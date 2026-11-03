@@ -8,6 +8,8 @@ refutation record and the lab notebook are all generated from it. The papers
 on Zenodo stay the frozen published record; this store is the living one.
 The design document is "Transport Lab: Knowledge Store Design".
 A result is in the graph only once it is in store/, with its proof and checks.
+Releases are archived on Zenodo as "Zero Divisors: Physics Graph"; RELEASING.md says how a release
+is made (merging a pull request is not a release).
 
 ## Layout
 

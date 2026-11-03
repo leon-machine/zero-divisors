@@ -1,9 +1,148 @@
 {
-  "title": "Transport Lab: the claim store of the Transport Papers",
+  "title": "Zero Divisors: Physics Graph",
   "upload_type": "dataset",
-  "description": "A store of granular, verified claims extracted from the Transport Papers (T0 to T17 and companion notes), with the toolkit that validates it, computes its derived state, and generates documents from it.",
-  "creators": [{"name": "Butler, Leon", "orcid": "0009-0006-4449-5617"}],
+  "description": "<p>The Physics Graph of the Transport Papers: every result of the series (T0 to T17 and companion notes) as an entry with its statement at four levels, its proof, the results it rests on, and an exact machine check, together with the toolkit that validates the graph and computes its derived state, the MCP server through which an AI agent can read it, and the site built from it (the Physics Graph, The Transport Principle and The Singularity).</p><p>The papers themselves are deposited separately on Zenodo and remain the version of record; the Physics Graph is the living store, archived here at each release.</p>",
+  "creators": [
+    {
+      "name": "Butler, Leon",
+      "orcid": "0009-0006-4449-5617"
+    }
+  ],
   "license": "cc-by-4.0",
-  "communities": [{"identifier": "transport-papers"}],
-  "keywords": ["Clifford algebras", "geometric algebra", "zero divisors", "transport principle", "knowledge graph"]
+  "communities": [
+    {
+      "identifier": "transport-papers"
+    }
+  ],
+  "keywords": [
+    "Clifford algebras",
+    "geometric algebra",
+    "zero divisors",
+    "transport principle",
+    "knowledge graph",
+    "machine-checked proofs"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22714501",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.21743863",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22714886",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22721556",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22721669",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22721790",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22721990",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722121",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722176",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722290",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722496",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722565",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722669",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722845",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22722953",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23232104",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23234576",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22723070",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22723212",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22723310",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Results are licensed CC BY 4.0; the code is MIT (LICENSE-CODE.txt). Each result records who did what in its credit list, including the AI model that drafted it where that is on record."
 }

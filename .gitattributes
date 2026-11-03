@@ -1,0 +1,4 @@
+# Left out of release archives (the zip GitHub makes for a tag, which Zenodo stores).
+# They stay in the repository: research-run records and CI settings are working material.
+colony/runs/ export-ignore
+.github/ export-ignore

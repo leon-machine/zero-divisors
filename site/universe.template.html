@@ -2319,6 +2319,12 @@ function renderProblems() {
 
 // ============================ DOCUMENTS ================================
 let docSel = null;
+// which release of the Physics Graph this site was built from; each release is archived on Zenodo
+function releaseLine() {
+  const r = DATA.release;
+  if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet.</p>`;
+  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""}</p>`;
+}
 function renderDocuments() {
   const docs = DATA.documents || [];
   const papers = docs.filter(d => d.kind === "paper").sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
@@ -2326,6 +2332,7 @@ function renderDocuments() {
   const row = d => `<li><button class="docrow" data-doc="${esc(d.id)}" aria-pressed="${d.id === docSel}"><span class="dcode">${esc(d.kind === "paper" ? (d.paper || "") : "")}</span><span class="dtitle">${esc(d.title)}</span></button></li>`;
   document.getElementById("documents").innerHTML = `<div class="eyebrow">Written from the store</div><h2>Documents</h2>
     <p class="lead">Each paper of the series, generated from the store: every result stated with its proof, results proved elsewhere cited to the paper that proves them. The official version of each paper is the one deposited on Zenodo; the documents here are generated from approved parts of the store and regenerated when a result is corrected.</p>
+    ${releaseLine()}
     <div class="docpane">
       <div class="doclist">
         ${(DATA.guides || []).length ? `<h4>The guides</h4><ul>${DATA.guides.map(g => `<li><button class="docrow" data-doc="guide:${esc(g.code)}" aria-pressed="${"guide:" + g.code === docSel}"><span class="dcode">${esc(g.code)}</span><span class="dtitle">${esc(g.title)}${g.subtitle ? `: ${esc(g.subtitle)}` : ""}</span></button></li>`).join("")}</ul>` : ""}

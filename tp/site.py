@@ -456,6 +456,26 @@ VERSION_NOTE = re.compile(r"\b[Vv]ersion\s+(\d+)\s*(?:->|\u2192|to)\s*(\d+)")
 KEY_DATE = re.compile(r"(\d{4})[_-](\d{2})[_-](\d{2})")
 
 
+def _release(lab):
+    """The release the site is built from: the latest tag reachable from HEAD, its date, and how
+    many commits HEAD is past it (0 when the site is built from the tag itself, as it should be
+    for the public site; see RELEASING.md). None before the first release."""
+    import subprocess
+    try:
+        tag = subprocess.run(["git", "-C", lab, "describe", "--tags", "--abbrev=0"],
+                             capture_output=True, text=True, timeout=30)
+        if tag.returncode != 0 or not tag.stdout.strip():
+            return None
+        t = tag.stdout.strip()
+        date = subprocess.run(["git", "-C", lab, "log", "-1", "--format=%ad", "--date=short", t],
+                              capture_output=True, text=True, timeout=30).stdout.strip()
+        ahead = subprocess.run(["git", "-C", lab, "rev-list", "--count", t + "..HEAD"],
+                               capture_output=True, text=True, timeout=30).stdout.strip()
+        return {"tag": t, "date": date, "ahead": int(ahead or 0)}
+    except Exception:
+        return None
+
+
 def _entity_history(e, git_rows):
     """What changed and when: the maintainer and review passes recorded under `extraction`
     (with the version a note names). The lab's commit history is not shown: it is working
@@ -888,7 +908,8 @@ def main(build="build", site="site", store="store", template="universe.template.
             "data_files": sorted(data_chunks),
             "featured": [f for f in FEATURED if f in keep],
             "mcp_tools": _mcp_tools(),
-            "contrib_example": _contrib_example()}
+            "contrib_example": _contrib_example(),
+            "release": _release(lab)}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
     tpl = open(os.path.join(site, template), encoding="utf-8").read()
     html = tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, default=str,
