@@ -10,8 +10,8 @@ overrides this brief where they differ. Standing rules for every run are in `col
 The method is attacker and referee: two attackers per cluster of problems (one constructive, one
 adversarial), a bridge-hunter reading across clusters, blind referees, and a fix round. The earlier
 ant-colony exploration (random walks, pheromone, scouts) was dropped on 2026-10-22 after a split
-test showed it did no better than direct lookups at much higher cost; `colony/ant.py` remains only
-for the run ledger and old trail maps.
+test showed it did no better than direct lookups at much higher cost, and its code is gone;
+`colony/ant.py` now only makes run folders and keeps the outcome ledger.
 
 ## Tools
 - `python3 colony/labcli.py <tool> '<json>'` - every lab MCP tool (get_open_problem, get_claim,

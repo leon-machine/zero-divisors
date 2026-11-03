@@ -1,24 +1,23 @@
 # colony/
 
-Tools and run records for attacking the store's open problems. The method is attacker and
-referee (BRIEF.md, read by every agent); the standing rules for every run (method, one close-out,
-central gates, proposal caps, acceptance policy, sync) are POLICIES.md. The ant-colony exploration
-used in the first two runs was dropped on 2026-10-22 (POLICIES.md section 0); ant.py is kept for the
-run ledger (`ant.py ledger`) and to read old trail maps.
+Tools for attacking the store's open problems. The method is attacker and referee (BRIEF.md, read
+by every agent); the standing rules for every run (method, one close-out, central gates, proposal
+caps, acceptance policy, sync) are POLICIES.md. The ant-colony exploration used in the first two
+runs was dropped on 2026-10-22 (POLICIES.md section 0) and its code removed; ant.py keeps the
+name and does two small jobs.
 
-- ant.py      the outcome ledger (`ledger add|summary`); also the retired walk, pheromone and
-              split-test commands, kept for reading the 2026-10-22 runs
+- ant.py      `init <run>` makes a run folder; `ledger add|summary` records each problem's outcome,
+              tokens, main proposal and referee verdict, and totals them
 - labcli.py   every MCP tool of the lab from the shell
 - runcheck.py run a check.py against the store (a function fails if it raises, returns False
               or records a GA.check failure)
 - check4.py   the maintainer's evidence layer on one proposal, as `tp accept` runs it
-- runs/<run>/ one folder per run: pheromones.jsonl, food.jsonl, round.txt, arms.json,
-              ledger.jsonl, findings/, verify/, work/
+- runs/<run>/ one folder per run: ledger.jsonl, findings/, verify/, work/, and the run's
+              RUN.md, REFEREE.md, FIXROUND.md, MAINTAINER.md and REPORT.md
 
 Paths are relative to the lab folder (override with TP_LAB). Pick a run with
 TP_COLONY_RUN=<run>; otherwise the newest run is used.
 
-runs/2026-10-22-pilot is the first run; runs/2026-10-22-toe is the second (split test, 55
-targets) and its RUN.md, REFEREE.md, FIXROUND.md and MAINTAINER.md are the templates for new runs.
-A new run: `python3 colony/ant.py init <run>` creates the folder and its ledger; copy RUN.md,
-REFEREE.md, FIXROUND.md and MAINTAINER.md from runs/2026-10-22-toe as templates.
+runs/2026-10-22-toe holds the templates for new runs: RUN.md, REFEREE.md, FIXROUND.md and
+MAINTAINER.md, and REPORT.md as the model report. A new run: `python3 colony/ant.py init <run>`,
+then copy those four files from runs/2026-10-22-toe and edit them.
