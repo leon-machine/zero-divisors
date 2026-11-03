@@ -1,0 +1,18 @@
+functions:
+  check_euclidean_rotor_period:
+    kind: exact
+    clauses: ["the rotor implementing one Euclidean period is R_{2 pi} = -1"]
+    omits: "Composition law tested at 4 x 4 rational circle pairs; the values R_pi = J, R_{2 pi} = -1, R_{4 pi} = +1 and the blade conjugation test are exact."
+  check_even_sector_periodic_odd_sector_antiperiodic:
+    kind: sampled
+    clauses: ["R_{2 pi} = -1 acts as +1 on the even sector and as -1 on the odd sector", "the ladder's generators are odd, so their correlation functions are antiperiodic"]
+    omits: "One completed pair in Cl(1,1). The module action -1 on the ladder generators, extended factorwise to all nonzero words of length <= 4, equals the parity automorphism (+1 on the 4 even words, -1 on the 4 odd words); conjugation by -1 is trivial on every blade. Antiperiodicity is computed for one mode's ordered thermal correlator at 3 sample q (ratio G(tau - beta)/G(tau) = s = -1, the grading sign), with e^{-tau w} carried as a formal factor; the Matsubara reading is not computed."
+  check_anticommutator_gives_fermi_dirac:
+    kind: sampled
+    clauses: ["the Fermi-Dirac denominator e^{omega/T} + 1 rather than Bose-Einstein e^{omega/T} - 1"]
+    omits: "KMS solved over 2 x 2 density matrices at sample q; the sign of the denominator follows from the (anti)commutator. The bosonisation of Step 4e and the Matsubara reading are not computed."
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_even_sector_periodic_odd_sector_antiperiodic strengthened: one action (R_2pi factorwise on ladder words) equals the parity automorphism, +1 even / -1 odd, and an odd thermal correlator is computed antiperiodic."

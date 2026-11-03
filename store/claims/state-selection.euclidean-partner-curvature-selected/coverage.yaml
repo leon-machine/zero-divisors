@@ -1,0 +1,22 @@
+functions:
+  check_pair_is_doubled_eigenplane:
+    kind: exact
+    clauses: ["1"]
+    omits: "Shape operator coded as S(B) = -(B + 3 sigma_r B sigma_r)/2 on the six frame bivectors; the cited T5 theorem is the source of that formula."
+  check_elliptic_rotor_periods:
+    kind: exact
+    clauses: ["2"]
+    omits: "R_{2 pi} = -1, R_{4 pi} = +1 and the blade conjugation test are exact; the composition law is checked at 4 x 4 Pythagorean angle pairs."
+  check_hyperbolic_and_elliptic_flows_share_the_pair:
+    kind: sampled
+    clauses: ["3"]
+    omits: "Generators shown in the eigenplane, commuting, with the squares +1 and -1; the composition laws are tested at sample rapidities and angles. 'Analytic continuation lambda -> i theta' is taken in the statement's stated sense (same pair, opposite sign of square), not computed as a continuation."
+  check_chiral_halves_carry_r_theta_and_r_minus_theta:
+    kind: sampled
+    clauses: ["4"]
+    omits: "Identity R^W = eps_+ R_theta + eps_- R_{-theta} tested at sample Pythagorean angles; the paragraph on vectors (R_theta rotates along the bifurcation sphere, no real rotor realises the Euclidean rotation) is another claim's check. The sense fixed by chirality is cited from synthesis.wick-rotor-chiral-angular-rotor (lineage motivated_by, not a declared premise); the check computes the chiral halves directly in Cl(2,4)."
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W127: removed the untouched_premises entry for synthesis.wick-rotor-chiral-angular-rotor, which is lineage (motivated_by), not a declared premise; the citation is recorded in the omits of check_chiral_halves_carry_r_theta_and_r_minus_theta. Exact Clifford-algebra computations cover clauses 1 to 4, the latter two at sample angles."

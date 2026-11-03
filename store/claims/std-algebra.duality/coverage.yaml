@@ -1,0 +1,15 @@
+functions:
+  check_duality_identities_all_signatures:
+    kind: sampled
+    clauses:
+    - '"a lc (XI) = (a ^ X) I"'
+    - '"a ^ (XI) = (a lc X) I"'
+    - '"maps Cl^k into Cl^(n-k)"'
+    omits: one sampled pair (a, X) per signature with n <= 4
+  check_dual_blade_is_orthogonal_complement:
+    kind: sampled
+    clauses:
+    - '"[AI] = [A]^perp"'
+    - '"a linear isomorphism Cl^k -> Cl^(n-k)"'
+    omits: blades of all subsets of four fixed vectors in Cl(4,0), Cl(1,3) and Cl(2,2); injectivity on
+      basis blades

@@ -1,0 +1,14 @@
+functions:
+  check_envelope_and_endpoint_under_diagonal_dynamics:
+    kind: sampled
+    clauses: ["S_R(t) <= min(Sth(t), C(t))", "S_R(complete evaporation) = 0"]
+    omits: "two runs (the model table's run and a five-pair run) with controlled-Z scrambling as the only number-diagonal dynamics; S_R = S_L is supported by equal purity and tr rho^3 only where the radiation has at most six qubits, not by equal spectra; the endpoint is checked as purity 1 of the full radiation; the bounds are shown attained where exact (S_L = S_th at stages before any eviction, and ln 2 per qubit by the maximally mixed qubit)"
+  check_locality_premise_is_necessary:
+    kind: exact
+    clauses: ["(L_E) cannot be dropped: rho_L2 = diag(5968/15625, 9657/15625), S_R about 0.96 bits against Sth about 0.55 nats (0.79 bits)"]
+    omits: "one witness (existence statement); S_R = S_L through tr rho^m for m = 2, 3, which fixes the spectrum because rank rho_R <= 2"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_envelope_and_endpoint_under_diagonal_dynamics now asserts the envelope is attained (S_L = S_th) at stages before any eviction, pinning which pairs S_th counts, and that ln 2 per qubit is the entropy of a maximally mixed qubit; size constants moved to module level"

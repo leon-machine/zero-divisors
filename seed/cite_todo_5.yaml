@@ -1,0 +1,130 @@
+angle.imported-singularity-papers-state-selection:
+  main:
+  - singularity.l-boundary-mode-locality
+  - singularity.q-joint-quasi-freeness-s-wave
+dark-energy.sheaf-papers-wall-soldering-variables:
+  main:
+  - sheaf.tameness
+dark-matter.democracy-de-sitter-radius-unit-ball:
+  main:
+  - dark-matter.d-democracy-total-mass
+  - dark-matter.r3-one-cell-per-unshared-direction
+dark-matter.flag-bit-exists-exactly-tower-dimension:
+  main:
+  - dark-matter.p3-nearest-dimension-representatives
+dark-matter.mirror-share-assembled:
+  main:
+  - dark-matter.p4-democracy-asymmetry-over-oriented-towers
+dark-matter.mirror-share-one-how-fragile:
+  main:
+  - dark-matter.p4-democracy-asymmetry-over-oriented-towers
+  - dark-matter.hyp-u-equal-rank-one-eigenvalues
+dark-matter.mirror-tower-copy-one:
+  main:
+  - dark-matter.p1-single-frozen-point
+dark-matter.mode-counts-two-modules-which-one:
+  main:
+  - dark-matter.p1-single-frozen-point
+  - dark-matter.p2-indifference
+dark-matter.no-coupling-rule-odd-towers-follows:
+  main:
+  - dark-matter.p2-indifference
+dark-matter.population-count-one-share-half-percent:
+  main:
+  - dark-matter.p1-single-frozen-point
+  - dark-matter.p2-indifference
+  - dark-matter.p3-nearest-dimension-representatives
+  - dark-matter.p4-democracy-asymmetry-over-oriented-towers
+dark-matter.projection-every-towers-content-dilutes-ones:
+  main:
+  - dark-matter.p1-single-frozen-point
+dark-matter.radiation-audit-what-theorem-closes-what:
+  main:
+  - dark-matter.hyp-u-equal-rank-one-eigenvalues
+dark-matter.stored-asymmetry-charge-not-number:
+  main:
+  - dark-matter.p1-single-frozen-point
+  - dark-matter.p5-boundary-modes-hold-entropy-not
+dark-matter.total-function-thickness:
+  main:
+  - dark-matter.p2-indifference
+  - dark-matter.r1-equal-mass-per-quantum
+  - dark-matter.r2-one-quantum-per-unit-ball
+dark-matter.towers-are-residues-single-clock-filter:
+  main:
+  - dark-matter.p2-indifference
+dark-matter.two-reductions:
+  main:
+  - dark-matter.d-democracy-total-mass
+dark-tower-matter.five-dimensional-content:
+  main:
+  - dark-tower-matter.hypothesis-s-slot-statistics
+dark-tower-matter.gauge-algebras:
+  main:
+  - dark-tower-matter.u-transposition-rule
+  - dark-tower-matter.h2-identification
+dark-tower-matter.same-kind-matter:
+  main:
+  - dark-tower-matter.u-transposition-rule
+  - dark-tower-matter.h2-identification
+descent-lift.imported-descent-modes-univalence-supplied-class:
+  main:
+  - singularity.l-boundary-mode-locality
+families.doublet-direction-module-georgi-jarlskog-clebsch:
+  main:
+  - standard-model.hyp-s-slot-statistics
+families.imported-indifference-instrument:
+  main:
+  - scrambling.indifference-structural-premise-series
+families.order-operations-matter-programme:
+  main:
+  - standard-model.hyp-s-slot-statistics
+neutrino.imported-indifference-faces-democratic-alignment-rank:
+  main:
+  - families.hyp-face-identification
+neutrino.leptogenesis-suppressed-alignment-reheating-premise-new:
+  main:
+  - dark-matter.hyp-u-equal-rank-one-eigenvalues
+neutrino.rank-one-seesaw-ordering-sum-double:
+  main:
+  - neutrino.m-framework-realises-majorana-term-scale
+neutrino.seesaw-what-gauge-invariance-proves-what:
+  main:
+  - neutrino.m-framework-realises-majorana-term-scale
+one-relation.character-experience-three-record-chain-theorems:
+  main:
+  - standard-model.hyp-s-slot-statistics
+one-relation.imported-indifference-instrument:
+  main:
+  - dark-matter.p2-indifference
+rungs.generators-outside-gauge-algebra:
+  main:
+  - standard-model.hyp-s-slot-statistics
+  - rungs.hyp-r-rung-reading
+sheaf.conservation-degeneracy-absolute-form:
+  main:
+  - sheaf.tameness
+sheaf.degeneration-sheaf:
+  main:
+  - sheaf.tameness
+sheaf.exceptional-algebra-deformation-normal-cone:
+  main:
+  - sheaf.tameness
+sheaf.metrics-residue-square-root-twist:
+  main:
+  - sheaf.tameness
+sheaf.one-sided-completion:
+  main:
+  - sheaf.tameness
+sheaf.tame-wall-induction:
+  main:
+  - sheaf.tameness
+simulations.cluster-bound-two-dimensions:
+  main:
+  - dark-matter.r1-equal-mass-per-quantum
+  - dark-matter.r2-one-quantum-per-unit-ball
+singularity.area-law-test:
+  main:
+  - singularity.c1-curvature-cutoff
+  - singularity.c2-cell-density
+  - singularity.c3-counted-epoch

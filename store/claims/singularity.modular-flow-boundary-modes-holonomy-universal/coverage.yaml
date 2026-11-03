@@ -1,0 +1,20 @@
+functions:
+  check_t_line_holonomy_rate:
+    kind: sampled
+    clauses: ["(i) the t-line transport is a boost in B_1 with rapidity per unit Killing time |A'|/2 = 1/(2r^2)", "rate 1/2 = kappa at the horizon; r^-2 growth inside; KMS period 4 pi r^2 shrinks", "in general units M/r^2, M drops out"]
+    omits: "the rate 1/(2r^2) is an exact rational-function identity, but the boost structure (generator, action on e0..e3) is checked at five sample w; that the modular flow equals the horizon holonomy (identification with Premise r-regularity-fixed-locus) is not computed; sample masses only"
+  check_hubble_normalised_limit_six_pi:
+    kind: exact
+    clauses: ["(ii) Hubble-normalised rate = 1/3 + (4/15) r + ... with S = 1 + (3/10) r + (9/56) r^2", "beta_H = 2 pi/|p_1| = 6 pi"]
+    omits: "series are exact rational coefficients to order 6 only; the formula (1/3) S/sqrt(1-r) for tau|A'|/(2 sqrt A) is taken as given rather than derived from tau = (2/3) r^(3/2) S; independence of M and of position on the exceptional set is not tested; the conditional KMS extension (open) is untouched"
+  check_sphere_rate_and_noncommuting_boosts:
+    kind: sampled
+    clauses: ["(iii) sphere number 2 pi/p_2 = 3 pi", "B_1 x B_2 = -R_12 != 0, pairwise non-commuting boosts", "a KMS state for one flow at beta != 0 is KMS for no other flow at beta' != 0"]
+    omits: "commutators are exact; the KMS-uniqueness consequence is only proxied by Gibbs densities ch - sh B_i in the Clifford algebra at two (ch, sh) samples, not an argument on an arbitrary von Neumann algebra with faithful normal state"
+untouched_premises:
+  singularity.imported-general-form: "the check works in the collar specialisation (imported-interior-collar-kasner-form); the general form is not separately computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numerical and algebraic content of (i)-(iii) is tested as recorded; the von Neumann algebra uniqueness argument is proxied, which the docstring says"

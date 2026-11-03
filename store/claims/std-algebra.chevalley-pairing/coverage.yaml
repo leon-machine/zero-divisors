@@ -1,0 +1,13 @@
+functions:
+  check_pairing_nondegenerate_symmetry_and_self_adjoint_vectors:
+    kind: complete
+    clauses:
+    - '"(i) beta is nondegenerate and pairs Lambda^m W only with Lambda^(k-m) W"'
+    - '"(ii) beta(y, x) = (-1)^(k(k-1)/2) beta(x, y)"'
+    - '"(iii) every vector is self-adjoint"'
+    omits: k <= 4, on all basis pairs and all 2k generators
+  check_elements_with_unit_norm_preserve_the_pairing:
+    kind: sampled
+    clauses:
+    - '"beta(R x, R y) = beta(x, y) whenever reverse(R) R = 1"'
+    omits: one boost-type element per k = 2, 3, 4

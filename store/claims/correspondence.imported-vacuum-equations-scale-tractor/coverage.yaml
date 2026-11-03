@@ -1,0 +1,18 @@
+functions:
+  check_vacuum_iff_null_scale_tractor_parallel:
+    kind: sampled
+    clauses: ["vacuum field equations are equivalent to covariant constancy of the null scale tractor"]
+    omits: "one Ricci-flat (Weyl-only) curvature operator with zero Schouten map and one non-vacuum operator with D ninf = -P(A) != 0, five directions; the field strength is a sample algebraic operator, not derived from a dynamical (hb, Omega); 'null' applies at Lambda = 0 only"
+  check_einstein_scale_tractor_parallel_with_norm:
+    kind: sampled
+    clauses: ["Einstein metric Ric = Lambda g: I_g is parallel with Q(I_g) = Lambda/3", "rho_g fixed by the scalar curvature (J/4)"]
+    omits: "Lambda in {3/2, -6/5, 9/7} with one Weyl coefficient, five directions"
+  check_parallel_section_forces_einstein_lambda_six_rho:
+    kind: sampled
+    clauses: ["a parallel section (1, 0, rho) forces rho constant", "g Einstein with Lambda = 6 rho"]
+    omits: "one non-constant rho (gradient r), two Lambda values with three rho each, and one non-Einstein sample showing P(e0) not proportional to e0; the claim for all curvature operators is not exhausted"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement (formal, technical) now says the scale tractor I_g is null exactly when Lambda = 0, matching Q(I_g) = Lambda/3; checks unchanged."

@@ -1,0 +1,10 @@
+functions:
+  check_massless_composites:
+    kind: partial
+    clauses: ["(1) lines omega = mu pi: h, Omega_omega, B_Lambda, sigma(x), m^2 = 2 sigma^2 |b|^2", "(2) massless planes of type (a) and (b), pi = 0 massive", "(3) source term -4|b|^2 on (a), zero on (b)", "(4) N constituents"]
+    omits: "(1) and (3) are exact at a few chosen mu, pi, lambda and two x, not general, and uniqueness of mu is not tested; (2) tests that the stated planes are massless and that shifting det mu or tilting pi leaves the locus, not the only-if classification of all massless composites, nor the mu + mu^dag != 0 case; (4) tests only a third constituent added to one type (a) plane, not type (b), multiples of one null spinor, or the only-if direction"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "values in (1) to (3) match the statement on the samples (sigma = 1 + lambda det mu, source -4|b|^2); the iff of (2) and (4) is tested only in the if direction"

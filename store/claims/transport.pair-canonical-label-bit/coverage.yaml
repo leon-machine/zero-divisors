@@ -1,0 +1,18 @@
+functions:
+  check_pair_and_involution_determine_each_other:
+    kind: sampled
+    clauses: ["u = 2e - 1 is an involution with e, 1 - e its spectral projections", "the pair {e, 1-e} and the involution +-u determine one another (relabelling is u -> -u)"]
+    omits: "five sample non-blade idempotents in Cl(1,1), Cl(2,2), Cl(1,3), Cl(3,1); the identities are general algebra but are checked numerically, not symbolically"
+  check_type_p_label_inner_iff_balanced:
+    kind: sampled
+    clauses: ["for type P the labelling is gauge (inner) precisely for balanced pairs", "otherwise resolved by rank order"]
+    omits: "five idempotents (three balanced, two unbalanced) with one conjugator-space element each; the unbalanced direction rests on unequal right-ideal dimensions (4 vs 12), and 'canonically resolved by rank order' is not tested beyond that dimension gap"
+  check_type_c_label_outer_until_ascent:
+    kind: sampled
+    clauses: ["type C: the labelling of eps_+- is exchangeable by no inner automorphism", "rendered gauge (inner) by the ascent"]
+    omits: "four split signatures (1,0), (2,1), (0,3), (3,2) only; the 'forgotten' Z_2 of Rule 2 (sign gamma of the fused ascent) and the closing ranking 'outer, forgotten, inner' are not tested by any function"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks match the labelled clauses on small cases; the Rule-2 forgotten bit in the three-Z_2 summary has no check and the balanced-iff-inner claim is tested on five idempotents."

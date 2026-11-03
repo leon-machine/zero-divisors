@@ -1,0 +1,50 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{5}{Setting and imports}{section.2}{}}
+\newlabel{eq:tractormetric}{{1}{5}{Setting and imports}{equation.2.1}{}}
+\newlabel{fact:frozen}{{2.1}{5}{Imported: the frozen point and its geometry}{theorem.2.1}{}}
+\newlabel{eq:conn}{{2}{5}{Imported: the frozen point and its geometry}{equation.2.2}{}}
+\newlabel{fact:mm}{{2.2}{5}{Imported: the MacDowell-Mansouri theorem, Stelle-West form}{theorem.2.2}{}}
+\newlabel{eq:ec}{{3}{6}{Imported: the MacDowell-Mansouri theorem, Stelle-West form}{equation.2.3}{}}
+\newlabel{fact:current}{{2.3}{6}{Imported: the s-wave current algebra}{theorem.2.3}{}}
+\newlabel{fact:walls}{{2.4}{6}{Imported: walls, and the sphere theorem}{theorem.2.4}{}}
+\newlabel{lem:sw}{{2.5}{6}{The Stelle-West vector of the frozen point}{theorem.2.5}{}}
+\newlabel{sec:action}{{3}{7}{The action of the frozen point}{section.3}{}}
+\newlabel{thm:action}{{3.1}{7}{The frozen point makes the Stelle-West vector}{theorem.3.1}{}}
+\newlabel{rem:whynonzero}{{3.2}{9}{Point of contact: why the form, not the value}{theorem.3.2}{}}
+\newlabel{fig:arrow}{{1}{10}{The existence boundary of Theorem \ref {thm:action}(2) in one fibre of the ambient bundle. Left: for $\Lambda > 0$ the frozen point $I$ lies off the null cone on the orbit $\ip {U}{U} = \Lambda /3$ of fibre vectors $U$; its stabiliser is $SO(1,4)$, and the five tangent directions $I^{\perp }$ are the $I$-half of the nine Goldstone modes of Proposition \ref {prop:goldstone}, all eaten. Right: as $\Lambda \to 0$ the arrow falls onto the null cone and the normalisation $1/\ip {I}{I} = 3/\Lambda $ develops its pole: a null vector cannot normalise the curvature-squared form of the action. The picture is exact, not schematic: the script verifies the norm identity, the pole, and the five-dimensional tangent space in exact arithmetic}{figure.1}{}}
+\newlabel{sec:vacate}{{4}{10}{What the equations vacate, and what cannot evolve}{section.4}{}}
+\newlabel{subsec:vacate}{{4.1}{10}{The equations vacate what the completion fills}{subsection.4.1}{}}
+\newlabel{thm:wallfree}{{4.1}{10}{The wall's free sector}{theorem.4.1}{}}
+\newlabel{subsec:w}{{4.2}{13}{Dark energy cannot evolve: the second registered stance}{subsection.4.2}{}}
+\newlabel{prop:w}{{4.2}{13}{$w = -1$ on the vacuum region; the registration, and its condition}{theorem.4.2}{}}
+\newlabel{subsec:twokinds}{{4.3}{14}{Two kinds of action: the ninth refutation}{subsection.4.3}{}}
+\newlabel{thm:twokinds}{{4.3}{14}{Gravity is pre-metric; the forces degenerate exactly where the conformal class does}{theorem.4.3}{}}
+\newlabel{rem:dichotomy}{{4.4}{15}{Point of contact: what the dichotomy explains}{theorem.4.4}{}}
+\newlabel{subsec:whichwall}{{4.4}{15}{Which wall: the soldering form against the sheaf paper's degeneration}{subsection.4.4}{}}
+\newlabel{prop:whichwall}{{4.5}{15}{The sheaf paper's wall in soldering variables}{theorem.4.5}{}}
+\newlabel{rem:whichwall}{{4.6}{16}{What this settles, and what it reformulates}{theorem.4.6}{}}
+\newlabel{subsec:kasner}{{4.5}{17}{The interface at the Schwarzschild wall: the datum has a pole, and its residue is the completion's weight}{subsection.4.5}{}}
+\newlabel{fact:weightedlimit}{{4.7}{17}{Imported: the weighted limit at the Schwarzschild singularity, and its matching}{theorem.4.7}{}}
+\newlabel{prop:lambdacorr}{{4.8}{17}{The cosmological constant does not change the residue}{theorem.4.8}{}}
+\newlabel{prop:kasnerwall}{{4.9}{18}{The frozen-point datum at a Kasner wall}{theorem.4.9}{}}
+\newlabel{asm:forcing}{{4.10}{20}{The forcing half at the Schwarzschild wall, in the residue sense}{theorem.4.10}{}}
+\newlabel{prop:counterterm}{{4.11}{21}{The wall counterterm}{theorem.4.11}{}}
+\newlabel{lem:varexp}{{4.12}{22}{Variable exponents: the residue is pointwise, the corrections are subleading}{theorem.4.12}{}}
+\newlabel{rem:remains}{{4.13}{23}{What the three discharges leave}{theorem.4.13}{}}
+\newlabel{sec:grip}{{5}{23}{One way to grip: the acoustic no-go}{section.5}{}}
+\newlabel{fact:cft}{{5.1}{23}{Imported: conformal orthogonality, and the Sugawara construction}{theorem.5.1}{}}
+\newlabel{prop:nogo}{{5.2}{23}{The acoustic no-go: one way to grip}{theorem.5.2}{}}
+\newlabel{rem:weakness}{{5.3}{24}{Weakness as dimension; the nonlinear bound; the open items named}{theorem.5.3}{}}
+\newlabel{prop:goldstone}{{5.4}{25}{The point at infinity has no physical fluctuation: the $(I,V)$-sector is pure gauge}{theorem.5.4}{}}
+\newlabel{asm:lift}{{5.5}{26}{The lift inherits the no-go, with its steps itemised}{theorem.5.5}{}}
+\newlabel{subsec:fourth}{{5.1}{26}{What kind of number the norm is: the fourth alternative}{subsection.5.1}{}}
+\newlabel{def:fourways}{{5.6}{27}{Four ways a number enters a theory of this shape}{theorem.5.6}{}}
+\newlabel{prop:exhaustive}{{5.7}{27}{The four alternatives are exhaustive; the three are not}{theorem.5.7}{}}
+\newlabel{prop:parameter}{{5.8}{27}{Under the action as written, the norm is a parameter of the laws}{theorem.5.8}{}}
+\newlabel{rem:promotion}{{5.9}{28}{What clause (3) requires, and what it yields: the promotion is a decision}{theorem.5.9}{}}
+\newlabel{fact:notkinematic}{{5.10}{29}{Imported: the norm is not kinematic}{theorem.5.10}{}}
+\newlabel{fact:ht}{{5.11}{29}{Imported: the Henneaux-Teitelboim promotion}{theorem.5.11}{}}
+\newlabel{sec:verdict}{{6}{29}{The engineering conclusion, and scope}{section.6}{}}
+\newlabel{asm:verdict}{{6.1}{29}{The conclusion does not depend on the ontology, at its level}{theorem.6.1}{}}
+\newlabel{sec:position}{{7}{31}{Position in the series}{section.7}{}}
+\newlabel{sec:verification}{{8}{32}{Machine verification}{section.8}{}}

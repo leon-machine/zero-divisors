@@ -1,0 +1,22 @@
+functions:
+  check_soldering_form_acquires_half_power_pole:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "three tame collar models; the residue k (x) k / T and simple pole of G^-1 are exact there, the tau^(-1/2) coframe is exhibited in the diagonal model only, and 'any coframe' follows by argument, not by computation"
+  check_weighted_chart_and_seven_dim_stabiliser:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "three models for the weighted cometric; the stabiliser dimension (7, against 6 for the Lorentzian form) is computed for eta_3 = minus the identity only"
+  check_dilation_lifts_to_ladder_boost:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "identification of the c-rescaling with the freedom of the partner line in the sheaf paper's residue theorem is cited, not computed"
+  check_dichotomy_cases_through_the_free_sector:
+    kind: sampled
+    clauses: ["(iv) invertible case and regular corank-one case"]
+    omits: "ranks 24, 18 and 12 for one invertible and one corank-one soldering form from the exported equations; the pole case at the sheaf wall is stated open and the Schwarzschild simple-pole answer is not checked here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks match (i)-(iii) and the two computable cases of (iv); the docstring says the pole case is not checked"

@@ -1,0 +1,22 @@
+functions:
+  check_orbits_are_rank_classes:
+    kind: sampled
+    clauses:
+    - (1) two idempotents are conjugate iff they have the same rank data
+    - idempotents of rank r, 0 < r < m, form a single orbit (simple); orbits indexed by rank pairs (split)
+    omits: Five algebras Cl(1,1), Cl(2,2), Cl(1,2), Cl(1,3), Cl(2,1) and only a finite family of idempotents in each (products of hyperbolic-pair projectors, eps_pm, and a sample non-coordinate e + e a (1-e)), not all idempotents; the negative direction is a failure to find an invertible conjugator among fixed kernel combinations plus the dimension argument
+  check_complement_conjugate_iff_balanced:
+    kind: sampled
+    clauses:
+    - (2) e and 1 - e are conjugate iff rank e = m - rank e (componentwise when split)
+    omits: Same five algebras and finite idempotent family
+  check_central_iff_singleton_orbit:
+    kind: sampled
+    clauses:
+    - (3) an idempotent is central iff its conjugation orbit is a singleton
+    omits: Same finite family; orbit singleton is tested through conjugation by basis blades, which suffices because the blades are units spanning A; the orbit-theoretic reading of the P/C boundary (second sentence of (3)) is interpretive and not checked
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The three clauses are tested on five algebras with a finite idempotent family; the classification over all idempotents is not reached by enumeration.

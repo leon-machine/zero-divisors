@@ -1,0 +1,11 @@
+The basis statement is \claimref{std-algebra.blade-basis}; its argument is recalled here because the clause on structure constants is read off from it. The blades span, by the defining relations: any word in the generators is reduced to blade form by the rewriting $e_j e_i = 2B(e_i, e_j) - e_i e_j$ ($i < j$) and $e_i e_i = B(e_i, e_i)$, each step lowering the number of inversions or the length, and each step introducing coefficients polynomial in the $B(e_i,e_j)$; this also proves the claim about structure constants, given independence.
+
+For independence, exhibit a module in which the blades act independently. On the exterior algebra $\Lambda W$ define, for $\alpha \in W$,
+\[
+c(\alpha)\,\xi \;=\; \alpha \wedge \xi \;+\; \iota_{B(\alpha, \cdot)}\,\xi ,
+\]
+exterior multiplication plus contraction with the functional $B(\alpha, \cdot) \in W^*$. Both operations are anti-derivations, exterior multiplication by $\alpha$ squares to zero, contraction squares to zero, and their anticommutator is multiplication by the pairing: $c(\alpha)^2 = B(\alpha,\alpha)\,\mathrm{id}$. By the universal property, $c$ extends to an algebra map $c : \Cl(W,B) \to \mathrm{End}(\Lambda W)$. Consider the symbol map $\sigma(x) = c(x)\,1 \in \Lambda W$. For a blade,
+\[
+\sigma(e_I) \;=\; c(e_{i_1}) \cdots c(e_{i_k})\,1 \;=\; e_{i_1} \wedge \dots \wedge e_{i_k} \;+\; (\text{terms of lower exterior degree}),
+\]
+since each contraction lowers degree by one while each wedge raises it by one, and the top-degree term takes every wedge. The images $\sigma(e_I)$ are therefore triangular with respect to exterior degree against the basis $\{e_{i_1} \wedge \dots \wedge e_{i_k}\}$ of $\Lambda W$, with unit leading coefficients, hence linearly independent; so the $e_I$ are independent in $\Cl(W,B)$. Nothing in the construction used nondegeneracy, and $c$ is visibly polynomial in $B$.

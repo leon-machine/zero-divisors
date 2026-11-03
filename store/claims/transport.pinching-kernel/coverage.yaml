@@ -1,0 +1,18 @@
+functions:
+  check_conditional_expectation_onto_commutant:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "ten bases with n <= 3; E^2 = E, E(1) = 1, im E = C = A + A ff* and dim C = 2^(n+1) are exact per base, but the C-bimodule property is tested only on 4 x 3 basis elements of C against every third blade"
+  check_kernel_is_ladder_sector:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "ten bases with n <= 3; kernel dimension 2^(n+1) and ker E = PB(1-P) + (1-P)BP = Af* + Af, E(f) = E(f*) = 0 exact per base"
+  check_round_trip_and_defect:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "ten bases with n <= 3; E(a) = a and D(a) = a f*f exact on every base blade, and the grade-involution Peirce reading exact; the defect formula D(xy) - D(x)D(y) = P x (1-P) y P is tested on one pair of sample elements per base; that the corner map is an isomorphism and 'an automorphism, faithful' are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Every clause has an exact computation on the ten bases with n <= 3; the defect identity and bimodule property are sampled in elements, faithfulness is untested. 2026-10-23 weak-checks pass: check_round_trip_and_defect now asserts that the round trip equals a f f* exactly on the even blades (before: only that it differs on the odd ones)"

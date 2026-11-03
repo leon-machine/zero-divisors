@@ -1,0 +1,18 @@
+functions:
+  check_subsystem:
+    kind: sampled
+    clauses: [(1)]
+    omits: Exact 6x6 row identities w A = -nu rho and rho A = -nu S w, hence w'' = nu^2 S w, for five (n, X) frames and five frozen values of S; the s-dependent equation is the pointwise identity, with no integration.
+  check_commutator:
+    kind: sampled
+    clauses: [(3)]
+    omits: 'The part of (3) about D = [E_X, N_n]: D^3 = nu^2 D, kernel dimension 2 and eigenvalues 0, +-nu each twice, and the gauge identity (1 - f N)A(1 + f N) - f'' N = E + f D when f'' = nu(S - f^2), for five frames and three (S, f); the "simple pole with residue eigenvalues 0, +-e" is read off from these.'
+  check_euler:
+    kind: sampled
+    clauses: [(3)]
+    omits: 'Euler profile S = +-C t^{-2}: the stated exponents solve y'''' = nu^2 S y at three (k, nu) defocusing and three (e, nu) focusing values, Riccati for f = -k/(nu t), shell invariance of t S dt, Re e = 1/2 for the complex roots at two omega; the zeros accumulating at s_c for nu^2 C > 1/4 (oscillation) is not computed, nor are solutions off the Euler profile.'
+  check_power_profiles:
+    kind: sampled
+    clauses: [(4)]
+    omits: 'Power profiles at three (beta, C, nu): the Frobenius series solves y'''' = nu^2 S y up to its top term, y'' leads with nu^2 C t^{2 beta - 1}/(2 beta - 1) (so |f| ~ nu C t^{2 beta - 1}/(1 - 2 beta)), the Tipler antiderivative C t^{2 beta}/(2 beta) is finite, and L^1 partial integrals grow for beta = 1/3 and stay bounded for beta = 2/3; the threshold beta = 1/2 for all beta and the logarithmic profiles (case (b) iff q > 1, (c) iff q <= 1) are not computed.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'The matrix identities, Euler exponents and power-profile coefficients are reproduced; the trichotomy (2) and the logarithmic classes of (4) have no function.'}

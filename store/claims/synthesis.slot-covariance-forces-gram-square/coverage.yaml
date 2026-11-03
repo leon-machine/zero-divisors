@@ -1,0 +1,24 @@
+functions:
+  check_face_vector_cofactor:
+    kind: sampled
+    clauses: ["(i) beta -> det(U) U^-1 beta and h -> U^dag h U"]
+    omits: "five unitaries (two permutations, phases, two rotations) times four configurations times four Lambda values, exact Gaussian rationals; U -> R_U onto U(3) is not tested; the sign-twisted permutation action is tested only as det = -1 for one transposition"
+  check_invariant_forms:
+    kind: partial
+    clauses: ["(ii) covariant forms are exactly span{beta-bar beta^T, |beta|^2 1}", "(ii) exactly one has diagonal 2|beta_k|^2", "(iii) nine-dimensional affine space of permutation-covariant forms", "(iii) the forms 2 beta-bar beta^T + c (J - 1)|beta|^2 are indefinite"]
+    omits: "exact nullities of the 81-dimensional tensor space (u(3) generators for U(3) covariance, connected group; two permutation generators for S3): 2, 0, 14, 9 as stated; positive semidefiniteness and rank three of 2 diag(|beta_k|^2) and its three degenerate families at the democratic direction are not tested; indefiniteness only at beta = e_1 for c = 1 and c = -1/3"
+  check_gram_square_on_configurations:
+    kind: sampled
+    clauses: ["(ii) diagonal 2|beta_k|^2", "(ii) tr M = 2 sum_{i<l} |B^{il}|^2", "(ii) Hermitian, rank one, spectrum (2|beta|^2, 0, 0), eigenvector beta-bar", "(ii) covariance of M under U(3)"]
+    omits: "four configurations, four Lambda values, five unitaries; the identification of the trace with m^2 - (Lambda/3) C_3 is not computed (m^2 and C_3 do not appear); 'in every configuration' is sampled"
+  check_lambda_obstruction:
+    kind: sampled
+    clauses: ["(iv) sum of faces' joins = m^2 + (Lambda/12) sum h_ii^2", "(iv) no covariant form in the six-term span has the joins as diagonal"]
+    omits: "the identity is checked only through the Casimir relation sum C(h_k) - C_3 = (1/4) sum h_ii^2 at sample configurations (m^2 is not computed); the inconsistency (rank 6 against 7) pools twelve (configuration, Lambda != 0) combinations with Lambda-independent coefficients, so coefficients depending on Lambda are not excluded at fixed Lambda; the Lambda = 0 control (unique solution a = 2) is exact on four configurations"
+untouched_premises:
+  families.slot-covariance-of-mass-law: "hypothesis of the theorem (U(3) covariance of the mass law); the check imposes covariance directly as the Lie-algebra and group rows, so there is no computable content to call"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebraic core (ii), (iii) dimension count is exact linear algebra; configuration-level statements are sampled; the obstruction (iv) pools Lambda values"

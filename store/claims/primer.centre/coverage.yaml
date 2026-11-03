@@ -1,0 +1,16 @@
+functions:
+  check_centre_by_linear_algebra:
+    kind: sampled
+    clauses:
+    - '"the centre of Cl(p,q) is R 1 if n is even, and R 1 + R omega if n is odd"'
+    omits: the 27 signatures with 1 <= n <= 6; the centre is an exact kernel on the full 2^n-dimensional algebra, but n is bounded
+  check_central_blades_higher_n:
+    kind: sampled
+    clauses:
+    - '"the centre of Cl(p,q) is R 1 if n is even, and R 1 + R omega if n is odd" (blade level)'
+    omits: 13 signatures with 6 <= n <= 9 and p in {0, 3, 6, 9}; only blades commuting with every generator are listed, not the full kernel
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: both functions compute the centre exactly on bounded ranges of signatures and the kind is recorded as sampled

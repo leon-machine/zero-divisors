@@ -1,0 +1,39 @@
+{
+ "doc": "trail-clifford-structure",
+ "version": 8,
+ "claims": [
+  "dark-matter.residue-soldered-invariant-not-algebraic-one@3",
+  "dark-matter.type-residue-what-each-tower-can@5",
+  "odd-extensions.doubling-or-complexification@5",
+  "odd-extensions.volume-element-odd-dimension@3",
+  "primer.centre@2",
+  "primer.classification-real-clifford-algebras@3",
+  "primer.commutation-rule@2",
+  "primer.sign@2",
+  "primer.twisted-adjoint-action@3",
+  "sheaf.blade-basis-degenerate-forms-included@4",
+  "std-algebra.blade-basis@1",
+  "std-algebra.morita-amplification@1",
+  "std-algebra.orthogonal-anticommute@1",
+  "std-algebra.sylvester-inertia@1",
+  "std-algebra.z2-grading@1",
+  "tower.matrix-amplification-structural-properties@3",
+  "transport.classification-idempotent-orbits@5",
+  "transport.classification-real-clifford-algebras@3",
+  "transport.units-span@2"
+ ],
+ "recipe_hash": "353c01ea3569",
+ "generated": "2026-11-02T16:27:56+00:00",
+ "spine": [
+  "sheaf.blade-basis-degenerate-forms-included",
+  "primer.commutation-rule",
+  "primer.twisted-adjoint-action",
+  "primer.sign",
+  "primer.centre",
+  "transport.classification-real-clifford-algebras",
+  "odd-extensions.doubling-or-complexification",
+  "transport.classification-idempotent-orbits",
+  "tower.matrix-amplification-structural-properties",
+  "dark-matter.residue-soldered-invariant-not-algebraic-one"
+ ]
+}

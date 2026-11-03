@@ -1,0 +1,14 @@
+functions:
+  check_one_algebra_two_solderings:
+    kind: sampled
+    clauses: ["the two readings of Cl(1,4) are two solderings of one algebra", "the series' residue assigns them to different towers"]
+    omits: "Five Lambda > 0 samples: Cl(I^perp) has signature (1,4) (residue 5 if soldered along all five directions) and the soldering along the Lorentz frame (1,3) gives residue 6."
+  check_stelle_west_vector_is_the_normal_of_fixed_norm:
+    kind: sampled
+    clauses: ["the fifth direction is the Stelle-West vector, the normal to the de Sitter hyperboloid, of fixed norm l = sqrt(3/Lambda)", "it is not a spacetime direction"]
+    omits: "Five samples: Lambda Q(V) = -3 (the norm is checked as l^2), V orthogonal to I and to the four-dimensional tangent space, not in it. The tangent space is computed as a kernel; the curve remark in the code is a comment. The size L of the five-dimensional towers' fifth direction is declared to have no computable content."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The residue contrast and the normal-direction facts are checked at five rational samples; the datum L is outside what can be computed."

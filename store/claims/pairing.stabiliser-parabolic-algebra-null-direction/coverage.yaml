@@ -1,0 +1,32 @@
+functions:
+  check_values_on_the_basis_and_null_rotations:
+    kind: exact
+    clauses:
+    - '"pv(e_01) = pv(e_23) = 0, pv(e_02) = 1, pv(e_03) = i, pv(e_12) = -1, pv(e_13) = -i"'
+    - '"pv(n e_2) = 2, pv(n e_3) = 2i"'
+    omits: ''
+  check_stabiliser_is_the_kernel_of_one_functional:
+    kind: exact
+    clauses:
+    - '"B stabilises W if and only if pv(B) = 0"'
+    - '"the stabiliser has complex dimension five"'
+    - '"the class of B is the mb-component of B . l; pv(B) = 0 exactly when B . l is in span{l, m}"'
+    omits: the mb-component identity (-pv(B)/2) is checked on 12 sample bivectors, which are not asserted to span; the stabiliser rank and kernel statements are exact over the basis
+  check_real_points_are_the_parabolic_algebra:
+    kind: exact
+    clauses:
+    - '"its real points form the four-dimensional parabolic algebra p(l) = span_R{e_01, e_23, l e_2, l e_3}"'
+    omits: ''
+  check_spin_action_fixes_vacuum_ray_iff_pv_vanishes:
+    kind: exact
+    clauses:
+    - '"which is the condition for the spin action of B to fix the vacuum ray"'
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: each function is an exact finite linear-algebra computation of what the statement asserts on the 6-dimensional bivector space
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"

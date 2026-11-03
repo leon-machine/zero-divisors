@@ -1,0 +1,23 @@
+functions:
+  check_one_and_two_loop_coefficients:
+    kind: exact
+    clauses:
+    - (1)
+    omits: Standard Model listing b and two-loop matrix are routine tests, not stated; the two-loop matrix is checked only for the complex-with-(15,2,2) case, as the statement says
+  check_one_loop_chain_solutions:
+    kind: exact
+    clauses:
+    - (2)
+    omits: Inputs (alpha^-1 = 128, sin^2 = 0.2312, alpha_s = 0.118) and M_Z are hard-coded, not read from spectrum-run; M_I and M_U are certified only to the stated two significant figures
+  check_real_chain_as_one_threshold_shift:
+    kind: exact
+    clauses:
+    - (3)
+    omits: The remark that no added matter in table-exact has negative entries is not tested; the corollary is checked only as the inequality (1+R)D2 > D1 + R D3 with min(D) < 0
+untouched_premises:
+  standard-model.imported-proton-condition: cited only in part (4), the record-level two-loop table, which the check does not test
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Parts (1) to (3) are exact rational or certified-bound computations; part (4), the two-loop integration, is declared record level in the docstring and has no function.

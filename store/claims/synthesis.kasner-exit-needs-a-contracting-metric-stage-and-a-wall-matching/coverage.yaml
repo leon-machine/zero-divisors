@@ -1,0 +1,14 @@
+functions:
+  check_exit_direction:
+    kind: sampled
+    clauses: ["(i) wavelength-to-Hubble ratio 1/(k tau^q) = 1/(q s) at seven exponents and five times", "(i) strictly decreasing in tau, so exit only toward the wall", "(i) expansion rate 1/tau needs sum p = 1"]
+    omits: "monotonicity for all tau follows from d(k tau^q)/d tau > 0 in the proof; the check samples rational tau^q"
+  check_liouville_and_adiabaticity:
+    kind: sampled
+    clauses: ["(ii) Liouville identity Z = s^(-1/2) u on monomials for five orders and five exponents", "(ii) control: wrong Liouville weight fails", "(ii) squared adiabatic parameter 1/a >= 4 at the wall, decreasing in s, equal to 1 at s^2 = a^(2/3) - a", "(ii) omega^2 < 0 near the wall for nu > 1/2", "(ii) omega^2 = 1 at nu = 1/2"]
+    omits: "the closed form a^2/(s^2 + a)^3 is derived in the proof; the check evaluates it on grids"
+  check_wall_curvature:
+    kind: sampled
+    clauses: ["(iii) K tau^4 equals the stored -16 p1 p2 p3 on the vacuum circle at four BKL values and 64/27 at Schwarzschild", "(iii) K > 0 at the isotropic disk point, both kinds of 5D vacuum point and an embedded 4D point", "(iii) K = 0 at the Milne points (1,0,0), (0,0,0,1)", "(iii) (0,0,0,1) reduces to (1/3,1/3,1/3) with b = tau", "(iii) control: wrong pair sign fails", "(iii) curvature two-forms recomputed from the power-law coframe by Cartan's equations at four points, Schwarzschild hand values"]
+    omits: "vanishing only at Milne points is the sum-of-squares argument in the proof"
+untouched_premises: {}

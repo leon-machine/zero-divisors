@@ -1,0 +1,18 @@
+functions:
+  check_admissible_neumann_inverse:
+    kind: sampled
+    clauses: ["1 + a is invertible via the Neumann series", "exponent families add to {k delta + ...}, only finitely many products below any level"]
+    omits: "one sample a with delta = 1/2, truncation level 4, no logarithmic terms; general exponent families and 'after shrinking epsilon' are not modelled"
+  check_smooth_positive_plus_small_is_invertible:
+    kind: sampled
+    clauses: ["any c + a with c smooth, positive and bounded away from zero near E is invertible"]
+    omits: "one polynomial c = 2 + tau + 3 tau^2 and the same a, modulo tau^4; general smooth c is not tested"
+  check_geometric_convergence_where_a_is_small:
+    kind: partial
+    clauses: ["the series converges locally uniformly where |a| <= 1/2"]
+    omits: "only the geometric partial-sum identity and bound at three points tau = 2^-12, 3^-12, 5^-12; local uniformity on a compact is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Neumann inversion is verified on one sample a and one smooth c at truncation level 4, plus pointwise geometric bounds at three tau; uniform convergence is analysis and is not computed.

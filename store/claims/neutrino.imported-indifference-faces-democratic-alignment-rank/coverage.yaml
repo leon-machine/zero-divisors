@@ -1,0 +1,18 @@
+functions:
+  check_democratic_line_and_invariant_forms:
+    kind: exact
+    clauses: ["the source lies on the democratic line spanned by u"]
+    omits: "The instrument itself (that it forces the source onto the fixed line) is a premise and is not tested; the span{1, J} part is not a statement clause."
+  check_rank_one_spectrum:
+    kind: exact
+    clauses: ["Y_0 proportional to J = u'u'^T, spectrum (3, 0, 0)"]
+    omits: "The Gram-square reading (that the leading Yukawa form is u'u'^T) is assumed, only the linear algebra of J is computed."
+  check_s3_protects_light_pair:
+    kind: partial
+    clauses: ["lifted by the second-order breaking S_3 -> S_2 -> 1"]
+    omits: "Three S_3-invariant samples keep the pair degenerate and one S_2-invariant sample splits it; the S_2 -> 1 step, the face identification, and the conversion of the CKM shape into CKM numbers are not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The computable core (fixed line, rank-one J with spectrum (3,0,0), S_3 protection of the light pair) is tested; the docstring itself declares that statuses and CKM numbers are not computed."

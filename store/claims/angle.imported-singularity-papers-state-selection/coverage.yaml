@@ -1,0 +1,30 @@
+functions:
+  check_boost_invariant_cyclic_separating_states:
+    kind: sampled
+    clauses: ["state form cos(theta)|00> + sin(theta)|11> with cos sin != 0", "one-sided marginal diag(cos^2, sin^2)"]
+    omits: "eigenspaces of the boost are computed exactly at the single sample w = 1; 'cyclic and separating' is identified with Schmidt rank 2 by definition, and the rank test and the marginal are run at four sample (c, s) only"
+  check_marginal_is_gibbs_at_the_sample_point:
+    kind: sampled
+    clauses: ["marginal is the Gibbs state at tan^2 theta = e^{-beta omega}", "sample point 9/16 has (cos, sin) = (4/5, 3/5)"]
+    omits: "the Gibbs relation is checked at the one sample point only (the sample-point numbers themselves are exact)"
+  check_intertwining_automorphisms_act_through_sign:
+    kind: sampled
+    clauses: ["every automorphism intertwining the phase flow acts on beta through {+-1}"]
+    omits: "inner automorphisms of M_2 only, at w = 1, for lambda in {1, -1, 2, 1/2, -3} and three mu; the characteristic-polynomial argument that forces mu = 0 and lambda^2 = 1 for all lambda, mu is stated in the docstring, not computed"
+  check_surface_gravity_and_euclidean_period:
+    kind: sampled
+    clauses: ["kappa = 1/4M", "Euclidean section smooth at period 2 pi/kappa"]
+    omits: "three masses and two displacement values with an inequality bound on the series remainder; 'exactly for the period 2 pi/kappa' (any other period is singular) is not tested"
+  check_kms_relations_fix_each_mode_marginal:
+    kind: exact
+    clauses: ["imposing KMS mode by mode fixes each single-mode marginal to the Gibbs state at the given Boltzmann ratio"]
+    omits: "that (R) imposes KMS, and at the period 2 pi/kappa, is the assumed premise singularity.r-regularity-fixed-locus, not computed; the KMS relations are solved for a general linear functional on M_2 (solution space one-dimensional, spanned by diag(1, q)) at the three ratios q in {9/16, 1/3, 5}"
+  check_supplied_class_ultralocal_and_sea_level_occupancies:
+    kind: partial
+    clauses: ["the supplied class is ultralocal", "sea level at k = 0 (n_0 = 1/2, n_k + n_{-k} = 1) under weights omega_k = kappa k"]
+    omits: "ultralocality is shown on three modes for all eight number monomials and the three parity sections (with the hopping generator a_0^dag a_1 as a failing contrast), not for the general d Gamma(a) with C^infty(E)-linear a; the weights omega_k = kappa k are premise (Q)'s convention (version 2; version 3 adopts kappa(k + 1/2)), entered, not derived; occupancy consequences at two values of x, and the bilinear weights computed from the flow's commutators on three sites only"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Renamed the two overclaiming functions to what they test; the KMS function now solves the KMS relations for a general functional (unique Gibbs marginal), ultralocality widened to all number monomials and parity sections on three modes with a hopping contrast; (R) and the weights are labelled as assumed premises."

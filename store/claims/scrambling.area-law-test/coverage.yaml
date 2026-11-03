@@ -1,0 +1,22 @@
+functions:
+  check_area_law_iff_half_mass:
+    kind: sampled
+    clauses:
+    - N = S_BH = 4 pi M^2 if and only if nu Delta t = M/2
+    omits: six sample values of xi = nu Delta t / M; the slice volume 8 pi M and S_BH = 4 pi M^2 are computed exactly, and N / S_BH = 2 xi holds at each sample, but xi is not symbolic
+  check_causal_epoch_order_m:
+    kind: sampled
+    clauses:
+    - the span of singularity in the causal future of a single horizon-crossing epoch is Delta t(eps) = 2M(ln(1/eps) - 8/3 + 2 ln 2) + O(eps), of order M up to a logarithm
+    omits: the formula is taken from the cited Fact, not derived; positivity and the bound below 2M ln(1/eps) are checked at eps = 2^-k for k = 2..12 with ln 2 bracketed exactly, and the margin 2 ln(1/eps) - Delta t/M is pinned to 16/3 - 4 ln 2 (positive, the same at every eps); the O(eps) term is not checked
+  check_lifetime_scaling:
+    kind: exact
+    clauses:
+    - counting over the hole's whole lifetime, Delta t ~ M^3, gives N ~ M^4
+    - the interior volume with dV/dv ~ M^2 gives V ~ M^5; both are linear in the time span
+    omits: the lifetime Delta t ~ M^3 and dV/dv ~ M^2 are inputs; the tension with the constancy of the horizon entropy and the evidential reading are not testable
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exponent and coefficient arithmetic is exact; the causal-epoch formula is imported and only its order-M consequence is checked. 2026-10-23 weak-checks pass: check_causal_epoch_order_m now pins the constant margin 2 ln(1/eps) - Delta t/M = 16/3 - 4 ln 2 exactly against the ln 2 bracket and asserts it positive, which pins the 2, 8/3 and 2 ln 2 of the imported formula"

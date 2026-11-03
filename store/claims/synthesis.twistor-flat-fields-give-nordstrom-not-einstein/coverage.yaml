@@ -1,0 +1,21 @@
+functions:
+  check_attachment_domain_is_tractor_flat:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "tractor field strength (Weyl, torsion and Cotton blocks) computed by exact Taylor jets at two rational points of each of two conformally flat fields with nonzero scalar curvature, all zero; one non-conformally-flat control with nonzero field strength whose spacetime block equals -W on every frame plane; the converse for every field rests on Weyl's theorem and the conformal invariance of the tractor connection (cited Facts), and the holonomy reading is argued"
+  check_curl_identity_forces_uniform_rest_density:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the contracted curl identity and its sum with the projected conservation law checked exactly at one rational point of the flat field for two sets of polynomial rho, p and a rationally parametrised unit u; the extension to every field (normal gauge at a point) and the Cotton step from Einstein's equations are proved in the text; nonuniform static dust gives nonzero curl"
+  check_nordstrom_trace_equation_solvable_for_any_trace:
+    kind: sampled
+    clauses: ["(i)", "(iii)"]
+    omits: "R = 6 box(phi)/phi^3 at two points of two fields; the trace equation solved to total order four for one nonuniform time-dependent trace and one set of Cauchy data, with R + 6 kappa tau = 0 through curvature-jet order two and a failing control trace; convergence and smooth existence are cited, not checked; the weak-field coefficients follow by algebra from the checked formula"
+  check_einstein_vacuum_on_attachment_domain_is_constant_curvature:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "conformally flat de Sitter fields at Lambda = 3 and -6/5, two points each: Weyl zero, R(B) = (Lambda/3) B on every frame plane, scalar 4 Lambda; the general vacuum statement is the algebra in the proof"
+untouched_premises:
+  field-theory.twistor-attachment: "names the one conformal spinor space whose transport defines the class; no computation uses its content"
+  synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians: "imported theorem used only in the reading of clause (iv); nothing in the checks depends on it"
+  synthesis.imported-nordstrom-scalar-theory-einstein-fokker-form: "imported Fact naming the theory that (iii) re-derives and giving its observational failures; the checks compute the equations directly and do not call it"

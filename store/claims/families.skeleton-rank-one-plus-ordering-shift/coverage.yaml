@@ -1,0 +1,19 @@
+functions:
+  check_wick_pieces_and_closed_form:
+    kind: sampled
+    clauses: ["H_kl = cosh^2 r delta_kl + x(5 + 6x) conj(n_k) n_l", "the four Wick pieces and their sum"]
+    omits: "two rational hyperbolic points (3/4, 5/4), (12/5, 13/5), three feeding ratios (lambda = 0, 3/4, 4/3), two channel phases per ratio, all nine (k, l); 'every pairing at every strength, feeding ratio and channel phase' is not enumerated"
+  check_normal_ordered_rank_one_and_ordering_floor:
+    kind: sampled
+    clauses: ["(1)", "(2)"]
+    omits: "the same two depths with lambda = 3/4 and 4/3 and one phase each: the normal-ordered form is 2x(2 + 3x) conj(n) n^T of rank 1 and kills the light plane; the ordering term c^2 1 + x conj(n) n^T acts as c^2 on it; the ordering term is taken as the first two Wick pieces, not recomputed as (1/2)<[Omega_l, Omega_k^dagger]>; the reading about the half-per-mode structure fixing hbar is declared out of the proved content"
+  check_spectrum_depends_only_on_depth:
+    kind: sampled
+    clauses: ["spec H = (cosh^2 r, cosh^2 r, 1 + 6x + 6x^2)", "tr H = 3 + 8x + 6x^2", "(3) m_e = m_mu identically in the class"]
+    omits: "characteristic invariants equal across lambda = 0, 3/4, 4/3 at fixed depth for two depths and one channel phase; the trace and heavy-eigenvalue identities are rational-function identities in x (exact); the light-pair degeneracy outside these samples rests on the rigidity result"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Q(zeta) Wick evaluation at sample depths, ratios and phases; the statement's 'every pairing' is sampled."

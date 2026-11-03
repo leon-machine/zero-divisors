@@ -1,0 +1,24 @@
+functions:
+  check_even_subalgebras_and_spin_groups_agree:
+    kind: partial
+    clauses: ["(i)", "(ii)"]
+    omits: "only the structure beneath the copy is tested: the even subalgebras of the reversal pairs (2,4)/(4,2) and (1,3)/(3,1) agree and have equal type; the gauge algebra, global form, hypercharges, chirality halves, massless mirror photon and neutrinos of (i) are not computed here"
+  check_complexified_fibres_and_ground_types:
+    kind: exact
+    clauses: ["list item (b): the complexified fibres agree", "(ii) the ground types H and R differ while the derivation does not see them"]
+    omits: "that the derivation never uses the tower's real Clifford module is an argument over the proof, not tested"
+  check_standard_model_running_and_mean_mass_ratio:
+    kind: partial
+    clauses: ["(iii) one-loop coefficients b = (41/10, -19/6, -7) of the copied content", "f_2 = 1 up to the ratio of mean mass per baryon, 0.995 on the burning branch"]
+    omits: "b is computed for this tower's content only; that the mirror's beta-functions equal ours is the copy of (i), not recomputed from an independent mirror listing, and Lambda_2 = Lambda_6, c_2 = c_6 are not separately tested; the mean-mass ratio is bracketed in (0.994, 0.996)"
+  check_p2_caveat_mirror_at_our_temperature:
+    kind: exact
+    clauses: ["Caveat (T14c): xi = 1 under P2 gives Delta N_eff = (8/7)(11/4)^(4/3) + 3.044 in (7.44, 7.45), which the record excludes"]
+    omits: "the exclusion is tested against the check's own cap constant, not against a cited bound"
+untouched_premises:
+  dark-matter.p1-single-frozen-point: "enters only the weaker second route in (v), a reading and not a computation (docstring)"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Renamed check_running_and_share_of_one to check_standard_model_running_and_mean_mass_ratio, removed the asserts that compared the same list with itself, and reworded docstring (iii): the mirror's equal running is the copy of (i), not recomputed. 2026-10-23 (weak checks): check_p2_caveat_mirror_at_our_temperature now pins the cube-root bracket of 11/4 exactly, Delta N_eff to (7.44720, 7.44721) from both ends of the bracket, and the ratio to the cap at 24 (integer part); quoted window and cap moved to module level."

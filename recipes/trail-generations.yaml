@@ -1,0 +1,25 @@
+doc: trail-generations
+title: 'Families of quarks and leptons'
+author: Leon Butler
+level: lay
+spine:
+- families.three-generations-faces-maximal-composite
+- families.three-identical-families-mixing-shared-slots
+- families.source-term-linear-tilt-mass-functional
+- refuted.the-vacuum-omega-area-sets-the-weak-scale
+- families.alignment-computed-thirteenth-refutation-democracy-one
+- families.faces-ordered-what-identification-requires-first
+- families.skeleton-rank-one-plus-ordering-shift
+- families.linear-conjecture-refuted-data
+- families.koide-class-crossing-fit-conclusion
+- families.one-open-problem-three-forms
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

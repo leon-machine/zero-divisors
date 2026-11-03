@@ -1,0 +1,18 @@
+functions:
+  check_conformal_spinor_space_has_complex_dimension_four:
+    kind: exact
+    clauses: ["\"The spinor module of the completed algebra Cl(2,4) is the conformal spinor space CS ... of dimension 4 over the complex unit I6\""]
+    omits: "exact in the three-mode Fock model of Cl(2,4) (Clifford relations, I6^2 = -1 central acting as +-i on the even sector, the 32 even blades spanning all 4 x 4 complex matrices); the identification of this Fock even sector with Cl^+(2,4)P is the premise's content and is not tested here"
+  check_palatial_symmetric_ordering_shift:
+    kind: exact
+    clauses: ["\"[Z^mu, Zbar_nu] = hbar delta^mu_nu\"", "\"q(M) = sum M Z Zbar - (hbar/2) tr M\"", "\"shifts q(id) by -hbar/2 per complex dimension, totalling -2 hbar\""]
+    omits: "hbar = 1; commutator on all monomials of degree <= 2 in 4 variables and all index pairs; q(M) identity for three sample M (identity, a generic one, a cyclic shift), which follows for every M from the exhaustive commutator check; shift -1, -3/2, -2 for 2, 3, 4 variables; 'Zbar the dual of Z under the reversion form h' is not tested"
+  check_clifford_storey_shift_matches:
+    kind: exact
+    clauses: ["\"on the Clifford storey, the boost generator of each adjoined plane is N - 1/2, a shift of minus one half per fermionic mode\"", "\"the two storeys carry the same signed ordering shift\""]
+    omits: "one hyperbolic plane Cl(1,1); further planes are copies and are not tested; the equality of the two shifts is read off by comparing -1/2 per mode with the palatial -1/2 per variable, not computed as a single statement"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite algebra behind each clause is checked exactly; the identification of the Fock model with the conformal spinor ideal and the reversion-form duality are premise content"

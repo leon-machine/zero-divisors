@@ -1,0 +1,22 @@
+functions:
+  check_operator_coupling_gives_registered_phase:
+    kind: sampled
+    clauses: ["\"the branch states are eigenstates and the relative phase arg(c11 c22/(c12 c21)) under exp(-I4 H t) is +Phi\""]
+    omits: "three layouts (r11, r22, r12, r21) with G = 1, M_A = 2, M_B = 3 and three unit-circle samples for the entangling determinant; massless rung numbers only here"
+  check_no_self_interaction_unlike_mean_field:
+    kind: sampled
+    clauses: ["\"no interaction between a body's own branches\"", "\"unlike the mean-field (Schrodinger-Newton) source, which entangles nothing\""]
+    omits: "three layouts; the mean-field source is modelled as <N> = 1/2 on each mode with a chosen self distance, a specific stand-in for the Schrodinger-Newton source"
+  check_massive_sources_quasi_particles_and_block_charges:
+    kind: sampled
+    clauses: ["\"(rung numbers of massless modes,) quasi-particle numbers or block charges of massive ones\""]
+    omits: "one mass block (K = 0, mu = 1) plus a two-block commutation check; the phase at the three layouts is computed from assigned 0/1 occupations by formula, not by acting H_N on massive branch states, and the stated 'either source' is not separately computed"
+  check_rigid_composites_monopole_plus_a_squared:
+    kind: sampled
+    clauses: ["\"for rigid composite bodies the phase is that of the total mass plus a correction of relative order (a/R)^2\""]
+    omits: "one layout (D = 20, separation 4), two unit-mass collinear constituents per body; f(0) = f'(0) = 0, f''(0) != 0 and a halving ratio in (7/2, 9/2) at a = 2, 1, not a general bound"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks test the statement's clauses at chosen layouts and one composite layout; the mean-field comparison and massive sector rest on stated stand-ins"

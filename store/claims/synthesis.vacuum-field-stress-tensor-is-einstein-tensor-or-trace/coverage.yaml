@@ -1,0 +1,22 @@
+functions:
+  check_first_order_data:
+    kind: sampled
+    clauses: ["preamble: omega_v(I_g, w) = -Sch(v,w) and omega_v(X, w) = g(v,w)"]
+    omits: "the tractor-connection matrix is coded from the Fact's non-Levi part; checked for one generic P, three vectors v and the four coordinate vectors w; that the classes are independent of the off-x extension is not tested"
+  check_schur:
+    kind: exact
+    clauses: ["(1) Theta = a Sch + b J g + c g: the equivariant linear maps of Sym^2 are spanned by the identity and P -> tr(P) eta"]
+    omits: "kernel of the commutation equations for a boost, two rotations and two reflections is exactly 2-dimensional (an upper bound for the full O(1,3) commutant, which contains both maps); that the constant term is a multiple of g (the only invariant symmetric tensor) is not computed"
+  check_dichotomy:
+    kind: sampled
+    clauses: ["(2) with 1 + kappa a != 0 the null-ray clause forces Sch to be proportional to g, and then Theta is pure trace with Theta(l,l) = 0", "(2) with a = -1/kappa the clause holds for every Sch"]
+    omits: "kappa = 3 (every step is linear in kappa), three triples (a, b, c), eleven null vectors giving rank 9 (so the solution space is span(eta)); the clause (1 + kappa a) P(l,l) = 0 is written into the rows rather than derived from the pairing classes; the explicit trace coefficient (a/4 + b) J + c is not asserted, only that the trace-free part vanishes"
+  check_conservation:
+    kind: sampled
+    clauses: ["(3) div Theta = (a + b) grad J via the contracted Bianchi identity", "(3) conserved for every metric iff b = 1/kappa in case (a)", "(3) then Theta = -(Ric - R g/2)/(8 pi G) + c g and Ric + 8 pi G Theta = (R/2 + 8 pi G c) g"]
+    omits: "one metric jet (vanishing first derivatives, pseudo-generic second and third derivatives) at the origin, kappa = 3, c = 2/7 and two pairs (a, b); 'iff' uses that grad J is nonzero in this jet; (4) the consequence for matter laws of the form of clause (7) is logical and is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the representation-theoretic step (1) is exact; the dichotomy and conservation are checked at sample coefficients and one metric jet"

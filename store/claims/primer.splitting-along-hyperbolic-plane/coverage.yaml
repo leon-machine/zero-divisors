@@ -1,0 +1,22 @@
+functions:
+  check_hyperbolic_pair_and_plane_basis:
+    kind: sampled
+    clauses:
+    - (1) "{1, v, w_0, v w_0} is a linear basis of Cl(H_0)"
+    - '"a hyperbolic pair (v, w_0): null vectors with v w_0 + w_0 v = 1"'
+    omits: two pairs only, the standard (e0 + e1)/2, (e0 - e1)/2 and a rescaled one
+  check_unique_split_expansion:
+    kind: sampled
+    clauses:
+    - (1) "every element of Cl(V') admits a unique expansion sigma = alpha + v beta + w_0 gamma + v w_0 delta with alpha, ..., delta in Cl(U')"
+    omits: nine forms of U' (dimension at most 4, degenerate included) with two hyperbolic pairs; the expansion is shown as a basis (full rank 2^n) plus one decomposed sample element
+  check_left_mult_by_v_injective:
+    kind: sampled
+    clauses:
+    - (2) "Left multiplication by v is injective on Cl(U')"
+    omits: the same nine forms and two pairs; the control that v is a zero divisor on all of Cl(V') is not part of the statement
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the three clauses are exact rank computations on nine sample forms of U' including degenerate ones

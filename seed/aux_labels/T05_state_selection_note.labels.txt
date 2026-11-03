@@ -1,0 +1,42 @@
+\newlabel{sec:gap}{{1}{3}{The gap, stated exactly}{section.1}{}}
+\newlabel{eq:car}{{1}{3}{Notation and standing conventions}{equation.1.1}{}}
+\newlabel{eq:descent}{{2}{3}{Notation and standing conventions}{equation.1.2}{}}
+\newlabel{tab:results}{{1}{4}{The results of this note and what each does to Step 4d's hypotheses. (P) is the univalence premise of Section \ref {sec:parity}; (R) the regularity premise of Section \ref {sec:rate}; (L$_E$) the ledger locality premise of Section \ref {sec:correlations}}{table.1}{}}
+\newlabel{sec:parity}{{2}{4}{The descent is the parity map}{section.2}{}}
+\newlabel{def:grading}{{2.1}{4}{The grading and the parity automorphism}{theorem.2.1}{}}
+\newlabel{thm:parity}{{2.2}{4}{The descent is the parity average}{theorem.2.2}{}}
+\newlabel{rem:evenledger}{{2.3}{5}{What this says about the two ledgers}{theorem.2.3}{}}
+\newlabel{sec:form}{{3}{5}{The form is forced; only one number is free}{section.3}{}}
+\newlabel{thm:form}{{3.1}{5}{The descended form is state independent}{theorem.3.1}{}}
+\newlabel{rem:honest}{{3.2}{6}{The honest reading, and why it sharpens the gap}{theorem.3.2}{}}
+\newlabel{prem:parity}{{3.3}{6}{(P): univalence}{theorem.3.3}{}}
+\newlabel{fact:www}{{3.4}{6}{Imported: the univalence superselection rule}{theorem.3.4}{}}
+\newlabel{thm:even}{{3.5}{6}{Ascended marginals are diagonal}{theorem.3.5}{}}
+\newlabel{rem:bought}{{3.6}{7}{What was bought}{theorem.3.6}{}}
+\newlabel{sec:rigidity}{{4}{7}{One temperature, and the rigidity of the number}{section.4}{}}
+\newlabel{def:gmc}{{4.1}{7}{The geometric modular condition}{theorem.4.1}{}}
+\newlabel{thm:kmsunique}{{4.2}{7}{KMS uniqueness at a factor}{theorem.4.2}{}}
+\newlabel{fact:kmsgeneral}{{4.3}{7}{Imported: the general statement}{theorem.4.3}{}}
+\newlabel{cor:universal}{{4.4}{8}{Universality of the temperature}{theorem.4.4}{}}
+\newlabel{thm:rigidity}{{4.5}{8}{Rate rigidity: the temperature is not algebra intrinsic}{theorem.4.5}{}}
+\newlabel{rem:clocks}{{4.6}{8}{Two clocks, one calibration}{theorem.4.6}{}}
+\newlabel{sec:rate}{{5}{9}{Fixing the rate: one premise, and its habitat inside the framework}{section.5}{}}
+\newlabel{prem:reg}{{5.1}{9}{(R): regularity at the fixed locus}{theorem.5.1}{}}
+\newlabel{prop:euclid}{{5.2}{9}{The Euclidean partner is curvature selected}{theorem.5.2}{}}
+\newlabel{thm:rate}{{5.3}{9}{The rate, and the discharge of hypothesis (iii)}{theorem.5.3}{}}
+\newlabel{cor:statistics}{{5.4}{10}{Where the $+1$ of Fermi-Dirac comes from}{theorem.5.4}{}}
+\newlabel{rem:priceR}{{5.5}{10}{The honest price of (R)}{theorem.5.5}{}}
+\newlabel{rem:dictionary}{{5.6}{10}{The dictionary}{theorem.5.6}{}}
+\newlabel{sec:purity}{{6}{11}{Purity is an output, not an input}{section.6}{}}
+\newlabel{thm:gns}{{6.1}{11}{The partner and the purification are canonical}{theorem.6.1}{}}
+\newlabel{rem:israel}{{6.2}{11}{Israel's reading, upgraded}{theorem.6.2}{}}
+\newlabel{sec:correlations}{{7}{11}{What equilibrium cannot supply: correlations}{section.7}{}}
+\newlabel{thm:overdet}{{7.1}{12}{Exact equilibrium over-determines the ledger}{theorem.7.1}{}}
+\newlabel{rem:rescue}{{7.2}{12}{Why this rescues rather than damages the chain}{theorem.7.2}{}}
+\newlabel{prem:local}{{7.3}{12}{(L$_E$): ledger locality}{theorem.7.3}{}}
+\newlabel{prop:diagonal}{{7.4}{13}{Number-diagonal dynamics; the model's scrambling derived}{theorem.7.4}{}}
+\newlabel{rem:local}{{7.5}{13}{The status of (L$_E$)}{theorem.7.5}{}}
+\newlabel{sec:relocated}{{8}{13}{The gap, relocated}{section.8}{}}
+\newlabel{tab:status}{{2}{13}{Step 4d after this note. The status line ``up to a state'' becomes ``proved from (P) and (R)''}{table.2}{}}
+\newlabel{sec:open}{{9}{14}{What remains open}{section.9}{}}
+\newlabel{sec:verify}{{10}{15}{Machine verification}{section.10}{}}

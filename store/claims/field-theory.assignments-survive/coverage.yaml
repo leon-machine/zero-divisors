@@ -1,0 +1,19 @@
+functions:
+  check_listing_and_conjugate_anomaly_free:
+    kind: exact
+    clauses: ["the listing and its conjugate (Y -> -Y, 3 <-> 3bar) are both anomaly-free"]
+    omits: "all five anomaly sums vanish for listing (a), its conjugate, and the conjugate read as right-handed; the mixed listing (doublets conjugated, singlets not) fails with -2/3, 4/9, -4 as a control"
+  check_exactly_four_patterns:
+    kind: complete
+    clauses: ["of the 64 conjugation patterns of one generation exactly four are anomaly-free", "every multiplet except the self-conjugate nu^c enters with the same status"]
+    omits: ""
+  check_conjugate_representations_with_i4:
+    kind: exact
+    clauses: ["the listing and its conjugate differ by the outer automorphism Y -> -Y, 3 <-> 3bar"]
+    omits: "computes only that the conjugate of the SU(2) doublet is equivalent to it (intertwiner of real dimension 2, epsilon) and the conjugate of the SU(3) triplet has no intertwiner with the triplet; that the I4-antilinear reading is the outer automorphism is not computed, and 'do not involve the complex unit' for the content and hypercharges is read from the other two checks"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The anomaly enumeration over all 64 patterns is exhaustive; the representation-theoretic check supports but does not directly state the outer-automorphism identification."

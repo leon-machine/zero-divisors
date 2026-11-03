@@ -1,0 +1,35 @@
+functions:
+  check_type_p_and_annihilating_idempotents:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "type P is shown by n being neither a vector nor a central idempotent (the Step 2 test encoded by hand, not by calling the algorithm); the reading that the obstruction is type N carried by the adjoined null vectors, the no-go closure and the point-level (1,1) ascent are imported, not computed"
+  check_moore_penrose_and_fock_adjoint:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "that the Fock form is definite (so that the Fact singles out these self-adjoint idempotents) is not tested; self-adjointness of nn^dag and n^dag n is"
+  check_rung_bivector_is_cartan:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "'Cartan element of the mode' is a naming; the squares and the commutation with N are what is computed"
+  check_reflection_exchanges_hop_and_pairing:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: ""
+  check_generators_square_and_rotors:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "Spin(2,2) membership is checked as evenness and R R~ = 1 (and R^dag R = 1); the twisted-adjoint action on vectors is not computed"
+  check_pairing_pair_identities:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "'the pairing rotation is the rotation of the plane this pair spans' is a reading and not computed"
+  check_pinching_erases_ladder_words:
+    kind: exact
+    clauses: ["(vii)"]
+    omits: ""
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is about one algebra, Cl(2,2), and each clause is verified exactly there (all 256 blade pairs for the anti-automorphism and the reflection); the imported readings of Step 3 are declared uncomputed in the docstring."

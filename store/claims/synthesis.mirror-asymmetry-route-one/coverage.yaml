@@ -1,0 +1,10 @@
+functions:
+  check_reversal_keeps_flag:
+    kind: partial
+    clauses: ["(i) Phi is an anti-isometry carrying the Witt pair to the Witt pair", "(i) Lambda Phi intertwines creation, annihilation up to -1, and every number operator; grade preserved", "(i) Phi o C is a second anti-isometry carrying W to Phi W', in the other family"]
+    omits: "one split Witt pair in a fixed basis of the 6-dimensional fibre, not every Witt pair of V_C; the families are computed by dim(X cap Y) mod 2 for that pair only; the asymmetry per mode and its signs +1 and -1 are not computed; (ii) and (iii) (epsilon_2 = +-epsilon_6, the orientation input, the scoping of P2) have no content in the check"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Function renamed check_reversal_keeps_flag; the families message is now backed by a computed family classification (dim(X cap Y) mod 2 for W, W', Phi W, Phi W', (Phi o C) W); module docstring lists what is not computed."

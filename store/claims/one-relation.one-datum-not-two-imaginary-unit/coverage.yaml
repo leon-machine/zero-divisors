@@ -1,0 +1,34 @@
+functions:
+  check_commutant_of_c:
+    kind: exact
+    clauses:
+    - '"The commutant of C in Cl+(1,3) is four-dimensional, spanned by 1 and the three bivectors"'
+    - '"the pseudoscalar, though even and a square root of -1, anticommutes with C"'
+    omits: ''
+  check_complex_structures_are_a_two_sheeted_hyperboloid:
+    kind: sampled
+    clauses:
+    - '"On the commutant J^2 = -1 iff the scalar part vanishes and the bivector part has unit timelike-signature norm, a two-sheeted hyperboloid"'
+    omits: a 6^4 rational grid (6 roots, both sheets); the identity J^2 = (a^2+b^2+c^2-d^2) + 2aB is not carried symbolically and the two-sheeted topology is read off the sign of d only
+  check_j_to_gamma0_bijection:
+    kind: sampled
+    clauses:
+    - '"The map J -> gamma_0 := CJ is a bijection from that hyperboloid onto the unit timelike vectors orthogonal to u, with inverse J = C^-1 gamma_0"'
+    omits: five hyperboloid points and four frames; bijectivity is checked as a two-way round trip at samples, not for the whole hyperboloid
+  check_joint_commutant_is_the_spin_plane_u1:
+    kind: sampled
+    clauses:
+    - '"The joint commutant of (C, J) in Cl+(1,3) is span{1, J}, whose rotors form the U(1)"'
+    omits: three J; rotors tested at the single angle (3/5, 4/5)
+  check_alignment_and_ideal_picture:
+    kind: sampled
+    clauses:
+    - '"if the laboratory''s gamma_0 is not orthogonal to the representative''s u, a rotor ... realigns u"'
+    omits: one boost rotor; the ideal-picture checks (P Cl P, P J) have no counterpart in the statement; the bookkeeping that the freedom is used once is not computable
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: all five functions test the displayed Cl(1,3) objects exactly at u = gamma_3 and at sample points, with the sampled kinds recorded
+untouched_premises:
+  std-algebra.duality: "standard algebra cited in the proof; the check computes the statement directly"

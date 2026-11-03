@@ -1,0 +1,14 @@
+functions:
+  check_annihilators_null_and_purity_in_low_dimension:
+    kind: sampled
+    clauses:
+    - '"(i) N_psi is totally null"'
+    - '"(iii) for k <= 3 every nonzero spinor of definite parity is pure; for k = 4, 1 + w1 w2 w3 w4 is
+      not"'
+    omits: ten sampled spinors of definite parity for k = 2, 3, the one k = 4 counterexample and one mixed-parity
+      control; (ii) is not tested
+  check_thouless_form_is_pure:
+    kind: sampled
+    clauses:
+    - '"(iv) psi_Z is pure, with N spanned by v_i - sum_j Z_ij w_j"'
+    omits: one antisymmetric Z for k = 3 and one for k = 4

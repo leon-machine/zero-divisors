@@ -1,0 +1,17 @@
+functions:
+  check_schmidt_equal_marginal_spectra:
+    kind: sampled
+    clauses: ["capacity arm: S_R = S_L <= ln dim L (Schmidt)"]
+    omits: "five rational coefficient matrices; equal nonzero spectra and the Renyi-2 purity bound tr rho^2 >= 1/dim L, not the von Neumann bound (docstring: logarithms not evaluated)"
+  check_envelope_min_thermal_capacity:
+    kind: partial
+    clauses: ["S_rad = min(Sth, C)", "rises, turns over at about half the initial entropy, falls, vanishes at complete evaporation"]
+    omits: "maximally entangled qubit idealisation only (min(r, l) Bell pairs, l0 = 6), where the min holds by construction; Page-typical saturation, the thermal arm's locality inputs and subleading corrections are not tested"
+untouched_premises:
+  singularity.stretched-singularity-count: "supplies dim L as the mode count; the check works with abstract qubit dimensions"
+  singularity.imported-page-average-entropy-subsystem: "Page's theorem for typical states; the docstring states saturation is not checked"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says Page saturation, locality inputs and the von Neumann form are not checked; the two functions test the Schmidt arm and an idealised envelope."

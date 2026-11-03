@@ -1,0 +1,14 @@
+functions:
+  check_hyperbolic_plane_gives_skew_lines:
+    kind: sampled
+    clauses: ["(3) determines (2) and (1)", "the mixed slot Som ^ Spi equals {n0, ninf}^perp of dimension four"]
+    omits: "four sample hyperbolic pairs (mode-0, a complex mode-2 pair, two mixing modes); 'naturally' (equivariance of the correspondence) is not tested"
+  check_splitting_gives_hyperbolic_plane:
+    kind: sampled
+    clauses: ["(2) determines (3), and the planes are recovered", "(1) and (2) correspond through the planes", "the mixed slot equals {n0, ninf}^perp"]
+    omits: "three sample splittings (complex included) with the scale fixed by eps(N_0 ^ N_inf) = 1; a control shows meeting lines give eps = 0; the joint normalisation of scale in (1) is not separately tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both directions of the three-way correspondence are checked on a handful of explicit data; the general naturality is not exercised."

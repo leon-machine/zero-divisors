@@ -1,0 +1,16 @@
+functions:
+  check_face_word_monomial_algebra:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: (i) is verified on every monomial of degree at most three (twenty monomials), entry by entry in the occupation basis; the induction on the degree that proves it for all degrees is in the proof text
+  check_mass_form_is_floor_plus_weighted_density:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: (ii) is verified entrywise on five non-Gaussian superpositions of up to five monomials of degree at most three with complex rational coefficients, with the trace identity and the Hermiticity and leading-minor positivity of G; mixed states follow by linearity and are not sampled; the general-degree statement is the proof's
+  check_forced_eigenvector_is_lowest_in_source_built_states:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: (iii) is verified at a = 1 and a = 2/3 on seven source-built states each (degree at most three, V insertions included) and on the stored word in n; the clause for all polynomials is the derivation argument of the proof; (iv) is arithmetic on measured masses in the proof text and is not checked

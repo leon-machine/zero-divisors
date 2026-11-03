@@ -1,0 +1,43 @@
+functions:
+  check_tractor_field_strength_of_torsion_free_field_annihilates_x:
+    kind: sampled
+    clauses:
+    - (i) the tractor field strength of a torsion-free field satisfies F . X = 0; a torsion block violates it
+    omits: checked on three sample Weyl tensors with a fixed Cotton block; the general case is the block form of the stored theorem, argued in the proof
+  check_eps_contraction_is_independent_of_the_second_vector_on_the_locus:
+    kind: sampled
+    clauses:
+    - (ii) eps(Y, X, F, G)/(X.Y) is independent of Y on the locus (X fixed) and not off it; eps(I, V, F, F) = eps(I, X, F, F) = (X.I) eps_X(F, F) in the store orientation
+    omits: three choices of Y, Lambda in {3, -3, 9/7} and one general tractor; the general case is the dimension argument in the proof
+  check_frozen_point_integrand_is_a_quarter_weyl_square:
+    kind: complete
+    clauses:
+    - (iii) eps_X(F, F) = (1/4) W_abcd W^abcd, the Cotton block not contributing
+    omits: 'none: the polarised identity is verified on a basis of the ten-dimensional Weyl space'
+  check_invariant_forms_on_the_locus_are_chern_and_weyl:
+    kind: exact
+    clauses:
+    - (iv) stab(X)-invariant bilinear forms on wedge^2(X^perp) are spanned by K and eps_X (symmetric dimension 2, antisymmetric 0); behaviour under the internal reflection; so(2,4) has one and so(1,3) two
+    omits: 'none: finite linear algebra over the rationals'
+  check_frame_leg_pairings_vanish_on_the_locus:
+    kind: complete
+    clauses:
+    - (iv) K(DX ^ DX, F) and eps_X(DX ^ DX, F) vanish on the locus (all ten basis Weyl tensors); the volume pairing does not
+    omits: 'none: both pairings are linear in W and are checked on all ten basis Weyl tensors (plus three samples with a Cotton block)'
+  check_weyl_square_integral_is_not_topological:
+    kind: exact
+    clauses:
+    - (v) the Weyl-square integral over S2 x S2 changes with the radius ratio while the Euler integral is constant
+    omits: Riemannian signature; the transfer to Lorentzian signature is the polynomial-identity argument in the proof
+  check_chern_form_is_the_chern_simons_derivative:
+    kind: sampled
+    clauses:
+    - (iv) the Chern form <F ^ F>_0 is d of the Chern-Simons form
+    omits: one fixed second-order jet of a connection at a point; the general identity is the Bianchi identity (cited)
+untouched_premises:
+  synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part: cited in the reading for the Einstein equations of the functional on its own field space; nothing here is computed from it
+  synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale: cited in the reading (the integrand is scale-blind on a conformal class); nothing computed from it
+  synthesis.promoted-norm-weyl-clock-flat-weight: cited for agreement of the normalisation with the stored instanton value; nothing computed from it
+  synthesis.imported-miskovic-olea-identity: cited for agreement on Einstein fields; the identity here is proved for every torsion-free field and checked independently
+  synthesis.imported-chern-weil-and-chern-simons-forms: imported Fact for the exactness of the Chern form in general (clause (iv)); the check verifies the identity on one fixed jet and calls no premise
+  synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form: imported Fact for the Bach equations and the conformal-gauge reading used in the Reading; nothing is computed from it

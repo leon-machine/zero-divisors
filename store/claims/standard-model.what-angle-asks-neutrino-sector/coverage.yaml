@@ -1,0 +1,17 @@
+functions:
+  check_triplet_vev:
+    kind: partial
+    clauses: ["M_I = 1.95e10 GeV and g_R(M_I) = 0.469, so v_R = M_I/g_R = 4.15e10 GeV"]
+    omits: "M_I and g_R are the record's printed values (typed constants); the two-loop chain run that produces them is not recomputed. Only the division and the roundings are verified."
+  check_effective_dirac_mass:
+    kind: exact
+    clauses: ["m_D = sqrt(m_3 f_J v_R) = 1.44 sqrt(f_J) GeV"]
+    omits: "Exact integer square-root rounding from the typed v_R and m_3 (0.0502 and 0.050 eV); the seesaw relation is checked at three couplings f_J."
+untouched_premises:
+  standard-model.matching-traces: "enters only through the chain whose run gives M_I and g_R; that run is record level and not recomputed"
+  standard-model.hyp-s-slot-statistics: "hypothesis with no computable content in this arithmetic"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The arithmetic downstream of the record values is exact; the record values themselves are inputs."

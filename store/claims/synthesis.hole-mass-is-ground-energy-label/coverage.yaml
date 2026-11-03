@@ -1,0 +1,22 @@
+functions:
+  check_ground_energy_exceeds_free_energy:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Z' > 1 on (0,1) by a Bernstein certificate for four listed spectra and all 53 multi-state spectra with levels 0..3 and degeneracies at most 2 (the docstring says exactly this), not for every spectrum; the Gibbs identity beta<H'> = A/4 - ln Z', the bounds M/2 < E_0 <= M and (i) F = M/2, ln Z = -A/4 are not computed"
+  check_heat_capacity_sign:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "u d<H>/du = Var(H) exactly and Var > 0 on (0,1) for two finite spectra; dM/d beta = 1/(8 pi) > 0, E_0(M)/M in (1/2, 1], and 'H_M cannot be independent of M on any interval' are not computed"
+  check_zero_weight_split:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "zero-weight sector for |J| = 1..6: Z' = 2^|J|, <H'> = 0, e^{-beta E_0} = 4^{-|J|} (the Smarr statement as arithmetic on e^{-S} = 2^{-|J|}); weights 1, 2 give Z' = (1+u)(1+u^2) and <H'> > 0; 'E_0 = M iff H_M is scalar on the support' and kappa_c = 1/(4 ln 2) are not tested"
+  check_symmetric_ordering:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "n - 1/2 = -(1/2) tanh(x/2) as an exact rational-function identity in u = e^{-x}, and beta E = x(n - 1/2) <= 0 on (0,1); the other half of the inequality, 0 < s(x), and the shift -sum omega_j/2 of E_0 are not asserted"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring (a) now names what is tested (four listed spectra plus all 53 multi-state spectra with levels 0..3, degeneracies <= 2), and the enumeration was added; (i) and the E_0 bounds remain listed as not computed."

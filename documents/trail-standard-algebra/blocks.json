@@ -1,0 +1,447 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "Every result in the Transport Papers is stated in one algebra: the geometric algebra of a space of directions with a rule for their square lengths. [[t]] This trail walks through its core, from that one rule to rotors, the classification of the real algebras, and the fermion Fock space. [[t]]\n\nProducts of basis directions form a basis of the whole algebra, even when some directions have zero length. [[c:std-algebra.blade-basis]] Sandwiching between directions carries out every reflection and rotation, and each rotation comes from exactly two rotors, $R$ and $-R$. [[c:std-algebra.spin-double-cover]]\n\nPairs of light-like directions behave exactly like fermion creation and annihilation operators. [[c:std-algebra.witt-basis-car]]",
+  "hash": "8685f1fdab8b"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk starts with the defining rule, builds up grades and symmetries, and ends where the algebra meets quantum theory. [[t]]",
+  "hash": "cc1b33a405df"
+ },
+ {
+  "id": "s:standard-algebra",
+  "type": "section",
+  "title": "Clifford algebras and quadratic forms",
+  "hash": "e368d2e5687c"
+ },
+ {
+  "id": "i:standard-algebra",
+  "type": "framing",
+  "text": "These results build the geometric algebra from one rule and show what it contains. [[t]]",
+  "hash": "8de62bfb9c77"
+ },
+ {
+  "id": "t:^>std-algebra.vector-squares",
+  "type": "transition",
+  "between": [
+   null,
+   "std-algebra.vector-squares"
+  ],
+  "text": "The algebra has a single defining rule: a vector $v$ multiplied by itself gives its square length $Q(v)$, a plain number. [[c:std-algebra.vector-squares]]\n\nApplying that rule to a sum of two vectors $u$ and $v$ gives \\[ uv + vu = 2B(u, v), \\] where $B$ is the dot product that $Q$ defines. [[c:std-algebra.vector-squares]] So the product $uv$ is the scalar $B(u, v)$ plus a part that changes sign when the order is swapped. [[c:std-algebra.vector-squares]]",
+  "hash": "f219a5ffa02b"
+ },
+ {
+  "id": "c:std-algebra.vector-squares",
+  "type": "theorem",
+  "claim": "std-algebra.vector-squares@1",
+  "title": "The product of two vectors",
+  "text": "Multiplying two arrows gives a number plus something new. The number is their ordinary dot product. The new part changes sign when the order is swapped, and turns out to be the oriented plane the two arrows span.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.polarisation"
+  ],
+  "hash": "e7e6d91d65a0",
+  "number": 1
+ },
+ {
+  "id": "t:std-algebra.vector-squares>std-algebra.blade-basis",
+  "type": "transition",
+  "between": [
+   "std-algebra.vector-squares",
+   "std-algebra.blade-basis"
+  ],
+  "text": "Reordering costs only a sign and a scalar, and a repeated vector collapses to a number, so every product reduces to products $e_I$ of distinct basis vectors in increasing order. [[c:std-algebra.blade-basis]]\n\nIn $n$ dimensions these blades, from $1$ up to the full volume, form a basis, so \\[ \\dim \\Cl(V, Q) = 2^{n} \\] [[c:std-algebra.blade-basis]] This holds when some directions have zero length, which matters because the series works in exactly such degenerate spaces. [[c:std-algebra.blade-basis]]",
+  "hash": "afab5176520b"
+ },
+ {
+  "id": "c:std-algebra.blade-basis",
+  "type": "theorem",
+  "claim": "std-algebra.blade-basis@1",
+  "title": "The blade basis, degenerate forms included",
+  "text": "Every element of the algebra is a combination of products of distinct basis arrows, and no such product can be written in terms of the others. In $n$ dimensions there are $2^{n}$ of them: the number, the arrows, the planes, the volumes and so on. This stays true even when some directions have zero length.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.existence-uniqueness",
+   "std-algebra.vector-squares"
+  ],
+  "hash": "c168fcf3af4f",
+  "number": 2
+ },
+ {
+  "id": "t:std-algebra.blade-basis>std-algebra.involution-properties",
+  "type": "transition",
+  "between": [
+   "std-algebra.blade-basis",
+   "std-algebra.involution-properties"
+  ],
+  "text": "Each blade has a grade $k$, the number of vectors in it, so every element splits into scalars, vectors, bivectors and so on. [[c:std-algebra.involution-properties]]\n\nThree ways of flipping an element act on grade $k$ by a sign: the grade involution, reversion (writing every product backwards) and their composite. [[c:std-algebra.involution-properties]] Reversion, written with a tilde, acts by \\[ \\tilde{x} = (-1)^{k(k-1)/2} x \\] on grade $k$, and it is the one that undoes rotations later in the walk. [[c:std-algebra.involution-properties]]",
+  "hash": "9fffb030b2aa"
+ },
+ {
+  "id": "c:std-algebra.involution-properties",
+  "type": "theorem",
+  "claim": "std-algebra.involution-properties@1",
+  "title": "The three involutions on each grade",
+  "text": "The three basic ways of \"flipping\" an element each multiply every grade by plus or minus one, according to a simple pattern in the grade. Reversion, for example, leaves numbers and arrows alone and changes the sign of planes and volumes.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.functoriality",
+   "std-algebra.existence-uniqueness",
+   "std-algebra.grade-decomposition"
+  ],
+  "hash": "e987e1e06d9e",
+  "number": 3
+ },
+ {
+  "id": "t:std-algebra.involution-properties>primer.centre",
+  "type": "transition",
+  "between": [
+   "std-algebra.involution-properties",
+   "primer.centre"
+  ],
+  "text": "The elements that commute with everything form the centre of the algebra. [[t]]\n\nWith $n$ even only the scalars are central. [[c:primer.centre]] With $n$ odd the pseudoscalar $\\omega = e_1 e_2 \\cdots e_n$, the product of all the basis vectors, is central too. [[c:primer.centre]]\n\nWhether the pseudoscalar squares to plus or minus one decides much of the algebra's shape, as the classification below shows. [[t]]",
+  "hash": "7df059963ca4"
+ },
+ {
+  "id": "c:primer.centre",
+  "type": "theorem",
+  "claim": "primer.centre@2",
+  "title": "The centre",
+  "text": "The centre of an algebra is the set of its elements that commute with everything in it. For the Clifford algebra of a space with an even number of dimensions, only the ordinary numbers do this. With an odd number of dimensions there is one more such element, the product of all the basis directions, so the centre becomes two-dimensional.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "ee3881dfd598",
+  "number": 4
+ },
+ {
+  "id": "t:primer.centre>std-algebra.reflection",
+  "type": "transition",
+  "between": [
+   "primer.centre",
+   "std-algebra.reflection"
+  ],
+  "text": "A vector $u$ with $Q(u) \\ne 0$ can be divided by. [[c:std-algebra.reflection]] Sandwiching another vector $x$ between it and its inverse gives \\[ x \\mapsto -u x u^{-1}, \\] the reflection in the mirror perpendicular to $u$. [[c:std-algebra.reflection]]\n\nSo the algebra does geometry directly: a mirror is just a vector. [[t]]",
+  "hash": "5ae2171d7844"
+ },
+ {
+  "id": "c:std-algebra.reflection",
+  "type": "theorem",
+  "claim": "std-algebra.reflection@1",
+  "title": "Reflection in a non-null vector",
+  "text": "Multiplying an arrow on both sides by a fixed arrow, with a sign, gives its mirror image in the plane perpendicular to the fixed arrow. This works for any fixed arrow that does not have zero length. Mirrors are the building blocks of all rotations.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.inverse-of-vector",
+   "std-algebra.vector-squares",
+   "std-algebra.orthogonal-anticommute"
+  ],
+  "hash": "c094c99ea465",
+  "number": 5
+ },
+ {
+  "id": "t:std-algebra.reflection>std-algebra.spin-double-cover",
+  "type": "transition",
+  "between": [
+   "std-algebra.reflection",
+   "std-algebra.spin-double-cover"
+  ],
+  "text": "Two reflections in a row give a rotation, or a boost in spacetime, and the product of the two vectors is a rotor $R$. [[c:std-algebra.spin-double-cover]] A rotor acts on vectors by \\[ x \\mapsto R x \\tilde{R} \\] [[c:std-algebra.spin-double-cover]]\n\nIn a nondegenerate space every such rotation arises this way, and exactly two rotors, $R$ and $-R$, give the same one. [[c:std-algebra.spin-double-cover]] This doubling is where spinors come from. [[t]]",
+  "hash": "3ef26fbc776c"
+ },
+ {
+  "id": "c:std-algebra.spin-double-cover",
+  "type": "theorem",
+  "claim": "std-algebra.spin-double-cover@1",
+  "title": "Spin double-covers the special orthogonal group",
+  "text": "Every rotation, and every Lorentz boost, is produced by a rotor, and by exactly two of them, which differ by a sign. This two-to-one relation is the origin of spin one-half: a full turn of space changes the sign of the rotor.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "primer.twisted-adjoint-action",
+   "primer.centre",
+   "std-algebra.cartan-dieudonne",
+   "std-algebra.reflection",
+   "std-algebra.inverse-of-vector",
+   "std-algebra.orthogonal-anticommute",
+   "std-algebra.z2-grading"
+  ],
+  "hash": "bdb66fe15455",
+  "number": 6
+ },
+ {
+  "id": "t:std-algebra.spin-double-cover>std-algebra.witt-decomposition",
+  "type": "transition",
+  "between": [
+   "std-algebra.spin-double-cover",
+   "std-algebra.witt-decomposition"
+  ],
+  "text": "Light-like vectors, nonzero vectors with $Q(u) = 0$, cannot be divided by, but they come in pairs. [[c:std-algebra.witt-decomposition]]\n\nA light-like vector $u$ and a partner $w$ span a hyperbolic plane, and the space splits into as many such planes as possible: \\[ V = H_1 \\perp \\dots \\perp H_m \\perp A \\perp \\operatorname{rad} V, \\] with $m = \\min(p, q)$ and $A$ free of light-like vectors. [[c:std-algebra.witt-decomposition]]\n\nThe number of these planes is the Witt index, which later in the lab counts quantum capacity. [[t]]",
+  "hash": "01c2ee4195b4"
+ },
+ {
+  "id": "c:std-algebra.witt-decomposition",
+  "type": "theorem",
+  "claim": "std-algebra.witt-decomposition@1",
+  "title": "Hyperbolic pairs and the Witt decomposition",
+  "text": "Any space with both space-like and time-like directions can be cut into perpendicular copies of the simplest space-time plane, plus a leftover piece that is purely space-like or purely time-like, plus the directions the length rule cannot see. The number of space-time planes, the smaller of the two counts, is the largest number of independent mutually perpendicular light-like directions the space can hold.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.sylvester-inertia",
+   "std-algebra.polarisation",
+   "std-algebra.vector-squares"
+  ],
+  "hash": "1b2b27cc6e29",
+  "number": 7
+ },
+ {
+  "id": "t:std-algebra.witt-decomposition>std-algebra.periodicity",
+  "type": "transition",
+  "between": [
+   "std-algebra.witt-decomposition",
+   "std-algebra.periodicity"
+  ],
+  "text": "Adding one hyperbolic plane doubles the matrix size: \\[ \\Cl(p{+}1, q{+}1) \\cong \\Mat_2(\\Cl(p,q)) \\] [[c:std-algebra.periodicity]]\n\nAdding eight positive or eight negative directions gives sixteen-by-sixteen matrices over the old algebra. [[c:std-algebra.periodicity]] So every real geometric algebra is a matrix algebra over $\\R$, $\\C$ or $\\HH$, or a sum of two such, fixed by $n = p + q$ and by $p - q$ modulo $8$. [[c:std-algebra.periodicity]]",
+  "hash": "e94b25d54f02"
+ },
+ {
+  "id": "c:std-algebra.periodicity",
+  "type": "theorem",
+  "claim": "std-algebra.periodicity@1",
+  "title": "Periodicity and the table of real Clifford algebras",
+  "text": "The algebras of all the different spaces fall into a repeating pattern of eight. Each is a table of real, complex or quaternion numbers, sometimes two such tables side by side, and which kind depends only on the difference between the number of space-like and time-like directions, counted round a clock of eight hours.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.tensor-rules",
+   "std-algebra.cl11-matrix",
+   "std-algebra.blade-basis"
+  ],
+  "hash": "637aeb5ef179",
+  "number": 8
+ },
+ {
+  "id": "t:std-algebra.periodicity>std-algebra.witt-basis-car",
+  "type": "transition",
+  "between": [
+   "std-algebra.periodicity",
+   "std-algebra.witt-basis-car"
+  ],
+  "text": "Return now to the light-like pairs of a hyperbolic plane. [[t]]\n\nChosen as a Witt basis $v_i$, $w_i$, with $B(v_i, w_j) = \\tfrac12 \\delta_{ij}$, they satisfy \\[ v_i w_j + w_j v_i = \\delta_{ij}, \\] and the $v_i$ anticommute among themselves, as do the $w_i$. [[c:std-algebra.witt-basis-car]] These are the canonical anticommutation relations, with $v_i$ annihilating and $w_i$ creating a fermion. [[c:std-algebra.witt-basis-car]]\n\nOne rule about square lengths therefore already contains the algebra of fermions. [[t]]",
+  "hash": "3b0cc1e59c61"
+ },
+ {
+  "id": "c:std-algebra.witt-basis-car",
+  "type": "theorem",
+  "claim": "std-algebra.witt-basis-car@1",
+  "title": "Null pairs satisfy the canonical anticommutation relations",
+  "text": "Inside a Clifford algebra, a direction of space paired with a direction of time produces two zero-length arrows that obey exactly the rules for creating and destroying a fermion. With several such pairs you get several independent fermion modes, without building any Hilbert space first.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.vector-squares"
+  ],
+  "hash": "39b58da139d3",
+  "number": 9
+ },
+ {
+  "id": "t:std-algebra.witt-basis-car>std-algebra.fock-representation",
+  "type": "transition",
+  "between": [
+   "std-algebra.witt-basis-car",
+   "std-algebra.fock-representation"
+  ],
+  "text": "Let the $w_i$ act by adding a direction and the $v_i$ by removing one. [[c:std-algebra.fock-representation]] This writes the whole algebra as matrices on all combinations of the $w_i$: \\[ \\Cl(V, Q) \\cong \\End(\\Lambda W) \\] [[c:std-algebra.fock-representation]]\n\nThat space is the fermion Fock space, and it sits inside the algebra as the left ideal generated by the vacuum idempotent $f$, so states and operators live in one algebra. [[c:std-algebra.fock-representation]]",
+  "hash": "6b93c84815da"
+ },
+ {
+  "id": "c:std-algebra.fock-representation",
+  "type": "theorem",
+  "claim": "std-algebra.fock-representation@1",
+  "title": "The Fock representation, and the Fock space as a minimal left ideal",
+  "text": "The state space of $k$ fermion modes, with its creation and annihilation operators, already sits inside the Clifford algebra of $k$ space and $k$ time directions. The \"empty\" state is an element of the algebra, and the other states are obtained by multiplying it by the creation arrows.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.witt-basis-car",
+   "std-algebra.existence-uniqueness",
+   "std-algebra.blade-basis"
+  ],
+  "hash": "126d6c01cb0e",
+  "number": 10
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:primer.twisted-adjoint-action",
+  "type": "fact",
+  "claim": "primer.twisted-adjoint-action@3",
+  "title": "The twisted adjoint action",
+  "text": "Every symmetry of a geometry that preserves lengths can be built from mirror reflections. In a Clifford algebra each reflection is carried out by sandwiching with a single direction, and a product of directions carries out the combined symmetry. This result sets up the sandwich carefully, with a sign twist for products of an odd number of directions, and shows that each length-preserving symmetry comes from exactly two such products, differing by sign.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim primer.twisted-adjoint-action, version 3 (T00 Lem 9.2)",
+  "hash": "abf0df644548",
+  "number": 11
+ },
+ {
+  "id": "c:std-algebra.cartan-dieudonne",
+  "type": "fact",
+  "claim": "std-algebra.cartan-dieudonne@1",
+  "title": "The Cartan-Dieudonne theorem",
+  "text": "Every rigid symmetry of a nondegenerate space, including rotations and Lorentz boosts, is a sequence of mirror reflections, never more than the number of dimensions. This is why products of arrows can describe all of them.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. Y. Lam, Introduction to Quadratic Forms over Fields, AMS (2005)., the Cartan-Dieudonne theorem; I. R. Porteous, Clifford Algebras and the Classical Groups, Cambridge University Press (1995)., orthogonal groups generated by reflections",
+  "hash": "d04e84dad0ce",
+  "number": 12
+ },
+ {
+  "id": "c:std-algebra.cl11-matrix",
+  "type": "fact",
+  "claim": "std-algebra.cl11-matrix@1",
+  "title": "Cl(1,1) and Cl(2,0) are the real 2x2 matrices",
+  "text": "The algebra of one space and one time direction is exactly the familiar algebra of two-by-two real matrices. The light-like directions become the matrices that move one coordinate into the other.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.cl11-matrix, version 1",
+  "hash": "c07a2ba0d682",
+  "number": 13
+ },
+ {
+  "id": "c:std-algebra.existence-uniqueness",
+  "type": "fact",
+  "claim": "std-algebra.existence-uniqueness@1",
+  "title": "The Clifford algebra exists and is unique",
+  "text": "The rule \"an arrow squared is a number\" can always be realised by an actual algebra, and in essentially one way only. One explicit construction lets arrows act on oriented areas and volumes by adding a direction or removing one.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.existence-uniqueness, version 1",
+  "hash": "5cbc1dbc671c",
+  "number": 14
+ },
+ {
+  "id": "c:std-algebra.functoriality",
+  "type": "fact",
+  "claim": "std-algebra.functoriality@1",
+  "title": "Isometries extend to algebra homomorphisms",
+  "text": "If a map of arrows preserves square lengths, it automatically extends to a map of the whole algebra that respects multiplication. Symmetries of space therefore act on everything built from arrows.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.functoriality, version 1",
+  "hash": "2a916eb582b5",
+  "number": 15
+ },
+ {
+  "id": "c:std-algebra.grade-decomposition",
+  "type": "fact",
+  "claim": "std-algebra.grade-decomposition@1",
+  "title": "The grade decomposition",
+  "text": "In $n$ dimensions there is one number direction, $n$ arrow directions, $n(n-1)/2$ plane directions and so on, and every element splits uniquely into these parts. The split does not depend on which perpendicular axes are chosen.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.grade-decomposition, version 1",
+  "hash": "802f6a438065",
+  "number": 16
+ },
+ {
+  "id": "c:std-algebra.inverse-of-vector",
+  "type": "fact",
+  "claim": "std-algebra.inverse-of-vector@1",
+  "title": "Which vectors and versors are invertible",
+  "text": "An arrow can be \"divided by\" exactly when its square length is not zero. Arrows of zero length, like light rays, cannot be inverted: multiplying such an arrow by itself gives zero. Products of invertible arrows are always invertible, and their inverse is found by writing the product backwards and dividing by a number.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.inverse-of-vector, version 1",
+  "hash": "11cef77d5b9f",
+  "number": 17
+ },
+ {
+  "id": "c:std-algebra.orthogonal-anticommute",
+  "type": "fact",
+  "claim": "std-algebra.orthogonal-anticommute@1",
+  "title": "Orthogonal vectors anticommute",
+  "text": "Perpendicular arrows anticommute: swapping their order flips the sign. That single fact, plus the squares of the basis arrows, gives the whole multiplication table.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.orthogonal-anticommute, version 1",
+  "hash": "662e96ea5444",
+  "number": 18
+ },
+ {
+  "id": "c:std-algebra.polarisation",
+  "type": "fact",
+  "claim": "std-algebra.polarisation@1",
+  "title": "Polarisation",
+  "text": "Knowing the square length of every arrow is the same as knowing the \"dot product\" of every pair of arrows. Each can be recovered from the other by a short formula.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.polarisation, version 1",
+  "hash": "952ed2c2d7b8",
+  "number": 19
+ },
+ {
+  "id": "c:std-algebra.sylvester-inertia",
+  "type": "fact",
+  "claim": "std-algebra.sylvester-inertia@1",
+  "title": "Orthogonal bases and the law of inertia",
+  "text": "However you choose perpendicular unit directions in a space, you always find the same number of \"space-like\", \"time-like\" and \"zero\" directions. These three counts are the space's signature, and they are all there is to know about it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. Y. Lam, Introduction to Quadratic Forms over Fields, AMS (2005)., the diagonalisation of forms and Sylvester's law of inertia (real case)",
+  "hash": "8a3e5b25b5e5",
+  "number": 20
+ },
+ {
+  "id": "c:std-algebra.tensor-rules",
+  "type": "fact",
+  "claim": "std-algebra.tensor-rules@1",
+  "title": "The tensor product rules",
+  "text": "Adding two extra directions to a space has a predictable effect on its algebra: the new algebra is the old one combined with a small two-dimensional algebra, at the cost of possibly swapping which directions count as space-like and which as time-like. Repeating this explains why the algebras repeat with period eight.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.tensor-rules, version 1",
+  "hash": "874c9d5c0722",
+  "number": 21
+ },
+ {
+  "id": "c:std-algebra.z2-grading",
+  "type": "fact",
+  "claim": "std-algebra.z2-grading@1",
+  "title": "The even subalgebra and the Z2 grading",
+  "text": "Parity multiplies like signs: even with even or odd with odd gives even, mixed gives odd. A product of a $j$-grade and a $k$-grade element can only have grades between their difference and their sum, in steps of two.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.z2-grading, version 1",
+  "hash": "d232bdab5f30",
+  "number": 22
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "From the single rule $v^{2} = Q(v)$ the walk has reached rotors, the classification of every real geometric algebra, and the fermion Fock space. [[c:std-algebra.vector-squares]]\n\nThe trail rests on no postulate. [[t]] Each step is proved in the lab and checked by machine, citing the classical law of inertia and the theorem that every isometry is a product of reflections. [[t]]",
+  "hash": "b2e54a8fe45a"
+ }
+]

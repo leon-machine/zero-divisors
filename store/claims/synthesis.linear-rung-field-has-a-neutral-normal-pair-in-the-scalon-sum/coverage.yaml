@@ -1,0 +1,26 @@
+functions:
+  check_i4_is_the_rung_fields_imaginary_unit_and_hypercharge_is_the_imaginary_rapidity_boost:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "the commutation, null-pair and anticommutation relations are checked on all generators (complete); c^2 = Q(c) at one point with four span{1, I4} coefficients; the two rotors at one rational rapidity each (e^t = 4; cos phi = -7/25), and at that phi the image of each gamma_mu, exp(2 phi I4 b) gamma_mu, differs from gamma_mu; bilinearity and the one-parameter groups for general parameters are proved in the text"
+  check_linear_field_spectrum_at_the_family_point:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "three coupling sets (g, g', lam, W', W'', k8, k9, k10) with rational r, the level re-solved for criticality: gradient zero, all eight masses with multiplicities by exact rank, the trace, the gauge kernel, no normal-tangent mixing, the normal pair as the Q-changing directions; plus the pure D-term at one point (five-dimensional kernel, m_h = M_Z, m_pm = M_W); the general formula is proved in the text"
+  check_null_lift_level_of_the_linear_vacuum:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "two coupling sets: the constant and linear coefficients in H^2 of the exact alpha_1-gradient vanish at rho = 1 - 2W'/m_H^2 and the linear one does not at rho = 1; orders H^4 and beyond, and the beta shift, are argued in the text"
+  check_scale_free_linear_field_on_the_flat_ray:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "three flat admissible coupling sets at two points of the ray: criticality, all eight masses with multiplicities, degree-four homogeneity, the tadpole for k6 or k7 nonzero (two each); nonnegativity on a 225-point grid for one set with k4 = k5 = 0, k10 >= r; one tachyonic example with a negative value; the general bound is proved in the text"
+  check_scalon_sum_with_the_normal_pair:
+    kind: exact
+    clauses: ["(4)"]
+  check_diphoton_below_090_for_every_charged_mass:
+    kind: sampled
+    clauses: ["(5)"]
+    omits: "positivity of the first seventy series coefficients of A0 and its leading term; interval values at six charged masses from 456 down to 70 GeV with monotone decrease; monotonicity for all masses follows from the positive series and is proved in the text"
+untouched_premises:
+  synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count: "cited in the proof to identify the computed relation as the standard two-doublet sum rule and for the argued Z-width exclusion; the check computes the sum and the bounds from the stored inputs"

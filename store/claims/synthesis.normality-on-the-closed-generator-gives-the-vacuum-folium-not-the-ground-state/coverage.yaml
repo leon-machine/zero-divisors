@@ -1,0 +1,35 @@
+functions:
+  check_the_attachment_closes_each_null_line_into_a_circle:
+    kind: sampled
+    clauses:
+    - (i) the attachment's conformal rotors act on a null line by Moebius maps, J sends s = 0 to the point at infinity, and the vacuum kernel is Moebius invariant with spinor weight
+    omits: checked at rational points and parameters; the generation of SL(2, R) by the three families is standard and stated in the proof
+  check_three_arcs_cover_every_pair_of_points:
+    kind: sampled
+    clauses:
+    - (ii) three intervals of the closed generator cover every pair of points, so the condition on every interval is global
+    omits: the cover is checked on a rational grid; the general statement is the counting argument in the proof
+  check_affine_kms_states_fail_on_a_single_far_end:
+    kind: partial
+    clauses:
+    - (iii) a translation-stationary state with a square-integrable difference on a far end is the vacuum
+    - (v) the affine-KMS difference is nonzero and fails on a single far end
+    omits: the KMS kernel enters through the exact series of x/sinh x; the far-end estimate is checked on polynomial translation-invariant kernels
+  check_the_slope_jump_vacuum_is_the_null_vacuum_on_each_far_end:
+    kind: sampled
+    clauses:
+    - (vi) the slope-jump reparametrisation is C^3 and increasing, and its vacuum equals the null vacuum on each far end
+    omits: positivity of f' and the kernel identities are checked on rational grids
+  check_the_slope_jump_vacuum_is_globally_disjoint_from_the_null_vacuum:
+    kind: partial
+    clauses:
+    - (vi) the cross-block difference is homogeneous of degree -1 with an exact lower bound on disjoint dilated rectangles, so the slope-jump vacuum is disjoint from the null vacuum, and different slopes are mutually disjoint
+    omits: divergence shown by exact lower bounds on 40 dilates; the remaining dilates follow by homogeneity
+  check_the_affine_group_is_implementable_on_the_slope_jump_vacuum:
+    kind: partial
+    clauses:
+    - (vi) conjugated translations and dilations have equal slopes at both ends and change the vacuum by a square-integrable kernel on the far blocks
+    omits: the bounded and mixed blocks are estimated in the proof, not checked
+untouched_premises:
+  synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit: enters through clause (iv) of the local-normality theorem, which the checks reach by premise()
+  synthesis.imported-haag-local-normality: imported principle cited in the reading; the checks verify the covering, disjointness and implementability statements directly

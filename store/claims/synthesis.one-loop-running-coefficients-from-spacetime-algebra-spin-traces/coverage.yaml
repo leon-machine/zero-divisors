@@ -1,0 +1,24 @@
+functions:
+  check_spin_weights_from_lorentz_generator_traces:
+    kind: sampled
+    clauses:
+    - '(1) <F^2>_0 = -X/2; spin weights -4 (vectors, a -> a . F), -1 (the minimal left ideal Cl+ P with the unit I4), -2 (the whole even algebra); tr_C(E^2) = 2 F^2 in both parts on the ideal; the ideal is four-dimensional and I4-stable; right multiplication does not preserve it (control)'
+    omits: 'three sample bivectors (the traces are quadratic forms in F, fixed on the six-dimensional space by the generic sample together with the identity tr = c <F^2>_0 argued in the proof); the scalar weight 0 is by definition'
+  check_b_weights_per_field_and_ghost_cancellation:
+    kind: complete
+    clauses:
+    - '(2) the spin weights recomputed from the Clifford traces (not hard-coded); b = (1/3) sigma w (n + 6 s): 1/3, 2/3, 4/3, -10/3, -1/3, -11/3; orbital +1/3 and spin -4 for the gauge field; the Nielsen-Hughes values per helicity pair'
+    omits: 'the heat-kernel coefficient a_2, the background-field operators and the determinant weights are imported (the heat-kernel Fact) and stated in the proof'
+  check_gauge_indices_of_the_derived_algebra:
+    kind: complete
+    clauses:
+    - '(3) T on Lambda^k C^2 and Lambda^k C^3 for every k, and C2(adj) = 2, 3, from explicit generators over Q(i); su(2) in Cl(3,0): C2/T = 4 from bivector commutators and left multiplication on the even algebra'
+    omits: 'the abelian factor is handled by the hypercharge sum in the next function'
+  check_running_coefficients_of_the_derived_content:
+    kind: complete
+    clauses:
+    - '(4) the content of one generation from the stored rule Y = (3j - 2k)/6 with the parity listing, the anomaly controls, b at (3, 1) = (41/10, -19/6, -7) and at (3, 2) = (21/5, -3, -7), with the spin weights from the traces, the closed forms in (n_g, n_h) and the asymptotic-freedom conditions on 0 <= n_g <= 9, 0 <= n_h <= 4, and at n_g = 3 asymptotic freedom of su(2) exactly for n_h <= 19 (scanned to 29)'
+    omits: 'the closed forms are linear in (n_g, n_h), so the grid determines them; the supersymmetric comparison is a control only'
+untouched_premises:
+  synthesis.imported-heat-kernel-coefficients-and-background-field-gauge: "the imported heat-kernel coefficient, background-field gauge and determinant weights are stated in the proof; the check computes the spin traces they are applied to"
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "the premise licenses the covariant background gauge with ghosts; nothing in the check computes from it"

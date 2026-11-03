@@ -1,0 +1,14 @@
+functions:
+  check_unipotents_are_isometries_fixing_k:
+    kind: sampled
+    clauses: ["(1) g_lambda is a G-isometry of W", "(2) g_lambda fixes k", "(3) g_lambda g_lambda' = g_(lambda+lambda')"]
+    omits: "27-point integer lattice in ker k at the Schwarzschild boundary Gram for m = 1, 2 only; the boundary Gram G(0) is hard-coded, not derived from the imported ladder."
+  check_dual_action_translates_candidates:
+    kind: sampled
+    clauses: ["(4) dual action on vectors is u -> u - k(u) lambda", "(5) on candidates it is translation by -lambda, free", "(6) transitive on candidates"]
+    omits: "Closed form compared to exact inverse on the 27-lambda lattice for m = 1, 2; freeness tested on three candidates; transitivity shown by lambda = a - b for three candidate pairs, not for general candidates or general lambda."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Fraction arithmetic at sample masses and a lattice of lambda; both clauses are covered at those samples and the one declared premise is touched by both functions."

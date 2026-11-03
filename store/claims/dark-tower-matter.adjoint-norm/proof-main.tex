@@ -1,0 +1,51 @@
+\textit{(i) The blades.}\enspace Every direction other than $e_{t}$ has square $-Q(e_{t})$. There are two cases.
+
+If $t \notin K$, moving $e_{t}$ through the $|K|$ vectors of $\rev{e_{K}}$ costs one sign each, and a blade times its reverse is the product of its squares:
+\[
+e_{K}^{\dagger} = e_{t}\rev{e_{K}}e_{t}^{-1} = (-1)^{|K|}\rev{e_{K}}, \qquad e_{K}\rev{e_{K}} = \bigl(-Q(e_{t})\bigr)^{|K|},
+\]
+so $e_{K}e_{K}^{\dagger} = (-1)^{|K|}\bigl(-Q(e_{t})\bigr)^{|K|} = Q(e_{t})^{|K|}$.
+
+If $e_{K} = e_{t}e_{K'}$, then $\rev{e_{K}} = \rev{e_{K'}}e_{t}$, and
+\begin{align*}
+e_{K}^{\dagger} &= e_{t}\rev{e_{K'}} = (-1)^{|K'|}\,\rev{e_{K'}}\,e_{t}, \\
+e_{K}e_{K}^{\dagger} &= (-1)^{|K'|}\,e_{t}\bigl(e_{K'}\rev{e_{K'}}\bigr)e_{t} = (-1)^{|K'|}\bigl(-Q(e_{t})\bigr)^{|K'|}\,Q(e_{t}) = Q(e_{t})^{|K|}.
+\end{align*}
+For $K \neq L$, $e_{K}e_{L}^{\dagger}$ is a multiple of $e_{K \triangle L}$, which has no scalar part. Hence for even $x = \sum_{K}x_{K}e_{K}$,
+\[
+\ip{xx^{\dagger}}_{0} \;=\; \sum_{K,L}x_{K}x_{L}\,\ip{e_{K}e_{L}^{\dagger}}_{0} \;=\; \sum_{K}x_{K}^{2} \qquad \text{(check B0)}.
+\]
+
+
+
+\emph{(ii) The corner and its conjugation.}  With $f = \tfrac{1}{2}(1 + e_{t}e_{a})$ and $\rev{(e_{t}e_{a})} = e_{a}e_{t}$,
+\[
+f^{\dagger} = \tfrac{1}{2}\bigl(1 + e_{t}\,e_{a}e_{t}\,e_{t}^{-1}\bigr) = \tfrac{1}{2}(1 + e_{t}e_{a}) = f.
+\]
+The corner $\F = f\Cl^{0}f$ is a division algebra $\R$, $\C$ or $\HH$ with unit $f$ (Fact \claimref{dark-tower-matter.imported-clifford-structure}(iii)). It is closed under $\dagger$, since $(fxf)^{\dagger} = fx^{\dagger}f$, and $\dagger$ is an anti-involution of it with $\ip{xx^{\dagger}}_{0} > 0$ for $x \neq 0$ by (i).
+
+The standard conjugation is the only anti-involution with that positivity. Every other candidate has an element with $xx^{\dagger} = -f$, whose scalar part is $-\tfrac{1}{2}$:
+\begin{itemize}
+\item on $\C$ the other candidate is the identity, and a unit square root $x$ of $-f$ gives $xx^{\dagger} = xx = -f$;
+\item on $\HH$ every other anti-involution is $x \mapsto u\bar{x}u^{-1}$ for a unit imaginary $u$, and a unit imaginary $v$ anticommuting with $u$ gives $v\,u\bar{v}u^{-1} = v^{2} = -f$.
+\end{itemize}
+So $\dagger$ is the standard conjugation, and
+\[
+x^{\dagger}x \;=\; xx^{\dagger} \;=\; N(x)\,f
+\]
+with $N$ the standard norm; the script verifies this as a polynomial identity in $x$'s coordinates (check B1). Taking scalar parts, with $\ip{f}_{0} = \tfrac{1}{2}$,
+\[
+\ip{xx^{\dagger}}_{0} \;=\; N(x)\,\ip{f}_{0} \;=\; \tfrac{1}{2}\,N(x),
+\]
+which is positive definite by (i), since $x$ is even (B3).
+
+
+
+\emph{(iii) The norm law.}  By the definition of the adjoint, $e_{t}\rev{x} = x^{\dagger}e_{t}$, and $\psi f = \psi$ for $\psi \in S$. So
+\begin{align*}
+\psi x\,e_{t}\,\rev{(\psi x)} &= \psi\,\bigl(x e_{t}\rev{x}\bigr)\,\rev{\psi} \\
+&= \psi\,\bigl(xx^{\dagger}\bigr)\,e_{t}\rev{\psi} \\
+&= N(x)\,\psi f\,e_{t}\rev{\psi} \\
+&= N(x)\,\psi e_{t}\rev{\psi},
+\end{align*}
+and the grade-one part is $j(\psi x) = N(x)\,j(\psi)$ (B2).

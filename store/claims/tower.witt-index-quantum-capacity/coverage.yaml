@@ -1,0 +1,24 @@
+functions:
+  check_mode_family_attains_witt_index:
+    kind: sampled
+    clauses:
+    - the maximal number of mode pairs realised by vectors is at least the Witt index min(p,q)
+    omits: Signatures with n <= 7 only; this is the lower bound (attainment), not maximality
+  check_witt_subspace_is_maximal:
+    kind: sampled
+    clauses:
+    - no mode family realised by vectors exceeds min(p,q) (upper bound)
+    omits: The explicit isotropic subspace W is shown maximal for n <= 7 by definiteness of W^perp/W; the general upper bound uses Witt theorem (not tested); the independent exhaustive search is only for n <= 4 and over isotropic vectors with coefficients in {-1,0,1}, so it is not exhaustive over R
+  check_each_rung_adds_one_mode:
+    kind: sampled
+    clauses:
+    - 'along the tower the Witt index is min(p,q) + k: each rung raises the capacity by exactly one and no more'
+    omits: Grounds n <= 3 and k <= 2 only; maximality by the W^perp signature test, not the lattice search
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Lower bound and maximality of the Witt family are checked on finite signatures; the general upper bound rests on Witt theorem.
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-decomposition: "standard algebra cited in the proof; the check computes the statement directly"

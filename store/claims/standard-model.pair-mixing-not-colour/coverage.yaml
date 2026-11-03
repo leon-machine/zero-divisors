@@ -1,0 +1,18 @@
+functions:
+  check_pair_mixing_is_compact_and_outside_the_real_form:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "The group-level statement is read off the algebra: u(3) not in this so(2,4) real form, with 9 > 7 compact dimensions excluding every conjugate; the value 7 for the maximal compact subgroup is taken from the imported Fact and only matched here by counting anti-Hermitian bivectors."
+  check_commutant_is_two_dimensional:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: ""
+  check_colour_on_the_label_copy_commutes:
+    kind: partial
+    clauses: ["(iii) the colour group acts on a label copy and commutes with the conformal action", "(iii) the pair mixing on the Fock factor does not commute with it"]
+    omits: "The Bogoliubov-relabelling reading, the frozen-point insensitivity, the 'category error' remark and the independence of the two cited theorems from the pair mixing are not computed (docstring says they are readings); the commutation holds by the tensor-product construction."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) and (ii) are exact finite computations in the 8-dimensional Fock space; (iii) is checked only for its commutation content, as the docstring says."

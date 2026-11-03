@@ -1,0 +1,61 @@
+functions:
+  check_plane_wave_field_in_gtg:
+    kind: sampled
+    clauses:
+    - (model) hb^-1(a) = a + H (a.k) k/2 gives the derived metric a.b + H (a.k)(b.k), with the Brinkmann coordinate reading 2 du dv - dx1^2 - dx2^2 of the flat product
+    - (model) tidal matrix diag(h1, h2) along d/du has nonzero trace (Ricci) and trace-free (Weyl) parts; the rational Jacobi solutions solve x'' = -h x
+    omits: three vectors and two values of H; the identities are algebraic in a, b, H
+  check_closed_form_is_the_synge_function:
+    kind: sampled
+    clauses:
+    - (model) the closed form satisfies the eikonal equation g^-1(d sigma, d sigma) = 2 sigma in each point, is symmetric, and sigma(x' + t d, x')/t^2 tends to g(d, d)/2 at rate t
+    omits: three point pairs and five values of t; uniqueness of the Synge function given these properties is proof-only
+  check_null_hypersurface_crossing_the_wave:
+    kind: sampled
+    clauses:
+    - (model) H is null, its generators are the integral curves of grad Phi (affine null geodesics), P obeys the Riccati equation P' = -h - P^2, P(0) = 0 (expansion and shear zero at x0) and expansion and shear nonzero for u != 0
+    omits: three values of u and two labels
+  check_transverse_hessian_of_sigma_on_the_horizon:
+    kind: sampled
+    clauses:
+    - (i) sigma vanishes on a generator with no linear term in the label difference, and its transverse Hessian is M = du J(u')^T A(u,u')^-1 J(u)
+    - (i) the Wronskian J A' - J' A = J(u') of Step 2
+    omits: the general second-variation argument (proof Step 2); in the model sigma is exactly quadratic in the labels
+  check_van_vleck_on_the_generator:
+    kind: sampled
+    clauses:
+    - (i) the Van Vleck determinant on the generator, from the mixed second derivatives of sigma, equals du^2/det A and is not 1
+    omits: the block-triangular argument for general fields (proof Step 3)
+  check_field_strength_cancels_from_the_null_coefficient:
+    kind: sampled
+    clauses:
+    - (i) det M = Delta a(u) a(u') exactly, so Delta^(1/2)/sqrt(det M) = (a(u) a(u'))^(-1/2), while det M, Delta and a differ from 1
+    - (ii) the canonical factor times the coefficient is 1 at u > u' and u < u', on central and off-central generators
+    omits: four sample pairs on one field; the general identity is Step 4 of the proof
+  check_canonical_projector_algebra:
+    kind: complete
+    clauses:
+    - (ii) Lambda = nk/2 with Lambda k = 0, Lambda n = n, n Lambda = 0, e0 Lambda = k/2, (1 - Lambda) e0 Lambda = k/2, Lambda e0 Lambda = 0, Lambda commutes with the transverse vectors
+    - (ii) Lambda p e0 Lambda = (p.k) Lambda, so only the derivative along k survives the projection
+    - (ii) the flux of the Dirac current through H depends only on Lambda psi and equals 2 <(Lambda psi)^dagger Lambda psi>
+    omits: the projector identities are exact Clifford identities; the vector identity is checked on two vectors and the flux on one spinor
+  check_generator_scaling_of_leading_term_and_smooth_differences:
+    kind: sampled
+    clauses:
+    - (iv) the canonical leading coefficient, computed from the model's sigma, Delta and area density at scaled points, is invariant under the generator scaling at weight 1/2 per leg, and is not without the canonical factor
+    - (iii) a smooth difference of restricted kernels scales to zero at rate lambda
+    omits: polynomial smooth differences only; the remainder bound of (iv) is argued, not checked
+  check_non_commuting_model:
+    kind: sampled
+    clauses:
+    - (i) on a plane wave with the tidal function rotated off the label basis and J'(0) not commuting with it, the closed form is the Synge function, H is null, the Hessian of -sigma is du J(u')^T A^-1 J(u) and both reordered forms fail
+    - (i) Delta = du^2/det A and det M = Delta a(u) a(u') with expansion and shear nonzero at x0 as well
+    omits: three point pairs and three generator samples on one field
+  check_projected_transverse_connection_keeps_only_the_expansion:
+    kind: complete
+    clauses:
+    - '(ii) Lambda f^a Omega(f_a) e0 Lambda = tr(B) Lambda when Omega(f_a).k = B(f_a): the projected transverse connection carries the expansion only'
+    - (ii) the shear and every other bivector component of Omega(f_a) drop out of the projection
+    omits: the bookkeeping of the first-order transport term and the cancellation of the log epsilon terms (argued in the proof)
+untouched_premises:
+  synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport: 'the leading coefficient U = Delta^(1/2) R and the time-function independence enter (ii) as inputs; the checks compute Delta, M and a from the model, not the parametrix'

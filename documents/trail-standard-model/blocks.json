@@ -1,0 +1,1114 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "Can the forces and particles of the Standard Model be read off the structure of conformal spinors (twistors)? [[t]] For the smallest composite that can have mass, the symmetries that respect its structure are exactly those behind the strong, weak and hypercharge forces. [[c:standard-model.gauge-algebra-minimal-massive-composite]]\n\nThe trail follows that observation to the precise gauge group, the quarks and leptons with their hypercharges, and the weak angle, several steps holding only under Hypothesis (S). [[c:standard-model.hyp-s-slot-statistics]] With the derived content alone the weak angle runs to the wrong value; an intermediate Pati-Salam symmetry repairs the running. [[c:standard-model.chain]]\n\nIt then takes up the Higgs field, the series' rung field, recorded as an elementary field of two doublets. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] The route that would generate the weak scale from quantum corrections alone makes definite predictions that differ from the Standard Model, and current data go against them on three independent counts. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] The working branch takes the weak scale as an input. [[c:synthesis.rung-unit-second-free-number]]",
+  "hash": "2726c10ba7cc"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk goes from symmetries to the group, then to the particle content and its charges, then to the running of the forces, and ends with the Higgs field and the weak scale. [[t]]\n\nTwo postulates are listed first. [[t]] One adopts the standard indefinite inner product for the gauge fields, which the running of the forces uses. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]] The other registers the constant that sets the weak scale as a free number of the laws. [[c:synthesis.rung-unit-second-free-number]]\n\nResults a step rests on but that are not on the trail are listed at the end. [[t]]",
+  "hash": "60645db0fd0a"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+  "type": "postulate",
+  "claim": "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2",
+  "title": "(KF), the Krein-form premise for gauge fields: on the palatial storey the gauge fields, their ghosts and their Pauli-Villars regulator fields carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ on the polarisations, and the physical space is positive through the quartet mechanism",
+  "text": "To describe light and the other force fields in a way that treats space and time alike, physicists use bookkeeping in which some unphysical states have negative or zero length, and remove them again before anything is measured. The same device is used to tame the infinities of quantum corrections, with auxiliary particles that count negatively. The series' quantum spaces all have positive lengths, so it cannot use this bookkeeping as it stands. This premise adopts it: the force fields of the series carry the standard indefinite measure built from the spacetime metric of their polarisations, and only states of positive length remain once the unphysical parts cancel in groups of four. Several results use it, among them the series' calculations of the first and second quantum corrections of electrodynamics, its calculation of how the force strengths change with energy, and its construction of the ghost bookkeeping. One of the two uses, the auxiliary negative particles, turns out not to be needed for the screening of charge by the vacuum, which can be computed without them. It is taken as given, not derived; it would be refuted if the physical states it leaves were found to include ones of negative length.",
+  "gap": false,
+  "level": "lay",
+  "hash": "c29fd13482d1",
+  "number": 1
+ },
+ {
+  "id": "c:synthesis.rung-unit-second-free-number",
+  "type": "postulate",
+  "claim": "synthesis.rung-unit-second-free-number@3",
+  "title": "The weak scale is a second free number beside $N$: its constant of the laws is the D-term level $\\xi$ (strictly $\\xi G$), so under the promoted action $v/M_{P}$ is the law up to relative order $(H/v)^{4}$ and the rung-frame boost $v/H$ is initial data",
+  "text": "In this framework almost every hierarchy of scales comes from one huge number, N, the ratio of the Planck mass to the scale set by the cosmological constant. The strength of the weak force's symmetry breaking, about 246 GeV, does not: it is set by how a particular reference frame in the extra dimensions is stretched, and the framework's construction works equally well for every stretch. The only stretch the structure itself prefers gives a weak scale far too small, by 44 powers of ten. In the field theory written for the Higgs field the stretch is fixed by one constant, and this assumption accepts that constant as a second basic number of the laws, put in by hand beside N. Since the framework treats N as a fact about the universe's history, the weak scale measured against the Planck mass is then the law, and the weak scale measured against the cosmological scale is a historical fact. It would be overturned if anyone derived the constant, showed it follows from N, or tied it to the cosmological constant.",
+  "gap": false,
+  "level": "lay",
+  "hash": "0998aca2da8c",
+  "number": 2
+ },
+ {
+  "id": "s:standard-model",
+  "type": "section",
+  "title": "The Standard Model",
+  "hash": "920d96cca5ea"
+ },
+ {
+  "id": "i:standard-model",
+  "type": "framing",
+  "text": "These results derive the Standard Model's symmetries and one generation of its matter from composites of conformal spinors, test the running of the forces against experiment, and then confront the series' Higgs field with data. [[t]]",
+  "hash": "cb39d42518d9"
+ },
+ {
+  "id": "t:^>standard-model.internal-symmetry-ladder",
+  "type": "transition",
+  "between": [
+   null,
+   "standard-model.internal-symmetry-ladder"
+  ],
+  "text": "We start from how conformal spinors describe particles: one is massless, and a massive particle needs at least two. [[c:mass.mass-symplectic-area-two-twistor-formula]]\n\nThe mixings of $n$ conformal spinors that preserve total momentum and total helicity form exactly $U(n)$, giving the ladder \\[ U(1), \\quad U(2), \\quad U(3) \\] [[c:standard-model.internal-symmetry-ladder]]",
+  "hash": "5fec8668f9f5"
+ },
+ {
+  "id": "c:standard-model.internal-symmetry-ladder",
+  "type": "theorem",
+  "claim": "standard-model.internal-symmetry-ladder@3",
+  "title": "The internal symmetry ladder",
+  "text": "In this description a massless particle is one basic spinor state of the conformal algebra and a massive one at least two. Mixing the spinor states of a system among themselves without changing its total momentum or total helicity is possible only through unitary transformations. So one spinor state has a circle of internal symmetry, two have the group $U(2)$, and three have $U(3)$. These are genuine unitary groups, not simple products of a special unitary group with a circle.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "baff449f7ad8",
+  "number": 3
+ },
+ {
+  "id": "t:standard-model.internal-symmetry-ladder>standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "transition",
+  "between": [
+   "standard-model.internal-symmetry-ladder",
+   "standard-model.gauge-algebra-minimal-massive-composite"
+  ],
+  "text": "A composite has two levels of internal structure: which conformal spinor, and which of its three internal pairs. [[c:standard-model.gauge-algebra-minimal-massive-composite]]\n\nThe automorphism algebra of the minimal massive hierarchy $\\C^{2} \\otimes \\C^{3}$ is \\[ \\su(2) \\oplus \\su(3) \\oplus \\uu(1), \\] exactly the Standard Model's. [[c:standard-model.gauge-algebra-minimal-massive-composite]] Three spinors instead, $\\C^{3} \\otimes \\C^{3}$, give a seventeen-dimensional algebra, which is too large. [[c:standard-model.gauge-algebra-minimal-massive-composite]]",
+  "hash": "6e1dd02af553"
+ },
+ {
+  "id": "c:standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "theorem",
+  "claim": "standard-model.gauge-algebra-minimal-massive-composite@4",
+  "title": "The gauge algebra of the minimal massive composite",
+  "text": "A composite of basic spinor states of the conformal algebra has a two-level internal structure: which spinor state, and which of its three internal pairs. The rotations that respect both levels form a symmetry algebra. For the smallest composite that can have mass, two spinor states of three pairs each, that algebra is exactly the one behind the strong, weak and hypercharge forces; for three spinor states it is too large.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "mass.mass-symplectic-area-two-twistor-formula"
+  ],
+  "hash": "c6ef6cefb1f7",
+  "number": 4
+ },
+ {
+  "id": "t:standard-model.gauge-algebra-minimal-massive-composite>standard-model.four-dimensions-forces-converse",
+  "type": "transition",
+  "between": [
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.four-dimensions-forces-converse"
+  ],
+  "text": "Before pinning down the group, the argument can be run the other way, to ask what the forces say about spacetime. [[t]]\n\nIf the gauge algebra is the automorphism algebra of the minimal massive composite, and mass begins at two constituents, then the Standard Model algebra forces four dimensions among the even dimensions. [[c:standard-model.four-dimensions-forces-converse]] Run backwards, the observed forces require a two-by-three structure, and both directions rest on that reading of the forces, which is stated as a premise. [[c:standard-model.four-dimensions-forces-converse]]",
+  "hash": "ec313ae94241"
+ },
+ {
+  "id": "c:standard-model.four-dimensions-forces-converse",
+  "type": "theorem",
+  "claim": "standard-model.four-dimensions-forces-converse@4",
+  "title": "Four dimensions from the forces, and the converse",
+  "text": "If the forces of nature are the symmetries of the smallest composite of basic spinor states that can have mass, and if, as in four dimensions, mass first appears at two such states (a hypothesis in other dimensions), then spacetime must have four dimensions: in any other even dimension the symmetries come out wrong. Run backwards, the observed forces require a two-by-three structure, and either of the framework's two inputs, two constituents or four dimensions, then fixes the other. Both directions rest on identifying the forces with these symmetries, which is stated as a premise.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.pair-count-dimension"
+  ],
+  "hash": "8c30bcada625",
+  "number": 5
+ },
+ {
+  "id": "t:standard-model.four-dimensions-forces-converse>standard-model.global-form-quotient-determined",
+  "type": "transition",
+  "between": [
+   "standard-model.four-dimensions-forces-converse",
+   "standard-model.global-form-quotient-determined"
+  ],
+  "text": "An algebra fixes the symmetries only near the identity, so the next step pins down the group itself. [[t]]\n\nIt is \\[ S(U(2) \\times U(3)) \\cong \\bigl(SU(2) \\times SU(3) \\times U(1)\\bigr)/\\mathbb{Z}_{6}, \\] the smallest of the Standard Model's global forms. [[c:standard-model.global-form-quotient-determined]] That quotient restricts which combinations of colour, weak charge and hypercharge any particle can carry. [[c:standard-model.global-form-quotient-determined]]",
+  "hash": "fff6e636319d"
+ },
+ {
+  "id": "c:standard-model.global-form-quotient-determined",
+  "type": "theorem",
+  "claim": "standard-model.global-form-quotient-determined@3",
+  "title": "The global form: the quotient determined",
+  "text": "The symmetries of the smallest composite that can carry mass have the algebra of the Standard Model forces. This result pins down the group itself, not only its algebra: it is the most economical of the possible global forms, the one in which a six-element subgroup is divided out. That choice restricts which combinations of colour, weak charge and hypercharge any particle can carry, and it is the form that grand unification requires. A free particle with no colour and a fractional electric charge would contradict the identification.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.gauge-algebra-minimal-massive-composite"
+  ],
+  "hash": "3d2ca94730f0",
+  "number": 6
+ },
+ {
+  "id": "t:standard-model.global-form-quotient-determined>pred.z6-charge-lattice",
+  "type": "transition",
+  "between": [
+   "standard-model.global-form-quotient-determined",
+   "pred.z6-charge-lattice"
+  ],
+  "text": "The restriction on charges is directly testable. [[t]]\n\nThe $\\mathbb{Z}_{6}$ charge lattice forbids any fractionally charged colour singlet, so finding one would refute this part of the framework. [[c:pred.z6-charge-lattice]] Searches so far have found none. [[c:pred.z6-charge-lattice]]",
+  "hash": "085d40c71b77"
+ },
+ {
+  "id": "c:pred.z6-charge-lattice",
+  "type": "prediction",
+  "claim": "pred.z6-charge-lattice@1",
+  "title": "No fractionally charged colour singlet",
+  "text": "The series derives not only the Standard Model's symmetries but the precise way they fit together, and that restricts the charges particles can have. In particular, a particle that feels no strong force must have a whole-number electric charge. Finding even one such particle with a fractional charge would refute this part of the framework; searches so far have found none.",
+  "gap": false,
+  "level": "lay",
+  "kill_condition": {
+   "threshold": "One confirmed fractionally charged colour-singlet particle",
+   "data_source": "PDG exotic-particle searches",
+   "registered": "2026-08 (T17 stance table, row 3)"
+  },
+  "hash": "7c0b7d625d1f",
+  "number": 7
+ },
+ {
+  "id": "t:pred.z6-charge-lattice>standard-model.quarks-leptons-two-level-fermion-content",
+  "type": "transition",
+  "between": [
+   "pred.z6-charge-lattice",
+   "standard-model.quarks-leptons-two-level-fermion-content"
+  ],
+  "text": "With the symmetries fixed, the next question is what matter the composite carries. [[t]] The pair-level cells carry the quark doublet $(2,3)_{1/6}$ unconditionally. [[c:standard-model.quarks-leptons-two-level-fermion-content]]\n\nUnder Hypothesis (S), one slot with the pairs full gives the lepton doublet \\[ (2,1)_{-1/2} \\] and without that hypothesis no lepton appears. [[c:standard-model.quarks-leptons-two-level-fermion-content]]",
+  "hash": "c0b0f4923da5"
+ },
+ {
+  "id": "c:standard-model.quarks-leptons-two-level-fermion-content",
+  "type": "theorem",
+  "claim": "standard-model.quarks-leptons-two-level-fermion-content@5",
+  "title": "Quarks and leptons: the two-level fermion content",
+  "text": "The paper builds composite particles from basic spinor states of the conformal algebra, which have two kinds of internal mode, slots and pairs. One slot with one pair gives exactly the quantum numbers of a quark doublet, with no extra assumption. One slot with all three pairs filled gives a colourless doublet with the lepton's charges, but only if the slots are assumed to behave as fermionic modes like the pairs; without that assumption no lepton appears. A lone spinor state's modes give colourless and coloured states with hypercharges 0, -1/3, -2/3 and -1.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.global-form-quotient-determined",
+   "standard-model.imported-cauchy-decomposition-exterior-power",
+   "standard-model.imported-pair-systems-two-chirality-halves",
+   "standard-model.raw-representation-content-state-space",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "ad0a66ec5ebf",
+  "number": 8
+ },
+ {
+  "id": "t:standard-model.quarks-leptons-two-level-fermion-content>standard-model.hypercharge-global-form-pair-counting-consistency",
+  "type": "transition",
+  "between": [
+   "standard-model.quarks-leptons-two-level-fermion-content",
+   "standard-model.hypercharge-global-form-pair-counting-consistency"
+  ],
+  "text": "Next come the charges that decide how these particles feel the electroweak force. [[t]]\n\nUnder Hypothesis (S) for the doublets, the composite's states carry the observed hypercharges of one generation. [[c:standard-model.hypercharge-global-form-pair-counting-consistency]] They satisfy all four anomaly conditions and are the unique solution for that content with \\[ Y_{Q} = \\tfrac16 \\] [[c:standard-model.hypercharge-global-form-pair-counting-consistency]]",
+  "hash": "d0545e022c3a"
+ },
+ {
+  "id": "c:standard-model.hypercharge-global-form-pair-counting-consistency",
+  "type": "theorem",
+  "claim": "standard-model.hypercharge-global-form-pair-counting-consistency@5",
+  "title": "Hypercharge from the global form, pair counting, and consistency",
+  "text": "Hypercharge is one of the charges that decide how particles feel the electroweak force. Here it is read off from how the symmetry acts on the composite's states, with the quark doublet carrying one sixth. Under a stated hypothesis about the state space, counting pairs and keeping track of handedness yields the lepton doublet and the four singlet particles with their observed hypercharges. The consistency conditions a quantum gauge theory must satisfy then hold, and given that particle content, all listed with one handedness, with the quark doublet's one sixth as the unit and a fourth singlet that is neutral or absent, they allow no other choice of charges.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.chirality-two-halves-spinor-module-conjugation",
+   "standard-model.imported-anomaly-coefficients",
+   "standard-model.imported-pair-systems-two-chirality-halves",
+   "standard-model.quarks-leptons-two-level-fermion-content",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "1ebb86f06c24",
+  "number": 9
+ },
+ {
+  "id": "t:standard-model.hypercharge-global-form-pair-counting-consistency>standard-model.under-s-composites-state-space-spinor",
+  "type": "transition",
+  "between": [
+   "standard-model.hypercharge-global-form-pair-counting-consistency",
+   "standard-model.under-s-composites-state-space-spinor"
+  ],
+  "text": "Under the same hypothesis the whole state space of the composite can be seen at once. [[t]] It is the five-mode Fock space $\\Lambda^{\\bullet}(\\C^{2} \\oplus \\C^{3})$, the $\\mathrm{Spin}(10)$ spinor. [[c:standard-model.under-s-composites-state-space-spinor]]\n\nIts even half is exactly one generation, \\[ Q \\oplus L \\oplus u^{c} \\oplus d^{c} \\oplus e^{c} \\oplus \\nu^{c}, \\] sixteen-dimensional and including a right-handed neutrino, while the odd half is the antiparticles. [[c:standard-model.under-s-composites-state-space-spinor]]",
+  "hash": "9712419b8678"
+ },
+ {
+  "id": "c:standard-model.under-s-composites-state-space-spinor",
+  "type": "theorem",
+  "claim": "standard-model.under-s-composites-state-space-spinor@6",
+  "title": "Under (S): the composite's state space is the $\\mathrm{Spin}(10)$ spinor, and the derived generation is its even half",
+  "text": "If the slots of a composite are assumed to behave as fermionic modes just like its pairs, the composite has five modes and 32 states. Half of them, those with an even number of filled modes, turn out to be exactly one generation of quarks and leptons with the right charges, including a right-handed neutrino, and the other half are the antiparticles. This is the 16 of the unified group Spin(10), arising from the framework's own modes. One extra symmetry appears; it causes no inconsistency and is broken by the neutrino's mass.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.chirality-two-halves-spinor-module-conjugation",
+   "standard-model.hypercharge-global-form-pair-counting-consistency",
+   "standard-model.imported-anomaly-coefficients",
+   "standard-model.imported-cauchy-decomposition-exterior-power",
+   "standard-model.imported-fock-representation-clifford-algebra-bogoliubov",
+   "standard-model.mass-bracket-charged-singlet",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "b05dedb40190",
+  "number": 10
+ },
+ {
+  "id": "t:standard-model.under-s-composites-state-space-spinor>standard-model.weak-angle-over-derived-generation",
+  "type": "transition",
+  "between": [
+   "standard-model.under-s-composites-state-space-spinor",
+   "standard-model.weak-angle-over-derived-generation"
+  ],
+  "text": "A full generation with its charges lets us compute the weak angle, which measures how the electromagnetic and weak forces share out between them. [[t]]\n\nOver one derived generation, with the lepton under Hypothesis (S), \\[ \\frac{\\sum T_{3}^{2}}{\\sum Q^{2}} = \\frac{3}{8} \\] [[c:standard-model.weak-angle-over-derived-generation]] That is $\\sin^{2}\\theta_{W}$ at unification, under the hypothesis that the particles fit into one simple group. [[c:standard-model.weak-angle-over-derived-generation]]",
+  "hash": "61b834a0105a"
+ },
+ {
+  "id": "c:standard-model.weak-angle-over-derived-generation",
+  "type": "theorem",
+  "claim": "standard-model.weak-angle-over-derived-generation@5",
+  "title": "The weak angle over the derived generation",
+  "text": "The weak mixing angle measures how the electromagnetic and weak forces share out between them. In unified theories it takes the value 3/8 at the unification energy, worked out from the charges of one family of particles. Here the same ratio comes out over the particle content the paper derives, provided one accepts the paper's hypothesis about the composite's modes (Hypothesis (S)), which is needed for the lepton; reading it as the weak angle at unification assumes, as unified theories do, that the particles fit into one simple larger symmetry group. Comparing with experiment requires running the value down to everyday energies, which is done separately.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "standard-route",
+  "rests_on": [
+   "standard-model.imported-one-loop-running-trace-ratio"
+  ],
+  "hash": "73af1042b359",
+  "number": 11
+ },
+ {
+  "id": "t:standard-model.weak-angle-over-derived-generation>standard-model.spectrum-run",
+  "type": "transition",
+  "between": [
+   "standard-model.weak-angle-over-derived-generation",
+   "standard-model.spectrum-run"
+  ],
+  "text": "The value $3/8$ holds at the unification scale, so the next step runs it down to where it is measured. [[c:standard-model.weak-angle-over-derived-generation]]\n\nAt one loop with the record inputs, the derived content with one imported Higgs doublet predicts \\[ \\sin^{2}\\theta_{W}(M_{Z}) = 78761/379488 \\approx 0.2075 \\] against the measured $0.2312$, refuting the desert. [[c:standard-model.spectrum-run]] The supersymmetric coefficients would give $0.2309$, so the framework's $3/8$ survives only if the running differs from that of the derived content. [[c:standard-model.spectrum-run]]",
+  "hash": "e62b14056beb"
+ },
+ {
+  "id": "c:standard-model.spectrum-run",
+  "type": "theorem",
+  "claim": "standard-model.spectrum-run@6",
+  "title": "The spectrum run",
+  "text": "The framework fixes how the electromagnetic and weak forces compare at a very high energy, but testing that means running the force strengths down to energies we can measure. In a one-loop calculation with the measured inputs, using only the particles the paper derives plus one imported Higgs doublet, the run misses the measured value by about ten percent and the three forces never meet at one point, as has been known for the simplest unified theories since the early 1990s. Supersymmetric-style partner particles bring the miss down to about one part in a thousand, so, if the framework's value is to survive, something beyond the derived content must change the running: partner-like particles, which the paper does not derive, or an enlarged symmetry at an intermediate energy, which it derives under Hypothesis (S). Whether the framework's own structure supplies this is left open at observation level.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "standard-route",
+  "rests_on": [
+   "standard-model.imported-one-loop-running-trace-ratio"
+  ],
+  "hash": "0c4515e52aaa",
+  "number": 12
+ },
+ {
+  "id": "t:standard-model.spectrum-run>standard-model.chain",
+  "type": "transition",
+  "between": [
+   "standard-model.spectrum-run",
+   "standard-model.chain"
+  ],
+  "text": "The failed run leaves two ways out: partner-like particles, which the series does not derive, or an enlarged symmetry at an intermediate energy. [[c:standard-model.spectrum-run]]\n\nUnder Hypothesis (S) the series supplies the second, the Pati-Salam symmetry, and with it the three couplings meet at one loop, with the intermediate scale between about $10^{10}$ and $10^{12}$ GeV and unification near $10^{16}$ GeV. [[c:standard-model.chain]] Below the intermediate scale the chain uses one Higgs doublet. [[c:standard-model.chain]]",
+  "hash": "642ece179c8c"
+ },
+ {
+  "id": "c:standard-model.chain",
+  "type": "theorem",
+  "claim": "standard-model.chain@8",
+  "title": "The chain",
+  "text": "This result tests whether the three force strengths of the Standard Model can meet at a single high energy when the symmetry first enlarges to the Pati-Salam group at an intermediate scale. Assuming the slots of the composite's basic spinor states behave like the pairs (Hypothesis (S)), and with the particle content the framework then supplies, left-right symmetry broken only at the unification scale and nothing else light, they do meet, with the intermediate scale roughly between $10^{10}$ and $10^{12}$ GeV and the unification scale near $10^{16}$ GeV. At two loops, from the measured couplings' central values, the most favourable version passes the proton-decay limit comfortably, while a version that keeps left-right symmetry down to the intermediate scale does not.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.direction-demanded-content-doublet-heavy",
+   "standard-model.imported-coefficient-sum-indices",
+   "standard-model.imported-pati-salam-representation-theory-survival",
+   "standard-model.imported-proton-condition",
+   "standard-model.imported-two-loop-gauge-coefficients",
+   "standard-model.left-right-parity-what-breaks-it",
+   "standard-model.majorana-element",
+   "standard-model.matching-traces",
+   "standard-model.one-threshold-exact-criterion",
+   "standard-model.spectrum-run",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "a3704bf7a9a1",
+  "number": 13
+ },
+ {
+  "id": "t:standard-model.chain>synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "transition",
+  "between": [
+   "standard-model.chain",
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+  ],
+  "text": "The running so far used coefficients taken from the literature. [[t]]\n\nThey now come out of the series' own algebra, as spin traces in the spacetime algebra, with the numbers of generations and Higgs doublets left as inputs. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] Three generations give $b = (\\tfrac{41}{10}, -\\tfrac{19}{6}, -7)$ with one doublet and $(\\tfrac{21}{5}, -3, -7)$ with two. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] The computation uses the indefinite inner product for the gauge fields, the first postulate. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]]",
+  "hash": "92b41e9e8c07"
+ },
+ {
+  "id": "c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "theorem",
+  "claim": "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@2",
+  "title": "The one-loop running coefficients from spin traces in the spacetime algebra, in a covariant gauge under the indefinite-form premise: the Lorentz generator of the field-strength bivector gives spin weights $0$, $-1$ and $-4$ for scalars, Weyl spinors (a minimal left ideal with the unit $I_{4}$) and vectors, the imported heat-kernel coefficient turns them into $\\tfrac13$, $\\tfrac23$ and $-\\tfrac{11}{3}$ per unit index, and under (S), with $n_{g}$ generations and $n_{h}$ doublets as inputs, the coefficients are $(\\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{10}, -\\tfrac{22}{3} + \\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{6}, -11 + \\tfrac{4n_{g}}{3})$, asymptotically free in both non-abelian factors for $n_{g} = 3$ and every $n_{h} \\leq 19$",
+  "text": "How fast the strengths of the forces change with energy is fixed, at the first quantum correction, by a sum over the particles, each weighted by a number that depends on its spin. Those weights come out of the series' algebra of spacetime as traces of how a field's spin responds to a force field, once a standard heat-kernel formula and the standard covariant treatment of the force fields are taken from the literature. The number of generations and of Higgs doublets are inputs, since the store has not settled either. Applied to the particle content the series derives under its slot hypothesis, three generations with one doublet give the standard values and two doublets give slightly different ones; with three generations the strong and weak forces weaken at high energy for any number of doublets up to nineteen. The gluons and the weak bosons are not yet built as quantum states here.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.fock-space-maxwell-modes",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.hypercharge-global-form-pair-counting-consistency",
+   "standard-model.imported-one-loop-running-trace-ratio",
+   "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "33ae28504d17",
+  "number": 14
+ },
+ {
+  "id": "t:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces>synthesis.rung-field-on-the-lift-locus",
+  "type": "transition",
+  "between": [
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+   "synthesis.rung-field-on-the-lift-locus"
+  ],
+  "text": "So the number of Higgs doublets matters, and the rest of the trail asks what the series says about its scalar sector. [[t]]\n\nThe series' Higgs candidate is the rung field, which lives in the extra directions that transport adds; transport fixes one combination of its two halves through the cosmological constant. [[c:synthesis.rung-field-on-the-lift-locus]] On that locus the field's one neutral physical mode is the rung unit, a boost of the rung frame, so the Higgs boson is a ripple of that scale. [[c:synthesis.rung-field-on-the-lift-locus]] Read with the Hermitian norm, the W and Z masses come out in the electroweak pattern. [[c:synthesis.rung-field-on-the-lift-locus]]",
+  "hash": "a61e4d45de7c"
+ },
+ {
+  "id": "c:synthesis.rung-field-on-the-lift-locus",
+  "type": "theorem",
+  "claim": "synthesis.rung-field-on-the-lift-locus@2",
+  "title": "On the null-lift locus the rung field's one neutral mode is the rung unit, the weak boson masses have the electroweak pattern at scale H^2 cosh 2 eta in the Hermitian reading (-Lambda/3 in the bilinear one), and every charge-preserving point has doublet lengths with product Lambda/3",
+  "text": "In the series the Higgs field sits in the extra directions that transport adds, and transport fixes one combination of its two halves, through the cosmological constant. Treating it as a field under that condition, the only direction in which it can change physically without breaking electromagnetism is the scale the earlier work called the rung unit, so the Higgs boson of this field is a ripple of that scale. The masses of the W and Z bosons come out in the right pattern if they are read with the quantum-mechanical (Hermitian) norm, which sees the scale; the geometric norm would give them a cosmologically small mass whatever the scale. Changing the scale is the hypercharge symmetry turned through an imaginary angle, and the scale is measured by a quantity that vanishes only at the frame matched to the cosmological scale. One consequence is sharp: if the quark masses come from this field through the series' single coupling and the up-type masses are read from the field itself rather than its conjugate, the up-type and down-type masses at tree level multiply to the coupling squared times the cosmological scale squared, whatever the scale chosen, which the observed top and bottom masses rule out; so one of those two readings has to go. Read through the conjugate, the up-type and down-type masses are equal and both grow with the scale.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.imported-tower-commuting-copies-fock-module",
+   "standard-model.ten-transported-ambient-space-doublets-are",
+   "standard-model.transported-frozen-point",
+   "synthesis.rung-unit-is-frame-boost",
+   "synthesis.rung-unit-transverse-to-norm",
+   "standard-model.one-vev-vector-relations-breaking-pattern"
+  ],
+  "hash": "0767923d60e3",
+  "number": 15
+ },
+ {
+  "id": "t:synthesis.rung-field-on-the-lift-locus>synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+  "type": "transition",
+  "between": [
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus"
+  ],
+  "text": "Next comes the simplest action for the rung field. [[t]]\n\nIt is a D-term potential whose hypercharge part carries one constant shift, the level $\\xi$; it keeps electric charge unbroken and puts the vacuum at a frame fixed by the level. [[c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus]] So the weak scale is an input, set by $\\xi$, as the second postulate records. [[c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus]]\n\nThe tree masses are rigid: the Higgs weighs exactly $M_{Z}$ and a charged pair exactly $M_{W}$, which the measured Higgs mass rules out, so a second term $W(N)$ in the potential is needed. [[c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus]]",
+  "hash": "c0947e6dfc01"
+ },
+ {
+  "id": "c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+  "type": "theorem",
+  "claim": "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3",
+  "title": "On the null-lift locus every $U(2)$-invariant potential of the rung field is a function of the Hermitian norm $N$ and the hypercharge moment map $m$ on the orbit space $N^{2} - m^{2} \\ge H^{4}$, whose boundary is the charge-preserving lift family; the hypercharge D-term action puts the vacuum on that boundary at the level $m^{*} = g'^{2}\\xi/(g^{2} + g'^{2})$, so $v/H$ enters only through the input $\\xi$, and gives the neutral mode the mass $M_{Z}$ and the charged pair $M_{W}$ at tree level in every frame; an added invariant $W(N)$ shifts them to $M_{Z}^{2} + 2W''m^{*2}/N^{*} + 2W'H^{4}/N^{*2}$ and $M_{W}^{2} + 2W'$, the latter twice the outward derivative of the potential, so local stability against charge breaking is the positivity of the charged mass; the rung field carries a physical charged scalar pair besides the neutral mode",
+  "text": "The series' candidate for the Higgs field is a component of the frozen point's lift, constrained to a surface where the lift stays null. This result writes down the simplest field theory for it: the standard kinetic term and the D-term potential, whose strength is fixed by the gauge couplings as in supersymmetric theories, with one free constant. That theory automatically keeps electric charge unbroken and sets the weak scale by the free constant, so the weak scale is an input here, matching the series' premise that registers that constant as a free number (with the cosmological constant read as a fact about the universe's history, as the series does, it is the weak scale against the Planck mass that the constant fixes). But the theory also predicts that the Higgs particle weighs exactly as much as the Z boson, which is false by about a third, so a second term in the potential is needed; the result says what such a term can be and how it moves the Higgs mass. The field is not the single Higgs doublet of the Standard Model: it also carries a pair of charged scalars, as heavy as the W boson in the simplest theory, which searches for charged scalars constrain (the bound, from memory, is near that mass).",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-unit-is-frame-boost",
+   "synthesis.rung-unit-second-free-number"
+  ],
+  "hash": "74c55e147b3b",
+  "number": 16
+ },
+ {
+  "id": "t:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus>synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix",
+  "type": "transition",
+  "between": [
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+   "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix"
+  ],
+  "text": "Masses for the quarks need a reading of how the rung field couples to them. [[t]]\n\nThe reading the series adopts is the one covariant under the right-handed rotations, with one family matrix on the field and another on its conjugate, the flavour structure of a left-right bidoublet. [[c:synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix]] Equal matrices would make up and down quarks equally heavy, so the top's mass must come from the conjugate's own coupling. [[c:synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix]] In this reading the charged pair couples to quarks about as strongly as the quarks' own mass couplings. [[c:synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix]]",
+  "hash": "0845b17317c8"
+ },
+ {
+  "id": "c:synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix",
+  "type": "theorem",
+  "claim": "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@2",
+  "title": "The coupling of the sixteen to the rung field with $Y$ on $c$ and $\\tilde{Y}$ on its conjugate $c^{*}$ (complex symmetric for a $10$) is the $\\su(2)_{R}$-covariant completion of the per-sector conjugate reading, which is not covariant; it reproduces the per-sector masses up to relative $e^{-2\\eta}$ and differs in the charged pair's couplings, which are of Yukawa strength; $\\tr H_{u} - \\tr H_{d} = 2m(c)(\\|Y\\|^{2} - \\|\\tilde{Y}\\|^{2})$ with $m$ the hypercharge moment map, the split vanishes at the balanced frame for every coupling, $\\tilde{Y} = Y$ gives $m_{u} = m_{d}$ exactly, and the part of $M_{u}$ read through $c$ is suppressed by $e^{-2\\eta}$, so the top mass cannot come from it",
+  "text": "In this framework the field that gives particles their masses comes with a mirror image, and both can talk to the quarks. The series has so far read the masses one sector at a time, which is not left-right symmetric; the left-right symmetric version lets the field and its mirror image each couple with its own strength. If they couple with the same strength, up-type and down-type quarks come out equally heavy, which is wrong; so the heavier up-type quarks (top above all) must come from the mirror image's own, different coupling. The imbalance between the two kinds of quark is then tied to the same quantity that sets the size of the weak scale, and it disappears exactly where that quantity would vanish. The other route, through the field itself, is far too weak to give the top its mass. In the symmetric version the field's electrically charged partner talks to quarks about as strongly as the quarks' own mass couplings, so it can be looked for in top-quark decays.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+   "standard-model.one-vev-vector-relations-breaking-pattern",
+   "standard-model.yukawa-pattern-two-rung-module",
+   "standard-model.invariant-pairing-five-modes",
+   "standard-model.hyp-s-slot-statistics",
+   "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant",
+   "synthesis.imported-left-right-bidoublet-two-yukawa-couplings"
+  ],
+  "hash": "1a899f427c17",
+  "number": 17
+ },
+ {
+  "id": "t:synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix>synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev",
+  "type": "transition",
+  "between": [
+   "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix",
+   "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev"
+  ],
+  "text": "Since the level is put in by hand, a natural question is whether the weak scale could instead arise from quantum corrections alone. [[t]]\n\nThis is the Gildener-Weinberg route: with a scale-free tree potential the Higgs mass comes entirely from one loop, \\[ 8\\pi^{2}v^{2}m_{h}^{2} = 6M_{W}^{4} + 3M_{Z}^{4} + 2m_{\\pm}^{4} - 12m_{t}^{4} - \\ell \\] [[c:synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev]]\n\nThe top quark makes the Standard Model's own sum negative, about $-(46\\ \\mathrm{GeV})^{2}$, and the rung field's charged pair restores it only if it weighs between $450$ and $456$ GeV. [[c:synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev]] The count assumes that the series' Majorana and Pati-Salam sectors decouple from the rung field, which on the present readings they do not, so the route is explored, not derived. [[c:synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev]]",
+  "hash": "2f1e27808548"
+ },
+ {
+  "id": "c:synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev",
+  "type": "theorem",
+  "claim": "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev@4",
+  "title": "Given the Gildener-Weinberg one-loop scalon formula, and with the Majorana and Pati-Salam sectors decoupled from the rung field, on its flat physical branch the Standard Model content alone gives a negative scalon mass squared, about $-(46\\ \\mathrm{GeV})^{2}$; the charged pair makes it positive exactly when $m_{\\pm}$ exceeds a threshold between $249$ and $268$ GeV, above $m_{t} - m_{b}$, and the measured Higgs mass then requires $450 < m_{\\pm} < 456$ GeV and gives $h \\to \\gamma\\gamma$ at $0.898$ to $0.900$ of the Standard Model rate",
+  "text": "One way to explain why the weak scale is so far below the gravitational one is the mechanism that makes the proton's mass: a scale generated by the slow running of a coupling, with no mass put in by hand. For the Higgs this works only if the particles that feel the Higgs field supply the Higgs mass through quantum effects, and in the Standard Model the top quark spoils it. The series' Higgs field carries an extra electrically charged scalar, which rescues the mechanism if it weighs between $450$ and $456$ GeV, provided the series' very heavy neutrino and unification sectors do not talk to the Higgs field, which on the series' present readings they do. The same charged scalar would make the Higgs decay to two photons about ten percent rarer than the Standard Model predicts, while the measurements, as recalled here, lean the other way. The route does not explain the size of the weak scale; it moves the question to where a coupling runs through zero. (Since 2 November 2026 this route is recorded as ruled out under the series' reading of how the Higgs field couples to quarks: the two-photon rate now measured lies well above what it predicts, the extra particles would make bottom mesons turn into their antiparticles far faster than is observed, and the forces among them would grow too strong within a few TeV.)",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+   "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch",
+   "synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass"
+  ],
+  "hash": "ef9f63eabd6e",
+  "number": 18
+ },
+ {
+  "id": "t:synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev>synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+  "type": "transition",
+  "between": [
+   "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev",
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum"
+  ],
+  "text": "That count treated the rung field as confined to the null-lift locus. [[t]]\n\nQuantised as an elementary field, with the spacetime volume element $I_{4}$ as its imaginary unit, the rung field is linear on all eight real components and carries a neutral normal pair besides the neutral mode and the charged pair. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] In two-doublet language it is the scale-invariant two-doublet model, and the normal pair joins the scalon sum. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]]\n\nThen the charged pair lies below $456$ GeV, the normal pair below $542$ GeV, and the Higgs decay to two photons stays below $0.900$ of the Standard Model rate for every allowed charged mass. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] The Particle Data Group 2026 average, $1.10 \\pm 0.06$, lies $3.3$ standard deviations above that bound. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] So the transmutation branch makes a definite prediction that differs from the Standard Model, and current data go against it: the two-photon rate is one of three independent counts. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] The earlier tree-level readings had already met data in the same way, the simplest potential putting the Higgs at exactly $M_{Z}$, which the measured Higgs mass rules out. [[c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus]]",
+  "hash": "ff3782b80dc1"
+ },
+ {
+  "id": "c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+  "type": "theorem",
+  "claim": "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3",
+  "title": "Quantised as an elementary field with $i = I_{4}$, the rung field is linear on all eight real components of the complexified rung summand, and on that summand (on values, not on spacetime points) the hypercharge rotation is the rung boost at $I_{4}$-imaginary rapidity; besides the stored neutral mode and charged pair it carries a neutral normal pair, the directions that change $Q$, of mass squared $2W' + 4N(k_{10} \\pm r)$, and the null-lift constraint is the limit $k_{10} \\to \\infty$; under the Gildener-Weinberg formula and decoupling the normal pair enters the scalon sum (the standard two-doublet sum rule), so the charged pair lies below $456$ GeV (below $383$ GeV when the normal pair is the heavier), the normal pair below $542$ GeV, and $h \\to \\gamma\\gamma$ below $0.900$ of the Standard Model rate for every charged mass between $m_{h}/2$ and $456$ GeV",
+  "text": "To treat the series' Higgs candidate, the rung field, as a quantum field one has to say what its quantum values are. The series' own imaginary unit, the spacetime volume element, works for it, and with that unit the hypercharge symmetry turns out to be the series' frame boost taken at imaginary speed. A quantum field of the ordinary, well-behaved kind cannot be confined to the curved surface on which the rung field was defined; it has to range over all its directions, and two extra neutral particles appear, the directions off the surface. If the weak scale arises from quantum corrections alone, as an earlier result explored, these two particles must be counted: the charged scalar that result predicted near 450 GeV is then lighter, the new neutral pair lies below about 540 GeV, and the predicted shortfall in the Higgs boson's decays to two photons, about ten per cent, remains for every allowed charged mass. (Since 2 November 2026 that quantum-corrections route is recorded as ruled out under the series' reading of how the Higgs field couples to quarks: the measured two-photon rate lies well above the predicted shortfall, the new neutral pair would make bottom mesons turn into their antiparticles far faster than is observed, and the forces among these particles would grow too strong within a few TeV. The working alternative has the second set of particles at a few TeV.)",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+   "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch",
+   "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev",
+   "synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass",
+   "field-theory.boost-modes",
+   "synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count"
+  ],
+  "hash": "63ee709214d3",
+  "number": 19
+ },
+ {
+  "id": "t:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum>synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint",
+  "type": "transition",
+  "between": [
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+   "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint"
+  ],
+  "text": "The Standard Model manages with one doublet, so the count of two deserves a check. [[t]]\n\nA one-doublet field meets the null-lift locus only in pure gauge, so two doublets follow from three readings taken exactly: the null-lift constraint, the Higgs as exactly the rung unit, and a linear field. [[c:synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint]] At any finite constraint coupling one doublet reproduces the rung-unit direction to relative order $H^{2}/v^{2}$, about $10^{-88}$, so nothing measurable at present separates the two counts. [[c:synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint]]",
+  "hash": "d040a45eeb44"
+ },
+ {
+  "id": "c:synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint",
+  "type": "theorem",
+  "claim": "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint@2",
+  "title": "A one-doublet field is pure gauge on the null-lift locus: the real four-dimensional $U(2)$-invariant subspaces of the complexified rung summand are the two complex doublets, on which $Q$ vanishes, and the graphs $\\beta = a\\bar{\\alpha}$, which meet the locus in one gauge orbit at one frame; so a field whose restriction to the exact locus carries the rung unit and the charged pair takes values in the whole summand, and two doublets follow only if the null-lift constraint is exact, the Higgs is exactly the rung unit and the field is linear; at finite constraint coupling a one-doublet field reproduces the rung-unit direction to relative order $H^{2}/v^{2}$",
+  "text": "In this framework the Higgs field lives in an eight-dimensional space whose directions come from the geometry that transport adds. The Standard Model uses one Higgs doublet, which has four real directions. This result asks whether four of the eight directions could be enough here. If the framework's vacuum condition is imposed exactly, they are not. Any four-direction slice that respects the weak and hypercharge symmetries either never meets that condition or meets it only along directions that are pure gauge, which the massive W and Z bosons absorb. The particle the framework identifies with the observed Higgs boson, a change of the frame in which the vacuum is read, points out of every such slice. If the condition is only approximate, as it is in a field theory with finite couplings, one doublet can imitate that particle to about one part in $10^{88}$. So the need for a second doublet rests on taking the condition and the identification exactly, not on anything measurable at present.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.ten-transported-ambient-space-doublets-are",
+   "synthesis.rung-unit-is-frame-boost",
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum"
+  ],
+  "hash": "4b25b9f745de",
+  "number": 20
+ },
+ {
+  "id": "t:synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint>synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch",
+  "type": "transition",
+  "between": [
+   "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint",
+   "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch"
+  ],
+  "text": "On the transmutation branch the two doublets meet a second strike. [[t]]\n\nThe scalon sum forces large quartic couplings, and run upward in the series' own variables some quartic reaches $4\\pi$ between about $0.8$ and $4$ TeV. [[c:synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch]] There the two-loop terms are already 30 to 70 percent of the one-loop ones, so the branch is a strongly coupled theory not far above the weak scale. [[c:synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch]]",
+  "hash": "61e1c59a7c51"
+ },
+ {
+  "id": "c:synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch",
+  "type": "theorem",
+  "claim": "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch@2",
+  "title": "For the scale-free linear rung field with gauge generators read as rung bivectors and the covariant third-family coupling (which gives both doublets top strength), the one-loop running of all ten quartics is given in closed form (the standard two-doublet equations under an explicit dictionary; the gauge contributions, with internal gauge lines in Landau gauge, under the Krein premise), the two-loop pure-quartic running on the branch $k_{4} = k_{5} = k_{6} = k_{7} = 0$ is given exactly, and the running of the flat-direction quartic is the stored scalon sum, $m_{h}^{2} = 4v^{2}\\beta_{k_{2}}$, with a scalon self-coupling $\\tfrac53$ of its tree value (standard); under the Gildener-Weinberg formula and decoupling, on the scalon-sum surface the quartics reach $4\\pi$ between about $0.8$ and $4$ TeV at one loop (computed)",
+  "text": "The series' Higgs field, read as an elementary quantum field, has eight components and, on the branch where all masses come from quantum effects, must have its extra particles near 400 to 500 GeV. That needs strong self-interactions. This result computes how those interactions change with energy, using the series' own description of the field, and finds that, under the approximations assumed for that branch, they grow too strong for ordinary calculation within a few TeV.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+   "synthesis.rung-field-on-the-lift-locus",
+   "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix",
+   "synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass",
+   "synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count",
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+   "synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "4788fb2c4876",
+  "number": 21
+ },
+ {
+  "id": "t:synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch>synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch",
+  "type": "transition",
+  "between": [
+   "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch",
+   "synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch"
+  ],
+  "text": "The third strike comes from flavour. [[t]]\n\nUnder the adopted coupling with symmetric family matrices, the neutral normal pair couples down quarks through the up-quark mass matrix, so it turns a bottom quark into a strange or down quark at tree level. [[c:synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch]] With both masses at most $542$ GeV it would make $B_{s}$ and $B_{d}$ mesons mix with their antiparticles more than $50$ times faster than measured, for every split of the two masses. [[c:synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch]] So, under that coupling, the transmutation branch is excluded. [[c:synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch]]",
+  "hash": "6fcf1d48c343"
+ },
+ {
+  "id": "c:synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch",
+  "type": "theorem",
+  "claim": "synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch@2",
+  "title": "Under the covariant coupling of the rung field to its conjugate with complex symmetric family matrices (the rung $10$), the neutral normal pair couples to down quarks through the up-quark mass matrix, $\\sqrt2\\,V^{\\dagger}\\hat{M}_{u}V^{*}/v$, so its $sb$ and $db$ entries exceed $5.18$ and $1.07$ GeV for every phase; at tree level a normal pair with both masses at most $542$ GeV gives $B_{s}$ and $B_{d}$ mixing more than $50$ times the measured mass differences for every splitting of its two masses, computed with imported hadronic inputs and quark mixing from tree-level measurements and unitarity; so if the Gildener-Weinberg formula and decoupling hold, the transmutation branch is excluded under this coupling, and on the branch with a level the second doublet is at least about $2.5$ TeV with conservative inputs and no QCD running",
+  "text": "The series' Higgs field contains a second set of particles. On the branch where all masses come from quantum effects, and under the approximations used there, these particles must weigh less than about 540 GeV. With the symmetric reading of how the series couples the Higgs field to quarks, the second set changes one kind of quark into another as it passes. Strange and bottom quarks bound into mesons would then turn into their antiparticles more than fifty times faster than is measured. So that branch is ruled out, unless the coupling to quarks is read differently.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix",
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+   "synthesis.imported-takagi-factorisation",
+   "synthesis.imported-left-right-bidoublet-two-yukawa-couplings",
+   "synthesis.imported-b-meson-mixing-inputs-vacuum-insertion-lattice-and-tree-level-quark-mixing"
+  ],
+  "hash": "01c54f44bf1b",
+  "number": 22
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:field-theory.boost-modes",
+  "type": "fact",
+  "claim": "field-theory.boost-modes@3",
+  "title": "The boost on the modes",
+  "text": "In the series a boost between observers is a rotation in a plane of the algebra. Acting on the tower's quantum modes, such a boost stretches and squeezes them rather than rotating them, so it is not a quantum symmetry in the usual sense. Its imaginary-angle counterpart is one, and the two are related as real and imaginary time are in thermal field theory.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.boost-modes, version 3 (FT Prop 3.3)",
+  "hash": "5d3d0a30503b",
+  "number": 23
+ },
+ {
+  "id": "c:field-theory.fock-space-maxwell-modes",
+  "type": "fact",
+  "claim": "field-theory.fock-space-maxwell-modes@4",
+  "title": "The Fock space and the Maxwell modes",
+  "text": "The photon's quantum states are built on polynomials, the standard representation of boson operators, with the spacetime volume element as imaginary unit. Each photon momentum then carries one complex mode, and with this choice of unit positive frequency coincides with positive helicity for every massless field, so the field operator destroys one helicity and creates the other.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.fock-space-maxwell-modes, version 4 (FT Prop 8.1)",
+  "hash": "7a9f12c618ee",
+  "number": 24
+ },
+ {
+  "id": "c:field-theory.second-quantisation",
+  "type": "fact",
+  "claim": "field-theory.second-quantisation@5",
+  "title": "Second quantisation",
+  "text": "Fields whose values are elements of the spacetime algebra and whose modes are tower planes can be quantised inside one algebra, with the volume element as imaginary unit. The resulting field is local, and its observables are the standard second-quantised ones. The price of this unit is that a field's two chiralities enter differently, one directly and one conjugated; Hestenes' unit avoids that at the cost of choosing a frame.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.second-quantisation, version 5 (FT Prop 5.2)",
+  "hash": "00708429a3e0",
+  "number": 25
+ },
+ {
+  "id": "c:mass.mass-symplectic-area-two-twistor-formula",
+  "type": "fact",
+  "claim": "mass.mass-symplectic-area-two-twistor-formula@3",
+  "title": "Mass as symplectic area: the two-spinor formula",
+  "text": "A single spinor of the conformal geometry describes a massless particle travelling at light speed. Two of them together can describe a massive particle, and its mass depends only on how far apart their two light-like directions point. When they line up the composite stays massless; the more they disagree, the heavier it is.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim mass.mass-symplectic-area-two-twistor-formula, version 3 (T11 Prop 4.1)",
+  "hash": "7bfd73fd99ba",
+  "number": 26
+ },
+ {
+  "id": "c:standard-model.chirality-two-halves-spinor-module-conjugation",
+  "type": "fact",
+  "claim": "standard-model.chirality-two-halves-spinor-module-conjugation@6",
+  "title": "Chirality: the two halves of the spinor module, and conjugation as duality",
+  "text": "The internal states of a single basic spinor state of the conformal algebra split into two halves of opposite handedness, and the Standard Model symmetry treats the two halves differently, so handedness is visible to the forces. Describing everything in one handedness, as is conventional in particle physics, turns the colour pattern into the observed one. Under the slot-statistics hypothesis, the two candidate doublets are mirror images of each other, a particle and its antiparticle, rather than two separate particles.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.chirality-two-halves-spinor-module-conjugation, version 6 (T12 Prop 5.6)",
+  "hash": "c7bdf27c953d",
+  "number": 27
+ },
+ {
+  "id": "c:standard-model.direction-demanded-content-doublet-heavy",
+  "type": "fact",
+  "claim": "standard-model.direction-demanded-content-doublet-heavy@7",
+  "title": "The direction: the demanded content is doublet-heavy",
+  "text": "Without new particles, the three force strengths of the Standard Model fail to meet at a single energy. Assuming Hypothesis (S) and taking the measured inputs, this result says which way a single threshold of new particles must tilt the running to fix that: they must add more to the weak force than a weighted average of what they add to the strong and hypercharge forces, and even then the content is acceptable only if it closes the whole gap. Particles that feel only the strong force, such as a gluino, make the miss worse.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.direction-demanded-content-doublet-heavy, version 7 (T12 Cor 8.10)",
+  "hash": "87c00ab69763",
+  "number": 28
+ },
+ {
+  "id": "c:standard-model.hyp-s-slot-statistics",
+  "type": "fact",
+  "claim": "standard-model.hyp-s-slot-statistics@9",
+  "title": "Hypothesis (S): slot statistics, derived from the slot-module hypothesis",
+  "text": "The framework's account of quarks and leptons rested on an assumption, called (S), that two particular ingredients of each particle behave like fermions, the kind of particle that obeys the exclusion principle. It is now a consequence of a weaker assumption: that a particle's states are built from one empty state by adding quanta of a single two-state kind, and that handedness splits them into particles and their mirror-image antiparticles in a way that respects the intermediate Pati-Salam symmetry the framework uses. Under that assumption, with the standard requirement that the theory be free of anomalies, the ingredients must be fermions, and the possible states of a particle form exactly the standard quantum state space of five fermionic modes, with the right handedness for the particles of the Standard Model.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.hyp-s-slot-statistics, version 9 (T12 Hypothesis (S))",
+  "hash": "4017e232e62c",
+  "number": 29
+ },
+ {
+  "id": "c:standard-model.imported-anomaly-coefficients",
+  "type": "fact",
+  "claim": "standard-model.imported-anomaly-coefficients@1",
+  "title": "Imported: the anomaly coefficients",
+  "text": "A gauge theory with chiral fermions only makes sense quantum mechanically if certain sums of the charges cancel. For a theory with a $U(1)$ factor alongside the colour and weak forces there are four such sums. If any one of them fails the theory is inconsistent, and breaking the symmetry does not repair it. This is a standard textbook result taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4",
+  "hash": "462fbf36cbd0",
+  "number": 30
+ },
+ {
+  "id": "c:standard-model.imported-cauchy-decomposition-exterior-power",
+  "type": "fact",
+  "claim": "standard-model.imported-cauchy-decomposition-exterior-power@1",
+  "title": "Imported: the Cauchy decomposition of an exterior power",
+  "text": "This is a standard tool from the theory of symmetry. It says how the fully antisymmetric combinations built from a product of two spaces break up into simpler pieces, each piece pairing a pattern on one space with the mirrored pattern on the other. It comes with a short list of small cases in two and three dimensions that the paper uses repeatedly, and a companion rule for sums of spaces. All of it is taken from the textbook literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "I. G. Macdonald, Symmetric Functions and Hall Polynomials, second edition, Oxford University Press (1995)., I, \\S 4, (4.3$'$); W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., Ex.~6.11; W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., \\S 6.1, \\S 15.3; W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., App.~B.2",
+  "hash": "1245d46a0a7c",
+  "number": 31
+ },
+ {
+  "id": "c:standard-model.imported-coefficient-sum-indices",
+  "type": "fact",
+  "claim": "standard-model.imported-coefficient-sum-indices@1",
+  "title": "Imported: the coefficient as a sum of indices",
+  "text": "How fast each force's strength changes with energy is set, at the first approximation, by one number per force. This standard formula builds that number from the particles present: the force carriers push one way, and fermions and scalars push the other, in proportion to how strongly each feels the force. For the Standard Model and for its simplest supersymmetric extension it gives well-known values. It is taken from the textbook literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., Ch.~18",
+  "hash": "a60c36e74017",
+  "number": 32
+ },
+ {
+  "id": "c:standard-model.imported-fock-representation-clifford-algebra-bogoliubov",
+  "type": "fact",
+  "claim": "standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1",
+  "title": "Imported: the Fock representation of a Clifford algebra, and its Bogoliubov group",
+  "text": "The possible states of a collection of fermions, particles like electrons that cannot share a state, can be organised as the spinor representation of a Clifford algebra. The transformations that preserve the rules fermions obey form a rotation group, and those that also keep the number of particles fixed form a unitary group. This is a standard textbook result that the series imports.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., Lecture~20, \\S 20.1; H. B. Lawson and M.-L. Michelsohn, Spin Geometry, Princeton University Press (1989)., Ch.~I, \\S\\S 2, 5",
+  "hash": "e0d290682fa4",
+  "number": 33
+ },
+ {
+  "id": "c:standard-model.imported-one-loop-running-trace-ratio",
+  "type": "fact",
+  "claim": "standard-model.imported-one-loop-running-trace-ratio@1",
+  "title": "Imported: one-loop running, and the trace ratio of a simple unifying group",
+  "text": "The strengths of the three forces change slowly with energy, and at the first approximation each inverse strength changes along a straight line against the logarithm of the energy, with a slope set by the particle content. If all three forces are pieces of one larger simple symmetry, their strengths must agree at the energy where that symmetry is intact, once they are measured on the common scale the larger symmetry fixes. Both statements are standard and taken from the literature, the second being the working hypothesis of grand unification.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Georgi and S. L. Glashow, Unity of all elementary-particle forces, Phys. Rev. Lett. 32 (1974), 438--441.; U. Amaldi, W. de Boer, and H. F\"urstenau, Comparison of grand unified theories with electroweak and strong coupling constants measured at LEP, Phys. Lett. B 260 (1991), 447--455.; S. Navas et al. (Particle Data Group), Review of particle physics, Phys. Rev. D 110 (2024), 030001.",
+  "hash": "acc73efb9bce",
+  "number": 34
+ },
+ {
+  "id": "c:standard-model.imported-pair-systems-two-chirality-halves",
+  "type": "fact",
+  "claim": "standard-model.imported-pair-systems-two-chirality-halves@5",
+  "title": "Imported: the pair systems and the two chirality halves",
+  "text": "This restates earlier results of the series for the Standard Model paper. The completed algebra acts on an eight-dimensional space that splits into two halves of opposite chirality, four dimensions each (the chirality of the completed algebra, not the left and right handedness of spacetime spinors at a point). Every nonzero spinor in the first half is the empty state of its own three fermionic ladder pairs, and all other states are reached from it by those operators.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.imported-pair-systems-two-chirality-halves, version 5 (T12 Fact 2.2)",
+  "hash": "2209180f8819",
+  "number": 35
+ },
+ {
+  "id": "c:standard-model.imported-pati-salam-representation-theory-survival",
+  "type": "fact",
+  "claim": "standard-model.imported-pati-salam-representation-theory-survival@1",
+  "title": "Imported: Pati-Salam representation theory, and the survival hypothesis",
+  "text": "The Pati-Salam picture groups quarks and leptons together by treating lepton number as a fourth colour, and it sits inside a larger symmetry, $\\mathrm{Spin}(10)$. The first part of this fact lists standard rules for how certain large families of $\\mathrm{Spin}(10)$ states break up under Pati-Salam. The second part is a working assumption of model builders: at each energy, only the scalar fields that are needed there are light. Both are taken from the literature, the second as an assumption rather than a theorem.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "J. C. Pati and A. Salam, Lepton number as the fourth ``color'', Phys. Rev. D 10 (1974) 275--289.; R. Slansky, Group theory for unified model building, Phys. Rep. 79 (1981) 1--128.; S. Bertolini, L. Di Luzio and M. Malinsk'y, Intermediate mass scales in the non-supersymmetric $SO(10)$ grand unification: a reappraisal, Phys. Rev. D 80 (2009) 015013, arXiv:0903.4049.",
+  "hash": "09c8dceae7d1",
+  "number": 36
+ },
+ {
+  "id": "c:standard-model.imported-proton-condition",
+  "type": "fact",
+  "claim": "standard-model.imported-proton-condition@1",
+  "title": "Imported: the proton condition",
+  "text": "Grand unified theories predict that protons eventually decay, at a rate that falls steeply as the unification energy rises. Experiments have not seen proton decay and set a lower limit on the proton's lifetime. Combining a standard estimate of the decay rate with that limit gives a minimum unification energy of a few times ten to the fifteen GeV, and a candidate spectrum passes the proton condition if it unifies above it. The estimate is taken from the literature and is uncertain by about a factor of two.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. Bertolini, L. Di Luzio and M. Malinsk'y, Intermediate mass scales in the non-supersymmetric $SO(10)$ grand unification: a reappraisal, Phys. Rev. D 80 (2009) 015013, arXiv:0903.4049.; Super-Kamiokande Collaboration (A. Takenaka et al.), Search for proton decay via $p to e^+pi^0$ and $p to mu^+pi^0$ with an enlarged fiducial volume in Super-Kamiokande I-IV, Phys. Rev. D 102 (2020) 112011, arXiv:2010.16098.",
+  "hash": "84125cc72dfe",
+  "number": 37
+ },
+ {
+  "id": "c:standard-model.imported-tower-commuting-copies-fock-module",
+  "type": "fact",
+  "claim": "standard-model.imported-tower-commuting-copies-fock-module@5",
+  "title": "Imported: the tower, its commuting copies, and the Fock module",
+  "text": "Each completion step adds a pair of directions that acts like the creation and destruction operators of one fermion. After k steps the algebra is the original one alongside an independent matrix algebra for the k fermion modes, the two commuting with each other. The fermion modes act on a state space that doubles with every step, one qubit per step.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.imported-tower-commuting-copies-fock-module, version 5 (T12 Fact 9.1)",
+  "hash": "07e3b9ef11f5",
+  "number": 38
+ },
+ {
+  "id": "c:standard-model.imported-two-loop-gauge-coefficients",
+  "type": "fact",
+  "claim": "standard-model.imported-two-loop-gauge-coefficients@1",
+  "title": "Imported: the two-loop gauge coefficients",
+  "text": "Beyond the first approximation, the way each force's strength changes with energy also depends on the strengths of the other forces and on the top quark's coupling to the Higgs field. This standard result gives the general formula for those corrections, the specific numbers for the Standard Model and its minimal supersymmetric extension, and the measured values the running starts from. It is taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "M. E. Machacek and M. T. Vaughn, Two-loop renormalization group equations in a general quantum field theory (I). Wave function renormalization, Nucl. Phys. B 222 (1983) 83--103.; S. P. Martin and M. T. Vaughn, Two-loop renormalization group equations for soft supersymmetry-breaking couplings, Phys. Rev. D 50 (1994) 2282--2292.; S. Navas et al. (Particle Data Group), Review of particle physics, Phys. Rev. D 110 (2024), 030001.",
+  "hash": "00840e746b2c",
+  "number": 39
+ },
+ {
+  "id": "c:standard-model.invariant-pairing-five-modes",
+  "type": "fact",
+  "claim": "standard-model.invariant-pairing-five-modes@5",
+  "title": "The invariant pairing on five modes",
+  "text": "The paper builds a natural way of pairing two states of a five-mode system: each pattern of occupied modes is matched with its complementary pattern, with a carefully chosen sign. This pairing respects the large $\\mathrm{Spin}(10)$ symmetry. Because complementary patterns have opposite parity, it never pairs two states from the same sixteen-state half, so a mass term between two such states needs an extra ingredient in the middle.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.invariant-pairing-five-modes, version 5 (T12 Lem 9.23)",
+  "hash": "557a6f51ad95",
+  "number": 40
+ },
+ {
+  "id": "c:standard-model.left-right-parity-what-breaks-it",
+  "type": "fact",
+  "claim": "standard-model.left-right-parity-what-breaks-it@7",
+  "title": "Left-right parity, and what breaks it",
+  "text": "In the Pati-Salam picture there is a symmetry that exchanges left-handed and right-handed matter. Under Hypothesis (S), the paper's hypothesis about the state space, this exchange is a half-turn that mixes one pair direction with one slot direction. The only Pati-Salam invariant of a certain kind is the rung parity, and the exchange flips its sign. So giving the rung parity a background value breaks the large symmetry down to Pati-Salam and breaks left-right symmetry at the same energy.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.left-right-parity-what-breaks-it, version 7 (T12 Prop 10.8)",
+  "hash": "e80926795362",
+  "number": 41
+ },
+ {
+  "id": "c:standard-model.majorana-element",
+  "type": "fact",
+  "claim": "standard-model.majorana-element@7",
+  "title": "The Majorana element is the $(10,1,3)$",
+  "text": "Assuming the slots behave like the pairs (Hypothesis (S)), a particular element built from all five creation operators turns the empty state, the right-handed neutrino, into the completely filled state and does nothing else. Used as a mass term it gives only the right-handed neutrino a mass, of the kind a neutral particle can have on its own. Among the Pati-Salam symmetries, those that leave the element unchanged are exactly those of the Standard Model, so a background value along it breaks the larger Pati-Salam symmetry to the Standard Model and gives that neutrino its mass at the same energy.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.majorana-element, version 7 (T12 Prop 10.7)",
+  "hash": "e0dbfed3a747",
+  "number": 42
+ },
+ {
+  "id": "c:standard-model.mass-bracket-charged-singlet",
+  "type": "fact",
+  "claim": "standard-model.mass-bracket-charged-singlet@4",
+  "title": "The mass bracket is a charged singlet",
+  "text": "For two conformal spinors, the series' mass is the size of a single complex number, the mass bracket. This result works out how that number changes under the internal symmetries of a system of two conformal spinors. It is unchanged by the $SU(2)$ part and only picks up a phase from the $U(1)$ part, so, with the paper's global form and hypercharge, it carries the charges of the conjugate electron field $e^{c}$, a weak singlet of hypercharge $+1$, rather than those of a weak doublet such as the Higgs.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.mass-bracket-charged-singlet, version 4 (T12 Prop 3.2)",
+  "hash": "35bea94f0231",
+  "number": 43
+ },
+ {
+  "id": "c:standard-model.matching-traces",
+  "type": "fact",
+  "claim": "standard-model.matching-traces@4",
+  "title": "The matching, from traces",
+  "text": "When the larger Pati-Salam symmetry breaks to the Standard Model at some energy, the strengths of the forces on either side must be joined up correctly. The paper reads the joining rule off simple traces of the charges over one generation. The hypercharge force takes three fifths of its inverse strength from the right-handed weak force and two fifths from the four-colour force, while the left-handed weak force and colour carry straight through.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.matching-traces, version 4 (T12 Lem 10.5)",
+  "hash": "b30999242b54",
+  "number": 44
+ },
+ {
+  "id": "c:standard-model.one-threshold-exact-criterion",
+  "type": "fact",
+  "claim": "standard-model.one-threshold-exact-criterion@3",
+  "title": "One threshold: the exact criterion",
+  "text": "When extra particles appear at one intermediate energy, the question of whether the three forces' strengths meet at a single higher energy becomes a small problem in linear algebra. This result solves it exactly, giving the threshold position and the meeting point as simple fractions of the measured inputs. It shows that adding complete families of particles at the threshold never changes where the forces meet, only how strong they are there, and it gives a clean test for whether the threshold falls in the allowed energy range.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.one-threshold-exact-criterion, version 3 (T12 Thm 8.9)",
+  "hash": "fe9cb974fc9a",
+  "number": 45
+ },
+ {
+  "id": "c:standard-model.one-vev-vector-relations-breaking-pattern",
+  "type": "fact",
+  "claim": "standard-model.one-vev-vector-relations-breaking-pattern@7",
+  "title": "One vev vector: the $10_{H}$ relations with up-type masses read through the conjugate, the breaking pattern, and the split",
+  "text": "Assuming the slots behave like the pairs (Hypothesis (S)), a single fixed direction in the space added by the transport construction plays the role of the Higgs field's background value. As in the Standard Model, the up-type quarks get their masses from the mirror image of that field. Read that way, at the simplest level a single coupling gives the up quark, the down quark, the electron and the neutrino one common mass, the pattern of the simplest Higgs field of the $\\mathrm{Spin}(10)$ grand unified theory, so the large difference between up-type and down-type masses must come from a further coupling or another source. The field breaks the electroweak symmetry in the observed way. And the requirement that the Higgs field's coloured partner neither acquire a background value nor stay light becomes the requirement that the direction lie among the added directions rather than the original ones.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.one-vev-vector-relations-breaking-pattern, version 7 (T12 Cor 9.25)",
+  "hash": "60b32c24438b",
+  "number": 46
+ },
+ {
+  "id": "c:standard-model.pair-count-dimension",
+  "type": "fact",
+  "claim": "standard-model.pair-count-dimension@3",
+  "title": "The pair count in dimension $n$",
+  "text": "A basic spinor state of the conformal algebra can be described as the empty state of a small set of paired switches, one pair for each independent direction of a special kind in the ambient space. This lemma counts those directions. In an even spacetime dimension n there are (n+2)/2 of them, which in our four-dimensional spacetime gives three pairs.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.pair-count-dimension, version 3 (T12 Lem 2.12)",
+  "hash": "96cd0c197b76",
+  "number": 47
+ },
+ {
+  "id": "c:standard-model.raw-representation-content-state-space",
+  "type": "fact",
+  "claim": "standard-model.raw-representation-content-state-space@3",
+  "title": "The raw representation content of the state space",
+  "text": "The paper's composite of two basic spinor states has six internal cells, two slots times three pairs, each of which can be empty or filled, giving 64 states. This result sorts those states by how they behave under the weak and colour symmetries and by how many cells are filled. A single spinor state has only three cells and eight states, which sort into a colourless state, a colour triplet, an antitriplet and a second colourless state.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.raw-representation-content-state-space, version 3 (T12 Prop 5.1)",
+  "hash": "13a9d8b2f5e4",
+  "number": 48
+ },
+ {
+  "id": "c:standard-model.ten-transported-ambient-space-doublets-are",
+  "type": "fact",
+  "claim": "standard-model.ten-transported-ambient-space-doublets-are@2",
+  "title": "The ten is the transported ambient space, and its doublets are the rungs",
+  "text": "Transport adds new directions to the space the framework works in. This result shows that, under the weak, colour and hypercharge symmetries, the two added pairs of directions have exactly the quantum numbers of the Higgs doublet, while the original directions carry those of a coloured partner. So the Higgs doublet's quantum numbers are those of directions the framework already builds, rather than being put in by hand.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.ten-transported-ambient-space-doublets-are, version 2 (T12 Prop 9.22)",
+  "hash": "c83cd410bf56",
+  "number": 49
+ },
+ {
+  "id": "c:standard-model.transported-frozen-point",
+  "type": "fact",
+  "claim": "standard-model.transported-frozen-point@5",
+  "title": "The transported frozen point",
+  "text": "The frozen point, the series' reference point for mass, can be carried up into a larger structure by the same construction that founds the series. When it is, it picks up new components pointing in the directions that carry the Higgs doublet's charges, plus a small piece proportional to the cosmological constant. The main components come from the construction itself, not from the frozen point; only the small piece is specific to it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.transported-frozen-point, version 5 (T12 Prop 9.27)",
+  "hash": "2fd0cb579b36",
+  "number": 50
+ },
+ {
+  "id": "c:standard-model.yukawa-pattern-two-rung-module",
+  "type": "fact",
+  "claim": "standard-model.yukawa-pattern-two-rung-module@5",
+  "title": "The Yukawa pattern of the two-rung module",
+  "text": "A mass for a quark or lepton comes from pairing two particle states through a Higgs-like direction. This theorem works out, for each of the ten directions of the transported space, which pairs of particle states it joins. Reading the sectors as particle species, which uses Hypothesis (S), the two added pairs of directions join exactly the pairs that the Standard Model's Higgs couplings join, while the original directions join the pairs that would let protons decay.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.yukawa-pattern-two-rung-module, version 5 (T12 Thm 9.24)",
+  "hash": "297c111b72f8",
+  "number": 51
+ },
+ {
+  "id": "c:synthesis.imported-b-meson-mixing-inputs-vacuum-insertion-lattice-and-tree-level-quark-mixing",
+  "type": "fact",
+  "claim": "synthesis.imported-b-meson-mixing-inputs-vacuum-insertion-lattice-and-tree-level-quark-mixing@1",
+  "title": "Imported: the inputs of a neutral-meson mixing bound; the $\\Delta F = 2$ operators and their vacuum-insertion matrix elements (Gabbiani et al. 1996), the lattice decay constants (FLAG 2024) and bag parameters (HPQCD 2019), the measured $B_{s}$ and $B_{d}$ mass differences (PDG 2025), and the quark-mixing determinations that do not use $B$ mixing (tree-level $|V_{cb}|$, $|V_{ub}|$, $\\gamma$ and the other direct moduli, PDG 2025), with three-family unitarity",
+  "text": "Mesons made of a bottom quark and a lighter antiquark turn into their own antiparticles and back at rates measured to a fraction of a percent. To test whether a new particle would speed this up, one needs how strongly the quarks are bound in the meson, taken from large lattice computations, the measured rates, and how the quark types mix, taken from decays that the new particle would not affect. The series takes all of these from the standard compilations.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "F. Gabbiani, E. Gabrielli, A. Masiero and L. Silvestrini, A complete analysis of FCNC and CP constraints in general SUSY extensions of the standard model, Nucl. Phys. B 477 (1996), 321--352; arXiv:hep-ph/9604387., Eq. (3) (operators Q1 to Q5) and Eq. (8) (vacuum-insertion matrix elements); Flavour Lattice Averaging Group (FLAG), Y. Aoki et al., FLAG Review 2024; arXiv:2411.04268., Table 1 (f_K+-, Nf = 2+1+1), Table 2 (f_B, f_Bs, Nf = 2+1+1); R. J. Dowdall, C. T. H. Davies, R. R. Horgan, G. P. Lepage, C. J. Monahan, J. Shigemitsu and M. Wingate (HPQCD), Neutral B-meson mixing from full lattice QCD at the physical point, Phys. Rev. D 100 (2019), 094508; arXiv:1907.01025., Table VI (bag parameters B1 to B5 for B_s and B_d, MS-bar at mu = m_b); S. Navas et al. (Particle Data Group), Review of Particle Physics, Phys. Rev. D 110 (2024), 030001, and its 2025 update: the review of the CKM quark-mixing matrix (rpp2025-rev-ckm-matrix) and the B mixing averages of the Heavy Flavour Averaging Group for the 2025 edition.",
+  "hash": "0a53d61744ad",
+  "number": 52
+ },
+ {
+  "id": "c:synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass",
+  "type": "fact",
+  "claim": "synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass@1",
+  "title": "Imported: radiative symmetry breaking (Coleman and Weinberg 1973) and, on a flat direction of a scale-free tree potential, the scalon mass $8\\pi^{2}v^{2}m_{S}^{2} = 3\\sum_{V}M^{4} + \\sum_{S}M^{4} - 4\\sum_{F}M^{4}$ (Gildener and Weinberg 1976)",
+  "text": "Some theories contain no built-in mass scale, yet produce one through quantum effects, as the strong force does for the proton. Coleman and Weinberg found how this can work for a Higgs-like field, and Gildener and Weinberg found the formula for the mass of the resulting light scalar particle: it is set by the masses of all the other particles, with heavy force carriers raising it and heavy quarks lowering it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. Coleman and E. Weinberg, Radiative corrections as the origin of spontaneous symmetry breaking, Phys. Rev. D 7 (1973), 1888--1910.; E. Gildener and S. Weinberg, Symmetry breaking and scalar bosons, Phys. Rev. D 13 (1976), 3333.; R. Foot, A. Kobakhidze and R. R. Volkas, Electroweak Higgs as a pseudo-Goldstone boson of broken scale invariance, arXiv:0704.1165, equations (10) to (14).",
+  "hash": "9556cb25dfb8",
+  "number": 53
+ },
+ {
+  "id": "c:synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations",
+  "type": "fact",
+  "claim": "synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations@1",
+  "title": "Imported: the running of scalar quartic couplings in a general gauge theory at one loop and of its pure-quartic part at two loops (Machacek and Vaughn 1985; Luo, Wang and Xiao 2003), and the one-loop renormalisation-group equations of the two-Higgs-doublet model with a discrete symmetry and type-II Yukawa couplings (Haber and Hempfling 1993; Branco et al. 2012)",
+  "text": "How strongly the Higgs-type fields push on one another changes with the energy at which they are probed, by an amount that can be calculated once and for all for any theory of this kind. The general formulas, and their standard form for a theory with two Higgs fields, are taken from the literature; the series uses them to follow its own Higgs field's couplings up in energy.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "M. E. Machacek and M. T. Vaughn, Two-loop renormalization group equations in a general quantum field theory (III). Scalar quartic couplings, Nucl. Phys. B 249 (1985), 70--92.; M. Luo, H. Wang and Y. Xiao, Two-loop renormalization group equations in general gauge field theories, Phys. Rev. D 67 (2003), 065019; arXiv:hep-ph/0211440.; I. Schienbein, F. Staub, T. Steudtner and K. Svirina, Revisiting RGEs for general gauge theories, Nucl. Phys. B 939 (2019), 1--48; arXiv:1809.06797., Eqs. (5.9), (5.13), (5.14); H. E. Haber and R. Hempfling, The renormalization-group improved Higgs sector of the minimal supersymmetric model, Phys. Rev. D 48 (1993), 4280--4309.; P. M. Ferreira and D. R. T. Jones, Bounds on scalar masses in two Higgs doublet models, JHEP 08 (2009), 069; arXiv:0903.2856., Eqs. (1), (37), (44), Appendix A; G. C. Branco, P. M. Ferreira, L. Lavoura, M. N. Rebelo, M. Sher and J. P. Silva, Theory and phenomenology of two-Higgs-doublet models, Phys. Rept. 516 (2012), 1--102; arXiv:1106.0034., Eq. (2) (the potential); Appendix E (renormalisation-group equations)",
+  "hash": "09b42e33cce8",
+  "number": 54
+ },
+ {
+  "id": "c:synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+  "type": "fact",
+  "claim": "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@1",
+  "title": "Imported: the heat-kernel (Seeley-DeWitt) coefficients of a Laplace-type operator, whose field-strength part on a flat background is $\\tfrac{1}{12}\\Omega_{\\mu\\nu}\\Omega^{\\mu\\nu} + \\tfrac12E^{2}$ ($a_{2}$ in DeWitt's numbering, $a_{4}$ in Vassilevich's), and the background-field gauge with Faddeev-Popov ghosts and the one-loop determinant weights (Abbott 1981)",
+  "text": "How strongly the forces of nature act changes with the energy at which they are probed, and the rate of change at the first quantum level can be read from a standard expansion that describes how heat would spread on the space of field configurations. Combined with a standard way of fixing the redundancy of force fields that keeps their symmetry visible, the expansion gives each kind of particle's contribution to the running. These are textbook results that the series takes as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "D. V. Vassilevich, Heat kernel expansion: user's manual, Phys. Rep. 388 (2003), 279--360, arXiv:hep-th/0306138.; B. S. DeWitt, Dynamical Theory of Groups and Fields, Gordon and Breach (1965).; L. F. Abbott, The background field method beyond one loop, Nucl. Phys. B 185 (1981), 189--203.",
+  "hash": "43285efc2097",
+  "number": 55
+ },
+ {
+  "id": "c:synthesis.imported-left-right-bidoublet-two-yukawa-couplings",
+  "type": "fact",
+  "claim": "synthesis.imported-left-right-bidoublet-two-yukawa-couplings@1",
+  "title": "Imported: in the left-right symmetric model the quark bidoublet $\\Phi$ couples through two family matrices, $h$ on $\\Phi$ and $\\tilde{h}$ on $\\tilde{\\Phi} = \\tau_{2}\\Phi^{*}\\tau_{2}$, giving $M_{U} = \\kappa h + \\kappa'e^{-\\mathrm{i}\\theta}\\tilde{h}$ and $M_{D} = \\kappa'e^{\\mathrm{i}\\theta}h + \\kappa\\tilde{h}$",
+  "text": "In left-right symmetric theories, which treat left-handed and right-handed particles alike at high energies, the Higgs field and its mirror image can each couple to the quarks with their own strengths. The up-type and down-type quark masses then come from different mixtures of the two couplings, which is how such theories let the top quark be much heavier than the bottom quark.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "G. Senjanovic and R. N. Mohapatra, Exact left-right symmetry and spontaneous violation of parity, Phys. Rev. D 12 (1975), 1502.; Y. Zhang, H. An, X. Ji and R. N. Mohapatra, General CP violation in minimal left-right symmetric model and constraints on the right-handed scale, arXiv:0712.4218, equations (7), (12) and (13).",
+  "hash": "c5695cf24f0e",
+  "number": 56
+ },
+ {
+  "id": "c:synthesis.imported-takagi-factorisation",
+  "type": "fact",
+  "claim": "synthesis.imported-takagi-factorisation@1",
+  "title": "Imported: every complex symmetric matrix is U Sigma U^T with U unitary and Sigma the nonnegative diagonal of its singular values (Autonne-Takagi factorisation)",
+  "text": "A standard theorem of matrix algebra says how to find the masses and the mass states when the masses of neutral particles are described by a symmetric table of complex numbers: the masses are the table's singular values, and the states are found from an associated table that is easier to handle.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "R. A. Horn and C. R. Johnson, Matrix Analysis, 2nd ed., Cambridge University Press (2013)., Corollary 4.4.4",
+  "hash": "40c9345e3047",
+  "number": 57
+ },
+ {
+  "id": "c:synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count",
+  "type": "fact",
+  "claim": "synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count@1",
+  "title": "Imported: the Gildener-Weinberg sum rule of the scale-invariant two-doublet model, $(\\sum M_{\\mathcal H}^{4})^{1/4} = 540$ GeV over the extra scalars for $m_{h} = 125$ GeV (Lee and Pilaftsis 2012; Lane and Shepherd 2018), and the number of light neutrino species from the $Z$ resonance, $N_{\\nu} = 2.9840 \\pm 0.0082$ (LEP and SLD 2006)",
+  "text": "In one class of theories the Higgs boson gets its mass purely from quantum effects, and if the Higgs field comes in two copies the extra particles must be heavy enough to make up for the top quark: a standard calculation puts a combined measure of their masses at about $540$ GeV. Separately, experiments at the Z boson showed there are just three kinds of light neutrino, which leaves no room for further light neutral particles the Z could produce. The series takes both from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "J. S. Lee and A. Pilaftsis, Radiative corrections to scalar masses and mixing in a scale invariant two Higgs doublet model, Phys. Rev. D 86 (2012), 035004, arXiv:1201.4891.; K. Lane and W. Shepherd, Natural stabilization of the Higgs boson's mass and alignment, arXiv:1808.07927, equation (10).; The ALEPH, DELPHI, L3, OPAL and SLD Collaborations, the LEP Electroweak Working Group and the SLD Electroweak and Heavy Flavour Groups, Precision electroweak measurements on the Z resonance, Phys. Rep. 427 (2006), 257, arXiv:hep-ex/0509008.",
+  "hash": "8375d087386f",
+  "number": 58
+ },
+ {
+  "id": "c:synthesis.rung-field-level-needed-off-balance-and-not-right-invariant",
+  "type": "fact",
+  "claim": "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@2",
+  "title": "On the null-lift locus, a charge-preserving vacuum of the rung field away from the balanced frame needs a nonzero hypercharge level whatever invariant $W(N)$ is added, with $m_{\\pm}^{2} = (M_{Z}^{2} - M_{W}^{2})(\\xi/m^{*} - 1)$; the level is not invariant under the right-handed $\\su(2)$ that commutes with the weak $\\su(2)$ on the rung summand and contains the hypercharge, whose element $2R_{1}$ followed by a slot swap in $U(2)$ is the mirror involution of the units",
+  "text": "In this framework the size of the Higgs field is set by a constant called the level, and it was not known whether some other ingredient of the Higgs potential could do the same job. It cannot: whatever else is added, a stable vacuum with the observed charge conservation needs the level, and the level must be at least as large as the Higgs field's own size squared. The level, however, is forbidden by the larger left-right symmetric structure that the framework's particle content already has, because that symmetry rotates the hypercharge into other directions. So the weak scale can only come from whatever breaks the left-right symmetry, the same kind of ingredient that is needed to make up-type and down-type quark masses differ.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.rung-field-level-needed-off-balance-and-not-right-invariant, version 2",
+  "hash": "7f49b3a00f67",
+  "number": 59
+ },
+ {
+  "id": "c:synthesis.rung-unit-is-frame-boost",
+  "type": "fact",
+  "claim": "synthesis.rung-unit-is-frame-boost@2",
+  "title": "The rung summand is split, and the rung unit is the boost of its frame",
+  "text": "The extra directions that transport adds, where the series finds the Higgs doublet, have a split geometry: two directions count positively and two negatively. The symmetry of the weak force is a rotation-like symmetry that needs an all-positive geometry, so it cannot act on these directions as they stand, and no energy expression built from their own geometry is positive. Both problems are cured by one extra choice the series already makes, a preferred frame. That frame comes with a scale, which the geometry of these directions does not see. On a reading argued in the proof but not proved, that scale is the unexplained ratio of the weak scale to the cosmological scale, and a frame matched to the cosmological scale would make the weak scale as small as the Hubble rate.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.rung-unit-is-frame-boost, version 2",
+  "hash": "918d31dbc9cd",
+  "number": 60
+ },
+ {
+  "id": "c:synthesis.rung-unit-transverse-to-norm",
+  "type": "fact",
+  "claim": "synthesis.rung-unit-transverse-to-norm@3",
+  "title": "A change of rung unit is a lift-preserving isometry transverse to the norm, and it carries one doublet lift to the other",
+  "text": "In the series the Higgs field's size is measured in a unit that the step carrying the cosmological point into the next layer has to choose, and changing that unit is a hyperbolic rotation of the new layer. That rotation leaves every geometric statement of the step unchanged, so the geometry cannot choose the unit. It is also a different direction from a change of the cosmological constant, so if the unit were promoted to a field, its changes would point in a different direction from those of the cosmological constant. The two Higgs directions that the step produces turn out to be the same thing seen in two frames, mirror images of each other about the frame matched to the cosmological scale.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.rung-unit-transverse-to-norm, version 3",
+  "hash": "c4a3244fd5ae",
+  "number": 61
+ },
+ {
+  "id": "c:synthesis.scale-free-rung-potentials-need-the-flat-physical-branch",
+  "type": "fact",
+  "claim": "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch@2",
+  "title": "A rung potential with no dimensionful constant restricts on the null-lift locus to $aN^{2} + bm^{2} + eNm + H^{2}(dN + fm)$ plus a constant and sees the rung unit only through the frame; a charge-preserving tree-level vacuum at the weak scale needs the physical-branch coefficient $a + b - e$ to vanish to about $10^{-88}$ of the other couplings, and on the cone $Q = 0$ that Gildener-Weinberg flat ray is bounded below exactly when $e \\ge 0$ and $2a \\ge e$, with a massless neutral mode and a charged pair at $(2a - e)v^{2}$ at tree level; the level-zero D-term with $\\kappa N^{2}$ fails it, with $m_{\\pm}^{2} = M_{W}^{2} - M_{Z}^{2}$",
+  "text": "Could the weak scale come from nothing, as the strong-interaction scale does, by the slow running of a coupling? The first condition is a potential for the series' Higgs candidate with no built-in mass scale. This result lists all such potentials and shows that, without quantum effects, they put the weak scale at most a modest factor from the cosmological scale, unless one combination of couplings vanishes almost exactly. When it vanishes exactly the potential is flat along the very direction that changes the weak scale, which in the series' geometry is a rescaling; quantum corrections then pick the scale. The flat direction is stable only for some couplings, and the simplest choice, the one behind an earlier prediction of a charged scalar near 117 GeV, is not among them: it makes the charged scalar's mass squared negative.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.scale-free-rung-potentials-need-the-flat-physical-branch, version 2",
+  "hash": "c56a43faee1e",
+  "number": 62
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "From the symmetries of the smallest massive composite the trail has recovered the Standard Model's forces and, under Hypothesis (S), a full generation of matter as half the states of the composite. [[c:standard-model.under-s-composites-state-space-spinor]] The derived content alone runs the weak angle to the wrong value, and the Pati-Salam chain repairs the running. [[c:standard-model.chain]]\n\nIn the scalar sector the series' Higgs field is the rung field, quantised as an elementary linear field of two doublets, a count that holds only when three readings are taken exactly. [[c:synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint]] Generating the weak scale from quantum corrections alone, the transmutation branch, gives definite predictions that differ from the Standard Model. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]] Under the adopted coupling reading it is excluded three times over: by the two-photon rate, by $B$-meson mixing, and by quartic couplings that grow strong within a few TeV. [[c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]]\n\nThe working branch is the one with a level, where the second doublet must lie at about $2.5$ TeV or above. [[c:synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch]] On it the level $\\xi$ is an input, a second free number of the laws beside $N$, not derived. [[c:synthesis.rung-unit-second-free-number]] How the chain's scales move with a second doublet between a few TeV and the intermediate scale is left open. [[c:standard-model.chain]]",
+  "hash": "06a3b43eb3ce"
+ }
+]

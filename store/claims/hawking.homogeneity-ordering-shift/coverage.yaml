@@ -1,0 +1,24 @@
+functions:
+  check_palatial_sign_of_realisation:
+    kind: exact
+    clauses: ["\"the palatial sign [Z^mu, Zbar_nu] = +hbar delta^mu_nu\""]
+    omits: "n = 4, all monomials of degree <= 3, hbar at three sample values; the commutator is a multiplication operator fixed by its value on 1, so the sampled monomials cover the operator identity (this reduction is argued in the docstring, not coded)"
+  check_charge_is_minus_hbar_euler_plus_two:
+    kind: exact
+    clauses: ["\"q(id) = -hbar(Upsilon + 2), as an operator identity\""]
+    omits: "all monomials of degree <= 4 for n = 4 (and degree <= 3 for n = 1..4 giving offset n/2), hbar at three samples; both sides are first-order operators with coefficients of degree <= 1 so degree <= 1 inputs determine them (docstring argument, not coded)"
+  check_homogeneity_iff_helicity:
+    kind: sampled
+    clauses: ["\"a function homogeneous of degree h is an eigenfunction of s with eigenvalue s hbar if and only if h = -2s - 2\""]
+    omits: "degrees h = 0..4 with one generic homogeneous polynomial each, hbar = 3/2, the table for s = +-1, +-2, +-1/2; the 'only if' direction is shown by one inhomogeneous polynomial (Z^0 + 1) not being an eigenfunction"
+  check_offset_is_the_ordering_shift:
+    kind: exact
+    clauses: ["\"The -2 is exactly the ordering shift\""]
+    omits: "monomials of degree <= 3, hbar at three samples; the normal-ordered operator gives -hbar Upsilon (no offset) and the opposite-sign realisation gives +hbar(Upsilon + 2), h = 2s + 2; the symmetric ordering per complex dimension is not derived"
+untouched_premises:
+  hawking.imported-penrose-transform: "cited only for the closing sentence identifying the Penrose transform's classification parameter with the u(1) charge; the check computes the operator identity and does not touch the transform"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the operator identity and the offset are exact on a determining set of monomials; the iff statement is sampled; the Penrose-transform sentence is untested"

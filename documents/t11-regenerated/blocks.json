@@ -1,0 +1,940 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "Mass enters a conformally invariant theory where scale does: as coupling to the frozen point, the parallel scale tractor of squared norm $\\Lambda/3$. We prove the mass-weight dictionary: a density of conformal weight $w$ coupled to the frozen point through the Thomas operator obeys the Klein-Gordon equation with $m^{2} = -w(w+n-1)Q(I)$, in dimension four $m^{2} = -w(w+3)\\Lambda/3$, the de Sitter formula $\\Delta(3-\\Delta)H^{2}$ with $\\Delta = -w$, $H^{2} = \\Lambda/3$. A real weight gives a nonnegative $m^{2}$ only on $w \\in [-3,0]$, and there at most $m = 3H/2$; every known massive particle has complex weight $-\\tfrac32 \\pm i\\nu$ with $\\nu \\approx m/H$, about $3 \\times 10^{38}$ for the electron. We prove the twistor counterpart, $m^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$ for a two-twistor composite, and compute its exact de Sitter extension: the composite's grip on the frozen point, $P = M(I_{\\Lambda})$ with $M$ the conformal moment map, is its de Sitter momentum, with squared length\n\\[\nm^{2} \\;=\\; 2\\,|B_{\\Lambda}|^{2} + Q(I_{\\Lambda})\\, C,\n\\]\nwhere $B_{\\Lambda} = \\br{\\pi^{1}\\pi^{2}} + (\\Lambda/6)[\\omega^{1}\\omega^{2}]$ is the composite's pairing against the frozen point and $C$ the internal $\\mathfrak{su}(2)$ Casimir of the constituents' Gram matrix. Relative to the deformed bracket the correction is one term, with coefficient exactly $\\Lambda/3$, and the massless locus is computed. The dictionary then assigns the composite its weight; it does not explain the observed masses but relocates the question: the hierarchy is the size of an imaginary weight. The paper is Tier B; every computational identity is verified in exact arithmetic by a deposited script.",
+  "verbatim": true,
+  "hash": "af7a72dc6954"
+ },
+ {
+  "id": "s:paper-1",
+  "type": "section",
+  "title": "Introduction",
+  "hash": "b605350bc002"
+ },
+ {
+  "id": "i:paper-1",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-introduction",
+  "type": "note",
+  "claim": "note.mass.setting-introduction@2",
+  "title": "Introduction",
+  "text": "The action paper of this series builds the internal vector of gravity's MacDowell-Mansouri functional from the completion's frozen point, the parallel scale tractor $I$ whose squared norm is $\\Lambda/3$: the Stelle-West vector is $V = X - (3/\\Lambda)I$, made from $I$ and the canonical tractor $X$ \\cite{ButlerT10}. That is the framework's account of what gravity is. This paper asks what mass is, and finds the same object at the centre of the answer twice: mass is the strength of a field's grip on the frozen point, measured once as a conformal weight read against the frozen point's length, and once as the length of a composite's momentum, which is the composite's grip on the same point. The paper proves each formula at the series' standard, computes the composite's mass in de Sitter space exactly, with the correction to the flat-space formula derived rather than estimated, and says precisely how the two readings meet: the flat formula is the squared pairing of the composite against the frozen point, and the dictionary then assigns the composite its weight.\n\nThe results come in three steps. \\emph{The dictionary} (the section ``The mass-weight dictionary''): a density of conformal weight $w$ coupled to the frozen point through the Thomas operator obeys the Klein-Gordon equation with\n\\[\nm^{2} = -w(w+n-1)\\,Q(I),\n\\]\nin dimension four $m^{2} = -w(w+3)\\Lambda/3$. With $H^{2} = \\Lambda/3$ and $\\Delta = -w$ this is the de Sitter mass formula $m^{2} = \\Delta(3-\\Delta)H^{2}$, and it carries its own classification: masslessness is $w \\in \\{0, -3\\}$, the conformally coupled scalar $w = -1$ has $m^{2} = 2H^{2}$, a real weight gives $m^{2} \\ge 0$ only for $w \\in [-3, 0]$ and then $m \\le 3H/2$, and every heavier field has complex weight $w = -\\tfrac32 \\pm i\\nu$. Since $3H/2$ is about $10^{-33}\\,\\mathrm{eV}$, every known massive particle is of the last kind, with $\\nu \\approx m/H$, about $3 \\times 10^{38}$ for the electron. The natural conjecture, that coupling to the frozen point explains the observed masses, fails: what the dictionary yields is the hierarchy problem restated as the size of an imaginary weight. \\emph{The area} (the section ``Mass as symplectic area''): a single twistor is massless; a two-twistor composite has $m^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$, the squared symplectic area between its constituents' spinor parts. \\emph{The join} (the section ``The exact join''): the de Sitter scale in the flat conformal chart is $\\sigma = 1 - \\Lambda Q/12$, and its frozen point in the twistor chart is $I_{\\Lambda} = n_{\\infty} + (\\Lambda/6)\\,n_{0}$, derived rather than assumed. The composite's grip on it, the ambient vector $P = M(I_{\\Lambda})$ built from the conformal moment map, is the de Sitter momentum, and its squared length is computed in closed form:\n\\[\nm^{2} \\;=\\; 2\\,|B_{\\Lambda}|^{2} + Q(I_{\\Lambda})\\,C, \\qquad B_{\\Lambda} = \\ip{I_{\\Lambda}}{Z^{1}\\wedge Z^{2}} = \\br{\\pi^{1}\\pi^{2}} + \\tfrac{\\Lambda}{6}[\\omega^{1}\\omega^{2}],\n\\]\nwith $C$ the internal $\\mathfrak{su}(2)$ Casimir of the two constituents. At $\\Lambda = 0$ this is the area formula, now read as the squared pairing of the composite against the frozen point; for $\\Lambda \\neq 0$ the correction is a single term whose coefficient is the frozen point's norm. The composite's weight is then read off the dictionary: for every composite heavier than $3H/2$, $\\mathrm{Re}\\,w = -\\tfrac32$ and $\\mathrm{Im}\\,w = m/H - \\tfrac98 H/m + O((H/m)^{3})$. the section ``What gravity is, and what remains'' assembles the results with the action paper, at declared levels: mass is coupling to the frozen point, gravity is the action of the frozen point, and the universality of free fall reads as the statement that the theory contains one scale-giving object.",
+  "gap": false,
+  "level": "formal",
+  "hash": "ced443b0fe70"
+ },
+ {
+  "id": "c:note.mass.setting-prior-art",
+  "type": "note",
+  "claim": "note.mass.setting-prior-art@2",
+  "title": "Prior art",
+  "text": "The tractor calculus and the Thomas operator are Thomas's, in the modern formulation of Bailey, Eastwood and Gover \\cite{BEG1994}; the scale tractor and the almost-Einstein technology are Gover's \\cite{Gover2010}; the identification of the parallel scale tractor with this series' frozen point, and the norm $Q(I) = \\Lambda/3$ in the series' conventions, are the geometry paper's \\cite{ButlerT6}. The two-twistor description of massive particles is classical twistor theory: Penrose, Hughston, and the Oxford school \\cite{PenroseRindler1986, Hughston1979}; the mass formula as a two-index contraction with the infinity twistor is standard there, as is the conformal moment map in twistor variables. The three series of unitary representations of $SO(1,4)$ are Dixmier's \\cite{Dixmier1961}; the mass formula $\\Delta(3-\\Delta)H^{2}$ is their modern parametrisation, standard in the de Sitter literature. The identification of the ambient space with $\\Lambda^{2}\\T$, of the incidence chart with the completion, and of the frozen point with the infinity twistor, which the join relies on, is the twistor paper's \\cite{ButlerT9}. What this paper claims as new is the dictionary read through the frozen point, so that mass and dark energy derive from a single object; the derivation of the de Sitter frozen point $I_{\\Lambda}$ and its deformed bracket from the scale function of the flat chart; the closed-form mass of the two-twistor composite in de Sitter space, with the correction to the flat formula computed as one term; and the reading of the equivalence principle that the assembly with the action paper permits.",
+  "gap": false,
+  "level": "formal",
+  "hash": "ccfc2bf4f415"
+ },
+ {
+  "id": "c:note.mass.setting-contribution",
+  "type": "note",
+  "claim": "note.mass.setting-contribution@1",
+  "title": "Contribution",
+  "text": "(1) The mass-weight dictionary at theorem level in the series' conventions, with its three de Sitter series as a corollary (the section ``The mass-weight dictionary''). (2) The two-twistor area formula, classical, reproved at theorem level because the join needs every sign, with the Fock-vacuum reading from the twistor paper (the section ``Mass as symplectic area''). (3) The exact join: the de Sitter scale and frozen point in the flat chart, what the chart's nullity fixes and the real slice, the chart form of the spin isomorphism, the grip of a composite on the frozen point and its reality (the first half of the reality lemma being the chart form of a twistor-paper statement, the second this paper's), the closed-form mass with its one-term correction, the Casimir form of the result, the five broken generators, and the weight of a composite (the section ``The exact join''). (4) The assembly with the action paper at declared levels, and the successor problems (the section ``What gravity is, and what remains''). (5) Machine verification of every computational identity in exact arithmetic \\cite{ButlerVerifyT11}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "a6a92069530d"
+ },
+ {
+  "id": "s:paper-2",
+  "type": "section",
+  "title": "Setting and imports",
+  "hash": "dd7174dfa00e"
+ },
+ {
+  "id": "i:paper-2",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-setting-imports",
+  "type": "note",
+  "claim": "note.mass.setting-setting-imports@2",
+  "title": "Setting and imports",
+  "text": "Notation follows the geometry and action papers \\cite{ButlerT6, ButlerT10}: spacetime signature $(+,-,-,-)$, dimension $n = 4$ except where $n$ is displayed, ambient (tractor) bundle of rank six with fibre metric of signature $(2,4)$, and units $G = c = 1$; $\\hbar$ is kept as a formal parameter where quantisation is discussed and set to $1$ elsewhere. In a scale $g$ the tractor splits as $V = (\\sigma, \\mu_{a}, \\rho)$ with\n\\begin{equation}\n\\ip{(\\sigma,\\mu,\\rho)}{(\\sigma',\\mu',\\rho')} = \\sigma\\rho' + \\rho\\sigma' + g(\\mu,\\mu'),\n\\end{equation}\nthe hyperbolic pair on the outer slots and the spacetime metric on the middle. The Schouten tensor is $P_{ab}$, its trace $J = g^{ab}P_{ab}$, and $\\Box = g^{ab}\\nabla_{a}\\nabla_{b}$ is the wave operator, so that the Klein-Gordon equation for mass $m$ reads $(\\Box + m^{2})\\sigma = 0$. Throughout, $H^{2} := \\Lambda/3$, so that $Q(I) = H^{2}$ for the frozen point below; $H$ is the Hubble rate of the de Sitter background, and ``Hubble units'' means $H = 1$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "9a657519ee38"
+ },
+ {
+  "id": "t:^>mass.imported-frozen-point-tractor-connection",
+  "type": "transition",
+  "between": [
+   null,
+   "mass.imported-frozen-point-tractor-connection"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-frozen-point-tractor-connection",
+  "type": "theorem",
+  "claim": "mass.imported-frozen-point-tractor-connection@6",
+  "title": "Imported: the frozen point and the tractor connection",
+  "text": "Let $g$ be the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The ambient bundle, whose fibre is the vector space of $\\Cl(2,4)$ with tractors $\\sigma\\nInf + \\mu + \\rho\\nO$, carries the canonical connection, which in Gauge Theory Gravity is the $\\Cl(2,4)$ rotation-gauge field $D^{T}_{a} = a \\cdot \\nabla + \\Omega_{T}(a)\\times$, $\\Omega_{T}(a) = \\Omega(a) - \\nInf \\wedge \\hb^{-1}(a) + \\nO \\wedge \\Sch(\\hb^{-1}(a))$, acting on tractors $\\sigma\\nInf + \\mu + \\rho\\nO$ (Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), whose expression in the scale $g$ is\n\\begin{equation}\n\\nabla_{a}(\\sigma, \\mu_{b}, \\rho) = \\bigl(\\nabla_{a}\\sigma - \\mu_{a},\\;\\; \\nabla_{a}\\mu_{b} + g_{ab}\\,\\rho - P_{ab}\\,\\sigma,\\;\\; \\nabla_{a}\\rho + P_{a}{}^{b}\\mu_{b}\\bigr),\n\\end{equation}\nand it preserves $\\ip{(\\sigma,\\mu,\\rho)}{(\\sigma',\\mu',\\rho')} = \\sigma\\rho' + \\rho\\sigma' + g(\\mu,\\mu')$. On a vacuum Einstein field with cosmological constant $\\Lambda$ (field strength $\\mathcal{R}(a) = \\Lambda a$), in these conventions $P_{ab} = (\\Lambda/6)\\,g_{ab}$ and $J = 2\\Lambda/3$, the bundle carries a distinguished parallel section $I$, the frozen point: in its own scale $I = (1, 0, \\rho_{I}) = \\nInf + \\rho_{I}\\nO$ with vanishing middle slot, $\\nabla I = 0$ is equivalent to the vacuum equations, and\n\\[\n\\rho_{I} = \\frac{J}{n} = \\frac{\\Lambda}{6}, \\qquad Q(I) = \\frac{2J}{n} = \\frac{\\Lambda}{3}.\n\\]\n(The geometry paper is four-dimensional; the general-$n$ form of $\\rho_{I}$ is the middle slot of \\claimref{mass.imported-frozen-point-tractor-connection} for the section $(1, 0, \\rho_{I})$, $g_{ab}\\rho_{I} = P_{ab}$, traced.) $I$ is null exactly when $\\Lambda = 0$; for $\\Lambda > 0$ its stabiliser is $SO(1,4)$ and the induced form on $I^{\\perp}$ has signature $(1,4)$. \\emph{Provenance:} \\cite[Fact~4.1, Prop.~4.4, Thm.~4.5, Thm.~4.7, Prop.~4.10]{ButlerT6} (Prop.~4.4 for the stabiliser algebra and the signature of $I^{\\perp}$, Prop.~4.10 for the group). The sign of the norm is the series' convention, fixed there and machine-verified; \\cite[Rem.~4.9]{ButlerT6} records why that sign is not free: a norm of the opposite sign could not carry the de Sitter stabiliser the same paper establishes. The relative sign of the Schouten slots in \\claimref{mass.imported-frozen-point-tractor-connection} against the literature is convention-dependent and is fixed internally in the geometry paper \\cite[Lem.~4.8]{ButlerT6}; every formula of this paper is written in the convention of \\claimref{mass.imported-frozen-point-tractor-connection}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Read in Gauge Theory Gravity: the metric $g$ below is the derived metric of the gravitational field $(\\hb, \\Omega)$ on flat spacetime, the manifold is the invertible region, and the tractor connection is the flat-space $\\Cl(2,4)$ gauge field of Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}; the index computation below is its reading in the splitting of $g$ (Fact \\claimref{synthesis.imported-gtg-dictionary}).\n\nThe ambient bundle carries the canonical connection, whose expression in the scale $g$ is\n\\begin{equation}\n\\nabla_{a}(\\sigma, \\mu_{b}, \\rho) = \\bigl(\\nabla_{a}\\sigma - \\mu_{a},\\;\\; \\nabla_{a}\\mu_{b} + g_{ab}\\,\\rho - P_{ab}\\,\\sigma,\\;\\; \\nabla_{a}\\rho + P_{a}{}^{b}\\mu_{b}\\bigr),\n\\end{equation}\nand it preserves $\\ip{(\\sigma,\\mu,\\rho)}{(\\sigma',\\mu',\\rho')} = \\sigma\\rho' + \\rho\\sigma' + g(\\mu,\\mu')$. On a vacuum Einstein background with cosmological constant $\\Lambda$, in these conventions $P_{ab} = (\\Lambda/6)\\,g_{ab}$ and $J = 2\\Lambda/3$, the bundle carries a distinguished parallel section $I$, the frozen point: in its own scale $I = (1, 0, \\rho_{I})$ with vanishing middle slot, $\\nabla I = 0$ is equivalent to the vacuum equations, and\n\\[\n\\rho_{I} = \\frac{J}{n} = \\frac{\\Lambda}{6}, \\qquad Q(I) = \\frac{2J}{n} = \\frac{\\Lambda}{3}.\n\\]\n(The geometry paper is four-dimensional; the general-$n$ form of $\\rho_{I}$ is the middle slot of \\claimref{mass.imported-frozen-point-tractor-connection} for the section $(1, 0, \\rho_{I})$, $g_{ab}\\rho_{I} = P_{ab}$, traced.) $I$ is null exactly when $\\Lambda = 0$; for $\\Lambda > 0$ its stabiliser is $SO(1,4)$ and the induced form on $I^{\\perp}$ has signature $(1,4)$. \\emph{Provenance:} \\cite[Fact~4.1, Prop.~4.4, Thm.~4.5, Thm.~4.7, Prop.~4.10]{ButlerT6} (\\claimref{interior.scale-tractor-leaves-cone}, \\claimref{interior.stabiliser-rotates-parabolic-reductive}, \\claimref{interior.non-null-stabilisers-section-they-act}, \\claimref{interior.imported-tractor-connection}, \\claimref{interior.covariant-form-vacuum-equations}) (Prop.~4.4 for the stabiliser algebra and the signature of $I^{\\perp}$, Prop.~4.10 for the group). The sign of the norm is the series' convention, fixed there and machine-verified; \\cite[Rem.~4.9]{ButlerT6} records why that sign is not free: a norm of the opposite sign could not carry the de Sitter stabiliser the same paper establishes. The relative sign of the Schouten slots in \\claimref{mass.imported-frozen-point-tractor-connection} against the literature is convention-dependent and is fixed internally in the geometry paper \\cite[Lem.~4.8]{ButlerT6} (\\claimref{interior.sign-fixed-internally}); every formula of this paper is written in the convention of \\claimref{mass.imported-frozen-point-tractor-connection}.\n",
+  "hash": "5dfd7f094bd6",
+  "number": 1
+ },
+ {
+  "id": "t:mass.imported-frozen-point-tractor-connection>mass.imported-thomas-operator",
+  "type": "transition",
+  "between": [
+   "mass.imported-frozen-point-tractor-connection",
+   "mass.imported-thomas-operator"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-thomas-operator",
+  "type": "fact",
+  "claim": "mass.imported-thomas-operator@2",
+  "title": "Imported: the Thomas operator",
+  "text": "Let $g$ be the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with tractors the vectors $\\sigma\\nInf + \\mu + \\rho\\nO$ of $\\Cl(2,4)$. On a density $\\sigma$ of conformal weight $w$ the Thomas operator $D$ produces the tractor\n\\[\nD\\sigma = \\bigl(\\, w(n+2w-2)\\,\\sigma,\\;\\; (n+2w-2)\\,\\nabla_{a}\\sigma,\\;\\; -(\\Box\\sigma - wJ\\sigma)\\,\\bigr)\n\\]\nin the splitting of a scale $g$, and $D\\sigma$ is conformally invariant as a weight-$(w-1)$ tractor field. For $w = 1$ and a scale $\\sigma$, $\\tfrac1n D\\sigma$ is the scale tractor of $\\sigma$, whose parallelism, for the tractor gauge field of Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, is the Einstein condition of Fact \\claimref{mass.imported-frozen-point-tractor-connection}. \\emph{Provenance:} Thomas's prolongation \\cite{Thomas1926}, in the form of \\cite{BEG1994}; see also \\cite{Gover2010}. The sign of the $J$-term follows the sign of the Schouten tensor in the connection, and within the convention of \\claimref{mass.imported-frozen-point-tractor-connection} it is the one displayed: at $w = 1$ on the constant density $1$ of an Einstein scale the display returns $(1, 0, J/4) = (1, 0, \\Lambda/6)$, the frozen point of Fact \\claimref{mass.imported-frozen-point-tractor-connection}, a consistency the paper's own computations confirm (Lemma \\claimref{mass.de-sitter-scale-frozen-point}(1), Corollary \\claimref{mass.weight-polynomial-two-series}(2)). No translation between conventions is used.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "T. Y. Thomas, On conformal geometry, Proc. Natl. Acad. Sci. USA 12 (1926), 352--359.; T. N. Bailey, M. G. Eastwood, and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.; A. R. Gover, Almost Einstein and Poincar'e-Einstein manifolds in Riemannian signature, J. Geom. Phys. 60 (2010), 182--204.",
+  "hash": "6494057c8764",
+  "number": 2
+ },
+ {
+  "id": "t:mass.imported-thomas-operator>mass.imported-flat-model-twistor-chart-infinity-external",
+  "type": "transition",
+  "between": [
+   "mass.imported-thomas-operator",
+   "mass.imported-flat-model-twistor-chart-infinity-external"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-flat-model-twistor-chart-infinity-external",
+  "type": "fact",
+  "claim": "mass.imported-flat-model-twistor-chart-infinity-external@1",
+  "title": "Imported: the flat model, the conformal spinor chart, and the infinity bivector (external ingredients)",
+  "text": "The results from outside the series on which \\claimref{mass.imported-flat-model-twistor-chart-infinity} draws, as cited there: T. N. Bailey, M. G. Eastwood, and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217., \\S2; R. Penrose and W. Rindler, Spinors and Space-Time, Vol. 2: Spinor and Twistor Methods in Space-Time Geometry, Cambridge University Press (1986).; L. P. Hughston, Twistors and Particles, Lecture Notes in Physics 97, Springer (1979)..",
+  "gap": false,
+  "level": "formal",
+  "provenance": "T. N. Bailey, M. G. Eastwood, and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217., \\S2; R. Penrose and W. Rindler, Spinors and Space-Time, Vol. 2: Spinor and Twistor Methods in Space-Time Geometry, Cambridge University Press (1986).; L. P. Hughston, Twistors and Particles, Lecture Notes in Physics 97, Springer (1979).",
+  "hash": "2b01ba74fdb5",
+  "number": 3
+ },
+ {
+  "id": "t:mass.imported-flat-model-twistor-chart-infinity-external>mass.imported-flat-model-twistor-chart-infinity",
+  "type": "transition",
+  "between": [
+   "mass.imported-flat-model-twistor-chart-infinity-external",
+   "mass.imported-flat-model-twistor-chart-infinity"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-flat-model-twistor-chart-infinity",
+  "type": "theorem",
+  "claim": "mass.imported-flat-model-twistor-chart-infinity@7",
+  "title": "Imported: the flat model, the conformal spinor chart, and the infinity bivector",
+  "text": "On a region where the gravitational field is a pure dilation $\\hb = \\sigma$ of the flat background in some gauge (so the Weyl part of the field strength vanishes; derived metric $\\sigma^{-2}\\eta$) the ambient bundle is trivial: its fibre is one fixed vector space $V$ with the ambient pairing, parallel sections are constant vectors, and the canonical tractor at the point $x$ is $X(x) = n_{0} + x - \\tfrac12 Q(x)\\, n_{\\infty}$, with $n_{0}, n_{\\infty}$ null, $\\ip{n_{0}}{n_{\\infty}} = +1$, $x$ in their orthogonal complement, and $Q(x) = \\ip{x}{x} = g(x,x)$ the flat quadratic form, so that $Q(X(x)) = 0$ identically. The scale function of a constant vector $V$ is its $\\sigma$-slot in the flat scale, $\\sigma_{V}(x) = \\ip{X(x)}{V}$. The complexification of $V$ is $\\Lambda^{2}\\CS$ for $\\CS$ the conformal spinor space (twistor space; the chirality half of the ascended Dirac module), with pairing $\\ip{U}{U'} = \\varepsilon(U \\wedge U')$ for the volume form $\\varepsilon$ on $\\Lambda^{4}\\CS$ that the identification fixes; a bivector is simple iff its norm vanishes; the mixed slot carries $Q(x) = -2\\det x$ in the chart's components \\cite[Thm.~4.2(2)]{ButlerT9}; a conformal spinor splits as $Z = (\\omega, \\pi)$ with $\\omega$ in the two-plane $\\Som$ whose Pl\\\"ucker bivector is $n_{\\infty}$ and $\\pi$ in the two-plane $\\Spi$ whose Pl\\\"ucker bivector is $n_{0}$. The action of $\\mathfrak{sl}(\\CS)$ on $\\Lambda^{2}\\CS$ by $A\\cdot(u \\wedge v) = Au \\wedge v + u \\wedge Av$ is a Lie algebra isomorphism onto $\\mathfrak{so}(\\Lambda^{2}\\CS, \\varepsilon)$, and the infinity bivector of a scale (the infinity twistor) is the image of its scale tractor: for a vacuum with $\\Lambda = 0$ it is covariantly constant and simple, the Pl\\\"ucker bivector of the infinity line. \\emph{Provenance:} the flat model as a fixed vector space with the point embedding is \\cite[\\S4.2]{ButlerT6}, the scale function $\\sigma = \\ip{X}{I}$ recovering $g = \\sigma^{-2}\\eta$ is used in \\cite[Lem.~4.8]{ButlerT6}, and the general form of the dictionary (parallel sections are constant vectors, with $\\sigma$-slot $\\ip{X(x)}{V}$) is \\cite[\\S2]{BEG1994}; in the form needed here it is elementary and is proved in one paragraph inside Lemma \\claimref{mass.de-sitter-scale-frozen-point}; the chirality half is \\cite[Thm.~3.1]{ButlerT9}; the identification $V_{\\C} = \\Lambda^{2}\\CS$ with its pairing, the normalisation of $\\varepsilon$, the simplicity criterion, and the equivariance of the identification are \\cite[Thm.~3.4]{ButlerT9}; the chart, the identification of the incidence relation with the completion's own chart, the spin isomorphism, and the infinity bivector are \\cite[Thm.~4.2, Cor.~4.8, Prop.~5.2]{ButlerT9}, in that paper's sign conventions, machine-verified there. The spinor bracket $\\br{\\pi^{1}\\pi^{2}} = \\varepsilon^{AB}\\pi^{1}_{A}\\pi^{2}_{B}$, the null momentum $p_{AA'} = \\pi_{A}\\bar\\pi_{A'}$ of a conformal spinor, and the conformal generators as Hermitian quadratics $\\bar{Z}_{\\alpha}Z^{\\beta}$ in the conformal spinor variables are classical \\cite{PenroseRindler1986, Hughston1979}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "On a region where the gravitational field is a pure dilation $\\hb = \\sigma$ of the flat background in some gauge (so the Weyl part of the field strength vanishes; derived metric $\\sigma^{-2}\\eta$) the ambient bundle is trivial: its fibre is one fixed vector space $V$ with the ambient pairing, parallel sections are constant vectors, and the canonical tractor at the point $x$ is $X(x) = n_{0} + x - \\tfrac12 Q(x)\\, n_{\\infty}$, with $n_{0}, n_{\\infty}$ null, $\\ip{n_{0}}{n_{\\infty}} = +1$, $x$ in their orthogonal complement, and $Q(x) = \\ip{x}{x} = g(x,x)$ the flat quadratic form, so that $Q(X(x)) = 0$ identically. The scale function of a constant vector $V$ is its $\\sigma$-slot in the flat scale, $\\sigma_{V}(x) = \\ip{X(x)}{V}$. The complexification of $V$ is $\\Lambda^{2}\\CS$ for $\\CS$ the conformal spinor space (twistor space; the chirality half of the ascended Dirac module), with pairing $\\ip{U}{U'} = \\varepsilon(U \\wedge U')$ for the volume form $\\varepsilon$ on $\\Lambda^{4}\\CS$ that the identification fixes; a bivector is simple iff its norm vanishes; the mixed slot carries $Q(x) = -2\\det x$ in the chart's components \\cite[Thm.~4.2(2)]{ButlerT9} (\\claimref{correspondence.incidence-relation-chart}); a conformal spinor splits as $Z = (\\omega, \\pi)$ with $\\omega$ in the two-plane $\\Som$ whose Pl\\\"ucker bivector is $n_{\\infty}$ and $\\pi$ in the two-plane $\\Spi$ whose Pl\\\"ucker bivector is $n_{0}$. The action of $\\mathfrak{sl}(\\CS)$ on $\\Lambda^{2}\\CS$ by $A\\cdot(u \\wedge v) = Au \\wedge v + u \\wedge Av$ is a Lie algebra isomorphism onto $\\mathfrak{so}(\\Lambda^{2}\\CS, \\varepsilon)$, and the infinity bivector of a scale (the infinity twistor) is the image of its scale tractor: for a vacuum with $\\Lambda = 0$ it is covariantly constant and simple, the Pl\\\"ucker bivector of the infinity line. \\emph{Provenance:} the flat model as a fixed vector space with the point embedding is \\cite[\\S4.2]{ButlerT6}, the scale function $\\sigma = \\ip{X}{I}$ recovering $g = \\sigma^{-2}\\eta$ is used in \\cite[Lem.~4.8]{ButlerT6}, and the general form of the dictionary (parallel sections are constant vectors, with $\\sigma$-slot $\\ip{X(x)}{V}$) is \\cite[\\S2]{BEG1994}; in the form needed here it is elementary and is proved in one paragraph inside Lemma \\claimref{mass.de-sitter-scale-frozen-point}; the chirality half is \\cite[Thm.~3.1]{ButlerT9} (\\claimref{correspondence.fock-model-complexified-ascended-algebra}); the identification $V_{\\C} = \\Lambda^{2}\\CS$ with its pairing, the normalisation of $\\varepsilon$, the simplicity criterion, and the equivariance of the identification are \\cite[Thm.~3.4]{ButlerT9} (\\claimref{correspondence.spinor-identification}); the chart, the identification of the incidence relation with the completion's own chart, the spin isomorphism, and the infinity bivector are \\cite[Thm.~4.2, Cor.~4.8, Prop.~5.2]{ButlerT9} (\\claimref{correspondence.spin-representation}, \\claimref{correspondence.one-statement-three-languages}), in that paper's sign conventions, machine-verified there. The spinor bracket $\\br{\\pi^{1}\\pi^{2}} = \\varepsilon^{AB}\\pi^{1}_{A}\\pi^{2}_{B}$, the null momentum $p_{AA'} = \\pi_{A}\\bar\\pi_{A'}$ of a conformal spinor, and the conformal generators as Hermitian quadratics $\\bar{Z}_{\\alpha}Z^{\\beta}$ in the conformal spinor variables are classical \\cite{PenroseRindler1986, Hughston1979}.\n\nThis restates \\claimref{mass.imported-flat-model-twistor-chart-infinity-external}.\n",
+  "hash": "7c9a4b9dfbe8",
+  "number": 4
+ },
+ {
+  "id": "t:mass.imported-flat-model-twistor-chart-infinity>mass.imported-palatial-quadratics-homogeneity-charge",
+  "type": "transition",
+  "between": [
+   "mass.imported-flat-model-twistor-chart-infinity",
+   "mass.imported-palatial-quadratics-homogeneity-charge"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-palatial-quadratics-homogeneity-charge",
+  "type": "theorem",
+  "claim": "mass.imported-palatial-quadratics-homogeneity-charge@4",
+  "title": "Imported: the palatial quadratics and the homogeneity charge",
+  "text": "The symmetrised quadratics $q(M)$ in the palatial oscillators $Z^\\alpha$, $\\bar Z_\\beta$ (twistor oscillators: the conformal spinor coordinates and their conjugates) represent $\\mathfrak{su}(2,2)$ with $[q(M), q(M')] = \\hbar\\, q([M,M'])$, and, in that paper's realisation $\\bar{Z}_{\\beta} = -\\hbar\\partial_{\\beta}$, the symmetrised identity quadratic $q(\\mathrm{id})$ acts on functions of homogeneity $h$ as $-(h+2)\\hbar$ (Penrose's $-2s-2$, proved in the series as an exact identity in the proof of that theorem); the lemma represents all of $\\mathfrak{gl}(4,\\C)$, of which $\\mathfrak{su}(2,2)$ is the real form used here. \\emph{Provenance:} \\cite[Lem.~5.5, Thm.~5.7]{ButlerT9}. Used here only in Remark \\claimref{note.mass.quantisation-ordering}, to place the classical computation of the section ``The exact join'' against its quantisation.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The symmetrised quadratics $q(M)$ in the palatial oscillators $Z^\\alpha$, $\\bar Z_\\beta$ (twistor oscillators: the conformal spinor coordinates and their conjugates) represent $\\mathfrak{su}(2,2)$ with $[q(M), q(M')] = \\hbar\\, q([M,M'])$, and, in that paper's realisation $\\bar{Z}_{\\beta} = -\\hbar\\partial_{\\beta}$, the symmetrised identity quadratic $q(\\mathrm{id})$ acts on functions of homogeneity $h$ as $-(h+2)\\hbar$ (Penrose's $-2s-2$, proved in the series as an exact identity in the proof of that theorem); the lemma represents all of $\\mathfrak{gl}(4,\\C)$, of which $\\mathfrak{su}(2,2)$ is the real form used here. \\emph{Provenance:} \\cite[Lem.~5.5, Thm.~5.7]{ButlerT9} (\\claimref{correspondence.symmetrised-quadratics-palatial-algebra}, \\claimref{correspondence.shared-core-ordering-dictionary}). Used here only in Remark \\claimref{note.mass.quantisation-ordering}, to place the classical computation of the section ``The exact join'' against its quantisation.\n",
+  "hash": "fccc6f969110",
+  "number": 5
+ },
+ {
+  "id": "t:mass.imported-palatial-quadratics-homogeneity-charge>mass.imported-unitary-representations-de-sitter-group",
+  "type": "transition",
+  "between": [
+   "mass.imported-palatial-quadratics-homogeneity-charge",
+   "mass.imported-unitary-representations-de-sitter-group"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.imported-unitary-representations-de-sitter-group",
+  "type": "fact",
+  "claim": "mass.imported-unitary-representations-de-sitter-group@3",
+  "title": "Imported: the unitary representations of the de Sitter group",
+  "text": "Among the unitary irreducible representations of $SO(1,4)$ carried by scalar fields, with the Casimir normalised so that it acts as $-m^{2}/H^{2}$ and $m^{2} = \\Delta(3-\\Delta)H^{2}$, are: the principal series, $m^{2} \\ge \\tfrac94 H^{2}$, parametrised by $\\Delta = \\tfrac32 + i\\nu$ with $m^{2} = (\\tfrac94 + \\nu^{2})H^{2}$; the complementary series, $0 < m^{2} < \\tfrac94 H^{2}$, with $\\Delta$ real in $(0,3)$; and the massless point $m = 0$. No representation of the principal or complementary series has $m^{2} < 0$; the exceptional (discrete) series, which also contains scalar members at $\\Delta = 3 + k$, $k = 1, 2, \\dots$, with $m^{2} = -k(k+3)H^{2}$, is not used in this paper. \\emph{Provenance:} the classification of the unitary representations is Dixmier's \\cite[\\S\\S3--4]{Dixmier1961}; the $\\Delta$-parametrisation and the mass formula for the scalar series of $SO(N,1)$ are the modern presentation, for which see \\cite{Higuchi1987}. The Casimir normalisation here is the field-theoretic one on a scalar module. The de Sitter Casimir $C_{2}(I_{\\Lambda}^{\\perp})$ of Proposition \\claimref{mass.casimir-form-join}, a quadratic form on the moment components of a composite, is in this same normalisation, with no shift between the two. What differs from the de Sitter mass is that Proposition's grip: by its clause (1) the grip equals the de Sitter mass plus $Q(I_{\\Lambda}) = H^{2}$ times the composite's conformal Casimir $C_{2}(\\Lambda^{2}\\CS)$. Used to read Corollary \\claimref{mass.weight-polynomial-two-series}, which proves the algebra of $-w(w+3)$ and imports the names of the series from here.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "J. Dixmier, Repr'esentations int'egrables du groupe de De Sitter, Bull. Soc. Math. France 89 (1961), 9--41., \\S\\S3--4; A. Higuchi, Symmetric tensor spherical harmonics on the $N$-sphere and their application to the de Sitter group $SO(N,1)$, J. Math. Phys. 28 (1987), 1553--1566.",
+  "hash": "ed38385a76d5",
+  "number": 6
+ },
+ {
+  "id": "t:mass.imported-unitary-representations-de-sitter-group>mass.invariant-forms-simple-lie-algebra",
+  "type": "transition",
+  "between": [
+   "mass.imported-unitary-representations-de-sitter-group",
+   "mass.invariant-forms-simple-lie-algebra"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.invariant-forms-simple-lie-algebra",
+  "type": "theorem",
+  "claim": "mass.invariant-forms-simple-lie-algebra@2",
+  "title": "Invariant forms on a simple Lie algebra",
+  "text": "On a finite-dimensional simple Lie algebra over $\\C$, any two nonzero invariant symmetric bilinear forms are proportional.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Let $B_{1}$ be the Killing form, nondegenerate by Cartan's criterion \\cite[\\S5.1]{Humphreys1972}, and $B_{2}$ invariant. Then $B_{2}(A, \\cdot) = B_{1}(\\phi A, \\cdot)$ defines a linear $\\phi$, and invariance of both forms makes $\\phi$ commute with the adjoint action; the adjoint representation of a simple algebra is irreducible, so $\\phi$ is a scalar by Schur's lemma \\cite[\\S6.1]{Humphreys1972}. Used in Proposition \\claimref{mass.casimir-form-join}.\n",
+  "hash": "581896bac2b4",
+  "number": 7
+ },
+ {
+  "id": "s:paper-3",
+  "type": "section",
+  "title": "The mass-weight dictionary",
+  "hash": "0f5be4dedda7"
+ },
+ {
+  "id": "i:paper-3",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:mass.invariant-forms-simple-lie-algebra>mass.mass-weight-dictionary",
+  "type": "transition",
+  "between": [
+   "mass.invariant-forms-simple-lie-algebra",
+   "mass.mass-weight-dictionary"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.mass-weight-dictionary",
+  "type": "theorem",
+  "claim": "mass.mass-weight-dictionary@4",
+  "title": "The mass-weight dictionary",
+  "text": "Let $\\sigma$ be a density of conformal weight $w$ on a vacuum Einstein background with frozen point $I$, and impose the coupling\n\\[\nI \\cdot D\\sigma = 0.\n\\]\nThen, in the scale of $I$, $\\sigma$ obeys the Klein-Gordon equation $(\\Box + m^{2})\\sigma = 0$ with\n\\begin{equation}\nm^{2} = -\\,w(w+n-1)\\,Q(I), \\qquad\\text{in } n = 4:\\quad m^{2} = -\\,w(w+3)\\,\\frac{\\Lambda}{3} = -\\,w(w+3)\\,H^{2}.\n\\end{equation}\nThe mass of a field is its conformal weight, read in the units the frozen point provides, and every mass in the theory is $\\sqrt{\\Lambda}$ times a factor fixed by the weight.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Pair $I = (1, 0, \\rho_{I})$ with $D\\sigma$ (Fact \\claimref{mass.imported-thomas-operator}) in the metric $\\ip{(\\sigma,\\mu,\\rho)}{(\\sigma',\\mu',\\rho')} = \\sigma\\rho' + \\rho\\sigma' + g(\\mu,\\mu')$. The middle slots contribute nothing since $I$ has $\\mu = 0$, leaving the two hyperbolic cross terms:\n\\[\nI \\cdot D\\sigma = 1 \\cdot \\bigl(-(\\Box\\sigma - wJ\\sigma)\\bigr) + \\rho_{I} \\cdot w(n+2w-2)\\,\\sigma .\n\\]\nSubstituting $\\rho_{I} = J/n$ from Fact \\claimref{mass.imported-frozen-point-tractor-connection} and collecting the $\\sigma$-terms:\n\\[\nI \\cdot D\\sigma = -\\Box\\sigma + wJ\\sigma + \\frac{J}{n}\\,w(n+2w-2)\\,\\sigma\n= -\\Box\\sigma + \\frac{wJ}{n}\\bigl[n + (n+2w-2)\\bigr]\\sigma\n= -\\Box\\sigma + \\frac{2wJ}{n}(n+w-1)\\,\\sigma .\n\\]\nSetting this to zero gives $\\Box\\sigma = \\tfrac{2wJ}{n}(n+w-1)\\,\\sigma$, that is $(\\Box + m^{2})\\sigma = 0$ with\n\\[\nm^{2} = -\\frac{2J}{n}\\,w(n+w-1) = -\\,w(w+n-1)\\,Q(I),\n\\]\nthe last step by $Q(I) = 2J/n$ (Fact \\claimref{mass.imported-frozen-point-tractor-connection}). In $n = 4$ with $J = 2\\Lambda/3$: $m^{2} = -w(w+3)\\Lambda/3$. The script forms the pairing slot by slot from the two Facts, with $\\sigma$ and $\\Box\\sigma$ as formal coordinates, and reads $m^{2}$ off the resulting Klein-Gordon equation, on a rational grid in $(w, n, J)$ and as an identity of rational functions in a formal $\\Lambda$; as a consequence, the opposite sign fails the same pairing wherever $m^{2} \\neq 0$, which the script also records.\n",
+  "hash": "a15d179faae3",
+  "number": 8
+ },
+ {
+  "id": "t:mass.mass-weight-dictionary>mass.weight-polynomial-two-series",
+  "type": "transition",
+  "between": [
+   "mass.mass-weight-dictionary",
+   "mass.weight-polynomial-two-series"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.weight-polynomial-two-series",
+  "type": "theorem",
+  "claim": "mass.weight-polynomial-two-series@5",
+  "title": "The weight polynomial and the two series",
+  "text": "In $n = 4$, with $\\Delta := -w$ and $H^{2} = \\Lambda/3 > 0$, the dictionary reads $m^{2} = \\Delta(3-\\Delta)H^{2}$, the de Sitter mass formula of Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}, whose two series are named below by that Fact; what is proved here is the algebra of $-w(w+3)$:\n\\begin{enumerate}\n\\item $m = 0$ exactly for $w \\in \\{0, -3\\}$, the shadow pair $w \\leftrightarrow -3-w$ preserving $m^{2}$;\n\\item the conformally coupled scalar $w = 1 - n/2 = -1$ has $m^{2} = 2H^{2}$; in general dimension $w = 1 - n/2$ gives $m^{2} = \\tfrac{n(n-2)}{4}Q(I)$;\n\\item for real $w$, $m^{2} = \\bigl[\\tfrac94 - (w + \\tfrac32)^{2}\\bigr]H^{2} \\le \\tfrac94 H^{2}$, with equality at $w = -\\tfrac32$; $m^{2} \\ge 0$ exactly for $w \\in [-3, 0]$, where $m$ runs over $[0, 3H/2]$, the complementary series $0 < m < 3H/2$ together with its two endpoints (the massless pair and the $\\nu = 0$ member of the principal series); a real weight outside $[-3,0]$ gives $m^{2} < 0$, outside both series of Fact \\claimref{mass.imported-unitary-representations-de-sitter-group} that this paper uses;\n\\item for $m > 3H/2$ the weight is complex,\n\\begin{equation}\nw = -\\frac32 \\pm i\\nu, \\qquad \\nu = \\sqrt{\\frac{m^{2}}{H^{2}} - \\frac94}, \\qquad \\nu = \\frac{m}{H} - \\frac98\\,\\frac{H}{m} + O\\!\\Bigl(\\frac{H^{3}}{m^{3}}\\Bigr),\n\\end{equation}\nthe principal series: the real part is universal and the mass lies in the imaginary part.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(1) $w(w+3) = 0$ iff $w \\in \\{0,-3\\}$, and $w(w+3)$ is invariant under $w \\mapsto -3-w$. (2) At $w = 1 - n/2$, $w + n - 1 = n/2$ and $-w(w+n-1) = (n/2)(n/2 - 1) = n(n-2)/4$; for $n = 4$ this is $2$. Directly from the operator: at this weight the top two slots of $D\\sigma$ vanish, $I \\cdot D\\sigma = -(\\Box\\sigma - wJ\\sigma) = -(\\Box\\sigma + J\\sigma)$, and $J = 2\\Lambda/3$ gives $m^{2} = 2\\Lambda/3$, which is the classical value of the conformal coupling $\\tfrac16 R$ on de Sitter space in these conventions; this is the convention-independent reference for the sign of \\claimref{mass.mass-weight-dictionary}. (3) Complete the square: $-w(w+3) = \\tfrac94 - (w+\\tfrac32)^{2}$, which is nonnegative iff $|w + \\tfrac32| \\le \\tfrac32$ iff $w \\in [-3,0]$; for instance $w = 1$ gives $m^{2} = -4H^{2}$, outside both series of Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}, which also names the series in (3) and (4). (4) Solve the quadratic $w^{2} + 3w + m^{2}/H^{2} = 0$; its discriminant $9 - 4m^{2}/H^{2}$ is negative exactly when $m > 3H/2$. The expansion of $\\nu = (m/H)\\sqrt{1 - \\tfrac94 H^{2}/m^{2}}$ is checked by the script as an exact truncated power series in $\\epsilon := H/m$: $\\sqrt{1 - \\tfrac94\\epsilon^{2}} = 1 - \\tfrac98\\epsilon^{2} - \\tfrac{81}{128}\\epsilon^{4} + \\cdots$. The script checks the two massless roots and the shadow symmetry $m^{2}(w) = m^{2}(-3-w)$ on instances, the closed form $\\tfrac{n(n-2)}{4}Q(I)$ at $w = 1 - n/2$ for four values of $n$, the completed square as a polynomial identity together with the sign of $m^{2}$ at real weights inside and outside $[-3,0]$, and item (4) in Gaussian rationals.\n",
+  "hash": "e17741a70288",
+  "number": 9
+ },
+ {
+  "id": "c:note.mass.conventions-sign",
+  "type": "note",
+  "claim": "note.mass.conventions-sign@2",
+  "title": "Conventions and the sign",
+  "text": "The dictionary is written in the conventions of Fact \\claimref{mass.imported-frozen-point-tractor-connection}, where $Q(I) = +\\Lambda/3$, and there it carries a minus sign in the invariant form. The physical content is convention-independent: $m^{2} = \\Delta(3-\\Delta)H^{2}$ with $\\Delta = -w$ is the de Sitter mass formula of Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}, and the conformally coupled scalar of Corollary \\claimref{mass.weight-polynomial-two-series}(2) fixes it. The sign in the invariant form and the sign of the norm are tied together by the computation of Theorem \\claimref{mass.mass-weight-dictionary}, and neither carries content on its own. \\cite[Rem.~4.9]{ButlerT6} records that the norm reads $+\\Lambda$ in the present conventions, and why the opposite sign could not carry the de Sitter stabiliser; this paper's displays are all in the present conventions. What no convention changes is the statement that a positive mass above $3H/2$ requires a complex weight.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8e75606d7934"
+ },
+ {
+  "id": "c:note.mass.what-dictionary-does-does-not-yield",
+  "type": "note",
+  "claim": "note.mass.what-dictionary-does-does-not-yield@2",
+  "title": "What the dictionary does and does not yield",
+  "text": "The natural conjecture, that coupling to the frozen point explains the observed masses, fails quantitatively, and the failure is the finding. The unit is $H \\approx 1.5 \\times 10^{-33}\\,\\mathrm{eV}$, so the fields with real weight in $[-3,0]$, the complementary series with its endpoints, end at $m = 3H/2$, below every known massive particle. Every known massive field is in the principal series, with $\\mathrm{Re}\\,w = -\\tfrac32$ and $\\mathrm{Im}\\,w = \\nu \\approx m/H$, about $3 \\times 10^{38}$ for the electron. The dictionary does not remove the hierarchy problem; it restates it: the hierarchy is the question of why the imaginary parts of the conformal weights of matter are so large in Hubble units. What the dictionary does yield: a single origin for mass and dark energy, both couplings to $I$; the de Sitter representation theory of matter as its $w$-classification, with the $-\\tfrac32$ of the principal series read as the universal real part of every weight; and, together with the area formula of the section ``Mass as symplectic area'', a two-scale structure for the matter programme: the frozen point supplies the unit, the spinor bracket supplies the compositeness, and the internal symmetry of the multi-spinor system (many conformal spinors) is where the forces arise, taken up by the standard-model paper \\cite{ButlerT12}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "df18091e9d03"
+ },
+ {
+  "id": "c:note.mass.point-contact-dictionary-plain-words",
+  "type": "note",
+  "claim": "note.mass.point-contact-dictionary-plain-words@2",
+  "title": "Point of contact: the dictionary in plain words",
+  "text": "The universe, in this framework, has exactly one built-in scale: the length of the point at infinity, which is the cosmological constant under another name. The theorem says that mass is how strongly a field is coupled to that one scale: each field carries a number, its weight, and its mass is that number read against that single scale. A massless field is one whose weight gives zero mass against that scale. Against the data the natural conjecture fails: the scale is the Hubble scale, whose length is cosmological, so a field whose weight is an ordinary real number is lighter than anything ever observed, and everyday particles must carry weights whose imaginary part is extremely large. The mechanism does not explain why matter is so heavy compared to dark energy; it converts that question into a new one, which is the old hierarchy problem restated. The next section adds the other half of the account from the conformal spinor side, and the section ``The exact join'' joins the two halves.",
+  "gap": false,
+  "level": "formal",
+  "hash": "20f19576852e"
+ },
+ {
+  "id": "s:paper-4",
+  "type": "section",
+  "title": "Mass as symplectic area",
+  "hash": "d5ac56a63a1e"
+ },
+ {
+  "id": "i:paper-4",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-mass-symplectic-area",
+  "type": "note",
+  "claim": "note.mass.setting-mass-symplectic-area@1",
+  "title": "Mass as symplectic area",
+  "text": "The dictionary reads mass off the frozen point. Twistor theory reads it off the constituents, and the reading is a two-line contraction. a figure of the original draws the two readings side by side. This section uses the abstract-index conventions of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}; the section ``The exact join'' uses the chart's components, in which the bracket $\\br{\\pi^{1}\\pi^{2}}$ is the same determinant.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8745a6a3d456"
+ },
+ {
+  "id": "t:mass.weight-polynomial-two-series>mass.mass-symplectic-area-two-twistor-formula",
+  "type": "transition",
+  "between": [
+   "mass.weight-polynomial-two-series",
+   "mass.mass-symplectic-area-two-twistor-formula"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.mass-symplectic-area-two-twistor-formula",
+  "type": "theorem",
+  "claim": "mass.mass-symplectic-area-two-twistor-formula@3",
+  "title": "Mass as symplectic area: the two-spinor formula",
+  "text": "On the real slice, where $\\varepsilon^{A'B'}$ is the conjugate of $\\varepsilon^{AB}$ and $\\bar\\pi$ the conjugate of $\\pi$ (the conjugation reverses the complex unit $I_{6}$): a single conformal spinor (twistor) carries null momentum $p_{AA'} = \\pi_{A}\\bar\\pi_{A'}$ and is massless, and a system of two conformal spinors with momentum\n\\[\np_{AA'} = \\pi^{1}_{A}\\bar\\pi^{1}_{A'} + \\pi^{2}_{A}\\bar\\pi^{2}_{A'}\n\\]\nhas\n\\begin{equation}\nm^{2} = p^{2} = 2\\,\\bigl|\\br{\\pi^{1}\\pi^{2}}\\bigr|^{2},\n\\end{equation}\nthe squared symplectic area between the two spinor parts. Aligned spinors (vanishing bracket) give a null composite, and mass grows with the misalignment.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Contract with the spinor metric: $p^{2} = \\varepsilon^{AB}\\varepsilon^{A'B'} p_{AA'}\\, p_{BB'}$. Expanding the product gives four terms. The two diagonal terms vanish by antisymmetry, $\\varepsilon^{AB}\\pi^{i}_{A}\\pi^{i}_{B} = 0$; for a single conformal spinor this is already the whole computation, $p^{2} = 0$. The two cross terms are equal (exchange the roles of the two spinors, which relabels $A \\leftrightarrow B$ and $A' \\leftrightarrow B'$, two transpositions, and leaves both epsilons unchanged), and each is\n\\[\n\\varepsilon^{AB}\\pi^{1}_{A}\\pi^{2}_{B}\\;\\cdot\\;\\varepsilon^{A'B'}\\bar\\pi^{1}_{A'}\\bar\\pi^{2}_{B'}\n= \\br{\\pi^{1}\\pi^{2}}\\cdot\\overline{\\br{\\pi^{1}\\pi^{2}}}\n= \\bigl|\\br{\\pi^{1}\\pi^{2}}\\bigr|^{2}\n\\]\non the real slice, where $\\varepsilon^{A'B'}$ is the conjugate of $\\varepsilon^{AB}$ under the conjugation reversing $I_{6}$ and the primed bracket is therefore the conjugate of the unprimed one. Hence $p^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$. The result is classical \\cite{Hughston1979}; it is reproved here because the join needs every sign. The contraction identities are checked by the script on exact Gaussian-rational spinor instances.\n",
+  "hash": "1624095a4baa",
+  "number": 10
+ },
+ {
+  "id": "c:note.mass.point-contact-angle-between-two-vacua",
+  "type": "note",
+  "claim": "note.mass.point-contact-angle-between-two-vacua@2",
+  "title": "Point of contact: the angle between two vacua",
+  "text": "The correspondence paper proves that a conformal spinor (a twistor) is a state of the completion's three ladder pairs, a pure spinor, and that each conformal spinor determines a Fock vacuum \\cite[Thm.~5.3]{ButlerT9}. Under that identification the bracket $\\br{\\pi^{1}\\pi^{2}}$ is the overlap datum of the two constituents' vacua, and Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula} acquires its structural reading: a composite is massless exactly when its constituents agree on a vacuum, and mass is the area of their disagreement. Mass, in this reading, is not a quantity intrinsic to one constituent but a relation: a misalignment within the composite, on the conformal spinor side; a grip on infinity, on the tractor side. That these are the same number is the join of the next section. The two-twistor description of massive particles is classical twistor theory \\cite{PenroseRindler1986, Hughston1979}, read here on conformal spinors; what the series adds is the identification of the ambient objects on both sides of the pairing, which is what lets the join be computed rather than postulated.",
+  "gap": false,
+  "level": "formal",
+  "hash": "5cf47ce2a3e6"
+ },
+ {
+  "id": "s:paper-5",
+  "type": "section",
+  "title": "The exact join",
+  "hash": "6c7fa8d3d606"
+ },
+ {
+  "id": "i:paper-5",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-exact-join",
+  "type": "note",
+  "claim": "note.mass.setting-exact-join@1",
+  "title": "The exact join",
+  "text": "Theorem \\claimref{mass.mass-weight-dictionary} and Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula} both compute a mass. This section shows that the flat-space formula is the squared pairing of the composite against the frozen point, extends it to $\\Lambda \\neq 0$ exactly, and then reads the composite's weight off the dictionary. The plan: find the frozen point of de Sitter space in the flat chart and fix what the chart's normalisation does and does not decide (Lemma \\claimref{mass.de-sitter-scale-frozen-point}, Remark \\claimref{note.mass.what-nullity-fixes}); write the conformal generators in the chart (Lemma \\claimref{mass.chart-form-spin-isomorphism}); define the grip of a composite on the frozen point, which is its de Sitter momentum, and prove it is a real vector (Definition \\claimref{obj.mass.grip-mass-composite}, Lemma \\claimref{mass.grip-real}); compute its squared length in closed form (Theorem \\claimref{mass.exact-join}); recognise the result as a difference of Casimirs (Proposition \\claimref{mass.casimir-form-join}) and identify the five broken generators (Lemma \\claimref{mass.five-broken-generators}); and read off the composite's weight (Proposition \\claimref{mass.weight-composite}).",
+  "gap": false,
+  "level": "formal",
+  "hash": "9c14c80c5e45"
+ },
+ {
+  "id": "t:mass.mass-symplectic-area-two-twistor-formula>mass.de-sitter-scale-frozen-point",
+  "type": "transition",
+  "between": [
+   "mass.mass-symplectic-area-two-twistor-formula",
+   "mass.de-sitter-scale-frozen-point"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.de-sitter-scale-frozen-point",
+  "type": "theorem",
+  "claim": "mass.de-sitter-scale-frozen-point@6",
+  "title": "The de Sitter scale and its frozen point",
+  "text": "Let $\\eta$ be the fixed product of flat spacetime, the chart of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}, $Q(x) = \\eta(x,x)$, and $\\sigma(x) := 1 - \\Lambda Q(x)/12$; on the region $\\sigma \\neq 0$ let $(\\hb, \\Omega)$ be the gravitational field with $\\hb(a) = \\sigma\\,a$ (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), whose derived metric is $g = \\sigma^{-2}\\eta$. Write tractors in the flat scale as the vectors $\\sigma\\,n_{\\infty} + \\mu + \\rho\\,n_{0}$ of $\\Cl(2,4)$.\n\\begin{enumerate}\n\\item The scale tractor of $\\sigma$ in the flat scale is\n\\[\nI_{\\sigma} = \\bigl(\\sigma,\\; \\nabla\\sigma,\\; -\\tfrac14\\Box\\sigma\\bigr) = \\Bigl(1 - \\frac{\\Lambda Q}{12},\\; -\\frac{\\Lambda}{6}\\,x_{a},\\; \\frac{\\Lambda}{6}\\Bigr),\n\\]\nit is parallel for the connection \\claimref{mass.imported-frozen-point-tractor-connection} of $\\eta$, and $\\ip{I_{\\sigma}}{I_{\\sigma}} = \\Lambda/3$ identically. Hence the derived metric $g = \\sigma^{-2}\\eta$ is Einstein with cosmological constant $\\Lambda$, on the region $\\sigma \\neq 0$: the gravitational field $\\hb = \\sigma$ is de Sitter space on flat spacetime, and $I_{\\sigma}$ is its frozen point.\n\\item The constant ambient vector whose scale function is $\\sigma$ is\n\\[\nI_{\\Lambda} := n_{\\infty} + \\frac{\\Lambda}{6}\\, n_{0},\n\\]\nand it is the only one: $\\ip{X(x)}{n_{\\infty} + \\lambda n_{0}} = 1 - \\lambda Q(x)/2$, which equals $\\sigma$ iff $\\lambda = \\Lambda/6$, and the points $X(x)$ span the ambient space. The vector $n_{0} + \\lambda n_{\\infty}$, of the same norm, has scale function $\\lambda - Q/2$: the inverted chart, not this one.\n\\item $\\ip{I_{\\Lambda}}{I_{\\Lambda}} = 2 \\cdot \\tfrac{\\Lambda}{6}\\ip{n_{\\infty}}{n_{0}} = \\Lambda/3$, in agreement with (1). At $\\Lambda = 0$, $I_{\\Lambda} = n_{\\infty}$: the frozen point of flat space is the point at infinity $n_{\\infty}$ of the conformal model (the infinity twistor), and, read through the Klein correspondence as a bivector, it becomes non-simple exactly when $\\Lambda \\neq 0$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Read in Gauge Theory Gravity: the metric below is the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and the manifold is its invertible region.\n\n\\emph{(1) The scale tractor.} By Fact \\claimref{mass.imported-thomas-operator} at $w = 1$ with $J = 0$ for the flat scale, the scale tractor of $\\sigma$ is $\\tfrac14 D\\sigma = (\\sigma, \\nabla\\sigma, -\\tfrac14\\Box\\sigma)$. With $\\nabla_{a}Q = 2x_{a}$ and $\\Box Q = 2\\eta^{ab}\\eta_{ab} = 8$,\n\\[\n\\nabla_{a}\\sigma = -\\tfrac{\\Lambda}{6}\\,x_{a}, \\qquad \\Box\\sigma = -\\tfrac{2\\Lambda}{3}, \\qquad -\\tfrac14\\Box\\sigma = \\tfrac{\\Lambda}{6}.\n\\]\n\\emph{Parallelism}, slot by slot in \\claimref{mass.imported-frozen-point-tractor-connection} with $P = 0$: the first slot is $\\nabla_{a}\\sigma - \\mu_{a} = 0$ by construction; the second is $\\nabla_{a}\\mu_{b} + \\eta_{ab}\\rho = -\\tfrac{\\Lambda}{6}\\eta_{ab} + \\tfrac{\\Lambda}{6}\\eta_{ab} = 0$; the third is $\\nabla_{a}\\rho = 0$ since $\\rho$ is constant. \\emph{The norm:}\n\\[\n2\\sigma\\rho + \\eta^{ab}\\mu_{a}\\mu_{b} = 2\\Bigl(1 - \\frac{\\Lambda Q}{12}\\Bigr)\\frac{\\Lambda}{6} + \\frac{\\Lambda^{2}}{36}Q = \\frac{\\Lambda}{3}.\n\\]\n\\emph{Einstein.} The tractor metric and parallelism are scale-independent, so in the scale $\\sigma$ itself, where the density is the constant $1$ and the section therefore reads $(1, 0, \\rho')$ by Fact \\claimref{mass.imported-thomas-operator} (its middle slot is $n\\nabla 1 = 0$), with $2\\rho' = \\Lambda/3$, Fact \\claimref{mass.imported-frozen-point-tractor-connection} gives that $g = \\sigma^{-2}\\eta$ is Einstein with $P_{ab} = \\rho' g_{ab}$, that is with cosmological constant $6\\rho' = \\Lambda$.\n\n\\emph{(2) The flat-model dictionary.} In the form used here it is elementary. A section $(\\sigma, \\mu_{b}, \\rho)$ is parallel for \\claimref{mass.imported-frozen-point-tractor-connection} with $P = 0$ iff the three slot equations $\\nabla_{a}\\rho = 0$, $\\nabla_{a}\\mu_{b} = -\\eta_{ab}\\rho$, $\\nabla_{a}\\sigma = \\mu_{a}$ hold; integrating them in turn,\n\\[\n\\rho = \\text{const}, \\qquad \\mu_{b} = v_{b} - \\rho\\, x_{b}, \\qquad \\sigma = \\alpha + \\ip{v}{x} - \\tfrac12\\rho\\, Q(x),\n\\]\nwith $v$ a constant covector and $\\alpha$ a constant: a six-parameter family. Since $\\ip{X(x)}{\\alpha n_{\\infty} + \\rho n_{0} + v} = \\alpha - \\tfrac12\\rho Q(x) + \\ip{v}{x}$ is exactly this $\\sigma$-slot, the parallel sections are the constant vectors $V = \\alpha n_{\\infty} + \\rho n_{0} + v$, with scale function $\\ip{X(x)}{V}$.\n\n\\emph{The scale function of $I_{\\Lambda}$.} $\\ip{X(x)}{n_{\\infty}} = \\ip{n_{0}}{n_{\\infty}} = 1$ and $\\ip{X(x)}{n_{0}} = -\\tfrac12 Q\\ip{n_{\\infty}}{n_{0}} = -\\tfrac12 Q$, since $n_{0}, n_{\\infty}$ are null and orthogonal to $x$; so\n\\[\n\\ip{X(x)}{n_{\\infty} + \\lambda n_{0}} = 1 - \\tfrac12\\lambda Q(x), \\qquad \\ip{X(x)}{n_{0} + \\lambda n_{\\infty}} = \\lambda - \\tfrac12 Q(x),\n\\]\nand the first equals $\\sigma$ iff $\\lambda = \\Lambda/6$.\n\n\\emph{Uniqueness.} The scale function $x \\mapsto \\ip{X(x)}{V}$ determines $V$ because the vectors $X(x)$ span the ambient space: the six values at $x = 0$, at the four coordinate unit vectors $e_{a}$ of $\\eta$, and at $x = 2e_{0}$ are independent, since $X(0) = n_{0}$, $X(e_{a}) - X(0) = e_{a} - \\tfrac12\\eta_{aa}n_{\\infty}$, and $X(2e_{0}) - 2X(e_{0}) + X(0) = -n_{\\infty}$.\n\n\\emph{(3) The norm in the chart.} $\\ip{n_{\\infty} + \\lambda n_{0}}{n_{\\infty} + \\lambda n_{0}} = 2\\lambda\\ip{n_{\\infty}}{n_{0}} = 2\\lambda$, using $\\ip{n_{\\infty}}{n_{\\infty}} = \\ip{n_{0}}{n_{0}} = 0$; and by Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity} a bivector is simple iff its norm vanishes, so $n_{\\infty} + \\lambda n_{0}$ is simple iff $\\lambda = 0$. The general statement behind (3), that the frozen point (the infinity twistor), read as a bivector, is simple iff $\\Lambda = 0$, is \\cite[Cor.~4.8]{ButlerT9}; here it is the chart computation.\n\n\\emph{Script.} It confirms (1) as rational-function identities in $\\Lambda$ at rational points (the second slot of the connection, the only one that is not an identity by construction, and the norm $\\Lambda/3$), the scale-function values of (2) at rational points and three values of $\\lambda$ together with the spanning of the six listed points by exact rank, and the ambient norm of (3) formed and equal to $2\\lambda$ at four values (null, hence simple by Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}, exactly at $\\lambda = 0$).\n",
+  "hash": "868890dcef44",
+  "number": 11
+ },
+ {
+  "id": "c:note.mass.what-nullity-fixes",
+  "type": "note",
+  "claim": "note.mass.what-nullity-fixes@3",
+  "title": "What nullity fixes",
+  "text": "With the undetermined slot coefficient $X_{c}(x) = n_{0} + x + c\\,Q(x)\\,n_{\\infty}$ one has $Q(X_{c}) = Q(x)(1 + 2c)$, so nullity of the point embedding for all $x$ fixes $c = -\\tfrac12$. This is a statement about the coefficient, not about the chart's normalisation: rescaling the volume form $\\varepsilon$ by $\\kappa$ rescales $\\ip{n_{0}}{n_{\\infty}}$, $Q(x)$ and $Q(X_{c})$ alike, and nullity is insensitive to $\\kappa$. What fixes the chart is the imported normalisation $\\ip{n_{0}}{n_{\\infty}} = +1$ together with $Q = Q(x)$ (Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}); on the $x$-slot this reads $\\ip{x}{y} = -\\varepsilon_{ab}\\varepsilon_{a'b'}x^{aa'}y^{bb'}$, so $Q(x) = -2\\det(x^{aa'})$. The real points of the $x$-slot are, by definition, the $x$ whose translation generator $A(x\\wedge n_{\\infty})$ lies in $\\mathfrak{su}(2,2)$ for the Hermitian form the relation displayed with \\claimref{mass.chart-form-spin-isomorphism} fixed below (the reversion form $h$ on the conformal spinor space $\\CS$, written in the chart's frame); by Lemma \\claimref{mass.chart-form-spin-isomorphism}(2) that generator's block is $b_{x} = x\\varepsilon$, and $x\\varepsilon$ is anti-Hermitian iff $x = \\tfrac{i}{\\sqrt2}K\\varepsilon$ with $K$ Hermitian (if $x = \\tfrac{i}{\\sqrt2}K\\varepsilon$ then $x\\varepsilon = -\\tfrac{i}{\\sqrt2}K$; conversely $K := i\\sqrt2\\,x\\varepsilon$ is Hermitian when $x\\varepsilon$ is anti-Hermitian, and $x = -\\tfrac{i}{\\sqrt2}K\\varepsilon^{-1} = \\tfrac{i}{\\sqrt2}K\\varepsilon$). So the real points are the matrices\n\\begin{equation}\nx^{aa'} = \\frac{i}{\\sqrt2}\\,K\\varepsilon, \\qquad K = \\begin{pmatrix} x^{0}+x^{3} & x^{1}-ix^{2} \\\\ x^{1}+ix^{2} & x^{0}-x^{3}\\end{pmatrix},\\quad \\varepsilon = \\begin{pmatrix} 0 & 1 \\\\ -1 & 0\\end{pmatrix},\n\\end{equation}\nwith $(x^{0}, x^{1}, x^{2}, x^{3})$ real, on which $Q = -2\\det x = \\det K = (x^{0})^{2} - (x^{1})^{2} - (x^{2})^{2} - (x^{3})^{2}$; the factor $i$ is that of the incidence relation (in geometric algebra the conformal pseudoscalar $I_6$, the complex unit of $\\CS$, so that $x^{aa'}$ is $H_x$ up to that unit and the normalisation), and the factor $\\varepsilon$ is what makes the translation generators of Lemma \\claimref{mass.chart-form-spin-isomorphism} anti-Hermitian for the relation displayed with \\claimref{mass.chart-form-spin-isomorphism} (Lemma \\claimref{mass.grip-real}). The correspondence paper's reality structure \\cite[Prop.~4.5]{ButlerT9} selects the same slice up to a choice of frame in $\\Sc'$, which changes no formula of this section: the computations below are polynomial identities in the chart. The script checks these statements with the slice scaled by $\\sqrt2$ (so that $Q = 2\\det K$ there), the normalisation $1/\\sqrt2$ being a real scalar that affects no reality statement; it also confirms that the anti-Hermiticity condition on the eight real parameters of $x$ has rank four, so that the slice is all of the real locus.",
+  "gap": false,
+  "level": "formal",
+  "hash": "db1246e0e9ce"
+ },
+ {
+  "id": "c:note.mass.setting-conformal-generators-chart",
+  "type": "note",
+  "claim": "note.mass.setting-conformal-generators-chart@1",
+  "title": "The conformal generators in the chart",
+  "text": "Write $\\T = \\Sc \\oplus \\Sc'$ with bases $e_{1}, e_{2}$ of $\\Sc$ and $e_{3}, e_{4}$ of $\\Sc'$, so that $n_{\\infty} = e_{1}\\wedge e_{2}$, $n_{0} = e_{3}\\wedge e_{4}$, the $x$-slot is spanned by the mixed bivectors $e_{a}\\wedge e_{a'}$ ($a \\in \\{1,2\\}$, $a' \\in \\{3,4\\}$), and $\\varepsilon(e_{1}\\wedge e_{2}\\wedge e_{3}\\wedge e_{4}) = 1$, which gives $\\ip{n_{0}}{n_{\\infty}} = +1$. A twistor is $Z = \\omega + \\pi = \\omega^{a}e_{a} + \\pi^{a'}e_{a'}$. Let $\\varepsilon_{ab}$ and $\\varepsilon_{a'b'}$ be the antisymmetric symbols with $\\varepsilon_{12} = \\varepsilon_{34} = 1$, so that $e_{a}\\wedge e_{b} = \\varepsilon_{ab}\\,n_{\\infty}$, $e_{a'}\\wedge e_{b'} = \\varepsilon_{a'b'}\\,n_{0}$, and the brackets are the determinants $\\br{\\pi^{1}\\pi^{2}} := \\varepsilon_{a'b'}\\pi_{1}^{a'}\\pi_{2}^{b'}$ and $[\\omega^{1}\\omega^{2}] := \\varepsilon_{ab}\\omega_{1}^{a}\\omega_{2}^{b}$. For the ambient vector $U \\wedge V$ let $R_{U\\wedge V}$ be the rotation $W \\mapsto \\ip{U}{W}V - \\ip{V}{W}U$ of $\\Lambda^{2}\\T$, and let $A(U \\wedge V) \\in \\mathfrak{sl}(\\T)$ be its preimage under the isomorphism of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}. Matrices act on column vectors in the basis $(e_{1}, e_{2}, e_{3}, e_{4})$, in block form according to $\\Sc \\oplus \\Sc'$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "70ef70f594e0"
+ },
+ {
+  "id": "t:mass.de-sitter-scale-frozen-point>mass.chart-form-spin-isomorphism",
+  "type": "transition",
+  "between": [
+   "mass.de-sitter-scale-frozen-point",
+   "mass.chart-form-spin-isomorphism"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.chart-form-spin-isomorphism",
+  "type": "theorem",
+  "claim": "mass.chart-form-spin-isomorphism@5",
+  "title": "The chart form of the spin isomorphism",
+  "text": "For $x = x^{aa'}e_{a}\\wedge e_{a'}$ in the $x$-slot:\n\\begin{enumerate}\n\\item $A(n_{\\infty}\\wedge n_{0}) = \\operatorname{diag}(-\\tfrac12, -\\tfrac12, \\tfrac12, \\tfrac12)$, the grading element;\n\\item $A(x \\wedge n_{\\infty}) = \\begin{pmatrix} 0 & b_{x} \\\\ 0 & 0 \\end{pmatrix}$ with $b_{x}: \\Spi \\to \\Som$, $(b_{x}\\pi)^{a} = x^{aa'}\\varepsilon_{a'b'}\\pi^{b'}$: the translations;\n\\item $A(x \\wedge n_{0}) = \\begin{pmatrix} 0 & 0 \\\\ c_{x} & 0 \\end{pmatrix}$ with $c_{x}: \\Som \\to \\Spi$, $(c_{x}\\omega)^{a'} = -x^{ba'}\\varepsilon_{ba}\\omega^{a}$: the special conformal generators.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Since the map $A \\mapsto (U \\mapsto A\\cdot U)$ is an isomorphism onto $\\mathfrak{so}(\\Lambda^{2}\\CS,\\varepsilon)$ (Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}), it suffices to check that each displayed matrix acts on the six basis bivectors as the named rotation does. Throughout, $Q(n_{\\infty}) = Q(n_{0}) = 0$, $\\ip{n_{\\infty}}{n_{0}} = 1$, and the $x$-slot is orthogonal to both.\n\n(1) $R_{n_{\\infty}\\wedge n_{0}}$ sends $n_{\\infty} \\mapsto Q(n_{\\infty})n_{0} - \\ip{n_{0}}{n_{\\infty}}n_{\\infty} = -n_{\\infty}$, $n_{0} \\mapsto n_{0}$, and every $x$-slot vector to $0$. The matrix $\\operatorname{diag}(-\\tfrac12,-\\tfrac12,\\tfrac12,\\tfrac12)$ sends $e_{1}\\wedge e_{2} \\mapsto (-\\tfrac12 - \\tfrac12)e_{1}\\wedge e_{2} = -n_{\\infty}$, $e_{3}\\wedge e_{4} \\mapsto n_{0}$, and $e_{a}\\wedge e_{a'} \\mapsto (-\\tfrac12 + \\tfrac12)e_{a}\\wedge e_{a'} = 0$.\n\n(2) $R_{x\\wedge n_{\\infty}}$ sends $n_{\\infty} \\mapsto \\ip{x}{n_{\\infty}}n_{\\infty} - Q(n_{\\infty})x = 0$, a mixed bivector $y \\mapsto \\ip{x}{y}n_{\\infty}$, and $n_{0} \\mapsto \\ip{x}{n_{0}}n_{\\infty} - \\ip{n_{\\infty}}{n_{0}}x = -x$. The matrix $A$ with block $b_{x}$ annihilates $\\Som$ and maps $e_{b'} \\mapsto x^{aa'}\\varepsilon_{a'b'}e_{a}$. Hence $A\\cdot n_{\\infty} = Ae_{1}\\wedge e_{2} + e_{1}\\wedge Ae_{2} = 0$. For $y = e_{c}\\wedge e_{b'}$: $A\\cdot y = e_{c}\\wedge Ae_{b'} = x^{aa'}\\varepsilon_{a'b'}\\,e_{c}\\wedge e_{a} = x^{aa'}\\varepsilon_{a'b'}\\varepsilon_{ca}\\,n_{\\infty}$, while by Remark \\claimref{note.mass.what-nullity-fixes} $\\ip{x}{e_{c}\\wedge e_{b'}} = -\\varepsilon_{ac}\\varepsilon_{a'b'}x^{aa'} = \\varepsilon_{ca}\\varepsilon_{a'b'}x^{aa'}$: equal. For $n_{0}$: $A\\cdot(e_{3}\\wedge e_{4}) = Ae_{3}\\wedge e_{4} + e_{3}\\wedge Ae_{4} = x^{a4}\\varepsilon_{43}\\,e_{a}\\wedge e_{4} + x^{a3}\\varepsilon_{34}\\,e_{3}\\wedge e_{a} = -x^{a4}e_{a}\\wedge e_{4} - x^{a3}e_{a}\\wedge e_{3} = -x$.\n\n(3) $R_{x\\wedge n_{0}}$ sends $n_{0} \\mapsto 0$, $y \\mapsto \\ip{x}{y}n_{0}$, and $n_{\\infty} \\mapsto \\ip{x}{n_{\\infty}}n_{0} - \\ip{n_{0}}{n_{\\infty}}x = -x$. The matrix with block $c_{x}$ annihilates $\\Spi$ and maps $e_{a} \\mapsto -x^{ba'}\\varepsilon_{ba}e_{a'}$. Hence $A\\cdot n_{0} = 0$. For $y = e_{a}\\wedge e_{c'}$: $A\\cdot y = Ae_{a}\\wedge e_{c'} = -x^{ba'}\\varepsilon_{ba}\\,e_{a'}\\wedge e_{c'} = -x^{ba'}\\varepsilon_{ba}\\varepsilon_{a'c'}\\,n_{0}$, while $\\ip{x}{e_{a}\\wedge e_{c'}} = -\\varepsilon_{ba}\\varepsilon_{a'c'}x^{ba'}$: equal. For $n_{\\infty}$: $A\\cdot(e_{1}\\wedge e_{2}) = Ae_{1}\\wedge e_{2} + e_{1}\\wedge Ae_{2} = -x^{2a'}\\varepsilon_{21}\\,e_{a'}\\wedge e_{2} - x^{1a'}\\varepsilon_{12}\\,e_{1}\\wedge e_{a'} = -x^{2a'}e_{2}\\wedge e_{a'} - x^{1a'}e_{1}\\wedge e_{a'} = -x$.\n\nEach displayed matrix is traceless. The script solves the linear systems $A\\cdot P = R(P)$ exactly for the nine rotations displayed and confirms that the solutions are these matrices, entry by entry.\n",
+  "hash": "61e93ac5768b",
+  "number": 12
+ },
+ {
+  "id": "c:note.mass.setting-grip-composite-frozen-point",
+  "type": "note",
+  "claim": "note.mass.setting-grip-composite-frozen-point@1",
+  "title": "The grip of a composite on the frozen point",
+  "text": "The classical phase space of $N$ twistors carries the Hermitian form $\\Sigma$ of signature $(2,2)$, written $\\bar{Z}\\cdot W := \\Sigma(Z, W)$, and the conformal group acts by $SU(2,2)$. The form is canonical up to a phase and has signature $(2,2)$ \\cite[Prop.~4.5(1), (2), (4)]{ButlerT9}; the chart frame fixes the phase, and in it $\\Sigma$ is the standard twistor form $\\bar{Z}\\cdot Z = \\omega^{A}\\bar\\pi_{A} + \\bar\\omega^{A'}\\pi_{A'}$ \\cite{PenroseRindler1986}, which pairs $\\omega$ with $\\bar\\pi$ through the frame: for $Z = (\\omega, \\pi)$ and $W = (\\xi, \\chi)$,\n\\begin{equation}\n\\bar{Z}\\cdot W = \\hp{\\pi}{\\xi} + \\overline{\\hp{\\chi}{\\omega}}, \\qquad \\hp{u}{v} := \\overline{u^{3}}\\,v^{1} + \\overline{u^{4}}\\,v^{2}\\quad (u \\in \\Sc',\\ v \\in \\Sc),\n\\end{equation}\nthe sesquilinear pairing that identifies the frame $e_{3}, e_{4}$ of $\\Sc'$ with the frame $e_{1}, e_{2}$ of $\\Sc$; we write $\\bar{u}_{a}$ for the conjugate of the component of $u \\in \\Sc'$ so identified with $e_{a}$, so that $\\hp{u}{v} = \\bar{u}_{a}v^{a}$. The real slice \\claimref{note.mass.what-nullity-fixes} is the one this form determines. The moment map of the action on the phase space is the classical form of the generators of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}:\n\\begin{equation}\nM_{A}(Z^{1}, \\dots, Z^{N}) := i\\sum_{i=1}^{N} \\bar{Z}^{i}\\cdot(A Z^{i}), \\qquad A \\in \\mathfrak{sl}(\\T),\n\\end{equation}\nreal for $A \\in \\mathfrak{su}(2,2)$, and $M_{U\\wedge V} := M_{A(U\\wedge V)}$ for ambient $U, V$. Equivariance is built in: for $\\gamma \\in SU(2,2)$, $M_{A}(\\gamma Z) = M_{\\gamma^{-1}A\\gamma}(Z)$, and $A(\\gamma U \\wedge \\gamma V) = \\gamma\\,A(U\\wedge V)\\,\\gamma^{-1}$ because the isomorphism of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity} intertwines the two actions.",
+  "gap": false,
+  "level": "formal",
+  "hash": "e21a9caab1ca"
+ },
+ {
+  "id": "t:mass.chart-form-spin-isomorphism>obj.mass.grip-mass-composite",
+  "type": "transition",
+  "between": [
+   "mass.chart-form-spin-isomorphism",
+   "obj.mass.grip-mass-composite"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:obj.mass.grip-mass-composite",
+  "type": "definition",
+  "claim": "obj.mass.grip-mass-composite@3",
+  "title": "The grip, and the mass of a composite",
+  "text": "Let $I$ be a nonzero ambient vector and $Z^{1}, \\dots, Z^{N} \\in \\CS$ a composite of conformal spinors (twistors). The \\emph{grip} of the composite on $I$ is the ambient vector $P = M(I)$ determined by\n\\[\n\\ip{P}{U} = M_{U\\wedge I} \\qquad\\text{for all ambient } U,\n\\]\nwhich exists and is unique because the pairing is nondegenerate. The \\emph{mass-squared} of the composite relative to $I$ is $m^{2} := Q(P)$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "60e4243f26f2",
+  "number": 13
+ },
+ {
+  "id": "c:note.mass.setting-grip-composite-frozen-point-2",
+  "type": "note",
+  "claim": "note.mass.setting-grip-composite-frozen-point-2@2",
+  "title": "The grip of a composite on the frozen point",
+  "text": "Three properties follow at once. First, $\\ip{P}{I} = M_{I\\wedge I} = 0$: the grip lies in $I^{\\perp}$. Second, $m^{2}$ is invariant under the stabiliser of $I$: for $\\gamma$ with $\\gamma I = I$, $\\ip{P(\\gamma Z)}{U} = M_{U\\wedge I}(\\gamma Z) = M_{\\gamma^{-1}(U\\wedge I)}(Z) = M_{\\gamma^{-1}U\\wedge I}(Z) = \\ip{P(Z)}{\\gamma^{-1}U} = \\ip{\\gamma P(Z)}{U}$, so $P(\\gamma Z) = \\gamma P(Z)$ and $Q(P)$ is unchanged; for the frozen point of Lemma \\claimref{mass.de-sitter-scale-frozen-point} the stabiliser acts on the ambient space through $SO(1,4)$ (Fact \\claimref{mass.imported-frozen-point-tractor-connection}; the Lie-algebra form of the surjection is Lemma \\claimref{mass.five-broken-generators}), and $P$ is a de Sitter vector. Third, at $\\Lambda = 0$, $I = n_{\\infty}$ and $\\ip{P}{x} = M_{x\\wedge n_{\\infty}}$ is, by Lemma \\claimref{mass.chart-form-spin-isomorphism}(2), the value of the translation generator on the composite, that is, its total momentum in the direction $x$; the $x$-slot part of $P$ is therefore the momentum, the remaining part is $-d\\,n_{\\infty}$ with $d$ the dilation charge, and since $n_{\\infty}$ is null and orthogonal to the $x$-slot, $m^{2}$ is the Poincar\\'e Casimir $p^{2}$. Definition \\claimref{obj.mass.grip-mass-composite} is the de Sitter extension of the mass of Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}: the composite's momentum is its grip on the point at infinity, and its mass is the length of that grip. Lemma \\claimref{mass.five-broken-generators} below identifies the generators $A(e_{a}\\wedge I)$, $e_{a} \\in I^{\\perp}$, whose charges are the components of $P$, with the five generators of $\\mathfrak{su}(2,2)$ broken by $I$, the de Sitter translations, which is the representation-theoretic form of the same statement. That $P$ is a real vector, so that $Q(P)$ is a value of the real $(1,4)$ form on $I^{\\perp}$, is the next lemma.",
+  "gap": false,
+  "level": "formal",
+  "hash": "610da61a6b7c"
+ },
+ {
+  "id": "t:obj.mass.grip-mass-composite>mass.grip-real",
+  "type": "transition",
+  "between": [
+   "obj.mass.grip-mass-composite",
+   "mass.grip-real"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.grip-real",
+  "type": "theorem",
+  "claim": "mass.grip-real@7",
+  "title": "The grip is real",
+  "text": "Let $V_{\\R}$ be the real span of $n_{\\infty}$, $n_{0}$ and the real slice \\claimref{note.mass.what-nullity-fixes} of the $x$-slot. For $U, V \\in V_{\\R}$ the generator $A(U\\wedge V)$ lies in $\\mathfrak{su}(2,2)$, the real form of $\\Sigma$, the reversion form of $\\CS$ (the twistor form); hence $M_{U\\wedge V}$ is real, and for $I \\in V_{\\R}$ the grip $P = M(I)$ lies in $V_{\\R}$. For the frozen point $I_{\\Lambda}$, $P$ is a real vector of $I_{\\Lambda}^{\\perp}$ and $m^{2} = Q(P)$ is a value of the $(1,4)$ form of Fact \\claimref{mass.imported-frozen-point-tractor-connection}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Conventions: the chart's complex unit, written $i$ below, is $I_{6}$, the complex unit of the conformal spinor space $\\CS$, and the bar is the conjugation that reverses it.\n\nThe first conclusion is the chart form of \\cite[Prop.~4.5(2)]{ButlerT9} (\\claimref{correspondence.reality-conjugation-twistor-form-factor}), which states that the real bivectors act $\\Sigma$-anti-Hermitianly; here it is the chart computation, in four steps. The second conclusion is this paper's.\n\n\\emph{Step 1, the criterion.} In the block form of Lemma \\claimref{mass.chart-form-spin-isomorphism}, $\\Sigma = \\left(\\begin{smallmatrix} 0 & 1 \\\\ 1 & 0\\end{smallmatrix}\\right)$, so for $A = \\left(\\begin{smallmatrix} A_{11} & A_{12} \\\\ A_{21} & A_{22}\\end{smallmatrix}\\right)$ the matrix $\\Sigma A = \\left(\\begin{smallmatrix} A_{21} & A_{22} \\\\ A_{11} & A_{12}\\end{smallmatrix}\\right)$ is anti-Hermitian iff $A_{12}^{\\dagger} = -A_{12}$, $A_{21}^{\\dagger} = -A_{21}$ and $A_{22} = -A_{11}^{\\dagger}$.\n\n\\emph{Step 2, the grading and the translations.} The grading element has $A_{11} = -\\tfrac12$, $A_{22} = \\tfrac12$, $A_{12} = A_{21} = 0$, and satisfies the criterion. For $x$ in the slice \\claimref{note.mass.what-nullity-fixes}, $x = \\tfrac{i}{\\sqrt2}K\\varepsilon$ with $K$ Hermitian, the translation block of Lemma \\claimref{mass.chart-form-spin-isomorphism}(2) is $b_{x} = x\\varepsilon = \\tfrac{i}{\\sqrt2}K\\varepsilon^{2} = -\\tfrac{i}{\\sqrt2}K$, anti-Hermitian.\n\n\\emph{Step 3, the special conformal generators.} The block of Lemma \\claimref{mass.chart-form-spin-isomorphism}(3) is $c_{x} = -x^{\\mathsf T}\\varepsilon = \\tfrac{i}{\\sqrt2}\\,\\varepsilon K^{\\mathsf T}\\varepsilon$ (using $\\varepsilon^{\\mathsf T} = -\\varepsilon$), whose adjoint is $-\\tfrac{i}{\\sqrt2}\\,\\varepsilon^{\\dagger}\\bar{K}\\varepsilon^{\\dagger} = -\\tfrac{i}{\\sqrt2}\\,\\varepsilon K^{\\mathsf T}\\varepsilon = -c_{x}$, since $\\bar K = K^{\\mathsf T}$ and $\\varepsilon^{\\dagger} = -\\varepsilon$: anti-Hermitian.\n\n\\emph{Step 4, the Lorentz generators.} For two rotations $R_{U\\wedge V}(Z) = \\ip{U}{Z}V - \\ip{V}{Z}U$, expanding both sides on a vector $Z$ gives\n\\[\n[R_{U\\wedge V}, R_{W\\wedge Y}] = \\ip{U}{W}R_{V\\wedge Y} - \\ip{U}{Y}R_{V\\wedge W} - \\ip{V}{W}R_{U\\wedge Y} + \\ip{V}{Y}R_{U\\wedge W}\n\\]\n(the four terms are $R_{U\\wedge V}R_{W\\wedge Y}Z = \\ip{W}{Z}\\,R_{U\\wedge V}Y - \\ip{Y}{Z}\\,R_{U\\wedge V}W$ minus the same with the pairs exchanged, regrouped by which of $U, V, W, Y$ carries $Z$). For $U = x$, $V = n_{\\infty}$, $W = x'$, $Y = n_{0}$ with $x, x'$ in the slice, $\\ip{n_{\\infty}}{x'} = \\ip{x}{n_{0}} = Q(n_{\\infty}) = 0$ and $\\ip{n_{\\infty}}{n_{0}} = 1$ leave $[R_{x\\wedge n_{\\infty}}, R_{x'\\wedge n_{0}}] = \\ip{x}{x'}R_{n_{\\infty}\\wedge n_{0}} + R_{x\\wedge x'}$. Hence $A(x\\wedge x') = [A(x\\wedge n_{\\infty}), A(x'\\wedge n_{0})] - \\ip{x}{x'}A(n_{\\infty}\\wedge n_{0})$ lies in $\\mathfrak{su}(2,2)$, a Lie algebra, because $\\ip{x}{x'}$ is real.\n\n\\emph{The span, and the grip.} The pairs $n_{\\infty}\\wedge n_{0}$ (one), $x\\wedge n_{\\infty}$ (four), $x\\wedge n_{0}$ (four) and $x\\wedge x'$ (six) span $\\Lambda^{2}V_{\\R}$, of dimension $15$, so every $A(U\\wedge V)$ with $U, V \\in V_{\\R}$ is in $\\mathfrak{su}(2,2)$, and $M_{A}$ is real there because $\\Sigma A$ anti-Hermitian makes $\\bar{Z}\\cdot AZ$ imaginary. Then $\\ip{P}{U} = M_{U\\wedge I}$ is real for every $U \\in V_{\\R}$, and since the pairing restricted to $V_{\\R}$ is a real nondegenerate form (the form of signature $(2,4)$ of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}; in the basis $n_{\\infty}, n_{0}$ and the slice \\claimref{note.mass.what-nullity-fixes} its Gram matrix is $\\left(\\begin{smallmatrix} 0 & 1 \\\\ 1 & 0\\end{smallmatrix}\\right) \\oplus \\operatorname{diag}(1,-1,-1,-1)$), $P \\in V_{\\R}$. The last clause is $P \\perp I_{\\Lambda}$ with Fact \\claimref{mass.imported-frozen-point-tractor-connection}. The script checks the commutator identity on the real points, the anti-Hermiticity of the generators for real pairs on four real points, and the reality of the pairings of $P$ with a real basis of $V_{\\R}$.\n",
+  "hash": "d6eaad2f3203",
+  "number": 14
+ },
+ {
+  "id": "c:note.mass.setting-grip-composite-frozen-point-3",
+  "type": "note",
+  "claim": "note.mass.setting-grip-composite-frozen-point-3@1",
+  "title": "The grip of a composite on the frozen point",
+  "text": "For two twistors, write $t_{il} := \\hp{\\pi^{i}}{\\omega^{l}}$ ($i, l \\in \\{1,2\\}$) for the $2 \\times 2$ matrix of mixed pairings, and\n\\begin{equation}\nh_{il} := \\bar{Z}^{i}\\cdot Z^{l} = t_{il} + \\overline{t_{li}}, \\qquad\nC := \\tfrac14\\,(h_{11} - h_{22})^{2} + |h_{12}|^{2} = \\tfrac12\\tr\\bigl(h_{0}^{2}\\bigr) = \\tfrac14\\bigl[(\\tr h)^{2} - 4\\det h\\bigr],\n\\end{equation}\nfor the Hermitian Gram matrix $h$ of the composite and its traceless part $h_{0}$. The diagonal entries $h_{ii} = \\bar{Z}^{i}\\cdot Z^{i}$ are twice the constituents' helicities; $C$ is the quadratic Casimir of the internal $\\mathfrak{su}(2)$ that mixes the two constituents, a quarter of the squared difference of the eigenvalues of $h$, nonnegative, and zero exactly when $h$ is a multiple of the identity.",
+  "gap": false,
+  "level": "formal",
+  "hash": "5b5afde0f1da"
+ },
+ {
+  "id": "t:mass.grip-real>mass.exact-join",
+  "type": "transition",
+  "between": [
+   "mass.grip-real",
+   "mass.exact-join"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.exact-join",
+  "type": "theorem",
+  "claim": "mass.exact-join@7",
+  "title": "The exact join",
+  "text": "Let $I_{\\Lambda} = n_{\\infty} + \\lambda n_{0}$ with $\\lambda = \\Lambda/6$ be the frozen point of Lemma \\claimref{mass.de-sitter-scale-frozen-point}, and $Z^{1}, Z^{2} \\in \\CS$ two conformal spinors (twistors).\n\\begin{enumerate}\n\\item \\emph{(The deformed bracket.)} The pairing of the composite against the frozen point is\n\\begin{equation}\nB_{\\Lambda} := \\ip{I_{\\Lambda}}{Z^{1}\\wedge Z^{2}} = \\br{\\pi^{1}\\pi^{2}} + \\frac{\\Lambda}{6}\\,[\\omega^{1}\\omega^{2}],\n\\end{equation}\nand at $\\Lambda = 0$ it is the classical contraction of the composite with the point at infinity $n_{\\infty}$, read as a bivector of $\\CS$ (Penrose's infinity twistor).\n\\item \\emph{(The mass.)} The grip $P = M(I_{\\Lambda})$ has squared length\n\\begin{equation}\nm^{2} = Q(P) = 2\\,|B_{\\Lambda}|^{2} + Q(I_{\\Lambda})\\, C = 2\\,|B_{\\Lambda}|^{2} + \\frac{\\Lambda}{3}\\, C .\n\\end{equation}\n\\item \\emph{(The flat shadow.)} At $\\Lambda = 0$, $m^{2} = 2|\\ip{I}{Z^{1}\\wedge Z^{2}}|^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$: Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}, read as the squared pairing of the composite against the frozen point.\n\\item \\emph{(The point-supported composite.)} If both spinors lie on the line $L_{x}$ of the point $x$, the composite bivector is $\\br{\\pi^{1}\\pi^{2}}X(x)$ and $B_{\\Lambda} = \\sigma(x)\\br{\\pi^{1}\\pi^{2}} = \\bigl(1 - \\tfrac{\\Lambda Q(x)}{12}\\bigr)\\br{\\pi^{1}\\pi^{2}}$: the flat bracket read in the de Sitter scale.\n\\item \\emph{(The massless locus.)} For $\\Lambda > 0$, $m^{2} \\ge 0$, and $m^{2} = 0$ if and only if $B_{\\Lambda} = 0$ and $h$ is a multiple of the identity; that multiple is zero, so the condition is $B_{\\Lambda} = 0$ and $h = 0$ (\\claimref{synthesis.many-twistor-join}(v)). The doubled composite $Z^{2} = Z^{1}$ has $B_{\\Lambda} = 0$ and $m^{2} = \\tfrac{\\Lambda}{3}\\,(\\bar{Z}\\cdot Z)^{2}$, so it is massless only when its constituent is null; and there are massless composites that are not doubled, for instance $Z^{1} = e_{1} + e_{4}$, $Z^{2} = \\alpha e_{1} + \\beta e_{4}$ with $\\alpha \\neq \\beta$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Conventions: the chart's complex unit, written $i$ below, is $I_{6}$, the complex unit of the conformal spinor space $\\CS$, and the bar is the conjugation that reverses it; $\\Som$ and $\\Spi$ are the halves of $\\CS$ spanned by $e_{1}, e_{2}$ and by $e_{3}, e_{4}$, the $E = -1$ and $E = +1$ eigenspaces.\n\n(1) Expand $Z^{1}\\wedge Z^{2} = (\\omega^{1} + \\pi^{1})\\wedge(\\omega^{2} + \\pi^{2})$ into four terms. Pairing against $n_{\\infty} = e_{1}\\wedge e_{2}$ annihilates every term with an $\\omega$ factor (the wedge repeats a vector of $\\Som$), leaving $\\varepsilon(e_{1}\\wedge e_{2}\\wedge\\pi^{1}\\wedge\\pi^{2}) = \\varepsilon_{a'b'}\\pi_{1}^{a'}\\pi_{2}^{b'}\\,\\varepsilon(e_{1}\\wedge e_{2}\\wedge e_{3}\\wedge e_{4}) = \\br{\\pi^{1}\\pi^{2}}$; pairing against $n_{0} = e_{3}\\wedge e_{4}$ likewise leaves $\\varepsilon(e_{3}\\wedge e_{4}\\wedge\\omega^{1}\\wedge\\omega^{2}) = [\\omega^{1}\\omega^{2}]\\,\\varepsilon(e_{3}\\wedge e_{4}\\wedge e_{1}\\wedge e_{2}) = [\\omega^{1}\\omega^{2}]$, the permutation being even. Linearity in $I_{\\Lambda}$ gives \\claimref{mass.exact-join}; at $\\Lambda = 0$ the frozen point is $n_{\\infty}$ (the infinity twistor) (Lemma \\claimref{mass.de-sitter-scale-frozen-point}(3)).\n\n(2) \\emph{Slots of the grip.} $M_{U\\wedge I}$ is linear in $U \\wedge I$, so with $I_{\\Lambda} = n_{\\infty} + \\lambda n_{0}$ the grip is $P = P_{\\infty} + \\lambda P_{0}$, where $P_{\\infty} := M(n_{\\infty})$ and $P_{0} := M(n_{0})$. Put $d := M_{n_{\\infty}\\wedge n_{0}}$, and for $x$ in the $x$-slot $p(x) := M_{x\\wedge n_{\\infty}}$, $k(x) := M_{x\\wedge n_{0}}$, three linear forms in $x$. Then $\\ip{P}{n_{\\infty}} = M_{n_{\\infty}\\wedge I_{\\Lambda}} = \\lambda M_{n_{\\infty}\\wedge n_{0}} = \\lambda d$, $\\ip{P}{n_{0}} = M_{n_{0}\\wedge n_{\\infty}} = -d$, and $\\ip{P}{x} = p(x) + \\lambda k(x)$. Writing $P = \\alpha n_{\\infty} + \\beta n_{0} + v$ with $v$ in the $x$-slot, $\\alpha = \\ip{P}{n_{0}} = -d$, $\\beta = \\ip{P}{n_{\\infty}} = \\lambda d$, and $\\ip{v}{x} = p(x) + \\lambda k(x)$ for all $x$. Hence\n\\[\nQ(P) = 2\\alpha\\beta + Q(v) = -2\\lambda d^{2} + Q(p) + 2\\lambda\\, p\\cdot k + \\lambda^{2}\\, Q(k),\n\\]\nwhere $f \\cdot g$ denotes the dual metric on linear forms on the $x$-slot. By Remark \\claimref{note.mass.what-nullity-fixes} the metric matrix on the $x$-slot, in the components $x^{aa'}$, is $G = -\\varepsilon\\otimes\\varepsilon$; since $\\varepsilon^{2} = -1$, $G^{2} = (\\varepsilon\\otimes\\varepsilon)^{2} = \\varepsilon^{2}\\otimes\\varepsilon^{2} = 1$, so $G^{-1} = G$ and $f\\cdot g = -\\varepsilon_{ab}\\varepsilon_{a'b'}f_{aa'}g_{bb'}$ with the same numerical symbols. Below, $u\\cdot v$ for two $2$-component objects is the plain sum $\\sum_{a}u_{a}v_{a}$ of products of components.\n\n\\emph{The three forms in components.} By Lemma \\claimref{mass.chart-form-spin-isomorphism}(2), $A(x\\wedge n_{\\infty})Z = b_{x}\\pi \\in \\Som$, so by the relation displayed with \\claimref{mass.chart-form-spin-isomorphism} and $M_{A}(Z^{1}, \\dots, Z^{N}) := i\\sum_{i=1}^{N} \\bar{Z}^{i}\\cdot(A Z^{i}), \\qquad A \\in \\mathfrak{sl}(\\T)$, $p(x) = i\\sum_{i}\\hp{\\pi^{i}}{b_{x}\\pi^{i}} = i\\sum_{i} x^{aa'}\\,\\overline{\\pi^{i}_{a}}\\,(\\varepsilon\\pi^{i})_{a'}$, where $(\\varepsilon\\pi)_{a'} := \\varepsilon_{a'b'}\\pi^{b'}$ and $\\overline{\\pi^{i}_{a}}$ is the conjugate of the component of $\\pi^{i}$ paired with $e_{a}$ by $\\Sigma$. Thus $p = \\sum_{i}p^{i}$ with $p^{i}_{aa'} = i\\,\\overline{\\pi^{i}_{a}}\\,(\\varepsilon\\pi^{i})_{a'}$. By Lemma \\claimref{mass.chart-form-spin-isomorphism}(3), $A(x\\wedge n_{0})Z = c_{x}\\omega \\in \\Spi$, so $k(x) = i\\sum_{i}\\overline{\\hp{c_{x}\\omega^{i}}{\\omega^{i}}} = i\\sum_{i}\\sum_{a'}(c_{x}\\omega^{i})^{a'}\\,\\overline{\\omega^{i}_{a'}} = -i\\sum_{i}x^{ba'}\\varepsilon_{ba}\\omega^{i\\,a}\\,\\overline{\\omega^{i}_{a'}}$; thus $k = \\sum_{i}k^{i}$ with $k^{i}_{aa'} = -i\\,(\\varepsilon\\omega^{i})_{a}\\,\\overline{\\omega^{i}_{a'}}$, where $(\\varepsilon\\omega)_{a} := \\varepsilon_{ab}\\omega^{b}$. By Lemma \\claimref{mass.chart-form-spin-isomorphism}(1), $A(n_{\\infty}\\wedge n_{0})Z = (-\\tfrac12\\omega, \\tfrac12\\pi)$, so $\\bar{Z}\\cdot AZ = -\\tfrac12\\hp{\\pi}{\\omega} + \\tfrac12\\overline{\\hp{\\pi}{\\omega}} = -i\\,\\mathrm{Im}\\hp{\\pi}{\\omega}$ and $d = \\sum_{i}\\mathrm{Im}\\,t_{ii} = \\mathrm{Im}\\tr t$.\n\n\\emph{The three pairings.} Using $\\varepsilon^{\\mathsf T}\\varepsilon = 1$, $\\varepsilon^{2} = -1$ and $\\det\\varepsilon = 1$ for the $2\\times 2$ symbol:\n\\begin{align*}\np^{i}\\cdot p^{l} &= -\\varepsilon_{ab}\\varepsilon_{a'b'}\\,(i)^{2}\\,\\overline{\\pi^{i}_{a}}\\,\\overline{\\pi^{l}_{b}}\\,(\\varepsilon\\pi^{i})_{a'}(\\varepsilon\\pi^{l})_{b'}\n= \\overline{\\br{\\pi^{i}\\pi^{l}}}\\;\\br{\\varepsilon\\pi^{i},\\varepsilon\\pi^{l}} = |\\br{\\pi^{i}\\pi^{l}}|^{2},\\\\\nk^{i}\\cdot k^{l} &= -\\varepsilon_{ab}\\varepsilon_{a'b'}\\,(-i)^{2}\\,(\\varepsilon\\omega^{i})_{a}(\\varepsilon\\omega^{l})_{b}\\,\\overline{\\omega^{i}_{a'}}\\,\\overline{\\omega^{l}_{b'}}\n= [\\varepsilon\\omega^{i},\\varepsilon\\omega^{l}]\\;\\overline{[\\omega^{i}\\omega^{l}]} = |[\\omega^{i}\\omega^{l}]|^{2},\\\\\np^{i}\\cdot k^{l} &= -\\varepsilon_{ab}\\varepsilon_{a'b'}\\,(i)(-i)\\,\\overline{\\pi^{i}_{a}}\\,(\\varepsilon\\omega^{l})_{b}\\,(\\varepsilon\\pi^{i})_{a'}\\,\\overline{\\omega^{l}_{b'}}\n= -\\bigl(-\\overline{\\pi^{i}}\\cdot\\omega^{l}\\bigr)\\bigl(\\pi^{i}\\cdot\\overline{\\omega^{l}}\\bigr) = t_{il}\\,\\overline{t_{il}} = |t_{il}|^{2},\n\\end{align*}\nwhere in the last line $\\varepsilon_{ab}u_{a}(\\varepsilon v)_{b} = u^{\\mathsf T}\\varepsilon\\varepsilon v = -u\\cdot v$ and $\\varepsilon_{a'b'}(\\varepsilon u)_{a'}v_{b'} = u^{\\mathsf T}\\varepsilon^{\\mathsf T}\\varepsilon v = u\\cdot v$. Summing over $i, l$: $Q(p) = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$ (the diagonal terms vanish, and this is Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula} again), $Q(k) = 2|[\\omega^{1}\\omega^{2}]|^{2}$, and $p\\cdot k = \\sum_{i,l}|t_{il}|^{2}$. Therefore\n\\[\nQ(P) = 2|\\br{\\pi^{1}\\pi^{2}}|^{2} + 2\\lambda^{2}|[\\omega^{1}\\omega^{2}]|^{2} + 2\\lambda\\Bigl(\\sum_{i,l}|t_{il}|^{2} - (\\mathrm{Im}\\tr t)^{2}\\Bigr).\n\\]\n\n\\emph{The comparison.} $2|B_{\\Lambda}|^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2} + 2\\lambda^{2}|[\\omega^{1}\\omega^{2}]|^{2} + 4\\lambda\\,\\mathrm{Re}\\bigl(\\br{\\pi^{1}\\pi^{2}}\\,\\overline{[\\omega^{1}\\omega^{2}]}\\bigr)$. The matrix $t$ is the product of the matrix with rows $\\overline{\\pi^{1}}, \\overline{\\pi^{2}}$ and the matrix with columns $\\omega^{1}, \\omega^{2}$, so $\\det t = \\overline{\\br{\\pi^{1}\\pi^{2}}}\\,[\\omega^{1}\\omega^{2}]$ and $\\mathrm{Re}\\det t = \\mathrm{Re}\\bigl(\\br{\\pi^{1}\\pi^{2}}\\overline{[\\omega^{1}\\omega^{2}]}\\bigr)$. It remains to show\n\\[\n\\sum_{i,l}|t_{il}|^{2} - (\\mathrm{Im}\\tr t)^{2} - 2\\,\\mathrm{Re}\\det t \\;=\\; C .\n\\]\nWith $h_{11} = 2\\,\\mathrm{Re}\\,t_{11}$, $h_{22} = 2\\,\\mathrm{Re}\\,t_{22}$, $h_{12} = t_{12} + \\overline{t_{21}}$, the right side is $(\\mathrm{Re}\\,t_{11} - \\mathrm{Re}\\,t_{22})^{2} + |t_{12}|^{2} + |t_{21}|^{2} + 2\\,\\mathrm{Re}(t_{12}t_{21})$, and the left side is $|t_{11}|^{2} + |t_{22}|^{2} + |t_{12}|^{2} + |t_{21}|^{2} - (\\mathrm{Im}\\,t_{11} + \\mathrm{Im}\\,t_{22})^{2} - 2\\,\\mathrm{Re}(t_{11}t_{22}) + 2\\,\\mathrm{Re}(t_{12}t_{21})$. Their difference is\n\\[\n|t_{11}|^{2} + |t_{22}|^{2} - (\\mathrm{Im}\\,t_{11} + \\mathrm{Im}\\,t_{22})^{2} - 2\\,\\mathrm{Re}(t_{11}t_{22}) - (\\mathrm{Re}\\,t_{11} - \\mathrm{Re}\\,t_{22})^{2},\n\\]\nand writing $t_{jj} = r_{j} + i s_{j}$ this is $(r_{1}^{2} + s_{1}^{2} + r_{2}^{2} + s_{2}^{2}) - (s_{1} + s_{2})^{2} - 2(r_{1}r_{2} - s_{1}s_{2}) - (r_{1} - r_{2})^{2} = 0$. Hence $Q(P) = 2|B_{\\Lambda}|^{2} + 2\\lambda C$, and $2\\lambda = Q(I_{\\Lambda}) = \\Lambda/3$ by Lemma \\claimref{mass.de-sitter-scale-frozen-point}(3). The identities for $C$ in the relation displayed with \\claimref{mass.grip-real} are the $2\\times 2$ identities $\\tr(h_{0}^{2}) = \\tr h^{2} - \\tfrac12(\\tr h)^{2}$ and $\\tr h^{2} = (\\tr h)^{2} - 2\\det h$.\n\n(3) At $\\lambda = 0$ the formula reduces to its first term, and (1) identifies $B_{0}$ with $\\br{\\pi^{1}\\pi^{2}} = \\ip{n_{\\infty}}{Z^{1}\\wedge Z^{2}}$.\n\n(4) In the chart of Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity} the line of $x$ is the graph $L_{x} = \\{\\mu_{x}\\pi + \\pi : \\pi \\in \\Spi\\}$ of the map $\\mu_{x}: \\Spi \\to \\Som$, $(\\mu_{x}\\pi)^{a} = x^{aa'}\\varepsilon_{b'a'}\\pi^{b'}$, that is $\\mu_{x} = -b_{x}$ in the notation of Lemma \\claimref{mass.chart-form-spin-isomorphism} \\cite[Thm.~4.2]{ButlerT9} (\\claimref{correspondence.incidence-relation-chart}); indeed $(\\mu_{x}e_{3} + e_{3})\\wedge(\\mu_{x}e_{4} + e_{4}) = n_{0} + \\mu_{x}e_{3}\\wedge e_{4} + e_{3}\\wedge\\mu_{x}e_{4} + \\det(\\mu_{x})\\,n_{\\infty} = n_{0} + x^{a4}e_{a}\\wedge e_{4} + x^{a3}e_{a}\\wedge e_{3} + \\det(x^{aa'})\\,n_{\\infty} = X(x)$, since $\\det\\mu_{x} = \\det(x^{aa'}) = -\\tfrac12 Q(x)$ by Remark \\claimref{note.mass.what-nullity-fixes}. Two conformal spinors on $L_{x}$ are $Z^{i} = \\mu_{x}\\pi^{i} + \\pi^{i}$, and bilinearity with antisymmetry gives $Z^{1}\\wedge Z^{2} = \\pi_{1}^{a'}\\pi_{2}^{b'}\\,(\\mu_{x}e_{a'} + e_{a'})\\wedge(\\mu_{x}e_{b'} + e_{b'}) = \\br{\\pi^{1}\\pi^{2}}\\,(\\mu_{x}e_{3} + e_{3})\\wedge(\\mu_{x}e_{4} + e_{4}) = \\br{\\pi^{1}\\pi^{2}}\\,X(x)$. Then $B_{\\Lambda} = \\br{\\pi^{1}\\pi^{2}}\\ip{I_{\\Lambda}}{X(x)} = \\br{\\pi^{1}\\pi^{2}}\\,\\sigma(x)$ by Lemma \\claimref{mass.de-sitter-scale-frozen-point}(2).\n\n(5) Both terms of \\claimref{mass.exact-join} are nonnegative for $\\Lambda > 0$, and $C = 0$ iff $h_{11} = h_{22}$ and $h_{12} = 0$. For $Z^{2} = Z^{1}$: $Z\\wedge Z = 0$ gives $B_{\\Lambda} = 0$; $h = h_{11}\\left(\\begin{smallmatrix}1&1\\\\1&1\\end{smallmatrix}\\right)$ gives $C = \\tfrac14\\cdot 0 + h_{11}^{2}$. For the example, $\\omega^{1} = e_{1}$, $\\pi^{1} = e_{4}$, $\\omega^{2} = \\alpha e_{1}$, $\\pi^{2} = \\beta e_{4}$: both brackets vanish, so $B_{\\Lambda} = 0$; every $t_{il} = \\hp{\\pi^{i}}{\\omega^{l}}$ pairs a multiple of $e_{4}$ (which $\\Sigma$ identifies with $e_{2}$) against a multiple of $e_{1}$ and vanishes, so $h = 0$; and $Z^{1}\\wedge Z^{2} = (\\beta - \\alpha)\\,e_{1}\\wedge e_{4} \\neq 0$. The script builds $P$ from the exact spin isomorphism and the moment map, on ten spinor pairs, and confirms (2) as an identity in $\\lambda$ (all three coefficients of the quadratic in $\\lambda$), the assembled values $Q(P_{\\infty})$, $Q(P_{0})$ and $\\ip{P_{\\infty}}{P_{0}}$ against their closed forms with $p\\cdot k$, $d$ and $\\det t$ formed from the components of the proof, (3), the wedge identity and the factor $\\sigma(x)$ of (4), and both parts of (5).\n",
+  "hash": "b249b916d662",
+  "number": 15
+ },
+ {
+  "id": "t:mass.exact-join>mass.casimir-form-join",
+  "type": "transition",
+  "between": [
+   "mass.exact-join",
+   "mass.casimir-form-join"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.casimir-form-join",
+  "type": "theorem",
+  "claim": "mass.casimir-form-join@6",
+  "title": "The Casimir form of the join",
+  "text": "Fix a composite $Z^{1}, \\dots, Z^{N}$ of conformal spinors with Hermitian Gram matrix $h_{il} = \\bar{Z}^{i}\\cdot Z^{l}$. For a nondegenerate subspace $W$ of the ambient space with basis $(e_{\\alpha})$ and inverse Gram matrix $(g^{\\alpha\\beta})$, put $M_{\\alpha\\beta} := M_{e_{\\alpha}\\wedge e_{\\beta}}$ and $C_{2}(W) := \\tfrac12\\, g^{\\alpha\\alpha'}g^{\\beta\\beta'}M_{\\alpha\\beta}M_{\\alpha'\\beta'}$, the quadratic Casimir of the rotations of $W$ evaluated on the composite; $C_{2}(\\Lambda^{2}\\CS)$ is the conformal Casimir $C_{2}(\\mathfrak{so}(2,4))$ of the composite, and for the frozen point $C_{2}(I_{\\Lambda}^{\\perp})$ is its de Sitter Casimir $C_{2}(\\mathfrak{so}(1,4))$, both as quadratic forms on the moment components; in this normalisation $C_{2}(I_{\\Lambda}^{\\perp})$ is the de Sitter Casimir of the scalar-module convention of Fact \\claimref{mass.imported-unitary-representations-de-sitter-group} (acting as $-m^{2}/H^{2}$). Let $I$ be a nonzero non-null ambient vector and $P = M(I)$ the grip of Definition \\claimref{obj.mass.grip-mass-composite}. Then:\n\\begin{enumerate}\n\\item $Q(P) = Q(I)\\,\\bigl(C_{2}(\\Lambda^{2}\\CS) - C_{2}(I^{\\perp})\\bigr)$;\n\\item $C_{2}(\\Lambda^{2}\\CS) = \\tr(h^{2}) - \\tfrac14(\\tr h)^{2}$, for any number of constituents;\n\\item hence, for two conformal spinors, $I = I_{\\Lambda}$ and $\\Lambda \\neq 0$, the de Sitter Casimir of the composite is\n\\[\nC_{2}(I_{\\Lambda}^{\\perp}) = \\tfrac14(\\tr h)^{2} + C - \\frac{6\\,|B_{\\Lambda}|^{2}}{\\Lambda}.\n\\]\n\\end{enumerate}\nConsequently (1) says that the grip $Q(P)$ equals the de Sitter mass $-Q(I)\\,C_{2}(I^{\\perp})$ plus $Q(I)\\,C_{2}(\\Lambda^{2}\\CS)$, and the two coincide only where the conformal Casimir vanishes.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Conventions: the chart's complex unit, written $i$ below, is $I_{6}$, the complex unit of the conformal spinor space $\\CS$, and the bar is the conjugation that reverses it.\n\n(1) Take a basis $e_{1}, \\dots, e_{5}$ of $I^{\\perp}$ and $e_{6} = I$; then $g^{a6} = 0$ for $a \\le 5$ and $g^{66} = 1/Q(I)$. In $\\tfrac12 g^{\\alpha\\alpha'}g^{\\beta\\beta'}M_{\\alpha\\beta}M_{\\alpha'\\beta'}$ the terms with no index equal to $6$ sum to $C_{2}(I^{\\perp})$; the terms with exactly one $6$ in $(\\alpha,\\beta)$ need exactly one $6$ in $(\\alpha',\\beta')$ in the matching position, giving $\\tfrac12\\bigl(g^{ab}g^{66}M_{a6}M_{b6} + g^{66}g^{ab}M_{6a}M_{6b}\\bigr) = g^{66}g^{ab}M_{a6}M_{b6}$; terms with $\\alpha = \\beta = 6$ vanish since $M_{66} = 0$. Now $M_{a6} = M_{e_{a}\\wedge I} = \\ip{P}{e_{a}}$, and $P \\in I^{\\perp}$, so $g^{ab}\\ip{P}{e_{a}}\\ip{P}{e_{b}} = Q(P)$. Hence $C_{2}(\\Lambda^{2}\\CS) = C_{2}(I^{\\perp}) + Q(P)/Q(I)$.\n\n(2) \\emph{The moment element.} Let $\\mathsf{M} := i\\sum_{i}Z^{i}\\otimes(\\bar{Z}^{i}\\cdot\\,)$ be the endomorphism $W \\mapsto i\\sum_{i}Z^{i}\\,(\\bar{Z}^{i}\\cdot W)$ of $\\CS$, so that $M_{A} = \\tr(\\mathsf{M}A)$ by $M_{A}(Z^{1}, \\dots, Z^{N}) := i\\sum_{i=1}^{N} \\bar{Z}^{i}\\cdot(A Z^{i}), \\qquad A \\in \\mathfrak{sl}(\\T)$, and let $\\mathsf{M}_{0}$ be its traceless part; since every $A_{\\alpha\\beta} := A(e_{\\alpha}\\wedge e_{\\beta})$ is traceless, $M_{\\alpha\\beta} = \\tr(\\mathsf{M}_{0}A_{\\alpha\\beta})$.\n\n\\emph{An invariant form.} Put\n\\[\n\\Phi(A, B) := \\tfrac12\\, g^{\\alpha\\alpha'}g^{\\beta\\beta'}\\,\\tr(AA_{\\alpha\\beta})\\,\\tr(BA_{\\alpha'\\beta'})\n\\]\non $\\mathfrak{sl}(\\CS)$, so that $C_{2}(\\Lambda^{2}\\CS) = \\Phi(\\mathsf{M}_{0}, \\mathsf{M}_{0})$. It is symmetric, and invariant: under $A \\mapsto \\gamma A\\gamma^{-1}$ the matrices $A_{\\alpha\\beta}$ transform by the rotation of the ambient basis induced by $\\gamma$ (Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}), and the contraction with $g^{\\alpha\\alpha'}g^{\\beta\\beta'}$ is invariant under rotations of the basis. By Lemma \\claimref{mass.invariant-forms-simple-lie-algebra}, $\\Phi(A,B) = \\kappa\\tr(AB)$ for a constant $\\kappa$.\n\n\\emph{The constant.} Evaluate at $A = B = \\mathsf{E} := A(n_{\\infty}\\wedge n_{0}) = \\operatorname{diag}(-\\tfrac12,-\\tfrac12,\\tfrac12,\\tfrac12)$, the grading element, in the basis $n_{\\infty}, n_{0}$, $x$-slot. For a translation or special conformal generator $\\tr(\\mathsf{E}A_{\\alpha\\beta}) = 0$, the blocks being off-diagonal (Lemma \\claimref{mass.chart-form-spin-isomorphism}). For a rotation of the $x$-slot: it annihilates $n_{\\infty}$ and $n_{0}$, and an $A$ with $A\\cdot n_{\\infty} = 0$ has no $\\Som \\to \\Spi$ block (the mixed component of $Ae_{1}\\wedge e_{2} + e_{1}\\wedge Ae_{2}$ is that block applied to $e_{1}, e_{2}$) and traceless $\\Som$-block (the $n_{\\infty}$-component is $\\tr_{\\Som}A$), and likewise from $n_{0}$; so $\\tr(\\mathsf{E}A_{\\alpha\\beta}) = -\\tfrac12\\tr_{\\Som}A + \\tfrac12\\tr_{\\Spi}A = 0$. Finally $\\tr(\\mathsf{E}\\,A(n_{\\infty}\\wedge n_{0})) = \\tr \\mathsf{E}^{2} = 1$ and $\\tr(\\mathsf{E}\\,A(n_{0}\\wedge n_{\\infty})) = -1$. With $g^{\\infty 0} = g^{0\\infty} = 1$ and $g^{\\infty\\infty} = g^{00} = 0$ the only surviving terms of $\\Phi(\\mathsf{E},\\mathsf{E})$ are $(\\alpha\\beta, \\alpha'\\beta') = (\\infty 0, 0\\infty)$ and $(0\\infty, \\infty 0)$, each contributing $-1$, so $\\Phi(\\mathsf{E},\\mathsf{E}) = -1 = \\kappa\\tr \\mathsf{E}^{2} = \\kappa$.\n\n\\emph{The value.} Hence $C_{2}(\\Lambda^{2}\\CS) = -\\tr(\\mathsf{M}_{0}^{2})$. Now $\\tr\\mathsf{M} = i\\sum_{i}\\bar{Z}^{i}\\cdot Z^{i} = i\\tr h$ and $\\tr\\mathsf{M}^{2} = -\\sum_{i,l}(\\bar{Z}^{i}\\cdot Z^{l})(\\bar{Z}^{l}\\cdot Z^{i}) = -\\tr(h^{2})$ ($h$ is Hermitian), so $-\\tr(\\mathsf{M}_{0}^{2}) = -\\tr\\mathsf{M}^{2} + \\tfrac14(\\tr\\mathsf{M})^{2} = \\tr(h^{2}) - \\tfrac14(\\tr h)^{2}$.\n\n(3) Combine (1), (2) and \\claimref{mass.exact-join}: $C_{2}(I_{\\Lambda}^{\\perp}) = \\tr h^{2} - \\tfrac14(\\tr h)^{2} - C - 6|B_{\\Lambda}|^{2}/\\Lambda$, and $\\tr h^{2} - \\tfrac14(\\tr h)^{2} - C = \\tfrac12\\tr h^{2} = \\tfrac14(\\tr h)^{2} + C$ by the relation displayed with \\claimref{mass.grip-real}. The script forms both Casimirs from the exact moment components in adapted bases and confirms (1), (2) and (3) on four pairs, together with $\\tr\\mathsf{E}^{2} = 1$.\n",
+  "hash": "8a6b754b3511",
+  "number": 16
+ },
+ {
+  "id": "t:mass.casimir-form-join>mass.five-broken-generators",
+  "type": "transition",
+  "between": [
+   "mass.casimir-form-join",
+   "mass.five-broken-generators"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.five-broken-generators",
+  "type": "theorem",
+  "claim": "mass.five-broken-generators@6",
+  "title": "The five broken generators",
+  "text": "Let $\\Omega_{I}(u,v) := \\ip{I}{u\\wedge v}$ be the $2$-form on the conformal spinor space $\\CS$ (twistor space) of an ambient vector $I$; it is nondegenerate iff $I$ is non-simple iff $Q(I) \\neq 0$. For such $I$, the elements $A \\in \\mathfrak{sl}(\\CS)$ with $\\Omega_{I}A$ symmetric form the stabiliser of $I$, of dimension $10$ (six conditions on $\\mathfrak{gl}(\\CS)$, none of which is the trace); the elements with $\\Omega_{I}A$ antisymmetric form a $6$-dimensional complement in $\\mathfrak{gl}(\\CS)$, cut to $5$ by the trace; and the five generators $A(e_{a}\\wedge I)$, $e_{a}$ a basis of $I^{\\perp}$, are an independent basis of that $5$-dimensional complement. On the real form, for the frozen point with $\\Lambda > 0$, the stabiliser is $\\mathfrak{so}(1,4)$ and the five are the de Sitter translations, the $I$-half of the nine Goldstone modes of the action paper \\cite[Prop.~5.4]{ButlerT10}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The components of $\\Omega_{I}$ are $\\varepsilon(I\\wedge e_{k}\\wedge e_{l})$, the Hodge dual of $I$, and its Pfaffian is a nonzero multiple of $\\varepsilon(I\\wedge I) = Q(I)$; so $\\Omega_{I}$ is nondegenerate iff $Q(I) \\neq 0$, which is the non-simplicity of $I$ (Lemma \\claimref{mass.de-sitter-scale-frozen-point}(3)). For $A \\in \\mathfrak{gl}(\\CS)$ put $\\beta_{A}(u,v) := \\Omega_{I}(u, Av) = u^{\\mathsf T}\\Omega_{I}Av$; since $\\Omega_{I}^{\\mathsf T} = -\\Omega_{I}$, $\\Omega_{I}(Au,v) = -\\beta_{A}(v,u)$, so $\\Omega_{I}(Au,v) + \\Omega_{I}(u,Av) = \\beta_{A}(u,v) - \\beta_{A}(v,u)$, and $A$ preserves $\\Omega_{I}$ iff $\\beta_{A}$, that is the matrix $\\Omega_{I}A$, is symmetric. By invariance of the pairing under the action of $\\mathfrak{sl}(\\CS)$ (Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}), $\\ip{I}{A\\cdot(u\\wedge v)} = -\\ip{A\\cdot I}{u\\wedge v}$, so $\\Omega_{I}(Au,v) + \\Omega_{I}(u,Av) = -\\Omega_{A\\cdot I}(u,v)$: preserving $\\Omega_{I}$ is the same as stabilising $I$, and the antisymmetric part of $\\beta_{A}$ is $-\\tfrac12\\Omega_{A\\cdot I}$. Symmetry of a $4\\times 4$ matrix is six conditions, so the stabiliser is $10$-dimensional; it is $\\mathfrak{sp}(\\Omega_{I}) \\cong \\mathfrak{so}(I^{\\perp})$, whose elements are traceless. Antisymmetry is ten conditions, leaving the $6$-dimensional space $\\{A : \\Omega_{I}A \\text{ antisymmetric}\\}$, on which $A \\mapsto A\\cdot I$ is injective (an antisymmetric $\\beta_{A}$ equal to $-\\tfrac12\\Omega_{A\\cdot I}$ vanishes iff $A\\cdot I = 0$, and then $A = 0$ by nondegeneracy), hence a bijection onto $\\Lambda^{2}\\CS$; $\\mathfrak{gl}(\\CS)$ is the direct sum of the two parts. The identity lies in the antisymmetric part ($\\beta_{1} = \\Omega_{I}$) and has trace $4$, so the trace cuts that part to a $5$-dimensional complement of the stabiliser inside $\\mathfrak{sl}(\\CS)$.\n\nFor $U \\in I^{\\perp}$, $A(U\\wedge I)$ is not in the stabiliser, since $R_{U\\wedge I}(I) = \\ip{U}{I}I - Q(I)U = -Q(I)U \\neq 0$, and $U \\mapsto A(U\\wedge I)$ is linear and injective on $I^{\\perp}$. Its image lies in the antisymmetric part by equivariance: under the stabiliser $\\mathfrak{so}(I^{\\perp})$, $I^{\\perp}$ is the $5$-dimensional vector representation and the stabiliser itself is the $10$-dimensional adjoint representation, irreducible and non-isomorphic, while $\\mathfrak{gl}(\\CS) = \\mathfrak{sp}(\\Omega_{I}) \\oplus \\{\\text{antisymmetric part}\\}$ is a decomposition into $\\mathfrak{so}(I^{\\perp})$-submodules (both conditions are invariant under conjugation by the stabiliser); the map $U \\mapsto A(U\\wedge I)$ is $\\mathfrak{so}(I^{\\perp})$-equivariant, so by Schur's lemma its component in $\\mathfrak{sp}(\\Omega_{I})$ vanishes. Since the five images are traceless (all of $A(\\cdot)$ is), they span the $5$-dimensional traceless antisymmetric part. The real-form statement is Fact \\claimref{mass.imported-frozen-point-tractor-connection}'s stabiliser together with the count $15 - 10 = 5$; the action paper's Proposition 5.4 counts nine broken generators for the pair $(I, V)$, of which the five directions of $I^{\\perp}$ are the $I$-half. The script confirms the dimensions $10$, $6$ and $5$ by exact rank at $\\Lambda = 3$ and checks directly that the five matrices $A(e_{a}\\wedge I_{\\Lambda})$ are traceless, independent, and have $\\Omega A$ antisymmetric.\n",
+  "hash": "79330d3e544b",
+  "number": 17
+ },
+ {
+  "id": "t:mass.five-broken-generators>mass.weight-composite",
+  "type": "transition",
+  "between": [
+   "mass.five-broken-generators",
+   "mass.weight-composite"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:mass.weight-composite",
+  "type": "theorem",
+  "claim": "mass.weight-composite@6",
+  "title": "The weight of a composite",
+  "text": "Let $\\Lambda > 0$. Define the \\emph{induced weight} of a composite of mass $m$ as the weight of a density with that mass under the dictionary, that is, a solution $w$ of $-w(w+3)H^{2} = m^{2}$. For the composite of two conformal spinors with $m^{2}$ given by \\claimref{mass.exact-join}:\n\\begin{equation}\nw = -\\frac32 \\pm i\\nu, \\qquad \\nu^{2} = \\frac{6\\,|B_{\\Lambda}|^{2}}{\\Lambda} + C - \\frac94,\n\\end{equation}\nthe weight being real exactly when $6|B_{\\Lambda}|^{2}/\\Lambda + C \\le \\tfrac94$, and otherwise on the principal series with $\\nu = m/H - \\tfrac98 H/m + O((H/m)^{3})$. The real part is $-\\tfrac32$ for every composite heavier than $3H/2$; the mass lies in the imaginary part, and for $|B_{\\Lambda}| \\gg H\\sqrt{C}$, which is the regime of every known particle when $C$ is of order one, $\\mathrm{Im}\\,w = \\sqrt{2}\\,|B_{\\Lambda}|/H$ at leading order.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Corollary \\claimref{mass.weight-polynomial-two-series}(4) with, by Theorem \\claimref{mass.exact-join}(2), $m^{2}/H^{2} = (2|B_{\\Lambda}|^{2} + \\tfrac{\\Lambda}{3}C)/(\\Lambda/3) = 6|B_{\\Lambda}|^{2}/\\Lambda + C$. The script checks $\\nu^{2}$ on three pairs at two values of $\\Lambda$, and the expansion as an exact power series.\n",
+  "hash": "858a30f182ee",
+  "number": 18
+ },
+ {
+  "id": "c:note.mass.what-join-says",
+  "type": "note",
+  "claim": "note.mass.what-join-says@3",
+  "title": "What the join says",
+  "text": "Two readings of one number, the first of them a definition, and beside them a field-side number that differs from it. On the composite side, the momentum is the grip on the frozen point, $P = M(I_{\\Lambda})$, and mass is its length (Definition \\claimref{obj.mass.grip-mass-composite}, a definition; Theorem \\claimref{mass.exact-join} is the closed form of that length). On the representation side, that squared length is $Q(I)$ times the difference between the conformal Casimir and the de Sitter Casimir (Proposition \\claimref{mass.casimir-form-join}): the part of the composite's conformal charge that the frozen point breaks. On the field side, mass is a weight read against the frozen point (Theorem \\claimref{mass.mass-weight-dictionary}), and the composite's squared de Sitter mass is $-H^{2}C_{2}(I_{\\Lambda}^{\\perp})$, with $H^{2} = Q(I_{\\Lambda}) = \\Lambda/3$; it differs from the squared grip $Q(P)$ by $H^{2}C_{2}(\\Lambda^{2}\\CS)$, and the two agree only where the conformal Casimir vanishes. The flat-space formula is the leading term of \\claimref{mass.exact-join}, and the correction is one term, $\\tfrac{\\Lambda}{3}C$, with $C$ the internal $\\mathfrak{su}(2)$ Casimir of the pair: it depends on the constituents only through the imbalance of their helicities and their Hermitian overlap, and it vanishes exactly when the Gram matrix is scalar. The massless composites, for $\\Lambda > 0$, are exactly those with $B_{\\Lambda} = 0$ and scalar Gram matrix, a locus that is neither empty nor the doubled locus (Theorem \\claimref{mass.exact-join}(5)), so compositeness by itself sets no lower bound on mass; the families paper has since settled the question this remark left open, fixing the bracket by the join and identifying the condensation seed as the source term, the $\\Lambda$-linear tilt of the mass functional, rather than as a point of the massless locus \\cite[Props.~4.1-4.2]{ButlerT13}. The point-supported evaluation, $B_{\\Lambda} = \\sigma(x)\\br{\\pi^{1}\\pi^{2}}$, is the point of contact with the classical picture: for a composite localised at $x$ the deformed bracket is the flat one rescaled by the de Sitter conformal factor, which is what a conformally invariant pairing must do. Finally, the join fixes the units of Remark \\claimref{note.mass.what-dictionary-does-does-not-yield}: the imaginary weight of a composite with $|B_{\\Lambda}| \\gg H\\sqrt{C}$ is $\\sqrt{2}|B_{\\Lambda}|/H$ at leading order, the symplectic area of the misalignment in Hubble units.",
+  "gap": false,
+  "level": "formal",
+  "hash": "740386c69274"
+ },
+ {
+  "id": "c:note.mass.quantisation-ordering",
+  "type": "note",
+  "claim": "note.mass.quantisation-ordering@2",
+  "title": "Quantisation and ordering",
+  "text": "Everything in this section is classical: $P$ and $m^{2}$ are functions on the phase space of two conformal spinors, and $\\hbar$ below is the formal parameter of the section ``Setting and imports''. The quantisation of the generators is the palatial one of Fact \\claimref{mass.imported-palatial-quadratics-homogeneity-charge}, symmetrised quadratics with $[q(M), q(M')] = \\hbar q([M,M'])$, and \\claimref{mass.exact-join} is then an identity between quartic operators up to ordering terms of order $\\hbar$ times quadratics and $\\hbar^{2}$ times constants; the correspondence paper's ordering dictionary \\cite[Thm.~5.7]{ButlerT9} is the method for computing them. The operator form of \\claimref{mass.exact-join}, with its ordering constants, is the first successor problem of the section ``What gravity is, and what remains''. Nothing in the classical identity depends on the choice, and the flat-space limit of the operator identity is the classical Poincar\\'e Casimir of the two-spinor system, which is standard.",
+  "gap": false,
+  "level": "formal",
+  "hash": "4681eab459f4"
+ },
+ {
+  "id": "s:paper-6",
+  "type": "section",
+  "title": "What gravity is, and what remains",
+  "hash": "8773e4162515"
+ },
+ {
+  "id": "i:paper-6",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.point-contact-what-gravity-why-everything",
+  "type": "note",
+  "claim": "note.mass.point-contact-what-gravity-why-everything@2",
+  "title": "Point of contact: what gravity is, and why everything falls the same way",
+  "text": "Assembling this paper with the action paper gives the following account, each claim at its declared level. First: mass is coupling to the frozen point, at theorem level for fields (Theorem \\claimref{mass.mass-weight-dictionary}) and, for composites, by Definition \\claimref{obj.mass.grip-mass-composite} with the closed form of Theorem \\claimref{mass.exact-join}; and gravity's action is the MacDowell-Mansouri functional of the frozen point (Fact \\claimref{dark-energy.frozen-point-makes-stelle-west-vector}, whose action clause rests on an identity imported at assembly level). So matter and gravity are two relations to the same object: a massive field couples to $I$; gravity is the dynamics of $I$. Second, a structural reading of the equivalence principle: every mass term in the theory is a coupling to the one frozen point whose dynamics is the gravitational field, so the universality of gravitation, that gravitational and inertial mass coincide and everything falls alike, reads as the statement that the theory contains a single scale-giving object. Fields differ in how strongly they couple to $I$ (their weight), never in what they couple to. This is a reading, not a theorem: it rests on the two theorem-level ends and on the uniqueness of the scale-giving object, and it is entered in the levels of the results below at that level. Third, imported from the action paper at the levels it assigns: the action paper leaves the graviton's ontology open and states its engineering conclusion on either reading; on the reading in which the graviton is a collective mode of the boundary mode space, the acoustic no-go gives that conclusion at the mixed level of its inputs, one step conditional on the entropy paper's premise \\cite[\\S\\S5--6]{ButlerT10}. Last, at the level of flagged speculation: a massive body is a multi-spinor composite (a composite of many conformal spinors), misaligned within (Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}) and coupled to $I$ through its grip (Definition \\claimref{obj.mass.grip-mass-composite}, Theorem \\claimref{mass.exact-join}), and its gravitational field is the response of the boundary mode space to that disturbance. In one sentence: gravity, at the quantum level, is the collective dynamics of the frozen point, coupling to which defines every mass, and everything falls the same way because there is only one point at infinity to couple to.",
+  "gap": false,
+  "level": "formal",
+  "hash": "24a899136082"
+ },
+ {
+  "id": "c:note.mass.setting-levels-results",
+  "type": "note",
+  "claim": "note.mass.setting-levels-results@1",
+  "title": "The levels of the results",
+  "text": "\\emph{Proved in this paper, at the standard of the root paper T1 \\cite{ButlerT1}:} the mass-weight dictionary and the algebra of its weight polynomial (Theorem \\claimref{mass.mass-weight-dictionary}, Corollary \\claimref{mass.weight-polynomial-two-series}, given the imported Facts; the names of the series are Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}'s); the two-twistor area formula (Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}); the de Sitter scale and frozen point in the flat chart (Lemma \\claimref{mass.de-sitter-scale-frozen-point}); what nullity fixes, and the real slice (Remark \\claimref{note.mass.what-nullity-fixes}); the chart form of the spin isomorphism (Lemma \\claimref{mass.chart-form-spin-isomorphism}); the reality of the grip (Lemma \\claimref{mass.grip-real}, whose first half is the chart form of the twistor paper's Proposition 4.5(2) and whose second half is this paper's); the exact join, all five parts (Theorem \\claimref{mass.exact-join}); the Casimir form (Proposition \\claimref{mass.casimir-form-join}, with Lemma \\claimref{mass.invariant-forms-simple-lie-algebra}, which imports Schur's lemma); the five broken generators (Lemma \\claimref{mass.five-broken-generators}).\n\n\\emph{Imported as Facts with provenance:} the frozen point and the tractor connection (Fact \\claimref{mass.imported-frozen-point-tractor-connection}); the Thomas operator (Fact \\claimref{mass.imported-thomas-operator}); the flat model, the twistor chart, the spin isomorphism and the infinity twistor (Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}); the palatial quadratics (Fact \\claimref{mass.imported-palatial-quadratics-homogeneity-charge}); the action theorem (Fact \\claimref{dark-energy.frozen-point-makes-stelle-west-vector}); the unitary representations of the de Sitter group (Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}).\n\n\\emph{Definitions, readings and registrations, flagged:} the mass of a composite as the length of its grip (Definition \\claimref{obj.mass.grip-mass-composite}: natural by its three properties, a definition nonetheless); the induced weight of a composite (Proposition \\claimref{mass.weight-composite}: the definition is its first sentence, and the proved half is the value of $\\nu^{2}$ that Theorem \\claimref{mass.exact-join} then gives); the sign conventions (Remark \\claimref{note.mass.conventions-sign}); the hierarchy reframed (Remarks \\claimref{note.mass.what-dictionary-does-does-not-yield} and \\claimref{note.mass.point-contact-dictionary-plain-words}); the three readings of one number (Remark \\claimref{note.mass.what-join-says}); the Fock-vacuum reading of the bracket (Remark \\claimref{note.mass.point-contact-angle-between-two-vacua}, an identification through the twistor paper's theorem); the equivalence-principle reading (Remark \\claimref{note.mass.point-contact-what-gravity-why-everything}, structural); the classical status of the join and its quantisation (Remark \\claimref{note.mass.quantisation-ordering}).",
+  "gap": false,
+  "level": "formal",
+  "hash": "af4662fa43ab"
+ },
+ {
+  "id": "c:note.mass.setting-successor-problems",
+  "type": "note",
+  "claim": "note.mass.setting-successor-problems@2",
+  "title": "Successor problems",
+  "text": "Five. (1) \\emph{The operator join:} quantise \\claimref{mass.exact-join} with the palatial ordering and compute the ordering constants; the ordering dictionary of the twistor paper is the method. (2) \\emph{A de Sitter chart:} the join runs in the flat chart with the deformation carried by $I_{\\Lambda}$; a chart adapted to the non-simple frozen point, in which $B_{\\Lambda}$ is a single determinant, would make the $SO(1,4)$ covariance of \\claimref{mass.exact-join} manifest rather than proved, a chart shared with the geometry paper's $\\Lambda$-extension \\cite{ButlerT6}. (3) \\emph{The weight assignments:} the dictionary maps the observed spectrum to imaginary weights of order $10^{38}$ in Hubble units (about $3 \\times 10^{38}$ for the electron); deriving them is the hierarchy problem restated in the framework's terms, and the condensation programme's second-order breaking is the named route \\cite{ButlerT13}. (4) \\emph{The massless locus and the seed:} decide whether the condensation equation's seed is supported on the locus of Theorem \\claimref{mass.exact-join}(5) or arises from the ordering constants of (1) \\cite{ButlerT13}. (5) \\emph{Many-twistor composites:} for $N$ constituents the grip $P = M(I_{\\Lambda})$ is defined verbatim and $P = P_{\\infty} + \\lambda P_{0}$ still holds, so $Q(P) = Q(p) + 2\\lambda(p\\cdot k - d^{2}) + \\lambda^{2}k\\cdot k$; the component formulas of the proof of Theorem \\claimref{mass.exact-join} are written for sums over $i, l$ and extend to $Q(p) = 2\\sum_{i<l}|\\br{\\pi^{i}\\pi^{l}}|^{2}$, $Q(k) = 2\\sum_{i<l}|[\\omega^{i}\\omega^{l}]|^{2}$, $p\\cdot k = \\sum_{i,l}|t_{il}|^{2}$ and $d = \\mathrm{Im}\\tr t$ (not proved or scripted here beyond $N = 2$); the comparison with $2\\sum_{i<l}|B^{il}_{\\Lambda}|^{2}$ and the identification of the remainder as an internal $\\mathfrak{u}(N)$ invariant is the counting the standard-model paper's content derivation needs \\cite{ButlerT12}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "38c8a45e058c"
+ },
+ {
+  "id": "s:paper-7",
+  "type": "section",
+  "title": "Position in the series",
+  "hash": "1c742bbde4d0"
+ },
+ {
+  "id": "i:paper-7",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-position-series",
+  "type": "note",
+  "claim": "note.mass.setting-position-series@1",
+  "title": "Position in the series",
+  "text": "This paper is T11 of the series. \\emph{It relies on five predecessors:} the root paper T1 \\cite{ButlerT1} for the standard of proof and the Fact (imported) discipline; the geometry paper T6 \\cite{ButlerT6} for the frozen point, the tractor connection, the norm $\\Lambda/3$ and its convention note (Fact \\claimref{mass.imported-frozen-point-tractor-connection}); the twistor paper T9 \\cite{ButlerT9} for the twistor chart, the incidence theorem, the spin isomorphism, the infinity twistor, the Fock-vacuum theorem and the palatial quadratics (Facts \\claimref{mass.imported-flat-model-twistor-chart-infinity} and \\claimref{mass.imported-palatial-quadratics-homogeneity-charge}, Remark \\claimref{note.mass.point-contact-angle-between-two-vacua}); and the action paper T10 \\cite{ButlerT10} for the action theorem, the Goldstone count and the engineering conclusion (Fact \\claimref{dark-energy.frozen-point-makes-stelle-west-vector}, Lemma \\claimref{mass.five-broken-generators}, Remark \\claimref{note.mass.point-contact-what-gravity-why-everything}). The fifth is the primer T0 \\cite{ButlerT0}, which supplies the bivector language throughout.\n\n\\emph{Papers that rely on this one:} the standard-model paper T12 \\cite{ButlerT12} imports the frozen point and its norm (Fact \\claimref{mass.imported-frozen-point-tractor-connection}), the dictionary and its weight polynomial (Theorem \\claimref{mass.mass-weight-dictionary}, Corollary \\claimref{mass.weight-polynomial-two-series}), the area formula (Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}, mass begins at two constituents), the de Sitter scale (Lemma \\claimref{mass.de-sitter-scale-frozen-point}), the grip (Definition \\claimref{obj.mass.grip-mass-composite}), the exact join (Theorem \\claimref{mass.exact-join}) and the Casimir form of the join (Proposition \\claimref{mass.casimir-form-join}), and takes up the internal symmetry whose Casimir is the correction term of Theorem \\claimref{mass.exact-join}; the families paper T13 \\cite{ButlerT13} carries the condensation programme to which the massless locus of Theorem \\claimref{mass.exact-join}(5) and successor problems (3) and (4) are routed, and settles the question of Remark \\claimref{note.mass.what-join-says} outright, the seed being the source term rather than a point of that locus \\cite[Props.~4.1-4.2]{ButlerT13}; the neutrino paper T15 \\cite{ButlerT15} is routed the massless locus of Theorem \\claimref{mass.exact-join}(5); the foundations paper T16 \\cite{ButlerT16} imports what nullity fixes (Remark \\claimref{note.mass.what-nullity-fixes}) and the grip (Definition \\claimref{obj.mass.grip-mass-composite}, Theorem \\claimref{mass.exact-join}); and the capstone T17 \\cite{ButlerT17} tabulates this paper's claims at their tiers.",
+  "gap": false,
+  "level": "formal",
+  "hash": "da898b12cd34"
+ },
+ {
+  "id": "s:paper-8",
+  "type": "section",
+  "title": "Machine verification",
+  "hash": "8f65e827e43e"
+ },
+ {
+  "id": "i:paper-8",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.mass.setting-machine-verification",
+  "type": "note",
+  "claim": "note.mass.setting-machine-verification@2",
+  "title": "Machine verification",
+  "text": "Every computational identity asserted in this paper has been verified in exact arithmetic by the script \\texttt{verify\\_T11.py} \\cite{ButlerVerifyT11}, which imports the series' shared library \\texttt{GA.py}: exact rationals and Gaussian rationals, exact rank, rational functions in a formal variable, and exact truncated power series. No floating point is used anywhere; thirty-nine checks, all passing, organised in five parts keyed to statement tags.\n\n\\emph{Part A: the dictionary.} The pairing $I \\cdot D\\sigma$ is formed slot by slot from Facts \\claimref{mass.imported-frozen-point-tractor-connection} and \\claimref{mass.imported-thomas-operator}, with $\\sigma$ and $\\Box\\sigma$ as formal coordinates, and $m^{2}$ is read off the resulting Klein-Gordon equation: $m^{2} = -w(w+n-1)Q(I)$ on a $144$-point rational grid in $(w, n, J)$, with a separate check that the opposite sign fails at every grid point where $m^{2} \\neq 0$; in $n = 4$, $Q(I) = \\Lambda/3$, $\\rho_{I} = \\Lambda/6$ and $m^{2} = -w(w+3)\\Lambda/3$ as rational-function identities in a formal $\\Lambda$. Corollary \\claimref{mass.weight-polynomial-two-series}: the conformally coupled scalar's $m^{2} = 2\\Lambda/3$ from the pairing; the massless weights $w = 0$ and $w = 1-n$, and no others among four further test values; the shadow symmetry $m^{2}(w) = m^{2}(1-n-w)$ and the closed form $\\tfrac{n(n-2)}{4}Q(I)$ at $w = 1 - n/2$ for four values of $n$; the completed square $-w(w+3) = \\tfrac94 - (w+\\tfrac32)^{2}$ as a polynomial identity, with $m^{2} \\ge 0$ at six real weights inside $[-3,0]$ and $m^{2} < 0$ at six outside; and $w = -\\tfrac32 \\pm i\\nu$ solving the dictionary in exact Gaussian rationals.\n\n\\emph{Part B: the area.} On exact Gaussian-rational spinor instances: a single twistor's momentum is null; $p^{2} = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$ on all ten pairs with the imaginary part identically zero; aligned spinors give a null composite.\n\n\\emph{Part C: the chart and the de Sitter scale.} The chart on $\\Lambda^{2}\\C^{4}$: $\\ip{n_{0}}{n_{\\infty}} = +1$ with both null; $Q(x) = -2\\det x$ and the orthogonality of the slots; $Q(X_{c}) = Q(1+2c)$ with $c$ undetermined (Remark \\claimref{note.mass.what-nullity-fixes}). Lemma \\claimref{mass.de-sitter-scale-frozen-point}: every slot of the flat tractor connection on $(\\sigma, \\nabla\\sigma, -\\tfrac14\\Box\\sigma)$ vanishes and the norm is $\\Lambda/3$, as rational-function identities in $\\Lambda$ at rational points; $\\ip{X(x)}{n_{\\infty} + \\lambda n_{0}} = 1 - \\lambda Q/2$ at rational points and three values of $\\lambda$, with the inverted order giving $\\lambda - Q/2$, and the six point embeddings of the uniqueness argument of exact rank six; the ambient pairing of $n_{\\infty} + \\lambda n_{0}$ with itself formed and equal to $2\\lambda$ at four values, with $2\\lambda = \\Lambda/3$, and the vector null, hence simple by Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}, exactly at $\\lambda = 0$. Theorem \\claimref{mass.exact-join}(1) and (4): both blocks of the deformed bracket on all ten twistor pairs, the assembled $B_{\\Lambda}$ at $\\Lambda = 3$, the point-supported factor $\\sigma(x)$ at two points and two values of $\\Lambda$, and the wedge identity $Z^{1}\\wedge Z^{2} = \\br{\\pi^{1}\\pi^{2}}X(x)$ for twistors built on the incidence line $\\mu_{x}\\pi + \\pi$, at four points and two spinor pairs.\n\n\\emph{Part D: the grip theorem.} The spin isomorphism is solved exactly: for each rotation $R_{U\\wedge V}$ the construction needs, the script finds the traceless $A$ whose action on every basis bivector equals that of the rotation. The nine rotations whose matrices Lemma \\claimref{mass.chart-form-spin-isomorphism} displays (the grading, four translations, four special conformal generators) are compared with these solutions entry by entry. The moment map $M_{A}(Z^{1}, \\dots, Z^{N}) := i\\sum_{i=1}^{N} \\bar{Z}^{i}\\cdot(A Z^{i}), \\qquad A \\in \\mathfrak{sl}(\\T)$ and the grip of Definition \\claimref{obj.mass.grip-mass-composite} are then built from these solutions, on ten twistor pairs: at $\\Lambda = 0$, $Q(P) = 2|\\br{\\pi^{1}\\pi^{2}}|^{2}$ and $P \\perp n_{\\infty}$; the grip on $n_{0}$, $M(n_{0})$, has squared length $2|[\\omega^{1}\\omega^{2}]|^{2}$; the cross term $\\ip{P_{\\infty}}{P_{0}}$ equals $p\\cdot k - d^{2}$ with the three forms in the components of the proof, $\\det t = \\overline{\\br{\\pi^{1}\\pi^{2}}}[\\omega^{1}\\omega^{2}]$, and equals $2\\,\\mathrm{Re}(\\br{\\pi^{1}\\pi^{2}}\\overline{[\\omega^{1}\\omega^{2}]}) + C$; and the theorem itself, $Q(P) = 2|B_{\\Lambda}|^{2} + 2\\lambda C$, as an identity in $\\lambda$ (all three coefficients of the quadratic), with $m^{2}$ real, $P \\perp I_{\\Lambda}$, and $P_{\\Lambda} = P_{\\infty} + \\lambda P_{0}$ recomputed independently at three values of $\\lambda$. The identities for $C$ in the relation displayed with \\claimref{mass.grip-real} and its nonnegativity. Lemma \\claimref{mass.grip-real}: on four real points of the slice \\claimref{note.mass.what-nullity-fixes}, every generator of a real pair (grading, translations, special conformal, Lorentz) has $\\Sigma A$ anti-Hermitian, the commutator identity of the proof holds on all sixteen pairs of points, and the grip on $I_{\\Lambda}$ has real pairing with $n_{\\infty}$, $n_{0}$ and the four real vectors on all ten pairs, and the anti-Hermiticity condition on the eight real parameters of $x$ has rank four (Remark \\claimref{note.mass.what-nullity-fixes}). The doubled composite's $m^{2} = 2\\lambda(\\bar{Z}\\cdot Z)^{2}$ on all five twistors and the non-doubled massless pair of Theorem \\claimref{mass.exact-join}(5). Proposition \\claimref{mass.casimir-form-join}: both Casimirs formed from the exact moment components in adapted bases, the decomposition (1), the value (2) and the closed form (3) on four pairs, and $\\tr\\mathsf{E}^{2} = 1$ on the grading element. Lemma \\claimref{mass.five-broken-generators}: the dimensions $10$, $6$, $5$ by exact rank, and the five matrices $A(e_{a}\\wedge I_{\\Lambda})$ traceless, independent, with $\\Omega A$ antisymmetric.\n\n\\emph{Part E: the weight.} $\\nu^{2} = 6|B_{\\Lambda}|^{2}/\\Lambda + C - \\tfrac94$ on three pairs at two values of $\\Lambda$, real and positive there; the expansion $\\sqrt{1 - \\tfrac94\\epsilon^{2}} = 1 - \\tfrac98\\epsilon^{2} - \\tfrac{81}{128}\\epsilon^{4} + \\cdots$, $\\epsilon = H/m$, as an exact truncated power series.\n\nWhat the script does not check: the conformal invariance of the Thomas operator (imported, Fact \\claimref{mass.imported-thomas-operator}); the flat-model dictionary and the spin isomorphism as theorems (imported, Fact \\claimref{mass.imported-flat-model-twistor-chart-infinity}; the script solves the isomorphism on the basis but does not prove it is one); Schur's lemma behind Lemma \\claimref{mass.invariant-forms-simple-lie-algebra} (imported); the de Sitter classification against which Corollary \\claimref{mass.weight-polynomial-two-series} is read (imported, Fact \\claimref{mass.imported-unitary-representations-de-sitter-group}); the ``only if'' of the massless locus in Theorem \\claimref{mass.exact-join}(5), which is the positivity argument of the proof; the normalisation $1/\\sqrt2$ of the real slice \\claimref{note.mass.what-nullity-fixes}, which the script carries as a scalar; the identification of the real form in Lemma \\claimref{mass.five-broken-generators} (that the stabiliser is $\\mathfrak{so}(1,4)$, that the five are the de Sitter translations, and the match with the action paper's Goldstone count), the script working over the Gaussian rationals, with no real-form check beyond the anti-Hermiticity checks of Lemma \\claimref{mass.grip-real}; the $N$-constituent formulas of successor problem (5); and Proposition \\claimref{mass.casimir-form-join}(2) beyond $N = 2$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "f2c93f4499f6"
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:correspondence.fock-model-complexified-ascended-algebra",
+  "type": "fact",
+  "claim": "correspondence.fock-model-complexified-ascended-algebra@6",
+  "title": "The Fock model of the complexified ascended algebra",
+  "text": "Let $W \\subset V_\\C$ be a maximal totally isotropic subspace ($\\dim_\\C W = 3$) and $W'$ a complementary maximal isotropic subspace, dual to $W$ under the $\\C$-bilinear form (such a pair exists, and any two such pairs are conjugate under $O(V_\\C)$). On the exterior algebra $\\Lambda^\\bullet W$ ($\\dim_\\C = 2^3 = 8$) define\n\\[\nc(w) := \\sqrt2\\; w \\wedge (\\cdot) \\quad (w \\in W),\n\\qquad\nc(w') := \\sqrt2\\; \\iota_{w'} \\quad (w' \\in W'),\n\\]\nwith $\\iota$ contraction through the pairing. Then $c(u)^2 = Q(u)\\,\\id$ for every $u \\in W \\oplus W' = V_\\C$, so $c$ extends to an algebra map $\\Cl(V_\\C) \\to \\End(\\Lambda^\\bullet W)$; this map is an isomorphism, and $\\Lambda^\\bullet W$ is the unique irreducible module of $\\Cl(2,4)_\\C$: the Dirac spinors of the completion. Vectors act oddly, so the even and odd halves\n\\[\n\\CS := \\Lambda^{\\mathrm{even}} W, \\qquad \\CSm := \\Lambda^{\\mathrm{odd}} W,\n\\]\neach of complex dimension 4, are modules of the even subalgebra $\\Cl^0(2,4)_\\C \\cong \\End(\\CS) \\oplus \\End(\\CSm)$: the two chiralities, the conformal spinor space $\\CS$ and its opposite $\\CSm$ (twistor and dual twistor space).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.fock-model-complexified-ascended-algebra, version 6 (T09 Thm 3.1)",
+  "hash": "e08e35a45c0d",
+  "number": 19
+ },
+ {
+  "id": "c:correspondence.incidence-relation-chart",
+  "type": "fact",
+  "claim": "correspondence.incidence-relation-chart@4",
+  "title": "The incidence relation is the chart",
+  "text": "Fix bases $\\pi_1, \\pi_2$ of $\\Spi$ and $e_1, e_2$ of $\\Som$ with $\\pi_1\\wedge\\pi_2 = N_0$ and $e_1 \\wedge e_2 = N_\\infty$. For a linear map $A: \\Spi \\to \\Som$ let $L_A := \\{A\\pi + \\pi : \\pi \\in \\Spi\\}$ be its graph line and\n\\[\nP(A) \\;:=\\; (A\\pi_1 + \\pi_1)\\wedge(A\\pi_2 + \\pi_2) \\;\\in\\; \\Lambda^2\\CS\n\\]\nits Pl\\\"ucker bivector, normalised by $P(0) = N_0$. Then:\n\\begin{enumerate}\n\\item \\emph{(Expansion.)} $P(A) = N_0 + \\varphi(A) + (\\det A)\\, N_\\infty$, where $\\varphi(A) := A\\pi_1\\wedge\\pi_2 + \\pi_1\\wedge A\\pi_2$ lies in the mixed slot $\\Som\\wedge\\Spi$ and $\\det$ is taken in the chosen bases.\n\\item \\emph{(The chart, term by term.)} $\\varphi$ is a linear isomorphism onto the mixed slot $= \\{\\nO,\\nInf\\}^\\perp \\otimes \\C$, and satisfies $Q(\\varphi(A)) = -2\\det A$. Writing $m(A) := \\varphi(A)$ as a vector of $\\{\\nO,\\nInf\\}^\\perp\\otimes\\C$, the Pl\\\"ucker bivector is exactly the completion's point embedding, complexified:\n\\[\nP(A) \\;=\\; \\nO \\,+\\, m(A)\\,-\\,\\tfrac12\\,Q(m(A))\\,\\nInf \\;=\\; X\\bigl(m(A)\\bigr).\n\\]\nIn particular every $P(A)$ is null, as a Pl\\\"ucker bivector must be, and the nullity of $P(A)$ is equivalent to the identity $\\det A = -\\tfrac12Q(m(A))$: the quadratic term of the chart is a determinant.\n\\item \\emph{(Coverage.)} $A \\mapsto L_A$ is a bijection from $\\operatorname{Hom}(\\Spi, \\Som)$ onto the lines of $\\PCS$ skew to $L_\\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\\ip{P}{\\nInf} \\neq 0$: the affine chart of the complexified conformal compactification, with the lines meeting $L_\\infty$ as the points at infinity; the real locus is cut out in Proposition \\claimref{correspondence.reality-conjugation-twistor-form-factor}(5).\n\\item \\emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\\infty, L_0)$ (Proposition \\claimref{correspondence.skew-lines-splittings-hyperbolic-planes-one}). (ii) The splitting of a conformal spinor (a twistor) into its $(\\omega, \\pi)$ parts along $\\CS = \\Som\\oplus\\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) The incidence relation (Penrose's $\\omega = ix\\pi$; in the real algebra $\\omega = \\tfrac12 x\\,\\nInf\\,\\pi$, real-linear in $x$) is the case $A = I_6\\hat x$ of the chart map, with $I_6$ the complex unit of $\\CS$ (a factor of $i$: with $I_6 = e_0e_1e_2e_3e_4e_5$, $I_6$ acts as $-i$ on $\\CS$) and $\\hat x$ Hermitian for the invariant Hermitian form $\\Sigma$ (the twistor form) of Proposition \\claimref{correspondence.reality-conjugation-twistor-form-factor}(5)). (iv) The stabiliser of the infinity line $L_\\infty$ in $\\mathfrak{so}(V_\\C)$ is the stabiliser of the ray of $\\nInf$: the Poincar\\'e parabolic, with its Levi factor acting on $\\Som \\oplus \\Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\\mathfrak{sl}(2,\\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \\claimref{correspondence.chiral-planes-summand-spaces}(1)).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.incidence-relation-chart, version 4 (T09 Thm 4.2)",
+  "hash": "1ecaf3aa8078",
+  "number": 20
+ },
+ {
+  "id": "c:correspondence.one-statement-three-languages",
+  "type": "fact",
+  "claim": "correspondence.one-statement-three-languages@5",
+  "title": "One statement in three languages",
+  "text": "Define the \\emph{infinity bivector} of a scale $g$ (Penrose's infinity twistor) as $I_{\\alpha\\beta} := \\Psi(I_g) \\in \\Lambda^2\\CS$, a bivector of the conformal spinor space, with $I_g = (1,0,\\rho_g)$ the scale tractor of Fact \\claimref{correspondence.imported-vacuum-equations-scale-tractor}. Then, on the region of invertibility of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with covariant constancy taken for the tractor gauge field of Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} and its action on $\\CS$:\n\\begin{enumerate}\n\\item vacuum with $\\Lambda = 0$ holds if and only if the infinity bivector is covariantly constant and \\emph{simple} (a line of $\\PCS$: the infinity line);\n\\item the Einstein condition with $\\Lambda \\neq 0$ holds if and only if the infinity bivector is covariantly constant with $\\varepsilon(I\\wedge I) = \\Lambda/3 \\neq 0$: a non-simple bivector, which is no line at all.\n\\end{enumerate}\nField equations, tractor parallelism, and infinity-bivector constancy are one statement in three languages, and the classical fact of twistor theory that the infinity bivector is simple precisely when $\\Lambda = 0$ is the transport principle's nullity criterion (Theorem \\claimref{correspondence.spinor-identification}(2)) applied to Fact \\claimref{correspondence.imported-vacuum-equations-scale-tractor}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.one-statement-three-languages, version 5 (T09 Cor 4.8)",
+  "hash": "0498a7832d26",
+  "number": 21
+ },
+ {
+  "id": "c:correspondence.reality-conjugation-twistor-form-factor",
+  "type": "fact",
+  "claim": "correspondence.reality-conjugation-twistor-form-factor@6",
+  "title": "Reality: the conjugation, the invariant Hermitian form, and the factor $I_6$",
+  "text": "Write $v \\mapsto \\bar v$ for the real structure of $V_\\C$ with real points $V$, and $J$ for the antilinear map on $\\Lambda^\\bullet W$ that conjugates coefficients in the monomial basis built on the isotropic basis of Theorem \\claimref{correspondence.fock-model-complexified-ascended-algebra}.\n\\begin{enumerate}\n\\item (\\emph{The conjugation.}) With $\\Gamma$ the parity operator ($+1$ on $\\CS$, $-1$ on $\\CSm$) and $b_4$ the fourth negative basis vector of the section ``Setting and imports'',\n\\[\n\\kappa := \\Gamma\\, c(b_4)\\, J\n\\]\nis an antilinear bijection of $\\Lambda^\\bullet W$ with $\\kappa\\, c(v) = c(\\bar v)\\, \\kappa$ for all $v \\in V_\\C$; every antilinear map with this property is a complex multiple of $\\kappa$; $\\kappa$ swaps the chiralities, $\\kappa(\\CS) = \\CSm$; and $\\kappa^2 = -\\id$.\n\\item (\\emph{The invariant Hermitian form.}) $\\Sigma(Z_1, Z_2) := B(\\kappa Z_1, Z_2)$ (the twistor form; on the conformal spinor space $\\CS$ it corresponds to the reversion form) is a nondegenerate sesquilinear form on $\\CS$ with $\\Sigma(Z_2, Z_1) = \\lambda\\,\\overline{\\Sigma(Z_1, Z_2)}$ for a constant $\\lambda$ of modulus one, so that a rescaling of $\\kappa$ by a phase makes $\\Sigma$ Hermitian; for the $\\kappa$ of (1), $\\lambda = 1$ and $\\Sigma$ is Hermitian as it stands. The real bivectors act $\\Sigma$-anti-Hermitianly, so $\\Sigma$ is $\\mathrm{Spin}(2,4)$-invariant.\n\\item (\\emph{Null planes.}) For every real null vector $v$ the plane of $\\Psi(v)$ is $\\Sigma$-null. In particular $\\Som$ and $\\Spi$ are $\\Sigma$-null.\n\\item (\\emph{Signature.}) $\\Sigma$ has signature $(2,2)$.\n\\item (\\emph{Reality of the chart, and the factor $I_6$.}) The conformal pseudoscalar $I_6$ acts on $\\CS$ as its complex unit (the factor $i$). Let $\\sigma(\\omega, \\pi) := \\Sigma(\\omega, \\pi)$ be the resulting perfect pairing $\\Som\\times\\Spi \\to \\C$, and call $\\hat x: \\Spi\\to\\Som$ \\emph{$\\sigma$-Hermitian} if $\\sigma(\\hat x\\pi, \\pi') = \\overline{\\sigma(\\hat x\\pi', \\pi)}$ for all $\\pi, \\pi' \\in \\Spi$. For $A \\in \\operatorname{Hom}(\\Spi, \\Som)$ the following are equivalent: (a) the chart point $m(A)$ of Theorem \\claimref{correspondence.incidence-relation-chart} is real, $m(A) \\in W_{1,3}$; (b) the line $L_A$ is $\\Sigma$-null; (c) $A = I_6\\hat x$ with $\\hat x$ $\\sigma$-Hermitian. Consequently the real points of the affine chart are exactly the $\\Sigma$-null lines skew to $L_\\infty$, the incidence relation of a real point reads $\\omega = I_6\\hat x\\pi$ with $\\hat x$ $\\sigma$-Hermitian, and on real points the chart norm is $Q(m) = -2\\det A = 2\\det\\hat x$ in the bases of Theorem \\claimref{correspondence.incidence-relation-chart}.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.reality-conjugation-twistor-form-factor, version 6 (T09 Prop 4.5)",
+  "hash": "e88c4db00e75",
+  "number": 22
+ },
+ {
+  "id": "c:correspondence.shared-core-ordering-dictionary",
+  "type": "fact",
+  "claim": "correspondence.shared-core-ordering-dictionary@4",
+  "title": "The shared core, and the ordering dictionary",
+  "text": "\\begin{enumerate}\n\\item The symmetrised quadratics of the palatial algebra close under commutator on a copy of $\\mathfrak{gl}(4,\\C) = \\mathfrak{gl}(\\CS)$, with $\\CS$ the conformal spinor space (twistor space) (Lemma \\claimref{correspondence.symmetrised-quadratics-palatial-algebra}); the anti-Hermitian part with respect to the Hermitian form $\\Sigma$ of Proposition \\claimref{correspondence.reality-conjugation-twistor-form-factor} is $\\mathfrak{u}(2,2)$, containing $\\mathfrak{su}(2,2) \\cong \\mathfrak{so}(2,4)$.\n\\item The bivectors of $\\Cl(2,4)_\\C$ close under commutator on $\\mathfrak{so}(2,4)_\\C$ and act on $\\CS$ as $\\mathfrak{sl}(\\CS)$ (Proposition \\claimref{correspondence.spin-representation}).\n\\item Under the Klein identification the two copies coincide, compatibly with their actions: the assignment $\\beta \\mapsto q(\\rho(\\beta))/\\hbar$ is an injective Lie algebra homomorphism $\\mathfrak{so}(2,4)_\\C \\to \\mathcal{P}$, and the adjoint action of $q(\\rho(\\beta))/\\hbar$ on the linear palatial generators $Z^\\alpha$, $\\bar Z_\\beta$ is the spinor action $\\rho(\\beta)$ of the Clifford bivector, in the dual pair of slots of Lemma \\claimref{correspondence.symmetrised-quadratics-palatial-algebra}(1) ($-\\rho(\\beta)$ on the $Z$ slot, its transpose on the $\\bar Z$ slot).\n\\item Both quantisations incur the same ordering shift of one half per dimension: on the palatial storey, symmetric ordering shifts the distinguished $\\mathfrak{u}(1)$ generator by $-\\tfrac{\\hbar}{2}$ per complex dimension of $\\CS$, totalling $-2\\hbar$ (Lemma \\claimref{correspondence.symmetrised-quadratics-palatial-algebra}(3)); on the Clifford storey, the boost generator of each adjoined plane is $N - \\tfrac12$: minus one half per fermionic mode, the same sign (Proposition \\claimref{correspondence.clifford-side-ordering-shift}).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.shared-core-ordering-dictionary, version 4 (T09 Thm 5.7)",
+  "hash": "042b5be76f94",
+  "number": 23
+ },
+ {
+  "id": "c:correspondence.spin-representation",
+  "type": "fact",
+  "claim": "correspondence.spin-representation@5",
+  "title": "The spin representation is $\\mathfrak{sl}(\\CS)$",
+  "text": "The bivectors of $\\Cl(V_\\C)$ close under commutator (a copy of $\\mathfrak{so}(2,4)_\\C := \\Lambda^2 V_\\C$, acting on vectors by $[\\beta, c(w)] = c(\\beta w)$), and their action on the conformal spinor space $\\CS$ (twistor space) is a Lie algebra isomorphism\n\\[\n\\rho: \\mathfrak{so}(2,4)_\\C \\;\\xrightarrow{\\ \\sim\\ }\\; \\mathfrak{sl}(\\CS) .\n\\]\nConsequently the image of $\\mathrm{Spin}(V_\\C)$ in $GL(\\CS)$ is all of $SL(\\CS)$, which acts transitively on $\\CS\\setminus\\{0\\}$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.spin-representation, version 5 (T09 Prop 5.2)",
+  "hash": "74ccbeaa089f",
+  "number": 24
+ },
+ {
+  "id": "c:correspondence.spinor-identification",
+  "type": "fact",
+  "claim": "correspondence.spinor-identification@7",
+  "title": "The spinor identification",
+  "text": "With $\\CS = \\Lambda^{\\mathrm{even}} W$ as in Theorem \\claimref{correspondence.fock-model-complexified-ascended-algebra}:\n\\begin{enumerate}\n\\item there is a canonical isomorphism $V_\\C \\cong \\Lambda^2 \\CS$ of $\\mathrm{Spin}$-modules, under which the quadratic form corresponds to $P \\mapsto \\varepsilon(P \\wedge P)$ for a fixed volume functional $\\varepsilon$ on $\\Lambda^4\\CS$;\n\\item a vector is null exactly when its bivector is simple (decomposable), that is, represents a 2-plane of $\\CS$, that is, a line of the projective spinor space $\\PCS := \\mathbb{P}(\\CS)$ (projective twistor space);\n\\item consequently the completion's fibre quadric (Fact \\claimref{correspondence.imported-forced-completion-fibre-quadric}), the space of null rays of $V$, double covers the real slice of the Klein quadric (a ray and its opposite give one point), whose points are the null lines of $V$ and are lines of $\\PCS$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.spinor-identification, version 7 (T09 Thm 3.4)",
+  "hash": "1e53d9ced6ff",
+  "number": 25
+ },
+ {
+  "id": "c:correspondence.symmetrised-quadratics-palatial-algebra",
+  "type": "fact",
+  "claim": "correspondence.symmetrised-quadratics-palatial-algebra@5",
+  "title": "Symmetrised quadratics of the palatial algebra",
+  "text": "For $M \\in \\mathfrak{gl}(4,\\C)$ with entries $M^\\beta{}_\\alpha$ set\n\\[\nq(M) \\;:=\\; \\tfrac12 \\sum_{\\alpha,\\beta} M^\\beta{}_\\alpha\\,\\bigl(Z^\\alpha \\bar Z_\\beta + \\bar Z_\\beta Z^\\alpha\\bigr) \\;\\in\\; \\mathcal{P}.\n\\]\nThen:\n\\begin{enumerate}\n\\item $[q(M), Z^\\gamma] = -\\hbar\\,(MZ)^\\gamma$ and $[q(M), \\bar Z_\\gamma] = +\\hbar\\,(M^{\\mathsf T}\\bar Z)_\\gamma$: the adjoint action of $q(M)$ on the linear generators is the linear action of $M$ (in the dual pair of representations), times $\\hbar$;\n\\item $[q(M), q(N)] = \\hbar\\, q([M,N])$: the map $M \\mapsto q(M)/\\hbar$ is an injective Lie algebra homomorphism $\\mathfrak{gl}(4,\\C) \\to \\mathcal{P}$;\n\\item $q(M) = \\sum M^\\beta{}_\\alpha Z^\\alpha \\bar Z_\\beta - \\tfrac{\\hbar}{2}\\operatorname{tr} M$: the symmetric and normal orderings of a quadratic differ by the central element $\\tfrac{\\hbar}{2}\\operatorname{tr}M$; for the distinguished generator $M = \\mathrm{id}$ (the helicity/homogeneity direction) the shift is $-2\\hbar$, that is $q(\\mathrm{id}) = \\sum_\\alpha Z^\\alpha\\bar Z_\\alpha - 2\\hbar$: minus one half of $\\hbar$ for each of the four complex dimensions of the conformal spinor space $\\CS$ (twistor space).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.symmetrised-quadratics-palatial-algebra, version 5 (T09 Lem 5.5)",
+  "hash": "c0777350da42",
+  "number": 26
+ },
+ {
+  "id": "c:dark-energy.frozen-point-makes-stelle-west-vector",
+  "type": "fact",
+  "claim": "dark-energy.frozen-point-makes-stelle-west-vector@5",
+  "title": "The frozen point makes the Stelle-West vector",
+  "text": "On the Einstein region with $\\Lambda \\neq 0$ of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), whose tractor connection is the $\\Cl(2,4)$ gauge field $\\Omega_{T}$ of Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, in the notation of Lemma \\claimref{dark-energy.stelle-west-vector-frozen-point}:\n\\begin{enumerate}\n\\item[(i)] \\emph{(Reduction; proved.)} Parallelism of $I$ reduces the ambient $SO(2,4)$-structure to the stabiliser of $I$, the de Sitter group $SO(1,4)$ for $\\Lambda > 0$ and the anti-de Sitter group $SO(2,3)$ for $\\Lambda < 0$, and the tractor connection to a metric connection on the rank-five bundle $I^\\perp$, of signature $(1,4)$ or $(2,3)$ respectively; the ambient curvature takes values in $\\Lambda^2 I^\\perp$. (The de Sitter names are used below; the anti-de Sitter branch reads identically with these substitutions, and every statement that follows uses only $\\{I,V\\}^\\perp$, whose signature is $(1,3)$ on both branches.)\n\\item[(ii)] \\emph{(The Stelle-West datum; proved.)} $V$ is a section of $I^\\perp$ of fixed squared norm $-3/\\Lambda = -\\ell^2$, its stabiliser in $SO(1,4)$ (or $SO(2,3)$) is the Lorentz group of $\\{I, V\\}^\\perp$, of signature $(1,3)$, its covariant derivative is the soldering form, the physical frame $\\hb^{-1}(a)$, and the reduced connection is $D + e\\wedge V/Q(V)$, on flat spacetime the gauge field $\\Omega(a) - \\hb^{-1}(a) \\wedge V/\\ell^{2}$, with Lorentz curvature block $R + \\ell^{-2}\\,e\\wedge e$. The pair (reduced connection, $V$) is exactly the datum of Fact \\claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. The Stelle-West vector is therefore not the frozen point, which is parallel; it is made from the frozen point and the canonical tractor, $V = X - (3/\\Lambda)\\,I$.\n\\item[(iii)] \\emph{(The action; proved, with the Stelle-West contraction of Fact \\claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west} as the imported input.)} The MacDowell-Mansouri functional of that datum is\n\\[\n\\begin{aligned}\nS[\\nabla, I, V] \\;&\\sim\\; \\frac{1}{Q(I)} \\int \\epsilon(I, V, F, F), \\\\\nS[\\nabla, I, X - \\tfrac{3}{\\Lambda}I] \\;&\\sim\\; \\frac{3}{\\Lambda}\\int \\epsilon(I, X, F, F) \\quad\\text{(value at the canonical solution),}\n\\end{aligned}\n\\]\nwhere $\\epsilon(I, V, F, F)$ denotes the fibre volume form of $\\mathcal{T}$ contracted with $I$, with $V$, and with the two bivector legs of $F\\wedge F$, the first line being the functional and the second its value at the canonical Stelle-West vector of Lemma \\claimref{dark-energy.stelle-west-vector-frozen-point}, written in the scale the frozen point determines (the canonical tractor $X$ carries a conformal weight): \\emph{extremise the square of the curvature as seen from the point at infinity}, the frozen point supplying the reduction and the prefactor, the canonical tractor the Stelle-West slot. In the variational principle $\\nabla$ ranges over the metric connections of the ambient bundle that preserve $I$, $\\nabla I = 0$, equivalently those that reduce to $I^\\perp$, which is the field space of Fact \\claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west} (the twenty further components per point of an unconstrained ambient connection are exactly $\\nabla I$, which enter the integrand quadratically through $[I\\wedge u, I\\wedge v] = -Q(I)\\,u\\wedge v$ and would spoil the identification with the Einstein-Cartan equations); this space is carried to itself by the ambient gauge group acting on $\\nabla$, $I$ and $V$ together, since $(g\\nabla g^{-1})(gI) = g(\\nabla I)$, and the tractor connection \\claimref{dark-energy.imported-frozen-point-geometry} is the point of it occupied by the canonical solution of Lemma \\claimref{dark-energy.stelle-west-vector-frozen-point}, generic gauge transformations moving it within the space without preserving the tractor shape. $I$ is a field subject to $Q(I) = \\Lambda/3$, and $V$ an independent field subject to $\\ip{V}{I} = 0$, $Q(V) = -3/\\Lambda$, of which Lemma \\claimref{dark-energy.stelle-west-vector-frozen-point} exhibits the canonical solution; the identity $Q(I)\\,Q(V) = -1$ holds for either sign of $\\Lambda$.\n\\end{enumerate}\nTwo consequences, each at its level:\n\\begin{enumerate}\n\\item \\emph{(Proved.)} $S$ is polynomial in the connection, $I$ and $V$, with no inverse metric anywhere: its integrand is defined wherever the ambient bundle and its connection are regular. At the Schwarzschild wall the connection is not regular (Proposition \\claimref{dark-energy.frozen-point-datum-kasner-wall} on the Kasner model, transported by Fact \\claimref{dark-energy.imported-weighted-limit-schwarzschild-singularity-matching}: a simple pole with the Kasner residue), and there the integrand's topological term diverges while its variational principle and field equations reach the wall as conditions on the residue; what the polynomial form yields at $\\Sigma$ is the equations, not the number. the section ``What the equations vacate, and what cannot evolve'' makes this precise.\n\\item \\emph{(Proved; the limit at the level of Fact \\claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}.)} The prefactor $1/Q(I) = 3/\\Lambda$ has a simple pole at $\\Lambda = 0$ and the integrand $\\epsilon(I, X, F, F)$ is polynomial in $\\Lambda$: the curvature-squared presentation exists precisely when $\\Lambda \\neq 0$, that is, precisely when the frozen point is off the null cone. This is a boundary of the presentation, not of the action principle. By the expansion of Fact \\claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west},\n\\[\nS \\;\\sim\\; \\frac{3}{\\Lambda}\\int \\epsilon_{abcd}R^{ab}\\wedge R^{cd} \\;+\\; 2\\int \\epsilon_{abcd}\\,e^a\\wedge e^b\\wedge R^{cd} \\;+\\; \\frac{\\Lambda}{3}\\int \\epsilon_{abcd}\\,e^a\\wedge e^b\\wedge e^c\\wedge e^d ,\n\\]\nthe first term is topological with vanishing interior variation (a boundary term only), and after its subtraction the limit $\\Lambda \\to 0$ is the Einstein-Cartan functional $2\\int\\epsilon_{abcd}\\,e^a\\wedge e^b\\wedge R^{cd}$: polynomial, defined at degenerate $e$, and no longer of curvature-squared form.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim dark-energy.frozen-point-makes-stelle-west-vector, version 5 (T10 Thm 3.1)",
+  "hash": "e0b3803fce11",
+  "number": 27
+ },
+ {
+  "id": "c:interior.covariant-form-vacuum-equations",
+  "type": "fact",
+  "claim": "interior.covariant-form-vacuum-equations@5",
+  "title": "Covariant form of the vacuum equations",
+  "text": "Let $g$ be the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) on its invertible region $M^\\circ$, and let $I_g := (1, 0, 0) = \\nInf$ be the pure-scale section of $\\mathcal{T}$ in the scale $g$. For the tractor connection, which in Gauge Theory Gravity is the $\\Cl(2,4)$ rotation-gauge field $D^{T}_{a} = a \\cdot \\nabla + \\Omega_{T}(a)\\times$, $\\Omega_{T}(a) = \\Omega(a) - \\nInf \\wedge \\hb^{-1}(a) + \\nO \\wedge \\Sch(\\hb^{-1}(a))$, acting on tractors $\\sigma\\nInf + \\mu + \\rho\\nO$ (Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), with slots in the splitting of $g$,\n\\[\n\\nabla_a I_g = \\bigl(0,\\; -\\Sch_{ab},\\; 0\\bigr), \\qquad\\text{that is}\\qquad D^{T}_{a}\\nInf = -\\Sch\\bigl(\\hb^{-1}(a)\\bigr),\n\\]\nso $I_g$ is parallel if and only if $\\Sch = 0$, if and only if $g$ is Ricci-flat, if and only if (Fact \\claimref{interior.imported-equivalence-einstein-equations}) the GTG vacuum field equations hold. Moreover $Q(I_g) = 0$: the section is null. Hence the vacuum field equations on $M^\\circ$ are exactly equivalent to the parallelism of the scale tractor $I_g$ attached to $g$: the ideal point of the fibre quadric that the physical scale distinguishes is covariantly constant. (Existence of \\emph{some} parallel null tractor is the strictly weaker, conformally invariant statement that $[g]$ is almost Ricci-flat: it carries an almost-Einstein scale which is Ricci-flat away from that scale's zero set, and the zero set may be non-empty. A non-constant rescaling $e^{2\\omega}g$ already keeps the parallel section while losing the field equations.) The statement is covariant under the gauge transformations of $\\mathcal{T}$, whose structure algebra is $\\mathfrak{so}(2,4)$ acting through the bivectors of $\\Cl(2,4)$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.covariant-form-vacuum-equations, version 5 (T06 Thm 4.5)",
+  "hash": "20a4583076ed",
+  "number": 28
+ },
+ {
+  "id": "c:interior.imported-tractor-connection",
+  "type": "fact",
+  "claim": "interior.imported-tractor-connection@2",
+  "title": "Imported: the tractor connection",
+  "text": "Let $g$ be the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) on its invertible region. The tractor bundle $\\mathcal{T}$ of the conformal class $[g]$, trivialised in the scale $g$ by $\\nInf$, the physical vectors and $\\nO$ (the vectors $\\sigma\\nInf + \\mu + \\rho\\nO$ of $\\Cl(2,4)$), carries a canonical connection depending only on $[g]$, preserving the metric $\\ip{(\\sigma,\\mu,\\rho)}{(\\sigma,\\mu,\\rho)} \\;=\\; g(\\mu,\\mu) \\,+\\, 2\\sigma\\rho$, whose expression in the scale $g$ is\n\\begin{equation}\n\\nabla_a(\\sigma, \\mu_b, \\rho) \\;=\\; \\bigl(\\nabla_a\\sigma - \\mu_a,\\;\\; \\nabla_a\\mu_b + g_{ab}\\,\\rho - \\Sch_{ab}\\,\\sigma,\\;\\; \\nabla_a\\rho + \\Sch_a{}^{b}\\mu_b\\bigr),\n\\end{equation}\nwhere $\\nabla_a$ on $\\mu$ is the covariant derivative $D$ of the gravitational field in the physical frame and $\\Sch_{ab}$ is the Schouten tensor of $g$, the components of the Schouten map $\\Sch(A) = \\tfrac12\\bigl(\\mathcal{R}(A) - \\tfrac16 A\\,\\mathcal{R}\\bigr)$ of the field strength; in four dimensions $\\Sch_{ab} = \\tfrac12\\bigl(\\Ric_{ab} - \\tfrac{R}{6}\\,g_{ab}\\bigr)$. \\emph{Provenance:} Bailey-Eastwood-Gover \\cite{BEG1994}; Curry-Gover \\cite[\\S 5]{CurryGover2018}. The display \\claimref{interior.imported-tractor-connection} is their connection written in the curvature conventions of the section ``Setting and conventions''; the relative sign of the Schouten slots against those references is convention-dependent, and Lemma \\claimref{interior.sign-fixed-internally} fixes it internally, so that no sign in this paper rests on a translation between conventions.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "T. N. Bailey, M. G. Eastwood and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.; S. N. Curry and A. R. Gover, An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds, in Asymptotic Analysis in General Relativity, London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170., \\S 5",
+  "hash": "ade37549dae3",
+  "number": 29
+ },
+ {
+  "id": "c:interior.non-null-stabilisers-section-they-act",
+  "type": "fact",
+  "claim": "interior.non-null-stabilisers-section-they-act@4",
+  "title": "Non-null stabilisers, and the section they act on",
+  "text": "Let $I \\in V$ with $Q(I) \\neq 0$. Then:\n\\begin{enumerate}\n\\item the stabiliser subalgebra of $I$ is $\\Lambda^2(I^\\perp) \\cong \\mathfrak{so}(I^\\perp)$, reductive, of dimension $10$, with trivial nilradical: $\\mathfrak{so}(1,4)$ if $Q(I) > 0$ and $\\mathfrak{so}(2,3)$ if $Q(I) < 0$;\n\\item the hyperplane section $M_I := \\{X \\in V : Q(X) = 0,\\ \\ip{X}{I} = 1\\}$ is, under $Y := X - I/Q(I)$, the pseudosphere $\\{Y \\in I^\\perp : Q(Y) = -1/Q(I)\\}$, a complete constant-curvature Lorentzian $4$-manifold on which the stabiliser acts as the isometry group: de Sitter space for $Q(I) > 0$, anti-de Sitter space for $Q(I) < 0$;\n\\item the polar hypersurface $\\{\\ip{X}{I} = 0\\}$ meets the quadric in the projectivised null cone of $I^\\perp$: for $Q(I) > 0$ a spacelike conformal infinity ($S^3$ with its standard conformal structure), for $Q(I) < 0$ a timelike one.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.non-null-stabilisers-section-they-act, version 4 (T06 Prop 4.4)",
+  "hash": "82c87e689252",
+  "number": 30
+ },
+ {
+  "id": "c:interior.scale-tractor-leaves-cone",
+  "type": "fact",
+  "claim": "interior.scale-tractor-leaves-cone@7",
+  "title": "$\\Lambda \\neq 0$: the scale tractor leaves the cone",
+  "text": "Let $g$ be the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) and let it satisfy the Einstein condition $\\Ric_{ab} = \\Lambda\\, g_{ab}$ on the invertible region $M^\\circ$, that is $\\mathcal{R}(a) = \\Lambda a$ for the field strength in the conventions of the section ``Setting and conventions'', and set\n\\[\nI_g \\;:=\\; \\Bigl(1,\\; 0,\\; \\tfrac{\\Lambda}{6}\\Bigr) \\;=\\; \\nInf + \\tfrac{\\Lambda}{6}\\,\\nO\n\\]\nin the scale $g$. Then $I_g$ is parallel, and every parallel section of the form $(1, 0, \\rho)$ arises this way: $(1,0,\\rho)$ is parallel if and only if $\\rho$ is constant and $g$ is Einstein with $\\Lambda = 6\\rho$. The norm is\n\\[\nQ(I_g) \\;=\\; \\tfrac{\\Lambda}{3} :\n\\]\nthe frozen point is null exactly in the $\\Lambda = 0$ vacuum, and for $\\Lambda \\neq 0$ it leaves the cone, with the cosmological constant as its squared norm (times the positive constant $3$).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.scale-tractor-leaves-cone, version 7 (T06 Thm 4.7)",
+  "hash": "b9fe0bfc6879",
+  "number": 31
+ },
+ {
+  "id": "c:interior.sign-fixed-internally",
+  "type": "fact",
+  "claim": "interior.sign-fixed-internally@4",
+  "title": "The sign is fixed internally",
+  "text": "The relative sign of the Schouten slots in \\claimref{interior.imported-tractor-connection}, the $\\nO \\wedge \\Sch(\\hb^{-1}(a))$ term of the tractor gauge field of Theorem \\claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, is determined, within the conventions of the section ``Setting and conventions'', by the requirement that the flat-model section attached to a $\\Lambda > 0$ Einstein representative be de Sitter space: with the signs as displayed, $\\Lambda > 0$ gives $Q(I_g) = \\Lambda/3 > 0$, whose flat-model section is the de Sitter pseudosphere by Proposition \\claimref{interior.non-null-stabilisers-section-they-act}(2); the opposite sign choice would attach the anti-de Sitter section to $\\Lambda > 0$, contradicting the naming convention $\\Ric_{ab} = \\Lambda g_{ab}$, $R = 4\\Lambda$ for de Sitter space fixed in the section ``Setting and conventions'', which is the store's curvature sign of the field strength, $\\mathcal{R}(B) = \\tfrac{\\Lambda}{3}B$ on de Sitter space (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.sign-fixed-internally, version 4 (T06 Lem 4.8)",
+  "hash": "710b83efb5ab",
+  "number": 32
+ },
+ {
+  "id": "c:interior.stabiliser-rotates-parabolic-reductive",
+  "type": "fact",
+  "claim": "interior.stabiliser-rotates-parabolic-reductive@2",
+  "title": "The stabiliser rotates from parabolic to reductive",
+  "text": "The stabiliser of the frozen point $I_g$ in the structure group of the completion is:\n\\begin{enumerate}\n\\item for $\\Lambda = 0$: the stabiliser of a null vector, the Poincar\\'e group $SO(1,3) \\ltimes \\R^4$ (Proposition \\claimref{interior.stabilisers-flat-model}), a group with $4$-dimensional nilradical: the parabolic situation, whose transvections are the obstruction structure of \\cite{ButlerT1};\n\\item for $\\Lambda > 0$: the de Sitter group $SO(1,4)$, reductive, acting on the Einstein section as its isometry group, with conformal infinity the spacelike polar $3$-sphere $\\ip{X}{I} = 0$;\n\\item for $\\Lambda < 0$: the anti-de Sitter group $SO(2,3)$, reductive, with timelike polar infinity.\n\\end{enumerate}\nIn short: $\\Lambda$ measures precisely the failure of infinity to be parabolic.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.stabiliser-rotates-parabolic-reductive, version 2 (T06 Prop 4.10)",
+  "hash": "1bd4f632a458",
+  "number": 33
+ },
+ {
+  "id": "c:refuted.the-mass-dictionary-coupling-to-the-frozen-point",
+  "type": "refutation",
+  "claim": "refuted.the-mass-dictionary-coupling-to-the-frozen-point@1",
+  "title": "The mass dictionary, coupling to the frozen point, explains the observed masses",
+  "text": "Refuted. The corrected statement: It restates the hierarchy problem: every known massive particle has complex weight $-\\tfrac32 \\pm i\\nu$ with $\\nu \\approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "mass.mass-weight-dictionary"
+  ],
+  "hash": "38a29f927639",
+  "number": 34
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ }
+]

@@ -1,0 +1,18 @@
+functions:
+  check_rank_one_eigenvalue_and_seesaw_inversion:
+    kind: sampled
+    clauses: ["one rank-one Dirac mass per sector at leading order", "seesaw m_3 = m_D^2/M_R"]
+    omits: "three sample Yukawa values and sample m_3; that the families alignment gives the democratic rank-one texture is the cited result"
+  check_two_ends_of_the_range:
+    kind: exact
+    clauses: ["m_b^2/m_3 ~ 3.5e11 GeV <= M_rung <= m_t^2/m_3 ~ 6e14 GeV"]
+    omits: "input masses m_t = 173, m_b = 4.18 GeV and m_3 = 0.05 eV (with brackets) are the check's own central values; the order-of-magnitude shift from running and the bottom-tau ratio near three are imported and not checked"
+  check_ratio_of_the_ends:
+    kind: exact
+    clauses: ["the ends differ by (m_t/m_b)^2 ~ 1.7e3"]
+    omits: "same input values"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the arithmetic of the range is checked exactly on the check's central masses; the hypothesis (U) and running are not testable here. 2026-10-23: the two ends of each bracket (m_t^2/m_3, m_b^2/m_3 and their ratio) are now pinned exactly by hand, not only bounded; the quoted windows moved to module level"

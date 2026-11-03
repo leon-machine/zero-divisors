@@ -1,0 +1,20 @@
+functions:
+  check_unitary_gauge_exists_and_is_complete:
+    kind: sampled
+    clauses:
+    - '"every fluctuation of the constrained pair (I, V) is a gauge transformation: unitary gauge exists and is complete"'
+    omits: Three Lambda and three events; the action-level clauses (second variation only in the connection, no equation of motion for Lambda) and the covariant constancy of the frozen point are not computed
+  check_stabiliser_is_lorentz_of_the_complement:
+    kind: sampled
+    clauses:
+    - '"every fluctuation of the constrained pair is a gauge transformation" (orbit counting: 15 - 6 = 9)'
+    omits: The stabiliser dimension and signature are not in the statement, only support its counting; same Lambda and event samples
+untouched_premises:
+  dark-energy.imported-frozen-point-geometry: bears only on the covariance of the frozen point, which the docstring declares not computed
+  interior.covariant-form-vacuum-equations: bears only on the covariant constancy of the frozen point, declared not computed
+  interior.scale-tractor-leaves-cone: bears only on the covariant constancy of the frozen point, declared not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The finite counting core is verified at sample Lambda and events; the rest is declared uncomputed in the docstring.

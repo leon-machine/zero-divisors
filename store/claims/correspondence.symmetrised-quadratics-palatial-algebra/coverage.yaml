@@ -1,0 +1,18 @@
+functions:
+  check_adjoint_action_on_generators:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "all 16 matrix units (so every M by linearity) plus two Gaussian samples, on monomials of degree <= 2, which determines an operator of differential order <= 2; hbar takes two values, and both sides are homogeneous of degree one in hbar, so one nonzero value already fixes the identity"
+  check_lie_homomorphism_and_injective:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the homomorphism identity is checked on 64 of the 256 ordered pairs of matrix units (on monomials of degree <= 1 only) and on three sample pairs on degree <= 2; injectivity (rank 16 of the 16 operators q(E_ab)) is exact"
+  check_symmetric_minus_normal_is_half_trace:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "all 16 matrix units plus sample M, N and the identity, on monomials of degree <= 3, at two values of hbar; the reading as minus one half of hbar for each complex dimension of CS is interpretive"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clauses (1) and (3) are linear in M and checked on all matrix units; the homomorphism clause covers a quarter of the unit pairs."

@@ -1,0 +1,10 @@
+functions:
+  check_gj_square_of_majorana_element:
+    kind: partial
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)", "(v)"]
+    omits: "(i) to (iv) are exact 32 x 32 matrix identities (TT^dagger projector, grade 0, 2, 4 components, X4 = 8 mu_R mu_P, w4 X4 = (3/32)(T_GJ - w4(B - L)), G4 = 4 mu^2 - 5/64, w4 G4 has no symmetric form, the 10 form with multiple zero, asserted with the values 5/16, -1/16, 1/16 of G4 on mode number 0, 2, 4) with the Majorana expansion exact; (ii) checks commutation with three rung generators, with B - L and non-commutation with v4 v5, but not the representation-theoretic label (15,1,3); the ratio |y_e/y_d| = 3 is not asserted here (it follows from the stored GJ form); (v) is checked at one real c = 3 for the square's cross part (c^2 X4), while the c^4 line is bilinearity of the product (c^2 mu_R)(c^2 mu_P), not a computation of mu(cT), and complex c is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (i) to (iv) exact; second half of (v) is a restatement of bilinearity, hence partial"

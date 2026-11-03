@@ -1,0 +1,24 @@
+functions:
+  check_commutator_is_edge_difference:
+    kind: sampled
+    clauses: ["\"[a_m, a_m^dagger] = B_m - T_m\""]
+    omits: "windows L = 6 and 7 only (all m = 1..L-1, applied to all 2^L basis states); not general L"
+  check_edge_clean_scalar:
+    kind: sampled
+    clauses: ["\"on every edge-clean state ... [a_m, a_m^dagger] acts as the scalar m\""]
+    omits: "L = 6, 7 and all 2m <= L (all edge-clean states counted, 2^(L-2m) each); not general L"
+  check_currents_commute:
+    kind: sampled
+    clauses: ["\"[a_m, a_m'] = 0 for all m, m', exactly\""]
+    omits: "L = 6 only, all m, m' and all 64 states"
+  check_cross_commutator_edge_supported:
+    kind: sampled
+    clauses: ["\"for m != m' the cross commutator [a_m, a_m'^dagger] is a difference of bilinears supported on the lowest and highest max(m, m') modes, which annihilates every state that is edge-clean at depth max(m, m')\""]
+    omits: "L = 7, m, m' in 1..3 only, all 128 states"
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause is an exhaustive operator check on the whole Fock space of the chosen windows L = 6, 7, so sampled only in L. 2026-10-23 weak-checks: check_commutator_is_edge_difference now counts its cases and asserts 1088 = sum over L of (L - 1) 2^L, so 'every m on all states' is pinned"

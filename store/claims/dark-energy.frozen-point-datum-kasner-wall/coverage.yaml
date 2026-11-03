@@ -1,0 +1,18 @@
+functions:
+  check_torsion_free_pole_and_regular_datum:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "two exponent triples at Kasner points and two non-Kasner points, each at two values of tau, with a single Lambda = 6/5; the simple pole t Omega(e_i) = -p_i B_i, constant Omega_T - omega, parallel I, soldering of rank 4, Q(I) = Lambda/3 and Q(X) = 0 are exact there; the double-pole curvature and the chart-independence argument for the Kretschmann scalar belong to the other functions"
+  check_double_pole_curvature_and_residue_equations:
+    kind: sampled
+    clauses: ["(i) curvature R^{i0}, R^{ij} is a double pole", "(ii)"]
+    omits: "all 256 Riemann components of the leading Kasner term at seven runs (five distinct exponent triples plus the Milne point), with Ricci-flatness checked to hold exactly when sum p = sum p^2 = 1 at those triples; the O(Lambda tau^2) correction of the Einstein-Lambda system is not computed here"
+  check_action_densities_at_the_wall:
+    kind: sampled
+    clauses: ["(iii)", "(i) Kretschmann scalar -16 p1 p2 p3 tau^{-4} and its divergence"]
+    omits: "Gauss-Bonnet density and Kretschmann scalar at three Kasner runs, relations to Ricci terms at the non-Kasner and Milne points, the Schwarzschild value 64/27, de Sitter values (-4 Ric^2 + R^2 = 0, eps e e R = -8 Lambda); the O(Lambda tau) size of the Einstein-Cartan density is checked only as exactly zero on the Kasner term and -8 Lambda on de Sitter, and eps e e e e = 24 vol is checked only as the permutation count 4! = 24, without the volume factor"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Formal Level paragraph now counts two rational Kasner exponent triples and two non-Kasner points, as the script runs; checks unchanged."

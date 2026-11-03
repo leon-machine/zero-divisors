@@ -1,0 +1,670 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "The Standard-Model paper of the series proves that the tensor ledger of the minimal massive composite contains no lepton doublet, and declares a slot-statistics hypothesis (S) to supply one. This note asks whether the lepton can be derived inside the two-level hierarchy without it, and answers no, exactly. The ledger is the two-twistor Dirac space $\\Sp \\otimes \\Sp$ with the automorphisms acting cell by cell; a lepton needs the slot to appear once with the pair state carrying the full system, $\\C^{2} \\otimes \\Sp$ with the slot mixing acting once. That space is neither a subrepresentation of the ledger nor a consequence of the ladder theorem, proved for bare twistors, nor of the excitation theorem, which has no slot index. It is a hypothesis, here called (C), with one chirality bit left open, the slotted sector's handedness relative to the free sector; with the bit fixed by the anomalies, (C) is the one-constituent row of the slot-statistics hypothesis, weaker than it, departing from the ledger only on twistors with two or more pairs excited. Under (C) the content is $\\C^{2} \\otimes \\T' = (2,3)_{1/6} \\oplus (2,1)_{-1/2}$, the quark and lepton doublets in one chirality half, $\\C^{2} \\otimes \\T$ their duals. Two further results hold under (C) or (S) alike: in the untwisted action the constituent spectrum is self-conjugate exactly for the determinant-one group, which at the level of consistency with conjugation removes the thirteenth generator, which T12 now settles at proposition level; and the relative handedness of the two sectors is one bit, fixed by the anomalies. Every identity is verified by a deposited script.",
+  "verbatim": true,
+  "hash": "a9f9ceb83bfa"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:lepton.hyp-c-constituent",
+  "type": "postulate",
+  "claim": "lepton.hyp-c-constituent@2",
+  "title": "Hypothesis (C): the constituent hypothesis",
+  "text": "\\emph{Hypothesis (C), the constituent hypothesis.} A constituent of the composite is a Dirac state in a slot, a conformal spinor or its partner (a twistor or its dual) with any of its pairs excited: its state space is\n\\[\n\\Con := \\C^{2} \\otimes \\Sp = \\C^{2} \\otimes \\Lambda^{\\bullet}W,\n\\]\nsixteen-dimensional, with a pair $(A, B) \\in U(2) \\times U(3)$ acting as $A \\otimes \\Lambda^{\\bullet}(B)$: $A$ acts on the slot vector once, and on nothing else; $B$ acts on the Dirac state. The chirality of a constituent is that of the Dirac spinor it holds (Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations}) up to one overall sign $\\epsilon = \\pm 1$ for the slotted sector relative to the free sector: $\\epsilon = +1$ means a slot leaves the half alone, $\\epsilon = -1$ that it reverses it. (C) leaves $\\epsilon$ open; Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors} fixes $\\epsilon = -1$. Write $\\Con_{k} := \\C^{2} \\otimes \\Lambda^{k}W$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "fe143c44224a",
+  "number": 1
+ },
+ {
+  "id": "s:paper-1",
+  "type": "section",
+  "title": "Setting, and what is imported",
+  "hash": "879ee3db5e24"
+ },
+ {
+  "id": "i:paper-1",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-setting-what-imported",
+  "type": "note",
+  "claim": "note.lepton.setting-setting-what-imported@1",
+  "title": "Setting, and what is imported",
+  "text": "Everything here lives in the Standard-Model paper T12 \\cite{ButlerT12}, whose notation is used: the minimal massive hierarchy $\\C^{2} \\otimes \\C^{3}$, two twistor slots of three ladder pairs each; the automorphism group $S(U(2) \\times U(3))$ with its $U(1)$ factor written $(\\lambda^{3}a, \\lambda^{-2}b)$; the abelian weight $q$ and hypercharge $Y = q/6$; and the representation notation $(r_{2}, r_{3})_{Y}$. Six imports carry the argument.",
+  "gap": false,
+  "level": "formal",
+  "hash": "34b22b08e26d"
+ },
+ {
+  "id": "t:^>lepton.imported-twistor-state-pair-system-excitations",
+  "type": "transition",
+  "between": [
+   null,
+   "lepton.imported-twistor-state-pair-system-excitations"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-twistor-state-pair-system-excitations",
+  "type": "theorem",
+  "claim": "lepton.imported-twistor-state-pair-system-excitations@4",
+  "title": "Imported: a conformal spinor is a state of its pair system, and its excitations are the Dirac module",
+  "text": "Let $W$ be a maximal isotropic subspace of the complexified ambient space $V_{\\C}$ of the completion $\\Cl(2,4)$. The complexified ascended algebra acts irreducibly on the eight-dimensional Dirac module $\\Sp := \\Lambda^{\\bullet}W$, whose chirality halves are $\\CS = \\Lambda^{\\mathrm{even}}W$ and $\\CSm = \\Lambda^{\\mathrm{odd}}W$. Every nonzero conformal spinor (twistor) $u \\in \\CS$ is the Fock vacuum of the three fermionic ladder pairs built on its annihilator space $W_{u}$, and for any maximal isotropic complement $U'$ dual to $W_u$ the map $\\Lambda^{\\bullet}U' \\to \\Sp$, $\\xi \\mapsto c(\\xi)u$, is a linear isomorphism: every state of the module is generated from $u$ by its own pair operators, the even products landing in $\\CS$ and the odd ones in $\\CSm$. Conformal spinors are states of the pair algebra, not its operators. \\emph{Provenance:} \\cite[Thms.~3.1, 5.3]{ButlerT9}; \\cite[Fact~2.2]{ButlerT12}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Let $W$ be a maximal isotropic subspace of the complexified ambient space $V_{\\C}$ of the completion $\\Cl(2,4)$, with a dual isotropic complement $U'$. The complexified ascended algebra acts irreducibly on the eight-dimensional Dirac module $\\Sp := \\Lambda^{\\bullet}W$, whose chirality halves are $\\CS = \\Lambda^{\\mathrm{even}}W$ and $\\CSm = \\Lambda^{\\mathrm{odd}}W$. Every nonzero conformal spinor (twistor) $u \\in \\CS$ is the Fock vacuum of the three fermionic ladder pairs built on its annihilator space $W_{u}$, and the map $\\Lambda^{\\bullet}U' \\to \\Sp$, $\\xi \\mapsto c(\\xi)u$, is a linear isomorphism: every state of the module is generated from $u$ by its own pair operators, the even products landing in $\\CS$ and the odd ones in $\\CSm$. Conformal spinors are states of the pair algebra, not its operators. \\emph{Provenance:} \\cite[Thms.~3.1, 5.3]{ButlerT9} (\\claimref{correspondence.twistors-are-states-three-ladder-pairs}, \\claimref{correspondence.fock-model-complexified-ascended-algebra}); \\cite[Fact~2.2]{ButlerT12} (\\claimref{standard-model.imported-pair-systems-two-chirality-halves}).\n",
+  "hash": "fea36d14d654",
+  "number": 2
+ },
+ {
+  "id": "t:lepton.imported-twistor-state-pair-system-excitations>lepton.imported-automorphism-group-section-hypercharge-generator",
+  "type": "transition",
+  "between": [
+   "lepton.imported-twistor-state-pair-system-excitations",
+   "lepton.imported-automorphism-group-section-hypercharge-generator"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-automorphism-group-section-hypercharge-generator",
+  "type": "theorem",
+  "claim": "lepton.imported-automorphism-group-section-hypercharge-generator@3",
+  "title": "Imported: the automorphism group, its section, and the hypercharge generator",
+  "text": "The automorphisms of the hierarchy, the unitaries $A \\otimes B$ of $\\C^{2} \\otimes \\C^{3}$ with $(A, B) \\in U(2) \\times U(3)$, form $(U(2) \\times U(3))/K$ with $K = \\{(\\lambda I_{2}, \\lambda^{-1}I_{3})\\}$, and each $K$-coset contains exactly one pair with $\\det A \\cdot \\det B = 1$, so the group is $S(U(2) \\times U(3)) \\cong (SU(2) \\times SU(3) \\times U(1))/\\mathbb{Z}_{6}$, the $U(1)$ factor acting as $(\\lambda^{3}a, \\lambda^{-2}b)$. The centre of its Lie algebra is spanned by $\\mathsf{y} = (3iI_{2}, -2iI_{3})$; on an irreducible representation $\\mathsf{y}$ acts as $iq$ with $q$ the abelian weight, and hypercharge is $Y = q/6$. Irreducible representations of $S(U(2) \\times U(3))$ are determined by their $SU(2)$ content, $SU(3)$ content and weight. \\emph{Provenance:} \\cite[Thms.~4.1, 4.2, and the definition before Prop.~5.3]{ButlerT12}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The automorphisms of the hierarchy, the unitaries $A \\otimes B$ of $\\C^{2} \\otimes \\C^{3}$ with $(A, B) \\in U(2) \\times U(3)$, form $(U(2) \\times U(3))/K$ with $K = \\{(\\lambda I_{2}, \\lambda^{-1}I_{3})\\}$, and each $K$-coset contains exactly one pair with $\\det A \\cdot \\det B = 1$, so the group is $S(U(2) \\times U(3)) \\cong (SU(2) \\times SU(3) \\times U(1))/\\mathbb{Z}_{6}$, the $U(1)$ factor acting as $(\\lambda^{3}a, \\lambda^{-2}b)$. The centre of its Lie algebra is spanned by $\\mathsf{y} = (3iI_{2}, -2iI_{3})$; on an irreducible representation $\\mathsf{y}$ acts as $iq$ with $q$ the abelian weight, and hypercharge is $Y = q/6$. Irreducible representations of $S(U(2) \\times U(3))$ are determined by their $SU(2)$ content, $SU(3)$ content and weight. \\emph{Provenance:} \\cite[Thms.~4.1, 4.2, and the definition before Prop.~5.3]{ButlerT12} (\\claimref{standard-model.quarks-leptons-two-level-fermion-content}, \\claimref{standard-model.global-form-quotient-determined}, \\claimref{standard-model.gauge-algebra-minimal-massive-composite}).\n",
+  "hash": "53bb5d65702c",
+  "number": 3
+ },
+ {
+  "id": "t:lepton.imported-automorphism-group-section-hypercharge-generator>lepton.imported-tensor-ledger-contains-no-lepton",
+  "type": "transition",
+  "between": [
+   "lepton.imported-automorphism-group-section-hypercharge-generator",
+   "lepton.imported-tensor-ledger-contains-no-lepton"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-tensor-ledger-contains-no-lepton",
+  "type": "theorem",
+  "claim": "lepton.imported-tensor-ledger-contains-no-lepton@3",
+  "title": "Imported: the tensor ledger contains no lepton",
+  "text": "The tensor ledger $\\Lambda^{\\bullet}(\\C^{2} \\otimes \\C^{3})$, the Fock space generated by the six cells $e_{i} \\otimes f_{a}$ with the automorphisms acting cell by cell as $\\Lambda^{\\bullet}(A \\otimes B)$, decomposes under $SU(2) \\times SU(3)$ as $(1,1) \\oplus (2,3) \\oplus [(3,\\bar{3}) \\oplus (1,6)] \\oplus [(4,1) \\oplus (2,8)] \\oplus [(3,3) \\oplus (1,\\bar{6})] \\oplus (2,\\bar{3}) \\oplus (1,1)$, graded by cell number, which is also the abelian weight; no $(2,1)$ occurs; and the states that fill a whole row, $\\bigwedge_{a}(v \\otimes f_{a})$ for $v \\in \\C^{2}$, are cubic in $v$ and span $S^{3}\\C^{2} \\otimes \\Lambda^{3}\\C^{3} = (4,1)$, of weight $3$. \\emph{Provenance:} \\cite[Prop.~5.1 and Prop.~5.3(2)]{ButlerT12}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The tensor ledger $\\Lambda^{\\bullet}(\\C^{2} \\otimes \\C^{3})$, the Fock space generated by the six cells $e_{i} \\otimes f_{a}$ with the automorphisms acting cell by cell as $\\Lambda^{\\bullet}(A \\otimes B)$, decomposes under $SU(2) \\times SU(3)$ as $(1,1) \\oplus (2,3) \\oplus [(3,\\bar{3}) \\oplus (1,6)] \\oplus [(4,1) \\oplus (2,8)] \\oplus [(3,3) \\oplus (1,\\bar{6})] \\oplus (2,\\bar{3}) \\oplus (1,1)$, graded by cell number, which is also the abelian weight; no $(2,1)$ occurs; and the states that fill a whole row, $\\bigwedge_{a}(v \\otimes f_{a})$ for $v \\in \\C^{2}$, are cubic in $v$ and span $S^{3}\\C^{2} \\otimes \\Lambda^{3}\\C^{3} = (4,1)$, of weight $3$. \\emph{Provenance:} \\cite[Prop.~5.1 and Prop.~5.3(2)]{ButlerT12} (\\claimref{standard-model.quarks-leptons-two-level-fermion-content}, \\claimref{standard-model.raw-representation-content-state-space}).\n",
+  "hash": "dee188648f15",
+  "number": 4
+ },
+ {
+  "id": "t:lepton.imported-tensor-ledger-contains-no-lepton>lepton.imported-free-sector-anomaly-conditions-external",
+  "type": "transition",
+  "between": [
+   "lepton.imported-tensor-ledger-contains-no-lepton",
+   "lepton.imported-free-sector-anomaly-conditions-external"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-free-sector-anomaly-conditions-external",
+  "type": "fact",
+  "claim": "lepton.imported-free-sector-anomaly-conditions-external@1",
+  "title": "Imported: the free sector and the anomaly conditions (external ingredients)",
+  "text": "The results from outside the series on which \\claimref{lepton.imported-free-sector-anomaly-conditions} draws, as cited there: S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4",
+  "hash": "bb6ea24ee370",
+  "number": 5
+ },
+ {
+  "id": "t:lepton.imported-free-sector-anomaly-conditions-external>lepton.imported-free-sector-anomaly-conditions",
+  "type": "transition",
+  "between": [
+   "lepton.imported-free-sector-anomaly-conditions-external",
+   "lepton.imported-free-sector-anomaly-conditions"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-free-sector-anomaly-conditions",
+  "type": "theorem",
+  "claim": "lepton.imported-free-sector-anomaly-conditions@4",
+  "title": "Imported: the free sector and the anomaly conditions",
+  "text": "The sector of a single conformal spinor (the single-twistor sector; massless, free) is $\\Sp = \\Lambda^{\\bullet}W$ with the pair-slot factor acting as $\\Lambda^{\\bullet}(\\lambda^{-2}b)$: its grade-$k$ states transform as $\\Lambda^{k}\\C^{3} = 1, 3, \\bar{3}, 1$ with weight $-2k$, that is $(1)_{0}, (3)_{-1/3}, (\\bar{3})_{-2/3}, (1)_{-1}$. For a gauge group with a $U(1)$ factor acting on Weyl fermions listed in one handedness, the four anomaly-cancellation conditions are those of \\cite[Fact~2.7]{ButlerT12}; a fermion of the opposite handedness enters as its conjugate, with the conjugate representation and the opposite hypercharge. \\emph{Provenance:} \\cite[Prop.~5.3(3), Fact~2.7]{ButlerT12}; \\cite[\\S 22.4]{WeinbergQFT1}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The sector of a single conformal spinor (massless, free) is $\\Sp = \\Lambda^{\\bullet}W$ with the pair-slot factor acting as $\\Lambda^{\\bullet}(\\lambda^{-2}b)$: its grade-$k$ states transform as $\\Lambda^{k}\\C^{3} = 1, 3, \\bar{3}, 1$ with weight $-2k$, that is $(1)_{0}, (3)_{-1/3}, (\\bar{3})_{-2/3}, (1)_{-1}$. For a gauge group with a $U(1)$ factor acting on Weyl fermions listed in one handedness, the four anomaly-cancellation conditions are those of \\cite[Fact~2.7]{ButlerT12} (\\claimref{standard-model.imported-anomaly-coefficients}); a fermion of the opposite handedness enters as its conjugate, with the conjugate representation and the opposite hypercharge. \\emph{Provenance:} \\cite[Prop.~5.3(3), Fact~2.7]{ButlerT12} (\\claimref{standard-model.quarks-leptons-two-level-fermion-content}); \\cite[\\S 22.4]{WeinbergQFT1}.\n\nThis restates \\claimref{lepton.imported-free-sector-anomaly-conditions-external}.\n",
+  "hash": "83d5bffdd098",
+  "number": 6
+ },
+ {
+  "id": "t:lepton.imported-free-sector-anomaly-conditions>lepton.imported-duality-pair-system-external",
+  "type": "transition",
+  "between": [
+   "lepton.imported-free-sector-anomaly-conditions",
+   "lepton.imported-duality-pair-system-external"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-duality-pair-system-external",
+  "type": "fact",
+  "claim": "lepton.imported-duality-pair-system-external@1",
+  "title": "Imported: duality in the pair system (external ingredients)",
+  "text": "The results from outside the series on which \\claimref{lepton.imported-duality-pair-system} draws, as cited there: W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., \\S 6.1, \\S 15.3.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., \\S 6.1, \\S 15.3",
+  "hash": "c64bb8b180cc",
+  "number": 7
+ },
+ {
+  "id": "t:lepton.imported-duality-pair-system-external>lepton.imported-duality-pair-system",
+  "type": "transition",
+  "between": [
+   "lepton.imported-duality-pair-system-external",
+   "lepton.imported-duality-pair-system"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.imported-duality-pair-system",
+  "type": "theorem",
+  "claim": "lepton.imported-duality-pair-system@3",
+  "title": "Imported: duality in the pair system",
+  "text": "As $U(3)$-modules, $(\\Lambda^{k}W)^{*} \\cong \\Lambda^{3-k}W \\otimes \\det{}^{-1}$; as a $U(2)$-module, $(\\C^{2})^{*} \\cong \\C^{2} \\otimes \\det{}^{-1}$. \\emph{Provenance:} \\cite[Fact~2.6]{ButlerT12}; \\cite[\\S 6.1, \\S 15.3]{FultonHarris1991}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "As $U(3)$-modules, $(\\Lambda^{k}W)^{*} \\cong \\Lambda^{3-k}W \\otimes \\det{}^{-1}$; as a $U(2)$-module, $(\\C^{2})^{*} \\cong \\C^{2} \\otimes \\det{}^{-1}$. \\emph{Provenance:} \\cite[Fact~2.6]{ButlerT12} (\\claimref{standard-model.imported-cauchy-decomposition-exterior-power}); \\cite[\\S 6.1, \\S 15.3]{FultonHarris1991}.\n\nThis restates \\claimref{lepton.imported-duality-pair-system-external}.\n",
+  "hash": "046163fa1ea3",
+  "number": 8
+ },
+ {
+  "id": "s:paper-2",
+  "type": "section",
+  "title": "The constituent space: the hypothesis that holds a lepton, and where it leaves the ledger",
+  "hash": "8bd8229ad618"
+ },
+ {
+  "id": "i:paper-2",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-constituent-space-hypothesis-holds-lepton",
+  "type": "note",
+  "claim": "note.lepton.setting-constituent-space-hypothesis-holds-lepton@1",
+  "title": "The constituent space: the hypothesis that holds a lepton, and where it leaves the ledger",
+  "text": "The tensor ledger of Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton} treats the six cells as independent fermionic modes: a state is an occupation pattern of cells, and a mixing of slots acts on each occupied cell separately. It is worth saying what this ledger is in the language of Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations}: $\\Lambda^{\\bullet}(\\C^{2} \\otimes W) = \\Lambda^{\\bullet}(W_{1} \\oplus W_{2}) \\cong \\Sp_{1} \\otimes \\Sp_{2}$, the tensor product of the Dirac modules of the two twistors, each twistor excited by its own pair operators. Read on two twistors, Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations} produces the ledger, not something else. A lepton doublet, $(2,1)$ of weight $-3$, needs a space in which the slot vector appears once and the pair state carries the full system; the ledger has no such space (Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton}), and the natural candidate, $\\C^{2} \\otimes \\Sp$ with the slot mixing acting on the slot alone, is not produced by the two theorems one would like to produce it. Fact \\claimref{standard-model.internal-symmetry-ladder} is proved for bare twistors, from their spinor parts, and says nothing about how a mixing acts on an excited twistor; Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations} concerns one twistor and carries no slot index. The step between them is a premise, and the note states it as one.\n\n\\begin{quote}\n\\emph{Hypothesis (C), the constituent hypothesis.} A constituent of the composite is a Dirac state in a slot, a twistor or its partner with any of its pairs excited: its state space is\n\\[\n\\Con := \\C^{2} \\otimes \\Sp = \\C^{2} \\otimes \\Lambda^{\\bullet}W,\n\\]\nsixteen-dimensional, with a pair $(A, B) \\in U(2) \\times U(3)$ acting as $A \\otimes \\Lambda^{\\bullet}(B)$: $A$ acts on the slot vector once, and on nothing else; $B$ acts on the Dirac state. The chirality of a constituent is that of the Dirac spinor it holds (Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations}) up to one overall sign $\\epsilon = \\pm 1$ for the slotted sector relative to the free sector: $\\epsilon = +1$ means a slot leaves the half alone, $\\epsilon = -1$ that it reverses it. (C) leaves $\\epsilon$ open; Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors} fixes $\\epsilon = -1$. Write $\\Con_{k} := \\C^{2} \\otimes \\Lambda^{k}W$.\n\\end{quote}\n\nHypothesis (C) with $\\epsilon = -1$ is the one-constituent row $j = 1$ of T12's Hypothesis (S), the five-mode Fock space $\\Lambda^{\\bullet}(\\C^{2} \\oplus W)$: there the $(1, k)$ component is $\\C^{2} \\otimes \\Lambda^{k}W$ with exactly this action, and (S)'s chirality, the parity of $j + k$, is on that row the parity of $1 + k$, the reversed half, which is $\\epsilon = -1$. With $\\epsilon = +1$ the two would contradict each other on the chirality clause, which is why the bit is left open in (C) and fixed by an argument rather than stipulated. So fixed, (C) is weaker than (S) in the plain sense that (S) implies it: (C) says nothing about states with two slot modes, nothing about the statistics of pairs of constituents, and nothing about a composite state space at all. The note claims no minimality for (C) over any class of hypotheses; what it shows is that (C) is enough for the lepton (Proposition \\claimref{lepton.content-constituent-space}) and exactly where any space holding one must depart from the ledger (Proposition \\claimref{lepton.unit-action-cell-action}).\n\nThe automorphism group of Fact \\claimref{lepton.imported-automorphism-group-section-hypercharge-generator} acts on $\\Con$ through its canonical section: an automorphism is a $K$-coset of pairs, the coset's representative with $\\det A \\cdot \\det B = 1$ is unique, and that representative acts as $A \\otimes \\Lambda^{\\bullet}(B)$. the section ``The group on the constituents, and the one remaining choice'' shows that among the actions of the automorphism group on $\\Con$ this is the only one compatible with conjugation.",
+  "gap": false,
+  "level": "formal",
+  "hash": "977c8b79b406"
+ },
+ {
+  "id": "t:lepton.imported-duality-pair-system>lepton.content-constituent-space",
+  "type": "transition",
+  "between": [
+   "lepton.imported-duality-pair-system",
+   "lepton.content-constituent-space"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.content-constituent-space",
+  "type": "theorem",
+  "claim": "lepton.content-constituent-space@4",
+  "title": "The content of the constituent space",
+  "text": "Assume Hypothesis (C), and let $S(U(2) \\times U(3))$ act through its canonical section. Then:\n\\begin{enumerate}\n\\item $\\Con_{k}$ transforms as $(2, \\Lambda^{k}\\C^{3})$ with abelian weight $q = 3 - 2k$, so\n\\[\n\\Con_{0} = (2,1)_{1/2}, \\qquad \\Con_{1} = (2,3)_{1/6}, \\qquad \\Con_{2} = (2,\\bar{3})_{-1/6}, \\qquad \\Con_{3} = (2,1)_{-1/2}.\n\\]\n\\item The odd half is one generation's doublets, in the same chirality half, writing $\\CS = \\Lambda^{\\mathrm{even}}W$ for the conformal spinor space and $\\CSm{} = \\Lambda^{\\mathrm{odd}}W$ for its partner (twistor and dual twistor space):\n\\[\n\\C^{2} \\otimes \\CSm{} \\;=\\; \\Con_{1} \\oplus \\Con_{3} \\;=\\; (2,3)_{1/6} \\oplus (2,1)_{-1/2} \\;=\\; Q \\oplus L.\n\\]\nThe lepton doublet is a slot holding the full pair system; the quark doublet is a slot holding one excited pair; and they lie in the same chirality half because one and three are both odd, whichever sign $\\epsilon$ takes.\n\\item The even half is the dual of the odd half, constituent by constituent: $\\Con_{k}^{*} \\cong \\Con_{3-k}$, so $\\C^{2} \\otimes \\CS = \\Con_{0} \\oplus \\Con_{2} = L^{*} \\oplus Q^{*}$, the antiparticles, in the opposite chirality half. A slot holding a bare conformal spinor, the Fock vacuum $u$ itself, is the antilepton.\n\\item The lattice condition $2t + 3\\delta + q \\equiv 0 \\pmod 6$ of \\cite[Thm.~4.2(ii)]{ButlerT12} holds on every $\\Con_{k}$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(1) The representative $(\\lambda^{3}a, \\lambda^{-2}b)$ acts on $v \\otimes \\omega \\in \\C^{2} \\otimes \\Lambda^{k}W$ as $\\lambda^{3}av \\otimes \\lambda^{-2k}\\Lambda^{k}(b)\\omega$: the $SU(2) \\times SU(3)$ content is $(2, \\Lambda^{k}\\C^{3})$, which is $(2,1), (2,3), (2,\\bar{3}), (2,1)$ for $k = 0, 1, 2, 3$ (Fact \\claimref{lepton.imported-duality-pair-system} for $\\Lambda^{2}\\C^{3} \\cong \\bar{3}$), and the weight is $3 - 2k$. (2) is (1) read at $k = 1, 3$, with the chirality clause of Hypothesis (C) (\\claimref{lepton.hyp-c-constituent}). (3) By Fact \\claimref{lepton.imported-duality-pair-system}, $\\Con_{k}^{*} = (\\C^{2})^{*} \\otimes (\\Lambda^{k}W)^{*} \\cong \\C^{2} \\otimes \\det(A)^{-1} \\otimes \\Lambda^{3-k}W \\otimes \\det(B)^{-1}$, and on the section $\\det A \\cdot \\det B = 1$, so this is $\\C^{2} \\otimes \\Lambda^{3-k}W = \\Con_{3-k}$; the weights confirm it, $-(3 - 2k) = 3 - 2(3-k)$, and irreducibles are determined by content and weight (Fact \\claimref{lepton.imported-automorphism-group-section-hypercharge-generator}). Parity flips because $k$ and $3 - k$ have opposite parity. (4) With $\\delta = 1$ on every $\\Con_{k}$ and $t = 0, 1, -1, 0$ for $k = 0, 1, 2, 3$: $3 + 3 = 6$, $2 + 3 + 1 = 6$, $-2 + 3 - 1 = 0$, $3 - 3 = 0$. The script builds $\\mathsf{y}$ on each $\\Con_{k}$ and reads off the weights, and checks the residues.\n",
+  "hash": "0671a3ac15c9",
+  "number": 9
+ },
+ {
+  "id": "c:note.lepton.what-was-assumed",
+  "type": "note",
+  "claim": "note.lepton.what-was-assumed@2",
+  "title": "What was assumed",
+  "text": "Everything in Proposition \\claimref{lepton.content-constituent-space} rests on (C), and (C) is not a theorem. What makes it plausible is Fact \\claimref{standard-model.internal-symmetry-ladder}'s form, $Z^{i} \\mapsto U^{i}{}_{j}Z^{j}$, which on bare conformal spinors (bare twistors) is the action of $A$ on a slot vector once; (C) extends that form to excited conformal spinors, and the extension is the premise. Nothing in (C) makes a slot a fermionic mode, and in $\\Con$ every pair belongs to the conformal spinor in the slot; so (C) does not pay the second cost T12 lists for (S), a composite state space that does not record which pairs belong to which slot. It pays nothing for the composite because it says nothing about the composite.",
+  "gap": false,
+  "level": "formal",
+  "hash": "71e9e0f00038"
+ },
+ {
+  "id": "c:note.lepton.setting-constituent-space-hypothesis-holds-lepton-2",
+  "type": "note",
+  "claim": "note.lepton.setting-constituent-space-hypothesis-holds-lepton-2@1",
+  "title": "The constituent space: the hypothesis that holds a lepton, and where it leaves the ledger",
+  "text": "The relation between $\\Con$ and the tensor ledger is exact, and it is the precise sense in which the ledger has no lepton and (C) departs from it at one point only. It is also the independence witness for (C): the ledger is a structure satisfying Facts \\claimref{standard-model.internal-symmetry-ladder} and \\claimref{lepton.imported-twistor-state-pair-system-excitations} in which the slot mixing acts cell by cell, so (C) is not a consequence of those Facts.",
+  "gap": false,
+  "level": "formal",
+  "hash": "40c01100ca1b"
+ },
+ {
+  "id": "t:lepton.content-constituent-space>lepton.unit-action-cell-action",
+  "type": "transition",
+  "between": [
+   "lepton.content-constituent-space",
+   "lepton.unit-action-cell-action"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.unit-action-cell-action",
+  "type": "theorem",
+  "claim": "lepton.unit-action-cell-action@3",
+  "title": "The unit action and the cell action",
+  "text": "Let $R_{k} \\subset \\Lambda^{k}(\\C^{2} \\otimes \\C^{3})$ be the span of the single-row $k$-pair states $\\bigwedge_{a \\in S}(e_{i} \\otimes f_{a})$, $i \\in \\{0, 1\\}$, $S \\subset \\{1,2,3\\}$ with $|S| = k$, and identify $R_{k}$ with $\\Con_{k}$ by $\\bigwedge_{a \\in S}(e_{i} \\otimes f_{a}) \\mapsto e_{i} \\otimes f_{S}$. Then:\n\\begin{enumerate}\n\\item For $k = 1$ the identification is an isomorphism of $U(2) \\times U(3)$-representations: the cell action $A \\otimes B$ on the cells and the unit action on $\\Con_{1}$ coincide. The pair-level generators of T12 are the one-pair constituents.\n\\item For $k = 2, 3$ the cell action does not preserve $R_{k}$: the $U(2) \\times U(3)$-span of $R_{k}$ under the cell action is $S^{k}\\C^{2} \\otimes \\Lambda^{k}\\C^{3}$, of dimension $(k+1)\\binom{3}{k}$, that is $(3,\\bar{3})$ at $k = 2$ and $(4,1)$ at $k = 3$, with abelian weight $k$; under the unit action $\\Con_{k} = (2, \\Lambda^{k}\\C^{3})$ has dimension $2\\binom{3}{k}$ and weight $3 - 2k$. The same basis states, the filled rows among them, carry different representations under the two actions.\n\\item Consequently the constituent space is not a subrepresentation of the tensor ledger, and the tensor ledger is the Fock space of the pairs, the multi-pair states of the composite counted cell by cell; it is not the space of the composite's constituents.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(1) Both actions send $e_{i} \\otimes f_{a}$ to $Ae_{i} \\otimes Bf_{a}$. (2) Under the cell action a mixing $A$ sends $\\bigwedge_{a \\in S}(e_{i} \\otimes f_{a})$ to $\\bigwedge_{a \\in S}(Ae_{i} \\otimes f_{a})$, which is the image of $(Ae_{i})^{\\otimes k} \\otimes f_{S}$ under the projection $(\\C^{2})^{\\otimes k} \\otimes \\Lambda^{k}\\C^{3} \\to \\Lambda^{k}(\\C^{2} \\otimes \\C^{3})$; as $Ae_{i}$ ranges over $\\C^{2}$ the tensors $v^{\\otimes k}$ span $S^{k}\\C^{2}$, so the span is $S^{k}\\C^{2} \\otimes \\Lambda^{k}\\C^{3}$, of dimension $(k+1)\\binom{3}{k}$, which is $9$ at $k = 2$ and $4$ at $k = 3$, exceeding $\\dim R_{k} = 2\\binom{3}{k}$ ($6$ and $2$) so $R_{k}$ is not preserved. Its $SU(2) \\times SU(3)$ content is $(k+1, \\Lambda^{k}\\C^{3})$, that is $(3,\\bar{3})$ and $(4,1)$, the representations Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton} lists in degrees two and three; and the weight is $k$, one per cell. Under the unit action $A$ acts once on the slot vector, so the span is $\\C^{2} \\otimes \\Lambda^{k}W = \\Con_{k}$ with the weight of Proposition \\claimref{lepton.content-constituent-space}. The script confirms the ranks: the $SU(2)$-orbit of a fixed pair subset $S$ under the cell action has rank $k + 1$ ($2, 3, 4$ for $k = 1, 2, 3$) and under the unit action rank $2$. (3) A subrepresentation would have to be preserved by the cell action; by (2) $R_{2}$ and $R_{3}$ are not, and by Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton} the ledger contains no $(2,1)$ at all. The reading of the ledger as the Fock space of pairs is the definition of the ledger, and is what Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations} gives on two conformal spinors; what (2) adds is the exact point at which (C) departs from it: on a conformal spinor with two or more pairs excited, the ledger lets a mixing of slots act on each pair separately, and (C) lets it act on the spinor once. Fact \\claimref{standard-model.internal-symmetry-ladder} is silent on excited conformal spinors, so it decides neither way; that is why (C) is a hypothesis.\n",
+  "hash": "e6b2cc934562",
+  "number": 10
+ },
+ {
+  "id": "c:note.lepton.operator-route-why-it-not-one",
+  "type": "note",
+  "claim": "note.lepton.operator-route-why-it-not-one@1",
+  "title": "The operator route, and why it is not one",
+  "text": "The ledger's states contain no $(2,1)$, but its operators do: $\\operatorname{Hom}(\\Lambda^{4}, \\Lambda^{1}) = \\Lambda^{1} \\otimes (\\Lambda^{4})^{*} \\supseteq (2,3) \\otimes (3,\\bar{3})$, and $2 \\otimes 3 = 2 \\oplus 4$, $3 \\otimes \\bar{3} = 1 \\oplus 8$ \\cite[\\S 11.2, \\S 13.2]{FultonHarris1991}, so a $(2,1)$ of weight $1 - 4 = -3$ sits among the operators that annihilate four cells and create one; likewise in $\\operatorname{Hom}(\\Lambda^{5}, \\Lambda^{2})$. One might hope to read T12's premise that elementary fermions are generators, not states, as admitting such an operator as the lepton. The note has no argument that closes this route, and does not claim one: what it observes is that the operator is a composite of five cell operators, that $\\operatorname{End}(\\Lambda^{\\bullet})$, of dimension $64^{2}$, contains a great many representations of the group, and that the note knows no principle that would select this one among them and call it elementary. The route inside the ledger is closed at the level of states by Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton}; at the level of operators it is not closed but unresolved, for want of a selection principle, and the script records the representation-theoretic fact that the $(2,1)_{-1/2}$ is there.",
+  "gap": false,
+  "level": "formal",
+  "hash": "07f1d67823a7"
+ },
+ {
+  "id": "s:paper-3",
+  "type": "section",
+  "title": "The group on the constituents, and the one remaining choice",
+  "hash": "e81a1f49e99a"
+ },
+ {
+  "id": "i:paper-3",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-group-constituents-one-remaining-choice",
+  "type": "note",
+  "claim": "note.lepton.setting-group-constituents-one-remaining-choice@1",
+  "title": "The group on the constituents, and the one remaining choice",
+  "text": "Hypothesis (C) lets all of $U(2) \\times U(3)$ act on $\\Con$, and $K$ acts nontrivially: $(\\lambda I_{2}, \\lambda^{-1}I_{3})$ acts on $\\Con_{k}$ by $\\lambda \\cdot \\lambda^{-k} = \\lambda^{1-k}$. So the thirteen-dimensional group acts faithfully on the constituents, as it did on the five-mode ledger of T12's Hypothesis (S), and the question of a thirteenth generator returns. It is answered by conjugation.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8186f26d3999"
+ },
+ {
+  "id": "t:lepton.unit-action-cell-action>lepton.self-conjugacy-forces-determinant-one-group",
+  "type": "transition",
+  "between": [
+   "lepton.unit-action-cell-action",
+   "lepton.self-conjugacy-forces-determinant-one-group"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.self-conjugacy-forces-determinant-one-group",
+  "type": "theorem",
+  "claim": "lepton.self-conjugacy-forces-determinant-one-group@4",
+  "title": "Self-conjugacy forces the determinant-one group",
+  "text": "As a representation of $U(2) \\times U(3)$, $\\Con$ is not self-dual: $\\Con_{k}^{*} \\cong \\Con_{3-k} \\otimes (\\det A \\cdot \\det B)^{-1}$, and no $\\Con_{j}$ is isomorphic to $\\Con_{k}^{*}$, since the $K$-weights $1 - j$ and $-(1 - k)$ never agree for $j, k \\in \\{0, 1, 2, 3\\}$ with matching content. As a representation of a subgroup $G \\subseteq U(2) \\times U(3)$ containing $SU(2) \\times SU(3)$, $\\Con$ is self-dual if and only if $\\det A \\cdot \\det B = 1$ on $G$, that is $G \\subseteq S(U(2) \\times U(3))$. In particular the largest subgroup of $U(2) \\times U(3)$ under which the constituent spectrum is closed under conjugation is exactly the automorphism group of the hierarchy, $S(U(2) \\times U(3))$, twelve-dimensional. All of this is for the untwisted action, the one in which the first display holds: if every component is twisted by $t = (\\det A \\cdot \\det B)^{-1/2}$, then $(\\Con_{k} \\otimes t)^{*} \\cong \\Con_{3-k} \\otimes t$, the twisted spectrum is closed under conjugation for the whole group (on the double cover on which $t$ is a character), and the conclusion does not hold there (Observation \\claimref{lepton.what-self-conjugacy-says-about-thirteenth}).",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The first isomorphism is Fact \\claimref{lepton.imported-duality-pair-system} as in the proof of Proposition \\claimref{lepton.content-constituent-space}(3), without setting the determinants to one. For the non-isomorphism, compare $K$-weights, $K$ the kernel of \\claimref{lepton.imported-automorphism-group-section-hypercharge-generator}: $\\Con_{j}$ has $K$-weight $1 - j$ and $\\Con_{k}^{*}$ has $-(1 - k) = k - 1$; equality needs $j + k = 2$, so $(j, k) \\in \\{(0,2), (1,1), (2,0)\\}$, but the $SU(3)$ contents of $\\Con_{0}, \\Con_{1}, \\Con_{2}$ are $1, 3, \\bar{3}$ and those of $\\Con_{2}^{*}, \\Con_{1}^{*}, \\Con_{0}^{*}$ are $3, \\bar{3}, 1$, which never match. If $\\det A \\cdot \\det B = 1$ on $G$ the twist is trivial and $\\Con_{k}^{*} \\cong \\Con_{3-k}$; if not, some $(A, B) \\in G$ has $\\det A \\cdot \\det B = \\mu \\neq 1$, and then $\\Con_{1}^{*} \\cong \\Con_{2} \\otimes \\mu^{-1}$, whose $SU(3)$ content $\\bar{3}$ is matched by $\\Con_{2}$ alone among the $\\Con_{j}$, is not isomorphic to $\\Con_{2}$ (they differ on that element), so $\\Con$ is not self-dual. (The case $k = 0$ would not do: $\\Con_{0}$ and $\\Con_{3}$ share the content $(2,1)$, and for $G = SU(2) \\times U(3)$ one has $\\Con_{0}^{*} \\cong \\C^{2} \\otimes (\\det A)^{-1} = \\Con_{0}$, so the dual of $\\Con_{0}$ is present there although $\\Con$ as a whole is not self-dual; $k = 1$ or $k = 2$, whose $SU(3)$ contents are matched by one constituent each, decide.) Since $G \\supseteq SU(2) \\times SU(3)$, the condition $\\det A \\cdot \\det B = 1$ on $G$ is the condition $G \\subseteq S(U(2) \\times U(3))$. The script checks the $K$-weights and the dual weights, and tests the biconditional on five subgroups $G$, through the lattice of central characters trivial on $G$, including the one on which the $k = 0$ test alone would fail to decide.\n",
+  "hash": "28e0f7d8330a",
+  "number": 11
+ },
+ {
+  "id": "t:lepton.self-conjugacy-forces-determinant-one-group>lepton.what-self-conjugacy-says-about-thirteenth",
+  "type": "transition",
+  "between": [
+   "lepton.self-conjugacy-forces-determinant-one-group",
+   "lepton.what-self-conjugacy-says-about-thirteenth"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.what-self-conjugacy-says-about-thirteenth",
+  "type": "conjecture",
+  "claim": "lepton.what-self-conjugacy-says-about-thirteenth@3",
+  "title": "What self-conjugacy says about the thirteenth generator",
+  "text": "A gauge symmetry of a theory with antiparticles must map the spectrum to itself and commute with conjugation: the conjugate of a state in the spectrum is in the spectrum, with the conjugate quantum numbers. The premise, printed: that $\\Con$ is the whole constituent state space and is already closed under conjugation, the constituents' antiparticles being constituents; the observed one-handed content of the Standard Model is a complex representation, and the requirement applies to its CPT completion, so the premise is that $\\Con$ is that completion. Under $U(2) \\times U(3)$ the constituent spectrum $\\Con$ fails self-conjugacy (Proposition \\claimref{lepton.self-conjugacy-forces-determinant-one-group}): the conjugate of a bare conformal spinor (twistor) in a slot, $\\Con_{0}^{*}$, is not a constituent, and the full conformal spinor $\\Con_{3}$, which has the conjugate content, carries the wrong $K$-charge. So on that premise $K$ is not a symmetry of the constituents, and the group acting on them is $S(U(2) \\times U(3))$, the same group Fact \\claimref{lepton.imported-automorphism-group-section-hypercharge-generator} derives from the cells, on which $K$ is trivial. The two agree, and the canonical section of the section ``The constituent space: the hypothesis that holds a lepton, and where it leaves the ledger'' is the only action of the automorphism group on $\\Con$ compatible with conjugation. The same argument applies to the five-mode ledger $\\Lambda^{\\bullet}(\\C^{2} \\oplus W)$ of T12's Hypothesis (S) in its untwisted action, whose $(j,k)$ component has $K$-weight $j - k$: its dual is the $(2-j, 3-k)$ component twisted by $(\\det A \\cdot \\det B)^{-1}$, so self-conjugacy forces the determinant-one group there too. T12 now shows that the state space carries the action twisted by $(\\det A \\cdot \\det B)^{-1/2}$, in which the $(j,k)$ component has central character $\\alpha^{j-1}\\beta^{k-3/2}$ on $(\\alpha I_{2}, \\beta I_{3})$ and the dual of every component is again a component, so there self-conjugacy does not exclude the thirteenth generator: it is the $U(1)_{X}$ of $\\mathrm{Spin}(10)$, anomaly-free and broken at the intermediate scale by the Majorana term of $\\nu^{c}$ \\cite[Prop.~5.8(3), Prop.~10.7]{ButlerT12}. Either way it is not a cost of (S). Two limits, stated. This is a statement about consistency with conjugation, at the level of the CPT theorem it invokes and of the premise just printed, and is recorded as an Observation for that reason; T12 reaches the untwisted half of this at proposition level, without that premise, from the anomaly conditions: in the untwisted action every abelian generator in the span of the two mode numbers other than hypercharge fails three of the four conditions over the derived generation \\cite[Prop.~5.8(3)(a)]{ButlerT12}. Self-conjugacy also singles out the canonical section among the actions of $S(U(2) \\times U(3))$ on $\\C^{2} \\otimes \\Sp$ that differ from it by a character: twisting the section by $(\\det A)^{m}$, $m \\in \\mathbb{Z}$, shifts every weight by $6m$ (on the section $\\det A = \\lambda^{6}$) and every hypercharge by $m$, giving $Y_{L} = -\\tfrac12 + m$; but the twisted space is self-dual only if $\\Con \\cong \\Con \\otimes (\\det A)^{-2m}$, and $\\det A$ is onto $U(1)$ on the section, so only $m = 0$ survives, as the weight multiset $\\{3, 1, -1, -3\\}$ shifted by $6m$ is closed under negation only at $m = 0$. The agreement $Y_{Q} = \\tfrac16$ with the ledger's one-cell states (Proposition \\claimref{lepton.unit-action-cell-action}(1)) is then a check, not the argument. The script checks the twisted values $Y_{L} = -\\tfrac52, \\tfrac32$ at $m = \\mp 2$ and the closure of the shifted multiset under negation for $m \\in [-3, 3]$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "2d00a9b42e54",
+  "number": 12
+ },
+ {
+  "id": "c:note.lepton.setting-group-constituents-one-remaining-choice-2",
+  "type": "note",
+  "claim": "note.lepton.setting-group-constituents-one-remaining-choice-2@1",
+  "title": "The group on the constituents, and the one remaining choice",
+  "text": "What remains is one binary choice. The doublets are the $\\T'$ constituents; the free sector $\\Sp$ of Fact \\claimref{lepton.imported-free-sector-anomaly-conditions} has its own halves; and the anomaly conditions require every fermion to be listed in one handedness. Which half of the free sector is listed with the $\\T'$ half of the slot sector is not decided by Hypothesis (C).",
+  "gap": false,
+  "level": "formal",
+  "hash": "5e8a516b315d"
+ },
+ {
+  "id": "t:lepton.what-self-conjugacy-says-about-thirteenth>lepton.relative-handedness-slotted-free-sectors",
+  "type": "transition",
+  "between": [
+   "lepton.what-self-conjugacy-says-about-thirteenth",
+   "lepton.relative-handedness-slotted-free-sectors"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:lepton.relative-handedness-slotted-free-sectors",
+  "type": "theorem",
+  "claim": "lepton.relative-handedness-slotted-free-sectors@4",
+  "title": "The relative handedness of the slotted and the free sectors",
+  "text": "Assume (C), and list the doublets $Q = \\Con_{1}$ and $L = \\Con_{3}$ as particles of one handedness. (The arithmetic is that of \\cite[Thm.~5.5(3), last clause]{ButlerT12}, with the signs of the two nonzero sums reversed, since T12 conjugates the doublets and this note conjugates the free sector, so the lists are overall conjugates; what is new is only its reading under (C).) There are two ways to list the free sector $\\Sp = \\Lambda^{\\bullet}W$ with them.\n\\begin{enumerate}\n\\item If the $\\CS$ half of the free sector (grades $0$ and $2$) is listed with the $\\CSm{}$ half of the slot sector, where $\\CS = \\Lambda^{\\mathrm{even}}W$ is the conformal spinor space and $\\CSm{} = \\Lambda^{\\mathrm{odd}}W$ its partner (twistor and dual twistor space), the two chirality halves of $\\Sp$, the list is $Q, L, (1)_{0}, (\\bar{3})_{-2/3}$, and the conjugates of the free $\\CSm{}$ half, $(\\bar{3})_{+1/3}$ and $(1)_{+1}$: that is $Q, L, \\nu^{c}, u^{c}, d^{c}, e^{c}$, one Standard Model generation with a right-handed neutrino, and all four anomaly conditions vanish.\n\\item If the $\\CSm{}$ half of the free sector is listed with the slot sector's, the list is $Q, L, (3)_{-1/3}, (1)_{-1}$ and the conjugates $(1)_{0}, (3)_{+2/3}$, and the $[SU(3)]^{2}U(1)$ and cubic conditions read $+\\tfrac23$ and $-\\tfrac49$.\n\\end{enumerate}\nSo the consistency of gauging fixes the relative handedness, the bit $\\epsilon$ of Hypothesis (C): the chirality half of a free conformal spinor that is listed with the constituents' $\\CSm{}$ is $\\CS$, that is, $\\epsilon = -1$, a slot reverses the half. Equivalently, in physical terms, the free-sector fields are $\\nu^{c}$ and $u^{c}$ from $\\CS$ and $d_{R}$ and $e_{R}$ from $\\CSm{}$, four Weyl fields of the observed charges with no conjugation applied to any of them, and a bare free conformal spinor is the neutrino singlet while a bare conformal spinor in a slot is the antilepton.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(1) The four sums of Fact \\claimref{lepton.imported-free-sector-anomaly-conditions} on the hypercharges (those of $Q$ and $L$ from \\claimref{lepton.content-constituent-space}) $(Y_{Q}, Y_{u^{c}}, Y_{d^{c}}, Y_{L}, Y_{e^{c}}, Y_{\\nu^{c}})$, which are\n\\[\n(\\tfrac16,\\; -\\tfrac23,\\; \\tfrac13,\\; -\\tfrac12,\\; 1,\\; 0):\n\\] $[SU(3)]^{2}U(1) = \\tfrac13 - \\tfrac23 + \\tfrac13 = 0$; $[SU(2)]^{2}U(1) = \\tfrac12 - \\tfrac12 = 0$; gravitational $1 - 2 + 1 - 1 + 1 + 0 = 0$; cubic $\\tfrac{1}{36} - \\tfrac89 + \\tfrac19 - \\tfrac14 + 1 + 0 = 0$. (2) With the free $\\CSm{}$ states $(3)_{-1/3}$, $(1)_{-1}$ listed unconjugated and the $\\CS$ states conjugated to $(1)_{0}$, $(3)_{+2/3}$: $[SU(3)]^{2}U(1) = 2 \\cdot \\tfrac16 - \\tfrac13 + \\tfrac23 = \\tfrac23$; $[SU(2)]^{2}U(1) = 0$ (the doublets are unchanged); gravitational $1 - 1 - 1 + 2 - 1 + 0 = 0$; cubic $\\tfrac{1}{36} - \\tfrac14 - \\tfrac19 + \\tfrac89 - 1 + 0 = -\\tfrac49$. Both lists are verified exactly by the script. The physical reading: the $\\CS$ half of the free sector listed as left-handed gives $\\nu^{c}$ and $u^{c}$ directly, and the $\\CSm{}$ half, being of the other handedness, is $d_{R} = (3)_{-1/3}$ and $e_{R} = (1)_{-1}$ as right-handed fields, the fields whose left-handed conjugates are $d^{c}$ and $e^{c}$. Both lists are drawn up under Hypothesis (C) (\\claimref{lepton.hyp-c-constituent}), whose bit $\\epsilon$ is the relative handedness the two lists decide.\n",
+  "hash": "1b492ae93db6",
+  "number": 13
+ },
+ {
+  "id": "c:note.lepton.what-kind-fact-relative-handedness",
+  "type": "note",
+  "claim": "note.lepton.what-kind-fact-relative-handedness@2",
+  "title": "What kind of fact the relative handedness is",
+  "text": "Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors} is a consistency condition, not a kinematic derivation: gauging $S(U(2) \\times U(3))$ on the constituents together with the free sector is possible only for the listing in (1). In T12's Hypothesis (S) the same bit was encoded structurally, as the slot mode's contribution to the parity of the total mode number, which is why (S) delivered it without an anomaly argument. In the constituent picture the bit is $\\epsilon$: a slot reverses which chirality half counts as the particle handedness relative to a free conformal spinor. (C) leaves $\\epsilon$ open, and this proposition is what fixes it: with $\\epsilon = -1$ the chirality clause of (C) is exactly (S)'s rule restricted to the row $j = 1$, while $\\epsilon = +1$, the reading on which the slot index carries no chirality, is inconsistent with the anomalies. Whether that reversal has a kinematic reason (a slot of a massive composite is not a free massless state, and the tie between chirality halves and helicity is T12's observation-level reading of \\cite[Fact~2.3]{ButlerT12}, made for free states) is open, and this note does not claim one. What the note claims is narrower: the choice is one bit, it is the particle-antiparticle orientation the series already lists as underivable \\cite[Prop.~5.2]{ButlerT14}, and the anomaly conditions fix it.",
+  "gap": false,
+  "level": "formal",
+  "hash": "36cfd48c4e7f"
+ },
+ {
+  "id": "s:paper-4",
+  "type": "section",
+  "title": "What this changes in T12, and what it does not",
+  "hash": "d3e7658db9b5"
+ },
+ {
+  "id": "i:paper-4",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-what-changes-t12-what-it",
+  "type": "note",
+  "claim": "note.lepton.setting-what-changes-t12-what-it@1",
+  "title": "What this changes in T12, and what it does not",
+  "text": "The answer to the question the note was asked is no: inside the two-level hierarchy as T12 defines it, the tensor ledger, there is no lepton doublet at the level of states, by Fact \\claimref{lepton.imported-tensor-ledger-contains-no-lepton}; at the level of operators the question is unresolved rather than closed (Remark \\claimref{note.lepton.operator-route-why-it-not-one}); and no theorem of the series extends the ladder's action from bare twistors to excited ones. What the note adds is the exact shape of a hypothesis that does supply the lepton, and the exact point at which it departs from the ledger. Hypothesis (C), with its bit fixed by Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors}, is (S) restricted to one constituent: if T12 were to adopt (C) in place of (S), the existence and hypercharge of the lepton (Proposition 5.3(2), equation (4)), the common chirality of the doublets (Theorem 5.5(1)) and the two twistor-level doublets as a doublet and its antiparticle (Proposition 5.6, last clause) would rest on (C), a weaker premise, and the second cost T12 lists for (S), a composite state space that does not record which pairs belong to which slot, would not be paid, because (C) has no composite state space. The relative handedness of the two sectors would remain, under (C), a consistency condition fixed by the anomalies (Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors}), which is what it already is in T12 Theorem 5.5(3).\n\nTwo results of this note hold under (C) and (S) alike. Proposition \\claimref{lepton.self-conjugacy-forces-determinant-one-group} and Observation \\claimref{lepton.what-self-conjugacy-says-about-thirteenth} address the first cost T12 listed for (S), the thirteenth generator: under either hypothesis, in the untwisted action, the constituent spectrum is self-conjugate only for the determinant-one group, so the automorphism rule, read with conjugation, gives twelve generators, not thirteen, at the level of the CPT premise the Observation prints. T12 now settles the point differently at proposition level \\cite[Prop.~5.8(3), Prop.~10.7]{ButlerT12}: in the untwisted action the anomaly conditions exclude the generator, but the state space carries the twisted action, in which it is anomaly-free, the $U(1)_{X}$ of $\\mathrm{Spin}(10)$, broken at the intermediate scale with the rest of the Pati-Salam algebra; so it is not a cost of (S) either way. That proposition's untwisted clause assumes (S) and computes over the five-mode charges; under (C) the singlets are the conjugated odd free states, so the charge list differs and the three linear sums are $2\\alpha + 3\\beta$, $4\\alpha + 6\\beta$ and $8\\alpha + 12\\beta$, with the same vanishing direction and the same conclusion. And Proposition \\claimref{lepton.unit-action-cell-action} locates the departure from the ledger exactly: on twistors with two or more pairs excited, and nowhere else.\n\nWhat (S) is still needed for, and (C) does not give: the composite's state space as $\\Lambda^{\\bullet}(\\C^{2} \\oplus W)$, hence $\\mathrm{Spin}(10)$ as the Bogoliubov group of five modes and the derived $3/8$ (T12 Proposition 5.8(2), Remark 5.9). Under (C), $Q \\oplus L = \\Con_{1} \\oplus \\Con_{3}$ is the $j = 1$ part of the even half of that Fock space and $\\Con_{0} \\oplus \\Con_{2}$ the $j = 1$ part of the odd half, and the free sector is the row $j = 0$; the row $j = 2$ is (S)'s alone. Successor problem (6) of T12 stands. It is sharpened, not narrowed: of its five outcomes this note closes the one that would derive the lepton inside the two-level hierarchy, and prices two of the others, the lepton needing at least (C) and $\\mathrm{Spin}(10)$ needing all of (S).",
+  "gap": false,
+  "level": "formal",
+  "hash": "e1a4870361a0"
+ },
+ {
+  "id": "s:paper-5",
+  "type": "section",
+  "title": "Position in the series",
+  "hash": "1c742bbde4d0"
+ },
+ {
+  "id": "i:paper-5",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-position-series",
+  "type": "note",
+  "claim": "note.lepton.setting-position-series@1",
+  "title": "Position in the series",
+  "text": "This note is a companion to T12 of the series and belongs with its Section 5. \\emph{It relies on:} the Standard-Model paper T12 \\cite{ButlerT12} for the hierarchy, the ladder theorem, the automorphism group and its section, the hypercharge generator, the tensor ledger and its no-lepton clause, the free sector and the anomaly Fact (Facts \\claimref{standard-model.internal-symmetry-ladder} to \\claimref{lepton.imported-free-sector-anomaly-conditions}); the twistor paper T9 \\cite{ButlerT9} for the Fock model and the pure-spinor theorem behind Fact \\claimref{lepton.imported-twistor-state-pair-system-excitations}; and the dark-matter paper T14 \\cite{ButlerT14} for the orientation bit that Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors} identifies. \\emph{Papers that would rely on it:} T12 itself, if (C) is adopted in place of (S), and its companion note on the transport tower, which restates (S) as a hypothesis about the tower and prices (S) at Tier C; and through T12 the families paper T13 \\cite{ButlerT13} and the neutrino paper T15 \\cite{ButlerT15}, whose imports of the content would then rest on (C) rather than on (S).",
+  "gap": false,
+  "level": "formal",
+  "hash": "41173f27a17f"
+ },
+ {
+  "id": "s:paper-6",
+  "type": "section",
+  "title": "Machine verification",
+  "hash": "8f65e827e43e"
+ },
+ {
+  "id": "i:paper-6",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.lepton.setting-machine-verification",
+  "type": "note",
+  "claim": "note.lepton.setting-machine-verification@1",
+  "title": "Machine verification",
+  "text": "Every computational identity asserted here is verified in exact arithmetic by the deposited script \\cite{ButlerVerifyT12L}, \\texttt{verify\\_T12\\_lepton.py}, which imports the series' shared library \\texttt{GA.py}: seventeen checks, all passing, no floating point. They are: the hypercharge generator built as an exact matrix on each $\\Con_{k}$ with weight $3 - 2k$, and the lattice residues (Proposition \\claimref{lepton.content-constituent-space}(1), (4)); the $SU(3)$ contents of the halves and the dual weights $-(3-2k) = 3 - 2(3-k)$ (Proposition \\claimref{lepton.content-constituent-space}(2), (3)); the $K$-weights $1 - k$, the dual $K$-weights $k - 1$, their disagreement at matching content, and the biconditional of Proposition \\claimref{lepton.self-conjugacy-forces-determinant-one-group} on five subgroups $G$ encoded by their trivial central characters, the $k = 0$ test alone passing on $SU(2) \\times U(3)$ while $k = 1$ decides; the twist by $(\\det A)^{m}$, its weights under $\\mathsf{y}$ and $K$, the values $Y_{L} = -\\tfrac52, \\tfrac32$ at $m = \\mp 2$, and the closure of the shifted weight multiset under negation only at $m = 0$; the twelve components of the five-mode ledger with their duals, exactly one (the vacuum) self-dual and none of the constituents' duals present (Observation \\claimref{lepton.what-self-conjugacy-says-about-thirteenth}); the ranks of the $SU(2)$-orbits of single-row states under the cell action ($k + 1$ for $k = 1, 2, 3$, computed in the wedge basis of $\\Lambda^{k}\\C^{6}$) and under the unit action ($2$), the cell weights $k$, and the full spans as ranks, $6, 9, 4$ against $6, 6, 2$ (Proposition \\claimref{lepton.unit-action-cell-action}); the $(2,1)$ at weight $-3$ inside $(2,3) \\otimes (3,\\bar{3})$ as a dimension identity (Remark \\claimref{note.lepton.operator-route-why-it-not-one}); and the two anomaly lists, $(0, 0, 0, 0)$ and $(\\tfrac23, 0, 0, -\\tfrac49)$, with the two lists conjugate in their free parts (Proposition \\claimref{lepton.relative-handedness-slotted-free-sectors}). What the script does not check: the Facts, verified in their own papers' scripts; and the readings of Remark \\claimref{note.lepton.what-was-assumed}, Observation \\claimref{lepton.what-self-conjugacy-says-about-thirteenth} and Remark \\claimref{note.lepton.what-kind-fact-relative-handedness}, which are not computations.",
+  "gap": false,
+  "level": "formal",
+  "hash": "12a9e98b81a9"
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:correspondence.fock-model-complexified-ascended-algebra",
+  "type": "fact",
+  "claim": "correspondence.fock-model-complexified-ascended-algebra@6",
+  "title": "The Fock model of the complexified ascended algebra",
+  "text": "Let $W \\subset V_\\C$ be a maximal totally isotropic subspace ($\\dim_\\C W = 3$) and $W'$ a complementary maximal isotropic subspace, dual to $W$ under the $\\C$-bilinear form (such a pair exists, and any two such pairs are conjugate under $O(V_\\C)$). On the exterior algebra $\\Lambda^\\bullet W$ ($\\dim_\\C = 2^3 = 8$) define\n\\[\nc(w) := \\sqrt2\\; w \\wedge (\\cdot) \\quad (w \\in W),\n\\qquad\nc(w') := \\sqrt2\\; \\iota_{w'} \\quad (w' \\in W'),\n\\]\nwith $\\iota$ contraction through the pairing. Then $c(u)^2 = Q(u)\\,\\id$ for every $u \\in W \\oplus W' = V_\\C$, so $c$ extends to an algebra map $\\Cl(V_\\C) \\to \\End(\\Lambda^\\bullet W)$; this map is an isomorphism, and $\\Lambda^\\bullet W$ is the unique irreducible module of $\\Cl(2,4)_\\C$: the Dirac spinors of the completion. Vectors act oddly, so the even and odd halves\n\\[\n\\CS := \\Lambda^{\\mathrm{even}} W, \\qquad \\CSm := \\Lambda^{\\mathrm{odd}} W,\n\\]\neach of complex dimension 4, are modules of the even subalgebra $\\Cl^0(2,4)_\\C \\cong \\End(\\CS) \\oplus \\End(\\CSm)$: the two chiralities, the conformal spinor space $\\CS$ and its opposite $\\CSm$ (twistor and dual twistor space).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.fock-model-complexified-ascended-algebra, version 6 (T09 Thm 3.1)",
+  "hash": "e08e35a45c0d",
+  "number": 14
+ },
+ {
+  "id": "c:correspondence.twistors-are-states-three-ladder-pairs",
+  "type": "fact",
+  "claim": "correspondence.twistors-are-states-three-ladder-pairs@6",
+  "title": "Conformal spinors are the states of three ladder pairs",
+  "text": "Let $u \\in \\CS\\setminus\\{0\\}$ and define its \\emph{annihilator space} $W_u := \\{v \\in V_\\C : c(v)u = 0\\}$.\n\\begin{enumerate}\n\\item $W_u$ is a maximal totally isotropic ($3$-dimensional) subspace of $V_\\C$: \\emph{every} conformal spinor (twistor) is a pure spinor. Moreover $W_u$ determines $u$ up to scale (the joint kernel of $c(W_u)$ is the line $\\C u$), so $[u] \\mapsto W_u$ is an injection of $\\PCS$ into the maximal isotropic subspaces, equivariant for the spin action.\n\\item For any maximal isotropic complement $U'$ dual to $W_u$, the map $\\Lambda^\\bullet U' \\to \\Lambda^\\bullet W$, $\\xi \\mapsto c(\\xi)u$, is a linear isomorphism: $u$ is the Fock vacuum of the three-ladder-pair system built on $(W_u, U')$, every state of the module is generated from $u$ by its own pair operators, and $\\CS$ (respectively $\\CSm$) is what the even (respectively odd) products generate. The pair system is canonical given $u$ up to the choice of dual complement.\n\\item Ambient vectors act on conformal spinor states as sums of three fermionic creation and annihilation operators; conformal spinors are therefore not \\emph{operators} of the pair algebra but its \\emph{states}. The annihilator spaces of $\\CS$-spinors and of $\\CSm$-spinors are disjoint families (no maximal isotropic annihilates both a nonzero even and a nonzero odd spinor).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.twistors-are-states-three-ladder-pairs, version 6 (T09 Thm 5.3)",
+  "hash": "3ab89a29ee2c",
+  "number": 15
+ },
+ {
+  "id": "c:standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "fact",
+  "claim": "standard-model.gauge-algebra-minimal-massive-composite@4",
+  "title": "The gauge algebra of the minimal massive composite",
+  "text": "The maximal hierarchy of three conformal spinors (the three-twistor hierarchy) $\\C^{3} \\otimes \\C^{3}$ has automorphism algebra $\\su(3) \\oplus \\su(3) \\oplus \\uu(1)$, of dimension seventeen, which is not the Standard Model's. The minimal massive one is: mass first exists at two constituents (Fact \\claimref{mass.mass-symplectic-area-two-twistor-formula}), so matter's \\emph{minimal massive} hierarchy is $\\C^{2} \\otimes \\C^{3}$, two conformal spinors of three pairs each, and its automorphisms form $(U(2) \\times U(3))/U(1)$, with Lie algebra\n\\begin{equation}\n\\su(2) \\oplus \\su(3) \\oplus \\uu(1),\n\\end{equation}\nof dimension $4 + 9 - 1 = 12 = 3 + 8 + 1$: the Standard Model Lie algebra exactly. The global group is determined by Theorem \\claimref{standard-model.global-form-quotient-determined}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.gauge-algebra-minimal-massive-composite, version 4 (T12 Thm 4.1)",
+  "hash": "5c1a25248085",
+  "number": 16
+ },
+ {
+  "id": "c:standard-model.global-form-quotient-determined",
+  "type": "fact",
+  "claim": "standard-model.global-form-quotient-determined@3",
+  "title": "The global form: the quotient determined",
+  "text": "The global gauge group of Theorem \\claimref{standard-model.gauge-algebra-minimal-massive-composite} is determined exactly. The kernel of the $(U(2) \\times U(3))$-action on $\\C^{2} \\otimes \\C^{3}$ is $K = \\{(\\lambda I_{2}, \\lambda^{-1} I_{3})\\} \\cong U(1)$, and\n\\begin{equation}\n(U(2) \\times U(3))/K \\;\\cong\\; S(U(2) \\times U(3)) \\;\\cong\\; \\bigl(SU(2) \\times SU(3) \\times U(1)\\bigr)/\\mathbb{Z}_{6}:\n\\end{equation}\nthe framework's group is the smallest of the Standard Model's global forms, the full $\\mathbb{Z}_{6}$ quotient, not the naive product and not either intermediate quotient. Three consequences. (i) $S(U(2) \\times U(3))$ is exactly the subgroup of $SU(5)$ preserving the splitting $\\C^{5} = \\C^{2} \\oplus \\C^{3}$, and none of the three proper covers $(SU(2) \\times SU(3) \\times U(1))/\\Gamma$, $\\Gamma \\subsetneq \\mathbb{Z}_{6}$, acts faithfully through it; so the framework's global form is the one that grand unification's embedding requires, and the trace ratio $3/8$ of the section ``Unification and the desert'' refers to the same normalisation from the other side. (ii) The representations of the group are confined to the $\\mathbb{Z}_{6}$ charge lattice: on a representation of the covering product with colour triality $t \\in \\mathbb{Z}_{3}$, weak parity $\\delta \\in \\mathbb{Z}_{2}$ (the class of the $SU(2)$ content: $1$ on a doublet, $0$ on a singlet or triplet) and abelian weight $q \\in \\mathbb{Z}$ (the integer such that the $U(1)$ factor $\\lambda$ acts by $\\lambda^{q}$), descent to the quotient holds if and only if $2t + 3\\delta + q \\equiv 0 \\pmod 6$; writing $Y = q/6$ this is the condition that $t/3 + \\delta/2 + Y$ be an integer. The content of Theorem \\claimref{standard-model.hypercharge-global-form-pair-counting-consistency} lies on it (each of its representations is built as a representation of $S(U(2) \\times U(3))$), and the lattice check is printed there. (iii) A structural stance, registered: the lattice forbids representations off it, so a confirmed discovery of, for example, a fractionally charged colour singlet would refute the identification of the gauge group with the automorphism group of minimal massive compositeness, a stance that current searches test \\cite{PDG2024}. The stance inherits the conditionality of Theorem \\claimref{standard-model.gauge-algebra-minimal-massive-composite}'s premise and is flagged at that level.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.global-form-quotient-determined, version 3 (T12 Thm 4.2)",
+  "hash": "a02f83d45fbf",
+  "number": 17
+ },
+ {
+  "id": "c:standard-model.imported-anomaly-coefficients",
+  "type": "fact",
+  "claim": "standard-model.imported-anomaly-coefficients@1",
+  "title": "Imported: the anomaly coefficients",
+  "text": "For a gauge group with a $U(1)$ factor acting on left-handed Weyl fermions, with the $U(1)$ charges $Y$, the four anomaly-cancellation conditions are: $[SU(3)]^{2}U(1)$, the sum of $Y$ over the colour triplets and antitriplets (each weighted by its $SU(2)$ multiplicity) vanishes; $[SU(2)]^{2}U(1)$, the sum of $Y$ over the weak doublets (each weighted by its colour multiplicity) vanishes; $U(1)^{3}$, the sum of $Y^{3}$ over all Weyl fermions vanishes; and mixed gravitational, the sum of $Y$ over all Weyl fermions vanishes. A right-handed Weyl fermion of charge $Y$ enters the conditions as a left-handed one of charge $-Y$ in the conjugate representation. The four conditions are necessary for the consistency of the gauge theory, and a failure of any of them is not lifted by spontaneous breaking: an anomalous $U(1)$ cannot be gauged whether or not it is broken. \\emph{Provenance:} \\cite[\\S 22.4]{WeinbergQFT2}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4",
+  "hash": "17e4bcc14600",
+  "number": 18
+ },
+ {
+  "id": "c:standard-model.imported-cauchy-decomposition-exterior-power",
+  "type": "fact",
+  "claim": "standard-model.imported-cauchy-decomposition-exterior-power@1",
+  "title": "Imported: the Cauchy decomposition of an exterior power",
+  "text": "For finite-dimensional complex vector spaces $A$ and $B$ and every $k$,\n\\[\n\\Lambda^{k}(A \\otimes B) \\;\\cong\\; \\bigoplus_{|\\lambda| = k} S_{\\lambda}A \\otimes S_{\\lambda'}B\n\\]\nas $GL(A) \\times GL(B)$-modules, the sum over partitions $\\lambda$ of $k$ with $\\lambda'$ the conjugate partition and $S_{\\lambda}$ the Schur functor; $S_{\\lambda}A = 0$ when $\\lambda$ has more parts than $\\dim A$. For $\\dim A = 2$: $S_{(1,1)}A = \\Lambda^{2}A = \\det$, $S_{(2,1)}A \\cong A \\otimes \\det$, $S_{(3)}A = S^{3}A$ of dimension four. For $\\dim B = 3$: $\\Lambda^{2}B \\cong B^{*} \\otimes \\det$, $S_{(2,1)}B \\cong \\mathfrak{sl}(B) \\otimes \\det$, the eight-dimensional adjoint, $S_{(2,2)}B \\cong S^{2}B^{*} \\otimes \\det^{2}$; and in general $\\Lambda^{k}B \\cong (\\Lambda^{n-k}B)^{*} \\otimes \\det$ for $n = \\dim B$, equivalently $(\\Lambda^{k}B)^{*} \\cong \\Lambda^{n-k}B \\otimes \\det^{-1}$. Under $SU(A) \\times SU(B)$ the determinant characters are trivial. For a direct sum, $\\Lambda^{n}(A \\oplus B) \\cong \\bigoplus_{j+k=n}\\Lambda^{j}A \\otimes \\Lambda^{k}B$ as $GL(A) \\times GL(B)$-modules. \\emph{Provenance:} the Cauchy formula is \\cite[I, \\S 4, (4.3$'$)]{Macdonald1995} and \\cite[Ex.~6.11]{FultonHarris1991}; the small identifications are the standard dimension-two and dimension-three cases of \\cite[\\S 6.1, \\S 15.3]{FultonHarris1991}; the direct-sum formula is \\cite[App.~B.2]{FultonHarris1991}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "I. G. Macdonald, Symmetric Functions and Hall Polynomials, second edition, Oxford University Press (1995)., I, \\S 4, (4.3$'$); W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., Ex.~6.11; W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., \\S 6.1, \\S 15.3; W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., App.~B.2",
+  "hash": "f3d8747abc01",
+  "number": 19
+ },
+ {
+  "id": "c:standard-model.imported-pair-systems-two-chirality-halves",
+  "type": "fact",
+  "claim": "standard-model.imported-pair-systems-two-chirality-halves@5",
+  "title": "Imported: the pair systems and the two chirality halves",
+  "text": "Let $W$ be a maximal isotropic (three-dimensional) subspace of $V_{\\C}$ with a dual isotropic complement. The complexified ascended algebra acts irreducibly on $\\Lambda^{\\bullet}W$, and its two chirality halves are $\\CS = \\Lambda^{\\mathrm{even}}W$ and $\\CSm = \\Lambda^{\\mathrm{odd}}W$, each of dimension four. Every nonzero conformal spinor (twistor) $u \\in \\CS$ is a pure spinor: it is the Fock vacuum of the system of three fermionic ladder pairs built on its own annihilator space $W_{u}$, every state of the module is generated from $u$ by those pair operators, and $\\CS$ (respectively $\\CSm$) is what the even (respectively odd) products generate. Conformal spinors are states of the pair algebra, not its operators. \\emph{Provenance:} \\cite[Thm.~3.1]{ButlerT9} for the Fock model and the chirality halves; \\cite[Thm.~5.3]{ButlerT9} for the pure-spinor and Fock-vacuum statements; the tower paper \\cite[Thms.~4.2, 4.3]{ButlerT3} for the iterated pair structure (one qubit per rung, Witt index as capacity) within which this sits.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.imported-pair-systems-two-chirality-halves, version 5 (T12 Fact 2.2)",
+  "hash": "f8ef09f55c64",
+  "number": 20
+ },
+ {
+  "id": "c:standard-model.internal-symmetry-ladder",
+  "type": "fact",
+  "claim": "standard-model.internal-symmetry-ladder@3",
+  "title": "The internal symmetry ladder",
+  "text": "For a system of $n$ conformal spinors (an $n$-twistor system) $(Z^{1}, \\ldots, Z^{n})$, the linear mixings $Z^{i} \\mapsto U^{i}{}_{j} Z^{j}$ that preserve the total momentum $p_{AA'} = \\sum_{i} \\pi^{i}_{A}\\bar\\pi^{i}_{A'}$, built from the parts $\\pi^{i}$ in the $E = +1$ eigenspace, and the total helicity form $\\sum_{i} \\bar{Z}^{i} \\cdot Z^{i}$, the reversion form $h$ summed over the spinors, for every configuration form exactly the unitary group $U(n)$. The ladder therefore reads: one conformal spinor, massless, internal group $U(1)$; two, the first massive step, internal group $U(2)$, with Lie algebra $\\su(2) \\oplus \\uu(1)$; three, internal group $U(3)$, with Lie algebra $\\su(3) \\oplus \\uu(1)$. (The groups are $U(n)$ themselves, not products: the map $SU(n) \\times U(1) \\to U(n)$, $(a, \\mu) \\mapsto \\mu a$, is onto, and its kernel is $\\{(\\mu^{-1}I_{n}, \\mu) : \\mu^{n} = 1\\} \\cong \\mathbb{Z}_{n}$ by the determinant, so $U(n) = (SU(n) \\times U(1))/\\mathbb{Z}_{n}$; the distinction is treated in the section ``The gauge algebra and the global form''.)",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.internal-symmetry-ladder, version 3 (T12 Prop 3.1)",
+  "hash": "54ad93fb935c",
+  "number": 21
+ },
+ {
+  "id": "c:standard-model.quarks-leptons-two-level-fermion-content",
+  "type": "fact",
+  "claim": "standard-model.quarks-leptons-two-level-fermion-content@5",
+  "title": "Quarks and leptons: the two-level fermion content",
+  "text": "Under $S(U(2) \\times U(3))$, with $Y$ the hypercharge just defined:\n\\begin{enumerate}\n\\item (Unconditional.) The pair-level generators, the cells of the tensor state space, transform as $(2, 3)$ with abelian weight $q = 1$, so $Y = 1/6$: the quark doublet's representation. A single pair has one unit of hypercharge.\n\\item (Under Hypothesis (S).) The states with one slot mode occupied and the pair modes in an $SU(3)$-invariant configuration are $\\C^{2} \\otimes \\Lambda^{0}W$, weight $3$ ($Y = +1/2$, total mode number one, odd), and $\\C^{2} \\otimes \\Lambda^{3}W$, weight $-3$ ($Y = -1/2$, total mode number four, even); both transform as $(2, 1)$. Without (S) neither exists in the state space, whose only row-filling states form the quadruplet $(4,1)$ of weight $+3$.\n\\item (Unconditional as a computation on the Fock space of a single conformal spinor, with the pair-slot factor acting alone; that Fock space is not a subspace of the tensor state space, and under (S) it is the row $j = 0$.) In the sector of a single conformal spinor (the single-twistor sector) $\\Lambda^{\\bullet}W = \\Lambda^{\\bullet}\\C^{3}$, the grade-$k$ states transform as $\\Lambda^{k}\\C^{3}$, that is as $1, 3, \\bar{3}, 1$ for $k = 0, 1, 2, 3$, with weight $q = -2k$: $Y = 0, -1/3, -2/3, -1$.\n\\end{enumerate}\nIn particular, under (S), the fermion content of the composite at the particle handedness (Theorem \\claimref{standard-model.hypercharge-global-form-pair-counting-consistency}) is\n\\begin{equation}\n(2,3)_{1/6} \\oplus (2,1)_{-1/2},\n\\end{equation}\nquark doublet plus lepton doublet, with colour neutrality of the lepton the statement that a state with its pair modes full is an $SU(3)$ singlet: a lepton is a complete conformal spinor, one slot with the pair system full, while a quark is one slot with one pair.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.quarks-leptons-two-level-fermion-content, version 5 (T12 Prop 5.3)",
+  "hash": "14804cbba7f5",
+  "number": 22
+ },
+ {
+  "id": "c:standard-model.raw-representation-content-state-space",
+  "type": "fact",
+  "claim": "standard-model.raw-representation-content-state-space@3",
+  "title": "The raw representation content of the state space",
+  "text": "Under $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$, with the abelian charge the pair number, the full Fock space of the minimal massive hierarchy decomposes as\n\\begin{equation}\n\\Lambda^{\\bullet}(\\C^{2} \\otimes \\C^{3}) = (1,1) \\oplus (2,3) \\oplus \\bigl[(3,\\bar{3}) \\oplus (1,6)\\bigr] \\oplus \\bigl[(4,1) \\oplus (2,8)\\bigr] \\oplus \\bigl[(3,3) \\oplus (1,\\bar{6})\\bigr] \\oplus (2,\\bar{3}) \\oplus (1,1),\n\\end{equation}\ngraded by pair number $0$ through $6$; and the sector of a single conformal spinor (the single-twistor sector, massless) decomposes as $\\Lambda^{\\bullet}\\C^{3} = 1 \\oplus 3 \\oplus \\bar{3} \\oplus 1$, graded $0$ through $3$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.raw-representation-content-state-space, version 3 (T12 Prop 5.1)",
+  "hash": "7ef2a297c4cf",
+  "number": 23
+ },
+ {
+  "id": "c:refuted.the-raw-representation-content-matches-the-fermi",
+  "type": "refutation",
+  "claim": "refuted.the-raw-representation-content-matches-the-fermi@1",
+  "title": "The raw representation content matches the fermion table entry by entry",
+  "text": "Refuted. The corrected statement: The disagreements are composites; generators, not states, are the content, and the lepton lies one level higher, under the declared hypothesis of slot statistics.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.quarks-leptons-two-level-fermion-content"
+  ],
+  "hash": "de20ed6e0d28",
+  "number": 24
+ },
+ {
+  "id": "c:refuted.the-three-twistor-hierarchy-carries-the-standard",
+  "type": "refutation",
+  "claim": "refuted.the-three-twistor-hierarchy-carries-the-standard@2",
+  "title": "The hierarchy of three conformal spinors $\\mathbb{C}^{3}\\otimes\\mathbb{C}^{3}$ carries the Standard Model",
+  "text": "The hierarchy of three conformal spinors (the three-twistor hierarchy) $\\mathbb{C}^{3}\\otimes\\mathbb{C}^{3}$ carries the Standard Model",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.gauge-algebra-minimal-massive-composite"
+  ],
+  "hash": "1c202bc4f400",
+  "number": 25
+ },
+ {
+  "id": "c:refuted.twistors-are-the-ladder-operators",
+  "type": "refutation",
+  "claim": "refuted.twistors-are-the-ladder-operators@2",
+  "title": "Conformal spinors are the ladder operators",
+  "text": "Conformal spinors (twistors) are the ladder operators",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "correspondence.twistors-are-states-three-ladder-pairs"
+  ],
+  "hash": "ea6bc89c6a2f",
+  "number": 26
+ },
+ {
+  "id": "c:pred.z6-charge-lattice",
+  "type": "prediction",
+  "claim": "pred.z6-charge-lattice@1",
+  "title": "No fractionally charged colour singlet",
+  "text": "The $\\mathbb{Z}_{6}$ charge lattice: no fractionally charged colour singlet exists.",
+  "gap": false,
+  "level": "formal",
+  "kill_condition": {
+   "threshold": "One confirmed fractionally charged colour-singlet particle",
+   "data_source": "PDG exotic-particle searches",
+   "registered": "2026-08 (T17 stance table, row 3)"
+  },
+  "hash": "263778a32770",
+  "number": 27
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ }
+]

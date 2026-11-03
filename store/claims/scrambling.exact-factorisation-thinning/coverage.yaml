@@ -1,0 +1,21 @@
+functions:
+  check_slice_count_per_unit_time:
+    kind: exact
+    clauses:
+    - (i) the slice count per unit Killing time is 8 pi M = 4 pi r_h = A/r_h, at leading order in r_c/2M
+    omits: the leading-order qualifier is checked only as r_c/2M = (2M)^(-2/3) having negative M-exponent; the neglected factor sqrt(1 - r_c/2M) is not computed
+  check_slice_count_per_period:
+    kind: exact
+    clauses:
+    - (ii) N_slice = 64 pi^2 M^2 and N_slice/S_BH = 16 pi
+    omits: ''
+  check_factorisation:
+    kind: exact
+    clauses:
+    - (iii) 16 pi = (beta/r_h)(A/S_BH) = 4 pi x 4, with beta/r_h = 2 pi/(kappa r_h) = 4 pi universal for Schwarzschild
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact monomial arithmetic in M and pi, with M-exponent zero checked for the universal factor.

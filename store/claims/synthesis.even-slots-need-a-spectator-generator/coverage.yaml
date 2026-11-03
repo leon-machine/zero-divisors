@@ -1,0 +1,10 @@
+functions:
+  check_even_slots_need_spectator:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "the blade counts in (ii) (16 and 8 in the commutant, 16 and 8 in the graded commutant, closure, 32 independent states, pseudoscalar the only anticommuting blade) are exhaustive over all 1024 blades of Cl(5,5); but 'every such pair of slots is odd' is argued in a comment from those counts, not asserted for arbitrary slot operators (only v_k and v_k Gamma_W are tested); (c) U(2) covariance is checked at one rotation (3/5, 4/5) in (i) and (iv), and for (iv) only the square-zero part of two-levelness; the parity claim for even slots is checked on products of s* and b operators, not as the value (-1)^k of the tower grading on states"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite algebra of the statement is enumerated exactly; the universal quantification over slot operators and over A in U(2) is sampled"

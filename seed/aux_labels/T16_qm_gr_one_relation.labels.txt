@@ -1,0 +1,43 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{5}{Setting and imports}{section.2}{}}
+\newlabel{fact:completion}{{2.1}{5}{imported: the completion and the ladder}{theorem.2.1}{}}
+\newlabel{fact:capacity}{{2.2}{5}{imported: Witt index is quantum capacity}{theorem.2.2}{}}
+\newlabel{fact:purespinor}{{2.3}{5}{imported: pure spinors and the incidence chart}{theorem.2.3}{}}
+\newlabel{fact:thermality}{{2.4}{5}{imported: the single-mode thermality and the modular period}{theorem.2.4}{}}
+\newlabel{fact:flag}{{2.5}{5}{imported: the flag, the arrow, and superselection}{theorem.2.5}{}}
+\newlabel{fact:condensate}{{2.6}{6}{imported: the condensate and the derived content}{theorem.2.6}{}}
+\newlabel{fact:indifference}{{2.7}{6}{imported: the indifference instrument}{theorem.2.7}{}}
+\newlabel{fact:roots}{{2.8}{6}{imported: square roots of $-1$ in real Clifford algebras}{theorem.2.8}{}}
+\newlabel{fact:cone}{{2.9}{6}{imported: the null cone determines the form, and Zeeman's theorem}{theorem.2.9}{}}
+\newlabel{fact:cartan}{{2.10}{7}{imported: Cartan's purity theorem and the Thouless form}{theorem.2.10}{}}
+\newlabel{fact:witt}{{2.11}{7}{imported: Witt's extension theorem}{theorem.2.11}{}}
+\newlabel{sec:two}{{3}{7}{The two presentations}{section.3}{}}
+\newlabel{prop:twopresentations}{{3.1}{7}{The two presentations}{theorem.3.1}{}}
+\newlabel{prop:capacity}{{3.2}{8}{The two capacities, and three consequences}{theorem.3.2}{}}
+\newlabel{fig:twocharts}{{1}{9}{The paper in one picture. The Clifford relation, read on an orthogonal basis, displays a metric and yields general relativity as the dynamics of how the vacuum varies from point to point; read on a Witt basis, the same relation is the canonical anticommutation relations and yields quantum mechanics as the dynamics of excitations above a vacuum chosen on a point's incidence line (Propositions \ref {prop:twopresentations} and \ref {prop:vacuummanifold}). Because the two readings are charts on one object rather than two objects, a count that both charts can perform is the same count on either; the boost qubit is a Witt-side count with no overlap partner and is drawn as such. The dashed bar lists three counts of Proposition \ref {prop:capacity}, real and complex, and says which is which: the real capacity of $(1,3)$, the boost qubit (clause (1), a single Witt-side count, not an overlap instance); the rung increment, one mode in either count (clause (2)), which is instance (i) of Proposition \ref {prop:overlap} and the input of its reading (iii); and the complex capacity three of the ascended space, the pair count (clause (3)), instance (ii)}{figure.1}{}}
+\newlabel{sec:vacua}{{4}{10}{Spacetime as the manifold of vacuum lines}{section.4}{}}
+\newlabel{prop:vacuummanifold}{{4.1}{10}{Spacetime as the manifold of vacuum lines}{theorem.4.1}{}}
+\newlabel{fig:holonomy}{{2}{12}{What gravity does to the mode. At every point the relation supplies two light rays $n_{\pm } = \tfrac 12(e_{0} \pm e_{1})$ in a timelike plane and the plane's unit bivector $\sigma = e_{0}e_{1}$, whose sign decides which ray is the creation operator ($n_{-}n_{+} = \tfrac 12(1+\sigma )$ is the occupied projector). Left: on a curved patch the connection carries $\sigma $ round a closed loop and returns it as a different bivector of the same point, the frame having been rotated by the holonomy; that rotation is curvature, and it acts on the plane, not on the discrete sign, which comes back unchanged in any connected orientable spacetime. Right: on flat space in curvilinear coordinates the components $g_{ab}$ vary and the drawn cones lean with the coordinates, but the transported $\sigma $ comes back as itself; leaning cones are a coordinate description and not curvature. The figure illustrates Proposition \ref {prop:vacuummanifold}(3) and does not replace it}{figure.2}{}}
+\newlabel{prop:overlap}{{4.2}{12}{The overlap table, sorted}{theorem.4.2}{}}
+\newlabel{rem:synthesisresidues}{{4.3}{13}{Two residues, named so the synthesis can be refuted}{theorem.4.3}{}}
+\newlabel{lem:speed}{{4.4}{14}{The third constant is the conversion constant between the charts}{theorem.4.4}{}}
+\newlabel{rem:quadric}{{4.5}{16}{Where exhaustiveness first fails: the $\nu = 4$ quadric}{theorem.4.5}{}}
+\newlabel{sec:lab}{{5}{16}{The laboratory: the slow shadow}{section.5}{}}
+\newlabel{lem:vectorderivative}{{5.1}{16}{The vector derivative is the covariant first-order operator}{theorem.5.1}{}}
+\newlabel{prop:slowshadow}{{5.2}{17}{Schr\"odinger as the slow shadow}{theorem.5.2}{}}
+\newlabel{rem:labtouchpoint}{{5.3}{19}{Point of contact: what has and has not been explained}{theorem.5.3}{}}
+\newlabel{lem:square}{{5.4}{19}{The form of the law is forced by its square}{theorem.5.4}{}}
+\newlabel{lem:oddroots}{{5.5}{19}{Odd square roots of $-1$, and the chiral phase}{theorem.5.5}{}}
+\newlabel{lem:onedatum}{{5.6}{20}{One datum, not two: the imaginary unit is the rest frame read through the law}{theorem.5.6}{}}
+\newlabel{cor:onebit}{{5.7}{21}{The arrow and the frequency are one bit, at $\Cl (1,3)$ level}{theorem.5.7}{}}
+\newlabel{sec:born}{{6}{21}{Born, measurement, and the vote}{section.6}{}}
+\newlabel{lem:current}{{6.1}{21}{The Dirac current is the conserved density}{theorem.6.1}{}}
+\newlabel{prop:born}{{6.2}{22}{The measure from indifference: Born's rule located}{theorem.6.2}{}}
+\newlabel{prem:recording}{{6.3}{23}{Recording is irreversible, stated so it can be refuted}{theorem.6.3}{}}
+\newlabel{rem:recording}{{6.4}{23}{Measurement as recording: the open remainder}{theorem.6.4}{}}
+\newlabel{prop:vote}{{6.5}{23}{The record chain votes: measurement without collapse}{theorem.6.5}{}}
+\newlabel{sec:experience}{{7}{24}{The character of experience}{section.7}{}}
+\newlabel{prem:supervenience}{{7.1}{24}{Supervenience, stated so it can be refuted}{theorem.7.1}{}}
+\newlabel{prop:experience}{{7.2}{24}{The character of experience: three record-chain theorems, and the final limit}{theorem.7.2}{}}
+\newlabel{sec:position}{{8}{26}{Position in the series}{section.8}{}}
+\newlabel{sec:verification}{{9}{27}{Machine verification}{section.9}{}}

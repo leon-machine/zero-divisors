@@ -1,0 +1,59 @@
+name: check
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml jsonschema
+      # The toolkit, the governance settings and the accepted lock come from the
+      # base branch, so a pull request cannot change the rules it is judged by.
+      - name: Trusted toolkit and rules from the base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin "${{ github.base_ref }}"
+          mkdir -p /tmp/base
+          git archive "origin/${{ github.base_ref }}" tp lib tests | tar -x -C /tmp/base
+          git show "origin/${{ github.base_ref }}:store/config.yaml" > /tmp/base/config.yaml
+          git show "origin/${{ github.base_ref }}:store/.tp-lock.json" > /tmp/base/lock.json || echo '{}' > /tmp/base/lock.json
+          cp /tmp/base/config.yaml store/config.yaml
+          cp /tmp/base/lock.json store/.tp-lock.json
+          rm -rf tp lib && cp -r /tmp/base/tp /tmp/base/lib .
+      - name: Tests
+        run: python -m unittest discover -s tests -t .
+      - name: Validate the store, layers 1-3, 5 and 6
+        env:
+          # the pull request's author; layer 6 maps it through governance.github_logins
+          TP_AUTHOR: ${{ github.event.pull_request.user.login || github.actor }}
+        run: python -m tp check --store store --layers 1,2,3,5,6 --keep-going
+      # Layer 4 runs contributed check.py files and the series verify scripts (legacy/). It
+      # always runs in full here: the layer-4 cache (store/.tp-layer4.json) comes from the
+      # branch under test and is not trusted. It runs
+      # in a container with no network, the repository mounted read-only and a
+      # throwaway temporary folder, so a hostile check can neither reach out nor
+      # change the tree.
+      - name: Evidence (layer 4) in an isolated container
+        run: |
+          pip install --quiet --target .ci-deps pyyaml jsonschema numpy scipy   # five legacy verify scripts use numpy/scipy
+          docker run --rm --network none --read-only \
+            --tmpfs /tmp:rw,size=512m --tmpfs /cache:rw,size=256m \
+            -e HOME=/tmp -e PYTHONDONTWRITEBYTECODE=1 \
+            -e PYTHONPATH=/lab/.ci-deps \
+            -v "$PWD":/lab:ro -w /lab python:3.11-slim \
+            python -m tp check --store store --layers 4 --keep-going --cache-dir /cache --full
+      - name: Build
+        run: python -m tp build --store store --no-mutants --layers 1-3
+      - uses: actions/upload-artifact@v5
+        with:
+          name: build
+          path: build/

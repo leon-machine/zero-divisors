@@ -1,0 +1,22 @@
+functions:
+  check_walls_displaced_successively:
+    kind: sampled
+    clauses: ["each wall displaced from the last into the unphysical region", "each completion resolves its wall and produces the next"]
+    omits: "stages k = 0..3 only, one coupling mu = nu = 1/2, four sample tau; the induction step s -> s/(1+2 mu nu s) is tested at three values of the wall position a, not symbolically in a, and is checked to carry each wall tau_k onto tau_(k+1); 'infinite' and 'compact Sigma' are not modelled"
+  check_each_wall_is_a_simple_corank_one_zero:
+    kind: sampled
+    clauses: ["a sequence of tame walls"]
+    omits: "stages k = 0..4 of the same single model; only simple zero and corank one are tested, not the other tameness conditions"
+  check_one_hyperbolic_plane_per_wall:
+    kind: sampled
+    clauses: ["Clifford sheaves of ranks 2^n, 2^(n+2), ...", "physical-side fibres ascend the Witt tower, one Rule-1 rung per wall"]
+    omits: "signatures (2,4), (3,5), (4,6), (5,7) at three tau per stage for k = 0..3 only; the Clifford algebras themselves are not identified"
+  check_radical_lines_have_global_sections:
+    kind: sampled
+    clauses: ["degeneracy is conserved along the entire sequence", "each wall is tame so the next coupling is possible"]
+    omits: "global radical section verified at three tau for k = 0..3; supports transversality of the slot-0 functional but 'good couplings at every stage' is only the single choice mu = nu = 1/2"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Four stages (k=0..3) of one iterated collar model with mu=nu=1/2 verify displacement, simple zeros, one hyperbolic plane per wall and radical sections; the infinite sequence rests on the induction premise. 2026-10-23 weak-check pass: the step s -> s/(1 + 2 mu nu s) is now also checked to move wall tau_k onto tau_(k+1) (before, the identity held for any constant in place of 2 mu nu)."

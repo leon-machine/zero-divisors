@@ -1,0 +1,744 @@
+angle.hop-across-cut:
+- finite-models
+- entanglement
+angle.hop-sea-filled-pairing:
+- pairing-and-bogoliubov
+- finite-models
+- entanglement
+angle.imported-singularity-papers-state-selection:
+- hawking-temperature
+- modular-theory
+- undetermined-input
+angle.imported-theorems-deliver-their-hypotheses:
+- classical-theorem
+- modular-theory
+- hawking-temperature
+angle.value-parameter-dynamics:
+- finite-models
+- undetermined-input
+angle.wedge-reflection-translations-are-ascent:
+- rotors-and-stabilisers
+- conformal-model
+- horizons
+angle.within-supplied-class-spectrum-condition-selects:
+- thermal-premises
+- entanglement
+- no-go
+correspondence.imported-ladder-pairs-fock-modules-over:
+- ladder-pairs
+- spinor-modules
+- witt-index
+dark-energy.imported-s-wave-current-algebra:
+- bosonisation
+- boundary-modes
+- modular-theory
+dark-energy.imported-s-wave-current-algebra-external:
+- bosonisation
+- classical-theorem
+dark-matter.imported-eight-towers-mod-8-clock:
+- towers-by-residue
+- clifford-classification
+descent-lift.classical-record-reproduces-descent-stores-nothing:
+- descent-map
+- measurement-and-records
+- ladder-pairs
+descent-lift.classical-shared-bit-reduced-view-pure:
+- descent-map
+- entanglement
+- measurement-and-records
+descent-lift.imported-descent-modes-univalence-supplied-class:
+- descent-map
+- univalence
+- superselection
+descent-lift.imported-descent-modes-univalence-supplied-class-external:
+- classical-theorem
+- univalence
+- superselection
+descent-lift.imported-fermionic-operations-are-even-reduced:
+- classical-theorem
+- grading-and-parity
+descent-lift.imported-pinching-one-way-door:
+- descent-map
+- no-go
+descent-lift.imported-stinespring-kraus-choi:
+- classical-theorem
+descent-lift.imported-thouless-states-witt-vacua:
+- pairing-and-bogoliubov
+- witt-index
+- classical-theorem
+descent-lift.imported-thouless-states-witt-vacua-external:
+- classical-theorem
+- pairing-and-bogoliubov
+descent-lift.kraus-form-descent-even-states:
+- descent-map
+- mode-counting
+descent-lift.lift-costs-one-rung-per-mode:
+- descent-map
+- ladder-pairs
+- pairing-and-bogoliubov
+descent-lift.pairing-creator-under-transport-algorithm:
+- transport-algorithm
+- pairing-and-bogoliubov
+- descent-map
+descent-lift.parity-alone-forces-second-rung:
+- ladder-pairs
+- univalence
+- forcing-and-uniqueness
+descent-lift.partial-lifts-witness-overshoots:
+- descent-map
+- pairing-and-bogoliubov
+- finite-models
+descent-lift.within-supplied-dynamics-descent-has-no:
+- no-go
+- descent-map
+- thermal-premises
+field-theory.assignments-survive:
+- hypercharge-and-anomalies
+- pseudoscalar-and-centre
+field-theory.boost-modes:
+- rotors-and-stabilisers
+- car-algebra
+- modular-theory
+field-theory.composite-gauge-bosons-what-excluded:
+- gauge-fields
+- no-go
+field-theory.composite-scalars-mean-field-level:
+- symmetry-breaking
+- mass-generation
+- pairing-and-bogoliubov
+- recovers-known-physics
+field-theory.conserved-numbers-mass-block:
+- mass-generation
+- pairing-and-bogoliubov
+field-theory.contact-interactions-tower:
+- scattering-amplitudes
+field-theory.coupled-system-tree-level:
+- recovers-known-physics
+- gauge-fields
+- scattering-amplitudes
+field-theory.elementary-photon-ga:
+- gauge-fields
+- pseudoscalar-and-centre
+- recovers-known-physics
+- scattering-amplitudes
+field-theory.fock-space-maxwell-modes:
+- gauge-fields
+- pseudoscalar-and-centre
+- chirality
+field-theory.ground-does-not-attach-modes:
+- no-go
+- conformal-model
+field-theory.how-close-tower-comes-ccr:
+- car-algebra
+- limits
+field-theory.imported-one-datum-massive-law:
+- mass-generation
+- pseudoscalar-and-centre
+field-theory.imported-standard-field-theory:
+- classical-theorem
+- conformal-spinors
+- hypercharge-and-anomalies
+field-theory.imported-statistics-no-go-palatial-algebra:
+- no-go
+- car-algebra
+- conformal-spinors
+field-theory.imported-tower-limit:
+- car-algebra
+- limits
+field-theory.mass:
+- mass-generation
+- pseudoscalar-and-centre
+- symmetry-breaking
+field-theory.no-canonical-commutation-relations-tower:
+- no-go
+- car-algebra
+field-theory.operator-newtonian-coupling:
+- quantum-gravity
+- entanglement
+- live-prediction
+field-theory.orientation-relocated:
+- conformal-spinors
+- chirality
+- pseudoscalar-and-centre
+field-theory.path-integral-inside-tower:
+- ladder-pairs
+- recovers-known-physics
+field-theory.second-quantisation:
+- chirality
+- pseudoscalar-and-centre
+field-theory.twistor-attachment:
+- conformal-spinors
+- car-algebra
+field-theory.where-each-lives:
+- pseudoscalar-and-centre
+- conformal-spinors
+- chirality
+hawking.bose-einstein-occupancy-quantified-window-corrections:
+- radiation-spectrum
+- bosonisation
+- recovers-known-physics
+hawking.current-commutator-exactly-edge-split:
+- bosonisation
+- boundary-modes
+hawking.full-uniqueness-given-dynamics:
+- modular-theory
+- forcing-and-uniqueness
+- boundary-modes
+hawking.gibbs-states-are-kms-conversely-finite:
+- modular-theory
+- classical-theorem
+hawking.greybody-inheritance-under-interface-premise:
+- radiation-spectrum
+- recovers-known-physics
+hawking.helicity-lift-joints-itemised:
+- conformal-spinors
+- ledger-audit
+hawking.homogeneity-ordering-shift:
+- conformal-spinors
+hawking.i-state:
+- modular-theory
+- car-algebra
+- recovers-known-physics
+- forcing-and-uniqueness
+hawking.i-state-continuum:
+- modular-theory
+- car-algebra
+- limits
+hawking.imported-algebra-boundary-modes-car-algebra:
+- car-algebra
+- boundary-modes
+hawking.imported-ideal-fermi-gas-uniqueness:
+- classical-theorem
+- modular-theory
+- car-algebra
+hawking.imported-kms-passes-inductive-limits:
+- classical-theorem
+- modular-theory
+- limits
+hawking.imported-modular-descent-premises-geometric-normalisation:
+- modular-theory
+- descent-map
+- hawking-temperature
+- undetermined-input
+hawking.imported-modular-descent-premises-geometric-normalisation-external:
+- classical-theorem
+- modular-theory
+hawking.imported-penrose-transform:
+- classical-theorem
+- conformal-spinors
+hawking.imported-quasi-free-kms-reduces-two:
+- classical-theorem
+- modular-theory
+- car-algebra
+hawking.imported-quasi-free-states-car-algebra:
+- classical-theorem
+- car-algebra
+hawking.imported-s-wave-bosonic-sector:
+- bosonisation
+- boundary-modes
+- radiation-spectrum
+hawking.imported-s-wave-bosonic-sector-external:
+- classical-theorem
+- bosonisation
+hawking.imported-thermal-representation:
+- classical-theorem
+- car-algebra
+- modular-theory
+hawking.imported-twistor-storey-ordering-shift:
+- conformal-spinors
+- spinor-modules
+hawking.joint-j3-s-wave-reduction:
+- thermal-premises
+- bosonisation
+- schwarzschild
+hawking.kms-restricts-invariant-subalgebras:
+- modular-theory
+hawking.modular-structure-completed-pair:
+- modular-theory
+- hyperbolic-plane
+- rotors-and-stabilisers
+hawking.premise-i-interface-identification:
+- thermal-premises
+- radiation-spectrum
+obj.descent-lift.lift:
+- descent-map
+- ladder-pairs
+obj.field-theory.single-algebra-field:
+- pseudoscalar-and-centre
+obj.hawking.boundary-mode-algebra-windows-boost-dynamics:
+- boundary-modes
+- car-algebra
+obj.hawking.continuum-mode-space:
+- car-algebra
+- limits
+obj.odd-extensions.single-extension:
+- towers-by-residue
+obj.pairing.pairing-class-transport:
+- pairing-and-bogoliubov
+obj.scrambling.stretched-singularity:
+- schwarzschild
+- entropy-premises
+obj.singularity.geometric-modular-condition-g:
+- thermal-premises
+- modular-theory
+obj.singularity.grading-parity-automorphism:
+- grading-and-parity
+obj.singularity.multi-mode-descent:
+- descent-map
+obj.singularity.two-fibres-two-assemblies:
+- grading-and-parity
+obj.state-selection.geometric-modular-condition:
+- thermal-premises
+- modular-theory
+obj.state-selection.grading-parity-automorphism:
+- grading-and-parity
+obj.tower.tower:
+- hyperbolic-plane
+- ladder-pairs
+odd-extensions.belongs-tower:
+- frozen-point
+- towers-by-residue
+odd-extensions.cosmological-constant-deforms-wall:
+- cosmological-constant
+- degenerate-algebras
+- towers-by-residue
+odd-extensions.every-path-mirror-crosses-two-time:
+- mirror-sector
+- towers-by-residue
+odd-extensions.four-extensions-are-four-odd-towers:
+- towers-by-residue
+- mirror-sector
+odd-extensions.four-extensions-oriented-pair:
+- towers-by-residue
+- mirror-sector
+- clifford-classification
+odd-extensions.imported-towers-clock:
+- towers-by-residue
+- clifford-classification
+odd-extensions.mirror-inside-complexified-extension-absent-doubled:
+- mirror-sector
+- grading-and-parity
+- towers-by-residue
+odd-extensions.two-readings-which-which:
+- frozen-point
+- towers-by-residue
+- undetermined-input
+odd-extensions.two-towers-one-curved-universe:
+- cosmological-constant
+- mirror-sector
+- towers-by-residue
+one-relation.imported-flag-arrow-superselection:
+- matter-asymmetry
+- superselection
+- witt-index
+one-relation.imported-single-mode-thermality-modular-period:
+- hawking-temperature
+- modular-theory
+- descent-map
+pairing.pairing-class-transverse-derivative-null-direction:
+- pairing-and-bogoliubov
+- null-directions
+pairing.pairing-functional-pair-creation-amplitude:
+- pairing-and-bogoliubov
+- spinor-modules
+pairing.regular-frame-class-vanishes-horizon-changes:
+- pairing-and-bogoliubov
+- schwarzschild
+- horizons
+pairing.static-frame-only-expansion-survives:
+- pairing-and-bogoliubov
+- schwarzschild
+- null-directions
+pairing.two-frames-share-vacuum-selected-transport:
+- pairing-and-bogoliubov
+- horizons
+- schwarzschild
+pred.boundary-mode-density:
+- live-prediction
+- boundary-modes
+- mode-counting
+q.tower.odd-charge:
+- open-problem
+- towers-by-residue
+- limits
+rungs.imported-tower-one-qubit-per-rung:
+- ladder-pairs
+- spinor-modules
+rungs.rung-spinor-module-mixings:
+- spinor-modules
+- pairing-and-bogoliubov
+- ladder-pairs
+- hypotheses-s-r-c
+scrambling.area-law-test:
+- mode-counting
+- boundary-modes
+scrambling.boundary-mode-space-matrix:
+- boundary-modes
+- idempotents
+scrambling.candidate-principles-their-yields:
+- mode-counting
+- boundary-modes
+scrambling.catalogue-confronted:
+- confronted-with-data
+- live-prediction
+scrambling.clock-inventory-boundary-modes:
+- boundary-modes
+- modular-theory
+- hawking-temperature
+scrambling.consistency-car-construction-i-states-insensitivity:
+- car-algebra
+- boundary-modes
+scrambling.epoch-modular-period-two-unknowns-become:
+- live-prediction
+- entropy-premises
+- modular-theory
+scrambling.exact-factorisation-thinning:
+- mode-counting
+- schwarzschild
+scrambling.exactness-excludes-cutoff-dependence:
+- mode-counting
+- entropy-premises
+scrambling.imported-kostant-madore-partition-data:
+- classical-theorem
+- representation-theory
+- classification
+scrambling.imported-modes-modular-inventory:
+- modular-theory
+- rotors-and-stabilisers
+scrambling.imported-time-plane-modular-data:
+- classical-theorem
+- modular-theory
+scrambling.integer-holographic-form-identification:
+- live-prediction
+- mode-counting
+- boundary-modes
+scrambling.intrinsic-clock-ic-flagged-premise:
+- entropy-premises
+- boundary-modes
+scrambling.mode-count:
+- mode-counting
+- boundary-modes
+scrambling.no-attic-route:
+- open-problem
+- entropy-premises
+scrambling.no-echo-prediction-registered:
+- live-prediction
+- kerr
+- horizons
+scrambling.no-recount-reaches-quarter:
+- no-go
+- mode-counting
+scrambling.pair-mode-qubit-one-object:
+- ladder-pairs
+- witt-index
+- two-readings
+scrambling.per-slice-verification-two-failed-aggregations:
+- mode-counting
+scrambling.principality-indifference-sphere:
+- indifference
+- representation-theory
+- forcing-and-uniqueness
+scrambling.residue-each-convention:
+- mode-counting
+scrambling.return-delay-scrambling-log-recovered:
+- recovers-known-physics
+- boundary-modes
+scrambling.spreading-law-chaos-bound-saturated:
+- boundary-modes
+- recovers-known-physics
+scrambling.uniqueness-internal-scaling:
+- mode-counting
+- forcing-and-uniqueness
+- entropy-premises
+singularity.area-law-test:
+- mode-counting
+- boundary-modes
+singularity.ascended-marginals-are-diagonal:
+- descent-map
+singularity.assembled-page-curve-up-typicality:
+- radiation-spectrum
+- entanglement
+- classical-theorem
+singularity.bosonisation-bridge-s-wave-sector:
+- bosonisation
+- boundary-modes
+- radiation-spectrum
+singularity.bundle-maps-quantise-without-hopping: []
+singularity.c1-curvature-cutoff:
+- entropy-premises
+- schwarzschild
+singularity.c2-cell-density:
+- entropy-premises
+- mode-counting
+singularity.c3-counted-epoch:
+- entropy-premises
+- schwarzschild
+singularity.causal-epoch-computed-exactly:
+- schwarzschild
+singularity.chains-state-class-stability:
+- thermal-premises
+- entanglement
+- modular-theory
+singularity.class-relative-no-go-no-supplied:
+- no-go
+- thermal-premises
+- boundary-modes
+singularity.computed:
+- hawking-temperature
+- schwarzschild
+singularity.deficit-carried-quanta-correlations:
+- descent-map
+- entanglement
+singularity.deficit-theorem-cost-descent-exactly:
+- descent-map
+singularity.descended-form-state-independent:
+- descent-map
+singularity.descent-parity-average:
+- descent-map
+- grading-and-parity
+singularity.descent-what-it-erases:
+- descent-map
+singularity.envelope-endpoint-why-boundary-mode-locality:
+- entropy-premises
+- radiation-spectrum
+singularity.euclidean-rotor-where-it-lies:
+- rotors-and-stabilisers
+- hawking-temperature
+singularity.euclidean-section-period:
+- hawking-temperature
+- schwarzschild
+- recovers-known-physics
+singularity.eviction-window-thermal-product-radiation-entropy:
+- radiation-spectrum
+- boundary-modes
+singularity.exact-equilibrium-over-determines-boundary-modes:
+- thermal-premises
+- entanglement
+singularity.finite-truncation-meet-big-fibres-equals:
+- descent-map
+singularity.function-linear-endomorphisms-are-bundle-maps:
+- classical-theorem
+singularity.imported-descent-one-way-conditional-expectation:
+- descent-map
+- no-go
+singularity.imported-descent-one-way-conditional-expectation-external:
+- classical-theorem
+- descent-map
+singularity.imported-general-form:
+- classical-theorem
+- modular-theory
+singularity.imported-induced-geometry-interior-slice:
+- schwarzschild
+singularity.imported-surface-gravity-redshifted-acceleration:
+- classical-theorem
+- hawking-temperature
+- horizons
+singularity.imported-univalence-superselection-rule:
+- univalence
+- superselection
+- classical-theorem
+singularity.kms-uniqueness-factor:
+- modular-theory
+- forcing-and-uniqueness
+- classical-theorem
+singularity.l-boundary-mode-locality:
+- entropy-premises
+- boundary-modes
+singularity.l-stabiliser-tangent:
+- entropy-premises
+- pairing-and-bogoliubov
+- rotors-and-stabilisers
+singularity.matching-steps-4b-4c-join-equation:
+- modular-theory
+- hyperbolic-plane
+- rotors-and-stabilisers
+singularity.models-entropy-sequence-exactly:
+- finite-models
+- radiation-spectrum
+singularity.modular-descent:
+- modular-theory
+- descent-map
+- hawking-temperature
+- undetermined-input
+singularity.modular-flow-boundary-modes-holonomy-universal:
+- modular-theory
+- hawking-temperature
+- kasner
+singularity.modular-structure-completed-pair:
+- modular-theory
+- hyperbolic-plane
+- rotors-and-stabilisers
+singularity.modular-theory-matrix-factor-proved-outright:
+- modular-theory
+- classical-theorem
+singularity.net-assembly-net-it-everything: []
+singularity.no-attic-derived-model:
+- entropy-premises
+singularity.number-diagonal-dynamics-models-scrambling-derived:
+- entropy-premises
+- boundary-modes
+singularity.p-reduced-metric-level-reading-many:
+- univalence
+- descent-map
+singularity.p-univalence:
+- univalence
+- grading-and-parity
+singularity.parity-protection:
+- finite-models
+singularity.pinching-against-partial-trace-scope-coincidence:
+- descent-map
+- entanglement
+singularity.plane-rate:
+- hawking-temperature
+- forcing-and-uniqueness
+- schwarzschild
+singularity.purity-correlation-transfer-recovery:
+- finite-models
+- entanglement
+- radiation-spectrum
+singularity.purity-output-partner-commutant:
+- modular-theory
+- entanglement
+singularity.q-joint-quasi-freeness-s-wave:
+- thermal-premises
+- car-algebra
+singularity.r-regularity-fixed-locus:
+- thermal-premises
+- hawking-temperature
+- modular-theory
+singularity.rate-discharge-hypothesis-iii:
+- hawking-temperature
+- recovers-known-physics
+- modular-theory
+singularity.rate-models-kinematic-inputs-l-u:
+- entropy-premises
+singularity.rate-rigidity-temperature-not-algebra-intrinsic:
+- undetermined-input
+- hawking-temperature
+- modular-theory
+singularity.schmidt-forcing-proved-outright:
+- entanglement
+- forcing-and-uniqueness
+singularity.sheaf-assembly-sheaf: []
+singularity.stretched-singularity-count:
+- mode-counting
+- schwarzschild
+- boundary-modes
+singularity.two-kms-functionals-sign:
+- modular-theory
+- grading-and-parity
+singularity.two-levels-finite-model:
+- finite-models
+- descent-map
+- radiation-spectrum
+- entanglement
+singularity.universality-temperature-under-g:
+- hawking-temperature
+- modular-theory
+singularity.what-event-returns-radiation:
+- radiation-spectrum
+- entanglement
+singularity.why-calibration-cannot-be-internal:
+- no-go
+- undetermined-input
+- hawking-temperature
+- thermal-premises
+standard-model.imported-tower-commuting-copies-fock-module:
+- ladder-pairs
+- spinor-modules
+state-selection.ascended-marginals-are-diagonal:
+- descent-map
+state-selection.descended-form-state-independent:
+- descent-map
+state-selection.descent-parity-average:
+- descent-map
+- grading-and-parity
+state-selection.euclidean-partner-curvature-selected:
+- rotors-and-stabilisers
+- hawking-temperature
+state-selection.exact-equilibrium-over-determines-ledger:
+- thermal-premises
+- entanglement
+state-selection.imported-general-statement:
+- classical-theorem
+- modular-theory
+state-selection.imported-univalence-superselection-rule:
+- univalence
+- superselection
+- classical-theorem
+state-selection.kms-uniqueness-factor:
+- modular-theory
+- forcing-and-uniqueness
+- classical-theorem
+state-selection.l-ledger-locality:
+- entropy-premises
+- boundary-modes
+state-selection.number-diagonal-dynamics-models-scrambling-derived:
+- entropy-premises
+- boundary-modes
+state-selection.p-univalence:
+- univalence
+- grading-and-parity
+state-selection.partner-purification-are-canonical:
+- modular-theory
+- entanglement
+state-selection.r-regularity-fixed-locus:
+- thermal-premises
+- hawking-temperature
+- modular-theory
+state-selection.rate-discharge-hypothesis-iii:
+- hawking-temperature
+- recovers-known-physics
+- modular-theory
+state-selection.rate-rigidity-temperature-not-algebra-intrinsic:
+- undetermined-input
+- hawking-temperature
+- modular-theory
+state-selection.universality-temperature:
+- hawking-temperature
+- modular-theory
+state-selection.where-fermi-dirac-comes:
+- recovers-known-physics
+- grading-and-parity
+- radiation-spectrum
+tower.algebraic-limit-even-charge:
+- limits
+tower.answers-iteration-question:
+- car-algebra
+- limits
+tower.car-limit-even-charge:
+- car-algebra
+- limits
+tower.commuting-copies:
+- clifford-classification
+- hyperbolic-plane
+tower.compatibility-connecting-maps-transported: []
+tower.fock-module-one-qubit-per-rung:
+- spinor-modules
+- ladder-pairs
+tower.glimms-classification-car-uniqueness:
+- classical-theorem
+- car-algebra
+- limits
+tower.grade-twist-when-it-inner:
+- grading-and-parity
+- pseudoscalar-and-centre
+tower.ladder-pairs-satisfy-car-vectors:
+- ladder-pairs
+- car-algebra
+- two-readings
+tower.rigidity-clock-frozen:
+- towers-by-residue
+- clifford-classification
+- obstruction-types
+tower.structure-tower-c-norms:
+- car-algebra
+tower.volume-elements-planes:
+- pseudoscalar-and-centre
+- hyperbolic-plane
+tower.witt-index-quantum-capacity:
+- witt-index
+- ladder-pairs
+- two-readings
+transport.pinching-kernel:
+- descent-map

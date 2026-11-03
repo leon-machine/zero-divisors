@@ -1,0 +1,39 @@
+functions:
+  check_isotropic_pair_and_clifford_relations:
+    kind: exact
+    clauses:
+    - maximal isotropic dual pair (W, W') of dimension 3 exists
+    - c(w) wedge, c(w') contraction
+    - c(u)^2 = Q(u) id, so c extends to Cl(V_C)
+    omits: the pair is the explicit coordinate one (scaled by sqrt 2 against the paper's basis); anticommutators
+      are checked on all 36 basis pairs, which gives c(u)^2 = Q(u) for every u by polarisation
+  check_blade_products_span_all_endomorphisms:
+    kind: exact
+    clauses:
+    - c is an isomorphism Cl(V_C) -> End(Lambda W)
+    - Lambda W is the irreducible module
+    omits: uniqueness of the irreducible module is the standard simplicity of Mat_8(C), not computed; irreducibility
+      follows from rank 64
+  check_chirality_halves_and_even_subalgebra:
+    kind: exact
+    clauses:
+    - vectors act oddly
+    - CS and CS- have dimension 4
+    - Cl^0(2,4)_C = End(CS) + End(CS-)
+    omits: ''
+  check_dual_pairs_conjugate_under_orthogonal_group:
+    kind: sampled
+    clauses:
+    - any two such dual pairs are conjugate under O(V_C)
+    omits: three sample pairs (annihilators of two even and one odd sample spinor with a built complement) against
+      the coordinate pair; each conjugating map is exact and preserves the form, but not every dual pair is sampled
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Algebra, rank and block-diagonal claims are exact on the 8-dimensional model; only the conjugacy-of-all-pairs
+    clause is sampled.
+untouched_premises:
+  std-algebra.existence-uniqueness: standard algebra cited in the proof; the check computes the statement directly
+  std-algebra.complex-clifford-algebra: cited for the general complex Clifford algebra and Fock model; the check
+    verifies the series instance directly

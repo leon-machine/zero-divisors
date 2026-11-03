@@ -1,0 +1,14 @@
+functions:
+  check_projected_dilution_matches_this_tower:
+    kind: sampled
+    clauses: ["matter dilutes as a^-3 and radiation as a^-4 for a tower of any dimension, co-expanding or static extra directions"]
+    omits: "the P1 sourcing rule is encoded in the check's own projected() model; D = 2, 3, 4 spatial directions and four sample scale factors (24 cases)"
+  check_single_sheet_reading_is_excluded:
+    kind: sampled
+    clauses: ["the missing shared direction is filled by sheets, one per unit of comoving length"]
+    omits: "the excluded reading (a single fixed sheet) gives a^-2 and a^-3 at four sample scale factors; the statement does not itself discuss the excluded reading"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the dilution laws are verified in a model of the sourcing rule, so the check confirms the arithmetic given P1 as encoded"

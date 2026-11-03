@@ -1,0 +1,9 @@
+functions:
+  check_hyperbolic_plane_is_m2r:
+    kind: exact
+    clauses:
+    - '"extends to an isomorphism Cl(H) -> M_2(R)"'
+    - '"uw and wu are the complementary idempotents"'
+    - '"Cl(2,0) = M_2(R)"'
+    omits: nothing for Cl(1,1) and Cl(2,0); a general hyperbolic plane reduces to Cl(1,1) by the isometry
+      of the text

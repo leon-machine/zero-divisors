@@ -1,0 +1,18 @@
+functions:
+  check_musical_image_is_ker_k:
+    kind: sampled
+    clauses: ["for every v in ker k there is v-tilde with G(alpha, v-tilde) = alpha(v)"]
+    omits: "one generated frame per signature (p >= 1, 2 <= n <= 5) and two Schwarzschild wall Grams; per fibre the argument is complete (kernel Rk, rank n-1, image in ker k) but the fibres are samples"
+  check_solution_unique_modulo_k:
+    kind: sampled
+    clauses: ["v-tilde is unique modulo R k"]
+    omits: "the same fibres; four shifts t and a second solution obtained by a reversed-column solve (nonzero difference for 74 of 78 v, asserted to lie on R k), probes for gauge independence of G(alpha, v-tilde)"
+  check_normalisation_one_gauge:
+    kind: sampled
+    clauses: ["G(v-tilde, v-tilde) + 2 v-tilde(u) = 0 is met at exactly one gauge representative", "the left side is affine in the gauge parameter with slope 2 k(u) = 2"]
+    omits: "slope read at four values of t on the same fibres, two transversals with k(u) = 1; the quadratic term G(k,k) = 0 follows from the radical, not asserted separately"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Solvability, uniqueness mod Rk and the affine gauge normalisation are verified exactly per fibre on a fixed generated corank-one fibre for each (p,q) with p>=1, n<=5 plus two Schwarzschild walls. 2026-10-23 weak-check pass: the second solution in the uniqueness check came from a reversed-row solve, which returned vt itself (difference always zero); it now comes from a reversed-column solve, and the check asserts the difference is a nonzero multiple of k for some v."

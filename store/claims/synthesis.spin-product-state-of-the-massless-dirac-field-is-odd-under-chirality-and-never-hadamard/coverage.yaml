@@ -1,0 +1,28 @@
+functions:
+  check_spin_product_is_odd_and_current_even_under_chirality:
+    kind: complete
+    clauses: ["(i) Gamma(psi) = I4 psi I4 is an involution commuting with the unit, minus the grade involution, anticommuting with left vectors and commuting with left bivectors", "(i) the spin product is odd and the current even under Gamma; left vectors are symmetric for the spin product"]
+    omits: "all 16 x 16 pairs of basis blades of Cl(1,3), complete by bilinearity; the passage from these identities to Gamma A_F Gamma = -A_F on the solution space, and the spectral consequence, are proved in the text"
+  check_block_density_and_block_chirality:
+    kind: sampled
+    clauses: ["(iii) the block Hamiltonian H = M s3 + k s1 has slope s3 in M (the spin-product density)", "(iii) at m = 0 the block chirality s1 commutes with H and anticommutes with s3; the conformal vacuum's Bloch vector is s1"]
+    omits: "six Pythagorean (k, M, omega) and one massless sample; the reduction of the Dirac field to the blocks is the stored one, cited"
+  check_massless_spin_product_state_is_perpendicular_to_the_conformal_vacuum:
+    kind: sampled
+    clauses: ["(iii) at m = 0 the turned density is cos(2k eta) s3 + sin(2k eta) s2, so every weighted mean A is perpendicular to s1", "(iii) |beta_k|^2 = 1/2 over the conformal vacuum", "(i) block form: s1 A s1 = -A and Q + s1 Q s1 = 1"]
+    omits: "seven exact rational turns and five weight sets (discrete weights, to which the integral is linear), including radiation weights F a with a = eta; continuous weights follow by linearity and limits, argued"
+  check_massive_block_reproduces_the_fewster_lang_angle:
+    kind: sampled
+    clauses: ["(iii) A.h = (M/omega) F(0) and |A|^2 = (M/omega)^2 F(0)^2 + (k/omega)^2 |F(2 omega)|^2, so 1 - 2|beta_k|^2 = M F(0)/(omega |A|)"]
+    omits: "six Pythagorean (k, M, omega), four weight sets of discrete weights with exact rational turns; the integral is linear in the weight"
+  check_sharp_collar_does_not_decay_and_the_softened_bound:
+    kind: partial
+    clauses: ["(iv) along omega T = (n + 1/2) pi, (1 - 2|beta_k|^2)^2 decreases to M^2T^2/(M^2T^2 + 1) = 9/25 at MT = 3/4, |beta_k|^2 -> 1/5, and |beta_k|^2 >= (1 - 2^(-1/2))/2 for k >= 3M", "(iv) the softened bound from (1 + x)(1 - x/2)^2 = 1 - 3x^2/4 + x^3/4"]
+    omits: "five sample momenta for the monotone limit; the Hadamard conclusions for the sharp and softened slabs are imported from Fewster and Lang (Thms 3.4, 3.5)"
+  check_conformal_weight_of_the_spin_product:
+    kind: exact
+    clauses: ["(iii) psi = a^(-3/2) chi and dvol = a^4 give the flat weight F a; the current keeps weight zero"]
+    omits: "exponent arithmetic only; the conformal covariance itself is the imported Fact"
+untouched_premises:
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: 'imported fact (the massless Dirac field rescales with weight 3/2 and keeps its current) cited in (iii); only its exponent is computed'
+  synthesis.attachment-conformal-energy-is-generated-by-z: 'stored theorem cited for the contrast in (v) (the twistor form selects the conformal vacuum); nothing is computed from it'

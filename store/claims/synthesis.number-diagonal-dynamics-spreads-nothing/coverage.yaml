@@ -1,0 +1,20 @@
+functions:
+  check_diagonal_support_never_grows:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iv)
+    omits: Four modes and two fixed number-diagonal Hamiltonians (with and without a three-body term); (i) is tested as ad^m(v_0) = v_0(-2H_1)^m for m <= 5 and not as the phase flow for real t; (ii) is tested as the algebraic support of those nested commutators, not as t-independence of out-of-time-order correlators; (iv) is the hop reach [1,2,3] for m = 1..3
+  check_real_time_dressing_exact:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    omits: One time (cos Jt = 3/5) with uniform couplings on four modes; the dressing identity U v_0 U^-1 = v_0 prod(cos 2 - i sin 2 sigma_k) is exact, but the weight distribution and mean size 3 sin^2 are evaluated from the stated binomial formula rather than read off the evolved operator; the equal-norm orthogonality of v_0 sigma_S, the almost-periodicity, the first-half-window time pi/(8J) and the closing claims about every (L_E) generator are not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Clifford checks of the nested commutator form, the support bound, the real-time dressing at one time and the contrast with a hopping generator on four modes.

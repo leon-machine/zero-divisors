@@ -1,0 +1,29 @@
+functions:
+  check_gtg_fields_torsion_free_and_store_curvature:
+    kind: sampled
+    clauses: ["(1) parenthetical: for a gravitational field on flat spacetime Omega_T(a) uses e_a = hb^{-1}(a) and the Schouten map of the field"]
+    omits: "two FLRW fields (de Sitter, dust) at one point; torsion-freeness, the store curvature and the Schouten map are the setup the later checks use, not clauses of the statement"
+  check_tractor_gauge_field_decomposition:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "two sample fields, four directions, one sample tractor; Omega_T is built from the displayed formula, so the check tests the structure (Levi part commutes with n0 and ninf, soldering in ninf ^ W, Schouten in n0 ^ W and abelian, the tractor slots, metric) and not the formula itself; identification of the Schouten summands as the nilradical of the parabolic is not tested; the spin lift assumption is not tested"
+  check_grading_weights_and_spinor_blocks:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "rho(E) = +1/2 on S_omega and -1/2 on S_pi is exact in the fixed model; the weights and the block structure of the two summands are checked for two fields and four directions"
+  check_summand_composite_and_equivariance:
+    kind: partial
+    clauses: ["(3)"]
+    omits: "only the composite sigma_a tau_c = (1/2) c(e_a) c(P(e_c)) = (1/2) P_ac id + rho(e_a ^ P(e_c)) on S_omega (16 pairs, two fields) and Levi-equivariance of the soldering summand on S_pi are checked; the epsilon and Schouten contractions with constants c_1, c_2, the lambda scaling, uniqueness up to scalar, and the Penrose-Rindler comparison (an imported convention) are not computed"
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+  correspondence.chiral-planes-summand-spaces: "supplies uniqueness of the summand maps up to a scalar; the check computes the composite directly and does not test uniqueness"
+  correspondence.imported-stabilisers-flat-model: "supplies the nilradical identification of the Schouten summand; the check verifies only that the Schouten summands commute and fix n0"
+  correspondence.spin-representation: "rho(B) psi = B psi / 2 is used as the definition of the spin action in the model"
+  correspondence.fock-model-complexified-ascended-algebra: "the conformal spinor space is realised as Cl^+(2,4) P through the imported Fact's model, not through the Fock model"
+  correspondence.imported-tractor-connection-local-twistor-transport-external: "cited only in the standard-route derivation"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks cover the decomposition, grading blocks and the composite on two sample fields; the index-form identification and its convention are explicitly outside the checks, as the statement itself says."

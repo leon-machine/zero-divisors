@@ -1,0 +1,22 @@
+functions:
+  check_ew_elimination_rank_one_up:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "re-derives M_nu = m_t(e3 e3^T - fhat) and (M_nu)_33 = 0 from the imported Clebsch relations (M_u = Y + w_u f, M_nu = Y - 3 w_u f, M_d = Z + w_d f, M_e = Z - 3 w_d f taken as inputs) for two rational symmetric samples; the singular-value reading sigma_1(N) = 1 or m_b/m_t of Hypothesis (U) is not tested"
+  check_rank_one_readings:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "trace eps^2 and determinant -eps^2 of N on the 2-3 block (degree-2 identity checked at five eps values, hence exact), so the nonzero eigenvalues solve l^2 - eps^2 l - eps^2 = 0; eigenvalue pairs (1, -1/2) at eps^2 = 1/2 and (r, -r/(1+r)) at eps^2 = r^2/(1+r); N = 0 at eps = 0; 'exactly at' (uniqueness of eps^2) is not asserted"
+  check_diagonal_order_excludes_both_readings:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the bounds (m_mu - m_s)/(m_b + m_tau) = 776/31291 > 0.0247 > m_b/m_t and max(m_d + m_e, m_s + m_mu)/(m_tau - m_b) < 0.326 < 1 are exact; 'for every choice of phases' is confirmed on 6 Pythagorean phases for each of u2, v2, u3, v3 for the d2/d3 ratio only (the triangle-inequality proof is not coded and d1/d3 is not sampled)"
+  check_rank_one_witness:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "fhat = e3 e3^T + mu e2 e2^T through the Clebsch relations gives M_nu = -mu m_t e2 e2^T with (M_nu)_33 = 0, exactly rank one with sigma_1 = mu m_t, at mu = 1 and mu = m_b/m_t only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) to (iii) reproduced; clause (iv) is a citation to a filed result and has no function here"

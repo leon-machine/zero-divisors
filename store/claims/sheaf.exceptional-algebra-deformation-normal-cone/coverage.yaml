@@ -1,0 +1,18 @@
+functions:
+  check_rescaled_limit_and_signature:
+    kind: sampled
+    clauses: ["rescaled forms converge to G0|V1 + Gdot(k,k) as t -> 0+", "cross terms suppressed by sqrt t", "physical-side limit has signature (p,q)"]
+    omits: "polynomial families G0 + t Gdot + t^2 G2 with fixed integer entries for each (p,q), p >= 1, n <= 4, and T = 3, -2; general smooth G(t) with O(t^2) remainder not covered"
+  check_special_fibre_is_the_limit_algebra:
+    kind: sampled
+    clauses: ["the rescaled Clifford family is a continuous family of nondegenerate algebras through t = 0", "the special fibre is Cl(V1 + R k, G-hat)"]
+    omits: "blade basis and c(a)^2 = R(s)(a,a) at s = 0 and two other s, one vector a; agreement of the s = 0 fibre with the limit form is compared on c(e_i)c(e_j) acting on the vacuum only; continuity of structure constants in s is not tested directly"
+  check_limit_independent_of_choices:
+    kind: sampled
+    clauses: ["independent of the choice of complement and of the scales of k and t up to canonical isomorphism"]
+    omits: "fixed sample shifts c_i, scalings c = 3, -2, 1/2 and a = 4, 9/4; shows the limit forms are related by explicit isometries, 'canonical' (naturality) is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Convergence to the limit form, the special-fibre algebra and choice-independence are verified on generated polynomial transversal families for all (p,q) with n<=4; the algebra-level agreement is tested on the vacuum state only.

@@ -1,0 +1,25 @@
+functions:
+  check_no_ascent_not_simple:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "the six type-C signatures with n <= 5 only (all of them at those sizes); non-simplicity is shown by the nontrivial central idempotent eps_+, simplicity of the pieces not needed"
+  check_null_generator_thickens:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the six signatures with n <= 5 only; the checks (J = A nu has dimension 2^n, two-sided ideal on all blade pairs, J^2 = 0, B_0 / J = A via the multiplicative projection) are exact per signature"
+  check_nondegenerate_ascents_simple_isomorphic_not_isometric:
+    kind: sampled
+    clauses: ["(3)", "the two ascents are isomorphic as algebras but not isometric"]
+    omits: "six signatures with n <= 5; simplicity and B = Mat_2(Cl^0(p,q)) are inferred from centre = R and corner dimension via the Rule-2 premise, not tested directly; the final classification 'minimal simple completions are exactly the two one-generator ascents' is not tested separately"
+  check_two_directions_double_again:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "six Gram matrices, each with exactly two extra directions (dim V' = n + 2, n = 1 or 3); dim V' > n + 2 not tested"
+untouched_premises:
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is tested exactly on small signatures (n <= 5), so sampled; the closing classification statement rests on (1)-(4) and the premises and has no function of its own. 2026-10-23 weak-checks pass: check_nondegenerate_ascents_simple_isomorphic_not_isometric now asserts eps_+ idempotent, checks anticommutation over all ordered pairs, and computes the non-isometry signatures from the Gram matrices of the two ascents instead of hand-built diagonals"

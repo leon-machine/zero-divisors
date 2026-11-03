@@ -1,0 +1,28 @@
+functions:
+  check_corank_one_differential_is_delta:
+    kind: sampled
+    clauses: ["(1) background: at a transverse corank-one point d det G = c H(k,k) with c != 0, in contrast to corank two"]
+    omits: "not a clause of the statement; six corank-one 4 x 4 matrices (two congruence classes P times three diagonal signatures) and four directions each, with both H(k,k) = 0 and H(k,k) != 0 occurring"
+  check_transverse_corank_two_three_signatures:
+    kind: sampled
+    clauses: ["(2) every neighbourhood meets (p0+2,q0), (p0+1,q0+1), (p0,q0+2)", "(2) if (1,3) is one of them, (2,2) is another"]
+    omits: "n = 4 in the normal form A(x) (+) B with A(x) a 2 x 2 symmetric matrix linear in x and B one of three constant blocks; five sample points at each of three scales, plus a diagonal sample for corank r = 1, 2, 3 giving r + 1 signatures; that a transverse cometric reduces to this normal form is not tested, nor general n"
+  check_cone_is_not_a_hypersurface:
+    kind: sampled
+    clauses: ["(1) det G vanishes to second order at the corank-two point", "(1) the zero set is not a smooth hypersurface there, so (T1) and (T2) fail", "(1) corank-two points form a codimension-three set, worldlines when n = 4"]
+    omits: "model cone with B = -1 on n = 4 only: zero linear coefficient along six lines, a nonzero quadratic coefficient, four independent lines in the zero set (which a smooth hypersurface cannot contain), and rank 2 along the x_4 axis; the quadric-cone form times R^(n-3) and general n are not tested"
+  check_corank_two_point_survives_perturbation:
+    kind: sampled
+    clauses: ["(1) every cometric C^1-close to G has a transverse corank-two point near x"]
+    omits: "two constant perturbation matrices at three eps values (corank-two point found within 10 eps) and one position-dependent perturbation A + eps L at two eps and three x_4; no C^1-neighbourhood, no transversality of the perturbed point, and the conclusion that the non-tame cometrics contain a nonempty C^1-open set are not tested"
+  check_tame_wall_is_two_signature:
+    kind: sampled
+    clauses: ["(2) contrast: a transverse corank-one wall separates exactly two signatures differing by one swap"]
+    omits: "not a clause of the statement; two rest blocks at eps = 1/5"
+untouched_premises:
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(1) and (2) are tested on the n = 4 normal-form cone; clause (3) (n = 2: no corank-two point, tame) has no computation"

@@ -1,0 +1,14 @@
+functions:
+  check_boost_algebra_and_isotropy_centraliser:
+    kind: exact
+    clauses: [(iv), '(ii) algebraic core: B_b in R B_1, B_c in R R_23']
+    omits: 'Exact rank computations in Cl(1,3): the bivectors commuting with R_23 are span{B_1, R_23} and nothing nonzero commutes with all three rotations; the existence and KMS part of (ii) (a faithful (alpha, beta)-KMS state) is not computed here.'
+  check_isotropy_invariant_kms_is_t_boost_only:
+    kind: sampled
+    clauses: [(ii)]
+    omits: 'Three rational (cosh, sinh) values for beta and three rational R_23 rotors: the B_1-Gibbs element is invariant, the B_2- and B_3-Gibbs elements are not; only pure boost flows (B_c = 0) are tried, so the K = (B_b + i B_c)/2 mixed case and the "if" direction with B_c in R R_23 are not computed; uniqueness of the KMS state on the simple atom is used implicitly.'
+  check_kasner_rates_fix_isotropy_only:
+    kind: sampled
+    clauses: [(i)]
+    omits: Kasner rate tensor and the first-order collar rates at R = 1/10 and 1/4, with two rotation angles per plane; the angle exclusion "nonzero angle mod pi" is tested only at two sines.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Clauses (i), (ii) and (iv) are covered at sample values (centraliser dimensions exact); clause (iii) (same beta over the sphere) has no check.'}

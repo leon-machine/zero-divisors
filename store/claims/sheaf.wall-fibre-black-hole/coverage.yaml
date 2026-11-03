@@ -1,0 +1,20 @@
+functions:
+  check_square_zero_ideal_of_half_dimension:
+    kind: sampled
+    clauses: ["J = Ak = kA", "J^2 = 0", "dim J = 8"]
+    omits: "exact finite algebra computation, but only at masses m = 1, 2, 3/2; the statement is for every point of E"
+  check_quotient_is_cl12:
+    kind: sampled
+    clauses: ["A/J = Cl(1,2)"]
+    omits: "masses m = 1, 2, 3/2 only; shows A = B + J with B the sub-Clifford algebra on rho, mu1, mu2 of induced signature (1,2), the isomorphism A/J = B is read from B meeting J in 0"
+  check_cl12_is_mat2_complex:
+    kind: sampled
+    clauses: ["Cl(1,2) = Mat_2(C)"]
+    omits: "explicit Pauli-matrix representation verified at m = 1, 2, 3/2 only (formula is uniform in m but not checked symbolically)"
+untouched_premises:
+  primer.classification-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each function tests its clause by finite algebra at three sampled masses; docstring states the masses."

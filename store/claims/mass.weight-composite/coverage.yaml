@@ -1,0 +1,18 @@
+functions:
+  check_induced_weight_principal_series:
+    kind: sampled
+    clauses: ["w = -3/2 +- i nu with nu^2 = 6|B_Lambda|^2/Lambda + C - 9/4", "the real part is -3/2"]
+    omits: "seven pairs at Lambda/6 = 1/2 and 2; m^2 is computed from the grip (independent of the closed formula) and compared; w is shown to solve -w(w+3) = m^2/H^2 for three values of nu; the expansion nu = m/H - (9/8) H/m + O((H/m)^3) is not tested here"
+  check_real_weight_exactly_below_threshold:
+    kind: sampled
+    clauses: ["the weight is real exactly when 6|B_Lambda|^2/Lambda + C <= 9/4"]
+    omits: "six composites at one Lambda (massless non-doubled, two doubled at m^2/H^2 = 1 and 9/4, three generic); with m^2/H^2 matched to the closed formula the iff reduces to the sign of the discriminant"
+  check_leading_order_im_w:
+    kind: sampled
+    clauses: ["for |B_Lambda| >> H sqrt(C), Im w = sqrt(2) |B_Lambda|/H at leading order"]
+    omits: "one pair at Lambda/6 = 1/2 scaled by t = 1, 10, 100; pins B(t) = t^2 <pi1 pi2> + lam [omega1 omega2], C(t) = t^2 C(1) and the relative error nu^2 H^2/(2|B|^2) - 1 = lam (C - 9/4)/|B|^2 exactly (m^2 from the grip), with nonzero leading coefficients so it decays like t^-2, and checks |rel| and |t^2 rel - lam C(1)/|<pi1 pi2>|^2| decrease at the samples; not an asymptotic proof; the claim that this is the regime of every known particle is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_leading_order_im_w replaced the loose numeric thresholds (rel < 1/1000, a factor-1000 drop) by exact pins: B(t) and C(t) scaling, the closed form rel = lam (C - 9/4)/|B|^2 with m^2 from the grip, nonzero leading coefficients, and monotone approach of t^2 rel to its limit"

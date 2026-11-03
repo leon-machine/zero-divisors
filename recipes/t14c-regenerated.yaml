@@ -1,0 +1,56 @@
+doc: t14c-regenerated
+title: 'The Matter in the Dark Towers: Companion note to T14: what each tower is made of, built by the
+  Standard-Model paper''s construction in geometric algebra (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- dark-tower-matter.imported-towers-their-types
+- dark-tower-matter.imported-clifford-structure
+- dark-tower-matter.imported-our-towers-chain
+- dark-tower-matter.imported-unit-ball-rule
+- dark-tower-matter.imported-cluster-simulations
+- obj.dark-tower-matter.ideals-fields-momentum
+- dark-tower-matter.constituents-field
+- dark-tower-matter.adjoint-norm
+- dark-tower-matter.where-mass-begins
+- dark-tower-matter.ladder
+- dark-tower-matter.pairs
+- dark-tower-matter.third-pairs-unit-five-dimensions
+- dark-tower-matter.gauge-algebras
+- dark-tower-matter.three-dimensional-content
+- dark-tower-matter.five-dimensional-content
+- dark-tower-matter.anomalies
+- dark-tower-matter.residue-seven-unit
+- dark-tower-matter.same-kind-matter
+- dark-tower-matter.mirror-algebra
+- dark-tower-matter.mirrors-temperature-p2
+- dark-tower-matter.mirrors-composition
+- dark-tower-matter.mirror-against-record
+- dark-tower-matter.three-dimensional-phases
+- dark-tower-matter.survival-sheets
+- dark-tower-matter.five-dimensional-towers
+- dark-tower-matter.r1-has-no-mechanism-odd-towers
+- dark-tower-matter.population
+- dark-tower-matter.sterile-kinematics
+- dark-tower-matter.towers-built
+show: spine-only
+paper: T14c
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../Claude outputs/dark_tower_matter_2026-10-20/T14c_dark_tower_matter.tex
+  note: Recreate T14c from the store
+cite: []
+prose: paper

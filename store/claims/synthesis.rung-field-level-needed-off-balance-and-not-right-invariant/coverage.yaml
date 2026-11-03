@@ -1,0 +1,19 @@
+functions:
+  check_level_necessary_for_an_off_balanced_vacuum:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "three W (a quadratic and a cubic with constants, and a quadratic tuned to xi = 0) in two frames at H^2 = 2, g = 2/3, g' = 1/2, by exact Hessians on L; the general statement rests on the two-line elimination in the proof, not on the samples"
+  check_commutant_of_weak_su2_is_su2_containing_hypercharge:
+    kind: complete
+    clauses: ["(2)"]
+    omits: "the commutant is computed over all 32 real coordinates of complex-linear maps; that real-linear maps reduce to complex-linear ones is argued in the proof, and the identification with the Pati-Salam su(2)_R is a reading of the stored decomposition"
+  check_right_moment_maps_and_the_orbit_of_m:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "moment-map identities at seven points; Cayley elements at four t on three generic points and two frames; the continuity argument that the orbit meets the whole fibre is in the proof"
+  check_level_not_right_invariant_and_mirror_in_right_group:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "invariance of the left plus right D-term at four t and four points, non-invariance of V_0 + k mu_Y for two k and of the level D-term at three frames, the mirror at three frames, all at H^2 = 2"
+untouched_premises:
+  synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors: "imported Fact: clause (2) makes the standard abelian-only statement explicit on the rung summand and the check computes the commutant directly; nothing reached through premise()"

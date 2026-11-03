@@ -1,0 +1,41 @@
+{
+ "doc": "trail-singularity",
+ "version": 8,
+ "claims": [
+  "pairing.imported-weyl-scalars-petrov-type-schwarzschild@2",
+  "primer.classification-real-clifford-algebras@3",
+  "sheaf.localised-transport@5",
+  "sheaf.one-sided-completion-singularity@4",
+  "sheaf.one-sided-completion@4",
+  "sheaf.schwarzschild-degeneration-boundary-tame@6",
+  "singularity.cones-fold@4",
+  "singularity.connection-bivector-computed@4",
+  "singularity.curvature-gauge-field-exact-shape-decoupling@4",
+  "singularity.degeneration-exactly@2",
+  "singularity.imported-equivalence-einstein-equations@2",
+  "singularity.imported-one-sided-completion-singularity@5",
+  "singularity.non-removability-invariant-argument@2",
+  "singularity.solution-where-divergence-lies@3",
+  "singularity.type-n-only-type-n@5",
+  "singularity.unipotent-ray@3",
+  "std-algebra.orthogonal-anticommute@1",
+  "std-algebra.sta-matrix@1",
+  "tower.rigidity-clock-frozen@5",
+  "transport.existence-classification-type-c@4",
+  "transport.existence-locus-type-n@5",
+  "transport.type-p-self-repairing@2"
+ ],
+ "recipe_hash": "109c626af84c",
+ "generated": "2026-11-02T16:31:37+00:00",
+ "spine": [
+  "singularity.unipotent-ray",
+  "singularity.connection-bivector-computed",
+  "singularity.solution-where-divergence-lies",
+  "singularity.curvature-gauge-field-exact-shape-decoupling",
+  "singularity.non-removability-invariant-argument",
+  "singularity.degeneration-exactly",
+  "singularity.cones-fold",
+  "singularity.type-n-only-type-n",
+  "singularity.imported-one-sided-completion-singularity"
+ ]
+}

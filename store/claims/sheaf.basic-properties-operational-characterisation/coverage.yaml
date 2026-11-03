@@ -1,0 +1,18 @@
+functions:
+  check_free_of_rank_four_with_bounded_norms:
+    kind: exact
+    clauses: ["locally free of rank four", "coincides with the cotangent module away from E"]
+    omits: "exact in u for the frame determinant u^5, but norms and cometric at m = 1, 2 only; that the frame generates W is the definition, not computed"
+  check_rain_characterisation_algebra:
+    kind: partial
+    clauses: ["a u-smooth one-form lies in W iff all four rain-frame components are bounded"]
+    omits: "only the algebraic part at sample polynomial coefficients and m = 1, 2; the analytic Taylor division and the only-if direction for general smooth forms are not computed"
+  check_rho_not_smooth_at_order_one:
+    kind: partial
+    clauses: ["order two is minimal for W to admit a smooth frame", "at order one rho = r^{1/2} dr is not smooth"]
+    omits: "non-smoothness is shown by unbounded difference quotients at r = 1/n^2 for six n; the p(r)^2 = r obstruction by its low coefficients and the even valuation of p^2 on a grid of 215 nonzero quadratics, not symbolically; minimality (no other smooth order-one frame) is argued in the paper, not computed"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "renamed check_order_two_is_minimal to check_rho_not_smooth_at_order_one; added asserts for the p(r)^2 = r obstruction (low coefficients a0^2, 2 a0 a1 and even valuation on a grid of 215 quadratics); docstring marks minimality as argued, not computed"

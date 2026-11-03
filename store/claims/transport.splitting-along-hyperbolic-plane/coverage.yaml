@@ -1,0 +1,16 @@
+functions:
+  check_hyperbolic_pair_and_unique_expansion:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "nine diagonal forms on U' with dim U' <= 3 (degenerate included) and two normalisations of the pair; basis property is exact per case by rank 2^(k+2), the expansion is rebuilt for one sample element; no non-orthogonal U' block, no dim U' > 3"
+  check_left_multiplication_by_v_injective_on_cl_u:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "same nine forms and two pairs; rank 2^k on Cl(U') (and half rank on Cl(V') as a contrast)"
+untouched_premises:
+  primer.splitting-along-hyperbolic-plane: "the claim restates the primer statement (equivalent_to); the checks recompute the basis and injectivity directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both clauses are exact rank computations on nine small forms; the statement is for every U', so sampled."

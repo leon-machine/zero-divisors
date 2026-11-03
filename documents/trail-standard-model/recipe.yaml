@@ -1,0 +1,37 @@
+doc: trail-standard-model
+title: The Standard Model
+author: Leon Butler
+level: lay
+spine:
+- standard-model.internal-symmetry-ladder
+- standard-model.gauge-algebra-minimal-massive-composite
+- standard-model.four-dimensions-forces-converse
+- standard-model.global-form-quotient-determined
+- pred.z6-charge-lattice
+- standard-model.quarks-leptons-two-level-fermion-content
+- standard-model.hypercharge-global-form-pair-counting-consistency
+- standard-model.under-s-composites-state-space-spinor
+- standard-model.weak-angle-over-derived-generation
+- standard-model.spectrum-run
+- standard-model.chain
+- synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
+- synthesis.rung-field-on-the-lift-locus
+- synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
+- synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
+- synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
+- synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
+- synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint
+- synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch
+- synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

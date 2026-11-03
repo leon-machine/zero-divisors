@@ -1,0 +1,14 @@
+First, the lifted points exhaust the non-ideal rays: if $N = s\nO + x + t\nInf$ is null with $s \neq 0$, then rescaling by $s^{-1}$ puts it in the form $\nO + x' + t'\nInf$ with $Q(x') = 2 \cdot 1 \cdot t'$ forced by nullity (see \eqref{eq:incidence} below), i.e.\ $N \in [X(x')]$. Second, the invertible points are dense in $\mathbb{V}$: for any $x$, pick $a$ with $Q(a) \neq 0$; then $t \mapsto Q(x + ta) = Q(x) + 2t\,(x \cdot a) + t^2 Q(a)$ is a nonconstant polynomial, hence nonzero for all small $t \neq 0$, and $x + ta \to x$. By continuity of the lift, the lifted invertible points are dense in the set of \emph{all} lifted points. It remains to show every ideal point is a limit of lifted invertible points; we exhibit explicit paths.
+
+\emph{Ideal points with $x \neq 0$.} Let $[\,x + t\,\nInf\,]$ be ideal, so $Q(x) = 0$, $x \neq 0$, $t \in \R$. By nondegeneracy choose $u \in \mathbb{V}$ with $x \cdot u = 1$, and for $s > 0$ set
+\[
+y_s \;=\; s\,x + \bigl(t + \tfrac{1}{s}\bigr)\,u .
+\]
+Then $Q(y_s) = 2s\bigl(t + \tfrac1s\bigr) + \bigl(t + \tfrac1s\bigr)^2 Q(u) = 2ts + 2 + \bigl(t + \tfrac1s\bigr)^2 Q(u)$, which is nonzero for all large $s$: if $t \neq 0$ the term $2ts$ dominates the remaining bounded terms, and if $t = 0$ the expression tends to $2$. So $y_s$ is eventually invertible. The rescaled representative
+\[
+\tfrac{1}{s}\,X(y_s) \;=\; \tfrac{1}{s}\,\nO + x + \tfrac{1}{s}\bigl(t + \tfrac1s\bigr)u + \tfrac{Q(y_s)}{2s}\,\nInf
+\;\longrightarrow\; x + t\,\nInf \quad (s \to \infty),
+\]
+since $\tfrac{Q(y_s)}{2s} = t + \tfrac1s + O(1/s) \to t$. The limit vector is nonzero, so by continuity of $\pi$, $[X(y_s)] \to [\,x + t\,\nInf\,]$.
+
+\emph{The ideal point $[\nInf]$.} Pick any $a$ with $Q(a) \neq 0$ and set $y_s = s\,a$. Then $\tfrac{2}{s^2 Q(a)} X(y_s) = \tfrac{2}{s^2 Q(a)} \nO + \tfrac{2}{s\,Q(a)}a + \nInf \to \nInf$.

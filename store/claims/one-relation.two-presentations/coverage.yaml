@@ -1,0 +1,25 @@
+functions:
+  check_orthogonal_reading_is_the_metric:
+    kind: sampled
+    clauses:
+    - '"On an orthogonal basis the relation displays a metric: {e_a, e_b} = 2 g_ab"'
+    omits: Cl(1,1), Cl(1,3), Cl(2,4) only; the vacuum Einstein equations and tractor parallelism of the geometry paper are cited, not tested
+  check_witt_reading_is_the_car:
+    kind: sampled
+    clauses:
+    - '"On a Witt basis ... {c(w_i), c(w_j)} = 0, {c(w_i), c(wbar_j)} = delta_ij" (CAR of dim W modes)'
+    - '"Over R the same reading is available on the real null pairs alone"'
+    omits: the three algebras Cl(1,1), Cl(1,3)_C, Cl(2,4)_C with 1, 2, 3 pairs; the real-only reading is exhibited for the real pairs inside these cases, the count of real pairs is the capacity claim
+  check_fock_module_from_the_vacuum:
+    kind: sampled
+    clauses:
+    - '"with the Fock module supplied by the pure-spinor construction"'
+    omits: the same three algebras; the span of w_K Omega has dimension 2^r and is closed under the generators, but the general pure-spinor construction is the imported Fact
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the kinematic identification is checked on three explicit algebras; the dynamical levels are explicitly outside the claim
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"

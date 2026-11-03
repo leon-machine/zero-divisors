@@ -1,0 +1,20 @@
+functions:
+  check_phase_window_from_the_split:
+    kind: complete
+    clauses: ["(i) r(d_lo) < r_min, r(d_hi) > r_max, tight at 10^-11", "(i) positive ordered roots on the window, p_1 < 0 past pi/12", "(i) 2/9 < pi/12"]
+    omits: "strict monotonicity of r on (0, pi/12) is proved in the proof text; the check tests it on ten sample points"
+  check_two_ninths_is_excluded:
+    kind: complete
+    clauses: ["(ii) r(2/9) in (206.7703, 206.7704), above r_max by more than 400 sigma_mu/m_e", "(ii) 2/9 - d_hi > 1.7e-7"]
+    omits: "the free-depth fit at delta = 2/9 (Q - 2/3 = -1.4e-7, tau 1776.967 MeV) is floating point, in the proof text only"
+  check_no_simple_rational_phase:
+    kind: complete
+    clauses: ["(iii) least denominator 630131 in the delta* window, with the window recertified against the stored masses"]
+  check_no_symmetry_angle:
+    kind: complete
+    clauses: ["(iv) Machin bounds on pi", "(iv) least denominator 25249 in the delta*/pi window, so b <= 4208 excluded on the orbit, with the window recertified against the stored masses"]
+    omits: "the reading that finite-order stabilisers give rational multiples of pi is argued, not computed"
+  check_elasticity_of_the_split:
+    kind: sampled
+    clauses: ["(v) elasticity in (12.4, 12.5)"]
+    omits: "difference quotient at epsilon = 10^-6 at the two window ends, not the derivative"

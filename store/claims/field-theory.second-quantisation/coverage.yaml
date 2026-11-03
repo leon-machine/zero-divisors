@@ -1,0 +1,22 @@
+functions:
+  check_lambda_is_orthogonal_projector_onto_ker_k:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "three null momenta k = (1,0,0,1), (5,3,4,0), (3,2,1,2); exhaustive over the 8 even blades for each"
+  check_field_anticommutator_is_local_kernel:
+    kind: partial
+    clauses: ["(2)"]
+    omits: "establishes only the discrete identity (no tower part; equals <phi1, sum_j 2 alpha_j cos(k_j.xi) Lambda(k_j) chi phi2>) for three modes, sample phases and three test spinors, with the control that dropping the projection fails, the explicit sum_j 2 alpha_j cos(k_j.xi) Lambda(k_j) chi form asserted for both eps = +1 and -1; the continuum form chi(nabla D)gamma_0 with D the Pauli-Jordan function is imported, and 'so the field is local' (vanishing outside the light cone) is not tested"
+  check_bilinears_are_second_quantised_operators:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "M = 1, gamma_01, gamma_12 only, three particle modes of one chirality; normal ordering of the antiparticle terms is checked as the c-number difference sum_j alpha(f_j, f_j)"
+  check_mixed_chirality_split_forced_by_i_equals_I4:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "three modes, sample phases and test spinors; that Hestenes' unit I sigma_3 is frame-dependent is not tested (only that it commutes with the tower vectors and that exactly one sign reproduces the whole-Dirac anticommutator)"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "explicit cos-Lambda sum now asserted for eps = -1 as well as +1, matching docstring (2); continuum locality (imported) and frame dependence of I sigma_3 remain listed in omits"

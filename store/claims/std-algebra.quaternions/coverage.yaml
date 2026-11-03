@@ -1,0 +1,8 @@
+functions:
+  check_hamilton_relations:
+    kind: exact
+    clauses:
+    - '"i^2 = j^2 = k^2 = ijk = -1"'
+    - '"Cl+(3,0) is isomorphic to H"'
+    - '"Cl(0,2) is isomorphic to H"'
+    omits: 'nothing: the relations and spans are finite computations'

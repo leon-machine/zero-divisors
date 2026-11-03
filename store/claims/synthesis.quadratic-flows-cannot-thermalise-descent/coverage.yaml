@@ -1,0 +1,21 @@
+functions:
+  check_conserved_quadratic_charges:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: One generic real symmetric 3x3 k and Q_n for n = 0..3, one boost weight triple, pairwise products sigma_j sigma_k added to the boost generator (not every element of the algebra they generate), and one occupation-moving term (hop times N_3) with its exact commutator with N_1
+  check_occupations_frozen:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: One gauge-invariant descent correlation matrix C on three modes; the flow is replaced by the Cayley unitary (1 - i s k)(1 + i s k)^-1 of the same k (exactly unitary, same invariants), not exp(i t k), so the phases e^{i(omega_i - omega_j)t} and the pairing phases e^{-i(omega_i + omega_j)t} are not tested; the statement for every state, for non-quasi-free states and the convergence statement are not tested
+  check_thermofield_restriction:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'Three pure pair states c|00> + s|11> with c^2 + s^2 = 1: the restriction is gauge invariant with occupation s^2 and Gibbs ratio s^2/c^2; (iv) is a consequence of (i) to (iii) and is not computed'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Clifford and Gaussian-rational checks of the conserved quantities, the frozen occupations (with a Cayley stand-in for the flow) and the pair-state restriction at sample data.

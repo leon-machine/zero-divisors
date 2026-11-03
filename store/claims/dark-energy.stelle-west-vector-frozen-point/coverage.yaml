@@ -1,0 +1,22 @@
+functions:
+  check_constraints_and_slots:
+    kind: sampled
+    clauses: ["(i)", "slots of V and W"]
+    omits: "Q(X), <X,I>, <V,I>, Q(V) and the slot values at five sample values of Lambda of both signs plus one hand value, not as identities in Lambda"
+  check_de_sitter_field_soldering_and_parallel_frozen_point:
+    kind: sampled
+    clauses: ["(ii)", "Schouten map (Lambda/6) id"]
+    omits: "flat-sliced de Sitter fields at two values of H only, not a general Einstein field"
+  check_gauge_field_is_omega_plus_frame_wedge_w:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "de Sitter fields at two values of H and a few sample tractors; the Levi-Civita form of the connection on a general tractor is checked only through its action on the samples"
+  check_bracket_of_soldering_bivectors:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "five sample values of Lambda of both signs on de Sitter frames"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause is tested at sample Lambda on de Sitter fields"

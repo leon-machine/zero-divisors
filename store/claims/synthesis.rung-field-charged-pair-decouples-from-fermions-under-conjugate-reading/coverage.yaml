@@ -1,0 +1,33 @@
+functions:
+  check_yukawa_readings_see_only_beta:
+    kind: sampled
+    clauses: ["(i) both per-sector readings vanish on pure-alpha vectors, are unchanged by a phase on alpha, and have sum |entry|^2 = 8 |beta|^2 in each sector; the c reading of up-type entries sees alpha"]
+    omits: "Two pure-alpha and three generic Gaussian-rational vectors, two rational phases; every entry on the 16 x 16 basis pairs is computed for each. The general statement follows from the stored species selection of v_a and w_a, cited in the proof."
+  check_charged_pair_coupling_is_cot_beta:
+    kind: sampled
+    clauses: ["(ii) the computed charged plane has beta-part (H^2/lambda^2) conj(a)", "(ii) normalised Yukawa weight ratio (H^2/lambda^2)^2 in both sectors"]
+    omits: "Four frames (H^2, lambda); the two-doublet reading of (ii) is a renaming, argued in the proof."
+  check_w_h_charged_vertex:
+    kind: sampled
+    clauses: ["(iii) T_j(dc/dlambda) lies in the charged sector and its projections satisfy |P_phys|^2 (lambda^4 - H^4)^2 = 4 H^4 lambda^4 |P_eaten|^2"]
+    omits: "Four frames; the identification of the projection with the vertex is from the kinetic term, in the proof."
+  check_alpha_phase_breaks_only_the_lift_constraint:
+    kind: sampled
+    clauses: ["(iv) the phase keeps N, m, |Q|, sum mu_j^2, mu_Y, G, commutes with T_j and Y, and sends Q to uQ; Q = 0 is kept"]
+    omits: "Three generic vectors, two phases; that the readings are kept is in check_yukawa_readings_see_only_beta."
+  check_charged_plane_alpha_only_at_zero_h:
+    kind: sampled
+    clauses: ["(iv) at H = 0 the charged plane lies in the alpha half"]
+    omits: "Two frames."
+  check_no_tree_vertex_with_w_and_a_neutral_gauge_field:
+    kind: sampled
+    clauses: ["reading (b), per-sector: no tree seagull W-Z-H or W-gamma-H at c_lambda (supporting the argued stability)", "the W W h seagull G(T_j c, T_j dc/dlambda) = (lambda^4 - H^4)/(8 lambda^3)", "generator pinning: T_1 c, T_2 c span a plane G-orthogonal to Y c; T_3 c = Y c"]
+    omits: "Four frames; supports the reading, not a numbered clause."
+  check_top_decay_branching_negligible:
+    kind: exact
+    clauses: ["(v) g^2 H^2/(4 M_W^2) < cot(beta_2) < g^2 H^2/(2 M_W^2), lower end in (2.32, 2.33) x 10^-89, upper end below 4.66 x 10^-89, from stored values; K < 1/2 at both ends of the m_pm bracket", "reading (d), covariant branch: K/(1+K) in (0.24, 0.25)"]
+    omits: "The top-width ratio formula is imported (synthesis.imported-two-doublet-top-to-charged-higgs-width-ratio) and not derived; the bracket on cot(beta_2) uses lambda^2 < 2N* < 2 lambda^2, from the statement's hypothesis lambda^2 > H^2; the covariant-branch coupling size is argued, not computed here."
+untouched_premises:
+  synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits: "imported Fact: the ATLAS limits are cited in the proof's reading (a) and (d) for comparison; nothing to compute"
+  synthesis.imported-long-lived-charged-particle-stau-limits: "imported Fact: the long-lived stau limits are cited in the proof's reading (c) and (d) for comparison; nothing to compute"
+  synthesis.imported-two-doublet-top-to-charged-higgs-width-ratio: "imported Fact: the width-ratio formula is entered in check_top_decay_branching_negligible as the factor K, not reached through premise()"

@@ -1,0 +1,22 @@
+functions:
+  check_one_and_two_constituents:
+    kind: sampled
+    clauses: ["a single constituent has null momentum", "two constituents have the squared mass of the two-constituent formula"]
+    omits: "three sample two-component spinors with Gaussian-rational entries (all three single constituents and all three pairs, plus one aligned pair); not a symbolic identity, and the twistor derivation is not computed"
+  check_three_ladder_pairs:
+    kind: exact
+    clauses: ["each constituent carries three ladder pairs", "the rungs satisfy the canonical anticommutation relations"]
+    omits: "verifies the explicit n = 4 realisation in Cl(2,4) with complex coefficients (CAR for all i, j, isotropic of dimension (n + 2)/2 = 3, Fock space of 8 states); why each constituent carries three pairs is the cited Fact"
+  check_mixings_are_unitary:
+    kind: sampled
+    clauses: ["the mixings of n constituents preserving total momentum and helicity form are U(n)"]
+    omits: "one unitary per n = 2, 3 (a Cayley transform with det not 1) preserves the invariants and one non-unitary control per n fails; the converse (every preserving mixing is unitary) and general n are not shown"
+  check_content_anomalies_and_lattice:
+    kind: exact
+    clauses: ["the content, hypercharges, anomalies and Higgs representation of one generation"]
+    omits: "one generation only; Q and L are typed in beside the grades of Lambda^k C^3; the derivation of the content from Hypothesis (S) is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring says the twistor correspondence and Hypothesis (S) are not computed; the four functions check the stated finite and sample-level consequences"

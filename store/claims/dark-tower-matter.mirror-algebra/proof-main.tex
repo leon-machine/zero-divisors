@@ -1,0 +1,27 @@
+\textit{(i) The product rule.}\enspace Write $Q$ for the squares of the first signature and $Q' = -Q$ for those of the second. For even blades $e_{K}$, $e_{L}$,
+\[
+e_{K}e_{L} \;=\; \sigma \prod_{c \in K \cap L}Q(e_{c})\;e_{K \triangle L},
+\]
+with $\sigma$ the reordering sign, which does not depend on the squares; the same holds in the second algebra with $Q'$ in place of $Q$.
+
+
+
+\emph{(i) The map respects it.}  Let $\varphi(e_{K}) = (-1)^{|K|/2}e_{K}$, and use $|K \triangle L| = |K| + |L| - 2|K \cap L|$ and $\prod_{c}Q'(e_{c}) = (-1)^{|K \cap L|}\prod_{c}Q(e_{c})$. Then
+\begin{align*}
+\varphi(e_{K}e_{L}) &= \sigma\prod_{c}Q(e_{c})\,(-1)^{|K \triangle L|/2}\,e_{K \triangle L}
+= (-1)^{\frac{|K|+|L|}{2}}(-1)^{|K \cap L|}\,\sigma\prod_{c}Q(e_{c})\,e_{K \triangle L}, \\
+\varphi(e_{K})\,\varphi(e_{L}) &= (-1)^{\frac{|K|+|L|}{2}}\,\sigma\prod_{c}Q'(e_{c})\,e_{K \triangle L}
+= (-1)^{\frac{|K|+|L|}{2}}(-1)^{|K \cap L|}\,\sigma\prod_{c}Q(e_{c})\,e_{K \triangle L}.
+\end{align*}
+The two agree. The script checks every pair of basis blades in both cases (I1).
+
+
+
+\emph{(ii)}  On the pseudoscalars,
+\[
+\varphi(I_{4}') = (-1)^{4/2}\,I_{4} = +I_{4}, \qquad \varphi(I_{6}') = (-1)^{6/2}\,I_{6} = -I_{6} \qquad \text{(I2)}.
+\]
+
+
+
+\emph{(iii)}  The commutants are $\HH$ and $\R$ (I3; Fact \claimref{dark-tower-matter.imported-clifford-structure}).

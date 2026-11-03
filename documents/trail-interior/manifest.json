@@ -1,0 +1,40 @@
+{
+ "doc": "trail-interior",
+ "version": 10,
+ "claims": [
+  "interior.boosts-generate-exactly-levi-factor@4",
+  "interior.complex-factorisation-location-ring@5",
+  "interior.complex-scale-inverse-cube-killing-spinor@5",
+  "interior.covariant-form-vacuum-equations@5",
+  "interior.duality-monodromy-fibration-over-ring@5",
+  "interior.exact-parallelism-convergence-rate@5",
+  "interior.exact-scale-decoupling@4",
+  "interior.filtration-cauchy-horizon-read-literature@7",
+  "interior.imported-kerr-curvature@2",
+  "interior.imported-mass-inflation-stability@3",
+  "interior.imported-schwarzschild-curvature-spectrum@6",
+  "interior.imported-walker-penrose-killing-spinor@2",
+  "interior.interior-connection-exactly@7",
+  "interior.kasner-form-interior@5",
+  "interior.metric-parallelism-trace-schouten-condition@6",
+  "interior.non-null-stabilisers-section-they-act@4",
+  "interior.scale-tractor-leaves-cone@7",
+  "interior.schwarzschild-de-sitter-weighted-limit@7",
+  "interior.stabilisers-flat-model@5",
+  "interior.weighted-limit-theorem@5",
+  "singularity.type-n-only-type-n@5"
+ ],
+ "recipe_hash": "7f2df46f8fd7",
+ "generated": "2026-11-02T16:30:16+00:00",
+ "spine": [
+  "interior.kasner-form-interior",
+  "interior.exact-parallelism-convergence-rate",
+  "interior.interior-connection-exactly",
+  "interior.weighted-limit-theorem",
+  "interior.schwarzschild-de-sitter-weighted-limit",
+  "interior.complex-factorisation-location-ring",
+  "interior.complex-scale-inverse-cube-killing-spinor",
+  "interior.filtration-cauchy-horizon-read-literature",
+  "interior.duality-monodromy-fibration-over-ring"
+ ]
+}

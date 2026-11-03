@@ -1,0 +1,17 @@
+functions:
+  check_characters_match:
+    kind: complete
+    clauses: ["(Lambda^k W)* has the character of Lambda^(3-k) W (x) det^-1, k = 0..3", "(C^2)* has the character of C^2 (x) det^-1"]
+    omits: "equality of torus characters (all four k and C^2), which decides the module isomorphism; no explicit intertwiner here"
+  check_equivariant_pairings:
+    kind: sampled
+    clauses: ["the wedge pairing Lambda^k W x Lambda^(3-k) W -> Lambda^3 W is a nondegenerate equivariant pairing up to det", "A^T J A = det(A) J for C^2"]
+    omits: "nondegeneracy is exact for k = 0..3; the equivariance identity C_k(B)^T E_k C_(3-k)(B) = det(B) E_k is checked at two rational matrices B and two A, not as a polynomial identity"
+untouched_premises:
+  lepton.imported-duality-pair-system-external: "textbook restatement; the check proves the same statement directly (docstring: no premise() call)"
+  standard-model.imported-cauchy-decomposition-exterior-power: "the check works with weight multisets and compound matrices of Lambda^k W, not the Cauchy decomposition"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both duality statements are tested exactly on characters and at sample matrices for the intertwiners."

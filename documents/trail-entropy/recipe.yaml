@@ -1,0 +1,27 @@
+doc: trail-entropy
+title: Entropy and information
+author: Leon Butler
+level: lay
+spine:
+- scrambling.mode-count
+- scrambling.area-law-test
+- scrambling.epoch-modular-period-two-unknowns-become
+- pred.boundary-mode-density
+- scrambling.spreading-law-chaos-bound-saturated
+- scrambling.no-echo-prediction-registered
+- singularity.deficit-theorem-cost-descent-exactly
+- singularity.eviction-window-thermal-product-radiation-entropy
+- singularity.envelope-endpoint-why-boundary-mode-locality
+- singularity.what-event-returns-radiation
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

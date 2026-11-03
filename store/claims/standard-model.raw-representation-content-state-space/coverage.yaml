@@ -1,0 +1,18 @@
+functions:
+  check_cauchy_table_by_degree:
+    kind: exact
+    clauses: ["the decomposition of Lambda^d(C^2 x C^3) by pair number d = 0..6"]
+    omits: "Computed from the imported Cauchy decomposition with irreps labelled by dimension and conjugate partition; no explicit module action is built."
+  check_cauchy_characters:
+    kind: sampled
+    clauses: ["the decomposition of Lambda^d(C^2 x C^3) by pair number d = 0..6"]
+    omits: "Character identity e_d(a_i b_j) = sum s_lam(a) s_lam'(b) checked at three rational points per degree, not as a polynomial identity."
+  check_single_spinor_sector:
+    kind: exact
+    clauses: ["Lambda^d C^3 = 1 + 3 + 3bar + 1, graded 0 through 3"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Table, dimensions and single-spinor sector computed exactly from the Cauchy decomposition, with an independent sampled character confirmation."

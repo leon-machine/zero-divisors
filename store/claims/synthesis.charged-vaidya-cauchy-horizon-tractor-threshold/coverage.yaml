@@ -1,0 +1,30 @@
+functions:
+  check_store_sign:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: Calibrates the store sign (Ric_store = Lambda g) on the de Sitter member m = e = 0 at two values of Lambda and three points; no clause is established by it alone
+  check_vaidya_schouten:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: The Schouten formula and R = 4 Lambda are verified exactly from second-order jets at four rational points with rational jets (m, m', m''), charges and Lambda (including Lambda < 0), not as an identity in all variables
+  check_crossing_ray:
+    kind: sampled
+    clauses:
+    - (2)
+    omits: 'At the same four points and three values of w: xi null, the geodesic equations ((log w)'' = -f_r/2 and the r-equation), n = dv/w and k^flat parallel, n(k) = 1, P(k, .) = S n + c k^flat with the stated S and c; the asymptotics of w, the finiteness of the affine length and the comparability statements are proved in the text, not computed'
+  check_inner_horizon:
+    kind: sampled
+    clauses:
+    - (2)
+    omits: Two rational examples (Reissner-Nordstrom m = 5/4, e^2 = 1 and Reissner-Nordstrom-de Sitter with roots 1, 2, 3, -6) of a simple inner root, kappa_- and the attracting outgoing-ray flow; the convergence of every region-II ray is proved in the text
+  check_threshold_bookkeeping:
+    kind: sampled
+    clauses:
+    - (3)
+    - (4)
+    omits: Exponent bookkeeping for the model w = exp(kappa v) and exponential tails at three kappa and four alpha (the L^1 test 2 alpha > kappa, the Tipler integrand m'/kappa, the profile exponent 2 beta - 2); the inverse-power tails and the comparison of the true w with exp(kappa v) are proved in the text
+untouched_premises:
+  synthesis.imported-gtg-dictionary: "reading of the derived metric's Christoffel symbols, geodesics and Schouten map as connection components, free-fall worldlines and field strength; the check computes these directly from the metric"
+  synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity: "cited for the store's sign calibration (Ric_store = -Ric_formula), which the check recomputes itself on de Sitter in check_store_sign"

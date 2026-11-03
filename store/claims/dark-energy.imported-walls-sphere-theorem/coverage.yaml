@@ -1,0 +1,26 @@
+functions:
+  check_radical_and_simple_pole:
+    kind: sampled
+    clauses: ["cometric acquires a one-dimensional radical", "metric has a simple pole along L (x) L with L^2 = N*Sigma"]
+    omits: "two model walls (Schwarzschild Gram and one polynomial family); tameness in general is the premise, not tested"
+  check_clifford_algebra_continues_with_square_zero_ideal:
+    kind: sampled
+    clauses: ["the Clifford sheaf continues across the wall"]
+    omits: "fibre algebra only, three signatures and three values of t; sheaf-level continuation is not tested"
+  check_witt_partner_exactly_at_the_wall:
+    kind: sampled
+    clauses: ["the completion adjoins the Witt partner k* with k k* + k* k = 1, <k, k*> = 1/2", "exactly at the wall"]
+    omits: "explicit witness in one completion (exact identities); 'exactly there' is checked as invertibility of k_t at two off-wall values of t"
+  check_principal_su2_carried_by_boundary_bilinears:
+    kind: sampled
+    clauses: ["every angular operator of the lift is a boundary-mode bilinear under the adjoint su(2) (sphere theorem)"]
+    omits: "n = 2..5 boundary modes; the selection of the principal embedding rests on the Indifference premise and is not checked, as the docstring says"
+untouched_premises:
+  scrambling.consistency-car-construction-i-states-insensitivity: "CAR consistency and insensitivity of I-states are not computed; the check works on the concrete Fock space"
+  scrambling.indifference-structural-premise-series: "hypothesis (Indifference) with no computable content"
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks test the finite content on model walls and small mode numbers; the Indifference selection is declared untested"

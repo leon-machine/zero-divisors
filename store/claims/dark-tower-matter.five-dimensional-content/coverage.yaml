@@ -1,0 +1,14 @@
+functions:
+  check_sixteen_states_four_species:
+    kind: complete
+    clauses: ["the sixteen states and the complement map negating Y and conjugating colour", "the table of four species with states (s,k)", "the electric charges of one generation without the weak doublet"]
+    omits: "the closing sentences (without (S) the content is one Dirac colour triplet of Y = 2/3; no chirality; every species has a gauge-invariant bare mass) are not computed"
+  check_centre_acts_by_minus_three_y:
+    kind: complete
+    clauses: ["the centre of U(3) acts by lambda^(k - 3s) = lambda^(-3Y), 3Y an integer, 3Y + k = 0 mod 3"]
+    omits: "the exponent k - 3s is coded from the rule of the section B -> ((det B)^-1, B) (slot gets det^-1, each occupied pair lambda), not computed from a matrix representation"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "both functions enumerate all sixteen states; the table and the lattice condition are exact"

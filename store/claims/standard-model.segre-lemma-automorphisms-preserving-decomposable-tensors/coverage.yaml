@@ -1,0 +1,22 @@
+functions:
+  check_stabiliser_lie_algebra_is_gl_m_plus_gl_k:
+    kind: partial
+    clauses: ["T = A (x) B"]
+    omits: "Infinitesimal form only: the Lie algebra of the stabiliser of the Segre cone is gl(m) + gl(k) for (m, k) = (2,2), (2,3), (3,2), (2,4), (3,3). The full group statement, other components when m != k, and general m, k are the lemma's argument and are not computed."
+  check_sum_of_two_decomposables:
+    kind: sampled
+    clauses: ["whole (first step of the proof: rank of u (x) v + u' (x) v')"]
+    omits: "A proof step, not a clause of the statement; rank 2 or 1 on sample vectors only."
+  check_swap_and_product_form:
+    kind: sampled
+    clauses: ["when m = k the factor swap is a further symmetry of the decomposable tensors"]
+    omits: "m = 2, 3 and sample vectors; the realignment-rank test that the swap is not of product form is supporting and not a clause."
+  check_unitary_rebalancing:
+    kind: sampled
+    clauses: ["if T is unitary then A and B may be taken unitary"]
+    omits: "A single worked example with rational orthogonal factors rescaled by 2 and 1/2; the general rebalancing argument is not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring says the group statement is not reduced to a finite computation; the four functions test the infinitesimal form, a proof step and two sample instances."

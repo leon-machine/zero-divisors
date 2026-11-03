@@ -1,0 +1,18 @@
+functions:
+  check_boost_identity:
+    kind: sampled
+    clauses: ["(1)", "(2)"]
+    omits: "at four rational Kerr-Schild points (including near the ring) and three boost factors: k null, l = (1,-v)/2 null with eta(k,l) = 1, the boost preserves eta^{-1}, B g^{-1} B^T = eta^{-1} + 2 H lam^2 k k exactly (so lam = rho^{1/2} gives the weight 1/2 coefficient 2M cos(psi)), det(eta^{-1} + s k k) = det(eta^{-1}), and H |z|^2 = M r; the smooth frame up to and including the ring and the orthonormal e_1, e_2 are not constructed, and the limit at rho = 0 is not taken"
+  check_forced_weights:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "exhaustive over the 625 weight vectors with entries in {-1,-1/2,0,1/2,1}, not over all real weights: exactly (1/2,-1/2,0,0) gives a finite nondegenerate limit that keeps the Kerr term, computed from exact rational functions of s = rho^{1/2}; 'for every rho > 0 the rescaled cometric equals eta^{-1} + 2M cos(psi) k k' and the exceptional-set limit are not asserted"
+  check_downstairs_sign:
+    kind: sampled
+    clauses: ["(3)", "(4)"]
+    omits: "at four points the deck map (r, c) -> (-r, -c) fixes the base point and reverses the sign of H |z|^2 (the Kerr coefficient is odd under the deck transformation); not tested: b_k = 1/4 as the only finite nonzero downstairs exponent, the claim for direction-dependent exponents, the zeros of cos(psi) on psi = +-pi/2, and the winding -3 of rho^3 M = -M e^{-3 I psi}"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (2) and the deck sign of (3) are checked; the winding in (4) and the downstairs exponent claim in (3) have no function"

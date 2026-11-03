@@ -1,0 +1,24 @@
+functions:
+  check_matrix_units_and_corner:
+    kind: sampled
+    clauses: ["B_gamma = Mat_2(Cl^0(p,q)) (matrix units and corner identification)"]
+    omits: "six signatures with p - q = 1 mod 4, n <= 5, both gamma; exact per case (16 products, corner = eps_+ A of dimension 2^(n-1), multiplicative on all even blade pairs, spanning by E_i1 c E_1j)"
+  check_fused_algebra_simple_centre_r:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "same six signatures; centre = R is computed exactly; simplicity is inferred from the diagonal of the trace form (each blade squares to +-1) and one-dimensional centre, with orthogonality of distinct blades not asserted"
+  check_eps_exchanged_by_ad_nu:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "six signatures, both gamma; Ad_nu = grade involution is checked on every blade of A, the idempotent exchange and non-centrality exactly"
+  check_two_ascents_isomorphic_fixing_corner:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "six signatures; the map nu_+ -> omega nu_- is shown to satisfy the relations and span (isomorphism), to fix A and send E_ij^+ to E_ij^-; 'canonically Mat_2(Cl^0)' rests on the matrix-units function"
+untouched_premises:
+  std-algebra.morita-amplification: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All clauses are exact on six type-C signatures with n <= 5 and both signs, so sampled over (p,q); simplicity is inferred from centre and trace-form diagonal."

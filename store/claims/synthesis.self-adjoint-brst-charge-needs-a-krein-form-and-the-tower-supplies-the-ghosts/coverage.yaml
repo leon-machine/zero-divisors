@@ -1,0 +1,32 @@
+functions:
+  check_positive_forms_carry_no_self_adjoint_nilpotent:
+    kind: complete
+    clauses:
+    - "(i) on floors of one and two planes the trace form makes all basis blades orthonormal; the palatial form has positive diagonal; the BRST charge of (ii) is nilpotent, nonzero and not self-adjoint for the positive form"
+    omits: "the lemma itself is the one-line argument in the proof; larger floors follow by the same product of signs"
+  check_krein_brst_nilpotent_and_self_adjoint:
+    kind: sampled
+    clauses:
+    - "(ii) S^2 = 1, S b S = d; Q^2 = 0, K Q = Q^T K and K symmetric on the space with T <= 3, for two null momenta"
+    - "(ii) the one-particle Krein form -u.w is invariant under the boost rotor 5/4 + 3/4 g0 g1 and the Euclidean form is not"
+    omits: "T <= 3 and two null momenta; the general identity is the algebra in the proof"
+  check_cohomology_is_transverse_and_positive:
+    kind: sampled
+    clauses:
+    - "(iii) ghost-number-zero cohomology dimensions 1, 2, 3, 4 at T = 0..3 with Krein signature (dim H, 0, dim im Q) on ker Q"
+    omits: "T <= 3 and two null momenta; all T is the quartet mechanism (imported), not computed"
+  check_cohomology_matches_the_photon_modes:
+    kind: sampled
+    clauses:
+    - "(iv) epsilon -> k epsilon maps k-perp into {f : k f = 0} with image of rank 2, and {f : k f = 0} has dimension 2"
+    omits: "three rational null momenta; the general statement is proved in the text"
+  check_derived_algebra_ghost_charge_is_nilpotent:
+    kind: exact
+    clauses:
+    - "(v) twelve independent generators of su(2) + su(3) + u(1) on C^2 x C^3, 62 nonzero structure constants; Q^2 = 0 with twelve tower ghost pairs; Q^2 != 0 without the cubic ghost term or with one perturbed structure constant"
+untouched_premises:
+  field-theory.twistor-attachment: "cited in the reading for the spin-statistics clause on the ghosts; nothing is computed from it"
+  synthesis.positive-structure-is-twistor-form-at-imaginary-time: "cited in the reading as a parallel indefinite form at the attachment's one-particle level; nothing is computed from it"
+  field-theory.path-integral-inside-tower: "cited in the reading as the precedent for Grassmann variables as rungs; nothing is computed from it"
+  synthesis.imported-brst-kugo-ojima-strocchi-and-gribov: "cited in the proof and the reading for the standard frame (BRST, the quartet mechanism, Strocchi's theorem, the Gribov ambiguity); the check recomputes its own charges exactly and computes nothing from the Fact"
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "the premise under which the reading takes the computed Krein-form charge as the series' gauge fixing; the check constructs the form itself and computes nothing from the premise"

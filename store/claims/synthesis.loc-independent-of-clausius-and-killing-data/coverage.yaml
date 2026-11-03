@@ -1,0 +1,14 @@
+functions:
+  check_vacuum_density_is_one_quarter:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "exact Taylor-jet curvature of Schwarzschild-de Sitter and de Sitter metrics at three (M, Lambda, r_0) points, all with Lambda != 0: R = 4 Lambda, trace-free Ricci zero, density 1/4 with c = 5/3, plus pinned anchor values; Schwarzschild (Lambda = 0) and Kerr, 'every field with Ric = Lambda g', and the inherited store statements (horizon temperatures, Clausius integrals, cutoff counts) are not tested"
+  check_einstein_static_universe_model:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "for a in {2, 3/2} and c = 5/3, at two points each: Ric(e_t,e_t) = 0, Ric(e_i,e_j) = (2/a^2) delta_ij, S_ab S^ab = 3/a^4, eta = (1/4)(1 + 3c/a^4), 8 pi rho = 2(1 + 3c/a^4)/a^2, dust geodesic and expansion-free, the defect T(k,k) - (eta/2 pi) Ric(k,k) = 0 on four rational null directions (and non-zero with eta = 1/4), Lambda_J = 1/a^2 and the spatial equations; the integrated-reading remark, (iii) independence (a logical consequence of (i) and (ii)) and (iv) are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the two computed spacetimes of (i) and (ii) are reproduced exactly at sample parameters; (iii) and (iv) follow from cited theorems"

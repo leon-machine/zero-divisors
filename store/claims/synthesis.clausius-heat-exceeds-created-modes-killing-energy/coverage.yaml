@@ -1,0 +1,14 @@
+functions:
+  check_kms_unique_on_window:
+    kind: sampled
+    clauses: [(1)]
+    omits: 'One two-mode window with q = (1/3, 1/5): the KMS equations on all 16 matrix units have a one-dimensional solution space spanned by e^{-beta H}; general windows and weights are the cited uniqueness theorem; unchanged entropy and energy between instants follows trivially and is not computed.'
+  check_exchange_leaves_kms:
+    kind: exact
+    clauses: [(4)]
+    omits: The example is exact as stated (q = 1/3, n = 1/4, cos = 3/5, total occupation 5/4, window occupation 73/100, not KMS); the first-law-to-Clausius route of the filed result and the claim about (E) are not computed.
+  check_created_mode_ledger:
+    kind: sampled
+    clauses: [(2), (3)]
+    omits: Factorisation of the Gibbs state for one choice of q; per-mode ledger exact in prime logarithms at e^x = 3 (entropy 2 ln 2 - (3/4) ln 3, Killing energy (1/4) ln 3, deficit ln(4/3)) and at e^x = 1, and common-weight scaling with dm = 2, -1, 0 at e^x = 3; the general created and lost sets with different weights, the fraction x n/s < 1 for all x, and the inconsistency of (R_inst), (Cl), (E) are not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The example numbers and the ledger values match the statement; general-weight statements are argued rather than enumerated.}

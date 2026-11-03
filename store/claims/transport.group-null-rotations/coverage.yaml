@@ -1,0 +1,26 @@
+functions:
+  check_group_law_and_injectivity:
+    kind: sampled
+    clauses:
+    - R_u R_u' = R_{u+u'}, so N_v is abelian
+    - u -> R_u is a group isomorphism (U,+) = N_v
+    omits: Nine signatures (n = 3..5) and a few fixed integer-combination samples of U; injectivity shown by linear independence of v e_k (k in U), group law only on ordered pairs of samples
+  check_null_rotations_are_rotors_fixing_v:
+    kind: sampled
+    clauses:
+    - N_v is a subgroup of Spin^0(p,q)
+    - each R_u fixes v
+    omits: Same nine signatures and samples; Spin^0 membership is shown as even + R R~ = 1 + vector-preserving + a path t -> R_{tu} from 1 at four values of t, not a full proof
+  check_levi_equivariance:
+    kind: sampled
+    clauses:
+    - every rotor g in the even subalgebra of Cl(U) fixes v and satisfies g R_u g^-1 = R_{g u g^-1}
+    omits: Signatures with dim U >= 2; three families of rotors g (ab with a, b in U, 1 + c e_i e_j for two choices) times the samples (105 cases), not every rotor of Spin(U)
+untouched_premises:
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Group law, rotor membership and Levi equivariance are tested exactly on nine signatures with finite samples of U and of rotors. 2026-10-23 weak-checks pass: check_null_rotations_are_rotors_fixing_v now asserts that the sampled path starts at 1 and pins the shear exactly, R_u w R_u^-1 - w = -u - Q(u) v"

@@ -1,0 +1,16 @@
+functions:
+  check_null_vector_squares_to_zero_and_multiplication_has_half_rank:
+    kind: sampled
+    clauses: ["null vector v != 0 has no left or right inverse in Cl(p,q)"]
+    omits: "82 chosen null vectors (e_i +- e_j and Pythagorean ones) in mixed signatures 2 <= n <= 5; not every null vector, not n > 5; non-surjectivity of left/right multiplication is exact per case"
+  check_no_inverse_in_larger_algebras:
+    kind: sampled
+    clauses: ["no inverse in any associative unital algebra containing Cl(p,q) as a unital subalgebra"]
+    omits: "only two extension types (Cl(p+1,q+1), one adjoined degenerate generator) and four sample w; the general-algebra step is the one-line argument v(vw) = 0, which the check only illustrates; half rank in the larger algebra (both extensions, 24 cases) only for n <= 3"
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is proved by v^2 = 0 and associativity; the checks test v^2 = 0 and half-rank on sampled null vectors and two extensions, consistent with the statement. 2026-10-23 weak-checks pass: check_no_inverse_in_larger_algebras now checks half rank in both extensions and pins the number of rank cases (24, by hand)"

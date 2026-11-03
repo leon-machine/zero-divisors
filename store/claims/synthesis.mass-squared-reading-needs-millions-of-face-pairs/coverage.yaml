@@ -1,0 +1,15 @@
+functions:
+  check_ratio_bound_on_the_span_of_face_words:
+    kind: sampled
+    clauses: ["(i) trace formula and G >= 0 on twelve random states with D <= 3", "(i)-(ii) the bound 2K + 1 + 2/(K + 2) on the same states", "(ii) equality at the word z_1^3"]
+    omits: "the general inequality is the two-line argument in the proof text (lambda_1 >= f, ratio of linear functionals)"
+  check_extreme_point_function_is_increasing:
+    kind: sampled
+    clauses: ["(ii) division identity and monotonicity for D = 0..60"]
+    omits: "monotonicity for all D is the increment 2 - 2/((D + 2)(D + 3)) > 0 in the proof text"
+  check_threshold_from_the_stored_masses:
+    kind: complete
+    clauses: ["(iii) the ratio window from the stored masses at three standard deviations", "(iii) K = 6065573 falls short, K = 6065574 does not"]
+untouched_premises:
+  synthesis.koide-channel-phase-target-depends-on-mass-definition: "the mass definition fixes which masses the stored quantities are; the check uses the stored pole masses and does not reach this premise"
+  synthesis.imported-one-loop-qed-pole-mass-relation: "imported Fact: used only in the floating-point remark on running masses, not in the check"

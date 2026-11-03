@@ -1,0 +1,22 @@
+functions:
+  check_tractor_gauge_field_preserves_tractor_metric:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "six sample fields (static and Painleve-Gullstrand Schwarzschild, two Schwarzschild-(anti-)de Sitter, Reissner-Nordstrom, flat de Sitter) and three constant tractors; the constructed Omega_T is the check's own assembly, not the quoted equation eq:tractorconn"
+  check_derivative_of_q_along_a_tractor_field:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "tractor fields with jet slots on only the de Sitter and Reissner-Nordstrom fields, first-order jets at one point; only the identity d_a Q(V) = 2 V . D^T_a V"
+  check_opposite_schouten_sign_breaks_metric_preservation:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "negative control only: shows a sign-flipped Schouten slot breaks Q-preservation; does not establish (i) itself"
+  check_trace_of_schouten_condition:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the Ric -> P map (rank 10, Ric = 2P + tr(P) eta) is exact on the basis of symmetric matrices; c = R/24 and Ric = (R/4) g are confirmed only on the Einstein sample fields, and the converse P = 0 iff Ric = 0 only on those samples"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks test both clauses at sample fields; the inversion Ric = 2P + tr(P) eta is exact, the rest is sampled."

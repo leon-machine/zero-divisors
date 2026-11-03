@@ -1,0 +1,6 @@
+functions:
+  test_ceiling:
+    kind: sampled
+    clauses: [(i), (ii), (iii), closing remark]
+    omits: (i) is checked on seven explicit multi-threshold spectra (exact piecewise-linear crossing) plus the gluino counterexample, not for all admissible spectra; (ii) is exact given rigorous rational enclosures of M_13 (2.4e14 < M_13 < 2.5e14; actual about 2.46e14, consistent with the quoted 2.5e14 as a rounding) and a_3 + 7 t_13 = 165219412/4093125 = 40.37 (quoted 40.4); the proton figure is bounded below 57/1000 (so the miss is a factor above 350, the statement's "above 200" is the cruder bound) and the lifetime ratio lies between 1e5 and 2e5; (iii) only checks Delta_1 >= Delta_3 >= 0 for the three rows (clause (e) of the cited proposition is not recomputed); the closing remark is checked from the index formula for triplets with d = 1, 2, 3, two multiplicities and seven hypercharges, one singlet doublet and the gluino, not "complete multiplets always" nor all colour singlets.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'The ceiling 40.37, t_13, the M_13 enclosure, the proton figure and the Y^2 >= 5/18 threshold are reproduced exactly; spectrum-wide claims are sampled. check.py names its function test_ceiling rather than check_*.'}

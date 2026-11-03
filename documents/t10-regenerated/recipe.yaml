@@ -1,0 +1,60 @@
+doc: t10-regenerated
+title: 'Dark Energy and the Action of Gravity: MacDowell-Mansouri, the Frozen Point,
+  and One Way to Grip (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- pred.dark-energy-w-minus-one
+- dark-energy.imported-frozen-point-geometry
+- dark-energy.imported-frozen-point-geometry-external
+- dark-energy.imported-macdowell-mansouri-theorem-stelle-west
+- dark-energy.imported-s-wave-current-algebra
+- dark-energy.imported-s-wave-current-algebra-external
+- dark-energy.imported-walls-sphere-theorem
+- dark-energy.stelle-west-vector-frozen-point
+- dark-energy.frozen-point-makes-stelle-west-vector
+- dark-energy.walls-free-sector
+- dark-energy.vacuum-region-registration-condition
+- dark-energy.gravity-pre-metric-forces-degenerate-exactly
+- dark-energy.sheaf-papers-wall-soldering-variables
+- dark-energy.imported-weighted-limit-schwarzschild-singularity-matching
+- dark-energy.cosmological-constant-does-not-change-residue
+- dark-energy.frozen-point-datum-kasner-wall
+- dark-energy.forcing-half-schwarzschild-wall-residue-sense
+- dark-energy.wall-counterterm
+- dark-energy.variable-exponents-residue-pointwise-corrections-are
+- dark-energy.imported-conformal-orthogonality-sugawara-construction
+- dark-energy.acoustic-no-go-one-way-grip
+- dark-energy.point-infinity-has-no-physical-fluctuation
+- dark-energy.lift-inherits-no-go-steps-itemised
+- obj.dark-energy.four-ways-number-enters-theory-shape
+- dark-energy.four-alternatives-are-exhaustive-three-are
+- dark-energy.under-action-written-norm-parameter-laws
+- dark-energy.imported-henneaux-teitelboim-promotion
+- dark-energy.conclusion-does-not-depend-ontology-level
+show: spine-only
+paper: T10
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T10_dark_energy.tex
+  note: Recreate T10 from the store
+cite:
+- standard-model.trichotomy-what-kind-number
+prose: paper
+msc: Primary 83D05, 53C80; Secondary 81T12, 83C45, 83F05.
+keywords: MacDowell-Mansouri action; Stelle-West mechanism; scale tractor; cosmological
+  constant; dark energy; equation of state; Sugawara construction; gravitational engineering;
+  Gertsenshtein effect.

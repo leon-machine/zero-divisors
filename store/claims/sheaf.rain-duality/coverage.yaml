@@ -1,0 +1,22 @@
+functions:
+  check_dual_coframe_of_rain_frame:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "exact in u (all interior radii) but only m = 1, 3, at the equator"
+  check_minkowski_gram_at_every_radius:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "exact in u but only m = 1, 3; also checks the rain frame is G-orthonormal as vectors, which the statement does not assert"
+  check_membership_iff_bounded_rain_components:
+    kind: sampled
+    clauses: ["(3) a u-smooth form lies in W iff its rain-frame components are bounded", "(3) the norm identity |alpha|^2 = alpha(V)^2 - sum alpha(e_i)^2", "(3) bounded norm does not suffice for membership", "(3) dr(V) = -m/sqrt r and dtheta(e_theta) = 1/r diverge"]
+    omits: "the iff is tested on monomials u^j (j = 0..3) in each of the four slots, not on arbitrary smooth forms or linear combinations; norm identity on five covectors; boundedness of a single null-mixing form; m = 1, 3"
+  check_exceptional_module_and_transition:
+    kind: sampled
+    clauses: ["(4) rho = sqrt r (k/sqrt r) - m dt", "(4) W is contained in W_exc with transition determinant -sqrt r", "(4) rain components of a covector are its W_exc coefficients", "(4) W_exc is the exceptional-regime module"]
+    omits: "ρ identity and the determinant are exact in u (m = 1, 3); coefficients equal rain components is tested for one sample covector; equality of C^infty-modules and the identification with the exceptional-algebra proposition are read off the boundary Gram diag(m^2,-1,-1,-1), not shown directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The dual coframe and exact Minkowski Gram are rational-function identities in u at m=1,3; membership iff bounded components is tested monomial by monomial and the module transition on one sample form.

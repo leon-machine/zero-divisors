@@ -1,0 +1,31 @@
+functions:
+  check_window_energy_of_the_boost_ground_state:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: the Schwarzian of e^{kappa tau} from the exact derivative ratios at kappa = 1/4, 2/7, 3, 1/2; the stored
+      density at c^-2 = 0, 1; factors of pi carried as rational coefficients; the Mellin integral route of the proof
+      is cited, not computed
+  check_zeta_sea_selects_the_half_offset:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: finite parts by exact power-series inversion at six values of a; the identity B_2/2 + 1/24 = (delta -
+      1/2)^2/2 at five offsets and four values of kappa, and its double root by the discriminant
+  check_thermal_state_carries_zero_in_the_null_ordering:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: rigorous rational bounds to 10^-15 at the half offset (exact equality rests on the imported theta identities)
+      and to 10^-4 at the zero offset, eight terms plus a tail bound
+  check_counted_unit_carries_no_mean_killing_energy:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: the bookkeeping of the hole's constant at two values of N and M per kappa; the window reading of (iv)
+      is a hypothesis of the clause, not checked
+untouched_premises:
+  synthesis.positive-null-energy-gives-r-premises: cited for the discretisation reading named as the hypothesis
+    of (iv) and for the Fermi-Dirac Mellin occupation of the cross-check in (i); nothing in the check uses it
+  synthesis.window-reading-array-killing-energy: adopted reading used only in clause (iv); clauses (i)-(iii) are
+    the checked identities

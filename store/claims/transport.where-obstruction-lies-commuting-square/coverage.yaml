@@ -1,0 +1,26 @@
+functions:
+  check_exactly_one_extension_obstructed:
+    kind: sampled
+    clauses: ["(a)"]
+    omits: "all 25 even (p,q) with n <= 8 (exact per signature); the centre being exactly {1, omega} (hence C, hence simple by semisimplicity) is computed only for n <= 6 and simplicity is inferred, not tested; no n > 8"
+  check_ideals_exchanged_by_grade_involution_inner_after_repair:
+    kind: partial
+    clauses: ["(b)"]
+    omits: "tests a supporting fact that the statement does not assert: the grade involution (and, after adjoining the repair generator of either sign, conjugation by it) exchanges eps_+ and eps_-; it does not show eps_+- A is a copy of A, which is (b); the span test is for n <= 4, the rest for n <= 6"
+  check_ideals_are_copies_of_a:
+    kind: sampled
+    clauses: ["(b)"]
+    omits: "n <= 6 for the relations of Cl(p,q) among the even generators h_i and n <= 4 for the dimension counts (eps_+ X has dimension 2^n, the h_i span 2^n); the isomorphism Cl(p+1,q) = Cl(q,p) = A at residues 0 and 4 is not tested, only that e_i nu alone has the squares of Cl(q,p) in the timelike case"
+  check_opposite_sign_repair_is_rule_one_ascent:
+    kind: sampled
+    clauses: ["(c)"]
+    omits: "n <= 6 (corner and P B P dimension counts only n <= 4); hyperbolic plane, both choices of ladder pair, residue returns to d, and Rule 2 matrix units are exact per signature; the equality Mat_2(Cl^0(extension)) = Mat_2(A) is tested only as equal corner dimension 2^n, not as an isomorphism"
+  check_same_sign_repair_definite_two_residues_away:
+    kind: partial
+    clauses: ["(d)"]
+    omits: "n <= 6; signature (p,q+2) or (p+2,q), residue d -+ 2, definite adjoined Gram, no null combination on a 5 x 5 grid of (a,b), centre R and matrix units are tested; the isomorphism Cl(p,q+2) or Cl(p+2,q) with Cl(p+1,q+1) is not tested at all"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each of (a)-(d) is tested exactly on even signatures with n <= 6 or 8; the (d) isomorphism to Cl(p+1,q+1) and the (b) Cl(q,p) isomorphism have no check, and one function tests a supporting fact rather than a stated clause. 2026-10-23 weak-checks pass: check_ideals_are_copies_of_a now asserts eps_+ idempotent, checks anticommutation over all ordered pairs, checks the Cl(q,p) squares of e_i nu for every i in the timelike case (was e_0 only) and pins the number of timelike cases (7, by hand)"

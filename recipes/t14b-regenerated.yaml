@@ -1,0 +1,44 @@
+doc: t14b-regenerated
+title: 'Simulating the Dark Towers: Methods, Assumptions and Tests of the Unit-Ball Composition: Companion
+  note to T14: the mathematics, the code and the premises behind the merger, halo and Galaxy tests (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- simulations.imported-unit-ball-rule-family
+- simulations.imported-mirror
+- simulations.imported-bullet-cluster
+- simulations.imported-cluster-shapes
+- simulations.imported-milky-ways-mass-budget
+- simulations.effective-cross-section-sheet-matter
+- simulations.imported-low-energy-scattering-two-dimensions
+- simulations.cluster-bound-two-dimensions
+- simulations.confinement-scale-does-not-matter
+- simulations.averaged-pair-operator
+- simulations.merger
+- simulations.halo-shapes
+- simulations.mirror-galaxy
+show: spine-only
+paper: T14b
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T14b_simulations.tex
+  note: Recreate T14b from the store
+cite:
+- dark-matter.superselected-hence-dark-exactly-stable
+prose: paper
+msc: Primary 85A40, 83F05; Secondary 76M28, 81U05.
+keywords: Mirror dark matter; self-interacting dark matter; smoothed-particle hydrodynamics; Bullet Cluster; galaxy-formation models; Clifford clock.

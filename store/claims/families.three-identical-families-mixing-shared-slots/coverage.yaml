@@ -1,0 +1,20 @@
+functions:
+  check_three_faces_meet_in_one_slot:
+    kind: complete
+    clauses: ["the faces, three of them given the three-spinor bound", "any two faces share exactly one spinor slot"]
+    omits: "all C(3,2) = 3 faces enumerated at N = 3; N = 4, 5, 6 are controls showing disjoint faces exist, so the intersection count is a property of the bound; the three-spinor bound itself is imported (observation level)"
+  check_slot_permutations_carry_copies:
+    kind: sampled
+    clauses: ["S3 acts transitively on the faces", "a slot permutation carries the face-F copy isomorphically onto the face-sigma(F) copy"]
+    omits: "transitivity and stabiliser order 2 are exhaustive (all 6 sigma, 3 faces); the transport of the copy (composite up to the orientation sign, bracket modulus, and the face U(2) action conjugated by the permutation matrix) is checked on one sample three-spinor system and three unitaries, not for a free system; the fermion content (2,3) + (2,1) is not itself transported in the check, only the composite and gauge action"
+  check_overlap_structure_single_slot:
+    kind: complete
+    clauses: ["inter-family mixing is mediated by single-slot overlap: no vanishing entries, suppressed double transitions"]
+    omits: "counts only the face overlap matrix (diagonal 2, off-diagonal 1) and that faces differ by exactly one slot; the identification of faces with physical families and the CKM-shape reading are observation-level and not computed"
+untouched_premises:
+  standard-model.hyp-s-slot-statistics: "Hypothesis (S) enters only as part of the copy's content, which the check transports as a whole (docstring); no function calls premise() on it and the lepton part is not tested separately"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The combinatorial claims are enumerated and the transport of the copy is run at a sample system and unitaries; the docstring states that identification and CKM reading are untested."

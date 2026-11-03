@@ -1,0 +1,165 @@
+angle.wedge-reflection-translations-are-ascent:
+  main:
+  - angle.imported-conformal-model-null-rotations
+conformal.blade-basis-persists-under-degeneracy:
+  main:
+  - conformal.blade-basis-persists-under-degeneracy-external
+conformal.minimal-nondegenerate-completion:
+  main:
+  - conformal.blade-basis-persists-under-degeneracy
+dark-matter.asymmetry-arrow-counted-fifteenth-refutation:
+  main:
+  - dark-matter.imported-derived-generation-flag
+dark-matter.ceiling-valued-inherited-success:
+  main:
+  - families.alignment-computed-thirteenth-refutation-democracy-one
+dark-matter.coefficients-floors-they-give-what-gravity:
+  main:
+  - dark-matter.mirror-tower-copy-one
+dark-matter.direction-nesting-adds-algebra:
+  main:
+  - dark-matter.nesting
+dark-matter.mirror-share-assembled:
+  main:
+  - dark-matter.imported-derived-generation-flag
+dark-matter.mirror-share-one-how-fragile:
+  main:
+  - dark-matter.no-coupling-rule-odd-towers-follows
+dark-matter.mode-counts-two-modules-which-one:
+  main:
+  - tower.witt-index-quantum-capacity
+dark-matter.no-coupling-rule-odd-towers-follows:
+  main:
+  - dark-matter.mirror-tower-copy-one
+  - dark-matter.residue-soldered-invariant-not-algebraic-one
+dark-matter.open-channels-their-costs:
+  main:
+  - dark-matter.mirror-tower-copy-one
+  - dark-matter.superselected-hence-dark-exactly-stable
+dark-matter.orientation-arrow-seventeenth-refutation:
+  main:
+  - dark-matter.imported-derived-generation-flag
+  - dark-matter.imported-trichotomy-descents-data
+dark-matter.parallel-boundary-mode-spaces-one-wall:
+  main:
+  - hawking.greybody-inheritance-under-interface-premise
+dark-matter.population-count-one-share-half-percent:
+  main:
+  - dark-matter.mirror-share-one-how-fragile
+  - dark-matter.projection-every-towers-content-dilutes-ones
+dark-matter.radiation-audit-what-theorem-closes-what:
+  main:
+  - dark-matter.open-channels-their-costs
+  - dark-matter.seeding-gravity-floor-dark-towers-temperature
+  - dark-matter.stored-asymmetry-charge-not-number
+dark-matter.seeding-gravity-floor-dark-towers-temperature:
+  main:
+  - dark-matter.ceiling-valued-inherited-success
+  - dark-matter.imported-massless-graviton-production-rate
+  - dark-matter.superselected-hence-dark-exactly-stable
+dark-matter.stored-asymmetry-charge-not-number:
+  main:
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+  - dark-matter.imported-trichotomy-descents-data
+  - dark-matter.parallel-boundary-mode-spaces-one-wall
+dark-matter.superselected-hence-dark-exactly-stable:
+  main:
+  - dark-matter.imported-gravity-only-coupling
+  - sheaf.infinite-wall-sequence
+dark-matter.total-function-thickness:
+  main:
+  - dark-matter.population-count-one-share-half-percent
+  - dark-matter.projection-every-towers-content-dilutes-ones
+dark-matter.two-roots-are-chord-arc-quarter:
+  main:
+  - dark-matter.total-function-thickness
+dark-matter.type-residue-what-each-tower-can:
+  main:
+  - dark-matter.towers-are-residues-single-clock-filter
+dark-matter.unit-ball-rule:
+  main:
+  - dark-matter.towers-are-residues-single-clock-filter
+dark-matter.which-towers-can-carry-arrow:
+  main:
+  - standard-model.four-dimensions-forces-converse
+dark-tower-matter.anomalies:
+  main:
+  - dark-tower-matter.three-dimensional-content
+  - rule2.imported-five-dimensional-chern-simons-shift
+  - rule2.imported-parity-anomaly
+dark-tower-matter.five-dimensional-content:
+  main:
+  - dark-tower-matter.gauge-algebras
+dark-tower-matter.mirrors-temperature-p2:
+  main:
+  - dark-matter.seeding-gravity-floor-dark-towers-temperature
+  - dark-matter.stored-asymmetry-charge-not-number
+dark-tower-matter.pairs:
+  main:
+  - dark-tower-matter.constituents-field
+dark-tower-matter.third-pairs-unit-five-dimensions:
+  main:
+  - dark-tower-matter.constituents-field
+dark-tower-matter.three-dimensional-content:
+  main:
+  - dark-tower-matter.gauge-algebras
+mass.chart-form-spin-isomorphism:
+  main:
+  - mass.imported-flat-model-twistor-chart-infinity
+mass.five-broken-generators:
+  main:
+  - mass.imported-flat-model-twistor-chart-infinity
+mass.mass-weight-dictionary:
+  main:
+  - mass.imported-thomas-operator
+mass.weight-composite:
+  main:
+  - mass.exact-join
+mass.weight-polynomial-two-series:
+  main:
+  - mass.imported-unitary-representations-de-sitter-group
+neutrino.empty-twistor:
+  main:
+  - neutrino.imported-ceiling-under-hypothesis-u-arrow
+neutrino.leptogenesis-suppressed-alignment-reheating-premise-new:
+  main:
+  - neutrino.imported-ceiling-under-hypothesis-u-arrow
+  - neutrino.imported-indifference-faces-democratic-alignment-rank
+  - neutrino.invariant-symmetric-matrices
+  - neutrino.rank-one-seesaw-ordering-sum-double
+neutrino.rank-one-seesaw-ordering-sum-double:
+  main:
+  - neutrino.imported-indifference-faces-democratic-alignment-rank
+  - neutrino.invariant-symmetric-matrices
+odd-extensions.belongs-tower:
+  main:
+  - odd-extensions.imported-copy-theorem-soldered-residue
+odd-extensions.copy-theorems-blind-spot:
+  main:
+  - odd-extensions.imported-representatives-dimension-nearest-four-types
+  - odd-extensions.imported-towers-clock
+  - odd-extensions.two-towers-one-curved-universe
+odd-extensions.doubling-or-complexification:
+  main:
+  - odd-extensions.volume-element-odd-dimension
+odd-extensions.four-extensions-are-four-odd-towers:
+  main:
+  - odd-extensions.four-extensions-oriented-pair
+  - odd-extensions.imported-conformal-completion
+odd-extensions.line-tame-wall:
+  main:
+  - odd-extensions.imported-tame-walls-exceptional-algebra-residue
+  - odd-extensions.transport-constrains-frozen-point-only-through
+odd-extensions.not-coupling-between-towers:
+  main:
+  - odd-extensions.are-ascents-pair-signed
+odd-extensions.twistor-algebra:
+  main:
+  - odd-extensions.imported-conformal-completion
+odd-extensions.two-classes-completion:
+  main:
+  - odd-extensions.imported-minimal-completion-degenerate-algebra-rule
+odd-extensions.two-towers-one-curved-universe:
+  main:
+  - dark-energy.point-infinity-has-no-physical-fluctuation
+  - odd-extensions.belongs-tower

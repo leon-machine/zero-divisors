@@ -1,0 +1,8 @@
+functions:
+  check_parity_and_grade_range:
+    kind: sampled
+    clauses:
+    - '"Cl^i Cl^j in Cl^(i+j)"'
+    - '"dimension 2^(n-1)"'
+    - '"Cl^j Cl^k in the sum of Cl^(|j-k|+2m)"'
+    omits: the grade parts of two sampled elements, every pair of grades, every signature with n <= 4

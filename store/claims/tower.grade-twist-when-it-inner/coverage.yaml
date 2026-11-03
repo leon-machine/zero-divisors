@@ -1,0 +1,27 @@
+functions:
+  check_embedding_is_twisted_diagonal:
+    kind: sampled
+    clauses:
+    - iota_k becomes the twisted diagonal diag(a, a^) in the corner identification
+    omits: Base is the ground algebra Cl(p,q) with n <= 4 (all signatures), a single plane, every basis blade; not a general floor T_k; the twisted-coordinate reading diag(a^, a) is checked only through its ingredients (omega = E22 - E11 and (x omega) omega = x for odd x), not as a matrix
+  check_even_charge_volume_element_implements_twist:
+    kind: sampled
+    clauses:
+    - 'the grade involution is implemented by the ground volume element u: a^ = u a u^-1'
+    - u anticommutes with vectors precisely when n is even
+    - diag(a, a^) = U diag(a, a) U^-1 with U = diag(1, u)
+    omits: Signatures with n <= 7 for the (anti)commutation, n even <= 6 for the blade identity; the matrix conjugation identity is tested on a single sample element per signature, not on every blade; "central simple" is not tested here
+  check_inner_exactly_for_even_charge:
+    kind: sampled
+    clauses:
+    - u implements the grade involution, and no other element does
+    - if p - q is odd the grade involution acts nontrivially on the centre and is outer, no inner correction exists
+    omits: Exact kernel only for n <= 6 (even) and n <= 5 (odd); odd-n centre = span{1, omega} and omega -> -omega for n <= 7; the claim "the grade involution is an R-algebra automorphism fixing the centre" for even charge is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Single-step statement is tested on ground algebras with n <= 7; the remark about the stagewise corrector not being U is outside this check (it lives in the compatibility entity).
+untouched_premises:
+  std-algebra.pseudoscalar-commutation: "standard algebra cited in the proof; the check computes the statement directly"
+  primer.centre: "standard algebra cited in the proof; the check computes the statement directly"

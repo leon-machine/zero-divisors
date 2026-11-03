@@ -1,0 +1,18 @@
+functions:
+  check_shares:
+    kind: exact
+    clauses: ["f = V_3/V_D, with values 4/3 at D = 2, 1 at D = 3, 8/(3 pi) at D = 4"]
+    omits: "D = 2, 3, 4 only, the dimensions that occur; the densities m/V_D and the unit-cell factor of R3 are coded as the rules, so the check computes their consequences and does not derive them; m cancels at two sample masses"
+  check_dark_towers_and_dimensions:
+    kind: partial
+    clauses: ["sum over dark r with D_r = 2, 2, 4, 4, 3"]
+    omits: "the five representatives (2,1), (1,2), (4,1), (1,4), (3,1) are typed in; it verifies their residues 1, 7, 3, 5, 2, causality and dimensions, not that these are exactly the populated dark towers"
+  check_total:
+    kind: exact
+    clauses: ["Omega_dark/Omega_b = (11 pi + 16)/(3 pi) = 5.36432", "within the error bar of 5.364 +- 0.065"]
+    omits: "that the agreement is a fit chosen with the value known, and the count of fourteen candidates, have no computable content here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the closed form and its decimal are exact in pi; the list of dark towers is an input, as the docstring says"

@@ -1,0 +1,20 @@
+functions:
+  check_centre_by_kernel:
+    kind: sampled
+    clauses:
+    - the centre of Cl(p,q) is R.1 for n even
+    - the centre is R.1 + R.omega for n odd
+    omits: Every (p,q) with 1 <= n <= 6 only; exact kernel of the commutator system, not all n
+  check_centre_blade_wise:
+    kind: sampled
+    clauses:
+    - the centre is R.1 for n even
+    - the centre is R.1 + R.omega for n odd
+    omits: Every (p,q) with n <= 9; blade-wise reduction to central blades relies on the diagonal form (invertible generators), argued in the docstring
+untouched_premises:
+  primer.centre: literature restatement of the primer result; the check recomputes the centre directly and does not need the primer
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Both checks compute the centre exactly for all signatures up to n = 6 and n = 9.

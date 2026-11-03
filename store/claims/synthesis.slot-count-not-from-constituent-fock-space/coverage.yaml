@@ -1,0 +1,10 @@
+functions:
+  check_slot_count_not_from_constituent_fock_space:
+    kind: partial
+    clauses: ["(1) even K has no SL(K)-singlet CS or CS* component", "(2) S_0 and S_2 carry CS + CS*", "(3) K = 3 exterior and symmetric, K = 4"]
+    omits: "(1) is tested only as emptiness of the weight-type list singlet_targets for K = 2 up to degree 8 and K = 4 up to degree 16 (a degree-parity count), for exterior/symmetric algebras only, not for parastatistics or general Fock-type spaces; (2) only the dimensions 4+4 of the even/odd W parts of the zero- and two-slot sectors, not their SL(4) module structure nor the vanishing of equivariant maps; (3) exact highest-weight multiplicities by rank over Q for the exterior algebra at the only two admissible degrees (3 and 9), and for the symmetric algebra only at degrees 3 and 9, so 'exactly one copy' in the full symmetric algebra and 'none' for K = 4 symmetric rest on the parity count, not on a computation"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the K = 3 multiplicities are computed exactly at the degrees the statement names; the general and parastatistics claims are carried by the argument, not the check"

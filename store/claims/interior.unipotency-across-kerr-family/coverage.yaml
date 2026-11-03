@@ -1,0 +1,18 @@
+functions:
+  check_null_shear_is_unipotent:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "four null k, three values of H and two (s, s') pairs on the frame vectors; P_k^2 = 0, the one-parameter group law and hb^{-1} = 1 - H P_k are checked on the frame, not 'wherever the gauge field is defined'"
+  check_kerr_schild_metric:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "four null k and three H; the bilinear identities hb(a).hb(b) = a.b + 2H(a.k)(b.k) and its inverse are exact on all frame pairs for each (k, H); the ingoing Eddington-Finkelstein identity is checked at three (M, r) and four displacements; the sign control is one inequality"
+  check_kernel_and_image_along_k:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "four null k; checks P_k(k) = 0 and that the image of P_k lies on the line of k, with the Painleve-Gullstrand map as contrast; the comparison with the finite-radius shear of Proposition interior.gauge-trajectory-unipotent-ray and 'at every point' are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Algebraic identities of the Kerr-Schild gauge are verified exactly for each sampled (k, H); the statement is for all null k and H."

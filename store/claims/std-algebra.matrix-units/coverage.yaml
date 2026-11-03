@@ -1,0 +1,10 @@
+functions:
+  check_matrix_units_and_isomorphism:
+    kind: sampled
+    clauses:
+    - '"E_ij E_kl = delta_jk E_il, sum E_ii = 1"'
+    - '"Phi is an isomorphism of unital algebras"'
+    - '"Cl(1,1) = M_2(R)"'
+    - '"Cl(1,1,1) = M_2(Cl(0,0,1))"'
+    omits: three algebras; the unit relations exhaustively, multiplicativity and the inverse on one sampled
+      pair each; the general statement is proved in the text

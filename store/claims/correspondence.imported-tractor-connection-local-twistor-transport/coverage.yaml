@@ -1,0 +1,22 @@
+functions:
+  check_tractor_connection_in_a_scale:
+    kind: sampled
+    clauses: ["(i) expression of the connection in a scale, slot by slot"]
+    omits: "two sample affine tractor fields at two points and three directions; Omega, hb^{-1} and a symmetric P are sample maps (P is not computed as the Schouten tensor of a derived metric); canonicity of the connection on the conformal class is not tested; the metric property a.grad Q(V) = 2 V . D V is checked in addition"
+  check_conformal_spinor_space_and_its_planes:
+    kind: exact
+    clauses: ["(ii) CS = Cl^+(2,4)P is a 4-dimensional module over I_6", "scale splitting into the omega and pi halves", "pi-plane {omega = 0} is the kernel of the null vector"]
+    omits: "the Penrose-Rindler 2-spinor index form is not computed"
+  check_conformal_spinor_connection_block_form:
+    kind: partial
+    clauses: ["(ii) the conformal spinor connection (local twistor transport)", "(ii) is the spin representation of (i)"]
+    omits: "only the block structure is checked (Lorentz part preserves each plane, soldering maps pi to omega and kills omega, Schouten part maps omega to pi and kills pi, composite (1/2) A P(C), complex-linearity over I_6, spin form of the tractor action on four basis spinors and four vectors, at three directions); the displayed coefficients i epsilon_A^B and i P_{AA'BB'} are not computed"
+  check_change_of_scale_fixes_omega_and_shifts_pi:
+    kind: sampled
+    clauses: ["under conformal rescaling omega is invariant and pi shifts", "the pi-plane is the canonical subbundle"]
+    omits: "three sample Y and two sample tractor fields; the tractor slots move as stated; 'pi shifts' is checked only as some nonzero shift of an omega-plane spinor, not its form"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The spinor-space clause is exact in the model; the connection and transport clauses are sampled or tested at block-structure level, which the kinds record."

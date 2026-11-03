@@ -1,0 +1,22 @@
+functions:
+  check_unique_canonical_partner:
+    kind: exact
+    clauses: ["(i) the minimal completion has signature (2,4) and is the rung", "(i) the null partner phi of I with Q(I,phi) = 1, Q(phi,phi) = 0, phi orthogonal to the Lorentz frame is canonical"]
+    omits: "Computes the solution line phi + cI of the pairing conditions and that its only null point is phi; the uniqueness of the isometry fixing W pointwise is the imported minimal-completion Fact, not recomputed."
+  check_norm_is_two_ab:
+    kind: sampled
+    clauses: ["(ii) a vector aI + b phi is orthogonal to the frame with norm 2ab", "(ii) the sign of Lambda is the sign of ab"]
+    omits: "Five (a, b) samples of both signs and zero. That every vector orthogonal to the Lorentz frame has this form is not enumerated (it is a dimension count, not coded)."
+  check_orbits_are_level_sets:
+    kind: sampled
+    clauses: ["(iii) the isometries fixing the Lorentz frame act on the plane as O(1,1)", "(iii) the orbits on nonzero vectors are the level sets of the norm", "(iv) no symmetry carries positive norm to negative"]
+    omits: "The O(1,1) conditions pr = qs = 0, ps + qr = 1 are the hand-derived characterisation, checked on four sample matrices (and one non-isometry); transitivity on level sets is shown for four explicit pairs (including null vectors), not for all pairs of equal norm."
+  check_two_signs_non_isomorphic:
+    kind: exact
+    clauses: ["(iv) the two intermediate algebras Cl(1,4) and Cl(2,3) are non-isomorphic"]
+    omits: "Computes omega central with omega^2 = +1 and -1; that the centre is exactly span{1, omega} (so R + R versus C) is not recomputed here, it is the cited twistor-algebra (iv)."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The partner, the 2ab norm, the O(1,1) orbit structure and the centre distinction are computed at exact samples; the uniqueness of the completing isometry and the centre dimension are imported from the cited facts."

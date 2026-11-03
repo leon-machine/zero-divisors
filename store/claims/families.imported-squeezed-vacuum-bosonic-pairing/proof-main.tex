@@ -1,0 +1,9 @@
+Let $a_{p}$, $p = 1, \dots, n$, be bosonic modes and $\xi$ a complex symmetric $n \times n$ matrix, with Takagi factorisation $\xi = U\Sigma U^{\mathsf{T}}$ for a unitary $U$ and $\Sigma = \mathrm{diag}(\sigma_{1}, \dots, \sigma_{n})$, $\sigma_{j} \ge 0$ the singular values of $\xi$. The squeezed vacuum of the pairing $\xi$ is the zero-mean Gaussian state whose only nonvanishing two-point functions are
+\[
+N_{pq} \;=\; \langle a_{p}^{\dagger}a_{q}\rangle \;=\; \overline{\bigl(U\,\sinh^{2}\!\Sigma\,U^{\dagger}\bigr)}_{pq}, \qquad
+M_{pq} \;=\; \langle a_{p}a_{q}\rangle \;=\; -\bigl(U\,\sinh\Sigma\cosh\Sigma\,U^{\mathsf{T}}\bigr)_{pq},
+\]
+
+the sign of $M$ a convention; any function $f$ applied in the Takagi basis, $U f(\Sigma) U^{\mathsf{T}}$, equals $g(\xi\xi^{\dagger})\,\xi$ with $g(s) = f(\sqrt{s})/\sqrt{s}$, which is what makes the formulas degenerate-safe. Wick's theorem gives, for zero-mean Gaussian states, $\langle a_{p}^{\dagger}a_{q}^{\dagger}a_{r}a_{s}\rangle = N_{ps}N_{qr} + N_{pr}N_{qs} + \overline{M_{pq}}M_{rs}$ and $\langle a_{r}a_{s}a_{p}^{\dagger}a_{q}^{\dagger}\rangle = D_{rq}D_{sp} + D_{rp}D_{sq} + M_{rs}\overline{M_{pq}}$ with $D_{rp} = \langle a_{r}a_{p}^{\dagger}\rangle = \delta_{rp} + N_{pr}$. \emph{Provenance:} the Takagi factorisation is \cite[Cor.~4.4.4]{HornJohnson}; bosonic Bogoliubov transformations, squeezed vacua and Wick's theorem for quasi-free states are \cite[Ch.~2-3]{Berezin1966} and, in the covariance-matrix form used here, \cite[\S II]{Weedbrook2012}; the series' ordering dictionary is \cite[Thm.~5.7]{ButlerT9}. The bosonic Fock space here is not the fermionic one of the Standard-Model paper.
+
+This restates \claimref{families.imported-squeezed-vacuum-bosonic-pairing-external}.

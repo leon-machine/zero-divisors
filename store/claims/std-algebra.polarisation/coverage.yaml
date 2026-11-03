@@ -1,0 +1,8 @@
+functions:
+  check_polarisation:
+    kind: sampled
+    clauses:
+    - '"B is symmetric and B(v, v) = Q(v)"'
+    - '"Q(sum x_i e_i) = sum G_ij x_i x_j"'
+    omits: four Gram matrices (including a degenerate and an indefinite one) and three vectors each; the
+      converse direction is the same computation read backwards

@@ -1,0 +1,18 @@
+functions:
+  check_descended_marginal_is_diagonal_gibbs:
+    kind: sampled
+    clauses: ["E_k(rho_k) is diagonal in the number basis", "E_k(rho_k) = e^(-beta_k omega_k N_k)/Z_k with beta_k omega_k = log(p_k/(1-p_k))"]
+    omits: "six hand-picked states on 1, 2, 3 modes (12 marginals); 'Gibbs' is here just the parametrisation diag(1, x)/(1+x), x = (1-p)/p, of a diagonal qubit state, with 0 < p < 1 asserted; K_k is not constructed"
+  check_beta_unique_and_endpoints:
+    kind: sampled
+    clauses: ["unique beta_k in [-infinity, +infinity]"]
+    omits: "strict monotonicity of p(x) = 1/(1+x) via the difference identity at four sample x (16 pairs), not for all x; endpoints p = 1, 0 as the Gibbs matrices at beta = +-infinity on two sample states"
+  check_zero_weight_mode:
+    kind: sampled
+    clauses: ["at a zero-weight mode the right side is id/2 for every beta_k", "existence fails unless p_k = 1/2"]
+    omits: "'for every beta' is modelled by setting x = x_any**0 = 1, so the loop is vacuous; one sample with p = 9/25 (not Gibbs) and one with p = 1/2"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says the sample states are arbitrary and the Gibbs matrix is compared entrywise; the checks are sample-level, with the parity-average premise supplying the descent."

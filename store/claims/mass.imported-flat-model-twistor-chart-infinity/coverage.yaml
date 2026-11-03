@@ -1,0 +1,33 @@
+functions:
+  check_null_embedding_and_forced_coefficient:
+    kind: sampled
+    clauses: ["n_0 and n_inf null with <n_0, n_inf> = +1, x orthogonal to both", "Q(x) = -2 det x in the chart components", "X(x) = n_0 + x - (1/2) Q(x) n_inf is null, Q(X(x)) = 0 identically"]
+    omits: "four sample x (two with Gaussian-rational entries) and four trial coefficients c in Q(X) = Q(x)(1 + 2c); not a symbolic identity in x"
+  check_simple_iff_null_and_planes:
+    kind: sampled
+    clauses: ["a bivector is simple iff its norm vanishes", "the Pluecker bivector of the omega-plane is n_inf and that of the pi-plane is n_0"]
+    omits: "six null samples (every X(x), n_inf, n_0, one wedge) of rank 2 and three non-null controls of rank 4; the simplicity criterion is not proved for arbitrary bivectors"
+  check_scale_function_is_sigma_slot:
+    kind: sampled
+    clauses: ["the scale function of a constant vector V is sigma_V(x) = <X(x), V>"]
+    omits: "only V = n_inf + l n_0 (four values of l) and V = n_0, at four x; constant vectors with an x-slot component are not tested; the 1 - Lambda Q/12 de Sitter scale is the case l = Lambda/6"
+  check_sl_action_is_isomorphism_onto_so:
+    kind: exact
+    clauses: ["the action of sl(CS) on Lambda^2 CS by A.(u ^ v) = Au ^ v + u ^ Av is a Lie algebra isomorphism onto so(Lambda^2 CS, epsilon)"]
+    omits: "pairing preservation on all basis pairs for the 15 generators of sl(4) and injectivity (rank 15 = dim so(6)) are exact; the Lie-homomorphism property is checked only on sample generator pairs"
+  check_infinity_bivector_simple_iff_flat:
+    kind: sampled
+    clauses: ["the infinity bivector of the scale n_inf + l n_0 is simple iff Lambda = 0, then n_inf = e_1 ^ e_2, the Pluecker bivector of the infinity line"]
+    omits: "four values of l; norm 2l is exact; that it is covariantly constant (constant vectors are parallel for the flat connection) is argued, not tested"
+untouched_premises:
+  correspondence.fock-model-complexified-ascended-algebra: "the check uses T11's own Lambda^2 C^4 twistor model, not the Fock model (docstring)"
+  correspondence.incidence-relation-chart: "the chart X(x) is checked directly; the incidence relation is exercised in mass.exact-join"
+  correspondence.one-statement-three-languages: "dictionary between languages; the model is checked directly"
+  correspondence.spin-representation: "the sl(4) action is checked in check_sl_action_is_isomorphism_onto_so without calling the premise"
+  correspondence.spinor-identification: "the identification of Lambda^2 C^4 with the Fock model's conformal spinor space is checked in that entity (docstring)"
+  mass.imported-flat-model-twistor-chart-infinity-external: "literature restatement (T6, T9, BEG1994); not called"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The chart, simplicity, scale-function and sl(4) action clauses are tested in T11's model; the trivial ambient bundle, spinor bracket, null momentum and Hermitian-quadratic generators have no check."

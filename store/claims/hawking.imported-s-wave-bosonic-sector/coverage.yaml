@@ -1,0 +1,24 @@
+functions:
+  check_edge_identity_on_the_window:
+    kind: sampled
+    clauses: ["\"the number-conserving bilinears satisfy the free-boson commutation relations exactly ... with an exact finite-window operator identity whose deviation is a difference of edge operators\""]
+    omits: "one 7-mode window, m = 1, 2, 3, all 128 states; not general window size; the 'completed limit' is not tested"
+  check_bilinear_subalgebra_invariant_under_boost:
+    kind: sampled
+    clauses: ["\"the bilinear subalgebra is globally invariant under the modular boost\""]
+    omits: "7-mode window, all pairs (i, j) and all 128 basis states, for one affine and one cubic weight set; general window size not tested"
+  check_restriction_to_currents_is_kms:
+    kind: sampled
+    clauses: ["\"the restriction of the Fermi-Dirac KMS state to the bilinear subalgebra is KMS at the same temperature\""]
+    omits: "7-mode window, x = 1/2, 1/3, m = 1, 2 and three chosen current products B; the product state equals the Gibbs state on all states; the lemma itself is cited, not proved here"
+  check_bose_einstein_occupancy_of_the_currents:
+    kind: sampled
+    clauses: ["\"giving the Bose-Einstein occupancy at T_H for the s-wave sector\""]
+    omits: "x = 1/2, 1/3, m <= 3, K = 20, 30 and a 7-mode density-matrix versus Wick comparison for m = 1, 2; the bilateral limit is bounded, not computed; the linear weight assignment (Premise Q) is a convention and is assumed"
+untouched_premises:
+  hawking.imported-s-wave-bosonic-sector-external: "provenance restatement of T5 Prem. 8.1 and Thm. 8.2 and the Frenkel-Kac correspondence; no finite content"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "boost-commutator loop widened from every fifth basis state to all 128 states, matching docstring (2)"

@@ -1,0 +1,29 @@
+functions:
+  check_no_type_c_and_quaternionic_matrix_form:
+    kind: exact
+    clauses: ["type C cannot occur: Cl(1,3) has p - q = -2 = 6 mod 8, is central simple (Mat_2(H)), has no central idempotents"]
+    omits: "centre span{1} is exhaustive blade-wise; the Mat_2(H) form is exhibited through the idempotent e = (1 + e_t e_r)/2 (e A e is 4-dimensional with I, J, I^2 = J^2 = -e, IJ = -JI; A e is 8-dimensional; 1 lies in A e A) rather than as a full isomorphism; the definition of type C from the taxonomy of T1 enters through the called premise only"
+  check_type_n_at_the_singularity:
+    kind: exact
+    clauses: ["the obstruction at r = 0 is type N: an isotropic direction without a metric partner"]
+    omits: "e_r is shown null and in the radical of the limit form ghat, and e_t + e_r a two-sided zero divisor with left multiplication of rank 8 < 16; that this meets the T1 definition of type N 'in the degenerate sense' is the called premise, not computed"
+  check_type_p_present_and_self_repairing:
+    kind: exact
+    clauses: ["type P is present in Cl(1,3)", "its rule is the rule of no rule: it neither licenses nor obstructs the ascent"]
+    omits: "only that e and 1 - e are orthogonal idempotents and that the identity assignment sigma(e) = e satisfies the von Neumann pseudo-inverse identities; Prop. 6.1 of T1 and the 'neither licenses nor obstructs' conclusion are not computed"
+  check_tower_floors_have_no_type_c:
+    kind: sampled
+    clauses: ["no floor of the resulting tower ever develops a type-C obstruction"]
+    omits: "floors Cl(1+k, 3+k) for k = 0, 1, 2 only (centre span{1}, p - q = 6 mod 8); 'ever' (all k) and Rule 1, the Witt completion, as the operative rule are not computed"
+untouched_premises:
+  sheaf.localised-transport: "cited for the localisation of the obstruction; the check covers only the Cl(1,3) type diagnosis and the tower floors"
+  sheaf.one-sided-completion: "cited for Rule 1 (the Witt completion) as the operative rule; not computed"
+  sheaf.one-sided-completion-singularity: "cited for the completion at the singularity; not computed"
+  sheaf.schwarzschild-degeneration-boundary-tame: "cited for the boundary data feeding the degenerate sense of type N; the check works with the limit form directly"
+  primer.classification-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.sta-matrix: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable diagnosis (centre, idempotent structure, radical, tower floors k <= 2) is verified exactly; the taxonomy and the Rule-1 claim are carried by premises"

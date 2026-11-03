@@ -1,0 +1,13 @@
+functions:
+  check_residual_s2_fixes_120_family_form:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    omits: (i) is an exact finite computation (invariant antisymmetric and symmetric dimensions for S_3 and S_2, u' ^ s = -3 (e1+e2) ^ e3 annihilating a); the four listed S_2-invariant symmetric matrices are shown S_2-invariant but not shown independent (the dimension 4 is computed separately); (ii) is checked at two values of epsilon; (iii) at one choice of the 10 matrix, of the 120 coefficients, of the VEVs and of (alpha, M_3), not as a symbolic cancellation; the Georgi-Jarlskog conclusion is interpretive
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rational and Gaussian-rational family-matrix computations confirm the invariant spaces and the S_3-invariance of the 126 contribution at sample couplings.

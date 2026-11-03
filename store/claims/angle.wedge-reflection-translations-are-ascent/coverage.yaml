@@ -1,0 +1,18 @@
+functions:
+  check_boost_rotor:
+    kind: exact
+    clauses: ["(i)"]
+    omits: ""
+  check_imaginary_rapidity_is_the_wedge_reflection:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "(cosh, sinh) = (0, i) at eta = i pi/2 is entered, not computed from the exponential; 'commutes with the boost' is tested against the single sample rotor R of (i)"
+  check_null_rotations_translate_points_in_the_completion:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "three sample translations a, three sample points x and the one sample boost rotor R; the statement is for all a in the base, all x, and the base's boost rotor"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) and (ii) are stated at specific values and checked exactly there; (iii) is general in a and x and is sampled."

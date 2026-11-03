@@ -1,0 +1,21 @@
+functions:
+  check_canonical_isomorphism_and_form:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "'canonical' (independence of choices) is not tested; psi is shown injective of rank 6 and Spin-equivariant on all 15 bivectors and 6 basis vectors, and the form is eps(P ^ P) with eps := -eps0/2 on all 21 pairs"
+  check_null_iff_simple_plane_is_kernel:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "eight real and two complex null samples (simple, plane equals ker c(v)) and three non-null samples (rank 4, Pf = -Q(v)) plus one more Pfaffian check; the identity Pf(psi(v)) = -Q(v) for all v follows from (1) but is not asserted here"
+  check_rays_double_cover_lines:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "eight sample real null vectors: psi(t v) = t psi(v) with the same plane for t in {-1, 2, i}, and the eight planes pairwise distinct; surjectivity onto the real slice of the Klein quadric is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clause (1) is exact on bases; clauses (2) and (3) are sampled at explicit null and non-null vectors."
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.inverse-of-vector: "standard algebra cited in the proof; the check computes the statement directly"

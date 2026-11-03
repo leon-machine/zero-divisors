@@ -1,0 +1,18 @@
+functions:
+  check_type_n_zero_divisor_has_no_element_level_resolution:
+    kind: sampled
+    clauses: ["division by a type-N zero divisor in Cl(1,3) admits no element-level resolution"]
+    omits: "four sample pseudo-inverses sigma in each of Cl(1,3) and Cl(2,4) (each shown moved by the null rotation fixing v); the no-go for every sigma is the imported premise, not shown here"
+  check_minimal_completion_is_cl24:
+    kind: sampled
+    clauses: ["the minimal completion is Cl(1,3) -> Cl(2,4)", "unique up to isomorphism"]
+    omits: "minimality is shown in the null-lift sense of transport.minimality: W = 0 fails at x = e0, and one-dimensional W fails by the sign argument at five sample Gram values g (both signs); dimension two is reached by the conformal model of signature (2,4); uniqueness through three sample 2 x 2 complement Grams reducing to the hyperbolic plane"
+  check_assignments_on_null_quadric_of_r24:
+    kind: sampled
+    clauses: ["the resolving assignments lie on the quadric of null rays of R^(2,4)"]
+    omits: "four invertible and four null sample points x; X(x) and iota X(x) null and nonzero at those, with the stated closed forms"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_minimal_completion_is_cl24 now tests minimality: no null-lift completion of dimension 0 or 1 exists (sign argument over sample Grams), so dimension two, the hyperbolic plane, is minimal."

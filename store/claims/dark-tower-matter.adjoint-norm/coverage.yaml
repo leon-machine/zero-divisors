@@ -1,0 +1,18 @@
+functions:
+  check_blade_adjoint_norms:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "scope is the six causal towers (1,2), (2,1), (1,3), (3,1), (1,4), (4,1), every basis blade of each; the sum-of-squares identity is symbolic in the coordinates of a general even x; other causal signatures are not run"
+  check_corner_conjugation_and_positive_norm:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "scope is the six causal towers; x is symbolic in the corner basis; positivity of N is read as a positive multiple of the sum of squares"
+  check_norm_law:
+    kind: complete
+    clauses: ["(iii)"]
+    omits: "scope is the six causal towers; psi in S and x in the corner are symbolic; j(psi) is shown not identically zero"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause is a polynomial identity in free coordinates, run over every causal tower the series uses"

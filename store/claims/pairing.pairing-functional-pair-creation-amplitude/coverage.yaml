@@ -1,0 +1,19 @@
+functions:
+  check_vacuum_to_pair_amplitude_is_minus_pv:
+    kind: exact
+    clauses:
+    - '"every bivector B of so(4,C) satisfies <12| B |0> = -pv(B)"'
+    omits: the six basis bivectors are checked and complex combinations by linearity, which suffices because both sides are linear in B
+  check_even_sector_two_by_two_structure:
+    kind: exact
+    clauses:
+    - '"the hops kill both states, the annihilation kills |0> and sends |12> to -|0>, the creation sends |0> to |12>, and the Cartan elements are diagonal"'
+    - '"On the vacuum a bivector acts through its Cartan scalar and its pairing class alone"'
+    omits: ''
+untouched_premises:
+  std-algebra.fock-representation: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: both functions are exact finite computations of what the statement asserts on the two-mode module

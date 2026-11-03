@@ -1,0 +1,7 @@
+In the defining representation of \eqref{eq:car}, $v = E_{12}$, $v^{*} = E_{21}$, $P = v^{*}v = E_{22}$, so $\sigma = 2P - 1 = \operatorname{diag}(-1, +1)$. For a general element,
+\[
+\alpha\begin{pmatrix} a & b \\ c & d \end{pmatrix}
+= \begin{pmatrix} -1 & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} -1 & 0 \\ 0 & 1\end{pmatrix}
+= \begin{pmatrix} a & -b \\ -c & d \end{pmatrix},
+\]
+so $\tfrac12(x + \alpha(x)) = \operatorname{diag}(a,d)$, which is the value of $E$ computed in \cite[Prop.~5.5]{ButlerT5} (\claimref{singularity.descent-what-it-erases}). The averaging map of a finite group acting by automorphisms is a conditional expectation onto the fixed-point algebra, and it is the unique one when the group has order two and the algebra is a factor, since a conditional expectation onto $\Aev$ is determined by its value on the complementary $\alpha$-eigenspace, which must be annihilated. The kernel is the $(-1)$-eigenspace of $\alpha$, which is $\Aod = \operatorname{span}\{v, v^{*}\}$. State preservation: $\omega(E(x)) = \tfrac12\bigl(\omega(x) + \omega(\alpha(x))\bigr) = \omega(x)$ when $\omega \circ \alpha = \omega$.

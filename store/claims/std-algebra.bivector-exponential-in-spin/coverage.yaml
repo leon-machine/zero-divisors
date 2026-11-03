@@ -1,0 +1,40 @@
+functions:
+  check_series_identities_for_general_bivectors:
+    kind: sampled
+    clauses:
+    - '"(e^B)~ = e^-B and e^B e^-B = 1"'
+    - '"e^B x e^-B = sum ad_B^k x / k! in V"'
+    omits: seven non-simple bivectors (B ^ B != 0), one per signature (4,0), (1,3), (2,2), (3,2), (2,1,1), (3,0,2),
+      (0,0,4); identities checked order by order up to order 7 (the series itself is summed in the proof)
+  check_series_identities_over_the_complex_numbers:
+    kind: sampled
+    clauses:
+    - '"over R or over C"'
+    omits: two non-simple complex bivectors (C^4 with an orthonormal basis, and Cl(2,4) complexified), up to order
+      6
+  check_terminating_exponentials_are_spin_plus:
+    kind: sampled
+    clauses:
+    - '"e^B = u_1 ... u_2j with prod Q(u_i) = +1: a rotor in Spin+"'
+    - '"an isometry"'
+    omits: four non-simple nilpotent bivectors (Cl(2,4) twice, Cl(3,2), Cl(3,3)), where the series terminates and
+      the Cartan-Dieudonne factorisation is computed exactly; non-terminating exponentials are covered by the proof
+  check_lorentzian_rotors_and_the_non_exponential:
+    kind: sampled
+    clauses:
+    - '"B^2 in C_I, central in the even part"'
+    - '"C(z)^2 - z S(z)^2 = 1"'
+    - '"-(1 + (g0 + g1) g2) is a rotor"'
+    omits: six sampled bivectors of Cl(1,3); the power-series identity to order 12; that -(1 + N) is not an exponential
+      uses the zeros of sinh, proved in the text
+  check_degenerate_exponential_is_not_a_versor:
+    kind: complete
+    clauses:
+    - '"For degenerate Q, e^B need not be a versor"'
+    omits: the one counterexample Cl(0,0,2), five sampled vectors for Q = 0 (Q = 0 identically is proved in the
+      text)
+untouched_premises:
+  std-algebra.spin-double-cover: cited for the determinant of an even product of reflections; the check verifies
+    the isometry directly
+  std-algebra.complex-clifford-algebra: cited for the complex blade basis in the complex clause of (ii); the check
+    works with explicit complex bivectors

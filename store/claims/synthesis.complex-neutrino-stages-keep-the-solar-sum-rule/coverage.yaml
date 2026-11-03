@@ -1,0 +1,29 @@
+functions:
+  check_equal_modulus_stages_reduce_to_the_symmetric_block:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: "(i) at four complex samples; the general statement is the three-entry computation in the proof; the Takagi factorisation is cited, not checked"
+  check_tilt_and_ratio_in_s_and_u:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: "the four moduli identities at six complex samples; the Hermitian eigenvector angle formula tan 2theta = 2|q|/p is standard and not checked"
+  check_tilt_maximum_on_the_level_set:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: "the derivative numerator identity is complete (polynomial in s, degree two in A, four values of A); the substitution, endpoint and closed form at sampled rational points; the bound itself on a 40 x 11 grid plus a 21 x 21 grid next to the maximiser (s = 10/99, u = 0), which the grid contains, so the grid maximum equals the bound exactly"
+  check_bound_against_data_for_complex_neutrino_stages:
+    kind: exact
+    clauses:
+    - (iv)
+    omits: "the NuFIT 6.0 three-sigma union edges (0.275, 0.02023) are inputs; the overlap identity |1 + wt|^2 - (1 - t)^2 = 2t(1 + Re w) at four unit phases"
+  check_symmetric_couplings_give_one_type_stages:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: "one complex sample of Y, Yt, a P12-even f and four vevs with pinned compressions, and one antisymmetric control; a P12-odd f (which also changes M_R) is outside the claim; the general statement is that the odd part of a symmetric matrix is symmetric"
+untouched_premises:
+  synthesis.imported-takagi-factorisation: "imported Fact: the Takagi factorisation is used in the proof of (i); the check verifies the reduction D N D = N_s and the singular values directly"
+  synthesis.imported-nufit-6-oscillation-parameter-ranges: "imported Fact: the check pins the NuFIT edges 0.275 and 0.02023 as literals and verifies the bound 0.71033 < 0.711"

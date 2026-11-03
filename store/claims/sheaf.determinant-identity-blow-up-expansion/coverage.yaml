@@ -1,0 +1,14 @@
+functions:
+  check_schur_complement_and_determinant_identity:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "exact in tau but for three hand-built collar models (n = 4, 4, 3) and four couplings; not a symbolic proof for arbitrary G, e, mu, nu, beta"
+  check_blow_up_expansion:
+    kind: sampled
+    clauses: ["(2) s = 1/lambda + O(1)", "(2) s -> +infinity where lambda > 0, -infinity where lambda < 0"]
+    omits: "three models; O(1) shown as absence of a pole of s - 1/lambda at tau = 0 on one transversal, local uniformity over the collar is not tested; side signs read off at tau = +-1/1000 only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Schur complement, determinant identity and the 1/lambda expansion are checked as rational-function identities in tau on three collar models and four couplings; local uniformity of the O(1) term is not tested.

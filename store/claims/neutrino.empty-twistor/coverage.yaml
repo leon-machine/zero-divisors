@@ -1,0 +1,24 @@
+functions:
+  check_single_spinor_singlets:
+    kind: partial
+    clauses: ["(1)"]
+    omits: "only the computable core: the grades of the exterior algebra of C^3 have dimensions 1, 3, 3, 1, the colour singlets are grades 0 and 3 matching the two singlets of 3bar + 3bar + 1 + 1, and Y = -k/3 gives 0 and -1 (conjugate +1 = Y(e^c)); the identification of nu_R with the empty conformal spinor and the naming remarks are imported and not tested"
+  check_anomaly_solution_set_is_the_span:
+    kind: sampled
+    clauses: ["(2) with Y_Q != 0 the solutions of the four anomaly conditions are exactly the span {sY + t(B-L)}, up to u^c <-> d^c"]
+    omits: "the three linear conditions are built into the parametrisation (c, d, e as functions of a, b, f) rather than solved; the cubic sum identity 18 a (8a^2 + p - 6af + f^2) and the quadratic root identities are matched on grids that fix the polynomials, completeness in b is checked at nine (a, f) with 15 trial b each (18 hits); the spectrum Y and B-L are typed constants"
+  check_ray_family_and_collapse:
+    kind: sampled
+    clauses: ["(2) the family Y + t(B-L) has Y_N = t and Y_N/Y_Q != 3", "(2) the ray of B-L is anomaly-free with Y_N/Y_Q = 3", "(2) at Y_N = 0 the family collapses to the derived spectrum", "(2) Witten's global SU(2) anomaly imposes nothing (even doublet count)"]
+    omits: "six values of t; the ratio 6t/(1+2t) is tested at those values with the identity 6t - 3(1+2t) = -3, not symbolically"
+  check_anomaly_invisible_on_the_lattice:
+    kind: exact
+    clauses: ["(3) at Y_N = 0 the fourth singlet contributes to none of the four sums", "(3) the Z_6 lattice admits its entry"]
+    omits: "the orientation dependency discharged by flag covariance is imported and has no computable content"
+untouched_premises:
+  neutrino.imported-ceiling-under-hypothesis-u-arrow: "cited for the flag covariance of the nu_R identification, a stance with no computable content here (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statements (2) and (3) are tested by exact anomaly sums and polynomial identities; (1) is an import whose only computable core is the grade count."

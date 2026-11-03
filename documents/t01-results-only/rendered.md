@@ -1,0 +1,1003 @@
+# The Transport Principle (from its results alone)
+
+**Abstract.** A nonzero null vector of $\Cl(p,q)$ has no left and no right inverse, either in $\Cl(p,q)$ or in any associative unital algebra containing it as a unital subalgebra. A map from the null cone into the Clifford algebra of an extension is $G$-equivariant when it intertwines the action of $G \subseteq \Pin(p,q)$ on null vectors with its action on the algebra. An extension of a nondegenerate quadratic space is any real quadratic space, possibly degenerate, that contains it with the same form on it, and it always splits as the original space plus its orthogonal complement. Along a hyperbolic plane spanned by $(v, w_0)$, every element of $\Cl(H_0 \perp U')$ expands uniquely as $\alpha + v\beta + w_0\gamma + v w_0\delta$ with coefficients in $\Cl(U')$, and left multiplication by $v$ is injective on $\Cl(U')$.
+
+Every result below is drawn from the Transport Lab store; each is shown with its derivation or cited with its provenance.
+
+## Setting, and the classical facts the proofs use
+
+This section gathers the results on setting, and the classical facts the proofs use.
+
+We begin here.
+
+**Theorem 1 (A null vector has no inverse).** A null vector $v \neq 0$ has no left inverse and no right inverse in $\Cl(p,q)$, nor in any associative unital algebra containing $\Cl(p,q)$ as a unital subalgebra.
+
+*Proof.* The relation $v^2 = Q(v) = 0$ (\claimref{std-algebra.vector-squares}) persists in any algebra containing $\Cl(p,q)$ as a subalgebra, since the multiplication restricts. If $vw = 1$ then $v = v(vw) = v^2 w = 0$; if $wv = 1$ then $v = (wv)v = wv^2 = 0$. Either way a contradiction.
+
+
+We turn to a further ingredient.
+
+**Definition 2 (Equivariance).** Let $\mathbb{V}' \supseteq \mathbb{V}$ be an extension of quadratic spaces (Definition \claimref{obj.transport.extension-quadratic-spaces}) and $G$ a subgroup of $\Pin(p,q)$, acting on the null cone $\Ncone \subset \mathbb{V}$ by $\Ad$ (which preserves $\mathbb{V}$ and its null cone, being an isometry of $\mathbb{V}$) and on $\Cl(\mathbb{V}')$ by $\tau$ through the inclusion $\Cl(\mathbb{V}) \subseteq \Cl(\mathbb{V}')$. A map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ is \emph{$G$-equivariant} if
+\[
+\sigma\bigl(\Ad_g(v)\bigr) \;=\; \tau_g\bigl(\sigma(v)\bigr) \qquad \text{for all } g \in G,\ v \in \Ncone .
+\]
+
+We turn to a further ingredient.
+
+**Definition 3 (Extension of quadratic spaces).** An \emph{extension} of the nondegenerate quadratic space $(\mathbb{V}, Q)$ is a real quadratic space $(\mathbb{V}', Q')$ with $\mathbb{V} \subseteq \mathbb{V}'$ and $Q'|_{\mathbb{V}} = Q$. The form $Q'$ is not assumed nondegenerate. Because $Q$ is nondegenerate on $\mathbb{V}$, the extension splits orthogonally and automatically: $\mathbb{V}' = \mathbb{V} \perp \mathbb{V}^{\perp}$, where $\mathbb{V}^{\perp} = \{ a \in \mathbb{V}' : a \cdot x = 0 \ \forall x \in \mathbb{V}\}$ \cite{Lam2005}. Extensions in this sense are exactly the ``ascents'' quantified over in Theorem \claimref{transport.no-go-level-elements}.
+
+We turn to a further ingredient.
+
+**Theorem 4 (Splitting along a hyperbolic plane).** Let $\mathbb{V}' = H_0 \perp U'$ be an orthogonal decomposition with $H_0$ a hyperbolic plane spanned by a hyperbolic pair $(v, w_0)$; the form on $U'$ may be degenerate. Then:
+\begin{enumerate}
+\item $\{1, v, w_0, v w_0\}$ is a linear basis of $\Cl(H_0)$, and every element of $\Cl(\mathbb{V}')$ admits a \emph{unique} expansion
+\[
+\sigma \;=\; \alpha + v\beta + w_0\gamma + v w_0\,\delta, \qquad \alpha, \beta, \gamma, \delta \in \Cl(U').
+\]
+\item Left multiplication by $v$ is injective on $\Cl(U')$.
+\end{enumerate}
+
+*Proof.* Restated from \claimref{primer.splitting-along-hyperbolic-plane} (T0), where it is proved or imported with its sources.
+
+
+We turn to a further ingredient.
+
+**Theorem 5 (Classification of the real Clifford algebras).** Let $d \equiv p - q \pmod 8$. Then $\Cl(p,q)$ is isomorphic, as a real associative algebra, to
+\[
+\begin{array}{llll}
+d = 0:\ \Mat_{k}(\R), &
+d = 1:\ \Mat_{k}(\R) \oplus \Mat_{k}(\R), &
+d = 2:\ \Mat_{k}(\R), &
+d = 3:\ \Mat_{k}(\C), \\[2pt]
+d = 4:\ \Mat_{k}(\HH), &
+d = 5:\ \Mat_{k}(\HH) \oplus \Mat_{k}(\HH), &
+d = 6:\ \Mat_{k}(\HH), &
+d = 7:\ \Mat_{k}(\C),
+\end{array}
+\]
+with $k$ in each case determined by $\dim_\R \Cl(p,q) = 2^n$. In particular $\Cl(p,q)$ is a simple algebra except when $d \in \{1, 5\}$, i.e.\ except when $p - q \equiv 1 \pmod 4$, where it is the direct sum of two isomorphic simple algebras.
+
+*Proof.* Restated from \claimref{primer.classification-real-clifford-algebras} (T0), where it is proved or imported with its sources.
+
+
+We turn to a further ingredient.
+
+**Theorem 6 (The centre).** For $n \geq 1$, the centre of $\Cl(p,q)$ is $\R \cdot 1$ if $n$ is even, and $\R \cdot 1 \oplus \R \cdot \omega$ if $n$ is odd, where $\omega = e_1 e_2 \cdots e_n$ is the pseudoscalar.
+
+*Proof.* Restated from \claimref{primer.centre} (T0), where it is proved or imported with its sources.
+
+
+We turn to a further ingredient.
+
+**Theorem 7 (The sign of $\omega^2$).** $\displaystyle \omega^2 = (-1)^{\tfrac{n(n-1)}{2}} (-1)^q = (-1)^{\tfrac{(p-q)(p-q-1)}{2}}$. In particular $\omega^2 = +1$ if and only if $p - q \equiv 0$ or $1 \pmod 4$.
+
+*Proof.* Restated from \claimref{primer.sign} (T0), where it is proved or imported with its sources.
+
+
+We turn to a further ingredient.
+
+**Theorem 8 (Regularity localises zero divisors at idempotents).** Every semisimple Artinian ring, in particular every real Clifford algebra of nondegenerate form, is von Neumann regular. Consequently, if $a$ is a nonzero zero divisor in such a ring $A$, and $x$ satisfies $axa = a$, then $e = xa$ and $f = ax$ are idempotents with
+\[
+a(1 - e) = 0, \qquad (1 - f)a = 0, \qquad e, f \notin \{0, 1\}.
+\]
+Moreover $ae = a$ and $fa = a$.
+
+*Proof.* By Wedderburn--Artin a semisimple Artinian ring is a finite product of matrix rings over division rings, and it suffices to verify regularity in $\Mat_k(D)$: any matrix $a$ of rank $r$ can be written $a = u \begin{psmallmatrix} 1_r & 0 \\ 0 & 0\end{psmallmatrix} v$ with $u, v$ invertible, and $x = v^{-1} \begin{psmallmatrix} 1_r & 0 \\ 0 & 0 \end{psmallmatrix} u^{-1}$ gives $axa = a$. (Clifford algebras of nondegenerate forms are semisimple by Theorem \claimref{transport.classification-real-clifford-algebras}.) For the consequence: $e^2 = xaxa = xa = e$, and $a(1-e) = a - axa = 0$; symmetrically for $f$. Also $ae = axa = a$ and $fa = axa = a$. If $e = 1$ then $xa = 1$, so $a$ is left-invertible, hence invertible in an Artinian ring, contradicting that $a$ is a zero divisor; if $e = 0$ then $a = ae = 0$, contradicting $a \neq 0$. The same for $f$.
+
+
+## A taxonomy of obstructions
+
+This section gathers the results on A taxonomy of obstructions.
+
+We turn to a further ingredient.
+
+**Definition 9 (Obstruction types).** Let $A = \Cl(p,q)$, nondegenerate. A zero-divisor obstruction of $A$ is classified as:
+\begin{itemize}
+\item \textbf{Type N (isotropic vector).} A null vector $v \in \mathbb{V}$, $v \neq 0$, $v^2 = Q(v) = 0$, together with the annihilating idempotent $wv$ it acquires through a hyperbolic partner (Example \claimref{note.transport.hyperbolic-partner-supplies-annihilating-idempotent}). Geometrically: an isotropic line, a direction without a metric partner.
+\item \textbf{Type P (non-central idempotent).} An idempotent $e = e^2$ with $e \notin \{0, 1\}$ and $e$ not central. Prototype: $e = \tfrac12(1 + u)$ with $u^2 = 1$, $u \neq \pm 1$. Each such $e$ is a zero divisor via $e(1 - e) = 0$.
+\item \textbf{Type C (central idempotent).} An idempotent $e \notin \{0,1\}$ lying in the centre of $A$. The two-sided ideals $eA$ and $(1-e)A$ then annihilate one another and $A$ splits as their direct sum.
+\end{itemize}
+
+We turn to a further ingredient.
+
+**Theorem 10 (The exceptional division algebras).** $\Cl(p,q)$ contains no zero divisors if and only if $(p,q) \in \{(0,0), (0,1), (0,2)\}$, where it is $\R$, $\C$, $\HH$ respectively. It contains no nilpotents if and only if $(p,q) \in \{(0,0), (0,1), (0,2), (1,0), (0,3)\}$: the three division algebras together with $\Cl(1,0) \cong \R \oplus \R$ and $\Cl(0,3) \cong \HH \oplus \HH$.
+
+*Proof.* By Theorem \claimref{transport.classification-real-clifford-algebras}, $\Cl(p,q)$ is $\Mat_k(\mathbb{F})$ or $\Mat_k(\mathbb{F})^{\oplus 2}$. A matrix algebra $\Mat_k(\mathbb{F})$ with $k \geq 2$ contains the nilpotent matrix unit $E_{12} \neq 0$; a direct sum contains the zero divisors $(x, 0)$; and a division algebra contains neither. So freedom from zero divisors forces a single factor with $k = 1$: $\mathbb{F}$ itself. Dimension count fixes the signatures: $\dim = 2^n = \dim_\R \mathbb{F}$ (\claimref{std-algebra.blade-basis}) gives $n = 0, 1, 2$ with $\mathbb{F} = \R, \C, \HH$, i.e.\ $(0,0), (0,1), (0,2)$ (the candidates $\Cl(1,0)$ and $\Cl(2,0)$, of the right dimensions, are $\R \oplus \R$ and $\Mat_2(\R)$ by the classification, not $\C$ and $\HH$). Freedom from nilpotents allows in addition direct sums of division algebras: $\Mat_k(\mathbb{F})^{\oplus 2}$ is nilpotent-free iff $k = 1$, and dimension count $2^n = 2\dim_\R \mathbb{F}$ within $d \in \{1,5\}$ gives exactly $\Cl(1,0) \cong \R \oplus \R$ ($n=1$) and $\Cl(0,3) \cong \HH \oplus \HH$ ($n=3$).
+
+
+We turn to a further ingredient.
+
+**Theorem 11 (Existence locus of type N).** $\Cl(p,q)$ contains a null vector if and only if the signature is mixed, $pq \neq 0$. In that case the null vectors form a cone of dimension $n - 1$, and every null vector is a two-sided zero divisor without left or right inverse in any unital algebra containing $\Cl(p,q)$.
+
+*Proof.* If $q = 0$ or $p = 0$ the form is definite and anisotropic: $Q(v) = 0$ forces $v = 0$. If $p, q \geq 1$, then $v = e_1 + e_n$ satisfies $v^2 = 1 - 1 + (e_1e_n + e_ne_1) = 0$ (\claimref{std-algebra.orthogonal-anticommute}); the solution set of the homogeneous quadratic $Q = 0$ minus the origin is a cone of dimension $n-1$. Non-invertibility in every extension is Lemma \claimref{transport.noinverse}: from $v^2 = 0$, $vw = 1$ gives $v = v^2 w = 0$.
+
+
+**Example  (The hyperbolic partner supplies the annihilating idempotent).** Let $v$ be null and $(v, w)$ a hyperbolic pair, $vw + wv = 1$. Then $e = wv$ is idempotent ($e^2 = w(vw)v = w(1 - wv)v = wv$, using $v^2 = w^2 = 0$), non-central (it fails to commute with $v$: $ev = wv\cdot v = wv^2 = 0$, while $ve = v(wv) = (vwv) = v \neq 0$), and
+\[
+v(1 - e)\;=\;v - vwv \;=\; v - v \;=\; 0 , \qquad (1-e) \ne 0.
+\]
+Thus the abstract annihilator idempotent of Lemma \claimref{transport.regularity-localises-zero-divisors-idempotents} is, for a type-N obstruction, realised by the geometry itself: the pseudo-inverse $w$ of the section ``Null vectors, zero divisors, and hyperbolic planes'' produces it. Type N is in this sense a geometric refinement of type P: a null vector is a zero divisor \emph{whose annihilating idempotent comes from an isotropic line}. What Theorem \claimref{transport.no-go-level-elements} will prove is that this refinement carries an obstruction the generic type-P case does not: the choice of $w$, hence of $e$, is sheared by the null rotations, and no equivariant choice exists in any ascent.
+
+**Example  (Nilpotents without null vectors: the two loci differ).** $\Cl(2,0) \cong \Mat_2(\R)$ has definite signature: no null vectors, by Proposition \claimref{transport.existence-locus-type-n}. It nevertheless contains nilpotents, e.g.
+\[
+x = (1 + e_1)\,e_2, \qquad x^2 = (1+e_1)\,e_2\,(1+e_1)\,e_2 = (1+e_1)(1-e_1)\,e_2^2 = 0,
+\]
+using $e_2 e_1 = -e_1 e_2$ and $e_1^2 = e_2^2 = 1$. A loose reading of type N, as comprising null vectors and more generally the elements they generate, therefore needs care: the \emph{nilpotency} locus (nonzero $x$ with $x^k = 0$) is strictly larger than the locus of algebras with isotropic vectors, and it is the latter, the grade-one geometric obstruction, that defines type N and triggers Rule 1. The nilpotent $x$ above is instead type-P-generated: $x = 2\,\varepsilon\, e_2$ with $\varepsilon = \tfrac12(1 + e_1)$ a non-central idempotent, and $x$ is annihilated by the idempotent $1 - \varepsilon$ on the left. In matrix form ($e_1 \mapsto \mathrm{diag}(1,-1)$, $e_2 \mapsto \begin{psmallmatrix} 0 & 1 \\ 1 & 0\end{psmallmatrix}$), $x \mapsto 2E_{12}$: the standard nilpotent matrix unit, built from idempotents and invertible vectors with no isotropic vector anywhere in $\mathbb{V}$.
+
+We turn to a further ingredient.
+
+**Theorem 12 (Existence and classification of type C).** $\Cl(p,q)$ ($n \geq 1$) contains a nontrivial central idempotent if and only if
+\[
+p - q \equiv 1 \pmod 4 ,
+\]
+and in that case the nontrivial central idempotents are exactly the two elements
+\[
+\varepsilon_\pm = \tfrac12\,(1 \pm \omega),
+\]
+which are exchanged by the grade involution $\hat{\cdot}$ (an \emph{outer} automorphism of the split algebra; no inner automorphism exchanges them, centrality being conjugation-invariant), and satisfy $\varepsilon_+ \varepsilon_- = 0$ and $\varepsilon_+ + \varepsilon_- = 1$, and effect the splitting $\Cl(p,q) = \varepsilon_+ A \,\oplus\, \varepsilon_- A$ into the two simple ideals of Theorem \claimref{transport.classification-real-clifford-algebras}.
+
+*Proof.* A central idempotent lies in the centre $\Zc$, computed in Lemma \claimref{transport.centre}. If $n$ is even, $\Zc = \R$, whose idempotents are $0$ and $1$: no type C. If $n$ is odd, $\Zc = \R[\omega]$ with $\omega^2 = \pm 1$ by Lemma \claimref{transport.sign}. Case $\omega^2 = -1$: $\Zc \cong \C$, and an idempotent $a + b\omega$ satisfies $a^2 - b^2 = a$ and $2ab = b$; if $b \neq 0$ the second gives $a = \tfrac12$ and the first $-b^2 = \tfrac14$, impossible over $\R$; so $b = 0$ and $a \in \{0,1\}$: no type C. Case $\omega^2 = +1$: $\Zc \cong \R \oplus \R$ via $\varepsilon_\pm$, whose idempotents are $0, 1, \varepsilon_+, \varepsilon_-$; direct check $\varepsilon_\pm^2 = \tfrac14(1 \pm 2\omega + \omega^2) = \varepsilon_\pm$ and $\varepsilon_+\varepsilon_- = \tfrac14(1 - \omega^2) = 0$. By Lemma \claimref{transport.sign}, $n$ odd and $\omega^2 = +1$ happen together precisely when $p - q$ is odd and $p - q \equiv 0, 1 \pmod 4$, i.e.\ precisely when $p - q \equiv 1 \pmod 4$. For the exchange: for $n$ odd the pseudoscalar is central, so no inner automorphism, in particular no vector conjugation, moves it; the exchanging symmetry must instead be the \emph{grade involution}: $\hat{\omega} = (-1)^n \omega = -\omega$ for $n$ odd (\claimref{std-algebra.involution-properties}), so the grade involution, implemented on the algebra by conjugation in the larger algebra $\Cl(p,q{+}1)$ or realised abstractly as an outer automorphism, exchanges $\varepsilon_+ \leftrightarrow \varepsilon_-$. Within $A$ itself the two ideals are exchanged by no inner automorphism, centrality being conjugation-invariant, and this is exactly why type C is the deepest obstruction: no inner automorphism can act on it. The splitting into two simple ideals is Theorem \claimref{transport.classification-real-clifford-algebras} ($d \in \{1,5\}$), each ideal $\varepsilon_\pm A \cong \Mat_k(\mathbb{F})$.
+
+
+**Remark  (Remark on Existence and classification of type C).** The proof just given settles a point worth recording: for $n$ odd the pseudoscalar is central, so \emph{no inner automorphism} of $\Cl(p,q)$ exchanges the two ideals; the exchanging symmetry is the grade involution, which is outer on the split algebra, and its realisation by an inner automorphism is available only after the one-generator ascent of Rule 2, where a new generator anticommuting with $\omega$ exists. This sharpens the sense in which Rule 2 is a \emph{repair}: the ascent does not merely contain the fused algebra, it renders inner the very symmetry whose absence defined the obstruction. The observation will be part of the minimality argument in the section ``Type C: ideal fusion, and Rule 2''.
+
+We turn to a further ingredient.
+
+**Theorem 13 (Existence locus of type P).** $\Cl(p,q)$ contains a non-central idempotent if and only if it is not a direct sum of division algebras, that is, if and only if
+\[
+(p,q) \;\notin\; \{(0,0),\ (0,1),\ (0,2),\ (1,0),\ (0,3)\} .
+\]
+In particular, for $n \geq 2$ with $(p,q) \notin \{(0,2), (0,3)\}$, type P is always present, and concretely: any invertible vector pair $a, b$ with $a \cdot b = 0$ and $a^2 b^2 = -1$ (one timelike and one spacelike factor) yields the non-central idempotent $\tfrac12(1 + u)$ with $u = ab$, since then $(ab)^2 = -a^2b^2 = +1$, and every unit blade $u$ with $u^2 = 1$, $u \neq \pm 1$, $u$ non-central yields one.
+
+*Proof.* In a division algebra, and in a sum of two, every idempotent is a sum of the componentwise trivial ones, hence central: $(x,y)$ idempotent in $D_1 \oplus D_2$ forces $x \in \{0,1\}$, $y \in \{0,1\}$, all four combinations central. Conversely if $\Cl(p,q) \cong \Mat_k(\mathbb{F})$ (or a sum) with $k \geq 2$, the matrix unit $E_{11}$ is a non-central idempotent. The signature list is Proposition \claimref{transport.exceptional-division-algebras}. For the concrete form: if $u^2 = 1$ then $\tfrac12(1+u)$ is idempotent, and it is central iff $u$ is; a product of two orthogonal invertible vectors squares to $(ab)^2 = -a^2b^2 = +1$ (\claimref{std-algebra.orthogonal-anticommute}) iff $a^2 b^2 = -1$, i.e.\ one timelike and one spacelike factor, available whenever $pq \neq 0$; in definite signature take instead a grade-one unit $u = e_1$ with $e_1^2 = +1$ ($p \geq 1$), or in the negative-definite case a suitable blade, e.g.\ $u = e_1e_2e_3e_4$ with $u^2 = +1$ for $q \geq 4$; the classification (\claimref{transport.classification-real-clifford-algebras}) guarantees existence in all listed cases, the explicit blade being a convenience, not the proof.
+
+
+We turn to a further ingredient.
+
+**Theorem 14 (Exhaustiveness: every zero divisor is annihilated by an idempotent).** Let $A = \Cl(p,q)$ be nondegenerate, $a \in A$ a nonzero zero divisor. Then:
+\begin{enumerate}
+\item There exist idempotents $e, f \notin \{0, 1\}$ with $a(1-e) = 0$ and $(1-f)a = 0$ (so $a$ both left-annihilates and is right-annihilated by nontrivial idempotents).
+\item If $p - q \not\equiv 1 \pmod 4$, every such idempotent is non-central: the obstruction carried by $a$ is of type P, refined to type N exactly when the annihilating idempotent is the $wv$ of a hyperbolic pair, as in Example \claimref{note.transport.hyperbolic-partner-supplies-annihilating-idempotent}.
+\item If $p - q \equiv 1 \pmod 4$, the element $a$ may in addition be annihilated by a \emph{central} idempotent (this happens exactly when $\varepsilon_+ a = 0$ or $\varepsilon_- a = 0$, i.e.\ when $a$ lies entirely in one simple ideal): type C. Every zero divisor not of this kind is again of type P within its ideal(s).
+\end{enumerate}
+Consequently the taxonomy N/P/C of Definition \claimref{obj.transport.obstruction-types} is exhaustive: every failure of invertibility in a real Clifford algebra of nondegenerate form is localised at an idempotent, non-central in the simple signatures, possibly central exactly in the signatures $p - q \equiv 1 \pmod 4$, and of isotropic-vector origin exactly in the mixed signatures.
+
+*Proof.* (1) is Lemma \claimref{transport.regularity-localises-zero-divisors-idempotents}. (2): for $p - q \not\equiv 1 \pmod 4$ the algebra is simple (Theorem \claimref{transport.classification-real-clifford-algebras}), so by Theorem \claimref{transport.existence-classification-type-c} its only central idempotents are $0$ and $1$, excluded in (1). (3): if $a = \varepsilon_- a$ (say), then $\varepsilon_+ a = \varepsilon_+ \varepsilon_- a = 0$ with $\varepsilon_+$ central and nontrivial. If neither central projector annihilates $a$, then both components $\varepsilon_\pm a$ are nonzero; apply Lemma \claimref{transport.regularity-localises-zero-divisors-idempotents} componentwise: in each simple ideal $\varepsilon_\pm A \cong \Mat_k(\mathbb{F})$, the component $\varepsilon_\pm a$ is either invertible (within the ideal) or annihilated by a non-central idempotent of that ideal; since $a$ is a zero divisor of $A$, not both components can be invertible in their ideals, so at least one is annihilated, and the annihilating idempotent, viewed in $A$, is non-central (it is neither $0$ nor $\varepsilon_\pm$ nor central in $A$, central idempotents of $A$ being classified in Theorem \claimref{transport.existence-classification-type-c}: any idempotent of $\varepsilon_\pm A$ central in $A$ would be a central idempotent of $A$ inside one ideal, hence $0$ or $\varepsilon_\pm$; the annihilating idempotent is nontrivial in its ideal, and if it equalled $\varepsilon_\pm$ then $\varepsilon_\pm a$ would be $0$, excluded). The classification of origins (isotropic iff mixed) is Proposition \claimref{transport.existence-locus-type-n} with Example \claimref{note.transport.hyperbolic-partner-supplies-annihilating-idempotent}.
+
+
+**Example  ($\Cl(1,1)$: N and P together).** $v = \tfrac{1}{\sqrt2}(e_1 + e_2)$, $w = \tfrac{1}{2\sqrt2}(e_1 - e_2)$ form a hyperbolic pair; $e = wv = \tfrac12(1 + e_1e_2)$ is the annihilating idempotent of Example \claimref{note.transport.hyperbolic-partner-supplies-annihilating-idempotent}, non-central; the algebra is $\Mat_2(\R)$ ($d = 0$), simple, and every zero divisor is N/P. This is the hyperbolic atom of Remark \claimref{note.transport.hyperbolic-atom} below, the one mixed signature where the element-level choice of $w$ is canonical.
+
+**Example  ($\Cl(1,0)$ and $\Cl(2,1)$: pure C, and C at matrix size).** $\Cl(1,0) \cong \R \oplus \R$ ($d = 1$): $\omega = e_1$, $\omega^2 = +1$, central; $\varepsilon_\pm = \tfrac12(1 \pm e_1)$; the only zero divisors are the multiples of $\varepsilon_\pm$: type C in its purest form, with no N (definite) and no P (division-algebra summands). $\Cl(2,1)$ ($d = 1$, dimension 8) $\cong \Mat_2(\R) \oplus \Mat_2(\R)$: the algebra of $2{+}1$-dimensional spacetime carries all three types at once: null vectors (mixed signature), matrix idempotents in each ideal, and the central pair $\tfrac12(1 \pm e_1e_2e_3)$.
+
+**Example  ($\Cl(1,3)$: the physical case is N-only-at-grade-one, simple).** $d = -2 \equiv 6$: $\Cl(1,3) \cong \Mat_2(\HH)$ is simple: no type C, which is what the singularity paper's diagnosis requires: there the black-hole obstruction is type N and Rule 1 (the $(1,1)$ ascent to $\Cl(2,4)$) is the operative rule.
+
+## Type N: the isotropic obstruction, and Rule 1
+
+This section gathers the results on type N: the isotropic obstruction, and Rule 1.
+
+We turn to a further ingredient.
+
+**Refutation 15 (The original conjecture, refuted below).** Division by zero promotes the element. For every null vector $v$ of $\Cl(p,q)$ there is, in the minimal ascent $\Cl(p{+}1,q{+}1)$, a canonically chosen partner $\sigma(v)$ satisfying $v\,\sigma(v)\,v = v$, the choice equivariant under the symmetries of the original algebra: the impossible division is repaired, element by element, one ascent up.
+
+We turn to a further ingredient.
+
+**Theorem 16 (No-go at the level of elements).** Let $(\mathbb{V}, Q)$ be nondegenerate of mixed signature $(p,q)$, $p, q \geq 1$, with $n = p + q \geq 3$, and let $\Ncone \subset \mathbb{V}$ be its null cone. Let $(\mathbb{V}', Q')$ be \emph{any} extension of $(\mathbb{V}, Q)$ in the sense of Definition \claimref{obj.transport.extension-quadratic-spaces}, possibly $\mathbb{V}$ itself. Then there is no map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ satisfying $v\,\sigma(v)\,v = v$ for every null $v$ that is equivariant, in the sense of Definition \claimref{obj.transport.equivariance}, even under the identity component $\Spin^0(p,q)$; a fortiori none equivariant under $\Spin(p,q)$ or $\Pin(p,q)$. Equivariant division by zero is impossible at the level of elements, in the Clifford algebra of every ascent, however large.
+
+*Proof.* Fix a null $v \in \Ncone$ and a null partner $w_0$ with $v \cdot w_0 = \tfrac12$, by the hyperbolic-pair construction of the section ``Null vectors, zero divisors, and hyperbolic planes'' (\claimref{std-algebra.witt-decomposition}); write $H_0 = \mathrm{span}\{v, w_0\}$ and $U = \{v, w_0\}^{\perp} \cap \mathbb{V}$, a nondegenerate subspace of $\mathbb{V}$ of dimension $n - 2 \geq 1$. By Definition \claimref{obj.transport.extension-quadratic-spaces} the extension splits as $\mathbb{V}' = \mathbb{V} \perp \mathbb{V}^{\perp}$, so
+\[
+\mathbb{V}' \;=\; H_0 \perp U', \qquad U' \mathrel{:=} U \perp \mathbb{V}^{\perp},
+\]
+and Lemma \claimref{transport.splitting-along-hyperbolic-plane} applies: every candidate $\sigma = \sigma(v) \in \Cl(\mathbb{V}')$ has a unique expansion $\sigma = \alpha + v\beta + w_0\gamma + v w_0 \delta$ with $\alpha, \beta, \gamma, \delta \in \Cl(U')$. Throughout, $\hat{\cdot}$ is the grade involution and we use the commutation rule $v\,x = \hat{x}\,v, \qquad x\,v = v\,\hat{x}$ (Lemma \claimref{primer.commutation-rule}) for $v$ against $\Cl(U')$, together with the hyperbolic-pair identities $v^2 = w^2 = 0, \qquad vw + wv = 1, \qquad \text{hence} \quad vwv = (1 - wv)v = v$.
+
+\emph{Step 1 (normal form for pseudo-inverses).} Compute $v\sigma v$ term by term:
+\[
+v\,\alpha\, v = v\, (\alpha v) = v\,(v \hat{\alpha}) = v^2 \hat\alpha = 0, \qquad
+v\,(v\beta)\,v = v^2 \beta v = 0, \qquad
+v\,(v w_0 \delta)\,v = v^2 w_0 \delta v = 0,
+\]
+while the third term survives:
+\[
+v\,(w_0 \gamma)\,v \;=\; v w_0\,(\gamma v) \;=\; v w_0\, v \hat{\gamma} \;=\; v \hat{\gamma}
+\]
+by $v^2 = w^2 = 0, \qquad vw + wv = 1, \qquad \text{hence} \quad vwv = (1 - wv)v = v$. Hence $v \sigma v = v \hat{\gamma}$, and since left multiplication by $v$ is injective on $\Cl(U')$ (Lemma \claimref{transport.splitting-along-hyperbolic-plane}(2)) and $\hat{\cdot}$ is an involution, $v \sigma v = v$ holds if and only if $\gamma = 1$. Every pseudo-inverse of $v$ therefore has the form
+\[
+\sigma \;=\; w_0 + \alpha + v\beta + v w_0 \delta .
+\]
+Note that only the first von Neumann identity is used; the theorem does not even require $\sigma v \sigma = \sigma$.
+
+\emph{Step 2 (null rotations).} For $u \in U$ set $R = 1 + vu$. Since $v \cdot u = 0$ and $v^2 = 0$,
+\[
+(vu)^2 = v\,(uv)\,u = -v\,(vu)\,u = -v^2 u^2 = 0, \qquad \text{and in particular} \quad vuv = -v^2u = 0,
+\]
+so $R = \exp(vu) = \exp(v \wedge u)$, with $R^{-1} = 1 - vu$. $R$ is even, and its reverse is $\widetilde{R} = 1 + uv = 1 - vu = R^{-1}$, so $R \widetilde{R} = 1$ and $R$ is a rotor.
+
+Take from now on $u$ with $Q(u) \neq 0$, which is possible because $U$ is nondegenerate and nonzero; such $u$ span $U$. Then $R$ is a versor outright, not merely a rotor. Indeed the vector $u' \mathrel{:=} u + Q(u)\,v$ satisfies $Q(u') = Q(u) + 2Q(u)\,(u \cdot v) = Q(u) \neq 0$ and
+\begin{equation}\label{eq:versorfactor}
+u'u \;=\; u^2 + Q(u)\,vu \;=\; Q(u)\,(1 + vu), \qquad \text{so} \qquad R \;=\; \frac{u'\,u}{Q(u)},
+\end{equation}
+a product of two invertible vectors of equal square. Normalising both factors to unit square multiplies the product by $|Q(u)|/Q(u) = \pm 1$, and when that sign is $-1$ we have $Q(u) < 0$, so the normalised $\hat{u} = u/\sqrt{|Q(u)|}$ satisfies $\hat{u}^2 = -1$ and the sign is itself a product of unit vectors. Hence $R \in \Spin(p,q)$. The same factorisation applies with $u$ replaced by $tu$ for every $t \neq 0$, so $t \mapsto 1 + t\,vu$ is a continuous path \emph{inside the group} joining $1$ to $R$, and therefore $R \in \Spin^0(p,q)$.
+
+Its action on vectors is computed directly. On $v$:
+\[
+R\,v\,R^{-1} = (1 + vu)\,v\,(1 - vu) = (v + vuv)(1 - vu) = v(1 - vu) = v - v^2u = v ,
+\]
+so $R$ fixes $v$. On $u'' \in U'$, using $u''v = -vu''$, $u u'' v = v u u''$ (two anticommutations) and $vuv = 0$:
+\[
+R\,u''\,R^{-1} = u'' - u''vu + vuu'' - vuu''vu = u'' + v(u''u + uu'') - v(vuu'')u = u'' + 2(u \cdot u'')\,v .
+\]
+On $w_0$, using $w_0 v = 1 - v w_0$ and $u w_0 = -w_0 u$:
+\[
+vuw_0 - w_0vu = -vw_0u - (1 - vw_0)u = -u, \qquad
+vuw_0vu = vu(1 - vw_0)u = vu^2 - (vuv)w_0u = Q(u)\,v,
+\]
+whence
+\[
+R\,w_0\,R^{-1} = w_0 + (vuw_0 - w_0vu) - vuw_0vu = w_0 - u - Q(u)\,v .
+\]
+These are the \emph{null rotations}, the parabolic transvections stabilising the null direction $v$.
+
+\emph{Step 3 (the shear).} Conjugate the normal form of Step 1 by $R$ and collect the $\Cl(U')$-component, i.e.\ the coefficient of $1 \in \Cl(H_0)$ in the unique expansion of Lemma \claimref{transport.splitting-along-hyperbolic-plane}. Term by term, using $\alpha v = v\hat\alpha$, $\delta v = v \hat\delta$, $\beta v = v\hat\beta$ and $vuv = 0$:
+\begin{align*}
+R\,\alpha\,R^{-1} &= \alpha + vu\alpha - \alpha vu - vu\alpha vu
+= \alpha + v\,(u\alpha - \hat{\alpha}u) && (\alpha vu = v\hat\alpha u;\ vu\alpha v = vuv\hat\alpha = 0),\\
+R\,(v\beta)\,R^{-1} &= v\beta + (vuv)\beta - (v\beta v)u - (vuv)\beta vu = v\beta && (v\beta v = v^2\hat\beta = 0),\\
+R\,(v w_0 \delta)\,R^{-1} &= v w_0 \delta - v w_0 \delta v u = v w_0 \delta - v\hat{\delta}u && (v w_0 \delta v u = v w_0 v \hat{\delta} u = v \hat\delta u),\\
+R\,w_0\,R^{-1} &= w_0 - u - Q(u)\,v && \text{(Step 2)}.
+\end{align*}
+Every correction except one retains a left factor of $v$ and therefore lies in the $v$- or $vw_0$-slots of the expansion; the sole contribution to the $\Cl(U')$-component comes from $R w_0 R^{-1}$, and that component of $R\,\sigma(v)\,R^{-1}$ equals $\alpha - u$. But $R$ fixes $v$, so equivariance demands $\tau_R(\sigma(v)) = R\,\sigma(v)\,R^{-1} = \sigma(v)$; comparing $\Cl(U')$-components in the unique expansion gives $\alpha - u = \alpha$, i.e.\ $u = 0$, for \emph{every} $u \in U$ with $Q(u) \neq 0$. Since $U$ is nondegenerate of dimension $n - 2 \geq 1$, such $u$ exist, a contradiction.
+
+
+**Remark  (Locality and robustness of the obstruction).** The proof consumes far less than the theorem's hypotheses offer, and it is worth recording what it actually uses, since the surplus rules out the obvious weakenings.
+
+\emph{It is local.} Only the stabiliser of a \emph{single} null vector enters. The sharp statement proved above is therefore: \emph{for one null vector $v$ there is no $\sigma \in \Cl(\mathbb{V}')$ with $v\sigma v = v$ that is invariant under the null rotations fixing $v$.} No global rule, no coherence across the cone, and no regularity of $\sigma$ (continuity, measurability, genericity) is assumed or would help; the theorem as stated follows at once.
+
+\emph{It survives equivariance up to scale.} The natural first weakening is to ask only that $\sigma(v)$ be canonical projectively, $\tau_R(\sigma(v)) = \lambda\,\sigma(v)$ for some $\lambda \neq 0$. This fails too. In the normal form of Step 1 the $w_0$-coefficient is $\gamma = 1$, and Step 3 shows it is unchanged by conjugation; comparing $w_0$-components forces $\lambda = 1$, whereupon the $\Cl(U')$-comparison gives the same contradiction $u = 0$.
+
+The next result builds directly on the one just stated.
+
+**Theorem 17 (The group of null rotations).** Let $v$ be a null vector with hyperbolic partner $w$ and $U = \{v, w\}^{\perp}$ the nondegenerate complement of the plane they span. For $u \in U$ set $R_u = 1 + vu$. Then $R_u R_{u'} = R_{u + u'}$, so
+\[
+N_v \;=\; \{\, R_u : u \in U \,\}
+\]
+is an abelian subgroup of $\Spin^0(p,q)$, and $u \mapsto R_u$ is an isomorphism of groups $(U, +) \cong N_v$. Each $R_u$ fixes $v$. Moreover the assignment is equivariant for the Levi factor: every rotor $g$ in the even subalgebra of $\Cl(U)$ fixes $v$ and satisfies $g\, R_u\, g^{-1} = R_{g u g^{-1}}$, the conjugation on the right being the vector action of $\Spin(U)$ on $U$.
+
+*Proof.* $R_u R_{u'} = 1 + v(u + u') + vuvu'$, and $vuvu' = (vuv)u' = 0$ since $vuv = -v^2u = 0$; so the group law holds, with $R_0 = 1$ and $R_u^{-1} = R_{-u}$. Injectivity of $u \mapsto R_u$: $vu = v \wedge u \neq 0$ for $u \neq 0$ by the blade basis (\claimref{std-algebra.blade-basis}). Membership in $\Spin^0$ and the fixing of $v$ are Step 2 of the proof of Theorem \claimref{transport.no-go-level-elements}. For the Levi statement: $g$ is an even product of vectors of $U$, each anticommuting with $v$ (\claimref{std-algebra.orthogonal-anticommute}), so $g$ commutes with $v$ and $gvg^{-1} = v$; then $g R_u g^{-1} = 1 + (gvg^{-1})(gug^{-1}) = 1 + v\,(gug^{-1})$, and $gug^{-1} \in U$ is the rotor action.
+
+
+We turn to a further ingredient.
+
+**Theorem 18 (The pseudo-inverse torsor).** On $S(v)$ define $\sigma \sim \sigma'$ iff $\sigma - \sigma' \in v\,\Cl(\mathbb{V}')$, the left ideal generated by $v$. Then:
+\begin{enumerate}
+\item Each class contains a unique representative of the form $w_0 + \alpha$ with $\alpha \in \Cl(U')$, so the quotient $T(v) := S(v)/\!\sim$ is an affine space with translation space $\Cl(U')$, via $[w_0 + \alpha] + \xi = [w_0 + \alpha + \xi]$.
+\item $N_v$ preserves $S(v)$ and the equivalence, hence acts on $T(v)$; the action is by translations along the grade-one subspace $U \subseteq \Cl(U')$:
+\[
+R_u \cdot [\,w_0 + \alpha\,] \;=\; [\,w_0 + \alpha - u\,].
+\]
+\item The $N_v$-orbit of any class is a torsor under $(U, +)$, and its translation cocycle, with respect to any base point, is the tautological homomorphism $\theta : N_v \to U$, $\theta(R_u) = u$.
+\end{enumerate}
+
+*Proof.* (1) In the normal form, $v\beta + vw_0\delta \in v\,\Cl(\mathbb{V}')$, and two elements $w_0 + \alpha$, $w_0 + \alpha'$ are equivalent iff $\alpha - \alpha' \in v\,\Cl(\mathbb{V}') \cap \Cl(U') = 0$: by the unique-expansion lemma (Lemma \claimref{transport.splitting-along-hyperbolic-plane}), $v\,\Cl(\mathbb{V}') = v\,\Cl(U') \oplus vw_0\,\Cl(U')$ occupies exactly the $v$- and $vw_0$-slots, which meet the $\Cl(U')$-slot in $0$. (2) Preservation of $S(v)$: since $R_u$ fixes $v$, $v\,(R\sigma R^{-1})\,v = R\,(v\sigma v)\,R^{-1} = RvR^{-1} = v$. Preservation of the ideal: $R\,(vX)\,R^{-1} = (RvR^{-1})(RXR^{-1}) = v\,(RXR^{-1}) \in v\Cl(\mathbb{V}')$. The translation formula is Step 3 of the proof of Theorem \claimref{transport.no-go-level-elements}: conjugating the normal form by $R_u$, every correction retains a left factor of $v$ except the contribution of $R_u w_0 R_u^{-1} = w_0 - u - Q(u)v$, whose $\Cl(U')$-component is $-u$. (3) The orbit map $u \mapsto R_u \cdot [\sigma_0] = [\sigma_0] - u$ is a bijection of $U$ onto the orbit (injectivity by (1)); the cocycle at base $[\sigma_0]$ is $c(R_u) = [\sigma_0] - R_u[\sigma_0] = u = \theta(R_u)$, independent of the base point since the coefficient action is trivial, and $c(R_uR_{u'}) = u + u' = c(R_u) + c(R_{u'})$ is the homomorphism property. The situation is the standard one: an affine action whose linear part is trivial has a fixed point exactly when its translation cocycle is a coboundary, and here the cocycle is tautological, the radical translating the candidates by exactly itself.
+
+
+**Remark  (The obstruction is parabolic).** The stabiliser of a null direction in an indefinite orthogonal group is not \emph{reductive}: it contains a nontrivial normal subgroup of \emph{unipotent} elements, transformations $g$ for which $g - \mathrm{id}$ is nilpotent (here $(R-1)^2 = 0$ in the algebra, while on $\mathbb{V}$ the action satisfies $(\Ad_R - \mathrm{id})^3 = 0$, with $(\Ad_R - \mathrm{id})^2 w_0 = -2Q(u)\,v$ nonzero whenever $Q(u) \neq 0$), called its unipotent radical. (``Parabolic'' parallels the M\"obius classification: like a parabolic M\"obius map, a null rotation is unipotent and fixes the null direction $[v]$; for $n = 3$ it fixes no other direction at all, while for $n \geq 4$ it fixes in addition the subspace $U \cap u^{\perp}$, which may itself contain null directions.) Step 3 shows that this radical acts on the candidate partners by translating the $\Cl(U')$-coefficient $\alpha$ by $-u$, freely and without fixed point; Proposition \claimref{transport.pseudo-inverse-torsor} makes that action exact. Two consequences deserve emphasis. First, enlarging the algebra can never help: the shearing rotors $R = 1 + vu$ and the translation vectors $u$ lie inside $\Cl(\mathbb{V})$ and act the same way in every extension, which is why Theorem \claimref{transport.no-go-level-elements} quantifies over all ascents at once. The quantifier ranges over the Clifford algebra of an extension quadratic space (Definition \claimref{obj.transport.extension-quadratic-spaces}), which is what the splitting of Lemma \claimref{transport.splitting-along-hyperbolic-plane} requires; it extends verbatim to matrix algebras $M_k\bigl(\Cl(\mathbb{V}')\bigr)$ over such an algebra, since reading $v\sigma v = v$ entrywise, with $v$ embedded as $v\,I$, makes each diagonal entry of $\sigma$ an invariant pseudo-inverse in $\Cl(\mathbb{V}')$ and so contradicts the theorem. Second, the phenomenon is absent in definite signature, where there are no null vectors and stabilisers of directions are compact and reductive: it is a genuinely mixed-signature obstruction, present exactly where the null cone is.
+
+The next result builds directly on the one just stated.
+
+**Theorem 19 (Cohomological form of the no-go).** With trivial coefficients, $H^1(N_v;\, U) = \mathrm{Hom}(N_v, U)$, one-coboundaries vanishing; and the class of the pseudo-inverse torsor is the tautological homomorphism $\theta$, which is nonzero whenever $U \neq 0$. An $N_v$-invariant pseudo-inverse of $v$ exists, in the given extension, if and only if this class vanishes, if and only if $U = 0$, i.e.\ $n = 2$: the hyperbolic atom of Remark \claimref{note.transport.hyperbolic-atom} is recovered as the exact vanishing locus of the class. Three consequences:
+\begin{enumerate}
+\item \emph{Enlargement-independence, cohomologically.} The group $N_v$, the coefficient module $U$, and the class $\theta$ are all constructed inside $\Cl(\mathbb{V})$ and act identically in every extension; the obstruction is pulled back unchanged along every ascent, which is the cohomological restatement of the quantification over all ascents in Theorem \claimref{transport.no-go-level-elements}.
+\item \emph{Levi equivariance.} By Lemma \claimref{transport.group-null-rotations}, $\theta$ intertwines the conjugation action of $\Spin(U)$ on $N_v$ with its vector action on $U$: the class is equivariant for the Levi factor of the stabiliser.
+\item \emph{The full stabiliser.} A pseudo-inverse selection equivariant under any subgroup of the stabiliser of $v$ containing $N_v$, in particular under the full parabolic stabiliser of the null direction, would restrict to an $N_v$-fixed point; nonvanishing of $\theta$ on the radical therefore obstructs every enlargement of the symmetry group at once.
+\end{enumerate}
+
+*Proof.* For a trivial module, cocycles $c(gg') = c(g) + c(g')$ are exactly homomorphisms and coboundaries $g \mapsto b - b$ vanish, so $H^1 = \mathrm{Hom}(N_v, U)$; under the isomorphism of Lemma \claimref{transport.group-null-rotations} the class $\theta$ is the identity of $U$, nonzero iff $U \neq 0$. If $\sigma$ is $N_v$-fixed then so is its class, and by Proposition \claimref{transport.pseudo-inverse-torsor}(2), $[\sigma] - u = [\sigma]$ forces $u = 0$ for every $u \in U$; conversely for $U = 0$ the group $N_v$ is trivial and the section of Remark \claimref{note.transport.hyperbolic-atom} is invariant. (1)--(3) are read off from Lemma \claimref{transport.group-null-rotations} and Proposition \claimref{transport.pseudo-inverse-torsor} as indicated.
+
+
+We turn to a further ingredient.
+
+**Theorem 20 (Density).** The lifted invertible points $\{[X(x)] : x \in \mathbb{V},\ Q(x) \neq 0\}$ are dense in $\mathcal{Q}$.
+
+*Proof.* First, the lifted points exhaust the non-ideal rays: if $N = s\nO + x + t\nInf$ is null with $s \neq 0$, then rescaling by $s^{-1}$ puts it in the form $\nO + x' + t'\nInf$ with $Q(x') = 2 \cdot 1 \cdot t'$ forced by nullity (see \claimref{transport.swap-rescale-normal-form} below), i.e.\ $N \in [X(x')]$. Second, the invertible points are dense in $\mathbb{V}$: for any $x$, pick $a$ with $Q(a) \neq 0$; then $t \mapsto Q(x + ta) = Q(x) + 2t\,(x \cdot a) + t^2 Q(a)$ is a nonconstant polynomial, hence nonzero for all small $t \neq 0$, and $x + ta \to x$. By continuity of the lift, the lifted invertible points are dense in the set of \emph{all} lifted points. It remains to show every ideal point is a limit of lifted invertible points; we exhibit explicit paths.
+
+\emph{Ideal points with $x \neq 0$.} Let $[\,x + t\,\nInf\,]$ be ideal, so $Q(x) = 0$, $x \neq 0$, $t \in \R$. By nondegeneracy choose $u \in \mathbb{V}$ with $x \cdot u = 1$, and for $s > 0$ set
+\[
+y_s \;=\; s\,x + \bigl(t + \tfrac{1}{s}\bigr)\,u .
+\]
+Then $Q(y_s) = 2s\bigl(t + \tfrac1s\bigr) + \bigl(t + \tfrac1s\bigr)^2 Q(u) = 2ts + 2 + \bigl(t + \tfrac1s\bigr)^2 Q(u)$, which is nonzero for all large $s$: if $t \neq 0$ the term $2ts$ dominates the remaining bounded terms, and if $t = 0$ the expression tends to $2$. So $y_s$ is eventually invertible. The rescaled representative
+\[
+\tfrac{1}{s}\,X(y_s) \;=\; \tfrac{1}{s}\,\nO + x + \tfrac{1}{s}\bigl(t + \tfrac1s\bigr)u + \tfrac{Q(y_s)}{2s}\,\nInf
+\;\longrightarrow\; x + t\,\nInf \quad (s \to \infty),
+\]
+since $\tfrac{Q(y_s)}{2s} = t + \tfrac1s + O(1/s) \to t$. The limit vector is nonzero, so by continuity of $\pi$, $[X(y_s)] \to [\,x + t\,\nInf\,]$.
+
+\emph{The ideal point $[\nInf]$.} Pick any $a$ with $Q(a) \neq 0$ and set $y_s = s\,a$. Then $\tfrac{2}{s^2 Q(a)} X(y_s) = \tfrac{2}{s^2 Q(a)} \nO + \tfrac{2}{s\,Q(a)}a + \nInf \to \nInf$.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 21 (Totality).** Let $(\mathbb{V}, Q)$ be nondegenerate, with the completion $\Cl(p{+}1,q{+}1)$ and quadric $\mathcal{Q}$ of the section ``The completion: the conformal model''. Define $\iota : \mathcal{Q} \to \mathcal{Q}$ by $\iota[N] = [\,e_+ N e_+\,]$. Then:
+\begin{enumerate}
+\item $\iota$ is well defined, total and continuous on $\mathcal{Q}$, and an involution.
+\item For every $x$ with $Q(x) \neq 0$, \; $\iota[X(x)] = [X(x/Q(x))]$: on invertible vectors $\iota$ is the geometric reciprocal $\rho$.
+\item For every $x_0$ with $Q(x_0) = 0$, that is, a null vector or the origin, $\iota[X(x_0)] = [\, x_0 + \tfrac12 \nInf \,]$, an ideal point (for $x_0 = 0$, the classical point at infinity $[\nInf]$), and this value is the limit of $\iota[X(x)]$ along every path of invertible $x \to x_0$. Consequently $\iota$ is the unique continuous map $\mathcal{Q} \to \mathcal{Q}$ agreeing with the lifted reciprocal $[X(x)] \mapsto [X(\rho(x))]$ on the lifted invertible locus.
+\end{enumerate}
+
+*Proof.* (1) Conjugation by the invertible element $e_+$ is an algebra automorphism of $\Cl(p{+}1,q{+}1)$ (on vectors, as $e_+^{2} = 1$, it is minus the reflection in $e_+^{\perp}$, \claimref{std-algebra.reflection}); in particular it is injective, so it sends nonzero elements to nonzero elements. By $e_+ \nO e_+ = -\tfrac12 \nInf, \qquad e_+ \nInf e_+ = -2\nO, \qquad e_+ x e_+ = -x \quad (x \in \mathbb{V})$ and linearity it maps vectors of the ambient space to vectors, and it preserves squared lengths: $(e_+ N e_+)^2 = e_+ N^2 e_+ = N^2$ for any vector $N$, since $N^2$ is a scalar. Hence it maps nonzero null vectors to nonzero null vectors, and rays to rays ($\lambda N \mapsto \lambda\, e_+Ne_+$), so $\iota$ is well defined and total on $\mathcal{Q}$. It is continuous because it descends from an invertible linear map of $\mathbb{V} \oplus H$ through the quotient $\pi$. Finally $e_+ (e_+ N e_+) e_+ = N$ since $e_+^2 = 1$, so $\iota^2 = \mathrm{id}$.
+
+(2) By linearity of conjugation and $e_+ \nO e_+ = -\tfrac12 \nInf, \qquad e_+ \nInf e_+ = -2\nO, \qquad e_+ x e_+ = -x \quad (x \in \mathbb{V})$,
+\begin{equation}\label{eq:keydisplay}
+e_+ X(x)\, e_+ \;=\; -\Bigl( Q(x)\,\nO + x + \tfrac12 \nInf \Bigr) \qquad \text{for every } x \in \mathbb{V}.
+\end{equation}
+For $Q(x) \neq 0$, rescaling by $-1/Q(x)$ gives $\nO + x/Q(x) + \tfrac12 (1/Q(x)) \nInf$, and since $Q(x/Q(x)) = 1/Q(x)$ this is exactly $X(x/Q(x))$ by $X(x) \;=\; \nO + x + \tfrac12 Q(x)\, \nInf$.
+
+(3) For $Q(x_0) = 0$ the display \claimref{transport.totality} gives $e_+ X(x_0) e_+ = -(x_0 + \tfrac12 \nInf)$, a nonzero vector (its $\nInf$-coefficient is $\tfrac12$) whose $\nO$-coefficient vanishes: an ideal point, null since $x_0 \cdot \nInf = 0$ and $x_0^2 = \nInf^2 = 0$; for $x_0 = 0$ it is the class $[\nInf]$. For the limit claim, consider the map $J : \mathbb{V} \to \mathcal{Q}$, $J(x) = [\,Q(x)\nO + x + \tfrac12\nInf\,]$. Its representative is polynomial in $x$ and never zero (the $\nInf$-coefficient is $\tfrac12$), so $J$ is continuous; and by \claimref{transport.totality}, $J(x) = \iota[X(x)]$ for \emph{every} $x \in \mathbb{V}$, whether $Q(x)$ vanishes or not. Continuity of $J$ at $x_0$ now gives $\iota[X(x)] \to \iota[X(x_0)]$ along every path of invertible $x \to x_0$, as claimed. For uniqueness: the lifted invertible points are dense in $\mathcal{Q}$ (Lemma \claimref{transport.density}) and $\mathcal{Q}$ is Hausdorff, so any two continuous maps $\mathcal{Q} \to \mathcal{Q}$ that agree on them agree everywhere; $\iota$ agrees with the lifted reciprocal there by (2).
+
+
+**Remark  (The hyperbolic atom).** The assumption $n \geq 3$ is necessary, and the bound is sharp. For $n = 2$ the space is itself a hyperbolic plane, $U = 0$, there are no null rotations, and the assignment $\sigma(\lambda v) = \lambda^{-1} w_0$, $\sigma(\lambda w_0) = \lambda^{-1} v$ defines a genuinely $\Pin(1,1)$-equivariant pseudo-inverse section in the sense of Definition \claimref{obj.transport.equivariance}, and no ascent is needed: the hyperbolic plane is self-complete \emph{at the level of elements}. (Its reciprocal on \emph{points} is of course still partial; Theorem \claimref{transport.totality} applies to it like any other base, and its own transport is $\Cl(2,2)$. The two senses of completion are exactly the two halves of the transport principle, and the atom separates them.)
+
+The section has a coordinate-free description, which is the real reason for its equivariance and simultaneously explains the failure for $n \geq 3$. For null $x$, call $y$ a \emph{partner} of $x$ if $y$ is null with $x \cdot y = \tfrac12$. Writing $y = av + bw_0 + u$ with $u \in U$, the two conditions read $b = 1$ and $a = -Q(u)$, so the partners of $v$ are exactly
+\begin{equation}
+y_u \;=\; w_0 - u - Q(u)\,v \qquad (u \in U),
+\end{equation}
+an affine space of dimension $n - 2$ on which, by Step 2 of Theorem \claimref{transport.no-go-level-elements}, the null rotations act simply transitively. For $n = 2$ it is a single point, so ``the partner of $x$'' is a well-formed metric description and $\sigma$ is equivariant for that reason alone, with no computation; for $n \geq 3$ a torsor has no distinguished point, and Theorem \claimref{transport.no-go-level-elements} says no enlargement of the space produces one. This is precisely why the hyperbolic plane is the unit of transport: the ascent of the section ``The completion: the conformal model'' adjoins a copy of the one quadratic space that needs no ascent of the first kind.
+
+
+The same dimension count is Zeeman's. By Zeeman's theorem \cite{Zeeman1964}, for $n \geq 3$ every bijection of Minkowski space preserving the causal order is generated by Lorentz transformations, translations and dilations, while in $n = 2$ the two null coordinates can be reparametrised independently and the causal automorphism group is infinite-dimensional. The two-dimensional counterexamples to Zeeman are exactly the freedom that the null rotations remove for $n \geq 3$ by mixing each null direction with the transverse ones; the little group of a null direction has a null-rotation part of dimension $n - 2$, and both theorems hold precisely when it is present. Zeeman's theorem is imported here, not proved, and nothing below depends on it; this paragraph records that the third hypothesis of Theorem \claimref{transport.no-go-level-elements} and Zeeman's are the same hypothesis, the existence of a null rotation, so that the hyperbolic atom is the exception to both for one reason.
+
+We turn to a further ingredient.
+
+**Definition 22 (Null-lift completion).** A \emph{null-lift completion} of the nondegenerate quadratic space $(\mathbb{V}, Q)$ is a pair $(\mathbb{W}, f)$ where $\mathbb{W}$ is a nondegenerate real quadratic space adjoined orthogonally to $\mathbb{V}$ and $f : \mathbb{V} \to \mathbb{W}$ is a map with $f(0) \neq 0$ such that
+\[
+X(x) \;=\; f(x) + x \ \in\ \mathbb{W} \perp \mathbb{V}
+\]
+is null for every $x \in \mathbb{V}$. The condition $f(0) \neq 0$ says only that the origin, like every point, is represented by a nonzero vector, hence by a ray. Nothing else is assumed of $f$: not linearity, not continuity, not injectivity.
+
+We turn to a further ingredient.
+
+**Theorem 23 (Minimality).** Let $(\mathbb{W}, f)$ be any null-lift completion of $(\mathbb{V}, Q)$. Then $\mathbb{W}$ contains at least one direction of positive square and one of negative square; in particular $\dim \mathbb{W} \geq 2$, and enlargements of signature increment $(+k, 0)$ or $(0, +k)$ are excluded for every $k$. A single hyperbolic plane suffices, and any two-dimensional $\mathbb{W}$ admitted by the definition is a hyperbolic plane; hence the minimal completion is
+\[
+\Cl(p,q) \;\longrightarrow\; \Cl(p{+}1, q{+}1),
+\]
+with the adjoined space unique up to isometry, and the signature increment is $(+1,+1)$ in every signature.
+
+*Proof.* Nullity of $X(x)$ and orthogonality of $\mathbb{W}$ to $\mathbb{V}$ give
+\[
+Q_{\mathbb{W}}(f(x)) = -Q(x) \qquad \text{for all } x \in \mathbb{V}.
+\]
+Setting $x = 0$: $Q_{\mathbb{W}}(f(0)) = 0$ with $f(0) \neq 0$, so $\mathbb{W}$ contains a nonzero null vector. A nondegenerate quadratic space containing a nonzero null vector is indefinite \cite{Lam2005} (a null vector has a hyperbolic partner, \claimref{std-algebra.witt-decomposition}), hence contains directions of both signs and has dimension at least $2$; increments $(+k,0)$ and $(0,+k)$, whose forms are definite, are excluded for every $k$. (When $\mathbb{V}$ has mixed signature the same conclusion follows a second way, with no appeal to the origin: $-Q$ attains both signs, hence so does $Q_{\mathbb{W}}$.)
+
+Sufficiency of one hyperbolic plane is the construction of the section ``The completion: the conformal model''--the section ``Totality of the transported reciprocal''. For uniqueness of the minimal $\mathbb{W}$: a two-dimensional nondegenerate quadratic space containing a nonzero null vector is indefinite, hence of signature $(1,1)$, and is the hyperbolic plane, unique up to isometry (the section ``Null vectors, zero divisors, and hyperbolic planes'', \cite{Lam2005}; \claimref{std-algebra.sylvester-inertia}). Hence $\dim \mathbb{W} = 2$ with signature $(1,1)$ is minimal and unique, and the increment is $(+1,+1)$.
+
+
+**Remark  (Remark on Minimality).** Two small arguments carry the theorem, and they deserve emphasis for how little they assume. The sign argument: the adjoined directions must be capable of cancelling squared lengths of every sign, and only a mixed addition can: new null structure appears only where positive meets negative. The origin argument: merely representing the origin as a ray already requires a null vector of $\mathbb{W}$, which forces indefiniteness even over a Euclidean base. The obstruction thereby determines its own repair, including where the repair lies. Note also the consonance with Remark \claimref{note.transport.hyperbolic-atom}: the completion adjoins precisely the hyperbolic plane, the one quadratic space that is self-complete at the level of elements, the unit of transport.
+
+**Remark  (Degenerate adjunctions, and why they are excluded).** Nondegeneracy of $\mathbb{W}$ is a hypothesis of Definition \claimref{obj.transport.null-lift-completion}, not a consequence, and it is worth being exact about its role, since the degenerate adjunction $\Cl(n,0,1)$ of projective geometric algebra is a familiar and useful construction.
+
+Over a base of \emph{mixed} signature the hypothesis is idle: the parenthetical second argument in the proof shows $Q_{\mathbb{W}}$ attains both signs, so $\mathbb{W}$ has a positive and a negative direction whether or not it also carries a radical, and the increment $(+1,+1)$ is forced regardless.
+
+Over a \emph{definite} base the hypothesis is essential to the proof. Take $\mathbb{V}$ positive definite and let $\mathbb{W} = \mathrm{span}\{r, b\}$ with $r$ spanning a radical ($Q_{\mathbb{W}}(r) = 0$, $r \cdot b = 0$) and $Q_{\mathbb{W}}(b) = -1$. Then $f(x) = r + \sqrt{Q(x)}\,b$ satisfies $Q_{\mathbb{W}}(f(x)) = -Q(x)$ and $f(0) = r \neq 0$: a null lift of increment $(0,+1)$ plus a degenerate direction. Theorem \claimref{transport.minimality} excludes it by fiat, and rightly so for present purposes: everything the completion is asked to do here (represent points as rays on a quadric, realise the inversion as a reflection, and read out answers by descent) runs on the versor machinery of the section ``The symmetry action, and equivariance'', which needs invertible generators and Cartan--Dieudonn\'e, both unavailable along a radical direction. The minimality theorem should therefore be read as: among completions whose adjoined structure is usable as geometry, the increment is $(+1,+1)$, always.
+
+**Remark  (What is and is not unique).** Uniqueness in Theorem \claimref{transport.minimality} is uniqueness of the adjoined \emph{space} $\mathbb{W}$ (up to isometry), hence of the completed algebra up to isomorphism. The lift $f$ itself is not unique: for any $c \neq 0$, $f_c(x) = c\,\nO + \tfrac{1}{2c} Q(x)\,\nInf$ satisfies the same nullity condition. What is forced is the space in which the lift must lie, not how it is parametrised.
+
+We turn to a further ingredient.
+
+**Definition 24 (Normalised conformal chart).** Let $(\mathbb{V}'', Q'')$ be a nondegenerate real quadratic space. A \emph{normalised conformal chart} of $(\mathbb{V}, Q)$ in $\mathbb{V}''$ is a map $\Phi : \mathbb{V} \to \mathbb{V}''$ with
+\[
+\Phi(x) \cdot \Phi(y) \;=\; -\tfrac12\, Q(x - y) \qquad \text{for all } x, y \in \mathbb{V}
+\]
+(in particular every $\Phi(x)$ is null, and $\Phi$ is injective by nondegeneracy). This is exactly the metric-faithfulness identity $X(x)^2 = 0, \qquad X(x)\cdot X(y) = -\tfrac12\, Q(x-y)$ of the conformal model; the lift $X$ of the completion is a normalised conformal chart, and any projective chart with a nowhere-vanishing scale is rescaled into this form. Nothing else is assumed of $\Phi$: not linearity, not continuity.
+
+We turn to a further ingredient.
+
+**Theorem 25 (The conformal Gram matrix).** Fix an orthogonal basis $e_1, \dots, e_n$ of $\mathbb{V}$ and the $n + 2$ points
+\[
+p_0 = 0, \qquad p_i = e_i \ (1 \leq i \leq n), \qquad p_{n+1} = 2e_1 .
+\]
+Then the symmetric $(n{+}2) \times (n{+}2)$ matrix $M_{ij} = -\tfrac12 Q(p_i - p_j)$ has rank $n + 2$ and signature $(p{+}1,\, q{+}1)$.
+
+*Proof.* Compute $M$ in the completion: by the model identity $X(x)^2 = 0, \qquad X(x)\cdot X(y) = -\tfrac12\, Q(x-y)$, $M$ is the Gram matrix of the lifted vectors $X(p_i) \in \mathbb{V} \oplus H$, so its rank and signature are those of the ambient form restricted to their span, and it suffices to show the lifts span the whole $(n{+}2)$-dimensional space, of signature $(p{+}1, q{+}1)$. The span contains $\nO = X(0)$; it contains $X(2e_1) - 2X(e_1) + X(0) = (2 - 2)e_1 + (2 - 1)Q(e_1)\nInf = Q(e_1)\,\nInf$ with $Q(e_1) = \pm 1 \neq 0$, hence $\nInf$; hence each $e_i = X(e_i) - X(0) - \tfrac12 Q(e_i)\nInf$. A spanning set of a nondegenerate space has Gram matrix congruent to the form (\claimref{std-algebra.sylvester-inertia}), giving rank $n+2$ and the stated signature.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 26 (Representation-independent minimality of the completion).** Let $(\mathbb{V}'', Q'')$ be nondegenerate of signature $(p'', q'')$ and suppose its null cone admits a normalised conformal chart of $(\mathbb{V}, Q)$. Then
+\[
+p'' \geq p + 1 \quad \text{and} \quad q'' \geq q + 1 ;
+\]
+in particular $\dim \mathbb{V}'' \geq n + 2$, and in case of equality the signature is exactly $(p{+}1, q{+}1)$ and $\Cl(\mathbb{V}'') \cong \Cl(p{+}1, q{+}1)$. Consequently the minimality of the completion is a property of the ambient quadric alone: no Clifford algebra whose quadratic space is smaller than, or differently balanced than, $(p{+}1, q{+}1)$ can host the point-level resolution, \emph{however} $\Cl(p,q)$ is embedded in it as an algebra.
+
+*Proof.* Let $s_i = \Phi(p_i)$ for the points of Lemma \claimref{transport.conformal-gram-matrix}. The chart condition gives $s_i \cdot s_j = M_{ij}$, so the pullback of $Q''|_{\mathrm{span}\{s_i\}}$ to $\R^{n+2}$ along $(c_i) \mapsto \sum c_i s_i$ is the quadratic form of $M$. Since $M$ is nondegenerate (Lemma \claimref{transport.conformal-gram-matrix}), the map is injective, the span $S$ has dimension $n+2$, and $Q''|_S$ is nondegenerate of signature $(p{+}1, q{+}1)$. A nondegenerate subspace splits off orthogonally, $\mathbb{V}'' = S \perp S^\perp$, whence $p'' = (p{+}1) + p(S^\perp) \geq p+1$ and likewise for $q''$. Equality of dimensions forces $S = \mathbb{V}''$ and the signature claim; the algebra statement is the functoriality of $\Cl$ on isometries.
+
+
+**Example  (An exotic embedding, and its inertness).** $\Cl(1,3) \cong \Mat_2(\HH)$ embeds unitally in $\Cl(2,3) \cong \Mat_4(\C)$, an algebra of \emph{half} the dimension of the completion $\Cl(2,4)$: the standard unital embedding $\HH \hookrightarrow \Mat_2(\C)$ ($1, i, j, k$ mapped to $I$, $\mathrm{diag}(i, -i)$, $\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}$, $\begin{psmallmatrix}0&i\\i&0\end{psmallmatrix}$) applied entrywise gives $\Mat_2(\HH) \hookrightarrow \Mat_4(\C)$, and $\Cl(2,3)$ has type $\Mat_4(\C)$ by Theorem \claimref{transport.classification-real-clifford-algebras} ($d \equiv 7$). The embedding is genuine; it is also inert: the ambient quadratic space of $\Cl(2,3)$ is five-dimensional, and by Theorem \claimref{transport.representation-independent-minimality-completion} no normalised conformal chart of four-dimensional spacetime exists on its quadric. The algebra is big enough to contain $\Cl(1,3)$ and too small to resolve it: what a resolution needs is not space for the \emph{elements} but space for the \emph{points}, and points cost two dimensions in the exact balance $(+1,+1)$.
+
+We turn to a further ingredient.
+
+**Theorem 27 (Swap-and-rescale normal form).** In the setting of Theorem \claimref{transport.totality}, represent elements of the quadric by homogeneous triples $(s, x, t)$ with $s,t \in \R$ and $x \in \mathbb{V}$, standing for $N = s\,\nO + x + t\,\nInf$ and defined up to overall scale, subject to the incidence (nullity) condition
+\begin{equation}
+Q(x) = 2st .
+\end{equation}
+The ordinary points are the classes with $s \neq 0$, normal form $(1, x, \tfrac12 Q(x))$, i.e.\ $X(x) \;=\; \nO + x + \tfrac12 Q(x)\, \nInf$. The ideal points, the classes with $s = 0$, then satisfy $Q(x) = 0$ and fall into three disjoint strata:
+\begin{enumerate}
+\item[(i)] $t \neq 0$ and $x \neq 0$: unique representative $(0, x', \tfrac12)$ with $x' = x/(2t)$ null; these classes are labelled bijectively by the null \emph{vectors} of $\mathbb{V}$, and are exactly the values $\iota$ takes on lifted null points (Theorem \claimref{transport.totality}(3));
+\item[(ii)] $t = 0$, $x \neq 0$: the class retains only the null \emph{ray} $[x]$; these classes are labelled by the null directions of $\mathbb{V}$;
+\item[(iii)] $x = 0$, which given $s = 0$ forces $t \neq 0$: the single classical point at infinity $[\nInf]$, which is the value $\iota[X(0)]$ by Theorem \claimref{transport.totality}(3).
+\end{enumerate}
+In these coordinates the map $\iota$ of Theorem \claimref{transport.totality} is the linear involution
+\[
+\iota(s, x, t) = (2t,\, x,\, \tfrac12 s),
+\]
+which preserves the incidence condition, is total, and recovers the reciprocal upon normalising the first slot where possible; where normalisation is impossible (first slot zero) the output is an ideal point.
+
+*Proof.* The three displayed actions of $e_+ \nO e_+ = -\tfrac12 \nInf, \qquad e_+ \nInf e_+ = -2\nO, \qquad e_+ x e_+ = -x \quad (x \in \mathbb{V})$ are the three columns of $\iota$ in the basis $(\nO, \mathbb{V}, \nInf)$: $e_+ N e_+ = -\bigl(2t\,\nO + x + \tfrac12 s\,\nInf\bigr)$, and the overall factor $-1$ is projectively immaterial, as in the section ``Totality of the transported reciprocal''. Preservation of the condition is the check $2\,(2t)(\tfrac12 s) = 2st$. The stratification of the ideal points is read off from \claimref{transport.swap-rescale-normal-form} with $s = 0$: nullity of $x$ is forced; if $x \neq 0$ and $t \neq 0$, scaling the class by $\tfrac{1}{2t}$ gives the unique representative with last slot $\tfrac12$, and Theorem \claimref{transport.totality}(3) exhibits every such class, and no other, as $\iota[X(x')]$ for the null vector $x'$; if $x \neq 0$ and $t = 0$ the class is the ray $[x]$ and only the direction of $x$ survives the projective quotient; and if $x = 0$ then $t \neq 0$, since $s = x = t = 0$ is not a class, leaving $[\nInf]$.
+
+
+**Remark  (Remark on Totality).** The geometric content of (3), for a null vector $v$: the value of ``division by $v$'' is an ideal point at null infinity \emph{determined by} $v$: it lies over the null direction of $v$, at a position fixed by the scale of $v$. The value remembers more than the direction alone: rescaling $v$ moves it, $[\,2v + \tfrac12\nInf\,] \neq [\,v + \tfrac12\nInf\,]$ (in the coordinates of Proposition \claimref{transport.swap-rescale-normal-form}, these are distinct points of the same ideal stratum). The answer to the forbidden division exists and is canonical; it merely does not lie in the original space. Together with Theorem \claimref{transport.no-go-level-elements}, this is the precise sense in which the ascent performs ``division by zero without an inverse operation'': the element remains non-invertible; the space of points acquires a value for the division.
+
+**Remark  (Where each stratum comes from).** The three strata are distinguished by $\iota$ itself, which supplies a check on the bookkeeping. Stratum (i) is exactly the image of the null cone of $\mathbb{V}$ under $\iota \circ X$, and (iii) is the image of the origin. Stratum (ii) is the image of neither: it is fixed \emph{pointwise} by $\iota$, since $(0,x,0) \mapsto (0,x,0)$. Indeed the whole fixed locus of $\iota$ is $\{Q(x) = 1\} \cup \text{(ii)}$, as one sees by solving $(2t, x, \tfrac12 s) = \lambda(s,x,t)$ against \claimref{transport.swap-rescale-normal-form}: $\lambda = 1$ forces $s = 2t$ and $Q(x) = 4t^2$, which after normalisation is the unit quadric when $t \neq 0$ and stratum (ii) when $t = 0$. So the null directions at infinity are the ideal fixed points of the inversion, as they must be: they are the directions along which the null cone through the origin goes to infinity, and inversion carries that cone to itself.
+
+We turn to a further ingredient.
+
+**Theorem 28 (Descent: the read-out map).** Define $\dsc : \mathcal{Q} \setminus \{\text{ideal points}\} \to \mathbb{V}$ by
+\[
+\dsc\,[\, s\,\nO + x + t\,\nInf \,] \;=\; x/s .
+\]
+Then:
+\begin{enumerate}
+\item $\dsc$ is well defined and continuous, and it is inverse to the lift: $\dsc[X(x)] = x$ for every $x \in \mathbb{V}$, and $X(\dsc[N]) \in [N]$ for every non-ideal null ray $[N]$. Hence $x \mapsto [X(x)]$ and $\dsc$ are mutually inverse homeomorphisms between $\mathbb{V}$ and $\mathcal{Q} \setminus \{\text{ideal points}\}$.
+\item On the invertible locus, descent returns the classical reciprocal: for every $x$ with $Q(x) \neq 0$,
+\[
+\dsc\bigl(\iota[X(x)]\bigr) \;=\; x/Q(x) \;=\; \rho(x).
+\]
+\item The composite $\dsc \circ \iota \circ [X(\cdot)]$ is defined exactly on $\{Q \neq 0\}$: for $Q(x_0) = 0$ the value $\iota[X(x_0)]$ is ideal by Theorem \claimref{transport.totality}(3) and lies outside the domain of $\dsc$. Descent is therefore partial precisely where the original reciprocal was, and necessarily so, since the ideal points are represented by no point of $\mathbb{V}$.
+\end{enumerate}
+
+*Proof.* (1) Scaling a representative by $\lambda \neq 0$ scales $s$ and $x$ alike, so $x/s$ is unchanged and $\dsc$ is well defined; the map $N \mapsto x(N)/s(N)$ is continuous on the open, scale-invariant set $\{s \neq 0\}$ of the null cone, so it descends to a continuous map on the quotient. For the lift, $\dsc[X(x)] = x/1 = x$. Conversely, given a non-ideal $[N]$, normalise $s = 1$; the incidence condition \claimref{transport.swap-rescale-normal-form} then forces $t = \tfrac12 Q(x)$, so the normalised representative is exactly $X(x)$ with $x = \dsc[N]$, whence $X(\dsc[N]) \in [N]$. Both directions are continuous, giving the homeomorphism.
+
+(2) By Theorem \claimref{transport.totality}(2), $\iota[X(x)] = [X(\rho(x))]$, and $\dsc[X(\rho(x))] = \rho(x)$ by (1).
+
+(3) Immediate from Theorem \claimref{transport.totality}(3) and the definition of the ideal points.
+
+
+**Remark  (Ascend, invert, descend).** In plain terms, the classical reciprocal is a composite of three steps. To divide by $x$, first \emph{ascend}: represent the point $x$ in the completion as the null ray $[X(x)]$. Next \emph{invert}: apply the reflection $\iota$, which is total and never fails. Finally \emph{descend}: return the answer to $\mathbb{V}$ with the read-out $\dsc$. Lemma \claimref{transport.descent-read-out-map}(2) states that whenever $Q(x) \neq 0$ this composite gives exactly the classical answer $x/Q(x)$. When $Q(x) = 0$ the first two steps still succeed, and the composite fails only at the last: the answer $\iota[X(x)]$ exists, but it is an ideal point, and ideal points correspond to no point of the original space to which $\dsc$ could return them. The division in the completion succeeds; what fails is the return of its result to $\mathbb{V}$. The classical impossibility of dividing by a null vector is thereby relocated rather than removed: it is not a failure of the operation but a failure of the descent, and the transport explains the obstruction rather than removing it. The answer exists, and it lies permanently outside the original space.
+
+**Remark  (Remark on Descent: the read-out map).** This is the linearise-then-normalise pattern of classical mathematics: M\"obius transformations $z \mapsto (az+b)/(cz+d)$ rendered total as linear maps on homogeneous pairs $(z,1)$ with the unnormalisable pairs $(\cdot\,,0)$ serving as the point at infinity; the homogeneous coordinates of projective geometry; the deferred ``perspective divide'' of computer graphics. All nonlinearity and all division are deferred to a single optional read-out, whose refusal is information (the answer is ideal), not failure. What Theorems \claimref{transport.no-go-level-elements}, \claimref{transport.totality} and \claimref{transport.minimality} add to the classical picture is a mandate: for the geometric reciprocal of a quadratic space, this pattern is not one available representation among many but the \emph{unique minimal} totalisation, realised on the null cone exactly two dimensions up, with the element-level alternative provably closed.
+
+## Type C: ideal fusion, and Rule 2
+
+This section gathers the results on type C: ideal fusion, and Rule 2.
+
+We turn to a further ingredient.
+
+**Theorem 29 (Decomposition and commutation).** $B_\gamma = A \oplus A\nu$ as a vector space, and
+\[
+\nu\, a \;=\; \hat{a}\, \nu \qquad (a \in A),
+\]
+where $\hat{\cdot}$ is the grade involution of $A$. For $\gamma = \pm 1$, $\nu$ is invertible with $\nu^{-1} = \gamma\nu$.
+
+*Proof.* The blades of $B_\gamma$ are the blades of $A$ together with the blades of $A$ times $\nu$ (ordering $\nu$ last), giving the direct sum; the count $2^{n+1} = 2^n + 2^n$ confirms it, and holds for $\gamma = 0$ as well \cite{Chevalley1997} (\claimref{std-algebra.blade-basis}). For the commutation rule: $\nu$ anticommutes with every generator $e_i$ of $A$ (orthogonality, \claimref{std-algebra.orthogonal-anticommute}), so for a blade $e_I$ of grade $k$, $\nu\, e_I = (-1)^k e_I\, \nu = \hat{e_I}\,\nu$, and the rule extends linearly. This is the commutation rule $v\,x = \hat{x}\,v, \qquad x\,v = v\,\hat{x}$ (\claimref{primer.commutation-rule}) applied to the adjoined generator. Invertibility: $\nu \cdot \gamma\nu = \gamma \nu^2 = \gamma^2 = 1$ for $\gamma = \pm 1$.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 30 (The ascent renders the grade involution inner).** Let $\gamma = \pm 1$. Conjugation by $\nu$ in $B_\gamma$ restricts on $A$ to the grade involution:
+\[
+\nu\, a\, \nu^{-1} \;=\; \hat{a} \qquad (a \in A).
+\]
+In particular $\nu \omega \nu^{-1} = -\omega$ and $\nu \varepsilon_\pm \nu^{-1} = \varepsilon_\mp$: the two formerly central projectors become an inner-conjugate pair. Consequently the two-sided ideal of $B_\gamma$ generated by either projector is all of $B_\gamma$, by the one-line computation
+\[
+\varepsilon_+ \;+\; \nu\,\varepsilon_+\,\nu^{-1} \;=\; \varepsilon_+ + \varepsilon_- \;=\; 1 .
+\]
+The obstruction of Remark \claimref{note.transport.typec-depth} is thereby resolved in the exact sense there identified: the symmetry exchanging the two ideals, outer on the split algebra, is inner in the ascent, and its availability is what fuses them.
+
+*Proof.* By Lemma \claimref{transport.decomposition-commutation}, $\nu a \nu^{-1} = \hat{a}\,\nu\nu^{-1} = \hat{a}$. Since $\omega$ has odd grade $n$, $\hat{\omega} = -\omega$ (\claimref{std-algebra.involution-properties}), whence $\varepsilon_\pm \mapsto \varepsilon_\mp$. The displayed sum lies in the ideal generated by $\varepsilon_+$ (both summands are multiples of $\varepsilon_+$ by ring elements), and equals $1$.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 31 (The corner is the even subalgebra).** The map $\phi : \Cl^0(p,q) \to \varepsilon_+ A$, $\phi(a) = \varepsilon_+ a$, is an isomorphism of unital algebras (with unit $\varepsilon_+$ on the right-hand side). Moreover $\varepsilon_+ B_\gamma\, \varepsilon_+ = \varepsilon_+ A$.
+
+*Proof.* $\phi$ is an algebra map because $\varepsilon_+$ is a central idempotent of $A$: $\phi(a)\phi(b) = \varepsilon_+ a\, \varepsilon_+ b = \varepsilon_+^2 ab = \phi(ab)$, and $\phi(1) = \varepsilon_+$. Injectivity: if $a$ is even and $\varepsilon_+ a = 0$, then $a = (\varepsilon_+ + \varepsilon_-)a = \varepsilon_- a$, i.e.\ $2a = a - \omega a$, i.e.\ $\omega a = -a$. But $\omega$ has odd grade ($n$ odd) while $a$ is even, so $\omega a$ is odd and $-a$ is even; a common value is possible only if both vanish, so $a = 0$. Surjectivity follows by dimension: $\dim \Cl^0 = 2^{n-1} = \tfrac12 \dim A = \dim \varepsilon_+ A$ (the first equality is \claimref{std-algebra.z2-grading}), the last equality because $x \mapsto (\varepsilon_+ x, \varepsilon_- x)$ splits $A$ into two summands exchanged (linearly) by the grade involution, which maps $\varepsilon_+ x \mapsto \varepsilon_- \hat{x}$ and is bijective. For the second statement: $\varepsilon_+ B_\gamma \varepsilon_+ = \varepsilon_+ A \varepsilon_+ + \varepsilon_+ A \nu \varepsilon_+$ by Lemma \claimref{transport.decomposition-commutation}; the first term is $\varepsilon_+ A$ (centrality in $A$), and the second vanishes: $\nu \varepsilon_+ = \varepsilon_- \nu$ (Proposition \claimref{transport.ascent-renders-grade-involution-inner}), so $\varepsilon_+ a \nu \varepsilon_+ = \varepsilon_+ a \varepsilon_- \nu = (\varepsilon_+ \varepsilon_-) a \nu = 0$.
+
+
+We turn to a further ingredient.
+
+**Theorem 32 (Matrix units, and the Peirce isomorphism).** Let $\gamma = \pm 1$ and set
+\[
+E_{11} = \varepsilon_+, \qquad E_{22} = \varepsilon_-, \qquad E_{12} = \varepsilon_+ \nu, \qquad E_{21} = \gamma\, \varepsilon_- \nu .
+\]
+Then $E_{11} + E_{22} = 1$ and $E_{ij} E_{kl} = \delta_{jk} E_{il}$: a full $2 \times 2$ system of matrix units. Consequently
+\[
+B_\gamma \;\cong\; \Mat_2\bigl(E_{11} B_\gamma E_{11}\bigr), \qquad b \;\longmapsto\; \bigl(E_{1i}\, b\, E_{j1}\bigr)_{ij},
+\]
+an isomorphism of unital algebras with inverse $(c_{ij}) \mapsto \sum_{i,j} E_{i1} c_{ij} E_{1j}$.
+
+*Proof.* The relations, using $\nu \varepsilon_\pm = \varepsilon_\mp \nu$ (Proposition \claimref{transport.ascent-renders-grade-involution-inner}), $\varepsilon_\pm^2 = \varepsilon_\pm$, $\varepsilon_+\varepsilon_- = 0$, $\nu^2 = \gamma$ and $\gamma^2 = 1$:
+\begin{align*}
+E_{12}E_{21} &= \varepsilon_+ \nu\, \gamma \varepsilon_- \nu = \gamma\, \varepsilon_+ (\nu \varepsilon_-) \nu = \gamma\, \varepsilon_+ \varepsilon_+ \nu^2 = \gamma^2 \varepsilon_+ = E_{11},\\
+E_{21}E_{12} &= \gamma\, \varepsilon_- \nu\, \varepsilon_+ \nu = \gamma\, \varepsilon_-^2 \nu^2 = E_{22},
+\end{align*}
+and the remaining relations follow the same way:
+\[
+E_{12}^2 = \varepsilon_+ \nu \varepsilon_+ \nu = \varepsilon_+ \varepsilon_- \nu^2 = 0, \qquad E_{21}^2 = 0,
+\]
+\[
+E_{11}E_{12} = E_{12}, \qquad
+E_{12}E_{11} = \varepsilon_+ \nu \varepsilon_+ = \varepsilon_+\varepsilon_-\nu = 0 .
+\] For the Peirce isomorphism, write $\phi(b)_{ij} = E_{1i} b E_{j1} \in E_{11} B_\gamma E_{11}$. Multiplicativity, using $E_{k1}E_{1k} = E_{kk}$ and $E_{11} + E_{22} = 1$:
+\[
+\sum_k \phi(b)_{ik}\,\phi(b')_{kj}
+\;=\; \sum_k E_{1i}\, b\, E_{k1}E_{1k}\, b'\, E_{j1}
+\;=\; E_{1i}\, b \Bigl(\textstyle\sum_k E_{kk}\Bigr) b'\, E_{j1}
+\;=\; \phi(bb')_{ij} .
+\]
+Unitality: $\phi(1)_{ij} = E_{1i}E_{j1} = \delta_{ij} E_{11}$. The displayed inverse is checked directly:
+\[
+\sum_{i,j} E_{i1}\, (E_{1i}\, b\, E_{j1})\, E_{1j} \;=\; \Bigl(\textstyle\sum_i E_{ii}\Bigr)\, b\, \Bigl(\textstyle\sum_j E_{jj}\Bigr) \;=\; b ,
+\]
+and conversely on matrices. This is the standard matrix-units criterion \cite{LamFC2001}, reproved for self-containment.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 33 (Rule 2: ideal fusion, sharp form).** Let $p - q \equiv 1 \pmod 4$ and $\gamma = \pm 1$. Then
+\[
+B_\gamma \;=\; \Cl(p{+}1,q) \ \text{or}\ \Cl(p,q{+}1) \;\cong\; \Mat_2\bigl(\Cl^0(p,q)\bigr),
+\]
+by the matrix units of Lemma \claimref{transport.matrix-units-peirce-isomorphism} and the corner identification of Lemma \claimref{transport.corner-even-subalgebra}. Consequently:
+\begin{enumerate}
+\item $B_\gamma$ is simple, and its centre is $\R$: the fusion does not reintroduce a central splitting, and $B_\gamma$ carries no type-C obstruction.
+\item The images of $\varepsilon_\pm$ in $B_\gamma$ are a conjugate pair of non-central idempotents, the diagonal matrix units of the fused algebra, exchanged by the inner automorphism $\mathrm{Ad}_\nu$, which restricts on $A$ to the grade involution (Proposition \claimref{transport.ascent-renders-grade-involution-inner}).
+\item The two ascents are isomorphic as algebras: $\Cl(p{+}1,q) \cong \Cl(p,q{+}1)$, both canonically $\Mat_2(\Cl^0(p,q))$, with an isomorphism through the matrix units that fixes the corner.
+\end{enumerate}
+
+*Proof.* The isomorphism $B_\gamma \cong \Mat_2(\varepsilon_+ B_\gamma \varepsilon_+) = \Mat_2(\varepsilon_+ A) \cong \Mat_2(\Cl^0(p,q))$ chains Lemmas \claimref{transport.matrix-units-peirce-isomorphism} and \claimref{transport.corner-even-subalgebra}; note the matrix units and the corner are the same for both signs of $\gamma$ up to the harmless factor $\gamma$ in $E_{21}$, which is why the right-hand side is $\gamma$-independent; this proves (3). For (1): $\varepsilon_+ A$ is semisimple (a direct summand of the semisimple $A$, Theorem \claimref{transport.classification-real-clifford-algebras}) with centre $\varepsilon_+ Z(A) = \R\,\varepsilon_+$ one-dimensional (here $Z(A) = \R \oplus \R\omega = \R\varepsilon_+ \oplus \R\varepsilon_-$ by Lemma \claimref{transport.centre}, and the centre of a direct sum is the direct sum of the centres), and a semisimple algebra whose centre is one-dimensional has exactly one Wedderburn block, i.e.\ is simple. Matrix algebras over simple algebras are simple (\claimref{std-algebra.morita-amplification}), so $B_\gamma$ is simple; its centre is $\R$ directly by Lemma \claimref{transport.centre}, since $n + 1$ is even. (2) is Proposition \claimref{transport.ascent-renders-grade-involution-inner} together with the identification of $\varepsilon_\pm$ as $E_{11}, E_{22}$; a diagonal matrix unit in $\Mat_2$ of a unital algebra is never central.
+
+
+**Remark  (The $\Mat_2$ pattern: the two rules compared).** Both minimal ascents turn out to be $2 \times 2$ matrix amplifications, of the whole algebra for type N and of its even half for type C (the section ``The mod-8 clock and the one-way door'' proves the first and reads both as the transport's own bookkeeping). The comparison exposes the cost asymmetry precisely: Rule 1 adds two dimensions and preserves the Morita class, $d$ fixed; Rule 2 adds one dimension, halves the coefficient algebra to its even part, and moves $d$ by $\pm 1$.
+
+The next result builds directly on the one just stated.
+
+**Theorem 34 (One generator is minimal; the minimal completions classified).** Let $A = \Cl(p,q)$, $p - q \equiv 1 \pmod 4$, and consider the Clifford algebras $\Cl(\mathbb{V}', Q')$ of arbitrary extensions $(\mathbb{V}', Q') \supseteq (\mathbb{V}, Q)$ of the quadratic space, $Q'$ possibly degenerate, each containing $A$ canonically and unitally. Then:
+\begin{enumerate}
+\item $\dim \mathbb{V}' = n$ (no ascent): $A$ itself is not simple (Theorem \claimref{transport.existence-classification-type-c}).
+\item $\dim \mathbb{V}' = n + 1$, adjoined generator null ($\gamma = 0$): the fusion fails structurally. The subspace $J = A\nu$ is a nonzero proper two-sided ideal of $B_0$ with $J^2 = 0$, and $B_0 / J \cong A$: the degenerate ascent is an infinitesimal thickening of $A$, not a completion of it. (This square-zero ideal is the fibre-level germ of the degeneration sheaf of the series' sheaf-theoretic paper \cite{ButlerT4}.)
+\item $\dim \mathbb{V}' = n + 1$, adjoined generator nondegenerate ($\gamma = \pm 1$ after rescaling): both ascents are simple and $\cong \Mat_2(\Cl^0(p,q))$ (Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}).
+\item $\dim \mathbb{V}' \geq n + 2$: $\dim \Cl(\mathbb{V}') \geq 2^{n+2}$.
+\end{enumerate}
+Hence the minimal simple Clifford completions of $A$ are exactly the two one-generator ascents $\Cl(p{+}1,q)$ and $\Cl(p,q{+}1)$, of dimension $2^{n+1}$; they are inequivalent as quadratic data (the extensions $\langle +1 \rangle$ and $\langle -1 \rangle$ are non-isometric) but isomorphic as algebras; and so the minimal completion of a type-C obstruction is \emph{unique up to isomorphism}, with the residual geometric choice, the sign of the adjoined direction's square, not detected by the completed algebra.
+
+*Proof.* (1) is Theorem \claimref{transport.existence-classification-type-c}. (2): by Lemma \claimref{transport.decomposition-commutation} (which holds for $\gamma = 0$), $B_0 = A \oplus A\nu$ with $\nu a = \hat{a}\nu$ and $\nu^2 = 0$. Then $J = A\nu$ satisfies: $J \neq 0$ ($\nu \neq 0$ and the sum is direct); $1 \notin J$ (again directness), so $J$ is proper; two-sidedness, since $A J = A A \nu \subseteq J$, $J A = A \nu A = A \hat{A} \nu \subseteq J$, and $\nu J = \nu A \nu = \hat{A} \nu^2 = 0 \subseteq J$, $J\nu \subseteq A\nu^2 = 0$; and $J^2 = A\nu A \nu = A \hat{A} \nu^2 = 0$. A simple algebra has no such ideal. The quotient: $B_0 / J = (A \oplus A\nu)/A\nu \cong A$ as algebras, the projection sending $\nu$ to $0$. (3) is Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}; a nonzero square rescales to $\pm 1$ by replacing $\nu$ with $\nu/\sqrt{|\nu^2|}$. (4) is the dimension formula $\dim \Cl = 2^{\dim \mathbb{V}'}$, degenerate or not (\claimref{std-algebra.blade-basis}). The classification statement assembles (1)--(4) with Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}(3); non-isometry of $\langle +1\rangle$ and $\langle -1 \rangle$ is Sylvester's law of inertia (\claimref{std-algebra.sylvester-inertia}).
+
+
+**Remark  (A bit the algebra forgets).** Theorem \claimref{transport.one-generator-minimal-minimal-completions-classified} sharpens the disanalogy with Rule 1 into its correct form. In Rule 1 the signature increment $(+1,+1)$ is unique outright (Theorem \claimref{transport.minimality}). In Rule 2 the \emph{algebraic} completion is likewise unique (there is one fused algebra, $\Mat_2(\Cl^0(p,q))$), but its geometric realisations are two, and no fusion-internal criterion distinguishes them: the sign $\gamma$ is a genuine geometric datum with no algebraic counterpart. The clock positions differ ($d + 1$ and $d - 1$ mod 8, i.e.\ residues $2$ and $0$, or $6$ and $4$), yet the classification table of Theorem \claimref{transport.classification-real-clifford-algebras} is symmetric about the split residues (positions $0$ and $2$ are both real type, $4$ and $6$ both quaternionic), which is the table-level reflection of the isomorphism proved intrinsically in Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}(3). A canonical choice of $\gamma$, if one is ever wanted, must therefore be imported from structure outside the algebra (an orientation of the ambient geometry), and we record the fact here at the level of algebra only: \emph{the fusion is forced, the sign is free}.
+
+**Remark  (A second refuted conjecture, recorded).** The natural conjecture is that the two minimal completions are ``in general non-isomorphic,'' reading the distinct clock positions $d \pm 1$ as distinct algebras. The computation refutes this: the matrix-unit construction of Lemma \claimref{transport.matrix-units-peirce-isomorphism} is independent of $\gamma$, and the two ascents are isomorphic always. The conjecture and its refutation are both recorded, in the practice of this paper's the section ``The refuted conjecture, and the no-go'', where the founding conjecture of the programme is refuted in the same way: the surviving true statement (geometric twoness, algebraic oneness) is sharper than either the conjecture or its naive negation.
+
+**Example  (The three smallest fusions).** $\Cl(1,0) \cong \R \oplus \R$: both ascents give $\Mat_2(\Cl^0(1,0)) = \Mat_2(\R)$, and indeed $\Cl(2,0) \cong \Cl(1,1) \cong \Mat_2(\R)$, the familiar coincidence that the Euclidean and Minkowski plane algebras agree, here encountered as forced by fusion uniqueness rather than as an accident of the classification table. $\Cl(0,3) \cong \HH \oplus \HH$: both ascents give $\Mat_2(\Cl^0(0,3)) = \Mat_2(\HH)$, i.e.\ $\Cl(1,3) \cong \Cl(0,4) \cong \Mat_2(\HH)$: the spacetime algebra is one of the two geometric realisations of the unique fusion of the double quaternions. $\Cl(2,1) \cong \Mat_2(\R) \oplus \Mat_2(\R)$ (the algebra of $2{+}1$-dimensional spacetime): both ascents give $\Mat_2(\Cl^0(2,1)) \cong \Mat_4(\R)$, i.e.\ $\Cl(3,1) \cong \Cl(2,2) \cong \Mat_4(\R)$.
+
+We turn to a further ingredient.
+
+**Theorem 35 (Embedding-independent minimality of the fusion).** Let $p - q \equiv 1 \pmod 4$, $A = \Cl(p,q) \cong \Mat_k(\mathbb{F}) \oplus \Mat_k(\mathbb{F})$ with $\mathbb{F} \in \{\R, \HH\}$, $f = \dim_\R \mathbb{F}$, so $\dim_\R A = 2k^2 f = 2^n$. Let $B$ be any \emph{simple} finite-dimensional real algebra admitting a unital algebra embedding $A \hookrightarrow B$. Then
+\[
+\dim_\R B \;\geq\; 2^{\,n+1},
+\]
+and equality holds if and only if $B \cong \Mat_{2k}(\mathbb{F}) \cong \Mat_2(\Cl^0(p,q))$: the fused algebra of Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form} is the minimal simple environment of $A$ in the absolute sense, and it is the unique one of minimal dimension up to isomorphism.
+
+*Proof.* Write $B \cong \Mat_m(D)$, $D \in \{\R, \C, \HH\}$, $d = \dim_\R D$, with unique irreducible module $W = D^m$, $\dim_\R W = md$. $B$ acts faithfully on $W$, hence so does $A$; a faithful module of $A$, split as in the statement by \claimref{transport.classification-real-clifford-algebras}, contains both irreducibles $V_\pm$ (of $\dim_\R = kf$ each), since otherwise one of the central projectors $\varepsilon_\pm \neq 0$ would act as zero. So $W \cong V_+^{\,a} \oplus V_-^{\,b}$ as an $A$-module with $a, b \geq 1$ and
+\[
+md \;=\; (a + b)\,k f \;\geq\; 2kf .
+\]
+Moreover the right $D$-action on $W$ commutes with $A$, so $D$ embeds unitally in the commutant (strictly, the right action embeds $D^{\mathrm{op}}$; harmless, as $\R$, $\C$ and $\HH$ are each isomorphic to their opposites, and the dimension bounds below are opposite-invariant) $\mathrm{End}_A(W) \cong \Mat_a(\mathbb{F}) \oplus \Mat_b(\mathbb{F})$ (using $\mathrm{End}_{\Mat_k(\mathbb{F})}(\mathbb{F}^k) \cong \mathbb{F}$ as real algebras), hence, projecting to each summand, unitally in both $\Mat_a(\mathbb{F})$ and $\Mat_b(\mathbb{F})$.
+
+Case $\mathbb{F} = \R$ ($f = 1$, $2k^2 = 2^n$). If $D = \R$: $m \geq 2k$ and $\dim B = m^2 \geq 4k^2 = 2^{n+1}$, with equality iff $m = 2k$, $B \cong \Mat_{2k}(\R)$. If $D = \C$: $\C \hookrightarrow \Mat_a(\R)$ forces $a \geq 2$, likewise $b \geq 2$, so $2m = (a+b)k \geq 4k$, $m \geq 2k$, and $\dim B = 2m^2 \geq 8k^2 = 2^{n+2}$. If $D = \HH$: $a, b \geq 4$, so $4m \geq 8k$, $\dim B = 4m^2 \geq 16k^2$. Case $\mathbb{F} = \HH$ ($f = 4$, $8k^2 = 2^n$). If $D = \HH$: $4m \geq 8k$ gives $m \geq 2k$ and $\dim B = 4m^2 \geq 16k^2 = 2^{n+1}$, equality iff $B \cong \Mat_{2k}(\HH)$. If $D = \C$: $\C \hookrightarrow \Mat_a(\HH)$ allows $a \geq 1$, but then $2m = 4(a+b)k \geq 8k$ gives $m \geq 4k$ and $\dim B = 2m^2 \geq 32k^2$. If $D = \R$: $m = 4(a+b)k \geq 8k$ and $\dim B = m^2 \geq 64k^2$. In every case the bound holds, and the equality case is exactly $\Mat_{2k}(\mathbb{F})$. Finally $\Mat_{2k}(\mathbb{F}) \cong \Mat_2(\Mat_k(\mathbb{F})) \cong \Mat_2(\Cl^0(p,q))$ by Lemma \claimref{transport.corner-even-subalgebra} and Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}.
+
+
+**Remark  (The cost of transport, independently of representation).** Theorems \claimref{transport.representation-independent-minimality-completion} and \claimref{transport.embedding-independent-minimality-fusion} together make the picture uniform across the two rules, and in both cases stronger than the quadratic-space normalisations under which the rules were first proved minimal. For type N, what an ambient algebra must supply is a quadric large enough to host the \emph{points}, and the conformal Gram matrix quantifies it exactly. For type C, what it must supply is a \emph{module} large enough to carry both ideals faithfully with the commutant the fusion requires, and the module count quantifies that exactly, against arbitrary simple real algebras rather than Clifford targets alone. In both cases the cost is independent of the embedding, and in both cases the minimal environment is the one the transport rule constructs.
+
+We turn to a further ingredient.
+
+**Theorem 36 (The even subalgebra of a one-dimensional extension).** Let $\nu$ be a generator adjoined orthogonally to $\Cl(p,q)$. If $\nu^2 = -1$ then $e_i \mapsto e_i\nu$ extends to an isomorphism $\Cl(p,q) \cong \Cl^0(p,q{+}1)$; if $\nu^2 = +1$ then the same map gives $\Cl(q,p) \cong \Cl^0(p{+}1,q)$.
+
+*Proof.* The images are even. Their squares are $(e_i\nu)^2 = e_i\nu e_i\nu = -e_i^2\nu^2$, which is $e_i^2$ for $\nu^2 = -1$ and $-e_i^2$ for $\nu^2 = +1$; for $i \neq j$, $(e_i\nu)(e_j\nu) = -e_ie_j\nu^2$ and $(e_j\nu)(e_i\nu) = -e_je_i\nu^2 = e_ie_j\nu^2$, so distinct images anticommute. By the universal property (\claimref{std-algebra.existence-uniqueness}) the assignment extends to a unital homomorphism from $\Cl(p,q)$ (respectively $\Cl(q,p)$) into the even subalgebra. It is surjective: for $i \neq j$, $(e_i\nu)(e_j\nu) = -\nu^2 e_ie_j = \mp e_ie_j$, so every even blade of the extension not involving $\nu$ is, up to sign, a product of images, and every even blade involving $\nu$ is $e_I\nu$ with $|I|$ odd, which is $\pm(e_{i_1}\nu)(e_{i_2}\nu)(e_{i_3}\nu)\cdots$ after pairing all but the last factor. Both sides have dimension $2^n$, so the surjection is an isomorphism. The script confirms the relations, the evenness, and the dimension on $(1,3)$ and $(2,0)$ with both signs of $\nu^2$.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 37 (Where the obstruction lies, and the commuting square).** Let $A = \Cl(p,q)$ with $n = p + q$ even, and let $A_s = \Cl(p,q{+}1)$ and $A_t = \Cl(p{+}1,q)$ be its spacelike and timelike one-dimensional extensions.
+\begin{enumerate}
+\item[(a)] Exactly one of $A_s$, $A_t$ carries the type-C obstruction: $A_s$ if $p - q \equiv 2 \pmod 4$, $A_t$ if $p - q \equiv 0 \pmod 4$. The other has complex type: its volume element is central with square $-1$, its centre is $\C$, and it is simple.
+\item[(b)] Each of the two ideals of the obstructed extension is a copy of $A$: $\varepsilon_\pm A_s \cong \Cl^0(p,q{+}1) \cong A$ in the first case, $\varepsilon_\pm A_t \cong \Cl^0(p{+}1,q) \cong \Cl(q,p) \cong A$ in the second (the last isomorphism because the residues $0$ and $4$ are fixed by negation mod $8$).
+\item[(c)] The Rule 2 repair of the obstructed extension by a generator of the opposite sign is $\Cl(p{+}1,q{+}1)$, the Rule 1 ascent of $A$: the two adjoined generators $e_{n+1}$ (the extension) and $\nu$ (the repair) span a hyperbolic plane, the null vectors $f = \tfrac12(u \pm w)$, $f^* = \tfrac12(u \mp w)$, with $u$ the adjoined generator of square $+1$ and $w$ that of square $-1$ (both combinations are null; the opposite signs make $ff^* + f^*f = 1$) are the ladder pair of Theorem \claimref{transport.rule-1-morita-trivial}, and the two amplifications agree: $\Mat_2(\Cl^0(\text{extension})) = \Mat_2(A)$. The residue returns to $d$.
+\item[(d)] The Rule 2 repair by a generator of the same sign is $\Cl(p,q{+}2)$ or $\Cl(p{+}2,q)$, isomorphic to $\Cl(p{+}1,q{+}1)$ as an algebra, at residue $d \mp 2$; the adjoined plane is definite and carries no null vector, so this adjunction is not the Rule 1 ascent of (c), although the algebra it produces is isomorphic to one.
+\end{enumerate}
+
+*Proof.* (a) By Theorem \claimref{transport.existence-classification-type-c} with Lemmas \claimref{transport.centre} and \claimref{transport.sign}, an odd-dimensional algebra is type C exactly when $p' - q' \equiv 1 \pmod 4$ and complex type exactly when $p' - q' \equiv 3 \pmod 4$; these exhaust the odd residues. For $A_s$, $p' - q' = p - q - 1$, which is $\equiv 1$ iff $p - q \equiv 2$ and $\equiv 3$ iff $p - q \equiv 0 \pmod 4$. For $A_t$, $p' - q' = p - q + 1$, which is $\equiv 1$ iff $p - q \equiv 0$ and $\equiv 3$ iff $p - q \equiv 2$. Since $n$ is even, $p - q$ is even, so exactly one case obtains for each extension and the two extensions fall on opposite sides. Simplicity of the complex-type algebra: its centre $\C$ is a field, and a semisimple algebra with a field for centre has one Wedderburn block.
+
+(b) The corner isomorphism $\varepsilon_+ A' \cong \Cl^0(A')$ is Lemma \claimref{transport.corner-even-subalgebra}, and $\varepsilon_- A' \cong \varepsilon_+ A'$ through the grade involution, which exchanges the ideals (Proposition \claimref{transport.ascent-renders-grade-involution-inner}). Lemma \claimref{transport.even-subalgebra-one-dimensional-extension} identifies $\Cl^0(p,q{+}1) \cong \Cl(p,q)$ and $\Cl^0(p{+}1,q) \cong \Cl(q,p)$. In the timelike case, $p - q \equiv 0 \pmod 4$ gives $q - p \equiv -(p-q) \pmod 8$, and the classification (Theorem \claimref{transport.classification-real-clifford-algebras}) assigns $\Cl(q,p)$ and $\Cl(p,q)$ the same type and dimension when $p - q \equiv 0 \pmod 4$ (residues $0$ and $4$ are each fixed by negation mod 8), so $\Cl(q,p) \cong \Cl(p,q)$ there (the script exercises the timelike form of Lemma \claimref{transport.even-subalgebra-one-dimensional-extension} on $(1,3)$ and $(2,0)$).
+
+(c) The spacelike case: the repair generator $\nu$ has $\nu^2 = +1$ and the extension generator $e_{n+1}$ has square $-1$, so the Gram matrix of the pair is $\mathrm{diag}(+1,-1)$, of signature $(1,1)$: a hyperbolic plane. Then $f = \tfrac12(\nu + e_{n+1})$ satisfies $f^2 = \tfrac14(\nu^2 + e_{n+1}^2 + \nu e_{n+1} + e_{n+1}\nu) = 0$, likewise $f^* = \tfrac12(\nu - e_{n+1})$, and $ff^* + f^*f = \tfrac14\bigl((\nu + e_{n+1})(\nu - e_{n+1}) + (\nu - e_{n+1})(\nu + e_{n+1})\bigr) = \tfrac12(\nu^2 - e_{n+1}^2) = 1$. The quadratic space is $\R^{p,q} \perp \langle e_{n+1}\rangle \perp \langle \nu \rangle = \R^{p+1,q+1}$ whichever order the two directions are adjoined in, so the algebra is $\Cl(p{+}1,q{+}1)$ on the nose, and Theorem \claimref{transport.rule-1-morita-trivial} reads it as $\Mat_2(A)$ through the ladder pair, while Lemma \claimref{transport.matrix-units-peirce-isomorphism} and Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form} read it as $\Mat_2(\Cl^0(A_s))$ through $\varepsilon_\pm$ and $\nu$; by (b) the two coefficient algebras are the same algebra. The residue of $\Cl(p{+}1,q{+}1)$ is $p - q$. The timelike case is the same computation with the signs of $\nu^2$ and $e_{n+1}^2$ exchanged and $f = \tfrac12(e_{n+1} + \nu)$, $f^* = \tfrac12(e_{n+1} - \nu)$.
+
+(d) Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}(3) gives the isomorphism of the two repairs and the residues $d' \pm 1$ of the fused algebras with $d' = d \mp 1$ the residue of the extension; the same-sign repair has residue $d \mp 2$. The adjoined plane has Gram matrix $\pm\,\mathrm{diag}(1,1)$, definite, so $(a e_{n+1} + b\nu)^2 = \pm(a^2 + b^2) \neq 0$ for $(a,b) \neq 0$: the adjoined plane carries no null vector, hence no ladder pair, so the adjunction is not a $(1,1)$ ascent; the algebra it produces is nevertheless $\Mat_2(A)$, and does contain ladder pairs, just none inside the adjoined plane.
+
+The script verifies (a) on every even-dimensional $(p,q)$ with $2 \leq n \leq 6$ by computing the volume element's centrality and square directly, and verifies (c) and (d) on the same grid: the obstructed extension is type C, the opposite-sign repair is at residue $d$ with a hyperbolic adjoined plane carrying a ladder pair, and the same-sign repair is two residues away with a definite plane.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 38 (Which residues obstruct which way).** The even residues whose spacelike extension is type C are $\{2, 6\}$; those whose timelike extension is type C are $\{0, 4\}$. In particular every even residue has exactly one obstructing one-dimensional extension. The physical lineage is at residue $6$ and its Rule 1 ascents never leave it (Theorem \claimref{transport.rule-1-morita-trivial}); by Theorem \claimref{transport.where-obstruction-lies-commuting-square} it leaves residue $6$ only through a spacelike direction, into the obstruction at residue $5$, and the opposite-sign repair returns it to $6$ as $\Mat_2$ of the algebra it started from. The same holds at residue $2$, with spacelike read as square $-1$: in T14's causal convention, where the mirror's time is its minus sign, that extension is the mirror's second time, and the mirror's own Kaluza-Klein direction gives the unobstructed $\Cl(4,1)$ (Proposition \claimref{synthesis.mirror-extensions-causal-convention}).
+
+*Proof.* Residues $2$ and $6$ are the even residues $\equiv 2 \pmod 4$; residues $0$ and $4$ are those $\equiv 0$. The rest is Theorem \claimref{transport.where-obstruction-lies-commuting-square}(a) and (c) read at $d = 6$ and $d = 2$. That Rule 1 ascents fix residue $6$ is \claimref{transport.rule-1-morita-trivial}. The script lists both sets from the grid.
+
+
+We turn to a further ingredient.
+
+**Theorem 39 (Odd Lorentzian dimension: exactly one real form is split).** Let $n$ be odd and consider the two real forms of the Lorentzian algebra in dimension $n$, $\Cl(1,n{-}1)$ (time of square $+1$) and $\Cl(n{-}1,1)$ (time of square $-1$). Then $\Cl(1,n{-}1)$ is type C if and only if $n \equiv 1 \pmod 4$, $\Cl(n{-}1,1)$ is type C if and only if $n \equiv 3 \pmod 4$, and in each case the other real form has complex type. The two real forms have the same complexification, which is split for every odd $n$: over $\C$ the element $\omega' = \omega$ or $i\omega$, whichever has square $+1$, is central, and $\tfrac12(1 \pm \omega')$ are its central idempotents. Thus the obstruction is present in every odd Lorentzian dimension; the real form decides whether it is visible as a splitting or hidden as a central complex structure.
+
+*Proof.* $\Cl(1,n{-}1)$ is the spacelike extension of $\Cl(1,n{-}2)$, an even-dimensional algebra with $p - q = 3 - n$, which is $\equiv 2 \pmod 4$ iff $n \equiv 1 \pmod 4$ and $\equiv 0$ iff $n \equiv 3$; Theorem \claimref{transport.where-obstruction-lies-commuting-square}(a) gives the first claim and the complex type of the other case. $\Cl(n{-}1,1)$ is the extension of $\Cl(n{-}2,1)$, $p - q = n - 3$, by a generator of square $+1$, obstructed iff $n - 3 \equiv 0$, i.e.\ $n \equiv 3 \pmod 4$, complex type otherwise. For the complexification: over $\C$ the substitution $e_i \mapsto ie_i$ on the generators of square $-1$ turns the relations of $\Cl(p,q)$ into those of $\Cl(n,0)$, so $\Cl(p,q) \otimes \C$ depends only on $n$ (\claimref{std-algebra.complexification}); the volume element remains central, and if $\omega^2 = -1$ then $(i\omega)^2 = +1$, so $\omega'$ as defined is a central involution and $\tfrac12(1 \pm \omega')$ are orthogonal central idempotents summing to $1$. The script checks the alternation, with its complex-type complement, in dimensions $3, 5, 7, 9, 11$.
+
+
+**Remark  (Three dimensions).** $n = 5$: $\Cl(1,4)$ is split, $\Cl(4,1)$ complex type. $n = 3$: $\Cl(2,1)$ is split, $\Cl(1,2)$ complex type. $n = 11$: $\Cl(10,1)$ is split, $\Cl(1,10)$ complex type. In the convention of this paper (time of square $+1$) the five-dimensional extension of spacetime is the split one; the planar and eleven-dimensional cases are split in the opposite convention. Physics done with complex gamma matrices sees the splitting in every odd dimension, as the corollary says it must; what the real form governs is the reality of the spinors.
+
+## Type P: the rule of no rule
+
+This section gathers the results on type P: the rule of no rule.
+
+We turn to a further ingredient.
+
+**Theorem 40 (Type P is self-repairing).** Let $A$ be any unital ring, $\mathcal{E}(A)$ its set of idempotents, and $A' \supseteq A$ any unital extension. The identity assignment
+\[
+\sigma : \mathcal{E}(A) \to A' , \qquad \sigma(e) = e,
+\]
+satisfies both von Neumann identities, $e\,\sigma(e)\,e = e$ and $\sigma(e)\,e\,\sigma(e) = \sigma(e)$, and is equivariant under \emph{every} ring automorphism of every extension: for any automorphism $\theta$ of $A'$ preserving $A$, $\sigma(\theta(e)) = \theta(\sigma(e))$ trivially. In the terminology of the taxonomy: the transport rule for type P is the identity, at signature increment $(0,0)$, and the repair is already present in the base algebra.
+
+*Proof.* $e\,e\,e = e^2 \cdot e = e \cdot e = e$, twice over; equivariance of the identity map is a tautology; and $\theta(e)$ is again an idempotent, so $\sigma$ is defined wherever equivariance asks it to be.
+
+
+**Remark  (Why the shear has nothing to act on: $eee = e$ versus $vvv = 0$).** The proposition looks too easy to be the analogue of Theorem \claimref{transport.no-go-level-elements}, so it is worth locating exactly where the difficulty of type N disappears. It is not in the shear, which is present on both sides: the pseudo-inverses of a null vector form a torsor under the null rotations (Proposition \claimref{transport.pseudo-inverse-torsor}), and the idempotents sharing the image of $e$ form one under $\mathrm{Hom}$-groups that the stabiliser of $e$ shears in exactly the same unipotent manner (Remark \claimref{note.transport.moore-penrose-boundary-idempotent-side} below). The difference is what the torsor contains. The null vector is not a member of its own repair family, since $v\,v\,v = 0 \neq v$, so equivariance must select from a set with no invariant point; the idempotent is a member of its own, since $eee = e$, so the repair need not lie in the sheared directions at all. One identity separates the two cases. The taxonomy's three transport costs, namely a hyperbolic plane for N (and even then only at the level of points), one generator for C, and nothing for P, are thus not a graded scale of difficulty but three different answers to the same equivariance question, each carrying its own theorem.
+
+We turn to a further ingredient.
+
+**Theorem 41 (Units span).** In a finite-dimensional unital $\R$-algebra $A$, every element is a sum of two invertible elements.
+
+*Proof.* For $a \in A$ and $\lambda \in \R$, the element $a - \lambda 1$ is invertible iff the left-multiplication operator $L_a - \lambda\, \mathrm{id}$ on the finite-dimensional space $A$ is invertible (if $L_{a - \lambda 1}$ is bijective, the preimage of $1$ is a right inverse, and finite-dimensionality upgrades one-sided inverses to two-sided). The reals $\lambda$ for which $\det(L_a - \lambda\,\mathrm{id}) = 0$ are finitely many, so choose $\lambda$ with both $a - \lambda 1$ and $\lambda 1$ invertible ($\lambda \neq 0$): then $a = (a - \lambda 1) + \lambda 1$.
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 42 (Classification of idempotent orbits).** Let $A = \Cl(p,q)$, nondegenerate, so that $A \cong \Mat_m(D)$ or $\Mat_m(D) \oplus \Mat_m(D)$ with $D \in \{\R, \C, \HH\}$ (Theorem \claimref{transport.classification-real-clifford-algebras}), acting on the free right $D$-module $V = D^m$ (or on the pair of them). Define the \emph{rank} of an idempotent as $\dim_D$ of its image (a rank pair, in the split case). Then:
+\begin{enumerate}
+\item Two idempotents are conjugate under the inner automorphism group of $A$ if and only if they have the same rank data. In the simple case the idempotents of rank $r$, $0 < r < m$, form a single conjugacy orbit; in the split case inner automorphisms act componentwise and the orbits are indexed by rank pairs.
+\item $e$ and $1 - e$ are conjugate if and only if $\mathrm{rank}\, e = m - \mathrm{rank}\, e$ (componentwise, in the split case): the labelling of a complementary pair is gauge exactly when the pair is balanced, and is canonically ordered by rank otherwise.
+\item An idempotent is central if and only if its conjugation orbit is a singleton. The taxonomy's P/C boundary is therefore orbit-theoretic: type C comprises the idempotents that conjugation cannot move at all, type P those it moves through a full rank class.
+\end{enumerate}
+
+*Proof.* (1) Conjugation preserves rank, since $geg^{-1}$ has image $g(\mathrm{im}\, e)$. Conversely let $e, e'$ be idempotents of equal rank $r$ on $V = D^m$, on which $A \cong \Mat_m(D)$ acts (\claimref{transport.classification-real-clifford-algebras}). Each splits $V$: $V = \mathrm{im}\,e \oplus \ker e$, both summands free (a finitely generated submodule of a free module over a division ring is free, with well-defined dimension); choose $D$-bases of $\mathrm{im}\,e$ and $\ker e$, and likewise for $e'$. The $D$-linear map $g$ carrying the first adapted basis to the second is invertible and satisfies $g e g^{-1} = e'$, both sides being the projection onto $g(\mathrm{im}\,e) = \mathrm{im}\,e'$ along $g(\ker e) = \ker e'$. In the split case, invertible elements are pairs of invertibles and conjugation acts componentwise (inner automorphisms preserve the two ideals, which are the algebra's minimal central summands), so the same argument applies in each slot and no inner automorphism exchanges slots.
+
+(2) is (1) applied to the pair, $\mathrm{rank}(1-e) = m - \mathrm{rank}(e)$.
+
+(3) If $e$ is central its orbit is $\{e\}$. Conversely, if $geg^{-1} = e$ for every invertible $g$, then $e$ commutes with every invertible element, hence with every sum of two of them, hence with all of $A$ by Lemma \claimref{transport.units-span}: $e$ is central. The identification of the singleton-orbit idempotents with the taxonomy's type C, and of the moved ones with type P, is then Definition \claimref{obj.transport.obstruction-types} read against (1).
+
+
+The next result builds directly on the one just stated.
+
+**Theorem 43 (The pair is canonical; the label is a bit).** For an idempotent $e \notin \{0,1\}$, set $u = 2e - 1$, an involution ($u^2 = 1$), with $e = \tfrac12(1+u)$ and $1 - e = \tfrac12(1-u)$ its spectral projections. The unordered pair $\{e, 1-e\}$ and the involution $\pm u$ determine one another canonically; the residual choice (which member to call $e$, equivalently the sign of $u$) is a $\mathbb{Z}_2$ labelling. By Theorem \claimref{transport.classification-idempotent-orbits}(2) this labelling is gauge (implemented by an inner automorphism) precisely for balanced pairs, and is canonically resolved by rank order otherwise. The pattern is now visible across the whole taxonomy: each obstruction type terminates in a residual $\mathbb{Z}_2$: the labelling of $\varepsilon_\pm$ for type C, exchangeable by no inner automorphism and rendered gauge only by the ascent (Proposition \claimref{transport.ascent-renders-grade-involution-inner}); the sign $\gamma$ of the fused ascent for Rule 2, not detected by the algebra (Remark \claimref{note.transport.bit-algebra-forgets}); and the labelling of $\{e, 1-e\}$ for type P, gauge already in the base algebra whenever the ranks permit. The three $\mathbb{Z}_2$'s are at strictly decreasing depth: outer, forgotten, inner.
+
+*Proof.* Everything except the last two sentences is contained in the displayed formulas and Theorem \claimref{transport.classification-idempotent-orbits}(2); the comparison across types collects Proposition \claimref{transport.ascent-renders-grade-involution-inner}, Remark \claimref{note.transport.bit-algebra-forgets} and Theorem \claimref{transport.classification-idempotent-orbits}(2), each proved where cited.
+
+
+**Remark  (The Moore--Penrose boundary, idempotent side).** One refinement of the type-P question does carry content, and it traces the boundary of the section ``The hyperbolic atom as a matrix algebra: the Moore--Penrose pseudoinverse'' from the other side. Within the idempotents sharing a fixed image $W$, is there a canonical one? They are in bijection with the complements of $W$, hence form a torsor under $\mathrm{Hom}(V/W, W)$ on which the stabiliser of $W$ acts by unipotent transvections, the same shear mechanism as the null rotations of Lemma \claimref{transport.group-null-rotations}. A definite Hermitian form resolves it, the orthogonal projection $P_W$ being the unique self-adjoint member; an indefinite one fails exactly on the degenerate subspaces, where no self-adjoint member exists at all: were $e$ self-adjoint with image $W$, any nonzero $z \in W \cap W^{\perp}$ would give $\langle x, z\rangle = \langle x, ez\rangle = \langle ex, z\rangle = 0$ for every $x$, against nondegeneracy of the ambient form. So the two sides agree: canonical selection is available exactly where a definite structure is. The transport-theoretic point is the division of labour. For type P the ambiguity concerns only \emph{which} idempotent to use, and the repair theorem needs no choice at all, since $\sigma(e) = e$ is asked about a given $e$; for type N the same ambiguity affects the repair itself, which is why the null cone needs the ascent and the idempotent variety does not.
+
+We turn to a further ingredient.
+
+**Theorem 44 (No fourth rule).** The taxonomy of Definition \claimref{obj.transport.obstruction-types} is transport-complete with two nontrivial rules. Type N: ascend by one hyperbolic plane, with the repair delivered at the level of points (Theorems \claimref{transport.no-go-level-elements}, \claimref{transport.totality}, \claimref{transport.minimality}, \claimref{transport.representation-independent-minimality-completion}). Type C: ascend by one generator, with the fused algebra unique up to isomorphism (Theorems \claimref{transport.rule-2-ideal-fusion-sharp-form}, \claimref{transport.one-generator-minimal-minimal-completions-classified}, \claimref{transport.embedding-independent-minimality-fusion}). Type P: no ascent; the identity is an equivariant repair (Proposition \claimref{transport.type-p-self-repairing}). By the exhaustiveness theorem (Theorem \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}), every zero divisor of a nondegenerate real Clifford algebra falls under these three rules.
+
+*Proof.* The source gives no separate proof: the corollary collects the theorems its statement cites. \claimref{transport.embedding-independent-minimality-fusion}, \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}, \claimref{transport.minimality}, \claimref{transport.no-go-level-elements}, \claimref{transport.one-generator-minimal-minimal-completions-classified}, \claimref{transport.representation-independent-minimality-completion}, \claimref{transport.rule-2-ideal-fusion-sharp-form}, \claimref{transport.totality}, \claimref{transport.type-p-self-repairing}.
+
+
+## The mod-8 clock and the one-way door
+
+This section gathers the results on the mod-8 clock and the one-way door.
+
+We turn to a further ingredient.
+
+**Theorem 45 (Rule 1 is Morita-trivial).** The elements
+\[
+E_{11} = ff^*, \qquad E_{22} = f^*f, \qquad E_{12} = f, \qquad E_{21} = f^*
+\]
+form a full $2 \times 2$ system of matrix units in $B$ ($E_{11} + E_{22} = 1$, $E_{ij}E_{kl} = \delta_{jk}E_{il}$); the corner is the base, $E_{11} B E_{11} = A\,ff^* \cong A$ via $a \mapsto a\,ff^*$; and therefore
+\[
+\Cl(p{+}1, q{+}1) \;\cong\; \Mat_2\bigl(\Cl(p,q)\bigr),
+\]
+under which the ascent embedding $A \hookrightarrow B$ becomes the twisted diagonal $a \mapsto \mathrm{diag}(a, \hat{a})$. In particular Rule 1 preserves the Morita class: the Wedderburn type, and with it the simplicity or splitness and the type-C diagnosis of the section ``A taxonomy of obstructions'', are the same for $B$ as for $A$, and the clock residue $d = p - q \pmod 8$ is fixed. (The \emph{presence} of types N and P is not preserved and could not be: Proposition \claimref{transport.no-transport-terminates} below shows every completion carries fresh obstructions of its own.) The adjoined ladder pair is, in the matrix description, exactly the off-diagonal matrix units, and the descent projectors $f^*f,\, ff^*$ are the diagonal ones.
+
+*Proof.* The matrix-unit relations are the hyperbolic-pair identities $v^2 = w^2 = 0, \qquad vw + wv = 1, \qquad \text{hence} \quad vwv = (1 - wv)v = v$ read off directly: $E_{12}E_{21} = ff^* = E_{11}$, $E_{21}E_{12} = f^*f = E_{22}$, $E_{12}^2 = f^2 = 0 = E_{21}^2$, $E_{11}E_{12} = ff^*f = f = E_{12}$, $E_{12}E_{11} = f\,ff^* = 0$, and so on; $E_{11} + E_{22} = 1$ is the pair's anticommutator. For the corner: using the displayed decomposition of $B$ and $ff^* a = a\, ff^*$ (evenness), one computes $ff^* (a_0 + a_1 f + a_2 f^* + a_3 ff^*)\, ff^* = (a_0 + a_3) ff^*$, since $ff^* \cdot f \cdot ff^* = f f^* Q(f) f^* = f \cdot ff^* = f^2 f^* = 0$ and likewise the $f^*$ term vanishes, while the $1$ and $ff^*$ terms remain; so $E_{11}BE_{11} = A\,ff^*$. The map $a \mapsto a\,ff^*$ is an algebra isomorphism onto it: multiplicative since $(a\,ff^*)(b\,ff^*) = ab\,(ff^*)^2 = ab\,ff^*$, unital onto the corner unit $ff^*$, injective by the directness of the decomposition. The Peirce isomorphism of Lemma \claimref{transport.matrix-units-peirce-isomorphism}, whose proof uses only the matrix-unit relations, then gives $B \cong \Mat_2(A)$. The embedding: for $a \in A$, $\varphi(a)_{11} = E_{11} a E_{11} = a\,ff^*$ and $\varphi(a)_{22} = E_{12}\, a\, E_{21} = f a f^* = \hat{a}\, ff^*$, while the off-diagonal entries vanish ($E_{11} a E_{21} = a\, ff^*f^* = 0$, $E_{12} a E_{11} = \hat a\,f ff^* = 0$); under the corner identification this is $\mathrm{diag}(a, \hat{a})$, which is multiplicative since the grade involution is an automorphism (\claimref{std-algebra.involution-properties}). Morita-class preservation, and with it the invariance of the type-C diagnosis, is the statement $\Mat_2(A) \sim_{\text{Morita}} A$ (\claimref{std-algebra.morita-amplification}) together with the fact that the Wedderburn data of $\Mat_2(\Mat_m(D))$ (or of the split case, blockwise) is that of $A$ with $m$ doubled.
+
+
+**Remark  (Prior art, and what is new here).** The isomorphism $\Cl(p{+}1,q{+}1) \cong \Mat_2(\Cl(p,q))$ is classical: it is the algebraic form of the $(1,1)$-periodicity of Clifford algebras \cite{ABS1964, Porteous1995, Lounesto2001}, usually obtained from $\Cl(p{+}1,q{+}1) \cong \Cl(p,q)\,\hat{\otimes}\,\Cl(1,1)$ and $\Cl(1,1) \cong \Mat_2(\R)$. What we claim as expository contribution is the presentation: the matrix units \emph{are} the transported ladder pair and its occupation projectors, so the periodicity isomorphism is not auxiliary to the transport principle but is the transport principle's own bookkeeping: the ascent adjoins exactly one row and column's worth of new structure, and the relations $f^2 = 0$, $ff^* + f^*f = 1$ are the matrix-unit relations of that adjunction. The parallel with Rule 2 is now exact (Remark \claimref{note.transport.2-pattern-two-rules-compared}): both rules amplify by $\Mat_2$, Rule 1 over the whole base, Rule 2 over its even half, and in both cases the matrix units are built from the completion's own canonical elements: the ladder pair for N, the central projectors plus the adjoined generator for C.
+
+**Remark  (Iteration).** Iterating Theorem \claimref{transport.rule-1-morita-trivial} gives $\Cl(p{+}k, q{+}k) \cong \Mat_{2^k}(\Cl(p,q))$: the tower over any base is Morita-stationary from its first step. The structural consequences of the iterated statement (tower rigidity, the one-mode-per-rung reading, and the direct limit) are the subject of the series' tower paper \cite{ButlerT3} and are not developed here.
+
+The next result builds directly on the one just stated.
+
+**Theorem 46 (Fusion occurs at most once).** Call a \emph{transport history} any finite sequence of algebras beginning at a nondegenerate $\Cl(p,q)$, each obtained from its predecessor by Rule 1 (the $(1,1)$ ascent) or, when the predecessor carries type C, by Rule 2 (ideal fusion). Then along any transport history:
+\begin{enumerate}
+\item the clock residue $d \bmod 8$ is constant under Rule 1 (Theorem \claimref{transport.rule-1-morita-trivial}) and moves by $\pm 1$ under Rule 2;
+\item type C is present exactly at $d \equiv 1 \pmod 4$, i.e.\ at residues $1$ and $5$ (Theorem \claimref{transport.existence-classification-type-c}), and Rule 2 maps these to residues in $\{0, 2\}$ and $\{4, 6\}$ respectively, none of which is $\equiv 1 \pmod 4$;
+\item hence Rule 2 can be applied at most once in any transport history, and after it (or from the start, if $d \not\equiv 1 \pmod 4$) every subsequent algebra in the history has the same Wedderburn type: the state machine takes at most one step on the mod-8 clock, and then remains fixed.
+\end{enumerate}
+In particular the physical lineage is stationary from the start: $\Cl(1,3)$ has $d \equiv 6$, is simple, never demands Rule 2, and every Rule-1 ascent $\Cl(1{+}k, 3{+}k) \cong \Mat_{2^k}(\Cl(1,3))$ remains at residue $6$, quaternionic type.
+
+*Proof.* (1) is Theorem \claimref{transport.rule-1-morita-trivial} and the count $d \mapsto d \pm 1$ for one adjoined generator. (2) is Theorem \claimref{transport.existence-classification-type-c} with the arithmetic $1 \pm 1 = 0, 2$ and $5 \pm 1 = 4, 6$ mod $8$. (3): once the residue leaves $\{1, 5\}$ it never returns, since Rule 1 fixes it and Rule 2 is only ever invoked (indeed only ever \emph{defined}, as a transport demand) at $\{1,5\}$; Morita-stationarity after the last (hence only) fusion is Theorem \claimref{transport.rule-1-morita-trivial} again. The closing statement on $\Cl(1,3)$ reads its residue $6$, simple and quaternionic, off \claimref{transport.classification-real-clifford-algebras}.
+
+
+We turn to a further ingredient.
+
+**Theorem 47 (The pinching, and its kernel).** Define the pinching $E : B \to B$, $E(x) = PxP + (1-P)x(1-P)$. Then:
+\begin{enumerate}
+\item $E$ is an idempotent linear map whose image is the commutant $C = \{x \in B : xP = Px\} = A \oplus A\,ff^*$, on which it restricts to the identity, and $E$ is a $C$-bimodule map: $E(cxc') = c\,E(x)\,c'$ for $c, c' \in C$, with $E(1) = 1$: a conditional expectation onto $C$.
+\item Its kernel is exactly the adjoined ladder sector:
+\[
+\ker E \;=\; PB(1-P) \,\oplus\, (1-P)BP \;=\; A f^* \,\oplus\, A f .
+\]
+In particular $E(f) = E(f^*) = 0$: the pinching erases precisely the pair the ascent adjoined, and nothing else.
+\item The round trip is exact on transported elements: for $a \in A$, $E(a) = a$, and the corner read-out $D(x) = PxP$, identified with an $A$-valued map through the natural corner isomorphism $E_{22}BE_{22} = A\,f^*f \cong A$ ($a \mapsto a\,f^*f$), satisfies $D(a) = a$: ascent-then-descent is the \emph{identity} on the base. (In the Peirce coordinates of Theorem \claimref{transport.rule-1-morita-trivial}, which identify the $(2,2)$ block with the $(1,1)$ corner by conjugating with $E_{12} = f$, the same round trip reads as the grade involution $\hat{a}$; the two corner identifications differ by exactly the grade twist of the embedding $a \mapsto \mathrm{diag}(a,\hat a)$, and either way the map is an automorphism, faithful.) The multiplicative defect of $D$ on general elements is the exact interposition formula
+\[
+D(xy) - D(x)D(y) \;=\; P\,x\,(1-P)\,y\,P .
+\]
+\end{enumerate}
+
+*Proof.* (1) $E^2 = E$ and $E(1) = P + (1-P) = 1$ are immediate from $P^2 = P$. If $xP = Px$ then the cross-blocks of $x$ vanish ($Px(1-P) = xP(1-P) = 0$ and symmetrically), so $x = PxP + (1-P)x(1-P) = E(x)$; conversely $E(x)$ commutes with $P$ for any $x$; hence $\mathrm{im}\,E = C$ and $E|_C = \mathrm{id}$. The bimodule property follows by moving $c, c'$ through the projectors they commute with. The identification $C = A \oplus A\,ff^*$: $A$ commutes with $P$ (evenness of $f^*f$ in the $H$-factor) and so does $ff^*$, giving $A \oplus A\,ff^* \subseteq C$; and the two diagonal Peirce blocks $PBP \oplus (1-P)B(1-P) = A\,f^*f \oplus A\,ff^*$ span the same $2 \cdot 2^n$-dimensional space, since $a\,f^*f = a - a\,ff^*$. (2) The off-diagonal Peirce blocks contain $Af$ and $Af^*$ ($f = ff^*\cdot f = f \cdot f^*f$ places $f \in (1-P)BP$, symmetrically $f^* \in PB(1-P)$), and the dimensions ($2^n$ each, against Peirce blocks of dimension $2^n$ each in $\Mat_2(A)$) force equality. (3) $E(a) = a$ since $a \in C$. $D(a) = P a P = a\,f^*f$ (as $a$ commutes with $P$ and $P^2 = P$), which is $a$ under the natural corner isomorphism. The Peirce-coordinate reading: the $(2,2)$ entry of $\varphi(a)$ transported to the $E_{11}$ corner is $E_{12}\,a\,E_{21} = f a f^* = \hat{a}\,ff^*$, i.e.\ $\hat{a}$, as computed in Theorem \claimref{transport.rule-1-morita-trivial}. The defect formula is $D(xy) = Px(P + (1-P))yP = D(x)D(y) + Px(1-P)yP$.
+
+
+We turn to a further ingredient.
+
+**Theorem 48 (The door is one-way).** Let $A = \Cl(p,q)$ be nondegenerate and let $B$ be either minimal completion of this paper: the Rule-1 ascent $\Cl(p{+}1,q{+}1) \cong \Mat_2(A)$, or (when $p - q \equiv 1 \bmod 4$) a Rule-2 ascent $\cong \Mat_2(\Cl^0(p,q))$. Then there is no unital algebra homomorphism $B \to A$ whatsoever. Every descent is therefore non-multiplicative; the conditional expectation of Proposition \claimref{transport.pinching-kernel} is the canonical linear surrogate, and its loss, the erasure of the ladder sector, is forced by the algebra, not chosen by the formalism.
+
+*Proof.* $B$ is semisimple (\claimref{transport.classification-real-clifford-algebras}), so the kernel of a homomorphism $\theta : B \to A$ is a sum of Wedderburn blocks of $B$, and $\theta$ is injective on the complementary blocks; unitality ($\theta(1) = 1 \neq 0$) forces at least one block to survive. It suffices then that every block of $B$ has real dimension exceeding $\dim_\R A$. Rule 1, $A$ simple: $B \cong \Mat_2(A)$ (\claimref{transport.rule-1-morita-trivial}) is a single block of dimension $4 \dim A > \dim A$. Rule 1, $A = S \oplus S$ split: $\Mat_2(A) \cong \Mat_2(S) \oplus \Mat_2(S)$, blocks of dimension $4 \dim S = 2 \dim A > \dim A$. Rule 2 ($A$ split): $B \cong \Mat_2(\Cl^0)$ is simple (Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}) of dimension $2^{n+1} = 2\dim A > \dim A$. In every case no block embeds in $A$, contradiction.
+
+
+**Remark  (The two-sided reading).** Proposition \claimref{transport.pinching-kernel} and Theorem \claimref{transport.door-one-way} split the loose statement that descent is lossy into its two true halves. On transported elements the round trip is not lossy at all: it is the identity in the natural corner identification (the grade involution in Peirce coordinates; either way invertible), and the base algebra passes through the door unchanged in both directions. What cannot descend is the completion's \emph{new} content, the ladder pair and everything it generates off the diagonal, and this impossibility is a theorem about unital homomorphisms, not an artefact of choosing a particular descent map. The statement the computations support is sharper than the original: \emph{descent is invertible on the transported elements and impossible on the elements the ascent adjoined}. Compare the point-level statement of Lemma \claimref{transport.descent-read-out-map}: there the descent is exact on the whole invertible locus and fails only on the ideal points, which are precisely the values the ascent added. Element-level and point-level descent lose different things, and each loses exactly what its ascent supplied.
+
+We turn to a further ingredient.
+
+**Theorem 49 (No transport terminates).** No algebra reachable by a nonempty transport history is free of zero divisors. Every Rule-1 completion has mixed signature and so carries type N; indeed the adjoined pair $f, f^*$ is itself null: the repair of the old null cone is effected by adjoining new members of it. Every Rule-2 completion is a matrix algebra $\Mat_2(\Cl^0(p,q))$ and so carries type P: the fusion's own matrix units supply the non-central idempotents and nilpotents. Transport never reaches a division algebra; each completion carries fresh obstructions of its own.
+
+*Proof.* Rule 1 adjoins a hyperbolic plane, so the completed signature $(p{+}1, q{+}1)$ is mixed whatever the base, and Proposition \claimref{transport.existence-locus-type-n} applies; concretely $f^2 = 0$ with $f \neq 0$. Rule 2's completion contains the matrix units of Lemma \claimref{transport.matrix-units-peirce-isomorphism}: $E_{11}$ is a non-central idempotent (Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}(2)) and $E_{12}$ is a nonzero nilpotent.
+
+
+We turn to a further ingredient.
+
+**Conjecture 50 (Obstructions are moved, never destroyed).** Proposition \claimref{transport.no-transport-terminates} is the zero-dimensional instance of a principle the transport programme repeatedly meets: a completion never removes degeneracy, it relocates it. We conjecture the following family form. For any family of quadratic forms degenerating tamely along a locus (in the sense of the series' sheaf-theoretic paper \cite{ButlerT4}), any completion of the family that is nondegenerate of constant signature on one side of the locus degenerates on a displaced locus on the other side; no completion is nondegenerate globally. The one-sided completion theorem and shadow wall of that paper prove exactly this for tame corank-one degenerations; the conjecture asserts the pattern is not an artefact of the tame case, and asks for the cohomological invariant that measures it, presumably a class built from the mod-8 residues on the two sides of the wall, the state machine of Proposition \claimref{transport.fusion-occurs-most-once} evaluated in families.
+
+## The transport principle, and the algorithm
+
+This section gathers the results on the transport principle, and the algorithm.
+
+We turn to a further ingredient.
+
+**Definition 51 (Transport).** The \emph{transport} of a nondegenerate $(\mathbb{V}, Q)$ is the pair consisting of the minimal completion $\Cl(p{+}1,q{+}1)$ of Theorem \claimref{transport.minimality} and the null-ray representation $X(x) \;=\; \nO + x + \tfrac12 Q(x)\, \nInf$; the \emph{transported reciprocal} is the total involution $\iota$ of Theorem \claimref{transport.totality}. For a type-C obstruction the corresponding transport is the one-generator ascent of Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}; for type P it is the identity.
+
+We turn to a further ingredient.
+
+**Theorem 52 (Transport principle).** Division fails in a real Clifford algebra of nondegenerate form in exactly three ways, and each carries a forced minimal repair.
+\begin{itemize}
+\item \emph{At an isotropic vector} the repair is impossible for the element and total for the point. No equivariant element-level repair exists in the Clifford algebra of any extension (Theorems \claimref{transport.no-go-level-elements}, \claimref{transport.cohomological-form-no-go}); the reciprocal nevertheless extends totally, continuously and uniquely on the space of points, in a completion whose increment $(+1,+1)$ is forced both as a lift and as an ambient quadric (Theorems \claimref{transport.totality}, \claimref{transport.minimality}, \claimref{transport.representation-independent-minimality-completion}).
+\item \emph{At a central idempotent} the repair is available at the level of elements, one dimension up: the adjoined generator renders the grade involution inner, the ideals fuse, and the completion is unique up to isomorphism and minimal among all simple real algebras (Theorems \claimref{transport.rule-2-ideal-fusion-sharp-form}, \claimref{transport.one-generator-minimal-minimal-completions-classified}, \claimref{transport.embedding-independent-minimality-fusion}).
+\item \emph{At a non-central idempotent} no repair is needed: the element is its own (Proposition \claimref{transport.type-p-self-repairing}).
+\end{itemize}
+The trichotomy is exhaustive (Theorem \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}), so there is no fourth case (Corollary \claimref{transport.no-fourth-rule}); in each case the cost is independent of how the algebra is represented, and is exactly what the obstruction requires. \emph{Complete the space when the obstruction is a direction, the algebra when it is a splitting, and nothing when the element is already its own repair.}
+
+*Proof.* Division fails in a real Clifford algebra of nondegenerate form in exactly three ways, and each carries a forced minimal repair.
+\begin{itemize}
+\item \emph{At an isotropic vector} the repair is impossible for the element and total for the point. No equivariant element-level repair exists in the Clifford algebra of any extension (Theorems \claimref{transport.no-go-level-elements}, \claimref{transport.cohomological-form-no-go}); the reciprocal nevertheless extends totally, continuously and uniquely on the space of points, in a completion whose increment $(+1,+1)$ is forced both as a lift and as an ambient quadric (Theorems \claimref{transport.totality}, \claimref{transport.minimality}, \claimref{transport.representation-independent-minimality-completion}).
+\item \emph{At a central idempotent} the repair is available at the level of elements, one dimension up: the adjoined generator renders the grade involution inner, the ideals fuse, and the completion is unique up to isomorphism and minimal among all simple real algebras (Theorems \claimref{transport.rule-2-ideal-fusion-sharp-form}, \claimref{transport.one-generator-minimal-minimal-completions-classified}, \claimref{transport.embedding-independent-minimality-fusion}).
+\item \emph{At a non-central idempotent} no repair is needed: the element is its own (Proposition \claimref{transport.type-p-self-repairing}).
+\end{itemize}
+The trichotomy is exhaustive (Theorem \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}), so there is no fourth case (Corollary \claimref{transport.no-fourth-rule}); in each case the cost is independent of how the algebra is represented, and is exactly what the obstruction requires. \emph{Complete the space when the obstruction is a direction, the algebra when it is a splitting, and nothing when the element is already its own repair.}
+
+
+We turn to a further ingredient.
+
+**Theorem 53 (The transport algorithm).** The Principle says what is true; practice needs to know what to do. The theorems distil into a six-step procedure, and every step names the theorem, proved above, that licenses it. the table accompanying \claimref{transport.transport-algorithm} is the one-page version: the theorems in operational form. That the steps form a decision procedure with no gaps is itself a theorem, Corollary \claimref{transport.no-fourth-rule}.
+
+
+
+
+\begin{enumerate}
+\item[\textbf{Step 1.}] \textbf{Locate the failure.} Identify the element at which invertibility fails, or, if the construction is a family, the locus at which it fails. Nothing later depends on how this is done; it is a computation in the case at hand. What the algebra guarantees is that the failure cannot be argued away: a null vector has no inverse in \emph{any} unital algebra containing the base (Lemma \claimref{transport.noinverse}), and neither has an idempotent.
+
+\item[\textbf{Step 2.}] \textbf{Diagnose the type.} Ask, in order:
+  \begin{itemize}
+  \item Is the failing element a vector $v$ with $Q(v) = 0$? Then the obstruction is \textbf{type N}. These exist exactly in mixed signature, $pq \neq 0$ (Proposition \claimref{transport.existence-locus-type-n}).
+  \item Is it a \emph{central} idempotent? Then \textbf{type C}. These exist exactly when $p - q \equiv 1 \pmod 4$, and are then exactly the two projectors $\tfrac12(1 \pm \omega)$ (Theorem \claimref{transport.existence-classification-type-c}); equivalently, exactly when the algebra is not simple (Theorem \claimref{transport.classification-real-clifford-algebras}).
+  \item Otherwise \textbf{type P}: a non-central idempotent, or an element annihilated by one.
+  \end{itemize}
+  The trichotomy is exhaustive: every zero divisor of a nondegenerate real Clifford algebra is annihilated by a nontrivial idempotent, possibly central in the split signatures, and then exactly when the element lies in one ideal (Theorem \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}). Two cautions. The nilpotency locus is strictly larger than the type-N locus, and nilpotence alone does not diagnose N (Example \claimref{note.transport.nilpotents-without-null-vectors-two-loci}); and a single algebra may carry all three types at once (Example \claimref{note.transport.cl-1-0-cl-2-1}).
+
+\item[\textbf{Step 3.}] \textbf{Apply the rule.}
+  \begin{itemize}
+  \item \textbf{Type N, Rule 1.} Adjoin one hyperbolic plane: $\Cl(p,q) \to \Cl(p{+}1,q{+}1)$. Do not expect the element to be repaired: no equivariant assignment of a partner to $v$ exists, in this ascent or any other (Theorem \claimref{transport.no-go-level-elements}), and the obstruction is a cohomology class that every enlargement pulls back unchanged (Theorem \claimref{transport.cohomological-form-no-go}). What is repaired is the space of points (Step 4). The increment is forced: $(+1,+1)$, never $(+2,0)$ or $(0,+2)$, among null-lift completions (Theorem \claimref{transport.minimality}), and no algebra with a smaller or differently balanced quadric can host the resolution however the base is embedded in it (Theorem \claimref{transport.representation-independent-minimality-completion}).
+  \item \textbf{Type C, Rule 2.} Adjoin one generator $\nu$ orthogonal to $\mathbb{V}$, of either nonzero square. The grade involution becomes inner, the two ideals fuse, and the completion is $\Mat_2(\Cl^0(p,q))$, simple (Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}). The null-generator ascent is not an option: it produces a square-zero ideal and never fuses (Theorem \claimref{transport.one-generator-minimal-minimal-completions-classified}(2)). The sign of $\nu^2$ is free and the algebra forgets it (Remark \claimref{note.transport.bit-algebra-forgets}); if it matters for the application, it must be fixed by structure outside the algebra.
+  \item \textbf{Type P.} Do nothing. The identity assignment $\sigma(e) = e$ is a total, fully equivariant von Neumann repair, at signature increment $(0,0)$ (Proposition \claimref{transport.type-p-self-repairing}).
+  \end{itemize}
+
+\item[\textbf{Step 4.}] \textbf{Compute in the completion.} For type N this is the substantive step, and it is where the classical formulas apply. Represent points, not elements: lift $x \in \mathbb{V}$ to the null ray of
+  \[
+  X(x) \;=\; \nO + x + \tfrac12 Q(x)\,\nInf ,
+  \]
+  which satisfies the incidence condition $Q(x) = 2st$ in the homogeneous coordinates $(s,x,t)$ of Proposition \claimref{transport.swap-rescale-normal-form}. The reciprocal is then the linear involution
+  \[
+  \iota(s,\,x,\,t) \;=\; (2t,\ x,\ \tfrac12 s),
+  \]
+  total on the quadric and never failing (Theorem \claimref{transport.totality}). All nonlinearity and all division have been deferred to a single read-out. This is the linearise-then-normalise pattern of homogeneous coordinates and M\"obius matrices, encountered here as forced rather than chosen (Remark \claimref{note.transport.classical}).
+
+\item[\textbf{Step 5.}] \textbf{Descend, and state what descent costs.} Return the answer to $\mathbb{V}$ with the read-out $\dsc[\,s\nO + x + t\nInf\,] = x/s$. On the invertible locus the composite gives exactly the classical answer (Lemma \claimref{transport.descent-read-out-map}(2)); where the first slot vanishes the answer is an ideal point and corresponds to no point of $\mathbb{V}$ (Lemma \claimref{transport.descent-read-out-map}(3)). \emph{The refusal of the read-out is information, not failure}: it says the answer exists and lies outside the original space. At the level of elements the corresponding statement is stronger and worth knowing before relying on any descent: the pinching onto the base is a conditional expectation whose kernel is exactly the adjoined ladder sector (Proposition \claimref{transport.pinching-kernel}), and there is no unital algebra homomorphism from either completion back to its base at all (Theorem \claimref{transport.door-one-way}). Descent is invertible on the transported elements and impossible on the elements the ascent adjoined.
+
+\item[\textbf{Step 6.}] \textbf{Iterate, or stop.} Ask whether the completion carries an obstruction of its own. It does: no transport terminates in a division algebra (Proposition \claimref{transport.no-transport-terminates}). But the bookkeeping is finite in the following sense: Rule 1 fixes the mod-8 residue, so the taxonomy of the completion is that of the base and iterating changes nothing structural (Theorem \claimref{transport.rule-1-morita-trivial}), while Rule 2 moves the residue off the split classes and can therefore occur at most once in any transport history (Proposition \claimref{transport.fusion-occurs-most-once}). A transport history takes at most one step on the clock, and then remains fixed.
+\end{enumerate}
+
+*Proof.* Each step names the result that licenses it; the derivation is those results.
+
+The Principle says what is true; practice needs to know what to do. The theorems distil into a six-step procedure, and every step names the theorem, proved above, that licenses it. the table accompanying \claimref{transport.transport-algorithm} is the one-page version: the theorems in operational form. That the steps form a decision procedure with no gaps is itself a theorem, Corollary \claimref{transport.no-fourth-rule}.
+
+
+
+
+\begin{enumerate}
+\item[\textbf{Step 1.}] \textbf{Locate the failure.} Identify the element at which invertibility fails, or, if the construction is a family, the locus at which it fails. Nothing later depends on how this is done; it is a computation in the case at hand. What the algebra guarantees is that the failure cannot be argued away: a null vector has no inverse in \emph{any} unital algebra containing the base (Lemma \claimref{transport.noinverse}), and neither has an idempotent.
+
+\item[\textbf{Step 2.}] \textbf{Diagnose the type.} Ask, in order:
+  \begin{itemize}
+  \item Is the failing element a vector $v$ with $Q(v) = 0$? Then the obstruction is \textbf{type N}. These exist exactly in mixed signature, $pq \neq 0$ (Proposition \claimref{transport.existence-locus-type-n}).
+  \item Is it a \emph{central} idempotent? Then \textbf{type C}. These exist exactly when $p - q \equiv 1 \pmod 4$, and are then exactly the two projectors $\tfrac12(1 \pm \omega)$ (Theorem \claimref{transport.existence-classification-type-c}); equivalently, exactly when the algebra is not simple (Theorem \claimref{transport.classification-real-clifford-algebras}).
+  \item Otherwise \textbf{type P}: a non-central idempotent, or an element annihilated by one.
+  \end{itemize}
+  The trichotomy is exhaustive: every zero divisor of a nondegenerate real Clifford algebra is annihilated by a nontrivial idempotent, possibly central in the split signatures, and then exactly when the element lies in one ideal (Theorem \claimref{transport.exhaustiveness-every-zero-divisor-annihilated-idempotent}). Two cautions. The nilpotency locus is strictly larger than the type-N locus, and nilpotence alone does not diagnose N (Example \claimref{note.transport.nilpotents-without-null-vectors-two-loci}); and a single algebra may carry all three types at once (Example \claimref{note.transport.cl-1-0-cl-2-1}).
+
+\item[\textbf{Step 3.}] \textbf{Apply the rule.}
+  \begin{itemize}
+  \item \textbf{Type N, Rule 1.} Adjoin one hyperbolic plane: $\Cl(p,q) \to \Cl(p{+}1,q{+}1)$. Do not expect the element to be repaired: no equivariant assignment of a partner to $v$ exists, in this ascent or any other (Theorem \claimref{transport.no-go-level-elements}), and the obstruction is a cohomology class that every enlargement pulls back unchanged (Theorem \claimref{transport.cohomological-form-no-go}). What is repaired is the space of points (Step 4). The increment is forced: $(+1,+1)$, never $(+2,0)$ or $(0,+2)$, among null-lift completions (Theorem \claimref{transport.minimality}), and no algebra with a smaller or differently balanced quadric can host the resolution however the base is embedded in it (Theorem \claimref{transport.representation-independent-minimality-completion}).
+  \item \textbf{Type C, Rule 2.} Adjoin one generator $\nu$ orthogonal to $\mathbb{V}$, of either nonzero square. The grade involution becomes inner, the two ideals fuse, and the completion is $\Mat_2(\Cl^0(p,q))$, simple (Theorem \claimref{transport.rule-2-ideal-fusion-sharp-form}). The null-generator ascent is not an option: it produces a square-zero ideal and never fuses (Theorem \claimref{transport.one-generator-minimal-minimal-completions-classified}(2)). The sign of $\nu^2$ is free and the algebra forgets it (Remark \claimref{note.transport.bit-algebra-forgets}); if it matters for the application, it must be fixed by structure outside the algebra.
+  \item \textbf{Type P.} Do nothing. The identity assignment $\sigma(e) = e$ is a total, fully equivariant von Neumann repair, at signature increment $(0,0)$ (Proposition \claimref{transport.type-p-self-repairing}).
+  \end{itemize}
+
+\item[\textbf{Step 4.}] \textbf{Compute in the completion.} For type N this is the substantive step, and it is where the classical formulas apply. Represent points, not elements: lift $x \in \mathbb{V}$ to the null ray of
+  \[
+  X(x) \;=\; \nO + x + \tfrac12 Q(x)\,\nInf ,
+  \]
+  which satisfies the incidence condition $Q(x) = 2st$ in the homogeneous coordinates $(s,x,t)$ of Proposition \claimref{transport.swap-rescale-normal-form}. The reciprocal is then the linear involution
+  \[
+  \iota(s,\,x,\,t) \;=\; (2t,\ x,\ \tfrac12 s),
+  \]
+  total on the quadric and never failing (Theorem \claimref{transport.totality}). All nonlinearity and all division have been deferred to a single read-out. This is the linearise-then-normalise pattern of homogeneous coordinates and M\"obius matrices, encountered here as forced rather than chosen (Remark \claimref{note.transport.classical}).
+
+\item[\textbf{Step 5.}] \textbf{Descend, and state what descent costs.} Return the answer to $\mathbb{V}$ with the read-out $\dsc[\,s\nO + x + t\nInf\,] = x/s$. On the invertible locus the composite gives exactly the classical answer (Lemma \claimref{transport.descent-read-out-map}(2)); where the first slot vanishes the answer is an ideal point and corresponds to no point of $\mathbb{V}$ (Lemma \claimref{transport.descent-read-out-map}(3)). \emph{The refusal of the read-out is information, not failure}: it says the answer exists and lies outside the original space. At the level of elements the corresponding statement is stronger and worth knowing before relying on any descent: the pinching onto the base is a conditional expectation whose kernel is exactly the adjoined ladder sector (Proposition \claimref{transport.pinching-kernel}), and there is no unital algebra homomorphism from either completion back to its base at all (Theorem \claimref{transport.door-one-way}). Descent is invertible on the transported elements and impossible on the elements the ascent adjoined.
+
+\item[\textbf{Step 6.}] \textbf{Iterate, or stop.} Ask whether the completion carries an obstruction of its own. It does: no transport terminates in a division algebra (Proposition \claimref{transport.no-transport-terminates}). But the bookkeeping is finite in the following sense: Rule 1 fixes the mod-8 residue, so the taxonomy of the completion is that of the base and iterating changes nothing structural (Theorem \claimref{transport.rule-1-morita-trivial}), while Rule 2 moves the residue off the split classes and can therefore occur at most once in any transport history (Proposition \claimref{transport.fusion-occurs-most-once}). A transport history takes at most one step on the clock, and then remains fixed.
+\end{enumerate}
+
+
+**Remark  (A worked instance).** The procedure is run end to end, on the case that motivated the programme, in the series' gravitational paper \cite{ButlerT5}, whose chain of steps mirrors the table accompanying \claimref{transport.transport-algorithm} row for row. It is worth carrying the outline through the paper as a running example. In it: the failure is located at the centre of the Schwarzschild solution, where the light cones fold onto a single direction (Step 1); the degenerating direction is null and the algebra $\Cl(1,3)$ is simple, with $d \equiv 6 \bmod 8$, so the diagnosis is type N and type C is unavailable (Step 2, by Theorem \claimref{transport.existence-classification-type-c} and Example \claimref{note.transport.cl-1-3-physical-case-n}); Rule 1 gives $\Cl(1,3) \to \Cl(2,4)$, the conformal algebra of spacetime, forced (Step 3); the transported division is total there (Step 4); and the descent is lossy in exactly the way Step 5 states, which is where that paper's physical content begins. The example is worth keeping in view for one reason in particular: the answer to the forbidden division is not a number in spacetime, and the algorithm says so in advance rather than after the fact.
+
+**Remark  (What the procedure does not do).** Three boundaries, each a theorem rather than a caution.
+
+It never returns an inverse. For type N no element-level repair exists at all (Theorem \claimref{transport.no-go-level-elements}); what the ascent supplies is a total operation on points together with a canonical destination for the values the base cannot hold. A reader who wants $1/v$ will not find it here, and Theorem \claimref{transport.no-go-level-elements} is the statement that nobody will.
+
+It assumes the form is nondegenerate. Everything above is stated for nondegenerate $(\mathbb{V},Q)$. A degenerate form is not a harder case of the same problem but a different one: its radical generates a square-zero ideal rather than a resolvable obstruction (Theorem \claimref{transport.one-generator-minimal-minimal-completions-classified}(2) is the fibre-level instance), and completing it is the subject of the series' sheaf-theoretic paper \cite{ButlerT4}.
+
+It is a procedure for one algebra. When division fails not at a point of an algebra but along a locus of a family, the rank of the relevant bundle cannot jump, and the correct object is a pair of sheaves rather than a single ascent: the fibrewise version of Step 3, with the completion performed over the degenerate locus and only there, is \cite[Thm.\ 4.4, Cor.\ 4.5]{ButlerT4}.
+
+## Results cited, not shown
+
+**Fact (imported) 54 (The centre).** For $n \geq 1$, the centre of $\Cl(p,q)$ is $\R \cdot 1$ if $n$ is even, and $\R \cdot 1 \oplus \R \cdot \omega$ if $n$ is odd, where $\omega = e_1 e_2 \cdots e_n$ is the pseudoscalar.
+
+*Provenance:* Transport Lab claim primer.centre, version 2 (T00 Lem 9.4).
+
+**Fact (imported) 55 (Classification of the real Clifford algebras).** Let $d \equiv p - q \pmod 8$. Then $\Cl(p,q)$ is isomorphic, as a real associative algebra, to the entry of the table of the section ``The mod-8 classification'': $\Mat_k(\R)$ for $d \in \{0, 2\}$, $\Mat_k(\C)$ for $d \in \{3, 7\}$, $\Mat_k(\HH)$ for $d \in \{4, 6\}$, $\Mat_k(\R) \oplus \Mat_k(\R)$ for $d = 1$, and $\Mat_k(\HH) \oplus \Mat_k(\HH)$ for $d = 5$, with $k$ fixed in each case by $\dim_\R \Cl(p,q) = 2^n$. In particular $\Cl(p,q)$ is simple except when $p - q \equiv 1 \pmod 4$, where it is the direct sum of two isomorphic simple algebras.
+
+*Provenance:* Transport Lab claim primer.classification-real-clifford-algebras, version 3 (T00 Thm 9.3).
+
+**Fact (imported) 56 (The commutation rule).** If the element $x$ lies in the subalgebra generated by vectors orthogonal to a vector $v$, then
+\begin{equation}
+v\,x = \hat{x}\,v, \qquad x\,v = v\,\hat{x} .
+\end{equation}
+
+*Provenance:* Transport Lab claim primer.commutation-rule, version 2 (T00 Lem 9.1).
+
+**Fact (imported) 57 (The sign of $\omega^2$).** $\displaystyle \omega^2 = (-1)^{\tfrac{n(n-1)}{2}} (-1)^q = (-1)^{\tfrac{(p-q)(p-q-1)}{2}}$. In particular $\omega^2 = +1$ if and only if $p - q \equiv 0$ or $1 \pmod 4$.
+
+*Provenance:* Transport Lab claim primer.sign, version 2 (T00 Lem 9.5).
+
+**Fact (imported) 58 (Splitting along a hyperbolic plane).** Let $\mathbb{V}' = H_0 \perp U'$ be an orthogonal decomposition of a real quadratic space, with $H_0$ a hyperbolic plane spanned by a hyperbolic pair $(v, w_0)$ (a pair of null vectors with $v w_0 + w_0 v = 1$, Example \claimref{note.primer.hyperbolic-plane}); the form on $U'$ may be degenerate. Then:
+\begin{enumerate}
+\item $\{1, v, w_0, v w_0\}$ is a linear basis of $\Cl(H_0)$, and every element of $\Cl(\mathbb{V}')$ admits a \emph{unique} expansion
+\[
+\sigma \;=\; \alpha + v\beta + w_0\gamma + v w_0\,\delta, \qquad \alpha, \beta, \gamma, \delta \in \Cl(U').
+\]
+\item Left multiplication by $v$ is injective on $\Cl(U')$.
+\end{enumerate}
+
+*Provenance:* Transport Lab claim primer.splitting-along-hyperbolic-plane, version 2 (T00 Lem 9.6).
+
+**Fact (imported) 59 (The blade basis, degenerate forms included).** Let $e_1, \dots, e_n$ be any basis of $V$. The $2^{n}$ ordered products $e_I = e_{i_1} e_{i_2} \cdots e_{i_k}$, for $I = \{i_1 < \dots < i_k\} \subseteq \{1, \dots, n\}$ (with $e_{\emptyset} = 1$), form a basis of $\Cl(V, Q)$. Hence $\dim \Cl(V, Q) = 2^{n}$, the map $\iota : V \to \Cl(V, Q)$ is injective, and $\Cl(V, Q) \ne 0$. This holds for every real quadratic space, degenerate or not.
+
+*Provenance:* Transport Lab claim std-algebra.blade-basis, version 1.
+
+**Fact (imported) 60 (Complexification, and the odd-dimensional split).** \begin{enumerate}
+\item[(i)] For nondegenerate $V$ of dimension $n$, $\Cl(V, Q) \otimes_\R \C \cong \Cl_n(\C)$, the Clifford algebra of $\C^{n}$ with $Q(z) = \sum z_i^{2}$; it depends only on $n$. $\Cl_n(\C) \cong \Mat_{2^{n/2}}(\C)$ for $n$ even and $\Cl_n(\C) \cong \Mat_{2^{(n-1)/2}}(\C) \oplus \Mat_{2^{(n-1)/2}}(\C)$ for $n$ odd.
+\item[(ii)] Let $n$ be odd, $V$ nondegenerate, and $\omega = e_1 \cdots e_n$ for an orthonormal basis ($Q(e_i) = \pm 1$), so that $\omega^{2} = \pm 1$. Then $\omega$ is central and invertible, $\Cl^{-} = \Cl^{+}\omega$, and
+\begin{itemize}
+\item if $\omega^{2} = 1$, the central idempotents $P_{\pm} = \tfrac12(1 \pm \omega)$ split $\Cl(V) = \Cl(V) P_+ \oplus \Cl(V) P_-$, and $a \mapsto a P_{\pm}$ is an isomorphism $\Cl^{+} \to \Cl(V) P_{\pm}$, so $\Cl(V) \cong \Cl^{+} \oplus \Cl^{+}$;
+\item if $\omega^{2} = -1$, $a \otimes (x + \mathrm{i} y) \mapsto a(x + y\omega)$ is an isomorphism $\Cl^{+} \otimes_\R \C \to \Cl(V)$, with $\omega$ as the imaginary unit.
+\end{itemize}
+\end{enumerate}
+
+*Provenance:* Transport Lab claim std-algebra.complexification, version 1.
+
+**Fact (imported) 61 (The Clifford algebra exists and is unique).** For every real quadratic space $(V, Q)$ a Clifford algebra exists: $\Cl(V, Q) = T(V) / I_Q$, the tensor algebra modulo the two-sided ideal generated by $\{v \otimes v - Q(v)\,1 : v \in V\}$, with $\iota$ the inclusion of $V = T^{1}(V)$ followed by the quotient map. Any two Clifford algebras of $(V, Q)$ are isomorphic by a unique isomorphism compatible with the maps from $V$. Concretely, for any real symmetric Gram matrix $G$ on $\R^{n}$ (degenerate allowed), the operators $c(v) = v \wedge {} + \, \iota_{Gv}$ on the exterior algebra $\Lambda \R^{n}$ satisfy $c(v)^{2} = Q(v)$, and so give a representation $\Cl(V, Q) \to \operatorname{End} \Lambda V$. (That this representation is faithful is shown afterwards, in the blade basis result, by the triangularity of $x \mapsto x \cdot 1$.)
+
+*Provenance:* Transport Lab claim std-algebra.existence-uniqueness, version 1.
+
+**Fact (imported) 62 (The three involutions on each grade).** The grade involution is an automorphism, reversion and Clifford conjugation are anti-automorphisms; all three are involutions and they commute. On $\Cl^{k}$ they act by
+\begin{equation}
+\hat{x} = (-1)^{k} x, \qquad \tilde{x} = (-1)^{k(k-1)/2} x, \qquad \bar{x} = (-1)^{k(k+1)/2} x .
+\end{equation}
+\texttt{GA.grade\_inv} and \texttt{GA.reverse} implement the first two.
+
+*Provenance:* Transport Lab claim std-algebra.involution-properties, version 1.
+
+**Fact (imported) 63 (An algebra and its matrix amplification).** Let $A$ be a unital real algebra and $m \ge 1$, and let $E_{ij}$ be the matrix units of $\Mat_m(A)$. Then:
+\begin{enumerate}
+\item[(i)] the centre of $\Mat_m(A)$ is $\{z \cdot 1_m : z \in \Zc(A)\}$;
+\item[(ii)] the two-sided ideals of $\Mat_m(A)$ are exactly the $\Mat_m(I)$ with $I$ a two-sided ideal of $A$;
+\item[(iii)] $M \mapsto M^{m}$ (columns, acted on by matrix multiplication) and $N \mapsto E_{11} N$ are mutually inverse equivalences between left $A$-modules and left $\Mat_m(A)$-modules, so $A$ and $\Mat_m(A)$ are Morita equivalent.
+\end{enumerate}
+With \claimref{std-algebra.matrix-units}: an algebra with a full $m \times m$ system of matrix units has the centre, the ideals and the modules of its corner.
+
+*Provenance:* Transport Lab claim std-algebra.morita-amplification, version 1.
+
+**Fact (imported) 64 (Orthogonal vectors anticommute).** For $u, v \in V$: $u v = -v u$ if and only if $B(u, v) = 0$. In an orthogonal basis $e_1, \dots, e_n$, $e_i e_j = -e_j e_i$ for $i \ne j$ and $e_i^{2} = Q(e_i)$, and the product of two basis blades is $e_I e_J = \pm \bigl(\prod_{i \in I \cap J} Q(e_i)\bigr)\, e_{I \triangle J}$, the sign being $(-1)$ to the number of pairs $(i, j) \in I \times J$ with $i > j$.
+
+*Provenance:* Transport Lab claim std-algebra.orthogonal-anticommute, version 1.
+
+**Fact (imported) 65 (Reflection in a non-null vector).** Let $u \in V$ with $Q(u) \ne 0$. Then $V = \R u \oplus u^{\perp}$, and for $x \in V$
+\begin{equation}
+-\,u x u^{-1} = x - 2\,\frac{B(x, u)}{Q(u)}\, u .
+\end{equation}
+The map $s_u : x \mapsto -u x u^{-1}$ is an isometry of $(V, Q)$ fixing $u^{\perp}$ pointwise and sending $u$ to $-u$: the reflection in the hyperplane $u^{\perp}$. It fixes $\operatorname{rad} V$ pointwise, $s_u^{2} = 1$, $s_{\lambda u} = s_u$ for $\lambda \ne 0$, and its determinant is $-1$. If $Q(a) = Q(b) \ne 0$ and $Q(a - b) \ne 0$, then $s_{a-b}(a) = b$.
+
+*Provenance:* Transport Lab claim std-algebra.reflection, version 1.
+
+**Fact (imported) 66 (Orthogonal bases and the law of inertia).** Every real quadratic space $(V, Q)$ of dimension $n$ has an orthogonal basis $e_1, \dots, e_n$ with $Q(e_i) \in \{1, -1, 0\}$. The numbers $p$, $q$ and $r$ of basis vectors with $Q(e_i) = 1$, $-1$ and $0$ do not depend on the basis (Sylvester's law of inertia). Moreover $r = \dim \operatorname{rad} V$, and $p + q$ is the rank of any Gram matrix of $B$. Two real quadratic spaces are isometric if and only if they have the same $(p, q, r)$.
+
+*Provenance:* T. Y. Lam, Introduction to Quadratic Forms over Fields, AMS (2005)., the diagonalisation of forms and Sylvester's law of inertia (real case).
+
+**Fact (imported) 67 (The product of two vectors).** In $\Cl(V, Q)$, for all $u, v \in V$,
+\begin{equation}
+v^{2} = Q(v), \qquad u v + v u = 2 B(u, v).
+\end{equation}
+In particular $u v = B(u, v) + \tfrac12(u v - v u)$, the sum of a scalar and an antisymmetric part.
+
+*Provenance:* Transport Lab claim std-algebra.vector-squares, version 1.
+
+**Fact (imported) 68 (Hyperbolic pairs and the Witt decomposition).** Let $(V, Q)$ be a real quadratic space of signature $(p, q, r)$ and let $m = \min(p, q)$.
+\begin{enumerate}
+\item[(i)] If $P \subseteq V$ is a nondegenerate plane and $u \in P$ is a nonzero null vector, there is a unique $w \in P$ such that $(u, w)$ is a hyperbolic pair; $P$ is a hyperbolic plane.
+\item[(ii)] (Witt decomposition) There is an orthogonal decomposition
+\begin{equation}
+V = H_1 \perp \dots \perp H_m \perp A \perp \operatorname{rad} V
+\end{equation}
+with each $H_i$ a hyperbolic plane and $A$ anisotropic ($Q(a) \ne 0$ for $a \ne 0$, hence definite, of signature $(p - m, q - m, 0)$).
+\item[(iii)] If $(u_i, w_i)$ is a hyperbolic pair spanning $H_i$, then $N = \operatorname{span}(u_1, \dots, u_m) \oplus \operatorname{rad} V$ is a maximal totally null subspace, and every totally null subspace has dimension at most $m + r$.
+\end{enumerate}
+
+*Provenance:* Transport Lab claim std-algebra.witt-decomposition, version 1.
+
+**Fact (imported) 69 (The even subalgebra and the Z2 grading).** $\Cl(V, Q) = \Cl^{+} \oplus \Cl^{-}$ with $\Cl^{i} \Cl^{j} \subseteq \Cl^{i+j}$ (indices mod $2$). So $\Cl^{+}$ is a subalgebra, of dimension $2^{n-1}$ for $n \ge 1$, and $\Cl^{-}$ is a $\Cl^{+}$-bimodule. More finely, $\Cl^{j}\Cl^{k} \subseteq \bigoplus_{m} \Cl^{|j-k| + 2m}$, $0 \le m \le \min(j,k)$.
+
+*Provenance:* Transport Lab claim std-algebra.z2-grading, version 1.
+
+**Refutation 70 (The two one-generator ascents differ as algebras).** Refuted. The conjecture was that the two one-generator ascents of a type-C algebra, adjoining $\nu$ with $Q(\nu) = +1$ or with $Q(\nu) = -1$, are non-isomorphic algebras. The corrected statement is that the two ascents are always isomorphic as algebras; the sign of $Q(\nu)$ is a geometric bit that the algebra forgets.
+
+The transport results assemble into a six-step procedure (locate, diagnose, apply the rule, compute, descend, iterate) in which every step is licensed by a proved result and no case is left uncovered.

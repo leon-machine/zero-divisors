@@ -1,0 +1,18 @@
+functions:
+  check_phi_is_unipotent_isometry_fixing_cotangent:
+    kind: sampled
+    clauses: ["h_u(Phi_v x, Phi_v y) = h_(u+v)(x, y)", "Phi_v restricts to the identity on T*M and fixes k", "Phi_v is unipotent"]
+    omits: "six wall fibres (two Schwarzschild masses, four general-frame signatures), couplings (-2,3) and (2,3), v in a basis of ker k; the isomorphism of completed Clifford algebras preserving the grading and identity on the degeneration subalgebra is not tested"
+  check_intertwiners_compose:
+    kind: sampled
+    clauses: ["Phi^u_v Phi^(u+v)_w = Phi^u_(v+w)"]
+    omits: "a hand-worked case at m = 1 (u = e_0, v = e_2, w = e_3) and two sample pairs (v,w) per fibre for six fibres and two couplings; 'one coherent system' is the cocycle on these samples only"
+  check_ladder_partner_and_parity_images:
+    kind: sampled
+    clauses: ["Phi_v(k*) = k* + v-tilde/2, a different ladder partner of the same k", "Phi_v(sigma) = sigma + v-tilde k"]
+    omits: "only two fibres (Schwarzschild m = 2 and the (1,2) wall), one coupling (-2,3) and one v; the image of sigma is formed from the image of the generators (multiplicativity of the induced map is assumed, not constructed)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Isometry, unipotence, fixing T*M, the cocycle and the ladder-partner and parity images are verified exactly on six wall fibres (the last only on two) and two couplings; the induced Clifford-algebra isomorphism and its grading are not constructed.

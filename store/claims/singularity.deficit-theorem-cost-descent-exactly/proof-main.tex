@@ -1,0 +1,5 @@
+Idempotency and trace preservation are the orthogonality and completeness of the $\Pi_\varepsilon$. Self-adjointness: $\tr(E(a)\,b) = \sum_\varepsilon \tr(\Pi_\varepsilon a \Pi_\varepsilon b) = \sum_\varepsilon \tr(a\, \Pi_\varepsilon b \Pi_\varepsilon) = \tr(a\,E(b))$ by cyclicity of the trace. The key step: $E(\rho)$ commutes with every $\Pi_\varepsilon$, hence so does every function of it, hence $E\bigl(\log E(\rho)\bigr) = \log E(\rho)$; self-adjointness with $b = \log E(\rho)$ then gives
+\[
+\tr\bigl(\rho \log E(\rho)\bigr) \;=\; \tr\bigl(E(\rho) \log E(\rho)\bigr) ,
+\]
+whence $\rel{\rho}{E\rho} = \tr\rho\log\rho - \tr\rho\log E\rho = -S(\rho) + S(E\rho)$. Nonnegativity and the equality case are Klein's inequality, the single classical input of the theorem \cite[\S 11.3]{NielsenChuang}. The script verifies the structural clauses on a generic rational matrix and the key identity, in moment form $\tr\bigl(\rho\,(E\rho)^m\bigr) = \tr\bigl(E\rho\,(E\rho)^m\bigr)$, on the model's scrambled two-pair state, in exact arithmetic.

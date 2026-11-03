@@ -1,0 +1,30 @@
+functions:
+  check_q_contains_p_and_r:
+    kind: sampled
+    clauses: [(i)]
+    omits: One window k = -1, 0, 1 for (Q) => (P), (R); (G) => (P) is only checked as "the diagonal Gibbs state at weights (1,2,4) and (2,3,7) commutes with the grading", which holds for any diagonal state and does not use the geometric modular condition (G).
+  check_odd_resonance_criterion:
+    kind: sampled
+    clauses: [(ii)]
+    omits: The commutant dimension equals the even-commutant dimension exactly when no odd signed resonance exists, tested on 50 weight sets (3-subsets of -3..3 and 4-subsets of 1..6, all distinct weights) and five named sets; repeated weights and larger n are not covered; the existence of odd Killing-stationary states with Gibbs marginals is only exhibited in check_not_p_models.
+  check_not_p_models:
+    kind: exact
+    clauses: [(iii)]
+    omits: Nothing of (iii) is omitted for the two displayed states, which are exact in the free symbol u (eigenvector certificates of positivity on 0 < u < 1, stationarity, Gibbs marginals, oddness, omega(X_0 Z_1) = u/(1+u) and the stated 3-mode value); the K_geo-membership of (L_E) is trivial.
+  check_not_r_model:
+    kind: exact
+    clauses: [(iv)]
+    omits: ''
+  check_not_le_model:
+    kind: sampled
+    clauses: [(v)]
+    omits: The pairing and the quartic hop are verified exactly, but the quadratic-generator classification is shown only on the window j = 2 and by enumerating the weight-zero quadratic monomials of ad(K_geo); it is not computed as the set of quadratic generators leaving the (Q) state stationary, and the span statement is not proved for general j.
+  check_not_q_model:
+    kind: exact
+    clauses: [(vi)]
+    omits: ''
+  check_chains_needs_pairing_clause:
+    kind: exact
+    clauses: [(vii)]
+    omits: Positivity of the state "(Q) plus a pairing coherence" is not asserted (only its evenness and Gibbs marginals); the dependence of Corollary (2) on the pairing exclusion is interpretation.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Counterexample models of (iii)-(vii) are exact in the free symbol u; implication (i), the odd-resonance iff and the quadratic classification are sampled on finite windows.'}

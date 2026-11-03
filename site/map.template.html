@@ -1,0 +1,387 @@
+<meta charset="utf-8">
+<title>Transport Lab Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one-screen instrument. The map is a tower read bottom to top
+   (foundations at the base, results climb as they depend on more), with a
+   reading panel on the right that stacks underneath on phones. */
+:root {
+  --bg: #eef1f3; --panel: #f8fafb; --ink: #15202a; --muted: #5c6b78; --rule: #d3dae0;
+  --edge: #9aa8b4; --accent: #2d4fd6; --past: #c46a12; --future: #0c7f86;
+  --proved: #2d4fd6; --imported: #8a6bd1; --postulate: #c43d5a; --conj: #c49512;
+  --refuted: #7a7f86; --object: #4c8a5a; --good: #2f8a4c; --warn: #b7791f; --bad: #c43d3d;
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1319; --panel: #141b23; --ink: #dce5ec; --muted: #8b9aa8; --rule: #26313c;
+  --edge: #3d4a57; --accent: #7d97ff; --past: #f0a052; --future: #3fc5cc;
+  --proved: #7d97ff; --imported: #b39cf0; --postulate: #ff7d97; --conj: #e6c04f;
+  --refuted: #8a9099; --object: #79c28a; --good: #5cc17f; --warn: #e3a948; --bad: #ff7b7b;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1319; --panel: #141b23; --ink: #dce5ec; --muted: #8b9aa8; --rule: #26313c;
+  --edge: #3d4a57; --accent: #7d97ff; --past: #f0a052; --future: #3fc5cc;
+  --proved: #7d97ff; --imported: #b39cf0; --postulate: #ff7d97; --conj: #e6c04f;
+  --refuted: #8a9099; --object: #79c28a; --good: #5cc17f; --warn: #e3a948; --bad: #ff7b7b;
+  color-scheme: dark }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.5 var(--body); margin: 0;
+  display: flex; flex-direction: column; overflow: hidden; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--rule); background: var(--panel); }
+h1 { font: 400 26px/1 var(--display); margin: 0; letter-spacing: 0.01em; white-space: nowrap; }
+h1 em { color: var(--accent); }
+.stats { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-left: auto; }
+.lens { display: flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.lens button { font: 500 12px var(--body); border: 0; background: transparent; color: var(--muted);
+  padding: 6px 10px; cursor: pointer; }
+.lens button[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+.lens button:focus-visible, input:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+#search { font: 13px var(--body); padding: 6px 10px; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--bg); color: var(--ink); width: 210px; max-width: 100%; }
+main { flex: 1; display: flex; min-height: 0; }
+#mapwrap { flex: 1; position: relative; min-width: 0; }
+svg#map { width: 100%; height: 100%; display: block; cursor: grab; }
+svg#map:active { cursor: grabbing; }
+.legend { position: absolute; left: max(12px, env(safe-area-inset-left, 0px)); bottom: 12px;
+  background: var(--panel); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 6px 10px; font: 11.5px var(--body); color: var(--muted); max-width: calc(100% - 24px); }
+.legend summary { cursor: pointer; font: 600 11px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.lg { display: grid; grid-template-columns: auto auto; gap: 3px 14px; margin-top: 6px; }
+.lg .wide { grid-column: 1 / -1; white-space: normal; max-width: 44ch; }
+.legend span { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.hint { position: absolute; right: 12px; bottom: 12px; font: 11.5px var(--body); color: var(--muted); }
+aside { width: 400px; max-width: 42%; border-left: 1px solid var(--rule); background: var(--panel);
+  overflow-y: auto; padding-block: 18px; padding-left: 20px;
+  padding-right: max(20px, env(safe-area-inset-right, 0px)); min-width: 0; }
+aside h2 { font: 400 25px/1.15 var(--display); margin: 4px 0 10px; text-wrap: balance; }
+.eyebrow { font: 500 11px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 14px; }
+.chip { font: 500 11.5px var(--body); padding: 2px 8px; border-radius: 999px; border: 1px solid var(--rule);
+  color: var(--ink); background: var(--bg); }
+.chip b { font-weight: 600; }
+.sec { border-top: 1px solid var(--rule); padding-top: 10px; margin-top: 12px; }
+.sec h3 { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 6px; }
+.prose { max-width: 62ch; overflow-x: auto; }
+.prose p { margin: 0 0 8px; }
+.formal { font-size: 13px; background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; }
+.pending { color: var(--muted); font-style: italic; }
+ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+ul.links a { color: var(--accent); text-decoration: none; cursor: pointer; }
+ul.links a:hover { text-decoration: underline; }
+ul.links .k { font: 11px var(--mono); color: var(--muted); margin-right: 6px; }
+.note { font-size: 12.5px; color: var(--muted); }
+.flag { color: var(--warn); }
+.empty h2 { margin-top: 0; }
+.empty ol { padding-left: 18px; color: var(--muted); }
+.ref { color: var(--accent); cursor: pointer; border-bottom: 1px dotted var(--accent); }
+text.region { font: italic 400 19px var(--display); fill: var(--muted); }
+text.side { font: 600 12px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--ink); }
+text.depth { font: 10px var(--mono); fill: var(--muted); }
+text.lbl { font: 9.5px var(--body); fill: var(--ink); pointer-events: none; }
+@media (max-width: 760px) {
+  main { flex-direction: column; }
+  aside { width: auto; max-width: none; border-left: 0; border-top: 1px solid var(--rule); max-height: 46%;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  #search { width: 100%; }
+  .controls { margin-left: 0; width: 100%; }
+  .hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header>
+  <h1>Transport <em>Lab</em> map</h1>
+  <div class="stats" id="stats"></div>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search claims, e.g. Hawking" aria-label="Search claims">
+    <div class="lens" role="group" aria-label="Colour by">
+      <button id="lens-status" data-lens="status" aria-pressed="true">Status</button>
+      <button id="lens-ledger" data-lens="ledger" aria-pressed="false">Ledger</button>
+      <button id="lens-check" data-lens="check" aria-pressed="false">Evidence</button>
+      <button id="lens-review" data-lens="review" aria-pressed="false">Review</button>
+    </div>
+  </div>
+</header>
+<main>
+  <div id="mapwrap">
+    <svg id="map" role="img" aria-label="Dependency map of the Transport Papers pilot store"></svg>
+    <details class="legend" id="legendbox" open><summary>Key</summary><div id="legend" class="lg"></div></details>
+    <div class="hint">Scroll to zoom, drag to pan, click a claim for its light cone</div>
+  </div>
+  <aside id="panel" aria-live="polite"></aside>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+window.MathJax = { tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["\\[", "\\]"]],
+  macros: {} }, svg: { fontCache: "global" }, startup: { typeset: false } };
+</script>
+<script>
+const DATA = /*__DATA__*/null;
+(function () {
+  // MathJax macros from the store's notation registry
+  const mac = {};
+  for (const [k, v] of Object.entries(DATA.notation || {})) {
+    const n = (v.match(/#(\d)/g) || []).map(s => +s[1]);
+    mac[k] = n.length ? [v, Math.max(...n)] : v;
+  }
+  window.MathJax.tex.macros = mac;
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js"></script>
+<script>
+const REGIONS = DATA.regions;  // subjects, in map order
+const SIDES = DATA.sides;
+const nodes = DATA.nodes, byId = new Map(nodes.map(n => [n.id, n]));
+const LOGICAL = new Set(["uses", "assumes", "specialises"]);
+const edges = DATA.edges.filter(e => byId.has(e.src) && byId.has(e.dst));
+const prem = new Map(), dept = new Map();
+nodes.forEach(n => { prem.set(n.id, []); dept.set(n.id, []); });
+edges.forEach(e => { if (LOGICAL.has(e.kind)) { prem.get(e.src).push(e); dept.get(e.dst).push(e); } });
+
+// depth: longest premise chain below each node (foundations at 0)
+const depth = new Map();
+function d(id, stack = new Set()) {
+  if (depth.has(id)) return depth.get(id);
+  if (stack.has(id)) return 0;
+  stack.add(id);
+  let v = 0;
+  for (const e of prem.get(id)) v = Math.max(v, d(e.dst, stack) + 1);
+  stack.delete(id); depth.set(id, v); return v;
+}
+nodes.forEach(n => d(n.id));
+const maxDepth = Math.max(...depth.values());
+
+// place: one column per region in series order; each depth level is a band,
+// and a crowded cell wraps onto several short rows so the columns stay narrow
+const PER = 5, GAPX = 26, SUB = 26, BAND_GAP = 30, PADC = 64;
+const cell = new Map();
+nodes.forEach(n => { n.col = n.subject || "unplaced"; const k = n.col + "|" + depth.get(n.id); (cell.get(k) || cell.set(k, []).get(k)).push(n); });
+const regionWidth = {}, bandRows = [];
+for (let k = 0; k <= maxDepth; k++) bandRows[k] = 1;
+REGIONS.forEach(r => {
+  let w = 2;
+  for (let k = 0; k <= maxDepth; k++) {
+    const c = (cell.get(r.key + "|" + k) || []).length;
+    w = Math.max(w, Math.min(c, PER));
+    bandRows[k] = Math.max(bandRows[k], Math.ceil(c / PER));
+  }
+  regionWidth[r.key] = w;
+});
+const bandY = []; let yAcc = 0;
+for (let k = 0; k <= maxDepth; k++) { bandY[k] = yAcc; yAcc += bandRows[k] * SUB + BAND_GAP; }
+const totalH = yAcc;
+let x0 = 0; const regionX = {};
+REGIONS.forEach((r, i) => {
+  if (i && REGIONS[i - 1].side !== r.side) x0 += 36;   // a gutter between the three sides
+  regionX[r.key] = x0; x0 += regionWidth[r.key] * GAPX + PADC; });
+const totalW = x0;
+const levelY = k => totalH - bandY[k] - BAND_GAP / 2;
+for (const [k, list] of cell) {
+  const [rk, dep] = k.split("|");
+  list.sort((a, b) => (a.kind === "object") - (b.kind === "object") || a.id.localeCompare(b.id));
+  const w = regionWidth[rk] * GAPX;
+  list.forEach((n, i) => {
+    const row = Math.floor(i / PER), inRow = Math.min(PER, list.length - row * PER), col = i % PER;
+    const start = regionX[rk] + (w - (inRow - 1) * GAPX) / 2;
+    n.x = start + col * GAPX; n.y = levelY(+dep) - row * SUB - SUB / 2;
+  });
+}
+
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const LENSES = {
+  status: { field: n => n.kind === "object" ? "object" : n.status,
+    keys: [["proved", "--proved", "Proved"], ["imported", "--imported", "Imported"], ["postulate", "--postulate", "Postulate"],
+           ["conjectured", "--conj", "Conjectured"], ["refuted", "--refuted", "Refuted"], ["object", "--object", "Definition"]] },
+  ledger: { note: "Computed from the extracted edges. Most applications of the transport algorithm cite T1 Section 8.1, which is not yet an entity, so they read as absent here.",
+    field: n => n.ledger,
+    keys: [["essential", "--postulate", "Transport-essential"], ["convenient", "--conj", "Transport-convenient"], ["absent", "--edge", "Transport-absent"]] },
+  check: { field: n => n.check,
+    keys: [["pass-legacy", "--good", "Verify-script checks pass"], ["pass", "--good", "Own check passes"], ["proof-only", "--conj", "Proof text only"],
+           ["fail", "--bad", "Check fails"], ["none", "--edge", "No evidence needed or none"]] },
+  review: { field: n => n.review || "none",
+    keys: [["typed", "--accent", "Typed (edges reviewed, levels written)"], ["draft", "--edge", "Draft from extraction"], ["reviewed", "--good", "Reviewed"]] },
+};
+let lens = "status", selected = null;
+
+const svg = d3.select("#map");
+const root = svg.append("g");
+const gRegions = root.append("g"), gEdges = root.append("g"), gNodes = root.append("g"), gLabels = root.append("g");
+REGIONS.forEach(r => {
+  gRegions.append("rect").attr("x", regionX[r.key] - 20).attr("y", -10).attr("width", regionWidth[r.key] * GAPX + 40)
+    .attr("height", totalH + 20).attr("rx", 10).attr("fill", "var(--panel)").attr("stroke", "var(--rule)");
+  const words = r.title.split(" "), lines = [];
+  let cur = "";
+  for (const w of words) { if ((cur + " " + w).trim().length > 15 && cur) { lines.push(cur); cur = w; } else cur = (cur + " " + w).trim(); }
+  if (cur) lines.push(cur);
+  const t = gRegions.append("text").attr("class", "region").attr("x", regionX[r.key] - 10).attr("y", totalH + 34);
+  lines.forEach((l, i) => t.append("tspan").attr("x", regionX[r.key] - 10).attr("dy", i ? 20 : 0).text(l));
+});
+SIDES.forEach(sd => {
+  const cols = REGIONS.filter(r => r.side === sd.key);
+  if (!cols.length) return;
+  const a = regionX[cols[0].key] - 20, last = cols[cols.length - 1], b = regionX[last.key] + regionWidth[last.key] * GAPX + 20;
+  gRegions.append("line").attr("x1", a).attr("x2", b).attr("y1", -28).attr("y2", -28).attr("stroke", "var(--muted)").attr("stroke-width", 1);
+  gRegions.append("text").attr("class", "side").attr("x", a).attr("y", -38).text(sd.title);
+});
+for (let k = 0; k <= maxDepth; k += 2) gRegions.append("text").attr("class", "depth").attr("x", -66).attr("y", levelY(k) - SUB / 2 + 4).text("depth " + k);
+
+const edgeSel = gEdges.selectAll("path").data(edges.filter(e => LOGICAL.has(e.kind))).join("path")
+  .attr("fill", "none").attr("stroke", "var(--edge)").attr("stroke-width", 0.8).attr("opacity", 0.35)
+  .attr("stroke-dasharray", e => e.kind === "assumes" ? "3 3" : null)
+  .attr("d", e => { const a = byId.get(e.dst), b = byId.get(e.src); const my = (a.y + b.y) / 2;
+    return `M${a.x},${a.y} C${a.x},${my} ${b.x},${my} ${b.x},${b.y}`; });
+
+const shape = n => n.status === "postulate" ? d3.symbolDiamond : n.kind === "object" ? d3.symbolSquare : d3.symbolCircle;
+const nodeSel = gNodes.selectAll("path").data(nodes).join("path")
+  .attr("transform", n => `translate(${n.x},${n.y})`)
+  .attr("d", n => d3.symbol(shape(n), n.status === "postulate" ? 130 : 80)())
+  .attr("stroke-width", n => n.status === "imported" ? 1.6 : 1.2)
+  .style("cursor", "pointer")
+  .on("click", (ev, n) => { ev.stopPropagation(); select(n.id); })
+  .on("mouseenter", (ev, n) => hover(n, true)).on("mouseleave", (ev, n) => hover(n, false));
+nodeSel.append("title").text(n => `${n.title}\n${n.status}`);
+const labelSel = gLabels.selectAll("text").data(nodes).join("text").attr("class", "lbl")
+  .attr("x", n => n.x + 8).attr("y", n => n.y + 3).text(n => n.title.length > 34 ? n.title.slice(0, 32) + "…" : n.title)
+  .attr("opacity", 0);
+
+function colour(n) {
+  const L = LENSES[lens], v = L.field(n), k = L.keys.find(x => x[0] === v);
+  return css(k ? k[1] : "--edge");
+}
+function paint() {
+  const past = new Set(), fut = new Set();
+  if (selected) {
+    const walk = (id, map, set, key) => { for (const e of map.get(id)) { const t = e[key]; if (!set.has(t)) { set.add(t); walk(t, map, set, key); } } };
+    walk(selected, prem, past, "dst"); walk(selected, dept, fut, "src");
+  }
+  nodeSel.attr("fill", n => n.status === "imported" ? css("--panel") : colour(n))
+    .attr("stroke", n => n.id === selected ? css("--ink") : colour(n))
+    .attr("stroke-width", n => n.id === selected ? 3 : n.status === "imported" ? 1.6 : 1.2)
+    .attr("opacity", n => !selected || n.id === selected || past.has(n.id) || fut.has(n.id) ? 1 : 0.14);
+  edgeSel.attr("stroke", e => !selected ? css("--edge") :
+      (past.has(e.dst) || e.src === selected) && (past.has(e.src) || e.src === selected) ? css("--past") :
+      (fut.has(e.src) || e.dst === selected) && (fut.has(e.dst) || e.dst === selected) ? css("--future") : css("--edge"))
+    .attr("opacity", e => !selected ? 0.35 :
+      ((past.has(e.dst) || e.src === selected) && (past.has(e.src) || e.src === selected)) ||
+      ((fut.has(e.src) || e.dst === selected) && (fut.has(e.dst) || e.dst === selected)) ? 0.95 : 0.05)
+    .attr("stroke-width", e => selected && (e.src === selected || e.dst === selected) ? 1.8 : 0.9);
+  const L = LENSES[lens];
+  const counts = {}; nodes.forEach(n => { const v = L.field(n); counts[v] = (counts[v] || 0) + 1; });
+  document.getElementById("legend").innerHTML = L.keys.filter(k => counts[k[0]]).map(k =>
+    `<span><i style="background:var(${k[1]})"></i>${k[2]} <b>${counts[k[0]]}</b></span>`).join("") +
+    (selected ? `<span><i style="background:var(--past)"></i>Depends on (past cone) <b>${past.size}</b></span>` +
+      `<span><i style="background:var(--future)"></i>Rests on it (future cone) <b>${fut.size}</b></span>` : "") +
+    (L.note ? `<span class="wide">${L.note}</span>` : "");
+  updateLabels();
+}
+let zoomK = 1;
+function updateLabels() {
+  labelSel.attr("opacity", n => (zoomK > 1.7 && (!selected || n.id === selected || isLit(n.id))) || n.id === selected ? 1 : 0);
+}
+let litCache = null;
+function isLit(id) { return litCache ? litCache.has(id) : true; }
+function hover(n, on) { labelSel.filter(m => m.id === n.id).attr("opacity", on ? 1 : (zoomK > 1.7 || n.id === selected ? 1 : 0)); }
+
+const zoom = d3.zoom().scaleExtent([0.25, 6]).on("zoom", ev => { root.attr("transform", ev.transform); zoomK = ev.transform.k; updateLabels(); });
+svg.call(zoom).on("click", () => select(null));
+function fit() {
+  const el = document.getElementById("map"), w = el.clientWidth, h = el.clientHeight;
+  const k = Math.min(w / (totalW + 110), h / (totalH + 140)) * 0.97;
+  svg.call(zoom.transform, d3.zoomIdentity.translate((w - k * (totalW - 70)) / 2, (h - k * (totalH + 50)) / 2 + 18 * k).scale(k));
+}
+
+// ---- reading panel -----------------------------------------------------------
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function tex(s) {
+  if (!s || s.trim() === "pending") return `<p class="pending">Not written yet.</p>`;
+  let t = esc(s)
+    .replace(/\\claimref\{([^}]+)\}/g, (m, id) => `<span class="ref" data-id="${id}">${esc((byId.get(id) || { title: id }).title)}</span>`)
+    .replace(/\\(?:emph|textit)\{([^{}]*)\}/g, "<em>$1</em>").replace(/\\textbf\{([^{}]*)\}/g, "<b>$1</b>")
+    .replace(/\\cite[pt]?(\[[^\]]*\])?\{([^}]+)\}/g, (m, l, k) => `<span class="note">[${k}${l ? ", " + l.slice(1, -1) : ""}]</span>`)
+    .replace(/\\(?:eqref|ref)\{([^}]+)\}/g, '<span class="note">($1)</span>')
+    .replace(/\\begin\{(enumerate|itemize)\}|\\end\{(enumerate|itemize)\}/g, "").replace(/\\item\s*/g, "<br>• ")
+    .replace(/~/g, " ");
+  return t.split(/\n\s*\n/).map(p => `<p>${p}</p>`).join("");
+}
+function chip(label, value) { return `<span class="chip">${label} <b>${esc(value)}</b></span>`; }
+function linkList(list, key) {
+  if (!list.length) return `<p class="note">None.</p>`;
+  return `<ul class="links">${list.map(e => { const n = byId.get(e[key]); return `<li><span class="k">${e.kind}</span><a data-id="${n.id}">${esc(n.title)}</a></li>`; }).join("")}</ul>`;
+}
+function select(id) {
+  selected = id;
+  litCache = null;
+  if (id) {
+    litCache = new Set([id]);
+    const walk = (x, map, key) => { for (const e of map.get(x)) if (!litCache.has(e[key])) { litCache.add(e[key]); walk(e[key], map, key); } };
+    walk(id, prem, "dst"); walk(id, dept, "src");
+  }
+  paint();
+  const p = document.getElementById("panel");
+  if (!id) { p.innerHTML = emptyPanel(); return; }
+  const n = byId.get(id), loc = n.locators || {};
+  const imp = (n.imported_from || []).map(i => esc(i.citation) + (i.locator ? ", " + esc(i.locator) : "")).join("<br>");
+  const subj = (REGIONS.find(r => r.key === n.subject) || { title: "Unplaced" }).title;
+  p.innerHTML = `<div class="eyebrow">${esc(subj)} · source ${esc(loc.paper || "")} ${esc(loc.number || "")}</div>
+    <h2>${esc(n.title)}</h2>
+    <div class="chips">${chip("status", n.status)}${n.effective && n.effective !== n.status ? chip("effective", n.effective) : ""}
+      ${n.kind === "claim" ? chip("ledger", n.ledger) : ""}${chip("evidence", n.check)}${chip("review", n.review || "none")}</div>
+    ${n.conditional_on && n.conditional_on.length ? `<p class="note">Holds given ${n.conditional_on.map(p => `<span class="ref" data-id="${p}">${esc(byId.get(p).title)}</span>`).join(", ")}.</p>` : ""}
+    <div class="sec prose"><h3>In one line</h3><p>${esc(n.one_liner)}</p></div>
+    <div class="sec prose"><h3>Plain words</h3>${tex(n.lay)}</div>
+    <div class="sec prose"><h3>Technical</h3>${tex(n.technical)}</div>
+    <div class="sec prose"><h3>Formal statement</h3><div class="formal">${tex(n.formal)}</div></div>
+    ${imp ? `<div class="sec prose"><h3>Imported from</h3><p class="note">${imp}</p></div>` : ""}
+    <div class="sec"><h3>Rests on (${prem.get(id).length})</h3>${linkList(prem.get(id), "dst")}</div>
+    <div class="sec"><h3>Used by (${dept.get(id).length})</h3>${linkList(dept.get(id), "src")}</div>
+    ${n.typing_note ? `<div class="sec"><h3>Typing note</h3><p class="note">${esc(n.typing_note)}</p></div>` : ""}
+    ${n.flags && n.flags.length ? `<div class="sec"><h3>Extraction flags</h3><p class="note flag">${n.flags.map(esc).join("<br>")}</p></div>` : ""}
+    <div class="sec"><p class="note" style="font-family:var(--mono)">${esc(n.id)} @${n.version}</p></div>`;
+  p.scrollTop = 0;
+  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([p]).catch(() => {});
+}
+function emptyPanel() {
+  const s = DATA.summary;
+  return `<div class="empty"><div class="eyebrow">Pilot store · drawn from T1 to T7</div>
+    <h2>Every claim, laid out as a tower</h2>
+    <p class="prose">Each mark is one result, placed in the column of its subject and raised by how many results it rests on. Foundations sit at the base. Geometry and gravity are on the left, the algebra in the middle, the quantum side on the right.</p>
+    <ol><li>Click any claim to light its past cone (what it depends on) in amber and its future cone (what rests on it) in teal.</li>
+    <li>Switch the colouring to see the ledger, the evidence behind each claim, or which claims have been typed.</li>
+    <li>Search by name, then follow the links in this panel to walk the chain.</li></ol>
+    <div class="sec"><h3>The store</h3><p class="note" style="font-family:var(--mono)">${s.line}</p></div>
+    <div class="sec"><h3>Try</h3><ul class="links">${DATA.featured.map(id => `<li><a data-id="${id}">${esc(byId.get(id).title)}</a></li>`).join("")}</ul></div></div>`;
+}
+document.getElementById("panel").addEventListener("click", ev => {
+  const t = ev.target.closest("[data-id]"); if (t && byId.has(t.dataset.id)) { select(t.dataset.id); centre(t.dataset.id); }
+});
+function centre(id) {
+  const n = byId.get(id), el = document.getElementById("map"), k = Math.max(zoomK, 1.8);
+  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(el.clientWidth / 2 - k * n.x, el.clientHeight / 2 - k * n.y).scale(k));
+}
+document.querySelectorAll(".lens button").forEach(b => b.addEventListener("click", () => {
+  lens = b.dataset.lens; document.querySelectorAll(".lens button").forEach(x => x.setAttribute("aria-pressed", x === b)); paint();
+  try { localStorage.setItem("tl-lens", lens); } catch (e) {}
+}));
+const search = document.getElementById("search");
+search.addEventListener("keydown", ev => {
+  if (ev.key !== "Enter") return;
+  const q = search.value.toLowerCase().trim(); if (!q) return;
+  const hit = nodes.find(n => n.title.toLowerCase().includes(q)) || nodes.find(n => (n.one_liner || "").toLowerCase().includes(q) || n.id.includes(q));
+  if (hit) { select(hit.id); centre(hit.id); }
+});
+document.getElementById("stats").textContent = DATA.summary.short;
+try { const l = localStorage.getItem("tl-lens"); if (l && LENSES[l]) document.querySelector(`[data-lens="${l}"]`).click(); } catch (e) {}
+window.addEventListener("resize", fit);
+if (window.innerWidth < 760) document.getElementById("legendbox").open = false;
+fit(); select(null);
+</script>

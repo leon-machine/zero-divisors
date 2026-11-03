@@ -1,0 +1,14 @@
+functions:
+  check_circle_and_era_end:
+    kind: sampled
+    clauses: [(i)]
+    omits: Circle identities are exact in GA.RF, but the bound min|p_i| >= 2/7 on 1 <= u <= 2 and the monotonicity are checked at five sample u; the exact values at u = 2 and u = 1 are computed; that every era of the BKL map ends on this arc is the companion result and is not tested.
+  check_generated_algebra:
+    kind: sampled
+    clauses: [(iii)]
+    omits: 'Only the algebraic generation step: the Lie algebra of the weighted boosts -p_i B_i has dimension 6 at four sample u in [1, 2], with R = identity; the accumulation-value and limit statement, rotations R and all u are not tested.'
+  check_bound_epoch_independent:
+    kind: partial
+    clauses: [(ii)]
+    omits: Tests only the Cauchy-Schwarz ingredient sum|u_i p_i| <= 1 at sample units and epochs; the transport bound, E_tau, the Gronwall estimate and the choice of R are not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Checks reproduce the circle identities, the 2/7 value and the so(1,3) generation; the docstring says the arc bound is checked exactly but it is sampled, and the (ii) check covers only its norm ingredient.'}

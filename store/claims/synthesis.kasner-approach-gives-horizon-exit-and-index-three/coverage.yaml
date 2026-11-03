@@ -1,0 +1,22 @@
+functions:
+  check_exponent_sets_have_unit_sum:
+    kind: sampled
+    clauses: ["(i) sum p = 1 and every exponent below 1 on the BKL circle at u = 1, 2, 3/2, 7/3, the epoch maps, the 5D isotropic vacuum point, the Schwarzschild interior and the scalar-shortened point", "(i) residue squares to sum p^2"]
+    omits: "the whole circle is the parametrisation's identity, checked at sample u"
+  check_bessel_order_zero:
+    kind: sampled
+    clauses: ["(ii) the tau operator equals k^2 tau^(-2p) times the order-0 Bessel operator on s^n (ln s)^m for every listed exponent", "(ii) control: order 1/2 fails", "(ii) control: friction sum p other than 1 fails"]
+    omits: "the identity is the chain rule; it is verified on terms s^n (ln s)^m with n in {0,1,2,3,5/2}, m <= 2, at k = 1 - p"
+  check_pump_linear_in_conformal_time:
+    kind: complete
+    clauses: ["(ii) z^2 = tau^(1 - p) = (1 - p) eta for every axis of every listed set", "(ii) control: de Sitter with b ~ a^beta has index -beta"]
+  check_normalisation_k_independent:
+    kind: complete
+    clauses: ["(iii) J0 solves Bessel 0; W[J0, Y0] = 2/(pi s) on series to order s^21", "(iii) |N|^2 = pi/(4(1 - p)) free of k"]
+    omits: "the series forms of J0 and Y0 are cited; the Wronskian is computed from them"
+  check_index_between_two_and_three:
+    kind: sampled
+    clauses: ["(iii) leading-form index above 3 + 2/L, sampled minimum and maximum pinned, above 2.57 for L <= -4.7 at both pi brackets", "(iv) blue by 2.0351", "(iv) the log factor is unbounded as k -> 0, so not of finite range"]
+    omits: "the bound [2, 3] for every s uses Watson's monotonicity, cited; the log bounds ln 2 > 0.693, ln 1.5625 > 0.446, gamma < 0.578 are stated in the proof"
+untouched_premises:
+  synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue: "proof (i): which matter points of the disk are reached, and that the sources treated keep sum p = 1, is cited; the check verifies sum p = 1 at the listed disk points directly"

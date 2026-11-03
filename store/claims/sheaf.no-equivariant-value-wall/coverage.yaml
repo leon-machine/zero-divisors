@@ -1,0 +1,22 @@
+functions:
+  check_theta_is_automorphism_fixing_k:
+    kind: sampled
+    clauses: ["theta_lambda is an h_u-isometry restricting to g_lambda on T*M and fixing k"]
+    omits: "six wall fibres (two Schwarzschild masses and four general-frame signatures), couplings (-2,3) and (2,3), a basis of ker k plus one combination; that theta is an automorphism of the completed Clifford algebra preserving grading and degeneration subalgebra is not tested"
+  check_dual_action_translates_candidates:
+    kind: sampled
+    clauses: ["contragredient action is id - lambda (x) k", "it translates every candidate by -lambda", "free action of (ker k, +)"]
+    omits: "two sample candidates per fibre; additivity checked for the first two lambda only; the consequence that no natural assignment of a candidate value exists is an argument, not computed"
+  check_no_theta_fixed_ladder_partner:
+    kind: sampled
+    clauses: ["h_u(k, x) = 0 for every x in Fix(theta_lambda), lambda != 0", "a ladder partner has h_u(k,x) = 1/2"]
+    omits: "same six fibres and two couplings, lambda in a basis of ker k plus one combination; the fixed set is computed as a kernel and matched to the proof's description"
+  check_partners_attached_injectively:
+    kind: sampled
+    clauses: ["Phi_v(k*) = k* + v-tilde/2 is a ladder partner of k", "injective in v"]
+    omits: "five sample v per fibre with one coupling (-2,3); injectivity shown by recovering v from v-tilde (exact linear algebra) and distinctness of the sample partners"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Isometry, k fixed, restriction to g_lambda, the contragredient translation, absence of theta-fixed ladder partners and injective partner attachment are verified exactly on six wall fibres and two couplings; the Clifford-algebra automorphism and the 'no natural assignment' deduction are not computed.

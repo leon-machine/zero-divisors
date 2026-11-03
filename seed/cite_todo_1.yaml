@@ -1,0 +1,173 @@
+dark-energy.cosmological-constant-does-not-change-residue:
+  main:
+  - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching
+dark-energy.frozen-point-datum-kasner-wall:
+  main:
+  - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching
+dark-energy.gravity-pre-metric-forces-degenerate-exactly:
+  main:
+  - dark-energy.frozen-point-makes-stelle-west-vector
+dark-energy.sheaf-papers-wall-soldering-variables:
+  main:
+  - sheaf.localised-transport
+dark-energy.vacuum-region-registration-condition:
+  main:
+  - dark-energy.frozen-point-makes-stelle-west-vector
+dark-energy.wall-counterterm:
+  main:
+  - dark-energy.frozen-point-makes-stelle-west-vector
+dark-energy.walls-free-sector:
+  main:
+  - dark-energy.frozen-point-makes-stelle-west-vector
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west
+interior.complex-factorisation-location-ring:
+  main:
+  - interior.imported-kerr-curvature
+interior.gauge-trajectory-unipotent-ray:
+  main:
+  - singularity.non-removability-invariant-argument
+  - singularity.type-n-only-type-n
+interior.interior-connection-exactly:
+  main:
+  - interior.exact-parallelism-convergence-rate
+standard-model.bidoublet-complex:
+  main:
+  - standard-model.one-vev-vector-relations-breaking-pattern
+standard-model.chain:
+  main:
+  - standard-model.imported-pati-salam-representation-theory-survival
+  - standard-model.imported-proton-condition
+  - standard-model.left-right-parity-what-breaks-it
+  - standard-model.majorana-element
+  - standard-model.matching-traces
+  - standard-model.one-threshold-exact-criterion
+  - standard-model.spectrum-run
+standard-model.complete-multiplets-shift-all-three-coefficients:
+  main:
+  - standard-model.imported-one-loop-running-trace-ratio
+standard-model.equal-weight-module:
+  main:
+  - families.doublet-direction-module-georgi-jarlskog-clebsch
+  - standard-model.majorana-element
+standard-model.fits-record-level:
+  main:
+  - standard-model.imported-clebsch-structure-seesaw
+  - standard-model.what-angle-asks-neutrino-sector
+standard-model.four-dimensions-forces-converse:
+  main:
+  - standard-model.pair-count-dimension
+standard-model.four-supersymmetric-splits:
+  main:
+  - standard-model.spectrum-run
+standard-model.frozen-point-pair-mixing:
+  main:
+  - standard-model.module-factorises-even-ground-elements-act
+standard-model.gauge-algebra-minimal-massive-composite:
+  main:
+  - mass.mass-symplectic-area-two-twistor-formula
+standard-model.generation-ten-under-pati-salam:
+  main:
+  - standard-model.automorphisms-preserve-slot-pair-split-are
+standard-model.global-form-quotient-determined:
+  main:
+  - standard-model.gauge-algebra-minimal-massive-composite
+standard-model.grade-three-georgi-jarlskog-direction:
+  main:
+  - families.doublet-direction-module-georgi-jarlskog-clebsch
+  - standard-model.imported-spinor-bilinears
+standard-model.lifted-components-read-vevs:
+  main:
+  - standard-model.transported-frozen-point
+  - standard-model.yukawa-pattern-two-rung-module
+standard-model.majorana-element:
+  main:
+  - standard-model.invariant-pairing-five-modes
+  - standard-model.under-s-composites-state-space-spinor
+standard-model.mass-bracket-charged-singlet:
+  main:
+  - mass.mass-symplectic-area-two-twistor-formula
+standard-model.module-factorises-even-ground-elements-act:
+  main:
+  - standard-model.imported-cauchy-decomposition-exterior-power
+standard-model.neutrino-dirac-matrix-charged-fermions:
+  main:
+  - standard-model.imported-clebsch-structure-seesaw
+standard-model.no-go-frozen-point-lifts-do:
+  main:
+  - families.doublet-direction-module-georgi-jarlskog-clebsch
+standard-model.proton-condition-candidates:
+  main:
+  - standard-model.four-supersymmetric-splits
+  - standard-model.supersymmetric-row-two-loops
+standard-model.proton-decay-only-through-slot-pair:
+  main:
+  - standard-model.automorphisms-preserve-slot-pair-split-are
+standard-model.space-symmetric-doublet-mass-forms-two:
+  main:
+  - families.doublet-direction-module-georgi-jarlskog-clebsch
+standard-model.spectrum-run:
+  main:
+  - standard-model.imported-one-loop-running-trace-ratio
+  - standard-model.weak-angle-over-derived-generation
+standard-model.table-exact:
+  main:
+  - standard-model.proton-condition-candidates
+standard-model.transported-frozen-point:
+  main:
+  - standard-model.imported-frozen-point-grip-thirteenth-refutation
+standard-model.transported-frozen-point-doublet-datum-not:
+  main:
+  - standard-model.grip-mass-two-rung-module
+  - standard-model.imported-tower-commuting-copies-fock-module
+standard-model.two-threshold-criterion:
+  main:
+  - standard-model.complete-multiplets-shift-all-three-coefficients
+standard-model.under-s-bracket-direction-charged-not:
+  main:
+  - standard-model.mass-bracket-charged-singlet
+standard-model.under-s-mirror-inherits-desert:
+  main:
+  - standard-model.imported-one-loop-running-trace-ratio
+  - standard-model.weak-angle-over-derived-generation
+standard-model.under-s-state-space-complete-multiplets:
+  main:
+  - standard-model.under-s-composites-state-space-spinor
+standard-model.weak-angle-over-derived-generation:
+  main:
+  - standard-model.hypercharge-global-form-pair-counting-consistency
+standard-model.what-derived-what-not:
+  main:
+  - standard-model.frozen-point-first-rung-component
+  - standard-model.ten-transported-ambient-space-doublets-are
+  - standard-model.yukawa-pattern-two-rung-module
+standard-model.what-direction-made:
+  main:
+  - families.doublet-direction-module-georgi-jarlskog-clebsch
+standard-model.yukawa-pattern-two-rung-module:
+  main:
+  - standard-model.invariant-pairing-five-modes
+state-selection.exact-equilibrium-over-determines-ledger:
+  main:
+  - singularity.deficit-theorem-cost-descent-exactly
+state-selection.rate-discharge-hypothesis-iii:
+  main:
+  - state-selection.universality-temperature
+transport.classification-idempotent-orbits:
+  main:
+  - transport.classification-real-clifford-algebras
+transport.door-one-way:
+  main:
+  - transport.classification-real-clifford-algebras
+  - transport.rule-1-morita-trivial
+transport.embedding-independent-minimality-fusion:
+  main:
+  - transport.classification-real-clifford-algebras
+transport.existence-locus-type-p:
+  main:
+  - transport.classification-real-clifford-algebras
+transport.fusion-occurs-most-once:
+  main:
+  - transport.classification-real-clifford-algebras
+transport.which-residues-obstruct-which-way:
+  main:
+  - transport.rule-1-morita-trivial

@@ -1,0 +1,10 @@
+functions:
+  check_trichotomy_and_independence:
+    kind: sampled
+    clauses: ["every conserved q is exactly one of (D), (P), (I)", "(K) holds with each of (D), (P), (I) and is excluded by none; (D) implies (K)", "(P) and (I) are compatible with (K) and its negation", "a q that is neither (K), (D) nor (I) is (P)"]
+    omits: "universal clauses are checked on the family of finite models with two parameter values, two solutions each, three-valued q (81 functions) and all 15 kinematic partitions, with counts 3, 6, 72; this is exhaustive for that family only, while the compatibility and existence clauses are exact witnesses"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "A logical statement over all theories tested exhaustively on a small finite family; the statement's claims, including the compatibility table, are reproduced there."

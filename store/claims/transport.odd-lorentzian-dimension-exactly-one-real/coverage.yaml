@@ -1,0 +1,20 @@
+functions:
+  check_exactly_one_real_form_is_type_c:
+    kind: sampled
+    clauses: ["Cl(1,n-1) type C iff n = 1 mod 4", "Cl(n-1,1) type C iff n = 3 mod 4", "the other real form has complex type"]
+    omits: "odd n in {3,5,7,9,11} only; the mod-4 law for all odd n is read off a table, not proved"
+  check_agrees_with_commuting_square_rule:
+    kind: sampled
+    clauses: ["Cl(1,n-1) type C iff n = 1 mod 4", "Cl(n-1,1) type C iff n = 3 mod 4"]
+    omits: "same n <= 11; checks the table against the commuting-square rule on the even base algebras, so it is a consistency test, not an independent route for the statement's iff beyond n <= 11"
+  check_common_complexification_is_split:
+    kind: sampled
+    clauses: ["the two real forms have the same complexification, split for every odd n", "omega' central with square +1, (1 +- omega')/2 central idempotents"]
+    omits: "n <= 11; independence of the 2^n blade products (that the complexification is the whole of Cl(n,0) tensor C) is tested only for n <= 5"
+untouched_premises:
+  std-algebra.complexification: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks cover odd n up to 11 exactly in each case; statement is for all odd n, so every function is sampled in n."

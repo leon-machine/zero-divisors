@@ -1,0 +1,32 @@
+functions:
+  check_linear_curvature_kernels:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "kernels of the first-order curvature, Weyl and scalar maps computed exactly at e0, e3, e0 + e1 (the representatives, up to scale, of the Lorentz orbits of nonzero momenta) and three further rational momenta; the extension to every nonzero p is the covariance and scaling argument of the proof; the identification of the Weyl-flat class with the twistor-flat class is the cited theorem"
+  check_stabiliser_commutant_on_gauge_quotient:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "commutant computed for five rational elements of the stabiliser of e0 and five of e3; complete reducibility of the stabiliser and the passage to every non-null p are argued in the proof; null p is not treated in (ii)"
+  check_null_momentum_has_further_classes:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "one null momentum and four rational elements of its stabiliser; exhibits further invariant classes (gauge plus the helicity-two directions, with and without the identity) so the count of four fails there; does not enumerate all invariant classes at null momentum"
+  check_conserved_source_pairing_channels:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "pairing ranks and annihilators at e0 and three rational momenta (timelike, spacelike, null); the scalar-flat annihilator only at non-null momenta"
+  check_null_flux_is_the_trace_free_channel:
+    kind: complete
+    clauses: ["(iv)"]
+    omits: "twelve rational null directions already give the full rank 9 on symmetric maps, so the kernel statement holds for all null directions; independence of the identity from the conserved sources at three momenta"
+  check_minimal_coupling_responses:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "one rational field strength and one rational scalar gradient, value and mass; derivatives from exact interpolation of the nonlinear densities at six rational t for all sixteen elementary maps; the general chain-rule statement and the massless Dirac case are in the proof text (the latter cited, not checked)"
+  check_point_source_coupling_is_universal:
+    kind: sampled
+    clauses: ["(vi)"]
+    omits: "one momentum-conserving configuration of five rational momenta spanning V; one null and one timelike source for the coupling to the conformal line; universality for configurations of six or more momenta (Weinberg's step over all configurations) is not computed"
+untouched_premises:
+  synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians: "imported theorem used only in the argued reading (vii); no computation depends on it"
+  synthesis.imported-gtg-dictionary: "supplies the reading of the first-order curvature, Ricci, Schouten and Weyl maps that the checks build directly"

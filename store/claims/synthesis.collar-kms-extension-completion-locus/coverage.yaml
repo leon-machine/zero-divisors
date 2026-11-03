@@ -1,0 +1,10 @@
+functions:
+  check_killing_bivector_parallel_carry:
+    kind: sampled
+    clauses: [(i)]
+    omits: The parallel-transport identity nabla_tau(a^{-1} d_t) = 0 and the Killing bivector a' e0 e1 are verified symbolically for two sample warp functions a, not for the collar metric itself; rho = 1/(2 r^2) is an exact rational-function identity from A = 1/r - 1, and proportionality and commutation of the carried generators is checked at four slices.
+  check_one_atom_kms_every_slice:
+    kind: sampled
+    clauses: [(ii), (iii), (iv)]
+    omits: 'On one atom and two atoms (formal variable z = e^pi): the period-2 pi Gibbs state is KMS for the generator c K exactly when beta c = 2 pi (wrong period m = 2 fails), with beta = 4 pi r^2 at r = 1, 1/2, 1/4 (the KMS test is the same call at each slice: only the arithmetic m = 1 varies) and beta_H = 6 pi at E, plus the series 6 pi (1 - 4r/5 + ...); uniqueness of the KMS state is the imported theorem, not computed; the slice-product failure is shown for three candidate exponent pairs (m1, m2), not for all beta; the Killing-time limit beta -> 0 at E is not evaluated.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Atom-level KMS statements and the series reproduce (i)-(iv); uniqueness and "no beta" for the slice-product reading are tested only at sample exponents.}

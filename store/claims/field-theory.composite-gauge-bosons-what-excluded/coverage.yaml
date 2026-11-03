@@ -1,0 +1,16 @@
+functions:
+  check_current_transforms_as_a_vector:
+    kind: sampled
+    clauses: ["J(Sf, Sg) = S J(f, g) S~ for every element S of definite parity"]
+    omits: "six rotors (boosts, rotations, products in non-commuting planes) and three further definite-parity elements (an odd vector, an even 1 + I4/3, an even sum of bivectors), on three pairs of massless chirality-+ spinors with rational null momenta; the mixed-parity 1 + g0 fails as a control; not a free-spinor or free-element identity"
+  check_vector_condensate_breaks_lorentz:
+    kind: sampled
+    clauses: ["a nonzero vector condensate breaks Lorentz invariance"]
+    omits: "the sample current vectors of three spinor pairs (real and I4 parts) are moved by one of two boost rotors and break exactly three of the six so(1,3) generators; a span{1, I4} scalar is fixed by every rotor; a genuine condensate expectation value is modelled by these bilinear current vectors; the Bjorken Goldstone-photon conflict, the Weinberg-Witten exclusion and the author's choice of the elementary route are literature and narrative, not computed"
+untouched_premises:
+  field-theory.imported-standard-field-theory: "literature restatement (Weinberg-Witten, Bjorken); no computable content, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Only the algebraic covariance and the Lorentz-breaking of a nonzero vector are computable; both are tested at sample spinors and rotors, and the exclusion theorems are declared uncomputed."

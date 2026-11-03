@@ -1,0 +1,14 @@
+functions:
+  check_shape_operator_algebra:
+    kind: exact
+    clauses: ["\"S := 1 - 3 Pi = -1/2 (B -> B + 3 sigma_r B sigma_r)\"", "\"S^2 + S = 2\"", "\"has spectrum (-2, -2, 1, 1, 1, 1), and is trace-free\""]
+    omits: "S is built as a 6 x 6 matrix on the blades gamma_a gamma_b of Cl(1,3) and Pi independently from the sigma_r, I sigma_r components; eigenspace dimensions 2 and 4 computed as kernels"
+  check_factorisation_at_every_radius:
+    kind: sampled
+    clauses: ["\"R(B) = -(M/r^3) S(B), exactly and at every radius\"", "\"S depends on neither M nor r\""]
+    omits: "eight (M, r) samples: four in the static gauge and four in the Painleve-Gullstrand gauge (two inside the horizon), curvature computed from the gauge fields by the jet engine; not a symbolic identity in M and r; the closing remark that the approach to the singularity changes only the prefactor is interpretive"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebra of S is exact on the finite bivector space and the factorisation is exact at eight (M, r) samples in two gauges"

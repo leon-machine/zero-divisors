@@ -1,0 +1,27 @@
+functions:
+  check_formula_and_translation_identities:
+    kind: sampled
+    clauses:
+    - '"W(x) is totally isotropic of dimension three"'
+    - '"1/2[e_a n_inf, X(x)] = dX/dx^a = e_a - x_a n_inf, 1/2[e_a n_inf, n_inf] = 0"'
+    - '"X(x+dx) - X(x) differs from dx^a d_a X by -1/2 Q(dx) n_inf alone"'
+    omits: four rational points and twelve displacements; the bivector action formula is checked against (1/2)[uv,w] on all basis bivectors and vectors (exact)
+  check_pairing_classes_and_parallel_direction:
+    kind: sampled
+    clauses:
+    - '"The pairing classes of the transport are (<dx,l>, <dx,m>, 0)"'
+    - '"all three vanish if and only if dx is a real multiple of l (for a complex one the equivalence fails, dx = m)"'
+    - '"X(x + s l) = X(x) + s l(x) in W(x)"'
+    omits: class formula at four points and twelve displacements and three values of s; the real kernel R l is an exact kernel computation of an x-independent 3 x 4 matrix
+  check_vacuum_stabiliser_has_dimension_twelve:
+    kind: exact
+    clauses:
+    - '"The stabiliser of a nu = 3 vacuum in so(6,C) has dimension 12 = nu^2 + nu(nu-1)/2, the three classes being independent functionals"'
+    omits: the formula in nu is evaluated at nu = 3 only; the dimension is computed exactly at four sample vacua W(x), each in two ways (stabiliser of W(x) and of the Fock vacuum ray)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the identities and classes are checked at sample points and the stabiliser dimension is an exact computation at nu = 3
+untouched_premises:
+  std-algebra.contraction-expansion: "standard algebra cited in the proof; the check computes the statement directly"

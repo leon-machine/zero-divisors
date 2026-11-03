@@ -1,0 +1,22 @@
+functions:
+  check_mass_form_magnitudes:
+    kind: sampled
+    clauses: ["nonzero entries of M_c have magnitude |a| on (L, nu^c), (Q, u^c) and |b| on (L, e^c), (Q, d^c)"]
+    omits: "Complex Gaussian-rational sample (a, b) only; the module is the five-mode Fock model."
+  check_conjugate_reading_gives_four_equal_masses:
+    kind: sampled
+    clauses: ["the conjugate c* = bbar v_4 + abar w_4 and the entries of M_{c*} on (Q, u^c), (L, nu^c) are |b|", "all four tree masses equal |b|", "read through c, m_u/m_d = |a|/|b|"]
+    omits: "The null-lift-locus product law m_u m_d = Lambda/3, its conflict with observed top and bottom masses, and the remark that a second coupling is needed are not checked (docstring says they are readings)."
+  check_rung_terms_select_isospin_components:
+    kind: exact
+    clauses: ["the v_4 term couples only the T_3 = -1/2 components of L and Q; the w_4 term only T_3 = +1/2"]
+    omits: ""
+  check_breaking_to_one_u1:
+    kind: sampled
+    clauses: ["a vector along one rung breaks the slot SU(2) x U(1)_Y to the U(1) that fixes it"]
+    omits: "Stabiliser dimension computed at a handful of (a, b) samples (including a = 0 or b = 0 endpoints); the doublet-triplet splitting sentence is not checked."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four functions test the relations of the statement at samples (isospin selection exhaustively over the sixteen); the interpretive sentences are declared unchecked in the docstring."

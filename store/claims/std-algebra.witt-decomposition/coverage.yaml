@@ -1,0 +1,14 @@
+functions:
+  check_hyperbolic_partner_in_a_plane:
+    kind: sampled
+    clauses:
+    - '"there is a unique w in P such that (u, w) is a hyperbolic pair"'
+    - '"isometric to R^{1,1}"'
+    omits: four planes; uniqueness of the partner is proved in the text, not checked
+  check_witt_decomposition_and_maximal_null_subspace:
+    kind: complete
+    clauses:
+    - '"V = H_1 perp ... perp H_m perp A perp rad V"'
+    - '"N is a maximal totally null subspace"'
+    omits: the standard decomposition of every signature with n <= 5; the dimension bound for arbitrary
+      totally null subspaces is proved in the text

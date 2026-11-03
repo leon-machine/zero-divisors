@@ -1,0 +1,15 @@
+functions:
+  check_faces_identical_and_direction_orders_them:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "S3 acting transitively on the three faces, any two sharing one slot, and the stabilisers (order 6, 2, 1) of a democratic, a two-equal and a generic vector are exhaustive for the finite case; that the face-valued bracket is the framework's only S3-charged vacuum object and that the identification is the condensate's alignment are structural readings, not computable"
+  check_texture_and_cabibbo_arithmetic:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "tan^2 theta = -(light eigenvalue)/(heavy eigenvalue) of the block (0, A; A, B) at three rational (A, B) points, not as an identity in free A, B; m_d/m_s bounds, sqrt(m_d/m_s) in [0.22415, 0.22425) and 0.4 percent agreement with 0.225 are exact interval arithmetic; the nearest-neighbour texture and the double suppression are not derived"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both functions test the computable content (S3 combinatorics and the Cabibbo arithmetic); the structural clause is flagged as such in the statement."

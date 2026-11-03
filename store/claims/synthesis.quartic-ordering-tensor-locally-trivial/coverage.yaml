@@ -1,0 +1,18 @@
+functions:
+  check_h2_sl4_vanishes:
+    kind: exact
+    clauses:
+    - (i)
+    omits: Computes H^1(sl4, sl4) = H^2(sl4, sl4) = 0 from the torus-weight-zero Chevalley-Eilenberg complex (dimensions 3, 21, 87, 273, ranks 3, 18, 69, d d = 0); that the nonzero weights are acyclic (Cartan formula) is argued in the docstring and not computed; the passage from the vanishing to the formal map Phi and the redefined generators Q is not computed
+  check_spin_two_coboundary_in_googly_slot:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: 'The spin-two Killing-symmetric map S(f+) = e+ on g+ (weight 4 in End g+, [g+, g-] = 0): d phi vanishes on (g-, g-), (g-, g+) and (g-, p), is nonzero on (g+, g+) with values in g+, and nonzero on (g+, p) and (p, p), and [,] + t d phi is the transport of [,] by 1 + t phi to first order; the reading of Conjecture (b) in (iii) is interpretive and not tested'
+untouched_premises:
+  correspondence.chiral-planes-summand-spaces: the check fixes the chiral blocks g+ and g- directly as the diagonal sl(2) blocks of sl(4); the lemma identifying them with the chiral planes is a restatement and is not called
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Chevalley-Eilenberg rank computation and exact bracket algebra in sl(4) establish the rigidity and the spin-two coboundary example.

@@ -1,0 +1,169 @@
+descent-lift.classical-record-reproduces-descent-stores-nothing:
+  main:
+  - descent-lift.lift-costs-one-rung-per-mode
+descent-lift.classical-shared-bit-reduced-view-pure:
+  main:
+  - descent-lift.lift-costs-one-rung-per-mode
+descent-lift.kraus-form-descent-even-states:
+  main:
+  - descent-lift.imported-stinespring-kraus-choi
+descent-lift.pairing-creator-under-transport-algorithm:
+  main:
+  - descent-lift.imported-pinching-one-way-door
+  - descent-lift.imported-taxonomy-type-p-rule-algorithm
+descent-lift.partial-lifts-witness-overshoots:
+  main:
+  - descent-lift.lift-costs-one-rung-per-mode
+descent-lift.within-supplied-dynamics-descent-has-no:
+  main:
+  - descent-lift.imported-descent-modes-univalence-supplied-class
+families.alignment-computed-thirteenth-refutation-democracy-one:
+  main:
+  - families.imported-indifference-instrument
+families.koide-class-crossing-fit-conclusion:
+  main:
+  - families.skeleton-rank-one-plus-ordering-shift
+families.source-term-linear-tilt-mass-functional:
+  main:
+  - families.imported-dictionary-exact-join
+  - families.imported-face-valued-bracket-quantum-numbers
+families.three-identical-families-mixing-shared-slots:
+  main:
+  - families.imported-face-valued-bracket-quantum-numbers
+field-theory.assignments-survive:
+  main:
+  - standard-model.hypercharge-global-form-pair-counting-consistency
+  - standard-model.imported-anomaly-coefficients
+  - standard-model.quarks-leptons-two-level-fermion-content
+field-theory.boost-modes:
+  main:
+  - field-theory.imported-tower-limit
+field-theory.composite-gauge-bosons-what-excluded:
+  main:
+  - field-theory.imported-standard-field-theory
+field-theory.conserved-numbers-mass-block:
+  main:
+  - field-theory.composite-scalars-mean-field-level
+field-theory.coupled-system-tree-level:
+  main:
+  - field-theory.fock-space-maxwell-modes
+  - field-theory.imported-standard-field-theory
+field-theory.elementary-photon-ga:
+  main:
+  - field-theory.contact-interactions-tower
+  - field-theory.imported-standard-field-theory
+field-theory.mass:
+  main:
+  - field-theory.imported-one-datum-massive-law
+field-theory.operator-newtonian-coupling:
+  main:
+  - field-theory.conserved-numbers-mass-block
+field-theory.orientation-relocated:
+  main:
+  - field-theory.where-each-lives
+field-theory.second-quantisation:
+  main:
+  - field-theory.imported-tower-limit
+field-theory.twistor-attachment:
+  main:
+  - field-theory.imported-statistics-no-go-palatial-algebra
+  - field-theory.imported-tower-limit
+lepton.relative-handedness-slotted-free-sectors:
+  main:
+  - lepton.content-constituent-space
+lepton.self-conjugacy-forces-determinant-one-group:
+  main:
+  - lepton.imported-automorphism-group-section-hypercharge-generator
+pairing.loop-classes-are-weyl-components:
+  main:
+  - pairing.imported-weyl-scalars-petrov-type-schwarzschild
+pairing.pairing-class-transverse-derivative-null-direction:
+  main:
+  - pairing.stabiliser-parabolic-algebra-null-direction
+pairing.static-frame-only-expansion-survives:
+  main:
+  - pairing.imported-schwarzschild-connection-curvature
+pairing.two-frames-share-vacuum-selected-transport:
+  main:
+  - pairing.static-frame-only-expansion-survives
+  - singularity.modular-flow-boundary-modes-holonomy-universal
+rule2.which-residues-obstruct-which-way:
+  main:
+  - transport.rule-1-morita-trivial
+scrambling.area-law-test:
+  main:
+  - scrambling.mode-count
+  - singularity.causal-epoch-computed-exactly
+scrambling.clock-inventory-boundary-modes:
+  main:
+  - tower.witt-index-quantum-capacity
+scrambling.exactness-excludes-cutoff-dependence:
+  main:
+  - scrambling.residue-each-convention
+  - scrambling.scheme-robustness-cutoff
+scrambling.no-recount-reaches-quarter:
+  main:
+  - scrambling.residue-each-convention
+scrambling.per-slice-verification-two-failed-aggregations:
+  main:
+  - scrambling.slice-volume-exactly-per-unit-killing
+scrambling.principality-indifference-sphere:
+  main:
+  - scrambling.boundary-mode-space-matrix
+  - scrambling.imported-time-plane-modular-data
+scrambling.residue-each-convention:
+  main:
+  - scrambling.imported-collars-coframe-exceptional-set-helicity
+sheaf.edge-wall:
+  main:
+  - sheaf.collision-census
+  - sheaf.local-freeness-constant-rank
+sheaf.exceptional-algebra-black-hole:
+  main:
+  - sheaf.exceptional-algebra-deformation-normal-cone
+sheaf.exponent-ratios-are-invariant:
+  main:
+  - sheaf.differential-closure-filtration-conormality
+sheaf.gauge-field-cometric:
+  main:
+  - sheaf.gauge-field-cometric-external
+  - singularity.cones-fold
+  - singularity.degeneration-exactly
+  - singularity.solution-where-divergence-lies
+  - singularity.unipotent-ray
+sheaf.localised-transport:
+  main:
+  - sheaf.one-sided-completion
+sheaf.matching-connection-level:
+  main:
+  - sheaf.weighted-limit
+sheaf.matching-fibre:
+  main:
+  - sheaf.weighted-limit
+sheaf.no-equivariant-value-wall:
+  main:
+  - sheaf.transversal-independence-wall
+sheaf.one-sided-completion-singularity:
+  main:
+  - sheaf.schwarzschild-degeneration-boundary-tame
+sheaf.tame-walls-are-two-sided:
+  main:
+  - sheaf.metrics-residue-square-root-twist
+sheaf.transversal-independence-wall:
+  main:
+  - sheaf.solve-closed-radical-gauge
+sheaf.variable-weight-boundary-tameness-completion-forced:
+  main:
+  - sheaf.function-linearity-tame-constructions
+sheaf.weighted-limit:
+  main:
+  - interior.boosts-generate-exactly-levi-factor
+  - interior.exact-parallelism-convergence-rate
+  - interior.interior-connection-exactly
+  - interior.kasner-form-interior
+  - interior.weighted-limit-theorem
+sheaf.weights-are-forced-are-kasner-exponents:
+  main:
+  - sheaf.exceptional-algebra-black-hole
+  - sheaf.kasner-data-interior
+  - sheaf.schwarzschild-degeneration-boundary-tame

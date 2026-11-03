@@ -1,0 +1,345 @@
+# Tag vocabulary: a controlled list of themes that cut across subjects.
+# Every entity has exactly one `subject` (subjects.yaml); it may also carry
+# 1 to 4 `tags` from this list, so a bridging result can sit in its home
+# subject and still light up with the other side.  Selecting a tag on the
+# site lights up every result that carries it.
+#
+# Each tag: id (kebab-case, stable), title (free), group, about (the test a
+# tagger applies: tag only when the result clearly meets it).
+# Groups: structures | methods | physics | hypotheses | record.
+#
+# What tags must NOT duplicate, because the build derives it:
+#   - whether a result rests on a postulate (its "holds given" set);
+#   - the two-ledger class (essential, convenient, absent);
+#   - status (proved, imported, refuted, live, ...) and kind.
+# Hypothesis tags therefore mark results ABOUT a hypothesis (stating,
+# testing, weakening, translating or refuting it), never results that merely
+# hold under it.
+
+# ---------------------------------------------------------------- structures
+- id: hyperbolic-plane
+  title: Hyperbolic planes and the (1,1) increment
+  group: structures
+  about: "Results that construct, split off, count or use a hyperbolic plane (a (1,1) block spanned by a null pair), including the forced (1,1) increment of the completion and splitting along a hyperbolic plane; not for a bare signature count."
+- id: witt-index
+  title: Witt index and Witt bases
+  group: structures
+  about: "Results about the Witt index (the maximal isotropic dimension) or a Witt basis, decomposition, flag or vacuum, including the Witt index read as quantum capacity and Witt's extension theorem."
+- id: idempotents
+  title: Idempotents and matrix units
+  group: structures
+  about: "Results about idempotents and their orbits, matrix units, Peirce decompositions, corners or minimal one-sided ideals of a Clifford algebra."
+- id: spinor-modules
+  title: Spinor modules and Fock modules
+  group: structures
+  about: "Results that build or analyse a spinor module: a minimal left ideal, a Fock module or Fock model, pure spinors, or the split of a spinor module into its two chirality halves."
+- id: conformal-model
+  title: Conformal model of points
+  group: structures
+  about: "Results that use the conformal model: points as null vectors of the completed space, the null cone and its quadric, the incidence relation or chart, the flat model and its stabilisers, spacetime as the manifold of vacuum lines."
+- id: conformal-spinors
+  title: Conformal spinors (twistors)
+  group: structures
+  about: "Results in which conformal spinors (twistors) appear: the conformal spinor space and its Fock model, local twistor transport, the Penrose transform, the nonlinear graviton, bivectors of two conformal spinors."
+- id: frozen-point
+  title: The frozen point
+  group: structures
+  about: "Results about or using the frozen (parallel) point of the completion: the infinity bivector, the pair I and V, its norm, its grip on other structures, its transported form, or its datum at a wall."
+- id: towers-by-residue
+  title: The eight towers
+  group: structures
+  about: "Results about the family of towers indexed by residue mod 8: the mod-8 clock, even and odd towers, the odd extensions that produce them, type by residue, which towers exist, pair up or are populated; not for results about the iteration of one tower alone."
+- id: ladder-pairs
+  title: Ladder pairs and rungs
+  group: structures
+  about: "Results about ladder pairs (two Clifford generators acting as one fermionic creation and annihilation pair) or the rungs of the tower: one qubit per rung, rung modules and rung mixings, what a lift costs in rungs."
+- id: car-algebra
+  title: CAR algebra and its states
+  group: structures
+  about: "Results about the canonical anticommutation relations as an algebra: the CAR limit of the tower, its Fock representation, quasi-free states, Glimm's classification, and contrasts with the canonical commutation relations."
+- id: degenerate-algebras
+  title: Degenerate Clifford algebras
+  group: structures
+  about: "Results about Clifford algebras of degenerate forms (nonzero radical): nilpotent ideals, a metric degenerating, the degenerate algebras at Lambda = 0, the minimal completion of a degenerate algebra, conservation of degeneracy."
+- id: grading-and-parity
+  title: Grading and parity
+  group: structures
+  about: "Results that turn on the Z2 grading: the grade or parity automorphism, the even subalgebra, whether the grade twist is inner, fermionic operations being even."
+- id: pseudoscalar-and-centre
+  title: Pseudoscalars, centre and imaginary units
+  group: structures
+  about: "Results about the volume element (pseudoscalar), the centre, the sign of the pseudoscalar's square, or which elements square to -1 and so can serve as an imaginary unit."
+- id: clifford-classification
+  title: Classification of real Clifford algebras
+  group: structures
+  about: "Results that establish or apply the classification of Cl(p,q) by signature: matrix algebras over R, C or H, mod-8 periodicity, Morita classes, which real form is split."
+- id: null-directions
+  title: Null vectors and null directions
+  group: structures
+  about: "Results whose content is a null vector, null blade, null direction or null flag, or the group of null rotations, whether in the algebra or in spacetime (null tetrads, principal null directions)."
+- id: rotors-and-stabilisers
+  title: Rotors, spin groups and stabilisers
+  group: structures
+  about: "Results about rotor or spin groups and their Lie algebras of bivectors, boosts and dilations, or the stabiliser of a point, direction or scale (parabolic, Levi, reductive)."
+- id: tractors
+  title: Tractors
+  group: structures
+  about: "Results that use the tractor bundle or tractor connection: the scale tractor, the Thomas operator, local twistor transport read as tractor transport."
+- id: pairing-and-bogoliubov
+  title: Pairing and Bogoliubov transformations
+  group: structures
+  about: "Results about fermionic or bosonic pairing: pairing classes and functionals, pair-creation amplitudes, Bogoliubov groups, Thouless states, squeezed vacua."
+- id: obstruction-types
+  title: Obstruction types C, N and P
+  group: structures
+  about: "Results that classify, locate, move or repair zero-divisor obstructions by type (C central, N nilpotent, P idempotent), or say which residues obstruct which way."
+
+# ------------------------------------------------------------------- methods
+- id: descent-map
+  title: The descent map
+  group: methods
+  about: "Results that compute with, characterise or try to invert the descent (the pinching E, the parity average, the one-way conditional expectation) or its lift, in whichever subject they occur."
+- id: transport-algorithm
+  title: Transport rules and algorithm
+  group: methods
+  about: "Results that run, characterise or bound the transport algorithm or its rules (Rule 1, Rule 2 fusion, totality, minimality, no fourth rule), including running it on a particular fibre or algebra."
+- id: modular-theory
+  title: Modular theory and KMS states
+  group: methods
+  about: "Results that use Tomita-Takesaki modular theory, a modular flow or period, or the KMS condition (KMS uniqueness, restriction to subalgebras, inductive limits, Gibbs states as KMS states)."
+- id: mode-counting
+  title: Mode and dimension counting
+  group: methods
+  about: "Results whose content is a count and what follows from it: modes, pairs, cells, quanta, generators, the dimension of a module, or a population."
+- id: finite-models
+  title: Explicit finite models
+  group: methods
+  about: "Results established by direct computation in an explicit finite model or worked example (a few modes, a named low-dimensional algebra, a sample point), as distinct from general theorems."
+- id: forcing-and-uniqueness
+  title: Forcing and uniqueness
+  group: methods
+  about: "Results whose point is that a structure, value, rule or weight is forced or unique, with no choice left, up to the stated equivalence ('forced, not chosen')."
+- id: classification
+  title: Classification and exhaustiveness
+  group: methods
+  about: "Results that list every case of something (algebras, orbits, completions, alternatives, candidates, splits) and show the list is exhaustive."
+- id: representation-theory
+  title: Representation theory and branching
+  group: methods
+  about: "Results that decompose a representation or module under a group: branching rules, tensor-product decompositions, Casimirs and invariant forms, for example 16 x 16 under Spin(10) or a module under Pati-Salam."
+- id: limits
+  title: Limits and convergence
+  group: methods
+  about: "Results that take a limit and control it: the inductive limit of the tower, a continuum limit of modes, a weighted or blow-up limit at a singularity, convergence rates."
+- id: bosonisation
+  title: Bosonisation and the s-wave sector
+  group: methods
+  about: "Results that use the s-wave reduction, current algebras, the Sugawara construction or the bosonisation bridge between fermionic and bosonic descriptions."
+- id: two-readings
+  title: The two readings of one relation
+  group: methods
+  about: "Results that pass between the metric reading and the CAR reading of the anticommutator relation, for example a Witt index read as capacity, or a conformal spinor read as a state of ladder pairs."
+- id: dictionaries
+  title: Dictionaries between languages
+  group: methods
+  about: "Results whose content is a translation between two formalisms (geometric algebra and tensor or spinor language, twistor and Clifford language, mass and weight), adding no new physical claim."
+
+# ------------------------------------------------------------------- physics
+- id: hawking-temperature
+  title: Hawking temperature
+  group: physics
+  about: "Results that derive, fix or constrain the Hawking temperature or its ingredients: surface gravity kappa, the Euclidean period 2 pi / kappa, the boundary modes being thermal at that temperature, its universality or its calibration."
+- id: radiation-spectrum
+  title: Radiated spectrum and evaporation
+  group: physics
+  about: "Results about what a black hole radiates: Fermi-Dirac or Bose-Einstein occupancies, greybody factors, emission rates, evaporation and its final bursts, graviton production, what the radiation carries."
+- id: horizons
+  title: Horizons
+  group: physics
+  about: "Results located at or about a horizon: Killing horizons, the horizon pair, frames regular or static at the horizon, the stretched horizon, the Cauchy horizon."
+- id: schwarzschild
+  title: Schwarzschild black hole
+  group: physics
+  about: "Results computed on the Schwarzschild or Schwarzschild-de Sitter solution: its connection and curvature, its fibre, wall, interior slices or singularity."
+- id: kerr
+  title: Kerr and rotation
+  group: physics
+  about: "Results about the Kerr family: its Kerr-Schild gauge, curvature, Killing spinor, ring singularity, Cauchy horizon or mass inflation."
+- id: kasner
+  title: Kasner interiors
+  group: physics
+  about: "Results that use the Kasner form of an interior or Kasner exponents, including weights at a wall that turn out to be the Kasner exponents."
+- id: curvature-and-field-equations
+  title: Curvature and the field equations
+  group: physics
+  about: "Results about the vacuum Einstein equations or an equivalent form of them (tractor, Schouten, MacDowell-Mansouri, Stelle-West), or about curvature spectra (Weyl components, Petrov type, half-flatness)."
+- id: boundary-modes
+  title: Boundary modes
+  group: physics
+  about: "Results about the boundary-mode algebra of a horizon or singularity: its windows, density, locality, clocks, and what the modes hold (entropy, charge)."
+- id: entanglement
+  title: Entanglement
+  group: physics
+  about: "Results about entangled states: entanglement across a cut, purification and partners, Schmidt forms, what the descent does to entanglement, gravitationally induced entanglement."
+- id: superselection
+  title: Superselection
+  group: physics
+  about: "Results that establish or use a superselection rule or a superselected sector (parity, charge, a dark sector), for example a sector being dark because it is superselected."
+- id: measurement-and-records
+  title: Measurement and records
+  group: physics
+  about: "Results about measurement, recording and experience: record chains, the Born rule, collapse or its absence, supervenience and the irreversibility of recording."
+- id: quantum-gravity
+  title: Gravity and quantum states
+  group: physics
+  about: "Results bearing on gravity's quantum character: whether gravity entangles or settles superpositions, the operator Newtonian coupling, gravity's source, the graviton and its absence or production."
+- id: gauge-fields
+  title: Gauge groups and gauge bosons
+  group: physics
+  about: "Results that identify or constrain a gauge group or algebra (the Standard-Model group and its global form, Pati-Salam, Spin(10), the odd towers' gauge algebras) or a gauge boson (the photon, Maxwell modes, composite gauge bosons)."
+- id: hypercharge-and-anomalies
+  title: Hypercharge, charges and anomalies
+  group: physics
+  about: "Results about hypercharge, charge quantisation and the charge lattice, fractionally charged states, or anomaly conditions and coefficients, Chern-Simons levels and the parity anomaly included."
+- id: running-and-unification
+  title: Running and unification
+  group: physics
+  about: "Results about running couplings and their coefficients, the weak angle, thresholds, unification, the desert, supersymmetric rows or proton decay."
+- id: chirality
+  title: Chirality
+  group: physics
+  about: "Results about handedness: chiral halves and chiral phases, left-right parity and what breaks it, the relative handedness of sectors, self-dual and anti-self-dual splits."
+- id: symmetry-breaking
+  title: Symmetry breaking and vevs
+  group: physics
+  about: "Results about how a symmetry is broken: vevs and breaking patterns, broken generators, condensates and their alignment, the Higgs doublet's quantum numbers."
+- id: flavour-and-mixing
+  title: Flavour, mass forms and mixing
+  group: physics
+  about: "Results about how families differ: Yukawa patterns, mass forms across families, Georgi-Jarlskog and Koide relations, mixing angles and CP phases, mixings of constituents."
+- id: seesaw-and-majorana
+  title: Seesaw and Majorana masses
+  group: physics
+  about: "Results about Majorana terms, the seesaw, the heavy direction, neutrinoless double-beta values, or the neutrino mass sum and ordering."
+- id: mass-generation
+  title: Mass terms and mass scales
+  group: physics
+  about: "Results that produce, bound or fail to produce a mass term or mass scale: the grip and the mass bracket, mass as symplectic area, the mass-weight dictionary, where mass begins in a tower."
+- id: cosmological-constant
+  title: Cosmological constant
+  group: physics
+  about: "Results about the value, sign or role of Lambda: the de Sitter radius, w = -1, Lambda deforming a wall or a residue, Lambda as a parameter or undetermined; not for results that only treat Lambda = 0 as a case."
+- id: the-number-n
+  title: The large number N
+  group: physics
+  about: "Results about the number N (the Planck-to-Hubble ratio): what it is, why it is large, whether it is a parameter of the laws or a coincidence."
+- id: dark-matter-ratio
+  title: Dark-matter ratio
+  group: physics
+  about: "Results that compute, bound or test the dark-to-visible matter ratio or one tower's share of it (the mirror share, the population count, the unit-ball shares)."
+- id: mirror-sector
+  title: The mirror sector
+  group: physics
+  about: "Results about the mirror tower or mirror matter: its existence, algebra, composition, temperature, and the astrophysical constraints on it."
+- id: matter-asymmetry
+  title: Matter asymmetry and the early universe
+  group: physics
+  about: "Results about the matter-antimatter asymmetry and its arrow (orientation, stored charge, leptogenesis, theta terms), or about early cosmic history (dating the descent, reheating, seeding and dilution of the towers)."
+- id: halos-and-clusters
+  title: Halos, clusters and simulations
+  group: physics
+  about: "Results about galaxy halos, clusters and mergers, the Milky Way's mass budget, the cross-section of sheet matter, and the simulations with their modelling premises S1 to S5 and C."
+
+# ---------------------------------------------------------------- hypotheses
+# Tag a result here only if it is ABOUT the hypothesis.  Results that merely
+# hold under it get the hypothesis in their derived "holds given" set.
+- id: hypotheses-s-r-c
+  title: Hypotheses (S), (R) and (C)
+  group: hypotheses
+  about: "Results about the matter-content hypotheses, slot statistics (S), its rung reading (R) and the constituent hypothesis (C): stating them, showing two are one, carrying them to other towers, testing or weakening them. Not results that merely hold 'under (S)'."
+- id: hypothesis-u
+  title: Hypothesis (U)
+  group: hypotheses
+  about: "Results about Hypothesis (U), equal rank-one eigenvalues at the ceiling: stating it, valuing the ceiling it gives, testing it or showing how fragile a conclusion is to it. Not the dark-tower premise U, nor the rate model's (U)."
+- id: premises-p1-p5
+  title: Premises P1 to P5
+  group: hypotheses
+  about: "Results about the dark-matter premises P1 (single frozen point), P2 (indifference), P3 (nearest-dimension representatives), P4 (democracy of the asymmetry), P5 (boundary modes hold entropy, not charge): stating, testing or discharging them."
+- id: counting-rules
+  title: The unit-ball and cell rules
+  group: hypotheses
+  about: "Results about the counting rules R1 (equal mass per quantum), R2 (one quantum per unit ball), R3 (one cell per unshared direction), democracy D and the unit-ball rule: stating them, deriving them or failing to from a mechanism, settling their status."
+- id: dark-tower-premises
+  title: Premises H1, H2 and U
+  group: hypotheses
+  about: "Results about the dark-tower premises of T14c: H1 (a constituent's momentum), H2 (gauge algebras as hierarchy automorphisms) and U (the transposition rule): stating, testing or carrying them across towers."
+- id: neutrino-premises
+  title: Neutrino premises H, M, R and EW
+  group: hypotheses
+  about: "Results about the neutrino-sector premises H (the second stage is hierarchical), M (a Majorana term at a scale M >> v), R (the descent reheats below the heavy scale) and EW (equal weight on the heavy direction)."
+- id: face-identification
+  title: The face identification
+  group: hypotheses
+  about: "Results about the working hypothesis that the three families are the faces of the maximal composite: stating it, what the identification requires, and the tests it has passed or failed."
+- id: thermal-premises
+  title: Regularity and the thermal premises
+  group: hypotheses
+  about: "Results about the premises of the Hawking-temperature chain: regularity at the fixed locus (R), the geometric modular condition (G), joint quasi-freeness (Q), the interface identification (I), the s-wave reduction J3, the supplied class of dynamics: stating, discharging, or showing what fails without them."
+- id: univalence
+  title: Univalence (P)
+  group: hypotheses
+  about: "Results about the univalence premise (P) and its localised or reduced forms: stating it, reducing it to a metric-level reading, importing it as a superselection rule, testing what it selects."
+- id: entropy-premises
+  title: Premises of the entropy count
+  group: hypotheses
+  about: "Results about the premises of the entropy count and the rate model: C1 to C3 (curvature cutoff, cell density, counted epoch), boundary-mode and ledger locality (L_E), the intrinsic clock (IC), and the rate model's inputs (L), (U), (C), (I)."
+- id: indifference
+  title: Indifference
+  group: hypotheses
+  about: "Results about indifference as a structural premise of the series or as an instrument: stating it, locating Born's rule or principality in it, testing it. P2 counts when the result is about indifference itself."
+
+# -------------------------------------------------------------------- record
+- id: refutation
+  title: Refutations
+  group: record
+  about: "Refuted entities, the results that refute them (named in their refuted_by), and results that carry out or count a refutation ('the thirteenth refutation')."
+- id: live-prediction
+  title: Live predictions
+  group: record
+  about: "Prediction entities, and results that register a prediction or compute the value it quotes (w = -1, the neutrino mass sum, no echoes, the boundary-mode density)."
+- id: open-problem
+  title: Open problems
+  group: record
+  about: "Open questions, and results that state a precise open problem, residual gap or open channel ('what stays open'); not every conjecture."
+- id: no-go
+  title: No-go results
+  group: record
+  about: "Results showing that something cannot exist or cannot be done within the stated class: no-go theorems, the impossibility of a repair, the absence of a rule, mechanism, lift or coupling."
+- id: classical-theorem
+  title: Classical theorems
+  group: record
+  about: "Named classical theorems and textbook results of the literature (Witt, Weyl, Glimm, Cartan, Zeeman, Stinespring, Bisognano-Wichmann, the Clifford classification), whether imported or re-proved; not 'Imported:' restatements of earlier Transport Papers."
+- id: recovers-known-physics
+  title: Recovers known physics
+  group: record
+  about: "Results whose statement is an established physical law or value re-obtained in the framework (Fermi-Dirac occupancy, the Hawking temperature, Born's rule, the Schrodinger limit, the Standard-Model charges). Content only: the two-ledger class is derived by the build, not tagged."
+- id: ledger-audit
+  title: Derived versus assumed
+  group: record
+  about: "Results whose content is an audit of a chain: what is derived and what is assumed, joints or steps itemised, what a theorem closes and what stays open, the order of operations."
+- id: undetermined-input
+  title: Free inputs and undetermined values
+  group: record
+  about: "Results showing that a value is not fixed by the series and enters as a parameter of the laws or an external calibration (Lambda undetermined, the temperature not algebra-intrinsic, an absolute scale not derived)."
+- id: confronted-with-data
+  title: Confronted with data
+  group: record
+  about: "Results that compare a framework output with observation or experiment: fits, the astrophysical record, constraints from data, tests passed or failed against measurements."
+- id: tameness
+  title: Tameness of walls
+  group: hypotheses
+  about: Results about the tameness hypothesis (T1)-(T3) for degenerating metrics itself (stating, testing or propagating it), not results that merely hold for tame walls.
+- id: scattering-amplitudes
+  title: Scattering and interactions
+  group: physics
+  about: Results computing interactions, scattering or tree-level amplitudes of the series' fields (contact terms, the coupled photon system).

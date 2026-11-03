@@ -1,0 +1,11 @@
+functions:
+  check_sandwich_is_reflection:
+    kind: sampled
+    clauses:
+    - '"-u x u^(-1) = x - 2 B(x, u)/Q(u) u"'
+    - '"an isometry"'
+    - '"fixes rad V pointwise, s_u^2 = 1"'
+    - '"determinant is -1"'
+    - '"s_(a-b)(a) = b"'
+    omits: five vectors u and three vectors x truncated to every signature with n <= 4 (non-null u only);
+      the exchange property in one example

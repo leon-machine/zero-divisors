@@ -1,0 +1,14 @@
+functions:
+  check_descent_is_joint_pinching:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'Three modes (Cl(3,3)) only: D idempotent on all 64 blades, image of rank 8, fixes the sigma monomials and the joint-number projectors; the formula E = sum P_nu x P_nu is not compared term by term, the bimodule property of the conditional expectation is not tested, and general n is not enumerated.'
+  check_covariance_iff_diagonal:
+    kind: sampled
+    clauses: [(ii), (iii)]
+    omits: 'n = 3 only: the map H -> D ad_H - ad_H D has kernel of dimension exactly 8 equal to the sigma monomials, so the iff is exact for that window; hop, pairing and an odd term fail (the odd term is not checked to have E(ad_H N) = 0); the all-t statement is tested only through two single-time rotations (pi/2 commutes, (3/5, 4/5) does not) and one diagonal generator that passes.'
+  check_greybody_channel_covariant:
+    kind: sampled
+    clauses: [(iv)]
+    omits: One transmission c = 3/5; the channel Phi is hard-coded from the stated matrix, not derived from the beam splitter; covariance with E is verified on the four matrix units (exact for this c) and the occupation map n -> (9/25) n on one state.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The kernel-dimension computation matches the iff on three modes and the greybody numbers match; only n = 3 and one c are covered.}

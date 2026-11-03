@@ -1,0 +1,18 @@
+functions:
+  check_spin_homomorphism_and_kernel:
+    kind: sampled
+    clauses:
+    - '"A versor of k factors acts with determinant (-1)^k"'
+    - '"For a rotor, Ad_R(x) = R x R~"'
+    - '"kernel {+-1}"'
+    omits: products of two and three unit vectors from small rational sets in R^{3,0}, R^{1,2}, R^{2,2};
+      surjectivity rests on the imported Cartan-Dieudonne theorem and is not tested here
+  check_kernel_is_plus_minus_one:
+    kind: exact
+    clauses:
+    - '"kernel {+-1}"'
+    - '"Nondegeneracy is needed for the kernel"'
+    omits: the linear condition Ad_g = 1 on V solved exactly over the even and the odd part in six nondegenerate
+      signatures with n <= 4; the degenerate failure is shown on one vector
+untouched_premises:
+  std-algebra.cartan-dieudonne: "used in the proof for surjectivity (every rotation is a product of an even number of reflections); the check exhibits explicit rotors for its cases and does not re-run the factorisation"

@@ -1,0 +1,16 @@
+functions:
+  check_grade_three_couplings_ratio_three:
+    kind: exact
+    clauses: ["w_4(B - L) and v_4(B - L) are pure grade three", "they couple exactly (L, e^c), (Q, d^c) and (L, nu^c), (Q, u^c)", "lepton-to-quark modulus ratio 3"]
+    omits: "that grade three lies in the 120 component of 16 x 16 is the imported grade dictionary, applied and not recomputed"
+  check_antisymmetric_family_coupling_between_families:
+    kind: sampled
+    clauses: ["with a family matrix antisymmetric in the family indices the combined form is symmetric and vanishes on the family diagonal, contributing only between different families"]
+    omits: "one sample antisymmetric 3 x 3 family matrix with all off-diagonal entries nonzero (all six off-diagonal blocks occur) and one symmetric control; not a free-matrix statement"
+untouched_premises:
+  standard-model.fits-record-level: "the fits of the Standard-Model paper (tuning of one part in 50 to several thousand, the registered route) are record-level and not recomputed, as the check docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The module clauses are computed exactly on the five-mode module and the family clause at a sample matrix; the fit statements are declared uncomputed."

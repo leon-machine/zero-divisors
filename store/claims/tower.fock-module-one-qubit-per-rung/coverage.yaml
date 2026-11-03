@@ -1,0 +1,30 @@
+functions:
+  check_w_is_maximal_isotropic:
+    kind: sampled
+    clauses:
+    - W_k is a maximal isotropic subspace of H_1 + ... + H_k
+    omits: k = 1..4 only
+  check_chevalley_module_and_vacuum:
+    kind: sampled
+    clauses:
+    - the Chevalley action makes the exterior algebra of dimension 2^k a module over B_k
+    - the vacuum is annihilated by every w_j and cyclic for the v_j
+    omits: k <= 4; c(a)^2 = Q(a) tested for one fixed rational vector a; module property follows from the generator relations
+  check_irreducible:
+    kind: sampled
+    clauses:
+    - irreducible module over B_k = Mat_{2^k}(R)
+    omits: Full-rank action of the 4^k blades only for k <= 3; for k = 4 only the Fock criterion (common kernel of the w_j is the vacuum line)
+  check_one_qubit_per_rung:
+    kind: sampled
+    clauses:
+    - 'each rung doubles the module: Lambda W_{k+1} = Lambda W_k (x) Lambda R v_{k+1}'
+    omits: k = 1..3 doublings to k+1 <= 4 only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Each clause is tested for k up to 3 or 4 on exact rational arithmetic.
+untouched_premises:
+  std-algebra.existence-uniqueness: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-decomposition: "standard algebra cited in the proof; the check computes the statement directly"

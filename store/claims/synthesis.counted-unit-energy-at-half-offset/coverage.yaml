@@ -1,0 +1,19 @@
+functions:
+  check_array_thermal_energy:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "rigorous rational interval arithmetic (10^-70 rounding, explicit tails) puts beta E per array within 10^-55 of pi/12 and the zero-offset value in (0.02351, 0.02352); the exact equality beta E = pi/12 rests on the imported theta identities (f'(2 pi) = 0); the entropy (1/2) ln 2 is re-bounded as a consistency control"
+  check_sea_energy_zeta:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the finite part 1/24 of -d/de (1/(2 sinh(e/2))) by exact power-series inversion, equal to -B_2(1/2)/2, with the integer-weight control -1/12; the cancellation beta E_sym = 0 and 2 ln Z = ln 2 per unit within 10^-55 and 10^-54 from the bounds of (i); zeta regularisation is the stated ordering convention, not derived"
+  check_counted_unit_against_mass:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "E/(TS) = pi/(6 ln 2) in (0.75539, 0.75540); E_c/M in (0.37769, 0.37770), E_0/M in (0.62230, 0.62231) inside (1/2, 1], at M = 1, 3/2, 7 with pi and ln 2 bounded; the symmetric-ordering split c = M is not computed separately (it is (ii) plus this)"
+  check_heat_capacity_distinguishes:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "beta^2 Var(E) per counted unit in (1.5964, 1.5965) by rigorous bounds; zero-weight variance 0 trivially"
+untouched_premises:
+  singularity.q-joint-quasi-freeness-s-wave: "postulate (Q) version 3, the array structure and half offset; the check computes on the array it defines, reached through the half-offset theorem"

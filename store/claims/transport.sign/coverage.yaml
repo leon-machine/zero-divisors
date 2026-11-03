@@ -1,0 +1,20 @@
+functions:
+  check_omega_square_closed_forms:
+    kind: sampled
+    clauses: ["omega^2 = (-1)^(n(n-1)/2) (-1)^q = (-1)^((p-q)(p-q-1)/2)"]
+    omits: "all 65 signatures with 1 <= n <= 10 (exact per signature); no case n > 10 and no symbolic proof"
+  check_reversal_sign_count:
+    kind: sampled
+    clauses: ["omega^2 = (-1)^(n(n-1)/2) (-1)^q (the sign count behind the first form)"]
+    omits: "1 <= n <= 10 only"
+  check_depends_only_on_p_minus_q:
+    kind: sampled
+    clauses: ["omega^2 depends only on p - q", "omega^2 = +1 iff p - q = 0 or 1 mod 4"]
+    omits: "signatures with 1 <= n <= 8 (shifted to n + 2 <= 10); residues read off the range, not proved for all p - q"
+untouched_premises:
+  primer.sign: "the claim restates primer.sign (equivalent_to plus a uses edge); the checks recompute omega^2 directly, so no premise() call"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Formula and residue statement are checked exactly on all signatures with n <= 10; general (p,q) is not covered, so every function is sampled."

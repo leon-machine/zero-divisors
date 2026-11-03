@@ -1,0 +1,18 @@
+functions:
+  check_operator_identities_on_polynomial_fields:
+    kind: sampled
+    clauses: ["nabla(nabla psi) = box psi, a scalar operator", "nabla(psi C) = (nabla psi) C for constant C"]
+    omits: "Three polynomial multivector fields and three C; the identities are general but checked on these samples."
+  check_t_only_solution_klein_gordon_iff_c_squared_minus_one:
+    kind: sampled
+    clauses: ["every solution satisfies Klein-Gordon iff C^2 = -1", "C^2 = +1 gives the tachyonic sign", "a non-scalar C^2 gives no scalar second-order equation"]
+    omits: "Series solutions to order 8 for two masses and two initial values, only for the three named C (Hestenes, I gamma_0, gamma_3 + I gamma_2); the general iff for an arbitrary C in Cl(1,3) is not tested, and \"no scalar equation at all\" is shown for the t-only solutions through psi_0 C^2 not being a scalar multiple of psi_0."
+  check_the_three_right_factors:
+    kind: exact
+    clauses: ["Hestenes' C = gamma_0 (I sigma_3)^-1 has C^2 = -1", "C = I gamma_0 has C^2 = +1", "C = gamma_3 + I gamma_2 has a non-scalar square"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The three named right factors and the squares are computed exactly; the iff is checked through the t-only solution for those three C rather than for arbitrary C."

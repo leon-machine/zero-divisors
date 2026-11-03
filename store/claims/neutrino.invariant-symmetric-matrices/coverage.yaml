@@ -1,0 +1,18 @@
+functions:
+  check_characterisation:
+    kind: exact
+    clauses: ["iff S = alpha 1 + beta J"]
+    omits: ""
+  check_spectrum_and_determinant:
+    kind: sampled
+    clauses: ["u' eigenvalue alpha + 3 beta", "u'^perp eigenspace alpha", "det S = alpha^2 (alpha + 3 beta)", "invertible iff alpha != 0 and alpha != -3 beta"]
+    omits: "Run on a 4 x 4 rational grid of (alpha, beta) plus the singular loci at four beta values; the determinant identity is fixed by a degree argument in the docstring, but the eigenspace and invertibility clauses are only sampled."
+  check_inverse_and_projector_forms:
+    kind: sampled
+    clauses: ["S^-1 = alpha^-1 1 - beta alpha^-1 (alpha + 3 beta)^-1 J", "Pi = 1 - J/3 projector", "S = alpha Pi + M_3 J/3 and S^-1 = alpha^-1 Pi + M_3^-1 J/3"]
+    omits: "Inverse and projector decompositions are compared at the grid points only; Pi identities are exact (no parameters)."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three functions test the stated iff, spectrum, determinant, inverse and projector forms exactly on rational data; the determinant and inverse are grid-sampled, not symbolic."

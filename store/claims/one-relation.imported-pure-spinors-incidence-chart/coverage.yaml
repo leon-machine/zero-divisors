@@ -1,0 +1,24 @@
+functions:
+  check_every_conformal_spinor_is_a_pure_vacuum:
+    kind: sampled
+    clauses: ["\"acts irreducibly on the Fock space\"", "\"annihilator W_u of dimension exactly three\"", "\"W_u determines u up to scale\""]
+    omits: "irreducibility is exact (64 independent blade products) but the annihilator statements are checked on 12 sample spinors, not every nonzero conformal spinor"
+  check_spin6_acts_as_sl4_with_open_vacuum_orbit:
+    kind: sampled
+    clauses: ["\"Spin(6,C) = SL(4,C)\" at Lie algebra level", "\"the vacuum orbit being open in P(CS) = P^3\""]
+    omits: "Lie algebra level only (15 traceless maps spanning sl(4)); openness is the tangent-space rank at 12 sample points, group-level isomorphism and transitivity not tested"
+  check_purity_is_one_quadric_at_dimension_eight:
+    kind: sampled
+    clauses: ["\"purity becoming one quadratic condition at 2 nu = 8\""]
+    omits: "8 sample spinors on the four-mode Fock space, both outcomes; the iff a c = Pf(b) is not proved for all spinors"
+  check_point_embedding_null_and_incidence_lines:
+    kind: sampled
+    clauses: ["\"X(x) is null identically, the slot coefficient -1/2 the only value\"", "\"a null vector is a simple bivector, that is, a line of P(CS)\"", "\"the incidence relation is the completion's own chart\""]
+    omits: "7 sample points and 4 alternative slot coefficients; the double cover of the real slice of the Klein quadric is checked only as v and -v giving one line and distinct lines for non-proportional samples"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "all premises are called; the general statements are checked at samples and the docstring says the open orbit is infinitesimal"
+untouched_premises:
+  std-algebra.pure-spinors: "standard algebra cited in the proof; the check computes the statement directly"

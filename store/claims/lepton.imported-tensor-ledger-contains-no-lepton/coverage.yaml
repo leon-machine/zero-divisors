@@ -1,0 +1,18 @@
+functions:
+  check_decomposition_and_weight:
+    kind: complete
+    clauses: ["the decomposition of Lambda(C^2 (x) C^3) under SU(2) x SU(3), graded by cell number", "the grade equals the abelian weight"]
+    omits: "all seven grades and total dimension 64 are enumerated; the decomposition is of the ledger as built here, whose identification with the cited series ledger rests on the premise calls"
+  check_no_lepton_doublet:
+    kind: complete
+    clauses: ["no (2,1) occurs"]
+    omits: ""
+  check_row_filling_states_are_the_4_1:
+    kind: sampled
+    clauses: ["the row-filling states are cubic in v", "they span S^3 C^2 (x) Lambda^3 C^3 = (4,1), of weight 3"]
+    omits: "six sample v; cubic is tested by v -> 2v multiplying every coordinate by 8, not a general degree argument; (4,1) is identified by rank 4 and U(2) weights (3,0), (2,1), (1,2), (0,3), not by an explicit isomorphism; weight 3 comes from the cell count"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The ledger decomposition and absence of (2,1) are exhaustive; the row-filling clause is sampled."

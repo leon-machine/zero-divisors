@@ -1,0 +1,6 @@
+functions:
+  check_de_sitter_count:
+    kind: sampled
+    clauses: [(i), (ii), (iii)]
+    omits: '(i) as in the entropy check (five H, three M_P: A = 4 pi N^2, S = pi N^2); (ii) |J| = kappa_c A = 4 pi kappa_c N^2 is arithmetic on the definition of the counting rule (proportional to N^2 for three sample residues, coefficient 1 of pi/ln 2 at kappa_c = 1/(4 ln 2), S/pi at kappa_c = 1/4); (iii) N^2 = C/pi is the same identity; the counting rule of the cited proposition and Observation (i) are not tested. The body repeats check_de_sitter_entropy (same module header).'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Pure arithmetic on the stated counting rule at sample H and M_P; no independent test of the rule.}

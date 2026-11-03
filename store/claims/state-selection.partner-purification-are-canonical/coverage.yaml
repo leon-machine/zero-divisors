@@ -1,0 +1,22 @@
+functions:
+  check_gns_vector_cyclic_and_separating:
+    kind: sampled
+    clauses: ["1"]
+    omits: "Four Pythagorean amplitude pairs (lambda_0, lambda_1); the statement is for any faithful diagonal state."
+  check_commutant_is_partner_copy_via_modular_conjugation:
+    kind: sampled
+    clauses: ["2"]
+    omits: "The commutant 1 (x) A is an exact kernel computation, independent of the state; J (a (x) 1) J = 1 (x) a-bar uses the fixed swap-conjugation J and the Tomita relation is checked at the four amplitude pairs."
+  check_purifications_differ_by_partner_unitary:
+    kind: sampled
+    clauses: ["3"]
+    omits: "Four amplitude pairs and a finite list of unitaries; the converse is shown for purifications generated from those unitaries, not for an arbitrary purification vector."
+  check_gibbs_state_gives_thermofield_double:
+    kind: sampled
+    clauses: ["4"]
+    omits: "Sample Gibbs weights x = e^{-omega_k/T} with rational roots; that this is exactly the state of the cited T5 Lemma 7.2 is a citation, and the closing 'consequently' sentences are not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational (Gaussian) computations at Pythagorean sample amplitudes cover all four clauses."

@@ -1,0 +1,30 @@
+functions:
+  check_mode_function_and_wronskian:
+    kind: exact
+    clauses: ["(i) Bunch-Davies mode u = e^(-iz)(1 - i/z) solves chi'' + (1 - 2/z^2) chi = 0 with Wronskian 2i"]
+    omits: "the mode and its normalisation are the input to (i), not a clause of it; exact symbolic Laurent arithmetic, so nothing is sampled"
+  check_bogoliubov_normalisation:
+    kind: exact
+    clauses: ["(i) alpha = e^(-ix) A, beta = -e^(ix) B with A = 1 - i/x - 1/(2x^2), B = 1/(2x^2)", "(i) |alpha|^2 - |beta|^2 = 1"]
+    omits: ""
+  check_closed_form:
+    kind: sampled
+    clauses: ["(i) F(x) = 1 + 1/(2x^4) + x^-2 [(1 - 1/(2x^2)) cos 2x - sin 2x/x]"]
+    omits: "F = |alpha - beta|^2 is compared with the closed form at five rational x and five rational circle points for (cos 2x, sin 2x) taken as independent; five x values do suffice for a degree-4 polynomial identity in x after clearing x^4, but the check does not say so; that the late-time spectrum is (H/2 pi)^2 |alpha - beta|^2 (the z -> 0 limit of alpha u + beta u-bar) is not tested"
+  check_small_x_blue:
+    kind: exact
+    clauses: ["(ii) F(x) = (4/9) x^2 - (1/15) x^4 + (8/1575) x^6 + O(x^8)"]
+    omits: "exact Taylor coefficients of x^4 F from the closed form up to x^12; the coefficients of x^5 and x^7 in F are computed but not asserted zero; n_s - 1 -> +2 is the trivial log-derivative of x^2 and is not computed"
+  check_large_x_windows_not_red:
+    kind: partial
+    clauses: ["(iii) |A|^2 = 1 + 1/(4x^4) and the envelope", "(iv) windows with x_1 >= 3"]
+    omits: "|A|^2 = 1 + 1/(4x^4) is checked only at x = 3 and x = 10 and the envelope inequality (|A| - B)^2 <= F <= (|A| + B)^2 is used in the weaker form (1 -+ ...)^2 without being tested as stated; 'F -> 1 with oscillations of envelope x^-2' is not tested; (iv) is covered here only for x_1 >= 3 (the all-x_1 statement is check_every_window_not_red); the Planck numbers 0.0351 and 0.0042 are hard-coded"
+  check_every_window_not_red:
+    kind: exact
+    clauses: ["(iv) ln F(x_1) - ln F(e^7 x_1) < 7 x 0.0267 for every x_1 > 0"]
+    omits: "exact rational enclosures of F on (0,1], [1,3] (200 Taylor-enclosed cells) and [3, oo) with all four cases of (x_1, x_2 = e^7 x_1) treated, so no x_1 is left out; the coefficient bound |s_n| <= 3 2^n/(n-2)! is tested on the computed range n <= 30 only (tail ratio 1/15, factor 15/14), and the Lipschitz bound |G'| <= 6 on [1,3] is stated, not tested; the enclosures are tested for soundness against independent closed-form enclosures of F at x = 1/2, 1, at both ends of every grid cell and at x = 3; the required factor 1 + y + y^2/2 = 1.204365805 and the integer part 1096 of e^7 are pinned by hand; the closing sentence about no window carrying the measured band is a logical consequence"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the only sampled step is the closed form at rational points; (i) to (iv) are otherwise exact, and the model-dependent closing sentence is not computable. 2026-10-23 weak-checks: check_every_window_not_red now pins the required factor and floor(e^7) = 1096 (used in place of the typed 1096), tests the Taylor coefficient bound on the computed range, and tests every enclosure against independent point enclosures of F, so an unsound lower or upper bound fails"

@@ -1,0 +1,22 @@
+functions:
+  check_spectrum_and_unique_ground_state:
+    kind: exact
+    clauses: ["(i)"]
+    omits: ""
+  check_generator_outside_supplied_class:
+    kind: exact
+    clauses: ["preamble: 'which is not in the supplied class'"]
+    omits: "that every supplied generator commutes with every N_x is imported (premise) and shown only on one sample generator; non-membership follows exactly from [N0, hop] != 0 given it"
+  check_parity_and_marginals:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "'physical under the univalence rule' is a definitional consequence of definite parity, not computed; vanishing on the odd sector is tested on six odd operators and follows exactly from Gamma psi = -psi, which is checked"
+  check_boost_eigenvector_statements:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational 4 x 4 computations cover (i)-(iii) and the preamble; no function claims more than it asserts."

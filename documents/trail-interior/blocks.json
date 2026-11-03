@@ -1,0 +1,421 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "This trail goes inside a black hole, where the fall towards the centre becomes a passage of time. [[c:interior.kasner-form-interior]] Near the centre of a non-rotating black hole the geometry is of Kasner form: one direction stretches while the other two shrink, each as a fixed power of proper time. [[c:interior.kasner-form-interior]]\n\nAfter rescaling by the natural clock, the rotation-gauge field settles to three pure boosts with the Kasner weights, which generate exactly the Lorentz algebra $\\mathfrak{so}(1,3)$. [[c:interior.weighted-limit-theorem]] A cosmological constant leaves that limit unchanged. [[c:interior.schwarzschild-de-sitter-weighted-limit]]\n\nFor a rotating black hole the series' rule, that trouble arises where a quantity cannot be inverted, picks out exactly the singular ring. [[c:interior.complex-factorisation-location-ring]] The walk ends at the unstable inner horizon and at an open conjecture about the ring. [[t]]",
+  "hash": "78579dbdf7d2"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk starts with the non-rotating black hole, building from its Kasner form to the limit at the singularity, and then turns to the rotating black hole. [[t]]",
+  "hash": "f13d24c6f661"
+ },
+ {
+  "id": "s:interior",
+  "type": "section",
+  "title": "Inside the black hole",
+  "hash": "f54a9669bd9a"
+ },
+ {
+  "id": "i:interior",
+  "type": "framing",
+  "text": "Each step looks a little closer at the region inside the horizon, first without rotation and then with it. [[t]]",
+  "hash": "41b82a992042"
+ },
+ {
+  "id": "t:^>interior.kasner-form-interior",
+  "type": "transition",
+  "between": [
+   null,
+   "interior.kasner-form-interior"
+  ],
+  "text": "We begin with the shape of the geometry inside the horizon, where the radius $r$ runs like a clock. [[c:interior.kasner-form-interior]]\n\nIn proper time $\\tau$, with the singularity at $\\tau = 0$, the derived metric is synchronous and diagonal, and to leading order its scale factors obey \\[ \\sqrt{A} \\propto \\tau^{-1/3}, \\qquad r \\propto \\tau^{2/3} \\] [[c:interior.kasner-form-interior]] These are the Kasner exponents $(-\\tfrac13, \\tfrac23, \\tfrac23)$: one direction stretches while two shrink. [[c:interior.kasner-form-interior]]",
+  "hash": "dd2c0b326465"
+ },
+ {
+  "id": "c:interior.kasner-form-interior",
+  "type": "theorem",
+  "claim": "interior.kasner-form-interior@5",
+  "title": "Kasner form of the interior",
+  "text": "Inside a non-rotating black hole the roles of space and time swap, and the fall towards the centre becomes a passage of time. In the right time variable the gravitational field near the centre looks like a Kasner universe: one direction stretches while the other two shrink, each, to leading order, as a fixed power of time. This result gives those powers, minus one third and two thirds twice, together with the first corrections.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.imported-schwarzschild-curvature-spectrum"
+  ],
+  "hash": "fbe8e20a30ec",
+  "number": 1
+ },
+ {
+  "id": "t:interior.kasner-form-interior>interior.exact-parallelism-convergence-rate",
+  "type": "transition",
+  "between": [
+   "interior.kasner-form-interior",
+   "interior.exact-parallelism-convergence-rate"
+  ],
+  "text": "An observer falling towards the centre can carry a frame of reference directions along. [[c:interior.exact-parallelism-convergence-rate]]\n\nThe adapted frame is exactly parallel along the free-fall worldlines, at every $\\tau > 0$, so carrying it into the singularity is not an asymptotic question. [[c:interior.exact-parallelism-convergence-rate]] The expansion rates reach the Kasner exponents at the single rate $O(\\tau^{2/3})$, without oscillation. [[c:interior.exact-parallelism-convergence-rate]]",
+  "hash": "2a5308a7f8e0"
+ },
+ {
+  "id": "c:interior.exact-parallelism-convergence-rate",
+  "type": "theorem",
+  "claim": "interior.exact-parallelism-convergence-rate@5",
+  "title": "Exact parallelism, and the convergence rate",
+  "text": "Inside a non-rotating black hole, an observer falling towards the centre can carry a set of reference directions along. This result shows that a natural choice of such directions is carried along perfectly, with no drift at all, right up to the singularity. It also gives the exact rate at which the stretching and squeezing of space approach the idealised Kasner pattern, and shows that the approach is smooth, without oscillation.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.kasner-form-interior"
+  ],
+  "hash": "db192227f56b",
+  "number": 2
+ },
+ {
+  "id": "t:interior.exact-parallelism-convergence-rate>interior.interior-connection-exactly",
+  "type": "transition",
+  "between": [
+   "interior.exact-parallelism-convergence-rate",
+   "interior.interior-connection-exactly"
+  ],
+  "text": "With a parallel frame in hand, the rotation-gauge field can be written down exactly. [[t]]\n\nOn each unit tangential direction the field $\\Omega$ is a pure boost $B_i = e_0 \\wedge e_i$ at the expansion rate $\\sigma_i$, plus one rotation from the round spheres: \\[ \\Omega(e_1) = -\\sigma_1 B_1, \\qquad \\Omega(e_3) = -\\sigma_3 B_3 + \\frac{\\cot\\theta}{r}\\,R_{23} \\] [[c:interior.interior-connection-exactly]] Along the direction of fall it vanishes, $\\Omega(e_0) = 0$. [[c:interior.interior-connection-exactly]]",
+  "hash": "fbf5cc533e8e"
+ },
+ {
+  "id": "c:interior.interior-connection-exactly",
+  "type": "theorem",
+  "claim": "interior.interior-connection-exactly@7",
+  "title": "The interior connection, exactly",
+  "text": "This result writes down exactly how directions twist into one another as one moves about inside a non-rotating black hole. Along each direction the effect is a pure stretching, except for one extra rotation term that reflects the curvature of the spheres of fixed radius. That rotation term grows like one over the radius.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.exact-parallelism-convergence-rate"
+  ],
+  "hash": "b206b7cf654e",
+  "number": 3
+ },
+ {
+  "id": "t:interior.interior-connection-exactly>interior.weighted-limit-theorem",
+  "type": "transition",
+  "between": [
+   "interior.interior-connection-exactly",
+   "interior.weighted-limit-theorem"
+  ],
+  "text": "This is the central result about the approach to the singularity. [[c:interior.weighted-limit-theorem]]\n\nAfter Hubble normalisation, rescaling by the natural clock, the connection tends to \\[ -\\sum_i p_i\\, B_i \\otimes \\hat\\theta^i \\] three pure boosts weighted by the Kasner exponents $p_i$, for Schwarzschild and every admissible metric. [[c:interior.weighted-limit-theorem]] The scale tractor extends as a parallel section, and the boundary holonomy algebra is exactly $\\Lambda^2 W \\cong \\mathfrak{so}(1,3)$. [[c:interior.weighted-limit-theorem]]",
+  "hash": "4bcc7f2d28ad"
+ },
+ {
+  "id": "c:interior.weighted-limit-theorem",
+  "type": "theorem",
+  "claim": "interior.weighted-limit-theorem@5",
+  "title": "Weighted limit theorem",
+  "text": "This is the central result about the approach to the singularity of a non-rotating black hole, and of a wider class of similar singularities. After rescaling by the natural clock, the rules for carrying directions settle to a clean limit at the singularity: three pure stretchings with the Kasner weights, and nothing else. These generate exactly the algebra of Lorentz transformations, while the parts of the larger symmetry that caused obstructions elsewhere in the series receive nothing.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.boosts-generate-exactly-levi-factor",
+   "interior.covariant-form-vacuum-equations",
+   "interior.exact-parallelism-convergence-rate",
+   "interior.interior-connection-exactly",
+   "interior.kasner-form-interior",
+   "interior.metric-parallelism-trace-schouten-condition",
+   "interior.non-null-stabilisers-section-they-act",
+   "interior.scale-tractor-leaves-cone",
+   "interior.stabilisers-flat-model"
+  ],
+  "hash": "6189bf775580",
+  "number": 4
+ },
+ {
+  "id": "t:interior.weighted-limit-theorem>interior.schwarzschild-de-sitter-weighted-limit",
+  "type": "transition",
+  "between": [
+   "interior.weighted-limit-theorem",
+   "interior.schwarzschild-de-sitter-weighted-limit"
+  ],
+  "text": "A natural worry is whether that limit survives a cosmological constant. [[t]]\n\nIt does: near the centre the corrections are of order $\\Lambda\\tau^2$, below the $O(\\tau^{2/3})$ recovery rate, so the exponents, data and rate are unchanged. [[c:interior.schwarzschild-de-sitter-weighted-limit]] For $\\Lambda > 0$ the limit algebra lies in the reductive stabiliser $\\mathfrak{so}(1,4)$, a simplification rather than a complication. [[c:interior.schwarzschild-de-sitter-weighted-limit]]",
+  "hash": "66add90058c5"
+ },
+ {
+  "id": "c:interior.schwarzschild-de-sitter-weighted-limit",
+  "type": "theorem",
+  "claim": "interior.schwarzschild-de-sitter-weighted-limit@7",
+  "title": "Schwarzschild-de Sitter weighted limit",
+  "text": "A cosmological constant, the ingredient behind the accelerating expansion of the universe, changes a black hole's gravitational field only very slightly near its centre. This result shows that the limiting behaviour at the singularity is the same as without it, with the same powers and the same rates. The one change is algebraic, and it makes the picture simpler rather than more complicated.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.boosts-generate-exactly-levi-factor",
+   "interior.exact-parallelism-convergence-rate",
+   "interior.kasner-form-interior",
+   "interior.non-null-stabilisers-section-they-act",
+   "interior.scale-tractor-leaves-cone",
+   "interior.weighted-limit-theorem"
+  ],
+  "hash": "0f09b4791385",
+  "number": 5
+ },
+ {
+  "id": "t:interior.schwarzschild-de-sitter-weighted-limit>interior.complex-factorisation-location-ring",
+  "type": "transition",
+  "between": [
+   "interior.schwarzschild-de-sitter-weighted-limit",
+   "interior.complex-factorisation-location-ring"
+  ],
+  "text": "The walk now turns to rotating black holes. [[t]]\n\nIn the commuting subalgebra $\\R \\oplus \\R I$, with $I$ the pseudoscalar and $I^2 = -1$, the Kerr curvature is the Schwarzschild shape operator times the scale \\[ \\mathfrak{M} = -M\\,(r - Ia\\cos\\theta)^{-3} \\] [[c:interior.complex-factorisation-location-ring]] Its base fails to be invertible exactly on the ring $r = 0$, $\\theta = \\pi/2$, which is where the black hole is singular. [[c:interior.complex-factorisation-location-ring]]",
+  "hash": "733ac134ca09"
+ },
+ {
+  "id": "c:interior.complex-factorisation-location-ring",
+  "type": "theorem",
+  "claim": "interior.complex-factorisation-location-ring@5",
+  "title": "Complex factorisation and the location of the ring",
+  "text": "The curvature of a rotating black hole can be written as the curvature of a non-rotating one, with the radius replaced by a complex number built from the radius and the angle. The series' rule is that trouble arises where a quantity cannot be inverted. Applied to this complex number, the rule picks out exactly the ring where a rotating black hole is singular, and says that the disc spanning the ring is regular.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.exact-scale-decoupling",
+   "interior.imported-kerr-curvature"
+  ],
+  "hash": "96649bf7bfda",
+  "number": 6
+ },
+ {
+  "id": "t:interior.complex-factorisation-location-ring>interior.complex-scale-inverse-cube-killing-spinor",
+  "type": "transition",
+  "between": [
+   "interior.complex-factorisation-location-ring",
+   "interior.complex-scale-inverse-cube-killing-spinor"
+  ],
+  "text": "That scalar-plus-pseudoscalar scale turns out to be a well-known object. [[c:interior.complex-scale-inverse-cube-killing-spinor]]\n\nIt is the inverse cube of the Walker-Penrose Killing-spinor scalar, \\[ \\mathfrak M = -M\\,\\chi^{-3}, \\qquad \\chi = r - Ia\\cos\\theta \\] [[c:interior.complex-scale-inverse-cube-killing-spinor]] So going once around the ring, the curvature's duality phase turns $-3$ times as far as the spinor's. [[c:interior.complex-scale-inverse-cube-killing-spinor]]",
+  "hash": "d5ba5e81d82d"
+ },
+ {
+  "id": "c:interior.complex-scale-inverse-cube-killing-spinor",
+  "type": "theorem",
+  "claim": "interior.complex-scale-inverse-cube-killing-spinor@5",
+  "title": "The complex scale is the inverse cube of the Killing spinor",
+  "text": "A previous result produced a complex number that controls the curvature of a rotating black hole. This result shows that the number is, up to a cube and a constant, a well-known object: the Killing spinor behind Carter's hidden conserved quantity for orbits around a rotating black hole. Going once around the singular ring, the curvature's phase therefore turns three times as often as the spinor's, in the opposite sense.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.complex-factorisation-location-ring",
+   "interior.imported-kerr-curvature",
+   "interior.imported-walker-penrose-killing-spinor"
+  ],
+  "hash": "1cd4f6441f27",
+  "number": 7
+ },
+ {
+  "id": "t:interior.complex-scale-inverse-cube-killing-spinor>interior.filtration-cauchy-horizon-read-literature",
+  "type": "transition",
+  "between": [
+   "interior.complex-scale-inverse-cube-killing-spinor",
+   "interior.filtration-cauchy-horizon-read-literature"
+  ],
+  "text": "A rotating black hole also has an inner horizon, which established results show to be unstable: infalling radiation makes the curvature grow without limit there while the geometry stays continuous. [[c:interior.imported-mass-inflation-stability]]\n\nRead in the series' language, this is a type-N degeneration, the same class as at the centre of a non-rotating black hole, realised on a null hypersurface. [[c:interior.filtration-cauchy-horizon-read-literature]] Survival is ordered by derivative level: point-level structure extends, connection-level structure generically fails, proved in spherical symmetry and expected for Kerr. [[c:interior.filtration-cauchy-horizon-read-literature]]",
+  "hash": "1170162daa43"
+ },
+ {
+  "id": "c:interior.filtration-cauchy-horizon-read-literature",
+  "type": "theorem",
+  "claim": "interior.filtration-cauchy-horizon-read-literature@7",
+  "title": "The filtration at the Cauchy horizon, read from the literature",
+  "text": "The inner horizon of a rotating black hole is known to be unstable: perturbations make the strength of the gravitational field blow up there, although the field itself stays continuous. This result translates those established findings into the series' language. It finds the same kind of breakdown as at the centre of a non-rotating black hole, one that generically hits the rules for comparing directions but not the field itself (proved in the spherically symmetric case and expected for rotating holes), and it places the divergence where the framework expects it.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.imported-mass-inflation-stability",
+   "interior.stabilisers-flat-model",
+   "singularity.type-n-only-type-n"
+  ],
+  "hash": "a8db97879a72",
+  "number": 8
+ },
+ {
+  "id": "t:interior.filtration-cauchy-horizon-read-literature>interior.duality-monodromy-fibration-over-ring",
+  "type": "transition",
+  "between": [
+   "interior.filtration-cauchy-horizon-read-literature",
+   "interior.duality-monodromy-fibration-over-ring"
+  ],
+  "text": "The walk ends with an open problem rather than a result. [[t]]\n\nSince the curvature's phase winds around the ring, the conjecture is that the completion's exceptional structure over the ring is a duality-monodromy fibration, whose structure group contains the duality circle. [[c:interior.duality-monodromy-fibration-over-ring]] The winding number three of the Kerr scale would be an invariant of that fibration; it is posed, not proved. [[c:interior.duality-monodromy-fibration-over-ring]]",
+  "hash": "721da33c5d1a"
+ },
+ {
+  "id": "c:interior.duality-monodromy-fibration-over-ring",
+  "type": "conjecture",
+  "claim": "interior.duality-monodromy-fibration-over-ring@5",
+  "title": "Duality-monodromy fibration over the ring",
+  "text": "Going once around the ring singularity of a rotating black hole, the complex phase of the curvature turns three times. The conjecture is that this twisting is the visible trace of a larger geometric structure attached to the ring, a bundle whose twisting links the different sheets of the black hole's extended spacetime. It is posed as an open problem, not proved.",
+  "gap": false,
+  "level": "lay",
+  "hash": "e43328caa349",
+  "number": 9
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:interior.boosts-generate-exactly-levi-factor",
+  "type": "fact",
+  "claim": "interior.boosts-generate-exactly-levi-factor@4",
+  "title": "The boosts generate exactly the Levi factor",
+  "text": "Among the symmetries of the series' six-dimensional ambient space, take the three boosts, the transformations that change velocity along each spatial axis. Repeatedly combining them produces exactly the six Lorentz transformations of ordinary spacetime and nothing else. In particular, boosts alone never generate a translation or a rescaling.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.boosts-generate-exactly-levi-factor, version 4 (T06 Lem 5.4)",
+  "hash": "41df54366334",
+  "number": 10
+ },
+ {
+  "id": "c:interior.covariant-form-vacuum-equations",
+  "type": "fact",
+  "claim": "interior.covariant-form-vacuum-equations@5",
+  "title": "Covariant form of the vacuum equations",
+  "text": "In the interior region, Einstein's equations for empty space can be recast as a single condition on the gravitational fields: a particular marker in the six-dimensional conformal extension of spacetime, attached to the physical scale, must stay constant as it is carried from point to point by a gauge field built from gravity. This result proves that the two formulations are exactly equivalent, and that the marker is a null (lightlike) object. It also notes that merely having some constant marker of this kind is a weaker condition that does not by itself give the field equations.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.covariant-form-vacuum-equations, version 5 (T06 Thm 4.5)",
+  "hash": "e8bd2e5ff2bc",
+  "number": 11
+ },
+ {
+  "id": "c:interior.exact-scale-decoupling",
+  "type": "fact",
+  "claim": "interior.exact-scale-decoupling@4",
+  "title": "Exact scale decoupling",
+  "text": "Near a Schwarzschild black hole the tidal curvature has a fixed pattern: stretching in one pair of directions and squeezing in the others, in a two-to-one ratio. This result shows the pattern is exactly the same at every radius, all the way in towards the singularity. Only its overall strength, which grows like the inverse cube of the radius, changes.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.exact-scale-decoupling, version 4 (T06 Prop 3.3)",
+  "hash": "b53622f41d8b",
+  "number": 12
+ },
+ {
+  "id": "c:interior.imported-kerr-curvature",
+  "type": "fact",
+  "claim": "interior.imported-kerr-curvature@2",
+  "title": "Imported: the Kerr curvature",
+  "text": "This is the standard description of the strength of the gravitational field around a rotating black hole, the quantity that plays the part of spacetime curvature, written in the language of geometric algebra on a flat background. The strength of the curvature is controlled by a single complex number built from the radius and the angle from the rotation axis. The result is taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003)., Ch.~14; B. Carter, Global structure of the Kerr family of gravitational fields, Phys. Rev. 174 (1968), 1559--1571.",
+  "hash": "957bfa9daf89",
+  "number": 13
+ },
+ {
+  "id": "c:interior.imported-mass-inflation-stability",
+  "type": "fact",
+  "claim": "interior.imported-mass-inflation-stability@3",
+  "title": "Imported: mass inflation and $C^0$ stability",
+  "text": "The inner horizon of a charged or rotating black hole is unstable. Radiation falling in piles up there and the strength of the gravitational field grows without limit, yet the field itself remains continuous and an infalling object is stretched only by a finite amount. These are established results of mathematical relativity taken from the literature; for rotating black holes part of the picture is still conjectural.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "E. Poisson and W. Israel, Internal structure of black holes, Phys. Rev. D 41 (1990), 1796--1809.; M. Dafermos and J. Luk, The interior of dynamical vacuum black holes I: the $C^0$-stability of the Kerr Cauchy horizon, preprint, arXiv:1710.01722 (2017).; J. Luk and S.-J. Oh, Strong cosmic censorship in spherical symmetry for two-ended asymptotically flat initial data I. The interior of the black hole region, Ann. of Math. (2) 190 (2019), 1--111.; J. Luk and S.-J. Oh, Strong cosmic censorship in spherical symmetry for two-ended asymptotically flat initial data II. The exterior of the black hole region, Ann. PDE 5 (2019), Art. 6.; A. Ori, Inner structure of a charged black hole: an exact mass-inflation solution, Phys. Rev. Lett. 67 (1991), 789--792.",
+  "hash": "63c040b2cab3",
+  "number": 14
+ },
+ {
+  "id": "c:interior.imported-schwarzschild-curvature-spectrum",
+  "type": "fact",
+  "claim": "interior.imported-schwarzschild-curvature-spectrum@6",
+  "title": "Imported: the Schwarzschild curvature spectrum",
+  "text": "The tidal part of the gravitational field strength around a non-rotating black hole has a simple form: one pair of planes feels a stretching or squeezing of one strength, and the four remaining mixed planes feel half that strength with the opposite sign. This standard result is restated from earlier work in the series.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.imported-schwarzschild-curvature-spectrum, version 6 (T06 Fact 2.2)",
+  "hash": "1c5f5f334706",
+  "number": 15
+ },
+ {
+  "id": "c:interior.imported-walker-penrose-killing-spinor",
+  "type": "fact",
+  "claim": "interior.imported-walker-penrose-killing-spinor@2",
+  "title": "Imported: the Walker-Penrose Killing spinor",
+  "text": "Rotating black holes have a hidden symmetry, which gives orbits an extra conserved quantity discovered by Carter. That symmetry comes from a special spinor field, whose basic invariant is a simple complex combination of the radius and the angle. This is a classical result taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "M. Walker and R. Penrose, On quadratic first integrals of the geodesic equations for type $22$ spacetimes, Commun. Math. Phys. 18 (1970), 265--274.; B. Carter, Global structure of the Kerr family of gravitational fields, Phys. Rev. 174 (1968), 1559--1571.",
+  "hash": "fa00d00e3fec",
+  "number": 16
+ },
+ {
+  "id": "c:interior.metric-parallelism-trace-schouten-condition",
+  "type": "fact",
+  "claim": "interior.metric-parallelism-trace-schouten-condition@6",
+  "title": "Metric parallelism, and the trace of the Schouten condition",
+  "text": "This lemma records two elementary facts behind the tractor form of the gravitational field equations. First, the natural derivative on the tractor bundle, which on flat spacetime is a field of rotations of the six-dimensional conformal model, respects that model's own notion of length. Second, if the Schouten tensor, a rearranged form of the gravitational field strength, is a multiple of the metric then the field is Einstein, and the Schouten tensor vanishes exactly when the Ricci curvature does.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.metric-parallelism-trace-schouten-condition, version 6 (T06 Lem 4.2)",
+  "hash": "d3a71df802f4",
+  "number": 17
+ },
+ {
+  "id": "c:interior.non-null-stabilisers-section-they-act",
+  "type": "fact",
+  "claim": "interior.non-null-stabilisers-section-they-act@4",
+  "title": "Non-null stabilisers, and the section they act on",
+  "text": "In the series' six-dimensional ambient space, pick a direction whose squared length is not zero. The symmetries that leave it fixed are those of de Sitter space if the squared length is positive, or of anti-de Sitter space if it is negative. A natural slice of the space of points is then exactly that de Sitter or anti-de Sitter spacetime, and its boundary at infinity is spacelike or timelike accordingly.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.non-null-stabilisers-section-they-act, version 4 (T06 Prop 4.4)",
+  "hash": "45a71d748063",
+  "number": 18
+ },
+ {
+  "id": "c:interior.scale-tractor-leaves-cone",
+  "type": "fact",
+  "claim": "interior.scale-tractor-leaves-cone@7",
+  "title": "$\\Lambda \\neq 0$: the scale tractor leaves the cone",
+  "text": "Einstein's equations with a cosmological constant can be written as the statement that one vector of the six-dimensional conformal model, the scale tractor, is unchanged as the gravitational gauge fields carry it from point to point. Its squared length turns out to be the cosmological constant divided by three. With no cosmological constant it has zero length, and any nonzero cosmological constant moves it off the cone of zero-length directions.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.scale-tractor-leaves-cone, version 7 (T06 Thm 4.7)",
+  "hash": "85b0d988091e",
+  "number": 19
+ },
+ {
+  "id": "c:interior.stabilisers-flat-model",
+  "type": "fact",
+  "claim": "interior.stabilisers-flat-model@5",
+  "title": "Stabilisers in the flat model",
+  "text": "In the flat model of the series' six-dimensional ambient space, the point at infinity is a direction of zero length. The symmetries that fix it are exactly those of flat spacetime, Lorentz transformations and translations, ten in all, with one extra rescaling if only its direction must be kept. The translations act as shears that tilt everything towards the point at infinity, and they are the same shears that block the naive way of dividing by zero.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.stabilisers-flat-model, version 5 (T06 Prop 4.3)",
+  "hash": "c9d85a4e38d4",
+  "number": 20
+ },
+ {
+  "id": "c:singularity.type-n-only-type-n",
+  "type": "fact",
+  "claim": "singularity.type-n-only-type-n@5",
+  "title": "Type N, and only type N",
+  "text": "At the centre of a non-rotating black hole one direction of the geometry collapses, and this result identifies which kind of algebraic obstruction that is in the series' classification. It is the kind caused by a direction with no partner to pair with. The other substantive kind, which would need the algebra to split into independent pieces, cannot occur for the algebra of spacetime, and a third kind is present but harmless. So the repair that applies is the one that supplies the missing partner by enlarging the algebra.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim singularity.type-n-only-type-n, version 5 (T05 Prop 3.1)",
+  "hash": "3c0905ad1d12",
+  "number": 21
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "The thread runs from the Kasner form of the non-rotating interior, through a parallel frame and an exact connection, to the limit at the singularity, and then carries the same invertibility rule into the rotating case. [[t]]\n\nNo postulate of the series enters this walk; its rotating part rests on imported results, namely the Kerr curvature, its Killing spinor and the instability of its inner horizon. [[t]] The inner-horizon step inherits the parts of that literature that are still conjectural for rotating black holes. [[c:interior.imported-mass-inflation-stability]]",
+  "hash": "4deda8c37c44"
+ }
+]

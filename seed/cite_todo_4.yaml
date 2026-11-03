@@ -1,0 +1,154 @@
+correspondence.chiral-planes-summand-spaces:
+  main:
+  - correspondence.chirality-split-ordering-insensitivity-asd-sector
+correspondence.local-twistor-transport-ascended-spinor-connection:
+  main:
+  - correspondence.fock-model-complexified-ascended-algebra
+  standard-route:
+  - correspondence.imported-tractor-connection-local-twistor-transport-external
+correspondence.no-real-lorentzian-vacuum-half-flat:
+  main:
+  - interior.exact-scale-decoupling
+  - interior.imported-kerr-curvature
+correspondence.reality-conjugation-twistor-form-factor:
+  main:
+  - correspondence.fock-model-complexified-ascended-algebra
+correspondence.spinor-identification:
+  main:
+  - correspondence.imported-forced-completion-fibre-quadric
+hawking.bose-einstein-occupancy-quantified-window-corrections:
+  main:
+  - hawking.i-state
+  - hawking.imported-s-wave-bosonic-sector
+hawking.homogeneity-ordering-shift:
+  main:
+  - hawking.imported-penrose-transform
+hawking.i-state-continuum:
+  main:
+  - hawking.imported-ideal-fermi-gas-uniqueness
+one-relation.arrow-frequency-are-one-bit-level:
+  main:
+  - one-relation.one-datum-not-two-imaginary-unit
+one-relation.overlap-table-sorted:
+  main:
+  - correspondence.clifford-side-ordering-shift
+  - dark-energy.acoustic-no-go-one-way-grip
+  - dark-energy.lift-inherits-no-go-steps-itemised
+  - one-relation.imported-completion-ladder
+  - one-relation.imported-single-mode-thermality-modular-period
+  - one-relation.two-capacities-three-consequences
+  - standard-model.pair-count-dimension
+one-relation.record-chain-votes-measurement-without-collapse:
+  main:
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+  - dark-matter.orientation-arrow-seventeenth-refutation
+  - one-relation.measure-indifference-borns-rule-located
+  - standard-model.trichotomy-what-kind-number
+one-relation.schr-odinger-slow-shadow:
+  main:
+  - one-relation.imported-condensate-derived-content
+one-relation.spacetime-manifold-vacuum-lines:
+  main:
+  - one-relation.two-presentations
+  - sheaf.localised-transport
+  - sheaf.one-sided-completion
+  - sheaf.one-sided-completion-singularity
+one-relation.two-capacities-three-consequences:
+  main:
+  - one-relation.two-presentations
+one-relation.two-presentations:
+  main:
+  - one-relation.imported-pure-spinors-incidence-chart
+rungs.r-s-are-one-hypothesis-two:
+  main:
+  - rungs.imported-fock-representation-bogoliubov-group
+simulations.confinement-scale-does-not-matter:
+  main:
+  - simulations.effective-cross-section-sheet-matter
+  - simulations.imported-low-energy-scattering-two-dimensions
+singularity.area-law-test:
+  main:
+  - singularity.causal-epoch-computed-exactly
+singularity.cones-fold:
+  main:
+  - singularity.degeneration-exactly
+  - singularity.non-removability-invariant-argument
+singularity.eviction-window-thermal-product-radiation-entropy:
+  main:
+  - singularity.no-attic-derived-model
+singularity.exact-equilibrium-over-determines-boundary-modes:
+  main:
+  - singularity.deficit-theorem-cost-descent-exactly
+singularity.matching-steps-4b-4c-join-equation:
+  main:
+  - sheaf.localised-transport
+  - sheaf.one-sided-completion
+  - singularity.degeneration-exactly
+  - singularity.pseudo-inverse-identities-hyperbolic-atom
+singularity.modular-structure-completed-pair:
+  main:
+  - singularity.pseudo-inverse-identities-hyperbolic-atom
+singularity.p-reduced-metric-level-reading-many:
+  main:
+  - singularity.imported-one-sided-completion-singularity
+singularity.plane-rate:
+  main:
+  - singularity.computed
+singularity.transport-schwarzschild-fibre:
+  main:
+  - transport.swap-rescale-normal-form
+singularity.two-levels-finite-model:
+  main:
+  - singularity.p-reduced-metric-level-reading-many
+  - singularity.parity-protection
+singularity.type-n-only-type-n:
+  main:
+  - tower.rigidity-clock-frozen
+singularity.what-event-returns-radiation:
+  main:
+  - singularity.purity-correlation-transfer-recovery
+singularity.why-calibration-cannot-be-internal:
+  main:
+  - singularity.connection-bivector-computed
+  - transport.transport-algorithm
+three-routes.base-unipotents-their-action-candidates:
+  main:
+  - three-routes.imported-boundary-gram-ladder
+three-routes.change-transversal-canonical-isomorphism-completions:
+  main:
+  - three-routes.imported-collar-data-coupling
+  - three-routes.radical-gauge-closes-solve
+three-routes.class-relative-no-go:
+  main:
+  - sheaf.function-linearity-tame-constructions
+three-routes.it-sheaf-risk-resolves-into-standing:
+  main:
+  - sheaf.function-linearity-tame-constructions
+  - three-routes.imported-collar-data-coupling
+three-routes.no-equivariant-value-boundary:
+  main:
+  - three-routes.change-transversal-canonical-isomorphism-completions
+  - three-routes.imported-collar-data-coupling
+three-routes.radical-gauge-closes-solve:
+  main:
+  - three-routes.imported-boundary-gram-ladder
+three-routes.stalks-are-pointwise-metric-levels:
+  main:
+  - sheaf.function-linearity-tame-constructions
+  - singularity.descent-parity-average
+three-routes.support-preserving-families-quantise-without-hopping:
+  main:
+  - three-routes.function-linear-maps-preserve-supports
+tower.answers-iteration-question:
+  main:
+  - tower.algebraic-limit-even-charge
+  - tower.car-limit-even-charge
+  - tower.rigidity-clock-frozen
+tower.compatibility-connecting-maps-transported:
+  main:
+  - tower.commuting-copies
+tower.structure-tower-c-norms:
+  main:
+  - tower.algebraic-limit-even-charge
+  - tower.commuting-copies
+  - tower.compatibility-connecting-maps-transported

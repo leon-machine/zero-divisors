@@ -1,0 +1,48 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{4}{Setting and imports}{section.2}{}}
+\newlabel{eq:tractormetric}{{1}{4}{Setting and imports}{equation.2.1}{}}
+\newlabel{fact:frozen}{{2.1}{4}{imported: the frozen point and the tractor connection}{theorem.2.1}{}}
+\newlabel{eq:tractorconn}{{2}{4}{imported: the frozen point and the tractor connection}{equation.2.2}{}}
+\newlabel{fact:thomas}{{2.2}{5}{imported: the Thomas operator}{theorem.2.2}{}}
+\newlabel{fact:chart}{{2.3}{5}{imported: the flat model, the twistor chart, and the infinity twistor}{theorem.2.3}{}}
+\newlabel{fact:palatial}{{2.4}{6}{imported: the palatial quadratics and the homogeneity charge}{theorem.2.4}{}}
+\newlabel{fact:action}{{2.5}{6}{imported: the action of the frozen point}{theorem.2.5}{}}
+\newlabel{fact:dixmier}{{2.6}{6}{imported: the unitary representations of the de Sitter group}{theorem.2.6}{}}
+\newlabel{lem:invforms}{{2.7}{6}{Invariant forms on a simple Lie algebra}{theorem.2.7}{}}
+\newlabel{sec:dictionary}{{3}{7}{The mass-weight dictionary}{section.3}{}}
+\newlabel{thm:dictionary}{{3.1}{7}{The mass-weight dictionary}{theorem.3.1}{}}
+\newlabel{eq:dictionary}{{3}{7}{The mass-weight dictionary}{equation.3.3}{}}
+\newlabel{cor:series}{{3.2}{7}{The weight polynomial and the two series}{theorem.3.2}{}}
+\newlabel{eq:principal}{{4}{8}{The weight polynomial and the two series}{equation.3.4}{}}
+\newlabel{rem:sign}{{3.3}{8}{Conventions and the sign}{theorem.3.3}{}}
+\newlabel{rem:hierarchy}{{3.4}{8}{What the dictionary does and does not yield}{theorem.3.4}{}}
+\newlabel{rem:plain}{{3.5}{8}{Point of contact: the dictionary in plain words}{theorem.3.5}{}}
+\newlabel{sec:area}{{4}{9}{Mass as symplectic area}{section.4}{}}
+\newlabel{prop:area}{{4.1}{9}{Mass as symplectic area: the two-twistor formula}{theorem.4.1}{}}
+\newlabel{eq:area}{{5}{9}{Mass as symplectic area: the two-twistor formula}{equation.4.5}{}}
+\newlabel{rem:vacua}{{4.2}{9}{Point of contact: the angle between two vacua}{theorem.4.2}{}}
+\newlabel{fig:twolanguages}{{1}{10}{One grip, two readings. Left: the dictionary of Theorem \ref {thm:dictionary}: a field's mass is its conformal weight read against the frozen point's length, the one scale the theory contains. Right: the area formula of Proposition \ref {prop:area}: a composite's mass is the symplectic area by which its constituents' spinor parts fail to align; aligned constituents give a null composite. The link is Theorem \ref {thm:grip}: at $\Lambda = 0$ the bracket is the pairing of the composite against the frozen point, $m^{2} = 2|\ip {I}{Z^{1}\wedge Z^{2}}|^{2}$, and for $\Lambda \neq 0$ the composite's grip on the frozen point has squared length $2|B_{\Lambda }|^{2} + (\Lambda /3)\,C$. Both panels read the same object, the frozen point; the dictionary then assigns a composite heavier than $3H/2$ the weight $w = -\tfrac 32 \pm i\nu $ with $\nu \approx m/H$ (Proposition \ref {prop:weight})}{figure.1}{}}
+\newlabel{sec:join}{{5}{10}{The exact join}{section.5}{}}
+\newlabel{lem:dsscale}{{5.1}{10}{The de Sitter scale and its frozen point}{theorem.5.1}{}}
+\newlabel{rem:nullity}{{5.2}{12}{What nullity fixes}{theorem.5.2}{}}
+\newlabel{eq:realslice}{{6}{12}{What nullity fixes}{equation.5.6}{}}
+\newlabel{lem:chartiso}{{5.3}{13}{The chart form of the spin isomorphism}{theorem.5.3}{}}
+\newlabel{eq:hermitian}{{7}{13}{The grip of a composite on the frozen point}{equation.5.7}{}}
+\newlabel{eq:moment}{{8}{13}{The grip of a composite on the frozen point}{equation.5.8}{}}
+\newlabel{def:grip}{{5.4}{14}{The grip, and the mass of a composite}{theorem.5.4}{}}
+\newlabel{lem:real}{{5.5}{14}{The grip is real}{theorem.5.5}{}}
+\newlabel{eq:gram}{{9}{15}{The grip of a composite on the frozen point}{equation.5.9}{}}
+\newlabel{thm:grip}{{5.6}{15}{The exact join}{theorem.5.6}{}}
+\newlabel{eq:blambda}{{10}{15}{The exact join}{equation.5.10}{}}
+\newlabel{eq:grip}{{11}{15}{The exact join}{equation.5.11}{}}
+\newlabel{prop:casimir}{{5.7}{17}{The Casimir form of the join}{theorem.5.7}{}}
+\newlabel{lem:five}{{5.8}{18}{The five broken generators}{theorem.5.8}{}}
+\newlabel{prop:weight}{{5.9}{19}{The weight of a composite}{theorem.5.9}{}}
+\newlabel{eq:weight}{{12}{19}{The weight of a composite}{equation.5.12}{}}
+\newlabel{rem:join}{{5.10}{19}{What the join says}{theorem.5.10}{}}
+\newlabel{rem:quantum}{{5.11}{20}{Quantisation and ordering}{theorem.5.11}{}}
+\newlabel{sec:gravity}{{6}{20}{What gravity is, and what remains}{section.6}{}}
+\newlabel{rem:gravity}{{6.1}{20}{Point of contact: what gravity is, and why everything falls the same way}{theorem.6.1}{}}
+\newlabel{sec:scope}{{6}{20}{The levels of the results}{section*.3}{}}
+\newlabel{sec:position}{{7}{21}{Position in the series}{section.7}{}}
+\newlabel{sec:verification}{{8}{22}{Machine verification}{section.8}{}}

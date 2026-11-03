@@ -1,0 +1,12 @@
+functions:
+  check_boost_maps_lines_and_fixes_ascent:
+    kind: sampled
+    clauses: [(i)]
+    omits: Exact 8x8 Gaussian-rational matrices, but only three boost rotors (e^lambda = 4, 9, 4/9) and four points x; the general lambda and x are the Clifford identity, not enumerated.
+  check_boost_stationary_section:
+    kind: sampled
+    clauses: [(ii), (iii), (iv)]
+    omits: (ii) at two (u, v) and three (lambda, mu); (iii) at three orbits with six boosts each (the segments contain f(|Q|) and collapse at |u| = |v|), not the existence of boost-constant sections nor e^{-beta} = |Q| as a derived consequence; (iv) checks that the stated vacuum has <N> = f(|Q|) and the stated purity at three points, not that these are the only such vacua, nor that |u| = |v| is the only pure case; (v) beta = -ln|Q| and the 2 pi hyperboloid are not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Checks reproduce (i), the occupation formula, the collapse of the segment at |u| = |v| and the purity formula as exact pinned values at sample points; uniqueness, existence and (v) are not tested.'}
+untouched_premises:
+  std-algebra.bivector-exponential: "standard algebra cited in the proof; the check computes the statement directly"

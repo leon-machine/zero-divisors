@@ -1,0 +1,21 @@
+functions:
+  check_rule_one_blocks_exceed_dim_a:
+    kind: sampled
+    clauses:
+    - 'there is no unital algebra homomorphism Cl(p+1,q+1) -> A (via: every Wedderburn block of B exceeds dim A)'
+    omits: All 15 signatures with n <= 4 only; computes the block dimensions (4 dim A, or 2 dim A when split) and the Morita form for n <= 3, but the step "all blocks larger than dim A implies no unital homomorphism" is not itself computed; the final sentences on the conditional expectation are interpretive
+  check_rule_two_block_exceeds_dim_a:
+    kind: sampled
+    clauses:
+    - no unital homomorphism Mat_2(Cl^0(p,q)) -> A for p - q = 1 mod 4 (Rule-2 ascent has one block of dimension 2 dim A)
+    omits: The six type-C signatures with n <= 5 and both signs of gamma; dimension count only
+  check_ideals_are_blocks:
+    kind: sampled
+    clauses:
+    - (kernel step) in a simple algebra every nonzero two-sided ideal is everything; in a split one the ideal of an eps_+ element is eps_+ A
+    omits: Six algebras with a few sample elements; supports the proof step, not a clause of the statement
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks verify the dimension count behind the non-existence of a unital homomorphism for n <= 4 (Rule 1) and n <= 5 (Rule 2); the non-existence itself follows from the cited block argument. 2026-10-23 weak-checks pass: check_ideals_are_blocks now asserts that eps_+ = (1 + omega)/2 is a central idempotent on the split signatures"

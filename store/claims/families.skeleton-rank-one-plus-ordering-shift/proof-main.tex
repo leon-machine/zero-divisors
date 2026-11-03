@@ -1,0 +1,20 @@
+Write $\hat\Omega_{k} = \sum_{pq}\Theta_{k}[p,q]\,a_{p}a_{q}$ with $\Theta_{k} = \tfrac12(E_{k} \otimes \varepsilon)$ symmetric and real, and put $\omega_{k} = \langle\hat\Omega_{k}\rangle = \mathrm{tr}(\Theta_{k}M)$. By Wick's theorem (Fact \claimref{families.imported-squeezed-vacuum-bosonic-pairing}), using the symmetry of $\Theta_{l}$ to merge the two $NN$ terms,
+\[
+\langle\hat\Omega_{k}^{\dagger}\hat\Omega_{l}\rangle = 2\,\mathrm{tr}\bigl(\Theta_{k}N\Theta_{l}N^{\mathsf{T}}\bigr) + \bar\omega_{k}\omega_{l}, \qquad
+\langle\hat\Omega_{l}\hat\Omega_{k}^{\dagger}\rangle = 2\,\mathrm{tr}\bigl(\Theta_{l}(\mathbb{1}+N^{\mathsf{T}})\Theta_{k}(\mathbb{1}+N)\bigr) + \omega_{l}\bar\omega_{k},
+\]
+so that
+\[
+H_{kl} \;=\; \bar\omega_{k}\omega_{l} + \mathrm{tr}(\Theta_{l}\Theta_{k}) + \mathrm{tr}(\Theta_{k}\Theta_{l}N^{\mathsf{T}}) + \mathrm{tr}(\Theta_{l}\Theta_{k}N) + 2\,\mathrm{tr}(\Theta_{k}N\Theta_{l}N^{\mathsf{T}}),
+\]
+four pieces. Insert the Gaussian data of Proposition \claimref{families.rigidity-pairing-sector-one-event}: $N = s^{2}\,\overline{R} \otimes \mathbb{1}$, $N^{\mathsf{T}} = s^{2}\,R \otimes \mathbb{1}$ with $R = \mathbb{1} - \bar{n}n^{\mathsf{T}}$, and $\omega_{k} = 2sc\,n_{k}$. Every trace factorises over the tensor product, with $\mathrm{tr}(\varepsilon\varepsilon) = -2$ on the spinor factor, and on the family factor the only identities needed are $E_{k}E_{l} = e_{l}e_{k}^{\mathsf{T}} - \delta_{kl}\mathbb{1}$ (from $\sum_{j}\varepsilon_{kij}\varepsilon_{ljm} = \delta_{km}\delta_{il} - \delta_{kl}\delta_{im}$), hence $\mathrm{tr}(E_{k}E_{l}) = -2\delta_{kl}$ and $\mathrm{tr}(E_{k}E_{l}X) = X_{kl} - \delta_{kl}\,\mathrm{tr}X$, and $n^{\mathsf{T}}E_{k}n = 0$ (antisymmetry). The pieces:
+\begin{align*}
+\mathrm{tr}(\Theta_{l}\Theta_{k}) &= \tfrac14\,\mathrm{tr}(E_{l}E_{k})\,\mathrm{tr}(\varepsilon\varepsilon) = \delta_{kl},\\
+\mathrm{tr}(\Theta_{k}\Theta_{l}N^{\mathsf{T}}) + \mathrm{tr}(\Theta_{l}\Theta_{k}N) &= -\tfrac{s^{2}}{2}\bigl[\mathrm{tr}(E_{k}E_{l}R) + \mathrm{tr}(E_{l}E_{k}\overline{R})\bigr]\\
+&= -\tfrac{s^{2}}{2}\bigl[(R_{kl} - 2\delta_{kl}) + (\overline{R}_{lk} - 2\delta_{kl})\bigr] = s^{2}\delta_{kl} + s^{2}\,\bar{n}_{k}n_{l},\\
+2\,\mathrm{tr}(\Theta_{k}N\Theta_{l}N^{\mathsf{T}}) &= -s^{4}\,\mathrm{tr}(E_{k}\overline{R}E_{l}R)\\
+&= -s^{4}\bigl[-2\delta_{kl} - (n_{l}\bar{n}_{k} - \delta_{kl}) - (\bar{n}_{k}n_{l} - \delta_{kl}) + (n^{\mathsf{T}}E_{k}n)(\bar{n}^{\mathsf{T}}E_{l}\bar{n})\bigr]\\
+&= 2s^{4}\,\bar{n}_{k}n_{l},\\
+\bar\omega_{k}\omega_{l} &= 4s^{2}c^{2}\,\bar{n}_{k}n_{l},
+\end{align*}
+using $\mathrm{tr}\,R = 2$, $\overline{R}_{lk} = R_{kl}$, and in the third line the expansion of $\overline{R} = \mathbb{1} - n\bar{n}^{\mathsf{T}}$ and $R = \mathbb{1} - \bar{n}n^{\mathsf{T}}$ into four traces. Summing, $H_{kl} = (1 + s^{2})\delta_{kl} + (s^{2} + 2s^{4} + 4s^{2}c^{2})\,\bar{n}_{k}n_{l} = c^{2}\delta_{kl} + x(5 + 6x)\,\bar{n}_{k}n_{l}$ with $c^{2} = 1 + x$, which is \eqref{eq:H}; the heavy eigenvalue is $1 + x + 5x + 6x^{2}$ and the trace is $3(1+x) + 5x + 6x^{2}$. The normal-ordered form is the first and last pieces of $\langle\hat\Omega_{k}^{\dagger}\hat\Omega_{l}\rangle$ alone, $2s^{4}\bar{n}_{k}n_{l} + 4s^{2}c^{2}\bar{n}_{k}n_{l} = 2x(2+3x)\,\bar{n}_{k}n_{l}$, rank one, which is clause (1); the ordering term is the remainder, $c^{2}\delta_{kl} + x\bar{n}_{k}n_{l}$, whose restriction to the light plane is $c^{2}$, clause (2); and clause (3) is the statement that \eqref{eq:H} depends on the pairing only through $r$ and the ray $n$. The script evaluates the four pieces and their sum in exact cyclotomic arithmetic, from the Wick formula and the Gaussian data, at rational hyperbolic points $(s, c) = (\tfrac34, \tfrac54), (\tfrac{12}{5}, \tfrac{13}{5})$, feeding ratios $\lambda \in \{0, \tfrac34, \tfrac43\}$ (chosen so that $|a|$ is rational) and channel phases $e^{i\chi} \in \{1, \zeta, \zeta^{2}\}$, and confirms each piece against its closed form and the total against \eqref{eq:H}; the trace and eigenvalue identities are checked as rational-function identities in $x$.

@@ -1,0 +1,18 @@
+functions:
+  check_global_purity_and_pure_radiation_at_completion:
+    kind: sampled
+    clauses: ["(1) the global state is pure at every stage", "(1) at completion the radiation alone carries it: S(R_all) = 0"]
+    omits: "six pair-parameter sets; purity of the global state is checked as norm 1 plus equal sector purities at two stages, not every stage; larger instances ('the script runs larger ones') are outside this check"
+  check_pair_coherence_damped_by_visibility:
+    kind: sampled
+    clauses: ["(2) the (R_1, L_1) marginal has coherence c_1 s_1 gamma, gamma = c_2^2 - s_2^2", "(2) its Renyi-2 purity is c_1^4 + s_1^4 + 2 c_1^2 s_1^2 gamma^2, below 1"]
+    omits: "six pair-parameter sets (including gamma < 0 and gamma near 0), exact rational values; not a symbolic identity in c_1, s_1, c_2, s_2"
+  check_correlators_carry_the_gate_pattern:
+    kind: sampled
+    clauses: ["(3) <X_R1 X_L1> = 2 c_1 s_1 gamma and <X_R1 X_L1 Z_L2> = 2 c_1 s_1", "every single-qubit state is identically thermal"]
+    omits: "six parameter sets; 'the pattern of applied gates is determined by multi-qubit correlators' is shown by the exchange of the two correlator values between the gated and ungated histories, not as a decoding statement for general gates"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "all three clauses are tested in the minimal instance at six parameter sets with exact rationals"

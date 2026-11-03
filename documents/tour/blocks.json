@@ -1,0 +1,1581 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "A null vector, nonzero but with square zero, can never be divided by, even inside a larger algebra. [[c:transport.noinverse]] With both space and time directions and at least three dimensions, no choice of partial inverses respects the symmetries, however the algebra is enlarged. [[c:transport.no-go-level-elements]]\n\nThe fix is a larger space with one new positive and one new negative direction, $\\Cl(p,q) \\to \\Cl(p{+}1, q{+}1)$. [[c:transport.minimality]] This becomes a recipe sorting every failure of division into three kinds, each with its own fix. [[c:transport.transport-algorithm]] Each step up the resulting tower adds exactly one fermionic mode. [[c:tower.witt-index-quantum-capacity]]\n\nAt the centre of a non-rotating black hole the obstruction is the kind this repair supplies. [[c:singularity.type-n-only-type-n]] Einstein's vacuum equations become one null tractor staying constant. [[c:interior.covariant-form-vacuum-equations]] The boundary modes carry a thermal state at the Hawking temperature, the only quasi-free state thermal for the boost clock. [[c:hawking.i-state]]\n\nOn the matter side, the smallest massive twistor composite carries exactly the symmetry of the strong, weak and hypercharge forces. [[c:standard-model.gauge-algebra-minimal-massive-composite]] With an assumed hierarchical second correction, the neutrino masses add up to about 0.059 eV. [[c:neutrino.rank-one-seesaw-ordering-sum-double]] Given stated symmetry assumptions, a mirror world copies the Standard Model. [[c:dark-matter.mirror-tower-copy-one]]",
+  "hash": "6c35ed720732"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "This tour follows one idea from pure algebra all the way to particles, neutrinos and dark matter. [[t]] It starts with a failure of division, because every later step is a response to that failure. [[t]]\n\nIt then shows how enlarging the space repairs the failure, and applies the repair to geometry and gravity, then to black holes and heat, and last to matter. [[t]] The assumptions that some results rest on are gathered first, under their own heading, so that what is proved stays separate from what is supposed. [[t]]",
+  "hash": "88170dc55fda"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:dark-matter.p1-single-frozen-point",
+  "type": "postulate",
+  "claim": "dark-matter.p1-single-frozen-point@1",
+  "title": "P1: the single frozen point",
+  "text": "This assumption says the origin of the universe happened once, in one way, for everything. Every hidden sector feels the same gravity, and every sector that can have a handedness received the same one. It is assumed, not derived.",
+  "gap": false,
+  "level": "lay",
+  "hash": "abf61f81153e",
+  "number": 1
+ },
+ {
+  "id": "c:dark-matter.p2-indifference",
+  "type": "postulate",
+  "claim": "dark-matter.p2-indifference@2",
+  "title": "P2: indifference, scoped to sector labels",
+  "text": "This assumption says the birth of the universe treats alike only things that are genuinely alike. The only hidden sectors that count as alike are pairs related by a reflection, so only those pairs are forced to match. Which member of the matching pair we live in is simply a matter of where we stand. What must match are the sector's fixed labels, such as its stored charge, not how hot it is: the assumption leaves the temperature of the mirror sector open, and it takes the number of modes the birth deposits to be finite.",
+  "gap": false,
+  "level": "lay",
+  "hash": "085dfd15545a",
+  "number": 2
+ },
+ {
+  "id": "c:neutrino.h-second-stage-hierarchical",
+  "type": "postulate",
+  "claim": "neutrino.h-second-stage-hierarchical@1",
+  "title": "H: the second stage is hierarchical",
+  "text": "This is an assumption, not a result: the lightest neutrino gets almost no mass, less than a hundredth of the next one. Other particle families show steep mass hierarchies of this kind, which makes the assumption plausible without proving it. With it, the framework's total neutrino mass becomes a sharp number rather than a lower limit.",
+  "gap": false,
+  "level": "lay",
+  "hash": "195f5b882d18",
+  "number": 3
+ },
+ {
+  "id": "c:neutrino.m-framework-realises-majorana-term-scale",
+  "type": "postulate",
+  "claim": "neutrino.m-framework-realises-majorana-term-scale@1",
+  "title": "M: the framework realises the Majorana term, at a scale $M \\gg v$",
+  "text": "Neutrinos could carry a special kind of mass that only electrically neutral particles can have. Nothing forbids it, but nothing in the framework yet shows that it forms or how big it is. The paper assumes that it does, at a very high scale, and leaves the explanation for later work.",
+  "gap": false,
+  "level": "lay",
+  "hash": "5dbda60a7575",
+  "number": 4
+ },
+ {
+  "id": "c:sheaf.tameness",
+  "type": "postulate",
+  "claim": "sheaf.tameness@1",
+  "title": "Tameness",
+  "text": "This is the standing assumption on how a geometry is allowed to degenerate. The places where it degenerates must form a smooth closed wall, exactly one direction must lose its length at each point of the wall, and these directions must vary smoothly along it. In addition, the length must vanish at a linear rate as the wall is reached, not to higher order.",
+  "gap": false,
+  "level": "lay",
+  "hash": "6d8a5d927437",
+  "number": 5
+ },
+ {
+  "id": "s:zero-divisors",
+  "type": "section",
+  "title": "Zero divisors and obstructions",
+  "hash": "63b2bea9a003"
+ },
+ {
+  "id": "i:zero-divisors",
+  "type": "framing",
+  "text": "The series starts from a simple question: what happens when you try to divide by something that is not zero but whose square is zero? [[t]]\n\nIn a space of mixed signature, $pq \\neq 0$, like the spacetime of relativity, such vectors exist, and they form a cone much like a light cone. [[c:transport.existence-locus-type-n]]",
+  "hash": "357155b7b460"
+ },
+ {
+  "id": "t:^>transport.noinverse",
+  "type": "transition",
+  "between": [
+   null,
+   "transport.noinverse"
+  ],
+  "text": "The first result shows how firmly these vectors resist division. [[t]]\n\nA null $v \\neq 0$ has no inverse on either side, in $\\Cl(p,q)$ or in any larger algebra containing it. [[c:transport.noinverse]]",
+  "hash": "8a76978e1aee"
+ },
+ {
+  "id": "c:transport.noinverse",
+  "type": "theorem",
+  "claim": "transport.noinverse@4",
+  "title": "A null vector has no inverse",
+  "text": "A null vector is a nonzero direction whose square is zero. Such an element can never be divided by: if it had an inverse on either side, multiplying through would force the vector itself to be zero. The argument uses only the fact that its square is zero, so it still applies in any larger algebra of the same kind that contains the original one.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.vector-squares"
+  ],
+  "hash": "5a49ade236d1",
+  "number": 6
+ },
+ {
+  "id": "t:transport.noinverse>transport.no-go-level-elements",
+  "type": "transition",
+  "between": [
+   "transport.noinverse",
+   "transport.no-go-level-elements"
+  ],
+  "text": "With exact inverses ruled out, one might settle for partial ones. [[t]]\n\nA partial inverse $\\sigma(v)$ satisfies \\[ v\\,\\sigma(v)\\,v = v \\] but in mixed signature with $n \\geq 3$ no choice of one for each null $v$ is equivariant, even under $\\Spin^0(p,q)$, in any extension. [[c:transport.no-go-level-elements]]",
+  "hash": "d8d0843fb7ca"
+ },
+ {
+  "id": "c:transport.no-go-level-elements",
+  "type": "theorem",
+  "claim": "transport.no-go-level-elements@4",
+  "title": "No-go at the level of elements",
+  "text": "A light-like direction has no inverse, but it has many partial inverses. This theorem shows that there is no way to choose one for every light-like direction that respects the symmetries of the geometry, in any space with both space and time directions and at least three dimensions. Enlarging the algebra by any number of new directions does not help.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "transport.splitting-along-hyperbolic-plane",
+   "primer.commutation-rule",
+   "std-algebra.witt-decomposition"
+  ],
+  "hash": "a15db214c240",
+  "number": 7
+ },
+ {
+  "id": "s:clifford-structure",
+  "type": "section",
+  "title": "Clifford algebra structure",
+  "hash": "22390e05304e"
+ },
+ {
+  "id": "i:clifford-structure",
+  "type": "framing",
+  "text": "A Clifford algebra is built from a space of directions together with a rule for multiplying them. [[c:conformal.blade-basis-persists-under-degeneracy]] Before trying to repair these algebras, it helps to know what they really are. [[t]]",
+  "hash": "983fc9471deb"
+ },
+ {
+  "id": "t:transport.no-go-level-elements>transport.classification-real-clifford-algebras",
+  "type": "transition",
+  "between": [
+   "transport.no-go-level-elements",
+   "transport.classification-real-clifford-algebras"
+  ],
+  "text": "The classical answer is a short and complete list. [[t]]\n\nEach real Clifford algebra is a matrix algebra over $\\R$, $\\C$ or $\\HH$, or a sum of two, according to the residue \\[ d \\equiv p - q \\pmod 8 \\] and it is simple except when $p - q \\equiv 1 \\pmod 4$. [[c:transport.classification-real-clifford-algebras]]",
+  "hash": "c92fe7b04108"
+ },
+ {
+  "id": "c:transport.classification-real-clifford-algebras",
+  "type": "theorem",
+  "claim": "transport.classification-real-clifford-algebras@3",
+  "title": "Classification of the real Clifford algebras",
+  "text": "Clifford algebras built from a space with p positive and q negative directions turn out to be familiar objects in disguise: square tables of numbers (matrices) whose entries are real numbers, complex numbers or quaternions, or a pair of such tables side by side. Which of these appears depends only on p minus q, in a pattern that repeats every eight steps. Usually the algebra is a single indivisible block; it splits into two identical pieces exactly when p minus q leaves remainder 1 on division by four.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "primer.classification-real-clifford-algebras"
+  ],
+  "hash": "2b8f2c04f5c0",
+  "number": 8
+ },
+ {
+  "id": "s:completion",
+  "type": "section",
+  "title": "The completion",
+  "hash": "d76961575d0b"
+ },
+ {
+  "id": "i:completion",
+  "type": "framing",
+  "text": "Since division cannot be rescued inside the algebra, the series moves outside it, into a larger space. [[t]] The question for this section is how much larger that space must be, and what to do once one is there. [[t]]",
+  "hash": "0a605045cf13"
+ },
+ {
+  "id": "t:transport.classification-real-clifford-algebras>transport.minimality",
+  "type": "transition",
+  "between": [
+   "transport.classification-real-clifford-algebras",
+   "transport.minimality"
+  ],
+  "text": "The first answer concerns the reciprocal of a single vector. [[t]]\n\nThe larger space needs one new direction of each sign, \\[ \\Cl(p,q) \\;\\longrightarrow\\; \\Cl(p{+}1, q{+}1) \\] and this hyperbolic plane is enough and unique up to isometry. [[c:transport.minimality]]",
+  "hash": "78f1a74518d5"
+ },
+ {
+  "id": "c:transport.minimality",
+  "type": "theorem",
+  "claim": "transport.minimality@4",
+  "title": "Minimality",
+  "text": "To make the reciprocal work everywhere, the series represents each point as a light-like direction in a larger space. This result asks how much larger that space has to be. The added part must contain at least one direction of positive square and one of negative square, so adding only space-like or only time-like directions never works, while one such pair is enough and is essentially unique.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.witt-decomposition",
+   "std-algebra.sylvester-inertia"
+  ],
+  "hash": "a9415cf688ea",
+  "number": 9
+ },
+ {
+  "id": "t:transport.minimality>conformal.minimal-nondegenerate-completion",
+  "type": "transition",
+  "between": [
+   "transport.minimality",
+   "conformal.minimal-nondegenerate-completion"
+  ],
+  "text": "A similar count applies when the geometry itself is degenerate. [[t]]\n\nA radical of dimension $r$ needs $r$ new partners, so $\\Cl(p,q,r)$ embeds minimally in $\\Cl(p{+}r, q{+}r)$. [[c:conformal.minimal-nondegenerate-completion]]",
+  "hash": "06aa59bcb5c2"
+ },
+ {
+  "id": "c:conformal.minimal-nondegenerate-completion",
+  "type": "theorem",
+  "claim": "conformal.minimal-nondegenerate-completion@6",
+  "title": "Minimal nondegenerate completion",
+  "text": "A geometric algebra built on a degenerate metric has directions that pair to zero with everything, and division fails along them. This result says how to enlarge the space so that the metric becomes nondegenerate: each degenerate direction needs exactly one new partner direction, and the enlarged metric gains one positive and one negative direction for each degenerate one. The smallest such enlargement is unique up to a symmetry that leaves the original space untouched. Minimality here is among enlargements of the underlying space, not among all algebras.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "conformal.blade-basis-persists-under-degeneracy",
+   "conformal.witt-extension-theorem",
+   "std-algebra.functoriality"
+  ],
+  "hash": "6d8455dc5f32",
+  "number": 10
+ },
+ {
+  "id": "t:conformal.minimal-nondegenerate-completion>transport.transport-algorithm",
+  "type": "transition",
+  "between": [
+   "conformal.minimal-nondegenerate-completion",
+   "transport.transport-algorithm"
+  ],
+  "text": "These pieces now fit together into one working procedure. [[t]]\n\nThe theorems distil into a six-step procedure, and every step names the theorem that licenses it. [[c:transport.transport-algorithm]]",
+  "hash": "350243a6bf44"
+ },
+ {
+  "id": "c:transport.transport-algorithm",
+  "type": "theorem",
+  "claim": "transport.transport-algorithm@3",
+  "title": "The transport algorithm",
+  "text": "This is the series' recipe for what to do when division fails. Find where it fails, decide which of three kinds of failure it is, apply the matching fix (add a pair of dimensions, add one dimension, or do nothing), do the calculation in the enlarged setting, and bring the answer back, noting where it cannot come back. The recipe can be repeated, but its bookkeeping settles after at most one change.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "transport.classification-real-clifford-algebras",
+   "transport.cohomological-form-no-go",
+   "transport.descent-read-out-map",
+   "transport.door-one-way",
+   "transport.exhaustiveness-every-zero-divisor-annihilated-idempotent",
+   "transport.existence-classification-type-c",
+   "transport.existence-locus-type-n",
+   "transport.fusion-occurs-most-once",
+   "transport.minimality",
+   "transport.no-fourth-rule",
+   "transport.no-go-level-elements",
+   "transport.no-transport-terminates",
+   "transport.noinverse",
+   "transport.one-generator-minimal-minimal-completions-classified",
+   "transport.pinching-kernel",
+   "transport.representation-independent-minimality-completion",
+   "transport.rule-1-morita-trivial",
+   "transport.rule-2-ideal-fusion-sharp-form",
+   "transport.swap-rescale-normal-form",
+   "transport.totality",
+   "transport.type-p-self-repairing"
+  ],
+  "hash": "2011f305d068",
+  "number": 11
+ },
+ {
+  "id": "s:tower",
+  "type": "section",
+  "title": "The tower and quantum capacity",
+  "hash": "af5663cdb5d8"
+ },
+ {
+  "id": "i:tower",
+  "type": "framing",
+  "text": "Repeating the basic repair builds a tower of ever larger spaces. [[t]]\n\nEach step adds a null pair $v_i, w_i$, and these obey exactly the rules of fermionic modes, $v_i w_j + w_j v_i = \\delta_{ij}$. [[c:tower.ladder-pairs-satisfy-car-vectors]]",
+  "hash": "acc6f87d83cb"
+ },
+ {
+  "id": "t:transport.transport-algorithm>tower.witt-index-quantum-capacity",
+  "type": "transition",
+  "between": [
+   "transport.transport-algorithm",
+   "tower.witt-index-quantum-capacity"
+  ],
+  "text": "The next result counts how much of this quantum structure each floor can hold. [[t]]\n\nThe number of modes realisable by vectors is the Witt index, \\[ \\min(p,q) \\] and along the tower it is $\\min(p,q) + k$, one more per rung. [[c:tower.witt-index-quantum-capacity]]",
+  "hash": "7bfc224c8aee"
+ },
+ {
+  "id": "c:tower.witt-index-quantum-capacity",
+  "type": "theorem",
+  "claim": "tower.witt-index-quantum-capacity@4",
+  "title": "Witt index is quantum capacity",
+  "text": "Inside a Clifford algebra one can ask how many independent fermionic modes can be built directly from vectors. The answer is a classical number attached to the geometry, the Witt index: the largest number of independent zero-length directions that are all orthogonal to one another. For a space with p positive and q negative directions it is the smaller of p and q. Each step up the tower raises this number by exactly one, so each step adds precisely one mode of capacity and no more.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "tower.ladder-pairs-satisfy-car-vectors",
+   "std-algebra.vector-squares",
+   "std-algebra.witt-decomposition"
+  ],
+  "hash": "abc096b41972",
+  "number": 12
+ },
+ {
+  "id": "s:walls",
+  "type": "section",
+  "title": "Degenerate metrics and walls",
+  "hash": "28311da2cf93"
+ },
+ {
+  "id": "i:walls",
+  "type": "framing",
+  "text": "Real geometries can degenerate in some places and not in others, so the repair has to be made locally, along a wall. [[t]]\n\nThe standing tameness assumption fixes what is allowed: a smooth closed wall, exactly one direction losing its length at each point, and that length vanishing at a linear rate. [[c:sheaf.tameness]]",
+  "hash": "9393e2d48df3"
+ },
+ {
+  "id": "t:tower.witt-index-quantum-capacity>sheaf.one-sided-completion",
+  "type": "transition",
+  "between": [
+   "tower.witt-index-quantum-capacity",
+   "sheaf.one-sided-completion"
+  ],
+  "text": "With that assumption in place, the repair can be carried right up to the wall. [[t]]\n\nOn the physical side the completed form is nondegenerate of signature $(p{+}1, q{+}1)$ at every point, including the wall, so every fibre is \\[ \\Cl(2,4) \\cong \\Mat_4(\\HH) \\] in the physical case. [[c:sheaf.one-sided-completion]]",
+  "hash": "d8a5124d9baf"
+ },
+ {
+  "id": "c:sheaf.one-sided-completion",
+  "type": "theorem",
+  "claim": "sheaf.one-sided-completion@4",
+  "title": "One-sided completion",
+  "text": "Assume a geometry degenerates along a wall in the tame way, with at least one positive direction on the physical side and with the dying direction's line consistently orientable along the wall. Then it can be repaired on that side by adding two extra dimensions and coupling them to the direction that is dying. This result shows that the coupling can be chosen so that the enlarged geometry is non-degenerate, with the same signature everywhere on the physical side, the wall itself included. The resulting family of algebras is then uniform: in the physical case every member is the algebra of four-by-four quaternion matrices.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "sheaf.determinant-identity-blow-up-expansion",
+   "sheaf.local-freeness-constant-rank",
+   "sheaf.wall-gram",
+   "sheaf.tameness"
+  ],
+  "hash": "d6b508074f79",
+  "number": 13
+ },
+ {
+  "id": "s:singularity",
+  "type": "section",
+  "title": "The singularity",
+  "hash": "770d63608d5a"
+ },
+ {
+  "id": "i:singularity",
+  "type": "framing",
+  "text": "The centre of a black hole is the first physical place where the repair is put to work. [[t]]\n\nApproaching it, the gravitational field grows without bound, but once that growth is divided out the field settles to a limit that is degenerate. [[c:singularity.degeneration-exactly]]",
+  "hash": "d8526229a5e5"
+ },
+ {
+  "id": "t:sheaf.one-sided-completion>singularity.type-n-only-type-n",
+  "type": "transition",
+  "between": [
+   "sheaf.one-sided-completion",
+   "singularity.type-n-only-type-n"
+  ],
+  "text": "The question is which kind of obstruction this degeneration turns out to be. [[t]]\n\nIt is type N, a null direction without a partner, and type C cannot occur, because \\[ p - q = -2 \\equiv 6 \\pmod 8 \\] makes $\\Cl(1,3) \\cong \\Mat_2(\\HH)$ simple. [[c:singularity.type-n-only-type-n]]",
+  "hash": "0629483b7c18"
+ },
+ {
+  "id": "c:singularity.type-n-only-type-n",
+  "type": "theorem",
+  "claim": "singularity.type-n-only-type-n@5",
+  "title": "Type N, and only type N",
+  "text": "At the centre of a non-rotating black hole one direction of the geometry collapses, and this result identifies which kind of algebraic obstruction that is in the series' classification. It is the kind caused by a direction with no partner to pair with. The other substantive kind, which would need the algebra to split into independent pieces, cannot occur for the algebra of spacetime, and a third kind is present but harmless. So the repair that applies is the one that supplies the missing partner by enlarging the algebra.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "sheaf.localised-transport",
+   "sheaf.one-sided-completion",
+   "sheaf.one-sided-completion-singularity",
+   "sheaf.schwarzschild-degeneration-boundary-tame",
+   "singularity.degeneration-exactly",
+   "tower.rigidity-clock-frozen",
+   "transport.existence-classification-type-c",
+   "transport.existence-locus-type-n",
+   "transport.type-p-self-repairing",
+   "primer.classification-real-clifford-algebras",
+   "std-algebra.sta-matrix"
+  ],
+  "hash": "372de5dcfd2b",
+  "number": 14
+ },
+ {
+  "id": "s:einstein",
+  "type": "section",
+  "title": "Einstein's equations in the completion",
+  "hash": "970604060f07"
+ },
+ {
+  "id": "i:einstein",
+  "type": "framing",
+  "text": "To say anything about gravity itself, the series needs Einstein's equations in a form that lives naturally in the enlarged space. [[t]]",
+  "hash": "2e26a604c7ec"
+ },
+ {
+  "id": "t:singularity.type-n-only-type-n>interior.covariant-form-vacuum-equations",
+  "type": "transition",
+  "between": [
+   "singularity.type-n-only-type-n",
+   "interior.covariant-form-vacuum-equations"
+  ],
+  "text": "The next result supplies such a form. [[t]]\n\nIn Gauge Theory Gravity on flat spacetime, the vacuum field equations hold exactly when the null scale tractor $I_g = \\nInf$ is parallel for the $\\Cl(2,4)$ gauge field. [[c:interior.covariant-form-vacuum-equations]]",
+  "hash": "d8be862c8bfa"
+ },
+ {
+  "id": "c:interior.covariant-form-vacuum-equations",
+  "type": "theorem",
+  "claim": "interior.covariant-form-vacuum-equations@5",
+  "title": "Covariant form of the vacuum equations",
+  "text": "In the interior region, Einstein's equations for empty space can be recast as a single condition on the gravitational fields: a particular marker in the six-dimensional conformal extension of spacetime, attached to the physical scale, must stay constant as it is carried from point to point by a gauge field built from gravity. This result proves that the two formulations are exactly equivalent, and that the marker is a null (lightlike) object. It also notes that merely having some constant marker of this kind is a weaker condition that does not by itself give the field equations.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "interior.imported-equivalence-einstein-equations",
+   "interior.imported-tractor-connection",
+   "interior.metric-parallelism-trace-schouten-condition"
+  ],
+  "hash": "55ef8551cd76",
+  "number": 15
+ },
+ {
+  "id": "s:descent",
+  "type": "section",
+  "title": "Descent, parity and states",
+  "hash": "0ed8b27987db"
+ },
+ {
+  "id": "i:descent",
+  "type": "framing",
+  "text": "After working upstairs one has to come back down, and any return journey must lose something. [[c:transport.door-one-way]] This section says what is lost and what the loss means. [[t]]",
+  "hash": "12a011673330"
+ },
+ {
+  "id": "t:interior.covariant-form-vacuum-equations>singularity.descent-parity-average",
+  "type": "transition",
+  "between": [
+   "interior.covariant-form-vacuum-equations",
+   "singularity.descent-parity-average"
+  ],
+  "text": "The first result identifies the way down with a familiar operation. [[t]]\n\nDescent is the average over fermion parity, \\[ E(x) \\;=\\; \\tfrac12\\bigl(x + \\alpha(x)\\bigr) \\] whose kernel is exactly the adjoined ladder sector. [[c:singularity.descent-parity-average]]",
+  "hash": "3fb8d0c9a1d2"
+ },
+ {
+  "id": "c:singularity.descent-parity-average",
+  "type": "theorem",
+  "claim": "singularity.descent-parity-average@4",
+  "title": "The descent is the parity average",
+  "text": "The descent, which keeps a mode's occupation data and discards its coherences, is the same thing as averaging over fermion parity: take an observable and its parity-flipped version and average the two. This makes it the only consistent projection onto the parity-even observables, and it leaves every parity-even state unchanged.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.descent-what-it-erases"
+  ],
+  "hash": "f5195d05b3f5",
+  "number": 16
+ },
+ {
+  "id": "t:singularity.descent-parity-average>singularity.purity-output-partner-commutant",
+  "type": "transition",
+  "between": [
+   "singularity.descent-parity-average",
+   "singularity.purity-output-partner-commutant"
+  ],
+  "text": "That leaves the question of where the missing partner of a mixed state comes from. [[t]]\n\nIn the state's own representation the partner is the commutant, and for a Gibbs state the cyclic vector is the thermofield double. [[c:singularity.purity-output-partner-commutant]]",
+  "hash": "cc8024a75ab3"
+ },
+ {
+  "id": "c:singularity.purity-output-partner-commutant",
+  "type": "theorem",
+  "claim": "singularity.purity-output-partner-commutant@4",
+  "title": "Purity is an output: the partner is the commutant",
+  "text": "Starting from a single quantum mode in a mixed state, there is a standard construction that builds a larger system in which that state is one half of a pure entangled state. This result shows that the partner needed for the pure state is not an extra ingredient: it emerges automatically as the mirror copy of the mode's own algebra, and the construction is unique up to changes made on the partner side alone. For a thermal state the resulting pure state is the familiar thermofield double.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.modular-theory-matrix-factor-proved-outright"
+  ],
+  "hash": "61d30393fb8d",
+  "number": 17
+ },
+ {
+  "id": "s:thermality",
+  "type": "section",
+  "title": "Temperature and Hawking radiation",
+  "hash": "ba7dc959f8d2"
+ },
+ {
+  "id": "i:thermality",
+  "type": "framing",
+  "text": "The series next asks whether the modes it finds at the black-hole boundary can be hot, in the sense that Hawking described. [[t]]",
+  "hash": "d774c6dff72c"
+ },
+ {
+  "id": "t:singularity.purity-output-partner-commutant>hawking.i-state",
+  "type": "transition",
+  "between": [
+   "singularity.purity-output-partner-commutant",
+   "hawking.i-state"
+  ],
+  "text": "The thermal case of that construction now meets the black hole directly. [[t]]\n\nAt inverse temperature \\[ \\beta = 1/\\TH = 2\\pi/\\kappa \\] the boundary modes have a state thermal for the boost clock, and within the quasi-free class it is unique, its two-point data forced. [[c:hawking.i-state]]",
+  "hash": "771eba66c291"
+ },
+ {
+  "id": "c:hawking.i-state",
+  "type": "theorem",
+  "claim": "hawking.i-state@3",
+  "title": "The I-state",
+  "text": "The boundary modes in this black-hole setting can be placed in a thermal state at the Hawking temperature, each mode filled according to the Fermi-Dirac rule. This result shows that this state exists and is thermal in the precise algebraic sense, both on every finite set of modes and on the whole system. It also shows that among the simple Gaussian (quasi-free) states it is the only one that is thermal for the geometry's boost time evolution, which turns the phase of each mode at its own frequency, so its occupation numbers are derived rather than chosen.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "hawking.gibbs-states-are-kms-conversely-finite",
+   "hawking.imported-kms-passes-inductive-limits",
+   "hawking.imported-quasi-free-states-car-algebra"
+  ],
+  "hash": "bddeb113174f",
+  "number": 18
+ },
+ {
+  "id": "s:dark-energy",
+  "type": "section",
+  "title": "Dark energy and the frozen point",
+  "hash": "368e6821d6a4"
+ },
+ {
+  "id": "i:dark-energy",
+  "type": "framing",
+  "text": "The cosmological constant enters through the frozen point, a fixed direction in an enlarged conformal space whose length the constant sets. [[c:dark-energy.imported-frozen-point-geometry]] One of the earlier results used here rests on an assumed principle rather than a proof. [[c:dark-energy.imported-walls-sphere-theorem]]",
+  "hash": "d8b76e7f1a69"
+ },
+ {
+  "id": "t:hawking.i-state>dark-energy.frozen-point-makes-stelle-west-vector",
+  "type": "transition",
+  "between": [
+   "hawking.i-state",
+   "dark-energy.frozen-point-makes-stelle-west-vector"
+  ],
+  "text": "From heat the tour turns to gravity on the largest scale. [[t]]\n\nWhere $\\Lambda \\neq 0$, the frozen point supplies the Stelle-West vector, so gravity's action makes sense where the metric degenerates. [[c:dark-energy.frozen-point-makes-stelle-west-vector]]",
+  "hash": "6bb78af4b86c"
+ },
+ {
+  "id": "c:dark-energy.frozen-point-makes-stelle-west-vector",
+  "type": "theorem",
+  "claim": "dark-energy.frozen-point-makes-stelle-west-vector@5",
+  "title": "The frozen point makes the Stelle-West vector",
+  "text": "The frozen point is a fixed direction in the larger conformal space whose length encodes the cosmological constant. On the region where Einstein's equations hold with a nonzero cosmological constant, this result shows that the frozen point, together with one canonical geometric object, produces exactly the extra vector that a known reformulation of gravity, due to MacDowell and Mansouri and to Stelle and West, requires. Gravity's action can then be written as the square of the curvature as seen from the point at infinity, with no inverse metric anywhere, so it is defined wherever the connection stays regular. At the black hole's wall, where the connection is singular, its value diverges but its field equations still reach the wall; and the curvature-squared form itself exists only while the cosmological constant is nonzero.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "dark-energy.imported-frozen-point-geometry",
+   "dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+   "dark-energy.imported-walls-sphere-theorem",
+   "dark-energy.stelle-west-vector-frozen-point"
+  ],
+  "hash": "2833c2bed042",
+  "number": 19
+ },
+ {
+  "id": "s:mass",
+  "type": "section",
+  "title": "The origin of mass",
+  "hash": "8c7ab1f28a91"
+ },
+ {
+  "id": "i:mass",
+  "type": "framing",
+  "text": "The tour now turns from gravity to matter, using twistors, in which a single twistor describes a massless particle travelling at light speed. [[c:mass.mass-symplectic-area-two-twistor-formula]]",
+  "hash": "4dd340bfaf04"
+ },
+ {
+  "id": "t:dark-energy.frozen-point-makes-stelle-west-vector>mass.mass-symplectic-area-two-twistor-formula",
+  "type": "transition",
+  "between": [
+   "dark-energy.frozen-point-makes-stelle-west-vector",
+   "mass.mass-symplectic-area-two-twistor-formula"
+  ],
+  "text": "The first question about matter is where its mass comes from. [[t]]\n\nA single conformal spinor carries the null momentum \\[ p_{AA'} = \\pi_{A}\\bar\\pi_{A'} \\] and is massless, so mass first appears for a system of two. [[c:mass.mass-symplectic-area-two-twistor-formula]]",
+  "hash": "d4ba1c374b55"
+ },
+ {
+  "id": "c:mass.mass-symplectic-area-two-twistor-formula",
+  "type": "theorem",
+  "claim": "mass.mass-symplectic-area-two-twistor-formula@3",
+  "title": "Mass as symplectic area: the two-spinor formula",
+  "text": "A single spinor of the conformal geometry describes a massless particle travelling at light speed. Two of them together can describe a massive particle, and its mass depends only on how far apart their two light-like directions point. When they line up the composite stays massless; the more they disagree, the heavier it is.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "c596c703a758",
+  "number": 20
+ },
+ {
+  "id": "s:standard-model",
+  "type": "section",
+  "title": "The Standard Model",
+  "hash": "920d96cca5ea"
+ },
+ {
+  "id": "i:standard-model",
+  "type": "framing",
+  "text": "Next the tour asks which forces such a massive composite would feel. [[t]]",
+  "hash": "1f4e6586b891"
+ },
+ {
+  "id": "t:mass.mass-symplectic-area-two-twistor-formula>standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "transition",
+  "between": [
+   "mass.mass-symplectic-area-two-twistor-formula",
+   "standard-model.gauge-algebra-minimal-massive-composite"
+  ],
+  "text": "Looking inside the smallest massive composite answers that question. [[t]]\n\nTwo conformal spinors of three pairs each have automorphisms $(U(2) \\times U(3))/U(1)$, with Lie algebra \\[ \\su(2) \\oplus \\su(3) \\oplus \\uu(1) \\] the Standard Model's exactly. [[c:standard-model.gauge-algebra-minimal-massive-composite]]",
+  "hash": "5771059ba999"
+ },
+ {
+  "id": "c:standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "theorem",
+  "claim": "standard-model.gauge-algebra-minimal-massive-composite@4",
+  "title": "The gauge algebra of the minimal massive composite",
+  "text": "A composite of basic spinor states of the conformal algebra has a two-level internal structure: which spinor state, and which of its three internal pairs. The rotations that respect both levels form a symmetry algebra. For the smallest composite that can have mass, two spinor states of three pairs each, that algebra is exactly the one behind the strong, weak and hypercharge forces; for three spinor states it is too large.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "mass.mass-symplectic-area-two-twistor-formula"
+  ],
+  "hash": "c6ef6cefb1f7",
+  "number": 21
+ },
+ {
+  "id": "s:generations",
+  "type": "section",
+  "title": "Families of quarks and leptons",
+  "hash": "6e4dfa2d035b"
+ },
+ {
+  "id": "i:generations",
+  "type": "framing",
+  "text": "The next question is why matter might repeat itself in families. [[t]]\n\nHere Hypothesis (S), an assumption about how the slots of a composite behave, is needed, and several of the framework's particle-physics results hold only if it does. [[c:standard-model.hyp-s-slot-statistics]] In particular, everything said about charged leptons depends on it. [[c:families.imported-one-derived-generation-hypothesis-s]]",
+  "hash": "4aceceaa0580"
+ },
+ {
+  "id": "t:standard-model.gauge-algebra-minimal-massive-composite>families.three-identical-families-mixing-shared-slots",
+  "type": "transition",
+  "between": [
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "families.three-identical-families-mixing-shared-slots"
+  ],
+  "text": "Allowing a composite more than two twistors leads to a simple count of choices. [[t]]\n\nThe faces, three of them under the three-spinor bound, carry identical content, because the permutations $S_{3}$ of the slots carry each face's copy onto every other. [[c:families.three-identical-families-mixing-shared-slots]]",
+  "hash": "da287c850f67"
+ },
+ {
+  "id": "c:families.three-identical-families-mixing-shared-slots",
+  "type": "theorem",
+  "claim": "families.three-identical-families-mixing-shared-slots@8",
+  "title": "Three identical families, mixing by shared slots",
+  "text": "If the largest allowed composite is made of three conformal spinors and a massive particle uses two of them, there are three ways to choose the pair. Each choice carries an exact copy of the same set of particles, because relabelling the spinors maps one copy onto another; the copies include the lepton doublet if the slots behave like the pairs (Hypothesis (S)). Any two choices share exactly one spinor, which hints at why quark families mix the way they do, though that hint and the matching of choices to real families are not proved.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-one-derived-generation-hypothesis-s",
+   "families.imported-face-valued-bracket-quantum-numbers",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "4250214dce53",
+  "number": 22
+ },
+ {
+  "id": "s:neutrinos",
+  "type": "section",
+  "title": "Neutrino masses",
+  "hash": "caf6659978a9"
+ },
+ {
+  "id": "i:neutrinos",
+  "type": "framing",
+  "text": "Neutrinos are where the framework comes closest to numbers that experiments can check. [[t]]\n\nThe account assumes that neutrinos carry a Majorana mass at a very high scale, which nothing in the framework yet shows forming. [[c:neutrino.m-framework-realises-majorana-term-scale]] The family picture it builds on is itself still a conjecture. [[c:neutrino.imported-indifference-faces-democratic-alignment-rank]]",
+  "hash": "aa07c1aeb36e"
+ },
+ {
+  "id": "t:families.three-identical-families-mixing-shared-slots>neutrino.rank-one-seesaw-ordering-sum-double",
+  "type": "transition",
+  "between": [
+   "families.three-identical-families-mixing-shared-slots",
+   "neutrino.rank-one-seesaw-ordering-sum-double"
+  ],
+  "text": "Treating the families even-handedly has a sharp consequence for neutrino masses. [[t]]\n\nThe Dirac mass matrix is democratic, $\\mD = d\\,\\J$, with the single eigenvalue $m_{D} = 3d$, so the seesaw gives the normal ordering. [[c:neutrino.rank-one-seesaw-ordering-sum-double]]",
+  "hash": "f0fb0e203edb"
+ },
+ {
+  "id": "c:neutrino.rank-one-seesaw-ordering-sum-double",
+  "type": "theorem",
+  "claim": "neutrino.rank-one-seesaw-ordering-sum-double@8",
+  "title": "The rank-one seesaw: ordering, sum, and the double-beta values",
+  "text": "Assuming the framework supplies the heavy neutrino's Majorana mass at a scale far above the electroweak one (Premise (M)), and because the framework's neutrino couplings treat the three families identically at first approximation (a structural-level reading), only one light neutrino gets a mass, through the seesaw. Provided the corrections that break that symmetry are small, that fixes the mass ordering as normal; if the second stage of those corrections is also hierarchical (Premise (H)), the total mass sits at the smallest value oscillation experiments allow, about 0.059 eV, and otherwise that value is only a lower bound. Under the same premises neutrinoless double-beta decay occurs, at rates too small for the next generation of experiments to see: a conditional absence.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "neutrino.imported-indifference-faces-democratic-alignment-rank",
+   "neutrino.invariant-symmetric-matrices",
+   "neutrino.seesaw-what-gauge-invariance-proves-what",
+   "neutrino.h-second-stage-hierarchical",
+   "neutrino.m-framework-realises-majorana-term-scale"
+  ],
+  "hash": "2d8941b05af3",
+  "number": 23
+ },
+ {
+  "id": "s:dark-matter",
+  "type": "section",
+  "title": "Dark matter and the dark towers",
+  "hash": "b346b3f9d5ec"
+ },
+ {
+  "id": "i:dark-matter",
+  "type": "framing",
+  "text": "The account of matter ends with matter we cannot see. [[t]] The answer rests on postulates, not proofs, about how the origin of the universe treats its hidden sectors. [[c:dark-matter.p1-single-frozen-point]]",
+  "hash": "24b51a703c23"
+ },
+ {
+  "id": "t:neutrino.rank-one-seesaw-ordering-sum-double>dark-matter.mirror-tower-copy-one",
+  "type": "transition",
+  "between": [
+   "neutrino.rank-one-seesaw-ordering-sum-double",
+   "dark-matter.mirror-tower-copy-one"
+  ],
+  "text": "Swapping the roles of time and space gives a second world to set beside our own. [[t]]\n\nEvery input of the Standard Model chain is invariant under the reversal \\[ (p,q) \\mapsto (q,p) \\] which carries $(1,3)$ to the mirror's $(3,1)$, so the mirror has the same gauge algebra and the same generation. [[c:dark-matter.mirror-tower-copy-one]]",
+  "hash": "e35300b43c7c"
+ },
+ {
+  "id": "c:dark-matter.mirror-tower-copy-one",
+  "type": "theorem",
+  "claim": "dark-matter.mirror-tower-copy-one@8",
+  "title": "The mirror tower is a copy of this one",
+  "text": "Swapping which directions count as time and which as space turns our world into a mirror world, and this result shows that every ingredient used to derive our particle physics survives the swap. So the mirror world has its own copy of the Standard Model as the series derives it (under Hypothesis (S)), with mirror photons and mirror neutrinos. If the two worlds share one cutoff scale (a common ceiling), then under the framework's premises of a single frozen point (P1) and indifference (P2), which fix a common coupling there and an equal matter excess, it also has the same particle masses and the same matter excess, so its matter equals our ordinary matter to within half a percent, the gap coming from the two worlds' nuclear histories. A later note (T14c) shows that the same indifference principle, applied as widely, would also make the mirror world as hot as ours, which observations rule out, so the cold mirror world the series relies on is an unstated exception to that principle.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "dark-matter.imported-inputs-standard-model-chain",
+   "dark-matter.type-residue-what-each-tower-can",
+   "dark-matter.p1-single-frozen-point",
+   "dark-matter.p2-indifference"
+  ],
+  "hash": "2f2cfb7451d1",
+  "number": 24
+ },
+ {
+  "id": "s:one-relation",
+  "type": "section",
+  "title": "One relation, read twice",
+  "hash": "5c5e9ea14eb0"
+ },
+ {
+  "id": "i:one-relation",
+  "type": "framing",
+  "text": "The tour closes by stepping back to the single rule behind everything. [[t]]\n\nThat rule, $\\{e_{a}, e_{b}\\} = 2g_{ab}\\mathbf{1}$, can be read as geometry or as the rule obeyed by fermions, though only at the level of structure. [[c:one-relation.two-presentations]]",
+  "hash": "ed74ce009b11"
+ },
+ {
+  "id": "t:dark-matter.mirror-tower-copy-one>one-relation.two-capacities-three-consequences",
+  "type": "transition",
+  "between": [
+   "dark-matter.mirror-tower-copy-one",
+   "one-relation.two-capacities-three-consequences"
+  ],
+  "text": "A last result counts the quantum structure in two ways. [[t]]\n\nThe real and complex capacities are \\[ r_{\\R}(p,q) = \\min(p,q), \\qquad r_{\\C}(p,q) = \\lfloor d/2 \\rfloor \\] and for spacetime $(1,3)$ they are $1$ and $2$. [[c:one-relation.two-capacities-three-consequences]]",
+  "hash": "4bca0509a719"
+ },
+ {
+  "id": "c:one-relation.two-capacities-three-consequences",
+  "type": "theorem",
+  "claim": "one-relation.two-capacities-three-consequences@5",
+  "title": "The two capacities, and three consequences",
+  "text": "Reading spacetime geometry as a system of fermion modes, there are two ways to count the modes: using only real directions, or allowing complex ones. The two counts usually differ, and for ordinary spacetime they give one and two. Each step up the tower of extended spaces adds exactly one mode to both counts, and the complex count of the extended six-dimensional space is three.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "one-relation.imported-witts-extension-theorem",
+   "one-relation.two-presentations",
+   "tower.witt-index-quantum-capacity",
+   "std-algebra.vector-squares",
+   "std-algebra.witt-decomposition"
+  ],
+  "hash": "a6cb3d7bde0b",
+  "number": 25
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:conformal.blade-basis-persists-under-degeneracy",
+  "type": "fact",
+  "claim": "conformal.blade-basis-persists-under-degeneracy@4",
+  "title": "The blade basis persists under degeneracy",
+  "text": "A Clifford algebra is built from a space of directions together with a rule for multiplying them. This fact says that the products of distinct basis directions always form a basis for the whole algebra, so an algebra built on m directions has size two to the power m. That stays true even when the multiplication rule is degenerate, with some directions of zero length against every direction.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim conformal.blade-basis-persists-under-degeneracy, version 4 (T02 Fact 2.1)",
+  "hash": "499ae9821a4b",
+  "number": 26
+ },
+ {
+  "id": "c:conformal.witt-extension-theorem",
+  "type": "fact",
+  "claim": "conformal.witt-extension-theorem@1",
+  "title": "The Witt extension theorem",
+  "text": "Suppose two spaces carry equivalent nondegenerate notions of length and angle. Then any length-preserving match between a part of one and a part of the other can be extended to a length-preserving match of the whole spaces. This works even when the parts themselves are degenerate. It is a standard theorem about quadratic forms.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67, American Mathematical Society (2005)., Ch.~I, Thm.~4.7",
+  "hash": "f22e5cd614bb",
+  "number": 27
+ },
+ {
+  "id": "c:dark-energy.imported-frozen-point-geometry",
+  "type": "fact",
+  "claim": "dark-energy.imported-frozen-point-geometry@6",
+  "title": "Imported: the frozen point and its geometry",
+  "text": "This fact collects earlier results about the frozen point, a fixed direction in the six-dimensional conformal model attached to flat spacetime. Einstein's vacuum equations amount to this direction staying constant as the gravitational gauge fields carry it from place to place, and its length is set by the cosmological constant. The symmetries that leave it alone form the de Sitter group, or the anti-de Sitter group when the cosmological constant is negative. The fact also writes down the gauge field that says what constant means here.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-energy.imported-frozen-point-geometry, version 6 (T10 Fact 2.1)",
+  "hash": "ef6a2a2387ff",
+  "number": 28
+ },
+ {
+  "id": "c:dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+  "type": "fact",
+  "claim": "dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3",
+  "title": "Imported: the MacDowell-Mansouri theorem, Stelle-West form",
+  "text": "MacDowell and Mansouri, and later Stelle and West, showed that gravity with a cosmological constant can be written as a theory of a larger symmetry group, the de Sitter group, broken by a vector of fixed length. On flat spacetime this means adding one extra direction to the algebra in which the gravitational fields take their values. The action is then the square of a field strength, and it splits into a topological piece, the usual Einstein term and the cosmological term. Its equations are the Einstein equations with that cosmological constant.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. W. MacDowell and F. Mansouri, Unified geometric theory of gravity and supergravity, Phys. Rev. Lett. 38 (1977), 739--742.; K. S. Stelle and P. C. West, Spontaneously broken de Sitter symmetry and the gravitational holonomy group, Phys. Rev. D 21 (1980), 1466--1488.; D. K. Wise, MacDowell-Mansouri gravity and Cartan geometry, Class. Quantum Grav. 27 (2010), 155010.",
+  "hash": "33ba0dd2d0f6",
+  "number": 29
+ },
+ {
+  "id": "c:dark-energy.imported-walls-sphere-theorem",
+  "type": "fact",
+  "claim": "dark-energy.imported-walls-sphere-theorem@6",
+  "title": "Imported: walls, and the sphere theorem",
+  "text": "Where geometry degenerates in the mildest, tame way, along a wall where one direction stops being measurable, the algebraic description of geometry does not break but carries on through the wall. The metric blows up there in a controlled way, and the completion adds exactly one partner to the dying direction. A further imported result, which rests on an assumed principle (the Indifference principle) rather than a proof, says that the sphere of directions around the wall is built from pairings of the wall's boundary modes.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-energy.imported-walls-sphere-theorem, version 6 (T10 Fact 2.4)",
+  "hash": "5ef3347c616a",
+  "number": 30
+ },
+ {
+  "id": "c:dark-energy.stelle-west-vector-frozen-point",
+  "type": "fact",
+  "claim": "dark-energy.stelle-west-vector-frozen-point@5",
+  "title": "The Stelle-West vector of the frozen point",
+  "text": "Starting from the frozen point and one canonical fixed direction of the six-dimensional conformal model, this lemma builds a vector perpendicular to the frozen point whose length is set by the cosmological constant. Its rate of change is exactly the frame that links the conformal model to the physical directions of the gravitational field on flat spacetime. It is the vector that the Stelle-West form of gravity needs, and the lemma records its basic algebra.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-energy.stelle-west-vector-frozen-point, version 5 (T10 Lem 2.5)",
+  "hash": "76b8ff4b9d35",
+  "number": 31
+ },
+ {
+  "id": "c:dark-matter.imported-inputs-standard-model-chain",
+  "type": "fact",
+  "claim": "dark-matter.imported-inputs-standard-model-chain@6",
+  "title": "Imported: the inputs of the Standard-Model chain",
+  "text": "The Standard-Model results of the series come from a chain of derivations. This entry lists every ingredient that chain uses, from the six-dimensional conformal geometry and its spinors to the mass formula, a counting rule for hypercharge, one structural hypothesis about the slots of the composite's spinor states (Hypothesis (S)) and a few textbook results. The point is that nothing else goes in, so later work can ask which ingredients survive in other settings. That the list is complete is a reading, carried as an assumption.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-matter.imported-inputs-standard-model-chain, version 6 (T14 Fact 4.2)",
+  "hash": "264f0875a402",
+  "number": 32
+ },
+ {
+  "id": "c:dark-matter.type-residue-what-each-tower-can",
+  "type": "fact",
+  "claim": "dark-matter.type-residue-what-each-tower-can@5",
+  "title": "Type by residue, and what each tower can carry intrinsically",
+  "text": "Each tower's basic algebra decides what kind of numbers its matter states naturally use: real numbers, complex numbers or quaternions. That choice depends only on the tower's label, and it fixes which continuous symmetries a tower carries before any further structure is added. For the representatives the paper uses, and in its labelling convention (the opposite convention swaps the two members of each mirror pair), the mirror tower comes out with real spinors and no built-in continuous charge, two of the odd towers with exactly one built-in charge each, and our own world with quaternionic spinors.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-matter.type-residue-what-each-tower-can, version 5 (T14 Thm 3.4)",
+  "hash": "d8df3f1a3bd8",
+  "number": 33
+ },
+ {
+  "id": "c:families.imported-face-valued-bracket-quantum-numbers",
+  "type": "fact",
+  "claim": "families.imported-face-valued-bracket-quantum-numbers@5",
+  "title": "Imported: the face-valued bracket and its quantum numbers",
+  "text": "In this framework a particle with mass is built from two conformal spinors, and its mass in flat space is carried by one complex number, the bracket. This result records how that number behaves under the framework's internal symmetries: it has the charges of $e^{c}$, the conjugate of the right-handed electron, with hypercharge $+1$, not those of the Higgs doublet of the Standard Model. Whether it nonetheless plays a role like the Higgs field is left open, and that reading is held at observation level only.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-face-valued-bracket-quantum-numbers, version 5 (T13 Fact 2.1)",
+  "hash": "68fbb62152c4",
+  "number": 34
+ },
+ {
+  "id": "c:families.imported-one-derived-generation-hypothesis-s",
+  "type": "fact",
+  "claim": "families.imported-one-derived-generation-hypothesis-s@6",
+  "title": "Imported: one derived generation, and Hypothesis (S)",
+  "text": "The families paper imports what the series has derived about one generation of matter. The quark doublet and the charges of single free spinor states come out with no extra assumption; the lepton doublet appears only if one adopts a stated hypothesis about how the slots those states occupy behave. With that hypothesis, and given the generation's particle content listed with one handedness, at most one extra neutral singlet and the quark doublet's charge as the unit, requiring the theory to be free of quantum anomalies fixes all the hypercharges of the generation, up to which of the two antiquark singlets takes which value. The hypothesis is not proved, and everything that paper says about charged leptons depends on it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-one-derived-generation-hypothesis-s, version 6 (T13 Fact 2.3)",
+  "hash": "448db0a9ef00",
+  "number": 35
+ },
+ {
+  "id": "c:hawking.gibbs-states-are-kms-conversely-finite",
+  "type": "fact",
+  "claim": "hawking.gibbs-states-are-kms-conversely-finite@2",
+  "title": "Gibbs states are KMS, and conversely, in finite dimensions",
+  "text": "In a finite quantum system, the thermal (Gibbs) state at a given temperature satisfies a standard algebraic test of thermal equilibrium, the KMS condition. This result also proves the converse: in finite dimensions the Gibbs state is the only state that passes the test, even when some energy levels coincide.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim hawking.gibbs-states-are-kms-conversely-finite, version 2 (T07 Lem 3.1)",
+  "hash": "48839a8ee4e9",
+  "number": 36
+ },
+ {
+  "id": "c:hawking.imported-kms-passes-inductive-limits",
+  "type": "fact",
+  "claim": "hawking.imported-kms-passes-inductive-limits@1",
+  "title": "Imported: KMS passes to inductive limits",
+  "text": "Thermal equilibrium, in its precise algebraic form, can be checked piece by piece. If a large system is the limit of an increasing chain of smaller subsystems, each preserved by the time evolution, and a state is in equilibrium on every one of them, then it is in equilibrium on the whole system. This is a known result taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., Prop.~5.3.25",
+  "hash": "4d5ff9a62e63",
+  "number": 37
+ },
+ {
+  "id": "c:hawking.imported-quasi-free-states-car-algebra",
+  "type": "fact",
+  "claim": "hawking.imported-quasi-free-states-car-algebra@2",
+  "title": "Imported: quasi-free states of the CAR algebra",
+  "text": "For fermions there is a class of especially simple states, called quasi-free, in which every correlation is fixed by the two-point correlations alone. This imported result says that each admissible choice of occupation data gives exactly one such state that is invariant under phase rotations, and that a quasi-free state is invariant in this way exactly when a certain pairing term vanishes. On finitely many modes with no mixing these states simply occupy each mode independently.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, Publ. RIMS Kyoto Univ. 6 (1971), 385--442.; O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., \\S 5.2",
+  "hash": "e376e5e163b1",
+  "number": 38
+ },
+ {
+  "id": "c:interior.imported-equivalence-einstein-equations",
+  "type": "fact",
+  "claim": "interior.imported-equivalence-einstein-equations@2",
+  "title": "Imported: equivalence with the Einstein equations",
+  "text": "Gauge theory gravity rewrites general relativity in the language of geometric algebra. This imported result says that, wherever its basic field can be inverted, its equations say exactly the same as Einstein's equations for the corresponding metric. In empty space this means the metric has vanishing Ricci curvature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "A. Lasenby, C. Doran and S. Gull, Gravity, gauge theories and geometric algebra, Phil. Trans. R. Soc. Lond. A 356 (1998), 487--582., \\S 4 (\\S 4.3, covariant forms of the field equations), App.~C; C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003)., Ch.~13-14",
+  "hash": "38748b9c38b9",
+  "number": 39
+ },
+ {
+  "id": "c:interior.imported-tractor-connection",
+  "type": "fact",
+  "claim": "interior.imported-tractor-connection@2",
+  "title": "Imported: the tractor connection",
+  "text": "Gravity here is a pair of fields on flat spacetime, and what it determines, once lengths are allowed to be rescaled freely, is a conformal geometry. To it one can attach a larger bundle called the tractor bundle, whose fibres are the six-dimensional vectors of the series' conformal model, with a natural way of differentiating its sections. This imported result gives that derivative explicitly once a particular scale is chosen, in terms of the Schouten tensor, a rearranged form of the field strength. The derivative depends only on the conformal geometry and respects the bundle's own metric.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. N. Bailey, M. G. Eastwood and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.; S. N. Curry and A. R. Gover, An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds, in Asymptotic Analysis in General Relativity, London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170., \\S 5",
+  "hash": "d98bfef4c970",
+  "number": 40
+ },
+ {
+  "id": "c:interior.metric-parallelism-trace-schouten-condition",
+  "type": "fact",
+  "claim": "interior.metric-parallelism-trace-schouten-condition@6",
+  "title": "Metric parallelism, and the trace of the Schouten condition",
+  "text": "This lemma records two elementary facts behind the tractor form of the gravitational field equations. First, the natural derivative on the tractor bundle, which on flat spacetime is a field of rotations of the six-dimensional conformal model, respects that model's own notion of length. Second, if the Schouten tensor, a rearranged form of the gravitational field strength, is a multiple of the metric then the field is Einstein, and the Schouten tensor vanishes exactly when the Ricci curvature does.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim interior.metric-parallelism-trace-schouten-condition, version 6 (T06 Lem 4.2)",
+  "hash": "d3a71df802f4",
+  "number": 41
+ },
+ {
+  "id": "c:neutrino.imported-indifference-faces-democratic-alignment-rank",
+  "type": "fact",
+  "claim": "neutrino.imported-indifference-faces-democratic-alignment-rank@6",
+  "title": "Imported: indifference, the faces, the democratic alignment, and the rank-one texture",
+  "text": "The framework adopts a rule, as a premise rather than a theorem, that it may not build in distinctions that nothing explains. Applied to three families pictured as three equivalent pairs inside a three-part object, the rule says the vacuum must at first treat all three alike. If the leading masses come from squaring that evenly weighted direction, one family is heavy and two are massless at first order, with smaller effects later separating the light ones. Each step holds only at the level the earlier work stated, and the family picture itself is still a conjecture.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim neutrino.imported-indifference-faces-democratic-alignment-rank, version 6 (T15 Fact 2.3)",
+  "hash": "8c081703fc32",
+  "number": 42
+ },
+ {
+  "id": "c:neutrino.invariant-symmetric-matrices",
+  "type": "fact",
+  "claim": "neutrino.invariant-symmetric-matrices@2",
+  "title": "$S_{3}$-invariant symmetric matrices",
+  "text": "If a three-by-three table of numbers must look the same however the three families are relabelled, it can contain only two independent numbers. That fixes its behaviour completely: one special direction in which all three families are equal, and a plane of directions all treated alike. Inverting such a table is then simple.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim neutrino.invariant-symmetric-matrices, version 2 (T15 Lem 4.3)",
+  "hash": "16df5881f078",
+  "number": 43
+ },
+ {
+  "id": "c:neutrino.seesaw-what-gauge-invariance-proves-what",
+  "type": "fact",
+  "claim": "neutrino.seesaw-what-gauge-invariance-proves-what@4",
+  "title": "The seesaw: what gauge invariance proves, and what is assumed",
+  "text": "The paper first rules out one idea: the cosmological constant's tiny effect on the framework's mass formula is far too weak to give neutrinos their mass. It then recalls that gauge symmetry allows exactly one fermion mass that needs no Higgs field, a Majorana mass for the right-handed neutrino. Assuming, as Premise (M), that the framework realises that mass and makes it large, the familiar seesaw follows at leading order: the light neutrino mass is the square of an ordinary mass divided by the huge one.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim neutrino.seesaw-what-gauge-invariance-proves-what, version 4 (T15 Prop 4.1)",
+  "hash": "ae86300c5b3d",
+  "number": 44
+ },
+ {
+  "id": "c:one-relation.imported-witts-extension-theorem",
+  "type": "fact",
+  "claim": "one-relation.imported-witts-extension-theorem@2",
+  "title": "Imported: Witt's extension theorem",
+  "text": "Witt's theorem concerns a space with a fixed rule for measuring lengths. It says that any length-preserving match between two pieces of the space extends to a length-preserving symmetry of the whole space, so pieces that look alike from the inside are also indistinguishable from the outside. It is a classical result from the 1930s.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "E. Witt, Theorie der quadratischen Formen in beliebigen K\"orpern, J. Reine Angew. Math. 176 (1937) 31--44.; T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67, American Mathematical Society (2005)., Ch.~I, \\S4",
+  "hash": "08fd30cacddf",
+  "number": 45
+ },
+ {
+  "id": "c:one-relation.two-presentations",
+  "type": "fact",
+  "claim": "one-relation.two-presentations@4",
+  "title": "The two presentations",
+  "text": "The basic rule of a Clifford algebra can be written in two ways. In one it describes distances and angles, the language of geometry and gravity; in the other it is exactly the rule obeyed by fermions, the language of quantum theory. The paper takes this to mean that geometry and quantum structure are two views of one object, though only at the level of structure, not of how things evolve.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim one-relation.two-presentations, version 4 (T16 Prop 3.1)",
+  "hash": "1cf628d9a1ca",
+  "number": 46
+ },
+ {
+  "id": "c:primer.classification-real-clifford-algebras",
+  "type": "fact",
+  "claim": "primer.classification-real-clifford-algebras@3",
+  "title": "Classification of the real Clifford algebras",
+  "text": "Clifford algebras built from a space with p positive and q negative directions turn out to be familiar objects in disguise: square tables of numbers whose entries are real numbers, complex numbers or quaternions, or a pair of such tables side by side. Which one appears depends only on p minus q, in a pattern that repeats every eight steps. The algebra splits into two identical pieces exactly when p minus q leaves remainder 1 on division by four.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim primer.classification-real-clifford-algebras, version 3 (T00 Thm 9.3)",
+  "hash": "e05917451c6b",
+  "number": 47
+ },
+ {
+  "id": "c:primer.commutation-rule",
+  "type": "fact",
+  "claim": "primer.commutation-rule@2",
+  "title": "The commutation rule",
+  "text": "In a Clifford algebra two perpendicular directions anticommute: swapping their order flips the sign. This rule extends that to anything built from directions perpendicular to a given one. Moving the given direction past such an element flips the sign of its odd part and leaves its even part alone.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim primer.commutation-rule, version 2 (T00 Lem 9.1)",
+  "hash": "c2cabda3fa9d",
+  "number": 48
+ },
+ {
+  "id": "c:sheaf.determinant-identity-blow-up-expansion",
+  "type": "fact",
+  "claim": "sheaf.determinant-identity-blow-up-expansion@3",
+  "title": "The determinant identity, and the blow-up expansion",
+  "text": "The enlarged geometry built around a degenerating wall has a determinant that factorises exactly into the original determinant times a simple correction factor. The correction involves a quantity that blows up as the wall is approached, like one over the vanishing eigenvalue, with opposite signs on the two sides. Knowing exactly how it blows up is what lets one control where the enlarged geometry stays non-degenerate.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.determinant-identity-blow-up-expansion, version 3 (T04 Lem 4.3)",
+  "hash": "9fee37a9786e",
+  "number": 49
+ },
+ {
+  "id": "c:sheaf.local-freeness-constant-rank",
+  "type": "fact",
+  "claim": "sheaf.local-freeness-constant-rank@2",
+  "title": "Local freeness at constant rank",
+  "text": "Gluing together the Clifford algebras at all points of a space gives a smoothly varying family of algebras. This result shows that the family has the same size everywhere, even where the geometry degenerates. So degeneration cannot be detected by counting dimensions; it has to show up in the structure of the algebra instead.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.local-freeness-constant-rank, version 2 (T04 Prop 2.8)",
+  "hash": "bcf93729cce3",
+  "number": 50
+ },
+ {
+  "id": "c:sheaf.localised-transport",
+  "type": "fact",
+  "claim": "sheaf.localised-transport@5",
+  "title": "Localised transport",
+  "text": "When the degenerate algebra is placed inside the larger completed algebra, it sits there unchanged. What changes is its surroundings: on the wall, a direction of zero length that was a dead end in the small algebra finds a partner in the large one, and together they behave like the creation and annihilation operators of a single fermion. This pairing happens only on the wall, so the fermion-like structure lives exactly where the geometry is singular.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.localised-transport, version 5 (T04 Cor 4.5)",
+  "hash": "441c063c58bb",
+  "number": 51
+ },
+ {
+  "id": "c:sheaf.one-sided-completion-singularity",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion-singularity@4",
+  "title": "One-sided completion at the singularity",
+  "text": "The completion that repairs a degenerating geometry can be carried out at the central singularity of a Schwarzschild black hole, once that singularity has been opened up into a boundary. Coupling two extra dimensions to the dying direction, with the sign of the coupling chosen to suit the black-hole interior and the coupling switched on only inside the horizon, gives a geometry that is non-degenerate everywhere, and no new degeneracy appears anywhere else. The fermion-like pairing then lives exactly on the opened-up singularity, which has the shape of a line times a sphere.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion-singularity, version 4 (T04 Thm 8.12)",
+  "hash": "824e574bbf54",
+  "number": 52
+ },
+ {
+  "id": "c:sheaf.schwarzschild-degeneration-boundary-tame",
+  "type": "fact",
+  "claim": "sheaf.schwarzschild-degeneration-boundary-tame@6",
+  "title": "The Schwarzschild degeneration is boundary-tame in $\\shW$",
+  "text": "At the centre of a Schwarzschild black hole the gravitational field is singular. Once the singularity is opened up into a boundary and suitably rescaled directions are used, the field's measure of lengths extends smoothly to that boundary and degenerates there in the mildest possible way: exactly one direction loses its length, and it does so at a linear rate. That dying direction is the same in two standard coordinate systems, and it is perpendicular to the slices traced out by observers falling freely inward.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.schwarzschild-degeneration-boundary-tame, version 6 (T04 Thm 8.7)",
+  "hash": "64ec14120944",
+  "number": 53
+ },
+ {
+  "id": "c:sheaf.wall-gram",
+  "type": "fact",
+  "claim": "sheaf.wall-gram@3",
+  "title": "The wall Gram",
+  "text": "On the wall, the enlarged geometry splits into two independent pieces: the ordinary directions that survive the degeneration, and a three-dimensional block made of the dying direction and the two added ones. A direct calculation shows that this block is never degenerate, whatever non-zero coupling strengths are used. The sign of the product of the two coupling constants decides how many directions of each sign the repaired geometry has.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.wall-gram, version 3 (T04 Lem 4.2)",
+  "hash": "2142e3cf3aa0",
+  "number": 54
+ },
+ {
+  "id": "c:singularity.degeneration-exactly",
+  "type": "fact",
+  "claim": "singularity.degeneration-exactly@2",
+  "title": "The degeneration, exactly",
+  "text": "Approaching the centre of a black hole the gravitational field grows without bound, but once that overall growth is divided out the field settles to a definite limit. The limit is degenerate: it registers only the time direction and is blind to the other three. The radial direction, along which the light cones fold, becomes one of these blind directions only in the limit, not at any finite distance from the centre.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim singularity.degeneration-exactly, version 2 (T05 Prop 2.6)",
+  "hash": "796a2f17d4fb",
+  "number": 55
+ },
+ {
+  "id": "c:singularity.descent-what-it-erases",
+  "type": "fact",
+  "claim": "singularity.descent-what-it-erases@5",
+  "title": "The descent, and what it erases",
+  "text": "A single fermionic mode can be described by a two-by-two matrix. The descent keeps the two diagonal entries, which record whether the mode is empty or occupied, and discards the two off-diagonal entries, which record quantum coherence between those two possibilities.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim singularity.descent-what-it-erases, version 5 (T05 Prop 5.5)",
+  "hash": "cc9e849737c1",
+  "number": 56
+ },
+ {
+  "id": "c:singularity.modular-theory-matrix-factor-proved-outright",
+  "type": "fact",
+  "claim": "singularity.modular-theory-matrix-factor-proved-outright@4",
+  "title": "Modular theory of a matrix factor, proved outright",
+  "text": "Tomita-Takesaki theory attaches to a quantum state a natural time evolution, called the modular flow. For two finite quantum systems in an entangled state, this lemma works out every ingredient of that theory by hand. The modular flow turns out to be the evolution generated by the reduced density matrix of one side, and the state satisfies the equilibrium (KMS) condition with respect to it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim singularity.modular-theory-matrix-factor-proved-outright, version 4 (T05 Lem 7.1)",
+  "hash": "2083b0e2c157",
+  "number": 57
+ },
+ {
+  "id": "c:standard-model.hyp-s-slot-statistics",
+  "type": "fact",
+  "claim": "standard-model.hyp-s-slot-statistics@9",
+  "title": "Hypothesis (S): slot statistics, derived from the slot-module hypothesis",
+  "text": "The framework's account of quarks and leptons rested on an assumption, called (S), that two particular ingredients of each particle behave like fermions, the kind of particle that obeys the exclusion principle. It is now a consequence of a weaker assumption: that a particle's states are built from one empty state by adding quanta of a single two-state kind, and that handedness splits them into particles and their mirror-image antiparticles in a way that respects the intermediate Pati-Salam symmetry the framework uses. Under that assumption, with the standard requirement that the theory be free of anomalies, the ingredients must be fermions, and the possible states of a particle form exactly the standard quantum state space of five fermionic modes, with the right handedness for the particles of the Standard Model.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.hyp-s-slot-statistics, version 9 (T12 Hypothesis (S))",
+  "hash": "4017e232e62c",
+  "number": 58
+ },
+ {
+  "id": "c:std-algebra.functoriality",
+  "type": "fact",
+  "claim": "std-algebra.functoriality@1",
+  "title": "Isometries extend to algebra homomorphisms",
+  "text": "If a map of arrows preserves square lengths, it automatically extends to a map of the whole algebra that respects multiplication. Symmetries of space therefore act on everything built from arrows.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.functoriality, version 1",
+  "hash": "2a916eb582b5",
+  "number": 59
+ },
+ {
+  "id": "c:std-algebra.sta-matrix",
+  "type": "fact",
+  "claim": "std-algebra.sta-matrix@1",
+  "title": "The spacetime algebra as a matrix algebra, and the spacetime split",
+  "text": "The algebra of spacetime arrows can be written with $2 \\times 2$ arrays of quaternions, or, after allowing complex numbers, with the $4 \\times 4$ Dirac matrices of relativistic quantum mechanics. Its even part is exactly the algebra of an observer's ordinary three-dimensional space.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.sta-matrix, version 1",
+  "hash": "72ebff0181ef",
+  "number": 60
+ },
+ {
+  "id": "c:std-algebra.sylvester-inertia",
+  "type": "fact",
+  "claim": "std-algebra.sylvester-inertia@1",
+  "title": "Orthogonal bases and the law of inertia",
+  "text": "However you choose perpendicular unit directions in a space, you always find the same number of \"space-like\", \"time-like\" and \"zero\" directions. These three counts are the space's signature, and they are all there is to know about it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. Y. Lam, Introduction to Quadratic Forms over Fields, AMS (2005)., the diagonalisation of forms and Sylvester's law of inertia (real case)",
+  "hash": "8a3e5b25b5e5",
+  "number": 61
+ },
+ {
+  "id": "c:std-algebra.vector-squares",
+  "type": "fact",
+  "claim": "std-algebra.vector-squares@1",
+  "title": "The product of two vectors",
+  "text": "Multiplying two arrows gives a number plus something new. The number is their ordinary dot product. The new part changes sign when the order is swapped, and turns out to be the oriented plane the two arrows span.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.vector-squares, version 1",
+  "hash": "b9e8d4b83e1b",
+  "number": 62
+ },
+ {
+  "id": "c:std-algebra.witt-decomposition",
+  "type": "fact",
+  "claim": "std-algebra.witt-decomposition@1",
+  "title": "Hyperbolic pairs and the Witt decomposition",
+  "text": "Any space with both space-like and time-like directions can be cut into perpendicular copies of the simplest space-time plane, plus a leftover piece that is purely space-like or purely time-like, plus the directions the length rule cannot see. The number of space-time planes, the smaller of the two counts, is the largest number of independent mutually perpendicular light-like directions the space can hold.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.witt-decomposition, version 1",
+  "hash": "b518d1014a0c",
+  "number": 63
+ },
+ {
+  "id": "c:tower.ladder-pairs-satisfy-car-vectors",
+  "type": "fact",
+  "claim": "tower.ladder-pairs-satisfy-car-vectors@4",
+  "title": "The ladder pairs satisfy the CAR, as vectors",
+  "text": "Each step up the tower adds a new pair of special zero-length directions to the space. Taken together, these pairs obey exactly the algebraic rules that quantum theory uses for fermionic modes, the kind of states occupied by particles such as electrons, with one mode per step. The rules hold for the directions themselves, so nothing has to be added or chosen to make them work, and a new step never disturbs the modes already present.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim tower.ladder-pairs-satisfy-car-vectors, version 4 (T03 Prop 4.1)",
+  "hash": "1543e622ebef",
+  "number": 64
+ },
+ {
+  "id": "c:tower.rigidity-clock-frozen",
+  "type": "fact",
+  "claim": "tower.rigidity-clock-frozen@5",
+  "title": "Rigidity; the clock is frozen",
+  "text": "Building the tower by adding pairs of opposite-signed directions never changes the essential type of the algebra. Every floor has the same underlying number system, the same centre and the same kinds of obstruction as the ground floor. For the spacetime algebra, every floor is a matrix algebra over the quaternions, so the eight-step Bott clock does not advance along the tower: it stays where it starts.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim tower.rigidity-clock-frozen, version 5 (T03 Thm 3.6)",
+  "hash": "d98c1227e7e8",
+  "number": 65
+ },
+ {
+  "id": "c:transport.cohomological-form-no-go",
+  "type": "fact",
+  "claim": "transport.cohomological-form-no-go@4",
+  "title": "Cohomological form of the no-go",
+  "text": "Earlier results show that the symmetries fixing a light-like direction slide every candidate partial inverse along by a definite amount. This theorem packages that sliding as a single algebraic invariant, which vanishes only in the smallest case of one space and one time direction. Because the invariant is built inside the original algebra, enlarging the algebra or the symmetry group cannot remove it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.cohomological-form-no-go, version 4 (T01 Thm 4.8)",
+  "hash": "b6ae52d51fb9",
+  "number": 66
+ },
+ {
+  "id": "c:transport.descent-read-out-map",
+  "type": "fact",
+  "claim": "transport.descent-read-out-map@2",
+  "title": "Descent: the read-out map",
+  "text": "After computing in the enlarged space one needs a way back to the original one. The read-out map does this for every point not at infinity, and for ordinary invertible vectors it gives back the familiar reciprocal. For zero-length vectors the answer lies at infinity, and the read-out declines, because no point of the original space represents it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.descent-read-out-map, version 2 (T01 Lem 4.23)",
+  "hash": "bc7a194a3322",
+  "number": 67
+ },
+ {
+  "id": "c:transport.door-one-way",
+  "type": "fact",
+  "claim": "transport.door-one-way@5",
+  "title": "The door is one-way",
+  "text": "The series repairs an algebra by moving up to a larger one. Starting from a nondegenerate algebra, this result shows that there is no way back down that respects multiplication: no structure-preserving map from either larger algebra (the second kind exists only when the signature meets a congruence condition) to the original one exists. Any return journey must lose something, and the natural way back loses the part the climb added.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.door-one-way, version 5 (T01 Thm 7.6)",
+  "hash": "dbc79eaba4bc",
+  "number": 68
+ },
+ {
+  "id": "c:transport.exhaustiveness-every-zero-divisor-annihilated-idempotent",
+  "type": "fact",
+  "claim": "transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3",
+  "title": "Exhaustiveness: every zero divisor is annihilated by an idempotent",
+  "text": "Whenever division fails in a Clifford algebra with a nondegenerate notion of length, the failure can be traced to an element that equals its own square. This shows that the three kinds of failure already named cover every case. Which kinds occur depends only on the numbers of space and time directions.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.exhaustiveness-every-zero-divisor-annihilated-idempotent, version 3 (T01 Thm 3.9)",
+  "hash": "5ab5dcb29193",
+  "number": 69
+ },
+ {
+  "id": "c:transport.existence-classification-type-c",
+  "type": "fact",
+  "claim": "transport.existence-classification-type-c@4",
+  "title": "Existence and classification of type C",
+  "text": "Some Clifford algebras secretly come in two independent halves, and the elements that pick out each half are called central idempotents. This result pins down exactly when that happens: precisely when the number of positive directions minus the number of negative ones leaves remainder 1 on division by four. In that case there are exactly two such elements, built from the product of all the basis directions. Reversing every direction swaps the two halves, but no conjugation by an element of the algebra itself can do so, since these elements commute with everything.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6)",
+  "hash": "2e2e9c26cf7a",
+  "number": 70
+ },
+ {
+  "id": "c:transport.existence-locus-type-n",
+  "type": "fact",
+  "claim": "transport.existence-locus-type-n@5",
+  "title": "Existence locus of type N",
+  "text": "In a space with both positive and negative directions, like the space-time of relativity, there are nonzero directions of zero length, called null directions. This result says they exist exactly when both kinds of direction are present, and that they then form a cone, much like a light cone. Each such direction multiplied by itself gives zero, so it can never be divided by, even in a larger algebra that contains the original one.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.existence-locus-type-n, version 5 (T01 Prop 3.3)",
+  "hash": "b97ee4fb8cba",
+  "number": 71
+ },
+ {
+  "id": "c:transport.fusion-occurs-most-once",
+  "type": "fact",
+  "claim": "transport.fusion-occurs-most-once@5",
+  "title": "Fusion occurs at most once",
+  "text": "Each Clifford algebra sits at one of eight positions on a clock. One repair rule never moves the hand; the other moves it by one step, is only used at the two positions where the algebra is split, and always lands where no split occurs. So the second rule can be used at most once, after which nothing structural changes. The algebra of spacetime starts at a position that never needs the second rule.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.fusion-occurs-most-once, version 5 (T01 Prop 7.4)",
+  "hash": "177eecc8007e",
+  "number": 72
+ },
+ {
+  "id": "c:transport.no-fourth-rule",
+  "type": "fact",
+  "claim": "transport.no-fourth-rule@4",
+  "title": "No fourth rule",
+  "text": "Division can fail in a nondegenerate real Clifford algebra in exactly three ways, and each has its own prescribed fix: add a pair of dimensions, add one dimension, or do nothing. Since every failure of division is one of the three, the list of fixes is complete.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.no-fourth-rule, version 4 (T01 Cor 6.7)",
+  "hash": "3277dd80d564",
+  "number": 73
+ },
+ {
+  "id": "c:transport.no-transport-terminates",
+  "type": "fact",
+  "claim": "transport.no-transport-terminates@4",
+  "title": "No transport terminates",
+  "text": "Each repair in the transport programme enlarges the algebra to fix a failure of division. This result shows that the enlarged algebra always has failures of its own: one repair adds new light-like directions, the other produces projections and elements that square to zero. So the process never ends in an algebra where every nonzero element can be divided by.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.no-transport-terminates, version 4 (T01 Prop 7.8)",
+  "hash": "0621d1b8ca36",
+  "number": 74
+ },
+ {
+  "id": "c:transport.one-generator-minimal-minimal-completions-classified",
+  "type": "fact",
+  "claim": "transport.one-generator-minimal-minimal-completions-classified@5",
+  "title": "One generator is minimal; the minimal completions classified",
+  "text": "When a Clifford algebra splits into two halves, one can try to repair it by adding directions. Adding nothing leaves it split; adding one direction of zero length only thickens the algebra without joining the halves; adding one direction of nonzero length joins them; adding more is larger than needed. The two possible single directions, of positive or negative square, give the same algebra, so the repair is unique and cannot tell which sign was used.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.one-generator-minimal-minimal-completions-classified, version 5 (T01 Thm 5.7)",
+  "hash": "06ff19292585",
+  "number": 75
+ },
+ {
+  "id": "c:transport.pinching-kernel",
+  "type": "fact",
+  "claim": "transport.pinching-kernel@3",
+  "title": "The pinching, and its kernel",
+  "text": "After moving up to the completed algebra there is a canonical way to come back down: keep the blocks that commute with a chosen projector and discard the rest. What is discarded is exactly the new ladder pair that the completion added, and every element of the original algebra comes back unchanged under the natural identification of the corner (under the other standard identification it comes back as its grade involution, still faithfully). Coming back down does not respect multiplication in general, and the result gives the exact correction term.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.pinching-kernel, version 3 (T01 Prop 7.5)",
+  "hash": "8cfe68d8eece",
+  "number": 76
+ },
+ {
+  "id": "c:transport.representation-independent-minimality-completion",
+  "type": "fact",
+  "claim": "transport.representation-independent-minimality-completion@4",
+  "title": "Representation-independent minimality of the completion",
+  "text": "One might hope to repair a geometry inside some smaller algebra by placing the original algebra in it in an unusual way. This result rules that out. What the repair needs is room for the points of the geometry together with their separations, and that requires at least one extra positive and one extra negative direction, whatever the embedding.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.representation-independent-minimality-completion, version 4 (T01 Thm 4.19)",
+  "hash": "f2ed7e55c8ad",
+  "number": 77
+ },
+ {
+  "id": "c:transport.rule-1-morita-trivial",
+  "type": "fact",
+  "claim": "transport.rule-1-morita-trivial@5",
+  "title": "Rule 1 is Morita-trivial",
+  "text": "The basic transport step adds one new pair of null directions to an algebra. The enlarged algebra turns out to be the algebra of two-by-two matrices with entries in the original one, with the new null pair playing the role of the off-diagonal entries. So the step leaves the essential type of the algebra unchanged, although whether certain other kinds of obstruction are present can change.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.rule-1-morita-trivial, version 5 (T01 Thm 7.1)",
+  "hash": "23007d0ed9d5",
+  "number": 78
+ },
+ {
+  "id": "c:transport.rule-2-ideal-fusion-sharp-form",
+  "type": "fact",
+  "claim": "transport.rule-2-ideal-fusion-sharp-form@4",
+  "title": "Rule 2: ideal fusion, sharp form",
+  "text": "Some Clifford algebras split into two independent halves. Adding one new direction, of either sign, fuses the halves into a single algebra of two-by-two matrices whose entries come from the algebra's even part. The fused algebra has no split of its own, and the two choices of sign give the same algebra.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.rule-2-ideal-fusion-sharp-form, version 4 (T01 Thm 5.5)",
+  "hash": "cd48c346a659",
+  "number": 79
+ },
+ {
+  "id": "c:transport.splitting-along-hyperbolic-plane",
+  "type": "fact",
+  "claim": "transport.splitting-along-hyperbolic-plane@3",
+  "title": "Splitting along a hyperbolic plane",
+  "text": "When a space contains a light-like direction paired with a partner, the algebra of the whole space splits into four slots built from that pair, each filled by an element of the algebra of the remaining directions. The split is unique, which makes it a reliable bookkeeping device. Multiplying by the light-like direction never sends a nonzero element of the remaining algebra to zero.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.splitting-along-hyperbolic-plane, version 3 (T01 Lem 2.4)",
+  "hash": "93e9897f4307",
+  "number": 80
+ },
+ {
+  "id": "c:transport.swap-rescale-normal-form",
+  "type": "fact",
+  "claim": "transport.swap-rescale-normal-form@4",
+  "title": "Swap-and-rescale normal form",
+  "text": "Points of the enlarged space can be written as a triple: a number, an ordinary vector, and a second number. In these terms, taking the reciprocal just swaps the two numbers, with a factor of two, a simple operation that always works. Dividing out the first number gives back the usual answer; when that number is zero, the answer is one of three kinds of point at infinity.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.swap-rescale-normal-form, version 4 (T01 Prop 4.21)",
+  "hash": "b438e7018a58",
+  "number": 81
+ },
+ {
+  "id": "c:transport.totality",
+  "type": "fact",
+  "claim": "transport.totality@3",
+  "title": "Totality",
+  "text": "In a Clifford algebra with vectors of zero length, the reciprocal of a vector is undefined on exactly those vectors. After moving to the enlarged space of points, a single reflection-like operation gives a reciprocal everywhere: it agrees with the usual one on ordinary vectors and sends zero-length vectors to points at infinity. Those values are the limits one would expect, and no other continuous rule matches the usual reciprocal.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.totality, version 3 (T01 Thm 4.10)",
+  "hash": "60910ab40b56",
+  "number": 82
+ },
+ {
+  "id": "c:transport.type-p-self-repairing",
+  "type": "fact",
+  "claim": "transport.type-p-self-repairing@2",
+  "title": "Type P is self-repairing",
+  "text": "Some zero divisors are projection-like elements, ones that equal their own square. For these, the repair being sought is already available: each such element can serve as its own partner and satisfies the required identities. Because the rule is simply to take the element itself, it automatically respects every symmetry, so nothing needs to be added to the algebra.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.type-p-self-repairing, version 2 (T01 Prop 6.1)",
+  "hash": "ea6b3a4d1ee0",
+  "number": 83
+ },
+ {
+  "id": "c:pred.neutrino-mass-sum-floor",
+  "type": "prediction",
+  "claim": "pred.neutrino-mass-sum-floor@2",
+  "title": "Neutrino mass sum at the oscillation floor",
+  "text": "If the second stage of the framework's family symmetry breaking is hierarchical (Premise (H)), the framework predicts that the three neutrino masses add up to the smallest total that oscillation experiments allow, about 0.059 eV, with the normal ordering. Cosmological surveys are now close to this value, so it is a near-term test.",
+  "gap": false,
+  "level": "lay",
+  "kill_condition": {
+   "threshold": "Below: a physical-prior cosmological bound confirmed below the floor, or confirmed inverted ordering. Above: a sum determined meaningfully above the floor (near 0.075 eV), or m1 measured above a few meV",
+   "data_source": "Cosmological combinations",
+   "registered": "2026-08 (T17 stance table, row 4)"
+  },
+  "hash": "8f7af7750105",
+  "number": 84
+ },
+ {
+  "id": "c:pred.no-neutrinoless-double-beta",
+  "type": "prediction",
+  "claim": "pred.no-neutrinoless-double-beta@2",
+  "title": "No neutrinoless double-beta signal at next-generation sensitivity",
+  "text": "Neutrinoless double-beta decay is a rare nuclear process that would show neutrinos are their own antiparticles. Assuming the framework's premise (H), that the lightest neutrino is nearly massless, the effective mass that sets the rate comes out at a few thousandths of an electronvolt, between about $1.3$ and $3.9$ meV, with the sharper windows $1.3$ to $1.7$ or $3.5$ to $3.9$ meV if the breaking is also assumed real. That is too small for the next generation of experiments to detect, so a clear signal there would count against the framework. The absence is conditional: it rests on premise (H).",
+  "gap": false,
+  "level": "lay",
+  "kill_condition": {
+   "threshold": "A confirmed signal above the predicted window",
+   "data_source": "Double-beta programmes",
+   "registered": "2026-08 (T17 stance table, row 10)"
+  },
+  "hash": "da0dd97d2a16",
+  "number": 85
+ },
+ {
+  "id": "c:scrambling.no-echo-prediction-registered",
+  "type": "prediction",
+  "claim": "scrambling.no-echo-prediction-registered@2",
+  "title": "The no-echo prediction, registered",
+  "text": "If quantum effects altered a black hole's surface, merging black holes would ring with faint repeated echoes a fraction of a second after the main signal. This framework puts its quantum structure deep inside the hole instead, so it predicts no echoes: the ringing should be exactly as general relativity says. A single confirmed echo would refute it.",
+  "gap": false,
+  "level": "lay",
+  "kill_condition": {
+   "threshold": "One statistically confirmed echo train at the Planck-structure delay",
+   "data_source": "gravitational-wave catalogues",
+   "registered": "2026-09 (T8 record; confronted in the T17 stance table, August 2026)"
+  },
+  "hash": "d53302d777b1",
+  "number": 86
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "The thread of the tour is one move, made again and again. [[t]] Division fails along null directions, so the space is enlarged by a pair of new directions, one of each sign. [[c:transport.minimality]] The work is done in the larger setting and the answer is brought back, noting where it cannot come back. [[c:transport.transport-algorithm]]\n\nAt the centre of a non-rotating black hole that move supplies the missing partner. [[c:singularity.type-n-only-type-n]] Its boundary modes then carry a thermal state at the Hawking temperature whose occupation numbers are derived rather than chosen. [[c:hawking.i-state]] On the matter side, the same algebra yields the symmetry of the strong, weak and hypercharge forces. [[c:standard-model.gauge-algebra-minimal-massive-composite]]\n\nNot all of this is proved from nothing, and the assumptions are part of the picture. [[t]] The repair along a wall assumes the degeneration is tame. [[c:sheaf.tameness]] The family results assume Hypothesis (S) about slot statistics. [[c:standard-model.hyp-s-slot-statistics]]\n\nThe neutrino results assume that the framework realises a heavy Majorana mass, which is left for later work. [[c:neutrino.m-framework-realises-majorana-term-scale]] The sharp total neutrino mass further assumes that the lightest neutrino gets almost no mass. [[c:neutrino.h-second-stage-hierarchical]]\n\nThe mirror world assumes a single shared origin for every hidden sector. [[c:dark-matter.p1-single-frozen-point]] It also assumes that only sectors related by a reflection are forced to match. [[c:dark-matter.p2-indifference]] That the matter excess is imprinted equally in the two mirror sectors is proved for the mirror copy, not assumed. [[c:dark-matter.mirror-tower-copy-one]]\n\nUnder these assumptions the framework makes claims that can fail. [[t]] It predicts that the three neutrino masses add up to about 0.059 eV, with the normal ordering. [[c:pred.neutrino-mass-sum-floor]] It expects no neutrinoless double-beta signal at next-generation sensitivity, so a clear signal would count against it. [[c:pred.no-neutrinoless-double-beta]] It predicts no echoes after black holes merge, and a single confirmed echo would refute it. [[c:scrambling.no-echo-prediction-registered]]",
+  "hash": "cb89a96d112b"
+ }
+]

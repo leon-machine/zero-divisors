@@ -1,0 +1,26 @@
+functions:
+  check_forced_completion_of_spacetime_algebra:
+    kind: partial
+    clauses:
+    - '"The forced completion of the spacetime algebra is Cl(1,3) -> Cl(2,4)"'
+    omits: checks that the exported conformal model has signature (2,4) with null lifts at three sample vectors and one transvection instance in Cl(2,4); that this completion is forced (minimality, no-go) is the imported theorem
+  check_fock_module_irreducible:
+    kind: exact
+    clauses:
+    - '"the complexified Cl(2,4) acts irreducibly on the Fock space of three fermionic ladder pairs"'
+    omits: ''
+  check_chirality_halves:
+    kind: exact
+    clauses:
+    - '"whose chirality halves are the conformal spinor space CS and its conjugate dual" (the halves Lambda^even W and Lambda^odd W, each irreducible, I_6 = +-i (-1)^N)'
+    omits: the identification of the even half with the conformal spinor space is the premise spinor-identification, and the odd half as the conjugate dual of CS is not tested (the docstring says so)
+  check_real_minimal_left_ideal_with_unit_i6:
+    kind: exact
+    clauses:
+    - '"in the real algebra it is the minimal left ideal Cl^+(2,4)P, whose complex unit is I_6"'
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the Fock module, chirality halves and minimal left ideal are exact finite computations; forcedness and the conjugate-dual identification are declared untested

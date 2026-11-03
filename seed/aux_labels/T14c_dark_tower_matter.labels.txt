@@ -1,0 +1,60 @@
+\newlabel{sec:intro}{{1}{4}{Introduction}{section.1}{}}
+\newlabel{tab:summary}{{1}{5}{The eight towers' matter. Fields: Theorem \ref {thm:fields}. Gauge algebras: Theorem \ref {thm:algebras}, under H2 and Premise \ref {prem:U}; $^{*}$with an external pair unit, $\su (2) \oplus \su (3) \oplus \uu (1)$ in both (Remark \ref {rem:branches}); $r = 0$: Remark \ref {rem:kleinian}. Content: Propositions \ref {prop:content3}, \ref {prop:content5}. In halos: Section \ref {sec:matter}}{table.1}{}}
+\newlabel{sec:setting}{{2}{5}{Setting, imports and premises}{section.2}{}}
+\newlabel{fact:towers}{{2.1}{5}{imported: the towers and their types}{theorem.2.1}{}}
+\newlabel{fig:clock}{{1}{6}{The eight towers on the residue clock, each with its signature under T14's Premise P3, the field of its constituents (Theorem \ref {thm:fields}) and what it carries. Across the dashed axis $r \mapsto -r$ the pairs $\{2, 6\}$, $\{1, 7\}$, $\{3, 5\}$ are exchanged; within each pair the field and the gauge algebra agree, and only discrete structure differs (Corollary \ref {cor:samekind}). The towers interact only through the one metric at the centre}{figure.1}{}}
+\newlabel{fact:clifford}{{2.2}{6}{imported: Clifford structure}{theorem.2.2}{}}
+\newlabel{fact:chain}{{2.3}{6}{imported: our tower's chain}{theorem.2.3}{}}
+\newlabel{fact:rule}{{2.4}{6}{imported: the unit-ball rule}{theorem.2.4}{}}
+\newlabel{fact:sims}{{2.5}{6}{imported: the cluster simulations}{theorem.2.5}{}}
+\newlabel{prem:H1}{{2.6}{7}{H1: momentum}{theorem.2.6}{}}
+\newlabel{prem:H2}{{2.7}{7}{H2: identification}{theorem.2.7}{}}
+\newlabel{prem:S}{{2.8}{7}{Hypothesis (S): slot statistics}{theorem.2.8}{}}
+\newlabel{prem:U}{{2.9}{7}{U: transposition rule}{theorem.2.9}{}}
+\newlabel{rem:whyU}{{2.10}{7}{why U}{theorem.2.10}{}}
+\newlabel{sec:constituents}{{3}{8}{Constituents, momentum and where mass begins}{section.3}{}}
+\newlabel{def:ideals}{{3.1}{8}{ideals, fields, momentum}{theorem.3.1}{}}
+\newlabel{thm:fields}{{3.2}{8}{the constituent's field}{theorem.3.2}{}}
+\newlabel{rem:T14types}{{3.3}{9}{T14's types are a different commutant}{theorem.3.3}{}}
+\newlabel{lem:norm}{{3.4}{9}{the adjoint and the norm}{theorem.3.4}{}}
+\newlabel{thm:onset}{{3.5}{10}{where mass begins}{theorem.3.5}{}}
+\newlabel{rem:T11}{{3.6}{11}{the four-dimensional case is T11's formula}{theorem.3.6}{}}
+\newlabel{thm:ladder}{{3.7}{11}{the ladder}{theorem.3.7}{}}
+\newlabel{sec:pairs}{{4}{12}{The ladder pairs and the complex unit}{section.4}{}}
+\newlabel{prop:pairs}{{4.1}{12}{the pairs}{theorem.4.1}{}}
+\newlabel{thm:unit}{{4.2}{12}{the third pair's unit in five dimensions}{theorem.4.2}{}}
+\newlabel{rem:units}{{4.3}{13}{the two readings of the unit}{theorem.4.3}{}}
+\newlabel{sec:algebras}{{5}{14}{The gauge algebras}{section.5}{}}
+\newlabel{thm:algebras}{{5.1}{14}{the gauge algebras}{theorem.5.1}{}}
+\newlabel{fig:grids}{{2}{15}{The minimal massive hierarchies: rows are constituents at mass onset, columns their ladder pairs. Two real constituents of two real pairs in three dimensions (orthogonal slot and pair groups, an abelian gauge algebra); two complex constituents of three pairs in four dimensions (T12's Standard-Model algebra); one constituent of three pairs in five dimensions (colour and one abelian charge). The automorphisms respecting both factors are the gauge algebras of Theorem \ref {thm:algebras}}{figure.2}{}}
+\newlabel{rem:branches}{{5.2}{15}{branches that break U, and what they give}{theorem.5.2}{}}
+\newlabel{sec:content}{{6}{15}{Content}{section.6}{}}
+\newlabel{prop:content3}{{6.1}{15}{the three-dimensional content}{theorem.6.1}{}}
+\newlabel{lem:neutralrow}{{6.2}{16}{the neutral row}{theorem.6.2}{}}
+\newlabel{prop:content5}{{6.3}{16}{the five-dimensional content}{theorem.6.3}{}}
+\newlabel{rem:S35}{{6.4}{17}{why (S) fails in three dimensions and not in five}{theorem.6.4}{}}
+\newlabel{prop:anomaly}{{6.5}{17}{anomalies}{theorem.6.5}{}}
+\newlabel{sec:paired}{{7}{18}{The paired towers}{section.7}{}}
+\newlabel{prop:omega7}{{7.1}{18}{the residue-seven unit}{theorem.7.1}{}}
+\newlabel{cor:samekind}{{7.2}{18}{same kind of matter}{theorem.7.2}{}}
+\newlabel{rem:r5unit}{{7.3}{19}{the $r = 5$ unit: datum or field}{theorem.7.3}{}}
+\newlabel{sec:mirror}{{8}{19}{The mirror}{section.8}{}}
+\newlabel{thm:mirror}{{8.1}{19}{the mirror as an algebra}{theorem.8.1}{}}
+\newlabel{prop:P2}{{8.2}{20}{the mirror's temperature and P2}{theorem.8.2}{}}
+\newlabel{comp:mirror}{{8.3}{20}{the mirror's composition}{theorem.8.3}{}}
+\newlabel{fig:mirror}{{3}{21}{The mirror's composition against its temperature ratio $\xi = T'/T$ (Computation \ref {comp:mirror}). T14 carries the whole interval from its gravitational floor to the $\Neff $ cap; P2 applied with T14's reach would put the mirror at $\xi = 1$, outside it}{figure.3}{}}
+\newlabel{obs:mirror}{{8.4}{21}{the mirror against the record}{theorem.8.4}{}}
+\newlabel{sec:matter}{{9}{21}{From content to matter}{section.9}{}}
+\newlabel{prop:phases}{{9.1}{21}{the three-dimensional phases}{theorem.9.1}{}}
+\newlabel{prop:sheetsurvival}{{9.2}{22}{survival on sheets}{theorem.9.2}{}}
+\newlabel{prop:fiveD}{{9.3}{22}{the five-dimensional towers}{theorem.9.3}{}}
+\newlabel{prop:R1}{{9.4}{23}{R1 has no mechanism in the odd towers}{theorem.9.4}{}}
+\newlabel{prop:population}{{9.5}{23}{population}{theorem.9.5}{}}
+\newlabel{sec:sterile}{{10}{23}{The sterile towers}{section.10}{}}
+\newlabel{prop:sterile}{{10.1}{23}{the sterile kinematics}{theorem.10.1}{}}
+\newlabel{rem:kleinian}{{10.2}{24}{the Kleinian algebra}{theorem.10.2}{}}
+\newlabel{sec:data}{{11}{24}{The dark sector as built, against the data}{section.11}{}}
+\newlabel{obs:data}{{11.1}{24}{the towers as built}{theorem.11.1}{}}
+\newlabel{sec:refute}{{12}{25}{What this note depends on, and what would refute it}{section.12}{}}
+\newlabel{sec:position}{{13}{25}{Position in the series}{section.13}{}}
+\newlabel{sec:verification}{{14}{26}{Machine verification}{section.14}{}}

@@ -1,0 +1,22 @@
+functions:
+  check_wave_number:
+    kind: exact
+    clauses: ["k = 0.0238 fm^-1 (preamble)"]
+    omits: ""
+  check_hard_disk_lengths:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "lambda = 14 fm and 0.49 fm from the logarithmic form are exact interval computations; the 13 fm 'from the partial-wave sum' is the s-wave plus a bound on m = +-1 only, the |m| >= 2 terms (order x^8) are not bounded"
+  check_cluster_bound_on_lambda:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the core spacing s = 3.5 cm is typed in as input (the paper derives it from R1 and R2); premise() calls on R1, R2 do not recompute it"
+  check_size_and_phase_shift_limits:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "interval computation of log10(a/fm) = -4.0e6 and delta_0 < 1.7e-7 from the (ii) bound; the size bound uses the logarithmic form, the phase-shift bound the small-angle relation lambda = (4/k) sin^2 delta_0"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring states that |m| >= 2 partial waves and the derivation of s are not covered; the quoted numbers all reproduce to the stated rounding."

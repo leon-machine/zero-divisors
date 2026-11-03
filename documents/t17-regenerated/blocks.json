@@ -1,0 +1,762 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "This capstone surveys the Transport Papers, eighteen papers, the primer T0 and the research papers T1 to T17, built on one principle: division by zero in a Clifford algebra is not a prohibition but a forced transport of the description into a minimally completed higher algebra. The series carries that principle from pure algebra (the no-go, the taxonomy, the tower, the sheaf theory) through the black hole (folded light cones to the Page envelope), the companions (the weighted limit, the Hawking spectrum, the boundary mode space, twistors, the frozen point's action), the matter programme (mass, the Standard Model, families, dark towers, neutrinos), and the synthesis (one relation, two shadows). Three things gathered here lie in no single series paper. First, the method: seventeen natural conjectures attempted, sixteen refuted and one placed, each failure locating a better statement one level up, tabulated against the papers that now prove the corrected statements. Second, the status: every paper's payload, epistemic tier, and machine-verified check count in one table, 1762 exact checks across sixteen companion scripts. Third, the falsifiable claims: six registered stances and six conditional absences, each with its dataset, current confrontation, and refutation condition, and the descent measure they leave over: two numbers and one bit, the weak scale's unit still open. The survey's script audits page counts against the companion PDFs, check counts against the counts the companion papers record, and the tables against one another. Nothing here is verified by publication; the claim table is where refutation should begin.",
+  "verbatim": true,
+  "hash": "746e351790af"
+ },
+ {
+  "id": "s:paper-1",
+  "type": "section",
+  "title": "Introduction",
+  "hash": "b605350bc002"
+ },
+ {
+  "id": "i:paper-1",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-introduction",
+  "type": "note",
+  "claim": "note.programme.setting-introduction@1",
+  "title": "Introduction",
+  "text": "A single question opens the series: what happens where division fails. In a Clifford algebra the failure is a geometric object, the null vector on its cone, and the series' founding principle treats the failure as prescribing the next step. Division by an isotropic vector is impossible at the level of elements, provably, in every mixed-signature algebra of dimension at least three (the hyperbolic plane is the one exception, and the idempotent type needs no repair at all); it becomes possible, uniquely and minimally, at the level of the space, by adjoining one hyperbolic plane and letting the undefined values be taken at the adjoined ideal points. The inverse operation never appears. That one principle, pursued mechanically through seventeen natural conjectures, sixteen of them refuted, generates the series this paper surveys: eighteen papers running from pure algebra to the black hole, the Standard Model, the dark sector, and the foundations of quantum mechanics.\n\nThis capstone is the one paper of the series whose subject is the series. It does three things that no companion paper can do for itself. It states the \\emph{method}: the refutation discipline, the three epistemic tiers, and the house rules that hold every paper to them (the section ``The method''); the roadmap of the series reserves this narrative for the capstone alone, so the companion papers state their results neutrally and cite here. It records the \\emph{status}: one table carrying every paper's payload, tier, and machine-verified check count, so that a reader can see in one place what has been proved, at what standard, and what remains (the section ``The series, paper by paper''). And it gathers the \\emph{falsifiable claims}: every registered stance in one place with its dataset, its current confrontation date-stamped, and the measurement that would refute it, together with the descent measure the whole framework leaves unexplained: two numbers and one bit (the section ``The falsifiable claims'' and the section ``The measure: two numbers and one bit''). The closing sections carry the series' open directions, each item with the paper it is now assigned to, and the thesis the whole programme argues for: a theory of singularities in which a singularity is not a wall but an interface (the section ``The open directions'' and the section ``The successor programme: a theory of singularities'').\n\nOne property of this paper is structural and is declared up front: it is \\emph{kept current}. Every status line here depends on results that are, at this writing, under review; when review changes a source paper, the corresponding line here changes. The paper is therefore built to be mechanically refreshable: its tables are compiled from the series' own verified numbers, and its verification script audits the page counts quoted here against the companion PDFs, the check counts against the counts the companion papers record (or, on request, against a fresh run of every companion script), and the tables against one another, so that a stale quotation is a failing check rather than a silent error. The version of record is whichever compilation postdates the series it describes.",
+  "gap": false,
+  "level": "formal",
+  "hash": "e63a0f07945a"
+ },
+ {
+  "id": "c:note.programme.setting-prior-art",
+  "type": "note",
+  "claim": "note.programme.setting-prior-art@1",
+  "title": "Prior art",
+  "text": "The sources of a survey are its series: the companion primer \\cite{ButlerT0}, the sixteen research companions \\cite{ButlerT1, ButlerT2, ButlerT3, ButlerT4, ButlerT5, ButlerT6, ButlerT7, ButlerT8, ButlerT9, ButlerT10, ButlerT11, ButlerT12, ButlerT13, ButlerT14, ButlerT15, ButlerT16}. The method itself has prior art and the paper says so: the discipline of exposing conjectures to refutation and treating each failure as information is Popper's \\cite{Popper1963}, and the idea that a research programme should be judged by whether its problem-shifts are progressive, by what its refutations force it to predict next, is Lakatos's \\cite{Lakatos1978}. What this paper claims under the name of method is not those philosophies but their unusually literal execution: a numbered refutation table, a declared standard of proof on every result, machine verification deposited with every computational paper, and registered predictions with named refutation conditions, maintained as a running discipline across one body of mathematics. The individual scientific sources (Hestenes' geometric algebra, Penrose's twistors, tractor calculus, MacDowell-Mansouri, bosonisation, modular theory, the Everett literature, and the rest) are acknowledged in the prior-art sections of the papers that use them, and this survey does not repeat those declarations except where a specific claim is discussed.",
+  "gap": false,
+  "level": "formal",
+  "hash": "2edb3828cecc"
+ },
+ {
+  "id": "c:note.programme.setting-contribution",
+  "type": "note",
+  "claim": "note.programme.setting-contribution@1",
+  "title": "Contribution",
+  "text": "(1) The method stated as method, with the refutations tabulated against the series papers that carry the corrected statements (the section ``The method''). (2) The status table, per series paper, with tiers and check counts (the section ``The series, paper by paper''). (3) The falsifiable claims: six registered stances and six conditional absences with datasets, current confrontations, and refutation conditions (the section ``The falsifiable claims''). (4) The descent measure gathered: two numbers and one bit, with the verification that fixed the count (the section ``The measure: two numbers and one bit''). (5) The open directions: the programme's open problems with the papers they are assigned to (the section ``The open directions''). (6) The singularity thesis and the pattern's other applications (the section ``The successor programme: a theory of singularities''). (7) A verification script that audits the page and check counts this survey quotes against the companion PDFs and the companion papers' recorded counts, and the survey's tables against one another \\cite{ButlerVerifyT17}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "6e7d7fdb6d95"
+ },
+ {
+  "id": "s:paper-2",
+  "type": "section",
+  "title": "The method",
+  "hash": "bae5bd51f2c2"
+ },
+ {
+  "id": "i:paper-2",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-seventeen-refutations",
+  "type": "note",
+  "claim": "note.programme.setting-seventeen-refutations@2",
+  "title": "Seventeen conjectures, sixteen refutations",
+  "text": "The series was produced by conjecturing naturally, failing precisely, and treating each failure as locating the next statement. Seventeen natural conjectures were attempted in the development of the programme; sixteen were refuted, and in every case the refutation located a better statement one level up, which is what a series paper now proves. The one exception is marked in the table: the twelfth conjecture, that $N$ is a parameter of the laws, is not refuted but placed, since the action paper proves it holds under the action as written, and whether $N$ is instead initial data of the descent rests on a promotion decision the series records open. The founding conjecture is the first and sets the pattern: it proposed that dividing by a zero divisor promotes the \\emph{element}, that some enlarged algebra contains an inverse for the null vector. The truth is that nothing repairs the element, provably and permanently, and that the division instead promotes the \\emph{space the element lies in}: the space completes, the value is taken at an adjoined ideal point, and the inverse operation never appears \\cite{ButlerT1}. Everything else in the series is that first refutation iterated at larger scale.\n\nTable \\claimref{refuted.twistors-are-the-ladder-operators} is the refutation table: each refuted conjecture, the corrected statement that replaced it, and the series paper that now carries the correction as a result. The ordinals follow the order in which the conjectures were attempted during the programme's development; the fifth through seventeenth were numbered at the time, while rows 2 to 4 gather early corrections (among them the naive palatial identification, refuted by a statistics computation, and the natural form of the tautological twist, refuted by its own pairing argument) whose internal order is not insisted on. The discipline the table records has a methodological point worth stating plainly: a framework whose natural conjectures keep failing \\emph{in a direction} is being determined by something. Sixteen consecutive failures, each of which made the surviving theory more falsifiable than the conjecture it replaced, are the series' best evidence that its subject is a structure and not a notation.\n\n  \\begin{longtable}{p{0.06\\textwidth} p{0.34\\textwidth} p{0.38\\textwidth} p{0.10\\textwidth}}\n\\toprule\n\\textbf{No.} & \\textbf{The natural conjecture} & \\textbf{The corrected statement} & \\textbf{Carried by} \\\\\n\\midrule\n\\endhead\n1 & Dividing by a zero divisor can be repaired at the element: some extension inverts the null vector & No extension inverts it (the no-go is cohomological: the tautological class of the stabiliser's unipotent radical); division transports the space instead, uniquely and minimally, with no inverse operation & T1 \\\\\n2--4 & Early forms refuted during the programme's development, among them: the two one-generator ascents differ as algebras; twistors are the ladder operators (the naive palatial identification); the wall twist is $N^{*}\\Sigma \\cong (L^{*})^{\\otimes 2}$ & The ascents are always isomorphic (the sign is a geometric bit the algebra forgets); twistors are the \\emph{states} of three ladder pairs, the two-level architecture; the twist is $N^{*}\\Sigma \\cong L^{\\otimes 2}$ (dying line = square root of the conormal) & T1, T9, T4 \\\\\n5 & The mass dictionary, coupling to the frozen point, explains the observed masses & It restates the hierarchy problem: every known massive particle has complex weight $-\\tfrac32 \\pm i\\nu$ with $\\nu \\approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units & T11 \\\\\n6 & The internal ladder acts on the whole tower at once & It acts sector-wise; the right object is the automorphism group of the two-level hierarchy & T12 \\\\\n7 & The three-twistor hierarchy $\\C^{3}\\otimes\\C^{3}$ carries the Standard Model & Its automorphism algebra is seventeen-dimensional, not twelve; the minimal \\emph{massive} composite $\\C^{2}\\otimes\\C^{3}$ carries exactly $su(2)\\oplus su(3)\\oplus u(1)$ & T12 \\\\\n8 & The raw representation content matches the fermion table entry by entry & The list of disagreements is a list of composites; generators, not states, are the content, and the lepton lies one level higher, under the standard-model paper's declared hypothesis of slot statistics & T12 \\\\\n9 & The internal forces are gauged polynomially, as gravity is & The internal curvature-squared invariant is topological; forces are metric-level Yang-Mills, gravity alone is pre-metric & T10, T12 \\\\\n10--12 & The number $N$ is a coincidence (Dirac), a mystery of largeness, and a parameter of the laws & $N$ is one number appearing in every smallness problem; largeness is generic for a tower and the question is why so small; the third conjecture is placed, not refuted: under the action as written $N$ is a parameter of the laws (the trichotomy's fourth alternative), and it is initial data of the descent, dated to the origin, only if the Henneaux-Teitelboim promotion is adopted, a decision recorded open & T12, T10 \\\\\n13 & The vacuum $\\omega$-area sets the weak scale & It is wrong by between forty-four and one hundred and five orders of magnitude; the weak scale falls back to the weight question, and the vacuum's alignment instead \\emph{orders} the families: democracy, rank one, one heavy & T13 \\\\\n14 & The desert: the derived content alone connects the structural scale to experiment & The one-loop run differs from the measured value by about $10.2$ percent (exact one-loop $78761/379488 = 0.2075$ against $0.2312$), so the running between the scales must change: either partner-like content, which no other tower supplies (every other tower contributes zero to this tower's one-loop coefficients), so that if the framework supplies it, it is this tower's split content across the rung and ground directions, or an intermediate symmetry, which the split between slots and pairs supplies as Pati-Salam, the weak angle then an input & T12 \\\\\n15 & A pre-descent $\\theta$-term sources the matter asymmetry & Odd-dimensional towers carry no continuous $\\theta$-angle (a degree count: characteristic classes have even degree, and the integer that survives is the instanton number), a non-relaxing angle of order one is excluded in this tower by the neutron dipole bound, and the framework inherits its asymmetry as initial data rather than generating it, the flag being the one mechanism it supplies itself & T14 \\\\\n16 & The neutrino mass is set by the cosmological term of the deformed bracket & The term lies below the flat term by $\\Lambda l^{2}/6$ at extent $l$ and never dominates below the horizon; the mass comes instead from the seesaw on the empty twistor, whose Majorana scale is a premise, with the sum at the oscillation floor under the hierarchy premise & T15 \\\\\n17 & The particle-antiparticle orientation is determined by the charge-zero condition & The refutation is a CPT-covariance argument on three premises (CPT covariance of the derived gauge sector, Hypothesis (S), and the trichotomy's exhaustiveness): the orientation is initial data, and it \\emph{is} the arrow of time & T14 \\\\\n\\bottomrule\n\n\\emph{The refutation table. Seventeen natural conjectures were attempted in the development of the programme; sixteen were refuted, each failure locating a better statement one level up, and the twelfth (row 10--12, third entry) is placed rather than refuted. Ordinals follow the order in which the conjectures were attempted, the fifth through seventeenth having been numbered at the time; rows 2--4 carry the early corrections without insisting on their internal order. The right column names the series paper that now proves the corrected statement.}\n\n\\end{longtable}",
+  "gap": false,
+  "level": "formal",
+  "hash": "2f20218d55a9"
+ },
+ {
+  "id": "c:note.programme.setting-three-tiers",
+  "type": "note",
+  "claim": "note.programme.setting-three-tiers@1",
+  "title": "The three tiers",
+  "text": "Every paper in the series is assigned one of three epistemic tiers, and every result inside a paper declares its own level, so that typography matches epistemic content everywhere. Where a paper declares its tier itself, in its abstract or its introduction, the status table of the section ``The series, paper by paper'' records that declaration; where it does not, the tier in the table is this survey's assignment. Tier A papers (the algebra arc) are theorem papers: complete proofs at journal-mathematics standard, nothing conditional. Tier B papers (the geometric and quantum companions) are assembly papers: their proofs rest on named established theorems (Bisognano-Wichmann, MacDowell-Mansouri, Kostant, Araki, the Penrose transform), with the assembly steps itemised so a reader can see exactly which steps the paper proves and which it imports. Tier C papers (the programme papers of the matter arc and the foundations) derive from flagged structural premises, with the premises stated in their own environments, attacked in their own subsections where the roadmap demands it, and quantified by registered predictions with named refutation conditions. The tiers are the declared shape of a programme that runs from pure algebra to cosmology. A Tier C paper that states five ways it could be refuted is doing its job as well as a Tier A paper that proves its theorems.",
+  "gap": false,
+  "level": "formal",
+  "hash": "79270ef0119b"
+ },
+ {
+  "id": "c:note.programme.setting-house-rules-why",
+  "type": "note",
+  "claim": "note.programme.setting-house-rules-why@1",
+  "title": "The house rules, and why",
+  "text": "Thirteen house rules bind every draft in the series; four carry the method and their rationale is given here. \\emph{The Fact (imported) discipline}: the Theorem and Proof environments are reserved for results proved in that paper at full standard; anything imported (from an earlier series paper or the literature) is stated in a visually distinct Fact environment with its precise provenance. The rule exists because a chain paper that states imports as Theorems claims a standard it has not met. \\emph{Machine verification}: every computational paper deposits a script, exact rational arithmetic wherever possible, no floating point, importing the series' shared exact-arithmetic library; across the sixteen companion scripts the series currently carries 1762 exact checks, every one passing, and several of the series' own errors (sign conventions, citation slips, a silently failing macro) were caught by the checks rather than by reading. \\emph{Per-theorem scope}: each theorem carries its own hypotheses, and sharp boundaries (the hyperbolic atom, the AVTD class, the s-wave sector, the Gaussian class, even transport charge) are stated as results rather than buried as caveats, because a boundary stated as a result is where the next paper starts. \\emph{Registered stances}: where the framework touches data it registers a position in advance, date-stamps the confrontation, and names the measurement that would refute it; the section ``The falsifiable claims'' is the gathered table, and the rule's rationale is the whole paper.",
+  "gap": false,
+  "level": "formal",
+  "hash": "a365fc4ede62"
+ },
+ {
+  "id": "s:paper-3",
+  "type": "section",
+  "title": "The series, paper by paper",
+  "hash": "1d58b8c3bdb0"
+ },
+ {
+  "id": "i:paper-3",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-series-paper-paper",
+  "type": "note",
+  "claim": "note.programme.setting-series-paper-paper@1",
+  "title": "The series, paper by paper",
+  "text": "The series is eighteen papers in six arcs, with two lettered companions to T14 (T14a, the odd extensions; T14b, the simulations), each paper one self-contained theorem cluster proved at the standard of its field. Arc A is the algebra (T1 through T4, with the primer T0 as its companion): the transport principle with its taxonomy of obstructions and transport rules, the applied completion note, the tower, and the sheaf theory over degenerate metrics. Arc B is the black hole (T5, T6): T5 chain from the folded light cones to the Page envelope, and its mathematical-relativity companion. Arc C is the quantum companions (T7, T8): the Hawking spectrum's state and lift, and the singularity's boundary mode space: its counting, scrambling, and observational record. Arc D is identification (T9, T10): the twistor correspondence and the action of the frozen point. Arc E is matter (T11 through T15): mass, the Standard Model, families, the dark towers, and the neutrino sector. Arc F is synthesis (T16 and this capstone). The eighteen papers are numbered consecutively, T0 through T17.",
+  "gap": false,
+  "level": "formal",
+  "hash": "e0f7b83517f8"
+ },
+ {
+  "id": "c:note.programme.setting-series-paper-paper-2",
+  "type": "note",
+  "claim": "note.programme.setting-series-paper-paper-2@3",
+  "title": "The series, paper by paper",
+  "text": "a table of the original is the status table: each paper's current version, its payload in one line, its epistemic tier, its machine verification, and what remains. Two conventions govern it. The tier column records the paper's declared tier, with the per-result levels stated in the papers themselves; and the verification column counts the exact checks in the paper's deposited script, all of which pass, for a series total of 1762 checks across the sixteen companion scripts T1 to T16 (the primer's small script and this paper's audit are counted separately in the section ``Machine verification''). The page counts in the table are audited by that script against the compiled PDFs, and the check counts against the counts the companion papers record, or against a fresh run of every companion script when the audit is invoked that way.\n\n   \n\\begin{longtable}{p{0.066\\textwidth} p{0.045\\textwidth} p{0.389\\textwidth} p{0.09\\textwidth} p{0.078\\textwidth} p{0.224\\textwidth}}\n\\toprule\n\\textbf{Paper} & \\textbf{Ver.} & \\textbf{Payload (one line)} & \\textbf{Tier, status} & \\textbf{Checks} & \\textbf{What remains} \\\\\n\\midrule\n\\endhead\nT0 & 1.0 & An introduction to geometric algebra: the primer companion, expository, every worked example machine-checked, closing with the toolkit of classical structural lemmas T1 imports, proved in full; the failure of division itself is deliberately left to T1 \\cite{ButlerT0} & companion; 16pp & 16 & Kept in step with the series' notation \\\\\nT1 & 3.0 & The transport principle: the taxonomy N/P/C proved exhaustive; the no-go at the element with its cohomological form; total division at the point with minimality forced twice over; Rule 2 fusion with embedding-independent minimality; type P settled (no fourth rule); the mod-8 clock, the one-way door, and the six-step transport algorithm; the extension theorem (where the obstruction lies, and the commuting square) \\cite{ButlerT1} & A; 51pp & 115 & The series' root; full-parabolic torsor class; conservation-of-obstruction conjecture (to T4's walls); the sign of $\\nu^{2}$ \\\\\nT2 & 1.0 & PGA completes minimally and uniquely to CGA, with the translator dictionary; the missing division is transported, not supplied by an inverse (the kinematic-singularity reading is this paper's remark in the section ``The successor programme: a theory of singularities'', not T2's) \\cite{ButlerT2} & A; 8pp & 20 & Sheaf-level degenerations of projective type (belongs to T4's methods) \\\\\nT3 & 1.0 & Tower rigidity (the clock never ticks under Rule 1); one qubit per rung; Witt index as quantum capacity; the CAR limit at even transport charge \\cite{ButlerT3} & A; 17pp & 31 & The odd-charge question (posed, not asserted) \\\\\nT4 & 1.0 & The degeneration sheaf; one-sided completion; absolute conservation of degeneracy; tame wall induction and the infinite wall sequence; the exceptional algebra; the residue with the corrected twist $N^{*}\\Sigma \\cong L^{\\otimes 2}$; two-sidedness of tame walls \\cite{ButlerT4} & A; 50pp & 296 & Wall-class conjecture (coarse half proved); the Kasner-weights conjecture beyond the diagonal class, where the Schwarzschild weights are forced: the analytic dictionary with T6's admissibility class; the Kerr composite; the operator and state level at the wall; the variable-exponent weighted limit; edge regularity; the twisted completion \\\\\nT5 & 1.0 & The six-step chain computed end to end for Schwarzschild, single-mode thermality, the bosonised photon sector, the count from named axioms, the Page envelope and eviction, and the explicit finite-mode model with the parity-protection lemma; the modular flow of the boundary modes as the $t$-line holonomy at $\\beta_{\\mathrm{H}} = 6\\pi$, and (L$_E$) stated with its cost as stabiliser against tangent \\cite{ButlerT5} & B; 77pp & 233 & Closure-completeness (the conjectural core inside axiom (L)); state selection (assigned to T7); the angular state on the exceptional set \\\\\nT6 & 1.0 & Where division fails (unipotent ray, scale decoupling); the parallel ideal point with the $\\Lambda \\neq 0$ extension (norm $+\\Lambda/3$, with its convention note); the weighted limit with values-level Levi boundary holonomy; Schwarzschild-de Sitter; the Kerr tests and the Cauchy-horizon derivative-level filtration; transport-level convergence along the tangential lines \\cite{ButlerT6} & A/B; 31pp & 82 & Quantitative transport across the Cauchy horizon; billiard-invariant limit; ring blow-up; edge regularity; Carter's constant inside the gauge-theoretic formalism \\\\\nT7 & 1.0 & The I-state with the pairing and the Fermi-Dirac symbol both forced by the KMS identity; the mode continuum; the Penrose homogeneity $-2s-2$ promoted to a stated result from T9's ordering shift; the helicity lift and greybody inheritance with the steps named; the finite mode space's exact edge and Planck identities (the $\\ell_{P}^{2}/A$ correction) \\cite{ButlerT7} & B; 21pp & 25 & Geometric modular action; the lift beyond assembly; the Kerr continuum; the $\\ell_{P}^{2}/A$ correction per observable; the cosmological state; helicity counting per boundary mode (one channel or both, feeding T8's count) \\\\\nT8 & 1.0 & The count with the internal cutoff's uniqueness; the epoch as the modular period (the flagged intrinsic-clock principle (IC)), converting to $\\nu = 1/16\\pi$ if and only if $N_{\\mathrm{epoch}} = S_{\\mathrm{BH}}$ (the convention throughout this survey: $\\nu$ in the 1-nat convention, which is $1/(16\\pi\\ln 2)$ in T5's capacity convention, the one T8 gives physical content); the fuzzy transverse sphere by principality-from-indifference; the spreading law saturating the chaos bound; the no-attic route; the no-echo prediction against GWTC-4.0; the calibration factorised, $16\\pi = 4\\pi \\times 4$, and the quarter examined down to the calibration residue $\\kappa_{c} = 1/(4\\ln 2)$ (a symbol T8 keeps distinct from the surface gravity $\\kappa$) with no recount reaching it \\cite{ButlerT8} & B/C; 23pp & 47 & Produce $\\kappa_{c} = 1/(4\\ln 2)$ from the boundary modes or refute (IC), the prediction depending on $\\kappa_{c}$ alone and assigned to T8; the Kerr ring count; chaos beyond free-fermion spreading; the slice-to-epoch aggregation rule; catalogue currency \\\\\nT9 & 1.0 & Twistors as ascended spinors (the Fock model); incidence is the completion's chart, term by term; local twistor transport as the spinor square root of the tractor connection; the palatial two-level architecture with the ordering shifts; the ordering-insensitivity theorem (the googly conjecture's algebraic half proved) \\cite{ButlerT9} & A/B; 30pp & 69 & The analytic googly half; the quantised incidence relation \\\\\nT10 & 1.0 & The Stelle-West vector made from the frozen point, $V = X - (3/\\Lambda)I$; the curvature-squared presentation exists if and only if $\\Lambda \\neq 0$; the equations vacate what the completion fills; $w = -1$ on the Einstein region, registered with its condition; two kinds of action (gravity pre-metric); the acoustic no-go closed at the mixed level of its inputs; the fourth alternative, $N$ a parameter of the laws under the action as written, with the Henneaux-Teitelboim promotion that would make it initial data one of a known class of modifications of the action and a decision recorded open \\cite{ButlerT10} & B; 36pp & 90 & The forcing half beyond the diagonal Kasner class; the dual wall; matter coupling at $\\Sigma$ and the frozen point off the vacuum region (the condition on $w = -1$); the Kerr no-go; the smallness of $\\Lambda$ behind the promotion decision \\\\\nT11 & 1.0 & The mass-weight dictionary $m^{2} = -w(w+3)Q(I)$, in dimension four $-w(w+3)\\Lambda/3$, the de Sitter formula with $\\Delta = -w$, nonnegative on real weights only for $w \\in [-3, 0]$, every known massive particle at complex weight $-\\tfrac32 \\pm i\\nu$; two-twistor mass as symplectic area; the exact join, the composite's grip on the frozen point as its de Sitter momentum, $m^{2} = 2|B_{\\Lambda}|^{2} + Q(I_{\\Lambda}) C$ with the correction to the deformed bracket one term of coefficient $\\Lambda/3$; the massless locus computed; the equivalence principle as a structural reading \\cite{ButlerT11} & B; 24pp & 39 & The operator join and its ordering constants; a de Sitter chart adapted to the non-simple frozen point (shared with T6); the weight assignments (the hierarchy restated); the massless locus and the condensation seed; many-twistor composites \\\\\nT12 & 2.0 & The Standard Model's algebra as automorphisms of $\\C^{2}\\otimes\\C^{3}$ with the exact $\\Z_{6}$ global form; the quark doublet as the cells and the singlet spectrum from the one-handed listing, with the lepton doublet, the common handedness, $\\mathrm{Spin}(10)$ and $\\sin^{2}\\theta_{W} = 3/8$ under the declared hypothesis (S) of slot statistics; the one-loop run in closed form; the one number $N$ and the trichotomy with its fourth alternative; the partner sector quantified (no other tower contributes, complete multiplets inert, the one- and two-threshold criteria, the one-loop rows failing the proton condition and the supersymmetric row admissible at two loops); the slot/pair split as a Pati-Salam intermediate symmetry, with the thirteenth generator its broken $U(1)_{X}$, meeting at $3.4 \\times 10^{16}$ GeV with the weak angle an input that the fermion masses fit without tuning when the second family's factor $3$ comes through mixing with the third by a grade-three direction, the route the series registers; the mass mechanism on the module (the frozen point insensitive to the slots, the doublet as the rung directions, the Yukawa pattern, the transported frozen point) and three no-go theorems on the Georgi-Jarlskog factor, every result of the mechanism that names a species under Hypothesis (S); the status proposition: the rung unit $v/M_{P} \\approx 2 \\times 10^{-17}$, not derived, rescaling-invariant and so not kinematically an instance of $N$ (in Hubble units $v/H = N\\,v/M_{P} \\approx 10^{44}$ inherits $N$) \\cite{ButlerT12} & B; 75pp & 243 & The rung unit and the rung component as a field; two loops at two thresholds; the pair-sector current in the mass mechanism; the orientation (with T14); the descent measure behind the promotion decision; Hypothesis (S) and the label-copy theorem; the intermediate scale; the coupling of the grade-three direction between the second and third families \\\\\nT13 & 2.0 & Three families as the faces of a three-twistor composite, the bound imported at observation level and the identification a conjecture; condensation with the $\\Lambda$-linear source; the thirteenth refutation, and democracy at structural level under the indifference premise and the Gram-square reading; Koide as a nullity condition for one member of the invariant family, the $2\\pi/3$ phases Fourier coordinates carrying no hypothesis; the rank-one-plus-shift theorem and the classification of the displaced-Gaussian class, one clause by theorem and two at flagged preliminary computation; the terminal state as it stands (one open problem in three forms), the absolute scale's list of excluded routes closed by covariance; the $126$ doublet direction with its Georgi-Jarlskog Clebsch, the one direction carrying the factor on a single family, and the reversed order of operations; the lepton sector under T12's Hypothesis (S) \\cite{ButlerT13} & C, declared; 28pp & 73 & The non-Gaussian completion; the Gram-square structure; the second-order breaking $S_{3} \\to S_{2} \\to 1$ and its modulus, now second to the two-term structure; the real structure of face space; the strong dressing; the absolute scale in three pieces and the weight pattern's coupling to the pair-sector current, or on T12's registered route the grade-three direction's coupling between the second and third families (with T12) \\\\\nT14 & 2.0 & Eight towers, two sterile, six populated, five dark, five being the count of dark causal residues under Premise P3 and not the count of anything in the density ratio; exact stability by superselection; the mirror tower a copy of this one with one visible share to half a percent, so $\\Omega_{\\mathrm{dark}}/\\Omega_{b} = 1 + 4.364$, the remainder symmetric and not derived; the unit-ball rule, one quantum of a common mass per unit ball of each tower's space on three premises of its own, returning the ratio as $(11\\pi + 16)/(3\\pi) = 5.364$, fitted, at observation level, with the floor $5.255$ for every thickness, and the composition it fixes passing the Bullet Cluster only with the odd towers' matter collisionless, a premise (T14b); the asymmetry inherited as initial data, with the fifteenth refutation a degree count and the dipole bound at its stated scope, and its strength $\\epsilon$ a declared stance; the orientation as the arrow (the seventeenth refutation, a covariance argument on three premises, Hypothesis (S) among them); the radiation audit conditional on the deposit energy; the ceiling valued; infall by parallel boundary mode spaces under the fifth premise, mass-limited with the supermassive case open, the boundary modes holding entropy and not charge; the fork restated at its level, the bit read once on $(2,2)$ \\cite{ButlerT14} & C, premises attacked; 74pp & 200 & Five open: the odd towers' content; the pre-descent theory (P1), with the reheating temperature and the deposit energy; the coupling rule; the burst dimming factor; the window. Closed in the negative: the partner question (no other tower contributes) \\\\\nT14a & 1.0 & One dimension at a time (companion to T14): a single added generator doubles or complexifies the shadow by its sign, the mirror's algebra sitting on the anti-de Sitter translation bivectors; the rung's even subalgebra as the anti-de Sitter algebra, so the copy theorem's inputs live in the complexification; the frozen point's scale tractor and Stelle-West vector as the ascent's pair signed by $\\Lambda$, the intermediate algebra of this world's own ascent and this tower's by the soldered residue; the transport constraining the frozen point only through its norm, so $\\Lambda$ is undetermined within the series, its frame components gauge, its sign not a selector of the visible tower; the $\\Lambda$ family a tame wall completed on both sides in the case the sheaf paper's conservation theorem excludes \\cite{ButlerT14a} & C; 23pp & 86 & No prediction; the one observational input is the sign of $\\Lambda$ \\\\\nT14b & 1.0 & Simulating the dark towers (companion to T14): per unit of the mass gravity sees, the three-dimensional towers' cross-section is a length times the spacing of the sheets, the composite's size entering only through a logarithm; one multi-species code runs a Bullet-like merger, the assembly of a galaxy cluster and a model of the Milky Way in two readings of T14's composition; with the three-dimensional towers' matter colliding it fails the Bullet Cluster and the shapes of galaxy clusters, under either assignment of the shares; with it collisionless only the mirror's $18.6$ percent collides, the merger passes and the shapes are not excluded; the mirror in the Galaxy registered and not yet decidable \\cite{ButlerT14b} & C; 36pp & 60 & The collisionless premise (the three-dimensional towers' couplings, which the series does not fix); the Galaxy test, which waits on a Gaia analysis with thicker dark disks and a bulge model with a disk-like dark component \\\\\nT15 & 2.0 & The right-handed neutrino as the empty twistor at grade zero, its hypercharge computed as zero (the filled twistor is $e^{c}$ at $Y = -1$), with the proof that anomaly cancellation could not have fixed it; the sixteenth refutation (the deformed bracket's cosmological term cannot supply the mass); the seesaw with its Majorana scale a premise (M), valued at both ends of the Dirac mass, T12's Pati-Salam route selecting the bottom-like one; the light matrix exactly rank one at leading order, whatever $\\alpha$ (the branch $\\alpha \\ll M_{3}$ is a separate premise, governing the breaking): inverted ordering excluded by rank rather than disfavoured by fit, and under the hierarchy premise (H) $\\mnu \\approx 0.059$ eV, $m_{\\beta\\beta}$ at $1.5$ or $3.7$ meV under the real-breaking assumption and in the hull $1.3$ to $3.9$ meV without it; the joint prediction with $w = -1$; leptogenesis suppressed under the reheating premise (R), with the $\\delta_{CP}$ stance \\cite{ButlerT15} & B/C; 22pp & 53 & The PMNS angles at second order; the two light masses and $\\alpha$ (deciding (H)), and whether the branch survives on T12's Pati-Salam route; deriving $M$ (discharging (M), deciding (R)); the injected asymmetry from the descent's dynamics rather than the real-breaking assumption; dataset currency, every number refresh-at-submission by construction \\\\\nT16 & 1.0 & The one relation's two presentations; Witt index as quantum capacity; every point a projective line of vacua and spacetime the manifold of such lines; the sorted overlap table; the third constant placed as the conversion constant between the charts, a conformal invariant below $\\hbar$ and $G$; the $\\nu = 4$ quadric where the incidence-line picture's exhaustiveness first fails; the laboratory's three postulates, one sourced, one half sourced, the third proved not a postulate, with the form of the law forced and $g = 2$ inherited; Born located with the additivity fragment isolated; the vote, on the indifference and recording premises and the flag's Hypothesis (S); experience as record-chain theorems under two premises, recording and supervenience, with Hypothesis (S) in the flow clause \\cite{ButlerT16} & B/C; 31pp & 146 & Which capacity the state reads (half answered); the state-selection residue; thermal time plus state selection as the laboratory's remainder; emergent versus exact superselection; the additivity fragment; the primordial spectrum (assigned to this capstone) \\\\\nT17 & 2.0 & This survey: the method, the status, the falsifiable claims, the measure, the directions, the thesis; with the audit script & survey; kept current & audit & Refreshed after every review round and every dataset move \\\\\n\\bottomrule\n\n\\emph{The status table. One row per series paper: the version printed on its title page, payload, declared tier and review status, exact-check count of the deposited verification script (all checks pass), and the declared remainder. The sixteen companion scripts carry 1762 checks in total; the primer's script and the audit script of the section ``Machine verification'' are counted separately, and the audit checks every page count in this table against the compiled PDF and every check count against the count the companion paper records, or against a fresh run of its script.}\n\n\\end{longtable}\n One reading of the table is worth making explicit for the general reader. The series's claims are not uniformly strong, and the table is built so that the gradient is visible: the algebra arc is unconditional theorem-proving; the black-hole and companion arcs are exact mathematics assembled on named imports, with the physical inputs (a state, an epoch, two structural axioms) flagged and quantified; the matter arc derives structure outright but numbers only through flagged premises, and says so; and the synthesis is explicitly a reading of proved parts. What is uniform is the discipline: every claim carries its level, every level is printed, and everything computational is machine-checked. The table's \"what remains\" column is the programme's open directions in miniature, expanded in the section ``The open directions''.",
+  "gap": false,
+  "level": "formal",
+  "hash": "3f70b844828b"
+ },
+ {
+  "id": "s:paper-4",
+  "type": "section",
+  "title": "The falsifiable claims",
+  "hash": "6f6706ab9631"
+ },
+ {
+  "id": "i:paper-4",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-falsifiable-claims",
+  "type": "note",
+  "claim": "note.programme.setting-falsifiable-claims@1",
+  "title": "The falsifiable claims",
+  "text": "The series' governing commitment to its reader is this: wherever the framework touches data, it registers a position in advance, in print, with the dataset named and the measurement that would refute it specified, and it keeps confronting that data as the record changes. The stances come in two strengths. A \\emph{registered stance} is unconditional within the framework (row 2 carries the one condition T10 names and does not use): if the measurement goes the other way, a piece of the framework essential to its proofs is refuted with no parameter available to absorb the result. A \\emph{conditional absence} is registered at the level of flagged premises: it says that if the framework's premises hold, a whole class of searches will return null forever, so that continued nulls are consistent with it and a single confirmed signal refutes the premises. a table of the original gathers all twelve, with the confrontation column date-stamped August 2026 and refreshed at every revision of this paper, which is kept current.\n\n  \\begin{longtable}{p{0.24\\textwidth} p{0.05\\textwidth} p{0.30\\textwidth} p{0.28\\textwidth}}\n\\toprule\n\\textbf{Stance} & \\textbf{Paper} & \\textbf{Dataset and current confrontation (2026-08)} & \\textbf{Refutation condition} \\\\\n\\midrule\n\\endhead\n\\multicolumn{4}{l}{\\emph{Registered stances (unconditional; a contrary measurement refutes structure used in the proofs)}}\\\\\n\\addlinespace[2pt]\n1. No echoes: post-merger ringdown is the unmodified Kerr quasinormal spectrum & T8 & Gravitational-wave catalogues; through GWTC-4.0, four catalogues and four search methods report no significant echo train, and early tentative claims did not survive reanalysis \\cite{GWTC4} & One statistically confirmed echo train at the Planck-structure delay \\\\\n2. Dark energy cannot evolve: $w = -1$ exactly, at every epoch; registered with its one condition, that the frozen point admits a definition on a matter-filled region that keeps it parallel, which T10 names and does not use & T10 & DESI DR2 with CMB and supernovae; a three-to-four sigma preference for evolving $w$ is reported and contested (derivative-concentrated, prior-sensitive, internally tensioned); the stance does not rely on the dispute and states its exposure \\cite{DESIDR2} & A confirmed detection of $w \\neq -1$ at any epoch, with no parameter available to absorb it \\\\\n3. The $\\Z_{6}$ charge lattice: no fractionally charged colour singlet exists & T12 & PDG exotic-particle searches; consistent to date \\cite{PDG} & One confirmed fractionally charged colour-singlet particle \\\\\n4. $\\mnu$ at the oscillation floor ($\\approx 0.059$ eV) with normal ordering, the sum a prediction under T15's hierarchy premise (H) & T15 & Cosmological combinations; DESI DR2 with the CMB gives $< 0.064$ eV in $\\Lambda$CDM \\cite{DESIDR2}; the tightest current bound, $< 0.052$ eV at 95\\% under a prior extending to zero, is Hou, Wang, Zhao and Zhang's, who read the excursion below the floor as an artefact of the prior and give $< 0.092$ eV with the physical floor imposed \\cite{HouWangZhaoZhang2026} & Below: a physical-prior cosmological bound confirmed below the floor, or confirmed inverted ordering. Above: a sum determined meaningfully above the floor (near $0.075$ eV), or $m_{1}$ measured above a few meV, refutes the number while leaving normal ordering intact \\\\\n5. The leptonic CP phase is trivial: $\\delta_{CP} \\in \\{0, \\pi\\}$ & T15 & Joint long-baseline analyses currently allow CP conservation at three sigma under normal ordering and exclude it under inverted; the stance and the ordering prediction now depend on the same measurement & Confirmed CP violation in the leptonic sector under normal ordering \\\\\n6. The internal prediction: $\\nu = 1/16\\pi$ in the 1-nat convention ($1/(16\\pi\\ln 2)$ in the capacity convention), equivalently one boundary-mode fermion per four Planck cells of horizon area per modular period ($N_{\\mathrm{epoch}} = S_{\\mathrm{BH}}$) & T8 & Internal: the geometry is closed at Schwarzschild (T6's tangential convergence), and the calibration residue $\\kappa_{c} = 1/(4\\ln 2)$ must be produced from the boundary modes themselves & A derivation of $\\kappa_{c}$ from the boundary modes returning any other value, which refutes the intrinsic-clock premise (IC) \\\\\n\\addlinespace[4pt]\n\\multicolumn{4}{l}{\\emph{Conditional absences (registered at the premises' level; continued nulls are consistent, one signal refutes)}}\\\\\n\\addlinespace[2pt]\n7. Permanent direct-detection nulls: dark matter couples through gravity alone & T14 & All direct-detection programmes; null to date & Any confirmed dark-matter detection above the gravitational floor \\\\\n8. No indirect dark-sector signals (annihilation or decay products) & T14 & Indirect-detection surveys; null to date & Any confirmed indirect signal \\\\\n9. No dark radiation: $\\Delta N_{\\mathrm{eff}} \\approx 0$, conditionally on the dark towers' open channels closing, which holds if the descent's deposit is no hotter than T14's estimate & T14 & CMB constraints \\cite{Planck2018}; consistent & One confirmed massless dark species \\\\\n10. No neutrinoless double-beta signal at next-generation sensitivity: $m_{\\beta\\beta}$ at $1.5$ or $3.7$ meV under Premise (H) and the real-breaking assumption, in the hull $1.3$ to $3.9$ meV without it & T15 & Double-beta programmes; the predicted values lie below the next generation's projected $10$ to $20$ meV band & A confirmed signal above the predicted window \\\\\n11. Dimmed final evaporation bursts: the hole radiates into all six populated towers, five of them dark, so the visible burst is dimmed by the ratio of total to visible light degrees of freedom, of order the tower count if the towers are comparable & T14 & Primordial-black-hole burst searches; registered as a minor prediction, the towers' degree-of-freedom counts not derived & An undimmed final burst at the standard luminosity \\\\\n12. No objective-collapse signature: no spontaneous-localisation noise, no gravitationally induced collapse & T16 & Collapse-model tests; null to date & One confirmed collapse signature, which ends the stance, the count of descent data, and the vote together \\\\\n\\bottomrule\n\n\\emph{The falsifiable claims: six registered stances and six conditional absences, each with its source paper, its dataset with the confrontation date-stamped August 2026, and its refutation condition. Rows 2 and 4 are jointly registered through shared datasets; rows 4 and 5 now depend on the same long-baseline measurement. Refreshed at every revision.}\n\n\\end{longtable}\n Three structural remarks about the table. First, the stances are \\emph{coupled}, deliberately: the dark-energy stance (row 2) and the neutrino sum (row 4) are jointly registered because the same survey combinations constrain both and because $w = -1$ removes the dark-energy parameter that could otherwise absorb a failing neutrino bound; and the ordering prediction and the phase stance (rows 4 and 5) have become one experimental question, since the current joint analysis excludes CP conservation under the ordering the framework already excludes. Whether the table should carry rows 4 and 5 merged into a single joint stance is an open presentational decision, recorded here rather than taken silently. Second, the table is \\emph{asymmetric by design}: most rows are absences, and the framework has stated that absences are hard to confirm and easy to refute, which is the correct exposure for a framework whose distinctive claims are structural. The two positive numbers it does predict (the neutrino sum at the floor; the internal $1/16\\pi$) are its two most exposed claims. Third, the table has \\emph{already changed} since the stances were first registered: the echo confrontation has survived a fourth catalogue; the dark-energy preference has sharpened and remains contested; and the neutrino bound tightened below the floor under an unphysical prior and was called a prior artefact by its own analyses, which is the nearest thing to a confirmation of a stance that the record has yet offered. A framework that registers observational positions is worth more than one that does not; this table is where this one can be refuted.",
+  "gap": false,
+  "level": "formal",
+  "hash": "7d7640685291"
+ },
+ {
+  "id": "s:paper-5",
+  "type": "section",
+  "title": "The measure: two numbers and one bit",
+  "hash": "bfa2d8ad291a"
+ },
+ {
+  "id": "i:paper-5",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-measure-two-numbers-one-bit",
+  "type": "note",
+  "claim": "note.programme.setting-measure-two-numbers-one-bit@3",
+  "title": "The measure: two numbers and one bit",
+  "text": "Every quantitative freedom the framework retains has been counted into one small object, and this section states it, with the one scale the count does not yet place. What the framework's laws contain, as derived across the series, is \\emph{initial data of the descent}, and the count across T12, T14, and T16 gives that data as two continuous numbers and one discrete bit. Beside it stands the weak scale: the Standard-Model paper's status proposition leaves the rung unit $v/M_{P} \\approx 2 \\times 10^{-17}$ not derived, and either a second continuous number or an instance of the first, while its first successor problem records that this unit is rescaling-invariant and so not kinematically an instance of $N$ (in Hubble units $v/H = N\\,v/M_{P} \\approx 10^{44}$ inherits $N$); until it is placed, the count of two numbers is the count of the descent's data and not of every unexplained dimensionless constant \\cite{ButlerT12}. The count's subject, dimensionless, is defined once the third constant is placed: the synthesis paper places $c$ as the conversion constant between the Witt chart and the metric chart, a conformal invariant below both $\\hbar$ and $G$, and the three placements close the unit system, the exponent matrix of $(c, \\hbar, G)$ over length, time and mass having determinant $-2$, so that every remaining constant is a dimensionless ratio \\cite{ButlerT16}.\n\nThe first number is $N = M_{P}/H$, about $1.0 \\times 10^{61}$, the square root, up to $\\sqrt{\\pi/\\ln 2}$, of the universe's horizon mode count (about $4.8 \\times 10^{122}$ under the black hole's counting rule). The Standard Model paper proves the compression as monomial identities: the strength of gravity ($G\\Lambda = 3N^{-2}$), the weakness of matter's self-gravity ($N^{-2}$), and the hierarchy of the weak scale ($\\operatorname{Im} w = (m/M_{P})\\,N$) are one number for the first two, by the definition of $N$, while the third also carries the rung unit; the trichotomy classifies $N$: its coincidence with the present age is epochal, Dirac's law being excluded by the registered and conditional $w = -1$ prediction; it is not a dynamical variable (by the frozen point's rigidity); and it is a datum of the descent, dated to the origin, on one condition the action paper now names: under the action as written $N$ is a parameter of the laws, constant on every solution and varying across the family of theories, and it is initial data only if the Stelle-West norm is promoted to a Lagrange-multiplier field whose constancy is an equation of motion, a decision the series records open with both branches stated \\cite{ButlerT12, ButlerT10}; the companion T14a \\cite{ButlerT14a} states the same freedom at the level of the algebra, the transport returning the rung and a canonical null frame and constraining the frozen point only through its norm $\\Lambda/3$. The second number is $\\epsilon$, the strength of the matter asymmetry, carried as a declared stance and not a classification: the dark-matter paper has the framework inherit its asymmetry as initial data of the descent rather than generate it, and its universality across the oriented towers is a theorem for the mirror and void for the odd residues \\cite{ButlerT14}. The bit is the orientation of the planted Witt flag, and the seventeenth refutation argues it is a bit on three stated premises, CPT covariance of the derived gauge sector, the Standard-Model paper's Hypothesis (S), and the exhaustiveness of the trichotomy: CPT conjugation is a covariance of every kinematic structure the series checks, so on those premises the absolute orientation is underivable, and the framework locates what it cannot determine. That one bit is spent once and read twice: it is the matter-antimatter asymmetry's sign and it is the arrow of time, the same choice in two readings \\cite{ButlerT14}, and the synthesis paper proves at $\\Cl(1,3)$ level that the two readings cannot come apart, given the law \\cite{ButlerT16}; on the two-time fork the bit exists but the arrow does not, so there it is read once.\n\nThe measure matters in two directions. Forward, it is what the programme leaves to cosmology: the last question of the framework is the physics of the first freezing, the dynamics that set $(N, \\epsilon)$ and spent the bit, and that question belongs to cosmology (the section ``The successor programme: a theory of singularities''). Backward, it is a constraint: because the count is fixed on its audited premises ($\\epsilon$ a declared stance, the deposit energy a datum the framework does not fix, and, for the bit, the three premises of the seventeenth refutation, Hypothesis (S) among them), any proposal that requires fresh uncaused choices is not an open alternative within the framework, and the synthesis paper uses exactly this closure against dynamical collapse, which would produce one new uncaused bit per measurement event against a total of one on those premises \\cite{ButlerT16}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "57ad220d3021"
+ },
+ {
+  "id": "s:paper-6",
+  "type": "section",
+  "title": "The open directions",
+  "hash": "15dfd80562c0"
+ },
+ {
+  "id": "i:paper-6",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-open-directions",
+  "type": "note",
+  "claim": "note.programme.setting-open-directions@1",
+  "title": "The open directions",
+  "text": "Ten research directions were open when the series began; it has since discharged, sharpened, or claimed most of them, and a table of the original is the updated table: each direction, the paper it is now assigned to, and its state after the series' first pass. The table is the complement of a table of the original: what the series has not done, gathered as deliberately as what it has.\n\n  \\begin{longtable}{p{0.30\\textwidth} p{0.12\\textwidth} p{0.48\\textwidth}}\n\\toprule\n\\textbf{Direction} & \\textbf{Assigned to} & \\textbf{State after the series' first pass} \\\\\n\\midrule\n\\endhead\n1. Sharpen the extensions & T1, T2, T4 & Largely discharged: the cohomological no-go with the torsor-mod-ideal formulation, representation-independent minimality with the exotic embeddings shown inert, and the PGA-to-CGA completion are now theorems. Remaining: the full-parabolic torsor class; sheaf-level degenerations of projective type. \\\\\n2. The sheaf-theoretic programme & T4, T6 & Tameness done, the twist corrected, two-sidedness new. Remaining: the residue at sheaf level and the anisotropic case; the BKL-weights conjecture (the weighted anisotropic completion is the central construction; its analysis is closed at Schwarzschild, with T6's transport-level convergence along the tangential lines, so the $\\nu$ prediction does not wait on it and depends on the calibration residue $\\kappa_{c}$ alone); the wall-class conjecture (coarse half proved); the tractor and Fefferman-Graham dictionary beyond assembly. \\\\\n3. Beyond the weighted limit & T6 & The limit proved for the AVTD class with the holonomy clause; Schwarzschild-de Sitter done. Remaining: the billiard-invariant version; edge regularity; the quantitative Cauchy-horizon transport theorem; the duality-monodromy conjecture over the ring. \\\\\n4. Close the counting & T8, T6 & The epoch derived as the modular period on the flagged premise; the target reformulated integer-holographically ($N_{\\mathrm{epoch}} = S_{\\mathrm{BH}}$); both naive aggregations refuted exactly. The calibration is now factorised exactly, $16\\pi = (\\beta/r_{h})(A/S_{\\mathrm{BH}})$, the quarter shown to be physics rather than a counting convention, and T6's tangential convergence closed at transport level, so the prediction does not wait on the geometry. Remaining: produce $\\kappa_{c} = 1/(4\\ln 2)$, one mode per Bekenstein-Mukhanov quantum per modular period, from the boundary modes, or refute (IC), the intrinsic-clock premise, assigned to T8; the Kerr ring count against Kerr entropy. \\\\\n5. Select the state & T7 & The Fermi-Dirac symbol now derived from the KMS identity; uniqueness in the quasi-free class proved; the continuum carried through the CAR limit. Remaining: geometric modular action (the open problem); beyond quasi-free; the cosmological state of the descent. \\\\\n6. Beyond the twistor kinematics & T9, T6 & The incidence question answered exactly; the googly conjecture's algebraic half proved (ordering-insensitivity of the anti-self-dual sector). Remaining: the analytic googly half; the quantised incidence relation; Carter's constant from the Killing-spinor identity; local twistors over the walls. \\\\\n7. Exercise Rule 2 physically & T1 & Open. T1's extension theorem (where the obstruction lies, and the commuting square) supplies the algebra the direction needs: on every one-dimensional extension of an even-dimensional algebra exactly one sign obstructs, its ideals are copies of the base, and the opposite-sign repair is the Rule 1 ascent. What the series does not carry is a physical system in which that obstruction, exchange and repair are exhibited by a measured or standard structure. Remaining: such an instance, and what selects the sign of the adjoined generator, boost or rotation, conformal or spatial, the same bit the series' choice of $\\Cl(2,4)$ rests on through T1's minimality argument. \\\\\n8. Facing the universe & this paper & The stances gathered in a table of the original and kept current. Remaining: the non-simple incidence chart (shared between T6 and T11); chaotic saturation beyond free-fermion spreading; and the smallness of $\\Lambda$, now placed exactly: under the action as written $N$ is a parameter of the laws, so ``why this $\\Lambda$'' is a question within one theory only if the Henneaux-Teitelboim promotion, one of a known class of modifications of the action, is adopted, a decision the series records open, and then a question for the descent measure no paper has begun; T14a \\cite{ButlerT14a} gives the algebraic form of the same placement: the transport, run on the $\\Lambda = 0$ wall, constrains the frozen point only through its norm, so neither the sign nor the magnitude of $\\Lambda$ is produced by the ascent, and the sign does not select the visible tower. \\\\\n9. Beyond the tower & T3, T4, T8 & The iteration question answered; the qubit ladder's algebraic reading supplied. Remaining: the odd-charge question; wall tameness for all couplings; the qubit ladder's physical reading, which is the $\\nu$ question again. \\\\\n10. The matter programme & T11-T15, T17 & Structure delivered at declared levels across six papers. The partner sector is quantified (no other tower contributes; the demand is split content; the one-loop rows fail the proton condition and the supersymmetric row is admissible at two loops), the slot/pair split supplies a Pati-Salam intermediate symmetry as the second route, on which the weak angle is an input that the fermion masses fit without tuning only if the second family's factor $3$ comes through mixing with the third by the grade-three direction, the Higgs doublet's representation and Yukawa pattern are derived from the rung directions, under Hypothesis (S) wherever a species is named, and three no-go theorems fix the shape of what is missing. Remaining, in the order the no-gos force: the two-term structure first, the coupling of the rung vector to the pair-sector current that the Georgi-Jarlskog factor needs and that neither the frozen point, the family structure nor the bracket supplies, on the registered route the grade-three direction's coupling between the second and third families; then the second-order breaking $S_{3} \\to S_{2} \\to 1$ acting on it (the CKM numbers and light masses); the rung unit and the rung component as a field; the intermediate scale; two loops at two thresholds; the dynamical potential behind the derived source term; the operator join with its ordering constants and the many-twistor grip (T11's successor problems); and the descent-sourced primordial spectrum against the measured index, the state being the first question, the programme item the synthesis paper assigns to this capstone itself and not begun. \\\\\n\\bottomrule\n\n\\emph{The open directions: the programme's ten research directions, updated against the series. Items are assigned to series papers; item 7 is T1's, and item 10's last entry (the primordial spectrum) is assigned to this capstone and not begun.}\n\n\\end{longtable}",
+  "gap": false,
+  "level": "formal",
+  "hash": "e7b6e2108526"
+ },
+ {
+  "id": "s:paper-7",
+  "type": "section",
+  "title": "The successor programme: a theory of singularities",
+  "hash": "df159efd6783"
+ },
+ {
+  "id": "i:paper-7",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-thesis",
+  "type": "note",
+  "claim": "note.programme.setting-thesis@1",
+  "title": "The thesis",
+  "text": "The programme's thesis can now be stated in one sentence, with every clause carried by a series paper rather than a promise: \\emph{a singularity is not a place where physics ends but an interface where the description is forced up one level}, element to point \\cite{ButlerT1}, metric to conformal \\cite{ButlerT4, ButlerT6}, classical value to operator, c-number to ladder \\cite{ButlerT3, ButlerT5}, by a completion that is minimal, unique, and one-way \\cite{ButlerT1}. On this reading the singularity is a functor to be applied, not a pathology to be excised: its degeneration type determines its completion \\cite{ButlerT1}; its rate of degeneration builds its exceptional geometry \\cite{ButlerT4}; its blow-up weights are its Kasner exponents \\cite{ButlerT6}; its boundary dynamics is a Levi excitation \\cite{ButlerT6}; its field equations vacate exactly the directions its completion fills \\cite{ButlerT10}; its modes are thermal at the temperature set by its own boost plane \\cite{ButlerT5}; and its information deficit is a fixed, algebraically tracked projection rather than a loss \\cite{ButlerT5}. The synthesis places the thesis inside a larger one: the completion functor acts on a spacetime already made, point by point, of the algebra's null elements, every point a projective line of quantum vacua, so a singularity is not where non-invertibility begins but where the vacuum family degenerates \\cite{ButlerT16}.\n\nEach clause is falsifiable in principle, and three tests are concrete enough to name. The BKL-weight identification can be tested in numerical relativity: Hubble-normalised holonomy should converge at the predicted power-law rate near generic singularities and fail to converge, in the predicted axis-rotating manner, in oscillatory ones. The mode count, repeated over the Kerr ring, must reproduce the known angular-momentum dependence of Kerr entropy or refute the counting (a table of the original, item 4). And the conservation of degeneracy forbids any signature-change cosmology from smoothly eliminating its wall: the wall can be moved, never destroyed, a structural constraint on no-boundary-type proposals checkable model by model \\cite{ButlerT4}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "f4df91e50db2"
+ },
+ {
+  "id": "c:note.programme.setting-other-applications-successor-programme",
+  "type": "note",
+  "claim": "note.programme.setting-other-applications-successor-programme@2",
+  "title": "Other applications, and the successor programme",
+  "text": "The pattern (a classical description divides by zero; a completed description resolves it at the level of a larger space; the divergence is confined to a scale while a shape survives) is not specific to black holes. Cosmology is its principal successor, on four counts: isotropic big-bang singularities are conformally far tamer than black-hole interiors, so the tame sheaf theory applies to the early universe more directly than to the objects it was built for; the shadow wall gives the interface between aeons in cyclic proposals a precise algebraic description; signature change is already inside the formalism, as the clash of ascents at Euclidean-Lorentzian walls; and the programme's own dating places the descent at the origin, reading the big bang as the freezing itself, with $\\Lambda$ the residue of that origin, $N$ the number that fixes the boundary modes it opened, and the dynamics of the first freezing left to cosmology as the framework's last question \\cite{ButlerT12, ButlerT14}. Outside gravity, the oldest instance of the pattern is optics: a caustic is a locus where the ray description divides by zero, and its resolution by wave optics, the Airy function replacing the infinity and the Maslov index recording a monodromy, is a small instance of the transport principle. Analogue-gravity systems, whose effective acoustic metrics degenerate at sonic horizons, inherit the results wholesale. And one application is resolutely practical: engineering and robotics already compute in projective and conformal geometric algebra, where kinematic singularities are corank drops of a Jacobian, and the completion prescription (adjoin the dying direction, re-metrised by its rate of degeneration) is an algorithm that may yield principled regularisations where current practice damps singularities ad hoc \\cite{ButlerT2}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "1c1787a0a3d3"
+ },
+ {
+  "id": "s:paper-8",
+  "type": "section",
+  "title": "Machine verification",
+  "hash": "8f65e827e43e"
+ },
+ {
+  "id": "i:paper-8",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-machine-verification",
+  "type": "note",
+  "claim": "note.programme.setting-machine-verification@2",
+  "title": "Machine verification",
+  "text": "A survey proves little and quotes much, so its script has a different task from the companion scripts': it is a \\emph{consistency audit}. The script \\texttt{verify\\_T17.py} \\cite{ButlerVerifyT17} imports the series' shared exact-arithmetic library \\texttt{GA.py}; exact rationals, integers, and certified interval brackets throughout, no floating point anywhere; seventy-five checks when every companion file is present, all passing, in six parts. What it audits is stated exactly. For each of the seventeen companion papers T0 to T16 it opens the companion's compiled PDF and reads the page count from the file's own page tree, and it reads the companion's check count from the count the companion paper records in the version block of its source (or, when invoked with \\texttt{--run-siblings}, from a fresh run of the companion script, counting the PASS lines it prints), and compares both with the status table and with the script's own recorded values; a companion file that is absent is reported as skipped, never as passing. It parses this paper's four tables from the source and counts their rows. It recomputes the physical numbers the paper quotes. Because this paper is kept current, the audit is also its refresh mechanism: when a review round changes a companion's page or check count, the corresponding check fails until this survey is regenerated, so a stale quotation is a reported error rather than a silent one.\n\n\\emph{Part A: the series' counts} (forty-seven checks). The paper inventory (eighteen papers, numbered consecutively, the identifiers 0 through 17 read from the file stems); the status table parsed and compared with the recorded page and check counts; the series total of 1762 computed from the recorded counts and compared with every place the body prints it; seventeen page counts read from the companion PDFs; seventeen check counts read from the companion papers' records or scripts; the version column read against the version printed on the title page of each of the twenty papers in the table; the refutation table's rows covering the ordinals 1 to 17 exactly once, each row naming its carrying paper; the stance table's six-plus-six, numbered in order; the ten open directions, each assigned; the measure's cardinality, two numbers and one bit, at each site the paper states it; and this paper's own compile log, which must carry no float-overflow warning (every table here is a breakable longtable) and no undefined reference.\n\n\\emph{Part B: the black-hole numbers}, as exact monomials in $\\pi$ and $M$: $\\beta = 8\\pi M$ with $\\beta/2\\pi = 4M$; the epoch volume $V = \\beta^{2} = 64\\pi^{2}M^{2}$; the equivalence $\\nu = 1/16\\pi \\iff N_{\\mathrm{epoch}} = \\nu V = 4\\pi M^{2} = S_{\\mathrm{BH}}$; and the naive count's overshoot by exactly $16\\pi$, the horizon-area coefficient.\n\n\\emph{Part C: the dark count.} The sterile residues computed as the fixed points of $r \\mapsto -r$ mod 8 (exactly $\\{0, 4\\}$); the count of five dark causal residues; and the ratio arithmetic T14 states, with five entering none of it: the symmetric remainder $4.364 = 5.364 - 1$ once the mirror's one share is removed; that remainder as $\\Omega h^{2} = 4.364 \\times 0.02237$, inside $0.0976 \\pm 0.0012$; and the mirror's share of the dark density, $1/5.364$, between $18.6$ and $18.7$ percent.\n\n\\emph{Part D: the matter numbers.} The two exact one-loop rationals ($78761/379488$ and $6539/28320$) bracketed to four decimals, with the over-twenty-times-closer inequality against the measured angle; the integer bracket $2^{398} < 10^{120} < 2^{399}$; the hypercharge quadratic's roots, sum, and product; $3/8$ as the exact trace ratio; the frozen-point norm $Q(I) = \\Lambda/3$ as a rational-function identity in formal $\\Lambda$, and the dictionary's sign, $m^{2} = -w(w+3)\\Lambda/3$, positive at the midpoint $w = -\\tfrac32$ of the real interval $[-3, 0]$ and negative at $w = 1$ outside it, with the principal-series form $m^{2} = (\\nu^{2} + \\tfrac94)\\Lambda/3$ at $w = -\\tfrac32 + i\\nu$ as a polynomial identity in formal $\\nu$; and the compression identity $G\\Lambda N^{2} = 3$.\n\n\\emph{Part E: the neutrino numbers}, by certified interval arithmetic (integer-square-root brackets on the mass-squared splittings): the normal-ordering floor confined to $(0.057, 0.061)$ eV and containing the predicted $0.059$; the $0.052$ eV zero-extending-prior bound strictly below the floor; the $0.092$ eV physical-prior bound above it; the inverted-ordering requirement above $0.097$ eV; the two $m_{\\beta\\beta}$ values recomputed from the splittings and the mixing brackets under the hierarchy premise and real breaking, bracketing $1.5$ and $3.7$ meV inside the hull $1.3$ to $3.9$ meV and below next-generation sensitivity; the quoted Koide value inside $2/3 \\pm 10^{-5}$; and the Cabibbo bracket containing $0.225$.\n\n\\emph{Part F: the capacity identities.} The Witt index of Lorentzian signature (one); the increment identity on an exhaustive grid; and the ascended capacity three, equal on both sides of the chart.\n\nWhat the audit does not and cannot check is what no script can: whether the source papers' proofs are correct (their own scripts and Leon's review carry that), whether the tiers are correctly assigned, whether the payload and remainder cells describe their papers faithfully, and whether the method section's claims about method are true of the practice. The audit guarantees a weaker and more useful thing: that the page and check counts this survey quotes are the companions' own, that its tables agree with one another, and that the physical numbers it repeats recompute.",
+  "gap": false,
+  "level": "formal",
+  "hash": "566917cd082a"
+ },
+ {
+  "id": "s:paper-9",
+  "type": "section",
+  "title": "Position in the series",
+  "hash": "1c742bbde4d0"
+ },
+ {
+  "id": "i:paper-9",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.programme.setting-position-series",
+  "type": "note",
+  "claim": "note.programme.setting-position-series@1",
+  "title": "Position in the series",
+  "text": "This paper is T17 of the series. \\emph{It relies on all seventeen predecessors,} T0 \\cite{ButlerT0} through T16 \\cite{ButlerT16}: the primer T0 \\cite{ButlerT0}; the algebra arc, T1 \\cite{ButlerT1}, T2 \\cite{ButlerT2}, T3 \\cite{ButlerT3} and T4 \\cite{ButlerT4}; the black-hole arc, T5 \\cite{ButlerT5} and T6 \\cite{ButlerT6}; the quantum companions T7 \\cite{ButlerT7} and T8 \\cite{ButlerT8}; the identification arc, T9 \\cite{ButlerT9} and T10 \\cite{ButlerT10}; the matter arc, T11 \\cite{ButlerT11}, T12 \\cite{ButlerT12}, T13 \\cite{ButlerT13}, T14 \\cite{ButlerT14} with its companions T14a \\cite{ButlerT14a} and T14b \\cite{ButlerT14b}, and T15 \\cite{ButlerT15}; and the synthesis T16 \\cite{ButlerT16}. Every row of the status table, every entry of the refutation table and every stance is one of those papers' results, quoted at the level the paper declares.\n\n\\emph{Papers that rely on this one:} none depends on its results, since it proves nothing the companions use. T2 \\cite{ButlerT2}, T15 \\cite{ButlerT15} and T16 \\cite{ButlerT16} cite it for the numbering of the stances and for the claim table.",
+  "gap": false,
+  "level": "formal",
+  "hash": "422daffe08ce"
+ },
+ {
+  "id": "s:standard-model",
+  "type": "section",
+  "title": "The Standard Model",
+  "hash": "920d96cca5ea"
+ },
+ {
+  "id": "i:standard-model",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-particle-antiparticle-orientation-is-determi>refuted.the-desert-the-derived-content-alone-connects-th",
+  "type": "transition",
+  "between": [
+   "refuted.the-particle-antiparticle-orientation-is-determi",
+   "refuted.the-desert-the-derived-content-alone-connects-th"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-desert-the-derived-content-alone-connects-th",
+  "type": "refutation",
+  "claim": "refuted.the-desert-the-derived-content-alone-connects-th@2",
+  "title": "The desert: the derived content alone connects the structural scale to experiment",
+  "text": "Refuted. The corrected statement: The one-loop run differs from the measured value by ten percent, so the running between the scales must change: either partner-like content across the rung and ground directions, or an intermediate symmetry (Pati-Salam), the weak angle then an input.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.spectrum-run"
+  ],
+  "hash": "a111452df1f3",
+  "number": 1
+ },
+ {
+  "id": "t:refuted.the-desert-the-derived-content-alone-connects-th>refuted.the-internal-ladder-acts-on-the-whole-tower-at-o",
+  "type": "transition",
+  "between": [
+   "refuted.the-desert-the-derived-content-alone-connects-th",
+   "refuted.the-internal-ladder-acts-on-the-whole-tower-at-o"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-internal-ladder-acts-on-the-whole-tower-at-o",
+  "type": "refutation",
+  "claim": "refuted.the-internal-ladder-acts-on-the-whole-tower-at-o@2",
+  "title": "The internal ladder acts on the whole tower at once",
+  "text": "Refuted. The corrected statement: It acts sector-wise; the right object is the automorphism group of the two-level hierarchy.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "rungs.ladder-group-rung-mixing-group-one"
+  ],
+  "hash": "5ae39e4cb200",
+  "number": 2
+ },
+ {
+  "id": "t:refuted.the-internal-ladder-acts-on-the-whole-tower-at-o>refuted.the-number-n-is-a-coincidence-dirac",
+  "type": "transition",
+  "between": [
+   "refuted.the-internal-ladder-acts-on-the-whole-tower-at-o",
+   "refuted.the-number-n-is-a-coincidence-dirac"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-number-n-is-a-coincidence-dirac",
+  "type": "refutation",
+  "claim": "refuted.the-number-n-is-a-coincidence-dirac@2",
+  "title": "The number N is a coincidence (Dirac)",
+  "text": "Refuted at observation level only, and in part: the refuting Observation \\claimref{standard-model.one-number-explain} is conjectured, unlike the refuters of the other refutations, which are proved. The corrected statement, that $N$ is one number appearing in every smallness problem, holds for the cosmological-constant problem ($G\\Lambda = 3N^{-2}$) and for gravity's weakness at the Hubble scale ($N^{-2}$), which are one number by the definition of $N$. It does not hold for the mass hierarchy: $\\operatorname{Im} w = N\\,(m/M_{P})$, to relative order $H^{2}/m^{2}$, carries the rung unit $v/M_{P} \\approx 2.0 \\times 10^{-17}$, which, granting as Proposition \\claimref{families.why-kinematic-attacks-had-fail} does that $m/M_{P}$ is invariant under the rescaling, is a second modulus kinematically not a function of $N$. What the series rejects is Dirac's reading of the coincidence as a law ($N$ a clock, $\\Lambda$ decaying as $1/t^{2}$), on its registered and conditional prediction $w = -1$; the coincidence itself, $N$ equal to the present age of the universe in Planck units, the series holds to be a coincidence of the present epoch (Observation \\claimref{standard-model.what}(iii)), and so too the Zel'dovich-Weinberg relation $m_{h}^{3} \\sim M_{P}^{2}H$ (Proposition \\claimref{families.why-kinematic-attacks-had-fail}).",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.one-number-explain"
+  ],
+  "hash": "251d8385a97a",
+  "number": 3
+ },
+ {
+  "id": "t:refuted.the-number-n-is-a-coincidence-dirac>refuted.the-number-n-is-a-mystery-of-largeness",
+  "type": "transition",
+  "between": [
+   "refuted.the-number-n-is-a-coincidence-dirac",
+   "refuted.the-number-n-is-a-mystery-of-largeness"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-number-n-is-a-mystery-of-largeness",
+  "type": "refutation",
+  "claim": "refuted.the-number-n-is-a-mystery-of-largeness@2",
+  "title": "The number N is a mystery of largeness",
+  "text": "Refuted at observation level only: the refuting Observation \\claimref{standard-model.why-large} is conjectured, and it rests on an exponential reading of the tower (each level's objects the fermionic pairs of the level above, counts $3, 8, 256, 2^{256}$) that no paper of the series proves. The corrected statement: on that reading largeness is generic, and the question is why the universe's horizon mode space, about $\\pi N^{2}/\\ln 2 \\approx 4.8 \\times 10^{122}$ modes under the black hole's counting rule (Theorem \\claimref{synthesis.de-sitter-mode-count}), with $N \\approx 1.0 \\times 10^{61}$ roughly its square root, is so small, lying between the reading's third level ($2^{256} \\approx 1.2 \\times 10^{77}$) and its fourth. Two limits. On the tower the series does prove, modes grow by one qubit per rung (Theorem \\claimref{tower.fock-module-one-qubit-per-rung}), and only state counts grow exponentially, so a mode count of $10^{122}$ is not generic there. And the reading places every count between $2^{256}$ and $2^{2^{256}}$ between the same two levels: the corrected statement held when the mode space was put at order $10^{60}$ (between the second and third levels) and holds at $10^{122}$, so the count does not test it.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.why-large"
+  ],
+  "hash": "c91847698a3c",
+  "number": 4
+ },
+ {
+  "id": "t:refuted.the-number-n-is-a-mystery-of-largeness>refuted.the-raw-representation-content-matches-the-fermi",
+  "type": "transition",
+  "between": [
+   "refuted.the-number-n-is-a-mystery-of-largeness",
+   "refuted.the-raw-representation-content-matches-the-fermi"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-raw-representation-content-matches-the-fermi",
+  "type": "refutation",
+  "claim": "refuted.the-raw-representation-content-matches-the-fermi@1",
+  "title": "The raw representation content matches the fermion table entry by entry",
+  "text": "Refuted. The corrected statement: The disagreements are composites; generators, not states, are the content, and the lepton lies one level higher, under the declared hypothesis of slot statistics.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.quarks-leptons-two-level-fermion-content"
+  ],
+  "hash": "de20ed6e0d28",
+  "number": 5
+ },
+ {
+  "id": "t:refuted.the-raw-representation-content-matches-the-fermi>refuted.the-three-twistor-hierarchy-carries-the-standard",
+  "type": "transition",
+  "between": [
+   "refuted.the-raw-representation-content-matches-the-fermi",
+   "refuted.the-three-twistor-hierarchy-carries-the-standard"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-three-twistor-hierarchy-carries-the-standard",
+  "type": "refutation",
+  "claim": "refuted.the-three-twistor-hierarchy-carries-the-standard@2",
+  "title": "The hierarchy of three conformal spinors $\\mathbb{C}^{3}\\otimes\\mathbb{C}^{3}$ carries the Standard Model",
+  "text": "The hierarchy of three conformal spinors (the three-twistor hierarchy) $\\mathbb{C}^{3}\\otimes\\mathbb{C}^{3}$ carries the Standard Model",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.gauge-algebra-minimal-massive-composite"
+  ],
+  "hash": "1c202bc4f400",
+  "number": 6
+ },
+ {
+  "id": "s:dark-matter",
+  "type": "section",
+  "title": "Dark matter and the dark towers",
+  "hash": "b346b3f9d5ec"
+ },
+ {
+  "id": "i:dark-matter",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-internal-forces-are-gauged-polynomially-as-g>refuted.a-pre-descent-term-sources-the-matter-asymmetry",
+  "type": "transition",
+  "between": [
+   "refuted.the-internal-forces-are-gauged-polynomially-as-g",
+   "refuted.a-pre-descent-term-sources-the-matter-asymmetry"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.a-pre-descent-term-sources-the-matter-asymmetry",
+  "type": "refutation",
+  "claim": "refuted.a-pre-descent-term-sources-the-matter-asymmetry@2",
+  "title": "A pre-descent $\\theta$-term sources the matter asymmetry",
+  "text": "The refuted claim is that a $\\theta$-term present before the descent sources the matter asymmetry through the topology of gauge bundles. A $\\theta$-term integrates a characteristic class of even degree, so the odd-dimensional towers carry no continuous $\\theta$. In this tower a non-relaxing angle of order one at the descent is excluded by the neutron electric dipole bound, which gives $|\\theta| \\lesssim 10^{-10}$ today; an angle that relaxes or rolls is not excluded. The framework instead inherits its asymmetry as initial data, the Witt flag being the one mechanism it supplies itself.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "dark-matter.asymmetry-arrow-counted-fifteenth-refutation"
+  ],
+  "hash": "12e0722f5ee3",
+  "number": 7
+ },
+ {
+  "id": "t:refuted.a-pre-descent-term-sources-the-matter-asymmetry>refuted.the-particle-antiparticle-orientation-is-determi",
+  "type": "transition",
+  "between": [
+   "refuted.a-pre-descent-term-sources-the-matter-asymmetry",
+   "refuted.the-particle-antiparticle-orientation-is-determi"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-particle-antiparticle-orientation-is-determi",
+  "type": "refutation",
+  "claim": "refuted.the-particle-antiparticle-orientation-is-determi@2",
+  "title": "The particle-antiparticle orientation is determined by the charge-zero condition",
+  "text": "The refuted expectation is that the charge-zero condition fixes the one absolute bit the Standard-Model derivation left open, the particle-antiparticle orientation. A $\\Z_{2}$ covariance argument on three premises (CPT conjugation is an isomorphism of every kinematic structure, Hypothesis (S), and, for the last step, the trichotomy's exhaustiveness) shows that whatever the structures determine is conjugation-invariant, while the orientation is not. The charge-zero condition fixes all relative structure; the absolute bit is initial data, and it is the Witt flag, the same choice as the arrow of time.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "dark-matter.orientation-arrow-seventeenth-refutation"
+  ],
+  "hash": "f1bc7fd91abf",
+  "number": 8
+ },
+ {
+  "id": "s:dark-energy",
+  "type": "section",
+  "title": "Dark energy and the frozen point",
+  "hash": "368e6821d6a4"
+ },
+ {
+  "id": "i:dark-energy",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:^>programme.n-parameter-of-the-laws",
+  "type": "transition",
+  "between": [
+   null,
+   "programme.n-parameter-of-the-laws"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:programme.n-parameter-of-the-laws",
+  "type": "conjecture",
+  "claim": "programme.n-parameter-of-the-laws@5",
+  "title": "The number N: a parameter of the laws under the action as written, initial data under the promoted action the series adopts",
+  "text": "Under the action as written, with $\\Lambda$ fixed before variation, $N = M_{P}/H$ is a parameter of the laws (Proposition \\claimref{dark-energy.under-action-written-norm-parameter-laws}). The series adopts the Henneaux-Teitelboim promotion of the Stelle-West norm to the value of a Lagrange-multiplier field with $d\\Lambda = 0$ as an equation of motion (Fact \\claimref{dark-energy.imported-henneaux-teitelboim-promotion}). Under the promoted action $N$ is initial data of the descent, dated to the origin: the norm mode is one global pair $(\\Lambda, \\tau)$ with no local mode, $N$ is constant on each solution and takes every positive value across the solution space (Theorem \\claimref{synthesis.promoted-norm-one-global-pair}), and on the Clausius route alone it is initial data even without the promotion (Theorem \\claimref{synthesis.einstein-route-makes-n-initial-data}(i)). The rung unit $v/H$ stays a parameter of the laws (Premise \\claimref{synthesis.rung-unit-second-free-number}), so $v/M_{P} = (v/H)/N$ is initial data and $Gv^{2}N^{2} = (v/H)^{2}$ holds as a law (Theorem \\claimref{synthesis.einstein-route-makes-n-initial-data}(iii)). The time $\\tau$ conjugate to the promoted norm is that of Theorem \\claimref{synthesis.promoted-norm-weyl-clock-flat-weight}: for the frozen-point action it advances by the Euler-density excess, the integral over the background region of a density built from the field strength $\\mathcal{R}(B)$ of the gravitational field on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with measure $\\det(\\hb)^{-1}d^{4}x$, which in vacuum is the integral of the square of the Weyl part $\\mathcal{W}$ and stands still on the de Sitter field, and with matter runs on every FLRW gravitational field with dust or radiation; it is not monotone, changing sign for dust at $8\\pi G\\rho = \\Lambda$, so it is a record of the history and not a time ordering it, and by an argued reading its advance is dominated by the earliest, hottest epoch. Why $\\Lambda$, and so $N$, is small is outside the series: the promotion makes it initial data, the only measure it names, the Liouville density per unit $\\tau$, is flat in whichever function of the norm is promoted (Theorem \\claimref{synthesis.promoted-norm-one-global-pair}), and a normalisable measure over $\\Lambda$ would need a further number.\n\n\\emph{Beyond one flat chart.} The compact spatial slices on which the promoted norm mode is one global pair $(\\Lambda, \\tau)$ are global and are not carried by a single gravitational field $(\\hb, \\Omega)$ on flat spacetime; the statements above that hold on the invertible region are in GTG, and the compact slices are read on the manifold assembled from the derived metric's charts.",
+  "gap": false,
+  "level": "formal",
+  "hash": "be99387ab3bf",
+  "number": 9
+ },
+ {
+  "id": "t:programme.n-parameter-of-the-laws>refuted.the-internal-forces-are-gauged-polynomially-as-g",
+  "type": "transition",
+  "between": [
+   "programme.n-parameter-of-the-laws",
+   "refuted.the-internal-forces-are-gauged-polynomially-as-g"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-internal-forces-are-gauged-polynomially-as-g",
+  "type": "refutation",
+  "claim": "refuted.the-internal-forces-are-gauged-polynomially-as-g@2",
+  "title": "The internal forces are gauged polynomially, as gravity is",
+  "text": "Refuted. The corrected statement: The internal curvature-squared invariant is topological; forces are metric-level Yang-Mills, gravity alone is pre-metric.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "dark-energy.gravity-pre-metric-forces-degenerate-exactly"
+  ],
+  "hash": "9f4b672f1413",
+  "number": 10
+ },
+ {
+  "id": "s:mass",
+  "type": "section",
+  "title": "The origin of mass",
+  "hash": "8c7ab1f28a91"
+ },
+ {
+  "id": "i:mass",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-three-twistor-hierarchy-carries-the-standard>refuted.the-mass-dictionary-coupling-to-the-frozen-point",
+  "type": "transition",
+  "between": [
+   "refuted.the-three-twistor-hierarchy-carries-the-standard",
+   "refuted.the-mass-dictionary-coupling-to-the-frozen-point"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-mass-dictionary-coupling-to-the-frozen-point",
+  "type": "refutation",
+  "claim": "refuted.the-mass-dictionary-coupling-to-the-frozen-point@1",
+  "title": "The mass dictionary, coupling to the frozen point, explains the observed masses",
+  "text": "Refuted. The corrected statement: It restates the hierarchy problem: every known massive particle has complex weight $-\\tfrac32 \\pm i\\nu$ with $\\nu \\approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "mass.mass-weight-dictionary"
+  ],
+  "hash": "38a29f927639",
+  "number": 11
+ },
+ {
+  "id": "s:neutrinos",
+  "type": "section",
+  "title": "Neutrino masses",
+  "hash": "caf6659978a9"
+ },
+ {
+  "id": "i:neutrinos",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-mass-dictionary-coupling-to-the-frozen-point>refuted.the-neutrino-mass-is-set-by-the-cosmological-ter",
+  "type": "transition",
+  "between": [
+   "refuted.the-mass-dictionary-coupling-to-the-frozen-point",
+   "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-neutrino-mass-is-set-by-the-cosmological-ter",
+  "type": "refutation",
+  "claim": "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter@2",
+  "title": "The neutrino mass is set by the cosmological term of the deformed bracket",
+  "text": "Refuted. The corrected statement: The term lies below the flat term and never dominates below the horizon; the mass comes from the seesaw on the empty conformal spinor (the state with no pair mode occupied), whose Majorana scale is a premise.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "neutrino.seesaw-what-gauge-invariance-proves-what"
+  ],
+  "hash": "02150c84f0df",
+  "number": 12
+ },
+ {
+  "id": "s:completion",
+  "type": "section",
+  "title": "The completion",
+  "hash": "d76961575d0b"
+ },
+ {
+  "id": "i:completion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-neutrino-mass-is-set-by-the-cosmological-ter>refuted.the-two-one-generator-ascents-differ-as-algebras",
+  "type": "transition",
+  "between": [
+   "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter",
+   "refuted.the-two-one-generator-ascents-differ-as-algebras"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-two-one-generator-ascents-differ-as-algebras",
+  "type": "refutation",
+  "claim": "refuted.the-two-one-generator-ascents-differ-as-algebras@2",
+  "title": "The two one-generator ascents differ as algebras",
+  "text": "Refuted. The conjecture was that the two one-generator ascents of a type-C algebra, adjoining $\\nu$ with $Q(\\nu) = +1$ or with $Q(\\nu) = -1$, are non-isomorphic algebras. The corrected statement is that the two ascents are always isomorphic as algebras; the sign of $Q(\\nu)$ is a geometric bit that the algebra forgets.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "transport.one-generator-minimal-minimal-completions-classified"
+  ],
+  "hash": "a7b2a9766c31",
+  "number": 13
+ },
+ {
+  "id": "s:generations",
+  "type": "section",
+  "title": "Families of quarks and leptons",
+  "hash": "6e4dfa2d035b"
+ },
+ {
+  "id": "i:generations",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-two-one-generator-ascents-differ-as-algebras>refuted.the-vacuum-omega-area-sets-the-weak-scale",
+  "type": "transition",
+  "between": [
+   "refuted.the-two-one-generator-ascents-differ-as-algebras",
+   "refuted.the-vacuum-omega-area-sets-the-weak-scale"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-vacuum-omega-area-sets-the-weak-scale",
+  "type": "refutation",
+  "claim": "refuted.the-vacuum-omega-area-sets-the-weak-scale@2",
+  "title": "The vacuum omega-area sets the weak scale",
+  "text": "Refuted. The corrected statement: It is wrong by between forty-four and one hundred and five orders of magnitude; the weak scale falls back to the weight question, and the vacuum alignment instead orders the families: democracy, rank one, one heavy.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "families.alignment-computed-thirteenth-refutation-democracy-one"
+  ],
+  "hash": "b84451eae7b4",
+  "number": 14
+ },
+ {
+  "id": "s:walls",
+  "type": "section",
+  "title": "Degenerate metrics and walls",
+  "hash": "28311da2cf93"
+ },
+ {
+  "id": "i:walls",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-vacuum-omega-area-sets-the-weak-scale>refuted.the-wall-twist-is",
+  "type": "transition",
+  "between": [
+   "refuted.the-vacuum-omega-area-sets-the-weak-scale",
+   "refuted.the-wall-twist-is"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.the-wall-twist-is",
+  "type": "refutation",
+  "claim": "refuted.the-wall-twist-is@1",
+  "title": "The wall twist is $N^{*}\\Sigma \\cong (L^{*})^{\\otimes 2}$",
+  "text": "Refuted. The corrected statement: The twist is $N^{*}\\Sigma \\cong L^{\\otimes 2}$: the dying line is the square root of the conormal.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "sheaf.residue-square-root-twist-black-hole"
+  ],
+  "hash": "8209128cfd8d",
+  "number": 15
+ },
+ {
+  "id": "s:conformal-spacetime",
+  "type": "section",
+  "title": "Spacetime in the conformal completion",
+  "hash": "147007be2d6b"
+ },
+ {
+  "id": "i:conformal-spacetime",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:refuted.the-wall-twist-is>refuted.twistors-are-the-ladder-operators",
+  "type": "transition",
+  "between": [
+   "refuted.the-wall-twist-is",
+   "refuted.twistors-are-the-ladder-operators"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:refuted.twistors-are-the-ladder-operators",
+  "type": "refutation",
+  "claim": "refuted.twistors-are-the-ladder-operators@2",
+  "title": "Conformal spinors are the ladder operators",
+  "text": "Conformal spinors (twistors) are the ladder operators",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "correspondence.twistors-are-states-three-ladder-pairs"
+  ],
+  "hash": "ea6bc89c6a2f",
+  "number": 16
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ }
+]

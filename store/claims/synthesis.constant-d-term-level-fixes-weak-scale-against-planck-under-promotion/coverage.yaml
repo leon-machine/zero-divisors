@@ -1,0 +1,9 @@
+functions:
+  check_level_vacuum_moment_map_independent_of_h:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "the orbit-space form against rung coordinates at three family points; the boundary minimum at m* = 12 for four values of H^2 with rational N*; the general statement is the one-line algebra of the proof"
+  check_ratio_fixed_by_the_laws:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "four values of H^2 at fixed level, three at a level proportional to H^2, and the identity at three v and two (M_P, H); the promoted solution set itself is the stored one and is not recomputed"

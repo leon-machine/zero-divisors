@@ -1,0 +1,22 @@
+functions:
+  check_rain_bounded_is_inclusion_in_w:
+    kind: partial
+    clauses: ["rain-bounded extension is contained in W", "W is the maximal rain-bounded extension"]
+    omits: "exact in u at m = 1, 3, but maximality is shown only by adjoining three named forms (dr, dtheta, du/u), not arbitrary forms outside W"
+  check_tame_rain_bounded_extensions_are_w:
+    kind: sampled
+    clauses: ["every rain-bounded boundary-tame extension is the maximal one"]
+    omits: "five hand-picked rain-bounded transitions at m = 1, 3, with the expected verdict list [T,T,F,F,F] written in; the general equivalence rests on the imported uniqueness-weighted-module premise"
+  check_anchoring_class_must_be_named:
+    kind: sampled
+    clauses: ["Example nullmix: some anchoring class must be named"]
+    omits: "Gram identities at (m,u) = (5,3), (5,4) only; the boundary Gram B0 is entered by hand and checked equal to the limit C -> m/2 of the frame Gram written as rational functions of C (r = m^2 - 4C^2), and (T2d), (T3d) are tested as corank one plus a nonzero minor, not against their definitions"
+  check_completion_is_attached_to_w:
+    kind: partial
+    clauses: ["the completion is attached to the geometry together with the infalling congruence"]
+    omits: "computes det h = m^2 (exact in u, m = 1, 3) and signature (2,4) for the W-based completion only; no comparison with another module, so the dependence on the congruence is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Maximality, the tame-iff-equal-to-W pattern and the null-mixing example are verified on named witness forms and five sample transitions; the general 'every rain-bounded tame extension equals W' is checked only through those samples. 2026-10-23 weak-check pass: the hand-entered boundary Gram B0 of ex:nullmix is now asserted equal to the C -> m/2 limit of the frame Gram (it was unconnected to the frame before)."

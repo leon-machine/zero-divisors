@@ -1,0 +1,18 @@
+functions:
+  check_capacity_matches_entropy_iff_calibration:
+    kind: sampled
+    clauses: ["C = S_BH = 4 pi M^2 iff nu Delta t = M/(2 ln 2)", "N_6a = S_BH/ln 2"]
+    omits: "ln 2 is a free indeterminate but M takes four values; dN/dt = 8 pi nu M is typed in as the leading-order rate, not recomputed from the count"
+  check_leading_order_and_epoch_scale:
+    kind: partial
+    clauses: ["at leading order in M", "the counted epoch is of order one Schwarzschild time"]
+    omits: "the sqrt(1 - r_c/2M) factor and the epoch Delta t = M k are typed in, not obtained from the causal-epoch lemma; shows (1 - r_c/2M) -> 1 along 2M = c^3 and that nu is then M-independent, which is the definition of the calibration"
+  check_lifetime_scalings:
+    kind: exact
+    clauses: ["whole-lifetime count N_6a ~ M^4", "interior volume V ~ M^5 from dV/dv ~ M^2"]
+    omits: "polynomial degree bookkeeping in free M; the rates dN/dt ~ M, dV/dv ~ M^2 and lifetime ~ M^3 are typed inputs; the 'unresolved tension' sentence has no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring states the epoch is taken as Delta t = M k and the rates as given; the calibration iff and the degree counts are tested within those inputs."

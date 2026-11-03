@@ -1,0 +1,19 @@
+functions:
+  check_slot_rho_is_the_unique_parallel_extension:
+    kind: sampled
+    clauses: ["(i)", "gauge"]
+    omits: "the gauge remark is checked for one special-conformal rotor at one rho; the formula for A(a) x I is checked at four rho, three frame vectors, three slots and two dilation values with one general Lorentz bivector; it is linear in each, and the injectivity of the slot map is checked on a basis; the derivative term (a . nabla rho) n0 is proof only"
+  check_transport_differs_from_it_by_the_matter_term:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "three stress tensors, two Lambda, three frame vectors, with 4 pi G a rational symbol; the injectivity of T -> T - tau/3 g is checked on the full basis of symmetric tensors"
+  check_transport_parallel_tractor_off_einstein_has_no_physical_scale:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "exact for the stated dust field and the listed scales (all three slot equations as rational functions of tau); the general statement for every conformally flat matter field is argued from the vanishing Weyl curvature"
+  check_sections_exist_for_every_norm_and_are_gauge:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "four values of rho; the topology of the level sets is argued, not checked"
+untouched_premises:
+  synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff: "cited in the Reading for the failure of the converse on the solution-only reading (stationary slots away from rho id, and the Euler-only line); nothing is computed from it"

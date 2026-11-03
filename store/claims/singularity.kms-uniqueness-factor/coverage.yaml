@@ -1,0 +1,14 @@
+functions:
+  check_kms_iff_gibbs:
+    kind: sampled
+    clauses: ["omega is KMS iff rho = e^{-beta K}/tr e^{-beta K}", "exactly one KMS state for each beta"]
+    omits: "six flows on Mat_2, Mat_3, Mat_4 with integer spectra and rational orthogonal U, and q = 2/3, 3/2 only; not all factors, flows or beta"
+  check_kms_states_form_a_line_in_beta:
+    kind: sampled
+    clauses: ["for K not a multiple of 1, the KMS states of the flow form a line parametrised by beta"]
+    omits: "distinctness of the Gibbs states is checked at three values of q per flow (injectivity in beta only at sample points), plus a tracial control and a scalar-K degenerate case"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "general statement over all matrix factors, flows and beta is checked on a small family of exact rational cases; both directions of the iff are covered"

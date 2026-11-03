@@ -1,0 +1,25 @@
+doc: trail-dark-energy
+title: 'Dark energy and the frozen point'
+author: Leon Butler
+level: lay
+spine:
+- dark-energy.imported-frozen-point-geometry
+- dark-energy.stelle-west-vector-frozen-point
+- dark-energy.frozen-point-makes-stelle-west-vector
+- dark-energy.point-infinity-has-no-physical-fluctuation
+- dark-energy.vacuum-region-registration-condition
+- pred.dark-energy-w-minus-one
+- dark-energy.four-alternatives-are-exhaustive-three-are
+- dark-energy.under-action-written-norm-parameter-laws
+- odd-extensions.transport-constrains-frozen-point-only-through
+- odd-extensions.cosmological-constant-undetermined-within-series
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

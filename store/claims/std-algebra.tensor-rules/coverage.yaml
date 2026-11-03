@@ -1,0 +1,10 @@
+functions:
+  check_tensor_rule:
+    kind: sampled
+    clauses:
+    - '"Cl(V perp W, eps Q + Q_W) = Cl(V, Q) (x) Cl(W, Q_W)"'
+    - '"v -> v (x) omega_W, w -> 1 (x) w"'
+    omits: thirteen pairs with dim V <= 2 and W a plane, through regular representations (faithful generator
+      images and full dimension); R^{0,8} and R^{8,0} rest on the proof
+untouched_premises:
+  std-algebra.cl11-matrix: "cited in the proof to read Cl(1,1) as M2(R) in the plane rule; the check verifies the rule from generator images directly"

@@ -1,0 +1,3781 @@
+ABS1964:
+  citation: M. F. Atiyah, R. Bott and A. Shapiro, Clifford modules, Topology 3 (1964), suppl. 1, 3--38.
+  doi: null
+  first_in: T01
+  latex: 'M.~F.~Atiyah, R.~Bott and A.~Shapiro,
+
+    Clifford modules,
+
+    \emph{Topology} \textbf{3} (1964), suppl.~1, 3--38.'
+ACTDR6:
+  citation: 'T. Louis et al. (ACT Collaboration), The Atacama Cosmology Telescope: DR6 power spectra,
+    likelihoods and $Lambda$CDM parameters, arXiv:2503.14452 (2025).'
+  doi: null
+  first_in: T14
+  latex: 'T.~Louis et al.\ (ACT Collaboration),
+
+    The Atacama Cosmology Telescope: DR6 power spectra, likelihoods and $\Lambda$CDM parameters,
+
+    arXiv:2503.14452 (2025).'
+AEMM2019:
+  citation: A. Almheiri, N. Engelhardt, D. Marolf and H. Maxfield, The entropy of bulk quantum fields
+    and the entanglement wedge of an evaporating black hole, J. High Energy Phys. 2019, 063 (2019).
+  doi: null
+  first_in: T05
+  latex: 'A.~Almheiri, N.~Engelhardt, D.~Marolf and H.~Maxfield,
+
+    The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole,
+
+    \emph{J.\ High Energy Phys.} \textbf{2019}, 063 (2019).'
+AGW1984:
+  citation: L. Alvarez-Gaum'e, E. Witten, Gravitational anomalies, Nucl. Phys. B 234 (1984) 269--330.
+  doi: null
+  first_in: T17-rule2
+  latex: 'L.~Alvarez-Gaum\''e, E.~Witten,
+
+    \emph{Gravitational anomalies},
+
+    Nucl.\ Phys.\ B 234 (1984) 269--330.'
+AMPS2013:
+  citation: 'A. Almheiri, D. Marolf, J. Polchinski and J. Sully, Black holes: complementarity or firewalls?,
+    J. High Energy Phys. 2013, 062 (2013).'
+  doi: null
+  first_in: T05
+  latex: 'A.~Almheiri, D.~Marolf, J.~Polchinski and J.~Sully,
+
+    Black holes: complementarity or firewalls?,
+
+    \emph{J.\ High Energy Phys.} \textbf{2013}, 062 (2013).'
+Abedi2017:
+  citation: 'J. Abedi, H. Dykaar and N. Afshordi, Echoes from the abyss: tentative evidence for Planck-scale
+    structure at black hole horizons, Phys. Rev. D 96 (2017), 082004.'
+  doi: null
+  first_in: T08
+  latex: 'J.~Abedi, H.~Dykaar and N.~Afshordi,
+
+    Echoes from the abyss: tentative evidence for Planck-scale structure at black hole horizons,
+
+    \emph{Phys.\ Rev.\ D} \textbf{96} (2017), 082004.'
+Abel2020:
+  citation: C. Abel et al. (nEDM collaboration), Measurement of the permanent electric dipole moment of
+    the neutron, Phys. Rev. Lett. 124 (2020), 081803.
+  doi: null
+  first_in: T14
+  latex: 'C.~Abel et al.\ (nEDM collaboration),
+
+    \emph{Measurement of the permanent electric dipole moment of the neutron},
+
+    Phys. Rev. Lett. \textbf{124} (2020), 081803.'
+Ablamowicz1998:
+  citation: 'R. Ablamowicz, Spinor representations of Clifford algebras: a symbolic approach, Computer
+    Physics Communications 115 (1998), 510--535.'
+  doi: null
+  first_in: T01
+  latex: 'R.~Ab{\l}amowicz,
+
+    Spinor representations of Clifford algebras: a symbolic approach,
+
+    \emph{Computer Physics Communications} \textbf{115} (1998), 510--535.'
+Adhikari1986:
+  citation: S. K. Adhikari, Quantum scattering in two dimensions, Am. J. Phys. 54 (1986) 362.
+  doi: null
+  first_in: T14b
+  latex: 'S.~K.~Adhikari,
+
+    \emph{Quantum scattering in two dimensions},
+
+    Am.\ J.\ Phys.\ 54 (1986) 362.'
+Allen1985:
+  citation: B. Allen, Vacuum states in de Sitter space, Phys. Rev. D 32 (1985), 3136--3149.
+  doi: 10.1103/PhysRevD.32.3136
+  first_in: synthesis
+  latex: B. Allen, Vacuum states in de Sitter space, Phys. Rev. D 32 (1985), 3136--3149.
+Amaldi1991:
+  citation: U. Amaldi, W. de Boer, and H. F"urstenau, Comparison of grand unified theories with electroweak
+    and strong coupling constants measured at LEP, Phys. Lett. B 260 (1991), 447--455.
+  doi: null
+  first_in: T12
+  latex: 'U.~Amaldi, W.~de Boer, and H.~F\"urstenau,
+
+    \emph{Comparison of grand unified theories with electroweak and strong coupling constants measured
+    at LEP},
+
+    Phys. Lett. B \textbf{260} (1991), 447--455.'
+Anderson1958:
+  citation: P. W. Anderson, Random-phase approximation in the theory of superconductivity, Phys. Rev.
+    112 (1958) 1900--1916.
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'P.~W. Anderson,
+
+    \emph{Random-phase approximation in the theory of superconductivity},
+
+    Phys. Rev. 112 (1958) 1900--1916.'
+Angles2008:
+  citation: P. Angl`es, Conformal Groups in Geometry and Spin Structures, Progress in Mathematical Physics
+    50, Birkh"auser (2008).
+  doi: null
+  first_in: T01
+  latex: 'P.~Angl\`es,
+
+    \emph{Conformal Groups in Geometry and Spin Structures},
+
+    Progress in Mathematical Physics 50, Birkh\"auser (2008).'
+Araki1971:
+  citation: H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, Publ. RIMS Kyoto Univ.
+    6 (1971), 385--442.
+  doi: null
+  first_in: T07
+  latex: 'H.~Araki,
+
+    On quasifree states of CAR and Bogoliubov automorphisms,
+
+    \emph{Publ.\ RIMS Kyoto Univ.} \textbf{6} (1971), 385--442.'
+ArakiMoriya2003:
+  citation: H. Araki, H. Moriya, Joint extension of states of subsystems for a CAR system, Commun. Math.
+    Phys. 237 (2003) 105--122.
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'H.~Araki, H.~Moriya,
+
+    \emph{Joint extension of states of subsystems for a CAR system},
+
+    Commun. Math. Phys. 237 (2003) 105--122.'
+ArakiWyss1964:
+  citation: H. Araki and W. Wyss, Representations of canonical anticommutation relations, Helv. Phys.
+    Acta 37 (1964), 136--159.
+  doi: null
+  first_in: T07
+  latex: 'H.~Araki and W.~Wyss,
+
+    Representations of canonical anticommutation relations,
+
+    \emph{Helv.\ Phys.\ Acta} \textbf{37} (1964), 136--159.'
+Archimedes:
+  citation: Archimedes, On the Sphere and Cylinder, Book I, Props. 33, 34 (c. 225 BC); T. L. Heath (ed.),
+    The Works of Archimedes, Cambridge University Press (1897).
+  doi: null
+  first_in: T14
+  latex: Archimedes, \emph{On the Sphere and Cylinder}, Book I, Props.~33, 34 (c.~225 BC); T.~L.~Heath
+    (ed.), \emph{The Works of Archimedes}, Cambridge University Press (1897).
+ArkaniHamedDimopoulos2005:
+  citation: N. Arkani-Hamed and S. Dimopoulos, Supersymmetric unification without low energy supersymmetry
+    and signatures for fine-tuning at the LHC, J. High Energy Phys. 06 (2005), 073.
+  doi: null
+  first_in: T12
+  latex: 'N.~Arkani-Hamed and S.~Dimopoulos,
+
+    \emph{Supersymmetric unification without low energy supersymmetry and signatures for fine-tuning at
+    the LHC},
+
+    J. High Energy Phys. \textbf{06} (2005), 073.'
+BDFS2000:
+  citation: D. Buchholz, O. Dreyer, M. Florig and S. J. Summers, Geometric modular action and spacetime
+    symmetry groups, Rev. Math. Phys. 12 (2000), 475--560.
+  doi: null
+  first_in: T07
+  latex: 'D.~Buchholz, O.~Dreyer, M.~Florig and S.~J.~Summers,
+
+    Geometric modular action and spacetime symmetry groups,
+
+    \emph{Rev.\ Math.\ Phys.} \textbf{12} (2000), 475--560.'
+BEG1994:
+  citation: T. N. Bailey, M. G. Eastwood and A. R. Gover, Thomas's structure bundle for conformal, projective
+    and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.
+  doi: null
+  first_in: T04
+  latex: 'T.~N.~Bailey, M.~G.~Eastwood and A.~R.~Gover,
+
+    Thomas''s structure bundle for conformal, projective and related structures,
+
+    \emph{Rocky Mountain J.\ Math.} \textbf{24} (1994), 1191--1217.'
+BGL1993:
+  citation: R. Brunetti, D. Guido and R. Longo, Modular structure and duality in conformal quantum field
+    theory, Commun. Math. Phys. 156 (1993), 201--219.
+  doi: null
+  first_in: T05-angle
+  latex: 'R.~Brunetti, D.~Guido and R.~Longo,
+
+    Modular structure and duality in conformal quantum field theory,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{156} (1993), 201--219.'
+BKL1970:
+  citation: V. A. Belinskii, I. M. Khalatnikov and E. M. Lifshitz, Oscillatory approach to a singular
+    point in the relativistic cosmology, Adv. Phys. 19 (1970), 525--573.
+  doi: null
+  first_in: T06
+  latex: 'V.~A.~Belinskii, I.~M.~Khalatnikov and E.~M.~Lifshitz,
+
+    Oscillatory approach to a singular point in the relativistic cosmology,
+
+    \emph{Adv.\ Phys.} \textbf{19} (1970), 525--573.'
+BR2:
+  citation: 'O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2: Equilibrium
+    States. Models in Quantum Statistical Mechanics, 2nd ed., Springer (1997).'
+  doi: null
+  first_in: T05
+  latex: 'O.~Bratteli and D.~W.~Robinson,
+
+    \emph{Operator Algebras and Quantum Statistical Mechanics 2: Equilibrium States. Models in Quantum
+    Statistical Mechanics},
+
+    2nd ed., Springer (1997).'
+BW1975:
+  citation: J. J. Bisognano and E. H. Wichmann, On the duality condition for a Hermitian scalar field,
+    J. Math. Phys. 16 (1975), 985--1007.
+  doi: null
+  first_in: T05-angle
+  latex: 'J.~J.~Bisognano and E.~H.~Wichmann,
+
+    On the duality condition for a Hermitian scalar field,
+
+    \emph{J.\ Math.\ Phys.} \textbf{16} (1975), 985--1007.'
+BW1976:
+  citation: J. J. Bisognano and E. H. Wichmann, On the duality condition for quantum fields, J. Math.
+    Phys. 17 (1976), 303--321.
+  doi: null
+  first_in: T05
+  latex: 'J.~J.~Bisognano and E.~H.~Wichmann,
+
+    On the duality condition for quantum fields,
+
+    \emph{J.\ Math.\ Phys.} \textbf{17} (1976), 303--321.'
+BaezHuerta2010:
+  citation: J. Baez and J. Huerta, The algebra of grand unified theories, Bull. Amer. Math. Soc. 47 (2010),
+    483--552.
+  doi: null
+  first_in: T12
+  latex: 'J.~Baez and J.~Huerta,
+
+    \emph{The algebra of grand unified theories},
+
+    Bull. Amer. Math. Soc. \textbf{47} (2010), 483--552.'
+Baker1975:
+  citation: A. Baker, Transcendental Number Theory, Cambridge University Press (1975).
+  doi: null
+  first_in: T08
+  latex: 'A.~Baker,
+
+    \emph{Transcendental Number Theory},
+
+    Cambridge University Press (1975).'
+BardeenZumino1984:
+  citation: W. A. Bardeen and B. Zumino, Consistent and covariant anomalies in gauge and gravitational
+    theories, Nucl. Phys. B 244 (1984), 421--453.
+  doi: null
+  first_in: synthesis
+  latex: W. A. Bardeen and B. Zumino, Consistent and covariant anomalies in gauge and gravitational theories,
+    Nucl. Phys. B 244 (1984), 421--453.
+BarnesHut1986:
+  citation: J. Barnes and P. Hut, A hierarchical O(N log N) force-calculation algorithm, Nature 324 (1986)
+    446.
+  doi: null
+  first_in: T14b
+  latex: 'J.~Barnes and P.~Hut,
+
+    \emph{A hierarchical O(N log N) force-calculation algorithm},
+
+    Nature 324 (1986) 446.'
+Bekenstein1973:
+  citation: J. D. Bekenstein, Black holes and entropy, Phys. Rev. D 7 (1973), 2333--2346.
+  doi: null
+  first_in: T05
+  latex: 'J.~D.~Bekenstein,
+
+    Black holes and entropy,
+
+    \emph{Phys.\ Rev.\ D} \textbf{7} (1973), 2333--2346.'
+BekensteinMukhanov1995:
+  citation: J. D. Bekenstein and V. F. Mukhanov, Spectroscopy of the quantum black hole, Phys. Lett. B
+    360 (1995) 7--12.
+  doi: null
+  first_in: T08
+  latex: 'J.~D.~Bekenstein and V.~F.~Mukhanov,
+
+    Spectroscopy of the quantum black hole,
+
+    \emph{Phys. Lett. B} \textbf{360} (1995) 7--12.'
+Berezin1966:
+  citation: F. A. Berezin, The Method of Second Quantization, Academic Press (1966).
+  doi: null
+  first_in: T13
+  latex: 'F.~A.~Berezin,
+
+    \emph{The Method of Second Quantization},
+
+    Academic Press (1966).'
+Bernal2018:
+  citation: N. Bernal, M. Dutra, Y. Mambrini, K. Olive, M. Peloso, and M. Pierre, Spin-2 portal dark matter,
+    Phys. Rev. D 97 (2018), 115020.
+  doi: null
+  first_in: T14
+  latex: 'N.~Bernal, M.~Dutra, Y.~Mambrini, K.~Olive, M.~Peloso, and M.~Pierre,
+
+    \emph{Spin-2 portal dark matter},
+
+    Phys. Rev. D \textbf{97} (2018), 115020.'
+BertoliniDiLuzioMalinsky2009:
+  citation: 'S. Bertolini, L. Di Luzio and M. Malinsk''y, Intermediate mass scales in the non-supersymmetric
+    $SO(10)$ grand unification: a reappraisal, Phys. Rev. D 80 (2009) 015013, arXiv:0903.4049.'
+  doi: null
+  first_in: T12
+  latex: 'S.~Bertolini, L.~Di~Luzio and M.~Malinsk\''y,
+
+    Intermediate mass scales in the non-supersymmetric $SO(10)$ grand unification: a reappraisal,
+
+    \emph{Phys. Rev. D} \textbf{80} (2009) 015013, arXiv:0903.4049.'
+BisognanoWichmann1976:
+  citation: J. J. Bisognano and E. H. Wichmann, On the duality condition for quantum fields, J. Math.
+    Phys. 17 (1976), 303--321.
+  doi: null
+  first_in: T07
+  latex: 'J.~J.~Bisognano and E.~H.~Wichmann,
+
+    On the duality condition for quantum fields,
+
+    \emph{J.\ Math.\ Phys.} \textbf{17} (1976), 303--321.'
+Borchers1992:
+  citation: H.-J. Borchers, The CPT-theorem in two-dimensional theories of local observables, Commun.
+    Math. Phys. 143 (1992), 315--332.
+  doi: null
+  first_in: T05-angle
+  latex: 'H.-J.~Borchers,
+
+    The CPT-theorem in two-dimensional theories of local observables,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{143} (1992), 315--332.'
+Boulware1975:
+  citation: D. G. Boulware, Quantum field theory in Schwarzschild and Rindler spaces, Phys. Rev. D 11
+    (1975), 1404--1423.
+  doi: null
+  first_in: T05
+  latex: 'D.~G.~Boulware,
+
+    Quantum field theory in Schwarzschild and Rindler spaces,
+
+    \emph{Phys.\ Rev.\ D} \textbf{11} (1975), 1404--1423.'
+BovyRix2013:
+  citation: J. Bovy and H.-W. Rix, A direct dynamical measurement of the Milky Way's disk surface density
+    profile, disk scale length, and dark matter profile at 4 kpc $lesssim R lesssim$ 9 kpc, Astrophys.
+    J. 779 (2013) 115.
+  doi: null
+  first_in: T14b
+  latex: 'J.~Bovy and H.-W.~Rix,
+
+    \emph{A direct dynamical measurement of the Milky Way''s disk surface density profile, disk scale
+    length, and dark matter profile at 4 kpc $\lesssim R \lesssim$ 9 kpc},
+
+    Astrophys.\ J.\ 779 (2013) 115.'
+Bratteli1972:
+  citation: O. Bratteli, Inductive limits of finite dimensional C*-algebras, Trans. Amer. Math. Soc. 171
+    (1972), 195--234.
+  doi: null
+  first_in: T03
+  latex: 'O.~Bratteli,
+
+    Inductive limits of finite dimensional C*-algebras,
+
+    \emph{Trans.\ Amer.\ Math.\ Soc.} \textbf{171} (1972), 195--234.'
+BratteliRobinson1997:
+  citation: O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd
+    ed., Springer, Berlin (1997).
+  doi: null
+  first_in: T03
+  latex: 'O.~Bratteli and D.~W.~Robinson,
+
+    \emph{Operator Algebras and Quantum Statistical Mechanics 2}, 2nd ed.,
+
+    Springer, Berlin (1997).'
+BravyiKitaev2002:
+  citation: S. B. Bravyi, A. Yu. Kitaev, Fermionic quantum computation, Ann. Phys. 298 (2002) 210--226.
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'S.~B. Bravyi, A.~Yu. Kitaev,
+
+    \emph{Fermionic quantum computation},
+
+    Ann. Phys. 298 (2002) 210--226.'
+BrownTeitelboim1988:
+  citation: J. D. Brown and C. Teitelboim, Neutralization of the cosmological constant by membrane creation,
+    Nucl. Phys. B 297 (1988), 787--836.
+  doi: null
+  first_in: T10
+  latex: 'J.~D.~Brown and C.~Teitelboim,
+
+    Neutralization of the cosmological constant by membrane creation,
+
+    \emph{Nucl.\ Phys.\ B} \textbf{297} (1988), 787--836.'
+BrunettiFredenhagenHollands2005:
+  citation: R. Brunetti, K. Fredenhagen and S. Hollands, A remark on alpha vacua for quantum field theories
+    on de Sitter space, J. High Energy Phys. 2005, no. 05, 063; arXiv:hep-th/0503022.
+  doi: null
+  first_in: synthesis
+  latex: R. Brunetti, K. Fredenhagen and S. Hollands, A remark on alpha vacua for quantum field theories
+    on de Sitter space, J. High Energy Phys. 2005, no. 05, 063; arXiv:hep-th/0503022.
+ButlerKernelT01:
+  citation: 'L. Butler, T01_kernel.lean: a Lean 4 formalisation of the algebraic kernel of ``The Transport
+    Principle'''', Lean 4 source checked against Mathlib, deposited with this paper (2026).'
+  doi: null
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{T01\_kernel.lean: a Lean 4 formalisation of the algebraic kernel of ``The Transport Principle''''},
+
+    Lean 4 source checked against Mathlib, deposited with this paper (2026).'
+ButlerPreregT05angle:
+  citation: 'L. Butler, preregistration_T05_angle.md: the kill conditions and predictions of ``What Fixes
+    the Angle'''', as registered before computation, deposited with this note (2026).'
+  doi: null
+  first_in: T05-angle
+  latex: 'L.~Butler,
+
+    \emph{preregistration\_T05\_angle.md: the kill conditions and predictions of ``What Fixes the Angle'''',
+    as registered before computation},
+
+    deposited with this note (2026).'
+ButlerPreregT05dilation:
+  citation: 'L. Butler, preregistration_T05_dilation.md: the kill conditions and predictions of ``The
+    Descent, Lifted'''', as registered before computation, deposited with this note (2026).'
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'L.~Butler,
+
+    \emph{preregistration\_T05\_dilation.md: the kill conditions and predictions of ``The Descent, Lifted'''',
+    as registered before computation},
+
+    deposited with this note (2026).'
+ButlerPreregT05pairing:
+  citation: 'L. Butler, preregistration_T05_pairing_type.md: the kill conditions and predictions of the
+    pairing-creator experiment of ``The Descent, Lifted'''', as registered before computation, deposited
+    with this note (2026).'
+  current_in: T05-descent-lift
+  doi: null
+  first_in: T05-pairing
+  latex: 'L.~Butler,
+
+    \emph{preregistration\_T05\_pairing\_type.md: the kill conditions and predictions of the pairing-creator
+    experiment of ``The Descent, Lifted'''', as registered before computation},
+
+    deposited with this note (2026).'
+ButlerSuppT14b:
+  citation: 'L. Butler, Code, run outputs and films for ``Simulating the Dark Towers'''': tpsim.c, the
+    initial-condition, measurement and Galaxy-model scripts, the run summaries, merger_three_ways.mp4
+    and bullet_moment.mp4, deposited with this note (2026).'
+  doi: null
+  first_in: T14b
+  latex: 'L.~Butler,
+
+    \emph{Code, run outputs and films for ``Simulating the Dark Towers''''}: \file{tpsim.c}, the initial-condition,
+    measurement and Galaxy-model scripts, the run summaries, \file{merger\_three\_ways.mp4} and \file{bullet\_moment.mp4},
+
+    deposited with this note (2026).'
+ButlerT0:
+  citation: 'L. Butler, An Introduction to Geometric Algebra: A Primer for the Transport Papers, Transport
+    Papers T0 (2026).'
+  current_in: T17-rule2
+  doi: 10.5281/zenodo.22714501
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{An Introduction to Geometric Algebra: A Primer for the Transport Papers},
+
+    Transport Papers T0 (2026).'
+ButlerT1:
+  citation: 'L. Butler, The Transport Principle: Total Division in Clifford Algebras via Minimal Completion,
+    Transport Papers T1 (2026).'
+  current_in: T17-rule2
+  doi: 10.5281/zenodo.21743863
+  first_in: T02
+  latex: 'L.~Butler,
+
+    \emph{The Transport Principle: Total Division in Clifford Algebras via Minimal Completion},
+
+    Transport Papers T1 (2026).'
+ButlerT10:
+  citation: 'L. Butler, Dark Energy and the Action of Gravity: MacDowell-Mansouri, the Frozen Point, and
+    One Way to Grip, Transport Papers T10 (2026), doi:10.5281/zenodo.22722496.'
+  current_in: T17
+  doi: 10.5281/zenodo.22722496
+  first_in: T05
+  latex: 'L.~Butler,
+
+    \emph{Dark Energy and the Action of Gravity: MacDowell-Mansouri, the Frozen Point, and One Way to
+    Grip},
+
+    Transport Papers T10 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722496}{10.5281/zenodo.22722496}.'
+ButlerT11:
+  citation: 'L. Butler, The Origin of Mass: The Weight Dictionary and the Exact Join, Transport Papers
+    T11 (2026), doi:10.5281/zenodo.22722565.'
+  current_in: T17
+  doi: 10.5281/zenodo.22722565
+  first_in: T09
+  latex: 'L.~Butler,
+
+    \emph{The Origin of Mass: The Weight Dictionary and the Exact Join},
+
+    Transport Papers T11 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722565}{10.5281/zenodo.22722565}.'
+ButlerT12:
+  citation: L. Butler, The Standard Model from the Minimal Massive Composite, Transport Papers T12 (2026),
+    doi:10.5281/zenodo.22722669.
+  current_in: T17
+  doi: 10.5281/zenodo.22722669
+  first_in: T03
+  latex: 'L.~Butler,
+
+    \emph{The Standard Model from the Minimal Massive Composite},
+
+    Transport Papers T12 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722669}{10.5281/zenodo.22722669}.'
+ButlerT13:
+  citation: 'L. Butler, Quark and Lepton Families: Condensation, Democracy, and the Koide Relation, Transport
+    Papers T13 (2026), doi:10.5281/zenodo.22722845.'
+  current_in: T17
+  doi: 10.5281/zenodo.22722845
+  first_in: T05-pairing
+  latex: 'L.~Butler,
+
+    \emph{Quark and Lepton Families: Condensation, Democracy, and the Koide Relation},
+
+    Transport Papers T13 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722845}{10.5281/zenodo.22722845}.'
+ButlerT14:
+  citation: 'L. Butler, Dark Matter and the Arrow of Time: The Five Dark Towers, Transport Papers T14
+    (2026).'
+  current_in: T17-rule2
+  doi: 10.5281/zenodo.22722953
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{Dark Matter and the Arrow of Time: The Five Dark Towers},
+
+    Transport Papers T14 (2026).'
+ButlerT14a:
+  citation: 'L. Butler, One Dimension at a Time: The Odd Extensions of the Oriented Towers, Transport
+    Papers T14a (2026), doi:10.5281/zenodo.23232104.'
+  doi: 10.5281/zenodo.23232104
+  first_in: T17
+  latex: 'L.~Butler,
+
+    \emph{One Dimension at a Time: The Odd Extensions of the Oriented Towers},
+
+    Transport Papers T14a (2026), doi:\href{https://doi.org/10.5281/zenodo.23232104}{10.5281/zenodo.23232104}.'
+ButlerT14b:
+  citation: 'L. Butler, Simulating the Dark Towers: Methods, Assumptions and Tests of the Unit-Ball Composition,
+    Transport Papers T14b (2026), doi:10.5281/zenodo.23234576,
+    deposited with its simulation code, run outputs and films; the films are also on YouTube, ``Galaxy
+    clusters in collision'''' (https://www.youtube.com/watch?v=0SvmSwInN0c) and ``The Bullet moment''''
+    (https://www.youtube.com/watch?v=KQnZUVR7bCk).'
+  current_in: T17
+  doi: 10.5281/zenodo.23234576
+  first_in: T14
+  latex: 'L.~Butler,
+
+    \emph{Simulating the Dark Towers: Methods, Assumptions and Tests of the Unit-Ball Composition},
+
+    Transport Papers T14b (2026), doi:\href{https://doi.org/10.5281/zenodo.23234576}{10.5281/zenodo.23234576},
+    deposited with its simulation code, run outputs and films; the films are also on YouTube, ``Galaxy
+    clusters in collision'''' (\url{https://www.youtube.com/watch?v=0SvmSwInN0c}) and ``The Bullet moment''''
+    (\url{https://www.youtube.com/watch?v=KQnZUVR7bCk}).'
+ButlerT15:
+  citation: 'L. Butler, Neutrino Masses: The Empty Twistor, the Seesaw Scale, and the Bet at the Floor,
+    Transport Papers T15 (2026), doi:10.5281/zenodo.22723070.'
+  current_in: T17
+  doi: 10.5281/zenodo.22723070
+  first_in: T11
+  latex: 'L.~Butler,
+
+    \emph{Neutrino Masses: The Empty Twistor, the Seesaw Scale, and the Bet at the Floor},
+
+    Transport Papers T15 (2026), doi:\href{https://doi.org/10.5281/zenodo.22723070}{10.5281/zenodo.22723070}.'
+ButlerT16:
+  citation: 'L. Butler, Quantum Mechanics and General Relativity from One Relation: The Two Shadows and
+    the Laboratory, Transport Papers T16 (2026), doi:10.5281/zenodo.22723212.'
+  current_in: T17
+  doi: 10.5281/zenodo.22723212
+  first_in: T05
+  latex: 'L.~Butler,
+
+    \emph{Quantum Mechanics and General Relativity from One Relation: The Two Shadows and the Laboratory},
+
+    Transport Papers T16 (2026), doi:\href{https://doi.org/10.5281/zenodo.22723212}{10.5281/zenodo.22723212}.'
+ButlerT17:
+  citation: 'L. Butler, The Transport Programme: Method, Status, and the Falsifiable Ledger,
+    Transport Papers T17 (2026).'
+  current_in: T17-rule2
+  doi: 10.5281/zenodo.22723310
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{The Transport Programme: Method, Status, and the Falsifiable Ledger},
+
+    Transport Papers T17 (2026).'
+ButlerT2:
+  citation: 'L. Butler, Projective Completes to Conformal: The Minimal Nondegenerate Completion of a Degenerate
+    Clifford Algebra, and Where PGA''s Missing Division Goes, Transport Papers T2 (2026), doi:10.5281/zenodo.22714886.'
+  current_in: T17
+  doi: 10.5281/zenodo.22714886
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{Projective Completes to Conformal: The Minimal Nondegenerate Completion of a Degenerate Clifford
+    Algebra, and Where PGA''s Missing Division Goes},
+
+    Transport Papers T2 (2026), doi:\href{https://doi.org/10.5281/zenodo.22714886}{10.5281/zenodo.22714886}.'
+ButlerT3:
+  citation: 'L. Butler, The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second
+    Quantisation, Transport Papers T3 (2026), doi:10.5281/zenodo.22721556.'
+  current_in: T17
+  doi: 10.5281/zenodo.22721556
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second Quantisation},
+
+    Transport Papers T3 (2026), doi:\href{https://doi.org/10.5281/zenodo.22721556}{10.5281/zenodo.22721556}.'
+ButlerT4:
+  citation: 'L. Butler, Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion,
+    and the Exceptional Algebra, Transport Papers T4 (2026), doi:10.5281/zenodo.22721669.'
+  current_in: T17
+  doi: 10.5281/zenodo.22721669
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion, and the Exceptional
+    Algebra},
+
+    Transport Papers T4 (2026), doi:\href{https://doi.org/10.5281/zenodo.22721669}{10.5281/zenodo.22721669}.'
+ButlerT5:
+  citation: 'L. Butler, Division by Zero at the Gravitational Singularity: The Transport Principle Applied
+    to the Black Hole, and the Information Paradox as a Category Error, Transport Papers T5 (2026), doi:10.5281/zenodo.22721790.'
+  current_in: T17
+  doi: 10.5281/zenodo.22721790
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{Division by Zero at the Gravitational Singularity: The Transport Principle Applied to the Black
+    Hole, and the Information Paradox as a Category Error},
+
+    Transport Papers T5 (2026), doi:\href{https://doi.org/10.5281/zenodo.22721790}{10.5281/zenodo.22721790}.'
+ButlerT6:
+  citation: 'L. Butler, The Geometry of the Black-Hole Interior: Where Division Fails, the Weighted Limit,
+    and the Kerr Tests, Transport Papers T6 (2026), doi:10.5281/zenodo.22721990.'
+  current_in: T17
+  doi: 10.5281/zenodo.22721990
+  first_in: T04
+  latex: 'L.~Butler,
+
+    \emph{The Geometry of the Black-Hole Interior: Where Division Fails, the Weighted Limit, and the Kerr
+    Tests},
+
+    Transport Papers T6 (2026), doi:\href{https://doi.org/10.5281/zenodo.22721990}{10.5281/zenodo.22721990}.'
+ButlerT7:
+  citation: 'L. Butler, Hawking Radiation from the Ledger: State, Continuum, Lift, and the Finite-Ledger
+    Seam, Transport Papers T7 (2026), doi:10.5281/zenodo.22722121.'
+  current_in: T17
+  doi: 10.5281/zenodo.22722121
+  first_in: T03
+  latex: 'L.~Butler,
+
+    \emph{Hawking Radiation from the Ledger: State, Continuum, Lift, and the Finite-Ledger Seam},
+
+    Transport Papers T7 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722121}{10.5281/zenodo.22722121}.'
+ButlerT8:
+  citation: 'L. Butler, Black-Hole Entropy and Scrambling: The Singularity Ledger and the No-Echo Prediction,
+    Transport Papers T8 (2026), doi:10.5281/zenodo.22722176.'
+  current_in: T17
+  doi: 10.5281/zenodo.22722176
+  first_in: T04
+  latex: 'L.~Butler,
+
+    \emph{Black-Hole Entropy and Scrambling: The Singularity Ledger and the No-Echo Prediction},
+
+    Transport Papers T8 (2026), doi:\href{https://doi.org/10.5281/zenodo.22722176}{10.5281/zenodo.22722176}.'
+ButlerT9:
+  citation: 'L. Butler, The Twistor Correspondence: Ascended Spinors, Incidence, and the Palatial Bridge,
+    Transport Papers T9 (2026).'
+  current_in: T17-rule2
+  doi: 10.5281/zenodo.22722290
+  first_in: T03
+  latex: 'L.~Butler,
+
+    \emph{The Twistor Correspondence: Ascended Spinors, Incidence, and the Palatial Bridge},
+
+    Transport Papers T9 (2026).'
+ButlerVerifySS:
+  citation: 'L. Butler, verify_state_selection.py: exact-arithmetic verification of the computational
+    identities of ``Selecting the State'''', Python script, deposited with this note alongside the shared
+    library GA.py (2026).'
+  doi: null
+  first_in: T05-state-selection
+  latex: 'L.~Butler,
+
+    \emph{verify\_state\_selection.py: exact-arithmetic verification of the computational identities of
+    ``Selecting the State''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT01:
+  citation: 'L. Butler, verify_T01.py: exact-arithmetic verification of the computational identities of
+    ``The Transport Principle'''', Python script, deposited with this paper alongside the shared library
+    GA.py (2026).'
+  doi: null
+  first_in: T01
+  latex: 'L.~Butler,
+
+    \emph{verify\_T01.py: exact-arithmetic verification of the computational identities of ``The Transport
+    Principle''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT02:
+  citation: 'L. Butler, verify_T02.py: exact-arithmetic verification of the computational identities of
+    ``Projective Completes to Conformal'''', Python script, deposited with this note (2026).'
+  doi: null
+  first_in: T02
+  latex: 'L.~Butler,
+
+    \emph{verify\_T02.py: exact-arithmetic verification of the computational identities of ``Projective
+    Completes to Conformal''''},
+
+    Python script, deposited with this note (2026).'
+ButlerVerifyT03:
+  citation: 'L. Butler, verify_T03.py: exact-arithmetic verification of the computational identities of
+    ``The Tower and the CAR Limit'''', Python script, deposited with this paper (2026).'
+  doi: null
+  first_in: T03
+  latex: 'L.~Butler,
+
+    \emph{verify\_T03.py: exact-arithmetic verification of the computational identities of ``The Tower
+    and the CAR Limit''''},
+
+    Python script, deposited with this paper (2026).'
+ButlerVerifyT04:
+  citation: 'L. Butler, verify_T04.py: exact-arithmetic verification of the computational identities of
+    ``Clifford Sheaves over Degenerate Metrics'''', Python script, deposited with this paper (2026).'
+  doi: null
+  first_in: T04
+  latex: 'L.~Butler,
+
+    \emph{verify\_T04.py: exact-arithmetic verification of the computational identities of ``Clifford
+    Sheaves over Degenerate Metrics''''},
+
+    Python script, deposited with this paper (2026).'
+ButlerVerifyT05:
+  citation: 'L. Butler, verify_T05.py: exact-arithmetic verification of the computational identities of
+    ``Division by Zero at the Gravitational Singularity'''', Python script, deposited with this paper
+    alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T05
+  latex: 'L.~Butler,
+
+    \emph{verify\_T05.py: exact-arithmetic verification of the computational identities of ``Division
+    by Zero at the Gravitational Singularity''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT05angle:
+  citation: 'L. Butler, verify_T05_angle.py: exact-arithmetic verification of the computational identities
+    of ``What Fixes the Angle'''', Python script, deposited with this note alongside the shared library
+    GA.py (2026).'
+  doi: null
+  first_in: T05-angle
+  latex: 'L.~Butler,
+
+    \emph{verify\_T05\_angle.py: exact-arithmetic verification of the computational identities of ``What
+    Fixes the Angle''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT05dilation:
+  citation: 'L. Butler, verify_T05_dilation.py: exact-arithmetic verification of the computational identities
+    of ``The Descent, Lifted'''', Python script, deposited with this note alongside the shared library
+    GA.py (2026).'
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'L.~Butler,
+
+    \emph{verify\_T05\_dilation.py: exact-arithmetic verification of the computational identities of ``The
+    Descent, Lifted''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT05pairing:
+  citation: 'L. Butler, verify_T05_pairing.py: exact-arithmetic verification of the computational identities
+    of ``Where the Pairing Generator Is'''', Python script, deposited with this note alongside the shared
+    library GA.py (2026).'
+  doi: null
+  first_in: T05-pairing
+  latex: 'L.~Butler,
+
+    \emph{verify\_T05\_pairing.py: exact-arithmetic verification of the computational identities of ``Where
+    the Pairing Generator Is''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT06:
+  citation: 'L. Butler, verify_T06.py: exact-arithmetic verification of the computational identities of
+    ``The Geometry of the Black-Hole Interior'''', Python script, deposited with this paper alongside
+    the shared library GA.py (2026).'
+  doi: null
+  first_in: T06
+  latex: 'L.~Butler,
+
+    \emph{verify\_T06.py: exact-arithmetic verification of the computational identities of ``The Geometry
+    of the Black-Hole Interior''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT10:
+  citation: 'L. Butler, verify_T10.py: exact-arithmetic verification of the computational identities of
+    ``Dark Energy and the Action of Gravity'''', Python script, deposited with this paper alongside the
+    shared library GA.py (2026).'
+  doi: null
+  first_in: T10
+  latex: 'L.~Butler,
+
+    \emph{verify\_T10.py: exact-arithmetic verification of the computational identities of ``Dark Energy
+    and the Action of Gravity''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT11:
+  citation: 'L. Butler, verify_T11.py: machine verification for ``The Origin of Mass'''', Python script,
+    deposited with this paper alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T11
+  latex: 'L.~Butler,
+
+    \emph{verify\_T11.py: machine verification for ``The Origin of Mass''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT12:
+  citation: 'L. Butler, verify_T12.py: machine verification for ``The Standard Model from the Minimal
+    Massive Composite'''', Python script, deposited with this paper alongside the shared library GA.py
+    (2026).'
+  doi: null
+  first_in: T12
+  latex: 'L.~Butler,
+
+    \emph{verify\_T12.py: machine verification for ``The Standard Model from the Minimal Massive Composite''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT12L:
+  citation: 'L. Butler, verify_T12_lepton.py: machine verification for ``The Lepton Inside the Hierarchy'''',
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T12-lepton
+  latex: 'L.~Butler,
+
+    \emph{verify\_T12\_lepton.py: machine verification for ``The Lepton Inside the Hierarchy''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT12R:
+  citation: 'L. Butler, verify_T12_rungs.py: machine verification for ``Two Rungs Up'''', Python script,
+    deposited with this note alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T12-rungs
+  latex: 'L.~Butler,
+
+    \emph{verify\_T12\_rungs.py: machine verification for ``Two Rungs Up''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT13:
+  citation: 'L. Butler, verify_T13.py: machine verification for ``Quark and Lepton Families: Condensation,
+    Democracy, and the Koide Relation'''', Python script, deposited with this paper alongside the shared
+    library GA.py (2026).'
+  doi: null
+  first_in: T13
+  latex: 'L.~Butler,
+
+    \emph{verify\_T13.py: machine verification for ``Quark and Lepton Families: Condensation, Democracy,
+    and the Koide Relation''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT14:
+  citation: 'L. Butler, verify_T14.py: machine verification for ``Dark Matter and the Arrow of Time: The
+    Dark Towers'''', Python script, deposited with this paper alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T14
+  latex: 'L.~Butler,
+
+    \emph{verify\_T14.py: machine verification for ``Dark Matter and the Arrow of Time: The Dark Towers''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT14b:
+  citation: 'L. Butler, verify_T14b.py: verification for the companion note ``Simulating the Dark Towers'''',
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T14b
+  latex: 'L.~Butler,
+
+    \emph{verify\_T14b.py: verification for the companion note ``Simulating the Dark Towers''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT14ext:
+  citation: 'L. Butler, verify_T14a.py: machine verification for the companion note ``One Dimension at
+    a Time: The Odd Extensions of the Oriented Towers'''', Python script, deposited with this note alongside
+    the shared library GA.py (2026).'
+  doi: null
+  first_in: T14a
+  latex: 'L.~Butler,
+
+    \emph{verify\_T14a.py: machine verification for the companion note ``One Dimension at a Time: The
+    Odd Extensions of the Oriented Towers''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT15:
+  citation: 'L. Butler, verify_T15.py: machine verification for ``Neutrino Masses'''', Python script,
+    deposited with this paper alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T15
+  latex: 'L.~Butler,
+
+    \emph{verify\_T15.py: machine verification for ``Neutrino Masses''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT16:
+  citation: 'L. Butler, verify_T16.py: machine verification for ``Quantum Mechanics and General Relativity
+    from One Relation'''', Python script, deposited with this paper alongside the shared library GA.py
+    (2026).'
+  doi: null
+  first_in: T16
+  latex: 'L.~Butler,
+
+    \emph{verify\_T16.py: machine verification for ``Quantum Mechanics and General Relativity from One
+    Relation''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT17:
+  citation: 'L. Butler, verify_T17.py: the consistency audit for the Transport Programme capstone, Python
+    script, deposited with this paper alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T17
+  latex: 'L.~Butler,
+
+    \emph{verify\_T17.py: the consistency audit for the Transport Programme capstone},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT17rule2:
+  citation: 'L. Butler, verify_T17_rule2.py: machine verification for the companion note ``Rule 2 Exercised
+    Physically'''', Python script, deposited with this note alongside the shared library GA.py (2026).'
+  doi: null
+  first_in: T17-rule2
+  latex: 'L.~Butler,
+
+    \emph{verify\_T17\_rule2.py: machine verification for the companion note ``Rule 2 Exercised Physically''''},
+
+    Python script, deposited with this note alongside the shared library GA.py (2026).'
+ButlerVerifyT7:
+  citation: 'L. Butler, verify_T07.py: exact-arithmetic verification of the computational identities of
+    ``Hawking Radiation from the Ledger'''', Python script, deposited with this paper alongside the shared
+    library GA.py (2026).'
+  doi: null
+  first_in: T07
+  latex: 'L.~Butler,
+
+    \emph{verify\_T07.py: exact-arithmetic verification of the computational identities of ``Hawking Radiation
+    from the Ledger''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT8:
+  citation: 'L. Butler, verify_T08.py: exact-arithmetic verification of the computational identities of
+    ``Black-Hole Entropy and Scrambling'''', Python script, deposited with this paper alongside the shared
+    library GA.py (2026).'
+  doi: null
+  first_in: T08
+  latex: 'L.~Butler,
+
+    \emph{verify\_T08.py: exact-arithmetic verification of the computational identities of ``Black-Hole
+    Entropy and Scrambling''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+ButlerVerifyT9:
+  citation: 'L. Butler, verify_T09.py: exact-arithmetic verification of the computational identities of
+    ``The Twistor Correspondence'''', Python script, deposited with this paper alongside the shared library
+    GA.py (2026).'
+  doi: null
+  first_in: T09
+  latex: 'L.~Butler,
+
+    \emph{verify\_T09.py: exact-arithmetic verification of the computational identities of ``The Twistor
+    Correspondence''''},
+
+    Python script, deposited with this paper alongside the shared library GA.py (2026).'
+CLASS2011:
+  citation: 'D. Blas, J. Lesgourgues and T. Tram, The Cosmic Linear Anisotropy Solving System (CLASS)
+    II: approximation schemes, J. Cosmol. Astropart. Phys. 07, 034 (2011).'
+  doi: null
+  first_in: T14
+  latex: 'D.~Blas, J.~Lesgourgues and T.~Tram,
+
+    The Cosmic Linear Anisotropy Solving System (CLASS) II: approximation schemes,
+
+    \emph{J.\ Cosmol.\ Astropart.\ Phys.} \textbf{07}, 034 (2011).'
+CR2015:
+  citation: M. Christodoulou and C. Rovelli, How big is a black hole?, Phys. Rev. D 91 (2015), 064046.
+  doi: null
+  first_in: T05
+  latex: 'M.~Christodoulou and C.~Rovelli,
+
+    How big is a black hole?,
+
+    \emph{Phys.\ Rev.\ D} \textbf{91} (2015), 064046.'
+CardosoPani2017:
+  citation: V. Cardoso and P. Pani, Tests for the existence of black holes through gravitational wave
+    echoes, Nat. Astron. 1 (2017), 586--591.
+  doi: null
+  first_in: T08
+  latex: 'V.~Cardoso and P.~Pani,
+
+    Tests for the existence of black holes through gravitational wave echoes,
+
+    \emph{Nat.\ Astron.} \textbf{1} (2017), 586--591.'
+Cartan1938:
+  citation: '''E. Cartan, Lecons sur la th''eorie des spineurs, Hermann, Paris (1938).'
+  doi: null
+  first_in: T05-pairing
+  latex: '\''E.~Cartan,
+
+    \emph{Le\c{c}ons sur la th\''eorie des spineurs},
+
+    Hermann, Paris (1938).'
+Carter1968:
+  citation: B. Carter, Global structure of the Kerr family of gravitational fields, Phys. Rev. 174 (1968),
+    1559--1571.
+  doi: null
+  first_in: T06
+  latex: 'B.~Carter,
+
+    Global structure of the Kerr family of gravitational fields,
+
+    \emph{Phys.\ Rev.} \textbf{174} (1968), 1559--1571.'
+Chabrier2003:
+  citation: G. Chabrier, Galactic stellar and substellar initial mass function, Publ. Astron. Soc. Pac.
+    115 (2003) 763.
+  doi: null
+  first_in: T14b
+  latex: 'G.~Chabrier,
+
+    \emph{Galactic stellar and substellar initial mass function},
+
+    Publ.\ Astron.\ Soc.\ Pac.\ 115 (2003) 763.'
+Chandrasekhar1983:
+  citation: S. Chandrasekhar, The Mathematical Theory of Black Holes, Oxford University Press, Oxford,
+    1983.
+  doi: null
+  first_in: T05
+  latex: 'S.~Chandrasekhar,
+
+    \emph{The Mathematical Theory of Black Holes},
+
+    Oxford University Press, Oxford, 1983.'
+ChangMohapatraParida1984:
+  citation: 'D. Chang, R. N. Mohapatra and M. K. Parida, Decoupling parity and $SU(2)_R$-breaking scales:
+    a new approach to left-right symmetric models, Phys. Rev. Lett. 52 (1984) 1072--1075.'
+  doi: null
+  first_in: T12
+  latex: 'D.~Chang, R.~N.~Mohapatra and M.~K.~Parida,
+
+    Decoupling parity and $SU(2)_{R}$-breaking scales: a new approach to left-right symmetric models,
+
+    \emph{Phys. Rev. Lett.} \textbf{52} (1984) 1072--1075.'
+Chevalley1954:
+  citation: C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954).
+  doi: null
+  first_in: T05
+  latex: 'C.~Chevalley,
+
+    \emph{The Algebraic Theory of Spinors},
+
+    Columbia University Press (1954).'
+Chevalley1997:
+  citation: C. Chevalley, The Algebraic Theory of Spinors and Clifford Algebras, Collected Works, Vol.
+    2, Springer, Berlin (1997).
+  doi: null
+  first_in: T01
+  latex: 'C.~Chevalley,
+
+    \emph{The Algebraic Theory of Spinors and Clifford Algebras},
+
+    Collected Works, Vol.~2, Springer, Berlin (1997).'
+Chevalley54:
+  citation: C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954).
+  doi: null
+  first_in: T09
+  latex: 'C.~Chevalley,
+
+    \emph{The Algebraic Theory of Spinors},
+
+    Columbia University Press (1954).'
+Choi1975:
+  citation: M.-D. Choi, Completely positive linear maps on complex matrices, Linear Algebra Appl. 10 (1975)
+    285--290.
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'M.-D. Choi,
+
+    \emph{Completely positive linear maps on complex matrices},
+
+    Linear Algebra Appl. 10 (1975) 285--290.'
+ChristodoulouRovelli2015:
+  citation: M. Christodoulou and C. Rovelli, How big is a black hole?, Phys. Rev. D 91 (2015), 064046.
+  doi: null
+  first_in: T08
+  latex: 'M.~Christodoulou and C.~Rovelli,
+
+    How big is a black hole?,
+
+    \emph{Phys.\ Rev.\ D} \textbf{91} (2015), 064046.'
+Clowe2006:
+  citation: D. Clowe et al., A direct empirical proof of the existence of dark matter, Astrophys. J. Lett.
+    648 (2006), L109--L113.
+  doi: null
+  first_in: T14
+  latex: 'D.~Clowe et al.,
+
+    \emph{A direct empirical proof of the existence of dark matter},
+
+    Astrophys. J. Lett. \textbf{648} (2006), L109--L113.'
+Connes1973:
+  citation: A. Connes, Une classification des facteurs de type III, Ann. Sci. 'Ec. Norm. Sup'er. (4) 6
+    (1973), 133--252.
+  doi: null
+  first_in: T05
+  latex: 'A.~Connes,
+
+    Une classification des facteurs de type III,
+
+    \emph{Ann.\ Sci.\ \''Ec.\ Norm.\ Sup\''er.} (4) \textbf{6} (1973), 133--252.'
+Croton2006:
+  citation: 'D. J. Croton et al., The many lives of active galactic nuclei: cooling flows, black holes
+    and the luminosities and colours of galaxies, Mon. Not. R. Astron. Soc. 365 (2006) 11.'
+  doi: null
+  first_in: T14b
+  latex: 'D.~J.~Croton et al.,
+
+    \emph{The many lives of active galactic nuclei: cooling flows, black holes and the luminosities and
+    colours of galaxies},
+
+    Mon.\ Not.\ R.\ Astron.\ Soc.\ 365 (2006) 11.'
+CurryGover2018:
+  citation: S. N. Curry and A. R. Gover, An introduction to conformal geometry and tractor calculus, with
+    a view towards analysis on manifolds, in Asymptotic Analysis in General Relativity, London Mathematical
+    Society Lecture Note Series 443, Cambridge University Press (2018), 86--170.
+  doi: null
+  first_in: T04
+  latex: 'S.~N.~Curry and A.~R.~Gover,
+
+    An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds,
+
+    in \emph{Asymptotic Analysis in General Relativity},
+
+    London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170.'
+DESI2025:
+  citation: 'DESI Collaboration, DESI DR2 results II: measurements of baryon acoustic oscillations and
+    cosmological constraints, arXiv:2503.14738 (2025).'
+  doi: null
+  first_in: T10
+  latex: 'DESI Collaboration,
+
+    DESI DR2 results II: measurements of baryon acoustic oscillations and cosmological constraints,
+
+    arXiv:2503.14738 (2025).'
+DESIDR2:
+  citation: 'DESI Collaboration, DESI DR2: baryon acoustic oscillations and constraints on dark energy
+    and neutrino mass, (2025--2026).'
+  doi: null
+  first_in: T17
+  latex: 'DESI Collaboration,
+
+    \emph{DESI DR2: baryon acoustic oscillations and constraints on dark energy and neutrino mass},
+
+    (2025--2026).'
+DFM2007:
+  citation: 'L. Dorst, D. Fontijne and S. Mann, Geometric Algebra for Computer Science: An Object-Oriented
+    Approach to Geometry, Morgan Kaufmann (2007).'
+  doi: null
+  first_in: T01
+  latex: 'L.~Dorst, D.~Fontijne and S.~Mann,
+
+    \emph{Geometric Algebra for Computer Science: An Object-Oriented Approach to Geometry},
+
+    Morgan Kaufmann (2007).'
+DHN2003:
+  citation: T. Damour, M. Henneaux and H. Nicolai, Cosmological billiards, Class. Quantum Grav. 20 (2003),
+    R145--R200.
+  doi: null
+  first_in: T06
+  latex: 'T.~Damour, M.~Henneaux and H.~Nicolai,
+
+    Cosmological billiards,
+
+    \emph{Class.\ Quantum Grav.} \textbf{20} (2003), R145--R200.'
+DafermosLuk2017:
+  citation: 'M. Dafermos and J. Luk, The interior of dynamical vacuum black holes I: the $C^0$-stability
+    of the Kerr Cauchy horizon, preprint, arXiv:1710.01722 (2017).'
+  doi: null
+  first_in: T06
+  latex: 'M.~Dafermos and J.~Luk,
+
+    The interior of dynamical vacuum black holes I: the $C^0$-stability of the Kerr Cauchy horizon,
+
+    preprint, arXiv:1710.01722 (2017).'
+DavidsonNardiNir2008:
+  citation: S. Davidson, E. Nardi, and Y. Nir, Leptogenesis, Phys. Rep. 466 (2008), 105--177.
+  doi: null
+  first_in: T15
+  latex: 'S.~Davidson, E.~Nardi, and Y.~Nir,
+
+    \emph{Leptogenesis},
+
+    Phys. Rep. \textbf{466} (2008), 105--177.'
+Deutsch1999:
+  citation: D. Deutsch, Quantum theory of probability and decisions, Proc. R. Soc. Lond. A 455 (1999),
+    3129--3137.
+  doi: null
+  first_in: T16
+  latex: 'D.~Deutsch,
+
+    \emph{Quantum theory of probability and decisions},
+
+    Proc. R. Soc. Lond. A \textbf{455} (1999), 3129--3137.'
+DiFrancesco1997:
+  citation: P. Di Francesco, P. Mathieu and D. S'en'echal, Conformal Field Theory, Springer, New York
+    (1997).
+  doi: null
+  first_in: T10
+  latex: 'P.~Di~Francesco, P.~Mathieu and D.~S\''en\''echal,
+
+    \emph{Conformal Field Theory},
+
+    Springer, New York (1997).'
+Dighton74:
+  citation: K. Dighton, An introduction to the theory of local twistors, Int. J. Theor. Phys. 11 (1974),
+    31--43.
+  doi: null
+  first_in: T09
+  latex: 'K.~Dighton,
+
+    An introduction to the theory of local twistors,
+
+    \emph{Int.\ J.\ Theor.\ Phys.} \textbf{11} (1974), 31--43.'
+DimopoulosRabyWilczek1981:
+  citation: S. Dimopoulos, S. Raby, and F. Wilczek, Supersymmetry and the scale of unification, Phys.
+    Rev. D 24 (1981), 1681--1683.
+  doi: null
+  first_in: T12
+  latex: 'S.~Dimopoulos, S.~Raby, and F.~Wilczek,
+
+    \emph{Supersymmetry and the scale of unification},
+
+    Phys. Rev. D \textbf{24} (1981), 1681--1683.'
+Dixmier1961:
+  citation: J. Dixmier, Repr'esentations int'egrables du groupe de De Sitter, Bull. Soc. Math. France
+    89 (1961), 9--41.
+  doi: null
+  first_in: T11
+  latex: 'J.~Dixmier,
+
+    \emph{Repr\''esentations int\''egrables du groupe de De Sitter},
+
+    Bull. Soc. Math. France \textbf{89} (1961), 9--41.'
+DolanJackiw1974:
+  citation: L. Dolan and R. Jackiw, Symmetry behavior at finite temperature, Phys. Rev. D 9 (1974), 3320--3341.
+  doi: null
+  first_in: synthesis
+  latex: L. Dolan and R. Jackiw, Symmetry behavior at finite temperature, Phys. Rev. D 9 (1974), 3320--3341.
+DoranLasenby2003:
+  citation: C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003).
+  doi: null
+  first_in: T01
+  latex: 'C.~Doran and A.~Lasenby,
+
+    \emph{Geometric Algebra for Physicists},
+
+    Cambridge University Press (2003).'
+DvaliMelfoSenjanovic1995:
+  citation: G. Dvali, A. Melfo and G. Senjanovic, Is there a monopole problem?, Phys. Rev. Lett. 75 (1995),
+    4559--4562; arXiv:hep-ph/9507230.
+  doi: 10.1103/PhysRevLett.75.4559
+  first_in: synthesis
+  latex: G. Dvali, A. Melfo and G. Senjanovic, Is there a monopole problem?, Phys. Rev. Lett. 75 (1995),
+    4559--4562; arXiv:hep-ph/9507230.
+ELS1972:
+  citation: D. Eardley, E. Liang and R. Sachs, Velocity-dominated singularities in irrotational dust cosmologies,
+    J. Math. Phys. 13 (1972), 99--107.
+  doi: null
+  first_in: T06
+  latex: 'D.~Eardley, E.~Liang and R.~Sachs,
+
+    Velocity-dominated singularities in irrotational dust cosmologies,
+
+    \emph{J.\ Math.\ Phys.} \textbf{13} (1972), 99--107.'
+EPW1981:
+  citation: M. G. Eastwood, R. Penrose and R. O. Wells, Cohomology and massless fields, Commun. Math.
+    Phys. 78 (1981), 305--351.
+  doi: null
+  first_in: T07
+  latex: 'M.~G.~Eastwood, R.~Penrose and R.~O.~Wells,
+
+    Cohomology and massless fields,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{78} (1981), 305--351.'
+Ertl2020:
+  citation: T. Ertl, S. E. Woosley, T. Sukhbold and H.-T. Janka, The explosion of helium stars evolved
+    with mass loss, Astrophys. J. 890 (2020) 51.
+  doi: null
+  first_in: T14b
+  latex: 'T.~Ertl, S.~E.~Woosley, T.~Sukhbold and H.-T.~Janka,
+
+    \emph{The explosion of helium stars evolved with mass loss},
+
+    Astrophys.\ J.\ 890 (2020) 51.'
+FG1985:
+  citation: C. Fefferman and C. R. Graham, Conformal invariants, in 'Elie Cartan et les math'ematiques
+    d'aujourd'hui, Ast'erisque, hors s'erie (1985), 95--116.
+  doi: null
+  first_in: T04
+  latex: 'C.~Fefferman and C.~R.~Graham,
+
+    Conformal invariants,
+
+    in \emph{\''Elie Cartan et les math\''ematiques d''aujourd''hui},
+
+    Ast\''erisque, hors s\''erie (1985), 95--116.'
+FG2012:
+  citation: C. Fefferman and C. R. Graham, The Ambient Metric, Annals of Mathematics Studies 178, Princeton
+    University Press (2012).
+  doi: null
+  first_in: T04
+  latex: 'C.~Fefferman and C.~R.~Graham,
+
+    \emph{The Ambient Metric},
+
+    Annals of Mathematics Studies 178, Princeton University Press (2012).'
+Fakhouri2010:
+  citation: O. Fakhouri, C.-P. Ma and M. Boylan-Kolchin, The merger rates and mass assembly histories
+    of dark matter haloes in the two Millennium simulations, Mon. Not. R. Astron. Soc. 406 (2010) 2267.
+  doi: null
+  first_in: T14b
+  latex: 'O.~Fakhouri, C.-P.~Ma and M.~Boylan-Kolchin,
+
+    \emph{The merger rates and mass assembly histories of dark matter haloes in the two Millennium simulations},
+
+    Mon.\ Not.\ R.\ Astron.\ Soc.\ 406 (2010) 2267.'
+Foot1994:
+  citation: R. Foot, A note on Koide's lepton mass relation, arXiv:hep-ph/9402242 (1994).
+  doi: null
+  first_in: T13
+  latex: 'R.~Foot,
+
+    \emph{A note on Koide''s lepton mass relation},
+
+    arXiv:hep-ph/9402242 (1994).'
+FootMirror2004:
+  citation: R. Foot, Mirror matter-type dark matter, Int. J. Mod. Phys. D 13 (2004), 2161--2192.
+  doi: null
+  first_in: T14
+  latex: 'R.~Foot,
+
+    \emph{Mirror matter-type dark matter},
+
+    Int. J. Mod. Phys. D \textbf{13} (2004), 2161--2192.'
+FredenhagenHaag1990:
+  citation: K. Fredenhagen and R. Haag, On the derivation of Hawking radiation associated with the formation
+    of a black hole, Commun. Math. Phys. 127 (1990), 273--284.
+  doi: null
+  first_in: T05
+  latex: 'K.~Fredenhagen and R.~Haag,
+
+    On the derivation of Hawking radiation associated with the formation of a black hole,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{127} (1990), 273--284.'
+FrenkelKac1980:
+  citation: I. B. Frenkel and V. G. Kac, Basic representations of affine Lie algebras and dual resonance
+    models, Invent. Math. 62 (1980), 23--66.
+  doi: null
+  first_in: T07
+  latex: 'I.~B.~Frenkel and V.~G.~Kac,
+
+    Basic representations of affine Lie algebras and dual resonance models,
+
+    \emph{Invent.\ Math.} \textbf{62} (1980), 23--66.'
+Fritzsch1978:
+  citation: H. Fritzsch, Weak-interaction mixing in the six-quark theory, Phys. Lett. B 73 (1978), 317.
+  doi: null
+  first_in: T13
+  latex: 'H.~Fritzsch,
+
+    \emph{Weak-interaction mixing in the six-quark theory},
+
+    Phys. Lett. B \textbf{73} (1978), 317.'
+FukugitaYanagida1986:
+  citation: M. Fukugita and T. Yanagida, Baryogenesis without grand unification, Phys. Lett. B 174 (1986),
+    45--47.
+  doi: null
+  first_in: T15
+  latex: 'M.~Fukugita and T.~Yanagida,
+
+    \emph{Baryogenesis without grand unification},
+
+    Phys. Lett. B \textbf{174} (1986), 45--47.'
+Fulton1998:
+  citation: W. Fulton, Intersection Theory, 2nd ed., Springer, Berlin (1998).
+  doi: null
+  first_in: T04
+  latex: 'W.~Fulton,
+
+    \emph{Intersection Theory}, 2nd ed.,
+
+    Springer, Berlin (1998).'
+FultonHarris1991:
+  citation: 'W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics
+    129, Springer (1991).'
+  doi: null
+  first_in: T12
+  latex: 'W.~Fulton and J.~Harris,
+
+    \emph{Representation Theory: A First Course},
+
+    Graduate Texts in Mathematics 129, Springer (1991).'
+GRS1979:
+  citation: M. Gell-Mann, P. Ramond, and R. Slansky, Complex spinors and unified theories, in Supergravity,
+    North-Holland (1979), 315--321.
+  doi: null
+  first_in: T15
+  latex: 'M.~Gell-Mann, P.~Ramond, and R.~Slansky,
+
+    \emph{Complex spinors and unified theories},
+
+    in \emph{Supergravity}, North-Holland (1979), 315--321.'
+GRW1986:
+  citation: G. C. Ghirardi, A. Rimini, and T. Weber, Unified dynamics for microscopic and macroscopic
+    systems, Phys. Rev. D 34 (1986), 470--491.
+  doi: null
+  first_in: T16
+  latex: 'G.~C. Ghirardi, A.~Rimini, and T.~Weber,
+
+    \emph{Unified dynamics for microscopic and macroscopic systems},
+
+    Phys. Rev. D \textbf{34} (1986), 470--491.'
+GSC2007:
+  citation: 'V. P. Gusynin, S. G. Sharapov, J. P. Carbotte, AC conductivity of graphene: from tight-binding
+    model to 2+1-dimensional quantum electrodynamics, Int. J. Mod. Phys. B 21 (2007) 4611--4658.'
+  doi: null
+  first_in: T17-rule2
+  latex: 'V.~P. Gusynin, S.~G. Sharapov, J.~P. Carbotte,
+
+    \emph{AC conductivity of graphene: from tight-binding model to 2+1-dimensional quantum electrodynamics},
+
+    Int.\ J.\ Mod.\ Phys.\ B 21 (2007) 4611--4658.'
+GST1968:
+  citation: R. Gatto, G. Sartori and M. Tonin, Weak self-masses, Cabibbo angle, and broken $SU(2) times
+    SU(2)$, Phys. Lett. B 28 (1968), 128.
+  doi: null
+  first_in: T13
+  latex: 'R.~Gatto, G.~Sartori and M.~Tonin,
+
+    \emph{Weak self-masses, Cabibbo angle, and broken $SU(2) \times SU(2)$},
+
+    Phys. Lett. B \textbf{28} (1968), 128.'
+GWTC4:
+  citation: 'LIGO Scientific Collaboration, Virgo Collaboration, and KAGRA Collaboration, GWTC-4.0: an
+    updated catalog of gravitational-wave transients, (2025--2026).'
+  doi: null
+  first_in: T17
+  latex: 'LIGO Scientific Collaboration, Virgo Collaboration, and KAGRA Collaboration,
+
+    \emph{GWTC-4.0: an updated catalog of gravitational-wave transients},
+
+    (2025--2026).'
+GWTC4TGR2026:
+  citation: 'The LIGO-Virgo-KAGRA Collaboration, GWTC-4.0: tests of general relativity III, preprint (2026);
+    with the catalogue GWTC-4.0 (2025-2026).'
+  doi: null
+  first_in: T08
+  latex: 'The LIGO-Virgo-KAGRA Collaboration,
+
+    GWTC-4.0: tests of general relativity III,
+
+    preprint (2026); with the catalogue GWTC-4.0 (2025-2026).'
+GeorgiGlashow1974:
+  citation: H. Georgi and S. L. Glashow, Unity of all elementary-particle forces, Phys. Rev. Lett. 32
+    (1974), 438--441.
+  doi: null
+  first_in: T12
+  latex: 'H.~Georgi and S.~L. Glashow,
+
+    \emph{Unity of all elementary-particle forces},
+
+    Phys. Rev. Lett. \textbf{32} (1974), 438--441.'
+GeorgiJarlskog1979:
+  citation: H. Georgi and C. Jarlskog, A new lepton-quark mass relation in a unified theory, Phys. Lett.
+    B 86 (1979) 297--300.
+  doi: null
+  first_in: T12
+  latex: 'H.~Georgi and C.~Jarlskog,
+
+    A new lepton-quark mass relation in a unified theory,
+
+    \emph{Phys. Lett. B} \textbf{86} (1979) 297--300.'
+GeorgiQuinnWeinberg1974:
+  citation: H. Georgi, H. R. Quinn, and S. Weinberg, Hierarchy of interactions in unified gauge theories,
+    Phys. Rev. Lett. 33 (1974) 451--454.
+  doi: null
+  first_in: T12
+  latex: 'H.~Georgi, H.~R.~Quinn, and S.~Weinberg,
+
+    Hierarchy of interactions in unified gauge theories,
+
+    \emph{Phys. Rev. Lett.} \textbf{33} (1974) 451--454.'
+Gertsenshtein1962:
+  citation: M. E. Gertsenshtein, Wave resonance of light and gravitational waves, Sov. Phys. JETP 14 (1962),
+    84--85.
+  doi: null
+  first_in: T10
+  latex: 'M.~E.~Gertsenshtein,
+
+    Wave resonance of light and gravitational waves,
+
+    \emph{Sov.\ Phys.\ JETP} \textbf{14} (1962), 84--85.'
+Gibbons1975:
+  citation: G. W. Gibbons, Vacuum polarization and the spontaneous loss of charge by black holes, Commun.
+    Math. Phys. 44 (1975) 245--264.
+  doi: null
+  first_in: T14
+  latex: 'G.~W.~Gibbons,
+
+    Vacuum polarization and the spontaneous loss of charge by black holes,
+
+    \emph{Commun. Math. Phys.} \textbf{44} (1975) 245--264.'
+GibbonsHawking1977:
+  citation: G. W. Gibbons and S. W. Hawking, Action integrals and partition functions in quantum gravity,
+    Phys. Rev. D 15 (1977), 2752--2756.
+  doi: null
+  first_in: T05
+  latex: 'G.~W.~Gibbons and S.~W.~Hawking,
+
+    Action integrals and partition functions in quantum gravity,
+
+    \emph{Phys.\ Rev.\ D} \textbf{15} (1977), 2752--2756.'
+GiudiceRomanino2004:
+  citation: G. F. Giudice and A. Romanino, Split supersymmetry, Nucl. Phys. B 699 (2004), 65--89.
+  doi: null
+  first_in: T12
+  latex: 'G.~F.~Giudice and A.~Romanino,
+
+    \emph{Split supersymmetry},
+
+    Nucl. Phys. B \textbf{699} (2004), 65--89.'
+Glimm1960:
+  citation: J. Glimm, On a certain class of operator algebras, Trans. Amer. Math. Soc. 95 (1960), 318--340.
+  doi: null
+  first_in: T03
+  latex: 'J.~Glimm,
+
+    On a certain class of operator algebras,
+
+    \emph{Trans.\ Amer.\ Math.\ Soc.} \textbf{95} (1960), 318--340.'
+Gover2010:
+  citation: A. R. Gover, Almost Einstein and Poincar'e-Einstein manifolds in Riemannian signature, J.
+    Geom. Phys. 60 (2010), 182--204.
+  doi: null
+  first_in: T06
+  latex: 'A.~R.~Gover,
+
+    Almost Einstein and Poincar\''e-Einstein manifolds in Riemannian signature,
+
+    \emph{J.\ Geom.\ Phys.} \textbf{60} (2010), 182--204.'
+Gunn2017:
+  citation: C. Gunn, Doing Euclidean plane geometry using projective geometric algebra, Adv. Appl. Clifford
+    Algebras 27 (2017), 1203--1232.
+  doi: null
+  first_in: T02
+  latex: 'C.~Gunn,
+
+    Doing Euclidean plane geometry using projective geometric algebra,
+
+    \emph{Adv.\ Appl.\ Clifford Algebras} \textbf{27} (2017), 1203--1232.'
+HHW1967:
+  citation: R. Haag, N. M. Hugenholtz and M. Winnink, On the equilibrium states in quantum statistical
+    mechanics, Commun. Math. Phys. 5 (1967), 215--236.
+  doi: null
+  first_in: T05
+  latex: 'R.~Haag, N.~M.~Hugenholtz and M.~Winnink,
+
+    On the equilibrium states in quantum statistical mechanics,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{5} (1967), 215--236.'
+HHW1978:
+  citation: H. Harari, H. Haut and J. Weyers, Quark masses and Cabibbo angles, Phys. Lett. B 78 (1978),
+    459.
+  doi: null
+  first_in: T13
+  latex: 'H.~Harari, H.~Haut and J.~Weyers,
+
+    \emph{Quark masses and Cabibbo angles},
+
+    Phys. Lett. B \textbf{78} (1978), 459.'
+HLR2001:
+  citation: H. Li, D. Hestenes and A. Rockwood, Generalized homogeneous coordinates for computational
+    geometry, in Geometric Computing with Clifford Algebras, G. Sommer (ed.), Springer (2001), 27--59.
+  doi: null
+  first_in: T01
+  latex: 'H.~Li, D.~Hestenes and A.~Rockwood,
+
+    Generalized homogeneous coordinates for computational geometry,
+
+    in \emph{Geometric Computing with Clifford Algebras},
+
+    G.~Sommer (ed.), Springer (2001), 27--59.'
+HP2007:
+  citation: 'P. Hayden and J. Preskill, Black holes as mirrors: quantum information in random subsystems,
+    J. High Energy Phys. 2007, 120 (2007).'
+  doi: null
+  first_in: T05
+  latex: 'P.~Hayden and J.~Preskill,
+
+    Black holes as mirrors: quantum information in random subsystems,
+
+    \emph{J.\ High Energy Phys.} \textbf{2007}, 120 (2007).'
+HartleHawking1976:
+  citation: J. B. Hartle and S. W. Hawking, Path-integral derivation of black-hole radiance, Phys. Rev.
+    D 13 (1976), 2188--2203.
+  doi: null
+  first_in: T05
+  latex: 'J.~B.~Hartle and S.~W.~Hawking,
+
+    Path-integral derivation of black-hole radiance,
+
+    \emph{Phys.\ Rev.\ D} \textbf{13} (1976), 2188--2203.'
+Hartshorne1977:
+  citation: R. Hartshorne, Algebraic Geometry, Graduate Texts in Mathematics 52, Springer, New York (1977).
+  doi: null
+  first_in: T04
+  latex: 'R.~Hartshorne,
+
+    \emph{Algebraic Geometry},
+
+    Graduate Texts in Mathematics 52, Springer, New York (1977).'
+Harvey2015:
+  citation: D. Harvey, R. Massey, T. Kitching, A. Taylor and E. Tittley, The nongravitational interactions
+    of dark matter in colliding galaxy clusters, Science 347 (2015) 1462.
+  doi: null
+  first_in: T14b
+  latex: 'D.~Harvey, R.~Massey, T.~Kitching, A.~Taylor and E.~Tittley,
+
+    \emph{The nongravitational interactions of dark matter in colliding galaxy clusters},
+
+    Science 347 (2015) 1462.'
+Hatcher2002:
+  citation: A. Hatcher, Algebraic Topology, Cambridge University Press (2002).
+  doi: null
+  first_in: synthesis
+  latex: A. Hatcher, Algebraic Topology, Cambridge University Press (2002).
+Hawking1975:
+  citation: S. W. Hawking, Particle creation by black holes, Commun. Math. Phys. 43 (1975), 199--220.
+  doi: null
+  first_in: T05
+  latex: 'S.~W.~Hawking,
+
+    Particle creation by black holes,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{43} (1975), 199--220.'
+HawkingEllis1973:
+  citation: S. W. Hawking and G. F. R. Ellis, The Large Scale Structure of Space-Time, Cambridge University
+    Press (1973).
+  doi: null
+  first_in: T16
+  latex: 'S.~W.~Hawking and G.~F.~R.~Ellis,
+
+    \emph{The Large Scale Structure of Space-Time},
+
+    Cambridge University Press (1973).'
+HaydenPreskill2007:
+  citation: 'P. Hayden and J. Preskill, Black holes as mirrors: quantum information in random subsystems,
+    JHEP 0709 (2007), 120.'
+  doi: null
+  first_in: T08
+  latex: 'P.~Hayden and J.~Preskill,
+
+    Black holes as mirrors: quantum information in random subsystems,
+
+    \emph{JHEP} \textbf{0709} (2007), 120.'
+HegerWoosley2002:
+  citation: A. Heger and S. E. Woosley, The nucleosynthetic signature of population III, Astrophys. J.
+    567 (2002) 532.
+  doi: null
+  first_in: T14b
+  latex: 'A.~Heger and S.~E.~Woosley,
+
+    \emph{The nucleosynthetic signature of population III},
+
+    Astrophys.\ J.\ 567 (2002) 532.'
+Helgason1978:
+  citation: S. Helgason, Differential Geometry, Lie Groups, and Symmetric Spaces, Academic Press (1978).
+  doi: null
+  first_in: T12
+  latex: 'S.~Helgason,
+
+    \emph{Differential Geometry, Lie Groups, and Symmetric Spaces},
+
+    Academic Press (1978).'
+HenneauxTeitelboim1989:
+  citation: M. Henneaux and C. Teitelboim, The cosmological constant and general covariance, Phys. Lett.
+    B 222 (1989), 195--199.
+  doi: null
+  first_in: T10
+  latex: 'M.~Henneaux and C.~Teitelboim,
+
+    The cosmological constant and general covariance,
+
+    \emph{Phys.\ Lett.\ B} \textbf{222} (1989), 195--199.'
+Hernquist1990:
+  citation: L. Hernquist, An analytical model for spherical galaxies and bulges, Astrophys. J. 356 (1990)
+    359.
+  doi: null
+  first_in: T14b
+  latex: 'L.~Hernquist,
+
+    \emph{An analytical model for spherical galaxies and bulges},
+
+    Astrophys.\ J.\ 356 (1990) 359.'
+Hestenes1967:
+  citation: D. Hestenes, Real spinor fields, J. Math. Phys. 8 (1967), 798--808.
+  doi: null
+  first_in: T16
+  latex: 'D.~Hestenes,
+
+    \emph{Real spinor fields},
+
+    J. Math. Phys. \textbf{8} (1967), 798--808.'
+Hestenes1975:
+  citation: D. Hestenes, Observables, operators, and complex numbers in the Dirac theory, J. Math. Phys.
+    16 (1975), 556--572.
+  doi: null
+  first_in: T16
+  latex: 'D.~Hestenes,
+
+    \emph{Observables, operators, and complex numbers in the Dirac theory},
+
+    J. Math. Phys. \textbf{16} (1975), 556--572.'
+Hestenes2001:
+  citation: 'D. Hestenes, Old wine in new bottles: a new algebraic framework for computational geometry,
+    in Geometric Algebra with Applications in Science and Engineering, E. Bayro-Corrochano and G. Sobczyk
+    (eds.), Birkh"auser, Boston (2001).'
+  doi: null
+  first_in: T01
+  latex: 'D.~Hestenes,
+
+    Old wine in new bottles: a new algebraic framework for computational geometry,
+
+    in \emph{Geometric Algebra with Applications in Science and Engineering},
+
+    E.~Bayro-Corrochano and G.~Sobczyk (eds.), Birkh\"auser, Boston (2001).'
+HestenesSobczyk1984:
+  citation: D. Hestenes and G. Sobczyk, Clifford Algebra to Geometric Calculus, Reidel, Dordrecht (1984).
+  doi: null
+  first_in: T01
+  latex: 'D.~Hestenes and G.~Sobczyk,
+
+    \emph{Clifford Algebra to Geometric Calculus},
+
+    Reidel, Dordrecht (1984).'
+Higuchi1987:
+  citation: A. Higuchi, Symmetric tensor spherical harmonics on the $N$-sphere and their application to
+    the de Sitter group $SO(N,1)$, J. Math. Phys. 28 (1987), 1553--1566.
+  doi: null
+  first_in: T11
+  latex: 'A.~Higuchi,
+
+    \emph{Symmetric tensor spherical harmonics on the $N$-sphere and their application to the de Sitter
+    group $SO(N,1)$},
+
+    J. Math. Phys. \textbf{28} (1987), 1553--1566.'
+HiscockWeems1990:
+  citation: W. A. Hiscock and L. D. Weems, Evolution of charged evaporating black holes, Phys. Rev. D
+    41 (1990) 1142--1151.
+  doi: null
+  first_in: T14
+  latex: 'W.~A.~Hiscock and L.~D.~Weems,
+
+    Evolution of charged evaporating black holes,
+
+    \emph{Phys. Rev. D} \textbf{41} (1990) 1142--1151.'
+HislopLongo1982:
+  citation: P. D. Hislop and R. Longo, Modular structure of the local algebras associated with the free
+    massless scalar field theory, Commun. Math. Phys. 84 (1982), 71--85.
+  doi: null
+  first_in: T05-angle
+  latex: 'P.~D.~Hislop and R.~Longo,
+
+    Modular structure of the local algebras associated with the free massless scalar field theory,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{84} (1982), 71--85.'
+HitzerAblamowiczSangwine2013:
+  citation: E. Hitzer, R. Abamowicz, and S. J. Sangwine, Square roots of $-1$ in real Clifford algebras,
+    in Quaternion and Clifford Fourier Transforms and Wavelets, Birkh"auser (2013) 123--153.
+  doi: null
+  first_in: T16
+  latex: 'E.~Hitzer, R.~Ab\l{}amowicz, and S.~J.~Sangwine,
+
+    Square roots of $-1$ in real Clifford algebras,
+
+    in \emph{Quaternion and Clifford Fourier Transforms and Wavelets}, Birkh\"auser (2013) 123--153.'
+HornJohnson:
+  citation: R. A. Horn and C. R. Johnson, Matrix Analysis, 2nd ed., Cambridge University Press (2013).
+  doi: null
+  first_in: T13
+  latex: 'R.~A.~Horn and C.~R.~Johnson,
+
+    \emph{Matrix Analysis}, 2nd ed.,
+
+    Cambridge University Press (2013).'
+HouWangZhaoZhang2026:
+  citation: H. Hou, S. Wang, Z.-C. Zhao, and X. Zhang, Constraints on the sum of neutrino masses from
+    ACT DR6 and DESI DR2 considering isocurvature initial conditions, preprint arXiv:2606.17994 (2026).
+  doi: null
+  first_in: T15
+  latex: 'H.~Hou, S.~Wang, Z.-C.~Zhao, and X.~Zhang,
+
+    \emph{Constraints on the sum of neutrino masses from ACT DR6 and DESI DR2 considering isocurvature
+    initial conditions},
+
+    preprint arXiv:2606.17994 (2026).'
+Hughston1979:
+  citation: L. P. Hughston, Twistors and Particles, Lecture Notes in Physics 97, Springer (1979).
+  doi: null
+  first_in: T11
+  latex: 'L.~P. Hughston,
+
+    \emph{Twistors and Particles},
+
+    Lecture Notes in Physics \textbf{97}, Springer (1979).'
+Humphreys1972:
+  citation: J. E. Humphreys, Introduction to Lie Algebras and Representation Theory, Graduate Texts in
+    Mathematics 9, Springer (1972).
+  doi: null
+  first_in: T11
+  latex: 'J.~E. Humphreys,
+
+    \emph{Introduction to Lie Algebras and Representation Theory},
+
+    Graduate Texts in Mathematics \textbf{9}, Springer (1972).'
+Humphreys72:
+  citation: J. E. Humphreys, Introduction to Lie Algebras and Representation Theory, Graduate Texts in
+    Mathematics 9, Springer (1972).
+  doi: null
+  first_in: T09
+  latex: 'J.~E.~Humphreys,
+
+    \emph{Introduction to Lie Algebras and Representation Theory},
+
+    Graduate Texts in Mathematics 9, Springer (1972).'
+IMS1997:
+  citation: K. Intriligator, D. R. Morrison, N. Seiberg, Five-dimensional supersymmetric gauge theories
+    and degenerations of Calabi-Yau spaces, Nucl. Phys. B 497 (1997) 56--100.
+  doi: null
+  first_in: T17-rule2
+  latex: 'K.~Intriligator, D.~R. Morrison, N.~Seiberg,
+
+    \emph{Five-dimensional supersymmetric gauge theories and degenerations of Calabi-Yau spaces},
+
+    Nucl.\ Phys.\ B 497 (1997) 56--100.'
+IsenbergMoncrief1990:
+  citation: J. Isenberg and V. Moncrief, Asymptotic behavior of the gravitational field and the nature
+    of singularities in Gowdy spacetimes, Ann. Physics 199 (1990), 84--122.
+  doi: null
+  first_in: T04
+  latex: 'J.~Isenberg and V.~Moncrief,
+
+    Asymptotic behavior of the gravitational field and the nature of singularities in Gowdy spacetimes,
+
+    \emph{Ann.\ Physics} \textbf{199} (1990), 84--122.'
+IsoUmetsuWilczek2006:
+  citation: S. Iso, H. Umetsu and F. Wilczek, Hawking radiation from charged black holes via gauge and
+    gravitational anomalies, Phys. Rev. Lett. 96 (2006), 151302; arXiv:hep-th/0602146.
+  doi: 10.1103/PhysRevLett.96.151302
+  first_in: synthesis
+  latex: S. Iso, H. Umetsu and F. Wilczek, Hawking radiation from charged black holes via gauge and gravitational
+    anomalies, Phys. Rev. Lett. 96 (2006), 151302; arXiv:hep-th/0602146.
+Israel1976:
+  citation: W. Israel, Thermo-field dynamics of black holes, Phys. Lett. A 57 (1976), 107--110.
+  doi: null
+  first_in: T05
+  latex: 'W.~Israel,
+
+    Thermo-field dynamics of black holes,
+
+    \emph{Phys.\ Lett.\ A} \textbf{57} (1976), 107--110.'
+JoosZeh1985:
+  citation: E. Joos and H. D. Zeh, The emergence of classical properties through interaction with the
+    environment, Z. Phys. B 59 (1985), 223--243.
+  doi: null
+  first_in: T16
+  latex: 'E.~Joos and H.~D. Zeh,
+
+    \emph{The emergence of classical properties through interaction with the environment},
+
+    Z. Phys. B \textbf{59} (1985), 223--243.'
+KWH1996:
+  citation: N. Katz, D. H. Weinberg and L. Hernquist, Cosmological simulations with TreeSPH, Astrophys.
+    J. Suppl. 105 (1996) 19.
+  doi: null
+  first_in: T14b
+  latex: 'N.~Katz, D.~H.~Weinberg and L.~Hernquist,
+
+    \emph{Cosmological simulations with TreeSPH},
+
+    Astrophys.\ J.\ Suppl.\ 105 (1996) 19.'
+KaloperPadilla2014:
+  citation: N. Kaloper and A. Padilla, Sequestering the Standard Model vacuum energy, Phys. Rev. Lett.
+    112 (2014), 091304.
+  doi: null
+  first_in: T10
+  latex: 'N.~Kaloper and A.~Padilla,
+
+    Sequestering the Standard Model vacuum energy,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{112} (2014), 091304.'
+KamLANDZen2023:
+  citation: S. Abe et al. (KamLAND-Zen Collaboration), Search for the Majorana nature of neutrinos in
+    the inverted mass ordering region with KamLAND-Zen, Phys. Rev. Lett. 130 (2023), 051801.
+  doi: null
+  first_in: T15
+  latex: 'S.~Abe et al. (KamLAND-Zen Collaboration),
+
+    \emph{Search for the Majorana nature of neutrinos in the inverted mass ordering region with KamLAND-Zen},
+
+    Phys. Rev. Lett. \textbf{130} (2023), 051801.'
+Kasner1921:
+  citation: E. Kasner, Geometrical theorems on Einstein's cosmological equations, Amer. J. Math. 43 (1921),
+    217--221.
+  doi: null
+  first_in: T04
+  latex: 'E.~Kasner,
+
+    Geometrical theorems on Einstein''s cosmological equations,
+
+    \emph{Amer.\ J.\ Math.} \textbf{43} (1921), 217--221.'
+KayWald1991:
+  citation: B. S. Kay and R. M. Wald, Theorems on the uniqueness and thermal properties of stationary,
+    nonsingular, quasifree states on spacetimes with a bifurcate Killing horizon, Phys. Rep. 207 (1991),
+    49--136.
+  doi: null
+  first_in: T05
+  latex: 'B.~S.~Kay and R.~M.~Wald,
+
+    Theorems on the uniqueness and thermal properties of stationary, nonsingular, quasifree states on
+    spacetimes with a bifurcate Killing horizon,
+
+    \emph{Phys.\ Rep.} \textbf{207} (1991), 49--136.'
+KerrSchild1965:
+  citation: R. P. Kerr and A. Schild, Some algebraically degenerate solutions of Einstein's gravitational
+    field equations, Proc. Symp. Appl. Math. 17 (1965), 199--209.
+  doi: null
+  first_in: T06
+  latex: 'R.~P.~Kerr and A.~Schild,
+
+    Some algebraically degenerate solutions of Einstein''s gravitational field equations,
+
+    \emph{Proc.\ Symp.\ Appl.\ Math.} \textbf{17} (1965), 199--209.'
+Kibble1976:
+  citation: T. W. B. Kibble, Topology of cosmic domains and strings, J. Phys. A 9 (1976), 1387--1398.
+  doi: null
+  first_in: synthesis
+  latex: T. W. B. Kibble, Topology of cosmic domains and strings, J. Phys. A 9 (1976), 1387--1398.
+KirzhnitsLinde1972:
+  citation: D. A. Kirzhnits and A. D. Linde, Macroscopic consequences of the Weinberg model, Phys. Lett.
+    B 42 (1972), 471--474.
+  doi: null
+  first_in: synthesis
+  latex: D. A. Kirzhnits and A. D. Linde, Macroscopic consequences of the Weinberg model, Phys. Lett.
+    B 42 (1972), 471--474.
+Klein1870:
+  citation: F. Klein, Zur Theorie der Liniencomplexe des ersten und zweiten Grades, Math. Ann. 2 (1870),
+    198--226.
+  doi: null
+  first_in: T09
+  latex: 'F.~Klein,
+
+    Zur Theorie der Liniencomplexe des ersten und zweiten Grades,
+
+    \emph{Math.\ Ann.} \textbf{2} (1870), 198--226.'
+Koide1982:
+  citation: Y. Koide, Fermion-boson two-body model of quarks and leptons and Cabibbo mixing, Lett. Nuovo
+    Cim. 34 (1982), 201; and A fermion-boson composite model of quarks and leptons, Phys. Lett. B 120
+    (1983), 161.
+  doi: null
+  first_in: T13
+  latex: 'Y.~Koide,
+
+    \emph{Fermion-boson two-body model of quarks and leptons and Cabibbo mixing},
+
+    Lett. Nuovo Cim. \textbf{34} (1982), 201; and \emph{A fermion-boson composite model of quarks and
+    leptons}, Phys. Lett. B \textbf{120} (1983), 161.'
+Kostant1959:
+  citation: B. Kostant, The principal three-dimensional subgroup and the Betti numbers of a complex simple
+    Lie group, Amer. J. Math. 81 (1959), 973--1032.
+  doi: null
+  first_in: T08
+  latex: 'B.~Kostant,
+
+    The principal three-dimensional subgroup and the Betti numbers of a complex simple Lie group,
+
+    \emph{Amer.\ J.\ Math.} \textbf{81} (1959), 973--1032.'
+Kraus1983:
+  citation: 'K. Kraus, States, Effects, and Operations: Fundamental Notions of Quantum Theory, Lecture
+    Notes in Physics 190, Springer (1983).'
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'K.~Kraus,
+
+    \emph{States, Effects, and Operations: Fundamental Notions of Quantum Theory},
+
+    Lecture Notes in Physics 190, Springer (1983).'
+KugoTownsend1983:
+  citation: T. Kugo, P. Townsend, Supersymmetry and the division algebras, Nucl. Phys. B 221 (1983) 357--380.
+  doi: null
+  first_in: T17-rule2
+  latex: 'T.~Kugo, P.~Townsend,
+
+    \emph{Supersymmetry and the division algebras},
+
+    Nucl.\ Phys.\ B 221 (1983) 357--380.'
+LDG1998:
+  citation: A. Lasenby, C. Doran and S. Gull, Gravity, gauge theories and geometric algebra, Phil. Trans.
+    R. Soc. Lond. A 356 (1998), 487--582.
+  doi: null
+  first_in: T05
+  latex: 'A.~Lasenby, C.~Doran and S.~Gull,
+
+    Gravity, gauge theories and geometric algebra,
+
+    \emph{Phil.\ Trans.\ R.\ Soc.\ Lond.\ A} \textbf{356} (1998), 487--582.'
+LEGEND2021:
+  citation: 'N. Abgrall et al. (LEGEND Collaboration), The Large Enriched Germanium Experiment for Neutrinoless
+    $betabeta$ Decay: LEGEND-1000 preconceptual design report, preprint arXiv:2107.11462 (2021).'
+  doi: null
+  first_in: T15
+  latex: 'N.~Abgrall et al. (LEGEND Collaboration),
+
+    \emph{The Large Enriched Germanium Experiment for Neutrinoless $\beta\beta$ Decay: LEGEND-1000 preconceptual
+    design report},
+
+    preprint arXiv:2107.11462 (2021).'
+Lakatos1978:
+  citation: I. Lakatos, The Methodology of Scientific Research Programmes, Cambridge University Press
+    (1978).
+  doi: null
+  first_in: T17
+  latex: 'I.~Lakatos,
+
+    \emph{The Methodology of Scientific Research Programmes},
+
+    Cambridge University Press (1978).'
+Lam1999:
+  citation: T. Y. Lam, Lectures on Modules and Rings, Graduate Texts in Mathematics 189, Springer, New
+    York (1999).
+  doi: null
+  first_in: T03
+  latex: 'T.~Y.~Lam,
+
+    \emph{Lectures on Modules and Rings},
+
+    Graduate Texts in Mathematics 189, Springer, New York (1999).'
+Lam2005:
+  citation: T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67,
+    American Mathematical Society (2005).
+  doi: null
+  first_in: T01
+  latex: 'T.~Y.~Lam,
+
+    \emph{Introduction to Quadratic Forms over Fields},
+
+    Graduate Studies in Mathematics 67, American Mathematical Society (2005).'
+LamFC2001:
+  citation: T. Y. Lam, A First Course in Noncommutative Rings, 2nd ed., Graduate Texts in Mathematics
+    131, Springer (2001).
+  doi: null
+  first_in: T01
+  latex: 'T.~Y.~Lam,
+
+    \emph{A First Course in Noncommutative Rings}, 2nd ed.,
+
+    Graduate Texts in Mathematics 131, Springer (2001).'
+LawsonMichelsohn1989:
+  citation: H. B. Lawson and M.-L. Michelsohn, Spin Geometry, Princeton University Press (1989).
+  doi: null
+  first_in: T12
+  latex: 'H.~B. Lawson and M.-L. Michelsohn,
+
+    \emph{Spin Geometry},
+
+    Princeton University Press (1989).'
+LazaridesMaggShafi1980:
+  citation: G. Lazarides, M. Magg and Q. Shafi, Phase transitions and magnetic monopoles in SO(10), Phys.
+    Lett. B 97 (1980), 87--92.
+  doi: null
+  first_in: synthesis
+  latex: G. Lazarides, M. Magg and Q. Shafi, Phase transitions and magnetic monopoles in SO(10), Phys.
+    Lett. B 97 (1980), 87--92.
+Lee2013:
+  citation: J. M. Lee, Introduction to Smooth Manifolds, second edition, Graduate Texts in Mathematics
+    218, Springer (2013).
+  doi: null
+  first_in: T12
+  latex: 'J.~M. Lee,
+
+    \emph{Introduction to Smooth Manifolds}, second edition,
+
+    Graduate Texts in Mathematics 218, Springer (2013).'
+Lee2020:
+  citation: J. G. Lee, E. G. Adelberger, T. S. Cook, S. M. Fleischer and B. R. Heckel, New test of the
+    gravitational $1/r^2$ law at separations down to 52 $mu$m, Phys. Rev. Lett. 124, 101101 (2020).
+  doi: null
+  first_in: T14
+  latex: 'J.~G.~Lee, E.~G.~Adelberger, T.~S.~Cook, S.~M.~Fleischer and B.~R.~Heckel,
+
+    New test of the gravitational $1/r^{2}$ law at separations down to 52 $\mu$m,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{124}, 101101 (2020).'
+Lounesto2001:
+  citation: P. Lounesto, Clifford Algebras and Spinors, 2nd ed., London Mathematical Society Lecture Note
+    Series 286, Cambridge University Press (2001).
+  doi: null
+  first_in: T01
+  latex: 'P.~Lounesto,
+
+    \emph{Clifford Algebras and Spinors}, 2nd ed.,
+
+    London Mathematical Society Lecture Note Series 286, Cambridge University Press (2001).'
+LukOh2019a:
+  citation: J. Luk and S.-J. Oh, Strong cosmic censorship in spherical symmetry for two-ended asymptotically
+    flat initial data I. The interior of the black hole region, Ann. of Math. (2) 190 (2019), 1--111.
+  doi: null
+  first_in: T06
+  latex: 'J.~Luk and S.-J.~Oh,
+
+    Strong cosmic censorship in spherical symmetry for two-ended asymptotically flat initial data I. The
+    interior of the black hole region,
+
+    \emph{Ann.\ of Math.\ (2)} \textbf{190} (2019), 1--111.'
+LukOh2019b:
+  citation: J. Luk and S.-J. Oh, Strong cosmic censorship in spherical symmetry for two-ended asymptotically
+    flat initial data II. The exterior of the black hole region, Ann. PDE 5 (2019), Art. 6.
+  doi: null
+  first_in: T06
+  latex: 'J.~Luk and S.-J.~Oh,
+
+    Strong cosmic censorship in spherical symmetry for two-ended asymptotically flat initial data II.
+    The exterior of the black hole region,
+
+    \emph{Ann.\ PDE} \textbf{5} (2019), Art.\ 6.'
+MACRO2002:
+  citation: M. Ambrosio et al. (MACRO Collaboration), Final results of magnetic monopole searches with
+    the MACRO experiment, Eur. Phys. J. C 25 (2002), 511--522; arXiv:hep-ex/0207020.
+  doi: 10.1140/epjc/s2002-01046-9
+  first_in: synthesis
+  latex: M. Ambrosio et al. (MACRO Collaboration), Final results of magnetic monopole searches with the
+    MACRO experiment, Eur. Phys. J. C 25 (2002), 511--522; arXiv:hep-ex/0207020.
+MSS2016:
+  citation: J. Maldacena, S. H. Shenker and D. Stanford, A bound on chaos, JHEP 1608 (2016), 106.
+  doi: null
+  first_in: T08
+  latex: 'J.~Maldacena, S.~H.~Shenker and D.~Stanford,
+
+    A bound on chaos,
+
+    \emph{JHEP} \textbf{1608} (2016), 106.'
+MaBertschinger1995:
+  citation: C.-P. Ma and E. Bertschinger, Cosmological perturbation theory in the synchronous and conformal
+    Newtonian gauges, Astrophys. J. 455, 7 (1995).
+  doi: null
+  first_in: T14
+  latex: 'C.-P.~Ma and E.~Bertschinger,
+
+    Cosmological perturbation theory in the synchronous and conformal Newtonian gauges,
+
+    \emph{Astrophys.\ J.} \textbf{455}, 7 (1995).'
+MacDowellMansouri1977:
+  citation: S. W. MacDowell and F. Mansouri, Unified geometric theory of gravity and supergravity, Phys.
+    Rev. Lett. 38 (1977), 739--742.
+  doi: null
+  first_in: T10
+  latex: 'S.~W.~MacDowell and F.~Mansouri,
+
+    Unified geometric theory of gravity and supergravity,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{38} (1977), 739--742.'
+Macdonald1995:
+  citation: I. G. Macdonald, Symmetric Functions and Hall Polynomials, second edition, Oxford University
+    Press (1995).
+  doi: null
+  first_in: T12
+  latex: 'I.~G. Macdonald,
+
+    \emph{Symmetric Functions and Hall Polynomials}, second edition,
+
+    Oxford University Press (1995).'
+Macdonald2010:
+  citation: A. Macdonald, Linear and Geometric Algebra, CreateSpace (2010).
+  doi: null
+  first_in: T00
+  latex: 'A.~Macdonald,
+
+    \emph{Linear and Geometric Algebra},
+
+    CreateSpace (2010).'
+MachacekVaughn1983:
+  citation: M. E. Machacek and M. T. Vaughn, Two-loop renormalization group equations in a general quantum
+    field theory (I). Wave function renormalization, Nucl. Phys. B 222 (1983) 83--103.
+  doi: null
+  first_in: T12
+  latex: 'M.~E.~Machacek and M.~T.~Vaughn,
+
+    Two-loop renormalization group equations in a general quantum field theory (I). Wave function renormalization,
+
+    \emph{Nucl. Phys. B} \textbf{222} (1983) 83--103.'
+Madore1992:
+  citation: J. Madore, The fuzzy sphere, Class. Quantum Grav. 9 (1992), 69--87.
+  doi: null
+  first_in: T08
+  latex: 'J.~Madore,
+
+    The fuzzy sphere,
+
+    \emph{Class.\ Quantum Grav.} \textbf{9} (1992), 69--87.'
+MartinVaughn1994:
+  citation: S. P. Martin and M. T. Vaughn, Two-loop renormalization group equations for soft supersymmetry-breaking
+    couplings, Phys. Rev. D 50 (1994) 2282--2292.
+  doi: null
+  first_in: T12
+  latex: 'S.~P.~Martin and M.~T.~Vaughn,
+
+    Two-loop renormalization group equations for soft supersymmetry-breaking couplings,
+
+    \emph{Phys. Rev. D} \textbf{50} (1994) 2282--2292.'
+Mathur2009:
+  citation: 'S. D. Mathur, The information paradox: a pedagogical introduction, Class. Quantum Grav. 26
+    (2009), 224001.'
+  doi: null
+  first_in: T05
+  latex: 'S.~D.~Mathur,
+
+    The information paradox: a pedagogical introduction,
+
+    \emph{Class.\ Quantum Grav.} \textbf{26} (2009), 224001.'
+McKee2015:
+  citation: C. F. McKee, A. Parravano and D. J. Hollenbach, Stars, gas, and dark matter in the solar neighborhood,
+    Astrophys. J. 814 (2015) 13.
+  doi: null
+  first_in: T14b
+  latex: 'C.~F.~McKee, A.~Parravano and D.~J.~Hollenbach,
+
+    \emph{Stars, gas, and dark matter in the solar neighborhood},
+
+    Astrophys.\ J.\ 814 (2015) 13.'
+Melrose1993:
+  citation: R. B. Melrose, The Atiyah-Patodi-Singer Index Theorem, Research Notes in Mathematics 4, A
+    K Peters, Wellesley (1993).
+  doi: null
+  first_in: T04
+  latex: 'R.~B.~Melrose,
+
+    \emph{The Atiyah-Patodi-Singer Index Theorem},
+
+    Research Notes in Mathematics 4, A K Peters, Wellesley (1993).'
+MilnorStasheff1974:
+  citation: J. W. Milnor and J. D. Stasheff, Characteristic Classes, Annals of Mathematics Studies 76,
+    Princeton University Press (1974).
+  doi: null
+  first_in: T04
+  latex: 'J.~W.~Milnor and J.~D.~Stasheff,
+
+    \emph{Characteristic Classes},
+
+    Annals of Mathematics Studies 76, Princeton University Press (1974).'
+Minkowski1977:
+  citation: P. Minkowski, $mu to egamma$ at a rate of one out of $10^9$ muon decays?, Phys. Lett. B 67
+    (1977), 421--428.
+  doi: null
+  first_in: T15
+  latex: 'P.~Minkowski,
+
+    \emph{$\mu \to e\gamma$ at a rate of one out of $10^{9}$ muon decays?},
+
+    Phys. Lett. B \textbf{67} (1977), 421--428.'
+MohapatraSenjanovic1980:
+  citation: R. N. Mohapatra and G. Senjanovi'c, Neutrino mass and spontaneous parity nonconservation,
+    Phys. Rev. Lett. 44 (1980), 912--915.
+  doi: null
+  first_in: T15
+  latex: 'R.~N. Mohapatra and G.~Senjanovi\''c,
+
+    \emph{Neutrino mass and spontaneous parity nonconservation},
+
+    Phys. Rev. Lett. \textbf{44} (1980), 912--915.'
+Monaghan1992:
+  citation: J. J. Monaghan, Smoothed particle hydrodynamics, Annu. Rev. Astron. Astrophys. 30 (1992) 543.
+  doi: null
+  first_in: T14b
+  latex: 'J.~J.~Monaghan,
+
+    \emph{Smoothed particle hydrodynamics},
+
+    Annu.\ Rev.\ Astron.\ Astrophys.\ 30 (1992) 543.'
+MonaghanGingold1983:
+  citation: J. J. Monaghan and R. A. Gingold, Shock simulation by the particle method SPH, J. Comput.
+    Phys. 52 (1983) 374.
+  doi: null
+  first_in: T14b
+  latex: 'J.~J.~Monaghan and R.~A.~Gingold,
+
+    \emph{Shock simulation by the particle method SPH},
+
+    J.\ Comput.\ Phys.\ 52 (1983) 374.'
+MonaghanLattanzio1985:
+  citation: J. J. Monaghan and J. C. Lattanzio, A refined particle method for astrophysical problems,
+    Astron. Astrophys. 149 (1985) 135.
+  doi: null
+  first_in: T14b
+  latex: 'J.~J.~Monaghan and J.~C.~Lattanzio,
+
+    \emph{A refined particle method for astrophysical problems},
+
+    Astron.\ Astrophys.\ 149 (1985) 135.'
+Mroz2024:
+  citation: P. Mr'oz et al., No massive black holes in the Milky Way halo, Nature 632 (2024), 749.
+  doi: null
+  first_in: T14
+  latex: 'P.~Mr\''oz et al.,
+
+    \emph{No massive black holes in the Milky Way halo},
+
+    Nature \textbf{632} (2024), 749.'
+NFW1997:
+  citation: J. F. Navarro, C. S. Frenk and S. D. M. White, A universal density profile from hierarchical
+    clustering, Astrophys. J. 490 (1997) 493.
+  doi: null
+  first_in: T14b
+  latex: 'J.~F.~Navarro, C.~S.~Frenk and S.~D.~M.~White,
+
+    \emph{A universal density profile from hierarchical clustering},
+
+    Astrophys.\ J.\ 490 (1997) 493.'
+NewmanPenrose1962:
+  citation: E. Newman, R. Penrose, An approach to gravitational radiation by a method of spin coefficients,
+    J. Math. Phys. 3 (1962) 566--578.
+  doi: null
+  first_in: T05-pairing
+  latex: 'E.~Newman, R.~Penrose,
+
+    \emph{An approach to gravitational radiation by a method of spin coefficients},
+
+    J. Math. Phys. 3 (1962) 566--578.'
+NielsenChuang:
+  citation: M. A. Nielsen and I. L. Chuang, Quantum Computation and Quantum Information, Cambridge University
+    Press (2000).
+  doi: null
+  first_in: T05
+  latex: 'M.~A.~Nielsen and I.~L.~Chuang,
+
+    \emph{Quantum Computation and Quantum Information},
+
+    Cambridge University Press (2000).'
+NielsenNinomiya1981:
+  citation: H. B. Nielsen, M. Ninomiya, Absence of neutrinos on a lattice (I). Proof by homotopy theory,
+    Nucl. Phys. B 185 (1981) 20--40.
+  doi: null
+  first_in: T17-rule2
+  latex: 'H.~B. Nielsen, M.~Ninomiya,
+
+    \emph{Absence of neutrinos on a lattice (I). Proof by homotopy theory},
+
+    Nucl.\ Phys.\ B 185 (1981) 20--40.'
+NiemiSemenoff1983:
+  citation: A. J. Niemi, G. W. Semenoff, Axial-anomaly-induced fermion fractionization and effective gauge-theory
+    actions in odd-dimensional space-times, Phys. Rev. Lett. 51 (1983) 2077--2080.
+  doi: null
+  first_in: T17-rule2
+  latex: 'A.~J. Niemi, G.~W. Semenoff,
+
+    \emph{Axial-anomaly-induced fermion fractionization and effective gauge-theory actions in odd-dimensional
+    space-times},
+
+    Phys.\ Rev.\ Lett.\ 51 (1983) 2077--2080.'
+NuFIT2024:
+  citation: 'I. Esteban, M. C. Gonzalez-Garcia, M. Maltoni, I. Martinez-Soler, J. P. Pinheiro, and T.
+    Schwetz, NuFit-6.0: updated global analysis of three-flavor neutrino oscillations, J. High Energy
+    Phys. 12 (2024), 216, arXiv:2410.05380.'
+  doi: null
+  first_in: T15
+  latex: 'I.~Esteban, M.~C.~Gonzalez-Garcia, M.~Maltoni, I.~Martinez-Soler, J.~P.~Pinheiro, and T.~Schwetz,
+
+    \emph{NuFit-6.0: updated global analysis of three-flavor neutrino oscillations},
+
+    J. High Energy Phys. \textbf{12} (2024), 216, arXiv:2410.05380.'
+Oguri2010:
+  citation: M. Oguri, M. Takada, N. Okabe and G. P. Smith, Direct measurement of dark matter halo ellipticity
+    from two-dimensional lensing shear maps of 25 massive clusters, Mon. Not. R. Astron. Soc. 405 (2010)
+    2215.
+  doi: null
+  first_in: T14b
+  latex: 'M.~Oguri, M.~Takada, N.~Okabe and G.~P.~Smith,
+
+    \emph{Direct measurement of dark matter halo ellipticity from two-dimensional lensing shear maps of
+    25 massive clusters},
+
+    Mon.\ Not.\ R.\ Astron.\ Soc.\ 405 (2010) 2215.'
+Ori1991:
+  citation: 'A. Ori, Inner structure of a charged black hole: an exact mass-inflation solution, Phys.
+    Rev. Lett. 67 (1991), 789--792.'
+  doi: null
+  first_in: T06
+  latex: 'A.~Ori,
+
+    Inner structure of a charged black hole: an exact mass-inflation solution,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{67} (1991), 789--792.'
+PDG:
+  citation: Particle Data Group, Review of Particle Physics, current edition.
+  doi: null
+  first_in: T17
+  latex: 'Particle Data Group,
+
+    \emph{Review of Particle Physics},
+
+    current edition.'
+PDG2024:
+  citation: S. Navas et al. (Particle Data Group), Review of particle physics, Phys. Rev. D 110 (2024),
+    030001.
+  doi: null
+  first_in: T12
+  latex: 'S.~Navas et al. (Particle Data Group),
+
+    \emph{Review of particle physics},
+
+    Phys. Rev. D \textbf{110} (2024), 030001.'
+Page1976:
+  citation: D. N. Page, Particle emission rates from a black hole, Phys. Rev. D 13 (1976), 198--206.
+  doi: null
+  first_in: T07
+  latex: 'D.~N.~Page,
+
+    Particle emission rates from a black hole,
+
+    \emph{Phys.\ Rev.\ D} \textbf{13} (1976), 198--206.'
+Page1993:
+  citation: D. N. Page, Average entropy of a subsystem, Phys. Rev. Lett. 71 (1993), 1291--1294.
+  doi: null
+  first_in: T05
+  latex: 'D.~N.~Page,
+
+    Average entropy of a subsystem,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{71} (1993), 1291--1294.'
+PatiSalam1974:
+  citation: J. C. Pati and A. Salam, Lepton number as the fourth ``color'', Phys. Rev. D 10 (1974) 275--289.
+  doi: null
+  first_in: T12
+  latex: 'J.~C.~Pati and A.~Salam,
+
+    Lepton number as the fourth ``color'''',
+
+    \emph{Phys. Rev. D} \textbf{10} (1974) 275--289.'
+Penington2020:
+  citation: G. Penington, Entanglement wedge reconstruction and the information paradox, J. High Energy
+    Phys. 2020, 002 (2020).
+  doi: null
+  first_in: T05
+  latex: 'G.~Penington,
+
+    Entanglement wedge reconstruction and the information paradox,
+
+    \emph{J.\ High Energy Phys.} \textbf{2020}, 002 (2020).'
+Penrose15:
+  citation: R. Penrose, Palatial twistor theory and the twistor googly problem, Phil. Trans. R. Soc. A
+    373 (2015), 20140237.
+  doi: null
+  first_in: T09
+  latex: 'R.~Penrose,
+
+    Palatial twistor theory and the twistor googly problem,
+
+    \emph{Phil.\ Trans.\ R.\ Soc.\ A} \textbf{373} (2015), 20140237.'
+Penrose1967:
+  citation: R. Penrose, Twistor algebra, J. Math. Phys. 8 (1967), 345--366.
+  doi: null
+  first_in: T05
+  latex: 'R.~Penrose,
+
+    Twistor algebra,
+
+    \emph{J.\ Math.\ Phys.} \textbf{8} (1967), 345--366.'
+Penrose1969:
+  citation: R. Penrose, Solutions of the zero-rest-mass equations, J. Math. Phys. 10 (1969), 38--39.
+  doi: null
+  first_in: T07
+  latex: 'R.~Penrose,
+
+    Solutions of the zero-rest-mass equations,
+
+    \emph{J.\ Math.\ Phys.} \textbf{10} (1969), 38--39.'
+Penrose1996:
+  citation: R. Penrose, On gravity's role in quantum state reduction, Gen. Relativ. Gravit. 28 (1996),
+    581--600.
+  doi: null
+  first_in: T16
+  latex: 'R.~Penrose,
+
+    \emph{On gravity''s role in quantum state reduction},
+
+    Gen. Relativ. Gravit. \textbf{28} (1996), 581--600.'
+Penrose2010:
+  citation: 'R. Penrose, Cycles of Time: An Extraordinary New View of the Universe, Bodley Head, London
+    (2010).'
+  doi: null
+  first_in: T04
+  latex: 'R.~Penrose,
+
+    \emph{Cycles of Time: An Extraordinary New View of the Universe},
+
+    Bodley Head, London (2010).'
+Penrose76:
+  citation: R. Penrose, Nonlinear gravitons and curved twistor theory, Gen. Relativ. Gravit. 7 (1976),
+    31--52.
+  doi: null
+  first_in: T09
+  latex: 'R.~Penrose,
+
+    Nonlinear gravitons and curved twistor theory,
+
+    \emph{Gen.\ Relativ.\ Gravit.} \textbf{7} (1976), 31--52.'
+PenroseMacCallum73:
+  citation: 'R. Penrose and M. A. H. MacCallum, Twistor theory: an approach to the quantisation of fields
+    and space-time, Phys. Rep. 6 (1973), 241--316.'
+  doi: null
+  first_in: T09
+  latex: 'R.~Penrose and M.~A.~H.~MacCallum,
+
+    Twistor theory: an approach to the quantisation of fields and space-time,
+
+    \emph{Phys.\ Rep.} \textbf{6} (1973), 241--316.'
+PenroseRindler1:
+  citation: 'R. Penrose, W. Rindler, Spinors and Space-Time, Vol. 1: Two-Spinor Calculus and Relativistic
+    Fields, Cambridge University Press (1984).'
+  doi: null
+  first_in: T05-pairing
+  latex: 'R.~Penrose, W.~Rindler,
+
+    \emph{Spinors and Space-Time, Vol.~1: Two-Spinor Calculus and Relativistic Fields},
+
+    Cambridge University Press (1984).'
+PenroseRindler1986:
+  citation: 'R. Penrose and W. Rindler, Spinors and Space-Time, Vol. 2: Spinor and Twistor Methods in
+    Space-Time Geometry, Cambridge University Press (1986).'
+  doi: null
+  first_in: T11
+  latex: 'R.~Penrose and W.~Rindler,
+
+    \emph{Spinors and Space-Time, Vol. 2: Spinor and Twistor Methods in Space-Time Geometry},
+
+    Cambridge University Press (1986).'
+PenroseRindler2:
+  citation: 'R. Penrose, W. Rindler, Spinors and Space-Time, Vol. 2: Spinor and Twistor Methods in Space-Time
+    Geometry, Cambridge University Press (1986).'
+  doi: null
+  first_in: T05-pairing
+  latex: 'R.~Penrose, W.~Rindler,
+
+    \emph{Spinors and Space-Time, Vol.~2: Spinor and Twistor Methods in Space-Time Geometry},
+
+    Cambridge University Press (1986).'
+PenroseRindler86:
+  citation: R. Penrose and W. Rindler, Spinors and Space-Time, Vols. 1--2, Cambridge University Press
+    (1984, 1986).
+  doi: null
+  first_in: T09
+  latex: 'R.~Penrose and W.~Rindler,
+
+    \emph{Spinors and Space-Time}, Vols.~1--2,
+
+    Cambridge University Press (1984, 1986).'
+Pierce1982:
+  citation: R. S. Pierce, Associative Algebras, Graduate Texts in Mathematics 88, Springer, New York (1982).
+  doi: null
+  first_in: T03
+  latex: 'R.~S.~Pierce,
+
+    \emph{Associative Algebras},
+
+    Graduate Texts in Mathematics 88, Springer, New York (1982).'
+PilaftsisUnderwood2004:
+  citation: A. Pilaftsis and T. E. J. Underwood, Resonant leptogenesis, Nucl. Phys. B 692 (2004), 303--345.
+  doi: null
+  first_in: T15
+  latex: 'A.~Pilaftsis and T.~E.~J.~Underwood,
+
+    \emph{Resonant leptogenesis},
+
+    Nucl. Phys. B \textbf{692} (2004), 303--345.'
+Planck2018:
+  citation: N. Aghanim et al. (Planck Collaboration), Planck 2018 results. VI. Cosmological parameters,
+    Astron. Astrophys. 641 (2020), A6.
+  doi: null
+  first_in: T14
+  latex: 'N.~Aghanim et al. (Planck Collaboration),
+
+    \emph{Planck 2018 results. VI. Cosmological parameters},
+
+    Astron. Astrophys. \textbf{641} (2020), A6.'
+PoissonIsrael1990:
+  citation: E. Poisson and W. Israel, Internal structure of black holes, Phys. Rev. D 41 (1990), 1796--1809.
+  doi: null
+  first_in: T06
+  latex: 'E.~Poisson and W.~Israel,
+
+    Internal structure of black holes,
+
+    \emph{Phys.\ Rev.\ D} \textbf{41} (1990), 1796--1809.'
+Polchinski1998:
+  citation: 'J. Polchinski, String Theory, Vol. II: Superstring Theory and Beyond, Cambridge University
+    Press (1998), Appendix B.'
+  doi: null
+  first_in: T17-rule2
+  latex: 'J.~Polchinski,
+
+    \emph{String Theory, Vol.~II: Superstring Theory and Beyond},
+
+    Cambridge University Press (1998), Appendix B.'
+Polyakov1977:
+  citation: A. M. Polyakov, Quark confinement and topology of gauge theories, Nucl. Phys. B 120 (1977),
+    429--458.
+  doi: null
+  first_in: T14
+  latex: 'A.~M. Polyakov,
+
+    \emph{Quark confinement and topology of gauge theories},
+
+    Nucl. Phys. B \textbf{120} (1977), 429--458.'
+Popper1963:
+  citation: 'K. R. Popper, Conjectures and Refutations: The Growth of Scientific Knowledge, Routledge
+    (1963).'
+  doi: null
+  first_in: T17
+  latex: 'K.~R. Popper,
+
+    \emph{Conjectures and Refutations: The Growth of Scientific Knowledge},
+
+    Routledge (1963).'
+Portail2017:
+  citation: 'M. Portail, O. Gerhard, C. Wegg and M. Ness, Dynamical modelling of the galactic bulge and
+    bar: the Milky Way''s pattern speed, stellar and dark matter mass distribution, Mon. Not. R. Astron.
+    Soc. 465 (2017), 1621.'
+  doi: null
+  first_in: T14
+  latex: 'M.~Portail, O.~Gerhard, C.~Wegg and M.~Ness,
+
+    \emph{Dynamical modelling of the galactic bulge and bar: the Milky Way''s pattern speed, stellar and
+    dark matter mass distribution},
+
+    Mon.\ Not.\ R.\ Astron.\ Soc.\ \textbf{465} (2017), 1621.'
+Porteous1995:
+  citation: I. R. Porteous, Clifford Algebras and the Classical Groups, Cambridge University Press (1995).
+  doi: null
+  first_in: T01
+  latex: 'I.~R.~Porteous,
+
+    \emph{Clifford Algebras and the Classical Groups},
+
+    Cambridge University Press (1995).'
+Preskill1979:
+  citation: J. P. Preskill, Cosmological production of superheavy magnetic monopoles, Phys. Rev. Lett.
+    43 (1979), 1365--1368.
+  doi: 10.1103/PhysRevLett.43.1365
+  first_in: synthesis
+  latex: J. P. Preskill, Cosmological production of superheavy magnetic monopoles, Phys. Rev. Lett. 43
+    (1979), 1365--1368.
+Preskill1984:
+  citation: J. Preskill, Magnetic monopoles, Ann. Rev. Nucl. Part. Sci. 34 (1984), 461--530.
+  doi: null
+  first_in: synthesis
+  latex: J. Preskill, Magnetic monopoles, Ann. Rev. Nucl. Part. Sci. 34 (1984), 461--530.
+PressleySegal1986:
+  citation: A. Pressley and G. Segal, Loop Groups, Oxford University Press (1986).
+  doi: null
+  first_in: T05
+  latex: 'A.~Pressley and G.~Segal,
+
+    \emph{Loop Groups},
+
+    Oxford University Press (1986).'
+RW2005:
+  citation: S. P. Robinson and F. Wilczek, Relationship between Hawking radiation and gravitational anomalies,
+    Phys. Rev. Lett. 95 (2005), 011303.
+  doi: null
+  first_in: T05
+  latex: 'S.~P.~Robinson and F.~Wilczek,
+
+    Relationship between Hawking radiation and gravitational anomalies,
+
+    \emph{Phys.\ Rev.\ Lett.} \textbf{95} (2005), 011303.'
+Randall2008:
+  citation: S. W. Randall, M. Markevitch, D. Clowe, A. H. Gonzalez, and M. Bradac, Constraints on the
+    self-interaction cross section of dark matter from numerical simulations of the merging galaxy cluster
+    1E 0657-56, Astrophys. J. 679 (2008), 1173--1180.
+  doi: null
+  first_in: T14
+  latex: 'S.~W.~Randall, M.~Markevitch, D.~Clowe, A.~H.~Gonzalez, and M.~Brada\v{c},
+
+    \emph{Constraints on the self-interaction cross section of dark matter from numerical simulations
+    of the merging galaxy cluster 1E 0657-56},
+
+    Astrophys. J. \textbf{679} (2008), 1173--1180.'
+Redlich1984:
+  citation: A. N. Redlich, Gauge noninvariance and parity nonconservation of three-dimensional fermions,
+    Phys. Rev. Lett. 52 (1984) 18--21; Parity violation and gauge noninvariance of the effective gauge
+    field action in three dimensions, Phys. Rev. D 29 (1984) 2366--2374.
+  doi: null
+  first_in: T17-rule2
+  latex: 'A.~N. Redlich,
+
+    \emph{Gauge noninvariance and parity nonconservation of three-dimensional fermions},
+
+    Phys.\ Rev.\ Lett.\ 52 (1984) 18--21; \emph{Parity violation and gauge noninvariance of the effective
+    gauge field action in three dimensions}, Phys.\ Rev.\ D 29 (1984) 2366--2374.'
+ReggeWheeler1957:
+  citation: T. Regge and J. A. Wheeler, Stability of a Schwarzschild singularity, Phys. Rev. 108 (1957),
+    1063--1069.
+  doi: null
+  first_in: T07
+  latex: 'T.~Regge and J.~A.~Wheeler,
+
+    Stability of a Schwarzschild singularity,
+
+    \emph{Phys.\ Rev.} \textbf{108} (1957), 1063--1069.'
+RobinsonWilczek2005:
+  citation: S. P. Robinson and F. Wilczek, A relationship between Hawking radiation and gravitational
+    anomalies, Phys. Rev. Lett. 95 (2005), 011303; arXiv:gr-qc/0502074.
+  doi: null
+  first_in: synthesis
+  latex: S. P. Robinson and F. Wilczek, A relationship between Hawking radiation and gravitational anomalies,
+    Phys. Rev. Lett. 95 (2005), 011303; arXiv:gr-qc/0502074.
+RouxCline2020:
+  citation: J.-S. Roux and J. M. Cline, Constraining galactic structures of mirror dark matter, Phys.
+    Rev. D 102 (2020), 063518; arXiv:2001.11504.
+  doi: null
+  first_in: T14
+  latex: 'J.-S.~Roux and J.~M.~Cline,
+
+    \emph{Constraining galactic structures of mirror dark matter},
+
+    Phys. Rev. D \textbf{102} (2020), 063518; arXiv:2001.11504.'
+SMS2000:
+  citation: T. Shiromizu, K. Maeda and M. Sasaki, The Einstein equations on the 3-brane world, Phys. Rev.
+    D 62, 024012 (2000).
+  doi: null
+  first_in: T14
+  latex: 'T.~Shiromizu, K.~Maeda and M.~Sasaki,
+
+    The Einstein equations on the 3-brane world,
+
+    \emph{Phys.\ Rev.\ D} \textbf{62}, 024012 (2000).'
+Saunders2010:
+  citation: S. Saunders, J. Barrett, A. Kent, and D. Wallace (eds.), Many Worlds? Everett, Quantum Theory,
+    and Reality, Oxford University Press (2010).
+  doi: null
+  first_in: T16
+  latex: 'S.~Saunders, J.~Barrett, A.~Kent, and D.~Wallace (eds.),
+
+    \emph{Many Worlds? Everett, Quantum Theory, and Reality},
+
+    Oxford University Press (2010).'
+Schutz2018:
+  citation: K. Schutz, T. Lin, B. R. Safdi, and C.-L. Wu, Constraining a thin dark matter disk with Gaia,
+    Phys. Rev. Lett. 121 (2018), 081101.
+  doi: null
+  first_in: T14
+  latex: 'K.~Schutz, T.~Lin, B.~R.~Safdi, and C.-L.~Wu,
+
+    \emph{Constraining a thin dark matter disk with Gaia},
+
+    Phys. Rev. Lett. \textbf{121} (2018), 081101.'
+SekinoSusskind2008:
+  citation: Y. Sekino and L. Susskind, Fast scramblers, JHEP 0810 (2008), 065.
+  doi: null
+  first_in: T08
+  latex: 'Y.~Sekino and L.~Susskind,
+
+    Fast scramblers,
+
+    \emph{JHEP} \textbf{0810} (2008), 065.'
+Selig2005:
+  citation: J. M. Selig, Geometric Fundamentals of Robotics, 2nd ed., Springer, New York (2005).
+  doi: null
+  first_in: T02
+  latex: 'J.~M.~Selig,
+
+    \emph{Geometric Fundamentals of Robotics}, 2nd ed.,
+
+    Springer, New York (2005).'
+Semenoff1984:
+  citation: G. W. Semenoff, Condensed-matter simulation of a three-dimensional anomaly, Phys. Rev. Lett.
+    53 (1984) 2449--2452.
+  doi: null
+  first_in: T17-rule2
+  latex: 'G.~W. Semenoff,
+
+    \emph{Condensed-matter simulation of a three-dimensional anomaly},
+
+    Phys.\ Rev.\ Lett.\ 53 (1984) 2449--2452.'
+Sewell1982:
+  citation: 'G. L. Sewell, Quantum fields on manifolds: PCT and gravitationally induced thermal states,
+    Ann. Phys. 141 (1982), 201--224.'
+  doi: null
+  first_in: T05
+  latex: 'G.~L.~Sewell,
+
+    Quantum fields on manifolds: PCT and gravitationally induced thermal states,
+
+    \emph{Ann.\ Phys.} \textbf{141} (1982), 201--224.'
+Slansky1981:
+  citation: R. Slansky, Group theory for unified model building, Phys. Rep. 79 (1981) 1--128.
+  doi: null
+  first_in: T12
+  latex: 'R.~Slansky,
+
+    Group theory for unified model building,
+
+    \emph{Phys. Rep.} \textbf{79} (1981) 1--128.'
+SpringelDiMatteoHernquist2005:
+  citation: V. Springel, T. Di Matteo and L. Hernquist, Modelling feedback from stars and black holes
+    in galaxy mergers, Mon. Not. R. Astron. Soc. 361 (2005) 776.
+  doi: null
+  first_in: T14b
+  latex: 'V.~Springel, T.~Di Matteo and L.~Hernquist,
+
+    \emph{Modelling feedback from stars and black holes in galaxy mergers},
+
+    Mon.\ Not.\ R.\ Astron.\ Soc.\ 361 (2005) 776.'
+StelleWest1980:
+  citation: K. S. Stelle and P. C. West, Spontaneously broken de Sitter symmetry and the gravitational
+    holonomy group, Phys. Rev. D 21 (1980), 1466--1488.
+  doi: null
+  first_in: T10
+  latex: 'K.~S.~Stelle and P.~C.~West,
+
+    Spontaneously broken de Sitter symmetry and the gravitational holonomy group,
+
+    \emph{Phys.\ Rev.\ D} \textbf{21} (1980), 1466--1488.'
+Stinespring1955:
+  citation: W. F. Stinespring, Positive functions on $C^*$-algebras, Proc. Amer. Math. Soc. 6 (1955) 211--216.
+  doi: null
+  first_in: T05-descent-lift
+  latex: 'W.~F. Stinespring,
+
+    \emph{Positive functions on $C^{*}$-algebras},
+
+    Proc. Amer. Math. Soc. 6 (1955) 211--216.'
+Sumino2009:
+  citation: Y. Sumino, Family gauge symmetry as an origin of Koide's mass formula and charged lepton spectrum,
+    J. High Energy Phys. 05 (2009), 075.
+  doi: null
+  first_in: T13
+  latex: 'Y.~Sumino,
+
+    \emph{Family gauge symmetry as an origin of Koide''s mass formula and charged lepton spectrum},
+
+    J. High Energy Phys. \textbf{05} (2009), 075.'
+SuperK2020:
+  citation: Super-Kamiokande Collaboration (A. Takenaka et al.), Search for proton decay via $p to e^+pi^0$
+    and $p to mu^+pi^0$ with an enlarged fiducial volume in Super-Kamiokande I-IV, Phys. Rev. D 102 (2020)
+    112011, arXiv:2010.16098.
+  doi: null
+  first_in: T12
+  latex: 'Super-Kamiokande Collaboration (A.~Takenaka et al.),
+
+    Search for proton decay via $p \to e^{+}\pi^{0}$ and $p \to \mu^{+}\pi^{0}$ with an enlarged fiducial
+    volume in Super-Kamiokande I-IV,
+
+    \emph{Phys. Rev. D} \textbf{102} (2020) 112011, arXiv:2010.16098.'
+SutherlandDopita1993:
+  citation: R. S. Sutherland and M. A. Dopita, Cooling functions for low-density astrophysical plasmas,
+    Astrophys. J. Suppl. 88 (1993) 253.
+  doi: null
+  first_in: T14b
+  latex: 'R.~S.~Sutherland and M.~A.~Dopita,
+
+    \emph{Cooling functions for low-density astrophysical plasmas},
+
+    Astrophys.\ J.\ Suppl.\ 88 (1993) 253.'
+T2KNOvA2025:
+  citation: K. Abe et al. (T2K Collaboration) and M. A. Acero et al. (NOvA Collaboration), Joint neutrino
+    oscillation analysis from the T2K and NOvA experiments, Nature (2025).
+  doi: null
+  first_in: T15
+  latex: 'K.~Abe et al. (T2K Collaboration) and M.~A. Acero et al. (NOvA Collaboration),
+
+    \emph{Joint neutrino oscillation analysis from the T2K and NOvA experiments},
+
+    Nature (2025).'
+Takesaki1972:
+  citation: M. Takesaki, Conditional expectations in von Neumann algebras, J. Funct. Anal. 9 (1972), 306--321.
+  doi: null
+  first_in: T05
+  latex: 'M.~Takesaki,
+
+    Conditional expectations in von Neumann algebras,
+
+    \emph{J.\ Funct.\ Anal.} \textbf{9} (1972), 306--321.'
+Teukolsky1973:
+  citation: S. A. Teukolsky, Perturbations of a rotating black hole I, Astrophys. J. 185 (1973), 635--647.
+  doi: null
+  first_in: T07
+  latex: 'S.~A.~Teukolsky,
+
+    Perturbations of a rotating black hole I,
+
+    \emph{Astrophys.\ J.} \textbf{185} (1973), 635--647.'
+Thomas1926:
+  citation: T. Y. Thomas, On conformal geometry, Proc. Natl. Acad. Sci. USA 12 (1926), 352--359.
+  doi: null
+  first_in: T11
+  latex: 'T.~Y. Thomas,
+
+    \emph{On conformal geometry},
+
+    Proc. Natl. Acad. Sci. USA \textbf{12} (1926), 352--359.'
+Thouless1960:
+  citation: D. J. Thouless, Stability conditions and nuclear rotations in the Hartree-Fock theory, Nucl.
+    Phys. 21 (1960) 225--232.
+  doi: null
+  first_in: T05-pairing
+  latex: 'D.~J. Thouless,
+
+    \emph{Stability conditions and nuclear rotations in the Hartree-Fock theory},
+
+    Nucl. Phys. 21 (1960) 225--232.'
+Tong2017:
+  citation: D. Tong, Line operators in the Standard Model, J. High Energy Phys. 2017, 104 (2017).
+  doi: null
+  first_in: T12
+  latex: 'D.~Tong,
+
+    \emph{Line operators in the Standard Model},
+
+    J. High Energy Phys. \textbf{2017}, 104 (2017).'
+TozziNorman2001:
+  citation: P. Tozzi and C. Norman, The evolution of X-ray clusters and the entropy of the intracluster
+    medium, Astrophys. J. 546 (2001) 63.
+  doi: null
+  first_in: T14b
+  latex: 'P.~Tozzi and C.~Norman,
+
+    \emph{The evolution of X-ray clusters and the entropy of the intracluster medium},
+
+    Astrophys.\ J.\ 546 (2001) 63.'
+Unruh1976:
+  citation: W. G. Unruh, Notes on black-hole evaporation, Phys. Rev. D 14 (1976), 870--892.
+  doi: null
+  first_in: T05
+  latex: 'W.~G.~Unruh,
+
+    Notes on black-hole evaporation,
+
+    \emph{Phys.\ Rev.\ D} \textbf{14} (1976), 870--892.'
+VanProeyen1999:
+  citation: A. Van Proeyen, Tools for supersymmetry, Ann. Univ. Craiova Phys. 9 (1999) 1--48, arXiv:hep-th/9910030.
+  doi: null
+  first_in: T17-rule2
+  latex: 'A.~Van Proeyen,
+
+    \emph{Tools for supersymmetry},
+
+    Ann.\ Univ.\ Craiova Phys.\ 9 (1999) 1--48, arXiv:hep-th/9910030.'
+WWW1952:
+  citation: G. C. Wick, A. S. Wightman and E. P. Wigner, The intrinsic parity of elementary particles,
+    Phys. Rev. 88 (1952), 101--105.
+  doi: null
+  first_in: T05
+  latex: 'G.~C.~Wick, A.~S.~Wightman and E.~P.~Wigner,
+
+    The intrinsic parity of elementary particles,
+
+    \emph{Phys.\ Rev.} \textbf{88} (1952), 101--105.'
+Wald1984:
+  citation: R. M. Wald, General Relativity, University of Chicago Press (1984).
+  doi: null
+  first_in: T05-pairing
+  latex: 'R.~M. Wald,
+
+    \emph{General Relativity},
+
+    University of Chicago Press (1984).'
+WalkerPenrose1970:
+  citation: M. Walker and R. Penrose, On quadratic first integrals of the geodesic equations for type
+    $22$ spacetimes, Commun. Math. Phys. 18 (1970), 265--274.
+  doi: null
+  first_in: T06
+  latex: 'M.~Walker and R.~Penrose,
+
+    On quadratic first integrals of the geodesic equations for type $\{22\}$ spacetimes,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{18} (1970), 265--274.'
+Wallace2012:
+  citation: 'D. Wallace, The Emergent Multiverse: Quantum Theory according to the Everett Interpretation,
+    Oxford University Press (2012).'
+  doi: null
+  first_in: T16
+  latex: 'D.~Wallace,
+
+    \emph{The Emergent Multiverse: Quantum Theory according to the Everett Interpretation},
+
+    Oxford University Press (2012).'
+Weedbrook2012:
+  citation: C. Weedbrook, S. Pirandola, R. Garc'ia-Patr'on, N. J. Cerf, T. C. Ralph, J. H. Shapiro and
+    S. Lloyd, Gaussian quantum information, Rev. Mod. Phys. 84 (2012), 621.
+  doi: null
+  first_in: T13
+  latex: 'C.~Weedbrook, S.~Pirandola, R.~Garc\''ia-Patr\''on, N.~J.~Cerf, T.~C.~Ralph, J.~H.~Shapiro and
+    S.~Lloyd,
+
+    \emph{Gaussian quantum information},
+
+    Rev. Mod. Phys. \textbf{84} (2012), 621.'
+Weinberg1964:
+  citation: S. Weinberg, Photons and gravitons in S-matrix theory, Phys. Rev. 135 (1964), B1049--B1056.
+  doi: null
+  first_in: T07
+  latex: 'S.~Weinberg,
+
+    Photons and gravitons in S-matrix theory,
+
+    \emph{Phys.\ Rev.} \textbf{135} (1964), B1049--B1056.'
+Weinberg1972:
+  citation: S. Weinberg, Gravitation and Cosmology, Wiley (1972), S16.4 (the pion-Hubble coincidence).
+  doi: null
+  first_in: T13
+  latex: 'S.~Weinberg,
+
+    \emph{Gravitation and Cosmology},
+
+    Wiley (1972), \S16.4 (the pion-Hubble coincidence).'
+Weinberg1974:
+  citation: S. Weinberg, Gauge and global symmetries at high temperature, Phys. Rev. D 9 (1974), 3357--3378.
+  doi: null
+  first_in: synthesis
+  latex: S. Weinberg, Gauge and global symmetries at high temperature, Phys. Rev. D 9 (1974), 3357--3378.
+WeinbergQFT1:
+  citation: 'S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University
+    Press (1996).'
+  doi: null
+  first_in: T12-lepton
+  latex: 'S.~Weinberg,
+
+    \emph{The Quantum Theory of Fields, Vol. 2: Modern Applications},
+
+    Cambridge University Press (1996).'
+WeinbergQFT2:
+  citation: 'S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University
+    Press (1996).'
+  doi: null
+  first_in: T12
+  latex: 'S.~Weinberg,
+
+    \emph{The Quantum Theory of Fields, Vol. 2: Modern Applications},
+
+    Cambridge University Press (1996).'
+WeinbergWitten1980:
+  citation: S. Weinberg and E. Witten, Limits on massless particles, Phys. Lett. B 96 (1980), 59--62.
+  doi: null
+  first_in: T07
+  latex: 'S.~Weinberg and E.~Witten,
+
+    Limits on massless particles,
+
+    \emph{Phys.\ Lett.\ B} \textbf{96} (1980), 59--62.'
+Westerweck2018:
+  citation: J. Westerweck et al., Low significance of evidence for black hole echoes in gravitational
+    wave data, Phys. Rev. D 97 (2018), 124037.
+  doi: null
+  first_in: T08
+  latex: 'J.~Westerweck et al.,
+
+    Low significance of evidence for black hole echoes in gravitational wave data,
+
+    \emph{Phys.\ Rev.\ D} \textbf{97} (2018), 124037.'
+Weyl1918:
+  citation: H. Weyl, Reine Infinitesimalgeometrie, Math. Z. 2 (1918), 384--411.
+  doi: null
+  first_in: T09
+  latex: 'H.~Weyl,
+
+    Reine Infinitesimalgeometrie,
+
+    \emph{Math.\ Z.} \textbf{2} (1918), 384--411.'
+Widmark2021:
+  citation: A. Widmark, C. F. P. Laporte, P. F. de Salas, and G. Monari, Weighing the Galactic disk using
+    phase-space spirals. II. Most stringent constraints on a thin dark disk using Gaia EDR3, Astron. Astrophys.
+    653 (2021), A86.
+  doi: null
+  first_in: T14
+  latex: 'A.~Widmark, C.~F.~P.~Laporte, P.~F.~de Salas, and G.~Monari,
+
+    \emph{Weighing the Galactic disk using phase-space spirals. II. Most stringent constraints on a thin
+    dark disk using Gaia EDR3},
+
+    Astron. Astrophys. \textbf{653} (2021), A86.'
+Wiesbrock1993:
+  citation: H.-W. Wiesbrock, Half-sided modular inclusions of von Neumann algebras, Commun. Math. Phys.
+    157 (1993), 83--92.
+  doi: null
+  first_in: T08
+  latex: 'H.-W.~Wiesbrock,
+
+    Half-sided modular inclusions of von Neumann algebras,
+
+    \emph{Commun.\ Math.\ Phys.} \textbf{157} (1993), 83--92.'
+Wise2010:
+  citation: D. K. Wise, MacDowell-Mansouri gravity and Cartan geometry, Class. Quantum Grav. 27 (2010),
+    155010.
+  doi: null
+  first_in: T10
+  latex: 'D.~K.~Wise,
+
+    MacDowell-Mansouri gravity and Cartan geometry,
+
+    \emph{Class.\ Quantum Grav.} \textbf{27} (2010), 155010.'
+Witt1937:
+  citation: E. Witt, Theorie der quadratischen Formen in beliebigen K"orpern, J. Reine Angew. Math. 176
+    (1937) 31--44.
+  doi: null
+  first_in: T16
+  latex: 'E.~Witt,
+
+    Theorie der quadratischen Formen in beliebigen K\"orpern,
+
+    \emph{J. Reine Angew. Math.} \textbf{176} (1937) 31--44.'
+Witten1996:
+  citation: E. Witten, Phase transitions in M-theory and F-theory, Nucl. Phys. B 471 (1996) 195--216.
+  doi: null
+  first_in: T17-rule2
+  latex: 'E.~Witten,
+
+    \emph{Phase transitions in M-theory and F-theory},
+
+    Nucl.\ Phys.\ B 471 (1996) 195--216.'
+Wittman2018:
+  citation: 'D. Wittman, N. Golovich and W. A. Dawson, The mismeasure of mergers: revised limits on self-interacting
+    dark matter in merging galaxy clusters, Astrophys. J. 869 (2018) 104.'
+  doi: null
+  first_in: T14b
+  latex: 'D.~Wittman, N.~Golovich and W.~A.~Dawson,
+
+    \emph{The mismeasure of mergers: revised limits on self-interacting dark matter in merging galaxy
+    clusters},
+
+    Astrophys.\ J.\ 869 (2018) 104.'
+Woosley2019:
+  citation: S. E. Woosley, The evolution of massive helium stars including mass loss, Astrophys. J. 878
+    (2019) 49.
+  doi: null
+  first_in: T14b
+  latex: 'S.~E.~Woosley,
+
+    \emph{The evolution of massive helium stars including mass loss},
+
+    Astrophys.\ J.\ 878 (2019) 49.'
+Yanagida1980:
+  citation: T. Yanagida, Horizontal symmetry and masses of neutrinos, Prog. Theor. Phys. 64 (1980), 1103--1105.
+  doi: null
+  first_in: T15
+  latex: 'T.~Yanagida,
+
+    \emph{Horizontal symmetry and masses of neutrinos},
+
+    Prog. Theor. Phys. \textbf{64} (1980), 1103--1105.'
+Zeeman1964:
+  citation: E. C. Zeeman, Causality implies the Lorentz group, J. Math. Phys. 5 (1964) 490--493.
+  doi: null
+  first_in: T01
+  latex: 'E.~C.~Zeeman,
+
+    Causality implies the Lorentz group,
+
+    \emph{J. Math. Phys.} \textbf{5} (1964) 490--493.'
+Zeh1970:
+  citation: H. D. Zeh, On the interpretation of measurement in quantum theory, Found. Phys. 1 (1970),
+    69--76.
+  doi: null
+  first_in: T16
+  latex: 'H.~D. Zeh,
+
+    \emph{On the interpretation of measurement in quantum theory},
+
+    Found. Phys. \textbf{1} (1970), 69--76.'
+Zeldovich1967:
+  citation: Ya. B. Zel'dovich, Cosmological constant and elementary particles, JETP Lett. 6 (1967), 316;
+    and The cosmological constant and the theory of elementary particles, Sov. Phys. Usp. 11 (1968), 381.
+  doi: null
+  first_in: T13
+  latex: 'Ya.~B.~Zel''dovich,
+
+    \emph{Cosmological constant and elementary particles},
+
+    JETP Lett. \textbf{6} (1967), 316; and \emph{The cosmological constant and the theory of elementary
+    particles}, Sov. Phys. Usp. \textbf{11} (1968), 381.'
+Zurek2005:
+  citation: W. H. Zurek, Probabilities from entanglement, Born's rule from envariance, Phys. Rev. A 71
+    (2005), 052105.
+  doi: null
+  first_in: T16
+  latex: 'W.~H. Zurek,
+
+    \emph{Probabilities from entanglement, Born''s rule from envariance},
+
+    Phys. Rev. A \textbf{71} (2005), 052105.'
+Zurek2014:
+  citation: 'K. M. Zurek, Asymmetric dark matter: theories, signatures, and constraints, Phys. Rep. 537
+    (2014), 91--121.'
+  doi: null
+  first_in: T14
+  latex: 'K.~M. Zurek,
+
+    \emph{Asymmetric dark matter: theories, signatures, and constraints},
+
+    Phys. Rep. \textbf{537} (2014), 91--121.'
+tHooft1985:
+  citation: G. 't Hooft, On the quantum structure of a black hole, Nucl. Phys. B 256 (1985), 727--745.
+  doi: null
+  first_in: T08
+  latex: 'G.~''t~Hooft,
+
+    On the quantum structure of a black hole,
+
+    \emph{Nucl.\ Phys.\ B} \textbf{256} (1985), 727--745.'
+vonNeumann1936:
+  citation: J. von Neumann, On regular rings, Proc. Natl. Acad. Sci. USA 22 (1936), 707--713.
+  doi: null
+  first_in: T01
+  latex: 'J.~von Neumann,
+
+    On regular rings,
+
+    \emph{Proc.\ Natl.\ Acad.\ Sci.\ USA} \textbf{22} (1936), 707--713.'
+GibbonsHawking1977cosmo:
+  citation: G. W. Gibbons and S. W. Hawking, Cosmological event horizons, thermodynamics, and particle creation,
+    Phys. Rev. D 15 (1977), 2738--2751.
+  doi: 10.1103/PhysRevD.15.2738
+  first_in: synthesis
+AllendoerferWeil1943:
+  citation: C. B. Allendoerfer and A. Weil, The Gauss-Bonnet theorem for Riemannian polyhedra, Trans.
+    Amer. Math. Soc. 53 (1943), 101--129.
+  doi: null
+  first_in: synthesis
+  latex: C. B. Allendoerfer and A. Weil, The Gauss-Bonnet theorem for Riemannian polyhedra, Trans. Amer.
+    Math. Soc. 53 (1943), 101--129.
+Andrews1976:
+  citation: G. E. Andrews, The Theory of Partitions, Encyclopedia of Mathematics and its Applications
+    2, Addison-Wesley, Reading (1976).
+  doi: null
+  first_in: synthesis
+  latex: G. E. Andrews, The Theory of Partitions, Encyclopedia of Mathematics and its Applications 2,
+    Addison-Wesley, Reading (1976).
+BCH1973:
+  citation: J. M. Bardeen, B. Carter and S. W. Hawking, The four laws of black hole mechanics, Commun.
+    Math. Phys. 31 (1973), 161--170.
+  doi: 10.1007/BF01645742
+  first_in: synthesis
+  latex: J. M. Bardeen, B. Carter and S. W. Hawking, The four laws of black hole mechanics, Commun. Math.
+    Phys. 31 (1973), 161--170.
+Chern1944:
+  citation: S.-S. Chern, A simple intrinsic proof of the Gauss-Bonnet formula for closed Riemannian manifolds,
+    Ann. of Math. (2) 45 (1944), 747--752.
+  doi: 10.2307/1969302
+  first_in: synthesis
+  latex: S.-S. Chern, A simple intrinsic proof of the Gauss-Bonnet formula for closed Riemannian manifolds,
+    Ann. of Math. (2) 45 (1944), 747--752.
+Csiszar1967:
+  citation: I. Csiszar, Information-type measures of difference of probability distributions and indirect
+    observations, Studia Sci. Math. Hungar. 2 (1967), 299--318.
+  doi: null
+  first_in: synthesis
+  latex: I. Csiszar, Information-type measures of difference of probability distributions and indirect
+    observations, Studia Sci. Math. Hungar. 2 (1967), 299--318.
+IyerWald1994:
+  citation: V. Iyer and R. M. Wald, Some properties of Noether charge and a proposal for dynamical black
+    hole entropy, Phys. Rev. D 50 (1994), 846--864.
+  doi: 10.1103/PhysRevD.50.846
+  first_in: synthesis
+  latex: V. Iyer and R. M. Wald, Some properties of Noether charge and a proposal for dynamical black
+    hole entropy, Phys. Rev. D 50 (1994), 846--864.
+Jacobson1995:
+  citation: 'T. Jacobson, Thermodynamics of spacetime: the Einstein equation of state, Phys. Rev. Lett.
+    75 (1995), 1260--1263.'
+  doi: 10.1103/PhysRevLett.75.1260
+  first_in: synthesis
+  latex: 'T. Jacobson, Thermodynamics of spacetime: the Einstein equation of state, Phys. Rev. Lett. 75
+    (1995), 1260--1263.'
+Jacobson2016:
+  citation: T. Jacobson, Entanglement equilibrium and the Einstein equation, Phys. Rev. Lett. 116 (2016),
+    201101.
+  doi: 10.1103/PhysRevLett.116.201101
+  first_in: synthesis
+  latex: T. Jacobson, Entanglement equilibrium and the Einstein equation, Phys. Rev. Lett. 116 (2016),
+    201101.
+JacobsonKangMyers1994:
+  citation: T. Jacobson, G. Kang and R. C. Myers, On black hole entropy, Phys. Rev. D 49 (1994), 6587--6598.
+  doi: 10.1103/PhysRevD.49.6587
+  first_in: synthesis
+  latex: T. Jacobson, G. Kang and R. C. Myers, On black hole entropy, Phys. Rev. D 49 (1994), 6587--6598.
+JacobsonMyers1993:
+  citation: T. Jacobson and R. C. Myers, Black hole entropy and higher curvature interactions, Phys. Rev.
+    Lett. 70 (1993), 3684--3687.
+  doi: 10.1103/PhysRevLett.70.3684
+  first_in: synthesis
+  latex: T. Jacobson and R. C. Myers, Black hole entropy and higher curvature interactions, Phys. Rev.
+    Lett. 70 (1993), 3684--3687.
+Kemperman1969:
+  citation: J. H. B. Kemperman, On the optimum rate of transmitting information, Ann. Math. Statist. 40
+    (1969), 2156--2177.
+  doi: null
+  first_in: synthesis
+  latex: J. H. B. Kemperman, On the optimum rate of transmitting information, Ann. Math. Statist. 40 (1969),
+    2156--2177.
+Kullback1967:
+  citation: S. Kullback, A lower bound for discrimination information in terms of variation, IEEE Trans.
+    Inform. Theory 13 (1967), 126--127.
+  doi: null
+  first_in: synthesis
+  latex: S. Kullback, A lower bound for discrimination information in terms of variation, IEEE Trans.
+    Inform. Theory 13 (1967), 126--127.
+LuoWangXiao2003:
+  citation: M. Luo, H. Wang and Y. Xiao, Two-loop renormalization group equations in general gauge field
+    theories, Phys. Rev. D 67 (2003), 065019.
+  doi: 10.1103/PhysRevD.67.065019
+  first_in: synthesis
+  latex: M. Luo, H. Wang and Y. Xiao, Two-loop renormalization group equations in general gauge field
+    theories, Phys. Rev. D 67 (2003), 065019.
+MachacekVaughn1984:
+  citation: M. E. Machacek and M. T. Vaughn, Two-loop renormalization group equations in a general quantum
+    field theory (II). Yukawa couplings, Nucl. Phys. B 236 (1984), 221--232.
+  doi: null
+  first_in: synthesis
+  latex: M. E. Machacek and M. T. Vaughn, Two-loop renormalization group equations in a general quantum
+    field theory (II). Yukawa couplings, Nucl. Phys. B 236 (1984), 221--232.
+MiskovicOlea2009:
+  citation: O. Miskovic and R. Olea, Topological regularization and self-duality in four-dimensional anti-de
+    Sitter gravity, Phys. Rev. D 79 (2009), 124020; arXiv:0902.2082.
+  doi: null
+  first_in: synthesis
+  latex: O. Miskovic and R. Olea, Topological regularization and self-duality in four-dimensional anti-de
+    Sitter gravity, Phys. Rev. D 79 (2009), 124020; arXiv:0902.2082.
+Mumford1983:
+  citation: D. Mumford, Tata Lectures on Theta I, Progress in Mathematics 28, Birkhauser, Boston (1983).
+  doi: null
+  first_in: synthesis
+  latex: D. Mumford, Tata Lectures on Theta I, Progress in Mathematics 28, Birkhauser, Boston (1983).
+Olshanskii1981:
+  citation: G. I. Ol'shanskii, Invariant cones in Lie algebras, Lie semigroups, and the holomorphic discrete
+    series, Funct. Anal. Appl. 15 (1981), 275--285.
+  doi: 10.1007/BF01106156
+  first_in: synthesis
+  latex: G. I. Ol'shanskii, Invariant cones in Lie algebras, Lie semigroups, and the holomorphic discrete
+    series, Funct. Anal. Appl. 15 (1981), 275--285.
+Olshanskii1982:
+  citation: G. I. Ol'shanskii, Invariant orderings in simple Lie groups. The solution to E. B. Vinberg's
+    problem, Funct. Anal. Appl. 16 (1982), 311--313.
+  doi: 10.1007/BF01077863
+  first_in: synthesis
+  latex: G. I. Ol'shanskii, Invariant orderings in simple Lie groups. The solution to E. B. Vinberg's
+    problem, Funct. Anal. Appl. 16 (1982), 311--313.
+Paneitz1981:
+  citation: S. M. Paneitz, Invariant convex cones and causality in semisimple Lie algebras and groups,
+    J. Funct. Anal. 43 (1981), 313--359.
+  doi: 10.1016/0022-1236(81)90021-5
+  first_in: synthesis
+  latex: S. M. Paneitz, Invariant convex cones and causality in semisimple Lie algebras and groups, J.
+    Funct. Anal. 43 (1981), 313--359.
+Paneitz1983:
+  citation: S. M. Paneitz, Determination of invariant convex cones in simple Lie algebras, Ark. Mat. 21
+    (1983), 217--228.
+  doi: 10.1007/BF02384311
+  first_in: synthesis
+  latex: S. M. Paneitz, Determination of invariant convex cones in simple Lie algebras, Ark. Mat. 21 (1983),
+    217--228.
+Pinsker1964:
+  citation: M. S. Pinsker, Information and Information Stability of Random Variables and Processes, Holden-Day,
+    San Francisco (1964).
+  doi: null
+  first_in: synthesis
+  latex: M. S. Pinsker, Information and Information Stability of Random Variables and Processes, Holden-Day,
+    San Francisco (1964).
+PowersStormer1970:
+  citation: R. T. Powers and E. Stormer, Free states of the canonical anticommutation relations, Commun.
+    Math. Phys. 16 (1970), 1--33.
+  doi: null
+  first_in: synthesis
+  latex: R. T. Powers and E. Stormer, Free states of the canonical anticommutation relations, Commun.
+    Math. Phys. 16 (1970), 1--33.
+Segal1976:
+  citation: I. E. Segal, Mathematical Cosmology and Extragalactic Astronomy, Academic Press, New York
+    (1976).
+  doi: null
+  first_in: synthesis
+  latex: I. E. Segal, Mathematical Cosmology and Extragalactic Astronomy, Academic Press, New York (1976).
+Takesaki1970:
+  citation: M. Takesaki, Disjointness of the KMS-states of different temperatures, Commun. Math. Phys.
+    17 (1970), 33--41.
+  doi: 10.1007/BF01649582
+  first_in: synthesis
+  latex: M. Takesaki, Disjointness of the KMS-states of different temperatures, Commun. Math. Phys. 17
+    (1970), 33--41.
+Vinberg1980:
+  citation: E. B. Vinberg, Invariant convex cones and orderings in Lie groups, Funct. Anal. Appl. 14 (1980),
+    1--10.
+  doi: 10.1007/BF01078407
+  first_in: synthesis
+  latex: E. B. Vinberg, Invariant convex cones and orderings in Lie groups, Funct. Anal. Appl. 14 (1980),
+    1--10.
+Wald1993:
+  citation: R. M. Wald, Black hole entropy is Noether charge, Phys. Rev. D 48 (1993), R3427--R3431.
+  doi: 10.1103/PhysRevD.48.R3427
+  first_in: synthesis
+  latex: R. M. Wald, Black hole entropy is Noether charge, Phys. Rev. D 48 (1993), R3427--R3431.
+WhittakerWatson1927:
+  citation: E. T. Whittaker and G. N. Watson, A Course of Modern Analysis, 4th ed., Cambridge University
+    Press, Cambridge (1927).
+  doi: null
+  first_in: synthesis
+  latex: E. T. Whittaker and G. N. Watson, A Course of Modern Analysis, 4th ed., Cambridge University
+    Press, Cambridge (1927).
+doCarmo1976:
+  citation: M. P. do Carmo, Differential Geometry of Curves and Surfaces, Prentice-Hall, Englewood Cliffs
+    (1976).
+  doi: null
+  first_in: synthesis
+  latex: M. P. do Carmo, Differential Geometry of Curves and Surfaces, Prentice-Hall, Englewood Cliffs
+    (1976).
+Raychaudhuri1955:
+  citation: A. Raychaudhuri, Relativistic cosmology. I, Phys. Rev. 98 (1955), 1123--1126.
+  doi: 10.1103/PhysRev.98.1123
+  first_in: synthesis
+  latex: 'A. Raychaudhuri, Relativistic cosmology. I, Phys. Rev. 98 (1955), 1123--1126.'
+Sachs1961:
+  citation: R. K. Sachs, Gravitational waves in general relativity. VI. The outgoing radiation condition,
+    Proc. R. Soc. Lond. A 264 (1961), 309--338.
+  doi: 10.1098/rspa.1961.0202
+  first_in: synthesis
+  latex: 'R. K. Sachs, Gravitational waves in general relativity. VI. The outgoing radiation condition,
+    Proc. R. Soc. Lond. A 264 (1961), 309--338.'
+Fixsen2009:
+  citation: D. J. Fixsen, The temperature of the cosmic microwave background, Astrophys. J. 707 (2009),
+    916--920.
+  doi: null
+  first_in: synthesis
+  latex: D. J. Fixsen, The temperature of the cosmic microwave background, Astrophys. J. 707 (2009), 916--920.
+Hasegawa2019:
+  citation: T. Hasegawa, N. Hiroshima, K. Kohri, R. S. L. Hansen, T. Tram and S. Hannestad, MeV-scale
+    reheating temperature and thermalization of oscillating neutrinos by radiative and hadronic decays
+    of massive particles, J. Cosmol. Astropart. Phys. 2019, no. 12, 012 (2019).
+  doi: 10.1088/1475-7516/2019/12/012
+  first_in: synthesis
+  latex: T. Hasegawa, N. Hiroshima, K. Kohri, R. S. L. Hansen, T. Tram and S. Hannestad, MeV-scale reheating
+    temperature and thermalization of oscillating neutrinos by radiative and hadronic decays of massive
+    particles, J. Cosmol. Astropart. Phys. 2019, no. 12, 012 (2019).
+WandsMalikLythLiddle2000:
+  citation: D. Wands, K. A. Malik, D. H. Lyth and A. R. Liddle, A new approach to the evolution of cosmological
+    perturbations on large scales, Phys. Rev. D 62 (2000), 043527.
+  doi: 10.1103/PhysRevD.62.043527
+  first_in: synthesis
+  latex: D. Wands, K. A. Malik, D. H. Lyth and A. R. Liddle, A new approach to the evolution of cosmological
+    perturbations on large scales, Phys. Rev. D 62 (2000), 043527.
+Wall2011:
+  citation: A. C. Wall, A proof of the generalized second law for rapidly changing fields and arbitrary
+    horizon slices, Phys. Rev. D 85 (2012), 104049; arXiv:1105.3445.
+  doi: 10.1103/PhysRevD.85.104049
+  first_in: synthesis
+  latex: 'A. C. Wall, A proof of the generalized second law for rapidly changing fields and arbitrary
+    horizon slices, Phys. Rev. D 85 (2012), 104049; arXiv:1105.3445.'
+CasiniTesteTorroba2017:
+  citation: H. Casini, E. Teste and G. Torroba, Modular Hamiltonians on the null plane and the Markov property
+    of the vacuum state, J. Phys. A 50 (2017), 364001; arXiv:1703.10656.
+  doi: 10.1088/1751-8121/aa7eaa
+  first_in: synthesis
+  latex: 'H. Casini, E. Teste and G. Torroba, Modular Hamiltonians on the null plane and the Markov property
+    of the vacuum state, J. Phys. A 50 (2017), 364001; arXiv:1703.10656.'
+FLPW2016:
+  citation: T. Faulkner, R. G. Leigh, O. Parrikar and H. Wang, Modular Hamiltonians for deformed half-spaces
+    and the averaged null energy condition, JHEP 09 (2016), 038; arXiv:1605.08072.
+  doi: 10.1007/JHEP09(2016)038
+  first_in: synthesis
+  latex: 'T. Faulkner, R. G. Leigh, O. Parrikar and H. Wang, Modular Hamiltonians for deformed half-spaces
+    and the averaged null energy condition, JHEP 09 (2016), 038; arXiv:1605.08072.'
+Araki1975:
+  citation: H. Araki, Relative entropy of states of von Neumann algebras, Publ. RIMS Kyoto Univ. 11 (1975),
+    no. 3, 809--833.
+  doi: 10.2977/prims/1195191148
+  first_in: synthesis
+  latex: 'H. Araki, Relative entropy of states of von Neumann algebras, Publ. RIMS Kyoto Univ. 11 (1975),
+    no. 3, 809--833.'
+Lasenby2019:
+  citation: A. N. Lasenby, Geometric algebra, gravity and gravitational waves, Adv. Appl. Clifford Algebras
+    (2019), doi:10.1007/s00006-019-0991-y; arXiv:1912.05960.
+  doi: 10.1007/s00006-019-0991-y
+  first_in: synthesis
+  latex: 'A.~N.~Lasenby, Geometric algebra, gravity and gravitational waves, \emph{Adv.\ Appl.\ Clifford
+    Algebras} (2019), arXiv:1912.05960.'
+PSSY2019:
+  citation: G. Penington, S. H. Shenker, D. Stanford and Z. Yang, Replica wormholes and the black hole
+    interior, arXiv:1911.11977 (2019; v2 2020).
+  doi: null
+  first_in: synthesis
+  latex: 'G.~Penington, S.~H.~Shenker, D.~Stanford and Z.~Yang, Replica wormholes and the black hole
+    interior, arXiv:1911.11977 (2019).'
+Lubkin1978:
+  citation: E. Lubkin, Entropy of an n-system from its correlation with a k-reservoir, J. Math. Phys. 19
+    (1978), 1028.
+  doi: 10.1063/1.523763
+  first_in: synthesis
+  latex: 'E.~Lubkin, Entropy of an $n$-system from its correlation with a $k$-reservoir, \emph{J.\ Math.\
+    Phys.} \textbf{19} (1978), 1028.'
+Pukanszky1961:
+  citation: L. Pukanszky, On the Kronecker products of irreducible representations of the 2 x 2 real
+    unimodular group. I, Trans. Amer. Math. Soc. 100 (1961), 116--152.
+  doi: null
+  first_in: synthesis
+  latex: 'L.~Pukánszky, On the Kronecker products of irreducible representations of the $2 \times 2$
+    real unimodular group.~I, \emph{Trans.\ Amer.\ Math.\ Soc.} \textbf{100} (1961), 116--152.'
+Repka1978:
+  citation: J. Repka, Tensor products of unitary representations of SL2(R), Amer. J. Math. 100 (1978),
+    747--774.
+  doi: null
+  first_in: synthesis
+  latex: 'J.~Repka, Tensor products of unitary representations of $SL_{2}(\mathbb{R})$, \emph{Amer.\
+    J.\ Math.} \textbf{100} (1978), 747--774.'
+XingZhangZhou2008:
+  citation: Z.-z. Xing, H. Zhang and S. Zhou, Updated values of running quark and lepton masses, Phys.
+    Rev. D 77 (2008), 113016.
+  doi: 10.1103/PhysRevD.77.113016
+  first_in: synthesis
+  latex: 'Z.-z.~Xing, H.~Zhang and S.~Zhou, Updated values of running quark and lepton masses,
+    \emph{Phys.\ Rev.\ D} \textbf{77} (2008), 113016.'
+Jarlskog1985:
+  citation: C. Jarlskog, Commutator of the quark mass matrices in the standard electroweak model and a
+    measure of maximal CP nonconservation, Phys. Rev. Lett. 55 (1985), 1039--1042.
+  doi: 10.1103/PhysRevLett.55.1039
+  first_in: synthesis
+  latex: 'C.~Jarlskog, Commutator of the quark mass matrices in the standard electroweak model and a
+    measure of maximal CP nonconservation, \emph{Phys.\ Rev.\ Lett.} \textbf{55} (1985), 1039--1042.'
+ChetyrkinKniehlSteinhauser1998:
+  citation: K. G. Chetyrkin, B. A. Kniehl and M. Steinhauser, Decoupling relations to O(alpha_s^3) and
+    their connection to low-energy theorems, Nucl. Phys. B 510 (1998), 61--87.
+  doi: 10.1016/S0550-3213(97)00649-4
+  first_in: synthesis
+  latex: 'K.~G.~Chetyrkin, B.~A.~Kniehl and M.~Steinhauser, Decoupling relations to
+    $O(\alpha_{s}^{3})$ and their connection to low-energy theorems, \emph{Nucl.\ Phys.\ B}
+    \textbf{510} (1998), 61--87.'
+Tarrach1981:
+  citation: R. Tarrach, The pole mass in perturbative QCD, Nucl. Phys. B 183 (1981), 384--396.
+  doi: null
+  first_in: synthesis
+  latex: 'R.~Tarrach, The pole mass in perturbative QCD, \emph{Nucl.\ Phys.\ B} \textbf{183} (1981),
+    384--396.'
+Lovelock1971:
+  citation: D. Lovelock, The Einstein tensor and its generalizations, J. Math. Phys. 12 (1971), 498--501.
+  doi: 10.1063/1.1665613
+  first_in: synthesis
+  latex: D. Lovelock, The Einstein tensor and its generalizations, J. Math. Phys. 12 (1971), 498--501.
+Lovelock1972:
+  citation: D. Lovelock, The four-dimensionality of space and the Einstein tensor, J. Math. Phys. 13 (1972),
+    874--876.
+  doi: 10.1063/1.1666069
+  first_in: synthesis
+  latex: D. Lovelock, The four-dimensionality of space and the Einstein tensor, J. Math. Phys. 13 (1972),
+    874--876.
+AndersonDuchamp1980:
+  citation: I. M. Anderson and T. Duchamp, On the existence of global variational principles, Amer. J.
+    Math. 102 (1980), 781--868.
+  doi: 10.2307/2374195
+  first_in: synthesis
+  latex: I. M. Anderson and T. Duchamp, On the existence of global variational principles, Amer. J. Math.
+    102 (1980), 781--868.
+Anderson1984:
+  citation: I. M. Anderson, Natural variational principles on Riemannian structures, Ann. of Math. (2)
+    120 (1984), 329--370.
+  doi: 10.2307/2006945
+  first_in: synthesis
+  latex: I. M. Anderson, Natural variational principles on Riemannian structures, Ann. of Math. (2) 120
+    (1984), 329--370.
+MardonesZanelli1991:
+  citation: A. Mardones and J. Zanelli, Lovelock-Cartan theory of gravity, Class. Quantum Grav. 8 (1991),
+    1545--1558.
+  doi: null
+  first_in: synthesis
+  latex: A. Mardones and J. Zanelli, Lovelock-Cartan theory of gravity, Class. Quantum Grav. 8 (1991),
+    1545--1558.
+Holst1996:
+  citation: S. Holst, Barbero's Hamiltonian derived from a generalized Hilbert-Palatini action, Phys.
+    Rev. D 53 (1996), 5966--5969; arXiv:gr-qc/9511026.
+  doi: 10.1103/PhysRevD.53.5966
+  first_in: synthesis
+  latex: S. Holst, Barbero's Hamiltonian derived from a generalized Hilbert-Palatini action, Phys. Rev.
+    D 53 (1996), 5966--5969; arXiv:gr-qc/9511026.
+Zanelli2005:
+  citation: J. Zanelli, Lecture notes on Chern-Simons (super-)gravities, arXiv:hep-th/0502193 (second
+    edition, 2008).
+  doi: null
+  first_in: synthesis
+  latex: J. Zanelli, Lecture notes on Chern-Simons (super-)gravities, arXiv:hep-th/0502193 (second edition,
+    2008).
+PerezRovelli2006:
+  citation: A. Perez and C. Rovelli, Physical effects of the Immirzi parameter, Phys. Rev. D 73 (2006),
+    044013; arXiv:gr-qc/0505081.
+  doi: 10.1103/PhysRevD.73.044013
+  first_in: synthesis
+  latex: A. Perez and C. Rovelli, Physical effects of the Immirzi parameter, Phys. Rev. D 73 (2006), 044013;
+    arXiv:gr-qc/0505081.
+FreidelMinicTakeuchi2005:
+  citation: L. Freidel, D. Minic and T. Takeuchi, Quantum gravity, torsion, parity violation and all that,
+    Phys. Rev. D 72 (2005), 104002; arXiv:hep-th/0507253.
+  doi: 10.1103/PhysRevD.72.104002
+  first_in: synthesis
+  latex: L. Freidel, D. Minic and T. Takeuchi, Quantum gravity, torsion, parity violation and all that,
+    Phys. Rev. D 72 (2005), 104002; arXiv:hep-th/0507253.
+ChernSimons1974:
+  citation: S.-S. Chern and J. Simons, Characteristic forms and geometric invariants, Ann. of Math. (2)
+    99 (1974), 48--69.
+  doi: 10.2307/1971013
+  first_in: synthesis
+  latex: S.-S. Chern and J. Simons, Characteristic forms and geometric invariants, Ann. of Math. (2) 99
+    (1974), 48--69.
+KobayashiNomizu1969:
+  citation: S. Kobayashi and K. Nomizu, Foundations of Differential Geometry, Vol. II, Interscience, New
+    York (1969).
+  doi: null
+  first_in: synthesis
+  latex: S. Kobayashi and K. Nomizu, Foundations of Differential Geometry, Vol. II, Interscience, New
+    York (1969).
+Bach1921:
+  citation: R. Bach, Zur Weylschen Relativitaetstheorie und der Weylschen Erweiterung des Kruemmungstensorbegriffs,
+    Math. Z. 9 (1921), 110--135.
+  doi: null
+  first_in: synthesis
+  latex: 'R. Bach, Zur Weylschen Relativit\"atstheorie und der Weylschen Erweiterung des Kr\"ummungstensorbegriffs,
+    Math. Z. 9 (1921), 110--135.'
+KakuTownsendVanNieuwenhuizen1977:
+  citation: M. Kaku, P. K. Townsend and P. van Nieuwenhuizen, Gauge theory of the conformal and superconformal
+    group, Phys. Lett. B 69 (1977), 304--308.
+  doi: null
+  first_in: synthesis
+  latex: M. Kaku, P. K. Townsend and P. van Nieuwenhuizen, Gauge theory of the conformal and superconformal
+    group, Phys. Lett. B 69 (1977), 304--308.
+Chamseddine1989:
+  citation: A. H. Chamseddine, Topological gauge theory of gravity in five and all odd dimensions, Phys.
+    Lett. B 233 (1989), 291--294.
+  doi: null
+  first_in: synthesis
+  latex: A. H. Chamseddine, Topological gauge theory of gravity in five and all odd dimensions, Phys.
+    Lett. B 233 (1989), 291--294.
+Chamseddine1990:
+  citation: A. H. Chamseddine, Topological gravity and supergravity in various dimensions, Nucl. Phys.
+    B 346 (1990), 213--234.
+  doi: null
+  first_in: synthesis
+  latex: A. H. Chamseddine, Topological gravity and supergravity in various dimensions, Nucl. Phys. B
+    346 (1990), 213--234.
+Hopf1927:
+  citation: H. Hopf, Vektorfelder in n-dimensionalen Mannigfaltigkeiten, Math. Ann. 96 (1927), 225--249.
+  doi: 10.1007/BF01209164
+  first_in: synthesis
+  latex: H. Hopf, Vektorfelder in n-dimensionalen Mannigfaltigkeiten, Math. Ann. 96 (1927), 225--249.
+York1972:
+  citation: J. W. York, Role of conformal three-geometry in the dynamics of gravitation, Phys. Rev. Lett.
+    28 (1972), 1082--1085.
+  doi: 10.1103/PhysRevLett.28.1082
+  first_in: synthesis
+  latex: J. W. York, Role of conformal three-geometry in the dynamics of gravitation, Phys. Rev. Lett.
+    28 (1972), 1082--1085.
+CapGoverHammerl2014:
+  citation: A. Cap, A. R. Gover and M. Hammerl, Holonomy reductions of Cartan geometries and curved orbit
+    decompositions, Duke Math. J. 163 (2014), 1035--1070.
+  doi: 10.1215/00127094-2644793
+  first_in: synthesis
+  latex: 'A.~\v{C}ap, A.~R.~Gover and M.~Hammerl, Holonomy reductions of Cartan geometries and curved orbit
+    decompositions, \emph{Duke Math.\ J.} \textbf{163} (2014), 1035--1070.'
+Mehler1866:
+  citation: 'F. G. Mehler, Ueber die Entwicklung einer Function von beliebig vielen Variablen nach Laplaceschen Functionen hoeherer Ordnung, J. Reine Angew. Math. 66 (1866), 161--176.'
+  doi: null
+  first_in: synthesis
+  latex: 'F. G. Mehler, Ueber die Entwicklung einer Function von beliebig vielen Variablen nach Laplaceschen Functionen hoeherer Ordnung, J. Reine Angew. Math. 66 (1866), 161--176.'
+Taqqu1975:
+  citation: 'M. S. Taqqu, Weak convergence to fractional Brownian motion and to the Rosenblatt process, Z. Wahrscheinlichkeitstheorie verw. Gebiete 31 (1975), 287--302.'
+  doi: null
+  first_in: synthesis
+  latex: 'M. S. Taqqu, Weak convergence to fractional Brownian motion and to the Rosenblatt process, Z. Wahrscheinlichkeitstheorie verw. Gebiete 31 (1975), 287--302.'
+DobrushinMajor1979:
+  citation: 'R. L. Dobrushin and P. Major, Non-central limit theorems for non-linear functionals of Gaussian fields, Z. Wahrscheinlichkeitstheorie verw. Gebiete 50 (1979), 27--52.'
+  doi: null
+  first_in: synthesis
+  latex: 'R. L. Dobrushin and P. Major, Non-central limit theorems for non-linear functionals of Gaussian fields, Z. Wahrscheinlichkeitstheorie verw. Gebiete 50 (1979), 27--52.'
+Wands1999:
+  citation: 'D. Wands, Duality invariance of cosmological perturbation spectra, Phys. Rev. D 60 (1999), 023507; arXiv:gr-qc/9809062.'
+  doi: 10.1103/PhysRevD.60.023507
+  first_in: synthesis
+  latex: 'D. Wands, Duality invariance of cosmological perturbation spectra, Phys. Rev. D 60 (1999), 023507; arXiv:gr-qc/9809062.'
+Brandenberger2015:
+  citation: 'R. H. Brandenberger, String gas cosmology after Planck, Class. Quantum Grav. 32 (2015), 234002; arXiv:1505.02381.'
+  doi: 10.1088/0264-9381/32/23/234002
+  first_in: synthesis
+  latex: 'R. H. Brandenberger, String gas cosmology after Planck, Class. Quantum Grav. 32 (2015), 234002; arXiv:1505.02381.'
+Sriramkumar2009:
+  citation: 'L. Sriramkumar, An introduction to inflation and cosmological perturbation theory, arXiv:0904.4584 (2009).'
+  doi: null
+  first_in: synthesis
+  latex: 'L. Sriramkumar, An introduction to inflation and cosmological perturbation theory, arXiv:0904.4584 (2009).'
+LangloisRiazuelo2000:
+  citation: 'D. Langlois and A. Riazuelo, Correlated mixtures of adiabatic and isocurvature cosmological perturbations, Phys. Rev. D 62 (2000), 043504; arXiv:astro-ph/9912497.'
+  doi: null
+  first_in: synthesis
+  latex: 'D. Langlois and A. Riazuelo, Correlated mixtures of adiabatic and isocurvature cosmological perturbations, Phys. Rev. D 62 (2000), 043504; arXiv:astro-ph/9912497.'
+ChoiSeto2012:
+  citation: 'K.-Y. Choi and O. Seto, Modulated reheating by curvaton, Phys. Rev. D 85 (2012), 123528; arXiv:1204.1419.'
+  doi: 10.1103/PhysRevD.85.123528
+  first_in: synthesis
+  latex: 'K.-Y. Choi and O. Seto, Modulated reheating by curvaton, Phys. Rev. D 85 (2012), 123528; arXiv:1204.1419.'
+Planck2018X:
+  citation: 'Y. Akrami et al. (Planck Collaboration), Planck 2018 results. X. Constraints on inflation, Astron. Astrophys. 641 (2020), A10; arXiv:1807.06211.'
+  doi: 10.1051/0004-6361/201833887
+  first_in: synthesis
+  latex: 'Y. Akrami et al. (Planck Collaboration), Planck 2018 results. X. Constraints on inflation, Astron. Astrophys. 641 (2020), A10; arXiv:1807.06211.'
+DLMF:
+  citation: 'F. W. J. Olver et al. (eds.), NIST Digital Library of Mathematical Functions, https://dlmf.nist.gov, Release 1.2.'
+  doi: null
+  first_in: synthesis
+  latex: 'F. W. J. Olver et al. (eds.), NIST Digital Library of Mathematical Functions, https://dlmf.nist.gov, Release 1.2.'
+Kaluza1921:
+  citation: 'T. Kaluza, Zum Unitaetsproblem der Physik, Sitzungsber. Preuss. Akad. Wiss. Berlin (Math. Phys.) 1921, 966--972.'
+  doi: null
+  first_in: synthesis
+  latex: 'T. Kaluza, Zum Unitaetsproblem der Physik, Sitzungsber. Preuss. Akad. Wiss. Berlin (Math. Phys.) 1921, 966--972.'
+Klein1926:
+  citation: 'O. Klein, Quantentheorie und fuenfdimensionale Relativitaetstheorie, Z. Phys. 37 (1926), 895--906.'
+  doi: null
+  first_in: synthesis
+  latex: 'O. Klein, Quantentheorie und fuenfdimensionale Relativitaetstheorie, Z. Phys. 37 (1926), 895--906.'
+OverduinWesson1997:
+  citation: 'J. M. Overduin and P. S. Wesson, Kaluza-Klein gravity, Phys. Rep. 283 (1997), 303--378; arXiv:gr-qc/9805018.'
+  doi: null
+  first_in: synthesis
+  latex: 'J. M. Overduin and P. S. Wesson, Kaluza-Klein gravity, Phys. Rep. 283 (1997), 303--378; arXiv:gr-qc/9805018.'
+FLAG2024:
+  citation: 'Y. Aoki et al. (Flavour Lattice Averaging Group), FLAG Review 2024, arXiv:2411.04268.'
+  doi: 10.1103/nfzp-p5dn
+  first_in: synthesis
+  latex: 'Y. Aoki et al. (Flavour Lattice Averaging Group), FLAG Review 2024, arXiv:2411.04268.'
+FritzschXing1999:
+  citation: 'H. Fritzsch and Z.-z. Xing, The light quark sector, CP violation, and the unitarity triangle, Nucl. Phys. B 556 (1999), 49--75; arXiv:hep-ph/9904286.'
+  doi: 10.1016/S0550-3213(99)00337-5
+  first_in: synthesis
+  latex: 'H. Fritzsch and Z.-z. Xing, The light quark sector, CP violation, and the unitarity triangle, Nucl. Phys. B 556 (1999), 49--75; arXiv:hep-ph/9904286.'
+Sumino2009b:
+  citation: 'Y. Sumino, Family gauge symmetry as an origin of Koide''s mass formula and charged lepton spectrum, arXiv:0903.3640 (2009), report TU-842.'
+  doi: null
+  first_in: synthesis
+  latex: 'Y. Sumino, Family gauge symmetry as an origin of Koide''s mass formula and charged lepton spectrum, arXiv:0903.3640 (2009), report TU-842.'
+HarrisonScott2002:
+  citation: 'P. F. Harrison and W. G. Scott, mu-tau reflection symmetry in lepton mixing and neutrino oscillations, Phys. Lett. B 547 (2002), 219--228; arXiv:hep-ph/0210197.'
+  doi: 10.1016/S0370-2693(02)02772-7
+  first_in: synthesis
+  latex: 'P. F. Harrison and W. G. Scott, mu-tau reflection symmetry in lepton mixing and neutrino oscillations, Phys. Lett. B 547 (2002), 219--228; arXiv:hep-ph/0210197.'

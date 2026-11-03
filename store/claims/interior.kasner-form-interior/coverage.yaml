@@ -1,0 +1,18 @@
+functions:
+  check_synchronous_derived_metric_and_free_fall:
+    kind: sampled
+    clauses: ["derived metric diagonal d tau^2 - A dt^2 - r^2 dOmega^2", "radial worldline velocity is D-parallel"]
+    omits: "three sample points; tau(r) as the integral of A^(-1/2) with the singularity at tau = 0 is not tested here"
+  check_tau_series_and_inversion:
+    kind: exact
+    clauses: ["tau(r) = (2/3) r^(3/2) (1 + (3/10) r + O(r^2))", "r = R (1 - R/5 + O(R^2))"]
+    omits: "exact power-series coefficients to order rho^12 (residual vanishes below rho^6 and is nonzero at rho^6); no bound on the remainder beyond the truncation"
+  check_kasner_exponents_of_the_approach:
+    kind: exact
+    clauses: ["sqrt(A) ~ tau^(-1/3) and r ~ tau^(2/3) to leading order", "(p_1, p_2, p_3) = (-1/3, 2/3, 2/3)", "p_1 + p_2 + p_3 = 1", "p_1^2 + p_2^2 + p_3^2 = 1"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Series coefficients 2/3, 3/10 and -1/5 and exponents (-1/3, 2/3, 2/3) are computed exactly and match the statement."

@@ -1,0 +1,22 @@
+functions:
+  check_commuting_automorphisms_fix_gibbs:
+    kind: sampled
+    clauses: ["(1) if theta commutes with the flow it fixes every Gibbs state of K"]
+    omits: "K = diag(0,1) only; the intertwiner kernel for d = 0 is exact (diagonal matrices) but non-invertibility is tested for d in {1, -1, 1/2} only; two diagonal unitaries and two Gibbs values x = 9/16, 16/9, not every beta"
+  check_reversing_automorphisms_flip_beta:
+    kind: sampled
+    clauses: ["(2) if theta reverses the flow then omega_beta o theta = omega_{-beta}"]
+    omits: "K = diag(0,1) only; anti-diagonal kernel exact for d = 1, non-invertibility for d in {0, 2, -1} only; two anti-diagonal unitaries and two values of x"
+  check_reparametrisation_rescales_beta:
+    kind: sampled
+    clauses: ["(3) under alpha_t -> alpha_{ct} the beta-KMS state is the (beta/c)-KMS state of the reparametrised flow"]
+    omits: "c = 2 only, at x = 9/16 and 16/9 (so that x^(1/2) is rational); c > 0 general and the unchanged-state wording are not enumerated"
+  check_only_orientation_flip_intertwines:
+    kind: sampled
+    clauses: ["(4) no automorphism intertwining the flow carries omega_beta to omega_beta' for |beta'| != |beta|", "the automorphism group acts on the line of KMS states with orbits {beta, -beta}"]
+    omits: "the spectrum condition {0,1} = {d, c+d} giving (c,d) = (1,0), (-1,1) is solved exactly by a case split, but non-existence for other c is checked at four values of c, and injectivity of the Gibbs map on five samples; the final interpretive sentences (a point on the line is a stipulation or outside data) are not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact rational checks on Mat_2 with K = diag(0,1) and sample betas; clause (4) additionally needs the whole-line argument, covered here only by the exact spectrum classification"

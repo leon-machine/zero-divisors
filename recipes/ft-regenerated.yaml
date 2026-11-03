@@ -1,0 +1,51 @@
+doc: ft-regenerated
+title: 'One Complex Unit: The Field Theory of the Transport Series, from the CAR Limit to the Photon (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- field-theory.imported-tower-limit
+- field-theory.imported-statistics-no-go-palatial-algebra
+- field-theory.imported-one-datum-massive-law
+- field-theory.imported-standard-field-theory
+- field-theory.ground-does-not-attach-modes
+- field-theory.twistor-attachment
+- field-theory.boost-modes
+- field-theory.path-integral-inside-tower
+- field-theory.where-each-lives
+- obj.field-theory.single-algebra-field
+- field-theory.second-quantisation
+- field-theory.mass
+- field-theory.contact-interactions-tower
+- field-theory.no-canonical-commutation-relations-tower
+- field-theory.composite-scalars-mean-field-level
+- field-theory.composite-gauge-bosons-what-excluded
+- field-theory.elementary-photon-ga
+- field-theory.fock-space-maxwell-modes
+- field-theory.coupled-system-tree-level
+- field-theory.how-close-tower-comes-ccr
+- field-theory.conserved-numbers-mass-block
+- field-theory.operator-newtonian-coupling
+- field-theory.assignments-survive
+- field-theory.orientation-relocated
+show: spine-only
+paper: FT
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../Claude outputs/ga_field_theory_note_2026-10-16/FT_one_complex_unit.tex
+  note: Recreate FT from the store
+cite: []
+prose: paper

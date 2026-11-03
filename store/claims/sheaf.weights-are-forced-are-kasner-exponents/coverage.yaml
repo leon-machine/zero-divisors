@@ -1,0 +1,18 @@
+functions:
+  check_cometric_and_its_orders:
+    kind: sampled
+    clauses: ["derived cometric on the Schwarzschild coordinate coframe (setup for (1), (2))"]
+    omits: "diagonal cometric and the order identities r G_rr = 1 - r, G_tt/r = -1/(1-r), r^2 G_thth = -1 compared at 4 radii x 2 angles; not a statement clause itself"
+  check_weights_forced_per_profile:
+    kind: sampled
+    clauses: ["(1)", "(2)", "other slot assignments exist, e.g. (1, -1/2, 1)"]
+    omits: "scans 729 half-integer triples (not all real a_i); uniqueness over Q^3 rests on a typed matrix 2I, and the entry orders (-1, 1, -2) are hard-coded rather than taken from check_cometric_and_its_orders"
+  check_exceptional_weights_are_kasner_exponents:
+    kind: exact
+    clauses: ["exceptional weights are the Kasner exponents (-1/3, 2/3, 2/3)", "sum p_i = sum p_i^2 = 1"]
+    omits: "exact arithmetic, but the weights (-1/2, 1, 1) and the proper-time exponent a_r + 1 = 3/2 are typed in, not taken from the forced solutions of check_weights_forced_per_profile"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both forced profiles and the Kasner conversion are checked at the stated values; uniqueness is scan plus rank rather than a derivation."

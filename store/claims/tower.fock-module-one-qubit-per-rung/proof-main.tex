@@ -1,0 +1,25 @@
+\emph{The action.} $W_k$ is isotropic (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}) of dimension $k$, maximal since the split form $H_1 \perp \cdots \perp H_k$ has Witt index $k$ (\claimref{std-algebra.witt-decomposition}). Define, for $\xi \in \Lambda^\bullet W_k$,
+\[
+c(v_j)\,\xi = v_j \wedge \xi, \qquad c(w_j)\,\xi = \iota_{\varphi_j}\,\xi, \qquad \varphi_j := 2\langle w_j, \cdot\,\rangle|_{W_k} \in W_k^* ,
+\]
+so $\varphi_j(v_i) = \delta_{ij}$, and extend linearly to arbitrary vectors $\alpha = \sum_j (a_j v_j + b_j w_j)$.
+
+\emph{The three anticommutator families,} elementary and proved outright. Wedge operators square to zero and pairwise anticommute, since $v \wedge v' = -v' \wedge v$ and $v \wedge v = 0$. The contraction $\iota_\varphi$ acts on monomials by
+\[
+\iota_\varphi(u_1 \wedge \cdots \wedge u_s) \;=\; \sum_{i=1}^{s} (-1)^{i-1}\, \varphi(u_i)\; u_1 \wedge \cdots \widehat{u_i} \cdots \wedge u_s .
+\]
+Two contractions anticommute: in $\iota_\varphi \iota_\psi + \iota_\psi \iota_\varphi$ applied to a monomial, the term deleting $u_j$ then $u_i$ (with $i < j$) in the first composite carries the sign
+\[
+(-1)^{j-1}(-1)^{i-1},
+\qquad \text{against} \qquad
+(-1)^{i-1}(-1)^{j-2}
+\]
+for the matching term of the second composite, which deletes $u_i$ then $u_j$; the shift by one arises because removing $u_i$ first moves $u_j$ up a slot, and the opposite signs cancel the terms pairwise. The mixed anticommutator: the displayed expansion gives $\iota_\varphi(v \wedge \xi) = \varphi(v)\,\xi - v \wedge \iota_\varphi(\xi)$ (the $i = 1$ term, then the rest), so $\{v \wedge \cdot\,,\, \iota_\varphi\} = \varphi(v)\,\mathrm{id}$.
+
+\emph{The Clifford relation, and the isomorphism.} Combining the three families,
+\[
+c(\alpha)^2 = \Bigl(\sum_j b_j \varphi_j\Bigr)\Bigl(\sum_i a_i v_i\Bigr)\,\mathrm{id} = \sum_j a_j b_j\,\mathrm{id} = Q(\alpha)\,\mathrm{id},
+\]
+since $Q(\alpha) = \sum_j 2 a_j b_j \langle v_j, w_j\rangle = \sum_j a_j b_j$. By the universal property (\claimref{std-algebra.existence-uniqueness}) $c$ extends to an algebra map $B_k \to \End(\Lambda^\bullet W_k)$. It is unital and nonzero with simple source ($B_k \cong \Mat_{2^k}(\R)$, Theorem \claimref{tower.commuting-copies}), hence injective; source and target both have dimension $2^{2k} = (2^k)^2$, so it is an isomorphism, and the module is irreducible.
+
+\emph{Vacuum, cyclicity, doubling.} The vacuum $1 \in \Lambda^0$ is sent to zero by every contraction and generates everything under wedges: $v_{i_1} \wedge \cdots \wedge v_{i_r} = c(v_{i_1}) \cdots c(v_{i_r})\,1$. The doubling statement is the exterior algebra of a direct sum.

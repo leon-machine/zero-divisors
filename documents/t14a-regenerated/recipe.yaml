@@ -1,0 +1,63 @@
+doc: t14a-regenerated
+title: 'One Dimension at a Time: The Odd Extensions of the Oriented Towers: Companion
+  note to T14: what a single added generator does, and what the cosmological constant
+  is to the ascent (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- odd-extensions.imported-towers-clock
+- odd-extensions.imported-representatives-dimension-nearest-four-types
+- odd-extensions.imported-copy-theorem-soldered-residue
+- odd-extensions.imported-conformal-completion
+- odd-extensions.imported-frozen-point
+- odd-extensions.imported-frozen-point-external
+- obj.odd-extensions.single-extension
+- odd-extensions.volume-element-odd-dimension
+- odd-extensions.doubling-or-complexification
+- odd-extensions.four-extensions-oriented-pair
+- odd-extensions.mirror-inside-complexified-extension-absent-doubled
+- odd-extensions.translation-bivectors-frozen-point
+- odd-extensions.twistor-algebra
+- odd-extensions.copy-theorems-blind-spot
+- odd-extensions.four-extensions-are-four-odd-towers
+- odd-extensions.every-path-mirror-crosses-two-time
+- odd-extensions.imported-frozen-point-degenerate-algebras
+- odd-extensions.are-ascents-pair-signed
+- odd-extensions.cosmological-constant-deforms-wall
+- odd-extensions.belongs-tower
+- odd-extensions.two-readings-which-which
+- odd-extensions.not-coupling-between-towers
+- odd-extensions.imported-minimal-completion-degenerate-algebra-rule
+- odd-extensions.transport-constrains-frozen-point-only-through
+- odd-extensions.cosmological-constant-undetermined-within-series
+- odd-extensions.boost-dilation-ratio-gauge
+- odd-extensions.two-towers-one-curved-universe
+- odd-extensions.imported-tame-walls-exceptional-algebra-residue
+- odd-extensions.line-tame-wall
+- odd-extensions.exceptional-algebra-residue-completion-both-sides
+- odd-extensions.two-classes-completion
+show: spine-only
+paper: T14a
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T14a_odd_extensions.tex
+  note: Recreate T14a from the store
+cite:
+- dark-energy.point-infinity-has-no-physical-fluctuation
+prose: paper
+msc: Primary 15A66, 83F05; Secondary 83C05, 81R25.
+keywords: Clifford algebras in odd dimension; de Sitter and anti-de Sitter algebras;
+  mirror matter; MacDowell-Mansouri gravity; Clifford clock.

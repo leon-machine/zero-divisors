@@ -1,0 +1,61 @@
+doc: t08-regenerated
+title: 'Black-Hole Entropy and Scrambling: The Singularity Ledger and the No-Echo Prediction (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- pred.boundary-mode-density
+- scrambling.imported-modes-modular-inventory
+- obj.scrambling.stretched-singularity
+- scrambling.scheme-robustness-cutoff
+- scrambling.slice-volume-exactly-per-unit-killing
+- scrambling.mode-count
+- scrambling.area-law-test
+- scrambling.uniqueness-internal-scaling
+- scrambling.clock-inventory-boundary-modes
+- scrambling.epoch-modular-period-two-unknowns-become
+- scrambling.integer-holographic-form-identification
+- scrambling.imported-collars-coframe-exceptional-set-helicity
+- scrambling.exact-factorisation-thinning
+- scrambling.candidate-principles-their-yields
+- scrambling.exactness-excludes-cutoff-dependence
+- scrambling.pair-mode-qubit-one-object
+- scrambling.residue-each-convention
+- scrambling.no-recount-reaches-quarter
+- scrambling.imported-time-plane-modular-data
+- scrambling.boundary-mode-space-matrix
+- scrambling.imported-kostant-madore-partition-data
+- scrambling.principality-indifference-sphere
+- scrambling.consistency-car-construction-i-states-insensitivity
+- scrambling.per-slice-verification-two-failed-aggregations
+- scrambling.spreading-law-chaos-bound-saturated
+- scrambling.return-delay-scrambling-log-recovered
+- scrambling.no-attic-route
+- scrambling.no-echo-prediction-registered
+- scrambling.catalogue-confronted
+show: spine-only
+paper: T08
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T08_entropy_scrambling.tex
+  note: Recreate T08 from the store
+cite:
+- tower.witt-index-quantum-capacity
+- interior.imported-schwarzschild-curvature-spectrum
+- singularity.causal-epoch-computed-exactly
+prose: paper
+msc: Primary 83C57, 81T05; Secondary 83C47, 81R10, 81P40.
+keywords: black hole entropy; stretched singularity; modular period; fuzzy sphere; Kostant principal embedding; fast scrambling; chaos bound; gravitational-wave echoes.

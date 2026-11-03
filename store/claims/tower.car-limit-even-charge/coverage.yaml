@@ -1,0 +1,24 @@
+functions:
+  check_tower_vectors_satisfy_the_car:
+    kind: sampled
+    clauses:
+    - the mode operators are represented by the adjoined null vectors themselves (a_j = w_j, a_j^dag = v_j = a_j^*)
+    omits: Grounds in CAR_GROUNDS and k <= 3 only; real GA floors with the intrinsic *, no complexification or C*-completion
+  check_fock_adjointness:
+    kind: sampled
+    clauses:
+    - w_j = v_j^* for the Fock inner product
+    - Cl(p,q)_C (x) CAR (finite Fock faithfulness)
+    omits: k <= 4 on the plane algebra (k <= 3 for rho(x*) = rho(x)^T) and one even ground Cl(1,1) with k <= 2; real GA, the unique C*-norm and the completion are not tested
+  check_ground_factor_commutes_and_correctors_unitary:
+    kind: sampled
+    clauses:
+    - 'the result is Cl(p,q)_C (x) CAR (tensor factorisation: ground commutes with modes, correctors unitary)'
+    omits: Grounds (1,3), (2,0), (1,1) with k <= 2 only; the C*-completion, Glimm uniqueness and CAR uniqueness are not recomputed
+untouched_premises:
+  tower.glimms-classification-car-uniqueness: literature fact (Glimm UHF classification and CAR uniqueness) with no finite content; the check docstring says it is not recomputed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Finite-stage CAR, adjointness and tensor-factor commutation are tested on chosen grounds; completion and uniqueness are cited facts.

@@ -1,0 +1,26 @@
+functions:
+  check_bracket_transforms_by_determinant:
+    kind: sampled
+    clauses:
+    - '"<pi1 pi2> -> det(U) <pi1 pi2>"'
+    - '"SU(2) singlet, charge one under det, charge two under the scalar phase"'
+    omits: Twelve exact Gaussian-rational unitaries and six spinor pairs; the identity is not shown symbolically for all U in U(2)
+  check_modulus_is_mass_phase_is_gauge:
+    kind: sampled
+    clauses:
+    - '"its modulus is the mass"'
+    - '"its phase is pure gauge under the U(1)"'
+    - '"it vanishes exactly on the massless locus"'
+    omits: Same twelve unitaries and six pairs plus one aligned pair; the pure-gauge claim is one explicit diagonal unitary making a bracket 3 + 4i real
+  check_hypercharge_weight_six_singlet:
+    kind: exact
+    clauses:
+    - '"the bracket transforms as (1,1) with abelian weight 6, Y = +1: the quantum numbers of e^c, not a weak doublet"'
+    omits: The excited-composite remark is explicitly undefined in the statement; the check enumerates all (j,k) with Lambda^j C^2 (x) Lambda^k C^3 for weight 6
+untouched_premises:
+  standard-model.imported-pair-systems-two-chirality-halves: declared premise (spinors as pair-system vacua) with no computable role in these identities, as the docstring says
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Algebraic clauses are sampled at exact unitaries and spinor pairs; the quantum numbers are an exact weight computation. The module docstring says (3) makes no premise() call, but the function does call the global-form premise (docstring is stale).

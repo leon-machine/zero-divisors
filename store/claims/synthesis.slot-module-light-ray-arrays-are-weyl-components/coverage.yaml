@@ -1,0 +1,25 @@
+functions:
+  check_mass_terms_enter_only_the_constraint:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "k^2 = 0, k m = 2 + 2B, the splitting of each gamma_mu along k, m and the transverse plane, k anticommuting with gamma_1, gamma_2, rank(L_k Lambda(k)) = 0, rank(L_k Lambda(m)) = 4 and rank(L_k R_X Lambda(k)) = 0 for all sixteen basis blades X, by exact rank; that Lorentz-covariant mass terms are right multipliers, the integration of the constraint along a generator and the anticommutator of the free data are argued in the proof, not computed"
+  check_canonical_projector_is_residue_zero_ideal:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "f = (1 + gamma_0 gamma_3)/2 equals Lambda(m), f^2 = f, f(1 - f) = 0, (gamma_0 gamma_3)^2 = 1, m f = 0 and k f != 0; the massive two-constituent statement of the residue-0 claim is cited, not recomputed"
+  check_sixteen_weyl_components_every_halving:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the 32 exterior basis states with their weights from exact number operators, the five conjugate pairs of isotypic components, all 32 sign patterns with each of the two coordinate neutral lines (64 halvings): dim V_+ = dim V_- = 16 and V_- = conj V_+ on weights; the array entropy (1/2) ln 2 is entered as the cited value; that the halvings commuting with the gauge algebra are exactly these is the cited theorem, not recomputed; other lines in the neutral block are argued to have the same weights"
+  check_particle_half_is_chiral:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "for all 64 halvings no nonzero weight (T3, colour, Y) of V_+ has its negative in V_+ and the zero weight occurs once; V itself is vector-like (contrast); the hypercharge histogram of the anomaly-free half and its zero sum; the reading of a Dirac field as R plus conj(R) in left-handed content is argued, not computed"
+  check_electroweak_pairing_and_neutrino_cases:
+    kind: exact
+    clauses: ["(iv)", "(ii)"]
+    omits: "the pairing by (charge, colour) gives 7 charged Dirac pairs and 2 neutral components; the counts 2 n_D + n_W = 16 for (7, 2) and (8, 0); the fifteen-component generation gives (7, 1) and 15/2 units; the Takagi argument for two Majorana fields at M != 0 is in the proof, not computed"
+  check_generations:
+    kind: exact
+    clauses: ["(ii)", "(iii)"]
+    omits: "for N_g = 1 to 4 copies of the anomaly-free half: 16 N_g arrays, 8 N_g units, no nonzero weight paired with its negative, N_g zero weights"

@@ -1,0 +1,1719 @@
+# Settled open problems, removed from the open list on 2026-10-23 at Leon's request.
+# Kept as the record of how each was settled; claims may still name these ids in extraction.open_problem.
+- id: op.derive-c-loc
+  title: Derive the local-horizon premise, or prove the conditional derivation of Einstein's equations
+  area: einstein
+  kind: research
+  difficulty: frontier
+  status: settled
+  source: Maintainer decision of 22 October (the local-horizon premise); the Einstein-route results of 22 October
+  statement: Premise (C$_{\mathrm{loc}}$) (\claimref{synthesis.c-loc-local-horizon-premise}) places the boundary-mode
+    count, the series' horizon temperature and its modular flow on local non-Killing horizons and small causal diamonds.
+    Either derive it from the series' structure, or take it as given and write the conditional derivation of Einstein's
+    equations from it and Jacobson's 1995 Clausius argument (the imported Fact synthesis.imported-jacobson-clausius-1995),
+    and prove that derivation in the store.
+  why: 'Without it the series has Einstein''s condition restated, not derived: every Einstein-route result in the
+    store names a count, temperature or modular flow on local horizons as the missing step, and the black-hole data
+    alone cannot separate Einstein''s theory from its Ricci-polynomial extensions.'
+  known: 'The Einstein condition is the standard null-cone form translated into vacuum language, infinity vacua
+    unexcited along their own light rays, a translation and not a derivation (\claimref{synthesis.einstein-condition-is-infinity-vacuum-incidence}).
+    On Jacobson''s Clausius route the epoch count returns Newton''s constant only through the area-law condition
+    that already fixes the registered $\nu$, a consistency, and the store places counts only on Killing horizons
+    (\claimref{synthesis.clausius-route-newton-constant-is-residue}). Black-hole thermodynamic data hold unchanged
+    in every Ricci-polynomial extension of Einstein''s theory (\claimref{synthesis.black-hole-data-do-not-fix-field-equations}).
+    The boundary-mode algebra gives the first law of entanglement on its own windows but not the small-ball state,
+    area density or diamond flow that Jacobson''s 2016 step needs (\claimref{synthesis.boundary-mode-first-law-of-entanglement}).
+    Settled by its first alternative: Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius} proves
+    Einstein''s equations with $\Lambda$ an integration constant and $G_{\mathrm{cl}} = 1/(4\eta)$ from (C$_{\mathrm{loc}}$),
+    the Clausius relation and named geometric hypotheses. Analysis of the premise''s version 1: its modular-flow
+    clause is its temperature clause on the whole mode algebra and its geometric reading contradicts a point-spectrum
+    mode set (\claimref{synthesis.local-boost-temperature-is-local-regularity}, \claimref{synthesis.c-loc-modular-clause-moves-no-nested-patch});
+    the entropy clause is one universal constant, $1/4$ with no count, exactly when the density ignores curvature
+    and matter at the point (\claimref{synthesis.c-loc-entropy-clause-curvature-independent-density}); horizon and
+    cutoff placements must be one mode set (\claimref{synthesis.c-loc-is-a-second-placement-of-the-count}). The
+    premise was restated as (Loc) and (R$_{\mathrm{loc}}$) (version 2). Deriving those two clauses is op.derive-loc-and-r-loc.'
+  attack:
+  - 'Write the conditional derivation: from (C$_{\mathrm{loc}}$)(i) and (ii) and the Clausius relation for matter
+    flux, follow Jacobson''s argument to $G_{ab} + \Lambda g_{ab} = (2\pi/\eta)T_{ab}$ and file it as a proved claim
+    that assumes the premise and uses the imported Fact.'
+  - 'Derive clause (ii) on small diamonds from the selected state: test whether the restriction of the series''
+    state to the modes of a small diamond is KMS for the diamond''s conformal Killing flow at leading order, starting
+    from the Hislop-Longo clause the store imports for conformal fields.'
+  - Test the universality of $\eta$ that clause (i) asserts against the literal count for spinning holes (\claimref{synthesis.kerr-ring-count-misses-area-law}),
+    which misses the area law.
+  success: A proved claim deriving Einstein's equations with $\Lambda$ an integration constant under (C$_{\mathrm{loc}}$),
+    or a derivation of (C$_{\mathrm{loc}}$) itself; or a result meeting the premise's refutation condition.
+  entities:
+  - synthesis.c-loc-local-horizon-premise
+  - synthesis.clausius-route-newton-constant-is-residue
+  - synthesis.black-hole-data-do-not-fix-field-equations
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence
+  - synthesis.boundary-mode-first-law-of-entanglement
+  - scrambling.epoch-modular-period-two-unknowns-become
+  - hawking.i-state
+  - synthesis.kerr-ring-count-misses-area-law
+  added: '2026-10-22'
+- id: op.rule-2-sign
+  title: What selects the sign of the adjoined generator
+  area: completion
+  kind: research
+  difficulty: frontier
+  status: settled
+  source: "T17, open direction 7; T17 Rule 2 note, what has been exercised"
+  statement: >-
+    The Rule 2 repair of a split extension fuses its two ideals by one more
+    generator whose square the fused algebra forgets: $\Cl(2,4)$ (a boost,
+    $\nu^2 = +1$) or $\Cl(1,5)$ (a rotation, $\nu^2 = -1$). Find a physical
+    system, or principle, in which the fused direction and its sign are forced
+    dynamically rather than by the representation theory of the fermions.
+  why: >-
+    The series' choice of $\Cl(2,4)$, and so of the conformal completion
+    every later paper uses, rests on T01's vector-level minimality argument
+    alone; a dynamical selection would ground the root choice.
+  known: >-
+    The kinematic exercise is delivered: of the two one-dimensional extensions
+    of an even-dimensional algebra exactly one obstructs, its ideals are
+    copies of the base, and the opposite-sign repair is the Rule 1 ascent
+    (\claimref{rule2.where-obstruction-sits-commuting-square}); the
+    five-dimensional Kaluza-Klein algebra and planar fermions are physical
+    instances. The bit is read, not decided
+    (\claimref{note.rule2.forgotten-bit-read},
+    \claimref{rule2.imported-rule-2-matrix-units-forgotten}): the geometry
+    tells the two repairs apart by whether the adjoined plane carries a null
+    vector. Relative to the split extension, the fused directions of either
+    repair form a plane on which the square is Lorentzian with the Rule 2
+    matrix units as null lines, so no principle on the fused algebra and the
+    extension alone fixes $\nu^{2}$
+    (\claimref{synthesis.rule-2-fusing-plane-lorentzian}). A physical
+    requirement does. With the imported classification of invariant cones
+    (\claimref{synthesis.imported-invariant-cone-classification}), the
+    spectrum condition (a generator bounded below, nontrivial on the identity
+    component) can hold for $\mathfrak{so}(2,4)$ and $\mathfrak{so}(4,2)$,
+    whose maximal compact subalgebra has a central rotation, and fails for
+    $\mathfrak{so}(1,5)$ and $\mathfrak{so}(3,3)$; so positive energy selects
+    the opposite-sign repair, the Rule 1 ascent with $\nu^{2} = +1$, and
+    returns $\Cl(2,4)$ for our tower in either signature convention
+    (\claimref{synthesis.positive-energy-selects-rule-2-sign}). The success
+    clause is met. Conditions: one imported theorem; the selection is a
+    condition on the spin group built from a chosen vector slot, not on the
+    abstract fused algebra, and it is not derived from equations of motion.
+    The root choice now rests on the spectrum condition rather than on
+    minimality alone.
+  attack:
+    - >-
+      Settled. One follow-up: prove that the conformal energy of the twistor
+      attachment is generated by the central rotation $Z = e_{0}\nu$, an
+      identification the selection argues but does not need.
+  success: >-
+    A principle that fixes $\nu^2$ from a physical requirement and returns
+    $\Cl(2,4)$ for our tower, or a demonstration that no dynamical principle
+    available to the series can, which would leave the root choice a
+    declared minimality postulate.
+  entities:
+    - rule2.where-obstruction-sits-commuting-square
+    - rule2.imported-rule-2-matrix-units-forgotten
+    - note.rule2.forgotten-bit-read
+    - synthesis.positive-energy-selects-rule-2-sign
+    - synthesis.rule-2-fusing-plane-lorentzian
+    - synthesis.imported-invariant-cone-classification
+    - note.rule2.setting-what-has-been-exercised-what
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- one relation
+
+- id: op.mirror-reversal-at-tower-top
+  title: Does the top of the tower distinguish r from -r
+  area: tower
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: "seed/SYNTHESIS_GAPS.md B2 (the open remainder of q.tower.odd-charge)"
+  statement: >-
+    The pair $(\varinjlim T_k, B_\infty)$, the tower's limit with its plane
+    algebra, determines the even ground algebra $\Cl^0(p,q)$ and so the
+    residue up to $r \mapsto -r$. Decide whether the pair, as an inclusion and
+    not only through its commutant, also distinguishes $r$ from $-r$.
+  why: >-
+    The reversal is exactly the orbit along which P2 equates towers; whether
+    the limit itself separates this tower from its mirror bears on whether
+    "which of 2, 6 is visible" is indexical, as P2 declares, or recorded in
+    the algebra.
+  known: >-
+    The bare limit forgets the residue entirely: every tower's limit is the
+    same CAR algebra (\claimref{synthesis.tower-limit-forgets-residue}, which
+    settles \claimref{q.tower.odd-charge}). The relative commutant of the
+    planes is exactly $\Cl^0(p,q)$, which fixes $n$, the parity of $r$, $r$
+    mod 4 for $n$ even, and the class $\{r, -r\}$, and no more, since
+    $\Cl^0(p,q) \cong \Cl^0(q,p)$
+    (\claimref{synthesis.plane-commutant-even-ground}). As an inclusion the
+    pair does not distinguish $r$ from $-r$: an explicit pair isomorphism
+    $L_{p,q} \to L_{q,p}$ sends each ground generator $x_{i}$ to $y_{i}e_{1}$
+    and re-pairs the planes, shifting every floor by one, so tower-top pairs
+    are classified by $n$ and $\pm r \bmod 8$
+    (\claimref{synthesis.tower-top-pair-forgets-reversal}); that isomorphism
+    meets the success clause. Over $\R$ the sign of $r$ lives in the grading:
+    the plane algebra's own grading recovers the odd ground part, and
+    isomorphisms that respect it, keep the individual planes, or fix the
+    ground under a phase clock with no zero mode separate $r$ from $-r$ for $r
+    \not\equiv 0, 4 \pmod 8$, though not over $\C$
+    (\claimref{synthesis.plane-grading-records-residue-sign}). Rule 2's
+    $\nu^{2}$ is recorded at the top: for $r \equiv 1 \pmod 4$ the two
+    repairs' residues $r \pm 1$ are never congruent up to sign modulo $8$. So
+    the reversal along which P2 equates towers is invisible to the ungraded
+    pair, as P2's indexical reading needs, and visible only to a grading or a
+    framing by the planes.
+  attack:
+    - >-
+      Settled. One consequence to carry: a phase clock with no zero mode (for
+      instance weights $\kappa(k + \tfrac12)$, one of the two offsets of
+      op.array-offset) fixes the ground and so records the sign of $r$;
+      whether the descent's clock has a zero mode bears on P2's indexical
+      reading.
+  success: >-
+    An invariant of the pair that separates $(p,q)$ from $(q,p)$, or an
+    isomorphism of pairs carrying one to the other.
+  entities:
+    - synthesis.plane-commutant-even-ground
+    - synthesis.tower-limit-forgets-residue
+    - synthesis.tower-top-pair-forgets-reversal
+    - synthesis.plane-grading-records-residue-sign
+    - q.tower.odd-charge
+    - tower.commuting-copies
+    - dark-matter.p2-indifference
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- thermality
+
+- id: op.folded-state-selection-note
+  title: One decision on the notes folded into T05
+  area: thermality
+  kind: housekeeping
+  difficulty: tractable
+  status: settled
+  source: "BUILD_REPORT, Leon's decisions carried out (21 October, night); seed/CONTRADICTIONS_STRUCTURE.md M9 and L12"
+  statement: >-
+    Twelve same-title pairs remain between T05 and the state-selection
+    note, whose results were folded into T05. They need one decision for
+    folded notes as a whole: merge each pair and retire one id (as was done
+    for T05 Thm C.3 and the three-routes note's Thm 2.4), or keep both and
+    record the differences.
+  why: >-
+    Two premises called (R) with different content are among the pairs: T05's
+    asserts KMS at the geometric period, the note's asserts regularity of the
+    two-point functions at the fixed locus, and restatements elsewhere cite
+    "(R)" without saying which. The two definitions of the geometric modular
+    condition differ on faithfulness.
+  known: >-
+    Settled on 22 October. The duplicate pairs were merged and the note's ids
+    retired with replaced_by in tombstones.yaml. The note's (R) is reducible
+    to T05's (\claimref{singularity.r-regularity-fixed-locus}): in its one
+    contentful reading it is T05's (R) plus vanishing inter-mode two-point
+    functions, and its one consumer, the note's rate theorem
+    (\claimref{state-selection.rate-discharge-hypothesis-iii}), was corrected
+    to assume T05's (R); the note's locality premise is merged into
+    \claimref{singularity.l-boundary-mode-locality}, and the two definitions
+    of the geometric modular condition into
+    \claimref{obj.singularity.geometric-modular-condition-g} (the note's now
+    says faithful, as T05's does). The comparison is
+    \claimref{synthesis.state-selection-r-and-le-against-t05}.
+  attack:
+    - >-
+      List the pairs by title and id suffix, and for each compare formal
+      statements: identical, narrowed, or different content.
+    - >-
+      Merge the identical ones with replaced_by in tombstones.yaml; for the
+      different ones, rename or record the difference and make each
+      restatement say which it cites.
+  success: >-
+    No unexplained same-title pair between T05 and the note, and every
+    citation of "(R)" resolving to one premise.
+  entities:
+    - singularity.r-regularity-fixed-locus
+    - state-selection.rate-discharge-hypothesis-iii
+    - singularity.rate-discharge-hypothesis-iii
+    - obj.singularity.geometric-modular-condition-g
+    - singularity.l-boundary-mode-locality
+    - synthesis.state-selection-r-and-le-against-t05
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- entropy
+
+- id: op.boundary-mode-provenance
+  title: Where the boundary modes come from, and the premises that place them
+  area: entropy
+  kind: consistency
+  difficulty: tractable
+  status: settled
+  source: "seed/CONTRADICTIONS_VALUES.md M12; seed/CONTRADICTIONS_STRUCTURE.md M7"
+  statement: >-
+    T05 places the boundary modes on the stretched singularity under
+    postulates (C1) and (C2), but T08's restated count, its area-law test,
+    the integer-holographic corollary, the density prediction and the no-echo
+    prediction use the same placement with neither postulate in their past
+    cones. Separately, T07 grounds the modes' countability in rungs of the
+    tower, while T05, T03 and T04 say the physical closure has one ascent, one
+    ladder pair per point, aggregated over s-wave channels.
+  why: >-
+    The prediction's holds_given shows only (IC), so a reader trusting it does
+    not see the placement premises it needs; and the provenance clash bears on
+    what the counted modes are, which the residue problem has to decide.
+  known: >-
+    T05's count holds under (C1) and (C2)
+    (\claimref{singularity.stretched-singularity-count}). T08's count now
+    takes its placement from T05's count, of which it is the leading order,
+    and no longer cites the Witt-index capacity Fact, which counts pairs per
+    rung and places nothing; so (C1) and (C2) are in the holds_given of the
+    count, the area-law test, the integer-holographic form and the density
+    prediction, and (C1) in that of the no-echo prediction
+    (\claimref{scrambling.mode-count},
+    \claimref{obj.scrambling.stretched-singularity}). Earlier text here said
+    that T08 counted with empty holds_given; that was true before these
+    corrections. The provenance is now one: the boundary modes are the ladder
+    pairs of the blown-up singular boundary, one per point, aggregated over
+    s-wave channels, with the tower as the model of their algebra only;
+    particle-hole conjugation below the level makes the array a mode set with
+    frequencies $\kappa|k|$ and the zero mode in its trace state
+    (\claimref{synthesis.s-wave-array-is-a-boundary-mode-set}), and the
+    definition of the boundary-mode algebra states that provenance
+    (\claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}). T05
+    cites the tower limit for structure only
+    (\claimref{singularity.bosonisation-bridge-s-wave-sector}), and T03 needs
+    no second rung on the physical side
+    (\claimref{tower.answers-iteration-question}). The success clause is met.
+  attack:
+    - >-
+      Settled. Housekeeping only: confirm that the no-echo prediction needs
+      (C1) alone, and remove the paper's rung-count reading of countability
+      from any level that still repeats it.
+  success: >-
+    The placement premises visible in the holds_given of every result that
+    uses the placement, and one stated provenance for the boundary modes.
+  entities:
+    - singularity.c1-curvature-cutoff
+    - singularity.c2-cell-density
+    - scrambling.mode-count
+    - obj.scrambling.stretched-singularity
+    - scrambling.no-echo-prediction-registered
+    - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
+    - synthesis.s-wave-array-is-a-boundary-mode-set
+    - singularity.bosonisation-bridge-s-wave-sector
+  added: "2026-10-22"
+
+- id: op.trichotomy-exhaustiveness
+  title: The seventeenth refutation and the trichotomy's exhaustiveness
+  area: dark-energy
+  kind: consistency
+  difficulty: tractable
+  status: settled
+  source: "seed/CONTRADICTIONS_VALUES.md M3; seed/DECISIONS_2026-10-21.md, decision 6 (left for now)"
+  statement: >-
+    The seventeenth refutation concludes that the particle-antiparticle
+    orientation is initial data, using as its last premise that the
+    alternatives kinematic, dynamical and initial-data are exhaustive. T10
+    proves they are not: a conserved quantity that is neither kinematic,
+    dynamical nor initial data is a parameter of the laws. Remove the
+    dependence or restate the conclusion.
+  why: >-
+    The exhaustiveness is now a store postulate assumed where used, so the
+    refutation and its restatements hold given a premise another proved result
+    shows false in general. The maintainer left the trichotomy itself as it is
+    for now.
+  known: >-
+    Settled on 22 October: the exhaustiveness postulate is retired
+    (tombstones.yaml) with no user left.
+    \claimref{dark-energy.four-alternatives-are-exhaustive-three-are}: the
+    inference "not kinematic, not dynamical, therefore initial data" is valid
+    only if (P) is excluded. The corrected seventeenth refutation
+    (\claimref{dark-matter.orientation-arrow-seventeenth-refutation}) reaches
+    initial data directly, under CPT covariance
+    (\claimref{dark-matter.premise-cpt-covariance}), Hypothesis (S) and the
+    reading that the flag is a datum, without the exhaustiveness; its two T16
+    restatements, the version 6 entities
+    \claimref{one-relation.imported-flag-arrow-superselection} and
+    \claimref{one-relation.record-chain-votes-measurement-without-collapse},
+    dropped their unused assumes edges. T14's trichotomy fact remains as
+    context (\claimref{dark-matter.imported-trichotomy-descents-data}).
+  attack:
+    - >-
+      None left: the success clause "or the postulate retired" is met. A
+      remaining check is that every citation of the refutation states its
+      conclusion at the strength of the corrected premises.
+  success: >-
+    No result's holds_given contains the exhaustiveness postulate, or the
+    postulate retired, with the refutation's conclusion stated at the strength
+    its premises give.
+  entities:
+    - dark-matter.orientation-arrow-seventeenth-refutation
+    - dark-energy.four-alternatives-are-exhaustive-three-are
+    - dark-matter.imported-trichotomy-descents-data
+    - dark-matter.premise-cpt-covariance
+    - one-relation.imported-flag-arrow-superselection
+    - one-relation.record-chain-votes-measurement-without-collapse
+    - refuted.the-particle-antiparticle-orientation-is-determi
+  added: "2026-10-22"
+
+- id: op.t12-n-after-the-count
+  title: "T12's observations on N now that the count is done"
+  area: dark-energy
+  kind: consistency
+  difficulty: tractable
+  status: settled
+  source: "note.synthesis.what-n-is-counted (22 October); seed/CONTRADICTIONS_VALUES.md M9 and M10; seed/CONTRADICTIONS_STRUCTURE.md M2"
+  statement: >-
+    T12's observation that the de Sitter entropy is of order $N^2$ is now a
+    performed count, $S_\Lambda = \pi N^2$, and under T08's counting rule
+    about $\pi N^2/\ln 2 \approx 4.8 \times 10^{122}$ modes, of which $N$ is
+    the square root up to $\sqrt{\pi/\ln 2}$. Correct the observations that
+    make $N$ itself the number of the universe's boundary modes or put that
+    space at order $10^{60}$, and T12's "of order $10^{60}$" for $N$, which is
+    about $1.0 \times 10^{61}$.
+  why: >-
+    Two refutations (10 and 11) are carried by these observations, and
+    "why the boundary mode space is so small, of order $10^{60}$" is the
+    question \claimref{standard-model.why-large} inverts largeness into; with
+    the count it is about $10^{122}$.
+  known: >-
+    \claimref{synthesis.de-sitter-entropy-pi-n-squared} (exact, from the
+    imported Gibbons-Hawking area law) and
+    \claimref{synthesis.de-sitter-mode-count} (conditional on the counting
+    rule); the corrections are recorded in
+    \claimref{note.synthesis.what-n-is-counted} and conventions.md known limit
+    5. They are now applied to \claimref{standard-model.why-large},
+    \claimref{standard-model.largeness-number-universes-boundary-modes},
+    \claimref{standard-model.what},
+    \claimref{standard-model.one-number-explain} and the frozen-point
+    dictionary, which give $N \approx 1.0 \times 10^{61}$ and the horizon mode
+    space $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$; the old figures
+    survive only in recorded source text. Exactly, $G\Lambda = 3N^{-2}$,
+    $(H/M_{P})^{2} = N^{-2}$ and the weight's Casimir is $(m/M_{P})^{2}N^{2}$,
+    while $\operatorname{Im} w = (m/M_{P})N$ holds only to relative order
+    $H^{2}/m^{2}$
+    (\claimref{synthesis.smallness-monomials-exact-hierarchy-casimir}). The
+    refuters of \claimref{refuted.the-number-n-is-a-coincidence-dirac} and
+    \claimref{refuted.the-number-n-is-a-mystery-of-largeness} are conjectured
+    observations, and both refutations now state at every level that they hold
+    at observation level only; the status label stays refuted, a maintainer
+    choice. The success clause is met.
+  attack:
+    - >-
+      Settled. Optional: give refutations 10 and 11 an observation-level
+      status label if the schema gains one.
+  success: >-
+    Every T12 entity stating the size of $N$ or of the mode space agrees with
+    the count, and the strength of refutations 10 and 11 matches their
+    refuters.
+  entities:
+    - note.synthesis.what-n-is-counted
+    - synthesis.de-sitter-mode-count
+    - synthesis.de-sitter-entropy-pi-n-squared
+    - standard-model.what
+    - standard-model.why-large
+    - standard-model.largeness-number-universes-boundary-modes
+    - refuted.the-number-n-is-a-coincidence-dirac
+    - refuted.the-number-n-is-a-mystery-of-largeness
+  added: "2026-10-22"
+
+- id: op.many-twistor-grip
+  title: The grip for many twistors
+  area: mass
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: "T11, successor problem (5)"
+  statement: >-
+    For $N$ constituents the grip $P = M(I_\Lambda)$ is defined verbatim and
+    $\langle P, P\rangle = p\cdot p + 2\lambda(p\cdot k - d^2) + \lambda^2 k\cdot k$.
+    Prove the component formulas $p\cdot p = 2\sum_{i<l}|\langle\pi^i\pi^l\rangle|^2$,
+    $k\cdot k = 2\sum_{i<l}|[\omega^i\omega^l]|^2$,
+    $p\cdot k = \sum_{i,l}|t_{il}|^2$, $d = \mathrm{Im}\,\mathrm{tr}\,t$,
+    compare with $2\sum_{i<l}|B^{il}_\Lambda|^2$, and identify the remainder as
+    an internal $\mathfrak u(N)$ invariant.
+  why: >-
+    T11 states the formulas extend but does not prove or script them beyond
+    $N = 2$; the remainder's identification is the counting the Standard-Model
+    paper's content derivation needs.
+  known: >-
+    The two-twistor case is \claimref{mass.exact-join}, whose proof writes the
+    component formulas as sums over $i, l$. Settled. The join for $N$
+    conformal spinors is proved with an exact check: $m^{2} =
+    2\sum_{i<l}|B^{il}_{\Lambda}|^{2}$ plus the $U(N)$-invariant remainder
+    $\tfrac{\Lambda}{3}\bigl(\tfrac12\tr h^{2} - \tfrac14(\tr h)^{2}\bigr)$,
+    nonnegative (\claimref{synthesis.many-twistor-join}). With the stored
+    join, three independent conformal spinors are massive for $\Lambda > 0$,
+    and at $\Lambda = 0$ massless three-constituent composites exist exactly
+    when all $\pi^{i}$ are proportional
+    (\claimref{synthesis.three-twistor-composites-massive}).
+  attack:
+    - >-
+      Script the identities for $N = 3$ in exact arithmetic with GA.py, then
+      prove the general case by the bilinearity of the sums.
+    - >-
+      Decompose the remainder under $U(N)$ acting on the constituent index.
+  success: >-
+    A proved $N$-twistor join with the remainder named as a $\mathfrak u(N)$
+    invariant, with an exact check.
+  entities:
+    - mass.exact-join
+    - synthesis.many-twistor-join
+    - synthesis.three-twistor-composites-massive
+    - rungs.mass-bracket-frozen-points-grip-slot
+    - note.mass.setting-successor-problems
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- standard model
+
+- id: op.two-loops-two-thresholds
+  title: Two loops at two thresholds for the supersymmetric splits
+  area: standard-model
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: "T12, successor problem (2)"
+  statement: >-
+    Extend the two-loop decision of the supersymmetric row from one common
+    threshold to the split families, which needs the two-loop coefficients of
+    partial supersymmetric content with the gaugino Yukawas included below the
+    heavy threshold.
+  why: >-
+    The target is to decide the supersymmetric row's splits and nothing else:
+    the other rows' conclusions stand at one loop, and the generic formula is
+    shown not to suffice.
+  known: >-
+    \claimref{standard-model.supersymmetric-row-two-loops} decides the row at
+    one threshold (record level, under (S) for its coefficients);
+    \claimref{standard-model.four-supersymmetric-splits} gives the exact
+    one-loop endpoints of the four splits. Under (S), at two loops all four
+    splits are admissible, on curves ending at the shared degenerate point
+    $M_{I} = M_{I}' = 2.3$ TeV, $f = f' = 0.901$, where every split is the
+    full supersymmetric content at one threshold; one loop's exclusion of
+    three of them was its miss of that point, which it places near $62$ GeV,
+    below $M_{Z}$ (\claimref{synthesis.supersymmetric-splits-two-loops}). The
+    decision rests on the diagonal point and does not depend on the
+    gaugino-Higgs-higgsino Yukawas: including them at tree-level matching
+    moves only the far ends of the curves of splits (a) and (d). The general
+    two-loop Yukawa term is now an imported Fact
+    (\claimref{synthesis.imported-two-loop-yukawa-gauge-terms}). The success
+    clause is met.
+  attack:
+    - >-
+      Settled. Housekeeping: the record clause of
+      \claimref{synthesis.supersymmetric-splits-two-loops} that includes the
+      gaugino Yukawas should cite
+      \claimref{synthesis.imported-two-loop-yukawa-gauge-terms} in place of
+      its present citation from memory.
+  success: >-
+    Each of the four splits decided as admissible or excluded at two loops.
+  entities:
+    - standard-model.supersymmetric-row-two-loops
+    - standard-model.four-supersymmetric-splits
+    - standard-model.chain
+    - synthesis.supersymmetric-splits-two-loops
+    - synthesis.imported-two-loop-yukawa-gauge-terms
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- generations
+
+- id: op.no-dark-radiation-under-p2
+  title: "No dark radiation under P2: narrow P2 or record the prediction killed"
+  area: dark-matter
+  kind: consistency
+  difficulty: tractable
+  status: settled
+  source: "seed/CONTRADICTIONS_VALUES.md H1 (narrowed 21 October, not settled); BUILD_REPORT, Leon's decisions carried out"
+  statement: >-
+    Applied with the reach of the copy theorem, P2 gives the mirror
+    $\xi = T'/T = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ at recombination,
+    excluded by a factor of about 25, so the prediction of no dark radiation
+    holds only with the mirror's seeded temperature as a free datum, an
+    exception to P2. Either narrow P2 so that the deposit energy per unit
+    charge is not among the data it equates, with a reason, or record the
+    prediction's kill condition as met under P2.
+  why: >-
+    The prediction is live, but under the store's own premise P2, applied as
+    T14 applies it elsewhere, its kill condition (one confirmed massless dark
+    species, from the CMB) is met, while T14 neither states nor costs the
+    exception.
+  known: >-
+    \claimref{dark-tower-matter.mirrors-temperature-p2} (assembly level)
+    computes the P2 value; \claimref{pred.no-dark-radiation} now states that
+    it needs a cold mirror, an exception to P2. P2 equates along the reversal
+    orbit only (\claimref{dark-matter.p2-indifference}); T14 applies it to the
+    ceiling coupling and the asymmetry per mode
+    (\claimref{dark-matter.mirror-tower-copy-one}). P2 is now scoped to
+    labels, not states: it equates the sector labels the descent deposits,
+    such as the tower charge, and not thermal states within a selected sector,
+    and the deposited mode set is declared finite
+    (\claimref{dark-matter.p2-indifference}, version 2). The reason is a
+    theorem: in the boundary-mode model of a reversal pair the tower charge is
+    a superselection label on every finite window and the mirror's temperature
+    is not, while on the infinite algebra a temperature becomes a label in the
+    disjointness sense only when infinitely many modes share one frequency
+    band (\claimref{synthesis.tower-charge-sector-label-temperature-not}, with
+    the imported Fact
+    \claimref{synthesis.imported-powers-stormer-takesaki-disjointness}). So P2
+    no longer reaches $\xi$, and the prediction stays live with $\xi$ a datum
+    of the descent. A shared-clock equilibrium would still give $\xi = 1$
+    without P2, so a cold mirror needs a non-equilibrium descent state, which
+    then persists, under a stated modelling hypothesis
+    (\claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}); under
+    Premise (R) the mirror's temperature measures only the deposit per unit
+    charge, $\xi^{4} = \tfrac43 Y_{B}\varepsilon$
+    (\claimref{synthesis.mirror-temperature-measures-deposit-under-r}). The
+    success clause is met. The prediction's own text still calls the cold
+    mirror an exception to P2, which is now out of date.
+  attack:
+    - >-
+      Settled. Housekeeping: restate \claimref{pred.no-dark-radiation} and
+      \claimref{dark-tower-matter.mirrors-temperature-p2} so that $\xi$ is a
+      datum of the deposit outside P2's scope, not an exception to it. The
+      mirror's temperature now belongs to op.pre-descent-theory.
+  success: >-
+    P2 restated with a scope that excludes the deposit energy and a reason for
+    the exclusion, leaving the prediction live; or the prediction marked
+    killed under P2.
+  entities:
+    - pred.no-dark-radiation
+    - dark-tower-matter.mirrors-temperature-p2
+    - dark-matter.p2-indifference
+    - synthesis.tower-charge-sector-label-temperature-not
+    - synthesis.cold-mirror-needs-non-equilibrium-descent
+    - synthesis.mirror-temperature-measures-deposit-under-r
+    - dark-matter.mirror-tower-copy-one
+    - dark-matter.open-channels-their-costs
+  added: "2026-10-22"
+
+- id: op.dark-sector-scopes
+  title: Dropped conditions and conventions in the dark sector
+  area: dark-matter
+  kind: consistency
+  difficulty: tractable
+  status: settled
+  source: "seed/CONTRADICTIONS_VALUES.md M6, M7 and M11; seed/CONTRADICTIONS_STRUCTURE.md M6"
+  statement: >-
+    Four open findings. The gravity-only coupling is imported conditional on
+    the Indifference premise and (Q) within the s-wave current algebra, but
+    the superselection result and both null-detection predictions show
+    neither condition nor scope. The dimmed-bursts prediction states six
+    populated towers, five of them dark, a count the store holds as a
+    conjecture. The unit-ball rule's levels present a derived match that its
+    status entity calls a fit. T14a and the Rule 2 note fix "space" as the
+    minus sign in both towers, which under T14's causal convention gives the
+    mirror the opposite reading.
+  why: >-
+    Each lets a reader take a conditional or fitted statement as derived, and
+    the mirror-convention clash produces a false-looking consequence about the
+    mirror's Kaluza-Klein direction.
+  known: >-
+    All four findings are resolved. The gravity-only coupling is now derived
+    from the T10 chain, sourced from
+    \claimref{dark-energy.acoustic-no-go-one-way-grip}, so its conditions
+    propagate: the holds_given of
+    \claimref{dark-matter.imported-gravity-only-coupling} shows P1, the
+    Indifference premise and (Q), and so do those of
+    \claimref{dark-matter.superselected-hence-dark-exactly-stable} and
+    \claimref{pred.dark-matter-direct-detection-null}, whose levels also state
+    the s-wave scope and the first-order qualifier. The dimmed-bursts
+    prediction no longer states six populated towers: it populates this tower
+    and the mirror, more if the odd towers are populated
+    (\claimref{pred.dimmed-evaporation-bursts}). Every level of
+    \claimref{dark-matter.unit-ball-rule} now says the agreement with $5.364$
+    is a fit, as \claimref{dark-matter.status-rule} records. Under T14's
+    causal convention the mirror's space and time extensions are $\Cl(4,1)$
+    and $\Cl(3,2)$, reversal partners of ours, and the mirror's Kaluza-Klein
+    direction is unobstructed
+    (\claimref{synthesis.mirror-extensions-causal-convention});
+    \claimref{odd-extensions.four-extensions-oriented-pair} and
+    \claimref{rule2.which-residues-obstruct-which-way} now state the uniform
+    convention beside T14's. The success clause is met.
+  attack:
+    - >-
+      Settled. A comments_on link from the status entity to the unit-ball rule
+      is not possible (only notes may comment), and the status entity names
+      the rule in its lineage instead.
+  success: >-
+    Each dependant's holds_given and levels showing the conditions it rests
+    on, and the two conventions marked where they meet.
+  entities:
+    - dark-matter.imported-gravity-only-coupling
+    - dark-matter.superselected-hence-dark-exactly-stable
+    - pred.dark-matter-direct-detection-null
+    - pred.dimmed-evaporation-bursts
+    - dark-matter.unit-ball-rule
+    - dark-matter.status-rule
+    - odd-extensions.four-extensions-oriented-pair
+    - synthesis.mirror-extensions-causal-convention
+  added: "2026-10-22"
+
+# ---------------------------------------------------------------- programme
+- id: op.horizon-entropy-functional
+  title: Is horizon entropy exactly the boundary-mode count, or the Wald functional
+  area: entropy
+  kind: consistency
+  difficulty: substantial
+  status: settled
+  source: "Maintainer decision of 22 October (horizon entropy and the Euler term); the Einstein-route results of 22 October; maintainer decision of 23 October (horizon entropy functional)"
+  statement: >-
+    Decide whether horizon entropy is exactly the boundary-mode count. If it
+    is, the Euler term of the series' MacDowell-Mansouri action, which under
+    the Wald functional shifts the entropy of a spherical horizon by
+    $-3\pi/(\Lambda G)$, must be excluded from the entropy functional; if the
+    Wald functional is the entropy, the count must carry that topological
+    shift, and the zero-mass and Nariai normalisations must be revisited.
+  why: >-
+    The two readings give different de Sitter and Schwarzschild-de Sitter
+    entropies and different nucleation rates, and a local-horizon premise for
+    the Einstein route needs to know which entropy it places on small
+    horizons.
+  known: >-
+    Assuming Wald entropy, the Euler term shifts every horizon's entropy by
+    $-3\pi\chi/(2\Lambda G)$: invisible to every first law or Clausius
+    relation between closed cuts of one topology, it zeroes the de Sitter
+    entropy, makes Schwarzschild-de Sitter horizons negative and quadruples
+    the Nariai nucleation exponent
+    (\claimref{synthesis.euler-term-horizon-entropy-shift}). On closed
+    horizons, Clausius on the Schwarzschild-de Sitter family with the series'
+    temperatures, zero entropy at zero mass and continuity at the Nariai
+    merger forces the additive constants to vanish, and nonnegativity alone
+    excludes a negative constant shift, so the Euler contribution must be
+    removed (\claimref{synthesis.sds-clausius-fixes-area-constant}, (v)). On
+    open patches, with the entropy of a patch a functional of the cut: the
+    Euler (Jacobson-Myers) entropy changes at first order in the patch's
+    affine extent, one order before heat and area, so the Clausius relation
+    imposed on every open patch admits it only where trace-free Ricci and
+    Weyl curvature vanish, and within the series' entropy family forces the
+    curvature-independent area density
+    (\claimref{synthesis.euler-entropy-first-order-rate-on-local-patches});
+    on radial local horizons of every Schwarzschild-de Sitter hole the Wald
+    density, $-3/(4\Lambda)$ times the Cartan curvature of the edge plane,
+    changes as $-3M/(2\Lambda r^{3})$ with no area change and no matter flux,
+    up outward and down inward, so no entropy-production reading rescues it
+    (\claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}).
+    The open-patch change is a divergence on the cut and cancels on closed
+    cuts, so the failure is of the Clausius relation on open patches, as the
+    Einstein route imposes it. Settled by decision (23 October), on these
+    results: horizon entropy is the count and area term, $S = A/4$, the
+    Einstein-Cartan part of the action alone; the Euler term stays in the action, where it is topological,
+    and is excluded from horizon entropy on local and on closed horizons.
+    Consequences: the de Sitter entropy is $\pi N^{2}$
+    (\claimref{synthesis.de-sitter-entropy-pi-n-squared}), and the Nariai
+    nucleation exponent is $-1$ in units of $\pi/(\Lambda G)$, the
+    Einstein-Hilbert value. Whether the series' count reproduces $A/4$ off
+    the Schwarzschild family is a separate question: read literally, the
+    cutoff count does not
+    (\claimref{synthesis.cutoff-count-is-not-a-local-density-on-sds}).
+  attack:
+    - >-
+      Settled. One follow-up, outside this problem: compare a boundary-mode
+      count of the de Sitter horizon, placed on the horizon with a density
+      fixed by flat data, with $\pi N^{2}$.
+  success: >-
+    A decision, recorded as a premise or proved, on whether the entropy
+    functional is the count (with the Euler term excluded) or the Wald
+    functional, with its consequences for the de Sitter entropy and the
+    local-horizon premise.
+  entities:
+    - synthesis.euler-term-horizon-entropy-shift
+    - synthesis.sds-clausius-fixes-area-constant
+    - synthesis.euler-entropy-first-order-rate-on-local-patches
+    - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
+    - synthesis.de-sitter-entropy-pi-n-squared
+    - synthesis.c-loc-local-horizon-premise
+  added: "2026-10-22"
+- id: op.array-offset
+  title: "The offset of the boundary-mode array: kappa k or kappa (k + 1/2)"
+  area: entropy
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "Maintainer decision of 22 October (the boundary-mode array offset); premise (Q); maintainer decision of 23 October (array offset)"
+  statement: >-
+    Premise (Q)'s weight clause is an affine law with two free data, the sea
+    offset and the slope. Decide the offset of the boundary-mode array's
+    weights: $\kappa k$, with a zero-weight mode, or $\kappa(k + \tfrac12)$,
+    with the sea level between sites.
+  why: >-
+    The offset decides the array's entropy at the Hawking temperature, and
+    with it how many arrays make one registered boundary mode's $\ln 2$ and
+    whether the residue problem is read with a zero-weight mode.
+  known: >-
+    Given (P) and (R), the quasi-free clause of (Q) is the maximum-entropy
+    rule and its weight clause an affine law with two free data, the offset
+    and the slope $\beta c = 2\pi$
+    (\claimref{synthesis.q-splits-maximum-entropy-affine-weights}). With
+    weights $\kappa(k + \tfrac12)$ the s-wave array carries exactly
+    $\tfrac12\ln 2$ at the Hawking temperature, given the classical
+    theta-function identities, and the Killing flow at one modular period is
+    the parity automorphism; with $\kappa k$ it carries $\ln 2 + \varepsilon$
+    (\claimref{synthesis.half-integer-weight-array-carries-half-ln2}). The
+    offset is not derived: every non-circular stored datum is blind to it.
+    The Euclidean-period sign $R_{2\pi} = -1$
+    (\claimref{state-selection.where-fermi-dirac-comes}) holds in a KMS state
+    at either offset, since it is the antiperiodicity of odd correlators in
+    imaginary time, while the offset is the sign of the real-time recurrence
+    at one period; the Planck clause, particle-hole symmetry and the
+    one-tower structure are offset-blind as well. Structurally the offset is
+    the spin structure of the array's recurrence circle: at $\beta c = 2\pi$
+    the recurrence and KMS periods are equal, $d = 0$ is the periodic and
+    $d = c/2$ the antiperiodic choice, and for spinor-valued fields
+    regularity of the Euclidean section admits only the antiperiodic one
+    (argued; the spin-structure fact is standard, cited from memory). Settled
+    by decision (23 October): Premise (Q) version 3 adopts $\kappa(k +
+    \tfrac12)$ as a consequence of reading the boundary modes as the field
+    theory's spinor fields on the horizon's light rays, of boost weight
+    $\tfrac12$, in the state that (N$_{+}$) selects
+    (\claimref{singularity.q-joint-quasi-freeness-s-wave},
+    \claimref{synthesis.positive-null-energy-gives-r-premises}); a field of
+    weight $\tfrac12$ changes sign under a full Euclidean turn. The reading
+    is the decision; the offset is not derived from it without identifying
+    the real-time recurrence at one period with that sign. Consequences: no
+    zero-weight mode; one array carries $\tfrac12\ln 2$, two arrays carry one
+    registered mode's $\ln 2$ under entropy matching; one array is one
+    oscillator tower, one helicity channel, at either offset
+    (\claimref{synthesis.array-ln2-is-zero-mode-doublet-one-tower}), so one
+    registered mode is two arrays and two helicity channels. The results
+    computed at $\kappa k$ (the residue value $0.3470$, the zero-mode charge
+    doublet, the one-channel count) refer to (Q) version 2 and carry notes.
+  attack:
+    - >-
+      Settled by decision. Follow-ups: derive the identification of the
+      array's real-time recurrence at one modular period with the Euclidean
+      sign from (N$_{+}$) and the discretisation of the continuum modes; and
+      derive that one counted unit is two arrays (op.residue-killing-weights).
+  success: >-
+    The offset fixed by a derivation, or adopted as a premise with its
+    consequences for the residue and the helicity count recorded.
+  entities:
+    - singularity.q-joint-quasi-freeness-s-wave
+    - synthesis.q-splits-maximum-entropy-affine-weights
+    - synthesis.half-integer-weight-array-carries-half-ln2
+    - synthesis.array-ln2-is-zero-mode-doublet-one-tower
+    - synthesis.positive-null-energy-gives-r-premises
+    - state-selection.where-fermi-dirac-comes
+    - pred.boundary-mode-density
+  added: "2026-10-22"
+- id: op.henneaux-teitelboim-promotion
+  title: "The promotion decision: what kind of number N is"
+  area: dark-energy
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "T10, successor problem (5); T12, successor problem (5); T17, open direction 8; maintainer decision of 23 October"
+  statement: >-
+    Under the action as written $\Lambda$ is fixed before variation, so
+    $N = M_P\sqrt{3/\Lambda}$ is a parameter of the laws, not initial data.
+    Decide whether to adopt the Henneaux-Teitelboim promotion, which makes the
+    Stelle-West norm the value of a Lagrange-multiplier field with $d\Lambda = 0$
+    as an equation of motion; if adopted, recompute the Goldstone count with
+    the norm mode and its conjugate time, and name the measure over $\Lambda$.
+  why: >-
+    It decides whether "why this $\Lambda$" is a question within one theory at
+    all, whether the dating of the descent and the initial-data readings stand,
+    and whether the descent measure is a measure within a theory or over
+    theories.
+  known: >-
+    \claimref{dark-energy.under-action-written-norm-parameter-laws} proves $N$
+    is (P) for the action as written and exhibits exactly one non-gauge norm
+    mode when $\Lambda$ may vary, which needs an equation the action does not
+    supply. The ascent constrains the frozen point only through its norm, so
+    neither sign nor size of $\Lambda$ is produced by it. Under the promotion
+    the norm mode becomes that reduction's one global pair $(\Lambda, \tau)$
+    with no local mode, the Goldstone count stays nine against nine, $N$
+    becomes initial data, and the only measure the promotion names, the
+    Liouville density per unit $\tau$, is flat in whichever function of the
+    norm is promoted (\claimref{synthesis.promoted-norm-one-global-pair}). For
+    the frozen-point action the Euclidean action of an Einstein instanton is
+    $I_{\mathrm{EH}} + \tfrac{\chi}{2}\pi N^{2} \ge 0$, and the time conjugate
+    to the norm advances by the Weyl-squared integral in vacuum, so it stands
+    still on de Sitter space, and by the Euler-density excess
+    $E - 8\Lambda^{2}/3$ with matter, so it runs on every FLRW cosmology with
+    dust or radiation; it is not monotone (for dust it changes sign at
+    $8\pi G\rho = \Lambda$), so it is a record of the history and not a time
+    ordering it; with a no-boundary weight the action favours no small
+    $\Lambda$ (\claimref{synthesis.promoted-norm-weyl-clock-flat-weight}). On
+    the Clausius route alone $\Lambda$ is an integration constant and $N$ is
+    initial data with no promotion; the route's solution set is the promoted
+    one, what the promotion adds over it is the conjugate time and the
+    Liouville density, and the action as written supplies the law
+    $\Lambda = \Lambda_{0}$ that restores (P); once $N$ is initial data, $v/H$
+    and $v/M_{P}$ cannot both be parameters of the laws
+    (\claimref{synthesis.einstein-route-makes-n-initial-data}). Settled by the
+    maintainer decision of 23 October: the promotion is adopted, with $v/H$
+    kept as the law. $N$ is initial data, dated to the origin; $v/M_{P}$ is
+    initial data with $Gv^{2}N^{2} = (v/H)^{2}$ a law; the recomputed count is
+    nine against nine with the one global pair; the measure named is the flat
+    Liouville density, and a normalisable measure over $\Lambda$ would need a
+    further number; the conjugate time is the Euler-density excess, a record
+    of the history; and the smallness of $\Lambda$ is declared outside the
+    series. The consequences are carried into
+    \claimref{programme.n-parameter-of-the-laws},
+    \claimref{standard-model.dating-descent} and
+    \claimref{synthesis.rung-unit-second-free-number}.
+    Note (1 November): the branch is reversed for the weak scale. The stored
+    D-term action, read under the promotion, has the level $\xi$ (strictly
+    $\xi G$) as a constant, so $v/M_{P}$ is the law and $v/H$ is initial data;
+    $Gv^{2}N^{2} = (v/H)^{2}$ is an identity, not a law
+    (\claimref{synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion});
+    the premise is restated accordingly.
+  attack:
+    - >-
+      Record the decision. If adopted, carry the flat Liouville measure and
+      the conjugate clock into \claimref{standard-model.dating-descent} and
+      \claimref{programme.n-parameter-of-the-laws}; if rejected, withdraw the
+      initial-data readings and declare the smallness of $\Lambda$ outside the
+      series.
+    - >-
+      The conjugate time stands still on de Sitter space in vacuum, and with
+      matter runs on every FLRW cosmology with dust or radiation; check what
+      it does to the series' clocks and to the I-state of the cosmological
+      horizon, where the Weyl tensor also vanishes.
+  success: >-
+    A recorded decision with its consequences carried: if adopted, the
+    recomputed count and a named measure; if rejected, the dating observation
+    withdrawn from initial-data status and the smallness of $\Lambda$ declared
+    outside the series.
+  entities:
+    - dark-energy.under-action-written-norm-parameter-laws
+    - dark-energy.imported-henneaux-teitelboim-promotion
+    - synthesis.promoted-norm-one-global-pair
+    - synthesis.promoted-norm-weyl-clock-flat-weight
+    - synthesis.einstein-route-makes-n-initial-data
+    - programme.n-parameter-of-the-laws
+    - standard-model.dating-descent
+    - synthesis.rung-unit-second-free-number
+  added: "2026-10-22"
+- id: op.collapsing-hole-state
+  title: A thermal condition for holes formed by collapse
+  area: thermality
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "The null ground-state premise (N+) and its scope, 23 October; settled by the collapse results of 26 October (Leon's decision)"
+  statement: >-
+    Premise (N$_{+}$) (\claimref{synthesis.n-plus-null-ground-state}) covers
+    the eternal (Kruskal) hole: it is a Hartle-Hawking-type regularity
+    condition on the whole generator of the extended solution. A hole formed
+    by collapse has horizon generators with no $u < 0$ half, and its physical
+    state is not a ground state for the null translations on the horizon.
+    State and justify an Unruh-type condition for such holes, on the outgoing
+    (Kruskal $U$) direction near the horizon, and derive from it the Hawking
+    flux at temperature $\kappa/2\pi$ on the series' continuum mode space.
+  why: >-
+    Astrophysical holes form by collapse. Without such a condition the
+    series' Hawking temperature for them rests on (R) as a separate premise,
+    and (N$_{+}$) does not replace it there.
+  known: >-
+    Settled (26 October), at the level the problem asks, on the per-light-ray
+    chiral carrier. The condition is (N$_{+}$) itself, in its short-distance
+    form, posed on the ingoing sheet through each point of the future
+    horizon, whose generator has both halves (the missing past half of the
+    horizon is never used); it is part of the scope of (N$_{+}$), not a new
+    premise. With the outgoing sector reduced to one chiral CAR field per
+    light ray (the postulate J3,
+    \claimref{hawking.joint-j3-s-wave-reduction}), the Kruskal function
+    $U = -e^{-\kappa t}(s - 1)e^{s^{2}/2 + s}$ of the Painlev\'e-Gullstrand
+    gauge is a regular parameter on that generator, dilated at rate $\kappa$
+    by the symmetry, so the late-time limit is exactly the scaling limit, and
+    for every state whose generator kernel is the ground-state singularity
+    plus a remainder bounded near the horizon point (a class the same in every
+    regular parameter for the weight-$\tfrac12$ kernel) the late-time state of
+    the near-horizon exterior outgoing modes is the continuum I-state at
+    $\beta = 2\pi/\kappa$; the condition is sufficient, not necessary (every
+    finite-rank change of the symbol has the same limit), and the
+    Boulware-type state is outside the class
+    (\claimref{synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet}).
+    In the collapse of a null shell the vacuum before the collapse is in the
+    class, its outgoing flux is exactly $-\tfrac{1}{24\pi}\{v, u\}$ at every
+    retarded time, tending to the chiral flux $\kappa^{2}/48\pi$ at
+    $\kappa/2\pi$, and among states KMS for the Killing translations at late
+    times only $T = \kappa/2\pi$ has finite null energy across the future
+    horizon
+    (\claimref{synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature}).
+    Hawking's flux at infinity follows from the near-horizon state under
+    Premise (I) with the greybody passage
+    (\claimref{hawking.premise-i-interface-identification}). Not covered:
+    the greybody factors themselves, collapse geometries other than the
+    spherical null shell, and the propagation of short-distance regularity
+    from the collapse region in general, which stays a literature citation
+    (Fulling-Sweeny-Wald 1978, Fredenhagen-Haag 1990, cited from memory).
+  attack:
+    - >-
+      Settled. Follow-ups: import the propagation of short-distance
+      regularity (Fulling, Sweeny and Wald; Fredenhagen and Haag) as a Fact
+      after checking the sources, if a general collapse geometry is wanted;
+      treat the greybody factors and non-spherical collapse.
+  success: >-
+    A stated condition for collapsing holes, with the Hawking flux at
+    $\kappa/2\pi$ derived from it on the continuum carrier, or a proof that
+    no condition of ground-state type can give it.
+  entities:
+    - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
+    - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature
+    - synthesis.n-plus-null-ground-state
+    - synthesis.positive-null-energy-gives-r-premises
+    - hawking.joint-j3-s-wave-reduction
+    - singularity.r-regularity-fixed-locus
+    - obj.hawking.continuum-mode-space
+  added: '2026-10-23'
+- id: op.collar-kms-extension
+  title: "6 pi at the exceptional set: is the collar state KMS for the global holonomy flow"
+  area: thermality
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "T05, Prop 13.2(ii) and its conclusion (open, stated as such); BUILD_REPORT, the de Sitter temperature (21 October); the collar result of 23 October; closed as premise-dependent by Leon's decision of 26 October"
+  statement: >-
+    Under (R$_{\mathrm{loc}}$), equivalently the local form of (N$_{+}$) at
+    each collar point, the Hubble-normalised inverse temperature of the
+    collar's modes is $6\pi(1 - \tfrac45 r + \cdots)$, tending to $6\pi$ at
+    the exceptional set, with no extension of the horizon's state. Decide the
+    one remaining question: whether the collar's state is also KMS for the
+    global $t$-line holonomy flow, which is what the choice between the
+    slice-product algebra (C) and the completion-locus hypothesis (E)
+    decides.
+  why: >-
+    The local value $6\pi$ is settled under the adopted premise; a KMS state
+    of the global holonomy flow would make it a temperature of the collar as
+    a whole, to set beside the horizon's and the cosmological horizon's
+    $2\pi$, rather than a limit of local values.
+  known: >-
+    Settled as premise-dependent (26 October); no premise is adopted. At a
+    collar point the $t$-boost is the unit boost of the local Rindler
+    horizons generated by $e_{0} \pm e_{1}$, and (R$_{\mathrm{loc}}$) fixes the
+    modes at rapidity period $2\pi$ on every slice, Killing-time period
+    $4\pi r^{2}$, Hubble-normalised $6\pi\sqrt{1 - r}/S(r)$
+    (\claimref{synthesis.collar-temperature-fixed-locally-by-r-loc}). Under
+    (C), independent slice atoms, the collar state is KMS for no single-rate
+    holonomy flow: the Killing periods differ from slice to slice, so the
+    state is KMS for the Killing-time flow at no common period
+    (\claimref{synthesis.collar-kms-extension-three-flows}), and a slice
+    product of states KMS at slice-dependent periods is KMS only for the
+    product flow that runs every slice at unit rapidity rate, which is a
+    holonomy flow only on the reparametrisation that (E) asserts (argued,
+    elementary). Under (E) every slice's holonomy flow is a reparametrisation
+    of one flow and the collar state is KMS for it, at the (R$_{\mathrm{loc}}$)
+    period on each slice
+    (\claimref{synthesis.collar-kms-extension-completion-locus}). Both
+    readings are consistent with (R$_{\mathrm{loc}}$) and with every adopted
+    premise ((C$_{\mathrm{loc}}$) version 3 and the local form of (N$_{+}$)
+    included), and they answer the question oppositely, so the present
+    premises do not decide it (argued). On the per-light-ray carrier that
+    (C$_{\mathrm{loc}}$) version 3 adopts the question is ill-posed (argued):
+    the generators of the collar's local horizons are the radial null rays of
+    the $(\tau, t)$ plane, which cross the slices, the $t$-line holonomy maps
+    rays to rays rather than acting as a dilation on one ray, neither (C) nor
+    (E) is the mode set there, and the local form of (N$_{+}$) makes each
+    ray's state the null vacuum, KMS at rapidity period $2\pi$ for the
+    dilation about each of its points, with no global flow needed. The local
+    form cannot be posed at the exceptional set itself, where the curvature
+    diverges, so $6\pi$ there is a limit of local values.
+  attack:
+    - >-
+      Settled as premise-dependent. A follow-up only if a premise is adopted:
+      (E) is the one reading under which the collar has a global temperature.
+  success: >-
+    A proof that the collar's state is, or is not, KMS for the global
+    holonomy flow, with the choice between (C) and (E) decided.
+  entities:
+    - synthesis.collar-temperature-fixed-locally-by-r-loc
+    - synthesis.collar-kms-extension-three-flows
+    - synthesis.collar-kms-extension-completion-locus
+    - synthesis.collar-isotropy-selects-t-boost
+    - singularity.modular-flow-boundary-modes-holonomy-universal
+    - synthesis.c-loc-local-horizon-premise
+    - synthesis.n-plus-null-ground-state
+  added: '2026-10-22'
+- id: op.small-findings
+  title: The remaining low-severity contradiction findings
+  area: programme
+  kind: housekeeping
+  difficulty: tractable
+  status: settled
+  source: "seed/CONTRADICTIONS_VALUES.md L2 to L8 and M8; seed/CONTRADICTIONS_STRUCTURE.md L1 to L5, L7 to L12 and M11; maintainer decision of 26 October"
+  statement: >-
+    About twenty small findings remain open in the two contradiction reports:
+    arithmetic and wording slips, uncertainties dropped from point values,
+    one-liners that drop premises, namesake slips such as (L) for (L$_E$),
+    and two scope or naming findings of medium severity: the self-conjugacy
+    theorem holds in the untwisted action, which its levels do not say, and
+    "chirality halves" names two different splittings.
+  why: >-
+    None changes a conclusion, but each misleads a reader or an AI agent
+    following the levels, and the self-conjugacy scope bears on whether the
+    thirteenth generator is excluded.
+  known: >-
+    Every finding in the two reports is resolved in the store or recorded.
+    Corrections cover the arithmetic and wording slips, the uncertainties
+    dropped from point values (for example the ranges now given in
+    \claimref{pred.no-neutrinoless-double-beta}), the one-liners that dropped
+    premises (\claimref{pred.no-objective-collapse}), the namesake (L) for
+    (L$_E$), the untwisted scope of
+    \claimref{lepton.self-conjugacy-forces-determinant-one-group} (twisting
+    makes the spectrum self-conjugate under the whole group, which bears on
+    \claimref{lepton.what-self-conjugacy-says-about-thirteenth}), and the two
+    chirality splittings, now named apart in conventions.md and in
+    \claimref{standard-model.imported-pair-systems-two-chirality-halves};
+    \claimref{singularity.c2-cell-density} no longer calls $\nu$ an order-one
+    constant. The medium findings went with their own problems: the
+    gravity-only coupling's conditions and the unit-ball fit
+    (op.dark-sector-scopes), the counted $N$ and refutations 10 and 11
+    (op.t12-n-after-the-count), and the placement premises
+    (op.boundary-mode-provenance). Settled (26 October): each finding was
+    checked against the live store, and the opening paragraphs of
+    seed/CONTRADICTIONS_VALUES.md and seed/CONTRADICTIONS_STRUCTURE.md no
+    longer end with "Others open": they name, for every remaining finding,
+    the entity, convention or settled problem that resolves it, and close
+    with "Every finding of this report is resolved or recorded".
+  attack:
+    - >-
+      Done: the resolutions were added to the opening paragraphs of
+      seed/CONTRADICTIONS_VALUES.md and seed/CONTRADICTIONS_STRUCTURE.md,
+      naming the entity that resolves each finding.
+  success: >-
+    Every finding resolved or recorded as accepted, and the reports' opening
+    paragraphs saying so.
+  entities:
+    - pred.no-objective-collapse
+    - pred.no-neutrinoless-double-beta
+    - lepton.self-conjugacy-forces-determinant-one-group
+    - lepton.what-self-conjugacy-says-about-thirteenth
+    - singularity.c2-cell-density
+    - standard-model.imported-pair-systems-two-chirality-halves
+    - scrambling.epoch-modular-period-two-unknowns-become
+  added: "2026-10-22"
+- id: op.operator-join
+  title: The operator join, its ordering constants, and neighbouring zero modes
+  area: mass
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "T11, successor problems (1) and (4); maintainer decision of 23 October; settled by Leon's close-out answer of 26 October"
+  statement: >-
+    The condensation equation's seed has zero expectation on every state of
+    definite constituent helicities, so a nonzero seed on the quantum massless
+    locus needs zero modes of the operator join in two neighbouring helicity
+    sectors. Decide whether $\hat m^{2}$ has zero modes in two joint
+    eigenspaces of $(\hat h_{11}, \hat h_{22})$ whose eigenvalues differ by
+    $\hbar(1,1)$ (constituent helicities each differing by $\tfrac12$) on the
+    positive-energy modules, and if so whether the seed connects them.
+  why: >-
+    The join $m^2 = 2|B_\Lambda|^2 + \tfrac{\Lambda}{3}C$ is classical; its
+    quantum form is where mass terms acquire their ordering corrections, and
+    the seed question connects the mass mechanism to the families paper's
+    condensation programme.
+  known: >-
+    The ordering constants are computed: in Jordan-symmetrised palatial
+    ordering $\hat m^{2} = \sum_{i<l}\{\hat B^{il}, \hat B^{il\dagger}\} +
+    \tfrac{\Lambda}{3}\hat C_{N} - \tfrac{N\Lambda}{3}\hbar^{2}$, one central
+    constant, with no term linear in the bracket
+    (\claimref{synthesis.operator-join-ordering-constants},
+    \claimref{synthesis.operator-join-casimir-shifts}), so the seed does not
+    arise from the constants. The seed has zero expectation on every state of
+    definite constituent helicities, so a massless state with nonzero seed
+    needs zero modes of $\hat m^{2}$ in two neighbouring sectors
+    (\claimref{synthesis.operator-join-seed-has-no-diagonal-matrix-elements}).
+    On the positive-energy modules the store's conjugation is the Hilbert
+    adjoint, with energies $|s| + 1 + n$
+    (\claimref{synthesis.attachment-conformal-energy-is-generated-by-z}).
+    There the join is
+    $2\hat B^{\dagger}\hat B + \tfrac{\Lambda}{3}\hbar^{2}(s_{1} + s_{2} +
+    j(j+1) - 2)$ on each isotype, and for $\Lambda \ge 0$ its band raising
+    the oscillator number by four is the product of the two creation brackets,
+    so it has no eigenvector of finite energy content in any sector; the
+    polynomial realisation's constant zero mode has no counterpart
+    (\claimref{synthesis.operator-join-positive-energy-no-finite-energy-zero-modes}).
+    For $\Lambda > 0$ the bracket and its conjugate span a unitary
+    $\mathfrak{su}(1,1)$ at the Fock scale matched to the frozen point, the
+    join is
+    $\tfrac{\Lambda}{3}\hbar^{2}(K_{0}^{2} - C_{\mathfrak{su}(1,1)} + j(j+1)
+    - 2)$, and, modulo the decomposition of $D^{+} \otimes D^{-}$
+    (\claimref{synthesis.imported-sl2r-discrete-series-tensor-product},
+    cited from memory), its point spectrum lies in
+    $[\tfrac{\Lambda}{3}\hbar^{2}, \infty)$ with the bound attained, so the
+    join has no normalisable zero mode in any helicity sector
+    (\claimref{synthesis.operator-join-point-spectrum-on-positive-energy-modules}).
+    Zero lies in the continuous spectrum only in the blocks $(K_{0}, j) =
+    (0, 0), (\pm 1, 0), (\pm\tfrac12, \tfrac12)$, as generalised (scattering)
+    states. For $\Lambda < 0$ the answer differs: at the Fock scale matched to
+    the frozen point ($\lambda s^{4} = -1$) the join preserves the oscillator
+    number and has zero modes of finite energy content (three at oscillator
+    number two, internal spin $1$, in the sectors
+    $(s_{1}, s_{2}) = (\tfrac12, -\tfrac12), (-\tfrac12, \tfrac12), (0, 0)$);
+    the series takes $\Lambda > 0$, so this does not bear on the seed. The
+    bracket's stored quantum numbers are $(1,1)$ with $Y = +1$
+    (\claimref{families.imported-face-valued-bracket-quantum-numbers}), so a
+    bracket condensate would be hypercharged and, being a weak singlet,
+    electrically charged (argued). Settled in the negative on the
+    positive-energy modules for $\Lambda > 0$ (Leon, 26 October): the join
+    has no normalisable zero mode there, so the seed must come from outside
+    the join. It passes to the families paper's condensation programme,
+    which must supply a carrier outside the join and account for the
+    bracket's hypercharge. Whether the seed's matrix elements between
+    generalised massless states mean anything is a different question, not
+    opened.
+  attack:
+    - >-
+      Compute the zero modes of $\hat m^{2}$ sector by sector on the
+      positive-energy modules of the twistor attachment, and evaluate the
+      source term of \claimref{families.source-term-linear-tilt-mass-functional}
+      between neighbouring ones. (Done: none are normalisable for
+      $\Lambda > 0$.)
+    - >-
+      Extend the polynomial computation to higher bidegrees, and decide
+      whether the polynomial and positive-energy realisations have the same
+      zero modes. (Done: they do not.)
+    - >-
+      If no neighbouring zero modes exist, pass the seed to the families
+      paper's condensation programme, stating there that it must also account
+      for the bracket's hypercharge. (Done by this settlement.)
+  success: >-
+    Zero modes of the join in two neighbouring helicity sectors with a nonzero
+    seed between them, or a proof that none exist on the positive-energy
+    modules, settling that the seed must come from outside the join.
+  entities:
+    - synthesis.operator-join-positive-energy-no-finite-energy-zero-modes
+    - synthesis.operator-join-point-spectrum-on-positive-energy-modules
+    - synthesis.attachment-conformal-energy-is-generated-by-z
+    - synthesis.imported-sl2r-discrete-series-tensor-product
+    - synthesis.operator-join-seed-has-no-diagonal-matrix-elements
+    - synthesis.operator-join-ordering-constants
+    - families.source-term-linear-tilt-mass-functional
+    - families.imported-face-valued-bracket-quantum-numbers
+  added: "2026-10-22"
+- id: op.majorana-scale
+  title: Deriving the Majorana scale and the intermediate scale
+  area: neutrinos
+  kind: research
+  difficulty: substantial
+  status: settled
+  source: "T15, successor problems (3) and (4); T12, successor problem (7); seed/CONTRADICTIONS_VALUES.md M4; maintainer decisions of 23 October; settled by Leon's close-out answer of 26 October"
+  statement: >-
+    The Majorana scale along the heavy direction, the $126$ Yukawa coupling
+    there or equivalently the $126$ doublet admixture $w_{u}$, is registered
+    as an input of the laws beside $N$ and $v/H$, fixed in value by $m_{3}$
+    (\claimref{synthesis.majorana-scale-free-input}). What remains is a
+    derivation: obtain the scale from the series' own dynamics rather than
+    from the observed $m_{3}$, which would refute that premise, and say
+    whether the same derivation fixes the triplet vev and so predicts
+    $\sin^2\theta_W$.
+  why: >-
+    It discharges Premise (M), decides Premise (R) of T15, turns the
+    agreement with the dark-matter paper's rung scale from a construction into
+    a check, and settles the scale of the degenerate pair whose decays the
+    non-thermal injection needs.
+  known: >-
+    The Majorana element is the $(10,1,3)$
+    (\claimref{standard-model.majorana-element}); on the chain with the
+    $(15,2,2)$, $M_I = 1.9 \times 10^{10}$ GeV is fixed by $\sin^2\theta_W$
+    (\claimref{standard-model.chain}). Under the imported Clebsch structure,
+    $M_{R} = (v_{R}/4w_{u})\,\mathrm{Sym}(M_{u} - M_{\nu})$, and under (EW)
+    $(M_{R})_{33} = m_{t}v_{R}/4w_{u}$
+    (\claimref{synthesis.majorana-scale-is-126-doublet-vev}). Every stored
+    relation is invariant under $f \mapsto \lambda f$,
+    $w_{u,d} \mapsto w_{u,d}/\lambda$ except the light masses, so the scale
+    is fixed only by the observed $m_{3}$, between $m_{t}v_{R}/(4v)$ and
+    $4\pi v_{R}$; on this route one vev sets $M_{I}$ through the gauge
+    coupling and $M_{R}$ through $f$, and neither $N$ nor $v/H$ enters
+    (\claimref{synthesis.majorana-scale-free-on-pati-salam-route}). The three
+    lines of attack are closed on the store's content. (1) The store holds no
+    Pati-Salam potential, and the series' only potential, the join's mass
+    functional, gives $\Lambda$-suppressed scales. (2) At two loops every
+    Dirac-type Yukawa shifts the three Pati-Salam couplings equally and moves
+    only $\alpha_{U}$; the Majorana coupling alone moves $M_{I}$ and $M_{U}$,
+    and the running stays a nonsingular system for $(\alpha_{U}, M_{I},
+    M_{U})$ at every value of it, so the three measured gauge couplings alone
+    fix the scales as functions of $f$ and never $f$ itself; a supplied
+    $M_{I}$ would fix $\mathrm{Tr}\,ff^{\dagger}$ only to about $0.4$ per
+    standard deviation of $\alpha_{s}$
+    (\claimref{synthesis.two-loop-running-cannot-fix-majorana-coupling}; the
+    extension from the linear system to the full two-loop system is argued).
+    (3) The Majorana element is a null five-blade of nonzero $B - L$ weight:
+    the Clifford norm of the frozen-point kind vanishes on it and on the whole
+    self-dual $126$, and every invariant polynomial, holomorphic or of the
+    real form, vanishes on it and its orbit; only the Fock norm, which needs
+    the Hermitian structure, survives, so no condition of the frozen-point
+    kind fixes the scale
+    (\claimref{synthesis.majorana-element-is-null-blade-no-frozen-point-condition}).
+    The Majorana scale is a datum of the sesquilinear kind, like $v/H$, not
+    of the bilinear kind that fixes $\Lambda$ through the frozen point
+    (argued reading). Settled in the negative (Leon, 26 October): no relation
+    the series can supply fixes the scale, and the premise
+    \claimref{synthesis.majorana-scale-free-input} stands. A derivation would
+    need what the store does not hold: a Pati-Salam potential, a dynamics for
+    the Hermitian structure's scale, or an independently supplied $M_{I}$ or
+    $M_{U}$ (for example from proton decay), which would fix the coupling
+    only loosely.
+  attack:
+    - >-
+      Derive the $126$ doublet admixture $w_{u}$ from a potential at $M_{I}$;
+      the store holds no Pati-Salam potential, and the series' only potential,
+      the join's mass functional, gives $\Lambda$-suppressed scales.
+    - >-
+      Compute the two-loop gauge running with Yukawa terms on the chain and
+      test whether, with the measured weak angle, it fixes $f$ along the heavy
+      direction to useful precision. (Done: it does not.)
+    - >-
+      Test whether any invariant condition of the frozen-point kind can fix
+      the vev of the Majorana element, which lies in a complex representation.
+      (Done: none can.)
+  success: >-
+    The Majorana scale (equivalently $f_{33}$ or $w_{u}$) derived from the
+    series' structure with no observed mass as input, consistent with the
+    seesaw masses, refuting the premise that it is an input; or a proof that
+    no relation the series can supply fixes it.
+  entities:
+    - synthesis.majorana-scale-free-input
+    - synthesis.majorana-scale-free-on-pati-salam-route
+    - synthesis.majorana-scale-is-126-doublet-vev
+    - synthesis.two-loop-running-cannot-fix-majorana-coupling
+    - synthesis.majorana-element-is-null-blade-no-frozen-point-condition
+    - neutrino.m-framework-realises-majorana-term-scale
+    - standard-model.majorana-element
+  added: "2026-10-22"
+- id: op.scale-selection-principle
+  title: A dynamical principle for the whole gauge field that fixes the trace-free part
+  area: einstein
+  kind: research
+  difficulty: frontier
+  status: settled
+  source: "Run target ein.infinity-vacuum-incidence, reformulated by the maintainer decision of 23 October; restated by Leon's decision of 26 October after the scale-action no-go; settled by Leon's decision of 31 October, given the imported MacDowell-Mansouri action and matter coupling"
+  statement: >-
+    The Einstein condition reads, in the store, as the own-ray incidence of
+    the infinity vacua
+    (\claimref{synthesis.einstein-condition-is-infinity-vacuum-incidence}),
+    which holds exactly when the scale tractor is parallel
+    (\claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}).
+    The positive structure's symmetry and the natural actions of the scale
+    alone do not select the almost-Einstein scale. Find a dynamical principle
+    for the whole gauge field $\hb$, not for the scale within a fixed
+    conformal class, whose field equations fix the trace-free part of the
+    curvature, so that the incidence, and with matter the field equations,
+    follow from it rather than being a rewriting of them; or show that no
+    principle on the series' objects does.
+  why: >-
+    This is the route that would read general relativity and quantum theory
+    as two readings of one relation, with no thermodynamics. It stopped at the
+    choice of scale within the conformal class, and the scale-only principles
+    are excluded, so the remaining route was a principle for the whole field;
+    the trace-free part is exactly what the curvature-independence of (Loc)
+    selects on the Clausius route.
+  known: >-
+    Point vacua stay point vacua along their own light rays in every
+    gravitational field; infinity vacua do exactly when the derived metric is
+    Einstein. By the almost-Einstein characterisation the incidence holds
+    exactly when the scale tractor $I' = I_{g} + \tfrac{J}{4}X$ is parallel,
+    and with matter $\nabla_{a}I' = 4\pi G\,(0, T^{\circ}_{ab},
+    \tfrac{1}{12}\nabla_{a}\tau)$, a rewriting of the field equations
+    (\claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}).
+    A stress tensor read linearly and covariantly off the vacua's first-order
+    classes is a relabelling of the curvature or pure trace
+    (\claimref{synthesis.vacuum-field-stress-tensor-is-einstein-tensor-or-trace}).
+    The no-go for scale-only principles (26 October): the symmetry of the
+    positive Hermitian structure fixes no scale tractor, the Einstein-Hilbert
+    action restricted to the conformal class has the single Yamabe equation,
+    and the tractor Dirichlet functional gives stationary scales that are not
+    parallel
+    (\claimref{synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale}).
+    Settled (31 October), given an imported action principle: the
+    MacDowell-Mansouri functional (Fact
+    \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}),
+    in the series' frozen-point form $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$
+    (\claimref{dark-energy.frozen-point-makes-stelle-west-vector}), varies the
+    whole field $(\hb, \Omega)$; its frame equation is
+    $E(a) = 2(\mathcal{G}(a) + \Lambda a)I$, rank ten on the curvature with
+    kernel the Weyl part, so it fixes the trace-free part, and its restriction
+    to pure dilations is the single Yamabe trace of the scale-only no-go; with
+    the imported Einstein-Cartan matter coupling (Fact
+    \claimref{synthesis.imported-einstein-cartan-matter-coupling}) and an
+    independently given stress tensor its on-shell Schouten tensor is
+    $\tfrac{\Lambda}{6}g - 4\pi G(T - \tfrac{\tau}{3}g)$, the stored derivative
+    of the scale tractor, and in vacuum the scale tractor is parallel: the
+    infinity-vacuum incidence is its vacuum case
+    (\claimref{synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part}).
+    The answer is transport-absent: adopting the functional adopts Einstein's
+    equations as a variational premise, and the series contributes only the
+    frozen-point presentation (prefactor $1/Q(I) = 3/\Lambda$). It agrees with
+    the Clausius route on the field equations and differs on the entropy, since
+    its Wald entropy carries the Euler term that (Loc) excludes. Deriving the
+    functional from transport or the series' objects is
+    op.derive-gravitational-action.
+  attack:
+    - >-
+      Settled given the imported action. Successor: op.derive-gravitational-action.
+  success: >-
+    A stated dynamical principle for the whole gauge field, not a rewording of
+    the parallel-tractor condition, whose field equations fix the trace-free
+    part and give the matter law with an independently given stress tensor;
+    or a proof that no principle on the series' objects does.
+  entities:
+    - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
+    - dark-energy.imported-macdowell-mansouri-theorem-stelle-west
+    - synthesis.imported-einstein-cartan-matter-coupling
+    - dark-energy.frozen-point-makes-stelle-west-vector
+    - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
+    - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale
+    - synthesis.einstein-condition-is-infinity-vacuum-incidence
+    - synthesis.vacuum-field-stress-tensor-is-einstein-tensor-or-trace
+  added: '2026-10-23'
+- id: op.which-boost-flow-is-time
+  title: Which boost flow is a window's physical time evolution
+  area: thermality
+  kind: consistency
+  difficulty: substantial
+  status: settled
+  source: "seed/CONTRADICTIONS_STRUCTURE.md H2 (resolved by naming, not settled); note.decisions.two-boost-flows; conventions.md, known limit 4; findings of 23 October on the continuum carrier; the one-unitary-group result and the restated chaos-bound sentence, 26 October; the value factor at Killing horizons, settled by Leon's decision of 31 October"
+  statement: >-
+    The series uses two flows with one generator $K = \sigma/2$: the real
+    rotor flow $\exp(\lambda\sigma/2)$, which rescales the modes, and the
+    phase flow $a_j \mapsto e^{-i\omega_j t}a_j$, related by $\lambda = it$.
+    Decide which is the physical time evolution of a window in the one
+    Schwarzschild time both papers use, and restate the spreading law and the
+    chaos-bound comparison on that basis.
+  why: >-
+    The KMS analysis, the I-state and the temperature use the phase flow; the
+    clock inventory and the scrambling law, with $t_* = \kappa^{-1}\ln N$, use
+    the rotor flow. The chaos-bound statement compares the rotor flow's growth
+    rate with the phase flow's temperature, so it needs both to be the same
+    evolution read two ways.
+  known: >-
+    Settled. On the windows only the phase flow is a $*$-automorphism, so it
+    is their time evolution and the rotor flow its KMS-strip continuation
+    (\claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}).
+    On the continuum of a horizon's generators the boost time evolution is
+    one unitary dilation group: on a horizon's null plane the canonical
+    component of the spinor field is $\Lambda(m)\psi$, the covariant boost
+    acts on it as the product of the rotor on values and the transport of the
+    affine parameter, neither of which preserves the anticommutator alone, and
+    the product is the unitary dilation, weight $\tfrac12$ forced; it is the
+    phase flow on Mellin modes, and continued to imaginary rapidity it is the
+    Euclidean rotor times a rotation of the affine parameter; in real time the
+    anticommutators of linear elements stay bounded, so the real-time Lyapunov
+    exponent of this quasi-free dynamics is $0$
+    (\claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}).
+    The value factor at Killing horizons (31 October): at every Killing
+    horizon with nonzero surface gravity, off its bifurcation surface,
+    whatever the field strength and with or without rotation, the Killing
+    bivector is $-\kappa\,k\wedge m + k\wedge\omega$, so relative to frames
+    parallel along the generators the Killing flow acts on the canonical
+    light-ray component by the generator-plane boost with weight
+    $e^{-\kappa t/2}$, the rotation one-form reaching only the constrained
+    component; the boost time evolution there is the same unitary dilation
+    group with no further helicity phase, derived rather than argued
+    (\claimref{synthesis.killing-horizon-value-factor-is-the-generator-boost}).
+    The spreading law and the chaos-bound comparison are restated on that
+    basis: the boost group's support-dilation rate equals its KMS rate,
+    $\kappa\beta = 2\pi$ under (N$_{+}$), the real-time Lyapunov exponent is
+    $0$, so the bound is met, not saturated, and $t_{*} = \kappa^{-1}\ln N$
+    counts $\ln N$ units of rapidity
+    (\claimref{scrambling.spreading-law-chaos-bound-saturated}). Within the
+    stationary class the equality $\kappa\beta = 2\pi$ is the edge condition
+    (\claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}).
+    Every dynamics the locality premise admits is number-diagonal, with no
+    exponential growth
+    (\claimref{synthesis.number-diagonal-dynamics-spreads-nothing}). Not
+    covered: chaotic (non-quadratic) dynamics of the windows, degenerate
+    (extremal) horizons, and the bifurcation surface itself.
+  attack:
+    - >-
+      Settled, follow-up included.
+  success: >-
+    The continuum identification proved, and the scrambling law and the
+    chaos-bound comparison restated on that basis; or a proof that the
+    comparison needs two distinct evolutions.
+  entities:
+    - synthesis.boost-evolution-on-generators-is-one-unitary-group
+    - synthesis.killing-horizon-value-factor-is-the-generator-boost
+    - synthesis.phase-flow-is-time-rotor-flow-kms-continuation
+    - scrambling.spreading-law-chaos-bound-saturated
+    - note.decisions.two-boost-flows
+    - synthesis.affine-cell-boost-spreads-without-scrambling
+    - synthesis.number-diagonal-dynamics-spreads-nothing
+    - synthesis.positive-null-energy-gives-r-premises
+  added: '2026-10-22'
+- id: op.radical-quotient
+  title: The radical ideal and the quotient algebra of a degenerate space
+  area: standard-algebra
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: grounding pass 2026-10-26
+  statement: For a degenerate real quadratic space with radical $\operatorname{rad} V$ of dimension $r$, prove in the core
+    that the two-sided ideal $J$ of $\Cl(V, Q)$ generated by $\operatorname{rad} V$ satisfies $J^{r+1} = 0$ and that $\Cl(V,
+    Q)/J \cong \Cl(V/\operatorname{rad} V, \bar Q)$.
+  why: \claimref{sheaf.degeneration-sheaf} uses both facts at the wall, and the nilpotent ideal is the starting point of
+    the completion (\claimref{conformal.nilpotent-ideal-becomes-unit-ideal}); the core has the radical and the blade basis
+    for degenerate forms but not this structure theorem.
+  known: 'The radical is defined in the core (\claimref{obj.std-algebra.radical}), and the blade basis holds for degenerate
+    forms (\claimref{std-algebra.blade-basis}). \claimref{conformal.nilpotent-ideal-becomes-unit-ideal} states the nilpotency
+    index for $\Cl(p,q,r)$ in the programme. Settled (Leon, 31 October) by \claimref{std-algebra.radical-ideal-and-quotient}:
+    for every real quadratic space with radical of dimension $r$ the ideal $J$ generated by the radical is spanned by the
+    blades with a radical factor, $\dim J = 2^{n} - 2^{n-r}$, its nilpotency index is exactly $r + 1$, the projection $V
+    \to V/\operatorname{rad} V$ extends to a surjection with kernel exactly $J$, so $\Cl(V, Q)/J \cong \Cl(V/\operatorname{rad}
+    V, \bar Q)$ and $\Cl(V, Q) = \Cl(U) \oplus J$, and $J$ is the largest nilpotent one-sided ideal and the radical of the
+    scalar-part form, with an exact check over every diagonal signature with $r \ge 1$ and $n \le 5$ and three non-diagonal
+    degenerate forms. \claimref{sheaf.degeneration-sheaf}(2) and \claimref{conformal.nilpotent-ideal-becomes-unit-ideal}
+    now cite it.'
+  attack:
+  - 'Choose a basis adapted to $V = U \perp \operatorname{rad} V$ and use the blade basis: $J$ is spanned by the blades
+    containing a radical generator, and the quotient map is the extension of $V \to V/\operatorname{rad} V$ given by the
+    universal property.'
+  success: A core theorem with an exact check over every signature with $n \le 5$, cited by the sheaf and completion results.
+  entities:
+  - obj.std-algebra.radical
+  - std-algebra.blade-basis
+  - sheaf.degeneration-sheaf
+  - conformal.nilpotent-ideal-becomes-unit-ideal
+  added: '2026-10-27'
+- id: op.bivector-exponential-spin
+  title: The exponential of a general bivector lies in Spin
+  area: standard-algebra
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: grounding pass 2026-10-26
+  statement: 'Prove in the core that for every bivector $B \in \Cl^{2}(V, Q)$, not only those with scalar square, $e^{B}$
+    is a rotor: $e^{B}\widetilde{e^{B}} = 1$ and $e^{B} x e^{-B} \in V$ for every vector $x$, with the exponential defined
+    by its power series; and state when a rotor is an exponential.'
+  why: \claimref{correspondence.spin-representation} needs $e^{B} \in \mathrm{Spin}$ for a general bivector of the conformal
+    algebra, and the core states the exponential only for bivectors whose square is a scalar (\claimref{std-algebra.bivector-exponential}).
+  known: 'Bivectors close under the commutator product and act skew-adjointly on vectors by it (\claimref{std-algebra.bivector-lie-algebra});
+    for a bivector with $B^{2} \in \R$ the exponential is given in closed form (\claimref{std-algebra.bivector-exponential});
+    rotors double-cover the rotations (\claimref{std-algebra.spin-double-cover}). Settled (Leon, 31 October) by \claimref{std-algebra.bivector-exponential-in-spin}:
+    for every bivector, over $\R$ or $\C$ and for every form, $e^{B}$ is even, $(e^{B})^{\sim} = e^{-B}$ and $e^{B}xe^{-B}
+    = e^{\operatorname{ad}_{B}}x$ is a vector, the map an isometry; for a nondegenerate real form $e^{B}$ is a rotor in
+    $\Spin^{+}$; for a degenerate form it need not be a versor ($e^{f_{1}f_{2}}$ in $\Cl(0,0,2)$); and in $\Cl(1,3)$ every
+    rotor is $\pm e^{B}$, the non-exponentials being exactly $-(1 + N)$ with $N$ a nonzero null bivector. When a rotor is
+    an exponential is answered beyond the Lorentzian case in one direction: for $\min(p, q) \ge 2$ some rotor is not $\pm
+    e^{B}$ (\claimref{std-algebra.rotors-beyond-exponentials}); the converse for $\min(p, q) \le 1$ is cited from memory
+    there and not claimed. What remains outside the store: the group-level step of \claimref{correspondence.spin-representation}
+    over $\C$ (every $e^{B}$ a versor of $\Spin(V_{\C})$, and $\Spin(V_{\C})$ generated by exponentials) needs the Cartan-Dieudonne
+    theorem over $\C$ or the connectedness of $\Spin_{6}(\C)$, neither imported (declined 31 October), so that result cites
+    the complex algebra but not this theorem.'
+  attack:
+  - Show that $t \mapsto e^{tB} x e^{-tB}$ solves $\dot y = [B, y]$, which preserves $V$, so the conjugate of a vector stays
+    a vector; and that $\widetilde{e^{B}} = e^{-B}$ since reversion negates bivectors.
+  - For the exact check, use a nilpotent or commuting decomposition of $B$ so the series terminates or splits into closed
+    forms.
+  success: A core theorem with an exact check covering non-simple bivectors, cited by the spin representation result.
+  entities:
+  - std-algebra.bivector-exponential
+  - std-algebra.bivector-lie-algebra
+  - std-algebra.spin-double-cover
+  - correspondence.spin-representation
+  added: '2026-10-27'
+- id: op.complex-clifford
+  title: The complex Clifford algebra in the core
+  area: standard-algebra
+  kind: housekeeping
+  difficulty: tractable
+  status: settled
+  source: grounding pass 2026-10-26
+  statement: Enter the complex Clifford algebra $\Cl(V_{\C})$ of a complex quadratic space in the algebra core, with its
+    classification modulo $2$ and its Fock model on a maximal totally null subspace of $V_{\C}$, so that results proved
+    over $\C$ cite the core directly instead of real core results read over $\C$.
+  why: 'Several conformal-spacetime proofs work in the complexified ascended algebra: the Chevalley pairing on the Fock
+    module (\claimref{correspondence.chevalley-pairing}), the spin representation (\claimref{correspondence.spin-representation})
+    and the Fock model of $\Cl(2,4)_{\C}$ (\claimref{correspondence.fock-model-complexified-ascended-algebra}). The grounding
+    pass of 26 October cited real core results for them, read over $\C$; the $\C$-linear Chevalley pairing has no exact
+    core counterpart.'
+  known: 'The complexification of a real Clifford algebra and its type for odd and even dimension are in the core (\claimref{std-algebra.complexification});
+    the real Fock representation and Chevalley pairing are too (\claimref{std-algebra.fock-representation}, \claimref{std-algebra.chevalley-pairing}).
+    Settled (Leon, 31 October) by \claimref{std-algebra.complex-clifford-algebra}: $\Cl(V, Q)$ over $\C$ by its universal
+    property, the blade basis for every form (degenerate included), an orthonormal basis for a nondegenerate form, the Fock
+    model on a maximal totally null subspace with its half-spinor modules, the classification modulo $2$ ($\Cl_{2k}(\C)
+    \cong \Mat_{2^{k}}(\C)$, $\Cl_{2k+1}(\C)$ two copies) and the $\C$-bilinear Chevalley pairing, each step stated over
+    $\C$ and checked exactly over $\Q(i)$. \claimref{correspondence.fock-model-complexified-ascended-algebra} and \claimref{correspondence.spin-representation}
+    now cite it; \claimref{correspondence.chevalley-pairing} proves its own case directly, the case $k = 3$ of part (v),
+    and does not cite it.'
+  attack:
+  - State $\Cl(V_{\C})$ by its universal property over $\C$, prove the blade basis and the mod-$2$ classification with exact
+    checks over the Gaussian rationals, and restate the Fock model and Chevalley pairing $\C$-linearly.
+  - Re-point the correspondence results' premises from the real results read over $\C$ to the new ones.
+  success: Core results for $\Cl(V_{\C})$ with checks, and the correspondence proofs citing them directly.
+  entities:
+  - std-algebra.complexification
+  - std-algebra.fock-representation
+  - std-algebra.chevalley-pairing
+  - correspondence.chevalley-pairing
+  - correspondence.spin-representation
+  - correspondence.fock-model-complexified-ascended-algebra
+  added: '2026-10-27'
+- id: op.derive-gravitational-action
+  title: Derive the field space of the gravitational action, the connections preserving the frozen point, from transport
+  area: einstein
+  kind: research
+  difficulty: frontier
+  status: settled
+  source: "Leon's decision of 31 October, settling op.scale-selection-principle given the imported MacDowell-Mansouri action and matter coupling; the gravitational-action results of 31 October and Leon's decisions on them (import (b) reworded to the field space, the Euler exclusion kept in normalisation form, Lambda fixed by the frozen point); settled as negative by Leon's decision of 1 November, after the field-space results of 1 November: the field space is an independent premise"
+  statement: >-
+    The store reaches Einstein's equations with $\Lambda$ from the
+    MacDowell-Mansouri functional in the series' frozen-point form,
+    $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$, varied over the connections
+    of the $\Cl(2,4)$ gauge field that preserve the frozen point $I$, with the
+    imported Einstein-Cartan matter coupling
+    (\claimref{synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part}).
+    What carries Einstein's equations is that field space, not the
+    integrand: on the series' own transport, the normal tractor connection of
+    a torsion-free field, the same integrand is a quarter of the Weyl square,
+    whose field equations are the Bach equations
+    (\claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared}).
+    Derive the field space (connections preserving $I$, with no inverse frame)
+    from transport or from the series' objects (the frozen point, the
+    canonical tractor, the $\Cl(2,4)$ tractor gauge field), and with it the
+    action and the matter coupling; or show that no principle on them gives
+    it, which would record the action as a permanent import.
+  why: >-
+    As it stands Einstein's equations enter this route through a variational
+    premise: the series supplies the integrand $\epsilon(I, X, F, F)$, the
+    prefactor $1/Q(I) = 3/\Lambda$ and the field-space datum $I$, and the
+    action is transport-convenient, not transport-essential. A derivation of
+    the field space would give the field equations, and with them the
+    infinity-vacuum incidence, from the series rather than by adoption. It
+    has to fit the Clausius route, whose (Loc) excludes the Euler term that
+    the action's Wald entropy carries; that exclusion is now recorded as a
+    normalisation, so the two routes agree on every entropy change.
+  known: >-
+    Settled as negative (Leon, 1 November): the field space is an
+    independent premise, recorded as Premise (FS)
+    (\claimref{synthesis.field-space-premise-parallel-frozen-point}): the
+    varied gravitational connection, a $\Cl(2,4)$ gauge field with
+    nondegenerate soldering, admits a parallel tractor $I$ with
+    $\ip{X}{I} = 1$ (the physical scale), a holonomy reduction to the
+    stabiliser of $I$ (Fact
+    \claimref{synthesis.imported-holonomy-reductions-of-cartan-geometries}).
+    The gravitational action is the imported functional (Fact
+    \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west})
+    in the series' frozen-point form plus (FS); it is transport-convenient,
+    not transport-essential. No route derives (FS); each result below is a
+    premise exchange, a negative result or a comparison, and none presupposes
+    the Einstein condition. Results of 31 October: the functional's frame
+    equation is $E(a) = 2(\mathcal{G}(a) + \Lambda a)I$, rank ten with kernel
+    the Weyl part, and with the imported matter coupling its on-shell Schouten
+    tensor is the stored derivative of the scale tractor
+    (\claimref{synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part});
+    among densities of the tractor gauge field that are polynomial, use no
+    inverse frame, depend on the connection only through its field strength
+    and are gauge invariant, with the connection reduced by $I$ and the
+    canonical tractor added, the combined spacetime and internal parity
+    selects $\epsilon(I, X, F, F)$ up to normalisation, the Euler term in
+    fixed ratio, and without that parity uniqueness is equivalent to a
+    torsion-free coupling; the no-inverse-frame hypothesis forces the
+    reduction only for slots that are functions of $(\hb, \Omega)$
+    (\claimref{synthesis.curvature-only-tractor-actions-are-macdowell-mansouri},
+    clause (vi) as reworded); on transport the frozen-point integrand is
+    $\ip{X}{I}\,\tfrac14 W_{abcd}W^{abcd}$ for every torsion-free field,
+    conformal gravity with the Bach equations
+    (\claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared});
+    in BF form with breaking on the Lorentz block the functional is flat
+    transport broken on the blade $I \wedge X = \nInf \wedge \nO$, agreeing
+    with the stored functional only in vacuum, with $\alpha N^{2}$ a
+    convention
+    (\claimref{synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x});
+    the Stelle-West norm is no local output within constant couplings, and
+    $\Lambda = 3Q(I)$ stays fixed by the frozen point, the registered input
+    $N$ (\claimref{synthesis.stelle-west-norm-is-no-local-output}); inverting
+    the Clausius route with the metric as varied field gives
+    Einstein-Hilbert with $G = 1/(4\eta)$ and a fixed $\Lambda$, the coupled
+    system being variational exactly when the heat tensor is the Hilbert
+    stress (\claimref{synthesis.inverse-problem-for-the-clausius-route});
+    the Euler part of a patch's Wald entropy is one topological constant per
+    patch, removed by the normalisation (Z)
+    (\claimref{synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term});
+    the frozen-point density is the reduction of the five-dimensional
+    Chern-Simons form with a fixed radion, a relocation, not a derivation
+    (\claimref{synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons});
+    the induced-gravity route through the spectral action is negative (no
+    stored result). Results of 1 November, the four equivalent readings of
+    (FS) and the closed routes. Assembly: a $\Cl(2,4)$ gauge field built from
+    $(\hb, \Omega)$ and no further field (T), covariant under the group of
+    gauge theory gravity, soldered, and either polynomial with no inverse
+    frame (P) or of order zero (O), is
+    $\Omega - \nInf \wedge \hb^{-1} + \rho\,\nO \wedge \hb^{-1}$ with $\rho$
+    constant, preserving $\nInf + \rho\nO$ for every field; the series'
+    transport satisfies (T) and violates (P) and (O), in the special-conformal
+    slot only, and meets the family exactly on Einstein fields; (T) is
+    needed, and under the parabolic group the reduction is a gauge choice
+    (\claimref{synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point}).
+    The slot: on torsion-free fields the integrand sees only the Lorentz
+    block; varying the whole special-conformal slot returns the Schouten slot
+    of the normal tractor connection and the Weyl square (the
+    Kaku-Townsend-van Nieuwenhuizen elimination, proved in the series), and
+    Einstein's equations with $\Lambda = 6\rho$ come out exactly when the
+    symmetric part of the slot is frozen at $\rho\,\id$, $\rho \neq 0$;
+    freeing the trace leaves $\tfrac14 E_{4} - \tfrac{1}{24}R^{2}$, freeing the
+    trace-free part adds $\tfrac12|\Ric_{0}|^{2}$; the dilation and the
+    antisymmetric slot are inert, and every row satisfies (P)
+    (\claimref{synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen}).
+    Gauge theory gravity: the connections preserving a constant tractor are
+    exactly GTG's pairs, and on them the $\Omega$-equation is the torsion
+    equation, so the independence of $\hb$ and $\Omega$ decides only the
+    torsion (spin) equation and the frozen slot $\rho\,\hb^{-1}$ carries
+    Einstein's equations; "field space = GTG's gauge principle" fails in its
+    strong form
+    (\claimref{synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation}).
+    Higgs reading: the stored Stelle-West family, and any curvature-independent
+    slot potential, keeps the frozen slot stationary only on Einstein fields
+    or on one line of couplings where the frozen value is the Euler form; a
+    polynomial stiffness penalty interpolates from conformal gravity to the
+    frozen-point functional, finite stiffness adding a Weyl square of
+    relative size $3/(4\mu\Lambda)$, and a multiplier imposing $DI = 0$ is
+    the premise itself: (FS) is the infinitely stiff frozen point
+    (\claimref{synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff}).
+    Duality: the duality complex structure acts only on the Lorentz algebra,
+    shared by every field space, and every chirality of the integrand
+    returns the Schouten slot; Plebanski and Ashtekar take the first-order
+    field space as input
+    (\claimref{synthesis.duality-complex-structure-does-not-reach-the-frozen-point}).
+    Matter regions: in the physical scale the frozen point is parallel for a
+    soldered connection exactly when the slot is $\tfrac{\Lambda}{6}\id$ with
+    no dilation; on shell for the frozen-point functional with the imported
+    matter coupling the series' transport differs by
+    $4\pi G(T - \tfrac{\tau}{3}g)$; the scale clause is needed; sections of
+    every norm exist, so topology selects nothing; adopting (FS) implies the
+    registration condition of the $w = -1$ prediction, the converse holding
+    only on its kinematic reading
+    (\claimref{synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise}).
+    Recorded with the settlement: clause (iii) of the registration result now
+    names the connection preserving $I$ and the physical scale and assumes
+    (FS) (\claimref{dark-energy.vacuum-region-registration-condition}); on
+    the reduced field space $\Lambda$ is a constant parameter and $w = -1$ is
+    the $\Lambda$CDM equation of state, so a confirmed $w = -1$ is not
+    independent evidence for (FS), while $w \neq -1$ would refute it and
+    $\Lambda$CDM (\claimref{pred.dark-energy-w-minus-one}). The matter
+    coupling's spin part is the Einstein-Cartan choice already made by the
+    definition of a gravitational field (first-order $\Omega$, vanishing
+    torsion a field equation for spinless matter;
+    \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}, note), and its
+    energy part the identification of the heat tensor with the Hilbert
+    stress; the exclusion of the Euler term from horizon entropy stays the
+    normalisation (Z) (\claimref{synthesis.c-loc-local-horizon-premise}).
+    Every normalisation met (Newton's constant, $\alpha$, the Chern-Simons
+    level times the reduced length) is free; none is related to $N$.
+  attack:
+    - >-
+      Settled as negative (1 November): the field space is the independent
+      Premise (FS), and the gravitational action is the imported functional
+      plus (FS), transport-convenient, not transport-essential. No successor
+      problem is opened. A future derivation of (FS) from the series'
+      structure, or a refutation of it (a confirmed $w \neq -1$, a confirmed
+      departure from Einstein's equations with constant $\Lambda$ where the
+      action applies, or a derivation that the gravitational connection has
+      no parallel tractor of unit pairing with $X$ off the Einstein region),
+      would reopen it.
+  success: >-
+    A derivation from transport or the series' objects of the field space of
+    connections preserving $I$, which with the curvature-only classification
+    under combined parity gives the frozen-point MacDowell-Mansouri functional,
+    together with the spin part of the matter coupling; or a proof that no
+    principle on them gives the field space, which would record the
+    gravitational action as a permanent import.
+  entities:
+    - synthesis.field-space-premise-parallel-frozen-point
+    - synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point
+    - synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen
+    - synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation
+    - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff
+    - synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise
+    - synthesis.duality-complex-structure-does-not-reach-the-frozen-point
+    - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
+  added: '2026-10-31'
+

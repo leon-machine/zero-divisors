@@ -1,0 +1,27 @@
+doc: trail-conformal-spacetime
+title: Spacetime in the conformal completion
+author: Leon Butler
+level: lay
+spine:
+- angle.imported-conformal-model-null-rotations
+- correspondence.fock-model-complexified-ascended-algebra
+- correspondence.spin-representation
+- correspondence.spinor-identification
+- correspondence.incidence-relation-chart
+- correspondence.reality-conjugation-twistor-form-factor
+- correspondence.twistors-are-states-three-ladder-pairs
+- one-relation.spacetime-manifold-vacuum-lines
+- correspondence.local-twistor-transport-ascended-spinor-connection
+- correspondence.one-statement-three-languages
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

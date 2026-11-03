@@ -1,0 +1,16 @@
+functions:
+  check_scale_is_minus_m_inverse_cube_of_killing_scalar:
+    kind: sampled
+    clauses: ["\"M_frak = -M chi^{-3} with chi = r - I a cos(theta)\""]
+    omits: "four (M, r, a cos theta) points (off the ring and on the disc), chi^3 M_frak = -M with controls chi^2 M_frak != -M and chi^4 M_frak = -M chi exactly; identification of chi with the Killing-spinor scalar of the imported Walker-Penrose Fact is by normalisation, and that the scale 'is a Killing spinor, a solution of Penrose's twistor equation' is not tested"
+  check_winding_is_three_times_the_spinor_scalar:
+    kind: sampled
+    clauses: ["\"the duality monodromy of Remark winding is -3 times the winding of the Killing spinor around the ring\""]
+    omits: "one loop of radius 1/2 in the (r, -a cos theta) plane through 20 rational unit-circle points less than 30 degrees apart, quadrant-counted: winding of chi is 1 and of -M chi^{-3} is -3; the duality monodromy of Remark winding itself is not computed, only the winding of M_frak is identified with it"
+untouched_premises:
+  interior.imported-schwarzschild-curvature-spectrum-external: "cited only in the standard-route derivation; literature import with no computable content here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: the chi^4 control is now the exact identity chi^4 M_frak = -M chi rather than an inequality; the product probe moved to module level"

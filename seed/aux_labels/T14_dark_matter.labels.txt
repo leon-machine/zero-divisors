@@ -1,0 +1,110 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{6}{Setting, premises, and imports}{section.2}{}}
+\newlabel{prem:single}{{2.1}{6}{P1: the single frozen point}{theorem.2.1}{}}
+\newlabel{prem:indiff}{{2.2}{6}{P2: indifference}{theorem.2.2}{}}
+\newlabel{prem:window}{{2.3}{6}{P3: nearest-dimension representatives}{theorem.2.3}{}}
+\newlabel{prem:democracy}{{2.4}{6}{P4: democracy of the asymmetry over the oriented towers}{theorem.2.4}{}}
+\newlabel{fact:towers}{{2.5}{6}{imported: the eight towers and the mod-8 clock}{theorem.2.5}{}}
+\newlabel{fact:acoustic}{{2.6}{6}{imported: gravity-only coupling}{theorem.2.6}{}}
+\newlabel{fact:frozen}{{2.7}{6}{imported: the frozen norm and the registered $w = -1$}{theorem.2.7}{}}
+\newlabel{fact:trichotomy}{{2.8}{6}{imported: the trichotomy and the descent's data}{theorem.2.8}{}}
+\newlabel{fact:flag}{{2.9}{7}{imported: the derived generation and the flag}{theorem.2.9}{}}
+\newlabel{def:flag}{{2.10}{7}{The Witt flag}{theorem.2.10}{}}
+\newlabel{prem:ledgercharge}{{2.11}{7}{P5: boundary modes hold entropy, not global charge}{theorem.2.11}{}}
+\newlabel{fact:discharge}{{2.12}{7}{imported: Schwinger discharge of a charged hole}{theorem.2.12}{}}
+\newlabel{fact:noremnant}{{2.13}{7}{imported: no remnant, the singularity paper's exhaustiveness clause}{theorem.2.13}{}}
+\newlabel{sec:towers}{{3}{8}{Towers, residues, and the flag filter}{section.3}{}}
+\newlabel{prop:residues}{{3.1}{8}{Towers are residues, and the single-clock filter}{theorem.3.1}{}}
+\newlabel{prop:flaggable}{{3.2}{8}{The flag is insensitive to the residue: no flag-level strengthening}{theorem.3.2}{}}
+\newlabel{def:type}{{3.3}{9}{Spinor module and type}{theorem.3.3}{}}
+\newlabel{thm:types}{{3.4}{9}{Type by residue, and what each tower can carry intrinsically}{theorem.3.4}{}}
+\newlabel{thm:soldered}{{3.5}{10}{The residue is a soldered invariant, not an algebraic one}{theorem.3.5}{}}
+\newlabel{def:frozenops}{{3.6}{11}{Frozen-phase operators}{theorem.3.6}{}}
+\newlabel{rem:flaglives}{{3.7}{11}{Where the flag is defined, and what it carries}{theorem.3.7}{}}
+\newlabel{def:fock}{{3.8}{11}{Null blades, the Fock ideal, and chirality}{theorem.3.8}{}}
+\newlabel{prop:families}{{3.9}{11}{The two families are the two chiralities}{theorem.3.9}{}}
+\newlabel{fig:clock}{{1}{12}{The eight towers as the residues of the mod-8 clock (Proposition \ref {prop:residues}), each labelled by its representative under P3, all joined to the one metric at the centre, the only way they touch. Our world is $r = 6$; its mirror $r = 2$, across the dashed axis $r \mapsto -r$, is a copy of it; the grey residues, $r = 0$ with two times and $r = 4$ with none, are sterile, the fixed points of that axis. The odd residues carry no flag bit on any window, the even ones carry it at these P3 representatives (Theorem \ref {thm:paritybit}), so the arrow exists at $r = 6$ and $r = 2$ only}{figure.1}{}}
+\newlabel{thm:paritybit}{{3.10}{13}{The flag bit exists exactly at tower dimension $0 \bmod 4$}{theorem.3.10}{}}
+\newlabel{cor:whocarries}{{3.11}{14}{Which towers can carry the arrow}{theorem.3.11}{}}
+\newlabel{rem:whatkind}{{3.12}{14}{Point of contact: what kind of dark matter this is}{theorem.3.12}{}}
+\newlabel{rem:forkrepriced}{{3.13}{14}{The fork's cost restated: the causal criterion is a theorem, and the bit on the fork is read once}{theorem.3.13}{}}
+\newlabel{sec:count}{{4}{15}{Dark, stable, counted}{section.4}{}}
+\newlabel{prop:stable}{{4.1}{15}{Superselected, hence dark and exactly stable}{theorem.4.1}{}}
+\newlabel{fact:sminputs}{{4.2}{15}{imported: the inputs of the Standard-Model chain}{theorem.4.2}{}}
+\newlabel{thm:mirror}{{4.3}{16}{The mirror tower is a copy of this one}{theorem.4.3}{}}
+\newlabel{thm:modes}{{4.4}{17}{Mode counts: two modules, and which one the series' matter lies in}{theorem.4.4}{}}
+\newlabel{prop:count}{{4.5}{18}{The population count: one share to half a percent, and a symmetric remainder}{theorem.4.5}{}}
+\newlabel{eq:ratio}{{1}{18}{The population count: one share to half a percent, and a symmetric remainder}{Item.4}{}}
+\newlabel{prop:charge}{{4.6}{19}{The stored asymmetry is a charge, not a number}{theorem.4.6}{}}
+\newlabel{prop:massbound}{{4.7}{21}{The mirror share is one, and how fragile that is}{theorem.4.7}{}}
+\newlabel{thm:share}{{4.8}{22}{The mirror share, assembled}{theorem.4.8}{}}
+\newlabel{rem:shareexposure}{{4.9}{23}{What the share is exposed to, and what it is not}{theorem.4.9}{}}
+\newlabel{obs:population}{{4.10}{23}{Which towers are populated}{theorem.4.10}{}}
+\newlabel{sec:arrow}{{5}{24}{The arrow counted}{section.5}{}}
+\newlabel{prop:arrow}{{5.1}{24}{The asymmetry: the arrow counted, and the fifteenth refutation}{theorem.5.1}{}}
+\newlabel{prop:orientation}{{5.2}{25}{The orientation is the arrow: the seventeenth refutation}{theorem.5.2}{}}
+\newlabel{rem:onebook}{{5.3}{25}{Point of contact: one datum for two questions}{theorem.5.3}{}}
+\newlabel{sec:audits}{{6}{26}{The audits}{section.6}{}}
+\newlabel{lem:projection}{{6.1}{26}{Projection: every tower's content dilutes as this one's}{theorem.6.1}{}}
+\newlabel{prop:audit}{{6.2}{26}{The radiation audit: what Theorem \ref {thm:types} closes, and what stays open}{theorem.6.2}{}}
+\newlabel{prop:openchannel}{{6.3}{28}{The open channels, with their costs}{theorem.6.3}{}}
+\newlabel{prop:ceiling}{{6.4}{29}{The ceiling valued, and an inherited success}{theorem.6.4}{}}
+\newlabel{prop:infall}{{6.5}{30}{Parallel boundary mode spaces at one wall: the infall computation}{theorem.6.5}{}}
+\newlabel{sec:rule}{{7}{32}{The dark matter ratio: the unit-ball rule}{section.7}{}}
+\newlabel{eq:sum}{{2}{32}{The dark matter ratio: the unit-ball rule}{equation.7.2}{}}
+\newlabel{subsec:nesting}{{7.1}{32}{The nesting}{subsection.7.1}{}}
+\newlabel{fig:geochains}{{2}{33}{All eight towers as nested spaces. Each world's space is the equatorial slice of the next, and the unit-ball rule compares the volumes of exactly these spaces, $V_{3}/V_{2}$ and $V_{3}/V_{4}$. The two sterile towers are where the picture runs out of time rather than space: residue $4$ is the five-dimensional tower's four-ball with its time removed, residue $0$ has two times and is the dividing line itself}{figure.2}{}}
+\newlabel{prop:nesting}{{7.1}{33}{The nesting}{theorem.7.1}{}}
+\newlabel{fig:superpose}{{3}{34}{The same eight towers superimposed. Signature reversal is a reflection in the $\Cl (2,2)$ plane, so the mirror chain is the same ball, disc and line read from the other side of it; each tag names the tower on its side, and the dashed circle is one tower named twice. One centre, one unit, one gravity: nothing in the picture belongs to one chain rather than the other except the name, which is what the unit-ball rule assumes when it measures every tower against the same unit ball and the same mass quantum. The symbols are those of Figure \ref {fig:geochains}}{figure.3}{}}
+\newlabel{fig:ballsphere}{{4}{35}{The two representations of the nesting. Left, balls of \emph {space} (Proposition \ref {prop:nesting}(ii), two dimensions suppressed): the five-dimensional tower's space is a solid four-ball and our space is the whole disc cut through its middle; the rim of that disc is our own boundary $\Sph ^{2}$. This is what the unit-ball rule uses. Right, spheres of \emph {spacetime} (Proposition \ref {prop:nesting}(iii), four dimensions suppressed): the tower's spacetime is a hollow sphere, a surface only, and our spacetime is its equator, a circumference and not a cut. This is the equivalent sphere form of Remark \ref {rem:forms}. On the right, the shaded surface between the equator and one pole has extent $R$ along the polar axis (the chord) and $\tfrac {\pi R}{2}$ along the surface (the arc), the two readings of Proposition \ref {prop:pole}}{figure.4}{}}
+\newlabel{subsec:rule}{{7.2}{35}{The rule}{subsection.7.2}{}}
+\newlabel{prem:R1}{{7.2}{35}{R1: equal mass per quantum}{theorem.7.2}{}}
+\newlabel{prem:R2}{{7.3}{35}{R2: one quantum per unit ball}{theorem.7.3}{}}
+\newlabel{prem:R3}{{7.4}{35}{R3: one cell per unshared direction}{theorem.7.4}{}}
+\newlabel{rem:massR1}{{7.5}{36}{R1 against the series' mass formulas}{theorem.7.5}{}}
+\newlabel{prop:rule}{{7.6}{36}{The unit-ball rule}{theorem.7.6}{}}
+\newlabel{rem:denominator}{{7.7}{37}{Why the ball is in the denominator}{theorem.7.7}{}}
+\newlabel{rem:rulehas}{{7.8}{37}{What the rule has and has not}{theorem.7.8}{}}
+\newlabel{rem:coexpand}{{7.9}{37}{The extra direction must co-expand}{theorem.7.9}{}}
+\newlabel{rem:forms}{{7.10}{37}{Equivalent forms, and an assignment that is not}{theorem.7.10}{}}
+\newlabel{subsec:free}{{7.3}{38}{The thickness: a contact mechanism}{subsection.7.3}{}}
+\newlabel{lem:fifth}{{7.11}{39}{The direction a nesting adds, in the algebra}{theorem.7.11}{}}
+\newlabel{prop:thickness}{{7.12}{39}{The contact mechanism returns R3}{theorem.7.12}{}}
+\newlabel{tab:excludes}{{1}{41}{The mechanism's four clauses and the nearest alternative to each. The section weighting counts a cut cell by the measure of its section relative to the maximal section, one normalisation among several: a unit $D$-ball cut at height $h$ has section measure $V_{D-1}(1 - h^{2})^{(D-1)/2}$, and relative to $V_{D-1}$ these weights integrate over both sides to $V_{D}/V_{D-1}$, which for $D = 4$ is $\tfrac {3\pi }{8}$, the $\cos ^{4}$ factor of the zero-mode reduction (Proposition \ref {prop:reduction}(i)); that reduction is the five-dimensional count with I and S withdrawn. With C withdrawn the sourcing rule reverts to the homogeneous integral over a length $c$, which is Proposition \ref {prop:Tc}. The list is the paper's, not exhaustive; other cell conventions and other normalisations of a partial count are not on it}{table.1}{}}
+\newlabel{rem:Sfork}{{7.13}{41}{What S uses, and what it does not}{theorem.7.13}{}}
+\newlabel{rem:scope}{{7.14}{41}{Scope of the mechanism}{theorem.7.14}{}}
+\newlabel{prop:Tc}{{7.15}{42}{The total as a function of the thickness}{theorem.7.15}{}}
+\newlabel{fig:Tc}{{5}{43}{The total $T(c) = 1 + \tfrac {8}{3c} + \tfrac {16c}{3\pi }$ against the thickness $c$ in units of the spacing (Proposition \ref {prop:Tc}), with the Planck-with-lensing band. The curve is symmetric under $c \mapsto \tfrac {\pi }{2c}$ and has its floor at $c = \sqrt {\pi /2}$. The observed value is met at $c = 1$ (R3) and at $c = \tfrac {\pi }{2}$ (the exchanged assignment of Remark \ref {rem:forms}). The grey points are the two thicknesses the de Sitter reductions of Section \ref {subsec:unit} produce, $\tfrac {3\pi }{8}$ and $\tfrac {\pi }{4}$; neither is on the band}{figure.5}{}}
+\newlabel{prop:pole}{{7.16}{43}{The two roots are the chord and the arc of a quarter turn}{theorem.7.16}{}}
+\newlabel{rem:twoc}{{7.17}{44}{The common thickness, and the curve if the two differ}{theorem.7.17}{}}
+\newlabel{subsec:unit}{{7.4}{44}{What could fix the unit: the de Sitter reading}{subsection.7.4}{}}
+\newlabel{fact:dsradius}{{7.18}{44}{imported: the frozen point and the de Sitter radius}{theorem.7.18}{}}
+\newlabel{prem:D}{{7.19}{44}{D: democracy of the total mass}{theorem.7.19}{}}
+\newlabel{prop:democracy}{{7.20}{44}{Democracy at the de Sitter radius is the unit-ball rule}{theorem.7.20}{}}
+\newlabel{eq:warp}{{3}{45}{What could fix the unit: the de Sitter reading}{equation.7.3}{}}
+\newlabel{fact:sms}{{7.21}{45}{imported: the induced equations on a hypersurface}{theorem.7.21}{}}
+\newlabel{prop:reduction}{{7.22}{45}{The two reductions}{theorem.7.22}{}}
+\newlabel{tab:reductions}{{2}{46}{The odd towers' shares under democracy (Premise D) for each way of letting the five-dimensional geometry decide how much of a tower's mass sources the equator (Proposition \ref {prop:reduction}). Only the slab of exactly one radius, which no reduction produces, reaches the observed value}{table.2}{}}
+\newlabel{rem:onepole}{{7.23}{47}{The one pole and the flat count}{theorem.7.23}{}}
+\newlabel{subsec:consistency}{{7.5}{47}{Consistency with other laws}{subsection.7.5}{}}
+\newlabel{prop:sourcing}{{7.24}{47}{The sourcing rule is forced, not chosen}{theorem.7.24}{}}
+\newlabel{fact:cavendish}{{7.25}{47}{imported: the inverse-square law at short range}{theorem.7.25}{}}
+\newlabel{cor:cavendish}{{7.26}{47}{The thickness is not a gravitational quantity}{theorem.7.26}{}}
+\newlabel{fact:linpert}{{7.27}{48}{imported: the linear momentum equation and the traceless field equation}{theorem.7.27}{}}
+\newlabel{prop:sheetsmove}{{7.28}{48}{A reduced response to gravity needs a supporting stress; the sheets move}{theorem.7.28}{}}
+\newlabel{rem:isotropy}{{7.29}{48}{The sheet family and the linear spectra}{theorem.7.29}{}}
+\newlabel{rem:halo}{{7.30}{49}{A halo built from collisionless sheets is a cold-dark-matter halo}{theorem.7.30}{}}
+\newlabel{fig:boltzmann}{{6}{50}{The Boltzmann computation of Remark \ref {rem:isotropy} (CLASS 3.4, Planck 2018 parameters otherwise), each spectrum as a ratio to the standard model's. The three-dimensional towers are a separate pressureless species responding to gravity at a fraction $g$, carrying the stress $\sigma = (1 - g)\psi $ of Proposition \ref {prop:sheetsmove}. Left, the matter power spectrum at $z = 0$; middle, the lensed temperature spectrum, the band the percent level at which it is measured; right, the lensing-potential spectrum, the band the $2.5\%$ of the measured amplitude. Sheets held fixed with orientations averaged, $g = \tfrac {2}{3}$, at the three shares the family gives (solid), and a response deficit of $5\%$ (yellow), are excluded; sheets that move, $g = 1$ (dashed), lie on the standard model's curves to four decimal places. A recorded computation, not a check of the script; the patch, inputs and outputs are deposited with the verification materials}{figure.6}{}}
+\newlabel{subsec:costs}{{7.6}{51}{What the rule costs}{subsection.7.6}{}}
+\newlabel{tab:costs}{{3}{51}{Each step behind the unit-ball rule, its status, and the ratio when the step is replaced by the nearest alternative. Every numerical alternative listed except $c = \tfrac {\pi }{2}$ (the same value), the floor and $\tfrac {3\pi }{8}$ applied to both types is excluded by the observation at more than four standard deviations; the floor is $1.7\sigma $ low and $\tfrac {3\pi }{8}$ applied to both types, which no reduction produces, is $1.5\sigma $ low}{table.3}{}}
+\newlabel{obs:status}{{7.31}{51}{The status of the rule}{theorem.7.31}{}}
+\newlabel{subsec:simulated}{{7.7}{52}{The composition in galaxy clusters and in the Galaxy}{subsection.7.7}{}}
+\newlabel{fact:simulated}{{7.32}{52}{imported: the composition simulated}{theorem.7.32}{}}
+\newlabel{sec:premises}{{8}{54}{The premises attacked, and what would refute this paper}{section.8}{}}
+\newlabel{sec:position}{{9}{65}{Position in the series}{section.9}{}}
+\newlabel{sec:verification}{{10}{67}{Machine verification}{section.10}{}}
+\newlabel{app:seeding}{{A}{69}{Seeding by gravity, and why no coupling rule follows}{appendix.A}{}}
+\newlabel{fact:alpha}{{A.1}{69}{imported: the massless-graviton production rate}{theorem.A.1}{}}
+\newlabel{prop:gravseed}{{A.2}{69}{Seeding by gravity: the floor on a dark tower's temperature}{theorem.A.2}{}}
+\newlabel{prop:coefficients}{{A.3}{70}{The coefficients, the floors they give, and what gravity cannot supply}{theorem.A.3}{}}
+\newlabel{prop:norule}{{A.4}{71}{No coupling rule for the odd towers follows from the series}{theorem.A.4}{}}

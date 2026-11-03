@@ -1,0 +1,26 @@
+functions:
+  check_type_c_iff_p_minus_q_one_mod_four:
+    kind: sampled
+    clauses:
+    - Cl(p,q) has a nontrivial central idempotent iff p - q = 1 mod 4
+    omits: All 35 signatures with 1 <= n <= 7; the helper solves the idempotent equation on the centre by hand-solved algebra (b = 1/2) and the check asserts non-emptiness plus the list of signatures, not the count two nor equality with eps_+- (the "exactly eps_+-" clause is covered only by that helper)
+  check_eps_pm_identities_and_exchange:
+    kind: sampled
+    clauses:
+    - the central idempotents are eps_+- = (1 +- omega)/2
+    - eps_+ eps_- = 0 and eps_+ + eps_- = 1
+    - exchanged by the grade involution
+    - centrality is conjugation invariant (no inner automorphism exchanges them)
+    omits: Signatures with p - q = 1 mod 4 and n <= 7; conjugation tested for one vector and one rotor per signature, not all invertibles
+  check_splitting_into_two_ideals:
+    kind: sampled
+    clauses:
+    - Cl(p,q) = eps_+ A + eps_- A into two ideals
+    omits: Signatures with p - q = 1 mod 4 and n <= 5 only; shows dimensions 2^(n-1), directness, ideal property and centre R eps_+ but not simplicity of the ideals or the identification with the classification theorem
+untouched_premises:
+  std-algebra.involution-properties: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Existence criterion, identities and splitting are tested for n <= 7 (n <= 5 for the splitting); uniqueness of eps_+- among central idempotents is by hand-solved algebra in a helper.

@@ -1,0 +1,29 @@
+functions:
+  check_dirac_current_is_future_causal_and_its_null_flux_is_canonical:
+    kind: sampled
+    clauses:
+    - (i) the Dirac current J = psi e0 psi~ is future causal, Q(J) = alpha^2 + beta^2 with psi psi~ = alpha + I beta, J.e0 = <psi^dagger psi> > 0 and J.N > 0 on timelike N
+    - (i) along any null k the flux density is 2 (k.e0) <(Lam psi)^dagger Lam psi> with the Hermitian projector Lam = e0 k/(2 k.e0), and depends on Lam psi only
+    omits: three spinors, five null directions and four timelike vectors; the divergence theorem on the region between the hypersurface piece and a Cauchy surface (proof Step 2); the curved-field content of (i) to (iii), including the iterated-limit argument of (iii-a), is proof-only
+  check_generator_scaling_is_conjugation_by_a_unitary_dilation:
+    kind: sampled
+    clauses:
+    - (ii) the scaled pairing lambda <phi, w(u0 + lambda ., u0 + lambda .) chi> equals <U phi, w U chi> with the dilation U at weight 1/2 per leg, which is unitary, and weight 1 is not
+    omits: polynomial kernels and test functions on one interval at three values of lambda; the operator-norm statement for bounded kernels is proof-only
+  check_thin_layers_on_the_flat_null_plane_converge_to_the_generator_car:
+    kind: sampled
+    clauses:
+    - (iv) on the flat null plane the compressed anticommutator has shell density 1/2 on both shells for every mass (exact Jacobian d^3p/(2|p0|) = dp_+ d^2p_perp/(2|p_+|) and Lam (p +- m) e0 Lam = (p.k) Lam)
+    - (iv) the thin-layer factor n^2/(n^2 + q^2) lies in (0, 1] and the layer defect 1 - rho_n^2 tends to zero below 2 q^2/n^2 at every shell point, so the layer limit is the generator CAR
+    omits: four shell points (two massive, both signs of p_+) and three values of n; the sampled transform is the two-sided exponential's, an example of the properties used (|rho^| <= 1, rho^ -> 1), not a smooth layer; the dominated-convergence step is proof-only
+  check_regulator_direction_drops_out_of_the_null_singularity_coefficient:
+    kind: complete
+    clauses:
+    - (v) for the Hermitian projector of a null k, Lam p e0 Lam (k.e0) = (p.k) Lam for every vector p (exact; at k.e0 = 1 the stored flat-plane identity), so for a complex time-function regulator the coefficient of the null singularity does not depend on the regulator direction
+    - (v) the Hermitian partner n = (2 (k.e0) e0 - k)/(2 (k.e0)^2) is null with n.k = 1 and Lam = n k/2, and e0 Lam = k/(2 k.e0)
+    omits: the identity is linear in p and is checked on a spanning set of regulators for five null directions; the comparison with a real thin-layer displacement and the log-coefficient matching of (v) are argued, not checked
+untouched_premises:
+  synthesis.imported-gtg-dictionary: 'supplies the physical frame in which the current is read; the checks work in that frame'
+  synthesis.imported-microlocal-hadamard-condition: 'enters (iii-a) only through the smooth difference of Hadamard kernels, a proof step'
+  synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard: 'supplies W = G_par + D near the hypersurface in (iii-a) and (iii-b), a proof step'
+  synthesis.imported-haefner-nicolas-dirac-characteristic-problem-on-light-cones-near-the-vertex: 'supplies (Iso) on light cones near the vertex in (iv) and the energy identity behind Step 2; cited in the proof, no exact computation uses it'

@@ -1,0 +1,36 @@
+functions:
+  check_setting:
+    kind: sampled
+    clauses:
+    - preamble (Q, N, T_j, Y, K definitions)
+    omits: CAR pairs v_a, w_b, the frame involution, Q(a v + b w) = a b, the slot generators as X on v and -X^T on w, hypercharge weights +-1/2, and invariance of Q and N under the four generators on one pair of sample complex vectors; no clause of (1) to (5) is established by it alone
+  check_charge_preserving_locus:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: 'Three values of Lambda and five of lambda: stabiliser of c_lambda is one-dimensional with unbroken generator Y - T_3 (kernel vector pattern); two misaligned points of L have trivial stabiliser; six aligned points (three radii, two unit vectors) are U(2)-images of c_{h/r}; the full classification (stabiliser nontrivial iff beta in C alpha-bar, and these are exactly the images of the c_lambda) is not enumerated'
+  check_two_readings_of_gauge_masses:
+    kind: sampled
+    clauses:
+    - (2)
+    omits: Hermitian and bilinear kinetic matrices equal N(c)/4 P0 and Q(c)/4 P0 at five lambda for one h; with the couplings (g, g') = (1, 1/2) only, the characteristic polynomial t (t - g^2)^2 (t - g^2 - g'^2) is verified at five values of t; the scale N(c_lambda) = H^2 cosh 2 eta appears in the next-but-one function, and the electroweak interpretation (M_Z/M_W) is not tested
+  check_rung_unit_is_the_neutral_mode:
+    kind: sampled
+    clauses:
+    - (3)
+    omits: 'At each of three Lambda and five lambda: the tangent space of L has real dimension 6, the gauge orbit 3, the orthogonal complement 3, dc/dlambda lies in it and is neutral for Y - T_3, the charged plane is two-dimensional with charge one, and Q(dc/d eta) = h, N(dc/d eta) = N(c); the parameter values are samples'
+  check_rung_unit_is_imaginary_hypercharge:
+    kind: sampled
+    clauses:
+    - (4)
+    omits: Rung-unit boost B_s equals e^{(log s)K} acting as c_lambda -> c_{lambda/s} (five lambda, three s); N(c_lambda) - h = (1/2)(lambda - h/lambda)^2, m = (1/2)((h/lambda)^2 - lambda^2), m = 0 iff lambda^2 = h and strictly decreasing along the family; strict convexity and minimality of N(e^{tK}c) along arbitrary orbits (alpha, beta nonzero) and the derivative 2m are not tested
+  check_product_law_and_mirror:
+    kind: sampled
+    clauses:
+    - (5)
+    omits: Product law N^2 = |Q|^2 + m^2 at two aligned complex points off L and strict inequality at one misaligned point; Dirac entries H^2/lambda and lambda with product h and ratio lambda^2/h read through c; both entries lambda with product lambda^2 = N - m through c*; the conjugation sends c_lambda to -c_{h/lambda}, preserving Q and N and reversing m; at five lambda for three Lambda
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Gaussian-rational computations in the rung summand confirm each clause at sample Lambda, lambda and couplings; general-orbit convexity and the full stabiliser classification are not enumerated.

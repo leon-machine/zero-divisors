@@ -1,0 +1,22 @@
+functions:
+  check_car_window:
+    kind: sampled
+    clauses: [hypothesis (B)]
+    omits: 'A model check: four modes in Cl(4,4) satisfy the CAR and the swap 0<->2, 1<->3 is an automorphism intertwining the two towers; no numbered clause is established.'
+  check_shared_clock_forces_xi_one:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'Three Gibbs parameters x on a four-mode window (w, 2w in each tower): the shared-clock product Gibbs state is KMS with the product occupations; the alternatives tried are only product Gibbs states with the mirror at another parameter (three per x), which fail KMS. Uniqueness of the KMS state (any state, the infinite algebra, the I-state) is the cited theorem, not recomputed.'
+  check_two_clocks_persist:
+    kind: sampled
+    clauses: [(ii)]
+    omits: 'Two (x, y) cases: the two-temperature product state is stationary under the decoupled H, fails KMS for the shared clock at the two candidate parameters z = x, y (KMS on a single mode forces z, argued rather than scanned), is KMS for the two-clock flow, and a partner-mode hopping obstructs stationarity by the occupation gap; not the infinite algebra.'
+  check_law_symmetric_realisation_asymmetric:
+    kind: sampled
+    clauses: [(iii)]
+    omits: 'One pair (x, y) = (1/3, 1/9): invariance of the mixture under the swap and under H, marginals 7/40, <N0 N2> = 1/40 against 49/1600 (not quasi-free), no cross two-point functions, not KMS at the single parameter 7/33 that mode 0 would force; each component has unequal occupations 1/4 and 1/10.'
+  check_reading_under_m:
+    kind: exact
+    clauses: [reading under (M)]
+    omits: 'Exact arithmetic on quoted inputs: Delta N_eff = 7.447 xi^4 and the cap 0.3 are typed in from the companion propositions; xi = 1 gives 7.447 (quoted 7.45), excluded by a factor of about 25, and the threshold lies between 0.448 and 0.449. The reading itself is conditional on (M) and is not tested.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The window models reproduce (i)-(iii) with explicit occupations; the cosmological numbers are exact on supplied inputs.}

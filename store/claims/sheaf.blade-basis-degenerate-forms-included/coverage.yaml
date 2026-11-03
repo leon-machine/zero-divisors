@@ -1,0 +1,20 @@
+functions:
+  check_blades_are_a_basis:
+    kind: sampled
+    clauses: ["the 2^n blades e_I form a linear basis of Cl(W, B)"]
+    omits: "eight sample rational Gram matrices with n <= 4; the exterior-algebra model of Cl(W,B) is taken as faithful (GA section 4), not rebuilt here"
+  check_structure_constants:
+    kind: sampled
+    clauses: ["the 2^n blades e_I form a linear basis of Cl(W, B)"]
+    omits: "supporting only: checks e_i e_j + e_j e_i = 2 B_ij, associativity (n <= 3 and one 4x4 Gram) and agreement with GA.mul for three diagonal forms; no clause of the statement is established beyond the model being an algebra"
+  check_structure_constants_polynomial:
+    kind: sampled
+    clauses: ["the structure constants are polynomial in the entries B(e_i, e_j)"]
+    omits: "degree <= n interpolation along a single line B0 + t B1 in n = 3 only (with the scalar constant of e_i e_j, i > j, pinned to 2 B_ij(t)); this is necessary for joint polynomiality in all entries, not a proof of it"
+untouched_premises:
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Blade independence, relations and polynomiality are tested on eight sample Gram matrices (n<=4) and one line in Gram space (n=3), in an exterior-algebra model of Cl(W,B); general B, n is not covered. 2026-10-23 weak-check pass, the polynomial check now pins the scalar constant of e_i e_j (i > j) to 2 B_ij(t) for every pair (it was asserted only for a pair with B_ij(t) = 0)."

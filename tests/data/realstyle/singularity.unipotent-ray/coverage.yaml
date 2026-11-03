@@ -1,0 +1,18 @@
+functions:
+  check_p_squares_to_zero:
+    kind: exact
+    clauses: ["P^2 = 0 exactly, at every radius"]
+    omits: "P is independent of beta; checked on the frame, two sample vectors and as a 4x4 rational matrix, which is exhaustive for a linear map"
+  check_closed_form_inverse_horizon_included:
+    kind: exact
+    clauses: ["hb is invertible with hb^{-1} = 1 + beta P, horizon included", "division does not fail at the horizon"]
+    omits: "identities are exact over Q(beta); horizon (beta = 1) and three other values also checked on the frame with GA"
+  check_trajectory_is_unipotent_ray:
+    kind: exact
+    clauses: ["{1 - beta P : beta >= 0} is a ray of unipotent maps: (hb - 1)^2 = 0, hb - 1 != 0"]
+    omits: "the additivity hb(b1) hb(b2) = hb(b1 + b2) is checked at three sample pairs only and is not itself a clause of the statement; 'algebraically unremarkable' at the horizon is interpretive"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "polynomial identities in beta are verified exactly over Q(beta), matching the statement"

@@ -1,0 +1,10 @@
+functions:
+  check_incidence_entanglement:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "(i): ascent marginals diag(1, w^2)/(1+w^2) of Omega and Psi at four w, ds/dw = beta dn/dw as an exact rational-function identity (the log coefficients cancel), and the sign of ds/dw on the grid k/7, |k| <= 20, so stationary at w = 0 and |w| = 1 with n = 1/2 there; s(1) = ln 2 is not asserted, the entropy is carried as symbols, and 'the partner depends on the spatial direction' is not tested; (ii): the maximal set equals the light cones of t = +-1 on a quarter-step grid, and increase of n on (0, 1) on the slice t = 0; the split of the null boundary into past (u = -1) and future (v = 1) parts is not tested; (iii): boost and dilation generators are self-adjoint with square 1 and exp(s g) at one s is not unitary; the rescaling of u, v by boosts and dilations and 'the diamond is determined by the Hermitian structure' are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "one function covers all three clauses at sample points and on grids; the ln 2 maximum value is inferred from n = 1/2 rather than computed"

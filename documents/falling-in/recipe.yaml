@@ -1,0 +1,42 @@
+doc: falling-in
+title: 'Falling In: from the singularity to the Hawking temperature'
+author: Leon Butler
+level: formal
+spine:
+- singularity.cones-fold
+- singularity.non-removability-invariant-argument
+- singularity.type-n-only-type-n
+- tower.witt-index-quantum-capacity
+- interior.covariant-form-vacuum-equations
+- singularity.descent-parity-average
+- singularity.deficit-theorem-cost-descent-exactly
+- singularity.purity-output-partner-commutant
+- singularity.rate-discharge-hypothesis-iii
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+- hawking.i-state
+- singularity.descended-form-state-independent
+- hawking.bose-einstein-occupancy-quantified-window-corrections
+frontier_regions:
+- transport
+- sheaf
+- conformal
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+section_titles:
+  singularity: 'The singularity: where division fails'
+  tower: Quantum capacity of the completion
+  interior: Einstein's equations in the completion
+  hawking: The Hawking state and the radiation
+gate:
+  g00_lines:
+  - 412
+  - 535
+  note: 'Phase 1 gate: compare with G00''s black-hole sections'

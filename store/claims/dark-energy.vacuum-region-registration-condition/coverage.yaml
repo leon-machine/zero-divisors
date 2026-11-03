@@ -1,0 +1,16 @@
+functions:
+  check_norm_constant_and_w_minus_one:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "two flat-sliced de Sitter fields (H = 1/2, 3/2) with kappa a rational stand-in for 8 pi G; constancy of Q(I) follows from the metric-preserving gauge field on sample tractors"
+  check_general_scale_tractor_norm_is_r_over_twelve:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "two de Sitter and two matter-dominated fields; that I_g is parallel exactly when g is Einstein is checked on these fields only, and R varying on a matter cosmology is checked at tau = 8 and 27"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clause (iii) is a registration with no computable content and the docstring says so; (i) and (ii) are tested on sample fields"
+untouched_premises:
+  synthesis.field-space-premise-parallel-frozen-point: assumed by clause (iii), a registration with no computable content; the check tests (i) and (ii) only and does not touch the premise

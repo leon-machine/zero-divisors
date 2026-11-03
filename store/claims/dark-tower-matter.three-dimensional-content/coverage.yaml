@@ -1,0 +1,18 @@
+functions:
+  check_cells_and_charges:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "single-flavour electrodynamics in 2+1 dimensions is the reading of the charges; only weights, charges and the p -> -p exchange are computed"
+  check_exterior_weights_on_lattice:
+    kind: complete
+    clauses: ["(ii)", "(iii) the weights (+-1, 0), (0, +-1) are off the lattice s + p even and (0, 0) is on it"]
+    omits: "which directions carry which weights (constituent level under (S), rung and pair directions) is imported from the supplementary script D3R; the incompatibility of (S) with the global form, the neutral direction's bare mass and the absence of a charged Higgs analogue are not computed"
+  check_no_chirality_and_neutral_states:
+    kind: complete
+    clauses: ["(iv)"]
+    omits: "no chirality is tested as: no nonzero element of Cl(1,2) or Cl(2,1) anticommutes with every vector; the neutral-state count is over occupations 0 to 2 of each of A, A-bar, B, B-bar (nine neutral states, all with zero net number of each cell)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (i), (ii) and (iv) are enumerated for the three-dimensional towers; (iii) is covered only by the lattice test, as the docstring says"

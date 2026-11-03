@@ -1,0 +1,26 @@
+functions:
+  check_non_ideal_null_rays_are_lifts:
+    kind: sampled
+    clauses:
+    - (proof step) every non-ideal null ray [N] equals a lift [X(y/s)]
+    omits: Reduction step of density, not the density claim itself; 72 (signature, y, s) triples over the model signatures in SIGS; t = Q(y)/(2s) solved from the affine N^2
+  check_invertible_points_dense_in_v:
+    kind: sampled
+    clauses:
+    - invertible points {Q != 0} accumulate at every null x in V
+    omits: One null vector x (with partner a) per signature and the shifted point xb; zeros of Q(x + t a) checked at t = 1/k, k <= 30; not an arbitrary null x
+  check_ideal_points_are_limits_of_lifted_invertible_points:
+    kind: sampled
+    clauses:
+    - ideal points [x + t ninf] (x null, nonzero) lie in the closure of the lifted invertible points
+    omits: One null x per signature and the t in T_VALUES; the convergence certificate is a degree <= 2 polynomial in 1/s fitted at three values of s and confirmed at a fourth, not a limit proof; topology of the quadric is not tested
+  check_point_at_infinity_is_limit:
+    kind: sampled
+    clauses:
+    - '[ninf] lies in the closure of the lifted invertible points'
+    omits: Two sample vectors a per signature and four values of s (exact remainder (2/(s Q(a))) a + (2/(s^2 Q(a))) n0 at each s, plus the interpolation certificate); not a topological closure argument
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Density is tested only through the explicit approximating paths of the proof with finite-sample convergence certificates; the topological statement itself is not computed. 2026-10-23 weak-checks pass: check_point_at_infinity_is_limit now asserts the exact O(1/s) remainder at every sample s, s (rep - ninf) = (2/Q(a)) (a + n0/s)"

@@ -1,0 +1,26 @@
+functions:
+  check_first_order_rate_formula:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "both rate formulas and the second-Bianchi gradient identity are verified in exact series at three generic polynomial metrics with generic elements; 'every symmetric B_l and covector omega is realised' is exercised by the generic data but not tested as a statement"
+  check_ppwave_cases:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "special cases only (flat space, one vacuum pp-wave with rate 32, one null-dust pp-wave with rate 16) and five alternative element-data choices for 'data beyond B and omega do not enter' in one metric; no general statement"
+  check_flat_element_vacuum:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the value 6 for the stated plane wave at the origin along d_u + d_v/2 + d_x is computed exactly (JM rate, Noether rate and the gradient term all equal 6, Ric(k,k) = 0 on five null k); the Schwarzschild-de Sitter radial-generator remark is not computed here"
+  check_null_data_force_constant_curvature:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "pointwise algebra only: Ric(k,k) = 0 for all null k forces trace-free Ricci = 0 (rank 9) and C(e_a,k,e_b,k) = 0 forces Weyl = 0 (rank 10), exact because the sample null vectors already reach full rank; Z = 0 at p, vanishing of the gradient term, the converse, and the global 'if and only if constant curvature' (Schur) are not tested"
+  check_first_order_defect:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "order counting at 3 Lambda x 3 (rate, Ric, T) samples with the rate r entered as a free number, so it does not use clause (i); tests heat and area change start at lam0^2 and the lam0 coefficient kappa alpha r/(4G); the 'requires r = 0 for all admissible elements' step is the nonvanishing assertion at samples"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks match their docstrings; clause (iii) (consequences, beta = 0, Loc derived for the listed densities) has no function, and 'requires constant curvature' is only the pointwise algebra"

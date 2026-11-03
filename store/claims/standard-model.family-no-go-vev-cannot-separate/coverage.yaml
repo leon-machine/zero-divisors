@@ -1,0 +1,20 @@
+functions:
+  check_one_family_clebsches_equal:
+    kind: sampled
+    clauses:
+    - '"|y_e| = |y_d|"'
+    - '"the same holds for M_nu^D against M_u"'
+    omits: Rung-plane coefficients (a, b) at four sample points for each hypercharge; the form is built on the sixteen of the rebuilt five-mode module, so the tie to the module of the doublet-direction claim is by construction, not by premise
+  check_family_factor_keeps_spectra:
+    kind: sampled
+    clauses:
+    - '"M_e and M_d have identical characteristic polynomials up to sign, for every F"'
+    omits: One non-symmetric invertible rational F and the single vectors w_4 and v_4 (not their combinations); the all-F statement is not tested symbolically, and S_3 breaking is covered only because F is arbitrary
+untouched_premises:
+  standard-model.imported-spinor-bilinears: cited only in the standard-route derivation; the check follows the main derivation
+  standard-model.imported-clebsch-structure-seesaw: cited only in the standard-route derivation; the check follows the main derivation
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Samples of an identity that follows from scaling; the 126 control shows the test discriminates.

@@ -1,0 +1,14 @@
+functions:
+  check_weighted_gram_is_tame_normal_form:
+    kind: sampled
+    clauses: ["W satisfies (T2d) and (T3d)"]
+    omits: "existence side only, at masses m = 1 and 3 (identity is exact in u, sampled in m); says nothing about uniqueness"
+  check_singular_transitions_violate_tameness:
+    kind: sampled
+    clauses: ["no other rain-bounded extension satisfies (T2d) and (T3d)"]
+    omits: "six hand-chosen polynomial transitions A at two masses, not the general transition matrix; the general argument (det A(0) = 0 forces o(r)) is the proof's, not the check's"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says 'exact' but states the six-transition and two-mass scope; both functions are sampled instances of the existence and uniqueness halves."

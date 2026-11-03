@@ -1,0 +1,22 @@
+functions:
+  check_bivector_is_the_dilation_generator:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "That B generates the dilations of the conformal model is read off from the rotor action in the next function; this function checks only the algebraic identities of B."
+  check_rotor_scales_the_null_pair:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Three rational rotors (t = 4, 9/4, 16); the relation to the boosts of the cited Theorem (iii) is not computed here."
+  check_ratio_is_gauge_and_product_invariant:
+    kind: sampled
+    clauses: ["(iii) the ratio b/a is a dilation gauge and only 2ab = Lambda/3 is invariant"]
+    omits: "Four frozen points, three rotors, three equal-norm pairs; that the dynamics does not fix the gauge, so that the components are unphysical and the frame carries nothing beyond Lambda, is the cited Fact and is not checked (the docstring says so)."
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.bivector-exponential: "standard algebra cited in the proof; the check computes the statement directly"
+  dark-energy.point-infinity-has-no-physical-fluctuation: "Cited for the dynamical statement that the gauge is not fixed by the dynamics; the docstring states that it is not checked here."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The identities for B, the rotor action and the gauge orbits are tested at rational samples; the dynamical half of (iii) rests on the imported Fact."

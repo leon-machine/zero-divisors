@@ -1,0 +1,21 @@
+functions:
+  check_frame_boost_is_twice_right_isospin:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "Clifford relations of the ten boosted generators and B_{1/lam} c_1 = c_lam at s = 2, 3/2 (Lambda/3 = 1/3); the eigenvalue relation ad N_R = 2 ad T_3R and B_s X = s^q X on nine monomials (T and T* among them); the extension to all elements by linearity is in the text"
+  check_majorana_directions_have_frame_weight_two:
+    kind: complete
+    clauses: ["(2)"]
+    omits: "all 3^5 slot-type monomials (each slot v, w or absent), weights computed by exact commutators with N_R, B - L, Y; weight-zero factors n_a and w_a v_a in a slot are covered by additivity in the text"
+  check_star_norm_is_chebyshev_in_the_frame:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "H = 1, s = 2, 3, 3/2: the *-norms of the boosted balanced rung component and of D = T + T*, the Chebyshev identity, vanishing cross terms, frame invariance of both pairings and the s^4 scaling of a null T; general weight q (T_q) is in the text"
+  check_frame_tied_majorana_scale_against_record:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "exact rational bounds from stored quantities with v^2 = 2N (pi < 22/7 proved by Machin partial sums); the algebraic step M >= kappa v^2/2H and the seesaw norm bound are in the text; the tree relation for v is cited from memory"
+  check_other_extensions_tie_to_v_or_h:
+    kind: exact
+    clauses: ["(5)"]
+    omits: "slot-4-only boost checked as an isometry and on T at s = 2, 5/3; hypercharge weights of T, T* and the rung vector; record bounds exact (pi > 3 by Machin); the statement that the tied sizes are of order kappa v and kappa H is in the text"

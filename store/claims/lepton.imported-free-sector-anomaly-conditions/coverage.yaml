@@ -1,0 +1,16 @@
+functions:
+  check_free_sector_content:
+    kind: exact
+    clauses: ["grade-k states transform as 1, 3, 3b, 1 with weight -2k, i.e. (1)_0, (3)_{-1/3}, (3b)_{-2/3}, (1)_{-1}"]
+    omits: ""
+  check_opposite_handedness_enters_conjugated:
+    kind: partial
+    clauses: ["a fermion of the opposite handedness enters as its conjugate, with the conjugate representation and the opposite hypercharge"]
+    omits: "the rule is encoded in the anomaly_sums routine and tested only through its consequence that a species plus its conjugate gives zero in all four sums, for six species, with two same-handedness controls; the four anomaly conditions of Fact 2.7 themselves are imported definitions and are not derived"
+untouched_premises:
+  lepton.imported-free-sector-anomaly-conditions-external: "textbook restatement of the same Fact; the docstring states there is no premise() call for it"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The sector content is computed exactly; the anomaly conditions are imported and only the conjugation consequence is exercised, as the docstring says."

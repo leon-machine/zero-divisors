@@ -1,0 +1,18 @@
+functions:
+  check_stabiliser_is_poincare:
+    kind: exact
+    clauses: ["stabiliser of nInf is Lambda^2 W + nInf W of dimension 10, so(1,3) semidirect R^4"]
+    omits: ""
+  check_ray_stabiliser_is_parabolic:
+    kind: exact
+    clauses: ["stabiliser of the ray has dimension 11", "adds the grading element nInf ^ nO"]
+    omits: "'maximal parabolic' is not tested beyond the dimension 11 and the one nonzero weight"
+  check_nilradical_translations_and_two_step:
+    kind: sampled
+    clauses: ["the nilradical acts as translations", "two-step nilpotent transvections"]
+    omits: "two shifts a and three points x for T_a X(x) T_a~ = X(x + a); two-step nilpotency of ad(nInf a) for those two a; that nInf ^ W is the nilradical of the parabolic and equals the no-go theorem's transvections is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Stabiliser dimensions and brackets are exact kernels in the finite Lie algebra; the nilradical clause is sampled."

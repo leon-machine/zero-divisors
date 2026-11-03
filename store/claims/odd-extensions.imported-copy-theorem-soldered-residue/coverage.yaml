@@ -1,0 +1,20 @@
+functions:
+  check_even_subalgebras_isomorphic:
+    kind: exact
+    clauses: ["Cl^0(2,4) is isomorphic to Cl^0(4,2) (and Spin(2,4) to Spin(4,2))", "the reversion form is invariant under signature reversal"]
+    omits: "Multiplicativity of phi on all 32 x 32 even blade pairs, bijectivity, grade preservation and compatibility with reversion; the helicity form and the mass formula of two conformal spinors are not computed beyond this algebraic carrier."
+  check_both_are_mat4c:
+    kind: exact
+    clauses: ["Cl^0(2,4) and Cl^0(4,2) are both Mat(4,C)"]
+    omits: ""
+  check_residue_is_soldered:
+    kind: exact
+    clauses: ["the residue is a soldered invariant, not an algebraic one"]
+    omits: "Compares only the congruence signatures (2,4) and (4,2) of the two generating subspaces and their residues 6 and 2; the claim that the one metric superselects the tower charge is not computable."
+untouched_premises:
+  dark-matter.superselected-hence-dark-exactly-stable: "Cited for the superselection of the tower charge and stability of the dark sector, which the docstring declares not computable."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The algebraic clauses (even subalgebras, Mat(4,C), residue as soldered data) are computed exactly; the superselection of the tower charge is declared not computable in the docstring."

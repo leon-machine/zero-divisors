@@ -1,0 +1,47 @@
+doc: t05-descent-lift-regenerated
+title: 'The Descent, Lifted: What the pinching discards, a pairing stores: Companion note to T1 and T5:
+  the reversible lift of the descent costs one rung per mode and needs exactly the generator the singularity
+  paper excludes (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- descent-lift.imported-pinching-one-way-door
+- descent-lift.imported-descent-modes-univalence-supplied-class
+- descent-lift.imported-descent-modes-univalence-supplied-class-external
+- descent-lift.imported-stinespring-kraus-choi
+- descent-lift.imported-fermionic-operations-are-even-reduced
+- descent-lift.imported-thouless-states-witt-vacua
+- descent-lift.imported-thouless-states-witt-vacua-external
+- descent-lift.kraus-form-descent-even-states
+- obj.descent-lift.lift
+- descent-lift.lift-costs-one-rung-per-mode
+- descent-lift.parity-alone-forces-second-rung
+- descent-lift.classical-shared-bit-reduced-view-pure
+- descent-lift.partial-lifts-witness-overshoots
+- descent-lift.classical-record-reproduces-descent-stores-nothing
+- descent-lift.within-supplied-dynamics-descent-has-no
+- descent-lift.imported-taxonomy-type-p-rule-algorithm
+- descent-lift.pairing-creator-under-transport-algorithm
+show: spine-only
+paper: T05-descent-lift
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_descent_lift_note.tex
+  note: Recreate T05-descent-lift from the store
+cite: []
+prose: paper
+msc: Primary 81P40; Secondary 15A66, 46L60, 81R25.
+keywords: Conditional expectation; pinching; Stinespring dilation; fermionic parity superselection; Bogoliubov transformation; entanglement; transport principle.

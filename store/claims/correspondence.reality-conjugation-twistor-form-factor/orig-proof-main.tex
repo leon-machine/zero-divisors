@@ -1,0 +1,43 @@
+(1) In the monomial basis the operators $c(w_j) = \sqrt2\,w_j\wedge$ and $c(w_j') = \sqrt2\,\iota_{w_j'}$ have real matrices, so $J c(v) J^{-1} = c(v^\varsigma)$, where $\varsigma$ conjugates the coordinates of $v$ in the isotropic basis. Compare $\varsigma$ with the real structure: $w_1, w_1', w_2, w_2'$ are real vectors, fixed by both, while $\bar w_3 = b_3 - ib_4 = -2w_3'$ and $\bar w_3' = -\tfrac12 w_3$ against $w_3^\varsigma = w_3$, $w_3'^\varsigma = w_3'$. The $\C$-linear map $g$ fixing $w_1, w_1', w_2, w_2'$ and sending $w_3 \mapsto -2w_3'$, $w_3' \mapsto -\tfrac12 w_3$ is the reflection $r$ in $b_4 = -\tfrac{i}{2}(w_3 + 2w_3')$: $r(v) = v - 2\ip{b_4}{v}b_4/\ip{b_4}{b_4} = v + 2\ip{b_4}{v}b_4$ fixes $b_4^\perp \ni w_1, w_1', w_2, w_2'$ and gives $r(w_3) = w_3 - 2i\,b_4 = w_3 - (w_3 + 2w_3') = -2w_3'$. Hence $\bar v = r(v^\varsigma) = (rv)^\varsigma$ for all $v$. In the Clifford algebra, $c(b_4)^{-1} = c(b_4)/\ip{b_4}{b_4} = -c(b_4)$ and
+\[
+c(b_4)\,c(u)\,c(b_4)^{-1} = \bigl(2\ip{b_4}{u} - c(u)c(b_4)\bigr)\bigl(-c(b_4)\bigr) = -2\ip{b_4}{u}c(b_4) - c(u) = -c(ru),
+\]
+while $\Gamma c(u)\Gamma^{-1} = -c(u)$ because vectors are odd. Therefore
+\[
+\kappa\,c(v)\,\kappa^{-1} = \Gamma\,c(b_4)\,c(v^\varsigma)\,c(b_4)^{-1}\,\Gamma^{-1} = \Gamma\bigl(-c(r v^\varsigma)\bigr)\Gamma^{-1} = c(r v^\varsigma) = c(\bar v).
+\]
+Uniqueness: if $\kappa'$ is another antilinear intertwiner, $\kappa^{-1}\kappa'$ is a $\C$-linear operator commuting with $c(V_\C)$ on the irreducible module $\Lambda^\bullet W$; an eigenspace of it is a nonzero submodule, hence everything, so $\kappa^{-1}\kappa'$ is a scalar. Parity: $J$ and $\Gamma$ preserve degree parity and $c(b_4)$ reverses it, so $\kappa(\T) = \T'$. The square: $b_4$ has purely imaginary coordinates, so $J c(b_4) J^{-1} = c(b_4^\varsigma) = -c(b_4)$, and with $J^2 = 1$,
+\[
+\kappa^2 = \Gamma c(b_4)\,\Gamma\,\bigl(J c(b_4) J^{-1}\bigr) = \bigl(-c(b_4)\bigr)\bigl(-c(b_4)\bigr) = c(b_4)^2 = \ip{b_4}{b_4} = -1 .
+\]
+The script checks the intertwining relation on every basis state for the six basis vectors and their $i$-multiples, the parity swap, and $\kappa^2$.
+
+(2) $\Sigma$ is well defined and nondegenerate: $\kappa$ maps $\T$ bijectively onto $\T'$ and $B$ is perfect on $\T'\times\T$. Consider $B'(x, y) := \overline{B(\kappa x, \kappa y)}$, a $\C$-bilinear form on $\Lambda^\bullet W$. It vanishes on pairs of equal parity ($\kappa$ swaps parity and $B$ pairs opposite parities only), and every vector is $B'$-self-transpose:
+\[
+B'(c(v)x, y) = \overline{B(c(\bar v)\kappa x, \kappa y)} = \overline{B(\kappa x, c(\bar v)\kappa y)} = \overline{B(\kappa x, \kappa\, c(v) y)} = B'(x, c(v) y),
+\]
+by (1) and Lemma \claimref{correspondence.chevalley-pairing}(3). Such forms are unique up to scale: since $B$ is nondegenerate, any bilinear $\beta$ is $\beta(x,y) = B(Tx, y)$ for a unique linear $T$, and if all vectors are self-transpose for both $\beta$ and $B$ then $B(Tc(v)x, y) = \beta(c(v)x, y) = \beta(x, c(v)y) = B(Tx, c(v)y) = B(c(v)Tx, y)$, so $T$ commutes with $c(V_\C)$ and is a scalar by the eigenspace argument of (1). Thus $B' = \lambda_0 B$ for a constant $\lambda_0$, i.e.\ $B(\kappa x, \kappa y) = \bar\lambda_0\,\overline{B(x,y)}$. Applying the construction twice, $\overline{B'(\kappa x, \kappa y)} = B(\kappa^2 x, \kappa^2 y) = B(x, y)$ and also $= \overline{\lambda_0\,B(\kappa x, \kappa y)} = \bar\lambda_0\, B'(x,y) = |\lambda_0|^2 B(x,y)$, so $|\lambda_0| = 1$. Now for $Z_1, Z_2 \in \T$, using antisymmetry of $B$, $Z_1 = -\kappa^2 Z_1$ and antilinearity of $\kappa$,
+\[
+\Sigma(Z_2, Z_1) = B(\kappa Z_2, Z_1) = -B(Z_1, \kappa Z_2) = B(\kappa(\kappa Z_1), \kappa Z_2) = \bar\lambda_0\,\overline{B(\kappa Z_1, Z_2)} = \lambda\,\overline{\Sigma(Z_1, Z_2)},
+\]
+with $\lambda := \bar\lambda_0$.
+If $\lambda = e^{i\theta}$, replacing $\kappa$ by $\mu\kappa$ with $\mu := e^{-i\theta/2}$ replaces $\Sigma$ by $\Sigma' = \mu\Sigma$, and $\Sigma'(Z_2,Z_1) = \mu\lambda\,\overline{\Sigma(Z_1,Z_2)} = (\mu\lambda/\bar\mu)\,\overline{\Sigma'(Z_1,Z_2)} = \overline{\Sigma'(Z_1,Z_2)}$, since $\mu\lambda/\bar\mu = e^{-i\theta/2}e^{i\theta}e^{-i\theta/2} = 1$: Hermitian. The script computes $\lambda_0 = \lambda = 1$ for the $\kappa$ of (1) on the full basis, checks that $\Sigma$ is Hermitian and of rank four, and re-runs the relation and the phase on $\kappa$ rescaled by $(3+4i)/5$, where $\lambda \neq 1$. Invariance: for real orthogonal $u, v$ and $\beta = \tfrac12 c(u)c(v)$, (1) gives $\kappa\rho(\beta) = \rho(\beta)\kappa$, so
+\[
+\Sigma(\rho(\beta)Z_1, Z_2) + \Sigma(Z_1, \rho(\beta)Z_2) = B(\rho(\beta)\kappa Z_1, Z_2) + B(\kappa Z_1, \rho(\beta) Z_2) = 0
+\]
+by Lemma \claimref{correspondence.chevalley-pairing}(4); the real bivectors span $\mathfrak{so}(2,4)$ and exponentiate to $\mathrm{Spin}(2,4)$. The script checks all fifteen.
+
+(3) For a real null $v$ the plane of $\Psi(v)$ is $c(v)\T'$ (Example \ref{ex:psi}), and
+\begin{align*}
+\Sigma\bigl(c(v)s_1,\, c(v)s_2\bigr) &= B\bigl(\kappa c(v)s_1,\, c(v)s_2\bigr) = B\bigl(c(v)\kappa s_1,\, c(v)s_2\bigr)\\
+&= B\bigl(\kappa s_1,\, c(v)^2 s_2\bigr) = \ip{v}{v}\,B(\kappa s_1, s_2) = 0 ,
+\end{align*}
+using $\bar v = v$, Lemma \claimref{correspondence.chevalley-pairing}(3), and nullity. $\Som$ and $\Spi$ are the planes of $\Psi(\nInf)$ and $\Psi(\nO)$, both real and null.
+
+(4) Take bases $e_1, e_2$ of $\Som$ and $\pi_1, \pi_2$ of $\Spi$. By (3) the Gram matrix of the Hermitian form $\Sigma$ on $\T = \Som\oplus\Spi$ is $\bigl(\begin{smallmatrix} 0 & S \\ S^* & 0\end{smallmatrix}\bigr)$ with $S_{ik} := \Sigma(e_i, \pi_k)$, and nondegeneracy forces $S$ to be invertible. Replacing $\pi_1, \pi_2$ by the basis with $S = I$ turns the Gram matrix into $\bigl(\begin{smallmatrix} 0 & I \\ I & 0\end{smallmatrix}\bigr)$, whose eigenvalues are $+1$ and $-1$, each with multiplicity two: signature $(2,2)$. The script reads the signature off $\Sigma$ itself, through its real form.
+
+(5) (a) $\Rightarrow$ (b): if $m(A)$ is real then $P(A) = X(m(A))$ is $\Psi$ of a real null vector, so its plane $L_A$ is $\Sigma$-null by (3). (b) $\Leftrightarrow$ (c): since $\Som$ and $\Spi$ are $\Sigma$-null and $\Sigma$ is Hermitian,
+\[
+\Sigma(A\pi + \pi,\ A\pi' + \pi') = \Sigma(A\pi, \pi') + \Sigma(\pi, A\pi') = h_A(\pi,\pi') + \overline{h_A(\pi',\pi)}, \qquad h_A(\pi,\pi') := \sigma(A\pi, \pi'),
+\]
+so $L_A$ is $\Sigma$-null exactly when the sesquilinear form $h_A$ on $\Spi$ is anti-Hermitian. With $\hat x := -iA$ and $\sigma$ antilinear in its first slot, $\sigma(\hat x\pi, \pi') = i\,h_A(\pi,\pi')$, and $h_A$ is anti-Hermitian exactly when $\sigma(\hat x\pi,\pi') = \overline{\sigma(\hat x\pi',\pi)}$, i.e.\ when $\hat x$ is $\sigma$-Hermitian. (c) $\Rightarrow$ (a): the set $\{A : m(A) \in W_{1,3}\} = \varphi^{-1}(W_{1,3})$ is a real subspace of $\operatorname{Hom}(\Spi,\Som)$ of real dimension four, because $\varphi$ is a $\C$-linear isomorphism onto $(W_{1,3})_\C$ (Theorem \claimref{correspondence.incidence-relation-chart}(2)); the set $\{i\hat x : \hat x\ \sigma\text{-Hermitian}\}$ is likewise a real subspace of real dimension four (Hermitian forms on a $2$-plane); (a) $\Rightarrow$ (b) $\Leftrightarrow$ (c) shows the first is contained in the second, and equal dimensions give equality. The script exhibits four $\sigma$-Hermitian $\hat x$ (the Pauli forms transported through $\sigma$) with $m(i\hat x)$ real and spanning $W_{1,3}$, and checks that $m(\hat x)$ is not real. The consequences: real chart points are the $\Sigma$-null lines skew to $L_\infty$ by (a) $\Leftrightarrow$ (b) and Theorem \claimref{correspondence.incidence-relation-chart}(3); $\omega = A\pi = i\hat x\pi$ with $\hat x$ $\sigma$-Hermitian is Penrose's incidence relation, his Hermitian matrix being $\hat x$ written in bases adapted to $\sigma$ (which rescale $\det$ by a constant, the spin-frame normalisation of Remark \ref{rem:factori}); and in the bases of Theorem \claimref{correspondence.incidence-relation-chart}, $\ip{m(A)}{m(A)} = -2\det A = -2\det(i\hat x) = 2\det\hat x$ by clause (2) of that theorem, real as it must be.

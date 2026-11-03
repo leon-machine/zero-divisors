@@ -1,0 +1,16 @@
+functions:
+  check_rung_component_norm_and_normalisation:
+    kind: sampled
+    clauses: ["(1) the frozen point's lift has second-rung component in the doublet directions, H_d-type for the point and H_u-type for its reciprocal, with the O(Lambda) admixture", "(2) coefficient one is the lift's normalisation; the rung component has norm -Lambda/3 and the total is null"]
+    omits: "A sample list of rational Lambda in a two-rung Cl(2,2) model that drops the spacetime part; the statement is for the tractor construction at any Lambda."
+  check_rung_directions_are_doublet_directions:
+    kind: exact
+    clauses: ["(1) the representation of the Higgs doublet is the rung directions: w_4, v_4 carry Y = -1/2, +1/2 and 2T_3 = -1, +1", "(2) the rung unit is v/H of order 10^44 Hubble units"]
+    omits: "The Yukawa-pattern part of (1) is another claim's content. The conversion is exact arithmetic on the typed values 246 GeV and 1.4e-42 GeV."
+untouched_premises:
+  standard-model.yukawa-pattern-two-rung-module: "cited in clause (1) for the Yukawa pattern, which this check does not recompute (it is that claim's own check)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clauses (1) and (2) are tested as the docstring says; (3) is declared a statement of scope and left unchecked."

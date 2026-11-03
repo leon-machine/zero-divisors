@@ -1,0 +1,18 @@
+functions:
+  check_half_offset_half_bit:
+    kind: exact
+    clauses: ["(i)", "(iii)"]
+    omits: "rigorous rational interval arithmetic (10^-70 rounding, explicit tails) shows |S_1/2 - (1/2) ln 2| < 10^-57, which is the 'without the identities' form of (i); the exact equality S_1/2 = (1/2) ln 2 rests on the imported theta identities; the factor 2 in 2 sum_{k>=0} s((2k+1) pi) (evenness of s) is built into the sum; the (iii) consequence 1/(2 ln 2) = twice 1/(4 ln 2) is not asserted"
+  check_zero_offset_value:
+    kind: exact
+    clauses: ["(ii)", "(iii)"]
+    omits: "S_0 in (0.720396698946605, 0.720396698946606) and 1/(4 S_0) in (0.3470310, 0.3470311) by rigorous bounds; ln 2/S_0 in (0.96, 0.97) contains no p/q with q <= 4 and p <= 4, which is the delta = 0 clause of (iii); agreement with the value ln 2 + epsilon of Theorem residue-from-mode-entropy(vi) is not compared"
+  check_recurrence_signs:
+    kind: sampled
+    clauses: ["closing paragraph: Killing flow at one modular period is the parity for delta = 1/2 and the identity for delta = 0"]
+    omits: "R(2 pi) = B^2 = -1 in Cl(2,0) exactly; the phase exp(2 pi i K) = (-1)^N (half weights) or 1 (integer weights) on all 16 basis states of a four-mode window, not on the infinite array; the filed-alongside clause (iv) of the q-splits theorem is not checked"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numerical bounds in (i) to (iii) are reproduced by rigorous arithmetic; the exact equality in (i) is imported"

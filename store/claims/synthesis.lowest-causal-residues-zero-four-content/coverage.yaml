@@ -1,0 +1,10 @@
+functions:
+  check_lowest_causal_residues_zero_four_content:
+    kind: sampled
+    clauses: ["(i) one causal floor per tower, lowest dimension min(r, 8-r) + 2", "(ii) residue 0 at (1,1): one ideal, null momentum, mass at two with both chiralities", "(iii) residue 4 at (1,5) and (5,1), either sign: dimension 8, field H, Q(j) = 0, m^2 = 1/4", "(iv) unit-ball values 6.160 to 6.161 and 12 standard errors"]
+    omits: "(i) enumerates towers with ground dimension m <= 12 only; (ii) does not compute Cl0 = R + R or the two non-isomorphic simple modules and the dimensions-three-to-five isomorphism remark; (iii) tests one pair of basis elements for m^2 = 1/4, not both; (iv) status of the fit (status-rule, P3 premise) is not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numerical and algebraic claims of (i) to (iv) are reproduced exactly on the finite cases; one function covers all clauses, and the sampling is in the m <= 12 tower range"

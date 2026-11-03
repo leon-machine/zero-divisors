@@ -1,0 +1,23 @@
+functions:
+  check_gl_relations_on_fock_space:
+    kind: sampled
+    clauses:
+    - '[E_ij, E_kl] = delta_jk E_il - delta_li E_kj, the gl(n) relations'
+    omits: n = 4 modes only (every index quadruple, every basis state, with the CAR on the same space)
+  check_one_particle_restriction_is_onto:
+    kind: sampled
+    clauses:
+    - E_ij preserve the one-particle subspace and restrict on it to the matrix unit e_ij, so the algebra they generate restricts onto Mat_n
+    omits: n = 3, 4, 5 only
+  check_doubling_gives_gl_n_in_clifford_algebra:
+    kind: sampled
+    clauses:
+    - the doubling the completion forces is exactly what turns a tower of modes into a matrix (n counted after doubling, each mode with its adjoined partner)
+    omits: n = 2, 3 in Cl(n,n); shows the doubled modes give n^2 gl(n) directions while the real directions give only n(n-1)/2 = dim so(n); "matrices can be spheres" is interpretive
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The gl(n) relations and the one-particle restriction are checked exactly at small n; the doubling clause is read as the dimension contrast.

@@ -1,0 +1,19 @@
+functions:
+  check_imaginary_weight_is_mass_in_hubble_units:
+    kind: sampled
+    clauses: ["Im w = m/H = N (m/M_P), with nu = m/H + O(H/m)"]
+    omits: "Im w = nu and m^2/H^2 = nu^2 + 9/4 at nu = 1, 7/2, 1000 (leading order only); the monomial identity N (m/M_P) = m/H is exact in the exponent model"
+  check_rescaling_weights:
+    kind: exact
+    clauses: ["under Lambda -> kappa^2 Lambda at fixed M_P: N -> N/kappa, m/M_P invariant, Im w -> Im w/kappa"]
+    omits: "exact exponent arithmetic on monomials in (Lambda, M_P, m, kappa) with H = (Lambda/3)^(1/2); the invariance of m/M_P is the observation-level premise and is built into the model (m and M_P are held fixed by definition), and N -> N/kappa is the imported proved clause restated, not derived"
+  check_covariance_forces_linear:
+    kind: sampled
+    clauses: ["any relation Im w = f(N) with f(N/kappa) = f(N)/kappa for every kappa forces f linear", "a power law N^a with a != 1, the hadronic N^(2/3), and the Zel'dovich-Weinberg coincidence m_h/M_P ~ N^(-1/3) cannot be kinematic"]
+    omits: "six exponents, five finite Laurent sums and three (N, kappa) points with integer powers: the covariance holds iff only a = 1 occurs; general f is not covered (the one-line argument f(N) = N f(1) is not in the code); the weights 1/3 versus 0 for N^(-1/3) and m/M_P are exact; the map of failed routes and the three-piece decomposition of the absolute scale are not computable"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The exponent bookkeeping is exact once the rescaling premise is built in; the 'forces f linear' clause is tested on Laurent sums and sample points."

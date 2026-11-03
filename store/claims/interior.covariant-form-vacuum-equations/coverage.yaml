@@ -1,0 +1,22 @@
+functions:
+  check_derivative_of_the_scale_tractor_is_minus_schouten:
+    kind: sampled
+    clauses: ["\"D^T_a n_inf = -Sch(hb^{-1}(a))\"", "\"Q(I_g) = 0\""]
+    omits: "one point on each of six spherically symmetric or homogeneous fields (Schwarzschild static, Schwarzschild Painleve-Gullstrand outside and inside the horizon, Schwarzschild-de Sitter, Reissner-Nordstrom, flat-sliced de Sitter), along the four frame directions; the tractor gauge field is built from the stated formula, the imported tractor-connection Fact is not recomputed"
+  check_parallel_iff_vacuum:
+    kind: sampled
+    clauses: ["\"I_g is parallel if and only if Sch = 0, if and only if g is Ricci-flat, if and only if the GTG vacuum field equations hold\""]
+    omits: "the same six fields only: parallelism of n_inf coincides with vanishing Ricci contraction on all of them (true for Schwarzschild, false for the other four), and D^T n_inf = -(Lambda/6) gamma_c on SdS and de Sitter; the equivalence with the GTG vacuum equations is the imported Fact and is not recomputed"
+  check_parallel_null_tractor_without_field_equations:
+    kind: sampled
+    clauses: ["\"Existence of some parallel null tractor is the strictly weaker, conformally invariant statement\"", "\"A non-constant rescaling e^{2 omega} g already keeps the parallel section while losing the field equations\""]
+    omits: "flat-sliced de Sitter at one point (H = 1/2, e^{Ht} = 3): the tractor V = s n_inf + H s gamma_0 - (Lambda/6) s n0 is null and D^T V = 0 along four directions with exact jet derivatives, on a non-Ricci-flat field, with a wrong-sign control; almost-Einstein scales, the zero set of the scale, and the rescaling statement itself are not tested"
+  check_structure_algebra_so24:
+    kind: sampled
+    clauses: ["\"whose structure algebra is so(2,4) acting through the bivectors of Cl(2,4)\""]
+    omits: "closure of the 15 bivectors under the commutator and perfectness (their commutators span all 15) are checked exhaustively; preservation of Q is checked on one sample tractor only; gauge covariance of the statement is not tested (the docstring says it is the imported Fact's content)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the statement's identities are tested exactly at chosen points of six named fields; the equivalences with Ricci-flatness and the field equations are checked on those examples, not proved"

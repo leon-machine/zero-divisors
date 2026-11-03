@@ -1,0 +1,11 @@
+functions:
+  check_commutators_and_skewness:
+    kind: sampled
+    clauses:
+    - '"A x C = <AC>_2"'
+    - '"A x x = <Ax>_1"'
+    - '"B(A x x, y) + B(x, A x y) = 0"'
+    - '"When (V, Q) is nondegenerate it is an isomorphism"'
+    - '"<XY>_0 = <YX>_0"'
+    omits: sampled bivectors, vectors and elements per signature with 2 <= n <= 4; injectivity is the
+      exact rank of the map on all bivector blades, recorded also for degenerate signatures

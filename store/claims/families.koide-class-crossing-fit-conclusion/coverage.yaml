@@ -1,0 +1,19 @@
+functions:
+  check_s2_reduction_and_the_root:
+    kind: exact
+    clauses: ["Q_sqrt(m) = 2/3 for (t, t, T) iff sqrt(T/t) = 4 + 3 sqrt 2", "K = (4 + 3 sqrt 2)^4 = 2308 + 1632 sqrt 2 = 4616 (approx)"]
+    omits: "the quadratic rho^2 - 8 rho - 2 comes from a degree-2 identity checked at four rationals; both roots are exact in Z[sqrt 2], the other is negative, so 'iff' holds on positive rho; K is bracketed in [4615.5, 4616.5); that the S2-symmetric point is the only Koide-compatible configuration in the Gaussian class is imported from the skeleton and rigidity results, not computed here"
+  check_crossing_unique_and_bracketed:
+    kind: exact
+    clauses: ["(1 + 6x + 6x^2)/(1 + x) = 6x + 1/(1 + x) = K", "the depth crosses exactly once, at x* = 769.3325 within 2.2e-4 of K/6 = 769.3328"]
+    omits: "uniqueness is the sign of the derivative 6 - 1/(1+x)^2 (numerator 6x^2 + 12x + 5, positive coefficients, so for x > 0); the identity x* = K/6 - 1/(6(1 + x*)) is checked through brackets, not symbolically; the ratio (1 + 6x + 6x^2)/(1 + x) is the skeleton's spectrum, taken as the premise"
+  check_canonical_depth_fails:
+    kind: partial
+    clauses: ["the depth is not canonical"]
+    omits: "tests only the one nominated canonical depth tanh^2 r = 1/2 (x = 1, ratio 13/2, below K); 'not canonical' in general, the reparametrisation reading ('depth is Koide's own number') and the conclusion that the mechanism stands as a fit and the derivation claim is refuted at this order are not computable, as the docstring says"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The computed values (4 + 3 sqrt 2, K, x* and K/6 brackets, ratio 13/2) are exact; the conclusion clause is declared uncomputable in the docstring."

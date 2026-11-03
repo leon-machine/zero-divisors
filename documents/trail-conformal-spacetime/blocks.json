@@ -1,0 +1,577 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "In the conformal completion, two extra directions are added to the algebra of spacetime, and every point becomes a null vector, one whose square is zero. [[c:angle.imported-conformal-model-null-rotations]] This trail shows that the same algebra already contains the conformal spinor space, which Penrose called twistor space. [[t]]\n\nThe null directions of the completion match the lines of the projective spinor space, the classical Klein correspondence obtained here from the algebra. [[c:correspondence.spinor-identification]] Penrose's incidence relation, the rule tying points to spinors, turns out to be the completion's own coordinate chart. [[c:correspondence.incidence-relation-chart]]\n\nConformal spinors are vacuum states of fermionic ladder pairs, not the operators that act on them. [[c:correspondence.twistors-are-states-three-ladder-pairs]] The walk ends with Einstein's vacuum equations read in three equivalent languages. [[c:correspondence.one-statement-three-languages]]",
+  "hash": "985d9ddeb513"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk starts from points as null vectors, builds the space the completed algebra acts on, and then reads the spinor dictionary off it one step at a time. [[t]] Results a step rests on but that are not on the trail are listed at the end. [[t]]",
+  "hash": "bfed8751d6cf"
+ },
+ {
+  "id": "s:conformal-spacetime",
+  "type": "section",
+  "title": "Spacetime in the conformal completion",
+  "hash": "147007be2d6b"
+ },
+ {
+  "id": "i:conformal-spacetime",
+  "type": "framing",
+  "text": "These results place spacetime, its light cones and its conformal spinors inside a single algebra. [[t]]",
+  "hash": "f4054c1dee15"
+ },
+ {
+  "id": "t:^>angle.imported-conformal-model-null-rotations",
+  "type": "transition",
+  "between": [
+   null,
+   "angle.imported-conformal-model-null-rotations"
+  ],
+  "text": "The completion adds a null pair $\\nO$ and $\\nInf$, the origin and the point at infinity, to the directions of spacetime. [[c:angle.imported-conformal-model-null-rotations]] A point $x$ is then represented by the null vector \\[ X(x) = \\nO + x + \\tfrac12 Q(x)\\,\\nInf \\] [[c:angle.imported-conformal-model-null-rotations]]\n\nThe product of two such vectors is $X(x)\\cdot X(y) = -\\tfrac12 Q(x - y)$, so separations are read off the algebra directly. [[c:angle.imported-conformal-model-null-rotations]] The rotors $R_u = 1 + vu$ that fix a null vector $v$ add like vectors. [[c:angle.imported-conformal-model-null-rotations]]",
+  "hash": "81716288c78b"
+ },
+ {
+  "id": "c:angle.imported-conformal-model-null-rotations",
+  "type": "theorem",
+  "claim": "angle.imported-conformal-model-null-rotations@5",
+  "title": "Imported: the conformal model and the null rotations",
+  "text": "Adding two extra directions to the algebra of space lets every point be written as a null vector, one whose square is zero, and the squared distance between two points can then be read off from a simple product of their vectors. In the same setting, each null direction has a family of rotations that leave it fixed, and these rotations combine exactly like ordinary addition of vectors. Both facts are carried over from earlier work in the series.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "transport.group-null-rotations",
+   "transport.totality"
+  ],
+  "hash": "6680316a4b5b",
+  "number": 1
+ },
+ {
+  "id": "t:angle.imported-conformal-model-null-rotations>correspondence.fock-model-complexified-ascended-algebra",
+  "type": "transition",
+  "between": [
+   "angle.imported-conformal-model-null-rotations",
+   "correspondence.fock-model-complexified-ascended-algebra"
+  ],
+  "text": "To compute with the completed algebra we need a concrete space for it to act on. [[t]]\n\nPick a maximal set $W$ of mutually null complex directions, with $\\dim_\\C W = 3$, and let vectors act on the exterior algebra $\\Lambda^\\bullet W$ by wedging and contracting: \\[ c(w) = \\sqrt2\\; w \\wedge (\\cdot), \\qquad c(w') = \\sqrt2\\; \\iota_{w'} \\] [[c:correspondence.fock-model-complexified-ascended-algebra]] This is the only irreducible module of the complexified algebra, the Fock model. [[c:correspondence.fock-model-complexified-ascended-algebra]]\n\nVectors act oddly, so the module splits into even and odd halves of complex dimension four, the two chiralities $\\CS$ and $\\CSm$. [[c:correspondence.fock-model-complexified-ascended-algebra]]",
+  "hash": "4bf7eef9ed64"
+ },
+ {
+  "id": "c:correspondence.fock-model-complexified-ascended-algebra",
+  "type": "theorem",
+  "claim": "correspondence.fock-model-complexified-ascended-algebra@7",
+  "title": "The Fock model of the complexified ascended algebra",
+  "text": "The completed algebra of six directions can be represented concretely. Pick three complex directions that are mutually lightlike, and let the algebra act on all combinations of them by adding or removing a direction, much as one creates and destroys particles. This gives an eight-dimensional space on which the algebra acts faithfully and irreducibly, the only such space up to equivalence, and it splits into two four-dimensional halves, the two chiralities.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.existence-uniqueness",
+   "std-algebra.complex-clifford-algebra"
+  ],
+  "hash": "d5881ea552c2",
+  "number": 2
+ },
+ {
+  "id": "t:correspondence.fock-model-complexified-ascended-algebra>correspondence.spin-representation",
+  "type": "transition",
+  "between": [
+   "correspondence.fock-model-complexified-ascended-algebra",
+   "correspondence.spin-representation"
+  ],
+  "text": "With the conformal spinor space in hand, the next question is how the symmetries of spacetime act on it. [[t]]\n\nThe bivectors close under commutators and act on $\\CS$ by an isomorphism \\[ \\rho : \\mathfrak{so}(2,4)_\\C \\to \\mathfrak{sl}(\\CS) \\] [[c:correspondence.spin-representation]] So the spin group acts as all of $SL(\\CS)$, and any nonzero conformal spinor can be moved to any other. [[c:correspondence.spin-representation]]",
+  "hash": "7048da1dc52b"
+ },
+ {
+  "id": "c:correspondence.spin-representation",
+  "type": "theorem",
+  "claim": "correspondence.spin-representation@6",
+  "title": "The spin representation is $\\mathfrak{sl}(\\CS)$",
+  "text": "The conformal symmetries of spacetime, extended to complex numbers, can be realised inside the completed Clifford algebra. Acting on the four-dimensional spinor space of the conformal algebra they give exactly the trace-free linear transformations of that space, no more and no fewer. At the level of groups every volume-preserving linear map of that space is achieved, so any nonzero spinor in it can be moved to any other.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.vector-squares",
+   "std-algebra.complex-clifford-algebra"
+  ],
+  "hash": "f966bc154229",
+  "number": 3
+ },
+ {
+  "id": "t:correspondence.spin-representation>correspondence.spinor-identification",
+  "type": "transition",
+  "between": [
+   "correspondence.spin-representation",
+   "correspondence.spinor-identification"
+  ],
+  "text": "Now the two pictures can be matched. [[t]]\n\nThe complexified vectors are exactly the bivectors of the spinor space, \\[ V_\\C \\cong \\Lambda^{2}\\CS \\] with the quadratic form becoming the wedge square of a bivector. [[c:correspondence.spinor-identification]] A vector is null exactly when its bivector is simple, that is, when it is a line of the projective spinor space $\\PCS$. [[c:correspondence.spinor-identification]] This is the Klein correspondence, obtained from the completion rather than assumed. [[c:correspondence.spinor-identification]]",
+  "hash": "65e4aa320525"
+ },
+ {
+  "id": "c:correspondence.spinor-identification",
+  "type": "theorem",
+  "claim": "correspondence.spinor-identification@7",
+  "title": "The spinor identification",
+  "text": "This result matches the six complex directions of the completed spacetime algebra with the six independent plane elements that can be formed inside the four-dimensional conformal spinor space. Under the match, the lightlike directions are exactly those plane elements that are single planes rather than sums of planes, and in projective terms these are lines of that spinor space. So the lightlike directions of the completion, taken up to sign, are lines in the projective spinor space: the Klein correspondence, obtained from the completion.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "correspondence.chevalley-pairing",
+   "correspondence.fock-model-complexified-ascended-algebra",
+   "correspondence.imported-forced-completion-fibre-quadric",
+   "std-algebra.vector-squares",
+   "std-algebra.inverse-of-vector"
+  ],
+  "hash": "e076c095f519",
+  "number": 4
+ },
+ {
+  "id": "t:correspondence.spinor-identification>correspondence.incidence-relation-chart",
+  "type": "transition",
+  "between": [
+   "correspondence.spinor-identification",
+   "correspondence.incidence-relation-chart"
+  ],
+  "text": "Since points are null vectors and null vectors are lines, each point of spacetime should be a line of spinors. [[t]]\n\nFor a linear map $A$ between the two planes $\\Spi$ and $\\Som$ of the splitting, the bivector of its graph line expands as \\[ P(A) = N_0 + \\varphi(A) + (\\det A)\\, N_\\infty \\] [[c:correspondence.incidence-relation-chart]] Term by term this is the completion's point $X(m(A))$, with the determinant as its quadratic term, so the incidence relation is the completion's chart. [[c:correspondence.incidence-relation-chart]]",
+  "hash": "8e9c29cb8371"
+ },
+ {
+  "id": "c:correspondence.incidence-relation-chart",
+  "type": "theorem",
+  "claim": "correspondence.incidence-relation-chart@4",
+  "title": "The incidence relation is the chart",
+  "text": "Penrose described a spacetime point by a line in a three-dimensional complex projective space, through his incidence relation. This theorem shows that, written out term by term, the coordinates of that line are exactly the null vector by which the completed algebra represents the point, so the incidence relation is the completion's coordinate chart. The quadratic term of the chart is a determinant, the lines meeting a fixed line at infinity are the points at infinity, and the symmetries fixing that line are those of flat spacetime.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "correspondence.chiral-planes-summand-spaces",
+   "correspondence.imported-stabilisers-flat-model",
+   "correspondence.skew-lines-splittings-hyperbolic-planes-one",
+   "correspondence.spinor-identification"
+  ],
+  "hash": "50a08598d8d5",
+  "number": 5
+ },
+ {
+  "id": "t:correspondence.incidence-relation-chart>correspondence.reality-conjugation-twistor-form-factor",
+  "type": "transition",
+  "between": [
+   "correspondence.incidence-relation-chart",
+   "correspondence.reality-conjugation-twistor-form-factor"
+  ],
+  "text": "So far everything is complex, but the spacetime we live in is real. [[t]]\n\nThe completion supplies its own antilinear conjugation, unique up to scale, and from it a Hermitian form on $\\CS$ of signature $(2,2)$. [[c:correspondence.reality-conjugation-twistor-form-factor]] Real points are the null lines of that form skew to the infinity line, with incidence relation \\[ \\omega = I_6\\, \\hat x\\, \\pi \\] for Hermitian $\\hat x$, so the factor in front is the conformal pseudoscalar $I_6$, not a bare imaginary unit. [[c:correspondence.reality-conjugation-twistor-form-factor]]",
+  "hash": "cf251b759be1"
+ },
+ {
+  "id": "c:correspondence.reality-conjugation-twistor-form-factor",
+  "type": "theorem",
+  "claim": "correspondence.reality-conjugation-twistor-form-factor@6",
+  "title": "Reality: the conjugation, the invariant Hermitian form, and the factor $I_6$",
+  "text": "The spinor space of the conformal algebra, as built here, is a complex space, and real spacetime has to be recovered from it by a reality condition. This result builds that condition from the completion itself: a conjugation operation and, from it, a Hermitian form on the spinor space with two positive and two negative directions. Real spacetime points are exactly the lines of spinors on which this form vanishes, and the complex unit in Penrose's incidence relation, here the conformal pseudoscalar, is forced by this reality condition.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "correspondence.chevalley-pairing",
+   "correspondence.incidence-relation-chart",
+   "correspondence.fock-model-complexified-ascended-algebra",
+   "std-algebra.inverse-of-vector",
+   "std-algebra.reflection"
+  ],
+  "hash": "4065009bafd2",
+  "number": 6
+ },
+ {
+  "id": "t:correspondence.reality-conjugation-twistor-form-factor>correspondence.twistors-are-states-three-ladder-pairs",
+  "type": "transition",
+  "between": [
+   "correspondence.reality-conjugation-twistor-form-factor",
+   "correspondence.twistors-are-states-three-ladder-pairs"
+  ],
+  "text": "Having placed conformal spinors in the algebra, we can ask what kind of object they are there. [[t]]\n\nEach nonzero spinor $u$ has an annihilator \\[ W_u = \\{ v \\in V_\\C : c(v)u = 0 \\} \\] which is a maximal null subspace, so every conformal spinor is pure. [[c:correspondence.twistors-are-states-three-ladder-pairs]] The spinor is the Fock vacuum of the three ladder pairs built on $W_u$, and every other state is reached from it by those pair operators. [[c:correspondence.twistors-are-states-three-ladder-pairs]]\n\nConformal spinors are therefore states that operators act on, not the operators themselves. [[c:correspondence.twistors-are-states-three-ladder-pairs]]",
+  "hash": "176b91ee8bbf"
+ },
+ {
+  "id": "c:correspondence.twistors-are-states-three-ladder-pairs",
+  "type": "theorem",
+  "claim": "correspondence.twistors-are-states-three-ladder-pairs@6",
+  "title": "Conformal spinors are the states of three ladder pairs",
+  "text": "The four-component spinors of the conformal algebra are the objects Penrose built his theory on. This result shows that, inside the completed algebra of the series, each such spinor is the empty state (the vacuum) of a system of three fermionic ladder pairs that the spinor itself singles out. Every other state of the module is reached from it by those ladder operators, so these spinors are the states the operators act on, not the operators themselves.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "correspondence.fock-model-complexified-ascended-algebra",
+   "correspondence.imported-ladder-pairs-fock-modules-over",
+   "correspondence.spin-representation",
+   "std-algebra.vector-squares",
+   "std-algebra.blade-basis"
+  ],
+  "hash": "0cf8bb3a2206",
+  "number": 7
+ },
+ {
+  "id": "t:correspondence.twistors-are-states-three-ladder-pairs>one-relation.spacetime-manifold-vacuum-lines",
+  "type": "transition",
+  "between": [
+   "correspondence.twistors-are-states-three-ladder-pairs",
+   "one-relation.spacetime-manifold-vacuum-lines"
+  ],
+  "text": "Putting the last two steps together gives a new picture of spacetime itself. [[t]]\n\nEvery point is null, so its vector acts on the Fock module as a nilpotent: \\[ c(X(x))^{2} = Q(X(x)) = 0 \\] [[c:one-relation.spacetime-manifold-vacuum-lines]] Its kernel is a line of vacua, and two points are null-separated exactly when their lines share a vacuum. [[c:one-relation.spacetime-manifold-vacuum-lines]]",
+  "hash": "c0fd19a3f251"
+ },
+ {
+  "id": "c:one-relation.spacetime-manifold-vacuum-lines",
+  "type": "theorem",
+  "claim": "one-relation.spacetime-manifold-vacuum-lines@6",
+  "title": "Spacetime as the manifold of vacuum lines",
+  "text": "In this picture every point of spacetime is a light-like vector, so in the algebra each point behaves like a zero divisor. Each point also carries a whole line of possible vacuum states, and two points are light-like separated exactly when their lines share a vacuum. The result then reads gravity as how these vacua change from point to point and quantum mechanics as the excitations above a chosen vacuum, with singularities where the family of vacua breaks down.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "one-relation.imported-pure-spinors-incidence-chart",
+   "one-relation.imported-witts-extension-theorem",
+   "one-relation.two-presentations",
+   "sheaf.localised-transport",
+   "sheaf.one-sided-completion",
+   "sheaf.one-sided-completion-singularity",
+   "std-algebra.inverse-of-vector"
+  ],
+  "hash": "dc863f0b1e04",
+  "number": 8
+ },
+ {
+  "id": "t:one-relation.spacetime-manifold-vacuum-lines>correspondence.local-twistor-transport-ascended-spinor-connection",
+  "type": "transition",
+  "between": [
+   "one-relation.spacetime-manifold-vacuum-lines",
+   "correspondence.local-twistor-transport-ascended-spinor-connection"
+  ],
+  "text": "For the vacua to vary from point to point we need a rule for carrying spinors along. [[t]]\n\nAssuming the conformal manifold is spin, the spinor connection induced from the tractor gauge field has exactly the form of Penrose's local transport of four-component spinors. [[c:correspondence.local-twistor-transport-ascended-spinor-connection]] The two agree once one imported sign and normalisation convention for the Schouten term is matched. [[c:correspondence.local-twistor-transport-ascended-spinor-connection]]",
+  "hash": "9548a57356b3"
+ },
+ {
+  "id": "c:correspondence.local-twistor-transport-ascended-spinor-connection",
+  "type": "theorem",
+  "claim": "correspondence.local-twistor-transport-ascended-spinor-connection@7",
+  "title": "The conformal spinor connection is Penrose's local twistor transport",
+  "text": "Two older formalisms describe the geometry of conformal spacetime: tractors, a six-component bundle with its own connection, and Penrose's four-component bundle with its own transport rule. Assuming the conformal spacetime is spin, so that the tractor bundle has spinors (locally they always exist), this result shows that those spinors, built from the completion's Fock model, carry a connection with exactly the shape of Penrose's transport rule. The two agree completely once one sign and normalisation convention for the curvature term is matched, and that convention is the only thing imported.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "standard-route",
+  "rests_on": [
+   "correspondence.imported-tractor-connection-local-twistor-transport-external"
+  ],
+  "hash": "95adc96cd402",
+  "number": 9
+ },
+ {
+  "id": "t:correspondence.local-twistor-transport-ascended-spinor-connection>correspondence.one-statement-three-languages",
+  "type": "transition",
+  "between": [
+   "correspondence.local-twistor-transport-ascended-spinor-connection",
+   "correspondence.one-statement-three-languages"
+  ],
+  "text": "With transport in place, Einstein's equations can be stated in any of the three languages met so far. [[t]]\n\nOn the region where the gravitational field $(\\hb, \\Omega)$ on flat spacetime is invertible, the vacuum and Einstein equations say that the infinity bivector \\[ I_{\\alpha\\beta} = \\Psi(I_g) \\in \\Lambda^{2}\\CS \\] is covariantly constant. [[c:correspondence.one-statement-three-languages]] It is simple, a genuine line of $\\PCS$, exactly when the cosmological constant vanishes, by the same rule that matched null vectors with lines. [[c:correspondence.one-statement-three-languages]]",
+  "hash": "066066138ea9"
+ },
+ {
+  "id": "c:correspondence.one-statement-three-languages",
+  "type": "theorem",
+  "claim": "correspondence.one-statement-three-languages@5",
+  "title": "One statement in three languages",
+  "text": "In this series gravity is a pair of fields on flat spacetime, and Einstein's vacuum equations can be phrased as the statement that one vector of the six-dimensional conformal model, the scale tractor, is constant as those fields carry it around. Translating that object into the spinors of the conformal algebra gives a bivector of that spinor space, the infinity bivector. This result shows that the three formulations say the same thing, and that the familiar fact that this bivector is a genuine line exactly when the cosmological constant vanishes is the same rule that matches lightlike vectors with lines.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "correspondence.imported-vacuum-equations-scale-tractor",
+   "correspondence.spinor-identification"
+  ],
+  "hash": "97fd79bd6d25",
+  "number": 10
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:correspondence.chevalley-pairing",
+  "type": "fact",
+  "claim": "correspondence.chevalley-pairing@4",
+  "title": "The Chevalley pairing",
+  "text": "The spinor space of the completion carries a natural way, due to Chevalley, of pairing two spinors to give a number. This result fixes all its signs: it pairs the two chirality halves with each other, it changes sign when the two inputs are swapped, and it is compatible with the action of vectors and of the infinitesimal symmetries.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.chevalley-pairing, version 4 (T09 Lem 3.3)",
+  "hash": "67e45d8f0c25",
+  "number": 11
+ },
+ {
+  "id": "c:correspondence.chiral-planes-summand-spaces",
+  "type": "fact",
+  "claim": "correspondence.chiral-planes-summand-spaces@5",
+  "title": "The chiral planes, and the summand spaces",
+  "text": "The Lorentz symmetry of spacetime, once complex numbers are allowed, splits into two independent halves. This result shows that the two planes into which the spinor space of the conformal algebra splits are exactly the basic two-component objects of these halves, one plane for each, and that together they rebuild the spacetime directions. It also shows that there is essentially only one symmetric way to combine a spacetime direction with one plane so as to land in the other.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.chiral-planes-summand-spaces, version 5 (T09 Lem 4.4)",
+  "hash": "546f151f3661",
+  "number": 12
+ },
+ {
+  "id": "c:correspondence.imported-forced-completion-fibre-quadric",
+  "type": "fact",
+  "claim": "correspondence.imported-forced-completion-fibre-quadric@6",
+  "title": "Imported: the forced completion and its fibre quadric",
+  "text": "In the algebra of spacetime some elements cannot be divided by, and nothing done inside the algebra fixes this. The smallest enlargement that does fix it adds two dimensions, one space-like and one time-like, and this enlargement is unique. The repaired divisions live on the set of light-like directions of the resulting six-dimensional space.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.imported-forced-completion-fibre-quadric, version 6 (T09 Fact 2.1)",
+  "hash": "62c8f2111cad",
+  "number": 13
+ },
+ {
+  "id": "c:correspondence.imported-ladder-pairs-fock-modules-over",
+  "type": "fact",
+  "claim": "correspondence.imported-ladder-pairs-fock-modules-over@1",
+  "title": "Imported: ladder pairs and Fock modules over the reals",
+  "text": "Two directions in this kind of algebra, one squaring to plus one and one to minus one, can be recombined into two elements of zero length that behave exactly like the operators that create and destroy a single fermion. Several such pairs together act on a space of states built by filling or emptying each mode, the usual Fock space of fermions. This is an imported result over the real numbers; the complex version is treated separately.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "cite[ S7] ButlerT1 ;  cite[ S 4] ButlerT3",
+  "hash": "c3cdcab05ee6",
+  "number": 14
+ },
+ {
+  "id": "c:correspondence.imported-stabilisers-flat-model",
+  "type": "fact",
+  "claim": "correspondence.imported-stabilisers-flat-model@3",
+  "title": "Imported: stabilisers in the flat model",
+  "text": "In the completed algebra, the symmetries that fix one special lightlike direction, the point at infinity, are exactly the symmetries of flat spacetime: rotations, boosts and translations. Allowing that direction to be rescaled adds one more symmetry, overall scaling. The translations are the same special transformations that appear in the series' earlier no-go theorem.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.imported-stabilisers-flat-model, version 3 (T09 Fact 4.3)",
+  "hash": "204b3149a99f",
+  "number": 15
+ },
+ {
+  "id": "c:correspondence.imported-tractor-connection-local-twistor-transport-external",
+  "type": "fact",
+  "claim": "correspondence.imported-tractor-connection-local-twistor-transport-external@1",
+  "title": "Imported: the tractor connection, and the conformal spinor connection (local twistor transport), external ingredients",
+  "text": "A list of the published works from which the series takes its two standard connection formulas for conformal geometry. Nothing new is claimed here; the entry records where the borrowed results come from.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "R. Penrose and W. Rindler, Spinors and Space-Time, Vols. 1--2, Cambridge University Press (1984, 1986)., Vol.~2, Ch.~6; T. N. Bailey, M. G. Eastwood and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.; S. N. Curry and A. R. Gover, An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds, in Asymptotic Analysis in General Relativity, London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170.; R. Penrose and M. A. H. MacCallum, Twistor theory: an approach to the quantisation of fields and space-time, Phys. Rep. 6 (1973), 241--316.; K. Dighton, An introduction to the theory of local twistors, Int. J. Theor. Phys. 11 (1974), 31--43.",
+  "hash": "8d097760ab0e",
+  "number": 16
+ },
+ {
+  "id": "c:correspondence.imported-vacuum-equations-scale-tractor",
+  "type": "fact",
+  "claim": "correspondence.imported-vacuum-equations-scale-tractor@6",
+  "title": "Imported: the vacuum equations and the scale tractor",
+  "text": "Einstein's vacuum equations can be rewritten as the statement that one vector of the six-dimensional conformal model, attached to the choice of scale, does not change as the gravitational gauge fields carry it across flat spacetime. With a cosmological constant the same holds, and the squared length of that vector is a third of the constant. This entry restates both results from earlier in the series.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.imported-vacuum-equations-scale-tractor, version 6 (T09 Fact 4.7)",
+  "hash": "ddfed2614aa3",
+  "number": 17
+ },
+ {
+  "id": "c:correspondence.skew-lines-splittings-hyperbolic-planes-one",
+  "type": "fact",
+  "claim": "correspondence.skew-lines-splittings-hyperbolic-planes-one@4",
+  "title": "Skew lines, splittings, hyperbolic planes: one datum",
+  "text": "Three different-looking pieces of structure turn out to be the same thing: a pair of non-intersecting lines in the projective spinor space, a splitting of the conformal spinor space into two planes, and a pair of lightlike directions of the kind the completion adds. Given any one, the other two follow. The four remaining directions, which mix the two planes, are exactly the directions perpendicular to the added pair.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim correspondence.skew-lines-splittings-hyperbolic-planes-one, version 4 (T09 Prop 4.1)",
+  "hash": "d82f33e684a4",
+  "number": 18
+ },
+ {
+  "id": "c:one-relation.imported-pure-spinors-incidence-chart",
+  "type": "fact",
+  "claim": "one-relation.imported-pure-spinors-incidence-chart@5",
+  "title": "Imported: pure spinors and the incidence chart",
+  "text": "This collects earlier results that the one-relation paper needs. In six complex dimensions every four-component spinor of the conformal algebra is the vacuum of its own small system of fermionic operators, a coincidence special to this dimension. Each point of spacetime corresponds to a line of such spinors, and the standard way of placing spacetime points into the six-dimensional space makes every point a light-like vector.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim one-relation.imported-pure-spinors-incidence-chart, version 5 (T16 Fact 2.3)",
+  "hash": "2c900872589d",
+  "number": 19
+ },
+ {
+  "id": "c:one-relation.imported-witts-extension-theorem",
+  "type": "fact",
+  "claim": "one-relation.imported-witts-extension-theorem@2",
+  "title": "Imported: Witt's extension theorem",
+  "text": "Witt's theorem concerns a space with a fixed rule for measuring lengths. It says that any length-preserving match between two pieces of the space extends to a length-preserving symmetry of the whole space, so pieces that look alike from the inside are also indistinguishable from the outside. It is a classical result from the 1930s.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "E. Witt, Theorie der quadratischen Formen in beliebigen K\"orpern, J. Reine Angew. Math. 176 (1937) 31--44.; T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67, American Mathematical Society (2005)., Ch.~I, \\S4",
+  "hash": "08fd30cacddf",
+  "number": 20
+ },
+ {
+  "id": "c:one-relation.two-presentations",
+  "type": "fact",
+  "claim": "one-relation.two-presentations@4",
+  "title": "The two presentations",
+  "text": "The basic rule of a Clifford algebra can be written in two ways. In one it describes distances and angles, the language of geometry and gravity; in the other it is exactly the rule obeyed by fermions, the language of quantum theory. The paper takes this to mean that geometry and quantum structure are two views of one object, though only at the level of structure, not of how things evolve.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim one-relation.two-presentations, version 4 (T16 Prop 3.1)",
+  "hash": "1cf628d9a1ca",
+  "number": 21
+ },
+ {
+  "id": "c:sheaf.localised-transport",
+  "type": "fact",
+  "claim": "sheaf.localised-transport@5",
+  "title": "Localised transport",
+  "text": "When the degenerate algebra is placed inside the larger completed algebra, it sits there unchanged. What changes is its surroundings: on the wall, a direction of zero length that was a dead end in the small algebra finds a partner in the large one, and together they behave like the creation and annihilation operators of a single fermion. This pairing happens only on the wall, so the fermion-like structure lives exactly where the geometry is singular.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.localised-transport, version 5 (T04 Cor 4.5)",
+  "hash": "441c063c58bb",
+  "number": 22
+ },
+ {
+  "id": "c:sheaf.one-sided-completion",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion@4",
+  "title": "One-sided completion",
+  "text": "Assume a geometry degenerates along a wall in the tame way, with at least one positive direction on the physical side and with the dying direction's line consistently orientable along the wall. Then it can be repaired on that side by adding two extra dimensions and coupling them to the direction that is dying. This result shows that the coupling can be chosen so that the enlarged geometry is non-degenerate, with the same signature everywhere on the physical side, the wall itself included. The resulting family of algebras is then uniform: in the physical case every member is the algebra of four-by-four quaternion matrices.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion, version 4 (T04 Thm 4.4)",
+  "hash": "adf4c78f37b9",
+  "number": 23
+ },
+ {
+  "id": "c:sheaf.one-sided-completion-singularity",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion-singularity@4",
+  "title": "One-sided completion at the singularity",
+  "text": "The completion that repairs a degenerating geometry can be carried out at the central singularity of a Schwarzschild black hole, once that singularity has been opened up into a boundary. Coupling two extra dimensions to the dying direction, with the sign of the coupling chosen to suit the black-hole interior and the coupling switched on only inside the horizon, gives a geometry that is non-degenerate everywhere, and no new degeneracy appears anywhere else. The fermion-like pairing then lives exactly on the opened-up singularity, which has the shape of a line times a sphere.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion-singularity, version 4 (T04 Thm 8.12)",
+  "hash": "824e574bbf54",
+  "number": 24
+ },
+ {
+  "id": "c:std-algebra.blade-basis",
+  "type": "fact",
+  "claim": "std-algebra.blade-basis@1",
+  "title": "The blade basis, degenerate forms included",
+  "text": "Every element of the algebra is a combination of products of distinct basis arrows, and no such product can be written in terms of the others. In $n$ dimensions there are $2^{n}$ of them: the number, the arrows, the planes, the volumes and so on. This stays true even when some directions have zero length.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.blade-basis, version 1",
+  "hash": "d7e1578d2c6d",
+  "number": 25
+ },
+ {
+  "id": "c:std-algebra.complex-clifford-algebra",
+  "type": "fact",
+  "claim": "std-algebra.complex-clifford-algebra@1",
+  "title": "The complex Clifford algebra, its classification modulo 2, its Fock model and its pairing",
+  "text": "Allowing complex coefficients erases the difference between space-like and time-like directions, so the algebra depends only on the number of dimensions: a single complex matrix algebra in even dimension and a pair of them in odd dimension. In even dimension the matrix algebra is the algebra of creation and annihilation operators of fermion modes, and the states carry a pairing that every rotation respects.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.complex-clifford-algebra, version 1",
+  "hash": "317b38fd123c",
+  "number": 26
+ },
+ {
+  "id": "c:std-algebra.existence-uniqueness",
+  "type": "fact",
+  "claim": "std-algebra.existence-uniqueness@1",
+  "title": "The Clifford algebra exists and is unique",
+  "text": "The rule \"an arrow squared is a number\" can always be realised by an actual algebra, and in essentially one way only. One explicit construction lets arrows act on oriented areas and volumes by adding a direction or removing one.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.existence-uniqueness, version 1",
+  "hash": "5cbc1dbc671c",
+  "number": 27
+ },
+ {
+  "id": "c:std-algebra.inverse-of-vector",
+  "type": "fact",
+  "claim": "std-algebra.inverse-of-vector@1",
+  "title": "Which vectors and versors are invertible",
+  "text": "An arrow can be \"divided by\" exactly when its square length is not zero. Arrows of zero length, like light rays, cannot be inverted: multiplying such an arrow by itself gives zero. Products of invertible arrows are always invertible, and their inverse is found by writing the product backwards and dividing by a number.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.inverse-of-vector, version 1",
+  "hash": "11cef77d5b9f",
+  "number": 28
+ },
+ {
+  "id": "c:std-algebra.reflection",
+  "type": "fact",
+  "claim": "std-algebra.reflection@1",
+  "title": "Reflection in a non-null vector",
+  "text": "Multiplying an arrow on both sides by a fixed arrow, with a sign, gives its mirror image in the plane perpendicular to the fixed arrow. This works for any fixed arrow that does not have zero length. Mirrors are the building blocks of all rotations.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.reflection, version 1",
+  "hash": "05d9f5dff656",
+  "number": 29
+ },
+ {
+  "id": "c:std-algebra.vector-squares",
+  "type": "fact",
+  "claim": "std-algebra.vector-squares@1",
+  "title": "The product of two vectors",
+  "text": "Multiplying two arrows gives a number plus something new. The number is their ordinary dot product. The new part changes sign when the order is swapped, and turns out to be the oriented plane the two arrows span.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.vector-squares, version 1",
+  "hash": "b9e8d4b83e1b",
+  "number": 30
+ },
+ {
+  "id": "c:transport.group-null-rotations",
+  "type": "fact",
+  "claim": "transport.group-null-rotations@4",
+  "title": "The group of null rotations",
+  "text": "Among the symmetries of a space with both space and time directions, some leave a chosen light-like direction exactly in place while shearing other directions along it. These null rotations combine just as vectors add in the directions perpendicular to the light ray and its partner. Ordinary rotations of those perpendicular directions act on the null rotations in the expected way.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.group-null-rotations, version 4 (T01 Lem 4.6)",
+  "hash": "e763161c8c45",
+  "number": 31
+ },
+ {
+  "id": "c:transport.totality",
+  "type": "fact",
+  "claim": "transport.totality@3",
+  "title": "Totality",
+  "text": "In a Clifford algebra with vectors of zero length, the reciprocal of a vector is undefined on exactly those vectors. After moving to the enlarged space of points, a single reflection-like operation gives a reciprocal everywhere: it agrees with the usual one on ordinary vectors and sends zero-length vectors to points at infinity. Those values are the limits one would expect, and no other continuous rule matches the usual reciprocal.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.totality, version 3 (T01 Thm 4.10)",
+  "hash": "60910ab40b56",
+  "number": 32
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "Starting from points as null vectors, the trail has recovered the conformal spinor space, the Klein correspondence, the incidence relation, the reality condition and local spinor transport, all from the completion itself. [[c:correspondence.incidence-relation-chart]]\n\nNo postulate is needed on this stretch; the one standing condition is that the conformal manifold be spin, which the transport step assumes. [[c:correspondence.local-twistor-transport-ascended-spinor-connection]] The vacuum-line picture of spacetime that emerges is the ground the later subjects build on. [[t]]",
+  "hash": "c7c454c9f131"
+ }
+]

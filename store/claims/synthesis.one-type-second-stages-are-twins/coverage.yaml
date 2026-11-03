@@ -1,0 +1,17 @@
+functions:
+  check_twin_map:
+    kind: exact
+    clauses:
+    - (i)
+    omits: The identities are linear in (s,b) and the samples span the 2-dimensional space, so the finite check fixes them; no symbolic derivation is run
+  check_observables_invariant:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iii)
+    omits: Four deltas, 16 X pairs and three (alpha, M3) pairs rather than free parameters; the PMNS matrix itself is not computed (equality of the mass matrices M M^T and m_nu is what is asserted); the closed form for M_R inverse is assumed; (iii) beyond-order remark is textual
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The twin map and the exact invariance of M M^T and m_D M_R^-1 m_D^T are verified in rationals at sample parameters.

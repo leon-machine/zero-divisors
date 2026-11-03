@@ -1,0 +1,20 @@
+functions:
+  check_transgression_identity:
+    kind: sampled
+    clauses: ["(i) dQ = eps R ^ R identically"]
+    omits: "Kasner connections at two exponent triples and one generic so(1,3) connection depending on the single coordinate s; the identity is not proved for a connection of general coordinate dependence"
+  check_slice_value_and_divergence_cancelled:
+    kind: sampled
+    clauses: ["(ii) Q restricted to the slice is 8 p1 p2 p3 eps^-2 d^3x", "the divergent part -(24/Lambda) p1 p2 p3 eps^-2 Vol_3", "(iii) S_ren is finite as eps -> 0 on the Kasner approach"]
+    omits: "two Kasner exponent triples, a few Lambda and eps; the S_ren limit being the Einstein-Cartan and cosmological contributions plus Q on the far boundary, and equality of the interior field equations, are not tested"
+  check_quadratic_term_vanishes_and_gauge_dependence:
+    kind: partial
+    clauses: ["(iii) the whole surviving value comes from the cubic term in the boost block", "Q is not gauge invariant under a local Lorentz rotation"]
+    omits: "non-invariance is shown for one null rotation (the docstring says a boost in the (0,1) plane, the code applies a null rotation about e_0 + e_1 into e_2) by Q' != Q with dQ' = dQ; the decomposition of the shift into an exact form and a Wess-Zumino term, and the residual O(Lambda) ambiguity, are not tested"
+untouched_premises:
+  dark-energy.cosmological-constant-does-not-change-residue: "the O(Lambda) shift of the finite part is a cited proposition, not computed here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (i), (ii) and the divergence cancellation are tested on samples; the third function's docstring names a boost where the code uses a null rotation, a stale description without effect on the clause"

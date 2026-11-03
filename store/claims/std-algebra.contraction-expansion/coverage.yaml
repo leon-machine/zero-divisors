@@ -1,0 +1,9 @@
+functions:
+  check_contraction_derivation_and_expansion:
+    kind: sampled
+    clauses:
+    - '"a lc (XY) = (a lc X)Y + X^(a lc Y)"'
+    - '"a lc (X ^ Y) = (a lc X) ^ Y + X^ ^ (a lc Y)"'
+    - '"a lc (a lc X) = 0"'
+    - '"the expansion"'
+    omits: one sampled triple per signature with n <= 4; the expansion for three vectors in Cl(2,1,1)

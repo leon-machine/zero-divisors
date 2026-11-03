@@ -1,0 +1,18 @@
+functions:
+  check_second_class_complement_line_changes_type:
+    kind: sampled
+    clauses: ["the Lambda family is completed by a family of hyperplanes in one fixed nondegenerate space whose complement is a single line that changes type across the wall (rank one)"]
+    omits: "Six (p,q) models at seven values of t, and the (1,3) Lambda family at four Lambda values; the totals (p+1, q+1) on both sides are exact at those samples."
+  check_first_class_cannot_be_two_sided:
+    kind: sampled
+    clauses: ["the first class (one exterior model, the same complement K on both sides) cannot be made two-sided: degeneracy is conserved"]
+    omits: "Only the model hyperplane family with a constant diagonal-sum complement K, for nine K and six (p,q), by sign change of the determinant (linearity checked at four t). Arbitrary tame walls, forms standard only outside a neighbourhood and non-trivial complement bundles are the sheaf paper's theorem, not tested."
+  check_first_class_rank_two:
+    kind: partial
+    clauses: ["the first class adjoins a hyperbolic plane to the whole bundle, rank two"]
+    omits: "Shows the model completion of the wall fibre R^(p,q,1) by phi adds a hyperbolic plane of signature (1,1) for six (p,q); that rank two is necessary (the dimension lower bound) is the imported minimal-completion Fact, and the reason it applies to the whole bundle (off-wall nondegeneracy needs a standard complement) is not tested."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The two classes are exhibited and contrasted on model walls; the claims that the transport is the first class and the frozen point passage is not a transport are definitional."

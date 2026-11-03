@@ -1,0 +1,18 @@
+functions:
+  check_even_ground_commutes_with_modes:
+    kind: sampled
+    clauses: ["\"every even ground element commutes with every mode operator of every higher plane\"", "\"the conformal bivectors ... act trivially on the modes\""]
+    omits: "exhaustive over the 32 even blades of Cl(2,4) (so all even ground elements by linearity), but only three higher planes, not every plane"
+  check_translations_and_lorentz_rotors_act_trivially:
+    kind: sampled
+    clauses: ["\"chart translations and the Lorentz rotors act trivially on the modes\""]
+    omits: "three translation directions (e1, e3, e4+e5), one boost rapidity, one rotation angle and their product; three planes only"
+  check_covariance_forces_constant_mode_functions:
+    kind: sampled
+    clauses: ["\"a field psi(x) = sum_j u_j(x) a_j on which the ground's translations act covariantly has constant mode functions\""]
+    omits: "checks only that the six mode operators are independent (rank 6) and that Ad(T) returns one sample set of constant coefficients; the x-dependence of u_j(x) and the covariance relation psi(x+a) = Ad(T_a) psi(x) are not computed, and the finite-dimensionality obstruction for noncompact groups (last sentence of the statement) is not tested by any function (the docstring says so)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebraic content (trivial action, independence of modes) is tested at samples; the finite-floor obstruction sentence is untested and the docstring discloses that"

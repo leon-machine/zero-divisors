@@ -1,0 +1,25 @@
+doc: trail-clifford-structure
+title: 'Clifford algebra structure'
+author: Leon Butler
+level: lay
+spine:
+- sheaf.blade-basis-degenerate-forms-included
+- primer.commutation-rule
+- primer.twisted-adjoint-action
+- primer.sign
+- primer.centre
+- transport.classification-real-clifford-algebras
+- odd-extensions.doubling-or-complexification
+- transport.classification-idempotent-orbits
+- tower.matrix-amplification-structural-properties
+- dark-matter.residue-soldered-invariant-not-algebraic-one
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: false

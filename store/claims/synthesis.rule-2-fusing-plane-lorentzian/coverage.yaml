@@ -1,0 +1,30 @@
+functions:
+  check_fusing_plane_lorentzian:
+    kind: exact
+    clauses:
+    - (i)
+    omits: 'Exact in both Cl(2,4) and Cl(1,5): the blades anticommuting with e0..e4 are exactly nu and Omega, Omega = omega nu, nu^2 = gamma, Omega^2 = -gamma, anticommuting, so the quadratic form has signature (1,1); the null lines nu eps_+- are nonzero of square zero and are the off-diagonal matrix units'
+  check_isomorphism_exchanges_vector_and_volume:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: The map e_i -> e_i, nu_+ -> nu_- omega respects all 36 Clifford relations of Cl(2,4), is onto (64-dimensional span), fixes A pointwise and sends Omega_+ to -nu_-; only the isomorphism half of (ii) is covered here
+  check_units_complete_generating_sets:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iv)
+    omits: 'Five rational units x = a nu + b Omega on each level set for both gamma (not every element of P with x^2 = +-1): each completes e0..e4 to a generating set of rank 64 of signature (2,4) or (1,5), and omega x is in P, anticommutes with x, squares to -x^2 and commutes with all bivectors; the identification of the centre of the even part and the discussion of what decides the sign in (iv) are interpretive and untested'
+  check_fixing_automorphisms_are_plane_boosts:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: Conjugation by u = a eps_+ + b eps_- at three (a, b) fixes A pointwise and scales the null lines by b/a and a/b in both repairs; transitivity on a level set is shown for one pair (x, y) with x^2 = y^2, and (Ep Em + Em Ep) = nu^2; that every automorphism fixing A is such a conjugation, that none exchanges the two signs and the count of exactly two completions are argued, not computed
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exhaustive blade computations in the two 64-dimensional algebras confirm (i) and the isomorphism of (ii); the unit-completion and automorphism statements are checked at sample elements.

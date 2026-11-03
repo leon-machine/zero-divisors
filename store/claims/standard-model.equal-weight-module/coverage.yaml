@@ -1,0 +1,21 @@
+functions:
+  check_projector_onto_nu_c_pair:
+    kind: exact
+    clauses:
+    - '"P = T^dagger T + T T^dagger projects onto nu^c and its conjugate"'
+    omits: The module is the 32-dimensional one of the doublet-direction export; P is compared with the diagonal projector on two basis states
+  check_equal_weight_forms:
+    kind: exact
+    clauses:
+    - (1)
+    omits: ''
+  check_commutes_iff_equal_weight:
+    kind: exact
+    clauses:
+    - (2)
+    omits: The iff in a, a' follows from [v4,P] = -[T^u,P] != 0 and linearity; the sample grid of six (a, a') pairs is a consistency run, not the proof
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Module-level exact computations in the fixed 32-dimensional module; both parts of the statement are directly tested.

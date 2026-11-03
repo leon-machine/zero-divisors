@@ -1,0 +1,29 @@
+functions:
+  check_star_exists_unique_antimultiplicative:
+    kind: sampled
+    clauses:
+    - on each complexified floor there is a unique conjugate-linear antiautomorphism * with x* = +-x on frame generators
+    omits: FLOORS only (m <= 6; grounds n <= 4 with k <= 1, n <= 2 with k = 2); antimultiplicativity on every pair of basis blades of every such floor (4096 pairs at m = 6), conjugate-linearity and involutivity on two complex samples
+  check_frame_unitary_and_ladder_adjoint:
+    kind: sampled
+    clauses:
+    - every frame generator, blade and ground or plane volume element is unitary
+    - v_j* = w_j
+    omits: Grounds n <= 4, k <= 2, m <= 8
+  check_maps_and_correctors_compatible:
+    kind: sampled
+    clauses:
+    - iota_k, phi_k, theta_k, V_k, W_k are compatible with *
+    omits: Four (ground, kk) cases ((1,1),2), ((2,0),1), ((0,2),1), ((1,3),1); theta tested only on 2^k-index matrix units with scalar entry; iota only as restriction of * on blades; being a homomorphism is taken from the cited entities
+  check_even_floors_are_full_matrix_star_algebras:
+    kind: sampled
+    clauses:
+    - if p - q is even each T_k^C is *-isomorphic to Mat_{2^(m/2)}(C) with * the conjugate transpose
+    omits: Even-charge floors in FLOORS (m <= 6); the consequences "unique C*-norm on each floor", "unital *-monomorphisms are isometric" and "the union carries a unique C*-norm" are not computable here and not checked
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "dropped the m <= 5 guard: * is now asserted antimultiplicative on every pair of basis blades for every floor with m <= 6, as docstring (1) says"
+untouched_premises:
+  std-algebra.involution-properties: "standard algebra cited in the proof; the check computes the statement directly"

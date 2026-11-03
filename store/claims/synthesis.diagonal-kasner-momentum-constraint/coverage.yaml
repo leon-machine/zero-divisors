@@ -1,0 +1,18 @@
+functions:
+  check_momentum_constraint_formula:
+    kind: sampled
+    clauses: [main formula tau R_0i, (M), (i)]
+    omits: The full coordinate Ricci tensor from metric jets (an independent route) equals d_i p_i + sum_j (p_i - p_j)(d_i b_j + L d_i p_j) at two Kasner points and two values of the log symbol L, with the L-coefficient vanishing and pinned values; the a = 1 case gives tau R_0i = d_i p_i at two L; a control with derivatives off the circle fails the formula. Two data sets only; "if and only if (M)" is immediate from the formula; "p constant iff (M) at b = 0" is not tested as a statement over U (see the tangent function).
+  check_tangent_and_collisions:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'At seven Kasner parameters u: p is on the circle, dp/du is parallel to the tangent t = (p3-p2, p1-p3, p2-p1); t_i = 0 at the three collision parameters u = -1/2, 1, -2 and no t_i vanishes at u = 1/3; "only at the collision" is not enumerated over the circle.'
+  check_one_coordinate_fields:
+    kind: sampled
+    clauses: [(ii)]
+    omits: 'At three (u, s1): the stated d_1 b_j with D > 0 satisfies (M) and the full Ricci component R_01 vanishes (and R_02 = R_03 = 0); not the statements about the boost block, the residue, the O(tau^{-p_max}(1 + |log tau|)) tangential bound or the order bounds of the Lemma.'
+  check_counterterm_scale_factor:
+    kind: partial
+    clauses: ['(ii) last clause: counterterm factor a1 a2 a3']
+    omits: 'Only bookkeeping: the tau-exponent sum(p) - 3 = -2 and the coefficient p1 p2 p3 a1 a2 a3 at three (u, a); the cubic boost-block term prod (p_i/tau) e^i and the leading-order density 8 p1 p2 p3 a1 a2 a3 eps^{-2} d^3x are taken as given, not derived. Clause (iii) (linear first-order system, antisymmetric coefficient matrix) has no check.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'The Ricci formula, the tangent/collision statements and the one-coordinate scale functions are reproduced at sample data; (iii) and the connection-form bounds are untested.'}

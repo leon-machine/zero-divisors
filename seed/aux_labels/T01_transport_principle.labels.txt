@@ -1,0 +1,132 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:prelim}{{2}{6}{Setting, and the classical facts the proofs use}{section.2}{}}
+\newlabel{subsec:quadratic}{{2.1}{6}{Quadratic spaces and Clifford algebras}{subsection.2.1}{}}
+\newlabel{eq:commutation}{{1}{7}{Scope of hypotheses}{equation.2.1}{}}
+\newlabel{subsec:null}{{2.2}{7}{Null vectors, zero divisors, and hyperbolic planes}{subsection.2.2}{}}
+\newlabel{lem:noinverse}{{2.1}{7}{}{theorem.2.1}{}}
+\newlabel{eq:hyperbolicpair}{{2}{7}{Null vectors, zero divisors, and hyperbolic planes}{equation.2.2}{}}
+\newlabel{subsec:groups}{{2.3}{7}{The symmetry action, and equivariance}{subsection.2.3}{}}
+\newlabel{eq:tau}{{3}{8}{The symmetry action, and equivariance}{equation.2.3}{}}
+\newlabel{def:equivariance}{{2.2}{8}{Equivariance}{theorem.2.2}{}}
+\newlabel{subsec:extensions}{{2.4}{8}{Extensions and a splitting lemma}{subsection.2.4}{}}
+\newlabel{def:extension}{{2.3}{8}{Extension of quadratic spaces}{theorem.2.3}{}}
+\newlabel{lem:split}{{2.4}{8}{Splitting along a hyperbolic plane; {\cite [Lemma 9.6]{ButlerT0}}}{theorem.2.4}{}}
+\newlabel{subsec:classification}{{2.5}{8}{Classification, the centre, and regularity}{subsection.2.5}{}}
+\newlabel{thm:classification}{{2.5}{9}{Classification of the real Clifford algebras; \cite {ABS1964, Porteous1995, Lounesto2001}, {\cite [Theorem 9.3]{ButlerT0}}}{theorem.2.5}{}}
+\newlabel{lem:center}{{2.6}{9}{The centre; {\cite [Lemma 9.4]{ButlerT0}}}{theorem.2.6}{}}
+\newlabel{lem:omegasq}{{2.7}{9}{The sign of $\omega ^2$; {\cite [Lemma 9.5]{ButlerT0}}}{theorem.2.7}{}}
+\newlabel{lem:regular}{{2.8}{9}{Regularity localises zero divisors at idempotents}{theorem.2.8}{}}
+\newlabel{sec:taxonomy}{{3}{9}{A taxonomy of obstructions}{section.3}{}}
+\newlabel{def:types}{{3.1}{9}{Obstruction types}{theorem.3.1}{}}
+\newlabel{prop:exceptions}{{3.2}{10}{The exceptional division algebras}{theorem.3.2}{}}
+\newlabel{prop:typeNlocus}{{3.3}{10}{Existence locus of type N}{theorem.3.3}{}}
+\newlabel{ex:hyperbolic-idem}{{3.4}{10}{The hyperbolic partner supplies the annihilating idempotent}{theorem.3.4}{}}
+\newlabel{ex:cl20}{{3.5}{11}{Nilpotents without null vectors: the two loci differ}{theorem.3.5}{}}
+\newlabel{thm:typeC}{{3.6}{11}{Existence and classification of type C}{theorem.3.6}{}}
+\newlabel{rem:typeC-depth}{{3.7}{11}{}{theorem.3.7}{}}
+\newlabel{prop:typeP}{{3.8}{12}{Existence locus of type P}{theorem.3.8}{}}
+\newlabel{thm:annihilator}{{3.9}{12}{Exhaustiveness: every zero divisor is annihilated by an idempotent}{theorem.3.9}{}}
+\newlabel{ex:cl11}{{3.10}{13}{$\Cl (1,1)$: N and P together}{theorem.3.10}{}}
+\newlabel{ex:cl10}{{3.11}{13}{$\Cl (1,0)$ and $\Cl (2,1)$: pure C, and C at matrix size}{theorem.3.11}{}}
+\newlabel{ex:cl13}{{3.12}{13}{$\Cl (1,3)$: the physical case is N-only-at-grade-one, simple}{theorem.3.12}{}}
+\newlabel{sec:typeN}{{4}{13}{Type N: the isotropic obstruction, and Rule 1}{section.4}{}}
+\newlabel{sec:nogo}{{4.1}{13}{The refuted conjecture, and the no-go}{subsection.4.1}{}}
+\newlabel{conj:original}{{4.1}{14}{The original conjecture, refuted below}{theorem.4.1}{}}
+\newlabel{thm:nogo}{{4.2}{14}{No-go at the level of elements}{theorem.4.2}{}}
+\newlabel{eq:versorfactor}{{4}{15}{The refuted conjecture, and the no-go}{equation.4.4}{}}
+\newlabel{rem:local}{{4.3}{15}{Locality and robustness of the obstruction}{theorem.4.3}{}}
+\newlabel{rem:parabolic}{{4.4}{16}{The obstruction is parabolic}{theorem.4.4}{}}
+\newlabel{rem:atom}{{4.5}{16}{The hyperbolic atom}{theorem.4.5}{}}
+\newlabel{eq:partners}{{5}{16}{The hyperbolic atom}{equation.4.5}{}}
+\newlabel{subsec:cohomology}{{4.2}{17}{The obstruction as a cohomology class}{subsection.4.2}{}}
+\newlabel{lem:Nv}{{4.6}{17}{The group of null rotations}{theorem.4.6}{}}
+\newlabel{prop:torsor}{{4.7}{18}{The pseudo-inverse torsor}{theorem.4.7}{}}
+\newlabel{thm:cohomological}{{4.8}{18}{Cohomological form of the no-go}{theorem.4.8}{}}
+\newlabel{sec:model}{{4.3}{19}{The completion: the conformal model}{subsection.4.3}{}}
+\newlabel{eq:lift}{{6}{19}{The completion: the conformal model}{equation.4.6}{}}
+\newlabel{eq:nullity}{{7}{19}{The completion: the conformal model}{equation.4.7}{}}
+\newlabel{lem:density}{{4.9}{19}{Density}{theorem.4.9}{}}
+\newlabel{sec:totality}{{4.4}{20}{Totality of the transported reciprocal}{subsection.4.4}{}}
+\newlabel{eq:action}{{8}{20}{Totality of the transported reciprocal}{equation.4.8}{}}
+\newlabel{thm:totality}{{4.10}{20}{Totality}{theorem.4.10}{}}
+\newlabel{eq:keydisplay}{{9}{21}{Totality of the transported reciprocal}{equation.4.9}{}}
+\newlabel{rem:destination}{{4.11}{21}{}{theorem.4.11}{}}
+\newlabel{sec:minimality}{{4.5}{21}{Minimality among null-lift completions}{subsection.4.5}{}}
+\newlabel{def:nulllift}{{4.12}{21}{Null-lift completion}{theorem.4.12}{}}
+\newlabel{thm:minimality}{{4.13}{22}{Minimality}{theorem.4.13}{}}
+\newlabel{rem:signargument}{{4.14}{22}{}{theorem.4.14}{}}
+\newlabel{rem:degenerate}{{4.15}{23}{Degenerate adjunctions, and why they are excluded}{theorem.4.15}{}}
+\newlabel{rem:whatunique}{{4.16}{23}{What is and is not unique}{theorem.4.16}{}}
+\newlabel{subsec:chartmin}{{4.6}{23}{Minimality against arbitrary embeddings}{subsection.4.6}{}}
+\newlabel{def:chart}{{4.17}{23}{Normalised conformal chart}{theorem.4.17}{}}
+\newlabel{lem:gram}{{4.18}{23}{The conformal Gram matrix}{theorem.4.18}{}}
+\newlabel{thm:chartmin}{{4.19}{24}{Representation-independent minimality of the completion}{theorem.4.19}{}}
+\newlabel{ex:exotic}{{4.20}{24}{An exotic embedding, and its inertness}{theorem.4.20}{}}
+\newlabel{sec:swap}{{4.7}{24}{Coordinate normal form, and descent}{subsection.4.7}{}}
+\newlabel{prop:swap}{{4.21}{24}{Swap-and-rescale normal form}{theorem.4.21}{}}
+\newlabel{eq:incidence}{{10}{24}{Swap-and-rescale normal form}{equation.4.10}{}}
+\newlabel{rem:strata}{{4.22}{25}{Where each stratum comes from}{theorem.4.22}{}}
+\newlabel{lem:descent}{{4.23}{25}{Descent: the read-out map}{theorem.4.23}{}}
+\newlabel{rem:aid}{{4.24}{26}{Ascend, invert, descend}{theorem.4.24}{}}
+\newlabel{rem:classical}{{4.25}{26}{}{theorem.4.25}{}}
+\newlabel{sec:checks}{{4.8}{26}{Consistency checks against known theory}{subsection.4.8}{}}
+\newlabel{subsec:mobius}{{4.8.1}{27}{The one-dimensional base: classical M\"obius inversion}{subsubsection.4.8.1}{}}
+\newlabel{subsec:mp}{{4.8.2}{27}{The hyperbolic atom as a matrix algebra: the Moore--Penrose pseudoinverse}{subsubsection.4.8.2}{}}
+\newlabel{sec:rules}{{5}{28}{Type C: ideal fusion, and Rule 2}{section.5}{}}
+\newlabel{subsec:rule2setting}{{5.1}{28}{Setting: one adjoined generator}{subsection.5.1}{}}
+\newlabel{lem:BAdecomp}{{5.1}{28}{Decomposition and commutation}{theorem.5.1}{}}
+\newlabel{prop:innergrade}{{5.2}{29}{The ascent renders the grade involution inner}{theorem.5.2}{}}
+\newlabel{subsec:fusion}{{5.2}{29}{The fusion theorem}{subsection.5.2}{}}
+\newlabel{lem:corner}{{5.3}{29}{The corner is the even subalgebra}{theorem.5.3}{}}
+\newlabel{lem:matrixunits}{{5.4}{29}{Matrix units, and the Peirce isomorphism}{theorem.5.4}{}}
+\newlabel{thm:fusion}{{5.5}{30}{Rule 2: ideal fusion, sharp form}{theorem.5.5}{}}
+\newlabel{rem:M2pattern}{{5.6}{31}{The $\Mat _2$ pattern: the two rules compared}{theorem.5.6}{}}
+\newlabel{subsec:rule2min}{{5.3}{31}{Minimality, and the classification of the minimal completions}{subsection.5.3}{}}
+\newlabel{thm:rule2min}{{5.7}{31}{One generator is minimal; the minimal completions classified}{theorem.5.7}{}}
+\newlabel{rem:forgottenbit}{{5.8}{31}{A bit the algebra forgets}{theorem.5.8}{}}
+\newlabel{rem:correction}{{5.9}{32}{A second refuted conjecture, recorded}{theorem.5.9}{}}
+\newlabel{ex:fusions}{{5.10}{32}{The three smallest fusions}{theorem.5.10}{}}
+\newlabel{subsec:embmin}{{5.4}{32}{Minimality against arbitrary embeddings, for the fusion}{subsection.5.4}{}}
+\newlabel{thm:embmin}{{5.11}{32}{Embedding-independent minimality of the fusion}{theorem.5.11}{}}
+\newlabel{rem:scopedischarged}{{5.12}{33}{The cost of transport, independently of representation}{theorem.5.12}{}}
+\newlabel{subsec:extension}{{5.5}{33}{One-dimensional extensions: where the obstruction lies, and the commuting square}{subsection.5.5}{}}
+\newlabel{lem:even}{{5.13}{33}{The even subalgebra of a one-dimensional extension}{theorem.5.13}{}}
+\newlabel{thm:extension}{{5.14}{34}{Where the obstruction lies, and the commuting square}{theorem.5.14}{}}
+\newlabel{fig:square}{{1}{35}{The commuting triangle of Theorem \ref {thm:extension}(c), with the same-sign repair of (d) as a fourth node, drawn for $d \equiv 2 \pmod 4$ (the physical lineage). What commutes is the triangle: from $\Cl (p,q)$ to $\Cl (p{+}1,q{+}1)$ directly, or through the obstruction. The Rule 1 ascent factors through the one-dimensional obstruction: the hyperbolic plane Rule 1 adjoins is one extra direction together with the direction Rule 2 demands to repair it, and the ladder pair is their null combinations. The dashed repair is the same algebra two residues away, reached by adjoining a definite plane, which carries no ladder pair. For $d \equiv 0 \pmod 4$ the roles of timelike and spacelike are exchanged}{figure.1}{}}
+\newlabel{cor:residues}{{5.15}{35}{Which residues obstruct which way}{theorem.5.15}{}}
+\newlabel{cor:lorentz}{{5.16}{36}{Odd Lorentzian dimension: exactly one real form is split}{theorem.5.16}{}}
+\newlabel{rem:threecases}{{5.17}{36}{Three dimensions}{theorem.5.17}{}}
+\newlabel{sec:typeP-rule}{{6}{36}{Type P: the rule of no rule}{section.6}{}}
+\newlabel{subsec:selfrepair}{{6.1}{36}{The repair theorem: cost zero}{subsection.6.1}{}}
+\newlabel{prop:selfrepair}{{6.1}{36}{Type P is self-repairing}{theorem.6.1}{}}
+\newlabel{rem:fixedpoint}{{6.2}{37}{Why the shear has nothing to act on: $eee = e$ versus $vvv = 0$}{theorem.6.2}{}}
+\newlabel{subsec:orbits}{{6.2}{37}{The idempotent variety: orbits, gauge, and the P/C boundary}{subsection.6.2}{}}
+\newlabel{lem:sumofunits}{{6.3}{37}{Units span}{theorem.6.3}{}}
+\newlabel{thm:orbits}{{6.4}{37}{Classification of idempotent orbits}{theorem.6.4}{}}
+\newlabel{prop:pair}{{6.5}{38}{The pair is canonical; the label is a bit}{theorem.6.5}{}}
+\newlabel{rem:MPboundary}{{6.6}{38}{The Moore--Penrose boundary, idempotent side}{theorem.6.6}{}}
+\newlabel{cor:norule}{{6.7}{39}{No fourth rule}{theorem.6.7}{}}
+\newlabel{sec:clock}{{7}{39}{The mod-8 clock and the one-way door}{section.7}{}}
+\newlabel{subsec:morita}{{7.1}{39}{Rule 1 is matrix amplification: the ladder pair as matrix units}{subsection.7.1}{}}
+\newlabel{thm:morita}{{7.1}{39}{Rule 1 is Morita-trivial}{theorem.7.1}{}}
+\newlabel{rem:moritapriorart}{{7.2}{40}{Prior art, and what is new here}{theorem.7.2}{}}
+\newlabel{rem:iteration}{{7.3}{40}{Iteration}{theorem.7.3}{}}
+\newlabel{subsec:parks}{{7.2}{40}{The state machine becomes stationary}{subsection.7.2}{}}
+\newlabel{prop:parks}{{7.4}{40}{Fusion occurs at most once}{theorem.7.4}{}}
+\newlabel{fig:clock}{{2}{41}{The mod-8 clock as a state machine. Nodes are the residues $d = p - q \bmod 8$, each carrying the Wedderburn type of $\Cl (p,q)$ from Theorem \ref {thm:classification}; the two doubled nodes $d = 1, 5$ (shaded) are the split signatures, the only carriers of type C. Grey loops: Rule 1 adjoins a hyperbolic plane and fixes the residue (Theorem \ref {thm:morita}), at every node. Dark arrows: Rule 2 adjoins one generator and moves $d$ by $\pm 1$, always from a split residue to a simple neighbour, and the two targets carry isomorphic fused algebras (Theorem \ref {thm:fusion}(3)). No arrow enters $\{1, 5\}$: fusion occurs at most once in any transport history, after which the machine is stationary (Proposition \ref {prop:parks}). The physical lineage is at $d \equiv 6$ and never leaves it}{figure.2}{}}
+\newlabel{subsec:oneway}{{7.3}{42}{The one-way door: what descent erases is what ascent added}{subsection.7.3}{}}
+\newlabel{prop:pinching}{{7.5}{42}{The pinching, and its kernel}{theorem.7.5}{}}
+\newlabel{thm:oneway}{{7.6}{42}{The door is one-way}{theorem.7.6}{}}
+\newlabel{rem:twosided}{{7.7}{43}{The two-sided reading}{theorem.7.7}{}}
+\newlabel{subsec:conservation}{{7.4}{43}{Conservation of obstruction}{subsection.7.4}{}}
+\newlabel{prop:noterminate}{{7.8}{43}{No transport terminates}{theorem.7.8}{}}
+\newlabel{conj:conservation}{{7.9}{43}{Obstructions are moved, never destroyed}{theorem.7.9}{}}
+\newlabel{sec:principle}{{8}{44}{The transport principle, and the algorithm}{section.8}{}}
+\newlabel{def:transport}{{8.1}{44}{Transport}{theorem.8.1}{}}
+\newlabel{pri:transport}{{8.2}{44}{Transport principle}{theorem.8.2}{}}
+\newlabel{sec:algorithm}{{8.1}{45}{The transport algorithm}{subsection.8.1}{}}
+\newlabel{rem:worked}{{8.3}{46}{A worked instance}{theorem.8.3}{}}
+\newlabel{rem:notdo}{{8.4}{46}{What the procedure does not do}{theorem.8.4}{}}
+\newlabel{tab:algorithm}{{1}{47}{The transport algorithm. Each row is a question a practitioner meets in order, the instrument that answers it, and the theorem that licenses the instrument. Step 3 is the only step where the three obstruction types diverge; Steps 4 and 5 are stated for type N, the only type whose repair is delivered at the level of points rather than elements}{table.1}{}}
+\newlabel{sec:position}{{9}{47}{Position in the series}{section.9}{}}
+\newlabel{sec:verification}{{10}{48}{Machine verification}{section.10}{}}

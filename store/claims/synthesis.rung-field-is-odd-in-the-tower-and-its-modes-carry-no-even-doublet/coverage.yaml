@@ -1,0 +1,18 @@
+functions:
+  check_rung_modes_are_a_doublet_pair_of_the_slot_mixing:
+    kind: complete
+    clauses: ["(2)"]
+  check_even_rung_algebra_has_no_doublet:
+    kind: complete
+    clauses: ["(2)"]
+  check_rung_field_is_odd_and_its_invariants_are_even_expectations:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "the vacuum's vanishing on every odd blade and its normalisation are complete; c^2, {c*, c} and the two two-point values at two real coefficient points; the I4-complex case and general coefficients are proved in the text"
+  check_spectator_doublet_is_even_and_two_level:
+    kind: complete
+    clauses: ["(3)"]
+  check_time_direction_gives_a_doublet_that_is_not_a_lorentz_scalar:
+    kind: complete
+    clauses: ["(3)"]
+untouched_premises: {}

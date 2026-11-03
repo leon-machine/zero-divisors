@@ -1,0 +1,14 @@
+functions:
+  check_regularity_and_idempotents:
+    kind: sampled
+    clauses: ["x with axa = a exists (von Neumann regularity)", "e = xa and f = ax are idempotents", "a(1-e) = 0, (1-f)a = 0, ae = a, fa = a", "e, f not in {0,1}"]
+    omits: "23 sample zero divisors in eight algebras with n <= 4; regularity is computed by solving axa = a for those samples only, not for every element, and the general theorem for semisimple Artinian rings is not tested"
+  check_controls_invertible_and_quaternions:
+    kind: partial
+    clauses: ["e, f not in {0,1}"]
+    omits: "a control, not the stated implication: for invertible samples in Cl(1,3), Cl(2,2) the computed x is the inverse (e = f = 1), and three samples in Cl(0,2) = H are non-zero-divisors with positive norm; nothing about zero divisors is asserted"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks compute regularity and the idempotent identities on 23 sample zero divisors; the control function tests the contrast case and says so."

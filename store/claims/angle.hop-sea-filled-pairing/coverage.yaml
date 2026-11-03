@@ -1,0 +1,18 @@
+functions:
+  check_v_is_the_particle_hole_automorphism:
+    kind: exact
+    clauses: ["preamble: V unitary, Hermitian, V^2 = 1, fixes a0, exchanges a1 and a1^dag"]
+    omits: ""
+  check_image_state_and_pairing_generator:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "the identification of V psi with the singularity paper's thermofield pair is by inspection of the values, not computed against that paper"
+  check_equal_frequency_boost_becomes_number_difference:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Entry-by-entry exact matrix identities on the 4-dimensional space match all clauses; premise angle.hop-across-cut is called."

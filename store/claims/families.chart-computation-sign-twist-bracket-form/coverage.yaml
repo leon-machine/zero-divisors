@@ -1,0 +1,19 @@
+functions:
+  check_sign_twist:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "Omega'_k = sgn(pi) Omega_{pi(k)} verified for all six permutations on two sample 3 x 2 Gaussian-rational arrays, not as an identity in free entries; the character multiplicities (0, 1, 1) of 3 x sgn and the sign transformation of the democratic vector are exact; the remark about the line's two orientations is a reading"
+  check_bracket_form:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "C(Omega) = det(W^T W) (Cauchy-Binet) and S3-invariance on two sample arrays; C(v) = s^2 + |d|^2 = |v|^2 on three sample real vectors; membership as the member alpha = 1, beta = -1 of the koide-nullity family is not tested here; the two-dimensional space of S3-invariant symmetric tensors (delta, J), C(f_+-) = 0, C(f_+, f_-) = 3, C(a f_+ + b f_-) = 6ab (nine-point grid, bilinear), no real vector on the Fourier lines, and C(v_lepton) = sum m_k = 1883.09937445 MeV are exact; 'nothing in the paper supplies O(3) invariance' is not computable"
+  check_fourier_coordinates_and_the_one_number:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "Gamma -> (Re(Gamma zeta^k))_k has rank 2 into the plane sum d_k = 0 (exact), and sum d_k^2 = (3/2)|Gamma|^2, Q = 1/3 + |Gamma|^2/(6a^2) and the tan(delta) relation are checked at four Gamma and two a, not as free-parameter identities; the lepton figures are rigorous interval bounds (|Gamma|^2/a^2 in 2 +- 10^-4, |Gamma|/a in [1.41415, 1.41425)), and delta is certified through tan^2(delta) in (tan^2 0.2215, tan^2 0.2225) together with Re Gamma > 0 (2 v0 > v1 + v2) and Im Gamma > 0 (v2 > v1) on the interval bounds, which place delta in (0, pi/2); the sign relations 2 v0 - v1 - v2 = 3 Re Gamma, v2 - v1 = (3/2) b are checked at the samples"
+untouched_premises: {}
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_fourier_coordinates_and_the_one_number now asserts Re Gamma > 0 and Im Gamma > 0 for the lepton data (and the sign relations at the samples), fixing the quadrant, so delta = 0.222 is certified."

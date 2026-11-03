@@ -1,0 +1,26 @@
+(1) \emph{Finite window first, exactly.} On the window $W = \{-K, \dots, K-1\}$ set $a_m = \sum_{k \in S_m} \psi^\dagger_k \psi_{k+m}$ with $S_m = \{k : k, k+m \in W\}$; normal-ordering constants are scalars and drop out of every commutator, so they play no role here. The CAR give, for single bilinears,
+\[
+[\psi^\dagger_k \psi_{k+m},\; \psi^\dagger_l \psi_{l+n}] = \delta_{k+m,\,l}\,\psi^\dagger_k\psi_{l+n} - \delta_{l+n,\,k}\,\psi^\dagger_l\psi_{k+m} .
+\]
+For $n = -m$ ($m > 0$), summing over $k \in S_m$ and $l \in S_{-m}$ and writing $N_j = \psi^\dagger_j\psi_j$:
+\[
+[a_m, a_{-m}] \;=\; \sum_{k \in S_m} \bigl(N_k - N_{k+m}\bigr)
+\;=\; \underbrace{\sum_{j=-K}^{-K+m-1} N_j}_{=:\,B_m} \;-\; \underbrace{\sum_{j=K-m}^{K-1} N_j}_{=:\,T_m} ,
+\]
+an \emph{exact operator identity}: the interior terms cancel in the telescoping sum and only the bottom and top $m$ sites survive. On any state that agrees with the filled sea on those edge sites, $B_m = m$ and $T_m = 0$, so $[a_m, a_{-m}] = m\,\id$ there; the edge operators are the entire finite-size correction, and they vanish on bulk states at every window size, not merely asymptotically. For $m + n \neq 0$ the same computation cancels all interior terms against each other and leaves an edge-supported remainder, zero on bulk states. The infinite array (modelled on the tower limit of \cite[Thm.~5.6]{ButlerT3}) has no edges, and the identities hold outright.
+
+(2) A bilinear $\psi^\dagger_k\psi_{k+m}$ is an eigenvector of the modular flow with definite weight (both factors carry definite weight by Theorem \claimref{singularity.modular-structure-completed-pair}(2)), and its weight is fixed by the difference $\omega_{k+m} - \omega_k$. The current $a_m$ sums these bilinears over $k$, so it is an eigenvector exactly when that difference does not depend on $k$, that is when the weights are affine in $k$. This is where the weight clause of (Q, \claimref{singularity.q-joint-quasi-freeness-s-wave}) enters: with $\omega_k = \kappa k$ the difference is $\kappa m$ for every $k$, each $a_m$ is a weight vector, and the linear span of the currents is invariant. For weights not affine in $k$ the summands of $a_m$ rotate at different rates and the span need not be invariant. The restriction statement is definitional: if $(\omega, \sigma_t)$ is KMS at $\beta$ on an algebra and $A$ is a globally invariant subalgebra, the correlation functions of elements of $A$, their analytic continuations, and the KMS boundary identity are computed in $A$ exactly as in the ambient algebra.
+
+(3) Under (Q, \claimref{singularity.q-joint-quasi-freeness-s-wave}), Wick's theorem gives $\langle a_{-m} a_m\rangle = \sum_{k} n_{k+m}(1 - n_k)$: the four-point functions factorise because (Q) sets every connected part to zero, which is exactly what a general member of the chain's state class denies. With the present convention the sum needs no vacuum subtraction: at $\beta \to \infty$ the summand $\mathbf{1}[k + m < 0]\,\mathbf{1}[k \geq 0]$ is empty for $m > 0$, consistent with $a_m$ annihilating the sea. Write $x := e^{-\beta\kappa} \in (0,1)$, $n_k = x^k/(1 + x^k)$, and
+\[
+g(k) := n_{k+m}(1 - n_k) = \frac{x^{k+m}}{(1 + x^{k+m})(1 + x^k)} \;\geq 0.
+\]
+The two-sided series $S := \sum_{k \in \mathbb{Z}} g(k)$ converges absolutely: $g(k) \leq x^{k+m}$ for $k \geq 0$ and $g(k) \leq x^{-k}$ for $k \leq -m$ (bound each Fermi factor by $1$ and the other by its numerator). Two exact pointwise identities finish the computation. \emph{Detailed balance:} $n_k(1 - n_{k+m}) = x^{-m}\, g(k)$, read off from the displayed formula by exchanging which factor keeps its numerator. \emph{Difference identity:} $g(k) - n_k(1 - n_{k+m}) = n_{k+m} - n_k$, by expanding both sides over the common denominator. Summing the difference identity over $\mathbb{Z}$ (all three series converge absolutely) and evaluating the telescoping middle sum by its partial sums,
+\[
+\sum_{k=-K}^{K} (n_{k+m} - n_k) \;=\; \sum_{j=K+1}^{K+m} n_j \;-\; \sum_{j=-K}^{-K+m-1} n_j \;\xrightarrow[K \to \infty]{}\; 0 - m = -m ,
+\]
+since $n_j \to 0$ as $j \to +\infty$ and $n_j \to 1$ as $j \to -\infty$. Therefore $S - x^{-m} S = -m$, i.e.
+\[
+S \;=\; \frac{m}{x^{-m} - 1} \;=\; \frac{m\,x^m}{1 - x^m} \;=\; \frac{m}{e^{\beta\kappa m} - 1} ,
+\]
+which is the assertion: Bose-Einstein occupancy, exactly, with the detailed-balance relation supplying the physical content. The deposited script verifies the two pointwise identities, the re-indexing, and the value against exact rational tail bounds; and, for (Q)'s role, that the Planck summand is the exact expectation $\langle n_{k+m}(1 - n_k)\rangle$ on the product member of the class while a correlated member with the same marginals shifts it by exactly the connected correlator.

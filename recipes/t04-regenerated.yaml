@@ -1,0 +1,86 @@
+doc: t04-regenerated
+title: 'Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion, and the Exceptional
+  Algebra (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- sheaf.invariant-form-t3
+- sheaf.blade-basis-degenerate-forms-included
+- obj.sheaf.clifford-sheaf
+- sheaf.local-freeness-constant-rank
+- sheaf.imported-classification-values
+- sheaf.imported-classification-values-external
+- sheaf.imported-real-line-bundles
+- sheaf.degeneration-sheaf
+- sheaf.resolution-ideal-theoretically
+- obj.sheaf.collar-data-coupling
+- sheaf.wall-gram
+- sheaf.determinant-identity-blow-up-expansion
+- sheaf.one-sided-completion
+- sheaf.localised-transport
+- sheaf.conservation-degeneracy-absolute-form
+- sheaf.conservation-degeneracy-located
+- sheaf.tame-wall-induction
+- sheaf.infinite-wall-sequence
+- sheaf.exceptional-algebra-deformation-normal-cone
+- sheaf.metrics-residue-square-root-twist
+- sheaf.tame-walls-are-two-sided
+- sheaf.wall-class
+- sheaf.gauge-field-cometric
+- sheaf.gauge-field-cometric-external
+- sheaf.kasner-data-interior
+- obj.sheaf.weighted-coframe-module
+- sheaf.basic-properties-operational-characterisation
+- sheaf.schwarzschild-degeneration-boundary-tame
+- sheaf.wall-fibre-black-hole
+- sheaf.one-sided-completion-singularity
+- sheaf.exceptional-algebra-black-hole
+- sheaf.residue-square-root-twist-black-hole
+- sheaf.weights-are-forced-are-kasner-exponents
+- obj.sheaf.extensions
+- sheaf.uniqueness-weighted-module
+- sheaf.characterisation-forced-within-rain-bounded-class
+- sheaf.rain-duality
+- sheaf.chains-radial-dyad-rain-finite
+- sheaf.weighted-limit
+- sheaf.matching-fibre
+- sheaf.matching-connection-level
+- obj.sheaf.variable-order-algebra-strict-diagonal-data
+- sheaf.boundary-units-invert
+- sheaf.variable-weight-boundary-tameness-completion-forced
+- obj.sheaf.relatively-admissible-perturbation
+- sheaf.stability-reduction-strict-diagonal-case
+- sheaf.log-obstruction
+- obj.sheaf.log-completion
+- sheaf.differential-closure-filtration-conormality
+- sheaf.exponent-ratios-are-invariant
+- sheaf.collision-census
+- sheaf.edge-wall
+- sheaf.function-linearity-tame-constructions
+- sheaf.base-unipotents-wall
+- sheaf.solve-closed-radical-gauge
+- sheaf.transversal-independence-wall
+- sheaf.no-equivariant-value-wall
+show: spine-only
+paper: T04
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T04_clifford_sheaves.tex
+  note: Recreate T04 from the store
+cite: []
+prose: paper
+msc: Primary 15A66, 53C50; Secondary 53A30, 14E15, 58A30.
+keywords: Clifford algebra; degenerate metric; signature change; nilpotent ideal; blow-up; deformation to the normal cone; tractor calculus; ambient metric.

@@ -1,0 +1,14 @@
+functions:
+  check_every_element_is_a_sum_of_two_units:
+    kind: sampled
+    clauses: ["every element of a finite-dimensional unital R-algebra is a sum of two invertible elements"]
+    omits: "37 sample elements in six Clifford algebras (n <= 4), upper-triangular 3 x 3 matrices, Mat_2(Q) and the dual numbers, over Q rather than R; unit decompositions exhibited exactly with a smallest nonzero integer shift lambda <= dim A + 1"
+  check_singular_sets_are_the_eigenvalues:
+    kind: partial
+    clauses: ["whole"]
+    omits: "tests the mechanism of the proof only (the lambda with a - lambda singular are the eigenvalues of L_a, finitely many) on six hand samples; the statement itself is not tested here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is for all finite-dimensional unital algebras; the checks decompose 37 samples exactly and test the eigenvalue mechanism, so sampled and partial."

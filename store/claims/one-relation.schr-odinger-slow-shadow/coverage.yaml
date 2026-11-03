@@ -1,0 +1,35 @@
+functions:
+  check_vector_derivative_is_covariant:
+    kind: sampled
+    clauses:
+    - step (1) "The first-order operator is the vector derivative nabla = gamma^mu d_mu" (covariant)
+    omits: six rational rotors; the uniqueness up to an invertible constant factor is the cited lemma, not tested
+  check_klein_gordon_square:
+    kind: sampled
+    clauses:
+    - 'step (2) "the form is then forced: ... squares to Klein-Gordon at mass m iff C^2 = -1"'
+    - '"every component of a solution is a Klein-Gordon field of the same m"'
+    omits: C^2 = -1 is verified for the Dirac-Hestenes C only, not the iff; plane-wave solution spaces at five on-shell and three off-shell momenta with one mass
+  check_imaginary_unit_and_rest_frame_are_one_datum:
+    kind: sampled
+    clauses:
+    - step (3) "choosing the imaginary unit and choosing the rest frame are one choice"
+    - '"it is not the boost plane, which squares to +1"'
+    omits: three sample rotors and one rest-space rotation; the time-orientation bit, the flag and the unsourced rest frame are levels, not computed
+  check_pauli_identity:
+    kind: exact
+    clauses:
+    - step (4) "the Pauli identity ab = a.b + I_3 a x b in the rest space"
+    omits: the nonrelativistic expansion, g = 2 and the Schroedinger limit are imported and not tested; the identity itself is exact on all nine basis pairs plus bilinearity
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  one-relation.arrow-frequency-are-one-bit-level: level statement that frequency sign and time direction are one bit, proved in its own entity
+  one-relation.imported-flag-arrow-superselection: orientation sourced under Hypothesis (S), a level statement with no computable content here
+  one-relation.imported-condensate-derived-content: the mass sourced by the condensate is an observation-level reading, not computable
+  one-relation.odd-square-roots-chiral-phase: cited for the odd-C classification and chiral phase, which has its own check
+  standard-model.hyp-s-slot-statistics: hypothesis on slot statistics, no computable content
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the four computable steps are checked within the recorded kinds and the docstring says the level statements and the imported descent are not computable

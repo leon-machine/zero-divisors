@@ -1,0 +1,67 @@
+---
+id: synthesis.mirror-asymmetry-route-one
+kind: claim
+version: 2
+title: The mirror's asymmetry by the audit route, and what that route needs
+status: proved
+subject: dark-matter
+tags:
+- mirror-sector
+- matter-asymmetry
+- indifference
+- premises-p1-p5
+proposed_by:
+  kind: ai
+  session: synthesis-gaps-2026-10-21
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: direction
+- name: Claude Opus 5.5
+  role: proposal and drafting
+  source: Co-Authored-By trailer of the commit that added it
+derivations:
+- name: main
+  uses:
+  - odd-extensions.two-towers-one-curved-universe@6
+  - dark-matter.orientation-arrow-seventeenth-refutation@9
+  - dark-matter.flag-bit-exists-exactly-tower-dimension@3
+  - dark-matter.mirror-tower-copy-one@8
+  - dark-tower-matter.mirrors-temperature-p2@6
+  proof: proof-main.tex
+checked_by:
+- kind: check
+  ref: check.py::check_reversal_keeps_flag
+lineage:
+  motivated_by:
+  - dark-matter.mirror-tower-copy-one
+about:
+- obj.dark-matter.witt-flag
+extraction:
+  maintainer_pass:
+    by: maintainer-2026-10-23
+    date: '2026-10-23'
+    note: 'Check entries synced with check.py: +1, -1 (added check_reversal_keeps_flag; removed test_reversal_keeps_flag). Version 1 -> 2.'
+  review_fixes:
+    by: ai-review-fix
+    date: 2026-10-21
+    note: 'Referee fixes: route one needs an orientation input of route two''s kind, not already contains it; Phi cited from the theorem''s proof; lay wording; check derives LambdaPhi from Phi.'
+---
+
+## formal
+Let $\Phi : (\sigma, \mu, \rho) \mapsto (\sigma, \mu, -\rho)$ be the scale-independent map from this tower's tractor fibre, metric $h$ of signature $(2,4)$, to the mirror's, metric $h'$ of signature $(4,2)$, with $h'(\Phi X, \Phi Y) = -h(X, Y)$ (the proof of Theorem \claimref{odd-extensions.two-towers-one-curved-universe}), extended to $V_{\C}$.
+\begin{enumerate}
+\item[(i)] $\Phi$ carries every Witt pair $(W, W')$ of $(V_{\C}, h)$ to the Witt pair $(\Phi W, \Phi W')$ of $(V_{\C}, h')$, with $\Phi W = W$ when $W$ is spanned by the $\sigma$-direction and vectors of $\mu_{\C}$. On the Fock modules, $\Lambda\Phi : \Lambda W' \to \Lambda \Phi W'$ intertwines the creation operators, intertwines the annihilation operators up to the sign $-1$ that the reversed form puts on every contraction, and intertwines every mode number operator exactly, the two signs cancelling. So $\Phi$ carries the Fock grade $k$ to grade $k$, particles to particles, and the asymmetry per mode of this tower, measured against $W$, to the mirror's measured against $\Phi W$, with sign $+1$. The composite $\Phi \circ C$ with the flag conjugate $C : v_{j} \leftrightarrow w_{j}$ of Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation} is a second anti-isometry, carrying $W$ to $\Phi W'$, in the other family (Theorem \claimref{dark-matter.flag-bit-exists-exactly-tower-dimension}), and the asymmetry with sign $-1$.
+\item[(ii)] Hence the first route of clause (v) of Theorem \claimref{dark-matter.mirror-tower-copy-one}, the audit along the reversal orbit, gives $\epsilon_{2} = +\epsilon_{6}$ exactly when the mirror is oriented by $\Phi W$, and $\epsilon_{2} = -\epsilon_{6}$ if by $\Phi W'$. Which holds is a discrete datum of the same kind as the orientation itself: conjugation of the mirror's kinematic data alone, an automorphism under the first premise of Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation}, exchanges the two, so no kinematic or dynamical result fixes it. It is fixed by the orientation clause of Premise \claimref{dark-matter.p1-single-frozen-point} or by Premise \claimref{dark-matter.p2-indifference} applied to that discrete datum; route one therefore needs an orientation input of route two's kind: P1's orientation clause, or P2 applied to the bit.
+\item[(iii)] Route one applies Premise \claimref{dark-matter.p2-indifference} to a continuous datum of the descent along the reversal orbit, the reach at which Proposition \claimref{dark-tower-matter.mirrors-temperature-p2} obtains $\xi = 1$ and $\Delta\Neff = 7.45$, excluded. So route one stands only under a scoping of P2 that separates the asymmetry per mode from the energy deposited per unit charge, and no premise in the store states one.
+\end{enumerate}
+On the store as it stands, clause (v) rests on the orientation clause of P1 (route two), and the claim that it stands by the audit with that clause withdrawn does not survive Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}. A scoping that would restore route one, offered and not proved: P2 equates along the orbit the superselected charges of the descent, which the stored asymmetry $Q = \epsilon N$ is (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(i)) and the temperature ratio is not.
+
+## technical
+The mirror tower is this tower's tractor geometry with the metric's sign reversed, and the two are related by one canonical map that flips the sign of the form. That map keeps every maximal isotropic subspace isotropic, so it carries this tower's Witt flag to a flag of the mirror; on the Fock modules it keeps creation operators, flips the sign of annihilation operators, and so keeps every number operator and the Fock grade. Particles go to particles, and the asymmetry per mode is carried with its sign. Composing with the flag conjugate gives a second sign-reversing map that exchanges particles and antiparticles. The audit route to the equality of the two towers' asymmetries therefore needs the mirror to be oriented by the image of this tower's flag, a discrete datum that no structure fixes, as in the seventeenth refutation; it is supplied by the single-flag clause of P1 or by P2 applied to that bit. The audit route also applies P2 to a continuous datum of the descent along the reversal orbit, exactly the reach that a later note shows forces the mirror to the photon temperature and is excluded by the effective number of neutrino species. So the clause currently rests on P1's orientation clause, unless P2 is scoped to separate the asymmetry from the deposited energy, for instance to superselected charges.
+
+## lay
+The dark-matter paper argues that the mirror world has the same small excess of matter over antimatter as ours, by two routes. One route says nature would not make an unexplained difference between the two worlds. This result checks the step that route skipped: the natural map between the two worlds does send matter to matter, not to antimatter, so if the worlds are matched by it an excess equal in size is also equal in sign. But whether the mirror is matched to us that way is itself a choice nothing fixes, the same kind of choice as which of matter and antimatter we call matter, so the route needs an assumption about orientation after all. And the same reasoning, applied to the mirror's temperature, gives a hot mirror that observations exclude, so the route also needs a reason to apply the rule to the excess and not to the heat.
+
+## one-liner
+The canonical reversal carries this tower's flag and Fock grading to the mirror's with sign $+1$, so the audit route to $\epsilon_{2} = \epsilon_{6}$ needs P1's orientation clause or P2 applied to the orientation bit, and at its stated reach it is the reach that the cold mirror refutes.

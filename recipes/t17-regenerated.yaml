@@ -1,0 +1,44 @@
+doc: t17-regenerated
+title: 'The Transport Programme: Method, Status, and the Falsifiable Ledger (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- programme.n-parameter-of-the-laws
+- refuted.a-pre-descent-term-sources-the-matter-asymmetry
+- refuted.the-desert-the-derived-content-alone-connects-th
+- refuted.the-internal-forces-are-gauged-polynomially-as-g
+- refuted.the-internal-ladder-acts-on-the-whole-tower-at-o
+- refuted.the-mass-dictionary-coupling-to-the-frozen-point
+- refuted.the-neutrino-mass-is-set-by-the-cosmological-ter
+- refuted.the-number-n-is-a-coincidence-dirac
+- refuted.the-number-n-is-a-mystery-of-largeness
+- refuted.the-particle-antiparticle-orientation-is-determi
+- refuted.the-raw-representation-content-matches-the-fermi
+- refuted.the-three-twistor-hierarchy-carries-the-standard
+- refuted.the-two-one-generator-ascents-differ-as-algebras
+- refuted.the-vacuum-omega-area-sets-the-weak-scale
+- refuted.the-wall-twist-is
+- refuted.twistors-are-the-ladder-operators
+show: spine-only
+paper: T17
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T17_transport_programme.tex
+  note: Recreate T17 from the store
+cite: []
+prose: paper
+msc: Primary 15A66, 83C57; Secondary 81T99, 83C47, 81V22.
+keywords: Clifford algebra; zero divisors; minimal completion; black-hole information; registered predictions; falsifiability; machine verification.

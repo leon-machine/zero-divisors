@@ -1,0 +1,23 @@
+functions:
+  check_cross_product_factor_and_gram_spectrum:
+    kind: sampled
+    clauses: ["every antisymmetric pairing has family factor G = [a]_x", "G G^dagger = |a|^2 1 - conj(a) a^T with spectrum {|a|^2, |a|^2, 0}"]
+    omits: "antisymmetric 3 x 3 matrices as the image of a -> [a]_x is exact (rank 3 = dimension), with two sample channel wedges; the Gram identity and spectrum are checked at five sample complex a over Q(zeta), not as a free-parameter identity"
+  check_takagi_fourfold:
+    kind: sampled
+    clauses: ["the Takagi spectrum of the full pairing is fourfold degenerate {sigma, sigma, sigma, sigma, 0, 0} with sigma = tau |a|"]
+    omits: "three sample a and two tau: xi xi^dag = tau^2 G G^dag (x) 1 has rank 4 and satisfies X (X - sigma^2) = 0; 'at every (lambda, chi)' is not enumerated and the symmetry of xi = tau G (x) eps is not asserted"
+  check_channel_vectors:
+    kind: sampled
+    clauses: ["the freezing is one Bogoliubov event with one depth r = tau sqrt(1 + lambda^2) for the two channels", "the equal-gain identity of the two channels"]
+    omits: "channel cross products and orthonormality of a_A, a_B are exact; |a_A + lambda e^{i chi} a_B|^2 = 1 + lambda^2 is checked at lambda in {0, 3/4, 4/3, 2} and three phases; equal gain is read as |a_A| = |a_B| = 1; the depth r = sigma and 'lambda is a relabelling of tau plus a rotation of the coherent ray' are not computed here"
+  check_coherent_vector_and_universal_point:
+    kind: sampled
+    clauses: ["the coherent face vector v_k = <Omega_k> = 2 sinh r cosh r n_k", "v_k is proportional to 1 + lambda e^{i chi} zeta^k", "at the universal point v_k = -i sqrt(2/3) sinh r cosh r (1 + e^{i chi} zeta^k)"]
+    omits: "two rational hyperbolic points (3/4, 5/4), (12/5, 13/5), lambda in {0, 3/4, 4/3} (|a| = 1, 5/4, 5/3) and three phases; the universal point lambda = 1 has |a| = sqrt 2 and is not instantiated, it follows from -i/sqrt 3 = (zeta^2 - zeta)/3 (docstring argument); Theta_k is defined in the check from the Gaussian data of the imported Fact"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Q(zeta) arithmetic at sample vectors, strengths, phases and squeezing points; the statement's 'every (lambda, chi)' is sampled and the lambda = 1 case is not instantiated."

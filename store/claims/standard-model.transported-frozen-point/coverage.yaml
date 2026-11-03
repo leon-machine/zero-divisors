@@ -1,0 +1,30 @@
+functions:
+  check_mode_vectors:
+    kind: exact
+    clauses: ["v = n_inf/2, w = -n_0 with v . w = 1/2 and v* = w"]
+    omits: "Exact identities for the second and third rung null pairs."
+  check_lift_and_its_rung_component:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Several ground vectors I with Lambda = 3 Q(I) positive, negative and zero; the statement is for the frozen point at any Lambda."
+  check_reciprocal_lift:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Same ground samples; the Lambda = 0 ideal point is tested separately."
+  check_third_rung_adds_minus_w5:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Same ground samples."
+  check_normalisation_scaling_and_conjugate_directions:
+    kind: sampled
+    clauses: ["coefficient one of -w_4 (v_4) is the lift's normalisation, for every x", "admixture scales as lambda^2 under I -> lambda I", "the two constructions land on conjugate null directions"]
+    omits: "Ground samples and a finite list of scales lambda."
+  check_hypercharges_of_the_components:
+    kind: exact
+    clauses: ["hypercharge -1/2 for w_4, w_5 and +1/2 for v_4, with 2T_3 = +-1 (the doublet labels in (i) to (iii))"]
+    omits: "Labelling read in the five-mode module as ad-eigenvalues of 6Y and 2T_3; the module's Y is not among the declared premises, as the docstring states."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is tested at several exact ground vectors including Lambda of both signs and zero; no function claims more than its samples."

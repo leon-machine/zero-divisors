@@ -1,0 +1,18 @@
+functions:
+  check_chart_in_the_model_equality_case:
+    kind: sampled
+    clauses: ["in case of equality the signature is exactly (p+1,q+1)"]
+    omits: "the 20 signatures with 1 <= n <= 5 only; shows the chart exists in Cl(p+1,q+1) with Gram M of signature (p+1,q+1) and rank n+2, but not the isomorphism Cl(V'') = Cl(p+1,q+1) for an arbitrary equality host"
+  check_larger_hosts_split_off_the_chart:
+    kind: sampled
+    clauses: ["p'' >= p+1 and q'' >= q+1 (larger hosts)", "dim V'' >= n+2"]
+    omits: "six base signatures and five extra blocks X; checks p'' = p+1+a, q'' = q+1+b for hosts of the form (model) + X, not for an arbitrary host containing a chart"
+  check_smaller_hosts_admit_no_chart:
+    kind: sampled
+    clauses: ["p'' >= p+1 and q'' >= q+1", "no smaller or differently balanced host can host the chart"]
+    omits: "inertia bound tested on three sample matrices S; exclusion of hosts with p'' + q'' <= n + 3 is exact for five base signatures ((1,1),(1,3),(3,1),(2,1),(0,3)) and follows from M having indices (p+1,q+1); the 'however Cl(p,q) is embedded as an algebra' consequence is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The signature bounds are tested by exact inertia computations on small signatures; the algebra-level consequences (Clifford isomorphism, embedding independence) have no check. 2026-10-23 weak-checks pass: check_larger_hosts_split_off_the_chart now asserts that the chart spans n + 2 directions and the extra block m independent ones, so the extra block is the whole complement (before: only orthogonality, which any vector of the block satisfies)"

@@ -1,0 +1,18 @@
+functions:
+  check_infinity_bivector_norm_is_lambda_over_three:
+    kind: exact
+    clauses: ["(2) eps(I wedge I) = Lambda/3", "I_{alpha beta} = Psi(I_g) is a bivector of CS"]
+    omits: "Pf(b_v) = -Q(v)/16 is checked on the 21 polarisation vectors, which fixes the quadratic identity for all v; eps := -16 Pf fixes the normalising constant, so 'eps = Lambda/3' is a normalisation choice plus Q(I_g) = Lambda/3 (tested at Lambda in {3/2, -6/5, 1/7})"
+  check_infinity_bivector_simple_iff_lambda_zero:
+    kind: sampled
+    clauses: ["(1) simple (a line of PCS: the infinity line) at Lambda = 0", "(2) non-simple for Lambda != 0"]
+    omits: "rank 2 for ninf, rank 4 for I_g at three Lambda != 0, five null and four non-null sample vectors; the iff for all Lambda would follow from the exact Pfaffian identity of the previous function and the rank-Pfaffian relation, which is not asserted here; the plane ker(ninf) is shown to be the radical of b_ninf"
+  check_constancy_in_three_languages:
+    kind: sampled
+    clauses: ["(1) covariant constancy of the infinity bivector, as constancy of the scale tractor", "(2) Einstein condition with Lambda != 0 iff constancy"]
+    omits: "equivariance of b_v is tested for four bivectors, two vectors and all six index pairs, not for every bivector; the iff is tested with one Einstein P (Lambda = 3/2) and one non-Einstein sample P in three directions; constancy at Lambda = 0 is not sampled here (it is the imported Fact's first clause)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The norm identity is exact through polarisation; simplicity and constancy are sampled at chosen Lambda and chosen Schouten maps, which the kinds record."

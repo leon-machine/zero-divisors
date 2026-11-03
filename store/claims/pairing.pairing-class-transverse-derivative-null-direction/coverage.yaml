@@ -1,0 +1,26 @@
+functions:
+  check_omega_reproduces_the_connection:
+    kind: sampled
+    clauses:
+    - '"pv(Omega(X)) = <nabla_X l, m>" (prerequisite: Omega(X) reproduces nabla_X on the frame)'
+    omits: 14 connections (four directions at each of three Schwarzschild frames F = 1/2, 3/5, 1/3, and two random rational ones)
+  check_pairing_class_is_transverse_derivative:
+    kind: sampled
+    clauses:
+    - '"For every direction X, pv(Omega(X)) = <nabla_X l, m>"'
+    omits: basis directions at three Schwarzschild frames and two random connections, complex directions by linearity; the identity is not carried symbolically in the connection coefficients
+  check_class_scales_with_the_null_direction:
+    kind: sampled
+    clauses:
+    - '"under a rescaling l -> lambda l the class scales by lambda, so its vanishing locus is a property of the null direction field"'
+    omits: one scaling lambda = F/(1 + F) at three Schwarzschild frames, with the derivative term of lambda nonzero
+  check_real_directions_parallel_exactly_when_class_vanishes:
+    kind: sampled
+    clauses:
+    - '"For a real direction X the vacuum is parallel along X exactly when the null direction is, nabla_X l proportional to l"'
+    omits: seven real directions at three Schwarzschild frames and four random metric-compatible connections (two with vanishing class); the complex-direction failure (nabla_m l = (F/r) m) is shown at the same frames
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_real_directions_parallel_exactly_when_class_vanishes now also runs four random metric-compatible connections (two with vanishing class, one by cancellation), as docstring (4) says"

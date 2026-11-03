@@ -1,0 +1,32 @@
+functions:
+  check_equivariant_slot_creation_is_exclusive:
+    kind: exact
+    clauses:
+    - (iv) "every U(2)-equivariant slot creation map anticommutes; a+(u)^2 = 0"
+    omits: Computed for the module F = Lambda C^2 taken from the CPT-closure theorem (that F is Lambda C^2 is not derived here); intertwiners are computed for n = 0, 1, and the docstring's "zero for n = 2" is not an assert (the target F_3 is zero); only the composite F_0 to F_2 is tested
+  check_five_mode_content:
+    kind: exact
+    clauses:
+    - (ii) "the state space is the five-mode Fock space with (A,B) acting as Lambda(A + B); its particle half is (1,1)_0 + (1,3bar)_{-2/3} + (2,3)_{1/6} + (2,1)_{-1/2} + (1,1)_1 + (1,3bar)_{1/3}"
+    omits: The isomorphism F = Lambda C^2 as a graded U(2)-module is not tested here
+  check_chirality_is_total_mode_parity:
+    kind: exact
+    clauses:
+    - (iii) "the chirality is the parity of the total mode number"
+    - (i) "if the tower grading (-1)^(pi n + k) is the chirality then pi = 1"
+    omits: 'Tested through the Pati-Salam clause (version 4 of the premise): the commutant of the 21 split-preserving bilinears, the two CPT halvings in it, anomaly freedom keeping the total parity, and the neutral-block step with the two-slot creation operator and its adjoint. The tower parity is tested over pi = 0..3 and found odd, i.e. pi = 1 mod 2'
+  check_one_clifford_system:
+    kind: exact
+    clauses:
+    - (v) "two slot and three pair modes form one CAR system; their Majoranas generate Cl(10) on Lambda C^5, parity its chirality"
+    omits: ''
+  check_particle_half_anomaly_free:
+    kind: exact
+    clauses:
+    - '"the particle half satisfies the four anomaly conditions of the imported Fact"'
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Every clause (i) to (v) and the anomaly remark has an exact check on the five-mode module; the slot-module hypothesis itself is a premise and the identification F = Lambda C^2 is taken from the CPT-closure theorem.

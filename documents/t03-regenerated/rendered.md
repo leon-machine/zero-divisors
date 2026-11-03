@@ -1,0 +1,461 @@
+# The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second Quantisation (regenerated from the store)
+
+**Abstract.** The transport principle of this series completes $\Cl(p,q)$ to $\Cl(p{+}1,q{+}1)$; the completed algebra carries a null cone of its own, so the completion invites iteration. This paper settles what the iterated tower is. Rigidity first: $\Cl(p{+}k, q{+}k) \cong \Mat_{2^k}(\Cl(p,q))$ canonically, so the transport charge $p - q$ is constant along the tower and the mod-8 clock never ticks. Bott periodicity manifests not as eventual return but as immediate freeze: every floor is Morita equivalent to the ground floor, and the eight clock positions classify eight parallel towers rather than stages of one. Each rung adjoins one hyperbolic plane, and the adjoined ladder pairs satisfy the canonical anticommutation relations exactly, as vectors: the tower is a fermionic register, one mode per rung, with Fock modules doubling at every floor and the Witt index counting capacity. The limit theorem settles the second-quantisation question: for even transport charge the grade twist in the connecting embeddings is inner by Skolem and Noether, the algebraic direct limit is $\Cl(p,q) \otimes \Mat_{2^\infty}$, and the completed complexified limit is the ground algebra tensored with the CAR algebra of countably many fermionic modes. Iterated transport is second quantisation. The odd-charge case, where the twist acts on the centre, is delimited precisely and posed. The paper is pure mathematics: complete proofs throughout, with the handful of imported classical results stated as facts carrying their provenance. Every computational identity is verified in exact arithmetic in an accompanying script.
+
+## What we assume
+
+**Postulate 1 (Tameness).** The pair $(M, G)$ is a \emph{tame corank-one degeneration} if:
+\begin{enumerate}
+\item[(T1)] $\Sig$ is a smooth closed hypersurface of $M$;
+\item[(T2)] $G$ has corank exactly one at every point of $\Sig$, and the radical lines assemble into a smooth line subbundle $\shL \subset T^*M|_\Sig$, locally spanned by a covector field $k$;
+\item[(T3)] (transversality) the degeneration is first-order: the canonical section $\delta$ of Lemma \claimref{sheaf.invariant-form-t3} below is nowhere vanishing on $\Sig$.
+\end{enumerate}
+
+## Introduction
+
+
+
+**setting  (Introduction).** The root paper of the series \cite{ButlerT1} repairs the failure of division at the null cone of $\Cl(p,q)$ by the minimal Witt completion $\Cl(p,q) \to \Cl(p{+}1,q{+}1)$, shows this is one of exactly two transport rules, classifies what each adjoins, and proves that the completed algebra is the matrix amplification $\Mat_2(\Cl(p,q))$ with the base embedded as a twisted diagonal. The completed algebra, being a Clifford algebra of mixed signature, has a null cone of its own. The question this paper answers is the evident one: what happens when the transport is iterated? Three specific forms of the question: does the ascended algebra's own singular behaviour force a further ascent, without end; does the mod-8 periodicity of the real Clifford classification make the climb circulate; and what is the limit object?
+
+The answers are more specific than the questions. The tower $\Cl(p{+}k,q{+}k)$ is canonically $\Mat_{2^k}(\Cl(p,q))$, so the climb never leaves the ground floor's Morita class: the clock is frozen, not circulating, and the eight clock positions classify eight parallel towers, one per transport charge $p - q \bmod 8$, rather than eight stages of one tower. What the iteration accumulates is capacity, not algebraic type: each rung adjoins one hyperbolic plane whose ladder pair satisfies the canonical anticommutation relations exactly, the Fock module doubles, and the Witt index, the algebra's count of independent fermionic modes, increases by exactly one. The limit is then the object the physical reading requires: the ground algebra tensored with the CAR algebra of a free fermionic field. Iterated transport is second quantisation, one mode per rung.
+
+The mathematical content of the limit statement requires operator-algebraic care, which it receives here. The connecting embeddings are twisted diagonals $a \mapsto \operatorname{diag}(a, \hat a)$, with $\hat a$ the grade involution; whether the twist can be removed decides whether the limit is a plain tensor product. For even transport charge the ground algebra is central simple, the involution is inner by the Skolem-Noether theorem, and the twist conjugates away rung by rung: the algebraic limit is exactly $\Cl(p,q) \otimes \Mat_{2^\infty}$, and its completed complexification is $\Cl(p,q)_\C \otimes \CAR$. For odd charge the grade involution acts nontrivially on the centre and is outer; the even-charge argument does not apply, and rather than assert the unproved standard expectation we delimit the boundary and pose the odd case precisely.
+
+**setting  (Prior art).** Every ingredient is classical; the assembly and the transport reading are the contributions. The isomorphism $\Cl(p{+}1,q{+}1) \cong \Mat_2(\Cl(p,q))$ is the $(1,1)$-periodicity of the real Clifford classification, due in matrix form to the classical structure theory \cite{Porteous1995, Lounesto2001} and in K-theoretic form to Atiyah, Bott and Shapiro \cite{ABS1964}; \cite{ButlerT1} re-derives it directly from the transport construction, with the ladder pair as explicit matrix units, and that derivation is the one iterated here. UHF algebras and their classification are Glimm's \cite{Glimm1960}; AF algebras and their diagrams are Bratteli's \cite{Bratteli1972}; the CAR algebra, its uniqueness, its Fock representations and its identification with the $2^\infty$ UHF algebra are standard operator algebra \cite{BratteliRobinson1997}. The Chevalley construction realising Clifford algebras on exterior algebras of isotropic subspaces \cite{Chevalley1997} is the mechanism behind the Fock module theorem. The Skolem-Noether theorem, the classical frame for the even-charge innerness \cite{Pierce1982}, is not actually imported: the implementing element is exhibited directly. Morita theory is classical \cite{Lam1999}. The infinite wall sequence that makes the far-side iteration unconditional is proved in the sheaf paper of this series \cite{ButlerT4}; the root paper \cite{ButlerT1} supplies the single step and its minimality. The contributions here are the canonical form of the rigidity, the exact CAR relations at vector level, the Skolem-Noether treatment of the grade twist, and the precise odd-charge boundary.
+
+**setting  (Contribution).** At the standard of \cite{ButlerT1}: complete proofs, each theorem carrying its own hypotheses.
+
+\begin{enumerate}
+\item \textbf{Tower rigidity} (the section ``Tower rigidity: the frozen clock''). $\Cl(p{+}k,q{+}k) \cong \Mat_{2^k}(\Cl(p,q))$ by an isomorphism assembled canonically from the $k$ ladder pairs, with the commuting-copies mechanism made explicit: the base re-embeds as $x \mapsto x\,\omega_1\cdots\omega_k$ against the adjoined planes' volume elements, and the two constructions (nested matrix units, commuting copies) agree. Transport charge is invariant, the clock is frozen, every floor is Morita equivalent to the ground floor, and no type-C obstruction ever arises by transport from a simple ground algebra.
+\item \textbf{Eight towers} (the section ``Tower rigidity: the frozen clock''). The mod-8 residues classify parallel towers; a signature-change wall is a meeting of two towers whose charges differ by two, and the shadow-wall phenomenon of \cite{ButlerT4} is re-read as tower change.
+\item \textbf{One qubit per rung} (the section ``One qubit per rung: Fock modules and capacity''). The adjoined null pairs satisfy the CAR exactly as vectors; the Fock module theorem: the algebra of $k$ adjoined planes acts irreducibly on the exterior algebra of the span of the creation directions, of dimension $2^k$, doubling per rung; and Witt index is quantum capacity: the maximal number of independent fermionic modes an algebra of the tower hosts is exactly its Witt index, which increases by one per rung.
+\item \textbf{The CAR limit} (the section ``The CAR limit''). For $p - q$ even: the grade involution is inner (Skolem-Noether), the twisted diagonals conjugate to untwisted ones stage by stage, the algebraic direct limit of the tower is $\Cl(p,q) \otimes \Mat_{2^\infty}$ canonically, and the completed complexified limit is $\Cl(p,q)_\C \otimes \CAR$, the ground algebra tensored with a free fermionic field algebra. For $p - q$ odd the twist is outer on the centre and the question is posed with the obstruction identified.
+\item \textbf{What the dynamics demands} (the section ``Physical reading, and scope''). Imported from \cite{ButlerT4} and \cite{ButlerT1} and assembled: on the physical closure nothing divides by zero at floor one and no further ascent is dynamically forced; beyond the shadow walls the demand is unconditional and infinite, one rung per wall. The scope section separates algebra-level theorems from physical readings.
+\end{enumerate}
+
+## Setup: the tower
+
+
+
+**setting  (The single step, recalled).** Throughout, $\Cl(p,q)$ is the real Clifford algebra of the nondegenerate form of signature $(p,q)$ on $\R^n$, $n = p + q$, with mixed signature $p, q \geq 1$ where null vectors are in question; notation follows \cite{ButlerT1}. Rule 1, the Witt completion, adjoins a hyperbolic plane $H = \operatorname{span}\{e, f\}$ with $e^2 = 1$, $f^2 = -1$, $e \cdot f = 0$, equivalently a null pair $v = \tfrac12(e+f)$, $w = \tfrac12(e-f)$ with $v^2 = w^2 = 0$ and $v \cdot w = \tfrac12$. The ladder pair $(v, w)$ satisfies
+\begin{equation}
+vw + wv = 1, \qquad v^2 = w^2 = 0,
+\end{equation}
+and generates, with the base, the completed algebra $\Cl(p{+}1, q{+}1)$. The single step is imported once, with its matrix-unit labelling fixed for the whole paper:
+
+
+
+**Definition 2 (The tower).** The \emph{tower} over $\Cl(p,q)$ is the chain of algebras $T_k := \Cl(p{+}k, q{+}k)$, $k \geq 0$, on the spaces $\R^{p,q} \perp H_1 \perp \cdots \perp H_k$ with $H_j = \operatorname{span}\{e_j, f_j\}$ orthogonal hyperbolic planes, together with the natural unital embeddings $\iota_k : T_k \hookrightarrow T_{k+1}$ induced by the inclusion of quadratic spaces. Write $v_j, w_j$ for the $j$-th null pair, $\omega_j := e_j f_j$ for the $j$-th plane's volume element, and $d := p - q \bmod 8$ for the \emph{transport charge}.
+
+**Remark  (Why this tower).** Rule 1 is the only rule that iterates: by \cite[Prop.~7.4]{ButlerT1} the fusion rule occurs at most once along any transport history and a pure Rule-1 lineage stays fusion-free, so the minimal repeated completion is exactly Definition \claimref{obj.tower.tower}. Minimality and uniqueness at each step are \cite[Thm.~4.13]{ButlerT1}, so the tower is the canonical iterated repair, not one choice among many.
+
+## Tower rigidity: the frozen clock
+
+
+
+**setting  (Tower rigidity: the frozen clock).** The central construction of the section is a pair of commuting subalgebras that between them generate each floor. The construction is classical in spirit; the form given here keys it to the transport data (the planes and their volume elements), which is what makes the iteration and the limit computation of the section ``The CAR limit'' exact. a figure of the original displays the object the section is about.
+
+
+
+**Theorem 3 (Volume elements of the planes).** Let $\omega_j = e_j f_j$. Then $\omega_j^2 = 1$; $\omega_j$ anticommutes with $e_j$ and $f_j$; $\omega_j$ commutes with $e_i, f_i$ for $i \neq j$ and with every ground generator; and the $\omega_j$ commute pairwise. Hence $\Omega_k := \omega_1 \cdots \omega_k$ satisfies $\Omega_k^2 = 1$, commutes with all ground generators, and anticommutes with each $e_j, f_j$, $j \leq k$.
+
+*Proof.* $\omega_j^2 = e_j f_j e_j f_j = -e_j^2 f_j^2 = -(1)(-1) = 1$, using $f_j e_j = -e_j f_j$ (\claimref{std-algebra.orthogonal-anticommute}). $\omega_j e_j = e_j f_j e_j = -e_j^2 f_j = -f_j$ while $e_j \omega_j = e_j e_j f_j = f_j$: they anticommute, and likewise for $f_j$. A ground generator or a generator of another plane anticommutes with both letters of $\omega_j$, hence commutes with their product. Pairwise commutation of the $\omega_j$ is the same parity count. The $\Omega_k$ statements follow: against $e_j$, exactly one factor ($\omega_j$) anticommutes.
+
+
+
+
+**Theorem 4 (Commuting copies).** Inside $T_k$, let $B_k$ be the subalgebra generated by the $2k$ plane generators $e_1, f_1, \dots, e_k, f_k$, and let $A_k$ be the subalgebra generated by the twisted base generators $x^{(k)} := x\,\omega_1 \omega_2 \cdots \omega_k$ for $x$ among the ground generators. Then: $B_k \cong \Cl(k,k) \cong \Mat_{2^k}(\R)$; $A_k \cong \Cl(p,q)$ via $x \mapsto x^{(k)}$ (the twisted generators satisfy the ground Clifford relations); $A_k$ and $B_k$ commute elementwise; and multiplication $A_k \otimes B_k \to T_k$ is an isomorphism of algebras,
+\[
+\Cl(p{+}k, q{+}k) \;\cong\; \Cl(p,q) \otimes \Mat_{2^k}(\R) \;=\; \Mat_{2^k}(\Cl(p,q)).
+\]
+The isomorphism is canonical given the ordered planes, and compatible with the tower embeddings up to the twist tracked in the section ``The CAR limit''.
+
+*Proof.* \emph{$B_k \cong \Cl(k,k)$.} The $2k$ generators are orthonormal for the split form ($e_j^2 = 1$, $f_j^2 = -1$, pairwise orthogonal), so the universal property (\claimref{std-algebra.existence-uniqueness}) gives a surjection $\Cl(k,k) \to B_k$; it is injective because the $2^{2k}$ blades in the letters $e_1, f_1, \dots, e_k, f_k$ are part of the blade basis of $T_k$ (\claimref{std-algebra.blade-basis}), hence independent. \emph{$\Cl(k,k) \cong \Mat_{2^k}(\R)$} by induction using the series' own results: $\Cl(0,0) = \R$, and $\Cl(j{+}1,j{+}1) \cong \Mat_2(\Cl(j,j))$ is Fact \claimref{transport.rule-1-morita-trivial} with base $\Cl(j,j)$, the $(j{+}1)$-st plane carrying the outer index, so $\Cl(k,k) \cong \Mat_2(\Mat_2(\cdots)) = \Mat_{2^k}(\R)$.
+
+\emph{$A_k \cong \Cl(p,q)$.} By Lemma \claimref{tower.volume-elements-planes}, $\Omega_k$ commutes with ground generators and $\Omega_k^2 = 1$, so for ground generators $x, y$:
+\[
+x^{(k)} y^{(k)} + y^{(k)} x^{(k)} = x \Omega_k y \Omega_k + y \Omega_k x \Omega_k = (xy + yx)\,\Omega_k^2 = 2B(x,y) .
+\]
+The universal property gives an algebra map $\Cl(p,q) \to A_k$, $x \mapsto x^{(k)}$; it sends the base blade $x_I$ to $x_I\,\Omega_k^{|I| \bmod 2}$, and these images are distinct nonzero blades (times a fixed invertible even element), hence independent: the map is an isomorphism onto $A_k$.
+
+\emph{Commutation.} For a ground generator $x$ and any plane generator $g \in \{e_j, f_j\}$: $x$ anticommutes with $g$, and $\Omega_k$ anticommutes with $g$ (Lemma \claimref{tower.volume-elements-planes}), so $x^{(k)} g = x \Omega_k g = -x g \Omega_k = g x \Omega_k = g x^{(k)}$. Generators commute, hence the subalgebras do.
+
+\emph{Multiplication is an isomorphism.} Commutation makes $A_k \otimes B_k \to T_k$ an algebra map. It is surjective: its image contains every plane generator, contains $\Omega_k \in B_k$, and therefore contains each ground generator $x = x^{(k)} \Omega_k$. Source and target both have dimension $2^n \cdot 2^{2k} = 2^{n + 2k}$, so a surjective linear map is an isomorphism. Finally $\Cl(p,q) \otimes \Mat_{2^k}(\R) = \Mat_{2^k}(\Cl(p,q))$. Canonicity: the construction used only the ordered orthogonal planes and their volume elements, no basis choices in the ground algebra. The compatibility with $\iota_k$ is Lemma \claimref{tower.grade-twist-when-it-inner} below: under these identifications $\iota_k$ is the twisted diagonal, the twist being conjugation by $\Omega$-data that the section ``The CAR limit'' tracks.
+
+
+**setting  (Tower rigidity: the frozen clock).** The structural properties of matrix amplification, used repeatedly below, are elementary and are proved here once; the one genuinely imported piece of Morita theory is stated as a fact.
+
+
+
+**Theorem 5 (Matrix amplification: structural properties).** Let $A$ be a unital real algebra and $m \geq 1$. Then: (i) $Z(\Mat_m(A)) = Z(A)\cdot 1_m$; (ii) if $A$ is simple, so is $\Mat_m(A)$; (iii) $\Mat_m(\Mat_r(D)) \cong \Mat_{mr}(D)$ for any unital $D$; (iv) $\Mat_m(A_1 \oplus A_2) \cong \Mat_m(A_1) \oplus \Mat_m(A_2)$.
+
+*Proof.* Parts (i) and (ii) are \claimref{std-algebra.morita-amplification}(i) and (ii); the computation runs as follows. (i) Let $z = (z_{ij})$ be central. The entries of $z E_{kl} = E_{kl} z$ are $(z E_{kl})_{ij} = z_{ik}\,\delta_{lj}$ and $(E_{kl} z)_{ij} = \delta_{ik}\, z_{lj}$; equality for all $i, j, k, l$ forces $z_{ik} = 0$ for $i \neq k$ and $z_{kk} = z_{ll}$, so $z = a \cdot 1_m$ with $a := z_{11}$, and commuting with $b \cdot 1_m$ for all $b \in A$ forces $a \in Z(A)$. The converse inclusion is clear. (ii) A nonzero two-sided ideal $I$ contains some $x$ with an entry $x_{kl} = a \neq 0$; then $E_{ik}\, x\, E_{lj} = a E_{ij} \in I$ for all $i, j$, so $I \supseteq \Mat_m(AaA) = \Mat_m(A)$, since $AaA = A$ by simplicity. (iii) and (iv) are regroupings of indices and entrywise splittings.
+
+
+
+
+**Fact (imported) 6 (Morita equivalence of an algebra and its amplification).** For any unital ring $A$ and $m \geq 1$, the column module $A^m$ is a $\Mat_m(A)$-$A$-bimodule implementing an equivalence of module categories: $A$ and $\Mat_m(A)$ are Morita equivalent. \emph{Provenance:} classical Morita theory, \cite[\S\S 17--18]{Lam1999}.
+
+*Provenance:* T. Y. Lam, Lectures on Modules and Rings, Graduate Texts in Mathematics 189, Springer, New York (1999)., \S\S 17--18.
+
+
+
+**Theorem 7 (Rigidity; the clock is frozen).** Along the tower: the transport charge $d = p - q \bmod 8$ is constant; the division-ring type, simplicity class, and centre of every floor equal those of the ground floor; every floor is Morita equivalent to the ground floor; and the obstruction taxonomy of \cite{ButlerT1} is floor-independent: in particular a type-C obstruction (a central idempotent) never arises by transport from a simple ground algebra, at any height. The physical tower is $\Cl(1{+}k, 3{+}k) \cong \Mat_{2^{k+1}}(\HH)$, frozen at clock position $6$. Bott periodicity manifests as immediate freeze, not eventual return.
+
+*Proof.* The charge is $(p{+}k) - (q{+}k) = p - q$, constant. All structural claims then follow from Theorem \claimref{tower.commuting-copies} and Lemma \claimref{tower.matrix-amplification-structural-properties}: centres agree by (i); if $A \cong \Mat_r(D)$ then $\Mat_{2^k}(A) \cong \Mat_{2^k r}(D)$ by (iii), the same division ring; simplicity propagates by (ii), and the block structure of a semisimple ground floor by (iv); and every floor is Morita equivalent to the ground floor by Fact \claimref{tower.morita-equivalence-algebra-amplification}. The taxonomy statement: by Fact \claimref{transport.existence-classification-type-c}, type C occurs exactly when the centre is $\R \oplus \R$; the centre is floor-independent by Lemma \claimref{tower.matrix-amplification-structural-properties}(i), so a simple ground floor (centre $\R$ or $\C$) propagates: no floor of its tower ever hosts a type-C obstruction. For the physical case, $\Cl(1,3) \cong \Mat_2(\HH)$ \cite{Porteous1995} (\claimref{std-algebra.sta-matrix}), so floor $k$ is $\Mat_{2^k}(\Mat_2(\HH)) = \Mat_{2^{k+1}}(\HH)$, and $1 - 3 \equiv 6 \pmod 8$.
+
+
+**Remark  (Eight towers; signature change is tower change).** The eight clock positions classify not stages of one tower but eight parallel towers, one per transport charge. The two sides of a tame signature-change wall carry charges $d$ and $d - 2$ \cite[\S 7.2]{ButlerT4}, and the shadow wall, where the two competing completions conflict, is where two towers of different charge meet. The wall sequence of \cite[Cor.~5.5]{ButlerT4} is a sequence of such meetings between neighbouring towers, displaced rung by rung away from the physical region.
+
+## One qubit per rung: Fock modules and capacity
+
+
+
+
+
+**Theorem 8 (The ladder pairs satisfy the CAR, as vectors).** In $T_k$, the adjoined null pairs satisfy, exactly and at the level of vectors,
+\[
+v_i v_j + v_j v_i = 0, \qquad w_i w_j + w_j w_i = 0, \qquad v_i w_j + w_j v_i = \delta_{ij}\,,
+\]
+for all $1 \leq i, j \leq k$: a system of $k$ fermionic modes, with no normal-ordering, no completion, and no representation chosen. Adding a rung adds one mode and touches none of the existing relations.
+
+*Proof.* Every displayed relation is an instance of the single Clifford relation $\alpha\beta + \beta\alpha = 2\langle\alpha, \beta\rangle$ on vectors (\claimref{std-algebra.vector-squares}), as for any Witt basis (\claimref{std-algebra.witt-basis-car}): the $v$'s are pairwise orthogonal null vectors ($\langle v_i, v_j \rangle = 0$ for $i \neq j$ since the planes are orthogonal, and $v_i^2 = 0$ since $v_i$ is null), likewise the $w$'s, and $\langle v_i, w_j \rangle = \tfrac12\delta_{ij}$ by the hyperbolic normalisation within each plane and orthogonality across planes. A new rung's vectors are orthogonal to all previous generators, so the old relations are untouched.
+
+
+
+
+**Theorem 9 (Fock module; one qubit per rung).** Let $W_k := \operatorname{span}\{v_1, \dots, v_k\}$, a maximal isotropic subspace of $H_1 \perp \cdots \perp H_k$. The Chevalley action ($v_j$ by wedge, $w_j$ by contraction against the pairing) makes the exterior algebra $\Lambda^\bullet W_k$, of dimension $2^k$, an irreducible module over $B_k \cong \Mat_{2^k}(\R)$, with the vacuum $1 \in \Lambda^0$ annihilated by every $w_j$ and cyclic for the $v_j$. Each rung doubles the module: $\Lambda^\bullet W_{k+1} = \Lambda^\bullet W_k \otimes \Lambda^\bullet \R v_{k+1}$, one qubit per rung.
+
+*Proof.* \emph{The action.} $W_k$ is isotropic (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}) of dimension $k$, maximal since the split form $H_1 \perp \cdots \perp H_k$ has Witt index $k$ (\claimref{std-algebra.witt-decomposition}). Define, for $\xi \in \Lambda^\bullet W_k$,
+\[
+c(v_j)\,\xi = v_j \wedge \xi, \qquad c(w_j)\,\xi = \iota_{\varphi_j}\,\xi, \qquad \varphi_j := 2\langle w_j, \cdot\,\rangle|_{W_k} \in W_k^* ,
+\]
+so $\varphi_j(v_i) = \delta_{ij}$, and extend linearly to arbitrary vectors $\alpha = \sum_j (a_j v_j + b_j w_j)$.
+
+\emph{The three anticommutator families,} elementary and proved outright. Wedge operators square to zero and pairwise anticommute, since $v \wedge v' = -v' \wedge v$ and $v \wedge v = 0$. The contraction $\iota_\varphi$ acts on monomials by
+\[
+\iota_\varphi(u_1 \wedge \cdots \wedge u_s) \;=\; \sum_{i=1}^{s} (-1)^{i-1}\, \varphi(u_i)\; u_1 \wedge \cdots \widehat{u_i} \cdots \wedge u_s .
+\]
+Two contractions anticommute: in $\iota_\varphi \iota_\psi + \iota_\psi \iota_\varphi$ applied to a monomial, the term deleting $u_j$ then $u_i$ (with $i < j$) in the first composite carries the sign
+\[
+(-1)^{j-1}(-1)^{i-1},
+\qquad \text{against} \qquad
+(-1)^{i-1}(-1)^{j-2}
+\]
+for the matching term of the second composite, which deletes $u_i$ then $u_j$; the shift by one arises because removing $u_i$ first moves $u_j$ up a slot, and the opposite signs cancel the terms pairwise. The mixed anticommutator: the displayed expansion gives $\iota_\varphi(v \wedge \xi) = \varphi(v)\,\xi - v \wedge \iota_\varphi(\xi)$ (the $i = 1$ term, then the rest), so $\{v \wedge \cdot\,,\, \iota_\varphi\} = \varphi(v)\,\mathrm{id}$.
+
+\emph{The Clifford relation, and the isomorphism.} Combining the three families,
+\[
+c(\alpha)^2 = \Bigl(\sum_j b_j \varphi_j\Bigr)\Bigl(\sum_i a_i v_i\Bigr)\,\mathrm{id} = \sum_j a_j b_j\,\mathrm{id} = Q(\alpha)\,\mathrm{id},
+\]
+since $Q(\alpha) = \sum_j 2 a_j b_j \langle v_j, w_j\rangle = \sum_j a_j b_j$. By the universal property (\claimref{std-algebra.existence-uniqueness}) $c$ extends to an algebra map $B_k \to \End(\Lambda^\bullet W_k)$. It is unital and nonzero with simple source ($B_k \cong \Mat_{2^k}(\R)$, Theorem \claimref{tower.commuting-copies}), hence injective; source and target both have dimension $2^{2k} = (2^k)^2$, so it is an isomorphism, and the module is irreducible.
+
+\emph{Vacuum, cyclicity, doubling.} The vacuum $1 \in \Lambda^0$ is sent to zero by every contraction and generates everything under wedges: $v_{i_1} \wedge \cdots \wedge v_{i_r} = c(v_{i_1}) \cdots c(v_{i_r})\,1$. The doubling statement is the exterior algebra of a direct sum.
+
+
+
+
+**Theorem 10 (Witt index is quantum capacity).** For any nondegenerate real quadratic space $(V, Q)$, the maximal number of pairwise-anticommuting fermionic mode pairs realisable by \emph{vectors} of $\Cl(V, Q)$ (families $(a_i, b_i)$ of vectors satisfying the displayed CAR of Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}) is exactly the Witt index $\min(p,q)$ of $Q$. Along the tower the Witt index is $\min(p,q) + k$: each rung raises the algebra's mode capacity by exactly one, and by no more.
+
+*Proof.* \emph{Upper bound.} Let $(a_i, b_i)_{i \leq m}$ be vectors satisfying the CAR. Reading the relations through the Clifford relation on vectors (\claimref{std-algebra.vector-squares}): $\langle a_i, a_j \rangle = 0$ for all $i, j$ (including $i = j$), and $\langle a_i, b_j \rangle = \tfrac12 \delta_{ij}$. The span of the $a_i$ is therefore totally isotropic, and the $a_i$ are independent: a vanishing combination $\sum c_i a_i = 0$ pairs against $b_j$ to give $c_j/2 = 0$. So $m \leq$ the maximal totally isotropic dimension, which for a nondegenerate real form of signature $(p,q)$ is $\min(p,q)$: diagonalise, $V = P \perp N$ with $P$ positive definite of dimension $p$ and $N$ negative definite of dimension $q$; a totally isotropic $U$ meets $P$ trivially (a nonzero $v \in U \cap P$ would have $Q(v,v) > 0$ and $Q(v,v) = 0$ at once), so the projection $U \to N$ along $P$ is injective and $\dim U \leq q$; symmetrically $\dim U \leq p$; and $\min(p,q)$ is attained by the null spans of $\min(p,q)$ hyperbolic pairs (the classical bound, cf.\ \cite[Ch.~I]{Lam2005}).
+
+\emph{Attainment.} Split off $\min(p,q)$ orthogonal hyperbolic planes from $(V, Q)$ (Witt decomposition, \claimref{std-algebra.witt-decomposition}) and take their normalised null pairs, as in Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}. Along the tower, the form of signature $(p{+}k, q{+}k)$ has Witt index $\min(p,q) + k$, and each rung contributes its own plane to the attaining family.
+
+
+**Remark  (What the capacity theorem forbids).** The theorem is a prohibition as much as a count: no choice of vectors extracts $\min(p,q) + k + 1$ fermionic modes from floor $k$. Capacity is quantified by the Witt index, the same quantity that the transport rules increment; the reading of the increment as ``one qubit per rung'' is therefore an exact identity, not an analogy. (Mode systems built from non-vector elements are a different question, deliberately outside the theorem's hypotheses; at vector level the count is sharp.)
+
+## The CAR limit
+
+
+
+
+
+**Theorem 11 (The grade twist, and when it is inner).** Under the isomorphism of Theorem \claimref{tower.commuting-copies}, the tower embedding $\iota_k$ becomes the twisted diagonal $a \mapsto \operatorname{diag}(a, \hat a)$ of \cite[Thm.~7.1]{ButlerT1} (in the corner identification of Fact \claimref{transport.rule-1-morita-trivial}; in the twisted coordinates with $E_{11} = vw$ it reads $\operatorname{diag}(\hat a, a)$). If $p - q$ is even, $\Cl(p,q)$ is central simple over $\R$, the grade involution is an $\R$-algebra automorphism fixing the centre, and it is inner, implemented by the ground volume element $u$ (which anticommutes with vectors precisely when $n$ is even): $\hat a = u a u^{-1}$. Consequently $\operatorname{diag}(a, \hat a) = U \operatorname{diag}(a, a)\, U^{-1}$ with $U = \operatorname{diag}(1, u)$: the twist conjugates away at the level of the single step. (How the correction transports through the identifications of Theorem \claimref{tower.commuting-copies}, which is what the limit theorem needs, is Lemma \claimref{tower.compatibility-connecting-maps-transported}; the stagewise corrector is \emph{not} simply this $U$.) If $p - q$ is odd the grade involution acts nontrivially on the centre ($\R \oplus \R$ or $\C$) and is outer; no inner correction exists.
+
+*Proof.* The matrix form of $\iota_k$ is Fact \claimref{transport.rule-1-morita-trivial} applied with base $T_k$: the new plane's ladder pair supplies the matrix units, and the base embeds as $a \mapsto \operatorname{diag}(a, \hat a)$, the grade involution taken in $T_k$. Note the parity is stable: $\dim$ of floor $k$ is $n + 2k$, of the same parity as $n$, so ``even charge'' is a property of the whole tower.
+
+Even charge: $n$ even makes $\Cl(p,q)$ (and every floor) central simple over $\R$ (its centre is $\R$, \claimref{primer.centre}) \cite{Porteous1995, Lounesto2001}. The grade involution is an $\R$-algebra automorphism fixing the centre $\R$ pointwise, so its innerness is an instance of the Skolem-Noether theorem \cite{Pierce1982}; nothing need be imported, because the implementing element is exhibited directly: the volume element $u = x_1 \cdots x_n$ of an orthogonal generator frame satisfies $u x = (-1)^{n-1} x u = -xu$ for each generator $x$ (\claimref{std-algebra.pseudoscalar-commutation}) (move $x$ through $n$ letters, one coincidence), and $u^2 = \pm 1$ is invertible; so $\Ad_u(x) = u x u^{-1} = -x = \hat x$ on generators, and two automorphisms agreeing on generators agree. The displayed conjugation is then the block computation $U \operatorname{diag}(a,a)\, U^{-1} = \operatorname{diag}(a, u a u^{-1})$ with $U = \operatorname{diag}(1, u)$, invertible in $\Mat_2(T_k)$.
+
+Odd charge: the centre of each floor is $\R \oplus \R$ ($d \equiv 1 \bmod 4$) or $\C$ ($d \equiv 3 \bmod 4$), generated by $1$ and the volume element $\omega$, which is odd (its length $n + 2k$ is odd) and is therefore sent by the grade involution to $-\omega$: the involution exchanges the two central idempotents $\tfrac12(1 \pm \omega)$, respectively conjugates the central complex structure. An inner automorphism fixes the centre pointwise; the grade involution does not, so it is outer, and no unitary correction of the diagonal exists.
+
+
+**setting  (The CAR limit).** The limit theorem compares the tower not with itself but with its image under the identifications $\varphi_k$ of Theorem \claimref{tower.commuting-copies}, and the corrector must be computed \emph{after} that transport. The next lemma does so; the answer differs from the single-step corrector.
+
+
+
+**Theorem 12 (Compatibility: the connecting maps, transported).** Let $p - q$ be even, $A := \Cl(p,q)$, and let $\varphi_k : T_k \to A \otimes \Mat_{2^k}(\R)$ be the identifications of Theorem \claimref{tower.commuting-copies}, with every plane's matrix units labelled as in Fact \claimref{transport.rule-1-morita-trivial} and the planes nested in order, the $(k{+}1)$-st plane carrying the outer index of $\Mat_{2^{k+1}} = \Mat_2(\Mat_{2^k})$. Write $\theta_k(z) := z \otimes 1_{2 \times 2}$ for block doubling in the outer index, $u_A \in A$ for the ground volume element, and $\overline\Omega_k \in \Mat_{2^k}(\R)$ for the image of $\Omega_k = \omega_1 \cdots \omega_k$. Then the transported connecting map $\psi_k := \varphi_{k+1} \circ \iota_k \circ \varphi_k^{-1}$ is
+\[
+\psi_k \;=\; \Ad(V_k) \circ \theta_k, \qquad
+V_k \;:=\; \begin{pmatrix} u_A \otimes 1_{2^k} & 0 \\ 0 & 1_A \otimes \overline\Omega_k \end{pmatrix},
+\]
+with $V_k$ invertible ($u_A^2 = \pm 1$, $\Omega_k^2 = 1$). In this labelling and for $n = p + q \ge 1$, the corrector is \emph{not} the transported single-step corrector $\operatorname{diag}(1, u_{T_k})$ of Lemma \claimref{tower.grade-twist-when-it-inner}: transporting through $\varphi$ splits the correction across the two tensor legs, the ground volume acting in the first corner and the planes' volume in the second. The labelling convention of Fact \claimref{transport.rule-1-morita-trivial} matters: with $vw$ and $wv$ exchanged for the new plane, the transported single-step corrector $\operatorname{diag}(1, u_{T_k})$ is the one that works and $V_k$ is not; for $n = 0$ the two coincide.
+
+*Proof.* Both sides are unital algebra maps into $A \otimes \Mat_{2^{k+1}}$, so it suffices to check them on generators of $A \otimes \Mat_{2^k}$: the elements $x \otimes 1$ for ground generators $x$, and $1 \otimes b$ for $b$ the image of a plane generator $g \in \{e_j, f_j\}$, $j \leq k$.
+
+\emph{Ground generators.} $\varphi_k^{-1}(x \otimes 1) = x^{(k)} = x\,\Omega_k$ (the twisted generator of \claimref{tower.commuting-copies}). In $T_{k+1}$, $\Omega_{k+1} = \Omega_k\, \omega_{k+1}$ and $\omega_{k+1}^2 = 1$ give $x^{(k)} = x^{(k+1)}\, \omega_{k+1}$. Under $\varphi_{k+1}$, $x^{(k+1)} \mapsto x \otimes 1_{2^{k+1}}$ by definition, and $\omega_{k+1} \mapsto 1_A \otimes \operatorname{diag}(-1_{2^k}, +1_{2^k})$ by Fact \claimref{transport.rule-1-morita-trivial} for the outer plane. Hence
+\[
+\psi_k(x \otimes 1) \;=\; x \otimes \operatorname{diag}(-1_{2^k},\, +1_{2^k}).
+\]
+On the other side, $\theta_k(x \otimes 1) = x \otimes 1_{2^{k+1}}$, and conjugating cornerwise by $V_k$: the first corner gives $(u_A \otimes 1)(x \otimes 1)(u_A \otimes 1)^{-1} = u_A x u_A^{-1} \otimes 1 = -x \otimes 1$ (Lemma \claimref{tower.grade-twist-when-it-inner}, $n$ even), the second gives $(1 \otimes \overline\Omega_k)(x \otimes 1)(1 \otimes \overline\Omega_k)^{-1} = x \otimes 1$. The two sides agree.
+
+\emph{Plane generators.} $\varphi_k^{-1}(1 \otimes b) = g$ and $\iota_k(g) = g \in B_{k+1}$. The nesting embeds $B_k$ into $\Mat_2(B_k)$ as the twisted diagonal of Fact \claimref{transport.rule-1-morita-trivial} with base $B_k = \Cl(k,k)$: $g \mapsto \operatorname{diag}(g, \hat g)$, with $\hat{\cdot}$ the grade involution of $B_k$, which by Lemma \claimref{tower.volume-elements-planes} is implemented by $\Omega_k$ (it anticommutes with every plane generator and squares to one). Under $\varphi_{k+1}$ this reads
+\[
+\psi_k(1 \otimes b) \;=\; 1 \otimes \operatorname{diag}\bigl(b,\ \overline\Omega_k\, b\, \overline\Omega_k^{-1}\bigr),
+\]
+and conjugating $\theta_k(1 \otimes b) = 1 \otimes \operatorname{diag}(b, b)$ cornerwise by $V_k$ gives exactly the same: the first corner commutes with $u_A \otimes 1$, the second is conjugated by $\overline\Omega_k$. The two sides agree.
+
+Two unital algebra maps agreeing on a generating set agree, and $V_k$ is invertible as stated. One full stage of this identity, with the corrector exactly as displayed, is verified in exact arithmetic over the ground algebra $\Cl(1,1)$ in the script (the section ``Machine verification'').
+
+
+
+
+**Theorem 13 (The algebraic limit, even charge).** Let $p - q$ be even. The algebraic direct limit of the tower $(T_k, \iota_k)$ is canonically isomorphic to
+\[
+\varinjlim T_k \;\cong\; \Cl(p,q) \otimes \Mat_{2^\infty}, \qquad \Mat_{2^\infty} := \varinjlim \Mat_{2^k}(\R) \ \ (m \mapsto \operatorname{diag}(m,m)),
+\]
+the ground algebra tensored with the algebraic $2^\infty$ matrix algebra. Equivalently, $\varinjlim T_k$ is the Clifford algebra of the infinite-dimensional quadratic space $\R^{p,q} \perp H_1 \perp H_2 \perp \cdots$.
+
+*Proof.* Write $A := \Cl(p,q)$, let $\varphi_k : T_k \to A \otimes \Mat_{2^k}$ be the isomorphisms of Theorem \claimref{tower.commuting-copies}, and transport the connecting maps: $\psi_k := \varphi_{k+1} \circ \iota_k \circ \varphi_k^{-1}$. By Lemma \claimref{tower.compatibility-connecting-maps-transported},
+\[
+\psi_k \;=\; \Ad(V_k) \circ \theta_k, \qquad \theta_k(z) := z \otimes 1_{\,2 \times 2}\ \text{(block doubling)},
+\]
+with $V_k$ the split corrector displayed there. The comparison system is $(A \otimes \Mat_{2^k},\, \theta_k)$, whose limit is $A \otimes \Mat_{2^\infty}$ by definition. Intertwine the two systems stagewise: set $W_0 := 1$ and recursively $W_{k+1} := \theta_k(W_k)\, V_k^{-1}$, each $W_k$ an invertible element of $A \otimes \Mat_{2^k}$, and define $\lambda_k := \Ad(W_k)$. Then
+\[
+\lambda_{k+1} \circ \psi_k = \Ad(W_{k+1}) \circ \Ad(V_k) \circ \theta_k = \Ad(\theta_k(W_k)) \circ \theta_k = \theta_k \circ \Ad(W_k) = \theta_k \circ \lambda_k ,
+\]
+using $\theta_k \circ \Ad(W_k) = \Ad(\theta_k(W_k)) \circ \theta_k$ (a unital homomorphism carries conjugation to conjugation by the image). The squares commute exactly, so the $\lambda_k$ assemble into an isomorphism of the direct limits: $\varinjlim T_k \cong A \otimes \Mat_{2^\infty}$.
+
+For the second description: the algebraic direct limit of Clifford algebras of a nested chain of quadratic spaces along the induced embeddings is the Clifford algebra of the union (both sides satisfy the same universal property for the union space, and every element of either side lies at a finite stage). Canonicity: the $\varphi_k$ and the correcting elements $W_k$ are built from the ordered planes and volume elements only.
+
+
+**setting  (The CAR limit).** Completing in a C*-norm presupposes a *-structure, and a proof must state which one is meant; the tower carries a canonical one, determined by its frames.
+
+
+
+**Theorem 14 (The *-structure of the tower, and its C*-norms).** Fix the tower's frames: an orthogonal ground frame $x_1, \dots, x_n$ diagonalising $Q$, and the plane frames $e_j, f_j$. On each complexified floor $T_k^{\,\C}$ there is a unique conjugate-linear antiautomorphism $*$ with $x^* = x$ for every frame generator with $x^2 = 1$ and $x^* = -x$ for every frame generator with $x^2 = -1$. Under it: every frame generator, every blade in the frame, and every ground or plane volume element is unitary ($z^* z = 1$); the ladder pairs are mutually adjoint, $v_j^* = w_j$; the connecting maps $\iota_k$, the identifications $\varphi_k$ of Theorem \claimref{tower.commuting-copies}, the block doublings $\theta_k$, and the correctors $V_k$ and $W_k$ of Lemma \claimref{tower.compatibility-connecting-maps-transported} and Theorem \claimref{tower.algebraic-limit-even-charge} are all compatible with $*$ (the maps are *-homomorphisms, the correctors unitary). If moreover $p - q$ is even, each $T_k^{\,\C}$ is *-isomorphic to $\Mat_{2^{m/2}}(\C)$, $m := n + 2k$, with $*$ the conjugate transpose; consequently each floor carries a unique C*-norm, every unital *-monomorphism between floors is isometric, and the increasing union $\bigcup_k T_k^{\,\C}$ carries a unique C*-norm.
+
+*Proof.* \emph{Existence and uniqueness.} Renormalise the $m$ frame generators of floor $k$ to $y_i := x_i$ when $x_i^2 = 1$ and $y_i := i\,x_i$ when $x_i^2 = -1$, so that $y_i^2 = 1$ and the $y_i$ pairwise anticommute. Reversal, the unique real antiautomorphism of a Clifford algebra fixing its generating vectors (the universal property applied to the opposite algebra; \claimref{std-algebra.involution-properties}), extends conjugate-linearly to $T_k^{\,\C}$; call the extension $*$. It is conjugate-linear and antimultiplicative by construction, fixes each $y_i$, and on the original generators unwinds to exactly the displayed values: for $x^2 = -1$, $x = -i\,y$ gives $x^* = \overline{(-i)}\, y^* = i\,y = -x$. Uniqueness holds because a conjugate-linear antiautomorphism is determined by its values on the generators.
+
+\emph{Unitarity and adjoint pairs.} $y_i^* y_i = y_i^2 = 1$, and each original generator satisfies $x^* x = 1$ in both cases ($x^2 = 1$ gives $x^*x = x^2 = 1$; $x^2 = -1$ gives $x^*x = -x^2 = 1$). A product of unitaries is unitary by telescoping, $(z_1 \cdots z_s)^* (z_1 \cdots z_s) = z_s^* \cdots z_1^* z_1 \cdots z_s = 1$; blades, the ground volume $u_A$, the plane volumes $\omega_j$ and $\Omega_k$, hence the corners of $V_k$ (\claimref{tower.compatibility-connecting-maps-transported}), hence $V_k$ and recursively $W_k$ (\claimref{tower.algebraic-limit-even-charge}), are such products or diagonals of them. The ladder pairs: $v_j^* = \tfrac12(e_j + f_j)^* = \tfrac12(e_j - f_j) = w_j$. The maps: $\iota_k$ and $\theta_k$ send frame generators to frame generators or to $z \otimes 1$, so they intertwine the $*$'s; for $\varphi_k$ (\claimref{tower.commuting-copies}), equip $A \otimes \Mat_{2^k}(\C)$ with the tensor $*$ (the ground $*$ on $A$, conjugate transpose on matrices) and check generators: $(x\,\Omega_k)^* = \Omega_k^*\, x^* = x^* \Omega_k$ since each $\omega_j^* = f_j^* e_j^* = (-f_j)(e_j) = e_j f_j = \omega_j$ and $\Omega_k$ commutes with ground generators, matching $(x \otimes 1)^* = x^* \otimes 1$; and the matrix units of Fact \claimref{transport.rule-1-morita-trivial} satisfy $E_{12}^* = v^* = w = E_{21}$ and $E_{11}^* = (vw)^* = w^* v^* = vw = E_{11}$, matching the conjugate transpose, nested stage by stage.
+
+\emph{The even case is a matrix *-algebra.} Let $m$ be even and represent on $(\C^2)^{\otimes m/2}$ by the tensor-Pauli assignment
+\[
+Y_{2l-1} := \sigma_z^{\otimes (l-1)} \otimes \sigma_x \otimes 1^{\otimes (m/2 - l)}, \qquad
+Y_{2l} := \sigma_z^{\otimes (l-1)} \otimes \sigma_y \otimes 1^{\otimes (m/2 - l)} ,
+\]
+Hermitian unitaries that pairwise anticommute and square to one; the universal property gives a unital homomorphism $\pi : T_k^{\,\C} \to \Mat_{2^{m/2}}(\C)$ with $\pi(y_i) = Y_i$, and $\pi$ is a *-homomorphism because $a \mapsto \pi(a^*)^*$ is again a homomorphism agreeing with $\pi$ on the generators. The $2^m$ blade images $Y_S := Y_{s_1} \cdots Y_{s_j}$ are, up to phase, distinct words in the Pauli basis, and distinct Pauli words are orthogonal for the trace form ($\operatorname{Tr}(Y_S^* Y_T) = 0$ for $S \neq T$), hence linearly independent: $\pi$ maps a basis to an independent set, so it is injective, and by the dimension count $2^m = (2^{m/2})^2$ it is a *-isomorphism onto the full matrix algebra, with $*$ the conjugate transpose.
+
+\emph{Unique C*-norm, isometric inclusions.} In any C*-norm on $\Mat_N(\C)$, a self-adjoint $y$ has $\|y\| = \lim_j \|y^{2^j}\|^{1/2^j}$ (the C*-identity iterated) $=$ the spectral radius of $y$ (Gelfand's formula, valid in any finite-dimensional normed algebra), and then $\|x\|^2 = \|x^*x\| = \rho(x^* x)$ for every $x$: the norm is determined algebraically, hence unique. A unital *-monomorphism between floors pulls the target's C*-norm back to a C*-norm on the source, which by uniqueness is the source's own norm: the map is isometric. Finally, any C*-norm on $\bigcup_k T_k^{\,\C}$ restricts on each floor to a C*-norm, hence to the unique one, so the norm on the union is determined.
+
+
+
+
+**Fact (imported) 15 (Glimm's classification, and CAR uniqueness).** (i) The completion of an increasing union of full matrix algebras $\Mat_{2^k}(\C)$ along unital embeddings, in its unique C*-norm, is the UHF algebra of type $2^\infty$, unique up to *-isomorphism. \emph{Provenance:} \cite{Glimm1960}. (ii) Any two C*-algebras generated by elements satisfying the canonical anticommutation relations over a given complex mode space, with $*$ matching the pairing, are canonically *-isomorphic; the CAR algebra over $\ell^2$ is *-isomorphic to the $2^\infty$ UHF algebra. \emph{Provenance:} \cite[Thm.~5.2.5]{BratteliRobinson1997}.
+
+*Provenance:* J. Glimm, On a certain class of operator algebras, Trans. Amer. Math. Soc. 95 (1960), 318--340.; O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., Thm.~5.2.5.
+
+
+
+**Theorem 16 (The CAR limit, even charge).** Continue with $p - q$ even. Complexifying and completing in the unique C*-norm of the complexified limit (Lemma \claimref{tower.structure-tower-c-norms}): the result is
+\[
+\Cl(p,q)_\C \,\otimes\, \CAR,
+\]
+where $\CAR$ is the CAR algebra of countably many fermionic modes, the unique Glimm UHF algebra of type $2^\infty$; the mode operators are represented by the adjoined null vectors themselves via Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}, with $w_j = v_j^*$ both for the intrinsic *-structure of Lemma \claimref{tower.structure-tower-c-norms} and for the Fock inner product. The completed tower is the ground algebra tensored with the algebra of a free fermionic quantum field: iterated transport is second quantisation, one mode per rung.
+
+*Proof.* Complexification commutes with direct limits and with tensor products, so by Theorem \claimref{tower.algebraic-limit-even-charge} the complexified limit is $\Cl(p,q)_\C \otimes \Mat_{2^\infty}^\C$, with $\Mat_{2^\infty}^\C$ the algebraic $2^\infty$ matrix algebra over $\C$: an increasing union of full matrix algebras, and the identification is a *-isomorphism because the correctors $W_k$ are unitary (Lemma \claimref{tower.structure-tower-c-norms}). By Lemma \claimref{tower.structure-tower-c-norms} each stage is a C*-algebra with its unique C*-norm, the connecting maps are isometric, and the union carries a unique C*-norm; its completion is Glimm's UHF algebra of type $2^\infty$ tensored with the finite-dimensional factor $\Cl(p,q)_\C$, by Fact \claimref{tower.glimms-classification-car-uniqueness}(i), the tensor factor changing nothing (finite-dimensional algebras are nuclear, and the tensor product of the completions is the completion of the algebraic tensor product).
+
+The identification with the CAR algebra is effected by the tower's own generators rather than by a Jordan-Wigner transformation. The elements $a_j := w_j$ (annihilation) and $a_j^\dagger := v_j$ (creation) of the limit satisfy the CAR exactly (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}), and $a_j^\dagger = a_j^*$ for the intrinsic *-structure, since $v_j^* = w_j$ (Lemma \claimref{tower.structure-tower-c-norms}). The Fock module of Theorem \claimref{tower.fock-module-one-qubit-per-rung}, taken over all $k$, is $\Lambda^\bullet W_\infty$ with the inner product making the wedge monomials in the $v_j$ orthonormal, and its vacuum is annihilated by every $a_j$. In it, wedge and contraction are mutually adjoint: for ordered monomials $v_S$ and $v_T$, both $\langle v_j \wedge v_S,\, v_T \rangle$ and $\langle v_S,\, \iota_{\varphi_j} v_T \rangle$ vanish unless $j \notin S$ and $T = \{j\} \cup S$, in which case both equal the sign that moves $v_j$ to its ordered position; linearity does the rest. So the *-relations are implemented by the adjoint for this inner product, and the generated C*-algebra is a representation of the CAR over the mode space $\ell^2$. By Fact \claimref{tower.glimms-classification-car-uniqueness}(ii), the C*-subalgebra generated by the $a_j, a_j^\dagger$ in the completion is \emph{the} CAR algebra; it is the completed image of the plane factor $\Mat_{2^\infty}^\C$ (the $j$-th plane's complexified algebra is generated by its pair), and the ground factor commutes with it. So the completion is $\Cl(p,q)_\C \otimes \CAR$, with the mode operators the transported null vectors themselves.
+
+
+**Remark  (What ``completion'' means here, and why it is unique).** A limit statement must say which completion is meant: here no hidden choice is made. On the algebraic limit the C*-norm is unique (Lemma \claimref{tower.structure-tower-c-norms}: each stage finite-dimensional, UHF at the top), so ``the completed tower'' is unambiguous once complexified; the real algebraic limit itself is Theorem \claimref{tower.algebraic-limit-even-charge}, with no completion needed. What is genuinely a choice is the complexification, made because the CAR algebra and its Fock adjointness are complex notions; the real limit remembers strictly more (its real K-theory), which is part of what Question \claimref{q.tower.odd-charge} is about.
+
+
+
+**Theorem 17 (Odd charge).** For $p - q$ odd the connecting twist is outer on the centre and Lemma \claimref{tower.grade-twist-when-it-inner} fails; the limit is still an AF-style object (an increasing union of finite-dimensional semisimple algebras), but its identification is sensitive to how the twist moves the two central idempotents (split case) or conjugates the complex structure (complex case). Identify $\varinjlim T_k$ for odd charge; in particular decide whether it is again a plain tensor product with $\Mat_{2^\infty}$, and what real K-theoretic invariant separates the cases if not.
+
+## Physical reading, and scope
+
+
+
+**setting  (The iteration question, answered).** The iteration question had three parts: is further ascent forced, does the clock circulate, and what is the limit. The pieces are now all theorems, in three different papers, and assembling them gives the corollary that answers the question.
+
+
+
+**Theorem 18 (The wall package).** Let $(M, G)$ be a tame corank-one degeneration in the sense of \cite[Hyp.~2.1]{ButlerT4}, with wall $\Sigma$ and radical line bundle $\mathcal{L}$. Assume the radical line bundle is trivial, $w_1(\mathcal{L}) = 0$, so that collar data exist. Then the one-sided completion of \cite[Thm.~4.4]{ButlerT4} is nondegenerate up to and including the wall; the transported reciprocal divides totally there, by \cite[Thm.~4.10]{ButlerT1}; and conservation of degeneracy \cite[Thm.~5.1, Prop.~5.2]{ButlerT4} relocates the degeneration to a shadow wall. Assume further that $\Sigma$ is compact. Then the shadow wall is itself tame for good couplings \cite[Lem.~5.3]{ButlerT4}, and the resulting infinite wall sequence adjoins exactly one hyperbolic plane to the ambient fibre form per wall \cite[Rem.~5.4, Cor.~5.5]{ButlerT4}, each shadow wall's radical line being trivial automatically. \emph{Provenance:} as cited, all in reviewable papers of this series.
+
+*Proof.* Let $(M, G)$ be a tame (\claimref{sheaf.tameness}) corank-one degeneration in the sense of \cite[Hyp.~2.1]{ButlerT4}, with wall $\Sigma$ and radical line bundle $\mathcal{L}$. Assume the radical line bundle is trivial, $w_1(\mathcal{L}) = 0$, so that collar data exist. Then the one-sided completion of \cite[Thm.~4.4]{ButlerT4} (\claimref{sheaf.one-sided-completion}) is nondegenerate up to and including the wall; the transported reciprocal divides totally there, by \cite[Thm.~4.10]{ButlerT1} (\claimref{transport.totality}); and conservation of degeneracy \cite[Thm.~5.1, Prop.~5.2]{ButlerT4} (\claimref{sheaf.conservation-degeneracy-located}, \claimref{sheaf.conservation-degeneracy-absolute-form}) relocates the degeneration to a shadow wall. Assume further that $\Sigma$ is compact. Then the shadow wall is itself tame for good couplings \cite[Lem.~5.3]{ButlerT4} (\claimref{sheaf.tame-wall-induction}), and the resulting infinite wall sequence adjoins exactly one hyperbolic plane to the ambient fibre form per wall \cite[Rem.~5.4, Cor.~5.5]{ButlerT4} (\claimref{sheaf.infinite-wall-sequence}), each shadow wall's radical line being trivial automatically. \emph{Provenance:} as cited, all in reviewable papers of this series.
+
+
+
+
+**Theorem 19 (Answers to the iteration question).** Let $(M, G)$ be a tame corank-one degeneration in the sense of \cite[Hyp.~2.1]{ButlerT4}, with trivial radical line bundle and compact wall as in Fact \claimref{tower.wall-package}, presenting the transport demand of the series' geometric setting.
+\begin{enumerate}
+\item \emph{Where ascent is forced.} On the physical closure, one ascent completes the description: by Fact \claimref{tower.wall-package} the one-sided completion is nondegenerate up to and including the wall and the transported reciprocal divides totally there; nothing on the physical side demands a second rung. Beyond the physical region, the demand repeats: by Fact \claimref{tower.wall-package} the degeneration relocates to a tame shadow wall, and the infinite wall sequence carries exactly one rung of this paper's tower per wall, displaced successively away from the physical region.
+\item \emph{Why the clock never ticks.} Theorem \claimref{tower.rigidity-clock-frozen}: the tower is Morita-stationary from its first step, and the mod-8 structure classifies the eight parallel towers, not stages of one.
+\item \emph{What the limit is.} Theorems \claimref{tower.algebraic-limit-even-charge} and \claimref{tower.car-limit-even-charge}: for even transport charge, the ground algebra tensored with the free fermionic field algebra, the modes being the transported null pairs themselves.
+\end{enumerate}
+The depth of the hierarchy, on this account: one forced conformal ascent, plus a fermionic ladder of capacity, one qubit per rung.
+
+*Proof.* Each clause cites its theorem ((2) \claimref{tower.rigidity-clock-frozen}; (3) \claimref{tower.algebraic-limit-even-charge} and \claimref{tower.car-limit-even-charge}), through Fact \claimref{tower.wall-package}, applied to the tame degeneration of \claimref{sheaf.tameness}; the only assembly is the observation that the wall sequence's rungs are tower steps: each shadow-wall completion adjoins one hyperbolic plane to the ambient bundle's fibre form (Fact \claimref{tower.wall-package}), which is precisely one application of Definition \claimref{obj.tower.tower}'s step at fibre level.
+
+
+**setting  (What the algebra fixes, and what a state must supply).** The tower theorems are kinematic: they fix the algebraic setting, not the physics within it. Fixed by the algebra alone: the mode count and its capacity bound (Theorem \claimref{tower.witt-index-quantum-capacity}); the Fock module and its qubit-per-rung doubling (Theorem \claimref{tower.fock-module-one-qubit-per-rung}); the matrix-unit description of ascent and descent, including the one-way pinching of \cite[\S7.3]{ButlerT1}; and the CAR limit as the algebra in which a mode continuum lies (Theorem \claimref{tower.car-limit-even-charge}). Not fixed by the algebra: which state the field algebra carries. Thermality of a mode, entanglement across a ladder pair, the thermofield-double structure of a horizon pair, and everything downstream of a choice of vacuum are properties of states on the CAR factor, constrained but not selected by the kinematics established here. That division is deliberate: T5 \cite{ButlerT5} computes a specific transport chain in a specific state and shows where its information goes; this paper certifies that the algebra it computes in is the canonical one, with its capacity count exact. The reading of modular theory on a single mode, and its extension over the limit as free-fermion thermal field theory, is T5's task; here it is a reference, not a claim.
+
+**setting  (Scope).** Algebra-level theorems, proved here: rigidity (Theorems \claimref{tower.commuting-copies}, \claimref{tower.rigidity-clock-frozen}), the CAR relations and Fock modules (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}, Theorem \claimref{tower.fock-module-one-qubit-per-rung}), capacity (Theorem \claimref{tower.witt-index-quantum-capacity}), the even-charge limit (Theorems \claimref{tower.algebraic-limit-even-charge}, \claimref{tower.car-limit-even-charge}). Imported theorems: the single step and its minimality \cite{ButlerT1}; the wall sequence \cite{ButlerT4}. Open, stated as such: the odd-charge limit (Question \claimref{q.tower.odd-charge}). Physical readings, flagged as readings: ``one qubit per rung'' as a statement about horizon or singularity modes (the algebra supplies the register; identifying its qubits with counted physical modes is the task of the series' counting papers); ``iterated transport is second quantisation'' as a slogan (the theorem is the tensor factorisation with CAR; the slogan adds an interpretive claim about what quantisation is that the mathematics neither needs nor decides).
+
+## Position in the series
+
+
+
+**setting  (Position in the series).** This paper is T3 of the series. It relies on two others. From the root paper T1 \cite{ButlerT1} it imports the single transport step as matrix amplification with the twisted diagonal (Fact \claimref{transport.rule-1-morita-trivial}), the minimality and uniqueness of the step (Remark \claimref{note.tower.why-tower}), the type-C diagnosis (Fact \claimref{transport.existence-classification-type-c}), and the totality theorem used in the assembly of the section ``Physical reading, and scope''. From the sheaf paper T4 \cite{ButlerT4} it imports the wall package (Fact \claimref{tower.wall-package}), which converts the tower from a kinematic possibility into the geometrically forced ladder of the far side.
+
+Downstream, the tower is used by the physical papers. T5 \cite{ButlerT5} computes its transport chain inside the algebra this paper certifies as canonical, with the capacity count exact; the mode continuum of T7 \cite{ButlerT7} and the Fock-module dictionary of T9 \cite{ButlerT9} build on the CAR limit and the one-qubit-per-rung theorems; and the matter papers T12 \cite{ButlerT12} and T14 \cite{ButlerT14} use the eight parallel towers and the frozen clock as the framework of their constructions.
+
+## Machine verification
+
+
+
+**setting  (Machine verification).** Every computational identity in this paper has been checked by computer, in exact rational arithmetic over the shared library's basis-blade Clifford product, in the manner of the verifications deposited with \cite{ButlerT1, ButlerT4}. The script \texttt{verify\_T03.py}, deposited with this paper alongside the series' shared exact-arithmetic library \texttt{GA.py}, \cite{ButlerVerifyT03}, performs its checks and reports each. The coverage: the volume-element lemma in full on the two-rung floor over $\Cl(1,3)$ (squares, own-plane anticommutation, all cross commutations, and the $\Omega_2$ properties); the commuting-copies theorem at $k = 2$, where the twisted generators are verified to satisfy the ground relations, all sixteen generator pairs of $A_2$ against $B_2$ commute, and the $256$ products of $A$-blades with $B$-blades are checked to be $256$ \emph{distinct} basis blades of $\Cl(3,5)$, an exact generation-and-dimension count; the frozen clock on floors $0$, $1$, $2$ of the physical tower by exhaustive blade-wise commutant (valid for diagonal forms, where an element is central exactly when each blade of its support is), each centre coming out $\operatorname{span}\{1\}$, so no checked floor hosts a central idempotent; the twenty-seven CAR relations of three ladder pairs in $\Cl(3,3)$ as vector identities; the Fock module on $\Lambda^\bullet W_3$ (the anticommutators on all eight states, $c(\alpha)^2 = Q(\alpha)\,\mathrm{id}$ for a general rational vector, the vacuum clause, and irreducibility by the exact rank of the sixty-four blade actions inside $\End(\Lambda^\bullet W_3)$); capacity instances in $\Cl(2,4)$ and on the floor $\Cl(3,5)$, with the isotropy and independence (exact rank) of the creation span verified in both algebras, as in the theorem's own argument; the grade twist: $\Ad_u$ equal to the grade involution on all blades of $\Cl(1,3)$ and $\Cl(2,4)$, the block conjugation $U \operatorname{diag}(a,a)\,U^{-1} = \operatorname{diag}(a, \hat a)$ in $\Mat_2(\Cl(1,3))$, and the odd-charge outerness witnessed in $\Cl(1,0)$ (commutative, yet the involution swaps its central idempotents); the compatibility lemma in full at one stage over the ground algebra $\Cl(1,1)$, where the transported connecting map is checked against $\Ad(V_k) \circ \theta_k$ with the \emph{split} corrector of Lemma \claimref{tower.compatibility-connecting-maps-transported}, generator by generator inside $\Cl(3,3)$, and the naive corrector $\operatorname{diag}(1, u_{T_1})$ is checked to fail, so the split is necessary; the *-structure of Lemma \claimref{tower.structure-tower-c-norms} on $\Cl(2,2)$ (antimultiplicativity on sampled products, unitarity of all generators and of the volume elements, and $v^* = w$ for the ladder pair); and the single-step corrector identity of Lemma \claimref{tower.grade-twist-when-it-inner} rearranged as one commuting square, on a sample element. Thirty-one checks in all. No floating point is used anywhere; the script exits nonzero on any failure, and all checks pass.
+
+## Results cited, not shown
+
+**Fact (imported) 20 (The centre).** For $n \geq 1$, the centre of $\Cl(p,q)$ is $\R \cdot 1$ if $n$ is even, and $\R \cdot 1 \oplus \R \cdot \omega$ if $n$ is odd, where $\omega = e_1 e_2 \cdots e_n$ is the pseudoscalar.
+
+*Provenance:* Transport Lab claim primer.centre, version 2 (T00 Lem 9.4).
+
+**Fact (imported) 21 (Conservation of degeneracy, absolute form).** Let $M$ be connected, let $(M,G)$ be a tame corank-one degeneration whose two open sides $\Mp \setminus \Sig$ and $M \setminus \Mp$ are both nonempty, let $E \to M$ be \emph{any} vector bundle containing $T^*M$ as a subbundle, carrying \emph{any} smooth symmetric form $h$ which is \emph{standard} outside some neighbourhood $U$ of $\Sig$ with $M \setminus U$ meeting both sides: there, $h = G \perp K$ for a nondegenerate form $K$ on a complement, with $\operatorname{sig}(K)$ the same on both exterior regions. Then $h$ is not nondegenerate everywhere: every completion of a signature-change cometric that is standard, in this sense, outside a neighbourhood of the wall degenerates somewhere. Degeneracy can be displaced, never destroyed.
+
+*Provenance:* Transport Lab claim sheaf.conservation-degeneracy-absolute-form, version 4 (T04 Thm 5.1).
+
+**Fact (imported) 22 (Conservation of degeneracy, located).** With the sign $\mu\nu > 0$ required for Theorem \claimref{sheaf.one-sided-completion}, the ambient form $h$ of Definition \claimref{obj.sheaf.collar-data-coupling} degenerates exactly on the zero set of $F = 1 + 2\mu\nu\beta^2 s$ within $M \setminus \Sig$, and this zero set is nonempty on the far side of every transversal: a displaced degeneration locus $\Sig'$ (the \emph{shadow wall}) separating $\Sig$ from the far exterior. Between $\Sig$ and the shadow wall the ambient signature remains $(p{+}1, q{+}1)$; across any simple zero of $F$ it passes to $(p, q{+}2)$. Choosing $\mu\nu < 0$ instead exchanges the roles of the two sides: $h|_\Sig$ has signature $(p, q{+}2)$, which is the Rule-1 ascent of the far side's algebra $\Cl(p{-}1, q{+}1)$, and the degeneration is displaced into the physical side, meaning the side on which the dying eigenvalue is positive. Which region that is depends on the wall: at the Schwarzschild singularity, where the dying eigenvalue is $-r$, it is the excised region $r < 0$, so the displaced shadow wall lies outside the manifold (Theorem \claimref{sheaf.one-sided-completion-singularity}). No choice of coupling sign yields a two-sided completion of constant signature, as Theorem \claimref{sheaf.conservation-degeneracy-absolute-form} independently guarantees.
+
+*Provenance:* Transport Lab claim sheaf.conservation-degeneracy-located, version 3 (T04 Prop 5.2).
+
+**Fact (imported) 23 (The infinite wall sequence).** Let $\Sig$ be compact. For good couplings at every stage, there is an infinite sequence $\Sig = \Sig^{(0)}, \Sig^{(1)} = \Sig', \Sig^{(2)}, \dots$ of tame walls, each displaced from the last into the unphysical region, carrying Clifford sheaves of ranks $2^n, 2^{n+2}, 2^{n+4}, \dots$ whose physical-side fibres ascend the Witt tower $\Cl(p,q) \to \Cl(p{+}1,q{+}1) \to \Cl(p{+}2,q{+}2) \to \cdots$, one Rule-1 rung per wall. Degeneracy is conserved along the entire sequence: each completion resolves its wall and produces the next, displaced successively further from the physical region.
+
+*Provenance:* Transport Lab claim sheaf.infinite-wall-sequence, version 4 (T04 Cor 5.5).
+
+**Fact (imported) 24 (One-sided completion).** Assume (T1)-(T3), with signature $(p,q)$, $p \geq 1$, on the physical side $\Mp$, and assume the radical line bundle is trivial, $w_1(\shL) = 0$, so that collar data exist. Then there exists a smooth symmetric form $h$ on $T$ over $M$, equal to $G \perp H$ outside a collar of $\Sig$, which is nondegenerate of constant signature $(p{+}1, q{+}1)$ at every point of $\Mp$, including $\Sig$ itself. Consequently $\shC := \Cl(T, h)$ restricted to $\Mp$ is a locally free sheaf of algebras of constant rank $2^{n+2}$ whose every fibre is isomorphic to $\Cl(p{+}1, q{+}1)$; in the physical case, $\Cl(2,4) \cong \Mat_4(\HH)$.
+
+*Provenance:* Transport Lab claim sheaf.one-sided-completion, version 4 (T04 Thm 4.4).
+
+**Fact (imported) 25 (Tame wall induction).** Assume $\Sig$ compact, and fix the collar. Near the wall, on the far side, $s$ is strictly monotone along transversals: $s = 1/\lambda + O(1)$ with derivative $s' = -\lambda'/\lambda^2\,(1 + o(1)) \neq 0$, since the singular term dominates the bounded derivative of the smooth remainder; call the (relatively compact) region where this monotonicity holds the \emph{monotone zone}, and let
+\[
+S \;:=\; \sup\,|s| \quad\text{over the far-side part of the collar \emph{outside} the monotone zone}
+\]
+(finite: that region has compact closure avoiding $\Sig$). Call the coupling \emph{good} if $|\mu\nu| < 1/(2S)$. For good couplings:
+\begin{enumerate}
+\item every far-side zero of $F$ lies in the monotone zone with $\beta \equiv 1$ there, so the shadow wall $\Sig'$ is the regular level set $\{F = 0\}$ with $dF = 2\mu\nu\,ds \neq 0$ transversally: a smooth closed hypersurface, and the zero of $\det h$ across it is simple;
+\item at each point of $\Sig'$ exactly one $h$-eigenvalue (with respect to an auxiliary frame metric) vanishes, to first order, and the radical line of $h|_{\Sig'}$ is a smooth line subbundle: it is the column space of the adjugate $\operatorname{adj}(h)$, which has rank one along $\Sig'$;
+\item the invariant transversality datum of Lemma \claimref{sheaf.invariant-form-t3} (which makes sense verbatim for any bundle with symmetric form) is nowhere zero on $\Sig'$: by Jacobi's formula the simplicity of the zero of $\det h$ \emph{is} the transversality of the degeneration.
+\end{enumerate}
+Hence $(T, h)$ is itself a tame corank-one degeneration along $\Sig'$, in the bundle-valued sense of Remark \claimref{note.sheaf.setup-generalises-arbitrary-bundles}. The completion therefore iterates: each wall's ambient form is a tame degeneration with its own shadow wall, and the infinite wall sequence exists unconditionally for good couplings, not merely generically.
+
+*Provenance:* Transport Lab claim sheaf.tame-wall-induction, version 5 (T04 Lem 5.3).
+
+**Fact (imported) 26 (The blade basis, degenerate forms included).** Let $e_1, \dots, e_n$ be any basis of $V$. The $2^{n}$ ordered products $e_I = e_{i_1} e_{i_2} \cdots e_{i_k}$, for $I = \{i_1 < \dots < i_k\} \subseteq \{1, \dots, n\}$ (with $e_{\emptyset} = 1$), form a basis of $\Cl(V, Q)$. Hence $\dim \Cl(V, Q) = 2^{n}$, the map $\iota : V \to \Cl(V, Q)$ is injective, and $\Cl(V, Q) \ne 0$. This holds for every real quadratic space, degenerate or not.
+
+*Provenance:* Transport Lab claim std-algebra.blade-basis, version 1.
+
+**Fact (imported) 27 (The Clifford algebra exists and is unique).** For every real quadratic space $(V, Q)$ a Clifford algebra exists: $\Cl(V, Q) = T(V) / I_Q$, the tensor algebra modulo the two-sided ideal generated by $\{v \otimes v - Q(v)\,1 : v \in V\}$, with $\iota$ the inclusion of $V = T^{1}(V)$ followed by the quotient map. Any two Clifford algebras of $(V, Q)$ are isomorphic by a unique isomorphism compatible with the maps from $V$. Concretely, for any real symmetric Gram matrix $G$ on $\R^{n}$ (degenerate allowed), the operators $c(v) = v \wedge {} + \, \iota_{Gv}$ on the exterior algebra $\Lambda \R^{n}$ satisfy $c(v)^{2} = Q(v)$, and so give a representation $\Cl(V, Q) \to \operatorname{End} \Lambda V$. (That this representation is faithful is shown afterwards, in the blade basis result, by the triangularity of $x \mapsto x \cdot 1$.)
+
+*Provenance:* Transport Lab claim std-algebra.existence-uniqueness, version 1.
+
+**Fact (imported) 28 (The three involutions on each grade).** The grade involution is an automorphism, reversion and Clifford conjugation are anti-automorphisms; all three are involutions and they commute. On $\Cl^{k}$ they act by
+\begin{equation}
+\hat{x} = (-1)^{k} x, \qquad \tilde{x} = (-1)^{k(k-1)/2} x, \qquad \bar{x} = (-1)^{k(k+1)/2} x .
+\end{equation}
+\texttt{GA.grade\_inv} and \texttt{GA.reverse} implement the first two.
+
+*Provenance:* Transport Lab claim std-algebra.involution-properties, version 1.
+
+**Fact (imported) 29 (An algebra and its matrix amplification).** Let $A$ be a unital real algebra and $m \ge 1$, and let $E_{ij}$ be the matrix units of $\Mat_m(A)$. Then:
+\begin{enumerate}
+\item[(i)] the centre of $\Mat_m(A)$ is $\{z \cdot 1_m : z \in \Zc(A)\}$;
+\item[(ii)] the two-sided ideals of $\Mat_m(A)$ are exactly the $\Mat_m(I)$ with $I$ a two-sided ideal of $A$;
+\item[(iii)] $M \mapsto M^{m}$ (columns, acted on by matrix multiplication) and $N \mapsto E_{11} N$ are mutually inverse equivalences between left $A$-modules and left $\Mat_m(A)$-modules, so $A$ and $\Mat_m(A)$ are Morita equivalent.
+\end{enumerate}
+With \claimref{std-algebra.matrix-units}: an algebra with a full $m \times m$ system of matrix units has the centre, the ideals and the modules of its corner.
+
+*Provenance:* Transport Lab claim std-algebra.morita-amplification, version 1.
+
+**Fact (imported) 30 (Orthogonal vectors anticommute).** For $u, v \in V$: $u v = -v u$ if and only if $B(u, v) = 0$. In an orthogonal basis $e_1, \dots, e_n$, $e_i e_j = -e_j e_i$ for $i \ne j$ and $e_i^{2} = Q(e_i)$, and the product of two basis blades is $e_I e_J = \pm \bigl(\prod_{i \in I \cap J} Q(e_i)\bigr)\, e_{I \triangle J}$, the sign being $(-1)$ to the number of pairs $(i, j) \in I \times J$ with $i > j$.
+
+*Provenance:* Transport Lab claim std-algebra.orthogonal-anticommute, version 1.
+
+**Fact (imported) 31 (How the pseudoscalar commutes).** In $\Cl(p, q, r)$, $n = p + q + r$, with unit pseudoscalar $I$:
+\begin{enumerate}
+\item[(i)] $I X_k = (-1)^{k(n-1)} X_k I$ for $X_k \in \Cl^{k}$; so $I$ commutes with $\Cl^{+}$, and with $\Cl^{-}$ when $n$ is odd, while it anticommutes with $\Cl^{-}$ when $n$ is even. Equivalently $I X = X I$ for $n$ odd and $I X = \hat{X} I$ for $n$ even.
+\item[(ii)] $I \tilde{I} = \prod_{i} Q(e_i)$, which is $(-1)^{q}$ when $r = 0$ and $0$ when $r > 0$.
+\item[(iii)] $I^{2} = (-1)^{n(n-1)/2} (-1)^{q}$ when $r = 0$ (\claimref{primer.sign}), and $I^{2} = 0$ when $r > 0$: in a degenerate algebra the pseudoscalar is nilpotent.
+\end{enumerate}
+
+*Provenance:* Transport Lab claim std-algebra.pseudoscalar-commutation, version 1.
+
+**Fact (imported) 32 (The spacetime algebra as a matrix algebra, and the spacetime split).** (i) $\Cl(1,3) \cong \Mat_2(\HH)$: with quaternion units $\mathbf{q}_1, \mathbf{q}_2, \mathbf{q}_3$, the assignment $\gamma_0 \mapsto \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma_k \mapsto \begin{psmallmatrix} 0 & \mathbf{q}_k \\ \mathbf{q}_k & 0 \end{psmallmatrix}$ extends to an isomorphism. (ii) As a labelled reading, the Dirac matrices $\gamma^{D}_0 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma^{D}_k = \begin{psmallmatrix} 0 & \sigma_k \\ -\sigma_k & 0 \end{psmallmatrix}$ ($2 \times 2$ blocks) give a faithful representation $\Cl(1,3) \to \Mat_4(\C)$ whose complex span is all of $\Mat_4(\C)$: $\C \otimes \Cl(1,3) \cong \Mat_4(\C)$. (iii) The relative vectors $\sigma_k = \gamma_k \gamma_0$ satisfy $\sigma_j \sigma_k + \sigma_k \sigma_j = 2\delta_{jk}$ and $\sigma_1 \sigma_2 \sigma_3 = I$, and generate the even subalgebra: $\Cl^{+}(1,3) \cong \Cl(3,0)$, so the spacetime pseudoscalar is the pseudoscalar of the observer's space.
+
+*Provenance:* Transport Lab claim std-algebra.sta-matrix, version 1.
+
+**Fact (imported) 33 (The product of two vectors).** In $\Cl(V, Q)$, for all $u, v \in V$,
+\begin{equation}
+v^{2} = Q(v), \qquad u v + v u = 2 B(u, v).
+\end{equation}
+In particular $u v = B(u, v) + \tfrac12(u v - v u)$, the sum of a scalar and an antisymmetric part.
+
+*Provenance:* Transport Lab claim std-algebra.vector-squares, version 1.
+
+**Fact (imported) 34 (Null pairs satisfy the canonical anticommutation relations).** Let $v_1, \dots, v_k, w_1, \dots, w_k \in V$ be a \emph{Witt basis} of their span: $B(v_i, v_j) = B(w_i, w_j) = 0$ and $B(v_i, w_j) = \tfrac12 \delta_{ij}$. Then in $\Cl(V, Q)$
+\begin{equation}
+v_i v_j + v_j v_i = 0, \qquad w_i w_j + w_j w_i = 0, \qquad v_i w_j + w_j v_i = \delta_{ij},
+\end{equation}
+the canonical anticommutation relations for $k$ modes (read $v_i$ as annihilators, $w_i$ as creators). The elements $N_i = w_i v_i$ are mutually commuting idempotents with $N_i + v_i w_i = 1$. In particular, for orthogonal hyperbolic planes $\operatorname{span}(e_i, e_{k+i})$ of $\R^{k,k}$, $v_i = \tfrac12(e_i + e_{k+i})$ and $w_i = \tfrac12(e_i - e_{k+i})$ form such a basis. The form need not be nondegenerate outside the span.
+
+*Provenance:* Transport Lab claim std-algebra.witt-basis-car, version 1.
+
+**Fact (imported) 35 (Hyperbolic pairs and the Witt decomposition).** Let $(V, Q)$ be a real quadratic space of signature $(p, q, r)$ and let $m = \min(p, q)$.
+\begin{enumerate}
+\item[(i)] If $P \subseteq V$ is a nondegenerate plane and $u \in P$ is a nonzero null vector, there is a unique $w \in P$ such that $(u, w)$ is a hyperbolic pair; $P$ is a hyperbolic plane.
+\item[(ii)] (Witt decomposition) There is an orthogonal decomposition
+\begin{equation}
+V = H_1 \perp \dots \perp H_m \perp A \perp \operatorname{rad} V
+\end{equation}
+with each $H_i$ a hyperbolic plane and $A$ anisotropic ($Q(a) \ne 0$ for $a \ne 0$, hence definite, of signature $(p - m, q - m, 0)$).
+\item[(iii)] If $(u_i, w_i)$ is a hyperbolic pair spanning $H_i$, then $N = \operatorname{span}(u_1, \dots, u_m) \oplus \operatorname{rad} V$ is a maximal totally null subspace, and every totally null subspace has dimension at most $m + r$.
+\end{enumerate}
+
+*Provenance:* Transport Lab claim std-algebra.witt-decomposition, version 1.
+
+**Fact (imported) 36 (Existence and classification of type C).** $\Cl(p,q)$ ($n \geq 1$) contains a nontrivial central idempotent if and only if
+\[
+p - q \equiv 1 \pmod 4 ,
+\]
+and in that case the nontrivial central idempotents are exactly the two elements
+\[
+\varepsilon_\pm = \tfrac12\,(1 \pm \omega),
+\]
+which are exchanged by the grade involution $\hat{\cdot}$ (an \emph{outer} automorphism of the split algebra; no inner automorphism exchanges them, centrality being conjugation-invariant), and satisfy $\varepsilon_+ \varepsilon_- = 0$ and $\varepsilon_+ + \varepsilon_- = 1$, and effect the splitting $\Cl(p,q) = \varepsilon_+ A \,\oplus\, \varepsilon_- A$ into the two simple ideals of Theorem \claimref{transport.classification-real-clifford-algebras}.
+
+*Provenance:* Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6).
+
+**Fact (imported) 37 (Rule 1 is Morita-trivial).** The elements
+\[
+E_{11} = ff^*, \qquad E_{22} = f^*f, \qquad E_{12} = f, \qquad E_{21} = f^*
+\]
+form a full $2 \times 2$ system of matrix units in $B$ ($E_{11} + E_{22} = 1$, $E_{ij}E_{kl} = \delta_{jk}E_{il}$); the corner is the base, $E_{11} B E_{11} = A\,ff^* \cong A$ via $a \mapsto a\,ff^*$; and therefore
+\[
+\Cl(p{+}1, q{+}1) \;\cong\; \Mat_2\bigl(\Cl(p,q)\bigr),
+\]
+under which the ascent embedding $A \hookrightarrow B$ becomes the twisted diagonal $a \mapsto \mathrm{diag}(a, \hat{a})$. In particular Rule 1 preserves the Morita class: the Wedderburn type, and with it the simplicity or splitness and the type-C diagnosis of the section ``A taxonomy of obstructions'', are the same for $B$ as for $A$, and the clock residue $d = p - q \pmod 8$ is fixed. (The \emph{presence} of types N and P is not preserved and could not be: Proposition \claimref{transport.no-transport-terminates} below shows every completion carries fresh obstructions of its own.) The adjoined ladder pair is, in the matrix description, exactly the off-diagonal matrix units, and the descent projectors $f^*f,\, ff^*$ are the diagonal ones.
+
+*Provenance:* Transport Lab claim transport.rule-1-morita-trivial, version 5 (T01 Thm 7.1).
+
+**Fact (imported) 38 (Totality).** Let $(\mathbb{V}, Q)$ be nondegenerate, with the completion $\Cl(p{+}1,q{+}1)$ and quadric $\mathcal{Q}$ of the section ``The completion: the conformal model''. Define $\iota : \mathcal{Q} \to \mathcal{Q}$ by $\iota[N] = [\,e_+ N e_+\,]$. Then:
+\begin{enumerate}
+\item $\iota$ is well defined, total and continuous on $\mathcal{Q}$, and an involution.
+\item For every $x$ with $Q(x) \neq 0$, \; $\iota[X(x)] = [X(x/Q(x))]$: on invertible vectors $\iota$ is the geometric reciprocal $\rho$.
+\item For every $x_0$ with $Q(x_0) = 0$, that is, a null vector or the origin, $\iota[X(x_0)] = [\, x_0 + \tfrac12 \nInf \,]$, an ideal point (for $x_0 = 0$, the classical point at infinity $[\nInf]$), and this value is the limit of $\iota[X(x)]$ along every path of invertible $x \to x_0$. Consequently $\iota$ is the unique continuous map $\mathcal{Q} \to \mathcal{Q}$ agreeing with the lifted reciprocal $[X(x)] \mapsto [X(\rho(x))]$ on the lifted invertible locus.
+\end{enumerate}
+
+*Provenance:* Transport Lab claim transport.totality, version 3 (T01 Thm 4.10).
+
+

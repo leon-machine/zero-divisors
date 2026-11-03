@@ -1,0 +1,22 @@
+functions:
+  check_determinant_identity:
+    kind: sampled
+    clauses: ["(1) det h = -det G (1 - 2 mu nu beta^2 s)"]
+    omits: "one 4 x 4 cometric and transversal (s = 50/3, det G = 3) with three triples (mu, nu, beta); the unit-frame reduction to the untwisted ambient form and the statement of good couplings are not tested"
+  check_kernel_at_shadow_wall:
+    kind: sampled
+    clauses: ["(2) at a zero of F the radical of h is spanned by (-G^-1 u, beta mu s, beta nu s) with nonzero T*M part, corank one"]
+    omits: "one G, e and two (nu, beta) with mu solving F = 0; that the shadow wall is a tame (transverse) corank-one wall, that it is a graph over Sigma, and w_1(L') = w_1(L) (a topological statement) are not tested"
+  check_twist_equivariance:
+    kind: sampled
+    clauses: ["(1) a change of frame D = 1 (+) (-1) (+) (-1) preserves h (D h(e) D = h(-e))", "(2) the kernel's T*M part flips with the frame, so the radical line is a copy of Lambda"]
+    omits: "one G, e and coupling at the shadow wall; the monodromy statement is checked as an algebraic equivariance, not as a bundle isomorphism"
+  check_moebius_wall:
+    kind: sampled
+    clauses: ["(4) on T^2 x R: radical of G on the wall is span(k), det h = t - 2 mu nu, nondegenerate on Sigma, shadow wall {t = 2 mu nu} with radical projecting onto span(k)", "(4) (phi/2 -> phi/2 + pi) flips k and u and fixes G"]
+    omits: "five rational points of the half-angle circle, (mu, nu) = (-1/3, 1), four values of t; tameness of {t = 0} (nonzero d det G/dt), two-sidedness, w_1(L) != 0, obstruction of untwisted one-rung completions and w_1(L') != 0 are topological or transversality claims and are not computed; clause (3) (iteration of the induction, constancy of W along the wall sequence) is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebra of the twisted ambient form is checked at sample data and the example is verified pointwise; the line-bundle classes and the iteration in (3) are not computed"

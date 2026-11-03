@@ -1,0 +1,23 @@
+functions:
+  check_duality_is_the_lorentz_commutant:
+    kind: exact
+    clauses:
+    - (i) commutant of ad on so(1,3) is spanned by 1 and J (J^2 = -1); on stab(I) (rho = 3/7, -2/5, 0), on the parabolic algebra of the line of X and on so(2,4) it is the scalars; J preserves neither stab(I) nor the parabolic algebra
+    omits: 'none: finite linear algebra over the rationals; the three values of rho cover all cases by the dilation conjugation argued in the proof'
+  check_frozen_point_pairing_is_the_duality_pairing:
+    kind: exact
+    clauses:
+    - (ii) eps_X(B, B') = -<B i4 B'>_0 on spacetime bivectors
+    omits: 'none: Gram matrices on the six blades; rho-independence via I ^ X = ninf ^ n0'
+  check_chiral_slot_hessian:
+    kind: exact
+    clauses:
+    - (iii) K Hessian zero on symmetric slots, blocks decouple, det on antisymmetric slot = -4096 (1 + tau^2)^3, rank 26 of the real form at tau = +-j
+    omits: 'none: a degree-six polynomial identity checked at eight points; the Hessians do not depend on the curvature or on rho'
+  check_schouten_slot_is_stationary_for_every_chirality:
+    kind: complete
+    clauses:
+    - (iv) eps_X and K slot gradients vanish at the Schouten slot on all torsion-free curvatures; with torsion the K gradient does not
+    omits: 'none for the torsion-free case: the gradients are linear in the curvature and are checked on the 100 Kulkarni-Nomizu products spanning the algebraic curvature tensors; the torsion case is one sample'
+untouched_premises:
+  synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff: "cited in (iv) for the case tau = 0 (the Schouten slot is the unique stationary slot of eps_X); the chiral extension is what the checks compute, and they do not call it"

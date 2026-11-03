@@ -1,0 +1,18 @@
+functions:
+  check_image_is_ker_k:
+    kind: sampled
+    clauses: ["for every v in ker k there is a covector vtilde with G(alpha, vtilde) = alpha(v) for all alpha"]
+    omits: "Schwarzschild boundary Gram at m = 1, 2, 3, 1/2, 5/3; kernel Rk and rank 3 computed, solvability tested for a kernel basis and two extra vectors per transversal (50 cases), not for every v; image equals ker k is concluded from rank, not asserted."
+  check_unique_modulo_radical:
+    kind: sampled
+    clauses: ["vtilde is unique modulo the radical Rk"]
+    omits: "Four gauge values t per vector (vectors of ker k built from both transversals) and three probe covectors; homogeneous solution space computed as one-dimensional and equal to Rk at the five masses."
+  check_normalisation_fixes_the_gauge:
+    kind: sampled
+    clauses: ["G(vtilde, vtilde) + 2 vtilde(u) = 0 fixes the gauge uniquely", "left side affine in the gauge parameter with slope 2 k(u) = 2"]
+    omits: "N(t) - N(0) = 2t tested at four values of t (enough for a quadratic in t, per case), unique root at t* = -N(0)/2 tested against four shifts; five masses and two transversals only."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational arithmetic on the boundary Gram at five masses covering each of the three clauses; the quantifier 'for every v' is sampled, not proved. 2026-10-23 (weak checks): check_unique_modulo_radical now runs on the ker k vectors built from both transversals (it used the first only); the probe covectors moved to module level."

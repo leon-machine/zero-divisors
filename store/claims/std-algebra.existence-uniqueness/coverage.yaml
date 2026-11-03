@@ -1,0 +1,7 @@
+functions:
+  check_model_squares_to_form:
+    kind: sampled
+    clauses:
+    - '"the operators c(v) satisfy c(v)^2 = Q(v)"'
+    omits: four 3x3 Gram matrices (two degenerate, one non-diagonal indefinite) and four vectors, on all
+      8 basis states; the tensor-algebra construction and uniqueness are proved in the text, not checked

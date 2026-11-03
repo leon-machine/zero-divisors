@@ -1,0 +1,26 @@
+functions:
+  check_every_zero_divisor_annihilated_both_sides:
+    kind: sampled
+    clauses:
+    - (1) idempotents e, f not in {0,1} with a(1-e) = 0 and (1-f)a = 0
+    omits: Fourteen hand-chosen zero divisors in twelve signatures (n <= 5), annihilator dimensions hand-tabulated; not an arbitrary zero divisor
+  check_simple_signatures_only_noncentral_annihilators:
+    kind: sampled
+    clauses:
+    - (2) for p - q != 1 mod 4 every such idempotent is non-central
+    omits: The ten samples with p - q != 1 mod 4; the centre (R or C with omega^2 = -1) has only trivial idempotents, shown by a polynomial identity checked at three sample points; the refinement "type N exactly when the annihilating idempotent is the wv of a hyperbolic pair" is not tested here
+  check_split_signatures_central_or_type_p:
+    kind: sampled
+    clauses:
+    - (3) for p - q = 1 mod 4, a is annihilated by a central idempotent exactly when eps_+ a = 0 or eps_- a = 0, otherwise type P
+    omits: Four samples ((2,1) twice, (0,3), (3,2)), two inside one ideal and two not; the converse (no central annihilator when both components are nonzero) is read from eps_+- a != 0, not independently searched
+  check_isotropic_origin_in_mixed_signatures:
+    kind: partial
+    clauses:
+    - the failure is of isotropic-vector origin in the mixed signatures (a null v is annihilated by the non-central wv)
+    omits: Six mixed signatures with n <= 4; does not test the converse "exactly in the mixed signatures" (that definite signatures have no isotropic-origin zero divisors) nor that the taxonomy N/P/C is exhaustive over all zero divisors
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is tested on hand-chosen zero divisors; the exhaustiveness for arbitrary zero divisors rests on the cited localisation theorem. 2026-10-23 weak-checks pass: check_isotropic_origin_in_mixed_signatures now asserts that v and w are null (the hypothesis) and takes its signatures from a module-level list"

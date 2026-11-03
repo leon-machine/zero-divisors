@@ -1,0 +1,19 @@
+functions:
+  check_fixed_bracket_identity_in_lambda:
+    kind: exact
+    clauses: ["|B_Lambda|^2 = m^2/2 - Lambda C/6 = (Lambda/6)(nu^2 + 9/4 - C)"]
+    omits: "identity in formal Lambda (GA.RF) at four rational (nu, C) points, affine in (nu^2, C) so they suffice; m^2 = (nu^2 + 9/4) Lambda/3 for a principal-series composite is inserted, not derived, and the first equality (that the join gives the bracket) is tested in check_bracket_from_composites"
+  check_bracket_from_composites:
+    kind: sampled
+    clauses: ["|B_Lambda|^2 = m^2/2 - Lambda C/6 for the composite of two twistors", "the flat bracket differs from B_Lambda by the Lambda-suppressed omega-area (Lambda/6)[omega1 omega2]"]
+    omits: "ten pairs from five sample twistors at the three values Lambda/6 in {1/2, 2, 1/9}; the principal-series form is not tested here"
+  check_bracket_nonzero_iff_mass_above_casimir_term:
+    kind: sampled
+    clauses: ["B_Lambda != 0 if and only if m^2 > Lambda C/3"]
+    omits: "five sample composites (generic pairs, two doubled, one massless-type pair) at three Lambda: 6 nonzero and 9 zero cases; 'every composite heavier than the Hubble scale' for C of order one and the order-parameter reading are not computable"
+untouched_premises: {}
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_bracket_from_composites now loops over all three Lambda values, as its docstring says."

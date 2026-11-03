@@ -1,0 +1,14 @@
+functions:
+  check_theta_is_automorphism_of_completed_structure:
+    kind: sampled
+    clauses: ["theta_lambda = ghat_lambda Phi_lambda^-1 is an automorphism of (T, h_u)", "theta restricts to g_lambda on W", "theta fixes k"]
+    omits: "Schwarzschild boundary data at m = 1, 2, 3, 1/2, two transversals, two (mu, nu) pairs, four lambdas (64 cases); not general G, u, lambda."
+  check_dual_action_is_free_translation:
+    kind: sampled
+    clauses: ["the induced dual action on candidate values is u' -> u' - lambda", "free action of (ker k, +)", "hence no equivariant classical value (no common fixed point)"]
+    omits: "One (mu, nu) pair, two candidates per fibre, lambdas from a basis plus one combination; additivity tested for one pair of lambdas. The final inference that no natural assignment exists is not computed beyond 'no sampled candidate is fixed'."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact sample-point checks of the matrix identities the statement uses; the closing non-existence statement for equivariant assignments is the free-action argument and is not computed as a separate step."

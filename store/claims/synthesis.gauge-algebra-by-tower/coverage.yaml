@@ -1,0 +1,10 @@
+functions:
+  test_gauge_algebra_by_tower:
+    kind: complete
+    clauses: ["table", "(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "enumerates all six causal towers and recomputes a (onset count), F, the real pair relations, b, K and the unit u from the geometric algebra, then the automorphism algebra as exact ranks (12, 17, 9, 2 and the wrong-input values 7, 4); the Lie algebras are identified only by dimension, centre dimension and derived dimension (e.g. 11 = 3 + 8); the dimension formula is verified for a, b <= 3 only; the hierarchy K^a (x) K^b itself rests on the premises H1, H2, U, which are called but have no computable content; Proposition (2) of four-dimensions-forces-converse and agreement with the mirror copy theorem are not recomputed. NOTE: the function is named test_gauge_algebra_by_tower, not check_*, so a harness that collects check_* functions finds none"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "single function covers the whole table and (i) to (iv); naming deviates from the check_* convention"

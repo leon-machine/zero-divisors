@@ -1,0 +1,18 @@
+functions:
+  check_unitary_mixings_preserve_momentum:
+    kind: sampled
+    clauses: ["U with U U^dagger = 1 preserves the total momentum of every n-tuple"]
+    omits: "spinors are symbolic (a polynomial identity in their coordinates) but only chosen unitaries are run: a rotation (3/5, 4/5) and a phase through each unit of F for n = 2, and one signed permutation for n = 3, in each of the six causal towers; not all of U(n)"
+  check_only_unitary_mixings:
+    kind: sampled
+    clauses: ["the converse: momentum preservation forces U U^dagger = 1"]
+    omits: "two non-unitary controls change the momentum, and the polarisation step (rank of the map from Hermitian X in M_2(F) to quadratic forms equals 2 + dim F on sample rows) is computed for n = 2 only; the general-n proof and the norm law j(psi a) = N(a) j(psi) are checked on sample psi"
+  check_momentum_preserving_groups:
+    kind: partial
+    clauses: ["the momentum-preserving group is O(n), U(n), Sp(n) as F = R, C, H"]
+    omits: "matches only the dimension of the Lie algebra {X : X + X^dagger = 0} in M_n(F) with dim o(n), u(n), sp(n) for n = 1, 2, 3 (and the anti-involution and fixed space R f); the identification of the group itself is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each function states its limits (chosen unitaries, n = 2 polarisation, Lie algebra dimensions for n <= 3); the iff and the named groups rest on the proof"

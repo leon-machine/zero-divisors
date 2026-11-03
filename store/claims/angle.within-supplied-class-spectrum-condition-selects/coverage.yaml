@@ -1,0 +1,14 @@
+functions:
+  check_unique_ground_state_is_a_product_number_state:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "six sample number polynomials on 2 and 3 modes (five with a unique minimum); 'Gibbs at no finite beta' is checked only for single-mode marginals and by trying three values of q, not for multi-mode sides or all q"
+  check_degenerate_ground_space_selects_nothing:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "exact for the stated H = (N_0 - N_1)^2; the closing sentence (positivity selects a Boulware-type state or none, 'Claim G is dead') is interpretive and not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) is a for-every-generator claim sampled on six polynomials; (ii) is an explicit example checked exactly."

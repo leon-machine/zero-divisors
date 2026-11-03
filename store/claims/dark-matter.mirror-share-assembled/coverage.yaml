@@ -1,0 +1,22 @@
+functions:
+  check_mode_ratio_is_one:
+    kind: complete
+    clauses: ["(i) n_2 = n_6, the same state space"]
+    omits: "signature-reversal map on the even subalgebras is multiplicative on all 32 x 32 pairs of even blades and bijective; the count of 32 states of five modes is combinatorial and not derived from the algebra"
+  check_mass_ratio_half_percent:
+    kind: exact
+    clauses: ["burning-branch ratio m_2/m_6 = 0.995, half a percent"]
+    omits: "m_2 = m_6 up to composition, the common ceiling coupling being P2 along the reversal orbit, is premise-level and not computed; Y_p, m_p and m(4He) are the check's record values"
+untouched_premises:
+  dark-matter.asymmetry-arrow-counted-fifteenth-refutation: "(iii) the asymmetry ratio is premised on P2 and not computed (docstring)"
+  dark-matter.imported-derived-generation-flag: "Hypothesis (S) as carried; no computable content in this assembly"
+  dark-matter.population-count-one-share-half-percent: "not computed here; the share is assembled from the three factors"
+  dark-matter.projection-every-towers-content-dilutes-ones: "enters the argument that content is shared; not a computable factor of f_2"
+  dark-matter.stored-asymmetry-charge-not-number: "(iv) temperature independence is a statement about which inputs enter, not a computation (docstring)"
+  standard-model.hyp-s-slot-statistics: "Hypothesis (S), a premise with no computable content"
+  dark-matter.p1-single-frozen-point: "premise, used only as a weaker second route to the asymmetry equality"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "only factors (i) and the half-percent number are computed; (iii) and (iv) are declared uncomputed"

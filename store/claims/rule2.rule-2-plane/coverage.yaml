@@ -1,0 +1,25 @@
+functions:
+  check_planar_split_and_outer_reflection:
+    kind: exact
+    clauses:
+    - (i)
+    omits: inequivalence of the two two-component representations is read from the opposite signs in eps_pm e_t, not tested as a separate statement
+  check_two_repairs_mat4r_inner_parity:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: 'the isomorphism with Mat_4(R) is not computed as such: matrix units, the corner of dimension 4 and centre R are (the corner is Mat_2(R) by check_planar_split_and_outer_reflection)'
+  check_time_positive_form_complex_type:
+    kind: exact
+    clauses:
+    - (iii)
+    omits: the corner of dimension 2 is not shown to be C (no element squaring to minus the idempotent is exhibited), so Cl(1,2) = Mat_2(C) rests on centre span(1, omega) plus the 2-dimensional corner
+untouched_premises:
+  std-algebra.cl11-matrix: "standard algebra cited in the proof; the check computes the statement directly"
+  primer.classification-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
+  rule2.rule-2-kaluza-klein-algebra: the proof reuses that theorem's argument and computations in the plane, not its Cl(1,4) result; the check recomputes them directly in Cl(2,1)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Each clause is computed exactly in GA with the stated signatures; omissions are only named isomorphism labels.

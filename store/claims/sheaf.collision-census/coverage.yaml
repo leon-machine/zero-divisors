@@ -1,0 +1,18 @@
+functions:
+  check_repeated_exponent_census:
+    kind: exact
+    clauses: ["(i)"]
+    omits: ""
+  check_zero_exponent_forces_a_second_zero:
+    kind: exact
+    clauses: ["(ii)", "zeros come in pairs"]
+    omits: ""
+  check_scan_of_rational_parametrisation:
+    kind: sampled
+    clauses: ["(i)", "(ii)"]
+    omits: "scan over u = a/b with |a| <= 7, 1 <= b <= 7 only (the parametrisation identities themselves are exact in u); cross-check of the two polynomial reductions, not an independent proof"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The two polynomial reductions are exact and give the census (i) and (ii); the rational-parametrisation scan is a finite sampled cross-check.

@@ -1,0 +1,26 @@
+functions:
+  check_boost_block_identity:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: "At the Kasner point (-2/7, 3/7, 6/7), c = 3/5, G = exp(c log tau N) for two triangular N (one in each order), three values of t and two log stand-ins (12 cases), one constant theta0: (tau d_tau E) E^{-1} = B entrywise for the orthonormal coframe E = Delta G theta0, and tau K carried to the orthonormal frame equals sym(B) entrywise (with matching characteristic polynomials); G = 1 gives P. The identification of these matrices with the connection forms omega^{l0} and the e^0-leg of the rotation block is by Cartan's first structure equation, argued, not computed; general G, x-dependent theta0 and other weights are not run"
+  check_weighted_criterion:
+    kind: partial
+    clauses:
+    - (ii)
+    omits: Tests the trace formula tr sym(B)^2 = sum p^2 + (c^2/2) sum N^2 tau^(2(p_l-p_m)) and the monotone trend at four values of tau for two fixed N; the if-and-only-if criteria (bounded Delta Omega Delta^-1, residue with no rotation part), the distinct-weights triangular statement in general, and the limit as tau -> 0 are not proved
+  check_counterexample_rate:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: The closed form 1 + (9/98) tau^(-4/7) is compared at four values of tau (t = 1/2..1/16), not as an identity in tau; G -> identity is the trivial f = t^3
+  check_residue_relations_on_kasner_circle:
+    kind: partial
+    clauses:
+    - (iv)
+    omits: Only shows that the Kasner weights satisfy tr R = tr R^2 = (tr R)^2 and that one off-circle point violates it; the derivation of these from the 00 Einstein equation and the Hamiltonian constraint at order tau^-2, the hypotheses on the limit and on tau^2 R3, and independence of Lambda are not tested (they come with the premises)
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_boost_block_identity strengthened: (tau d_tau E) E^{-1} = B and the orthonormal-frame tau K = sym(B) asserted entrywise (12 cases), not only characteristic polynomials; check_residue_field_equations renamed check_residue_relations_on_kasner_circle; docstrings (a), (d) reworded"

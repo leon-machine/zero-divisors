@@ -1,0 +1,14 @@
+functions:
+  check_coefficients:
+    kind: exact
+    clauses: ["(i) middle-regime one-loop coefficients of (a) to (d) and the generic two-loop matrices", "(i) common diagonal point f = f' = 1.0116 at one loop, outside the triangle, lines of (a), (b), (c) miss it"]
+    omits: "exact Fractions from component listings, covering the finite set of four splits; the 62 GeV reading of the 1.2 percent miss (Proposition table-exact(c)) is not computed; 'the lines miss the triangle' is tested as endpoint position on the f = 1 and f' = 0 edges at the one-loop record inputs (alpha_em^-1 = 128, sin^2 = 0.2312, alpha_s = 0.118)"
+  check_decision:
+    kind: partial
+    clauses: ["(ii) at M_I = M_I' every split runs the coefficients of the one-threshold supersymmetric row", "(ii) the diagonal point meets the proton condition", "(ii) one-loop f = f' > 1 so the decision changes with the two-loop row"]
+    omits: "exact; the proton condition is compared at M_U = 1.1e16 GeV and alpha_U^-1 = 25.7 taken from the stored row, which are not recomputed; the diagonal point's admissibility (f = 0.901, M_I = 2.3 TeV, inside the triangle) is asserted only as M_Z < M_I < M_U, and the two-loop run that produces these numbers is not part of the check; the closing sentence that none of the four splits is excluded is a logical consequence"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the module docstring says clauses (iii) to (v) (numerical record: far ends, proton ranges, alpha_s sensitivity) are not part of the check; no function covers them, so they stand on the proof text"

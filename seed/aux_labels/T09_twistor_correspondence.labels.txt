@@ -1,0 +1,62 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{4}{Setting and imports}{section.2}{}}
+\newlabel{fact:completion}{{2.1}{4}{Imported: the forced completion and its fibre quadric}{theorem.2.1}{}}
+\newlabel{fact:fock}{{2.2}{4}{Imported: ladder pairs and Fock modules over the reals}{theorem.2.2}{}}
+\newlabel{sec:spinors}{{3}{5}{Twistors as ascended spinors}{section.3}{}}
+\newlabel{subsec:purespinor}{{3.1}{5}{The pure-spinor construction}{subsection.3.1}{}}
+\newlabel{thm:purespinor}{{3.1}{5}{The Fock model of the complexified ascended algebra}{theorem.3.1}{}}
+\newlabel{rem:dims}{{3.2}{6}{Dimensions, and the real form}{theorem.3.2}{}}
+\newlabel{subsec:chevalley}{{3.2}{6}{The Chevalley pairing}{subsection.3.2}{}}
+\newlabel{lem:chevalley}{{3.3}{7}{The Chevalley pairing}{theorem.3.3}{}}
+\newlabel{subsec:klein}{{3.3}{7}{The Klein quadric is the fibre quadric}{subsection.3.3}{}}
+\newlabel{thm:spinorid}{{3.4}{7}{The spinor identification}{theorem.3.4}{}}
+\newlabel{ex:psi}{{3.5}{8}{The isomorphism on the Witt pair}{theorem.3.5}{}}
+\newlabel{sec:incidence}{{4}{9}{Incidence encodes the completion}{section.4}{}}
+\newlabel{subsec:skew}{{4.1}{9}{Skew lines are Witt completions}{subsection.4.1}{}}
+\newlabel{prop:skewwitt}{{4.1}{9}{Skew lines, splittings, hyperbolic planes: one datum}{theorem.4.1}{}}
+\newlabel{subsec:incidencethm}{{4.2}{9}{The incidence theorem}{subsection.4.2}{}}
+\newlabel{thm:incidence}{{4.2}{9}{The incidence relation is the chart}{theorem.4.2}{}}
+\newlabel{fact:parabolic}{{4.3}{11}{Imported: stabilisers in the flat model}{theorem.4.3}{}}
+\newlabel{lem:homone}{{4.4}{11}{The chiral planes, and the summand spaces}{theorem.4.4}{}}
+\newlabel{prop:reality}{{4.5}{12}{Reality: the conjugation, the twistor form, and the factor $i$}{theorem.4.5}{}}
+\newlabel{rem:factori}{{4.6}{14}{What the factor $i$ is, and what remains conventional}{theorem.4.6}{}}
+\newlabel{subsec:threelang}{{4.3}{14}{The three-language dictionary}{subsection.4.3}{}}
+\newlabel{fact:vacuumT6}{{4.7}{14}{Imported: the vacuum equations and the scale tractor}{theorem.4.7}{}}
+\newlabel{cor:threelang}{{4.8}{14}{One statement in three languages}{theorem.4.8}{}}
+\newlabel{subsec:localtwistor}{{4.4}{15}{Local twistors: the ascended spinor connection}{subsection.4.4}{}}
+\newlabel{fact:ltt}{{4.9}{15}{Imported: the tractor connection, and local twistor transport}{theorem.4.9}{}}
+\newlabel{prop:localtwistor}{{4.10}{15}{Local twistor transport is the ascended spinor connection}{theorem.4.10}{}}
+\newlabel{rem:touchtractor}{{4.11}{17}{Point of contact: what became of the tractor formalism}{theorem.4.11}{}}
+\newlabel{rem:ltconvention}{{4.12}{17}{The one imported convention in the local twistor identification}{theorem.4.12}{}}
+\newlabel{sec:palatial}{{5}{17}{The palatial relation: two quantisations, one core}{section.5}{}}
+\newlabel{subsec:statistics}{{5.1}{18}{Statistics refutes the naive identification}{subsection.5.1}{}}
+\newlabel{prop:statistics}{{5.1}{18}{The statistics no-go}{theorem.5.1}{}}
+\newlabel{subsec:states}{{5.2}{18}{Twistors are the states of three ladder pairs}{subsection.5.2}{}}
+\newlabel{prop:spiniso}{{5.2}{18}{The spin representation is $\mathfrak {sl}(\T )$}{theorem.5.2}{}}
+\newlabel{thm:states}{{5.3}{19}{Twistors are the states of three ladder pairs}{theorem.5.3}{}}
+\newlabel{rem:alphaplanes}{{5.4}{20}{Point of contact: $\alpha $-planes, and the tower}{theorem.5.4}{}}
+\newlabel{subsec:core}{{5.3}{20}{The shared core and the ordering shift}{subsection.5.3}{}}
+\newlabel{lem:weyl}{{5.5}{20}{Symmetrised quadratics of the palatial algebra}{theorem.5.5}{}}
+\newlabel{prop:rent}{{5.6}{21}{The Clifford side of the ordering shift}{theorem.5.6}{}}
+\newlabel{thm:core}{{5.7}{21}{The shared core, and the ordering dictionary}{theorem.5.7}{}}
+\newlabel{fig:twostorey}{{1}{22}{The two-storey resolution of the palatial conjecture (Section \ref {sec:palatial}). The naive identification of Penrose's quantised twistors with the completion's ladder pairs fails on statistics: the palatial algebra is bosonic and admits no finite-dimensional representation, while the ladder pairs are fermionic and lie inside the $64$-dimensional completed algebra (Proposition \ref {prop:statistics}). The proved replacement is a tower. The fermionic (Clifford) quantisation turns ambient directions into twistor states: every twistor is the Fock vacuum of its own three-pair system (Theorem \ref {thm:states}). The bosonic (Weyl) quantisation of the palatial programme turns those states into operators. The conformal algebra is the invariant core of both storeys, and each storey incurs an ordering shift of one half per dimension: $N - \tfrac 12$ per adjoined mode below, the homogeneity shift $-2$ of $-2s-2$ above (Theorem \ref {thm:core})}{figure.1}{}}
+\newlabel{rem:twostorey}{{5.8}{22}{The two-storey picture}{theorem.5.8}{}}
+\newlabel{sec:googly}{{6}{23}{The nonlinear graviton, the boundary, and the googly conjecture}{section.6}{}}
+\newlabel{subsec:graviton}{{6.1}{23}{The nonlinear graviton, and the Lorentzian boundary}{subsection.6.1}{}}
+\newlabel{fact:graviton}{{6.1}{23}{Imported: the nonlinear graviton}{theorem.6.1}{}}
+\newlabel{fact:weylstar}{{6.2}{23}{Imported: Weyl commutes with duality}{theorem.6.2}{}}
+\newlabel{fact:weyl}{{6.3}{23}{Imported: Weyl's theorem}{theorem.6.3}{}}
+\newlabel{lem:star}{{6.4}{23}{Lorentzian duality is a complex structure}{theorem.6.4}{}}
+\newlabel{prop:lorentz}{{6.5}{23}{No real Lorentzian vacuum is half-flat}{theorem.6.5}{}}
+\newlabel{rem:boundary}{{6.6}{24}{The boundary, stated plainly}{theorem.6.6}{}}
+\newlabel{subsec:quartic}{{6.2}{24}{Ordering at quartic order, and the ordering insensitivity of the anti-self-dual sector}{subsection.6.2}{}}
+\newlabel{lem:quartic}{{6.7}{24}{The ordering filtration}{theorem.6.7}{}}
+\newlabel{rem:receptacle}{{6.8}{25}{Where a curvature operator could enter}{theorem.6.8}{}}
+\newlabel{fact:reducibility}{{6.9}{25}{Imported: complete reducibility}{theorem.6.9}{}}
+\newlabel{prop:blind}{{6.10}{25}{The chirality split, and the ordering insensitivity of the ASD sector}{theorem.6.10}{}}
+\newlabel{subsec:googlyconj}{{6.3}{26}{The googly conjecture, at quartic order}{subsection.6.3}{}}
+\newlabel{conj:googly}{{6.11}{26}{Googly localisation at quartic order}{theorem.6.11}{}}
+\newlabel{rem:googlyhonest}{{6.12}{26}{What is proved, and what is conjectured}{theorem.6.12}{}}
+\newlabel{sec:scope}{{7}{26}{Scope, and successor problems}{section.7}{}}
+\newlabel{sec:position}{{8}{27}{Position in the series}{section.8}{}}
+\newlabel{sec:verification}{{9}{28}{Machine verification}{section.9}{}}

@@ -1,0 +1,26 @@
+functions:
+  check_gauge_field_reproduces_stored_connection:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "algebraic part only (the three slots of Theta(A) x V and preservation of Q) at three (Schouten map, direction, tractor) samples; the derivative terms a.grad sigma, D_a mu, a.grad rho and the rotation part Omega(a) are not tested"
+  check_scale_tractor_parallel_iff_einstein:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Theta(A) x I = rho A - P(A) is checked for one non-Einstein P (P1) at three directions and vanishes for P = rho id at Lambda = 9/7; 'rho constant' (the derivative slot) and 'Sch = rho id iff Einstein R(a) = Lambda a' are not tested"
+  check_flat_de_sitter_scale_tractor_is_parallel_frozen_point:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Lambda = 6/5 only; a.grad V + Theta(a) x V = 0 at three points and three directions by an exact central difference (V quadratic), Q(V) = Lambda/3 at those points, V(0) = I_Lambda"
+  check_field_strength_spacetime_block_is_weyl:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "the algebraic part -R(A^B) + Theta(A) x Theta(B) on all basis bivectors for three curvature operators (de Sitter, two Kulkarni-Nomizu type built from generic P1, P2): spacetime block equals -W and no other block, vanishing on de Sitter; the derivative terms (torsion, Cotton) are not tested"
+  check_stelle_west_reduction_is_macdowell_mansouri_connection:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "Lambda = 3/4 only: Theta(A) = A^W, Q(V) = -3/Lambda, Theta(A) x V = A, Theta(A) x I = 0, Theta(A) x Theta(B) = (A^B)/4 = ell^-2 A^B; the restriction to I-perp and the Lorentz curvature block -(R(B) - ell^-2 B) are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebraic content of (i) to (v) is checked at sample parameters; the closing statement on the parabolic subgroup and the gauge law has no function"

@@ -1,0 +1,37 @@
+# The series' guides: deposited on Zenodo, not generated from the store. The Documents page lists
+# them first and links only to the deposited files, so there is one version of each.
+- code: G00
+  title: The Transport Papers
+  subtitle: A Guide
+  doi: 10.5281/zenodo.22924379
+  pdf: https://zenodo.org/records/23244114/files/G00_transport_papers_guide.pdf?download=1
+  version: Version 2.0, October 2026
+  abstract: >-
+    Division by zero is mathematics' most famous forbidden move. This guide, and the series it
+    introduces, take the opposite view: in the algebras that describe spacetime, the failure of
+    division is not a defect but an instruction. The failure is not repaired at the element but
+    resolved by enlarging the space the element lives in, by exactly one new direction of each kind
+    and provably no other, and reading the undefined values off at the new points. That
+    enlargement, one hyperbolic plane, is one fermionic mode: the repair of division is a quantum
+    degree of freedom nobody put in. This is the transport principle, and when pursued mechanically
+    it generates a programme. At the bottom of each algebra is one relation, $uv + vu = 2\,u \cdot v$,
+    which read on an ordinary basis is a metric and on a basis of light rays a fermionic mode.
+    General relativity and quantum mechanics, the series argues, are the two readings. This guide
+    is the way in, every premise named and every refutation counted.
+- code: G01
+  title: Zero Divisors as Signposts
+  subtitle: The detailed guide to the Transport Papers
+  doi: 10.5281/zenodo.21628839
+  version: Version 3.0, October 2026
+  abstract: >-
+    The Transport Papers, eighteen papers T0 to T17 and two companion notes, take the view that in
+    the Clifford algebras that describe spacetime the failure of division is an instruction.
+    Dividing by a null vector is provably impossible at the level of elements in every
+    mixed-signature algebra of dimension at least three. It becomes possible, uniquely and
+    minimally, at the level of the space, by adjoining one hyperbolic plane and reading the
+    undefined values off at the new ideal points, with no inverse operation. This volume, G01, is
+    the detailed guide to the series, one chapter per paper. Each chapter states the paper's
+    headline results with their key equations, explains their mechanism, and ends with a table of
+    every numbered result in the paper, with locators. Nothing is proved here; every result is
+    stated at the level its paper proves it, with its premises named. The series is
+    machine-checked and unrefereed.

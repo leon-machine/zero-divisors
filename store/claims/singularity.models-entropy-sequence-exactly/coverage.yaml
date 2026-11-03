@@ -1,0 +1,14 @@
+functions:
+  check_window_product_and_entropy_identity:
+    kind: exact
+    clauses: ["rho_L is diagonal in the number basis with the product distribution of its members", "S_L(t) = sum_{k in W} H(c_k^2) exactly", "tr rho_R^2 = prod (c_k^4 + s_k^4)", "S_R(t) = S_L(t)"]
+    omits: "S_R = S_L is established as equality of the nonzero spectra of rho_R and rho_L (eigenvectors v_j of rho_R with eigenvalues the rho_L diagonal, mutually orthogonal, eigenvalues summing to tr rho_R), at all six stages; positivity of rho_R (it is a marginal) is used, not computed"
+  check_phase_one_two_and_completion:
+    kind: exact
+    clauses: ["S_R = S_th exactly through Phase I", "in Phase II S_R <= C, strict at every stage with a nonempty window", "S_R = 0 at completion"]
+    omits: "S_R is computed as the entropy of the rho_L spectrum, which check_window_product_and_entropy_identity shows is the nonzero spectrum of rho_R; the 'equality iff every window member is maximally entangled' direction is not tested beyond strictness in this run"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "S_R = S_L now tested as equality of the nonzero spectra of rho_R and rho_L (explicit eigenvectors of rho_R) at all six stages, replacing the m = 2, 3 moment comparison at <= 6 radiation qubits; docstring reworded"

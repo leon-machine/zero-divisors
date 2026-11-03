@@ -1,0 +1,24 @@
+functions:
+  check_static_gauge_field_is_torsion_free_with_static_metric:
+    kind: sampled
+    clauses: ["\"whose derived metric is the static spherically symmetric vacuum metric f dt_s^2 - f^{-1} dr^2 - r^2 dOmega^2 with f = 1 - 2M/r\""]
+    omits: "four static sample points (sqrt f, sin theta, cos theta, M) with rational values: torsion-free connection and the Gram matrix of the physical frame equal diag(f, -1/f, -r^2, -r^2 sin^2 theta); the gauge field is entered by hand in the static gauge"
+  check_static_spectrum_on_frame_planes:
+    kind: sampled
+    clauses: ["\"diagonal on the coordinate planes of the static orthonormal frame, with eigenvalue 2M/r^3 on the radial boost plane and its Hodge dual, and -M/r^3 on the four mixed planes\""]
+    omits: "the same four static sample points: calR(gamma_a gamma_b) equals 2M/r^3 on gamma_0 gamma_1 and gamma_2 gamma_3 and -M/r^3 on the four mixed planes, Ricci contraction zero; not symbolic in M and r"
+  check_painleve_gullstrand_gauge_gives_the_same_spectrum:
+    kind: sampled
+    clauses: ["\"the radial-plane eigenvalue from the gauge field alone\"", "\"the two computations agreeing on the invertible region\""]
+    omits: "four Painleve-Gullstrand sample points, two inside the horizon (beta > 1): Omega(e_t) = (M/r^2) sigma_r, radial eigenvalue 2M/r^3 and the full operator equal to the static one; the PG gauge field is entered by hand from the Cartan equations"
+  check_top_eigenspace_is_sigma_r_and_its_dual:
+    kind: sampled
+    clauses: ["\"eigenvalue ... 2M/r^3 on the radial boost plane sigma_r and its Hodge dual I sigma_r\""]
+    omits: "two static sample points: the 2M/r^3 and -M/r^3 eigenspaces have dimensions 2 and 4 and the first is spanned by sigma_r and I sigma_r; sigma_r^2 = +1, (I sigma_r)^2 = -1"
+untouched_premises:
+  interior.imported-schwarzschild-curvature-spectrum-external: "cited only in the standard-route derivation; the provenance sentence (Butler T5, Doran and Lasenby) is not computable and the docstring says it is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the curvature spectrum is computed exactly from the gauge fields at eight sample points in two gauges; the provenance sentence is untested"

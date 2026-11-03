@@ -1,0 +1,10 @@
+functions:
+  check_collar_rates_and_temperatures:
+    kind: sampled
+    clauses: [(ii), (iii), (iv)]
+    omits: Power series truncated at order 8 for S, rho_H = 1/3 + 4r/15 + ..., the local Hubble temperature 6 pi(1 - 4r/5 + ...)/r^2 by two routes, and the Hubble-KMS period 2 pi(1 + 4r/5 + ...); rho = 1/(2r^2) and the period 2 pi/r^2 are exact; monotonicity of rho_H/rho is supported by positivity of the first nine series coefficients only; the divergence of rho_H at the horizon (so that the Hubble-KMS period diverges as r -> 1, (iii)), and the limit 2 pi/rho_H -> 6 pi at E are not computed as limits.
+  check_product_kms_and_no_common_state:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'A toy two-slice model with profiles f = (1, 2) and g = (1, 3): the product Gibbs state is KMS for f (all 16 x 16 matrix units) and population ratios rule out any g-KMS state; the actual Killing, Hubble and rapidity profiles are not used, so the claim that no state on two or more slices is KMS for two of the three flows rests on the argued monotonicity of rho_H/rho; uniqueness is imported.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Series values 6 pi, -24/5, 4/5 and the rates match the statement; the no-common-state claim is checked only on a toy profile pair.'}

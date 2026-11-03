@@ -1,0 +1,18 @@
+functions:
+  check_spacelike_nu_gives_cl_pq:
+    kind: sampled
+    clauses:
+    - '"If nu^2 = -1 then e_i -> e_i nu extends to an isomorphism Cl(p,q) = Cl^0(p,q+1)"'
+    omits: all 20 signatures with 1 <= p + q <= 5; relations checked and the 2^n ordered products of the images span a space of dimension 2^n = dim Cl^0
+  check_timelike_nu_gives_cl_qp:
+    kind: sampled
+    clauses:
+    - '"if nu^2 = +1 then the same map gives Cl(q,p) = Cl^0(p+1,q)"'
+    omits: the same range p + q <= 5, plus two explicit instances
+untouched_premises:
+  std-algebra.existence-uniqueness: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: both clauses are checked by the relations and a dimension count on all signatures with p + q <= 5

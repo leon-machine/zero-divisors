@@ -1,0 +1,20 @@
+functions:
+  check_qi_times_qv:
+    kind: sampled
+    clauses: ["Q(I) Q(V) = -1 for Lambda != 0"]
+    omits: "Three nonnull rational samples (two signs of Lambda)."
+  check_stabiliser_reductive_iff_non_null:
+    kind: sampled
+    clauses: ["at Lambda = 0 the scale tractor is null with parabolic (Poincare-type) stabiliser", "the stabiliser is reductive exactly when Q(I) != 0"]
+    omits: "Three nonnull and two null samples; \"parabolic\" is read from the 4-dimensional abelian radical ideal (I e_mu) and the 11-dimensional null-line stabiliser. The rotation of I from null to non-null as a process is not tested."
+  check_degenerate_clifford_ideal:
+    kind: sampled
+    clauses: ["a one-dimensional radical gives Cl(p,q;1) with nilpotent n, n^2 = 0, and n Cl a two-sided ideal of square zero", "n is a vector-type zero divisor"]
+    omits: "All 15 (p,q) with p + q <= 4 (not every (p,q)); the sheaf-paper treatment and that the transport resolves the zero divisor are cited, not tested."
+untouched_premises:
+  sheaf.one-sided-completion: "Cited for the one-sided completions of the sheaf paper, which the docstring states are not recomputed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The Q(I)Q(V) identity, the stabiliser structure at null and non-null I, and the nilpotent ideal are checked on samples; the sheaf-paper material is cited."

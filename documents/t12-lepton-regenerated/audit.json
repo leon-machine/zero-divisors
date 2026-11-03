@@ -1,0 +1,12 @@
+[
+ {
+  "code": "D109",
+  "block": "abstract",
+  "message": "abstract has 265 words; budget 150 to 250"
+ },
+ {
+  "code": "D110",
+  "block": "document",
+  "message": "AI judge not configured: entailment of tagged sentences by their claims was not checked"
+ }
+]

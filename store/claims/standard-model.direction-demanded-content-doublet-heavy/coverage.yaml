@@ -1,0 +1,22 @@
+functions:
+  check_record_ratio_below_r0:
+    kind: exact
+    clauses:
+    - '"R = 1357472/973455 = 1.39448..., r_0 = 218/115 = 1.89565..., R < r_0"'
+    omits: Inputs (alpha_em^-1 = 128, sin^2 = 0.2312, alpha_s = 0.118) are re-stated in the function, not read from spectrum-run
+  check_direction_criterion:
+    kind: sampled
+    clauses:
+    - '"f > 0 iff (1 + R) D2 > D1 + R D3"'
+    - '"admissible only if r_Delta <= R"'
+    omits: Checked on a 7^3 grid of rational shifts, not symbolically; the second clause is tested as f <= 1 iff r_Delta <= R among shifts with f > 0 and b_23 + D_23 > 0, and the admissibility condition is not tested for the shifts with b_23 + D_23 <= 0; both outcomes of each criterion occur on the grid, and b_12 = 109/15, b_23 = 23/6 are pinned by hand
+  check_gluino_worsens:
+    kind: sampled
+    clauses:
+    - '"content with D2 = 0, D3 > 0 and D1 >= 0, a gluino for instance, has f < 0"'
+    omits: Tested for D1 in {0, 1/10, 2} and D3 in {1/2, 2, 5} plus the gluino (0, 0, 2), not symbolically; the control (-2, 0, 1/6) shows the scope condition D1 >= 0 is needed
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "formal and technical restated: the gluino sentence now carries Delta_1 >= 0 (the criterion gives f > 0 when Delta_1 < -R Delta_3); check adds the control (-2, 0, 1/6) with f > 0. 2026-10-23 weak-checks pass: check_direction_criterion now asserts that both sides of each equivalence occur on the grid (not only f > 0 and f <= 1) and pins b_12, b_23 by hand."

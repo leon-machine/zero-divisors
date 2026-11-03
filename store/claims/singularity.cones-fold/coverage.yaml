@@ -1,0 +1,25 @@
+functions:
+  check_null_directions_of_the_physical_cone:
+    kind: sampled
+    clauses: ["hb^-1(a) = e_t + (lambda + beta) e_r and g(a,a) = 1 - (lambda + beta)^2", "a is g-null exactly when lambda = -beta +- 1"]
+    omits: "exact in lambda (g is quadratic, fixed by three values and factored over Q(lambda)) but at four sample beta only"
+  check_horizon_null_pair:
+    kind: exact
+    clauses: ["at the horizon beta = 1 the null directions are lambda = 0 (hovering) and lambda = -2"]
+    omits: "scan of integer lambda in [-3, 2] for roots of a quadratic; two roots found, so the root set is complete"
+  check_cones_fold_onto_e_r:
+    kind: sampled
+    clauses: ["normalised directions 1/(-beta +- 1) e_t + e_r tend to e_r, both tipping inward", "g(e_t, e_t) = 1 - beta^2 -> -infinity"]
+    omits: "negative coefficients and the bound |c|(beta - 1) <= 1 checked at beta = 2, 10, 1000, not a limit proof; g(e_t,e_t) = 1 - beta^2 obtained by fitting a quadratic to three values (assumed quadratic)"
+  check_limit_direction_is_null_kernel_direction:
+    kind: partial
+    clauses: ["the degeneration is through a null kernel direction in the exact sense of Proposition singularity.degeneration-exactly"]
+    omits: "P e_r = 0 and vanishing of the limit form ghat(a,b) = -(a.e_t)(b.e_t) on e_r; ghat is typed in rather than derived as the limit of the rescaled cometric"
+untouched_premises:
+  singularity.non-removability-invariant-argument: "cited only for the closing sentence that the degeneration is not removable by gauge choice; no finite computation is attempted"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The cone computation is checked at sample beta; the closing non-removability sentence is cited and untested."

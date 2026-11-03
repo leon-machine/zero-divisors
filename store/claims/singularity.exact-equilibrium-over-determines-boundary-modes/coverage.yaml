@@ -1,0 +1,18 @@
+functions:
+  check_geometric_state_is_product:
+    kind: sampled
+    clauses: ["rho proportional to e^(-beta K_geo) = tensor product over k of e^(-beta omega_k K_k)"]
+    omits: "two three-mode weight sets ((1,2,3) at y = 2/3 and (1,1/2,2) at y = 4/9), entrywise on all 8 basis states; not general weights or mode count"
+  check_zero_correlation_and_zero_deficit:
+    kind: sampled
+    clauses: ["C(rho) = sum_k S(rho_k) - S(rho) = 0", "descent deficit D(rho || E_N rho) = 0, rho a fixed point of E_N", "the two levels (deficit and carried-quanta correlations) agree exactly"]
+    omits: "the same two three-mode states; entropies are exact vectors over the primes, deficit identity D = C(rho) - C(E_N rho) checked as 0 = 0 - 0"
+  check_correlated_state_carries_the_deficit:
+    kind: sampled
+    clauses: ["the correlations on which Steps 5 and 6b depend are precisely the deviation from it"]
+    omits: "one pure two-mode state c|00> + s|11> (3/5, 4/5) with the same Gibbs marginals: C = 2 S(m), D = S(m), D = C(rho) - C(E_N rho); a qualitative contrast, not a theorem"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Product form, zero correlation and zero deficit are checked exactly on two three-mode samples; the final 'deviation' sentence has only one contrasting example."

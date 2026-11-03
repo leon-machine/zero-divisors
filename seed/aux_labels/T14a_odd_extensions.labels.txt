@@ -1,0 +1,55 @@
+\newlabel{sec:setting}{{1}{3}{Setting, and what is imported}{section.1}{}}
+\newlabel{fact:towers}{{1.1}{3}{imported: the towers and the clock}{theorem.1.1}{}}
+\newlabel{fact:reps}{{1.2}{3}{imported: the representatives at the dimension nearest four, and the types}{theorem.1.2}{}}
+\newlabel{fact:copy}{{1.3}{3}{imported: the copy theorem, and the soldered residue}{theorem.1.3}{}}
+\newlabel{fact:conformal}{{1.4}{3}{imported: the conformal completion}{theorem.1.4}{}}
+\newlabel{fact:frozen}{{1.5}{3}{imported: the frozen point}{theorem.1.5}{}}
+\newlabel{sec:single}{{2}{3}{What a single generator does}{section.2}{}}
+\newlabel{def:single}{{2.1}{3}{single extension}{theorem.2.1}{}}
+\newlabel{lem:omega}{{2.2}{4}{the volume element in odd dimension}{theorem.2.2}{}}
+\newlabel{thm:split}{{2.3}{4}{doubling or complexification}{theorem.2.3}{}}
+\newlabel{cor:four}{{2.4}{4}{the four extensions of the oriented pair}{theorem.2.4}{}}
+\newlabel{rem:pseudo}{{2.5}{5}{the added axis is the pseudoscalar}{theorem.2.5}{}}
+\newlabel{sec:mirror}{{3}{5}{Where the mirror sits}{section.3}{}}
+\newlabel{thm:mirror}{{3.1}{5}{the mirror inside the complexified extension, and absent from the doubled one}{theorem.3.1}{}}
+\newlabel{prop:momenta}{{3.2}{6}{the translation bivectors of the frozen point}{theorem.3.2}{}}
+\newlabel{rem:physics}{{3.3}{6}{what this says, and what it does not}{theorem.3.3}{}}
+\newlabel{sec:rung}{{4}{7}{The rung's even subalgebra is the anti-de Sitter algebra}{section.4}{}}
+\newlabel{thm:rung}{{4.1}{7}{the twistor algebra is $\Cl (2,3)$}{theorem.4.1}{}}
+\newlabel{cor:blind}{{4.2}{7}{the copy theorem's blind spot}{theorem.4.2}{}}
+\newlabel{rem:holography}{{4.3}{8}{the holographic coincidence}{theorem.4.3}{}}
+\newlabel{sec:clock}{{5}{8}{The clock, and the paths between the oriented towers}{section.5}{}}
+\newlabel{prop:clock}{{5.1}{8}{the four extensions are the four odd towers}{theorem.5.1}{}}
+\newlabel{prop:path}{{5.2}{9}{every path to the mirror crosses the two-time fork}{theorem.5.2}{}}
+\newlabel{rem:nomech}{{5.3}{9}{no mechanism}{theorem.5.3}{}}
+\newlabel{sec:pair}{{6}{9}{The frozen point splits the ascent's pair}{section.6}{}}
+\newlabel{fact:null}{{6.1}{9}{imported: the frozen point at $\Lambda = 0$, and the degenerate algebras}{theorem.6.1}{}}
+\newlabel{thm:pair}{{6.2}{9}{$I$ and $V$ are the ascent's pair, signed by $\Lambda $}{theorem.6.2}{}}
+\newlabel{cor:wall}{{6.3}{10}{the cosmological constant deforms the wall}{theorem.6.3}{}}
+\newlabel{rem:t10}{{6.4}{10}{what this adds to the dark-energy paper}{theorem.6.4}{}}
+\newlabel{sec:soldering}{{7}{11}{The soldering decides}{section.7}{}}
+\newlabel{prop:belongs}{{7.1}{11}{$\Cl (I^{\perp })$ belongs to this tower}{theorem.7.1}{}}
+\newlabel{cor:readings}{{7.2}{11}{the two readings, and which is which}{theorem.7.2}{}}
+\newlabel{cor:nocoupling}{{7.3}{11}{$\Lambda $ is not a coupling between towers}{theorem.7.3}{}}
+\newlabel{rem:copies}{{7.4}{12}{what the copies are}{theorem.7.4}{}}
+\newlabel{sec:run}{{8}{12}{Running the transport on the wall}{section.8}{}}
+\newlabel{fact:completion}{{8.1}{12}{imported: the minimal completion of a degenerate algebra, and Rule 1}{theorem.8.1}{}}
+\newlabel{thm:free}{{8.2}{12}{the transport constrains the frozen point only through its norm}{theorem.8.2}{}}
+\newlabel{cor:uncaused}{{8.3}{13}{the cosmological constant is undetermined within the series}{theorem.8.3}{}}
+\newlabel{rem:nullpair}{{8.4}{13}{the dictionary with the ascent's null pair}{theorem.8.4}{}}
+\newlabel{rem:twobits}{{8.5}{14}{two bits, compared}{theorem.8.5}{}}
+\newlabel{rem:stance}{{8.6}{14}{what the transport stance does and does not say about $\Lambda $}{theorem.8.6}{}}
+\newlabel{sec:doors}{{9}{14}{Two negative results}{section.9}{}}
+\newlabel{fact:goldstone}{{9.1}{14}{imported: the point at infinity is pure gauge}{theorem.9.1}{}}
+\newlabel{prop:dilation}{{9.2}{14}{the boost is the dilation; the ratio $b/a$ is gauge}{theorem.9.2}{}}
+\newlabel{prop:twotowers}{{9.3}{15}{the two towers in one curved universe}{theorem.9.3}{}}
+\newlabel{rem:onesees}{{9.4}{16}{the one operator that sees the difference}{theorem.9.4}{}}
+\newlabel{sec:lambdawall}{{10}{16}{The wall in the cosmological constant}{section.10}{}}
+\newlabel{fact:t4}{{10.1}{16}{imported: tame walls, the exceptional algebra, the residue, and conservation}{theorem.10.1}{}}
+\newlabel{prop:tamewall}{{10.2}{17}{the $\Lambda $ line is a tame wall}{theorem.10.2}{}}
+\newlabel{thm:lambdawall}{{10.3}{17}{exceptional algebra, residue, and the completion on both sides}{theorem.10.3}{}}
+\newlabel{cor:twowalls}{{10.4}{18}{two classes of completion}{theorem.10.4}{}}
+\newlabel{rem:t4earns}{{10.5}{19}{what the section adds}{theorem.10.5}{}}
+\newlabel{sec:refute}{{11}{19}{What this note depends on}{section.11}{}}
+\newlabel{sec:position}{{12}{20}{Position in the series}{section.12}{}}
+\newlabel{sec:verification}{{13}{20}{Machine verification}{section.13}{}}

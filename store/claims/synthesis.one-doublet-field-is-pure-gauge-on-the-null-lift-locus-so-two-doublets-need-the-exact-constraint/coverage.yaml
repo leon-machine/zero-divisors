@@ -1,0 +1,17 @@
+functions:
+  check_one_doublet_subspaces_are_the_graphs:
+    kind: complete
+    clauses: ["(1)"]
+    omits: "the space of real 8x4 matrices intertwining the four u(2) generators on the doublet and on R_C is solved in full by exact elimination (real dimension 4) and equals the span of the four named maps; injectivity is checked on four sampled nonzero maps and follows in general from irreducibility of the doublet as a real representation (proof); that every invariant four-dimensional subspace is such an image is complete reducibility (proof)"
+  check_graphs_meet_the_lift_locus_in_one_frame:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "Q = a|alpha|^2, N and m/N on G_a for five values of a and three alpha each; Q = 0 on the complex doublets; c_lam in G_a exactly for a = -lam^2/h for fifteen (h, lam); the general identities are the one-line computations in the proof"
+  check_one_doublet_field_on_the_lift_locus_is_pure_gauge:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "for fifteen (h, lam): T G_{-r} cap ker dQ has dimension 3 and equals the gauge tangent; the rung unit and both charged directions lie outside T G_{-r}; the u(2)-span of {c_lam, u_lam} has real rank 8 and that of c_lam alone is G_{-r}"
+  check_radial_mode_of_a_one_doublet_field_changes_q:
+    kind: sampled
+    clauses: ["(4)", "(5)"]
+    omits: "for fifteen (h, lam): the Hermitian complement of the gauge orbit inside G_{-r} at c_lam is the line of c_lam, along which dQ = -2h, while Q(c_lam, u_lam) = 0 and the rung unit moves the moment map; the exact difference c_lam/lam - u_lam = (2h/lam^2) e_4; the mass of the normal directions and the order-of-magnitude mass shift are in the proof, not checked"

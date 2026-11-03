@@ -1,0 +1,20 @@
+functions:
+  check_sums_of_null_vectors:
+    kind: sampled
+    clauses: ["(i) the orthogonal complement of every non-null vector is nondegenerate and indefinite", "(i) every vector is a sum of two null vectors with w perpendicular to v and Q(w) = -Q(v)/4"]
+    omits: "every non-null vector of the integer box {-2..2}^4 in R^(2,2), both signs of Q(v), with the decomposition constructed exactly for each; the statement is for every vector"
+  check_null_cone_connected:
+    kind: partial
+    clauses: ["(i) the null cone minus the origin is connected, so it has no invariant future half"]
+    omits: "exhibits the rational circle parametrisation of a loop of nonzero null vectors from n towards -n at six sample parameters, plus the limit u -> infinity; connectedness of the whole cone is not computed. The contrast in R^(1,3) (24 nonzero null vectors in the box all with t0 != 0) is a sample"
+  check_definite_has_no_null_vector:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the Gram matrix of R^(4,0) and R^(0,4) is diagonal with entries +-1, hence definite; the closing consequences (no massless constituent, no time, no evolution) are interpretation"
+untouched_premises:
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(ii) is exact, (i)'s decomposition is checked on an integer box and the connectedness of the cone only by an exhibited loop; the docstring describes these limits"

@@ -1,0 +1,15 @@
+functions:
+  check_pair_number_table:
+    kind: exact
+    clauses: ["N_W takes the values 1 and 3 on Q and L and 0 and 2 on the rung-even species", "B - L takes four values where the rung algebra distinguishes two parities"]
+    omits: ""
+  check_four_operators_forms:
+    kind: exact
+    clauses: ["w_4 and w_4 N_W have the 10 form, with the form of w_4 N_W equal to 3/2 times that of w_4", "w_4 chi has vanishing symmetric form", "only w_4 N_W chi has the 126 form, |y_e| = 3/2, |y_d| = 1/2", "f(T_GJ) = -2/3 f(w_4 N_W chi), T_GJ = w_4 chi - 2/3 w_4 N_W chi"]
+    omits: "The final sentence (the pair number is outside every object of the mass mechanism derived in the series) is a survey and is not computed."
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact module computations on the sixteen reproduce every number and the operator identity stated."

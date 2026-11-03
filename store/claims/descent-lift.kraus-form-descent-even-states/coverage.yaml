@@ -1,0 +1,23 @@
+functions:
+  check_kraus_sum_is_pinching:
+    kind: sampled
+    clauses: ["on the full Fock space the descent is 2^-nu sum_kappa G^kappa rho G^kappa"]
+    omits: "nu = 1, 2, 3 only, every matrix unit; the statement is for general nu"
+  check_kraus_rank_is_choi_rank:
+    kind: sampled
+    clauses: ["Kraus rank 2^nu on the full space", "Kraus rank 2^(nu-1) on the even sector"]
+    omits: "nu = 1, 2, 3 only (2, 4, 8 and 1, 2, 4), rank computed as the Choi rank of the stated channel"
+  check_even_sector_monomials_pair_up:
+    kind: sampled
+    clauses: ["on the even sector G^kappa and G^(kappa + 1) agree, so the monomials pair up", "the descent is 2^(1-nu) sum_{kappa_nu = 0} G^kappa rho G^kappa", "every Kraus operator is even and number-diagonal", "nu = 1: the descent is the identity"]
+    omits: "nu = 1, 2, 3, 4 only; the formula is checked on even matrix units |A><B|"
+  check_pair_example:
+    kind: sampled
+    clauses: ["nu = 2: (1/2)(rho + G0 rho G0) on span{|00>, |11>} kills exactly the pairing coherence, c|00> + s|11> -> diag(c^2, s^2)"]
+    omits: "run at (c, s) = (4/5, 3/5) only (coherence 12/25 removed, output diag(16/25, 9/25)); the general (c, s) map is not tested at free parameters, though check_even_sector_monomials_pair_up covers the nu = 2 formula on all matrix units"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Fraction computations at nu <= 3 or 4 match the docstring; nothing is claimed beyond those cases."

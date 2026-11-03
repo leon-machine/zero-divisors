@@ -1,0 +1,13 @@
+functions:
+  check_oriented_causal:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    omits: Clauses (i) and (ii) are enumerated for n <= 10 only (the statement is for every dimension) and use the family criterion m odd as an input; (iii) is run only for the oriented causal signatures of dimensions 4 and 8; the type-C obstruction and the explicit central idempotents of Cl(p,q+1) are not computed (only that the volume element there is central of square +1); the closing consequence about windows and P3 is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Signature enumeration to n=10 and exact blade algebra for n=4,8 reproduce the residue pair {2,6}, the absence of oriented causal towers at residues 0 and 4, and omega^2=-1.

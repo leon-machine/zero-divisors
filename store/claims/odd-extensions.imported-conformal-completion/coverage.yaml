@@ -1,0 +1,18 @@
+functions:
+  check_shadow_completes_one_rung_up:
+    kind: sampled
+    clauses: ["a shadow (t,s) has conformal completion with ambient (t+1, s+1), one rung up its own tower", "for this world the ambient is (2,4)"]
+    omits: "All 15 shadows with t + s <= 4 (not every (t,s)); the completion is built by adjoining a hyperbolic plane, so this tests the signature and residue bookkeeping of that construction, not the imported forced-completion fact itself."
+  check_conformal_spinor_space_is_c4_with_unit_i6:
+    kind: exact
+    clauses: ["conformal spinor space CS = C^4 (twistor space) with complex unit I_6"]
+    omits: "Computed with one explicit primitive idempotent P of Cl^0(2,4)."
+  check_spin_group_acts_through_even_subalgebra:
+    kind: exact
+    clauses: ["its conformal spin group acts on CS through Cl^0(2,4)"]
+    omits: "Computes that the even subalgebra acts faithfully on CS (rank 32 = 2 x 4^2); the spin group itself is not constructed, it sits inside Cl^0 by definition."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The (2,4) conformal spinor structure is computed exactly; the general (t,s) completion is tested on the 15 shadows of dimension at most four."

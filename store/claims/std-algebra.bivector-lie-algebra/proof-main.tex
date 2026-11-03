@@ -1,0 +1,9 @@
+Grades. By \claimref{std-algebra.z2-grading}, $AC$ has grades $0, 2, 4$ and $Ax$ grades $1, 3$. Reversion is an anti-automorphism with $\tilde{A} = -A$, $\tilde{x} = x$, acting on grade $k$ by $(-1)^{k(k-1)/2}$ (\claimref{std-algebra.involution-properties}). So $(AC)^{\sim} = \tilde{C}\tilde{A} = CA$, hence $\langle CA \rangle_k = (-1)^{k(k-1)/2} \langle AC \rangle_k$: equal for $k = 0, 4$ and opposite for $k = 2$. Thus $AC - CA = 2\langle AC \rangle_2$. Likewise $(Ax)^{\sim} = -xA$, so $\langle xA \rangle_1 = -\langle Ax \rangle_1$ and $\langle xA \rangle_3 = \langle Ax \rangle_3$, giving $Ax - xA = 2\langle Ax \rangle_1$.
+
+Cyclicity: in an orthogonal basis the scalar part of $e_I e_J$ is nonzero only if $I = J$ (\claimref{std-algebra.grade-decomposition}), and then $e_I e_J = e_J e_I$; bilinearity gives $\langle XY \rangle_0 = \langle YX \rangle_0$.
+
+Skewness: for vectors $\langle u y \rangle_0 = B(u, y)$ by \claimref{std-algebra.vector-squares}. So $2B(A \times x, y) + 2B(x, A \times y) = \langle (Ax - xA) y \rangle_0 + \langle x (Ay - yA) \rangle_0 = \langle Axy \rangle_0 - \langle xyA \rangle_0 = 0$ by cyclicity.
+
+Lie homomorphism: in any associative algebra $[[A, C], x] = [A, [C, x]] - [C, [A, x]]$ (Jacobi), which with the factors $\tfrac12$ reads $(A \times C) \times x = A \times (C \times x) - C \times (A \times x)$.
+
+Isomorphism when nondegenerate: if $A \times x = 0$ for all $x$ then $A$ commutes with $V$, hence with the whole algebra, so it is central; by \claimref{primer.centre} the centre is spanned by $1$ and, for odd $n$, the pseudoscalar of odd grade $n$, so a central bivector is $0$. The map is therefore injective, and $\dim \so(V, Q) = \binom{n}{2}$ because $X \mapsto G X$ ($G$ the invertible Gram matrix) identifies skew-adjoint maps with skew-symmetric matrices. Equal dimensions give the isomorphism.

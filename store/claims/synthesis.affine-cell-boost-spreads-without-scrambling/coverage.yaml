@@ -1,0 +1,14 @@
+functions:
+  check_affine_cells_spread_at_rate_kappa:
+    kind: sampled
+    clauses: ["(i)", "(ii)"]
+    omits: "Only m = e^{kappa t} = 4 (n steps, n up to 4) on cells j = 1, 2 in a finite window of cell-constant functions; general integer m is not tested, and the CAR anticommutator is represented by the one-particle overlap."
+  check_log_cells_are_displaced_and_generator_hops:
+    kind: sampled
+    clauses: ["(iii)", "(iv)"]
+    omits: "m = 4 only; log cells i = 0 to 3; for (iv) it checks that weight leaves cell j and arrives at cell 4j (overlap 1/2), not at all of the cells mj, ..., mj + m - 1. The closing remarks (not the out-of-time-order growth of the chaos bound) are not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Fraction checks of the dilation at m = 4 on a finite window support the four clauses at that sample; the general m and kappa are not tested."

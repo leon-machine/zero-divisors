@@ -1,0 +1,22 @@
+functions:
+  check_residues_in_both_conventions:
+    kind: exact
+    clauses:
+    - (i) kappa_c = S_BH/A = 1/4 in the 1-nat convention
+    - '(ii) kappa_c = 1/(4 ln 2) in the capacity convention: one mode per 4 ln 2 Planck areas per period'
+    omits: the identification with the Bekenstein-Mukhanov area quantum is a citation, not tested
+  check_conventions_differ_by_ln2:
+    kind: exact
+    clauses:
+    - (iii) the two residues differ by exactly ln 2; a two-level mode holds at most ln 2 nats and ln 2 < 1, so the 1-nat convention credits more than a mode holds; the thinning is 16 pi ln 2
+    omits: '"at most ln 2" is tested as the value of the maximally mixed state (coefficient 1 in units of ln 2), not as a maximum over states; ln 2 < 1 via e > 5/2'
+  check_one_helicity_per_mode:
+    kind: exact
+    clauses:
+    - '(iv) one boundary mode registers one helicity: capacity per mode ln 2 and kappa_c = 1/(4 ln 2), not 1/(8 ln 2)'
+    omits: the homogeneities -2s - 2 are distinct (arithmetic); that one mode registers one helicity is the lift's modelling joint J3 and is not checked (docstring)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Residue arithmetic is exact; the modelling joint J3 behind clause (iv) is explicitly untested.

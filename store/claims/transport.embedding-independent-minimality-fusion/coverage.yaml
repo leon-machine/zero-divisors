@@ -1,0 +1,22 @@
+functions:
+  check_case_analysis_minimum:
+    kind: sampled
+    clauses:
+    - dim B >= 2^(n+1) for any simple B containing A
+    - equality iff B = Mat_2k(F) (unique minimiser)
+    omits: 'Finite enumeration of the proof arithmetic: F in {R,H}, k = 1..6, D in {R,C,H}, multiplicities a, b <= 12; unbounded k and multiplicities are not covered'
+  check_embedding_rules:
+    kind: sampled
+    clauses:
+    - (proof ingredient) unital embeddings C -> Mat_2(R), H -> Mat_4(R), C -> H; no C in Mat_odd(R)
+    omits: The explicit embeddings are exact; the odd-size exclusion is only the determinant sign for a = 1, 3, 5, 7, not a general argument; not a clause of the statement itself
+  check_equality_case_is_mat_2k_f:
+    kind: sampled
+    clauses:
+    - equality holds iff B = Mat_2k(F) = Mat_2(Cl^0(p,q))
+    omits: Six split signatures with n <= 5; shows the Rule-2 fusion is simple of dimension 2^(n+1) with primitive-idempotent corner F, but does not compute the isomorphism with Mat_2(Cl^0(p,q))
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The minimality bound is tested through the proof arithmetic on a bounded range and the equality case on six split signatures.

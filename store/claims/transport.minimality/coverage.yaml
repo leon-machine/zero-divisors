@@ -1,0 +1,31 @@
+functions:
+  check_hyperbolic_plane_completion_in_every_signature:
+    kind: sampled
+    clauses:
+    - 'a single hyperbolic plane suffices: the null lift X(x) = f(x) + x in Cl(p+1,q+1)'
+    - the signature increment is (+1,+1) in every signature
+    omits: Fourteen signatures (definite, mixed, n = 0) with four sample x each (56 cases); increment read from the congruence signature of the Gram matrix, not for all (p,q)
+  check_null_vector_forces_both_signs:
+    kind: sampled
+    clauses:
+    - W contains at least one direction of positive square and one of negative square
+    - enlargements of signature increment (+k,0) or (0,+k) are excluded
+    omits: Seven sample Gram matrices of dimension 2 to 4 with a rational null vector, plus tridiagonal definite Grams for k <= 5; the general fact (nondegenerate W with a null vector is indefinite) is classical and sampled here
+  check_two_dimensional_w_is_hyperbolic_plane:
+    kind: sampled
+    clauses:
+    - any two-dimensional W admitted by the definition is a hyperbolic plane, unique up to isometry
+    omits: Eight sample 2 x 2 Gram matrices, six with a null vector (Gram [[0,1],[1,0]] in a computed basis) and two definite controls
+  check_mixed_signature_second_route:
+    kind: sampled
+    clauses:
+    - (second route) for mixed V, Q_W o f takes both signs
+    omits: Mixed signatures in MIXED_SIGS with one x of Q = +1 and one of Q = -4 each
+untouched_premises:
+  std-algebra.witt-decomposition: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The completion works in the sampled signatures and the structural facts are checked on sample Grams; the classical quadratic-space theorems are not proved by enumeration.

@@ -1,0 +1,7 @@
+In the defining representation $v = E_{12}$, $v^{*} = E_{21}$, so $P = E_{22}$ and $\sigma = 2P - 1 = \operatorname{diag}(-1, +1)$; then
+\[
+\alpha\begin{pmatrix} a & b \\ c & d \end{pmatrix}
+= \begin{pmatrix} -1 & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} -1 & 0 \\ 0 & 1\end{pmatrix}
+= \begin{pmatrix} a & -b \\ -c & d \end{pmatrix},
+\]
+so $\tfrac12(x + \alpha(x)) = \operatorname{diag}(a,d)$, which is the value of $E$ computed in Proposition \claimref{singularity.descent-what-it-erases}. The average of a finite group acting by automorphisms is a conditional expectation onto the fixed-point algebra. It is moreover the unique conditional expectation of $\Aa$ onto $\Aev$, by bimodularity: if $F$ is any conditional expectation onto $\Aev$, then for odd $x$, since $\sigma \in \Aev$ and $\sigma x \sigma = -x$, bimodularity gives $\sigma F(x) \sigma = F(\sigma x \sigma) = -F(x)$, while $F(x) \in \Aev$ is fixed by conjugation with $\sigma$, so $F(x) = -F(x) = 0$: every conditional expectation onto $\Aev$ annihilates the $(-1)$-eigenspace of $\alpha$, which is $\Aod = \operatorname{span}\{v, v^{*}\}$, and agrees with the identity on $\Aev$, hence equals $E$ on $\Aa = \Aev \oplus \Aod$. State preservation is $\omega(E(x)) = \tfrac12(\omega(x) + \omega(\alpha(x))) = \omega(x)$. The script verifies the identity, idempotence, the conditional-expectation property $E(axb) = aE(x)b$ for even $a, b$, and the range and kernel, on generic rational data.

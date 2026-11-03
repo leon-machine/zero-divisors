@@ -1,0 +1,24 @@
+functions:
+  check_even_subalgebra_is_mat4c:
+    kind: exact
+    clauses: ["Cl^0(2,4) is isomorphic to Cl(2,3)", "the complex unit I_6 spans the centre with 1"]
+    omits: "Also gives Cl^0(2,4) = Cl(4,1) and Mat(4, C). It does not itself test that Cl^0(2,4) is the complexification of each oriented real form (see the shadows function)."
+  check_both_shadows_inside:
+    kind: exact
+    clauses: ["Cl^0(2,4) contains both real forms (Cl(1,3) and Cl(3,1))"]
+    omits: "Checks that e_i e_6 and e_i e_1 generate 16-dimensional copies of Cl(1,3) and Cl(3,1); does not check that a shadow plus I_6 times it spans all 32 dimensions (the complexification claim), and the non-isomorphism of the shadows is the imported Fact, not computed."
+  check_rungs_not_isomorphic:
+    kind: exact
+    clauses: ["the rungs Cl(2,4) and Cl(4,2) do not identify"]
+    omits: "Wedderburn types Mat(4,H) versus Mat(8,R) from primitive idempotents; that these are the two towers' types by the imported Facts is not recomputed."
+  check_odd_extensions_differ:
+    kind: complete
+    clauses: ["odd extensions that signature reversal does not identify, whose centres differ", "the even subalgebras do identify"]
+    omits: "Exhaustive over the four signatures (2,3), (4,1), (3,2), (1,4); the claim that the bare fifth generator is used by no derived quantity of the series is imported, and the isomorphism of conformal spin groups and spinor modules is not computed here."
+untouched_premises:
+  odd-extensions.two-towers-one-curved-universe: "Cited only for the remark that no derived quantity of the series uses the bare fifth generator, which the docstring lists as not computable."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four functions compute the even-subalgebra structure, the rung types and the odd-extension centres exactly; the first-construction-by-dimension remark and the spin-group and spinor-module identifications are not computed."

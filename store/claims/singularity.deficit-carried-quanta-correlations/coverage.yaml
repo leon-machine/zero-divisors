@@ -1,0 +1,18 @@
+functions:
+  check_diagonal_marginals_pass_through_descent:
+    kind: sampled
+    clauses: ["if every rho_k is diagonal, the single-mode marginals of E_N(rho) equal those of rho"]
+    omits: "four states (the model's final 8-qubit radiation, a scrambled two-pair state, one 2-qubit and one 3-qubit mixed state built with diagonal marginals) plus one coherent-marginal control"
+  check_deficit_is_total_correlation_drop_mixed:
+    kind: sampled
+    clauses: ["D(rho || E_N rho) = C(rho) - C(E_N rho)"]
+    omits: "two mixed states only (2-qubit and 3-qubit), D computed from its definition; exact entropy vectors over primes"
+  check_pure_state_deficit_is_whole_descended_entropy:
+    kind: sampled
+    clauses: ["for globally pure rho, S(rho) = 0 and the deficit equals S(E_N rho)", "no single-quantum quantity contributes: the deficit is the total correlation drop"]
+    omits: "two pure states (the model's final radiation, 3 H(16/25) + H(144/169), and the scrambled two-pair state, 2 H(16/25)); the deficit is taken from the deficit theorem (premise) with S(rho) = 0, not recomputed from the relative-entropy definition"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact entropy bookkeeping on a handful of states, as the docstring says; no general proof is claimed."

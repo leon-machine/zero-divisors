@@ -1,0 +1,40 @@
+functions:
+  check_aligned_tame_walls_regular_iff_radical_normal:
+    kind: complete
+    clauses:
+    - 'setup: among the diagonal exponent pairs tested only (1, 0) and (0, 1) are tame, with radical the conormal and tangent respectively'
+    - '(i) the radical-normal wall is flat, at finite proper time, with Riemannian far side, and its metric is -dtau^2 + dx^2 + dy^2 + dz^2 in tau = 2 sqrt t'
+    - '(iii) the radical-tangent wall has R = (3/2) t^-2 and a far side of signature (2, 2); the general formula R = (b/2)(b + 2 - a) t^(a - 2) agrees with the engine on five pairs'
+    omits: 'the Cauchy property of the slices and the propagation step are argued in the proof (half of Minkowski space); transverse metrics depending on t are not computed'
+  check_radiation_origin_is_conformally_a_radical_normal_wall:
+    kind: sampled
+    clauses:
+    - '(iv) the expanding field is t^(2p) times a field degenerating at t = 0 with radical dt, tame only for 2p = 1'
+    - '(iv) Friedmann exponent p = 2/(3(1 + w)) recomputed from the Einstein tensor; only w = 1/3 is tame in cosmic time'
+    - '(iv) for every sampled w with p < 1 the bracket is -d eta^2 + delta in conformal time (tameness depends on the time coordinate)'
+    - '(iv) radiation-dominated field: R = 0 and Ric.Ric = (3/4) t^-4'
+    omits: 'five values of w; conformal covariance of the massless fields is cited, not computed'
+  check_wall_smooth_scalar_solutions_are_a_lagrangian_half:
+    kind: sampled
+    clauses:
+    - '(ii) indicial exponents 0 and 1/2 of t d_t^2 + (1/2) d_t'
+    - '(ii) even modes are power series in t solving the equation; odd modes carry t^(1/2); the symplectic form vanishes on even modes and pairs them with odd ones'
+    omits: 'three rational values of omega^2, series to order t^6; the Whitney step and the general solution are in the proof'
+  check_wall_smooth_dirac_solutions_are_static_zero_modes:
+    kind: sampled
+    clauses:
+    - '(ii) M preserves the even subalgebra and M^2 = -(|k|^2 + m^2) on every even blade'
+    - '(ii) M has rank 8 for (k, m) nonzero and rank 0 at k = 0 = m, so a wall-smooth Dirac plane wave vanishes'
+    omits: 'five samples of (k, m) including m = 0 and k = 0; the superposition step and curved transverse metrics are in the proof'
+  check_radiation_field_smoothness_in_t_depends_on_the_conformal_weight:
+    kind: sampled
+    clauses:
+    - '(iv) massless scalar on the radiation field: indicial exponents 0 and -1/2; the t-smooth solutions are the tau-odd flat half'
+    - '(iv) massless Dirac on the radiation field: exponents -3/4 + n/2 are never integers, so no nonzero t-smooth solution'
+    omits: 'three rational values of k^2, series to order t^6; the conformal weights are the standard ones, cited'
+untouched_premises:
+  synthesis.imported-propagation-of-hadamard-form: 'imported theorem applied in (i) to the Cauchy slices of the flat half-space; nothing is computed from it'
+  transport.pinching-kernel: 'cited in the Reading only, for the conditional expectation being the identity on its range and erasing only the coherences with the adjoined pair'
+  synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions: 'imported lemma (Whitney, clause (c)) applied in the proof of (ii); the check verifies the even and odd mode series directly'
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: 'imported theorem (conformal covariance in four dimensions) applied in (iv); the check computes the weights 1/2 and 3/4 exponents directly'
+  synthesis.imported-hadamard-stress-tensor-diverges-at-the-reissner-nordstrom-de-sitter-cauchy-horizon: 'cited in the Reading only, for the stress tensor at a Cauchy horizon where the propagation stops'

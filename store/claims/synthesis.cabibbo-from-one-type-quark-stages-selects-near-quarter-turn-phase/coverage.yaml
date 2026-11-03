@@ -1,0 +1,21 @@
+functions:
+  check_light_angle_is_the_gst_relation:
+    kind: sampled
+    clauses: ["(i) cos^2(2 theta) = (trH - 2|det B|)/(trH + 2|det B|) on five Gaussian-rational x with y = +-x and y = conj(x)", "(i) tabulated 1/46 at x = y = 1 + 2i", "(i) the lopsided control y = 2x fails"]
+    omits: "the general identity is proved symbolically in the proof text"
+  check_overlap_formula:
+    kind: sampled
+    clauses: ["(i) h_u.h_d = z_u z_d + Re(b_u conj b_d) on four exact instances", "(i) an imaginary x_u against a real x_d is a quarter turn"]
+    omits: "the projector overlap formula is standard algebra in the proof text"
+  check_real_and_third_turn_phases_miss_vus:
+    kind: complete
+    clauses: ["(ii) the window W from the stored |V_us|", "(ii) safe bounds at cos phi = 1, 1/2, -1/2, -1 outside W"]
+  check_quarter_turn_band_contains_vus:
+    kind: complete
+    clauses: ["(iii) bounds (0.2111, 0.2350) at cos phi = 0 contain W", "(iii) central value in (0.22256, 0.22257) at the Nf = 2+1+1 ratios and in (0.22054, 0.22055), below W, at the Nf = 2+1 ratios", "(iii) stored M_Z central ratios inside the windows"]
+  check_phase_window:
+    kind: complete
+    clauses: ["(iii) cos phi in (-0.42, 0.36) over the windows and W"]
+untouched_premises:
+  synthesis.imported-fritzsch-texture-cabibbo-formula: "imported Fact: the formula is rederived in the proof; the check verifies it exactly on Gaussian-rational instances"
+  synthesis.imported-flag-2024-light-quark-mass-ratios: "imported Fact: the lattice ratios enter as the windows [18, 22] and [440, 580], literals of the check"

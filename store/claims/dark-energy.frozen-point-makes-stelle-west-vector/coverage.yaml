@@ -1,0 +1,20 @@
+functions:
+  check_reduction_and_curvature_in_i_perp:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "parallelism of I and the reduction of the connection to a metric connection on I-perp are not tested; stabiliser dimension and signature are checked at two values of Lambda, and curvature in Lambda^2 I-perp only on de Sitter (zero) and on the Lambda = 0 Kasner vacuum"
+  check_stelle_west_datum_and_lorentz_block:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "reduced connection and D V = soldering form are checked on de Sitter fields (Lambda > 0) only, not the anti-de Sitter branch or a general field; identification with the MacDowell-Mansouri datum is imported"
+  check_action_prefactor_expansion_and_invariance:
+    kind: sampled
+    clauses: ["(iii)", "consequence (2)"]
+    omits: "expansion is checked for one sample pair of bivectors and four values of Lambda; the topological character of the first term, the Lambda -> 0 limit being Einstein-Cartan, and consequence (1) (polynomial action at the Schwarzschild wall) are not tested"
+untouched_premises:
+  dark-energy.imported-walls-sphere-theorem: "cited only for the wall in consequence (1), which has no computable content in this check"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks test (i)-(iii) and consequence (2) on samples; consequence (1) is untested. 2026-10-23 weak-checks pass: check_reduction_and_curvature_in_i_perp now also pins Q(I) = Lambda/3 and asserts the Schouten preconditions (Lambda/6 on de Sitter, 0 on Kasner) of the field strengths it evaluates"

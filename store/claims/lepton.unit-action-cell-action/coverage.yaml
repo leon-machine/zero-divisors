@@ -1,0 +1,18 @@
+functions:
+  check_one_pair_identification_is_isomorphism:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_cell_span_exceeds_constituents:
+    kind: exact
+    clauses: ["(2) the cell action does not preserve R_k for k = 2, 3", "(2) the span has dimension (k+1) C(3,k), i.e. 9 at k = 2 and 4 at k = 3", "(3) the constituent space is not a subrepresentation of the ledger"]
+    omits: "the span is identified with S^k C^2 (x) Lambda^k C^3 by dimension here and by the su(2) Casimir in the other function; its SU(3) content (3b at k = 2) is not computed"
+  check_weights_and_spin_of_the_two_actions:
+    kind: exact
+    clauses: ["(2) abelian weight k under the cell action and 3 - 2k under the unit action", "(2) the cell span has su(2) spin k/2 (S^k C^2), (4,1) at k = 3"]
+    omits: "the unit action's own spin (the doublet value 3/2) is not computed; the closing reading in (3) of the tensor ledger as the Fock space of the pairs is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All clauses of (1) and (2) are exact finite computations on gl(2) + gl(3) generators; (3) is the logical consequence of the non-invariance of R_k."

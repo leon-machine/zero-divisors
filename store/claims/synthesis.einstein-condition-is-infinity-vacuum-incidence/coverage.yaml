@@ -1,0 +1,30 @@
+functions:
+  check_classes:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "one fixed rational P, v, l, m; independence of the class from the extension of W is not tested"
+  check_own_ray:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "equivalence (a) iff (c) is exact (11 null directions give rank 9 of 10, kernel span(eta)); (b) uses only 6 companions; the -Lambda/6 g(v,w) class is checked at Lambda = 3 only; Sch to Ric translation not tested"
+  check_fixed_vacuum:
+    kind: exact
+    clauses: ["(6)"]
+    omits: "Sch = c l l (real, trace-free) is exact; Ric = 2c l l and J = 0 as Ricci statements are not tested"
+  check_fock:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "Fock-vacuum clause only, for one W and three P (generic, radiation, Einstein) along five directions; the 8-dimensional module and kernel facts restate the imported chart"
+  check_real_direction:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "only the one-real-direction clause, for three axis-aligned l; the shape of every infinity vacuum and 'exactly two infinity vacua per real null direction' are not tested"
+  check_matter_and_bianchi:
+    kind: sampled
+    clauses: ["(7)"]
+    omits: "only the forward direction at one (kappa, Lambda, T); the converse 'only if' is not tested; the Bianchi linear system is typed in, not derived; the de Sitter normalisation assert is a tautology of the constructed Ric0"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks match their docstrings; clause (5) Ricci-flat and the nabla I_g = 0 equivalence have no function"

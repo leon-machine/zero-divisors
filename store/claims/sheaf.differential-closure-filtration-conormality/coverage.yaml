@@ -1,0 +1,22 @@
+functions:
+  check_log_completion_is_a_stable_algebra:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "fixed elements A1, A2, A3, B1 with polynomial coefficients and exponents in one tangential variable x; commutativity, associativity, Leibniz and [d/dx, tau d/dtau] = 0 are tested on those, not proved in general"
+  check_log_filtration_by_tangential_derivatives:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "N = 1..4 on the single monomial tau^(1+2x^2), radial letters on three elements and one eight-letter word; general A and arbitrary words not covered"
+  check_exponent_set_never_drops:
+    kind: sampled
+    clauses: ["(3) no operation lowers the exponent set"]
+    omits: "four sample elements and one four-letter word; only the algebraic content, the analytic conormal bound with arbitrary b-vector fields and |log tau|^k = O(tau^-eps) is not checked"
+  check_constant_exponent_ring_and_degree_zero_part:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "one log-free element with constant exponents and the sample elements A1, A2; identification with Melrose's polyhomogeneous ring is a literature statement, not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The formal log calculus (defined by the log-obstruction formulas) is exercised on fixed sample elements; the analytic conormal estimate and the identification with Melrose's ring are not computed, as the docstring says.

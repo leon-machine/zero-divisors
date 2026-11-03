@@ -1,0 +1,23 @@
+functions:
+  check_information_is_cheap:
+    kind: exact
+    clauses: ["(ii) S_BH of a solar-mass hole is of order 1e77 against its progenitor's 1e58"]
+    omits: "record constants M_Pl, m_p, M_sun; ten nats per baryon is the check's upper allowance; that the deficit theorem and Page curve are untouched is not computed"
+  check_schwinger_discharge_and_crossover:
+    kind: exact
+    clauses: ["(iii) Gauss-law charge is returned by discharge below about 1.3e5 solar masses"]
+    omits: "the cost of discharge, of order charge times the lightest charged mass and negligible against M, is not computed; above the crossover the open case is not addressed"
+  check_charge_is_expensive:
+    kind: exact
+    clauses: ["(iv) global charge is not returned: a GeV proton against a nanokelvin T_H"]
+    omits: "bound on the return fraction below 1e-20 uses the most baryons a hole can emit; P5 and the greybody premise are cited, not tested"
+untouched_premises:
+  dark-matter.imported-eight-towers-mod-8-clock: "the ascent of each tower's ladder at the wall is structural and not computed here (docstring: (i) and (v) are premises' content)"
+  dark-matter.superselected-hence-dark-exactly-stable: "stability of the dark towers enters (i) only as a premise"
+  dark-matter.p1-single-frozen-point: "(i) democratic return of energy is P1's content, not computed"
+  singularity.rate-models-kinematic-inputs-l-u: "(v) no remnant is an imported exhaustiveness clause at its level, not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the arithmetic of (ii)-(iv) is bracketed exactly; (i), (v) and the burst-dimming remark are declared uncomputed. 2026-10-23 (weak checks): check_charge_is_expensive pins T_H at one solar mass (6.16702e-8 K), m_p/T_H (1.765549e20), the most baryons a hole can emit (6.736832e36) and the return fraction (5.663961e-21) to their last digit by hand, which pins the 8 pi and the squares; the quoted one-sided bounds are implied and were removed."

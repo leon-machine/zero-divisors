@@ -1,0 +1,22 @@
+functions:
+  check_representation:
+    kind: exact
+    clauses: ["a matrix representation with {gamma^mu, gamma^nu} = 2 eta^{mu nu}, gamma^0 Hermitian and gamma^k anti-Hermitian"]
+    omits: "Also checks the twelve rational mass-shell momenta used elsewhere."
+  check_conserved_currents_are_one_dimensional:
+    kind: exact
+    clauses: ["the conserved constant sesquilinear currents form a space of dimension at most one"]
+    omits: "Upper bound only: the 528 necessary conditions from two-plane-wave solutions have rank 63 modulo a prime, so the Gamma space is at most one-dimensional; that gamma^mu itself is conserved on every solution is the next function and only on samples. The reduction of conservation to the two-plane-wave conditions is the proof's step, not coded."
+  check_dirac_current_is_conserved:
+    kind: sampled
+    clauses: ["Gamma^mu = gamma^mu is conserved on every solution"]
+    omits: "Twelve mass-shell momenta with two spin states each (all ordered pairs) and one ubar pslash = m ubar check; general solutions are superpositions and the Dirac-equation algebra is not run symbolically."
+  check_density_is_sum_of_squared_moduli:
+    kind: sampled
+    clauses: ["J^0 = psibar gamma^0 psi = psi^dagger psi is a sum of squared moduli, positive and zero only on the zero state"]
+    omits: "Three spinors (two nonzero, one zero); the identity follows from (gamma^0)^2 = 1, which check_representation tests."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The one-dimensional upper bound is a genuine exact computation; the lower bound and positivity are checked at samples."

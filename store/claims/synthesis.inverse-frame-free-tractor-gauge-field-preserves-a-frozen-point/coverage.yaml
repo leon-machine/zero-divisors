@@ -1,0 +1,43 @@
+functions:
+  check_displacement_weight_bounds_the_slot_only_without_inverse_frame:
+    kind: complete
+    clauses:
+    - (i) step 1, weight-one monomials of the jets of (e, Omega) are exactly e and Omega undifferentiated; with hb admitted they occur with every number of factors, the Schouten type among them at frame
+      degree -1
+    omits: the enumeration stops at five factors and third derivatives; the general bound sum(1 + k_i) >= n is in the text
+  check_lorentz_equivariant_maps_between_the_slots:
+    kind: exact
+    clauses:
+    - '(i) step 2, shared by the (P) and (O) routes: the Lorentz-equivariant maps between R, W and Lambda^2 W; the commutant on W is the identity line'
+    omits: 'none: finite linear algebra over the rationals; the (O) reduction to linear slots (frame transitivity) is in the text'
+  check_the_admissible_field_determines_the_frozen_point:
+    kind: sampled
+    clauses:
+    - (ii) A_rho annihilates exactly the line of I_rho at rho = 3/14, -1/2, 0; soldering; a dilation slot leaves no annihilated vector
+    omits: at one sample frame and rotation field; the general argument (every invertible frame) is the three-line computation in the text
+  check_normal_tractor_connection_meets_the_family_only_on_einstein_fields:
+    kind: sampled
+    clauses:
+    - (iii) the normal connection equals A_rho and keeps I_rho parallel exactly for Sch = rho id, A_rho keeps it always; the normal slot scales as 1/c under e -> c e
+    omits: one Einstein and one non-Einstein Schouten map with Weyl part zero, and one sample field strength for the scaling; the general statements are in the text
+  check_wall_regularity_separates_the_family_from_the_normal_connection:
+    kind: sampled
+    clauses:
+    - (iii) the normal slot has a simple pole at a corank-one frame; A_rho is polynomial there and keeps I_rho parallel
+    omits: one sample field strength and one degenerating direction; (v), that bounded rational slots are polynomial, is argued in the text
+  check_an_independent_slot_field_leaves_no_parallel_tractor:
+    kind: sampled
+    clauses:
+    - (iv) an independent special-conformal slot annihilates no constant tractor, and for sample first jets its field strength annihilates no vector; the slot -e/2 keeps the line of I_{-1/2}
+    omits: one sample slot field and one sample first jet; generic behaviour is what is claimed
+  check_a_parallel_tractor_of_unit_pairing_is_gauged_to_the_constant_frozen_point:
+    kind: sampled
+    clauses:
+    - (vi) a special-conformal rotor fixing X carries a tractor of unit pairing with X to the constant ninf + rho n0, rho = Q(I)/2
+    omits: one sample tractor; the rotor algebra is general and the rest of (vi) is the cited bijection
+untouched_premises:
+  synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation: "its clause (ii), the bijection, is cited in (ii) and used in the converse of (vi); the check tests the rotor step of (vi) and does not recompute the bijection"
+  synthesis.imported-holonomy-reductions-of-cartan-geometries: "imported Fact cited in (vi) for the holonomy-reduction reading of the premise; nothing is computed from it"
+  dark-energy.walls-free-sector: cited for clause (v), argued; its walls are frames of corank one where the stored equations are used because they are polynomial in e; nothing is computed from it
+  dark-energy.frozen-point-datum-kasner-wall: cited for clause (v), argued; its pole in the Levi-Civita block, with divergent curvature, limits the wall reading to corank-one walls; nothing is computed
+    from it

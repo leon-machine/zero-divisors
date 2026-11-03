@@ -1,0 +1,18 @@
+functions:
+  check_dimensions_three_four_pair_law:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "scope is the four causal towers (1,2), (2,1), (1,3), (3,1); spinors symbolic on a basis of S, so each law is a polynomial identity in the coordinates; also checks the sandwich structure of rev(phi) phi"
+  check_dimension_five_single_law:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "scope is the two towers (1,4), (4,1); the nonzero zero set of rev(psi) psi is exhibited by a search over coefficients in {-1,0,1}; that it is a cone follows from homogeneity"
+  check_momenta_in_one_half_space:
+    kind: sampled
+    clauses: ["in every causal tower the total momentum of any number of constituents is timelike or null, never spacelike"]
+    omits: "symbolic for the energy of a single constituent (Q(e_t) (j(psi).e_t) = sum of squares of the coordinates); the total momentum of several constituents is tested only for one triple of rational constituents per tower, and each individual momentum being causal is the content of the other two functions, not rerun here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) and (ii) are polynomial identities over every causal tower of the stated dimensions; the closing sentence on sums of momenta rests on the single-constituent identity plus one rational triple"

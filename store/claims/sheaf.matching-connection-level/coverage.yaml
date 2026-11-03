@@ -1,0 +1,18 @@
+functions:
+  check_adapted_coframe_is_exceptional:
+    kind: sampled
+    clauses: ["(1) sqrt(m^2-r) dtau = rho", "(1) sqrt(m^2-r) theta^1 = -sqrt(r) dt + m (k/sqrt r)", "(1) the boost of rapidity chi relates static and rain frames, unit-normalised", "(1) the two frames coincide at the wall"]
+    omits: "five rational points (m, sqrt r) inside the horizon; theta^2 = mu_1, theta^3 = mu_2 and membership in the exceptional module are not tested; the coincidence at the wall is the boost formula evaluated at r = 0 (frame map [[0, 1], [-1, 0]] on (dt, k^)) plus bounds |sinh chi| < 2 sqrt r, cosh chi - 1 < r along one rational sequence at m = 1; k^ = k/sqrt r itself is not evaluated at r = 0"
+  check_rates_by_exact_series:
+    kind: exact
+    clauses: ["(2) tau sigma_1 = -1/3 - (4/15) r + ..., tau sigma_2 = 2/3 - (2/15) r + ...", "(2) tau/r = (2/3) sqrt r + O(r^{3/2})", "(2) trace rule tau(sigma_1 + 2 sigma_2) -> 1"]
+    omits: "only the u^0 and u^2 coefficients (and no u^1 term) are asserted, the rest of the series is computed but unchecked; targets are hard-coded and not compared with the weighted-limit premise's series (its return value is not used); the rotation-gauge field form and sign convention are not tested"
+  check_matching_values_generate_so13:
+    kind: exact
+    clauses: ["(3) total element is minus the unit boost B_w", "(3) the nonzero multiples of the three boosts generate the full bivector algebra so(1,3)"]
+    omits: "p = (-1/3, 2/3, 2/3) from the series; B_w^2 = 1 and Lie closure of dimension 6 are computed; the holonomy theorem of ButlerT6, the identification of the boundary value with the weight one-form of the exceptional coframe, and the ladder-boost so(1,1) sentence are not recomputed"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the wall coincidence now evaluates the same boost formula (-sqrt r, m)/sqrt(m^2 - r) at r = 0 (theta^1 = k^, d tau = -dt) and bounds its approach along a rational sequence, replacing the literal (0,1) == (0,1)"

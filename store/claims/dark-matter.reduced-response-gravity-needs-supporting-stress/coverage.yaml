@@ -1,0 +1,24 @@
+functions:
+  check_setting_derived_metric_linear_order:
+    kind: sampled
+    clauses: ["setting: the perturbed FLRW field in conformal Newtonian gauge with potentials psi, phi"]
+    omits: "checks the linear part of the derived metric at two rational (psi, phi, a) points; the clauses (i), (ii) and the conclusion g = 1 are not touched"
+  check_unique_stress_for_reduced_response:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the momentum equation theta' = -H theta + k^2 psi - k^2 sigma is taken from the premise; uniqueness of sigma = (1 - g) psi is shown at three rational (k, psi, g) samples, not in general"
+  check_potential_with_the_stress:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the traceless equation k^2 (phi - psi) = c [rho sigma + Sigma] is assumed, not derived; the stated psi satisfies it at two rational parameter sets, not as a symbolic identity"
+  check_projected_response_and_orientation_average:
+    kind: sampled
+    clauses: ["g = sin^2(theta) for held-fixed sheets", "2/3 averaged over orientations"]
+    omits: "sin^2 is checked at four rational vector pairs; the 2/3 average is exact. The stress of a medium holding the sheets, the absence of such a medium in the series, and the conclusion g = 1 are arguments, not computed"
+untouched_premises:
+  dark-matter.projection-every-towers-content-dilutes-ones: "cited for the absence of a rigidity along the normal, which is an argument about the series' content with no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the four functions test the computable clauses (i), (ii) and the sin^2 and 2/3 values at the recorded sample level; the g = 1 conclusion is argued, not checked, as the docstring says"

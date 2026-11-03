@@ -1,0 +1,22 @@
+functions:
+  check_weights_by_commutators:
+    kind: exact
+    clauses: ["rung creation vectors have hypercharge +1/2 with 2T_3 = +1, -1; annihilation vectors the conjugate", "pair vectors are weak singlets of hypercharge -+1/3"]
+    omits: ""
+  check_four_multiplets:
+    kind: exact
+    clauses: ["the ten decomposes as (2,1)_{1/2} + (2,1)_{-1/2} + (1,3)_{-1/3} + (1,3bar)_{1/3}"]
+    omits: ""
+  check_one_mode_states_form_the_five:
+    kind: exact
+    clauses: ["whole (supporting: one-mode states of the module)"]
+    omits: "Hypercharge is computed from the typed formula (3j - 2k)/6, not from the operator, and the function restates content of the first; not a clause of the statement."
+  check_ten_is_the_complexified_ambient_space:
+    kind: exact
+    clauses: ["the ten is the transported ambient space itself", "the pair vectors are null directions (W, Wbar maximal isotropic); rung pairs hyperbolic"]
+    omits: "The identification with the 10 of Spin(10) of the imported spinor bilinears and the Higgs-doublet and colour-triplet readings are not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Commutator computations on all 32 basis states and exact Clifford relations cover the displayed decomposition."

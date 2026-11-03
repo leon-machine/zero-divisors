@@ -1,0 +1,18 @@
+functions:
+  check_phase_split_from_minimal_level:
+    kind: complete
+    clauses: ["(C) effective level 0, confining", "(T) effective level +-1, topologically massive", "flux attachment shifts the spin by q^2/2k"]
+    omits: "enumerates bare levels +-1/2 and both mass signs (two of each phase, aligned exactly in phase T) with an integral-level control; the imported dynamics (Polyakov confinement, the topologically massive photon, the onia annihilation) and the interpretive spin 0 on standard signs are not computed"
+  check_contact_suppression:
+    kind: partial
+    clauses: ["contact processes scale as (m/e^2)^2"]
+    omits: "the scaling is assumed (amplitude proportional to m/e^2); the function only squares 1/(7e7) and 1/(7.1e7) and compares with the K4 threshold 2e-16 of the survival proposition, numbers that do not appear in this statement; the threshold ratio 1/sqrt(2e-16) = 70710678.1 and the probability 2.0408e-16 at 7e7 are pinned by hand"
+  check_r7_central_unit:
+    kind: exact
+    clauses: ["at r = 7 the algebra's central unit"]
+    omits: "only that omega is central with omega^2 = -1 in Cl(2,3); its role in the stability of the cells, and the Delta N_eff of about 4e-3 (supplementary CHECK_COS), are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring says the phase classification is assembly level on imported dynamics; the contact-suppression function tests an arithmetic consequence, not the scaling the statement asserts. 2026-10-23 weak-checks: check_contact_suppression now pins the threshold ratio (integer part 70710678 of 1/sqrt(2e-16)) and the probability at 7e7 (2.0408e-16), so the stated bounds are shown sharp; inputs moved to module level"

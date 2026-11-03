@@ -1,0 +1,55 @@
+\newlabel{sec:intro}{{1}{4}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{5}{Setting, imports and premises}{section.2}{}}
+\newlabel{fact:stable}{{2.1}{5}{imported: superselection}{theorem.2.1}{}}
+\newlabel{fact:rule}{{2.2}{5}{imported: the unit-ball rule and its family}{theorem.2.2}{}}
+\newlabel{fact:mirror}{{2.3}{5}{imported: the mirror}{theorem.2.3}{}}
+\newlabel{eq:shares}{{1}{6}{Imported from the dark-matter paper}{equation.2.1}{}}
+\newlabel{fact:bullet}{{2.4}{6}{imported: the Bullet Cluster}{theorem.2.4}{}}
+\newlabel{fact:oguri}{{2.5}{6}{imported: cluster shapes}{theorem.2.5}{}}
+\newlabel{fact:mw}{{2.6}{6}{imported: the Milky Way's mass budget}{theorem.2.6}{}}
+\newlabel{prem:S1}{{2.7}{6}{S1: one species per tower}{theorem.2.7}{}}
+\newlabel{prem:S2}{{2.8}{6}{S2: the sheet fluid}{theorem.2.8}{}}
+\newlabel{prem:S3}{{2.9}{7}{S3: the mirror in a cluster}{theorem.2.9}{}}
+\newlabel{prem:S4}{{2.10}{7}{S4: our matter}{theorem.2.10}{}}
+\newlabel{prem:S5}{{2.11}{7}{S5: halos}{theorem.2.11}{}}
+\newlabel{prem:C}{{2.12}{7}{C: the odd towers collisionless}{theorem.2.12}{}}
+\newlabel{rem:Cneeds}{{2.13}{7}{what Premise C needs}{theorem.2.13}{}}
+\newlabel{sec:sidm}{{3}{7}{Self-interaction within a sheet}{section.3}{}}
+\newlabel{prop:sigmaeff}{{3.1}{7}{the effective cross-section of sheet matter}{theorem.3.1}{}}
+\newlabel{tab:sidm}{{1}{8}{The three-dimensional towers' $\sigma _{\mathrm {eff}}/m$ in $\cmg $ (Proposition \ref {prop:sigmaeff}), in clusters at $z = 0.3$ ($\Delta $ the overdensity), for in-sheet cross-sections $\lambda = 0.21$ fm (the nucleon's Compton length) to $2$ fm. The cluster bounds are $0.47$ to $1.25\ \cmg $ (Fact \ref {fact:bullet}). In a core at $\lambda = 1$ fm the in-sheet mean free path $1/(n_{2}\lambda )$ is $26$ AU, so on cluster scales the matter is a fluid within its sheets}{table.1}{}}
+\newlabel{fact:2d}{{3.2}{8}{imported: low-energy scattering in two dimensions}{theorem.3.2}{}}
+\newlabel{prop:scatter}{{3.3}{8}{the cluster bound in two dimensions}{theorem.3.3}{}}
+\newlabel{cor:confinement}{{3.4}{9}{the confinement scale does not matter}{theorem.3.4}{}}
+\newlabel{sec:code}{{4}{9}{The simulation code}{section.4}{}}
+\newlabel{fig:sigma}{{1}{10}{Self-interaction cross-section per mass of each tower's matter in a cluster core, against the merger limits of Fact \ref {fact:bullet} ($0.47$ and $1.25\ \cmg $). The three-dimensional towers at composite strength (Table \ref {tab:sidm}), the mirror's atomic cross-section (Fact \ref {fact:mirror}) and the five-dimensional towers (Section \ref {sec:sidm})}{figure.1}{}}
+\newlabel{fig:fraction}{{2}{11}{The share of all dark matter that collides, by composition: mirror plasma (red) and three-dimensional sheet fluid (blue), against the Bullet Cluster's mass-loss bound read as a bound on the dark matter (Fact \ref {fact:bullet}). Only reading (C) is below it; counted with the subcluster's gas, its colliding fraction is $29$ percent of its mass}{figure.2}{}}
+\newlabel{eq:projector}{{2}{13}{The sheet fluid}{equation.4.2}{}}
+\newlabel{lem:projector}{{4.1}{13}{the averaged pair operator}{theorem.4.1}{}}
+\newlabel{sec:ics}{{5}{14}{Initial conditions}{section.5}{}}
+\newlabel{tab:comps}{{2}{15}{Compositions run, as shares of the dark matter (\file {merger.py}). The orientation codes describe the sheets' normals: \texttt {random} (a random normal per particle), \texttt {perp} (all normals along the line of sight, perpendicular to the merger axis, so the axis lies in the sheets) and \texttt {par} (all normals along the merger axis). A run is named \emph {model\_orientation}; \texttt {mirror\_only} is model \texttt {mirror} with random normals, reading (C). Suffix \texttt {nm}: the mirror collisionless from the start; suffix \texttt {lo}: half resolution}{table.2}{}}
+\newlabel{sec:measure}{{6}{16}{Measurements}{section.6}{}}
+\newlabel{sec:results}{{7}{17}{Results: mergers and halos}{section.7}{}}
+\newlabel{tab:merger}{{3}{17}{The Bullet-like merger (Section \ref {sec:measure}): separation at the Bullet-like moment, maximum separation after closest approach up to $t = 1.3$ (the CDM run was followed to $1.5$; the runs at $1083$ to $1090$ and $759$ to $846$ kpc are still separating at $1.3$), lensing contrast, signed mass-peak offset from the galaxies (positive: the mass peak leads; below $10$ kpc is within one grid cell), the subcluster's own mass within $150$ kpc of its galaxies relative to CDM's, and the mass-to-light change since $t = 0$ (sampling error $15$ to $21$ percent). The own-mass column has no observed counterpart: Randall et al.'s $23$ percent bound on mass loss is inferred from the mass-to-light ratio, not from the mass inside a fixed aperture. Where the contrast is near or below $1$ there is no separate subcluster peak, and the offset (\texttt {rule\_perp}'s $+185$) locates the nearest mass maximum, not a subcluster's. ``Dissolved'': the subcluster no longer has a galaxy concentration, so the ratio does not measure what the observation measures. Each run is one realisation. Observed values from Fact \ref {fact:bullet}; $^{\dagger }$the subcluster's lensing peak, within $1\sigma $ of its galaxy centroid, which is known to $22$ kpc; $^{*}$the observed value is the ratio itself, not a change}{table.3}{}}
+\newlabel{obs:merger}{{7.1}{17}{the merger}{theorem.7.1}{}}
+\newlabel{fig:merger}{{3}{18}{The merger against the Bullet Cluster (Table \ref {tab:merger}): lensing contrast (1 means no separate peak), the subcluster-to-main mass-to-light ratio relative to its value at $t = 0$, against the observed $0.84 \pm 0.07$ (which is the ratio itself), and the size of the mass-peak offset against the galaxy-centroid precision of $22$ kpc. CDM grey, reading (W) blue (random normals; normals along the line of sight, so the merger axis in the sheets; normals along the merger axis), reading (C) green}{figure.3}{}}
+\newlabel{tab:halo}{{4}{19}{Projected ellipticity $1 - b/a$ inside $500$ kpc of the assembled cluster, mean of three projections, for the two seeds; the last column is each seed's ratio to the CDM run of the same seed. CDM's own two seeds differ by $0.15$}{table.4}{}}
+\newlabel{obs:halo}{{7.2}{19}{halo shapes}{theorem.7.2}{}}
+\newlabel{fig:retention}{{4}{20}{The subcluster's own mass within $150$ kpc of its galaxies, projected, relative to each run's own start, from the re-runs used for the films (Section \ref {sec:films}); Table \ref {tab:merger}'s own mass is instead each run's at its own Bullet-like moment divided by CDM's at CDM's ($t = 1.12$). At $t = 1.20$ ($1.17$ Gyr), the Bullet-like moment of reading (C) in the run of Table \ref {tab:merger}, CDM keeps $0.83$, reading (C) $0.62$ and reading (W) $0.17$; reading (W) does not reach the Bullet-like separation by $t = 1.3$. The rise near closest approach is compression, not accretion}{figure.4}{}}
+\newlabel{fig:halo}{{5}{21}{Projected ellipticity of the assembled cluster for the six compositions of Table \ref {tab:halo}: mean (dot) and the two seeds (bar); grey, CDM; blue, the compositions of reading (W); green, reading (C); plum, the compositions with the mirror settled from the start. Against the observed $0.46 \pm 0.04$ (Fact \ref {fact:oguri}). The isolated assembly makes even CDM rounder than real clusters, so the comparison is with the CDM run}{figure.5}{}}
+\newlabel{sec:films}{{8}{22}{The films}{section.8}{}}
+\newlabel{fig:film1}{{6}{24}{Film 1 at reading (C)'s Bullet-like moment, $1.17$ Gyr (\file {merger\_three\_ways.mp4}; online as ``Galaxy clusters in collision'', \url {https://www.youtube.com/watch?v=0SvmSwInN0c}). Left to right: CDM, reading (W), reading (C). Points: galaxies; pink: our gas (X-ray proxy); green lines: sheet fluid (the film's ``colliding 3D-tower matter''); dashed orange: mirror gas; blue contours: total projected mass. In (W) the sheet fluid is held at the centre with the gas and the subcluster's mass peak is gone; in (C) and CDM a mass peak stays on the subcluster's galaxies, left of centre, with the gas behind}{figure.6}{}}
+\newlabel{fig:film2}{{7}{25}{Film 2 at its final frame (\file {bullet\_moment.mp4}; online as ``The Bullet moment'', \url {https://www.youtube.com/watch?v=KQnZUVR7bCk}): reading (C) at the Bullet-like moment, with the measured markers and the comparison with Clowe et al.\ and Randall et al. Layers as in Figure \ref {fig:film1}: points, galaxies; pink, our gas; dashed orange, mirror gas; blue contours, total projected mass. Markers: cross, the subcluster's galaxy peak; plus, the lensing (mass) peaks of the subcluster and the main cluster; white diamond, the subcluster's gas peak. No telescope imagery is used}{figure.7}{}}
+\newlabel{sec:galaxy}{{9}{26}{The mirror in the Galaxy}{section.9}{}}
+\newlabel{tab:F}{{5}{28}{The helium-star feedback factor $F$: supernova energy per unit stellar mass formed of a pure-helium population relative to ours, by the black-hole cut (rows) and the factor by which the IMF is shifted up in mass (columns); \file {imf\_table.py}}{table.5}{}}
+\newlabel{obs:galaxy}{{9.1}{28}{the mirror in the Galaxy}{theorem.9.1}{}}
+\newlabel{fig:galaxy}{{8}{29}{The mirror in the Milky Way against $F$, median and range over the converged set-ups (total normalisation, yield $yF$). Left: gas and stars within $1.1$ kpc of the plane at the Sun, against the room for extra disk-like mass (dynamical less counted stars, $38 - 33.4 = 4.6 \pm 5$, used as $15$ at about $2\sigma $ and $10$ at about $1\sigma $; Fact \ref {fact:mw}). Right: mass in the bulge volume ($10^{9}\ \Msun $), against the three readings of its room: $8.3$ (mirror bar), $3.1$ (all dark), $0.6$ (proportional). Shaded: the helium-star range of $F$. Dash-dot: limits below which a measurement would exclude the helium branch under every choice tried with yield $yF$ ($5$ at the Sun, $1.7$ in the bulge)}{figure.8}{}}
+\newlabel{sec:total}{{10}{30}{The total and the radiation}{section.10}{}}
+\newlabel{sec:costs}{{11}{30}{What the tests decide, and what they cost}{section.11}{}}
+\newlabel{fig:Tc}{{9}{31}{The total $T(c)$ (Fact \ref {fact:rule}) against Planck 2018 with lensing, $5.364 \pm 0.065$. Blue points: $c = 1$ (R3), $c = \pi /2$ and the floor; grey points: the two thicknesses the series' de Sitter length produces, $3\pi /8$ and $\pi /4$ \cite [\S 7.4]{ButlerT14}}{figure.9}{}}
+\newlabel{tab:glance}{{6}{32}{The tests at a glance}{table.6}{}}
+\newlabel{fig:neff}{{10}{33}{$N_{\mathrm {eff}}$: T14's value with gravity-only heating against Planck 2018 (temperature, polarisation, lensing and baryon acoustic oscillations)}{figure.10}{}}
+\newlabel{sec:position}{{12}{34}{Position in the series}{section.12}{}}
+\newlabel{sec:verification}{{13}{35}{Machine verification}{section.13}{}}
+\newlabel{sec:running}{{14}{35}{Running the code}{section.14}{}}
+\newlabel{tab:files}{{7}{37}{The files in \file {code/} and what each produces}{table.7}{}}
+\newlabel{tab:stages}{{8}{38}{The stages of \file {reproduce.py}}{table.8}{}}

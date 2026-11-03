@@ -1,0 +1,16 @@
+functions:
+  check_traces_on_sixteen:
+    kind: exact
+    clauses:
+    - '"tr T_3L^2 = tr T_3R^2 = 2, tr (B-L)^2 = 16/3, tr Y^2 = 10/3"'
+    omits: ''
+  check_matching_relations:
+    kind: partial
+    clauses:
+    - '"a_1 = (3/5) a_2R + (2/5) a_4"'
+    omits: The coefficients 3/5 and 2/5 are derived exactly from the traces (c^2 = 3/8, k^2 = 2/3, weights tr T_3R^2 / tr Y^2 and (1/4) tr (B-L)^2 / tr Y^2) and the relation is verified at three sample couplings; a_2 = a_2L and a_3 = a_4 are not examined, and the normalisation of the imported trace-ratio Fact (a_1 = (3/5) alpha_Y^-1) is used as given
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The traces are exact; the matching clause tested is the abelian one, which carries the content.

@@ -1,0 +1,35 @@
+functions:
+  check_real_capacity_is_min_pq:
+    kind: sampled
+    clauses:
+    - '"r_R(p,q) = min(p,q), the number of modes realisable by real null vectors"'
+    omits: the 35 signatures with p, q <= 5, p + q >= 1; maximality among all real isotropic subspaces uses Witt (premise), only the definite remainder is checked
+  check_complex_capacity_is_floor_half_d:
+    kind: sampled
+    clauses:
+    - '"r_C(p,q) = floor(d/2), the maximal isotropic dimension of V_C"'
+    omits: the same grid p, q <= 5; the construction attains floor(d/2) and the odd-d remainder is anisotropic, which gives maximality
+  check_agreement_locus_and_increments:
+    kind: sampled
+    clauses:
+    - '"They agree exactly when |p - q| <= 1; for (1,3) they are 1 and 2, for (2,4) they are 2 and 3"'
+    - (2) "r_R and r_C each rise by exactly one per rung"
+    omits: agreement and increments checked on the closed formulas over p, q <= 8 and against the constructed pairs for p, q <= 5; the structural step that a (1,1) ascent adjoins one hyperbolic plane is not computed here
+  check_boost_qubit_and_dirac_fock_space:
+    kind: partial
+    clauses:
+    - (1) "the anisotropic complement is definite" and "the Dirac spinor of Cl(1,3)_C as a two-mode Fock space of dimension 2^2 = 4"
+    omits: dimension four is the rank of four explicit Fock states, not a proof that Cl Omega has no more; the conjugacy of all real hyperbolic planes under O(1,3) is not tested here; the (0,2) signature is of the Gram matrix of the generators off the real pair (one real pair, two pairs in all)
+  check_ascended_capacity_three_complex_two_real:
+    kind: exact
+    clauses:
+    - (3) "r_C(2,4) = 3 ... the Standard-Model paper's pair count (n+2)/2 at n = 4" and "the real capacity of the ascended space is two"
+    omits: the Standard-Model selection of the strong force and four dimensions is cited, not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "every function tests the capacity formulas it names on grids or exact numbers, with the finite grids recorded as sampled. 2026-10-23 weak-checks pass: check_boost_qubit_and_dirac_fock_space now pins the signature (1,3) of S, one real pair and two pairs in all, and computes the complement signature from the Gram matrix of the generators off the real pair instead of a fixed diagonal block; Fock states range over all subsets of the pairs"
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-decomposition: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,14 @@
+Compute the Gram matrix of the rescaled frame $(v_1, \dots, v_{n-1}, k/\sqrt{t})$, $v_i$ a basis of $V_1$, against $G(t)$:
+\[
+G(t)(v_i, v_j) = G_0(v_i,v_j) + t\dot G(v_i,v_j) + O(t^2) \;\longrightarrow\; G_0(v_i,v_j) ;
+\]
+\[
+G(t)(v_i, k/\sqrt{t}) = \frac{G_0(v_i,k) + t\dot G(v_i,k) + O(t^2)}{\sqrt{t}} = \frac{0 + O(t)}{\sqrt{t}} = O(\sqrt{t}) \;\longrightarrow\; 0 ,
+\]
+using $G_0(v_i, k) = 0$ ($k$ is radical for $G_0$);
+\[
+G(t)(k/\sqrt{t},\, k/\sqrt{t}) = \frac{G_0(k,k) + t\dot G(k,k) + O(t^2)}{t} = \dot G(k,k) + O(t) \;\longrightarrow\; \dot G(k,k) \neq 0 .
+\]
+The limit Gram is block-diagonal: $G_0|_{V_1}$, nondegenerate of signature $(p{-}1,q)$ (Theorem \claimref{sheaf.degeneration-sheaf}(2), via $V_1 \cong T^*_xM/\shL$), plus the $1 \times 1$ block $\dot G(k,k)$, positive on the physical side (Remark \ref{rem:coords}); so $\hat G$ is nondegenerate of signature $(p,q)$ there. All rescaled Gram entries are continuous functions of $\sqrt{t}$ on $[0, \varepsilon)$, and by Lemma \claimref{sheaf.blade-basis-degenerate-forms-included} the structure constants of the corresponding Clifford algebras are polynomial in them: the rescaled Clifford family is continuous through $t = 0$, with nondegenerate special fibre $\shE(x)$.
+
+Independence. Changing the complement, $v \mapsto v + c(v)k$: the $V_1$-block entries change by $c(v)G_0(k, w) + c(w)G_0(v,k) + c(v)c(w)G_0(k,k) + O(t) = O(t)$, and the cross terms remain $O(\sqrt t)$, so the limit is unchanged, and the two limit forms are literally equal under the isomorphism $v + \R k \mapsto v' + \R k$ of $V_1 \oplus \R k$ with $V_1' \oplus \R k$ fixing $k$ and matching complements through the quotient $T^*_xM/\shL$. Rescaling $k \mapsto ck$ multiplies the diagonal limit entry by $c^2$ and the generator by $c$: the map $v_i \mapsto v_i$, $k \mapsto ck$ is an isometry of the two limit forms, inducing a canonical isomorphism of the Clifford algebras. Reparametrising $t \mapsto at$ ($a > 0$) multiplies $\dot G$ by $a$ and the rescaled generator $k/\sqrt{t}$ by $1/\sqrt{a}$; the two effects compose to the isometry $k \mapsto k/\sqrt a$ against the $a$-fold entry, again canonical. In each case the displayed isometry is built from the change of data alone, with no further choices, and the isomorphism of Clifford algebras it induces by functoriality is the canonical identification meant in the statement. (Uniqueness among all isometries fixing the $V_1$-part fails, $k \mapsto -k$ being another; canonicality here means choice-freeness of the displayed maps, not uniqueness.)

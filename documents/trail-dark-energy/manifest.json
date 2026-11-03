@@ -1,0 +1,43 @@
+{
+ "doc": "trail-dark-energy",
+ "version": 11,
+ "claims": [
+  "dark-energy.four-alternatives-are-exhaustive-three-are@2",
+  "dark-energy.frozen-point-makes-stelle-west-vector@5",
+  "dark-energy.imported-frozen-point-geometry-external@1",
+  "dark-energy.imported-frozen-point-geometry@6",
+  "dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3",
+  "dark-energy.imported-walls-sphere-theorem@6",
+  "dark-energy.point-infinity-has-no-physical-fluctuation@4",
+  "dark-energy.stelle-west-vector-frozen-point@5",
+  "dark-energy.under-action-written-norm-parameter-laws@4",
+  "dark-energy.vacuum-region-registration-condition@8",
+  "interior.covariant-form-vacuum-equations@5",
+  "interior.imported-tractor-connection@2",
+  "interior.non-null-stabilisers-section-they-act@4",
+  "interior.scale-tractor-leaves-cone@7",
+  "interior.sign-fixed-internally@4",
+  "interior.stabiliser-rotates-parabolic-reductive@2",
+  "odd-extensions.cosmological-constant-undetermined-within-series@1",
+  "odd-extensions.imported-minimal-completion-degenerate-algebra-rule@5",
+  "odd-extensions.transport-constrains-frozen-point-only-through@2",
+  "odd-extensions.twistor-algebra@6",
+  "pred.dark-energy-w-minus-one@3",
+  "standard-model.trichotomy-what-kind-number@10",
+  "synthesis.field-space-premise-parallel-frozen-point@1"
+ ],
+ "recipe_hash": "d71e456e1692",
+ "generated": "2026-11-02T16:27:08+00:00",
+ "spine": [
+  "dark-energy.imported-frozen-point-geometry",
+  "dark-energy.stelle-west-vector-frozen-point",
+  "dark-energy.frozen-point-makes-stelle-west-vector",
+  "dark-energy.point-infinity-has-no-physical-fluctuation",
+  "dark-energy.vacuum-region-registration-condition",
+  "pred.dark-energy-w-minus-one",
+  "dark-energy.four-alternatives-are-exhaustive-three-are",
+  "dark-energy.under-action-written-norm-parameter-laws",
+  "odd-extensions.transport-constrains-frozen-point-only-through",
+  "odd-extensions.cosmological-constant-undetermined-within-series"
+ ]
+}

@@ -1,0 +1,18 @@
+functions:
+  check_chain_rule_formulas:
+    kind: sampled
+    clauses: ["tau d/dtau tau^e = e tau^e", "d/dx tau^e = e'(x) tau^e log tau"]
+    omits: "three polynomial exponents, truncated at x-order 7; the exponential is written out as a series rather than treating tau^e(x) symbolically"
+  check_algebra_and_stability:
+    kind: sampled
+    clauses: ["A is a commutative algebra stable under tau d/dtau", "stable under tangential vector fields iff every exponent is locally constant"]
+    omits: "one pair of sample exponents for the product law, one constant and one nonconstant exponent for the tangential statement, x-order 7; the 'iff' and the algebra A over smooth coefficient functions are not covered"
+  check_log_is_a_jordan_block:
+    kind: partial
+    clauses: ["if e'(x0) != 0 then tau^e log tau does not lie in A near (x0, 0)"]
+    omits: "only the algebraic core (tau^e0 L is a rank-two generalised eigenvector; finite pure-power sums with constant coefficients are killed by prod(tau d/dtau - c_j)); non-membership with smooth coefficient functions g_j(tau) is analytic and is not checked, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The formulas are derived from the exponential series to x-order 7 for three sample exponents, and the algebraic core of the non-membership (Jordan block) is shown; the analytic non-membership with smooth coefficient functions is stated as unchecked.

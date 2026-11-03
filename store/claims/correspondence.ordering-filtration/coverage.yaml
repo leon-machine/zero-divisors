@@ -1,0 +1,22 @@
+functions:
+  check_quadratic_ambiguities_are_central:
+    kind: complete
+    clauses: ["(1)"]
+    omits: "all 45 multisets of degree <= 2 in the four Z's and four Zbar's, every ordering compared with the sorted one"
+  check_cubic_ambiguities_are_linear:
+    kind: complete
+    clauses: ["(3) cubic discrepancies are hbar times linear terms, so not gl(CS)-valued"]
+    omits: "all 120 multisets of degree 3; the cubic case is not a numbered clause, it supports the 'first at quartic order' claim"
+  check_quartic_ambiguities_and_balanced_mixed:
+    kind: complete
+    clauses: ["(2) first part: discrepancy is hbar (quadratic) + hbar^2 C, balanced quadratic is mixed and equals q(M) up to a central hbar term", "(3) quartic is the first order with a gl(CS)-valued ambiguity"]
+    omits: "all 330 multisets of degree 4 (100 balanced, 58 of those with a nonzero discrepancy); the identification of sl(CS) with so(2,4)_C is not tested"
+  check_balanced_discrepancy_is_q_of_commutator:
+    kind: sampled
+    clauses: ["(2) [q(M), q(N)] = hbar q([M, N])"]
+    omits: "one generic rational pair M, N in gl(4) rather than a basis of matrix units; q(id) has central shift -2 hbar is also checked"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Degrees 0 to 4 are enumerated exhaustively in the four-pair palatial algebra; only the general commutator identity is sampled, at one pair."

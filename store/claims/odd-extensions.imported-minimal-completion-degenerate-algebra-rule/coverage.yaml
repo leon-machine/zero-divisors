@@ -1,0 +1,26 @@
+functions:
+  check_lower_bound_dimension:
+    kind: sampled
+    clauses: ["every completion has dimension at least p + q + 2r"]
+    omits: "Random rational extensions by exactly r - 1 vectors (three per case, 30 cases with p + q <= 3, r <= 3) are degenerate of rank p + q + 2r - 2; smaller extensions and non-random ones are not run and there is no symbolic dimension argument."
+  check_minimal_completions_signature:
+    kind: sampled
+    clauses: ["the minimal completions have signature exactly (p+r, q+r)", "the model completion has Q(rho,phi) = 1, Q(phi,phi) = 0 and is nondegenerate"]
+    omits: "Random extensions by r vectors, of which 87 of 90 are nondegenerate and all have signature (p+r, q+r); the count 87 is hard-coded."
+  check_minimal_completion_unique_fixing_v:
+    kind: sampled
+    clauses: ["any two minimal completions are isometric by an isometry fixing the original space pointwise"]
+    omits: "The explicit map to the model is computed for the 87 random nondegenerate samples, not for arbitrary completions."
+  check_type_n_increment_forced:
+    kind: partial
+    clauses: ["for a type-N obstruction the increment (+1,+1) is forced outright"]
+    omits: "Shows the hyperbolic-plane completion of five nondegenerate (p,q) has increment (+1,+1); that no other increment is possible (forced) is not tested here."
+  check_type_c_sign_forgotten:
+    kind: sampled
+    clauses: ["for a type-C obstruction the sign of the adjoined generator's square is forgotten by the algebra"]
+    omits: "Six (p,q) with p - q = 1 mod 4 and n <= 5 show Cl(p+1,q) = Cl(p,q+1) via nu -> omega nu; that the completed algebra is unique and the definition of type C are the cited classification."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The dimension bound, minimal signature and uniqueness are tested on random rational samples rather than proved, and the type-N clause shows the increment but not its necessity; none of this contradicts the statement."

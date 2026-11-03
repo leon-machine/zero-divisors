@@ -1,0 +1,31 @@
+functions:
+  check_affine_kms_remainder_is_smooth_at_every_point:
+    kind: complete
+    clauses:
+    - (iii)(a) affine-KMS states have a remainder analytic on the whole line, so they satisfy the condition at every point
+    - (iv) the condition does not select the ground state
+    omits: the series inversion is checked to order y^18 with the Bernoulli closed form; analyticity on the real line uses positivity of all Taylor coefficients, checked on partial sums at rational points
+  check_symbol_criterion_separates_thermal_mixture_and_jump_states:
+    kind: sampled
+    clauses:
+    - (i) translation-invariant form of the two-ordering criterion (rapid decay of f - theta at both ends)
+    - (iii)(b) the mixtures have a non-decaying remainder symbol
+    - (iii)(d) the jump example is a state with odd, square-integrable, not rapidly decreasing remainder symbol whose tail fixes the jump height
+    omits: checked at rational q and integer p in a finite range; the general wave-front-set argument of (i) is in the proof
+  check_mixture_fails_the_local_hilbert_schmidt_condition_everywhere:
+    kind: exact
+    clauses:
+    - (iii)(b) the mixtures' remainder is a principal value kernel whose local Hilbert-Schmidt norm diverges at every point
+    omits: the divergence is shown through an exact lower bound at a dyadic sequence of cutoffs
+  check_half_thermal_products_fail_the_condition_at_the_edge_only:
+    kind: sampled
+    clauses:
+    - (iii)(c) the half-thermal products are analytic off the edge and homogeneous of degree -1 at it
+    - (ii) the boost acts as the dilation about the edge, so stationarity is homogeneity
+    omits: checked at c = 1/2 and sample points; the general c is the stored theorem
+untouched_premises:
+  synthesis.imported-microlocal-hadamard-condition: "imported bulk condition cited in the proof's Reading as what the generator condition is the analogue of; the checks compute the generator statements directly"
+  synthesis.imported-local-quasi-equivalence-of-hadamard-states: "imported bulk theorem cited in the Reading only; nothing is computed from it"
+  synthesis.imported-kay-wald-uniqueness-and-no-go: "imported theorem cited in the Reading for the stationary case and the Schwarzschild-de Sitter no-go; nothing is computed from it"
+  synthesis.imported-propagation-of-hadamard-form: "imported propagation theorem cited in the Reading for holes formed by collapse; nothing is computed from it"
+  synthesis.imported-powers-stormer-takesaki-disjointness: "clause (c), the Powers-Stormer inequality, is cited in the Reading for the step from a trace-class remainder to local normality; the checks test the Hilbert-Schmidt condition directly"

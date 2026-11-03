@@ -1,0 +1,14 @@
+functions:
+  check_index_from_capacity_and_temperature:
+    kind: complete
+    clauses: ["(i) index 2 - gamma - 2 tau by exponent arithmetic; the three cases; 8.3 to 8.4 sigma for scale invariance", "(i) gamma + 2 tau = 2.0351 and tau = 0.01755 at gamma = 2"]
+  check_amplitude_in_window:
+    kind: complete
+    clauses: ["(ii) P_Phi bracketed at the window ceiling; ratio to (4/9) A_s above 1e10; required temperature between 7.4e13 and 7.5e13 GeV; the 1 MeV floor"]
+    omits: "the conversion formula is cited (string-gas literature); the constants M_Pl, hbar and the Mpc are cited"
+  check_frozen_point_temperature:
+    kind: complete
+    clauses: ["(iii) H0 in GeV bracketed; Omega_L; P_Phi between 1e-123 and 1e-122; short by over 1e112"]
+untouched_premises:
+  synthesis.imported-string-gas-thermal-spectrum-and-conversion: "imported Fact: the conversion is the hypothesis of the formal statement; the check verifies the exponent and amplitude arithmetic that follows from it"
+  synthesis.imported-large-scale-potential-and-sachs-wolfe-relations: "imported Fact: the factor 2/3 converts the index of Phi to that of zeta in the proof; no number from it enters the checks"

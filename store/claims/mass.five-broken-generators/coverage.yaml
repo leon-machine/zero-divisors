@@ -1,0 +1,18 @@
+functions:
+  check_omega_nondegenerate_iff_non_null:
+    kind: sampled
+    clauses: ["Omega_I is nondegenerate iff I is non-simple iff Q(I) != 0"]
+    omits: "det Omega_I = (Q(I)/2)^2 at three non-null I and two null controls, and two simple vectors z_1 ^ z_2 with Q = 0; the determinant identity is not proved in general"
+  check_stabiliser_ten_complement_five:
+    kind: sampled
+    clauses: ["the A with Omega_I A symmetric form a 10-dimensional space of traceless elements annihilating I (six conditions, none the trace)", "the antisymmetric ones form a 6-dimensional complement, cut to 5 by the trace", "the five A(e_a ^ I) form an independent basis of that complement"]
+    omits: "three non-null I (two frozen points of opposite sign, one generic); the symmetric kernel is shown to annihilate I and have dimension 10, but equality with the full stabiliser {A : A.I = 0} is not separately computed"
+  check_real_form_de_sitter_and_anti_de_sitter:
+    kind: sampled
+    clauses: ["on the real form, for Lambda > 0 the stabiliser is so(1,4)"]
+    omits: "three frozen points (Lambda/6 = 1/2, 3, -1/3); only the signature of I-perp in the real span is computed ((1,4) or (2,3)); that the five are de Sitter translations and the I-half of the nine Goldstone modes of the cited action paper are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The dimension counts 10, 6, 5 and the nondegeneracy criterion are tested at three non-null vectors; the Goldstone reading is not."

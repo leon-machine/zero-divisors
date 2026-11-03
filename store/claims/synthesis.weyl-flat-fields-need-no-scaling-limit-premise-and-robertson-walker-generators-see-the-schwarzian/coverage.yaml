@@ -1,0 +1,36 @@
+functions:
+  check_schwarzian_of_the_physical_affine_parameter:
+    kind: sampled
+    clauses:
+    - (iii) S of the physical affine parameter Psi' = a^2 equals 2a''/a - 4(a'/a)^2 and -2a (1/a)''
+    omits: four polynomial scale factors at five rational times; the identity is algebraic in a, a', a'' and holds for every smooth a
+  check_schwarzian_vanishes_exactly_on_de_sitter_and_flat:
+    kind: complete
+    clauses:
+    - '(iii) S computed as a rational function from the derivatives of a^2: -2n(n+1)/t^2 for a = t^n, -3 <= n <= 3, zero only for n = 0 and n = -1; radiation -4/t^2, matter -12/t^2'
+    - (iii) a = 1/(alpha t + beta) gives S = 0 with Moebius Psi and Psi' = a^2; a = 1/(1 + t^2) gives S != 0
+    omits: the converse (S identically zero forces 1/a linear) is the ODE (1/a)'' = 0, proof-only
+  check_pulled_back_vacuum_differs_by_the_schwarzian_kernel:
+    kind: sampled
+    clauses:
+    - (iii) Moebius Psi leaves the weight-1/2 null vacuum kernel exactly invariant
+    - (iii) radiation Psi gives the squared ratio 1 + S x^2/6 + O(x^3) with S = -4/t^2, a nonzero Schwarzian kernel
+    - (ii) the pullback of the null vacuum by a regular reparametrisation differs by a kernel vanishing on the diagonal
+    omits: smoothness of the Schwarzian kernel in general (Hadamard's lemma) and the CAR weight-1/2 forcing are proof-only
+  check_conformal_factor_scales_to_local_inertial_coordinates:
+    kind: sampled
+    clauses:
+    - (i) a(t0)^-3 W(z) = W(a(t0) z) for the flat massless kernel and the conformal factor tends to a(t0)^-3 at rate l
+    omits: the Hadamard property of the rescaled state (conformal covariance, wave-front sets) is proof-only
+  check_conformal_null_geodesics_keep_their_covectors:
+    kind: sampled
+    clauses:
+    - (i) flat null lines with f' = phi^-2 are affine null geodesics of the conformally flat field and carry the flat covector, so C^pm agree; f' = phi^-1 is not affine
+    omits: three polynomial conformal factors of t at five rational times; the wave-front-set invariance under smooth nonvanishing factors is standard and proof-only
+  check_leading_term_in_the_physical_parameter:
+    kind: sampled
+    clauses:
+    - (iii) the leading coefficient in the physical parameter is S_Phi = -S/a^4, computed from the squared ratio at image points for the radiation field
+    omits: three values of t0 at one point; the inversion rule is standard and the convergence is shown on eight decreasing separations
+untouched_premises:
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: 'imported theorem (local conformal flatness of Weyl-flat fields, weight 3/2 of the massless Dirac field) applied in the set-up of the proof; nothing is computed from it'

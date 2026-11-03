@@ -1,0 +1,24 @@
+functions:
+  check_weight_half_preserves_the_local_hilbert_schmidt_norm:
+    kind: sampled
+    clauses:
+    - (i) the weight-1/2 boost scaling preserves local Hilbert-Schmidt norms
+    omits: checked on rational sample kernels; the general statement is the change of variables in the proof
+  check_quasi_equivalence_gives_a_hilbert_schmidt_difference:
+    kind: sampled
+    clauses:
+    - (ii) local normality gives a Hilbert-Schmidt difference of two-point functions
+    omits: checked on sample kernels; the imported quasi-equivalence criterion is not re-proved
+  check_homogeneous_remainder_is_not_square_integrable_at_the_edge:
+    kind: sampled
+    clauses:
+    - (iii) half-thermal product states are locally disjoint from the vacuum at the edge
+    omits: the divergence of the remainder is checked on sample cutoffs
+  check_regular_reparametrisation_changes_the_vacuum_by_a_bounded_kernel:
+    kind: sampled
+    clauses:
+    - (iv) regular reparametrisations change the vacuum by a bounded kernel
+    omits: checked for sample reparametrisations
+untouched_premises:
+  synthesis.imported-haag-local-normality: imported principle cited in the reading; the checks verify the scaling
+    and disjointness statements directly

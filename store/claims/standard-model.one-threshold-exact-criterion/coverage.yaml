@@ -1,0 +1,18 @@
+functions:
+  check_closed_form_solution_and_uniqueness:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Closed forms verified by substitution on a finite set of 72 spectrum and record pairs plus the singular case; not symbolic in the record values and coefficients. The log conversion to GeV is not checked."
+  check_complete_multiplets_inert:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Sample shifts c on the same finite set; M_U and M_I are not computed (only x and y, from which they follow), and the lemma is used by name only."
+  check_interval_criterion_and_monotonicity:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "The iff is tested on a grid at three record points and two b vectors; the Moebius derivative identity is exact at the sample coefficients only. 'admissibility reduces to a_U > 0' is not tested (only x > 0)."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each function tests its clause by exact rational arithmetic on sample points, none claims more; the closed forms are not checked symbolically."

@@ -1,0 +1,9 @@
+(1) $g_k$ vanishes identically on $\Sig$ (there $k$ spans the radical, so in particular $G(k,k) = 0$), so its differential at points of $\Sig$ vanishes on vectors tangent to $\Sig$.
+
+(2) Two extensions differ by a covector field $m$ vanishing on $\Sig$; locally $m = \tau\, \tilde m$ for a defining function $\tau$ of $\Sig$ and a smooth $\tilde m$. Then
+\[
+g_{k + m} - g_k \;=\; 2\,G(k, m) + G(m,m) \;=\; 2\tau\, G(k, \tilde m) + \tau^2 G(\tilde m, \tilde m).
+\]
+Differentiating at a point of $\Sig$ and using $\tau|_\Sig = 0$: the second term contributes $0$ (it vanishes to second order), and the first contributes $2\,G(k, \tilde m)\, d\tau|_\Sig$, which vanishes because $G(k, \cdot)|_\Sig = 0$. Hence $dg_{k+m}|_\Sig = dg_k|_\Sig$.
+
+(3) $g_{ck} = c^2 g_k$, so $dg_{ck}|_\Sig = c^2\, dg_k|_\Sig + 2c\,g_k\,dc|_\Sig = c^2\, dg_k|_\Sig$, the second term vanishing because $g_k|_\Sig = 0$. Well-definedness of $\delta$ on the line bundle $\shL^{\otimes 2}$, whose local frames are exactly the $c^2 (k \otimes k)$ ($c$ nonvanishing), is (2) and (3) together.

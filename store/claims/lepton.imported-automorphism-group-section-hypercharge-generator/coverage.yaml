@@ -1,0 +1,22 @@
+functions:
+  check_kernel_and_section:
+    kind: sampled
+    clauses: ["the automorphism group is (U(2) x U(3))/K with K = {(lambda I_2, lambda^-1 I_3)}", "each K-coset contains exactly one pair with det A det B = 1"]
+    omits: "Lie algebra kernel (rank 12, kernel the line of (1, -1)) is exact; the group-level statements are checked at three values of lambda and one pair (A, B), not symbolically in lambda, A, B"
+  check_z6_quotient:
+    kind: sampled
+    clauses: ["S(U(2) x U(3)) = (SU(2) x SU(3) x U(1))/Z_6"]
+    omits: "counts the solutions of lambda^6 = 1 among N-th roots of unity for N in {6, 12, 30, 42} and a bijection of Z_6 onto the centres Z_2 x Z_3; surjectivity of (a, b, lambda) -> (lambda^3 a, lambda^-2 b) onto S(U(2) x U(3)) and general lambda in U(1) are not tested"
+  check_centre_is_hypercharge_line:
+    kind: exact
+    clauses: ["the centre of the Lie algebra is spanned by y = (3i I_2, -2i I_3)"]
+    omits: ""
+  check_y_acts_by_the_abelian_weight:
+    kind: sampled
+    clauses: ["y acts as iq on an irreducible representation, Y = q/6"]
+    omits: "only the irreducible constituents of the exterior powers of C^2 (x) C^3 (k = 0..6) and of the five-mode modules (j < 3, k < 4); the last sentence (irreducibles are determined by SU(2) content, SU(3) content and weight) is not tested, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Lie-algebra statements are exact; group-level quotient statements are checked at samples; the final classification sentence is declared untested."

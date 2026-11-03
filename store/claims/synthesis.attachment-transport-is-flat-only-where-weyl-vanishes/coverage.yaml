@@ -1,0 +1,30 @@
+functions:
+  check_samples_are_weyl_maps_of_each_petrov_type:
+    kind: complete
+    clauses:
+    - 'setup: each sample is a Weyl map (pair symmetry, zero Ricci trace, first Bianchi identity, I4-linear) of the stated Petrov type, read from the minimal polynomial'
+    omits: the type test is exact on each sample; the general normal-form argument is in the proof
+  check_schouten_drops_out_of_the_field_strength:
+    kind: sampled
+    clauses:
+    - (i) the derivative-free field strength is minus the Weyl map on every coordinate plane, for two non-Einstein Schouten maps
+    omits: seven Weyl samples and two Schouten maps; the general statement is the stored tractor theorem (iv)
+  check_parallel_conformal_spinors_by_petrov_type:
+    kind: sampled
+    clauses:
+    - (ii) annihilated subspace of complex dimension 4, 2, 0 at types O, N and III, D, II, I
+    - (ii) at type N it is the kernel of the repeated principal null vector k, not of m
+    omits: one sample per type (N, III and singular I unique up to rotor and scale; D, II, I covered for all invariants by the spinor argument in the proof)
+  check_cotton_block_only_cuts_the_type_n_kernel:
+    kind: sampled
+    clauses:
+    - (ii) a Cotton block can only reduce the annihilated subspace
+    omits: four sample Cotton vectors at type N
+  check_no_conformal_energy_generator_commutes_with_weyl:
+    kind: complete
+    clauses:
+    - (iii) commutant dimensions 15, 5, 1 and the commutant spanned by E at types I, II, D, III
+    - (iii) every commutant element annihilates the null vector k; Z annihilates only a negative-definite 4-plane
+    omits: the conjugation step (a rotor is an isometry) is in the proof; commutants computed on the samples
+untouched_premises:
+  synthesis.imported-twistor-equation-integrability-petrov-n-or-o: "imported integrability condition cited as the standard form of the kernel dimensions the checks compute directly from the Petrov samples; no check calls it"

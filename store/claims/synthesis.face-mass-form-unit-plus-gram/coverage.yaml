@@ -1,0 +1,14 @@
+functions:
+  check_theta_normalisation:
+    kind: exact
+    clauses: ["whole"]
+    omits: "tests only the setup: Theta_k = (1/2) eps_kij eps_AB is symmetric with tr(Theta_k Theta_l) = delta_kl; no clause (i) to (iii) is touched"
+  check_unit_plus_gram:
+    kind: sampled
+    clauses: ["whole"]
+    omits: "the pure-state identity H_kl = <psi|psi> delta_kl + <Omega_k psi, Omega_l psi> + 2 sum_p <(Theta_k a)_p psi, (Theta_l a)_p psi> in exact amplitudes for 4 finite-support, non-Gaussian states (the unit-plus-Gram form W^dagger W is this identity); mixed states, (i) H >= 1 with its equality condition, (ii) invariance of the floor, and (iii) the coherent/connected/number split and the Gaussian-class values K = 2x^2 P, 2N = x(1 + P) are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the central identity is tested on four non-Gaussian states; the numbered consequences have no function"

@@ -1,0 +1,18 @@
+functions:
+  check_two_mode_states_are_the_ten:
+    kind: exact
+    clauses: ["Lambda^2(R_2 + W) = (1,1)_1 + (2,3)_{1/6} + (1,3bar)_{-2/3}, e^c + Q + u^c", "the slot bivector is the e^c direction: T_3 = 0, Y = 1, charge 1", "(a) not neutral, so a condensate there breaks electromagnetism"]
+    omits: "That the bracket's modulus is therefore a mass parameter and not a vev is a reading of the charge."
+  check_the_ten_occurs_in_120_and_126_not_in_10v:
+    kind: exact
+    clauses: ["(b) the 10 of SU(5) occurs in the 120 and the 126 and not in the 10_v"]
+    omits: "Counts highest-weight vectors in Lambda^1, Lambda^3 and Lambda^5; Lambda^5 is 126 + 126bar and which half is the 126 is the imported convention (the docstring says it is not recomputed)."
+  check_120_couplings_antisymmetric_vanish_on_one_generation:
+    kind: exact
+    clauses: ["(b) the 120 coupling is antisymmetric in generations and vanishes for one", "(c) no mass operator on a single generation from the bracket direction"]
+    omits: "The 126 branch ('the charged component just excluded') is not computed here; it rests on the mass-bracket premise."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Finite exact computations on the five-mode module and U(5) highest-weight counts cover (a) to (c); the 126 branch is cited."

@@ -1,0 +1,16 @@
+functions:
+  check_matrix_unit_relations:
+    kind: sampled
+    clauses:
+    - E11 + E22 = 1 and E_ij E_kl = delta_jk E_il (a full 2 x 2 system of matrix units)
+    omits: The six type-C signatures with n <= 5 and both gamma (all 16 relations in each), not all n; opposite-sign control passes as intended
+  check_peirce_isomorphism:
+    kind: sampled
+    clauses:
+    - B_gamma = Mat_2(E11 B E11) via b -> (E_1i b E_j1) with inverse (c_ij) -> sum E_i1 c_ij E_1j
+    omits: Same twelve cases; bijectivity by rank 2^(n+1) = 4 dim corner and recovery of every basis blade by the inverse, but multiplicativity only on pseudo-random sample pairs (SEEDS), not every basis pair
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Matrix units and the Peirce map are checked exactly on the type-C bases with n <= 5; multiplicativity is sampled.

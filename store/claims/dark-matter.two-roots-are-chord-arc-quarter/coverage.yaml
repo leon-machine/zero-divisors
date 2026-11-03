@@ -1,0 +1,18 @@
+functions:
+  check_chord_and_arc:
+    kind: exact
+    clauses: ["the region between the equator and one pole has extent R along the polar axis and pi R/2 along the surface", "chord c = 1, arc c = pi/2"]
+    omits: "chord taken as the polar distance and arc as a quarter great circle by definition; R is sampled at three values (the ratio is scale free); 'R2 selects the chord' (a unit ball's extent along the added direction is its radius) is definitional and not separately tested"
+  check_totals_agree_compositions_differ:
+    kind: exact
+    clauses: ["the two totals agree", "their compositions differ"]
+    omits: "the exchange itself is the premise Proposition (i); here T(1) = T(pi/2) is verified as an identity in pi and the shares (4/3, 8/(3 pi)) versus (8/(3 pi), 4/3) are compared"
+  check_both_poles_excluded:
+    kind: exact
+    clauses: ["both poles: c = 2 and c = pi give 5.729 and 7.182, both excluded"]
+    omits: "that the two-pole extent corresponds to c = 2 and c = pi is the statement's assignment, not computed"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Removed the vacuous check_cells_measure_the_radius (its assert was fixed by its own input list); the R2 chord selection is recorded as definitional under check_chord_and_arc."

@@ -1,0 +1,18 @@
+functions:
+  check_single_mode_readings:
+    kind: sampled
+    clauses: ["(i) strict periodicity holds for no state", "(i) glued reading holds exactly when n = 1/(Q + 1)", "(i) ladder correlators do not see omega(a)", "(i) zero weight: periodicity vacuous, glued reading forces n = 1/2"]
+    omits: "three values of Q (3, 1/5, 7/2) and Q = 1; the equations (1/Q - 1)(1 - n) = 0 and (Q - 1) n = 0 are written out from the Q^(-+1) rule rather than derived from the flow, and 'no solution' and 'unique root' are tested by enumerating a handful of candidate occupancies, not by solving; regularity alone being vacuous (every F entire) and the marginal being the Gibbs state at beta = p are not computed"
+  check_two_mode_counter_models:
+    kind: sampled
+    clauses: ["(ii) mixed correlators vanish under the glued reading", "(iii) coherence c != 0 gives an even state with T05's (R) and omega(a_1 a_2^*) = -c, so (R_reg) fails", "(iii) density correlation d != 0 gives a state with (R_reg) and omega(N_1 N_2) - n_1 n_2 = d, so (Q) fails"]
+    omits: "one pair (Q_1, Q_2) = (3, 5) and one value each of c = 1/50 and d = 1/100, exact density matrices in the Jordan-Wigner basis; (ii) is exercised only as the failure of mixed gluing for model A and its holding for the product state and model B, the implication 'glued mixed correlators force zero' is not derived; the implications 'T05's (R) with (Q) implies (R_reg)' and 'R_reg implies T05's (R)' are not tested"
+  check_le_pair_same_generators:
+    kind: sampled
+    clauses: ["(v) the boost-bivector algebra has dimension 2^n, commutes with every N_k, contains sigma_j sigma_k", "(v) hopping and pairing lie outside it"]
+    omits: "n = 3 only in Cl(3,3) (dimension 8, general 2^n not tested); hopping and pairing tested for the single pair (1, 2); the comparison of the note's retired premise text with T05's clause (that the two premises name one generator class) is textual and not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact arithmetic throughout, at sample Q, c, d and n = 3; clause (iv) and the 'implies' directions of (iii) are not computed"

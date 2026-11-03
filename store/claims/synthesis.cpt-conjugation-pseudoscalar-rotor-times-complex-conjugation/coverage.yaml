@@ -1,0 +1,26 @@
+functions:
+  check_anti_automorphism_and_rotor:
+    kind: sampled
+    clauses: [(1)]
+    omits: The anti-automorphism property (and failure of multiplicativity) of grade involution o reversal is checked on two sample products X, Y, not as a structural identity; the vector action -1, I6 = (e0e1)(e2e3)(e4e5) with each factor squaring to -1 and I6 rev(I6) = 1, Ad(I6) = grade involution on three elements, and the Cl(1,3) control are exact; "each factor is exp(pi B_k/2)" is read from B^2 = -1, not evaluated.
+  check_conjugate_flag_other_family:
+    kind: sampled
+    clauses: [(2)]
+    omits: 'One Witt flag (J: e0 -> e1, e2 -> e3, e4 -> e5, w_k = e_{2k} - i e_{2k+1}) rather than a generic W with W cap W-bar = 0: isotropy, the pairing diag(4,-4,-4) (twice the B of the docstring), W + W-bar = C^6, I6 N = i N and I6 conj(N) = -i conj(N), and the Cl(3,3) control I6^2 = +1 are exact for it.'
+  check_real_linear_swap_reverses_action:
+    kind: sampled
+    clauses: [(3)]
+    omits: 'One real-linear isometry (reflection in e1, e3, e5, g(W) = W-bar, g(I6) = -I6) and one data point (I, V, F) with value -152: the integrand flips under g, is fixed by grade involution o reversal and by complex conjugation; "every" real-linear g with g(W) = W-bar having det -1 is not enumerated; the Witt swap leaving R^{2,4} is shown by one non-real coefficient.'
+  check_C_antilinear_automorphism:
+    kind: sampled
+    clauses: [(4)]
+    omits: C = Ad(I6) o kappa is verified multiplicative, antilinear and involutive on two sample elements X, Y, fixes I6, maps gen_k to -gen_k, carries N to -conj(N) and fixes the integrand at the one data point (-152); the statements that the stored composite is reversal composed with C, and that no real-linear realisation of the flag conjugate is orientation-preserving, are not computed here.
+  check_reading_convention:
+    kind: sampled
+    clauses: [(5)]
+    omits: 'Pinned values on a single data point: the two alternative readings give -226 -> +226 (phi substituted in a bivector slot) and -152 -> +152 (kappa with phi applied to the whole integrand), with the real reflection keeping -152; "every action functional of real tensor fields" is not testable and not tested, and C-invariance of the bivector-odd functional is not asserted in this function.'
+untouched_premises:
+  std-algebra.involution-properties: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.bivector-exponential: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.pseudoscalar-commutation: "standard algebra cited in the proof; the check computes the statement directly"
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Clauses (1)-(5) are reproduced as exact identities or pinned values on one flag and one data point; universal quantifiers (every g, every functional) are not enumerated.'}

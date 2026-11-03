@@ -1,0 +1,34 @@
+doc: t02-regenerated
+title: Projective Completes to Conformal (regenerated from the store)
+author: Leon Butler
+level: formal
+spine:
+- conformal.blade-basis-persists-under-degeneracy
+- conformal.blade-basis-persists-under-degeneracy-external
+- conformal.witt-extension-theorem
+- conformal.minimal-nondegenerate-completion
+- conformal.nilpotent-ideal-becomes-unit-ideal
+- conformal.principal-case
+show: spine-only
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T02_projective_to_conformal.tex
+  note: 'Phase 3 gate: regenerate one paper at formal level and compare with the original'
+paper: T02
+sections: paper
+cite: []
+prose: paper
+msc: Primary 15A66; Secondary 51N25, 68U05, 15A63.
+keywords: projective geometric algebra; conformal geometric algebra; degenerate Clifford algebra; Witt completion; minimal completion.

@@ -1,0 +1,15 @@
+functions:
+  check_magnitude_window:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "exact arithmetic on the stated inputs only (H = 10^-33 eV, M_P = 10^28 eV, weak scale 10^11 eV, Lambda = H^2 in these units): H^2/M_P = 10^-94, 10^-105 and 10^-44 of the weak scale; 'any vacuum length' is covered by the endpoints and two interior lengths; the refutation of the vacuum-area conjecture is the physical reading of the estimate"
+  check_democratic_line_and_rank_one_texture:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "the S3-fixed vectors, rank-1 Gram square, spectrum (3, 0, 0), eigenvector u' and the light plane are exact; that the kinematic vacuum cannot break S3 (the indifference instrument) is a premise, and the Gram-square reading of the leading mass form is a reading, not computed"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clauses (1) and (3) are tested exactly on the stated inputs; clauses (2) (redirection) and (4) (residue named) have no computable content, as the docstring says."

@@ -1,0 +1,14 @@
+functions:
+  check_displayed_sign_attaches_de_sitter:
+    kind: sampled
+    clauses: ["with the signs as displayed, Lambda > 0 gives Q(I_g) = Lambda/3 > 0", "its flat-model section is the de Sitter pseudosphere"]
+    omits: "three Lambda values on de Sitter's calR(B) = (Lambda/3) B; de Sitter identification is by signature of I-perp, sign of Q(Y) = -3/Lambda and tangent signature (1,3), not re-derived from Proposition (2)"
+  check_opposite_sign_attaches_anti_de_sitter:
+    kind: sampled
+    clauses: ["the opposite sign choice would attach the anti-de Sitter section to Lambda > 0"]
+    omits: "three Lambda values; shows rho = -Lambda/6, Q(I) = -Lambda/3, I-perp signature (2,3), Q(Y) = 3/Lambda; that this contradicts the naming convention is a statement about conventions, not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both sign choices are computed and give the dS and AdS sections the statement asserts; the determination argument itself is a two-case comparison at sample Lambda."

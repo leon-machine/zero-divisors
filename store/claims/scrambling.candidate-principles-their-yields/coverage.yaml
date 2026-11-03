@@ -1,0 +1,22 @@
+functions:
+  check_p1_slice_count_scheme_bound:
+    kind: exact
+    clauses:
+    - (P1) one fermion per Planck cell of the slice returns N_epoch = 16 pi S_BH
+    - 'the slice count scales as c_0^(3/2): proper-time scheme exactly 3/2 times the curvature scheme, Kretschmann scheme 12^(1/4) times it, an irrational multiple'
+    omits: the three cutoff conditions are entered and solved in the check, not read from the cited scheme entity
+  check_p3_horizon_normalised_count:
+    kind: exact
+    clauses:
+    - (P3) one fermion per Planck cell of the sphere at horizon normalisation, once per modular period, returns N_epoch = A = 4 S_BH independently of the cutoff scheme
+    omits: the coframe (dt, r_h d theta, r_h sin theta d phi) is the cited Fact; only the weight identity (r^(1/2) sqrt(A))^2 = 1 - r (polynomial identity) and r^-1 . r = 1 are checked; the cell count A is by definition of the principle
+  check_p2_breaks_scaling:
+    kind: exact
+    clauses:
+    - (P2) fundamentals per sphere aggregated over the epoch breaks the M-scaling
+    omits: the model of the fundamentals per sphere as sqrt(4 pi r_c^2) is taken from the cited Proposition
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: All three principles are computed exactly as monomials in M and pi; each depends on its cited definition of the count.

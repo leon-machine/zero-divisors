@@ -1,0 +1,16 @@
+functions:
+  check_flavour_blind_dressing_keeps_q:
+    kind: sampled
+    clauses: ["(i) Q(lam m) = Q(m)"]
+    omits: "three rational square-coordinate samples and three factors, not all m and lam"
+  check_raising_lighter_masses_lowers_q:
+    kind: sampled
+    clauses: ["(ii) dQ/ds_j = 2 (S1 s_j - S2)/S1^3", "(ii) 3 s_j <= s_3 gives S1 s_j < S2; the heaviest raises Q", "(ii) raising the lighter masses lowers Q"]
+    omits: "derivative compared with difference quotients on three samples; the path argument is in the proof, the grid of factors is a sample"
+  check_quark_quotients_exceed_two_thirds:
+    kind: complete
+    clauses: ["(iii) Q > 2/3 and its stated value to three places for the five mass sets"]
+    omits: "u, c, the charm pole mass and the M_Z sets are values cited from memory, hard-coded"
+  check_required_heavy_to_light_ratio:
+    kind: complete
+    clauses: ["(iv) R* brackets (1.88, 1.89), (2.19, 2.20), (8.67, 8.68), (17.5, 17.6) and the ninth condition at their upper ends"]

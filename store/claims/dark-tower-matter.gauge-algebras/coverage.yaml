@@ -1,0 +1,21 @@
+functions:
+  check_three_dimensional_algebra_is_so2_plus_so2:
+    kind: sampled
+    clauses: ["(i) gauge algebra so(2) + so(2), abelian, dimension 2", "(i) kernel {(1,1), (-1,-1)}"]
+    omits: "the algebra part is exact; the kernel of (A,B) -> A (x) B is computed on 40 x 40 pairs from a rational subgroup of O(2) (Pythagorean rotations, a quarter turn, a reflection), not on the whole group"
+  check_three_dimensional_global_form:
+    kind: complete
+    clauses: ["(i) the identity component of the group is U(1)_+ x U(1)_-"]
+    omits: "enumerates the nine weights of the exterior algebra of the four cells (s + p even, integral charges q_+- = (s +- p)/2, with (1,0) and (0,1) present); the torus is read from the charge lattice generating Z^2, with no group-level computation"
+  check_five_dimensional_algebra_is_u3:
+    kind: exact
+    clauses: ["(ii) gauge algebra u(3) = su(3) + u(1), dimension 9"]
+    omits: "dimension 9, derived algebra 8, centre 1 (controls 12 and 7); su(3) is identified by construction and dimension, not by a Killing form; the global form (U(1) x U(3))/U(1) = U(3) is not computed"
+untouched_premises:
+  dark-tower-matter.u-transposition-rule: "premise selecting the hierarchy; no computable content in the algebra checks"
+  dark-tower-matter.h1-momentum: "hypothesis on momentum with no computable content in these checks"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the Lie algebra statements are exact; the group-level statements (kernel on O(2) x O(2), the global form of (ii)) are only sampled or not computed"

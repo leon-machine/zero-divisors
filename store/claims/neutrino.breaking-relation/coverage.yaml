@@ -1,0 +1,22 @@
+functions:
+  check_exact_identity_and_majorana_only_breaking:
+    kind: sampled
+    clauses: ["m_D M_R^-1 m_D^T = (d^2 delta^2/alpha) A Pi A^T + (d^2/(3 M_3)) q q^T, q = 3u' + delta A u'", "no breaking of the Majorana sector alone lifts m_2 (J X J = (sum X_ij) J)"]
+    omits: "three directions A (e_3 e_3^T and two general real matrices), three (alpha, M_3, d) and four delta; both sides are quadratic in delta so four values fix the identity in delta, but A, alpha, M_3 and d are sampled; Majorana-only breaking is checked for four X, giving a light matrix of rank at most one"
+  check_reference_direction_scale:
+    kind: exact
+    clauses: ["for A = e_3 e_3^T, |Pi A Pi| = 2/3 and lambda_A = 4/9", "delta^2 lambda_A is invariant under a rescaling of A", "A Pi A^T has eigenvalue 2/3, a factor 2/3 against the compression"]
+    omits: "rescaling invariance is checked at three scale factors c; lambda'_A = 0 is also computed"
+  check_leading_order_compression_eigenvalues:
+    kind: sampled
+    clauses: ["the second and third light masses are, to leading order in delta, (d^2 delta^2/alpha) times the eigenvalues of Pi A Pi A^T Pi"]
+    omits: "two generic directions A at one (alpha, M_3) = (1, 2) and delta = 10^-2, 10^-3, 10^-4; only the sum and product of the two light masses (c_2/c_1 and c_3/c_1) are matched to the compression's trace and 2-minor sum within 2 delta, not the individual eigenvalues (the trace and 2-minor sum themselves are pinned to by-hand values); m_1/m_2 = lambda'_A/lambda_A follows from this and is not separately tested"
+  check_instances_diagonalised_exactly:
+    kind: exact
+    clauses: ["the formula overestimates the exact ratio m_2/m_3 by more than a half at the instance of the cited remark"]
+    omits: "exact bracket of r = m_2/m_3 through r/(1+r)^2 = c_2/c_1^2 at delta = 0.286, M_3/alpha = 66 (r = 0.1695723 against the formula's 0.26659, factor 1.5722) and at delta = 0.006, M_3/alpha = 1284 (r/formula = 0.995055, r/(A Pi A^T formula) = 0.663370), each pinned to six or seven figures; the instance values are taken from the remark; the O(delta) and O(delta^2 M_3/alpha) structure of the remainder is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The exact identity is sampled in A and the parameters; the leading-order ratio is confirmed only at the two instances and for the sum and product of the light masses. 2026-10-23 (weak checks): check_leading_order_compression_eigenvalues pins the trace and 2-minor sum of Pi A Pi A^T Pi for both directions to by-hand values (91/9, 169/9; 1276/81, 400/9); check_instances_diagonalised_exactly pins r = m_2/m_3 and its ratios to the formulas to six or seven figures and the formula value 0.26659 exactly; samples, instance inputs and the tolerance moved to module level."

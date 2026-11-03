@@ -1,0 +1,22 @@
+functions:
+  check_car_window:
+    kind: exact
+    clauses: ["(i) setup: the four window modes realise the CAR in Cl(4,4)"]
+    omits: "all 16 anticommutators {a_i, a_j^*} and 16 {a_i, a_j} checked; this is the window realisation, not a clause of the statement"
+  check_charge_is_sector_label:
+    kind: sampled
+    clauses: ["(i) observable algebra is the direct sum of full matrix algebras over joint charge values", "(i) the centre is spanned by the joint charge projections", "(i) window states of different charge are disjoint"]
+    omits: "one window only (two modes per tower, so sectors of dimension 1, 2, 1 each and total dimension 36 = (1 + 4 + 1)^2), not 'every window'; the centre is shown through central projections plus the algebra dimension, not computed directly; disjointness is shown for two explicit Gibbs-times-sector states separated by a central projection"
+  check_temperature_not_sector_label:
+    kind: sampled
+    clauses: ["(ii) products of Gibbs states at beta, beta' (equal or not) have invertible density and positive weight in every joint charge sector"]
+    omits: "three clock pairs (x' = 1/3, 1/50, 2/7 against x = 1/3) on the two-plus-two mode window with frequencies 1 and 2; that the central support is 1 and that no central projection separates two xi follow logically from positivity and are not computed separately"
+  check_mode_affinity:
+    kind: sampled
+    clauses: ["(iii) a_j < 1 exactly when the clocks differ", "(iii) 1 - a_j <= |n_j - n'_j|", "(iii) a band of modes at one frequency has a positive lower bound on 1 - a_j"]
+    omits: "exact rational inequalities (squared forms) on a 7 x 7 grid of Boltzmann factors and one pair (n, k) = (1/3, 1/4); the Powers-Stormer disjointness and quasi-equivalence criterion is imported and not tested, so the divergent and convergent sum cases, the 'finite label only on windows' remark and the closing Reading paragraph are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "window-scale exact checks of (i) and (ii) and per-mode checks of (iii); all infinite-algebra statements rest on the imported criterion"

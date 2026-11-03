@@ -1,0 +1,18 @@
+functions:
+  check_single_spinor_is_null:
+    kind: sampled
+    clauses: ["a single conformal spinor carries null momentum p_AA' = pi_A conj(pi_A') and is massless"]
+    omits: "seven Gaussian-rational spinors; the identity p^2 = 0 is not carried symbolically"
+  check_two_spinor_mass_is_symplectic_area:
+    kind: sampled
+    clauses: ["m^2 = p^2 = 2 |<pi^1 pi^2>|^2"]
+    omits: "all 21 pairs of the seven spinors, real, with p = A A-dagger and det p = |det A|^2 checked on each (the Cauchy-Binet route), two hand values; not a symbolic identity"
+  check_aligned_null_and_mass_grows_with_misalignment:
+    kind: sampled
+    clauses: ["aligned spinors (vanishing bracket) give a null composite", "mass grows with the misalignment"]
+    omits: "scalar multiples c of seven spinors for three c; along pi^2 = pi^1 + t eta only t = 0..3 for four spinors and two eta, mass 2 t^2 |<pi^1 eta>|^2 strictly increasing; 'grows with misalignment' is tested along these lines only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The formula m^2 = 2|<pi^1 pi^2>|^2 holds exactly on every sampled pair."

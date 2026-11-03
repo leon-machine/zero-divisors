@@ -1,0 +1,22 @@
+functions:
+  check_two_spinor_configuration_is_the_one_rung_sector:
+    kind: exact
+    clauses:
+    - the configuration space C^2 (x) CS, eight-dimensional, is the sector (j,k) in {(1,0),(1,2)} of the two-rung module
+    - which under U(2) x U(3) is (2,1)_{1/2} + (2,3b)_{-1/6}
+    omits: the identification of the continuous data (omega^i, pi^i) with the E = -1, +1 parts and the L*, Q* versus L, Q orientation reading are not tested
+  check_two_particle_product_not_in_module:
+    kind: exact
+    clauses:
+    - The two-particle tensor product CS (x) CS has no U(3)-equivariant embedding in the module
+    omits: ''
+  check_mass_bracket_is_quadratic:
+    kind: sampled
+    clauses:
+    - the mass bracket is quadratic in Psi and lives in S^2 of the module, not in the module
+    omits: two sample Psi, one scaling factor and one non-additivity instance; "lives in S^2 of the module" is not tested beyond quadraticity
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Sector content and the Casimir obstruction are exact finite computations; the quadraticity of the bracket is checked at samples.

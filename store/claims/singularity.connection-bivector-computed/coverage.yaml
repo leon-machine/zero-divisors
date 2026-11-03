@@ -1,0 +1,18 @@
+functions:
+  check_beta_identities_in_q_r_beta:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "identities beta' = -beta/2r, beta beta' = -M/r^2 hold exactly in r in Q(r)[beta] but at two masses M = 3/2, 5 only; jet derivative of beta checked at six sample points"
+  check_stated_connection_solves_torsion_uniquely:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "zero torsion for all six pairs at six sample points (first-order jets), not the three structure equations as written; sign assembly checked on one component; uniqueness (rank 24) and the perturbed control go beyond the statement"
+  check_connection_on_radial_plane:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "six sample points; 'exactly and at every radius' and the r^(-3/2) divergence follow from the formulas but are tested only at those points"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three clauses are checked at exact rational sample points, as the docstring says."

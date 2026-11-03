@@ -1,0 +1,10 @@
+store/.tp-cache/
+build/
+__pycache__/
+*.pyc
+proposals/
+site/pdf/
+
+# document version snapshots: written by tp doc / tp regen, not kept in git
+documents/*/versions/
+colony/.graph_cache_v2.pkl

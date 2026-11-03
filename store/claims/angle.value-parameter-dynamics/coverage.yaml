@@ -1,0 +1,18 @@
+functions:
+  check_ground_state_eigenvalue_and_marginal:
+    kind: sampled
+    clauses: ["unique ground state c|10> + s|01>", "eigenvalue -tc/s", "left marginal Gibbs for N_0 at q = c^2/s^2"]
+    omits: "seven rational points (c, s, t) with hand-tabulated values; the statement is for every rational point with c s != 0 and t c s > 0"
+  check_gap_identities_and_sign_condition:
+    kind: sampled
+    clauses: ["ground state unique exactly when t c s > 0 (gap positivity)"]
+    omits: "16-point grid of (c, s, t); the gap formulas are not proved symbolically, though they are low-degree rational identities"
+  check_gibbs_parameter_fixed_by_ratio_and_sign_of_t:
+    kind: sampled
+    clauses: ["determination clause: c/s is the root of r^2 + (eps/t) r - 1 = 0 with the sign of t", "q fixed by eps/t and sign of t, by eps/t alone for t > 0"]
+    omits: "root check at the seven proof points; the counterexample (4/5, 3/5, t = 60) against (3/5, -4/5, t = -60) with equal eps/t = -7/12 and q = 16/9 versus 9/16 is exact and shows the sign of t is needed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement as written already carries the sign-of-t correction that the check's docstring reports; all three functions sample a for-every-rational claim."

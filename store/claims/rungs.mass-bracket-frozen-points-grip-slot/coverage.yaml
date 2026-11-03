@@ -1,0 +1,24 @@
+functions:
+  check_volume_identities_and_mass:
+    kind: sampled
+    clauses:
+    - eps(n_inf ^ Z1 ^ Z2) = <pi1 pi2>, so m^2 = 2|eps(n_inf ^ Z1 ^ Z2)|^2
+    - eps(n_0 ^ Z1 ^ Z2) = <omega1 omega2>
+    - eps(I_Lambda ^ Z1 ^ Z2) = <pi1 pi2> + (Lambda/6)<omega1 omega2>
+    omits: four sample spinor pairs (two complex) and two values of Lambda; the identities are quadratic in eight entries so the samples do not determine them; m^2 = p^2 uses the check's own spinor p^2 formula
+  check_slot_trace_and_symmetric_square_component:
+    kind: sampled
+    clauses:
+    - the total momentum is the slot trace of Psi (x) conj(Psi) restricted to the pi-parts
+    - Z1 ^ Z2 is the Lambda^2 C^2 (x) Lambda^2 CS component of Psi . Psi
+    omits: four sample pairs; the complex unit I_6 is not modelled
+  check_mass_zero_iff_orthogonal_to_frozen_point:
+    kind: sampled
+    clauses:
+    - at Lambda = 0 the mass vanishes exactly when that bivector is orthogonal to the frozen point
+    omits: six sample pairs, two of them with zero mass
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact arithmetic over Q(i) at a handful of sample spinor pairs; the identities are low-degree polynomials but are not proved symbolically.

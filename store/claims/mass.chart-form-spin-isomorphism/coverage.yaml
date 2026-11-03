@@ -1,0 +1,18 @@
+functions:
+  check_grading_element:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_translations_block:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "exact on the four basis x and two further samples; extension to all x uses that A(x ^ n_inf) is linear in x"
+  check_special_conformal_block:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "exact on the four basis x and two further samples; extension to all x uses that A(x ^ n_0) is linear in x"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The spin preimage is solved exactly (rank 15, kernel the scalars) and matches all three displayed matrices."

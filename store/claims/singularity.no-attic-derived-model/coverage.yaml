@@ -1,0 +1,18 @@
+functions:
+  check_two_sectors_exhaust_the_qubits:
+    kind: sampled
+    clauses: ["modes exiting the window are placed in L(t) u R(t)", "kinematics: W and R disjoint, together all injected qubits"]
+    omits: "two specific runs only (the model table and a five-pair run); not all schedules or pair parameters"
+  check_sector_spectra_agree:
+    kind: sampled
+    clauses: ["modes exiting the window carry no q-number content out of the two-sector decomposition"]
+    omits: "global normalisation and equality of the nonzero spectra of rho_R and rho_L (explicit orthogonal eigenvectors of rho_R) at all 13 stages of two runs; positivity of rho_R (a marginal) is used, not computed; not all schedules or pair parameters"
+  check_evicted_correlations_stay_in_the_sectors:
+    kind: sampled
+    clauses: ["their correlations are placed, at eviction, in L(t) u R(t)"]
+    omits: "at the 9 evictions of two runs: evicted qubit diag(c^2, s^2), its complement's nonzero spectrum {c^2, s^2}, and I(L_j : rest) = 2 H(c_j^2) as a formal combination of entropies of computed spectra; not all schedules or pair parameters"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "sector spectra now compared in full (eigenvectors of rho_R) at every stage, no skipped stages; the evicted qubit's complement spectrum and the mutual information 2 h_j are computed; docstrings (2), (3) reworded"

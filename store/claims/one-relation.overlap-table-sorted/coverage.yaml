@@ -1,0 +1,23 @@
+functions:
+  check_ladder_pair_doubles_the_algebra:
+    kind: sampled
+    clauses:
+    - (i) "Cl(p+1,q+1) = Mat(2, Cl(p,q)), one matrix doubling per rung" and "2^(p+q+2) = 4 * 2^(p+q)"
+    omits: the ten bases with p + q <= 3 only; the reading of a matrix doubling as one mode is the identification of two-presentations and is not computed here
+  check_pair_count_is_the_complex_capacity:
+    kind: exact
+    clauses:
+    - (ii) "the pair count (n+2)/2 = 3 at n = 4 is the maximal isotropic dimension of the complexified ascended space"
+    omits: the equality is an identification, which the check does not touch beyond exhibiting the dimension 3 with U-perp = U; (iii) and the constants placement are readings
+untouched_premises:
+  std-algebra.periodicity: "standard algebra cited in the proof; the check computes the statement directly"
+  one-relation.third-constant-conversion-constant-between-charts: cited for the placement of c; the placement is an identification of where the constants enter, not a computation
+  one-relation.imported-single-mode-thermality-modular-period: item (iii) is a reading of two results together, declared not a computation
+  correspondence.clifford-side-ordering-shift: cited for hbar as the ordering shift, a placement with no computable content here
+  dark-energy.acoustic-no-go-one-way-grip: cited for G at structural level, a placement with no computable content here
+  dark-energy.lift-inherits-no-go-steps-itemised: cited for the conditionality of the G placement, no computable content here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: only items (i) and (ii) are computable and the docstring says (iii) and the constants are readings; both functions test them within the recorded kinds

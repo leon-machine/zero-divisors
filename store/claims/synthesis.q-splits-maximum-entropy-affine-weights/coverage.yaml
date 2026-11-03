@@ -1,0 +1,31 @@
+functions:
+  check_quasi_free_part:
+    kind: partial
+    clauses:
+    - (i)
+    omits: 'One 3-mode window with b = e^{beta c} = 3 and one correlated member of C (rho = sigma + (1/10) (N_0 - 1/2)(N_1 - 1/2)): sigma is Gibbs and satisfies Wick, rho has the same marginals and two-point data but violates Wick and differs from sigma, and Tr(rho log sigma) = Tr(sigma log sigma) is established through equal one-point data; the entropies and relative entropy are not evaluated, and the equivalences (a) to (e) over all of C, in particular (c) the geometric modular condition and (e) the maximum-entropy characterisation, are not tested'
+  check_affine_law:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'Finite windows (W = 8 for one-particle shifts, 4 modes for the second-quantised hat): the shift S_m is an eigenoperator of ad diag(omega) for every m iff omega is affine, tested with one affine law and three non-affine ones, lambda_m = c m; the bi-infinite array, the "span of the currents is invariant exactly in this case" and the sign convention are not separately tested'
+  check_planck_offset_free:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: b = e^{beta c} = 3 only, three offsets D, m = 1, 2, 3; the termwise identity on k = -6..6, exact telescoping on windows of half-width 5, 10, 20 and the explicit edge bound; the limit m/(b^m - 1) is read from the bound, not taken symbolically for all b, D, m
+  check_particle_hole_offsets:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'b = 4: the symbol is invariant under k -> -k at D = 1, under k -> -1 - k at D^2 = b and under neither at the generic offset D = 3, on |k| <= 6; the equivalence with c k0 + 2d = 0 for every integer k0, the commutation with the boost flow beyond the one-particle reflection, the exactly-two-classes count and the slope datum y = beta c = 2 pi are not tested'
+  check_tensor_placement:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'n = 2, 3 with a three-level array and a 4-mode Fock space: diag(omega) tensor 1 commutes with the principal triple on the channel factor, the diagonal commutant of 1 tensor e has dimension |W|, and the single-window placement (kappa/2) h does not commute with e; the statements about the common-weight particle-hole theorem, the conflict of its clause (iv) and the maximally mixed level k = 0 are not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Jordan-Wigner and rational-symbol computations at sample windows support each clause; (i) is tested only as the Wick/Gibbs/relative-entropy mechanism, not as the five-way equivalence.

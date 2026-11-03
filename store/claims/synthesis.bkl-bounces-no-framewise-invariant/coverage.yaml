@@ -1,0 +1,6 @@
+functions:
+  check_bkl_bounces:
+    kind: sampled
+    clauses: [(i), (ii), (iii)]
+    omits: Eight sample u (and nine points of [1, 2]) for the transition law, the 20/21 jump and the rational orbits; the algebra dimension is checked at three epochs; infinitely many eras and non-Cauchy behaviour for irrational u are not tested; for (iii) only the e3 monotonicity (exact polynomial identity), the golden-ratio sign pattern at seven points and constancy on rational orbits are computed, not the classical absence of continuous invariants nor the wall-counterterm normalisation.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Every displayed value (20/21, Schwarzschild point, (1,0,0), partial-quotient count, dimensions 6 and 1) is reproduced; the general and irrational-orbit parts rest on argument.'}

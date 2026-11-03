@@ -1,0 +1,26 @@
+functions:
+  check_kinematics_and_conservation:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "setup only: confirms the ten sample configurations are null and rational and that the GA transition currents used are conserved (the hypothesis of (4)); no statement clause itself is established, and conservation is checked only for these currents"
+  check_helicity_eigen_relation:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "ten rational frames (off and on axes) only, not every q; the control that t1 + h I4 t2 fails is checked at the same frames"
+  check_sesquilinear_and_helicity_sum:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "ten configurations and two helicities only; (2) is checked for the transition currents used, not for arbitrary complex vectors J"
+  check_coulomb_gauge_equals_covariant:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "ten rational configurations (eight with q0 != 0) only; the two-time-ordering propagator form is taken as given, not derived"
+  check_massive_vector_contact_limit:
+    kind: sampled
+    clauses: ["(5)"]
+    omits: "three configurations and the single mass M^2 = 10^6; checks the exact identity -J.J/(t-M^2) = (J.J/M^2)(1 + t/(M^2-t)), which gives the contact term plus a relative correction, not a limit statement; e set to 1"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each of clauses (1)-(5) is tested exactly at chosen rational configurations; nothing is claimed beyond the samples"

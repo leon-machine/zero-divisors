@@ -1,0 +1,134 @@
+# Subject areas: the map's columns, left to right, and the default sections of
+# generated documents.  Every entity names one subject in its `subject` field.
+# Reorder, rename or add subjects here; ids are stable, titles are free.
+# Sides: metric = geometry and gravity; algebra = the algebra; car = the quantum
+# side; matter = matter and cosmology; synthesis = the programme as a whole.
+# Programme: the research programme the subject belongs to (store/config.yaml
+# `programmes`; docs/PROGRAMMES.md). A subject holds entities of one programme.
+- id: einstein
+  title: Einstein's equations in the completion
+  side: metric
+  about: "the vacuum field equations read upstairs; tractors, parallel scale, curvature spectra"
+  programme: transport-papers
+- id: interior
+  title: Inside the black hole
+  side: metric
+  about: "interior geometry, Kasner form, weighted limits, Kerr and the Cauchy horizon"
+  programme: transport-papers
+- id: walls
+  title: Degenerate metrics and walls
+  side: metric
+  about: "sheaves of Clifford algebras over degenerating metrics, tameness, one-sided completion, collars and residues"
+  programme: transport-papers
+- id: singularity
+  title: The singularity
+  side: metric
+  about: "where the gravitational gauge field fails to invert, and the diagnosis of that failure"
+  programme: transport-papers
+- id: conformal-spacetime
+  title: Spacetime in the conformal completion
+  side: metric
+  about: "spacetime inside the completed algebra: the incidence chart, null lines, the conformal model of points, the spinor dictionary"
+  programme: transport-papers
+- id: zero-divisors
+  title: Zero divisors and obstructions
+  side: algebra
+  about: "why division fails, the obstruction types, the no-go results"
+  programme: transport-papers
+- id: completion
+  title: The completion
+  side: algebra
+  about: "the transport rules and algorithm: totality, minimality, the forced hyperbolic plane, fusion, the conformal completion"
+  programme: transport-papers
+- id: clifford-structure
+  title: Clifford algebra structure
+  side: algebra
+  about: "classification, centre, grading, idempotents, matrix units, Morita classes, the geometric algebra primer"
+  programme: transport-papers
+- id: one-relation
+  title: One relation, read twice
+  side: algebra
+  about: "the anticommutator relation read as a metric and as canonical anticommutation relations; what each reading forces"
+  programme: transport-papers
+- id: tower
+  title: The tower and quantum capacity
+  side: car
+  about: "iterated completion, odd and even extensions, ladder pairs, the CAR limit, the Witt index as capacity"
+  programme: transport-papers
+- id: descent
+  title: Descent, parity and states
+  side: car
+  about: "the descent map and its lift, parity superselection, modular theory, KMS states, entanglement under descent"
+  programme: transport-papers
+- id: quantum-fields
+  title: Quantum fields in one algebra
+  side: car
+  about: "second quantisation from the CAR limit, the imaginary units as pseudoscalars, mass and contact interactions, composite and elementary bosons, the photon's Fock space, gravity's source"
+  programme: transport-papers
+- id: thermality
+  title: Temperature and Hawking radiation
+  side: car
+  about: "the Hawking temperature, the I-state, the radiated spectrum, the premises it rests on"
+  programme: transport-papers
+- id: entropy
+  title: Entropy and information
+  side: car
+  about: "counting the boundary modes, the area law, the Page curve, scrambling, echoes, what radiation carries"
+  programme: transport-papers
+- id: dark-energy
+  title: Dark energy and the frozen point
+  side: matter
+  about: "the parallel point of the completion, its length as the cosmological constant, the equation of state"
+  programme: transport-papers
+- id: mass
+  title: The origin of mass
+  side: matter
+  about: "coupling to the frozen point, mass terms, scales"
+  programme: transport-papers
+- id: standard-model
+  title: The Standard Model
+  side: matter
+  about: "the gauge group, hypercharge, chirality, unification, the weak angle, leptons and rungs"
+  programme: transport-papers
+- id: generations
+  title: Families of quarks and leptons
+  side: matter
+  about: "why three generations, mass hierarchies and mixing"
+  programme: transport-papers
+- id: neutrinos
+  title: Neutrino masses
+  side: matter
+  about: "the seesaw, the mass sum, the ordering, leptogenesis"
+  programme: transport-papers
+- id: dark-matter
+  title: Dark matter and the dark towers
+  side: matter
+  about: "the dark towers, the dark-matter ratio, their matter content, simulations of halos and mergers"
+  programme: transport-papers
+- id: programme
+  title: The programme as a whole
+  side: synthesis
+  about: "the synthesis: tiers, the refutation record, live predictions, open problems, the two-ledger classification"
+  programme: transport-papers
+# Standard physics, imported once (programme `standard`): textbook results and
+# measured quantities that the programmes cite through uses edges.
+- id: standard-quantities
+  title: Measured and defined constants
+  side: matter
+  about: "measured and defined constants: masses, couplings, the Planck scale, cosmological parameters, with value, uncertainty, units and source (the quantity entities)"
+  programme: standard
+- id: standard-gr
+  title: General relativity, textbook results
+  side: metric
+  about: "general relativity and gauge theory gravity as found in the textbooks and the literature: field equations, exact solutions, horizons, surface gravity"
+  programme: standard
+- id: standard-qft
+  title: Quantum field theory, textbook results
+  side: car
+  about: "quantum field theory and representation theory as found in the textbooks: canonical anticommutation relations, Fock space, KMS and modular theory, Lie group representations"
+  programme: standard
+- id: standard-algebra
+  title: Clifford algebras and quadratic forms
+  side: algebra
+  about: "Clifford algebras and the classification of quadratic forms: the real and complex classification, periodicity, Witt decomposition, the Witt index"
+  programme: standard

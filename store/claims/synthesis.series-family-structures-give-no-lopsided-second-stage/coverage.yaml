@@ -1,0 +1,22 @@
+functions:
+  check_odd_part_of_series_structures_is_the_sign_line:
+    kind: complete
+    clauses:
+    - (i)
+    omits: none; the odd-part rank, the sign-representation multiplicity (exact kernel over all six permutations) and the identities for S are finite exact computations
+  check_koide_circulant_puts_the_channel_phase_on_the_sign_line:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: (ii) is verified at cos d = 3/5, sin d = 4/5 and two values of lambda; the identity for all d is the one-line expansion in the proof; that the face family lines are Fourier lines of a flavour basis is a reading, not checked
+  check_light_plane_compression_is_one_type_in_modulus:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (v)
+    omits: (iii) on one complex sample of each type and four complex coefficients of A; the general statement is the reality of b_e, b_o; (v) only through the lopsided control A E
+  check_complex_one_type_light_angle_and_overlap:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: (iv) the polynomial identity at four (k, r2), the eigenvector relation at two complex pairs, the overlap inequality at eight samples; the stored numbers under (H) are taken from the sum rule; the complex-neutrino remark is numerical and not checked

@@ -1,0 +1,23 @@
+functions:
+  check_dictionary_sign:
+    kind: sampled
+    clauses: ["m^2 = -w(w+3) Lambda/3 = -w(w+3) H^2", "-w(w+3) = nu^2 + 9/4 > 0 on the principal series w = -3/2 +- i nu"]
+    omits: "seven rational weights w at three values of Lambda (including a negative one), and three nu; the (sigma, Box sigma) coefficients of I . D sigma are written into the code, not derived from the Thomas tractor, so the Klein-Gordon step is rebuilt as a formula and not computed from the tractor equation"
+  check_exact_join_and_casimir:
+    kind: sampled
+    clauses: ["B_Lambda = <pi1 pi2> + (Lambda/6)[omega1 omega2]", "m^2 = 2|B_Lambda|^2 + (Lambda/3) C", "C >= 0, zero exactly when the Gram matrix is scalar"]
+    omits: "ten pairs from five sample twistors at the single value Lambda/6 = 1/2 (Lambda = 3), plus one scalar-Gram control"
+  check_massless_locus_and_pure_residue:
+    kind: sampled
+    clauses: ["massless composites for Lambda > 0 are exactly those with B_Lambda = 0 and scalar Gram matrix", "composites with B_Lambda = 0 and m^2 = Lambda C/3 != 0 exist"]
+    omits: "single Lambda (lam = 1/2): one massless example (asserted not doubled and with C = 0, so it lies on the stated locus), three doubled composites for the residue, and the 'iff' on the ten sample pairs; not a classification over all twistor pairs"
+  check_principal_series_expansion:
+    kind: exact
+    clauses: ["nu = m/H - (9/8) H/m + O((H/m)^3)"]
+    omits: "the threshold m > 3H/2 for the principal series is not tested; the expansion is the exact power-series coefficient of x sqrt(1 - 9/(4x^2)) (t^1 and t^2 terms), plus a four-point check of a^2 - (x^2 - 9/4) = 81/(64 x^2)"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring and asserts match (ten pairs, listed Lambda values); the join is checked at sample twistors and one Lambda, which is what 'exact checks of the computable content' amounts to. 2026-10-23 weak-checks pass: the massless example is now asserted independent (Z1 ^ Z2 != 0) with scalar Gram matrix (C = 0)."

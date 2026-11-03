@@ -1,0 +1,22 @@
+functions:
+  check_sigma_is_unit_boost_bivector:
+    kind: sampled
+    clauses: ["(1) sigma^2 = 1", "(1) in the hyperbolic atom sigma = e0 e1 exactly"]
+    omits: "four CAR realisations only (three rescalings of the Cl(1,1) atom and one pair in Cl(2,2)), not an arbitrary CAR pair; the identity sigma^2 = 1 for general (v, v*) is not checked symbolically"
+  check_rotor_flow_opposite_weights:
+    kind: sampled
+    clauses: ["(2) R_lambda = exp(lambda sigma/2) sends v to e^{-lambda} v and v* to e^{+lambda} v*"]
+    omits: "R is taken as c + s sigma at five rational (cosh, sinh) of lambda/2 on four pairs; the exponential series itself is not summed and irrational lambda is not covered"
+  check_spectral_projectors_are_descent_projectors:
+    kind: sampled
+    clauses: ["(3) (1 +- sigma)/2 equal v* v and v v*", "(4) sigma = 2N - 1, K = sigma/2 = N - 1/2 in the Fock representation"]
+    omits: "four realisations plus the 2x2 Fock representation; the descent projectors of Proposition descent-what-it-erases are not computed, P is defined as v* v inside the check, so 'are the descent projectors' is by definition"
+  check_rotor_flow_unique_within_real_rotors:
+    kind: exact
+    clauses: ["(5) Spin+(1,1) is one-dimensional: the even subalgebra of Cl(1,1) is span{1, e0 e1}", "(5) Mat_2(C) has a three-parameter family of one-parameter unitary groups"]
+    omits: "the rotor norm a^2 - b^2 is checked at two samples; 'only one-parameter flow implemented by real rotors' is inferred from the one-dimensional bivector space, not as a Lie-group statement"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "items (1)-(4) are tested on a small set of CAR realisations rather than in general; (5) is exact; no claim is contradicted"

@@ -1,0 +1,19 @@
+functions:
+  check_quasiparticles_diagonalise_the_block:
+    kind: sampled
+    clauses: ["gamma_a = alpha w_a + beta v_c and gamma_c = alpha' w_c + beta' v_a satisfy [H, gamma] = -E gamma", "H = E (N_a + N_c) + (K - E) exactly, with N = gamma* gamma/{gamma, gamma*}"]
+    omits: "five (K, mu) cases (including K = 0 and complex mu) with E^2 = K^2 + |mu|^2 rational; not for general (K, mu)"
+  check_rung_numbers_not_conserved_massive_vacuum:
+    kind: sampled
+    clauses: ["a single rung number does not commute with H when mu != 0", "the massive vacuum has <n_a> = (E - K)/(2E)"]
+    omits: "the same five cases; N_a, N_c commute with H and each other, n_a, n_c do not commute with H, the vacuum is killed by both gammas; the expectation is computed exactly in each case"
+  check_charge_in_rung_algebra:
+    kind: sampled
+    clauses: ["Q = n_a - n_c lies in the rung algebra, commutes with H, equals N_a - N_c and vanishes on the massive vacuum", "one massive quantum is the rung state v_a P0 itself"]
+    omits: "the same five cases; v_a P0 is an eigenstate of H with energy K, N_a = 1, N_c = 0, Q = +1 (and v_c P0 has Q = -1); 'one massive quantum' is read from N_a = 1, not from an excitation-energy computation"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact Cl(1,3) tower computations at five sample blocks; the statement is general in (K, mu)."

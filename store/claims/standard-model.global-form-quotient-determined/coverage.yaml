@@ -1,0 +1,29 @@
+functions:
+  check_kernel_and_coset_rescaling:
+    kind: sampled
+    clauses:
+    - '"the kernel of the action is K = {(lam I_2, lam^-1 I_3)}"'
+    - '"(U(2) x U(3))/K = S(U(2) x U(3))"'
+    omits: One unitary pair (A, B) and one unit Gaussian lam; shows K acts trivially and each sampled coset has one det-one representative, but not that the kernel is no larger than K
+  check_z6_kernel_exactly:
+    kind: exact
+    clauses:
+    - '"S(U(2) x U(3)) = (SU(2) x SU(3) x U(1))/Z_6"'
+    - (i) "none of the three proper covers acts faithfully through it"
+    omits: ''
+  check_su5_splitting_subgroup:
+    kind: sampled
+    clauses:
+    - (i) "S(U(2) x U(3)) is exactly the subgroup of SU(5) preserving the splitting"
+    omits: The commutant dimension 13 = 4 + 9 is exact, but the block-determinant and unitarity statements are checked on one block-diagonal sample (A, B)
+  check_charge_lattice:
+    kind: complete
+    clauses:
+    - (ii) "descent iff 2t + 3 delta + q = 0 mod 6, i.e. t/3 + delta/2 + Y integer"
+    - (ii) "the content of the hypercharge theorem lies on the lattice"
+    omits: The finite range s <= 3, d <= 5, |q| <= 12 covers every residue class of (s mod 2, d mod 3, q mod 6) but the central character zeta^(-3s+2d+q) is taken from the docstring formula; the spectrum is a hard-coded list, not read from the hypercharge theorem; (iii), the falsifiability stance, has no computable content
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Group-level identities are exact in cyclotomic and Gaussian rationals; the sample-based functions are labelled sampled.

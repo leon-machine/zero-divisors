@@ -1,0 +1,8 @@
+functions:
+  check_isometry_extends_multiplicatively:
+    kind: sampled
+    clauses:
+    - '"extends to a unique unital algebra homomorphism"'
+    - '"injective when f is"'
+    omits: two isometries (a boost of R^{2,1} and a shear of R^{1,0,1}), multiplicativity on every pair
+      of basis blades; composition is not tested

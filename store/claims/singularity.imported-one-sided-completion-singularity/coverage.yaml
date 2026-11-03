@@ -1,0 +1,20 @@
+functions:
+  check_completed_form_nondegenerate_no_shadow_wall:
+    kind: sampled
+    clauses: ["h is nondegenerate of constant signature (2,4) at every point, E included", "no shadow wall forms anywhere", "h restricted to W is G"]
+    omits: "det h = r + 2 mu nu b^2 (r - m^2)/m^2 is an exact rational-function identity, but positivity and signature (2,4) are evaluated only on grids of radii, four bump values, three couplings and two masses; the dependence of b on r and the canonical identification of the generated subalgebra with the degeneration sheaf are not tested"
+  check_ladder_pair_exactly_over_boundary:
+    kind: sampled
+    clauses: ["the ladder pair k* = n0/(2 nu) exists exactly over E"]
+    omits: "all 64 states are covered at E, but only for sample masses and couplings; off E only c(k)^2 = -r on the vacuum at sample radii, which shows k is not nilpotent but not that no other partner exists; Cl(1,3) -> Cl(2,4) = Mat_2(H) -> Mat_4(H) is declared unchecked"
+  check_dying_line_trivialised_by_rain_potential:
+    kind: exact
+    clauses: ["the dying line is orientable: w_1(L)=0 via k = d Phi"]
+    omits: "k(d_t)=m is taken from the definition; only dPhi/dr = sqrt r and k(d_t - beta d_r)=0 are computed symbolically in u"
+untouched_premises:
+  sheaf.one-sided-completion-singularity: "this claim is its verbatim import, so the check re-derives its content rather than citing it"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks test what the statement asserts at sample parameters, with the det identity and the orientability clause exact; Mat_4(H) identification and subalgebra identification untested as the docstring says"

@@ -1,0 +1,14 @@
+functions:
+  check_congruence_to_diagonal_data:
+    kind: sampled
+    clauses: ["congruent by a transition in GL_4(A), the identity on the exceptional boundary, to diagonal data with the same exponents", "perturbed units c_i' = c_i (1 + O(tau^delta))"]
+    omits: "one data set at Kasner point u = 2 in w = tau^(1/7) with units 1+w, 1+w^2, 1-w^3/2 and one Xi (positive relative order in every entry); membership of the units in A is read from invertible pivots at w = 0, not from the boundary-unit lemma's exponent families"
+  check_conclusions_hold_verbatim:
+    kind: sampled
+    clauses: ["corank one with the same radical", "dying eigenvalue of exactly first order with the unperturbed leading unit", "the (2,4) completion with no shadow wall"]
+    omits: "same single instance; signature (2,4) at w = 0, 1/3, 1/2 and det h(0) = 1, absence of a shadow wall is not scanned; the same module and the pointwise-forced weights are not tested; the control shows a relative-order-zero cross term breaks the conclusions"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: A single instance (Kasner u=2, one hand-chosen relatively admissible Xi, three unit choices) verifies the congruence and the verbatim conclusions; pointwise-forced weights and arbitrary admissible perturbations are not covered.

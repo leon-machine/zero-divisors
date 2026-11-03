@@ -1,0 +1,19 @@
+functions:
+  check_spacetime_roots_all_conjugate_to_I:
+    kind: sampled
+    clauses:
+    - '"in Cl(1,3) every square root of -1 is conjugate to I"'
+    omits: five roots (two vectors, a bivector, a trivector, I), an explicit invertible conjugator for
+      each
+  check_three_classes_in_pauli_algebra:
+    kind: sampled
+    clauses:
+    - '"in Cl(3,0) there are three classes"'
+    - '"D = R: one class if m is even"'
+    omits: five roots in Cl(3,0) and one pair in Cl(2,0); non-conjugacy is shown by the invariant and
+      by an empty solution space
+  check_existence_by_signature:
+    kind: sampled
+    clauses:
+    - '"contains a square root of -1 unless (p, q) in {(0,0), (1,0)}"'
+    omits: n <= 4; existence shown by a blade, the exception (1,0) by the scalar part on a grid

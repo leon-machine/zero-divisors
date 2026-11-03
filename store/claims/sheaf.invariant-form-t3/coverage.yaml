@@ -1,0 +1,18 @@
+functions:
+  check_radical_and_tangential_vanishing:
+    kind: sampled
+    clauses: ["(1) dg_k|Sigma annihilates T Sigma"]
+    omits: "one polynomial model in (tau, y) with a hand-derived radical k = (1,-y), five sample extensions (one of which is zero)"
+  check_independent_of_extension:
+    kind: sampled
+    clauses: ["(2) dg_k|Sigma is independent of the chosen extension of k"]
+    omits: "five polynomial extensions k + tau m in the one model; the control (non-radical perturbation) is not part of the statement"
+  check_scales_by_c_squared:
+    kind: sampled
+    clauses: ["(3) k -> ck scales dg_k|Sigma by c^2|Sigma", "delta is nowhere zero iff it is an isomorphism (zero locus y = -2)"]
+    omits: "three polynomial c in the one model; the line-bundle equivalence is read off sample points y only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Clauses (1)-(3) and the nowhere-zero locus of delta are verified exactly in one polynomial two-dimensional model with five extensions and three rescalings.

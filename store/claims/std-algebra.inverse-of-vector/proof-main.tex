@@ -1,0 +1,3 @@
+If $Q(v) \ne 0$ then $v \cdot v/Q(v) = v^{2}/Q(v) = 1$ by \claimref{std-algebra.vector-squares}, and likewise on the other side. If $Q(v) = 0$ then $v^{2} = 0$; if also $vw = 1$ for some $w$, then $v = v(vw) = v^{2} w = 0$, so $1 = 0 \cdot w = 0$, which is impossible because $\Cl(V, Q) \ne 0$ by \claimref{std-algebra.blade-basis}. Hence a null vector, zero or not, has no inverse, and a nonzero null vector is a zero divisor.
+
+For a versor, $\tilde{g} = u_k \cdots u_1$ (\claimref{std-algebra.involution-properties}), and $g \tilde{g} = u_1 \cdots u_{k-1} (u_k u_k) u_{k-1} \cdots u_1 = Q(u_k)\, u_1 \cdots u_{k-1} u_{k-1} \cdots u_1$; induction gives $\prod_i Q(u_i)$. The same computation from the inside out gives $\tilde{g} g$.

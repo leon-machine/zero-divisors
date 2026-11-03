@@ -1,0 +1,18 @@
+functions:
+  check_powers_collapse:
+    kind: sampled
+    clauses:
+    - '"A^(2k) = lambda^k, A^(2k+1) = lambda^k A"'
+    - '"true for every simple bivector, and for every bivector when n <= 3"'
+    omits: five simple bivectors (elliptic, hyperbolic, two null) up to the eighth power; one sampled
+      bivector per three-dimensional signature, degenerate included; a four-dimensional counterexample
+  check_closed_forms_are_rotors:
+    kind: sampled
+    clauses:
+    - '"e^A (e^A)~ = 1"'
+    - '"the product of two invertible vectors, hence a rotor"'
+    omits: the closed forms are checked at one rational point of each unit curve (3/5, 4/5), (5/4, 3/4),
+      (1, 7/2); the series identity itself is checked through the power law, not summed
+untouched_premises:
+  std-algebra.product-decomposition: "cited in the proof for a^b = ab - B(a,b); the check computes squares of bivectors directly"
+  std-algebra.exterior-isomorphism: "cited in the proof for decomposability of bivectors when n <= 3; the check samples bivectors in low dimension directly"

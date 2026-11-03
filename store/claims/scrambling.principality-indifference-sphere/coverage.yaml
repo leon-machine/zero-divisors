@@ -1,0 +1,24 @@
+functions:
+  check_triples_and_partition_data:
+    kind: sampled
+    clauses:
+    - a non-principal embedding decomposes the n modes into invariant blocks, a partition (Fact (i))
+    omits: 'n = 2..6, all 28 partitions: the sl_2 triple is built blockwise and its Jordan type recovers the partition; no claim about n > 6'
+  check_principal_is_multiplicity_free:
+    kind: sampled
+    clauses:
+    - the principal embedding is the unique one carrying no partition data
+    omits: 'n = 2..6, every partition: only lambda = (n) has multiplicity-free adjoint decomposition (highest weights 0, 2, ..., 2(n-1)); the indifference Principle that rules out the uncaused data is a premise, not computable'
+  check_round_irreducible_sphere_only_for_principal:
+    kind: sampled
+    clauses:
+    - the bilinear sector of the boundary modes is canonically Madore's fuzzy sphere (a round irreducible sphere)
+    omits: 'n = 2..6, every partition: the Casimir is scalar iff all parts are equal, and the commutant is one-dimensional iff lambda = (n); the large-n limit being the round S^2 is not tested'
+untouched_premises:
+  scrambling.indifference-structural-premise-series: structural premise (indifference Principle), not computable (docstring)
+  scrambling.imported-time-plane-modular-data: concerns the time and plane dimensions; the check covers the sphere only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exhaustive over partitions for n <= 6 but sampled in n; the selection by indifference and the large-n limit are untested.

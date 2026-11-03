@@ -1,0 +1,813 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "Matter comes in three copies, or generations, of each kind of particle, with no accepted explanation for why there are three. [[c:families.three-generations-faces-maximal-composite]] This trail follows the conjecture that three counts the ways of choosing two building blocks out of three, and it ends with a plain answer: the series does not derive three generations. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]]\n\nAnomalies cancel within each generation, so consistency allows any number, and requiring the strong and weak forces to weaken at high energy allows at most five with one or two Higgs doublets. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] Three rests on an imported, observation-level bound read through a family-symmetry hypothesis. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]]\n\nThe walk then asks how far the framework gets in telling the copies apart. [[t]] The vacuum gives one heavy family and two light ones, but the simplest vacua leave the light pair exactly degenerate. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]] [[c:families.skeleton-rank-one-plus-ordering-shift]] The electron-to-muon ratio of about $207$ remains the open problem. [[c:families.one-open-problem-three-forms]]",
+  "hash": "391e7d375296"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk has two parts. [[t]] First it asks whether the framework can count the families, starting from two facts about quantum fields that bear on the count without fixing it. [[t]] Then it follows the attempts to make identical families differ in mass, ending where the account stops. [[t]]\n\nNegative results stay on the trail, because each one narrows what the answer can be. [[t]]",
+  "hash": "b403e79310c7"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:standard-model.slot-module-hypothesis",
+  "type": "postulate",
+  "claim": "standard-model.slot-module-hypothesis@4",
+  "title": "The slot-module hypothesis: the weaker constituent hypothesis behind (S), with the slot module generated from a unique vacuum and the chirality a CPT halving commuting with the Pati-Salam algebra",
+  "text": "The framework's account of quarks and leptons needed an assumption, called (S), that two particular ingredients of each particle behave like fermions. This weaker assumption replaces it. It says how a particle's possible states are organised, that they are built from exactly one empty state by adding quanta of a single two-state kind, that handedness splits the states into particles and their mirror-image antiparticles in the way every theory of fermions requires, with that split respecting the intermediate Pati-Salam symmetry the framework already uses, and that, if the ingredients are fermions, they combine with the particle's other fermionic modes into one system. Those requirements, with the standard consistency condition that the theory be free of anomalies, force the ingredients to behave like fermions and fix which states are left-handed, so (S) becomes a consequence rather than an assumption. Respecting the Pati-Salam symmetry does one job the others cannot: it decides that the completely empty state counts as a particle rather than an antiparticle.",
+  "gap": false,
+  "level": "lay",
+  "hash": "5acceb8e1a68",
+  "number": 1
+ },
+ {
+  "id": "c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+  "type": "postulate",
+  "claim": "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2",
+  "title": "(KF), the Krein-form premise for gauge fields: on the palatial storey the gauge fields, their ghosts and their Pauli-Villars regulator fields carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ on the polarisations, and the physical space is positive through the quartet mechanism",
+  "text": "To describe light and the other force fields in a way that treats space and time alike, physicists use bookkeeping in which some unphysical states have negative or zero length, and remove them again before anything is measured. The same device is used to tame the infinities of quantum corrections, with auxiliary particles that count negatively. The series' quantum spaces all have positive lengths, so it cannot use this bookkeeping as it stands. This premise adopts it: the force fields of the series carry the standard indefinite measure built from the spacetime metric of their polarisations, and only states of positive length remain once the unphysical parts cancel in groups of four. Several results use it, among them the series' calculations of the first and second quantum corrections of electrodynamics, its calculation of how the force strengths change with energy, and its construction of the ghost bookkeeping. One of the two uses, the auxiliary negative particles, turns out not to be needed for the screening of charge by the vacuum, which can be computed without them. It is taken as given, not derived; it would be refuted if the physical states it leaves were found to include ones of negative length.",
+  "gap": false,
+  "level": "lay",
+  "hash": "c29fd13482d1",
+  "number": 2
+ },
+ {
+  "id": "s:quantum-fields",
+  "type": "section",
+  "title": "Two checks on the count",
+  "hash": "51ca5d8cb8a4"
+ },
+ {
+  "id": "i:quantum-fields",
+  "type": "framing",
+  "text": "The walk starts with two standard facts of quantum field theory, recomputed in the spacetime algebra, because each depends on the number of generations in a different way. [[t]]",
+  "hash": "0aaf567292f1"
+ },
+ {
+  "id": "t:^>synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "type": "transition",
+  "between": [
+   null,
+   "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation"
+  ],
+  "text": "Matter comes in three generations, and nobody has an accepted explanation for why there are three. [[c:families.three-generations-faces-maximal-composite]] A first place to look for the number is consistency. [[t]]\n\nA quantum field theory with chiral forces must have its triangle anomalies cancel. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]] In the spacetime algebra the anomaly takes a clean form: the axial divergence is the bilinear form of $\\langle I_{4}F^{2}\\rangle_{0} = -2E\\cdot B$, the pseudoscalar part of the square of the field bivector. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]] This is the standard result of Adler, Bell and Jackiw, recomputed here with imported Pauli-Villars regulators. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]]",
+  "hash": "9ff9eacebdd3"
+ },
+ {
+  "id": "c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "type": "theorem",
+  "claim": "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation@2",
+  "title": "The triangle anomaly in the spacetime algebra with imported Pauli-Villars regulators (standard: Adler; Bell and Jackiw): the vector Ward identities hold integrand by integrand, the axial divergence is the regulator-mass limit $(1/(2\\pi^{2}))\\langle I_{4}\\gamma^{\\nu}k_{1}\\gamma^{\\rho}k_{2}\\rangle_{0}$ per Dirac fermion for any weights with $\\sum_{i} c_{i} = 0$, the bilinear form of the pseudoscalar part of $F^{2}$, and for one stored generation the gauge anomaly tensor vanishes on the whole gauge algebra (standard per-generation cancellation)",
+  "text": "Some symmetries of classical fields fail once quantum effects are included; the classic case is the axial anomaly of a charged particle in an electromagnetic field, found in 1969. This result recomputes that anomaly in the series' own algebra of spacetime, using a standard method of taming the infinities. The anomaly comes out as the part of the squared electromagnetic field that measures how electric and magnetic fields line up, with the textbook strength. For a theory to be consistent, such anomalies must cancel between all the particles that feel a force; the result checks that they cancel within one generation of the series' particles, so the cancellation does not depend on how many generations there are.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.anomaly-freedom-forces-slot-content",
+   "synthesis.imported-adler-bell-jackiw-axial-anomaly"
+  ],
+  "hash": "3d7def2315b5",
+  "number": 3
+ },
+ {
+  "id": "t:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation>synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "transition",
+  "between": [
+   "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+  ],
+  "text": "The anomaly tensor vanishes within one generation of the stored content, so it cancels generation by generation and says nothing about how many generations there are. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]]\n\nA second place to look is how the strengths of the forces change with energy. [[t]] Spin traces in the spacetime algebra, turned into running weights by an imported standard heat-kernel formula, give $\\tfrac13$, $\\tfrac23$ and $-\\tfrac{11}{3}$ for complex scalars, Weyl spinors and gauge fields with their ghosts. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] The computation works in a covariant gauge, where the gauge fields carry an indefinite (Krein) inner product, adopted as a premise. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]]\n\nWith $n_{g}$ generations and $n_{h}$ Higgs doublets as inputs, three generations and one doublet give the standard coefficients $(\\tfrac{41}{10}, -\\tfrac{19}{6}, -7)$. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]]",
+  "hash": "77d558231f5f"
+ },
+ {
+  "id": "c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "theorem",
+  "claim": "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@2",
+  "title": "The one-loop running coefficients from spin traces in the spacetime algebra, in a covariant gauge under the indefinite-form premise: the Lorentz generator of the field-strength bivector gives spin weights $0$, $-1$ and $-4$ for scalars, Weyl spinors (a minimal left ideal with the unit $I_{4}$) and vectors, the imported heat-kernel coefficient turns them into $\\tfrac13$, $\\tfrac23$ and $-\\tfrac{11}{3}$ per unit index, and under (S), with $n_{g}$ generations and $n_{h}$ doublets as inputs, the coefficients are $(\\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{10}, -\\tfrac{22}{3} + \\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{6}, -11 + \\tfrac{4n_{g}}{3})$, asymptotically free in both non-abelian factors for $n_{g} = 3$ and every $n_{h} \\leq 19$",
+  "text": "How fast the strengths of the forces change with energy is fixed, at the first quantum correction, by a sum over the particles, each weighted by a number that depends on its spin. Those weights come out of the series' algebra of spacetime as traces of how a field's spin responds to a force field, once a standard heat-kernel formula and the standard covariant treatment of the force fields are taken from the literature. The number of generations and of Higgs doublets are inputs, since the store has not settled either. Applied to the particle content the series derives under its slot hypothesis, three generations with one doublet give the standard values and two doublets give slightly different ones; with three generations the strong and weak forces weaken at high energy for any number of doublets up to nineteen. The gluons and the weak bosons are not yet built as quantum states here.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.fock-space-maxwell-modes",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.hypercharge-global-form-pair-counting-consistency",
+   "standard-model.imported-one-loop-running-trace-ratio",
+   "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "33ae28504d17",
+  "number": 4
+ },
+ {
+  "id": "s:generations",
+  "type": "section",
+  "title": "The faces as families",
+  "hash": "576e6b38eb0a"
+ },
+ {
+  "id": "i:generations",
+  "type": "framing",
+  "text": "This section turns to the families themselves: first whether the framework can count them, then whether it can tell them apart. [[t]]",
+  "hash": "5e9ccaeaae90"
+ },
+ {
+  "id": "t:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces>families.three-generations-faces-maximal-composite",
+  "type": "transition",
+  "between": [
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+   "families.three-generations-faces-maximal-composite"
+  ],
+  "text": "Read back on the step above, colour weakens at high energy for $n_{g} \\leq 8$ and the weak force for $8n_{g} + n_{h} < 44$, so the running caps the number of generations without choosing it. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]]\n\nNeither consistency nor the running picks out three. [[t]] The framework's own conjecture is that the number comes from counting: if the largest composite is three conformal spinors (twistors) and a massive unit uses two of them, there are \\[ \\binom{3}{2} = 3 \\] ways to choose the pair. [[c:families.three-generations-faces-maximal-composite]] The bound of three is held only at observation level, so the conjecture is conditional on it. [[c:families.three-generations-faces-maximal-composite]]",
+  "hash": "4c0ebbc9b56f"
+ },
+ {
+  "id": "c:families.three-generations-faces-maximal-composite",
+  "type": "conjecture",
+  "claim": "families.three-generations-faces-maximal-composite@3",
+  "title": "Three generations as the faces of the maximal composite",
+  "text": "Matter comes in three copies, or generations, of each kind of particle, with no accepted explanation for why there are three. This conjecture proposes that the number comes from counting: if the largest allowed composite has three building blocks (a bound the series holds only at observation level) and a massive particle uses two of them, there are exactly three ways to choose the pair. Each choice would be one generation, with its lepton doublet as identified under Hypothesis (S), and the way generations mix would come from how the choices overlap.",
+  "gap": false,
+  "level": "lay",
+  "hash": "5103fca7e752",
+  "number": 5
+ },
+ {
+  "id": "t:families.three-generations-faces-maximal-composite>families.three-identical-families-mixing-shared-slots",
+  "type": "transition",
+  "between": [
+   "families.three-generations-faces-maximal-composite",
+   "families.three-identical-families-mixing-shared-slots"
+  ],
+  "text": "The next step makes the counting precise. [[t]] Each of the three faces carries an isomorphic copy of the fermion content, with the lepton doublet included under Hypothesis (S). [[c:families.three-identical-families-mixing-shared-slots]]\n\nAny two faces share exactly one slot, which at observation level suggests a CKM-shaped mixing. [[c:families.three-identical-families-mixing-shared-slots]] That suggestion, and the matching of faces to real families, are not proved. [[c:families.three-identical-families-mixing-shared-slots]]",
+  "hash": "ceb87eb046e8"
+ },
+ {
+  "id": "c:families.three-identical-families-mixing-shared-slots",
+  "type": "theorem",
+  "claim": "families.three-identical-families-mixing-shared-slots@8",
+  "title": "Three identical families, mixing by shared slots",
+  "text": "If the largest allowed composite is made of three conformal spinors and a massive particle uses two of them, there are three ways to choose the pair. Each choice carries an exact copy of the same set of particles, because relabelling the spinors maps one copy onto another; the copies include the lepton doublet if the slots behave like the pairs (Hypothesis (S)). Any two choices share exactly one spinor, which hints at why quark families mix the way they do, though that hint and the matching of choices to real families are not proved.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-one-derived-generation-hypothesis-s",
+   "families.imported-face-valued-bracket-quantum-numbers",
+   "standard-model.hyp-s-slot-statistics"
+  ],
+  "hash": "4250214dce53",
+  "number": 6
+ },
+ {
+  "id": "t:families.three-identical-families-mixing-shared-slots>synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group",
+  "type": "transition",
+  "between": [
+   "families.three-identical-families-mixing-shared-slots",
+   "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group"
+  ],
+  "text": "Identical copies are not yet generations. [[t]] In a quantum field theory three generations are three copies of the content under one gauge group, $3 \\times 16 = 48$ independent states. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]] The next step shows that the shared-slot picture of the step above cannot be read as three generations under one gauge group, so the mixing hint drawn from shared slots does not stand in that reading. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]] If the three faces are read inside one state space, sharing their slots, the reading fails twice. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]]\n\nTwo face planes in a three-dimensional slot space meet in a line, so any algebra acting on the slots leaves at most one face plane irreducible, and at most one face can be a weak doublet. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]] The faces' chirality halves also overlap: they span $28$ of the $32$ even states with one pair system shared by the faces, and $46$, at most $47$, with separate pair modes per face. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]]",
+  "hash": "b655533d3b54"
+ },
+ {
+  "id": "c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group",
+  "type": "theorem",
+  "claim": "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group@1",
+  "title": "Read in one state space, the three faces of the three-spinor composite are not three generations under one gauge group: any Lie algebra acting linearly on the three slots has at most one face plane as an irreducible invariant subspace, so at most one face is a weak doublet, and the faces' chirality halves overlap: with one pair system shared by the faces they span 28 of the 32 even states of $\\Lambda^{\\bullet}(\\C^{3} \\oplus W)$ (at most 40 with halves chosen face by face), with separate pair modes per face 46 (at most 47), in every case short of the 48 of three generations",
+  "text": "One proposal in the series says the three families of matter particles are the three ways of choosing two of the three building blocks of a largest composite. In a quantum field theory, three families means three separate copies of the particle content, all feeling the same forces in the same way. If the three choices live in one shared set of states, this fails twice: the weak force can treat only one of the three pairs as a doublet, because any two pairs share a block, and the shared blocks make the copies overlap, giving at most 28 distinct states (46 if each pair keeps its own colour modes) where three families need 48. The idea survives only if the three pairs are three separate composites.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.three-identical-families-mixing-shared-slots",
+   "standard-model.hyp-s-slot-statistics",
+   "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus"
+  ],
+  "hash": "bd7a702db59d",
+  "number": 7
+ },
+ {
+  "id": "t:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group>synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+  "type": "transition",
+  "between": [
+   "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group",
+   "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free"
+  ],
+  "text": "So the face identification survives only if the three faces are three separate composites, each with its own slots. [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]] The next step asks what the framework's standing premise on composites says about that reading. [[t]]\n\nThe slot-module hypothesis, adopted as a premise, builds a composite's slot states from one vacuum by one doublet of slot operators, so every composite has exactly two slots. [[c:standard-model.slot-module-hypothesis]] [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] Under it the shared three-slot space fails even for the gauge group of a single face: either one slot goes uncounted by the centre that sets the hypercharge, or every species appears twice and the chirality half is vectorlike. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]]",
+  "hash": "7b77255c4396"
+ },
+ {
+  "id": "c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+  "type": "theorem",
+  "claim": "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free@2",
+  "title": "Under the slot-module hypothesis the shared three-slot space of the faces is no slot module even for the gauge group of one face (a slot of weight zero, or two slot vacua with every species twice and a vectorlike chirality half), complementing the stored result that the faces are generations only as separate composites; the number of separate composites is independent of the premise and of anomaly freedom, and if both non-abelian factors are to be asymptotically free it is at most five at one or two doublets (both standard); that it is three is only an argued reading resting on the imported observation-level three-spinor bound, whose face space is the dual triplet of the slot space",
+  "text": "The framework's account of a particle family builds it from two internal ingredients called slots. Its standing assumption about how a family's states are organised already allows exactly two slots per particle, never three. This result shows that the old idea of the three families as the three pairs chosen from one three-slot object fails that assumption even when only one pair is looked at. In the shared space every particle would appear twice, and the left-right asymmetry of the weak force would cancel out. This adds to an earlier result that the families must be three separate objects. The same assumption, and the requirement that the theory be free of anomalies, are satisfied by any number of separate families, which is standard. If the strengths of both nuclear-type forces are to weaken at high energy, at most five families are allowed. That there are three is not derived: it is only a reading that rests on a separate, observation-level bound that the largest object has three slots, which can be paired in three ways.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.cpt-closure-forces-slot-module-and-chirality",
+   "standard-model.imported-anomaly-coefficients",
+   "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group",
+   "families.three-identical-families-mixing-shared-slots",
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "synthesis.imported-witten-global-su2-anomaly",
+   "standard-model.slot-module-hypothesis",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "c0f1fcb764ea",
+  "number": 8
+ },
+ {
+  "id": "t:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free>families.source-term-linear-tilt-mass-functional",
+  "type": "transition",
+  "between": [
+   "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+   "families.source-term-linear-tilt-mass-functional"
+  ],
+  "text": "The step above is the plain answer to the counting question: the faces must be separate composites, and the series does not derive that there are three of them. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] The premise and anomaly cancellation hold copy by copy for any number of composites, and if both non-abelian forces are to weaken at high energy the running allows at most five at one or two Higgs doublets. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] Three appears only as a reading: the face space of three slots is three-dimensional, and taking it as the space of generation labels is a further family-symmetry hypothesis resting on the imported, observation-level three-spinor bound. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]]\n\nWith the number taken as an input, the trail turns to what could make the identical families differ, starting with the vacuum. [[t]]\n\nWriting the deformed bracket as $B_{\\Lambda} = b + \\tfrac{\\Lambda}{6}\\,\\Omega_{\\omega}$, with $b$ the flat mass bracket, its square expands as \\[ 2|B_{\\Lambda}|^{2} = 2|b|^{2} + \\frac{2\\Lambda}{3}\\,\\mathrm{Re}\\bigl(\\bar{b}\\,\\Omega_{\\omega}\\bigr) + \\frac{\\Lambda^{2}}{18}\\,|\\Omega_{\\omega}|^{2}, \\] whose middle term is linear in $b$. [[c:families.source-term-linear-tilt-mass-functional]] If the potential is built on this functional with $b$ and the vacuum $\\omega$-area independent, a reading held at observation level, condensation cannot be avoided unless that area vanishes. [[c:families.source-term-linear-tilt-mass-functional]]",
+  "hash": "55f62216c02c"
+ },
+ {
+  "id": "c:families.source-term-linear-tilt-mass-functional",
+  "type": "theorem",
+  "claim": "families.source-term-linear-tilt-mass-functional@4",
+  "title": "The source term: the $\\Lambda$-linear tilt of the mass functional",
+  "text": "Expanding the formula for a particle's mass with the cosmological constant switched on reveals an extra term that is linear in the basic mass quantity. Such a term acts like a slope that pushes the system away from zero. So, if the energy landscape is built from this formula and the two brackets in it are treated as independent, a nonzero value cannot be avoided unless the vacuum value of one of them, the $\\omega$-area, vanishes. The size of that value then depends on that one quantity, which the framework names but does not compute. This second step is a reading at observation level, and the independence of the two brackets is the assumption it rests on.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-dictionary-exact-join",
+   "families.imported-face-valued-bracket-quantum-numbers"
+  ],
+  "hash": "0de463da4a4f",
+  "number": 9
+ },
+ {
+  "id": "t:families.source-term-linear-tilt-mass-functional>refuted.the-vacuum-omega-area-sets-the-weak-scale",
+  "type": "transition",
+  "between": [
+   "families.source-term-linear-tilt-mass-functional",
+   "refuted.the-vacuum-omega-area-sets-the-weak-scale"
+  ],
+  "text": "A natural guess was that this tilt also fixes the weak scale. [[c:refuted.the-vacuum-omega-area-sets-the-weak-scale]]\n\nThe tilt is $\\Lambda$-suppressed, so for any vacuum length between the Planck and Hubble scales it lies between roughly $10^{-105}$ and $10^{-44}$ of the weak scale. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]] The guess is refuted and kept on the record. [[c:refuted.the-vacuum-omega-area-sets-the-weak-scale]]",
+  "hash": "733865693bda"
+ },
+ {
+  "id": "c:refuted.the-vacuum-omega-area-sets-the-weak-scale",
+  "type": "refutation",
+  "claim": "refuted.the-vacuum-omega-area-sets-the-weak-scale@2",
+  "title": "The vacuum omega-area sets the weak scale",
+  "text": "It was a natural guess that the tiny vacuum area term which tilts the mass condensate also fixes the energy scale of the weak force. A size estimate shows it falls short by between forty-four and one hundred and five powers of ten, so the guess is wrong. What the vacuum term does fix is a direction among the three families, not a size, and the weak scale goes back to being an open question.",
+  "gap": false,
+  "level": "lay",
+  "refuted_by": [
+   "families.alignment-computed-thirteenth-refutation-democracy-one"
+  ],
+  "hash": "cb2f6f0e46c1",
+  "number": 10
+ },
+ {
+  "id": "t:refuted.the-vacuum-omega-area-sets-the-weak-scale>families.alignment-computed-thirteenth-refutation-democracy-one",
+  "type": "transition",
+  "between": [
+   "refuted.the-vacuum-omega-area-sets-the-weak-scale",
+   "families.alignment-computed-thirteenth-refutation-democracy-one"
+  ],
+  "text": "What the vacuum term can still fix is a direction among the families rather than a size, since directions are ratios and do not depend on $\\Lambda$. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]]\n\nUnder the indifference instrument that direction is democratic, and under the Gram-square reading it gives a rank-one mass form: one heavy family and two light ones at leading order. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]] Separating the two light families is left as the next problem. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]]",
+  "hash": "684048cfb0ae"
+ },
+ {
+  "id": "c:families.alignment-computed-thirteenth-refutation-democracy-one",
+  "type": "theorem",
+  "claim": "families.alignment-computed-thirteenth-refutation-democracy-one@4",
+  "title": "The alignment computed: the thirteenth refutation, democracy, and one heavy family",
+  "text": "The paper first asks whether a tiny effect tied to the cosmological constant could set the energy scale of the weak force, and a size estimate shows it falls short by more than forty orders of magnitude, so that idea is ruled out. What the effect can still fix is a direction rather than a size. Assuming nature does not favour one family over another without cause, and assuming a particular form for the leading mass pattern, that direction gives one heavy family and two light ones at first approximation. Separating the two light families is left as the next problem.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-indifference-instrument",
+   "families.source-term-linear-tilt-mass-functional"
+  ],
+  "hash": "57a726c82e6e",
+  "number": 11
+ },
+ {
+  "id": "t:families.alignment-computed-thirteenth-refutation-democracy-one>families.faces-ordered-what-identification-requires-first",
+  "type": "transition",
+  "between": [
+   "families.alignment-computed-thirteenth-refutation-democracy-one",
+   "families.faces-ordered-what-identification-requires-first"
+  ],
+  "text": "With one direction singled out, the three identical faces can at last be ranked. [[t]] Ordering them requires breaking $S_{3}$, the permutations of the three faces, which the condensate's alignment does at structural level. [[c:families.faces-ordered-what-identification-requires-first]]\n\nAs a first test the resulting nearest-neighbour texture gives the Cabibbo relation \\[ \\theta_{C} \\approx \\sqrt{m_{d}/m_{s}} \\approx 0.224, \\] passed at observation level. [[c:families.faces-ordered-what-identification-requires-first]]",
+  "hash": "1e3b66d0e576"
+ },
+ {
+  "id": "c:families.faces-ordered-what-identification-requires-first",
+  "type": "theorem",
+  "claim": "families.faces-ordered-what-identification-requires-first@3",
+  "title": "The faces ordered: what the identification requires, and the first test passed",
+  "text": "The three candidate families in this framework start out exactly alike, but real families differ in mass, so something must tell them apart. The paper argues that the only thing available is the direction in which the vacuum settles, which then ranks the three by how much they overlap with it. As a first check, this kind of ranking leads to a well-known approximate formula linking a quark mixing angle to a ratio of quark masses, and the numbers agree to within about a percent. The check relies on standard assumptions borrowed from earlier work on such mass patterns.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.alignment-computed-thirteenth-refutation-democracy-one",
+   "families.imported-face-valued-bracket-quantum-numbers",
+   "families.three-identical-families-mixing-shared-slots"
+  ],
+  "hash": "35b10c6978ea",
+  "number": 12
+ },
+ {
+  "id": "t:families.faces-ordered-what-identification-requires-first>families.skeleton-rank-one-plus-ordering-shift",
+  "type": "transition",
+  "between": [
+   "families.faces-ordered-what-identification-requires-first",
+   "families.skeleton-rank-one-plus-ordering-shift"
+  ],
+  "text": "The next question is what the simplest vacua do to the two light families. [[t]]\n\nFor every antisymmetric Gaussian pairing the mass form is \\[ \\cosh^{2}r\\,\\delta_{kl} + x(5 + 6x)\\,\\bar{n}_{k}n_{l}, \\] rank one plus an ordering floor. [[c:families.skeleton-rank-one-plus-ordering-shift]] So the light pair is exactly degenerate and $S_{2}$ cannot break in this class: whatever separates the electron and the muon must come from beyond it. [[c:families.skeleton-rank-one-plus-ordering-shift]]",
+  "hash": "39a6dbbeac8a"
+ },
+ {
+  "id": "c:families.skeleton-rank-one-plus-ordering-shift",
+  "type": "theorem",
+  "claim": "families.skeleton-rank-one-plus-ordering-shift@5",
+  "title": "The skeleton: rank one plus the ordering shift, and the unbreakable $S_{2}$",
+  "text": "The paper computes exactly the mass pattern produced by its simplest vacuum, for every setting of its parameters. The answer is always one heavy family and two light ones with exactly equal masses, and the light masses come entirely from a quantum ordering effect. Because the two light masses can never differ in this setting, the electron and the muon cannot be told apart here, so whatever separates them must come from beyond this class of vacua.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-squeezed-vacuum-bosonic-pairing",
+   "families.rigidity-pairing-sector-one-event"
+  ],
+  "hash": "0cd37bfa3a6f",
+  "number": 13
+ },
+ {
+  "id": "t:families.skeleton-rank-one-plus-ordering-shift>families.linear-conjecture-refuted-data",
+  "type": "transition",
+  "between": [
+   "families.skeleton-rank-one-plus-ordering-shift",
+   "families.linear-conjecture-refuted-data"
+  ],
+  "text": "The charged-lepton masses offer a sharp clue about what that missing ingredient must do. [[t]] The linear conjecture predicts $Q_{m} = 2/3$, and the data give $0.8936$, so it is refuted. [[c:families.linear-conjecture-refuted-data]]\n\nIn the $\\sqrt{m}$ coordinate, suggested for the light pair by the rank-one leading form and assumed for the heavy family, \\[ Q_{\\sqrt{m}} = \\frac{\\sum_{k} m_{k}}{\\bigl(\\sum_{k}\\sqrt{m_{k}}\\bigr)^{2}} = 0.6666645, \\] the Koide relation, holding within experimental uncertainty. [[c:families.linear-conjecture-refuted-data]]",
+  "hash": "fa31544e45a6"
+ },
+ {
+  "id": "c:families.linear-conjecture-refuted-data",
+  "type": "theorem",
+  "claim": "families.linear-conjecture-refuted-data@3",
+  "title": "The linear conjecture, refuted by data",
+  "text": "A first guess, that the three charged-lepton masses themselves satisfy a simple balance condition, which they would if the masses were the basic coordinates and the split between the families were even, fails clearly against the data. The paper's own structure suggests why: the two lighter masses appear only at second order, so the natural quantities are their square roots. Using the square roots, the same condition holds to a few parts in a million. This is the Koide relation, known since the early 1980s; what the paper adds is a possible reason for using square roots, with an acknowledged gap for the heaviest lepton.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.alignment-computed-thirteenth-refutation-democracy-one"
+  ],
+  "hash": "770876eefe98",
+  "number": 14
+ },
+ {
+  "id": "t:families.linear-conjecture-refuted-data>families.koide-class-crossing-fit-conclusion",
+  "type": "transition",
+  "between": [
+   "families.linear-conjecture-refuted-data",
+   "families.koide-class-crossing-fit-conclusion"
+  ],
+  "text": "The obvious test is whether the simplest vacua can produce the Koide relation. [[t]] Within the Gaussian class it holds only at the $S_{2}$ point, where it fixes a heavy-to-light ratio $K \\approx 4616$. [[c:families.koide-class-crossing-fit-conclusion]]\n\nThe depth crosses the required ratio exactly once, at $x^{*} \\approx K/6 \\approx 769.33$, which is the Koide number transcribed. [[c:families.koide-class-crossing-fit-conclusion]] So the mechanism is a fit, and the derivation claim is refuted at this order. [[c:families.koide-class-crossing-fit-conclusion]]",
+  "hash": "49e658540402"
+ },
+ {
+  "id": "c:families.koide-class-crossing-fit-conclusion",
+  "type": "theorem",
+  "claim": "families.koide-class-crossing-fit-conclusion@3",
+  "title": "Koide in the class: the crossing, and the fit conclusion",
+  "text": "Within the paper's simplest class of vacuum states, the Koide mass relation can only hold in a special symmetric case, and there it fixes one number, the ratio of the heavy mass to the light ones. The model can match that number by choosing its depth parameter, and it does so at exactly one value. But that value is essentially the Koide number rewritten, so the model fits the relation rather than explaining it. The attempted derivation is therefore recorded as refuted at this level, and the relation is treated as a measurement of the depth.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.skeleton-rank-one-plus-ordering-shift"
+  ],
+  "hash": "7b5057d70238",
+  "number": 15
+ },
+ {
+  "id": "t:families.koide-class-crossing-fit-conclusion>families.one-open-problem-three-forms",
+  "type": "transition",
+  "between": [
+   "families.koide-class-crossing-fit-conclusion",
+   "families.one-open-problem-three-forms"
+  ],
+  "text": "The failures add up to a single diagnosis. [[t]]\n\nAt the displaced-Gaussian class the split, the angle and the depth are one open problem, since the simplest vacua take all three as inputs instead of predicting them. [[c:families.one-open-problem-three-forms]] It is registered as a non-Gaussian completion that must produce the $207$ from caused structure. [[c:families.one-open-problem-three-forms]]",
+  "hash": "c202727bc219"
+ },
+ {
+  "id": "c:families.one-open-problem-three-forms",
+  "type": "conjecture",
+  "claim": "families.one-open-problem-three-forms@2",
+  "title": "One open problem in three forms",
+  "text": "Three seemingly separate puzzles, the electron-muon mass ratio, the Koide angle and the depth parameter, turn out to be one unanswered question in this framework. Its simplest vacuum states take all three as inputs instead of predicting them. The paper registers the missing ingredient as its main open problem and sets conditions that any solution must satisfy.",
+  "gap": false,
+  "level": "lay",
+  "hash": "4673f2a4fc41",
+  "number": 16
+ },
+ {
+  "id": "t:families.one-open-problem-three-forms>synthesis.pair-singlet-mass-form-is-floor-plus-face-density",
+  "type": "transition",
+  "between": [
+   "families.one-open-problem-three-forms",
+   "synthesis.pair-singlet-mass-form-is-floor-plus-face-density"
+  ],
+  "text": "Later work has sharpened that problem without solving it. [[t]] Beyond the Gaussian class, on the states built from face words, the mass form is $H = (1 + \\langle N\\rangle/4)\\mathbb{1}$ plus a positive weighted face density: a common floor plus a count of how the pairs are spread over the families. [[c:synthesis.pair-singlet-mass-form-is-floor-plus-face-density]]",
+  "hash": "8d857167dca6"
+ },
+ {
+  "id": "c:synthesis.pair-singlet-mass-form-is-floor-plus-face-density",
+  "type": "theorem",
+  "claim": "synthesis.pair-singlet-mass-form-is-floor-plus-face-density@1",
+  "title": "On the span of face words the mass form is the floor $1 + \\langle N\\rangle/4$ plus a weighted face density, so the forced eigenvector is the lowest in every source-built state and, under the mass-squared reading of the mass form, the split is a population ratio of the selected state",
+  "text": "In the families paper the three charged leptons get their masses from a vacuum full of correlated pairs of quanta, and the electron and muon come out equal unless the vacuum is of a more complicated, non-Gaussian kind. Earlier work showed that symmetry alone cannot fix the electron-to-muon ratio and noticed, in computed examples, that one particular direction always came out lightest. This result explains why, and does so for every vacuum of the relevant kind. The mass formula turns out to have a simple shape: a common floor, set only by how many pairs the vacuum holds on average, plus a term that counts how the pairs are spread over the family directions. The direction that always came out lightest is one that, by construction, never receives any pairs in these vacua, so it sits exactly on the floor. The other two masses then measure how the pairs are shared between the remaining two directions. Reading the formula's eigenvalues as squared masses, as the families paper does, the famous ratio of about 207 becomes a statement about how a frozen vacuum shares its pairs, and any rule that chooses the vacuum must get that sharing right.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "families.imported-squeezed-vacuum-bosonic-pairing",
+   "families.skeleton-rank-one-plus-ordering-shift",
+   "synthesis.face-mass-form-unit-plus-gram",
+   "synthesis.cumulants-at-fixed-second-moments-keep-the-floor",
+   "synthesis.real-structure-breaks-source-stabiliser-to-z2"
+  ],
+  "hash": "0f5dff31671a",
+  "number": 17
+ },
+ {
+  "id": "t:synthesis.pair-singlet-mass-form-is-floor-plus-face-density>synthesis.mass-squared-reading-needs-millions-of-face-pairs",
+  "type": "transition",
+  "between": [
+   "synthesis.pair-singlet-mass-form-is-floor-plus-face-density",
+   "synthesis.mass-squared-reading-needs-millions-of-face-pairs"
+  ],
+  "text": "In the vacua built from the source and its conjugate one direction never receives pairs and sits exactly at the floor, which is why the lightest family always came out along it. [[c:synthesis.pair-singlet-mass-form-is-floor-plus-face-density]] Reading the eigenvalues as squared masses, as the families paper does, the electron's mass is fixed by the mean pair number and the ratio of about $207$ becomes a population ratio of the selected vacuum. [[c:synthesis.pair-singlet-mass-form-is-floor-plus-face-density]]\n\nThat reading sets a scale for any rule that picks the vacuum. [[t]] For every state on the span of face words the heavier eigenvalues over the lightest are bounded by roughly twice the largest pair number, so the measured $(m_{\\mu}^{2} + m_{\\tau}^{2})/m_{e}^{2} \\approx 1.213 \\times 10^{7}$ needs weight at pair numbers of at least $6065574$. [[c:synthesis.mass-squared-reading-needs-millions-of-face-pairs]]",
+  "hash": "73377b0c5596"
+ },
+ {
+  "id": "c:synthesis.mass-squared-reading-needs-millions-of-face-pairs",
+  "type": "theorem",
+  "claim": "synthesis.mass-squared-reading-needs-millions-of-face-pairs@2",
+  "title": "Under the mass-squared reading of the face mass form, every state on the span of face words has $(\\lambda_{2} + \\lambda_{3})/\\lambda_{1} \\le (2 + \\tfrac52\\langle D\\rangle + \\langle D^{2}\\rangle)/(1 + \\tfrac12\\langle D\\rangle)$, and a state supported on pair numbers at most $K$ has it at most $2K + 1 + 2/(K + 2)$, so the measured charged-lepton masses at the pole masses need a frozen vacuum with weight at pair numbers of at least $6065574$ (an estimated $6.4$ million at common-scale running masses, first order in $\\alpha$)",
+  "text": "In one reading of the theory, the three charged-lepton masses squared are the three levels of a matrix built from the vacuum, and the vacuum is described by how many pairs of certain quanta it holds. This result shows that the ratio of the heavy levels to the light one can never exceed about twice the largest number of pairs present. Since the tau is about 3477 times heavier than the electron (at the pole masses), the squared ratio is about twelve million, so the vacuum must contain states with at least about six million pairs; with the masses defined at a common energy scale instead, the number rises to about 6.4 million. Whatever rule picks the vacuum has to produce a number that large from the theory's structure, without it being put in by hand.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.pair-singlet-mass-form-is-floor-plus-face-density",
+   "synthesis.koide-channel-phase-target-depends-on-mass-definition",
+   "synthesis.imported-one-loop-qed-pole-mass-relation"
+  ],
+  "hash": "c79a35c95841",
+  "number": 18
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:families.imported-dictionary-exact-join",
+  "type": "fact",
+  "claim": "families.imported-dictionary-exact-join@5",
+  "title": "Imported: the dictionary and the exact join",
+  "text": "This gathers two earlier results for later use. First, a field's mass is fixed by a number called its weight, read against the single scale that the cosmological constant provides. Second, a particle made of two conformal spinors has an exact mass formula: a term measuring how misaligned its parts are, plus a small correction proportional to the cosmological constant. For any ordinary particle the weight is a complex number whose imaginary part carries the mass.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-dictionary-exact-join, version 5 (T13 Fact 2.2)",
+  "hash": "72e5a36557a8",
+  "number": 19
+ },
+ {
+  "id": "c:families.imported-face-valued-bracket-quantum-numbers",
+  "type": "fact",
+  "claim": "families.imported-face-valued-bracket-quantum-numbers@5",
+  "title": "Imported: the face-valued bracket and its quantum numbers",
+  "text": "In this framework a particle with mass is built from two conformal spinors, and its mass in flat space is carried by one complex number, the bracket. This result records how that number behaves under the framework's internal symmetries: it has the charges of $e^{c}$, the conjugate of the right-handed electron, with hypercharge $+1$, not those of the Higgs doublet of the Standard Model. Whether it nonetheless plays a role like the Higgs field is left open, and that reading is held at observation level only.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-face-valued-bracket-quantum-numbers, version 5 (T13 Fact 2.1)",
+  "hash": "68fbb62152c4",
+  "number": 20
+ },
+ {
+  "id": "c:families.imported-indifference-instrument",
+  "type": "fact",
+  "claim": "families.imported-indifference-instrument@2",
+  "title": "Imported: the indifference instrument",
+  "text": "The series assumes that nature does not make arbitrary choices: if nothing in the theory tells two things apart, the theory may not treat them differently. This entry says how the families paper itself reads that assumption in practice. Things related by a symmetry must be given equal weight, but things that are genuinely different are never forced to match. It is an assumption of the programme, not something it proves.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-indifference-instrument, version 2 (T13 Fact 2.5)",
+  "hash": "8cec3b913594",
+  "number": 21
+ },
+ {
+  "id": "c:families.imported-one-derived-generation-hypothesis-s",
+  "type": "fact",
+  "claim": "families.imported-one-derived-generation-hypothesis-s@6",
+  "title": "Imported: one derived generation, and Hypothesis (S)",
+  "text": "The families paper imports what the series has derived about one generation of matter. The quark doublet and the charges of single free spinor states come out with no extra assumption; the lepton doublet appears only if one adopts a stated hypothesis about how the slots those states occupy behave. With that hypothesis, and given the generation's particle content listed with one handedness, at most one extra neutral singlet and the quark doublet's charge as the unit, requiring the theory to be free of quantum anomalies fixes all the hypercharges of the generation, up to which of the two antiquark singlets takes which value. The hypothesis is not proved, and everything that paper says about charged leptons depends on it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-one-derived-generation-hypothesis-s, version 6 (T13 Fact 2.3)",
+  "hash": "448db0a9ef00",
+  "number": 22
+ },
+ {
+  "id": "c:families.imported-squeezed-vacuum-bosonic-pairing",
+  "type": "fact",
+  "claim": "families.imported-squeezed-vacuum-bosonic-pairing@3",
+  "title": "Imported: the squeezed vacuum of a bosonic pairing",
+  "text": "When pairs of bosonic particles are created together in a controlled way, the resulting state is called a squeezed vacuum. All of its statistics are fixed by two tables of numbers, one counting particles and one measuring the pairing, and both can be read off from a standard factorisation of the pairing matrix. A standard rule, Wick's theorem, then gives every more complicated average from these two tables. These are textbook results used as tools.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.imported-squeezed-vacuum-bosonic-pairing, version 3 (T13 Fact 2.6)",
+  "hash": "dc89a3056005",
+  "number": 23
+ },
+ {
+  "id": "c:families.rigidity-pairing-sector-one-event",
+  "type": "fact",
+  "claim": "families.rigidity-pairing-sector-one-event@3",
+  "title": "Rigidity: the pairing sector is one event",
+  "text": "This result looks at every way the vacuum can pair up particles within one sector and shows that, however the ingredients are mixed, the outcome is always the same kind of single event, governed by one depth parameter. Of the three underlying numbers, two always come out equal and the third zero, whatever the mix. This rigidity means the different pairing channels cannot be played off against each other, and it fixes the direction the vacuum picks out in family space.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim families.rigidity-pairing-sector-one-event, version 3 (T13 Prop 6.1)",
+  "hash": "13a95109f7a7",
+  "number": 24
+ },
+ {
+  "id": "c:field-theory.fock-space-maxwell-modes",
+  "type": "fact",
+  "claim": "field-theory.fock-space-maxwell-modes@4",
+  "title": "The Fock space and the Maxwell modes",
+  "text": "The photon's quantum states are built on polynomials, the standard representation of boson operators, with the spacetime volume element as imaginary unit. Each photon momentum then carries one complex mode, and with this choice of unit positive frequency coincides with positive helicity for every massless field, so the field operator destroys one helicity and creates the other.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.fock-space-maxwell-modes, version 4 (FT Prop 8.1)",
+  "hash": "7a9f12c618ee",
+  "number": 25
+ },
+ {
+  "id": "c:field-theory.second-quantisation",
+  "type": "fact",
+  "claim": "field-theory.second-quantisation@5",
+  "title": "Second quantisation",
+  "text": "Fields whose values are elements of the spacetime algebra and whose modes are tower planes can be quantised inside one algebra, with the volume element as imaginary unit. The resulting field is local, and its observables are the standard second-quantised ones. The price of this unit is that a field's two chiralities enter differently, one directly and one conjugated; Hestenes' unit avoids that at the cost of choosing a frame.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.second-quantisation, version 5 (FT Prop 5.2)",
+  "hash": "00708429a3e0",
+  "number": 26
+ },
+ {
+  "id": "c:standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "fact",
+  "claim": "standard-model.gauge-algebra-minimal-massive-composite@4",
+  "title": "The gauge algebra of the minimal massive composite",
+  "text": "A composite of basic spinor states of the conformal algebra has a two-level internal structure: which spinor state, and which of its three internal pairs. The rotations that respect both levels form a symmetry algebra. For the smallest composite that can have mass, two spinor states of three pairs each, that algebra is exactly the one behind the strong, weak and hypercharge forces; for three spinor states it is too large.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.gauge-algebra-minimal-massive-composite, version 4 (T12 Thm 4.1)",
+  "hash": "3b8413acfc55",
+  "number": 27
+ },
+ {
+  "id": "c:standard-model.hyp-s-slot-statistics",
+  "type": "fact",
+  "claim": "standard-model.hyp-s-slot-statistics@9",
+  "title": "Hypothesis (S): slot statistics, derived from the slot-module hypothesis",
+  "text": "The framework's account of quarks and leptons rested on an assumption, called (S), that two particular ingredients of each particle behave like fermions, the kind of particle that obeys the exclusion principle. It is now a consequence of a weaker assumption: that a particle's states are built from one empty state by adding quanta of a single two-state kind, and that handedness splits them into particles and their mirror-image antiparticles in a way that respects the intermediate Pati-Salam symmetry the framework uses. Under that assumption, with the standard requirement that the theory be free of anomalies, the ingredients must be fermions, and the possible states of a particle form exactly the standard quantum state space of five fermionic modes, with the right handedness for the particles of the Standard Model.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.hyp-s-slot-statistics, version 9 (T12 Hypothesis (S))",
+  "hash": "4017e232e62c",
+  "number": 28
+ },
+ {
+  "id": "c:standard-model.hypercharge-global-form-pair-counting-consistency",
+  "type": "fact",
+  "claim": "standard-model.hypercharge-global-form-pair-counting-consistency@5",
+  "title": "Hypercharge from the global form, pair counting, and consistency",
+  "text": "Hypercharge is one of the charges that decide how particles feel the electroweak force. Here it is read off from how the symmetry acts on the composite's states, with the quark doublet carrying one sixth. Under a stated hypothesis about the state space, counting pairs and keeping track of handedness yields the lepton doublet and the four singlet particles with their observed hypercharges. The consistency conditions a quantum gauge theory must satisfy then hold, and given that particle content, all listed with one handedness, with the quark doublet's one sixth as the unit and a fourth singlet that is neutral or absent, they allow no other choice of charges.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.hypercharge-global-form-pair-counting-consistency, version 5 (T12 Thm 5.5)",
+  "hash": "b649a390bfed",
+  "number": 29
+ },
+ {
+  "id": "c:standard-model.imported-anomaly-coefficients",
+  "type": "fact",
+  "claim": "standard-model.imported-anomaly-coefficients@1",
+  "title": "Imported: the anomaly coefficients",
+  "text": "A gauge theory with chiral fermions only makes sense quantum mechanically if certain sums of the charges cancel. For a theory with a $U(1)$ factor alongside the colour and weak forces there are four such sums. If any one of them fails the theory is inconsistent, and breaking the symmetry does not repair it. This is a standard textbook result taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4",
+  "hash": "462fbf36cbd0",
+  "number": 30
+ },
+ {
+  "id": "c:standard-model.imported-one-loop-running-trace-ratio",
+  "type": "fact",
+  "claim": "standard-model.imported-one-loop-running-trace-ratio@1",
+  "title": "Imported: one-loop running, and the trace ratio of a simple unifying group",
+  "text": "The strengths of the three forces change slowly with energy, and at the first approximation each inverse strength changes along a straight line against the logarithm of the energy, with a slope set by the particle content. If all three forces are pieces of one larger simple symmetry, their strengths must agree at the energy where that symmetry is intact, once they are measured on the common scale the larger symmetry fixes. Both statements are standard and taken from the literature, the second being the working hypothesis of grand unification.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Georgi and S. L. Glashow, Unity of all elementary-particle forces, Phys. Rev. Lett. 32 (1974), 438--441.; U. Amaldi, W. de Boer, and H. F\"urstenau, Comparison of grand unified theories with electroweak and strong coupling constants measured at LEP, Phys. Lett. B 260 (1991), 447--455.; S. Navas et al. (Particle Data Group), Review of particle physics, Phys. Rev. D 110 (2024), 030001.",
+  "hash": "acc73efb9bce",
+  "number": 31
+ },
+ {
+  "id": "c:synthesis.anomaly-freedom-forces-slot-content",
+  "type": "fact",
+  "claim": "synthesis.anomaly-freedom-forces-slot-content@3",
+  "title": "Anomaly freedom forces odd slot parity and the slot content of Hypothesis (S), up to multiplicity",
+  "text": "The series' Standard-Model paper needs a premise, called (S), saying that the two places a composite's twistors occupy behave like fermions. This result keeps the rest of that setting but lets those places behave in any way compatible with the symmetry, and lets their contribution to handedness be either odd or even. Requiring that the resulting particles be free of gauge anomalies, the consistency condition every chiral gauge theory must meet, forces the places to count as odd for handedness and to have exactly the fermionic pattern, possibly repeated several times, and forces the exclusion principle. More exotic behaviour, such as parafermions, and even places, give anomalous particle content.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.anomaly-freedom-forces-slot-content, version 3",
+  "hash": "5e2d8a3728e9",
+  "number": 32
+ },
+ {
+  "id": "c:synthesis.cpt-closure-forces-slot-module-and-chirality",
+  "type": "fact",
+  "claim": "synthesis.cpt-closure-forces-slot-module-and-chirality@1",
+  "title": "For a slot module generated from one vacuum by one doublet of slot creation operators, CPT closure forces the fermionic slot module and anomaly freedom forces the chirality to be the mode-number parity away from the neutral singlets",
+  "text": "The series builds each particle from two kinds of internal slot, and the most-used assumption in the store says, among other things, which states are left-handed and that the slot quanta behave like fermions. This result shows that part of that assumption can be derived. Requiring only what every theory of fermions has, that each particle's antiparticle be present with the opposite handedness, already forces the slot quanta to be fermion-like, provided the slot states are built from one empty state by adding quanta of a single two-state kind. Requiring further that the theory be free of quantum anomalies then forces the handedness to be the even-or-odd count of occupied modes, exactly as the assumption states, except for the choice within the pair of neutral states that would be the right-handed neutrino.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.cpt-closure-forces-slot-module-and-chirality, version 1",
+  "hash": "d26412175aaf",
+  "number": 33
+ },
+ {
+  "id": "c:synthesis.cumulants-at-fixed-second-moments-keep-the-floor",
+  "type": "fact",
+  "claim": "synthesis.cumulants-at-fixed-second-moments-keep-the-floor@1",
+  "title": "Higher cumulants added at the skeleton's second moments cannot lower the light floor",
+  "text": "In the series the three charged-lepton families get their masses from a frozen quantum state of six modes, and the simplest (Gaussian) version of that state makes the electron and the muon exactly equally heavy. The open problem asks whether adding a small non-Gaussian ingredient could split them by the observed factor of about 207. This result shows that it cannot do so as a small correction. The lighter pair's common mass in the Gaussian state is fixed by how many quanta sit in the other family directions, and any extra non-Gaussian ingredient that leaves those numbers alone can only make every family heavier, never lighter. Reaching the real masses would then need the extra ingredient to be thousands of times larger than the Gaussian part. What has to change instead is where the quanta sit: almost all of them must be in the electron's direction, and the non-Gaussian structure would have to explain why.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.cumulants-at-fixed-second-moments-keep-the-floor, version 1",
+  "hash": "cf79b428443f",
+  "number": 34
+ },
+ {
+  "id": "c:synthesis.face-mass-form-unit-plus-gram",
+  "type": "fact",
+  "claim": "synthesis.face-mass-form-unit-plus-gram@1",
+  "title": "In every state the face mass form is at least the unit, the excess an explicit Gram matrix",
+  "text": "In the families paper the masses of the three generations come from how the vacuum fluctuates in three directions of an internal space. That paper computed this only for the simplest class of vacua, the Gaussian ones, where two generations come out exactly equal. This result looks at every possible vacuum and shows the mass pattern always has the same two-part shape: a fixed baseline, equal for all three generations, plus a part built as the square of something the vacuum determines. So any proposal to separate the electron from the muon has to do it entirely through that second part; the baseline can never help.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.face-mass-form-unit-plus-gram, version 1",
+  "hash": "22c7e442fa67",
+  "number": 35
+ },
+ {
+  "id": "c:synthesis.imported-adler-bell-jackiw-axial-anomaly",
+  "type": "fact",
+  "claim": "synthesis.imported-adler-bell-jackiw-axial-anomaly@1",
+  "title": "Imported: the axial anomaly of spinor electrodynamics (Adler 1969; Bell and Jackiw 1969): when the vector current is kept conserved, the divergence of the axial current of a Dirac fermion has, besides the mass term, the anomalous term $(\\alpha/4\\pi)\\,\\epsilon^{\\xi\\sigma\\tau\\rho}F_{\\xi\\sigma}F_{\\tau\\rho}$ from the triangle graph, which accounts for the decay of the neutral pion into two photons",
+  "text": "Some symmetries of the classical equations of particle physics do not survive in the quantum theory. The best known case concerns the difference between left-handed and right-handed particles: in 1969 Adler, and Bell and Jackiw, found that quantum effects of light break this balance by an amount set by the electric and magnetic fields together, and that this explains why a neutral pion decays into two photons. The series takes this result from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. L. Adler, Axial-vector vertex in spinor electrodynamics, Phys. Rev. 177 (1969), 2426--2438.; J. S. Bell and R. Jackiw, A PCAC puzzle: pi0 -> gamma gamma in the sigma-model, Nuovo Cimento A 60 (1969), 47--61.; S. L. Adler, Anomalies to all orders, in: 50 Years of Yang-Mills Theory, ed. G. 't Hooft, World Scientific (2005); arXiv:hep-th/0405040., eq. (1) and the reference list",
+  "hash": "46238b7d9679",
+  "number": 36
+ },
+ {
+  "id": "c:synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+  "type": "fact",
+  "claim": "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@1",
+  "title": "Imported: the heat-kernel (Seeley-DeWitt) coefficients of a Laplace-type operator, whose field-strength part on a flat background is $\\tfrac{1}{12}\\Omega_{\\mu\\nu}\\Omega^{\\mu\\nu} + \\tfrac12E^{2}$ ($a_{2}$ in DeWitt's numbering, $a_{4}$ in Vassilevich's), and the background-field gauge with Faddeev-Popov ghosts and the one-loop determinant weights (Abbott 1981)",
+  "text": "How strongly the forces of nature act changes with the energy at which they are probed, and the rate of change at the first quantum level can be read from a standard expansion that describes how heat would spread on the space of field configurations. Combined with a standard way of fixing the redundancy of force fields that keeps their symmetry visible, the expansion gives each kind of particle's contribution to the running. These are textbook results that the series takes as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "D. V. Vassilevich, Heat kernel expansion: user's manual, Phys. Rep. 388 (2003), 279--360, arXiv:hep-th/0306138.; B. S. DeWitt, Dynamical Theory of Groups and Fields, Gordon and Breach (1965).; L. F. Abbott, The background field method beyond one loop, Nucl. Phys. B 185 (1981), 189--203.",
+  "hash": "43285efc2097",
+  "number": 37
+ },
+ {
+  "id": "c:synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+  "type": "fact",
+  "claim": "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1",
+  "title": "Imported: the one-loop machinery of covariant perturbation theory: Feynman parametrisation, the Wick-rotated integrals of $(\\ell^{2} - \\Delta)^{-n}$ with symmetric integration, Pauli-Villars regulator fields of either sign of weight (Pauli and Villars 1949), the covariant photon propagator with gauge-parameter independence of on-shell amplitudes, and on-shell external states",
+  "text": "To compute the first quantum corrections in a theory such as electrodynamics, physicists use a standard toolkit: a trick for combining denominators, a rotation of the time direction into an imaginary one that turns the integrals into ordinary ones, and a way of taming their infinities with heavy auxiliary particles, some of which count negatively. These tools are textbook material; the series takes them as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "W. Pauli and F. Villars, On the invariant regularization in relativistic quantum theory, Rev. Mod. Phys. 21 (1949), 434--444.; M. E. Peskin and D. V. Schroeder, An Introduction to Quantum Field Theory, Addison-Wesley (1995), chapters 6 and 7.; S. Weinzierl, Introduction to Feynman integrals, arXiv:1005.1855, equations (50) and (61).",
+  "hash": "705107cab044",
+  "number": 38
+ },
+ {
+  "id": "c:synthesis.imported-one-loop-qed-pole-mass-relation",
+  "type": "fact",
+  "claim": "synthesis.imported-one-loop-qed-pole-mass-relation@1",
+  "title": "Imported: at one loop in QED the pole mass of a charged lepton is m_pole = [1 + (alpha/pi)(1 + (3/4) ln(mu^2/mbar^2))] mbar(mu), and Koide's relation written in running masses is shifted by about 0.1 percent (Sumino 2009)",
+  "text": "There are two standard ways to define the mass of a charged particle such as the electron, and quantum effects of electromagnetism make them differ slightly, by different amounts for the electron, muon and tau. A famous exact-looking relation among the three masses holds for one definition and is off by a tenth of a percent for the other.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Y. Sumino, Family gauge symmetry as an origin of Koide's mass formula and charged lepton spectrum, arXiv:0903.3640 (2009), report TU-842., eq. (6); Y. Sumino, Family gauge symmetry as an origin of Koide's mass formula and charged lepton spectrum, J. High Energy Phys. 05 (2009), 075.",
+  "hash": "651929ca90d2",
+  "number": 39
+ },
+ {
+  "id": "c:synthesis.imported-witten-global-su2-anomaly",
+  "type": "fact",
+  "claim": "synthesis.imported-witten-global-su2-anomaly@1",
+  "title": "Imported: Witten's global $SU(2)$ anomaly; a four-dimensional $SU(2)$ gauge theory with an odd number of left-handed fermion doublets (and no other representations) is inconsistent, so a consistent theory has an even number of them (Witten 1982)",
+  "text": "Witten found that a theory with the weak force acting on an odd number of left-handed particle pairs cannot be consistent, whatever else it contains. Each family of ordinary matter has four such pairs, so any number of families passes this test; it cannot be used to fix how many families there are.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "E. Witten, An SU(2) anomaly, Phys. Lett. B 117 (1982), no. 5, 324--328.",
+  "hash": "62b89d54fa13",
+  "number": 40
+ },
+ {
+  "id": "c:synthesis.koide-channel-phase-target-depends-on-mass-definition",
+  "type": "fact",
+  "claim": "synthesis.koide-channel-phase-target-depends-on-mass-definition@2",
+  "title": "In the $\\sqrt{m}$ (circulant) reading the channel-phase target is a pole-mass statement: at first order in $\\alpha$ the one-loop QED relation between pole and $\\overline{\\mathrm{MS}}$ masses moves the Koide phase reproducing $m_{\\mu}/m_{e}$ at a common scale to $(0.22254, 0.22258)$, more than $1800$ times the distance of $\\tfrac29$ from $\\delta_{*}$, and puts Koide's $Q$ off $\\tfrac23$ by $(1.0, 1.3) \\times 10^{-3}$",
+  "text": "The previous result pinned an angle, which encodes the muon-to-electron mass ratio in one reading of this framework (where a vector built from the vacuum is read as the square roots of the masses), to nine decimal places and showed it is not a simple fraction or a simple symmetry angle. But particle masses can be defined in more than one way: the physical mass of a free particle, or a mass that depends on the energy scale at which it is measured. The tiny electromagnetic corrections that relate these definitions shift the mass ratio by about two percent and the angle by about three parts in ten thousand, thousands of times more than the difference between the angle and the often-quoted value $2/9$. So the nine-decimal target, and the conclusion that no symmetry of order up to $4208$ supplies it, hold only if the framework's masses are the physical masses, which is the working choice for now. If the vacuum rule sets masses at a high energy scale, the target moves, it is known far less precisely, and the famous Koide formula itself fails there by about a tenth of a percent.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.koide-channel-phase-target-depends-on-mass-definition, version 2",
+  "hash": "24049dab638a",
+  "number": 41
+ },
+ {
+  "id": "c:synthesis.one-loop-qed-in-the-spacetime-algebra",
+  "type": "fact",
+  "claim": "synthesis.one-loop-qed-in-the-spacetime-algebra@2",
+  "title": "One-loop electrodynamics in the spacetime algebra, in a covariant gauge with imported Pauli-Villars regulators: transverse vacuum polarisation with coefficient $e^{2}/(12\\pi^{2})$, $F_{2}(0) = \\alpha/(2\\pi)$ through the real bivector $\\gamma^{\\mu} \\wedge q$, $Z_{1} = Z_{2}$, and the unit outside the product on massive lines",
+  "text": "The standard first quantum corrections of electrodynamics, the screening of charge by virtual pairs, the electron's extra magnetic moment and the identity that keeps charge the same at every order, come out of the series' algebra of spacetime with the usual numbers. Two standard ingredients are taken from the literature: the usual covariant description of the photon inside loops, and the usual way of taming the infinities with heavy auxiliary particles, some of which enter with negative weight; both rest on a premise the series adopts, that the photon's states carry the standard indefinite measure in which some unphysical states have negative length. The charge screening has the textbook strength, the magnetic correction is the fine-structure constant over two pi, and the magnetic structure is a plain plane element of spacetime with no imaginary number in it. One point is specific to the series: its imaginary unit, the spacetime volume element, may sit inside the algebraic products only on massless lines; on massive lines it must stay outside, or charge conservation fails.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.one-loop-qed-in-the-spacetime-algebra, version 2",
+  "hash": "3467f8c957ee",
+  "number": 42
+ },
+ {
+  "id": "c:synthesis.real-structure-breaks-source-stabiliser-to-z2",
+  "type": "fact",
+  "claim": "synthesis.real-structure-breaks-source-stabiliser-to-z2@2",
+  "title": "Every $S_{3}$-equivariant real structure breaks the coherent source's stabiliser to $\\mathbb{Z}_{2}$, forcing exactly one eigenvector of the mass form (the reflection of the Koide vector through the democratic axis; at the floor, so the lowest, in every state built from the source, its conjugate and the invariant quartic word, and not in general) and leaving a five-parameter block that the state alone fixes; the channel phase is invisible to it and a cubic family word forces nothing, so the $207$ cannot come from the real structure or the cubic family word acting by covariance",
+  "text": "The families paper leaves the electron and muon with equal masses, protected by a symmetry of the vacuum built from one preferred direction. One hoped-for cure was a notion of which directions in the family space count as real. This result shows what that notion can and cannot do. After a change of coordinates the preferred direction always looks the same, whichever version of reality is chosen and whatever the one free angle of the paper is, so that angle, which is where the muon-to-electron ratio would hide, is invisible. The symmetry that remains is a single mirror, and a mirror fixes only one thing: one definite direction in family space must be a mass eigenstate. Whether that state is the lightest, and how far apart the two light masses are, is not fixed at all; it depends on the detailed vacuum, and exact computations show every possibility is realised. A second candidate, a cubic combination of the three families, fixes even less. So for these two candidates the ratio of about 207 cannot be a consequence of symmetry; it would have to come from a rule choosing the vacuum, and no such rule is in the series.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.real-structure-breaks-source-stabiliser-to-z2, version 2",
+  "hash": "ad721053aa60",
+  "number": 43
+ },
+ {
+  "id": "c:synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+  "type": "fact",
+  "claim": "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3",
+  "title": "On the null-lift locus every $U(2)$-invariant potential of the rung field is a function of the Hermitian norm $N$ and the hypercharge moment map $m$ on the orbit space $N^{2} - m^{2} \\ge H^{4}$, whose boundary is the charge-preserving lift family; the hypercharge D-term action puts the vacuum on that boundary at the level $m^{*} = g'^{2}\\xi/(g^{2} + g'^{2})$, so $v/H$ enters only through the input $\\xi$, and gives the neutral mode the mass $M_{Z}$ and the charged pair $M_{W}$ at tree level in every frame; an added invariant $W(N)$ shifts them to $M_{Z}^{2} + 2W''m^{*2}/N^{*} + 2W'H^{4}/N^{*2}$ and $M_{W}^{2} + 2W'$, the latter twice the outward derivative of the potential, so local stability against charge breaking is the positivity of the charged mass; the rung field carries a physical charged scalar pair besides the neutral mode",
+  "text": "The series' candidate for the Higgs field is a component of the frozen point's lift, constrained to a surface where the lift stays null. This result writes down the simplest field theory for it: the standard kinetic term and the D-term potential, whose strength is fixed by the gauge couplings as in supersymmetric theories, with one free constant. That theory automatically keeps electric charge unbroken and sets the weak scale by the free constant, so the weak scale is an input here, matching the series' premise that registers that constant as a free number (with the cosmological constant read as a fact about the universe's history, as the series does, it is the weak scale against the Planck mass that the constant fixes). But the theory also predicts that the Higgs particle weighs exactly as much as the Z boson, which is false by about a third, so a second term in the potential is needed; the result says what such a term can be and how it moves the Higgs mass. The field is not the single Higgs doublet of the Standard Model: it also carries a pair of charged scalars, as heavy as the W boson in the simplest theory, which searches for charged scalars constrain (the bound, from memory, is near that mass).",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus, version 3",
+  "hash": "b56248659f3c",
+  "number": 44
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "On the count, the trail ends with a negative answer: the series does not derive three generations. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] Anomaly cancellation holds generation by generation for any number, the running allows at most five if both non-abelian forces are to weaken at high energy, and three rests on an imported observation-level bound read through a family-symmetry hypothesis. [[c:synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free]] The matching of the three faces to the real families is itself still a conjecture, now read as three separate composites. [[c:families.three-generations-faces-maximal-composite]] [[c:synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group]]\n\nOn the masses, three identical families become one heavy family and two light ones once the vacuum picks a direction, while separating the light pair remains open. [[c:families.alignment-computed-thirteenth-refutation-democracy-one]] Under the mass-squared reading any vacuum that does it must hold millions of face pairs, a number some rule has to produce from the theory's structure rather than by hand. [[c:synthesis.mass-squared-reading-needs-millions-of-face-pairs]]\n\nSeveral steps rest on stated premises: the slot-module hypothesis and Hypothesis (S) that it yields, the Krein inner product for gauge fields in the running, the observation-level three-spinor bound, and the indifference premise that nature does not favour one family without cause. [[c:standard-model.slot-module-hypothesis]] [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]] [[c:families.three-generations-faces-maximal-composite]] [[c:families.alignment-computed-thirteenth-refutation-democracy-one]]",
+  "hash": "83d0a2c45781"
+ }
+]

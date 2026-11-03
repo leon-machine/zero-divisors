@@ -1,0 +1,27 @@
+functions:
+  check_boost_is_the_car_scaling_about_the_edge:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the rotor identities B l B~ = r^2 l, B n B~ = r^-2 n, fixed e_2, e_3 and the dilation of u l + y e_2 at three rational rapidities and three points; the weight 1/2 singled out among p = k/4, k = 0..4, on indicator functions of four rational intervals at two scales; other weights and general functions are not tested"
+  check_kernels_homogeneous_and_differ_only_at_the_edge_scale:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "the kernels W_c at five periods c (with k/c an integer) and four point pairs: c = 1 equal to the null vacuum, homogeneity of degree -1 of W_c and of D_c at three scales, D_c = 0 exactly when c = 1, growth of D_c towards the edge at two depths, the diagonal normalisation within 1/N, and the Mellin KMS identity at period 2 pi c (not at 2 pi) at three q; that a stationary state is its own scaling limit at the edge, and the bounded-difference variant of (ii), are argued from homogeneity, not computed as distributions"
+  check_off_the_edge_every_member_is_locally_the_vacuum:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the series of g_c to order 12 in y at gamma = 1/c^2 in {0, 1/4, 1/9, 4, 1}: zero constant term, even, first coefficient -(gamma - 1)/24, vanishing identically only at gamma = 1, with the control that dropping 1/c leaves a pole; analyticity in the strip and the scaling limit off the edge are argued from the series, not computed"
+  check_null_energy_of_the_family:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "point-split T_uu(1) = (gamma - 1)/(48 pi) from exact series in epsilon at five gamma, in units of 1/pi; the u^{-2} dependence is by homogeneity, so the constancy of the Killing-frame density is an identity at three u, not an independent test"
+  check_cross_edge_block:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the vacuum cross block 1/(u - v) at three pairs u > 0 > v, its homogeneity at three scales, and the product state's zero cross block differing from it by a difference growing as 1/s at the edge; the half restrictions of the product states are not recomputed here"
+  check_zero_null_energy_does_not_select_the_vacuum:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "the mixture (1/4) m_{1/2} + (3/4) m_infinity: no pole, zero y^2 coefficient, y^4 coefficient 21/5760, the cancelling weight 1/4, and within the one-period family only gamma = 1 with zero null energy at five gamma; that the mixed symbol defines a stationary quasi-free state (0 <= symbol <= 1) is argued, not computed"
+untouched_premises:
+  singularity.why-calibration-cannot-be-internal: "cited in proof (v) only, for the fact that the Painleve-Gullstrand gauge field is invertible on the future horizon r = 2M; no check function computes with it"

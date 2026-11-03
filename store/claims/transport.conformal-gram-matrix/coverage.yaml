@@ -1,0 +1,18 @@
+functions:
+  check_rank_and_signature:
+    kind: sampled
+    clauses:
+    - M has rank n + 2 and signature (p+1, q+1)
+    omits: All signatures with 1 <= n <= 6 for two bases (orthonormal, and one non-normalised choice of six rational scales) = 54 cases; entries computed from the GA square, not from a closed formula
+  check_gram_of_null_lifts:
+    kind: partial
+    clauses:
+    - M_ij = -1/2 Q(p_i - p_j)
+    omits: Asserts neither rank n + 2 nor signature (p+1,q+1); it only confirms that M is the Gram matrix of the null lifts X(p_i) in Cl(p+1,q+1) for n <= 4, an explanatory remark outside the formal statement
+untouched_premises:
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Rank and signature are computed exactly for n <= 6 on two bases; the null-lift function supports the construction but does not test the claimed values.

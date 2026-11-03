@@ -1,0 +1,14 @@
+functions:
+  check_g_gives_one_temperature:
+    kind: sampled
+    clauses: ["a state satisfying (G) has beta_k = beta independent of k over the modes of nonzero weight"]
+    omits: "one weight vector (1, 2, 3, 0) on four modes and y = e^{-beta} in {2/3, 5/4}; (G) is taken to be the Gibbs state of K_geo; the zero-weight marginal is diag(1,1)/2 and carries no beta_k, as noted"
+  check_product_satisfies_g_only_at_equal_betas:
+    kind: sampled
+    clauses: ["conversely a state with per-mode marginals Gibbs(beta_k omega_k) and no inter-mode correlation satisfies (G) only if the beta_k of the nonzero-weight modes coincide"]
+    omits: "same weight vector and two y; one agreeing product and three single-mode deviations (two nonzero-weight modes and the zero-weight mode) per y, not an exhaustive converse over all (beta_k)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "both directions are tested exactly on one four-mode weight vector at two temperatures"

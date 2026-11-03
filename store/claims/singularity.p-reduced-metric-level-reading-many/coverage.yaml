@@ -1,0 +1,20 @@
+functions:
+  check_modewise_descents_commute_and_compose_to_joint_pinching:
+    kind: sampled
+    clauses: ["the mode-wise descents commute", "their composite, in any order, is E_N (the joint-number pinching)"]
+    omits: "N = 2 and 3 modes only, exhaustive over all matrix units and all orderings there; not general N"
+  check_fixed_subalgebra_dimension_and_uniqueness_step:
+    kind: sampled
+    clauses: ["each is the unique conditional expectation onto the Ad(sigma_k)-fixed subalgebra", "the fixed subalgebra has dimension 4^N/2"]
+    omits: "N = 1, 2, 3; the dimension and range(E_k) = fixed algebra are exact there, but the conditional-expectation properties (positivity, bimodularity) and uniqueness are only supported by the eigenvector structure and invertibility of sigma_k, not proved"
+  check_meet_is_joint_diagonal_smaller_than_parity_even:
+    kind: sampled
+    clauses: ["E_N is a conditional expectation onto the intersection of the mode-wise ranges, the joint-number-diagonal algebra", "strictly smaller than the total-parity-even algebra on two or more modes"]
+    omits: "dimensions 2^N versus 4^N/2 computed for N = 1, 2, 3 ((2,2), (4,8), (8,32)); not general N; the conditional-expectation property of E_N is not tested"
+untouched_premises:
+  singularity.imported-one-sided-completion-singularity: "cited for the localisation that attaches one descent per point of E, which sits in the antecedent (a choice, stated unchecked in the docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the algebraic content is verified exactly for N = 1..3; the antecedent (sheaf assembly choice) is declared unchecked"

@@ -1,0 +1,9 @@
+functions:
+  check_pseudoscalar_commutation:
+    kind: complete
+    clauses:
+    - '"I X_k = (-1)^(k(n-1)) X_k I"'
+    - '"I I~ = prod Q(e_i)"'
+    - '"I^2 = 0 when r > 0"'
+    omits: every signature with n <= 5, one sampled element per signature checked on every grade; the
+      square formula for r = 0 is the premise's

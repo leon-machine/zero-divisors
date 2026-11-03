@@ -1,0 +1,26 @@
+functions:
+  check_fibrewise_even_part_is_subalgebra:
+    kind: sampled
+    clauses: ["sigma = k* k - k k* is built from the ladder", "the fibrewise condition (Ad sigma fixed part) defines a subalgebra"]
+    omits: "One ladder mode on 2 x 2 matrices; fibre of a single mode, not the full completed Clifford algebra."
+  check_even_families_glue_and_form_an_algebra:
+    kind: sampled
+    clauses: ["M is a sheaf of algebras (even families glue and are closed under product and function multiples)"]
+    omits: "Three-point model with a two-set cover and a few explicit even families; not a sheaf on Sigma and not the sheaf axioms in general."
+  check_parity_insensitive_to_ladder_rescaling:
+    kind: sampled
+    clauses: ["sigma is insensitive to the sign (and scale) of k"]
+    omits: "Three scalings c = 2, -3, 1/2 on the one-mode fibre; no collar data enter although the collar premise is called."
+  check_untwisted_ladder_exists_iff_w1_zero:
+    kind: sampled
+    clauses: ["existence of the untwisted ladder bundle is equivalent to w1(L) = 0"]
+    omits: "Two-chart circle with transitions in {+1,-1}^2, all four choices enumerated, so complete for that model only; that the ladder exists globally exactly when collar data do is not computed."
+  check_even_part_does_not_see_the_twist:
+    kind: sampled
+    clauses: ["M, built from Ad sigma, glues on a twisted ladder bundle as well and does not see the twist"]
+    omits: "Same two-chart model and three even elements; shows even elements glue on all four transition choices and k glues on two, not that M glues as a sheaf on a general twisted bundle."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring describes finite models and the asserts are those models; the equivalence with collar data and the sheaf statement over Sigma are carried by the two premises and the model, not computed. 2026-10-23 (weak checks): check_parity_insensitive_to_ladder_rescaling pins sigma = diag(-1, 1) by hand under every rescaling, not only its invariance; the rescalings moved to module level."

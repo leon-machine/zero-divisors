@@ -1,0 +1,11 @@
+Write $A := \Cl(p,q)$, let $\varphi_k : T_k \to A \otimes \Mat_{2^k}$ be the isomorphisms of Theorem \claimref{tower.commuting-copies}, and transport the connecting maps: $\psi_k := \varphi_{k+1} \circ \iota_k \circ \varphi_k^{-1}$. By Lemma \claimref{tower.compatibility-connecting-maps-transported},
+\[
+\psi_k \;=\; \Ad(V_k) \circ \theta_k, \qquad \theta_k(z) := z \otimes 1_{\,2 \times 2}\ \text{(block doubling)},
+\]
+with $V_k$ the split corrector displayed there. The comparison system is $(A \otimes \Mat_{2^k},\, \theta_k)$, whose limit is $A \otimes \Mat_{2^\infty}$ by definition. Intertwine the two systems stagewise: set $W_0 := 1$ and recursively $W_{k+1} := \theta_k(W_k)\, V_k^{-1}$, each $W_k$ an invertible element of $A \otimes \Mat_{2^k}$, and define $\lambda_k := \Ad(W_k)$. Then
+\[
+\lambda_{k+1} \circ \psi_k = \Ad(W_{k+1}) \circ \Ad(V_k) \circ \theta_k = \Ad(\theta_k(W_k)) \circ \theta_k = \theta_k \circ \Ad(W_k) = \theta_k \circ \lambda_k ,
+\]
+using $\theta_k \circ \Ad(W_k) = \Ad(\theta_k(W_k)) \circ \theta_k$ (a unital homomorphism carries conjugation to conjugation by the image). The squares commute exactly, so the $\lambda_k$ assemble into an isomorphism of the direct limits: $\varinjlim T_k \cong A \otimes \Mat_{2^\infty}$.
+
+For the second description: the algebraic direct limit of Clifford algebras of a nested chain of quadratic spaces along the induced embeddings is the Clifford algebra of the union (both sides satisfy the same universal property for the union space, and every element of either side lies at a finite stage). Canonicity: the $\varphi_k$ and the correcting elements $W_k$ are built from the ordered planes and volume elements only.

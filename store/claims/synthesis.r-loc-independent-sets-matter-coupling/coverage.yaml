@@ -1,0 +1,27 @@
+functions:
+  check_local_window_fails_r_loc_only:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Sheet-labelled weights 1, 2, 3 at c = 2 only (KMS at period 4 pi, not at 2 pi, with the Killing window of weights -1, 0, 1 keeping period 2 pi), occupations as rational functions of e^{-2 pi}; the statements that no other premise constrains the state, that the failure is exactly when c is not 1, and the nonemptiness of U are not tested
+  check_clausius_defect_with_temperature_factor:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: The defect (kappa/2)(T(k,k) - (s eta/2 pi) Ric(k,k)) lambda_0^2 by exact polynomial integration at three parameter sets with 2 pi replaced by a rational stand-in; the O(lambda_0^3) term and the derivation of T_chi are not tested
+  check_polarisation_is_a_tensor_equation:
+    kind: exact
+    clauses:
+    - (iii)
+    omits: 'Linear-algebra lemma used in (iii): the quadratic forms S -> S(k,k) over twelve rational null vectors have rank 9 on ten-component symmetric tensors with kernel spanned by g, so the null-null equation for all k is a tensor equation up to a multiple of g; the hypotheses (H1) to (H4) are not tested'
+  check_coupling_scales_with_period:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (iv)
+    omits: G_cl read off the Clausius defect at c = 1, 2, 3 and the single value eta = 1/4 (so c/(4 eta) = c, with 2 pi a rational stand-in); G_cl = c/(4 eta) for general eta, the Killing-patch remark (the null-null equation reads 0 = 0) and the calibration eta = 1/4 are not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rational-function and polynomial-integration checks support the model, the Clausius defect and the scaling G_cl = c G at sample parameters.

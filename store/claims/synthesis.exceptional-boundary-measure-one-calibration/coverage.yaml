@@ -1,0 +1,26 @@
+functions:
+  check_kasner_defining_function:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "series identity dtau/ds = 2 s^2 (a^2 - s^2)^(-1/2) holds to order x^8 (truncated, NS = 9) and A (dtau/dr)^2 = 1 at three rational points; uniqueness of tau is argued in a comment, not tested; Kasner exponents are checked as arithmetic on (-1/3, 2/3, 2/3)"
+  check_measure_limit:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "series of V/tau to order x^8: leading coefficient 1 and first correction -4/5 are exact, volume form checked against GA at three rational points; the prefactor 6 pi a^2 = 12 pi M is hand arithmetic in a comment, not asserted; 'dimension of an area' and 'no free constant' are not tested"
+  check_threshold_to_proper_time:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "(2M/r^3) tau^2 = (4/9) T^2 as a series (coefficients 4/9, 4/15, 32/175); nu' = (2/3) kappa_s is checked at three (lambda, tau_c) pairs chosen to satisfy tau_c^2 lambda = 4/9, so it restates the leading identity; the O(x_c) correction in tau_c is not tested"
+  check_store_count_recovered:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "series identity vol = 8 pi M (1 - x)^(1/2) at the lambda = 1 slice to order x^8, and the first coefficient -1/2 against -4/5; the general-threshold count 12 pi M nu tau_c is checked as arithmetic (144 tau_c^2 K = 64); the replacement of (C1), (C2) by (C2') is interpretive and untested"
+  check_calibration:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "nu' ln 2 = 1/(24 pi) and kappa_s ln 2 = 1/(16 pi) are computed exactly with pi powers tracked as (coefficient, power); S_BH = 4 pi M^2, rate 12 pi M and period 8 pi M are entered as inputs; the 'if and only if' is the invertibility of the linear relation; the match to Prediction pred.boundary-mode-density is not checked"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numbers 3/10, -4/5, 4/9, 1/(24 pi), 1/(16 pi) reproduced; checks are truncated-series and sampled, with the 12 pi M prefactor hand-derived"

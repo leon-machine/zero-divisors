@@ -1,0 +1,14 @@
+functions:
+  check_operator_join:
+    kind: sampled
+    clauses:
+    - (1)
+    - (2)
+    - (3)
+    - (4)
+    omits: 'The statement says any N: the normal form and the palatial constants are checked for N=2,3 (Moyal route) and N=2 (representation route) at two values of lambda; (2) is quadratic in lambda and run at three values; the closing general-N sentence is not run for N>=4; the commutator [B,B dagger] is checked as a Poisson bracket at N=2'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The traceless generators, the -5/2 lambda key matrix, the -2N lambda hbar^2 and -5N lambda/2 hbar^2 constants and the flat limit are exact in rationals at the sampled N and lambda.

@@ -1,0 +1,18 @@
+functions:
+  check_sector_additivity_and_rung_mixing_invariance:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Only two frozen points, three states and two Gaussian-rational U(2) mixings; the statement is for any ambient I and every state. m^2 is checked for mixing invariance only, not as a sector sum."
+  check_sum_over_slot_components:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Checks the moment sum (P is 2M coordinatewise, so the grip sum follows); three sample component vectors, doublet and two singlet sectors (j = 0, 2) only."
+  check_grip_depends_on_the_multiset:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Tests swapping the two slot states of the doublet and moving a singlet between sectors j = 0 and 2, on sample components; not arbitrary slot placements."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each function tests its clause on exact rational samples in the five-mode Fock form; nothing claimed beyond the samples."

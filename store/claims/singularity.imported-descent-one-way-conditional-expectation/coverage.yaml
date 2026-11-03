@@ -1,0 +1,24 @@
+functions:
+  check_pinching_is_conditional_expectation:
+    kind: sampled
+    clauses: ["E is a conditional expectation onto the commutant of P"]
+    omits: "six signatures with p + q <= 2 in Cl(p+1, q+1); the bimodule property is checked on all pairs of the commutant basis for n <= 1 and only on 4 x 4 sample pairs for n = 2"
+  check_kernel_is_ladder_sector:
+    kind: sampled
+    clauses: ["its kernel is exactly the adjoined ladder sector A f* + A f"]
+    omits: "the same six signatures; kernel identified by dimension count (ladder sector inside ker E, both of dimension 2^(n+1))"
+  check_no_return_homomorphism:
+    kind: sampled
+    clauses: ["no unital algebra homomorphism from the completed algebra back to its base exists"]
+    omits: "all signatures with n = p + q <= 3: every Wedderburn block of Cl(p+1, q+1) is larger than dim A = 2^n, which rules out a unital homomorphism by dimension; the pinching and the corner read-out are shown non-multiplicative for the six small signatures"
+  check_trace_preserving_expectation_is_unique:
+    kind: sampled
+    clauses: ["the unique conditional expectation onto that subalgebra preserving the trace"]
+    omits: "signatures (0,0), (1,0), (0,1) only; the affine solution space has dimension 0 with and without the trace condition, so E is the only bimodule projection there; the general case is Takesaki's theorem (cited)"
+untouched_premises:
+  singularity.imported-descent-one-way-conditional-expectation-external: "literature restatement (Takesaki's uniqueness theorem and the cited T1 propositions); the check reproduces the finite order-two instance directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All four clauses are tested in small Clifford algebras (n <= 2 or 3); the docstring says uniqueness is the order-two instance of the cited fact."

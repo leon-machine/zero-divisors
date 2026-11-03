@@ -1,0 +1,14 @@
+functions:
+  check_page_deficit_bounds:
+    kind: sampled
+    clauses: ["(i)", "(ii)"]
+    omits: "exact rational arithmetic with rigorous ln 2 enclosure, but only m = 2^w <= n = 2^r with w <= 5 and r <= w + 3, not 'all 2 <= m <= n'; the crossing bound is checked only below (> 2/5), not the upper bound 1/2 + 1/m of the final sentence; 'halving with each radiated qubit' is not asserted"
+  check_eviction_deficits:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "(ii): s(0) = ln 2 and the deficit sum (ln 2 - h_k) = 0 are computed for windows of 1 to 5 members; (iii): the identity Pinsker bound = (1/2) tanh^2(x_*/2) and the window threshold 2/tanh^2(x_*/2) are computed at four sample values of e^{x_*}, and the (Q) weights x = 2 pi|k| are bounded rigorously (e^{2 pi} > 500, 1/2 nat per member, two members exceed 1 nat); the 'not covered' regimes are not tested"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_eviction_deficits now evaluates s(0) = ln 2 and the zero deficit sum, and computes the general (1/2) tanh^2(x_*/2) bound and its window threshold at sample weights."

@@ -1,0 +1,19 @@
+functions:
+  check_partial_descent_map:
+    kind: exact
+    clauses: ["the coupling with record |00> + A|11> induces rho -> (rho + A^2 G0 rho G0)/(1 + A^2)"]
+    omits: "run at six values of A on all even matrix units; this is the identity because every matrix entry of the unnormalised map is a polynomial of degree at most 2 in A (an argument not written in the code)"
+  check_coherence_fraction:
+    kind: exact
+    clauses: ["fraction (1 - A^2)/(1 + A^2) of the coherence is left", "values 1, 7/25, 0, -7/25 at A = 0, 3/4, 1, 4/3"]
+    omits: "numerator 1 - A^2 and norm 1 + A^2 checked at six values of A (degree 2, so the identity); the four quoted values are exact; that 4/3 is the amplitude of the singularity paper's witness rotation is not tested"
+  check_complete_iff_maximally_paired:
+    kind: sampled
+    clauses: ["the descent is complete if and only if the record is maximally paired"]
+    omits: "factor evaluated at eight real A values and found zero only at A = +-1; the 'only if' over all A rests on the closed form (1 - A^2), and 'maximally paired' is read as A^2 = 1 without a separate entanglement computation"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Values and closed form match the statement exactly; only the iff is checked by sampled zeros."

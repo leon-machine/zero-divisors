@@ -1,0 +1,7 @@
+[
+ {
+  "code": "D110",
+  "block": "document",
+  "message": "AI judge not configured: entailment of tagged sentences by their claims was not checked"
+ }
+]

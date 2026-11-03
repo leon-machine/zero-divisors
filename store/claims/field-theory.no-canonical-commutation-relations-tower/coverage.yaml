@@ -1,0 +1,18 @@
+functions:
+  check_scalar_part_is_a_trace_on_every_floor:
+    kind: sampled
+    clauses: ["\"No floor contains a pair with [a, a*] = 1\""]
+    omits: "floors k = 0, 1, 2 only (Cl(1,3), Cl(2,4), Cl(3,5)), exhaustive over all blade pairs on each; the argument is the trace argument for any a, a* in the floor, not specific to a* being the star of a; higher floors not tested"
+  check_matrix_trace_kills_commutators:
+    kind: sampled
+    clauses: ["\"no bounded element of the CAR limit satisfies it\""]
+    omits: "only the finite-rung analogue: tr([X, Y]) = 0 on all pairs of matrix units of 1, 2 and 3 Jordan-Wigner modes (4416 pairs) and tr(v v* + v* v) = 2^N, tr([v, v*]) = 0 for N = 1, 2, 3; the bounded statement in the CAR limit (Wielandt-Wintner) is imported and not tested (the docstring says so)"
+  check_composite_pair_is_not_excluded:
+    kind: exact
+    clauses: ["\"Bosons made of fermions are not excluded by this\""]
+    omits: ""
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_matrix_trace_kills_commutators now runs the all-matrix-units loop at 1, 2 and 3 modes, as docstring (1) says."

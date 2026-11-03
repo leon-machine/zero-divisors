@@ -1,0 +1,18 @@
+functions:
+  check_normal_pair_couples_down_quarks_through_the_up_mass_matrix:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "one pair of exact unitary matrices (Cayley transforms) and one pair of mass spectra; the identity for all Takagi forms is proved in the text"
+  check_integrating_out_the_normal_pair:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "three commuting test values (J, a, b); the algebraic identity is proved in the text"
+  check_flavour_changing_entries_are_bounded_below:
+    kind: complete
+    clauses: ["(ii)"]
+  check_tree_level_mixing_exceeds_the_measured_mass_differences:
+    kind: sampled
+    clauses: ["(iii)", "(iv)"]
+    omits: "the excess at the worst corner of the input ranges is exact; the monotonicity of the split bound is checked in closed form at five sampled (a, b) and proved for all in the text"
+untouched_premises:
+  synthesis.imported-left-right-bidoublet-two-yukawa-couplings: "cited in the proof to identify the coupling structure with the bidoublet at kappa' = 0; the check computes the couplings from the stored formulas"

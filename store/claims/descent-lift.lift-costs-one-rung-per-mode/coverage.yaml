@@ -1,0 +1,28 @@
+functions:
+  check_record_count_and_lift_form:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "does not show that every lift has the form W|A> = |A> (x) r_A (a Stinespring-Kraus derivation); it shows ((G^kappa)_AA) has M M^T = 2^(nu-1) 1 (so invertible) for nu = 2, 3, 4 and that the explicit lift of (iii) has the form with every r_A even for nu = 2, 3"
+  check_even_sector_of_k_rungs:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "even-sector dimension 2^(k-1) counted for k = 1..6 and the least k with room for 2^(nu-1) records for nu = 2..5; the general k and nu are the obvious pattern, not proved by the check"
+  check_lift_with_nu_rungs:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "nu = 2 and 3 only (W even, W^dag W = 2^(nu-1), Tr_R W rho W^dag = 2^(nu-1) E(rho) on every even matrix unit); the explicit pair form W = 1 (x) |00> + G0 (x) |11> is matched exactly"
+  check_factorisation_and_coupling:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "only the pair (nu = 2): C = 1 - 2 P^R_11 N_0 equals the stated polynomial, is diagonal, even, an involution, C(|A> (x) phi) = W|A>, and phi is the Thouless state and a Witt vacuum; the general-nu factorisation with C = sum_kappa G^kappa (x) |r_kappa><r_kappa| is not tested (C is written down for the pair, not built from the sum)"
+  check_lift_needs_number_change:
+    kind: partial
+    clauses: ["(v)"]
+    omits: "only the two-mode pair with two rungs: ten sample number-conserving generators commute with total number and the charge sector with system part A and record number 0 contains only |00> (so r_00, r_11 cannot be orthogonal); the claim for an arbitrary even unitary, the so(2(nu + k)) statement (named, not enumerated, as the docstring says) and general nu are not tested. The pairing-on-system realisation 1 + X is not unitary and is checked only to induce 2E, as the docstring states"
+untouched_premises:
+  descent-lift.imported-fermionic-operations-are-even-reduced: "cited only in the standard-route derivation (proof-standard-route.tex); literature restatement with no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring states what is exact and what is not computed; the general claims (every lift has the form, arbitrary even unitaries, general nu) are covered only by the proof, and the check records that."

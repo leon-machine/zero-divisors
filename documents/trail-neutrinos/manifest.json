@@ -1,0 +1,39 @@
+{
+ "doc": "trail-neutrinos",
+ "version": 10,
+ "claims": [
+  "dark-matter.hyp-u-equal-rank-one-eigenvalues@3",
+  "mass.exact-join@7",
+  "neutrino.breaking-relation@3",
+  "neutrino.empty-twistor@5",
+  "neutrino.h-second-stage-hierarchical@1",
+  "neutrino.imported-ceiling-under-hypothesis-u-arrow@6",
+  "neutrino.imported-derived-content-singlets@7",
+  "neutrino.imported-indifference-faces-democratic-alignment-rank@6",
+  "neutrino.invariant-symmetric-matrices@2",
+  "neutrino.leptogenesis-suppressed-alignment-reheating-premise-new@7",
+  "neutrino.m-framework-realises-majorana-term-scale@1",
+  "neutrino.r-descent-reheats-below-lower-heavy@1",
+  "neutrino.rank-one-seesaw-ordering-sum-double@8",
+  "neutrino.real-breaking-assumption@1",
+  "neutrino.seesaw-what-gauge-invariance-proves-what@4",
+  "pred.leptonic-cp-trivial@2",
+  "pred.neutrino-mass-sum-floor@2",
+  "pred.no-neutrinoless-double-beta@2",
+  "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter@2"
+ ],
+ "recipe_hash": "992f641878a0",
+ "generated": "2026-11-02T16:30:51+00:00",
+ "spine": [
+  "neutrino.empty-twistor",
+  "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter",
+  "neutrino.seesaw-what-gauge-invariance-proves-what",
+  "neutrino.invariant-symmetric-matrices",
+  "neutrino.rank-one-seesaw-ordering-sum-double",
+  "neutrino.breaking-relation",
+  "pred.neutrino-mass-sum-floor",
+  "pred.no-neutrinoless-double-beta",
+  "neutrino.leptogenesis-suppressed-alignment-reheating-premise-new",
+  "pred.leptonic-cp-trivial"
+ ]
+}

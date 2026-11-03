@@ -1,0 +1,47 @@
+doc: t05-three-routes-regenerated
+title: 'Three Routes from the Localisation: The Metric-Level Sheaf, the Boundary No-Go,
+  and the Hopping Exclusion: A companion note to Transport Papers T5 (Steps 4a, 5
+  and 6b) and T4 (Section 8) (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- three-routes.imported-collar-data-coupling
+- three-routes.imported-boundary-gram-ladder
+- obj.three-routes.ladder-bundle-even-subbundle
+- three-routes.it-sheaf-risk-resolves-into-standing
+- three-routes.stalks-are-pointwise-metric-levels
+- singularity.finite-truncation-meet-big-fibres-equals
+- three-routes.join-disqualified-wrong-stalks
+- obj.three-routes.candidates-base-unipotents
+- three-routes.base-unipotents-their-action-candidates
+- three-routes.radical-gauge-closes-solve
+- three-routes.change-transversal-canonical-isomorphism-completions
+- three-routes.no-equivariant-value-boundary
+- three-routes.function-linear-maps-preserve-supports
+- three-routes.support-preserving-families-quantise-without-hopping
+- three-routes.class-relative-no-go
+show: spine-only
+paper: T05-three-routes
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_three_routes_note.tex
+  note: Recreate T05-three-routes from the store
+cite:
+- singularity.p-reduced-metric-level-reading-many
+prose: paper
+msc: Primary 15A66, 53C50; Secondary 46L60, 18F20.
+keywords: Clifford algebra; degenerate metric; sheaf; conditional expectation; superselection;
+  no-go theorem.

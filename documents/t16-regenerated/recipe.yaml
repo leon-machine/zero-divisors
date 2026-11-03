@@ -1,0 +1,58 @@
+doc: t16-regenerated
+title: 'Quantum Mechanics and General Relativity from One Relation: The Two Shadows
+  and the Laboratory (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- pred.no-objective-collapse
+- one-relation.imported-completion-ladder
+- one-relation.imported-pure-spinors-incidence-chart
+- one-relation.imported-single-mode-thermality-modular-period
+- one-relation.imported-flag-arrow-superselection
+- one-relation.imported-condensate-derived-content
+- one-relation.imported-indifference-instrument
+- one-relation.imported-square-roots-real-clifford-algebras
+- one-relation.imported-null-cone-determines-form-zeemans
+- one-relation.imported-null-cone-determines-form-zeemans-external
+- one-relation.imported-cartans-purity-theorem-thouless-form
+- one-relation.imported-witts-extension-theorem
+- one-relation.two-presentations
+- one-relation.two-capacities-three-consequences
+- one-relation.spacetime-manifold-vacuum-lines
+- one-relation.overlap-table-sorted
+- one-relation.third-constant-conversion-constant-between-charts
+- one-relation.vector-derivative-covariant-first-order-operator
+- one-relation.schr-odinger-slow-shadow
+- one-relation.form-law-forced-square
+- one-relation.odd-square-roots-chiral-phase
+- one-relation.one-datum-not-two-imaginary-unit
+- one-relation.arrow-frequency-are-one-bit-level
+- one-relation.dirac-current-conserved-density
+- one-relation.measure-indifference-borns-rule-located
+- one-relation.record-chain-votes-measurement-without-collapse
+- one-relation.character-experience-three-record-chain-theorems
+show: spine-only
+paper: T16
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T16_qm_gr_one_relation.tex
+  note: Recreate T16 from the store
+cite:
+- tower.witt-index-quantum-capacity
+prose: paper
+msc: Primary 81P05, 15A66; Secondary 81P15, 83C45, 81S05.
+keywords: Clifford algebra; canonical anticommutation relations; pure spinors; foundations
+  of quantum mechanics; Born rule; envariance; measurement problem; arrow of time.

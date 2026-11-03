@@ -1,0 +1,6 @@
+functions:
+  check_de_sitter_temperature:
+    kind: sampled
+    clauses: [whole]
+    omits: 'One CAR mode at five Boltzmann factors r: the gluing r n = 1 - n has the unique solution n = 1/(r+1), the marginal is the Gibbs state, it satisfies the KMS relations for the phase flow, and a diagonal state diag(1-m, m) satisfies them only at m = n (three trial m); kappa^2 = B^2 = <I,I> = H^2 in both signs of the ambient form at four H, giving beta H = 2 pi as the identity kappa = H. Not tested: that every mode has the same temperature with no condition on the joint state (a single mode only), the consequence that the modular-descent hypothesis (iii) holds, and the premises (P) and (R_Lambda) themselves (inputs).'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'One-mode gluing, KMS uniqueness among diagonal states and kappa^2 = <I,I> are reproduced; the multi-mode statement is not enumerated.'}

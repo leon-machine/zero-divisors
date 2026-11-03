@@ -1,0 +1,52 @@
+functions:
+  check_normalisation:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Q(F) = E - 4 s R + 24 s^2 for the round S^4, S^2 x S^2 and CP^2 at the single value s = 5/7, Q(D) = 24, k = 1/(64 pi G) and Lambda = 3/l^2 at three l^2; the Gauss-Bonnet coefficient l^2/(64 pi G) = 3/(64 pi G Lambda) is not asserted separately
+  check_gauss_bonnet_cross:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: Only confirms that the stored curvature tensors and volumes (as inputs) reproduce Ric = Lambda g and chi = 2, 4, 3 for the three instantons
+  check_pointwise_einstein_identity:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One generic Weyl tensor and three values of Lambda (including a negative one): F = W, Q(F) = |W|^2 (the volume terms cancel) and tr F = 0; the pointwise identity for an arbitrary Einstein metric is not run'
+  check_instanton_actions:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: Exact values I_MM = 0, 4/3, 3/4 and I_EH = -1, -2/3, -3/4 (in pi N^2) with I_MM = I_EH + chi/2 and I_MM >= 0 for the three listed manifolds only; the identity for every closed Einstein 4-manifold and the equality case (conformally flat iff zero) are not covered
+  check_conjugate_time_density:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: Exact secant of S(u) = u Q(R - D/u) for one non-Einstein curvature tensor at two values of u giving E - 24/(u1 u2), dS/du = Q(F) + 4 tr F/u, and F = W on an Einstein tensor; the divide-by-g'(u) rule for other promoted variables and the -3/Lambda^2 factor are not computed
+  check_clock_frozen_conformally_flat_and_kasner:
+    kind: partial
+    clauses:
+    - (iv)
+    omits: Weyl tensor of FLRW is zero for three parameter sets (Lorentzian), and the Kretschmann coefficient 64/27 for the exponents (2/3, 2/3, -1/3) from the stated formula; Einstein plus conformally flat implies constant curvature, the factor tau^-3 of the density and the tau^-2 divergence, and the identification of the density with k times the Kretschmann density are not computed
+  check_matter_flrw_density:
+    kind: exact
+    clauses:
+    - (v)
+    omits: The density E - 24/u^2 = (4/3)[Lambda(rho - 3p) - rho(rho + 3p)] for flat FLRW with a perfect fluid from the Riemann tensor, with Einstein's equations verified from the same tensor, on a 3x3x3 grid in (Lambda, rho, p); both sides have degree at most 2 in each variable, so the grid proves the identity; radiation and dust values and the zero at rho = Lambda included; the Lorentzian general formula and the O(G) reading are in the last function
+  check_matter_density_frame_independent:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (v)
+    omits: 'Three FLRW fluids: the fixed-frame density equals the unit-frame density plus the matter trace term t/(2u) because s - 12/u = -t; the matter contribution t/(2u) is entered by formula from the stated convention rather than derived from a matter Lagrangian, and hypothesis (Mat) is not tested'
+  check_lorentzian_decomposition_with_source:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: The decomposition E - (8/3) Lambda^2 = |W|^2 - 2|T_tf|^2 - (4/3) Lambda t + t^2/6 on one generic algebraic curvature tensor at three values of Lambda, and the first-order value -t/(2 Lambda); the identity is quadratic in the curvature and is not run on a basis of curvature tensors
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Tensor-level exact arithmetic confirms the instanton actions, the FLRW matter density and the Lorentzian decomposition; the general-manifold, other-promoted-variable and Kasner-scaling statements, and the (H) reading, are not computed.

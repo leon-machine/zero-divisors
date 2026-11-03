@@ -1,0 +1,18 @@
+functions:
+  check_generator_square_is_minus_lambda_over_three:
+    kind: sampled
+    clauses: ["the generator's square is -Lambda/3, opposite in sign to Lambda", "the complement is Cl(1,4)-signed for Lambda > 0, Cl(2,3)-signed for Lambda < 0, (1,3;1) at 0"]
+    omits: "Seven (t, s) samples covering Lambda > 0, < 0 and = 0, not a symbolic identity in (c, d); signature of I^perp only, the algebras are read from the signature."
+  check_omega_square_is_lambda_over_three:
+    kind: sampled
+    clauses: ["doubled for Lambda > 0", "complexified for Lambda < 0"]
+    omits: "omega^2 = Lambda/3 on seven samples, and the doubling (two central idempotents with 16-dimensional ideals) and the complex unit are checked on four samples with Lambda/3 a rational square; nothing is checked about the deformation being a continuous family."
+  check_lambda_zero_degenerate_algebra:
+    kind: sampled
+    clauses: ["the degenerate Cl(1,3;1) at Lambda = 0 with nilpotent generator I"]
+    omits: "Two null samples; the ideal closure test multiplies only six sample words, not the full algebra. That I is the zero divisor the transport is built to resolve, and that the family deforms continuously in Lambda, are not tested."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The sign of the generator's square and the three fibres (degenerate, doubled, complexified) are checked at samples of Lambda; the one-parameter family structure is not tested as a family."

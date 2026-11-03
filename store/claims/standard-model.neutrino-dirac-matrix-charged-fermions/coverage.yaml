@@ -1,0 +1,20 @@
+functions:
+  check_differences_without_120:
+    kind: sampled
+    clauses: ["M_d - M_e = 4 w_d f and M_u - M_nu = 4 w_u f"]
+    omits: "One complex-rational parameter set with two 10s; statement allows any number of 10s."
+  check_neutrino_matrix_fixed_under_ew:
+    kind: sampled
+    clauses: ["M_nu = M_u - m_t fhat", "M_nu and M_R fixed by the charged fermions"]
+    omits: "One EW-normalised data set and one alternative parameter set with the same charged matrices; the rotation and phase freedom of the charged leptons is not examined."
+  check_120_unfixes_neutrino_matrix:
+    kind: sampled
+    clauses: ["with a 120 the two differences gain (c_d - c_e) h and (c_u - c_nu) h", "M_nu is no longer fixed"]
+    omits: "Independence of the two coefficients from each other is shown only by moving c_nu alone; independence from w_u and w_d is not tested."
+untouched_premises:
+  standard-model.hyp-s-slot-statistics: "hypothesis with no computable content here; the check builds the Clebsch structure of the imported Fact directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks build the imported Clebsch structure on exact Gaussian-rational matrices and test each displayed relation and the non-uniqueness with a 120 on samples."

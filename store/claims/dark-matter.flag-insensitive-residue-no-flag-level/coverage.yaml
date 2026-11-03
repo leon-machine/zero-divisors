@@ -1,0 +1,20 @@
+functions:
+  check_witt_transitivity_on_hyperbolic_pairs:
+    kind: sampled
+    clauses: ["in every nondefinite representative the isometry group acts transitively on hyperbolic planes and on the null lines within them"]
+    omits: "21 constructed hyperbolic pairs (three in each of seven representatives) carried to the standard pair by at most four reflections; general transitivity is Witt's theorem"
+  check_paper_witnesses_13_and_22:
+    kind: sampled
+    clauses: ["the descent's flag is as uncaused in (1,3) as in (2,2)"]
+    omits: "explicit witnesses in (1,3) and (2,2) only, a rotation and an exchange of isotropic planes; the other representatives are covered only by the first function"
+  check_definite_residue_has_flag_but_no_plane:
+    kind: complete
+    clauses: ["the definite representatives of r = 4 contain no hyperbolic plane", "the descent's flag, a maximal isotropic of the complexified ambient, exists there"]
+    omits: "existence of the flag for every other even residue is the cited flag-bit theorem; the exclusion of r = 0 resting on the two-time import and the open fork are not computational"
+untouched_premises:
+  std-algebra.witt-extension: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable content is exhibited by constructive samples and explicit witnesses; the claim declares no premises"

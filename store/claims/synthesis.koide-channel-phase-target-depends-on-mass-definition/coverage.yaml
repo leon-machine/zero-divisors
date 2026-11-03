@@ -1,0 +1,20 @@
+functions:
+  check_first_order_factor_is_mu_free:
+    kind: sampled
+    clauses: ["(i) the coefficient of alpha in the ratio of two one-loop factors is (3/2)(ln m_i - ln m_j), mu-free, on three rational instances of the logarithms; the second-order coefficient is nonzero"]
+    omits: "the general first-order expansion is one line of algebra in the proof text"
+  check_common_scale_phase_band:
+    kind: complete
+    clauses: ["(ii) rbar in (210.58, 210.89) for alpha in [1/138, alpha(M_Z)]", "(ii) r(0.22254) < rbar_min and r(0.22258) > rbar_max, tight at 10^-5", "(ii) the band below pi/12"]
+  check_shift_dwarfs_the_two_ninths_gap:
+    kind: complete
+    clauses: ["(iii) pole window recertified", "(iii) shift > 3.1e-4 and > 1800 (2/9 - delta*)", "(iii) delta* < 2/9 < band"]
+  check_koide_defect_at_common_scale:
+    kind: complete
+    clauses: ["(iv) pole Q within 1e-5 of 2/3 at both ends and the centre of m_tau", "(iv) common-scale Q - 2/3 in (1.0e-3, 1.3e-3) at both ends of the kappa range"]
+    omits: "monotonicity of Q in m_tau and in kappa is argued in the proof text; the check evaluates the ends"
+  check_look_elsewhere_in_the_band:
+    kind: complete
+    clauses: ["(v) least denominator 319 in the band", "(v) least denominator 367 in the band over pi, so b <= 61 excluded on the orbit"]
+untouched_premises:
+  synthesis.imported-one-loop-qed-pole-mass-relation: "imported Fact: the relation is the hypothesis of (i); the check applies it as a first-order formula with the alpha bracket as literals"

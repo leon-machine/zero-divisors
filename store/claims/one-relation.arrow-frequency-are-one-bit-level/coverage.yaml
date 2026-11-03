@@ -1,0 +1,20 @@
+functions:
+  check_reversing_j_reverses_gamma0:
+    kind: sampled
+    clauses: ["with C fixed, J -> -J forces gamma_0 -> -gamma_0 since C(-J) = -(CJ)"]
+    omits: "Five J on both sheets (J a square root of -1 commuting with C); the identity itself is linear and immediate."
+  check_pi_rotation_flipping_j_flips_c:
+    kind: sampled
+    clauses: ["the rest rotation by pi about an axis in the spin plane flips J, fixes gamma_0, but flips C so is not a symmetry of the fixed law"]
+    omits: "Three axes of the spin plane (e1, e2 and (3 e1 + 4 e2)/5) at the single value J = e1 e2."
+  check_frame_and_unit_transform_together:
+    kind: sampled
+    clauses: ["hence, given the law, the frequency sign, particle against antiparticle and the direction of the frame's time are one bit and not two"]
+    omits: "Checks that R~(CJ)R = (R~CR)(R~JR) for two rotors and five J, and that a rotor fixing C and gamma_0 fixes J; the physical identification of the bit with the frequency sign and particle/antiparticle is the imported Fact under Hypothesis (S), not computed."
+untouched_premises:
+  one-relation.imported-flag-arrow-superselection: "Imported identification under Hypothesis (S) of the flag with the arrow; the statement says this paper only proves the two readings cannot come apart and does not source the bit, so there is no computable content."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The Clifford identities behind the one-bit statement are verified at rational samples; the identification with frequency sign and antiparticle is imported."

@@ -1,0 +1,20 @@
+functions:
+  check_source_expansion:
+    kind: sampled
+    clauses: ["(1) 2|B_Lambda|^2 = 2|b|^2 + (2 Lambda/3) Re(conj(b) Omega) + (Lambda^2/18) |Omega|^2"]
+    omits: "exact over Q(i) at 4 values of b, 3 of Omega and 4 of Lambda (identity in formal Lambda for each (b, Omega) pair as the docstring argues, degree 2); not a free-variable identity in b and Omega"
+  check_wirtinger_gradient:
+    kind: sampled
+    clauses: ["(1) the middle term is linear in b; its derivative in b at b = 0 is (2 Lambda/3) Omega, nonzero iff Lambda Omega != 0"]
+    omits: "L(b) + i L(ib) = 2 c conj(b) with c = (Lambda/3) Omega at 4 Lambda, 3 Omega, 4 b, and homogeneity lin(2b) = 2 lin(b); no sample has Lambda = 0 or Omega = 0, so the 'iff' is exercised only on the nonzero side"
+  check_phase_locking:
+    kind: sampled
+    clauses: ["(1) at fixed moduli the middle term is maximised in the phase of b exactly when arg b = arg Omega"]
+    omits: "one Omega = 3 + 4i and |b| = 5 at eight rational unit phases (maximum 25 = |b||Omega| attained only at u = Omega/5); the sign of Lambda (maximised versus minimised) is not addressed; clause (2), the effective-potential reading, has no computable content and is not checked"
+untouched_premises:
+  families.imported-face-valued-bracket-quantum-numbers: "cited only in the reading of clause (2) (the locked phase is pure gauge under the abelian factor); the checks cover the proved clause (1)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clause (1) is tested at sample b, Omega and Lambda; clause (2) is a reading with no computable content, as the docstring says."

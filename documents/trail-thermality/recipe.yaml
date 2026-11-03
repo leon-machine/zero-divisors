@@ -1,0 +1,46 @@
+doc: trail-thermality
+title: Temperature and Hawking radiation
+author: Leon Butler
+level: lay
+spine:
+- singularity.computed
+- singularity.euclidean-section-period
+- singularity.plane-rate
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+- singularity.rate-discharge-hypothesis-iii
+- hawking.i-state
+- hawking.i-state-continuum
+- hawking.bose-einstein-occupancy-quantified-window-corrections
+- hawking.greybody-inheritance-under-interface-premise
+- synthesis.n-plus-null-ground-state
+- synthesis.imported-microlocal-hadamard-condition
+- synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
+- synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
+- synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
+- synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
+- synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
+- synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car
+- synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
+- synthesis.hadamard-scaling-limit-premise
+- synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
+- synthesis.hadamard-deposit-premise
+- synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite
+- synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard
+- synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard
+- synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands
+section_titles:
+  thermality: Temperature and Hawking radiation
+  quantum-fields: Where the state comes from
+  dark-energy: What the Hadamard condition leaves free
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

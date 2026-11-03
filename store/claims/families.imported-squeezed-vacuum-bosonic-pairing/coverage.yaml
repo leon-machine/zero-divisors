@@ -1,0 +1,24 @@
+functions:
+  check_bogoliubov_relations:
+    kind: sampled
+    clauses: ["the squeezed vacuum of the pairing xi = U Sigma U^T is the vacuum of reference modes c_j with a = U (C c - S c^dagger) (canonical commutation relations)"]
+    omits: "n = 2 with one Gaussian-rational U and two rational hyperbolic pairs (5/4, 3/4), (13/12, 5/12); checked on the coefficient matrices (U (C^2 - S^2) U^dagger = 1, [a_p, a_q] = 0), not at operator level"
+  check_two_point_functions:
+    kind: sampled
+    clauses: ["N_pq = <a_p^dag a_q> = conj(U sinh^2 Sigma U^dagger)_pq", "M_pq = <a_p a_q> = -(U sinh Sigma cosh Sigma U^T)_pq"]
+    omits: "n = 2, one U, two squeezing values; computed in the truncated Fock model for all four index pairs; that these are the only nonvanishing two-point functions (and zero mean) is not tested separately, the sign of M is a convention"
+  check_wick_four_point:
+    kind: sampled
+    clauses: ["Wick's theorem for <a_p^dag a_q^dag a_r a_s> and <a_r a_s a_p^dag a_q^dag> with D_rp = delta_rp + N_pr"]
+    omits: "all 16 index choices but only for the n = 2 sample state; the Gaussian (quasi-free) property in general is not tested"
+  check_takagi_functional_calculus:
+    kind: sampled
+    clauses: ["U f(Sigma) U^T = g(xi xi^dagger) xi with g(s) = f(sqrt s)/sqrt s"]
+    omits: "n = 2, one U, a generic and a degenerate Sigma, and only the two odd polynomials f(s) = s^3 and s^5 + 2s; existence of the Takagi factorisation is imported and general f is not covered"
+untouched_premises:
+  families.imported-squeezed-vacuum-bosonic-pairing-external: "external literature record (Horn-Johnson, Berezin, Weedbrook); its content is recomputed at sample points rather than cited, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Four exact computations at one two-mode sample; the statement is general in n and xi, so each function is sampled."

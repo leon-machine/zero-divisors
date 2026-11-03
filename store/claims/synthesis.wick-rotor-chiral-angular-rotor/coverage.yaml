@@ -1,0 +1,18 @@
+functions:
+  check_generator_identities:
+    kind: exact
+    clauses: ["(i) I_4 sigma = e_2 e_3, I_6 sigma = E e_2 e_3 is a 4-blade commuting with sigma and E with square -1", "(i) R^W_theta = cos(theta/2) + sin(theta/2) E e_2 e_3 is a real even element with R^W_(2 pi) = -1 and R^W_(4 pi) = +1"]
+    omits: "exact blade algebra in Cl(2,4), including I_6 commuting with all 32 even blades; the closed form cos + sin X as exp(theta X/2) is taken from X^2 = -1, not from the series; the group law is checked at 16 pairs of four rational half-angle points; the module-level statement about the conformal spinors is not tested"
+  check_chiral_splitting:
+    kind: sampled
+    clauses: ["(ii) eps_pm are orthogonal idempotents summing to 1, with eps_pm I_6 = +- eps_pm I_4", "(ii) R^W_theta = eps_+ R_theta + eps_- R_-theta"]
+    omits: "the identity is checked at four rational half-angle points (it is linear in (cos, sin), so two independent points would fix it, which the check does not say); the action on L_0 and L_infinity as the E = +-1 eigenspaces of the conformal spinors, and the sense fixed by chirality, are read off the algebra and not computed on a spinor module"
+  check_not_a_rotor_on_vectors:
+    kind: sampled
+    clauses: ["(iii) R^W reverse(R^W) = cos theta + sin theta E e_2 e_3 != 1", "(iii) conjugation by R^W takes e_2 to a vector plus a grade-3 part off pi Z", "(iii) E e_2 e_3 is a versor at theta = pi; R_theta is a rotor"]
+    omits: "four rational angles off pi Z, one test vector (e_2) for the failure to preserve vectors; the statement 'not an isometry of the ambient vectors for theta not in pi Z' and the consequences for clause (3) of the cited Proposition and the identification with the angular member are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact blade algebra in Cl(2,4); the angle-dependent claims are checked at four rational half-angle points"

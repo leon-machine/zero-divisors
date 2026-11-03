@@ -1,0 +1,37 @@
+functions:
+  check_einstein_static_and_sphere_curvature_and_vector_density:
+    kind: exact
+    clauses:
+    - "(i) Ric = (0, 2, 2, 2), R = 6 on the unit Einstein static field; Ric = 3, R = 12 on the unit four-sphere"
+    - "(ii) the Feynman-gauge vector density tr(E + R/6) = -2 scalar units, -4 with two ghosts; the Weyl fermion weight 1 from the Lichnerowicz term"
+    omits: "the two constant-curvature fields only; the weights in general are Fact (a), (b)"
+  check_quartet_cancels_level_by_level_on_the_einstein_static_field:
+    kind: sampled
+    clauses:
+    - "(i) scalar harmonic multiplicity (l+1)^2 and the signed quartet count 0 for l >= 1, -1 at l = 0"
+    - "(i) coexact multiplicity 2l(l+2) equals the helicity +-1 module count"
+    - "(i) the S^3 spectra reproduce the heat-kernel densities of Delta_0 and Delta_1"
+    omits: "levels l < 40; the general level is the binomial identity in the proof; the quartet for alpha != 1 is argued"
+  check_gauge_fixed_operator_has_longitudinal_eigenvalue_over_alpha:
+    kind: sampled
+    clauses:
+    - "(ii) in momentum space P_alpha k = Q(k) k / alpha and P_alpha t = Q(k) t for t orthogonal to k"
+    omits: "one momentum and three alpha; on a curved field the statement is the Hodge commutation in the proof"
+  check_four_sphere_spectra_reproduce_heat_kernel_densities:
+    kind: exact
+    clauses:
+    - "(ii) the S^4 scalar and coexact one-form spectra reproduce the volume and tr(E + R/6) terms exactly"
+    omits: "the multiplicity formula is checked against the harmonic-polynomial count for l < 30; the coexact spectrum is cited"
+  check_vector_weight_is_alpha_minus_five:
+    kind: sampled
+    clauses:
+    - "(ii) weight alpha - 5 and volume weight 1 + alpha^2 for alpha = 0, 1/2, 1, 2, 3"
+    - "(iii) the gauge-invariant product gives -4 and 2"
+    omits: "five values of alpha on the unit four-sphere; general alpha and fields are the scaling argument of the proof"
+  check_series_content_induced_coefficient:
+    kind: sampled
+    clauses:
+    - "(iv) B = 12(alpha - 1) + 8(1 - 6 xi_R) under the covariant cut-off and 8(1 - 6 xi_R) under the energy cut-off"
+    omits: "a grid of alpha and xi_R values; the reading that the coefficient is fixed only with regulator and gauge is argued"
+untouched_premises:
+  synthesis.imported-brst-kugo-ojima-strocchi-and-gribov: "imported quartet mechanism cited in the reading for the zero norm of the quartet under (K4); no check calls it"

@@ -1,0 +1,21 @@
+functions:
+  check_conservation:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "a single rational pair (one n_i, n_j, masses, velocities, kernel gradient, F_ij); pair-level momentum and energy cancellation only, not the summed SPH equations or the fixed-smoothing-length proviso"
+  check_parallel_normals_rejection:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "eight rational unit normals times three sample vectors"
+  check_orthogonal_normals_and_idempotence:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "one orthogonal pair for eigenvalues 1, 1/2, 1/2; idempotence iff same line checked over all 64 ordered pairs of eight rational unit vectors, not all unit vectors"
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.product-decomposition: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is tested on rational sample data, as the docstring says; no claim beyond the samples."

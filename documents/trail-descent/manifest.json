@@ -1,0 +1,38 @@
+{
+ "doc": "trail-descent",
+ "version": 10,
+ "claims": [
+  "angle.imported-theorems-deliver-their-hypotheses@1",
+  "descent-lift.classical-shared-bit-reduced-view-pure@4",
+  "descent-lift.imported-descent-modes-univalence-supplied-class@8",
+  "descent-lift.imported-fermionic-operations-are-even-reduced@1",
+  "descent-lift.imported-stinespring-kraus-choi@1",
+  "descent-lift.kraus-form-descent-even-states@6",
+  "descent-lift.lift-costs-one-rung-per-mode@4",
+  "descent-lift.parity-alone-forces-second-rung@3",
+  "singularity.descended-form-state-independent@4",
+  "singularity.descent-parity-average@4",
+  "singularity.descent-what-it-erases@5",
+  "singularity.modular-descent@5",
+  "singularity.modular-structure-completed-pair@5",
+  "singularity.pseudo-inverse-identities-hyperbolic-atom@4",
+  "singularity.schmidt-forcing-proved-outright@4",
+  "std-algebra.bivector-exponential@1",
+  "std-algebra.cl11-matrix@1",
+  "std-algebra.witt-basis-car@1"
+ ],
+ "recipe_hash": "55754f6d794d",
+ "generated": "2026-11-02T16:29:08+00:00",
+ "spine": [
+  "singularity.descent-what-it-erases",
+  "singularity.descent-parity-average",
+  "singularity.descended-form-state-independent",
+  "singularity.modular-structure-completed-pair",
+  "singularity.schmidt-forcing-proved-outright",
+  "singularity.modular-descent",
+  "descent-lift.kraus-form-descent-even-states",
+  "descent-lift.lift-costs-one-rung-per-mode",
+  "descent-lift.parity-alone-forces-second-rung",
+  "descent-lift.classical-shared-bit-reduced-view-pure"
+ ]
+}

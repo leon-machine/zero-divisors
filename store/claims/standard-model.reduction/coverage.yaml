@@ -1,0 +1,26 @@
+functions:
+  check_six_numbers_zero_on_singlets_area_on_doublets:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "Tests the grip-mass formula (one null momentum per slot component, m^2 = 2 det of the sum) at sample spinors and one unitary slot mixing, not the mass read off the module's moment map; state-dependence is shown by a single differing pair of values."
+  check_frozen_point_not_pair_invariant:
+    kind: exact
+    clauses: ["(1) (supporting: the frozen point is not pair invariant)"]
+    omits: "This sub-claim is not stated in the formal text; the function computes the six pair-vector weights under the u(3) Cartan."
+  check_inverse_split_on_every_multiplet:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "Massive/massless support read from the grip-mass model on sample spinors over the twelve (j, k) sectors; 'massive' on a doublet is generic, not for every state."
+  check_bracket_charged_and_no_one_generation_operator:
+    kind: partial
+    clauses: ["(3)"]
+    omits: "Checks charge T_3 + Y = 1, the det(A) transformation and antisymmetry of the single 120-direction operator w_0 w_1 w_2; that this is the only operator of the bracket's weight and that the bracket is defined on tuples and not on the module are not computed."
+  check_six_free_numbers:
+    kind: exact
+    clauses: ["(4) six independent invariant operators on the sixteen"]
+    omits: "That the scalar sector must supply the six numbers, and the Higgs-doublet identification, are interpretation."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clauses (1) to (3) are tested on the grip-mass model at samples; (4) exactly; the interpretive conclusion is untested as the docstring implies."

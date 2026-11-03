@@ -1,0 +1,26 @@
+functions:
+  check_matter_parity_in_stabiliser:
+    kind: complete
+    clauses: ["(i) m in G, m fixes the vev and the whole (10,1,3), m = exp(3 pi i (B-L)) is -1 on the 16", "(i) SU(4) centre elements fixing the vev: a = 0, 2"]
+  check_matter_parity_not_in_identity_component:
+    kind: sampled
+    clauses: ["(i) SU(2)_R part of exp(2 pi i t Y) scalar iff t integer", "(i) central elements of H_0 have c_4 = c_R", "(i) m has c_4 - c_R = 1/2", "(i) 2 pi and 4 pi rotors of Spin(3)"]
+    omits: "t sampled on a grid of denominator 12 in [-4, 4] and at integers in [-12, 12]; the general statement (t integer forced, then c_4 = c_R = (-1)^t) is the proof's algebra; pi_1(G/H) = pi_0(H) is cited"
+  check_controls:
+    kind: complete
+    clauses: ["(i) i 1_4 does not fix the vev", "(i) the colour centre fixes the vev but not the multiplet", "(i) (-1_4, 1, -1_R) in H_0"]
+  check_r_window_below_restoration:
+    kind: complete
+    clauses: ["(ii) v_R exact, (R) cap between 0.0175 and 0.0176 v_R"]
+    omits: "restoration at temperatures of order v_R and the defect-free electroweak and strong transitions are cited, not computed"
+  check_string_tension_and_cmb_fraction:
+    kind: complete
+    clauses: ["(iii) G mu central, lower and upper corners pinned", "(iii) kappa below 1e13 for both models", "(iii) f_10 below 4.3e-17 with the mirror"]
+    omits: "the tension formula, scaling and the Planck string bounds are cited from memory; clause (iv) is argued"
+  check_generator_is_spin_rotor_minus_one:
+    kind: complete
+    clauses: ["(i) the 2 pi rotor of Spin(6) is -1, fixes vectors and 3-vectors, negates spinors"]
+    omits: "the identification of the 10 with self-dual 3-vectors and the Spin(10) image are cited"
+untouched_premises:
+  synthesis.finite-range-descent-deposit-cannot-seed-cmb: "clause (iv), deposited monopoles as a finite-range deposit, is argued in the proof and not computed"
+  synthesis.imported-macro-monopole-flux-limit: "clause (iv), the density cap on deposited monopoles, is argued in the proof and not computed"

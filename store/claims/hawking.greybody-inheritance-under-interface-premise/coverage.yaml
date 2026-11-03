@@ -1,0 +1,21 @@
+functions:
+  check_fermionic_occupancy_is_upper_sign:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "fermionic half of joint (ii) only, on a two-mode window with one rational rotation and two sets of Boltzmann factors; the window case of Theorem hawking.i-state-continuum, not the continuum theorem"
+  check_bosonic_occupancy_is_lower_sign:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "bosonic half of joint (ii): x = 1/2, 1/3, m = 1, 2, K = 20, 30, checks the tail bound toward n_-(m kappa) and n_- - n_+ = 2 n_+ n_-; the (Q) convention is a modelling input and is not tested"
+  check_hawking_temperature_coefficient:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "two masses M = 1/2, 4; checks kappa = f'(2M)/2 = 1/(4M) with f' = 2M/r^2 entered by hand and kappa/2 = 1/(8M); the factor pi in T_H = kappa/(2 pi) is not represented, so the coefficient is checked up to pi"
+untouched_premises:
+  hawking.imported-exterior-exactly-general-relativity: "joint (i), the inheritance of the transmission coefficients Gamma_{slm} from classical GR on the exterior, is a literature import; no computable content"
+  hawking.premise-i-interface-identification: "Premise (I) is the assembly's one non-theorem joint, a hypothesis with no computable content; the flux formula under (I) is a definition (joint (iii))"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks cover only joint (ii), the horizon occupancies and the temperature coefficient, as the docstring says; the flux formula, joints (i) and (iii), and Premise (I) are not tested"

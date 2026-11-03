@@ -1,0 +1,22 @@
+functions:
+  check_kms_states_are_gibbs_lines:
+    kind: sampled
+    clauses: ["\"the Gibbs form of the descended state is state-independent\""]
+    omits: "one mode (2 x 2), Boltzmann symbols q in {9/16, 16/9, 1/3, 5}; the KMS solution line diag(1, q) only"
+  check_descended_state_kms_at_free_beta:
+    kind: sampled
+    clauses: ["\"the descended state is KMS for the phase flow at some inverse temperature beta, the hypotheses leave beta free, its sign included\""]
+    omits: "two pure entangled two-qubit states c|00> + s|11> at (4/5, 3/5) and (3/5, 4/5) as a model of the ascended pair; cyclic and separating is represented by Schmidt rank 2; the general statement for the ascended algebra is not tested"
+  check_geometric_normalisation:
+    kind: sampled
+    clauses: ["\"the physical temperature T_H = kappa/2pi = 1/8 pi M\"", "\"kappa = 1/4M\"", "\"the Euclidean period 8 pi M\"", "\"the reduced density matrix is diag(1, e^{-omega/T_H})/Z\""]
+    omits: "three masses M = 1, 1/2, 5/3 and one frequency omega = 3/7; kappa = f'(2M)/2 is computed from the Schwarzschild f = 1 - 2M/r, not 'from the gauge field' as the statement says; the factor pi cannot be represented, so periods and T_H are checked as coefficients of pi and 1/pi; positivity, premises (P), (R), and the shape-operator reading (S(sigma) = -2 sigma) are not computed (the docstring says so)"
+untouched_premises:
+  hawking.imported-modular-descent-premises-geometric-normalisation-external: "provenance restatement of the T5 results cited in the statement; no finite content"
+  singularity.matching-steps-4b-4c-join-equation: "needed only for the shape-operator reading of the boost plane, which the docstring says is not computed"
+  singularity.p-univalence: "hypothesis (P) supplying positivity; assumed, no computable content (the docstring says it is not computed)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite two-level model and the Schwarzschild normalisation arithmetic are tested at chosen samples; the premises (P), (R), the gauge-field derivation of kappa, and the shape operator are untested and mostly flagged in the docstring"

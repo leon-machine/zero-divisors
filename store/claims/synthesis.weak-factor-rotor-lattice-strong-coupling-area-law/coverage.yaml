@@ -1,0 +1,38 @@
+functions:
+  check_bivectors_close_to_su2_and_product_matches_ga:
+    kind: complete
+    clauses:
+    - (i) the bivectors of Cl(3,0) close to su(2) with a negative-definite trace form; the rotor product agrees with the Clifford product on all basis pairs
+    omits: 'none'
+  check_finite_groups_reproduce_haar_moments:
+    kind: partial
+    clauses:
+    - (ii) the Haar moment formula, against the Hurwitz units through degree 5 and the quaternion group through degree 3
+    omits: 'moments of degree above 5; the formula itself is the standard sphere integral of the proof'
+  check_gluing_rule_and_gauge_variant_averages_vanish:
+    kind: complete
+    clauses:
+    - (iii) the gluing rule and the vanishing of gauge-variant link averages on all basis pairs (complete by bilinearity); the U(1) gluing coefficient
+    omits: 'none'
+  check_closed_loops_gauge_invariant:
+    kind: sampled
+    clauses:
+    - (iv) gauge invariance of closed loops under rational site rotors; an open line is not invariant
+    omits: 'one rational gauge configuration on a 2x2 patch; the identity is proved in general'
+  check_strong_coupling_area_law_leading_coefficients:
+    kind: sampled
+    clauses:
+    - (v) the leading coefficient (1/4)^A for the 1x1, 2x1 and 2x2 loops, the 1x1 also without gauge fixing
+    omits: 'larger rectangles; the general case is the tree-gauge induction of the proof'
+  check_compact_u1_has_the_same_strong_coupling_area_law:
+    kind: sampled
+    clauses:
+    - (vi) compact U(1) gives (1/2)^A for the 1x1 and 2x1 loops
+    omits: 'larger rectangles; same induction'
+  check_scalar_part_of_exponential_is_cosine_series:
+    kind: sampled
+    clauses:
+    - (vii) the scalar part of exp(B) is the cosine series of the bivector norm, to sixth order
+    omits: 'two rational bivectors; the identity is proved in general'
+untouched_premises:
+  synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement: "cited in the proof for the strong-coupling expansion, reflection positivity, beta = 4/g^2 and compact U(1) deconfinement; the check recomputes the Haar moments, gluing and leading coefficients itself"

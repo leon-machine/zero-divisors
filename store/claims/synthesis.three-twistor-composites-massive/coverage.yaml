@@ -1,0 +1,10 @@
+functions:
+  check_three_twistor_composites_massive:
+    kind: partial
+    clauses: ["(1) det Omega_lambda = lambda^2; B != 0 for some i < l when Lambda != 0 and r >= 3", "(2) m^2 >= 2 sum |B|^2 > 0 at Lambda > 0, r >= 3; r = 2 massless occurs", "(3) zeta_a I^ab = -(B^23 Z^1 + B^31 Z^2 + B^12 Z^3); det I = lambda^2; the vector is the radical", "(4) flat case: W = S_omega + C pi_0 gives all B = 0 and m^2 = 0"]
+    omits: "exact Gaussian rationals on pseudo-random triples (N = 3, 4, 5, three trials each, lambda in {1/6, 1, -2/3, 0}), so (1), (2) and the contraction identity are sampled, not proved; det I = lambda^2 is checked at four lambda values (enough for a degree-2 polynomial, not stated) on the matrix of I rather than on Omega_lambda; m^2 uses the join formula 2 sum|B|^2 + 2 lambda C_N coded in the check, so m^2 >= 2 sum|B|^2 is sampled at lambda = 1/6 and 3; 'spans the radical' is tested only as B(u, Z_j) = 0 for the three constituents, not that the radical has dimension one; (4) 'only if' (every B = 0 forces all pi proportional) is not tested, the 'if' direction is tested on three constructed families, and 'no r = 4 composite has every B = 0 for any Lambda' is tested only for random r = 4 at Lambda != 0, not at Lambda = 0 nor for special r = 4 spans"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks test what the statement says at random exact samples; the converse of (4) and the dimension of the radical are not computed"

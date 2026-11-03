@@ -1,0 +1,20 @@
+functions:
+  check_odd_volume_element_central_with_square:
+    kind: sampled
+    clauses: ["omega is central for n odd", "omega^2 = (-1)^(n(n-1)/2 + q)"]
+    omits: "All 42 signatures with n odd and n <= 11, not every odd n; the identity is a closed-form sign rule checked by direct blade multiplication."
+  check_n5_square_is_minus_one_to_q:
+    kind: complete
+    clauses: ["for n = 5, omega^2 = (-1)^q"]
+    omits: ""
+  check_even_control_not_central:
+    kind: sampled
+    clauses: ["whole"]
+    omits: "A control, not a clause of the statement: for even n <= 10 (35 signatures) omega anticommutes with every generator, so the odd-n hypothesis is not idle."
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The central and sign claims are verified for every odd n up to 11 and for all six n = 5 signatures; the statement for larger odd n is not enumerated."

@@ -1,0 +1,26 @@
+functions:
+  check_common_weight:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Commutant of the principal sl2 in Mat_n is the scalars for n = 2..6 (against 2 for the partition (n-1,1)); quasi-free number-preserving generators commuting with the second-quantised triple form the line of N_tot for n = 2, 3, 4 and the full Fock commutant is larger (5, 8) for n = 2, 3; the form of the symbol of a rotation-invariant state, the residue 1/(4 s(x)) and the use of the Killing weight x = 2 pi omega/kappa are not tested
+  check_weight_invisible_on_gauge_invariant_algebra:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'n = 2, 3, 4 with six (n, q) cases: N_tot central in A_0, dim A_0 = sum C(n,k)^2, rho_q commutes with every E_ij (so tracial on A_0) and <N_tot> = n q; maximally mixed marginals only at q = 1/2; the interpretive conclusion that the inference from a trivial restriction to zero weight is invalid is not computed'
+  check_particle_hole:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: The invariant nondegenerate bilinear form is constructed for n = 2..6 with the right symmetry type; the Bogoliubov map C is built and tested (fixes the second-quantised rotations, N_tot -> n - N_tot, rho_q o C = rho_{1-q}, C-invariance only at q = 1/2, C^2 as parity or identity) for n = 2 and n = 3 in orthonormal real bases only; that eps is a signed permutation in the standard basis for general n, the equivalence with the registered residue 1/(4 ln 2) and the no-quasi-freeness direction are not computed
+  check_q_weights_are_a_rotation:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'n = 3, 5, 7 (integer j) only: the spectrum of h/2 is {-j..j} and h does not commute with e; half-integer j (even n) is not tested, and exclusion by (i) is not recomputed'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Jordan-Wigner computations at small n support each clause; general-n statements and the closing paragraph on strict inequalities are not computed.

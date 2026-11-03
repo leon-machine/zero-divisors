@@ -1,0 +1,18 @@
+functions:
+  check_parity_section_constant_along_ladder_family:
+    kind: sampled
+    clauses: ["the algebra is defined by sigma, which does not see the sign of the ladder (sigma constant along the normalisation family)"]
+    omits: "one-mode fibre Cl(1,1) at four values of the normalisation lambda; the sheaf axioms (locality, gluing) are inherited from bundle sections and, as the docstring says, are not computed"
+  check_even_projection_constant_rank_subalgebra:
+    kind: sampled
+    clauses: ["the fibrewise projection (id + alpha_x)/2 is an idempotent bundle map", "A+ is a locally trivial subbundle (constant rank), a subalgebra"]
+    omits: "idempotence and rank 2 at four sample lambda; smoothness of the bundle map and local triviality are inferred from constant rank, not computed; stalk of germs is not tested"
+  check_sign_of_ladder_invisible:
+    kind: sampled
+    clauses: ["(k, k*) -> (-k, -k*) leaves sigma and the projection unchanged, while k itself is odd"]
+    omits: "four sample lambda in the one-mode fibre"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "only the fibrewise algebra is tested, as the docstring says; the w_1(L) hypothesis, the twisted variant and the sheaf axioms are not checked"

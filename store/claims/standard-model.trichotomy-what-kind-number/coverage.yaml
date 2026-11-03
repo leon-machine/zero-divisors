@@ -1,0 +1,28 @@
+functions:
+  check_rescaling_kinematics:
+    kind: partial
+    clauses: ["(1) under Lambda -> s^2 Lambda at fixed M_P, I -> sI, H -> sH and N -> N/s with the conformal class unchanged"]
+    omits: "Sampled at Lambda in {3, 1/2, -6/5} and s in {2, 3/5} plus one dilation rotor (s = 4); the unchanged discrete invariants (dimension twelve, Z_6, dimension four, content, 3/8) are not computed here, as the docstring says, nor the observation-level reading."
+  check_n_varies_across_lambda:
+    kind: partial
+    clauses: ["(4) N is constant on each solution space and varies across Lambda"]
+    omits: "Only N^2 = 3/Lambda varying across Lambda (exact derivative identity and three values); constancy on each solution space S_Lambda, the Henneaux-Teitelboim promotion and clause (2) are imported and not computed."
+  check_units_statement_numbers:
+    kind: exact
+    clauses: ["about 4.8e122 qubits with base-two logarithm about 407", "R = log2 N^2 about 405", "N about 1.0e61"]
+    omits: "Rigorous bounds on pi and ln 2; C is taken over the interval [4.75, 4.85] e122 and the consistency of the three figures is checked, not C derived from physical inputs. The mod-8 clock sentence is not computed."
+untouched_premises:
+  standard-model.four-dimensions-forces-converse: "supports the 'dimension four' invariant, computed elsewhere from data that do not contain Lambda (docstring)"
+  standard-model.gauge-algebra-minimal-massive-composite: "supports the 'algebra of dimension twelve' invariant, not recomputed here"
+  standard-model.global-form-quotient-determined: "supports the Z_6 invariant, not recomputed here"
+  standard-model.hypercharge-global-form-pair-counting-consistency: "supports the hypercharge invariant, not recomputed here"
+  standard-model.imported-norm-frozen-point-not-field: "imported clause (2), not computed (docstring)"
+  standard-model.pair-count-dimension: "supports the pair-structure invariant, not recomputed here"
+  standard-model.quarks-leptons-two-level-fermion-content: "supports the content invariant, not recomputed here"
+  standard-model.weak-angle-over-derived-generation: "supports the ratio 3/8 invariant, not recomputed here"
+  dark-energy.imported-henneaux-teitelboim-promotion: "imported clause (4) alternative, no computable content here (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring limits the checks to the computable clauses; the scaling, variation and unit numbers are tested and everything conditional or imported is declared untested."

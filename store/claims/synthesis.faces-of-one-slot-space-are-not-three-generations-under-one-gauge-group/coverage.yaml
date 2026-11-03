@@ -1,0 +1,17 @@
+functions:
+  check_joint_stabiliser_keeps_the_common_line:
+    kind: complete
+    clauses: ["(1)"]
+    omits: "the joint stabiliser in gl(3, Q) of each of the three pairs of face planes is solved in full by exact elimination (dimension 5) and every basis element fixes the common line; complex coefficients follow because the conditions are rational and linear; the general Lie-algebra statement is the intersection argument in the proof"
+  check_weak_weights_of_the_other_faces:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "T3 multisets of the three faces' even halves under the weak U(2) of face 01 and their symmetry; that weight multisets of su(2) representations are symmetric is cited in the proof, not computed"
+  check_face_halves_span_twenty_eight:
+    kind: complete
+    clauses: ["(2)", "(3)"]
+    omits: "all 64 exterior states of Lambda(C^3 + C^3), spans by exact rank (56, 28), the sharing pattern, and the maximum 40 over all eight per-face choices of half"
+  check_separate_pair_modes_span_forty_six:
+    kind: complete
+    clauses: ["(2)", "(3)"]
+    omits: "the reading with separate pair modes per face (three slots shared, nine pair modes): the three faces' 16-state halves, their span 46 by exact rank, the vacuum as the only common state, and the maximum 47 over all eight per-face choices of half"

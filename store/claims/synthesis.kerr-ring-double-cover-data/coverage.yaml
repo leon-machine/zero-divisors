@@ -1,0 +1,14 @@
+functions:
+  check_double_cover_identities:
+    kind: sampled
+    clauses: ["(1)", "(2)", "(3)"]
+    omits: "z^2 = w, H = M Re(1/z), the vanishing of H on the disc (z imaginary), invariance of (rho^2, Z) and z -> -z, H -> -H, scale -> -scale under (r, c) -> (-r, -c) at 200 deterministic rational points plus a worked example; dw = 2a d rho - 2 I a dZ at the ring and its rank two by exact symmetric differences (w is quadratic, so exact) for three a; H = M cos(arg z)/|z| is the same identity in polar form; downstairs H = M |w|^{-1/2} cos(arg(w)/2) and the statement that k is the time direction plus a unit tangent at the ring are not tested"
+  check_windings:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "exact crossing counts on a 160-vertex rational polygon: the loop has winding 1, the scale -M z^-3 has winding -3, z^k has winding k for k = -3..3, the double-cover loop maps to winding 2 under w = z^2, and scale(-z) = -scale(z); the downstairs phase -3 pi (half of -6 pi) and holonomy e^{-3 pi I} = -1 follow from these and are not computed along an image path; the identification of the deck action with the holonomy is by that sign"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "identities checked at many rational points; winding numbers exact"

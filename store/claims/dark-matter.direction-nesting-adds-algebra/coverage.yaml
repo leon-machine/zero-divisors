@@ -1,0 +1,22 @@
+functions:
+  check_residue_five:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "that the central idempotents cut out the two simple components carrying the two irreducible modules is the cited type-residue theorem; here they are shown central, orthogonal and summing to 1"
+  check_residue_three:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "one module is read from the absence of a splitting of omega, not from a module classification"
+  check_residue_seven:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "behaviour of the added direction under P -> -P is not checked for this residue"
+  check_residue_one:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "behaviour of the added direction under P -> -P is not checked for this residue"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the four statements are identities in small Clifford algebras and each is verified exactly"

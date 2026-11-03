@@ -1,0 +1,18 @@
+functions:
+  check_single_mode_partial_trace_equals_pinching:
+    kind: sampled
+    clauses: ["(i) for a global state whose Schmidt basis is the number basis, the mode marginal is diagonal and a fixed point of E"]
+    omits: "three pure two-qubit states a|00> + b|11> and one equal mixture of them (one mode against one partner qubit), plus the control c|+0> + s|-1>; not every such global state or larger partners"
+  check_many_modes_partial_trace_keeps_coherence_pinching_kills_it:
+    kind: sampled
+    clauses: ["(ii) on N >= 2 modes tr_L retains the off-diagonal joint-number matrix elements while E_N annihilates them", "the two agree on every single-mode marginal"]
+    omits: "one scrambled instance (two thermofield pairs plus a controlled-Z) at two parameter sets, N = 2 modes only; the trace is over the second pair, a surrogate for tr_L on the radiation; the 'different maps in general' is shown by this single instance"
+  check_marginal_of_pinching_is_pinching_of_marginal:
+    kind: sampled
+    clauses: ["(ii) the two maps agree on every single-mode marginal: marginal_k(E_N x) = E(marginal_k x)"]
+    omits: "exhaustive over all matrix units for N = 2 and N = 3 (hence linear in x), not general N"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact rational checks at small N and sample states; the 'scoped once' bookkeeping about Steps 4d and 6b is not computable"

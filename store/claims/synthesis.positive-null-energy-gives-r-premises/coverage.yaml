@@ -1,0 +1,41 @@
+functions:
+  check_half_generator_strip_is_kms_at_two_pi:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: The analytic strip of the continued two-point function (no zero of z q u - v for 0 < theta < 2 pi, boundary signs, weight 1/2 forced by the CAR, the factor e^{i pi} carrying W- to W+, controls for u < 0) at four (u, v, q) triples and twelve values of tan(theta/2); uniqueness of the beta-KMS state, evenness and the identification with the I-state of the cited theorem are not tested
+  check_past_half_is_kms_for_the_future_boost:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: Same strip analysis on the past half at three (u, v, q') triples with the orientation control; the Mellin relation m(-w) = (1 + e^{2 pi w})^-1 is evaluated from a symbol function defined in the check (m_plus), so it restates the formula rather than deriving it
+  check_mellin_symbol_is_the_i_state_at_two_pi:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: The symbol m = (i/2)(cot(pi s) - i) is taken as given (not derived as the Mellin transform of the kernel) and shown equal to (1 + e^{2 pi h})^-1 and not to the beta = pi or 4 pi values at five values of e^{pi omega}; the two-point KMS identity is checked at the same points
+  check_horizon_boosts_dilate_affine_generators:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'Only the setup quantities of (iii): non-affinity 1/(4M) on Schwarzschild at three masses and +H, -H on de Sitter at three values (with tabulated cases), the affine parameter V = e^{kappa v}/kappa as a truncated series, and the local boost rotor dilating a null generator at unit rate for three rapidities; the KMS and Fermi-Dirac conclusions, the exclusion of collapse holes and the whole-Kruskal-generator remark are not tested'
+  check_boost_and_dilation_conjugate_null_translations:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'Second sentence of (v): in Cl(2,4) the null translation, the boost and the dilation satisfy the ax+b relation (B T_alpha B~ = T_{r^2 alpha}) at r = 3/2, 2/5 and alpha = 5/7, 3, and agree on the generator but not off it; the Borchers form of the cited fact is not re-derived'
+  check_point_spectrum_carries_no_dilated_translation:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'Windows of four weights (one distinct set, one with a repeated weight) and c in {1, -2/3, 1/4}: no nonzero P with [K, P] = i c P; the strongly continuous group, the countable mode space, the array of (Q) and the closing statement about occupation numbers on the continuum (Mellin width) are not tested; the result is the imported point-spectrum theorem restated at samples'
+  check_spectrum_condition_gives_positive_null_generators:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'First sentence of (v): <l, p> >= 0 for seven rational future null l and 28 rational p in the closed forward cone, with equality only on the ray of l, and a spacelike direction taking both signs; the passage from the spectrum condition on a representation to positive generators is not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The checks cover the analytic mechanism for the period 2 pi, the surface gravities, the ax+b relation and the positivity inequality at sample data; no function tests (i) (the null vacuum symbol and its uniqueness) or the uniqueness and evenness parts of (ii) and (iii).

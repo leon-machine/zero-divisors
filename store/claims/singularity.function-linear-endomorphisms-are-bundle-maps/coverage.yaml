@@ -1,0 +1,18 @@
+functions:
+  check_function_linear_maps_are_fibrewise:
+    kind: partial
+    clauses: ["D is a bundle map {a_x}", "for a line bundle, multiplication by a function"]
+    omits: "finite-base analogue only (three points, trivial bundles of rank 1 and 2, two functions, mixed basis): the common kernel has dimension 3 r^2 and is block diagonal; the smooth-section statement over E (C-infinity(E)-linearity) is analytic and not tested"
+  check_value_at_x_depends_only_on_s_at_x:
+    kind: partial
+    clauses: ["(Ds)(x) depends only on s(x)"]
+    omits: "finite-base analogue (s(x) = 0 implies (Ds)(x) = 0 at three points, ranks 1, 2); the bump-function argument on smooth sections is not tested"
+  check_controls_are_not_function_linear:
+    kind: sampled
+    clauses: ["whole"]
+    omits: "supporting control, not a clause: a difference operator and d/dx fail function-linearity (Leibniz defect f' s) on sample data"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring states the lemma is analytic and only its finite core is checked."

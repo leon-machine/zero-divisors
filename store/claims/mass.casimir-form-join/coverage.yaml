@@ -1,0 +1,22 @@
+functions:
+  check_grip_norm_is_difference_of_casimirs:
+    kind: sampled
+    clauses: ["(1) Q(P) = Q(I) (C_2(Lambda^2 CS) - C_2(I-perp))"]
+    omits: "two non-null I (the frozen point at Lambda/6 = 1/2 and one generic vector off the n_inf, n_0 plane) and three composites of two or three spinors with Gaussian-rational components"
+  check_grip_norm_casimirs_negative_lambda_and_one_spinor:
+    kind: sampled
+    clauses: ["(1) Q(P) = Q(I) (C_2(Lambda^2 CS) - C_2(I-perp))"]
+    omits: "one frozen point of negative Lambda (Lambda/6 = -1/3) with one-spinor and two-spinor composites"
+  check_conformal_casimir_is_trace_form:
+    kind: sampled
+    clauses: ["(2) C_2(Lambda^2 CS) = tr(h^2) - (tr h)^2/4"]
+    omits: "four sample composites of one, two and three constituents (plus one hand value 12); 'any number of constituents' is not exhausted"
+  check_de_sitter_casimir_closed_form:
+    kind: sampled
+    clauses: ["(3) C_2(I_Lambda-perp) = (tr h)^2/4 + C - 6|B_Lambda|^2/Lambda for two spinors"]
+    omits: "one Lambda (Lambda/6 = 1/2) and two composites; only the grading element normalisation tr E^2 = 1 is checked of the normalisation claim, not that C_2(I-perp) acts as -m^2/H^2 in the scalar-module convention of the cited Fact; the closing remark that Q(P) and the de Sitter mass coincide only where the conformal Casimir vanishes is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each numbered clause is an exact identity over Q(i) at a handful of frozen points and composites; the scalar-module normalisation is not tested."

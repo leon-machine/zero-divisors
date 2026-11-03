@@ -1,0 +1,17 @@
+functions:
+  check_complex_forms:
+    kind: sampled
+    clauses:
+    - '"Cl(V, Q) (x) C = Cl_n(C)"'
+    - '"Cl_n(C) = M_(2^(n/2))(C) for n even"'
+    - '"M + M for n odd"'
+    omits: n <= 4, explicit generator matrices; the decomposition of the odd case into two blocks is not
+      displayed
+  check_odd_dimension_split:
+    kind: sampled
+    clauses:
+    - '"omega is central"'
+    - '"a -> aP+ is an isomorphism"'
+    - '"a (x) (x + iy) -> a(x + y omega) is an isomorphism"'
+    omits: every nondegenerate signature with n = 1, 3, 5; multiplicativity on one or two sampled pairs
+      of even elements

@@ -1,0 +1,309 @@
+% T2 of the Transport Papers series: short applied note.
+% Correction (2026-09-10, mechanical pass, per Leon): rule 23 misidentified T5 as the printed-version exception. T1 is the exception at Version 3.0; every other paper, T5 included, reads Version 1.0. \date corrected accordingly (was 1.1).
+% v1.1 (2026-09-10, derivation session, Fable 5.1 subagent, per rule 20,
+%   series-review repair pass against series_review_2026-09-09.md).
+%   Review 2.6: subtitle changed to "The Minimal Nondegenerate Completion of
+%   a Degenerate Clifford Algebra, and Where PGA's Missing Division Goes";
+%   abstract no longer says PGA's missing inverses "exist in CGA": it now
+%   says what Rem 2.4 and Rem 3.3 say (no extension gives a radical element
+%   an inverse; CGA supplies a partner with rho phi + phi rho = 2, division
+%   total at the level of ideals). Abstract 235 words (was 209).
+%   Rem 2.4 (rem:scope): T1 Sec 4.6 no longer called "the corank-one
+%   transport case"; it is the nondegenerate base, one hyperbolic plane.
+%   Rule 18: Sec 4 (sec:position) opens "This paper is T2 of the series.",
+%   siblings as "T1 \cite{ButlerT1}", "T4 \cite{ButlerT4}", "the capstone
+%   T17 \cite{ButlerT17}"; new \bibitem{ButlerT17}. ButlerT1/T4 titles checked.
+%   Rule 10 form: \newtheorem{fact} display name -> "Fact (imported)"; the
+%   "Imported: " prefix dropped from the brackets of Facts 2.1 and 2.2.
+%   Environment types and numbering unchanged.
+%   Sec 5: "from-scratch basis-blade implementation" -> the shared library's
+%   basis-blade product (the script imports GA.py); same fix in the
+%   verify_T02.py docstring.
+%   \date bumped to Version 1.1. No em dashes.
+%   Script: verify_T02.py 20/20 PASS, re-run; docstring wording only.
+%   Compile: pdflatex x2, 8 pages, 0 errors, 0 undefined refs, 0 multiply
+%   defined, 1 overfull (pre-existing, 5.3pt), no float overflow.
+% 2026-09-09 addendum (interactive session with Leon, Opus 5). Two changes
+%   per Leon: (1) the printed version is now 1.0 for every paper T0 to T17,
+%   T5 alone at 3.0 (progress-doc rule 23); the development numbering is
+%   retired from the title page and kept in this header. (2) Every reference
+%   to the programme monograph is removed (rule 24), re-pointed to the series
+%   where a sibling paper carries the result and otherwise restated to stand
+%   alone. No mathematics, no labels and no numbering changed, so verify_T02.py
+%   stands unchanged at 20/20 and was not re-run.
+%   Here: the delta sentence now reads "What is new here is the full rigor".
+% v1.2 (2026-09-09, derivation session, Fable 5.1 subagent, per rule 20,
+% review-repair pass against T02_review_v1.md, same session). B1: Rem 3.3's
+% "every equation obstructed by annihilation becomes solvable in the
+% completion" (false: e_0 x = 1 has no solution in CGA either, per Rem 2.4)
+% replaced by the ideal-level statement, 1 generated through rho phi + phi rho
+% = 2 and not through an inverse. S1: Prop 2.5's closing sentence "Completion
+% replaces each nilpotent radical direction by a hyperbolic plane" (inside the
+% statement, unproved there, "replaces" wrong) restated as "each radical basis
+% vector spans a hyperbolic plane with a partner vector of the completion",
+% and one line added to the proof's last paragraph (null the partner by
+% phi_i -> phi_i - (1/2) Q(phi_i, phi_i) rho_i). N1: the v1.1 block's "21
+% PASS" was wrong; verify_T02.py: 20/20 PASS, unchanged by this pass (no
+% check added or removed; the docstring's "upstairs" reworded to "in the
+% completion"). N2: \date updated to Version 1.2, September 2026. N4:
+% abstract's repeated "unique minimal nondegenerate completion" sentence
+% trimmed; abstract 209 words raw, 208 stripped. N5 (hand-typed Gram literals
+% in completion_gram_checks) and N6 (pre-existing 5.3pt overfull box at the
+% displayed claim) left. Compile: pdflatex x2, 8 pages, 0 errors, 0
+% undefined, 0 multiply-defined, 1 overfull (pre-existing), no float
+% overflow. Numbering frozen: aux diff empty. Knock-on: none for any
+% sibling; T17's audit parses this block's 20/20.
+% v1.1 (2026-09-08, prose pass, Fable 5.1 subagent, per project rule 22: mannered
+% prose replaced by literal statement, Leon's ruling to replace the recurring
+% vocabulary too). Body only; 22 sentences changed. Compile: pdflatex twice,
+% 8 pages, 0 errors, 0 undefined references, 0 multiply-defined labels;
+% numbering unchanged (aux diff empty). verify_T02.py: 21 PASS before and
+% after, ALL CHECKS PASSED (one check label reworded "upstairs" to "in the
+% completion" to match the paper). Glossary items applied: upstairs -> in the
+% completion (3); price -> cost (1); status ledger -> status table (1);
+% workhorses -> plain noun (1); "not X but Y" doublings removed (2, abstract
+% and intro); "exactly"/"no more" tags removed (3). Non-glossary choices:
+% "face" (of a result) -> "instance"/"form"/"presentation" (5); "headline
+% corollary/case" -> "principal" (2); "two ends of one forced construction/
+% completion" -> "the second is the unique minimal completion of the first" /
+% "a degenerate algebra and its unique minimal completion" (2); "survives
+% degeneracy" (Fact title) -> "persists under degeneracy"; "kills the product"
+% -> "makes the product zero"; "only ever accumulate" -> "accumulate and are
+% never contracted away"; "Completion converts infinitesimals into dimensions"
+% -> "Completion replaces each nilpotent radical direction by a hyperbolic
+% plane"; "deep versions live in" -> "general versions are proved in";
+% "exhibited sharply" -> "exhibited"; "demands r planes, no more, and the
+% demand has exactly one minimal answer" -> "requires exactly r planes, and
+% the minimal completion is unique". Left: the \title line (preamble, "Live in
+% CGA") and the Authorship paragraph (standard disclaimer, verbatim).
+% Version 1.0: the minimal nondegenerate completion theorem for degenerate
+% Clifford algebras (ZD Thm 12.3 at full rigor: existence by completing the
+% square, minimality by the radical pairing, signature forced by Witt
+% splitting proved inline, uniqueness by Witt extension), the PGA -> CGA
+% corollary, the translator dictionary, and the relation to the series'
+% transport rules. verify_T02.py accompanies.
+% 2026-08-25 review pass: radical ideal corrected to nilpotent (J^{r+1} = 0,
+% square-zero iff r = 1), minimality clause aligned with what is proved,
+% injectivity argued inline, partner anticommutator = 2 fixed, Fact
+% (imported) discipline (rule 11), Position section (rule 15).
+% House rules: no em dashes; short abstract; standard series disclaimer.
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{fact}[theorem]{Fact (imported)}
+
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rad}{\mathrm{rad}}
+\newcommand{\nO}{n_0}
+\newcommand{\nInf}{n_\infty}
+
+\title{\bfseries Projective Completes to Conformal\\[4pt]
+  \large\itshape The Minimal Nondegenerate Completion of a Degenerate Clifford Algebra, and Where PGA's Missing Division Goes}
+\author{Leon Butler\\ \normalsize\href{mailto:lbutler.math@gmail.com}{\texttt{lbutler.math@gmail.com}}\\ \normalsize ORCID: \href{https://orcid.org/0009-0006-4449-5617}{0009-0006-4449-5617}}
+\date{Version 1.0, September 2026 \textperiodcentered{} Transport Papers, T2}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\normalsize
+Projective geometric algebra $\Cl(3,0,1)$ and conformal geometric algebra $\Cl(4,1)$ are the two standard algebras of applied geometric computing, usually presented as independent modelling choices. This note proves that the second is the unique minimal nondegenerate completion of the first. For any real Clifford algebra $\Cl(p,q,r)$ of a degenerate form with nondegenerate part of signature $(p,q)$ and radical of dimension $r$, the minimal nondegenerate Clifford completion exists, has signature exactly $(p{+}r, q{+}r)$, and is unique up to an isometry fixing the original space pointwise: existence by adjoining the dual of the radical with the hyperbolic pairing, minimality because each radical direction must pair nontrivially into any completion, the signature forced by Witt splitting of the complement, and uniqueness by the Witt extension theorem. In particular $\Cl(3,0,1)$ completes minimally and uniquely to $\Cl(4,1)$. The completion converts the radical's nilpotent ideal into the unit ideal. No extension gives a radical element an inverse, since its square stays zero; what CGA supplies is a partner $\varphi$ for each radical direction $\rho$ with $\rho\varphi + \varphi\rho = 2$, so the division PGA lacks becomes total at the level of ideals, through the pairing and not through inverses. The embedding carries PGA's translators to CGA's translators verbatim. Every result is proved in full; the note situates the theorem in the series' transport-rule taxonomy and delimits what minimality promises. All computational identities are verified in exact rational arithmetic in an accompanying script.
+\end{abstract}
+
+\medskip
+\noindent\textbf{MSC 2020.} Primary 15A66; Secondary 51N25, 68U05, 15A63.\\
+\textbf{Keywords.} projective geometric algebra; conformal geometric algebra; degenerate Clifford algebra; Witt completion; minimal completion.
+
+\newpage
+\textbf{Authorship and disclosure. }The founding idea of the series is the author's: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The direction of investigation and the critical review of the results are likewise the author's. The mathematical development and the drafting of the text were carried out in extended collaboration with Claude Fable 5 (Anthropic), an AI system.
+
+\newpage
+\section{Introduction}\label{sec:intro}
+
+Two algebras dominate applied geometric algebra. Projective (plane-based) geometric algebra, $\mathrm{PGA} = \Cl(3,0,1)$, models Euclidean rigid motions with a degenerate metric whose null direction $e_0$ encodes the plane at infinity \cite{Gunn2017, Selig2005}. Conformal geometric algebra, $\mathrm{CGA} = \Cl(4,1)$, embeds Euclidean space on a null quadric and adds inversions and dilations to the versor group \cite{HLR2001, DFM2007}. The two are normally introduced as alternative modelling decisions with different trade-offs. This note proves a sharper statement: CGA is the \emph{unique minimal nondegenerate completion} of PGA. The relationship is a theorem, an instance of the general minimal-completion theorem for degenerate Clifford algebras, which this note states and proves in full (Theorem \ref{thm:main}), with the PGA case as its principal corollary (Corollary \ref{cor:pga}).
+
+The theorem belongs to a series. The root paper \cite{ButlerT1} proved the transport principle, that the failure of division at null vectors of $\Cl(p,q)$ is repaired minimally and uniquely by one hyperbolic plane, $\Cl(p,q) \to \Cl(p{+}1,q{+}1)$, and classified all zero-divisor obstructions and their transport rules; the sheaf paper \cite{ButlerT4} handled metrics that degenerate along a locus, where the radical generates a canonical square-zero ideal (the corank-one case), and proved that any nondegenerate completion converts that ideal into the unit ideal. The present note is the degenerate-algebra instance of the same programme: a radical of dimension $r$ requires exactly $r$ hyperbolic planes, and the minimal completion is unique. What is new here is the full rigor: the minimality argument is completed, the signature is forced by a Witt-splitting argument, and uniqueness is proved by the Witt extension theorem, none of which the applied literature states in this generality.
+
+\section{The minimal completion theorem}\label{sec:theorem}
+
+\subsection{Setup}
+
+Let $(W, B)$ be a real quadratic space of dimension $m$ with radical $R := \rad(B) = \{\rho : B(\rho, \cdot) = 0\}$ of dimension $r \geq 1$, and nondegenerate induced form of signature $(p,q)$ on $W/R$, so $m = p + q + r$; write $\Cl(p,q,r) := \Cl(W,B)$. The proofs import exactly two results, stated here with their provenance; everything else is proved in this note.
+
+\begin{fact}[The blade basis persists under degeneracy]\label{fact:blades}
+Let $B$ be any symmetric bilinear form on a real space $W$ of dimension $m$, and let $e_1, \dots, e_m$ be any basis of $W$. Then the $2^m$ blades $e_I = e_{i_1} \cdots e_{i_k}$, $I = \{i_1 < \dots < i_k\}$, form a linear basis of $\Cl(W, B)$; in particular $\dim \Cl(W,B) = 2^m$ whether or not $B$ is degenerate. \emph{Provenance:} \cite[Lem.~2.6]{ButlerT4}; classical, \cite{Chevalley1997}.
+\end{fact}
+
+\begin{fact}[The Witt extension theorem]\label{fact:witt}
+Over a field of characteristic not two, let $(\widetilde W_1, Q_1)$ and $(\widetilde W_2, Q_2)$ be isometric nondegenerate quadratic spaces and let $\sigma : S_1 \to S_2$ be an isometry between subspaces $S_i \subseteq \widetilde W_i$, the $S_i$ arbitrary and possibly degenerate. Then $\sigma$ extends to an isometry $\widetilde W_1 \to \widetilde W_2$. \emph{Provenance:} \cite[Ch.~I, Thm.~4.7]{Lam2005}.
+\end{fact}
+
+A \emph{completion} of $(W,B)$ is a quadratic space $(\widetilde W, Q)$ with $W \subseteq \widetilde W$ and $Q|_W = B$ and $Q$ nondegenerate; it is \emph{minimal} if no completion has smaller dimension. Every completion induces a unital algebra embedding $\Cl(W,B) \hookrightarrow \Cl(\widetilde W, Q)$: the inclusion of generators satisfies the Clifford relation, so the universal property gives the algebra map, and the map is injective because a basis of $W$ extends to a basis of $\widetilde W$, whereupon Fact \ref{fact:blades} sends the blades of $\Cl(W,B)$ to blades of $\Cl(\widetilde W, Q)$ in the extended basis, which are linearly independent.
+
+\begin{theorem}[Minimal nondegenerate completion]\label{thm:main}
+Let $(W,B)$ be as in the Setup: radical of dimension $r \geq 1$, nondegenerate part of signature $(p,q)$, $m = \dim W = p + q + r$. Then $(W,B)$ admits a completion, and:
+\begin{enumerate}
+\item every completion satisfies $\dim \widetilde W \geq m + r$;
+\item completions of dimension exactly $m + r$ exist, and every such has signature $(p{+}r,\, q{+}r)$;
+\item any two minimal completions are isometric by an isometry fixing $W$ pointwise.
+\end{enumerate}
+Consequently $\Cl(p,q,r)$ embeds in $\Cl(p{+}r, q{+}r)$, minimally so among the embeddings induced by completions (no completion of dimension below $m + r$ exists), and the minimal ambient algebra is unique up to an isomorphism fixing the image of $\Cl(p,q,r)$.
+\end{theorem}
+
+\begin{proof}
+\emph{(1) The radical pairing.} Let $(\widetilde W, Q)$ be any completion. For $\rho \in R$ the functional $Q(\rho, \cdot)$ vanishes on all of $W$ (it equals $B(\rho, \cdot)$ there), hence descends to a functional on $\widetilde W / W$. This defines a linear map
+\[
+\lambda : R \longrightarrow (\widetilde W / W)^*, \qquad \lambda(\rho) := Q(\rho, \cdot) \bmod W .
+\]
+If $\lambda(\rho) = 0$ then $Q(\rho, \cdot)$ vanishes on $W$ and on representatives of $\widetilde W / W$, hence on $\widetilde W$, so $\rho = 0$ by nondegeneracy: $\lambda$ is injective, and $\dim(\widetilde W / W) \geq r$.
+
+\emph{(2) Existence at the bound, and the forced signature.} Take $\widetilde W := W \oplus R^*$ and define $Q$ by: $Q|_W = B$; $Q(\rho, \varphi) = \varphi(\rho)$ for $\rho \in R$, $\varphi \in R^*$; $Q(\varphi, \varphi') = 0$ on $R^*$; and $Q(V_1, R^*) = 0$ for a fixed complement $V_1$ of $R$ in $W$. Nondegeneracy: if $v_1 + \rho + \varphi$ ($v_1 \in V_1$, $\rho \in R$, $\varphi \in R^*$) is $Q$-orthogonal to everything, then pairing against $R^*$ gives $\rho = 0$, against $R$ gives $\varphi = 0$, and against $V_1$ gives $v_1 = 0$ since $B|_{V_1}$ is nondegenerate (it is a complement of the radical). For the signature, choose a basis $\rho_1, \dots, \rho_r$ of $R$ with dual basis $\varphi_1, \dots, \varphi_r$: each $\operatorname{span}\{\rho_i, \varphi_i\}$ is a hyperbolic plane, the planes are mutually orthogonal and orthogonal to $V_1$, so $Q \cong B|_{V_1} \perp H^{\perp r}$ has signature $(p{+}r, q{+}r)$.
+
+Now let $(\widetilde W, Q)$ be \emph{any} completion of dimension $m + r$. Then $V_1^{\perp}$ (orthocomplement in $\widetilde W$) is nondegenerate of dimension $(m{+}r) - (p{+}q) = 2r$, being the orthocomplement of a nondegenerate subspace, and it contains $R$ (radical vectors are $B$-orthogonal to $V_1$), which is totally isotropic of dimension $r$: half the dimension. We claim:
+\begin{quote}
+\emph{a nondegenerate quadratic space $(X, Q_X)$ of dimension $2s$ containing a totally isotropic subspace $U$ of dimension $s$ is isometric to $H^{\perp s}$.}
+\end{quote}
+The claim with $s = r$ gives $Q|_{V_1^\perp} \cong H^{\perp r}$ of signature $(r,r)$, and the total is $(p{+}r, q{+}r)$.
+
+Proof of the claim, by induction on $s$, the case $s = 0$ being empty. Pick $u \in U$ nonzero; by nondegeneracy there is $y$ with $Q_X(u, y) = 1$, and $y' := y - \tfrac12 Q_X(y,y)\, u$ is null with $Q_X(u, y') = 1$ still, so $H_1 := \operatorname{span}\{u, y'\}$ is a hyperbolic plane and $X = H_1 \perp X_1$ with $X_1 := H_1^{\perp}$ nondegenerate of dimension $2s - 2$. For $u' \in U$ set $u'' := u' - Q_X(u', y')\, u$: then $u''$ pairs to zero with $u$ (both terms do, $U$ being isotropic) and with $y'$ (the correction cancels), so $u'' \in X_1$. The corrected vectors span a totally isotropic subspace of $X_1$, and the correction map $u' \mapsto u''$ is linear with kernel exactly $\R u$, so that subspace has dimension $s - 1$. Induction finishes the claim.
+
+\emph{(3) Uniqueness.} Let $(\widetilde W_1, Q_1)$ and $(\widetilde W_2, Q_2)$ be minimal completions. By (2) they are isometric abstractly; more precisely, the identity $W \to W$ is an isometry between the subspaces $W \subseteq \widetilde W_1$ and $W \subseteq \widetilde W_2$ of two isometric nondegenerate spaces, and by Fact \ref{fact:witt} it extends to an isometry $\widetilde W_1 \to \widetilde W_2$. Functoriality of $\Cl$ turns this isometry into an algebra isomorphism fixing the embedded copy of $\Cl(p,q,r)$.
+\end{proof}
+
+\begin{remark}[What minimality promises, and what it does not]\label{rem:scope}
+The theorem is a statement about \emph{vector-level} completions: nondegenerate quadratic spaces extending $(W,B)$. It does not assert that $\Cl(p{+}r,q{+}r)$ is minimal among all associative algebras receiving $\Cl(p,q,r)$; that stronger, representation-independent statement is the subject of the sharpenings of \cite[\S4.6]{ButlerT1}, proved there for a nondegenerate base, where the completion adjoins a single hyperbolic plane, by conformal Gram methods. It also does not promise that individual degenerate \emph{elements} acquire inverses in the completion: they cannot, since a square-zero element is invertible in no unital extension \cite[Lem.~2.1]{ButlerT1}. What the completion delivers is stated ideal-theoretically in Proposition \ref{prop:unitideal}.
+\end{remark}
+
+\begin{proposition}[The nilpotent ideal becomes the unit ideal]\label{prop:unitideal}
+Fix a basis $\rho_1, \dots, \rho_r$ of $R$. In $\Cl(p,q,r)$ the radical generates the two-sided ideal $J = \sum_i \Cl \cdot \rho_i$, with
+\[
+\dim J = 2^m - 2^{m-r}, \qquad J^{\,r+1} = 0, \qquad J^{\,r} \neq 0 ;
+\]
+in particular $J^2 = 0$ precisely when $r = 1$, the corank-one case established at sheaf level in \cite[Thm.~3.1]{ButlerT4}. In any completion, the image of the radical generates the \emph{unit} ideal of the ambient Clifford algebra, and each radical basis vector spans a hyperbolic plane with a partner vector of the completion.
+\end{proposition}
+
+\begin{proof}
+\emph{The mechanics of radical letters.} Work in the blade basis (Fact \ref{fact:blades}) adapted to a decomposition $W = V_1 \oplus R$: each blade is $x_T\, \rho_S$ with $x_T$ a blade in a basis of $V_1$ and $\rho_S := \rho_{s_1} \cdots \rho_{s_j}$, $S = \{s_1 < \dots < s_j\}$. A radical letter $\rho$ satisfies $B(\rho, z) = 0$ for every vector $z$, so $\rho z = -z\rho$ with no scalar term: in any product of blades, radical letters reorder by pure anticommutation and contract with nothing, while a repeated radical letter makes the product zero ($\rho^2 = 0$). Hence
+\[
+(x_T\, \rho_S)(x_{T'}\, \rho_{S'}) \;=\;
+\begin{cases}
+0 & \text{if } S \cap S' \neq \emptyset, \\
+\pm\, (x_T\, x_{T'})\; \rho_{S \cup S'} & \text{if } S \cap S' = \emptyset ,
+\end{cases}
+\]
+where $x_T\, x_{T'}$ expands over blades of $V_1$ alone: radical letters accumulate and are never contracted away.
+
+\emph{The ideal, and its dimension.} $\mathcal{S} := \operatorname{span}\{x_T \rho_S : S \neq \emptyset\}$ is a two-sided ideal by the display, and it equals $J$: every $x_T \rho_S$ with $s_1 \in S$ lies in $\Cl \cdot \rho_{s_1} \cdot \Cl$, and conversely every product $a \rho_i b$ expands into blades each retaining the letter $\rho_i$. Counting blades with $S \neq \emptyset$ gives $\dim J = 2^m - 2^{m-r}$.
+
+\emph{Nilpotency, and its exact index.} By the display, a product of $j$ elements of $J$ lies in the span of blades carrying at least $j$ radical letters; only $r$ radical letters exist, so $J^{\,r+1} = 0$. In the other direction, $\rho_1 \cdots \rho_r$ is a product of $r$ elements of $J$ and is a basis blade, hence nonzero: $J^{\,r} \neq 0$. For $r \geq 2$ the nonzero blade $\rho_1 \rho_2 \in J^2$ shows the ideal is not square-zero.
+
+\emph{The unit ideal in the completion.} Let $(\widetilde W, Q)$ be any completion and $\rho_i$ a radical basis vector. By nondegeneracy there is $\varphi_i \in \widetilde W$ with $Q(\rho_i, \varphi_i) = 1$, so the Clifford relation gives $\rho_i \varphi_i + \varphi_i \rho_i = 2$, and $1 = \tfrac12(\rho_i \varphi_i + \varphi_i \rho_i)$ lies in the two-sided ideal generated by $\rho_i$ (both summands carry the factor $\rho_i$). Replacing $\varphi_i$ by $\varphi_i - \tfrac12 Q(\varphi_i, \varphi_i)\, \rho_i$ leaves $Q(\rho_i, \varphi_i) = 1$ (since $Q(\rho_i, \rho_i) = 0$) and makes $\varphi_i$ null, so $\operatorname{span}\{\rho_i, \varphi_i\}$ is a hyperbolic plane. This is the finite-dimensional instance of the resolution mechanism of \cite[Prop.~3.4]{ButlerT4}.
+\end{proof}
+
+\section{PGA completes to CGA, exactly}\label{sec:pga}
+
+\begin{corollary}[The principal case]\label{cor:pga}
+$\mathrm{PGA} = \Cl(3,0,1)$ has minimal nondegenerate completion $\Cl(4,1) = \mathrm{CGA}$, uniquely: the engineering community's two standard algebras are a degenerate algebra and its unique minimal completion. Likewise in the plane, $\Cl(2,0,1)$ completes minimally to $\Cl(3,1)$; and in general the $n$-dimensional Euclidean PGA $\Cl(n,0,1)$ completes minimally to the $n$-dimensional CGA $\Cl(n{+}1,1)$.
+\end{corollary}
+
+\begin{proof}
+Theorem \ref{thm:main} with $(p,q,r) = (n,0,1)$.
+\end{proof}
+
+\begin{example}[The dictionary, and the translators]\label{ex:dictionary}
+Write $e_0$ for PGA's degenerate generator and $e_1, e_2, e_3$ for the Euclidean ones. The completion adjoins one dual direction; in CGA conventions, take the null pair $\nInf, \nO$ with $\nInf^2 = \nO^2 = 0$ and $\nInf \cdot \nO = -1$, and embed
+\[
+e_0 \longmapsto \nInf, \qquad e_i \longmapsto e_i .
+\]
+This is an isometric embedding of the degenerate form ($\nInf$ is null and orthogonal to the $e_i$), hence induces the algebra embedding of Theorem \ref{thm:main}; the adjoined partner is $\nO$. Under it, PGA's translator by a vector $t$,
+\[
+T_t \;=\; 1 + \tfrac12\, e_0\, t \qquad (t = t^i e_i),
+\]
+maps to $1 + \tfrac12 \nInf t$, which is precisely CGA's translator \cite{DFM2007}. The embedding is an algebra map, so all motor compositions, exponentials of PGA bivectors, and sandwich actions are carried verbatim; what CGA adds (versors built from $\nO$: inversions, dilations, transversions) is exactly the content of the adjoined direction. The plane at infinity of PGA becomes the point at infinity's null direction of CGA, which is the geometric form of the pairing $\lambda$ in the minimality proof: the direction that paired with nothing in PGA is the direction that must pair with something in any completion.
+\end{example}
+
+\begin{remark}[Why PGA cannot be repaired in place]\label{rem:inplace}
+A frequently asked question in the applied community is whether PGA's non-invertible elements (anything with a factor in the ideal $J$) could be given inverses by a clever convention. Proposition \ref{prop:unitideal} says what is possible and what is not: no extension makes a radical element invertible (its square is zero and stays zero), but the minimal completion makes the ideal it generates the whole algebra, so the obstruction is lifted at the level of ideals: what annihilated in PGA generates $1$ in CGA, through the identity $\rho\varphi + \varphi\rho = 2$ and not through an inverse of $\rho$. The repair is a transport, not an inverse: the same reading this series gives division by zero throughout \cite{ButlerT1}. And the minimality clause fixes the cost: exactly one hyperbolic plane per radical dimension.
+\end{remark}
+
+\begin{remark}[Relation to the transport rules]\label{rem:taxonomy}
+In the taxonomy of \cite{ButlerT1}, a radical direction is the degenerate limiting case of a type-N obstruction, and its transport rule is the Witt completion; the degenerate one-generator ascent (adjoining a null direction \emph{without} a partner) is exactly what building $\Cl(p,q,r{+}1)$ from $\Cl(p,q,r)$ does, and it leaves the form degenerate, so no such ascent is ever a completion: more nilpotence never repairs nilpotence, which is why the repair must adjoin partners, not more radical. For nondegenerate bases the same phenomenon is exhibited in \cite[Thm.~5.7]{ButlerT1}: there the null adjunction produces a square-zero thickening of the base, not a completion of it. At sheaf level the same structure appears as the degeneration sheaf's fibre over a singular locus \cite[Thm.~3.1]{ButlerT4}. The present note is the finite-dimensional, applied instance of those results.
+\end{remark}
+
+\section{Position in the series}\label{sec:position}
+
+This paper is T2 of the series. It relies on two papers of the series. From the root paper T1 \cite{ButlerT1} it takes the element-level lemma that a square-zero element is invertible in no unital extension, the type-N reading of a radical direction and the taxonomy frame of Remark \ref{rem:taxonomy}, and the representation-independent sharpenings whose scope Remark \ref{rem:scope} delimits. From the sheaf paper T4 \cite{ButlerT4} it takes the blade-basis lemma for degenerate forms (Fact \ref{fact:blades}), together with the corank-one square-zero ideal and resolution mechanism of which Proposition \ref{prop:unitideal} is the finite-dimensional, any-corank instance.
+
+No later paper of the series depends on this note's theorems: it is the applied-audience presentation of results whose general versions are proved in T1 \cite{ButlerT1} and T4 \cite{ButlerT4}, and the status table of the capstone T17 \cite{ButlerT17} records it on that basis.
+
+\section{Machine verification}\label{sec:verification}
+
+Every computational identity in this note has been checked by computer, in exact rational arithmetic over the shared library's basis-blade Clifford product, which admits degenerate generators, in the manner of the verifications deposited with \cite{ButlerT1, ButlerT4}. The script \texttt{verify\_T02.py}, deposited with this note alongside the series' shared exact-arithmetic library \texttt{GA.py}, \cite{ButlerVerifyT02}, performs its checks and reports each: the radical ideal of $\Cl(3,0,1)$ (dimension $8$, all $64$ ideal products zero: the corank-one, square-zero case of Proposition \ref{prop:unitideal}); the nilpotency profile at corank two in $\Cl(2,1,2)$ (ideal dimension $24 = 2^5 - 2^3$, a nonzero product in $J^2$, $\dim J^2 = 8$, and $J^3 = 0$, per Proposition \ref{prop:unitideal}); the model completions' Gram matrices (nondegeneracy by exact rank, signatures $(4,1)$ and $(4,3)$ by exact congruence diagonalisation, per Theorem \ref{thm:main}(2)); the embedding $e_0 \mapsto \nInf$ (isometry of the degenerate form on all pairs, algebra map on all $16 \times 16$ blade products, injectivity by exact rank); the unit-ideal identity $\nInf \nO' + \nO' \nInf = 1$ for the normalised partner; the translator dictionary (PGA translator composition $T_s T_t = T_{s+t}$ and its verbatim image in $\Cl(4,1)$, including the sandwich action on a sample vector, checked to move the vector, so the check is not vacuous); and the radical-pairing injectivity instance of the minimality argument. No floating point is used anywhere; the script exits nonzero on any failure, and all checks pass.
+
+\begin{thebibliography}{9}
+
+\bibitem{ButlerT1}
+L.~Butler,
+\emph{The Transport Principle: Total Division in Clifford Algebras via Minimal Completion},
+Transport Papers T1 (2026).
+
+\bibitem{ButlerT4}
+L.~Butler,
+\emph{Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion, and the Exceptional Algebra},
+Transport Papers T4 (2026).
+
+\bibitem{ButlerT17}
+L.~Butler,
+\emph{The Transport Programme: Method, Status, and the Falsifiable Ledger},
+Transport Papers T17 (2026).
+
+\bibitem{Chevalley1997}
+C.~Chevalley,
+\emph{The Algebraic Theory of Spinors and Clifford Algebras},
+Collected Works, Vol.~2, Springer, Berlin (1997).
+
+\bibitem{Lam2005}
+T.~Y.~Lam,
+\emph{Introduction to Quadratic Forms over Fields},
+Graduate Studies in Mathematics 67, American Mathematical Society (2005).
+
+\bibitem{HLR2001}
+D.~Hestenes, H.~Li and A.~Rockwood,
+New algebraic tools for classical geometry,
+in \emph{Geometric Computing with Clifford Algebras} (G.~Sommer, ed.), Springer, Berlin (2001), 3--26.
+
+\bibitem{DFM2007}
+L.~Dorst, D.~Fontijne and S.~Mann,
+\emph{Geometric Algebra for Computer Science},
+Morgan Kaufmann, San Francisco (2007).
+
+\bibitem{Gunn2017}
+C.~Gunn,
+Doing Euclidean plane geometry using projective geometric algebra,
+\emph{Adv.\ Appl.\ Clifford Algebras} \textbf{27} (2017), 1203--1232.
+
+\bibitem{Selig2005}
+J.~M.~Selig,
+\emph{Geometric Fundamentals of Robotics}, 2nd ed.,
+Springer, New York (2005).
+
+\bibitem{ButlerVerifyT02}
+L.~Butler,
+\emph{verify\_T02.py: exact-arithmetic verification of the computational identities of ``Projective Completes to Conformal''},
+Python script, deposited with this note (2026).
+
+\end{thebibliography}
+
+\end{document}

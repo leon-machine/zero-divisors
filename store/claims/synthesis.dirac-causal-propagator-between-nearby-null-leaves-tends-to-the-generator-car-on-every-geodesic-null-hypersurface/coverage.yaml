@@ -1,0 +1,43 @@
+functions:
+  check_projector_algebra_of_the_null_trace:
+    kind: complete
+    clauses:
+    - (i) Lambda p k = 2 (p.k) Lambda for every n with n.k = 1, Lambda k = 0 and k Lambda = k (Step 3)
+    - (i) tail and mass numerators vanish on the generator, Lambda (c k) V k = 0 for every multivector V (Step 3)
+    - (i) the projected transverse connection is theta Lambda for self-adjoint B and leaves an f1 f2 part otherwise (Step 4(b))
+    omits: exact Clifford identities on three choices of n, two vectors p, one generic multivector and one symmetric and one antisymmetric B
+  check_step_coefficient_formula_on_generic_jets:
+    kind: sampled
+    clauses:
+    - (i) on arbitrary jets in the adapted gauge N2 = O(eta^2) at v = 0
+    - (i) N1(0) + tr(M^-1 Q) = 2 [d' - d tr(M^-1 M')/2 + theta d/2] Lambda, independent of the first-order transport
+    - (i) the step coefficient is zero under the half-density law and the formula fails without the connection or with non-self-adjoint B
+    omits: two values of u on one jet data set; the identity is polynomial in the jets and is proved in Step 4
+  check_step_coefficient_vanishes_on_the_plane_wave_field:
+    kind: sampled
+    clauses:
+    - (i) from first principles on the Weyl-curved plane wave (non-commuting tidal and deviation maps) and on its flat member with an expanding, shearing hypersurface N2 = O(eta^2) and the step coefficient is zero
+    - (i) the cancellation is between nonzero pieces; doubling d_u log Delta or freezing Lambda(x) breaks it, dropping the transport breaks N2 = O(eta^2)
+    omits: three point pairs per field in the Kerr-Schild gauge, where the projected connection term vanishes identically and the expansion enters through the variation of Lambda(x); the connection identity itself is tested on generic jets
+  check_step_coefficient_vanishes_on_a_flat_cubic_null_hypersurface:
+    kind: sampled
+    clauses:
+    - (i) on the flat field with a null hypersurface with expansion, shear and cubic jets N2 = O(eta^2) and the step coefficient is zero; freezing Lambda(x) breaks it
+    - (i) the coincidence transverse Hessian has determinant a^2
+    omits: three point pairs and one coincidence point
+  check_layer_displacement_and_coincidence_coefficient:
+    kind: sampled
+    clauses:
+    - (i) sigma between H and the leaf displaced by w is sigma - w (u - u'), so b = (u' - u)(k.l)
+    - (i) d_w N2 = -Lambda l R k(x') exactly on the plane-wave field
+    - "(i) coincidence coefficient: -(1/2) Lambda l k/(k.l) = -Lambda for every null l and every n, so the delta coefficient is exactly Lambda"
+    - (i) the flat null plane kernel is exact for every w
+    omits: two point pairs on the curved plane wave, two null vectors l, two n, two flat sample displacements
+  check_layer_wightman_term_has_one_i0_for_both_leaf_sides:
+    kind: sampled
+    clauses:
+    - (iii)(a) at the light cone the regulator eps (t(x) - t(x')) has the sign of -v for every future timelike time gradient, so both sides give (u' - u - i0)^-1
+    omits: two null l, three transverse offsets, three time gradients, four values of w; the log and pole structure is proved in Step 6
+untouched_premises:
+  synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car: 'supplies the flux contraction (i) used in Step 5 for (ii) and the thin-layer limits (iii-a) used in Step 6(b); functional-analytic proof steps, no exact computation here uses them'
+  synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel: 'supplies the bound on the epsilon-regularised restriction used only in the comparison at the end of Step 6(b); a proof step'

@@ -1,0 +1,24 @@
+functions:
+  check_commutant_dimensions:
+    kind: exact
+    clauses:
+    - '"the commutant is fourteen-dimensional"'
+    - '"restricted to the sixteen-dimensional even half the commutant is six-dimensional"'
+    omits: ''
+  check_sectors_and_the_chirality_changing_operator:
+    kind: exact
+    clauses:
+    - '"the twelve sectors are pairwise inequivalent except the vacuum (0,0) and the filled state (2,3)"'
+    - '"the one off-diagonal invariant operator is chirality-changing"'
+    omits: Inequivalence is read from distinct weight multisets (sufficient), equivalence of the two singlets from both being trivial one-dimensional representations
+  check_one_mass_per_species:
+    kind: exact
+    clauses:
+    - '"an invariant mass operator on the even half is exactly one number per species"'
+    - '"the framework imposes no relation among the six"'
+    omits: The second clause is the statement that the commutant algebra relates no two species numbers; no physical input beyond the algebra is examined
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact sparse elimination over the 32-dimensional module for all three clauses.

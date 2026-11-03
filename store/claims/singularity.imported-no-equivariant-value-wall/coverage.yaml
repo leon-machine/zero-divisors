@@ -1,0 +1,24 @@
+functions:
+  check_theta_is_automorphism_fixing_k:
+    kind: sampled
+    clauses: ["theta_lambda is an h_u-isometry restricting to g_lambda on W and fixing k"]
+    omits: "two masses and two lambdas only (not every lambda in ker k); the automorphism of the completed Clifford algebra preserving grading and degeneration subalgebra is inferred, not computed; the cocycle of Phi_v is not tested"
+  check_contragredient_translates_candidates:
+    kind: sampled
+    clauses: ["the contragredient action is id - lambda (x) k, translating every candidate by -lambda", "a natural assignment would be a fixed point of a free translation action: none exists"]
+    omits: "two masses, two lambdas, three candidates each; the naturality argument itself is not a computation"
+  check_no_theta_fixed_ladder_partner:
+    kind: sampled
+    clauses: ["h_u(k,x)=0 for every x in Fix(theta_lambda), whereas a ladder partner has h_u(k,x)=1/2"]
+    omits: "two masses, two lambdas; Fix(theta) computed exactly there but not for general lambda"
+  check_partners_attached_injectively:
+    kind: sampled
+    clauses: ["the construction attaches to each candidate u'=u+v the partner Phi_v(k*)=k*+(1/2)tilde v, injectively in v"]
+    omits: "27 lattice points v in {-1,0,1}^3 in ker k at two masses, not injectivity for all v"
+untouched_premises:
+  sheaf.no-equivariant-value-wall: "this claim is its verbatim import, so the check re-derives its content rather than citing it"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "all four functions test the stated translation/non-fixed-partner mechanism at sample masses and lambdas; no general-lambda or Clifford-algebra-level check"

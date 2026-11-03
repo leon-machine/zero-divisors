@@ -1,0 +1,18 @@
+functions:
+  check_killing_field_and_its_norm:
+    kind: sampled
+    clauses: ["Q(K) = f = 1 - 2M/r", "K = hb^-1(e_t) is the static Killing field"]
+    omits: "four (beta, M) sample points outside the horizon; Killing property as antisymmetry of A -> (A.D)K on the physical frame, via exact first-order jets"
+  check_redshifted_acceleration_of_static_observers:
+    kind: sampled
+    clauses: ["redshifted proper acceleration sqrt f sqrt(-Q((v.D)v)) = f'(r)/2 at every r > 2M"]
+    omits: "four sample points r > 2M with f' = 2M/r^2 typed; checked as f (-Q(a)) = (f'/2)^2"
+  check_surface_gravity_on_the_horizon_locus:
+    kind: sampled
+    clauses: ["kappa = lim f'(r)/2 = 1/(4M)"]
+    omits: "three masses; computes (K.D)K = kappa K directly on the locus beta = 1 and compares with f'(2M)/2 = 1/(4M); the limit r -> 2M of the exterior acceleration is not taken as a limit"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is verified at exact rational sample points; the imported surface-gravity fact is called in every function."

@@ -1,0 +1,18 @@
+functions:
+  check_gtg_pair_is_bijective_with_connections_preserving_i:
+    kind: exact
+    clauses:
+    - (ii) the annihilator of I_rho is Lambda^2 W + u_rho ^ W (dimension 10, rank 10), the common annihilator of these bivectors is the line of I_rho, the translation brackets are 2 rho a ^ b (abelian at rho = 0), and the map is equivariant under rational rotors of W fixing n0 and ninf
+    omits: 'checked at rho in {0, 1/2, -1/2, 3/14} and for three rotors; other values of rho rescale n0'
+  check_field_strength_splits_into_shifted_curvature_and_torsion:
+    kind: sampled
+    clauses:
+    - (ii) F = R + 2 rho E ^ E - u_rho ^ T with values annihilating I_rho
+    omits: one rational first jet of (E, Omega) at a point, four values of rho; the identity is bilinear algebra proved in the text
+  check_omega_equation_is_the_torsion_equation:
+    kind: partial
+    clauses:
+    - (i) eps(I, w, B, C) = 0 for w in W and B, C in Lambda^2 W; the torsion-to-Omega-equation map has rank 24; D V is a multiple of the frame
+    omits: the integration by parts and the chain-rule step on the torsion-free subfamily are in the text; the frame equation is the stored rank-10 one and the Bach contrast the stored Weyl-square result, neither recomputed; at rho in {1/2, -1/2, 3/14} and two frames
+untouched_premises:
+  synthesis.imported-einstein-cartan-matter-coupling: cited in (i) for the reading of the torsion equation with spinning matter; nothing is computed from it

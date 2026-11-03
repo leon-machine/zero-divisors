@@ -1,0 +1,18 @@
+functions:
+  check_real_pairs_generate_su22:
+    kind: exact
+    clauses: ["A(U ^ V) lies in su(2,2) for U, V in V_R"]
+    omits: "exact on all 15 pairs of the six real basis vectors plus mixed real vectors; extension to all of V_R uses that A(U ^ V) is real-bilinear and su(2,2) is a real subspace; the non-real control confirms the test is not vacuous"
+  check_moments_of_real_pairs_are_real:
+    kind: sampled
+    clauses: ["hence M_{U ^ V} is real"]
+    omits: "four sample composites of one, two and three spinors; general reality follows from Sigma A anti-Hermitian and is not carried symbolically"
+  check_grip_on_frozen_point_is_real_vector_of_one_four_form:
+    kind: sampled
+    clauses: ["for the frozen point I_Lambda, P is a real vector of I_Lambda-perp", "m^2 = Q(P) is a value of the (1,4) form"]
+    omits: "only I = I_Lambda at Lambda/6 = 1/2, 3, 1/7 (all Lambda > 0) with three composites; the general claim P = M(I) in V_R for every I in V_R is not tested for the mixed real vectors"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: in check_moments_of_real_pairs_are_real the non-real control is now pinned exactly (moments of A(iU ^ V) are i times the real moments of A(U ^ V), nonzero on some composite) rather than only 'some moment has nonzero imaginary part'; pairs enumerated by combinations"

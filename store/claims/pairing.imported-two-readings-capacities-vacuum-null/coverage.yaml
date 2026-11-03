@@ -1,0 +1,24 @@
+functions:
+  check_witt_basis_relations_are_the_car:
+    kind: sampled
+    clauses:
+    - '"The relation {e_a, e_b} = 2 g_ab on a Witt basis is the canonical anticommutation relations"'
+    - '"for (1,3) these are one and two, the complex reading being the Dirac spinor as a two-mode Fock space" (mode count)'
+    omits: every signature with 2 <= n <= 6 (floor(n/2) modes); the Fock module itself is the pure-spinor construction and is not built here
+  check_real_and_complex_capacities:
+    kind: sampled
+    clauses:
+    - '"A real quadratic space of signature (p,q) has real capacity min(p,q) and complex capacity floor((p+q)/2)"'
+    omits: every signature with n <= 6; maximality is shown by definiteness of W-perp/W (real) and a nonzero form on a space of dimension at most one (complex)
+  check_every_weyl_spinor_pure_up_to_six:
+    kind: sampled
+    clauses:
+    - '"Every Weyl spinor of Spin(2 nu, C) is pure for 2 nu <= 6, so at nu = 2 and nu = 3 every parity-definite state is the vacuum of some Witt decomposition"'
+    omits: five states at nu = 2 and six at nu = 3, both parities; the sharpness witnesses at nu = 4 are not part of the statement
+untouched_premises:
+  one-relation.spacetime-manifold-vacuum-lines: the clause that a vacuum is an extra datum, a null direction, is a reading and is declared not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the three finite cores are checked on signatures up to n = 6 and on sample states; the vacuum-as-datum clause is a declared reading

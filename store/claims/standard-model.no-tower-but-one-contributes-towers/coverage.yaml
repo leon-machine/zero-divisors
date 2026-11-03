@@ -1,0 +1,14 @@
+functions:
+  check_other_tower_fields_have_zero_index:
+    kind: sampled
+    clauses: ["phi has index zero under SU(2), SU(3) and U(1)_Y of this tower"]
+    omits: "Six sample field types (either statistics, several multiplicities); zero index follows from setting rho = 0 for a field with no H component, which is the imported superselection used as input, not derived here."
+  check_other_towers_leave_this_tower_running_unchanged:
+    kind: sampled
+    clauses: ["contributes zero to each of b_1, b_2, b_3", "mirror tower and the four odd-dimensional towers together contribute Dl = (0, 0, 0)"]
+    omits: "One model content (31 zero-index fields); the sentence on the partner-like content being supplied by this tower is interpretation and is not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational bookkeeping for sample fields; the zero index is built in via the imported superselection, which the docstring states."

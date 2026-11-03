@@ -1,0 +1,18 @@
+functions:
+  check_dust_dilution_exponents:
+    kind: sampled
+    clauses: ["(ii) continuity, rho_5 proportional to 1/(a^3 b), rho_5 L a^3 constant for b ~ a and b constant"]
+    omits: "one sample scale factor a(t) = 1 + t/2 + t^2/3 and two choices of b; dust conservation d_t(sqrt(g) rho) = 0 is taken as the continuity equation, not derived; clause (i) is not computed"
+  check_kaluza_klein_newton_constant_cancels:
+    kind: partial
+    clauses: ["(ii) Kaluza-Klein: G_4 = G_5/L, G_4 rho_4 = G_5 rho_5"]
+    omits: "only the volume factor sqrt(g_5) = b sqrt(g_4) is computed (one 4x4 field, three L); G_4 = G_5/L is then set by definition and the cancellation G_4 rho_4 = G_5 rho_5 follows by construction; the reduction of R_5 to R_4 in the Einstein-Hilbert action is not computed"
+  check_projected_dust_and_heavier_rest_mass:
+    kind: sampled
+    clauses: ["(ii) projected comoving dust is four-dimensional dust", "(ii) p^mu p_mu = m^2 + p_5^2"]
+    omits: "the projection is defined as multiplication of the five-dimensional dust tensor by L, so the dust form is by construction; the mass relation is checked at three samples and three Pythagorean triples; clause (i) is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring says clause (i) is not computed and that the Kaluza-Klein step goes through the volume factor; the three functions test those stated parts at sample level"

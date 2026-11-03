@@ -1,0 +1,27 @@
+functions:
+  check_points_and_reduction:
+    kind: complete
+    clauses: ["(v) the two isotropic points and a generic point lie on K5 and reduce onto the disk, the isotropic ones to (1/3,1/3,1/3) with c^2 = 2/3", "(v) equal observed exponents on K5 only at p = 0 and p = 1/2", "(i) sample points of the vacuum circle"]
+  check_offdiagonal_mode_equation:
+    kind: sampled
+    clauses: ["(i) delta R_ab is the stated operator and every other first-order component vanishes", "(i) background Ricci-flat at vacuum points, only TT at disk points", "(i) control: exchanged friction exponent fails"]
+    omits: "computed exactly at twelve point-and-index choices in four and five dimensions; the general-P form is stated in the proof and was computed symbolically"
+  check_bessel_order:
+    kind: sampled
+    clauses: ["(ii) operator identity with nu^2 = (w^2 + 4 xi c^2)/(4(1-p)^2) on s^n for 120 parameter sets and six n", "(ii) control: shifted order fails", "(ii) R tau^2 = -c^2 at three disk points", "(ii) conformal consistency xi = 1/6 -> nu = 1/2"]
+    omits: "the identity is the chain rule; checked on monomials s^n"
+  check_index_table:
+    kind: sampled
+    clauses: ["(v) KK vector orders 2 and 1 at the isotropic points for every polarisation and axis", "(v) cross modes order 0 at isotropic points", "(iv) BKL orders and spread at sampled u", "(vi) window, fixed couplings outside it, 229 sigma, xi window bounds"]
+    omits: "(iii) the small-argument form of the Hankel function is cited; BKL spread checked at six values of u, proved for all u in the proof"
+  check_clifford_weights:
+    kind: exact
+    clauses: ["(vi) B5 is a unit boost on K5 and (e_a B5 - B5 e_a)/2 = P_a e0 at three points"]
+  check_isotropic_segment:
+    kind: sampled
+    clauses: ["(v) segment membership 0 <= p <= 1/2, vacuum ends only", "(v) hidden-to-observed ratio bound", "(v) KK vector order |1-4p|/(1-p) and index (5-11p)/(1-p) sweeping [-1, 3]", "(vi) KK potential window p in (0.4556, 0.4570) interior to (1/3, 1/2)", "(iii), (v) KK field-strength index 5 - 2 nu in [1, 5] on the segment, 2 + x at the window, leading branch constant iff p >= 1/4"]
+    omits: "the bounds hold for all p by the closed forms in the proof; the check samples a 61-point grid"
+untouched_premises:
+  synthesis.imported-bessel-reduction-and-small-argument-hankel-forms: "imported Fact: the small-argument Hankel form is used in the proof of (iii); the check verifies the Bessel operator identity and the index table directly"
+  synthesis.imported-kaluza-klein-ansatz: "imported Fact: the ansatz identifies the off-diagonal mode with the Kaluza-Klein vector; the check computes the linearised Ricci tensor directly"
+  synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds: "imported Fact: statistical isotropy is used in the reading of (iv); no number from it enters the checks"

@@ -1,0 +1,25 @@
+doc: trail-standard-model
+title: 'The Standard Model'
+author: Leon Butler
+level: lay
+spine:
+- standard-model.internal-symmetry-ladder
+- standard-model.gauge-algebra-minimal-massive-composite
+- standard-model.global-form-quotient-determined
+- pred.z6-charge-lattice
+- standard-model.quarks-leptons-two-level-fermion-content
+- standard-model.hypercharge-global-form-pair-counting-consistency
+- standard-model.under-s-composites-state-space-spinor
+- standard-model.weak-angle-over-derived-generation
+- standard-model.spectrum-run
+- standard-model.four-dimensions-forces-converse
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

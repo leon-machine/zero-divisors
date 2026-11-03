@@ -1,0 +1,46 @@
+doc: t17-rule2-regenerated
+title: 'Rule 2 Exercised Physically: Kaluza-Klein directions, planar fermions, and
+  the commuting square: Companion note to T17: closing Direction 7 of the forward
+  ledger (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- rule2.imported-classification-centre-type-c
+- rule2.imported-classification-centre-type-c-external
+- rule2.imported-rule-2-matrix-units-forgotten
+- rule2.imported-completion-spacetime-algebra-spinors
+- rule2.even-subalgebra-one-dimensional-extension
+- rule2.where-obstruction-sits-commuting-square
+- rule2.which-residues-obstruct-which-way
+- rule2.odd-lorentzian-dimension-exactly-one-real
+- rule2.imported-gamma-matrices-odd-dimension
+- rule2.rule-2-kaluza-klein-algebra
+- rule2.imported-five-dimensional-chern-simons-shift
+- rule2.imported-parity-anomaly
+- rule2.imported-graphenes-two-valleys-doubling
+- rule2.rule-2-plane
+show: spine-only
+paper: T17-rule2
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T17_rule2_note.tex
+  note: Recreate T17-rule2 from the store
+cite:
+- transport.rule-1-morita-trivial
+prose: paper
+msc: Primary 15A66; Secondary 81R25, 83E15, 81T25.
+keywords: Clifford algebras; central idempotents; Kaluza-Klein; parity anomaly; graphene;
+  conformal algebra; transport principle.

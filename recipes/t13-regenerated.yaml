@@ -1,0 +1,60 @@
+doc: t13-regenerated
+title: 'Quark and Lepton Families: Condensation, Democracy, and the Koide Relation (regenerated from the
+  store)'
+author: Leon Butler
+level: formal
+spine:
+- families.imported-face-valued-bracket-quantum-numbers
+- families.imported-dictionary-exact-join
+- families.imported-one-derived-generation-hypothesis-s
+- families.imported-indifference-instrument
+- families.imported-squeezed-vacuum-bosonic-pairing
+- families.imported-squeezed-vacuum-bosonic-pairing-external
+- families.three-generations-faces-maximal-composite
+- families.three-identical-families-mixing-shared-slots
+- families.bracket-fixed-join
+- families.source-term-linear-tilt-mass-functional
+- families.alignment-computed-thirteenth-refutation-democracy-one
+- families.faces-ordered-what-identification-requires-first
+- families.linear-conjecture-refuted-data
+- families.koide-nullity-condition-one-member-invariant
+- families.chart-computation-sign-twist-bracket-form
+- families.rigidity-pairing-sector-one-event
+- families.skeleton-rank-one-plus-ordering-shift
+- families.koide-class-crossing-fit-conclusion
+- families.classification-displaced-gaussian-class-solved-level
+- families.one-open-problem-three-forms
+- families.koide-instrument
+- families.selectivity-observation-level
+- families.absolute-scale-clean-negative-result
+- families.why-kinematic-attacks-had-fail
+- families.doublet-direction-module-georgi-jarlskog-clebsch
+- families.imported-tree-relations-family-no-go
+- families.imported-tree-relations-family-no-go-external
+- families.order-operations-matter-programme
+- families.imported-decomposition-grade-dictionary
+- families.imported-grade-three-direction-between-families
+show: spine-only
+paper: T13
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T13_quark_lepton_families.tex
+  note: Recreate T13 from the store
+cite:
+- standard-model.trichotomy-what-kind-number
+prose: paper
+msc: Primary 81V15, 81R05; Secondary 15A66, 81T50, 81V22.
+keywords: generations; Koide relation; charged-lepton masses; democratic textures; Cabibbo angle; symmetry breaking; Gaussian states; Bogoliubov transformation.

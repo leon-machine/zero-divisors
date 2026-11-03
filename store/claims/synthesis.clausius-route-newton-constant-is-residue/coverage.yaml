@@ -1,0 +1,10 @@
+functions:
+  check_accrual_versus_epoch:
+    kind: sampled
+    clauses: [(ii)]
+    omits: kappa is computed from f = 1 - 2m/r and the epoch count N/A = 4 pi nu is checked at three nu and three M (the control that the accrual rate is not proportional to the area is exact in M); the claim that no Clausius flux crosses a stationary horizon is read as "rate != 0"; (i), the temperature clause, and Jacobson's theorem itself are not tested.
+  check_newton_constant_ratio:
+    kind: sampled
+    clauses: [(iii)]
+    omits: The area-law value nu = 1/(16 pi) (1-nat; 1/(16 pi ln 2) in the capacity convention) is computed at three M, but the Jacobson side is typed in (nu = (1/4)/(4 pi L) and G_cl/G = 1/(16 a b)), so "the two routes agree" and the iff over the (a, b) grid are arithmetic on supplied formulas, and eta = 1/4 under the calibration kappa_c = 1/(4<s>) is a one-line identity.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The epoch-count and area-law numbers are derived as stated; the Newton-constant ratio rests on formulas typed into the check.}

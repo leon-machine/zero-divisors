@@ -1,0 +1,32 @@
+functions:
+  check_symmetric_and_antisymmetric_entries_are_e_plus_o_and_e_minus_o:
+    kind: sampled
+    clauses:
+    - (i) symmetric and antisymmetric weights are e + o (down) and e - o (up)
+    omits: ten weightings on the module, both parts; the general case is the parity argument of the proof
+  check_one_rung_vector_gives_proportional_mass_matrices:
+    kind: sampled
+    clauses:
+    - (ii) one rung vector, T3R-even composites, independent family matrices give b M_u = conj(b) M_d
+    omits: one exact instance per sector; the general case is the two-line proof
+  check_relatively_real_family_matrices_give_conjugate_squares:
+    kind: sampled
+    clauses:
+    - (iii) relatively real family matrices give H_u = conj(H_d), with nontrivial mixing possible
+    omits: one exact instance; the identity is proved in general
+  check_trace_law_two_channels:
+    kind: sampled
+    clauses:
+    - (iv) the trace law, each channel alone and together; symmetric-antisymmetric trace orthogonality
+    omits: three exact instances; the law is an identity proved in general
+  check_ten_plus_120_keeps_the_trace_and_splits_the_determinant:
+    kind: sampled
+    clauses:
+    - (v) a 10 with one 120 keeps tr H_u = tr H_d; the determinant identity and law
+    omits: one exact instance and the phase pi/2 case; the identities are proved in general
+  check_second_ten_splits_only_through_the_cp_channel:
+    kind: exact
+    clauses:
+    - (vi) the exact instance of a split by a second 10, and its removal by aligned phases or real matrices
+    omits: 'none: (vi) is a statement about the instance'
+untouched_premises: {}

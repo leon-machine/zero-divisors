@@ -1,0 +1,24 @@
+functions:
+  check_trivial_coefficients_and_tautological_class:
+    kind: sampled
+    clauses:
+    - H^1(N_v;U) = Hom(N_v,U) with one-coboundaries vanishing
+    - the class of the pseudo-inverse torsor is the tautological homomorphism theta, nonzero when U != 0
+    omits: Five signatures (1,2),(2,1),(2,2),(1,3),(3,1) with no extension (CASES[:5]), two base pseudo-inverses and sampled u; shows the translation part is independent of the class and theta(R_u R_u') = u + u', not the group-cohomology identity H^1 = Hom itself
+  check_class_vanishes_exactly_at_the_atom:
+    kind: sampled
+    clauses:
+    - an N_v-invariant pseudo-inverse exists iff the class vanishes iff U = 0 iff n = 2
+    - (1) enlargement independence (extensions included)
+    - (3) no equivariant selection under a larger subgroup of the stabiliser
+    omits: Nine cases with n = 3, 4 (some with an extra generator of square 1, -1 or 0) and three n = 2 atom cases; inconsistency tested for sampled u in N_v, and for (3) only one added Levi rotor, not the full parabolic stabiliser (no dilation part)
+  check_levi_equivariance:
+    kind: sampled
+    clauses:
+    - (2) theta intertwines the conjugation action of Spin(U) on N_v with its vector action on U
+    omits: Cases with at least two U generators (15 (case, u) pairs); the check is g R_u g^-1 = R_{g u g^-1} with g fixing v, from which the intertwining of theta follows; theta is not recomputed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Trivial-coefficient shift, inconsistency off the atom, consistency at n = 2 and Levi equivariance are tested on finite cases; the cohomological identification H^1 = Hom is not computed. 2026-10-23 weak-checks pass: check_class_vanishes_exactly_at_the_atom now asserts that each R_u is in N_v (R_u R_u^-1 = 1, R_u v R_u^-1 = v), that v s v = v alone and each fixed-point condition alone are consistent (so the inconsistency is joint), and that the Levi step runs on exactly the five n = 4 cases"

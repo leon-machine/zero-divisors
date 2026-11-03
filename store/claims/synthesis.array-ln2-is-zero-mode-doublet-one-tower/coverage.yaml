@@ -1,0 +1,14 @@
+functions:
+  check_charge_times_oscillator:
+    kind: sampled
+    clauses: [(i), (ii)]
+    omits: Counts are exact on the window k = -6..6 for E <= 6 only; the Gibbs product form, S_array = S_charge + S_osc, the formula for S_osc and S_charge > ln 2 are not computed; the half-integer-offset case is checked only for the unique zero-energy configuration and the Q^2/2 ground energies on the same window.
+  check_currents_blind_to_doublet:
+    kind: sampled
+    clauses: [(iii)]
+    omits: 'Five-site Jordan-Wigner matrices and m = 1, 2, 3 only: no statement for the infinite array, for general m, or for the whole current algebra; the tower-factor statement and the eigenvalues of a_0 on the doublet are read off from the charge number operator only.'
+  check_one_tower_not_two:
+    kind: exact
+    clauses: [(iv)]
+    omits: The numbers 1,1,2,3,5,7,11 and 1,2,5,10,20,36,65 are exactly what the statement asserts; the reading "one array registers at most one helicity channel" is an interpretation, not a computation.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Counting clauses (i), (ii), (iv) and the commutation part of (iii) are computed on finite windows as the docstring says; the entropy split and S_osc value in (i) are untested.'}

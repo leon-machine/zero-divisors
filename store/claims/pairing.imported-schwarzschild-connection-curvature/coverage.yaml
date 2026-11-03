@@ -1,0 +1,29 @@
+functions:
+  check_static_connection_is_the_torsion_free_field:
+    kind: sampled
+    clauses:
+    - '"the rotation-gauge field Omega, read as the connection forms of that coframe, is omega^0_1 = (f''/2 sqrt f) theta^0, omega^2_1 = (sqrt f/r) theta^2, omega^3_1 = (sqrt f/r) theta^3, omega^3_2 = (cot theta/r) theta^3"'
+    omits: three rational points (M = 1/2, 1/2, 3/2) with exact first-order jets; torsion-freeness and uniqueness (rank 24) at the point, derived metric diag(f, -1/f, -r^2, -r^2 sin^2)
+  check_curvature_eigenvalues_on_coordinate_planes:
+    kind: sampled
+    clauses:
+    - '"the curvature operator R(B) is diagonal on the coordinate planes with eigenvalues 2M/r^3 on the radial plane and the angular plane and -M/r^3 on the four mixed planes"'
+    omits: the same three points; the closed form (M/2r^3)(B + 3 sigma_r B sigma_r) is matched at each
+  check_extreme_pair_and_sign_of_square:
+    kind: sampled
+    clauses:
+    - '"The extreme eigenvalue distinguishes the pair {sigma_r, I sigma_r} invariantly"'
+    - '"sigma_r^2 = +1 against (I sigma_r)^2 = -1"'
+    omits: eigenspace dimension two at three points; the sign of the squares is exact; which null direction is the vacuum's (the flag bit) is a convention, not tested
+  check_painleve_gullstrand_gauge_field:
+    kind: sampled
+    clauses:
+    - '"In the Painleve-Gullstrand gauge hb = 1 - beta P, ... the derived metric is ds^2 = dT^2 - (dr + beta dT)^2 - r^2 dOmega^2 ... and hb is invertible through the horizon"'
+    omits: four sample values of beta (including beta = 1 and beta > 1) on the radial plane only; the angular part r^2 dOmega^2 and the relation beta^2 = 2M/r are not tested
+untouched_premises:
+  singularity.euclidean-rotor-where-it-lies: cited for where the Euclidean rotor lies relative to the pair, a placement not computed here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the four functions compute the stated forms, eigenvalues and metric at sample points and the docstring declares the flag-bit sentence untested

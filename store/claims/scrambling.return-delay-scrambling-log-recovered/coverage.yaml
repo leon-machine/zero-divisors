@@ -1,0 +1,16 @@
+functions:
+  check_round_duration_is_4m:
+    kind: sampled
+    clauses:
+    - the round duration is beta/(2 pi) = 1/kappa = 4M, with beta = 8 pi M
+    omits: masses M = 1, 5/2, 1000 only (pi kept as an exact indeterminate); the dwell floor (IC condition) is not checked
+  check_epidemic_doubling_count:
+    kind: sampled
+    clauses:
+    - charging the re-encoding at one pairwise operation per boost e-fold per mode, spreading epidemically over N ~ S modes, requires of order ln S rounds, giving T_return ~ 4M ln S
+    omits: 'the doubling simulation matches ceil(log2 N) for all N <= 4100, so T_return = 4M log2 S = (4M/ln 2) ln S: the displayed 4M ln S holds up to the factor 1/ln 2 that the statement absorbs into "approximately"; the epidemic model itself is a premise'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The coefficient 4M is exact; the epidemic count gives log base 2, a constant factor 1/ln 2 away from the displayed ln S, which the statement's wording absorbs.

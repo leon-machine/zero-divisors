@@ -1,0 +1,21 @@
+functions:
+  check_ladder_pair_matrix_units_and_corner:
+    kind: sampled
+    clauses: ["E_ij form a full 2 x 2 system of matrix units", "E11 B E11 = A ff* and a -> a ff* is an isomorphism A -> corner"]
+    omits: "all 15 signatures with n <= 4 only; multiplicativity of a -> a ff* is checked on all blade pairs only for n <= 3 and on one sampled pair per blade for n = 4"
+  check_twisted_diagonal_and_mat2:
+    kind: sampled
+    clauses: ["Cl(p+1,q+1) = Mat_2(Cl(p,q))", "the ascent embedding becomes the twisted diagonal a -> diag(a, a-hat)"]
+    omits: "n <= 4; rank 4 * 2^n = dim B shows the Peirce map is bijective, and the diagonal entries are checked on base blades (linear in a, so every a), with the untwisted version as a failing control"
+  check_morita_invariants_preserved:
+    kind: sampled
+    clauses: ["Rule 1 preserves the Morita class: splitness and type-C diagnosis", "the clock residue p - q (mod 8) is fixed"]
+    omits: "n <= 4; checks centre size, a central square-+1 blade and the mod-8 arithmetic, not the Wedderburn type or simplicity of B directly; the parenthetical that types N and P are not preserved is not tested here"
+untouched_premises:
+  std-algebra.involution-properties: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.morita-amplification: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Matrix units and the twisted diagonal are exact on all 15 signatures with n <= 4; the Morita-invariants clause is tested through proxies (centre and splitness), not Wedderburn type."

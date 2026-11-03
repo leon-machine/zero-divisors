@@ -1,0 +1,16 @@
+functions:
+  check_planes_are_chiral_doublets:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "one splitting (n0 = w0, ninf = 2 w'0) only; that g+ and g- are commuting sl(2) subalgebras is taken from the cited proposition, not recomputed here"
+  check_summand_hom_spaces_one_dimensional:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "same single splitting; equivariance is imposed under the six basis bivectors, which generate l"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Rank, equivariance and kernel-dimension computations are exact over Q(i) in the model for both clauses; other splittings are not sampled."
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,17 @@
+functions:
+  check_pseudo_inverse_identities:
+    kind: sampled
+    clauses: ["v v* v = v and v* v v* = v* from the CAR alone"]
+    omits: "five CAR realisations (four rescalings of the Cl(1,1) atom and one pair in Cl(2,2)); the one-line derivation v(1 - v v*) = v is replayed in a single realisation, not symbolically"
+  check_atom_is_car_and_zero_divisor:
+    kind: exact
+    clauses: ["in Cl(1,1) the vectors v = (e0 + e1)/2, v* = (e0 - e1)/2 satisfy the CAR exactly", "v is a zero divisor with no genuine inverse"]
+    omits: "no inverse is shown in Cl(1,1) only (v Cl(1,1) has dimension 2 and does not contain 1, and v^2 = 0); the uniqueness sentence ('the unique unit of transport needing no ascent', cited to T1 Rem. 4.5) is a citation and not checked, as the docstring says"
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "computable parts tested as stated; the uniqueness of the atom is a cited result outside the check"

@@ -1,0 +1,14 @@
+functions:
+  check_conformal_model:
+    kind: sampled
+    clauses: ["null pair with nO . nInf = -1", "X(x) null", "X(x) . X(y) = -Q(x - y)/2"]
+    omits: "general (p, q) and arbitrary points: six signatures and three sample points per signature"
+  check_null_rotations_isomorphic_to_u:
+    kind: partial
+    clauses: ["R_u = 1 + vu is a rotor fixing v", "u -> R_u is a homomorphism of (U, +)", "u -> R_u is injective on U"]
+    omits: "surjectivity onto 'the group of null rotations of v' is not tested (the image {R_u} is taken as that group); sampled in four settings with two u each, rank test for injectivity is exact per setting"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Sampled and partial but consistent with the statement; the 'onto' half of the isomorphism is not independently tested."

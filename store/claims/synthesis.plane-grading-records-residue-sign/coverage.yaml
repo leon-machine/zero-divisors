@@ -1,0 +1,31 @@
+functions:
+  check_twisted_commutant_is_odd_ground:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Ten ground signatures (n <= 5) and floors K = 1, 2 with dimension at most 11, by blade sign tables; the statement is for the direct limit and every ground algebra; that Z^0 + Z^1 is a graded subalgebra is not tested beyond the dimension count 2^n
+  check_ground_algebra_separates_reversal:
+    kind: partial
+    clauses:
+    - (ii)
+    omits: 'Only the reversal case of (ii): the regular trace form signature of Cl(p,q) differs from that of Cl(q,p) exactly when r is not 0 or 4 mod 8 (n <= 8, an invariant of the ungraded algebra), and the reversal Phi sends e_2, f_1 to even elements for three ground algebras; the full iff (existence of Psi when n'' = n and r'' = r mod 8, and non-existence for every other pair) is not tested, nor that the isomorphism of pairs restricts to the ground algebra'
+  check_framing_recovers_plane_grading:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'One ground (1,-1) and the first two planes: P_1 meet the commutant of P_2 is span{1, e_1 f_1} and Ad(e_1 f_1) is the grading on P_1; the consequence for isomorphisms carrying planes to planes and the framed classification are not tested'
+  check_half_period_of_common_clock_is_plane_grading:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'Last sentence of (iv) only: three ground algebras and five weight vectors (all-odd with gcd 1, and two mixed parity ones); the half-period unitary is built from the closed form cos + i sin e f, not from exponentiating the generator'
+  check_clock_without_zero_mode_vacuum_line:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'Tests the mechanism behind the positivity of c alpha(c): the least eigenspace is one line for nonzero weights and c alpha(c) = nu^2 on it, with a zero weight the line doubles and e_1 escapes with e_1 alpha(e_1) = -1; one ground (1,-1), three planes, four weight vectors; the chain Psi alpha Psi^-1 = Ad(c) alpha'', the induced isomorphism of ground algebras and the conclusion n'' = n, r'' = r mod 8 are not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Clauses (i), (iii) and the mechanisms of (ii) and (iv) are checked by blade algebra on truncations; no function tests clause (v) (the complex-linear x_i -> i y_i isomorphism) and the iff in (ii) is only tested for the reversal.

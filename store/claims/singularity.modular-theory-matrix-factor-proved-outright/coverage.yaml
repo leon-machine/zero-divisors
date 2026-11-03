@@ -1,0 +1,18 @@
+functions:
+  check_cyclic_and_separating_iff_weights_positive:
+    kind: sampled
+    clauses: ["Omega = sum lambda_i |ii> with all lambda_i > 0 is cyclic and separating for M"]
+    omits: "four weight vectors (n = 2, 3, 4) plus two zero-weight controls; the parenthetical 'any cyclic separating vector of M has this form in its Schmidt basis' is not tested"
+  check_tomita_polar_decomposition:
+    kind: sampled
+    clauses: ["S = J Delta^{1/2} with Delta = rho (x) conj(rho)^{-1}", "J|ij> = |ji> antilinearly"]
+    omits: "four weight vectors; antilinearity of S tested on two complex elements a per weight; the closure of S and the general n are not covered; rho-bar equals rho because the weights are real"
+  check_modular_flow_and_kms:
+    kind: sampled
+    clauses: ["the modular flow on M is sigma_t(a) = rho^{it} a rho^{-it}", "omega(ab) = omega(b rho a rho^{-1}) for all a, b in M"]
+    omits: "flow identity checked at the integer exponents z = 1, 2, -1 on a single complex a per weight, with z = it argued from matching eigenvalue-ratio exponents but not computed; KMS is exhaustive over matrix units (hence all a, b) but only for the four sample weight vectors"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact rational computation at four weight vectors; the statement is general in n and lambda"

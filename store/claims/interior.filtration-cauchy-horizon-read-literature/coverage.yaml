@@ -1,0 +1,21 @@
+functions:
+  check_boost_weights_of_bivectors:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "algebraic core only: the bivectors of Cl(1,3) split into boost weights +1, 0, -1 of dimension 2 each for the null direction l = e0 + e1, exactly, with scaling q^w under three rational boosts; findings (1) and (2) have no finite computation and are not tested (the docstring says so)"
+  check_parabolic_and_its_nilradical:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "parabolic of l has dimension 4, its nilradical is span{l ^ e2, l ^ e3} (dimension 2, abelian, squares zero, an ideal of the parabolic), computed as exact kernels in the Lorentz algebra of the physical frame; the pattern of the premise stabilisers-flat-model is read across, not recomputed"
+  check_extreme_weight_curvature_occupies_nilpotent_slots:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "algebraic core only: the Weyl space has dimension 10 and boost weights -2..2 on it are each two-dimensional; each weight +2 basis map has image exactly span{l ^ e2, l ^ e3} (rank 2, inside the slot), kills weight 0 and +1 bivectors, and scales the weight -1 inputs by q^2 at three boosts; that the mass-inflation divergence has extreme weight is the imported statement and is not tested"
+untouched_premises:
+  interior.imported-mass-inflation-stability: "findings (1) and (2) read literature regularity classes and a C^0 extension; no finite computation (docstring); finding (3)'s divergence of extreme weight is imported"
+  singularity.type-n-only-type-n: "finding (1), the obstruction type N at the Cauchy horizon, is a classification reading with no finite computation here"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "added asserts: Weyl space dimension 10, each weight +2 basis map has image rank 2 inside the slot, and the union of their images spans span{l ^ e2, l ^ e3}; docstring (c) now tested"

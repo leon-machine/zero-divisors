@@ -1,0 +1,22 @@
+functions:
+  check_five_dimensional_count:
+    kind: exact
+    clauses: ["(i) f_5D = V_3/V_4"]
+    omits: "the contact criterion (a unit ball at height h meets the hyperplane iff h^2 <= 1) is checked at sample heights and foot points; the postulates C, I, S and O are assumed"
+  check_side_is_immaterial:
+    kind: exact
+    clauses: ["(iii) the one side S"]
+    omits: "the statement does not assert side-immateriality in so many words; the check supports the one-side count by central orthogonal idempotents in Cl(1,4)"
+  check_three_dimensional_sheets:
+    kind: exact
+    clauses: ["(ii) f_3D = V_3/V_2", "sheet spacing s = 1 from O"]
+    omits: ""
+  check_total_and_alternatives:
+    kind: exact
+    clauses: ["(iii) the total is the unit-ball rule's", "d_b cancels"]
+    omits: "the cancellation of d is checked at the sample lengths in UNITS; the comparison with observation (more than 5.5 sigma without S) uses the check's own OBS and SIG constants"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the arithmetic and geometry derived from the postulates are exact in Q(pi); the postulates themselves are not tested"

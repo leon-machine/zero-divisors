@@ -1,0 +1,9 @@
+functions:
+  check_null_pairs_satisfy_the_car:
+    kind: complete
+    clauses:
+    - '"v_i v_j + v_j v_i = 0, w_i w_j + w_j w_i = 0, v_i w_j + w_j v_i = delta_ij"'
+    - '"N_i = w_i v_i are mutually commuting idempotents with N_i + v_i w_i = 1"'
+    - '"The form need not be nondegenerate outside the span"'
+    omits: the standard Witt basis of R^{k,k} for k = 1, 2, 3, and of R^{2,2,1}; other Witt bases differ
+      by an isometry of the span

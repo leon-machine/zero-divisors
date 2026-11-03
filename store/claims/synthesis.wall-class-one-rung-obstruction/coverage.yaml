@@ -1,0 +1,22 @@
+functions:
+  check_rung_relaxed_construction:
+    kind: sampled
+    clauses: ["(3) existence direction: a nondegenerate one-rung form equal to G + H on the physical exterior and G + (positive definite) on the far exterior", "(3) good-coupling bound mu^2 S < 2 is needed"]
+    omits: "Schur identity det h = det G * 2 (-2 sigma - mu^2 beta^2 s) on 80 pseudo-random rational instances (n = 3, 4); the construction itself is built along one model transversal (physical signature (2,1), 320 grid points, hand-chosen bump and interpolation) so there is no global manifold and w_1(L) is trivially zero; negative controls mu = 1, 8 degenerate as expected; the 'only if w_1 = 0' direction of (3), the strict reading (1), and (4) and (5) are not tested"
+  check_far_side_negative_bundle_contains_dying_line:
+    kind: sampled
+    clauses: ["(3) only-if, local step: inertia(G) = inertia(G|_Q) + sign of the Schur complement, so the far-side negative bundle is N(G|_Q) plus the dying line"]
+    omits: "60 pseudo-random symmetric matrices of order 3 to 5 (Haynsworth inertia additivity); the global step (the negative line bundle is a copy of L, so w_1 vanishes) is topological and not computed"
+  check_doubling_is_never_obstructed:
+    kind: sampled
+    clauses: ["(2) h_D is nondegenerate of signature (n,n) even where G is singular"]
+    omits: "constant beta in {1, 1/3, -2} and A = identity only; 40 pseudo-random symmetric S of order 2 to 4 (half forced to corank one) plus a worked example, via D^2 = (S^2 + beta^2) (+) (S^2 + beta^2); a general bundle metric A, a bump beta equal to 1 near Sigma and 0 outside C, and the equality with G (+) (-G) outside C are not tested"
+  check_isotropic_line_in_rank_three:
+    kind: sampled
+    clauses: ["(4) and (5) local step: in the rank-three wall Gram of signature (2,1) the orthogonal complement of the isotropic line is positive semidefinite, so a negative vector pairs nondegenerately with the line"]
+    omits: "three couplings (mu, nu) with mu nu > 0; the passage to Lambda|_Sigma = L and the restriction condition on w_1(L) in (5) are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "only local linear-algebra ingredients are computed; clauses (1), (4), (5) and the 'only if' of (3) are topological and have no computation"

@@ -1,0 +1,22 @@
+functions:
+  check_module_irreducible_and_factorised:
+    kind: exact
+    clauses:
+    - '"Lambda(W + R_2) = Lambda W (x) Lambda R_2 as an irreducible module over M_32(C), pair modes before rung modes"'
+    omits: Irreducibility is the scalar commutant of the ten mode operators (Burnside gives M_32); the identification with the complexified two-rung algebra T_2 (x) C is the imported tower fact
+  check_even_ground_elements_act_on_pairs_only:
+    kind: exact
+    clauses:
+    - (1)
+    omits: ''
+  check_rung_vectors_twisted_and_commuting:
+    kind: exact
+    clauses:
+    - (2)
+    - (3)
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: All three parts are exact operator-form tests on the 32 x 32 module.

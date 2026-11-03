@@ -1,0 +1,24 @@
+functions:
+  check_mean_mass_per_baryon_share:
+    kind: exact
+    clauses: ["(i) mean mass per baryon 936.7 against 931.8 MeV, f_2 = 0.995 in the completion limit"]
+    omits: "Lambda_2 = Lambda_6 and c_2 = c_6 are the mirror theorem; the neutron-rich composition at the gravitational floor (T14c caveat) is not computed"
+  check_one_loop_bound_and_chain:
+    kind: sampled
+    clauses: ["(ii) ln(Lambda_2/Lambda_6) >= Delta b/(b_6 + Delta b) ln(M/Lambda_6)"]
+    omits: "equality of the one-loop relation checked at sample b_6, Delta b and L_6; the inequality chain on a 41-point grid at six (b_6, Delta b) pairs"
+  check_one_flavour_factors_over_the_ceiling_range:
+    kind: exact
+    clauses: ["(ii) one Dirac flavour moves the share by a factor between 4.89 and 21.4, past 5.364 except at the bottom of the range with b_6 = 11"]
+    omits: "one-loop assumptions (common ceiling and coupling) are inputs; the range 3.5e11 to 6e14 GeV is taken from the check's constants"
+  check_coupling_departure_window:
+    kind: exact
+    clauses: ["(ii) a factor 2.45 per unit at b = 7", "within ten percent of one only for |delta| < 0.106"]
+    omits: "window edge bracketed between 0.106 and 0.107 on the upward side, which is the binding one"
+untouched_premises:
+  dark-matter.no-coupling-rule-odd-towers-follows: "(iii) is a scope statement and is not computed (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numerical claims of (i) and (ii) are bracketed exactly; the one-loop bound itself is checked as algebra at samples"

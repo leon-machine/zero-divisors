@@ -1,0 +1,18 @@
+functions:
+  check_gibbs_state_is_kms_on_b:
+    kind: sampled
+    clauses: ["\"If omega is alpha-KMS at beta on B\""]
+    omits: "the hypothesis is realised only for B = Mat_4 (two modes) with H = N1 + 2 N2 and q = 1/2, 3; all 256 matrix-unit pairs"
+  check_restriction_to_invariant_subalgebras:
+    kind: sampled
+    clauses: ["\"then omega restricted to C is KMS at beta for alpha restricted to C\""]
+    omits: "four unital invariant subalgebras of Mat_4 (dimensions 4, 4, 8, 6) at two q; the C*-algebraic setting and analytic continuation are not tested (the docstring says only the finite-dimensional core is checked); invariance under the real flow is tested by seven scalings z, and alpha_{i beta}(C) = C at the two q"
+  check_non_invariant_control:
+    kind: sampled
+    clauses: ["\"alpha_t(C) = C\""]
+    omits: "control only: shows span{1, swap} is a unital subalgebra not preserved by the flow, so the hypothesis can fail; it does not test the conclusion for a non-invariant subalgebra"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite-dimensional content is tested exactly on one model with four subalgebras, as the docstring says; the general C*-algebra statement is not computed"

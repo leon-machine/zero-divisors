@@ -1,0 +1,14 @@
+functions:
+  check_isometries_factor_into_reflections:
+    kind: sampled
+    clauses:
+    - '"Every isometry of (V, Q) is a product of at most n reflections"'
+    omits: six rational isometries in dimensions 2 and 3, factored by the constructive step of the proof;
+      the general theorem is imported
+  check_degenerate_counterexample:
+    kind: exact
+    clauses:
+    - '"every reflection fixes rad V pointwise, so an isometry of a degenerate space that moves a radical
+      vector is not a product of reflections"'
+    omits: the fixing of the radical is checked on four reflections; that it holds for all follows from
+      the reflection formula

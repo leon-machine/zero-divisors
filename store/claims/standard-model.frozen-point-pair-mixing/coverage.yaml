@@ -1,0 +1,22 @@
+functions:
+  check_ambient_weights_are_nonzero:
+    kind: exact
+    clauses:
+    - '"V_C = 3 + 3bar with weights +-e_i, none zero"'
+    - '"no nonzero vector of V_C, in particular no frozen point at any Lambda, is U(3)-invariant"'
+    omits: The frozen-point part is the five sample (a, b) for I = a v_1 + b w_1, which the zero joint kernel on all of V_C already covers
+  check_generic_stabiliser_is_u2:
+    kind: sampled
+    clauses:
+    - '"the stabiliser in U(3) of a generic vector is a U(2)"'
+    omits: Five sample vectors of C^3 (two basis vectors and three complex ones), not a generic vector symbolically; no premise is called
+  check_vectors_commute_with_rung_mixing:
+    kind: exact
+    clauses:
+    - '"every vector of V_C commutes with the rung mixing U(2) and the rung number"'
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Weights and commutation are exact in the five-mode module; the stabiliser dimension is sampled.

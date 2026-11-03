@@ -1,0 +1,18 @@
+functions:
+  check_orbits_and_invariant_assignments:
+    kind: complete
+    clauses: ["(4)", "(1)", "(2)"]
+    omits: "exhaustive over all signatures with p, q <= 4 and all eight residues and all 64 pairs (x, y): the reversal orbits are exactly {0}, {4}, {1,7}, {2,6}, {3,5}, invariant assignments have dimension five, and the orbit indicator separates any two residues in different orbits; this is the single group Z/2 acting on residues, so the general finite-group statements of (1) and (2) are not tested"
+  check_haar_on_orbit_and_maxent_overreach:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the only invariant probability on {2,6} is found by search over nine multiples of 1/8, not solved in general (the two-line argument w2 = w6, w2 + w6 = 1 is not coded); uniform over all eight residues is invariant and equates residues 0 and 2; at five fixed orbit totals the invariant assignment is the Haar one on each orbit; the general finite orbit statement is not tested"
+  check_many_valued_outcome_has_no_invariant_member:
+    kind: exact
+    clauses: ["(3)", "(4)"]
+    omits: "the swap of a two-element orbit: the outcome set {(1,0),(0,1)} is invariant with no invariant member, the barycentre is a single-valued invariant alternative, and a three-cycle analogue; the temperature remark of (4) is a toy with xi = 1/3 and a grid of three values showing single-valued symmetric outcomes force T_2 = T_6; the record's exclusion of a common temperature (Proposition mirrors-temperature-p2) and P2's indexical clause are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the statement is a formalisation with abstract finite groups; the checks verify the reversal-orbit instance and the swap counterexample exactly"

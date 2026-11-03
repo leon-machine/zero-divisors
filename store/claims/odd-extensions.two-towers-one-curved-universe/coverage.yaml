@@ -1,0 +1,21 @@
+functions:
+  check_intermediate_algebras_and_the_rule:
+    kind: sampled
+    clauses: ["(i) intermediate algebras: de Sitter this world Cl(1,4) doubled, mirror Cl(4,1) complexified; anti-de Sitter this world Cl(2,3) complexified, mirror Cl(3,2) doubled", "(i) doubled iff (de Sitter and this world) or (anti-de Sitter and mirror)"]
+    omits: "All four (world, sign) cases are enumerated, but each at one representative frozen point I of the right sign of norm in R^{2,4} or R^{4,2}; that every I of that sign gives the same signature is not shown. That the mirror reads -g, giving the (4,2) tractor bundle and norm -Q(I), is taken as given."
+  check_even_subalgebras_coincide:
+    kind: exact
+    clauses: ["(ii) Cl^0(1,4) and Cl^0(4,1) have the same presentation: bivectors e_mu e_5 anticommuting with squares (+,-,-,-)"]
+    omits: "The structure constants agree on all 16 x 16 products and the isomorphism of the even subalgebras follows; that the spin groups, spinor modules, MacDowell-Mansouri bivector algebras and the copy theorem's derived content coincide is read from this isomorphism, not separately computed."
+  check_fifth_generator_alone_differs:
+    kind: exact
+    clauses: ["(iii) doubled case: e_5^2 = -1 and e_5 = +-omega' on the two summands; complexified case: e_5^2 = +1 and e_5 = omega'^-1 omega, omega central with omega^2 = -1"]
+    omits: "Run only for Cl(1,4) and Cl(4,1); the anti-de Sitter pair Cl(3,2), Cl(2,3) is not rerun here (it falls under the general doubling-or-complexification statement)."
+untouched_premises:
+  odd-extensions.belongs-tower: "Cited for the closing consequence that the unit vector along V lies outside the soldered space; the docstring states the consequence is not recomputed."
+  dark-energy.point-infinity-has-no-physical-fluctuation: "Cited for placing the V direction in the pure-gauge sector; the docstring states the consequence is not recomputed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four-case rule, the coincidence of the even parts and the fifth-generator contrast are computed; the closing consequence that no derived quantity uses e_5 rests on the cited propositions and is not recomputed, as the docstring says."

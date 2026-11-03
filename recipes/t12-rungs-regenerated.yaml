@@ -1,0 +1,47 @@
+doc: t12-rungs-regenerated
+title: 'Two Rungs Up: The Composite as a Spinor of the Transported Algebra, and What That Would Decide:
+  A companion note to Transport Papers T12 (Hypothesis (S), successor problem (6)) (regenerated from the
+  store)'
+author: Leon Butler
+level: formal
+spine:
+- rungs.imported-tower-one-qubit-per-rung
+- rungs.imported-totality-minimality-completion
+- rungs.imported-spinor-identification-witt-data-line
+- rungs.imported-mass-symplectic-area
+- rungs.imported-ladder-automorphism-group-no-lepton
+- rungs.imported-fock-representation-bogoliubov-group
+- rungs.imported-fock-representation-bogoliubov-group-external
+- rungs.imported-results-t12-used-registration
+- rungs.rung-spinor-module-mixings
+- rungs.mass-bracket-frozen-points-grip-slot
+- rungs.ladder-group-rung-mixing-group-one
+- rungs.r-s-are-one-hypothesis-two
+- rungs.generators-outside-gauge-algebra
+- rungs.fact-null-momenta-invite-one-rung
+- rungs.two-twistor-bivector-null-invites-one
+- rungs.transported-module-holds-tuple-one-vector
+show: spine-only
+paper: T12-rungs
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T12_rungs_note.tex
+  note: Recreate T12-rungs from the store
+cite:
+- standard-model.under-s-composites-state-space-spinor
+prose: paper
+msc: Primary 81R40, 15A66; Secondary 81V22, 20G45.
+keywords: transport principle; Clifford tower; spinor module; Standard Model; $\mathrm{Spin}(10)$; twistor; Fock space.

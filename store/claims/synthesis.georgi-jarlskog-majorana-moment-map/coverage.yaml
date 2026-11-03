@@ -1,0 +1,10 @@
+functions:
+  check_moment_map_georgi_jarlskog:
+    kind: exact
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "full 32 x 32 exact matrix identities on the five-mode module: mu(T) = X/8, mu_P = -(3/16)(B - L), mu_R = T3R/4, no mixed component (asserted by construction of the projection), w4 mu_P, w4 mu_R mu_P = (3/256)(T_GJ - w4(B - L)), symmetric part 3/256 times the GJ form (ratio 3), antisymmetric part -3/256 times the grade-three form with equal moduli, and annihilation of N_R odd; (ii) is checked for powers 0 to 5 of mu, which span all polynomials in mu since mu has six distinct eigenvalues; invariance of the pairing B is checked on four sample bivectors and species labels are entered from (S)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "all four clauses are verified as exact operator identities on the module the statement is about"

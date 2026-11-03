@@ -1,0 +1,19 @@
+functions:
+  check_one_rung_candidates_induce_descent:
+    kind: exact
+    clauses: ["Stinespring's minimal dilation and the occupation copy each induce the descent on the even sector"]
+    omits: "the Stinespring map induces 2E (rho + G0 rho G0), i.e. the descent up to the factor 2, as the docstring states; all four even matrix units are run"
+  check_both_one_rung_candidates_are_odd:
+    kind: exact
+    clauses: ["both are odd", "Stinespring record states |0> +- |1> mix the parities", "the occupation copy sends the even |11> to a joint state of odd parity"]
+    omits: "that the rung's even sector is one line is asserted (len = 1); the argument that no even one-rung map separates r_00 and r_11 is the theorem, not recomputed here"
+  check_two_rung_occupation_copy_is_even_lift:
+    kind: exact
+    clauses: ["there is no other obstruction"]
+    omits: "'no other obstruction' is shown only by exhibiting the even two-rung occupation copy that induces E and equals the lift of (iii); the univalence rule itself is not computable"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is about the pair with one rung; the three functions compute each stated map exactly on the full finite case."

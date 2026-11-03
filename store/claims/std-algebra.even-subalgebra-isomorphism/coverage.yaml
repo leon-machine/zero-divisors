@@ -1,0 +1,9 @@
+functions:
+  check_even_subalgebra_is_clifford:
+    kind: complete
+    clauses:
+    - '"u -> ue extends to an isomorphism Cl(U, -sQ) -> Cl+(V, Q)"'
+    - '"Cl+(p,q,r) = Cl(p,q-1,r)"'
+    - '"Cl+(p,q,r) = Cl(q,p-1,r)"'
+    omits: every signature with n <= 5 (degenerate included), both choices of e where available; e is
+      a basis generator

@@ -1,0 +1,21 @@
+functions:
+  check_three_cutoffs_solve_exactly:
+    kind: exact
+    clauses:
+    - the three cutoff conditions 2M/r^3 = 1, 48 M^2/r^6 = 1 and tau(r) = 1 yield r_c = c_0 M^(1/3) with c_0 = 2^(1/3), 48^(1/6), (3/2)^(2/3) 2^(1/3)
+    omits: tau(r) is entered by its leading term (2/3) r^(3/2) (2M)^(-1/2)
+  check_proper_time_leading_term:
+    kind: exact
+    clauses:
+    - tau = (2/3) r^(3/2) (2M)^(-1/2) (1 + O(r/2M)) is the proper time to the singularity
+    omits: the series coefficients (2/3 and the next-order ratio 3/10) are exact; A(u)^-1 = u/(2M - u) is checked at nine sample points only and the powers of 2M are carried by comment rather than computed
+  check_constants_order_one:
+    kind: exact
+    clauses:
+    - all three constants are order one
+    omits: order one is read as c_0 in (1, 2), checked through sixth powers 4, 48, 81/4 and interval bounds
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact monomial and series computations matching the stated constants.

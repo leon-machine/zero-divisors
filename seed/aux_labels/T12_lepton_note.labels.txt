@@ -1,0 +1,20 @@
+\newlabel{sec:setting}{{1}{3}{Setting, and what is imported}{section.1}{}}
+\newlabel{fact:ladder}{{1.1}{3}{imported: the ladder acts on twistors as units}{theorem.1.1}{}}
+\newlabel{fact:pairs}{{1.2}{3}{imported: a twistor is a state of its pair system, and its excitations are the Dirac module}{theorem.1.2}{}}
+\newlabel{fact:group}{{1.3}{3}{imported: the automorphism group, its section, and the hypercharge generator}{theorem.1.3}{}}
+\newlabel{fact:nolepton}{{1.4}{3}{imported: the tensor ledger contains no lepton}{theorem.1.4}{}}
+\newlabel{fact:free}{{1.5}{3}{imported: the free sector and the anomaly conditions}{theorem.1.5}{}}
+\newlabel{fact:duality}{{1.6}{3}{imported: duality in the pair system}{theorem.1.6}{}}
+\newlabel{sec:constituent}{{2}{4}{The constituent space: the hypothesis that holds a lepton, and where it leaves the ledger}{section.2}{}}
+\newlabel{prop:content}{{2.1}{4}{The content of the constituent space}{theorem.2.1}{}}
+\newlabel{rem:assumed}{{2.2}{5}{What was assumed}{theorem.2.2}{}}
+\newlabel{prop:twoactions}{{2.3}{5}{The unit action and the cell action}{theorem.2.3}{}}
+\newlabel{rem:operator}{{2.4}{6}{The operator route, and why it is not one}{theorem.2.4}{}}
+\newlabel{sec:group}{{3}{6}{The group on the constituents, and the one remaining choice}{section.3}{}}
+\newlabel{prop:selfconj}{{3.1}{6}{Self-conjugacy forces the determinant-one group}{theorem.3.1}{}}
+\newlabel{obs:thirteen}{{3.2}{7}{What self-conjugacy says about the thirteenth generator}{theorem.3.2}{}}
+\newlabel{prop:orientation}{{3.3}{8}{The relative handedness of the slotted and the free sectors}{theorem.3.3}{}}
+\newlabel{rem:orientation}{{3.4}{8}{What kind of fact the relative handedness is}{theorem.3.4}{}}
+\newlabel{sec:changes}{{4}{9}{What this changes in T12, and what it does not}{section.4}{}}
+\newlabel{sec:position}{{5}{10}{Position in the series}{section.5}{}}
+\newlabel{sec:verification}{{6}{10}{Machine verification}{section.6}{}}

@@ -1,0 +1,30 @@
+functions:
+  check_bivectors_close_and_act_on_vectors:
+    kind: exact
+    clauses:
+    - bivectors close under commutator
+    - '[beta, c(w)] = c(beta w)'
+    omits: closure on all 225 pairs of basis bivectors (plus one complex combination); the vector action on all
+      15 bivectors and 6 basis vectors, which fixes it for every w by linearity
+  check_rho_is_isomorphism_onto_sl:
+    kind: exact
+    clauses:
+    - rho is a Lie algebra isomorphism onto sl(CS)
+    omits: ''
+  check_spin_image_in_sl_and_transitive:
+    kind: sampled
+    clauses:
+    - the image of Spin(V_C) in GL(CS) is all of SL(CS)
+    - SL(CS) acts transitively on CS minus {0}
+    omits: determinant 1 for six sample products of two vectors with Q(u) Q(v) = 1 (plus a scaling control), and
+      tangent rank 4 at four sample spinors; that the image is all of SL(CS) and that open orbits in the connected
+      CS minus {0} give transitivity are arguments from the Lie algebra statement, not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The Lie algebra statement is exact on all basis pairs; the group-level 'consequently' is sampled.
+untouched_premises:
+  std-algebra.vector-squares: standard algebra cited in the proof; the check computes the statement directly
+  std-algebra.complex-clifford-algebra: cited for the complex Clifford algebra the representation lives in; the
+    check verifies the representation directly

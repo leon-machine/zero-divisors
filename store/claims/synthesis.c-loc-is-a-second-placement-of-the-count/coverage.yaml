@@ -1,0 +1,18 @@
+functions:
+  check_cutoff_meets_no_horizon:
+    kind: sampled
+    clauses: [(i)]
+    omits: Schwarzschild part is an exact identity in M ((2M)^3 - 2M = 2M(2M-1)(2M+1), threshold M = 1/2, horizon scale 1/(4M^2)); the Kerr part is three holes at M = 500 (a = 300, 400, 480), not all a >= 2(2M)^{2/3}; that (C1), (C2) place modes only on the cutoff locus is the premises' content, not computed.
+  check_killing_patch_is_local_rindler:
+    kind: partial
+    clauses: [(ii)]
+    omits: Only that the outgoing null expansion theta = f/r vanishes at r = 2M for Schwarzschild at three masses (shear is taken zero by symmetry); the local Rindler approximation, the value eta A = A/4 and the Kerr case are not computed.
+  check_double_count_doubles_newton_constant:
+    kind: exact
+    clauses: [(iii)]
+    omits: The numbers (32 pi nu <s> = 1, eta = 1/8, G_cl = 2G, entropy per area 1/2 at the registered nu, G_cl = kG for k = 1, 2, 3) are exact arithmetic in x = pi nu <s>; the hypotheses (independent sets, product state, S_tot) are inputs, not tested; S_BH = 4 pi M^2 is the derivative identity plus two masses.
+  check_two_placements_on_kerr:
+    kind: exact
+    clauses: [(iv)]
+    omits: The two stated bounds (N <= 11/28 A_+/4 at (500,300); N > A_+/4 at (500,480)) are exact with Archimedes bounds on pi, but the literal-count formula and the eta_K bound are hard-coded from the companion Kerr theorem, not recomputed; the independent-reading remark A_+/4 + N != A_+/4 is not tested.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: All four numeric clauses are reproduced; (ii) is covered only for the Schwarzschild expansion.}

@@ -1,0 +1,30 @@
+functions:
+  check_positive_pair_collision_is_exchange_fixed_point:
+    kind: exact
+    clauses: ["(1) p(1/u) = (p1, p3, p2)(u)", "(1) collision at the fixed point u = 1 (Schwarzschild)"]
+    omits: "uniqueness of the collision locus rests on the factorisation of p2 - p3 (exact) and the census premise; that the Definition admits the collision and the Theorem holds across it verbatim is not tested"
+  check_ordering_change_forces_taub_edge:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "constraints, q1 q2 identity and q(1/2) = p(2) are exact; which axis is dying for v > 0 and v < 0 is read at three samples each; that an ordering change forces the Taub triple is the census premise, not re-derived"
+  check_dying_order_maximal_at_schwarzschild:
+    kind: exact
+    clauses: ["(3) d(1) - d(u) = 2(u-1)^2 / (3(1+u+u^2))", "(3) maximal d = 2/3 at the Schwarzschild triple", "(3) tends to zero at the edge"]
+    omits: "the tau^2 series for Schwarzschild consistency is truncated at order 8 and is not a clause of the statement; d = -2 p1 is the dying order only on the u > 0 chamber"
+  check_edge_gram_nondegenerate_and_sheaf_rank:
+    kind: sampled
+    clauses: ["(3) on Z the weighted Gram is diag(1,-c1,-c2,-c3), corank zero", "(3) radical line rank one on chambers and zero on Z", "(3) the degeneration sheaf keeps rank sixteen"]
+    omits: "two choices of c and two chamber Grams entered by hand, not derived from the weighted-Gram construction; ranks computed for those constant matrices only"
+  check_chamber_package_across_the_edge:
+    kind: sampled
+    clauses: ["(3) on each chamber the forced weights and the package hold with the chamber's own dying axis"]
+    omits: "only the v < 0 chamber at v = -1/4 (weighted Gram, det h = 1 + rho', signature (2,4) at four sample w, weights from the weight rule); the v > 0 chamber and the rest of the package are not tested; the premise's returned data is not used"
+  check_no_module_crosses_the_edge:
+    kind: partial
+    clauses: ["(4) both chamber weight assignments degenerate to (0,0,0,1) at Z", "(4) the diagonal transition is a unit on neither side"]
+    omits: "exact identities for q1(-q2) and q1 - q2 but exponent signs only at three v on each side; that no isomorphism of any form exists over a neighbourhood is not tested, only the diagonal transition is examined (on the v < 0 chamber its exponents are both positive and the inverse's both negative)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Rational-function identities on the Kasner and witness curves are exact; chamber signs, the chamber package and non-crossing are sampled at a few v, and the non-isomorphism of the chamber modules is shown only for the diagonal transition.

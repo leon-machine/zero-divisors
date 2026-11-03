@@ -1,0 +1,22 @@
+functions:
+  check_mode_algebra_and_unit_rapidity:
+    kind: exact
+    clauses: ["setup: ad_X v_j = -(omega_j/kappa) v_j, ad_X v_j^* = +(omega_j/kappa) v_j^*", "(ii)"]
+    omits: "exact Clifford algebra for n = 3 modes: CAR, K_j = sigma_j/2 = N_j - 1/2 acting on its own pair with weights -1, +1 at unit rapidity and trivially on other modes, and the adjoint spectrum -c_j, +c_j for two sample weight vectors; the identification of the flow's own plane pair (Proposition plane-rate, Definition of the boundary modes) is not tested"
+  check_clock_forces_binary_weights:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "exhaustive over integer weight vectors c in {-2..2}^3 (124 nonzero: 52 clocks, 72 not), not over all real weights: X is a clock exactly when the nonzero |c_i| coincide, and then the normalised weights lie in {-1, 0, 1}; only (K1) is tested, the rapidity normalisation (K2) is a convention here; 'without (K) the weights are free' follows from the enumeration"
+  check_q_weights_not_a_clock:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "arrays k = -j..j for j = 1, 2, 3: a clock for j = 1, not for j = 2, 3 (magnitudes 1..j with one zero mode); j >= 4 follows from j = 2 but is not run"
+  check_binary_residue:
+    kind: exact
+    clauses: ["(iii)", "(iv)", "(vi)"]
+    omits: "rigorous rational brackets: s(2 pi) in (0.013577, 0.013578), kappa_c(0) in (0.3606, 0.3608) containing 1/(4 ln 2), kappa_c(1) in (18.413, 18.414), ln 2/s(2 pi) in (51.05, 51.06), 1/s(2 pi) in (73.65, 73.66); strict increase in f is shown at five values f = 0, 1/4, ..., 1 only; the dichotomy f in {0, 1} of (iv), the rule that completed pairs of boost planes are moved, and omega_j = kappa_Lambda in (vi) are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numerical clauses (iii) and (vi) reproduced by rigorous brackets; (i) and (v) are enumerations over integer weights"

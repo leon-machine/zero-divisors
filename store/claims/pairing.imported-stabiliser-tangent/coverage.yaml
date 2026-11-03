@@ -1,0 +1,32 @@
+functions:
+  check_quadratic_operators_span_the_bivectors:
+    kind: sampled
+    clauses:
+    - '"the bivectors of so(2 nu) split as hops, Cartan elements, pair annihilations and pair creations"'
+    omits: nu = 2, 3, 4 only, not general nu >= 2
+  check_action_on_the_vacuum:
+    kind: sampled
+    clauses:
+    - '"every hop with i != j and every annihilation vanishes and every Cartan element is a scalar"'
+    - '"the creations span the tangent of dimension nu(nu-1)/2"'
+    omits: nu = 2, 3, 4 only
+  check_stabiliser_and_tangent_dimensions:
+    kind: sampled
+    clauses:
+    - '"hops and annihilations are the stabiliser of the vacuum ray"'
+    - '"the tangent ... of dimension nu(nu-1)/2"'
+    omits: the dimension nu^2 + nu(nu-1)/2 of the stabiliser is a kernel computation at nu = 2, 3, 4 only; that the orbit of Witt vacua is the spinor variety is imported
+  check_hop_rotation_fixes_and_pairing_rotation_moves_the_vacuum:
+    kind: sampled
+    clauses:
+    - '"A hop rotation fixes the vacuum, a pairing rotation moves it"'
+    - '"|00> -> 3/5 |00> + 4/5 |11> is the pairing rotation on one pair at (cos theta, sin theta) = (3/5, 4/5)"'
+    omits: one angle (3/5, 4/5) and nu = 2, 3, 4; the witness is exact (Jordan-Wigner |11> = a1^dag a2^dag |0>)
+untouched_premises:
+  one-relation.imported-cartans-purity-theorem-thouless-form: Thouless exponential form is declared unused by the docstring
+  pairing.imported-stabiliser-tangent-external: literature restatement, declared not called
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: each function is an exact computation at nu = 2, 3, 4 of statements made for nu >= 2, recorded as sampled

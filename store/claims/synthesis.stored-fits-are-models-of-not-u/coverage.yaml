@@ -1,0 +1,14 @@
+functions:
+  check_charged_heavy_values:
+    kind: exact
+    clauses: ["(i) sigma_max(M_u) in (92.44, 92.46) and sigma_max(M_d) in (1.3649, 1.3652) in every set"]
+    omits: "exact Sturm-sequence brackets for all four stored sets, so the finite statement is covered; the coupling digits are embedded copies of STORED_FITS and the forms M_u = Y + w_u f + c_u H, M_nu = Y - 3 w_u f + c_n H, M_d = Z + w_d f + c_d H are the check's own reading of the Clebsch structure (premise called, formulas not compared); that these are the masses the fits target is not tested"
+  check_leading_dirac_values:
+    kind: exact
+    clauses: ["(ii) sigma_max(M_nu) in the four stated brackets", "(iii) factor above 18 from m_t, above 2.2 from m_b, above 90 among the sets"]
+    omits: "exact Sturm brackets and exact rational inequalities for all four sets; (iii) uses the point values m_t = 92.45 and m_b = 1.3651 rather than the (i) brackets, which does not change the conclusions; the model-of claim (the sets satisfy Hypothesis (S), Premise (EW), the triplet vev and fit the eighteen observables) and the ceiling argument ('argued, not computed') are not tested here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numbers in (i) to (iii) are pinned exactly; the fit quality and the closing independence claim rest on the cited proposition and on argument"

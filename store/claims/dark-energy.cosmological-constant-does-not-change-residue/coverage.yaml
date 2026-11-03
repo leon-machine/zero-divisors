@@ -1,0 +1,22 @@
+functions:
+  check_field_equations_of_the_bianchi_field:
+    kind: sampled
+    clauses: ["the field equations of the diagonal Bianchi I field: H_i' + H_i sum_j H_j = Lambda and sum_{i<j} H_i H_j = Lambda"]
+    omits: "two random rational jets (a_i, H_i, H_i') and two de Sitter data points; the Ricci components computed from the torsion-free gauge field match the closed forms and the constraint identity sum(evolution_i) - (00) = 2 sum_{i<j} H_i H_j at those jets only"
+  check_unique_odd_formal_solution:
+    kind: sampled
+    clauses: ["for every Kasner point a unique formal solution with a simple pole of residue p", "H_i = p_i/tau + (Lambda/2)(1 - p_i) tau + sum h_{i,n} tau^{2n-1}", "every h_{i,n} is a polynomial in Lambda and p fixed by the evolution equations alone"]
+    omits: "five rational Kasner points, Lambda an exact indeterminate, series built through tau^5 and residuals checked to tau^4; polynomiality in Lambda is checked for n = 2 only; uniqueness and oddness rest on the determinants (2n)^2(2n+1) and (2n+1)^2(2n+2) for n = 1, 2, 3, not all n; the dependence on p is sampled, not symbolic"
+  check_constraint_propagates:
+    kind: exact
+    clauses: ["the constraint then holding identically"]
+    omits: "the propagation identity C' = 2 S (Lambda - C) is exact (polynomial of degree <= 3 in each of four variables, fully determined by the 4^4 grid); that it forces C = Lambda for the pole solution is an argument not computed here, the series check showing only that the constraint residual vanishes through tau^4"
+  check_schwarzschild_de_sitter_residue_unchanged:
+    kind: sampled
+    clauses: ["at a Schwarzschild-de Sitter wall the residue is the Kasner boost of the Lambda = 0 approach", "the field equations at the wall remain the Kasner relations"]
+    omits: "c = Lambda/3 at three values (1, -2, 5/7) against Lambda = 0, tau^0 coefficients of the interior rates compared exactly; the claimed corrections of relative order tau^{1/3} and tau^{2/3} are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Formal-series claims are checked at sample Kasner points and low orders with Lambda symbolic; the propagation identity is exact and the wall clause is sampled in Lambda."

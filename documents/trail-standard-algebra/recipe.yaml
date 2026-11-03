@@ -1,0 +1,27 @@
+doc: trail-standard-algebra
+title: The algebra core
+author: Leon Butler
+level: lay
+spine:
+- std-algebra.blade-basis
+- std-algebra.vector-squares
+- std-algebra.involution-properties
+- primer.centre
+- std-algebra.reflection
+- std-algebra.spin-double-cover
+- std-algebra.witt-decomposition
+- std-algebra.periodicity
+- std-algebra.witt-basis-car
+- std-algebra.fock-representation
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

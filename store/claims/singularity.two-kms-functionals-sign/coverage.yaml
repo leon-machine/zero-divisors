@@ -1,0 +1,20 @@
+functions:
+  check_ungraded_kms_is_unique_gibbs_state:
+    kind: sampled
+    clauses: ["(1) the functionals satisfying the ungraded KMS identity are the multiples of tr(e^{-beta omega K} .)", "Z = 1 + e^{-beta omega}, occupancy (e^{beta omega} + 1)^{-1}"]
+    omits: "kernel computed on all 16 pairs of matrix units, exact, but at five rational Boltzmann factors x = e^{-beta omega} in (0,1), not symbolically in beta"
+  check_graded_kms_is_parity_twisted_not_a_state:
+    kind: sampled
+    clauses: ["(2) the graded identity gives the multiples of tr(Gamma e^{-beta omega K} .)", "Z_Gamma = 1 - e^{-beta omega}, occupancy -x/(1-x) < 0, not a state"]
+    omits: "five rational x in (0,1); the check that the normalised functional is negative on N is at those samples"
+  check_plus_one_is_the_two_state_sum:
+    kind: sampled
+    clauses: ["(3) the +1 of the Fermi-Dirac denominator is Z = 1 + e^{-beta omega}, a sum over the two module states, with sign + for the KMS state and - for the twisted functional"]
+    omits: "five rational x; the statement that the gluing condition of (R) is the ungraded identity and selects the state is an identification with Premise r-regularity-fixed-locus, not computed"
+untouched_premises:
+  singularity.kms-uniqueness-factor: "the uniqueness in (1) is recomputed here as a kernel instead of being imported, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "linear-algebra content tested exactly at five Boltzmann factors; the link to Premise (R) is not computable"

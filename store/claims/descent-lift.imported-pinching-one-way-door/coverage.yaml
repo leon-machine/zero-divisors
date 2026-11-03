@@ -1,0 +1,18 @@
+functions:
+  check_pinching_is_conditional_expectation:
+    kind: sampled
+    clauses: ["pinching is idempotent", "image is the commutant of P", "conditional expectation (bimodule property)"]
+    omits: "the six signatures with p + q <= 2 only; the bimodule property is run on all pairs of commutant-basis elements for n <= 1 but only on a 4 x 4 subset (C[:4] x C[-4:]) for n = 2; the statement is for all (p, q)"
+  check_kernel_is_ladder_sector:
+    kind: sampled
+    clauses: ["kernel is the ladder sector A f + A f*"]
+    omits: "the six signatures with p + q <= 2 only"
+  check_no_return_homomorphism:
+    kind: sampled
+    clauses: ["no unital algebra homomorphism B -> A", "every descent is non-multiplicative, the pinching in particular"]
+    omits: "block dimensions for p + q <= 3 and non-multiplicativity for p + q <= 2; the non-existence is argued from block sizes (a unital homomorphism would embed a block), the embedding step is not computed; 'every descent' beyond the pinching and the corner read-out is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring says p + q <= 2 and p + q <= 3, and the asserts match; the general-signature statement is sampled over those cases."

@@ -1,0 +1,405 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "A Clifford algebra is built from a space of directions together with a rule for their lengths, and this trail is a primer on its structure. [[t]] Products of basis directions form a basis of the whole algebra, even when the length rule is degenerate. [[c:sheaf.blade-basis-degenerate-forms-included]] Sandwiching by directions carries out every length-preserving symmetry, each one coming from exactly two such products that differ by sign. [[c:primer.twisted-adjoint-action]] Every real Clifford algebra is a table of real, complex or quaternion numbers, or a pair of such tables, in a pattern that repeats every eight steps. [[c:transport.classification-real-clifford-algebras]] The trail ends by showing that the position in that pattern belongs to the geometry, not to the bare algebra. [[c:dark-matter.residue-soldered-invariant-not-algebraic-one]] These are the tools the other algebra trails rely on. [[t]]",
+  "hash": "095747557eac"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk starts with the multiplication table, moves through symmetries and the special product of all directions to the classification, and ends with matrix enlargements and what the geometry adds to the bare algebra. [[t]]",
+  "hash": "ece93dc39e72"
+ },
+ {
+  "id": "s:clifford-structure",
+  "type": "section",
+  "title": "Clifford algebra structure",
+  "hash": "22390e05304e"
+ },
+ {
+  "id": "i:clifford-structure",
+  "type": "framing",
+  "text": "These results describe a Clifford algebra from the inside: its basis, its symmetries, its centre, and its place in a classification. [[t]]",
+  "hash": "8c9b2df6768f"
+ },
+ {
+  "id": "t:^>sheaf.blade-basis-degenerate-forms-included",
+  "type": "transition",
+  "between": [
+   null,
+   "sheaf.blade-basis-degenerate-forms-included"
+  ],
+  "text": "A Clifford algebra multiplies directions, and the first thing to know is what a basis of it looks like. [[t]] The products of basis directions, called blades, form a basis of the algebra for any length rule, degenerate or not, and for any choice of basis directions, perpendicular or not. [[c:sheaf.blade-basis-degenerate-forms-included]] The multiplication table depends polynomially, and so smoothly, on the length rule. [[c:sheaf.blade-basis-degenerate-forms-included]]",
+  "hash": "c1828c8811df"
+ },
+ {
+  "id": "c:sheaf.blade-basis-degenerate-forms-included",
+  "type": "theorem",
+  "claim": "sheaf.blade-basis-degenerate-forms-included@4",
+  "title": "Blade basis, degenerate forms included",
+  "text": "A Clifford algebra is built from a space of directions together with a rule for multiplying lengths. This result says that the standard basis of the algebra, made from products of basis directions, still works when the rule is degenerate, so that some directions have zero length against everything, and even when the chosen directions are not perpendicular. The multiplication table depends polynomially, and so smoothly, on the rule.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.blade-basis"
+  ],
+  "hash": "59830c4d39d7",
+  "number": 1
+ },
+ {
+  "id": "t:sheaf.blade-basis-degenerate-forms-included>transport.classification-real-clifford-algebras",
+  "type": "transition",
+  "between": [
+   "sheaf.blade-basis-degenerate-forms-included",
+   "transport.classification-real-clifford-algebras"
+  ],
+  "text": "We turn to a further ingredient. [[t]]",
+  "hash": "61db8d834da3"
+ },
+ {
+  "id": "c:transport.classification-real-clifford-algebras",
+  "type": "theorem",
+  "claim": "transport.classification-real-clifford-algebras@3",
+  "title": "Classification of the real Clifford algebras",
+  "text": "Clifford algebras built from a space with p positive and q negative directions turn out to be familiar objects in disguise: square tables of numbers (matrices) whose entries are real numbers, complex numbers or quaternions, or a pair of such tables side by side. Which of these appears depends only on p minus q, in a pattern that repeats every eight steps. Usually the algebra is a single indivisible block; it splits into two identical pieces exactly when p minus q leaves remainder 1 on division by four.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "primer.classification-real-clifford-algebras"
+  ],
+  "hash": "2b8f2c04f5c0",
+  "number": 2
+ },
+ {
+  "id": "t:transport.classification-real-clifford-algebras>odd-extensions.doubling-or-complexification",
+  "type": "transition",
+  "between": [
+   "transport.classification-real-clifford-algebras",
+   "odd-extensions.doubling-or-complexification"
+  ],
+  "text": "In odd dimensions the split has a simple reason behind it. [[t]] If the pseudoscalar squares to plus one, the algebra falls apart into two identical copies of its even part; if it squares to minus one, it behaves like the imaginary unit and the algebra is its even part with complex coefficients allowed. [[c:odd-extensions.doubling-or-complexification]] The even part is always a Clifford algebra of one dimension fewer. [[c:odd-extensions.doubling-or-complexification]]",
+  "hash": "34961cd32488"
+ },
+ {
+  "id": "c:odd-extensions.doubling-or-complexification",
+  "type": "theorem",
+  "claim": "odd-extensions.doubling-or-complexification@5",
+  "title": "Doubling or complexification",
+  "text": "In an odd number of dimensions, the product of all the basis directions commutes with everything. If it squares to plus one, the algebra falls apart into two identical copies of its even part, the part built from products of an even number of directions. If it squares to minus one, it behaves like the imaginary unit and the algebra is that even part with complex coefficients allowed. The even part itself is always a Clifford algebra of one dimension fewer.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "odd-extensions.volume-element-odd-dimension",
+   "std-algebra.z2-grading",
+   "std-algebra.orthogonal-anticommute"
+  ],
+  "hash": "235a93304956",
+  "number": 3
+ },
+ {
+  "id": "t:odd-extensions.doubling-or-complexification>transport.classification-idempotent-orbits",
+  "type": "transition",
+  "between": [
+   "odd-extensions.doubling-or-complexification",
+   "transport.classification-idempotent-orbits"
+  ],
+  "text": "Elements equal to their own square, called idempotents, act like projections, and they mark where division fails. [[t]] In a nondegenerate real Clifford algebra, two idempotents are related by an internal change of viewpoint exactly when they project onto subspaces of the same size, in each block when the algebra splits. [[c:transport.classification-idempotent-orbits]] The ones that no such change can move are exactly the ones that commute with everything. [[c:transport.classification-idempotent-orbits]]",
+  "hash": "63c967f22da3"
+ },
+ {
+  "id": "c:transport.classification-idempotent-orbits",
+  "type": "theorem",
+  "claim": "transport.classification-idempotent-orbits@5",
+  "title": "Classification of idempotent orbits",
+  "text": "Idempotents are elements equal to their own square, like projections onto a subspace. This result sorts them in any nondegenerate real Clifford algebra: two are related by an internal change of viewpoint exactly when they project onto subspaces of the same size (in each of the two blocks, when the algebra splits into two). The ones that no such change can move at all are exactly the ones that commute with everything, and this is how the series separates two of its types of obstruction.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "transport.classification-real-clifford-algebras",
+   "transport.units-span"
+  ],
+  "hash": "cfb9af777f18",
+  "number": 4
+ },
+ {
+  "id": "t:transport.classification-idempotent-orbits>tower.matrix-amplification-structural-properties",
+  "type": "transition",
+  "between": [
+   "transport.classification-idempotent-orbits",
+   "tower.matrix-amplification-structural-properties"
+  ],
+  "text": "The classification describes algebras as matrices, so it helps to know what taking matrices does. [[t]] Replacing an algebra by square matrices with entries in it changes its size but keeps its centre and its simplicity; matrices of matrices are just larger matrices, and the operation distributes over a sum of algebras. [[c:tower.matrix-amplification-structural-properties]]",
+  "hash": "347fc057113b"
+ },
+ {
+  "id": "c:tower.matrix-amplification-structural-properties",
+  "type": "theorem",
+  "claim": "tower.matrix-amplification-structural-properties@3",
+  "title": "Matrix amplification: structural properties",
+  "text": "Replacing an algebra by square matrices whose entries come from that algebra changes its size but not its essential character. The centre stays the same, simplicity is kept, matrices of matrices are just larger matrices, and a direct sum of algebras splits into a direct sum of matrix algebras.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "std-algebra.morita-amplification"
+  ],
+  "hash": "2e3351025710",
+  "number": 5
+ },
+ {
+  "id": "t:tower.matrix-amplification-structural-properties>dark-matter.residue-soldered-invariant-not-algebraic-one",
+  "type": "transition",
+  "between": [
+   "tower.matrix-amplification-structural-properties",
+   "dark-matter.residue-soldered-invariant-not-algebraic-one"
+  ],
+  "text": "Since matrix enlargement keeps so much fixed, a bare algebra can hide where it came from. [[t]] The position in the cycle of eight, the residue, is kept by every isomorphism that carries directions to directions, but not by bare algebra isomorphisms, under which some different residues coincide at equal dimension. [[c:dark-matter.residue-soldered-invariant-not-algebraic-one]] For example, the algebra of our world and that of one of the series' candidate dark towers are the same bare algebra, and what tells them apart is which elements count as directions, which the metric fixes. [[c:dark-matter.residue-soldered-invariant-not-algebraic-one]]",
+  "hash": "3faaa8d72490"
+ },
+ {
+  "id": "c:dark-matter.residue-soldered-invariant-not-algebraic-one",
+  "type": "theorem",
+  "claim": "dark-matter.residue-soldered-invariant-not-algebraic-one@3",
+  "title": "The residue is a soldered invariant, not an algebraic one",
+  "text": "Each tower of possible matter is labelled by a number, its residue, which comes from how many directions are time-like and how many space-like. This result shows that the label only has meaning once the algebra is tied to the geometry of spacetime. As bare algebras, some different towers are exactly the same at the same dimension, for example our world's algebra and that of one dark tower. What tells them apart is which elements count as directions, and that is fixed by the metric.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "dark-matter.type-residue-what-each-tower-can",
+   "std-algebra.sylvester-inertia",
+   "primer.classification-real-clifford-algebras"
+  ],
+  "hash": "df8ec5f74448",
+  "number": 6
+ },
+ {
+  "id": "s:standard-algebra",
+  "type": "section",
+  "title": "Clifford algebras and quadratic forms",
+  "hash": "e368d2e5687c"
+ },
+ {
+  "id": "i:standard-algebra",
+  "type": "framing",
+  "text": "This section gathers the results on Clifford algebras and quadratic forms. [[t]]",
+  "hash": "f131b8821f8f"
+ },
+ {
+  "id": "t:dark-matter.residue-soldered-invariant-not-algebraic-one>primer.commutation-rule",
+  "type": "transition",
+  "between": [
+   "dark-matter.residue-soldered-invariant-not-algebraic-one",
+   "primer.commutation-rule"
+  ],
+  "text": "We turn to a further ingredient. [[t]]",
+  "hash": "61db8d834da3"
+ },
+ {
+  "id": "c:primer.commutation-rule",
+  "type": "theorem",
+  "claim": "primer.commutation-rule@2",
+  "title": "The commutation rule",
+  "text": "In a Clifford algebra two perpendicular directions anticommute: swapping their order flips the sign. This rule extends that to anything built from directions perpendicular to a given one. Moving the given direction past such an element flips the sign of its odd part and leaves its even part alone.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "c8d1c6fd48ee",
+  "number": 7
+ },
+ {
+  "id": "t:primer.commutation-rule>primer.twisted-adjoint-action",
+  "type": "transition",
+  "between": [
+   "primer.commutation-rule",
+   "primer.twisted-adjoint-action"
+  ],
+  "text": "That sign rule is what makes reflections work. [[t]] Sandwiching by a single direction reflects in the mirror perpendicular to it, with a sign twist for products of an odd number of directions, and each length-preserving symmetry arises from exactly two such products, differing by sign. [[c:primer.twisted-adjoint-action]]",
+  "hash": "2d328c0d9f2a"
+ },
+ {
+  "id": "c:primer.twisted-adjoint-action",
+  "type": "theorem",
+  "claim": "primer.twisted-adjoint-action@3",
+  "title": "The twisted adjoint action",
+  "text": "Every symmetry of a geometry that preserves lengths can be built from mirror reflections. In a Clifford algebra each reflection is carried out by sandwiching with a single direction, and a product of directions carries out the combined symmetry. This result sets up the sandwich carefully, with a sign twist for products of an odd number of directions, and shows that each length-preserving symmetry comes from exactly two such products, differing by sign.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "9930882c334e",
+  "number": 8
+ },
+ {
+  "id": "t:primer.twisted-adjoint-action>primer.sign",
+  "type": "transition",
+  "between": [
+   "primer.twisted-adjoint-action",
+   "primer.sign"
+  ],
+  "text": "One product of directions is special: the product of all the basis directions, called the pseudoscalar. [[c:primer.sign]] Its square is always plus one or minus one: plus one exactly when the number of positive directions minus the number of negative ones leaves remainder zero or one on division by four, and minus one otherwise. [[c:primer.sign]]",
+  "hash": "93e46f6f49dc"
+ },
+ {
+  "id": "c:primer.sign",
+  "type": "theorem",
+  "claim": "primer.sign@2",
+  "title": "The sign of $\\omega^2$",
+  "text": "Multiplying all the basis directions of a Clifford algebra together gives a special element called the pseudoscalar. Its square is always plus one or minus one, and this result says which. The answer depends only on the number of positive directions minus the number of negative ones: plus one when that difference leaves remainder 0 or 1 on division by four, and minus one otherwise.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "29865ceed8e9",
+  "number": 9
+ },
+ {
+  "id": "t:primer.sign>primer.centre",
+  "type": "transition",
+  "between": [
+   "primer.sign",
+   "primer.centre"
+  ],
+  "text": "The pseudoscalar also decides which elements commute with everything, the centre of the algebra. [[c:primer.centre]] With an even number of dimensions only the ordinary numbers do; with an odd number the pseudoscalar does too, so the centre becomes two-dimensional. [[c:primer.centre]]",
+  "hash": "f338c8d3af34"
+ },
+ {
+  "id": "c:primer.centre",
+  "type": "theorem",
+  "claim": "primer.centre@2",
+  "title": "The centre",
+  "text": "The centre of an algebra is the set of its elements that commute with everything in it. For the Clifford algebra of a space with an even number of dimensions, only the ordinary numbers do this. With an odd number of dimensions there is one more such element, the product of all the basis directions, so the centre becomes two-dimensional.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "ee3881dfd598",
+  "number": 10
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:dark-matter.type-residue-what-each-tower-can",
+  "type": "fact",
+  "claim": "dark-matter.type-residue-what-each-tower-can@5",
+  "title": "Type by residue, and what each tower can carry intrinsically",
+  "text": "Each tower's basic algebra decides what kind of numbers its matter states naturally use: real numbers, complex numbers or quaternions. That choice depends only on the tower's label, and it fixes which continuous symmetries a tower carries before any further structure is added. For the representatives the paper uses, and in its labelling convention (the opposite convention swaps the two members of each mirror pair), the mirror tower comes out with real spinors and no built-in continuous charge, two of the odd towers with exactly one built-in charge each, and our own world with quaternionic spinors.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim dark-matter.type-residue-what-each-tower-can, version 5 (T14 Thm 3.4)",
+  "hash": "d8df3f1a3bd8",
+  "number": 11
+ },
+ {
+  "id": "c:odd-extensions.volume-element-odd-dimension",
+  "type": "fact",
+  "claim": "odd-extensions.volume-element-odd-dimension@3",
+  "title": "The volume element in odd dimension",
+  "text": "Multiply all the basis directions of an odd-dimensional Clifford algebra together and the result commutes with everything in the algebra. Its square is either plus one or minus one, and this lemma gives a simple formula for which. In five dimensions it is plus one exactly when the number of negative directions is even.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim odd-extensions.volume-element-odd-dimension, version 3 (T14a Lem 2.2)",
+  "hash": "10c5fda86900",
+  "number": 12
+ },
+ {
+  "id": "c:primer.classification-real-clifford-algebras",
+  "type": "fact",
+  "claim": "primer.classification-real-clifford-algebras@3",
+  "title": "Classification of the real Clifford algebras",
+  "text": "Clifford algebras built from a space with p positive and q negative directions turn out to be familiar objects in disguise: square tables of numbers whose entries are real numbers, complex numbers or quaternions, or a pair of such tables side by side. Which one appears depends only on p minus q, in a pattern that repeats every eight steps. The algebra splits into two identical pieces exactly when p minus q leaves remainder 1 on division by four.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim primer.classification-real-clifford-algebras, version 3 (T00 Thm 9.3)",
+  "hash": "e05917451c6b",
+  "number": 13
+ },
+ {
+  "id": "c:std-algebra.blade-basis",
+  "type": "fact",
+  "claim": "std-algebra.blade-basis@1",
+  "title": "The blade basis, degenerate forms included",
+  "text": "Every element of the algebra is a combination of products of distinct basis arrows, and no such product can be written in terms of the others. In $n$ dimensions there are $2^{n}$ of them: the number, the arrows, the planes, the volumes and so on. This stays true even when some directions have zero length.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.blade-basis, version 1",
+  "hash": "d7e1578d2c6d",
+  "number": 14
+ },
+ {
+  "id": "c:std-algebra.morita-amplification",
+  "type": "fact",
+  "claim": "std-algebra.morita-amplification@1",
+  "title": "An algebra and its matrix amplification",
+  "text": "Taking square arrays of elements of an algebra gives a bigger algebra with the same essential structure: the same central elements, the same ways of being cut down, and the same ways of acting on things.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.morita-amplification, version 1",
+  "hash": "cf9136714cb8",
+  "number": 15
+ },
+ {
+  "id": "c:std-algebra.orthogonal-anticommute",
+  "type": "fact",
+  "claim": "std-algebra.orthogonal-anticommute@1",
+  "title": "Orthogonal vectors anticommute",
+  "text": "Perpendicular arrows anticommute: swapping their order flips the sign. That single fact, plus the squares of the basis arrows, gives the whole multiplication table.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.orthogonal-anticommute, version 1",
+  "hash": "662e96ea5444",
+  "number": 16
+ },
+ {
+  "id": "c:std-algebra.sylvester-inertia",
+  "type": "fact",
+  "claim": "std-algebra.sylvester-inertia@1",
+  "title": "Orthogonal bases and the law of inertia",
+  "text": "However you choose perpendicular unit directions in a space, you always find the same number of \"space-like\", \"time-like\" and \"zero\" directions. These three counts are the space's signature, and they are all there is to know about it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "T. Y. Lam, Introduction to Quadratic Forms over Fields, AMS (2005)., the diagonalisation of forms and Sylvester's law of inertia (real case)",
+  "hash": "8a3e5b25b5e5",
+  "number": 17
+ },
+ {
+  "id": "c:std-algebra.z2-grading",
+  "type": "fact",
+  "claim": "std-algebra.z2-grading@1",
+  "title": "The even subalgebra and the Z2 grading",
+  "text": "Parity multiplies like signs: even with even or odd with odd gives even, mixed gives odd. A product of a $j$-grade and a $k$-grade element can only have grades between their difference and their sum, in steps of two.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.z2-grading, version 1",
+  "hash": "d232bdab5f30",
+  "number": 18
+ },
+ {
+  "id": "c:transport.units-span",
+  "type": "fact",
+  "claim": "transport.units-span@2",
+  "title": "Units span",
+  "text": "In any finite-dimensional algebra over the real numbers, even an element that cannot be divided by is the sum of two elements that can. The trick is to subtract a suitable multiple of 1, which leaves something invertible for all but finitely many choices.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim transport.units-span, version 2 (T01 Lem 6.3)",
+  "hash": "0e5a07a0b562",
+  "number": 19
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "The structure of a real Clifford algebra is fixed by its numbers of positive and negative directions, in a pattern that repeats every eight steps. [[c:transport.classification-real-clifford-algebras]] Yet the position in that pattern lives in the geometry, since bare algebra isomorphisms can forget it. [[c:dark-matter.residue-soldered-invariant-not-algebraic-one]] This trail rests on no postulate: each step is proved here or cited from results proved elsewhere and from the classical literature. [[t]]",
+  "hash": "97ce5a45639c"
+ }
+]

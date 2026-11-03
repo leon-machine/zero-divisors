@@ -1,0 +1,21 @@
+functions:
+  check_one_sided_weightings_grade_three:
+    kind: exact
+    clauses:
+    - '"w_4 (B - L) and v_4 (B - L) are pure grade three"'
+    omits: That grade three is the 120 component of 16 x 16 is the imported spinor-bilinear Fact, not recomputed
+  check_forms_antisymmetric_ratio_three:
+    kind: exact
+    clauses:
+    - '"mass forms on the sixteen are antisymmetric, couple exactly (L,e^c),(Q,d^c) resp. (L,nu^c),(Q,u^c), lepton-to-quark modulus ratio 3"'
+    omits: ''
+  check_antisymmetric_family_matrix_off_diagonal:
+    kind: sampled
+    clauses:
+    - '"with an antisymmetric family matrix the combined form is symmetric and vanishes on the family diagonal"'
+    omits: One sample antisymmetric 3 x 3 matrix (plus one symmetric control), not every antisymmetric family matrix
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Module-level exact computations; the family-matrix statement is a single sample of an elementary identity.

@@ -1,0 +1,39 @@
+doc: t05-angle-regenerated
+title: 'What Fixes the Angle: The spectrum-condition route to the Hawking temperature, run in the ascent''s
+  own algebra: Companion note to T5: within the supplied dynamics positivity of energy selects the Boulware
+  state; a hop across the horizon is what the route needs, and the hop with the sea filled is the pairing
+  (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- angle.imported-singularity-papers-state-selection
+- angle.imported-conformal-model-null-rotations
+- angle.imported-theorems-deliver-their-hypotheses
+- angle.wedge-reflection-translations-are-ascent
+- angle.within-supplied-class-spectrum-condition-selects
+- angle.hop-across-cut
+- angle.hop-sea-filled-pairing
+- angle.value-parameter-dynamics
+show: spine-only
+paper: T05-angle
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_angle_note.tex
+  note: Recreate T05-angle from the store
+cite: []
+prose: paper
+msc: Primary 83C57; Secondary 15A66, 46L60, 81T05, 82B10.
+keywords: Hawking temperature; spectrum condition; Bisognano--Wichmann theorem; KMS state; Boulware state; particle-hole symmetry; conformal model; transport principle.

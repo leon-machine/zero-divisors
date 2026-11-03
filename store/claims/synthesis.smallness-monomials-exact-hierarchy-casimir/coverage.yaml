@@ -1,0 +1,14 @@
+functions:
+  check_gravitational_monomials:
+    kind: sampled
+    clauses: ["(i) G Lambda = 3 N^-2 and G Q(I_Lambda) = N^-2"]
+    omits: "I_Lambda = n_inf + (Lambda/6) n_0 and Q(I) = H^2 = Lambda/3 are built and read off in Cl(2,4) and the two monomials checked in rationals, but at five values of H and three of M_P, not as free parameters; the construction of I_Lambda is taken from the dictionary rather than derived"
+  check_hierarchy_entry:
+    kind: partial
+    clauses: ["(ii) c(w(m)) = (m/M_P)^2 N^2", "(iii) bounds 9/(8x) <= x - nu <= 9/(4x) and 0 < 1 - Im w/x <= 9H^2/(4m^2)", "(iii) real weight in [-3, 0] for m <= 3H/2"]
+    omits: "(ii) and the bracket are checked at six values of x (and five H, three M_P) with nu^2 defined as x^2 - 9/4, so the Casimir identity is a consistency check of the quadratic (Casimir of -3/2 + i nu is 9/4 + nu^2, checked at four nu), not an independent derivation of w(m) from the dictionary; real weights are checked at five points only, and that every m <= 3H/2 has such a weight is not tested; (iv) N^2 = N_w^2 + 9/4 is asserted only with N_w^2 defined as N^2 - 9/4 (a restatement) and 0 < N - N_w <= 9/(4N) is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i) to (iii) are tested at sample points as the docstring says; clause (iv) of the statement has no independent test"

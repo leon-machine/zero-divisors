@@ -1,0 +1,21 @@
+functions:
+  check_invariant_form_is_unique:
+    kind: partial
+    clauses:
+    - '"T_1 = T_2 = T_3 for every representation rho"'
+    omits: Proves the lemma for su(5) only (one Weyl-invariant quadratic form, equal norms of X_1, X_2, X_3); Weyl invariance of the weight multiset is tested on the nine listed representations, not for an arbitrary rho, and Spin(10) is reached only through its listed representations
+  check_indices_equal_on_complete_multiplets:
+    kind: sampled
+    clauses:
+    - '"T_1 = T_2 = T_3"'
+    omits: Nine representations (5, 5bar, 10, 10bar, 15, 24, 16, 10 of Spin(10), 45); no general rho
+  check_shifts_are_multiples_of_one_one_one:
+    kind: sampled
+    clauses:
+    - '"Delta = c (1,1,1), c = (2/3) T for Weyl fermions, (1/3) T for complex scalars"'
+    omits: Five sample multiplets (Weyl 10, 24, 16, scalar 5bar, three scalar 16s) and one control; c is read from the stated coefficient rule, not independently derived
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The su(5) uniqueness is exact; the statement for arbitrary rho is covered by that lemma plus nine sampled representations, which the docstring says.

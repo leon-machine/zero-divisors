@@ -1,0 +1,17 @@
+functions:
+  check_omega_square:
+    kind: sampled
+    clauses:
+    - '"omega^2 = (-1)^(n(n-1)/2) (-1)^q = (-1)^((p-q)(p-q-1)/2)"'
+    - '"omega^2 = +1 if and only if p - q = 0 or 1 mod 4"'
+    omits: the 65 signatures with 1 <= n <= 10, computed with the blade engine; not all n
+  check_exponent_parity_identity:
+    kind: exact
+    clauses:
+    - the equality of the two closed forms, "(-1)^(n(n-1)/2)(-1)^q = (-1)^((p-q)(p-q-1)/2)"
+    omits: the identity n(n-1)/2 + q - (p-q)(p-q-1)/2 = 2pq is polynomial of degree 2 in each variable, so the 21 x 21 integer grid proves it for all integers; the value of omega^2 itself is not computed here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: omega^2 is computed up to n = 10 and the equality of the two closed forms is proved by the grid argument

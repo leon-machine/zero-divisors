@@ -1,0 +1,24 @@
+doc: trail-quantum-fields
+title: 'Quantum fields in one algebra'
+author: Leon Butler
+level: lay
+spine:
+- field-theory.ground-does-not-attach-modes
+- field-theory.twistor-attachment
+- field-theory.where-each-lives
+- field-theory.second-quantisation
+- field-theory.mass
+- field-theory.contact-interactions-tower
+- field-theory.fock-space-maxwell-modes
+- field-theory.operator-newtonian-coupling
+- field-theory.orientation-relocated
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

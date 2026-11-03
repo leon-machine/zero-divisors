@@ -1,0 +1,23 @@
+functions:
+  check_residues_and_type_c_sites:
+    kind: sampled
+    clauses:
+    - (1) d is constant under Rule 1 and moves by +-1 under Rule 2
+    - (2) type C is present exactly at d = 1 mod 4; Rule 2 maps residue 1 into {0,2} and 5 into {4,6}, none of which is 1 mod 4
+    omits: All signatures with 1 <= n <= 10 (type C computed blade-exactly in GA, 15 type-C sites); not all n
+  check_histories_fuse_at_most_once:
+    kind: sampled
+    clauses:
+    - (3) Rule 2 can be applied at most once in any transport history, the residue stays fixed afterwards
+    omits: Histories of length <= 6 from the 14 starts with 1 <= n <= 4 (the empty signature (0,0) is not a start, contrary to the docstring "every start with n <= 4", and the docstring count "other 12 starts" should be 11); the residue stands in for the Wedderburn type, which it determines
+  check_rule_one_amplification_and_lineage:
+    kind: sampled
+    clauses:
+    - Rule 1 is matrix amplification (residue unchanged)
+    - the physical lineage Cl(1+k,3+k) stays at residue 6, simple, never demands Rule 2
+    omits: Starts with 1 <= n <= 4 for the amplification structure; physical lineage only k <= 2
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The mod-8 bookkeeping is computed exactly (n <= 10) and histories exhaustively up to length 6 from small starts; two small docstring miscounts noted in omits do not affect the asserts.

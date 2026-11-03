@@ -1,0 +1,14 @@
+functions:
+  check_window_flow_acts_by_phases:
+    kind: sampled
+    clauses: ['setup: "tau_t(a_j) = e^{-i omega_j t} a_j"']
+    omits: 'Model check only: two Jordan-Wigner modes, weights (1, 2), one phase z = (3+4i)/5; establishes no numbered clause.'
+  check_recurrence_without_period:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'One phase and one window: z^n != 1 for n <= 200 and a close return at n = 61 and 122; relative compactness for every x in the CAR algebra, arbitrary epsilon and S, and negative-time returns T'' <= -S are not tested.'
+  check_shift_contrast:
+    kind: partial
+    clauses: ['closing remark: "the geometric reading needs a mode space on which the boost has continuous spectrum"']
+    omits: A contrast model (bilateral shift never recurs and maps a subspace properly into itself); it does not test (ii) for point-spectrum flows nor the conclusion A_c = A_c' of (iii).
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Only the recurrence model of (i) and a contrast are computed; (ii) and (iii) are proof-only and no function claims otherwise.}

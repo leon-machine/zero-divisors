@@ -1,0 +1,27 @@
+functions:
+  check_vertex_self_adjoint_and_charge_conserving:
+    kind: sampled
+    clauses: ["H_int = e sum J^mu A_mu is self-adjoint and conserves the fermion charges"]
+    omits: "e = 1; every second configuration of the nine (five), for both the component vertex and the GA-product vertex, plus self-adjointness of the Coulomb operator H_C; vertex terms commute with Q_A and Q_B"
+  check_second_order_amplitude_distinguishable:
+    kind: sampled
+    clauses: ["the second-order amplitude H_int (E_i - H_0)^-1 H_int + H_C equals -e^2 J_A(3,1) . J_B(4,2)/t for distinguishable fermions, exactly"]
+    omits: "nine rational configurations with e = 1 and photon modes of rational |q| (perfect-square conditions); equality is exact in Q(i) at each, the intermediate states are the four one-photon states (two helicities, two vertices)"
+  check_coulomb_term_and_both_helicities_needed:
+    kind: sampled
+    clauses: ["dropping the Coulomb term, or one helicity, gives a different amplitude"]
+    omits: "three configurations; the fermionic-ordering clause is tested in check_identical_fermions_exchange_sign"
+  check_ga_product_vertex_same_amplitude:
+    kind: sampled
+    clauses: ["the second-order amplitude -e^2 J_A . J_B/t, with the vertex written as the GA product proj(J_GA A_GA)"]
+    omits: "five configurations; each intermediate state equals the component vertex's with the helicity label swapped; the GA-product vertex is the docstring's alternative form and the statement does not name it separately"
+  check_identical_fermions_exchange_sign:
+    kind: sampled
+    clauses: ["-e^2 (J_31 . J_42/t - J_41 . J_32/u) for identical fermions", "dropping the fermionic ordering gives a different amplitude"]
+    omits: "four configurations, one species with eight photon modes at q = k1 - k3 and q' = k1 - k4 and the Coulomb operator (1/2) sum rho(p) rho(-p)/|p|^2; the bosonic sum differs from the computed amplitude; e = 1"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact second-order Fock-space computations at sample rational configurations; the statement's amplitudes (unnormalised J, e = 1) match what the code computes."

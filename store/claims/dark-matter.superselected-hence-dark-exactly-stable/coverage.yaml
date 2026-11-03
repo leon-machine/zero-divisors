@@ -1,0 +1,22 @@
+functions:
+  check_ascent_preserves_residue:
+    kind: sampled
+    clauses: ["2 (ascent stays within the tower: completion adjoins (1,1), residue preserved)"]
+    omits: "all (p,q) with p + q <= 6 only; that the completion adjoins exactly a null pair is the premise Fact; the displacement of the mod-8 shadow walls (wall-sequence theorem) is not touched"
+  check_completion_is_matrix_amplification:
+    kind: sampled
+    clauses: ["2 (completion adjoins (1,1))"]
+    omits: "Cl(p+1,q+1) = Mat_2(Cl(p,q)) for all (p,q) with n <= 4 only; the statement does not name the matrix structure"
+  check_no_soldered_map_between_residues:
+    kind: partial
+    clauses: ["1 (preserve its signature)"]
+    omits: "tests that the six populated residues have distinct Gram signatures after one rational change of basis; that portal matrix elements vanish identically, and the sector decomposition of the Definition, are not computed"
+untouched_premises:
+  dark-matter.imported-gravity-only-coupling: "the acoustic no-go behind the darkness clause is a literature restatement with no computable content here"
+  sheaf.infinite-wall-sequence: "the wall-sequence theorem and its hypotheses (compact base, good couplings) are not computable in the check"
+  dark-matter.p1-single-frozen-point: "premise; the single-frozen-point hypothesis has no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the functions test the algebraic ingredients of steps 1 and 2 and nothing of step 3 or the darkness clause, as the docstring states"

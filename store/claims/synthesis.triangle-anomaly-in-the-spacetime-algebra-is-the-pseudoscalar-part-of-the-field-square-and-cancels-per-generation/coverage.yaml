@@ -1,0 +1,43 @@
+functions:
+  check_gamma5_trace_is_the_pseudoscalar_part:
+    kind: sampled
+    clauses:
+    - '(i) Tr(gamma5 abcd) = 4 i <I4 abcd>_0 = -4 i lambda against Dirac matrices over Q(i); antisymmetry'
+    omits: 'four sample quadruples and the frame; general vectors by multilinearity'
+  check_vector_ward_identity_integrand_by_integrand:
+    kind: sampled
+    clauses:
+    - (ii) k1 (D1 + D2) = B(l - k1) - B(l) and the k2 contraction, integrand by integrand
+    omits: 'three masses and loop momenta for k1, one for k2; the identity is the resolvent identity at every point'
+  check_two_point_terms_integrate_to_zero_under_the_regulator:
+    kind: sampled
+    clauses:
+    - (ii), (iii) two-point pseudoscalar numerator mass independent, a^b only, odd about the centre; regulated decay O(|l|^-6) iff sum c_i = 0
+    omits: 'sample vectors and weight sets; the integral statements are the proof text'
+  check_axial_identity_integrand_by_integrand:
+    kind: sampled
+    clauses:
+    - (iii) q (D1 + D2) = -2M (P1 + P2) + four two-point terms
+    omits: 'two masses and loop momenta'
+  check_regulator_term_gives_one_over_two_pi_squared:
+    kind: sampled
+    clauses:
+    - (iii) numerator of P1, P2 is M 4 i <I4 g^nu k1 g^rho k2>_0, independent of l; radial integral 1/(4 Delta); coefficient 1/2 for three weight sets
+    omits: 'two masses and loop momenta; the limit M_i to infinity is the proof text'
+  check_field_form_is_the_pseudoscalar_part_of_f_squared:
+    kind: sampled
+    clauses:
+    - (iv) <I4 a1 k1 a2 k2>_0 = <I4 f1 f2>_0, Bose symmetric; <I4 F^2>_0 = -2 E.B
+    omits: 'two field values and one polarisation pair'
+  check_chiral_projectors_collapse_to_one:
+    kind: sampled
+    clauses:
+    - (v) three projectors collapse to one; half vector plus half axial trace
+    omits: 'four index triples; the group-theory reduction to d is argued'
+  check_anomaly_tensor_of_one_generation_vanishes_on_the_whole_gauge_algebra:
+    kind: exact
+    clauses:
+    - (vi) all 364 components of d on a basis of sl3 + sl2 + C vanish on one generation; tr X = 0; the quark doublet alone does not cancel
+    omits: 'none: a symmetric tensor vanishes iff its basis components do'
+untouched_premises:
+  synthesis.imported-adler-bell-jackiw-axial-anomaly: "the original anomaly papers, cited for comparison of the magnitude; the check computes the coefficient directly"

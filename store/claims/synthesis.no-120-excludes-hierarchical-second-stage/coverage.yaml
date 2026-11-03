@@ -1,0 +1,16 @@
+functions:
+  check_no_120_stages_are_one_type:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Three sample coupling sets and one sample (d, delta); the symmetry argument for all Yukawa matrices and the claim that a 120 is the only source of y != x are not enumerated; the parenthetical on purely antisymmetric stages is untested
+  check_hierarchy_bound_fails:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: The sum rule inequality and the data edge cos^2 = 0.711 are inputs; (iii) is a reading of (i) and (ii), not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rational check that the (m1/m2)^(1/4) lower bound exceeds 0.0874 > 0.01 (factor 8.74 > 8.7); the one-type claim is checked at samples.

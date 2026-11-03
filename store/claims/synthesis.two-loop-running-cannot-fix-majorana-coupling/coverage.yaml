@@ -1,0 +1,22 @@
+functions:
+  check_component_sums_are_unit_multiples:
+    kind: complete
+    clauses: ["(i) sum_c T^c T^c^dag = (dim R/8) 1 for the (10,1,3), (1,2,2), (15,2,2) on explicit orthogonal bases, both blocks"]
+  check_yukawa_casimir_vectors:
+    kind: complete
+    clauses: ["(i) Majorana vector (15/4, 0, 15/2), matched (6, 0, 15/4)", "(i) Dirac-type vectors (1/4) dim R (1,1,1), universal after matching"]
+  check_running_family_never_fixes_eps:
+    kind: sampled
+    clauses: ["(ii) determinant D0 + (201/4) eps with the stated D0 and the chain-independent coefficient 201/4 = -det[1, b_SM, v] checked directly, unique solution, x rising, universal shift moves a_U only"]
+    omits: "eps on the grid {0, 1/8, ..., 3}, not all eps (the determinant's affinity in eps is checked, which gives positivity for all eps >= 0); the full two-loop gauge system (implicit-function argument) is argued, not checked"
+  check_sensitivities:
+    kind: sampled
+    clauses: ["(iii) d ln M_I / d Tr(f f^dag) in (0.08, 0.11) per chain", "(iii) alpha_s +- 0.0009 moves ln M_I by 0.03 to 0.05"]
+    omits: "one-loop baseline only; the threshold comparison of the proof is not checked"
+  check_given_mi_alpha_s_band_in_trace:
+    kind: sampled
+    clauses: ["(iii) with M_I supplied, alpha_s +- 0.0009 moves the inferred Tr(f f^dag) by more than 0.3"]
+    omits: "one true value Tr(f f^dag) = 16 pi^2/158 (eps = 1/158), one-loop baseline"
+untouched_premises:
+  standard-model.imported-clebsch-structure-seesaw: "supplies the normalisation M_R = v_R f only; the check works per unit Tr(f f^dag)"
+  synthesis.majorana-scale-free-on-pati-salam-route: "used only in the closing orbit remark (the action of g_lambda on eps); the check verifies that x rises with eps, which is what the remark uses"

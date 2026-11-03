@@ -1,0 +1,89 @@
+doc: t14-regenerated
+title: 'Dark Matter and the Arrow of Time: The Dark Towers (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- pred.dark-matter-direct-detection-null
+- pred.dimmed-evaporation-bursts
+- pred.no-dark-radiation
+- pred.no-indirect-dark-signals
+- dark-matter.imported-eight-towers-mod-8-clock
+- dark-matter.imported-gravity-only-coupling
+- dark-matter.imported-trichotomy-descents-data
+- dark-matter.imported-derived-generation-flag
+- obj.dark-matter.witt-flag
+- dark-matter.imported-schwinger-discharge-charged-hole
+- dark-matter.towers-are-residues-single-clock-filter
+- dark-matter.flag-insensitive-residue-no-flag-level
+- obj.dark-matter.spinor-module-type
+- dark-matter.type-residue-what-each-tower-can
+- dark-matter.residue-soldered-invariant-not-algebraic-one
+- obj.dark-matter.frozen-phase-operators
+- obj.dark-matter.null-blades-fock-ideal-chirality
+- dark-matter.two-families-are-two-chiralities
+- dark-matter.flag-bit-exists-exactly-tower-dimension
+- dark-matter.which-towers-can-carry-arrow
+- dark-matter.superselected-hence-dark-exactly-stable
+- dark-matter.imported-inputs-standard-model-chain
+- dark-matter.mirror-tower-copy-one
+- dark-matter.mode-counts-two-modules-which-one
+- dark-matter.population-count-one-share-half-percent
+- dark-matter.stored-asymmetry-charge-not-number
+- dark-matter.mirror-share-one-how-fragile
+- dark-matter.mirror-share-assembled
+- dark-matter.which-towers-are-populated
+- dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+- dark-matter.orientation-arrow-seventeenth-refutation
+- dark-matter.projection-every-towers-content-dilutes-ones
+- dark-matter.radiation-audit-what-theorem-closes-what
+- dark-matter.open-channels-their-costs
+- dark-matter.ceiling-valued-inherited-success
+- dark-matter.parallel-boundary-mode-spaces-one-wall
+- dark-matter.nesting
+- dark-matter.unit-ball-rule
+- dark-matter.direction-nesting-adds-algebra
+- dark-matter.contact-mechanism-returns-r3
+- dark-matter.total-function-thickness
+- dark-matter.two-roots-are-chord-arc-quarter
+- dark-matter.imported-frozen-point-de-sitter-radius
+- dark-matter.democracy-de-sitter-radius-unit-ball
+- dark-matter.imported-induced-equations-hypersurface
+- dark-matter.two-reductions
+- dark-matter.sourcing-rule-forced-not-chosen
+- dark-matter.imported-inverse-square-law-short-range
+- dark-matter.thickness-not-gravitational-quantity
+- dark-matter.imported-linear-momentum-equation-traceless-field
+- dark-matter.reduced-response-gravity-needs-supporting-stress
+- dark-matter.status-rule
+- dark-matter.imported-composition-simulated
+- dark-matter.imported-composition-simulated-external
+- dark-matter.imported-massless-graviton-production-rate
+- dark-matter.seeding-gravity-floor-dark-towers-temperature
+- dark-matter.coefficients-floors-they-give-what-gravity
+- dark-matter.no-coupling-rule-odd-towers-follows
+show: spine-only
+paper: T14
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T14_dark_matter.tex
+  note: Recreate T14 from the store
+cite:
+- dark-energy.vacuum-region-registration-condition
+- singularity.rate-models-kinematic-inputs-l-u
+prose: paper
+msc: Primary 83F05, 81V25; Secondary 15A66, 81T12, 85A40.
+keywords: dark matter; hidden sectors; Clifford algebra periodicity; matter-antimatter
+  asymmetry; arrow of time; effective number of neutrinos; self-interacting dark matter.

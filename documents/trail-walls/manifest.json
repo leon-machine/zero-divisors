@@ -1,0 +1,43 @@
+{
+ "doc": "trail-walls",
+ "version": 9,
+ "claims": [
+  "primer.commutation-rule@2",
+  "sheaf.blade-basis-degenerate-forms-included@4",
+  "sheaf.conservation-degeneracy-located@3",
+  "sheaf.degeneration-sheaf@6",
+  "sheaf.determinant-identity-blow-up-expansion@3",
+  "sheaf.exceptional-algebra-deformation-normal-cone@5",
+  "sheaf.imported-classification-values@4",
+  "sheaf.imported-real-line-bundles@1",
+  "sheaf.infinite-wall-sequence@4",
+  "sheaf.invariant-form-t3@2",
+  "sheaf.local-freeness-constant-rank@2",
+  "sheaf.localised-transport@5",
+  "sheaf.metrics-residue-square-root-twist@5",
+  "sheaf.one-sided-completion@4",
+  "sheaf.resolution-ideal-theoretically@4",
+  "sheaf.tame-wall-induction@5",
+  "sheaf.tame-walls-are-two-sided@3",
+  "sheaf.tameness@1",
+  "sheaf.wall-gram@3",
+  "std-algebra.existence-uniqueness@1",
+  "std-algebra.radical-ideal-and-quotient@1",
+  "std-algebra.sylvester-inertia@1",
+  "std-algebra.vector-squares@1"
+ ],
+ "recipe_hash": "95a272b575a8",
+ "generated": "2026-11-02T16:32:59+00:00",
+ "spine": [
+  "sheaf.local-freeness-constant-rank",
+  "sheaf.degeneration-sheaf",
+  "sheaf.exceptional-algebra-deformation-normal-cone",
+  "sheaf.wall-gram",
+  "sheaf.one-sided-completion",
+  "sheaf.localised-transport",
+  "sheaf.metrics-residue-square-root-twist",
+  "sheaf.tame-walls-are-two-sided",
+  "sheaf.conservation-degeneracy-located",
+  "sheaf.infinite-wall-sequence"
+ ]
+}

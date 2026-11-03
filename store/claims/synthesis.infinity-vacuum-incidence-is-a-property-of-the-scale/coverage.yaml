@@ -1,0 +1,22 @@
+functions:
+  check_ray_closure:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "eleven rational null directions with one generic and one Einstein Schouten tensor: nabla_l X = L, nabla_l L = P(l,l) X, span(X, L) closed in every metric; for the Einstein case nabla_l I_g = -(1/2) L (Lambda = 3) and nabla_l L = 0; infinity line not closed for the generic P; Fock-level statement at the single direction l = (1,1,0,0); the geodesic transport for every parameter value is the ODE consequence of closure, not integrated; the Levi-Civita part annihilating X, I_g, L is assumed; the converse (first-order own-ray persistence implies Einstein) is not tested here"
+  check_conformal_blindness:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the stated example f = 1 + a x_1^2 at a = 3 only: Sch = a dx^1 dx^1 at the origin, non-zero trace-free part, own-ray class P(l,l) = a for l = d_0 + d_1, same Fock vacuum for eta and f eta at the origin, unexcited for eta and excited for f eta; Hessians proportional to eta (k = 1, -2/3) give zero own-ray class on all eleven null directions; the Ricci tensor at the origin is from a typed-in formula in dGamma; the statement that CAR data, X and point vacua depend only on [g] is not tested"
+  check_frozen_point_decomposition:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "for a generic Schouten tensor: <I', X> = 1, Q(I') = J/2, I_g = I' - (1/2) Q(I') X is null, own-ray class equal to <nabla_l I', L> on eleven null l, middle slot of nabla_v I' equal to minus the trace-free Schouten tensor at three v; for the Einstein tensor I' is parallel with Lambda = (3/2) J = 3; 'iff on a connected region' and the identification with the imported scale tractor and frozen point are not tested"
+  check_matter_sources_frozen_point:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "two (kappa, Lambda) pairs and one rational T: middle slot of nabla I' equals kappa(T - (tau/4) g), J/4 = Lambda/6 + kappa tau/12 so Lambda = 6 rho - 2 pi G tau, and the own-ray class kappa T(l,l) on eleven null l; the derivative slot (1/4) nabla J = (kappa/12) nabla tau is not tested (constancy of Lambda is assumed), nor the 'always nabla I' = (0, -Sch°, (1/4) nabla J)' form, nor the converse"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "algebraic content of (1) to (4) checked at sample parameters; derivative slots and the converse of (1) have no test"

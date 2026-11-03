@@ -1,0 +1,27 @@
+doc: trail-completion
+title: The completion
+author: Leon Butler
+level: lay
+spine:
+- transport.minimality
+- transport.totality
+- transport.descent-read-out-map
+- conformal.minimal-nondegenerate-completion
+- conformal.principal-case
+- transport.rule-1-morita-trivial
+- transport.rule-2-ideal-fusion-sharp-form
+- transport.one-generator-minimal-minimal-completions-classified
+- transport.fusion-occurs-most-once
+- transport.transport-principle
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

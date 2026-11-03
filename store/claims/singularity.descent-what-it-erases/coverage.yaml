@@ -1,0 +1,17 @@
+functions:
+  check_occupation_projector:
+    kind: exact
+    clauses: ["P^2 = P", "1 - P = v v*", "P = diag(0,1) in the defining representation"]
+    omits: "exact in the defining 2 x 2 representation, the second Jordan-Wigner mode on two modes and the Cl(1,1) hyperbolic atom; no abstract CAR proof"
+  check_pinching_keeps_diagonal_erases_coherences:
+    kind: exact
+    clauses: ["E(a b; c d) = diag(a, d)", "descent retains the occupation data and erases the coherences b, c"]
+    omits: "E computed on the four matrix units (linear, so general) and compared with three sample matrices over Q and Q(i)"
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.cl11-matrix: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Finite-dimensional linear statements, verified on a basis."

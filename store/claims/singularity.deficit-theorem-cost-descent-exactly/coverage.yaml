@@ -1,0 +1,18 @@
+functions:
+  check_pinching_structure:
+    kind: sampled
+    clauses: ["E is idempotent, trace-preserving and Hilbert-Schmidt self-adjoint"]
+    omits: "four complete orthogonal projector families on R^4 (two qubits) and one generic rational pair a, b"
+  check_key_lemma_moment_form:
+    kind: sampled
+    clauses: ["S(E(rho)) - S(rho) = D(rho || E(rho)) (supporting lemma tr(rho f(E rho)) = tr(E rho f(E rho)))"]
+    omits: "the lemma in moment form f(x) = x^m, m = 1..4, for four families on three density matrices; a supporting step of the proof, not a clause of the statement"
+  check_entropy_identity_exact:
+    kind: sampled
+    clauses: ["S(E(rho)) - S(rho) = D(rho || E(rho))", "D >= 0 with equality iff rho = E(rho)"]
+    omits: "one mixed state under the rotated rank-one family only, three pure states under all four families, and the model's two-pair state under E_N; mixed states under the rank-two and parity families are not tested; positivity and the equality case are checked on those cases only, and rho = E rho gives D = 0 for one fixed state"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says the identity is checked where both spectra are rational; the general theorem is the proof's."

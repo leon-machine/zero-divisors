@@ -1,0 +1,28 @@
+functions:
+  check_store_sign:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: Calibrates the sign convention for the store Schouten tensor on de Sitter in conformal time at the single value H = 2; no clause of the statement is established by it alone
+  check_rosen_schouten:
+    kind: sampled
+    clauses:
+    - (1)
+    - (2)
+    omits: 'Two choices of a (the model a = 1 + t, u = -t^2, and one rational a(u)): only Schouten P_uu = a_uu/a, du parallel (Gamma^u_bc = 0), Christoffel symbols in {a_u/a, a a_u}, and y = a solving the removal equation; continuity of g, continuous extension of D-transport across u_c, the Tipler-type condition and the decomposition with n = du, S, R = 0 are not tested'
+  check_flat_scales:
+    kind: sampled
+    clauses:
+    - (2)
+    - (3)
+    omits: Flatness of a^-2 g is checked for the model a = 1 + t only (not for general a), flatness of phi^-2 eta for phi = 1 + 3w and the Schouten value -phi''/phi for phi = 1 + 3w + 5w^2, and the Wronskian identity for one rational a, w; the C^1 chart, the formula for c, the inserted transport exp(c N_n), the shell strength -(beta_+ - beta_-)/alpha and the identification with the tractor transport are not tested
+  check_model_integrability:
+    kind: exact
+    clauses:
+    - (4)
+    omits: Exact Laurent orders at t = 0 in the model a = 1 + t, u = -t^2 (a_u integrable, a_u^2 and S not integrable, S = -1/(4 t^3 (1+t)), Tipler integral finite); the continuation beyond u_c, local square-integrability failure of the Christoffel symbols as a statement about both components, and the divergent branch (3) with the N_n-slot divergence are not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Symbolic (rational-function) curvature checks cover the Rosen-form Schouten tensor, the removal equation and the divergence orders in the model; the general-a and null-shell-strength statements are tested only at the model or sample functions (docstring still says impulsive).

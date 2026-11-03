@@ -1,0 +1,80 @@
+doc: t01-results-only
+title: The Transport Principle (from its results alone)
+author: Leon Butler
+level: formal
+spine:
+- transport.noinverse
+- obj.transport.equivariance
+- obj.transport.extension-quadratic-spaces
+- transport.splitting-along-hyperbolic-plane
+- transport.classification-real-clifford-algebras
+- transport.centre
+- transport.sign
+- transport.regularity-localises-zero-divisors-idempotents
+- obj.transport.obstruction-types
+- transport.exceptional-division-algebras
+- transport.existence-locus-type-n
+- transport.existence-classification-type-c
+- transport.existence-locus-type-p
+- transport.exhaustiveness-every-zero-divisor-annihilated-idempotent
+- transport.original-conjecture-refuted-below
+- transport.no-go-level-elements
+- transport.group-null-rotations
+- transport.pseudo-inverse-torsor
+- transport.cohomological-form-no-go
+- transport.density
+- transport.totality
+- obj.transport.null-lift-completion
+- transport.minimality
+- obj.transport.normalised-conformal-chart
+- transport.conformal-gram-matrix
+- transport.representation-independent-minimality-completion
+- transport.swap-rescale-normal-form
+- transport.descent-read-out-map
+- transport.decomposition-commutation
+- transport.ascent-renders-grade-involution-inner
+- transport.corner-even-subalgebra
+- transport.matrix-units-peirce-isomorphism
+- transport.rule-2-ideal-fusion-sharp-form
+- transport.one-generator-minimal-minimal-completions-classified
+- transport.embedding-independent-minimality-fusion
+- transport.even-subalgebra-one-dimensional-extension
+- transport.where-obstruction-lies-commuting-square
+- transport.which-residues-obstruct-which-way
+- transport.odd-lorentzian-dimension-exactly-one-real
+- transport.type-p-self-repairing
+- transport.units-span
+- transport.classification-idempotent-orbits
+- transport.pair-canonical-label-bit
+- transport.no-fourth-rule
+- transport.rule-1-morita-trivial
+- transport.fusion-occurs-most-once
+- transport.pinching-kernel
+- transport.door-one-way
+- transport.no-transport-terminates
+- transport.obstructions-are-moved-never-destroyed
+- obj.transport.transport
+- transport.transport-principle
+- transport.transport-algorithm
+show: spine-only
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T01_transport_principle.tex
+  note: Recreate T01 from the results, proofs and remarks alone, with AI-written prose
+paper: T01
+sections: paper
+cite: []
+msc: Primary 15A66; Secondary 11E88, 16E50, 16U99, 51B10, 53A30.
+keywords: Clifford algebra; geometric algebra; zero divisor; null vector; idempotent;
+  pseudo-inverse; conformal model; null rotation; Bott periodicity; transport principle.

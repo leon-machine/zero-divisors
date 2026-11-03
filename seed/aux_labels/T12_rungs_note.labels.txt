@@ -1,0 +1,25 @@
+\newlabel{sec:setting}{{1}{3}{Setting, and what is imported}{section.1}{}}
+\newlabel{fact:tower}{{1.1}{3}{imported: the tower, one qubit per rung}{theorem.1.1}{}}
+\newlabel{fact:totality}{{1.2}{3}{imported: totality and minimality of the completion}{theorem.1.2}{}}
+\newlabel{fact:spinorid}{{1.3}{3}{imported: the spinor identification, the Witt data, and the line at infinity}{theorem.1.3}{}}
+\newlabel{fact:area}{{1.4}{3}{imported: mass as symplectic area}{theorem.1.4}{}}
+\newlabel{fact:ladder}{{1.5}{4}{imported: the ladder, the automorphism group, and the no-lepton clause}{theorem.1.5}{}}
+\newlabel{fact:fock}{{1.6}{4}{imported: the Fock representation and its Bogoliubov group}{theorem.1.6}{}}
+\newlabel{fact:sixteen}{{1.7}{4}{imported: the derived generation under (S)}{theorem.1.7}{}}
+\newlabel{fact:downstream}{{1.8}{4}{imported: results of T12 used in the registration}{theorem.1.8}{}}
+\newlabel{sec:exact}{{2}{4}{The exact part: what the tower's spinor module is, and how the paper's objects sit in it}{section.2}{}}
+\newlabel{thm:rungs}{{2.1}{4}{The $n$-rung spinor module and its mixings}{theorem.2.1}{}}
+\newlabel{rem:compact}{{2.2}{6}{The compact form}{theorem.2.2}{}}
+\newlabel{lem:bracket}{{2.3}{6}{The mass bracket is the frozen point's grip on the slot-antisymmetric bivector, at $\Lambda = 0$}{theorem.2.3}{}}
+\newlabel{prop:ladderrung}{{2.4}{6}{The ladder group is the rung-mixing group on the one-constituent sector}{theorem.2.4}{}}
+\newlabel{rem:identifies}{{2.5}{7}{What this identifies, and what it does not}{theorem.2.5}{}}
+\newlabel{prop:equiv}{{2.6}{7}{(R) and (S) are one hypothesis in two languages}{theorem.2.6}{}}
+\newlabel{prop:outside}{{2.7}{7}{The generators outside the gauge algebra}{theorem.2.7}{}}
+\newlabel{sec:open}{{3}{8}{The part that does not close: no mechanism makes a twistor a rung}{section.3}{}}
+\newlabel{cor:onerung}{{3.1}{8}{of Fact \ref {fact:totality}: null momenta invite one rung, together}{theorem.3.1}{}}
+\newlabel{prop:bivector}{{3.2}{8}{The two-twistor bivector is null, invites one rung, and that rung's $U(2)$ mixes chirality}{theorem.3.2}{}}
+\newlabel{prop:config}{{3.3}{9}{The transported module holds the tuple as one vector, not as two twistors}{theorem.3.3}{}}
+\newlabel{rem:leaves}{{3.4}{9}{Where this leaves (R)}{theorem.3.4}{}}
+\newlabel{sec:fallback}{{4}{10}{The fallback: (S) as a Tier C premise}{section.4}{}}
+\newlabel{sec:position}{{5}{11}{Position in the series}{section.5}{}}
+\newlabel{sec:verification}{{6}{11}{Machine verification}{section.6}{}}

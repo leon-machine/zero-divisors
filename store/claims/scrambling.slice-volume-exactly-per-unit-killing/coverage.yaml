@@ -1,0 +1,16 @@
+functions:
+  check_induced_slice_geometry_and_volume:
+    kind: sampled
+    clauses:
+    - the induced geometry of the slice r = r_c inside the horizon is ds_3^2 = f dt^2 + r_c^2 d Omega^2 with f = 2M/r_c - 1, so the three-volume per unit Killing time is 4 pi r_c^2 sqrt(f)
+    omits: three sample slices with rational beta and sqrt(f); the Gram matrix and its determinant are computed, the angular integral 4 pi is not; the Painleve-Gullstrand field is entered by its formula (the cited Fact sheaf.gauge-field-cometric is not a declared use)
+  check_cutoff_gives_exactly_eight_pi_m:
+    kind: sampled
+    clauses:
+    - with r_c = (2M)^(1/3) and to leading order, 4 pi r_c^2 sqrt(2M/r_c) = 8 pi M exactly; a cutoff radius independent of M would give M^(1/2)
+    omits: four values of t with 2M = t^3 (the identity is not carried symbolically); the neglected factor sqrt(1 - r_c/2M) is evaluated at t = 5/4 only (3/5); the M-exponents are checked by one scaling ratio
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rational checks at chosen slices and cutoff values; the identities are not carried symbolically in this entity.

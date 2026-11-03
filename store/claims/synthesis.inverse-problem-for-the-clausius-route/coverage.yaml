@@ -1,0 +1,35 @@
+functions:
+  check_helmholtz_in_the_metric_selects_the_einstein_form:
+    kind: complete
+    clauses:
+    - (i) self-adjoint covariant second-order symbols have dimension 4; the Einstein symbol passes, the route's Ricci form fails, and M_beta of the Einstein symbol fails for beta != 0 with asymmetry linear in beta
+    - (i) the route's form is M_{-1/2} of the Einstein form
+    - (i) for the reparametrised field (delta g = M_beta delta psi) M_beta of the Einstein form passes; the selection is for the metric as the varied field
+    omits: principal symbols only (a necessary condition); exact on the full ten-dimensional basis at two momenta; linearity in beta checked at three values
+  check_lambda_free_form_needs_unimodular_variations:
+    kind: complete
+    clauses:
+    - (ii) the trace-free form fails on all variations and passes on trace-free ones; M_{-1/4} has rank 9
+    - (ii) Q(I) = Lambda/3 for the frozen point, and the Einstein form with Lambda = 3 Q(I) keeps only the de Sitter field of that Lambda while the trace-free form keeps all
+    omits: de Sitter samples at two values of Lambda and three of Lambda'; the general case beyond the M_beta family rests on Lovelock's theorem (imported Fact synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians)
+  check_linearised_lovelock_is_one_line:
+    kind: complete
+    clauses:
+    - (iii) transverse covariant second-order symbols form a plane; with self-adjointness one line, the Einstein symbol
+    omits: 'none at the level of covariant second-order symbols: finite linear algebra'
+  check_matter_cross_helmholtz_forces_the_hilbert_stress:
+    kind: sampled
+    clauses:
+    - (v) the cross Helmholtz condition holds with the Hilbert stress (minimal and xi-coupled scalar) and fails for an altered source or a mismatched coupling
+    omits: one scalar model at the flat background (constant-coefficient backgrounds only); the general statement is the proof's Hessian-symmetry argument
+  check_euler_density_is_invisible_and_weyl_square_is_fourth_order:
+    kind: complete
+    clauses:
+    - (iv) the Euler density has zero second variation at the flat background
+    - (ii) the Weyl-squared functional has a nonzero fourth-order second variation, so the order bound excludes it
+    omits: second variations at the flat background only; Bach-flatness of Einstein fields is the imported Fact synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
+untouched_premises:
+  synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians: imported Fact (Lovelock's theorem, natural null Lagrangians) for (ii) beyond the family and for (iv); the checks compute principal symbols and second variations and call no premise for it
+  synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form: imported Fact (Bach-flatness of Einstein fields) for the order bound in (ii); the check computes the Weyl-square second variation directly
+  synthesis.curvature-only-tractor-actions-are-macdowell-mansouri: its classification is granted in the first-order clause of (iv); nothing is computed from it here
+  synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared: quoted in (ii) and (iv) for the value of the integrand on the normal tractor connections; nothing is computed from it here

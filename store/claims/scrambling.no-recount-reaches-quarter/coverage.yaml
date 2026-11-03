@@ -1,0 +1,22 @@
+functions:
+  check_residue_closure:
+    kind: sampled
+    clauses:
+    - a counting rule built from a rational number of modes per cell, cell areas rational multiples of integer powers of pi, and a rational number of ticks has residue kappa_c = q pi^k
+    omits: 1440 rules from 8 mode values, 6 cell coefficients, k in -2..3 and 5 tick values; closure for arbitrary rational inputs is not proved by the enumeration
+  check_targets:
+    kind: partial
+    clauses:
+    - in the capacity convention kappa_c = 1/(4 ln 2) is not reached (no rule with k = 0; the k != 0 exclusion is conditional)
+    - in the 1-nat convention the target kappa_c = 1/4 is rational
+    omits: 'only the formal statement is checked: the L = ln 2 exponent of every residue is 0 while the target has -1; the number-theoretic content (pi^k ln 2 not rational: transcendence of ln 2, algebraic independence of pi and ln 2) is not certified (docstring)'
+  check_natural_rules:
+    kind: partial
+    clauses:
+    - the natural rules return kappa_c = 4 pi (P1), kappa_c = 1 (P3) and a broken scaling (P2), none of them 1/4
+    omits: P1 and P3 are checked (N_epoch entered as 16 pi S_BH and A); P2 (the broken scaling) is not recomputed here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The residue algebra is exact; the number-theoretic exclusions are imported and the check covers only their formal shadow.

@@ -1,0 +1,11 @@
+functions:
+  check_axial_rotation_is_symmetry_of_real_structure_words:
+    kind: sampled
+    clauses: [(i), (ii), (iii)]
+    omits: '(i): two Cayley rotations about u'' (t = 1/2, -2/7), orthogonality, R u'' = u'', commutation with the cyclic shift and with sigma_{x,y} for four sign choices and two complex c are checked; the phase action R f_+ = e^{i theta} f_+ and v(chi) -> v(chi + theta) are not evaluated (they follow from commutation with the cyclic shift, whose eigenvalues are distinct). (ii): one fixed word (vacuum + Omega(c)^dag + g Omega(c)^dag Omega(sigma c)^dag) at g = 2/3 is compared through the characteristic polynomial of H at c and Rc; no Hamiltonian evolution. (iii): sum_k (Omega_k^dag)^3 applied after the source at g = 1/2 separates c from Rc and agrees at c and its cyclic shift, for the same samples.'
+  check_fock_rotation_covariance:
+    kind: sampled
+    clauses: ['(i): H(R^ psi) = R H(psi) R^T', '(ii): psi[Rc] = R^ psi[c] and the spectrum of H does not depend on the rotation', '(ii): sum_k (Omega_k^dag)^2 and sum_k Omega_k^dag Omega_k are invariant under R^']
+    omits: 'two Cayley rotations, two complex c, sigma_{1,1} and sigma_{-1,-1}, two words (the one above and one also using sum_k (Omega_k^dag)^2 and V = sum_k Omega_k^dag Omega_k): 16 cases; invariance of sum_k (Omega_k^dag)^2 tested on the vacuum and commutation of V with R^ on the sample states only; no Hamiltonian evolution; generic complex c rather than v(chi)'
+untouched_premises: {families.skeleton-rank-one-plus-ordering-shift: 'the skeleton operators Omega_k and the mass form are rebuilt locally from the Levi-Civita data, not drawn from the theorem; no coverage of the theorem''s own content is needed', families.rigidity-pairing-sector-one-event: 'the coherent face vector v(chi) = kappa(u'' + lambda e^{i chi} f_+) is not instantiated; the check works with generic complex c'}
+judge: {by: fix-round-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'stale module docstring (checks (a) to (d)) replaced by a description of what is run; added check_fock_rotation_covariance, which uses the Fock map to test psi[Rc] = R^ psi[c], H(R^ psi) = R H R^T and invariance of the rotation-invariant face words'}

@@ -1,0 +1,64 @@
+functions:
+  check_field_symmetries_commuting_with_the_boost:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: The kernel dimension 4 of B -> ([B, I], [B, K]) and the closure [e3W, e4W] = -2Q(W) e3e4 at seven values
+      of Lambda; the dimension count for every Lambda is in the proof
+  check_fixed_tube_point_is_the_frozen_point:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: A grid of three feet, six scales and three rational rapidities at Lambda = 12, 3, 48, 4/3; the general
+      statement is the proof's decomposition of Re X(m) along I, W, e3, e4
+  check_boost_norm_is_maximal_and_equal_to_inverse_surface_gravity_at_the_frozen_point:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: The identity 1 - H N = (1 - H rho/2)^2/sigma at four values of H and seven scales, not as a polynomial
+      identity; N = 4/(5H) at rho = 1/H
+  check_frozen_point_orbit_is_the_free_fall_orbit:
+    kind: sampled
+    clauses:
+    - (iv)
+    - (vi)
+    omits: The acceleration at three rapidities, up to six scales and six values of Lambda (points with sigma <=
+      0 skipped)
+  check_frozen_orbit_is_the_stored_static_observer:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: One rotor at Lambda = 3 and four times t; other Lambda follow by the dilation covariance, not computed
+  check_bifurcation_plane_is_a_round_sphere_with_equator_at_the_frozen_scale:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: Gauss curvature by exact central differences at four points for five values of Lambda; the equator by
+      comparison with five other radii; that the so(3) acts by isometries is from the cited de Sitter theorem
+  check_no_fixed_tube_point_for_nonpositive_lambda:
+    kind: sampled
+    clauses:
+    - (vi)
+    omits: The grid of the fixed-point check at Lambda = 0, -12, -3/4
+  check_stelle_west_vector_at_the_tube_point:
+    kind: sampled
+    clauses:
+    - (vii)
+    omits: The grid of the fixed-point check at Lambda = 12, 3, 48, 4/3, with the conjugate points; the sign Q(Re
+      V) <= 0 for every m is the proof's negativity of span(e3, e4, W)
+  check_scale_of_the_null_pair_moves_rho_and_lambda_together:
+    kind: sampled
+    clauses:
+    - (viii)
+    omits: Three rotor parameters and the four values of Lambda at foot zero and rapidity zero; the general foot
+      and rapidity follow by covariance, not computed
+  check_two_horizon_field_separates_the_candidates:
+    kind: sampled
+    clauses:
+    - (scope)
+    omits: One Schwarzschild-de Sitter example (Lambda = M = 3/7, horizons 1 and 2) and the de Sitter limit M =
+      0; the general statement that two horizons of one static region have different surface gravities away from
+      the Nariai limit is not computed
+untouched_premises:
+  synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries: a costed clause used only in the reading
+    that adopts the selected point; the checks verify the selection and its properties directly

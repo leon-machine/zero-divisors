@@ -1,0 +1,20 @@
+functions:
+  check_radial_curvature_from_gauge_field:
+    kind: sampled
+    clauses: ["(1) R(d_t ^ d_r) = -d_r(M/r^2) sigma_r = (2M/r^3) sigma_r, from the gauge field alone", "the commutator term vanishes and nothing depends on t"]
+    omits: "six rational (M, beta) points with first-order jets; the identity -d/dr (M/r^2) = 2M/r^3 is exact in r but only for M = 3/2 and 5"
+  check_vacuum_curvature_spectrum:
+    kind: sampled
+    clauses: ["(2) the curvature operator is diagonal on the six frame planes with eigenvalue magnitudes (2, 1, 1, 1, 1, 2) M/r^3", "vanishing Ricci contraction (vacuum)"]
+    omits: "six sample points in the PG gauge; the static-chart computation of the appendix and the equivalence of the two pictures (Fact imported-equivalence-einstein-equations) are not used or compared; 'solves the vacuum field equations at every r > 0' is read from Ricci = 0 at these points"
+  check_gauge_field_unimodular:
+    kind: sampled
+    clauses: ["(3) det hb = 1 exactly, hb - 1 nilpotent", "the (t,r) block of the metric has determinant -1", "the divergence sits in Omega and the curvature"]
+    omits: "det hb = 1, (hb - 1)^2 = 0 and the metric block determinant -1 are exact identities in beta; the divergence of Omega(e_r)^2 and of the radial curvature is shown only as monotone growth at r = 8, 1/2, 1/32 (M = 1), and the divergence of the metric components without a rescaled limit is not tested"
+untouched_premises:
+  singularity.imported-equivalence-einstein-equations: "cited for the agreement of the static-chart appendix computation with the PG gauge on the invertible region; the check computes everything in the PG gauge directly (the docstring says so)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "curvature and spectrum checked at six exact rational points, unimodularity as exact identities in beta; divergence of Omega and curvature only shown at three radii"

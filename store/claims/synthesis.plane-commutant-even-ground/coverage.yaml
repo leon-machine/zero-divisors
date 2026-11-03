@@ -1,0 +1,15 @@
+functions:
+  test_plane_commutant:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    omits: (i) is checked at finite floors only (commutant of the planes of T_{k+1} inside T_k for k <= 2, ground dimension plus planes at most 9) over eleven ground signatures, not in the direct limit; the 2^n dimension of the single-floor commutant is checked for k = 1, 2; (ii) checks the centre of Cl^0 (R for eight odd-n cases, span{1,omega} with the sign of omega^2 for ten even-n cases) but not the list of types or that the pair determines n; (iii) checks that the generators u_i = e_i e_n have the same squares and anticommutation for eight signatures and their reversals
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The finite-floor commutant, the centre of the even ground algebra and the reversal-invariant presentation are verified by blade enumeration; the function is named test_plane_commutant, not check_*.
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"

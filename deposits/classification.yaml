@@ -1,0 +1,2645 @@
+# Classes of the results revised since their deposit (tp.deposits): corrected, changed or reworded.
+# The first pass (review-2026-10-27) read each result's word diff against the deposit with the
+# store's notes. Each entry holds for the entity version named; a later edit returns the result
+# to the rules until it is classified again. Override one with: python -m tp.deposits set.
+correspondence.chevalley-pairing:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space and its opposite chirality for twistor and dual twistor space.'
+  version: 4
+correspondence.chiral-planes-summand-spaces:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and citations only: conformal spinor space for twistor space; the proof is unchanged.'
+  version: 5
+correspondence.chirality-split-ordering-insensitivity-asd-sector:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only; the proof is unchanged.
+  version: 4
+correspondence.fock-model-complexified-ascended-algebra:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and terminology only: Q(u) for the square of a vector, conformal spinor space for twistor space.'
+  version: 6
+correspondence.googly-localisation-quartic-order:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal and projective spinor spaces for twistor spaces; the conjecture is unchanged.'
+  version: 3
+correspondence.imported-nonlinear-graviton:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: A new paragraph explains why this global, complex result is not carried by one real gravitational field
+    on flat spacetime; the import is unchanged.
+  version: 4
+correspondence.imported-tractor-connection-local-twistor-transport:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with conformal spinor terminology; the import and its provenance
+    are unchanged.
+  version: 6
+correspondence.imported-vacuum-equations-scale-tractor:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language, making explicit that the scale tractor is null exactly when
+    Lambda is zero; content unchanged.
+  version: 6
+correspondence.imported-weyl-commutes-duality:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language (Weyl map commutes with the pseudoscalar); the manifold form
+    is kept as an equivalent reading.
+  version: 2
+correspondence.imported-weyls-theorem:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity reading added beside the classical theorem; the theorem is unchanged.
+  version: 2
+correspondence.incidence-relation-chart:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The incidence relation's factor i is now the pseudoscalar I_6 (acting as -i), with a real-algebra form
+    added; valid for either sign.
+  version: 4
+correspondence.local-twistor-transport-ascended-spinor-connection:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and Gauge Theory Gravity phrasing: conformal spinor bundle for spin bundle, flat-spacetime
+    gauge field reading added; result unchanged.'
+  version: 7
+correspondence.no-real-lorentzian-vacuum-half-flat:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with added citations; the statement and proof are unchanged.
+  version: 6
+correspondence.one-statement-three-languages:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and Gauge Theory Gravity phrasing: infinity bivector for infinity twistor, flat-spacetime
+    gravitational field; the claim is unchanged.'
+  version: 5
+correspondence.ordering-filtration:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space for twistor space.'
+  version: 3
+correspondence.reality-conjugation-twistor-form-factor:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Clause (5) uses the pseudoscalar I_6, acting as plus or minus i, in place of i; valid for either sign.
+    Otherwise renaming and notation.
+  version: 6
+correspondence.shared-core-ordering-dictionary:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the ordering shift is -hbar/2 per dimension, -2 hbar in total, matching the minus sign of
+    N - 1/2.'
+  version: 4
+correspondence.skew-lines-splittings-hyperbolic-planes-one:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space for twistor space; cross-references updated.'
+  version: 4
+correspondence.spin-representation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space for twistor space; a citation added.'
+  version: 5
+correspondence.spinor-identification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and notation only: conformal spinor space for twistor space, Q(v) for squares; citations
+    added.'
+  version: 7
+correspondence.symmetrised-quadratics-palatial-algebra:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the ordering shift is -2 hbar, not +2 hbar (minus a half hbar per complex dimension).'
+  version: 5
+correspondence.twistors-are-states-three-ladder-pairs:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and notation only: conformal spinors for twistors, Q(v) for squares; citations added.'
+  version: 6
+dark-energy.cosmological-constant-does-not-change-residue:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement with the connection re-signed to the store convention, Omega(gamma_i)
+    = -H_i gamma_0 ^ gamma_i; equations and conclusions unchanged.
+  version: 6
+dark-energy.forcing-half-schwarzschild-wall-residue-sense:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The connection residue is re-signed to the store convention, minus the sum of p_i B_i; Gauge Theory Gravity
+    wording otherwise; steps unchanged.
+  version: 4
+dark-energy.four-alternatives-are-exhaustive-three-are:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: (K) is not independent of the other three, since (D) implies (K); (P) and (I) are compatible
+    with either.'
+  version: 2
+dark-energy.frozen-point-datum-kasner-wall:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Residue bivector re-signed to the store's Gauge Theory Gravity convention; the script's sample points
+    are now two Kasner and two non-Kasner.
+  version: 7
+dark-energy.frozen-point-makes-stelle-west-vector:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with Q(v) notation and cross-references; content unchanged.
+  version: 5
+dark-energy.gravity-pre-metric-forces-degenerate-exactly:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations updated and one sentence makes explicit that gravity's action contains no inverse metric.
+  version: 4
+dark-energy.imported-frozen-point-geometry:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with Q(v) notation and added citations; the imported content
+    is unchanged.
+  version: 6
+dark-energy.imported-henneaux-teitelboim-promotion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Notation Q(v) and citation format only; the imported statement is unchanged.
+  version: 4
+dark-energy.imported-macdowell-mansouri-theorem-stelle-west:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Transcribed into Gauge Theory Gravity with explicit connection, field-strength operator and functional
+    in the store's sign conventions; the cited theorem is unchanged.
+  version: 3
+dark-energy.imported-s-wave-current-algebra:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the proof now repeats the imported statement with cross-references; citation formatting
+    updated.'
+  version: 5
+dark-energy.imported-walls-sphere-theorem:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the proof repeats the imported statement with added citations and cross-references.'
+  version: 6
+dark-energy.imported-weighted-limit-schwarzschild-singularity-matching:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Restated in Gauge Theory Gravity, with the limiting connection re-signed to the store convention: minus
+    the sum of p_i B_i. Content unchanged.'
+  version: 5
+dark-energy.point-infinity-has-no-physical-fluctuation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Notation Q(v) for squares and Gauge Theory Gravity wording for the tractor connection; the counting is
+    unchanged.
+  version: 4
+dark-energy.sheaf-papers-wall-soldering-variables:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language (derived cometric, physical-vector map); statements, dimensions
+    and cases unchanged.
+  version: 8
+dark-energy.stelle-west-vector-frozen-point:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language (tractors as Cl(2,4) vectors, physical frame); Q(v) notation;
+    the computations are unchanged.
+  version: 5
+dark-energy.under-action-written-norm-parameter-laws:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 4
+dark-energy.vacuum-region-registration-condition:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the vacuum stress-energy is +(Lambda/8 pi G) g, positive energy density; the deposited minus
+    sign gave a negative vacuum energy. w = -1 unchanged.'
+  version: 7
+dark-energy.variable-exponents-residue-pointwise-corrections-are:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity restatement: same formulas and claims, phrased as fields on flat spacetime; citations
+    updated.'
+  version: 4
+dark-energy.wall-counterterm:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement of the connection and field strength; the counterterm, formulas and coefficients
+    are unchanged.
+  version: 4
+dark-energy.walls-free-sector:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language (soldering form as physical-vector map); ranks, free sector
+    and cases unchanged.
+  version: 5
+dark-matter.asymmetry-arrow-counted-fifteenth-refutation:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Scope qualified: the theta-term matches the flag bit at the P3 representatives; otherwise citations only.'
+  version: 4
+dark-matter.ceiling-valued-inherited-success:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations only, naming the alignment result and Hypothesis (U) used.
+  version: 5
+dark-matter.coefficients-floors-they-give-what-gravity:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the descent temperature is 31.9 to 36.2 times the ceiling, not thirty to thirty-six.'
+  version: 4
+dark-matter.direction-nesting-adds-algebra:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only.
+  version: 3
+dark-matter.imported-derived-generation-flag:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor' Fock structure) and citations only; the fact's text now repeated as its
+    proof.
+  version: 6
+dark-matter.imported-frozen-point-de-sitter-radius:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with Q(I) for the inner product; content unchanged.
+  version: 6
+dark-matter.imported-gravity-only-coupling:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the coupling holds at first order, under the Indifference premise and (Q), and ''nothing else
+    observable'' needs Premise P1.'
+  version: 3
+dark-matter.imported-induced-equations-hypersurface:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in five-dimensional Gauge Theory Gravity, with the source's signature declared; the imported
+    term is unchanged.
+  version: 2
+dark-matter.imported-inputs-standard-model-chain:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor space', complex over I_6) and citations; the fact's text now repeated as
+    its proof.
+  version: 6
+dark-matter.imported-linear-momentum-equation-traceless-field:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language; equations and provenance unchanged.
+  version: 2
+dark-matter.mirror-share-assembled:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Hypotheses restated: P4 is no longer assumed, being discharged for the mirror by the copy theorem''s
+    clause (v).'
+  version: 7
+dark-matter.mirror-share-one-how-fragile:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Superseded in part: the half-percent bracket holds only where the mirror is helium, not at the gravitational
+    floor where it is mostly neutrons.'
+  version: 6
+dark-matter.mirror-tower-copy-one:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Superseded in part: P2 with this reach forces T''/T = 1, which is excluded, so the cold mirror is an
+    unstated exception to P2.'
+  version: 8
+dark-matter.mode-counts-two-modules-which-one:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor modes') and cross-references only; counts unchanged.
+  version: 6
+dark-matter.nesting:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citation only: names the functoriality fact behind the injective algebra map.'
+  version: 3
+dark-matter.no-coupling-rule-odd-towers-follows:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations only; the proof names the results clause (c) rests on.
+  version: 4
+dark-matter.open-channels-their-costs:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Narrowed: the cold mirror holds only if its temperature is a free datum, an exception to P2, which gives
+    an excluded Delta N_eff of 7.45.'
+  version: 5
+dark-matter.orientation-arrow-seventeenth-refutation:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the proof no longer rests on the trichotomy''s exhaustiveness, shown false in general, and
+    conjugation is antilinear; conclusion unchanged.'
+  version: 9
+dark-matter.p2-indifference:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Scope added by decision: P2 equates sector labels such as the tower charge, not thermal states, and the
+    mode set is finite.'
+  version: 2
+dark-matter.population-count-one-share-half-percent:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only; the proof now states how P1 to P3 and P4 enter through the cited results.
+  version: 5
+dark-matter.premise-cpt-covariance:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: CPT conjugation is an antilinear anti-automorphism, not a real linear automorphism; the premise
+    and its action clause are now stated explicitly.'
+  version: 2
+dark-matter.projection-every-towers-content-dilutes-ones:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only.
+  version: 3
+dark-matter.radiation-audit-what-theorem-closes-what:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: three-dimensional U(1)s confine only in phase (C); in phase (T) the photon is topologically
+    massive. The channel stays closed.'
+  version: 7
+dark-matter.reduced-response-gravity-needs-supporting-stress:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: responds to the gravitational field rather than the metric; clauses unchanged.'
+  version: 3
+dark-matter.seeding-gravity-floor-dark-towers-temperature:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation: the rounded factor 4e-3 is given as 3.75e-3, and premises are cited; no change of result.'
+  version: 4
+dark-matter.sourcing-rule-forced-not-chosen:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Restated in Gauge Theory Gravity language: field equations of a gravitational field on flat spacetime;
+    content unchanged.'
+  version: 3
+dark-matter.status-rule:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'New clause (vi) by decision: the fit needs residues 0 and 4 empty, adopted as a costed clause; no number
+    changes.'
+  version: 3
+dark-matter.stored-asymmetry-charge-not-number:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Superseded in part: the free mirror temperature is an exception to P2, and at the floor the mirror is
+    mostly neutrons, not burnt to helium.'
+  version: 7
+dark-matter.superselected-hence-dark-exactly-stable:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: darkness holds at first order, at the acoustic no-go''s mixed level and its premises, not
+    unconditionally; stability unchanged.'
+  version: 5
+dark-matter.thickness-not-gravitational-quantity:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Note added by decision: the experimental exclusion assumes the hidden direction co-expands; a static
+    one escapes the bound.'
+  version: 4
+dark-matter.total-function-thickness:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: names the lemma, rules and premise each step uses.'
+  version: 5
+dark-matter.towers-are-residues-single-clock-filter:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only, plus a closing sentence on how P2 enters through the labelling convention.
+  version: 5
+dark-matter.two-reductions:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language, with a note on the global four-sphere; computations unchanged.
+  version: 7
+dark-matter.two-roots-are-chord-arc-quarter:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only.
+  version: 4
+dark-matter.type-residue-what-each-tower-can:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: notes that the type table is classical (Cartan, Bott) and repeats the labelling convention.'
+  version: 5
+dark-matter.unit-ball-rule:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'New clause: states that the 5.364 agreement is a fit, found by solving for the observed value; arithmetic
+    unchanged.'
+  version: 5
+dark-matter.which-towers-can-carry-arrow:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology: real ''conformal spinors'' for real twistors, with a gloss; cross-references updated.'
+  version: 4
+families.bracket-fixed-join:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinors' for 'twistors') and cross-reference format only.
+  version: 4
+families.chart-computation-sign-twist-bracket-form:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('spinor labels' for 'twistor labels') and cross-reference format only.
+  version: 5
+families.doublet-direction-module-georgi-jarlskog-clebsch:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citation only: species names supplied by Hypothesis (S).'
+  version: 6
+families.faces-ordered-what-identification-requires-first:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('two-spinor face') and citation format only.
+  version: 3
+families.imported-dictionary-exact-join:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: two conformal spinors in place of two twistors; proof restates the import.'
+  version: 5
+families.imported-face-valued-bracket-quantum-numbers:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: two-twistor composite and three-twistor bound renamed for conformal spinors.'
+  version: 5
+families.imported-one-derived-generation-hypothesis-s:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: single-twistor singlets and twistor slots renamed for conformal spinors.'
+  version: 6
+families.imported-squeezed-vacuum-bosonic-pairing:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: citation format, and the imported fact''s text now repeated as its proof.'
+  version: 3
+families.imported-tree-relations-family-no-go:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: citation format, and the imported fact''s text now repeated as its proof.'
+  version: 6
+families.koide-class-crossing-fit-conclusion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation: a sentence makes explicit that the crossing equation is the Koide condition on the skeleton
+    spectrum.'
+  version: 3
+families.linear-conjecture-refuted-data:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the Koide quotient on the lepton data is 0.6666645, not 0.666661.'
+  version: 3
+families.order-operations-matter-programme:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and citations only; the proof now names Hypothesis (S) where it supplies the species
+    names.
+  version: 5
+families.selectivity-observation-level:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the strong dressing no longer explains the quarks'' failure of Koide; known dressings can
+    only lower the quotient, so this is open.'
+  version: 4
+families.source-term-linear-tilt-mass-functional:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology and citations only, plus a sentence naming the fact the pure-gauge remark rests on.
+  version: 4
+families.three-generations-faces-maximal-composite:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: ''conformal spinor'' for ''twistor''; the conjecture is unchanged.'
+  version: 2
+families.three-identical-families-mixing-shared-slots:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor' for 'twistor') and a sentence naming where Hypothesis (S) enters; combinatorics
+    unchanged.
+  version: 6
+hawking.greybody-inheritance-under-interface-premise:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only; statement repeated in the proof slot.
+  version: 6
+hawking.helicity-lift-joints-itemised:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor storey called the conformal storey; joints and provenance unchanged.'
+  version: 5
+hawking.homogeneity-ordering-shift:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor functions written as functions on the conformal spinor space; computation unchanged.'
+  version: 6
+hawking.i-state-continuum:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references added, with a sentence naming the source of the uniqueness clause.
+  version: 5
+hawking.imported-algebra-boundary-modes-car-algebra:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only; statement repeated in the proof slot.
+  version: 5
+hawking.imported-modular-descent-premises-geometric-normalisation:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The flow for which the descended state is KMS is now named as the phase flow of the same generator; provenance
+    pointers added.
+  version: 6
+hawking.imported-penrose-transform:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor-space region written as a region of the conformal spinor space, complex unit named
+    I_4.'
+  version: 2
+hawking.imported-s-wave-bosonic-sector:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only; statement repeated in the proof slot.
+  version: 6
+hawking.imported-twistor-storey-ordering-shift:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor space written as the conformal spinor space over I_6; the ordering shift is unchanged.'
+  version: 6
+hawking.modular-structure-completed-pair:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations of standard algebra facts and cross-references only.
+  version: 3
+interior.boosts-generate-exactly-levi-factor:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector, plus a citation.'
+  version: 4
+interior.complex-scale-inverse-cube-killing-spinor:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the duality monodromy is minus three times the Killing spinor''s winding, in the opposite
+    sense; twistor wording also replaced by Killing spinor.'
+  version: 5
+interior.covariant-form-vacuum-equations:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement naming the tractor connection as a Cl(2,4) gauge field; Q notation; same
+    theorem.
+  version: 5
+interior.duality-monodromy-fibration-over-ring:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: New note that the sheets of the maximal extension lie beyond one flat chart; ring described via the Kerr-Schild
+    field. Conjecture unchanged.
+  version: 4
+interior.exact-parallelism-convergence-rate:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity wording: physical frame and D-parallel transport; rates and constants unchanged.'
+  version: 5
+interior.filtration-cauchy-horizon-read-literature:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording plus a new scope note that the Cauchy horizon lies beyond one flat chart;
+    findings unchanged.
+  version: 7
+interior.imported-kerr-curvature:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity wording: field strength on flat spacetime, ring where hb is undefined; formula unchanged.'
+  version: 2
+interior.imported-mass-inflation-stability:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording plus a new scope note that the Cauchy horizon and extension across it lie
+    beyond one flat chart.
+  version: 3
+interior.imported-schwarzschild-curvature-spectrum:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement; eigenvalues and planes unchanged, provenance pointer added.
+  version: 6
+interior.imported-tractor-connection:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement of the imported tractor connection; connection and sign sentence unchanged.
+  version: 2
+interior.imported-walker-penrose-killing-spinor:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording of the imported Killing spinor result; content unchanged.
+  version: 2
+interior.interior-connection-exactly:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Connection values re-signed to the store's GTG sign convention, minus sigma_i B_i; values otherwise unchanged.
+  version: 7
+interior.kasner-form-interior:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity wording: derived metric and worldlines of D-parallel velocity; series and exponents
+    unchanged.'
+  version: 5
+interior.metric-parallelism-trace-schouten-condition:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording and Q notation; same lemma and proof.
+  version: 6
+interior.non-null-stabilisers-section-they-act:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(I) for the square of a vector, plus citations of standard algebra facts.'
+  version: 4
+interior.scale-tractor-leaves-cone:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording, Q notation and a provenance pointer to Gover; same result.
+  version: 7
+interior.schwarzschild-de-sitter-weighted-limit:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording, naming the tractor as parallel for the Cl(2,4) gauge field; content unchanged.
+  version: 7
+interior.schwarzschild-lines-exactly:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Generator and model transport re-signed to the store's GTG sign convention; norms, series, bound and rates
+    unchanged.
+  version: 5
+interior.sign-fixed-internally:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording and Q notation; the sign argument is unchanged.
+  version: 4
+interior.stabilisers-flat-model:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector, plus a citation for the bivector action.'
+  version: 5
+interior.transport-level-convergence-along-tangential-curves:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity wording: admissible gravitational field and D-transport; the bound is unchanged.'
+  version: 4
+interior.unipotency-across-kerr-family:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(k) for the square of a vector, and cross-references.'
+  version: 5
+interior.weighted-limit-theorem:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Limiting connection re-signed to the store's GTG convention, minus sum p_i B_i; GTG restatement otherwise,
+    content unchanged.
+  version: 5
+mass.casimir-form-join:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: removed the claim that the two Casimir normalisations differ by the conformal Casimir, which
+    gave an impossible mass for the conformal scalar.'
+  version: 6
+mass.chart-form-spin-isomorphism:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: chart halves renamed and Q(v) for squares; the computation is unchanged.'
+  version: 5
+mass.de-sitter-scale-frozen-point:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity restatement: de Sitter space as a dilation field on flat spacetime; the computation
+    is unchanged.'
+  version: 6
+mass.exact-join:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Massless condition sharpened: the multiple of the identity must be zero, so h = 0; otherwise terminology
+    and notation only.'
+  version: 7
+mass.five-broken-generators:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and notation only: conformal spinor space for twistor space, Q(v) for squares.'
+  version: 6
+mass.grip-real:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and notation: Sigma named as the reversion form, i read as I6, Q(v) for squares; content
+    unchanged.'
+  version: 7
+mass.imported-flat-model-twistor-chart-infinity:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and Gauge Theory Gravity wording: conformal spinors for twistors, flat-spacetime field language;
+    statements and proofs unchanged.'
+  version: 7
+mass.imported-frozen-point-tractor-connection:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement of the tractor connection and Q(v) notation; content unchanged, provenance
+    cross-references added.
+  version: 6
+mass.imported-palatial-quadratics-homogeneity-charge:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: palatial oscillators for twistor oscillators; the statement is restated in the proof
+    with citations.'
+  version: 4
+mass.imported-thomas-operator:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity restatement: same formulas and claims, phrased as fields on flat spacetime; citations
+    updated.'
+  version: 2
+mass.imported-unitary-representations-de-sitter-group:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the two Casimirs share one normalisation with no shift; the grip exceeds the de Sitter mass
+    by H^2 times the conformal Casimir.'
+  version: 3
+mass.mass-symplectic-area-two-twistor-formula:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors, conjugation read as reversing I6; the computation is
+    unchanged.'
+  version: 3
+mass.mass-weight-dictionary:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 4
+mass.weight-composite:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: two conformal spinors for two twistors; a cross-reference added in the proof.'
+  version: 6
+mass.weight-polynomial-two-series:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Notation Q(v), added attributions, and the convention remark repeated in the proof; the mathematics is
+    unchanged.
+  version: 5
+neutrino.empty-twistor:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: empty conformal spinor for empty twistor; disclaimer about the Standard-Model paper''s
+    usage updated; computation unchanged.'
+  version: 5
+neutrino.imported-ceiling-under-hypothesis-u-arrow:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: T14 states the flag covariance for the grade-zero singlet, not the grade-three state; CPT
+    premise named.'
+  version: 6
+neutrino.imported-derived-content-singlets:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: single conformal spinor for single twistor; representations and hypercharges unchanged.'
+  version: 7
+neutrino.imported-indifference-faces-democratic-alignment-rank:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: two-spinor faces and three-spinor bound for the twistor names; content unchanged.'
+  version: 6
+neutrino.imported-mass-bracket-quantum-numbers:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors; the bracket and its quantum numbers unchanged.'
+  version: 5
+neutrino.leptogenesis-suppressed-alignment-reheating-premise-new:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added, including to the real-breaking assumption already named in the text; statement unchanged.
+  version: 7
+neutrino.rank-one-seesaw-ordering-sum-double:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology (full conformal spinor) and citations; the boundary value is now written explicitly as m1
+    = 0.1 meV.
+  version: 8
+neutrino.real-breaking-assumption:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The real-breaking assumption, used in the paper inside a proposition, is now stated as a separate named
+    premise.
+  version: 1
+neutrino.seesaw-what-gauge-invariance-proves-what:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations updated; proof now says explicitly that clause (3) is under Premise (M), as already stated.
+  version: 4
+note.correspondence.boundary-stated-plainly:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: projective and conformal spinor spaces in place of twistor wording.'
+  version: 2
+note.correspondence.dimensions-real-form:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space and its opposite chirality for twistor and dual twistor space.'
+  version: 2
+note.correspondence.isomorphism-witt-pair:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: the twistor space symbols renamed to the conformal spinor space and its opposite chirality.'
+  version: 2
+note.correspondence.point-contact-planes-tower:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space in place of twistor space.'
+  version: 2
+note.correspondence.point-contact-what-became-tractor-formalism:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors and infinity bivector in place of twistors and infinity twistor.'
+  version: 2
+note.correspondence.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(u) for the square of a vector; cross-references updated.'
+  version: 2
+note.correspondence.setting-setting-imports:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(x) written for the square of a vector.'
+  version: 2
+note.correspondence.two-storey-picture:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor states for twistor states.'
+  version: 2
+note.correspondence.what-factor-i-what-remains-conventional:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The factor i is now read as the pseudoscalar I_6, with Penrose's i kept in parentheses; terminology otherwise
+    converted.
+  version: 2
+note.dark-energy.point-contact-why-form-not-value:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(I) written for the square of the vector I.'
+  version: 2
+note.dark-energy.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.dark-energy.setting-what-kind-number-norm-fourth:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.dark-matter.setting-predictions-collected:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and table typography only in the compared text.
+  version: 2
+note.dark-matter.where-flag-defined-what-it-carries:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: the complex unit is written I_4, the field theory''s imaginary unit, in place of i.'
+  version: 2
+note.hawking.setting-mode-continuum:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the countable mode set comes from s-wave aggregation of ladder pairs, not from the tower adjoining
+    modes one rung at a time.'
+  version: 2
+note.interior.points-contact-established-physics-kept-view:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor theory glossed as the theory of the conformal spinor space; T9 called the correspondence
+    paper.'
+  version: 2
+note.interior.setting-flat-model-dictionary:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(x) written for the square of a vector.'
+  version: 2
+note.interior.setting-tractor-bundle-scale:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q of a tractor for its inner product with itself.'
+  version: 2
+note.interior.setting-transport-along-tangential-curves-lines:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Model generator H(s) re-signed to minus sum u^i p_i B_i, the store's GTG sign convention.
+  version: 2
+note.interior.what-equation-now-says:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: twistor space glossed as the conformal spinor space; T9 called the correspondence paper.'
+  version: 2
+note.mass.conventions-sign:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.point-contact-angle-between-two-vacua:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors and the correspondence paper named; the reading is unchanged.'
+  version: 2
+note.mass.point-contact-dictionary-plain-words:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 2
+note.mass.point-contact-what-gravity-why-everything:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 2
+note.mass.quantisation-ordering:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors and the correspondence paper named.'
+  version: 2
+note.mass.setting-grip-composite-frozen-point-2:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.setting-introduction:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.setting-prior-art:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.setting-setting-imports:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.setting-successor-problems:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) written for the square of a vector; references updated.'
+  version: 2
+note.mass.what-dictionary-does-does-not-yield:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: spinor bracket and multi-spinor system in place of twistor bracket and multi-twistor
+    system.'
+  version: 2
+note.mass.what-join-says:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the field-side de Sitter mass is not a third reading of the grip; it differs by H^2 times
+    the conformal Casimir.'
+  version: 3
+note.mass.what-nullity-fixes:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Notation Q(v) and added geometric algebra readings of the Hermitian form and the factor i; content unchanged.
+  version: 3
+note.odd-extensions.dictionary-ascents-null-pair:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; cross-references updated.'
+  version: 2
+note.odd-extensions.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; cross-references updated.'
+  version: 2
+note.one-relation.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; cross-references updated.'
+  version: 2
+note.one-relation.where-exhaustiveness-first-fails-4-quadric:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors, with a parenthetical geometric algebra reading added.'
+  version: 2
+note.programme.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector.'
+  version: 2
+note.programme.setting-measure-two-numbers-one-bit:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: N is the square root of the horizon mode count, not the count; one number for two monomials
+    only; Dirac''s law excluded, coincidence epochal.'
+  version: 3
+note.programme.setting-other-applications-successor-programme:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: N fixes the boundary modes the origin opened (about pi N^2/ln 2 of them); it is not their
+    number.'
+  version: 2
+note.programme.setting-series-paper-paper-2:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Typography and layout of the table only.
+  version: 3
+note.programme.setting-seventeen-refutations:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Typography and cross-references only.
+  version: 2
+note.simulations.setting-laying-out-files-2:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Typography and layout only.
+  version: 1
+note.singularity.cost-r-dictionary:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Wording only: T9 named as the correspondence paper on the conformal spinor space rather than the twistor
+    correspondence.'
+  version: 2
+note.singularity.setting-gauge-theory-exactly:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the torsion equation and rotation-gauge law need the adjoint of hb; curvature and field-equation
+    signs also changed to the store convention.'
+  version: 2
+note.standard-model.0-what-massless-means-here:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor representation for twistor representation.'
+  version: 2
+note.standard-model.point-contact-grand-unification-what-hypothesis:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: the twistor-slot space is now called the slot space of the conformal spinors.'
+  version: 2
+note.standard-model.point-contact-what-kind-explanation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: the twistor paper glossed as T09 on the conformal spinor space.'
+  version: 2
+note.standard-model.setting-introduction:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected wording about N: it is a state count fixing the boundary-mode count, not the number of boundary
+    modes itself.'
+  version: 2
+note.standard-model.setting-modules-mass-mechanism-rung-doublet-2:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(I) for the square of the frozen point.'
+  version: 2
+note.standard-model.setting-successor-problems:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the rescaling-invariant rung unit is v/M_P, about 2e-17; v/H, about 10^44, inherits N.'
+  version: 2
+note.standard-model.sixth-refutation-ladder-not-gauge-group:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 2
+note.standard-model.weakness-examined-exotics-conjugation-hypercharge:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 2
+note.tower.setting-machine-verification:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and references only: <a,a> written as Q(a); the thirty-one checks are unchanged.'
+  version: 2
+note.transport.setting-destination-advance:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: cross-references and layout adjusted; the six questions and the reading route are
+    unchanged.'
+  version: 1
+obj.hawking.boundary-mode-algebra-windows-boost-dynamics:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: New provenance for the mode set and a new convention placing modes below the level by particle-hole conjugates,
+    zero mode excluded.
+  version: 2
+obj.interior.weighted-blow-up-hubble-normalisation-admissible:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Admissibility now defined for a gravitational field, and the model connection re-signed to the store's
+    GTG convention, minus sum p_i B_i.
+  version: 2
+obj.mass.grip-mass-composite:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and terminology only: constituents named as conformal spinors and Q(P) for the squared grip.'
+  version: 3
+obj.scrambling.stretched-singularity:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: mode placement was attributed to the tower capacity fact; it now rests on Postulates (C1)
+    and (C2), and the definition places no modes.'
+  version: 2
+obj.sheaf.weighted-coframe-module:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: coordinates are labels on the flat background of the PG gauge; module
+    unchanged.'
+  version: 2
+obj.singularity.geometric-modular-condition-g:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The definition now specifies the phase flow generated by K_geo, not its real rotor flow.
+  version: 2
+odd-extensions.are-ascents-pair-signed:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; cross-references updated.'
+  version: 4
+odd-extensions.boost-dilation-ratio-gauge:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added for standard algebra facts (orthogonal vectors anticommute, bivector exponential); proof
+    unchanged.
+  version: 3
+odd-extensions.copy-theorems-blind-spot:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Twistor module renamed conformal spinor module; new clause names the complex unit as the conformal pseudoscalar
+    I6, and the proof now spells out its sources.
+  version: 5
+odd-extensions.doubling-or-complexification:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected sign: on the summand of (1 plus or minus omega)/2, e_n acts as plus or minus s omega'', with
+    s the square of e_n.'
+  version: 5
+odd-extensions.exceptional-algebra-residue-completion-both-sides:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; citations updated.'
+  version: 4
+odd-extensions.four-extensions-are-four-odd-towers:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Cross-references only: citations updated and the sources of each step named in the proof.'
+  version: 4
+odd-extensions.four-extensions-oriented-pair:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'New remark: the labels follow a uniform convention; in T14''s causal convention the mirror''s extensions
+    are Cl(4,1) and Cl(3,2).'
+  version: 5
+odd-extensions.imported-conformal-completion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor space' with complex unit I_6) and citations only.
+  version: 5
+odd-extensions.imported-copy-theorem-soldered-residue:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor module', reversion form) and citations; the fact's text now repeated as
+    its proof.
+  version: 5
+odd-extensions.imported-frozen-point:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity restatement, and the translation part renormalised to the store convention: -e wedge
+    V over l squared.'
+  version: 6
+odd-extensions.imported-frozen-point-degenerate-algebras:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; provenance restated with citations.'
+  version: 4
+odd-extensions.imported-representatives-dimension-nearest-four-types:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the other six residues admit matter; the source does not say they are populated.'
+  version: 4
+odd-extensions.line-tame-wall:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; proof cites the relation 2ab = Lambda/3 and the tameness
+    conditions explicitly.'
+  version: 4
+odd-extensions.mirror-inside-complexified-extension-absent-doubled:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and citations of standard algebra facts only.
+  version: 4
+odd-extensions.not-coupling-between-towers:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof now cites the theorem supplying Lambda as a datum of the ascent; the argument is unchanged.
+  version: 3
+odd-extensions.translation-bivectors-frozen-point:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(V) for the square of a vector; cross-references updated.'
+  version: 3
+odd-extensions.twistor-algebra:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology ('conformal spinor space'), with the volume element glossed as I_6 and citations added; mathematics
+    unchanged.
+  version: 6
+odd-extensions.two-classes-completion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof now names the Fact supplying the rank two of the first class; content unchanged.
+  version: 3
+odd-extensions.two-towers-one-curved-universe:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: the one gravitational field on flat spacetime replaces the one manifold;
+    Q(v) notation; clauses unchanged.'
+  version: 6
+one-relation.arrow-frequency-are-one-bit-level:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof names the bijection whose linearity it uses; content unchanged.
+  version: 4
+one-relation.character-experience-three-record-chain-theorems:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added, including Hypothesis (S) where already used; content unchanged.
+  version: 4
+one-relation.imported-flag-arrow-superselection:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the orientation bit now rests on CPT invariance of actions, Hypothesis (S) and the flag as
+    a datum, not on the trichotomy''s exhaustiveness.'
+  version: 7
+one-relation.imported-indifference-instrument:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof restates the imported principle with citations; content unchanged.
+  version: 4
+one-relation.imported-null-cone-determines-form-zeemans:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof restates the imported facts with citations; content unchanged.
+  version: 3
+one-relation.imported-pure-spinors-incidence-chart:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space for twistor space; citations added.'
+  version: 5
+one-relation.imported-single-mode-thermality-modular-period:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the clock inventory gives the clocks'' period 8 pi M, not the modular period unconditionally;
+    that equality needs premise (R).'
+  version: 6
+one-relation.odd-square-roots-chiral-phase:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; citations added.'
+  version: 5
+one-relation.overlap-table-sorted:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Terminology (conformal spinor pairs, correspondence paper) and citations added; content unchanged.
+  version: 5
+one-relation.record-chain-votes-measurement-without-collapse:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the one bit is counted under the corrected orientation argument''s premises (CPT on actions,
+    flag as datum), not the trichotomy''s exhaustiveness.'
+  version: 6
+one-relation.spacetime-manifold-vacuum-lines:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology and notation only: conformal spinors for twistors, Q(v) for the square of a vector; citations
+    added.'
+  version: 6
+one-relation.third-constant-conversion-constant-between-charts:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: the point-line correspondence of conformal spinors for the twistor correspondence;
+    citations added.'
+  version: 6
+one-relation.two-capacities-three-consequences:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added for standard algebra facts used in the proof; content unchanged.
+  version: 5
+one-relation.two-presentations:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added for standard algebra facts used in the proof; content unchanged.
+  version: 4
+primer.classification-real-clifford-algebras:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: A second derivation is added, via the periodicity theorem, supplying the induction the original proof
+    left to the classical sources.
+  version: 3
+programme.n-parameter-of-the-laws:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'By decision the series adopts the promoted action: N is now initial data, a parameter of the laws only
+    under the action as written.'
+  version: 5
+refuted.the-number-n-is-a-coincidence-dirac:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the refuter is conditional; N covers two monomials, not the mass hierarchy, and what is rejected
+    is Dirac''s law.'
+  version: 2
+refuted.the-number-n-is-a-mystery-of-largeness:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the mode count is about 4.8e122 (pi N^2/ln 2), not N, and the refutation rests on an unproved
+    reading.'
+  version: 2
+refuted.the-three-twistor-hierarchy-carries-the-standard:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: three conformal spinors for three twistors.'
+  version: 2
+refuted.the-two-one-generator-ascents-differ-as-algebras:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: No change to the refuted statement; only the store's lineage links were added.
+  version: 2
+refuted.the-vacuum-omega-area-sets-the-weak-scale:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: No change to the refuted statement; only the store's lineage links were added.
+  version: 2
+refuted.the-wall-twist-is:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: No change to the refuted statement; only the store's lineage links were added.
+  version: 1
+refuted.twistors-are-the-ladder-operators:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors.'
+  version: 2
+scrambling.area-law-test:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only; the area-law comparison is unchanged.
+  version: 4
+scrambling.clock-inventory-boundary-modes:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and citation formatting only; the clock inventory argument is unchanged.
+  version: 5
+scrambling.exactness-excludes-cutoff-dependence:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only; the argument is unchanged.
+  version: 4
+scrambling.imported-collars-coframe-exceptional-set-helicity:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity terms (physical-vector map); weights, normalisation and helicity lift
+    unchanged; citations added.
+  version: 6
+scrambling.imported-modes-modular-inventory:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the proof now repeats the imported statement with cross-references; citation formatting
+    updated.'
+  version: 3
+scrambling.intrinsic-clock-ic-flagged-premise:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Scope added by decision: the premise is read as a calibration on the Schwarzschild family only, with
+    the de Sitter and Kerr misses noted.'
+  version: 3
+scrambling.mode-count:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the count leaned on the tower''s capacity, which places no modes; it now assumes (C1) and
+    (C2), with nu''s corank factor fixed.'
+  version: 2
+scrambling.no-recount-reaches-quarter:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only, plus a phrase naming the capacity target already in use.
+  version: 4
+scrambling.pair-mode-qubit-one-object:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added to results the proof already uses; no change of content.
+  version: 4
+scrambling.per-slice-verification-two-failed-aggregations:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references only; the verification and failed aggregations are unchanged.
+  version: 4
+scrambling.principality-indifference-sphere:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added for the indifference principle and imports; a sentence makes explicit where time and the
+    plane come from.
+  version: 4
+scrambling.residue-each-convention:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and citation formatting only; the residues in each convention are unchanged.
+  version: 4
+scrambling.slice-volume-exactly-per-unit-killing:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language (Painleve-Gullstrand gauge field on flat spacetime); the computation
+    and result are unchanged.
+  version: 4
+scrambling.spreading-law-chaos-bound-saturated:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the chaos bound is met, not saturated; the real-time Lyapunov exponent is zero, so ''saturates
+    by construction'' was overstated.'
+  version: 5
+sheaf.blade-basis-degenerate-forms-included:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: the basis statement is cited as standard, its argument recalled for the structure constants.'
+  version: 4
+sheaf.conservation-degeneracy-located:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Clarified: ''physical side'' means where the dying eigenvalue is positive; at Schwarzschild that is r
+    < 0, outside the manifold.'
+  version: 3
+sheaf.degeneration-sheaf:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: standard facts and the tameness hypotheses are cited where the proof uses them.'
+  version: 5
+sheaf.edge-wall:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and constant rank of the sheaf cited.'
+  version: 4
+sheaf.exceptional-algebra-black-hole:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'New proof text: the limit Gram and residue computations are now written out rather than left to the script.'
+  version: 4
+sheaf.exceptional-algebra-deformation-normal-cone:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the nonvanishing derivative is attributed to tameness condition (T3).'
+  version: 5
+sheaf.exponent-ratios-are-invariant:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and the final clause attributed.'
+  version: 4
+sheaf.imported-classification-values:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the imported values and provenance are repeated under the proof, with citations formatted.'
+  version: 4
+sheaf.kasner-data-interior:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: the metric is the derived metric of the gravitational field; exponents
+    unchanged.'
+  version: 2
+sheaf.matching-connection-level:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity, with connection values re-signed to the store's sign convention (boundary
+    value now -B_w).
+  version: 7
+sheaf.matching-fibre:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Sign convention changed: the surviving value is now -sum p_i B_i, matched to -B_w, in the Gauge Theory
+    Gravity sign.'
+  version: 4
+sheaf.no-equivariant-value-wall:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated to named results.'
+  version: 5
+sheaf.one-sided-completion-singularity:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and the sign of g_k cited.'
+  version: 4
+sheaf.schwarzschild-degeneration-boundary-tame:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: the PG cometric is the derived cometric of the gauge field; Gram and identities
+    unchanged.'
+  version: 6
+sheaf.tame-walls-are-two-sided:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the residue isomorphism and tameness are cited where applied.'
+  version: 3
+sheaf.transversal-independence-wall:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the normalisation lemma is cited.'
+  version: 4
+sheaf.variable-weight-boundary-tameness-completion-forced:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citation only: the closing consequence is attributed to the function-linearity result.'
+  version: 5
+sheaf.wall-fibre-black-hole:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the classification is cited for Cl(1,2) = Mat_2(C).'
+  version: 4
+sheaf.weighted-limit:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity, and the connection values re-signed to the store's sign convention (now
+    -sigma_i B_i).
+  version: 6
+sheaf.weights-are-forced-are-kasner-exponents:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: ''read off the geometry'' becomes ''read off the gravitational field'';
+    weights unchanged.'
+  version: 5
+simulations.averaged-pair-operator:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added for standard algebra facts used in the proof; content unchanged.
+  version: 5
+simulations.cluster-bound-two-dimensions:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Proof pointer expanded to name the results it rests on; the computation is unchanged.
+  version: 3
+simulations.confinement-scale-does-not-matter:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added to the proof's steps; content unchanged.
+  version: 4
+simulations.imported-mirror:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the mirror is not helium at the gravitational floor (degenerate, mostly neutrons there); helium
+    only for xi about 3e-3 to 2e-2.'
+  version: 5
+singularity.area-law-test:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references added, including the source of the epoch reading; argument unchanged.
+  version: 5
+singularity.assembled-page-curve-up-typicality:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Status changed from imported Fact to proved assembly, with a step-by-step proof and Page's theorem split
+    out as a separate import.
+  version: 3
+singularity.bosonisation-bridge-s-wave-sector:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: invariance of the current span under the modular flow holds only for weights affine in k,
+    so it uses Premise (Q).'
+  version: 7
+singularity.c1-curvature-cutoff:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: By decision, scope limited to a Schwarzschild calibration, with a note that the premise's form is forced
+    up to one constant.
+  version: 4
+singularity.c2-cell-density:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: nu is not of order one; the area law needs nu about 0.029. Also scoped to Schwarzschild calibration.'
+  version: 4
+singularity.causal-epoch-computed-exactly:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity wording: rain geodesics as worldlines of D-parallel velocity; same integral and
+    expansion.'
+  version: 4
+singularity.computed:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording; same value kappa = 1/4M.
+  version: 4
+singularity.connection-bivector-computed:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: the connection one-forms are components of the rotation-gauge field; values
+    unchanged.'
+  version: 4
+singularity.curvature-gauge-field-exact-shape-decoupling:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: standard facts cited, and the classical type-D spectrum attributed.'
+  version: 4
+singularity.euclidean-section-period:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity, with a new remark that the regularity condition is local at the tip;
+    period 8 pi M unchanged.
+  version: 5
+singularity.eviction-window-thermal-product-radiation-entropy:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only.
+  version: 7
+singularity.imported-descent-one-way-conditional-expectation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the imported statement and provenance are repeated, with citations formatted.'
+  version: 7
+singularity.imported-induced-geometry-interior-slice:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording of the same induced metric, with a note that static and PG times agree on
+    the slice.
+  version: 2
+singularity.imported-interior-collar-kasner-form:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Connection values re-signed to the store's GTG sign convention (minus sigma_1 B_1); GTG restatement otherwise,
+    content unchanged.
+  version: 6
+singularity.imported-page-average-entropy-subsystem:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: New separate import stating Page's average-entropy theorem, split out of the assembled Page curve Fact.
+  version: 1
+singularity.imported-surface-gravity-redshifted-acceleration:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity wording of Wald's result with the covariant derivative D and Q(K); content unchanged.
+  version: 2
+singularity.kms-uniqueness-factor:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the clause on the family of KMS states needs K not a multiple of 1, where the flow is trivial.'
+  version: 4
+singularity.l-boundary-mode-locality:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Premise restated as descent covariance on finite windows (equivalent), with a note that it forbids fast
+    real-time scrambling.
+  version: 2
+singularity.matching-steps-4b-4c-join-equation:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: Step 4c''s modular flow is the phase flow Ad(exp(it sigma/2)), not the real rotor flow, which
+    is its continuation.'
+  version: 5
+singularity.modular-descent:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The flow is now named precisely as the phase flow of sigma, and premise (R) is cited at the normalisation
+    step.
+  version: 5
+singularity.modular-flow-boundary-modes-holonomy-universal:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: the bracket written as the commutator product with its normalisation stated; cross-references
+    updated.'
+  version: 2
+singularity.no-attic-derived-model:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations and cross-references only.
+  version: 6
+singularity.p-reduced-metric-level-reading-many:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references updated and a sentence makes explicit that the modes are the localised ladder pairs.
+  version: 6
+singularity.pseudo-inverse-identities-hyperbolic-atom:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: broken equation references repaired and standard facts cited.'
+  version: 4
+singularity.q-joint-quasi-freeness-s-wave:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: By decision, mode weights become kappa(k + 1/2) instead of kappa k, so no zero-weight mode; results under
+    kappa k refer to version 2.
+  version: 3
+singularity.r-regularity-fixed-locus:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'A note added: for the eternal hole (R) follows from the null ground-state premise; restated in Gauge
+    Theory Gravity.'
+  version: 3
+singularity.stretched-singularity-count:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement on flat spacetime with cross-references; same claim and mathematics.
+  version: 7
+singularity.transport-schwarzschild-fibre:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity phrasing: Q_p is the square of the physical vector; clauses (1) to (4) unchanged.'
+  version: 8
+singularity.two-levels-finite-model:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and attributions added; content unchanged.
+  version: 6
+singularity.what-event-returns-radiation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references added, with a sentence naming the result the partner-correlation clause rests on.
+  version: 5
+singularity.why-calibration-cannot-be-internal:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: regularity across the horizon is no longer stated as equivalent in general, only for states
+    KMS for the Killing flow; GTG restatement added.'
+  version: 6
+standard-model.automorphisms-preserve-slot-pair-split-are:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the module is the five-mode state space of Hypothesis (S).'
+  version: 6
+standard-model.bidoublet-complex:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Conclusion weakened after the conjugate reading: m_t != m_b needs a second doublet coupling, no longer
+    that the rung field is complex.'
+  version: 10
+standard-model.bracket-composite-lands:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citation only: species named by Hypothesis (S).'
+  version: 6
+standard-model.chain:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the premises of the run, including (S), are named explicitly.'
+  version: 7
+standard-model.chirality-two-halves-spinor-module-conjugation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor space and its partner for the twistor halves; content unchanged.'
+  version: 6
+standard-model.coefficient-cannot-come-frozen-point:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor storey for twistor storey; citations updated.'
+  version: 4
+standard-model.configuration-sector-carries-higgs-doublets-quantum:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: two-twistor configuration renamed the configuration of two conformal spinors.'
+  version: 3
+standard-model.connection-forced:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Gauge Theory Gravity restatement: the conformal spinor connection as the tractor gauge field on flat
+    spacetime; theorem unchanged.'
+  version: 4
+standard-model.dating-descent:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the dating holds only under the Henneaux-Teitelboim promotion, and the descent has no mechanism
+    for the measured spectrum.'
+  version: 4
+standard-model.direction-demanded-content-doublet-heavy:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Hypothesis on the gluino-type content now adds Delta_1 >= 0; decimals extended and the route of (S) stated.
+  version: 7
+standard-model.equal-weight-module:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the sources of T, the projector and T_GJ are named.'
+  version: 5
+standard-model.family-no-go-vev-cannot-separate:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations and attribution added: the relations are those of a single 10 in standard model building.'
+  version: 6
+standard-model.fits-record-level:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the premises of the fits are named explicitly.'
+  version: 6
+standard-model.four-dimensions-forces-converse:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors; the pair-count citation added in the proof.'
+  version: 4
+standard-model.four-supersymmetric-splits:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Makes explicit that (S) enters only through the spectrum run's inputs and content.
+  version: 5
+standard-model.frozen-point-first-rung-component:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation: the complex unit used for the complexification is named explicitly; Q(I) notation; computation
+    unchanged.'
+  version: 4
+standard-model.frozen-point-pair-mixing:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citation added for the commutation with the rung generators.
+  version: 4
+standard-model.gauge-algebra-minimal-massive-composite:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors; a citation added in the proof.'
+  version: 4
+standard-model.generation-ten-under-pati-salam:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the sectors are the species under (S).'
+  version: 7
+standard-model.global-form-quotient-determined:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Cross-references and citation format only; the proof is unchanged.
+  version: 3
+standard-model.grade-three-georgi-jarlskog-direction:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: species under (S) and the imported Facts named.'
+  version: 5
+standard-model.grip-mass-two-rung-module:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors; citation to (S) for the sector labels added.'
+  version: 7
+standard-model.hyp-s-slot-statistics:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Hypothesis (S) is now derived from a weaker slot-module premise, with clause (i) conditional; status changes
+    from premise to result.
+  version: 8
+standard-model.hypercharge-global-form-pair-counting-consistency:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor language, plus a note distinguishing this paper''s empty and full
+    spinor from the neutrino paper''s usage.'
+  version: 5
+standard-model.imported-fock-model-twistor-space:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: twistor space and its dual renamed the conformal spinor space and its opposite chirality.'
+  version: 5
+standard-model.imported-frozen-point-dictionary:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected value: M_P/H is about 1.0 x 10^61, not of order 10^60; otherwise Gauge Theory Gravity wording
+    and notation.'
+  version: 7
+standard-model.imported-frozen-point-grip-thirteenth-refutation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Restated in Gauge Theory Gravity language with Q(v) notation and conformal spinors; mass, grip and refutation
+    unchanged.
+  version: 6
+standard-model.imported-grip-area-casimir-form:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and terminology only: Q(v) for the square of a vector, conformal spinor for twistor.'
+  version: 5
+standard-model.imported-norm-frozen-point-not-field:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Notation Q(v) and citation format; the statement is restated in the proof with provenance links.
+  version: 4
+standard-model.imported-pair-systems-two-chirality-halves:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors for twistors; the statement is restated in the proof with citations.'
+  version: 5
+standard-model.imported-tower-commuting-copies-fock-module:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: the imported statement is restated in the proof with store citations.'
+  version: 5
+standard-model.imported-tractor-bundle-spinor-bundle-their:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Gauge Theory Gravity restatement and conformal spinor terminology for the tractor and spinor bundles;
+    content unchanged.
+  version: 6
+standard-model.imported-twistor-charge-helicity:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: the charge on the conformal spinor space for twistor charge; restated with citations.'
+  version: 4
+standard-model.internal-symmetry-ladder:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: n conformal spinors, with pi and the helicity form read in geometric algebra; the computation
+    is unchanged.'
+  version: 3
+standard-model.largeness-number-universes-boundary-modes:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: N is not the boundary mode count but its square root up to a constant; dating made conditional
+    on the promotion.'
+  version: 3
+standard-model.left-right-parity-what-breaks-it:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: the imaginary unit written I_4; species named under (S).'
+  version: 7
+standard-model.lifted-components-read-vevs:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Follows the conjugate reading: each lift now gives equal up-type and down-type entries; the H_d/H_u reading
+    is set aside.'
+  version: 8
+standard-model.majorana-element:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references to (S), the invariant pairing and the hypercharge relation added.'
+  version: 7
+standard-model.mass-bracket-charged-singlet:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors, and the phase written with the complex unit I6; content unchanged.'
+  version: 4
+standard-model.neutrino-dirac-matrix-charged-fermions:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references to the Clebsch Fact, Premise (EW) and (S) added.'
+  version: 6
+standard-model.no-go-frozen-point-lifts-do:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation only: Q(v) for the square of a vector; a citation added.'
+  version: 4
+standard-model.one-number-explain:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: N is about 10^61, not of order 10^60; the one-number reading now holds for two of the three
+    smallness problems only.'
+  version: 4
+standard-model.one-vev-vector-relations-breaking-pattern:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Up-type and neutrino masses now read through the conjugate rung vector, by decision; one coupling gives
+    all four Dirac masses equal.
+  version: 6
+standard-model.pair-count-dimension:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 3
+standard-model.pair-mixing-not-colour:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor, its Fock space and bundle in place of twistor language.'
+  version: 4
+standard-model.places-outside-state-space:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: the two-twistor U(2) is now the U(2) mixing two conformal spinors.'
+  version: 2
+standard-model.proton-condition-candidates:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Citations added and the route by which (S) enters made explicit; no change of content.
+  version: 5
+standard-model.proton-decay-only-through-slot-pair:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the sixteen is the generation under (S).'
+  version: 5
+standard-model.quarks-leptons-two-level-fermion-content:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor language; Hypothesis (S) now cited by name; content unchanged.'
+  version: 5
+standard-model.raw-representation-content-state-space:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinors in place of twistors; content unchanged.'
+  version: 3
+standard-model.reduction:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the species reading under (S) is cited explicitly.'
+  version: 7
+standard-model.spectrum-run:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: Proof now states where Hypothesis (S) enters the run, through the lepton doublets and the simple group,
+    and cites the literature.
+  version: 6
+standard-model.supersymmetric-row-two-loops:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution added: the result is known from standard supersymmetric unification; role of (S) stated.'
+  version: 6
+standard-model.table-exact:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Pointer added for clause (e) and the role of (S) made explicit; same table and conclusions.
+  version: 7
+standard-model.transported-frozen-point-doublet-datum-not:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'Clause (ii) widened: a general rung vector breaks U(2) to U(1) only in a special case, otherwise completely.'
+  version: 8
+standard-model.trichotomy-what-kind-number:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected observation layer: entropic weight is exp(pi N^2), rung count about 405, and the mod-8 clock
+    reading contradicted proved results.'
+  version: 9
+standard-model.two-threshold-criterion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citation added: a common shift is what a complete multiplet contributes.'
+  version: 4
+standard-model.under-s-bracket-direction-charged-not:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references to Hypothesis (S) and the mass bracket added.'
+  version: 7
+standard-model.under-s-composites-state-space-spinor:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Terminology only: conformal spinor slots and doublets; cross-references updated; content unchanged.'
+  version: 6
+standard-model.under-s-frozen-points-split-inverse:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: reference to Hypothesis (S) for the five-mode state space added.'
+  version: 7
+standard-model.under-s-mirror-inherits-desert:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references to Hypothesis (S) and the normalisation added; no change of content.'
+  version: 5
+standard-model.under-s-state-space-complete-multiplets:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references to Hypothesis (S) and the spinor weights added.'
+  version: 5
+standard-model.weak-angle-over-derived-generation:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations and attribution added: the role of (S) for the lepton doublet and the classic-value attribution
+    are made explicit.'
+  version: 5
+standard-model.what:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'The preliminary indication is now a performed computation: entropy pi N^2, mode count pi N^2/ln 2; N
+    is the square root.'
+  version: 3
+standard-model.what-angle-asks-neutrino-sector:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: Values quoted to one more digit; the role of (S) stated.
+  version: 4
+standard-model.what-derived-what-not:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and citations only: Q(c) for the square of a vector; results collected are named.'
+  version: 4
+standard-model.what-direction-made:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: reliance on (S) and the source of T_GJ stated.'
+  version: 6
+standard-model.why-large:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the boundary mode space is of order 10^122 modes, not 10^60; 10^61 is N, its square root.'
+  version: 3
+standard-model.yukawa-pattern-two-rung-module:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations and attribution added: the coupling pattern is the standard 10 coupled to two 16s.'
+  version: 5
+tower.answers-iteration-question:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: each clause now names the theorem it cites, including the tameness hypotheses.'
+  version: 5
+tower.compatibility-connecting-maps-transported:
+  by: review-2026-10-27
+  class: corrected
+  date: '2026-10-27'
+  reason: 'Corrected: the naive corrector fails only for n at least 1; for n = 0 the two coincide. The relabelling
+    effect is restated.'
+  version: 6
+tower.fock-module-one-qubit-per-rung:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and citation only: <a,a> written as Q(a), with standard facts cited.'
+  version: 6
+tower.ladder-pairs-satisfy-car-vectors:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: the vector-square and Witt-basis facts are cited.'
+  version: 4
+tower.matrix-amplification-structural-properties:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: parts (i) and (ii) are noted as the standard Morita amplification facts.'
+  version: 3
+transport.centre:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: the proof now points to the primer, where the centre is computed.'
+  version: 4
+transport.classification-idempotent-orbits:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and the classification cited where the matrix form is used.'
+  version: 5
+transport.classification-real-clifford-algebras:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: the proof now points to the primer''s classification theorem.'
+  version: 3
+transport.embedding-independent-minimality-fusion:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and the classification cited for the module splitting.'
+  version: 4
+transport.fusion-occurs-most-once:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: references updated and the classification cited for the residue of Cl(1,3).'
+  version: 5
+transport.group-null-rotations:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: The setting (null v, hyperbolic partner w, complement U) is stated explicitly and supporting facts cited;
+    same result.
+  version: 4
+transport.no-fourth-rule:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Presentation only: a note that the corollary collects the cited theorems, with references updated.'
+  version: 4
+transport.noinverse:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and citation only: v^2 written as Q(v) and the vector-squares fact cited.'
+  version: 4
+transport.one-generator-minimal-minimal-completions-classified:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: numbered references replaced by named results, and Sylvester''s law of inertia cited.'
+  version: 5
+transport.rule-1-morita-trivial:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Notation and citation only: f.f written as Q(f), with standard facts cited.'
+  version: 5
+transport.sign:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: the proof now points to the primer, where the sign of the pseudoscalar square is computed.'
+  version: 3
+transport.splitting-along-hyperbolic-plane:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Attribution only: the proof now points to the primer, where the lemma is proved.'
+  version: 3
+transport.transport-algorithm:
+  by: review-2026-10-27
+  class: reworded
+  date: '2026-10-27'
+  reason: 'Citations only: numbered theorem references replaced by named results.'
+  version: 3
+transport.where-obstruction-lies-commuting-square:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: The ladder pair is now written in the two adjoined generators u (square +1) and w (square -1), with their
+    squares stated.
+  version: 4
+transport.which-residues-obstruct-which-way:
+  by: review-2026-10-27
+  class: changed
+  date: '2026-10-27'
+  reason: 'New clause: at residue 2, in T14''s causal convention, the extension is the mirror''s second time, with
+    unobstructed Cl(4,1).'
+  version: 6

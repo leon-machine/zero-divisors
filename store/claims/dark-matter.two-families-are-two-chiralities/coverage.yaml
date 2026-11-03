@@ -1,0 +1,26 @@
+functions:
+  check_pure_spinors_of_witt_pair:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "only the Witt pair W, W' in split form for m = 1..4 is tested (pure spinors f and the top state, unique up to scale, both chirality eigenstates); the statement is for every maximal isotropic U in every even dimension 2m"
+  check_versor_parity_and_chirality:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "at m = 1..4, for three chosen vectors (Q = 1, -3, 8, all invertible, asserted) and their ordered products, the pure spinor of the image of W is u f (odd, opposite eigenvalue) or u2 u1 f (even, same eigenvalue); general U and general versors are not covered, and invariance under the full connected group is not proved by it"
+  check_two_families_and_witt_pair_parity:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "I^2 = 1 and the opposite-chirality pattern {1: opposite, 2: same, 3: opposite, 4: same} for m = 1..4 only, with the swap of one w_k for v_k giving the opposite chirality; 'exactly two families' for every maximal isotropic U rests on (i), which is tested only for W and W'"
+  check_odd_dimension_one_family:
+    kind: partial
+    clauses: ["odd dimension: the spin algebra does not preserve the grade parity of S", "odd dimension: one family"]
+    omits: "for m = 1..3 the check shows omega central, the reflection in l fixing W and W' pointwise, and l v_1 mapping the grade-0 state to a nonzero multiple of the grade-1 state; transitivity of the connected isometry group on all maximal isotropic subspaces is not tested"
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-extension: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.pseudoscalar-commutation: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each function states in its docstring that it works on the split Witt pair for small m; the general-U content of (i) and the transitivity in odd dimension rest on the argument, not on the checks. 2026-10-23 (weak checks): check_versor_parity_and_chirality now asserts that every sample vector is invertible with Q = 1, -3, 8 (the old filter could drop samples silently), that u u^{-1} = 1, and that the chirality of f is +-1; sample vectors and the range of m moved to module level."

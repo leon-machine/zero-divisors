@@ -1,0 +1,24 @@
+functions:
+  check_mehler_orthogonality:
+    kind: sampled
+    clauses: ["(i) E[He_m(X) He_n(Y)] = delta_mn n! rho^n for m, n <= 7 as exact polynomials in rho", "(i) pinned moments and Hermite polynomial"]
+    omits: "the identity for all orders is the generating-function proof; checked to order 7"
+  check_conversion_covariance_positive:
+    kind: sampled
+    clauses: ["(i) Cov(f(X), f(Y)) = sum c_n^2 n! rho^n computed directly from moments for the curvaton series, a modulated decay rate and a pure square", "(i) non-negative coefficients; lowest power = Hermite rank"]
+    omits: "three representative conversions; the general case is the proof"
+  check_local_degree_mean_order:
+    kind: sampled
+    clauses: ["(ii) rho g'/g >= Hermite rank at six sample rho in (0, 1] for three conversions", "(ii) nbar - 1 <= (11/24) rho for the curvaton series"]
+    omits: "the general mean-order identity is termwise differentiation, stated in the proof"
+  check_index_never_below_field:
+    kind: sampled
+    clauses: ["(iii) min(n0 m, 3) >= m on a grid of m in (0, 3) and n0 <= 6, equality at n0 = 1", "(iii) positive Fourier weight of r^-beta on 0 < beta < 3 by intervals"]
+    omits: "the Fourier asymptotics of a power-law correlation is cited; the sign table uses interval facts about Gamma and sine stated in the proof"
+  check_series_fields_give_blue:
+    kind: complete
+    clauses: ["(iv) stored indices at u = 2.7 (massless 1458/829, unitary floor 2 - 200/529) and at the pivot", "(iv) gaps above 394 and 482 standard deviations"]
+    omits: "the smallness of the smeared correlation at observed separations is argued in the proof"
+untouched_premises:
+  synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra: "imported Fact: the check verifies the Mehler identity to order 7 and the sign of the Fourier weight by intervals directly"
+  synthesis.imported-curvaton-and-modulated-reheating-coefficients: "imported Fact: the check uses the curvaton series and the modulated rate as sample conversions without reaching the Fact"

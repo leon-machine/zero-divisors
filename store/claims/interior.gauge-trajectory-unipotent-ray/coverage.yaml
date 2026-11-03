@@ -1,0 +1,26 @@
+functions:
+  check_unipotent_group_and_history_ray:
+    kind: sampled
+    clauses: ["\"P^2 = 0\"", "(1)"]
+    omits: "P^2 = 0 and (1 + sP)(1 + s'P) = 1 + (s + s')P are exact with s free (s' at four values); the history as the ray s = -beta(r) in (-infinity, 0] is checked at five beta values (r = 2M/beta^2, M = 3/2) for monotonicity, s <= 0, s^2 r = 2M and |s| <= 1 exactly at r >= 2M (the horizon sample beta = 1 attains it), not as a statement for every radius"
+  check_closed_form_inverse:
+    kind: exact
+    clauses: ["(2)"]
+    omits: ""
+  check_metric_is_painleve_gullstrand:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "derived metric entries computed in GA at five beta values and matched to the stated quadratics (each entry has degree <= 2 in beta, so three values would determine it; the degree argument is not coded)"
+  check_folding_onto_kernel_direction:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "null directions e_t + lambda e_r with lambda = -beta +- 1 checked null at beta = 1, 3, 20, with the bound |1/lambda|(beta - 1) <= 1 and P(e_r) = 0; the convergence of the normalised directions to e_r as beta -> infinity and the failure of division at r = 0 are not computed, and the type-N degeneration is cited to T5"
+untouched_premises:
+  singularity.type-n-only-type-n: "the type-N classification of the degeneration is a cited result, with no computation here"
+  singularity.non-removability-invariant-argument: "non-removability of the divergence is an argument about invariants, with no finite computation here"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: the ray part of check_unipotent_group_and_history_ray now also pins s^2 r = 2M and the horizon (|s| <= 1 exactly at r >= 2M); sample parameters moved to module level"

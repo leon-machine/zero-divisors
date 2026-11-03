@@ -1,0 +1,1138 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "Quantum field theory describes particles that can be created and destroyed, and this trail builds it inside one real geometric algebra. [[t]] The tower's fermionic modes do not by themselves sit anywhere in spacetime. [[c:field-theory.ground-does-not-attach-modes]] With the spacetime volume element as the field's imaginary unit, second quantisation gives a local field with the standard observables. [[c:field-theory.second-quantisation]]\n\nThe walk adds mass, the photon and gravity's source, then adopts one premise, an indefinite inner product for gauge fields. [[t]] Under it the first and second quantum corrections of electrodynamics and the running of the force strengths come out with the textbook values. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]] The triangle anomaly cancels within each generation. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]] The trail ends with the gauge structure of the gluons and weak bosons, the tie between spin and statistics, and what is still open. [[t]]",
+  "hash": "affc07c86bbd"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "The walk first attaches the modes to spacetime, sorts out the imaginary units and quantises the free fields. [[t]] It then adopts one premise and follows the loops of electrodynamics, the anomaly and the gauge fields of the strong and weak forces. [[t]] It ends with spin and statistics, and with the questions the field theory leaves open. [[t]]",
+  "hash": "134a38f2bf29"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+  "type": "postulate",
+  "claim": "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2",
+  "title": "(KF), the Krein-form premise for gauge fields: on the palatial storey the gauge fields, their ghosts and their Pauli-Villars regulator fields carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ on the polarisations, and the physical space is positive through the quartet mechanism",
+  "text": "To describe light and the other force fields in a way that treats space and time alike, physicists use bookkeeping in which some unphysical states have negative or zero length, and remove them again before anything is measured. The same device is used to tame the infinities of quantum corrections, with auxiliary particles that count negatively. The series' quantum spaces all have positive lengths, so it cannot use this bookkeeping as it stands. This premise adopts it: the force fields of the series carry the standard indefinite measure built from the spacetime metric of their polarisations, and only states of positive length remain once the unphysical parts cancel in groups of four. Several results use it, among them the series' calculations of the first and second quantum corrections of electrodynamics, its calculation of how the force strengths change with energy, and its construction of the ghost bookkeeping. One of the two uses, the auxiliary negative particles, turns out not to be needed for the screening of charge by the vacuum, which can be computed without them. It is taken as given, not derived; it would be refuted if the physical states it leaves were found to include ones of negative length.",
+  "gap": false,
+  "level": "lay",
+  "hash": "c29fd13482d1",
+  "number": 1
+ },
+ {
+  "id": "s:quantum-fields",
+  "type": "section",
+  "title": "Quantum fields in one algebra",
+  "hash": "c85c13f6aff5"
+ },
+ {
+  "id": "i:quantum-fields",
+  "type": "framing",
+  "text": "Each step below adds one piece to a quantum field theory written entirely in one real algebra. [[t]]",
+  "hash": "0271c0a84a50"
+ },
+ {
+  "id": "t:^>field-theory.ground-does-not-attach-modes",
+  "type": "transition",
+  "between": [
+   null,
+   "field-theory.ground-does-not-attach-modes"
+  ],
+  "text": "The series' tower stacks extra planes on top of the algebra of spacetime, and each plane carries one fermionic quantum mode. [[c:field-theory.imported-tower-limit]] But the spacetime symmetries, the translations, rotations and boosts, commute with every mode operator, so a field built from the modes $a_j$, \\[ \\psi(x) = \\sum_j u_j(x)\\,a_j , \\] on which translations act covariantly can only have constant mode functions $u_j$. [[c:field-theory.ground-does-not-attach-modes]]\n\nThe obstruction is that each floor of the tower is finite, and a group like the boosts, which never closes up on itself, has no nontrivial quantum action on a finite floor. [[c:field-theory.ground-does-not-attach-modes]]",
+  "hash": "464b9a89a838"
+ },
+ {
+  "id": "c:field-theory.ground-does-not-attach-modes",
+  "type": "theorem",
+  "claim": "field-theory.ground-does-not-attach-modes@4",
+  "title": "The ground does not attach the modes",
+  "text": "The tower adds quantum modes on top of the spacetime algebra, but the spacetime symmetries, translations, rotations and boosts, do not act on those modes at all. So the tower alone cannot place its modes in spacetime; something else must supply the link.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "tower.commuting-copies",
+   "tower.volume-elements-planes"
+  ],
+  "hash": "d31ba9ee654f",
+  "number": 2
+ },
+ {
+  "id": "t:field-theory.ground-does-not-attach-modes>field-theory.twistor-attachment",
+  "type": "transition",
+  "between": [
+   "field-theory.ground-does-not-attach-modes",
+   "field-theory.twistor-attachment"
+  ],
+  "text": "Something else must supply the link between modes and spacetime. [[t]] It comes from the conformal spinor space $\\CS$ (twistor space), which supplies positive-energy particle states with a conformal-group action, while the Penrose transform turns them into waves in spacetime. [[c:field-theory.twistor-attachment]]\n\nIn the oscillator model the helicity-$s$ states have energies and multiplicities \\[ |s| + 1 + n , \\qquad (n+1)(n + 2|s| + 1) \\] so the tower's floors are energy cut-offs, not regions of space. [[c:field-theory.twistor-attachment]] The standard link between spin and statistics holds: a lift is local exactly when $2s$ is odd, and the series' fermions pass. [[c:field-theory.twistor-attachment]]",
+  "hash": "dc5f08d63b18"
+ },
+ {
+  "id": "c:field-theory.twistor-attachment",
+  "type": "theorem",
+  "claim": "field-theory.twistor-attachment@6",
+  "title": "The attachment through conformal spinors",
+  "text": "Since spacetime symmetries do not act on the tower's modes directly, the link must come from elsewhere. It comes from the series' conformal spinor storey, which provides positive-energy particle states with the right symmetry, while the Penrose transform turns them into waves in spacetime. On this reading the tower's levels are energy cut-offs rather than places, and the usual link between spin and statistics holds for the series' fermions.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.imported-standard-field-theory",
+   "field-theory.imported-statistics-no-go-palatial-algebra",
+   "field-theory.imported-tower-limit"
+  ],
+  "hash": "880f959e1388",
+  "number": 3
+ },
+ {
+  "id": "t:field-theory.twistor-attachment>field-theory.where-each-lives",
+  "type": "transition",
+  "between": [
+   "field-theory.twistor-attachment",
+   "field-theory.where-each-lives"
+  ],
+  "text": "Quantum theory needs a square root of minus one, and this attachment brings in two candidates that must be kept apart. [[t]] The conformal spinors' unit is the conformal volume element $I_6$, while a massless field's unit is the spacetime volume element $I_4$, and they differ by the bivector $E$ of the added conformal plane: \\[ I_6 = I_4 E , \\qquad E = e_+ e_- , \\qquad E^2 = 1 \\] [[c:field-theory.where-each-lives]]\n\nOn the spinors at a point, $I_6 = +I_4$ on one chiral doublet and $-I_4$ on the other. [[c:field-theory.where-each-lives]] A mass term anticommutes with $I_4$, which the next steps put to use. [[c:field-theory.where-each-lives]]",
+  "hash": "e6733c97dc2a"
+ },
+ {
+  "id": "c:field-theory.where-each-lives",
+  "type": "theorem",
+  "claim": "field-theory.where-each-lives@3",
+  "title": "Where each imaginary unit lives",
+  "text": "Every square root of minus one the field theory needs is an element of the real geometric algebra. The conformal spinors' unit is the conformal volume element, which on the spinors at a point becomes the spacetime volume element with a sign set by chirality. For massless fields the unit is the spacetime volume element, which agrees with Hestenes' choice up to that sign, while a mass term does not commute with it.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "c54bc84d4551",
+  "number": 4
+ },
+ {
+  "id": "t:field-theory.where-each-lives>field-theory.second-quantisation",
+  "type": "transition",
+  "between": [
+   "field-theory.where-each-lives",
+   "field-theory.second-quantisation"
+  ],
+  "text": "With the field's unit fixed as $I_4$, fields valued in the spacetime algebra, with tower planes as modes, can be quantised inside one algebra. [[c:field-theory.second-quantisation]] The projector onto the solutions with null momentum $k$ is \\[ \\Lambda(k) = \\frac{k\\gamma_0}{2k_0} \\] and the field's anticommutator has no tower part, so the field is local and its observables are the standard second-quantised ones. [[c:field-theory.second-quantisation]]\n\nThe price of this unit is that a field's two chiralities enter differently, the right-handed part directly and the left-handed part conjugated. [[c:field-theory.second-quantisation]] Hestenes' choice of unit avoids the split but depends on a chosen frame. [[c:field-theory.second-quantisation]]",
+  "hash": "120da4162e4d"
+ },
+ {
+  "id": "c:field-theory.second-quantisation",
+  "type": "theorem",
+  "claim": "field-theory.second-quantisation@5",
+  "title": "Second quantisation",
+  "text": "Fields whose values are elements of the spacetime algebra and whose modes are tower planes can be quantised inside one algebra, with the volume element as imaginary unit. The resulting field is local, and its observables are the standard second-quantised ones. The price of this unit is that a field's two chiralities enter differently, one directly and one conjugated; Hestenes' unit avoids that at the cost of choosing a frame.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.imported-tower-limit"
+  ],
+  "hash": "43bde79ce3b2",
+  "number": 5
+ },
+ {
+  "id": "t:field-theory.second-quantisation>field-theory.orientation-relocated",
+  "type": "transition",
+  "between": [
+   "field-theory.second-quantisation",
+   "field-theory.orientation-relocated"
+  ],
+  "text": "One binary choice from the series' derivation of particle physics remains: an orientation that tells particles from antiparticles. [[c:field-theory.orientation-relocated]] Fixing the field's unit as $I_4$ does not remove it, because left multiplication by $e_+$ swaps the two halves $T$ and $T'$ of the conformal spinor space while commuting with $I_4$ and with Lorentz rotors. [[c:field-theory.orientation-relocated]]\n\nThe halves are told apart only by the conformal spinors' own unit $J$, right multiplication by $I_6$: on the momentum doublet $J = +I_4$ in $T$ and $J = -I_4$ in $T'$. [[c:field-theory.orientation-relocated]] The algebra fixes $J$ only up to sign, so the orientation becomes the relative sign of the two units. [[c:field-theory.orientation-relocated]]",
+  "hash": "70808bf1cf58"
+ },
+ {
+  "id": "c:field-theory.orientation-relocated",
+  "type": "theorem",
+  "claim": "field-theory.orientation-relocated@6",
+  "title": "The orientation is relocated",
+  "text": "The Standard-Model paper's matter keeps one binary choice, an orientation that tells particles from antiparticles. Fixing the field's imaginary unit does not remove it: the two halves of the conformal spinor space look the same to that unit and to relativity. The choice reappears as the relative sign between the field's unit and the conformal spinors' own unit.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.where-each-lives"
+  ],
+  "hash": "f81606f0cbd3",
+  "number": 6
+ },
+ {
+  "id": "t:field-theory.orientation-relocated>field-theory.mass",
+  "type": "transition",
+  "between": [
+   "field-theory.orientation-relocated",
+   "field-theory.mass"
+  ],
+  "text": "Mass is the next ingredient, and it involves both chiralities at once. [[t]] For a right factor $N$ that anticommutes with Hestenes' unit, the pairing \\[ B_N(\\psi, \\phi) = \\proj(\\tilde\\psi\\phi N) \\] is the Lorentz-invariant two-component (epsilon) pairing, and a massive Dirac wave couples a part $\\chi$ to a part $\\eta$ of opposite $I_4$-charge with mass density $2B(\\chi, \\eta)$. [[c:field-theory.mass]]\n\nThe mass breaks the common $I_4$ phase rotation, which is axial, and $I_4$ stays the field algebra's unit rather than the complex structure of the massive equation. [[c:field-theory.mass]] That equation still needs one geometric datum beyond the field, in effect a rest-frame direction. [[c:field-theory.imported-one-datum-massive-law]]",
+  "hash": "47f06a1225c9"
+ },
+ {
+  "id": "c:field-theory.mass",
+  "type": "theorem",
+  "claim": "field-theory.mass@4",
+  "title": "Mass with $i = I_4$",
+  "text": "With the spacetime volume element as imaginary unit every field is read in one chirality, and a mass couples a left-handed part to a right-handed one. The mass term then takes exactly the standard two-component form. The unit belongs to the field algebra, not to the massive equation, which still needs its own geometric datum.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.imported-one-datum-massive-law"
+  ],
+  "hash": "6d5d968ba9b8",
+  "number": 7
+ },
+ {
+  "id": "t:field-theory.mass>field-theory.fock-space-maxwell-modes",
+  "type": "transition",
+  "between": [
+   "field-theory.mass",
+   "field-theory.fock-space-maxwell-modes"
+  ],
+  "text": "Mass alone gives free particles; a force carried across distance needs a boson, such as the photon, and bosons do not fit in the tower directly. [[t]] The exact commutation rule of bosons cannot be realised in any finite-dimensional algebra; it needs infinitely many states, as in the standard representation on polynomials. [[c:field-theory.imported-statistics-no-go-palatial-algebra]]\n\nSo the photon's states are polynomials with $I_4$ as the imaginary unit, and \\[ a_m = \\frac{\\partial}{\\partial z_m} , \\qquad a_m^* = z_m \\] satisfy the bosonic commutation relations exactly, one complex mode per photon momentum. [[c:field-theory.fock-space-maxwell-modes]] With this unit positive frequency is positive helicity for every massless field, so the photon field operator destroys one helicity and creates the other. [[c:field-theory.fock-space-maxwell-modes]]",
+  "hash": "a8b32691f367"
+ },
+ {
+  "id": "c:field-theory.fock-space-maxwell-modes",
+  "type": "theorem",
+  "claim": "field-theory.fock-space-maxwell-modes@4",
+  "title": "The Fock space and the Maxwell modes",
+  "text": "The photon's quantum states are built on polynomials, the standard representation of boson operators, with the spacetime volume element as imaginary unit. Each photon momentum then carries one complex mode, and with this choice of unit positive frequency coincides with positive helicity for every massless field, so the field operator destroys one helicity and creates the other.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "219e174a42df",
+  "number": 8
+ },
+ {
+  "id": "t:field-theory.fock-space-maxwell-modes>field-theory.operator-newtonian-coupling",
+  "type": "transition",
+  "between": [
+   "field-theory.fock-space-maxwell-modes",
+   "field-theory.operator-newtonian-coupling"
+  ],
+  "text": "The same tools let gravity's source be written as an operator rather than an average. [[t]] For a massive fermion built in the tower the mode occupations change, but the quasi-particle numbers and a charge built from the modes are conserved. [[c:field-theory.conserved-numbers-mass-block]]\n\nIf the Newtonian pull is built from such conserved numbers $N_i$, \\[ H_N = -G\\sum_{i<j}\\frac{M_iM_jN_iN_j}{r_{ij}} , \\] two masses each held in a superposition of two places pick up exactly the registered entangling phase, with its sign. [[c:field-theory.operator-newtonian-coupling]] A mean-field version of gravity would entangle nothing; the registered prediction itself rests on its own stated premises, which this trail does not show. [[c:field-theory.operator-newtonian-coupling]]",
+  "hash": "d5d26bf6dae9"
+ },
+ {
+  "id": "c:field-theory.operator-newtonian-coupling",
+  "type": "theorem",
+  "claim": "field-theory.operator-newtonian-coupling@4",
+  "title": "The operator Newtonian coupling",
+  "text": "If gravity's Newtonian pull is built from conserved particle numbers, two masses each held in a superposition of two places pick up exactly the entangling phase the series registered as a prediction, with the right sign. A mean-field version of gravity would entangle nothing, and composite bodies, if rigid, behave like point masses up to a small correction.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.conserved-numbers-mass-block"
+  ],
+  "hash": "51757fc3904c",
+  "number": 9
+ },
+ {
+  "id": "t:field-theory.operator-newtonian-coupling>synthesis.one-loop-qed-in-the-spacetime-algebra",
+  "type": "transition",
+  "between": [
+   "field-theory.operator-newtonian-coupling",
+   "synthesis.one-loop-qed-in-the-spacetime-algebra"
+  ],
+  "text": "Quantum corrections come from loops of virtual particles, and computing them in a way that treats space and time alike needs a photon description in which some unphysical states have negative or zero length. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]] The series' quantum spaces all have positive lengths, so it cannot use this bookkeeping as it stands. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]]\n\nIt therefore adopts a premise: gauge fields, their ghosts and their regulator fields carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ on the polarisations, and only states of positive length survive once the unphysical ones cancel in groups of four. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]] It is taken as given, not derived, and it would be refuted by physical states of negative length or by physical amplitudes that depend on the gauge. [[c:synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields]]\n\nWith that premise in place, and with regulators imported in the Pauli-Villars form, some of negative weight, the first quantum corrections of electrodynamics come out of the spacetime algebra with the textbook values. [[c:synthesis.one-loop-qed-in-the-spacetime-algebra]]\n\nThe screening of charge by virtual pairs has coefficient $e^{2}/(12\\pi^{2})$ per Dirac fermion, and the electron's extra magnetic moment is \\[ F_{2}(0) = \\frac{\\alpha}{2\\pi} , \\] carried by the real bivector $\\gamma^{\\mu} \\wedge q$ with no imaginary number in it. [[c:synthesis.one-loop-qed-in-the-spacetime-algebra]] The identity $Z_{1} = Z_{2}$, which keeps charge the same at every order, holds. [[c:synthesis.one-loop-qed-in-the-spacetime-algebra]]\n\nOne point is specific to the series: on massive lines the unit $I_4$ must stand outside the products, or charge conservation fails. [[c:synthesis.one-loop-qed-in-the-spacetime-algebra]]",
+  "hash": "d0720b6a387a"
+ },
+ {
+  "id": "c:synthesis.one-loop-qed-in-the-spacetime-algebra",
+  "type": "theorem",
+  "claim": "synthesis.one-loop-qed-in-the-spacetime-algebra@2",
+  "title": "One-loop electrodynamics in the spacetime algebra, in a covariant gauge with imported Pauli-Villars regulators: transverse vacuum polarisation with coefficient $e^{2}/(12\\pi^{2})$, $F_{2}(0) = \\alpha/(2\\pi)$ through the real bivector $\\gamma^{\\mu} \\wedge q$, $Z_{1} = Z_{2}$, and the unit outside the product on massive lines",
+  "text": "The standard first quantum corrections of electrodynamics, the screening of charge by virtual pairs, the electron's extra magnetic moment and the identity that keeps charge the same at every order, come out of the series' algebra of spacetime with the usual numbers. Two standard ingredients are taken from the literature: the usual covariant description of the photon inside loops, and the usual way of taming the infinities with heavy auxiliary particles, some of which enter with negative weight; both rest on a premise the series adopts, that the photon's states carry the standard indefinite measure in which some unphysical states have negative length. The charge screening has the textbook strength, the magnetic correction is the fine-structure constant over two pi, and the magnetic structure is a plain plane element of spacetime with no imaginary number in it. One point is specific to the series: its imaginary unit, the spacetime volume element, may sit inside the algebraic products only on massless lines; on massive lines it must stay outside, or charge conservation fails.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.elementary-photon-ga",
+   "field-theory.coupled-system-tree-level",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "96af3fc32114",
+  "number": 10
+ },
+ {
+  "id": "t:synthesis.one-loop-qed-in-the-spacetime-algebra>synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "transition",
+  "between": [
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+  ],
+  "text": "The same spin traces fix how the strengths of the three forces change with energy. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] Each field's spin gives a weight, $\\tfrac13$, $\\tfrac23$ and $-\\tfrac{11}{3}$ per unit index for scalars, Weyl spinors and vectors, once a standard heat-kernel formula is imported. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]]\n\nThe numbers of generations $n_{g}$ and of Higgs doublets $n_{h}$ are inputs, since the store has not settled either. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] For the content the series derives under its slot hypothesis, three generations and one doublet give the standard coefficients $(\\tfrac{41}{10}, -\\tfrac{19}{6}, -7)$, and two doublets give $(\\tfrac{21}{5}, -3, -7)$. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]] With three generations colour and weak isospin both weaken at high energy for every number of doublets up to $19$. [[c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces]]",
+  "hash": "c4704734ad7e"
+ },
+ {
+  "id": "c:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "type": "theorem",
+  "claim": "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@2",
+  "title": "The one-loop running coefficients from spin traces in the spacetime algebra, in a covariant gauge under the indefinite-form premise: the Lorentz generator of the field-strength bivector gives spin weights $0$, $-1$ and $-4$ for scalars, Weyl spinors (a minimal left ideal with the unit $I_{4}$) and vectors, the imported heat-kernel coefficient turns them into $\\tfrac13$, $\\tfrac23$ and $-\\tfrac{11}{3}$ per unit index, and under (S), with $n_{g}$ generations and $n_{h}$ doublets as inputs, the coefficients are $(\\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{10}, -\\tfrac{22}{3} + \\tfrac{4n_{g}}{3} + \\tfrac{n_{h}}{6}, -11 + \\tfrac{4n_{g}}{3})$, asymptotically free in both non-abelian factors for $n_{g} = 3$ and every $n_{h} \\leq 19$",
+  "text": "How fast the strengths of the forces change with energy is fixed, at the first quantum correction, by a sum over the particles, each weighted by a number that depends on its spin. Those weights come out of the series' algebra of spacetime as traces of how a field's spin responds to a force field, once a standard heat-kernel formula and the standard covariant treatment of the force fields are taken from the literature. The number of generations and of Higgs doublets are inputs, since the store has not settled either. Applied to the particle content the series derives under its slot hypothesis, three generations with one doublet give the standard values and two doublets give slightly different ones; with three generations the strong and weak forces weaken at high energy for any number of doublets up to nineteen. The gluons and the weak bosons are not yet built as quantum states here.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.fock-space-maxwell-modes",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.hypercharge-global-form-pair-counting-consistency",
+   "standard-model.imported-one-loop-running-trace-ratio",
+   "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "33ae28504d17",
+  "number": 11
+ },
+ {
+  "id": "t:synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces>synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four",
+  "type": "transition",
+  "between": [
+   "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+   "synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four"
+  ],
+  "text": "Going beyond the first correction usually means letting the dimension of spacetime vary, and that raises the question of what happens to the field's unit. [[t]]\n\nIn four dimensions $i = I_4$ squares to $-1$, commutes with every bivector and anticommutes with every vector. [[c:synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four]] In the algebras $\\Cl(1, D-1)$ all three properties hold together only when $D \\equiv 0 \\pmod 4$, that is in dimensions four, eight, twelve and so on. [[c:synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four]] In other dimensions the unit gives up either covariance under rotations that mix old and new directions or its anticommutation with vectors, the same split as the known difficulty with the chirality element in dimensional regularisation. [[c:synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four]]",
+  "hash": "1bd9be8c7041"
+ },
+ {
+  "id": "c:synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four",
+  "type": "theorem",
+  "claim": "synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four@2",
+  "title": "The unit $i = I_4$ keeps its three four-dimensional properties in $\\Cl(1, D-1)$ only when $D \\equiv 0 \\pmod 4$, so a continuation through the integer-dimensional algebras gives up Lorentz covariance in the mixed planes or the anticommutation with vectors",
+  "text": "In this framework the imaginary number of quantum theory is the four-dimensional volume element of the spacetime algebra. The most common way of taming the infinities of quantum field theory pretends that spacetime has a slightly different number of dimensions. In the algebras of whole-number dimensions near four, this result shows that the volume element loses one of its three defining properties: it either stops respecting rotations that mix the old and new directions, or stops behaving oppositely to directions as it does in four dimensions. All three properties return only in dimensions four, eight, twelve and so on. The same split is the known difficulty with the chirality matrix in that method, here met by the imaginary unit itself.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.imported-tower-limit",
+   "primer.sign",
+   "std-algebra.pseudoscalar-commutation",
+   "synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5"
+  ],
+  "hash": "da991acbd0eb",
+  "number": 12
+ },
+ {
+  "id": "t:synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four>synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient",
+  "type": "transition",
+  "between": [
+   "synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four",
+   "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient"
+  ],
+  "text": "With one contraction rule the Clifford product continues to any dimension, and the second quantum correction of electrodynamics can be computed in dimensional regularisation, under the Krein premise. [[c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient]]\n\nThe vacuum polarisation of a massless Dirac fermion is transverse and independent of the gauge choice in every dimension, and its nested infinities cancel because $Z_{1} = Z_{2}$ holds integrand by integrand. [[c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient]] The result is the standard second coefficient $\\beta_{1} = 4$ per fermion, \\[ \\mu\\frac{d\\alpha}{d\\mu} = \\frac{2\\alpha^{2}}{3\\pi} + \\frac{\\alpha^{3}}{2\\pi^{2}} , \\] with the $\\overline{\\mathrm{MS}}$ constant $16\\zeta_{3} - 55/3$. [[c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient]]\n\nThe method of taming the infinities is borrowed, not the series' own, but the second-order rate does not depend on which standard method is used. [[c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient]]",
+  "hash": "a66fb3bcded2"
+ },
+ {
+  "id": "c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient",
+  "type": "theorem",
+  "claim": "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient@2",
+  "title": "Two-loop electrodynamics in the spacetime algebra continued in dimension, under the Krein-form premise and in dimensional regularisation: the vacuum polarisation of a massless Dirac fermion is transverse and independent of the gauge parameter identically in $d$, has a simple pole only because the vertex and self-energy subdivergences cancel, and recovers the standard second coefficient $\\beta_{1} = 4$ per fermion (Jost and Luttinger 1950) ($\\mu\\,d\\alpha/d\\mu = 2\\alpha^{2}/(3\\pi) + \\alpha^{3}/(2\\pi^{2})$) with the $\\overline{\\mathrm{MS}}$ constant $16\\zeta_{3} - 55/3$; the Ward-Takahashi identity holds integrand by integrand at two loops, so $Z_{1} = Z_{2}$ there (argued for the integrals)",
+  "text": "Electrodynamics in the series' algebra of spacetime now goes one step beyond the first quantum corrections. The screening of charge by virtual electron pairs is computed to second order, with the dimension of spacetime treated as a variable so that the infinities appear in a controlled way; the algebra continues to any dimension through one rule, checked in every whole dimension from four to eight. The result has the textbook structure: it does not depend on the arbitrary choice of how the photon is described, it conserves charge, and the nested infinities of its pieces cancel among themselves because of the identity that keeps the electron's charge and its normalisation in step. The strength of the electric force grows with energy at the standard rate, including the standard second-order term. All of this holds under the series' premise that the photon's states carry the standard indefinite measure; the method of taming the infinities is borrowed, not the series' own, but the second-order rate does not depend on which standard method is used.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "field-theory.coupled-system-tree-level",
+   "synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "116fb80d7fa2",
+  "number": 13
+ },
+ {
+  "id": "t:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient>synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+  "type": "transition",
+  "between": [
+   "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient",
+   "synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity"
+  ],
+  "text": "A running coupling is not yet an observation; a prediction needs a scattering rate. [[t]]\n\nThrough LSZ reduction the propagator residues $p \\pm m$ become twice the mass times idempotents of trace two, and the rate of $e^{+}e^{-} \\to \\mu^{+}\\mu^{-}$ follows from two Clifford traces: \\[ \\sigma = \\frac{4\\pi\\alpha^{2}}{3s}\\,\\frac{\\beta(3 - \\beta^{2})}{2} \\]. [[c:synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity]]\n\nAt the next order, the part of the photon's dressing that corresponds to real pairs being produced equals the tree rate, the s-channel optical-theorem relation for the photon self-energy. [[c:synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity]] The rest is the slow growth of the electric force with energy, $(\\alpha/(3\\pi))(\\ln(s/m^{2}) - 5/3)$ at large $s$, and reading that growth as a change of the charge itself, $e = Z_{3}^{1/2}e_{0}$, uses the Krein premise. [[c:synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity]]",
+  "hash": "797e268cad50"
+ },
+ {
+  "id": "c:synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+  "type": "theorem",
+  "claim": "synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity@2",
+  "title": "The standard S-matrix of $e^{+}e^{-} \\to \\mu^{+}\\mu^{-}$ recovered in the spacetime algebra: LSZ reduction with the propagator residues $p \\pm m$ as twice the mass times idempotents of trace two, the tree cross section $\\sigma = \\tfrac{4\\pi\\alpha^{2}}{3s}\\,\\beta(3 - \\beta^{2})/2$ from two Clifford traces, and at one loop the on-shell polarisation insertion, whose absorptive part $(\\alpha/3)\\beta(3 - \\beta^{2})/2$ equals $s\\sigma_{\\mathrm{tree}}/(4\\pi\\alpha)$ (the s-channel optical-theorem relation for the photon self-energy) and whose large-$s$ form is $(\\alpha/(3\\pi))(\\ln(s/m^{2}) - 5/3)$ (Lehmann, Symanzik and Zimmermann 1955; standard textbook results)",
+  "text": "The series' algebra of spacetime now reproduces a standard textbook scattering prediction: an electron and a positron annihilate into a muon and an antimuon. The incoming and outgoing particles are fixed by algebraic projections built from their momenta, each picking out the particle's two spin states, and the rate comes out as the textbook formula, with the characteristic angular pattern and the suppression near the energy threshold for making the muons. At the next order the photon in the middle is dressed by virtual pairs; the part of this dressing that corresponds to real pairs being produced matches the rate computed at the first order exactly, one instance of the rule that probabilities add up to one, and the rest is the slow growth of the electric force with energy. Reading that growth as a change of the charge itself assumes the series' premise that the photon's states carry the standard indefinite measure.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.coupled-system-tree-level",
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "65050409b971",
+  "number": 14
+ },
+ {
+  "id": "t:synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity>synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants",
+  "type": "transition",
+  "between": [
+   "synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+   "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+  ],
+  "text": "Every loop so far has used a borrowed regulator, and the Pauli-Villars one needs fields of negative weight. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]]\n\nA standard alternative, extending the loop kernels across the points where they are singular, needs none. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]] Under the imported extension theorem of Epstein and Glaser, the one-loop vacuum polarisation extends to a covariant, transverse kernel with log coefficient of magnitude $e^{2}/(12\\pi^{2})$ per Dirac fermion, using no Pauli-Villars field and no Krein form. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]]\n\nFor the other one-loop kernels the result is narrower. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]] Covariant extensions that keep the Ward identities can differ only by the three constants physicists already adjust, $Z_{3}$, $\\delta m$ and $Z_{2} = Z_{1}$, but that such extensions exist is imported, not proved, and the self-energy and vertex still hold under the Krein premise. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]] The tower's own floors are no substitute, since no smooth weighting of them keeps a boost. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]]",
+  "hash": "c596abd68a52"
+ },
+ {
+  "id": "c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants",
+  "type": "theorem",
+  "claim": "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants@2",
+  "title": "Standard method (Epstein and Glaser 1973; Freedman, Johnson and Latorre 1992) carried out in the spacetime algebra, under the imported extension theorem: the one-loop vacuum polarisation of electrodynamics extends across the coincident point with no regulator to a Lorentz-covariant, transverse kernel whose scale derivative gives the standard log coefficient of magnitude $e^{2}/(12\\pi^{2})$ per Dirac fermion with no Pauli-Villars field and no Krein form; any two covariant one-loop extensions obeying the Ward identities and the reflection differ only by $Z_{3}$, $\\delta m$ and $Z_{2} = Z_{1}$, and at most one three-current extension conserves both vector currents, so all such extensions have the same axial divergence (existence of Ward-preserving extensions beyond the vacuum polarisation imported, not proved; the self-energy and vertex kernels rest on the Krein-form premise)",
+  "text": "Calculations with quantum loops produce infinities that are usually tamed by a regulator, an artificial modification at very high energies removed at the end. The series had used borrowed regulators, one of which needs fictitious particles with negative probabilities, and its own natural cut-off, the floors of its tower, singles out one observer and so breaks relativity. A known method, extending the loop quantities across the points where they are singular, is here carried out in the series' algebra. For the screening of electric charge by the vacuum it needs no regulator and no fictitious particles, stays relativistic, keeps charge conservation, and gives the standard strength of screening. For the other one-loop quantities the calculation shows that the only freedom left by relativity and charge conservation is the three constants physicists already adjust (the electron's mass, the normalisation of its field and the strength of the charge); that a version keeping charge conservation exists there is taken from the literature, and for the electron's own corrections the photon's states are assumed to carry the standard indefinite measure of the series' premise. The whole calculation assumes the standard theorem on extending such quantities, also taken from the literature. Separately, no smoothing of the tower's floors can restore relativity.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.coupled-system-tree-level",
+   "field-theory.twistor-attachment",
+   "synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off",
+   "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+   "synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+   "synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "f456c4b4972d",
+  "number": 15
+ },
+ {
+  "id": "t:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants>synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "type": "transition",
+  "between": [
+   "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants",
+   "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation"
+  ],
+  "text": "The same extension result makes the axial divergence of the three-current loop independent of the scheme. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]]\n\nIn the spacetime algebra that axial anomaly is the pseudoscalar part of the square of the field bivector, \\[ \\langle I_{4}F^{2}\\rangle_{0} = -2E\\cdot B , \\] with the textbook strength found by Adler, Bell and Jackiw, recomputed here with imported Pauli-Villars regulators. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]]\n\nFor one generation of the series' content the anomaly tensor vanishes on the whole gauge algebra, so the cancellation holds generation by generation, whatever their number. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]] The mixed gravitational condition is met by a trace count, $\\mathrm{tr}\\,Y = 0$, not by a computed triangle. [[c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation]]",
+  "hash": "d5890509051f"
+ },
+ {
+  "id": "c:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "type": "theorem",
+  "claim": "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation@2",
+  "title": "The triangle anomaly in the spacetime algebra with imported Pauli-Villars regulators (standard: Adler; Bell and Jackiw): the vector Ward identities hold integrand by integrand, the axial divergence is the regulator-mass limit $(1/(2\\pi^{2}))\\langle I_{4}\\gamma^{\\nu}k_{1}\\gamma^{\\rho}k_{2}\\rangle_{0}$ per Dirac fermion for any weights with $\\sum_{i} c_{i} = 0$, the bilinear form of the pseudoscalar part of $F^{2}$, and for one stored generation the gauge anomaly tensor vanishes on the whole gauge algebra (standard per-generation cancellation)",
+  "text": "Some symmetries of classical fields fail once quantum effects are included; the classic case is the axial anomaly of a charged particle in an electromagnetic field, found in 1969. This result recomputes that anomaly in the series' own algebra of spacetime, using a standard method of taming the infinities. The anomaly comes out as the part of the squared electromagnetic field that measures how electric and magnetic fields line up, with the textbook strength. For a theory to be consistent, such anomalies must cancel between all the particles that feel a force; the result checks that they cancel within one generation of the series' particles, so the cancellation does not depend on how many generations there are.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.anomaly-freedom-forces-slot-content",
+   "synthesis.imported-adler-bell-jackiw-axial-anomaly"
+  ],
+  "hash": "3d7def2315b5",
+  "number": 16
+ },
+ {
+  "id": "t:synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation>synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms",
+  "type": "transition",
+  "between": [
+   "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+   "synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms"
+  ],
+  "text": "Fields that feel a force in only one handedness need more care once the dimension is continued. [[t]]\n\nWith $I_4$ as the BMHV chirality element and the unit outside the products, the chiral projectors delete the extra-dimensional part of every loop momentum. [[c:synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms]] The calculation then breaks the photon's Ward identities by small, definite amounts, removed by finite counterterms equal to the published ones, \\[ \\frac{1}{16\\pi^{2}}\\Big[-\\frac{e^{2}}{6}\\sum Y^{2}\\,\\bar A\\cdot\\bar\\partial^{2}\\bar A + \\frac{e^{4}}{12}\\sum Y^{4}(\\bar A^{2})^{2}\\Big] \\]. [[c:synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms]]\n\nUnlike the anomaly, in the purely chiral formulation these terms never cancel between fields. [[c:synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms]]",
+  "hash": "93d0854fafd5"
+ },
+ {
+  "id": "c:synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms",
+  "type": "theorem",
+  "claim": "synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms@2",
+  "title": "With $I_{4}$ as the four-dimensional chirality element of dimensional regularisation and the unit outside the product, the chiral projectors delete the evanescent loop momentum, and a massless chiral abelian field breaks the photon two- and four-point Ward identities by local finite terms, cancelled by the counterterms $\\frac{1}{16\\pi^{2}}\\bigl[-\\tfrac{e^{2}}{6}\\sum Y^{2}\\,\\bar A\\cdot\\bar\\partial^{2}\\bar A + \\tfrac{e^{4}}{12}\\sum Y^{4}(\\bar A^{2})^{2}\\bigr]$, which, when every field carries a chiral vertex, never cancel between fields (standard values)",
+  "text": "Calculations of quantum corrections often pretend that spacetime has a slightly different number of dimensions. In that method the four-dimensional volume element, which elsewhere in the series supplies the imaginary number of quantum theory, plays the role of the standard chirality element, which is not defined beyond four dimensions; the imaginary number itself stays outside the products. This result works out what that costs for particles that feel a force only in one handedness: the calculation breaks the force's symmetry by small, definite amounts, which have to be removed by hand with two correction terms. Their sizes come out equal to the published ones, and when every particle is treated as one-handed they add up rather than cancel over the particles of a generation, unlike the anomaly.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four",
+   "synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5",
+   "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+   "synthesis.anomaly-freedom-forces-slot-content"
+  ],
+  "hash": "88e295713425",
+  "number": 17
+ },
+ {
+  "id": "t:synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms>synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+  "type": "transition",
+  "between": [
+   "synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms",
+   "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form"
+  ],
+  "text": "The Krein premise has carried much of this, so it is worth asking how much of it the algebra itself supplies. [[t]]\n\nOn the conformal spinors the adjoint of the twistor form is Clifford conjugation, and its trace form on vectors is minus the metric, $\\tau(a^{\\sharp}b) = -a\\cdot b$, as in every Clifford algebra. [[c:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form]] On polarisations this is exactly the one-particle Gupta-Bleuler form of the premise, unique up to a real factor among Lorentz-invariant forms, and its Fock space is the Feynman-gauge realisation. [[c:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form]]\n\nSo the form is restated inside the store, not derived: nothing here shows that the unphysical modes must carry the indefinite form, and the premise's other clauses do not follow. [[c:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form]]",
+  "hash": "b234ca7f5cd2"
+ },
+ {
+  "id": "c:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+  "type": "theorem",
+  "claim": "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form@1",
+  "title": "Clifford conjugation of the conformal spinor algebra is the adjoint of the twistor form, and its trace form on vectors is minus the metric; on spacetime vectors this is the one-particle Gupta-Bleuler form $-u\\cdot w$ of clause (K1) of the Krein premise, the unique Lorentz-invariant form up to a real factor, and the positive structure gives the Euclidean form of its time, the two related by the involution $J$, whose second quantisation is the fundamental symmetry $(-1)^{n_{0}}$; this restates the one-particle content of (K1), and that the unphysical modes are quantised with the indefinite form, and clauses (K2) to (K4), remain premises",
+  "text": "The indefinite \"length\" used to quantise force fields covariantly gives the time direction negative length and the space directions positive length. This is the series' own spacetime metric with its sign reversed. The result shows that the conformal spinors of the series carry the same rule, and that the ordinary positive length used for light corresponds to choosing a time direction. It does not show that the series must use the indefinite length for its unphysical states; that remains an assumption.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.positive-structure-is-twistor-form-at-imaginary-time",
+   "field-theory.fock-space-maxwell-modes",
+   "field-theory.imported-tower-limit"
+  ],
+  "hash": "ffcf277def9d",
+  "number": 18
+ },
+ {
+  "id": "t:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form>synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+  "type": "transition",
+  "between": [
+   "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+   "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent"
+  ],
+  "text": "The gluons and the weak bosons need the same covariant treatment, now for fields that act on one another. [[t]]\n\nOn the derived gauge algebra $\\mathfrak{su}(2) \\oplus \\mathfrak{su}(3) \\oplus \\mathfrak{u}(1)$, realised by bivectors, the BRST differential \\[ sA = \\nabla c + g[A, c] , \\qquad sc = -\\tfrac{g}{2}[c, c] \\] squares to zero on every field and derivative for every coupling $g$. [[c:synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent]] It fails if the Jacobi identity, the factor of one half or the covariant term is altered. [[c:synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent]]\n\nThe unit $I_4$ never enters and no inner product is needed, so this part of the gauge structure is independent of the Krein premise. [[c:synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent]]",
+  "hash": "7b2d1dc2a2c5"
+ },
+ {
+  "id": "c:synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+  "type": "theorem",
+  "claim": "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent@2",
+  "title": "For the gauge algebra $\\mathfrak{su}(2) \\oplus \\mathfrak{su}(3) \\oplus \\mathfrak{u}(1)$ of the minimal massive composite, realised up to isomorphism by bivectors of $\\Cl(9,0)$, the field-level BRST differential of the Lie-algebra-valued vector potential, $sA = \\nabla c + g[A, c]$ (the covariant derivative of the ghost) with $sc = -\\tfrac{g}{2}[c, c]$, squares to zero on all fields and their derivatives for every coupling, needs the Jacobi identity, the factor $\\tfrac12$ and the covariant term, transforms the bivector field strength covariantly, and makes the Yang-Mills density plus an exact gauge-fixing term with the Faddeev-Popov operator invariant",
+  "text": "To describe the strong and weak forces as quantum fields in a way that respects relativity, one adds fictitious ghost fields and a bookkeeping operation that must give zero when applied twice. This result writes that operation for the full set of the series' force fields (without the Higgs fields' part), with the force fields' symmetry written as plane elements of a Clifford algebra, and checks exactly that it gives zero twice, for any strength of the force. It also shows that each ingredient is needed: removing the term in which the ghost feels the force field, or changing a factor of one half, spoils it. The usual energy of the force fields and the usual way of fixing the gauge pass the test. Nothing here is new physics; it confirms that the series' algebra carries the standard construction.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov"
+  ],
+  "hash": "10d5fd09579f",
+  "number": 19
+ },
+ {
+  "id": "t:synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent>synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+  "type": "transition",
+  "between": [
+   "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+   "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta"
+  ],
+  "text": "Positivity of the physical states is where the inner product returns. [[t]]\n\nUnder the first two clauses of the Krein premise, the Gupta-Bleuler form and the ghost pairing, the free BRST charge of the gluons and of the massive W and Z in the Feynman-'t Hooft gauge has an explicit homotopy, $Q_{B}R + RQ_{B} = N_{q}$, that counts the unphysical quanta. [[c:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta]] So at every number of quanta the physical states are the transverse polarisations, two per gluon and three per massive vector, and they have positive length. [[c:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta]]\n\nThe statement is for free fields and is perturbative; the interacting case still rests on Kugo and Ojima's hypotheses. [[c:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta]]",
+  "hash": "92bb44ff013d"
+ },
+ {
+  "id": "c:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+  "type": "theorem",
+  "claim": "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta@2",
+  "title": "Under clauses (K1) and (K2) of the Krein-form premise (the polarisation states carry the Gupta-Bleuler form $-u\\cdot w$, the ghost pair the pairing $\\langle c, \\bar c\\rangle_K = 1$), the free BRST charge of the gluons (at null momenta) and of the massive W and Z in the Feynman-'t Hooft gauge (with their Goldstone modes) has a one-particle contracting homotopy whose second quantisation counts the unphysical quanta, so at every number of quanta its cohomology is the Fock space of the transverse polarisations, two per gluon and three per massive vector, and the Krein form is positive on it with radical the image of the charge",
+  "text": "In the standard quantum theory of the strong and weak forces, the force fields carry unphysical parts, which come with negative probabilities, and ghost particles that cancel them. The cancellation works because the unphysical modes come in groups of four whose contributions vanish. Earlier work on the series checked this for states with up to three particles. This result proves it for any number of particles, for the gluons of the strong force and for the heavy W and Z of the weak force in one standard choice of gauge, by an explicit operator that counts the unphysical particles: any allowed state containing them is equivalent to zero, so the surviving states are made only of the physical polarisations, and they have positive probabilities. It holds for free particles and assumes two parts of the negative-norm bookkeeping the series has adopted as a premise; it is a statement of perturbation theory; the fully interacting case still rests on the standard assumptions of the literature.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+   "field-theory.imported-statistics-no-go-palatial-algebra",
+   "field-theory.imported-tower-limit",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+   "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "8565bf35e594",
+  "number": 20
+ },
+ {
+  "id": "t:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta>synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+  "type": "transition",
+  "between": [
+   "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+   "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law"
+  ],
+  "text": "Beyond perturbation theory, fixing a gauge for a non-abelian field is not unique. [[c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law]]\n\nIn the rotors of the weak factor, some families of equivalent fields meet the Coulomb and Landau conditions more than once, and on a lattice the copies cancel in a signed count equal to the Euler characteristic, zero; so BRST under the Krein premise is a perturbative tool. [[c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law]] The gauge-invariant lattice needs neither the indefinite form nor ghosts. [[c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law]]\n\nWith a frozen doublet the weak Wilson loop at infinite coupling follows a perimeter law, $c(\\kappa)^{P}$, so with the series' two doublets, taken as input, the strong-coupling area law of the weak factor is no test of confinement. [[c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law]]",
+  "hash": "786e23882e39"
+ },
+ {
+  "id": "c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+  "type": "theorem",
+  "claim": "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law@2",
+  "title": "Beyond perturbation theory the Coulomb and Landau conditions for the weak factor are not unique (the general statement for the covariant gauges is Gribov's and Singer's), and with a fundamental doublet the weak rotor lattice has a perimeter law: the identity rotor map is a Coulomb-gauge copy of the zero field on the round three-sphere taken as a compactified spatial slice, where an abelian field has none; on the weak rotor lattice the Landau gauge has a copy of the trivial field, generated by an abelian subgroup, with two negative Faddeev-Popov modes, which are non-abelian; on a two-site lattice the signed count of copies is zero, the Euler characteristic of the rotor group; with a frozen fundamental doublet the weak Wilson loop at $\\beta = 0$ is $c(\\kappa)^{P}$",
+  "text": "To calculate with force fields such as the gluons and the W and Z, physicists usually pick one representative from each family of physically identical field configurations. For these fields the choice cannot be made cleanly: some families meet the selection rule more than once, and on a lattice the duplicates cancel each other exactly. This result shows both effects in the series' own rotation algebra. It also shows that, once the Higgs fields are included, the lattice test usually used for confinement, how a loop of field lines decays with its area, no longer applies to the weak force. The lattice formulation, which never picks representatives, needs neither the series' assumed indefinite form nor the auxiliary ghost fields.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law",
+   "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement",
+   "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+   "synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity"
+  ],
+  "hash": "90086b31ccf4",
+  "number": 21
+ },
+ {
+  "id": "t:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law>synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+  "type": "transition",
+  "between": [
+   "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+   "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics"
+  ],
+  "text": "The last structural question is why matter fields obey the exclusion rule and force fields do not. [[t]]\n\nFor the attached free fields, given the massless two-point function and positive norm, locality decides it: the polarisation sums have degree $2s$, so the tower's anticommuting modes carry only local spinor fields and the palatial commuting modes only local scalar and photon fields. [[c:synthesis.locality-of-the-attached-free-fields-fixes-their-statistics]] An elementary Higgs field of positive norm must therefore be palatial, while with an indefinite form an anticommuting scalar can be local, as ghosts are. [[c:synthesis.locality-of-the-attached-free-fields-fixes-their-statistics]]",
+  "hash": "70995a8a90d7"
+ },
+ {
+  "id": "c:synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+  "type": "theorem",
+  "claim": "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@2",
+  "title": "For the series' attached free massless fields with positive norm ($c > 0$), given the massless two-point function, locality of the attached field fixes its statistics: the stored polarisation sums have degree $d = 2s$ in $k$ (the scalar $1$, the spinor $2k_{0}\\Lambda(k)$, the photon's bivector sum), the bracket at spacelike separation is a nonzero multiple of $1 + \\eta c(-1)^{d}$, so in a positive-norm space the tower's CAR ($\\eta = +1$) gives a local field only for the spinor and the palatial CCR ($\\eta = -1$) only for the scalar and the photon, and an elementary local rung scalar of positive norm is palatial; with an indefinite form ($c = -1$) the locality condition flips and a CAR scalar is local, as Faddeev-Popov ghosts are",
+  "text": "Particles that make up matter obey an exclusion rule, while particles of force and the Higgs do not, and which rule a particle obeys is tied to its spin. Here that tie is derived for the series' simplest fields from one requirement, together with the usual rule that quantum states have positive probabilities: measurements at points too far apart for light to connect must not disturb each other. The series stores exclusion-rule modes in one part of its algebra and the other kind in another; the requirement allows half-integer spin only in the first and whole-number spin only in the second, so an elementary Higgs field would have to be built in the second. Without positive probabilities the rule fails, which is why the bookkeeping fields used to fix gauges can break it.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "field-theory.fock-space-maxwell-modes",
+   "field-theory.twistor-attachment",
+   "field-theory.imported-tower-limit",
+   "field-theory.imported-statistics-no-go-palatial-algebra",
+   "field-theory.no-canonical-commutation-relations-tower",
+   "field-theory.how-close-tower-comes-ccr",
+   "synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem"
+  ],
+  "hash": "22bf24a233a3",
+  "number": 22
+ },
+ {
+  "id": "t:synthesis.locality-of-the-attached-free-fields-fixes-their-statistics>synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+  "type": "transition",
+  "between": [
+   "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+   "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number"
+  ],
+  "text": "Interactions could in principle spoil that tie. [[t]]\n\nIf the interacting fields are built by causal perturbation theory from the attached free fields, every interaction term of the series contains matter fields and ghosts in pairs. [[c:synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number]] Then the grading equals the full turn $U(2\\pi)$ to every order on fields of even ghost count, in particular at ghost number zero, and the Jost import is needed only beyond perturbation theory. [[c:synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number]]",
+  "hash": "51883ea57570"
+ },
+ {
+  "id": "c:synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+  "type": "theorem",
+  "claim": "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number@2",
+  "title": "If the interacting fields are built from the series' attached free fields by causal perturbation theory (Bogoliubov's formula, time-ordered products that are graded symmetric, preserve the Grassmann parity, factorise causally, satisfy the Wick expansion and are covariant under the covering group of the Poincare group), and the free Feynman-gauge potential is taken in its indefinite form, then to every order the rotation by $2\\pi$ equals the statistics grading on every interacting field with an even number of ghost factors, in particular at ghost number zero: every monomial of the series' interaction density, for any number of scalar doublets, is a Lorentz scalar with even spinor and ghost counts, an interacting field keeps the Grassmann parity and the $2\\pi$ eigenvalue $(-1)^{n_{\\psi}}$ of its Wick polynomial, and interacting fields are graded-local with that parity; so in perturbation theory the Jost-point import is replaced by the free-field locality result and the imported axioms, and ghost fields of odd ghost count carry the opposite sign",
+  "text": "Particles of half-integer spin obey the exclusion rule and those of whole-number spin do not. For the series' free particles this tie was already derived; the question was whether it survives interactions. In the standard step-by-step construction of interacting fields, it does: each step combines the free fields with the interaction, and every term of the series' interaction contains matter fields in pairs, so turning a field by a full circle and exchanging two fields give the same sign before and after the interaction is switched on. The bookkeeping fields used to fix gauges are the one exception, as they were for free fields, and they always appear in pairs in anything physical. What the step-by-step construction does not give is a statement about the full theory beyond that expansion; there a deeper assumption is still needed.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+   "field-theory.second-quantisation",
+   "field-theory.imported-tower-limit",
+   "synthesis.one-loop-qed-in-the-spacetime-algebra",
+   "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+   "synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+  ],
+  "hash": "b3561aa7ef99",
+  "number": 23
+ },
+ {
+  "id": "t:synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number>synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics",
+  "type": "transition",
+  "between": [
+   "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+   "synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics"
+  ],
+  "text": "Beyond perturbation theory one route goes through the vacuum's own symmetries restricted to wedge-shaped regions. [[t]]\n\nIn the spacetime algebra the reflection of a wedge is conjugation by a single element, its boost bivector $B$, and the reflections of a wedge and its quarter-turned copy compose to a rotor of square $-1$, the $2\\pi$ rotation in the spin group. [[c:synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics]] So under the spectrum condition, if the vacuum's modular conjugations act geometrically on wedges, Kuckert's theorem gives spin-statistics for interacting fields. [[c:synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics]]\n\nNothing in the store supplies that action on the local algebras, so this route remains conditional. [[c:synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics]]",
+  "hash": "485944bf51ec"
+ },
+ {
+  "id": "c:synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics",
+  "type": "theorem",
+  "claim": "synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics@2",
+  "title": "In the spacetime algebra the reflection of a wedge is conjugation by its boost bivector $B$ ($B^{2} = 1$, $B\\tilde B = -1$); it reverses the edge's null translations, which the wedge's boosts dilate; the reflections of the wedge and of its copy turned by a quarter turn compose, whichever signs the two versors carry, to a rotor whose square is $-1$, the rotation by $2\\pi$ in the spin group (along the turned wedges $B_{\\theta}B = \\cos\\theta + \\sin\\theta\\,\\gamma_{1}\\gamma_{2}$, whose lift by continuity reaches $-1$ at the causal complement); with $i = I_{4}$ the twist $V = (1 + I_{4}k)(1 + I_{4})^{-1}$ squares to the grading $k$; so, under the spectrum condition and the other hypotheses of an imported theorem, if the modular conjugations of the wedge algebras act on the local algebras as the wedge reflections (weaker than modular covariance), the rotation by $2\\pi$ is the statistics operator of the interacting field net; nothing in the store supplies that action on the local algebras",
+  "text": "One way to explain why matter particles obey the exclusion rule and force particles do not uses a natural flow of the vacuum restricted to a wedge-shaped region of spacetime. In the series' algebra, the mirror image of such a wedge is a single algebraic element, the wedge's own boost plane, and mirroring twice in wedges turned by half a turn gives a full turn, which for a spin-one-half value is a sign change. If the vacuum's natural mirror operation matches the geometric mirror on every region, the spin rule follows for interacting particles. Positive energy gives that match for shifts along light rays, not for every region, and nothing in the series gives it for regions, so that match remains an assumption.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "synthesis.modular-period-on-values-is-the-dual-plane-turn",
+   "angle.imported-theorems-deliver-their-hypotheses",
+   "synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem",
+   "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+   "synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem"
+  ],
+  "hash": "051842269f70",
+  "number": 24
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:angle.imported-theorems-deliver-their-hypotheses",
+  "type": "fact",
+  "claim": "angle.imported-theorems-deliver-their-hypotheses@1",
+  "title": "Imported: the theorems that deliver $2\\pi$, and their hypotheses",
+  "text": "These are the standard theorems of quantum field theory that produce the factor $2\\pi$ behind the Unruh and Hawking temperatures. They say that when energy is positive and the theory respects relativity and locality, the natural internal clock of the region on one side of a horizon is the horizon's boost, running at a fixed rate. The entry records their hypotheses, since those are what any attempt to use them must supply.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "J. J. Bisognano and E. H. Wichmann, On the duality condition for a Hermitian scalar field, J. Math. Phys. 16 (1975), 985--1007.; J. J. Bisognano and E. H. Wichmann, On the duality condition for quantum fields, J. Math. Phys. 17 (1976), 303--321.; H.-J. Borchers, The CPT-theorem in two-dimensional theories of local observables, Commun. Math. Phys. 143 (1992), 315--332.; P. D. Hislop and R. Longo, Modular structure of the local algebras associated with the free massless scalar field theory, Commun. Math. Phys. 84 (1982), 71--85.; R. Brunetti, D. Guido and R. Longo, Modular structure and duality in conformal quantum field theory, Commun. Math. Phys. 156 (1993), 201--219.; G. L. Sewell, Quantum fields on manifolds: PCT and gravitationally induced thermal states, Ann. Phys. 141 (1982), 201--224.; B. S. Kay and R. M. Wald, Theorems on the uniqueness and thermal properties of stationary, nonsingular, quasifree states on spacetimes with a bifurcate Killing horizon, Phys. Rep. 207 (1991), 49--136.; W. G. Unruh, Notes on black-hole evaporation, Phys. Rev. D 14 (1976), 870--892.",
+  "hash": "6cb86d4447d5",
+  "number": 25
+ },
+ {
+  "id": "c:field-theory.conserved-numbers-mass-block",
+  "type": "fact",
+  "claim": "field-theory.conserved-numbers-mass-block@3",
+  "title": "Conserved numbers in a mass block",
+  "text": "The registered gravity prediction needs numbers that stay fixed while matter evolves. For a massive fermion built in the tower the individual mode occupations change, but the quasi-particle numbers and a charge built from the modes are conserved, and a single massive particle is a single occupied mode.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.conserved-numbers-mass-block, version 3 (FT Prop 9.1)",
+  "hash": "f872930e72f3",
+  "number": 26
+ },
+ {
+  "id": "c:field-theory.coupled-system-tree-level",
+  "type": "fact",
+  "claim": "field-theory.coupled-system-tree-level@3",
+  "title": "The coupled system at tree level",
+  "text": "Coupling the tower's fermions to the photon's quantum states, the computation reproduces at lowest order the textbook scattering of two charged particles by photon exchange, including the exchange term for identical particles. Each ingredient matters: leaving out the Coulomb term, one photon helicity or the fermions' sign rule changes the answer.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.coupled-system-tree-level, version 3 (FT Prop 8.2)",
+  "hash": "37d0855152a8",
+  "number": 27
+ },
+ {
+  "id": "c:field-theory.elementary-photon-ga",
+  "type": "fact",
+  "claim": "field-theory.elementary-photon-ga@4",
+  "title": "The elementary photon in GA",
+  "text": "Taking the photon as a fundamental field, its polarisations and helicities can be written in geometric algebra with the volume element as imaginary unit. With them, photon exchange between two currents reproduces the standard result, given that the currents are conserved, and a heavy force carrier reduces to the contact interaction.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.elementary-photon-ga, version 4 (FT Prop 7.3)",
+  "hash": "bd89a6d841da",
+  "number": 28
+ },
+ {
+  "id": "c:field-theory.how-close-tower-comes-ccr",
+  "type": "fact",
+  "claim": "field-theory.how-close-tower-comes-ccr@4",
+  "title": "How close the tower comes to the CCR",
+  "text": "Pairs of fermion modes in the tower behave almost like bosons, but not exactly: they form a finite ladder of states, like a quantum spin. The exact boson relations appear only in the limit of infinitely many pairs, and then only for states with a bounded number of bosons.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.how-close-tower-comes-ccr, version 4 (FT Prop 8.3)",
+  "hash": "d2c34e24d08f",
+  "number": 29
+ },
+ {
+  "id": "c:field-theory.imported-one-datum-massive-law",
+  "type": "fact",
+  "claim": "field-theory.imported-one-datum-massive-law@2",
+  "title": "Imported: one datum for the massive law",
+  "text": "Writing the equation of a massive electron in geometric algebra needs one extra geometric ingredient beyond the field itself, in effect a rest-frame direction. The spacetime volume element, although it squares to minus one, cannot play that role.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.imported-one-datum-massive-law, version 2 (FT Fact 2.3)",
+  "hash": "6e31df9b8e37",
+  "number": 30
+ },
+ {
+  "id": "c:field-theory.imported-standard-field-theory",
+  "type": "fact",
+  "claim": "field-theory.imported-standard-field-theory@4",
+  "title": "Imported: standard field theory",
+  "text": "The field-theory note relies on six textbook results that it does not reprove: the theorem linking spin to statistics, the transform that turns geometric data into massless fields, a theorem forbidding certain massless charged composite particles, the way a fermion condensate yields a massless scalar, the standard energy operator of quantum electrodynamics, and the axial anomaly.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, ch. 4 (the Jost-point form of the spin-statistics theorem; named in the source); The Penrose transform and its H^1 isomorphism (Penrose; named in the source); S. Weinberg and E. Witten, the Weinberg-Witten theorem (named in the source); The random-phase Goldstone pole of the Nambu-Jona-Lasinio model (named in the source); The Coulomb-gauge Hamiltonian of quantum electrodynamics (Sakurai; Weinberg, The Quantum Theory of Fields, vol. I; named in the source); The Adler-Bell-Jackiw anomaly (named in the source)",
+  "hash": "d1b7012cc3db",
+  "number": 31
+ },
+ {
+  "id": "c:field-theory.imported-statistics-no-go-palatial-algebra",
+  "type": "fact",
+  "claim": "field-theory.imported-statistics-no-go-palatial-algebra@2",
+  "title": "Imported: the statistics no-go and the palatial algebra",
+  "text": "The canonical commutation relations of bosons cannot be realised by finite matrices, nor inside any finite-dimensional algebra such as a floor of the tower; they need infinitely many states, as in the standard representation on polynomials. Even in the infinite tower they cannot be realised by bounded operators.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.imported-statistics-no-go-palatial-algebra, version 2 (FT Fact 2.2)",
+  "hash": "37e609d07a4d",
+  "number": 32
+ },
+ {
+  "id": "c:field-theory.imported-tower-limit",
+  "type": "fact",
+  "claim": "field-theory.imported-tower-limit@3",
+  "title": "Imported: the tower and its limit",
+  "text": "Each plane added to the tower contributes one fermionic mode, with the anticommutation rules of fermion creation and annihilation. Adding planes without end gives the algebra of a free fermionic quantum field.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.imported-tower-limit, version 3 (FT Fact 2.1)",
+  "hash": "2e3ab18da3f4",
+  "number": 33
+ },
+ {
+  "id": "c:field-theory.no-canonical-commutation-relations-tower",
+  "type": "fact",
+  "claim": "field-theory.no-canonical-commutation-relations-tower@3",
+  "title": "No canonical commutation relations in the tower",
+  "text": "The exact commutation rule of elementary bosons cannot be satisfied inside any finite part of the tower, nor by bounded operators in its limit. That does not rule out bosons that are composites of the tower's fermions.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim field-theory.no-canonical-commutation-relations-tower, version 3 (FT Prop 6.3)",
+  "hash": "cd6c9b20298b",
+  "number": 34
+ },
+ {
+  "id": "c:primer.sign",
+  "type": "fact",
+  "claim": "primer.sign@2",
+  "title": "The sign of $\\omega^2$",
+  "text": "Multiplying all the basis directions of a Clifford algebra together gives a special element called the pseudoscalar. Its square is always plus one or minus one, and this result says which. The answer depends only on the number of positive directions minus the number of negative ones: plus one when that difference leaves remainder 0 or 1 on division by four, and minus one otherwise.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim primer.sign, version 2 (T00 Lem 9.5)",
+  "hash": "0fdbb2a12068",
+  "number": 35
+ },
+ {
+  "id": "c:standard-model.gauge-algebra-minimal-massive-composite",
+  "type": "fact",
+  "claim": "standard-model.gauge-algebra-minimal-massive-composite@4",
+  "title": "The gauge algebra of the minimal massive composite",
+  "text": "A composite of basic spinor states of the conformal algebra has a two-level internal structure: which spinor state, and which of its three internal pairs. The rotations that respect both levels form a symmetry algebra. For the smallest composite that can have mass, two spinor states of three pairs each, that algebra is exactly the one behind the strong, weak and hypercharge forces; for three spinor states it is too large.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.gauge-algebra-minimal-massive-composite, version 4 (T12 Thm 4.1)",
+  "hash": "3b8413acfc55",
+  "number": 36
+ },
+ {
+  "id": "c:standard-model.hypercharge-global-form-pair-counting-consistency",
+  "type": "fact",
+  "claim": "standard-model.hypercharge-global-form-pair-counting-consistency@5",
+  "title": "Hypercharge from the global form, pair counting, and consistency",
+  "text": "Hypercharge is one of the charges that decide how particles feel the electroweak force. Here it is read off from how the symmetry acts on the composite's states, with the quark doublet carrying one sixth. Under a stated hypothesis about the state space, counting pairs and keeping track of handedness yields the lepton doublet and the four singlet particles with their observed hypercharges. The consistency conditions a quantum gauge theory must satisfy then hold, and given that particle content, all listed with one handedness, with the quark doublet's one sixth as the unit and a fourth singlet that is neutral or absent, they allow no other choice of charges.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim standard-model.hypercharge-global-form-pair-counting-consistency, version 5 (T12 Thm 5.5)",
+  "hash": "b649a390bfed",
+  "number": 37
+ },
+ {
+  "id": "c:standard-model.imported-one-loop-running-trace-ratio",
+  "type": "fact",
+  "claim": "standard-model.imported-one-loop-running-trace-ratio@1",
+  "title": "Imported: one-loop running, and the trace ratio of a simple unifying group",
+  "text": "The strengths of the three forces change slowly with energy, and at the first approximation each inverse strength changes along a straight line against the logarithm of the energy, with a slope set by the particle content. If all three forces are pieces of one larger simple symmetry, their strengths must agree at the energy where that symmetry is intact, once they are measured on the common scale the larger symmetry fixes. Both statements are standard and taken from the literature, the second being the working hypothesis of grand unification.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Georgi and S. L. Glashow, Unity of all elementary-particle forces, Phys. Rev. Lett. 32 (1974), 438--441.; U. Amaldi, W. de Boer, and H. F\"urstenau, Comparison of grand unified theories with electroweak and strong coupling constants measured at LEP, Phys. Lett. B 260 (1991), 447--455.; S. Navas et al. (Particle Data Group), Review of particle physics, Phys. Rev. D 110 (2024), 030001.",
+  "hash": "acc73efb9bce",
+  "number": 38
+ },
+ {
+  "id": "c:std-algebra.pseudoscalar-commutation",
+  "type": "fact",
+  "claim": "std-algebra.pseudoscalar-commutation@1",
+  "title": "How the pseudoscalar commutes",
+  "text": "The unit volume element commutes with everything in odd dimensions, and flips the sign of arrows in even dimensions. If the space has a direction of zero length, the volume element squares to zero.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim std-algebra.pseudoscalar-commutation, version 1",
+  "hash": "345cc82bf038",
+  "number": 39
+ },
+ {
+  "id": "c:synthesis.anomaly-freedom-forces-slot-content",
+  "type": "fact",
+  "claim": "synthesis.anomaly-freedom-forces-slot-content@3",
+  "title": "Anomaly freedom forces odd slot parity and the slot content of Hypothesis (S), up to multiplicity",
+  "text": "The series' Standard-Model paper needs a premise, called (S), saying that the two places a composite's twistors occupy behave like fermions. This result keeps the rest of that setting but lets those places behave in any way compatible with the symmetry, and lets their contribution to handedness be either odd or even. Requiring that the resulting particles be free of gauge anomalies, the consistency condition every chiral gauge theory must meet, forces the places to count as odd for handedness and to have exactly the fermionic pattern, possibly repeated several times, and forces the exclusion principle. More exotic behaviour, such as parafermions, and even places, give anomalous particle content.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.anomaly-freedom-forces-slot-content, version 3",
+  "hash": "5e2d8a3728e9",
+  "number": 40
+ },
+ {
+  "id": "c:synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off",
+  "type": "fact",
+  "claim": "synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off@3",
+  "title": "Read as a sharp mode cut-off (the result holds for any finite truncation of a chiral band, the floors of the tower included), a floor keeps the charge and the free continuity equation exactly; for a one-chirality field on a window of $2N$ momentum modes the central term of the density algebra is an edge operator, equal on the filled sea (and on states whose window edges are filled below and empty above) to its continuum value $p$ exactly for $p \\le N$ and to $\\min(p, 2N - p)$ in general (it differs on states excited at the edges), the one-loop density response lying at energy exactly $p$ with that weight; and the conformal-energy cut of the twistor attachment keeps the spatial rotations but no boost; nor does any weighting of the floors by conformal energy, sharp or smooth (closure of the commutant with one boost, and Schur's lemma)",
+  "text": "A calculation in quantum field theory with loops needs a regulator, a way of cutting off the infinitely many high-energy modes. The series has a natural candidate: its tower is built floor by floor, each floor holding finitely many fermion modes, and on the series' link to spacetime the floors are energy cut-offs. This result tests that candidate, and with it any sharp cut-off on the number of modes, on a simple model, one chirality of a fermion moving around a circle. The floor keeps electric charge exactly and keeps the charge flowing correctly. The subtle quantum term that gives the vacuum its polarisability, and that underlies the anomaly of chiral fermions, cannot exist exactly on any finite floor; instead it appears at the floor's edges, and it takes exactly the right value for every wavelength longer than the cut-off, provided the modes near the cut-off are in their vacuum state. The price is relativity: a floor is defined by one notion of energy and is unchanged by rotations but not by boosts. Smoothing the cut-off does not help: no gradual weighting of the floors by energy restores the boosts.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off, version 3",
+  "hash": "73cda9adb110",
+  "number": 41
+ },
+ {
+  "id": "c:synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+  "type": "fact",
+  "claim": "synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@3",
+  "title": "Given the Hadamard parametrix of the squared Dirac operator (imported), every gauge-invariant quasi-free Hadamard state of the Dirac field of mass m0 >= 0 on a globally hyperbolic gravitational field scales, under the store's dilation in a gauge with hb(x0) = 1, to the flat field's massless vacuum on both orderings (standard: Sahlmann and Verch 2001, Prop. 5.6, re-derived in the spacetime algebra for Dirac spinors), so clause (a) of (HS) holds and the premise's content is its generator clause (b)",
+  "text": "The series assumed that any state of the free electron field of the standard regular kind (gauge-invariant, quasi-free and Hadamard), looked at closely enough at a point where gravity is present, resembles the empty state of flat space. This result proves that assumption for the bulk of space-time, for massive and massless particles and for every gravitational field with a well-posed causal structure (globally hyperbolic), by redoing in the series' algebra a known theorem of Sahlmann and Verch from the mathematical physics literature: close up, the curvature, the mass and the gravitational connection all fade out of the state's correlations at definite rates. It relies on two standard analytic facts quoted from the literature rather than proved in the series. What it does not prove is the companion statement the series also needs: that the same is true when the state is looked at only along the light rays of a small horizon. That part stays an assumption.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Sahlmann and R. Verch, Microlocal spectrum condition and Hadamard form for vector-valued quantum fields in curved spacetime, Rev. Math. Phys. 13 (2001), 1203--1246; arXiv:math-ph/0008029., Prop. 5.6; Def. 5.3; K. Sanders, The locally covariant Dirac field, Rev. Math. Phys. 22 (2010); arXiv:0911.1304.",
+  "hash": "2218b2f9246c",
+  "number": 42
+ },
+ {
+  "id": "c:synthesis.imported-adler-bell-jackiw-axial-anomaly",
+  "type": "fact",
+  "claim": "synthesis.imported-adler-bell-jackiw-axial-anomaly@1",
+  "title": "Imported: the axial anomaly of spinor electrodynamics (Adler 1969; Bell and Jackiw 1969): when the vector current is kept conserved, the divergence of the axial current of a Dirac fermion has, besides the mass term, the anomalous term $(\\alpha/4\\pi)\\,\\epsilon^{\\xi\\sigma\\tau\\rho}F_{\\xi\\sigma}F_{\\tau\\rho}$ from the triangle graph, which accounts for the decay of the neutral pion into two photons",
+  "text": "Some symmetries of the classical equations of particle physics do not survive in the quantum theory. The best known case concerns the difference between left-handed and right-handed particles: in 1969 Adler, and Bell and Jackiw, found that quantum effects of light break this balance by an amount set by the electric and magnetic fields together, and that this explains why a neutral pion decays into two photons. The series takes this result from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "S. L. Adler, Axial-vector vertex in spinor electrodynamics, Phys. Rev. 177 (1969), 2426--2438.; J. S. Bell and R. Jackiw, A PCAC puzzle: pi0 -> gamma gamma in the sigma-model, Nuovo Cimento A 60 (1969), 47--61.; S. L. Adler, Anomalies to all orders, in: 50 Years of Yang-Mills Theory, ed. G. 't Hooft, World Scientific (2005); arXiv:hep-th/0405040., eq. (1) and the reference list",
+  "hash": "46238b7d9679",
+  "number": 43
+ },
+ {
+  "id": "c:synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+  "type": "fact",
+  "claim": "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1",
+  "title": "Imported: covariant quantisation of gauge fields: BRST symmetry (Becchi, Rouet and Stora 1976; Tyutin 1975), the Kugo-Ojima quartet mechanism (1979), Strocchi's theorem that a local covariant vector potential obeying Maxwell's equations needs an indefinite metric (1967 to 1970), and the Gribov ambiguity of non-abelian gauge fixing (1978)",
+  "text": "Force fields such as light and the gluons carry a redundancy: many mathematical descriptions give the same physics. Removing it while keeping the equal treatment of space and time is done with fictitious ghost particles and a bookkeeping symmetry found in the 1970s. That bookkeeping works only if some unphysical states are allowed negative or zero length, which then cancel in groups of four; a theorem of Strocchi shows there is no way around this, and Gribov showed that for the gluons the usual way of removing the redundancy fails for very strong fields. The series takes these results from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "C. Becchi, A. Rouet and R. Stora, Renormalization of gauge theories, Ann. Phys. 98 (1976), 287--321.; I. V. Tyutin, Gauge invariance in field theory and statistical physics in operator formalism, Lebedev Institute preprint LEBEDEV-75-39 (1975), arXiv:0812.0580.; T. Kugo and I. Ojima, Local covariant operator formalism of non-abelian gauge theories and quark confinement problem, Prog. Theor. Phys. Suppl. 66 (1979), 1--130.; F. Strocchi, Gauge problem in quantum field theory, Phys. Rev. 162 (1967), 1429.; F. Strocchi, Gauge problem in quantum field theory. III. Quantization of Maxwell equations and weak local commutativity, Phys. Rev. D 2 (1970), 2334--2340.; H. Gottschalk, Indefinite metric, arXiv:math-ph/0501033 (review).; V. N. Gribov, Quantization of non-Abelian gauge theories, Nucl. Phys. B 139 (1978), 1.",
+  "hash": "d185eb89063f",
+  "number": 44
+ },
+ {
+  "id": "c:synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5",
+  "type": "fact",
+  "claim": "synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2",
+  "title": "Imported: dimensional regularisation ('t Hooft and Veltman 1972) and its treatment of $\\gamma_{5}$ (Breitenlohner and Maison 1977): the metric and the Dirac matrices split into four-dimensional and evanescent parts, $\\{\\gamma_{5}, \\bar\\gamma^{\\mu}\\} = 0$, $[\\gamma_{5}, \\hat\\gamma^{\\mu}] = 0$, which breaks the BRST symmetry of chiral gauge theories and needs finite symmetry-restoring counterterms (at one and at two loops in the abelian case); and the $d$-dimensional integral rules: translation invariance, vanishing scale-free integrals, integration by parts (Chetyrkin and Tkachov 1981), the radial integral, symmetric integration, the massless bubble $G(a_{1}, a_{2})$ and the two-loop benchmark $6\\zeta_{3}$",
+  "text": "One standard way of taming the infinities of quantum corrections pretends that spacetime has a slightly non-integer number of dimensions. The quantity that distinguishes left-handed from right-handed particles exists only in four dimensions, so the method has to give up one of its properties; the standard choice keeps it consistent at the cost of extra corrections in theories, like the weak force, that treat left and right differently. The method comes with a small set of rules for doing the resulting integrals, which reduce complicated calculations to a few standard ones.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "G. 't Hooft and M. Veltman, Regularization and renormalization of gauge fields, Nucl. Phys. B 44 (1972), 189--213.; P. Breitenlohner and D. Maison, Dimensional renormalization and the action principle, Commun. Math. Phys. 52 (1977), 11--38.; H. Belusca-Maito, A. Ilakovac, M. Madjor-Bozinovic and D. Stoeckinger, Dimensional regularization and Breitenlohner-Maison/'t Hooft-Veltman scheme for gamma_5 applied to chiral YM theories: full one-loop counterterm and RGE structure, J. High Energy Phys. 08 (2020), 024, arXiv:2004.14398, equations (2.1), (2.6) and (2.10).; H. Belusca-Maito, A. Ilakovac, P. Kuehler, M. Madjor-Bozinovic and D. Stoeckinger, Two-loop application of the Breitenlohner-Maison/'t Hooft-Veltman scheme with non-anticommuting gamma_5: full renormalization and symmetry-restoring counterterms in an abelian chiral gauge theory, J. High Energy Phys. 11 (2021), 159; arXiv:2109.11042., abstract; eqs. (6.4) and (6.5) (the one-loop breaking and the one-loop finite symmetry-restoring counterterms of the abelian theory with right-handed fermions, Tr Y_R^3 = 0 imposed); K. G. Chetyrkin and F. V. Tkachov, Integration by parts: the algorithm to calculate beta-functions in 4 loops, Nucl. Phys. B 192 (1981), 159--204.; A. Grozin, Lectures on multiloop calculations, lectures at the Calc-03 school, Dubna (2003); arXiv:hep-ph/0307297., eq. (2.1) (normalisation), eq. (2.5) (the bubble G(n1, n2)), eq. (2.12) (a triangle relation), Sec. 2.1 (scale-free integrals vanish); A. V. Kotikov and S. Teber, Multi-loop techniques for massless Feynman diagram calculations, arXiv:1805.05109., eq. (2.14) (scale-free integrals vanish), eq. (2.19) (the bubble), the rule of triangles attributed to Chetyrkin and Tkachov, eqs. (3.42), (3.43) (the two-loop diagram with five unit lines, 6 zeta3 + O(eps)); S. Weinzierl, Introduction to Feynman integrals, arXiv:1005.1855., eq. (39) (translation invariance), eq. (64) (the angular integral 2 pi^{D/2}/Gamma(D/2)), eq. (76) (a radial integral)",
+  "hash": "f8730f1499bb",
+  "number": 45
+ },
+ {
+  "id": "c:synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+  "type": "fact",
+  "claim": "synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1",
+  "title": "Imported: causal perturbation theory (Epstein and Glaser 1973) with the extension theorem for distributions of finite scaling degree (Brunetti and Fredenhagen 2000, Thms. 5.2 and 5.3), the existence of time-ordered products of electrodynamics obeying perturbative gauge invariance and the Ward identities (Scharf 1995), the local construction of interacting fields and of the BRST structure of electrodynamics (Duetsch and Fredenhagen 1999), and renormalised Yang-Mills fields with Ward identities keeping the interacting BRST charge nilpotent (Hollands 2008)",
+  "text": "The infinities of quantum field theory can be avoided without any artificial cut-off. Epstein and Glaser showed that the calculation can be built up step by step from the requirement that cause precedes effect; the only freedom left at each step is how to treat the points where particles meet, and that freedom is a short list of constants. Later work showed that this freedom can be used to keep the conservation of electric charge exact at every step, constructed the local quantities of the theory directly, and extended the construction to the force fields of the strong and weak interactions, on flat spacetime and in gravitational fields. The series takes these results from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Epstein and V. Glaser, The role of locality in perturbation theory, Ann. Inst. H. Poincare A 19 (1973), no. 3, 211--295.; R. Brunetti and K. Fredenhagen, Microlocal analysis and interacting quantum field theories: renormalization on physical backgrounds, Commun. Math. Phys. 208 (2000), 623--661; arXiv:math-ph/9903028., Sec. 5.2, Thm. 5.2 (scaling degree below the dimension: unique extension of the same degree) and Thm. 5.3 (finite scaling degree at least the dimension: extensions of the same degree exist; the ambiguity, terms P(d)delta supported at the point, in the proof and the discussion around it); G. Scharf, Finite Quantum Electrodynamics: The Causal Approach, 2nd ed., Springer, Berlin (1995)., ch. 3 (the method of Epstein and Glaser, splitting of causal distributions, application to QED); sec. 4.6 (gauge invariance and Ward identities); sec. 5.3 (axial anomalies); D. R. Grigore, Gauge invariance of the quantum electrodynamics in the causal approach to renormalization theory, arXiv:hep-th/9911214., introduction: a reformulated proof of gauge invariance of QED to all orders in the Epstein-Glaser approach, noting that an earlier proof relies on reduction formulae for one-particle reducible graphs; M. Duetsch and K. Fredenhagen, A local (perturbative) construction of observables in gauge theories: the example of QED, Commun. Math. Phys. 203 (1999), 71--105; arXiv:hep-th/9807078.; S. Hollands, Renormalized quantum Yang-Mills fields in curved spacetime, Rev. Math. Phys. 20 (2008), 1033--1172; arXiv:0705.3340.",
+  "hash": "382df0498efc",
+  "number": 46
+ },
+ {
+  "id": "c:synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem",
+  "type": "fact",
+  "claim": "synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1",
+  "title": "Imported: the massless two-point function $D_{+}$, real and even at spacelike separation; Pauli's free-field spin-statistics argument (1940); and the algebraic spin-statistics theorem of Guido and Longo (1995): for a modular covariant net of field algebras with the Reeh-Schlieder property and normal commutation relations the statistics grading is $\\Gamma = U(2\\pi)$",
+  "text": "Particles of whole-number spin behave as bosons and those of half-number spin as fermions. For free particles this follows from a short argument of Pauli using the standard formula for how a field's values at two points are correlated. For interacting fields Guido and Longo proved it from a property of the vacuum: that its natural flow in each wedge of spacetime is the geometric boost. The series takes these results as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "W. Pauli, The connection between spin and statistics, Phys. Rev. 58 (1940), 716--722.; D. Guido and R. Longo, An algebraic spin and statistics theorem, Commun. Math. Phys. 172 (1995), 517, arXiv:funct-an/9406005, Theorem 2.11 and Proposition 2.4.; A. Shalabi, M. H. Zambianco and T. R. Perche, The effect of curvature on local observables in quantum field theory, arXiv:2412.12294, equation (11).; R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, Benjamin (1964).",
+  "hash": "98d2647e6af5",
+  "number": 47
+ },
+ {
+  "id": "c:synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+  "type": "fact",
+  "claim": "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@2",
+  "title": "Imported: the Hadamard parametrix of a normally hyperbolic operator on a vector bundle has leading coefficient the square root of the Van Vleck determinant times the parallel transport of the operator's connection (Friedlander 1975; Bar, Ginoux and Pfaffle 2007, Ch. 2); for the squared Dirac operator that connection is the spin connection (Lichnerowicz), so U = Delta^(1/2) R; the Hadamard form does not depend on the time function of its i0 prescription (Kay and Wald 1991; Sahlmann and Verch 2001, Sec. 5.1); and in four dimensions the retarded and advanced fundamental solutions on a causal domain are (1/4 pi) theta(+-(t - t')) [U delta(sigma) + V theta(sigma)] with V smooth (Friedlander 1975; Bar, Ginoux and Pfaffle 2007, Ch. 2)",
+  "text": "Physicists describe the regular states of a quantum field by the exact way its correlations blow up when two points come together. For the electron field, the strength of that blow-up is set by two pieces of geometry: how quickly straight paths from a point spread out, and how the electron's spin is carried along the path joining the two points. The rule also does not depend on which way of slicing space-time into moments is used to state it, and the same two pieces of geometry fix how a disturbance of the field spreads along the light cone. These are taken from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "F. G. Friedlander, The Wave Equation on a Curved Space-Time, Cambridge University Press, Cambridge, 1975., the fundamental solutions of normally hyperbolic operators and their Hadamard form; cited from memory, not read; C. Bar, N. Ginoux and F. Pfaffle, Wave Equations on Lorentzian Manifolds and Quantization, ESI Lectures in Mathematics and Physics, European Mathematical Society, 2007; arXiv:0806.1036., Ch. 2 (Def. 2.2.1, Prop. 2.3.1; the formal and local fundamental solutions as sums of Hadamard coefficients times Riesz distributions); Sec. 1.3 (the function mu_x); E. Poisson, The motion of point particles in curved spacetime, Living Rev. Relativity 7 (2004), 6; arXiv:gr-qc/0306052., Sec. 4.3.2, Eqs. (266), (268), (269), (273) (scalar Green functions); Sec. 4.4.2 (electromagnetic Green functions, U = parallel propagator times Delta^(1/2)); H. Sahlmann and R. Verch, Microlocal spectrum condition and Hadamard form for vector-valued quantum fields in curved spacetime, Rev. Math. Phys. 13 (2001), 1203--1246; arXiv:math-ph/0008029., Sec. 3.5; Sec. 5.1; B. S. Kay and R. M. Wald, Theorems on the uniqueness and thermal properties of stationary, nonsingular, quasifree states on spacetimes with a bifurcate Killing horizon, Phys. Rep. 207 (1991), 49--136.; M. J. Radzikowski, Micro-local approach to the Hadamard condition in quantum field theory on curved space-time, Commun. Math. Phys. 179 (1996), 529--553.; L. Ronge, Formulas for Hadamard coefficients in terms of Green's operators, arXiv:2604.25763 (2026)., Def./Prop. 2.9, 2.10; Sec. 2.1; A. G. M. Lewis, Hadamard renormalization of a 2-dimensional Dirac field, Phys. Rev. D 101 (2020), 125019; arXiv:1910.05663., Eqs. (14), (26), (52)",
+  "hash": "3d0e08e653f0",
+  "number": 48
+ },
+ {
+  "id": "c:synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+  "type": "fact",
+  "claim": "synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@1",
+  "title": "Imported: the heat-kernel (Seeley-DeWitt) coefficients of a Laplace-type operator, whose field-strength part on a flat background is $\\tfrac{1}{12}\\Omega_{\\mu\\nu}\\Omega^{\\mu\\nu} + \\tfrac12E^{2}$ ($a_{2}$ in DeWitt's numbering, $a_{4}$ in Vassilevich's), and the background-field gauge with Faddeev-Popov ghosts and the one-loop determinant weights (Abbott 1981)",
+  "text": "How strongly the forces of nature act changes with the energy at which they are probed, and the rate of change at the first quantum level can be read from a standard expansion that describes how heat would spread on the space of field configurations. Combined with a standard way of fixing the redundancy of force fields that keeps their symmetry visible, the expansion gives each kind of particle's contribution to the running. These are textbook results that the series takes as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "D. V. Vassilevich, Heat kernel expansion: user's manual, Phys. Rep. 388 (2003), 279--360, arXiv:hep-th/0306138.; B. S. DeWitt, Dynamical Theory of Groups and Fields, Gordon and Breach (1965).; L. F. Abbott, The background field method beyond one loop, Nucl. Phys. B 185 (1981), 189--203.",
+  "hash": "43285efc2097",
+  "number": 49
+ },
+ {
+  "id": "c:synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem",
+  "type": "fact",
+  "claim": "synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@1",
+  "title": "Imported: Kuckert's spin-statistics theorem from modular P$_{1}$CT symmetry (if the modular conjugation of a wedge algebra acts on the local algebras as the wedge's reflection, then, with covariance under the covering group, the spectrum condition and compact internal symmetries, the rotation by $2\\pi$ is the Bose-Fermi operator), and Borchers' theorem on half-sided translations ($\\Delta^{it}U(s)\\Delta^{-it} = U(e^{-2\\pi t}s)$, $JU(s)J = U(-s)$)",
+  "text": "Why particles of half-integer spin obey the exclusion rule can be proved in several ways. Kuckert showed that it follows from a symmetry property of the vacuum: the mathematical reflection that the vacuum defines for each wedge-shaped region of spacetime must act on what can be measured as the ordinary mirror reflection of that wedge. Borchers's theorem, a tool of the same theory, says how this reflection and its companion flow treat a shift along a light ray that carries the region into itself. The series uses both when asking which assumption would carry its spin and statistics results beyond approximations.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130., Sec. 2, Assumptions I (covariance under the universal covering of the restricted Poincare group, spectrum condition), II (modular P1CT symmetry), III (compact internal symmetries); Sec. 3, Corollary 3.2, Lemma 3.3 and the remark after it, Theorem 3.4, Corollary 3.5; H.-J. Borchers, The CPT-theorem in two-dimensional theories of local observables, Commun. Math. Phys. 143 (1992), 315--332.; S. J. Summers, Tomita-Takesaki modular theory, in Encyclopedia of Mathematical Physics, Elsevier, 2006; arXiv:math-ph/0511034., Theorem 5.1 (half-sided modular inclusions; the relations of Borchers' theorem); S. Doplicher and J. E. Roberts, Why there is a field algebra with a compact gauge group describing the superselection structure in particle physics, Commun. Math. Phys. 131 (1990), 51--107., Theorem 5.4 (twisted duality), as cited by Kuckert",
+  "hash": "8df04f6e5a30",
+  "number": 50
+ },
+ {
+  "id": "c:synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient",
+  "type": "fact",
+  "claim": "synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1",
+  "title": "Imported: the reduction formula of Lehmann, Symanzik and Zimmermann (1955), S-matrix elements as residues at the one-particle poles of the time-ordered functions with one normalisation factor per leg; Ward's identity (1950), the vertex at zero momentum transfer equal to minus the momentum derivative of the self-energy, so that $Z_{1} = Z_{2}$ in electrodynamics; and the order-$e^{4}$ charge renormalisation of electrodynamics (Jost and Luttinger 1950), the second coefficient of the beta function",
+  "text": "Three classic results of the quantum theory of light and electrons: the rule that turns the theory's correlation functions into probabilities for particles to scatter; Ward's identity, which guarantees that the electron's charge is corrected only through the light field and never separately through the electron; and the second-order calculation of how the strength of the electric force grows with energy. The series takes these from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "H. Lehmann, K. Symanzik and W. Zimmermann, Zur Formulierung quantisierter Feldtheorien, Nuovo Cimento 1 (1955), no. 1, 205--225.; J. C. Ward, An identity in quantum electrodynamics, Phys. Rev. 78 (1950), no. 2, 182.; R. Jost and J. M. Luttinger, Vacuumpolarisation und e^4-Ladungsrenormalisation fuer Elektronen, Helv. Phys. Acta 23 (1950), 201--214.; M. Steinhauser, Results and techniques of multi-loop calculations, Phys. Rept. 364 (2002), 247--357; arXiv:hep-ph/0201075., eq. (2.33), the two-loop photon renormalisation constant Z3 of the massless vacuum polarisation",
+  "hash": "6352c4157269",
+  "number": 51
+ },
+ {
+  "id": "c:synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+  "type": "fact",
+  "claim": "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1",
+  "title": "Imported: the one-loop machinery of covariant perturbation theory: Feynman parametrisation, the Wick-rotated integrals of $(\\ell^{2} - \\Delta)^{-n}$ with symmetric integration, Pauli-Villars regulator fields of either sign of weight (Pauli and Villars 1949), the covariant photon propagator with gauge-parameter independence of on-shell amplitudes, and on-shell external states",
+  "text": "To compute the first quantum corrections in a theory such as electrodynamics, physicists use a standard toolkit: a trick for combining denominators, a rotation of the time direction into an imaginary one that turns the integrals into ordinary ones, and a way of taming their infinities with heavy auxiliary particles, some of which count negatively. These tools are textbook material; the series takes them as given.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "W. Pauli and F. Villars, On the invariant regularization in relativistic quantum theory, Rev. Mod. Phys. 21 (1949), 434--444.; M. E. Peskin and D. V. Schroeder, An Introduction to Quantum Field Theory, Addison-Wesley (1995), chapters 6 and 7.; S. Weinzierl, Introduction to Feynman integrals, arXiv:1005.1855, equations (50) and (61).",
+  "hash": "705107cab044",
+  "number": 52
+ },
+ {
+  "id": "c:synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity",
+  "type": "fact",
+  "claim": "synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity@1",
+  "title": "Imported: no continuous gauge-fixing condition exists for a non-abelian gauge field on the three- or four-sphere (Singer 1978); a lattice BRST gauge fixing of a compact gauge group gives a vanishing partition function and expectation values 0/0, the Gribov copies cancelling in pairs with the signs of the Faddeev-Popov determinant (Neuberger 1987); and with Higgs fields of fixed length in the fundamental representation the Higgs and confinement regions of a lattice gauge theory are analytically connected (Fradkin and Shenker 1979)",
+  "text": "Describing the force fields of particle physics involves a redundancy, and the usual ways of removing it work only for weak fields. Singer proved that no smooth way of removing it works everywhere; Neuberger showed that the standard bookkeeping, done on a lattice of spacetime points, gives zero divided by zero; and Fradkin and Shenker showed that a force field with a Higgs field of the simplest kind has no sharp boundary between a regime where its charges are confined and one where its particles are massive. The series takes these results from the literature.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "I. M. Singer, Some remarks on the Gribov ambiguity, Commun. Math. Phys. 60 (1978), no. 1, 7--12.; G. Esposito, D. N. Pelliccia and F. Zaccaria, Gribov problem for gauge theories: a pedagogical introduction, arXiv:hep-th/0404240., the paragraph citing Singer: for SU(N) on S^3 or S^4 no gauge-fixing condition compatible with the asymptotic conditions exists; no global cross-section of the Yang-Mills bundle; H. Neuberger, Nonperturbative BRS invariance and the Gribov problem, Phys. Lett. B 183 (1987), 337--340.; A. C. Kalloniatis, L. von Smekal and A. G. Williams, Curci-Ferrari mass and the Neuberger problem, arXiv:hep-lat/0501016., introduction: the lattice BRST partition function and the integrals of BRST-invariant observables are topological invariants, the Euler character of SU(n), which vanishes, so expectation values are 0/0; E. Fradkin and S. H. Shenker, Phase diagrams of lattice gauge theories with Higgs fields, Phys. Rev. D 19 (1979), 3682--3697.",
+  "hash": "e28f107d0dea",
+  "number": 53
+ },
+ {
+  "id": "c:synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement",
+  "type": "fact",
+  "claim": "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement@1",
+  "title": "Imported: Wilson's lattice gauge theory (1974) with $\\beta = 2N/g^{2}$, $4/g^{2}$ for $SU(2)$, needing no gauge fixing; reflection positivity and the strong-coupling area law (Osterwalder and Seiler 1978); Elitzur's theorem (1975); and the deconfined phase of four-dimensional compact $U(1)$ at weak coupling (Guth 1980; Fr\\\"ohlich and Spencer 1982)",
+  "text": "Putting the forces of nature on a grid of points in space and time, as Wilson did in 1974, avoids the redundancy problems of their usual description and makes it possible to prove things about them. On such a grid, if the coupling is strong, a pair of test charges is held together with a force that does not weaken with distance. This is proved rigorously, but it holds for electromagnetism on a grid too, which is known to stop confining at weak coupling, so it is not by itself evidence that the real strong force confines.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "K. G. Wilson, Confinement of quarks, Phys. Rev. D 10 (1974), 2445--2459.; K. Osterwalder and E. Seiler, Gauge field theories on the lattice, Ann. Phys. 110 (1978), 440.; S. Elitzur, Impossibility of spontaneously breaking local symmetries, Phys. Rev. D 12 (1975), 3978--3982.; A. H. Guth, Existence proof of a nonconfining phase in four-dimensional U(1) lattice gauge theory, Phys. Rev. D 21 (1980), 2291.; J. Froehlich and T. Spencer, Massless phases and symmetry restoration in abelian gauge theories and spin systems, Commun. Math. Phys. 83 (1982), 411--454.; A. Denbleyker, D. Du, Y. Liu, Y. Meurice and A. Velytsky, Series expansions of the density of states in SU(2) lattice gauge theory, arXiv:0807.0185, equation (2) and the definition after it.",
+  "hash": "9b703b41a250",
+  "number": 54
+ },
+ {
+  "id": "c:synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+  "type": "fact",
+  "claim": "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3",
+  "title": "Quantised as an elementary field with $i = I_{4}$, the rung field is linear on all eight real components of the complexified rung summand, and on that summand (on values, not on spacetime points) the hypercharge rotation is the rung boost at $I_{4}$-imaginary rapidity; besides the stored neutral mode and charged pair it carries a neutral normal pair, the directions that change $Q$, of mass squared $2W' + 4N(k_{10} \\pm r)$, and the null-lift constraint is the limit $k_{10} \\to \\infty$; under the Gildener-Weinberg formula and decoupling the normal pair enters the scalon sum (the standard two-doublet sum rule), so the charged pair lies below $456$ GeV (below $383$ GeV when the normal pair is the heavier), the normal pair below $542$ GeV, and $h \\to \\gamma\\gamma$ below $0.900$ of the Standard Model rate for every charged mass between $m_{h}/2$ and $456$ GeV",
+  "text": "To treat the series' Higgs candidate, the rung field, as a quantum field one has to say what its quantum values are. The series' own imaginary unit, the spacetime volume element, works for it, and with that unit the hypercharge symmetry turns out to be the series' frame boost taken at imaginary speed. A quantum field of the ordinary, well-behaved kind cannot be confined to the curved surface on which the rung field was defined; it has to range over all its directions, and two extra neutral particles appear, the directions off the surface. If the weak scale arises from quantum corrections alone, as an earlier result explored, these two particles must be counted: the charged scalar that result predicted near 450 GeV is then lighter, the new neutral pair lies below about 540 GeV, and the predicted shortfall in the Higgs boson's decays to two photons, about ten per cent, remains for every allowed charged mass. (Since 2 November 2026 that quantum-corrections route is recorded as ruled out under the series' reading of how the Higgs field couples to quarks: the measured two-photon rate lies well above the predicted shortfall, the new neutral pair would make bottom mesons turn into their antiparticles far faster than is observed, and the forces among these particles would grow too strong within a few TeV. The working alternative has the second set of particles at a few TeV.)",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, version 3",
+  "hash": "47bfd270d560",
+  "number": 55
+ },
+ {
+  "id": "c:synthesis.modular-period-on-values-is-the-dual-plane-turn",
+  "type": "fact",
+  "claim": "synthesis.modular-period-on-values-is-the-dual-plane-turn@2",
+  "title": "With the field theory's unit $I_{4}$, the boost rotor of a wedge plane $B$ continued to imaginary rapidity is, on every value in the even subalgebra, the real rotor of the dual plane $I_{4}B$, so one modular period $2\\pi$ acts on a spin-$s$ value as $(-1)^{2s}$ and half a period as the turn by $\\pi$ of the dual plane; the KMS condition at period $2\\pi$ holds for a CAR mode and a CCR mode alike, so (R$_{\\mathrm{loc}}$) and the KMS period do not fix statistics; under modular covariance of the wedge algebras, which is not a premise of the store, an imported theorem gives the spin-statistics connection, with the $(-1)^{2s}$ coming from representation theory and the dual-plane form only re-expressing it",
+  "text": "In this framework the imaginary unit of quantum theory is the four-dimensional volume element of spacetime. With that choice, letting a boost run for an imaginary amount, as one does to describe thermal states, turns into an ordinary rotation of the plane at right angles to the boost, as far as the values of fields are concerned. One full thermal period is then a full turn, which flips the sign of a fermion and leaves a boson unchanged.\n\nThe thermal condition alone does not care whether a particle is a fermion or a boson. What links spin to statistics is the stronger assumption that the vacuum's thermal flow in every wedge is the geometric boost, acting on the fields' values; a known theorem then gives the usual link. So the link could be traded for that assumption, but the framework's present assumptions do not supply it; for free fields a separate argument from locality does.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.modular-period-on-values-is-the-dual-plane-turn, version 2",
+  "hash": "3175a08be242",
+  "number": 56
+ },
+ {
+  "id": "c:synthesis.positive-structure-is-twistor-form-at-imaginary-time",
+  "type": "fact",
+  "claim": "synthesis.positive-structure-is-twistor-form-at-imaginary-time@3",
+  "title": "The positive Hermitian structure is the twistor form polarised at the imaginary unit time point; the positive structures compatible with the twistor form are the points of the forward tube, and only positive structures carry states",
+  "text": "The framework had two candidate ways of measuring the size of quantum states at a point of spacetime: one that treats all directions alike but cannot give every state a positive size, and one that always gives positive sizes but picks out a direction of time and a unit of length. This result shows they are the same thing seen from two places. The positive one is the symmetric one viewed from a particular point of complexified spacetime, one unit along imaginary time, and every positive version of it comes from such a point. Since a quantum state needs positive sizes, a state has to choose such a point; the question of which measure the state uses becomes the question of which point it is viewed from.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.positive-structure-is-twistor-form-at-imaginary-time, version 3",
+  "hash": "984a09251c45",
+  "number": 57
+ },
+ {
+  "id": "c:synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+  "type": "fact",
+  "claim": "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@2",
+  "title": "A nonzero BRST charge that is self-adjoint, as the Kugo-Ojima physical-state condition requires, cannot exist on the positive forms of the tower and the palatial polynomials; with the standard Gupta-Bleuler (Krein) form, the Minkowski metric of the polarisations, and a tower pair as ghosts the charge at a null momentum is nilpotent and self-adjoint, its ghost-number-zero cohomology (computed up to three quanta) is positive with one-particle space the stored photon modes $\\{f : kf = 0\\}$, and for the derived gauge algebra the standard constraint charge with ghosts on twelve tower pairs squares to zero exactly when its cubic ghost term is kept",
+  "text": "Quantising force fields like the gluons in a way that respects relativity needs a way of removing their unphysical parts. The standard way introduces fictitious particles (ghosts) and an accounting operator that, in its usual form, only works if some states are allowed negative norm. The series' quantum spaces all have positive norms, and a short argument shows that this usual form of the accounting cannot exist on them. The standard remedy, an indefinite measure built from the spacetime metric of the force field's polarisations, works with ghosts taken from the tower's fermion modes: for a single light-like momentum the surviving states are the two transverse polarisations, the same states the series already uses for the photon, and for the series' gauge group the ghosts' accounting closes exactly. The indefinite measure is a premise for the series, not something it derives, and the series' covariant treatment of force fields holds under it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts, version 2",
+  "hash": "cb57d8690b1b",
+  "number": 58
+ },
+ {
+  "id": "c:synthesis.weak-factor-rotor-lattice-strong-coupling-area-law",
+  "type": "fact",
+  "claim": "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law@2",
+  "title": "In Wilson's lattice form, which needs no gauge fixing for any compact group, the weak factor of the derived gauge algebra has rotor links, its Haar gluing rule is $\\int\\langle XU\\rangle_0\\langle\\widetilde{U}Y\\rangle_0\\,dU = \\tfrac14\\langle XY\\rangle_0$, and every rectangular Wilson loop has leading strong-coupling coefficient $(\\beta/4)^{A}$, the same area law as compact $U(1)$ with $(\\beta/2)^{A}$",
+  "text": "The weak force's symmetry, which the series derives, can be put on a spacetime lattice in the form introduced by Wilson, with each link carrying a rotation of the spacetime algebra. As in Wilson's construction for any such symmetry, this quantises the field directly, with no need to fix a gauge. When the coupling is strong, at leading order of the strong-coupling expansion the energy of a pair of test charges grows with their separation, the signature of confinement. The same happens for the electromagnetic symmetry on the lattice, so this alone does not show that the weak or strong force confines in the real, continuum world; that question needs the behaviour of the coupling at short distances.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim synthesis.weak-factor-rotor-lattice-strong-coupling-area-law, version 2",
+  "hash": "f71c629a8cba",
+  "number": 59
+ },
+ {
+  "id": "c:tower.commuting-copies",
+  "type": "fact",
+  "claim": "tower.commuting-copies@5",
+  "title": "Commuting copies",
+  "text": "Adding hyperbolic planes to a Clifford algebra creates nothing essentially new. The enlarged algebra splits into two pieces that commute with each other: a slightly twisted copy of the original algebra, and an algebra of ordinary real square matrices. So each floor of the tower is the ground algebra with matrix entries.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim tower.commuting-copies, version 5 (T03 Thm 3.2)",
+  "hash": "a8331c7b7601",
+  "number": 60
+ },
+ {
+  "id": "c:tower.volume-elements-planes",
+  "type": "fact",
+  "claim": "tower.volume-elements-planes@5",
+  "title": "Volume elements of the planes",
+  "text": "Each new plane added to the algebra has its own volume element, the product of its two generators. These elements square to one, flip the sign of their own plane's generators, and commute with everything else, including each other. Multiplying them all together gives a single element with the same behaviour towards all the added planes at once.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Transport Lab claim tower.volume-elements-planes, version 5 (T03 Lem 3.1)",
+  "hash": "5d074df0788b",
+  "number": 61
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "Along the trail the tower's modes are attached to spacetime through the conformal spinor space and quantised with the spacetime volume element as the field's unit, and the field theory built on them reproduces standard electrodynamics through the second correction, a scattering rate and the cancellation of the anomaly, each in a stated scheme. [[t]]\n\nMost of the loop results hold under one adopted premise, the indefinite Krein form for gauge fields, whose one-particle form the algebra restates as the trace form of Clifford conjugation without deriving it. [[c:synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form]]\n\nFour matters remain open. [[t]]\n\nRenormalisation in a regulator-free scheme stops at the vacuum polarisation: that Ward-preserving extensions exist for the other one-loop kernels is imported, not proved. [[c:synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants]] The second-order result still uses dimensional regularisation, a borrowed method. [[c:synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient]]\n\nThe interacting gauge fields are not yet built: quartet positivity holds for free fields, and the interacting case rests on Kugo and Ojima's hypotheses. [[c:synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta]] Confinement of pure colour, the mass-gap question, is not addressed. [[c:synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law]]\n\nSpin-statistics for interacting fields beyond perturbation theory waits on a modular action that the store does not supply. [[c:synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics]]",
+  "hash": "38a17f43c439"
+ }
+]

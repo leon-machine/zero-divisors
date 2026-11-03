@@ -1,0 +1,29 @@
+functions:
+  check_every_point_is_null:
+    kind: sampled
+    clauses:
+    - 'clause 1 "Q(X(x)) = 0 identically: every point of spacetime is a non-invertible element of the algebra"'
+    omits: seven sample points, three speeds c, four alternative slot coefficients; the dimensional-homogeneity remark about the third constant is only reflected in the c scaling
+  check_points_are_lines_of_vacua:
+    kind: sampled
+    clauses:
+    - clause 2 "c(X(x))^2 = 0, kernel of dimension four on the module and exactly two on CS"
+    - '"every conformal spinor on L_x is the Fock vacuum of its own three-pair system ... X(x) in W_u"'
+    - '"null-separated exactly when their incidence lines share a vacuum"'
+    omits: seven sample points and 21 pairs; the Klein quadric identification and the remark that it is not the pure-spinor variety P^3 are not tested
+  check_car_over_a_chosen_vacuum:
+    kind: sampled
+    clauses:
+    - clause 3 "excitations over a chosen vacuum obeying the CAR"
+    omits: two sample points and one vacuum each; that the vacuum choice is an extra datum (a null direction) and that GR is the dynamics of the vacua are readings
+untouched_premises:
+  std-algebra.inverse-of-vector: "standard algebra cited in the proof; the check computes the statement directly"
+  one-relation.imported-witts-extension-theorem: literature restatement, not called by any finite core
+  sheaf.localised-transport: clause 4 is a reading of the sheaf paper's localisation theorem, with no finite content
+  sheaf.one-sided-completion: clause 4 reading, no finite content
+  sheaf.one-sided-completion-singularity: clause 4 reading, no finite content
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: clauses 1 to 3 have finite checks at sample points and the docstring says clause 4 has no finite content

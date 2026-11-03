@@ -1,0 +1,18 @@
+functions:
+  check_bit_iff_tower_dimension_zero_mod_four:
+    kind: sampled
+    clauses: ["the choice between W and W' is a bit if and only if n = 0 mod 4", "the bit is the chirality of the pure spinor"]
+    omits: "Fock model computed for m = 1..4 (n = 0, 2, 4, 6); n = 8 and 10 enter only through the parity arithmetic (n + 2)/2 mod 2; general n and the discreteness of the invariant for the connected spin group rest on the cited chirality premise"
+  check_odd_ambient_no_bit:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "ambient dimensions 3, 5, 7 only (m = 1, 2, 3); the parity fact that odd residues are odd-dimensional is checked for p, q < 12"
+  check_even_residues_at_p3_and_other_windows:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "the P3 representatives are recomputed from the dimension-four rule over all signatures of dimension four, not taken from the premise"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the iff is verified for towers of dimension 0 to 6 and the odd case for three ambients; the statement is general in n"

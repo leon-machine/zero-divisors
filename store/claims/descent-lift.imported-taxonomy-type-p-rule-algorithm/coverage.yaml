@@ -1,0 +1,31 @@
+functions:
+  check_zero_divisors_annihilated_by_idempotents:
+    kind: sampled
+    clauses: ["every zero divisor is annihilated on each side by a nontrivial idempotent", "the idempotent is non-central in a simple algebra"]
+    omits: "five sample zero divisors in Cl(1,3), Cl(2,0), Cl(0,3), Cl(1,2), Cl(1,1) plus one invertible control; the statement is for every zero divisor of every nondegenerate real Clifford algebra"
+  check_type_n_hyperbolic_idempotent:
+    kind: sampled
+    clauses: ["type N when the annihilating idempotent is wv for a hyperbolic pair (v, w), vw + wv = 1"]
+    omits: "only the 'if' direction at four signatures (1,3), (2,2), (1,1), (3,1) plus the absence of null vectors in Cl(2,0) on a 9-point grid; 'exactly when' (the converse) is not tested"
+  check_step_two_diagnosis:
+    kind: sampled
+    clauses: ["Step 2 diagnoses by three tests in order: null vector N, central idempotent C, otherwise P", "nilpotence alone does not diagnose N"]
+    omits: "seven sample elements; the diagnose() function encodes the rule being tested, so it confirms the sample classifications and the Cl(2,0) caution, not the rule's completeness"
+  check_step_three_rules:
+    kind: sampled
+    clauses: ["one generator for type C (either sign)", "nothing for type P, the identity repairing an idempotent", "a general type-P element has von Neumann pseudo-inverses"]
+    omits: "Step 3 for type N (adjoining a hyperbolic plane) is not tested; type C only for Cl(0,3), pseudo-inverse space dimensions only for the five sample zero divisors; the identity-repairs-idempotent check is one sample idempotent in Cl(2,0)"
+  check_self_adjoint_idempotent_needs_definite_form:
+    kind: sampled
+    clauses: ["among idempotents with a given image the self-adjoint one is canonical exactly where a definite form is available"]
+    omits: "three algebras (Cl(2,0) definite: unique; Cl(1,1) and Cl(1,3) null ideal: none for the reversion; two auxiliary positive involutions in Cl(1,3) give different projectors); 'exactly where' over all signatures is not enumerated"
+  check_one_one_ascent:
+    kind: sampled
+    clauses: ["ladder pair f, f* and occupation projectors form a system of matrix units", "the adjoined pair is null", "reflection in an adjoined direction is an automorphism of the ascent"]
+    omits: "only the ascent Cl(1,3) -> Cl(2,4); the statement is for the (1,1) ascent of any nondegenerate algebra"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring says 'exact sample points' and the asserts are samples; nothing claims more than the sampled signatures. The type-N repair in Step 3 has no check."

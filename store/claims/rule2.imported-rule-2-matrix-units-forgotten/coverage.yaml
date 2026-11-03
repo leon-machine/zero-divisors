@@ -1,0 +1,34 @@
+functions:
+  check_matrix_units_simplicity_and_ad_nu:
+    kind: sampled
+    clauses:
+    - '"E_11 = eps_+, E_22 = eps_-, E_12 = eps_+ nu, E_21 = gamma eps_- nu form a full 2 x 2 system of matrix units in B_gamma"'
+    - '"conjugation by nu restricts on A to the grade involution"'
+    - '"the images of eps_+- are a conjugate pair of non-central idempotents exchanged by Ad_nu"'
+    - '"B_gamma is simple"'
+    omits: the ten signatures with p - q = 1 mod 4 and n <= 7, both signs of gamma; simplicity is read from centre R (central blades) with semisimplicity taken from the premise
+  check_corner_map_isomorphism:
+    kind: sampled
+    clauses:
+    - '"the map a -> eps_+ a is an isomorphism Cl^0(p,q) -> eps_+ A"'
+    omits: the six signatures with n <= 5 and gamma = +1; multiplicativity on all pairs of even blades, dimension 2^(n-1) on both sides
+  check_ascents_isomorphic_not_isometric:
+    kind: sampled
+    clauses:
+    - '"the two ascents are isomorphic as algebras though non-isometric as quadratic data"'
+    omits: ten signatures; nu_+ -> omega nu_- is shown to satisfy the relations of Cl(p+1,q) in Cl(p,q+1) and the signatures differ, but bijectivity of the resulting map is not computed here
+  check_null_generator_never_fuses:
+    kind: sampled
+    clauses:
+    - '"the null generator never fuses"'
+    omits: the six signatures with n <= 5; J = A nu a square-zero two-sided ideal with quotient of dimension 2^n, and the blades of zero square are exactly those containing nu
+  check_fusion_fires_at_most_once:
+    kind: sampled
+    clauses:
+    - '"One nondegenerate generator is minimal ... and fusion fires at most once in any transport history"'
+    omits: exhaustive over histories of length at most 4 from the 15 signatures with n <= 4, which does not cover arbitrary histories; minimality of one generator is the imported theorem and only the non-simplicity of A is computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the matrix units, corner map, ascent relations and ideal J are exact computations at sample signatures; the history result is exhaustive only to length 4

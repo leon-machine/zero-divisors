@@ -1,0 +1,21 @@
+functions:
+  check_residue_constant_along_ascents:
+    kind: sampled
+    clauses: ["the residue r = p - q mod 8 is constant along each tower of (1,1) ascents"]
+    omits: "all (p,q) with p + q <= 6 and k = 1, 2, 3 null pairs only (84 cases)"
+  check_representatives_under_p3:
+    kind: complete
+    clauses: ["the P3 representatives at every residue", "r = 0 and r = 4 are sterile"]
+    omits: "the P3 rule is encoded in the checker as its reading of the premise; exhaustive over all signatures with p + q <= 10"
+  check_odd_residues_carry_no_bit:
+    kind: sampled
+    clauses: ["the odd residues carry no orientation bit"]
+    omits: "odd residues have odd dimension for p + q <= 10 and the volume element is central in the twenty odd-dimensional signatures with n <= 7; the bit existing exactly at dimension 0 mod 4 is the flag-bit theorem, taken as the definition used; 'and therefore no asymmetry' is not computed"
+untouched_premises:
+  dark-matter.superselected-hence-dark-exactly-stable: "exact superselection is not computable here (the docstring says so)"
+  dark-matter.type-residue-what-each-tower-can: "cited as a source for the towers' types; the statement's clauses are the residue, the representatives and the orientation bit, none of which uses the types"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable clauses are covered, the first and third on bounded windows of signatures; the interaction-only-through-the-metric sentence has no computable content"

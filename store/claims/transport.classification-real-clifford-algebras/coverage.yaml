@@ -1,0 +1,18 @@
+functions:
+  check_eight_entry_table:
+    kind: sampled
+    clauses:
+    - the eight-entry table in d = p - q mod 8
+    - k determined by dim = 2^n
+    - simple except when d in {1, 5}
+    omits: All 45 signatures with n <= 8; the Wedderburn data come from the primer classifier imported through premise(), not recomputed here, so this tests the table against that classifier
+  check_matrix_sizes_sample:
+    kind: sampled
+    clauses:
+    - k in each case determined by dim = 2^n
+    omits: Twelve hand-tabulated sample signatures compared with the primer classifier output
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The table is tested on all signatures with n <= 8 against the imported primer classifier; no independent recomputation of the classification itself.

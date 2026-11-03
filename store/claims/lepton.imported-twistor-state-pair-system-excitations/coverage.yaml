@@ -1,0 +1,20 @@
+functions:
+  check_fock_module_irreducible_with_two_halves:
+    kind: exact
+    clauses: ["the algebra acts irreducibly on the eight-dimensional Dirac module", "chirality halves CS = even, CS- = odd"]
+    omits: "tests the Clifford algebra Cl(V_C) in the check's own wedge/contraction Fock model (Clifford relations, 64 independent blade products, vectors exchange the halves); identification of Cl(V_C) with the complexified ascended algebra is the premise's"
+  check_each_conformal_spinor_is_a_fock_vacuum:
+    kind: sampled
+    clauses: ["every nonzero twistor u in CS is the Fock vacuum of three fermionic ladder pairs built on its annihilator W_u"]
+    omits: "seven sample spinors u (vacuum, top-even state, generic Gaussian-rational combinations); annihilator dimension 3, totally isotropic, joint kernel the line of u"
+  check_excitations_from_a_dual_complement_span_the_module:
+    kind: sampled
+    clauses: ["for a maximal isotropic complement U' dual to W_u the map Lambda U' -> Sp, xi -> c(xi)u, is a linear isomorphism, even products in CS and odd ones in CS-"]
+    omits: "the statement says any such U'; the check uses one complement per u (the first transversal annihilator of an odd sample spinor) for seven u, plus the control U' = W_u of rank one; the statement's U' dual to W versus a complement of W_u is addressed in the docstring"
+untouched_premises:
+  standard-model.imported-pair-systems-two-chirality-halves: "restates the same content; the docstring says it is not called"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Irreducibility is exact in the Fock model; the vacuum and excitation clauses are tested on seven spinors and one complement each, not for every u and every U'."

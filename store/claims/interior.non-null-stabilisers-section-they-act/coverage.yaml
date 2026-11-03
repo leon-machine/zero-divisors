@@ -1,0 +1,21 @@
+functions:
+  check_stabiliser_is_so_of_the_complement:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "six sample vectors I (four on the ninf + rho n0 axis, two off-axis), three of each sign; dimension 10, equality with the wedges of I-perp, signature of I-perp and nondegenerate trace form are checked, but the isomorphism with so(1,4) or so(2,3) is read from the signature of I-perp, not tested as a Lie algebra isomorphism"
+  check_section_is_the_pseudosphere_with_transitive_isometries:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "sample I and four sample points X each; checks Y = X - I/Q(I) lies in I-perp with Q(Y) = -1/Q(I), Lorentzian tangent space (1,3), transitivity (rank 4) and isotropy dimension 6; constant curvature, completeness and the isometry-group statement are not computed (the docstring says completeness is not computed)"
+  check_polar_infinity_spacelike_or_timelike:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "five (I, X) pairs only; checks the signature of X-perp in I-perp ((0,3) plus null direction or (1,2) plus null direction); that the polar hypersurface meets the quadric in the whole projectivised null cone of I-perp, and the S^3 conformal structure, are not tested"
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Signature and dimension content of (1)-(3) is tested at samples; curvature, completeness and global topology are disclosed as not computed."

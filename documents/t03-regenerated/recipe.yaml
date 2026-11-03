@@ -1,0 +1,50 @@
+doc: t03-regenerated
+title: 'The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second
+  Quantisation (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- obj.tower.tower
+- tower.volume-elements-planes
+- tower.commuting-copies
+- tower.matrix-amplification-structural-properties
+- tower.morita-equivalence-algebra-amplification
+- tower.rigidity-clock-frozen
+- tower.ladder-pairs-satisfy-car-vectors
+- tower.fock-module-one-qubit-per-rung
+- tower.witt-index-quantum-capacity
+- tower.grade-twist-when-it-inner
+- tower.compatibility-connecting-maps-transported
+- tower.algebraic-limit-even-charge
+- tower.structure-tower-c-norms
+- tower.glimms-classification-car-uniqueness
+- tower.car-limit-even-charge
+- q.tower.odd-charge
+- tower.wall-package
+- tower.answers-iteration-question
+show: spine-only
+paper: T03
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T03_tower_car.tex
+  note: Recreate T03 from the store
+cite:
+- transport.rule-1-morita-trivial
+- transport.existence-classification-type-c
+prose: paper
+msc: Primary 15A66, 46L05; Secondary 46L60, 81R10, 15A63.
+keywords: Clifford algebra; Witt completion; matrix amplification; mod-8 periodicity;
+  CAR algebra; UHF algebra; second quantisation; Fock space.

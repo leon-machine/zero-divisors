@@ -1,0 +1,31 @@
+functions:
+  check_mass_bracket_slot_factor:
+    kind: exact
+    clauses:
+    - The slot factor of the mass bracket transforms as (1,1)_1
+    - under (S) the state at (2,0) is that same one-dimensional representation Lambda^2 C^2
+    omits: the slot factor is entered as Lambda^2 C^2 (its character is written directly), not extracted from the mass bracket
+  check_hypercharge_unique_and_family:
+    kind: partial
+    clauses:
+    - the hypercharge assignment satisfying the anomaly conditions is unique
+    - with a fourth singlet of free hypercharge a one-parameter family Y + t(B - L) appears
+    omits: uniqueness is for Y_Q = 1/6 fixed and up to the Y_u/Y_d swap; the family is shown anomaly-free (cubic in t vanishing at five values) but not shown to be the whole solution set
+  check_weak_angle_and_desert:
+    kind: exact
+    clauses:
+    - sin^2 theta_W = 3/8 over the derived generation (9/26 over the quark doublet and the singlets alone)
+    - the one-loop run with the measured couplings and the observed spectrum does not meet
+    omits: the GUT normalisation factor 3/5 is hard-coded rather than taken from the 3/8; the beta coefficients and couplings are inputs; "must change through partner-like content or an intermediate symmetry" is interpretive
+  check_abelian_generators_twisted_and_untwisted:
+    kind: partial
+    clauses:
+    - 'untwisted: every abelian generator except hypercharge fails three of the four anomaly conditions'
+    - twisted by det^-1/2 every abelian generator is anomaly-free
+    - the thirteenth generator is the U(1)_X of Spin(10), broken by the Majorana term of nu^c
+    omits: the Pati-Salam breaking and the determinant-one gauge group below the intermediate scale are not tested here (deferred to standard-model.majorana-element); X in so(10) is shown on one mode and summed by linearity
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Numerical and polynomial claims are exact; the gauge-group-below-the-scale clause and the physical readings are not tested.

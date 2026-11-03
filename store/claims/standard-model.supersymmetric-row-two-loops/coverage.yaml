@@ -1,0 +1,26 @@
+functions:
+  check_two_loop_matrices_from_the_formulas:
+    kind: exact
+    clauses: ["by the coefficients of the imported two-loop Fact"]
+    omits: "Rebuilds the SM and supersymmetric matrices from component listings and compares with the quoted ones; not a clause of the numerical statement itself."
+  check_integrator_against_exact_one_loop:
+    kind: sampled
+    clauses: ["whole (control: the integrator reproduces the exact one-loop threshold)"]
+    omits: "A control for the method, not a clause of the statement; one input set, with the one-loop threshold (62.1 GeV) matched to 10^-5 in t."
+  check_central_meeting_point:
+    kind: partial
+    clauses: ["the three couplings meet at M_I = 2.3 TeV, M_U = 1.1e16 GeV, alpha_U^-1 = 25.7"]
+    omits: "Fixed-step RK4 in exact fixed-point arithmetic: the meeting is located by a sign change between bracketing t_I values, but the integration truncation error (about 1e-9, measured when the check was written) is not bounded in the code, so 'meet exactly' is a numerical bracket and not a proof."
+  check_alpha_s_range:
+    kind: partial
+    clauses: ["M_I moves between 1.7 and 3.0 TeV across alpha_s = 0.1180 +- 0.0009"]
+    omits: "Same numerical-integration caveat; the two endpoint values of alpha_s only."
+  check_threshold_shifts:
+    kind: partial
+    clauses: ["M_I shifts by 0.3 TeV (top Yukawa off), 0.06 TeV (y_t = 0.99), 0.15 TeV (sin beta = 0.9), 0.27 TeV (sin^2 theta_W + 0.0001)", "the row is admissible at two loops with its threshold in the low TeV range"]
+    omits: "Same numerical-integration caveat; shifts are differences of two bracketed values rounded to one or two figures."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each quoted figure is reproduced by the check at the stated rounding; the RK4 integration is numerical (not enclosed), which the docstring states."

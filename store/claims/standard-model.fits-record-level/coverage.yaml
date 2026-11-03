@@ -1,0 +1,18 @@
+functions:
+  check_charged_fermion_masses:
+    kind: exact
+    clauses:
+    - '"the nine charged-fermion masses reproduced in every row"'
+    omits: Tolerances are the legacy 1% (up, charged lepton) and 2% (down), not stated in the statement; |V_us|, |V_cb|, |V_ub|, the CKM phase and the three lepton mixing angles are not tested
+  check_neutrino_masses_and_dirac_entries:
+    kind: exact
+    clauses:
+    - '"m_3 and m_3/m_2 reproduced"'
+    - table entries "largest |M_nu| entry" and "m_1"
+    - '"m_1 below about 0.1 meV in the first row"'
+    omits: Table digits only (printed to the stated half-units); the tuning measure Delta, the sources of the factor 3 of the second family, the "order 1 eV" seesaw estimate, "nothing cancels" in the first row, and "none is a prediction" are not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The 11 of 18 observables the function lists are verified exactly in rational arithmetic; the docstring states that CKM, lepton angles and Delta are only in the legacy floating-point script.

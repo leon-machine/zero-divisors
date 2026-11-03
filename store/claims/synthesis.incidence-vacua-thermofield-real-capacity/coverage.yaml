@@ -1,0 +1,16 @@
+functions:
+  check_real_states_read_real_capacity:
+    kind: sampled
+    clauses: ["(i)", "(v)"]
+    omits: "on the 8-dimensional module of Cl(2,4) only, for four sample real states (the trace, the vacuum projector of the real null modes a, b, the projector onto ker a, and (1 + e1 e2/3 + ep/2)/8): each is real on all 64 blades, has omega(gh) = 0 and occupation exactly 1/2 on all seven definite-plane modes, and its null space {y : omega(y* y) = 0} is conjugation-closed, totally isotropic and of dimension 0, 2, 1, 0 <= min(2,4); the chiral vacuum |0>_+ has null space of dimension 3 and is not real. Not tested: the bound dim <= min(p,q) for every real state (it is the real-signature bound, not computed), other signatures beyond the integer criterion floor((p+q)/2) <= min(p,q) iff |p - q| <= 1 for p + q <= 6, and (v) for adjoined planes beyond the generator pairs of Cl(2,4)"
+  check_incidence_lines_thermofield:
+    kind: sampled
+    clauses: ["(ii)", "(iii)", "(iv)"]
+    omits: "at eight (t, r) points with pinned exact values: X(x) is null, Omega_x and Psi_x lie in one chirality half and span the kernel of X there (dimension 2), ascent occupations u^2/(1+u^2) and v^2/(1+v^2), N block-diagonal on the line (the segment of occupations), <a> = 0, all 16 blades of e1, e2, e+, e- real, +-i on e3 e4, (a,b) purity 1 on the two vacua and (w1^2+w2^2)/(w1+w2)^2 < 1 on their sum; not tested: the thermofield-double form and partner unitary for Psi, negative beta for |u| > 1, a diagonal Gibbs marginal for every vacuum on the line, 'every value of the segment attained', the beta = 2 pi condition on e^{-pi}, and the origin statement beyond the pinned values"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_real_states_read_real_capacity now computes four real states on Cl(2,4) (reality on all 64 blades, omega(gh) = 0, occupation 1/2, null spaces real totally isotropic of dimension <= 2), the non-real chiral vacuum with null space 3, and the |p - q| <= 1 criterion for p + q <= 6"
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"

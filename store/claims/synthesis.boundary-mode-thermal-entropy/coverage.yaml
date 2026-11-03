@@ -1,0 +1,6 @@
+functions:
+  check_mode_entropy:
+    kind: sampled
+    clauses: ['"two forms of s(x) agree"', '"s'' = -x n(1-n)"', '"s is even"', '"s(2 pi) = 0.01358..."', '"under two per cent of ln 2"']
+    omits: Term-by-term log coefficients, dn/dx and d/dx ln(1+e^{-x}) at five Boltzmann factors r (not symbolic in r); strict monotonicity in |x|, s <= ln 2 with equality only at zero weight and s -> 0 are not asserted (only n = 1/2 at r = 1); the value at x = 2 pi is rigorously bracketed in (0.01357, 0.01359).
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'The two entropy forms, derivative pieces, evenness and the 0.01358 value are computed as the statement says; the monotonicity conclusions follow by hand from the checked derivative.'}

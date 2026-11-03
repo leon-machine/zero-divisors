@@ -1,0 +1,20 @@
+functions:
+  check_star_free_invariant_is_topological:
+    kind: sampled
+    clauses: ["(1) second route"]
+    omits: "checked for two gl(2)-valued polynomial connections (one abelian), not every simple factor; the first route (no invariant eps(I, ., F_i, F_i) since I is an internal singlet) is structural and untested"
+  check_hodge_star_depends_on_conformal_class_only:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "two sample soldering matrices and two scale factors; gravity's action being pre-metric rests on the cited theorem and is not tested here"
+  check_star_degenerates_at_corank_one_wall:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "one diagonal model with a simple pole in one leg at three values of s; tameness in general, and the claim that the topological theta-terms are what crosses, are not tested"
+untouched_premises:
+  dark-energy.frozen-point-makes-stelle-west-vector: "used only for the pre-metric character of gravity's action, whose content is checked in that entity"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the three checks test the computable content of clauses (1)-(3) on samples; the structural first route is untested and said so"

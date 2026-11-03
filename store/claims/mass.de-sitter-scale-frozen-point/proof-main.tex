@@ -1,0 +1,29 @@
+Read in Gauge Theory Gravity: the metric below is the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and the manifold is its invertible region.
+
+\emph{(1) The scale tractor.} By Fact \claimref{mass.imported-thomas-operator} at $w = 1$ with $J = 0$ for the flat scale, the scale tractor of $\sigma$ is $\tfrac14 D\sigma = (\sigma, \nabla\sigma, -\tfrac14\Box\sigma)$. With $\nabla_{a}Q = 2x_{a}$ and $\Box Q = 2\eta^{ab}\eta_{ab} = 8$,
+\[
+\nabla_{a}\sigma = -\tfrac{\Lambda}{6}\,x_{a}, \qquad \Box\sigma = -\tfrac{2\Lambda}{3}, \qquad -\tfrac14\Box\sigma = \tfrac{\Lambda}{6}.
+\]
+\emph{Parallelism}, slot by slot in \eqref{eq:tractorconn} with $P = 0$: the first slot is $\nabla_{a}\sigma - \mu_{a} = 0$ by construction; the second is $\nabla_{a}\mu_{b} + \eta_{ab}\rho = -\tfrac{\Lambda}{6}\eta_{ab} + \tfrac{\Lambda}{6}\eta_{ab} = 0$; the third is $\nabla_{a}\rho = 0$ since $\rho$ is constant. \emph{The norm:}
+\[
+2\sigma\rho + \eta^{ab}\mu_{a}\mu_{b} = 2\Bigl(1 - \frac{\Lambda Q}{12}\Bigr)\frac{\Lambda}{6} + \frac{\Lambda^{2}}{36}Q = \frac{\Lambda}{3}.
+\]
+\emph{Einstein.} The tractor metric and parallelism are scale-independent, so in the scale $\sigma$ itself, where the density is the constant $1$ and the section therefore reads $(1, 0, \rho')$ by Fact \claimref{mass.imported-thomas-operator} (its middle slot is $n\nabla 1 = 0$), with $2\rho' = \Lambda/3$, Fact \claimref{mass.imported-frozen-point-tractor-connection} gives that $g = \sigma^{-2}\eta$ is Einstein with $P_{ab} = \rho' g_{ab}$, that is with cosmological constant $6\rho' = \Lambda$.
+
+\emph{(2) The flat-model dictionary.} In the form used here it is elementary. A section $(\sigma, \mu_{b}, \rho)$ is parallel for \eqref{eq:tractorconn} with $P = 0$ iff the three slot equations $\nabla_{a}\rho = 0$, $\nabla_{a}\mu_{b} = -\eta_{ab}\rho$, $\nabla_{a}\sigma = \mu_{a}$ hold; integrating them in turn,
+\[
+\rho = \text{const}, \qquad \mu_{b} = v_{b} - \rho\, x_{b}, \qquad \sigma = \alpha + \ip{v}{x} - \tfrac12\rho\, Q(x),
+\]
+with $v$ a constant covector and $\alpha$ a constant: a six-parameter family. Since $\ip{X(x)}{\alpha n_{\infty} + \rho n_{0} + v} = \alpha - \tfrac12\rho Q(x) + \ip{v}{x}$ is exactly this $\sigma$-slot, the parallel sections are the constant vectors $V = \alpha n_{\infty} + \rho n_{0} + v$, with scale function $\ip{X(x)}{V}$.
+
+\emph{The scale function of $I_{\Lambda}$.} $\ip{X(x)}{n_{\infty}} = \ip{n_{0}}{n_{\infty}} = 1$ and $\ip{X(x)}{n_{0}} = -\tfrac12 Q\ip{n_{\infty}}{n_{0}} = -\tfrac12 Q$, since $n_{0}, n_{\infty}$ are null and orthogonal to $x$; so
+\[
+\ip{X(x)}{n_{\infty} + \lambda n_{0}} = 1 - \tfrac12\lambda Q(x), \qquad \ip{X(x)}{n_{0} + \lambda n_{\infty}} = \lambda - \tfrac12 Q(x),
+\]
+and the first equals $\sigma$ iff $\lambda = \Lambda/6$.
+
+\emph{Uniqueness.} The scale function $x \mapsto \ip{X(x)}{V}$ determines $V$ because the vectors $X(x)$ span the ambient space: the six values at $x = 0$, at the four coordinate unit vectors $e_{a}$ of $\eta$, and at $x = 2e_{0}$ are independent, since $X(0) = n_{0}$, $X(e_{a}) - X(0) = e_{a} - \tfrac12\eta_{aa}n_{\infty}$, and $X(2e_{0}) - 2X(e_{0}) + X(0) = -n_{\infty}$.
+
+\emph{(3) The norm in the chart.} $\ip{n_{\infty} + \lambda n_{0}}{n_{\infty} + \lambda n_{0}} = 2\lambda\ip{n_{\infty}}{n_{0}} = 2\lambda$, using $\ip{n_{\infty}}{n_{\infty}} = \ip{n_{0}}{n_{0}} = 0$; and by Fact \claimref{mass.imported-flat-model-twistor-chart-infinity} a bivector is simple iff its norm vanishes, so $n_{\infty} + \lambda n_{0}$ is simple iff $\lambda = 0$. The general statement behind (3), that the frozen point (the infinity twistor), read as a bivector, is simple iff $\Lambda = 0$, is \cite[Cor.~4.8]{ButlerT9}; here it is the chart computation.
+
+\emph{Script.} It confirms (1) as rational-function identities in $\Lambda$ at rational points (the second slot of the connection, the only one that is not an identity by construction, and the norm $\Lambda/3$), the scale-function values of (2) at rational points and three values of $\lambda$ together with the spanning of the six listed points by exact rank, and the ambient norm of (3) formed and equal to $2\lambda$ at four values (null, hence simple by Fact \claimref{mass.imported-flat-model-twistor-chart-infinity}, exactly at $\lambda = 0$).

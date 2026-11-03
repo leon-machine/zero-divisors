@@ -1,0 +1,8 @@
+functions:
+  check_product_associative_unital_and_relations:
+    kind: complete
+    clauses:
+    - '"associative with unit ()"'
+    - '"e_i^2 = Q(e_i) and e_i e_j = -e_j e_i"'
+    omits: 'a cross-check of the code: exhaustive on basis triples for n <= 3, one sampled triple per
+      signature for n = 4; the proof covers every n by the move-by-move argument on blade_mul' 

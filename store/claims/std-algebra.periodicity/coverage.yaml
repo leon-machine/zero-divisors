@@ -1,0 +1,22 @@
+functions:
+  check_small_tensor_identities:
+    kind: exact
+    clauses:
+    - '"H (x) H = M_4(R)"'
+    - '"C (x) H = M_2(C)"'
+    - '"C (x) C = C + C"'
+    omits: 'nothing: the three identities are finite rank statements, computed exactly'
+  check_table_invariants:
+    kind: partial
+    clauses:
+    - '"the table"'
+    - '"determined by n and p - q mod 8"'
+    omits: every nondegenerate signature with n <= 8; the check confirms isomorphism invariants (dimension,
+      centre, trace-form signature) that separate the table's entries, not the isomorphisms themselves,
+      which the proof builds
+  check_periodicity_of_the_invariant:
+    kind: partial
+    clauses:
+    - '"Cl(p+1, q+1) = M_2(Cl(p,q))"'
+    - '"Cl(p+8, q) = Cl(p, q+8) = M_16(Cl(p,q))"'
+    omits: the invariant's scaling for n <= 10; isomorphisms are in the proof

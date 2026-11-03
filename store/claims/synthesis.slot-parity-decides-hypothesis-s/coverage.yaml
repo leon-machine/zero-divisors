@@ -1,0 +1,10 @@
+functions:
+  check_slot_parity_decides_s:
+    kind: partial
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "(a)-(d) are universal hypotheses but the check builds four explicit realisations in Cl(6,6) (pi = 0, 1, each with and without the pair-number sign flip), so (i) CAR among slots, (ii) independence of the 32 states and (iii) parity (-1)^(pi j + k) are verified exactly for those realisations only; the commuting-slots obstruction is one explicit pair with one rotation (permanent -7/25 against determinant 1); U(2) covariance is tested on one rational rotation of the slots and the U(3) action on the pair modes and the identification with Lambda(A) x Lambda(B) are not tested; (iv) the component lists, the sums -2/3, 0, 0, 4/9 for Y, the rank-2 kernel (b = 0, g = -a) and the pi = 1 vanishing are exact on the fixed content table; (v) and (vi) are logical consequences and are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact on explicit operator realisations and on the anomaly table; the statement's universal quantification over operators satisfying (a)-(d) is not exhausted by four realisations"

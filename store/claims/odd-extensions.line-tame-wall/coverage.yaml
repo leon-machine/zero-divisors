@@ -1,0 +1,18 @@
+functions:
+  check_gram_and_tameness:
+    kind: sampled
+    clauses: ["(i) Gram diag(1,-1,-1,-1,-Lambda/3) for every Lambda and gauge", "(T1) degenerate only at Lambda = 0", "(T2) radical spanned by I_0", "(T3) dying eigenvalue crosses zero at speed -1/3"]
+    omits: "Seven Lambda values and four constant plus two smooth gauges; the derivative -1/3 is taken of a hand-built rational function -2ab with a = 1 while the difference quotients come from the Gram. The tame structure itself (smooth closed hypersurface, line bundle) is not computed beyond the point Lambda = 0."
+  check_signatures_on_the_two_sides:
+    kind: sampled
+    clauses: ["(ii) signatures (2,3) for Lambda < 0 and (1,4) for Lambda > 0"]
+    omits: "Seven Lambda values and four gauges; the physical reading (anti-de Sitter versus de Sitter wall) is interpretive."
+  check_symmetric_gauge_not_smooth:
+    kind: sampled
+    clauses: ["(iii) the gauge a = b is not smooth at the wall and undefined for Lambda < 0", "(iii) scalar invariants are gauge independent while w_0 = a(0) I_0 depends on the normalisation"]
+    omits: "Non-smoothness is shown by unbounded difference quotients at five Lambda = 6/n^2 on the branch a = +1/n; the other sign branch is not run. Gauge independence of the signature is checked at Lambda = -1 over four gauges."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is verified at rational Lambda and gauge samples; (T1) and the smoothness claims are local computations only."

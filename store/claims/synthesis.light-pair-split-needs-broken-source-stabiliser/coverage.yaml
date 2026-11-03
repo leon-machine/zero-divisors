@@ -1,0 +1,18 @@
+functions:
+  check_covariance:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "four rational family unitaries (two with det = 1, two with det != 1) on two generic finite-support states, exact amplitudes: H(U psi) = N H(psi) N^dagger and U Omega(c)^dagger U^dagger = Omega(N c)^dagger at one complex c; 'for every state' and every U in U(3) are not covered"
+  check_stabiliser_invariant_states_degenerate:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "(iii) is exact on the two named non-Gaussian states: both invariant under two SU(2) elements, with H(0,0) = H(1,1), all off-diagonal entries zero, H(2,2) != H(0,0), repeated eigenvalue (cubic discriminant 0), the first with values 361/145 and 461/29, and a nonzero ordered truncated four-point function; (ii) is tested only on these instances plus one state built from Omega(v)^dagger and V for a complex v, invariant under two non-commuting stabiliser elements whose N-commutant has complex dimension 2; the general Schur-type statement for every state and the polynomial and Hamiltonian-evolution claims are not tested"
+  check_breaking_controls:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "exact discriminants for the stated words at one generic complex c and one isotropic c (sum c_k^2 = 0) and one real c: adding (Omega_1^dagger)^2|0> to the first state splits the pair (discriminant 92252253077913600/14976071831449), the conjugate-vector words split it for the complex and isotropic c and leave it degenerate for real c, and the same words with Omega(c)^dagger twice leave it degenerate; other c are not run; the closing remark on the coherent vector of an antisymmetric pairing is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computed instances named in (iii) and (iv) are reproduced exactly; (i) and (ii) are general claims checked at instances"

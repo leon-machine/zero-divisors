@@ -1,0 +1,16 @@
+functions:
+  check_supplied_generators_commute_with_every_occupation:
+    kind: sampled
+    clauses: ["no generator in the supplied class moves occupation: every one commutes with every N_x", "the supplied class is ultralocal (joint-diagonal)"]
+    omits: "three-point Fock model only; the function-linear maps are the computed kernel for two sample functions (dimension 3, diagonal), 12 generators in all (kernel basis, one combination, 8 parity products)"
+  check_pairing_generators_lie_outside_the_class:
+    kind: sampled
+    clauses: ["pairing generators are C-infinity-linear in coefficients and commute with total parity", "they are not joint-diagonal and do not commute with N_x", "the class does not contain them"]
+    omits: "three-point model, the 3 pairs x < y; 'outside the class' shown by commutation with N_tot of all nine matrix units dGamma(E_ij) versus [N_tot, P_xy] != 0"
+untouched_premises:
+  sheaf.function-linearity-tame-constructions: "hypothesis of the statement ('Assume Fact ...'); the docstring says it is a survey with no finite core"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both halves are tested in a three-point model, which the docstring states; the assumed Fact has no computable content."

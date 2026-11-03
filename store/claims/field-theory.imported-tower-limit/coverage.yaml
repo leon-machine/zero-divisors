@@ -1,0 +1,14 @@
+functions:
+  check_planes_generate_car:
+    kind: sampled
+    clauses: ["\"{v_j, w_k} = delta_jk, v_j^2 = w_j^2 = 0\""]
+    omits: "n = 1, 2, 3 planes over the ground Cl(1,3), not every n"
+  check_rungs_are_full_matrix_algebras:
+    kind: sampled
+    clauses: ["\"the planes generate the CAR\"", "\"the tower's limit is the CAR algebra\""]
+    omits: "rungs n = 1, 2, 3 (4^n independent monomials) and n = 1, 2 for the Fock matrix representation; the unital embedding of rung n in rung n + 1 is asserted for n = 1, 2 (multiplicative on all monomial pairs, unit to unit, monomials stay independent, the new plane anticommutes with the old generators); the C*-completion and uniqueness of the limit are not tested (the docstring admits the latter)"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_rungs_are_full_matrix_algebras now tests the unital embedding of rung n in rung n + 1 (n = 1, 2), as its docstring says."

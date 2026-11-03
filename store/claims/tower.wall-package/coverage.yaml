@@ -1,0 +1,26 @@
+functions:
+  check_completion_nondegenerate_up_to_the_wall:
+    kind: sampled
+    clauses:
+    - the one-sided completion is nondegenerate up to and including the wall
+    - tame corank-one input
+    omits: One explicit collar model (G = diag(tau,-1,-1,-1), mu = nu = 1/2) at a few tau values; the general tame degeneration of ButlerT4 is not reached; the clause "the transported reciprocal divides totally" is not checked
+  check_degeneracy_relocated_to_shadow_wall:
+    kind: sampled
+    clauses:
+    - conservation of degeneracy relocates the degeneration to a shadow wall
+    omits: Same single model; absolute form tested for five couplings c in {-3,-1/2,0,1/4,2} via an affine determinant (two points), not a general degeneration
+  check_iterated_walls_tame_one_plane_each:
+    kind: sampled
+    clauses:
+    - the shadow wall is itself tame
+    - the infinite wall sequence adjoins exactly one hyperbolic plane per wall
+    - each shadow wall radical line is trivial automatically
+    omits: Walls k = 0..3 of the same model only (signature (2+k,4+k) at the k-th wall); the infinite sequence and the compactness hypothesis on Sigma are not tested
+untouched_premises:
+  transport.totality: clause "the transported reciprocal divides totally" is a theorem of T1 about the conformal quadric that the collar model does not reach (stated in the check docstring)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The geometric Fact is checked in a single explicit model for four walls; the total-division clause is declared unchecked.

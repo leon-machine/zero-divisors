@@ -1,0 +1,22 @@
+functions:
+  check_mixings_preserving_momentum_and_helicity_are_unitary:
+    kind: sampled
+    clauses:
+    - The mixings of a system of n conformal spinors preserving momentum and helicity for every configuration are exactly U(n), acting as U (x) 1
+    omits: n = 2, 3; five unitary and three non-unitary sample matrices and three sample configurations; "exactly" rests on the non-unitary samples failing, not on a derivation
+  check_automorphism_algebras_and_cosets:
+    kind: partial
+    clauses:
+    - the automorphism group of C^2 (x) C^3 is (U(2) x U(3))/K = S(U(2) x U(3))
+    - that of C^3 (x) C^3 has Lie algebra su(3) + su(3) + u(1), dimension seventeen
+    omits: Lie algebra dimensions 12 and 17 (and kernel dimension 1) are exact; the su/u decomposition and the claim that every automorphism of the hierarchy has the form A (x) B are not computed; coset statements are tested at sample lambda, A, B
+  check_tensor_ledger_has_no_lepton_doublet:
+    kind: exact
+    clauses:
+    - the tensor ledger Lambda(C^2 (x) C^3) contains no (2,1)
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The ledger statement is exact; the mixing and automorphism clauses are tested at samples and by dimension counts.

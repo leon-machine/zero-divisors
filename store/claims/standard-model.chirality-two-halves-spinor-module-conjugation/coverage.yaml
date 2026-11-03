@@ -1,0 +1,20 @@
+functions:
+  check_halves_inequivalent:
+    kind: exact
+    clauses:
+    - '"the two halves carry (1)_0 + (3bar)_{-2/3} and (3)_{-1/3} + (1)_{-1}, inequivalent"'
+    - '"3 + 3bar becomes 3bar + 3bar under one handedness"'
+    omits: Inequivalence is tested as no common (colour, Y) summand; that the halves are the chirality halves of the ascended Dirac module is not tested
+  check_conjugation_is_duality:
+    kind: sampled
+    clauses:
+    - '"(Lambda^k W)^* = Lambda^(3-k) W (x) (Lambda^3 W)^*, weight +2k"'
+    - '"the two doublets are each other''s duals, opposite parity"'
+    omits: The wedge-duality identity is checked at two rational GL(3) samples and the doublet identity at two GL(2) samples, not symbolically; opposite parity under (S) is only the parity of mode numbers 1 and 4
+untouched_premises:
+  standard-model.imported-cauchy-decomposition-exterior-power: literature restatement; the check verifies the exterior-power duality directly
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Weights and content are computed from the hypercharge generator and match the statement; the duality identity is sampled.

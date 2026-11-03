@@ -1,0 +1,8 @@
+functions:
+  check_involutions_on_products_and_grades:
+    kind: sampled
+    clauses:
+    - '"the grade involution is an automorphism, reversion and Clifford conjugation are anti-automorphisms"'
+    - '"all three are involutions and they commute"'
+    - '"On Cl^k they act by"'
+    omits: one pair of sampled elements per signature with n <= 4, all grades of the first

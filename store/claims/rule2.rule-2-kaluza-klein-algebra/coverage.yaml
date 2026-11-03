@@ -1,0 +1,39 @@
+functions:
+  check_type_c_and_ideals:
+    kind: exact
+    clauses:
+    - (i)
+    omits: ''
+  check_ideals_are_spacetime_algebra_two_dirac_reps:
+    kind: exact
+    clauses:
+    - (ii)
+    omits: the identification Cl(1,3) = Mat_2(H) is shown by a 4-dimensional corner with quaternion units, not by an explicit isomorphism; inequivalence of the two representations is read from omega acting as +1 and -1
+  check_fifth_parity_is_outer:
+    kind: exact
+    clauses:
+    - (iii)
+    omits: ''
+  check_two_repairs_matrix_units_centre_r:
+    kind: exact
+    clauses:
+    - (iv)
+    omits: 'the isomorphisms with Mat_2(Cl^0(1,4)), Mat_2(Cl(1,3)) and Mat_4(H) are not computed as such: matrix units, the corner of dimension 16 and centre R are (the corner is Cl(1,3) by check_ideals_are_spacetime_algebra_two_dirac_reps)'
+  check_parity_becomes_inner_boost_or_rotation:
+    kind: exact
+    clauses:
+    - (v)
+    omits: ''
+  check_cl24_is_rule_one_ascent_of_spacetime:
+    kind: exact
+    clauses:
+    - (vi)
+    omits: that Cl(1,3) is the conformal algebra of Minkowski space whose spinors carry twistor space is the cited Fact, not tested
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.sta-matrix: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: All six functions compute the clauses they name exactly in GA; the only untested content is the cited twistor reading in (vi).

@@ -1,0 +1,8 @@
+functions:
+  check_pauli_reading_and_the_pseudoscalar:
+    kind: exact
+    clauses:
+    - '"Cl(3,0) is isomorphic to M_2(C) by e_k -> sigma_k"'
+    - '"I goes to i 1"'
+    - '"the centre R 1 + R I"'
+    omits: 'nothing: a finite computation'

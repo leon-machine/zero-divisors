@@ -1,0 +1,19 @@
+functions:
+  check_two_spinor_mass_is_twice_squared_bracket:
+    kind: sampled
+    clauses: ["flat mass m^2 = 2|<pi1 pi2>|^2 at Lambda = 0"]
+    omits: "fifteen pairs from six Gaussian-rational spinors plus aligned pairs; single momenta null and future-directed; the factor 2 comes from the convention P = p^a sigma_a/sqrt 2 (checked as p.p = det(p^a sigma_a) on four rational vectors)"
+  check_bracket_transforms_by_the_determinant:
+    kind: sampled
+    clauses: ["the mass bracket transforms by det(U) under the internal U(2)", "SU(2) singlet, charge one under the determinant, modulus invariant"]
+    omits: "five unitary Gaussian-rational U (determinants 1, i, i, -1, -i) on six pairs from four spinors; the global form S(U(2) x U(3)) is not touched"
+  check_bracket_carries_the_quantum_numbers_of_ec:
+    kind: exact
+    clauses: ["(1,1) with Y = +1: the quantum numbers of e^c and not those of a weak doublet"]
+    omits: "computed on the five-mode module with the Lie algebras su(3) and su(2) (commutators vanish, ad-weight Y = +1, T3 = 0, creates the (2,0) sector); the species name e^c is the supplied table and the global group is not computed; the three-spinor bound and the order-parameter reading are observation-level with no finite core, as the docstring says"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Observation-level clauses are declared uncomputable; the computable clauses are tested at samples (spinors, unitaries) or exactly (module weights)."

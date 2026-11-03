@@ -1,0 +1,20 @@
+functions:
+  check_unit_ball_shares_and_total:
+    kind: exact
+    clauses: ["share of a D-dimensional tower is V_3/V_D", "Omega_dark/Omega_b = (11 pi + 16)/(3 pi) = 5.364"]
+    omits: "the tower count (this tower, two D = 2, two D = 4) is typed into the total; identity in pi as a rational function, numeric value from Machin bounds"
+  check_thickness_family:
+    kind: sampled
+    clauses: ["T(c) = 1 + 8/(3c) + 16c/(3 pi)", "T(1) = T(pi/2) = 5.364"]
+    omits: "T(c) rebuilt from the shares at five rational c, not as a function of c; the two equal values T(1), T(pi/2) are exact identities in pi"
+  check_floor_of_the_family:
+    kind: sampled
+    clauses: ["floor 5.255 at c = sqrt(pi/2)"]
+    omits: "the minimising identity (A/c + Bc)^2 - 4AB = (A/c - Bc)^2 is checked at four sample c; A/B = pi/2 and the numerics 1.2533 and 5.255 are exact interval computations"
+untouched_premises:
+  dark-matter.reduced-response-gravity-needs-supporting-stress: "supports only the dynamical sentence that the sheets move with the matter; no finite computable content (docstring: not tested)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The numbers 5.364, 5.255, 1.2533 and the T(1) = T(pi/2) coincidence all reproduce; the 'sheets move with the matter' sentence is untested, as the docstring says."

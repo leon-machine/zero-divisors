@@ -1,0 +1,14 @@
+functions:
+  check_palatial_quadratics_represent_gl4:
+    kind: sampled
+    clauses: ["[q(M), q(M')] = hbar q([M, M'])", "the lemma represents all of gl(4, C), su(2,2) its real form"]
+    omits: "operators are compared by their action on test Laurent polynomials (five for [Z, Zbar], three for the 256 ordered matrix-unit pairs), not as operators; bilinearity extends to gl(4, C), the real form su(2,2) is not tested separately; faithfulness (rank 16) is shown"
+  check_identity_quadratic_is_homogeneity_shifted_by_two:
+    kind: sampled
+    clauses: ["q(id) acts on functions of homogeneity h as -(h + 2) hbar"]
+    omits: "nine monomials covering the eight homogeneities h in {-5, -4, -2, -1, 0, 1, 2, 3}; the realisation Zbar = -hbar d/dZ with hbar = 3/7 is the check's choice; Penrose's -2s - 2 form is not separately tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The commutation relations and the -(h+2) hbar shift are verified exactly on the test functions and monomials used."

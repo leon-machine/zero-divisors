@@ -1,0 +1,23 @@
+functions:
+  check_closed_form_and_values:
+    kind: sampled
+    clauses: ["the unification condition determines sin^2 theta_W as an exact rational function of the inputs", "SM prediction 78761/379488 = 0.2075", "supersymmetric value 6539/28320 = 0.23089 within 10^-3 of the record"]
+    omits: "The closed form t = (alpha_em^-1 - (8/3) alpha_s^-1)/(...) is compared with the solver at a finite set of inputs and coefficient vectors, not as a rational-function identity; the quoted values are exact rationals."
+  check_higgs_and_generations:
+    kind: sampled
+    clauses: ["without the doublet sin^2 theta_W = 3457/16992", "complete multiplets inert, whatever the number of generations"]
+    omits: "Generation count tested for 0 to 5 generations (each adds the same 4/3 to every b_i, from exact index sums 2, 2, 2), not for every number."
+  check_no_common_meeting:
+    kind: exact
+    clauses: ["the three couplings do not meet at a common scale: pairwise meetings at three different values of L"]
+    omits: ""
+  check_scales_and_spread:
+    kind: exact
+    clauses: ["M_U about 7e14 GeV (SM)", "SUSY M_U about 2e16 GeV and pairwise meetings 2.0, 2.2, 2.3 e16 GeV", "miss is about ninety times the alpha_s spread (+-0.00027)"]
+    omits: "Rigorous rational bounds on pi and exp. 'Within about fifteen percent of one another' is only tested as largest/smallest below 1.2; 'a ten-percent miss' is not asserted separately."
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational arithmetic and rigorous enclosures support every number asserted; only the 'exact rational function' wording is tested at samples."

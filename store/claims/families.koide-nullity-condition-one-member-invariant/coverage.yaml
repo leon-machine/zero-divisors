@@ -1,0 +1,23 @@
+functions:
+  check_singlet_doublet_decomposition:
+    kind: exact
+    clauses: ["face space decomposes under S3 as singlet + doublet"]
+    omits: "fixed space of dimension 1 and commutant of dimension 2 of the permutation representation, which for dimension 3 gives singlet + irreducible doublet (inequivalent); the invariant coordinates s and d are definitions"
+  check_invariant_forms_two_parameter_family:
+    kind: sampled
+    clauses: ["the S3-invariant quadratic forms are exactly the two-parameter family q_{alpha,beta} = alpha s^2 - beta |d|^2", "for alpha, beta > 0 signature (1,2) with the democratic direction timelike", "for beta < 0 the same family is Euclidean"]
+    omits: "the dimension 2 of the invariant symmetric forms is exact, but signature (1,2), q(1,1,1) = 3 alpha and the form formula are checked at three sample (alpha, beta) and five sample vectors, and the Euclidean (3,0) signature at the same three parameter pairs (with the sign of beta flipped); the Minkowski-space reading and Foot's 45 degree reading are not computable"
+  check_nullity_chain:
+    kind: sampled
+    clauses: ["Q_sqrt(m) = 2/3 iff cos^2 theta = 1/2 iff s^2 = |d|^2 iff q(v) = 0"]
+    omits: "the four equivalent forms are evaluated on five sample vectors, none of which is on the cone; the true side is covered by one exact vector in Z[sqrt 2] checked only through 2 s^2 = |v|^2"
+  check_lepton_vector_null_to_three_parts_per_million:
+    kind: exact
+    clauses: ["q(v_lepton) = 0.0062 against |v|^2 = 1883, null to 3e-6 relative"]
+    omits: "rigorous rational interval bounds on sqrt of the PDG 2024 masses: q in [0.00615, 0.00625), |v|^2 = 1883.09937445, q/|v|^2 in [2.5, 3.5)e-6; the mass inputs themselves are data"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks match the statement's computable claims; the remarks that the member q is a choice, that the bracket form is Euclidean (Proposition on the chart) and the light-cone reading are interpretive and not computed here."

@@ -1,0 +1,13 @@
+functions:
+  check_mirror_temperature_measures_deposit:
+    kind: exact
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    omits: 'Rational arithmetic from the stored inputs only: the physical assumptions of (ii) (instant thermalisation, g''=g, no later entropy) are not tested; the stated edges 0.70 and 1.4e3 are roundings of 0.698.. and 1379.. (check asserts the unrounded bounds); the monotone-in-T line uses 4e-13 rather than a value above 1e13 and is vacuous'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Every number in (i)-(iii) is recomputed exactly from the stored floors and Y_B; the rounded window edges are slightly looser than the exact ones.

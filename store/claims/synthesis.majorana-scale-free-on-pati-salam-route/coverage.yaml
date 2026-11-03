@@ -1,0 +1,30 @@
+functions:
+  check_dirac_matrices_invariant_majorana_scales:
+    kind: sampled
+    clauses: ["(i) M_u, M_nu, M_d, M_e invariant; M_R -> lambda M_R"]
+    omits: "one complex rational data instance with two 10 couplings and three values of lambda, not all data and all lambda"
+  check_light_masses_scale_mixing_invariant:
+    kind: sampled
+    clauses: ["(i) m_nu -> m_nu/lambda, m_nu m_nu^dagger -> |lambda|^-2 m_nu m_nu^dagger, mixing and light-mass ratios invariant"]
+    omits: "one data instance, three lambda; mass ratios tested through the scale-free trace and determinant invariants of m m^dagger, not through the eigenvalues themselves"
+  check_ew_and_dirac_reading_of_u_invariant:
+    kind: sampled
+    clauses: ["(ii) Premise (EW) invariant", "(ii) Hypothesis (U) in Dirac-eigenvalue reading invariant", "(iii) heavy-direction entry m_t v_R/(4 w_u)"]
+    omits: "(EW) imposed along a chosen direction x = (1,1,1) rather than the third axis, one instance and three lambda; the chain and the triplet vev v_R = M_I/g_R of (ii) are not computed"
+  check_fit_observables_one_scale:
+    kind: partial
+    clauses: ["(ii) seventeen of eighteen fitted observables invariant, m_3 scales"]
+    omits: "the eighteen observables are not computed or compared with the fits: the counts 13 + 3 + 1 are hard-coded and credited when Gram matrices of M_u, M_d, M_e and a trace-ratio of H are invariant, and m_3 is represented by trace(H) != trace(H0); one instance, one lambda"
+  check_stored_inequalities_leave_an_interval:
+    kind: sampled
+    clauses: ["(iii) m_t v_R/(4v) <= |(M_R)_33| <= 4 pi v_R, width factor above 83 for m_t(M_I) <= 100 GeV", "(iii) seeding window M_3 > 1.36e12 GeV above the range"]
+    omits: "v_R = 4.2e10 GeV is a chosen input and m_t takes three values (80, 91, 100); pi enters through the rational bounds 3 < pi < 22/7; the seeding bound is quoted, not derived"
+  check_electroweak_normalisation_restored:
+    kind: sampled
+    clauses: ["preface: composite with rescaling of the 10s restores the electroweak normalisation and fixes every Dirac matrix"]
+    omits: "only the first 10 coupling is rescaled and the restoring mu is shown to exist (1/mu^2 > 0) but not itself applied; the 120 rescaling (h, c) -> (nu h, c/nu) is not tested; the normalisation form S is the check's own choice"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i), (ii) EW part and (iii) interval are reproduced on a sample instance; clauses (iv) and (v) have no test function; check_fit_observables_one_scale credits hard-coded counts through proxy invariants and does not test the fit record"

@@ -1,0 +1,29 @@
+functions:
+  check_massless_shell_projectors:
+    kind: complete
+    clauses:
+    - '(ii) the remainder is a plane-wave superposition with projector weights of norm one: (1 pm n e0)/2 idempotent, complementary, Dirac-self-adjoint, scalar part 1/2, Lambda_+ = p e0/(2 p0), p Lambda_+
+      = 0'
+    omits: the identities are exact for every unit direction by the single relation (n e0)^2 = 1; the five Pythagorean directions are a cross-check
+  check_coincidence_differences_have_one_sign:
+    kind: sampled
+    clauses:
+    - (ii) necessity, the one-sign structure used by the moment lemma; symmetric differences (z + 1/z - 2)^m = (-1)^m |z - 1|^(2m)
+    - (ii) odd powers of the frequency weigh particles and antiparticles alike, even powers mix signs
+    omits: the moment lemma itself (Bochner, Fatou) is proof-only and cited as standard; (i) and (v) are proof-only here, their lemmas being checked in the Weyl-flat result filed alongside
+  check_thermal_profile_has_every_moment:
+    kind: complete
+    clauses:
+    - (iii) Fermi-Dirac below e^-x, int x^k e^-x = k! for k up to 15, so M_k <= 16 pi (k + 2)! T^(k+3)
+    omits: the polynomial identity P_k - P_k' = x^k holds for every k by the same telescoping; k <= 15 is checked; the eta bounds are standard and proof-only
+  check_power_tail_profile_has_finite_shot_term_but_not_every_moment:
+    kind: complete
+    clauses:
+    - (iv) radial moments 1/30, 1/20, 1/5, mean energy 3T/2, spread 8/3 for (1 + p/T)^-6
+    - (iv) the third moment diverges (dyadic lower bounds), hence every higher one, so the remainder is not C^3 by (ii)
+    omits: the shot term's finiteness then follows from the stored formula; not recomputed
+untouched_premises:
+  synthesis.imported-gtg-dictionary: reading of the derived metric and of null geodesics in the set-up and (i); the geodesic lemma is checked in the Weyl-flat result, a premise here
+  synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian: 'its clause (i) (conformal transfer of null geodesics and wave-front sets, scaling limit) is cited in the set-up, (i) and (v); checked there, not recomputed'
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: 'imported theorem (weight 3/2 of the massless Dirac field, vanishing Weyl part of a conformally flat field) applied in the set-up; nothing is computed from it'
+  synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions: 'imported lemmas (Bochner, the moment lemma) applied in the necessity half of (ii); the one-sign symmetric differences they need are checked, the lemmas themselves are not'

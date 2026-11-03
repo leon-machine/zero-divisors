@@ -1,0 +1,27 @@
+functions:
+  check_ingoing_radius_is_affine_in_pg_gauge:
+    kind: sampled
+    clauses: ["(preliminaries) radial null directions w = 1 - beta, -(1 + beta); the ingoing tangent (gamma0 - gamma1)/(1 + beta) is parallel under the stored Painleve-Gullstrand rotation gauge field, so r is affine"]
+    omits: "four rational (M, beta) samples, horizon (beta = 1) and interior (beta > 1) included, not an identity in Q(beta); the reading of parallel physical velocity as free fall is the imported dictionary"
+  check_killing_translation_dilates_the_crossing:
+    kind: sampled
+    clauses: ["(preliminaries) dr/du = -(r - 2M)/(2r) on an ingoing worldline; U = -rho e^{rho/2M} has dU/du = -kappa U with the exponential factor cancelled; dU/dr = -1 at the crossing"]
+    omits: "three masses and five radii; the integration of the ODE and the analytic continuation through rho = 0 are argued"
+  check_vacuum_kernel_pulls_back_to_the_thermal_kernel:
+    kind: sampled
+    clauses: ["(ii) the weight-1/2 null-vacuum kernel is Moebius and dilation invariant; its pull-back by U = -e^{-kappa u}/kappa is the thermal kernel kappa/(2 sinh(kappa(u1 - u2)/2)); antiperiodic under -i beta with no pole at -i beta/2"]
+    omits: "rational points in the variable x = e^{kappa u/2}; the identification with the I-state and its uniqueness are the stored theorem and import"
+  check_short_distance_condition_and_scaling_limit:
+    kind: sampled
+    clauses: ["(i) for f = l e^l the pulled-back kernel is the null vacuum plus a remainder vanishing at the crossing, with first coefficient {f,l}(0)(l1 - l2)/12, {f,l}(0) = -3", "(ii) the dilated remainder is O(mu^2)"]
+    omits: "exact series to order six along three lines through the origin; the two-variable analyticity of the remainder and the composition of analytic maps are argued"
+  check_vaidya_shell_flux_tends_to_hawking_value:
+    kind: sampled
+    clauses: ["(ii) {v,u} = -m(4s - 3m)/(8 s^4) at twelve (m, s); its value -kappa^2/2 at the horizon ray; the O(s - m) approach", "(i) {U,v} = -3/(4m^2) at the horizon ray, finite"]
+    omits: "the transformation law of the chiral null energy and the Fermi integral are cited, not computed; the ray tracing through the shell is the derived-metric reading"
+  check_regularity_across_future_horizon_selects_t_h:
+    kind: sampled
+    clauses: ["(iii) the chain rule F_u = U_u^2 F_U + kappa^2/48pi closes, and F_U is bounded at U -> 0 only for theta = 1; the Boulware Schwarzian {u,U} = 1/(2U^2)"]
+    omits: "in Schwarzian units at four theta, two kappa and three U; the deficiency-index remark is the sibling's"
+untouched_premises:
+  hawking.joint-j3-s-wave-reduction: "postulate J3, the per-ray chiral reduction in its geometric-optics form; the check computes the flux of the reduced field, it does not test the reduction"

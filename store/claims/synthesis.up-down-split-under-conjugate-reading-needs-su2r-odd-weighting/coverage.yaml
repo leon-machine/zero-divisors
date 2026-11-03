@@ -1,0 +1,16 @@
+functions:
+  check_t3r_even_weightings_never_split_up_from_down:
+    kind: sampled
+    clauses:
+    - (i) T3R-even weightings give m_u = m_d
+    omits: checked for sample weightings; the general case is the parity argument of the proof
+  check_parts_of_the_square_under_the_conjugate_reading:
+    kind: exact
+    clauses:
+    - '(ii) the parts of the square: 10 and P_4 T3R-even, X_4 and mu_R T3R-odd'
+    omits: 'none: finite computation on the sixteen'
+untouched_premises:
+  synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square: its P_4/R_4 split is re-derived in
+    the proof and checked directly here
+  synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5: cited for the scope of the Dirac-neutrino clauses
+    (the halving); not computed in the check

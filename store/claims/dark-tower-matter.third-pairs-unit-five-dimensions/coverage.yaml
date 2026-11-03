@@ -1,0 +1,26 @@
+functions:
+  check_r3_unit_and_three_pairs:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "computed in an explicit real 16 x 16 module of Cl(5,2) (irreducible, commutant C, spin commutant H)"
+  check_r3_units_anticommuting_with_i7:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "five units on the circle of units anticommuting with I_7 (+-J1, +-J2 and (3 J1 + 4 J2)/5) are run; the dimension 30 is computed for one J only"
+  check_r5_no_canonical_unit:
+    kind: exact
+    clauses: ["(iii) no element of H outside R commutes with all of H", "(iii) omega^2 = +1"]
+    omits: "computed in an explicit real 16 x 16 module of Cl(2,5); also checks that the spin commutant equals the Clifford commutant"
+  check_r5_third_pair_for_every_unit:
+    kind: sampled
+    clauses: ["(iii) every unit u commutes with the vectors and builds a third pair", "(iii) u(3)_u has centraliser span{1, u}", "(iii) a second unit anticommuting with u generates dimension 30"]
+    omits: "nine sampled units (the six basis units with signs and three (3/5, 4/5) mixtures) satisfy the CAR; the Lie algebra dimension 9, centraliser span{1, u} and dimension 30 are verified for the first two sampled units only"
+  check_r5_units_conjugate:
+    kind: sampled
+    clauses: ["(iii) any two units are conjugate: (1 - u'u) u = u'(1 - u'u), and u' = -u by a unit anticommuting with u"]
+    omits: "all 81 ordered pairs of the nine sampled units (the identity itself follows from u^2 = u'^2 = -1); the identification of the choices with the sphere Sp(1)/U(1) = S^2 is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the structure at r = 3 and the absence of a canonical unit at r = 5 are exact in explicit modules; the every-unit statements are checked on sampled units, as the docstring says"

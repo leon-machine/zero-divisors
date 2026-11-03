@@ -1,0 +1,18 @@
+functions:
+  check_frame_curvature_multiples:
+    kind: sampled
+    clauses: [(i)]
+    omits: Exact in r (GA.RF) but at five masses only; the six sectional-curvature formulas are written by hand from the synchronous metric (not derived from a curvature operator); "every algebraic curvature scalar is a function of w alone" is argued, and the level-set step is the trivial 12 lambda^2 = K0.
+  check_forced_weights_reproduce_curvature:
+    kind: exact
+    clauses: [(ii)]
+    omits: The six numbers (2,-1,-1,-1,-1,2) x 2/(9 tau^2) from p = (-1/3, 2/3, 2/3) and 4/(9 tau^2) = 2M/r^3 on the stated tau are exact; the criterion lambda = 4/9 is not asserted, and that tau is the leading proper time of the weighted blow-up is taken from the imported results.
+  check_count_one_number:
+    kind: sampled
+    clauses: [(iv)]
+    omits: The squared volume identity (4 pi r_c^2)^2 (2M/r_c - 1) = (8 pi M)^2 lambda^{-1}(1 - r_c/2M) is checked at 16 (mu, r_c) pairs; the exponent (1 + 3 alpha)/2 for power-law slices is typed in, not derived, and the check of alpha = 1/3 is arithmetic; the asymptotic dN/dt = 8 pi kappa_s M(1 + O(M^{-2/3})), the area-law value kappa_s = 1/(16 pi ln 2) and nu' = (2/3) kappa_s are not computed.
+  check_slice_isometries_transitive:
+    kind: sampled
+    clauses: [(iii)]
+    omits: 'Only the SO(3) part: rotors carrying e3 to five rational unit vectors; the R translations, the induced metric, and uniqueness of the invariant measure (cited, Haar-Weil) are not computed.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: (i) and (ii) are exact-in-r identities (the first at five masses); (iii) and the count in (iv) are sampled and the final area-law numbers are untested.}

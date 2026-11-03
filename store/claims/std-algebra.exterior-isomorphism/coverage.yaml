@@ -1,0 +1,11 @@
+functions:
+  check_outer_product_is_exterior:
+    kind: sampled
+    clauses:
+    - '"e_I ^ e_J is e_I e_J when I and J are disjoint and 0 otherwise"'
+    - '"does not depend on Q"'
+    - '"v_1 ^ ... ^ v_k = [v_1, ..., v_k]"'
+    - '"the symbol map"'
+    omits: structure constants on every pair of blades for every signature with n <= 4; associativity
+      and the antisymmetrisation on sampled elements for n = 4; the symbol map for one non-diagonal 3x3
+      Gram matrix

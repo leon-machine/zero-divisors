@@ -1,0 +1,28 @@
+functions:
+  check_even_simple_with_centre_r:
+    kind: sampled
+    clauses:
+    - '"Cl(p,q) is simple for n even, with centre R"'
+    omits: the 24 signatures with n in {2, 4, 6, 8}; semisimplicity from the nondegenerate trace form, centre from central blades
+  check_odd_centre_and_square:
+    kind: sampled
+    clauses:
+    - '"For n odd the volume element is central, omega^2 = (-1)^(n(n-1)/2)(-1)^q, and the centre is R[omega]: R + R when omega^2 = +1, C when omega^2 = -1"'
+    omits: the 20 signatures with n in {1, 3, 5, 7}
+  check_central_idempotents:
+    kind: sampled
+    clauses:
+    - '"Cl(p,q) contains a nontrivial central idempotent if and only if p - q = 1 mod 4, and then the nontrivial central idempotents are exactly eps_+- = (1 +- omega)/2"'
+    omits: all 44 signatures with 1 <= n <= 8; (a + b omega)^2 is a degree-2 identity verified on a 3 x 3 grid, the solving of the idempotent equations is by hand
+  check_grade_involution_outer_and_ideals_simple:
+    kind: sampled
+    clauses:
+    - '"exchanged by the grade involution, which is outer on the split algebra: no inner automorphism exchanges the two ideals, each of which is simple"'
+    omits: the ten split signatures with n <= 7; inner automorphisms tested by explicit invertible u = 2 + e_i, simplicity from dimension 2^(n-1) and centre R eps with semisimplicity taken from the classification premise
+untouched_premises:
+  rule2.imported-classification-centre-type-c-external: literature restatement of the classical table, declared not used in the finite cores
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: every clause is tested exactly on all signatures with n <= 8, bounded relative to the statement for all n

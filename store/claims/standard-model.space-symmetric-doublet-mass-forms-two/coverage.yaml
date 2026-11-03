@@ -1,0 +1,14 @@
+functions:
+  check_two_dimensional_space:
+    kind: complete
+    clauses: ["the forms span exactly a two-dimensional space spanned by the 10 direction w_4 (ratio 1) and T_GJ (ratio 3)", "every form couples only (L, e^c) and (Q, d^c)"]
+    omits: "Enumerates all 512 odd normal-ordered monomials and takes the colour-singlet kernel exactly; relies on the exported module of the Georgi-Jarlskog premise."
+  check_ratio_is_free:
+    kind: sampled
+    clauses: ["the ratio y_e/y_d takes every value as the two coefficients vary"]
+    omits: "The entrywise relations (T_GJ form = -1 times the 10 form on the lepton pair, +1/3 on the quark pair) are exact, but 'every value' is tested at sample target ratios; the solved parametrisation divides by 1 - r, so r = 1 is not sampled."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The exhaustive monomial enumeration is the finite classification the statement makes; the free ratio is shown by exact entrywise relations plus samples."

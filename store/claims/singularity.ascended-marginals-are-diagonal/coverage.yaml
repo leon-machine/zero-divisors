@@ -1,0 +1,18 @@
+functions:
+  check_even_units_have_zero_ladder_expectation_and_diagonal_marginals:
+    kind: sampled
+    clauses: ["omega(v_k) = omega(v_k*) = 0 at every mode", "rho_k diagonal, coinciding with E_k(rho_k)"]
+    omits: "exhaustive over every even matrix unit (hence by linearity every even state) but only for N = 2, 3, 4 Jordan-Wigner modes; the odd units are a control"
+  check_even_state_marginals_are_descended_gibbs:
+    kind: partial
+    clauses: ["Gibbs state at a unique beta_k for omega_k != 0", "at a zero-weight mode diagonality holds and the Gibbs form requires p_k = 1/2"]
+    omits: "one mixed even state per N = 2, 3, 4; 'Gibbs' is only the parametrisation diag(1, x)/(1 + x), x = (1-p)/p, of any diagonal qubit state: K_k and omega_k are never constructed, and uniqueness of beta_k is not tested; the zero-weight case is shown by a sample with p != 1/2"
+  check_parity_protection_is_special_case:
+    kind: sampled
+    clauses: ["parity protection lemma is the special case for the model's even states"]
+    omits: "two instances of the thermofield-pair model (2 and 3 pairs, fixed c_k, s_k) plus one parity-mixed control"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says the Gibbs matrix is taken from the premise's descended form; the Gibbs-state function reduces to a parametrisation, hence recorded partial."

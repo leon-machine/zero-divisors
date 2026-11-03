@@ -1,0 +1,22 @@
+functions:
+  check_torsion_and_frame_ranks:
+    kind: exact
+    clauses: ["(a)"]
+    omits: "ranks 24 and 16 on the invertible region are computed at one sample coframe; the rank-18 count, three vacated rows, 15 + 9 split and nonvanishing radical components are exact on the three normal forms (the statement's own setting), the last by one explicit integer curvature"
+  check_connection_rank_and_symbols:
+    kind: partial
+    clauses: ["(b) rank 12 of the connection equation", "(c) principal symbol ranks"]
+    omits: "ranks of the symbol (6 radial, 3 tangential) are taken on the whole twelve-dimensional free sector; that the symbol vanishes on the symmetric part of M and is injective on K, and so that M is never propagated, is not separated"
+  check_free_sector_is_k_plus_m:
+    kind: exact
+    clauses: ["(b) the free sector is two symmetric tensors K and M, no radical-leg components"]
+    omits: "Lorentzian and Riemannian forms only, as the statement says; the identification t = (tr M) 1 - M of the freed torsion is not checked"
+  check_hamiltonian_constraint:
+    kind: sampled
+    clauses: ["(d)"]
+    omits: "constant free connections only, the identity E_D = sigma_2'(M) - sigma_2'(K) tested at a few random coefficient vectors rather than as a quadratic-form identity; curved-wall remarks are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring discloses the unchecked identification and curved-wall remarks; (c) is checked only through ranks"

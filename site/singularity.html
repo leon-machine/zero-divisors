@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Singularity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one pinned screen. The live view fills it; the story is told in subtitles and in drawings laid over the view.
+   A thin chapter strip under the masthead is the only chrome. Single dark theme by choice. */
+:root{
+  --void:#100e0d; --void-2:#191614; --line:#3a332e; --line-2:#574d45;
+  --text:#ece5d9; --text-2:#bfb5a6; --text-3:#8d8377;
+  --red:#e07a55; --blue:#93b4da; --green:#a6c497; --plum:#cf9bb5; --gold:#f0c27a;
+  --display:"Source Serif 4","Iowan Old Style",Georgia,serif; --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --serif:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --barh:47px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--void);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.55}
+a{color:var(--gold)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(16,14,13,.92);border-bottom:1px solid var(--line)}
+.bar .in{max-width:1180px;margin:0 auto;padding:8px 20px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between}
+.bar .name{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--text)}
+.bar .name .sub{font-family:var(--sans);font-weight:400;font-size:.8rem;color:var(--text-3)}
+
+
+.fall{position:relative;background:#000;height:calc(100vh - var(--barh));height:calc(100dvh - var(--barh))}
+.pin{position:absolute;inset:0;overflow:hidden;touch-action:none}
+body.atend .pin{touch-action:pan-y}
+#sky,#ov{position:absolute;inset:0;width:100%;height:100%;display:block}
+#sky{cursor:grab;touch-action:none;transition:filter .4s ease}
+body.atend #sky{touch-action:pan-y}
+#sky.drag{cursor:grabbing}
+#ov{pointer-events:none}
+#ov.live{pointer-events:auto;cursor:pointer}
+.whiteout{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+
+.track{position:absolute;left:0;right:0;top:0;z-index:6;display:flex;overflow-x:auto;background:rgba(16,14,13,.4);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track button{flex:1 0 auto;background:none;border:0;color:var(--text-3);font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;padding:6px 10px;cursor:pointer;position:relative;white-space:nowrap}
+.track button.on{color:var(--text)}
+.track button.on::after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;background:var(--red)}
+.track button.done{color:var(--text-2)}
+.track button b{font-weight:500;color:var(--gold);margin-right:4px}
+
+.title{position:absolute;left:0;right:0;top:56px;padding-inline:24px;pointer-events:none;transition:opacity .3s}
+.title .in{max-width:1180px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.title h1{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:6px 0 10px;max-width:13ch;text-wrap:balance;text-shadow:0 2px 18px #000}
+.title.compact .eyebrow{margin-bottom:0}@media (max-width:700px){.title.compact p{display:none}}
+.title p{max-width:44ch;color:var(--text-2);margin:0;font-family:var(--sans);font-size:1rem;text-shadow:0 1px 8px #000}
+
+/* subtitles */
+.cap{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 74px);transform:translate(-50%,6px);width:min(820px,calc(100% - 40px));text-align:center;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+.cap.show{opacity:1;transform:translate(-50%,0)}
+.cap .line{font-family:var(--display);font-weight:400;font-size:clamp(1rem,1.75vw,1.32rem);line-height:1.36;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
+.cap .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--text-3);text-shadow:0 1px 6px #000}
+.cap a{pointer-events:auto}
+.cap .acts{margin-top:14px;display:flex;gap:10px;justify-content:center;pointer-events:auto}
+.chip{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;padding:0 6px;border:1px solid currentColor;white-space:nowrap;background:rgba(16,14,13,.5)}
+.chip.std{color:var(--text-3)} .chip.A{color:var(--blue)} .chip.B{color:var(--green)} .chip.C{color:var(--plum)}
+.chip.AB{color:#9fbdb9} .chip.BC{color:#b9b0c6}
+.chip.prem{color:var(--plum);border-style:dashed} .chip.pred{color:var(--red)} .chip.ana{color:var(--gold);border-style:dotted}
+
+/* instruments, quiet */
+.hud{position:absolute;top:40px;right:20px;font-family:var(--mono);font-size:.72rem;color:var(--text-3);text-align:right;text-shadow:0 1px 6px #000;transition:opacity .5s;pointer-events:none}
+.hud b{display:block;font-weight:500;font-size:1.05rem;color:var(--text);font-variant-numeric:tabular-nums;margin-bottom:6px}
+.hud .bar2{width:160px;height:2px;background:var(--line-2);margin:4px 0 2px auto;position:relative}
+.hud .bar2 i{position:absolute;left:0;top:0;bottom:0;background:var(--red)}
+.hud .bar2 u{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--gold)}
+.controls{position:absolute;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);display:flex;gap:4px;transition:opacity .5s}
+/* Back and Next: the story is a slide show; each subtitle is a step */
+.ctl{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);transform:translateX(-50%);z-index:8;display:flex;align-items:center;gap:12px}
+.ctl button{background:rgba(16,14,13,.6);border:1px solid var(--line-2);border-radius:8px;padding:6px 16px;cursor:pointer;font:500 .85rem var(--sans);color:var(--text-2)}
+.ctl button:hover:not(:disabled){border-color:var(--text-2);color:var(--text)}
+.ctl button:disabled{opacity:.35;cursor:default}
+.ctl #next{border-color:var(--gold);color:var(--gold);padding:6px 22px}
+.ctl #next.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(240,194,122,.12)}}
+.ctl .n{font:400 .7rem var(--mono);color:var(--text-3);min-width:4.5em;text-align:center}
+.controls button{background:rgba(16,14,13,.45);border:1px solid var(--line-2);border-radius:8px;color:var(--text-2);font:500 .78rem var(--sans);padding:4px 10px;cursor:pointer}
+.controls button[aria-pressed="true"]{color:var(--text);border-color:var(--text-2)}
+.controls button.hot{color:var(--red);border-color:var(--red)}
+.foot-note{position:absolute;left:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);font-family:var(--mono);font-size:.66rem;color:var(--text-3);transition:opacity .5s;pointer-events:none}
+.btn{background:rgba(16,14,13,.5);border:1px solid var(--text-2);border-radius:8px;padding:5px 14px;cursor:pointer;font:500 .85rem var(--sans);color:var(--text);text-decoration:none}
+.btn.hot{border-color:var(--red);color:var(--red)}
+.nogl{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:20px;color:var(--text-2)}
+@media (max-width:700px){
+  .bar .name .sub{display:none}
+  body:not(.infall) .cap{bottom:calc(env(safe-area-inset-bottom,0px) + 62px)}
+  .bar .in{padding:6px 12px}
+  .hud{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 50px);right:12px;font-size:.64rem}
+  .hud b{font-size:.9rem;margin-bottom:2px}.hud .bar2{width:110px}
+  .hud .opt{display:none}
+  .cap{bottom:calc(env(safe-area-inset-bottom,0px) + 150px)}
+  .controls{left:12px;right:auto;justify-content:flex-start}
+  .ctl{left:auto;right:12px;transform:none;gap:6px}.ctl .n{display:none}.ctl button{padding:6px 12px}.ctl #next{padding:6px 16px}
+  .hud{bottom:calc(env(safe-area-inset-bottom,0px) + 60px)}
+  .foot-note{display:none}
+  .track button{font-size:.6rem;padding:5px 8px}
+}
+@media (prefers-reduced-motion:reduce){.cap,.title,.hud,.controls{transition:none}.ctl #next.pulse{animation:none}}
+/* the scoreboard of registered claims */
+.board{position:absolute;left:50%;top:46px;transform:translateX(-50%);width:min(860px,calc(100% - 28px));font-family:var(--mono);font-size:.72rem;color:var(--text-2);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;pointer-events:none;background:rgba(16,14,13,.85);border:1px solid var(--line);padding:10px 14px}
+.board.show{opacity:1;visibility:visible}
+.board .bh{color:var(--text-3);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.board .r{display:grid;grid-template-columns:12px minmax(0,1.25fr) 40px minmax(0,1fr);gap:2px 10px;align-items:center;padding:2px 0;border-top:1px solid rgba(58,51,46,.7);opacity:.12;transition:opacity .4s}
+.board .r.in{opacity:1}
+.board .c{color:var(--text);font-family:var(--serif);font-size:.86rem;line-height:1.3}
+.board .p{color:var(--text-3)}
+.board .st{color:var(--text-3);font-size:.66rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board .c{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board .r.hl .c{color:var(--red)}
+.d{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none}
+.d.hold{background:var(--green)} .d.press{background:var(--red)} .d.wait{background:var(--gold)} .d.int{background:var(--text-3)}
+.board .key{margin-top:8px;display:flex;gap:4px 14px;flex-wrap:wrap;color:var(--text-3);font-size:.64rem;align-items:center}
+.board .key span{display:inline-flex;gap:5px;align-items:center}
+@media (max-width:700px){.board{font-size:.62rem;padding:8px 10px}.board .r{grid-template-columns:10px minmax(0,1fr) 30px}.board .st{display:none}.board .c{font-size:.76rem}}
+body.video .controls,body.video #cap,body.video .ctl{display:none}
+body.video *{transition:none!important}
+.vcap,.vend{display:none}
+body.video .vcap{display:block;position:absolute;left:50%;bottom:54px;transform:translateX(-50%);width:min(1100px,calc(100% - 80px));text-align:center;font-family:var(--display);font-weight:500;font-size:1.85rem;line-height:1.24;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
+body.video .vcap .tags{margin-top:8px;display:flex;gap:6px 10px;justify-content:center;font-family:var(--mono);font-size:.75rem;color:var(--text-3)}
+body.video .vcap .chip{font-size:.7rem}
+body.video .vend{display:grid;place-content:center;text-align:center;position:absolute;inset:0;background:var(--void);opacity:0;z-index:30}
+.vend h2{font-family:var(--display);font-weight:600;font-size:4.5rem;margin:10px 0 18px}
+.vend p{color:var(--text-2);font-size:1.25rem;margin:0}.vend .u{font-family:var(--mono);color:var(--gold);font-size:1.05rem;margin-top:14px}
+.vend .eyebrow{font-size:1.1rem}
+.after{max-width:900px;margin:0 auto;padding:28px 20px 48px;font:.84rem/1.55 var(--sans);color:var(--text-3);border-top:1px solid var(--line)}
+.after p{margin:0 0 .7em}
+.labref{color:inherit;text-decoration:underline dotted;text-underline-offset:2px;pointer-events:auto;cursor:pointer}
+.labref:hover{color:var(--gold)}
+.cap .tags{pointer-events:auto}
+body.white .hud *{color:#3a342e!important;text-shadow:none}
+.pin .vign{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.62));pointer-events:none;opacity:0;transition:opacity .4s}
+body.infall:not(.white) .pin .vign{opacity:1}
+body.white .cap .line{color:#141210;text-shadow:none}body.white .cap .tags,body.white .hud{color:#3a342e;text-shadow:none}
+.cap{display:flex;flex-direction:column}
+.cap .tags{order:-1;margin:0 0 7px}
+.cap .ptitle{order:-2;display:none;margin:0 0 10px;text-align:center;font-family:var(--display);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.1;color:var(--text);text-shadow:0 2px 14px #000}
+.cap .ptitle span{display:block;margin-bottom:4px;font:400 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.cap.part .ptitle{display:block}
+.cap .line{text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+</style>
+</head>
+<body>
+<header class="bar"><div class="in">
+  <span class="name">The Singularity <span class="sub">&middot; falling into Sagittarius A*, the black hole at the centre of our Galaxy, 4.3 million suns</span></span>
+
+</div></header>
+<main>
+<section class="fall" id="fall" aria-label="A first-person fall into a black hole, then the Transport Papers in six parts">
+  <div class="pin">
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <canvas id="ov" aria-hidden="true"></canvas>
+    <div class="nogl" id="nogl"><p>This browser cannot draw the live view (WebGL is off). Press Next: the story still plays.</p></div>
+    <div class="vign" aria-hidden="true"></div>
+    <div class="whiteout" id="whiteout"></div>
+    <nav class="track" id="track" aria-label="Chapters"></nav>
+    <div class="title" id="title"><div class="in">
+      <div class="eyebrow">The Transport Papers &middot; Part I &middot; T4 to T6</div>
+      <h1>Fall into a black hole</h1>
+      <p>Press Next, or scroll, to fall. Drag to look around. Every pixel is a ray of light traced backwards around the hole, the way it would reach your eye.</p>
+    </div></div>
+    <div class="hud" id="hud">
+      <span>distance from centre</span><b id="hR"></b>
+      <span>time left on your watch</span><b id="hTau"></b>
+      <span class="opt">falling at</span><b class="opt" id="hV"></b>
+      <div class="bar2"><i id="hBar"></i><u id="hHor"></u></div>
+    </div>
+    <div class="board" id="board" aria-label="The registered predictions and their status"><div class="bh" id="boardHead">Registered in advance &middot; status from the record</div><div id="rows"></div>
+      <div class="key"><span><i class="d hold"></i>holding so far</span><span><i class="d press"></i>under pressure</span><span><i class="d wait"></i>not yet reached by data</span></div></div>
+    <div class="vcap" id="vcap"></div><div class="vend" id="vend"><div class="eyebrow">The Transport Papers</div><h2>The Singularity</h2><p>Explore it yourself: the Physics Graph, the papers and their verification scripts</p><p class="u">zenodo.org/communities/transport-papers</p></div>
+    <div class="cap" id="cap" aria-live="polite"><div class="line" id="capLine"></div><div class="tags" id="capTags"></div><div class="acts" id="capActs"></div><div class="ptitle" id="capPart"></div></div>
+    <div class="controls" id="controls">
+      <button class="hot" id="autoFall">Fall for me</button>
+      <button id="lookBack" aria-pressed="false">Look back</button>
+    </div>
+    <div class="ctl" id="ctl"><button id="back" aria-label="Back one step">Back</button><span class="n" id="stepn"></span><button id="next" class="pulse" aria-label="Next step">Next</button></div>
+  </div>
+</section>
+</main>
+<div class="after">
+  <p>Every numbered reference under a subtitle opens that result in the Physics Graph, with its statement, proof and checks. The predictions board is read from the record when the site is built.</p>
+  <p>The founding conjecture, the direction of investigation and critical review are the author&rsquo;s, Leon Butler. The mathematical development and drafting were produced in extended collaboration with Claude (Anthropic), an AI system. The papers are independent work and have not yet been through journal peer review: <a href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">the Transport Papers on Zenodo</a>.</p>
+  <p>The view is computed by tracing light rays through the Schwarzschild gravitational field in the Painlev&eacute;&ndash;Gullstrand gauge (Gauge Theory Gravity on a flat background), for an observer falling from rest far away, in the plane of a thin disc of hot gas orbiting the hole. The disc is drawn the way most depictions draw it (the film Interstellar among them): its inner edge at the last stable orbit, its glow shifted by the gas&rsquo;s motion and by gravity, and the gas close to you left out as you fall past it, so the view stays clear. Sagittarius A*&rsquo;s own gas is fainter and thicker; its light, bent by the hole, makes the ring the Event Horizon Telescope imaged. Labels: Tier A proved; Tier B assembled from named theorems; Tier C rests on a flagged premise; Tier A/B and B/C are the papers&rsquo; own split grades; Premised means assumed and said so; Prediction means registered in advance; Analogy is a picture, not the mathematics. Numbers use standard constants: Schwarzschild radius 2GM/c&sup2;, Hawking temperature &#295;c&sup3;/8&pi;GMk<sub>B</sub>, entropy A/4 in Planck units, echo delay 8(GM/c&sup3;) ln(M/m<sub>P</sub>) as in T8.</p>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// written by tp.site when the Lab is built: the record's predictions and a map from deposited numbers to results
+const LAB = {"preds":[{"st":"press","title":"Dark energy cannot evolve: w = -1","paper":"T10","note":"The combined Pantheon+ and DES-SN5YR sample (Unite, 2,884 type Ia...","id":"pred.dark-energy-w-minus-one"},{"st":"press","title":"Neutrino mass sum at the oscillation floor","paper":"T15","note":"Planck with Planck and ACT lensing and DESI BAO gives a sum below...","id":"pred.neutrino-mass-sum-floor"},{"st":"hold","title":"Gravity does not settle superpositions","paper":"QG","note":"XENONnT gives R0 above 4.5e-10 m (95%), superseding the Majorana...","id":"pred.no-gravitational-settling"},{"st":"hold","title":"No fractionally charged colour singlet","paper":"T12","note":"No fractionally charged or millicharged particle seen. milliQan sets...","id":"pred.z6-charge-lattice"},{"st":"hold","title":"Direct detection stays null","paper":"T14","note":"One nuclear-recoil-like event at 248 +- 23 +- 23 keV in 220 live...","id":"pred.dark-matter-direct-detection-null"},{"st":"hold","title":"No dark radiation","paper":"T14","note":"N_eff = 2.990 +- 0.070, consistent with the Standard Model 3.044...","id":"pred.no-dark-radiation"},{"st":"hold","title":"No indirect dark-sector signals","paper":"T14","note":"No confirmed signal, but two claimed excesses are live: the Galactic...","id":"pred.no-indirect-dark-signals"},{"st":"hold","title":"The leptonic CP phase is trivial","paper":"T15","note":"For normal ordering the 3 sigma interval for delta_CP is [-1.38 pi...","id":"pred.leptonic-cp-trivial"},{"st":"hold","title":"No neutrinoless double-beta signal at next-generation sensitivity","paper":"T15","note":"Xe-136: T1/2 above 3.8e26 yr (90%), m_bb below 28 to 122 meV. Ge-76...","id":"pred.no-neutrinoless-double-beta"},{"st":"hold","title":"No objective-collapse signature","paper":"T16","note":"No collapse signature. XENONnT bounds Markovian CSL at lambda/rC^2...","id":"pred.no-objective-collapse"},{"st":"hold","title":"The no-echo prediction, registered","paper":"T8","note":"LVK's four echo searches over GWTC-4.0 find no evidence for...","id":"scrambling.no-echo-prediction-registered"},{"st":"wait","title":"Gravity entangles two masses by the standard phase","paper":"QG","note":"No experiment has reached gravity-mediated entanglement. The newest...","id":"pred.gravity-entangles-standard-phase"},{"st":"wait","title":"Dimmed final evaporation bursts","paper":"T14","note":"No final evaporation burst detected. LHAASO limits the local rate...","id":"pred.dimmed-evaporation-bursts"},{"st":"wait","title":"One boundary mode per Bekenstein-Mukhanov area quantum","paper":"T8","note":"No experiment tests a discrete horizon-area spectrum. GW250114...","id":"pred.boundary-mode-density"}],"refs":{"T0":{"1":"primer.commutation-rule","2":"primer.twisted-adjoint-action","6.2":"note.primer.boost-what-it-does-null-direction","4.1":"note.primer.hyperbolic-plane","2.1":"note.primer.euclidean-plane","6.1":"note.primer.rotation-exactly","9.4":"primer.centre","9.3":"primer.classification-real-clifford-algebras","9.1":"primer.commutation-rule","9.5":"primer.sign","9.6":"primer.splitting-along-hyperbolic-plane","9.2":"primer.twisted-adjoint-action"},"T1":{"7.9":"transport.obstructions-are-moved-never-destroyed","4.1":"transport.original-conjecture-refuted-below","5.16":"transport.odd-lorentzian-dimension-exactly-one-real","6.7":"transport.no-fourth-rule","5.15":"transport.which-residues-obstruct-which-way","4.17":"obj.transport.normalised-conformal-chart","2.2":"obj.transport.equivariance","2.3":"obj.transport.extension-quadratic-spaces","4.12":"obj.transport.null-lift-completion","8.1":"obj.transport.transport","3.1":"obj.transport.obstruction-types","10":"transport.swap-rescale-normal-form","9":"transport.totality","5":"note.transport.hyperbolic-atom","4":"transport.no-go-level-elements","3.11":"note.transport.cl-1-0-cl-2-1","3.10":"note.transport.cl-1-1-n-p-together","3.12":"note.transport.cl-1-3-physical-case-n","3.5":"note.transport.nilpotents-without-null-vectors-two-loci","4.20":"note.transport.exotic-embedding-inertness","5.10":"note.transport.three-smallest-fusions","3.4":"note.transport.hyperbolic-partner-supplies-annihilating-idempotent","5.1":"transport.decomposition-commutation","4.6":"transport.group-null-rotations","2.6":"transport.centre","5.3":"transport.corner-even-subalgebra","4.9":"transport.density","4.23":"transport.descent-read-out-map","5.13":"transport.even-subalgebra-one-dimensional-extension","4.18":"transport.conformal-gram-matrix","5.4":"transport.matrix-units-peirce-isomorphism","2.1":"transport.noinverse","2.7":"transport.sign","2.8":"transport.regularity-localises-zero-divisors-idempotents","2.4":"transport.splitting-along-hyperbolic-plane","6.3":"transport.units-span","8.2":"transport.transport-principle","3.2":"transport.exceptional-division-algebras","5.2":"transport.ascent-renders-grade-involution-inner","7.8":"transport.no-transport-terminates","6.5":"transport.pair-canonical-label-bit","7.4":"transport.fusion-occurs-most-once","7.5":"transport.pinching-kernel","6.1":"transport.type-p-self-repairing","4.21":"transport.swap-rescale-normal-form","4.7":"transport.pseudo-inverse-torsor","3.3":"transport.existence-locus-type-n","3.8":"transport.existence-locus-type-p","5.6":"note.transport.2-pattern-two-rules-compared","6.6":"note.transport.moore-penrose-boundary-idempotent-side","4.24":"note.transport.ascend-invert-descend","4.5":"note.transport.hyperbolic-atom","4.25":"note.transport.classical","5.9":"note.transport.second-refuted-conjecture-recorded","4.15":"note.transport.degenerate-adjunctions-why-they-are-excluded","4.11":"note.transport.destination","6.2":"note.transport.why-shear-has-nothing-act-eee","5.8":"note.transport.bit-algebra-forgets","7.3":"note.transport.iteration","4.3":"note.transport.locality-robustness-obstruction","7.2":"note.transport.prior-art-what-new-here","8.4":"note.transport.what-procedure-does-not-do","4.4":"note.transport.obstruction-parabolic","5.12":"note.transport.cost-transport-independently-representation","4.14":"note.transport.signargument","4.22":"note.transport.where-each-stratum-comes","5.17":"note.transport.three-dimensions","7.7":"note.transport.two-sided-reading","3.7":"note.transport.typec-depth","4.16":"note.transport.what-not-unique","8.3":"note.transport.worked-instance","3.9":"transport.exhaustiveness-every-zero-divisor-annihilated-idempotent","4.19":"transport.representation-independent-minimality-completion","2.5":"transport.classification-real-clifford-algebras","4.8":"transport.cohomological-form-no-go","5.11":"transport.embedding-independent-minimality-fusion","5.14":"transport.where-obstruction-lies-commuting-square","5.5":"transport.rule-2-ideal-fusion-sharp-form","4.13":"transport.minimality","7.1":"transport.rule-1-morita-trivial","4.2":"transport.no-go-level-elements","7.6":"transport.door-one-way","6.4":"transport.classification-idempotent-orbits","5.7":"transport.one-generator-minimal-minimal-completions-classified","4.10":"transport.totality","3.6":"transport.existence-classification-type-c"},"T2":{"3.1":"conformal.principal-case","3.2":"note.conformal.dictionary-translators","2.1":"conformal.blade-basis-persists-under-degeneracy","2.2":"conformal.witt-extension-theorem","2.5":"conformal.nilpotent-ideal-becomes-unit-ideal","3.3":"note.conformal.why-pga-cannot-be-repaired-place","2.4":"note.conformal.what-minimality-promises-what-it-does","3.4":"note.conformal.relation-transport-rules","2.3":"conformal.minimal-nondegenerate-completion"},"T3":{"6.2":"tower.answers-iteration-question","2.2":"obj.tower.tower","3.4":"tower.morita-equivalence-algebra-amplification","2.1":"transport.rule-1-morita-trivial","3.5":"transport.existence-classification-type-c","5.5":"tower.glimms-classification-car-uniqueness","6.1":"tower.wall-package","3.3":"tower.matrix-amplification-structural-properties","5.2":"tower.compatibility-connecting-maps-transported","5.4":"tower.structure-tower-c-norms","5.1":"tower.grade-twist-when-it-inner","3.1":"tower.volume-elements-planes","4.1":"tower.ladder-pairs-satisfy-car-vectors","5.8":"q.tower.odd-charge","4.4":"note.tower.what-capacity-theorem-forbids","3.7":"note.tower.eight-towers-signature-change-tower-change","5.7":"note.tower.what-completion-means-here-why-it","2.3":"note.tower.why-tower","5.3":"tower.algebraic-limit-even-charge","4.3":"tower.witt-index-quantum-capacity","5.6":"tower.car-limit-even-charge","3.2":"tower.commuting-copies","4.2":"tower.fock-module-one-qubit-per-rung","3.6":"tower.rigidity-clock-frozen"},"T4":{"7.2":"sheaf.wall-class","8.20":"sheaf.characterisation-forced-within-rain-bounded-class","4.5":"sheaf.localised-transport","7.1":"sheaf.tame-walls-are-two-sided","5.5":"sheaf.infinite-wall-sequence","8.3":"obj.sheaf.weighted-coframe-module","2.7":"obj.sheaf.clifford-sheaf","4.1":"obj.sheaf.collar-data-coupling","8.17":"obj.sheaf.extensions","9.8":"obj.sheaf.log-completion","9.4":"obj.sheaf.relatively-admissible-perturbation","9.1":"obj.sheaf.variable-order-algebra-strict-diagonal-data","1":"sheaf.degeneration-sheaf","8.21":"note.sheaf.eigenvalue-essential","8.19":"note.sheaf.rain-boundedness-essential-null-mixing-extension","3.6":"note.sheaf.physical-fibre","9.6":"note.sheaf.sharpness-relative-order-zero","2.9":"sheaf.imported-classification-values","8.2":"sheaf.kasner-data-interior","2.10":"sheaf.imported-real-line-bundles","8.1":"sheaf.gauge-field-cometric","8.25":"sheaf.weighted-limit","2.1":"sheaf.tameness","2.6":"sheaf.blade-basis-degenerate-forms-included","9.12":"sheaf.collision-census","4.3":"sheaf.determinant-identity-blow-up-expansion","2.2":"sheaf.invariant-form-t3","9.7":"sheaf.log-obstruction","9.2":"sheaf.boundary-units-invert","4.2":"sheaf.wall-gram","5.3":"sheaf.tame-wall-induction","10.2":"sheaf.solve-closed-radical-gauge","10.1":"sheaf.base-unipotents-wall","8.4":"sheaf.basic-properties-operational-characterisation","5.2":"sheaf.conservation-degeneracy-located","8.23":"sheaf.chains-radial-dyad-rain-finite","6.1":"sheaf.exceptional-algebra-deformation-normal-cone","8.26":"sheaf.matching-fibre","9.17":"sheaf.function-linearity-tame-constructions","2.8":"sheaf.local-freeness-constant-rank","8.22":"sheaf.rain-duality","3.4":"sheaf.resolution-ideal-theoretically","8.14":"sheaf.exceptional-algebra-black-hole","8.10":"sheaf.wall-fibre-black-hole","8.15":"sheaf.residue-square-root-twist-black-hole","3.3":"note.sheaf.fibre-over-null-generator-thickening-butlert1","9.16":"note.sheaf.what-section-does-does-not-close","6.4":"note.sheaf.blow-up-dictionary","9.15":"note.sheaf.what-stays-interior-paper","8.8":"note.sheaf.boundary-tameness-stated","5.4":"note.sheaf.setup-generalises-arbitrary-bundles","2.3":"note.sheaf.coordinates-crossing-speed","2.5":"note.sheaf.dimension-signature-generality","3.2":"note.sheaf.non-reducedness-singularity-registers-infinitesimal","8.5":"note.sheaf.bounded-norm-alone-does-not-characterise","9.11":"note.sheaf.answer-smooth-structure-question","8.24":"note.sheaf.kinematic-status-module","8.13":"note.sheaf.conservation-degeneracy-boundary-sharp-example","8.9":"note.sheaf.what-degenerated-physically","8.6":"note.sheaf.what-weights-are","3.5":"note.sheaf.sharpening-no-simplicity-needed","4.6":"note.sheaf.only-product-coupling-constants-matters","2.4":"note.sheaf.scope-tame-class","10.5":"note.sheaf.scope-what-discharges","6.3":"note.sheaf.direction-induced-twist","5.6":"note.sheaf.wall-class-posed","9.14":"note.sheaf.mixmaster-wall-complex","8.28":"note.sheaf.what-remains-matching","5.1":"sheaf.conservation-degeneracy-absolute-form","8.27":"sheaf.matching-connection-level","3.1":"sheaf.degeneration-sheaf","9.9":"sheaf.differential-closure-filtration-conormality","9.13":"sheaf.edge-wall","10.4":"sheaf.no-equivariant-value-wall","4.4":"sheaf.one-sided-completion","9.10":"sheaf.exponent-ratios-are-invariant","6.2":"sheaf.metrics-residue-square-root-twist","8.12":"sheaf.one-sided-completion-singularity","8.7":"sheaf.schwarzschild-degeneration-boundary-tame","9.5":"sheaf.stability-reduction-strict-diagonal-case","10.3":"sheaf.transversal-independence-wall","8.18":"sheaf.uniqueness-weighted-module","9.3":"sheaf.variable-weight-boundary-tameness-completion-forced","8.16":"sheaf.weights-are-forced-are-kasner-exponents"},"T5":{"10.2":"singularity.c2-cell-density","10.1":"singularity.c1-curvature-cutoff","10.3":"singularity.c3-counted-epoch","9.4":"singularity.deficit-carried-quanta-correlations","11.6":"singularity.envelope-endpoint-why-boundary-mode-locality","11.7":"singularity.what-event-returns-radiation","7.32":"singularity.chains-state-class-stability","7.15":"singularity.universality-temperature-under-g","6.4":"singularity.matching-steps-4b-4c-join-equation","7.12":"obj.singularity.geometric-modular-condition-g","5.6":"obj.singularity.grading-parity-automorphism","5.1":"obj.singularity.fibrewise-conformal-lift","C.1":"obj.singularity.two-fibres-two-assemblies","9.1":"obj.singularity.multi-mode-descent","7":"obj.singularity.fibrewise-conformal-lift","13.1":"singularity.imported-interior-collar-kasner-form","B.4":"sheaf.function-linearity-tame-constructions","2.1":"singularity.imported-equivalence-einstein-equations","A.1":"singularity.imported-surface-gravity-redshifted-acceleration","7.14":"singularity.imported-general-form","B.3":"singularity.imported-no-equivariant-value-wall","5.9":"singularity.imported-descent-one-way-conditional-expectation","B.2":"singularity.imported-one-sided-completion-singularity","B.1":"sheaf.schwarzschild-degeneration-boundary-tame","10.5":"singularity.imported-induced-geometry-interior-slice","7.9":"singularity.imported-univalence-superselection-rule","4.1":"singularity.pseudo-inverse-identities-hyperbolic-atom","10.4":"singularity.causal-epoch-computed-exactly","12.1":"singularity.parity-protection","7.2":"singularity.schmidt-forcing-proved-outright","C.6":"singularity.function-linear-endomorphisms-are-bundle-maps","7.1":"singularity.modular-theory-matrix-factor-proved-outright","7.30":"singularity.l-boundary-mode-locality","9.6":"singularity.p-reduced-metric-level-reading-many","7.8":"singularity.p-univalence","8.1":"singularity.q-joint-quasi-freeness-s-wave","11.3":"singularity.rate-models-kinematic-inputs-l-u","7.19":"singularity.r-regularity-fixed-locus","10.7":"singularity.area-law-test","9.2":"singularity.pinching-against-partial-trace-scope-coincidence","10.6":"singularity.stretched-singularity-count","5.5":"singularity.descent-what-it-erases","7.31":"singularity.number-diagonal-dynamics-models-scrambling-derived","7.21":"singularity.euclidean-rotor-where-it-lies","2.5":"singularity.cones-fold","13.2":"singularity.modular-flow-boundary-modes-holonomy-universal","7.25":"singularity.why-calibration-cannot-be-internal","2.7":"singularity.non-removability-invariant-argument","A.2":"singularity.computed","5.2":"singularity.transport-schwarzschild-fibre","2.6":"singularity.degeneration-exactly","C.2":"singularity.sheaf-assembly-sheaf","12.4":"singularity.models-entropy-sequence-exactly","11.4":"singularity.no-attic-derived-model","2.3":"singularity.connection-bivector-computed","6.2":"singularity.plane-rate","C.7":"singularity.bundle-maps-quantise-without-hopping","7.18":"singularity.euclidean-section-period","2.4":"singularity.solution-where-divergence-lies","13.4":"singularity.l-stabiliser-tangent","7.23":"singularity.two-kms-functionals-sign","12.3":"singularity.purity-correlation-transfer-recovery","12.5":"singularity.two-levels-finite-model","3.1":"singularity.type-n-only-type-n","2.2":"singularity.unipotent-ray","13.3":"note.singularity.where-spectrum-would-lie","12.6":"note.singularity.dissolution-now-both-levels","7.11":"note.singularity.what-hypothesis-ii-cost-what-p","7.17":"note.singularity.two-clocks-one-calibration","11.8":"note.singularity.what-was-obtained-what-it-cost","5.8":"note.singularity.metric-level-parity-even-level","6.5":"note.singularity.frame-made-explicit","7.7":"note.singularity.unconditional-reading-how-it-sharpens-gap","C.9":"note.singularity.declared-residual-size","11.2":"note.singularity.island-dictionary-one-dissonance","7.4":"note.singularity.israels-reading-recovered","8.3":"note.singularity.four-dimensional-lift-flagged","5.3":"note.singularity.what-instance-shows-what-it-does","C.5":"note.singularity.what-antecedent-stated-plainly","11.9":"note.singularity.monogamy-firewalls-small-corrections-theorem","7.22":"note.singularity.what-curvature-selected-pair-does-does","7.26":"note.singularity.cost-r-dictionary","12.2":"note.singularity.thermality-records-what-projection-cannot-see","7.29":"note.singularity.why-rescues-rather-than-damages-chain","13.5":"note.singularity.what-does-residual","7.33":"note.singularity.steps-status-what-still-open","7.24":"note.singularity.euclidean-reading-sign-flagged","2.8":"note.singularity.corank-limit-weighted-answer","9.5":"note.singularity.where-descent-acts-hawkings-loss-derived","7.5":"note.singularity.three-wrinkles-recorded","8.2":"singularity.bosonisation-bridge-s-wave-sector","9.3":"singularity.deficit-theorem-cost-descent-exactly","7.3":"singularity.modular-descent","7.10":"singularity.ascended-marginals-are-diagonal","11.5":"singularity.eviction-window-thermal-product-radiation-entropy","7.6":"singularity.descended-form-state-independent","7.27":"singularity.purity-output-partner-commutant","C.8":"singularity.class-relative-no-go-no-supplied","7.13":"singularity.kms-uniqueness-factor","C.4":"singularity.net-assembly-net-it-everything","C.3":"singularity.finite-truncation-meet-big-fibres-equals","6.3":"singularity.modular-structure-completed-pair","5.4":"singularity.imported-no-c-number-repair","7.28":"singularity.exact-equilibrium-over-determines-boundary-modes","11.1":"singularity.assembled-page-curve-up-typicality","5.7":"singularity.descent-parity-average","7.20":"singularity.rate-discharge-hypothesis-iii","7.16":"singularity.rate-rigidity-temperature-not-algebra-intrinsic","6.1":"singularity.curvature-gauge-field-exact-shape-decoupling"},"T6":{"6.6":"interior.duality-monodromy-fibration-over-ring","5.12":"interior.schwarzschild-lines-exactly","5.5":"obj.interior.weighted-blow-up-hubble-normalisation-admissible","3":"interior.imported-tractor-connection","6.10":"interior.imported-mass-inflation-stability","2.1":"interior.imported-equivalence-einstein-equations","6.3":"interior.imported-kerr-curvature","6.1":"interior.imported-kerr-schild-form-kerr-gauge","2.2":"interior.imported-schwarzschild-curvature-spectrum","4.1":"interior.imported-tractor-connection","6.7":"interior.imported-walker-penrose-killing-spinor","5.3":"interior.interior-connection-exactly","4.2":"interior.metric-parallelism-trace-schouten-condition","5.4":"interior.boosts-generate-exactly-levi-factor","5.1":"interior.kasner-form-interior","5.2":"interior.exact-parallelism-convergence-rate","4.8":"interior.sign-fixed-internally","4.3":"interior.stabilisers-flat-model","4.4":"interior.non-null-stabilisers-section-they-act","6.2":"interior.unipotency-across-kerr-family","6.8":"interior.complex-scale-inverse-cube-killing-spinor","6.11":"interior.filtration-cauchy-horizon-read-literature","6.4":"interior.complex-factorisation-location-ring","3.3":"interior.exact-scale-decoupling","4.10":"interior.stabiliser-rotates-parabolic-reductive","3.1":"interior.gauge-trajectory-unipotent-ray","5.7":"note.interior.parabolic-structure-completed","5.8":"note.interior.generic-delimiter-mixmaster","4.6":"note.interior.what-equation-now-says","5.10":"note.interior.what-two-ends-geometry-jointly-say","6.9":"note.interior.points-contact-established-physics-kept-view","4.11":"note.interior.refining-not-contradicting-parabolic-structure","3.2":"note.interior.parabolic-structural-reason","4.9":"note.interior.convention-note-sign-norm","5.13":"note.interior.what-closed-what-remains","3.4":"note.interior.three-readings","6.12":"note.interior.conclusion-two-cautions","6.5":"note.interior.duality-winding-around-ring","5.11":"interior.transport-level-convergence-along-tangential-curves","4.7":"interior.scale-tractor-leaves-cone","4.5":"interior.covariant-form-vacuum-equations","5.9":"interior.schwarzschild-de-sitter-weighted-limit","5.6":"interior.weighted-limit-theorem"},"T7":{"5.4":"hawking.greybody-inheritance-under-interface-premise","5.3":"hawking.helicity-lift-joints-itemised","3.8":"hawking.full-uniqueness-given-dynamics","4.1":"obj.hawking.continuum-mode-space","2.7":"obj.hawking.boundary-mode-algebra-windows-boost-dynamics","4.3":"hawking.imported-thermal-representation","2.4":"hawking.imported-s-wave-bosonic-sector","2.3":"hawking.imported-algebra-boundary-modes-car-algebra","2.2":"hawking.imported-modular-descent-premises-geometric-normalisation","2.5":"hawking.imported-exterior-exactly-general-relativity","3.7":"hawking.imported-ideal-fermi-gas-uniqueness","3.4":"hawking.imported-kms-passes-inductive-limits","5.1":"hawking.imported-penrose-transform","3.3":"hawking.imported-quasi-free-states-car-algebra","2.6":"hawking.imported-twistor-storey-ordering-shift","3.5":"hawking.imported-quasi-free-kms-reduces-two","3.1":"hawking.gibbs-states-are-kms-conversely-finite","3.2":"hawking.kms-restricts-invariant-subalgebras","6.1":"hawking.current-commutator-exactly-edge-split","5.2":"hawking.homogeneity-ordering-shift","2.1":"hawking.modular-structure-completed-pair","6.2":"hawking.bose-einstein-occupancy-quantified-window-corrections","3.9":"note.hawking.what-now-proved-open-problem","5.5":"note.hawking.what-lift-does-does-not-claim","6.3":"note.hawking.p-2-correction-interpreted","4.4":"note.hawking.free-fermion-thermal-field-theory-israels","4.5":"note.hawking.which-dynamics-what-level","6.4":"note.hawking.point-contact-weinberg-witten-triage","4.2":"hawking.i-state-continuum","3.6":"hawking.i-state"},"T8":{"6.2":"scrambling.return-delay-scrambling-log-recovered","6.3":"scrambling.no-attic-route","6.1":"scrambling.spreading-law-chaos-bound-saturated","4.4":"scrambling.integer-holographic-form-identification","3.1":"obj.scrambling.stretched-singularity","2.3":"tower.witt-index-quantum-capacity","4.7":"scrambling.imported-collars-coframe-exceptional-set-helicity","2.4":"interior.imported-schwarzschild-curvature-spectrum","2.2":"scrambling.imported-modes-modular-inventory","5.3":"scrambling.imported-kostant-madore-partition-data","2.1":"singularity.causal-epoch-computed-exactly","5.1":"scrambling.imported-time-plane-modular-data","4.2":"scrambling.clock-inventory-boundary-modes","3.2":"scrambling.scheme-robustness-cutoff","4.1":"scrambling.intrinsic-clock-ic-flagged-premise","5.4":"scrambling.indifference-structural-premise-series","3.5":"scrambling.area-law-test","5.6":"scrambling.consistency-car-construction-i-states-insensitivity","4.10":"scrambling.exactness-excludes-cutoff-dependence","4.8":"scrambling.exact-factorisation-thinning","5.2":"scrambling.boundary-mode-space-matrix","5.7":"scrambling.per-slice-verification-two-failed-aggregations","4.13":"scrambling.no-recount-reaches-quarter","4.11":"scrambling.pair-mode-qubit-one-object","4.12":"scrambling.residue-each-convention","3.6":"scrambling.uniqueness-internal-scaling","3.3":"scrambling.slice-volume-exactly-per-unit-killing","4.9":"scrambling.candidate-principles-their-yields","7.2":"scrambling.catalogue-confronted","7.1":"scrambling.no-echo-prediction-registered","4.14":"note.scrambling.prediction-restated","4.6":"note.scrambling.point-contact-what-kind-statement","4.5":"note.scrambling.circularity-fence","3.7":"note.scrambling.density-factor-stated-full","3.4":"scrambling.mode-count","4.3":"scrambling.epoch-modular-period-two-unknowns-become","5.5":"scrambling.principality-indifference-sphere"},"T9":{"6.11":"correspondence.googly-localisation-quartic-order","4.8":"correspondence.one-statement-three-languages","3.5":"note.correspondence.isomorphism-witt-pair","2.1":"correspondence.imported-forced-completion-fibre-quadric","2.2":"correspondence.imported-ladder-pairs-fock-modules-over","6.1":"correspondence.imported-nonlinear-graviton","4.9":"correspondence.imported-tractor-connection-local-twistor-transport","4.3":"correspondence.imported-stabilisers-flat-model","6.9":"correspondence.imported-complete-reducibility","4.7":"correspondence.imported-vacuum-equations-scale-tractor","6.3":"correspondence.imported-weyls-theorem","6.2":"correspondence.imported-weyl-commutes-duality","3.3":"correspondence.chevalley-pairing","4.4":"correspondence.chiral-planes-summand-spaces","6.7":"correspondence.ordering-filtration","6.4":"correspondence.lorentzian-duality-complex-structure","5.5":"correspondence.symmetrised-quadratics-palatial-algebra","6.10":"correspondence.chirality-split-ordering-insensitivity-asd-sector","4.10":"correspondence.local-twistor-transport-ascended-spinor-connection","6.5":"correspondence.no-real-lorentzian-vacuum-half-flat","4.5":"correspondence.reality-conjugation-twistor-form-factor","5.6":"correspondence.clifford-side-ordering-shift","4.1":"correspondence.skew-lines-splittings-hyperbolic-planes-one","5.2":"correspondence.spin-representation","5.1":"correspondence.statistics-no-go","5.4":"note.correspondence.point-contact-planes-tower","6.6":"note.correspondence.boundary-stated-plainly","3.2":"note.correspondence.dimensions-real-form","4.6":"note.correspondence.what-factor-i-what-remains-conventional","6.12":"note.correspondence.what-proved-what-conjectured","4.12":"note.correspondence.one-imported-convention-local-twistor-identification","6.8":"note.correspondence.where-curvature-operator-could-enter","4.11":"note.correspondence.point-contact-what-became-tractor-formalism","5.8":"note.correspondence.two-storey-picture","5.7":"correspondence.shared-core-ordering-dictionary","4.2":"correspondence.incidence-relation-chart","3.1":"correspondence.fock-model-complexified-ascended-algebra","3.4":"correspondence.spinor-identification","5.3":"correspondence.twistors-are-states-three-ladder-pairs"},"T10":{"4.10":"dark-energy.forcing-half-schwarzschild-wall-residue-sense","5.5":"dark-energy.lift-inherits-no-go-steps-itemised","6.1":"dark-energy.conclusion-does-not-depend-ontology-level","5.6":"obj.dark-energy.four-ways-number-enters-theory-shape","2":"dark-energy.imported-frozen-point-geometry","3":"dark-energy.imported-macdowell-mansouri-theorem-stelle-west","5.1":"dark-energy.imported-conformal-orthogonality-sugawara-construction","2.3":"dark-energy.imported-s-wave-current-algebra","2.1":"dark-energy.imported-frozen-point-geometry","5.11":"dark-energy.imported-henneaux-teitelboim-promotion","2.2":"dark-energy.imported-macdowell-mansouri-theorem-stelle-west","5.10":"standard-model.trichotomy-what-kind-number","2.4":"dark-energy.imported-walls-sphere-theorem","4.7":"dark-energy.imported-weighted-limit-schwarzschild-singularity-matching","2.5":"dark-energy.stelle-west-vector-frozen-point","4.12":"dark-energy.variable-exponents-residue-pointwise-corrections-are","4.11":"dark-energy.wall-counterterm","5.7":"dark-energy.four-alternatives-are-exhaustive-three-are","5.4":"dark-energy.point-infinity-has-no-physical-fluctuation","4.9":"dark-energy.frozen-point-datum-kasner-wall","4.8":"dark-energy.cosmological-constant-does-not-change-residue","5.2":"dark-energy.acoustic-no-go-one-way-grip","5.8":"dark-energy.under-action-written-norm-parameter-laws","4.2":"dark-energy.vacuum-region-registration-condition","4.5":"dark-energy.sheaf-papers-wall-soldering-variables","4.4":"note.dark-energy.point-contact-what-dichotomy-explains","5.9":"note.dark-energy.what-clause-3-requires-what-it","4.13":"note.dark-energy.what-three-discharges-leave","5.3":"note.dark-energy.weakness-dimension-nonlinear-bound-open-items","4.6":"note.dark-energy.what-settles-what-it-reformulates","3.2":"note.dark-energy.point-contact-why-form-not-value","3.1":"dark-energy.frozen-point-makes-stelle-west-vector","4.3":"dark-energy.gravity-pre-metric-forces-degenerate-exactly","4.1":"dark-energy.walls-free-sector"},"T11":{"3.2":"mass.weight-polynomial-two-series","5.4":"obj.mass.grip-mass-composite","5":"mass.mass-symplectic-area-two-twistor-formula","10":"mass.exact-join","3":"mass.mass-weight-dictionary","11":"mass.exact-join","4":"mass.weight-polynomial-two-series","6":"note.mass.what-nullity-fixes","2":"mass.imported-frozen-point-tractor-connection","12":"mass.weight-composite","2.5":"dark-energy.frozen-point-makes-stelle-west-vector","2.3":"mass.imported-flat-model-twistor-chart-infinity","2.6":"mass.imported-unitary-representations-de-sitter-group","2.1":"mass.imported-frozen-point-tractor-connection","2.4":"mass.imported-palatial-quadratics-homogeneity-charge","2.2":"mass.imported-thomas-operator","5.3":"mass.chart-form-spin-isomorphism","5.1":"mass.de-sitter-scale-frozen-point","5.8":"mass.five-broken-generators","2.7":"mass.invariant-forms-simple-lie-algebra","5.5":"mass.grip-real","4.1":"mass.mass-symplectic-area-two-twistor-formula","5.7":"mass.casimir-form-join","5.9":"mass.weight-composite","6.1":"note.mass.point-contact-what-gravity-why-everything","3.4":"note.mass.what-dictionary-does-does-not-yield","5.10":"note.mass.what-join-says","5.2":"note.mass.what-nullity-fixes","3.5":"note.mass.point-contact-dictionary-plain-words","5.11":"note.mass.quantisation-ordering","3.3":"note.mass.conventions-sign","4.2":"note.mass.point-contact-angle-between-two-vacua","3.1":"mass.mass-weight-dictionary","5.6":"mass.exact-join"},"T12":{"9.34":"standard-model.coefficient-cannot-come-frozen-point","10.9":"standard-model.bidoublet-complex","8.10":"standard-model.direction-demanded-content-doublet-heavy","9.12":"standard-model.under-s-frozen-points-split-inverse","8.6":"standard-model.under-s-mirror-inherits-desert","9.36":"standard-model.what-direction-made","9.28":"standard-model.lifted-components-read-vevs","9.25":"standard-model.one-vev-vector-relations-breaking-pattern","9.8":"obj.standard-model.two-rung-module-sectors-slot-components","8.4":"obj.standard-model.one-threshold-spectrum-admissible","1":"standard-model.gauge-algebra-minimal-massive-composite","5":"standard-model.weak-angle-over-derived-generation","4":"standard-model.quarks-leptons-two-level-fermion-content","3":"standard-model.raw-representation-content-state-space","2":"standard-model.global-form-quotient-determined","6":"obj.standard-model.one-threshold-spectrum-admissible","2.7":"standard-model.imported-anomaly-coefficients","9.6":"standard-model.imported-spinor-bilinears","2.6":"standard-model.imported-cauchy-decomposition-exterior-power","11.1":"standard-model.imported-clebsch-structure-seesaw","9.19":"standard-model.imported-maximal-compact-subgroups","2.5":"standard-model.imported-frozen-point-dictionary","2.11":"standard-model.imported-fock-representation-clifford-algebra-bogoliubov","9.5":"standard-model.imported-frozen-point-grip-thirteenth-refutation","9.38":"families.doublet-direction-module-georgi-jarlskog-clebsch","9.3":"standard-model.imported-grip-area-casimir-form","2.3":"standard-model.imported-twistor-charge-helicity","8.1":"standard-model.imported-coefficient-sum-indices","8.3":"standard-model.imported-invariant-forms-simple-lie-algebra","2.1":"mass.mass-symplectic-area-two-twistor-formula","9.4":"transport.totality","9.7":"neutrino.imported-ceiling-under-hypothesis-u-arrow","2.2":"standard-model.imported-pair-systems-two-chirality-halves","8.21":"standard-model.imported-proton-condition","10.1":"standard-model.imported-pati-salam-representation-theory-survival","2.10":"standard-model.imported-norm-frozen-point-not-field","2.8":"standard-model.imported-one-loop-running-trace-ratio","9.1":"standard-model.imported-tower-commuting-copies-fock-module","8.2":"standard-model.imported-sectors-superselection-mirror-copy","2.9":"standard-model.imported-tractor-bundle-spinor-bundle-their","9.2":"standard-model.imported-fock-model-twistor-space","2.4":"dark-energy.gravity-pre-metric-forces-degenerate-exactly","8.18":"standard-model.imported-two-loop-gauge-coefficients","8.8":"standard-model.complete-multiplets-shift-all-three-coefficients","10.5":"standard-model.matching-traces","2.12":"standard-model.pair-count-dimension","9.23":"standard-model.invariant-pairing-five-modes","2.13":"standard-model.segre-lemma-automorphisms-preserving-decomposable-tensors","7.1":"standard-model.one-number-explain","11.7":"standard-model.fits-record-level","7.4":"standard-model.dating-descent","9.17":"standard-model.configuration-sector-carries-higgs-doublets-quantum","7.5":"standard-model.largeness-number-universes-boundary-modes","8.14":"standard-model.places-outside-state-space","7.2":"standard-model.what","7.3":"standard-model.why-large","9.15":"standard-model.under-s-bracket-direction-charged-not","10.7":"standard-model.majorana-element","5.6":"standard-model.chirality-two-halves-spinor-module-conjugation","9.16":"standard-model.invariant-operators-module","5.7":"standard-model.connection-forced","5.3":"standard-model.quarks-leptons-two-level-fermion-content","6.2":"standard-model.spectrum-run","10.8":"standard-model.left-right-parity-what-breaks-it","11.5":"standard-model.neutrino-dirac-matrix-charged-fermions","11.3":"standard-model.equal-weight-module","9.9":"standard-model.module-factorises-even-ground-elements-act","9.26":"standard-model.frozen-point-first-rung-component","4.3":"standard-model.four-dimensions-forces-converse","11.6":"standard-model.grade-three-georgi-jarlskog-direction","3.1":"standard-model.internal-symmetry-ladder","8.13":"standard-model.under-s-state-space-complete-multiplets","9.27":"standard-model.transported-frozen-point","9.14":"standard-model.frozen-point-pair-mixing","9.20":"standard-model.pair-mixing-not-colour","8.22":"standard-model.proton-condition-candidates","10.6":"standard-model.proton-decay-only-through-slot-pair","10.10":"standard-model.chain","10.4":"standard-model.generation-ten-under-pati-salam","5.1":"standard-model.raw-representation-content-state-space","9.18":"standard-model.reduction","11.2":"standard-model.what-angle-asks-neutrino-sector","3.2":"standard-model.mass-bracket-charged-singlet","5.8":"standard-model.under-s-composites-state-space-spinor","10.2":"standard-model.automorphisms-preserve-slot-pair-split-are","8.16":"standard-model.four-supersymmetric-splits","9.29":"standard-model.what-derived-what-not","8.11":"standard-model.table-exact","9.22":"standard-model.ten-transported-ambient-space-doublets-are","8.5":"standard-model.no-tower-but-one-contributes-towers","9.21":"standard-model.transported-frozen-point-doublet-datum-not","7.6":"standard-model.trichotomy-what-kind-number","9.32":"standard-model.space-symmetric-doublet-mass-forms-two","8.19":"standard-model.supersymmetric-row-two-loops","6.1":"standard-model.weak-angle-over-derived-generation","11.8":"note.standard-model.what-section-settles-route-series-takes","9.37":"note.standard-model.what-settles-what-it-leaves-open","6.3":"note.standard-model.point-contact-what-framework-adds-classic","8.7":"note.standard-model.what-settled-what-gravitational-channel-cannot","8.23":"note.standard-model.what-condition-does-not-cover","5.2":"note.standard-model.eighth-refutation-split-conclusion-decisive-test","11.4":"note.standard-model.equal-weight-premise","8.17":"note.standard-model.gluino-heavier-threshold-block-level","9.13":"note.standard-model.0-what-massless-means-here","9.30":"note.standard-model.two-pairings-two-patterns","10.11":"note.standard-model.what-chain-decides-what-it-leaves","8.12":"note.standard-model.sensitivity-one-loop-decides-nothing-about","5.9":"note.standard-model.point-contact-grand-unification-what-hypothesis","3.3":"note.standard-model.sixth-refutation-ladder-not-gauge-group","10.3":"note.standard-model.reading-automorphism-rule","8.20":"note.standard-model.scope","4.4":"note.standard-model.point-contact-what-kind-explanation","5.4":"note.standard-model.weakness-examined-exotics-conjugation-hypercharge","4.1":"standard-model.gauge-algebra-minimal-massive-composite","9.10":"standard-model.moment-map-grip-mass-are-insensitive","9.35":"standard-model.bracket-composite-lands","8.9":"standard-model.one-threshold-exact-criterion","9.31":"standard-model.family-no-go-vev-cannot-separate","9.33":"standard-model.no-go-frozen-point-lifts-do","4.2":"standard-model.global-form-quotient-determined","5.5":"standard-model.hypercharge-global-form-pair-counting-consistency","9.11":"standard-model.grip-mass-two-rung-module","8.15":"standard-model.two-threshold-criterion","9.24":"standard-model.yukawa-pattern-two-rung-module"},"T13":{"3.1":"families.three-generations-faces-maximal-composite","8.3":"families.order-operations-matter-programme","6":"families.skeleton-rank-one-plus-ordering-shift","7":"families.koide-class-crossing-fit-conclusion","1":"families.bracket-fixed-join","5":"families.rigidity-pairing-sector-one-event","3":"families.linear-conjecture-refuted-data","4":"families.chart-computation-sign-twist-bracket-form","2":"families.source-term-linear-tilt-mass-functional","2.1":"families.imported-face-valued-bracket-quantum-numbers","8.5":"families.imported-decomposition-grade-dictionary","2.2":"families.imported-dictionary-exact-join","2.6":"families.imported-squeezed-vacuum-bosonic-pairing","2.3":"families.imported-one-derived-generation-hypothesis-s","8.6":"families.imported-grade-three-direction-between-families","2.5":"families.imported-indifference-instrument","2.4":"standard-model.trichotomy-what-kind-number","8.2":"families.imported-tree-relations-family-no-go","7.4":"families.absolute-scale-clean-negative-result","7.1":"families.one-open-problem-three-forms","7.2":"families.koide-instrument","7.3":"families.selectivity-observation-level","8.1":"families.doublet-direction-module-georgi-jarlskog-clebsch","4.3":"families.alignment-computed-thirteenth-refutation-democracy-one","5.4":"families.chart-computation-sign-twist-bracket-form","6.4":"families.classification-displaced-gaussian-class-solved-level","4.1":"families.bracket-fixed-join","7.5":"families.why-kinematic-attacks-had-fail","6.3":"families.koide-class-crossing-fit-conclusion","3.2":"families.three-identical-families-mixing-shared-slots","5.1":"families.linear-conjecture-refuted-data","5.3":"families.koide-nullity-condition-one-member-invariant","4.4":"families.faces-ordered-what-identification-requires-first","6.1":"families.rigidity-pairing-sector-one-event","4.2":"families.source-term-linear-tilt-mass-functional","8.4":"note.families.what-series-holds-what-bracket-cannot","3.3":"note.families.point-contact-what-kind-answer-three","5.2":"note.families.indifference-route-examined-withdrawn","6.2":"families.skeleton-rank-one-plus-ordering-shift"},"T14":{"7.26":"dark-matter.thickness-not-gravitational-quantity","3.11":"dark-matter.which-towers-can-carry-arrow","2.10":"obj.dark-matter.witt-flag","3.8":"obj.dark-matter.null-blades-fock-ideal-chirality","3.6":"obj.dark-matter.frozen-phase-operators","3.3":"obj.dark-matter.spinor-module-type","1":"dark-matter.population-count-one-share-half-percent","2.6":"dark-matter.imported-gravity-only-coupling","A.1":"dark-matter.imported-massless-graviton-production-rate","7.25":"dark-matter.imported-inverse-square-law-short-range","2.12":"dark-matter.imported-schwinger-discharge-charged-hole","7.18":"dark-matter.imported-frozen-point-de-sitter-radius","2.9":"dark-matter.imported-derived-generation-flag","2.7":"dark-energy.vacuum-region-registration-condition","7.27":"dark-matter.imported-linear-momentum-equation-traceless-field","2.13":"singularity.rate-models-kinematic-inputs-l-u","7.32":"dark-matter.imported-composition-simulated","4.2":"dark-matter.imported-inputs-standard-model-chain","7.21":"dark-matter.imported-induced-equations-hypersurface","2.5":"dark-matter.imported-eight-towers-mod-8-clock","2.8":"dark-matter.imported-trichotomy-descents-data","7.11":"dark-matter.direction-nesting-adds-algebra","6.1":"dark-matter.projection-every-towers-content-dilutes-ones","4.10":"dark-matter.which-towers-are-populated","7.31":"dark-matter.status-rule","7.19":"dark-matter.d-democracy-total-mass","7.2":"dark-matter.r1-equal-mass-per-quantum","7.3":"dark-matter.r2-one-quantum-per-unit-ball","7.4":"dark-matter.r3-one-cell-per-unshared-direction","2.4":"dark-matter.p4-democracy-asymmetry-over-oriented-towers","2.2":"dark-matter.p2-indifference","2.11":"dark-matter.p5-boundary-modes-hold-entropy-not","2.1":"dark-matter.p1-single-frozen-point","2.3":"dark-matter.p3-nearest-dimension-representatives","7.15":"dark-matter.total-function-thickness","5.1":"dark-matter.asymmetry-arrow-counted-fifteenth-refutation","6.2":"dark-matter.radiation-audit-what-theorem-closes-what","6.4":"dark-matter.ceiling-valued-inherited-success","4.6":"dark-matter.stored-asymmetry-charge-not-number","A.3":"dark-matter.coefficients-floors-they-give-what-gravity","4.5":"dark-matter.population-count-one-share-half-percent","7.20":"dark-matter.democracy-de-sitter-radius-unit-ball","3.9":"dark-matter.two-families-are-two-chiralities","3.2":"dark-matter.flag-insensitive-residue-no-flag-level","A.2":"dark-matter.seeding-gravity-floor-dark-towers-temperature","6.5":"dark-matter.parallel-boundary-mode-spaces-one-wall","4.7":"dark-matter.mirror-share-one-how-fragile","7.1":"dark-matter.nesting","A.4":"dark-matter.no-coupling-rule-odd-towers-follows","6.3":"dark-matter.open-channels-their-costs","5.2":"dark-matter.orientation-arrow-seventeenth-refutation","7.16":"dark-matter.two-roots-are-chord-arc-quarter","7.22":"dark-matter.two-reductions","3.1":"dark-matter.towers-are-residues-single-clock-filter","7.6":"dark-matter.unit-ball-rule","7.28":"dark-matter.reduced-response-gravity-needs-supporting-stress","7.24":"dark-matter.sourcing-rule-forced-not-chosen","4.1":"dark-matter.superselected-hence-dark-exactly-stable","7.12":"dark-matter.contact-mechanism-returns-r3","7.13":"note.dark-matter.what-s-uses-what-it-does","7.9":"note.dark-matter.extra-direction-must-co-expand","7.7":"note.dark-matter.why-ball-denominator","3.7":"note.dark-matter.where-flag-defined-what-it-carries","3.13":"note.dark-matter.forks-cost-restated-causal-criterion-theorem","7.10":"note.dark-matter.equivalent-forms-assignment-not","7.30":"note.dark-matter.halo-built-collisionless-sheets-cold-dark","7.29":"note.dark-matter.sheet-family-linear-spectra","7.5":"note.dark-matter.r1-against-series-mass-formulas","5.3":"note.dark-matter.point-contact-one-datum-two-questions","7.23":"note.dark-matter.one-pole-flat-count","7.8":"note.dark-matter.what-rule-has-has-not","7.14":"note.dark-matter.scope-mechanism","4.9":"note.dark-matter.what-share-exposed-what-it-not","7.17":"note.dark-matter.common-thickness-curve-if-two-differ","3.12":"note.dark-matter.point-contact-what-kind-dark-matter","4.3":"dark-matter.mirror-tower-copy-one","4.4":"dark-matter.mode-counts-two-modules-which-one","3.10":"dark-matter.flag-bit-exists-exactly-tower-dimension","4.8":"dark-matter.mirror-share-assembled","3.5":"dark-matter.residue-soldered-invariant-not-algebraic-one","3.4":"dark-matter.type-residue-what-each-tower-can"},"T14a":{"4.2":"odd-extensions.copy-theorems-blind-spot","2.4":"odd-extensions.four-extensions-oriented-pair","7.3":"odd-extensions.not-coupling-between-towers","7.2":"odd-extensions.two-readings-which-which","10.4":"odd-extensions.two-classes-completion","8.3":"odd-extensions.cosmological-constant-undetermined-within-series","6.3":"odd-extensions.cosmological-constant-deforms-wall","2.1":"obj.odd-extensions.single-extension","8.1":"odd-extensions.imported-minimal-completion-degenerate-algebra-rule","1.4":"odd-extensions.imported-conformal-completion","1.3":"odd-extensions.imported-copy-theorem-soldered-residue","1.5":"odd-extensions.imported-frozen-point","9.1":"dark-energy.point-infinity-has-no-physical-fluctuation","6.1":"odd-extensions.imported-frozen-point-degenerate-algebras","1.2":"odd-extensions.imported-representatives-dimension-nearest-four-types","10.1":"odd-extensions.imported-tame-walls-exceptional-algebra-residue","1.1":"odd-extensions.imported-towers-clock","2.2":"odd-extensions.volume-element-odd-dimension","7.1":"odd-extensions.belongs-tower","5.1":"odd-extensions.four-extensions-are-four-odd-towers","9.2":"odd-extensions.boost-dilation-ratio-gauge","3.2":"odd-extensions.translation-bivectors-frozen-point","5.2":"odd-extensions.every-path-mirror-crosses-two-time","10.2":"odd-extensions.line-tame-wall","9.3":"odd-extensions.two-towers-one-curved-universe","7.4":"note.odd-extensions.what-copies-are","4.3":"note.odd-extensions.holographic-coincidence","5.3":"note.odd-extensions.no-mechanism","8.4":"note.odd-extensions.dictionary-ascents-null-pair","9.4":"note.odd-extensions.one-operator-sees-difference","3.3":"note.odd-extensions.what-says-what-it-does-not","2.5":"note.odd-extensions.added-axis-pseudoscalar","8.6":"note.odd-extensions.what-transport-stance-does-does-not","6.4":"note.odd-extensions.what-adds-dark-energy-paper","10.5":"note.odd-extensions.what-section-adds","8.5":"note.odd-extensions.two-bits-compared","8.2":"odd-extensions.transport-constrains-frozen-point-only-through","10.3":"odd-extensions.exceptional-algebra-residue-completion-both-sides","3.1":"odd-extensions.mirror-inside-complexified-extension-absent-doubled","6.2":"odd-extensions.are-ascents-pair-signed","4.1":"odd-extensions.twistor-algebra","2.3":"odd-extensions.doubling-or-complexification"},"T14b":{"3.4":"simulations.confinement-scale-does-not-matter","3.2":"simulations.imported-low-energy-scattering-two-dimensions","2.4":"simulations.imported-bullet-cluster","2.3":"simulations.imported-mirror","2.6":"simulations.imported-milky-ways-mass-budget","2.5":"simulations.imported-cluster-shapes","2.2":"simulations.imported-unit-ball-rule-family","2.1":"dark-matter.superselected-hence-dark-exactly-stable","4.1":"simulations.averaged-pair-operator","9.1":"simulations.mirror-galaxy","7.2":"simulations.halo-shapes","7.1":"simulations.merger","2.12":"simulations.c-odd-towers-collisionless","2.7":"simulations.s1-one-species-per-tower","2.8":"simulations.s2-sheet-fluid","2.9":"simulations.s3-mirror-cluster","2.10":"simulations.s4-our-matter","2.11":"simulations.s5-halos","3.3":"simulations.cluster-bound-two-dimensions","3.1":"simulations.effective-cross-section-sheet-matter","2.13":"note.simulations.what-premise-c-needs"},"T14c":{"8.3":"dark-tower-matter.mirrors-composition","7.2":"dark-tower-matter.same-kind-matter","3.1":"obj.dark-tower-matter.ideals-fields-momentum","2.3":"dark-tower-matter.imported-our-towers-chain","2.2":"dark-tower-matter.imported-clifford-structure","2.4":"dark-tower-matter.imported-unit-ball-rule","2.5":"dark-tower-matter.imported-cluster-simulations","2.1":"dark-tower-matter.imported-towers-their-types","6.2":"note.dark-tower-matter.neutral-row","3.4":"dark-tower-matter.adjoint-norm","11.1":"dark-tower-matter.towers-built","8.4":"dark-tower-matter.mirror-against-record","2.6":"dark-tower-matter.h1-momentum","2.7":"dark-tower-matter.h2-identification","2.8":"dark-tower-matter.hypothesis-s-slot-statistics","2.9":"dark-tower-matter.u-transposition-rule","8.2":"dark-tower-matter.mirrors-temperature-p2","9.4":"dark-tower-matter.r1-has-no-mechanism-odd-towers","6.5":"dark-tower-matter.anomalies","6.1":"dark-tower-matter.three-dimensional-content","6.3":"dark-tower-matter.five-dimensional-content","9.3":"dark-tower-matter.five-dimensional-towers","7.1":"dark-tower-matter.residue-seven-unit","4.1":"dark-tower-matter.pairs","9.1":"dark-tower-matter.three-dimensional-phases","9.5":"dark-tower-matter.population","9.2":"dark-tower-matter.survival-sheets","10.1":"dark-tower-matter.sterile-kinematics","6.4":"note.dark-tower-matter.why-s-fails-three-dimensions-not","3.6":"note.dark-tower-matter.four-dimensional-case-t11s-formula","3.3":"note.dark-tower-matter.t14s-types-are-different-commutant","5.2":"note.dark-tower-matter.branches-break-u-what-they-give","10.2":"note.dark-tower-matter.kleinian-algebra","7.3":"note.dark-tower-matter.r-5-unit-datum-or-field","4.3":"note.dark-tower-matter.two-readings-unit","2.10":"note.dark-tower-matter.why-u","5.1":"dark-tower-matter.gauge-algebras","3.2":"dark-tower-matter.constituents-field","3.7":"dark-tower-matter.ladder","8.1":"dark-tower-matter.mirror-algebra","3.5":"dark-tower-matter.where-mass-begins","4.2":"dark-tower-matter.third-pairs-unit-five-dimensions"},"T15":{"1":"neutrino.seesaw-what-gauge-invariance-proves-what","2.2":"neutrino.imported-mass-bracket-quantum-numbers","2.5":"neutrino.imported-ceiling-under-hypothesis-u-arrow","2.1":"neutrino.imported-derived-content-singlets","2.3":"neutrino.imported-indifference-faces-democratic-alignment-rank","2.4":"mass.exact-join","2.6":"dark-energy.vacuum-region-registration-condition","4.6":"neutrino.breaking-relation","4.3":"neutrino.invariant-symmetric-matrices","4.8":"neutrino.mixing-none-leading-order","4.5":"neutrino.h-second-stage-hierarchical","4.2":"neutrino.m-framework-realises-majorana-term-scale","5.4":"neutrino.r-descent-reheats-below-lower-heavy","5.1":"neutrino.double-prediction-sum-predicted-floor","3.1":"neutrino.empty-twistor","5.3":"neutrino.leptogenesis-suppressed-alignment-reheating-premise-new","4.4":"neutrino.rank-one-seesaw-ordering-sum-double","4.1":"neutrino.seesaw-what-gauge-invariance-proves-what","4.7":"note.neutrino.branch-m-3","5.2":"note.neutrino.confrontation-it-stands-date-stamped","3.2":"note.neutrino.point-contact-why-neutrino-different","4.9":"note.neutrino.valuation-m-both-ends-hypothesis-u"},"T16":{"5.7":"one-relation.arrow-frequency-are-one-bit-level","2.2":"tower.witt-index-quantum-capacity","2.10":"one-relation.imported-cartans-purity-theorem-thouless-form","2.1":"one-relation.imported-completion-ladder","2.6":"one-relation.imported-condensate-derived-content","2.9":"one-relation.imported-null-cone-determines-form-zeemans","2.5":"one-relation.imported-flag-arrow-superselection","2.7":"one-relation.imported-indifference-instrument","2.3":"one-relation.imported-pure-spinors-incidence-chart","2.8":"one-relation.imported-square-roots-real-clifford-algebras","2.4":"one-relation.imported-single-mode-thermality-modular-period","2.11":"one-relation.imported-witts-extension-theorem","6.1":"one-relation.dirac-current-conserved-density","5.5":"one-relation.odd-square-roots-chiral-phase","5.6":"one-relation.one-datum-not-two-imaginary-unit","4.4":"one-relation.third-constant-conversion-constant-between-charts","5.4":"one-relation.form-law-forced-square","5.1":"one-relation.vector-derivative-covariant-first-order-operator","6.3":"one-relation.recording-irreversible-stated-so-it-can","7.1":"one-relation.supervenience-stated-so-it-can-be","6.2":"one-relation.measure-indifference-borns-rule-located","3.2":"one-relation.two-capacities-three-consequences","7.2":"one-relation.character-experience-three-record-chain-theorems","4.2":"one-relation.overlap-table-sorted","5.2":"one-relation.schr-odinger-slow-shadow","3.1":"one-relation.two-presentations","4.1":"one-relation.spacetime-manifold-vacuum-lines","6.5":"one-relation.record-chain-votes-measurement-without-collapse","5.3":"note.one-relation.point-contact-what-has-has-not","4.5":"note.one-relation.where-exhaustiveness-first-fails-4-quadric","6.4":"note.one-relation.measurement-recording-open-remainder","4.3":"note.one-relation.two-residues-named-so-synthesis-can"},"T17":{"1":"refuted.twistors-are-the-ladder-operators"}}};
+const PRESSED = (() => { const n = LAB.preds.filter(x => x.st === 'press').length, W = ['None', 'One', 'Two', 'Three', 'Four', 'Five', 'Six'];
+  return !n ? 'None is under pressure now.' : (W[n] || String(n)) + (n === 1 ? ' is' : ' are') + ' under pressure now, marked in red.'; })();
+// open a result in the Lab's universe (this page is shown inside the Lab, same origin)
+function openInLab(hash){ try { if (window.parent && window.parent !== window) { window.parent.location.hash = hash; return; } } catch (e) {}
+  window.open('transport_lab.html' + hash, '_blank', 'noopener'); }
+document.addEventListener('click', e => { const a = e.target.closest('[data-lab]'); if (!a) return; e.preventDefault(); openInLab('#' + a.dataset.lab); });
+// video mode (?video): no animation loop; a renderer calls window.__frame(vh, ms, caption) once per frame
+const VIDEO = /[?&]video/.test(location.search); let vVh = 0;
+if (VIDEO) document.body.classList.add('video');
+/* ---------- physics ---------- */
+const G = 6.6743e-11, c = 2.99792458e8, hbar = 1.054571817e-34, kB = 1.380649e-23, Msun = 1.98847e30;
+const mP = Math.sqrt(hbar * c / G), lP = Math.sqrt(hbar * G / c ** 3);
+const massSuns = 4.3e6;             // Sagittarius A*
+const SUP = {'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(x, d = 2){ const e = Math.floor(Math.log10(Math.abs(x))); return (x / 10 ** e).toFixed(d - 1) + '×10' + String(e).split('').map(ch => SUP[ch]).join(''); }
+function dur(s){
+  if (s < 1e-3) return (s * 1e6).toPrecision(3) + ' microseconds';
+  if (s < 1) return (s * 1e3).toPrecision(3) + ' milliseconds';
+  if (s < 120) return s.toPrecision(3) + ' seconds';
+  if (s < 7200) return (s / 60).toPrecision(3) + ' minutes';
+  if (s < 172800) return (s / 3600).toPrecision(3) + ' hours';
+  if (s < 3.15576e7 * 2) return (s / 86400).toPrecision(3) + ' days';
+  return (s / 3.15576e7).toPrecision(3) + ' years';
+}
+function durShort(s){ return dur(s).replace(' microseconds', ' µs').replace(' milliseconds', ' ms').replace(' seconds', ' s').replace(' minutes', ' min'); }
+function len(m){ if (m < 1e-9) return sci(m) + ' m'; if (m < 1e3) return m.toPrecision(3) + ' m'; if (m < 1e9) return (m / 1e3).toPrecision(3) + ' km'; if (m < 1e12) return (m / 1e9).toPrecision(3) + ' million km'; return sci(m) + ' m'; }
+function temp(T){ if (T < 1e-12) return sci(T) + ' degrees above absolute zero'; return (T * 1e9).toPrecision(2) + ' billionths of a degree above absolute zero'; }
+function NUM(){
+  const M = massSuns * Msun, tM = G * M / c ** 3;
+  return { tM, M, TH: temp(hbar * c ** 3 / (8 * Math.PI * G * M * kB)), S: sci(4 * Math.PI * G * M * M / (hbar * c) / Math.LN2, 3),
+    echo: dur(8 * tM * Math.log(M / mP)), beta: dur(8 * Math.PI * tM), scr: dur(4 * tM * Math.log(4 * Math.PI * G * M * M / (hbar * c))), charge: massSuns < 1.3e5 ? 'Its electric charge comes back too.' : 'Whether its electric charge comes back from a hole this big, the papers leave open.',
+    npred: String(LAB.preds.length), pressed: PRESSED };
+}
+
+
+/* ---------- the live view: ray tracing in Painleve-Gullstrand coordinates ---------- */
+const cv = $('#sky');
+const gl = cv.getContext('webgl', {antialias: false, preserveDrawingBuffer: true}) || cv.getContext('experimental-webgl');
+const RMAX = 40, RMIN = 0.06, INCL = 0.0;
+const VS = 'attribute vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }';
+  const FS = `
+precision highp float;
+uniform vec2 res; uniform vec3 camPos; uniform mat3 camRot; uniform float halfFov; uniform float tm; uniform float diskOn;
+float erfa(float x){ float z = clamp(2.2567584 * x * (1.0 + 0.0894 * x * x), -30.0, 30.0); float e = exp(z); return (e - 1.0) / (e + 1.0); }
+float hash(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+void deriv(vec3 x, vec3 p, float pt, out vec3 dx, out vec3 dp){
+  float r = length(x); float s = dot(x, p); float beta = sqrt(2.0 / r); vec3 n = x / r;
+  dx = beta * n * pt + p - beta * beta * n * dot(n, p);
+  float r15 = 1.0 / (r * sqrt(r)); float r35 = r15 / (r * r); float r3 = 1.0 / (r * r * r); float r5 = r3 / (r * r);
+  dp = -pt * 1.41421356 * (p * r15 - 1.5 * s * x * r35) + (2.0 * s * p * r3 - 3.0 * s * s * x * r5);
+}
+vec3 starLayer(vec3 d, float k, float thresh){
+  float th = acos(clamp(d.y, -1.0, 1.0)); float ph = atan(d.z, d.x);
+  vec2 uv = vec2(ph / 6.2831853 * k * 2.0, th / 3.1415927 * k);
+  vec2 c = floor(uv); vec2 f = fract(uv);
+  float h = hash(c);
+  if (h < thresh) return vec3(0.0);
+  vec2 sp = vec2(hash(c + 7.1), hash(c + 3.7)) * 0.7 + 0.15;
+  float dd = length((f - sp) * vec2(sin(th) * 2.0, 1.0));
+  float b = pow((h - thresh) / (1.0 - thresh), 2.0) * exp(-dd * dd * 900.0 / (k * 0.01 + 1.0));
+  float w = hash(c + 1.3);
+  return b * mix(vec3(1.0, 0.78, 0.55), vec3(0.7, 0.82, 1.0), w);
+}
+vec3 sky(vec3 d, float g){
+  vec3 col = vec3(0.0);
+  vec3 bn = normalize(vec3(0.35, 0.88, 0.32));
+  float band = exp(-pow(dot(d, bn) / 0.2, 2.0));
+  float aph = atan(d.z, d.x); float mott = 0.62 + 0.38 * sin(aph * 23.0 + sin(d.y * 31.0) * 2.0) * sin(d.y * 17.0 + aph * 5.0);
+  col += vec3(0.055, 0.045, 0.04) * band * mott + vec3(0.006, 0.006, 0.008);
+  col += starLayer(d, 90.0, 0.62) * 2.2 + starLayer(d, 220.0, 0.75) * 1.4;
+  float gg = clamp(g, 0.05, 20.0);
+  vec3 tint = gg > 1.0 ? mix(vec3(1.0), vec3(0.66, 0.8, 1.3), clamp(log(gg) / 1.4, 0.0, 1.0))
+                       : mix(vec3(1.0), vec3(1.4, 0.5, 0.22), clamp(-log(gg) / 1.1, 0.0, 1.0));
+  return col * tint * pow(gg, 1.6);
+}
+// the gas's colour by temperature: deep orange when cool, through gold, to white when hot, bluish only when strongly blueshifted
+vec3 bb(float t){ vec3 c = mix(vec3(1.0, 0.42, 0.12), vec3(1.0, 0.76, 0.42), smoothstep(0.35, 1.0, t)); c = mix(c, vec3(1.0, 0.95, 0.86), smoothstep(1.0, 1.9, t)); c = mix(c, vec3(0.8, 0.88, 1.0), smoothstep(2.4, 4.0, t)); return c * smoothstep(0.06, 0.5, t); }
+void main(){
+  vec2 uv = (gl_FragCoord.xy - 0.5 * res) / (0.5 * res.y);
+  vec3 x = camPos; float R = length(x); vec3 n = x / R; float beta = sqrt(2.0 / R);
+  // never past straight behind: on very wide screens the edges fade to black there instead of repeating the view
+  float ang0 = length(uv) * halfFov, ang = min(ang0, 3.1415927); vec2 dir2 = length(uv) > 1e-6 ? uv / length(uv) : vec2(0.0); vec3 d = normalize(camRot * vec3(dir2 * sin(ang), cos(ang)));
+  vec3 p = -d; float pt = -(1.0 + beta * dot(n, d));
+  float far = max(3.0 * R, 40.0);
+  vec3 col = vec3(0.0); vec3 acc = vec3(0.0); float tr = 1.0; bool done = false;
+  vec3 dx; vec3 dp;
+  for (int i = 0; i < 320; i++) {
+    float r = length(x);
+    float kt = -pt + sqrt(2.0 / r) * dot(x, p) / r;
+    if (abs(kt) > 40.0) { done = true; break; }
+    deriv(x, p, pt, dx, dp);
+    if (r > far && dot(x, -dx) > 0.0) { col = sky(normalize(-dx), 1.0 / max(-pt, 1e-3)); done = true; break; }
+    float h = -(0.06 * r + 0.004) / max(1.0, length(dx));
+    vec3 dx2; vec3 dp2;
+    deriv(x + 0.5 * h * dx, p + 0.5 * h * dp, pt, dx2, dp2);
+    vec3 xn = x + h * dx2; vec3 pn = p + h * dp2;
+    if (diskOn > 0.5) {
+      // a thin disc of hot gas with a little thickness (H = 0.04 r), seen through its column:
+      // a face-on crossing gives the gas's own brightness, a grazing one more, until it turns opaque
+      vec3 xm = 0.5 * (x + xn); float rc = length(xm); float H = 0.028 * rc;
+      if (rc > 5.6 && rc < 21.0 && min(abs(x.y), abs(xn.y)) < 3.0 * H || x.y * xn.y < 0.0 && rc > 5.6 && rc < 21.0) {
+        float ds = length(xn - x); float dy = xn.y - x.y;
+        float col1 = abs(dy) > 1e-4 * ds ? ds / abs(dy) * 0.5 * (erfa(xn.y / H) - erfa(x.y / H)) * sign(dy)
+                                         : ds * exp(-xm.y * xm.y / (H * H)) / 1.7724539;
+        float w = min(col1 / H, 3.0);
+        if (w > 1e-4) {
+          vec3 pc = 0.5 * (p + pn);
+          float E = -pt; float L = xm.z * pc.x - xm.x * pc.z;
+          float Om = 1.0 / (rc * sqrt(rc)); float ut = 1.0 / sqrt(1.0 - 3.0 / rc);
+          float Eem = ut * (E - Om * L); float g = 1.0 / max(Eem, 1e-3);
+          float F = max(0.0, 1.0 - sqrt(6.0 / rc)) / (rc * rc * rc);
+          float T = pow(F / 0.00065, 0.25);
+          float ph = atan(xm.z, xm.x) + Om * tm * 0.6;
+          float streak = 0.84 + 0.1 * sin(ph * 7.0 + rc * 2.3) * sin(ph * 3.0 - rc * 1.1 + 1.3) + 0.06 * sin(rc * 9.0 + ph * 2.0);
+          vec3 em = bb(T * g) * pow(g, 3.0) * F / 0.00065 * streak * 0.75;
+          float edge = smoothstep(6.0, 6.4, rc) * (1.0 - smoothstep(13.0, 20.0, rc));
+          // the gas right around you is left out, so the disc is seen as it is from a distance
+          float dc = length(xm - camPos); edge *= smoothstep(0.6 * R, 1.3 * R, dc);
+          acc += tr * em * edge * w; tr *= exp(-0.7 * w * edge);
+          if (tr < 0.02) { done = true; break; }
+        }
+      }
+    }
+    x = xn; p = pn;
+  }
+  if (!done) { deriv(x, p, pt, dx, dp); col = sky(normalize(-dx), 1.0 / max(-pt, 1e-3)); }
+  col = acc + tr * col;
+  col = 1.0 - exp(-col * 1.6);
+  col *= 1.0 - smoothstep(2.85, 3.1415927, ang0);
+  gl_FragColor = vec4(pow(col, vec3(0.9)), 1.0);
+}`;
+let prog = null; const U = {};
+function compile(){
+  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; };
+  prog = gl.createProgram(); gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+  gl.useProgram(prog);
+  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, -1,1, 1,-1, 1,1]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  ['res','camPos','camRot','halfFov','tm','diskOn'].forEach(k => U[k] = gl.getUniformLocation(prog, k));
+}
+let ok = !!gl;
+if (ok) { try { compile(); } catch (e) { console.error(e); ok = false; } }
+if (!ok) $('#nogl').style.display = 'grid';
+  const SHADOW = [[40.0, 0.1012], [30.1496, 0.1287], [22.7249, 0.1624], [17.1287, 0.2032], [12.9106, 0.2517], [9.7312, 0.3082], [7.3348, 0.3724], [5.5285, 0.4437], [4.1671, 0.5209], [3.1409, 0.6021], [2.3674, 0.6852], [1.7844, 0.7682], [1.345, 0.849], [1.0138, 0.9261], [0.7641, 0.9983], [0.5759, 1.0649], [0.4341, 1.1255], [0.3272, 1.18], [0.2466, 1.2287], [0.1859, 1.2719], [0.1401, 1.3099], [0.1056, 1.3434], [0.0796, 1.3726], [0.06, 1.3982]];
+function shadowAngle(r){ const L = Math.log(r); for (let i = 0; i < SHADOW.length - 1; i++) { const a = SHADOW[i], b = SHADOW[i + 1];
+    if (r <= a[0] && r >= b[0]) { const t = (L - Math.log(a[0])) / (Math.log(b[0]) - Math.log(a[0])); return a[1] + t * (b[1] - a[1]); } }
+  return r > SHADOW[0][0] ? SHADOW[0][1] * SHADOW[0][0] / r : SHADOW[SHADOW.length - 1][1]; }
+// the dark region's share of the screen grows steadily with depth, so the view never seems to pull back
+function fallFov(r){ const s = Math.log(RMAX / r) / Math.log(RMAX / RMIN); const frac = 0.18 + 0.64 * Math.pow(Math.min(1, Math.max(0, s)), 0.7);
+  const aspect = cv.width / Math.max(1, cv.height); const narrow = aspect < 1 ? Math.max(aspect, 0.5) : 1; return Math.min(2.6, shadowAngle(r) / frac / narrow); }
+let R = RMAX, yaw = 0, pitch = 0, lookBack = false, scale = 0.5;
+// the glow's brightness: the camera's exposure follows the light around it, so the ring stays readable as the gas closes in
+const disk = true;                     // a thin disc in the plane of the fall, as most depictions draw it (Interstellar); the notes say how Sagittarius A*'s own gas differs
+let renderR = RMAX, renderDisk = true, renderYaw = 0, renderPitch = 0, fovNow = 0.6, mode = 'fall';
+const camDir = [0, Math.sin(INCL), Math.cos(INCL)];
+function basis(){
+  const f0 = camDir.map(v => -v);
+  let up0 = [0, 1, 0]; const dt = up0[0]*f0[0] + up0[1]*f0[1] + up0[2]*f0[2]; up0 = up0.map((v, i) => v - dt * f0[i]); const lu = Math.hypot(...up0); up0 = up0.map(v => v / lu);
+  const cross = (a, b) => [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
+  const right0 = cross(up0, f0);
+  const cy = Math.cos(renderYaw), sy = Math.sin(renderYaw), cp = Math.cos(renderPitch), sp = Math.sin(renderPitch);
+  const f1 = f0.map((v, i) => cy * v + sy * right0[i]); const r1 = right0.map((v, i) => cy * v - sy * f0[i]);
+  const f = f1.map((v, i) => cp * v + sp * up0[i]); const u = up0.map((v, i) => cp * v - sp * f1[i]);
+  return [...r1, ...u, ...f];
+}
+function resize(){ const r = cv.getBoundingClientRect(); const w = Math.max(160, Math.round(r.width * scale)), h = Math.max(120, Math.round(r.height * scale)); if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; } }
+const T0 = performance.now();
+function draw(now){
+  if (!ok) return;
+  resize(); gl.viewport(0, 0, cv.width, cv.height);
+  const pos = camDir.map(v => v * renderR);
+  gl.uniform2f(U.res, cv.width, cv.height); gl.uniform3f(U.camPos, pos[0], pos[1], pos[2]);
+  gl.uniformMatrix3fv(U.camRot, false, new Float32Array(basis()));
+  gl.uniform1f(U.halfFov, fovNow); gl.uniform1f(U.tm, (now - T0) / 1000); gl.uniform1f(U.diskOn, renderDisk ? 1 : 0);
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
+}
+
+/* ---------- timeline, in viewport heights ---------- */
+const sec = $('#fall');
+const FALL = 700, SCENE = 160, TITLE = 70;
+const PARTS = [
+  {n: 'I', k: 'fall', short: 'The fall', eyebrow: 'The Transport Papers · Part I · T4 to T6', h: 'Fall into a black hole', p: 'Press Next, or scroll, to fall. Drag to look around. Every pixel is a ray of light traced backwards around the hole, the way it would reach your eye.', scenes: []},
+  {n: 'II', k: 't2', short: 'Transport', eyebrow: 'Part II · T1, T5, T9', h: 'The Transport Principle', p: 'Where a calculation divides by zero, the papers do not stop. They move it to a larger space where it can go on, and prove that the smallest such space is unique.', scenes: ['move', 'twistor', 'switches']},
+  {n: 'III', k: 't4', short: 'Information', eyebrow: 'Part III · T5, T7, T8', h: 'The Information Paradox', p: 'A black hole glows, shrinks and vanishes. So where did everything that fell in go?', scenes: ['paradox', 'info', 'fate', 'thermo', 'count', 'scramble']},
+  {n: 'IV', k: 't5', short: 'The tower', eyebrow: 'Part IV · T3, T14', h: 'The Tower and the CAR Limit', p: 'Make the move again and again. Each floor holds one more switch, the algebra of a free fermion field waits at the top, and there turn out to be eight towers.', scenes: ['car', 'dark']},
+  {n: 'V', k: 't6', short: 'Dark ratio', eyebrow: 'Part V · T14', h: 'The Dark Matter Ratio', p: 'Why the dark towers might hold 5.364 times as much matter as ours.', scenes: ['ratio']},
+  {n: 'VI', k: 't7', short: 'Refute it', eyebrow: 'Part VI · T8, T14, T17', h: 'What Would Refute It', p: 'Every claim that touches data, set down in print, with the measurement that would break it.', scenes: ['towers', 'echo', 'score']},
+];
+const SCENES = [], PART_OF = {fall: 0}, TITLES = new Set();
+PARTS.forEach((pt, i) => { if (i) { SCENES.push(pt.k); TITLES.add(pt.k); PART_OF[pt.k] = i; } pt.scenes.forEach(k => { SCENES.push(k); PART_OF[k] = i; }); });
+const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 150, twistor: 210, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
+TITLES.forEach(k => LEN[k] = TITLE);
+const START = {fall: 0}; { let acc = FALL; SCENES.forEach(k => { START[k] = acc; acc += LEN[k] || SCENE; }); }
+const TOTAL = START.score + LEN.score + 100;
+$('#track').innerHTML = PARTS.map((pt, i) => `<button data-p="${i}"><b>${pt.n}</b>${pt.short}</button>`).join('');
+let titleShown = 0;
+// the bottom of a part's title, measured once with a hidden copy, so a drawing can sit clear of it
+const titleBottoms = new Map();
+function titleBottom(i){ const key = i + ':' + innerWidth + 'x' + innerHeight; if (titleBottoms.has(key)) return titleBottoms.get(key);
+  const t = $('#title'), c = t.cloneNode(false); c.id = ''; c.classList.add('compact'); c.style.visibility = 'hidden'; c.style.opacity = 0; const pt = PARTS[i];
+  c.innerHTML = `<div class="in"><div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p></div>`; t.parentNode.appendChild(c);
+  const o = ov.getBoundingClientRect(), kids = Array.from(c.querySelector('.in').children), rg = document.createRange();
+  const right = Math.max(...kids.map(k => { rg.selectNodeContents(k); return rg.getBoundingClientRect().right; })) - o.left;
+  const b = {bottom: c.querySelector('.in').getBoundingClientRect().bottom - o.top, right}; c.remove(); titleBottoms.set(key, b); return b; }
+function fillTitle(i){ const pt = PARTS[i]; $('#title .in').innerHTML = `<div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p>`; }
+function phaseAt(v){
+  if (v < FALL) return {mode: 'fall', s: v / FALL};
+  let k = SCENES[0]; SCENES.forEach(x => { if (v >= START[x]) k = x; });
+  return {mode: k, s: Math.min(1, (v - START[k]) / (LEN[k] || SCENE))};
+}
+const radiusAt = s => RMAX * Math.pow(RMIN / RMAX, s);
+
+/* ---------- subtitles ---------- */
+const T = {std: ['std', 'Standard physics'], A: ['A', 'Tier A'], AB: ['AB', 'Tier A/B'], B: ['B', 'Tier B'], BC: ['BC', 'Tier B/C'], C: ['C', 'Tier C'], prem: ['prem', 'Premised'], pred: ['pred', 'Registered prediction'], ana: ['ana', 'Analogy']};
+const KIND = {Thm: 1, Prop: 1, Lem: 1, Cor: 1, Fact: 1, Def: 1, Rem: 1, Asm: 1, Obs: 1, Rec: 1, Conj: 1, Comp: 1, Premise: 1};
+function refHtml(t){
+  // "T5 Thm 2.5, 2.7 · T6": each number that the deposited paper's label table knows opens that result in the Lab
+  return t.split(' \u00b7 ').map(part => {
+    const m = part.match(/^(T\d+[a-c]?)\s+(\w+)\s+([\d.]+(?:,\s*[\d.]+)*)$/);
+    if (!m || !KIND[m[2]] || !LAB.refs[m[1]]) return part;
+    const nums = m[3].split(/,\s*/).map(n => { const id = LAB.refs[m[1]][n]; return id ? `<a href="#" class="labref" data-lab="${id}" title="Open in the Physics Graph">${n}</a>` : n; });
+    return `${m[1]} ${m[2]} ${nums.join(', ')}`;
+  }).join(' \u00b7 ');
+}
+const tagHtml = tags => tags.map(t => typeof t === 'string' ? `<span>${refHtml(t)}</span>` : `<span class="chip ${T[t[0]][0]}">${T[t[0]][1]}</span>`).join('');
+const FALLCAPS = [
+  {hi: 29, lo: 6.4, t: 'The dark circle is the shadow. Hot gas orbits in a thin disc, and the light from its far side is bent over the top and under the bottom. The disc ends at the last stable orbit; you fall on towards it, ever faster, and the starlight ahead turns blue.', g: [['std'], 'r = 6M']},
+  {hi: 6.4, lo: 1.5, t: 'At the photon sphere, light itself can orbit the hole. Then you cross the horizon and feel nothing, but from here nothing can get back out. Time left on your watch: {tau}.', g: [['std'], 'r = 3M, 2M']},
+  {hi: 1.5, lo: 0.235, t: 'Inside, the centre is a moment in your future, as sure as tomorrow. Tides stretch you along the fall and squeeze you from the sides, by fixed powers of the time left, the Kasner exponents \u22121/3, 2/3, 2/3. Among simple rescalings, the papers show only these let the description reach the centre intact.', g: [['std'], 'T6 Lem 5.1', ['A'], 'T4 Thm 8.7, 8.16']},
+  {hi: 0.235, lo: 0, t: 'In the papers’ description, the light cones fold flat onto a single line. The equations are about to divide by zero.', g: [['B'], 'T5 Prop 2.5, 2.7']},
+];
+const SCAPS = {
+  move: [[0, 1.01, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction of time and one more of space. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']]],
+  twistor: [[0, 0.3, 'The 2 + 4 space is not new. Roger Penrose used it in 1967 to describe rays of light, through its spinors: the conformal spinors (his twistors).', [['std'], 'Penrose 1967']],
+         [0.3, 1.01, 'Up there the reciprocal is defined everywhere. The rule lifts every point of spacetime onto a light ray of the larger space and works with the rays instead. Written out, that lift is Penrose\u2019s founding equation of twistor theory, term for term: the classical Klein correspondence, reached from the other end.', [['A'], 'T1 Thm 4.10 \u00b7 \u00a78.1', ['AB'], 'T9 Thm 4.2']]],
+  switches: [[0, 0.5, 'No ordinary numbers can fill the gap. What the move leaves instead are switches, each on or off and never on twice: the algebra of the Pauli exclusion principle, and nobody put it in.', [['B'], 'T5 §4, Fact 5.4']],
+         [0.5, 1.01, 'Where classical gravity breaks, fermionic structure appears. Click a quantum switch.', []]],
+  paradox: [[0, 1.01, 'Back outside, far away. Hawking found that black holes glow, very faintly, and slowly evaporate, and the glow looks completely random. So when the hole is gone, where is everything that fell in? Quantum theory says information is never destroyed: that is the information paradox.', [['std'], 'Hawking 1975']]],
+  fate: [[0, 0.3, 'And the matter itself? Falling in, its mass adds to the hole\u2019s, so the hole grows. The matter reaches the centre, where the switches are.', [['std'], ['C'], 'T14 Prop 6.5']],
+         [0.3, 1.01, 'Then, very slowly, the glow carries that energy back out and the hole shrinks again; the information climbs into the switches and comes back in the correlations. {charge} Its count of protons and neutrons does not: the glow is far too cold to make them, so that count is lost. That nothing at all is left behind is a further premise.', [['C'], 'T14 Prop 6.5', ['prem'], 'P5 · no remnant']]],
+  thermo: [[0, 1.01, 'From out here each switch looks random: on with a chance set by the temperature, less often the more energy it holds. This one: {TH}. The temperature follows from two stated premises, not from the mathematics alone, and the papers say so.', [['C'], 'T5 Thm 7.20', ['prem'], 'the temperature']]],
+  info: [[0, 0.22, 'Catch the glow one quantum at a time and each looks random, like a coin weighted by the temperature. That is what thermal means.', [['C'], 'T5 Thm 7.20']],
+         [0.22, 0.46, 'But each quantum has a partner, left behind at the centre. On its own, the partner looks just as random.', [['B'], 'T5 Thm 7.27']],
+         [0.46, 0.72, 'Compare them in pairs and the randomness cancels. The message was never in either one. It is in how they are related: the correlations.', [['ana'], 'a one-time pad']],
+         [0.72, 1.01, 'Our four-dimensional books keep only the plain counts, so the message looks lost. The six-dimensional books also keep the quantum correlations, and the papers compute the gap exactly.', [['B'], 'T5 Thm 9.3, Cor 9.4']]],
+  car: [[0, 0.3, 'The larger space has light rays of its own, so the move can be made again: one more direction of time, one more of space. And again. That is a tower.', [['A'], 'T3 Thm 4.2']],
+         [0.3, 1.01, 'Each floor adds exactly one switch: spacetime holds one, and every floor up one more. Climb for ever and the floors together carry the algebra of a free fermion field, as many switches as you like: the CAR algebra.', [['A'], 'T3 Thm 4.2, 4.3, 5.6']]],
+  dark: [[0, 0.31, 'Climbing never changes one number: time directions minus space directions, counted round a clock of eight. The clock is established mathematics: Élie Cartan classified these algebras by that number in 1908, and the same eightfold repetition reappears in topology as Bott periodicity (1959). So there are eight towers (in the same universe), and our world is one of them.', [['std'], 'Cartan 1908 · Bott 1959', ['A'], 'T1 Thm 2.5, 7.1', ['C'], 'T14 Prop 3.1']],
+         [0.31, 0.64, 'Two cannot hold matter: one has no time, one has two. One is a mirror copy of ours, with the same particles and forces. The other four have one space direction fewer, or one more.', [['C'], 'T14 Prop 3.1, Thm 4.3']],
+         [0.64, 1.01, 'The towers touch only through gravity, at first order and under the papers\u2019 premises. Their matter weighs, but never shines and never collides with ours. That is what dark matter would look like.', [['C'], 'T14 Prop 4.1']]],
+  arrow: [[0, 0.3, 'Every switch is a pair of light rays. One creates, the other destroys. But which is which?', [['C'], 'T14 Prop 5.1']],
+         [0.3, 0.62, 'The laws cannot say. Swapping the two everywhere changes no law at all, and the papers prove, under named premises, that no law could ever fix the choice.', [['C'], 'T14 Prop 5.2']],
+         [0.62, 1.01, 'On the papers’ premises, the choice was made once, at the start. It decides which is matter and which antimatter, and it is the direction of time: one bit, read twice.', [['C'], 'T14 Prop 5.2, Rem 5.3']]],
+  ratio: [[0, 0.12, 'Our world and its mirror have the same shape, one the reflection of the other. Laid on top of each other they are one unit ball, holding two worlds.', [['C'], 'T14 Prop 7.1, Fig. 3']],
+         [0.12, 0.25, 'The others nest around the same centre. Hide one dimension and our ball is a slice through the five-dimensional towers\u2019 four-ball, and the three-dimensional towers\u2019 disc is a slice through ours. Each shape again holds two towers.', [['C'], 'T14 Prop 7.1']],
+         [0.25, 0.38, 'Now three assumptions, none derived: every quantum weighs the same; each tower holds one quantum per unit ball of its own space; and each counts through one unit of the direction we lack or it lacks.', [['prem'], 'T14 R1, R2, R3']],
+         [0.38, 0.445, 'One quantum each, but different volumes: the disc has area \u03c0, our ball volume 4\u03c0/3, the four-ball \u03c0\u00b2/2. Density is what to compare: gravity responds to mass per volume, not to mass alone, and what Planck measures is a ratio of densities. Every tower acts on our gravity through our three directions of space, so its density counts in our volume.', [['C'], 'T14 Lem 6.1, Prop 7.6, 7.24']],
+         [0.445, 0.52, 'Compare any tower\u2019s density with ours and the mass m appears top and bottom, so it cancels. Only the volume is left.', [['C'], 'T14 Prop 7.6, 7.12']],
+         [0.52, 0.79, 'So each tower’s share, against ours, is our ball divided by its own: 4/3 for the three-dimensional towers, 8/(3\u03c0) for the five-dimensional ones, 1 for the mirror. Computed: add the five dark shares, 1 + 2 \u00d7 4/3 + 2 \u00d7 8/(3\u03c0) = (11\u03c0 + 16)/(3\u03c0) = 5.364.', [['C'], 'T14 Prop 7.6']],
+         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The rule was found by fitting this number, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['C'], 'T14 Obs 7.31']]],
+  towers: [[0, 0.32, 'All the towers feel one gravitational field, so a black hole\u2019s centre is shared by all of them.', [['C'], 'T14 Prop 6.5']],
+         [0.32, 0.66, 'What falls in gives its energy back as radiation into every populated tower; its information, and for small holes its charge, comes back in its own.', [['C'], 'T14 Prop 6.5']],
+         [0.66, 1.01, 'So the last flash of an evaporating black hole, if small ones exist, is dimmed by a factor between 2 and about 5.5. A registered prediction for the searches.', [['pred'], 'T14 Prop 6.5 \u00b7 T17']]],
+  count: [[0, 1.01, 'If the papers’ count is right, one switch for every 4 ln 2, about 2.8, Planck areas of horizon, each cycle of the hole’s clock: for this black hole, {S} of them. That density is predicted, not derived: it rests on a flagged premise and a calibration still open.', [['C'], 'T8 Cor 4.4', ['pred'], 'T17']]],
+  scramble: [[0, 0.28, 'Drop a message in. How fast does the hole mix it through all its switches?', [['std'], 'Hayden & Preskill 2007']],
+         [0.28, 1.01, 'A touch on one switch spreads to more and more of them, at the rate 2\u03c0T: the hole\u2019s own clock, set by the same premise as its temperature. At that rate the hole mixes a message through all its switches in {scr}. The rate meets the chaos bound, but the switches are not chaotic: real chaos is left open.', [['C'], 'T8 Asm 6.1', ['std'], 'Maldacena, Shenker, Stanford 2016']]],
+  score: [[0, 1.01, 'This framework predicts no echoes; none confirmed so far, and one would refute it. Wherever the papers touch data, they state what would prove them wrong: {npred} predictions are on record. {pressed}', [['pred'], 'T8 Rec 7.1, 7.2 \u00b7 T17 \u00a74'], 'end']],
+  echo: [[0, 0.34, 'When black holes merge, the new one rings like a bell.', [['std']]],
+         [0.34, 1.01, 'If its horizon had structure a Planck length outside it, echoes would follow; for a hole the size of Sagittarius A*, {echo} apart.', ['other proposals']]],
+};
+/* ---------- the player: a slide show. Each subtitle is a step; Next cuts to it at once (its subtitle
+   appears immediately) and then plays the step's own movement slowly, over three to six seconds. ---------- */
+const vOfR = r => FALL * Math.log(RMAX / r) / Math.log(RMAX / RMIN);
+// parts whose title stays on screen over the first step of their first scene, instead of a slide of its own
+// t5's title stays at the top over the tower; t6's and t7's sit as a heading above the subtitle, clear of the drawings
+const MERGED_CAP = new Set(['t6', 't7']);
+const MERGED = new Set(['t5', 't6', 't7']), MERGED_FIRST = {}; PARTS.forEach((pt, i) => { if (MERGED.has(pt.k) && pt.scenes.length) MERGED_FIRST[pt.scenes[0]] = i; });
+const STEPS = [[0, 0]];              // [start, stop] on the timeline, in viewport heights
+FALLCAPS.forEach(cp => STEPS.push([vOfR(cp.hi) + 0.3, cp.lo > 0 ? vOfR(cp.lo) - 0.3 : FALL - 0.5]));
+SCENES.forEach(k => { const n = LEN[k] || SCENE;
+  if (TITLES.has(k)) { if (!MERGED.has(k)) STEPS.push([START[k] + 0.1 * n, START[k] + 0.5 * n]); return; }
+  (SCAPS[k] || []).forEach(c => { const b = Math.min(c[1], 1); STEPS.push([START[k] + (c[0] + 0.004) * n, START[k] + (c[0] + 0.7 * (b - c[0])) * n]); }); });
+const STOPS = STEPS.map(x => x[1]);
+const RATE = 18;                     // viewport heights a second: the pace of the movement inside a step
+let vNow = 0, idx = 0, anim = null, snap = true;
+const ease = x => (1 - Math.cos(Math.PI * x)) / 2;
+function goStep(i, play = true){
+  i = Math.max(0, Math.min(STEPS.length - 1, i)); idx = i; const [a, b] = STEPS[i]; snap = true;
+  if (!play || reduce || b - a < 1) { anim = null; vNow = b; }
+  else { vNow = a; anim = {from: a, to: b, t0: performance.now(), dur: Math.min(6000, Math.max(2600, (b - a) / RATE * 1000))}; }
+  ui();
+}
+function playerV(now){
+  if (VIDEO) return vVh;
+  if (anim) { const x = Math.min(1, (now - anim.t0) / anim.dur); vNow = anim.from + (anim.to - anim.from) * ease(x); if (x >= 1) { anim = null; autoNext(); } }
+  return vNow;
+}
+const LAST = () => idx === STEPS.length - 1;
+function ui(){
+  $('#back').disabled = idx === 0; $('#next').disabled = LAST();
+  $('#next').classList.toggle('pulse', idx === 0); $('#stepn').textContent = `${idx + 1} / ${STEPS.length}`;
+  document.body.classList.toggle('atend', LAST());
+}
+const next = () => goStep(idx + 1), back = () => goStep(idx - 1, false);
+$('#next').addEventListener('click', () => { stopAuto(); next(); }); $('#back').addEventListener('click', () => { stopAuto(); back(); });
+$$('#track button').forEach(b => b.addEventListener('click', () => { stopAuto(); const i = +b.dataset.p;
+  const v0 = i ? START[PARTS[i].k] : 0; goStep(STOPS.findIndex(v => v >= v0), i > 0); }));
+addEventListener('keydown', e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  const onCtl = e.target.closest('a,button');
+  if (['ArrowRight', 'ArrowDown', 'PageDown'].includes(e.key) || ((e.key === ' ' || e.key === 'Enter') && !onCtl)) { e.preventDefault(); stopAuto(); next(); }
+  else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); stopAuto(); back(); }
+  else if (e.key === 'Home') { stopAuto(); goStep(0, false); } else if (e.key === 'End') { stopAuto(); goStep(STEPS.length - 1, false); }
+});
+// one turn of the wheel is one step, taken once the wheel has been still for half a second, so the
+// momentum of a trackpad cannot carry past a step; after the last step the page scrolls on to the notes
+let wheelQuiet = 0, wheelArmed = true;
+addEventListener('wheel', e => {
+  if (scrollY > 2 || (LAST() && e.deltaY > 0)) return;
+  e.preventDefault(); const now = performance.now();
+  if (now - wheelQuiet > 500) wheelArmed = true; wheelQuiet = now;
+  if (!wheelArmed || Math.abs(e.deltaY) < 4) return;
+  wheelArmed = false; stopAuto(); e.deltaY > 0 ? next() : back();
+}, {passive: false});
+let touchY = null;
+addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => { if (touchY === null || scrollY > 2) return; const dy = touchY - e.changedTouches[0].clientY; touchY = null;
+  if (e.target.closest('a,button')) return; if (dy > 50 && !LAST()) { stopAuto(); next(); } else if (dy < -50) { stopAuto(); back(); } }, {passive: true});
+// Fall for me: the steps of the fall play one after another, with time to read each
+let auto = false, autoT = null;
+function stopAuto(){ auto = false; clearTimeout(autoT); $('#autoFall').textContent = 'Fall for me'; }
+function autoNext(){ if (!auto) return; if (idx >= FALLCAPS.length) { stopAuto(); return; } autoT = setTimeout(() => { if (auto) next(); }, 1800); }
+$('#autoFall').addEventListener('click', () => { if (auto) return stopAuto(); auto = true; $('#autoFall').textContent = 'Stop'; next(); });
+
+let capKey = null;
+function fill(t, live){ return t.replace(/\{(\w+)\}/g, (_, k) => live[k] !== undefined ? live[k] : ''); }
+function setCap(key, text, tags, acts){
+  const box = $('#cap');
+  if (key === capKey) { if ($('#capLine').textContent !== text) $('#capLine').textContent = text; return; }
+  capKey = key;
+  if (!key) { box.classList.remove('show'); return; }
+  { $('#capLine').textContent = text; $('#capTags').innerHTML = tagHtml(tags);
+    $('#capActs').innerHTML = acts === 'end' ? '<a class="btn" href="#" data-lab="universe">Explore the Physics Graph</a><a class="btn" href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Read the papers</a><button class="btn hot" id="again">Fall again</button>' : '';
+    const ag = $('#again'); if (ag) ag.addEventListener('click', () => { stopAuto(); goStep(0, false); });
+    box.classList.add('show'); }
+}
+
+/* ---------- overlay: drawings anchored in the scene ---------- */
+const ov = $('#ov'), ox = ov.getContext('2d');
+let OW = 0, OH = 0;
+const capMeas = (() => { const m = $('#cap').cloneNode(true); m.id = ''; m.classList.add('show'); m.style.visibility = 'hidden'; m.querySelectorAll('[id]').forEach(e => e.removeAttribute('id')); $('#cap').parentNode.appendChild(m); return m; })();
+const regionCache = new Map();
+function region(scene){
+  if (regionCache.has(scene)) return regionCache.get(scene);
+  const o = ov.getBoundingClientRect(), top = $('#track').getBoundingClientRect().bottom - o.top + 14;
+  let bot = OH - 120;
+  (SCAPS[scene] || []).forEach(c => { capMeas.children[0].textContent = c[2].replace(/\{\w+\}/g, '0.000×10⁰⁰ units'); capMeas.children[1].innerHTML = tagHtml(c[3]); capMeas.children[2].innerHTML = c[4] === 'end' ? '<a class="btn">x</a>' : '';
+    bot = Math.min(bot, capMeas.getBoundingClientRect().top - o.top - 18); });
+  const r = {top, bot}; regionCache.set(scene, r); return r;
+}
+function sizeOv(){ regionCache.clear(); const r = ov.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); OW = r.width; OH = r.height; ov.width = Math.round(OW * d); ov.height = Math.round(OH * d); ox.setTransform(d, 0, 0, d, 0, 0); }
+const env = (x, a, b, f = 0.28) => { if (x < a || x > b) return 0; const w = (b - a) * f; return Math.min(1, (x - a) / w, (b - x) / w); };
+const envLog = (r, hi, lo) => { if (r > hi || r < lo) return 0; const a = Math.log(hi), b = Math.log(Math.max(lo, 1e-3)), x = Math.log(r), w = (a - b) * 0.18; return Math.min(1, (a - x) / w, (x - b) / w); };
+const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a'};
+// a dark plate behind labels that sit over the disc's glow
+function plate(x, y, w, h, a = 0.62){ ox.save(); ox.fillStyle = `rgba(6,5,5,${a})`; ox.beginPath(); ox.roundRect ? ox.roundRect(x, y, w, h, 8) : ox.rect(x, y, w, h); ox.fill(); ox.restore(); }
+function lab(text, x, y, col, align = 'left', size = 15){
+  ox.font = `italic ${size}px "Source Serif 4", Georgia, serif`; ox.textAlign = align; ox.textBaseline = 'middle';
+  ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.75)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y);
+}
+function mono(text, x, y, col, align = 'center', size = 12){ ox.font = `${size}px "IBM Plex Mono", Consolas, monospace`; ox.textAlign = align; ox.textBaseline = 'middle'; ox.lineWidth = 3; ox.strokeStyle = 'rgba(0,0,0,.7)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y); }
+function leader(x1, y1, x2, y2, col){ ox.strokeStyle = col; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke(); ox.fillStyle = col; ox.fillRect(x1 - 2, y1 - 2, 4, 4); }
+function hash(i){ const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+
+function overlayFall(cx, cy, unit){
+  const aligned = Math.max(0, 1 - (Math.abs(yaw) + Math.abs(pitch)) * 6) * (lookBack ? 0 : 1);
+  if (aligned <= 0) { overlayKasner(); return; }
+  const rs = shadowAngle(R) / fovNow * unit;
+  const wideF = OW >= OH;
+  // these stay up to the end of the step, so they can be read while it rests; they go as the next step falls on
+  let a = envLog(R, 30, 4.5) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a;
+    // labels kept on screen: clear of the chapter strip, the readout at top right and the subtitle; each leader runs
+    // from the feature it names to the label's near end. The shadow's points into the dark between the band and its
+    // lensed lower arc; the far side's sits up and to the left, away from the readout
+    const o = ov.getBoundingClientRect(), hb = $('#hud').getBoundingClientRect(), cb = $('#cap').getBoundingClientRect();
+    const yMin = $('#track').getBoundingClientRect().bottom - o.top + 18, yMax = (cb.height ? cb.top - o.top : OH - 140) - 22, hudL = hb.left - o.left - 14, hudB = hb.bottom - o.top + 6;
+    const put = (text, ax, ay, lx0, ly0, align, mono2) => {
+      ox.font = 'italic 15px "Source Serif 4", Georgia, serif'; const w = Math.max(ox.measureText(text).width, mono2 ? mono2.length * 6.6 : 0);
+      let ly = Math.min(yMax - (mono2 ? 20 : 0), Math.max(yMin, ly0)), lx = align === 'right' ? Math.max(16 + w, lx0) : Math.min(OW - 16 - w, lx0);
+      if (ly < hudB && (align === 'right' ? lx : lx + w) > hudL) lx = align === 'right' ? hudL : hudL - w;
+      leader(ax, ay, align === 'right' ? lx + 6 : lx - 6, ly, C.t2); plate((align === 'right' ? lx - w : lx) - 8, ly - 13, w + 16, mono2 ? 46 : 26, 0.5); lab(text, lx, ly, C.text, align);
+      if (mono2) mono(mono2, lx, ly + 20, C.t3, align, 11); };
+    put('the shadow', cx - rs * 0.42, cy + rs * 0.5, cx - rs * 1.6, cy + rs * 1.5, 'right');
+    const gx = Math.min(cx + rs * 1.85, OW - 40); put('hot gas orbiting in a thin disc, seen edge-on', gx, cy, gx + 46, cy + 44, 'left', 'drawn thin; the gas you fall past is left out');
+    const fx = cx + rs * 1.33 * Math.cos(-1.95), fy = cy + rs * 1.33 * Math.sin(-1.95); put('the disc’s far side, its light bent over the top', fx, fy, fx - 56, fy - 40, 'right');
+    // the starlight's: the dark sky just outside the lower right of the lensed ring, raised if the subtitle is near
+    { const r2 = rs * 1.62; let th = 1.0; if (cy + r2 * Math.sin(th) > yMax - 34) th = Math.asin(Math.max(0.15, Math.min(1, (yMax - 34 - cy) / r2)));
+      const qx = cx + r2 * Math.cos(th), qy = cy + r2 * Math.sin(th); put('starlight, bent around the hole', qx, qy, qx + 46, qy + 26, 'left'); }
+  }
+  a = envLog(R, 3.7, 2.45) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a; const px = cx + rs * 1.02 * Math.cos(-2.4), py = cy + rs * 1.02 * Math.sin(-2.4); leader(px, py, px - 56, py - 44, C.t2);
+    lab('light that circled the hole', px - 62, py - 44, C.text, 'right'); }
+  if (R < 2.4 && R > 1.62) { const k = (2.4 - R) / 0.78; ox.globalAlpha = aligned * (1 - k) * Math.min(1, k * 6);
+    const rr = rs * (1.02 + 2.6 * Math.pow(k, 1.4)); ox.strokeStyle = C.gold; ox.lineWidth = 2; ox.beginPath(); ox.arc(cx, cy, rr, 0, 2 * Math.PI); ox.stroke();
+    lab('the horizon, passing you', cx, cy - rr - 14, C.gold, 'center', 16); }
+  a = envLog(R, 1.3, 0.42) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a; const px = cx + rs * 1.07 * Math.cos(-0.6), py = cy + rs * 1.07 * Math.sin(-0.6); leader(px, py, px + 60, py - 40, C.t2); lab('the whole outside universe, squeezed into a ring', px + 66, py - 40, C.text); }
+  a = envLog(R, 0.232, 0.02) * aligned;
+  if (a > 0) { ox.globalAlpha = a;
+    // the future light cone in the papers' (Painleve-Gullstrand) coordinates: light moves at dr/dt = -beta -+ 1 with beta = sqrt(2M/r),
+    // both edges inward inside the horizon, closing onto one line as r -> 0 (T5 Prop 2.5); drawn with r to the right and t up
+    const bt = Math.sqrt(2 / R), L = Math.min(unit * 0.55, 120), ax = cx + L * 0.55, ay = cy + L * 0.45;
+    const n1 = Math.hypot(bt + 1, 1), n2 = Math.hypot(bt - 1, 1), e1 = [-(bt + 1) / n1, -1 / n1], e2 = [-(bt - 1) / n2, -1 / n2];
+    ox.fillStyle = 'rgba(240,194,122,0.22)'; ox.beginPath(); ox.moveTo(ax, ay); ox.lineTo(ax + L * e1[0], ay + L * e1[1]); ox.lineTo(ax + L * e2[0], ay + L * e2[1]); ox.closePath(); ox.fill();
+    ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.beginPath(); ox.moveTo(ax + L * e1[0], ay + L * e1[1]); ox.lineTo(ax, ay); ox.lineTo(ax + L * e2[0], ay + L * e2[1]); ox.stroke();
+    ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(ax + 14, ay); ox.lineTo(ax + 14, ay - 34); ox.stroke(); mono('time', ax + 14, ay - 44, C.t3);
+    lab('a light cone, in the papers’ coordinates', ax + 22, ay + 18, C.gold);
+    const deg = (Math.atan(bt + 1) - Math.atan(bt - 1)) * 180 / Math.PI; mono(deg.toFixed(deg < 1 ? 2 : 1) + '° wide', ax - L * 0.5, ay + 18, C.t2); }
+  ox.globalAlpha = 1;
+  overlayKasner();
+}
+// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13)
+function overlayMove(s){
+  const S = Math.min(OW, OH), narrow = OW < OH, sm = sm01, cx = OW / 2, {top, bot} = region('move');
+  const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return; ox.globalAlpha = a;
+  const head = narrow ? 44 : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
+  const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
+  const add = [[-0.62, -0.78, C.red, '+ time'], [0.66, -0.75, C.red, '+ space']];
+  base.forEach(([dx, dy, col, t]) => { ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke(); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); });
+  const g = sm((s - 0.01) / 0.5);
+  add.forEach(([dx, dy, col, t]) => { if (g <= 0) return; ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L * g, cy + dy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + dx * (L + 22), cy + dy * (L + 22), col, 'center'); });
+  const sig = g < 1 ? '1 + 3' : '2 + 4', fs = Math.round(Math.min(S * 0.065, 56));
+  ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; ox.fillStyle = C.text;
+  if (narrow) { ox.textAlign = 'center'; ox.fillText(sig, cx, top + fs * 0.8); }
+  else { ox.textAlign = 'right'; ox.fillText(sig, cx - L * 1.25, cy - L * 0.35); mono(g < 1 ? 'time + space' : 'one more of each', cx - L * 1.25, cy - L * 0.35 + 24, C.t3, 'right', 11); }
+  mono(g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
+  ox.globalAlpha = 1;
+}
+// switches
+const NSW = 20, swState = Array.from({length: NSW}, (_, i) => hash(i + 3) < 0.4); let swFlash = null;
+function swPos(i, cx, cy){ const rr = Math.min(OW, OH) * 0.27, a = -Math.PI / 2 + i / NSW * 2 * Math.PI; return [cx + rr * Math.cos(a), cy + rr * Math.sin(a)]; }
+function overlaySwitches(s, cx, cy, now){
+  const shown = Math.min(NSW, Math.floor(s / 0.12 * NSW) + 1);
+  for (let i = 0; i < shown; i++) { const [x, y] = swPos(i, cx, cy), on = swState[i];
+    ox.beginPath(); ox.arc(x, y, 9, 0, 2 * Math.PI); ox.lineWidth = 1.6; ox.strokeStyle = on ? C.green : C.t2; ox.fillStyle = on ? C.green : 'rgba(16,14,13,.6)'; ox.fill(); ox.stroke(); }
+  if (s > 0.08) { mono('f*  switches on', cx, cy - 12, C.green, 'center', 13); mono('f   switches off', cx, cy + 12, C.t2, 'center', 13); }
+  if (swFlash && now - swFlash.t < 1600) { const [x, y] = swPos(swFlash.i, cx, cy); ox.globalAlpha = 1 - (now - swFlash.t) / 1600; lab(swFlash.msg, x, y - 22, swFlash.col, 'center', 14); ox.globalAlpha = 1; }
+}
+ov.addEventListener('click', e => {
+  if (mode !== 'switches') return; const r = ov.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, cx = OW / 2, cy = OH * 0.44;
+  for (let i = 0; i < NSW; i++) { const [px, py] = swPos(i, cx, cy); if (Math.hypot(px - x, py - y) < 18) {
+    swState[i] = !swState[i]; swFlash = {i, t: performance.now(), msg: swState[i] ? 'f*: on (once only)' : 'f: off', col: swState[i] ? C.green : C.t2}; dirtyOv = true; return; } }
+});
+// outside scenes: where the hole sits on screen
+function holeOnScreen(cx, cy, unit){ const x = cx - renderYaw / fovNow * unit, y = cy + renderPitch / fovNow * unit; const rs = shadowAngle(renderR) / fovNow * unit; return [x, y, rs]; }
+function overlayThermo(s, hx, hy, rs, now){
+  const n = 28, p = 1 / (Math.E + 1), tick = Math.floor((now - T0) / 650);
+  const a = env(s, 0.02, 1.3, 0.1); if (a <= 0) return; ox.globalAlpha = a;
+  let on = 0;
+  for (let i = 0; i < n; i++) { const ang = i / n * 2 * Math.PI, x = hx + rs * 1.6 * Math.cos(ang), y = hy + rs * 1.6 * Math.sin(ang); const lit = hash(i * 31 + (reduce ? 0 : tick) * 7.3) < p; on += lit;
+    ox.beginPath(); ox.arc(x, y, 5, 0, 2 * Math.PI); ox.fillStyle = lit ? C.green : 'rgba(16,14,13,.5)'; ox.strokeStyle = lit ? C.green : C.t3; ox.lineWidth = 1.2; ox.fill(); ox.stroke(); }
+  mono(on + ' of ' + n + ' on now  ·  27% on average', hx, hy - rs * 1.6 - 22, C.t2, 'center', 12);
+  ox.globalAlpha = 1;
+}
+const MSG = 'NOTHING IS LOST', KEY = Array.from({length: 32}, (_, i) => Math.floor(hash(i + 91) * 256));
+function overlayInfo(s, hx, hy, rs, now){
+  const t = (now - T0) / 1000;
+  // radiation streaming out: bytes leaving the hole
+  ox.globalAlpha = Math.min(1, s * 6);
+  for (let k = 0; k < 26; k++) { const life = ((reduce ? 0.5 : t * 0.12) + hash(k)) % 1, ang = hash(k + 50) * 2 * Math.PI, d = Math.min(rs * (1.1 + life * 3.2), OH * 0.42);
+    const byte = Math.floor(hash(k * 13 + Math.floor((reduce ? 0 : t * 0.12) + hash(k))) * 256);
+    ox.globalAlpha = Math.min(1, s * 6) * (1 - life) * 0.9; mono(byte.toString(16).toUpperCase().padStart(2, '0'), hx + d * Math.cos(ang), hy + d * Math.sin(ang), C.red, 'center', 12); }
+  ox.globalAlpha = 1;
+  // the received line: radiation bytes, decoding once the partner is used
+  const dec = Math.max(0, Math.min(1, (s - 0.5) / 0.35)), n = MSG.length, y = Math.min(OH * 0.66, hy + rs + 44), w = Math.min(OW - 40, n * 34), x0 = OW / 2 - w / 2 + 17;
+  for (let i = 0; i < n; i++) { const ch = MSG.charCodeAt(i), shownPlain = i < Math.floor(dec * n + 0.001);
+    mono(shownPlain ? (MSG[i] === ' ' ? '·' : MSG[i]) : (ch ^ KEY[i]).toString(16).toUpperCase().padStart(2, '0'), x0 + i * (w / n), y, shownPlain ? C.green : C.red, 'center', shownPlain ? 17 : 13); }
+  mono(dec > 0 ? 'decoded with the partner' : 'the radiation, as received', OW / 2, y + 24, C.t3, 'center', 11);
+  if (s > 0.42) { ox.globalAlpha = Math.min(1, (s - 0.42) * 8); ox.beginPath(); ox.arc(hx, hy, 6, 0, 2 * Math.PI); ox.fillStyle = C.plum; ox.fill(); lab('the partner, at the centre', hx + 12, hy - 14, C.plum); ox.globalAlpha = 1; }
+}
+
+// the dark towers and the shared hole (T1 Thm 7.1; T14 Prop 3.1, 4.1, 6.5, 7.1, 7.6)
+const TW = {us: ['#f0c27a', 0.18], mirror: ['#93b4da', 0.18], d3: ['#a6c497', 0.32], d5: ['#cf9bb5', 0.32]};
+function towerOf(k){ const h = hash(k * 7.7 + 2); return h < 0.18 ? 'us' : h < 0.36 ? 'mirror' : h < 0.68 ? 'd3' : 'd5'; }
+const RES = [ // residue: colour, short name, kind
+  ['#8d8377', 'empty: two times', 'sterile'], ['#a6c497', '3D', 'd3'], ['#93b4da', 'the mirror', 'mirror'], ['#cf9bb5', '5D', 'd5'],
+  ['#8d8377', 'empty: no time', 'sterile'], ['#cf9bb5', '5D', 'd5'], ['#f0c27a', 'ours', 'us'], ['#a6c497', '3D', 'd3']];
+function centreGeom(){ const narrow = OW < OH; return {narrow, hx: OW / 2, hy: OH * (narrow ? 0.44 : 0.4), Rb: narrow ? Math.min(OH * 0.18, OW * 0.36) : Math.min(OH * 0.23, OW * 0.36)}; }
+function nest(hx, hy, Rb, a, labels, narrow){
+  const ry = Rb * 0.3, la = 0.62, lx = Rb * Math.cos(la), ly = ry * Math.sin(la);
+  ox.globalAlpha = a;
+  const g = ox.createRadialGradient(hx - Rb * 0.3, hy - Rb * 0.35, Rb * 0.1, hx, hy, Rb);
+  g.addColorStop(0, 'rgba(207,155,181,0.18)'); g.addColorStop(1, 'rgba(207,155,181,0.05)');
+  ox.fillStyle = g; ox.beginPath(); ox.arc(hx, hy, Rb, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(207,155,181,0.75)'; ox.lineWidth = 1.3; ox.stroke();
+  ox.fillStyle = 'rgba(240,194,122,0.10)'; ox.beginPath(); ox.ellipse(hx, hy, Rb, ry, 0, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(240,194,122,0.85)'; ox.lineWidth = 1.4; ox.stroke();
+  ox.strokeStyle = 'rgba(166,196,151,0.95)'; ox.lineWidth = 1.6; ox.beginPath(); ox.moveTo(hx - lx, hy - ly); ox.lineTo(hx + lx, hy + ly); ox.stroke();
+  if (labels > 0) { ox.globalAlpha = a * labels;
+    if (narrow) {
+      lab('five-dimensional towers’ space: a four-ball', hx, hy - Rb - 52, C.plum, 'center', 13);
+      lab('a slice through it: ours, and the mirror’s', hx, hy - Rb - 34, C.gold, 'center', 13);
+      lab('a slice through ours: the three-dimensional towers’', hx, hy - Rb - 16, C.green, 'center', 13);
+    } else {
+      const p1 = [hx + Rb * Math.cos(-0.7), hy + Rb * Math.sin(-0.7)]; leader(p1[0], p1[1], p1[0] + 40, p1[1] - 30, C.plum); lab('the five-dimensional towers’ space: a four-ball', p1[0] + 46, p1[1] - 30, C.plum);
+      const p2 = [hx - Rb, hy]; leader(p2[0], p2[1], p2[0] - 30, p2[1] + 34, C.gold); lab('a slice through it: our space, and the mirror’s', p2[0] - 36, p2[1] + 34, C.gold, 'right');
+      const p3 = [hx + lx, hy + ly]; leader(p3[0], p3[1], p3[0] + 30, p3[1] + 40, C.green); lab('a slice through ours: the three-dimensional towers’', p3[0] + 36, p3[1] + 40, C.green);
+      mono('one centre, one gravity · drawn with two dimensions hidden', hx, hy - Rb - 18, C.t3, 'center', 11);
+    } }
+  ox.globalAlpha = 1;
+  return {ry, la, lx, ly};
+}
+function stack(x, y, w, h, n, col, alpha){ for (let k = 0; k < n; k++) { ox.globalAlpha = alpha * (1 - k * 0.16); ox.fillStyle = col; ox.fillRect(x - w / 2, y - k * (h + 3) - h, w, h); } ox.globalAlpha = 1; }
+function overlayDark(s, now){
+  const {narrow, hx, hy, Rb} = centreGeom(), S = Math.min(OW, OH);
+  // a: one tower, rung by rung
+  const aA = 0;
+  if (aA > 0) { ox.globalAlpha = aA; const rungs = [['1 + 3', 'our spacetime'], ['2 + 4', 'the completion'], ['3 + 5', ''], ['4 + 6', '']], shown = Math.min(4, 1 + Math.floor(s / 0.05)), W0 = S * 0.22, H0 = Math.max(16, S * 0.035);
+    for (let k = 0; k < shown; k++) { const y = hy + S * 0.16 - k * (H0 + 10), w = W0 * (1 + k * 0.18); ox.fillStyle = k === 0 ? 'rgba(240,194,122,0.85)' : 'rgba(224,122,85,' + (0.75 - k * 0.12) + ')'; ox.fillRect(hx - w / 2, y - H0, w, H0);
+      ox.font = '600 12px "IBM Plex Mono", Consolas, monospace'; ox.textAlign = 'center'; ox.textBaseline = 'middle'; ox.fillStyle = '#100e0d'; ox.fillText(rungs[k][0], hx, y - H0 / 2); if (rungs[k][1]) lab(rungs[k][1], hx + w / 2 + 12, y - H0 / 2, k === 0 ? C.gold : C.red); }
+    if (shown > 1) { lab('each rung: one more time direction, one more space direction', hx, hy + S * 0.16 + 26, C.t2, 'center', 14); }
+    ox.globalAlpha = 1; }
+  // b-d: the clock of eight towers
+  const aB = env(s, 0.2, 1.3, 0.08);
+  if (aB > 0) { const Rc = narrow ? OW * 0.27 : Math.min(OH * 0.22, OW * 0.26);
+    const coloured = Math.min(1, Math.max(0, (s - 0.46) / 0.06)), spokes = Math.min(1, Math.max(0, (s - 0.72) / 0.06));
+    ox.globalAlpha = aB; ox.strokeStyle = 'rgba(191,181,166,0.35)'; ox.lineWidth = 1; ox.beginPath(); ox.arc(hx, hy, Rc, 0, 2 * Math.PI); ox.stroke();
+    mono('time minus space, mod 8', hx, hy + (spokes > 0 ? 22 : 0), C.t3, 'center', 11);
+    if (spokes > 0) { lab('gravity', hx, hy - 8, C.text, 'center', 16); }
+    for (let r = 0; r < 8; r++) { const ang = -Math.PI / 2 + r * Math.PI / 4, x = hx + Rc * Math.cos(ang), y = hy + Rc * Math.sin(ang);
+      const [col, name, kind] = RES[r], c0 = r === 6 ? C.gold : C.t2, cc = coloured > 0.5 ? col : c0;
+      if (spokes > 0 && kind !== 'sterile') { ox.globalAlpha = aB * spokes * 0.6; ox.strokeStyle = cc; ox.setLineDash([3, 4]); ox.beginPath(); ox.moveTo(hx + (x - hx) * 0.2, hy + (y - hy) * 0.2); ox.lineTo(x, y); ox.stroke(); ox.setLineDash([]); }
+      ox.globalAlpha = aB; ox.fillStyle = '#100e0d'; ox.strokeStyle = cc; ox.lineWidth = r === 6 ? 2.2 : 1.4; ox.fillRect(x - 13, y - 13, 26, 26); ox.strokeRect(x - 13, y - 13, 26, 26);
+      mono(String(r), x, y, cc, 'center', 13);
+      stack(x, y - 17, 18, 4, 3, cc, aB * (kind === 'sterile' && coloured > 0.5 ? 0.35 : 0.9));
+      const vert = Math.abs(Math.cos(ang)) < 0.2; const lx = vert ? x + 24 : x + Math.cos(ang) * 30, ly = vert ? y : y + Math.sin(ang) * 30;
+      const tag = coloured > 0.5 ? (narrow && r === 2 ? 'mirror' : name) : (r === 6 ? 'ours' : '');
+      if (tag) { ox.globalAlpha = aB * (r === 6 ? 1 : coloured); lab(tag, lx, ly, cc, vert || Math.cos(ang) > 0.3 ? 'left' : 'right', narrow ? 12 : 14); }
+    }
+    ox.globalAlpha = 1; }
+}
+// the ratio, derived step by step (T14 Prop 7.1, R1-R3, Prop 7.6, Prop 7.15, Obs 7.31)
+function ballDraw(x, y, R, col, alpha, eq){ ox.globalAlpha = alpha; const g = ox.createRadialGradient(x - R * 0.3, y - R * 0.35, R * 0.1, x, y, R);
+  g.addColorStop(0, col.replace('1)', '0.28)')); g.addColorStop(1, col.replace('1)', '0.06)')); ox.fillStyle = g; ox.beginPath(); ox.arc(x, y, R, 0, 2 * Math.PI); ox.fill();
+  ox.strokeStyle = col; ox.lineWidth = 1.4; ox.stroke(); if (eq) { ox.setLineDash([3, 4]); ox.beginPath(); ox.ellipse(x, y, R, R * 0.3, 0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]); } ox.globalAlpha = 1; }
+function texL(t, x, y, col, size, align = 'left', weight = 500){ ox.font = `${weight} ${size}px "Source Serif 4", Georgia, serif`; ox.textAlign = align; ox.textBaseline = 'alphabetic'; ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.8)'; ox.strokeText(t, x, y); ox.fillStyle = col; ox.fillText(t, x, y); }
+function labFit(text, x, y, col, align, size){ let z = size; ox.font = `italic ${z}px "Source Serif 4", Georgia, serif`;
+  const room = align === 'right' ? x - 10 : align === 'left' ? OW - 10 - x : 2 * Math.min(x - 10, OW - 10 - x);
+  const w = ox.measureText(text).width; if (w > room) z = Math.max(10, Math.floor(z * room / w)); lab(text, x, y, col, align, z); }
+function overlayRatio(s, now){
+  const narrow = OW < OH;
+  const hx = narrow ? OW / 2 : OW * 0.3, hy = narrow ? OH * 0.39 : OH * 0.38, Rb = narrow ? Math.min(OH * 0.11, OW * 0.25) : Math.min(OH * 0.2, OW * 0.19);
+  const px = narrow ? 20 : OW * 0.55, pw = narrow ? OW - 40 : Math.min(OW * 0.4, 500), py = narrow ? 118 : OH * 0.16;
+  const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+  // A: two unit balls, ours and the mirror's, slide together
+  const m = sm(s / 0.07), squash = sm((s - 0.13) / 0.08), outer = sm((s - 0.16) / 0.07), inner = sm((s - 0.2) / 0.06);
+  const ry = Rb * (1 - 0.7 * squash);
+  if (squash < 1) { const d = Rb * 1.25 * (1 - m);
+    ['rgba(240,194,122,1)', 'rgba(147,180,218,1)'].forEach((col, k) => { const x = hx + (k ? d : -d);
+      ox.save(); ox.translate(x, hy); ox.scale(1, 1 - 0.7 * squash); ballDraw(0, 0, Rb, col, 1 - squash * 0.6, false); ox.restore(); });
+    if (m < 0.95) { lab('our unit ball', hx - d, hy + Rb + 22, C.gold, 'center'); lab('the mirror’s', hx + d, hy + Rb + 22, C.blue, 'center'); }
+    else if (squash < 0.2) { lab('one unit ball, two worlds', hx, hy + Rb + 22, C.text, 'center'); }
+    ox.globalAlpha = (1 - squash) * m; ox.strokeStyle = C.text; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(hx, hy); ox.lineTo(hx + Rb * Math.cos(-2.3), hy + Rb * Math.sin(-2.3)); ox.stroke();
+    lab('radius: one unit', hx + Rb * 0.55 * Math.cos(-2.3) - 6, hy + Rb * 0.55 * Math.sin(-2.3) - 8, C.text, 'right', 13); ox.globalAlpha = 1; }
+  // B: hide one dimension: our ball becomes the slice of the four-ball; the disc a slice of ours
+  if (outer > 0) { ballDraw(hx, hy, Rb, 'rgba(207,155,181,1)', outer, false); }
+  if (squash > 0) { ox.globalAlpha = squash; ox.fillStyle = 'rgba(240,194,122,0.12)'; ox.beginPath(); ox.ellipse(hx, hy, Rb, ry, 0, 0, 2 * Math.PI); ox.fill();
+    ox.strokeStyle = 'rgba(240,194,122,0.9)'; ox.lineWidth = 1.5; ox.stroke(); ox.setLineDash([4, 4]); ox.strokeStyle = 'rgba(147,180,218,0.9)'; ox.beginPath(); ox.ellipse(hx, hy, Rb + 2, ry + 2, 0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = 1; }
+  const la = 0.62, lx = Rb * Math.cos(la), ly = Rb * 0.3 * Math.sin(la);
+  if (inner > 0) { ox.globalAlpha = inner; ox.strokeStyle = 'rgba(166,196,151,1)'; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(hx - lx, hy - ly); ox.lineTo(hx + lx, hy + ly); ox.stroke(); ox.globalAlpha = 1; }
+  ox.fillStyle = C.text; ox.beginPath(); ox.arc(hx, hy, 2.4, 0, 2 * Math.PI); ox.fill();
+  // labels on the shapes: name, then volume, then share
+  const stage = s < 0.38 ? 'name' : s < 0.52 ? 'vol' : 'share';
+  if (outer > 0.5) { const L = {
+      d5: {name: 'four-ball: the two 5D towers (5, 3)', vol: 'four-ball  V₄ = π²/2 = 4.93', share: 'each 5D tower: V₃/V₄ = 8/(3π) = 0.85'},
+      us: {name: 'our ball: us + mirror (6, 2)', vol: 'our ball  V₃ = 4π/3 = 4.19', share: 'mirror: V₃/V₃ = 1'},
+      d3: {name: 'disc: the two 3D towers (7, 1)', vol: 'disc  V₂ = π = 3.14', share: 'each 3D tower: V₃/V₂ = 4/3'} };
+    const a = Math.min(1, (outer - 0.5) * 2) * (s > 0.66 && narrow ? Math.max(0, 1 - (s - 0.66) / 0.04) : 1); ox.globalAlpha = a;
+    const sz = narrow ? 12 : 15;
+    if (narrow) { ox.globalAlpha = a * (1 - env(s, 0.38, 0.53, 0.1)); lab(L.d5[stage], hx, hy - Rb - 14, C.plum, 'center', sz); ox.globalAlpha = a; lab(L.us[stage], hx, hy + Rb + 18, C.gold, 'center', sz); lab(L.d3[stage], hx, hy + Rb + 36, C.green, 'center', sz); }
+    else { labFit(L.d5[stage], hx, hy - Rb - 18, C.plum, 'center', sz);
+      const xr = hx - Rb - 14; labFit(L.us[stage], xr, hy - 14, C.gold, 'right', sz);
+      leader(hx - lx, hy - ly, xr + 4, hy + 16, C.green); labFit(L.d3[stage], xr, hy + 16, C.green, 'right', sz); }
+    if (!narrow && s < 0.38) mono('one centre · every shape a unit ball · one dimension hidden', hx, hy + Rb + 22, C.t3, 'center', 11);
+    ox.globalAlpha = 1; }
+  // C: the three premises
+  const aP = env(s, 0.25, 0.4, 0.14);
+  if (aP > 0 && !narrow) { ox.globalAlpha = aP; mono('THE THREE ASSUMPTIONS (NOT DERIVED)', px, py, C.t3, 'left', 11);
+    [['R1', 'every quantum has the same mass'], ['R2', 'one quantum per unit ball of a tower’s own space'], ['R3', 'each counts through one unit of a missing direction']]
+      .forEach(([k, t], i) => { mono(k, px, py + 30 + i * 28, C.gold, 'left', 12); lab(t, px + 36, py + 30 + i * 28, C.text, 'left', 16); });
+    mono('R1 has no mechanism in the odd towers, about 81% of the dark matter (T14c Prop 9.4)', px, py + 30 + 3 * 28 + 4, C.t3, 'left', 10);
+    ox.globalAlpha = 1; }
+  // C2: compare densities, and watch the mass cancel (T14 Prop 7.6 and its proof)
+  // the density working fades out, then the shares fade in, where they stood
+  const aQ = env(s, 0.38, 0.6, 0.1) * (s > 0.521 ? Math.max(0, 1 - (s - 0.521) / 0.022) : 1);
+  if (aQ > 0) { ox.globalAlpha = aQ; const st = Math.min(1, Math.max(0, (s - 0.445) / 0.03)), x = narrow ? OW / 2 : px, al = narrow ? 'center' : 'left', z = narrow ? 17 : 25, y0 = narrow ? py + 18 : py + 8, M = C.gold;
+    if (!narrow) mono('COMPARING DENSITIES', x, y0, C.t3, 'left', 11);
+    eqLine([['density  =  ', C.text], ['mass', C.text], [' ÷ ', C.text], ['volume', C.text], ['  =  ', C.text], ['m', M], [' / V', C.text]], x, y0 + (narrow ? 4 : 34), z * 0.85, al);
+    eqLine([['ρ', C.text], ['tower', C.text, 'sub'], [' / ρ', C.text], ['ours', C.text, 'sub'], ['  =  (', C.text], ['m', M, '', st], [' / V', C.text], ['D', C.text, 'sub'], [')  ÷  (', C.text], ['m', M, '', st], [' / V', C.text], ['3', C.text, 'sub'], [')', C.text]], x, y0 + (narrow ? 34 : 80), z, al);
+    if (st > 0) { ox.globalAlpha = aQ * st; eqLine([['=  V', C.gold], ['3', C.gold, 'sub'], [' / V', C.gold], ['D', C.gold, 'sub']], x + (narrow ? 0 : 0), y0 + (narrow ? 64 : 124), z, al);
+      if (!narrow) { lab('the mass m cancels: only the volume is left', x, y0 + 162, C.gold, 'left', 16);
+        mono('R3 turns the disc and four-ball counts into densities in our space', x, y0 + 188, C.t3, 'left', 10); }
+      else mono('the mass m cancels', x, y0 + 86, C.gold, 'center', 10); }
+    ox.globalAlpha = 1; }
+  // D: shares and the sum, written out
+  const aS = Math.min(1, Math.max(0, (s - 0.545) / 0.03)) * (s > 0.79 ? Math.max(0, 1 - (s - 0.79) / 0.03) : 1);   // the sum gives way to the comparison
+  if (aS > 0) { ox.globalAlpha = aS; const fs = narrow ? 17 : 24, x0 = narrow ? OW / 2 : px, al = narrow ? 'center' : 'left', y0 = narrow ? py + 14 : py + 10;
+    texL('dark matter  ∕  ordinary matter', x0, y0, C.t2, fs * 0.75, al);
+    const t1 = true, t2 = true, t3 = true;   // shown whole, at once
+    if (!narrow) {
+      let x = x0; const y = y0 + fs * 1.7, under = [];
+      const piece = (t, col, note) => { texL(t, x, y, col, fs, 'left'); const w = ox.measureText(t).width; if (note) under.push([note, x + w / 2, col]); x += w; };
+      piece('=  ', C.text); piece('1', C.text, 'mirror'); if (t1) { piece('  +  2 × ', C.text); piece('4/3', C.text, 'two 3D towers'); } if (t2) { piece('  +  2 × ', C.text); piece('8/(3π)', C.text, 'two 5D towers'); }
+      under.forEach(([t, cx]) => mono(t, cx, y + fs * 0.7, C.t3, 'center', 10));
+      if (t3) { texL('=  (11π + 16) / (3π)', x0, y + fs * 2.0, C.text, fs, 'left'); texL('=  5.364', x0, y + fs * 3.6, C.gold, fs * 1.25, 'left', 600); }
+    } else {
+      texL('= 1 ' + (t1 ? '+ 2×4/3 ' : '') + (t2 ? '+ 2×8/(3π)' : ''), x0, y0 + fs * 1.5, C.text, fs, al);
+      if (t3) texL('= (11π+16)/(3π) = 5.364', x0, y0 + fs * 2.9, C.gold, fs, al, 600); }
+    ox.globalAlpha = 1; }
+  // E: computed against measured, side by side, then both on one number line with the measurement's error band
+  const aM = Math.min(1, Math.max(0, (s - 0.79) / 0.04));
+  if (aM > 0) { ox.globalAlpha = aM;
+    const lx0 = narrow ? 24 : px, lw = narrow ? OW - 48 : pw, by = narrow ? hy + Rb + 34 : py + 20, ly0 = narrow ? by + 92 : by + Math.min(230, Math.max(170, OH * 0.27)), lo = 4.95, hi = 5.75, X = v => lx0 + (v - lo) / (hi - lo) * lw;
+    const mu = 5.364, sd = 0.065, r = 5.3643;
+    // the two numbers
+    const bw = narrow ? (OW - 48) / 2 - 6 : lw / 2 - 8, bh = narrow ? 58 : 96, b2 = lx0 + bw + (narrow ? 12 : 16);
+    [[lx0, C.gold, 'COMPUTED · THE RULE', '5.3643'], [b2, C.blue, 'MEASURED · PLANCK 2018', '5.364 ± 0.065']].forEach(([x, col, k, v]) => {
+      ox.fillStyle = 'rgba(16,14,13,0.72)'; ox.strokeStyle = col; ox.lineWidth = 1.2; ox.beginPath(); ox.roundRect ? ox.roundRect(x, by, bw, bh, 8) : ox.rect(x, by, bw, bh); ox.fill(); ox.stroke();
+      mono(k, x + bw / 2, by + (narrow ? 15 : 22), col, 'center', narrow ? 9 : 12); texL(v, x + bw / 2, by + (narrow ? 40 : 62), col, narrow ? 19 : Math.min(34, bw * 0.15), 'center', 600); });
+    if (!narrow) mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 24, C.t3, 'left', 11);
+    // the number line
+    ox.fillStyle = 'rgba(147,180,218,0.16)'; ox.fillRect(X(mu - 2 * sd), ly0 - 22, X(mu + 2 * sd) - X(mu - 2 * sd), 44);
+    ox.fillStyle = 'rgba(147,180,218,0.38)'; ox.fillRect(X(mu - sd), ly0 - 22, X(mu + sd) - X(mu - sd), 44);
+    ox.strokeStyle = C.t2; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(lx0, ly0); ox.lineTo(lx0 + lw, ly0); ox.stroke();
+    for (let v = 5.0; v <= 5.71; v += 0.1) { const x = X(v); ox.beginPath(); ox.moveTo(x, ly0 - 4); ox.lineTo(x, ly0 + 4); ox.stroke(); mono(v.toFixed(1), x, ly0 + 16, C.t3, 'center', 10); }
+    ox.strokeStyle = C.blue; ox.lineWidth = 1.5; ox.beginPath(); ox.moveTo(X(mu), ly0 - 26); ox.lineTo(X(mu), ly0 + 26); ox.stroke();
+    if (!narrow) { mono('1σ', X(mu + sd * 0.5), ly0 + 32, C.blue, 'center', 9); mono('2σ', X(mu + sd * 1.5), ly0 + 32, C.blue, 'center', 9); }
+    ox.fillStyle = C.gold; ox.beginPath(); ox.moveTo(X(r), ly0 - 8); ox.lineTo(X(r) + 7, ly0); ox.lineTo(X(r), ly0 + 8); ox.lineTo(X(r) - 7, ly0); ox.closePath(); ox.fill();
+    if (!narrow) { lab('◆ computed', X(r) + 12, ly0 - 30, C.gold, 'left', 13); lab('measured, 1σ and 2σ', X(mu) - 12, ly0 - 30, C.blue, 'right', 13);
+      ox.strokeStyle = C.t3; ox.setLineDash([2, 3]); ox.beginPath(); ox.moveTo(X(5.255), ly0 - 22); ox.lineTo(X(5.255), ly0 + 22); ox.stroke(); ox.setLineDash([]);
+      mono('5.255: lowest any thickness gives', X(5.255) - 6, ly0 + 46, C.t3, 'right', 10);
+      if (ly0 + 64 < OH - 150) mono('Planck 2018 with lensing; with BAO added, 5.32 ± 0.05', lx0, ly0 + 64, C.t3, 'left', 10); }
+    ox.globalAlpha = 1; }
+}
+
+function overlayTowers(s, now){
+  const {narrow, hx, hy, Rb} = centreGeom(), t = (now - T0) / 1000;
+  const g = nest(hx, hy, Rb, 1, s < 0.3 ? 1 : Math.max(0, 1 - (s - 0.3) / 0.06), narrow), {ry, la} = g;
+  // the black hole: a black dot at the one centre
+  const rh = Math.max(7, Rb * 0.085), pulse = reduce ? 0 : Math.sin(t * 2) * 0.5 + 0.5;
+  const gl0 = ox.createRadialGradient(hx, hy, rh * 0.9, hx, hy, rh * 2.6); gl0.addColorStop(0, `rgba(240,194,122,${0.35 + 0.15 * pulse})`); gl0.addColorStop(1, 'rgba(240,194,122,0)');
+  ox.fillStyle = gl0; ox.beginPath(); ox.arc(hx, hy, rh * 2.6, 0, 2 * Math.PI); ox.fill();
+  ox.fillStyle = '#000'; ox.beginPath(); ox.arc(hx, hy, rh, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(240,194,122,0.8)'; ox.lineWidth = 1; ox.stroke();
+  if (s < 0.34) lab('a black hole', hx + rh + 10, hy - rh - 8, C.text, 'left', 14);
+  const aRad = Math.max(0, Math.min(1, (s - 0.3) / 0.08));
+  if (aRad > 0) {
+    for (let k = 0; k < 110; k++) {
+      const tw = towerOf(k), col = TW[tw][0], life = ((reduce ? 0.55 : t * 0.16) + hash(k + 400)) % 1, d = rh * 1.3 + life * (Rb * 1.02 - rh * 1.3);
+      const th = hash(k + 800) * 2 * Math.PI; let x, y;
+      if (tw === 'd3') { const sg = hash(k + 900) < 0.5 ? -1 : 1; x = hx + sg * d * Math.cos(la); y = hy + sg * d * (ry / Rb) * Math.sin(la); }
+      else if (tw === 'd5') { const ph = (hash(k + 950) < 0.5 ? 0.35 : 2.8) + hash(k + 960) * 0.3; x = hx + d * Math.cos(th) * Math.sin(ph); y = hy + d * (ry / Rb) * Math.sin(th) * Math.sin(ph) - d * Math.cos(ph) * 0.95; }
+      else { x = hx + d * Math.cos(th); y = hy + d * (ry / Rb) * Math.sin(th); }
+      ox.globalAlpha = aRad * (1 - life * 0.85); ox.fillStyle = col; const z = tw === 'us' ? 3.4 : 2.6; ox.fillRect(x - z / 2, y - z / 2, z, z);
+    }
+    ox.globalAlpha = aRad * (s > 0.62 && narrow ? Math.max(0, 1 - (s - 0.62) / 0.04) : 1);
+    const lx0 = narrow ? hx : hx - Rb - 24, ly0 = narrow ? hy - Rb - 40 : hy + Rb * 0.45, al = narrow ? 'center' : 'right';
+    if (narrow) { mono('■ ours, the only light we see   ■ the other towers’', lx0, ly0, C.t2, al, 10); }
+    else { [['■ ours: the only light we see', C.gold], ['■ the mirror’s', C.blue], ['■ the three-dimensional towers’', C.green], ['■ the five-dimensional towers’', C.plum]]
+      .forEach(([tx, col], i) => mono(tx, lx0, ly0 + i * 17, col, al, 11)); }
+    ox.globalAlpha = 1;
+  }
+  if (s > 0.66) { const a = Math.min(1, (s - 0.66) / 0.08), u = Math.min(1, (s - 0.7) / 0.22);
+    const dim = 1 / (1 + Math.max(0, u) * 4.5), pulse2 = reduce ? 1 : 0.75 + 0.25 * Math.sin(t * 3);
+    const yF = narrow ? hy - Rb - 70 : hy - Rb * 0.35, xA = narrow ? hx - OW * 0.24 : hx - Rb - Math.min(150, OW * 0.12), xB = narrow ? hx + OW * 0.24 : hx + Rb + Math.min(150, OW * 0.12);
+    const flash = (x, b, label, sub) => { const R0 = 26; const gg = ox.createRadialGradient(x, yF, 0, x, yF, R0 * 1.8);
+      gg.addColorStop(0, `rgba(255,236,200,${0.95 * b * pulse2})`); gg.addColorStop(0.4, `rgba(240,194,122,${0.55 * b * pulse2})`); gg.addColorStop(1, 'rgba(240,194,122,0)');
+      ox.fillStyle = gg; ox.beginPath(); ox.arc(x, yF, R0 * 1.8, 0, 2 * Math.PI); ox.fill(); const ly = narrow ? yF + 40 : yF + 52; lab(label, x, ly, C.text, 'center', narrow ? 12 : 14); mono(sub, x, ly + (narrow ? 16 : 20), C.t3, 'center', narrow ? 10 : 11); };
+    ox.globalAlpha = a; flash(xA, 1, 'one tower alone', 'all the light ours');
+    flash(xB, dim, 'shared among the towers', u < 0.25 ? 'dimmed' : u < 0.6 ? '÷ 2 with the mirror' : '÷ about 5.5 with all six');
+    ox.globalAlpha = 1; }
+}
+
+function overlayCount(s, hx, hy, rs){
+  const g = Math.max(7, Math.min(12, rs / 9)), R0 = rs * 0.97; ox.save(); ox.beginPath(); ox.arc(hx, hy, R0, 0, 2 * Math.PI); ox.clip();
+  ox.strokeStyle = 'rgba(191,181,166,0.28)'; ox.lineWidth = 1;
+  for (let x = hx - R0; x <= hx + R0; x += g) { ox.beginPath(); ox.moveTo(x, hy - R0); ox.lineTo(x, hy + R0); ox.stroke(); }
+  for (let y = hy - R0; y <= hy + R0; y += g) { ox.beginPath(); ox.moveTo(hx - R0, y); ox.lineTo(hx + R0, y); ox.stroke(); }
+  // one switch per 4 ln 2 = 2.77 Planck areas on average: each square holds a dot with that chance
+  let i = 0; for (let x = hx - R0; x <= hx + R0; x += g) for (let y = hy - R0; y <= hy + R0; y += g) { i++;
+    if (hash(i) < Math.min(1, s * 1.6) / (4 * Math.LN2)) { ox.beginPath(); ox.arc(x + g / 2, y + g / 2, Math.max(2, g * 0.26), 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); } }
+  ox.restore();
+  if (OW < OH) { lab('each square: one Planck area', hx, hy - rs * 1.25 - 26, C.t2, 'center', 14); lab('each dot: one switch, one per 2.8 on average', hx, hy - rs * 1.25 - 6, C.green, 'center', 14); }
+  else { plate(hx + rs * 1.1 - 12, hy - rs * 1.55 - 18, 360, 58); lab('each square: one Planck area', hx + rs * 1.1, hy - rs * 1.55, C.t2); lab('each dot: one switch, one per 2.8 on average', hx + rs * 1.1, hy - rs * 1.55 + 22, C.green); }
+}
+function overlayEcho(s, hx, hy, rs){
+  const wide = OW > OH * 1.1; const x0 = wide ? hx + rs * 1.0 : OW * 0.06, x1 = wide ? OW - 36 : OW * 0.94, y0 = wide ? hy - rs * 1.95 : Math.min(hy + rs + OH * 0.12, OH * 0.62), A = Math.min(OH * 0.08, 60), xr = x0 + (x1 - x0) * Math.min(1, s * 1.5);
+  const ring = t => t < 0 ? 0 : Math.exp(-t / 11.2) * Math.cos(0.3737 * t);
+  const delay = 8 * Math.log(massSuns * Msun / mP), tEnd = delay * 3.3, split = 0.24;
+  const X = t => t < 0 ? x0 + (x1 - x0) * split * (1 + t / 400) : x0 + (x1 - x0) * (split + (1 - split) * t / tEnd);
+  const echoA = env(s, 0.34, 1.3, 0.08);
+  const sig = t => { if (t < 0) { const u = -t; return Math.pow(1 + u / 60, -0.25) * 0.9 * Math.cos(4.4 * Math.pow(u, 0.625)); } return ring(t); };
+  ox.strokeStyle = 'rgba(147,180,218,0.25)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x0, y0); ox.lineTo(x1, y0); ox.stroke();
+  ox.strokeStyle = C.blue; ox.lineWidth = 1.6; ox.beginPath(); let first = true;
+  for (let k = 0; k <= 1600; k++) { const t = -400 + (tEnd + 400) * k / 1600, x = X(t); if (x > xr) break; const y = y0 - sig(t) * A; first ? ox.moveTo(x, y) : ox.lineTo(x, y); first = false; }
+  ox.stroke();
+  if (echoA > 0) { ox.globalAlpha = echoA; ox.strokeStyle = C.red; ox.setLineDash([3, 3]); ox.lineWidth = 1.3;
+    for (let k = 1; k <= 3; k++) { const tk = k * delay, x = X(tk); if (x > xr) break; ox.beginPath(); for (let j = 0; j <= 120; j++) { const t = tk + j * 0.6; const y = y0 - 0.42 * Math.pow(0.55, k - 1) * ring(t - tk) * A; j ? ox.lineTo(X(t), y) : ox.moveTo(X(t), y); } ox.stroke(); mono('echo ' + k, x, y0 + A + 14, C.red, 'center', 11); }
+    ox.setLineDash([]); ox.globalAlpha = 1; }
+  if (s > 0.72) { const a = Math.min(1, (s - 0.72) * 6); ox.globalAlpha = a; lab('this framework: the ringing simply dies away', wide ? X(40) : OW * 0.06, y0 + A + 40, C.green); ox.globalAlpha = 1; }
+  mono('inspiral', x0, y0 - A - 14, C.t3, 'left', 11); mono('merger', X(0), y0 - A - 14, C.t3, 'center', 11);
+}
+
+// ---------- helpers for the new chapters ----------
+const sm01 = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+function arrowLine(x1, y1, x2, y2, col, w = 1.6, head = 8){ ox.strokeStyle = col; ox.fillStyle = col; ox.lineWidth = w; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke();
+  const a = Math.atan2(y2 - y1, x2 - x1); ox.beginPath(); ox.moveTo(x2, y2); ox.lineTo(x2 - head * Math.cos(a - 0.4), y2 - head * Math.sin(a - 0.4)); ox.lineTo(x2 - head * Math.cos(a + 0.4), y2 - head * Math.sin(a + 0.4)); ox.closePath(); ox.fill(); }
+const EQF = z => `500 ${z}px "Source Serif 4", Georgia, serif`;
+// one line of mathematics: parts are [text, colour, 'sup' | 'sub' | '']
+function eqLine(parts, x, y, size, align = 'center'){
+  let w = 0; parts.forEach(([t, , k]) => { ox.font = EQF(k ? size * 0.62 : size); w += ox.measureText(t).width; });
+  let xx = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  parts.forEach(([t, col, k, strike]) => { const z = k ? size * 0.62 : size, dy = k === 'sup' ? -size * 0.36 : k === 'sub' ? size * 0.18 : 0; texL(t, xx, y + dy, col, z, 'left'); ox.font = EQF(z); const tw = ox.measureText(t).width;
+    if (strike > 0) { ox.strokeStyle = C.red; ox.lineWidth = Math.max(1.6, size * 0.08); ox.beginPath(); ox.moveTo(xx - 2, y - size * 0.05 + size * 0.22); ox.lineTo(xx - 2 + (tw + 4) * strike, y - size * 0.05 - size * 0.42 * strike + size * 0.22); ox.stroke(); }
+    xx += tw; });
+  return w;
+}
+
+// the fall, inside: a ring of dust stretched and squeezed at the Kasner rates (T6 Lem 5.1, T4 Thm 8.7)
+function overlayKasner(){
+  const a = envLog(R, 0.72, 0.21); if (a <= 0) return;
+  const narrow = OW < OH, x0 = narrow ? OW * 0.42 : OW * 0.13, y0 = narrow ? OH * 0.21 : OH * 0.46, r0 = narrow ? 19 : Math.min(OH * 0.055, 44);
+  const k = Math.min(1, R / 0.72), along = Math.pow(k, -0.5), across = k;
+  ox.globalAlpha = a;
+  ox.setLineDash([2, 4]); ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.arc(x0, y0, r0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]);
+  for (let i = 0; i < 16; i++) { const t = i / 16 * 2 * Math.PI, x = x0 + r0 * across * Math.cos(t), y = y0 + r0 * along * Math.sin(t);
+    ox.fillStyle = C.gold; ox.beginPath(); ox.arc(x, y, 2.6, 0, 2 * Math.PI); ox.fill(); }
+  arrowLine(x0 + r0 * 1.2 + 10, y0 - 18, x0 + r0 * 1.2 + 10, y0 + 22, C.t2, 1.2, 6); mono('to the centre', x0 + r0 * 1.2 + 16, y0 + 2, C.t2, 'left', 10);
+  mono('a ring of dust, side view', x0, y0 - r0 * along - 16, C.text, 'center', 11);
+  mono('stretched ×' + along.toFixed(2) + ' · squeezed ×' + across.toFixed(2), x0, y0 + r0 * along + 16, C.gold, 'center', 10);
+  ox.globalAlpha = 1;
+}
+
+// the move lands on the conformal completion; its lift is the incidence relation of conformal spinors (T9 Thm 4.2)
+// three steps, each one continuous movement: the cone of 2 + 4 draws itself; points of spacetime rise one after another
+// to their light rays; the two equations write themselves out, term by term
+function eqWidth(parts, size){ let w = 0; parts.forEach(([t, , k]) => { ox.font = EQF(k ? size * 0.62 : size); w += ox.measureText(t).width; }); return w; }
+function eqReveal(parts, x, y, size, f){ if (f <= 0) return; const w = eqWidth(parts, size); ox.save(); ox.beginPath(); ox.rect(x - w / 2 - 6, y - size * 1.2, (w + 12) * Math.min(1, f), size * 2.4); ox.clip(); eqLine(parts, x, y, size); ox.restore(); }
+function camS(unit, cx, cy, elev, D, yaw){ const ce = Math.cos(elev), se = Math.sin(elev), f = unit * D, cyw = Math.cos(yaw), syw = Math.sin(yaw);
+  return ([X0, Y0, Z]) => { const X = X0 * cyw - Y0 * syw, Y = X0 * syw + Y0 * cyw, yc = Y * se + Z * ce, zc = D + Y * ce - Z * se; return [cx + f * X / zc, cy - f * yc / zc]; }; }
+// fit a camera's view of the given world points into a screen box
+function fitCam(pts, x0, y0, w, h, elev, D, yaw){ const p1 = camS(1, 0, 0, elev, D, yaw), q = pts.map(p1);
+  const bx0 = Math.min(...q.map(v => v[0])), bx1 = Math.max(...q.map(v => v[0])), by0 = Math.min(...q.map(v => v[1])), by1 = Math.max(...q.map(v => v[1]));
+  const k = Math.min(w / (bx1 - bx0), h / (by1 - by0)), ox_ = x0 + (w - (bx1 - bx0) * k) / 2 - bx0 * k, oy_ = y0 + (h - (by1 - by0) * k) / 2 - by0 * k;
+  return p => { const v = p1(p); return [ox_ + v[0] * k, oy_ + v[1] * k]; }; }
+function overlayTwistor(s){
+  const narrow = OW < OH, cx = OW / 2, sm = sm01, {top, bot} = region('twistor');
+  const eqK = 0, eqH = 0;           // room the equations take at the bottom
+  const dTop = top + (narrow ? 26 : 34), dBot = bot - eqK * eqH - 8;
+  const a0 = sm(s / 0.06), fade = 1 - 0.45 * eqK;
+  // world: the sheet of spacetime (Z = 0) and the light cone of 2 + 4 (apex A, axis up, rim radius = height: light at 45 degrees)
+  // the cone stands above the sheet of spacetime, its tip over the sheet's centre
+  const A = [0, 0, 1.0], H = narrow ? 1.5 : 1.55;
+  const sheet = narrow ? [[-1.7, -1.1], [1.7, 1.1]] : [[-2.5, -1.3], [2.5, 1.3]];
+  const rim = th => [A[0] + H * Math.cos(th), A[1] + H * Math.sin(th), A[2] + H];
+  const keyPts = [[sheet[0][0], sheet[0][1], 0], [sheet[1][0], sheet[0][1], 0], [sheet[0][0], sheet[1][1], 0], [sheet[1][0], sheet[1][1], 0], A];
+  for (let k = 0; k < 16; k++) keyPts.push(rim(k / 16 * 2 * Math.PI));
+  const pr = fitCam(keyPts, narrow ? 18 : OW * 0.2, dTop + (narrow ? 0 : 18), narrow ? OW - 36 : OW * 0.6, Math.max(80, dBot - dTop - (narrow ? 0 : 40)), 0.34, 9, narrow ? -0.15 : -0.18);
+  const P = (u, v) => pr([(sheet[0][0] + sheet[1][0]) / 2 + u * (sheet[1][0] - sheet[0][0]) / 2, v * (sheet[1][1] - sheet[0][1]) / 2, 0]);
+  ox.globalAlpha = a0 * fade;
+  // the sheet
+  { const c = [[sheet[0][0], sheet[0][1], 0], [sheet[1][0], sheet[0][1], 0], [sheet[1][0], sheet[1][1], 0], [sheet[0][0], sheet[1][1], 0]].map(pr);
+    ox.fillStyle = 'rgba(147,180,218,0.07)'; ox.beginPath(); c.forEach(([x, y], i) => i ? ox.lineTo(x, y) : ox.moveTo(x, y)); ox.closePath(); ox.fill(); ox.strokeStyle = 'rgba(147,180,218,0.55)'; ox.lineWidth = 1; ox.stroke();
+    ox.strokeStyle = 'rgba(191,181,166,0.2)'; for (let k = 1; k < 6; k++) { const t = k / 6;
+      let p = pr([sheet[0][0] + t * (sheet[1][0] - sheet[0][0]), sheet[0][1], 0]), q = pr([sheet[0][0] + t * (sheet[1][0] - sheet[0][0]), sheet[1][1], 0]); ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke();
+      p = pr([sheet[0][0], sheet[0][1] + t * (sheet[1][1] - sheet[0][1]), 0]); q = pr([sheet[1][0], sheet[0][1] + t * (sheet[1][1] - sheet[0][1]), 0]); ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke(); }
+    const lp = pr([(sheet[0][0] + sheet[1][0]) / 2, sheet[0][1], 0]); lab('spacetime, 1 + 3', lp[0], lp[1] + 20, C.blue, 'center', narrow ? 12 : 14); }
+  // the cone: generators sweep round from the tip, then the rim closes; nearer half bright, farther half faint
+  const g = sm((s - 0.02) / 0.16), ap = pr(A), N = 96, rp = Array.from({length: N + 1}, (_, k) => pr(rim(k / N * 2 * Math.PI)));
+  const near = k => Math.sin(k / N * 2 * Math.PI) < 0;                    // Y < 0 is nearer the viewer
+  if (g > 0) {
+    const fillA = sm((s - 0.1) / 0.08); ox.fillStyle = `rgba(224,122,85,${0.13 * fillA})`; ox.beginPath(); ox.moveTo(...ap); rp.forEach(p => ox.lineTo(...p)); ox.closePath(); ox.fill();
+    for (let k = 0; k < N; k++) { if (k / N > g) break; ox.strokeStyle = near(k) ? 'rgba(224,122,85,0.9)' : 'rgba(224,122,85,0.35)'; ox.lineWidth = near(k) ? 1.6 : 1; ox.setLineDash(near(k) ? [] : [3, 4]);
+      ox.beginPath(); ox.moveTo(...rp[k]); ox.lineTo(...rp[k + 1]); ox.stroke(); } ox.setLineDash([]);
+    for (let k = 0; k < 12; k++) { if (k / 12 > g) break; const i = Math.round(k / 12 * N); ox.strokeStyle = near(i) ? 'rgba(224,122,85,0.32)' : 'rgba(224,122,85,0.12)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(...rp[i]); ox.stroke(); }
+    // the outline: the two generators that bound the cone on screen
+    let lo = 0, hi = 0, best0 = Infinity, best1 = -Infinity; rp.forEach(([x, y], k) => { const t = Math.atan2(x - ap[0], ap[1] - y); if (t < best0) { best0 = t; lo = k; } if (t > best1) { best1 = t; hi = k; } });
+    ox.strokeStyle = 'rgba(224,122,85,0.9)'; ox.lineWidth = 1.6; [lo, hi].forEach(k => { const e = rp[k]; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(ap[0] + (e[0] - ap[0]) * g, ap[1] + (e[1] - ap[1]) * g); ox.stroke(); });
+    ox.fillStyle = C.red; ox.beginPath(); ox.arc(ap[0], ap[1], 3, 0, 2 * Math.PI); ox.fill();
+    ox.globalAlpha = a0 * fade * sm((s - 0.12) / 0.05); const yTop = Math.min(...rp.map(p => p[1])); if (narrow) lab('the light cone of 2 + 4', ap[0] + 10, ap[1] + 4, C.red, 'left', 12); else lab('the light cone of 2 + 4', ap[0], yTop - 12, C.red, 'center', 14);
+    ox.globalAlpha = a0 * fade; }
+  // four points of spacetime, each carried to its own ray of the cone: a generator, from the tip to the rim exactly
+  const pts = [[0.2, 0.15, -1.15, C.gold], [-0.55, -0.45, -2.2, C.blue], [0.6, -0.5, -0.35, C.green], [-0.35, 0.55, 0.55, C.plum]];
+  pts.forEach(([u, v, th, col], i) => {
+    const t0 = 0.31 + i * 0.035, k = sm((s - t0) / 0.07); if (k <= 0) return;
+    const [px, py] = P(u, v), e = pr(rim(th)), land = [ap[0] + (e[0] - ap[0]) * 0.55, ap[1] + (e[1] - ap[1]) * 0.55];
+    ox.fillStyle = col; ox.beginPath(); ox.arc(px, py, 4, 0, 2 * Math.PI); ox.fill();
+    const qx = (px + land[0]) / 2, qy = Math.min(py, land[1]) - (narrow ? 30 : 60), B = t => [(1 - t) * (1 - t) * px + 2 * (1 - t) * t * qx + t * t * land[0], (1 - t) * (1 - t) * py + 2 * (1 - t) * t * qy + t * t * land[1]];
+    ox.setLineDash([3, 4]); ox.strokeStyle = col; ox.lineWidth = 1.1; ox.beginPath(); for (let j = 0; j <= 30; j++) { const [x, y] = B(k * j / 30); j ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke(); ox.setLineDash([]);
+    if (k < 1) { const [x, y] = B(k); ox.beginPath(); ox.arc(x, y, 3.2, 0, 2 * Math.PI); ox.fill(); }
+    const r = sm((s - t0 - 0.05) / 0.04); if (r > 0) { ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(ap[0] + (e[0] - ap[0]) * r, ap[1] + (e[1] - ap[1]) * r); ox.stroke();
+      if (r >= 1) { ox.beginPath(); ox.arc(e[0], e[1], 3, 0, 2 * Math.PI); ox.fill(); } } });
+  if (s > 0.3) { ox.globalAlpha = a0 * fade * sm((s - 0.3) / 0.03); const [px, py] = P(pts[0][0], pts[0][1]); lab('a point x', px - 8, py + 18, C.gold, 'right', narrow ? 12 : 14);
+    lab(s < 0.36 ? 'x becomes a ray of the cone, X(x)' : 'each point becomes its own ray of the cone', cx, narrow ? top + 8 : P(0, -1)[1] + 46, C.text, 'center', narrow ? 13 : 15); }
+  // the two equations, written out term by term
+  ox.globalAlpha = 1;
+  if (false) { const z = narrow ? 19 : 27, y2 = bot - (narrow ? 34 : 40), y1 = y2 - (narrow ? 58 : 70);
+    const T_ = C.text, X = C.gold, Bc = C.blue;
+    const e1 = [['X(', T_], ['x', X], [') = n', T_], ['o', T_, 'sub'], [' + ', T_], ['x', X], [' + ½ Q(', T_], ['x', X], [') n', T_], ['∞', T_, 'sub']];
+    const e2 = [['ω', Bc], ['A', Bc, 'sup'], [' = i ', T_], ['x', X], ['AA′', X, 'sup'], [' π', Bc], ['A′', Bc, 'sub']];
+    const f1 = sm((s - 0.61) / 0.09), f2 = sm((s - 0.71) / 0.09);
+    ox.globalAlpha = sm((s - 0.6) / 0.03); mono('THE RULE’S LIFT, T1', cx, y1 - z * 1.05, C.t3, 'center', 10); ox.globalAlpha = 1; eqReveal(e1, cx, y1, z, f1);
+    if (f2 > 0) { ox.globalAlpha = sm((s - 0.7) / 0.03); mono('PENROSE’S INCIDENCE RELATION, 1967', cx, y2 - z * 1.05, C.t3, 'center', 10); ox.globalAlpha = 1; eqReveal(e2, cx, y2, z, f2); }
+    const k3 = sm((s - 0.8) / 0.05); if (k3 > 0) { ox.globalAlpha = k3; mono(narrow ? 'the same point x in both' : 'the same point x in both: one written as a ray, one as a pair of spinors', cx, y2 + z * 1.0, C.gold, 'center', narrow ? 10 : 11); } }
+  ox.globalAlpha = 1;
+}
+
+// scrambling at the chaos bound (T8 Asm 6.1)
+const SCR_N = 48, SCR_ORDER = Array.from({length: SCR_N}, (_, i) => i).sort((a, b) => hash(a * 5.3 + 1) - hash(b * 5.3 + 1));
+function overlayScramble(s, hx, hy, rs){
+  const a = env(s, 0.06, 1.3, 0.08); if (a <= 0) return; ox.globalAlpha = a;
+  const wide = OW > OH * 1.1, u = Math.max(0, Math.min(1, (s - 0.24) / 0.5)), reached = Math.max(1, Math.min(SCR_N, Math.round(Math.exp(u * Math.log(SCR_N))))), rr = rs * (wide ? 1.3 : 1.5);
+  const rank = new Array(SCR_N); SCR_ORDER.forEach((k, i) => rank[k] = i);
+  for (let i = 0; i < SCR_N; i++) { const t = i / SCR_N * 2 * Math.PI, x = hx + rr * Math.cos(t), y = hy + rr * Math.sin(t), on = s > 0.12 && rank[i] < reached;
+    ox.beginPath(); ox.arc(x, y, Math.max(2.5, Math.min(5, rs / 18)), 0, 2 * Math.PI); ox.fillStyle = on ? (rank[i] === 0 ? C.text : C.red) : 'rgba(16,14,13,.6)'; ox.strokeStyle = on ? C.red : C.t3; ox.lineWidth = 1.1; ox.fill(); ox.stroke(); }
+  if (s > 0.12) mono('touched: ' + reached + ' of ' + SCR_N, hx, hy - rr - 18, C.text, 'center', 12);
+  // the growth curve
+  const gx0 = wide ? hx + rs * 2.3 : 40, gx1 = wide ? Math.min(OW - 60, gx0 + 460) : OW - 30, gy1 = wide ? hy + rs * 0.9 : OH * 0.36, gy0 = wide ? hy - rs * 1.3 : OH * 0.17;
+  ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(gx0, gy0); ox.lineTo(gx0, gy1); ox.lineTo(gx1, gy1); ox.stroke();
+  const tMax = Math.log(SCR_N), X = t => gx0 + (gx1 - gx0) * t / (tMax * 1.15), Y = n => gy1 - (gy1 - gy0) * (n - 1) / (SCR_N - 1);
+  ox.strokeStyle = C.red; ox.lineWidth = 2; ox.beginPath(); const tNow = u * tMax;
+  for (let j = 0; j <= 80; j++) { const t = tNow * j / 80, x = X(t), y = Y(Math.exp(t)); j ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke();
+  ox.setLineDash([3, 4]); ox.strokeStyle = 'rgba(224,122,85,0.4)'; ox.beginPath(); for (let j = 0; j <= 80; j++) { const t = tMax * j / 80; j ? ox.lineTo(X(t), Y(Math.exp(t))) : ox.moveTo(X(t), Y(Math.exp(t))); } ox.stroke(); ox.setLineDash([]);
+  mono('switches reached', gx0 + 6, gy0 - 10, C.t2, 'left', 10); mono('time', gx1, gy1 + 14, C.t2, 'right', 10);
+  if (s > 0.45) lab('spreading at 2πT, the hole’s clock', X(tMax * 0.08), Y(SCR_N * 0.62), C.red, 'left', wide ? 15 : 12);
+  if (u >= 1) { mono('all of them', X(tMax), Y(SCR_N) - 12, C.text, 'center', 10); }
+  ox.globalAlpha = 1;
+}
+
+// the tower and the CAR limit (T3 Thm 4.2, 4.3, 5.6)
+function overlayCar(s){
+  // the tower sits clear of Part IV's title, which stays over the first step
+  const narrow = OW < OH, W = narrow ? OW * 0.5 : Math.min(OW * 0.24, 300), tb = titleBottom(PART_OF.car), besideX = tb.right + 200 + W / 2;
+  const beside = !narrow && besideX + W / 2 + 100 <= OW;                // room beside the title: the tower stands to its right
+  const cx = beside ? Math.max(OW / 2, besideX) : OW / 2, yb = narrow ? OH * 0.56 : OH * 0.62, yt = beside ? OH * 0.18 : Math.max(narrow ? OH * 0.17 : OH * 0.18, tb.bottom + (narrow ? 22 : 30)), n = 4, gap = (yb - yt) / (n + 0.9);
+  const H = narrow ? 20 : 28, shown = Math.min(n, 1 + Math.floor(Math.max(0, s - 0.02) / 0.09));
+  const names = ['spacetime, 1 + 3', '2 + 4: the completion', '3 + 5', '4 + 6'];
+  for (let k = 0; k < shown; k++) { const y = yb - k * gap;
+    ox.fillStyle = 'rgba(147,180,218,0.1)'; ox.strokeStyle = k ? 'rgba(147,180,218,0.7)' : C.gold; ox.lineWidth = 1.3; ox.fillRect(cx - W / 2, y - H / 2, W, H); ox.strokeRect(cx - W / 2, y - H / 2, W, H);
+    for (let j = 0; j <= k; j++) { const x = cx + (j - k / 2) * Math.min(28, W / (k + 2)); ox.beginPath(); ox.arc(x, y, narrow ? 5 : 6.5, 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); }
+    if (narrow) mono(names[k], cx, y - H / 2 - 9, k ? C.t2 : C.gold, 'center', 10); else lab(names[k], cx - W / 2 - 16, y, k ? C.t2 : C.gold, 'right', 15);
+    lab((k + 1) + (k ? ' switches' : ' switch'), cx + W / 2 + (narrow ? 8 : 16), y, C.green, 'left', narrow ? 12 : 15);
+    if (k > 0) { const xa = cx - W / 2 + 14; arrowLine(xa, y + gap - H / 2 - 2, xa, y + H / 2 + 3, C.red, 1.6, 6); if (k === 1) mono('+1 time, +1 space', xa + 10, y + gap / 2, C.red, 'left', narrow ? 9 : 11); } }
+  if (s > 0.42) { ox.globalAlpha = Math.min(1, (s - 0.42) / 0.05); mono('⋮', cx, yb - n * gap + gap * 0.42, C.t2, 'center', 18); ox.globalAlpha = 1; }
+  const aT = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
+  if (aT > 0) { ox.globalAlpha = aT; const y = yt;
+    const gr = ox.createLinearGradient(cx - W * 0.6, 0, cx + W * 0.6, 0); gr.addColorStop(0, 'rgba(207,155,181,0.05)'); gr.addColorStop(0.5, 'rgba(207,155,181,0.3)'); gr.addColorStop(1, 'rgba(207,155,181,0.05)');
+    ox.fillStyle = gr; ox.fillRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2); ox.strokeStyle = C.plum; ox.lineWidth = 1.4; ox.strokeRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2);
+    for (let j = 0; j < 40; j++) { ox.fillStyle = 'rgba(166,196,151,0.85)'; ox.beginPath(); ox.arc(cx - W * 0.56 + W * 1.12 * hash(j + 70), y - H * 0.45 + H * 0.9 * hash(j + 170), 2, 0, 2 * Math.PI); ox.fill(); }
+    if (narrow) { mono('the CAR limit: every floor at once', cx, y + H * 0.6 + 12, C.plum, 'center', 10); }
+    else if (cx + W * 0.6 + 330 <= OW) { lab('the CAR limit: every floor at once', cx + W * 0.6 + 16, y - 9, C.plum, 'left', 16); mono('as many switches as you like: a free fermion field', cx + W * 0.6 + 16, y + 12, C.t2, 'left', 11); }
+    else { lab('the CAR limit: every floor at once', cx, y + H * 0.6 + 16, C.plum, 'center', 14); }
+    ox.globalAlpha = 1; }
+  if (s > 0.3) { ox.globalAlpha = Math.min(1, (s - 0.3) / 0.05) * 0.9; const xl = narrow ? 14 : cx - W / 2 - 180;
+    ox.strokeStyle = C.green; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(xl, yb + H / 2); ox.lineTo(xl, yt - H / 2); ox.stroke();
+    ox.save(); ox.translate(xl - 7, (yb + yt) / 2); ox.rotate(-Math.PI / 2); mono('time minus space never changes on the way up', 0, 0, C.green, 'center', narrow ? 9 : 11); ox.restore(); ox.globalAlpha = 1; }
+}
+
+// the orientation bit: matter and the arrow of time (T14 Prop 5.1, 5.2, Rem 5.3)
+function overlayArrow(s){
+  const narrow = OW < OH, S = Math.min(OW, OH), R0 = narrow ? Math.min(OW * 0.2, 78) : Math.min(S * 0.16, 125);
+  const pos = narrow ? [[OW / 2, OH * 0.27], [OW / 2, OH * 0.52]] : [[OW * 0.3, OH * 0.42], [OW * 0.7, OH * 0.42]];
+  const aB = Math.min(1, Math.max(0, (s - 0.3) / 0.05)), pick = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
+  const panel = (k, x, y, a) => { if (a <= 0) return; ox.globalAlpha = a * (k === 1 ? 1 - 0.6 * pick : 1); const flip = k === 1;
+    [[-1, 'f'], [1, 'f*']].forEach(([dx, name]) => { const creates = flip ? dx < 0 : dx > 0, col = creates ? C.gold : C.t2, ex = x + dx * R0 * 0.75, ey = y - R0 * 0.75;
+      arrowLine(x, y, ex, ey, col, 2.2, 9); lab(creates ? 'creates' : 'destroys', ex + dx * 8, ey - 10, col, dx > 0 ? 'left' : 'right', narrow ? 12 : 15); mono(name, (x + ex) / 2 - dx * 14, (y + ey) / 2 + 6, col, 'center', 12); });
+    const tl = R0 * 0.9, ty = y + (narrow ? 20 : 28), dir = flip ? -1 : 1; arrowLine(x - dir * tl / 2, ty, x + dir * tl / 2, ty, C.blue, 1.6, 7); mono('time', x, ty + 13, C.blue, 'center', 10);
+    lab(k === 0 ? 'one choice' : 'the other choice', x, ty + (narrow ? 32 : 40), C.text, 'center', narrow ? 13 : 16); };
+  panel(0, ...pos[0], env(s, -0.1, 1.2, 0.08)); panel(1, ...pos[1], aB);
+  if (aB > 0 && pick < 1) { ox.globalAlpha = aB * (1 - pick); const [x1, y1] = pos[0], [x2, y2] = pos[1];
+    if (narrow) { arrowLine(OW * 0.85, y1 + 10, OW * 0.85, y2 - 40, C.t2, 1.2, 6); arrowLine(OW * 0.85, y2 - 40, OW * 0.85, y1 + 10, C.t2, 1.2, 6); mono('swap', OW * 0.85, (y1 + y2) / 2 - 15, C.t2, 'center', 10); }
+    else { const mx = (x1 + x2) / 2; arrowLine(mx - 60, y1 - R0 * 0.3, mx + 60, y1 - R0 * 0.3, C.t2, 1.2, 7); arrowLine(mx + 60, y1 - R0 * 0.3, mx - 60, y1 - R0 * 0.3, C.t2, 1.2, 7);
+      lab('swap them everywhere:', mx, y1 - R0 * 0.3 - 30, C.text, 'center', 15); lab('no law changes', mx, y1 - R0 * 0.3 + 22, C.text, 'center', 15); } }
+  if (pick > 0) { ox.globalAlpha = pick; const [x, y] = pos[0], w = R0 * 2.9, top = y - R0 * 1.1, bot = y + (narrow ? 62 : 82);
+    ox.strokeStyle = C.gold; ox.lineWidth = 1.4; ox.strokeRect(x - w / 2, top, w, bot - top);
+    if (narrow) mono('ours: one bit, set once', x, top - 10, C.gold, 'center', 10);
+    else { const mx = (pos[0][0] + pos[1][0]) / 2; lab('ours: one bit, set once, at the start', mx, bot + 30, C.gold, 'center', 17); mono('which is matter, and which way time runs', mx, bot + 54, C.t2, 'center', 11); } }
+  ox.globalAlpha = 1;
+}
+
+// the paradox stated: something falls in, random glow comes out (Hawking 1975)
+function overlayParadox(s, hx, hy, rs, now){
+  const t = (now - T0) / 1000, aRad = sm01((s - 0.2) / 0.1);
+  if (aRad > 0) for (let k = 0; k < 26; k++) { const life = ((reduce ? 0.5 : t * 0.12) + hash(k)) % 1, ang = hash(k + 50) * 2 * Math.PI, d = Math.min(rs * (1.1 + life * 3.2), OH * 0.42);
+    const byte = Math.floor(hash(k * 13 + Math.floor((reduce ? 0 : t * 0.12) + hash(k))) * 256);
+    ox.globalAlpha = aRad * (1 - life) * 0.9; mono(byte.toString(16).toUpperCase().padStart(2, '0'), hx + d * Math.cos(ang), hy + d * Math.sin(ang), C.red, 'center', 12); }
+  ox.globalAlpha = 1;
+  // a message falls in
+  const u = Math.min(1, Math.max(0, (s - 0.04) / 0.36));
+  if (u > 0 && u < 1) { const sx = Math.min(OW - 80, hx + rs * 3.4), sy = hy - rs * 1.4, x = sx + (hx - sx) * u * u, y = sy + (hy - sy) * u * u, z = 1 - 0.85 * u;
+    ox.globalAlpha = 1 - u * u; ox.fillStyle = 'rgba(240,194,122,0.18)'; ox.strokeStyle = C.gold; ox.lineWidth = 1.2; ox.fillRect(x - 58 * z, y - 16 * z, 116 * z, 32 * z); ox.strokeRect(x - 58 * z, y - 16 * z, 116 * z, 32 * z);
+    if (z > 0.4) mono('NOTHING IS LOST', x, y, C.gold, 'center', Math.max(7, 12 * z)); ox.globalAlpha = 1; }
+  if (s > 0.6) { ox.globalAlpha = Math.min(1, (s - 0.6) / 0.06); lab('where did the message go?', hx, hy - rs - 26, C.gold, 'center', 18); ox.globalAlpha = 1; }
+}
+
+// where the message is: in the pairs, not in either half (T5 Thm 5.7, 7.27, 9.3; the one-time pad is an analogy)
+const ALPH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ', MSGI = MSG.split('').map(ch => ALPH.indexOf(ch));
+function overlayCorr(s, now){
+  const narrow = OW < OH, n = MSG.length, cw = Math.min(48, (OW - 36) / n), x0 = OW / 2 - cw * n / 2 + cw / 2;
+  const gap = narrow ? 78 : 100, y1 = narrow ? OH * 0.2 : OH * 0.2, y2 = y1 + gap, y3 = y2 + gap, fs = narrow ? 15 : 22, ch = fs * 1.55;
+  const tick = reduce ? Math.floor(s * 60) : Math.floor((now - T0) / 450);
+  const aP = sm01((s - 0.22) / 0.05), aL = sm01((s - 0.46) / 0.05), aD = sm01((s - 0.72) / 0.05);
+  const letter = k => k === 26 ? '·' : ALPH[k];
+  const cell = (x, y, txt, col, a, steady) => { ox.globalAlpha = a; ox.fillStyle = 'rgba(16,14,13,0.75)'; ox.fillRect(x - cw / 2 + 2, y - ch / 2, cw - 4, ch);
+    ox.strokeStyle = col; ox.lineWidth = steady ? 1.4 : 1; ox.strokeRect(x - cw / 2 + 2, y - ch / 2, cw - 4, ch); mono(txt, x, y + 1, col, 'center', fs); };
+  const lx = x0 - cw / 2 + 2, rowLab = (t, y, col, a) => { ox.globalAlpha = a; mono(t, lx, y - ch / 2 - 11, col, 'left', narrow ? 10 : 11); };
+  for (let i = 0; i < n; i++) { const x = x0 + i * cw, r = Math.floor(hash(i * 31.7 + tick * 7.13) * 27), p = (r - MSGI[i] + 27) % 27;
+    cell(x, y1, letter(r), C.red, 1, false);
+    if (aP > 0) cell(x, y2, letter(p), C.plum, aP, false);
+    if (aL > 0) { ox.globalAlpha = aL * 0.55; ox.strokeStyle = C.green; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x, y1 + ch / 2); ox.lineTo(x, y2 - ch / 2); ox.moveTo(x, y2 + ch / 2); ox.lineTo(x, y3 - ch / 2); ox.stroke();
+      cell(x, y3, letter(MSGI[i]), C.green, aL, true); } }
+  rowLab(narrow ? 'the radiation, out here: each one random' : 'the radiation, out here: each one any letter, equally likely', y1, C.red, 1);
+  if (aP > 0) rowLab('its partners, at the centre: just as random', y2, C.plum, aP);
+  if (aL > 0) rowLab('compared in pairs: steady, every time', y3, C.green, aL);
+  ox.globalAlpha = 1;
+  if (aD > 0) { ox.globalAlpha = aD; const yb = y3 + ch / 2 + (narrow ? 26 : 34), sz = narrow ? 13 : 16;
+    if (narrow) { lab('4D books: plain counts only, so noise', OW / 2, yb, C.red, 'center', sz); lab('6D books: the correlations too', OW / 2, yb + 22, C.green, 'center', sz);
+      mono('the gap: the quantum correlations, computed', OW / 2, yb + 44, C.t2, 'center', 10); }
+    else { lab('four-dimensional books: the plain counts only, so noise', OW / 2 - 16, yb, C.red, 'right', sz); lab('six-dimensional books: the quantum correlations too', OW / 2 + 16, yb, C.green, 'left', sz);
+      mono('the gap between the two books is the quantum correlations: a relative entropy the papers compute exactly', OW / 2, yb + 28, C.t2, 'center', 11); }
+    ox.globalAlpha = 1; }
+}
+
+
+// what happens to what falls in (T14 Prop 6.5)
+function overlayFate(s, hx, hy, rs){
+  const narrow = OW < OH, u = sm01((s - 0.02) / 0.24);
+  if (u < 1) { const sx = narrow ? OW * 0.8 : Math.min(OW - 120, hx + rs * 3.6), sy = narrow ? hy - rs * 3 : hy - rs * 1.5, x = sx + (hx - sx) * u * u, y = sy + (hy - sy) * u * u, z = 1 - 0.85 * u;
+    ox.globalAlpha = 1 - u * u; ox.fillStyle = 'rgba(240,194,122,0.2)'; ox.strokeStyle = C.gold; ox.lineWidth = 1.2; ox.fillRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z); ox.strokeRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z);
+    if (z > 0.45) mono('a star’s worth of matter', x, y, C.gold, 'center', Math.max(7, 12 * z)); ox.globalAlpha = 1; }
+  // the hole is heavier now: its horizon grows with its mass
+  const g = sm01((s - 0.24) / 0.06);
+  if (g > 0) { const a = g * (1 - 0.6 * sm01((s - 0.5) / 0.1)); ox.globalAlpha = a; ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.setLineDash([4, 4]); ox.beginPath(); ox.arc(hx, hy, rs * (1.02 + 0.06 * g), 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]);
+    lab('its mass adds to the hole’s: M + m', hx, hy - rs * 1.6 - 16, C.gold, 'center', narrow ? 13 : 16); ox.globalAlpha = 1; }
+  const big = massSuns >= 1.3e5;
+  const rows = [['✓', 'its energy', 'held as the hole’s mass, then given back as the glow', C.gold, 0.3], ['✓', 'its information', 'comes back in the correlations', C.green, 0.36],
+    [big ? '?' : '✓', 'its electric charge', big ? 'left open for a hole this big' : 'comes back too, for holes below about 100,000 suns', big ? C.t2 : C.blue, 0.46],
+    ['✗', 'its protons and neutrons', 'not returned: the glow is far too cold to make them', C.red, 0.52], ['–', 'a remnant', 'none is left behind (a premise)', C.t2, 0.58]];
+  const x0 = narrow ? 22 : hx + rs * 2.1, y0 = narrow ? OH * 0.16 : Math.max(OH * 0.17, hy - 150), pitch = narrow ? 38 : 46;
+  { const a = Math.min(1, Math.max(0, (s - rows[0][4]) / 0.04)); if (a > 0) { ox.globalAlpha = a; plate(x0 - 22, y0 - 26, narrow ? OW - 2 * (x0 - 22) : Math.min(OW - x0 + 4, 420), rows.length * pitch + 12); ox.globalAlpha = 1; } }
+  rows.forEach(([ic, name, note, col, t0], i) => { const a = Math.min(1, Math.max(0, (s - t0) / 0.04)); if (a <= 0) return; const y = y0 + i * pitch; ox.globalAlpha = a;
+    if (!narrow) { ox.setLineDash([2, 5]); ox.strokeStyle = col; ox.globalAlpha = a * 0.5; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(hx + rs * 1.05, hy); ox.lineTo(x0 - 10, y); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = a; }
+    mono(ic, x0, y, col, 'center', narrow ? 15 : 18); lab(name, x0 + 18, y - (narrow ? 7 : 8), col, 'left', narrow ? 14 : 17); mono(note, x0 + 18, y + (narrow ? 9 : 12), C.t2, 'left', narrow ? 9 : 11); });
+  ox.globalAlpha = 1;
+}
+
+/* ---------- the loop ---------- */
+let lastSig = '', lastFilt = '', dirty = true, dirtyOv = true, inView = true, frames = [], lastT = performance.now();
+new IntersectionObserver(es => { inView = es[0].isIntersecting; }).observe(sec);
+const CENTRE = new Set(['sing', 'move', 'twistor', 'switches', 't2']), CLEAR = new Set(['paradox', 'fate', 'thermo', 'count', 'scramble', 'echo']);
+const OUTSIDE = new Set(SCENES.filter(k => !CENTRE.has(k)));
+// the predictions as the Lab's record holds them: [status, claim, paper, latest data]
+const CLAIMS = LAB.preds.map(p => [p.st, p.title, p.paper, p.note]);
+$('#rows').innerHTML = CLAIMS.map(([st, c, p, n]) => `<div class="r" data-st="${st}"><i class="d ${st}"></i><span class="c">${c}</span><span class="p">${p}</span><span class="st">${n}</span></div>`).join('');
+let boardStage = -1;
+// the board shrinks, if it must, to stay clear of the subtitle below it
+function fitBoard(){ const bd = $('#board'), cap = $('#cap'); bd.style.transform = 'translateX(-50%)'; bd.style.transformOrigin = 'top center';
+  const r = bd.getBoundingClientRect(), c = cap.classList.contains('show') ? cap.getBoundingClientRect().top : innerHeight - 160, room = c - 14 - r.top;
+  if (r.height > room && room > 60) bd.style.transform = `translateX(-50%) scale(${(room / r.height).toFixed(3)})`; }
+function hudUpdate(){
+  const M = massSuns * Msun, tM = G * M / c ** 3, rm = R * G * M / c ** 2, tau = (2 / 3) * Math.pow(R, 1.5) / Math.SQRT2 * tM;
+  $('#hR').innerHTML = len(rm); $('#hTau').textContent = durShort(tau);
+  $('#hV').textContent = R > 2 ? (Math.sqrt(2 / R) * 100).toFixed(1) + '% of light' : 'inside: no hovering';
+  const f = Math.log(RMAX / R) / Math.log(RMAX / RMIN);
+  $('#hBar').style.width = (f * 100).toFixed(1) + '%'; $('#hHor').style.left = (Math.log(RMAX / 2) / Math.log(RMAX / RMIN) * 100).toFixed(1) + '%';
+  const tide = 2 * G * M * 2 / Math.pow(rm, 3) / 9.81;
+  return {tau: dur(tau), tide: tide < 0.01 ? 'too small to feel' : (tide < 1e3 ? tide.toPrecision(2) : sci(tide, 2)) + ' times Earth’s gravity'};
+}
+function loop(now){
+  if (inView) {
+    const v = playerV(now), ph = phaseAt(v), prev = mode; mode = ph.mode;
+    let animate = false;
+    if (mode === 'fall') {
+      const Rt = radiusAt(ph.s), k = reduce || VIDEO || snap ? 1 : 0.18, Rn = Math.exp(Math.log(R) + (Math.log(Rt) - Math.log(R)) * k);
+      const moved = Math.abs(Rn - R) / R > 1e-4; R = Rn;
+      renderR = R; renderDisk = disk; renderYaw = yaw + (lookBack ? Math.PI : 0); renderPitch = pitch; fovNow = fallFov(R); animate = moved || (disk && !reduce);
+    } else if (OUTSIDE.has(mode)) {
+      R = RMIN; renderR = 26; renderDisk = disk; renderPitch = 0;
+      const wide = cv.width >= cv.height; fovNow = wide ? 0.55 : 0.62 / Math.max(0.5, cv.width / cv.height);
+      renderYaw = mode === 'towers' ? 0 : (wide ? 0.3 : 0) + (reduce || VIDEO ? 0 : Math.sin((now - T0) / 16000) * 0.06); animate = !reduce && !VIDEO && mode !== 'towers' && CLEAR.has(mode);
+    } else { R = RMIN; renderR = RMIN; renderDisk = disk; renderYaw = 0; renderPitch = 0; fovNow = fallFov(RMIN); }
+    if (prev !== mode) dirty = true; if (snap) { snap = false; dirty = true; }
+    if (animate || dirty) { const dt = now - lastT; lastT = now; draw(now); dirty = false;
+      frames.push(dt); if (frames.length > 20) frames.shift();
+      if (!VIDEO && frames.length === 20) { const avg = frames.reduce((a, b) => a + b) / 20; if (avg > 48 && scale > 0.22) { scale *= 0.85; frames = []; } else if (avg < 22 && scale < 0.7) { scale *= 1.08; frames = []; } } }
+    // chrome
+    const inFall = mode === 'fall', live = Object.assign(NUM(), inFall ? hudUpdate() : {});
+    document.body.classList.toggle('infall', inFall);
+    const mFirst = MERGED_FIRST[mode], mEnd = mFirst !== undefined ? ((SCAPS[mode] || [])[0] || [0, 0.3])[1] : 0, mergedOn = mFirst !== undefined && ph.s < mEnd;
+    const ti = TITLES.has(mode) ? PART_OF[mode] : mergedOn ? mFirst : inFall ? 0 : -1;
+    if (ti >= 0 && ti !== titleShown) { fillTitle(ti); titleShown = ti; }
+    const capTitle = mergedOn && MERGED_CAP.has(PARTS[mFirst].k);
+    $('#title').classList.toggle('compact', mergedOn);
+    $('#cap').classList.toggle('part', capTitle); if (capTitle && $('#capPart').dataset.p !== String(mFirst)) { $('#capPart').dataset.p = mFirst; $('#capPart').innerHTML = `<span>Part ${PARTS[mFirst].n}</span>${PARTS[mFirst].h}`; }
+    $('#title').style.opacity = inFall ? (R > 30.5 ? 1 : 0) : capTitle ? 0 : mergedOn ? Math.max(0, Math.min(1, (mEnd - ph.s) / 0.05)) : ti > 0 ? Math.max(0, Math.min(1, ph.s / 0.3, (1 - ph.s) / 0.3)) : 0;
+    const bs = mode === 'score' ? Math.min(13, Math.floor(ph.s / 0.03) + 1) + (ph.s > 0.45 ? 100 : 0) : -1;
+    if (bs >= 0) fitBoard();
+    if (bs !== boardStage) { boardStage = bs; $('#board').classList.toggle('show', bs >= 0);
+      $$('#rows .r').forEach((r, i) => { r.classList.toggle('in', bs >= 100 || i < bs % 100); r.classList.toggle('hl', bs >= 100 && r.dataset.st === 'press'); }); }
+    ['#hud', '#controls'].forEach(s => { const el = $(s); el.style.opacity = inFall ? 1 : 0; el.style.visibility = inFall ? 'visible' : 'hidden'; });
+    let w = 0; if (inFall && R < 0.2) w = Math.pow(Math.min(1, Math.log(0.2 / R) / Math.log(0.2 / 0.0615)), 1.6); if (mode === 't2') w = Math.max(0, 1 - ph.s * 2.5);
+    $('#whiteout').style.opacity = w; document.body.classList.toggle('white', w > 0.55);
+    const filt = inFall ? 'none' : mode === 'ratio' ? 'brightness(.03) blur(5px)' : CENTRE.has(mode) ? 'brightness(.06) blur(4px)' : mode === 'ledger' ? 'brightness(.06) blur(3px)' : mode === 't4' ? 'brightness(.15) blur(1px)' : CLEAR.has(mode) ? 'brightness(.9)' : 'brightness(.035) blur(4px)';   // the hole behind a drawing is dimmed so the drawing reads; its disc is bright
+    if (lastFilt !== filt) { cv.style.filter = filt; lastFilt = filt; }
+    ov.classList.toggle('live', mode === 'switches');
+    const ovVis = TITLES.has(mode) || mode === 'score' || mode === 'ledger' ? 'hidden' : 'visible'; if (ov.style.visibility !== ovVis) ov.style.visibility = ovVis;
+    // subtitles
+    if (inFall) { let k = null; FALLCAPS.forEach((cp, i) => { if (R <= cp.hi && R > cp.lo) k = i; });
+      if (k === null) setCap(null); else setCap('f' + k, fill(FALLCAPS[k].t, live), FALLCAPS[k].g); }
+    else { const list = SCAPS[mode] || []; let hit = null; list.forEach((cp, i) => { if (ph.s >= cp[0] && ph.s < cp[1]) hit = i; });
+      if (hit === null) setCap(null); else { const cp = list[hit]; setCap(mode + hit + massSuns, fill(cp[2], live), cp[3], cp[4]); } }
+    // chapter strip
+    const curP = inFall ? 0 : PART_OF[mode];
+    $$('#track button').forEach(b => { const i = +b.dataset.p, on = i === curP; if (on && !b.classList.contains('on')) { const t = $('#track'); t.scrollLeft = Math.max(0, b.offsetLeft - (t.clientWidth - b.offsetWidth) / 2); }
+      b.classList.toggle('on', on); b.classList.toggle('done', i < curP); });
+    // drawings
+    if (OW !== ov.getBoundingClientRect().width || OH !== ov.getBoundingClientRect().height) { sizeOv(); dirtyOv = true; }
+    const timed = !reduce && (mode === 'thermo' || mode === 'info' || mode === 'paradox' || mode === 'towers' || mode === 'dark' || (mode === 'switches' && swFlash && now - swFlash.t < 1700));
+    const sig = [mode, ph.s.toFixed(4), R.toFixed(5), yaw.toFixed(3), pitch.toFixed(3), lookBack, fovNow.toFixed(4), renderYaw.toFixed(4), swState.join(''), massSuns].join('|');
+    if (!timed && !dirtyOv && sig === lastSig) { if (!VIDEO) requestAnimationFrame(loop); return; }
+    lastSig = sig; dirtyOv = false;
+    ox.clearRect(0, 0, OW, OH);
+    const cx = OW / 2, cyc = OH / 2, unit = OH / 2;
+    if (inFall) overlayFall(cx, cyc, unit);
+    else if (mode === 'move') overlayMove(ph.s);
+    else if (mode === 'switches') overlaySwitches(ph.s, cx, OH * 0.44, now);
+    else if (mode === 'twistor') overlayTwistor(ph.s);
+    else if (OUTSIDE.has(mode) && mode !== 'ledger' && !TITLES.has(mode)) { const [hx, hy, rs] = holeOnScreen(cx, cyc, unit);
+      if (mode === 'thermo') overlayThermo(ph.s, hx, hy, rs, now); else if (mode === 'info') overlayCorr(ph.s, now); else if (mode === 'paradox') overlayParadox(ph.s, hx, hy, rs, now); else if (mode === 'fate') overlayFate(ph.s, hx, hy, rs);
+      else if (mode === 'scramble') overlayScramble(ph.s, hx, hy, rs); else if (mode === 'car') overlayCar(ph.s); else if (mode === 'arrow') overlayArrow(ph.s);
+      else if (mode === 'dark') overlayDark(0.22 + 0.78 * ph.s, now); else if (mode === 'ratio') overlayRatio(ph.s, now); else if (mode === 'towers') overlayTowers(ph.s, now); else if (mode === 'count') overlayCount(ph.s, hx, hy, rs); else if (mode === 'echo') overlayEcho(ph.s, hx, hy, rs); }
+  }
+  if (!VIDEO) requestAnimationFrame(loop);
+}
+/* ---------- controls ---------- */
+let drag = null;
+cv.addEventListener('pointerdown', e => { if (e.pointerType === 'touch' || mode !== 'fall') return; drag = {x: e.clientX, y: e.clientY, yaw, pitch}; cv.classList.add('drag'); cv.setPointerCapture(e.pointerId); });
+cv.addEventListener('pointermove', e => { if (!drag) return; yaw = drag.yaw - (e.clientX - drag.x) * 0.005; pitch = Math.max(-1.3, Math.min(1.3, drag.pitch + (e.clientY - drag.y) * 0.005)); dirty = true; });
+cv.addEventListener('pointerup', () => { drag = null; cv.classList.remove('drag'); });
+cv.addEventListener('dblclick', () => { yaw = 0; pitch = 0; dirty = true; });
+$('#lookBack').addEventListener('click', () => { lookBack = !lookBack; $('#lookBack').setAttribute('aria-pressed', String(lookBack)); dirty = true; });
+
+const barH = () => document.documentElement.style.setProperty('--barh', $('.bar').offsetHeight + 'px'); barH();
+addEventListener('resize', () => { barH(); sizeOv(); dirty = true; });
+sizeOv(); fovNow = fallFov(R); ui(); draw(performance.now()); if (!VIDEO) requestAnimationFrame(loop);
+if (VIDEO) { scale = +(new URLSearchParams(location.search).get('scale') || 0.6);
+  window.__frame = (v, ms, cap, capA, endA) => { vVh = v; const vc = $('#vcap'); if (vc.dataset.k !== cap) { vc.innerHTML = cap; vc.dataset.k = cap; } vc.style.opacity = capA; $('#vend').style.opacity = endA || 0; loop(T0 + ms); return mode; }; }
+window.__fall = { get mode(){ return mode; }, get scale(){ return scale; }, START, TOTAL, STEPS, step: goStep, get idx(){ return idx; }, get busy(){ return !!anim; } };
+})();
+</script>
+
+</body>
+</html>

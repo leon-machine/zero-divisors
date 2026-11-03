@@ -1,0 +1,18 @@
+functions:
+  check_tension_both_orderings:
+    kind: sampled
+    clauses: [(i)]
+    omits: 'Four rational q = e^{-x}: n - 1/2 = (q-1)/(2(1+q)) < 0; the identity s - x n = ln(1+q) is not computed (only 1 + q > 1 is asserted), -(x/2) tanh(x/2) is not checked, and E < TS = M/2 (clause (v) of the residue theorem) is not evaluated; the x = 2 pi enclosures give x n < s and n < 1/2; "E = 0 exactly at zero weight" is checked only at x = 0 and by strictness at samples.'
+  check_central_label_model:
+    kind: sampled
+    clauses: [(ii)]
+    omits: 'Exact: dimension 2^m for m = 1, 2, 3 and zero Killing generator; the central label is represented as the scalar m, so its commutation with mode operators is automatic; the thermodynamic identities S = 4 pi M^2, (dS/dM) T = 1, 2TS = M are checked at three stand-ins for pi and three M, starting from S := 4 pi M^2, with dS/dM = 8 pi M typed in; the tie 4 pi mu(m)^2 = m ln 2 to ln dim H_m, the n = 1/2 marginal at zero weight and dM = T ln 2 are not asserted.'
+  check_no_gibbs_state:
+    kind: sampled
+    clauses: [(iii)]
+    omits: mu(m) < sqrt(m)/4 is exact via enclosures of pi and ln 2; divergence for every beta > 0 is shown by the exponent k^2 ln 2 - beta k/4 at beta = 1 and 10 (growing increments), not for all beta; dM/dT = -8 pi M^2 is only checked as a finite difference at M = 1/2 (negative).
+  check_moved_mode_ratio:
+    kind: exact
+    clauses: [(iv)]
+    omits: The interval (0.8625, 0.8627) for x n / s at x = 2 pi is rigorously enclosed; the statement about arbitrary mixtures of zero-weight and moved modes is a consequence, not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Enclosed numbers and the Fock dimensions are right; the model identities are checked from the area-law definition of mu rather than derived, as the statement itself says.'}

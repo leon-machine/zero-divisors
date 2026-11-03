@@ -1,0 +1,377 @@
+- id: rh-mass-line
+  title: The mass line and the critical line
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: T11 puts every mass above 3H/2 on Re w = -3/2. Is there a non-trivial bridge to the Riemann hypothesis, either
+    through a transport or ascent step that fixes the real part (Route A) or through a concrete operator forced by the series
+    whose spectral or scattering determinant is built from xi(s) (Route B)?
+  kill_conditions:
+  - 'K1 Circularity: the argument assumes reality or self-adjointness of an operator whose spectrum is the zeros (Hilbert-Polya
+    restated).'
+  - 'K2 Proves too much: the argument uses only the functional-equation symmetry s -> 1-s plus complex conjugation; it must
+    fail for the Davenport-Heilbronn function.'
+  - 'K3 Prior art: the operator reduces to a known construction (Lax-Phillips / Pavlov-Faddeev, Bost-Connes, primon gas, Berry-Keating,
+    Connes, de Bruijn-Newman).'
+  - 'K4 Imported arithmetic: primes, log p or an arithmetic lattice are inserted by hand rather than forced by the series.'
+  - 'K5 Transport does no work: the zero-divisor locus of the relevant object is a place where zeta has no zero.'
+  run: '2026-09-29'
+  outcome: killed
+  summary: Both routes were killed; all five kill conditions triggered. The pin to Re w = -3/2 is reality of the Casimir plus
+    Vieta, which is the standard unitarity mechanism and is imported. The de Sitter series fall on the T1 trichotomy, but
+    the transport principle is inert on the principal series, and its one square-zero point maps to s = 1/2, where zeta(1/2)
+    = -1.46035... is not zero. Filed transport-absent, with the trichotomy table kept as a remark for T11 or G01.
+  sources:
+  - TP_Papers_Suite/preregistration_RH_mass_line.md
+  - TP_Papers_Suite/RH_mass_line_findings.md
+- id: rh-near-susy
+  title: An odd operator that nearly commutes with H
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: In the fermionic primon gas, is there an odd operator Q that commutes, or nearly commutes, with H strongly enough
+    to control the index 1/zeta below Re b = 1, and does the series supply such a Q?
+  kill_conditions:
+  - 'K1 Circular: Q is built from the Moebius signs themselves; any bound on it is a bound on the Mertens function restated.'
+  - 'K3 Prior art: the graded-trace (Witten-index) reading of mu is Spector (1990); any equivalence found is filed as a reformulation.'
+  - 'K5 Series-native operators inert: if every odd operator the series supplies (gamma_p, their l^2 combinations, finitely
+    supported odd CAR elements) is stuck at sigma >= 1, the route is killed.'
+  - 'K6 Superselection: if the series'' descent or univalence rule annihilates every odd operator, record that Q is declared
+    unphysical (not by itself a kill).'
+  run: '2026-09-29'
+  outcome: killed
+  summary: 'K1, K3, K5 and K6 all triggered and the success condition was not met; filed transport-absent. Exact supersymmetry
+    is impossible because H has simple spectrum by unique factorisation, and every odd operator the series supplies is stuck
+    at s = 1 by the Hagedorn divergence of the modes it leaves untouched. The result kept is an equivalence: RH holds if and
+    only if some parity-reversing pairing has [e^{-sH}, Q] trace class for every s > 1/2, attained by a pairing built from
+    the Moebius signs, and treated as a reformulation in the line of Spector.'
+  sources:
+  - TP_Papers_Suite/preregistration_RH_near_susy.md
+  - TP_Papers_Suite/RH_near_susy_findings.md
+- id: rh-two-pictures
+  title: The index in two pictures (CAR and ordinary linear algebra)
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: Looking at the index problem from the CAR (fermionic Fock space) side and from the ordinary vector space and chain-complex
+    side, which statements must agree in both pictures, and does either picture give the other new information?
+  kill_conditions:
+  - Homology illuminates RH only if the total Betti number of Delta_n is of order n^{1/2}; if it grows like n (or n/log n)
+    with cancellation across degrees, homology only relocates the cancellation and adds no leverage.
+  - K1 (circular), carried over.
+  - 'K3 (prior art: Redheffer 1977, Hall/Rota Moebius-Euler characteristic, Bjorner 2011, Spector 1990, Nyman-Beurling / Baez-Duarte),
+    carried over.'
+  run: '2026-09-29'
+  outcome: negative-result
+  summary: 'The two pictures agree everywhere they must, but none of the agreements gives leverage on RH. The pre-registered
+    test came out on the no-leverage side: the total Betti number grows linearly, as 2n/pi^2, so homology holds a large cancellation
+    rather than removing it. The series'' supercharge, compressed to a window, is Bjorner''s boundary operator and leaves
+    one third of all states unpaired; reading that 1/3 off the Hagedorn point is the one candidate new remark, pending a wider
+    literature check.'
+  sources:
+  - TP_Papers_Suite/preregistration_RH_two_pictures.md
+  - TP_Papers_Suite/RH_two_pictures_findings.md
+- id: rh-signature
+  title: RH as a signature theorem
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: Can RH be generalised in geometric-algebra language as a Lorentzian-signature statement (a hyperbolic pole plane
+    plus a definite complement on which Frobenius or scaling acts as a similitude), and does any of four attacks on zeta in
+    that language succeed?
+  kill_conditions:
+  - 'Attack 1 (local dominance): killed if the margin of the full form tends to 0 as L grows, or if the archimedean part alone
+    fails.'
+  - 'Attack 2 (similitude route): killed (K1) if the definiteness is the thing to be proved.'
+  - 'Attack 3 (transport principle): killed (K5) if the minimal (1,1) completion says nothing about the sign of the complement.'
+  - 'Attack 4 (finite-dimensional signature: Hermite / Jensen / Lorentzian polynomials): recorded as a direction, tested only
+    by literature status.'
+  run: '2026-09-29'
+  outcome: killed
+  summary: 'The generalisation holds in the proven case: for 19,968 curves over F_p (5 <= p <= 61) the Gram matrix has signature
+    (1,3), and the Hasse bound is exactly definiteness of the transverse plane. On zeta, attacks 1 to 3 were killed: the archimedean
+    part alone loses positivity near L ~ 0.602 and the full margin collapses super-exponentially. Attack 4 was left open on
+    literature grounds only. What remains is a precise statement of the missing ingredient, a Hodge index theorem for an arithmetic
+    surface (Connes'' programme).'
+  sources:
+  - TP_Papers_Suite/preregistration_RH_signature.md
+  - TP_Papers_Suite/RH_signature_findings.md
+- id: rh-descent
+  title: The pole plane as an ascended plane (reverse transport)
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: Treating the zeta pole plane as a T1-ascended plane, is RH equivalent to the descended space being anisotropic
+    after one reverse transport (Witt index exactly 1), and are the poles the forced completion of the degeneration that builds
+    up as the support L grows?
+  kill_conditions:
+  - 'K1: circular if the anisotropy of W is only restated as ''the zeros are real''.'
+  - 'K5: killed if the reverse transport supplies no positivity mechanism.'
+  - Prediction A (near-null directions pair with the pole functionals) against prediction B (near-null directions transverse
+    to the poles); B expected in advance.
+  run: '2026-09-29'
+  outcome: killed
+  summary: 'K5 triggered: the reverse transport supplies no positivity mechanism; K1 was avoided. The descent statement (RH
+    if and only if the Witt index is exactly 1) is exact and verified in the function-field case and holds numerically for
+    zeta up to L = 1. Prediction B held as expected: the degeneration is transverse to the poles, so the poles are not its
+    forced completion. The new observation is that the pole plane plays the role of the ample class, with 96-99% alignment.'
+  sources:
+  - TP_Papers_Suite/preregistration_RH_descent.md
+  - TP_Papers_Suite/RH_descent_findings.md
+- id: rh-lift
+  title: Inverting the descent as the Riemann-Roch step
+  programme: Riemann hypothesis
+  registered: '2026-09-29'
+  question: Can the lift that inverts the descent supply the Riemann-Roch growth step of the Hodge index argument on the Weil
+    side, as a growth or dimension law that uses the Euler product?
+  kill_conditions:
+  - 'K2'' (Epstein test): any candidate (iii) that does not use the Euler product also applies to the Epstein zeta of x^2
+    + 5y^2, which has zeros with Re s > 1, and is killed.'
+  - 'K7 (classical ceiling): if the only Euler-product positivity used is Lambda(n) >= 0 against nonnegative test functions,
+    the output is at best a de la Vallee Poussin zero-free region.'
+  - 'K5: the lift gives structure but no growth law.'
+  run: '2026-09-29'
+  outcome: killed
+  summary: 'Killed on K5 and K7, as predicted in advance: the lift is a splitting of the extension, not a growth law. In the
+    series'' language the ample class (i) and ''effective meets ample positively'' (ii) hold exactly, and Riemann-Roch growth
+    (iii) is equivalent to RH itself. The Epstein test shows any valid step (iii) must use the Euler product, and the note
+    records a precise target (a dimension function on correspondences growing quadratically and using Lambda >= 0 on prime
+    powers) and does not see a series object that supplies it.'
+  sources:
+  - TP_Papers_Suite/preregistration_RH_lift.md
+  - TP_Papers_Suite/RH_lift_findings.md
+- id: t05-pairing-generator
+  title: The pairing generator and the mismatch angle
+  programme: Transport Papers
+  registered: '2026-09-18'
+  question: Does the framework's own connection, relative to its own vacuum field, have a nonzero pairing class, so that a
+    pairing generator is derived rather than premised (route 2)? And is the Hawking mismatch angle the pairing class of some
+    transport or holonomy of that connection (gap 1)?
+  kill_conditions:
+  - 'K2.1 (nothing pairs): pi(omega(X)) = 0 for every direction X at every radius.'
+  - 'K2.2 (frame artefact): the class is nonzero but is not <nabla_X l, m>, or its vanishing is not invariant under l -> lambda
+    l.'
+  - 'K2.3 (consistency with T5): pi(omega(d_t)) != 0 or pi(omega(d_r)) != 0 (would kill T5''s statement, not route 2).'
+  - 'K2.4 (intra-fibre only): every pairing class acts within the fibre at one point and none pairs the ladder at x with the
+    ladder at y != x.'
+  - 'K1.1 (frame mismatch is Cartan): the static and infalling frames differ at a point by an element of p_W.'
+  - 'K1.2 (holonomy carries no mode weight): every holonomy''s pairing class depends on geometry alone, while the Hawking
+    angle is a one-parameter family in omega.'
+  - 'K1.3 (the sign of the square): the Hawking pairing needs the Euclidean rotor and every holonomy is a real rotor.'
+  run: '2026-09-18'
+  outcome: partial
+  summary: Route 2 closes in the intra-fibre sense (K2.1 to K2.3 did not trigger) but not across points (K2.4 triggered);
+    the note itself says those three conditions carried little risk, K2.2 being an identity. The pairing class is the Newman-Penrose
+    transverse derivative of the null direction, and in Schwarzschild only rho survives. Gap 1 is not closed (K1.1 and K1.2
+    triggered, K1.3 cited), and the contribution is graded a dictionary, transport-absent, with the identifications imported.
+  sources:
+  - TP_Papers_Suite/preregistration_T05_pairing.md
+  - TP_Papers_Suite/T05_pairing_generator_note.tex
+- id: t05-descent-lift
+  title: The reversible lift of the descent
+  programme: Transport Papers
+  registered: '2026-09-18'
+  question: Does the series' one-way descent (the parity pinching) have a reversible lift within the tower, an even isometric
+    dilation with a record made of rungs, and is the only step outside the supplied dynamics a pairing rotation?
+  kill_conditions:
+  - 'K1 (one rung suffices): an even isometric dilation of the single-mode parity average exists with a one-rung record.'
+  - 'K2 (no pairing needed): an even unitary generated by number-conserving elements only realises a lift from the record
+    vacuum.'
+  - 'K3 (coupling outside the supplied class): the controlled coupling C is not joint-number-diagonal.'
+  - 'K4 (coherence not stored): the lifted state of c|0> + s|1> does not have reduced spectrum (c^2, s^2) on system and record
+    with the joint state pure.'
+  - 'K5 (the principle): nothing in T1 forces a non-invertible map to be lifted, so the lift is a reading (expected to trigger;
+    not a kill of the mathematics).'
+  run: '2026-09-18'
+  outcome: survived
+  summary: 'K1 to K4 did not trigger, in a corrected framing on the physical even states: there the minimal record is nu rungs,
+    one per mode, not the registered nu + 1 on the full space. The lift is explicit, needs a non-number-conserving (pairing)
+    generator somewhere, and stores the discarded coherence as pair-record entanglement. K5 triggered as expected, so extending
+    the principle from elements to maps is a reading and the ledger grade is transport-absent. The lift does not touch the
+    Hawking angle.'
+  sources:
+  - TP_Papers_Suite/preregistration_T05_dilation.md
+  - TP_Papers_Suite/T05_descent_lift_note.tex
+- id: t05-pairing-type
+  title: The pairing creator under the transport algorithm
+  programme: Transport Papers
+  registered: '2026-09-18'
+  question: 'Run T1''s six-step transport algorithm on the pairing creator n = f1* f2* in Cl(2,2): does it produce the pairing
+    rotation, or a rung on which it lives, so that the generator T5 excludes is an output of the principle?'
+  kill_conditions:
+  - 'K1 (the diagnosis): n is a bivector, the algebra is simple, and n is annihilated on one side by a non-central idempotent,
+    so n is type P and Step 3 is ''do nothing''.'
+  - 'K2 (the pseudo-inverse): the pair annihilation n'' satisfies all four Penrose equations with n, so the output lies in
+    T5''s vacuum stabiliser.'
+  - 'K3 (the ascent''s own rotation): the rung bivector f wedge f* squares to +1/4 and commutes with the number operator,
+    so the ascent''s own rotation is a boost, not a pairing.'
+  - 'K4 (no preference in the ascent): the reflection e4 -> -e4 carries the hop to the pairing, so nothing in T1 prefers one
+    to the other.'
+  run: '2026-09-18'
+  outcome: killed
+  summary: 'Claim F is dead at Step 3, as registered: K1 to K3 triggered and K4 held. The algorithm returns type P at cost
+    zero and hands back the pair annihilation, an element of T5''s vacuum stabiliser. The ascent supplies hops and pairings
+    alike as rotors and has a symmetry exchanging them, so the principle neither produces nor excludes the pairing; T5''s
+    exclusion is a premise about the vacuum (a Step 2 / Thm 3.9(2) discrepancy is recorded for T1).'
+  sources:
+  - TP_Papers_Suite/preregistration_T05_pairing_type.md
+  - TP_Papers_Suite/T05_descent_lift_note.tex
+- id: t05-angle
+  title: The spectrum-condition route to the Hawking angle
+  programme: Transport Papers
+  registered: '2026-09-18'
+  question: Does the Hawking angle follow from a spectrum condition (positivity of energy of the boundary modes) for a generator
+    the ascent installs, within the dynamics the framework supplies, with the Bisognano-Wichmann mechanism then fixing beta
+    = 2 pi?
+  kill_conditions:
+  - 'K1 (the supplied class selects Boulware): every joint-number-diagonal generator with a unique ground state has a number
+    basis state as ground state, with pure marginals, boost-KMS at beta = infinity only.'
+  - 'K2 (a hop is what the route needs): H = [[7, -12], [-12, 0]] has a unique entangled ground state (3/5)|10> + (4/5)|01>
+    with left marginal diag(16/25, 9/25), T5''s sample point e^{-omega/T} = 9/16.'
+  - 'K3 (the pairing is the hop with the sea filled): the particle-hole map on the right mode carries the hop ground state
+    to the thermofield state and the hop generator to the pairing generator.'
+  - 'K4 (the geometric half of Bisognano-Wichmann is in the algebra): the boost rotor at rapidity i pi is the reflection through
+    the bifurcation surface and the translations are T_a = 1 + n_inf a / 2.'
+  - 'K5 (the value): no finite mode model reproduces 2 pi from its own data, so the value stays imported (expected to trigger).'
+  - 'K6 (ledger): no step needs the (1,1) increment, so the result is transport-absent (expected).'
+  run: '2026-09-18'
+  outcome: killed
+  summary: 'K1 triggered, so Claim G is dead within the supplied class, as registered: the spectrum condition selects a Boulware-type
+    state or nothing. K2, K3 and K4 held, so the route survives only as a conditional that needs a hopping (kinetic) term
+    the locality premise excludes, and T5''s two open items become one. K5 and K6 triggered: the finite model makes the Gibbs
+    parameter a ratio of couplings, so 2 pi remains the imported theorem''s.'
+  sources:
+  - TP_Papers_Suite/preregistration_T05_angle.md
+  - TP_Papers_Suite/T05_angle_note.tex
+- id: t12-unification
+  title: T12 unification review
+  programme: Transport Papers
+  registered: null
+  question: Prompted by the G01 page 175 figure showing the gauge couplings meeting pairwise at three points, is T12's unification
+    derivation off, and, following on, can the weak angle be derived along a Pati-Salam route from the slot/pair split?
+  kill_conditions: null
+  run: '2026-10-06'
+  outcome: partial
+  summary: Not pre-registered (a findings review, revision 2 dated 2026-10-07); the desert refutation and the G01 figure were
+    confirmed correct, three of Prop 8.11's admissible rows were found excluded by the proton bound, and Prop 5.8(3) was corrected
+    to thirteen anomaly-free generators. A Pati-Salam intermediate symmetry is derived, with M_U at 6.4 times the proton bound
+    on the headline chain. The weak angle is neither derived nor refuted on this route; the revision-1 'candidate refutation'
+    was withdrawn.
+  sources:
+  - TP_Papers_Suite/T12_unification_findings_2026-10-06.md
+- id: qg-entanglement-registration
+  title: Does gravity entangle two masses?
+  programme: Quantum gravity routes
+  registered: '2026-10-09'
+  question: With the frozen-point connection of the dark-energy paper, does gravity entangle two masses at the sizes tabletop
+    experiments can reach?
+  kill_conditions:
+  - A positive result at the standard size refutes the single grade-two connection with real coefficients (the value reading)
+  run: '2026-10-12'
+  outcome: inverted
+  summary: Registered first as "gravity does not entangle" (the value reading). Reviews showed the equations admit a second,
+    element reading that gives the standard entangling phase. On 12 October the element reading was chosen, so the registered
+    prediction is now that gravity entangles by the standard phase, conditional on premises P-i to P-vi held fixed before
+    any result.
+  sources:
+  - 'Project: claude/QG_entanglement_prediction_registration.md'
+- id: qg-items-1-2
+  title: Probabilities from the relation, and forcing the element reading
+  programme: Quantum gravity routes
+  registered: '2026-10-11'
+  question: Can states and Born probabilities be derived from the series' own relation (item 1), and does the algebra force
+    the element reading (item 2)?
+  kill_conditions:
+  - Some nonzero x with tr(x* x) <= 0 on the rung algebra
+  - Commutant of the spinor ideal not a four-dimensional division algebra
+  - Born weights negative or not conserved under J-evolution
+  - A value-reading generator that is linear and gives each pattern eigenstate its own rate with a nonzero interaction combination
+  run: '2026-10-11'
+  outcome: partial
+  summary: 'Item 1 partly achieved: given the rest frame, a positive inner product, a quaternionic commutant, a complex unit
+    up to gauge and Born weights follow; the weights are frame-relative and the state and Gleason''s premises stay open. Item
+    2 not achieved: the algebra does not force the element reading. A pre-registered route (rung boost as a symmetry) was
+    refuted. 36 exact checks.'
+  sources:
+  - 'Project: claude/preregistration_QG_items_1_2.md'
+  - 'Project: claude/QG_items_1_2_findings.md'
+- id: qg-common-time
+  title: A common time across pattern geometries?
+  programme: Quantum gravity routes
+  registered: '2026-10-11'
+  question: Does anything in the frozen-point structure identify points and instants across the occupation patterns' geometries,
+    and is the experiments' observable well defined without it?
+  kill_conditions:
+  - A term of the trace action coupling different patterns' fields (A)
+  - The common frozen point forcing a finite-dimensional identification (B)
+  - A consistent transformation law for off-diagonal fields under different relabellings (C)
+  - A residual pattern-wise diffeomorphism that changes the closed-loop phase (D)
+  run: '2026-10-11'
+  outcome: partial
+  summary: At the experiments' order the observable is well defined through the shared past, the asymptotic static time and
+    the common background, not through the frozen point, which identifies nothing. A new kinematic bimodule obstruction was
+    found but is second order. Penrose's objection, a decay rate from E_G, is untouched. 20 exact checks; the referee broke
+    the first draft's headline.
+  sources:
+  - 'Project: claude/preregistration_QG_common_time.md'
+  - 'Project: claude/QG_common_time_findings.md'
+- id: qg-settling
+  title: Can the framework turn the geometric mismatch into a settling rate?
+  programme: Quantum gravity routes
+  registered: '2026-10-11'
+  question: Does the framework contain Penrose's E_G and a law that turns it into a decay of coherence between patterns?
+  kill_conditions:
+  - A J-law evolution under which |z_pi z_rho| changes (3.1)
+  - The cross-pattern variance not proportional to E_G (3.2)
+  - A term already in the framework that produces a dissipator (3.3)
+  - Horizon decoherence time comparable to an experiment's duration (3.4)
+  run: '2026-10-11'
+  outcome: negative-result
+  summary: The framework as written does not settle superpositions, because its evolution is postulated unitary, not because
+    anything was computed. E_G is expressible by a standard identity but not native. Adding the one postulate that would give
+    a rate is a switch to the Diosi-Penrose model. Led to the registered no-settling stance S1. 11 exact checks.
+  sources:
+  - 'Project: claude/preregistration_QG_settling.md'
+  - 'Project: claude/QG_settling_findings.md'
+  - 'Project: claude/QG_no_settling_registration.md'
+- id: qg-radiated-record
+  title: Does the radiated field record which path?
+  programme: Quantum gravity routes
+  registered: '2026-10-12'
+  question: Does the retarded gravitational field record which path a mass took, and does the framework need quantum radiation?
+  kill_conditions:
+  - The retarded field commuting with the detection at spacelike separation under premise P-v
+  - A radiated record large enough to matter in the proposed experiments
+  run: '2026-10-12'
+  outcome: killed
+  summary: Premise P-v (no free radiative part) fails microcausality once retardation is included, at every size of superposition,
+    so it has to go and the radiation must carry quantum states. The radiated record in the experiments is negligible (below
+    10^-60 quanta), so the no-settling stance is untouched. 12 exact checks; the draft's claim of safety was withdrawn as
+    resting on an assumed Planck-length floor.
+  sources:
+  - 'Project: claude/QG_radiated_record_findings.md'
+- id: qg-radiative-sector
+  title: Can the tower supply the radiative sector's quantum states?
+  programme: Quantum gravity routes
+  registered: '2026-10-12'
+  question: Can the bulk radiative field with canonical commutation relations be generated from the tower rather than imposed?
+  kill_conditions:
+  - 'Registered R1 to R4; the concession outcome named in advance: the commutation relations are a canonical quantisation
+    of a derived phase space'
+  run: '2026-10-12'
+  outcome: negative-result
+  summary: No. The series supplies the phase space, the conformal core and exact two-dimensional s-wave bosons, but not the
+    bulk commutation relations, which must be imposed as in any canonical quantisation. The pre-registered concession is recorded
+    without rescue. The pre-registration missed what the series already proved about bosons, noted as a failure of method.
+    11 exact checks.
+  sources:
+  - 'Project: claude/QG_radiative_sector_findings.md'
+- id: qg-peierls
+  title: The Peierls-bracket normalisation test
+  programme: Quantum gravity routes
+  registered: '2026-10-12'
+  question: Does microcausality fix the free graviton field's unit of action to the matter's?
+  kill_conditions:
+  - A consistent quantisation that is microcausal for every ratio of the two units of action (P1)
+  run: '2026-10-12'
+  outcome: killed
+  summary: 'The central claim fails: a consistent quantisation is microcausal for every ratio, so "same hbar" is a convention
+    for Newton''s constant, not a constraint. What survives: the sign of the spin-2 field is healthy because gravity attracts,
+    and the action to quantise is fixed. 14 exact checks.'
+  sources:
+  - 'Project: claude/QG_peierls_findings.md'

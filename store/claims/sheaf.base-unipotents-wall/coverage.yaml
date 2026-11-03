@@ -1,0 +1,14 @@
+functions:
+  check_unipotents_are_isometries_fixing_k:
+    kind: sampled
+    clauses: ["g_lambda is a G-isometry", "g_lambda fixes k"]
+    omits: "three sample lambda in each of two fixed fibres (Cl(1,2,1) and the m=2 Schwarzschild wall); not symbolic in lambda or general fibres"
+  check_composition_and_translation_action:
+    kind: sampled
+    clauses: ["g_lambda g_lambda' = g_(lambda+lambda')", "dual action u' -> u' - k(u') lambda", "free and transitive translation on transversals"]
+    omits: "sample lambda and transversals in the Cl(1,2,1) fibre only; the Schwarzschild wall fibre is not tested for these clauses"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Isometry, fixing k, composition and dual translation action verified at sampled lambda in a GA fibre Cl(1,2,1) (and the isometry part also in the Schwarzschild wall Gram at m=2).

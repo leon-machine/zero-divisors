@@ -1,0 +1,18 @@
+functions:
+  check_three_admissible_rows_fail:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "That these three rows are the admissible ones of table-exact is taken from the hard-coded ROWS, not re-derived here."
+  check_segment_crossing:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "The crossing is bracketed exactly (f between 0.86811 and 0.86813) but 'meets the condition from the near-degenerate end down to' and 'fails beyond' are tested at sample points above and below, not along the whole segment."
+  check_two_loop_row_meets:
+    kind: partial
+    clauses: ["(3)"]
+    omits: "Checks the lifetime about 3e35 yr and the condition from the two-loop central run; M_U = 1.1e16 GeV and alpha_U^-1 = 25.7 are not asserted in this function."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Rigorous rational interval arithmetic on the imported lifetime formula supports every quoted number the three functions assert."

@@ -1,0 +1,18 @@
+functions:
+  check_residue_is_minus_k_tensor_k:
+    kind: exact
+    clauses: ["lim r G^{-1} = -k (x) k, rank one"]
+    omits: "exact in r but only m = 1, 2, 3/2; also the residue for the defining functions 2r + r^2 and r/(1+r), which the statement does not state"
+  check_transversality_datum_and_scaling:
+    kind: sampled
+    clauses: ["delta: k (x) k -> -dr|_E is an isomorphism", "the dying line on E is spanned by the Killing-time covector", "the dying line is a canonical square root of the r-conormal bundle; the partner line one of its dual"]
+    omits: "g_k = -r exact in r; scaling by c(0)^2 and the partner by 1/c(0) at three polynomial units and three masses; the bundle-level 'canonical square root' readings are not constructed beyond the scaling laws"
+  check_rescaled_frame_limit:
+    kind: exact
+    clauses: ["none: the rescaled frame limit is not asserted by this statement"]
+    omits: "computes G(rho, k/u) = -u, G(k/u,k/u) = -1 and the limit diag(m^2,-1,-1,-1), which belongs to the exceptional-algebra entity, so it establishes no clause here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The residue limit -k(x)k, g_k=-r, the c(0)^2 and 1/c(0) scalings and the Killing-time line identification are exact (masses 1, 2, 3/2); 'canonical square root' is read only from the scaling laws, as the docstring says.

@@ -1,0 +1,25 @@
+functions:
+  check_r_and_s_are_the_same_module:
+    kind: exact
+    clauses:
+    - (R) at n = 2 and (S) are equivalent up to the relabelling of two slots with two rungs
+    omits: establishes the module identification Phi (bijective on basis states up to sign, intertwining every creation and annihilation operator, hence gl(2) + gl(3), grading and chirality); the logical implications between the hypotheses rest on the cited Facts
+  check_constituent_sector_and_generation:
+    kind: exact
+    clauses:
+    - the constituent hypothesis holds as the j = 1 sector
+    - the derived generation is the even half of the module
+    omits: the species labels nu^c, u^c, Q, L, e^c, d^c are read from the weights; the cited Fact itself is not recomputed
+  check_bogoliubov_spin10:
+    kind: partial
+    clauses:
+    - Spin(10) is the Bogoliubov group of the composite's modes
+    omits: the 45 bilinears closing under the so(10) structure constants on the 32-dimensional module is exact (complexified; the real Majorana span has signature (5,5)); the compact real form, the Spin group and the Bogoliubov-group identification are not tested
+untouched_premises:
+  rungs.imported-ladder-automorphism-group-no-lepton: cited for the U(n) mixing group; no function here recomputes it
+  rungs.mass-bracket-frozen-points-grip-slot: the mass-bracket clause is the cited lemma, whose own check covers it; not recomputed here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The module identification and sector counts are exact at n = 2; the mass-bracket clause is not covered by any function here.

@@ -1,0 +1,24 @@
+The relations, using $\nu \varepsilon_\pm = \varepsilon_\mp \nu$ (Proposition \claimref{transport.ascent-renders-grade-involution-inner}), $\varepsilon_\pm^2 = \varepsilon_\pm$, $\varepsilon_+\varepsilon_- = 0$, $\nu^2 = \gamma$ and $\gamma^2 = 1$:
+\begin{align*}
+E_{12}E_{21} &= \varepsilon_+ \nu\, \gamma \varepsilon_- \nu = \gamma\, \varepsilon_+ (\nu \varepsilon_-) \nu = \gamma\, \varepsilon_+ \varepsilon_+ \nu^2 = \gamma^2 \varepsilon_+ = E_{11},\\
+E_{21}E_{12} &= \gamma\, \varepsilon_- \nu\, \varepsilon_+ \nu = \gamma\, \varepsilon_-^2 \nu^2 = E_{22},
+\end{align*}
+and the remaining relations follow the same way:
+\[
+E_{12}^2 = \varepsilon_+ \nu \varepsilon_+ \nu = \varepsilon_+ \varepsilon_- \nu^2 = 0, \qquad E_{21}^2 = 0,
+\]
+\[
+E_{11}E_{12} = E_{12}, \qquad
+E_{12}E_{11} = \varepsilon_+ \nu \varepsilon_+ = \varepsilon_+\varepsilon_-\nu = 0 .
+\] For the Peirce isomorphism, write $\phi(b)_{ij} = E_{1i} b E_{j1} \in E_{11} B_\gamma E_{11}$. Multiplicativity, using $E_{k1}E_{1k} = E_{kk}$ and $E_{11} + E_{22} = 1$:
+\[
+\sum_k \phi(b)_{ik}\,\phi(b')_{kj}
+\;=\; \sum_k E_{1i}\, b\, E_{k1}E_{1k}\, b'\, E_{j1}
+\;=\; E_{1i}\, b \Bigl(\textstyle\sum_k E_{kk}\Bigr) b'\, E_{j1}
+\;=\; \phi(bb')_{ij} .
+\]
+Unitality: $\phi(1)_{ij} = E_{1i}E_{j1} = \delta_{ij} E_{11}$. The displayed inverse is checked directly:
+\[
+\sum_{i,j} E_{i1}\, (E_{1i}\, b\, E_{j1})\, E_{1j} \;=\; \Bigl(\textstyle\sum_i E_{ii}\Bigr)\, b\, \Bigl(\textstyle\sum_j E_{jj}\Bigr) \;=\; b ,
+\]
+and conversely on matrices. This is the standard matrix-units criterion \cite{LamFC2001}, reproved for self-containment.

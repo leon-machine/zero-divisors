@@ -1,0 +1,18 @@
+functions:
+  check_maximal_isotropic_dimension_is_half:
+    kind: sampled
+    clauses: ["a maximal totally isotropic subspace of V_C has dimension (n+2)/2"]
+    omits: "Only n = 2, 4, 6, 8, 10; builds one isotropic U of dimension r with U^perp = U, the general n is not covered."
+  check_no_larger_isotropic_subspace:
+    kind: partial
+    clauses: ["a maximal totally isotropic subspace of V_C has dimension (n+2)/2"]
+    omits: "Only tests that adjoining a single standard basis vector or conjugate null vector to U breaks isotropy; it does not rule out a larger isotropic subspace not containing U (the bound 2 dim U' <= 2r is argued in the docstring, not computed)."
+  check_dimension_four_has_three_pairs:
+    kind: exact
+    clauses: ["in dimension four it has three"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Checks exhibit the maximal isotropic subspace for sample even n; the non-existence of a larger one rests on U^perp = U, not on the second function."

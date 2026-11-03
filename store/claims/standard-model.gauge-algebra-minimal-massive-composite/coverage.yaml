@@ -1,0 +1,22 @@
+functions:
+  check_maximal_hierarchy_is_seventeen:
+    kind: exact
+    clauses:
+    - '"C^3 (x) C^3 has automorphism algebra su(3) + su(3) + u(1), dimension seventeen"'
+    omits: ''
+  check_mass_first_at_two_constituents:
+    kind: sampled
+    clauses:
+    - '"mass first exists at two constituents (the Fact)"'
+    omits: Four sample spinors in Gaussian rationals (six pairs, plus one aligned pair); det p = |<pi1 pi2>|^2 is the content, the Fact's symplectic-area formula itself is imported
+  check_minimal_massive_is_standard_model:
+    kind: exact
+    clauses:
+    - '"C^2 (x) C^3 has Lie algebra su(2) + su(3) + u(1), dimension 12 = 3 + 8 + 1"'
+    - '"automorphisms (U(2) x U(3))/U(1)"'
+    omits: The group-level quotient is tested through the Lie-algebra kernel and one unit Gaussian lambda; the global form is the other theorem's
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Dimensions, derived algebras, centres and the kernel line are exact rank computations.

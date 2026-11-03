@@ -1,0 +1,46 @@
+doc: t15-regenerated
+title: 'Neutrino Masses: The Empty Twistor, the Seesaw Scale, and the Bet at the Floor (regenerated from
+  the store)'
+author: Leon Butler
+level: formal
+spine:
+- pred.leptonic-cp-trivial
+- pred.neutrino-mass-sum-floor
+- pred.no-neutrinoless-double-beta
+- neutrino.imported-derived-content-singlets
+- neutrino.imported-mass-bracket-quantum-numbers
+- neutrino.imported-indifference-faces-democratic-alignment-rank
+- neutrino.imported-ceiling-under-hypothesis-u-arrow
+- neutrino.empty-twistor
+- neutrino.seesaw-what-gauge-invariance-proves-what
+- neutrino.invariant-symmetric-matrices
+- neutrino.rank-one-seesaw-ordering-sum-double
+- neutrino.breaking-relation
+- neutrino.mixing-none-leading-order
+- neutrino.double-prediction-sum-predicted-floor
+- neutrino.leptogenesis-suppressed-alignment-reheating-premise-new
+show: spine-only
+paper: T15
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T15_neutrino_masses.tex
+  note: Recreate T15 from the store
+cite:
+- mass.exact-join
+- dark-energy.vacuum-region-registration-condition
+prose: paper
+msc: Primary 81V15, 81V25; Secondary 83F05, 15A18.
+keywords: right-handed neutrino; seesaw mechanism; neutrino mass ordering; cosmological neutrino mass bound; neutrinoless double-beta decay; leptogenesis; leptonic CP phase.

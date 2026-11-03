@@ -1,0 +1,20 @@
+functions:
+  check_clock_never_ticks:
+    kind: sampled
+    clauses:
+    - (2) the tower is Morita-stationary from its first step
+    omits: Physical tower Cl(1+k,3+k) at k = 0, 1, 2 only; the sentence that mod-8 structure classifies the eight parallel towers is not tested; clause (1) (wall geometry) has no finite algebraic content and is not checked
+  check_one_qubit_per_rung:
+    kind: sampled
+    clauses:
+    - (3) the modes being the transported null pairs; "one qubit per rung"
+    omits: Physical tower k <= 3 only; CAR checked for v_i,w_j mixed relations (v v, v w) but not w w; the identification of the limit with ground (x) free fermionic algebra is delegated to the cited theorems
+untouched_premises:
+  tower.wall-package: clause (1) is geometric (tame degeneration, shadow walls) with no finite algebraic core; the check docstring says it is not checked
+  tower.algebraic-limit-even-charge: clause (3) limit identification is delegated to the cited theorem; the check tests only the CAR modes on finite floors
+  sheaf.tameness: hypothesis on the geometric degeneration with no computable content for the algebraic checks
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The check docstring states that clause (1) is skipped; clauses (2) and (3) are tested on the physical tower at three or four floors only.

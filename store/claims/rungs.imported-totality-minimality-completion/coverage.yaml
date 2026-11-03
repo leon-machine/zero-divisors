@@ -1,0 +1,21 @@
+functions:
+  check_no_equivariant_pseudo_inverse_of_null_vectors:
+    kind: sampled
+    clauses:
+    - no extension of Cl(V) carries a Spin^0-equivariant element-level inverse of the null vectors
+    omits: only Cl(V) and its hyperbolic ascent Cl(V+H); the five mixed signatures with n = 3, 4 (all of them); pseudo-inverses of the stated form with four sample (alpha, beta, delta), not symbolic
+  check_conformal_model_adjoins_one_hyperbolic_plane:
+    kind: partial
+    clauses:
+    - the minimal null-lift completion is the adjunction of a single hyperbolic plane Cl(p,q) -> Cl(p+1,q+1), unique up to isometry, in every signature
+    omits: tests only that the conformal model has Gram signature (p+1,q+1) with (n0, ninf) hyperbolic, for all 15 signatures n <= 4; minimality and uniqueness up to isometry are not tested (the content of transport.minimality)
+  check_transported_reciprocal_total_involutive_continuous:
+    kind: sampled
+    clauses:
+    - on the completion's quadric iota is total, continuous and involutive, agrees with the geometric reciprocal on invertible vectors and sends every null x0 to [x0 + n_inf/2] as the limit along every invertible path
+    omits: five mixed signatures, three invertible and three null points each; continuity only as an extrapolation to h = 0 along straight lines in three directions (Lagrange through three h and through all four); iota comes from the premise export
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "renamed check_minimal_completion_one_hyperbolic_plane to check_conformal_model_adjoins_one_hyperbolic_plane and reworded docstring (2): minimality and uniqueness are tested in transport.minimality, not here (kind stays partial); continuity check now also asserts the four-point Lagrange extrapolation, as the docstring says"

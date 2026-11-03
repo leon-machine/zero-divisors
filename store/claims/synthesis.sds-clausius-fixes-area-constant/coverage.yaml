@@ -1,0 +1,14 @@
+functions:
+  check_sds_clausius:
+    kind: partial
+    clauses:
+    - setup (horizon ordering, third root, Nariai merger)
+    - (i)
+    - (iv)
+    - (v) numerics
+    omits: 'Five rational horizon pairs (r_b, r_c) and four ell: f(r_h) = 0, bracket of the Nariai radius, r f L2 factorisation, Clausius dM = T dS with S/pi = r^2 on both horizons (dM/dr = r f''/2), 4 pi T_c = 2/ell and (2 pi T_c)^2 = <I,I>, S_c(M=0)/pi = ell^2 = 1/<I,I>, and the Lambda = 0 quarter at three M; uniqueness of the antiderivative up to a constant is a comment, not computed; (ii) and (iii) are tested only through the end radii (r_b -> 0, double root at r_N), not as if-and-only-if statements in c_b, c_c; the (v) constant -pi L2 is assumed in the check (the statement defers its value to euler-term-horizon-entropy-shift), the example "S + c satisfies (T), (Cl), (N) and violates (Z)" is not run, and nonnegativity is not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Rational-function identities at sample horizon pairs confirm the Clausius integration and the limits; the if-and-only-if clauses (ii), (iii) and the (v) example are not run as such.

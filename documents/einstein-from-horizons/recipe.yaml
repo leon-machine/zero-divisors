@@ -1,0 +1,26 @@
+doc: einstein-from-horizons
+title: Einstein's equations from horizon thermodynamics
+author: Leon Butler
+level: lay
+spine:
+- synthesis.black-hole-data-do-not-fix-field-equations
+- synthesis.imported-raychaudhuri-null-congruence
+- synthesis.imported-jacobson-clausius-1995
+- synthesis.einstein-equations-from-c-loc-and-clausius
+- synthesis.local-boost-temperature-is-local-regularity
+- synthesis.c-loc-entropy-clause-curvature-independent-density
+- synthesis.c-loc-is-a-second-placement-of-the-count
+- synthesis.c-loc-modular-clause-moves-no-nested-patch
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true
+theme: einstein

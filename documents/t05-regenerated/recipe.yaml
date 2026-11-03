@@ -1,0 +1,107 @@
+doc: t05-regenerated
+title: 'Division by Zero at the Gravitational Singularity: The Transport Principle
+  Applied to the Black Hole, and the Information Paradox as a Category Error (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- singularity.imported-equivalence-einstein-equations
+- singularity.unipotent-ray
+- singularity.connection-bivector-computed
+- singularity.solution-where-divergence-lies
+- singularity.cones-fold
+- singularity.degeneration-exactly
+- singularity.non-removability-invariant-argument
+- singularity.type-n-only-type-n
+- singularity.pseudo-inverse-identities-hyperbolic-atom
+- obj.singularity.fibrewise-conformal-lift
+- singularity.transport-schwarzschild-fibre
+- singularity.imported-no-c-number-repair
+- singularity.descent-what-it-erases
+- obj.singularity.grading-parity-automorphism
+- singularity.descent-parity-average
+- singularity.imported-descent-one-way-conditional-expectation
+- singularity.imported-descent-one-way-conditional-expectation-external
+- singularity.curvature-gauge-field-exact-shape-decoupling
+- singularity.plane-rate
+- singularity.modular-structure-completed-pair
+- singularity.matching-steps-4b-4c-join-equation
+- singularity.modular-theory-matrix-factor-proved-outright
+- singularity.schmidt-forcing-proved-outright
+- singularity.modular-descent
+- singularity.descended-form-state-independent
+- singularity.imported-univalence-superselection-rule
+- singularity.ascended-marginals-are-diagonal
+- obj.singularity.geometric-modular-condition-g
+- singularity.kms-uniqueness-factor
+- singularity.imported-general-form
+- singularity.universality-temperature-under-g
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+- singularity.euclidean-section-period
+- singularity.rate-discharge-hypothesis-iii
+- singularity.euclidean-rotor-where-it-lies
+- singularity.two-kms-functionals-sign
+- singularity.why-calibration-cannot-be-internal
+- singularity.purity-output-partner-commutant
+- singularity.exact-equilibrium-over-determines-boundary-modes
+- singularity.number-diagonal-dynamics-models-scrambling-derived
+- singularity.chains-state-class-stability
+- singularity.bosonisation-bridge-s-wave-sector
+- obj.singularity.multi-mode-descent
+- singularity.pinching-against-partial-trace-scope-coincidence
+- singularity.deficit-theorem-cost-descent-exactly
+- singularity.deficit-carried-quanta-correlations
+- singularity.p-reduced-metric-level-reading-many
+- singularity.causal-epoch-computed-exactly
+- singularity.imported-induced-geometry-interior-slice
+- singularity.stretched-singularity-count
+- singularity.area-law-test
+- singularity.assembled-page-curve-up-typicality
+- singularity.no-attic-derived-model
+- singularity.eviction-window-thermal-product-radiation-entropy
+- singularity.envelope-endpoint-why-boundary-mode-locality
+- singularity.what-event-returns-radiation
+- singularity.parity-protection
+- singularity.purity-correlation-transfer-recovery
+- singularity.models-entropy-sequence-exactly
+- singularity.two-levels-finite-model
+- singularity.imported-interior-collar-kasner-form
+- singularity.modular-flow-boundary-modes-holonomy-universal
+- singularity.l-stabiliser-tangent
+- singularity.imported-surface-gravity-redshifted-acceleration
+- singularity.computed
+- singularity.imported-one-sided-completion-singularity
+- singularity.imported-no-equivariant-value-wall
+- obj.singularity.two-fibres-two-assemblies
+- singularity.sheaf-assembly-sheaf
+- singularity.finite-truncation-meet-big-fibres-equals
+- singularity.net-assembly-net-it-everything
+- singularity.function-linear-endomorphisms-are-bundle-maps
+- singularity.bundle-maps-quantise-without-hopping
+- singularity.class-relative-no-go-no-supplied
+show: spine-only
+paper: T05
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_gravitational_singularity.tex
+  note: Recreate T05 from the store
+cite:
+- sheaf.function-linearity-tame-constructions
+- sheaf.schwarzschild-degeneration-boundary-tame
+prose: paper
+msc: Primary 83C57, 81T05; Secondary 15A66, 46L60, 94A17.
+keywords: black hole information paradox; Hawking radiation; Clifford algebra; conformal
+  group; modular theory; thermofield double; Page curve; bosonisation.

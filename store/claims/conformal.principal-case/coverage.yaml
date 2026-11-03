@@ -1,0 +1,18 @@
+functions:
+  check_minimal_completion_is_cga:
+    kind: sampled
+    clauses: ["Cl(n, 0, 1) has minimal nondegenerate completion Cl(n+1, 1)", "n = 3 gives Cl(4, 1), n = 2 gives Cl(3, 1)"]
+    omits: "n = 1..6 with four sample (a, c, d) per n for det = -c^2 and signature (n+1, 1) (the PGA and plane signatures are computed at one sample); no completion of dimension n + 1 is the trivial rank statement"
+  check_completion_unique_fixing_v:
+    kind: sampled
+    clauses: ["uniquely (every minimal completion is the model, by a map fixing V)"]
+    omits: "n = 1..6, four sample (a, c, d); the explicit partner phi is verified to have the model Gram relations, and that (e_i, rho, phi) is a basis is not asserted"
+  check_pga_embeds_in_cga:
+    kind: sampled
+    clauses: ["Cl(n, 0, 1) embeds in Cl(n+1, 1)"]
+    omits: "n = 1..4; relations plus rank 2^(n+1) of the generated products, exact for each n"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The general-n statement is sampled for n up to 6 (up to 4 for the embedding); all asserts match the stated signatures."

@@ -1,0 +1,64 @@
+{
+ "g00_cited_in_pilot": 13,
+ "g00_cited_outside_pilot": [
+  "T16 Prop.~3.2",
+  "T9 Thm.~4.2",
+  "T9 Thm.~5.3",
+  "T9 Thm.~4.2"
+ ],
+ "locator_type_mismatches": [
+  "T5 Thm.~2.5: G00 says Thm, the paper has a proposition",
+  "T5 Thm.~2.7: G00 says Thm, the paper has a proposition",
+  "T5 Thm.~3.1: G00 says Thm, the paper has a proposition",
+  "T5 Thm.~2.5: G00 says Thm, the paper has a proposition",
+  "T5 Thm.~2.7: G00 says Thm, the paper has a proposition"
+ ],
+ "generated_shown": 35,
+ "generated_cited_facts": 16,
+ "generated_postulates": [
+  "singularity.p-univalence",
+  "singularity.q-joint-quasi-freeness-s-wave",
+  "singularity.r-regularity-fixed-locus"
+ ],
+ "extra_prerequisites_not_in_g00": [
+  "tower.grade-twist-when-it-inner",
+  "tower.volume-elements-planes",
+  "tower.commuting-copies",
+  "tower.matrix-amplification-structural-properties",
+  "tower.rigidity-clock-frozen",
+  "tower.ladder-pairs-satisfy-car-vectors",
+  "singularity.degeneration-exactly",
+  "singularity.connection-bivector-computed",
+  "singularity.solution-where-divergence-lies",
+  "singularity.descent-what-it-erases",
+  "singularity.modular-theory-matrix-factor-proved-outright",
+  "singularity.ascended-marginals-are-diagonal",
+  "singularity.computed",
+  "singularity.pseudo-inverse-identities-hyperbolic-atom",
+  "singularity.modular-structure-completed-pair",
+  "singularity.curvature-gauge-field-exact-shape-decoupling",
+  "singularity.plane-rate",
+  "singularity.kms-uniqueness-factor",
+  "singularity.bosonisation-bridge-s-wave-sector",
+  "interior.metric-parallelism-trace-schouten-condition",
+  "hawking.gibbs-states-are-kms-conversely-finite",
+  "hawking.imported-s-wave-bosonic-sector"
+ ],
+ "order_agreement_kendall_tau": 0.6666666666666666,
+ "order_pairs_compared": 13,
+ "pending_level_gaps": [],
+ "prose_blocks": 42,
+ "g00_lines_with_locators": 14,
+ "g00_narrative_lines": 19,
+ "g00_figures": 1,
+ "g00_boxes": 5,
+ "latex_compiles": true,
+ "latex_errors": [],
+ "latex_undefined_refs": 0,
+ "pdf_pages": 21,
+ "shown_claims_with_equation_refs": 22,
+ "shown_claims_with_unresolved_refs": 1,
+ "audit_codes": {
+  "D110": 1
+ }
+}

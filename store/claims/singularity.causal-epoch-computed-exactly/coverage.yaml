@@ -1,0 +1,18 @@
+functions:
+  check_integrand_partial_fractions_antiderivative:
+    kind: sampled
+    clauses: ["|dt/dr| = sqrt(r/2M) r/(2M - r) for the unit-energy rain worldline", "the antiderivative 4M((1/2) ln((1+u)/(1-u)) - u - u^3/3)"]
+    omits: "identities are exact rational-function identities in u, but at the single mass M = 3/2 (M enters as an overall factor and is not carried symbolically)"
+  check_closed_form_inside_riemann_bracket:
+    kind: sampled
+    clauses: ["Delta t(eps) = 4M((1/2) ln((1+u)/(1-u)) - u - u^3/3)"]
+    omits: "closed form lies inside exact lower and upper Riemann sums (240 subintervals) at three upper limits u0 = 3/5, 4/5, 9/10 and M = 3/2; the older closed form is excluded at u0 = 9/10"
+  check_expansion_remainder_and_energy_independence:
+    kind: sampled
+    clauses: ["Delta t = 2M(ln(1/eps) - 8/3 + 2 ln 2) + O(eps)", "coefficient 2M of the logarithm is independent of the worldline's energy"]
+    omits: "remainder bracketed by 2M eps and 4M eps at eps = 1 - u^2 for u = 9/10, 99/100, 999/1000 (O(eps) not proved); the residue 2M of r/(2M - r) is an exact identity, but the energy factor E/sqrt(E^2 + |f|) is typed in (three energies), not derived from the geodesic equation"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring says 'exact' of rational and interval arithmetic; the O(eps) remainder and the energy independence are checked at sample points and a typed factor, within what the functions assert."

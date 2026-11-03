@@ -1,0 +1,17 @@
+functions:
+  check_no_dilated_generator_on_windows:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'Second half of (i) only: three-mode windows, two weight sets ((-1,0,1) and (1,2,3)) and c in {1,2,7}, by a rank computation (c = 0 gives the commutant, a control); arbitrary windows, weights and real c are not covered'
+  check_point_spectrum_and_recurrence:
+    kind: sampled
+    clauses:
+    - (i)
+    - (iv)
+    omits: The spectrum of ad K is computed for the weights (-1,0,1) (integral, from -2 to 2) and (1/2,3/2,5/2) (integral exactly on even matrix units); periodicity at 2 pi is read off integrality, not by exponentiating, and the invariance and relative compactness of every window orbit is not separately tested; (ii) and (iii) (no dilation-covariant group on the algebra or the GNS space, the Bisognano-Wichmann consequence) are not tested by any function
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Finite-window rank and spectrum computations support (i) and (iv); the abstract statements (ii) and (iii) are left to the proof.

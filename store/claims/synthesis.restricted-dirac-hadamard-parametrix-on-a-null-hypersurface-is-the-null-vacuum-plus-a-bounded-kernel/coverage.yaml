@@ -1,0 +1,48 @@
+functions:
+  check_projector_keeps_only_the_screen_null_components:
+    kind: complete
+    clauses:
+    - (i) only the f^n components of a bivector survive Lambda f^c (.) e0 Lambda, with Lambda f^c (w^n) e0 Lambda = f^c w Lambda
+    - (i) Lambda k = 0, Lambda e0 Lambda = 0, Lambda f e0 Lambda = 0 and Lambda p e0 Lambda = (p.k) Lambda (Step 2)
+    - (i) f^c B(f_c) Lambda = tr(B) Lambda for self-adjoint B; an antisymmetric B leaves an f1 f2 part
+    omits: exact Clifford identities; the vector identity is checked on two vectors and the trace identity on one self-adjoint and one antisymmetric map
+  check_log_coefficient_formula_on_generic_jets:
+    kind: sampled
+    clauses:
+    - (i) on arbitrary jets in the adapted gauge the numerator N has no part of degree 0 or 1 in eta
+    - (i) the log epsilon weight tr(M^-1 X) equals -[d' - d tr(M^-1 M')/2 + theta d/2] Lambda, whatever the transport, the other connection components, J(eta) and alpha
+    - (i) the formula fails without the connection or with a non-self-adjoint expansion-shear map
+    omits: four sample sets (two jet data sets, two values of u); the identity is polynomial in the jets and is proved in Step 3
+  check_log_coefficient_vanishes_by_the_van_vleck_identity:
+    kind: sampled
+    clauses:
+    - (i) on the plane-wave model and the flat shearing model d_u log Delta - tr(M^-1 d_u M) + theta(u) = 0, so the log epsilon coefficient is zero
+    omits: three point pairs on each of two fields; the general identity is Delta^(1/2)/sqrt(det M) = (a a')^(-1/2) of the stored result
+  check_first_principles_plane_wave_kernel:
+    kind: sampled
+    clauses:
+    - (i) from first principles on the plane-wave field (non-commuting tidal and deviation maps, Ricci and Weyl nonzero) the projected kernel numerator has no degree 0 or 1 part and its degree 2 part has zero M-trace
+    - (i) freezing the projector, doubling d_u log Delta, dropping the transport or flipping the sign of Omega(d_u) (which also flips the transport rotor built from it) breaks it
+    omits: three point pairs (u > u', u < u', central and off-central generators) in the Kerr-Schild gauge, which is not adapted off the central generator; there the projected connection term vanishes identically (k e_i k = 0) and the expansion enters through the variation of the projector Lambda(x), so the connection identity itself is tested on generic jets, not here; the sign of Omega(d_u) is invisible in the term K Omega(d_u) and is detected only through the transport rotor built from it
+  check_flat_field_shearing_hypersurface:
+    kind: sampled
+    clauses:
+    - (i) on the flat field with an expanding and shearing null hypersurface the log epsilon coefficient is zero
+    omits: three point pairs
+  check_model_transport_rotor_and_connection:
+    kind: sampled
+    clauses:
+    - (model) the closed-form rotor R = 1 + (1/2)(t - w).e ^ K is the spin transport along the geodesic and is a rotor
+    - (model) Omega(d_u) = (1/2) dH/dx_i e_i ^ K matches its coordinate reading (the Christoffel symbols) in the Kerr-Schild frame
+    omits: two point pairs
+  check_mass_and_log_terms_are_below_the_log_order:
+    kind: sampled
+    clauses:
+    - (i) Lambda U e0 Lambda'^dagger and Lambda grad sigma vanish on the generator, so the mass term and V log sigma have degree at least -1
+    omits: three point pairs on the plane-wave field
+  check_regularised_model_integrals:
+    kind: partial
+    clauses:
+    - (ii) the log weight of eta eta/sigma^2 is M^-1 times that of 1/sigma (difference log-free); the i0 radial integral is 1/C
+    omits: the two-dimensional model integrals of Step 4, the uniform-in-eps bound and the distributional limit (Steps 4 and 5) are proof-only; the radial primitives are checked with dual numbers at rational points; every curved-field check tests the log weight, not the bound
+untouched_premises: {}

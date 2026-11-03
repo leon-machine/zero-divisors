@@ -1,0 +1,15 @@
+functions:
+  check_invariants_moment_maps_and_orbit_space:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "invariance of |alpha|^2, |beta|^2 and Q under five rational U(2) elements on three Gaussian-rational points, mu_Y = m/2 and sum_j mu_j^2 = (N^2 - |Q|^2)/4 at those points, the family on L saturating N^2 - m^2 = H^4 with mu_1 = mu_2 = 0, mu_3 = m/2 at four lambda, one off-family point of L with N^2 - m^2 > H^4 and all moment maps nonzero, and c -> c* on the samples; that the four invariants generate the ring, that the boundary is exactly the charge-preserving orbits and the statement about potentials in N alone are not computed"
+  check_d_term_vacuum_and_tree_masses:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "at H^2 = 1, g = 2/3, g' = 1/2 and three frames: the level xi fixed by m*, V larger at four neighbouring frames along the family, the formula V(N, m) at one off-family point, m_h^2 = M_Z^2 on the neutral mode and M_W^2 on the two-dimensional charged plane by exact Hessians on L, and N*^2 = m*^2 + H^4; the global minimum over the orbit space is not searched, the case xi = 0 and the large-xi approximation are not computed separately, and the gauge masses are entered by formula"
+  check_added_invariant_shifts_masses:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "W(N) = kappa (N - N_0)^2 only, at two frames and two (kappa, N_0) pairs: criticality, m_h^2 = M_Z^2 + 2 W'' m*^2/N* + 2 W' H^4/N*^2, m_pm^2 = M_W^2 + 2 W' = twice the outward derivative, by exact Hessians on L, with one stable and one charge-breaking sample; general W, the global-minimum question and the v >> H approximation are not computed"
+untouched_premises:
+  synthesis.rung-unit-second-free-number: "postulate registering v/H as a free input; the D-term parameter xi is that input, which the check treats as a free rational"

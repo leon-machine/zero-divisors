@@ -1,0 +1,10 @@
+functions:
+  check_one_mode_one_qubit:
+    kind: exact
+    clauses: [(i)]
+    omits: 'Exact: one ladder pair of Cl(1,1) has a rank-one vacuum projector and a 2-dimensional left ideal, so capacity ln 2; the Fock-reading count that two helicity channels have four joint states (two pairs) is not computed.'
+  check_grouping_rescales_unit_only:
+    kind: sampled
+    clauses: [(ii), (iii)]
+    omits: 'Four chosen lists of per-pair entropies (units of ln 2) with h = 1, 2: kappa^{(h)} = kappa^{(1)}/h, the bound 1/(4 h ln 2) and equality iff all entropies are maximal; the formula kappa = 1/(4<s>) is hard-coded from the residue theorem, and the equality-case values 1/(4 ln 2), 1/(8 ln 2) arise as the all-ones case; the J3 remark in (iii) is not computable.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Pure bookkeeping, as the docstring says; the physical content (channel grouping) is not tested.'}

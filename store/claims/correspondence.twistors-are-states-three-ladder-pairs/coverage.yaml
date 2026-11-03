@@ -1,0 +1,21 @@
+functions:
+  check_every_conformal_spinor_is_pure:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "six sample even spinors (vacuum, a top-adjacent state, Gaussian combinations) rather than every nonzero u; dim W_u = 3, isotropy, joint kernel equal to C u, pairwise distinct W_u, and Spin-equivariance for three real vector products, tested at the samples"
+  check_vacuum_of_own_three_pair_system:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "six even and two odd sample spinors with the dual complement built as in the cited proof; CAR, rank 8 of xi -> c(xi)u, and the even and odd products giving CS and CS- (rank 4 each) hold at those samples; 'canonical up to the choice of dual complement' is not tested"
+  check_states_not_operators_and_disjoint_families:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "vectors are sums of the six pair operators for one sample u; the joint kernel is one line of a single parity for the 8 coordinate maximal isotropic subspaces and the sample W_u, not for every maximal isotropic subspace"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three clauses are for-every-spinor or for-every-subspace statements checked at explicit samples; no function claims more."
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"

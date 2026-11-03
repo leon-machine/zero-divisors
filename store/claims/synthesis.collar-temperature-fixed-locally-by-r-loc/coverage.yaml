@@ -1,0 +1,19 @@
+functions:
+  check_radial_and_sphere_local_horizons:
+    kind: exact
+    clauses: [(i)]
+    omits: ''
+  check_hubble_and_killing_periods_of_r_loc_state:
+    kind: sampled
+    clauses: [(ii)]
+    omits: Exact series to first order (beta_H/(6 pi) = 1 - 4r/5), the Killing period 4 pi r^2 at three slices and the cutoff value 124/125 at 2M = 1000 (r_c = 1/100); the O(r^2) remainder, the general-M cutoff expansion and "independent of M" at the exceptional set are read from the leading coefficient only; the identification with the states of the two companion theorems is not recomputed.
+  check_killing_extension_violates_r_loc:
+    kind: sampled
+    clauses: [(iii)]
+    omits: Rapidity period 2 pi/r^2 differs from 2 pi at r = 1/2, 1/10, 1/100 (and r_c = 1/100 for 2M = 1000), equal at the horizon only; "every slice r < 1" is not enumerated; the identification of the cutoff-placed modes with the horizon modes (one-mode-set clause) and hypothesis (A) are inputs.
+  check_shared_atoms_carry_no_temperature:
+    kind: sampled
+    clauses: [(iv)]
+    omits: One pair read by two sheets is shown by the Gibbs densities diag(1,q) and diag(1,1/q) differing at q = 1/5 (equal only at q = 1, zero weight, not asserted as a general iff); on the frame atom 1, B_1, B_2 are independent (rank 3) with B^2 = 1 and [B_1, B_2] != 0, which gives non-proportionality of e^{-pi B_1} and e^{-pi B_2} given sinh pi != 0 (e^{-pi B} = cosh - sinh B is not evaluated); the KMS-for-both-flows conclusion rests on the imported uniqueness.
+untouched_premises: {synthesis.local-boost-temperature-is-local-regularity: 'cited for the wording of the hypothesis (R_loc) (a clause of a premise), which has no computable content in the check'}
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Clause (i) is an exact Clifford identity; (ii)-(iv) are first-order or sample-value reproductions of the stated numbers.}

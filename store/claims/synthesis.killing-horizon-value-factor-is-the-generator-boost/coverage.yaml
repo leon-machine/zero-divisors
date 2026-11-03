@@ -1,0 +1,30 @@
+functions:
+  check_killing_bivector_shape_on_the_horizon:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: the solution space of Y.(X.F) = 0 on k-perp is computed exactly (rank of the 9 x 6 constraint matrix) for two null frames (k = e0 + e1 and k = 5e0 + 3e1 + 4e2); the surface-gravity coefficient at kappa = 1/4, -2/7, 3, two rotation one-forms and phi = 1, 7/3; the symmetry of the Hessian (the second-fundamental-form step) is proved in the text, not computed
+  check_canonical_block_is_the_generator_boost:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: Lambda(m) G^n for n <= 4 at three boost coefficients and three one-forms per frame; boosts at e^{lam/2} = 3/2, 1/5, 7/3 composed with two null rotations in both orders; one transverse rotation as a control
+  check_closed_form_and_frame_independence:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    omits: F_K^2 = kappa^2, the closed form of exp(-t F_K/2), the group law and the k psi scaling at three rapidities, two values of kappa, with and without a rotation one-form, in both frames
+  check_pg_rotation_field_on_the_killing_line:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: Cartan's structure equations at three sample points with independent rational beta, beta', r, cot(theta) (the identities are linear in these values, so a point check is a check of the formulas); horizons of three Schwarzschild masses, two de Sitter scales and the two horizons of one Schwarzschild-de Sitter field with rational radii
+  check_value_factor_and_transport_compose_to_the_dilation:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: the kernel identity on two affine cells at three rapidities, including one below 1 (the cosmological orientation)
+untouched_premises:
+  synthesis.positive-null-energy-gives-r-premises: "cited (the boost of its setup) for the transport u -> e^{+-kappa t} u of the generators' affine parameter; the check uses the transport law directly"
+  transport.group-null-rotations: "cited for the null rotations 1 + (1/2) k s forming a group fixing k; the check builds them directly and verifies the rotor and fixing properties"

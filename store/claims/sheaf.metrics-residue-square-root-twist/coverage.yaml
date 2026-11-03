@@ -1,0 +1,18 @@
+functions:
+  check_residue_is_inverse_transversality:
+    kind: sampled
+    clauses: ["O = lim tau G^{-1} = k (x) k / (delta(k (x) k)/d tau)", "the residue is delta^{-1}"]
+    omits: "four polynomial collar models (n = 3, 4; T = 1, -3, 2, 1) with exact rational inverse, plus one non-adapted covector basis; not symbolic in the model"
+  check_residue_weights:
+    kind: sampled
+    clauses: ["O depends on tau through the weight of a section of L (x) L (x) N Sigma", "independent of the extension of k"]
+    omits: "the same four models, three scalings of k and two of tau; weight behaviour checked on the single coefficient O_00, not as a canonical section of a line bundle"
+  check_partner_line_is_dual_to_dying_line:
+    kind: sampled
+    clauses: ["the Witt partner line is identified with L* (partner of ck is k*/c)", "N Sigma = (L*)^(x2): canonical square root of the normal bundle"]
+    omits: "two couplings and three scalings c at a single wall block; only the inverse scaling of the partner under k -> ck, the isomorphisms N*Sigma = L^2 and N Sigma = (L*)^2 as bundles are not constructed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The residue formula, its weights under rescalings and the inverse scaling of the partner line are verified in four exact collar models and two couplings; the line-bundle isomorphisms themselves are not constructed.

@@ -1,0 +1,19 @@
+functions:
+  check_partial_waves_diagonal:
+    kind: sampled
+    clauses: ["step (1)"]
+    omits: "orthogonality of harmonic polynomials of degree 0..4 on the sphere; the two-point function decomposition itself is not computed"
+  check_spin_separates_from_singlet:
+    kind: sampled
+    clauses: ["step (4)"]
+    omits: "su(2) in spin 1/2, 1, 3/2 and V_1/2 (x) V_1/2 only; that angular operators of the lift are bilinears of definite spin is the imported sphere theorem; the remark that dimension would not separate T from the bilinears is not tested"
+untouched_premises:
+  dark-energy.point-infinity-has-no-physical-fluctuation: "cited only in the closing sentence that closes the programme; no computation in this statement"
+  interior.imported-equivalence-einstein-equations: "step (3) exterior exactness is an imported theorem with no finite core, as the docstring says"
+  scrambling.principality-indifference-sphere: "enters through the sphere theorem and the Indifference premise; no separate computable content here"
+  scrambling.indifference-structural-premise-series: "hypothesis with no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks cover the computable cores of steps (1) and (4); steps (2) and (3) are declared uncomputed"

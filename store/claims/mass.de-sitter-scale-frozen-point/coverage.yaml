@@ -1,0 +1,22 @@
+functions:
+  check_scale_tractor_parallel_with_norm:
+    kind: sampled
+    clauses: ["(1) I_sigma = (sigma, grad sigma, -(1/4) Box sigma) = (1 - Lambda Q/12, -(Lambda/6) x, Lambda/6)", "(1) I_sigma is parallel for the connection of eta", "(1) <I_sigma, I_sigma> = Lambda/3"]
+    omits: "Lambda in {3, -6/5, 1/2} and three points x; derivatives of the degree-2 polynomial sigma by exact central differences; the flat tractor connection Omega_T(a) = -n_inf ^ a is taken as the premise form"
+  check_gauge_field_sigma_is_de_sitter:
+    kind: sampled
+    clauses: ["(1) the field hb(a) = sigma a has derived metric sigma^-2 eta, Einstein with cosmological constant Lambda (de Sitter space on flat spacetime)"]
+    omits: "same three Lambda and three points; the rotation-gauge field Omega(a) = -(a ^ grad sigma)/sigma is the check's own formula, shown torsion-free with unique torsion map (rank 24) and calR(B) = (Lambda/3) B on the six frame planes; the Ricci tensor is not computed separately and the region sigma != 0 is only sampled"
+  check_frozen_point_unique_constant_vector:
+    kind: sampled
+    clauses: ["(2) <X(x), n_inf + lambda n_0> = 1 - lambda Q(x)/2 equals sigma iff lambda = Lambda/6", "(2) the points X(x) span the ambient space", "(2) n_0 + lambda n_inf has scale function lambda - Q/2"]
+    omits: "the two scale-function identities at four points and three lambda; the span (rank 6 from six points) and the solved unique V = n_inf + (Lambda/6) n_0 at three Lambda are exact"
+  check_frozen_point_norm_and_null_limit:
+    kind: exact
+    clauses: ["(3) <I_Lambda, I_Lambda> = Lambda/3", "(3) at Lambda = 0, I_Lambda = n_inf, null"]
+    omits: "the clause that I_Lambda read as a bivector through the Klein correspondence is non-simple exactly when Lambda != 0 is not tested (it rests on the imported simplicity criterion)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Parallelism, norm Lambda/3 and uniqueness are computed at sample Lambda and points; the Klein non-simplicity remark in (3) has no check."

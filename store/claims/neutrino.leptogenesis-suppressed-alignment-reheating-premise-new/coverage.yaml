@@ -1,0 +1,24 @@
+functions:
+  check_alignment_kills_decay_asymmetries:
+    kind: sampled
+    clauses: ["(1) every heavy eigenbasis contains u' for beta != 0", "(1) Y_D^dag Y_D = 3|y|^2 J has one nonzero diagonal entry at u'", "(1) every off-diagonal entry vanishes so epsilon_i = 0", "(1) N_perp has no Dirac coupling"]
+    omits: "Three (alpha, beta), four complex y and five eigenbasis choices only; the beta = 0 case (\"a fortiori\") is not run; epsilon_i = 0 is read off from Im[(T_ij)^2] = 0 without the loop function f(M_j/M_i)."
+  check_washout_strength_and_resonant_pair:
+    kind: sampled
+    clauses: ["(2) K = m_3/m_* approx 45 for m_* in (1.06, 1.15) meV", "(2) the pair interference combination is O(1) in delta"]
+    omits: "K is bounded by exact interval arithmetic on stated input ranges (Dm31 in (2.45, 2.55)e-3 eV^2); the O(1) ratio is checked at three delta values for two sample breakings A and pinned to its by-hand closed form (17/33, 51/275); |T_12|^2/T_11^2 is checked against its by-hand leading term delta^2 |<u', A e_2>|^2/81 within 5 delta; K's ends are pinned to seven figures. That the rank-one coupling washes exactly one flavour direction, that the descent asymmetry lies in it, the pair split and widths, and the Boltzmann suppression under (R) are not tested."
+  check_real_breaking_kills_interference:
+    kind: sampled
+    clauses: ["(3) if the breaking is real the relative phases vanish and the injection is zero", "(3) a relative phase makes the interference term nonzero"]
+    omits: "Three real breakings, two delta values and three Pythagorean phases only (unit modulus asserted), and only the interference term Im[(T_1j)^2] in the Y_D-basis; the injection orders delta^2 sin(phi) and O(1) sin(phi), the flavour independence of the orientation and the theta-angle, and the delta_CP stance are not computed."
+  check_unification_above_heavy_scale:
+    kind: exact
+    clauses: ["under (R) and (U) the unification scale on either branch lies above M_3 at either end of Hypothesis (U)"]
+    omits: "Exact interval arithmetic, but m_t, m_b, Dm31 and the three unification scales (7e14, 2e16, 3.36e16 GeV) are hard-coded input values; that the universe never revisited unification is not tested."
+untouched_premises:
+  neutrino.r-descent-reheats-below-lower-heavy: "Premise (R) is a stated reheating hypothesis with no computable content; the docstring says the arithmetic around it is checked instead."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks test the computable parts (alignment, K, resonant ratio, real-versus-complex interference, scale ordering); premise (R) is a premise with no computable content and the injection orders and delta_CP stance are not computed. 2026-10-23 (weak checks): check_washout_strength_and_resonant_pair pins K's ends (43.04128, 47.639174), the pair ratio's closed form to by-hand values 17/33 and 51/275, and the O(delta^2) term's leading coefficient |<u', A e_2>|^2/81 (1/81, 5/81) within 5 delta, in place of a fixed bracket; check_real_breaking_kills_interference asserts the phases have modulus one and drops the Im[(T_1j)^2] = 0 assert implied by T real; samples, the basis choice and J moved to module level."

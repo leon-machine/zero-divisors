@@ -1,0 +1,21 @@
+functions:
+  check_car_as_vectors:
+    kind: sampled
+    clauses:
+    - v_i v_j + v_j v_i = 0
+    - w_i w_j + w_j w_i = 0
+    - v_i w_j + w_j v_i = delta_ij
+    omits: Grounds with n <= 3 and k <= 3 only; the identities are exact multivector products in each case
+  check_new_rung_touches_nothing:
+    kind: sampled
+    clauses:
+    - adding a rung adds one mode and touches none of the existing relations
+    omits: k < 3 so T_{k+1} up to k+1 = 3, grounds n <= 3 only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact products on finite grounds and k <= 3; the relations are ground independent but only sampled.
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"

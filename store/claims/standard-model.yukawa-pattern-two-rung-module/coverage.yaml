@@ -1,0 +1,20 @@
+functions:
+  check_rung_vectors_carry_dirac_yukawas:
+    kind: exact
+    clauses: ["(i)"]
+    omits: ""
+  check_pair_vectors_carry_triplet_couplings:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: ""
+  check_symmetric_hypercharge_conserving_and_no_bare_mass:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "The closing paragraph (the rung directions carry precisely the Standard Model Dirac Yukawas, the ground directions the baryon-number-violating triplet couplings) is a reading of (i) and (ii) and is not separately computed."
+untouched_premises:
+  standard-model.imported-spinor-bilinears: "identification of the ten and the sixteen with Spin(10) bilinears; the check computes the pairing couplings directly on the explicit module"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Every one of the ten vectors and all 16 x 16 basis pairs are enumerated exactly, matching the species pairs stated."

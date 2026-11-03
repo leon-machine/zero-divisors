@@ -1,0 +1,9 @@
+functions:
+  check_centre_and_ideals_of_the_amplification:
+    kind: partial
+    clauses:
+    - '"the centre of M_m(A) is Z(A) 1_m"'
+    - '"the two-sided ideals are the M_m(I)"'
+    - '"E_11 N"'
+    omits: m = 2 only; the centre for four algebras (two degenerate); one nontrivial and one full ideal
+      in M_2(Cl(0,0,1)); the module equivalence is proved in the text and only its corner is tested

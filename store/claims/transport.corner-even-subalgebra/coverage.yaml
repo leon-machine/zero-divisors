@@ -1,0 +1,23 @@
+functions:
+  check_corner_map_is_unital_homomorphism:
+    kind: sampled
+    clauses:
+    - phi(a) = eps_+ a is a unital algebra homomorphism Cl^0 -> eps_+ A
+    omits: Type-C signatures with n <= 5 only (n = 7 skipped); multiplicativity on every pair of even blades
+  check_corner_map_is_bijective:
+    kind: sampled
+    clauses:
+    - phi is an isomorphism (injective and onto eps_+ A)
+    omits: All ten type-C signatures with n <= 7, by ranks of the image of blades
+  check_extension_adds_nothing_to_corner:
+    kind: sampled
+    clauses:
+    - eps_+ B_gamma eps_+ = eps_+ A
+    omits: Type-C signatures with n <= 5 and gamma = +-1 only
+untouched_premises:
+  std-algebra.z2-grading: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Homomorphism, bijectivity and the corner equality are tested exactly on the type-C signatures up to n = 5 (n = 7 for bijectivity). 2026-10-23 weak-checks pass: check_corner_map_is_unital_homomorphism moves the size limit and even-blade list to module level and asserts the even basis has 2^(n-1) elements"

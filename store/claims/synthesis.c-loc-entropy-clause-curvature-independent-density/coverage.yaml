@@ -1,0 +1,18 @@
+functions:
+  check_lorentz_transitive_on_horizon_data:
+    kind: sampled
+    clauses: [(i)]
+    omits: Transitivity is verified for nine rational future null vectors (70 ordered non-parallel pairs, 14 with l a multiple of l0), by the explicit two-reflection construction; all null pairs and all positive scalings c, mu are not enumerated; the stabiliser claims are in the next function.
+  check_boost_rescales_ray_fixes_plane:
+    kind: sampled
+    clauses: [(i)]
+    omits: Three boosts (rescaling factors (c+s)^2 = 4, 4/9... as computed from three (c, s)); "every positive factor" is not enumerated; rotations of Pi and preservation of the area element of Pi are not tested; "all tangent spaces are isometric" is not computed.
+  check_eta_from_temperature:
+    kind: exact
+    clauses: [(ii)]
+    omits: kappa(M) = 1/(4M), 1/T = 8 pi M, dS/dM = 1/T, S(0) = 0 and S/A = 1/4 are exact identities in M, with the period control giving c/4 as stated; the de Sitter and Kerr cases only insert the imported S and A and divide (one N-family and M = 5, a = 3), and the area-law equivalence is a trivial algebraic equivalence on four sample products. The identification of thermodynamic entropy with the horizon density integral is a hypothesis, not computed.
+  check_clausius_forces_constant_density:
+    kind: partial
+    clauses: [(iv)]
+    omits: 'Only the order counting: with the area factor 1 + c l^2 and heat q l^2 supplied as second order, the first-order coefficient of T dS - dQ is -T g (two parameter sets), plus nullity and rank 4 of four sample null vectors; the second-order scaling of heat and area change (vanishing expansion) is assumed, not derived from the geometry, and C^1, connectedness are not touched.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Checks reproduce (i), (ii) and the skeleton of (iv); clause (iii) (equivalence of the entropy content of clause (i) with (Loc)) has no check. 2026-10-23 weak-checks: check_clausius_forces_constant_density now asserts the four spanning vectors are null (before, only their rank was tested).'}

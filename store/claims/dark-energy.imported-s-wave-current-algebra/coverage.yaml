@@ -1,0 +1,22 @@
+functions:
+  check_current_algebra_with_edge_split:
+    kind: sampled
+    clauses: ["current algebra holds with the finite-window deviation an explicit difference of edge operators"]
+    omits: "all 2^7 states of a 7-mode window for m = 1, 2, 3 (exhaustive in states but one window size); the completed limit is not tested"
+  check_currents_are_weight_vectors_of_the_boost:
+    kind: sampled
+    clauses: ["the current sector is modular-invariant"]
+    omits: "only the weight-vector form [K, a_m] = -m kappa a_m on a 7-mode window; modular invariance of the whole current sector is not tested"
+  check_quasi_free_state_restricts_to_kms_on_currents:
+    kind: sampled
+    clauses: ["under (Q) the induced state is KMS", "without (Q) only the marginals are thermal"]
+    omits: "KMS identity tested for m = 1, 2 and three sample operators B on a 7-mode window; the no-(Q) clause is one counterexample state with one connected correlation"
+  check_charge_zero_levels_are_bosonic_fock_space:
+    kind: sampled
+    clauses: ["the charge-zero sector is canonically the bosonic Fock space"]
+    omits: "levels E <= 4 on an 8-mode window (counts p(E) and span rank); canonicity and the infinite limit are cited, not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks are finite-window samples of the statement and the docstring says what is not checked"

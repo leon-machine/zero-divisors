@@ -1,0 +1,22 @@
+functions:
+  check_massless_pair_and_shadow_symmetry:
+    kind: exact
+    clauses: ["(1) m = 0 exactly for w in {0, -3}", "(1) the shadow map w -> -3-w preserves m^2", "(1) m^2 = Delta(3 - Delta) H^2 with Delta = -w"]
+    omits: "the identification of Delta(3 - Delta) with the de Sitter mass formula of the cited Fact is not tested"
+  check_conformally_coupled_weight:
+    kind: exact
+    clauses: ["(2) w = 1 - n/2 gives m^2 = n(n-2)/4 Q(I) in general dimension", "(2) n = 4: w = -1, m^2 = 2 H^2"]
+    omits: ""
+  check_real_weights_complementary_series:
+    kind: sampled
+    clauses: ["(3) m^2 = [9/4 - (w + 3/2)^2] H^2 <= (9/4) H^2 with equality at w = -3/2", "(3) m^2 >= 0 exactly for w in [-3, 0]", "(3) a real weight outside [-3, 0] gives m^2 < 0"]
+    omits: "the identity 9/4 - (w + 3/2)^2 = p(w) is exact; the sign claims are checked on a grid of 54 rational w in [-5, 9/4); the correspondence of [0, 3H/2] with the complementary series and its endpoints is the cited Fact's, not tested"
+  check_principal_series_and_expansion:
+    kind: sampled
+    clauses: ["(4) w = -3/2 +- i nu gives p = 9/4 + nu^2", "(4) nu = m/H - (9/8) H/m + O(H^3/m^3)"]
+    omits: "four values of nu and four values of x = m/H; the series sqrt(1 - (9/4) eps^2) = 1 - (9/8) eps^2 - (81/128) eps^4 is exact, and the remainder identity (a^2 - nu^2) x^2 = 81/64 is checked at the four x, not symbolically"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Items (1) and (2) are exact polynomial identities; (3) and (4) are exact identities with grid and sample checks of the sign and remainder claims."

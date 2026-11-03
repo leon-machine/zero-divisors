@@ -1,0 +1,5 @@
+For even $g$, $\tau_g$ is plain conjugation, an automorphism. For odd $g$,
+\[
+\tau_g(x)\,\tau_g(y) \;=\; g\hat{x}g^{-1}g\hat{y}g^{-1} \;=\; g\,\hat{x}\hat{y}\,g^{-1} \;=\; g\,\widehat{xy}\,g^{-1} \;=\; \tau_g(xy),
+\]
+and $\tau_g(1) = 1$, so $\tau_g$ is again an automorphism; naive conjugation by an odd versor is not vector-preserving, and the twist by $\hat{\cdot}$ is the standard repair. On a vector $x$, for odd $g$ we have $\hat{g} = -g$, so $\tau_g(x) = g\hat{x}g^{-1} = -gxg^{-1} = \hat{g}xg^{-1} = \Ad_g(x)$; for even $g$, $\hat{g} = g$ and the two agree at once. For a single invertible vector $u$, split $x = x_{\parallel} + x_{\perp}$ with $x_{\parallel} = \dfrac{x \cdot u}{Q(u)}\,u$ along $u$ and $x_{\perp}$ orthogonal to $u$: then $u x_{\parallel} u^{-1} = x_{\parallel}$ (parallel vectors commute) and $u x_{\perp} u^{-1} = -x_{\perp}$ (orthogonal vectors anticommute), so $-uxu^{-1} = x_{\perp} - x_{\parallel} = x - 2x_{\parallel}$, the stated reflection. Cartan--Dieudonn\'e \cite{Lam2005, Porteous1995} writes every element of $O(p,q)$ as a product of reflections, giving surjectivity; the kernel computation is classical \cite{Porteous1995}.

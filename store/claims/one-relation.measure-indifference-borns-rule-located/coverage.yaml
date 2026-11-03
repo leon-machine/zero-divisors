@@ -1,0 +1,22 @@
+functions:
+  check_density_is_positive_and_frame_relative:
+    kind: sampled
+    clauses:
+    - '"the gamma_0 component of the geometric current J = psi gamma_0 psi~" (positive)'
+    - '"the located Born density is frame-relative"'
+    omits: four sample spinors and one boosted frame; uniqueness and conservation are the cited lemma, not tested here
+  check_indifference_forces_equality_on_transitive_orbits:
+    kind: sampled
+    clauses:
+    - '"indifference forces equality"'
+    omits: seven sample permutation groups acting on abstract weight vectors; the Witt rotations as exact symmetries of the frozen vacuum are not tested
+  check_fine_graining_returns_squared_norms:
+    kind: sampled
+    clauses:
+    - '"rational weights follow by fine-graining into equal-norm constituents"'
+    omits: three Pythagorean-rational states; additivity of weights is assumed (the residual postulate), the permutation step and the continuity step are not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the computable parts are tested at samples and the docstring says the identification with occupation weight and the residual postulate are not computable

@@ -1,0 +1,18 @@
+functions:
+  check_pseudoscalar_excluded_and_commutant_four_dimensional:
+    kind: sampled
+    clauses: ["\"the pseudoscalar cannot serve as it\""]
+    omits: "three unit spacelike u only (g3, a rotated and a boosted one); the setting C = I u for the mass datum is taken from the source lemma, not derived"
+  check_complex_structures_form_hyperboloid:
+    kind: sampled
+    clauses: ["\"needs one geometric datum beyond the field\""]
+    omits: "J^2 formula checked at 30 rational points and 4 hyperboloid points for u = g3 only; the iff characterisation s = 0, a^2 - b^2 - c^2 = 1 is not proved symbolically"
+  check_imaginary_unit_and_rest_frame_one_choice:
+    kind: sampled
+    clauses: ["\"needs one geometric datum beyond the field\""]
+    omits: "u = g3 and four hyperboloid points only; that the massive Dirac law needs exactly such a J is the source lemma's content and is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks test the lemma's algebraic setting at samples; the physical claim that the massive law needs this datum is imported and not computed"

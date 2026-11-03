@@ -1,0 +1,181 @@
+# The tower and quantum capacity
+
+**Abstract.** Each time the series repairs a failure of division it adds a pair of new directions, and repeating the step builds a tower of ever larger algebras.
+
+Each floor is the ground algebra with matrix entries, $\Cl(p{+}k, q{+}k) \cong \Mat_{2^k}(\Cl(p,q))$, so nothing essentially new appears. Every floor keeps the ground floor's type, so the clock $d = p - q \bmod 8$ does not advance.
+
+What grows is quantum capacity: each rung adds exactly one fermionic mode. In the infinite limit, for even charge, the tower becomes the algebra of a free fermion field. The walk ends with the ways our spacetime algebra can be extended by a single direction.
+
+The walk starts with the shape of a single floor, then climbs rung by rung, counting what each step adds, and ends at the infinite limit and a side branch. Each result appears after the ones it rests on.
+
+## What we assume
+
+**Postulate 1 (Tameness).** This is the standing assumption on how a geometry is allowed to degenerate. The places where it degenerates must form a smooth closed wall, exactly one direction must lose its length at each point of the wall, and these directions must vary smoothly along it. In addition, the length must vanish at a linear rate as the wall is reached, not to higher order.
+
+## The tower and quantum capacity
+
+This section climbs the tower one rung at a time.
+
+The tower is built by adding, again and again, a hyperbolic plane: one new positive and one new negative direction.
+
+After $k$ rungs the plane generators give real matrices and a twisted copy of the ground generators commutes with them, so \[ \Cl(p{+}k, q{+}k) \;\cong\; \Cl(p,q) \otimes \Mat_{2^k}(\R) \] the ground algebra with matrix entries. Climbing enlarges the algebra without changing its character.
+
+**Theorem 2 (Commuting copies).** Adding hyperbolic planes to a Clifford algebra creates nothing essentially new. The enlarged algebra splits into two pieces that commute with each other: a slightly twisted copy of the original algebra, and an algebra of ordinary real square matrices. So each floor of the tower is the ground algebra with matrix entries.
+
+*Rests on:* tower.grade-twist-when-it-inner, tower.volume-elements-planes, transport.rule-1-morita-trivial, std-algebra.existence-uniqueness, std-algebra.blade-basis
+
+Because each floor is the ground algebra with matrix entries, its structural features survive the climb.
+
+The charge $d = p - q \bmod 8$, the centre, the division ring and the kinds of obstruction are the same on every floor. For spacetime every floor is \[ \Cl(1{+}k, 3{+}k) \cong \Mat_{2^{k+1}}(\HH) \] so the clock stays frozen at position $6$.
+
+**Theorem 3 (Rigidity; the clock is frozen).** Building the tower by adding pairs of opposite-signed directions never changes the essential type of the algebra. Every floor has the same underlying number system, the same centre and the same kinds of obstruction as the ground floor. For the spacetime algebra, every floor is a matrix algebra over the quaternions, so the eight-step Bott clock does not advance along the tower: it stays where it starts.
+
+*Rests on:* tower.commuting-copies, tower.matrix-amplification-structural-properties, tower.morita-equivalence-algebra-amplification, transport.existence-classification-type-c, std-algebra.sta-matrix
+
+If the type never changes, the natural question is what the climb does add.
+
+The null pairs $v_i, w_i$ adjoined at the rungs obey exactly the canonical anticommutation relations of fermionic modes, \[ v_i v_j + v_j v_i = 0, \qquad w_i w_j + w_j w_i = 0, \qquad v_i w_j + w_j v_i = \delta_{ij} \] as vectors, with no representation chosen. A new rung adds one mode without disturbing the earlier ones.
+
+**Theorem 4 (The ladder pairs satisfy the CAR, as vectors).** Each step up the tower adds a new pair of special zero-length directions to the space. Taken together, these pairs obey exactly the algebraic rules that quantum theory uses for fermionic modes, the kind of states occupied by particles such as electrons, with one mode per step. The rules hold for the directions themselves, so nothing has to be added or chosen to make them work, and a new step never disturbs the modes already present.
+
+*Rests on:* std-algebra.vector-squares, std-algebra.witt-basis-car
+
+Fermionic modes need a space of states to act on.
+
+The $v_j$ act by wedging and the $w_j$ by contraction on the exterior algebra $\Lambda^\bullet W_k$ of dimension $2^k$, a Fock space whose vacuum $1$ is killed by every $w_j$. Each rung doubles it, \[ \Lambda^\bullet W_{k+1} = \Lambda^\bullet W_k \otimes \Lambda^\bullet \R v_{k+1} \] one qubit per rung.
+
+**Theorem 5 (Fock module; one qubit per rung).** The planes added in the tower act naturally on a space built like the state space of fermions: an empty vacuum state, with raising operators that fill slots and lowering operators that empty them. Nothing smaller carries this action, and after k planes the space has dimension 2 to the power k. Each new plane doubles it, adding one qubit per rung of the tower.
+
+*Rests on:* tower.commuting-copies, tower.ladder-pairs-satisfy-car-vectors, std-algebra.existence-uniqueness, std-algebra.witt-decomposition
+
+One can then ask how many fermionic modes an algebra can hold at most, using only its own vectors.
+
+The answer is the Witt index, \[ \min(p,q) \] the smaller of the counts of positive and negative directions. Along the tower it is $\min(p,q) + k$, so each rung adds exactly one mode and no more.
+
+**Theorem 6 (Witt index is quantum capacity).** Inside a Clifford algebra one can ask how many independent fermionic modes can be built directly from vectors. The answer is a classical number attached to the geometry, the Witt index: the largest number of independent zero-length directions that are all orthogonal to one another. For a space with p positive and q negative directions it is the smaller of p and q. Each step up the tower raises this number by exactly one, so each step adds precisely one mode of capacity and no more.
+
+*Rests on:* tower.ladder-pairs-satisfy-car-vectors, std-algebra.vector-squares, std-algebra.witt-decomposition
+
+Having counted rung by rung, the walk now lets the tower run forever.
+
+When $p - q$ is even the algebraic union has a clean form, \[ \varinjlim T_k \;\cong\; \Cl(p,q) \otimes \Mat_{2^\infty} \] the ground algebra with entries in an infinite matrix algebra built by repeated doubling. Equivalently, it is the Clifford algebra of $\R^{p,q}$ with all the planes added at once.
+
+**Theorem 7 (The algebraic limit, even charge).** Keep adding planes to the tower forever and take the union, purely algebraically. When the numbers of positive and negative directions differ by an even amount, the result has a clean description: the original algebra with entries in an infinite matrix algebra built by repeated doubling. Equivalently, it is the Clifford algebra of the infinite-dimensional space obtained by adding all the planes at once.
+
+*Rests on:* tower.commuting-copies, tower.compatibility-connecting-maps-transported
+
+The algebraic union still has to be completed, with complex scalars and a norm.
+
+For even charge the completed limit is \[ \Cl(p,q)_\C \,\otimes\, \CAR \] the ground algebra with the CAR algebra, the standard algebra of a free fermion field with countably many modes. The null vectors added at each rung act directly as that field's creation and annihilation operators, with $w_j = v_j^*$.
+
+**Theorem 8 (The CAR limit, even charge).** Repeatedly applying the transport step builds an infinite tower of algebras. When the signature difference is even and the tower is completed, it becomes the original algebra combined with the standard algebra of a free field of fermions with countably many modes. Each rung of the tower contributes exactly one fermionic mode, and the null vectors added at that rung act directly as its creation and annihilation operators.
+
+*Rests on:* tower.algebraic-limit-even-charge, tower.fock-module-one-qubit-per-rung, tower.glimms-classification-car-uniqueness, tower.ladder-pairs-satisfy-car-vectors, tower.structure-tower-c-norms
+
+These results answer the question that started the tower: how many times must the completion step be repeated?
+
+Under the tameness premise, for a compact wall with a trivial radical line bundle, one ascent completes the physical side, and further rungs arise only beyond it, one per shadow wall.
+
+The repetitions never change the algebra's type, and in the even-charge limit they add the modes of a free fermion field.
+
+**Theorem 9 (Answers to the iteration question).** The question was how many times the series' completion step has to be repeated. Under the tameness premise, and for a compact wall with a trivial radical line, on the physical side of a degeneration the answer is once; further steps are demanded only beyond it, one for each successive hidden wall. Repeating the step never changes the algebra's essential type, and in the infinite limit, for even charge, it simply adds the modes of a free fermion field, one qubit per step.
+
+*Rests on:* tower.wall-package, tower.rigidity-clock-frozen, tower.algebraic-limit-even-charge, tower.car-limit-even-charge, sheaf.tameness
+
+The unit the tower adds turns up elsewhere in the series under other names.
+
+A ladder pair $(v_i, w_i)$, a fermionic mode and a unit of Witt-index capacity are one object: a single qubit, of maximal entropy $\ln 2$ nats. The conformal algebra $\Cl(2,4)$ carries exactly two of them, whether one counts pairs or modes.
+
+**Theorem 10 (Pair, mode, qubit: one object).** Three things in the series that sound different, a pair of null directions in the tower, a fermionic mode in the singularity analysis and a unit of quantum capacity, are the same thing. Each is one fermion mode with two states, empty or filled, which is one qubit and can hold at most $\ln 2$ nats of entropy. The conformal algebra has room for exactly two of them, and counting pairs or counting modes gives the same number.
+
+*Rests on:* tower.fock-module-one-qubit-per-rung, tower.ladder-pairs-satisfy-car-vectors, tower.witt-index-quantum-capacity, std-algebra.witt-basis-car
+
+So far each step added two directions at once, and adding a single direction instead leads off the main tower.
+
+Our spacetime algebra $\Cl(1,3)$ and its mirror $\Cl(3,1)$ can each be extended by one time or one space direction, giving $\Cl(1,4)$, $\Cl(2,3)$, $\Cl(3,2)$ and $\Cl(4,1)$. A space direction doubles, as in $\Cl(1,4) = \Cl(1,3) \oplus \Cl(1,3)$, a time direction complexifies, and the four land on the residues $5$, $7$, $1$ and $3$.
+
+**Theorem 11 (The four extensions of the oriented pair).** Our spacetime algebra and its mirror image can each be extended by one extra direction, of time type or of space type, giving four algebras. Adding a space direction produces two identical copies of the original algebra side by side, while adding a time direction produces the original algebra with complex numbers allowed. Each of the four lands on a different odd value of the series' mod-eight charge.
+
+*Rests on:* odd-extensions.doubling-or-complexification, odd-extensions.imported-representatives-dimension-nearest-four-types, odd-extensions.volume-element-odd-dimension, std-algebra.sta-matrix
+
+## Results cited, not shown
+
+**Fact (imported) 12 (Doubling or complexification).** In an odd number of dimensions, the product of all the basis directions commutes with everything. If it squares to plus one, the algebra falls apart into two identical copies of its even part, the part built from products of an even number of directions. If it squares to minus one, it behaves like the imaginary unit and the algebra is that even part with complex coefficients allowed. The even part itself is always a Clifford algebra of one dimension fewer.
+
+*Provenance:* Transport Lab claim odd-extensions.doubling-or-complexification, version 5 (T14a Thm 2.3).
+
+**Fact (imported) 13 (Imported: the representatives at the dimension nearest four, and the types).** This collects, for the odd-extensions note, which signature stands for each of the eight towers when the dimension is kept as close to four as possible. Two of the eight have no single time direction and are ruled out; the other six can hold matter, though whether the odd ones actually do is a further question, which only observation can answer. It also records that our world's algebra and the mirror's differ as real algebras, one built on quaternions and the other on real numbers.
+
+*Provenance:* Transport Lab claim odd-extensions.imported-representatives-dimension-nearest-four-types, version 4 (T14a Fact 1.2).
+
+**Fact (imported) 14 (The volume element in odd dimension).** Multiply all the basis directions of an odd-dimensional Clifford algebra together and the result commutes with everything in the algebra. Its square is either plus one or minus one, and this lemma gives a simple formula for which. In five dimensions it is plus one exactly when the number of negative directions is even.
+
+*Provenance:* Transport Lab claim odd-extensions.volume-element-odd-dimension, version 3 (T14a Lem 2.2).
+
+**Fact (imported) 15 (The blade basis, degenerate forms included).** Every element of the algebra is a combination of products of distinct basis arrows, and no such product can be written in terms of the others. In $n$ dimensions there are $2^{n}$ of them: the number, the arrows, the planes, the volumes and so on. This stays true even when some directions have zero length.
+
+*Provenance:* Transport Lab claim std-algebra.blade-basis, version 1.
+
+**Fact (imported) 16 (The Clifford algebra exists and is unique).** The rule "an arrow squared is a number" can always be realised by an actual algebra, and in essentially one way only. One explicit construction lets arrows act on oriented areas and volumes by adding a direction or removing one.
+
+*Provenance:* Transport Lab claim std-algebra.existence-uniqueness, version 1.
+
+**Fact (imported) 17 (The spacetime algebra as a matrix algebra, and the spacetime split).** The algebra of spacetime arrows can be written with $2 \times 2$ arrays of quaternions, or, after allowing complex numbers, with the $4 \times 4$ Dirac matrices of relativistic quantum mechanics. Its even part is exactly the algebra of an observer's ordinary three-dimensional space.
+
+*Provenance:* Transport Lab claim std-algebra.sta-matrix, version 1.
+
+**Fact (imported) 18 (The product of two vectors).** Multiplying two arrows gives a number plus something new. The number is their ordinary dot product. The new part changes sign when the order is swapped, and turns out to be the oriented plane the two arrows span.
+
+*Provenance:* Transport Lab claim std-algebra.vector-squares, version 1.
+
+**Fact (imported) 19 (Null pairs satisfy the canonical anticommutation relations).** Inside a Clifford algebra, a direction of space paired with a direction of time produces two zero-length arrows that obey exactly the rules for creating and destroying a fermion. With several such pairs you get several independent fermion modes, without building any Hilbert space first.
+
+*Provenance:* Transport Lab claim std-algebra.witt-basis-car, version 1.
+
+**Fact (imported) 20 (Hyperbolic pairs and the Witt decomposition).** Any space with both space-like and time-like directions can be cut into perpendicular copies of the simplest space-time plane, plus a leftover piece that is purely space-like or purely time-like, plus the directions the length rule cannot see. The number of space-time planes, the smaller of the two counts, is the largest number of independent mutually perpendicular light-like directions the space can hold.
+
+*Provenance:* Transport Lab claim std-algebra.witt-decomposition, version 1.
+
+**Fact (imported) 21 (Compatibility: the connecting maps, transported).** When each floor of the tower is rewritten as matrices over the ground algebra, the map from one floor to the next becomes simple block doubling followed by a conjugation. This result writes down the conjugating element exactly. It has two pieces sitting in the two diagonal corners, one built from the ground algebra's volume element and one from that of the added planes, rather than the single correction a one-step view would suggest (with the matrix units labelled as the store fixes them; with the other labelling the single correction is the right one).
+
+*Provenance:* Transport Lab claim tower.compatibility-connecting-maps-transported, version 6 (T03 Lem 5.2).
+
+**Fact (imported) 22 (Glimm's classification, and CAR uniqueness).** Gluing together ever larger matrix algebras, doubling in size each time, and completing gives one specific infinite-dimensional algebra, whatever unital gluing maps are used. Separately, the algebra generated by fermion creation and annihilation operators is determined by their relations alone, and for countably many modes it is that same algebra. Both are standard results imported from the operator-algebra literature.
+
+*Provenance:* J. Glimm, On a certain class of operator algebras, Trans. Amer. Math. Soc. 95 (1960), 318--340.; O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., Thm.~5.2.5.
+
+**Fact (imported) 23 (The grade twist, and when it is inner).** Each step up the tower places the previous algebra inside the next one with a small twist, built from the operation that flips the sign of every vector. When the numbers of positive and negative directions differ by an even amount, the twist is only a change of viewpoint at each step: conjugating by a single element, the volume element of the ground algebra, undoes it. When they differ by an odd amount, the twist moves the centre of the algebra and cannot be undone in this way.
+
+*Provenance:* Transport Lab claim tower.grade-twist-when-it-inner, version 4 (T03 Lem 5.1).
+
+**Fact (imported) 24 (Matrix amplification: structural properties).** Replacing an algebra by square matrices whose entries come from that algebra changes its size but not its essential character. The centre stays the same, simplicity is kept, matrices of matrices are just larger matrices, and a direct sum of algebras splits into a direct sum of matrix algebras.
+
+*Provenance:* Transport Lab claim tower.matrix-amplification-structural-properties, version 3 (T03 Lem 3.3).
+
+**Fact (imported) 25 (Morita equivalence of an algebra and its amplification).** Replacing an algebra by the algebra of square matrices with entries in it does not change its module theory: the two have equivalent categories of modules. This is a classical result imported from ring theory.
+
+*Provenance:* T. Y. Lam, Lectures on Modules and Rings, Graduate Texts in Mathematics 189, Springer, New York (1999)., \S\S 17--18.
+
+**Fact (imported) 26 (The *-structure of the tower, and its C*-norms).** Once complex numbers are allowed, each level of the tower of algebras carries a natural notion of adjoint, fixed by how it acts on the basic generators, and every map used to build the tower respects it. When the signature difference is even, every level is an ordinary algebra of complex square matrices. Such an algebra has exactly one way of measuring size that is compatible with the adjoint, and so does the union of all the levels.
+
+*Provenance:* Transport Lab claim tower.structure-tower-c-norms, version 7 (T03 Lem 5.4).
+
+**Fact (imported) 27 (Volume elements of the planes).** Each new plane added to the algebra has its own volume element, the product of its two generators. These elements square to one, flip the sign of their own plane's generators, and commute with everything else, including each other. Multiplying them all together gives a single element with the same behaviour towards all the added planes at once.
+
+*Provenance:* Transport Lab claim tower.volume-elements-planes, version 5 (T03 Lem 3.1).
+
+**Fact (imported) 28 (The wall package).** When a geometry degenerates along a wall in a controlled, tame way, and the dying direction can be oriented consistently along the wall, adding two extra directions removes the degeneracy at the wall. The degeneracy does not disappear, though; it reappears at a nearby shadow wall. If the wall is compact, and the couplings are suitably chosen, the process can be repeated indefinitely, each step adding one more pair of directions. This summary is carried over from earlier work in the series and holds under the tameness assumption.
+
+*Provenance:* Transport Lab claim tower.wall-package, version 5 (T03 Fact 6.1).
+
+**Fact (imported) 29 (Existence and classification of type C).** Some Clifford algebras secretly come in two independent halves, and the elements that pick out each half are called central idempotents. This result pins down exactly when that happens: precisely when the number of positive directions minus the number of negative ones leaves remainder 1 on division by four. In that case there are exactly two such elements, built from the product of all the basis directions. Reversing every direction swaps the two halves, but no conjugation by an element of the algebra itself can do so, since these elements commute with everything.
+
+*Provenance:* Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6).
+
+**Fact (imported) 30 (Rule 1 is Morita-trivial).** The basic transport step adds one new pair of null directions to an algebra. The enlarged algebra turns out to be the algebra of two-by-two matrices with entries in the original one, with the new null pair playing the role of the off-diagonal entries. So the step leaves the essential type of the algebra unchanged, although whether certain other kinds of obstruction are present can change.
+
+*Provenance:* Transport Lab claim transport.rule-1-morita-trivial, version 5 (T01 Thm 7.1).
+
+The tower never changes an algebra's type, yet each rung contributes exactly one fermionic mode, and for even charge the infinite climb yields a free fermion field.
+
+The account of when further rungs are needed rests on the tameness assumption listed under what we assume. That premise is the only assumption this trail lists.

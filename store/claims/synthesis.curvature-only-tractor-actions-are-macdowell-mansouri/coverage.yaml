@@ -1,0 +1,33 @@
+functions:
+  check_pure_transport_admits_only_the_chern_weil_density:
+    kind: exact
+    clauses:
+    - (i) so(2,4) and the parabolic algebra of the line of X admit only the Killing form; the stabiliser of X admits two forms on all bivectors, none internally odd, and two on Lambda^2(X^perp), one internally odd (eps(I, X, ., .))
+    omits: 'none: finite linear algebra over the rationals'
+  check_frozen_point_alone_admits_only_the_chern_weil_density:
+    kind: exact
+    clauses:
+    - (ii) the stabiliser of I admits only the Killing form on Lambda^2(I^perp)
+    omits: checked at Lambda = 3 and -3 (the de Sitter and anti-de Sitter cases); other values differ by a rescaling of n0
+  check_frozen_point_and_canonical_tractor_give_three_and_one_odd:
+    kind: exact
+    clauses:
+    - (iii) the invariant forms are spanned by K, H, M; M = eps(I, X, ., .); the internally odd subspace is span(M); only K is stab(I)-invariant
+    omits: checked at Lambda = 3, -3, 9/7
+  check_frame_equations_of_the_two_non_topological_densities:
+    kind: exact
+    clauses:
+    - (iv) frame equation of M has rank 10 on algebraic curvatures, of H rank 0 there and 16 on all curvature two-forms
+    omits: at Lambda = 9/7 and at a point with the frame the identity; the variational identity reducing the frame equation to B(e ^ delta e ^ F_W) is proved in the text
+  check_which_hypotheses_do_the_work:
+    kind: exact
+    clauses:
+    - (vi) first-order class adds two e^e^F invariants; the unreduced class has six; the Lorentz commutant on W is one-dimensional and the slot rho e makes the frozen point parallel
+    omits: the degree argument that the slot is linear in the frame is in the text; e^4 count (one) is the dimension of Lambda^4 W
+untouched_premises:
+  dark-energy.imported-macdowell-mansouri-theorem-stelle-west: cited for the Gauss-Bonnet, Einstein-Cartan and cosmological split of the functional M identifies; the split itself is bilinearity
+  synthesis.imported-einstein-cartan-matter-coupling: cited for torsion vanishing without spin density (H inert) and proportional to it with spin (H physical)
+  synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part: the rank-10 frame equation is recomputed here, so the check agrees with it rather than using it
+  synthesis.imported-chern-weil-and-chern-simons-forms: imported Fact for Chern-Weil closedness (the topological clauses (i) to (iii)); the check counts invariant forms and calls no premise
+  synthesis.imported-lovelock-cartan-four-forms-and-holst-term: imported Fact for the vacuum inertness of the Holst term and the readings of (v) and (vi); nothing is computed from it
+  synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared: its value of eps(I, X, F, F) on the normal tractor connection is quoted in (i); the check here counts the invariant forms on Lambda^2(X^perp) and does not recompute that value

@@ -1,0 +1,23 @@
+functions:
+  check_t_gj_pure_grade_five:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "that grade five on the sixteen is 126 + 126bar, that the surviving duality half is the 126, and the absence of 10 and 120 components follow from the imported grade dictionary, not recomputed; the 126bar half acting as zero on the sixteen and both halves being nonzero are computed"
+  check_georgi_jarlskog_entries:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the species names are the supplied table of Hypothesis (S); |y_e/y_d| = 3 = |(B - L)(L)/(B - L)(Q)| is computed on the 32 x 32 module"
+  check_one_sided_weighting_antisymmetric:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: ""
+  check_up_type_twin:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "'|m_nu^D| = 3 |m_u|' is read from the moduli 1 and 1/3 of the form entries; no mass computation"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is about one concrete five-mode module and the checks build it as 32 x 32 rational matrices, cross-checked against the GA model of Cl(5,5), so each clause is computed exactly."

@@ -1,0 +1,22 @@
+functions:
+  check_wallis_factors_and_zero_mode_thickness:
+    kind: exact
+    clauses: ["(i) factors pi l/2 and 3 pi l/8", "(i) G_4 = 2 G_5/(pi l)", "(i) L_eff = (3 pi/8) l = (V_4/V_3) l", "the rule's L_eff = l is produced by neither reduction (zero-mode part)"]
+    omits: "exact in pi with l the sample 7/2 (every relation is homogeneous in l); the integrals are taken by the Wallis recursion and the Fourier expansion, not from the action"
+  check_warped_field_volume_and_curvature_weights:
+    kind: sampled
+    clauses: ["(i) the gravitational term and bulk dust acquire the factors l c^2 and l c^4"]
+    omits: "one 4x4 field matrix, one fixed field strength and c = 3/5, 5/13, 1; the c^-2 scaling is that of a fixed four-dimensional field strength under rescaling by c, so the extra terms of the warped five-dimensional curvature from the derivative of c are not computed, and the full Einstein-Hilbert reduction is not"
+  check_local_projection_thickness:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "rho is the sample 5/3 (all relations are linear in rho); the form of the induced-equation bracket contracted with u is the checker's reading of the imported Fact"
+  check_sheet_spacing_and_totals_under_democracy:
+    kind: exact
+    clauses: ["(iii)", "consequences: totals 5.000, 4.333, 5.667, 5.000"]
+    omits: "the sum rule Omega_dark/Omega_b = 1 + 2 f_3D + 2 f_5D is taken from D; the global four-sphere enters only through its area"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numbers pi/2, 3pi/8, pi/4, 4/3 and the four totals are exact in pi; the warped-curvature function covers only the fixed-field-strength scaling, which the docstring states"

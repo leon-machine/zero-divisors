@@ -1,0 +1,21 @@
+functions:
+  check_plane_volume_elements:
+    kind: sampled
+    clauses:
+    - omega_j^2 = 1
+    - omega_j anticommutes with e_j and f_j
+    - omega_j commutes with other planes and ground generators
+    - the omega_j commute pairwise
+    omits: Grounds n <= 3 and k in {1,2,3} only; exact products in each; controls (does not commute with own plane) pass
+  check_product_omega_k:
+    kind: sampled
+    clauses:
+    - Omega_k^2 = 1, commutes with all ground generators, anticommutes with each e_j, f_j
+    omits: Same finite grounds and k <= 3
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact identities on finite cases.
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"

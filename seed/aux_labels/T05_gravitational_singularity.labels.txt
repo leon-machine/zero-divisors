@@ -1,0 +1,160 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{tab:chain}{{1}{5}{The transport chain, with statuses. The step names in italics are those of the transport algorithm of \cite [\S 8.1]{ButlerT1}, verbatim, and the section titles carry the same names; Table \ref {tab:algmap} gives the bijection. Each status is argued where the step is proved, and every premise is a named one stated in the text: univalence (P) and horizon regularity (R), the KMS condition at the period the Euclidean section fixes, imposed mode by mode, in Step 4d; joint quasi-freeness (Q) in Step 4e; the metric-level reading $\EN $, licensed in Step 5 by Proposition \ref {prem:localuniv} up to its definitional antecedent; the capacity postulates (C1)-(C3) in Step 6a; localisation (L), purity (U), capacity (C) and injection (I), collected as Premise \ref {prem:ratemodel} in Step 6b, with boundary-mode locality (L$_E$) stated as Premise \ref {prem:local} in Step 4d and used in Step 6b, of which (L)'s exhaustiveness clause is the one carrying conjectural weight, and (I)'s freshness clause, like (L$_E$)'s never-return clause, is the rate model's own assumption rather than an import. Given them the statements are theorems; Step 6b uses no typicality and claims the envelope, the exact rising branch, the quantified falling branch and the endpoint; exact saturation of the falling branch holds only in the zero-frequency idealisation, of which the linear weights supply exactly one mode}{table.1}{}}
+\newlabel{tab:algmap}{{2}{6}{The transport algorithm of \cite {ButlerT1}, instantiated. The middle column names the theorems of the root paper licensing each step; the right column names where this paper executes it}{table.2}{}}
+\newlabel{sec:locate}{{2}{7}{Step 1: locate the failure}{section.2}{}}
+\newlabel{subsec:gtg}{{2.1}{7}{The gauge theory, exactly}{subsection.2.1}{}}
+\newlabel{eq:gtgdyn}{{1}{7}{The gauge theory, exactly}{equation.2.1}{}}
+\newlabel{eq:gtgfield}{{2}{7}{The gauge theory, exactly}{equation.2.2}{}}
+\newlabel{eq:metricdef}{{3}{8}{The gauge theory, exactly}{equation.2.3}{}}
+\newlabel{eq:gaugelaws}{{4}{8}{The gauge theory, exactly}{equation.2.4}{}}
+\newlabel{fact:gtgequiv}{{2.1}{8}{Imported: equivalence with the Einstein equations}{theorem.2.1}{}}
+\newlabel{subsec:solution}{{2.2}{8}{The Schwarzschild gauge field, its connection, and where the divergence lies}{subsection.2.2}{}}
+\newlabel{eq:hbar}{{5}{8}{The Schwarzschild gauge field, its connection, and where the divergence lies}{equation.2.5}{}}
+\newlabel{prop:unipotent}{{2.2}{8}{The unipotent ray}{theorem.2.2}{}}
+\newlabel{eq:pgcoframe}{{6}{8}{The Schwarzschild gauge field, its connection, and where the divergence lies}{equation.2.6}{}}
+\newlabel{prop:omega}{{2.3}{9}{The connection bivector, computed}{theorem.2.3}{}}
+\newlabel{prop:solution}{{2.4}{9}{The solution, and where the divergence lies}{theorem.2.4}{}}
+\newlabel{subsec:fails}{{2.3}{10}{Where division fails}{subsection.2.3}{}}
+\newlabel{prop:fold}{{2.5}{10}{The cones fold}{theorem.2.5}{}}
+\newlabel{prop:limit}{{2.6}{10}{The degeneration, exactly}{theorem.2.6}{}}
+\newlabel{prop:invariant}{{2.7}{11}{Non-removability: the invariant argument}{theorem.2.7}{}}
+\newlabel{rem:weights}{{2.8}{11}{The corank of the limit, and the weighted answer}{theorem.2.8}{}}
+\newlabel{fig:fold}{{1}{12}{The light cones fold (Proposition \ref {prop:fold}). Each panel shows the two null directions $\et + (-\beta \pm 1)\er $ of the physical cone in the $(t,r)$ plane, at increasing $\beta = \sqrt {2M/r}$. Far from the hole ($\beta = 0$) the cone is symmetric. At the horizon ($\beta = 1$) the outgoing branch stands along $\et $: light hovers, and the other branch is ingoing. As $r \to 0$ ($\beta \to \infty $) both branches tip inward and collapse onto the radial line $\R \,\er $ (dashed), which is null for the limit form of Proposition \ref {prop:limit}: the type-N obstruction that triggers Rule 1. The folding is the division by zero, seen causally}{figure.1}{}}
+\newlabel{sec:diagnose}{{3}{12}{Step 2: diagnose the type}{section.3}{}}
+\newlabel{prop:typeN}{{3.1}{12}{Type N, and only type N}{theorem.3.1}{}}
+\newlabel{sec:ascent}{{4}{13}{Step 3: apply the rule}{section.4}{}}
+\newlabel{eq:car}{{{CAR}}{13}{Step 3: apply the rule}{AMS.4}{}}
+\newlabel{lem:atom}{{4.1}{13}{Pseudo-inverse identities, and the hyperbolic atom}{theorem.4.1}{}}
+\newlabel{sec:operators}{{5}{14}{Step 4a: compute in the completion; the transport instantiated, and the operators forced}{section.5}{}}
+\newlabel{subsec:lift}{{5.1}{14}{The point-level transport, instantiated}{subsection.5.1}{}}
+\newlabel{def:lift}{{5.1}{14}{The fibrewise conformal lift}{theorem.5.1}{}}
+\newlabel{eq:t5lift}{{7}{14}{The fibrewise conformal lift}{equation.5.7}{}}
+\newlabel{prop:lift}{{5.2}{14}{The transport, on the Schwarzschild fibre}{theorem.5.2}{}}
+\newlabel{rem:liftreading}{{5.3}{15}{What this instance shows, and what it does not}{theorem.5.3}{}}
+\newlabel{thm:nocnumber}{{5.4}{15}{Imported: no c-number repair}{theorem.5.4}{}}
+\newlabel{prop:descent}{{5.5}{16}{The descent, and what it erases}{theorem.5.5}{}}
+\newlabel{def:grading}{{5.6}{16}{The grading, and the parity automorphism}{theorem.5.6}{}}
+\newlabel{thm:parityavg}{{5.7}{16}{The descent is the parity average}{theorem.5.7}{}}
+\newlabel{rem:evenledger}{{5.8}{17}{The metric level is the parity even level}{theorem.5.8}{}}
+\newlabel{fact:oneway}{{5.9}{17}{Imported: the descent is a one-way conditional expectation}{theorem.5.9}{}}
+\newlabel{sec:boost}{{6}{18}{Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator}{section.6}{}}
+\newlabel{thm:shape}{{6.1}{18}{The curvature of the gauge field: exact shape decoupling}{theorem.6.1}{}}
+\newlabel{prop:plane}{{6.2}{19}{The plane and the rate}{theorem.6.2}{}}
+\newlabel{thm:modular}{{6.3}{19}{Modular structure of the completed pair}{theorem.6.3}{}}
+\newlabel{cor:weld}{{6.4}{20}{The matching: Steps 4b and 4c join by equation}{theorem.6.4}{}}
+\newlabel{rem:frame}{{6.5}{21}{The frame, made explicit}{theorem.6.5}{}}
+\newlabel{sec:thermal}{{7}{21}{Step 4d: compute in the completion; thermality, and the state that carries it}{section.7}{}}
+\newlabel{subsec:scaffolding}{{7.1}{22}{The operator structure, and the theorem it supports}{subsection.7.1}{}}
+\newlabel{lem:tomita}{{7.1}{22}{Modular theory of a matrix factor, proved outright}{theorem.7.1}{}}
+\newlabel{lem:schmidt}{{7.2}{22}{Schmidt forcing, proved outright}{theorem.7.2}{}}
+\newlabel{thm:descent}{{7.3}{22}{Modular descent}{theorem.7.3}{}}
+\newlabel{rem:israel}{{7.4}{24}{Israel's reading, recovered}{theorem.7.4}{}}
+\newlabel{rem:wrinkles}{{7.5}{24}{Three wrinkles, recorded}{theorem.7.5}{}}
+\newlabel{subsec:selection}{{7.2}{24}{What selects the state}{subsection.7.2}{}}
+\newlabel{thm:form}{{7.6}{24}{The descended form is state independent}{theorem.7.6}{}}
+\newlabel{rem:honest}{{7.7}{25}{The unconditional reading, and how it sharpens the gap}{theorem.7.7}{}}
+\newlabel{prem:parity}{{7.8}{25}{(P): univalence}{theorem.7.8}{}}
+\newlabel{fact:www}{{7.9}{25}{Imported: the univalence superselection rule}{theorem.7.9}{}}
+\newlabel{thm:even}{{7.10}{25}{Ascended marginals are diagonal}{theorem.7.10}{}}
+\newlabel{rem:bought}{{7.11}{26}{What hypothesis (ii) cost, and what (P) costs}{theorem.7.11}{}}
+\newlabel{def:gmc}{{7.12}{26}{The geometric modular condition (G)}{theorem.7.12}{}}
+\newlabel{thm:kmsunique}{{7.13}{26}{KMS uniqueness at a factor}{theorem.7.13}{}}
+\newlabel{fact:kmsgeneral}{{7.14}{26}{Imported: the general form}{theorem.7.14}{}}
+\newlabel{cor:universal}{{7.15}{27}{Universality of the temperature under (G)}{theorem.7.15}{}}
+\newlabel{thm:rigidity}{{7.16}{27}{Rate rigidity: the temperature is not algebra intrinsic}{theorem.7.16}{}}
+\newlabel{rem:clocks}{{7.17}{28}{Two clocks, one calibration}{theorem.7.17}{}}
+\newlabel{prop:section}{{7.18}{28}{The Euclidean section, and its period}{theorem.7.18}{}}
+\newlabel{prem:reg}{{7.19}{29}{(R): regularity at the fixed locus}{theorem.7.19}{}}
+\newlabel{thm:rate}{{7.20}{29}{The rate, and the discharge of hypothesis (iii)}{theorem.7.20}{}}
+\newlabel{prop:euclid}{{7.21}{30}{The Euclidean rotor, and where it lies}{theorem.7.21}{}}
+\newlabel{rem:pair}{{7.22}{30}{What the curvature-selected pair does and does not select}{theorem.7.22}{}}
+\newlabel{prop:statistics}{{7.23}{31}{The two KMS functionals, and the sign in $Z$}{theorem.7.23}{}}
+\newlabel{rem:spinstructure}{{7.24}{31}{The Euclidean reading of the sign, flagged}{theorem.7.24}{}}
+\newlabel{prop:horizon}{{7.25}{32}{Why the calibration cannot be internal}{theorem.7.25}{}}
+\newlabel{rem:priceR}{{7.26}{32}{The cost of (R), and the dictionary}{theorem.7.26}{}}
+\newlabel{thm:gns}{{7.27}{33}{Purity is an output: the partner is the commutant}{theorem.7.27}{}}
+\newlabel{thm:overdet}{{7.28}{33}{Exact equilibrium over-determines the boundary modes}{theorem.7.28}{}}
+\newlabel{rem:rescue}{{7.29}{33}{Why this rescues rather than damages the chain}{theorem.7.29}{}}
+\newlabel{prem:local}{{7.30}{34}{(L$_E$): boundary-mode locality}{theorem.7.30}{}}
+\newlabel{prop:diagonal}{{7.31}{34}{Number-diagonal dynamics; the model's scrambling derived}{theorem.7.31}{}}
+\newlabel{cor:stateclass}{{7.32}{34}{The chain's state class, and its stability}{theorem.7.32}{}}
+\newlabel{rem:selectstatus}{{7.33}{35}{The step's status, and what is still open}{theorem.7.33}{}}
+\newlabel{sec:photons}{{8}{36}{Step 4e: compute in the completion; from fermions to photons}{section.8}{}}
+\newlabel{prem:quasifree}{{8.1}{36}{(Q): joint quasi-freeness, with the s-wave weights}{theorem.8.1}{}}
+\newlabel{thm:bosonisation}{{8.2}{37}{The bosonisation bridge, s-wave sector}{theorem.8.2}{}}
+\newlabel{rem:lift}{{8.3}{39}{The four-dimensional lift, flagged}{theorem.8.3}{}}
+\newlabel{sec:descent}{{9}{39}{Step 5: descend, and state what descent costs}{section.9}{}}
+\newlabel{def:multidescent}{{9.1}{39}{The multi-mode descent}{theorem.9.1}{}}
+\newlabel{prop:coincidence}{{9.2}{40}{Pinching against partial trace: the scope of a coincidence}{theorem.9.2}{}}
+\newlabel{thm:deficit}{{9.3}{40}{The deficit theorem: the cost of descent, exactly}{theorem.9.3}{}}
+\newlabel{cor:correlations}{{9.4}{41}{The deficit is carried by the quanta correlations}{theorem.9.4}{}}
+\newlabel{rem:wheredescent}{{9.5}{41}{Where the descent acts, and Hawking's loss derived}{theorem.9.5}{}}
+\newlabel{prem:localuniv}{{9.6}{42}{(P$_{\mathrm {loc}}$), reduced: the metric-level reading on many modes}{theorem.9.6}{}}
+\newlabel{sec:capacity}{{10}{43}{Step 6a: iterate, or stop; the clock stops, and the boundary-mode capacity}{section.10}{}}
+\newlabel{ax:cutoff}{{10.1}{43}{C1: curvature cutoff}{theorem.10.1}{}}
+\newlabel{ax:cell}{{10.2}{43}{C2: cell density}{theorem.10.2}{}}
+\newlabel{ax:epoch}{{10.3}{43}{C3: counted epoch}{theorem.10.3}{}}
+\newlabel{lem:epoch}{{10.4}{43}{The causal epoch, computed exactly}{theorem.10.4}{}}
+\newlabel{fact:slice}{{10.5}{44}{Imported: the induced geometry of an interior slice}{theorem.10.5}{}}
+\newlabel{prop:count}{{10.6}{44}{The stretched singularity, and the count}{theorem.10.6}{}}
+\newlabel{prop:arealaw}{{10.7}{45}{The area-law test}{theorem.10.7}{}}
+\newlabel{sec:page}{{11}{45}{Step 6b: iterate, or stop; two levels, the Page envelope, and eviction}{section.11}{}}
+\newlabel{subsec:restated}{{11.1}{45}{The paradox restated}{subsection.11.1}{}}
+\newlabel{fig:page}{{2}{46}{The Page envelope: the two counts crossing. The radiation entropy $S_R(t)$ (solid) is the minimum of two independently computed quantities: the thermal accumulation $\Sth (t)$ of the emitted quanta (rising, Step 4d through injection (I)) and the boundary-mode capacity $C(t) \approx S_{\mathrm {BH}}(M(t))$ of the shrinking boundary mode space of the singularity (falling, Step 6a). The $C$ arm of the envelope and the endpoint $S_R = 0$ need only purity and the dimension bound; the $\Sth $ arm needs boundary-mode locality as well, and cannot be had without it (Corollary \ref {cor:envelope}); saturation, the solid curve itself, follows from Page typicality (Fact \ref {thm:pagecurve}) and from nothing weaker: the eviction theorem of the rate model (Theorem \ref {thm:eviction}) delivers the envelope, the exact rising branch and the endpoint without typicality, but saturates the falling branch only in the maximally entangled idealisation $c_k = s_k$, which by the thermofield angle is the zero-frequency case $\omega _k = 0$, of which the chain's linear weights supply exactly one mode, the sea level, so no window of two or more members can saturate; at every nonzero weight $h_k < \ln 2$ strictly, and the mechanism's falling branch runs strictly inside the envelope, at $S_R = \sum _{k \in W} h_k$. The crossing at $t_{\mathrm {Page}}$ is the rate-model shadow of the extremal-surface exchange of the islands derivations. The descended reading of the same history, monotone with no falling branch, is Proposition \ref {prop:twoledgers}(2)}{figure.2}{}}
+\newlabel{subsec:envelope}{{11.2}{46}{The envelope}{subsection.11.2}{}}
+\newlabel{thm:pagecurve}{{11.1}{46}{Assembled: the Page curve, up to typicality}{theorem.11.1}{}}
+\newlabel{rem:islands}{{11.2}{47}{The island dictionary, and one dissonance}{theorem.11.2}{}}
+\newlabel{subsec:eviction}{{11.3}{47}{The eviction theorem: the falling branch without typicality}{subsection.11.3}{}}
+\newlabel{prem:ratemodel}{{11.3}{47}{The rate model's kinematic inputs: (L), (U), (C), (I)}{theorem.11.3}{}}
+\newlabel{prop:noattic}{{11.4}{48}{No attic, derived in the model}{theorem.11.4}{}}
+\newlabel{thm:eviction}{{11.5}{48}{Eviction: the window is a thermal product, and the radiation entropy is its content}{theorem.11.5}{}}
+\newlabel{cor:envelope}{{11.6}{50}{The envelope and the endpoint, and why boundary-mode locality is needed for them}{theorem.11.6}{}}
+\newlabel{cor:mirror}{{11.7}{50}{What an event returns to the radiation}{theorem.11.7}{}}
+\newlabel{rem:cost}{{11.8}{51}{What was obtained, and what it cost}{theorem.11.8}{}}
+\newlabel{rem:monogamy}{{11.9}{51}{Monogamy, firewalls, and the small-corrections theorem}{theorem.11.9}{}}
+\newlabel{sec:model}{{12}{52}{The finite-mode model: the dissolution step by step}{section.12}{}}
+\newlabel{subsec:modeldef}{{12.1}{52}{The model}{subsection.12.1}{}}
+\newlabel{subsec:parity}{{12.2}{52}{Exact thermality of every quantum: the parity-protection lemma}{subsection.12.2}{}}
+\newlabel{lem:parity}{{12.1}{52}{Parity protection}{theorem.12.1}{}}
+\newlabel{rem:receipt}{{12.2}{53}{Thermality records what the projection cannot see}{theorem.12.2}{}}
+\newlabel{subsec:where}{{12.3}{53}{Purity, and where the information lies}{subsection.12.3}{}}
+\newlabel{prop:transfer}{{12.3}{53}{Purity, correlation transfer, and recovery}{theorem.12.3}{}}
+\newlabel{subsec:ledger}{{12.4}{54}{The model, run exactly}{subsection.12.4}{}}
+\newlabel{tab:model}{{3}{54}{The finite-mode model, event by event, entropies in bits: $h = H(\tfrac {9}{25})/\ln 2 = H(\tfrac {16}{25})/\ln 2$ and $h' = H(\tfrac {25}{169})/\ln 2$ are the per-quantum entropies of the model's two kinds of pair, and $C$ is $|W|$. Events 1 and 2 are Phase I ($S_R = \Sth $ exactly); events 3 to 6 are Phase II, where $S_R = \sum _{k \in W}h_k$ lies strictly below the capacity whenever the window is nonempty, because no pair is maximally entangled, by exactly the shortfall Theorem \ref {thm:eviction} quantifies. The descended reading of the same history, monotone with no falling branch, is Proposition \ref {prop:twoledgers}(2)}{table.3}{}}
+\newlabel{prop:modelentropy}{{12.4}{54}{The model's entropy sequence, exactly}{theorem.12.4}{}}
+\newlabel{subsec:descentapplied}{{12.5}{55}{The descent, applied: the two levels in numbers}{subsection.12.5}{}}
+\newlabel{prop:twoledgers}{{12.5}{55}{The two levels of the finite model}{theorem.12.5}{}}
+\newlabel{rem:bothledgers}{{12.6}{56}{The dissolution, now at both levels}{theorem.12.6}{}}
+\newlabel{sec:flowinside}{{13}{56}{The modular flow of the boundary modes inside, and the entangling half of (L$_E$)}{section.13}{}}
+\newlabel{fact:collar}{{13.1}{57}{Imported: the interior collar in Kasner form}{theorem.13.1}{}}
+\newlabel{subsec:holonomy}{{13.1}{57}{The modular flow is the $t$-line holonomy}{subsection.13.1}{}}
+\newlabel{prop:holonomy}{{13.2}{57}{The modular flow of the boundary modes as a holonomy, and its universal temperature}{theorem.13.2}{}}
+\newlabel{rem:angular}{{13.3}{58}{Where a spectrum would lie}{theorem.13.3}{}}
+\newlabel{subsec:entangling}{{13.2}{58}{The entangling half of (L$_E$)}{subsection.13.2}{}}
+\newlabel{prop:stabtangent}{{13.4}{58}{(L$_E$) as the stabiliser and the tangent}{theorem.13.4}{}}
+\newlabel{rem:residualsplit}{{13.5}{59}{What this does to the residual}{theorem.13.5}{}}
+\newlabel{sec:verification}{{14}{60}{Machine verification}{section.14}{}}
+\newlabel{sec:conclusion}{{15}{65}{What is established, what is premised, what is open}{section.15}{}}
+\newlabel{app:schw}{{A}{66}{The Schwarzschild curvature and the surface gravity: the metric-picture cross-check}{appendix.A}{}}
+\newlabel{app:metric}{{A.1}{67}{The metric of the gauge field, and its static form}{subsection.A.1}{}}
+\newlabel{app:curvature}{{A.2}{67}{The curvature operator, by the Cartan structure equations}{subsection.A.2}{}}
+\newlabel{app:kappa}{{A.3}{68}{The surface gravity}{subsection.A.3}{}}
+\newlabel{fact:kappa}{{A.1}{68}{Imported: surface gravity as redshifted acceleration}{theorem.A.1}{}}
+\newlabel{prop:kappaval}{{A.2}{68}{$\kappa = 1/4M$, computed}{theorem.A.2}{}}
+\newlabel{app:imports}{{B}{68}{The imported localisation theorems, verbatim}{appendix.B}{}}
+\newlabel{fact:schwtame}{{B.1}{68}{Imported: the Schwarzschild degeneration is boundary-tame in $\shW $}{theorem.B.1}{}}
+\newlabel{fact:schwcompletion}{{B.2}{69}{Imported: one-sided completion at the singularity}{theorem.B.2}{}}
+\newlabel{fact:novalue}{{B.3}{69}{Imported: no equivariant value at the wall}{theorem.B.3}{}}
+\newlabel{fact:functionlinear}{{B.4}{70}{Imported: function-linearity of the tame constructions}{theorem.B.4}{}}
+\newlabel{app:threeroutes}{{C}{70}{The metric-level sheaf, and the hopping exclusion}{appendix.C}{}}
+\newlabel{app:mlsheaf}{{C.1}{71}{The metric-level sheaf: two assemblies of the pointwise levels}{subsection.C.1}{}}
+\newlabel{def:mlpresheaf}{{C.1}{71}{The two fibres, and the two assemblies}{theorem.C.1}{}}
+\newlabel{prop:mlsheaf}{{C.2}{71}{The sheaf assembly is a sheaf}{theorem.C.2}{}}
+\newlabel{thm:mlmeet}{{C.3}{71}{On a finite truncation, meet of the big fibres equals join of the small fibres equals $\operatorname {range}(E_F)$}{theorem.C.3}{}}
+\newlabel{thm:mljoin}{{C.4}{72}{The net assembly is a net, and it is everything}{theorem.C.4}{}}
+\newlabel{rem:mlresidue}{{C.5}{72}{What the antecedent is, stated plainly}{theorem.C.5}{}}
+\newlabel{app:hopping}{{C.2}{72}{The hopping exclusion}{subsection.C.2}{}}
+\newlabel{lem:supportT5}{{C.6}{72}{Function-linear endomorphisms are bundle maps}{theorem.C.6}{}}
+\newlabel{prop:quantiseT5}{{C.7}{73}{Bundle maps quantise without hopping}{theorem.C.7}{}}
+\newlabel{thm:hopclass}{{C.8}{73}{The class-relative no-go: no supplied generator hops}{theorem.C.8}{}}
+\newlabel{rem:hopresidual}{{C.9}{73}{The declared residual, and its size}{theorem.C.9}{}}

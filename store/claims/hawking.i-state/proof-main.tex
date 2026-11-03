@@ -1,0 +1,12 @@
+(1) On a window $F$, the quasi-free state with diagonal symbol is the product state of Fact \claimref{hawking.imported-quasi-free-states-car-algebra} with $n_j = (1 + e^{\beta\omega_j})^{-1}$, which is exactly the Gibbs density matrix of $H_F$: $e^{-\beta H_F} = \bigotimes_j \mathrm{diag}(1, e^{-\beta\omega_j})$, normalised; the script builds the two sides independently and confirms the identity in exact arithmetic. Lemma \claimref{hawking.gibbs-states-are-kms-conversely-finite} gives the KMS identity on the window, exactly; the script verifies it on a three-mode window at rational Boltzmann factors, on a spanning set of pairs. The windows are nested with dense union and the dynamics preserves each, so Fact \claimref{hawking.imported-kms-passes-inductive-limits} passes the KMS property to $\mathfrak{A}$.
+(2) Apply the KMS identity to the pair $x = a^\dagger(f)$, $y = a^\dagger(g)$, with $f, g$ supported in windows (so that $\alpha_{i\beta}(a^\dagger(f)) = a^\dagger(e^{-\beta h}f)$ is again a generator):
+\[
+P(f, g) \;=\; \omega\bigl(a^\dagger(f)\,a^\dagger(g)\bigr) \;=\; \omega\bigl(a^\dagger(g)\,a^\dagger(e^{-\beta h}f)\bigr) \;=\; P(g,\, e^{-\beta h}f).
+\]
+Antisymmetry of creation operators gives $P(f, g) = -P(g, f)$, so $P(g, (1 + e^{-\beta h})f) = 0$ for all $f, g$ in the dense span of the windows; $1 + e^{-\beta h}$ is bounded with bounded inverse and preserves that span, so $P = 0$.
+(3) Apply the KMS identity to the pair $x = a^\dagger(f)$, $y = a(g)$:
+\[
+\omega\bigl(a^\dagger(f)\,a(g)\bigr) \;=\; \omega\bigl(a(g)\,a^\dagger(e^{-\beta h}f)\bigr)
+\;=\; \ip{g}{e^{-\beta h}f} - \omega\bigl(a^\dagger(e^{-\beta h}f)\,a(g)\bigr),
+\]
+using the CAR $\{a(g), a^\dagger(f')\} = \ip{g}{f'}$. In symbols: $\ip{g}{Af} = \ip{g}{e^{-\beta h}f} - \ip{g}{Ae^{-\beta h}f}$ for all $f, g$ supported in windows, i.e.\ $A(1 + e^{-\beta h}) = e^{-\beta h}$ on the dense span, i.e.\ $A = e^{-\beta h}(1+e^{-\beta h})^{-1} = (1 + e^{\beta h})^{-1} = A_I$ (all four operators bounded, $h \ge 0$ here). By (2) and Fact \claimref{hawking.imported-quasi-free-states-car-algebra}, the state is determined by its two-point data, which are forced, so $\omega = \omega_I$. The mode-diagonal scalar identity $n = e^{-\beta\omega}(1-n)$, equivalently the detailed balance $n/(1-n) = e^{-\beta\omega}$, is checked by the script as an exact identity of rational functions.

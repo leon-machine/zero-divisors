@@ -1,0 +1,23 @@
+functions:
+  check_central_rotation_contains_time_translation:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Z^2 = -1, Z = P_{e0} + e0 n0, nilpotency and commutation of the P_a are exact; the dilation identity rho^-2 D Z D~ = P_{e0} + rho^-4 e0 n0 is checked at rho = 2, 3/2, 10 and rho = 2, 4, 8 (tabulated coefficients) rather than as an identity in rho; commutation of the P_a at two sample vectors
+  check_boost_orbit_reaches_null_translations:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: The boost identity 2 rho^-2 B P B~ = P_l + rho^-4 P_{e0-e1} at rho = 2, 3; rotations carrying P_l to P_{e0+n} for three rational unit n; two sample forward timelike vectors written as positive combinations of two future null vectors, not every vector of the closed forward cone
+  check_controls_spacelike_past_and_wedge_reflection:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'Controls only: Ad(e1e2) sends P_{e1} to -P_{e1}, the -Z orbit tends to -P_{e0} (rho = 2, 4), the translations fix n_inf and the dilation scales it; the closedness, convexity and invariance of C_pi, the implication Z in C_pi gives P_a in C_pi, the vanishing of spacelike d pi(P_a), and all of (iii) (vacuum ground state, local horizons, curved horizons) are representation-theoretic and not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Cl(2,4) algebra at sample dilation and boost parameters supports the orbit identities of (i) and the sign controls; the cone statements (ii) and (iii) are not computed.
+untouched_premises:
+  std-algebra.bivector-exponential: "standard algebra cited in the proof; the check computes the statement directly"

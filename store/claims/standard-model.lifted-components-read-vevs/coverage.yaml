@@ -1,0 +1,26 @@
+functions:
+  check_reading_through_the_conjugate:
+    kind: sampled
+    clauses:
+    - '"the lift gives m_nu = m_u = m_e = m_d = 1; the reciprocal''s lift all four Lambda/3; together 1 + Lambda/3, m_u/m_d = 1 exactly"'
+    omits: Lambda in {1/10, 3, -6/5, 0} only (the reciprocal needs Lambda != 0); magnitudes are compared through their squares, so signs are not tested
+  check_reading_through_c_itself:
+    kind: sampled
+    clauses:
+    - '"read through c itself the lift gives m_e = m_d = 1 and m_nu = m_u = Lambda/3, the reciprocal''s lift the reverse"'
+    omits: Lambda in {1/10, 3, -6/5}; that this is not the series' reading (rung-field theorem (5)) is not tested
+  check_the_unit_is_the_lifts:
+    kind: sampled
+    clauses:
+    - '"the same magnitudes arise from the lift of any vector of the ground completion"'
+    omits: Five sample ground vectors; the sentence that the frozen point contributes only the O(Lambda) admixture and fixes no overall scale is a reading
+  check_ground_frozen_point_gives_no_dirac_mass:
+    kind: sampled
+    clauses:
+    - '"the ground frozen point, a vector of V, gives no Dirac mass: its couplings are the triplet ones"'
+    omits: Three sample vectors of the pair-mode space, whose couplings together cover all five triplet pairs; the frozen point itself is not constructed in this function
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The second-rung components are computed from the lift, not typed in; every clause is checked at sample Lambda or sample ground vectors.

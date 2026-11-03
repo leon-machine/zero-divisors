@@ -1,0 +1,886 @@
+% T14a of the Transport Papers series (companion to T14).
+% now T14a_odd_extensions.tex and verify_T14a.py. Printed version 1.0 per
+% rule 23 (the v1.0-v1.9 development history below is the working record);
+% \date line, the Position section's opening sentence (rule 18) and the
+% script's name in Section 13 and the bibliography changed. No other change.
+% v1.9 (2026-09-18, derivation round after the three-reviewer re-review
+% T14_odd_extensions_review_v3.md of v1.8; all items applied. No mathematical
+% statement changed: wording, locators and scope only.)
+%   F1: cor:blind named no pairing for "non-isomorphic odd extensions, whose
+%       centres differ". Under signature reversal it is thm:rung(iv) and
+%       true; under the like-for-like pairing prop:clock supplies it is
+%       false, Cl(2,3) = Cl(4,1) = Mat(4,C) with centre C being printed in
+%       thm:rung(i) four lines above. Now "odd extensions that signature
+%       reversal does not identify (thm:rung(iv))".
+%   F2: "the first construction above the shadow" now reads "by dimension",
+%       in cor:blind and the abstract. v1.8 conceded that the rungs also keep
+%       the towers apart, so the superlative needed its ordering: the odd
+%       extensions are five-dimensional, the rungs six, nothing between.
+%   F3: abstract. "one theorem" -> "one new result" (the note has six
+%       theorem environments); "its sign selects no tower" -> "does not
+%       select the visible tower" (prop:twotowers' own scope); "supplies no
+%       coupling between towers" -> "does not supply the coupling the dark
+%       towers need" (cor:nocoupling's own sentence). Trimmed by twelve words
+%       to stay at 248: "follows the answer through three papers" cut, the
+%       closing sentence already saying it, and "in the sheaf paper's sense"
+%       folded into the conservation-theorem attribution.
+%   F4: H^2 = <I,I> = Lambda/3 is T12 Fact 2.5 (fact:dictionary), which
+%       states it verbatim, with T12 Obs 7.1 for N = M_P/H. v1.8's Prop 7.6
+%       (prop:trichotomy) uses N and H and states neither identity, and this
+%       note's fact:frozen carries <I,I> = Lambda/3 without H.
+%   F5: thm:split's proof, Sec 13 Part A and A5's own label no longer count
+%       the idempotent identities among what A5 checks over every odd
+%       signature. A5 checks (iii), the sign pairing, the dimensions and the
+%       spanning; Part B checks the idempotents on the four extensions.
+%   F6: Sec 11's closing sentence: Secs 2-5 import fact:reps AND fact:towers
+%       for their algebra, and fact:copy is read in rem:physics and
+%       rem:nomech as well as in thm:rung(iii).
+%   F7: rem:t4earns: tameness itself is generic (thm:lambdawall(iii)); what
+%       is specific to Lambda is which objects play the tame structure's
+%       roles.
+%   F8: the centre proof's diagonality clause. The commutator is monomial
+%       with zero diagonal; the conjugation x -> e_i x e_i^{-1} is the
+%       diagonal map with the same kernel, and is what the argument needs.
+%   Also: rem:holography says the boundary lies in a distinct TOWER
+%       (fact:towers) and records as a separate question whether a conformal
+%       class with no chosen scale is a superselected SECTOR (fact:copy
+%       speaks of the one metric); Sec 11 gains (D5) for that identification,
+%       the sheaf paper's hypotheses becoming (D6); Sec 13's not-checked list
+%       gains thm:split's algebra-map properties and no longer says the note
+%       uses only that the shadow types differ; the script's Part I comment
+%       matches the body's "excludes by hypothesis".
+%   NOT applied, left to Leon: rem:holography's framing. cor:nocoupling holds
+%       that isomorphisms between towers which do not respect the soldering
+%       carry nothing; applied to the holographic dictionary that gives the
+%       second branch, that one framework is wrong about this pair, rather
+%       than a difference of subject. The remark records both branches and
+%       argues neither. Deciding it is a content change, not a repair.
+%   Left open (unchanged): thm:free(iii)'s transitivity, unscripted and
+%       argued in the text, recorded in Sec 13; thm:free(iii)'s
+%       extension-by-the-identity clause; T14 Thm 3.5's part label; T12 Fact
+%       2.11's locator; the "Premise P1/P2" names, for which the aux carries
+%       no P-numbering; the sibling note's off-by-one T14 locators.
+%   verify_T14_ext.py 86/86. Abstract 248 words.
+%   Compile: pdflatex x3, 23 pages, 0 errors, 0 undefined references,
+%   0 bad boxes; 0 em dashes.
+% v1.8 (2026-09-18, derivation round after the re-review
+% T14_odd_extensions_review_v2.md of v1.7; all items applied).
+%   N1: cor:blind's universal ("every construction above the shadow
+%       identifies the towers") was FALSE: the rungs Cl(2,4) and Cl(4,2)
+%       are of the two towers' types. Now: every object the copy theorem
+%       is built from identifies them (thm:rung(iii)); the rungs do not.
+%   N2: rem:holography: the v1.7 dissolution rested on "a conformal class
+%       has no signature", which is false (signature is conformally
+%       invariant; the note's own prop:twotowers proof says so). Restored
+%       as an open question: the AdS_4 boundary has residue 7 and is a tower
+%       by the series' criterion; the superselection is about soldered
+%       operators and a holographic dictionary is not one; whether that is
+%       a difference of subject or a contradiction is not argued.
+%   N3: Section 11's closing sentence corrected (Secs 2-5 import fact:reps
+%       for the algebra; their frozen-point identifications rest on
+%       fact:conformal, fact:frozen; thm:rung(iii) on fact:copy).
+%   N4: H^2 = <I,I> now cited as T10 Fact 2.1 in the form T12 Prop 7.6
+%       uses (was "T12 Sec 7"); statement (ii) no longer says "the
+%       dark-energy paper's".
+%   N5: thm:free retitled "constrains the frozen point only through its
+%       norm"; (iii) reworded to the invariant statement.
+%   N6: rem:t4earns says the Lambda-specific thing (the wall's radical,
+%       dying direction and residue are I_0, the Stelle-West line and the
+%       Stelle-West norm) and records the two-sided completion as generic.
+%   N7: Section 11 opener: no observation refutes the identifications; the
+%       one observational input is the sign of Lambda; Omega_Lambda
+%       parenthetical moved from thm:lambdawall(ii) to rem:physics with
+%       the Planck citation.
+%   N8: A6 described in Section 13 Part A.
+%   N9: centre proof given its diagonality clause; thm:split proof's
+%       script sentence narrowed to what A5 computes.
+%   M1: "the element -1" (not a boost) exchanges branches. M2: I2 and I6 now
+%       run the same four gauges as I1. M3: "six nonzero values". M4: I9
+%       moved after I8. M5: cor:twowalls "because" attached correctly.
+%   M6: a(0)^2 = 1. M9: D3 attributes the conclusion to rem:onesees.
+%   M10: T3 Prop 4.1, Thm 4.2 and T14 Lem 6.1 locators added.
+%   M11: abstract rewritten to cover Sections 7-11 and to say what the note
+%       is (a dictionary between three papers, one theorem, no prediction);
+%       "not a coupling" softened to "supplies no coupling"; the mirror
+%       sentence no longer leads with the counterfactual branch; subtitle
+%       changed from "where the mirror sits" to "what the cosmological
+%       constant is to the ascent".
+%   M7: abstract word count is by the convention "each inline math run one
+%       token"; the header's figure uses it.
+%   M8/M12: historical header blocks below keep their original statement
+%       numbers and labels (rem:twobits, rem:stance moved to 8.5, 8.6 at
+%       v1.6; rem:survives replaced by rem:copies at v1.7; R1's content is
+%       Section 11's opener and R6's is D5); the CURRENT numbering is the
+%       compiled one, not any older block's.
+%   Left open (from the review): thm:free(iii) transitivity unscripted
+%       (argued in text, recorded in Sec 13); T14 Thm 3.5's part label;
+%       the sibling note's off-by-one T14 locators.
+%   verify_T14_ext.py 86/86. Abstract 248 words.
+%   Compile: pdflatex x3, 22 pages, 0 errors, 0 undefined references,
+%   0 bad boxes; 0 em dashes.
+% v1.7 (2026-09-18, derivation round applied after the three-reviewer pass
+% T14_odd_extensions_review_v1.md; Leon: apply all, accept S3 and S9).
+%   B1: the three Section 13 paragraphs duplicated inside the proof of
+%       thm:pair (an anchor sentence shared by both places) cut.
+%   B2: prop:clock: Cl(4,1) is the mirror's TIME extension and Cl(3,2) its
+%       SPACE extension; wording corrected, grouping unchanged.
+%   B3: cor:blind and abstract: the shadows are already non-isomorphic
+%       (fact:reps); the claim is now "the first construction ABOVE the
+%       shadow that keeps the towers apart, through an element no derived
+%       quantity uses"; Position adjusted.
+%   S1: thm:lambdawall(ii) residue stated covariantly as -3 w_0 (x) w_0,
+%       = -3 I_0 (x) I_0 only in the gauge a(0) = 1; prop:tamewall(iii)
+%       narrowed to the scalar invariants; the slope -1/3 tied to the
+%       parametrisation.
+%   S2: the rank +1 completion on both sides shown generic (general
+%       hyperplane model in thm:lambdawall(iii), script I9); cor:twowalls
+%       recast as two CLASSES OF COMPLETION, not two kinds of wall;
+%       rem:t4earns claims one observation (the excluded-case placement),
+%       the other two recorded as dictionary entries; conservation on the
+%       Lambda line noted as reducing to the constancy clause.
+%   S3: cor:uncaused retitled "undetermined within the series"; sign and
+%       magnitude one modulus; Sec 7 and Sec 9 openings corrected;
+%       prop:dilation title "the ratio b/a is gauge".
+%   S4: prop:belongs(iii): the coincidence IS induced by an isometry of
+%       quadratic spaces; what fails is the soldering; false analogy to
+%       Cl(1,3) = Cl(0,4) removed.
+%   S5: T1 locators: Sec 8 (transport), Sec 2.2 (null pair), Sec 4 (type N).
+%   S6: fact:conformal -> T9 Fact 2.1, Thm 3.4; fact:null T4 locators
+%       (Thm 3.1, Prop 3.4, Thm 4.4); T10 Prop 4.8 gloss REMOVED (its
+%       "residue" is the Kasner pole residue, not the mod-8 residue).
+%   S7: E7 tests uniqueness; E8 tests the dead end; H6/G5 premises named in
+%       the "not checked" paragraph.
+%   S8: rem:holography: the tension dissolved by the note's own results (a
+%       conformal boundary has no soldered metric, hence no residue);
+%       flourishes removed; embedding-space convention stated (M21).
+%   S9: Section 11 retitled "What this note depends on", D1-D5; R1 and R6
+%       dropped; "no observation can refute it" stated.
+%   S10: prop:twotowers and rem:onesees: the one witnessing operator couples
+%       to the unsoldered, pure-gauge direction; the note takes the reading
+%       on which the mirror sector is observationally identical.
+%   S11: observed Lambda > 0 stated (Planck 2018 cited) in abstract and
+%       rem:physics: the mirror-on-the-momenta is the other sign.
+%   S12/S13: thm:lambdawall(i) proportional (factor sqrt 3); (ii) with
+%       |Lambda|, H the asymptotic de Sitter rate.
+%   S14: thm:rung(iv) centres stated pairwise correctly.
+%   S15: rem:survives replaced by the timeless rem:copies; prop:clock's
+%       physical last sentence replaced; prop:momenta pointer updated.
+%   S16: rule-22 wording ("doors", "earns", "hostage", "price", "skeleton")
+%       removed.
+%   M1-M22 as applicable: rem:nullpair scoped; thm:pair proof in (c,d) with
+%       I_0 defined; thm:mirror(iii) spanning given its own blade argument;
+%       64-dimensional generation qualified to <I,I> != 0; prop:path formula;
+%       thm:free proof's swap/branch statement; cor:wall sign wording;
+%       rem:twobits parity wording; script index convention stated; Part B
+%       sign check tightened; A5-A6 generality checks; G3 identity; H9 for
+%       Cl(2,3) too; I1 and I6 over four gauges; G5/G6 labels; A1 comment.
+%   Reviewer item 5: the tractor map Phi named in prop:twotowers(i).
+%   NOT applied: the sibling note's off-by-one T14 locators (separate fix).
+%   verify_T14_ext.py 86/86. Abstract 249 words.
+%   Compile: pdflatex x3, 22 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; 0 em dashes.
+% v1.6 (2026-09-18, same derivation session, Fable 5; Leon: "please add to
+% the note" the dictionary with the ascent's null pair). rem:nullpair (8.4,
+% after cor:uncaused): v = I_0, v* = phi/2 with v v* + v* v = 1 (T1's CAR
+% normalisation); at Lambda = 0 the frozen point IS the null generator v and
+% the completion adjoins v*; for Lambda != 0, I = a v + b v* with ab =
+% Lambda/3 and V is proportional to a v - b v*: sum and difference of one
+% pair of null components; sign of Lambda = relative sign of a, b; dilation
+% (a,b) -> (ta, b/t); T3's annihilator/creator reading stated verbatim, no
+% claim attached. verify_T14_ext.py 83/83 (G7, G8 added to Part G).
+%   Compile: pdflatex x3, 21 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.5 (2026-09-18, same derivation session, Fable 5; Leon: "anything else
+% you can work on?"; three in-note items). (a) New Section 11, refutation
+% conditions R1-R6 (house standard; the note had none). (b) rem:holography
+% (4.3): the kinematic coincidence with AdS/CFT recorded, with the tension
+% between holography's one-physics reading and T14's two-solderings reading
+% stated as open, not argued. (c) prop:twotowers proof (i): the claim that
+% reversing the metric negates the tractor norm of I is now argued (tractor
+% signature (4,2) for [-g]; rho -> -rho under g -> -g via the inverse
+% metric, Laplacian and scalar curvature), previously asserted bare.
+%   No new checks (81/81 unchanged). No change to the abstract.
+%   Compile: pdflatex x3, 21 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.4 (2026-09-18, same derivation session, Fable 5; Leon: "please do this",
+% item 1 of the exploration list: the family over the Lambda line as a T4
+% degeneration; suite reachable again, T4 read from the suite). New
+% Section 10:
+%   fact:t4 (10.1): imported, T4 Hyp 2.1 (T1-T3), Lem 2.2, Rem 2.3, Prop 6.1
+%       (exceptional algebra), Thm 6.2 (residue), Thm 5.1 (conservation,
+%       absolute), all locators from T04's aux.
+%   prop:tamewall (10.2): in a smooth dilation gauge the family I_L^perp is a
+%       tame corank-one wall at L = 0: Gram diag(1,-1,-1,-1,-L/3), radical
+%       I_0, slope -1/3; sides (2,3) and (1,4); the unit gauge a = b is not
+%       smooth at the wall.
+%   thm:lambdawall (10.3): T4's blow-up rescaling = T10's unit Stelle-West
+%       vector; exceptional algebra Cl(2,3) from L < 0, Cl(1,4) from L > 0,
+%       block-diagonal exactly; residue = Stelle-West norm, L<V,V> = -3,
+%       dLambda = -3 I_0 (x) I_0, weightless normalisation by H = sqrt(L/3);
+%       the rung completes the wall on BOTH sides at rank +1, allowed
+%       because K = <I_L,I_L> = L/3 switches sign: T4 Thm 5.1's own named
+%       exception.
+%   cor:twowalls (10.4): two kinds of wall in the series (soldered base:
+%       one-sided, conserved, rank +2; frozen-point parameter: two-sided,
+%       removed, rank +1 with type change).
+%   rem:t4earns (10.5): nothing fixes Lambda; what changes is the status of
+%       "wall".
+%   Locators corrected from the aux files (device link restored): T10
+%       prop:goldstone is Prop 5.4 (v1.3 guessed 5.3); T2 thm:main is
+%       Thm 2.3 (was cited as 3.1); T1 minimality Thm 4.13, Rule 2
+%       minimality Thm 5.7, forgotten bit Rem 5.8 (were descriptive).
+%   verify_T14_ext.py 81/81 (Part I, 8 checks).
+%   Compile: pdflatex x3, 19 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.3 (2026-09-17, same derivation session, Fable 5; Leon: "Do 3 then 2"
+% from the list of further explorations). New Section 9, two doors closed:
+%   fact:goldstone (9.1): imported, T10 prop:goldstone ((I,V) sector pure
+%       gauge). LOCATOR GUESSED as Prop 5.3 (third numbered item of T10 Sec 5 by grep): the T10 aux was not reachable
+%       (device link down); the mechanical pass must check the number
+%       against T10's aux (label prop:goldstone) and correct it.
+%   prop:dilation (9.2): B = I^phi = -e+e- is the dilation generator; the
+%       boosts of thm:free are dilations; (a,b) are gauge, only 2ab physical,
+%       and T10 says the gauge is not fixed dynamically: the magnitude of
+%       Lambda is NOT reachable from the transport's frame. Door 1 closed.
+%   prop:twotowers (9.3): in one dS universe this world's intermediate is
+%       doubled Cl(1,4) and the mirror's complexified Cl(4,1) (AdS: reversed);
+%       the even subalgebras have the same presentation, so spin groups,
+%       spinors and MM bivector algebras coincide: the sign of Lambda does
+%       NOT select the visible tower. Door 2 closed.
+%   rem:onesees (9.4): the bare e_5 (gamma_5 vs i gamma_5) is the one
+%       operator that would see the difference; recorded, not chased.
+%   verify_T14_ext.py 73/73 (Part H, 9 checks); Part B label reworded (the
+%       shadow meets the even subalgebra in its even part; the old label
+%       said "same span", which the check never tested).
+%   Compile: pdflatex x3, 17 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.2 (2026-09-17, same derivation session, Fable 5; Leon: "ok do this",
+% i.e. run T1/T2's transport on Cl(1,3;1) and see whether the sign of
+% Lambda comes out free). It comes out free. New Section 8:
+%   fact:completion (8.1): imported, T2 Thm 3.1 (minimal completion, unique
+%       up to isometry fixing the base) and T1's Rule 1 minimality and
+%       Rule 2 forgotten-bit remark.
+%   thm:free (8.2): the completion of Cl(1,3;1) is the rung with a CANONICAL
+%       null partner phi of I (the isometry fixing the base is unique);
+%       vectors orthogonal to the Lorentz frame are a I + b phi with norm
+%       2ab; the isometries fixing the frame are O(1,1), orbits = level sets
+%       of the norm; so the transport fixes the frozen point up to its norm
+%       Lambda/3 and no further; the two signs are inequivalent under every
+%       symmetry and non-isomorphic one level down.
+%   cor:uncaused (8.3): the sign of Lambda has P2's status (uncaused
+%       selection), like which oriented tower is visible.
+%   rem:twobits (8.4): unlike Rule 2's forgotten bit, this one has an
+%       algebraic witness (the intermediate algebra).
+%   rem:stance (8.5): the transport stance does NOT predict Lambda != 0;
+%       consistent with T10 prop:parameter.
+%   verify_T14_ext.py 64/64 (Part G added, 6 checks). \date to Version 1.2.
+%   Compile: pdflatex x3, 15 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.1 (2026-09-17, same derivation session, Fable 5; Leon: "please try to
+% resolve" the two open problems of v1.0). Both resolved; the open-problem
+% section is replaced by Sections 6 and 7:
+%   fact:null (6.1): imported, T10 parabolic case at Lambda = 0 and the
+%       identity <I,I><V,V> = -1; T4 degenerate algebras; T1 nilpotent type.
+%   thm:pair (6.2): I and V are the ascent's hyperbolic pair, signed by
+%       Lambda; Cl(I^perp) is the intermediate of THIS world's ascent,
+%       Cl(1,3) < Cl(I^perp) < Cl(2,4): Cl(1,4) for Lambda > 0, Cl(2,3) for
+%       Lambda < 0, degenerate Cl(1,3;1) with I nilpotent at Lambda = 0;
+%       the Lorentz frame stays (1,3) throughout.
+%   cor:wall (6.3): Lambda deforms the wall (nilpotent generator) into a
+%       signed generator; the two odd extensions are the two signs.
+%   rem:t10 (6.4): T10's parabolic-to-reductive rotation at Clifford level;
+%       T10 Prop 4.8 = thm:pair(iv).
+%   prop:belongs (7.1): by T14 Thm 3.5's DEFINITION of the residue (signature
+%       of the soldered tangent image), Cl(I^perp) has tower charge 6: V is
+%       not tangent (nabla V = e). Its isomorphism with Cl(1,4) is of the
+%       Cl(1,3) = Cl(0,4) kind: no vector to vector.
+%   cor:readings (7.2): open problem 1 resolved: the fifth direction of the
+%       frozen point is V, normal to the hyperboloid, norm sqrt(3/Lambda),
+%       this tower's; the 5d dark towers need a fifth TANGENT direction of
+%       size L, which the frozen point does not supply (L still unfixed).
+%   cor:nocoupling (7.3): open problem 2 resolved NEGATIVELY: Lambda is a
+%       datum of this tower's ascent; the algebraic coincidence carries
+%       nothing across the superselection (T14's own exactness argument).
+%   rem:survives (7.4): Sections 2-4 stand; prop:momenta and prop:clock
+%       re-read as statements about algebras; cor:blind survives.
+%   Abstract rewritten (249 words). \date bumped to Version 1.1.
+%   verify_T14_ext.py 58/58 (Part F added: frozen point on rational
+%       instances <I,I> = 3, -3, 0; signatures (1,4), (2,3), (1,3;1) by
+%       exact congruence; nilpotent ideal of Cl(1,3;1); Lorentz frame (1,3)).
+%   Compile: pdflatex x3, 13 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 249 words; 0 em dashes.
+% v1.0 (2026-09-17, derivation session, Fable 5; Leon: from an "innocent
+% question", what adding ONE dimension to Cl(1,3) does, then "chase this
+% further", then "do this": write it up as a companion note with a verify
+% script). Result: a single added generator is never a transport (no null
+% pair); it is a doubling (space sign) or a complexification (time sign) of
+% the four-dimensional shadow, decided by the parity of q at n = 5. The
+% anti-de Sitter extension Cl(2,3) of this world contains the mirror Cl(3,1)
+% as its even subalgebra, generated by the MacDowell-Mansouri translation
+% bivectors; the de Sitter extension Cl(1,4) contains no copy of the mirror.
+% The rung's even subalgebra Cl^0(2,4) is Cl(2,3), so the twistor algebra is
+% the anti-de Sitter Clifford algebra, and T14's copy theorem (Thm 4.3) runs
+% entirely inside the complexification that forgets the real form: the odd
+% extension is the first construction that separates the two oriented towers
+% at algebra level (Cl(2,3) and Cl(3,2) have different centres). The four
+% extensions are the four odd towers: de Sitter reaches the five-dimensional
+% shadows (residues 5, 3), anti-de Sitter the three-dimensional ambients
+% (residues 7, 1). T10's frozen point (Fact 2.1, Thm 3.1) realises the
+% extension as the bundle I^perp. What is NOT decided: the soldering (fifth
+% direction as normal versus as spacetime), and whether Lambda is the
+% coupling rule T14 lacks; both flagged as open. Contents:
+%   lem:omega (2.2): omega central, omega^2 = (-1)^(n(n-1)/2 + q).
+%   thm:split (2.3): odd algebra = Cl^0 + Cl^0 or Cl^0 (x) C; Cl^0(p,q+1) =
+%       Cl(p,q), Cl^0(p+1,q) = Cl(q,p).
+%   cor:four (2.4): the four extensions of the oriented pair, with residues.
+%   thm:mirror (3.1): in Cl(2,3) the e_mu generate Cl(1,3) and the e_mu e_5
+%       generate Cl(3,1), meeting in Cl^0(1,3); in Cl(1,4) both generate
+%       Cl(1,3) and Cl(3,1) does not embed.
+%   prop:momenta (3.2): the translation bivectors of I^perp generate this
+%       world's shadow for Lambda > 0 and the mirror's for Lambda < 0.
+%   thm:rung (4.1): Cl^0(2,4) = Cl(2,3) = M(4,C); the copy theorem's inputs
+%       live in the complexification; Cl(2,3) and Cl(3,2) not isomorphic.
+%   prop:clock (5.1): the four extensions are the four odd towers.
+%   prop:path (5.2): every sign-flip path from (1,3) to (3,1) at dimension
+%       four passes through the two-time fork (2,2).
+%   verify_T14_ext.py 48/48 (five parts A-E; run in the cloud workspace
+%       against the suite's GA.py, per Leon's standing instruction).
+%   Compile: pdflatex x3, 10 pages, 0 errors, 0 undefined references, 0 bad
+%   boxes; abstract 246 words; 0 em dashes.
+%   Files new to the suite: T14_odd_extensions_note.tex/.pdf,
+%   verify_T14_ext.py. Not done here (mechanical pass): status table,
+%   tp_status.html, project sync, T17 open-problem entries.
+% House rules: no em dashes; abstract 150-250; standard disclaimer; Fact
+% (imported) discipline; verification imports GA.py; no citation to
+% unpublished notes (rule 17b): the companion note on odd dimension is
+% named in prose, not cited; what is needed from it is re-proved here.
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{observation}[theorem]{Observation}
+
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\Mat}{\mathrm{M}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\ip}[2]{\langle #1, #2\rangle}
+
+\title{\bfseries One Dimension at a Time:\\ The Odd Extensions of the Oriented Towers\\[4pt]
+  \large\itshape Companion note to T14: what a single added generator does, and what the cosmological constant is to the ascent}
+\author{Leon Butler\\ \normalsize\href{mailto:lbutler.math@gmail.com}{\texttt{lbutler.math@gmail.com}}\\ \normalsize ORCID: \href{https://orcid.org/0009-0006-4449-5617}{0009-0006-4449-5617}}
+\date{Version 1.0, September 2026 \textperiodcentered{} Transport Papers, T14a}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\normalsize
+The transport adds a null pair and climbs a tower without changing its residue. This note asks what a single added generator does to the oriented towers $\Cl(1,3)$ and $\Cl(3,1)$. A space-sign generator doubles the shadow, $\Cl(1,4) \cong \Cl(1,3) \oplus \Cl(1,3)$; a time-sign generator complexifies it, $\Cl(2,3) \cong \Cl(1,3) \otimes \C$, and there the mirror's algebra sits, on the anti-de Sitter translation bivectors. The first rung's even subalgebra is $\Cl(2,3)$, so the dark-matter paper's copy theorem runs inside the complexification that forgets the real form; the odd extension is the first construction above the shadow, by dimension, that keeps the towers apart, through an element no derived quantity uses. The dark-energy paper's frozen point realises the extension: its scale tractor and Stelle-West vector are the ascent's pair, signed by $\Lambda$, and the algebra of $I^{\perp}$ is the intermediate of this world's own ascent, $\Cl(1,4)$ for the observed $\Lambda > 0$, $\Cl(2,3)$ for $\Lambda < 0$, degenerate at $\Lambda = 0$. By the soldered residue that algebra is this tower's, so $\Lambda$ does not supply the coupling the dark towers need. Run on the degenerate case, the transport returns the rung and a canonical null frame and constrains the frozen point only through its norm: within the series $\Lambda$ is undetermined, its frame components are gauge, and its sign does not select the visible tower. The family over the $\Lambda$ line is a tame wall, completed on both sides in the case the sheaf paper's conservation theorem excludes. The note is a dictionary between three papers, with one new result and no prediction.
+\end{abstract}
+
+\medskip
+\noindent\textbf{MSC 2020.} Primary 15A66, 83F05; Secondary 83C05, 81R25.\\
+\textbf{Keywords.} Clifford algebras in odd dimension; de Sitter and anti-de Sitter algebras; mirror matter; MacDowell-Mansouri gravity; Clifford clock.
+
+\newpage
+\textbf{Authorship and disclosure. }The founding idea of the series is the author's: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The direction of investigation and the critical review of the results are likewise the author's. The mathematical development and the drafting of the text were carried out in extended collaboration with Claude Fable 5 (Anthropic), an AI system.
+
+\newpage
+\section{Setting, and what is imported}\label{sec:setting}
+
+Throughout, $\Cl(p,q)$ is the real Clifford algebra on $p$ generators squaring to $+1$ and $q$ squaring to $-1$, $n = p + q$, with orthonormal generators $e_{1}, \ldots, e_{n}$ and volume element $\omega = e_{1}e_{2}\cdots e_{n}$. The series' convention is time $= $ plus: this world is $\Cl(1,3)$, residue $p - q \equiv 6 \pmod 8$, and its mirror is $\Cl(3,1)$, residue $2$. Under the opposite convention every attribution below to a named member of a reversal pair passes to the other member, and the pair-level statements are unchanged; the dark-matter paper carries the same clause \cite[Thm.~3.4]{ButlerT14}. Nothing in this note depends on which member is called this world except the names.
+
+\begin{fact}[imported: the towers and the clock]\label{fact:towers}
+The $(1,1)$ ascent $\Cl(p,q) \to \Cl(p+1,q+1) \cong \Mat(2, \Cl(p,q))$ preserves $p - q$; the real Clifford algebras are periodic modulo eight; the eight residues label eight parallel towers. \emph{Provenance:} \cite[Thms.~3.2 and 3.6]{ButlerT3}; \cite[Fact~2.5]{ButlerT14}.
+\end{fact}
+
+\begin{fact}[imported: the representatives at the dimension nearest four, and the types]\label{fact:reps}
+At the dimension nearest four the residues are represented by the shadows $(1,3)$ at $r = 6$, $(3,1)$ at $r = 2$, $(2,2)$ at $r = 0$, $(0,4)$ and $(4,0)$ at $r = 4$, $(2,1)$ at $r = 1$, $(1,2)$ at $r = 7$, $(4,1)$ at $r = 3$ and $(1,4)$ at $r = 5$; the residues $0$ and $4$ are sterile and the other six are populated. The real spinor type is a function of the residue alone: $\Cl(1,3) \cong \Mat(2,\HH)$ (quaternionic, one module) and $\Cl(3,1) \cong \Mat(4,\R)$ (real, one module); in particular the two are not isomorphic as real algebras. \emph{Provenance:} \cite[Prop.~3.1, Thm.~3.4]{ButlerT14}.
+\end{fact}
+
+\begin{fact}[imported: the copy theorem, and the soldered residue]\label{fact:copy}
+The mirror tower is a copy of this one: every input to the Standard-Model chain (the conformal spin group $\mathrm{Spin}(2,4) \cong \mathrm{Spin}(4,2)$, the twistor module with its helicity form, the complexified isotropic structure, the two-twistor mass formula) is invariant under signature reversal, because over $\C$ the ambient carries no signature and $\Cl^{0}(2,4) \cong \Cl^{0}(4,2) \cong \Mat(4,\C)$. The residue is a soldered invariant, not an algebraic one, and the one metric superselects the tower charge. \emph{Provenance:} \cite[Thms.~3.5 and 4.3, Prop.~4.1]{ButlerT14}.
+\end{fact}
+
+\begin{fact}[imported: the conformal completion]\label{fact:conformal}
+A shadow of signature $(t,s)$ has conformal completion with ambient of signature $(t+1, s+1)$, one rung up its own tower; for this world the ambient is $(2,4)$ and its conformal spin group acts on the twistor space $\C^{4}$ through $\Cl^{0}(2,4)$. \emph{Provenance:} \cite[Fact~2.1, Thm.~3.4]{ButlerT9}; \cite[Fact~2.11]{ButlerT12}.
+\end{fact}
+
+\begin{fact}[imported: the frozen point]\label{fact:frozen}
+On the invertible region with $\Lambda \neq 0$ the parallel scale tractor $I$ has squared norm $\ip{I}{I} = \Lambda/3$ in the tractor metric of signature $(2,4)$; its orthogonal complement $I^{\perp}$ is a rank-five bundle carrying the induced form of signature $(1,4)$ for $\Lambda > 0$ and $(2,3)$ for $\Lambda < 0$, with stabiliser $SO(1,4)$ or $SO(2,3)$; the Stelle-West vector $V$ is a section of $I^{\perp}$ of squared norm $-3/\Lambda$, its stabiliser is the Lorentz group of $\{I, V\}^{\perp}$, of signature $(1,3)$, and its covariant derivative is the soldering form, so that in the gauge where $V$ is constant the reduced connection splits as a Lorentz connection plus the translation part $e^{\mu}\wedge V/\ell$. \emph{Provenance:} \cite[Fact~2.1, Thm.~3.1]{ButlerT10}; the construction is MacDowell and Mansouri's \cite{MacDowellMansouri1977} in Stelle and West's form \cite{StelleWest1980}.
+\end{fact}
+
+\section{What a single generator does}\label{sec:single}
+
+\begin{definition}[single extension]\label{def:single}
+The \emph{time extension} of $\Cl(p,q)$ is $\Cl(p+1, q)$ and its \emph{space extension} is $\Cl(p, q+1)$, each with the new generator written $e_{n+1}$ and the old generators, and the subalgebra they generate, called the \emph{shadow}. A single extension is not a transport in the series' sense: the transport adjoins a null pair $e_{+} + e_{-}$ because a zero divisor of vector type is resolved by a nilpotent, and a single generator squaring to $\pm 1$ supplies none \cite[\S 8]{ButlerT1}.
+\end{definition}
+
+\begin{lemma}[the volume element in odd dimension]\label{lem:omega}
+For $n$ odd, $\omega$ is central in $\Cl(p,q)$ and $\omega^{2} = (-1)^{n(n-1)/2 + q}$. For $n = 5$ this is $\omega^{2} = (-1)^{q}$.
+\end{lemma}
+
+\begin{proof}
+$e_{i}\omega = (-1)^{n-1}\omega e_{i}$ since $e_{i}$ anticommutes with the $n - 1$ other factors and commutes with itself; for $n$ odd the sign is $+1$, and the generators generate. Reversing the order of the $n$ factors costs $(-1)^{n(n-1)/2}$ and the contractions $e_{i}^{2}$ cost $(-1)^{q}$. The script verifies centrality and the sign on every diagonal signature of dimension one, three, five and seven.
+\end{proof}
+
+\begin{theorem}[doubling or complexification]\label{thm:split}
+Let $n$ be odd and let $\Cl^{0}$ be the even subalgebra of $\Cl(p,q)$.
+\begin{enumerate}
+\item[(i)] If $\omega^{2} = +1$, then $\Cl(p,q) \cong \Cl^{0} \oplus \Cl^{0}$, the two summands the ideals of the complementary central idempotents $(1 \pm \omega)/2$, and on each summand $e_{n}$ acts as $\pm\,\omega' $ where $\omega' = e_{1}\cdots e_{n-1}$ is the volume element of the shadow.
+\item[(ii)] If $\omega^{2} = -1$, then $\Cl(p,q) \cong \Cl^{0} \otimes_{\R} \C$ with $\omega$ as the imaginary unit.
+\item[(iii)] $\Cl^{0}(p, q+1) \cong \Cl(p,q)$ and $\Cl^{0}(p+1, q) \cong \Cl(q,p)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) With $\omega$ central and $\omega^{2} = 1$ the elements $P_{\pm} = (1 \pm \omega)/2$ are central, idempotent, orthogonal and sum to one, so the algebra is the direct sum of the ideals $P_{\pm}\Cl$. The map $x \mapsto P_{\pm}x$ restricted to $\Cl^{0}$ is injective, since $\omega$ is odd and $x - \omega x$ can vanish for even $x$ only if $x = 0$, and surjective onto $P_{\pm}\Cl$ because $P_{\pm}y = P_{\pm}(y_{0} \pm \omega y_{1})$ for $y = y_{0} + y_{1}$ split by parity, with $\omega y_{1}$ even; and $P_{\pm}$ is central, so the map is an algebra isomorphism. Finally $\omega = \omega' e_{n}$ with $e_{n}$ commuting with $\omega'$ (it anticommutes with each of the $n - 1$ factors, an even number), so $\omega^{2} = \omega'^{2}e_{n}^{2}$ and $\omega^{2} = 1$ forces $\omega'^{2} = e_{n}^{2} =: s \in \{\pm 1\}$; then $P_{\pm}\omega' = (\omega' \pm s\,e_{n})/2$ and $P_{\pm}e_{n} = (e_{n} \pm s\,\omega')/2 = \pm s\,P_{\pm}\omega'$, so $e_{n}$ acts on the two summands as $+s\,\omega'$ and $-s\,\omega'$. (ii) With $\omega^{2} = -1$ central, $\Cl$ is a $\C$-algebra through $\omega$, and the $\R$-linear map $\Cl^{0} \otimes \C \to \Cl$, $x \otimes (a + bi) \mapsto ax + b\,\omega x$, is an algebra homomorphism, injective by the parity argument, and surjective by dimension ($2 \cdot 2^{n-1} = 2^{n}$). (iii) For $e_{n}^{2} = -1$ the elements $e_{i}e_{n}$, $i < n$, anticommute pairwise and square to $-e_{i}^{2}e_{n}^{2} = e_{i}^{2}$, so they generate a copy of $\Cl(p,q)$ inside $\Cl^{0}(p, q+1)$, of the full dimension $2^{n-1}$; for $e_{n}^{2} = +1$ they square to $-e_{i}^{2}$ and generate $\Cl(q,p)$. The script verifies (iii), and the identities behind (i) and (ii) (the sign pairing $P_{\pm}e_{n} = \pm s P_{\pm}\omega'$, the dimensions and the spanning, but not the idempotent identities and not the algebra-map properties, which are argued above), over every odd signature of dimensions three and five, and (i) and (ii) in detail on the four extensions of Corollary \ref{cor:four}: the idempotents, the two ideals of dimension sixteen, the action of $e_{5}$ as $\pm\omega'$ on them, and the spanning of all thirty-two dimensions by $\Cl(p,q) + \omega\,\Cl(p,q)$ in the complexified cases.
+\end{proof}
+
+\begin{corollary}[the four extensions of the oriented pair]\label{cor:four}
+The single extensions of this world and its mirror are, with their residues,
+\[
+\begin{array}{lllll}
+\toprule
+\text{extension} & \text{algebra} & \omega^{2} & \text{structure} & r \\
+\midrule
+\text{this world} + \text{space} & \Cl(1,4) & +1 & \Cl(1,3) \oplus \Cl(1,3) & 5 \\
+\text{this world} + \text{time}  & \Cl(2,3) & -1 & \Cl(1,3) \otimes \C \cong \Mat(4,\C), \ \Cl^{0} \cong \Cl(3,1) & 7 \\
+\text{mirror} + \text{space}     & \Cl(3,2) & +1 & \Cl(3,1) \oplus \Cl(3,1) & 1 \\
+\text{mirror} + \text{time}      & \Cl(4,1) & -1 & \Cl(3,1) \otimes \C \cong \Mat(4,\C), \ \Cl^{0} \cong \Cl(1,3) & 3 \\
+\bottomrule
+\end{array}
+\]
+In both towers the generator of the time sign complexifies and the generator of the space sign doubles.
+\end{corollary}
+
+\begin{proof}
+Both shadows have $q$ odd ($3$ and $1$); a time generator leaves $q$ unchanged and a space generator raises it by one, so by Lemma \ref{lem:omega} the time extensions have $\omega^{2} = -1$ and the space extensions $\omega^{2} = +1$, and Theorem \ref{thm:split} gives the structures. The even subalgebras are from Theorem \ref{thm:split}(iii): $\Cl^{0}(1,4) \cong \Cl(1,3)$, $\Cl^{0}(2,3) \cong \Cl(3,1)$, $\Cl^{0}(3,2) \cong \Cl(3,1)$, $\Cl^{0}(4,1) \cong \Cl(1,3)$. The residues are $p - q \bmod 8$. The identification $\Cl(1,3) \otimes \C \cong \Mat(4,\C)$ is Fact \ref{fact:reps} complexified.
+\end{proof}
+
+\begin{remark}[the added axis is the pseudoscalar]\label{rem:pseudo}
+In the doubled case the fifth generator is nothing new: on each summand it acts as the pseudoscalar $\omega' = e_{1}e_{2}e_{3}e_{4}$ of the shadow, up to sign, so the extra space direction of $\Cl(1,4)$ is the chirality operator of $\Cl(1,3)$ promoted from a $4$-blade to a vector, with the choice of sign the only datum the extension adds. In the complexified case the fifth generator is $e_{5} = \pm\,\omega\,\omega'^{-1}$, that is $i\gamma_{5}$ in the physicists' notation, and the algebra is the complexified Dirac algebra.
+\end{remark}
+
+\section{Where the mirror sits}\label{sec:mirror}
+
+\begin{theorem}[the mirror inside the complexified extension, and absent from the doubled one]\label{thm:mirror}
+In $\Cl(2,3)$, the time extension of this world with $e_{5}^{2} = +1$:
+\begin{enumerate}
+\item[(i)] the generators $e_{1}, \ldots, e_{4}$ generate a copy of $\Cl(1,3)$, this world's shadow;
+\item[(ii)] the bivectors $e_{\mu}e_{5}$, $\mu = 1, \ldots, 4$, anticommute pairwise, square to $(-1, +1, +1, +1)$, and generate the whole even subalgebra, which is a copy of $\Cl(3,1)$, the mirror's shadow;
+\item[(iii)] the two copies meet exactly in the even part of the shadow, $\Cl^{0}(1,3) \cong \Mat(2,\C)$, of dimension eight, the Lorentz algebra with its Weyl spinors; and together with $\omega$ they span everything, $\Cl(2,3) = \Cl(1,3) \oplus \omega\,\Cl(1,3)$;
+\item[(iv)] no automorphism of $\Cl(2,3)$ carries the copy of $\Cl(1,3)$ onto the copy of $\Cl(3,1)$; the natural map between their generating sets is multiplication by the central $\omega$, $e_{\mu} \mapsto \omega e_{\mu}$, which squares to $-e_{\mu}^{2}$ (the Wick rotation) and is complex-linear, not an automorphism of the real algebra.
+\end{enumerate}
+In $\Cl(1,4)$, the space extension with $e_{5}^{2} = -1$: the generators $e_{\mu}$ and the bivectors $e_{\mu}e_{5}$ both generate copies of $\Cl(1,3)$, the elements $\omega e_{\mu}$ generate a third, and $\Cl(3,1)$ admits no unital embedding into $\Cl(1,4)$ at all. The same statements hold for the mirror's two extensions with the roles of $\Cl(1,3)$ and $\Cl(3,1)$ exchanged.
+\end{theorem}
+
+\begin{proof}
+(i) is the definition of the shadow. (ii) is Theorem \ref{thm:split}(iii) with $e_{5}^{2} = +1$: the products square to $-e_{\mu}^{2}$, which is $(-1, +1, +1, +1)$, and generate a subalgebra of dimension sixteen inside the even subalgebra of dimension sixteen. (iii) The shadow's even part consists of even elements of $\Cl(2,3)$, so it lies in the intersection; the shadow's odd part consists of odd elements of $\Cl(2,3)$, since the generators $e_{1}, \ldots, e_{4}$ are odd there, so it meets the even subalgebra in zero; the intersection is exactly $\Cl^{0}(1,3)$, of dimension eight, and $\Cl^{0}(1,3) \cong \Cl(3,0) \cong \Mat(2,\C)$ is the Pauli algebra. For the spanning statement: $\omega$ times a blade of the shadow is, up to sign, the complementary blade of the shadow times $e_{5}$, so $\Cl(1,3) + \omega\,\Cl(1,3)$ contains every blade of $\Cl(2,3)$ (the script checks the dimension); this is the shadow's version of Theorem \ref{thm:split}(ii), which decomposes by the even subalgebra instead. (iv) An automorphism carries a subalgebra to an isomorphic subalgebra, and $\Cl(1,3) \not\cong \Cl(3,1)$ by Fact \ref{fact:reps}. With $\omega$ central and $\omega^{2} = -1$, $(\omega e_{\mu})^{2} = -e_{\mu}^{2}$ and the $\omega e_{\mu}$ anticommute pairwise, so they generate a $\Cl(3,1)$; this is the complex-linear identification of the two real forms and it is not an automorphism of the real algebra, since $\omega e_{\mu}$ is a $4$-blade, not a vector.
+
+For $\Cl(1,4)$: Theorem \ref{thm:split}(iii) with $e_{5}^{2} = -1$ gives $(e_{\mu}e_{5})^{2} = e_{\mu}^{2}$, and $\omega^{2} = +1$ gives $(\omega e_{\mu})^{2} = e_{\mu}^{2}$, so all three sets generate $\Cl(1,3)$. For the non-embedding: $\Cl(1,4) \cong A \oplus A$ with $A = \Cl(1,3) \cong \Mat(2,\HH)$ by Theorem \ref{thm:split}(i) and Fact \ref{fact:reps}. A unital homomorphism $\phi: \Mat(4,\R) \to A \oplus A$ composed with the projection to a summand on which $\phi(1) \neq 0$ is a unital homomorphism $\Mat(4,\R) \to A$; its kernel is a two-sided ideal of the simple algebra $\Mat(4,\R)$ not containing $1$, hence zero; so it is injective between real algebras of equal dimension sixteen, hence an isomorphism, contradicting $\Mat(4,\R) \not\cong \Mat(2,\HH)$ (Fact \ref{fact:reps}). The statements for the mirror's extensions follow by exchanging the roles of $p$ and $q$ throughout. The script verifies the squares, the anticommutation, the dimensions of the generated subalgebras and of their intersections with the even subalgebra, and the Wick-rotated squares, for all four extensions.
+\end{proof}
+
+\begin{proposition}[the translation bivectors of the frozen point]\label{prop:momenta}
+Under Fact \ref{fact:frozen}, write $\Cl(I^{\perp})$ for the Clifford bundle of the rank-five bundle $I^{\perp}$, and let $e_{5} = V/|V|$ be the unit Stelle-West direction, so that the Lorentz frame $e_{1}, \ldots, e_{4}$ of $\{I,V\}^{\perp}$ and $e_{5}$ together generate $\Cl(I^{\perp})$ fibrewise. Then:
+\begin{enumerate}
+\item[(i)] for $\Lambda > 0$, $\Cl(I^{\perp}) \cong \Cl(1,4)$, $e_{5}^{2} = -1$, and the translation bivectors $e_{\mu}e_{5}$ of the MacDowell-Mansouri connection generate this world's shadow $\Cl(1,3)$;
+\item[(ii)] for $\Lambda < 0$, $\Cl(I^{\perp}) \cong \Cl(2,3)$, $e_{5}^{2} = +1$, and the translation bivectors generate a copy of the mirror's abstract algebra $\Cl(3,1)$, while this world's shadow is the subalgebra generated by the Lorentz frame (what this copy is and is not: Proposition \ref{prop:belongs} and Corollary \ref{cor:readings}).
+\end{enumerate}
+In either case the fibrewise algebra $\Cl(I^{\perp})$ is one of the two extensions of Corollary \ref{cor:four}, and the Poincar\'e contraction $\ell \to \infty$ leaves the Clifford type of the translation algebra unchanged.
+\end{proposition}
+
+\begin{proof}
+Fact \ref{fact:frozen} gives the signature of $I^{\perp}$ as $(1,4)$ or $(2,3)$ by the sign of $\Lambda$, the sign of $\ip{V}{V} = -3/\Lambda$, and $\{I,V\}^{\perp}$ of signature $(1,3)$ in both cases; so $e_{5}^{2} = \operatorname{sign}\ip{V}{V}$ is $-1$ for $\Lambda > 0$ and $+1$ for $\Lambda < 0$, and $\Cl(I^{\perp})$ is the space extension or the time extension of $\Cl(1,3)$ respectively. The translation part of the reduced connection is $e^{\mu}\wedge V/\ell$, whose Clifford image is the bivector $e_{\mu}e_{5}$ up to the scalar $1/\ell$; the algebra these generate is Theorem \ref{thm:mirror}: $\Cl(1,3)$ in the first case, $\Cl(3,1)$ in the second. The contraction rescales the generators by $1/\ell$ and rescaling does not change the signs of the squares.
+\end{proof}
+
+\begin{remark}[what this says, and what it does not]\label{rem:physics}
+The de Sitter algebra of this world is two copies of this world, and the anti-de Sitter algebra of this world is this world merged with its mirror, with the mirror sitting on the momenta. This is a statement about the fibrewise Clifford algebra of $I^{\perp}$, which Fact \ref{fact:frozen} supplies; it is not a statement that a negative cosmological constant would turn matter into mirror matter. The tower charge is soldered and superselected (Fact \ref{fact:copy}), and Proposition \ref{prop:path} below shows that no path of sign changes at fixed dimension four connects the two oriented towers without passing through a sterile signature. What the proposition does establish is that the sign of $\Lambda$ selects which of two non-isomorphic algebras the frozen point's translation generators live in, and that only one of them contains the mirror. The observed cosmological constant is positive \cite{Planck2018}, so the algebra realised in this universe is the doubled $\Cl(1,4)$ with no copy of the mirror in it; the mirror on the momenta is a statement about the other sign. The same source gives the present Hubble rate as exceeding the asymptotic rate $\sqrt{\Lambda/3}$ of Theorem \ref{thm:lambdawall}(ii) by the factor $\Omega_{\Lambda}^{-1/2}$.
+\end{remark}
+
+\section{The rung's even subalgebra is the anti-de Sitter algebra}\label{sec:rung}
+
+\begin{theorem}[the twistor algebra is $\Cl(2,3)$]\label{thm:rung}
+Let $\Cl(2,4)$ be the ambient of this world's conformal completion (Fact \ref{fact:conformal}). Then:
+\begin{enumerate}
+\item[(i)] $\Cl^{0}(2,4) \cong \Cl(2,3) \cong \Cl(4,1) \cong \Mat(4,\C)$, the two odd algebras being generated inside the even subalgebra by $e_{i}e_{6}$ for a spacelike $e_{6}$ and by $e_{i}e_{1}$ for a timelike $e_{1}$ respectively; the rung's volume element $\omega_{6}$ is even, squares to $-1$ and commutes with every even element, and is the complex unit of $\Mat(4,\C)$;
+\item[(ii)] inside $\Cl^{0}(2,4)$ both oriented shadows occur: the bivectors $e_{i}e_{6}$ for $i = 2, \ldots, 5$ generate a $\Cl(1,3)$ and the bivectors $e_{i}e_{1}$ for $i = 2, \ldots, 5$ generate a $\Cl(3,1)$;
+\item[(iii)] every input to the copy theorem (Fact \ref{fact:copy}) is an object of $\Cl^{0}(2,4)$ or of its complexified modules, hence of the complexification in which $\Cl(1,3)$ and $\Cl(3,1)$ are two real forms of one algebra;
+\item[(iv)] signature reversal is not an isomorphism of the odd extensions: $\Cl(2,3) \not\cong \Cl(3,2)$ and $\Cl(1,4) \not\cong \Cl(4,1)$, the centre being $\C$ in $\Cl(2,3)$ and $\Cl(4,1)$ and $\R \oplus \R$ in $\Cl(3,2)$ and $\Cl(1,4)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Theorem \ref{thm:split}(iii) applied to $\Cl(2,4)$ with a spacelike distinguished generator gives $\Cl^{0}(2,4) \cong \Cl(2,3)$, and with a timelike one $\Cl^{0}(2,4) \cong \Cl(4,1)$; both are $\Mat(4,\C)$ by Corollary \ref{cor:four}. For $n = 6$ even, $\omega_{6}$ anticommutes with every vector, hence commutes with every even element, and $\omega_{6}^{2} = (-1)^{15}(-1)^{4} = -1$; being even it lies in $\Cl^{0}(2,4)$ and is central there, and since $\Cl^{0}(2,4) \cong \Mat(4,\C)$ has centre $\C$, $\omega_{6}$ is the complex unit up to sign. (ii) The squares are $(e_{i}e_{6})^{2} = -e_{i}^{2}e_{6}^{2} = e_{i}^{2} = (1, -1, -1, -1)$ for $i = 2, \ldots, 5$ with the signature $(+,+,-,-,-,-)$, and $(e_{i}e_{1})^{2} = -e_{i}^{2} = (-1, 1, 1, 1)$; both sets anticommute pairwise and generate subalgebras of dimension sixteen. (iii) The conformal spin group is generated by the bivectors of $\Cl(2,4)$, which are even; the twistor space $\C^{4}$ is the irreducible module of $\Cl^{0}(2,4) \cong \Mat(4,\C)$; the isotropic structure is a structure on $V_{\C} = \C^{6}$, the complexification of the ambient; and the mass formula is a bivector norm in the even subalgebra. (iv) An isomorphism of algebras restricts to an isomorphism of centres; the centre of an odd Clifford algebra is spanned by $1$ and $\omega$: a basis blade commutes with $e_{i}$ exactly when $e_{i}$ anticommutes with an even number of its factors, which for a blade of grade $k$ containing $e_{i}$ requires $k - 1$ even and for one not containing it requires $k$ even, and only the scalar and the volume element satisfy both conditions for every $i$; since $x \mapsto e_{i}xe_{i}^{-1}$ is diagonal in the blade basis, an element commutes with every $e_{i}$ exactly when each of its blades does, so the centre is spanned by those two (the script confirms dimension two over every odd signature of dimension at most five, and dimension one over every even signature of dimension at most six), and is $\R \oplus \R$ when $\omega^{2} = +1$ and $\C$ when $\omega^{2} = -1$; Corollary \ref{cor:four} gives the signs. The script verifies (i), (ii) and the centre dimensions.
+\end{proof}
+
+\begin{corollary}[the copy theorem's blind spot]\label{cor:blind}
+The copy theorem identifies this world and its mirror by working in an algebra, $\Cl^{0}(2,4) \cong \Cl(2,3)$, that contains both real forms and is the complexification of each. It is therefore exactly blind to the distinction that a single extension sees: the two oriented towers have isomorphic conformal spin groups, isomorphic twistor modules and one complexified ambient, but odd extensions that signature reversal does not identify (Theorem \ref{thm:rung}(iv)), whose centres differ. The shadows themselves are non-isomorphic (Fact \ref{fact:reps}); every object the copy theorem is built from, the even subalgebra of the rung, the conformal spin group and the twistor module (Theorem \ref{thm:rung}(iii)), identifies the two towers, while the rungs themselves, $\Cl(2,4)$ and $\Cl(4,2)$, do not, being of the two towers' types by Facts \ref{fact:towers} and \ref{fact:reps}; the odd extension is the first construction above the shadow, by dimension, that keeps them apart, and it does so through an element, the bare fifth generator, that no derived quantity of the series uses (Proposition \ref{prop:twotowers}).
+\end{corollary}
+
+\begin{proof}
+Theorem \ref{thm:rung}(iii) and (iv).
+\end{proof}
+
+\begin{remark}[the holographic coincidence]\label{rem:holography}
+Writing, as here, $\Cl(2,4)$ for the Clifford algebra of the flat space in which $\mathrm{AdS}_{5}$ is the hyperboloid, and likewise for the other hyperboloids: the rung is the algebra of $\mathrm{AdS}_{5}$, whose isometry group $SO(2,4)$ is the conformal group of this world; the intermediate $\Cl(2,3)$ is the algebra of $\mathrm{AdS}_{4}$ and, by Proposition \ref{prop:clock}, the conformal ambient of the three-dimensional residue-$7$ shadow, the group theory of $\mathrm{AdS}_{4}/\mathrm{CFT}_{3}$; the de Sitter intermediate $\Cl(1,4)$ is the ambient of the Euclidean three-dimensional shadow $(0,3)$, also of residue $5$, the group theory of $\mathrm{dS}/\mathrm{CFT}$. All of this is the standard fact that the isometry group of $\mathrm{AdS}_{d+1}$ is the conformal group in $d$ dimensions, which any conformal field theory in $d$ dimensions shares whether or not a bulk exists; the note adds only the residues. The coincidence does expose a difference in what two frameworks say about one pair of algebras. Holography takes the bulk and its boundary to be one physics in two descriptions. The series takes the residue of a sector to be the signature of its soldered space (Proposition \ref{prop:belongs}), which a conformal class carries as well as a metric, so the boundary of $\mathrm{AdS}_{4}$ has residue $7$ and lies, by Fact \ref{fact:towers}, in a tower distinct from the bulk's; whether a conformal class with no chosen scale is also a superselected sector, Fact \ref{fact:copy} speaking of the one metric, is a separate question and is not settled here; and the series' superselection is a statement about operators soldered to one metric, which a holographic dictionary is not. Whether that last difference means the two frameworks are speaking about different things, or that one of them is wrong about this pair, is not argued anywhere in the series and is not argued here; the remark records the question and claims nothing about the dynamical content of holography, to which the series has no counterpart.
+\end{remark}
+
+\section{The clock, and the paths between the oriented towers}\label{sec:clock}
+
+\begin{proposition}[the four extensions are the four odd towers]\label{prop:clock}
+The residues of the four extensions are $5$, $7$, $1$, $3$ (Corollary \ref{cor:four}), and they land on the odd towers in two roles: $\Cl(1,4)$ and $\Cl(4,1)$, this world's space extension and the mirror's time extension, are the representatives at the dimension nearest four of the residues $5$ and $3$ (Fact \ref{fact:reps}), the two five-dimensional dark towers; $\Cl(2,3)$ and $\Cl(3,2)$, this world's time extension and the mirror's space extension, are the conformal ambients (Fact \ref{fact:conformal}) of the representatives $(1,2)$ and $(2,1)$ of the residues $7$ and $1$, the two three-dimensional dark towers. This is a statement about abstract algebras: the frozen point's algebra $\Cl(I^{\perp})$ of Proposition \ref{prop:momenta} coincides with a five-dimensional shadow for $\Lambda > 0$ and with a three-dimensional ambient for $\Lambda < 0$ as an algebra, and Proposition \ref{prop:belongs} says that as a soldered object it is neither.
+\end{proposition}
+
+\begin{proof}
+$(1,4)$ and $(4,1)$ are listed in Fact \ref{fact:reps} at $r = 5$ and $r = 3$. The conformal completion of $(1,2)$ is $(2,3)$ and of $(2,1)$ is $(3,2)$, residues $7$ and $1$, preserved by the $(1,1)$ step (Fact \ref{fact:towers}). The last sentence is Proposition \ref{prop:momenta} read against the first two, with Proposition \ref{prop:belongs} for the soldering. The script checks every residue.
+\end{proof}
+
+\begin{proposition}[every path to the mirror crosses the two-time fork]\label{prop:path}
+At fixed dimension four, a change of the sign of one generator moves the signature $(p, 4-p)$ to $(p \pm 1, 4 - p \mp 1)$ and the residue by $\pm 2$. Every sequence of such changes from $(1,3)$ to $(3,1)$ passes through $(2,2)$, residue $0$, the two-time sterile fork; the other neighbour of $(1,3)$, the Euclidean $(0,4)$ at residue $4$, is a dead end from which the only continuation returns to $(1,3)$.
+\end{proposition}
+
+\begin{proof}
+The signatures at dimension four are the five points $p = 0, \ldots, 4$ on a line, a sign change moves $p$ by one, and a walk from $p = 1$ to $p = 3$ visits $p = 2$; $p = 0$ has one neighbour. The script enumerates every non-revisiting walk of length at most six and finds exactly one, $(1,3) \to (2,2) \to (3,1)$.
+\end{proof}
+
+\begin{remark}[no mechanism]\label{rem:nomech}
+Together with Fact \ref{fact:copy} this closes the question of a physical passage between the oriented towers within the series: the tower charge is superselected by the one metric, the only algebra in which both towers are present identifies them by the complex unit and not by any automorphism (Theorem \ref{thm:mirror}(iv)), and the only continuous route through signatures at dimension four runs through a signature with no causal structure. The two towers share gravity, and by Proposition \ref{prop:momenta} the sign of $\Lambda$; that is the whole of the shared channel.
+\end{remark}
+
+\section{The frozen point splits the ascent's pair}\label{sec:pair}
+
+The rung of this world is $\Cl(2,4)$, obtained from $\Cl(1,3)$ by adjoining a hyperbolic pair, one generator of each sign, whose null combinations are the zero divisors the transport resolves (Fact \ref{fact:towers}, Definition \ref{def:single}). The frozen point of the dark-energy paper is a vector in that rung, and its norm is the cosmological constant. This section shows that $I$ and the Stelle-West vector $V$ are the ascent's pair, signed by $\Lambda$, and that the odd extensions of Section \ref{sec:single} are the intermediate algebras of this world's own ascent, with the degenerate case at $\Lambda = 0$ the wall of the sheaf paper.
+
+\begin{fact}[imported: the frozen point at $\Lambda = 0$, and the degenerate algebras]\label{fact:null}
+At $\Lambda = 0$ the parallel scale tractor is null, its stabiliser is parabolic (the Poincar\'e-type stabiliser of a null direction), and the rotation to the reductive de Sitter stabiliser happens exactly when $\ip{I}{I} \neq 0$; the identity $\ip{I}{I}\,\ip{V}{V} = -1$ holds for $\Lambda \neq 0$. A quadratic space with a one-dimensional radical has Clifford algebra $\Cl(p,q;1)$ with a nilpotent generator $n$, $n^{2} = 0$, and $n\,\Cl(p,q;1)$ is a two-sided ideal of square zero; the series treats these algebras, their nilpotent ideals and their one-sided completions in the sheaf paper, and a nilpotent generator is the vector-type zero divisor whose resolution is the transport. \emph{Provenance:} \cite[Fact~2.1, Thm.~3.1]{ButlerT10}; \cite[Thm.~3.1, Prop.~3.4, Thm.~4.4]{ButlerT4}; \cite[\S 4]{ButlerT1}.
+\end{fact}
+
+\begin{theorem}[$I$ and $V$ are the ascent's pair, signed by $\Lambda$]\label{thm:pair}
+In the tractor bundle of signature $(2,4)$ let $I$ be the frozen point, $\ip{I}{I} = \Lambda/3$, and for $\Lambda \neq 0$ let $V$ be the Stelle-West vector. Then:
+\begin{enumerate}
+\item[(i)] $I$ and $V$ span a hyperbolic plane: $\ip{I}{V} = 0$, $\ip{I}{I}$ and $\ip{V}{V}$ have opposite signs, and the unit directions $e_{I}$, $e_{V}$ anticommute with each other and with the Lorentz frame of $\{I,V\}^{\perp}$;
+\item[(ii)] $I^{\perp}$ is spanned by the Lorentz frame and $e_{V}$, and $\Cl(I^{\perp})$ is the subalgebra of the rung generated by these five: the space extension $\Cl(1,4)$ for $\Lambda > 0$ ($e_{V}^{2} = -1$) and the time extension $\Cl(2,3)$ for $\Lambda < 0$ ($e_{V}^{2} = +1$); adjoining $e_{I}$ returns the whole rung, so the ascent factors as
+\[
+\Cl(1,3) \;\subset\; \Cl(I^{\perp}) \;\subset\; \Cl(2,4),
+\]
+with the sign of $\Lambda$ deciding which of the pair's two signed directions is adjoined first;
+\item[(iii)] at $\Lambda = 0$ the frozen point, written $I_{0}$ from here on, is null and lies in its own complement, $I^{\perp}$ is degenerate of signature $(1,3;1)$, and $\Cl(I^{\perp}) \cong \Cl(1,3;1)$ is the degenerate algebra with $I$ itself the nilpotent generator: $I^{2} = 0$, $I$ anticommutes with the Lorentz frame, and $I\,\Cl(1,3;1)$ is a sixteen-dimensional ideal of square zero;
+\item[(iv)] the Lorentz frame $\{I,V\}^{\perp}$ has signature $(1,3)$ for every value of $\Lambda$, including zero.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Write the rung's hyperbolic plane orthogonal to the Lorentz frame as $\mathrm{span}(e_{+}, e_{-})$ with $e_{+}^{2} = +1$, $e_{-}^{2} = -1$; the frozen point is $I = c\,e_{+} + d\,e_{-}$ with $c^{2} - d^{2} = \Lambda/3$, and the orthogonal vector in the plane is $w = d\,e_{+} + c\,e_{-}$ with $\ip{w}{w} = d^{2} - c^{2} = -\ip{I}{I}$ and $\ip{I}{w} = cd - cd = 0$. (i) For $\Lambda \neq 0$, $V$ is the section of $I^{\perp}$ of norm $-3/\Lambda$ orthogonal to the Lorentz frame (Fact \ref{fact:frozen}), so $V$ is a multiple of $w$ and $\ip{I}{I}\ip{V}{V} < 0$ is the identity of Fact \ref{fact:null}. Orthogonal vectors anticommute in a Clifford algebra. (ii) $I^{\perp} = \{I,V\}^{\perp} \oplus \mathrm{span}(w)$ by dimension, and $e_{V}^{2} = \operatorname{sign}\ip{V}{V} = -\operatorname{sign}\Lambda$; so the five generators have signature $(1,3) + (0,1) = (1,4)$ for $\Lambda > 0$ and $(1,3) + (1,0) = (2,3)$ for $\Lambda < 0$, which are the two extensions of Corollary \ref{cor:four}. The five together with $e_{I}$ are an orthogonal basis of the rung's vector space, so they generate $\Cl(2,4)$. (iii) At $c = d$, $\ip{I}{I} = 0$ and $w = I$, so $I \in I^{\perp}$, the induced form has the one-dimensional radical $\mathrm{span}(I)$, and the Clifford algebra of the five generators has one null generator: $\Cl(1,3;1)$, with the ideal and its square as in Fact \ref{fact:null}. (iv) The Lorentz frame is orthogonal to both $e_{+}$ and $e_{-}$ and its signature does not depend on $c, d$. The script verifies (i) to (iv) on exact rational instances with $\ip{I}{I} = 3$, $-3$ and $0$: the orthogonality relations, the signatures $(1,4)$, $(2,3)$ and $(1,3;1)$ by exact congruence, the anticommutation, the generation of all sixty-four dimensions when $\ip{I}{I} \neq 0$, the nilpotent generator and its ideal in $\Cl(1,3;1)$, and the signature $(1,3)$ of the Lorentz frame in all three cases.
+\end{proof}
+
+\begin{corollary}[the cosmological constant deforms the wall]\label{cor:wall}
+The intermediate algebra of this world's ascent is a one-parameter family in $\Lambda$: the degenerate $\Cl(1,3;1)$ at $\Lambda = 0$, whose nilpotent generator is the zero divisor the transport is built to resolve, deformed to the doubled $\Cl(1,4)$ for $\Lambda > 0$ and the complexified $\Cl(2,3)$ for $\Lambda < 0$. The sign of $\Lambda$ fixes the sign given to the ascent's null generator (the generator's square is $-\Lambda/3$, the opposite sign), and the two odd extensions are the two ways of giving it one.
+\end{corollary}
+
+\begin{proof}
+Theorem \ref{thm:pair}(ii) and (iii); the family is $I = c\,e_{+} + d\,e_{-}$ with $c^{2} - d^{2} = \Lambda/3$.
+\end{proof}
+
+\begin{remark}[what this adds to the dark-energy paper]\label{rem:t10}
+The dark-energy paper proves the parabolic-to-reductive rotation of the stabiliser at $\Lambda \neq 0$ at the level of groups. Theorem \ref{thm:pair} is the same rotation at the level of the Clifford algebra: the null direction of the parabolic case is the nilpotent generator of a degenerate algebra, and the reductive case is that generator given a sign. That the tangent image keeps signature $(1,3)$ whatever $\Lambda$ does is Theorem \ref{thm:pair}(iv) read through Fact \ref{fact:copy}.
+\end{remark}
+
+\section{The soldering decides}\label{sec:soldering}
+
+Section \ref{sec:clock} placed the four extensions on the four odd towers as algebras. The dark-matter paper's definition of the residue is not algebraic, and applying it settles which tower the frozen point's algebra belongs to.
+
+\begin{proposition}[$\Cl(I^{\perp})$ belongs to this tower]\label{prop:belongs}
+Under the dark-matter paper's Theorem 3.5 the residue of a sector is the signature of the soldered vector space, the image of the tangent space in the algebra with $v^{2} = g(v,v)$ (Fact \ref{fact:copy}). For the algebra $\Cl(I^{\perp})$ of Theorem \ref{thm:pair}:
+\begin{enumerate}
+\item[(i)] the soldered vector space is the Lorentz frame $\{I,V\}^{\perp} = e(TM)$, the image of the soldering form, of signature $(1,3)$ for every $\Lambda$ (Theorem \ref{thm:pair}(iv)); $V$ is not in it, being orthogonal to $e(TM)$ with $\nabla V = e$ (Fact \ref{fact:frozen});
+\item[(ii)] hence $\Cl(I^{\perp})$ has tower charge $6$: it is a sub-object of this world's rung, the intermediate algebra of this world's own ascent, and not the ground shadow of the residue-$5$ or residue-$7$ tower whose abstract algebra it shares;
+\item[(iii)] the coincidence $\Cl(I^{\perp}) \cong \Cl(1,4)$ for $\Lambda > 0$ is induced by an isometry of quadratic spaces ($I^{\perp}$ has signature $(1,4)$ outright) but by no map of soldered data: the isometry carries $e_{V}$, which is not soldered, to a fifth tangent direction of the five-dimensional shadow, which is, and carries the four-dimensional soldered space into a proper subspace of that shadow's tangent space.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) is Fact \ref{fact:frozen} with Theorem \ref{thm:pair}(iv). (ii) The residue is the signature of the soldered space by definition, and that signature is $(1,3)$, residue $6$; the algebra generated by the soldered space together with the unsoldered $e_{V}$ lies inside the rung generated by the soldered space together with the ascent's pair. (iii) A five-dimensional shadow of residue $5$ is, by the same definition, an algebra whose soldered space has signature $(1,4)$, so all five generators are tangent; under the one four-dimensional metric of the dark-matter paper's Premise P1 this needs a fifth tangent direction beyond the four, an internal direction in the sense of that paper's projection lemma \cite[Lem.~6.1]{ButlerT14}. The isometry $I^{\perp} \cong \R^{1,4}$ identifies $e_{V}$ with that direction, so it does not carry the soldered space onto the soldered space, which is what the dark-matter paper's Theorem 3.5(i) requires of a map that preserves the residue.
+\end{proof}
+
+\begin{corollary}[the two readings, and which is which]\label{cor:readings}
+The two readings of $\Cl(1,4)$ that occur in the series are two solderings of one algebra, and the series' definition of the residue assigns them to different towers. The fifth direction of the frozen point's algebra is not a spacetime direction and never was: it is the Stelle-West vector, the normal to the de Sitter hyperboloid, with fixed norm $\ell = \sqrt{3/\Lambda}$, and its algebra is this tower's. The five-dimensional dark towers, if populated, are soldered to a fifth tangent direction that the frozen point does not supply, whose size $L$ remains the datum the series does not fix. Proposition \ref{prop:clock} therefore holds as a statement about algebras, and only about algebras.
+\end{corollary}
+
+\begin{proof}
+Proposition \ref{prop:belongs}.
+\end{proof}
+
+\begin{corollary}[$\Lambda$ is not a coupling between towers]\label{cor:nocoupling}
+The cosmological constant is a datum of this tower's ascent (Theorem \ref{thm:pair}), and its coincidence with the residue-$5$ tower's abstract algebra carries no structure across the superselection, since the dark-matter paper's exactness argument is precisely that isomorphisms between towers that do not respect the soldering carry nothing (Fact \ref{fact:copy}). The coupling rule the dark-matter paper's odd towers need is not supplied by $\Lambda$.
+\end{corollary}
+
+\begin{proof}
+Proposition \ref{prop:belongs}(iii) and Fact \ref{fact:copy}.
+\end{proof}
+
+\begin{remark}[what the copies are]\label{rem:copies}
+Sections \ref{sec:single} to \ref{sec:rung} are about this world's own ascent. The copy of the mirror's algebra that Proposition \ref{prop:momenta}(ii) finds on the translation bivectors for $\Lambda < 0$ is not the mirror tower, whose vectors are soldered; it is the reason the two oriented towers' intermediate algebras are non-isomorphic (Corollary \ref{cor:blind}), and that non-isomorphism is a statement about the two towers' own ascents under their own solderings, unaffected by this section. Likewise the odd towers' algebras that Proposition \ref{prop:clock} finds among the four extensions are their abstract algebras only.
+\end{remark}
+
+\section{Running the transport on the wall}\label{sec:run}
+
+Section \ref{sec:pair} put the frozen point at $\Lambda = 0$ on the wall: the nilpotent generator of $\Cl(1,3;1)$. The series has a procedure for walls, the transport, and this section runs it and asks what it fixes and what it leaves free. The answer is that it fixes the rung and a canonical null frame in the rung's new plane, and nothing about the frozen point's position in that plane beyond what its norm, the cosmological constant, records.
+
+\begin{fact}[imported: the minimal completion of a degenerate algebra, and Rule 1]\label{fact:completion}
+A real quadratic space with nondegenerate part of signature $(p,q)$ and radical of dimension $r$ admits a nondegenerate completion; every completion has dimension at least $p + q + 2r$; the minimal ones have signature exactly $(p+r, q+r)$; and any two minimal completions are isometric by an isometry fixing the original space pointwise, so the minimal ambient Clifford algebra $\Cl(p+r, q+r)$ is unique up to an isomorphism fixing the embedded $\Cl(p,q;r)$. In the model completion the radical is paired with its dual, $Q(\rho, \varphi) = 1$, $Q(\varphi,\varphi) = 0$, $\varphi$ orthogonal to the nondegenerate part. For a type-N obstruction in a nondegenerate algebra the increment $(+1,+1)$ is forced outright; for a type-C obstruction the completed algebra is unique but the sign of the adjoined generator's square is a geometric datum the algebra forgets. \emph{Provenance:} \cite[Thm.~2.3 and its model]{ButlerT2}; \cite[Thm.~4.13, Thm.~5.7 and Rem.~5.8]{ButlerT1}.
+\end{fact}
+
+\begin{theorem}[the transport constrains the frozen point only through its norm]\label{thm:free}
+Let $W = I_{0}^{\perp}$, the degenerate space of signature $(1,3;1)$ at $\Lambda = 0$ with radical spanned by the null frozen point $I_{0}$, written $I$ in this theorem, and let $\widetilde W$ be its minimal completion. Then:
+\begin{enumerate}
+\item[(i)] $\widetilde W$ has signature $(2,4)$ and is the rung; the isometry of Fact \ref{fact:completion} fixing $W$ pointwise is unique, so the null partner $\varphi$ of $I$ with $Q(I,\varphi) = 1$, $Q(\varphi,\varphi) = 0$, $\varphi \perp \{I\}^{\perp} \cap W$ is canonical: the transport supplies the hyperbolic plane $\mathrm{span}(I, \varphi)$ together with a distinguished null basis of it;
+\item[(ii)] every vector orthogonal to the Lorentz frame is $aI + b\varphi$ with norm $2ab$; a frozen point of cosmological constant $\Lambda$ is such a vector with $2ab = \Lambda/3$, and the sign of $\Lambda$ is the sign of the product of its components along the null generator and its canonical partner;
+\item[(iii)] the isometries of the completion that fix the Lorentz frame act on the plane as $O(1,1)$, whose orbits on nonzero vectors are exactly the level sets of the norm; so the only invariant of the frozen point under the symmetries the transport supplies is its norm $\Lambda/3$: the cosmological constant, sign and magnitude, is the one modulus of the frozen point that the transport leaves free;
+\item[(iv)] no symmetry of the completion carries a frozen point of positive norm to one of negative norm, and the two intermediate algebras $\Cl(I_{\Lambda}^{\perp})$ for the two signs are non-isomorphic (Theorem \ref{thm:rung}(iv)); the two signs are inequivalent under every symmetry the construction has, and the choice between them is decided by nothing in the transport.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Fact \ref{fact:completion} with $(p,q,r) = (1,3,1)$ gives $(2,4)$. An isometry of $\widetilde W$ fixing $W$ pointwise sends $\varphi$ to a vector $x$ with $Q(x, w) = Q(\varphi, w)$ for all $w \in W$ and $Q(x,x) = 0$; the five linear conditions have rank five in six unknowns, so $x = \varphi + cI$, and $Q(x,x) = 2c\,Q(I,\varphi) = 2c$ forces $c = 0$. (ii) $Q(aI + b\varphi, aI + b\varphi) = 2ab\,Q(I,\varphi) = 2ab$; the vector is orthogonal to the Lorentz frame because $I$ and $\varphi$ are. (iii) The plane $\mathrm{span}(I,\varphi)$ is the orthogonal complement of the Lorentz frame, so an isometry fixing the frame restricts to an isometry of the plane, and the isometry group of a hyperbolic plane is $O(1,1)$: the boosts $(a,b) \mapsto (ta, b/t)$, $t > 0$, the swap $(a,b) \mapsto (b,a)$, and their products with $-1$. The boosts are transitive on each branch of each hyperbola $2ab = \text{const} \neq 0$ and on each of the four null rays; the element $-1$ exchanges the two branches of a hyperbola, and the swap exchanges the two null axes; so the orbits are the level sets of the norm. (iv) Isometries preserve the norm; the non-isomorphism is Theorem \ref{thm:rung}(iv). The script verifies the signature, the rank-five linear system and its unique null solution, the norm formula on instances of both signs and zero, the boost and swap invariances, and the centres.
+\end{proof}
+
+\begin{corollary}[the cosmological constant is undetermined within the series]\label{cor:uncaused}
+The transport, run on the wall, returns the rung and a canonical null frame in its new plane, and stops; the frozen point's position in that plane is data the transport receives, not data it produces, and the one invariant of that position is the norm $\Lambda/3$, sign and magnitude together. Within the series the sign is a choice between two options that the construction makes inequivalent (Theorem \ref{thm:free}(iv)) and that nothing in the construction decides, which is the status the dark-matter paper's Premise P2 gives to the choice of which oriented tower is the visible one; the analogy is one of status, since P2's choice is binary and this one is a real modulus. Nothing here says the sign has no cause: only that the transport is not it.
+\end{corollary}
+
+\begin{proof}
+Theorem \ref{thm:free}(iii) and (iv), with \cite[Premise P2]{ButlerT14} for the status.
+\end{proof}
+
+\begin{remark}[the dictionary with the ascent's null pair]\label{rem:nullpair}
+The correspondence between the frozen point and the pair the transport adjoins, stated in the root paper's normalisation (which fixes the null basis up to the dilation, one hyperbolic plane being isometric to any other). The adjoined plane has the signed basis $e_{\pm}$ and the null basis $v = \tfrac12(e_{+} + e_{-})$, $v^{*} = \tfrac12(e_{+} - e_{-})$, with $v^{2} = v^{*2} = 0$ and $vv^{*} + v^{*}v = 1$, the pair the root paper adjoins and the tower paper reads as the one fermionic mode of the rung \cite[\S 2.2]{ButlerT1}, \cite[Prop.~4.1, Thm.~4.2]{ButlerT3}. The note's canonical frame is the same two null rays, $v = I_{0}$ and $v^{*} = \varphi/2$. Then: at $\Lambda = 0$ the frozen point is the null generator $v$ itself, the zero divisor of vector type, and the direction the completion adjoins is its partner $v^{*}$, canonical by Theorem \ref{thm:free}(i); the Stelle-West vector does not exist there. For $\Lambda \neq 0$ the frozen point is a combination of both null generators,
+\[
+I_{\Lambda} \;=\; \alpha\, v + \beta\, v^{*}, \qquad \ip{I_{\Lambda}}{I_{\Lambda}} = \alpha\beta = \Lambda/3 ,
+\]
+and the Stelle-West vector is the same two components with the relative sign reversed,
+\[
+V \;\propto\; \alpha\, v - \beta\, v^{*}, \qquad \ip{V}{V} \propto -\alpha\beta ,
+\]
+orthogonal to $I_{\Lambda}$ and to the Lorentz frame. So $I$ and $V$ are the sum and difference of one pair of null components, which is why they form the signed basis up to scale and a boost (Theorem \ref{thm:pair}(i)); the sign of $\Lambda$ is the relative sign of $\alpha$ and $\beta$, de Sitter when they agree and anti-de Sitter when they differ, and the wall is either of them vanishing. The dilation acts as $v \mapsto tv$, $v^{*} \mapsto v^{*}/t$, an automorphism of the relation $vv^{*} + v^{*}v = 1$, and $\alpha\beta$ is its invariant (Proposition \ref{prop:dilation}); in the frame of Theorem \ref{thm:free}, $\alpha = a$ and $\beta = 2b$. In the tower paper's reading of $v$ and $v^{*}$ as the annihilation and creation operators of the rung's mode, the frozen point of a $\Lambda = 0$ universe is a pure annihilator and a nonzero $\Lambda$ is a creation component, the product of the two coefficients being $\Lambda/3$; this is what that reading says verbatim; only the vanishing of the creation component is invariant, its size being the dilation gauge, and the note attaches no claim to the reading. The script verifies the null pair, its normalisation, the identification with the canonical frame, and the norms and orthogonality of $\alpha v \pm \beta v^{*}$ on instances of both signs and zero.
+\end{remark}
+
+\begin{remark}[two bits, compared]\label{rem:twobits}
+The root paper's Rule 2 leaves a sign free too, the square of the generator adjoined to a type-C obstruction, and records that the completed algebra forgets it. The sign left free here is of a different kind. The completed algebra, the rung $\Cl(2,4)$, forgets it in the same way; but the intermediate algebra of Theorem \ref{thm:pair} remembers it, the doubled $\Cl(1,4)$ against the complexified $\Cl(2,3)$, because the base $\Cl(1,3)$ is even-dimensional and exactly one of the two single extensions changes the parity of $q$ (Lemma \ref{lem:omega}). So the sign of $\Lambda$ is a geometric datum with an algebraic witness one level below the rung, and the witness is what Section \ref{sec:rung} used to separate the oriented towers.
+\end{remark}
+
+\begin{remark}[what the transport stance does and does not say about $\Lambda$]\label{rem:stance}
+The programme reads a zero divisor as a signpost rather than a prohibition, and Theorem \ref{thm:pair}(iii) puts $\Lambda = 0$ on the wall. It is tempting to read the stance as saying that a universe does not sit on the wall, hence $\Lambda \neq 0$. Theorem \ref{thm:free} is what the stance actually delivers: the transport off the wall is the passage from $\Cl(1,3;1)$ to the rung, which is the same rung for every $\Lambda$, and it says nothing about where in the rung's new plane the frozen point lies. The dark-energy paper's finding that the norm is a parameter of the laws under the action as written is the dynamical form of the same statement, and this note does not improve on it.
+\end{remark}
+
+\section{Two negative results}\label{sec:doors}
+
+Theorem \ref{thm:free}(iii) says the frozen point's two components in the canonical null frame are related by a symmetry of the completion. This section adds that the symmetry is a gauge symmetry of the dark-energy paper's action, so the components are unphysical and not merely symmetry-related; and it shows that the sign of $\Lambda$, though it acts differently on the two oriented towers, does not select which of them is the visible one.
+
+\begin{fact}[imported: the point at infinity is pure gauge]\label{fact:goldstone}
+In the dark-energy paper's gauge-fixed action the $(I,V)$ sector carries no physical fluctuation: the nine Goldstone modes of the frozen point and the Stelle-West vector are all eaten, and the five tangent directions $I^{\perp}$ are the $I$-half of them. \emph{Provenance:} \cite[Prop.~5.4]{ButlerT10}.
+\end{fact}
+
+\begin{proposition}[the boost is the dilation; the ratio $b/a$ is gauge]\label{prop:dilation}
+In the rung, with the canonical null frame realised as $I = (e_{+} + e_{-})/2$, $\varphi = e_{+} - e_{-}$ in the hyperbolic plane orthogonal to the Lorentz frame:
+\begin{enumerate}
+\item[(i)] the bivector $B = I \wedge \varphi = -e_{+}e_{-}$ squares to $+1$, commutes with every Lorentz bivector and with every Lorentz vector, and anticommutes with $e_{\pm}$: it is the generator of the dilations of the conformal model;
+\item[(ii)] the rotor $R = \cosh\theta + B\sinh\theta$ fixes the Lorentz frame and acts on the plane by $I \mapsto tI$, $\varphi \mapsto \varphi/t$ with $t = e^{2\theta}$, so the boosts of Theorem \ref{thm:free}(iii) are the dilations;
+\item[(iii)] hence the ratio $b/a$ of the frozen point's components is a dilation gauge and only the product $2ab = \Lambda/3$ is invariant, and by Fact \ref{fact:goldstone} the gauge is not fixed by the dynamics either: the components are unphysical, not merely symmetry-related, and the frame the transport supplies carries no quantity beyond $\Lambda$ itself.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) $I\varphi = \tfrac12(e_{+} + e_{-})(e_{+} - e_{-}) = 1 - e_{+}e_{-}$, so $I \wedge \varphi = -e_{+}e_{-}$ and $B^{2} = -e_{+}^{2}e_{-}^{2} = +1$; a bivector of a plane commutes with vectors orthogonal to the plane and anticommutes with vectors in it. (ii) $R\tilde R = \cosh^{2}\theta - \sinh^{2}\theta = 1$, $R$ fixes what commutes with $B$, and on the plane $RxR^{-1}$ is the hyperbolic rotation by $2\theta$, whose eigenvectors are the null directions with eigenvalues $e^{\pm 2\theta}$. (iii) is (ii) with Theorem \ref{thm:free}(iii) and Fact \ref{fact:goldstone}. The script verifies (i) and (ii) with the rational rotor $\cosh\theta = 5/4$, $\sinh\theta = 3/4$ ($t = 4$): unit, fixing $e_{1}, \ldots, e_{4}$, scaling $I$ by $4$ and $\varphi$ by $1/4$, and carrying a frozen point along its hyperbola with $2ab$ preserved.
+\end{proof}
+
+\begin{proposition}[the two towers in one curved universe]\label{prop:twotowers}
+Both oriented towers are soldered to the one manifold, the mirror with the metric's sign reversed, so the mirror's tractor bundle has signature $(4,2)$ and its frozen point has norm $-\ip{I}{I}$. Then:
+\begin{enumerate}
+\item[(i)] in a de Sitter universe the intermediate algebra of this world's ascent is the doubled $\Cl(1,4)$ and the mirror's is the complexified $\Cl(4,1)$; in an anti-de Sitter universe they are the complexified $\Cl(2,3)$ and the doubled $\Cl(3,2)$. The rule is: doubled if and only if (de Sitter and this world) or (anti-de Sitter and mirror);
+\item[(ii)] the even subalgebras $\Cl^{0}(1,4)$ and $\Cl^{0}(4,1)$ have the same presentation, the bivectors $e_{\mu}e_{5}$ anticommuting with squares $(+,-,-,-)$, so the two towers' conformal-to-de-Sitter spin groups, spinor modules and MacDowell-Mansouri bivector algebras coincide; the derived content of the dark-matter paper's copy theorem, which runs through the spin group, does not see the doubling;
+\item[(iii)] what differs is the bare fifth generator alone: $e_{5}^{2} = -1$ with $e_{5} = \pm\omega'$ on the two summands in the doubled case, against $e_{5}^{2} = +1$ with $e_{5} = \omega'^{-1}\omega$, a central complex unit times the pseudoscalar, in the complexified case.
+\end{enumerate}
+Consequently the sign of $\Lambda$ does not select the visible tower: it distinguishes the two towers' intermediate algebras, but through an element no derived quantity of the series uses, and that element is the unit vector along $V$, which Proposition \ref{prop:belongs} places outside the soldered space and Fact \ref{fact:goldstone} places in the pure-gauge sector.
+\end{proposition}
+
+\begin{proof}
+(i) The tractor bundle of a conformal class of signature $(p,q)$ carries a metric of signature $(p+1,q+1)$ (Fact \ref{fact:frozen}), so the class $[-g]$ of signature $(3,1)$ has a tractor metric of signature $(4,2)$; in a scale $g$ the tractor metric is $2\sigma\rho + g^{-1}(\mu,\mu)$ and the scale tractor of $\sigma$ is $(\sigma, \nabla\sigma, -(\Delta\sigma + J\sigma)/n)$ with $J$ a multiple of the scalar curvature; under $g \mapsto -g$ the Levi-Civita connection and the Ricci tensor are unchanged while the inverse metric, the Laplacian and the scalar curvature change sign, so $\rho \mapsto -\rho$; the map $\Phi: (\sigma, \mu, \rho) \mapsto (\sigma, \mu, -\rho)$ from the tractor bundle of $[g]$ to that of $[-g]$ is scale-independent, intertwines the two tractor connections, carries the scale tractor of $g$ to that of $-g$, and satisfies $h_{-g}(\Phi X, \Phi X) = -h_{g}(X, X)$. Hence the mirror's frozen point has norm $-\ip{I}{I}$ and its $I^{\perp}$ has the reversed signature of ours: $(4,1)$ against $(1,4)$ and $(3,2)$ against $(2,3)$; the doubling or complexification is Corollary \ref{cor:four}. (ii) Theorem \ref{thm:split}(iii): with $e_{5}^{2} = -1$ in $\Cl(1,4)$ and $e_{5}^{2} = +1$ in $\Cl(4,1)$ the products $e_{\mu}e_{5}$ square to $e_{\mu}^{2}$ and $-e_{\mu}^{2}$ respectively, which are both $(+,-,-,-)$ since the two Lorentz frames are reversed; a Clifford algebra is determined by such a presentation. That the copy theorem's inputs are spin-group objects is Fact \ref{fact:copy}. (iii) is Theorem \ref{thm:split}(i) and Remark \ref{rem:pseudo}. The script verifies the signatures of the mirror's $I^{\perp}$ on the same rational instances, the two-by-two rule from the signs of $\omega^{2}$, the common presentation of the even subalgebras, and the squares and factorisations of $e_{5}$.
+\end{proof}
+
+\begin{remark}[the one operator that sees the difference]\label{rem:onesees}
+An operator linear in $e_{5}$ alone, a term $\bar\psi e_{5}\psi$, is the one place the doubling would show: $e_{5}$ is the real pseudoscalar in one tower and the pseudoscalar times a central complex unit in the other, which in the physicists' notation is $\gamma_{5}$ against $i\gamma_{5}$, an anti-Hermitian against a Hermitian bilinear. But $e_{5}$ is the unit Stelle-West direction, unsoldered by Proposition \ref{prop:belongs}(i) and pure gauge by Fact \ref{fact:goldstone}; so either a coupling to it can be physical, in which case Fact \ref{fact:goldstone} is being read too strongly in Proposition \ref{prop:dilation}(iii), or it cannot, in which case the mirror sector is observationally identical to this one at every level the series reaches. The note takes the second reading, consistently with Proposition \ref{prop:dilation}, and records the operator as the one place the first reading would show; the Hermiticity statement depends on a Dirac-representation convention the note does not fix.
+\end{remark}
+
+\section{The wall in the cosmological constant}\label{sec:lambdawall}
+
+Theorem \ref{thm:pair} gives a one-parameter family of intermediate algebras, nondegenerate for $\Lambda \neq 0$ and degenerate at $\Lambda = 0$. The sheaf paper has a theory of exactly such families: tame corank-one degenerations, their exceptional algebras, the residue of the metric at the wall, and a conservation law that says the degeneracy of a wall in spacetime can be displaced but never destroyed. This section runs that theory on the $\Lambda$ line. The family is a tame wall in the sheaf paper's sense, and the rung completes it on both sides, which the conservation law forbids for the completions it covers; the family lies in the case the conservation theorem's proof excludes by hypothesis, a complement whose signature switches across the wall, and that case is generic to any corank-one family of hyperplanes in a fixed nondegenerate space. The section's content is the identification of the dark-energy paper's frozen-point geometry with the sheaf paper's tame structure, and the placement of the $\Lambda$ family in that excluded case.
+
+\begin{fact}[imported: tame walls, the exceptional algebra, the residue, and conservation]\label{fact:t4}
+A pair $(M,G)$, $G$ a smooth symmetric form on a bundle over $M$, is a tame corank-one degeneration if (T1) the degenerate locus $\Sigma$ is a smooth closed hypersurface, (T2) the corank is exactly one on $\Sigma$ with the radical lines a smooth line bundle spanned locally by $k$, and (T3) the dying eigenvalue crosses zero at nonzero speed along every transversal, invariantly: the section $\delta(k \otimes k) = dg_{k}|_{\Sigma}$ of $\operatorname{Hom}(L^{\otimes 2}, N^{*}\Sigma)$ is nowhere zero. The signatures on the two sides differ by one unit, $(p,q)$ where the dying eigenvalue is positive against $(p-1, q+1)$. Rescaling the dying direction by $t^{-1/2}$ along a transversal gives a continuous family of nondegenerate algebras through the wall whose special fibre, the exceptional algebra, is the Clifford algebra of the surviving form orthogonal to the rate of degeneration, of signature $(p,q)$ on the side approached. The inverse form has a canonical simple pole at the wall whose residue is $\delta^{-1}$, giving $N^{*}\Sigma \cong L^{\otimes 2}$: the dying line is a square root of the conormal bundle and the adjoined partner line a square root of the normal bundle. Conservation, absolute form: for a tame wall with both sides nonempty, any symmetric form on any bundle containing the original, standard outside a neighbourhood of the wall in the sense of being $G \perp K$ there with $K$ nondegenerate of the \emph{same} signature on both exterior regions, degenerates somewhere; the constancy of $\operatorname{sig} K$ across the wall is necessary, a completion allowed to switch $K$'s signature being able to match the two sides. \emph{Provenance:} \cite[Hyp.~2.1, Lem.~2.2, Rem.~2.3, Prop.~6.1, Thm.~6.2, Thm.~5.1]{ButlerT4}.
+\end{fact}
+
+\begin{proposition}[the $\Lambda$ line is a tame wall]\label{prop:tamewall}
+Fix the dilation gauge by a smooth nowhere-vanishing $a(\Lambda)$ and write the frozen point in the canonical null frame as $I_{\Lambda} = a I_{0} + b\varphi$ with $2ab = \Lambda/3$ (Theorem \ref{thm:free}). Let $w_{\Lambda} = aI_{0} - b\varphi$, so that $I_{\Lambda}^{\perp}$ is spanned by the Lorentz frame and $w_{\Lambda}$. Then the family $(I_{\Lambda}^{\perp}, \text{induced form})$ over the $\Lambda$ line is a tame corank-one degeneration in the sense of Fact \ref{fact:t4}:
+\begin{enumerate}
+\item[(i)] its Gram matrix in the frame $(e_{1}, \ldots, e_{4}, w_{\Lambda})$ is $\operatorname{diag}(1,-1,-1,-1,-\Lambda/3)$ for every $\Lambda$ and every gauge, so the degenerate locus is the point $\Lambda = 0$ (T1), the radical there is the line spanned by $I_{0}$ (T2), and the dying eigenvalue $-\Lambda/3$ crosses zero with nonzero speed (T3), $\delta(w_{0} \otimes w_{0}) = -\tfrac13\,d\Lambda$ in the parametrisation by $\Lambda$, the $3$ being that of $\ip{I}{I} = \Lambda/3$;
+\item[(ii)] the signatures on the two sides are $(2,3)$ for $\Lambda < 0$ and $(1,4)$ for $\Lambda > 0$: the wall separates the anti-de Sitter and de Sitter intermediate algebras, and crossing it changes the sign of one direction's square, which is the sheaf paper's signature-change wall in a parameter rather than in spacetime;
+\item[(iii)] the gauge $a = b$, which makes $I_{\Lambda}$ proportional to $I_{0} + \varphi$, is not smooth at the wall and is not defined for $\Lambda < 0$; the tame structure needs a smooth gauge, and the scalar invariants (the dying eigenvalue, its crossing speed, the signatures) do not depend on which, while the identification of the radical vector with $I_{0}$ at a fixed normalisation does, $w_{0} = a(0)\,I_{0}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) $\ip{w_{\Lambda}}{w_{\Lambda}} = -2ab = -\Lambda/3$, $\ip{w_{\Lambda}}{I_{\Lambda}} = ab - ab = 0$, and both are orthogonal to the Lorentz frame; the Gram is block diagonal because $I_{0}$ and $\varphi$ are. The radical at $\Lambda = 0$ is spanned by $w_{0} = aI_{0}$. The crossing speed is $d(-\Lambda/3)/d\Lambda = -1/3 \neq 0$. (ii) is the sign of $-\Lambda/3$ read against Corollary \ref{cor:four}. (iii) $a = b = \sqrt{\Lambda/6}$. The script verifies the Gram, the corank at $\Lambda = 0$ only, the gauge independence of the dying eigenvalue, the exact slope $-1/3$ at six nonzero rational values of $\Lambda$, and the two signatures.
+\end{proof}
+
+\begin{theorem}[exceptional algebra, residue, and the completion on both sides]\label{thm:lambdawall}
+For the tame wall of Proposition \ref{prop:tamewall}:
+\begin{enumerate}
+\item[(i)] the sheaf paper's rescaling of the dying direction, $w_{\Lambda} \mapsto w_{\Lambda}/\sqrt{|\Lambda|}$, is proportional, by the fixed factor $\sqrt 3$, to the dark-energy paper's normalisation of the Stelle-West vector to unit length, $e_{V} = V/|V|$, both being normalisations of the same line; the exceptional algebra at the wall is the Lorentz frame orthogonal to the rate of degeneration, $\Cl(1,3) \perp \langle +\tfrac13\rangle \cong \Cl(2,3)$ approached from $\Lambda < 0$ and $\Cl(1,3) \perp \langle -\tfrac13\rangle \cong \Cl(1,4)$ from $\Lambda > 0$, the cross terms vanishing identically so that the rescaled family is exactly, not asymptotically, block diagonal;
+\item[(ii)] the residue of the inverse form at the wall is $-3\,w_{0} \otimes w_{0}$, the coefficient fixed by the normalisation $\ip{w_{\Lambda}}{w_{\Lambda}} = -\Lambda/3$: the pole is the Stelle-West norm, $\Lambda\,\ip{V}{V} = -3$, one algebraic step from the imported identity of Fact \ref{fact:null}; the sheaf paper's identification $N^{*}\Sigma \cong L^{\otimes 2}$ reads $d\Lambda \cong -3\, w_{0} \otimes w_{0}$, which is $-3\,I_{0} \otimes I_{0}$ when $a(0)^{2} = 1$, so the dying direction carries the weight of $|\Lambda|^{1/2}$ and the weightless normalisation of the frozen point's complement is by $\sqrt{|\Lambda|/3}$, which for $\Lambda > 0$ is the asymptotic de Sitter rate $H = \sqrt{\Lambda/3}$, the series' $H^{2} = \ip{I}{I}$;
+\item[(iii)] the rung, with its tractor metric of constant signature $(2,4)$, is a nondegenerate completion of the family on both sides of the wall, of rank one more, the completing direction at the wall being the partner $\varphi$ and away from it the frozen point $I_{\Lambda}$ itself; this is not particular to the cosmological constant: for any $(p,q)$ the family of hyperplanes $\mathrm{span}(f_{1}, \ldots, f_{n}, u + \tfrac{t}{2}v)$ of $\R^{p,q} \perp H$, $H$ hyperbolic with null basis $u, v$, $\ip{u}{v} = 1$, is a tame corank-one family with dying eigenvalue $t$ completed on both sides by the fixed $(p+1,q+1)$, and the $\Lambda$ family is this model with $(p,q) = (1,3)$, $u = I_{0}$, $v = \varphi$, $t = -\Lambda/3$;
+\item[(iv)] this does not contradict the conservation of degeneracy, and lies in the case its proof excludes by hypothesis: the complement of $I_{\Lambda}^{\perp}$ in the rung is $\mathrm{span}(I_{\Lambda})$ with $K = \ip{I_{\Lambda}}{I_{\Lambda}} = \Lambda/3$, whose signature is $(1,0)$ on one side and $(0,1)$ on the other, so the completion is not standard in the sense of Fact \ref{fact:t4}, and the totals $(2,3) + (0,1) = (1,4) + (1,0) = (2,4)$ match because the complement's line changes type across the wall; on the $\Lambda$ line, where the base is contractible and the wall a point, the conservation theorem reduces to the local constancy of a signature and its content is the constancy clause on $K$ alone.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) $V$ is the multiple of $w_{\Lambda}$ with $\ip{V}{V} = -3/\Lambda$ (Theorem \ref{thm:pair}), and $w_{\Lambda}/\sqrt{|\Lambda|}$ has norm $\mp 1/3$, so it is $e_{V}/\sqrt 3$; the rescaled Gram's dying entry is $(-\Lambda/3)/t$ with $t = \mp\Lambda$, and the off-diagonal entries are zero for every $\Lambda$ by Proposition \ref{prop:tamewall}(i), so the sheaf paper's limit is attained identically; the signatures are by inspection. (ii) The inverse Gram's dying entry is $-3/\Lambda$, so $\Lambda$ times it is $-3$; the sheaf paper's residue formula gives $\lim \Lambda\, G^{-1} = (1/T)\,w_{0} \otimes w_{0}$ with $T = -1/3$; and $\ip{V}{V} = -3/\Lambda$ is Fact \ref{fact:frozen}. The weight statement is the sheaf paper's reading of $L^{\otimes 2} \cong N^{*}\Sigma$, and $H^{2} = \ip{I}{I} = \Lambda/3$ is \cite[Fact~2.5]{ButlerT12}, the form the Standard-Model paper uses for its $N = M_{P}/H$ \cite[Obs.~7.1]{ButlerT12}. (iii) The rung's metric has signature $(2,4)$ for every $\Lambda$; at $\Lambda = 0$ the five vectors of $I_{0}^{\perp}$ together with $I_{0}$ span only five dimensions, $I_{0}$ being the radical, and the sixth direction is $\varphi$ (Theorem \ref{thm:free}(i)); for $\Lambda \neq 0$ the sixth direction is $I_{\Lambda}$; the rank count $5 + 1 = 6$ is the projective-to-conformal paper's $m + r$ (Fact \ref{fact:completion}). For the general model, $\ip{u + \tfrac{t}{2}v}{u + \tfrac{t}{2}v} = t$, the complement is spanned by $u - \tfrac{t}{2}v$ of norm $-t$, and the total is the fixed $(p+1,q+1)$; the $\Lambda$ family is the case $u = I_{0}$, $v = \varphi$ with $\ip{I_{0}}{\varphi} = 1$ and $t = -\Lambda/3$ up to the gauge. (iv) $\ip{I_{\Lambda}}{I_{\Lambda}} = \Lambda/3$ changes sign at the wall; Fact \ref{fact:t4}'s conservation theorem requires $\operatorname{sig} K$ constant across it, and its proof states that the clause is necessary because a completion allowed to switch $K$'s signature can match the two sides, which is what happens here. The script verifies (i) to (iv) on the same rational instances: the rescaled dying entries, the two exceptional signatures, $\Lambda\,(G^{-1})_{ww} = -3$ for every $\Lambda \neq 0$, the total signature $(2,4)$ on both sides with the sign of $K$ switching, the five-dimensional span at $\Lambda = 0$, and the signature $(2,4)$ of the Lorentz frame with $I_{0}$ and $\varphi$.
+\end{proof}
+
+\begin{corollary}[two classes of completion]\label{cor:twowalls}
+The sheaf paper's conservation theorem concerns completions with one exterior model: the same nondegenerate complement $K$ on both sides of the wall. For those, degeneracy is conserved and displaced to a shadow wall, and the ambient adjoins a hyperbolic plane to the whole bundle: rank two by Fact \ref{fact:completion}, and to the whole bundle because off the wall the bundle is nondegenerate and the standard complement must exist there. The $\Lambda$ family is completed by a construction of the other class: a family of hyperplanes in one fixed nondegenerate space, whose complement is a single line that changes type across the wall, rank one. Nothing prevents a spacetime wall from being completed in the second class as well, with a complement that is not standard; what the sheaf paper proves is that the first class cannot be made two-sided. The transport principle's founding move, resolving a nilpotent by a pair, is the first class, and the frozen point's passage from anti-de Sitter to de Sitter is the second, which is not a transport (Definition \ref{def:single}).
+\end{corollary}
+
+\begin{proof}
+Theorem \ref{thm:lambdawall}(iii) and (iv) against Fact \ref{fact:t4}.
+\end{proof}
+
+\begin{remark}[what the section adds]\label{rem:t4earns}
+That the family of intermediate algebras in $\Lambda$ is a tame wall at all is generic (Theorem \ref{thm:lambdawall}(iii)). What is specific to the cosmological constant is which objects of the dark-energy paper play the tame structure's roles: the frozen point's null direction is the radical, the Stelle-West line is the dying direction and the Stelle-West norm is the residue; the completion on both sides that the rung provides is the generic one for a family of hyperplanes and is recorded as an instance of the case the conservation theorem excludes, not as a property of $\Lambda$. None of this fixes $\Lambda$, its sign or its magnitude: the family is parametrised by $\Lambda$ and the theory describes the family.
+\end{remark}
+
+\section{What this note depends on}\label{sec:refute}
+
+The note makes no prediction; no observation can refute its identifications, and the only observational input it uses is the sign of $\Lambda$, which selects which branch describes this universe (Remark \ref{rem:physics}). What it claims is a set of identifications, each proved in the note from imported results, and this section says which imported result each identification depends on and what falls with it.
+\begin{enumerate}
+\item[(D1)] \emph{The frozen point.} Theorem \ref{thm:pair}, Proposition \ref{prop:momenta} and all of Sections \ref{sec:soldering}, \ref{sec:run}, \ref{sec:doors} and \ref{sec:lambdawall} rest on the dark-energy paper's frozen point (Fact \ref{fact:frozen}): the parallel scale tractor of norm $\Lambda/3$ with the Stelle-West vector as the fifth direction of $I^{\perp}$. Without it the algebra of Section \ref{sec:pair} is a statement about an arbitrary vector of the rung's hyperbolic plane with no physical referent.
+\item[(D2)] \emph{The soldered residue.} Proposition \ref{prop:belongs} and Corollaries \ref{cor:readings} and \ref{cor:nocoupling} rest on the dark-matter paper's definition of the residue as the signature of the tangent image (Fact \ref{fact:copy}). A definition admitting unsoldered directions into the residue would reopen both questions the section closes and, by the same stroke, the exactness of the dark-matter paper's superselection.
+\item[(D3)] \emph{The copy theorem's inputs.} Corollary \ref{cor:blind} and Proposition \ref{prop:twotowers}(ii) rest on every input of the copy theorem being a spin-group object (Fact \ref{fact:copy}), and Remark \ref{rem:onesees}'s conclusion that the mirror sector is observationally identical to this one rests on Fact \ref{fact:goldstone}: a derived quantity depending on the bare fifth generator would need a physical coupling to the pure-gauge direction, which that Fact excludes.
+\item[(D4)] \emph{The Goldstone proposition.} Proposition \ref{prop:dilation}(iii) rests on the dark-energy paper's $(I,V)$ sector being pure gauge (Fact \ref{fact:goldstone}); a dynamical fixing of the dilation gauge would make the ratio $b/a$ physical.
+\item[(D5)] \emph{The residue of a conformal class.} Remark \ref{rem:holography}'s statement that the boundary of $\mathrm{AdS}_{4}$ has residue $7$ and lies in a tower distinct from the bulk's rests on Fact \ref{fact:conformal}, on Fact \ref{fact:towers}, and on the signature of a conformal class being well defined. A definition of the residue requiring a chosen scale would withdraw it, and with it the remark's statement of the difference between the two frameworks.
+\item[(D6)] \emph{The sheaf paper's hypotheses.} Section \ref{sec:lambdawall} rests on the sheaf paper's tameness conditions and conservation theorem as stated (Fact \ref{fact:t4}); its one observation is about the hypothesis of that theorem and stands or falls with the theorem's statement.
+\end{enumerate}
+Sections \ref{sec:single} to \ref{sec:clock} prove their algebra in the note, importing Facts \ref{fact:reps} and \ref{fact:towers} for it; their identifications with the frozen point, in Propositions \ref{prop:momenta} and \ref{prop:clock}, rest on Facts \ref{fact:conformal} and \ref{fact:frozen} as (D1) records, and the copy theorem's inputs in Theorem \ref{thm:rung}(iii), with the superselection read in Remarks \ref{rem:physics} and \ref{rem:nomech}, on Fact \ref{fact:copy}.
+
+\section{Position in the series}\label{sec:position}
+
+This paper is T14a of the series, a companion to the dark-matter paper T14 \cite{ButlerT14}, downstream of its Theorem 3.4 (types by residue), Theorem 3.5 (the soldered residue), Proposition 4.1 (superselection) and Theorem 4.3 (the mirror copy), and it says where that copy theorem stops: at the real form. It uses the tower paper T3 \cite{ButlerT3} for the clock, the transport paper T1 \cite{ButlerT1} for why a single generator is not a transport, the twistor paper T9 \cite{ButlerT9} and the Standard-Model paper T12 \cite{ButlerT12} for the conformal completion and the twistor module, and the dark-energy paper T10 \cite{ButlerT10} for the frozen point, whose rank-five bundle $I^{\perp}$ is the physical occurrence of the single extension. A sibling companion note to T14 constructs the odd-dimensional twistor spaces and the odd towers' content under the reading in which all five generators are soldered; this note is upstream of nothing there and is consistent with it, the two reading the same odd algebras under different solderings, which Proposition \ref{prop:belongs} assigns to different towers. Theorem \ref{thm:pair} is downstream of T10's Theorem 3.1 and gives its parabolic-to-reductive rotation an algebraic form (Remark \ref{rem:t10}); Theorem \ref{thm:free} runs the completion theorem of the projective-to-conformal paper T2 \cite{ButlerT2} on the wall of Theorem \ref{thm:pair}(iii) and finds the cosmological constant to be the one modulus the transport leaves free, which the capstone should record beside T10's parameter-of-the-laws finding; Section \ref{sec:doors} adds that the frame's components are gauge by T10's Goldstone proposition and that the sign of $\Lambda$ does not select the visible tower. Section \ref{sec:lambdawall} runs the sheaf paper T4 \cite{ButlerT4} on the family over the $\Lambda$ line and finds it a tame wall completed in the class the conservation theorem excludes (Corollary \ref{cor:twowalls}), which T4's successor-problem list should carry. The capstone T17 \cite{ButlerT17} should carry Corollary \ref{cor:blind} as the statement of what the copy theorem does and does not identify above the shadow, Corollary \ref{cor:wall} beside T10's entry, and Corollary \ref{cor:nocoupling} beside the odd towers' missing coupling rule, which this note leaves as missing.
+
+\section{Machine verification}\label{sec:verification}
+
+Every computational identity asserted in this note has been verified in exact rational arithmetic by the script \texttt{verify\_T14a.py} \cite{ButlerVerifyT14ext}, which imports the series' shared library \texttt{GA.py} and uses its basis-blade engine; no floating point anywhere. The script indexes generators from zero, so its $e_{0}, \ldots, e_{5}$ are the text's $e_{1}, \ldots, e_{6}$. Eighty-six checks, all passing, in nine parts.
+
+\emph{Part A: the volume element.} Centrality and the sign $\omega^{2} = (-1)^{n(n-1)/2+q}$ on every diagonal signature of dimensions one, three, five and seven; the four signs of Corollary \ref{cor:four}; commutation of $\omega$ with the added generator; Theorem \ref{thm:split}(iii) and the identities behind (i) and (ii), with the specific sign assignment of (i), over every odd signature of dimensions three and five; and the dimension of the centre, two over every odd signature of dimension at most five and one over every even signature of dimension at most six.
+
+\emph{Part B: doubling and complexification.} For the two doubled extensions, the central idempotents $(1 \pm \omega)/2$, the two ideals of dimension sixteen, the action of $e_{5}$ as $+s\,\omega'$ and $-s\,\omega'$ on them with $s = e_{5}^{2}$, and the shadow meeting the even subalgebra exactly in its even part; for the two complexified extensions, the spanning of all thirty-two dimensions by $\Cl(p,q) + \omega\,\Cl(p,q)$ and $\omega^{2} = -1$ central.
+
+\emph{Part C: where the mirror sits.} For all four extensions, the pairwise anticommutation and the squares of the bivectors $e_{\mu}e_{5}$, the generated subalgebra equal to the even subalgebra, the shadow of dimension sixteen meeting it in dimension eight, and the squares of $\omega e_{\mu}$ (reversed in the complexified cases, unchanged in the doubled ones); for $\Cl(2,3)$, the intersection equal to $\Cl^{0}(1,3)$.
+
+\emph{Part D: the rung.} In $\Cl(2,4)$, the signatures $(2,3)$ and $(4,1)$ generated by $e_{i}e_{6}$ and $e_{i}e_{1}$, both generating the even subalgebra of dimension thirty-two; $\omega_{6}$ even, $\omega_{6}^{2} = -1$, commuting with every even element and anticommuting with every vector; the copies of $\Cl(1,3)$ and $\Cl(3,1)$ inside the even subalgebra.
+
+\emph{Part E: the clock and the paths.} The residues of the four extensions, of the oriented pair and of the odd towers' representatives; the residue preserved by conformal completion; the centres of the four extensions of dimension two with the signs that separate the reversed pairs, and the centre of the rung of dimension one; the enumeration of sign-change walks from $(1,3)$ to $(3,1)$, exactly one, with $(0,4)$ a dead end.
+
+\emph{Part F: the frozen point and the ascent's pair.} On exact rational instances of $I = a\,e_{+} + b\,e_{-}$ with $\ip{I}{I} = 3$, $-3$ and $0$: the orthogonality of the Lorentz frame and $w$ to $I$, $\ip{w}{w} = -\ip{I}{I}$; the signatures $(1,4)$, $(2,3)$ and $(1,3;1)$ of $I^{\perp}$ by exact congruence; $w = I$ and $I^{2} = 0$ in the null case; the opposite signs and anticommutation of $I$ and $w$; the generation of all sixty-four dimensions by $I^{\perp}$ with $I$ when $\ip{I}{I} \neq 0$; in $\Cl(1,3;1)$ the nilpotent generator, its anticommutation with the Lorentz frame, the sixteen-dimensional ideal and its vanishing square; and the signature $(1,3)$ of the Lorentz frame in all three cases.
+
+\emph{Part G: the transport on the wall.} In the projective-to-conformal paper's model of the completion of $(1,3;1)$: the signature $(2,4)$ by exact congruence; the rank-five linear system for the image of the partner and its unique null solution $c = 0$; the norm $2ab$ of $aI + b\varphi$ on instances of both signs and zero; the invariance of the norm under rational boosts and the swap, the image staying orthogonal to the Lorentz frame; the centres of the two intermediate algebras; and the null pair $v, v^{*}$ in the root paper's normalisation, its identification with the canonical frame, and the norms $\pm\alpha\beta$ and orthogonality of $\alpha v \pm \beta v^{*}$.
+
+\emph{Part H: the two negative results.} The canonical null frame in the rung's diagonal basis; $B = I \wedge \varphi = -e_{+}e_{-}$ with $B^{2} = 1$, commuting with the Lorentz bivectors and vectors and anticommuting with $e_{\pm}$; the rational rotor $5/4 + (3/4)B$ unit, fixing the Lorentz frame, scaling $I$ by $4$ and $\varphi$ by $1/4$, moving a frozen point along its hyperbola; the mirror's $I^{\perp}$ signatures $(4,1)$ and $(3,2)$ on the same instances; the two-by-two rule; the common presentation of $\Cl^{0}(1,4)$ and $\Cl^{0}(4,1)$; and the squares and factorisations of the bare fifth generator.
+
+\emph{Part I: the wall in the cosmological constant.} In four dilation gauges and at seven rational values of $\Lambda$ including zero: the Gram $\operatorname{diag}(1,-1,-1,-1,-\Lambda/3)$ of $I_{\Lambda}^{\perp}$ and its corank at $\Lambda = 0$ only; the gauge independence of the dying eigenvalue; the exact crossing slope $-1/3$ in the parametrisation by $\Lambda$; the signatures $(2,3)$ and $(1,4)$ on the two sides; the rescaled dying entries $\pm 1/3$ and the exceptional signatures; $\Lambda\,(G^{-1})_{ww} = -3$ in every gauge with $w_{0} = a\,I_{0}$; the total signature $(2,4)$ on both sides with the complement's sign switching; the five-dimensional span at the wall and the signature of the Lorentz frame with $I_{0}$ and $\varphi$; and the general hyperplane model of Theorem \ref{thm:lambdawall}(iii) for five signatures $(p,q)$ and five values of $t$.
+
+What the script does not check: the isomorphism types $\Mat(2,\HH)$ and $\Mat(4,\R)$ of the two oriented shadows (Fact \ref{fact:reps}, imported; the note uses that they differ and, in Corollary \ref{cor:blind}, which type belongs to which tower), the frozen-point geometry (Facts \ref{fact:frozen} and \ref{fact:null}, imported; the script checks the algebra of a vector of each norm sign in the rung, not that the parallel tractor is that vector), the algebra-map properties of Theorem \ref{thm:split}(i) and (ii) (argued in the text; the script checks the identities they rest on and the four extensions in detail), the identification of the MacDowell-Mansouri translation part with the bivectors $e_{\mu}e_{5}$ beyond the signs of their squares, the reversal of the tractor norm under $g \mapsto -g$ (Proposition \ref{prop:twotowers}(i), argued in the text; Part H checks its consequences from the reversed signature declared as input), and the transitivity of the boosts on each level set of the norm (Theorem \ref{thm:free}(iii), argued in the text; Part G checks invariance under particular boosts).
+
+\begin{thebibliography}{99}
+
+\bibitem{ButlerT1}
+L.~Butler,
+\emph{The Transport Principle: Total Division in Clifford Algebras via Minimal Completion},
+Transport Papers T1 (2026).
+
+\bibitem{ButlerT2}
+L.~Butler,
+\emph{Projective Completes to Conformal: The Minimal Nondegenerate Completion of a Degenerate Clifford Algebra, and Why PGA's Missing Inverses Live in CGA},
+Transport Papers T2 (2026).
+
+\bibitem{ButlerT3}
+L.~Butler,
+\emph{The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second Quantisation},
+Transport Papers T3 (2026).
+
+\bibitem{ButlerT4}
+L.~Butler,
+\emph{Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion, and the Exceptional Algebra},
+Transport Papers T4 (2026).
+
+\bibitem{ButlerT9}
+L.~Butler,
+\emph{The Twistor Correspondence: Ascended Spinors, Incidence, and the Palatial Bridge},
+Transport Papers T9 (2026).
+
+\bibitem{ButlerT10}
+L.~Butler,
+\emph{Dark Energy and the Action of Gravity: MacDowell-Mansouri, the Frozen Point, and One Way to Grip},
+Transport Papers T10 (2026).
+
+\bibitem{ButlerT12}
+L.~Butler,
+\emph{The Standard Model from the Minimal Massive Composite},
+Transport Papers T12 (2026).
+
+\bibitem{ButlerT14}
+L.~Butler,
+\emph{Dark Matter and the Arrow of Time: The Five Dark Towers},
+Transport Papers T14 (2026).
+
+\bibitem{ButlerT17}
+L.~Butler,
+\emph{Capstone: The Transport Programme, Method, Status, and the Falsifiable Ledger},
+Transport Papers T17 (2026).
+
+\bibitem{Planck2018}
+Planck Collaboration,
+\emph{Planck 2018 results. VI. Cosmological parameters},
+Astron.\ Astrophys.\ 641 (2020) A6.
+
+\bibitem{MacDowellMansouri1977}
+S.~W.~MacDowell and F.~Mansouri,
+\emph{Unified geometric theory of gravity and supergravity},
+Phys.\ Rev.\ Lett.\ 38 (1977) 739.
+
+\bibitem{StelleWest1980}
+K.~S.~Stelle and P.~C.~West,
+\emph{Spontaneously broken de Sitter symmetry and the gravitational holonomy group},
+Phys.\ Rev.\ D 21 (1980) 1466.
+
+\bibitem{ButlerVerifyT14ext}
+L.~Butler,
+\emph{verify\_T14a.py: machine verification for the companion note ``One Dimension at a Time: The Odd Extensions of the Oriented Towers''},
+Python script, deposited with this note alongside the shared library GA.py (2026).
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,18 @@
+functions:
+  check_sds_radial_generator_data:
+    kind: sampled
+    clauses: ["(ii) R(k,A,k,B) = 0 and R(k,A,B,C) = 0 on the radial null generators"]
+    omits: "exact rational arithmetic but only at three (M, Lambda, r0) points and two displaced points along each generator; R(k,A,B,C) = 0 is not rechecked at the displaced points; vanishing of expansion and shear along all of gamma is not asserted here (see check_entropy_change_without_flux)"
+  check_density_is_cartan_curvature:
+    kind: sampled
+    clauses: ["(i) s = (1 - 3K/Lambda)/4 = -3/(4 Lambda) F(e2,e3,e2,e3)", "(i) s = 0 on every local edge of de Sitter", "(i) A/4 - 3 pi/Lambda on the horizon sphere"]
+    omits: "R_Sigma = 2K (Gauss equation for vanishing k-extrinsic curvature) is the input of jm_density, not derived; the Cartan curvature F is K - Lambda/3 by definition, no link to the Lorentz block of the MacDowell-Mansouri field strength is computed; de Sitter checked on four planes at two Lambda values; sphere integral at three (r_b, Lambda) points using the closed form for K; the Killing field and surface gravity kappa_b are not tested"
+  check_entropy_change_without_flux:
+    kind: sampled
+    clauses: ["(ii) s(lambda) = -3M/(2 Lambda r^3), delta A = 0, delta Q = 0", "(ii) Delta S closed form, positive outward and negative inward", "(ii) first-order rate +-9M/(2 Lambda r0^4)", "(iii) defect (k.grad s) lambda_0 of the integrated reading"]
+    omits: "three (M, Lambda, r0) points, two lambda_0 values, four marching steps; the O(lambda_0^2) remainder is not tested beyond the jet derivative; (iii) consequences (refutation condition (a), failure of (H1), no d_iS >= 0 reading, other entropy functionals) are logical, not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact rational arithmetic from the metric jets, as the docstring says; every check is at sample parameters, so none is exact for free M, Lambda, r0"

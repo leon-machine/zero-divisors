@@ -1,0 +1,22 @@
+functions:
+  check_constituent_content_and_weights:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_odd_and_even_halves:
+    kind: exact
+    clauses: ["(2)", "(3) C^2 (x) CS = Con_0 + Con_2 = L* + Q*, the Fock vacuum slot is the antilepton"]
+    omits: "same chirality half is represented only as odd grade (even grade for the antiparticle half); sign epsilon and the physical chirality convention are not modelled; Q and L are the content labels, not particle identifications"
+  check_duality_on_the_section:
+    kind: exact
+    clauses: ["(3) Con_k* is isomorphic to Con_(3-k) on S(U(2) x U(3))"]
+    omits: "isomorphism read from negated torus weights equal to the weights of Con_(3-k) shifted by the determinant twist, with the twist shown trivial on y; characters decide because the constituents are the finite-dimensional modules of a compact group, no explicit intertwiner"
+  check_lattice_condition:
+    kind: exact
+    clauses: ["(4)"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is a finite exact weight computation on the four constituents k = 0..3."

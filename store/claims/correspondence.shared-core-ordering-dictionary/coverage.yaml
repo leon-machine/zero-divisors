@@ -1,0 +1,22 @@
+functions:
+  check_palatial_quadratics_and_u22:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "closure [q(M), q(N)] = hbar q([M, N]) is checked at one sample pair (hbar = 2/5, monomials of degree <= 2); the real kernel u(2,2) of dimension 16 and su(2,2) as the 15-dimensional span of the traceless anti-Hermitian bivector images are exact; the isomorphism su(2,2) = so(2,4) is not checked beyond dimension"
+  check_bivectors_act_as_sl:
+    kind: exact
+    clauses: ["(2) the bivectors act on CS as sl(CS)"]
+    omits: "closure of the bivectors under commutator on so(2,4)_C is not computed here; traceless with complex rank 15 gives all of sl(4)"
+  check_klein_identification_is_lie_embedding:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "the homomorphism identity is checked on 30 of the 105 pairs of basis bivectors, on monomials of degree <= 2, at hbar = 2/5; injectivity (rank 15) and the adjoint action on Z^alpha and Zbar_beta (all 15 bivectors, monomials of degree <= 1) are checked for every basis bivector"
+  check_same_ordering_shift_both_storeys:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "the palatial shift -2 hbar is checked as an operator identity on monomials of degree <= 3; the Clifford shift N_k - 1/2 on the three Witt pairs; the shifts are shown to be the same sign (negative), one half per dimension or mode"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Ordering shifts and the sl(CS) and su(2,2) dimension counts are exact; the Lie-algebra homomorphism and closure clauses are sampled on subsets of basis pairs."

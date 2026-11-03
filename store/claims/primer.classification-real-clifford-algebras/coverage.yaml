@@ -1,0 +1,18 @@
+functions:
+  check_classification_table:
+    kind: sampled
+    clauses:
+    - '"Cl(p,q) is isomorphic to the entry of the clock table by d = p - q mod 8, with k fixed by dim = 2^n"'
+    omits: the 36 signatures with n <= 7, covering every residue d; the Wedderburn type is computed from exact invariants (semisimplicity, centre, primitive idempotent corner) but periodicity to larger n is not tested here
+  check_split_summands_isomorphic_and_simple:
+    kind: sampled
+    clauses:
+    - '"Cl(p,q) is simple except when p - q = 1 mod 4, where it is the direct sum of two isomorphic simple algebras"'
+    omits: eight split signatures (p - q = 1 mod 4) with n <= 7; the simple case off p - q = 1 mod 4 is tested in the table function
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the classification is verified from exact invariants on all signatures with n <= 7, which does not cover the statement for all n
+untouched_premises:
+  std-algebra.periodicity: "the second derivation cites the periodicity result for the induction; the check verifies the table directly"

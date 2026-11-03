@@ -1,0 +1,13 @@
+functions:
+  check_limit_forgets_residue:
+    kind: partial
+    clauses: ["(i) the frame bijection Phi is square- and anticommutation-preserving, carries T_k into T'_{k+max(p,q)}, with inverse on generators", "(iii) u_i = x_i x_n present Cl^0(p,q) as Cl(p,q-1) or Cl(0,p-1) of even residue", "(iii) floor centre span{1, omega} at odd residue, only R commutes with the next plane; centre R at even residue"]
+    omits: "exact blade computations on truncations: twelve signatures with k = 0, 1, 2 for (i), eleven odd-n signatures for the u_i presentation, six odd-residue and five even-residue signatures with k = 0, 1, 2 (or 0, 1) for the floor centres, so each is sampled over signatures and floors; not tested: L_{p,q} = Cl(R^{p,q} perp H_infty) and the isomorphism with Mat_{2^infinity} (imported), that Phi does not carry B_infinity onto the plane subalgebra, that L_{p,q} determines neither n nor r, (ii) absorption for even r, L_{p,q} = Cl^0(p,q) tensor Mat_{2^infinity} and non-isomorphism with Cl(p,q) tensor Mat_{2^infinity} (only the floor-level centre contrast is checked), the centre statements for the limit algebras, and (iv) the *-isomorphism, unique C*-norm and CAR completion"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring restricts the check to (i) and (iii) on truncations, and the checks do that; the limit-level claims in (ii)-(iv) rest on the cited theorems"
+untouched_premises:
+  std-algebra.existence-uniqueness: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.functoriality: "standard algebra cited in the proof; the check computes the statement directly"

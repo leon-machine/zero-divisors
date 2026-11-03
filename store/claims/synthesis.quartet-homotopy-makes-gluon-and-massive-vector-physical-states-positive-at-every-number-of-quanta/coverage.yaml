@@ -1,0 +1,24 @@
+functions:
+  check_one_particle_quartets_and_homotopies:
+    kind: sampled
+    clauses:
+    - "(ii) gluon at k = (5,3,4,0): Q1^2 = 0, Krein-self-adjoint, homotopy exists and the stated R1 works, transverse span Krein-orthogonal with Gram (25, 1)"
+    - "(iii) massive at p = (5,4,0,0), beta = 3: nilpotent, self-adjoint, homotopy exists and the stated R1 works, p-perp Krein-orthogonal with Gram (9, 1, 1); beta = 2 not nilpotent"
+    omits: "one null and one timelike rational momentum; the general case is the algebra in the proof"
+  check_second_quantised_homotopy_counts_quartet_quanta:
+    kind: sampled
+    clauses:
+    - "(i), (iv) Q^2 = 0, Krein self-adjointness and Q R + R Q = dGamma(P) on every sector T <= 4 (gluon), T <= 3 (massive); sector sizes 1, 6, 19, 44, 85 and 1, 7, 26, 70"
+    omits: "all T is the derivation lemma in the proof"
+  check_cohomology_is_the_positive_physical_fock_space:
+    kind: sampled
+    clauses:
+    - "(iv) ghost-number-zero cohomology 1, 2, 3, 4, 5 (gluon, T <= 4), 1, 3, 6, 10 (massive, T <= 3), 1, 4, 10, 20 (two colours, T <= 3), Krein signature (dim H, 0, rank) on ker Q"
+    omits: "all T and all finite direct sums follow from (i)"
+  check_broken_gauge_algebra_one_particle_count:
+    kind: exact
+    clauses:
+    - "(v) two doublets with neutral aligned vacuum values (input): Goldstone map of rank 3 computed, 9 massless and 3 massive vectors, unbroken u(1) mixing T3 and Y; direct sum of the one-particle spaces (75 modes) Krein-self-adjoint, Q1^2 = 0, Q1 R1 + R1 Q1 = P, rank P = 48, physical span of Krein signature (27, 0, 0); 8 - 3 = 5 physical scalars"
+untouched_premises:
+  synthesis.imported-brst-kugo-ojima-strocchi-and-gribov: "cited for the standard frame (the quartet mechanism and its interacting form under Kugo and Ojima's hypotheses); the check constructs its own charges and homotopies and computes nothing from the Fact"
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "clauses (K1), (K2) are hypotheses; the check builds the forms they state (Gupta-Bleuler -u.w, ghost pairing 1) directly"

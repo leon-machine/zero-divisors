@@ -1,0 +1,22 @@
+functions:
+  check_bargmann_fock_ccr_and_adjoint:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "four variables and monomials of degree <= 6 with one fixed coefficient, adjointness on every seventh monomial pair; not all polynomials or arbitrarily many modes; the link to photon modes and to the palatial algebra (an analogy in the statement) is not tested"
+  check_one_complex_mode_per_null_momentum:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "six unit directions n only, not every null k"
+  check_positive_frequency_is_positive_helicity:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "six directions and one rotation angle (cos, sin = 4/5, 3/5); the massless even spinor claim is checked on the spinors built from the 8 even blades for both chiralities, not on every spinor in ker k"
+  check_riemann_silberstein_field:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "only the annihilation/creation coefficient structure (X + I4 Y, X - I4 Y) per direction and the sign of T03's * on bivector blades; the normalisation N, the 2X factor, the sum over modes and the exponentials are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each of clauses (1)-(4) is checked exactly at chosen directions or degrees; the analogy to the palatial algebra is correctly not claimed as tested"

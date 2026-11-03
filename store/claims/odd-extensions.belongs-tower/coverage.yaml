@@ -1,0 +1,21 @@
+functions:
+  check_soldered_space_is_the_lorentz_frame:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Six rational (t, s) samples plus one Lambda = 0 point. The identification of {I,V}^perp with e(TM), the image of the soldering form, and nabla V = e come from the imported Fact and are not computed; only that V is orthogonal to and not in the frame is."
+  check_tower_charge_six_not_five_or_seven:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Residue is taken as (p - q) mod 8 of the form on the relevant space, on six samples (both signs of Lambda); that this is the copy theorem's residue, and that Cl(I^perp) is a sub-object of the rung rather than a ground shadow, is the imported Fact plus a dimension count (32 inside 64), not computed further."
+  check_isometry_carries_e_v_to_a_tangent_direction:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Three Lambda > 0 samples with rational |V|, one particular isometry (the orthonormal-basis coordinates). \"By no map of soldered data\" is the proof's definitional step; what is computed is the mismatch of soldered signatures, (1,3) in four of five dimensions against (1,4)."
+untouched_premises:
+  dark-matter.projection-every-towers-content-dilutes-ones: "Cited for the dilution of content across towers, which plays no part in the signature and residue computation checked here."
+  dark-matter.p1-single-frozen-point: "Hypothesis that the world has a single frozen point; it is the setting of the check (one I per sample) and has no computable content."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks compute the soldered signature, the residues 6 versus 5 or 7, and the e_V mismatch within sampled Lambda; the soldering identification itself is imported."

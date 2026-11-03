@@ -1,0 +1,20 @@
+functions:
+  check_frozen_point_norm_complement_stabiliser_both_signs:
+    kind: sampled
+    clauses: ["Q(I) = Lambda/3 in signature (2,4)", "I^perp has signature (1,4) for Lambda > 0 and (2,3) for Lambda < 0 with stabiliser SO(1,4) or SO(2,3)", "I is parallel"]
+    omits: "Two Lambda values of each sign. The stabiliser is identified by dimension 10 and trace-form signature (4,6) or (6,4), not by an explicit isomorphism with so(1,4), so(2,3). Parallelism of I is checked for one sample hb^-1 and Omega in five directions with the Einstein field P = (Lambda/6) id taken as given."
+  check_stelle_west_vector_and_lorentz_stabiliser:
+    kind: sampled
+    clauses: ["V is a section of I^perp of squared norm -3/Lambda", "its stabiliser is the Lorentz group of {I,V}^perp of signature (1,3)"]
+    omits: "Four Lambda samples; the Lorentz algebra is identified by dimension 6, trace-form signature (3,3) and the (1,3) signature of {I,V}^perp. V is a constant vector here, so V being a section over the manifold is not tested."
+  check_soldering_form_and_reduced_connection:
+    kind: sampled
+    clauses: ["its covariant derivative is the soldering form hb^-1(e^mu)", "the reduced connection is a Lorentz connection plus the translation part e^mu ^ V/Q(V) = -e^mu ^ V/l^2"]
+    omits: "Four Lambda samples and five directions with one sample hb^-1 and one sample Omega (the identities are linear in A)."
+untouched_premises:
+  odd-extensions.imported-frozen-point-external: "Declared as the external-literature source (MacDowell and Mansouri; Stelle and West) of the construction; the check computes the geometry directly instead of calling it."
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "deleted the stale docstring note claiming the formal text writes e^mu ^ V/l; the formal text reads e^mu ^ V/Q(V) = -e^mu ^ V/l^2, as tested"

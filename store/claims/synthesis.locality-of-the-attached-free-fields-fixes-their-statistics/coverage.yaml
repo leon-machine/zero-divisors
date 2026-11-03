@@ -1,0 +1,15 @@
+functions:
+  check_polarisation_sums_have_degree_two_s:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "five rational null k (one of negative energy): Lambda^2 = Lambda, k Lambda = 0, P(-k) = -P(k), P(2k) = 2P(k) for the spinor; two transverse polarisations in the stored mode space; the transverse photon sum equals the quadratic polynomial for all 36 pairs of basis bivectors, with P(-k) = P(k), P(2k) = 4P(k); the general k is the polynomial identity in the proof"
+  check_locality_selects_the_statistics:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "four rational spacelike points, eta in {+1, -1}, c in {1, 2, 1/2} (positive norm) and c = -1 (indefinite form, asserted as the exception), one photon component (A = B = gamma_0 gamma_1); box(1/Q) = 0 there; the spacelike set as a whole is the rational-function argument in the proof; the massless two-point function is cited, only 1/Q and its evenness are used"
+  check_storeys_carry_opposite_brackets:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "a tower plane in Cl(1,1) and the polynomial pair on z^n for n <= 5; the no-CCR theorem is cited, not recomputed"
+untouched_premises:
+  synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem: "cited for D+ and Pauli's argument; the check uses only f = 1/Q and its evenness, computed directly"

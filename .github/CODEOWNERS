@@ -1,0 +1,5 @@
+# Every change needs a maintainer's review; subject owners can be added per folder.
+*                         @leon-machine
+/store/config.yaml        @leon-machine
+/store/subjects.yaml      @leon-machine
+/store/tombstones.yaml    @leon-machine

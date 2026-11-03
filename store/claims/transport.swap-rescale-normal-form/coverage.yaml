@@ -1,0 +1,18 @@
+functions:
+  check_incidence_and_ordinary_normal_form:
+    kind: sampled
+    clauses: ["incidence condition Q(x) = 2st", "ordinary points (s != 0) have normal form (1, x, Q(x)/2)"]
+    omits: "three bases (1,1), (2,1), (1,3), four x and five (s,t) pairs; N^2 = Q(x) - 2st and the coordinate read-back are exact on those samples; the normal form is tested for three values of s"
+  check_iota_is_the_swap_rescale_involution:
+    kind: sampled
+    clauses: ["iota(s,x,t) = (2t, x, s/2) is a linear involution preserving the incidence condition", "recovers the reciprocal on normalising the first slot where possible"]
+    omits: "same three bases and sample grid; the overall sign -1 of e_+ N e_+ is dropped by hand; 'total' (image never zero) is not separately asserted, and 'where normalisation is impossible the output is an ideal point' is not asserted here"
+  check_three_strata_of_ideal_points:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "(i) unique representative (0, x/(2t), 1/2) and image of lifted null points on three null vectors and three t; on the grid x in {-1, 0, 1}^n, t in {0, 1/2, -1, 2} for the three bases, projective classes are computed by proportionality: classes never mix strata, stratum (i) classes coincide exactly when the labels x/(2t) do, stratum (ii) classes exactly when the x are proportional (null rays), stratum (iii) is one class, and the class counts match hand counts (2/4/6 rays, 12/24/36 labels); bijectivity onto all null vectors and exhaustiveness off the grid are not tested; (iii) also checks e_+ nO e_+ = -nInf/2"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_three_strata_of_ideal_points now computes projective classes on a grid: strata disjointness, labelling of (i) by null vectors and of (ii) by null rays, (iii) a single class, with hand-derived class counts; docstring says grid-only."

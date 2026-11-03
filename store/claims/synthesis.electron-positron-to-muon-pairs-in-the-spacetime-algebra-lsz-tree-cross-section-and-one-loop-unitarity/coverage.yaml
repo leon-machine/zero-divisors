@@ -1,0 +1,34 @@
+functions:
+  check_lsz_residues_are_spin_projectors:
+    kind: sampled
+    clauses:
+    - '(1) on shell (p + m)^2 = 2m(p + m), (p - m)^2 = -2m(p - m), (p + m)(p - m) = 0, traces +-4m, trace-two idempotents; the residue of S(p) at the pole is p + m'
+    omits: 'three rational on-shell momenta and one off-shell momentum; the identities are proved for all p in the text'
+  check_tree_spin_sum_from_clifford_traces:
+    kind: sampled
+    clauses:
+    - '(2) the product of the two Clifford traces equals the standard form at three rational configurations (both masses, massless electron, both massless); control with the particle residue for the positron fails'
+    omits: 'three kinematic points; the identity is a polynomial identity proved by the trace formula in the text'
+  check_massless_angular_distribution_and_cross_section:
+    kind: complete
+    clauses:
+    - '(2) massless: |M|^2/e^4 = 1 + cos^2 theta at five rational angles (degree two, so exact); dsigma/dOmega = alpha^2(1 + c^2)/(4 s); sigma = 4 pi alpha^2/(3 s)'
+    omits: 'the two-body phase-space factor 1/(64 pi^2 s) is imported'
+  check_massive_cross_section_threshold_factor:
+    kind: complete
+    clauses:
+    - '(2) m_e = 0: the trace result is quadratic in cos theta (checked at a fourth angle) and integrates to (4 pi alpha^2/(3 s)) beta (3 - beta^2)/2 at four rational beta (a cubic in beta, so exact at that s)'
+    omits: 'one value of s; both sides scale as 1/s'
+  check_one_loop_absorptive_part_equals_tree_rate:
+    kind: complete
+    clauses:
+    - '(3) the window ends (1 -+ beta)/2 are the roots of x(1-x) = m^2/s; Im Pi_hat = -(alpha/6) beta (3 - beta^2) equals -s sigma_tree/(4 pi alpha), four rational beta (a cubic)'
+    omits: 'the i0 prescription of the logarithm and the optical-theorem reading are in the proof'
+  check_one_loop_large_s_constant_and_longitudinal_part:
+    kind: sampled
+    clauses:
+    - '(3) int x(1-x) ln(x(1-x)) = -5/18, the constant -5/3 and the coefficient 1/3; the q_mu q_nu part of the dressed photon vanishes between on-shell currents for every nu, control q = p1 - p2 fails'
+    omits: 'one massive kinematic point for the current identity (proved algebraically in the text)'
+untouched_premises:
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "a premise of the charge-renormalisation sentence only (argued); the check computes the tree amplitude, the absorptive part and the large-s constant, which do not use it"
+  synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient: "the reduction formula and Ward's identity, cited; the check computes the residues, traces and integrals directly"

@@ -1,0 +1,20 @@
+functions:
+  check_null_cone_determines_the_form_up_to_scale:
+    kind: sampled
+    clauses: ["\"the null cone determines Q up to a nonzero real scalar\" (the three null families)", "\"at n = 2 the first family alone suffices\""]
+    omits: "the nine signatures up to (3,3) only, not general n; the first-family kernel is checked by dimension 1 + p(p-1)/2 + q(q-1)/2, not by exhibiting the stated form"
+  check_null_vector_exists_iff_signature_mixed:
+    kind: sampled
+    clauses: ["\"Cl(p,q) contains a null vector if and only if pq != 0\" (null-locus criterion)"]
+    omits: "all signatures with n <= 6 only, not general n; tests vectors of R^(p,q) rather than elements of Cl(p,q)"
+  check_two_dimensional_causal_automorphisms_are_not_conformal:
+    kind: partial
+    clauses: ["\"in n = 2 the two null coordinates can be reparametrised independently and the causal automorphism group is infinite-dimensional\""]
+    omits: "the n >= 3 Zeeman theorem (literature, untested); infinite dimension only illustrated by four coefficient sets and four independent odd powers on a 9 x 9 grid, one non-affine second difference"
+untouched_premises:
+  one-relation.imported-null-cone-determines-form-zeemans-external: "literature restatement of Zeeman and Hawking-Ellis, no finite core (the docstring says so)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the first and third statements have exact finite cores that the checks test within the recorded scope; Zeeman for n >= 3 is declared literature"

@@ -1,0 +1,18 @@
+functions:
+  check_store_sigma_and_real_lines:
+    kind: sampled
+    clauses: ["setup: Sigma Hermitian of rank four with Som and Spi null, phase fixed (lambda = 1, mu = 2)", "(ii) lines of real points (y = 0) are Sigma-null"]
+    omits: "signature (2,2) is not computed (follows from rank four and two null planes); the chart is checked to reproduce the four real basis vectors and the null Gram matrix at four real points x; the Gram matrix is not compared with the formula -2 sigma(y-hat pi, pi')"
+  check_restricted_form_is_imaginary_part:
+    kind: sampled
+    clauses: ["(i) the form on the incidence line depends only on y, determinant of sign Q(y)", "(ii) definite iff Q(y) > 0, signature (1,1) iff Q(y) < 0, rank one for y null nonzero, positive iff y^0 > 0"]
+    omits: "six values of y (definite future, definite past, split, timelike, spacelike, null) and two values of x each; determinant 4 Q(y) and trace 4 y^0 are read in the stored basis of the line, so independence of x is sampled, not proved; rank one is checked at one null y"
+  check_imaginary_boost_half_strip:
+    kind: sampled
+    clauses: ["(iii) x(theta) = rho cos(theta) e_1 + i rho sin(theta) e_0 has Gram 2 rho sin(theta) times the identity: definite of one sign on each half strip, null at 0 and pi"]
+    omits: "one rho = 3/2 and six rational points (cos theta, sin theta), two in each half strip and the two null ones; the point x(theta) is written down directly rather than obtained by applying the imaginary boost, and the period 2 pi and x(pi) = -x_0 are read off the formula"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact arithmetic on the store's own Sigma and chart; all three clauses are checked at sample points only"

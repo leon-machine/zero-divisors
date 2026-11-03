@@ -1,0 +1,5 @@
+Containment is immediate: $B_i \in \Lambda^2 W$ and $\Lambda^2 W$ is a subalgebra (brackets of operators preserving $W$ and annihilating $W^\perp$ do the same). For fullness, compute with \eqref{eq:bivectoraction}, the action of bivectors on vectors as the orthogonal Lie algebra (\claimref{std-algebra.bivector-lie-algebra}): for $u,v,u',v'$ orthogonal frame vectors,
+\[
+[\,u\wedge v,\ v\wedge w\,] \;=\; Q(v)\; u\wedge w ,
+\]
+and brackets of wedges with no shared factor vanish. Hence $[B_1, B_2] = [e_0\wedge e_1,\, e_0 \wedge e_2]$: rewriting $B_1 = -e_1\wedge e_0$, this is $-Q(e_0)\, e_1\wedge e_2 = -R_{12}$, and cyclically for the other pairs: all three rotations appear. Then $[R_{12}, B_2] = [e_1\wedge e_2, e_0\wedge e_2]$ $= -[e_1\wedge e_2,\, e_2\wedge e_0] = -Q(e_2)\,e_1\wedge e_0 = -B_1$ recovers the boosts, and the six elements $\{B_i, R_{ij}\}$ are a basis of $\Lambda^2 W$. The verification script performs the generation exactly: starting from the three boosts as antisymmetric matrices over $\mathbb{Q}$ preserving the $(2,4)$ form, it closes under commutators and confirms the resulting span has dimension six and lies in $\Lambda^2 W$.

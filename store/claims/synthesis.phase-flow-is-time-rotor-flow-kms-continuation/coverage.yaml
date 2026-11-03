@@ -1,0 +1,41 @@
+functions:
+  check_star_adjoint_and_compact_part:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'Lie-algebra level only: E-adjoint of ad_B equal to ad_{B*}, compact part antisymmetric, boost part symmetric and nonzero iff B_b is nonzero, at fixed rational bivectors in six signatures; the statement that Ad(e^{lambda B}) is a *-automorphism for all lambda iff B_b = 0, its E-orthogonality and the imaginary spectrum are not exponentiated here'
+  check_atom_boost_rotor_not_star:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'Second sentence of (ii) only: the atom boost in Cl(1,1), *-symmetric, weights -2 and +2, and its rotor at the single rapidity e^{lambda/2} = 2 is not a *-map; the first sentence (no clock generates a *-automorphic flow) is not tested here'
+  check_rotor_flow_not_positive:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: Witness states and X at three values of lambda (e^{2 lambda} = 4, 2, 11/10) on two modes rather than every lambda != 0; the value formula s^2(1 - c^2 cosh^2 2 lambda) is asserted exactly at each
+  check_rotor_at_beta_is_kms_swap:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: One mode (2x2 Gibbs matrices) and three values of e^{beta/2}, over all matrix units so linear in A, B; the identity Ad(e^{lambda K}) = tau_{-i lambda} and multi-mode windows are not tested
+  check_detuned_pairing_and_hop:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: Two modes, three Pythagorean triples (kappa, g, Omega) and three phases; the common-phase claim is tested for one hop only, not an arbitrary gauge-invariant W; h-Hermiticity of ad_H and h-unitarity on V_C and the cosh(Omega lambda) growth of the real-parameter flow are not tested here
+  check_conjugated_clocks_not_star:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: Five rotor conjugates of one atom boost in Cl(2,2) with its single frame *-structure; clocks in general (any adjoint action that is semisimple with a nonzero real eigenvalue) and other frame *-structures are not covered
+  check_pairing_flow_exponentiated:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: Two modes, two (kappa, g, Omega) triples and three rational (cos, sin) points; e^{itH} is built from the closed form cos P_even + i sin H/Omega + P_odd after checking H P_odd = 0 and H^2 = Omega^2 P_even; unitarity, group law and the transfer bound g^2/Omega^2 are checked, the non-*-map for real lambda is not
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Each function tests a stated sub-clause at fixed rational data; the all-lambda, all-signature and all-clock quantifiers are sampled and the closing statement about the CAR windows is not computed.

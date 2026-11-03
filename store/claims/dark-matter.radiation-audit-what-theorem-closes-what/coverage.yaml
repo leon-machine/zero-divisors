@@ -1,0 +1,26 @@
+functions:
+  check_one_photon_like_species_breaks_the_cap:
+    kind: exact
+    clauses: ["one two-polarisation species at the visible temperature gives Delta N_eff = (8/7)(11/4)^(4/3) ~ 4.4", "five such sectors give of order twenty"]
+    omits: "the cap 0.3 is the check's constant for the Planck bound"
+  check_ground_level_and_vector_like_odd_towers:
+    kind: complete
+    clauses: ["ground level: an intrinsic U(1) exactly at the complex members r = 3, 7", "(2) the three-dimensional towers are vector-like (no chirality in odd dimension)"]
+    omits: "all six populated representatives are covered; Polyakov confinement, the phases (C) and (T), the parity anomaly and the closure of the 3D photon channel are not computed"
+  check_closing_margins_on_the_interval:
+    kind: exact
+    clauses: ["the mirror channel closes by twelve orders at the floor and eight at the hot deposit", "five-dimensional towers close by eight orders", "a nine-vector tower at the hot end is at 7.4"]
+    omits: "the 7.4 is bracketed between 10^7.35 and 10^7.4, which pins the rounding (the margin itself is pinned to 2.33270e7); the five-dimensional case is checked with three light polarisations for one species; the deposit estimate and floor are inputs from the premises"
+  check_mirror_atomic_cross_section:
+    kind: exact
+    clauses: ["elastic cross-section per mass of order 2e8 (hydrogen) and 5e7 (helium) cm^2/g for the mirror's neutral atoms"]
+    omits: "pi (2 a_0)^2 is the check's geometric estimate; the cross-section and both per-mass figures are pinned to six figures (helium 5.29606e7)"
+untouched_premises:
+  dark-matter.imported-eight-towers-mod-8-clock: "the Goldstone mass estimate Lambda_conf^2/M_rung is dimensional analysis and is not computed (docstring)"
+  dark-matter.projection-every-towers-content-dilutes-ones: "a^-4 dilution of a surviving photon is cited, not recomputed here"
+  dark-matter.ceiling-valued-inherited-success: "the rung-breaking scale is valued in that proposition; not used by this audit's computations"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable parts are bracketed exactly; items 2 (closure mechanism), 3 (qualitative) and 4 (Goldstones) and the self-interaction remarks for the 3D and 5D towers are declared uncomputed. 2026-10-23 (weak checks): check_closing_margins_on_the_interval pins the coefficient 0.07786 and each margin by hand (4.0219e12 at the floor, 1.241301e8 and 1.400640e8 at the hot deposit, 2.33270e7 for the nine-vector tower, above 10^7.35 so the 7.4 rounding is pinned); check_mirror_atomic_cross_section pins pi (2 a_0)^2 and both per-mass figures to six figures. Inputs moved to module level."

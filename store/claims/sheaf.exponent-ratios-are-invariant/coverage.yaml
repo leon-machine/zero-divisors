@@ -1,0 +1,22 @@
+functions:
+  check_ratios_are_the_invariants:
+    kind: sampled
+    clauses: ["tau = zeta sigma carries tau^e to zeta^e sigma^e (exponents invariant)", "tau = zeta sigma^a rescales exponents by a(x); ratios e_i/e_j invariant"]
+    omits: "three sample exponent polynomials, one a(x), three points x0, one zeta; the ratio identity is cross-multiplication (commutativity); that ratios are the complete invariants and the smoothness of zeta^e are not tested"
+  check_kasner_ratio_monotone_and_separating:
+    kind: exact
+    clauses: ["-p1/p2 = u/(1+u) is strictly increasing in the Kasner parameter", "p3/p2 = u"]
+    omits: ""
+  check_constant_presentation_iff_constant_ratios:
+    kind: sampled
+    clauses: ["strict diagonal data admits a constant-exponent presentation iff all ratios are locally constant", "this happens exactly where u is locally constant"]
+    omits: "one constant u = 2 and one varying u = 1 + x, and only the reparametrisation a = 1/p2; the 'only if' for arbitrary a rests on ratio invariance (previous function) and monotonicity, not combined here"
+  check_varying_exponents_keep_their_logs:
+    kind: sampled
+    clauses: ["for genuinely varying exponents the logarithms are unavoidable"]
+    omits: "single example u(x) = 1 + x after the reparametrisation p2 -> 1, using the exported formal calculus; unavoidability under every reparametrisation is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Transformation law and Kasner ratio identities are exact or sampled as stated; the iff and the log-unavoidability are shown on one constant and one varying u, and unit smoothness is analysis, named as unchecked.

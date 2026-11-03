@@ -1,0 +1,21 @@
+functions:
+  check_time_extension_of_this_world:
+    kind: exact
+    clauses: ["(i) the frame generates Cl(1,3)", "(ii) the bivectors e_mu e_5 anticommute, square to (-1,+1,+1,+1) and generate the even subalgebra, a copy of Cl(3,1)", "(iii) the copies meet in the 8-dimensional even part Cl^0(1,3) = Mat(2,C) and with omega span Cl(2,3)", "(iv) the Wick map e_mu -> omega e_mu squares to -e_mu^2 and is not an automorphism"]
+    omits: "For (iv), no automorphism carrying the Cl(1,3) copy onto the Cl(3,1) copy follows from the computed Wedderburn types Mat_2(H) versus Mat_4(R) (non-isomorphic subalgebras); that step is the proof's simplicity argument and is not coded. Non-multiplicativity of the Wick map is shown on one pair of generators."
+  check_space_extension_of_this_world:
+    kind: partial
+    clauses: ["in Cl(1,4) the generators e_mu, the bivectors e_mu e_5 and omega e_mu each generate a copy of Cl(1,3)", "Cl(3,1) admits no unital embedding into Cl(1,4)"]
+    omits: "The three copies of Cl(1,3) and the doubling into two Mat_2(H) summands are computed; the non-embedding of Cl(3,1) = Mat_4(R) is not tested directly, it would follow from the computed summand types and simplicity of Mat_4(R) by an argument that is only a comment in the code."
+  check_mirror_extensions:
+    kind: partial
+    clauses: ["the same statements hold for the mirror's two extensions with the roles of Cl(1,3) and Cl(3,1) exchanged"]
+    omits: "For Cl(4,1) the shadow and bivector types, the dimension-8 overlap (not its identification as the even part or Mat(2,C)) and the omega span are computed; for Cl(3,2) the three copies of Cl(3,1) and omega^2 = +1 are computed. The Wick-map non-automorphism for Cl(4,1), the doubling ideals of Cl(3,2) and the non-embedding of Cl(1,3) into Cl(3,2) are not tested."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The this-world time extension is checked in full; the Cl(1,4) non-embedding and the mirror statements are checked through their computable core, as the docstring says."
+untouched_premises:
+  std-algebra.sta-matrix: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.pauli-algebra: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,34 @@
+\textit{The pairing as a sandwich.}\enspace Write $\psi = \phi f$ with $\phi \in \Cl^{0}(V)$ and $f = \tfrac{1}{2}(1 + b)$, $b$ a bivector of square $+1$. Then $\rev{b} = -b$, so $\rev{f} = 1 - f$ and
+\[
+\rev{\psi}\psi \;=\; (1 - f)\;\rev{\phi}\phi\;f.
+\]
+The element $\rev{\phi}\phi$ is even and reversion-invariant, so it has grades $0$ and $4$ only:
+\[
+\rev{\phi}\phi = s + F, \qquad s = \ip{\rev{\phi}\phi}_{0}, \quad F = \ip{\rev{\phi}\phi}_{4}.
+\]
+Since $(1 - f)f = 0$, every part of $\rev{\phi}\phi$ that commutes with $b$ drops out of the sandwich:
+\[
+(1 - f)\,c\,f \;=\; c\,(1 - f)f \;=\; 0 \qquad \text{whenever } cb = bc.
+\]
+
+
+
+\emph{Dimensions three and four.}  In dimension three $F = 0$. In dimension four $F = uI$ is a multiple of the pseudoscalar, which commutes with every even element and in particular with $b$. In both cases all of $\rev{\phi}\phi$ commutes with $b$, so $\rev{\psi}\psi = 0$. This is the alternation in (i).
+
+
+
+\emph{Dimension five.}  Here $F$ is a general four-vector, which need not commute with $b$, and $(1 - f)\,F f \neq 0$ for suitable $\phi$, so the pairing is not alternating.
+
+
+
+\emph{The mass laws.}  The two displayed laws are identities between polynomials of degree four in the coordinates of $\psi_{1}, \psi_{2}$ (respectively $\psi$) on a basis of $S$. The script verifies them as polynomial identities over $\mathbb{Q}$, not on samples, in all six causal towers (checks B4, B5), together with the nullity of $j(\psi)$ in dimensions three and four (B4); it exhibits a nonzero $\psi$ with $\rev{\psi}\psi = 0$ in each five-dimensional tower (B6). The right-hand sides are nonnegative by Lemma \claimref{dark-tower-matter.adjoint-norm}(i), so each single momentum (and in dimensions three and four each pair sum) is timelike or null.
+
+
+
+\emph{Any number of constituents.}  For every $\psi \in S$,
+\begin{align*}
+Q(e_{t})\,\bigl(j(\psi)\cdot e_{t}\bigr) &= Q(e_{t})\,\ip{\psi e_{t}\rev{\psi}\,e_{t}}_{0} \\
+&= \ip{\psi\,e_{t}\rev{\psi}e_{t}^{-1}}_{0} \\
+&= \ip{\psi\psi^{\dagger}}_{0} \;\geq\; 0 \qquad \text{(B7)}.
+\end{align*}
+So every constituent's momentum is causal and lies in the same closed half-space bounded by $e_{t}^{\perp}$, hence in the same half of the causal cone, and that half is closed under addition.

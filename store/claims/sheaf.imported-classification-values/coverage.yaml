@@ -1,0 +1,16 @@
+functions:
+  check_five_values:
+    kind: exact
+    clauses: ["Cl(1,3) = Mat_2(H)", "Cl(0,4) = Mat_2(H)", "Cl(0,3) = H + H", "Cl(2,4) = Mat_4(H)", "Cl(1,2) = Mat_2(C)"]
+    omits: "isomorphisms are identified through the premise classifier's invariants (semisimple, division algebra D, matrix size k, number of summands), not by explicit maps; the classifier itself runs in the primer premise's check"
+  check_centres_of_the_odd_values:
+    kind: partial
+    clauses: ["Cl(0,3) = H + H", "Cl(1,2) = Mat_2(C)"]
+    omits: "only shows omega = e_0...e_(n-1) is central with omega^2 = -1 (Cl(1,2)) and +1 (Cl(0,3)); does not establish the matrix or quaternion structure"
+untouched_premises:
+  sheaf.imported-classification-values-external: "provenance import of the literature classification (Porteous, Lounesto); the check takes its values from the primer's classifier premise instead"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The five stated types are read off the primer's classifier invariants (type D, k, summands); the second function checks only the centres of Cl(1,2) and Cl(0,3), which is consistent with but weaker than the stated isomorphisms.

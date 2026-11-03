@@ -1,0 +1,22 @@
+functions:
+  check_centres_and_I6:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_conformal_spinor_ideal_and_commutant:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the commutant (span{1, I6}) is computed exactly as a kernel, but minimality of the ideal is sampled on three nonzero elements (it also follows from the rank-32 faithful action) and 'squares to -1 iff a = 0, b = +-1' is tested at five (a, b) points rather than derived"
+  check_two_chiral_doublets:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "Lorentz invariance of L0 and Linf tested for three rotors (boost, rotation, a product), not every Lorentz element"
+  check_massless_complex_structure_is_pseudoscalar:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "one null momentum k = gamma_0 + gamma_3 and one rotation angle (cos, sin) = (3/5, 4/5); Maxwell J is built by hand as (-g, f) and compared with +-I4; the mass-term anticommutation is shown for right gamma_0 on even phi and for I4 with I4 gamma_3, one momentum, not for general mass data"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (1)-(4) are tested exactly on the finite Clifford modules; Lorentz invariance and the massless sector use chosen rotors and one momentum"

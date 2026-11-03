@@ -1,0 +1,42 @@
+{
+ "doc": "trail-standard-algebra",
+ "version": 5,
+ "claims": [
+  "primer.centre@2",
+  "primer.twisted-adjoint-action@3",
+  "std-algebra.blade-basis@1",
+  "std-algebra.cartan-dieudonne@1",
+  "std-algebra.cl11-matrix@1",
+  "std-algebra.existence-uniqueness@1",
+  "std-algebra.fock-representation@1",
+  "std-algebra.functoriality@1",
+  "std-algebra.grade-decomposition@1",
+  "std-algebra.inverse-of-vector@1",
+  "std-algebra.involution-properties@1",
+  "std-algebra.orthogonal-anticommute@1",
+  "std-algebra.periodicity@1",
+  "std-algebra.polarisation@1",
+  "std-algebra.reflection@1",
+  "std-algebra.spin-double-cover@1",
+  "std-algebra.sylvester-inertia@1",
+  "std-algebra.tensor-rules@1",
+  "std-algebra.vector-squares@1",
+  "std-algebra.witt-basis-car@1",
+  "std-algebra.witt-decomposition@1",
+  "std-algebra.z2-grading@1"
+ ],
+ "recipe_hash": "31b5af94ffd9",
+ "generated": "2026-11-02T16:31:53+00:00",
+ "spine": [
+  "std-algebra.blade-basis",
+  "std-algebra.vector-squares",
+  "std-algebra.involution-properties",
+  "primer.centre",
+  "std-algebra.reflection",
+  "std-algebra.spin-double-cover",
+  "std-algebra.witt-decomposition",
+  "std-algebra.periodicity",
+  "std-algebra.witt-basis-car",
+  "std-algebra.fock-representation"
+ ]
+}

@@ -1,0 +1,25 @@
+functions:
+  check_quartic_invariants_restrict_to_five_couplings:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "invariance of the ten quartic invariants under five rational U(2) elements at seven points, the five-coupling restriction and the conjugation rule at four points of L for three coefficient vectors, independence of the six monomials on L, the homogeneity test of the D-term at two levels; that the ten invariants span all quartic invariants is the stored first fundamental theorem, not computed"
+  check_family_potential_scaling_and_frame_bound:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "the family formula at four frames for three coefficient vectors, the joint rescaling with s = 2, the leading part of dF/dt, positivity of dF/dt above a rational upper bound of X0 on forty points for three samples, the inequality at three exactly constructed critical points and at two near-saturating ones (where the bound without its factor two and K_- term fails), the runaway for two samples with K_+ < 0; the general inequality is proved in the text"
+  check_gildener_weinberg_admissibility:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "nonnegativity on a 97-point grid of the cone for four admissible coupling sets and one explicit negative value for each violated condition; the equivalence for general couplings is proved in the text"
+  check_flat_ray_tree_masses:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "exact Hessians on the cone Q = 0 at two points of the physical ray for three admissible coupling sets: dimension of the physical space, massless neutral mode, charged mass 2(2a - e)N, no mixing; the gauge masses are entered by formula"
+  check_d_term_with_norm_quartic_is_not_admissible:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "g = 2/3, g' = 1/2, two points of the ray: flatness, charged mass M_W^2 - M_Z^2, a negative interior value, and one admissible moment-map sample; the general inequality on kappa' is proved in the text"
+  check_rung_unit_is_the_conformal_dilatation:
+    kind: complete
+    clauses: ["(5)"]
+untouched_premises: {}

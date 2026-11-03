@@ -1,0 +1,12 @@
+functions:
+  check_blade_table:
+    kind: complete
+    clauses:
+    - '"e_I e_J = +-(prod Q(e_i)) e_(I sym diff J)"'
+    - '"the sign being (-1) to the number of pairs"'
+    omits: every pair of basis blades for every signature with n <= 4; the GA engine is the algebra tested
+  check_anticommute_iff_orthogonal:
+    kind: sampled
+    clauses:
+    - '"uv = -vu if and only if B(u, v) = 0"'
+    omits: five vectors per signature with n <= 3, all ordered pairs

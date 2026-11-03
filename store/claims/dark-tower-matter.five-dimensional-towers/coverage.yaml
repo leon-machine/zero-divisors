@@ -1,0 +1,17 @@
+functions:
+  check_five_dimensional_at_every_epoch:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "L T today in (1150, 1180) and at g_s = 106.75 in (385, 395) are bracketed exactly and both exceed 120 pi, with the integer parts (1166 today, 387 = 123 pi early) pinned against by-hand values; 'always below T/120' at every epoch between uses the g_s^(-1/3) scaling at the two ends only; 'at their matter's mass scale (K5)' and the few-levels-deep dark bath at T14's temperatures are not checked"
+  check_confinement_scale_negligible:
+    kind: partial
+    clauses: ["(ii) confinement scale below pi/L by a factor smaller than e^-250"]
+    omits: "the exponent in (280, 290) is bracketed exactly under the stated K7 inputs (b_4 = 11, g_5^2 = 8 pi^3 per GeV, T = m/20); infrared freedom of five-dimensional gauge theory, the 1/r^2 binding bound of eight times strong coupling, and no dark hadrons or atoms are not computed"
+untouched_premises:
+  dark-tower-matter.five-dimensional-content: "cited for the species (including N) in (iii) to (vi), which the docstring says are not checked here"
+  dark-tower-matter.u-transposition-rule: "premise invoked in (vi) for the open branch of both five-dimensional towers; no computable content in this check"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring states that only (i) and the e^-250 number of (ii) are checked; (iii) to (vi) rest on Kaluza-Klein sums and supplementary computations. 2026-10-23 weak-checks: check_five_dimensional_at_every_epoch now also pins the integer parts of L T (1166 today, 387 early) and of L T/pi early (123) against by-hand values, so the stated brackets are no longer the only test"

@@ -1,0 +1,1304 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "T5's counting step enters with two conditional inputs, the counted epoch and the per-cell density. This paper is the derivation programme for that count, with the dynamics and observational record of the boundary modes, at declared tiers. Proved: the stretched singularity is scheme-robust; its slice volume per unit Killing time is exactly $8\\pi M$ at leading order under the framework's own curvature cutoff; the count $N = 8\\pi\\nu M\\Delta t/\\lP^2$ reproduces the Bekenstein-Hawking entropy exactly when $\\nu\\Delta t = M/2$; and the internal cutoff's mass scaling is the unique one from which an admissible timescale of order $M$ reaches the area law. Conditional, on the flagged intrinsic-clock premise: the epoch is the modular period $\\beta = 8\\pi M$, collapsing two unknowns into the single falsifiable density $\\nu = 1/16\\pi$ in the 1-nat convention, equivalently the integer-holographic statement that the boundary mode space registers $\\SBH$ fermions per modular period, up to the absorbed $\\ln 2$: one per four Planck cells of horizon; the naive reading overshoots by exactly the horizon-area coefficient $16\\pi$. The transverse sphere emerges by Kostant's principal embedding with principality forced by the flagged indifference premise, the fuzzy count matching the slice geometry and both naive aggregations refuted. The clocks of the boundary modes run at exactly $2\\pi T$, so operator spreading saturates the chaos bound by construction, at free-fermion tier. The observational record: the registered no-echo prediction stands consistent across four gravitational-wave catalogues, one confirmed echo train from refutation. Forty-seven exact-arithmetic checks certify the computational identities.",
+  "verbatim": true,
+  "hash": "d88c04959975"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:scrambling.indifference-structural-premise-series",
+  "type": "postulate",
+  "claim": "scrambling.indifference-structural-premise-series@2",
+  "title": "Indifference, structural premise of the series",
+  "text": "The framework forbids uncaused structure: a construction may not carry distinctions (partitions, assignments, orderings) that nothing in the framework determines. \\emph{Provenance and level:} this is the structural principle used to order the family faces, applied here at the declared level; it is a premise of the derivation below, not a theorem, and is flagged as such.",
+  "gap": false,
+  "level": "formal",
+  "hash": "f6c180dd2205",
+  "number": 1
+ },
+ {
+  "id": "c:scrambling.intrinsic-clock-ic-flagged-premise",
+  "type": "postulate",
+  "claim": "scrambling.intrinsic-clock-ic-flagged-premise@3",
+  "title": "Intrinsic clock (IC), flagged premise",
+  "text": "The counted epoch is intrinsic to the boundary modes: whatever span of Killing time the count is taken over is determined by the dynamical structure of the boundary modes themselves, not by an external choice. This is a naturality premise, not a theorem; its named failure mode is stated in Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}, and the circularity fence of Remark \\claimref{note.scrambling.circularity-fence} protects it from self-confirmation.\n\n\\emph{Scope (Schwarzschild calibration).} This premise, with Premises \\claimref{singularity.c1-curvature-cutoff} and \\claimref{singularity.c2-cell-density}, is read as a calibration of the count on the Schwarzschild family only, where it makes the counted epoch the modular period (Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}). Read with a horizon's modular period on a Schwarzschild-de Sitter hole, the literal cutoff count with the density fixed at $\\Lambda = 0$ is $u/(3u - 2)$ times $A_{b}/4$, $u = 2M/r_{b}$, for every $\\Lambda > 0$, and neither horizon's period gives $A_{b}/4$ (Theorem \\claimref{synthesis.cutoff-count-is-not-a-local-density-on-sds}); the literal cutoff count also misses the area law for spinning holes with $a \\ge 2(2M)^{2/3}$ (Theorem \\claimref{synthesis.kerr-ring-count-misses-area-law}). Away from the Schwarzschild family the count is read through the horizon placement of clause (Loc) of Premise \\claimref{synthesis.c-loc-local-horizon-premise}, with a density fixed by flat tangent data.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8b033edffa31",
+  "number": 2
+ },
+ {
+  "id": "c:singularity.c1-curvature-cutoff",
+  "type": "postulate",
+  "claim": "singularity.c1-curvature-cutoff@4",
+  "title": "C1: curvature cutoff",
+  "text": "The q-number boundary mode space of the singularity is supported on the stretched singularity, the surface on which the curvature reaches the Planck scale: $2M/r^3 = 1$ in Planck units, i.e.\\ $r_c = (2M)^{1/3}$.\n\n\\emph{Note (form and calibration).} The form of this premise is forced, not chosen: an algebraic (pointwise) curvature criterion at a mass-independent value selects a member of the family $r_c^{3} = 2M/\\lambda$, of which this premise is $\\lambda = 1$, and, with an isometry-invariant density for Premise \\claimref{singularity.c2-cell-density}, the leading count sees the threshold $\\lambda$ and the density $\\nu$ only through the one number $\\kappa_{s} = \\nu\\lambda^{-1/2}$ (Theorem \\claimref{synthesis.c1-c2-forms-forced-one-number}). At leading order this premise together with (C2) is equivalent to (C2$'$), the modes carried by the exceptional set itself with $\\nu' = \\tfrac23\\kappa_{s}$ modes per Planck area of its Kasner measure $\\mu_{E} = 12\\pi M$ per unit Killing time; the two differ only at relative order $(2M)^{-2/3}$ (Theorem \\claimref{synthesis.exceptional-boundary-measure-one-calibration}). The premise is kept as stated.\n\n\\emph{Scope (Schwarzschild calibration).} This premise, with Premise \\claimref{singularity.c2-cell-density} and the intrinsic-clock premise (IC) (Premise \\claimref{scrambling.intrinsic-clock-ic-flagged-premise}), is read as a calibration of the count on the Schwarzschild family only. Read literally on other holes the count fails the area law: on a Schwarzschild-de Sitter hole, with the counted epoch read as the hole's modular period, it is $u/(3u - 2)$ times $A_{b}/4$, $u = 2M/r_{b}$, for every $\\Lambda > 0$, and no horizon's period gives $A_{b}/4$ (Theorem \\claimref{synthesis.cutoff-count-is-not-a-local-density-on-sds}); for a spinning hole with $a \\ge 2(2M)^{2/3}$ the cutoff locus is a timelike tube beyond the inner horizon and the literal count misses the area law by a factor of order $M^{-1/3}$ (Theorem \\claimref{synthesis.kerr-ring-count-misses-area-law}). Away from the Schwarzschild family the count is read through the horizon placement, the modes on the horizon with a density fixed by flat tangent data, as clause (Loc) of Premise \\claimref{synthesis.c-loc-local-horizon-premise} states.",
+  "gap": false,
+  "level": "formal",
+  "hash": "7434ceef5858",
+  "number": 3
+ },
+ {
+  "id": "s:paper-1",
+  "type": "section",
+  "title": "Introduction",
+  "hash": "b605350bc002"
+ },
+ {
+  "id": "i:paper-1",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-introduction",
+  "type": "note",
+  "claim": "note.scrambling.setting-introduction@1",
+  "title": "Introduction",
+  "text": "T5 of this series \\cite{ButlerT5} uses the singularity's boundary mode space twice: its capacity caps the radiation's fine-grained entropy (the falling branch of the Page curve), and its count is the area law. Both uses rest on a counting formula with two inputs T5 imports conditionally and flags: the counted \\emph{epoch} $\\Delta t$, and the per-cell mode density $\\nu$. This paper is the derivation programme for that count, together with the dynamics of the boundary modes (scrambling) and its observational record (echoes). The paper says its level in every section: what is proved is proved at the standard of \\cite{ButlerT1}; what is conditional carries its named premise; what is assembled from results proved elsewhere stands in an \\emph{Assembly}, its component results and their sources displayed and no proof claimed; and what is observational stands in a \\emph{Record}, resting on the cited survey record with the date attached.\n\nFive strands organise the paper. \\emph{The count} (the section ``The count''): the stretched singularity is scheme-robust at order one, its slice volume per unit Killing time is exactly $8\\pi M$ in Planck units to leading order under the framework's own curvature cutoff, the resulting count $N = 8\\pi\\nu M\\Delta t/\\lP^2$ reproduces the Bekenstein-Hawking entropy exactly when $\\nu\\Delta t = M/2$, and the mass scaling produced by the internal cutoff is the \\emph{unique} one for which an admissible timescale of order $M$ reaches the area law. \\emph{The epoch} (the section ``The epoch is the modular period''): on the flagged premise that the counted epoch is intrinsic to the boundary modes, it can only be the modular period $\\beta = 8\\pi M$: every intrinsic clock of the boundary modes runs at the modular rate $\\kappa$, so every one carries the period $\\beta$; the conversion is exact and holds in both directions, collapsing the pair $(\\Delta t, \\nu)$ into the single falsifiable prediction $\\nu = 1/16\\pi$ in the 1-nat convention, whose integer-holographic equivalent is that the boundary mode space registers $\\SBH$ fermions per modular period, up to the absorbed per-mode $\\ln 2$: one per four Planck cells of horizon. \\emph{The sphere} (the section ``The transverse sphere from the boundary modes''): the transverse angular geometry is derived from the correlation structure, by Kostant's principal embedding with principality forced by the indifference principle, and the fuzzy operator count $n^2$ reproduces the slice sphere's Planck-cell scaling exactly; the two naive aggregation rules both fail, in instructive ways, and the failure is quantified. \\emph{The dynamics} (the section ``Scrambling, and the return delay''): the intrinsic flows of the boundary modes are all bivector-generated and the only ones the geometry converts to Schwarzschild time are the hyperbolic ones, all at the common rate $\\kappa$, so operator spreading is boost-hyperbolic and the scrambling time is $(\\beta/2\\pi)\\ln S$: the chaos bound is saturated by construction, at free-fermion tier, with genuine chaos beyond it named as open. \\emph{The record} (the section ``The observational record''): the framework's quantum structure lies at the stretched singularity and nowhere near the horizon, so the registered prediction is an unmodified Kerr ringdown with no echoes, and the catalogue record through GWTC-4.0 is confronted, with the confrontation's openness stated.",
+  "gap": false,
+  "level": "formal",
+  "hash": "704f38e95779"
+ },
+ {
+  "id": "c:note.scrambling.setting-prior-art",
+  "type": "note",
+  "claim": "note.scrambling.setting-prior-art@1",
+  "title": "Prior art",
+  "text": "The prior work, acknowledged once. Black-hole entropy and its area law are Bekenstein-Hawking \\cite{Bekenstein1973, Hawking1975}; brick-wall counting is 't Hooft \\cite{tHooft1985}; the interior-volume growth is Christodoulou-Rovelli \\cite{ChristodoulouRovelli2015}. Fast scrambling is Hayden-Preskill and Sekino-Susskind \\cite{HaydenPreskill2007, SekinoSusskind2008}, and the chaos bound is Maldacena-Shenker-Stanford \\cite{MSS2016}. The principal $\\mathfrak{sl}_2$ and its multiplicity-free adjoint decomposition are Kostant's \\cite{Kostant1959}; the fuzzy sphere is Madore's \\cite{Madore1992}. Echo phenomenology is Cardoso-Pani \\cite{CardosoPani2017}; the search record runs from the early claims and reanalyses \\cite{Abedi2017, Westerweck2018} to the catalogue-level tests of general relativity through GWTC-4.0 \\cite{GWTC4TGR2026}. Within the series, the count's axioms and the eviction dynamics are T5's \\cite{ButlerT5}, the weighted completion that carries the density factor is the geometry paper T6's \\cite{ButlerT6}, capacity is the tower paper T3's \\cite{ButlerT3}, the wall results are the sheaf paper T4's \\cite{ButlerT4}, and the modular inventory of a single mode is reproved in the spectrum paper T7 \\cite{ButlerT7}. What this paper claims as new is the assembled programme: the uniqueness argument for the mass scaling, the exact epoch conversion with its integer-holographic form and circularity fence, the indifference derivation of principality with its consistency checks, the spreading law's inventory argument, and the registered confrontation, each at its declared tier.",
+  "gap": false,
+  "level": "formal",
+  "hash": "b143cefc70ff"
+ },
+ {
+  "id": "c:note.scrambling.setting-contribution",
+  "type": "note",
+  "claim": "note.scrambling.setting-contribution@1",
+  "title": "Contribution",
+  "text": "(1) The count made exact where it can be: scheme robustness, the $8\\pi M$ slice volume (exact at leading order), the counting theorem with its convention-sensitivity clause, the area-law equivalence, and the uniqueness of the internal cutoff's scaling (the section ``The count''). (2) The clock inventory (every intrinsic clock of the boundary modes runs at the one modular rate, with period $\\beta$), the epoch theorem on its flagged premise, the exact conversion to $\\nu = 1/16\\pi$ in the 1-nat convention, the integer-holographic equivalence with the $16\\pi$ overshoot identified as the area coefficient, the circularity fence, and the calibration factorised, $16\\pi = 4\\pi \\times 4$, with its residue $\\kappa_c$ in each convention and the prediction restated as $\\nu = 1/(16\\pi\\ln 2)$ in the capacity convention (the section ``The epoch is the modular period''). (3) The transverse sphere: the matrix structure of the doubled boundary mode space, Kostant principality from indifference, the $n^2$ slice check, exact in scaling, the I-state consistency checks, and the failure of both naive aggregations (the section ``The transverse sphere from the boundary modes''). (4) The spreading law with the chaos bound saturated by construction, the return delay, and the no-attic derivation route (the section ``Scrambling, and the return delay''). (5) The registered no-echo prediction and the catalogue confrontation (the section ``The observational record''). (6) Machine verification of every computational identity in exact arithmetic \\cite{ButlerVerifyT8}.",
+  "gap": false,
+  "level": "formal",
+  "hash": "c54553affd33"
+ },
+ {
+  "id": "s:paper-2",
+  "type": "section",
+  "title": "Setting and imports",
+  "hash": "dd7174dfa00e"
+ },
+ {
+  "id": "i:paper-2",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-setting-imports",
+  "type": "note",
+  "claim": "note.scrambling.setting-setting-imports@1",
+  "title": "Setting and imports",
+  "text": "Units $G = c = \\hbar = 1$, so $\\lP = 1$ and $\\SBH = A/4 = 4\\pi M^2$ for Schwarzschild; the Hawking temperature is $\\TH = \\kappa/2\\pi = 1/8\\pi M$ and the modular period is $\\beta = 1/\\TH = 8\\pi M$. Where a law's standard shape is the point we write $T$ for $\\TH$ and $S$ for $\\SBH$; $m_P$, the Planck mass, is one in these units.",
+  "gap": false,
+  "level": "formal",
+  "hash": "a0bed2e9f8b7"
+ },
+ {
+  "id": "t:^>scrambling.imported-modes-modular-inventory",
+  "type": "transition",
+  "between": [
+   null,
+   "scrambling.imported-modes-modular-inventory"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.imported-modes-modular-inventory",
+  "type": "theorem",
+  "claim": "scrambling.imported-modes-modular-inventory@3",
+  "title": "Imported: the mode's modular inventory",
+  "text": "For a completed pair, the boost bivector $\\sigma$ satisfies $\\sigma^2 = 1$, generates the rotor flow with weights $\\mp 1$ on the pair, has the occupation projectors as spectral projectors, acts in Fock representation through $\\tfrac12\\sigma = N - \\tfrac12$, and is the unique one-parameter rotor flow of the atom \\emph{up to reparametrisation of the flow parameter and orientation} (the bivector space is one-dimensional: the algebra fixes the orbits, not the speed, which is the normalisation the geometry supplies). The geometric normalisation converts rapidity to Schwarzschild time at the surface gravity $\\kappa = 1/4M$. Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\\pi$; the continuation's generator $i\\sigma$ lies outside the real algebra, so the cycle belongs to the clock's Euclidean continuation, not to any intrinsic flow of the boundary modes. \\emph{Provenance:} \\cite[Prop.~2.1]{ButlerT7} (proved self-contained there); the normalisation \\cite[App.~A]{ButlerT5}; the continuation and its $2\\pi$ conjugation period \\cite[Prop.~7.21(1)]{ButlerT5}; the exclusion of $i\\sigma$ from the real algebra \\cite[Prop.~7.21(3)]{ButlerT5}.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "For a completed pair, the boost bivector $\\sigma$ satisfies $\\sigma^2 = 1$, generates the rotor flow with weights $\\mp 1$ on the pair, has the occupation projectors as spectral projectors, acts in Fock representation through $\\tfrac12\\sigma = N - \\tfrac12$, and is the unique one-parameter rotor flow of the atom \\emph{up to reparametrisation of the flow parameter and orientation} (the bivector space is one-dimensional: the algebra fixes the orbits, not the speed, which is the normalisation the geometry supplies). The geometric normalisation converts rapidity to Schwarzschild time at the surface gravity $\\kappa = 1/4M$. Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\\pi$; the continuation's generator $i\\sigma$ lies outside the real algebra, so the cycle belongs to the clock's Euclidean continuation, not to any intrinsic flow of the boundary modes. \\emph{Provenance:} \\cite[Prop.~2.1]{ButlerT7} (\\claimref{hawking.modular-structure-completed-pair}) (proved self-contained there); the normalisation \\cite[App.~A]{ButlerT5}; the continuation and its $2\\pi$ conjugation period \\cite[Prop.~7.21(1)]{ButlerT5} (\\claimref{singularity.euclidean-rotor-where-it-lies}); the exclusion of $i\\sigma$ from the real algebra \\cite[Prop.~7.21(3)]{ButlerT5}.\n\nThis restates \\claimref{singularity.computed}.\n",
+  "hash": "0b23a40a4fdf",
+  "number": 4
+ },
+ {
+  "id": "s:paper-3",
+  "type": "section",
+  "title": "The count",
+  "hash": "401f21d502b3"
+ },
+ {
+  "id": "i:paper-3",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:scrambling.imported-modes-modular-inventory>obj.scrambling.stretched-singularity",
+  "type": "transition",
+  "between": [
+   "scrambling.imported-modes-modular-inventory",
+   "obj.scrambling.stretched-singularity"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:obj.scrambling.stretched-singularity",
+  "type": "definition",
+  "claim": "obj.scrambling.stretched-singularity@2",
+  "title": "Stretched singularity",
+  "text": "The \\emph{stretched singularity} is the interior slice $r = r_c$ defined by the curvature-eigenvalue cutoff $2M/r^3 = 1$ in Planck units: $r_c = (2M)^{1/3}$. It is the working substitute for the exceptional boundary of the completion: the locus where the classical description is replaced by the completed one, on which, by Postulate (C1) of the singularity paper (\\claimref{singularity.c1-curvature-cutoff}), the boundary-mode pairs lie, with $\\nu$ fermionic modes (ladder pairs) per Planck cell by Postulate (C2), $\\nu$ left free there (\\claimref{singularity.c2-cell-density}). The definition places no modes; results that count modes on the slice hold under (C1) and (C2).",
+  "gap": false,
+  "level": "formal",
+  "hash": "85df2abfa89b",
+  "number": 5
+ },
+ {
+  "id": "t:obj.scrambling.stretched-singularity>scrambling.scheme-robustness-cutoff",
+  "type": "transition",
+  "between": [
+   "obj.scrambling.stretched-singularity",
+   "scrambling.scheme-robustness-cutoff"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.scheme-robustness-cutoff",
+  "type": "theorem",
+  "claim": "scrambling.scheme-robustness-cutoff@3",
+  "title": "Scheme robustness of the cutoff",
+  "text": "The stretched singularity is robust at order one against the choice of Planck criterion: the curvature-eigenvalue condition $2M/r^3 = 1$, the Kretschmann condition $48M^2/r^6 = 1$, and the unit-proper-time condition $\\tau(r) = 1$ (with $\\tau = \\tfrac23 r^{3/2}(2M)^{-1/2}(1 + O(r/2M))$ the proper time to the singularity) all yield $r_c = c_0\\,M^{1/3}\\lP^{2/3}$ with order-one constants: $c_0 = 2^{1/3}$, $48^{1/6}$, and $(3/2)^{2/3}\\,2^{1/3}$ respectively. The surface where the algebra requires completion is, at this order, unambiguous.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Each condition is solved exactly for $r$. Curvature eigenvalue: $r^3 = 2M$, so $r_c = (2M)^{1/3} = 2^{1/3}M^{1/3}$. Kretschmann: $r^6 = 48M^2$, so $r_c = 48^{1/6}M^{1/3}$. Proper time: from the exact interior integral $\\tau(r) = \\int_0^r \\sqrt{u/(2M - u)}\\,du = \\tfrac{2}{3}\\,r^{3/2}(2M)^{-1/2}(1 + O(r/2M))$ (the leading term of the series proved in \\cite[Lem.~5.1]{ButlerT6} (\\claimref{interior.kasner-form-interior}), rescaled to $2M \\neq 1$), setting $\\tau = 1$ gives $r_c = (3/2)^{2/3}(2M)^{1/3}(1 + O(r_c/M))$. All three are $M^{1/3}$ times constants $2^{1/3} \\approx 1.26$, $48^{1/6} \\approx 1.91$, $(3/2)^{2/3}2^{1/3} \\approx 1.65$: order one. The script checks the three exponent computations and the constants exactly (as exact powers of rationals).\n",
+  "hash": "8e99738e0479",
+  "number": 6
+ },
+ {
+  "id": "t:scrambling.scheme-robustness-cutoff>scrambling.slice-volume-exactly-per-unit-killing",
+  "type": "transition",
+  "between": [
+   "scrambling.scheme-robustness-cutoff",
+   "scrambling.slice-volume-exactly-per-unit-killing"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.slice-volume-exactly-per-unit-killing",
+  "type": "theorem",
+  "claim": "scrambling.slice-volume-exactly-per-unit-killing@4",
+  "title": "The slice volume is exactly $8\\pi M$ per unit Killing time, at leading order in $r_c/2M$",
+  "text": "For the Schwarzschild field in the Painlev\\'e-Gullstrand gauge field $\\hb = 1 - \\beta P$, $\\beta = \\sqrt{2M/r}$, of Fact \\claimref{sheaf.gauge-field-cometric}, the induced geometry of the background slice $r = r_c$ inside the horizon, read from $\\hb^{-1}$ on its tangent vectors ($Q(\\hb^{-1}(e_t)) = -f$), is $ds_3^2 = f\\,dt^2 + r_c^2\\,d\\Omega^2$ with $f = 2M/r_c - 1$, so the three-volume per unit Killing time $t$ is $4\\pi r_c^2\\sqrt{f}$. With the curvature cutoff $r_c = (2M)^{1/3}$ and to leading order in $r_c/2M$ (i.e.\\ $f \\approx 2M/r_c$),\n\\[\n4\\pi\\,r_c^2\\,\\sqrt{2M/r_c} \\;=\\; 4\\pi\\,\\sqrt{2M}\\;r_c^{3/2} \\;=\\; 4\\pi\\,\\sqrt{2M}\\,\\sqrt{2M} \\;=\\; 8\\pi M\n\\]\n\\emph{exactly}: the cutoff radius combines with the anisotropic stretch of the $t$-direction to give an exactly linear dependence on the mass. A cutoff radius independent of $M$ would give $M^{1/2}$ instead.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Read in Gauge Theory Gravity: the metric below is the derived metric of a gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and the manifold is its invertible region.\n\nInside the horizon $r$ is timelike and $t$ spacelike; the static metric restricted to $r = r_c$ gives the displayed induced metric with $f = 2M/r_c - 1 > 0$. The volume element is $\\sqrt{f}\\,r_c^2\\sin\\theta\\,dt\\,d\\theta\\,d\\varphi$; integrating the sphere gives $4\\pi r_c^2\\sqrt f$ per unit $t$. The display is the exponent identity $r_c^{3/2} = ((2M)^{1/3})^{3/2} = (2M)^{1/2}$, checked exactly by the script; the neglected factor is $\\sqrt{1 - r_c/2M} = 1 + O(M^{-2/3})$, subleading at large $M$ and quantified as such.\n",
+  "hash": "4f7c849f4652",
+  "number": 7
+ },
+ {
+  "id": "t:scrambling.slice-volume-exactly-per-unit-killing>scrambling.mode-count",
+  "type": "transition",
+  "between": [
+   "scrambling.slice-volume-exactly-per-unit-killing",
+   "scrambling.mode-count"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.mode-count",
+  "type": "theorem",
+  "claim": "scrambling.mode-count@2",
+  "title": "The mode count",
+  "text": "Assume (C1) and (C2) (Postulates \\claimref{singularity.c1-curvature-cutoff} and \\claimref{singularity.c2-cell-density}, through Proposition \\claimref{singularity.stretched-singularity-count}): the boundary modes lie on the stretched singularity, $\\nu$ fermionic modes per Planck cell (the calibration factor, Remark \\claimref{note.scrambling.density-factor-stated-full}), and let $\\Delta t$ be the counted span of Killing time. Then, to leading order in $r_c/2M$ (Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing}),\n\\[\nN \\;=\\; 8\\pi\\,\\nu\\,M\\,\\Delta t\\,/\\,\\lP^2,\n\\qquad\\text{equivalently}\\qquad\n\\frac{dN}{dt} \\;=\\; 8\\pi\\nu M \\;=\\; \\frac{\\nu}{\\TH}:\n\\]\nthe accrual rate is set by the Hawking temperature. The count $N = 8\\pi\\nu M\\,\\Delta t$ needs only (C1) and (C2); the form $\\nu/\\TH$ reads $8\\pi M$ as $1/\\TH$, the temperature that modular descent fixes under (R) (Premise \\claimref{singularity.r-regularity-fixed-locus}, through Proposition \\claimref{singularity.stretched-singularity-count}). The coefficient depends on $\\nu$, whose corank factor (C2) fixes at one, so what remains in it is the Planck-cell calibration and the bit or nat convention ($1/(16\\pi\\ln 2)$ against $1/16\\pi$ at the area law); the proportionality $dN/dt \\propto 1/\\TH$ does not depend on $\\nu$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "By Proposition \\claimref{singularity.stretched-singularity-count}, which holds under (C1) (\\claimref{singularity.c1-curvature-cutoff}: the boundary mode space is supported on the slice $r = r_c = (2M)^{1/3}$) and (C2) (\\claimref{singularity.c2-cell-density}: $\\nu$ fermionic modes per Planck cell of that slice), the modes accrue at $dN/dt = 8\\pi\\nu M\\sqrt{1 - r_c/2M}$. The number of Planck cells accumulated per unit Killing time is the slice volume of Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing} divided by $\\lP^3 = 1$, i.e.\\ $8\\pi M$ at leading order, the leading term of the same factor; multiplying by $\\nu$ and by the span $\\Delta t$ gives $N$. The second display substitutes $\\TH = 1/8\\pi M$, which Proposition \\claimref{singularity.stretched-singularity-count} takes from modular descent under (R) (\\claimref{singularity.r-regularity-fixed-locus}); the count $N$ itself uses only (C1) and (C2). The corank factor in $\\nu$ is fixed at one by (C2); what remains in $\\nu$ is the Planck-cell calibration and the bit or nat convention (Remark \\claimref{note.scrambling.density-factor-stated-full}), and the proportionality $dN/dt \\propto 1/\\TH$ does not depend on it. The placement of the modes on the slice, and their density per cell, are the two postulates and nothing else: in particular the tower's Witt-index capacity, which counts mode pairs per rung, supplies neither, and the modes counted here are the ladder pairs of (C2), one per point of the blown-up singular boundary, not rungs of the tower.\n",
+  "hash": "19033a96e144",
+  "number": 8
+ },
+ {
+  "id": "t:scrambling.mode-count>scrambling.area-law-test",
+  "type": "transition",
+  "between": [
+   "scrambling.mode-count",
+   "scrambling.area-law-test"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.area-law-test",
+  "type": "theorem",
+  "claim": "scrambling.area-law-test@4",
+  "title": "The area-law test",
+  "text": "$N = \\SBH = 4\\pi M^2$ if and only if $\\nu\\,\\Delta t = M/2$: the count reproduces the Bekenstein-Hawking entropy, coefficient included, precisely when the counted epoch is of order one Schwarzschild time. The scale has an independent causal meaning: the span of singularity in the causal future of a single horizon-crossing epoch is $\\Delta t(\\varepsilon) = 2M\\bigl(\\ln(1/\\varepsilon) - \\tfrac83 + 2\\ln 2\\bigr) + O(\\varepsilon)$, of order $M$ up to a logarithm (Fact \\claimref{singularity.causal-epoch-computed-exactly}). Counting instead over the hole's whole lifetime, $\\Delta t \\sim M^3$, gives $N \\sim M^4$: the count then shares with the interior-volume growth of \\cite{ChristodoulouRovelli2015} the linearity in time and the unresolved tension with the constancy of the horizon entropy, though not the growth law (their $dV/dv \\propto M^2$ gives $V \\sim M^5$ over the lifetime). The framework does not resolve that tension; it reproduces it from an independent starting point, which is evidence the count tracks real structure; the confrontation is recorded.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "With the count $N = 8\\pi\\nu M\\Delta t$ of \\claimref{scrambling.mode-count}, $8\\pi\\nu M\\Delta t = 4\\pi M^2 \\iff \\nu\\Delta t = M/2$: arithmetic, checked exactly by the script. The causal-epoch formula is the import (\\claimref{singularity.causal-epoch-computed-exactly}); the lifetime scaling substitutes $\\Delta t \\propto M^3$.\n",
+  "hash": "0723665ca0e9",
+  "number": 9
+ },
+ {
+  "id": "t:scrambling.area-law-test>scrambling.uniqueness-internal-scaling",
+  "type": "transition",
+  "between": [
+   "scrambling.area-law-test",
+   "scrambling.uniqueness-internal-scaling"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.uniqueness-internal-scaling",
+  "type": "theorem",
+  "claim": "scrambling.uniqueness-internal-scaling@3",
+  "title": "Uniqueness of the internal scaling",
+  "text": "Call a timescale \\emph{admissible} when the Schwarzschild geometry supplies it without tuning: the light-crossing, causal-epoch, and modular scales, $\\Delta t \\propto M$ up to logarithmic dressings, and the evaporation lifetime, $\\Delta t \\propto M^3$. Write the count as $N \\propto M^p\\,\\Delta t$ with $p$ determined by the cutoff scheme. Then $p = 1$, produced by the framework's own curvature cutoff, is the \\emph{unique} power for which an admissible timescale of order $M$ delivers the area law $N \\propto M^2$: a sphere-only count (cells of the $r_c$-sphere, no $t$-stretch) gives $4\\pi r_c^2 \\propto M^{2/3}$, hence $p = 2/3$ and $N \\sim M^{5/3}$; a fixed (mass-independent) cutoff radius gives volume per unit time $\\propto \\sqrt{M}$, hence $p = 1/2$ and $N \\sim M^{3/2}$; and no admissible infrared choice repairs either: matching $M^{p + q} = M^2$ with $p \\in \\{2/3, 1/2\\}$ requires $q \\in \\{4/3, 3/2\\}$, and no admissible timescale has those exponents (a logarithmic dressing changes no exponent). The scaling test could have failed and did not.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The three exponent computations: (i) internal cutoff, Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing}: $p = 1$, and $q = 1$ (the causal epoch) gives $N \\propto M^2$, the area law, with the exact coefficient handled by Proposition \\claimref{scrambling.area-law-test}. (ii) Sphere-only: $4\\pi r_c^2 = 4\\pi(2M)^{2/3}$, so $p = 2/3$. (iii) Fixed radius $r_0$: volume per unit time $4\\pi r_0^2\\sqrt{2M/r_0} \\propto M^{1/2}$, so $p = 1/2$. The matching arithmetic is displayed; the admissible set is the statement's hypothesis, its exponents are $1$ and $3$, and neither $4/3$ nor $3/2$ is among them, a logarithmic dressing changing no exponent. The script checks all exponent arithmetic exactly as rational-exponent identities.\n",
+  "hash": "0783c6ab3621",
+  "number": 10
+ },
+ {
+  "id": "c:note.scrambling.density-factor-stated-full",
+  "type": "note",
+  "claim": "note.scrambling.density-factor-stated-full@1",
+  "title": "The density factor $\\nu$, stated in full",
+  "text": "Two normalisations enter $\\nu$, and their statuses differ. The corank is settled: under the weights the geometry forces, the anisotropic Schwarzschild singularity carries exactly one ladder pair per point of the blown-up singular locus \\cite[\\S 8.9]{ButlerT4}, the resolution T5 records in passing the count to this paper \\cite[\\S 10]{ButlerT5}. What remains open is the \\emph{cell calibration}: how many Planck cells of slice volume one localised pair accounts for, the conversion from per-point to per-cell. The weighted completion supplies the geometry at the exceptional set on which that conversion is to be read (Fact \\claimref{tower.witt-index-quantum-capacity}), and its analysis is closed at Schwarzschild, so no analytic step of the geometry programme stands between it and $\\nu$; what blocks the calibration is one dimensionless number, the residue $\\kappa_c$ of the section ``The calibration factorised, and the quarter examined'', and deriving it is this paper's task, carried as its first successor problem (the section ``Scope, and successor problems''). The $M$-scaling of Theorem \\claimref{scrambling.mode-count} is independent of it, the coefficient is not, and the section ``The epoch is the modular period'' converts the requirement into that single number. Separately, the per-mode entropy normalisation is $\\ln 2$ for a maximally mixed fermionic mode: T5 compares the capacity $C = N\\ln 2$, not the bare count, with $\\SBH$, so the area-law condition of Proposition \\claimref{scrambling.area-law-test} reads $\\nu\\Delta t = M/2$ in the 1-nat convention used here and $\\nu\\Delta t = M/(2\\ln 2)$ in T5's capacity convention, a factor of $\\ln 2$ (31 per cent) that is stated rather than absorbed into an approximation sign.",
+  "gap": false,
+  "level": "formal",
+  "hash": "c4d41d082807"
+ },
+ {
+  "id": "s:paper-4",
+  "type": "section",
+  "title": "The epoch is the modular period",
+  "hash": "7897f5e1a91a"
+ },
+ {
+  "id": "i:paper-4",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-epoch-modular-period",
+  "type": "note",
+  "claim": "note.scrambling.setting-epoch-modular-period@1",
+  "title": "The epoch is the modular period",
+  "text": "the section ``The count'''s count is conditional on an epoch $\\Delta t \\sim M$ whose justification there was causal (the span of singularity belonging to one moment of the exterior hole), i.e.\\ imported from spacetime structure rather than derived from the boundary modes. This section derives it internally, on one premise, stated first and flagged throughout.",
+  "gap": false,
+  "level": "formal",
+  "hash": "54a708cced3f"
+ },
+ {
+  "id": "t:scrambling.uniqueness-internal-scaling>scrambling.clock-inventory-boundary-modes",
+  "type": "transition",
+  "between": [
+   "scrambling.uniqueness-internal-scaling",
+   "scrambling.clock-inventory-boundary-modes"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.clock-inventory-boundary-modes",
+  "type": "theorem",
+  "claim": "scrambling.clock-inventory-boundary-modes@5",
+  "title": "The clock inventory of the boundary modes",
+  "text": "Every clock of the boundary modes runs at the modular rate $\\kappa$, with period $\\beta = 2\\pi/\\kappa = 8\\pi M$. Precisely:\n\\begin{enumerate}\n\\renewcommand{\\labelenumi}{(\\roman{enumi})}\n\\item Call a flow \\emph{intrinsic} when it is a one-parameter group of inner automorphisms of the boundary-mode algebra, with even generator, preserving the vector grade. The intrinsic flows of a Clifford boundary-mode algebra are rotor (bivector-generated) flows, quadratic in the pair operators.\n\\item Call an intrinsic flow a \\emph{clock} when it is hyperbolic (its adjoint action on the mode operators semisimple with real eigenvalues) with a common rapidity across the modes it moves, the rapidity being the parameter the geometric normalisation converts to Schwarzschild time. The algebra fixes only the orbits, not the speed (Fact \\claimref{scrambling.imported-modes-modular-inventory}'s reparametrisation clause), so a clock's parameter is normalised to the rapidity itself, not a multiple of it. For a single completed pair the bivector space is one-dimensional, its flow is the boost, and the conversion runs at the surface gravity $\\kappa = 1/4M$.\n\\item A nonzero bivector generates a clock exactly when its adjoint action on the mode operators is semisimple with real eigenvalues, all nonzero ones of equal magnitude, which the normalisation to rapidity sets to one; if $\\operatorname{ad}_X$ is semisimple with spectrum $\\{+c, 0, -c\\}$ then the $\\pm c$ eigenspaces are isotropic and mutually dual for the neutral form of the boundary modes, so by Witt extension $X$ is $O(n,n)$-conjugate to $c$ times a sum of standard atom boosts; the geometric normalisation, being a property of the quadratic space rather than of a choice of modes, is invariant under that conjugation and converts every such flow at the one $\\kappa$. Writing $E_{ij} = \\psi_i^\\dagger\\psi_j$ for the gauge-invariant bilinears of the $n$-mode boundary space's mode operators $\\psi_i$ (Proposition \\claimref{scrambling.boundary-mode-space-matrix}, proved independently of this lemma), the cases below are illustrative rather than a partition. The diagonal $E_{ii}$ are the atoms' boosts (Fact \\claimref{scrambling.imported-modes-modular-inventory}) and the equal-coefficient sum $\\sum_i E_{ii}$ their simultaneous boost, all with adjoint eigenvalues $\\pm 1$; the symmetric combinations $E_{ij} + E_{ji}$ are opposed pairs of boosts of the rotated modes $(\\psi_i \\pm \\psi_j)/\\sqrt{2}$, again $\\pm 1$. The antisymmetric $E_{ij} - E_{ji}$ are compact and the strictly off-diagonal $E_{ij}$ nilpotent, neither carrying a rapidity; a mixed diagonal $\\sum_i c_i E_{ii}$ with unequal $|c_i|$ has no common rapidity. And the pairing sector $c\\,\\psi_i^\\dagger\\psi_j^\\dagger + d\\,\\psi_j\\psi_i$, outside $\\mathfrak{gl}(n)$ and completing the bivector algebra of the completed boundary mode space, of dimension $n(2n-1)$ against $\\mathfrak{gl}(n)$'s $n^2$ (the $n$ hyperbolic pairs of Fact \\claimref{tower.witt-index-quantum-capacity} make the quadratic space split, so that algebra is $\\mathfrak{so}(n,n)$), is classified by the sign of one product, its adjoint eigenvalues being $\\pm\\sqrt{cd}$: hyperbolic for $cd > 0$ (a clock, at unit rapidity outright when $cd = 1$), compact for $cd < 0$, nilpotent for $cd = 0$.\n\\end{enumerate}\nThe boundary mode space therefore has many intrinsic flows and one clock rate: whichever clock is read, single-atom, rotated-pair, common, or paired, its period is $\\beta$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(i) is the algebra's own inventory: a one-parameter group of inner automorphisms of a Clifford algebra preserving the vector grade is generated by an even element whose commutator preserves grade one, i.e.\\ by a bivector (the commutator of a vector with a grade-$2k$ element has grade $2k - 1$, so only $k = 1$ preserves the vector space; a mixed even generator $A_2 + A_4 + \\cdots$ reduces to its bivector part, since grade preservation forces $[A_{2k}, v] = 0$ for every vector $v$ when $k \\geq 2$, making each higher $A_{2k}$ central, and an even central element is a scalar; scalars generate nothing). The single-pair clause of (ii) is the import, proved in \\cite[Prop.~2.1]{ButlerT7} (\\claimref{hawking.modular-structure-completed-pair}), unique up to reparametrisation and orientation: the algebra fixes the orbits, not the speed, and the geometric normalisation of \\cite[App.~A]{ButlerT5} is what fixes the speed, converting rapidity, and only rapidity, to Schwarzschild time at $\\kappa = 1/4M$, so a rescaled generator traverses the same orbits and defines the same clock, not a faster one. For (iii): the flow a bivector $X$ generates acts on the mode operators by $\\operatorname{ad}_X$, which is insensitive to a central shift ($\\operatorname{ad}_{E_{ii}} = \\operatorname{ad}_{E_{ii} - 1/2}$), so it is the adjoint spectrum and not the one-particle spectrum that the classification must read. From the canonical anticommutation relations of the mode operators (Proposition \\claimref{scrambling.boundary-mode-space-matrix}), $[E_{ij}, \\psi_k^\\dagger] = \\delta_{jk}\\psi_i^\\dagger$ and $[E_{ij}, \\psi_k] = -\\delta_{ik}\\psi_j$. Hence $\\operatorname{ad}_{E_{ii}}$ has eigenvalues $\\pm 1$ on $(\\psi_i^\\dagger, \\psi_i)$ and $0$ elsewhere, and the atom's boost bivector $\\sigma_i = 2(\\hat n_i - \\tfrac12)$ (Fact \\claimref{scrambling.imported-modes-modular-inventory}) generates that same flow in the rotor convention $e^{\\sigma_i t/2}(\\cdot)\\,e^{-\\sigma_i t/2}$: unit rapidity. The equal-coefficient sum $\\sum_i E_{ii}$ gives $\\pm 1$ on every mode, the simultaneous boost of all $n$ atoms and the statement's common clock; what is compact here is the phase circle $e^{i\\theta \\hat n}$, whose generator is $i$ times a bivector, which the real Clifford algebra of the boundary modes excludes, its centre being scalar, so the phase circle is not an intrinsic flow in the sense of (i); the single-atom instance of the exclusion is published as \\cite[Prop.~7.21(3)]{ButlerT5} (\\claimref{singularity.euclidean-rotor-where-it-lies}). For $i \\neq j$, $\\operatorname{ad}_{E_{ij} + E_{ji}}$ has eigenvectors $\\psi_i^\\dagger \\pm \\psi_j^\\dagger$ with eigenvalues $\\pm 1$, and $E_{ij} + E_{ji} = \\hat n_+ - \\hat n_-$ exactly in the rotated modes $(\\psi_i \\pm \\psi_j)/\\sqrt{2}$: again unit rapidity. The antisymmetric $E_{ij} - E_{ji}$ has adjoint eigenvalues $\\pm i$ and is compact; the single $E_{ij}$ with $i \\neq j$ is nilpotent, generating a unipotent shear; neither carries a rapidity. A diagonal $\\sum_i c_i E_{ii}$ has adjoint eigenvalues $\\pm c_i$, so unequal $|c_i|$ leave no common rapidity and admit no single conversion. The pairing sector is classified by one product: from the CAR, $\\operatorname{ad}$ of $c\\,\\psi_i^\\dagger\\psi_j^\\dagger + d\\,\\psi_j\\psi_i$ maps $\\psi_i^\\dagger \\mapsto d\\,\\psi_j$, $\\psi_j \\mapsto c\\,\\psi_i^\\dagger$, $\\psi_j^\\dagger \\mapsto -d\\,\\psi_i$, $\\psi_i \\mapsto -c\\,\\psi_j^\\dagger$, two $2 \\times 2$ blocks each with eigenvalues $\\pm\\sqrt{cd}$: hyperbolic for $cd > 0$, where unequal coefficients rescale the common rapidity rather than remove it ($2\\psi_i^\\dagger\\psi_j^\\dagger + \\tfrac12\\psi_j\\psi_i$ is a clock at unit rapidity outright); compact for $cd < 0$, eigenvalues $\\pm i\\sqrt{|cd|}$; nilpotent for $cd = 0$. Every clock in the inventory is therefore hyperbolic with unit rapidity after normalisation, hence by the Witt-extension clause of (iii), in the split space of the $n$ hyperbolic pairs of \\claimref{tower.witt-index-quantum-capacity}, $O(n,n)$-conjugate to a sum of standard atom boosts, and the geometric normalisation converts them all at the one $\\kappa$. What is unique is the rate, not the flow. Normalisation sets the nonzero adjoint eigenvalues to $\\pm 1$, so the continuation of any clock to imaginary rapidity acts on the mode operators by $e^{\\pm i\\theta}$ and has conjugation period exactly $2\\pi$, the atom's period of Fact \\claimref{scrambling.imported-modes-modular-inventory} (\\cite[Prop.~7.21(1)]{ButlerT5}); at the geometric rate $\\kappa$ that period is the Schwarzschild span $2\\pi/\\kappa = \\beta$.\n",
+  "hash": "f51cbbb1e80b",
+  "number": 11
+ },
+ {
+  "id": "t:scrambling.clock-inventory-boundary-modes>scrambling.epoch-modular-period-two-unknowns-become",
+  "type": "transition",
+  "between": [
+   "scrambling.clock-inventory-boundary-modes",
+   "scrambling.epoch-modular-period-two-unknowns-become"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.epoch-modular-period-two-unknowns-become",
+  "type": "theorem",
+  "claim": "scrambling.epoch-modular-period-two-unknowns-become@5",
+  "title": "The epoch is the modular period; two unknowns become one",
+  "text": "Assume (IC). Then the counted epoch is the modular period:\n\\[\n\\Delta t \\;=\\; \\beta \\;=\\; \\frac{2\\pi}{\\kappa} \\;=\\; 8\\pi M \\qquad \\text{(Schwarzschild)}.\n\\]\nThe conversion is exact and holds in both directions: with the epoch fixed, the area-law condition $\\nu\\,\\Delta t = M/2$ of Proposition \\claimref{scrambling.area-law-test} becomes a prediction for the density factor,\n\\[\n\\nu \\;=\\; \\frac{M/2}{8\\pi M} \\;=\\; \\frac{1}{16\\pi}\n\\]\nin the 1-nat convention ($\\nu = 1/(16\\pi\\ln 2)$ in T5's capacity convention, Remark \\claimref{note.scrambling.density-factor-stated-full}; the section ``The calibration factorised, and the quarter examined'' shows the capacity convention is the one with physical content and restates the prediction there), and a calibration principle for the exceptional set (Fact \\claimref{tower.witt-index-quantum-capacity}; the section ``The calibration factorised, and the quarter examined'' says what it must produce) must return that number \\emph{or refute the premise (IC)}. Two unknowns have become one equation and one falsifiable identification; the count's remaining condition is a single dimensionless number with a named derivation route and a named failure mode. The scale $\\Delta t \\sim M$ is thereby derived rather than imported, cohering with Theorem \\claimref{scrambling.mode-count}'s own observation that the accrual rate is set by the horizon's temperature: the singularity keeps the horizon's scale.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "By Lemma \\claimref{scrambling.clock-inventory-boundary-modes} every clock of the boundary modes runs at the modular rate $\\kappa$, with period $\\beta = 8\\pi M$: the flows differ, the rate does not. (IC, \\claimref{scrambling.intrinsic-clock-ic-flagged-premise}) says the epoch is set by an intrinsic clock, and a clock marks a span through its period: a hyperbolic flow has exactly one, the $2\\pi$ conjugation cycle of its Euclidean continuation: a clock is $O(n,n)$-conjugate to a sum of standard atom boosts (Lemma \\claimref{scrambling.clock-inventory-boundary-modes}), the atom's cycle is \\cite[Prop.~7.21(1)]{ButlerT5} (\\claimref{singularity.euclidean-rotor-where-it-lies}), and the geometric normalisation converts it to $2\\pi/\\kappa = \\beta$, whereas the e-folding time $\\kappa^{-1}$ is rapidity one and closes no cycle. Every candidate clock carries the same period, so $\\Delta t = \\beta$. The displayed conversion is arithmetic, verified exactly by the script; the two-direction clause is Proposition \\claimref{scrambling.area-law-test} read in each direction.\n",
+  "hash": "9d35fcd42db4",
+  "number": 12
+ },
+ {
+  "id": "t:scrambling.epoch-modular-period-two-unknowns-become>scrambling.integer-holographic-form-identification",
+  "type": "transition",
+  "between": [
+   "scrambling.epoch-modular-period-two-unknowns-become",
+   "scrambling.integer-holographic-form-identification"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.integer-holographic-form-identification",
+  "type": "theorem",
+  "claim": "scrambling.integer-holographic-form-identification@2",
+  "title": "The integer-holographic form, and the identification of the $16\\pi$",
+  "text": "With the epoch fixed at $\\beta$:\n\\begin{enumerate}\n\\item the counted three-volume of one epoch is $V = (8\\pi M)\\cdot\\beta = 64\\pi^2M^2$ in Planck units; restoring the length, $V = \\beta^2\\lP$: the coincidence with $\\beta^2$ is a consequence of the framework's units, one visible power of $\\lP$ marking the volume as geometric rather than purely modular;\n\\item the prediction $\\nu = 1/16\\pi$ holds if and only if the number of boundary modes registered per modular period is\n\\[\nN_{\\mathrm{epoch}} \\;=\\; \\nu\\,V \\;=\\; 4\\pi M^2 \\;=\\; \\SBH\n\\]\nexactly as arithmetic: \\emph{one boundary-mode fermion per four Planck cells of horizon area, per modular period}. The transcendental density becomes an integer-holographic statement, in the 1-nat convention and inheriting the per-mode $\\ln 2$ normalisation of Remark \\claimref{note.scrambling.density-factor-stated-full};\n\\item the naive one-mode-per-volume-cell reading ($\\nu = 1$) overshoots it by exactly $16\\pi$, which is precisely the horizon-area coefficient $A = 16\\pi M^2$: the thinning the weighted completion must produce is the area coefficient itself. (a figure of the original draws the assembled counting geometry.)\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "All three clauses are exact arithmetic from Theorem \\claimref{scrambling.mode-count} and Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}: $V = 8\\pi M \\cdot 8\\pi M = 64\\pi^2 M^2$ and $\\beta^2 = (8\\pi M)^2$; $\\nu V = 64\\pi^2M^2/16\\pi = 4\\pi M^2$; and $V/\\SBH = 64\\pi^2M^2/4\\pi M^2 = 16\\pi = A/M^2$. The script checks each as an exact identity in the formal symbols $(\\pi, M)$.\n",
+  "hash": "ffeca1b89f7a",
+  "number": 13
+ },
+ {
+  "id": "c:note.scrambling.circularity-fence",
+  "type": "note",
+  "claim": "note.scrambling.circularity-fence@1",
+  "title": "The circularity fence",
+  "text": "T5's capacity statement (the Page-curve computation) \\emph{cites} the count of the section ``The count'' and the area-law condition under test; any derivation of the epoch routed through the Page-curve or eviction computation therefore proves the prediction from itself, and is excluded. Admissible derivations of $\\nu = 1/16\\pi$ in the 1-nat convention, $\\nu = 1/(16\\pi\\ln 2)$ in the capacity convention (Remark \\claimref{note.scrambling.density-factor-stated-full}), must come from the structure of the boundary modes themselves (a calibration principle on the exceptional set of the weighted completion, the section ``The calibration factorised, and the quarter examined'', or the slice-to-epoch aggregation of the section ``The transverse sphere from the boundary modes''); the fence is part of what makes the prediction falsifiable, and the failed direct aggregations recorded in the section ``The transverse sphere from the boundary modes'' show that it excludes real candidates.",
+  "gap": false,
+  "level": "formal",
+  "hash": "e103a50a40e9"
+ },
+ {
+  "id": "c:note.scrambling.point-contact-what-kind-statement",
+  "type": "note",
+  "claim": "note.scrambling.point-contact-what-kind-statement@1",
+  "title": "Point of contact: what kind of statement this is",
+  "text": "The step of Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become} is the framework's version of a familiar holographic practice: when a quantity is conditional on a regulator, derive the regulator from the system's own modular structure. The coherence checks are threefold: the causal epoch of Fact \\claimref{singularity.causal-epoch-computed-exactly} is $O(M)$ with an identified logarithm, matching the modular period's scale; the count's rate is set by the horizon's own temperature, $dN/dt = \\nu/\\TH$; and the epoch three-volume comes out as $\\beta^2\\lP$, modular up to a single Planck factor. None of the three is a proof of (IC), and the third is the weakest, its power of $\\lP$ the residue of geometry; together they are why the premise is worth flagging rather than discarding.",
+  "gap": false,
+  "level": "formal",
+  "hash": "d8053f696ae7"
+ },
+ {
+  "id": "c:note.scrambling.setting-calibration-factorised-quarter-examined",
+  "type": "note",
+  "claim": "note.scrambling.setting-calibration-factorised-quarter-examined@1",
+  "title": "The calibration factorised, and the quarter examined",
+  "text": "Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become} leaves one number, and Fact \\claimref{tower.witt-index-quantum-capacity} places it at the exceptional set of the weighted completion. The geometry paper's weighted limit holds at transport level along every tangential curve of fixed Hubble-normalised length for the whole admissible class (the metrics of \\cite[Def.~5.5]{ButlerT6}, whose Kasner-type exponents satisfy $\\sum_i p_i^2 = 1$, as Schwarzschild's $(-\\tfrac13, \\tfrac23, \\tfrac23)$ do), and at Schwarzschild the $\\varphi$-lines converge with rate $\\tau^{1/3}$ and the boundary data are regular by symmetry \\cite[\\S 5.5]{ButlerT6}; the prediction is stated at Schwarzschild, where no billiard arises. So no analytic obstacle remains between the framework and $\\nu$; what remains is a calibration principle, carried by this paper (Remark \\claimref{note.scrambling.density-factor-stated-full}), and the results below say what it must produce: the required thinning factorises; exactness excludes the cutoff from the count and narrows the normalisation to two cutoff-free scales, the horizon $r_h$ and $r_* = M$; one tick per modular period is (IC) read as a counting rule; and the residue is Bekenstein-Hawking's quarter, which in the one convention that compares an entropy with an entropy is $1/(4\\ln 2)$, unreachable by any counting rule whose residue is rational ($k = 0$ in Proposition \\claimref{scrambling.no-recount-reaches-quarter}) and, conditionally on the expected algebraic independence of $\\pi$ and $\\ln 2$, by any counting rule at all.",
+  "gap": false,
+  "level": "formal",
+  "hash": "72a1f7211643"
+ },
+ {
+  "id": "t:scrambling.integer-holographic-form-identification>scrambling.imported-collars-coframe-exceptional-set-helicity",
+  "type": "transition",
+  "between": [
+   "scrambling.integer-holographic-form-identification",
+   "scrambling.imported-collars-coframe-exceptional-set-helicity"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.imported-collars-coframe-exceptional-set-helicity",
+  "type": "theorem",
+  "claim": "scrambling.imported-collars-coframe-exceptional-set-helicity@6",
+  "title": "Imported: the collar's coframe at the exceptional set, and the helicity lift",
+  "text": "In units $2M = 1$ the weighted coframe of the Schwarzschild interior gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the components of its physical-vector map $\\hb^{-1}$ in the orthonormal frame adapted to $(t, \\theta, \\varphi)$, rescaled, carries the weights $r^{1/2}$ on $\\sqrt{A}\\,dt$ and $r^{-1}$ on $r\\,d\\theta$, $r\\sin\\theta\\,d\\varphi$: these are the Kasner exponents $(-\\tfrac13, \\tfrac23, \\tfrac23)$ of the proper-time variable $\\tau \\propto r^{3/2}$ rewritten in the variable $r$, where they read $(-\\tfrac12, 1, 1)$, normalised to one at $r = r_h$; the horizon-normalised coframe on the exceptional set is therefore $(dt,\\ r_h\\,d\\theta,\\ r_h\\sin\\theta\\,d\\varphi)$ exactly, $(r^{1/2}\\sqrt{A})^2 = 1 - r \\to 1$ and $r^{-1}\\cdot r = 1$. In the Hawking paper's lift, each channel $(\\omega, \\ell, m, s)$ of the near-horizon reduction is one two-dimensional mode, and the two helicities of a massless species are two channels at distinct homogeneities $-2s - 2$ ($-4$ and $0$ for the photon, $-6$ and $+2$ for the graviton); the channel identification is that paper's joint J3, its one modelling joint, which it assigns to this paper as an open successor problem, so the lift enters here at modelling tier and not at theorem tier. \\emph{Provenance:} \\cite[Lemmas 5.1 to 5.3, Def.~5.5]{ButlerT6} and \\cite[Thm.~8.16]{ButlerT4} for the weights; \\cite[Fact~5.1, Prop.~5.2, Assembly~5.3]{ButlerT7} for the lift, Assembly 5.3 there itemising J3 as modelling.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The coframe below is that of the derived metric of the Schwarzschild interior gravitational field, the components of $\\hb^{-1}$ in an orthonormal frame (Fact \\claimref{synthesis.imported-gtg-dictionary}(i)). In units $2M = 1$ the weighted coframe of the Schwarzschild interior carries the weights $r^{1/2}$ on $\\sqrt{A}\\,dt$ and $r^{-1}$ on $r\\,d\\theta$, $r\\sin\\theta\\,d\\varphi$: these are the Kasner exponents $(-\\tfrac13, \\tfrac23, \\tfrac23)$ of the proper-time variable $\\tau \\propto r^{3/2}$ rewritten in the variable $r$, where they read $(-\\tfrac12, 1, 1)$, normalised to one at $r = r_h$; the horizon-normalised coframe on the exceptional set is therefore $(dt,\\ r_h\\,d\\theta,\\ r_h\\sin\\theta\\,d\\varphi)$ exactly, $(r^{1/2}\\sqrt{A})^2 = 1 - r \\to 1$ and $r^{-1}\\cdot r = 1$. In the Hawking paper's lift, each channel $(\\omega, \\ell, m, s)$ of the near-horizon reduction is one two-dimensional mode, and the two helicities of a massless species are two channels at distinct homogeneities $-2s - 2$ ($-4$ and $0$ for the photon, $-6$ and $+2$ for the graviton); the channel identification is that paper's joint J3, its one modelling joint, which it assigns to this paper as an open successor problem, so the lift enters here at modelling tier and not at theorem tier. \\emph{Provenance:} \\cite[Lemmas 5.1 to 5.3, Def.~5.5]{ButlerT6} (\\claimref{interior.interior-connection-exactly}, \\claimref{interior.kasner-form-interior}) and \\cite[Thm.~8.16]{ButlerT4} (\\claimref{sheaf.weights-are-forced-are-kasner-exponents}) for the weights; \\cite[Fact~5.1, Prop.~5.2, Assembly~5.3]{ButlerT7} (\\claimref{hawking.homogeneity-ordering-shift}, \\claimref{hawking.imported-penrose-transform}, \\claimref{hawking.helicity-lift-joints-itemised}) for the lift, Assembly 5.3 there itemising J3 as modelling.\n",
+  "hash": "9c1ebeea2f3e",
+  "number": 14
+ },
+ {
+  "id": "t:scrambling.imported-collars-coframe-exceptional-set-helicity>scrambling.exact-factorisation-thinning",
+  "type": "transition",
+  "between": [
+   "scrambling.imported-collars-coframe-exceptional-set-helicity",
+   "scrambling.exact-factorisation-thinning"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.exact-factorisation-thinning",
+  "type": "theorem",
+  "claim": "scrambling.exact-factorisation-thinning@3",
+  "title": "The exact factorisation of the thinning",
+  "text": "In Planck units, with $r_h = 2M$, $A = 4\\pi r_h^2 = 16\\pi M^2$, $\\beta = 8\\pi M$ and $\\SBH = A/4$:\n\\begin{enumerate}\n\\item[(i)] the slice count per unit Killing time is $8\\pi M = 4\\pi r_h = A/r_h$, at leading order in $r_c/2M$;\n\\item[(ii)] the slice count per modular period is $N_{\\mathrm{slice}} = 64\\pi^2 M^2$ and $N_{\\mathrm{slice}}/\\SBH = 16\\pi$, at the same order;\n\\item[(iii)] $16\\pi = (\\beta/r_h) \\times (A/\\SBH) = 4\\pi \\times 4$, and the first factor is universal for Schwarzschild, $\\beta/r_h = 2\\pi/(\\kappa r_h) = 4\\pi$ with $\\kappa = 1/(2r_h)$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(i) and (ii) are Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing} and Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}'s numbers multiplied, and inherit Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing}'s leading-order qualifier, the neglected factor being $\\sqrt{1 - r_c/2M}$; (iii) is arithmetic, exact, $\\beta/r_h = 8\\pi M/2M = 4\\pi$ and $A/\\SBH = 4$. The script performs all of it as exact monomials in $\\pi$ and $M$.\n",
+  "hash": "3f5ab1ae1dc8",
+  "number": 15
+ },
+ {
+  "id": "c:note.scrambling.setting-calibration-factorised-quarter-examined-2",
+  "type": "note",
+  "claim": "note.scrambling.setting-calibration-factorised-quarter-examined-2@1",
+  "title": "The calibration factorised, and the quarter examined",
+  "text": "The two factors are different kinds of question. The $4\\pi = \\beta/r_h$ measures the modular period in units of the horizon's own Killing time scale; it is what disappears if the $t$-direction of the exceptional set is counted \\emph{once per modular period} instead of once per slice cell, which is (IC) read as a counting rule. The remaining $4$ is $A/\\SBH$, Bekenstein-Hawking's quarter, which falls on the sphere factor when the sphere is counted at horizon normalisation.",
+  "gap": false,
+  "level": "formal",
+  "hash": "854d9dd40bf6"
+ },
+ {
+  "id": "t:scrambling.exact-factorisation-thinning>scrambling.candidate-principles-their-yields",
+  "type": "transition",
+  "between": [
+   "scrambling.exact-factorisation-thinning",
+   "scrambling.candidate-principles-their-yields"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.candidate-principles-their-yields",
+  "type": "theorem",
+  "claim": "scrambling.candidate-principles-their-yields@2",
+  "title": "The candidate principles and their yields",
+  "text": "Let a calibration principle be a rule assigning to the exceptional set $E = \\{\\tau = 0\\} \\times \\R_t \\times S^2$ a count of boundary-mode fermions per modular period. Then:\n\\begin{enumerate}\n\\item[(P1)] \\emph{one fermion per Planck cell of the slice} returns $N_{\\mathrm{epoch}} = 16\\pi\\,\\SBH$, and the coefficient is scheme-bound: the slice count scales as $c_0^{3/2}$, so the proper-time scheme returns exactly $\\tfrac32$ times the curvature scheme's count and the Kretschmann scheme $12^{1/4}$ times it, an irrational multiple;\n\\item[(P3)] \\emph{one fermion per Planck cell of the sphere at horizon normalisation, once per modular period} returns $N_{\\mathrm{epoch}} = A = 4\\,\\SBH$, independently of the cutoff scheme, because the horizon-normalised coframe on $E$ is exactly $(dt,\\ r_h\\,d\\theta,\\ r_h\\sin\\theta\\,d\\varphi)$ (Fact \\claimref{scrambling.imported-collars-coframe-exceptional-set-helicity});\n\\item[(P2)] \\emph{fundamentals per sphere aggregated over the epoch} breaks the $M$-scaling (Proposition \\claimref{scrambling.per-slice-verification-two-failed-aggregations}).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(P1): $N_{\\mathrm{slice}}$ of Proposition \\claimref{scrambling.exact-factorisation-thinning}; the slice volume per unit $t$ is $4\\pi r_c^2\\sqrt{2M/r_c} = 4\\pi\\sqrt{2M}\\,r_c^{3/2}$, proportional to $c_0^{3/2}$ (Lemma \\claimref{scrambling.scheme-robustness-cutoff}); the script computes $(c_0/2^{1/3})^{3/2}$ on the prime factorisations, $2^{-1}3^{1} = \\tfrac32$ for the proper-time scheme and $2^{1/2}3^{1/4} = 12^{1/4}$ for Kretschmann. (P3): the weights of Fact \\claimref{scrambling.imported-collars-coframe-exceptional-set-helicity}, with $(r^{1/2}\\sqrt A)^2 = r(1/r - 1) = 1 - r$ evaluated at $r = 0$ by the script; the sphere of radius $r_h$ has $A$ Planck cells, and one per period gives $A$. (P2) is Proposition \\claimref{scrambling.per-slice-verification-two-failed-aggregations}.\n",
+  "hash": "cd88ad246554",
+  "number": 16
+ },
+ {
+  "id": "t:scrambling.candidate-principles-their-yields>scrambling.exactness-excludes-cutoff-dependence",
+  "type": "transition",
+  "between": [
+   "scrambling.candidate-principles-their-yields",
+   "scrambling.exactness-excludes-cutoff-dependence"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.exactness-excludes-cutoff-dependence",
+  "type": "theorem",
+  "claim": "scrambling.exactness-excludes-cutoff-dependence@4",
+  "title": "Exactness excludes cutoff dependence",
+  "text": "Suppose a calibration principle returns $N_{\\mathrm{epoch}} = \\SBH = 4\\pi M^2$ exactly and its count is a monomial $c\\,\\pi^p M^m$ in the geometric data of the interior with $c$ rational. Then the count cannot depend on the stretched radius $r_c$: any dependence on $r_c$ through a power $r_c^a$, $a \\neq 0$, carries the scheme constant $c_0^a$, which differs between the three schemes for every real $a \\neq 0$ and, for rational $a$, is irrational for the Kretschmann scheme whenever $a \\notin 6\\mathbb{Z}$. The principle must therefore be normalised at a scale the interior fixes without a cutoff. Exactness does not choose that scale: the interior fixes the horizon $r_h = 2M$, at which the sphere carries $A = 4\\,\\SBH$ cells and the count is $\\SBH$ with the residue $\\tfrac14$ on the cells (Proposition \\claimref{scrambling.residue-each-convention}(i)), and it fixes equally the rational multiple $r_* = M = r_h/2$, at which the sphere carries $4\\pi M^2 = \\SBH$ cells and the residue is $1$. Which of the two a principle should mean is not decided here.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "$c_0^a$ for the three schemes of \\claimref{scrambling.scheme-robustness-cutoff} is $2^{a/3}$, $2^{2a/3}3^{a/6}$, $2^{-a/3}3^{2a/3}$; their ratios $2^{a/3}3^{a/6}$ and $2^{-2a/3}3^{2a/3}$ are not $1$ for real $a \\neq 0$, so a count carrying $r_c^a$ takes different values in different schemes, and a scheme-dependent count cannot equal the scheme-independent $\\SBH$ in all of them; for rational $a$ the Kretschmann constant $48^{a/6} = 2^{2a/3}\\,3^{a/6}$ is rational exactly when both exponents are integers, that is when $a \\in 6\\mathbb{Z}$, and is otherwise irrational (at $a = 3/2$, for instance, it is $2\\cdot 3^{1/4}$). The Schwarzschild interior has one dimensionful parameter, $M$, so a cutoff-free radius is a fixed multiple of $M$; the horizon is the distinguished one, with residue $\\tfrac14$ (\\claimref{scrambling.residue-each-convention}(i)), and $r_* = M$ is the one at which the residue is $1$, the sphere's cell count there being $\\SBH$ itself; the script displays both as arithmetic. The argument excludes the cutoff; it does not rank the two.\n",
+  "hash": "d36c2cef4577",
+  "number": 17
+ },
+ {
+  "id": "t:scrambling.exactness-excludes-cutoff-dependence>scrambling.pair-mode-qubit-one-object",
+  "type": "transition",
+  "between": [
+   "scrambling.exactness-excludes-cutoff-dependence",
+   "scrambling.pair-mode-qubit-one-object"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.pair-mode-qubit-one-object",
+  "type": "theorem",
+  "claim": "scrambling.pair-mode-qubit-one-object@4",
+  "title": "Pair, mode, qubit: one object",
+  "text": "The tower's ladder pair $(v_i, w_i)$, the singularity paper's ``fermionic mode'', and the ``one ladder pair per point of the exceptional set'' of Fact \\claimref{tower.witt-index-quantum-capacity} are the same object: one creation and one annihilation operator, a two-dimensional state space, one qubit, maximal entropy $\\ln 2$ nats. In particular $\\Cl(2,4)$ carries exactly two such pairs, its Witt index, and the count of pairs is the count of modes: no factor of two enters between the tower and this paper's count.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The tower's relations \\cite[Prop.~4.1]{ButlerT3} (\\claimref{tower.ladder-pairs-satisfy-car-vectors}) are the CAR of $k$ modes with $v_i$ the creation and $w_i$ the annihilation operator of mode $i$, each mode's algebra $\\Mat_2$ with the two-dimensional Fock space $\\{|0\\rangle, v_i|0\\rangle\\}$, one qubit per rung \\cite[Thm.~4.2]{ButlerT3} (\\claimref{tower.fock-module-one-qubit-per-rung}); the singularity paper's per-mode capacity $\\ln 2$ is the maximal entropy of that two-state system; the corank statement counts these pairs. The script realises two pairs in $\\Cl(2,4)$ as $v_i = \\tfrac12(e_a + e_b)$, $w_i = \\tfrac12(e_a - e_b)$ on two orthogonal hyperbolic planes and checks all ten anticommutation relations exactly, the CAR of a Witt basis (\\claimref{std-algebra.witt-basis-car}); that no third pair exists is the capacity theorem \\cite[Thm.~4.3]{ButlerT3} (\\claimref{tower.witt-index-quantum-capacity}).\n",
+  "hash": "84210a3d0f35",
+  "number": 18
+ },
+ {
+  "id": "t:scrambling.pair-mode-qubit-one-object>scrambling.residue-each-convention",
+  "type": "transition",
+  "between": [
+   "scrambling.pair-mode-qubit-one-object",
+   "scrambling.residue-each-convention"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.residue-each-convention",
+  "type": "theorem",
+  "claim": "scrambling.residue-each-convention@4",
+  "title": "The residue in each convention",
+  "text": "Write the epoch count as $N_{\\mathrm{epoch}} = \\kappa_c \\times A \\times 1$, horizon-normalised sphere cells times one tick per modular period, with $\\kappa_c$ the dimensionless \\emph{calibration residue}, a symbol distinct from the surface gravity $\\kappa$ of the section ``Setting and imports''. Then:\n\\begin{enumerate}\n\\item[(i)] in the 1-nat convention of this paper, $N_{\\mathrm{epoch}} = \\SBH$ gives $\\kappa_c = \\SBH/A = \\tfrac14$;\n\\item[(ii)] in the capacity convention of the singularity paper, $N_{\\mathrm{epoch}}\\ln 2 = \\SBH$ gives $\\kappa_c = 1/(4\\ln 2)$: one boundary mode per $4\\ln 2$ Planck areas of horizon per modular period, which is one mode per Bekenstein-Mukhanov area quantum \\cite{BekensteinMukhanov1995};\n\\item[(iii)] the two differ by exactly $\\ln 2$, and only (ii) compares an entropy with an entropy: a fermionic mode carries at most $\\ln 2$ nats, so the 1-nat convention credits each mode with more entropy than it can hold, and the exact ``$16\\pi$'' of Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become} is a property of that convention, the physical thinning being $16\\pi\\ln 2$;\n\\item[(iv)] one boundary mode registers one helicity: by Fact \\claimref{scrambling.imported-collars-coframe-exceptional-set-helicity} the two helicities of a massless species are two channels of the lift, so the capacity per boundary mode is $\\ln 2$ and not $2\\ln 2$, and $\\kappa_c$ is $1/(4\\ln 2)$, not $1/(8\\ln 2)$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(i) and (ii) are $N_{\\mathrm{epoch}}/A$ with $N_{\\mathrm{epoch}}$ read off Corollary \\claimref{scrambling.integer-holographic-form-identification}(2) in each convention: $N_{\\mathrm{epoch}} = \\SBH = 4\\pi M^2$ in the 1-nat convention and $N_{\\mathrm{epoch}} = \\SBH/\\ln 2$ in the capacity convention (the $\\ln 2$ of Remark \\claimref{note.scrambling.density-factor-stated-full}), divided by $A = 16\\pi M^2$; the script performs them as exact monomials in $\\pi$ and $M$ with $\\ln 2$ a formal indeterminate. (iii): the maximal entropy of a two-dimensional state space is $\\ln 2$, the entropy of the maximally mixed state, and $\\ln 2 < 1$; the singularity paper already compares $C = N\\ln 2$ with $\\SBH$ for this reason \\cite[Prop.~10.7]{ButlerT5} (\\claimref{singularity.area-law-test}), and Remark \\claimref{note.scrambling.density-factor-stated-full} records the factor. (iv) is a reading of the lift of \\claimref{scrambling.imported-collars-coframe-exceptional-set-helicity} at the level of its channel identification, its modelling step: the homogeneities $-2s - 2$ at $s = \\pm 1, \\pm 2$ are $-4, 0, -6, +2$, pairwise distinct, so no single channel contains both helicities; the script checks the table.\n",
+  "hash": "19e99cb004d5",
+  "number": 19
+ },
+ {
+  "id": "t:scrambling.residue-each-convention>scrambling.no-recount-reaches-quarter",
+  "type": "transition",
+  "between": [
+   "scrambling.residue-each-convention",
+   "scrambling.no-recount-reaches-quarter"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.no-recount-reaches-quarter",
+  "type": "theorem",
+  "claim": "scrambling.no-recount-reaches-quarter@4",
+  "title": "No recount reaches the quarter",
+  "text": "Let a counting rule assign to the exceptional set a tally that is a rational number of modes per cell, with cells whose areas are rational multiples of integer powers of $\\pi$ in Planck units, over a rational number of ticks per modular period. Then its residue $\\kappa_c$ is a rational multiple of an integer power of $\\pi$, $\\kappa_c = q\\pi^k$ with $q \\in \\mathbb{Q}$ and $k \\in \\mathbb{Z}$. In the capacity convention the target is $\\kappa_c = 1/(4\\ln 2)$; equality would require $\\pi^k\\ln 2 \\in \\mathbb{Q}$, which is false for $k = 0$, $\\ln 2$ being transcendental \\cite[Thm.~1.4]{Baker1975}, so no rule with $k = 0$ reaches the target; for $k \\neq 0$ it would contradict the expected algebraic independence of $\\pi$ and $\\ln 2$, which is not a theorem, so the exclusion of rules with $k \\neq 0$ is conditional on that independence. In the 1-nat convention the target $\\kappa_c = \\tfrac14$ is rational, and the natural rules of Proposition \\claimref{scrambling.candidate-principles-their-yields} return $\\kappa_c = 4\\pi$ (P1), $\\kappa_c = 1$ (P3) and a broken scaling (P2), none of them $\\tfrac14$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "A product and quotient of rational multiples of integer powers of $\\pi$ is one, which is the closure the script checks on the rule's three factors. For the capacity target of \\claimref{scrambling.residue-each-convention}(ii), $1/(4\\ln 2) = q\\pi^k$ with $q$ rational gives $\\pi^k\\ln 2 = 1/(4q)$ rational; at $k = 0$ this says $\\ln 2$ is rational, contradicting its transcendence (Hermite-Lindemann, an import, not scripted). The residues of the natural rules are Proposition \\claimref{scrambling.candidate-principles-their-yields}'s yields divided by $A$: $16\\pi\\,\\SBH/A = 4\\pi$ and $A/A = 1$.\n",
+  "hash": "8aff95c24930",
+  "number": 20
+ },
+ {
+  "id": "c:note.scrambling.prediction-restated",
+  "type": "note",
+  "claim": "note.scrambling.prediction-restated@1",
+  "title": "The prediction, restated",
+  "text": "Propositions \\claimref{scrambling.exact-factorisation-thinning} to \\claimref{scrambling.no-recount-reaches-quarter} reduce the calibration to the form\n\\[\nN_{\\mathrm{epoch}} \\;=\\; \\kappa_c \\times (\\text{horizon-normalised sphere cells}) \\times (\\text{one tick per modular period}),\n\\]\nwith the normalisation narrowed to two cutoff-free scales by exactness ($r_h$, or $r_* = M$, Proposition \\claimref{scrambling.exactness-excludes-cutoff-dependence}), one tick per period being (IC) read as a counting rule, and $\\kappa_c$ the residue. The residue is not an artefact of the counting conventions: the chain from tower to count carries no hidden factor of two (Proposition \\claimref{scrambling.pair-mode-qubit-one-object}); the helicity clause is closed at the tier of the lift's modelling joint J3 (Proposition \\claimref{scrambling.residue-each-convention}(iv), Fact \\claimref{scrambling.imported-collars-coframe-exceptional-set-helicity}), not at theorem tier; and in the one convention with physical content the residue is $1/(4\\ln 2)$, which no recount of the exceptional set with a rational residue ($k = 0$) produces, and, conditionally on the expected algebraic independence of $\\pi$ and $\\ln 2$, no recount with $k \\neq 0$ either (Proposition \\claimref{scrambling.no-recount-reaches-quarter}). The prediction's declared form is therefore: \\emph{the boundary mode space registers one mode per Bekenstein-Mukhanov area quantum of horizon per modular period}, $\\nu = 1/(16\\pi\\ln 2)$ in the capacity convention, and deriving that is equivalent to deriving Bekenstein-Hawking's quarter. Arithmetically $\\kappa_c = \\tfrac14$ in the 1-nat convention is horizon normalisation replaced by normalisation at $r_* = r_h/2 = M$, since $4\\pi M^2 = \\SBH$; whether that radius means anything is not decided here. The $16\\pi$ of Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become} stands as the convention-dependent form of the same statement.",
+  "gap": false,
+  "level": "formal",
+  "hash": "26764e2a8ea5"
+ },
+ {
+  "id": "s:paper-5",
+  "type": "section",
+  "title": "The transverse sphere from the boundary modes",
+  "hash": "abe303b6fc3d"
+ },
+ {
+  "id": "i:paper-5",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-transverse-sphere-boundary-modes",
+  "type": "note",
+  "claim": "note.scrambling.setting-transverse-sphere-boundary-modes@1",
+  "title": "The transverse sphere from the boundary modes",
+  "text": "The count of the section ``The count'' used the metric slice geometry. This section derives the transverse angular geometry from the correlation structure itself, completing a sequence whose first two steps are standard modular theory, and then runs the quantitative checks: one exact agreement, and two instructive failures.",
+  "gap": false,
+  "level": "formal",
+  "hash": "dc668bf2bda9"
+ },
+ {
+  "id": "t:scrambling.no-recount-reaches-quarter>scrambling.imported-time-plane-modular-data",
+  "type": "transition",
+  "between": [
+   "scrambling.no-recount-reaches-quarter",
+   "scrambling.imported-time-plane-modular-data"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.imported-time-plane-modular-data",
+  "type": "fact",
+  "claim": "scrambling.imported-time-plane-modular-data@1",
+  "title": "Imported: time and the plane from modular data",
+  "text": "The modular flow of a wedge algebra in the vacuum implements the boost: the timelike direction is recoverable from modular data (Bisognano-Wichmann). One half-sided modular inclusion recovers the two-dimensional conformal structure (Wiesbrock). \\emph{Provenance:} \\cite{BisognanoWichmann1976} (the duality theorem) and \\cite{Wiesbrock1993} (the main theorem); both at assembly level for the present use.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "J. J. Bisognano and E. H. Wichmann, On the duality condition for quantum fields, J. Math. Phys. 17 (1976), 303--321.; H.-W. Wiesbrock, Half-sided modular inclusions of von Neumann algebras, Commun. Math. Phys. 157 (1993), 83--92.",
+  "hash": "541608da4584",
+  "number": 21
+ },
+ {
+  "id": "t:scrambling.imported-time-plane-modular-data>scrambling.boundary-mode-space-matrix",
+  "type": "transition",
+  "between": [
+   "scrambling.imported-time-plane-modular-data",
+   "scrambling.boundary-mode-space-matrix"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.boundary-mode-space-matrix",
+  "type": "theorem",
+  "claim": "scrambling.boundary-mode-space-matrix@4",
+  "title": "The boundary mode space as matrix",
+  "text": "Let the boundary mode space carry $n$ completed pairs, $n$ counted after the completion's doubling (each mode with its adjoined partner). The gauge-invariant bilinears $E_{ij} := \\psi_i^\\dagger \\psi_j$ satisfy $[E_{ij}, E_{kl}] = \\delta_{jk}E_{il} - \\delta_{li}E_{kj}$ (the $\\mathfrak{gl}(n)$ relations, an instance of the CAR bilinear commutator), preserve the one-particle subspace, and restrict on it to the full matrix algebra: $E_{ij}|_{\\text{one-particle}} = $ the matrix unit $e_{ij}$, so the associative algebra they generate restricts onto $\\Mat_n$. The doubling the completion forces is exactly what turns a tower of modes into a matrix; and matrices can be spheres.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The commutator identity is the bilinear computation used already in \\cite[Prop.~6.1]{ButlerT7} (there for the currents; here for general index pairs): $[\\psi_i^\\dagger\\psi_j, \\psi_k^\\dagger\\psi_l] = \\delta_{jk}\\psi_i^\\dagger\\psi_l - \\delta_{li}\\psi_k^\\dagger\\psi_j$ from the CAR (\\claimref{std-algebra.witt-basis-car}). Each $E_{ij}$ maps the one-particle subspace $\\operatorname{span}\\{\\psi_k^\\dagger|0\\rangle\\}$ to itself, acting as $e_{ij}$ ($E_{ij}\\psi_k^\\dagger|0\\rangle = \\delta_{jk}\\psi_i^\\dagger|0\\rangle$); the matrix units generate $\\Mat_n$, so the restriction map is onto. The doubling is what supplies the complex structure: each real mode with its adjoined partner supplies the complex $\\psi_i, \\psi_i^\\dagger$ from which the gauge-invariant $E_{ij}$ are built; real Clifford directions alone give the orthogonal bilinears, and it is the pairing that produces $\\mathfrak{gl}(n)$. The script checks the commutator table and the one-particle action exactly on a five-mode instance.\n",
+  "hash": "8d7bd77a9b43",
+  "number": 22
+ },
+ {
+  "id": "t:scrambling.boundary-mode-space-matrix>scrambling.imported-kostant-madore-partition-data",
+  "type": "transition",
+  "between": [
+   "scrambling.boundary-mode-space-matrix",
+   "scrambling.imported-kostant-madore-partition-data"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.imported-kostant-madore-partition-data",
+  "type": "fact",
+  "claim": "scrambling.imported-kostant-madore-partition-data@1",
+  "title": "Imported: Kostant, Madore, and the $\\mathfrak{sl}_2$ partition data",
+  "text": "(i) Embeddings of $\\mathfrak{sl}_2$ into $\\mathfrak{gl}_n$ are classified, up to conjugation, by the partition of $n$ given by the restriction of the defining representation; the \\emph{principal} embedding is the one with a single part (the irreducible $n$-dimensional representation), and it is essentially unique. (ii) For the principal embedding the adjoint decomposition of $\\Mat_n$ is multiplicity-free: $\\Mat_n \\cong \\bigoplus_{\\ell=0}^{n-1}(2\\ell + 1)$, one spin-$\\ell$ multiplet for each $\\ell < n$ (Kostant). (iii) $\\Mat_n$ with this $\\mathfrak{su}(2)$ structure is Madore's fuzzy sphere, whose large-$n$ limit is the round $S^2$ \\cite{Madore1992}, radius excluded: the radius is scale. \\emph{Provenance:} \\cite{Kostant1959} (the principal three-dimensional subgroup and the multiplicity-free adjoint decomposition) and \\cite{Madore1992} (the fuzzy sphere and its large-$n$ limit); the $\\mathfrak{sl}_2$ classification is classical representation theory.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "J. Madore, The fuzzy sphere, Class. Quantum Grav. 9 (1992), 69--87.; B. Kostant, The principal three-dimensional subgroup and the Betti numbers of a complex simple Lie group, Amer. J. Math. 81 (1959), 973--1032.",
+  "hash": "b2a6323cfec5",
+  "number": 23
+ },
+ {
+  "id": "t:scrambling.imported-kostant-madore-partition-data>scrambling.principality-indifference-sphere",
+  "type": "transition",
+  "between": [
+   "scrambling.imported-kostant-madore-partition-data",
+   "scrambling.principality-indifference-sphere"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.principality-indifference-sphere",
+  "type": "theorem",
+  "claim": "scrambling.principality-indifference-sphere@4",
+  "title": "Principality from indifference: the sphere",
+  "text": "Under Principle \\claimref{scrambling.indifference-structural-premise-series}, the $\\mathfrak{su}(2)$ structure carried by the matrix algebra of the boundary modes (Proposition \\claimref{scrambling.boundary-mode-space-matrix}) is the principal embedding, uniquely: a non-principal embedding decomposes the $n$ modes into invariant blocks, a partition whose sizes and assignments nothing in the framework causes (Fact \\claimref{scrambling.imported-kostant-madore-partition-data}(i)), and indifference forbids exactly such uncaused data; the principal embedding is the unique one carrying no partition data, its internal distinctions forced by the algebra once conjugation-gauge is fixed. Consequently the bilinear sector of the boundary modes is canonically Madore's fuzzy sphere, and its large-$n$ limit is the round transverse $S^2$, radius state-side: three of the four emergent dimensions now rest on the correlation structure (time and the plane from Fact \\claimref{scrambling.imported-time-plane-modular-data}, the sphere from this theorem), the fourth being scale. The conclusion is conditional on Principle \\claimref{scrambling.indifference-structural-premise-series} wherever this theorem is cited.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "The mathematical content is the classification of Fact \\claimref{scrambling.imported-kostant-madore-partition-data}(i): the conjugacy classes of embeddings into the matrix algebra $\\Mat_n$ of the boundary modes (\\claimref{scrambling.boundary-mode-space-matrix}) are the partitions of $n$, and every class except $(n)$ carries a nontrivial partition; the selection is then the application of the Principle (\\claimref{scrambling.indifference-structural-premise-series}), whose level is declared there. Uniqueness up to conjugation is Kostant's, and conjugation is the gauge freedom the statement fixes. The multiplicity-free decomposition and the fuzzy-sphere reading are Fact \\claimref{scrambling.imported-kostant-madore-partition-data}(ii)-(iii). The script exhibits the distinction concretely at $n = 3$: the principal $\\mathfrak{sl}_2$ (an exact integer triple) has adjoint decomposition of $\\Mat_3$ with exactly three irreducible summands of dimensions $1 + 3 + 5 = 9$ (kernel of $\\operatorname{ad}_e$ of dimension three), while a non-principal block embedding has a larger highest-weight space (multiplicities), verifying the partition-data diagnosis in exact arithmetic. The clause on three of the four emergent dimensions takes time and the plane from \\claimref{scrambling.imported-time-plane-modular-data}, which recovers the timelike direction and the two-dimensional conformal structure from modular data.\n",
+  "hash": "21f91d46cc8c",
+  "number": 24
+ },
+ {
+  "id": "t:scrambling.principality-indifference-sphere>scrambling.consistency-car-construction-i-states-insensitivity",
+  "type": "transition",
+  "between": [
+   "scrambling.principality-indifference-sphere",
+   "scrambling.consistency-car-construction-i-states-insensitivity"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.consistency-car-construction-i-states-insensitivity",
+  "type": "theorem",
+  "claim": "scrambling.consistency-car-construction-i-states-insensitivity@5",
+  "title": "Consistency with the CAR construction, and the I-state's insensitivity",
+  "text": "Three checks, each at its level. (i) \\emph{Assembly:} the near-horizon reduction delivers one field per $(\\ell, m)$ with $m$-independent dynamics, so the modular flow acts as a scalar on each multiplet and centralises the $\\mathfrak{su}(2)$: the sphere's symmetry commutes with the clock. (ii) \\emph{Proved:} the mixed bilinears of Proposition \\claimref{scrambling.boundary-mode-space-matrix} are ordinary gauge-invariant CAR bilinears of the observable algebra: no operator outside the algebra of the boundary modes themselves is invoked. (iii) \\emph{Proved, within the quasi-free setting:} the I-state with multiplet-degenerate frequencies is invariant under every gauge Bogoliubov transformation of the complexified one-particle space commuting with the one-particle Hamiltonian, in particular under all embedded $SU(2)$ actions: for a quasi-free state whose symbol is a function of the one-particle Hamiltonian, $\\Lambda = g(h)$, and a unitary $U$ on the one-particle space with $UhU^* = h$, the transformed state has symbol $U\\Lambda U^* = Ug(h)U^* = g(h) = \\Lambda$, the same state. The I-state is embedding-insensitive: it neither selects nor obstructs the sphere. This diagonality is the sphere's side of the orthogonality no-go carried by the action paper T10 \\cite{ButlerT10}: the state is insensitive to space for the same reason the gravitational sector leaves no mark on it; the full development of that identity is that paper's task (shared between the two papers).",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "(i) is the standard reduction, imported and flagged as modelling in the manner of \\cite[Rem.~4.5]{ButlerT7}. (ii) is inspection of Proposition \\claimref{scrambling.boundary-mode-space-matrix}. (iii) is the displayed two-line computation, plus the fact that a gauge-invariant quasi-free state is determined by its symbol (\\cite[Fact 3.3]{ButlerT7} (\\claimref{hawking.imported-quasi-free-states-car-algebra}), Araki); the script verifies an $SU(2)$-rotation instance on a degenerate three-mode multiplet exactly.\n",
+  "hash": "506fff66b20f",
+  "number": 25
+ },
+ {
+  "id": "t:scrambling.consistency-car-construction-i-states-insensitivity>scrambling.per-slice-verification-two-failed-aggregations",
+  "type": "transition",
+  "between": [
+   "scrambling.consistency-car-construction-i-states-insensitivity",
+   "scrambling.per-slice-verification-two-failed-aggregations"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.per-slice-verification-two-failed-aggregations",
+  "type": "theorem",
+  "claim": "scrambling.per-slice-verification-two-failed-aggregations@4",
+  "title": "The per-slice verification, and the two failed aggregations",
+  "text": "Let $n$ be the linear size of the slice's matrix algebra. Then:\n\\begin{enumerate}\n\\item \\emph{(The slice check, exact in scaling.)} Matching the fuzzy operator dimension to the slice sphere's Planck-cell count sets $n^2 = 4\\pi r_c^2 = 4\\pi(2M)^{2/3}$ to leading order ($n$ is an integer matrix size and the right side transcendental; what the match fixes exactly is the $M^{2/3}$ scaling): the fuzzy count reproduces, from the matrix side, exactly the sphere-only case of Proposition \\claimref{scrambling.uniqueness-internal-scaling}, its $M^{2/3}$ scaling. The fuzzy geometry and the metric geometry agree slice by slice.\n\\item \\emph{(Operator-cell aggregation fails, by exactly the area coefficient.)} Counting one boundary-mode fermion per operator cell of the epoch volume is the $\\nu = 1$ reading, which overshoots $N_{\\mathrm{epoch}} = \\SBH$ by exactly $16\\pi$ (Corollary \\claimref{scrambling.integer-holographic-form-identification}(3)): the required thinning is the horizon-area coefficient itself.\n\\item \\emph{(Fundamental-per-slice aggregation breaks the scaling.)} Counting $n \\propto M^{1/3}$ fundamentals per sphere and aggregating over the epoch's spheres (the slice volume of Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing} contains $8\\pi M/4\\pi r_c^2 = (2M)^{1/3}$ spheres per unit Killing time) gives\n\\[\nN_{\\mathrm{fund}} \\;\\propto\\; M^{1/3}\\cdot M^{1/3}\\cdot \\Delta t \\;\\propto\\; M^{5/3} \\quad (\\Delta t \\sim M),\n\\]\nwhich breaks the area scaling altogether.\n\\end{enumerate}\nBoth direct aggregation rules fail, so the slice-to-epoch aggregation is the weighted completion's task: derive $N_{\\mathrm{epoch}} = \\SBH$, or refute the intrinsic-clock premise.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "All three clauses are exact exponent arithmetic, checked by the script: (1) $4\\pi r_c^2$ with $r_c = (2M)^{1/3}$; (2) is Corollary \\claimref{scrambling.integer-holographic-form-identification}(3); (3) multiplies the displayed factors, with the spheres-per-unit-time count, from the slice volume of \\claimref{scrambling.slice-volume-exactly-per-unit-killing}, $8\\pi M / 4\\pi(2M)^{2/3} = 2M/(2M)^{2/3} = (2M)^{1/3}$.\n",
+  "hash": "9f2ae529cdd9",
+  "number": 26
+ },
+ {
+  "id": "s:paper-6",
+  "type": "section",
+  "title": "Scrambling, and the return delay",
+  "hash": "5f6585822b3b"
+ },
+ {
+  "id": "i:paper-6",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-scrambling-return-delay",
+  "type": "note",
+  "claim": "note.scrambling.setting-scrambling-return-delay@1",
+  "title": "Scrambling, and the return delay",
+  "text": "T5's eviction dynamics is a rate model, and its instant information return was flagged there as the rate model's artefact. This section supplies the internal timescales of the boundary modes at the same declared tier: a rate model whose clock, unlike its couplings, is a theorem.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8c15db462172"
+ },
+ {
+  "id": "t:scrambling.per-slice-verification-two-failed-aggregations>scrambling.spreading-law-chaos-bound-saturated",
+  "type": "transition",
+  "between": [
+   "scrambling.per-slice-verification-two-failed-aggregations",
+   "scrambling.spreading-law-chaos-bound-saturated"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.spreading-law-chaos-bound-saturated",
+  "type": "theorem",
+  "claim": "scrambling.spreading-law-chaos-bound-saturated@5",
+  "title": "The spreading law, and the chaos bound met, not saturated",
+  "text": "Three framework-internal facts fix the window's internal dynamics. First, the intrinsic flows of a Clifford boundary-mode algebra are bivector-generated, quadratic in the pair operators (Lemma \\claimref{scrambling.clock-inventory-boundary-modes}(i)). Second, the distinguished bivector flow is the boost (Fact \\claimref{scrambling.imported-modes-modular-inventory}). Third, the boost is the translation clock of the window itself: the Killing flow that displaces modes along the window is the boost at rate $\\kappa$, with the accrual rate of Theorem \\claimref{scrambling.mode-count}. Boost-hyperbolic one-body dynamics expands operator amplitudes as $e^{\\kappa t}$, so support deposited on a single mode spans the $N$-mode window at\n\\[\nt_* \\;=\\; \\kappa^{-1}\\ln N \\;=\\; \\frac{\\beta}{2\\pi}\\,\\ln S :\n\\]\nthe fast-scrambling law, with the logarithm the signature of hyperbolic dynamics rather than an assumption. Every intrinsic clock it has runs at the modular rate, and the expansion rate is exactly $2\\pi T$: the boost group's support-dilation rate equals its KMS rate, $\\kappa\\beta = 2\\pi$, which holds under (N$_{+}$) (\\claimref{synthesis.n-plus-null-ground-state}). The real-time Lyapunov exponent of this quasi-free dynamics is $0$: the one unitary group that dilates the support has bounded anticommutators on linear elements (Theorem \\claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}). So the Maldacena-Shenker-Stanford chaos bound is met, not saturated. \\emph{Tier, declared:} what is derived is the free-fermion operator-spreading timescale under a generic quadratic coupling, in the rate-model normalisation; genuine chaotic saturation beyond free-fermion spreading is open, and is named as such in the section ``Scope, and successor problems''.\n\n\\smallskip\n\\noindent\\emph{The derivation, step by step.} The inventory clauses are Lemma \\claimref{scrambling.clock-inventory-boundary-modes} (proved) and its import (Fact \\claimref{scrambling.imported-modes-modular-inventory}). The expansion computation: a quadratic generator containing the boost scales ladder operators by $e^{\\pm\\kappa t}$ (Fact \\claimref{scrambling.imported-modes-modular-inventory}'s weight clause, exponentiated), so under a generic quadratic coupling the amplitude reaching a mode at mode distance $d$ grows as $e^{\\kappa t}$ against an initial suppression of order $1/N$; support spans all the boundary modes when $e^{\\kappa t} \\sim N$, i.e.\\ at $t_* = \\kappa^{-1}\\ln N$, and $N \\sim S$ over an epoch of order $M$ (Proposition \\claimref{scrambling.area-law-test}). The identification $\\kappa^{-1} = \\beta/2\\pi$ is arithmetic ($\\beta = 2\\pi/\\kappa$), checked by the script along with the Schwarzschild value $\\beta/2\\pi = 4M$. The MSS statement that no system exceeds the growth rate $2\\pi T$ is the point of contact \\cite{MSS2016}: the rate $\\kappa$ at which support dilates is one group's rate set against its own KMS period $2\\pi/\\kappa$, while the out-of-time-order growth that the bound limits is absent from the quasi-free dynamics, so the bound is met and not saturated.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Follows from \\claimref{scrambling.clock-inventory-boundary-modes}, \\claimref{scrambling.imported-modes-modular-inventory}, \\claimref{scrambling.mode-count} and \\claimref{scrambling.area-law-test}, as the source states.\n",
+  "hash": "38cda90d47d7",
+  "number": 27
+ },
+ {
+  "id": "t:scrambling.spreading-law-chaos-bound-saturated>scrambling.return-delay-scrambling-log-recovered",
+  "type": "transition",
+  "between": [
+   "scrambling.spreading-law-chaos-bound-saturated",
+   "scrambling.return-delay-scrambling-log-recovered"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.return-delay-scrambling-log-recovered",
+  "type": "theorem",
+  "claim": "scrambling.return-delay-scrambling-log-recovered@2",
+  "title": "The return delay: the scrambling log recovered",
+  "text": "In the rate model, deposited information cannot return before the dwell time of the window (the epoch of the section ``The epoch is the modular period'', the correct power of $M$); and charging the window-internal re-encoding at the framework's causal rate (one pairwise operation per boost e-fold $\\kappa^{-1}$ per mode, spreading epidemically over the $N \\sim S$ modes) requires of order $\\ln S$ rounds of duration $\\beta/2\\pi$, giving a return delay\n\\[\nT_{\\mathrm{return}} \\;\\approx\\; \\frac{\\beta}{2\\pi}\\,\\ln S \\;=\\; 4M\\,\\ln S :\n\\]\nthe fast-scrambling time \\cite{HaydenPreskill2007, SekinoSusskind2008}, recovered from the framework's own clock. This removes the instant-return artefact of T5's rate model; the first-principles account of the spreading exponent is Assembly \\claimref{scrambling.spreading-law-chaos-bound-saturated}, and genuine chaotic dynamics beyond it remains open.\n\n\\smallskip\n\\noindent\\emph{The derivation, step by step.} The dwell floor is the epoch (Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}, conditional on (IC)); the epidemic count is the standard doubling estimate, $\\log_2 S$ rounds to reach $S$ modes from one, each round one causal step of the window's clock, the $\\ln 2$ absorbed into the displayed approximation; the clock and its rate are the theorems cited. The coefficient $4M$ is exact arithmetic from $\\beta = 8\\pi M$, script-checked.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Follows from \\claimref{scrambling.epoch-modular-period-two-unknowns-become} and \\claimref{scrambling.spreading-law-chaos-bound-saturated}, as the source states.\n",
+  "hash": "cc6bcf58b20d",
+  "number": 28
+ },
+ {
+  "id": "t:scrambling.return-delay-scrambling-log-recovered>scrambling.no-attic-route",
+  "type": "transition",
+  "between": [
+   "scrambling.return-delay-scrambling-log-recovered",
+   "scrambling.no-attic-route"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.no-attic-route",
+  "type": "theorem",
+  "claim": "scrambling.no-attic-route@1",
+  "title": "The no-attic route",
+  "text": "T5's eviction theorem runs on an axiom (A), that modes exiting the window deposit their correlations in the window-radiation accounting, with no third sector. The derivation route, assembled from the series' theorems: by the localisation provided by the wall results, operator-valued degrees of freedom exist within the physical closure only where division fails (the window mode space and the radiation's partner modes are the only q-number sectors) \\cite[\\S 5 and \\S 8]{ButlerT4}, \\cite[\\S 10--11]{ButlerT5}; and by the iteration corollary of the tower paper T3, one ascent completes the description on the physical closure, with no further rungs demanded there \\cite[Cor.~6.2]{ButlerT3}: there is no further completion in which a third sector (an attic) could lie. Hence (A)'s content reduces to the \\emph{exhaustiveness} of the localisation (the no-remnant, closure-completeness claim), exactly as T5's own derivation records; that exhaustiveness remains the conjectural core, inherited and named, and this assembly's contribution is to have isolated it: everything else in (A) is theorem-backed.\n\n\\smallskip\n\\noindent\\emph{The derivation, step by step.} A violation of (A) requires a q-number sector outside the localisation's inventory, which the cited theorems forbid on the physical closure given exhaustiveness; the three imports are cited in the statement.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Follows from \\claimref{sheaf.one-sided-completion-singularity}, \\claimref{singularity.no-attic-derived-model} and \\claimref{tower.answers-iteration-question}, as the source states.\n",
+  "hash": "fc12eeacbd1e",
+  "number": 29
+ },
+ {
+  "id": "s:paper-7",
+  "type": "section",
+  "title": "The observational record",
+  "hash": "7abc8666f0c7"
+ },
+ {
+  "id": "i:paper-7",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:scrambling.no-attic-route>scrambling.no-echo-prediction-registered",
+  "type": "transition",
+  "between": [
+   "scrambling.no-attic-route",
+   "scrambling.no-echo-prediction-registered"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.no-echo-prediction-registered",
+  "type": "prediction",
+  "claim": "scrambling.no-echo-prediction-registered@2",
+  "title": "The no-echo prediction, registered",
+  "text": "The framework's quantum structure lies at the stretched singularity, $r_c = (2M)^{1/3}$ in Planck units, by Postulate \\claimref{singularity.c1-curvature-cutoff} (C1): deep inside the hole, at Planck curvature, and nowhere near the horizon, which remains exactly the smooth vacuum horizon of classical general relativity (the exterior dictionary is exact, \\cite[Fact 2.1]{ButlerT6}). The registered prediction: post-merger ringdown is the Kerr quasinormal spectrum of general relativity with \\emph{no} modification, and in particular no echo train at the Planck-structure delay $\\tau_{\\mathrm{echo}} \\approx 8M\\ln(M/m_P)$ (the delay at which near-horizon structure at Planck distance would reflect \\cite{CardosoPani2017}), of order tens to hundreds of milliseconds for stellar-mass remnants ($35$ ms at $10\\,M_\\odot$, $0.1$ to $0.25$ s for remnants of $30$ to $70\\,M_\\odot$): within the sensitivity band of existing detectors. A single statistically confirmed echo train would refute the framework's localisation of quantum structure. The prediction is stated so that it can fail.",
+  "gap": false,
+  "level": "formal",
+  "kill_condition": {
+   "threshold": "One statistically confirmed echo train at the Planck-structure delay",
+   "data_source": "gravitational-wave catalogues",
+   "registered": "2026-09 (T8 record; confronted in the T17 stance table, August 2026)"
+  },
+  "hash": "0f5c22fa03f2",
+  "number": 30
+ },
+ {
+  "id": "t:scrambling.no-echo-prediction-registered>scrambling.catalogue-confronted",
+  "type": "transition",
+  "between": [
+   "scrambling.no-echo-prediction-registered",
+   "scrambling.catalogue-confronted"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:scrambling.catalogue-confronted",
+  "type": "fact",
+  "claim": "scrambling.catalogue-confronted@1",
+  "title": "The catalogue, confronted",
+  "text": "Through the fourth gravitational-wave transient catalogue (GWTC-4.0, 2025-2026: some two hundred and eighteen compact-binary candidates, with ninety-one confident signals subjected to the dedicated tests of general relativity), the echo searches comprise two families of echo waveform templates and two morphology-agnostic searches for coherent post-merger excess power, applied to the fourth observing run's events alongside all prior ones; they report no statistically significant echo train, and the early tentative claims \\cite{Abedi2017} did not survive independent reanalysis \\cite{Westerweck2018, GWTC4TGR2026}. The registered prediction of Record \\claimref{scrambling.no-echo-prediction-registered} therefore stands consistent with every event so far analysed, across four catalogues and four search methods. \\emph{Level:} observational, resting on the cited survey record as of the catalogue date; the confrontation is not closed and cannot be: it becomes more stringent with each catalogue, and the framework remains one confirmed echo train away from refutation.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "LIGO-Virgo-KAGRA, GWTC-4.0 and the echo searches cited by T8",
+  "hash": "6cc9fd194763",
+  "number": 31
+ },
+ {
+  "id": "s:paper-8",
+  "type": "section",
+  "title": "Scope, and successor problems",
+  "hash": "8e149f82c04c"
+ },
+ {
+  "id": "i:paper-8",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-levels-results",
+  "type": "note",
+  "claim": "note.scrambling.setting-levels-results@1",
+  "title": "The levels of the results",
+  "text": "\\emph{Proved, at the standard of \\cite{ButlerT1}:} scheme robustness with exact constants (Lemma \\claimref{scrambling.scheme-robustness-cutoff}); the slice volume, exact at leading order (Proposition \\claimref{scrambling.slice-volume-exactly-per-unit-killing}); the counting theorem and the area-law equivalence (Theorem \\claimref{scrambling.mode-count}, Proposition \\claimref{scrambling.area-law-test}); the scaling uniqueness (Proposition \\claimref{scrambling.uniqueness-internal-scaling}); the clock inventory (Lemma \\claimref{scrambling.clock-inventory-boundary-modes}); the exact epoch conversion and the integer-holographic arithmetic (the displayed identities of Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become} and Corollary \\claimref{scrambling.integer-holographic-form-identification}); the factorisation of the thinning, the yields of the candidate principles, the exclusion of cutoff dependence with its two remaining scales, the pair-mode-qubit identity, the residue in each convention, and the rationality closure of a counting rule's residue with its $k = 0$ case, on the imported transcendence of $\\ln 2$ (Propositions \\claimref{scrambling.exact-factorisation-thinning} to \\claimref{scrambling.no-recount-reaches-quarter}, the helicity clause (iv) of Proposition \\claimref{scrambling.residue-each-convention} at the level of the lift's modelling joint J3 and not above it); the mode-space-as-matrix proposition and the I-state's embedding-insensitivity (Propositions \\claimref{scrambling.boundary-mode-space-matrix}, \\claimref{scrambling.consistency-car-construction-i-states-insensitivity}(ii) and (iii)); the slice check and both aggregation failures (Proposition \\claimref{scrambling.per-slice-verification-two-failed-aggregations}, clause (2) read with the epoch fixed at $\\beta$).\n\n\\emph{Conditional, on named premises:} the epoch theorem on the intrinsic-clock premise (IC) (Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}, Principle \\claimref{scrambling.intrinsic-clock-ic-flagged-premise}), with the circularity fence in force (Remark \\claimref{note.scrambling.circularity-fence}) and with it the integer-holographic reading of Corollary \\claimref{scrambling.integer-holographic-form-identification}; the sphere theorem on the indifference principle (Theorem \\claimref{scrambling.principality-indifference-sphere}, Principle \\claimref{scrambling.indifference-structural-premise-series}); the no-attic route on closure-completeness (Assembly \\claimref{scrambling.no-attic-route}); the exclusion of counting rules with $k \\neq 0$ in Proposition \\claimref{scrambling.no-recount-reaches-quarter}, on the expected algebraic independence of $\\pi$ and $\\ln 2$, which is not a theorem.\n\n\\emph{Assembly and rate-model tier, declared:} the modular recovery of time and the plane (Fact \\claimref{scrambling.imported-time-plane-modular-data}); the spreading law and the return delay (Assemblies \\claimref{scrambling.spreading-law-chaos-bound-saturated} and \\claimref{scrambling.return-delay-scrambling-log-recovered}); the reduction clause of Proposition \\claimref{scrambling.consistency-car-construction-i-states-insensitivity}(i).\n\n\\emph{Observational:} the registered prediction and the catalogue confrontation (Records \\claimref{scrambling.no-echo-prediction-registered} and \\claimref{scrambling.catalogue-confronted}), date-stamped.",
+  "gap": false,
+  "level": "formal",
+  "hash": "7da791c0451e"
+ },
+ {
+  "id": "c:note.scrambling.setting-successor-problems",
+  "type": "note",
+  "claim": "note.scrambling.setting-successor-problems@1",
+  "title": "Successor problems",
+  "text": "Five, in decreasing order of urgency. (1) \\emph{Produce or refute $\\nu = 1/(16\\pi\\ln 2)$:} derive the residue $\\kappa_c = 1/(4\\ln 2)$, one boundary mode per Bekenstein-Mukhanov area quantum of horizon per modular period, from the structure of the boundary modes themselves, or refute (IC); the corank is settled at one \\cite[\\S 8.9]{ButlerT4}, the analysis of the geometry paper's weighted limit is closed at Schwarzschild \\cite[\\S 5.5]{ButlerT6}, exactness narrows the normalisation to two cutoff-free scales, $r_h$ or $r_* = M$ (Proposition \\claimref{scrambling.exactness-excludes-cutoff-dependence}), one tick per period is (IC) read as a counting rule, and no recount with a rational residue ($k = 0$) reaches $\\kappa_c$, nor, conditionally on the expected algebraic independence of $\\pi$ and $\\ln 2$, any recount with $k \\neq 0$ (Proposition \\claimref{scrambling.no-recount-reaches-quarter}); Corollary \\claimref{scrambling.integer-holographic-form-identification} states the target in its sharpest form ($N_{\\mathrm{epoch}} = \\SBH$), and Proposition \\claimref{scrambling.per-slice-verification-two-failed-aggregations}'s failed aggregations mark two excluded routes. (2) \\emph{The Kerr ring count:} repeat the section ``The count'' over the ring's codimension-two, duality-fibred exceptional structure \\cite[Conj.~6.6]{ButlerT6}, which will scale differently with mass and spin, testing the count against the known angular-momentum dependence of Kerr entropy. (3) \\emph{Chaotic saturation beyond free-fermion spreading:} upgrade Assembly \\claimref{scrambling.spreading-law-chaos-bound-saturated} from operator-spreading to genuine out-of-time-order chaos, or show that the quadratic tier of the boundary modes is where the framework's claim ends. (4) \\emph{The slice-to-epoch aggregation:} a first-principles rule taking Proposition \\claimref{scrambling.per-slice-verification-two-failed-aggregations}(1)'s slice count to the epoch count, replacing the two failed naive rules. (5) \\emph{Catalogue currency:} the confrontation of Record \\claimref{scrambling.catalogue-confronted} is with a moving record, and every new observing run is a fresh test; the stance is standing, not archival.",
+  "gap": false,
+  "level": "formal",
+  "hash": "e4ade182cb2d"
+ },
+ {
+  "id": "s:paper-9",
+  "type": "section",
+  "title": "Position in the series",
+  "hash": "1c742bbde4d0"
+ },
+ {
+  "id": "i:paper-9",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-position-series",
+  "type": "note",
+  "claim": "note.scrambling.setting-position-series@1",
+  "title": "Position in the series",
+  "text": "This paper is T8 of the series. \\emph{It relies on seven predecessors:} the primer T0 \\cite{ButlerT0} and the root paper T1 \\cite{ButlerT1} for the completed-pair language, the transport principle, and the standard of proof; the tower paper T3 \\cite{ButlerT3} for capacity as Witt index (Fact \\claimref{tower.witt-index-quantum-capacity}) and for the iteration corollary the no-attic route runs on (Assembly \\claimref{scrambling.no-attic-route}); the sheaf paper T4 \\cite{ButlerT4} for the wall results that localise one ladder pair per point of the blown-up singular locus, corank one under the forced weights (Fact \\claimref{tower.witt-index-quantum-capacity}); the singularity paper T5 \\cite{ButlerT5} for the counting axioms of the boundary modes, the causal epoch, the eviction dynamics, and the geometric normalisation (Facts \\claimref{singularity.causal-epoch-computed-exactly} and \\claimref{scrambling.imported-modes-modular-inventory}); the geometry paper T6 \\cite{ButlerT6} for the curvature scale, the interior proper-time series, and the weighted completion, closed at Schwarzschild, on whose exceptional set the calibration this paper carries is to be read (Facts \\claimref{interior.imported-schwarzschild-curvature-spectrum} and \\claimref{tower.witt-index-quantum-capacity}, Remark \\claimref{note.scrambling.density-factor-stated-full}); and the spectrum paper T7 \\cite{ButlerT7} for the mode's modular inventory and the quasi-free calculus behind the I-state checks (Fact \\claimref{scrambling.imported-modes-modular-inventory}, Proposition \\claimref{scrambling.consistency-car-construction-i-states-insensitivity}).\n\n\\emph{Papers that rely on this one:} the singularity paper T5 \\cite{ButlerT5} conditions its counting step on the epoch and density that this paper derives, quantifies, and converts into the single prediction $\\nu = 1/16\\pi$ in the 1-nat convention, $\\nu = 1/(16\\pi\\ln 2)$ in T5's own capacity convention; the action paper T10 \\cite{ButlerT10} imports the sphere theorem (Theorem \\claimref{scrambling.principality-indifference-sphere}), with its indifference premise attached, and shares the sphere's orthogonality no-go (Proposition \\claimref{scrambling.consistency-car-construction-i-states-insensitivity}); and the capstone T17 \\cite{ButlerT17} tabulates this paper's claims at their tiers.",
+  "gap": false,
+  "level": "formal",
+  "hash": "bbf0787e23b4"
+ },
+ {
+  "id": "s:paper-10",
+  "type": "section",
+  "title": "Machine verification",
+  "hash": "8f65e827e43e"
+ },
+ {
+  "id": "i:paper-10",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.scrambling.setting-machine-verification",
+  "type": "note",
+  "claim": "note.scrambling.setting-machine-verification@1",
+  "title": "Machine verification",
+  "text": "The computational identities asserted in this paper are verified by \\texttt{verify\\_T08.py}, the script deposited with the paper \\cite{ButlerVerifyT8}; it imports the series' shared exact-arithmetic library \\texttt{GA.py} and runs entirely in exact arithmetic: dimensional quantities are exact monomials $c\\cdot 2^a 3^b \\pi^p M^e$ with rational coefficients and exponents (normalised so equal quantities have equal representations), so every scaling claim is an identity of exponents rather than a numerical estimate; the representation-theoretic and Fock computations are over the rationals. Forty-seven checks pass. Not scripted, and stated as such where they occur: the imported Facts, certified by their source papers' scripts or by the literature (Fact \\claimref{interior.imported-schwarzschild-curvature-spectrum}'s displayed Kretschmann arithmetic included); the transcendence of $\\ln 2$ (Hermite-Lindemann) that Proposition \\claimref{scrambling.no-recount-reaches-quarter} imports, which no script certifies; the assembly steps of the section ``Scrambling, and the return delay'' beyond their exact coefficients; and the observational Records.\n\nThe coverage, by section. \\emph{The count} (Lemma \\claimref{scrambling.scheme-robustness-cutoff} through Proposition \\claimref{scrambling.uniqueness-internal-scaling}): the three cutoff schemes solved exactly, with the constants $2^{1/3}$, $48^{1/6} = 2^{2/3}3^{1/6}$, $3^{2/3}2^{-1/3}$ and the common $M^{1/3}$ exponent; the exact slice-volume identity $4\\pi r_c^2\\sqrt{2M/r_c} = 8\\pi M$; the rate identity $dN/dt = \\nu/\\TH$; the area-law equivalence at $\\nu\\Delta t = M/2$; and the uniqueness arithmetic, driven by the computed exponents against the admissible set (sphere-only $M^{2/3}$, fixed-radius $M^{1/2}$, the unavailable matching timescales $M^{4/3}$, $M^{3/2}$). \\emph{The calibration} (the section ``The calibration factorised, and the quarter examined''): the factorisation $16\\pi = 4\\pi \\times 4$ and its ingredients as exact monomials; the scheme ratios $\\tfrac32$ and $12^{1/4}$ on the prime factorisations; the horizon-normalised coframe values at $r = 0$; the ten anticommutation relations of two ladder pairs in $\\Cl(2,4)$; the two cutoff-free scales and their residues $\\tfrac14$ and $1$; the two calibrations with $\\ln 2$ a formal indeterminate; the homogeneity table of the helicity lift; the natural rules' residues $4\\pi$ and $1$ against the target $\\tfrac14$; and the rationality closure of a counting rule's residue on eighty rules built from the paper's objects, none reaching $1/(4\\ln 2)$ as a formal expression in $\\ln 2$ while one reaches $\\tfrac14$ (Propositions \\claimref{scrambling.exact-factorisation-thinning} to \\claimref{scrambling.no-recount-reaches-quarter}; the step from the formal to the numerical exclusion at $k = 0$ is the imported transcendence). \\emph{The clock inventory} (Lemma \\claimref{scrambling.clock-inventory-boundary-modes}): the adjoint spectra of the inventory's representatives classified exactly from their $2\\times2$ rational blocks, transcribed from the proof's computation, and the same conclusions re-derived from a two-mode CAR representation built in the script (mode operators as exact Fock matrices, the pairing generators built rather than asserted, $\\operatorname{ad}_X$ computed by commutator and the criterion read off it); the clock criterion run on each case (the atom, rotated-pair, opposed, common and paired boosts admitted; the compact, nilpotent, unequal-magnitude and complex-spectrum elements excluded), the pairing trichotomy certified by the sign of $cd$, and the discriminating cases $E_{11} + E_{12} - E_{21}$ (every adjoint eigenvalue of modulus one, none real: the modulus-only variant the script also runs admits it, the stated criterion excludes it) and $E_{11} + E_{12} + E_{22}$ (real adjoint eigenvalues, all nonzero of modulus one, excluded by semisimplicity alone). \\emph{The epoch} (Theorem \\claimref{scrambling.epoch-modular-period-two-unknowns-become}, Corollary \\claimref{scrambling.integer-holographic-form-identification}): $\\beta = 2\\pi/\\kappa = 8\\pi M$; the conversion $\\nu = 1/16\\pi$ in the 1-nat convention; the epoch three-volume $V = 64\\pi^2M^2 = \\beta^2\\lP$; $\\nu V = 4\\pi M^2 = \\SBH$; and the $16\\pi$ overshoot identified with the horizon-area coefficient, all as exact monomial identities, with $\\SBH$ and the horizon area derived from $r_s = 2M$ and anchored by their own check rather than typed in. \\emph{The sphere} (Theorem \\claimref{scrambling.principality-indifference-sphere}, Propositions \\claimref{scrambling.boundary-mode-space-matrix}, \\claimref{scrambling.consistency-car-construction-i-states-insensitivity}, \\claimref{scrambling.per-slice-verification-two-failed-aggregations}): an integer principal $\\mathfrak{sl}_2$ triple in $\\Mat_3$ with its bracket table verified exactly; the adjoint kernel of $\\operatorname{ad}_e$ of dimension exactly three (multiplicity-free $1 + 3 + 5$) against dimension five for a non-principal block embedding (partition data made visible); the $\\operatorname{ad}_h$ weight multiset $\\{0,0,0,\\pm2,\\pm2,\\pm4\\}$; the $\\mathfrak{gl}(n)$ bilinear commutator identities on the full five-mode Fock space and the one-particle restriction onto matrix units; the second-quantised rational rotation ($U$ orthogonal with entries in fifths) verified exact and particle-number preserving, the equal-occupancy quasi-free product state verified invariant under it entrywise, and a control at unequal occupancies verified to break the invariance, the degeneracy hypothesis made visible: the I-state's embedding-insensitivity certified on the state itself; the slice-count and spheres-per-time exponents, and the $M^{5/3}$ failure of fundamental-per-slice aggregation. \\emph{The dynamics} (Assemblies \\claimref{scrambling.spreading-law-chaos-bound-saturated} and \\claimref{scrambling.return-delay-scrambling-log-recovered}): the scrambling coefficient $4M$, as the arithmetic of $\\beta$ and $\\kappa$ already fixed. The script exits nonzero on any failure and prints one line per check, tagged by the statement or section it certifies.",
+  "gap": false,
+  "level": "formal",
+  "hash": "d92920090f31"
+ },
+ {
+  "id": "s:entropy",
+  "type": "section",
+  "title": "Entropy and information",
+  "hash": "dd1381047ea1"
+ },
+ {
+  "id": "i:entropy",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:scrambling.catalogue-confronted>pred.boundary-mode-density",
+  "type": "transition",
+  "between": [
+   "scrambling.catalogue-confronted",
+   "pred.boundary-mode-density"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:pred.boundary-mode-density",
+  "type": "prediction",
+  "claim": "pred.boundary-mode-density@2",
+  "title": "One boundary mode per Bekenstein-Mukhanov area quantum",
+  "text": "The internal prediction, in the capacity convention (a fermionic mode carries at most $\\ln 2$ nats): $\\nu = 1/(16\\pi\\ln 2)$, equivalently one boundary-mode fermion per $4\\ln 2$ Planck cells of horizon area, one per Bekenstein-Mukhanov area quantum, per modular period ($N_{\\mathrm{epoch}}\\ln 2 = S_{\\mathrm{BH}}$, calibration residue $\\kappa_c = 1/(4\\ln 2)$, \\claimref{scrambling.residue-each-convention}). In the 1-nat convention the same statement reads $\\nu = 1/16\\pi$, one fermion per four Planck cells ($N_{\\mathrm{epoch}} = S_{\\mathrm{BH}}$, $\\kappa_c = \\tfrac14$).",
+  "gap": false,
+  "level": "formal",
+  "kill_condition": {
+   "threshold": "A derivation of the calibration residue from the boundary modes returning any other value, which refutes the intrinsic-clock premise (IC)",
+   "data_source": "Internal",
+   "registered": "2026-08 (T17 stance table, row 6)"
+  },
+  "hash": "dacdf167862d",
+  "number": 32
+ },
+ {
+  "id": "c:note.synthesis.residue-and-the-prediction",
+  "type": "note",
+  "claim": "note.synthesis.residue-and-the-prediction@2",
+  "title": "The residue, the s-wave weights and the boundary-mode prediction",
+  "text": "The calibration residue was not derived (Theorem \\claimref{synthesis.residue-from-mode-entropy}). Under the area-law hypothesis it is the reciprocal of four times the counted modes' mean thermal entropy, so the registered value $\\kappa_{c} = 1/(4\\ln 2)$ of Prediction \\claimref{pred.boundary-mode-density} is the case in which every counted mode has zero Killing weight. The one weight assignment the series makes, the s-wave convention of Premise \\claimref{singularity.q-joint-quasi-freeness-s-wave}, does not give that value under any reading of which modes are counted. Counting arrays gives $0.3470$ against $0.3607$, about four per cent low; counting every mode drives the residue up without bound; counting only the zero-weight modes leaves $0.0272$ nats per array outside the area law. Since (Q) is adopted for one step only and the result is a conditional reformulation, this neither meets nor fails the prediction's kill condition. It does mark where the prediction is exposed: a derivation that fixed the weights as (Q) does would return a residue other than the registered one and so, by the kill condition, refute the intrinsic-clock premise (IC).",
+  "gap": false,
+  "level": "formal",
+  "hash": "905fffb58b59"
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:hawking.helicity-lift-joints-itemised",
+  "type": "fact",
+  "claim": "hawking.helicity-lift-joints-itemised@5",
+  "title": "The helicity lift, with its joints itemised",
+  "text": "Helicity is not additional structure imported into the framework: it is the eigenvalue of the distinguished $\\mathfrak{u}(1)$ charge of the completion's conformal storey (the twistor storey: $\\Cl(2,4)$ with its conformal spinor space $\\CS$), and the four-dimensional mode space of each massless species has a canonical place in it. The joints, each with its provenance:\n\\begin{enumerate}\n\\item (\\emph{Joint J1: the transform, classical.}) By Fact \\claimref{hawking.imported-penrose-transform}, the helicity-$s$ mode space is the cohomology at homogeneity $-2s-2$; photon kinematics are at homogeneities $-4$ and $0$ ($s = \\pm1$), graviton kinematics at $-6$ and $+2$ ($s = \\pm2$).\n\\item (\\emph{Joint J2: the charge, proved in the series.}) The ordering shift is proved in the correspondence paper (Fact \\claimref{hawking.imported-twistor-storey-ordering-shift}), and Proposition \\claimref{hawking.homogeneity-ordering-shift} derives the homogeneity $-2s-2$ from it: the classification parameter of Joint J1 is an internal charge of the completion, so the helicity ladder is part of the ascended kinematics rather than a phenomenological label.\n\\item (\\emph{Joint J3: the reduction, modelling.}) The current boson of the s-wave theory (Fact \\claimref{hawking.imported-s-wave-bosonic-sector}) is the s-wave reduction of each such four-dimensional field, and the lift from the boundary modes to the field is the standard partial-wave reconstruction, each helicity sector identified through the transform of Joint J1: the near-horizon reduction of field theory on the Schwarzschild exterior identifies each $(\\omega, \\ell, m, s)$ channel with a two-dimensional mode, which is where Definition \\claimref{obj.hawking.continuum-mode-space}'s modelling input enters, flagged as such in Remark \\claimref{note.hawking.which-dynamics-what-level}.\n\\end{enumerate}\nThe composite statement is the conjunction of the three joints with the provenance displayed: J1 is classical, J2 is Fact \\claimref{hawking.imported-twistor-storey-ordering-shift} together with Proposition \\claimref{hawking.homogeneity-ordering-shift}, and J3 is the one modelling joint. The homogeneity table is checked by the script.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim hawking.helicity-lift-joints-itemised, version 5 (T07 Asm 5.3)",
+  "hash": "f4e35a1bb0cc",
+  "number": 33
+ },
+ {
+  "id": "c:hawking.homogeneity-ordering-shift",
+  "type": "fact",
+  "claim": "hawking.homogeneity-ordering-shift@6",
+  "title": "The homogeneity $-2s-2$ is the ordering shift",
+  "text": "On functions on the conformal spinor space $\\CS$ (twistor functions), realise the palatial relation of Fact \\claimref{hawking.imported-twistor-storey-ordering-shift} by $\\bar Z_\\nu = -\\hbar\\,\\partial/\\partial Z^\\nu$ (the realisation with the palatial sign $[Z^\\mu, \\bar Z_\\nu] = +\\hbar\\,\\delta^\\mu_\\nu$), let $\\Upsilon := Z^\\mu \\partial_\\mu$ be the homogeneity (Euler) operator, its eigenvalue written $\\mathsf{h}$ in sans serif to keep it clear of the one-particle Hamiltonian $h$, and let the helicity operator be one half the distinguished charge, $\\mathsf{s} := \\tfrac12\\, q(\\id)$, the standard helicity operator on $\\CS$ (twistor helicity) \\cite{Penrose1969, EPW1981} in the symmetric ordering that Fact \\claimref{hawking.imported-twistor-storey-ordering-shift} forces storey-wide. Then, as an operator identity,\n\\[\nq(\\id) \\;=\\; -\\hbar\\,(\\Upsilon + 2),\n\\]\nso a function on $\\CS$ homogeneous of degree $\\mathsf{h}$ is an eigenfunction of $\\mathsf{s}$ with eigenvalue $s\\hbar$ if and only if\n\\[\n\\mathsf{h} \\;=\\; -2s - 2.\n\\]\nThe $-2$ is exactly the ordering shift: without the symmetric-ordering shift of $-\\hbar/2$ per complex dimension (over the complex unit $I_6$) the offset would vanish. Combined with Fact \\claimref{hawking.imported-penrose-transform}, the classification parameter of the Penrose transform is the completion's own $\\mathfrak{u}(1)$ charge, its offset supplied by the ordering. The computation is not new to the series: it appears, without being stated as a result, inside the proof of \\cite[Thm.~5.7]{ButlerT9}, where T9's script also checks it; what this proposition adds is the statement at result level, in the transform's context, discharging the homogeneity half of the successor problem T9 assigns to this paper (the transform itself stays open).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim hawking.homogeneity-ordering-shift, version 6 (T07 Prop 5.2)",
+  "hash": "a1dd8c6548ad",
+  "number": 34
+ },
+ {
+  "id": "c:hawking.imported-penrose-transform",
+  "type": "fact",
+  "claim": "hawking.imported-penrose-transform@2",
+  "title": "Imported: the Penrose transform",
+  "text": "Massless free fields of helicity $s$ on (suitably convex regions of complexified) Minkowski space (complexified with the unit $I_4$, points $u + I_4 w$) are in natural isomorphism with the first cohomology of the corresponding region of the conformal spinor space $\\CS$ (twistor space) with coefficients in $\\mathcal{O}(-2s-2)$: the homogeneity $-2s-2$ classifies the helicity-$s$ field. \\emph{Provenance:} Penrose \\cite{Penrose1969}; the sheaf-cohomological form \\cite{EPW1981}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "R. Penrose, Solutions of the zero-rest-mass equations, J. Math. Phys. 10 (1969), 38--39.; M. G. Eastwood, R. Penrose and R. O. Wells, Cohomology and massless fields, Commun. Math. Phys. 78 (1981), 305--351.",
+  "hash": "6e69899795c2",
+  "number": 35
+ },
+ {
+  "id": "c:hawking.imported-quasi-free-states-car-algebra",
+  "type": "fact",
+  "claim": "hawking.imported-quasi-free-states-car-algebra@2",
+  "title": "Imported: quasi-free states of the CAR algebra",
+  "text": "For every operator $A$ on $\\ell^2(J)$ with $0 \\le A \\le 1$ (the \\emph{symbol}) there is a unique gauge-invariant state $\\omega_A$ on $\\mathfrak{A}$ with two-point function $\\omega_A(a^\\dagger(f)\\,a(g)) = \\ip{g}{Af}$ and all higher truncated functions zero (Wick determinants). More generally, a quasi-free state (all truncated functions beyond second order vanishing) is determined by its full two-point data, the symbol together with the pairing $P(f, g) := \\omega(a^\\dagger(f)\\,a^\\dagger(g))$, and gauge invariance is exactly $P = 0$. On a finite window with diagonal symbol this is the explicit product state $\\bigotimes_j \\rho_j$, $\\rho_j = \\mathrm{diag}(1 - n_j,\\, n_j)$ in the occupation basis, which the script realises exactly. \\emph{Provenance:} Araki \\cite{Araki1971}; \\cite[\\S 5.2]{BratteliRobinson1997}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, Publ. RIMS Kyoto Univ. 6 (1971), 385--442.; O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., \\S 5.2",
+  "hash": "b16edd488d06",
+  "number": 36
+ },
+ {
+  "id": "c:hawking.modular-structure-completed-pair",
+  "type": "fact",
+  "claim": "hawking.modular-structure-completed-pair@3",
+  "title": "Modular structure of the completed pair",
+  "text": "Let $(v, v^*)$ be a completed pair and $\\sigma := v^*v - vv^*$. Then:\n\\begin{enumerate}\n\\item $\\sigma^2 = 1$; in the hyperbolic atom $\\Cl(1,1)$ with $v = \\tfrac12(e_0 + e_1)$, $v^* = \\tfrac12(e_0 - e_1)$, one has $\\sigma = e_0 e_1$: the unit boost bivector of the plane (relabelling the pair reverses the orientation);\n\\item the rotor flow $R_\\lambda := \\exp(\\lambda\\sigma/2)$ acts by $R_\\lambda\\, v\\, R_\\lambda^{-1} = e^{-\\lambda}v$ and $R_\\lambda\\, v^*\\, R_\\lambda^{-1} = e^{+\\lambda}v^*$: the pair diagonalises the boost with opposite weights;\n\\item the spectral projectors $\\tfrac12(1 \\pm \\sigma)$ are the occupation projectors $v^*v$ and $vv^*$;\n\\item in the Fock representation the boost generator is the shifted number operator, $\\tfrac12\\sigma = N - \\tfrac12$;\n\\item the bivector space of $\\Cl(1,1)$ is one-dimensional, so the boost flow is the unique one-parameter rotor flow of the atom \\emph{up to reparametrisation of the flow parameter and orientation}: the algebra fixes the orbits of any rotor-implemented modular flow, but not its speed, which is exactly the normalisation Remark \\claimref{note.hawking.what-now-proved-open-problem} (the section ``The state input: the I-state'') leaves open.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim hawking.modular-structure-completed-pair, version 3 (T07 Prop 2.1)",
+  "hash": "e13b12131748",
+  "number": 37
+ },
+ {
+  "id": "c:interior.imported-equivalence-einstein-equations",
+  "type": "fact",
+  "claim": "interior.imported-equivalence-einstein-equations@2",
+  "title": "Imported: equivalence with the Einstein equations",
+  "text": "On any region where $\\hb$ is invertible, the GTG field equations for $(\\hb, \\Omega)$ are equivalent to the Einstein field equations for the metric $g(a,b) = \\hb^{-1}(a)\\cdot\\hb^{-1}(b)$; in vacuum, to Ricci-flatness of $g$. \\emph{Provenance:} Lasenby, Doran and Gull \\cite[\\S 4.3 and App.~C]{LDG1998}; textbook form \\cite[Ch.~13-14]{DoranLasenby2003}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "A. Lasenby, C. Doran and S. Gull, Gravity, gauge theories and geometric algebra, Phil. Trans. R. Soc. Lond. A 356 (1998), 487--582., \\S 4 (\\S 4.3, covariant forms of the field equations), App.~C; C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003)., Ch.~13-14",
+  "hash": "b574af3b663f",
+  "number": 38
+ },
+ {
+  "id": "c:interior.imported-schwarzschild-curvature-spectrum",
+  "type": "fact",
+  "claim": "interior.imported-schwarzschild-curvature-spectrum@6",
+  "title": "Imported: the Schwarzschild curvature spectrum",
+  "text": "For the Schwarzschild gravitational field $(\\hb, \\Omega)$ on flat spacetime in the static gauge, whose derived metric is the static spherically symmetric vacuum metric $f\\,dt_s^2 - f^{-1}dr^2 - r^2 d\\Omega^2$ with $f = 1 - 2M/r$ (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the curvature operator $B \\mapsto \\mathcal{R}(B)$ on physical bivectors, in the store's sign, is diagonal on the coordinate planes of the static orthonormal frame of physical vectors, with eigenvalue of one magnitude, $2M/r^3$, on the radial boost plane $\\sigma_r$ and its Hodge dual $I\\sigma_r$, and eigenvalue of half that magnitude and opposite sign, $-M/r^3$, on the four mixed planes. \\emph{Provenance:} the radial-plane eigenvalue from the gauge field alone in \\cite[Prop.~2.4(1)]{ButlerT5}; the mixed- and angular-plane eigenvalues by the Cartan structure equations in the static chart in \\cite[App.~A]{ButlerT5}, the two computations agreeing on the invertible region by Fact \\claimref{interior.imported-equivalence-einstein-equations}; the same computation in the GTG literature is \\cite[Ch.~14]{DoranLasenby2003}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.imported-schwarzschild-curvature-spectrum, version 6 (T06 Fact 2.2)",
+  "hash": "876f49ce4b87",
+  "number": 39
+ },
+ {
+  "id": "c:interior.interior-connection-exactly",
+  "type": "fact",
+  "claim": "interior.interior-connection-exactly@7",
+  "title": "The interior connection, exactly",
+  "text": "In the parallel frame of Lemma \\claimref{interior.exact-parallelism-convergence-rate}, write $B_i := e_0 \\wedge e_i$ for the three boost bivectors and $R_{ij} := e_i \\wedge e_j$ for the rotations. The rotation-gauge field $\\Omega$ of the interior gravitational field on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}: the torsion-free connection, whose reading on the derived metric is its Levi-Civita connection), evaluated on the unit tangential physical directions (through $A \\cdot D = D_{\\hb(A)}$, so that $\\Omega(e_c)$ stands for $\\Omega(\\hb(e_c))$), is exactly\n\\[\n\\Omega(e_1) = -\\sigma_1 B_1, \\qquad\n\\Omega(e_2) = -\\sigma_2 B_2, \\qquad\n\\Omega(e_3) = -\\sigma_3 B_3 + \\frac{\\cot\\theta}{r}\\,R_{23},\n\\]\nand $\\Omega(e_0) = 0$, in the sign of the Definition, $D_a M = a \\cdot \\nabla M + \\Omega(a) \\times M$, in which the Cartan forms $\\omega^{i}{}_{0} = \\sigma_i\\,\\theta^i$ assemble to $-\\sigma_i B_i$. The rotation coefficient is the connection induced by $D$ on the round two-spheres of fixed $(\\tau, t)$, of radius $r$: in any local orthonormal frame on an $S^2$ coordinate patch its coefficients are $O(1/r)$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.interior-connection-exactly, version 7 (T06 Lem 5.3)",
+  "hash": "48620b8832c9",
+  "number": 40
+ },
+ {
+  "id": "c:interior.kasner-form-interior",
+  "type": "fact",
+  "claim": "interior.kasner-form-interior@5",
+  "title": "Kasner form of the interior",
+  "text": "In the interior, with $A(r) := 2M/r - 1 > 0$, the Schwarzschild gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), taken in a synchronous position gauge, has derived metric of diagonal form\n\\[\nds^2 \\;=\\; d\\tau^2 - A\\,dt^2 - r^2\\,d\\Omega^2,\n\\qquad\n\\tau(r) \\;=\\; \\int_0^r A(u)^{-1/2}\\,du ,\n\\]\nwhere $\\tau$ is proper time along the radial timelike worldlines ruling the interior, whose velocity $\\hb^{-1}(x')$ is $D$-parallel (the geodesics of the derived metric), normalised so that the singularity is $\\tau = 0$. In units $2M = 1$,\n\\[\n\\tau(r) \\;=\\; \\tfrac23\\, r^{3/2}\\bigl(1 + \\tfrac{3}{10}\\,r + O(r^2)\\bigr),\n\\qquad\nr \\;=\\; R\\,\\bigl(1 - \\tfrac15 R + O(R^2)\\bigr), \\quad R := (3\\tau/2)^{2/3},\n\\]\nand the scale factors obey $\\sqrt{A} \\propto \\tau^{-1/3}$ and $r \\propto \\tau^{2/3}$ to leading order: the Kasner exponents of the approach are\n\\[\n(p_1, p_2, p_3) \\;=\\; \\bigl(-\\tfrac13,\\ \\tfrac23,\\ \\tfrac23\\bigr),\n\\qquad\np_1 + p_2 + p_3 \\;=\\; 1, \\qquad p_1^2 + p_2^2 + p_3^2 \\;=\\; 1 .\n\\]",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim interior.kasner-form-interior, version 5 (T06 Lem 5.1)",
+  "hash": "acd839b86427",
+  "number": 41
+ },
+ {
+  "id": "c:sheaf.one-sided-completion-singularity",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion-singularity@4",
+  "title": "One-sided completion at the singularity",
+  "text": "Adjoin the trivial hyperbolic plane $(\\nO, \\nInf)$ to $\\shW$ and couple it to the dying direction by the construction of Definition \\claimref{obj.sheaf.collar-data-coupling}, taking the normalised transversal $u = \\partial_t/m$ (so that $k(u) = 1$, as the definition requires), coupling constants satisfying $\\mu\\nu < 0$, and bump supported inside the horizon. Then the ambient form $h$ is nondegenerate of constant signature $(2,4)$ at every point of $\\Mt$, the boundary $E$ included; the subalgebra generated by $\\shW$ is canonically the degeneration sheaf; and the ladder pair\n\\[\nk^* = \\frac{\\nO}{2\\nu}, \\qquad k k^* + k^* k = 1, \\qquad k^2 = (k^*)^2 = 0\n\\]\nexists exactly over $E$. The ascent $\\Cl(1,3) \\to \\Cl(2,4)$, i.e.\\ $\\Mat_2(\\HH) \\to \\Mat_4(\\HH)$, is thereby performed at the Schwarzschild singularity, localised on $E \\cong \\R \\times S^2$. Moreover no shadow wall forms anywhere in the manifold.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion-singularity, version 4 (T04 Thm 8.12)",
+  "hash": "78749c90f7b5",
+  "number": 42
+ },
+ {
+  "id": "c:sheaf.weights-are-forced-are-kasner-exponents",
+  "type": "fact",
+  "claim": "sheaf.weights-are-forced-are-kasner-exponents@5",
+  "title": "The weights are forced and are the Kasner exponents",
+  "text": "For the Schwarzschild gravitational field $(\\hb, \\Omega)$ on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), within the class of diagonal rescalings $r^{a_i}$ of the Schwarzschild coordinate coframe, demand that its derived cometric, read on the rescaled coframe, extend continuously to $E$. Then:\n\\begin{enumerate}\n\\item requiring a corank-one limit whose dying entry is the Killing-time entry, vanishing at first order, forces $(a_r, a_t, a_\\theta) = (\\tfrac12, 0, 1)$, uniquely: the degeneration-sheaf regime of Theorem \\claimref{sheaf.schwarzschild-degeneration-boundary-tame};\n\\item requiring a nondegenerate limit forces $(a_r, a_t, a_\\theta) = (\\tfrac12, -\\tfrac12, 1)$, uniquely: the exceptional regime of Proposition \\claimref{sheaf.exceptional-algebra-black-hole}.\n\\end{enumerate}\nThe naming of the dying entry in (1) is not a free choice but is read off the gravitational field: the radical of the actual degeneration is the Killing-time covector (Theorem \\claimref{sheaf.schwarzschild-degeneration-boundary-tame}(4)); without naming it, other slot assignments exist (for instance $(1, -\\tfrac12, 1)$ sends the radial entry to zero at first order instead), so the forcing is per named profile. Converted to proper time $\\tau_{\\mathrm{p}} \\propto r^{3/2}$, the exceptional weights are the Kasner exponents $(-\\tfrac13, \\tfrac23, \\tfrac23)$ of Fact \\claimref{sheaf.kasner-data-interior}, with $\\sum p_i = \\sum p_i^2 = 1$. This settles the Kasner-weights conjecture for Schwarzschild within the diagonal class: given the dying direction determined by the field, the weights of the anisotropic completion are not chosen, they are forced, and they are the Kasner exponents.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim sheaf.weights-are-forced-are-kasner-exponents, version 5 (T04 Thm 8.16)",
+  "hash": "f07f6bb06f05",
+  "number": 43
+ },
+ {
+  "id": "c:singularity.area-law-test",
+  "type": "fact",
+  "claim": "singularity.area-law-test@5",
+  "title": "The area-law test",
+  "text": "Assume (C1)-(C3), write $N_{\\mathrm{6a}} = (dN_{\\mathrm{6a}}/dt)\\,\\Delta t$ for the mode count of the counted epoch, and let $C := N_{\\mathrm{6a}}\\ln 2$ be its boundary-mode capacity in nats, $\\ln 2$ per fermionic mode. Then, at leading order in $M$, $C = S_{\\mathrm{BH}} = 4\\pi M^2$ if and only if $\\nu\\,\\Delta t = M/(2\\ln 2)$: the capacity matches the Bekenstein-Hawking entropy \\cite{Bekenstein1973, Hawking1975}, the coefficient calibrated by $\\nu\\,\\Delta t$ rather than predicted (the closing paragraph of this section quantifies the conventions), exactly when the counted epoch is of order one Schwarzschild time, which is what (C3) supplies via Lemma \\claimref{singularity.causal-epoch-computed-exactly}, the $\\ln 2$ being absorbed into the order-one calibration of $\\nu\\,\\Delta t$. It is the capacity, not the bare count, that premise (C) and Fact \\claimref{singularity.assembled-page-curve-up-typicality} compare with $S_{\\mathrm{BH}}$; the count itself then reads $N_{\\mathrm{6a}} = S_{\\mathrm{BH}}/\\ln 2$. Counting over the hole's whole lifetime instead gives $N_{\\mathrm{6a}} \\sim M^4$, which shares with the interior-volume growth of Christodoulou-Rovelli \\cite{CR2015} the linearity in advanced time and the unresolved tension with the constancy of the horizon entropy, though not the mass scaling: their $dV/dv \\propto M^{2}$ gives $V \\sim M^{5}$ over the lifetime, while $dN_{\\mathrm{6a}}/dt \\propto M$ gives $M^{4}$ here.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.area-law-test, version 5 (T05 Prop 10.7)",
+  "hash": "0ad43c4ce4f5",
+  "number": 44
+ },
+ {
+  "id": "c:singularity.causal-epoch-computed-exactly",
+  "type": "fact",
+  "claim": "singularity.causal-epoch-computed-exactly@4",
+  "title": "The causal epoch, computed exactly",
+  "text": "For the Schwarzschild gravitational field on flat spacetime (Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), along the rain worldlines of the interior, the radial infall worldlines with unit energy at infinity whose velocity $\\hb^{-1}(x')$ is $D$-parallel and which are the worldlines of the Painlev\\'e-Gullstrand frame of the section ``Step 1: locate the failure'' (velocity $e_t$ in the gauge $\\hb = 1 - \\beta P$), $|dt/dr| = \\sqrt{r/2M}\\;r/(2M - r)$ in static Killing time $t$, so the span of Killing time between crossing $r = 2M(1 - \\varepsilon)$ and reaching the singular locus $r = 0$ is\n\\[\n\\Delta t(\\varepsilon) \\;=\\; \\int_0^{2M(1-\\varepsilon)} \\sqrt{\\frac{r}{2M}}\\,\\frac{r\\,dr}{2M - r}\n\\;=\\; 4M\\Bigl(\\tfrac12\\ln\\frac{1+u}{1-u} - u - \\tfrac{u^{3}}{3}\\Bigr)\\Big|_{u = \\sqrt{1-\\varepsilon}}\n\\;=\\; 2M\\Bigl(\\ln\\tfrac{1}{\\varepsilon} - \\tfrac83 + 2\\ln 2\\Bigr) + O(\\varepsilon) :\n\\]\nof order $M$ for any fixed regulator $\\varepsilon$, with only logarithmic sensitivity to the horizon-crossing cutoff, the coefficient $2M$ of the logarithm being independent of the worldline's energy. The informal estimate ``$\\Delta t \\sim M$ up to a logarithm'' is exactly this statement, with the logarithm identified.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.causal-epoch-computed-exactly, version 4 (T05 Lem 10.4)",
+  "hash": "77f4f59de301",
+  "number": 45
+ },
+ {
+  "id": "c:singularity.computed",
+  "type": "fact",
+  "claim": "singularity.computed@4",
+  "title": "$\\kappa = 1/4M$, computed",
+  "text": "For the Schwarzschild gravitational field of the section ``The metric of the gauge field, and its static form'' (the stored field $\\hb = 1 - \\beta P$ on flat spacetime, Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the static Killing field $K = \\hb^{-1}(e_t)$ has $Q(K) = f = 1 - 2M/r$, and the static observers, of velocity $v = K/\\sqrt f$, have redshifted proper acceleration $\\sqrt f\\,\\sqrt{-Q((v \\cdot D)v)} = f'(r)/2$ at every $r > 2M$, so the surface gravity of the horizon locus $r = 2M$ is\n\\[\n\\kappa \\;=\\; \\lim_{r \\to 2M} \\frac{f'(r)}{2} \\;=\\; \\frac{1}{2}\\cdot\\frac{2M}{(2M)^2} \\;=\\; \\frac{1}{4M} .\n\\]",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.computed, version 4 (T05 Prop A.2)",
+  "hash": "6b5e2d79b577",
+  "number": 46
+ },
+ {
+  "id": "c:singularity.euclidean-rotor-where-it-lies",
+  "type": "fact",
+  "claim": "singularity.euclidean-rotor-where-it-lies@3",
+  "title": "The Euclidean rotor, and where it lies",
+  "text": "Let $\\sigma = e_0e_1$ be the boost bivector of the hyperbolic atom in the radial plane, with $\\sigma^{2} = +1$, and let $\\Aa \\cong \\Mat_2(\\C)$ be the mode algebra, the complexification of the atom.\n\\begin{enumerate}\n\\item The boost rotor $R_\\lambda = \\exp(\\lambda\\sigma/2)$ continues to imaginary rapidity $\\lambda = i\\theta$ as $R_{i\\theta} = \\exp(i\\theta\\sigma/2) = \\cos(\\theta/2) + i\\sigma\\sin(\\theta/2)$, a unitary of $\\Aa$ whose generator $i\\sigma$ squares to $-1$; $R_{2\\pi i} = -1$ and $R_{4\\pi i} = +1$, so the rotor has period $4\\pi$ and its conjugation action period $2\\pi$.\n\\item On the two-dimensional module on which $v, v^{*}$ act as ladder operators, $R_{i\\theta} = \\operatorname{diag}(e^{-i\\theta/2}, e^{i\\theta/2})$: a rotation through $2\\pi$ multiplies every spinor by $-1$, while its conjugation action on $\\Aa$ is the identity.\n\\item The generator $i\\sigma$ is not an element of the real algebra $\\Cl(1,3)$. The dual member of the curvature-selected pair, $I\\sigma_r = e_0e_1e_2e_3\\,e_0e_1 = e_2e_3$, is the \\emph{angular} plane: its rotor $\\exp(\\theta I\\sigma_r/2)$ fixes $e_0$, $e_1$ and $\\sigma_r$ and rotates $e_2$ into $e_3$, a rotation along the bifurcation sphere, not around it. The Euclidean rotation around the bifurcation sphere is therefore realised by no real rotor of $\\Cl(1,3)$, and in particular not by the curvature-selected pair $\\{\\sigma_r, I\\sigma_r\\}$; it is realised by the unitary $R_{i\\theta}$ of the complexified radial plane.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.euclidean-rotor-where-it-lies, version 3 (T05 Prop 7.21)",
+  "hash": "dec2ddf4dc51",
+  "number": 47
+ },
+ {
+  "id": "c:singularity.no-attic-derived-model",
+  "type": "fact",
+  "claim": "singularity.no-attic-derived-model@6",
+  "title": "No attic, derived in the model",
+  "text": "Under (L), (U) and (C): modes exiting the window carry no q-number content out of the two-sector decomposition; their correlations are placed, at eviction, in $L(t) \\cup R(t)$. The no-attic axiom (A) is a theorem of the model's kinematics.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.no-attic-derived-model, version 6 (T05 Prop 11.4)",
+  "hash": "8a3d1401a129",
+  "number": 48
+ },
+ {
+  "id": "c:singularity.stretched-singularity-count",
+  "type": "fact",
+  "claim": "singularity.stretched-singularity-count@7",
+  "title": "The stretched singularity, and the count",
+  "text": "Assume (C1) and (C2). For the Schwarzschild field in the Painlev\\'e-Gullstrand gauge field $\\hb = 1 - \\beta P$, $\\beta = \\sqrt{2M/r}$, of Fact \\claimref{sheaf.gauge-field-cometric}, the three-volume of the background slice $r = r_c$ per unit Killing time, from the metric induced by $\\hb^{-1}$ (Fact \\claimref{singularity.imported-induced-geometry-interior-slice}), is\n\\[\n4\\pi\\,r_c^{2}\\sqrt{|f(r_c)|} \\;=\\; 4\\pi\\sqrt{2M}\\,r_c^{3/2}\\sqrt{1 - \\tfrac{r_c}{2M}} \\;=\\; 8\\pi M\\sqrt{1 - \\tfrac{r_c}{2M}} \\;=\\; 8\\pi M\\,\\bigl(1 + O(M^{-2/3})\\bigr) ,\n\\]\nusing $r_c^{3} = 2M$: the cutoff radius conspires with the anisotropic stretch to leave \\emph{linear} mass dependence at leading order, special to this cutoff (a mass-independent cutoff radius gives $M^{1/2}$ and can never reach the area law). With $\\nu$ fermionic modes per Planck cell, and writing $N_{\\mathrm{6a}}$ for the number of boundary modes (the notation Steps 6b and Fact \\claimref{singularity.assembled-page-curve-up-typicality} use for this section's count),\n\\[\n\\frac{dN_{\\mathrm{6a}}}{dt} \\;=\\; 8\\pi\\nu M\\sqrt{1 - \\tfrac{r_c}{2M}} \\;=\\; \\frac{\\nu}{\\TH}\\sqrt{1 - \\tfrac{r_c}{2M}} :\n\\]\nthe stretched singularity registers $\\nu$ modes per Hawking period up to the correction factor $\\sqrt{1 - r_c/2M}$, which tends to $1$ as $M \\to \\infty$ in Planck units ($r_c/2M = (2M)^{-2/3}$). It keeps time with the horizon's own clock.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim singularity.stretched-singularity-count, version 7 (T05 Prop 10.6)",
+  "hash": "3ac38638c2d5",
+  "number": 49
+ },
+ {
+  "id": "c:std-algebra.witt-basis-car",
+  "type": "fact",
+  "claim": "std-algebra.witt-basis-car@1",
+  "title": "Null pairs satisfy the canonical anticommutation relations",
+  "text": "Let $v_1, \\dots, v_k, w_1, \\dots, w_k \\in V$ be a \\emph{Witt basis} of their span: $B(v_i, v_j) = B(w_i, w_j) = 0$ and $B(v_i, w_j) = \\tfrac12 \\delta_{ij}$. Then in $\\Cl(V, Q)$\n\\begin{equation}\nv_i v_j + v_j v_i = 0, \\qquad w_i w_j + w_j w_i = 0, \\qquad v_i w_j + w_j v_i = \\delta_{ij},\n\\end{equation}\nthe canonical anticommutation relations for $k$ modes (read $v_i$ as annihilators, $w_i$ as creators). The elements $N_i = w_i v_i$ are mutually commuting idempotents with $N_i + v_i w_i = 1$. In particular, for orthogonal hyperbolic planes $\\operatorname{span}(e_i, e_{k+i})$ of $\\R^{k,k}$, $v_i = \\tfrac12(e_i + e_{k+i})$ and $w_i = \\tfrac12(e_i - e_{k+i})$ form such a basis. The form need not be nondegenerate outside the span.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim std-algebra.witt-basis-car, version 1",
+  "hash": "4bfaf1829940",
+  "number": 50
+ },
+ {
+  "id": "c:tower.answers-iteration-question",
+  "type": "fact",
+  "claim": "tower.answers-iteration-question@5",
+  "title": "Answers to the iteration question",
+  "text": "Let $(M, G)$ be a tame corank-one degeneration in the sense of \\cite[Hyp.~2.1]{ButlerT4}, with trivial radical line bundle and compact wall as in Fact \\claimref{tower.wall-package}, presenting the transport demand of the series' geometric setting.\n\\begin{enumerate}\n\\item \\emph{Where ascent is forced.} On the physical closure, one ascent completes the description: by Fact \\claimref{tower.wall-package} the one-sided completion is nondegenerate up to and including the wall and the transported reciprocal divides totally there; nothing on the physical side demands a second rung. Beyond the physical region, the demand repeats: by Fact \\claimref{tower.wall-package} the degeneration relocates to a tame shadow wall, and the infinite wall sequence carries exactly one rung of this paper's tower per wall, displaced successively away from the physical region.\n\\item \\emph{Why the clock never ticks.} Theorem \\claimref{tower.rigidity-clock-frozen}: the tower is Morita-stationary from its first step, and the mod-8 structure classifies the eight parallel towers, not stages of one.\n\\item \\emph{What the limit is.} Theorems \\claimref{tower.algebraic-limit-even-charge} and \\claimref{tower.car-limit-even-charge}: for even transport charge, the ground algebra tensored with the free fermionic field algebra, the modes being the transported null pairs themselves.\n\\end{enumerate}\nThe depth of the hierarchy, on this account: one forced conformal ascent, plus a fermionic ladder of capacity, one qubit per rung.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.answers-iteration-question, version 5 (T03 Cor 6.2)",
+  "hash": "9eabebe08a17",
+  "number": 51
+ },
+ {
+  "id": "c:tower.fock-module-one-qubit-per-rung",
+  "type": "fact",
+  "claim": "tower.fock-module-one-qubit-per-rung@6",
+  "title": "Fock module; one qubit per rung",
+  "text": "Let $W_k := \\operatorname{span}\\{v_1, \\dots, v_k\\}$, a maximal isotropic subspace of $H_1 \\perp \\cdots \\perp H_k$. The Chevalley action ($v_j$ by wedge, $w_j$ by contraction against the pairing) makes the exterior algebra $\\Lambda^\\bullet W_k$, of dimension $2^k$, an irreducible module over $B_k \\cong \\Mat_{2^k}(\\R)$, with the vacuum $1 \\in \\Lambda^0$ annihilated by every $w_j$ and cyclic for the $v_j$. Each rung doubles the module: $\\Lambda^\\bullet W_{k+1} = \\Lambda^\\bullet W_k \\otimes \\Lambda^\\bullet \\R v_{k+1}$, one qubit per rung.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.fock-module-one-qubit-per-rung, version 6 (T03 Thm 4.2)",
+  "hash": "ad56f42ffc39",
+  "number": 52
+ },
+ {
+  "id": "c:tower.ladder-pairs-satisfy-car-vectors",
+  "type": "fact",
+  "claim": "tower.ladder-pairs-satisfy-car-vectors@4",
+  "title": "The ladder pairs satisfy the CAR, as vectors",
+  "text": "In $T_k$, the adjoined null pairs satisfy, exactly and at the level of vectors,\n\\[\nv_i v_j + v_j v_i = 0, \\qquad w_i w_j + w_j w_i = 0, \\qquad v_i w_j + w_j v_i = \\delta_{ij}\\,,\n\\]\nfor all $1 \\leq i, j \\leq k$: a system of $k$ fermionic modes, with no normal-ordering, no completion, and no representation chosen. Adding a rung adds one mode and touches none of the existing relations.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.ladder-pairs-satisfy-car-vectors, version 4 (T03 Prop 4.1)",
+  "hash": "f519a62efea6",
+  "number": 53
+ },
+ {
+  "id": "c:tower.witt-index-quantum-capacity",
+  "type": "fact",
+  "claim": "tower.witt-index-quantum-capacity@4",
+  "title": "Witt index is quantum capacity",
+  "text": "For any nondegenerate real quadratic space $(V, Q)$, the maximal number of pairwise-anticommuting fermionic mode pairs realisable by \\emph{vectors} of $\\Cl(V, Q)$ (families $(a_i, b_i)$ of vectors satisfying the displayed CAR of Proposition \\claimref{tower.ladder-pairs-satisfy-car-vectors}) is exactly the Witt index $\\min(p,q)$ of $Q$. Along the tower the Witt index is $\\min(p,q) + k$: each rung raises the algebra's mode capacity by exactly one, and by no more.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.witt-index-quantum-capacity, version 4 (T03 Thm 4.3)",
+  "hash": "4e622a1737c6",
+  "number": 54
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ }
+]

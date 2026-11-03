@@ -1,0 +1,15 @@
+functions:
+  check_rung_unit_is_frame_boost:
+    kind: partial
+    clauses:
+    - (1)
+    - (2)
+    - (3)
+    - (4)
+    - (5)
+    omits: (1) E_ab = matrix unit on v and minus transpose on w, preserving Q, the u(2) intersection with real matrices is one-dimensional (E_45 - E_54), but the hypercharge weights +-3 are not computed; (2) trace-form signature (4,2) of so(2,2) is exact (control (0,6) for so(4), su(2) form negative in the 2-dim rep) while "no subalgebra isomorphic to su(2)" and the holonomy consequence are argued from it, not enumerated; (3) one-dimensional invariant symmetric forms for gl(2,R), sl(2,R), so(2,2) and the positive theta form are exact; (4) and (5) hold at 12 sample pairs (Lambda, lambda), 5 of them balanced, and R_mu invariance at mu = 1, -1, 2/5, so the iff of (5) is tested on samples only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact algebra for (1)-(3) with the su(2)-subalgebra and weight-3 claims argued rather than computed; (4) and (5) are identities checked at sample points.

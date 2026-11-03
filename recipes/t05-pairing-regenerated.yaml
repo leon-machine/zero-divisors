@@ -1,0 +1,50 @@
+doc: t05-pairing-regenerated
+title: 'Where the Pairing Generator Is: The connection moves the vacuum by the optical scalars of its
+  null direction: Companion note to T5 and T16: a dictionary, one claim closed for the pre-ascent fibre,
+  one not closed (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- pairing.imported-stabiliser-tangent
+- pairing.imported-stabiliser-tangent-external
+- pairing.imported-two-readings-capacities-vacuum-null
+- pairing.imported-null-flags
+- pairing.imported-spin-coefficients-null-tetrad
+- pairing.imported-schwarzschild-connection-curvature
+- pairing.imported-flat-conformal-model-twistor-incidence
+- pairing.imported-flat-conformal-model-twistor-incidence-external
+- pairing.stabiliser-parabolic-algebra-null-direction
+- pairing.pairing-functional-pair-creation-amplitude
+- pairing.singularity-papers-witness-rotation-null-direction
+- obj.pairing.pairing-class-transport
+- pairing.pairing-class-transverse-derivative-null-direction
+- pairing.static-frame-only-expansion-survives
+- pairing.regular-frame-class-vanishes-horizon-changes
+- pairing.curvature-which-loops-move-vacuum
+- pairing.imported-weyl-scalars-petrov-type-schwarzschild
+- pairing.loop-classes-are-weyl-components
+- pairing.displacement-pairs-point-mode-vacuum-parallel
+- pairing.two-frames-share-vacuum-selected-transport
+show: spine-only
+paper: T05-pairing
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_pairing_generator_note.tex
+  note: Recreate T05-pairing from the store
+cite: []
+prose: paper
+msc: Primary 15A66; Secondary 83C57, 81R25, 53C27.
+keywords: Clifford algebras; Witt decomposition; pure spinors; Newman-Penrose spin coefficients; Schwarzschild; Bogoliubov transformation; transport principle.

@@ -1,0 +1,23 @@
+functions:
+  check_pseudo_inverse_normal_form:
+    kind: sampled
+    clauses:
+    - (Step 1) the pseudo-inverses of a null v form the affine space w0 + (alpha, beta, delta free, gamma = 1)
+    omits: Eight (signature, extension) cases from CASES with n = 3, 4 plus ascents by generators of square +1, -1 or 0; fixed sample sigma; prepares the no-go but is not the no-go itself
+  check_null_rotations_fix_v_and_shear_w0:
+    kind: sampled
+    clauses:
+    - (Step 2) R = 1 + vu is a rotor in Spin^0 fixing v with R w0 R^-1 = w0 - u - Q(u) v
+    omits: Same cases and sample vectors u of U with Q(u) != 0; membership in Spin^0 shown by R R~ = 1 and R = u'u/Q(u) with a path at two values of t, not a full proof
+  check_no_pseudo_inverse_fixed_by_null_rotations:
+    kind: sampled
+    clauses:
+    - there is no map sigma on the null cone with v sigma(v) v = v that is equivariant, even under Spin^0(p,q), in any extension
+    omits: Twelve (case, u) pairs; shows the affine system {v s v = v, R s R^-1 = s} is inconsistent at a single null v (so no pseudo-inverse is fixed by the stabiliser); the reduction from equivariance of sigma on the whole cone to fixedness at one v, and the full Pin and Spin versions, are not computed
+untouched_premises:
+  std-algebra.witt-decomposition: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The no-go is tested as inconsistency of the fixed-point system at one null vector on five signatures and three extensions; the reduction from equivariance to stabiliser-fixedness is not computed.

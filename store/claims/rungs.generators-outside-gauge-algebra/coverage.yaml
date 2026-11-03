@@ -1,0 +1,20 @@
+functions:
+  check_mode_number_preserving_is_u5:
+    kind: exact
+    clauses:
+    - exactly twenty-five preserve the mode number, spanning u(5)
+    - twenty changing the mode number by two
+    omits: works with the real-form Majorana bilinears (complex spans agree); the five-mode module is taken from Hypothesis (S)/(R), not derived
+  check_split_preserving_is_u2_u3:
+    kind: exact
+    clauses:
+    - exactly thirteen preserve the slot-pair split and the mode number, spanning u(2) + u(3)
+    - thirty-two lie outside u(2) + u(3), twelve of them inside u(5) moving one excitation between a rung and a pair
+    omits: ''
+untouched_premises:
+  rungs.hyp-r-rung-reading: hypothesis with no computable content of its own; the check takes the five-mode module as given (its docstring notes (S) clause (v) or (R) give the same module)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Kernel dimensions 25, 13 and the 12 and 20 complements are computed exactly on the 32-dimensional module; Hypothesis (R) is assumed, not computed.

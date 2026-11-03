@@ -1,0 +1,14 @@
+functions:
+  check_join_is_the_whole_ledger:
+    kind: sampled
+    clauses: ["(i) J(U) is the whole ledger, so the two-ledger discrepancy against it vanishes identically"]
+    omits: "Finite Jordan-Wigner truncations with N = 2, 3, 4 points and one mode per point; join shown whole by monomial rank 4^N; the infinite ledger on Sigma is not touched. No premise() call although a premise is declared."
+  check_join_has_elements_odd_at_each_point:
+    kind: partial
+    clauses: ["(ii) J contains elements odd at every point x (v_y in J with Ad sigma_y v_y = -v_y)"]
+    omits: "Only the existence of odd elements in the finite join; the presheaf step (any presheaf with J as sections has stalk data properly exceeding A_x^+, so J is the section object of no sheaf with pointwise metric stalks) is not computed and a stalk (colimit over neighbourhoods) cannot be formed in a finite truncation."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clause (i) is checked in finite truncations and the factual core of (ii) is checked; the sheaf-theoretic conclusion of (ii) is argued, not computed, and the docstring claims no more."

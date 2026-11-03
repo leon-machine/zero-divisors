@@ -1,0 +1,25 @@
+doc: trail-tower
+title: 'The tower and quantum capacity'
+author: Leon Butler
+level: lay
+spine:
+- tower.commuting-copies
+- tower.rigidity-clock-frozen
+- tower.ladder-pairs-satisfy-car-vectors
+- tower.fock-module-one-qubit-per-rung
+- tower.witt-index-quantum-capacity
+- tower.algebraic-limit-even-charge
+- tower.car-limit-even-charge
+- tower.answers-iteration-question
+- scrambling.pair-mode-qubit-one-object
+- odd-extensions.four-extensions-oriented-pair
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

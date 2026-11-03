@@ -1,0 +1,12 @@
+functions:
+  check_blades_form_a_basis_for_any_form_and_basis:
+    kind: sampled
+    clauses: ["the 2^m blades form a linear basis of Cl(W, B) for any symmetric B and any basis", "dim Cl(W, B) = 2^m, degenerate or not"]
+    omits: "four (form, basis) pairs over Q with m = 3, 4, 3, 4; blade independence and the 2^m dimension of the image algebra on Lambda(W) are tested, not that the blades span Cl(W, B) itself (an upper bound on dim Cl(W, B) from the Clifford relations is not checked)"
+untouched_premises:
+  conformal.blade-basis-persists-under-degeneracy-external: "literature restatement (Chevalley and the series' earlier lemma); the check recomputes the statement directly and calls only the sheaf-level premise"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "A for-any-form-and-basis statement tested on four cases including degenerate and zero forms; the check docstring matches what is asserted."

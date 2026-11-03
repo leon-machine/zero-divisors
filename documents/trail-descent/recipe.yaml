@@ -1,0 +1,27 @@
+doc: trail-descent
+title: Descent, parity and states
+author: Leon Butler
+level: lay
+spine:
+- singularity.descent-what-it-erases
+- singularity.descent-parity-average
+- singularity.descended-form-state-independent
+- singularity.modular-structure-completed-pair
+- singularity.schmidt-forcing-proved-outright
+- singularity.modular-descent
+- descent-lift.kraus-form-descent-even-states
+- descent-lift.lift-costs-one-rung-per-mode
+- descent-lift.parity-alone-forces-second-rung
+- descent-lift.classical-shared-bit-reduced-view-pure
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

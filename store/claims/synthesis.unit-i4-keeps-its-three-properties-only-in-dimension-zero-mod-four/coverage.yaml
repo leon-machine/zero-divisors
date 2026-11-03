@@ -1,0 +1,40 @@
+functions:
+  check_bivector_commutant_is_span_of_one_and_pseudoscalar:
+    kind: partial
+    clauses:
+    - (i) the bivector commutant is span{1, I_D}
+    omits: 'D = 3 to 8 enumerated blade by blade (complete for those D); general D is the sign argument of the proof'
+  check_pseudoscalar_square_has_period_four:
+    kind: partial
+    clauses:
+    - (ii) I_D squared against the closed formula, and the list of D with square -1
+    omits: 'D = 2 to 12; general D is the parity table of the proof'
+  check_three_properties_only_when_dimension_is_zero_mod_four:
+    kind: partial
+    clauses:
+    - (iii) the three properties hold together exactly for D = 0 mod 4; D = 5, 6, 7 each lose one
+    omits: 'D = 2 to 12; uniqueness up to sign uses (i)'
+  check_four_dimensional_unit_inside_higher_dimensions:
+    kind: partial
+    clauses:
+    - (iv) I4 in Cl(1, D-1) squares to -1, anticommutes with the four and commutes with the extra generators, anticommutes with exactly the 4(D-4) mixed bivector blades
+    omits: 'D = 5 to 8'
+  check_left_and_right_unit_differ_exactly_on_mixed_blades:
+    kind: partial
+    clauses:
+    - (v) left and right multiplication by I4 agree on even blades with an even number of four-dimensional indices and are opposite otherwise, 2^(D-2) differing blades; the right unit commutes with a mixed rotor and the left does not
+    omits: 'D = 4 to 7 for the blade count; one rotor and one sample element for the covariance'
+  check_tower_plane_generators_commute_with_the_unit:
+    kind: exact
+    clauses:
+    - (vi) one adjoined plane over the ground; I4 commutes with v and w and anticommutes with every g_mu v and g_mu w
+    omits: 'none: one plane is the statement; further planes repeat it'
+  check_signature_dependence_of_the_odd_dimension_clauses:
+    kind: partial
+    clauses:
+    - (ii), (iii) in the signature (D-1, 1) - I_D squared is -1 exactly for D = 0, 1 mod 4, the three properties still exactly for D = 0 mod 4, and I_5 has (a) and (b) there
+    omits: 'D = 2 to 12'
+untouched_premises:
+  primer.sign: "the stored sign of the pseudoscalar square, cited for clause (ii); the check recomputes the squares blade by blade"
+  std-algebra.pseudoscalar-commutation: "the stored commutation of the pseudoscalar, cited for clauses (i) and (iii); the check enumerates the commutants itself"
+  synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5: "cited in the argued paragraph on dimensional regularisation; nothing in the check computes from it"

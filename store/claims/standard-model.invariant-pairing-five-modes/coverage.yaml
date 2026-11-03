@@ -1,0 +1,19 @@
+functions:
+  check_pairing_complement_nondegenerate:
+    kind: exact
+    clauses:
+    - '"B is nondegenerate, pairs each state with its complement only (even with odd, the 16 with the 16bar)"'
+    - '"B(psi, phi) = 0 for psi, phi both in the 16"'
+    omits: ''
+  check_so10_invariance:
+    kind: exact
+    clauses:
+    - '"B(X psi, phi) + B(psi, X phi) = 0 for every bivector X of the ten"'
+    omits: ''
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: 'Exact on the 32-dimensional module: the pairing is built from its defining formula and invariance is checked for the 45 so(10) generators and the 45 Majorana bilinears.'

@@ -1,0 +1,18 @@
+functions:
+  check_e_plus_maps_halves_and_swaps_doublets:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "commutation with Lorentz rotors tested for three rotors (boost, rotation, a product), not every Lorentz element; the interpretive conclusion that I4 and Lorentz symmetry alone do not tell T from T' is not itself computed"
+  check_unit_J_distinguishes_halves:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "commutation of right I6 with the Clifford generators is asserted on three sample spinors only (it is associativity); that J is the unit commuting with Clifford multiplication (uniqueness up to the commutant) comes from the premise, not computed here"
+  check_sign_of_unit_relocates_orientation:
+    kind: partial
+    clauses: ["(3)"]
+    omits: "does not compute that the commutant is span{1, I6} (taken from the premise), so 'fixes the unit only up to sign' is not established; checks only that with -J the I4-linear momentum doublet moves to T' and the conjugate one to T, and that -J squares to -1 and commutes with Clifford action on four sample spinors; the momentum doublets are asserted 4-dimensional in each half so the doublet tests are not vacuous"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (1) and (2) are tested directly on the finite modules; clause (3) rests on the premise for the commutant and the check covers its consequence for the doublets. 2026-10-23 weak-checks: check_sign_of_unit_relocates_orientation now asserts ker n_0 has real dimension 4 in T and T' (before, a wrong n_0 with empty kernels passed)"

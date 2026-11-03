@@ -1,0 +1,18 @@
+functions:
+  check_one_mode_states_are_the_split_five:
+    kind: exact
+    clauses: ["the one-mode states form 5 = R_2 + W = (2,1)_{1/2} + (1,3)_{-1/3}, split along the slot/pair line"]
+    omits: ""
+  check_doublet_massive_triplet_massless:
+    kind: sampled
+    clauses: ["the doublet, with two slot components, carries the area mass 2|[pi^1 pi^2]|^2", "each triplet state, with one component, is massless"]
+    omits: "Area formula tested on pairs of sample Gaussian-rational spinors, not symbolically; uses the grip-mass model of the premise, not the module's moment map."
+  check_mass_supported_on_slot_doublets_everywhere:
+    kind: sampled
+    clauses: ["the frozen-point mass is supported on the slot-doublet sectors and vanishes on slot-singlet ones, for every multiplet", "the opposite of the split the running demands"]
+    omits: "Masses for the twelve sectors are read from the grip-mass model at sample spinors; the 'demanded' split (doublets light, triplets heavy) is encoded in the function as colour-nonzero = heavy, not computed from the premise."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Module content is exact; masses come from the grip-mass formula at sample spinors, and the demanded split is an input of the comparison."

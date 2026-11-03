@@ -1,0 +1,15 @@
+doc: trail-einstein
+title: 'Einstein''s equations in the completion'
+author: Leon Butler
+level: lay
+spine: [interior.imported-equivalence-einstein-equations, interior.metric-parallelism-trace-schouten-condition, interior.covariant-form-vacuum-equations, interior.scale-tractor-leaves-cone, interior.sign-fixed-internally, interior.stabiliser-rotates-parabolic-reductive, hawking.imported-exterior-exactly-general-relativity, interior.exact-scale-decoupling, correspondence.no-real-lorentzian-vacuum-half-flat]
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

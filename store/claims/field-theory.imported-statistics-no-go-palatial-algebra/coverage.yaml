@@ -1,0 +1,14 @@
+functions:
+  check_no_finite_dimensional_representation:
+    kind: sampled
+    clauses: ["\"no nonzero finite-dimensional representation and no embedding into any finite-dimensional algebra\""]
+    omits: "the trace obstruction is exhausted only on Cl(2,4) (all 4096 blade pairs, hence its complexification) and on the polynomial realisation truncated to degree <= 6; arbitrary finite-dimensional algebras and representations are not tested, and the Wielandt-Wintner (bounded CAR) statement is not tested (the docstring says so)"
+  check_polynomial_realisation:
+    kind: sampled
+    clauses: ["\"It is realised on polynomials by Zbar_beta = -hbar d/dZ^beta\""]
+    omits: "four variables, four sample polynomials, one rational hbar = 3/7"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the trace argument is exercised on instances (Cl(2,4) and degree <= 6 truncations) and the polynomial realisation at samples; the general no-go and Wielandt-Wintner are not computed and the docstring says so"

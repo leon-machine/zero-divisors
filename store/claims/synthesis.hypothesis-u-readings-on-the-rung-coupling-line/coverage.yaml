@@ -1,0 +1,14 @@
+functions:
+  check_species_entries:
+    kind: sampled
+    clauses: ["(i)", "(ii)"]
+    omits: "entry moduli |a - a'| on (L, nu^c), |a + a'/3| on (Q, u^c), |b - b'| on (L, e^c), |b + b'/3| on (Q, d^c) on a 5 x 5 rational grid of (a, a') in exact 32-dimensional module matrices, with no other species present; the up-type coupling commutes with the condensate projector iff a' = a on the same grid, which is the kappa = 0 point of (ii); complex couplings and the interpretation as Premise (EW) in every family direction are not tested"
+  check_ratio_line_and_bottom_point:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iv)"]
+    omits: "M_nu M_nu^T = kappa^2 M_u M_u^T for two family matrices (democratic and generic) at three (a, a'), which is linear algebra once (i)'s entries are given; kappa = 1 on the real line exactly at a' = 0 and a' = 3a through the polynomial identity a'(8a'/9 - 8a/3), checked at sample points; the complex Apollonius circle itself is not tested; (iv) is exact: kappa in (0.01476, 0.01477) and a'/a = (1 - kappa)/(1 + kappa/3) in (0.9804, 0.9805) solves the equation; (iii) (a' = b' = 0, all four rank-one eigenvalues coincide iff |a| = |b|) has no test"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i), (ii) and (iv) are checked as exact arithmetic at sample couplings; clause (iii) has no function"

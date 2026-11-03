@@ -1,0 +1,40 @@
+functions:
+  check_spinor_module_irreducible_graded:
+    kind: sampled
+    clauses:
+    - (1) the complexified spinor module is Lambda(W + R_n) = Sp (x) Lambda C^n of dimension 2^(3+n), bigraded by (j,k), irreducible, chirality the parity of j + k
+    - (4) 2^(3+n) = 8, 16, 32, 64
+    omits: n = 0..3; irreducibility by unique vacuum plus cyclicity; at n = 2 only the shape of the five-mode module (halves of dimension 16) is checked, not the identification with Hypothesis (S)
+  check_split_unitaries_act_by_exterior_powers:
+    kind: sampled
+    clauses:
+    - (2) the unitaries preserving the two summands act as Lambda(B + A), on Lambda^j R_n (x) Lambda^k W by Lambda^j(A) (x) Lambda^k(B)
+    omits: n = 1, 2, 3 with one sample block unitary each; "exactly the action Hypothesis (S) prescribes" is not computed
+  check_majoranas_and_bogoliubov_dimension:
+    kind: partial
+    clauses:
+    - (3) the Bogoliubov group of the 3+n modes is the compact orthogonal group O(6+2n), implemented by Pin(6+2n); at n = 3 it is Spin(12)
+    - (4) dim so(6+2n) = 15, 28, 45, 66
+    omits: Hermitian Clifford relations and the dimension of the adjoint action of the bilinears on the Majorana span (n = 0..3) only; the group O(6+2n), compactness and the Pin implementation are not tested
+  check_number_preserving_part_and_double_cover:
+    kind: sampled
+    clauses:
+    - (3) the number-preserving subgroup of Spin(6+2n) is a double cover of U(3+n), acting as Lambda (x) det^(-1/2); on the determinant-one subgroup this agrees with the action of (2)
+    omits: n = 0..3; Lie algebra level at one sample X; the double cover is shown by one element (gamma_0 gamma_1 squares to -1 and negates a_0^dag only); the rotor image is checked for n <= 1 only
+  check_spin10_irreducible_on_each_half:
+    kind: exact
+    clauses:
+    - (3) at n = 2 the connected part is Spin(10), acting irreducibly on each chirality half; the half of even j + k is the sixteen-dimensional half-spin representation
+    omits: irreducibility via a one-dimensional common kernel of the lowering operators, with complete reducibility imported; the identification of the even half with the generation of the cited Fact is not tested
+  check_cell_action_ranks_and_faithfulness:
+    kind: exact
+    clauses:
+    - (3) at n = 3 the U(3) x U(3) of dimension eighteen acts faithfully, its action on the cell sector has kernel K and image the seventeen, and the trace-free subalgebra contains K's generator; at n = 2 the twelve is the cell action of a thirteen-dimensional group
+    omits: 'Lie algebra level only: ranks 18, 17, 16 at n = 3 and 13, 12, 12 at n = 2 and the kernel generator; the group-level kernel {(lambda I, lambda^-1 I)} and global faithfulness are not computed; dim(u(3) + u(n)) = 9 + n^2 is computed for n = 2, 3 only'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Docstring states what is not computed (identification with Hypothesis (S), group-level faithfulness); the checks match the statement within those limits.
+untouched_premises:
+  std-algebra.complexification: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,22 @@
+functions:
+  check_algebra_is_rung_clifford_plus_frozen_point_multiple:
+    kind: sampled
+    clauses: ["(i) dim A = 32", "(i) A = Cl_R + I Cl_R with Cl_R the sixteen-dimensional algebra of the two rung modes"]
+    omits: "one parameter choice only (a = 2, b = 3, lambda = 1/7); Cl_R is exhibited as the span of the sixteen ordered monomials in v_4, w_4, v_5, w_5 (dimension 16), and Cl_R = Cl(2,2) over C is read from that, not computed as an isomorphism; I^2 = ab is checked as a scalar"
+  check_colour_singlet_part_is_rung_clifford:
+    kind: sampled
+    clauses: ["(ii) the colour-singlet part of A, the commutant of su(3) on the pair modes, is exactly Cl_R"]
+    omits: "same single parameter choice (a, b, lambda); commutant of the six off-diagonal v_i w_j inside the 32-dimensional algebra has dimension 16 and equals the span of Cl_R"
+  check_doublet_direction_and_mass_forms:
+    kind: exact
+    clauses: ["(iii) the odd elements of Cl_R of hypercharge -1/2 and T_3 = -1/2 are spanned by w_4 and w_4 N_5", "(iv) f(w_4 N_5) = (1/2) f(w_4), with |y_e| = |y_d|", "(iv) b^dag v_5 = -w_4 + w_4 N_5 has mass form -(1/2) of the 10 form"]
+    omits: "weight vectors are the ordered monomials of Cl_R (a weight basis), so the weight space is spanned by the selected monomials; 'every symmetric doublet mass form produced by A' is reduced to this colour-singlet Cl_R weight space via (ii) and (iii), and forms from the I Cl_R part are not computed"
+  check_126_direction_and_pair_bivector_outside:
+    kind: partial
+    clauses: ["(v) the 126 direction T_GJ is not in the span of the forms A produces", "(v) the pair bivector sum_i v_i ^ w_i is not in A"]
+    omits: "T_GJ's form is shown independent of the forms of w_4 and w_4 N_5 only (rank 2 for three forms), not of the forms of all 32 elements of A; the pair bivector is shown outside A by rank 32 -> 33, at the single parameter choice; the operators entering are pinned (chi an involution, -1 on the vacuum, odd in the rung modes; B - L = 1 and -1 at N_W = 0 and 3; the pair bivector equal to N_W - 3/2)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(i)-(iv) are tested exactly at one parameter choice, (v) only against the doublet-weight forms, which the docstring states. 2026-10-23 weak-checks pass: (v) now pins chi, B - L and the normalisation of the pair bivector by exact asserts."

@@ -1,0 +1,20 @@
+functions:
+  check_projection_is_smooth_idempotent_constant_rank:
+    kind: sampled
+    clauses: ["the fibrewise projection (id + alpha_x)/2 is a smooth idempotent bundle map", "A^+ is locally trivial (constant rank)"]
+    omits: "Single-mode fibre Mat_2 moved by one polynomial conjugation g_x; idempotency is a rational-function identity in x for that family, rank 2 tested at six sample points; the actual fibre bundle over Sigma is not constructed."
+  check_range_is_even_part_kernel_odd_part:
+    kind: sampled
+    clauses: ["the range of the projection is the even part A_x^+ = span{1, sigma_x}", "its kernel is the odd part"]
+    omits: "Same one-mode model at six points; the identification with the descent E(a) = (a + sigma a sigma)/2 of the premise is by the formula used, not an independent computation."
+  check_even_germs_are_the_stalk:
+    kind: sampled
+    clauses: ["the stalk of M at x is C^infinity_x tensor A_x^+, germs of families valued in the even part"]
+    omits: "Two polynomial germs with odd admixture in the one-mode model; germs are polynomials, not smooth germs; the identification with the pointwise metric level of the imported Prop 5.5 and Thm 5.7 is not checked."
+untouched_premises:
+  sheaf.function-linearity-tame-constructions: "Declared as used but no function calls premise() for it (grep of check.py shows only singularity.descent-parity-average); the model has no tame machinery."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "A smooth one-mode model whose asserts match the statement's local description of the stalk; the claim about the metric level of the imported paper and the use of function-linearity are not exercised."

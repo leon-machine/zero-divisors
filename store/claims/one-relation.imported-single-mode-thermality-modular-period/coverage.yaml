@@ -1,0 +1,25 @@
+functions:
+  check_single_mode_thermality:
+    kind: sampled
+    clauses:
+    - '"Thermality at the Hawking temperature is a single-mode theorem" (KMS state of the ladder pair is Gibbs)'
+    omits: three sample Boltzmann factors q on the 2 x 2 mode factor; premises (P) and (R) and the value of T_H are not derived
+  check_clock_period_is_eight_pi_m:
+    kind: sampled
+    clauses:
+    - '"gives their clocks the period beta = 8 pi M"'
+    omits: three sample masses; the unit-rapidity eigenvalues are exact on the Cl(1,1) boost, but that beta is the modular period is premise (R), not tested
+  check_descent_is_a_one_way_conditional_expectation:
+    kind: sampled
+    clauses:
+    - '"The descent is a one-way conditional expectation"'
+    omits: three base signatures (1,1), (1,2), (2,1) only; the absence of any unital homomorphism B -> A (transport.door-one-way) and the trace-uniqueness clause are not checked
+untouched_premises:
+  sheaf.one-sided-completion-singularity: cited for the one-sided completion of the singular boundary, no computable content in the finite cores
+  transport.door-one-way: the docstring says the absence of a unital homomorphism has its own check
+  singularity.why-calibration-cannot-be-internal: the statement that no result at the singular boundary can supply (R) is not computable
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: each function tests the finite core its docstring names at sample parameters; the premise-dependent claims are declared unchecked

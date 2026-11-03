@@ -1,0 +1,18 @@
+functions:
+  check_bivectors_are_so13:
+    kind: exact
+    clauses: ["(1) the bivector algebra of the exceptional fibre is so(1,3)"]
+    omits: "identifies the bivectors of Cl(1,3) with eta-antisymmetric endomorphisms (all six blades, rank 6, bracket matched); that this is the holonomy algebra of the Fact and the canonicity of the fibre identification are not tested"
+  check_weight_bivector_is_unit_boost:
+    kind: sampled
+    clauses: ["(3) B_w is eta-antisymmetric with characteristic polynomial lambda^4 - (sum p_i^2) lambda^2", "(3) the second Kasner relation makes the surviving matrix a unit boost", "(2) the surviving value corresponds to -B_w"]
+    omits: "the forced exponents (-1/3, 2/3, 2/3) and three rational Kasner points, plus a control off the circle; not symbolic in p; the correspondence of -B_w with the Hubble-normalised rotation-gauge value and the weights-forced-equal-exponents link are not computed (premise called, return unused)"
+  check_ladder_boost_on_ambient_fibre:
+    kind: sampled
+    clauses: ["K = [k,k*]/2 = k ^ k* = N - 1/2", "K^2 = 1/4 on the whole ambient fibre", "an so(1,1) supported on the wall: [K,k] = k, [K,k*] = -k*"]
+    omits: "one concrete null pair k = (e_0 + e_5)/2, k* = (e_0 - e_5)/2 in Cl(2,4); the identities are consequences of the CAR relations but the actual ladder pair of the completion is not used"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: so(1,3) from bivectors, the weight bivector at the forced exponents and sample Kasner points (char poly lambda^4 - lambda^2, B_w^2 = 1) and the ladder boost identities in Cl(2,4) are exact computations; canonicity of the identification is stated as unchecked.

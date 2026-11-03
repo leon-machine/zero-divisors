@@ -1,0 +1,13 @@
+functions:
+  check_rung_unit_transverse_to_norm:
+    kind: sampled
+    clauses:
+    - (1)
+    - (2)
+    - (3)
+    omits: (1) isometry, CAR pair and X_mu = B_{1/mu} X_1 at four mu and three test vectors, but only totality clause (2) (e+ X e+ proportional to X(x/Q(x))) is run, not "every clause"; the invariant-function statement is not tested; (2) at four Lambda and mu in {1, 2, 1/3, 7/5} plus d/dLambda at two mu; (3) the reciprocal lift equals the frame mu = Lambda/3 and the balanced frame mu = H gives equal Hermitian and Klein norms at Lambda = 4/3 only, and c_{Lambda/3} = B_{3/Lambda} c_1 is not tested as a boost identity
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rational computations at sample Lambda and mu confirm the norm, transversality and mirror-frame claims; the full totality clause list and the invariant-function claim are not tested.

@@ -1,0 +1,30 @@
+functions:
+  check_norm_of_the_stelle_west_vector_is_fixed_by_the_frozen_point:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "restates the stored lemma up to rescaling X; the identity is checked at three values of Lambda and three of sigma; the general case is the two-line algebra of the proof"
+  check_released_norm_equation_is_the_euler_identity:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "homogeneity and the vanishing of doubly-V contractions are checked pointwise on one general field strength; the integration by parts and the tangential derivative terms are proof only"
+  check_pointwise_values_on_torsion_free_einstein_blocks:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "four Weyl maps, four kappa, three t, two Lambda; the general Weyl map is covered by the proof's double-dual argument, not by a spanning set"
+  check_schwarzschild_de_sitter_is_excluded_and_de_sitter_norm_is_free:
+    kind: sampled
+    clauses: ["(iv)(a)"]
+    omits: "three (M, Lambda, r) triples; the sectional-curvature formulas of the static field are cited and checked only to give an Einstein curvature with the stored Kretschmann value; the connection equation's homogeneity in t is proof only"
+  check_coupling_ratio_and_the_weyl_obstruction:
+    kind: sampled
+    clauses: ["(iv)(b)", "(iv)(c)"]
+    omits: "two coupling pairs and one coupling triple at sample t, kappa and two radii"
+  check_store_chart_normalisation:
+    kind: sampled
+    clauses: ["convention", "(iii)", "(iv)(a)"]
+    omits: "stored-chart values checked on the four Weyl maps, four kappa, two Lambda and one Schwarzschild-de Sitter triple; the factor -1/4 between conventions is checked on the same samples"
+untouched_premises:
+  synthesis.promoted-norm-weyl-clock-flat-weight: "cited only in the argued reading comparing the released norm with the promoted one; no computable content of it is used"
+  dark-energy.imported-henneaux-teitelboim-promotion: "imported Fact cited only in the argued reading"
+  dark-energy.under-action-written-norm-parameter-laws: "cited only in the argued reading for the norm as a parameter of the laws"
+  synthesis.rung-unit-transverse-to-norm: "cited in a closing remark for the rung boosts being isometries fixing the ground; no computation of it is used"

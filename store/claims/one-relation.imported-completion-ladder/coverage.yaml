@@ -1,0 +1,20 @@
+functions:
+  check_one_hyperbolic_plane_per_completion:
+    kind: partial
+    clauses: ["among nondegenerate null-lift completions the minimal one adjoins one hyperbolic plane (1,1)"]
+    omits: "Ten signatures and two sample points each: the conformal completion built by the transport.minimality export adjoins (1,1) and the lifts are null; that no smaller completion exists (minimality) and the statement that division fails exactly at non-invertible elements are not tested here."
+  check_tower_is_matrix_amplification:
+    kind: sampled
+    clauses: ["iterating gives Cl(p+k, q+k) = Mat(2^k, Cl(p,q))"]
+    omits: "Sixteen cases (n <= 2 with k = 1, 2 and n = 3 with k = 1), via twisted generators, an independent product count and the rung algebra Mat(2^k, R); not every (p,q,k)."
+  check_one_fermionic_mode_per_rung:
+    kind: sampled
+    clauses: ["one fermionic mode adjoined per rung"]
+    omits: "The canonical anticommutation relations are checked across k <= 3 rungs for base (1,1). The completed limit Cl(p,q)_C (x) CAR for p - q even is an inductive limit not tested beyond its finite stages, and the odd-charge limit is stated as open (docstring)."
+untouched_premises:
+  std-algebra.tensor-rules: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Finite stages of the ladder are verified on small cases; the completed limit and the minimality of the one-plane completion are not tested."

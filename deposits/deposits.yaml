@@ -1,0 +1,164 @@
+# The deposited versions of the Transport Papers: the baseline against which the Lab
+# marks what has changed in a generated paper. One entry per paper; the .tex beside
+# this file is the source of the version on Zenodo. When a new version is deposited,
+# replace it with: python -m tp.deposits record <code> --tex FILE --doi DOI --version V
+T00:
+  doi: 10.5281/zenodo.22714501
+  file: T00_ga_primer.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: b816762bc1222644eebc673d01ce37151b7ae030cc71ab34e2e0675554b20cc8
+  version: '1.0'
+T01:
+  doi: 10.5281/zenodo.21743863
+  file: T01_transport_principle.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 9cc9d1e607767a5419a763e12a1ad662cddc5aee708bb5930c0ec446081a09df
+  version: '3.0'
+T02:
+  doi: 10.5281/zenodo.22714886
+  file: T02_projective_to_conformal.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 7e3f47a672b23a6caceabc23bfaa573c7d3d708b0466c1fa5687908affbd7b01
+  version: '1.0'
+T03:
+  doi: 10.5281/zenodo.22721556
+  file: T03_tower_car.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: ae0736a4d2173d3d57a7f0b8f3dd7145c61e4756cce954498b1086d0eee30d8c
+  version: '1.0'
+T04:
+  doi: 10.5281/zenodo.22721669
+  file: T04_clifford_sheaves.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 6ed05b5f3f0dc759a56a09b46d5b7f26b9520cbceec6682dd332be9d85ddd0eb
+  version: '1.0'
+T05:
+  doi: 10.5281/zenodo.22721790
+  file: T05_gravitational_singularity.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 44d69f8bb0d3ec55f819661e5ef0066a57cf84e892e8d9cc5d68dd26f015fad0
+  version: '1.0'
+T06:
+  doi: 10.5281/zenodo.22721990
+  file: T06_blackhole_interior.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 012fbb54b95c29edb9f3d8e41afc654a3c531cb51e28f3f5e83b054eefa3d0b8
+  version: '1.0'
+T07:
+  doi: 10.5281/zenodo.22722121
+  file: T07_hawking_radiation.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 3fdade7da058ce1f23f258c4f6a2db38ae32971f6898d8e6b9f9008af499de8a
+  version: '1.0'
+T08:
+  doi: 10.5281/zenodo.22722176
+  file: T08_entropy_scrambling.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 19f13d38565e89ddd35c0ceb3d701e0ea4f3943ca544ea97bd2d996550ed4db7
+  version: '1.0'
+T09:
+  doi: 10.5281/zenodo.22722290
+  file: T09_twistor_correspondence.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 7ca549b2223bf6104d80cd1152f6606edba01df6d11d56c3dc431022b56f5014
+  version: '1.0'
+T10:
+  doi: 10.5281/zenodo.22722496
+  file: T10_dark_energy.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 96e9cf31c933979eb573d5526e5b9e04f91ca1e5df9e5300354dfbe106d5e14d
+  version: '1.0'
+T11:
+  doi: 10.5281/zenodo.22722565
+  file: T11_origin_of_mass.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 0970ff8768bbe83c01fcf62f62924763ce1e13389f5ba17c04da0a2abe56d146
+  version: '1.0'
+T12:
+  doi: 10.5281/zenodo.22722669
+  file: T12_standard_model.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: c181a62306322384b243454184179128fdcd93e81014ad8c58eeb0ffc3267c9f
+  version: '2.0'
+T13:
+  doi: 10.5281/zenodo.22722845
+  file: T13_quark_lepton_families.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 95c475eaaf8d2cd7a801943d870b44e2829757b820263320ddc2136156581eaf
+  version: '2.0'
+T14:
+  doi: 10.5281/zenodo.22722953
+  file: T14_dark_matter.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: bc8f2fd6825e6c144949fba0ef042c6ab5d2d41b9680cb350bda26a932b9e830
+  version: '2.0'
+T14a:
+  doi: 10.5281/zenodo.23232104
+  file: T14a_odd_extensions.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 84ba33f34a077c91bfa26631047f70fb58b371154ee8d9181ee3a95ded65916e
+  version: '1.0'
+T14b:
+  doi: 10.5281/zenodo.23234576
+  file: T14b_simulations.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 4418081d3af5b92f23d2a2fd3f7a5791f7a6df3fe0156bf4825d371b4ce8ea86
+  version: '1.0'
+T15:
+  doi: 10.5281/zenodo.22723070
+  file: T15_neutrino_masses.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 6887c3b9661f97a68c8dce88dfb01fc91ac343afbf2ab170023e9b6b4236e562
+  version: '2.0'
+T16:
+  doi: 10.5281/zenodo.22723212
+  file: T16_qm_gr_one_relation.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: cc82f92c8f0d71d1e89caca0ef5c4558f8d8f1cb6eb1b3d04b1b187aaa93409c
+  version: '1.0'
+T17:
+  doi: 10.5281/zenodo.22723310
+  file: T17_transport_programme.tex
+  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
+    line. Replace with the Zenodo file if they differ.
+  recorded: '2026-10-27'
+  sha256: 49db869fd16c551ca610b60356e1c49820e653ce0ee0f60f3ba850cd2e4c966a
+  version: '2.0'

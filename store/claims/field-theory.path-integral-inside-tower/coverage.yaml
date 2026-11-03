@@ -1,0 +1,22 @@
+functions:
+  check_grassmann_variables_are_rungs:
+    kind: sampled
+    clauses: ["\"Grassmann variables are further rungs\""]
+    omits: "four further rungs and the M = 2 Berezin integrals at two values of t and both eta; the identification of the tower Berezin integral with the abstract one is fixed up to one overall sign"
+  check_exact_slicing_is_trace:
+    kind: sampled
+    clauses: ["\"The Grassmann path integral at slicing M gives Tr(1 - delta H)^M exactly\""]
+    omits: "H = N on one mode (plus a two-mode factorisation at M = 2, 3), M = 1..5, three values of delta, both eta"
+  check_continuum_limit_gibbs_and_fermi_dirac:
+    kind: sampled
+    clauses: ["\"and Tr exp(-beta H) and the Fermi-Dirac occupation in the limit\""]
+    omits: "the limit M -> infinity is not computed: exact rational interval enclosures of (1 - 1/M)^M at M = 100 and 1000 and of e^{-1}, for beta*eps = 1 only, with width below 1/M around 1/(e + 1)"
+  check_two_point_function_matsubara:
+    kind: sampled
+    clauses: ["\"its two-point function is antiperiodic for the trace and periodic for the supertrace at every slicing\""]
+    omits: "M = 2, 3, 4 and two values of t, one mode; the period itself is imported and not checked (the statement says so)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the exact slicing and the two-point parity are computed at chosen M and t; the continuum limit is checked only by finite-M enclosures and is not claimed as a limit computation"

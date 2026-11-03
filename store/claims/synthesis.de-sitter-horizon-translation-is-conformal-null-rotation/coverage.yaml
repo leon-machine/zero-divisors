@@ -1,0 +1,43 @@
+functions:
+  check_boundary_point_and_null_plane:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: <n, I> = 0, <X(x), n> = <x, n> and sigma = 1 + L r^2/12 on the generators are checked at L = 3, 3/7, 12, three transverse points and three values of s, with sigma tabulated, not as identities in L, x_perp and s
+  check_killing_horizon_and_rotation_invariant_parameter:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    omits: The boost n^m and the rotation rotors 1 + B/3 for the three static-patch planes at L = 3/7, three transverse points and s = 0, 1, 5/2, with the (e2, W) images at s = 1 tabulated; the proof's invariant <Y, m>/<Y, I> gives the general statement
+  check_uniform_translation_is_null_rotation:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: nilpotency of n I and the identity (1/2) n I = P_n + (L/12) n n0 at L = 3, 3/7; the generator-wise shift a sigma(x_perp) (tabulated) at a = 2/5, -3, three transverse points and two values of s
+  check_cone_reaches_the_conformal_null_rotation:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: The two orbit identities at rho = 1/2, 1/4, 3 (dilation) and rho = 2, 3 (boost); the closedness and invariance of C_pi, the limits and the rotations to every future null n are representation-theoretic and not computed
+  check_covariance_to_the_static_observer_at_the_origin:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: One rotor at L = 3 carrying n to 2 v* = X(2 e0)/2; transitivity of the isometry group on static patches is cited, not computed
+  check_controls:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (iv)
+    omits: 'Controls only: a non-null direction (sigma tabulated at two points), the non-uniform shift of P_n alone (tabulated), the sign of the n n0 coefficient at L < 0; clause (v) (Howe-Moore, the identification with the horizon modes) is not tested'
+  check_dilation_field_against_schwarzschild_field:
+    kind: sampled
+    clauses:
+    - (vi)
+    omits: The Weyl part computed exactly from Fact (v) for R(B) = cB at c = 1, 1/7 and for R = -k(1 - 3 Pi) at k = 2/5 in one orthonormal frame and one rotation gauge; that every pure dilation has vanishing Weyl part and the covariance under displacements are cited, not computed
+  check_free_fall_lines_on_the_horizon:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: Omega(n).n = 0 at two points of N_n and its tabulated value at one point off it, at L = 3/7; the physical tangent of lambda at one point

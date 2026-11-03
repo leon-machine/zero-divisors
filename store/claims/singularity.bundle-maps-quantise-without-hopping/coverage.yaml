@@ -1,0 +1,18 @@
+functions:
+  check_bundle_map_quantises_to_multiplication_operator:
+    kind: sampled
+    clauses: ["dGamma(a) = sum_j a_xj N_xj, diagonal in the joint number basis and commuting with every occupation number"]
+    omits: "one truncation of three points, ten diagonal maps (eight 0/1 and two generic)"
+  check_controlled_z_conserves_occupations:
+    kind: sampled
+    clauses: ["whole"]
+    omits: "supporting only: the controlled-Z generator sigma_x sigma_y is not mentioned in the statement; three points"
+  check_cross_component_hops:
+    kind: sampled
+    clauses: ["a cross component a_xy != 0 quantises to psi_x^dag psi_y, carrying (N_x, N_y) = (0,1) onto (1,0)"]
+    omits: "pure matrix units E_xy for the six ordered pairs of a three-point truncation, not a general map a with other entries"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both halves of the statement are tested on a three-point truncation; the docstring says so."

@@ -1,0 +1,18 @@
+functions:
+  check_ascended_and_descended_ledgers:
+    kind: exact
+    clauses: ["(1) tr rho_R^2 = 1", "(2) tr(E rho_R)^2 = prod (c_k^4 + s_k^4) = 817544276833/6972900390625", "S_2(E rho_R) = log2(6972900390625/817544276833) approx 3.09 bits", "S(E rho_R) = sum H(c_k^2) = S_th exactly", "stage by stage the descended entropy is monotone non-decreasing"]
+    omits: "the 3.09 bits is checked as a rigorous bound in (3.08, 3.10); the ascended-entropy sequence the docstring describes (rising, returning to 0) is computed from the diagonal of rho_L, taking rho_L diagonal and S(rho_R(t)) = S(rho_L(t)) as given, and is not part of the statement's clauses"
+  check_deficit_located_and_message_not_descending:
+    kind: exact
+    clauses: ["(3) D(rho_R || E rho_R) = S(E rho_R) - S(rho_R) = S_th", "every single-qubit marginal is identical at the two levels", "the decoding correlators (24/25, 168/625) versus (168/625, 24/25) are annihilated by E, both become 0 in both histories", "under the total-parity grading alone the even correlator X X Z would descend"]
+    omits: "the correlators are taken in the two-pair instance of Proposition purity-correlation-transfer-recovery, not read off the four-pair run; S(rho_R) = 0 enters through the purity assertion"
+  check_records_survive_inter_pair_destroyed:
+    kind: exact
+    clauses: ["(4) the (R_k, L_k) marginal of E rho_R is diag(c_k^2, 0, 0, s_k^2)", "the joint distributions of (R_k, R_l), k != l, factorise"]
+    omits: "the closing sentence (everything the scrambling wrote across the pairs is erased) is interpretive; the ascended non-product check is on neighbouring pairs only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the statement is about this specific four-pair run and every asserted number and identity is computed exactly in it"

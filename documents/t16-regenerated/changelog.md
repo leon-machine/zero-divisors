@@ -1,0 +1,344 @@
+# Changelog: t16-regenerated
+
+## v9 (2026-10-27T17:10:47+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v8 (2026-10-27T16:52:28+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v7 (2026-10-27T15:18:05+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v6 (2026-10-27T13:34:04+00:00)
+
+- bump: major
+- correspondence.clifford-side-ordering-shift: revised-substantive
+- correspondence.fock-model-complexified-ascended-algebra: revised-substantive
+- correspondence.incidence-relation-chart: revised-substantive
+- correspondence.spinor-identification: revised-substantive
+- correspondence.twistors-are-states-three-ladder-pairs: revised-substantive
+- dark-energy.acoustic-no-go-one-way-grip: revised-substantive
+- dark-energy.lift-inherits-no-go-steps-itemised: revised-substantive
+- dark-matter.asymmetry-arrow-counted-fifteenth-refutation: revised-substantive
+- dark-matter.orientation-arrow-seventeenth-refutation: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- families.alignment-computed-thirteenth-refutation-democracy-one: revised-substantive
+- families.bracket-fixed-join: revised-substantive
+- families.source-term-linear-tilt-mass-functional: revised-substantive
+- mass.de-sitter-scale-frozen-point: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-flat-model-twistor-chart-infinity: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- one-relation.arrow-frequency-are-one-bit-level: revised-substantive
+- one-relation.dirac-current-conserved-density: revised-substantive
+- one-relation.form-law-forced-square: revised-substantive
+- one-relation.imported-completion-ladder: revised-substantive
+- one-relation.imported-condensate-derived-content: revised-substantive
+- one-relation.imported-flag-arrow-superselection: revised-substantive
+- one-relation.imported-null-cone-determines-form-zeemans: revised-substantive
+- one-relation.imported-pure-spinors-incidence-chart: revised-substantive
+- one-relation.imported-single-mode-thermality-modular-period: revised-substantive
+- one-relation.imported-witts-extension-theorem: revised-substantive
+- one-relation.measure-indifference-borns-rule-located: revised-substantive
+- one-relation.odd-square-roots-chiral-phase: revised-substantive
+- one-relation.one-datum-not-two-imaginary-unit: revised-substantive
+- one-relation.overlap-table-sorted: revised-substantive
+- one-relation.schr-odinger-slow-shadow: revised-substantive
+- one-relation.spacetime-manifold-vacuum-lines: revised-substantive
+- one-relation.third-constant-conversion-constant-between-charts: revised-substantive
+- one-relation.two-capacities-three-consequences: revised-substantive
+- one-relation.two-presentations: revised-substantive
+- one-relation.vector-derivative-covariant-first-order-operator: revised-substantive
+- primer.sign: added
+- scrambling.clock-inventory-boundary-modes: revised-substantive
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- singularity.imported-descent-one-way-conditional-expectation: revised-substantive
+- singularity.modular-descent: revised-substantive
+- singularity.r-regularity-fixed-locus: revised-substantive
+- singularity.why-calibration-cannot-be-internal: revised-substantive
+- standard-model.connection-forced: revised-substantive
+- standard-model.hyp-s-slot-statistics: revised-substantive
+- standard-model.pair-count-dimension: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- std-algebra.bivector-exponential: added
+- std-algebra.duality: added
+- std-algebra.inverse-of-vector: added
+- std-algebra.periodicity: added
+- std-algebra.pseudoscalar-commutation: added
+- std-algebra.pure-spinors: added
+- std-algebra.tensor-rules: added
+- std-algebra.vector-squares: added
+- std-algebra.witt-basis-car: added
+- std-algebra.witt-decomposition: added
+- tower.answers-iteration-question: revised-substantive
+- tower.car-limit-even-charge: revised-substantive
+- tower.witt-index-quantum-capacity: revised-substantive
+- transport.door-one-way: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.minimality: revised-substantive
+- transport.pinching-kernel: revised-substantive
+- renumbered c:scrambling.clock-inventory-boundary-modes: 54 -> 55
+- renumbered c:sheaf.localised-transport: 55 -> 56
+- renumbered c:sheaf.one-sided-completion: 56 -> 57
+- renumbered c:sheaf.one-sided-completion-singularity: 57 -> 58
+- renumbered c:singularity.imported-descent-one-way-conditional-expectation: 58 -> 59
+- renumbered c:singularity.modular-descent: 59 -> 60
+- renumbered c:singularity.why-calibration-cannot-be-internal: 60 -> 61
+- renumbered c:standard-model.connection-forced: 61 -> 62
+- renumbered c:standard-model.hyp-s-slot-statistics: 62 -> 63
+- renumbered c:standard-model.pair-count-dimension: 63 -> 64
+- renumbered c:standard-model.trichotomy-what-kind-number: 64 -> 65
+- renumbered c:tower.answers-iteration-question: 65 -> 76
+- renumbered c:tower.car-limit-even-charge: 66 -> 77
+- renumbered c:tower.witt-index-quantum-capacity: 67 -> 78
+- renumbered c:transport.door-one-way: 68 -> 79
+- renumbered c:transport.existence-locus-type-n: 69 -> 80
+- renumbered c:transport.minimality: 70 -> 81
+- renumbered c:transport.pinching-kernel: 71 -> 82
+- renumbered c:refuted.a-pre-descent-term-sources-the-matter-asymmetry: 72 -> 83
+- renumbered c:refuted.the-mass-dictionary-coupling-to-the-frozen-point: 73 -> 84
+- renumbered c:refuted.the-particle-antiparticle-orientation-is-determi: 74 -> 85
+- renumbered c:refuted.the-vacuum-omega-area-sets-the-weak-scale: 75 -> 86
+- renumbered c:refuted.twistors-are-the-ladder-operators: 76 -> 87
+- renumbered c:pred.dark-matter-direct-detection-null: 77 -> 88
+- renumbered c:pred.no-indirect-dark-signals: 78 -> 89
+
+## v5 (2026-10-23T06:45:41+00:00)
+
+- bump: major
+- correspondence.fock-model-complexified-ascended-algebra: revised-substantive
+- correspondence.incidence-relation-chart: revised-substantive
+- correspondence.spinor-identification: revised-substantive
+- correspondence.twistors-are-states-three-ladder-pairs: revised-substantive
+- dark-matter.orientation-arrow-seventeenth-refutation: revised-substantive
+- dark-matter.p2-indifference: revised-substantive
+- dark-matter.premise-cpt-covariance: revised-substantive
+- dark-matter.premise-flag-as-datum: added
+- dark-matter.premise-trichotomy-exhaustive: removed
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-flat-model-twistor-chart-infinity: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- note.one-relation.setting-machine-verification: revised-substantive
+- one-relation.character-experience-three-record-chain-theorems: revised-substantive
+- one-relation.imported-flag-arrow-superselection: revised-substantive
+- one-relation.odd-square-roots-chiral-phase: revised-substantive
+- one-relation.record-chain-votes-measurement-without-collapse: revised-substantive
+- one-relation.schr-odinger-slow-shadow: revised-substantive
+- one-relation.spacetime-manifold-vacuum-lines: revised-substantive
+- pred.dark-matter-direct-detection-null: revised-substantive
+- pred.no-indirect-dark-signals: revised-substantive
+- pred.no-objective-collapse: revised-substantive
+- singularity.imported-descent-one-way-conditional-expectation: revised-substantive
+- singularity.why-calibration-cannot-be-internal: revised-substantive
+- standard-model.hyp-s-slot-statistics: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- c:standard-model.hyp-s-slot-statistics: moved to s:cited
+- dark-matter.premise-trichotomy-exhaustive: left the document's dependency cone, removed
+- renumbered c:one-relation.imported-completion-ladder: 10 -> 9
+- renumbered c:one-relation.imported-pure-spinors-incidence-chart: 11 -> 10
+- renumbered c:one-relation.imported-single-mode-thermality-modular-period: 12 -> 11
+- renumbered c:one-relation.imported-flag-arrow-superselection: 13 -> 12
+- renumbered c:one-relation.imported-condensate-derived-content: 14 -> 13
+- renumbered c:one-relation.imported-indifference-instrument: 15 -> 14
+- renumbered c:one-relation.imported-square-roots-real-clifford-algebras: 16 -> 15
+- renumbered c:one-relation.imported-null-cone-determines-form-zeemans-external: 17 -> 16
+- renumbered c:one-relation.imported-null-cone-determines-form-zeemans: 18 -> 17
+- renumbered c:one-relation.imported-cartans-purity-theorem-thouless-form: 19 -> 18
+- renumbered c:one-relation.imported-witts-extension-theorem: 20 -> 19
+- renumbered c:one-relation.two-presentations: 21 -> 20
+- renumbered c:one-relation.two-capacities-three-consequences: 22 -> 21
+- renumbered c:one-relation.spacetime-manifold-vacuum-lines: 23 -> 22
+- renumbered c:one-relation.overlap-table-sorted: 24 -> 23
+- renumbered c:one-relation.third-constant-conversion-constant-between-charts: 25 -> 24
+- renumbered c:one-relation.vector-derivative-covariant-first-order-operator: 26 -> 25
+- renumbered c:one-relation.schr-odinger-slow-shadow: 27 -> 26
+- renumbered c:one-relation.form-law-forced-square: 28 -> 27
+- renumbered c:one-relation.odd-square-roots-chiral-phase: 29 -> 28
+- renumbered c:one-relation.one-datum-not-two-imaginary-unit: 30 -> 29
+- renumbered c:one-relation.arrow-frequency-are-one-bit-level: 31 -> 30
+- renumbered c:one-relation.dirac-current-conserved-density: 32 -> 31
+- renumbered c:one-relation.measure-indifference-borns-rule-located: 33 -> 32
+- renumbered c:one-relation.record-chain-votes-measurement-without-collapse: 34 -> 33
+- renumbered c:one-relation.character-experience-three-record-chain-theorems: 35 -> 34
+- renumbered c:pred.no-objective-collapse: 36 -> 35
+- renumbered c:correspondence.clifford-side-ordering-shift: 37 -> 36
+- renumbered c:correspondence.fock-model-complexified-ascended-algebra: 38 -> 37
+- renumbered c:correspondence.incidence-relation-chart: 39 -> 38
+- renumbered c:correspondence.spinor-identification: 40 -> 39
+- renumbered c:correspondence.twistors-are-states-three-ladder-pairs: 41 -> 40
+- renumbered c:dark-energy.acoustic-no-go-one-way-grip: 42 -> 41
+- renumbered c:dark-energy.lift-inherits-no-go-steps-itemised: 43 -> 42
+- renumbered c:dark-matter.asymmetry-arrow-counted-fifteenth-refutation: 44 -> 43
+- renumbered c:dark-matter.orientation-arrow-seventeenth-refutation: 45 -> 44
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 46 -> 45
+- renumbered c:families.alignment-computed-thirteenth-refutation-democracy-one: 47 -> 46
+- renumbered c:families.bracket-fixed-join: 48 -> 47
+- renumbered c:families.imported-indifference-instrument: 49 -> 48
+- renumbered c:families.source-term-linear-tilt-mass-functional: 50 -> 49
+- renumbered c:mass.de-sitter-scale-frozen-point: 51 -> 50
+- renumbered c:mass.exact-join: 52 -> 51
+- renumbered c:mass.imported-flat-model-twistor-chart-infinity: 53 -> 52
+- renumbered c:mass.mass-weight-dictionary: 54 -> 53
+- renumbered c:scrambling.clock-inventory-boundary-modes: 55 -> 54
+- renumbered c:sheaf.localised-transport: 56 -> 55
+- renumbered c:sheaf.one-sided-completion: 57 -> 56
+- renumbered c:sheaf.one-sided-completion-singularity: 58 -> 57
+- renumbered c:singularity.imported-descent-one-way-conditional-expectation: 59 -> 58
+- renumbered c:singularity.modular-descent: 60 -> 59
+- renumbered c:singularity.why-calibration-cannot-be-internal: 61 -> 60
+- renumbered c:standard-model.connection-forced: 62 -> 61
+- renumbered c:standard-model.hyp-s-slot-statistics: 9 -> 62
+
+## v4 (2026-10-21T21:01:37+00:00)
+
+- bump: major
+- dark-matter.orientation-arrow-seventeenth-refutation: revised-substantive
+- dark-matter.premise-cpt-covariance: added
+- dark-matter.premise-trichotomy-exhaustive: added
+- one-relation.imported-flag-arrow-superselection: revised-substantive
+- one-relation.imported-single-mode-thermality-modular-period: revised-substantive
+- one-relation.record-chain-votes-measurement-without-collapse: revised-substantive
+- singularity.modular-descent: revised-substantive
+- singularity.why-calibration-cannot-be-internal: added
+- renumbered c:one-relation.recording-irreversible-stated-so-it-can: 2 -> 4
+- renumbered c:one-relation.supervenience-stated-so-it-can-be: 3 -> 5
+- renumbered c:scrambling.indifference-structural-premise-series: 4 -> 6
+- renumbered c:singularity.p-univalence: 5 -> 7
+- renumbered c:singularity.r-regularity-fixed-locus: 6 -> 8
+- renumbered c:standard-model.hyp-s-slot-statistics: 7 -> 9
+- renumbered c:one-relation.imported-completion-ladder: 8 -> 10
+- renumbered c:one-relation.imported-pure-spinors-incidence-chart: 9 -> 11
+- renumbered c:one-relation.imported-single-mode-thermality-modular-period: 10 -> 12
+- renumbered c:one-relation.imported-flag-arrow-superselection: 11 -> 13
+- renumbered c:one-relation.imported-condensate-derived-content: 12 -> 14
+- renumbered c:one-relation.imported-indifference-instrument: 13 -> 15
+- renumbered c:one-relation.imported-square-roots-real-clifford-algebras: 14 -> 16
+- renumbered c:one-relation.imported-null-cone-determines-form-zeemans-external: 15 -> 17
+- renumbered c:one-relation.imported-null-cone-determines-form-zeemans: 16 -> 18
+- renumbered c:one-relation.imported-cartans-purity-theorem-thouless-form: 17 -> 19
+- renumbered c:one-relation.imported-witts-extension-theorem: 18 -> 20
+- renumbered c:one-relation.two-presentations: 19 -> 21
+- renumbered c:one-relation.two-capacities-three-consequences: 20 -> 22
+- renumbered c:one-relation.spacetime-manifold-vacuum-lines: 21 -> 23
+- renumbered c:one-relation.overlap-table-sorted: 22 -> 24
+- renumbered c:one-relation.third-constant-conversion-constant-between-charts: 23 -> 25
+- renumbered c:one-relation.vector-derivative-covariant-first-order-operator: 24 -> 26
+- renumbered c:one-relation.schr-odinger-slow-shadow: 25 -> 27
+- renumbered c:one-relation.form-law-forced-square: 26 -> 28
+- renumbered c:one-relation.odd-square-roots-chiral-phase: 27 -> 29
+- renumbered c:one-relation.one-datum-not-two-imaginary-unit: 28 -> 30
+- renumbered c:one-relation.arrow-frequency-are-one-bit-level: 29 -> 31
+- renumbered c:one-relation.dirac-current-conserved-density: 30 -> 32
+- renumbered c:one-relation.measure-indifference-borns-rule-located: 31 -> 33
+- renumbered c:one-relation.record-chain-votes-measurement-without-collapse: 32 -> 34
+- renumbered c:one-relation.character-experience-three-record-chain-theorems: 33 -> 35
+- renumbered c:pred.no-objective-collapse: 34 -> 36
+- renumbered c:correspondence.clifford-side-ordering-shift: 35 -> 37
+- renumbered c:correspondence.fock-model-complexified-ascended-algebra: 36 -> 38
+- renumbered c:correspondence.incidence-relation-chart: 37 -> 39
+- renumbered c:correspondence.spinor-identification: 38 -> 40
+- renumbered c:correspondence.twistors-are-states-three-ladder-pairs: 39 -> 41
+- renumbered c:dark-energy.acoustic-no-go-one-way-grip: 40 -> 42
+- renumbered c:dark-energy.lift-inherits-no-go-steps-itemised: 41 -> 43
+- renumbered c:dark-matter.asymmetry-arrow-counted-fifteenth-refutation: 42 -> 44
+- renumbered c:dark-matter.orientation-arrow-seventeenth-refutation: 43 -> 45
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 44 -> 46
+- renumbered c:families.alignment-computed-thirteenth-refutation-democracy-one: 45 -> 47
+- renumbered c:families.bracket-fixed-join: 46 -> 48
+- renumbered c:families.imported-indifference-instrument: 47 -> 49
+- renumbered c:families.source-term-linear-tilt-mass-functional: 48 -> 50
+- renumbered c:mass.de-sitter-scale-frozen-point: 49 -> 51
+- renumbered c:mass.exact-join: 50 -> 52
+- renumbered c:mass.imported-flat-model-twistor-chart-infinity: 51 -> 53
+- renumbered c:mass.mass-weight-dictionary: 52 -> 54
+- renumbered c:scrambling.clock-inventory-boundary-modes: 53 -> 55
+- renumbered c:sheaf.localised-transport: 54 -> 56
+- renumbered c:sheaf.one-sided-completion: 55 -> 57
+- renumbered c:sheaf.one-sided-completion-singularity: 56 -> 58
+- renumbered c:singularity.imported-descent-one-way-conditional-expectation: 57 -> 59
+- renumbered c:singularity.modular-descent: 58 -> 60
+- renumbered c:standard-model.connection-forced: 59 -> 62
+- renumbered c:standard-model.pair-count-dimension: 60 -> 63
+- renumbered c:standard-model.trichotomy-what-kind-number: 61 -> 64
+- renumbered c:tower.answers-iteration-question: 62 -> 65
+- renumbered c:tower.car-limit-even-charge: 63 -> 66
+- renumbered c:tower.witt-index-quantum-capacity: 64 -> 67
+- renumbered c:transport.door-one-way: 65 -> 68
+- renumbered c:transport.existence-locus-type-n: 66 -> 69
+- renumbered c:transport.minimality: 67 -> 70
+- renumbered c:transport.pinching-kernel: 68 -> 71
+- renumbered c:refuted.a-pre-descent-term-sources-the-matter-asymmetry: 69 -> 72
+- renumbered c:refuted.the-mass-dictionary-coupling-to-the-frozen-point: 70 -> 73
+- renumbered c:refuted.the-particle-antiparticle-orientation-is-determi: 71 -> 74
+- renumbered c:refuted.the-vacuum-omega-area-sets-the-weak-scale: 72 -> 75
+- renumbered c:refuted.twistors-are-the-ladder-operators: 73 -> 76
+- renumbered c:pred.dark-matter-direct-detection-null: 74 -> 77
+- renumbered c:pred.no-indirect-dark-signals: 75 -> 78
+
+## v3 (2026-10-21T16:46:34+00:00)
+
+- bump: major
+- one-relation.imported-completion-ladder: revised-substantive
+- one-relation.schr-odinger-slow-shadow: revised-substantive
+- refuted.a-pre-descent-term-sources-the-matter-asymmetry: revised-substantive
+- refuted.the-particle-antiparticle-orientation-is-determi: revised-substantive
+- refuted.the-vacuum-omega-area-sets-the-weak-scale: revised-substantive
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- singularity.p-univalence: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- tower.car-limit-even-charge: revised-substantive
+- tower.witt-index-quantum-capacity: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.minimality: revised-substantive
+
+## v2 (2026-10-21T15:35:30+00:00)
+
+- bump: major
+- correspondence.spinor-identification: revised-substantive
+- dark-matter.asymmetry-arrow-counted-fifteenth-refutation: revised-substantive
+- dark-matter.orientation-arrow-seventeenth-refutation: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- families.alignment-computed-thirteenth-refutation-democracy-one: revised-substantive
+- families.imported-indifference-instrument: revised-substantive
+- families.source-term-linear-tilt-mass-functional: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-flat-model-twistor-chart-infinity: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- one-relation.arrow-frequency-are-one-bit-level: revised-substantive
+- one-relation.character-experience-three-record-chain-theorems: revised-substantive
+- one-relation.imported-completion-ladder: revised-substantive
+- one-relation.imported-condensate-derived-content: revised-substantive
+- one-relation.imported-flag-arrow-superselection: revised-substantive
+- one-relation.imported-indifference-instrument: revised-substantive
+- one-relation.imported-null-cone-determines-form-zeemans: revised-substantive
+- one-relation.imported-pure-spinors-incidence-chart: revised-substantive
+- one-relation.imported-single-mode-thermality-modular-period: revised-substantive
+- one-relation.overlap-table-sorted: revised-substantive
+- one-relation.record-chain-votes-measurement-without-collapse: revised-substantive
+- one-relation.schr-odinger-slow-shadow: revised-substantive
+- one-relation.spacetime-manifold-vacuum-lines: revised-substantive
+- one-relation.two-capacities-three-consequences: revised-substantive
+- one-relation.two-presentations: revised-substantive
+- scrambling.clock-inventory-boundary-modes: revised-substantive
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- singularity.imported-descent-one-way-conditional-expectation: revised-substantive
+- singularity.modular-descent: revised-substantive
+- tower.answers-iteration-question: revised-substantive
+- transport.door-one-way: revised-substantive
+
+## v1 (2026-10-21T12:41:54+00:00)
+
+- first generation: 90 claim blocks
+

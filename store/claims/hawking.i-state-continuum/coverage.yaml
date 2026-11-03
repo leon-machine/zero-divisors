@@ -1,0 +1,21 @@
+functions:
+  check_fermi_dirac_quasi_free_state_is_kms:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "window case only (pure-point h): one two-mode and one three-mode window with rational orthogonal U; the symbol-built quasi-free state equals the Gibbs state and satisfies KMS on all matrix-unit quadruples; the continuum statements (core, unbounded h, the lift from two-point KMS to the state) are not tested (the docstring says so)"
+  check_pairing_of_kms_state_vanishes:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "same two windows; G a(f) G^{-1} = a(e^{beta h} f) and vanishing of the antisymmetric pairing solving P(f, g) = -P(e^{beta h} f, g), as a linear system; not the core argument for unbounded h"
+  check_two_point_kms_forces_the_fermi_dirac_symbol:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "same two windows: the two-point KMS identity for an unknown A has the unique solution A_I; the bounded-spectral-subspace core and the extension 'everywhere' are not tested; the closing uniqueness sentence among all states is not tested here (see hawking.full-uniqueness-given-dynamics)"
+untouched_premises:
+  hawking.imported-quasi-free-kms-reduces-two: "lifts the two-point KMS identity to the state in the continuum; no finite content (docstring: not checked)"
+  hawking.imported-ideal-fermi-gas-uniqueness: "closing uniqueness sentence rests on it; its window case is checked in hawking.full-uniqueness-given-dynamics, not here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the window case of clauses (1)-(3) is tested exactly at two rational windows, as the docstring says; the continuum content is untested"

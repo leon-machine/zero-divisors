@@ -1,0 +1,61 @@
+doc: t06-regenerated
+title: 'The Geometry of the Black-Hole Interior: Where Division Fails, the Weighted
+  Limit, and the Kerr Tests (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- interior.imported-equivalence-einstein-equations
+- interior.imported-schwarzschild-curvature-spectrum
+- interior.imported-schwarzschild-curvature-spectrum-external
+- interior.gauge-trajectory-unipotent-ray
+- interior.exact-scale-decoupling
+- interior.imported-tractor-connection
+- interior.metric-parallelism-trace-schouten-condition
+- interior.stabilisers-flat-model
+- interior.non-null-stabilisers-section-they-act
+- interior.covariant-form-vacuum-equations
+- interior.scale-tractor-leaves-cone
+- interior.sign-fixed-internally
+- interior.stabiliser-rotates-parabolic-reductive
+- interior.kasner-form-interior
+- interior.exact-parallelism-convergence-rate
+- interior.interior-connection-exactly
+- interior.boosts-generate-exactly-levi-factor
+- obj.interior.weighted-blow-up-hubble-normalisation-admissible
+- interior.weighted-limit-theorem
+- interior.schwarzschild-de-sitter-weighted-limit
+- interior.transport-level-convergence-along-tangential-curves
+- interior.schwarzschild-lines-exactly
+- interior.imported-kerr-schild-form-kerr-gauge
+- interior.unipotency-across-kerr-family
+- interior.imported-kerr-curvature
+- interior.complex-factorisation-location-ring
+- interior.duality-monodromy-fibration-over-ring
+- interior.imported-walker-penrose-killing-spinor
+- interior.complex-scale-inverse-cube-killing-spinor
+- interior.imported-mass-inflation-stability
+- interior.filtration-cauchy-horizon-read-literature
+show: spine-only
+paper: T06
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T06_blackhole_interior.tex
+  note: Recreate T06 from the store
+cite: []
+prose: paper
+msc: Primary 83C57, 53A30; Secondary 15A66, 53C50, 83C20.
+keywords: gauge theory gravity; Schwarzschild singularity; tractor calculus; almost-Einstein;
+  Kasner; BKL; weighted blow-up; Kerr; Kerr-Schild; Killing spinor; Cauchy horizon.

@@ -1,0 +1,20 @@
+functions:
+  check_jacobi_corank_one_simple_zero:
+    kind: sampled
+    clauses: ["(1) corank one: first-order coefficient of det G is det(G0 on the complement) G1(k,k)", "(1) corank two: d(det G) = 0"]
+    omits: "n = 4 with one fixed complement block, one G2, three values of G1(k,k) at corank one and three symmetric G1 at corank two; the identification of G1(k,k) with the transversality datum delta(k tensor k) of the Lemma, the 'iff' between (T1)-(T3) and 'det G is a regular zero set', the frame independence, and 'S vanishes to first order iff (T3)' are not tested"
+  check_wild_wall_completion_and_shadow:
+    kind: sampled
+    clauses: ["(2) s = (1 - c)^2/S + B", "(2) h nondegenerate of signature (p+1, q+1) on M_phys including the wall", "(3) odd m: far-side degeneration of h is a simple zero of det h (shadow wall)"]
+    omits: "one model only: m = 3, a fixed negative definite G1 (3 x 3), fixed b1, e and couplings (mu, nu) = (1/10, 1/2); the identity holds at four rational tau, the signature (2,4) at the wall and 40 physical points, det h has simple zeros (gcd with derivative) with one in (-1/4, -1/5); 'whatever m is', 'good couplings' in general, 'no order of vanishing used' and c = 0 on the wall as a general statement are not tested"
+  check_even_order_keeps_signature:
+    kind: sampled
+    clauses: ["(3) even m: the signature does not change across the wall"]
+    omits: "m = 2 with b = 0 and a diagonal-block model, signature compared at tau = +-1/10 only; no completed form h is built for m = 2, so 'h is nondegenerate on a whole neighbourhood of the wall' is not tested; (4) two-sidedness of a signature-changing wall and the existence of a one-sided even-order wall with a corank-one degeneration are not tested (the m = 3, b = 0 model only shows a signature change)"
+untouched_premises:
+  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "functions test what their docstrings say, on single exact models; the neighbourhood clause of (3) for even m and clause (4) have no computation"

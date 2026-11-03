@@ -1,0 +1,18 @@
+functions:
+  check_logarithmic_depletion_law:
+    kind: sampled
+    clauses: ["1/N_f = 1/N_0 + (2P/m) ln(a_f/a_i)/(a^2 H)"]
+    omits: "1/N = 1/N_0 + k x solves dN/dx = -k N^2 as a rational-function identity for three sample (N_0, k); the reduction of the sheet rate equation dn/dt = -2 H n - sigma v n^2 to it (h k = sigma v) is checked at two rational points"
+  check_survival_numbers:
+    kind: exact
+    clauses: ["keeps 99 percent of its number only for P about 2e-16 or less", "at P = 1 about 1e-14 survives"]
+    omits: "exact rational intervals for the inputs typed in as decimals (ln(a_f/a_i) = 25.8, d_b = 0.98 m, g = 3.36, 10.75, 106.75): P bound in (1.2e-16, 2.2e-16) and survival in (1e-14, 2.5e-14); the K3 numbers depend on the g chosen"
+  check_phase_t_threshold_and_collisionless:
+    kind: exact
+    clauses: ["in phase (T) e^2/m > 7e7", "collisionless threshold 5.9e6 from the phase-shift bound 1.7e-7"]
+    omits: "the bound (m/e^2)^2 <= 2e-16 and the phase-shift bound 1.7e-7 are typed in; that phase (C) fails R2 by itself rests on the imported confinement and is not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the decimals are redone with exact intervals; the depletion law is verified symbolically in x at sample constants"

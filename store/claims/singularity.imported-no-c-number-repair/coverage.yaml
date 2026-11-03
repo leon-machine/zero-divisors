@@ -1,0 +1,22 @@
+functions:
+  check_partners_form_affine_space_over_u:
+    kind: sampled
+    clauses: ["the candidate partners form an affine space"]
+    omits: "Q(ax+bw+x)=ab+Q(x) and the partner identities are checked on a 3x3 grid and sample x in U, for mixed signatures 3<=n<=6 only, not as a symbolic identity for all n"
+  check_null_rotations_translate_partners:
+    kind: sampled
+    clauses: ["the stabiliser contains the parabolic null rotations", "those rotations act by translation", "a translation has no fixed point", "in the minimal ascent or in any enlargement"]
+    omits: "sample u and x, signatures 3<=n<=6; enlargement tested only for the single ascent Cl(p+1,q+1); the class in H^1(N_v;U) is never computed as a cohomology class, only theta(R_u)=-u/2 on samples"
+  check_dimension_two_exception:
+    kind: exact
+    clauses: ["the dimension-two exception, where the class vanishes"]
+    omits: "uniqueness of the partner w is read off a 3x3 grid of (a,b), though it follows from U=0"
+  check_wall_translation_action:
+    kind: sampled
+    clauses: ["no equivariant classical value exists at E either (translation action model at the wall)"]
+    omits: "tests the abstract model T_lambda=id-lambda(x)k on R^4 at sample k, lambda, candidates; it does not touch the Cl(p,q) wall or the completion's transversal independence"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks test the affine-space/translation mechanism, the dimension-two exception and a model of the wall action at samples; the cohomological non-vanishing and the literature theorems are not computed"

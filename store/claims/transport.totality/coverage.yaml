@@ -1,0 +1,21 @@
+functions:
+  check_iota_well_defined_total_involution:
+    kind: sampled
+    clauses: ["(1) well defined, total, involution"]
+    omits: "85 sample null vectors over five bases (definite and mixed); continuity is not tested; e_+ N e_+ staying a nonzero null vector is exact per sample"
+  check_reciprocal_on_invertible_vectors:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "five bases and five sample x (24 with Q(x) != 0); the columns of iota on nO, nInf and each generator are computed exactly, but the display e_+ X(x) e_+ = -(Q(x) nO + x + nInf/2) and the reciprocal are checked only at the sample x"
+  check_null_points_go_to_ideal_points_continuously:
+    kind: sampled
+    clauses: ["(3) iota[X(x0)] = [x0 + nInf/2], an ideal point", "(3) the value is the limit along invertible paths x -> x0"]
+    omits: "11 null x0 over five bases (x0 = 0 and two mixed-signature null vectors); the limit is tested along straight lines x0 + t y for three y and four t via the exact polynomial identity J(x0 + ty) - J(x0), not along every path; the closing uniqueness sentence (topological, density and Hausdorff) is not checked, as the docstring says"
+untouched_premises:
+  std-algebra.reflection: "standard algebra cited in the proof; the check computes the statement directly"
+  transport.density: "cited only for the closing uniqueness sentence (topological, density of the lifted invertible points), which no check covers"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The algebraic content of (1)-(3) is exact on samples; continuity and the uniqueness sentence are not covered, and the docstring says so for uniqueness."

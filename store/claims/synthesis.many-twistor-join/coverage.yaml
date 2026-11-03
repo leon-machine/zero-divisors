@@ -1,0 +1,10 @@
+functions:
+  check_many_twistor_join:
+    kind: partial
+    clauses: ["(1) components", "(2) the join", "(3) U(N) invariance", "(4) positivity", "(5) the massless locus", "(6) the de Sitter Casimir"]
+    omits: "(1) to (3) and the spectral formula of (4) are exact at random Gaussian-rational points for N = 2..5 (three routes to the grip agree), not symbolic; (3) tests h -> U^dag h U and invariance of the grip norm, sum |B|^2 and C_N but not B -> U^T B U; (4) never tests that h has at most two positive and two negative eigenvalues (only C_N >= 0 on sampled Gram matrices); (5) tests only the if direction on two examples (B = 0 and h = 0 give P.P = 0) plus identities of the antilinear map J, not the only-if direction or the N = 2 remark; (6) is an algebraic consequence of route B with the conformal Casimir tr h^2 - (tr h)^2/4 hard-coded, at two positive lambda only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "no contradiction with the statement: Q(P) = 2 sum|B|^2 + 2 lambda C_N with 2 lambda = Lambda/3 matches clause (2); the iff of (5) and the signature claim of (4) are not tested as stated"

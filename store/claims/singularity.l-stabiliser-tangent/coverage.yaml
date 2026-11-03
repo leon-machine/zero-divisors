@@ -1,0 +1,22 @@
+functions:
+  check_so2nu_split_and_closure:
+    kind: sampled
+    clauses: ["bivectors split as hops, Cartan elements, pair annihilations and pair creations with the stated counts", "the corrected elements close under the bracket", "the raw elements without 1/2 are not closed and with the identity span so(2 nu) + C"]
+    omits: "nu = 2, 3, 4 only (statement is for all nu >= 2); the identification of the span with so(2 nu) is by rank nu(2 nu - 1) and closure, not against an independent model of so(2 nu)"
+  check_vacuum_stabiliser_and_tangent:
+    kind: sampled
+    clauses: ["hops with i != j and pair annihilations vanish on |0>, Cartan elements act as -1/2", "pair creations on |0> are linearly independent", "tangent space of the orbit of |0> has dimension 1 + nu(nu-1)/2, modulo |0> it is nu(nu-1)/2"]
+    omits: "nu = 2, 3, 4 only; that this span is the tangent space of the orbit of Witt vacua (a geometric identification) is not computed, only the ranks of X|0>"
+  check_rotations_fix_or_move_the_vacuum:
+    kind: sampled
+    clauses: ["every hop rotation fixes the vacuum and every pairing rotation moves it", "the necessity witness |00> -> 3/5|00> + 4/5|11>"]
+    omits: "nu = 4 and the single angle (cos, sin) = (3/5, 4/5); the closing sentences on the premise, the stabiliser of the supplied class and the 'only part that can create entanglement' are not tested"
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.pure-spinors: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "linear-algebra content of the statement is verified exactly for nu = 2..4 and one angle; the interpretive consequences about Premise l-boundary-mode-locality are not computable"

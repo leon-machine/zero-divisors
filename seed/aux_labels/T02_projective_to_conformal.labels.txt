@@ -1,0 +1,14 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:theorem}{{2}{3}{The minimal completion theorem}{section.2}{}}
+\newlabel{fact:blades}{{2.1}{3}{Imported: the blade basis persists under degeneracy}{theorem.2.1}{}}
+\newlabel{fact:witt}{{2.2}{3}{Imported: the Witt extension theorem}{theorem.2.2}{}}
+\newlabel{thm:main}{{2.3}{4}{Minimal nondegenerate completion}{theorem.2.3}{}}
+\newlabel{rem:scope}{{2.4}{5}{What minimality promises, and what it does not}{theorem.2.4}{}}
+\newlabel{prop:unitideal}{{2.5}{5}{The nilpotent ideal becomes the unit ideal}{theorem.2.5}{}}
+\newlabel{sec:pga}{{3}{5}{PGA completes to CGA, exactly}{section.3}{}}
+\newlabel{cor:pga}{{3.1}{5}{The principal case}{theorem.3.1}{}}
+\newlabel{ex:dictionary}{{3.2}{6}{The dictionary, and the translators}{theorem.3.2}{}}
+\newlabel{rem:inplace}{{3.3}{6}{Why PGA cannot be repaired in place}{theorem.3.3}{}}
+\newlabel{rem:taxonomy}{{3.4}{6}{Relation to the transport rules}{theorem.3.4}{}}
+\newlabel{sec:position}{{4}{7}{Position in the series}{section.4}{}}
+\newlabel{sec:verification}{{5}{7}{Machine verification}{section.5}{}}

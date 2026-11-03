@@ -1,0 +1,17 @@
+functions:
+  check_homogeneity_table:
+    kind: exact
+    clauses: ["J1"]
+    omits: "evaluates the stated map s -> -2s - 2 and its injectivity for s = +-1, +-2 against the table (-4, 0, -6, +2); the Penrose transform itself (cohomology at homogeneity -2s - 2) is the imported fact and is not computed"
+  check_helicity_is_the_shifted_euler_charge:
+    kind: sampled
+    clauses: ["J2"]
+    omits: "all 35 monomials of degree <= 3 in four variables (hbar = 1); shows q(id) = -(Upsilon + 2) and that the normal-ordered sum has no offset; the u(1) identification with the conformal storey of Cl(2,4) and the claim that the helicity ladder is part of the ascended kinematics are not computed"
+untouched_premises:
+  hawking.imported-s-wave-bosonic-sector: "joint J3, the s-wave reduction, is a modelling joint with no computable content (the docstring says so)"
+  hawking.joint-j3-s-wave-reduction: "assumed modelling joint J3; no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "J1 and J2 are tested as far as they are computable and J3 is declared untested; the table and the shifted charge match the statement"

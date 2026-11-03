@@ -1,0 +1,31 @@
+functions:
+  check_clausius_on_the_action_shell_is_eta_equals_c_over_4g:
+    kind: sampled
+    clauses:
+    - (i) under the action's field equation at coupling G the Clausius defect at period 2 pi c is t(k,k)(1 - 4 G eta / c) at every null k, with or without a Weyl part; it vanishes at a k with t(k,k) != 0 only at eta = c/(4G)
+    omits: three rational stresses with Lambda in {1/3, 3/4, 2/7}, G in {1, 1/2, 5/3}, Weyl amplitudes {2, 0, -3}; twelve null directions; five values of eta and four of c; the identity is linear algebra proved in the text
+  check_null_cone_values_fix_the_stress_up_to_the_metric:
+    kind: exact
+    clauses:
+    - (i) t -> (t(k,k)) over null k has rank 9 on the ten symmetric maps with kernel the metric, so a matter-crossed point has some null k with t(k,k) != 0
+    omits: rank computed on twelve rational null directions; rank 9 there bounds the kernel by one dimension, which the metric fills
+  check_stored_witness_is_on_the_shell_of_a_different_coupling:
+    kind: exact
+    clauses:
+    - (ii) the Einstein static universe of radius 2 with dust t = 1/4 solves the action's equations at G = 1/2 and not at G = 1; the spatial equation fixes Lambda = 1/4; at G = 1 it needs t = 1/8, where the defect vanishes at eta = 1/4 and not at eta = 1/2
+    omits: four null directions for the defect; five sample values of Lambda for the failure at G = 1, the general statement following from the spatial equation
+  check_period_factor_is_fixed_only_where_matter_crosses:
+    kind: sampled
+    clauses:
+    - (iii) on a flat dust Friedmann-Lambda instant on the shell at G = 1 with eta = 1/4 the defect vanishes only at c = 1
+    - (iv) on de Sitter the defect vanishes for every eta and c
+    omits: one Friedmann instant (expansion rate 1, kappa rho = 3/2, Lambda = 3/2) and five values of c; the continuity step of (ii) is the stored theorem, not recomputed
+  check_vacuum_weyl_field_leaves_the_relation_empty:
+    kind: sampled
+    clauses:
+    - (iv) on vacuum fields with Lambda in {1/2, 3/5, 2} and nonzero type-D Weyl parts (tabulated scalar curvature and Weyl value) the defect vanishes for every eta and c, while the same fields with dust at coupling G in {1, 2, 1/2} have the tabulated defect (1 - G)/2 at eta = 1/4, c = 1
+    omits: three vacuum operators; the general case is the one-line computation in the proof
+untouched_premises:
+  synthesis.imported-jacobson-clausius-1995: cited in (i) as the standard identification the relation generalises; the defect is computed from the stored pencil identity
+  synthesis.local-normality-at-the-edge-gives-the-null-ground-state: cited in (ii) as one way the hypothesis c = 1 is met; nothing is computed from it
+  synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term: cited in the reading as a comparison with the action's Wald entropy; nothing is computed from it

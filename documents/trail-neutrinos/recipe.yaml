@@ -1,0 +1,27 @@
+doc: trail-neutrinos
+title: Neutrino masses
+author: Leon Butler
+level: lay
+spine:
+- neutrino.empty-twistor
+- refuted.the-neutrino-mass-is-set-by-the-cosmological-ter
+- neutrino.seesaw-what-gauge-invariance-proves-what
+- neutrino.invariant-symmetric-matrices
+- neutrino.rank-one-seesaw-ordering-sum-double
+- neutrino.breaking-relation
+- pred.neutrino-mass-sum-floor
+- pred.no-neutrinoless-double-beta
+- neutrino.leptogenesis-suppressed-alignment-reheating-premise-new
+- pred.leptonic-cp-trivial
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

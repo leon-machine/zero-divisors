@@ -1,0 +1,28 @@
+functions:
+  check_frozen_point_and_flat_chart:
+    kind: sampled
+    clauses:
+    - '"I = n_inf + (Lambda/6) n_0 is parallel with Q(I) = Lambda/3 = H^2"'
+    - '"in the flat chart I_Lambda = n_inf + (Lambda/6) n_0"'
+    omits: Two values of Lambda, three points and three directions; parallelism in the flat chart is a central difference exact on quadratics; the Einstein field is the explicit P = (Lambda/6) id
+  check_dictionary_is_klein_gordon_in_de_sitter_chart:
+    kind: sampled
+    clauses:
+    - '"a density of weight w coupled to the frozen point obeys Klein-Gordon with m^2 = -w(w+3) Lambda/3"'
+    omits: Weights w = 0, -1, -2, -3 only (integer, so sigma^-w is polynomial), one Lambda = 3/5, two polynomial f; a shifted-mass control fails as it should; non-integer w is not tested
+  check_weight_polynomial_and_complex_weights:
+    kind: sampled
+    clauses:
+    - '"m^2 = -w(w+3) Lambda/3 = Delta(3 - Delta) H^2, real weights give m^2 >= 0 only on [-3, 0], m <= 3H/2"'
+    - '"w = -3/2 +- i nu with nu ~ m/H"'
+    omits: Grid of 81 rational w for the quadratic identity and the sign interval, and three sample masses for nu = m/H - (9/8)(H/m) + O((H/m)^3)
+  check_number_n_is_planck_over_hubble:
+    kind: exact
+    clauses:
+    - '"N = Im w(M_P) ~ M_P/H, about 1.0e61"'
+    omits: Inputs are the hard-coded PDG 2024 values (M_P, H_0, Omega_Lambda); the statement itself marks the number as record status; Im w differs from M_P/H by less than 1e-60 is shown by a bound on N^2 only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Structure checks are sampled in the parameters; the final number is an exact rational computation from stated inputs.

@@ -1,0 +1,18 @@
+functions:
+  check_frozen_point_is_a_rung_vector:
+    kind: sampled
+    clauses:
+    - '"I = nInf - (Lambda/6) nO, Q(I) = Lambda/3"'
+    - '"no spacetime component"'
+    - '"equal to the null point at infinity at Lambda = 0"'
+    omits: Q(I) = Lambda/3 and the norm product -2st are verified at six values of Lambda and three (s, t) samples, not with Lambda free
+  check_rung_plane_is_a_pair_mode:
+    kind: exact
+    clauses:
+    - '"the plane H_1 is one of the three pair modes of W over the complex unit"'
+    omits: Uses the spacetime complex unit I_4 = f0 f1 f2 f3, not the statement's I_6; W is exhibited as a maximal isotropic subspace with a dual complement, and its identity with the W of the imported Fock model is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The norm and null-pair claims hold exactly at the sampled Lambda; the pair-mode claim is shown for an explicit W and I_4, which is the content the docstring states.

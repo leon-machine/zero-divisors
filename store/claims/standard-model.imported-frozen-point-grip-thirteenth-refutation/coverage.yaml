@@ -1,0 +1,26 @@
+functions:
+  check_frozen_point_in_its_own_scale:
+    kind: sampled
+    clauses:
+    - '"frozen point has components (1, 0, rho_I), Q(I) = Lambda/3, parallel, null n_inf at Lambda = 0"'
+    omits: Four values of Lambda (0, 3/5, -6/7, 2) on the explicit Einstein field P = (Lambda/6) id
+  check_two_spinor_mass_is_symplectic_area:
+    kind: sampled
+    clauses:
+    - '"for two conformal spinors m^2 = 2|<pi1 pi2>|^2 at Lambda = 0"'
+    omits: Three sample pairs of twistors, one spinor and one aligned control per pair
+  check_exact_join_grip_mass:
+    kind: sampled
+    clauses:
+    - '"at general Lambda the exact join gives m^2 = 2|B_Lambda|^2 + (Lambda/3) C"'
+    omits: Three sample pairs at four values of Lambda, from the moment-map definition with the exact ambient Gram inverse; two constituents only
+  check_thirteenth_refutation_magnitudes:
+    kind: partial
+    clauses:
+    - '"the bracket''s magnitude, fixed by the exact join, cannot reach the weak scale"'
+    omits: Only the orders of ten of H = hbar H_0 and H^2/M_P against 1e11 eV are computed; that the bracket's magnitude is of order H or H^2/M_P is the families paper's structural clause, which the docstring says is not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Frozen point, two-spinor mass and exact join are sampled exact identities; the last sentence of the statement (families result) is covered only as orders of ten.

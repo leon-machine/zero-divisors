@@ -1,0 +1,10 @@
+functions:
+  check_majorana_matrix_is_126_difference:
+    kind: sampled
+    clauses: ["(i) Sym(M_u - M_nu) = 4 w_u f, Sym(M_d - M_e) = 4 w_d f, antisymmetric parts, M_R = v_R/(4 w) Sym(difference)", "(ii) (M_R)_33 = m_t v_R/(4 w_u) under Premise (EW)"]
+    omits: "one complex rational instance with two 10s and one 120, not any number of 10s or the case without the 120; (ii) is tested along the direction x = (1,1,1) as x^T M x = m_t x.x, equivalent to the 33 entry in an orthonormal basis with x/|x| third, and a symmetric-120 control is the only negative test; the closing remark on singular values of M_R is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "identities of (i) and (ii) hold exactly on the instance; naming anomaly: function and docstring are named majorana-matrix-is-126-difference, not the entity id"

@@ -1,0 +1,22 @@
+functions:
+  check_pseudoscalar_along_towers:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "four rungs of each tower, Cl(2,3) to Cl(5,6) and Cl(3,2) to Cl(6,5), are computed blade by blade; 'every rung' rests on the formula Q(omega) = (-1)^(n(n-1)/2) (-1)^q, verified for every (p,q) with p + q <= 9 and for the rung step on the same range"
+  check_omega_odd_at_r7:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "only Cl(2,3), the lowest residue-seven rung; omega e_K odd for every even blade, omega T odd with dim Cl hf = 2 dim T = 8, and the grade involution reversing omega are computed there; higher residue-seven rungs are not run"
+  check_rotation_by_c_plus_s_omega:
+    kind: exact
+    clauses: ["(iii) c + s omega commutes with the Clifford action and carries X + omega Y to (cX - sY) + omega (sX + cY)", "(iii) every cell carries charge +-1", "(iii) a charge-2 term is not invariant"]
+    omits: "Cl(2,3) only; the identity is bilinear in (c,s) and (X,Y) and is checked on the basis cases and at (3/5, 4/5); the identification with the slot rotation of the gauge-algebras theorem, and the Majorana-mass clause (assembly level), are not computed"
+untouched_premises:
+  primer.sign: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.pseudoscalar-commutation: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.involution-properties: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring says the assembly-level clause is not computable; (ii) and (iii) are checked at the lowest rung and (i) on four rungs plus the closed formula"

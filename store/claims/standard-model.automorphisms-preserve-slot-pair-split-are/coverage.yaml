@@ -1,0 +1,18 @@
+functions:
+  check_split_bivectors_close:
+    kind: complete
+    clauses: ["the split-preserving bivectors are 6 + 15 = 21 of the 45", "they close under the commutator", "the other 24 mix slots with pairs"]
+    omits: "exhaustive over the 45 bivectors of Cl(10,0) and all 21 x 21 commutators; non-closure of the 24 is shown by one commutator leaving them; the identification of the 21 with su(2)_L + su(2)_R + su(4) is not made here; the Fock part checks only the Clifford relations and the rank 45"
+  check_left_right_and_pati_salam_generators:
+    kind: exact
+    clauses: ["su(2)_L = span{v4 w5, v5 w4, (N4 - N5)/2} and su(2)_R = span{v4 v5, w5 w4, (N4 + N5 - 1)/2}", "su(4) is the fifteen pair bivectors, containing su(3) and B - L", "Y = T_3R + (B - L)/2 exactly"]
+    omits: "su(2) relations, mutual commutation and spans verified exactly as 32x32 matrices; the 15 pair bivectors are shown to span a 15-dimensional space containing su(3) and B - L, but the isomorphism so(6) = su(4) and the closure of the 15 on the Fock side are not separately computed; 'the weak su(2) of the gauge-algebra theorem is su(2)_L' is a premise"
+  check_commutant_on_sixteen:
+    kind: exact
+    clauses: ["on the sixteen the commutant of the 21 is spanned by 1 and chi"]
+    omits: "commutant dimension 2 computed by exact elimination on the 16 even states, chi = -(-1)^{N_R} commutes with all 21 and is +1 on the 8 slot-doublet states; the group-level sentence (Spin(4) x Spin(6), and U(2) x U(3) when the mode number is kept) is not tested, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Lie-algebra content tested exactly; the passage to the automorphism groups is not tested and the docstring says so"

@@ -1,0 +1,27 @@
+functions:
+  check_tameness_conditions:
+    kind: sampled
+    clauses: ["(T1)", "(T2) corank exactly one with a one-dimensional radical", "(T3) delta(k (x) k) nonzero and invariant"]
+    omits: "Four model families G = P^T diag(h, lambda) P plus the Schwarzschild wall; det is tested nonzero only at four nearby points, smoothness of Sigma and of the radical bundle are not finite computations (the docstring says only local models are represented). Invariance of delta is checked by k -> 3k and t = 2s."
+  check_signatures_and_exceptional_fibre:
+    kind: sampled
+    clauses: ["the signatures on the two sides differ by one unit, (p,q) where the dying eigenvalue is positive", "the rescaled family has exceptional algebra the Clifford algebra of the surviving form, of the signature of the side approached"]
+    omits: "Four model families at t = +-1/100; the adapted frame is the construction's P^-1, not found for a general wall, and the continuity of the rescaled family is read from lambda(t)/t -> delta with zero cross terms."
+  check_residue_is_inverse_transversality_datum:
+    kind: sampled
+    clauses: ["the inverse form has a simple pole at the wall with residue delta^-1 (k (x) k/delta(k (x) k))", "N*Sigma = L^2 up to the stated rescaling"]
+    omits: "Four model families and the Schwarzschild wall at three scales of k and the defining function tau = 2t; the line-bundle isomorphism N*Sigma = L^2 is represented only by this scaling behaviour."
+  check_conservation_needs_constant_complement:
+    kind: partial
+    clauses: ["conservation, absolute form: a completion G (+) K with K of constant signature degenerates somewhere", "a completion allowed to switch the signature of K can match the two sides"]
+    omits: "Only the global direct sum G (+) K with constant K (determinant of opposite signs at t = +-1/100) and the hyperbolic model for two h; forms that are standard only outside a neighbourhood of the wall, and arbitrary bundles containing the original, are not tested."
+untouched_premises:
+  sheaf.conservation-degeneracy-absolute-form: "Sheaf-paper theorem restated by this entity; the conservation check tests the model case directly and does not call it."
+  sheaf.exceptional-algebra-deformation-normal-cone: "Sheaf-paper theorem on the exceptional algebra and normal-cone deformation; the fibre check tests model walls directly and does not call it."
+  sheaf.invariant-form-t3: "Sheaf-paper formulation of the invariant transversality datum; the tameness check tests the invariance of delta on model walls without calling it."
+  sheaf.metrics-residue-square-root-twist: "Sheaf-paper statement of the residue and the square-root twist; the residue check tests model walls directly without calling it."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The model-wall checks cover (T1) to (T3), the signature jump, the exceptional fibre and the residue; the global sheaf statements and the general conservation theorem are represented by local models only, as the docstring says."

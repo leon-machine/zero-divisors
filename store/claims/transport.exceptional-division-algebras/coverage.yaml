@@ -1,0 +1,25 @@
+functions:
+  check_witnesses_exist_exactly_off_the_exceptional_lists:
+    kind: sampled
+    clauses:
+    - Cl(p,q) has zero divisors iff (p,q) not in {(0,0),(0,1),(0,2)}
+    - Cl(p,q) has nilpotents iff (p,q) not in {(0,0),(0,1),(0,2),(1,0),(0,3)}
+    omits: All 28 signatures with n <= 6 only, via explicit blade witnesses (1+u, 1-u) and a + b; larger n is not computed
+  check_exceptional_algebras_are_sums_of_division_algebras:
+    kind: complete
+    clauses:
+    - no zero divisors for (0,0),(0,1),(0,2)
+    - no nilpotents for (0,0),(0,1),(0,2),(1,0),(0,3)
+    omits: ''
+  check_verdicts_match_the_classification_table:
+    kind: sampled
+    clauses:
+    - 'whole (the verdicts agree with the Wedderburn data: no zero divisors iff D with one summand and k = 1; no nilpotents iff k = 1)'
+    omits: n <= 6 only (28 signatures); the d-table is hard-coded from the classification premise
+untouched_premises:
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Existence of witnesses is tested for n <= 6 and the absence is exhaustive over the five exceptional algebras the statement lists.

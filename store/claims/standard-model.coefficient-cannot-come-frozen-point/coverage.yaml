@@ -1,0 +1,21 @@
+functions:
+  check_no_rung_count_reaches_pair_bivector:
+    kind: sampled
+    clauses:
+    - '"no polynomial in the frozen point and its lifts reaches the pair-sector bivector, however many rungs"'
+    omits: Only R = 2, 3, 4 rungs and one frozen point (a, b) = (2, -3); lifts are modelled as pure rung vectors; the 126 direction itself is not examined here
+  check_frozen_point_forms_are_the_ten:
+    kind: sampled
+    clauses:
+    - '"no polynomial in the frozen point and rung operators produces the 126 doublet direction"'
+    omits: One module (R = 2) and one frozen point (2, -3); not a statement about every rung count or every frozen point
+  check_t_gj_needs_the_pair_bivector:
+    kind: exact
+    clauses:
+    - '"the pair sector enters through sum v_i ^ w_i, the B - L generator"'
+    omits: The identification with the conformal spinor storey charge is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The computable sentences are tested as the docstring says; the general "however many rungs" is sampled at R = 2, 3, 4 and R = 2 on the module; the closing reading and open computation are not checked.

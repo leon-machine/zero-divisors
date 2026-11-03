@@ -1,0 +1,11 @@
+functions:
+  check_quarter:
+    kind: exact
+    clauses:
+    - whole
+    omits: The identities S = 4 pi M^2 = A/4, dM = (kappa/8 pi) dA and the scaling with the period are polynomial of degree at most 2 in M and checked at four rational M, with the antiderivative coefficient 8/2 = 4 computed symbolically; the thermodynamic hypotheses (internal energy M, Clausius relation, S -> 0) are assumptions of the statement
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The quarter and the period-scaling formula are verified by exact rational arithmetic in units of pi.

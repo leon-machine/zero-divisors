@@ -1,0 +1,24 @@
+doc: trail-thermality
+title: 'Temperature and Hawking radiation'
+author: Leon Butler
+level: lay
+spine:
+- singularity.computed
+- singularity.euclidean-section-period
+- singularity.plane-rate
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+- singularity.rate-discharge-hypothesis-iii
+- hawking.i-state
+- hawking.i-state-continuum
+- hawking.bose-einstein-occupancy-quantified-window-corrections
+- hawking.greybody-inheritance-under-interface-premise
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

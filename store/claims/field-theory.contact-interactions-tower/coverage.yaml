@@ -1,0 +1,23 @@
+functions:
+  check_contact_term_structure:
+    kind: sampled
+    clauses: ["H = g J_A . J_B is self-adjoint, commutes with both charges, and has tower grade four"]
+    omits: "one spinor configuration (CONFIGS[0]) with g = 1; momentum conservation is also asserted for all six configurations"
+  check_matrix_element_and_s_squared_law:
+    kind: sampled
+    clauses: ["<A3, B4|H|A1, B2> = g J_A(3,1) . J_B(4,2)", "|M|^2/(g^2 s^2) = 1/4 for spinors normalised to J(f, f) = k, in general |M|^2/(g^2 c1 c2 c3 c4 s^2) = 1/4, at every configuration tested"]
+    omits: "the matrix-element identity at three configurations; the ratio is computed as |M|^2/(c1 c2 c3 c4 s^2) = 1/4 at six configurations, dividing by the spinor norms c_i defined by J(f, f) = c_i k (c_i = 1/20, 1/10, ... in the samples)), with g = 1"
+  check_crossed_amplitude_u_squared_law:
+    kind: sampled
+    clauses: ["with the second species as antiparticles the crossed amplitude gives |M|^2/(g^2 u^2) = 1/4 under the same normalisation"]
+    omits: "the crossed amplitude -J_A(3,1) . J_B(2,4) at two configurations; the ratio |M|^2/(c1 c2 c3 c4 u^2) = 1/4 at six, again after dividing by the spinor norms"
+  check_boosted_frames:
+    kind: sampled
+    clauses: ["the normalised |M|^2/(g^2 s^2) = 1/4 in boosted frames"]
+    omits: "one configuration (CONFIGS[1]) boosted by the single rotor (5/4, 3/4) in the (0,3) plane; |M|^2 and s are invariant and the normalised ratio is again 1/4; normalisation by the spinor norms as above"
+untouched_premises: {}
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement (formal, technical, one-liner) now states the 1/4 laws for spinors normalised to J(f, f) = k, in general |M|^2/(g^2 c1c2c3c4 s^2) = 1/4 (also u^2 and boosted), which is what the checks compute; checks unchanged."

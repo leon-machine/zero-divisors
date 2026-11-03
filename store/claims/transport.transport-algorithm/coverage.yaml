@@ -1,0 +1,33 @@
+functions:
+  check_step1_no_inverse_at_null_vectors_and_idempotents:
+    kind: sampled
+    clauses: ["Step 1"]
+    omits: "mixed signatures with n <= 4 only; v = e_0 + e_p has v^2 = 0 and half-rank left multiplication, and one idempotent (1 + e_0 e_p)/2 per signature has e(1-e) = 0; the 'any unital algebra containing the base' part is the one-line argument, not tested beyond v^2 = 0"
+  check_step2_diagnosis_loci_and_cautions:
+    kind: partial
+    clauses: ["Step 2 (type N locus)", "Step 2 (type C locus and not simple)", "Step 2 (the two cautions)"]
+    omits: "signatures with 1 <= n <= 5; null vectors iff pq != 0, central blades, type C iff p - q = 1 mod 4 and the two projectors, and both cautions (Cl(2,0) nilpotent without null vector; Cl(2,1) with all three types) are exact; 'exactly when the algebra is not simple' is tested only in one direction (type C gives a proper ideal), and the exhaustiveness of the trichotomy (every zero divisor annihilated by a nontrivial idempotent) is tested only for the null basis pairs e_i + e_j"
+  check_step3_the_three_rules:
+    kind: partial
+    clauses: ["Step 3 Rule 1", "Step 3 Rule 2", "Step 3 type P"]
+    omits: "n <= 3 (Rule 2 for the three type-C signatures with both signs); Rule 1 matrix units and corner, Rule 2 exchange of eps_+- by nu, volume element anticommuting, centre R, and (A nu)^2 = 0 on sample blade pairs are exact; type P is tested only as e e e = e for (1 + e_0)/2; the forced increment (+1,+1) (minimality), no-go for an equivariant partner and the cohomological no-go, and the representation-independent minimality are not tested"
+  check_steps4_and_5_compute_then_descend:
+    kind: partial
+    clauses: ["Step 4", "Step 5"]
+    omits: "bases (1,1), (2,1), (1,2) and five sample x; iota in coordinates (2t, x, s/2) and the read-out x/s giving x/Q(x) on invertible lifted points and refusing (s = 0) on four null lifted points are exact; totality of iota on the whole quadric is not tested; the pinching is tested only as E(f) = E(f*) = 0 and E fixing one base vector, not 'kernel exactly the ladder sector'; the absence of a unital homomorphism from the completion to its base (door one-way) is not tested"
+  check_step6_bookkeeping_and_no_termination:
+    kind: sampled
+    clauses: ["Step 6"]
+    omits: "all transport histories starting from the nine bases with n <= 3 and ending at n <= 5 (a finite enumeration, not all histories): Rule 1 fixes the residue mod 8 and type-C diagnosis, Rule 2 moves the residue by +-1 off the split classes, and Rule 2 occurs at most once; non-termination only as the null f in Rule 1 completions and the non-central eps_+ after Rule 2 on the n <= 3 bases"
+untouched_premises:
+  transport.cohomological-form-no-go: "cited in Step 3 only for the no-repair-of-v remark (a cohomology class pulled back unchanged); no computable content in these checks"
+  transport.door-one-way: "cited in Step 5 for the absence of a unital homomorphism back to the base; not checked"
+  transport.minimality: "cited in Step 3 for the forced (+1,+1) increment; not checked"
+  transport.no-fourth-rule: "the corollary that the six steps form a decision procedure without gaps; a meta-statement not checked here"
+  transport.no-go-level-elements: "cited in Step 3 for the non-existence of an equivariant partner; not checked"
+  transport.representation-independent-minimality-completion: "cited in Step 3 for the host-independence of the minimal quadric; not checked here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks compute Steps 1 to 6 on small signatures (n <= 5); the steps that cite the no-go, minimality and door-one-way theorems have no check for those parts, so three functions are partial."

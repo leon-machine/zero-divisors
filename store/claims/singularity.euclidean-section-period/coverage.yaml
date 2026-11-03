@@ -1,0 +1,22 @@
+functions:
+  check_wick_rotated_derived_metric:
+    kind: sampled
+    clauses: ["derived metric f dtau^2 + f^-1 dr^2 + r^2 dOmega^2", "f dtau^2 + f^-1 dr^2 = d rho^2 + F(rho)^2 dtau^2"]
+    omits: "four masses times three (w, sin theta) sample points; Gram of the physical frame computed in Cl(4,0), (rho, tau) block read off from the frame"
+  check_slope_is_half_f_prime:
+    kind: sampled
+    clauses: ["F(0) = 0", "dF/d rho at 0 = f'(2M)/2 = kappa = 1/(4M)"]
+    omits: "dF/d rho = M/r^2 is an exact rational-function identity in w, but at four masses only"
+  check_tip_expansion:
+    kind: sampled
+    clauses: ["near rho = 0 the plane carries d rho^2 + kappa^2 rho^2 dtau^2 + O(rho^4) dtau^2"]
+    omits: "exact power series of F(rho) to order 9 at the three masses with rational sqrt(2M) (M = 1/2, 2, 9/2): F = kappa rho + c3 rho^3 + ..., even coefficients zero; the O(rho^4) remainder is not bounded beyond that order"
+  check_regular_tip_iff_period_eight_pi_m:
+    kind: sampled
+    clauses: ["smooth iff kappa p = 2 pi, i.e. p = 8 pi M", "otherwise a cone of total angle kappa p"]
+    omits: "the rotation-gauge field (a = 0, c = -F') is solved at three sample (F, F') values; smoothness is tested only as 'angle-label field equals the flat polar field c = -1', which is a criterion typed in, at five periods p/pi in {8M, 8M +- 1, 4M, 16M} per mass"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_regular_tip_iff_period_eight_pi_m now asserts that among the sample periods exactly p = 8 pi M gives the smooth tip (the iff was previously vacuous if no sample hit 8M); samples moved to module level"

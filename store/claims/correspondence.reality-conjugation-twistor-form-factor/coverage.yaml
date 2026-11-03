@@ -1,0 +1,25 @@
+functions:
+  check_conjugation_intertwines_and_is_unique:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_twistor_form_hermitian_invariant:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "the phase-rescaling remark (lambda of modulus one) is checked at one phase, (3+4i)/5, giving lambda = (-7+24i)/25; the correspondence with the reversion form on CS is not tested; invariance is infinitesimal (all 15 real bivectors anti-Hermitian)"
+  check_null_planes_and_signature:
+    kind: sampled
+    clauses: ["(3)", "(4)"]
+    omits: "(3): the plane of Psi(v) is Sigma-null for eight sample real null vectors, plus S_omega and S_pi exactly, not every real null vector; (4) signature (2,2) is exact (real form of signature (4,4,0))"
+  check_real_chart_three_ways:
+    kind: exact
+    clauses: ["(5)"]
+    omits: "the chart norm Q(m) = -2 det A = 2 det x-hat on real points is checked only at the four basis elements of the real subspace, not on all real points; the three 4-dimensional real subspaces are shown equal by exact kernel and span computations"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Conjugation, form and chart equivalences are exact linear algebra in the model; null planes for general real null vectors and the chart norm are sampled."
+untouched_premises:
+  std-algebra.inverse-of-vector: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.reflection: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,18 @@
+functions:
+  check_sds_field_is_schwarzschild_plus_de_sitter:
+    kind: sampled
+    clauses: ["the Schwarzschild-de Sitter interior field in synchronous gauge"]
+    omits: "setting only: torsion-free (rank 24), frame D-parallel along e_0 and curvature = Schwarzschild part + (Lambda/3) B on six planes at three sample points (Lambda of both signs); no clause of the statement's corrections, limit or holonomy is tested here"
+  check_corrections_relative_order_lambda_r3:
+    kind: sampled
+    clauses: ["relative corrections of order Lambda r^3/M ~ Lambda tau^2", "the Hubble-normalised connection differs from the Schwarzschild one by O(Lambda tau^2)", "identical Kasner exponents (-1/3, 2/3, 2/3)"]
+    omits: "only A_SdS/A_S, tau(rho) and the two rate series are compared, at three values of c = Lambda/3 and to order rho^12; not every function of the derived metric; identical boundary data and identical convergence rate are not tested; the exponents enter as the printed leading constants"
+  check_holonomy_inside_reductive_stabiliser:
+    kind: sampled
+    clauses: ["the limit algebra lies inside the reductive stabiliser so(1,4) of the parallel non-null tractor", "no nilradical for Lambda > 0"]
+    omits: "Lambda = 3, -6, 0 only; the limit algebra is generated from the supplied Kasner exponents (not computed from the field), and only its dimension 6 is checked, so its identification as so(1,3) (signature of W) is not tested; the Lambda < 0 case is extra to the statement"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The O(Lambda tau^2) corrections and the reductive-stabiliser containment are tested at samples; verbatim transfer of the weighted-limit theorem (boundary data, rate) is imported, not computed."

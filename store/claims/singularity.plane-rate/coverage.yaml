@@ -1,0 +1,18 @@
+functions:
+  check_pair_selected_invariantly:
+    kind: sampled
+    clauses: ["the doubled eigenvalue singles out the pair {sigma_r, I sigma_r} invariantly at every radius", "the boost member sigma_r has square +1"]
+    omits: "the eigenstructure of the shape operator S (eigenvalue -2 on a 2-dimensional kernel, 1 on 4) is exact linear algebra, but the curvature R(B) = -(M/r^3) S(B) is taken as the stored form rather than recomputed from the gauge fields, and R(sigma_r) = +2M/r^3 sigma_r is checked at six (M, beta) points"
+  check_surface_gravity_from_the_connection:
+    kind: sampled
+    clauses: ["at the horizon the Killing flow's boost plane is sigma_r's plane, with surface gravity kappa = 1/(4M)"]
+    omits: "four masses at beta = 1, with off-horizon controls at two further points; (K.D)K = kappa K verified, and kappa = f'(2M)/2 via an exact rational function f, but only at those masses"
+  check_two_pi_rapidity_is_eight_pi_m:
+    kind: sampled
+    clauses: ["an interval of 2 pi in rapidity corresponds to 2 pi/kappa = 8 pi M of Schwarzschild time"]
+    omits: "four masses; the horizon rate is read off the sigma_r coefficient of Omega(e_t) as stored, and 8 pi M is the identity kappa*8M = 2 at those masses"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "values kappa = 1/(4M) and 8 pi M match the statement at all sampled masses"

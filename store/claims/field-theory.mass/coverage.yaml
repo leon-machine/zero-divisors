@@ -1,0 +1,22 @@
+functions:
+  check_pairing_on_one_chirality:
+    kind: sampled
+    clauses: ["\"B_N is a nonzero, antisymmetric, nondegenerate, Lorentz-invariant, I_4-bilinear pairing on chi_+\"", "\"the four even right factors N that anticommute with I sigma_3\""]
+    omits: "exhaustive over the 16 basis blades N (exactly the four stated give a nonzero pairing), antisymmetry, I4-bilinearity and nondegeneracy on the whole 4-dimensional chi_+; Lorentz invariance only under three rotors (boost, rotation, boost); the identification with the epsilon pairing is inferred from rank and I4-stability, not computed"
+  check_charge_two_under_common_phase:
+    kind: sampled
+    clauses: ["\"of charge two under the common phase\""]
+    omits: "one phase angle (cos, sin) = (3/5, 4/5) and the four N; no symbolic theta"
+  check_massive_plane_wave_couples_opposite_charges:
+    kind: sampled
+    clauses: ["\"A massive Dirac plane wave splits as chi + psi_- with eta = psi_- N in chi_+\"", "\"chi and eta have opposite I_4-charges\"", "\"the Dirac equation is the coupled pair\"", "\"the mass density is 2B(chi, eta)\""]
+    omits: "one momentum p = 5 g0 + 3 g1 with m = 4, one Dirac phase angle; the mass density is checked as 2 B_{N^{-1}}(chi, eta) (N^{-1} = +-N)"
+  check_pseudoscalar_is_not_the_massive_complex_structure:
+    kind: sampled
+    clauses: ["\"I_4 is the field algebra's unit, not the massive law's complex structure\"", "\"The common I_4 phase is axial and the mass breaks it\""]
+    omits: "one momentum and mass; checks that right I sigma_3 preserves and left I4 flips the solution space and that right g0 anticommutes with right I4 on even elements; 'axial' as a label is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause of the statement is tested exactly at chosen rotors, angles and one massive momentum; check functions use bare asserts and return None"

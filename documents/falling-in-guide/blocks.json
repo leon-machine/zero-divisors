@@ -1,0 +1,850 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "At the centre of a non-rotating black hole a curvature measure that no change of description alters grows without bound, so the breakdown is real. [[c:singularity.non-removability-invariant-argument]] Both radial light directions swing inward and merge into one at the centre. [[c:singularity.cones-fold]] The obstruction is a direction with no partner, so the repair enlarges the algebra to supply one. [[c:singularity.type-n-only-type-n]] Each step up the resulting tower adds exactly one fermionic mode built from vectors. [[c:tower.witt-index-quantum-capacity]] Inside the hole, Einstein's equations for empty space amount exactly to a marker on the metric staying constant. [[c:interior.covariant-form-vacuum-equations]] Coming back down is the same as averaging each observable with its parity-flipped version. [[c:singularity.descent-parity-average]] For a mode whose mixed state gives both outcomes some probability, the partner making the doubled state pure is the mirror copy of its own algebra. [[c:singularity.purity-output-partner-commutant]] Whatever the starting state, each descended mode of nonzero weight reads as thermal at exactly one temperature. [[c:singularity.descended-form-state-independent]] The entropy gained in coming down measures how distinguishable the state is from its descended version, and is never negative. [[c:singularity.deficit-theorem-cost-descent-exactly]] Two premises, on allowed states and on smoothness at the horizon, put every mode at the same Hawking temperature. [[c:singularity.rate-discharge-hypothesis-iii]] The algebra alone cannot choose that value: its symmetries only flip the sign of an inverse temperature. [[c:singularity.rate-rigidity-temperature-not-algebra-intrinsic]] At that temperature the Fermi-Dirac filling is the only simple Gaussian state thermal for the boost clock. [[c:hawking.i-state]] Given the s-wave modelling convention, its collective boson modes have exactly the Bose-Einstein occupancy, up to an exponentially small correction on a finite window. [[c:hawking.bose-einstein-occupancy-quantified-window-corrections]]",
+  "hash": "b214c5e81586"
+ },
+ {
+  "id": "introduction",
+  "type": "framing",
+  "text": "This guide follows a black hole from its centre, where the usual mathematics breaks down, to the radiation it gives off. [[t]] It starts at the singularity, because everything later depends on knowing exactly what has gone wrong there and what kind of repair it calls for. [[t]] Two short sections then describe the enlarged algebra that makes the repair, called the completion: how much room it has for quantum modes, and what Einstein's equations look like inside it. [[t]] With the completion in place, the guide follows the return journey back down to the observables of a single mode, and asks what that step keeps and what it throws away. [[t]] The next section puts a price on the return journey, measured as a gain in entropy. [[t]] The last section shows how the same ingredients produce a temperature, why the algebra alone cannot set its value, and how the resulting state describes the radiation. [[t]] Results that the argument uses without proving are gathered at the end and cited rather than shown. [[t]]",
+  "hash": "50177e15dad2"
+ },
+ {
+  "id": "s:assumptions",
+  "type": "section",
+  "title": "What we assume",
+  "hash": "7d3a64186fde"
+ },
+ {
+  "id": "c:singularity.p-univalence",
+  "type": "postulate",
+  "claim": "singularity.p-univalence@2",
+  "title": "(P): univalence",
+  "text": "The premise (P) requires every physical state $\\omega$ of the boundary modes to be even under the grading automorphism $\\alpha$, that is $\\omega \\circ \\alpha = \\omega$. Equivalently, $\\omega$ vanishes on the odd sector $\\Aod$, so odd elements of the boundary-mode algebra have zero expectation value.\n\nIt is a premise, not a derived result: it restricts which states count as physical, and enters as an input wherever it is invoked.",
+  "gap": false,
+  "level": "technical",
+  "hash": "30dc17045abd",
+  "number": 1
+ },
+ {
+  "id": "c:singularity.r-regularity-fixed-locus",
+  "type": "postulate",
+  "claim": "singularity.r-regularity-fixed-locus@3",
+  "title": "(R): regularity at the fixed locus",
+  "text": "Premise (R) imposes the KMS condition on each single-mode marginal at a fixed period. For mode $k$, with Killing flow $\\alpha_t = \\operatorname{Ad}(e^{it\\omega_k K_k})$ and $a, b \\in \\{v_k, v_k^{*}\\}$, the entire correlation function $F_{a,b}(t) = \\omega(a\\,\\alpha_t(b))$ is required to continue in imaginary Killing time to a single-valued function on the regular Euclidean section of the Schwarzschild field, its two orderings being the two sides of the cut, which meet after one period: $F_{a,b}(t + ip) = \\omega(\\alpha_t(b)\\,a)$ with $p = 2\\pi/\\kappa$.\n\nThe period is the one that smoothness of the Euclidean section at its tip dictates, a local condition. The condition is imposed on the single-mode marginals only.\n\nOn the continuum of the horizon's light rays, for the eternal hole, this content follows from the null ground-state premise (N$_{+}$), which has no temperature in it; the ladder wording here is its discretisation. (R) keeps its status as a premise.",
+  "gap": false,
+  "level": "technical",
+  "hash": "cb5ef3ed6ca3",
+  "number": 2
+ },
+ {
+  "id": "s:singularity",
+  "type": "section",
+  "title": "The singularity: where division fails",
+  "hash": "f5ce3727d2bb"
+ },
+ {
+  "id": "i:singularity",
+  "type": "framing",
+  "text": "This section looks at the centre of the black hole, shows that the breakdown there is real, and identifies what kind of breakdown it is. [[t]]",
+  "hash": "ea610510cf4f"
+ },
+ {
+  "id": "t:^>singularity.non-removability-invariant-argument",
+  "type": "transition",
+  "between": [
+   null,
+   "singularity.non-removability-invariant-argument"
+  ],
+  "text": "We begin with a quantity that no change of description can alter. [[t]]",
+  "hash": "37cea8a16173"
+ },
+ {
+  "id": "c:singularity.non-removability-invariant-argument",
+  "type": "theorem",
+  "claim": "singularity.non-removability-invariant-argument@2",
+  "title": "Non-removability: the invariant argument",
+  "text": "The curvature scalar of the solution is $K := R_{abcd}R^{abcd} = 48M^2/r^6$, assembled from the curvature eigenvalue spectrum (each frame plane contributes four times its eigenvalue squared), and it diverges as $r \\to 0$. Under the rotation-gauge law the curvature transforms by conjugation, $\\mathcal{R}(B) \\mapsto R\\,\\mathcal{R}(B)\\tilde R$, which preserves every scalar contraction, and under position-gauge displacements it transforms by pullback, which relocates the function but cannot remove its unbounded range near the singular locus.\n\nHence $K$ is invariant under every gauge transformation of the theory, $r$-dependent transformations of arbitrary size included, and no gauge choice removes the degeneration at $r = 0$: the division-by-zero locus is a property of the solution, not of its presentation.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.solution-where-divergence-lies"
+  ],
+  "hash": "832401a76ab6",
+  "number": 3
+ },
+ {
+  "id": "t:singularity.non-removability-invariant-argument>singularity.cones-fold",
+  "type": "transition",
+  "between": [
+   "singularity.non-removability-invariant-argument",
+   "singularity.cones-fold"
+  ],
+  "text": "With the breakdown shown to be genuine, we watch what happens to the paths of light on the way in. [[t]]",
+  "hash": "a5aa0df9e0e0"
+ },
+ {
+  "id": "c:singularity.cones-fold",
+  "type": "theorem",
+  "claim": "singularity.cones-fold@4",
+  "title": "The cones fold",
+  "text": "In the Painlev\\'e-Gullstrand gauge the metric is $g(a,a) = Q(\\hb^{-1}(a))$ with $\\hb^{-1} = 1 + \\beta P$. For $a = \\et + \\lambda\\,\\er$ in the $(t,r)$ plane this gives $\\hb^{-1}(a) = \\et + (\\lambda + \\beta)\\er$ and $g(a,a) = 1 - (\\lambda + \\beta)^2$, so the two null directions are $\\lambda = -\\beta \\pm 1$, the radial null curves $dr/dt = -\\beta \\pm 1$. At the horizon, $\\beta = 1$, they are the hovering ray $\\lambda = 0$ and an ingoing ray $\\lambda = -2$.\n\nAs $r \\to 0$, $\\beta \\to \\infty$ and both branches, normalised by their $\\er$-coefficient, converge to $\\er$, tipping inward on the way, while $g(\\et,\\et) = 1 - \\beta^2 \\to -\\infty$, so no rescaling of the classical field stays finite and nondegenerate. The degeneration is through a null kernel direction in the exact sense of the rescaled-limit result, and it is not removable by gauge choice.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.degeneration-exactly",
+   "singularity.non-removability-invariant-argument",
+   "std-algebra.orthogonal-anticommute"
+  ],
+  "hash": "732056ffeee9",
+  "number": 4
+ },
+ {
+  "id": "t:singularity.cones-fold>singularity.type-n-only-type-n",
+  "type": "transition",
+  "between": [
+   "singularity.cones-fold",
+   "singularity.type-n-only-type-n"
+  ],
+  "text": "Knowing which direction collapses, we can now name the kind of obstruction it is. [[t]]",
+  "hash": "e717c87f58ab"
+ },
+ {
+  "id": "c:singularity.type-n-only-type-n",
+  "type": "theorem",
+  "claim": "singularity.type-n-only-type-n@5",
+  "title": "Type N, and only type N",
+  "text": "The obstruction at $r = 0$ is of type N: the degenerating direction $\\er$ is null for the limit form and lies in its radical, so it is an isotropic direction without a metric partner, in the degenerate sense that the root taxonomy hands to the sheaf framework, whose localisation theorem supplies the partner by completion on the exceptional set. Type C cannot occur: $\\Cl(1,3)$ has $p - q = -2 \\equiv 6 \\pmod 8$, so it is central simple, $\\Cl(1,3) \\cong \\Mat_2(\\HH)$, with no central idempotents for ideal fusion to fuse.\n\nType P is present, as in every algebra of this size, but demands no transport: its rule is the identity assignment, so it neither licenses nor obstructs the ascent. The operative transport rule is the Witt completion, and no floor of the resulting tower ever develops a type-C obstruction.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "sheaf.localised-transport",
+   "sheaf.one-sided-completion",
+   "sheaf.one-sided-completion-singularity",
+   "sheaf.schwarzschild-degeneration-boundary-tame",
+   "singularity.degeneration-exactly",
+   "tower.rigidity-clock-frozen",
+   "transport.existence-classification-type-c",
+   "transport.existence-locus-type-n",
+   "transport.type-p-self-repairing",
+   "primer.classification-real-clifford-algebras",
+   "std-algebra.sta-matrix"
+  ],
+  "hash": "bb6cddee8c4a",
+  "number": 5
+ },
+ {
+  "id": "s:tower",
+  "type": "section",
+  "title": "Quantum capacity of the completion",
+  "hash": "f1f075516621"
+ },
+ {
+  "id": "i:tower",
+  "type": "framing",
+  "text": "This short section asks how much room for quantum modes the completion provides as it is built up. [[t]]",
+  "hash": "153f736e5649"
+ },
+ {
+  "id": "t:singularity.type-n-only-type-n>tower.witt-index-quantum-capacity",
+  "type": "transition",
+  "between": [
+   "singularity.type-n-only-type-n",
+   "tower.witt-index-quantum-capacity"
+  ],
+  "text": "Since the repair works by enlarging the algebra, the natural next question is how much the enlargement can hold. [[t]]",
+  "hash": "8aaff00b6321"
+ },
+ {
+  "id": "c:tower.witt-index-quantum-capacity",
+  "type": "theorem",
+  "claim": "tower.witt-index-quantum-capacity@4",
+  "title": "Witt index is quantum capacity",
+  "text": "Let $(V, Q)$ be a nondegenerate real quadratic space of signature $(p,q)$, and call a family of vectors $(a_i, b_i)_{i \\leq m}$ of $\\Cl(V,Q)$ a mode family if it satisfies $a_i a_j + a_j a_i = 0$, $b_i b_j + b_j b_i = 0$ and $a_i b_j + b_j a_i = \\delta_{ij}$. The largest possible $m$ is exactly the Witt index $\\min(p,q)$. For the upper bound, the relations force the $a_i$ to span a totally isotropic subspace, and pairing against the $b_j$ shows the $a_i$ are linearly independent; a totally isotropic subspace of a nondegenerate form of signature $(p,q)$ has dimension at most $\\min(p,q)$. The bound is attained by the normalised null pairs of $\\min(p,q)$ orthogonal hyperbolic planes split off by a Witt decomposition.\n\nAlong the tower, $T_k$ has signature $(p{+}k, q{+}k)$ and hence Witt index $\\min(p,q) + k$, so each rung raises the number of vector-realised modes by exactly one and by no more.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "tower.ladder-pairs-satisfy-car-vectors",
+   "std-algebra.vector-squares",
+   "std-algebra.witt-decomposition"
+  ],
+  "hash": "6f897d5a6eac",
+  "number": 6
+ },
+ {
+  "id": "s:einstein",
+  "type": "section",
+  "title": "Einstein's equations in the completion",
+  "hash": "970604060f07"
+ },
+ {
+  "id": "i:einstein",
+  "type": "framing",
+  "text": "Here the question is what form Einstein's equations for empty space take once the completion is in place. [[t]]",
+  "hash": "34279aedae5e"
+ },
+ {
+  "id": "t:tower.witt-index-quantum-capacity>interior.covariant-form-vacuum-equations",
+  "type": "transition",
+  "between": [
+   "tower.witt-index-quantum-capacity",
+   "interior.covariant-form-vacuum-equations"
+  ],
+  "text": "From the algebra of the completion we turn to its geometry. [[t]]",
+  "hash": "4edc054a5a9b"
+ },
+ {
+  "id": "c:interior.covariant-form-vacuum-equations",
+  "type": "theorem",
+  "claim": "interior.covariant-form-vacuum-equations@5",
+  "title": "Covariant form of the vacuum equations",
+  "text": "Let $g$ be the derived metric of a gravitational field on flat spacetime, on its invertible region $\\Mo$, and $I_g = (1,0,0) = \\nInf$ its pure-scale tractor. The tractor connection, which on flat spacetime is the $\\Cl(2,4)$ gauge field $\\Omega_{T}$ built from $\\Omega$, the frame $\\hb^{-1}$ and the Schouten map, gives $\\nabla_a I_g = (0,\\, -\\Sch_{ab},\\, 0)$, so $I_g$ is parallel exactly when $\\Sch = 0$, which holds exactly when $g$ is Ricci-flat, which is equivalent to the GTG vacuum field equations. The section is null, $Q(I_g) = 0$.\n\nSo the vacuum field equations on $\\Mo$ are equivalent to parallelism of the scale tractor attached to $g$. The existence of some parallel null tractor is strictly weaker: it says only that $[g]$ is almost Ricci-flat, and a non-constant rescaling $e^{2\\omega}g$ keeps a parallel section while losing the field equations. The statement is covariant under the gauge transformations of $\\mathcal{T}$, whose structure algebra $\\mathfrak{so}(2,4)$ acts through the bivectors of $\\Cl(2,4)$.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "interior.imported-equivalence-einstein-equations",
+   "interior.imported-tractor-connection",
+   "interior.metric-parallelism-trace-schouten-condition"
+  ],
+  "hash": "e138322bd839",
+  "number": 7
+ },
+ {
+  "id": "s:descent",
+  "type": "section",
+  "title": "Descent, parity and states",
+  "hash": "0ed8b27987db"
+ },
+ {
+  "id": "i:descent",
+  "type": "framing",
+  "text": "Having gone up into the completion, we need a way back down to what a single mode can show us, and this section studies that return step. [[t]]",
+  "hash": "5b78f2aa12ed"
+ },
+ {
+  "id": "t:interior.covariant-form-vacuum-equations>singularity.descent-parity-average",
+  "type": "transition",
+  "between": [
+   "interior.covariant-form-vacuum-equations",
+   "singularity.descent-parity-average"
+  ],
+  "text": "With the geometry settled, we look first at the map that comes back down from the completion. [[t]]",
+  "hash": "3306ef2bef2c"
+ },
+ {
+  "id": "c:singularity.descent-parity-average",
+  "type": "theorem",
+  "claim": "singularity.descent-parity-average@4",
+  "title": "The descent is the parity average",
+  "text": "On the single-mode algebra $\\Aa$ the descent equals the parity average: $E(x) = \\tfrac12\\bigl(x + \\alpha(x)\\bigr) = \\tfrac12(x + \\sigma x \\sigma)$. Hence $E$ is the group average over $\\{\\id, \\alpha\\}$ and the unique conditional expectation of $\\Aa$ onto its fixed-point algebra $\\Aev$.\n\nIts range is $\\Aev$, its kernel is exactly the adjoined ladder sector $\\Aod$, and it preserves every state with $\\omega \\circ \\alpha = \\omega$.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.descent-what-it-erases"
+  ],
+  "hash": "b9884b4dbfbb",
+  "number": 8
+ },
+ {
+  "id": "t:singularity.descent-parity-average>singularity.purity-output-partner-commutant",
+  "type": "transition",
+  "between": [
+   "singularity.descent-parity-average",
+   "singularity.purity-output-partner-commutant"
+  ],
+  "text": "Because coming down discards information, it is natural to ask where the partner that keeps the larger state pure comes from. [[t]]",
+  "hash": "8fbab932dbb6"
+ },
+ {
+  "id": "c:singularity.purity-output-partner-commutant",
+  "type": "theorem",
+  "claim": "singularity.purity-output-partner-commutant@4",
+  "title": "Purity is an output: the partner is the commutant",
+  "text": "Let $\\omega$ be a faithful state on the mode factor with $\\varrho = \\operatorname{diag}(\\lambda_0^2, \\lambda_1^2)$, $\\lambda_i > 0$. Its GNS representation lives on $\\C^2 \\otimes \\C^2$ with cyclic vector $\\Omega = \\sum_i \\lambda_i |ii\\rangle$, cyclic and separating for $\\pi(\\Aa) = \\Aa \\otimes 1$; the commutant $\\pi(\\Aa)' = 1 \\otimes \\Aa = J\\pi(\\Aa)J$ is the partner copy, and any two purifications of $\\omega$ differ by a unitary on the purifying factor alone.\n\nWhen $\\omega$ is the Gibbs state at inverse temperature $\\beta$, $\\Omega$ is the thermofield double with $\\tan\\theta = \\lambda_1/\\lambda_0 = e^{-\\omega_k/2T}$, the same vector the Schmidt-forcing argument produces. So purity of the doubled state, the existence of the partner and the thermofield form are consequences of the one-sided state rather than independent choices.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.modular-theory-matrix-factor-proved-outright"
+  ],
+  "hash": "74d15e5bda48",
+  "number": 9
+ },
+ {
+  "id": "t:singularity.purity-output-partner-commutant>singularity.descended-form-state-independent",
+  "type": "transition",
+  "between": [
+   "singularity.purity-output-partner-commutant",
+   "singularity.descended-form-state-independent"
+  ],
+  "text": "Turning from the doubled state back to a single mode, we ask what shape its descended state can take. [[t]]",
+  "hash": "c1df1b7675e6"
+ },
+ {
+  "id": "c:singularity.descended-form-state-independent",
+  "type": "theorem",
+  "claim": "singularity.descended-form-state-independent@4",
+  "title": "The descended form is state independent",
+  "text": "For any state on the boundary mode space and any mode $k$, the descended marginal $E_k(\\varrho_k)$ is diagonal in the number basis, because the range of $E_k$ is the even subalgebra. A diagonal density matrix $\\operatorname{diag}(p_k, 1 - p_k)$ is then the Gibbs state $e^{-\\beta_k\\omega_k N_k}/Z_k$ for a unique $\\beta_k \\in [-\\infty, +\\infty]$, fixed by $\\beta_k\\omega_k = \\log\\bigl(p_k/(1-p_k)\\bigr)$, provided $\\omega_k \\neq 0$.\n\nAt a zero-weight mode the right side is $\\tfrac12\\,\\id$ for every $\\beta_k$, so uniqueness fails there and existence requires $p_k = \\tfrac12$. No hypothesis on the ascended state is used.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.descent-parity-average"
+  ],
+  "hash": "edf0e5871f0e",
+  "number": 10
+ },
+ {
+  "id": "s:entropy",
+  "type": "section",
+  "title": "Entropy and information",
+  "hash": "dd1381047ea1"
+ },
+ {
+  "id": "i:entropy",
+  "type": "framing",
+  "text": "Coming down is not free, and this section measures exactly what it costs. [[t]]",
+  "hash": "5a711820adf3"
+ },
+ {
+  "id": "t:singularity.descended-form-state-independent>singularity.deficit-theorem-cost-descent-exactly",
+  "type": "transition",
+  "between": [
+   "singularity.descended-form-state-independent",
+   "singularity.deficit-theorem-cost-descent-exactly"
+  ],
+  "text": "Knowing what the descent leaves behind, we now put an exact figure on what it removes. [[t]]",
+  "hash": "3da21835f07c"
+ },
+ {
+  "id": "c:singularity.deficit-theorem-cost-descent-exactly",
+  "type": "theorem",
+  "claim": "singularity.deficit-theorem-cost-descent-exactly@4",
+  "title": "The deficit theorem: the cost of descent, exactly",
+  "text": "Let $E$ be the pinching by a complete family of orthogonal projectors, the multi-mode descent $\\EN$ included. Then $E$ is idempotent, trace-preserving and self-adjoint for the Hilbert-Schmidt pairing, and for every density matrix $\\rho$ the entropy increase under $E$ is exactly a relative entropy: $S(E(\\rho)) - S(\\rho) = \\rel{\\rho}{E(\\rho)} \\geq 0$, with equality if and only if $\\rho = E(\\rho)$.\n\nThe level discrepancy of the chain is this quantity, so the cost of descent is an exact relative entropy rather than a qualitative statement.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [],
+  "hash": "fd91ed441f72",
+  "number": 11
+ },
+ {
+  "id": "s:thermality",
+  "type": "section",
+  "title": "Temperature and Hawking radiation",
+  "hash": "ba7dc959f8d2"
+ },
+ {
+  "id": "i:thermality",
+  "type": "framing",
+  "text": "The last section turns the descended states into a temperature, and that temperature into radiation. [[t]]",
+  "hash": "3973e66ba98b"
+ },
+ {
+  "id": "t:singularity.deficit-theorem-cost-descent-exactly>singularity.rate-discharge-hypothesis-iii",
+  "type": "transition",
+  "between": [
+   "singularity.deficit-theorem-cost-descent-exactly",
+   "singularity.rate-discharge-hypothesis-iii"
+  ],
+  "text": "With the cost understood, we use the two premises to fix which temperature the descended modes actually have. [[t]]",
+  "hash": "db3f0178809d"
+ },
+ {
+  "id": "c:singularity.rate-discharge-hypothesis-iii",
+  "type": "theorem",
+  "claim": "singularity.rate-discharge-hypothesis-iii@4",
+  "title": "The rate, and the discharge of hypothesis (iii)",
+  "text": "Assume (P) and (R). At each mode the marginal is diagonal in the number basis, $\\operatorname{diag}(1 - n, n)$ with $n = \\omega(v^*v)$, and the gluing condition of (R) on the ladder pair reduces to $e^{p\\omega}n = 1 - n$, so $n = (e^{p\\omega} + 1)^{-1}$ with period $p = 2\\pi/\\kappa$. The marginal is therefore the Gibbs state of $K_k$ at $\\beta_k = \\beta = 2\\pi/\\kappa = 8\\pi M$, that is $T = \\kappa/2\\pi = 1/8\\pi M = \\TH$, with occupancy $\\omega(v_k^*v_k) = (e^{\\beta\\omega_k} + 1)^{-1} \\in (0,1)$.\n\nSince the occupancy lies strictly between $0$ and $1$, every marginal is faithful, hence cyclic and separating for its mode factor: the cyclic-and-separating hypothesis of the modular descent theorem is a consequence of (R), not an assumption. The temperature is the same at every mode without any condition on the joint state, because each mode sees the same $\\kappa$, which is constant over the bifurcation sphere.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.ascended-marginals-are-diagonal",
+   "singularity.computed",
+   "singularity.descended-form-state-independent",
+   "singularity.modular-structure-completed-pair",
+   "singularity.plane-rate",
+   "singularity.p-univalence",
+   "singularity.r-regularity-fixed-locus"
+  ],
+  "hash": "9c9c6e909de1",
+  "number": 12
+ },
+ {
+  "id": "t:singularity.rate-discharge-hypothesis-iii>singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+  "type": "transition",
+  "between": [
+   "singularity.rate-discharge-hypothesis-iii",
+   "singularity.rate-rigidity-temperature-not-algebra-intrinsic"
+  ],
+  "text": "Having found the Hawking value, we ask how much of it the algebra itself determines. [[t]]",
+  "hash": "53194d008e9c"
+ },
+ {
+  "id": "c:singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+  "type": "theorem",
+  "claim": "singularity.rate-rigidity-temperature-not-algebra-intrinsic@4",
+  "title": "Rate rigidity: the temperature is not algebra intrinsic",
+  "text": "Let $\\alpha_t = \\operatorname{Ad}(e^{itK})$ be the boost's phase flow on the single-mode algebra $\\Aa$, the rotor flow $\\exp(\\lambda\\sigma/2)$ continued to imaginary rapidity, with $\\beta$-KMS states $\\omega_\\beta$; every automorphism of this matrix factor is inner, $\\theta = \\operatorname{Ad}(U)$. An automorphism commuting with the flow fixes every $\\omega_\\beta$; one reversing the flow sends $\\omega_\\beta$ to $\\omega_{-\\beta}$; and a constant reparametrisation $\\alpha_t \\mapsto \\alpha_{ct}$ with $c > 0$ leaves $\\omega_\\beta$ unchanged while rescaling its inverse temperature to $\\beta/c$.\n\nHence automorphisms intertwining the flow act on the line of KMS states with orbits $\\{\\beta, -\\beta\\}$: $|\\beta|$ is an invariant of the pair (state, parametrised flow), and the line carries no automorphism-theoretic structure beyond the orientation flip. A condition singling out one point of the line must either stipulate the state or refer to data outside $(\\Aa, \\alpha)$, and the value of $|\\beta|$ is meaningful only relative to a parametrisation of the flow, which the algebra does not supply.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "singularity.kms-uniqueness-factor"
+  ],
+  "hash": "879e0c9b9267",
+  "number": 13
+ },
+ {
+  "id": "t:singularity.rate-rigidity-temperature-not-algebra-intrinsic>hawking.i-state",
+  "type": "transition",
+  "between": [
+   "singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+   "hawking.i-state"
+  ],
+  "text": "With that caution in mind, we assemble the thermal state across all the boundary modes together. [[t]]",
+  "hash": "c3655980a7fe"
+ },
+ {
+  "id": "c:hawking.i-state",
+  "type": "theorem",
+  "claim": "hawking.i-state@3",
+  "title": "The I-state",
+  "text": "Take the boundary-mode algebra $\\mathfrak{A}$ with its boost dynamics $\\tau$ at $\\beta = 1/\\TH = 2\\pi/\\kappa$. The quasi-free state $\\omega_I$ with Fermi-Dirac symbol $A_I = (1+e^{\\beta h})^{-1}$, that is occupancies $n_j = 1/(e^{\\omega_j/\\TH}+1)$, restricts on every window $F$ to the Gibbs state of $H_F = \\sum_{j\\in F}\\omega_j N_j$ and is KMS there exactly; it is the unique quasi-free extension of these window states, and it is $\\tau$-KMS at $\\beta$ on the whole algebra.\n\nWithin the quasi-free class the converse holds. Applying the KMS identity to two creation operators shows that the pairing vanishes, so a quasi-free $\\tau$-KMS state at $\\beta$ is automatically gauge-invariant. Applying it to a creation and an annihilation operator, with the CAR, gives $A(1+e^{-\\beta h}) = e^{-\\beta h}$, hence $A = A_I$: the two-point data are forced, and $\\omega_I$ is the unique quasi-free state whose modular clock is the geometry's clock.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "hawking.gibbs-states-are-kms-conversely-finite",
+   "hawking.imported-kms-passes-inductive-limits",
+   "hawking.imported-quasi-free-states-car-algebra"
+  ],
+  "hash": "b9feaf22581b",
+  "number": 14
+ },
+ {
+  "id": "t:hawking.i-state>hawking.bose-einstein-occupancy-quantified-window-corrections",
+  "type": "transition",
+  "between": [
+   "hawking.i-state",
+   "hawking.bose-einstein-occupancy-quantified-window-corrections"
+  ],
+  "text": "It remains to see what this fermionic state looks like when its levels are repackaged as bosons. [[t]]",
+  "hash": "e8b68ee38f7e"
+ },
+ {
+  "id": "c:hawking.bose-einstein-occupancy-quantified-window-corrections",
+  "type": "theorem",
+  "claim": "hawking.bose-einstein-occupancy-quantified-window-corrections@5",
+  "title": "Bose-Einstein occupancy, with quantified window corrections",
+  "text": "On the bilateral ladder with level spacing $\\epsilon$ and the sea at level $0$, carrying the linear s-wave weight assignment as a modelling input, the I-state occupancies are $n_k = (x^{-k}+1)^{-1}$ with Boltzmann factor $x = e^{-\\beta\\epsilon} \\in (0,1)$. They obey the exact detailed-balance identity $n_k - n_{k+m} = (x^{-m}-1)\\,n_{k+m}(1-n_k)$ for every $k$ and every $m \\ge 1$.\n\nSumming over $k \\in \\Z$, the left side telescopes to $1$ in each of the $m$ residue classes modulo $m$, so $\\sum_{k} n_{k+m}(1-n_k) = m/(e^{\\beta\\epsilon m}-1)$. This sum is the current two-point function $\\langle a_m^\\dagger a_m\\rangle_I$, so the unit-normalised boson $\\hat a_m = a_m/\\sqrt{m}$ has exactly the Bose-Einstein occupancy $1/(e^{\\beta\\epsilon m}-1)$ at $\\TH$. On the window $[-K, K]$ with the sea at the centre, the bilateral sum exceeds the window sum by a positive amount at most $2m\\,x^{K-m}/(1-x)$.",
+  "gap": false,
+  "level": "technical",
+  "derivation": "main",
+  "rests_on": [
+   "hawking.i-state",
+   "hawking.imported-s-wave-bosonic-sector"
+  ],
+  "hash": "32b6f7343c2c",
+  "number": 15
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:hawking.gibbs-states-are-kms-conversely-finite",
+  "type": "fact",
+  "claim": "hawking.gibbs-states-are-kms-conversely-finite@2",
+  "title": "Gibbs states are KMS, and conversely, in finite dimensions",
+  "text": "Let $\\mathfrak{B} = \\End(\\C^m)$ carry the dynamics $\\alpha_t = \\mathrm{Ad}(e^{itH})$ for a diagonal $H$ with eigenvalues $\\lambda_a$, repeated or not, and fix $\\beta \\in \\R$. The Gibbs state $\\omega_G(x) = \\tr(e^{-\\beta H}x)/\\tr(e^{-\\beta H})$ satisfies the KMS identity $\\omega_G(xy) = \\omega_G(y\\,\\alpha_{i\\beta}(x))$ with $\\alpha_{i\\beta}(x) = e^{-\\beta H}x\\,e^{\\beta H}$, by cyclicity of the trace.\n\nConversely, writing a KMS state as $\\omega(x) = \\tr(\\rho x)$ and testing the identity on matrix units forces Gibbs ratios $\\rho_{aa} = e^{-\\beta(\\lambda_a-\\lambda_b)}\\rho_{bb}$ between the diagonal entries and makes every off-diagonal entry vanish, even where eigenvalues coincide. Hence $\\rho = e^{-\\beta H}/Z$: the Gibbs state is the unique $\\alpha$-KMS state at $\\beta$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim hawking.gibbs-states-are-kms-conversely-finite, version 2 (T07 Lem 3.1)",
+  "hash": "23916bec7a3f",
+  "number": 16
+ },
+ {
+  "id": "c:hawking.imported-kms-passes-inductive-limits",
+  "type": "fact",
+  "claim": "hawking.imported-kms-passes-inductive-limits@1",
+  "title": "Imported: KMS passes to inductive limits",
+  "text": "Suppose a C*-algebra is the closure of an increasing union of subalgebras, each globally invariant under a one-parameter dynamics, and a state is KMS at inverse temperature $\\beta$ on each subalgebra for the restricted dynamics. Then the state is KMS at $\\beta$ on the whole algebra: the analytic-element requirement is checked on the dense union and passes to the closure. This is a standard result of operator-algebraic statistical mechanics, imported from the literature.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., Prop.~5.3.25",
+  "hash": "857475594392",
+  "number": 17
+ },
+ {
+  "id": "c:hawking.imported-quasi-free-states-car-algebra",
+  "type": "fact",
+  "claim": "hawking.imported-quasi-free-states-car-algebra@2",
+  "title": "Imported: quasi-free states of the CAR algebra",
+  "text": "For every operator $A$ on $\\ell^2(J)$ with $0 \\le A \\le 1$ there is a unique gauge-invariant state $\\omega_A$ on the CAR algebra $\\mathfrak{A}$ with two-point function $\\omega_A(a^\\dagger(f)\\,a(g)) = \\ip{g}{Af}$ and all higher truncated functions zero, so that the higher correlators are Wick determinants. More generally, a quasi-free state is determined by its symbol together with its pairing $P(f,g) = \\omega(a^\\dagger(f)\\,a^\\dagger(g))$, and gauge invariance is exactly $P = 0$.\n\nOn a finite window with diagonal symbol the state is the explicit product $\\bigotimes_j \\rho_j$ with $\\rho_j = \\mathrm{diag}(1-n_j,\\, n_j)$ in the occupation basis. This is standard material, imported from the literature.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, Publ. RIMS Kyoto Univ. 6 (1971), 385--442.; O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2, 2nd ed., Springer, Berlin (1997)., \\S 5.2",
+  "hash": "5c2b9fdfd561",
+  "number": 18
+ },
+ {
+  "id": "c:hawking.imported-s-wave-bosonic-sector",
+  "type": "fact",
+  "claim": "hawking.imported-s-wave-bosonic-sector@6",
+  "title": "Imported: the s-wave bosonic sector",
+  "text": "Unconditionally, on a window of the boundary mode space the number-conserving bilinears (currents) satisfy the free-boson commutation relations exactly in the completed limit, the finite-window deviation being an exact difference of edge operators, and the bilinear subalgebra is globally invariant under the modular boost.\n\nConditionally on Premise (Q), joint quasi-freeness with linear s-wave weights, the restriction of the Fermi-Dirac KMS state to the bilinear subalgebra is KMS at the same temperature, which gives Bose-Einstein occupancy at $\\TH$ for the s-wave sector. The boson-fermion correspondence behind this is classical.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim hawking.imported-s-wave-bosonic-sector, version 6 (T07 Fact 2.4)",
+  "hash": "e9677793cd56",
+  "number": 19
+ },
+ {
+  "id": "c:interior.imported-equivalence-einstein-equations",
+  "type": "fact",
+  "claim": "interior.imported-equivalence-einstein-equations@2",
+  "title": "Imported: equivalence with the Einstein equations",
+  "text": "On any region where the gauge field $\\hb$ is invertible, the field equations of gauge theory gravity (GTG) for $(\\hb, \\Omega)$ are equivalent to the Einstein field equations for the metric $g(a,b) = \\hb^{-1}(a)\\cdot\\hb^{-1}(b)$. In vacuum they are equivalent to Ricci-flatness of $g$. This is imported from the gauge-theory-gravity literature.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "A. Lasenby, C. Doran and S. Gull, Gravity, gauge theories and geometric algebra, Phil. Trans. R. Soc. Lond. A 356 (1998), 487--582., \\S 4 (\\S 4.3, covariant forms of the field equations), App.~C; C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003)., Ch.~13-14",
+  "hash": "86b4b531bf69",
+  "number": 20
+ },
+ {
+  "id": "c:interior.imported-tractor-connection",
+  "type": "fact",
+  "claim": "interior.imported-tractor-connection@2",
+  "title": "Imported: the tractor connection",
+  "text": "For a gravitational field on flat spacetime with derived metric $g$, the tractor bundle $\\mathcal{T}$ of the conformal class $[g]$ is, on the invertible region, the vectors $\\sigma\\nInf + \\mu + \\rho\\nO$ of $\\Cl(2,4)$. It carries a canonical connection that depends only on $[g]$ and preserves the tractor metric. In the scale $g$ it reads $\\nabla_a(\\sigma,\\mu_b,\\rho) = \\bigl(\\nabla_a\\sigma - \\mu_a,\\ \\nabla_a\\mu_b + g_{ab}\\rho - \\Sch_{ab}\\sigma,\\ \\nabla_a\\rho + \\Sch_a{}^{b}\\mu_b\\bigr)$, with $\\nabla$ on $\\mu$ the gravitational covariant derivative, where in four dimensions the Schouten tensor is $\\Sch_{ab} = \\tfrac12\\bigl(\\Ric_{ab} - \\tfrac{R}{6}g_{ab}\\bigr)$, read from the field strength.\n\nThe connection is imported from the tractor-calculus literature. The relative sign of the Schouten slots against those references depends on curvature conventions, and it is fixed internally rather than by translating between conventions.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "T. N. Bailey, M. G. Eastwood and A. R. Gover, Thomas's structure bundle for conformal, projective and related structures, Rocky Mountain J. Math. 24 (1994), 1191--1217.; S. N. Curry and A. R. Gover, An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds, in Asymptotic Analysis in General Relativity, London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170., \\S 5",
+  "hash": "e1040559d015",
+  "number": 21
+ },
+ {
+  "id": "c:interior.metric-parallelism-trace-schouten-condition",
+  "type": "fact",
+  "claim": "interior.metric-parallelism-trace-schouten-condition@6",
+  "title": "Metric parallelism, and the trace of the Schouten condition",
+  "text": "(i) The tractor connection preserves the tractor metric. On flat spacetime the connection is a $\\Cl(2,4)$ bivector-valued gauge field acting by the commutator product, an infinitesimal rotation, so it preserves $Q$; in index form, differentiating $Q(T)$ along any direction and substituting the connection, the genuine derivative terms reassemble the derivative of $Q(T)$, and the remaining terms cancel in pairs; the two Schouten terms are one contraction written with the index raised on either side, so no symmetry of $\\Sch$ is needed.\n\n(ii) For a gravitational field with derived metric $g$, if $\\Sch_{ab} = c\\,g_{ab}$ for a function $c$, tracing gives $c = R/24$, and substituting back gives $\\Ric_{ab} = \\tfrac{R}{4}g_{ab}$. In particular $\\Sch_{ab} = 0$ if and only if $\\Ric_{ab} = 0$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim interior.metric-parallelism-trace-schouten-condition, version 6 (T06 Lem 4.2)",
+  "hash": "0f95c52c53f2",
+  "number": 22
+ },
+ {
+  "id": "c:primer.classification-real-clifford-algebras",
+  "type": "fact",
+  "claim": "primer.classification-real-clifford-algebras@3",
+  "title": "Classification of the real Clifford algebras",
+  "text": "The real Clifford algebra $\\Cl(p,q)$ is, as a real associative algebra, a full matrix algebra over $\\R$, $\\C$ or $\\HH$, or a direct sum of two copies of one, and which case occurs depends only on $d \\equiv p - q \\pmod 8$: $\\Mat_k(\\R)$ for $d = 0, 2$; $\\Mat_k(\\R) \\oplus \\Mat_k(\\R)$ for $d = 1$; $\\Mat_k(\\C)$ for $d = 3, 7$; $\\Mat_k(\\HH)$ for $d = 4, 6$; and $\\Mat_k(\\HH) \\oplus \\Mat_k(\\HH)$ for $d = 5$. The size $k$ is fixed by $\\dim_\\R \\Cl(p,q) = 2^n$.\n\nIn particular $\\Cl(p,q)$ is simple except when $p - q \\equiv 1 \\pmod 4$, where it is the direct sum of two isomorphic simple algebras.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim primer.classification-real-clifford-algebras, version 3 (T00 Thm 9.3)",
+  "hash": "c7d83f18f0df",
+  "number": 23
+ },
+ {
+  "id": "c:sheaf.localised-transport",
+  "type": "fact",
+  "claim": "sheaf.localised-transport@5",
+  "title": "Localised transport",
+  "text": "The subalgebra of the ambient sheaf $\\shC = \\Cl(T, h)$ generated by $T^*M$ is canonically isomorphic to $\\shA$ globally, the wall included, because $h$ restricts to $G$ on $T^*M$ identically. Over $\\Mo \\cap \\Mp$ the inclusion $\\shA \\subset \\shC$ is fibrewise the conformal embedding $\\Cl(p,q) \\subset \\Cl(p{+}1, q{+}1)$. Over $\\Sig$ a radical covector $k$ has $Q(k) = 0$ in both algebras, yet the two-sided ideal it generates is square-zero in $A(x)$ and is the whole of $C(x)$, where $k^* = \\nO/(2\\nu)$ satisfies $Q(k^*) = 0$ and $k k^* + k^* k = 1$.\n\nSo the completion does not modify the degenerate algebra; it re-embeds it where its infinitesimals cease to be infinitesimal. The ladder pair $(k, k^*)$ exists exactly over $\\Sig$, so the canonical anticommutation structure of the series' operator-algebraic reading is supported on the singular locus.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim sheaf.localised-transport, version 5 (T04 Cor 4.5)",
+  "hash": "be21d61d0e31",
+  "number": 24
+ },
+ {
+  "id": "c:sheaf.one-sided-completion",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion@4",
+  "title": "One-sided completion",
+  "text": "Assume tameness (T1)-(T3), signature $(p,q)$ with $p \\geq 1$ on the physical side $\\Mp$, and a trivial radical line bundle, $w_1(\\shL) = 0$, so that collar data exist. Then there is a smooth symmetric form $h$ on $T = T^*M \\oplus \\underline{\\R}^2$, equal to $G \\perp H$ outside a collar of $\\Sig$, that is nondegenerate of constant signature $(p{+}1, q{+}1)$ at every point of $\\Mp$, the wall included.\n\nThe proof takes coupling constants with $\\mu\\nu > 0$: on $\\Sig$ the wall Gram gives the signature directly; in the collar on the physical side, after shrinking the collar, $s > 0$ and so $1 + 2\\mu\\nu\\beta^2 s \\geq 1$ in the determinant identity; outside the collar $h = G \\perp H$. Consequently $\\shC = \\Cl(T, h)$ restricted to $\\Mp$ is locally free of rank $2^{n+2}$ with every fibre isomorphic to $\\Cl(p{+}1, q{+}1)$, which is $\\Mat_4(\\HH)$ in the physical case.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion, version 4 (T04 Thm 4.4)",
+  "hash": "43c82f15b8f8",
+  "number": 25
+ },
+ {
+  "id": "c:sheaf.one-sided-completion-singularity",
+  "type": "fact",
+  "claim": "sheaf.one-sided-completion-singularity@4",
+  "title": "One-sided completion at the singularity",
+  "text": "Adjoin the hyperbolic plane $(\\nO, \\nInf)$ to the weighted module $\\shW$ and couple it to the dying direction by the collar construction, with normalised transversal $u = \\partial_t/m$ (so that $k(u) = 1$), coupling constants with $\\mu\\nu < 0$, and bump supported inside the horizon. Here the dying eigenvalue is negative on the physical side and $s < 0$ inside the horizon, so the determinant factor satisfies $1 + 2\\mu\\nu\\beta_b^2 s \\geq 1$ wherever the bump is supported; hence the ambient form $h$ is nondegenerate of constant signature $(2,4)$ at every point of $\\Mt$, the boundary $E$ included, and no shadow wall forms anywhere.\n\nThe subalgebra generated by $\\shW$ is canonically the degeneration sheaf, and the ladder pair $k^* = \\nO/(2\\nu)$, with $k k^* + k^* k = 1$ and $Q(k) = Q(k^*) = 0$, exists exactly over $E$. This performs the ascent $\\Cl(1,3) \\to \\Cl(2,4)$, that is $\\Mat_2(\\HH) \\to \\Mat_4(\\HH)$, at the Schwarzschild singularity, localised on $E \\cong \\R \\times S^2$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim sheaf.one-sided-completion-singularity, version 4 (T04 Thm 8.12)",
+  "hash": "c290b6505fb1",
+  "number": 26
+ },
+ {
+  "id": "c:sheaf.schwarzschild-degeneration-boundary-tame",
+  "type": "fact",
+  "claim": "sheaf.schwarzschild-degeneration-boundary-tame@6",
+  "title": "The Schwarzschild degeneration is boundary-tame in $\\shW$",
+  "text": "In the frame $(\\rho, \\dtPG, \\mu_1, \\mu_2)$ of the weighted module $\\shW$, the derived cometric of the Painlev\\'e-Gullstrand gauge field $\\hb = 1 - \\beta P$ on flat spacetime has Gram matrix with $(\\rho, \\dtPG)$ block $\\begin{pmatrix} m^2 - r & -m \\\\ -m & 1 \\end{pmatrix}$ and angular block $\\mathrm{diag}(-1, -1)$, with entries polynomial in $r$ and so extending smoothly to the boundary $E$. Then $\\det G = -r$, giving signature $(1,3)$ at every $r > 0$, horizon included; at $E$ the rank is exactly three, with radical spanned by $k = \\rho + m\\,\\dtPG$ and nondegenerate complement $\\langle \\rho, \\mu_1, \\mu_2 \\rangle$ carrying $\\mathrm{diag}(m^2, -1, -1)$, of signature $(1,2)$; and $Q(k) = G(k,k) = -r$ exactly, so the degeneration is first order with transversality datum $\\delta(k \\otimes k) = -\\,dr|_E$.\n\nThe same module and radical arise from the Schwarzschild coordinate frame through the smooth invertible change of frame $\\dtS = \\dtPG + \\tfrac{m}{m^2 - r}\\rho$, and on $E$ the radical is spanned by $\\dtS$. Finally $k = d\\Phi$ with $\\Phi = m t + \\tfrac23 r^{3/2}$, and $k$ annihilates the infalling free-fall congruence along $\\partial_t - \\beta\\,\\partial_r$ at every radius.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim sheaf.schwarzschild-degeneration-boundary-tame, version 6 (T04 Thm 8.7)",
+  "hash": "e507b2218011",
+  "number": 27
+ },
+ {
+  "id": "c:singularity.ascended-marginals-are-diagonal",
+  "type": "fact",
+  "claim": "singularity.ascended-marginals-are-diagonal@5",
+  "title": "Ascended marginals are diagonal",
+  "text": "For a state $\\omega$ satisfying univalence, $\\omega \\circ \\alpha = \\omega$, the odd ladder elements of each mode have vanishing expectation: $\\omega(v_k) = \\omega(\\alpha(v_k)) = -\\omega(v_k)$, so $\\omega(v_k) = \\omega(v_k^{*}) = 0$. These are exactly the off-diagonal entries of the single-mode marginal $\\varrho_k$ in the number basis, so $\\varrho_k$ is diagonal and equals $E_k(\\varrho_k)$. By the state independence of the descended form it is then the Gibbs state of $K_k$ at a unique $\\beta_k$ when $\\omega_k \\neq 0$; at a zero-weight mode diagonality still holds, but the Gibbs form requires $p_k = \\tfrac12$.\n\nConsequently partial trace and pinching coincide on every single-mode marginal of such a state, without the extra hypothesis that was needed before. The parity protection lemma of the finite-mode model is the special case of the model's states, which are even because every configuration in their support has even total occupation.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.ascended-marginals-are-diagonal, version 5 (T05 Thm 7.10)",
+  "hash": "3d9b306721d1",
+  "number": 28
+ },
+ {
+  "id": "c:singularity.computed",
+  "type": "fact",
+  "claim": "singularity.computed@4",
+  "title": "$\\kappa = 1/4M$, computed",
+  "text": "For the static black-hole field on flat spacetime, a static observer has velocity $v = K/\\sqrt f$, with $K = \\hb^{-1}(e_t)$ the static Killing field and $Q(K) = f$. Its acceleration $(v \\cdot D)v$ has the single radial coordinate component $A^r = f'/2$, its proper magnitude is $f'/(2\\sqrt f)$, and multiplying by the redshift factor $\\sqrt f$ gives the redshifted acceleration $f'(r)/2$ at every $r > 2M$.\n\nSurface gravity is the horizon limit of this redshifted acceleration, so $\\kappa = \\lim_{r \\to 2M} f'(r)/2 = \\tfrac12 \\cdot 2M/(2M)^2 = 1/4M$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.computed, version 4 (T05 Prop A.2)",
+  "hash": "f54c5cd22db2",
+  "number": 29
+ },
+ {
+  "id": "c:singularity.degeneration-exactly",
+  "type": "fact",
+  "claim": "singularity.degeneration-exactly@2",
+  "title": "The degeneration, exactly",
+  "text": "As $r \\to 0$ the gauge map and metric have exact rescaled limits, with every identity holding at finite $\\beta$. The map satisfies $\\beta^{-1}\\hb = \\beta^{-1}\\id - P \\to -P$, a rank-one map with image $\\R\\,\\er$ and kernel $\\et^{\\perp} = \\operatorname{span}(\\er, e_\\vartheta, e_\\varphi)$. The metric satisfies $\\beta^{-2} g \\to \\hat g$ with $\\hat g(a,b) = -(a\\cdot\\et)(b\\cdot\\et)$, a form of rank one and signature $(0,1,3)$ whose radical is $\\et^{\\perp}$, the kernel of the limit map.\n\nThe folded direction $\\er$ lies in this radical and is $\\hat g$-null, whereas $g(\\er,\\er) = -1$ at every finite radius. The nullity of the degenerate direction is therefore a property of the limit form, not of the flat background, which is the exact content of degeneration through a null kernel direction.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.degeneration-exactly, version 2 (T05 Prop 2.6)",
+  "hash": "53c17bece2e1",
+  "number": 30
+ },
+ {
+  "id": "c:singularity.descent-what-it-erases",
+  "type": "fact",
+  "claim": "singularity.descent-what-it-erases@5",
+  "title": "The descent, and what it erases",
+  "text": "With $P := v^* v$, the anticommutation relation and $v^2 = (v^*)^2 = 0$ give $P^2 = P$ and $1 - P = v v^*$. In the defining $2 \\times 2$ representation, $v = E_{12}$ and $v^* = E_{21}$, so $P = \\operatorname{diag}(0,1)$.\n\nThe descent $E(x) := PxP + (1-P)\\,x\\,(1-P)$ sends the matrix with entries $a, b, c, d$ to $\\operatorname{diag}(a, d)$: it retains the occupation data and erases the coherences $b, c$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.descent-what-it-erases, version 5 (T05 Prop 5.5)",
+  "hash": "5df4f7e8e63b",
+  "number": 31
+ },
+ {
+  "id": "c:singularity.kms-uniqueness-factor",
+  "type": "fact",
+  "claim": "singularity.kms-uniqueness-factor@4",
+  "title": "KMS uniqueness at a factor",
+  "text": "On a matrix factor $\\Aa$ with the inner flow $\\alpha_t = \\operatorname{Ad}(e^{itK})$ and any $\\beta \\neq 0$, a state $\\omega = \\tr(\\varrho\\,\\cdot\\,)$ satisfies the $(\\alpha,\\beta)$-KMS condition exactly when $\\varrho = e^{-\\beta K}/\\tr e^{-\\beta K}$. Writing the KMS identity $\\omega(ab) = \\omega(b\\,e^{-\\beta K}a\\,e^{\\beta K})$ as traces and using cyclicity shows that $\\varrho\\,e^{\\beta K}$ commutes with every element, so it is central and therefore scalar because the algebra is a factor; normalisation fixes the constant, and the converse is the same computation read backwards.\n\nSo for each nonzero $\\beta$ there is exactly one KMS state, and, for $K$ not a multiple of $1$, the KMS states of the flow form a single line parametrised by $\\beta$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.kms-uniqueness-factor, version 4 (T05 Thm 7.13)",
+  "hash": "27dd4440e455",
+  "number": 32
+ },
+ {
+  "id": "c:singularity.modular-structure-completed-pair",
+  "type": "fact",
+  "claim": "singularity.modular-structure-completed-pair@4",
+  "title": "Modular structure of the completed pair",
+  "text": "For a pair $(v, v^*)$ obeying the canonical anticommutation relations, set $\\sigma := v^*v - vv^*$. Then $\\sigma^2 = 1$, and in the hyperbolic atom $v = \\tfrac12(e_0 + e_1)$, $v^* = \\tfrac12(e_0 - e_1)$ inside $\\Cl(1,1)$ one has $\\sigma = e_0e_1$, the unit boost bivector of the plane. The rotor flow $R_\\lambda = \\exp(\\lambda\\sigma/2)$ acts by $v \\mapsto e^{-\\lambda}v$ and $v^* \\mapsto e^{\\lambda}v^*$, so the pair diagonalises the boost with opposite weights, the structure of outgoing and ingoing horizon modes.\n\nThe spectral projectors $\\tfrac12(1 \\pm \\sigma)$ of the boost are exactly the occupation projectors $v^*v$ and $vv^*$, which are the descent projectors, and in the fermionic representation $\\sigma = 2N - 1$, so $K := \\sigma/2 = N - \\tfrac12$. Since $\\mathrm{Spin}^+(1,1)$ is one-dimensional, the boost flow is the only one-parameter flow implemented by real rotors of the atom; this uniqueness holds within real rotor flows of $\\Cl(1,1)$, not among all one-parameter unitary groups of $\\Mat_2(\\C)$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.modular-structure-completed-pair, version 4 (T05 Thm 6.3)",
+  "hash": "bb7a6aef76ba",
+  "number": 33
+ },
+ {
+  "id": "c:singularity.modular-theory-matrix-factor-proved-outright",
+  "type": "fact",
+  "claim": "singularity.modular-theory-matrix-factor-proved-outright@4",
+  "title": "Modular theory of a matrix factor, proved outright",
+  "text": "Take $H = \\C^n \\otimes \\C^n$, $M = \\Mat_n(\\C) \\otimes 1$ and a cyclic separating vector in Schmidt form $\\Omega = \\sum_i \\lambda_i |ii\\rangle$ with all $\\lambda_i > 0$ and $\\sum_i \\lambda_i^2 = 1$. The Tomita operator $S : a\\Omega \\mapsto a^*\\Omega$ acts on basis vectors as $|ij\\rangle \\mapsto (\\lambda_i/\\lambda_j)|ji\\rangle$, and its polar decomposition $S = J\\Delta^{1/2}$ is explicit: $\\Delta = \\rho \\otimes \\bar\\rho^{\\,-1}$ with $\\rho = \\sum_i \\lambda_i^2 |i\\rangle\\langle i|$, and $J$ the antilinear swap $|ij\\rangle \\mapsto |ji\\rangle$.\n\nConsequently the modular flow on $M$ is $\\sigma_t(a) = \\rho^{it} a \\rho^{-it}$, and the vector state $\\omega = \\langle\\Omega, \\cdot\\,\\Omega\\rangle$ satisfies the KMS identity $\\omega(ab) = \\omega(b\\,\\rho a \\rho^{-1})$ for all $a, b \\in M$. Because everything is finite-dimensional, all of this follows by direct computation.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.modular-theory-matrix-factor-proved-outright, version 4 (T05 Lem 7.1)",
+  "hash": "1fe90c797ed2",
+  "number": 34
+ },
+ {
+  "id": "c:singularity.plane-rate",
+  "type": "fact",
+  "claim": "singularity.plane-rate@4",
+  "title": "The plane and the rate",
+  "text": "The doubled curvature eigenvalue singles out the pair of planes $\\{\\sigma_r, I\\sigma_r\\}$ invariantly at every radius, and its two members are separated invariantly by their squares, $\\sigma_r^2 = +1$ and $(I\\sigma_r)^2 = -1$ (up to the orientation sign). So the plane of the completed pair is not chosen. At the horizon the boost member $\\sigma_r$ is the boost plane of the Killing flow, whose surface gravity, computed as the redshifted proper acceleration of static observers, is $\\kappa = \\tfrac12 f'(r_h) = 1/4M$.\n\nThis fixes the geometric normalisation: an interval of $2\\pi$ in rapidity corresponds to $2\\pi/\\kappa = 8\\pi M$ of Schwarzschild time, and this single conversion factor is where the numerical value of the temperature enters the chain.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.plane-rate, version 4 (T05 Prop 6.2)",
+  "hash": "10129b87ad77",
+  "number": 35
+ },
+ {
+  "id": "c:singularity.solution-where-divergence-lies",
+  "type": "fact",
+  "claim": "singularity.solution-where-divergence-lies@3",
+  "title": "The solution, and where the divergence lies",
+  "text": "The pair $(\\hb, \\Omega)$ solves the vacuum field equations at every $r > 0$. On the radial plane both connection values are multiples of $\\sigma_r$, so the commutator term of the field strength vanishes and $\\mathcal{R}(\\partial_t \\wedge \\partial_r) = -\\partial_r(M/r^2)\\,\\sigma_r = (2M/r^3)\\,\\sigma_r$: an eigenplane with eigenvalue of magnitude $2M/r^3$, obtained within the gauge formalism. The full curvature operator is diagonal on the six frame planes with eigenvalue magnitudes $(2M/r^3, M/r^3, M/r^3, M/r^3, M/r^3, 2M/r^3)$ and vanishing Ricci contraction, the remaining planes being computed in the static chart and carried over by the imported equivalence with the Einstein equations on the invertible region.\n\nMeanwhile $\\det \\hb = 1$ at every radius, horizon included, because $1 - \\beta P$ is unipotent for the rank-one nilpotent $P$, and the $(t,r)$ block of the metric has determinant $-1$. So at finite radius the classical field is a volume-preserving shear, and the divergence of the description is carried by the connection, the curvature and the metric components, not by $\\hb$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim singularity.solution-where-divergence-lies, version 3 (T05 Prop 2.4)",
+  "hash": "c76ae07bd977",
+  "number": 36
+ },
+ {
+  "id": "c:std-algebra.orthogonal-anticommute",
+  "type": "fact",
+  "claim": "std-algebra.orthogonal-anticommute@1",
+  "title": "Orthogonal vectors anticommute",
+  "text": "Two vectors anticommute exactly when they are orthogonal. In an orthogonal basis this gives the multiplication table of basis blades: the product $e_I e_J$ is the blade on the symmetric difference $I \\triangle J$, times the squares of the shared generators, times a sign that counts how many transpositions are needed to sort the indices.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim std-algebra.orthogonal-anticommute, version 1",
+  "hash": "aefcf27b5fda",
+  "number": 37
+ },
+ {
+  "id": "c:std-algebra.sta-matrix",
+  "type": "fact",
+  "claim": "std-algebra.sta-matrix@1",
+  "title": "The spacetime algebra as a matrix algebra, and the spacetime split",
+  "text": "In the store's signature the spacetime algebra is the algebra of $2 \\times 2$ quaternion matrices, as the classification predicts for $p - q \\equiv 6$. The familiar Dirac matrices are complex, so they represent the complexified algebra, $4 \\times 4$ complex matrices; the real spacetime algebra sits inside as a real form. The spacetime split identifies the even part of the spacetime algebra with the algebra of the observer's three-dimensional space, and the two pseudoscalars coincide.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim std-algebra.sta-matrix, version 1",
+  "hash": "4c13941ea4a9",
+  "number": 38
+ },
+ {
+  "id": "c:std-algebra.vector-squares",
+  "type": "fact",
+  "claim": "std-algebra.vector-squares@1",
+  "title": "The product of two vectors",
+  "text": "A vector squares to its quadratic form, and the symmetrised product of two vectors is twice their polar form: $uv + vu = 2B(u, v)$. So the product of two vectors splits into the scalar $B(u, v)$ and the antisymmetric part $\\tfrac12(uv - vu)$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim std-algebra.vector-squares, version 1",
+  "hash": "f02e978ee3cc",
+  "number": 39
+ },
+ {
+  "id": "c:std-algebra.witt-decomposition",
+  "type": "fact",
+  "claim": "std-algebra.witt-decomposition@1",
+  "title": "Hyperbolic pairs and the Witt decomposition",
+  "text": "In a nondegenerate plane, a null vector $u$ has exactly one partner $w$ with $uw + wu = 1$, so the plane is hyperbolic. Globally, a real quadratic space splits orthogonally into $\\min(p, q)$ hyperbolic planes, a definite remainder and the radical. Taking one null vector from each hyperbolic plane, together with the radical, gives a totally null subspace of the largest possible dimension, $\\min(p, q) + r$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim std-algebra.witt-decomposition, version 1",
+  "hash": "1ccadfc71355",
+  "number": 40
+ },
+ {
+  "id": "c:tower.ladder-pairs-satisfy-car-vectors",
+  "type": "fact",
+  "claim": "tower.ladder-pairs-satisfy-car-vectors@4",
+  "title": "The ladder pairs satisfy the CAR, as vectors",
+  "text": "In the $k$-th algebra of the tower, $T_k = \\Cl(p{+}k, q{+}k)$, each adjoined hyperbolic plane carries a normalised null pair $(v_i, w_i)$. These vectors satisfy $v_i v_j + v_j v_i = 0$, $w_i w_j + w_j w_i = 0$ and $v_i w_j + w_j v_i = \\delta_{ij}$ for all $1 \\leq i, j \\leq k$, which are the canonical anticommutation relations of $k$ fermionic modes. The relations hold exactly, among vectors of the algebra, with no normal ordering, no completion and no choice of representation.\n\nEach relation is an instance of the Clifford relation $ab + ba = 2\\langle a, b\\rangle$ for vectors: the null vectors have $Q(v_i) = Q(w_i) = 0$, distinct planes are orthogonal, and the hyperbolic normalisation gives $\\langle v_i, w_i\\rangle = \\tfrac12$. The vectors of a new rung are orthogonal to all earlier generators, so adding a rung adds one mode and leaves the existing relations untouched.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim tower.ladder-pairs-satisfy-car-vectors, version 4 (T03 Prop 4.1)",
+  "hash": "913a240afe19",
+  "number": 41
+ },
+ {
+  "id": "c:tower.rigidity-clock-frozen",
+  "type": "fact",
+  "claim": "tower.rigidity-clock-frozen@5",
+  "title": "Rigidity; the clock is frozen",
+  "text": "Along the tower the transport charge $d = p - q \\bmod 8$ is constant, since $(p{+}k) - (q{+}k) = p - q$. Each floor is a matrix algebra over the ground floor, so its division-ring type, simplicity class and centre equal those of the ground floor, and it is Morita equivalent to the ground floor. The obstruction taxonomy is therefore floor-independent; in particular a type-C obstruction, a central idempotent, never arises by transport from a simple ground algebra, at any height.\n\nFor the physical tower, $\\Cl(1{+}k, 3{+}k) \\cong \\Mat_{2^{k+1}}(\\HH)$ sits at clock position $6$ for every $k$: Bott periodicity shows up as immediate freeze, not eventual return.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim tower.rigidity-clock-frozen, version 5 (T03 Thm 3.6)",
+  "hash": "3303e0147c75",
+  "number": 42
+ },
+ {
+  "id": "c:transport.existence-classification-type-c",
+  "type": "fact",
+  "claim": "transport.existence-classification-type-c@4",
+  "title": "Existence and classification of type C",
+  "text": "A type C obstruction is a nontrivial central idempotent, so it must lie in the centre, which is $\\R$ for even $n$ and $\\R[\\omega]$ for odd $n$. When $\\omega^2 = -1$ that centre is a copy of $\\C$, whose only idempotents are $0$ and $1$; when $\\omega^2 = +1$ it is $\\R \\oplus \\R$, with exactly two nontrivial idempotents $\\varepsilon_\\pm = \\tfrac12(1 \\pm \\omega)$. Combining the parity of $n$ with the sign of $\\omega^2$ shows that $\\Cl(p,q)$, $n \\geq 1$, has a nontrivial central idempotent if and only if $p - q \\equiv 1 \\pmod 4$.\n\nIn that case $\\varepsilon_+ \\varepsilon_- = 0$ and $\\varepsilon_+ + \\varepsilon_- = 1$, and $\\Cl(p,q) = \\varepsilon_+ A \\oplus \\varepsilon_- A$ is the splitting into two simple ideals. The grade involution sends $\\omega \\mapsto -\\omega$ and so exchanges $\\varepsilon_+$ and $\\varepsilon_-$; it is an outer automorphism, because an inner automorphism fixes every central element and therefore cannot exchange them.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6)",
+  "hash": "4269b515b307",
+  "number": 43
+ },
+ {
+  "id": "c:transport.existence-locus-type-n",
+  "type": "fact",
+  "claim": "transport.existence-locus-type-n@5",
+  "title": "Existence locus of type N",
+  "text": "A null vector is a nonzero $v$ with $Q(v) = 0$. In $\\Cl(p,q)$ such vectors exist exactly when the signature is mixed, $pq \\neq 0$: a definite form is anisotropic, while for $p, q \\geq 1$ the sum of a positive and a negative unit basis vector is null. When they exist, the null vectors form a cone of dimension $n - 1$, the zero set of the quadratic form with the origin removed.\n\nEvery null vector satisfies $v^2 = 0$ and so is a two-sided zero divisor, and it has neither a left nor a right inverse in any unital algebra containing $\\Cl(p,q)$: from $vw = 1$ one would get $v = v^2 w = 0$.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim transport.existence-locus-type-n, version 5 (T01 Prop 3.3)",
+  "hash": "28f546f9016e",
+  "number": 44
+ },
+ {
+  "id": "c:transport.type-p-self-repairing",
+  "type": "fact",
+  "claim": "transport.type-p-self-repairing@2",
+  "title": "Type P is self-repairing",
+  "text": "Let $A$ be any unital ring, $\\mathcal{E}(A)$ its idempotents and $A' \\supseteq A$ any unital extension. Taking each idempotent as its own partner, $\\sigma(e) = e$, both von Neumann identities $e\\,\\sigma(e)\\,e = e$ and $\\sigma(e)\\,e\\,\\sigma(e) = \\sigma(e)$ hold because $e^3 = e$. The assignment commutes with every automorphism $\\theta$ of $A'$ preserving $A$, since $\\theta(e)$ is again an idempotent of $A$ and $\\sigma$ is the identity.\n\nIn the obstruction taxonomy this says that the transport rule for type P, the non-central idempotents, is the identity at signature increment $(0,0)$: the repair is already present in the base algebra.",
+  "gap": false,
+  "level": "technical",
+  "provenance": "Transport Lab claim transport.type-p-self-repairing, version 2 (T01 Prop 6.1)",
+  "hash": "322c02fbb763",
+  "number": 45
+ },
+ {
+  "id": "c:scrambling.no-echo-prediction-registered",
+  "type": "prediction",
+  "claim": "scrambling.no-echo-prediction-registered@2",
+  "title": "The no-echo prediction, registered",
+  "text": "Under Postulate (C1), the framework places its quantum structure at the stretched singularity $r_c = (2M)^{1/3}$, at Planck curvature deep inside the hole, while the horizon remains the smooth vacuum horizon of general relativity because the exterior dictionary is exact. The registered prediction is that post-merger ringdown is the unmodified Kerr quasinormal spectrum.\n\nIn particular there is no echo train at the Planck-structure delay $\\tau_{\\mathrm{echo}} \\approx 8M\\ln(M/m_P)$, about 35 ms at $10\\,\\Msun$ and 0.1 to 0.25 s for remnants of 30 to $70\\,\\Msun$, within the band of existing detectors. One statistically confirmed echo train would refute the framework's localisation of quantum structure.",
+  "gap": false,
+  "level": "technical",
+  "kill_condition": {
+   "threshold": "One statistically confirmed echo train at the Planck-structure delay",
+   "data_source": "gravitational-wave catalogues",
+   "registered": "2026-09 (T8 record; confronted in the T17 stance table, August 2026)"
+  },
+  "hash": "4008219a5e9b",
+  "number": 46
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "The breakdown at the centre of a non-rotating black hole is a feature of the solution itself, not of how it is written down. [[c:singularity.non-removability-invariant-argument]] It is the kind of obstruction caused by a direction with no partner, so the repair is to enlarge the algebra and supply one. [[c:singularity.type-n-only-type-n]] Coming back down from the enlargement costs exactly an entropy gain, which is never negative and is zero only when there was nothing to discard. [[c:singularity.deficit-theorem-cost-descent-exactly]] Under the two premises every mode comes out at the same Hawking temperature, with no assumption about correlations between modes. [[c:singularity.rate-discharge-hypothesis-iii]] The Fermi-Dirac state at that temperature is the only simple Gaussian state that is thermal for the boost clock of the geometry. [[c:hawking.i-state]] Given the s-wave modelling convention, its collective boson modes on the infinite ladder have exactly the Bose-Einstein thermal occupancy. [[c:hawking.bose-einstein-occupancy-quantified-window-corrections]] What we assume comes down to a short list. [[t]] The first premise, univalence, says that physical states of the boundary modes give zero average to every quantity that changes fermion number by an odd amount. [[c:singularity.p-univalence]] The second, regularity, asks each boundary mode on its own to look thermal for the black hole's time flow, at the temperature for which the imaginary-time version of the spacetime is smooth. [[c:singularity.r-regularity-fixed-locus]] The s-wave convention behind the boson reading is a modelling input rather than a derived result. [[c:hawking.bose-einstein-occupancy-quantified-window-corrections]] The value of the temperature also has meaning only once the clock's parameter is converted into physical time, and the algebra does not supply that conversion. [[c:singularity.rate-rigidity-temperature-not-algebra-intrinsic]] One consequence faces observation directly: merging black holes should ring exactly as general relativity says, with no echoes, and a single confirmed echo would refute the framework. [[c:scrambling.no-echo-prediction-registered]]",
+  "hash": "f72bc767a27d"
+ }
+]

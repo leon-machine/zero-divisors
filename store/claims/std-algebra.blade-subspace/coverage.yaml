@@ -1,0 +1,10 @@
+functions:
+  check_blades_and_subspaces:
+    kind: sampled
+    clauses:
+    - '"A != 0 if and only if v_1, ..., v_k are linearly independent; then [A] = span"'
+    - '"A A~ = det [B(v_i, v_j)]"'
+    - '"A is a zero divisor"'
+    - '"with equality if and only if Y is a blade"'
+    omits: all subsets of six fixed vectors in every signature with n = 4 (degenerate included); (ii)
+      and (iii) on one example each

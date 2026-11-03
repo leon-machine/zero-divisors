@@ -1,0 +1,26 @@
+functions:
+  check_chern_simons_five_form_reduces_to_the_frozen_point_functional:
+    kind: sampled
+    clauses:
+    - (i) L5 on theta4 + lambda dy I equals (3 lambda/Q(V)) eps(I, V, F, F) ^ dy with K4 = (Lambda/3) theta4 ^ theta4
+    omits: checked on pseudo-random rational frames and curvatures at Lambda in {3, -3/2, 12} and lambda in {1, 2/3}; both sides are multilinear, the general case is the proof
+  check_reduced_lovelock_terms_are_a_perfect_square_only_on_the_chern_simons_family:
+    kind: sampled
+    clauses:
+    - (ii) multiplicities 1, 3, 5 and the perfect-square criterion 9 b^2 = 20 a c
+    omits: multiplicities checked on samples at Lambda = 3 and -3/2; the criterion is algebra in the proof, tested on five coefficient triples
+  check_five_dimensional_equations_on_the_ansatz_add_the_radion_equation:
+    kind: sampled
+    clauses:
+    - (iii) the 5D equations on the torsion-free ansatz are the frame equation and eps(I, V, F, F) = 0; Schwarzschild value Kretschmann/4, type N value 0
+    omits: at a point, frame the identity, Lambda = 3 and -3/2; generic curvatures on two samples
+  check_signature_of_the_five_dimensional_parent:
+    kind: exact
+    clauses:
+    - (iv) V-perp signature (2,3) for Lambda > 0 and (1,4) for Lambda < 0; Cl(1,5) parent Lorentzian with de Sitter I-perp
+    omits: 'none: finite linear algebra at four values of Lambda; the sign pattern depends only on the sign of Lambda'
+untouched_premises:
+  dark-energy.imported-macdowell-mansouri-theorem-stelle-west: cited for the normalisation of the connection and of the Lorentz block; the reduced density is compared with eps(I, V, F, F) directly
+  synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part: cited for the frame equation vanishing on Einstein fields; the check recomputes it at the Schwarzschild point
+  synthesis.imported-five-dimensional-chern-simons-gravity: imported Fact (the five-dimensional Chern-Simons action and its Lovelock form) taken as the input of (i) to (iii); the checks compute the reduction from the transgression coefficients and call no premise for it
+  synthesis.imported-chern-weil-and-chern-simons-forms: imported Fact (transgression and variation of Chern-Simons forms) used in (i) and (iii); the checks evaluate the resulting integrals and equations directly

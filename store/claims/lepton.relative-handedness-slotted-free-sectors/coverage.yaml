@@ -1,0 +1,18 @@
+functions:
+  check_first_listing_is_one_generation_anomaly_free:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "the list is built from the actions (content, Y = q/6, conjugation) and the four sums are those of the imported Fact; physical names nu^c, u^c, d^c, e^c are the statement's reading of the computed content"
+  check_second_listing_is_anomalous:
+    kind: exact
+    clauses: ["(2)"]
+    omits: ""
+  check_consistency_fixes_relative_handedness:
+    kind: complete
+    clauses: ["exactly one of the two listings is anomaly-free", "epsilon = -1: a slot reverses the half", "a bare conformal spinor in a slot is the antilepton (2,1)_{1/2}; a bare free spinor is the neutrino singlet (1)_0"]
+    omits: "epsilon = -1 is read as free grades of one parity listed with slot grades of the other; the definition of the bit epsilon in Hypothesis (C) is not modelled; the closing physical reading (nu^c and u^c from CS, d_R and e_R from CS-bar, no conjugation applied) is not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both listings and their anomaly sums (2/3, 0, 0, -4/9 for the second) match the statement; the epsilon reading is a parity encoding."

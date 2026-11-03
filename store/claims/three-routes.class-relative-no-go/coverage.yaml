@@ -1,0 +1,20 @@
+functions:
+  check_function_linear_maps_are_diagonal:
+    kind: sampled
+    clauses: ["by Lemma function-linear-maps-preserve-supports, function-linear one-particle maps preserve supports"]
+    omits: "Three-point model with the point indicators as the only functions; nine matrix units and two composite maps; no sheaf, no smooth functions, no sections of a bundle over Sigma."
+  check_bundle_maps_quantise_without_hopping:
+    kind: sampled
+    clauses: ["by Proposition support-preserving-families-quantise-without-hopping, no supplied generator moves occupation between points", "occupation-conserving products such as sigma_x sigma_y"]
+    omits: "Jordan-Wigner Fock space of three modes (8 x 8); nine diagonal bundle maps; one-particle generators only, not the localisation, completion or closure constructions."
+  check_off_diagonal_generators_hop:
+    kind: sampled
+    clauses: ["control: off-diagonal generators and a difference operator outside the supplied class do hop"]
+    omits: "Control only; it does not test any clause of the no-go itself."
+untouched_premises:
+  sheaf.function-linearity-tame-constructions: "The statement's opening claim that every tame generator is C^infinity-linear is taken as given; no function calls premise() for it and the model does not test the machinery of the note."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring presents a finite three-mode model of the two lemmas, which is what the asserts do; the 'hence no generator from localisation, completion, or any closure construction' step is the imported premise plus the two lemmas and is not computed. 2026-10-23 (weak checks): check_function_linear_maps_are_diagonal also pins the count of support-preserving units (3) and the commutator [hop, chi_1] = 4 E_21 by hand; check_off_diagonal_generators_hop asserts the difference operator moves every occupation (not only N_1) and that the occupation patterns are all 2^3; sample maps moved to module level."

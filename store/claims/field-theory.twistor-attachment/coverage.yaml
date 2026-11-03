@@ -1,0 +1,20 @@
+functions:
+  check_oscillator_module_spectrum_and_twistor_form:
+    kind: sampled
+    clauses: ["\"the helicity-s module has energies |s| + 1 + n with multiplicity (n+1)(n + 2|s| + 1)\"", "\"the conformal energy is the palatial quadratic of the reversion form h on CS\""]
+    omits: "CCR on monomials of degree <= 3, helicity and energy identities on degree <= 4, multiplicity counts for 2s = -4..4 and n <= 4; the signature (2,2) form Sigma = diag(-1,-1,1,1) is assumed to be the twistor form h, and its identification with the reversion form on the Clifford module CS is not computed; the positive-energy one-particle space, the Penrose transform and 'the tower's CAR is the second quantisation over that space' are not tested"
+  check_u22_preserves_positive_energy_helicity_modules:
+    kind: sampled
+    clauses: ["\"the sixteen generators of u(2,2), the algebra preserving h, preserve each positive-energy, fixed-helicity module\""]
+    omits: "images of monomials of degree <= 3 only; the sixteen q(E_ab) are the complexified gl(4) basis, and that they span the algebra preserving h (the real form u(2,2)) is not tested"
+  check_kernels_exchange_parity_is_spin_statistics:
+    kind: sampled
+    clauses: ["\"a CAR lift is local exactly when 2s is odd\"", "\"the Penrose transform supplies the mode functions\"", "\"the series' fermion assignments pass\""]
+    omits: "kernels checked as zero-rest-mass solutions for 2s = 1, 2 only; parity W(-x) = (-1)^{2s} W(x) at one spacelike point x = (1,2,1,1) for 2s = 0..4; locality of the lift follows from the imported Jost-point theorem and is read off the parity, not computed; the series' fermion assignments are not enumerated (only 2s = 1 appears as an odd case); the statement that the tower's floors are energy cut-offs, not regions, is an interpretation and is not tested (the docstring says so)"
+untouched_premises:
+  field-theory.imported-tower-limit: "the tower's CAR as second quantisation over the space is the premise's content; the check has no finite tower computation, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the oscillator-model identities and the kernel parities are tested exactly at chosen degrees and one point; the geometric identification of Sigma with the Clifford reversion form and the interpretive claims are untested and mostly flagged in the docstring"

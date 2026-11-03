@@ -1,0 +1,27 @@
+doc: trail-walls
+title: Degenerate metrics and walls
+author: Leon Butler
+level: lay
+spine:
+- sheaf.local-freeness-constant-rank
+- sheaf.degeneration-sheaf
+- sheaf.exceptional-algebra-deformation-normal-cone
+- sheaf.wall-gram
+- sheaf.one-sided-completion
+- sheaf.localised-transport
+- sheaf.metrics-residue-square-root-twist
+- sheaf.tame-walls-are-two-sided
+- sheaf.conservation-degeneracy-located
+- sheaf.infinite-wall-sequence
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

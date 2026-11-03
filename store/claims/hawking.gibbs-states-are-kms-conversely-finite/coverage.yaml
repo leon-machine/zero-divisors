@@ -1,0 +1,14 @@
+functions:
+  check_gibbs_state_satisfies_kms_symbolically:
+    kind: sampled
+    clauses: ["\"the Gibbs state omega_G satisfies the KMS identity omega_G(xy) = omega_G(y alpha_{i beta}(x)) for all x, y\""]
+    omits: "m = 1..4 and six chosen integer spectra (including degenerate ones); the Boltzmann factor x = e^{-beta} is symbolic, so beta is free; checked on all matrix-unit pairs, which suffices by bilinearity"
+  check_kms_state_unique_degenerate_included:
+    kind: sampled
+    clauses: ["\"it is the unique alpha-KMS state at beta on B, degenerate spectrum included\""]
+    omits: "same six spectra with m <= 4; the KMS constraints are solved as a linear system over Q(x) and again at x = 1, 2/3, 3/2; uniqueness is that of the linear solution space (a one-dimensional kernel spanned by diag(x^lambda_a)), which contains the state"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "both clauses are tested exactly with beta symbolic, but only for m <= 4 and six spectra"

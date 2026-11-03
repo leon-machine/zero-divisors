@@ -1,0 +1,1033 @@
+% T9 of the Transport Papers series.
+% Correction (2026-09-10, mechanical pass, per Leon): rule 23 misidentified T5 as the printed-version exception. T1 is the exception at Version 3.0; every other paper, T5 included, reads Version 1.0. \date corrected accordingly (was 1.1).
+% v1.1 (2026-09-10, derivation session, Fable 5.1 subagent, per rule 20,
+%   series-review repair pass against series_review_2026-09-09.md).
+%   Review 2.10: Sec 9 (Position), successors list: the claim that T10
+%   imports the summand decomposition of Prop 4.10(1) removed (T10 cites
+%   nothing from T9); replaced by the true statement that T10 proves the
+%   decomposition itself, in the frozen point's scale, as its Lemma 2.5(iii).
+%   The predecessor count ("four predecessors") is unchanged; no successor
+%   count is stated. All ButlerTn bibitems checked against the title list:
+%   all match. \date -> Version 1.1. Abstract 249 words, unchanged.
+%   Script: verify_T09.py 69/69, unchanged in content, re-run.
+%   Compile: pdflatex x2, 30 pages, 0 errors, 0 undefined refs, 0 multiply
+%   defined, 5 overfull, no float overflow.
+% 2026-09-09 addendum (interactive session with Leon, Opus 5). Two changes
+%   per Leon: (1) the printed version is now 1.0 for every paper T0 to T17,
+%   T5 alone at 3.0 (progress-doc rule 23); the development numbering is
+%   retired from the title page and kept in this header. (2) Every reference
+%   to the programme monograph is removed (rule 24), re-pointed to the series
+%   where a sibling paper carries the result and otherwise restated to stand
+%   alone. No mathematics, no labels and no numbering changed, so verify_T09.py
+%   stands unchanged at 69/69 and was not re-run.
+%   Here: version only. NOTE: this file was restored from the project copy in
+%   the same session after an editing error truncated it; the restore was
+%   verified by structure and a clean compile at 30pp.
+% v1.7 (2026-09-09, derivation session, Fable 5.1 subagent, per rule 20,
+%   review-repair pass against T09_review_v7.md, same session).  Body and
+%   script labels only; no result, label, number, or claim changed.
+%   S1: fact:ltt provenance: "standard, though unproved, in the tractor
+%       literature" -> "standard in the tractor literature" (the prose pass
+%       had turned "folklore" into a claim about the sources).
+%   S2: rem:alphaplanes: "three-qubit level" -> "three-qubit floor" (T3's
+%       defined term for a tower level, cited in the same sentence).
+%   N1: \date -> Version 1.7.  N2: script labels retagged to the paper's
+%       vocabulary (wing -> summand, kills -> annihilates, touchpoint -> point
+%       of contact, rent -> ordering shift; six labels and the docstring;
+%       no predicate touched).  N3: "prior work is extensive".  N4: "What
+%       survives of the naive conjecture is its corrected form".  N5:
+%       successor problem (3): "scale splitting fails" (T4's word).
+%   Not fixed: N6 (title still "the Palatial Bridge"; printed in nine sibling
+%       bibitems, Leon's decision); N7 informational.
+%   Script: 69/69, labels only.  Compile x2: 0 errors, 0 undefined refs,
+%   0 multiply defined, no float overflow, 30 pages, 5 overfull boxes (all
+%   pre-existing).  Numbering frozen: aux diff empty on label numbers.
+%   Abstract 249 words.
+% v1.6 (2026-09-08, prose pass, Fable 5.1 subagent, per project rule 22: mannered
+%   prose replaced by literal statement, Leon's ruling to replace the recurring
+%   vocabulary too).  Body only; no result, label, number, or claim changed.
+%   Glossary applied: "ordering rent" / "the rent" / "Clifford rent" -> "the
+%   ordering shift" (16, incl. prop:rent, thm:core(4), subsec:core, figure and
+%   caption); "pay(s) a rent" -> "incur(s) a shift" (4); "touchpoint" -> "point
+%   of contact" (6, incl. two remark titles); "honest boundary" -> "the boundary" /
+%   "the Lorentzian boundary" / "as it stands" (5); "kills/killed" (operator) ->
+%   "annihilates/annihilated" (9); "lives/live in" -> "lies/lie in" (7);
+%   "upstairs" -> "in the completion" (2); "folklore statement" -> "standard, though unproved";
+%   "machinery" -> "methods/results/routines" (4); "in disguise" -> "under
+%   another name"; "mints" -> "produces"; "the debts are declared" -> "the prior
+%   work is acknowledged"; "business" -> "task"; "blind(ness)" -> "insensitiv(ity)"
+%   (8, incl. prop:blind title and subsec:quartic).  Non-glossary choices:
+%   "the palatial bridge" -> "the palatial relation" (sec 5 title) / "the
+%   relation to palatial twistor theory" / "on the palatial side" (abstract);
+%   "soldering/Schouten wing(s)", "wing spaces/decomposition/composite" ->
+%   "summand(s)" (24; T7's "wings -> summands", NOTE for T10 which imports the
+%   decomposition); "chain of custody" -> "chain of results"; "closes the
+%   triangle" -> "completes the identification"; "attack" -> "approach";
+%   "The receptacle" (rem title) -> "Where a curvature operator could enter";
+%   "three-qubit floor" -> "three-qubit level"; "staircase on which the palatial
+%   storey stands" -> "states on which the palatial storey acts"; "runs it both
+%   ways" -> "applies it in both directions"; "celebrated", "genuinely",
+%   "theorem-backed architecture", "The surprise:" removed or made literal.
+%   Compile x2: 0 errors, 0 undefined refs, 30 pages.  Script 69/69 unchanged.
+%   Numbering unchanged (aux diff on label numbers empty; page numbers of some
+%   Section 6 labels moved by one).  Abstract 248 words.
+% v1.5 (2026-09-02, derivation session, from the v1.4 tag-sweep review):
+%   X1-X5: five script tags brought to the paper's symbols (Psi_C and the
+%       constant -1/-2 without the letter lambda; kappa^2 = -1/2 noted as the
+%       C-normalised -1; xhat for the Hermitian samples, not sigma_k or X;
+%       A1/A2 reconciled with A^(1), A^(2); constants printed as numbers).
+%   X7: p_c := P(e_c) defined once and the wings indexed by direction
+%       (sigma_{e}, tau_{p} -> sigma_a, tau_c with e = e_a, p = P(e_c)).
+%   X8: the scoping sentence attributes the tractor triple to the tractor
+%       literature.  X6: abstract untouched (247 raw tokens; next change
+%       must trade).
+%   Script: 69/69, tags only.  Compile x3: 0 errors, 0 undefined refs,
+%   30 pages.  No result numbers changed.  Mechanical-pass list unchanged:
+%   B7, N19, V14, N24 (30pp, 69), N25, N29, N34/N36, N38.  Open for Leon:
+%   unchanged.
+% v1.4 (2026-09-02, derivation session, from the v1.3 targeted re-review):
+%   W1: three script tags retagged to the paper's symbols ({w_j^, iota_j'}
+%       ladder pairs; A^(1), A^(2)).  W2: Section 9 names the operators, not
+%       the letters.  W3: scoping sentence widened to every tractor splitting
+%       (fact:vacuumT6 named); wings written sigma_e, tau_p in the proof.
+%   W4, W5, W8: abstract and Contribution (2) agree ("stabiliser of the
+%       infinity line, equivalently of the ray of n_inf"); "null lines that
+%       resolve division by zero" in the abstract and the thm:spinorid gloss;
+%       parentheticals merged.  W6: orientation from a2, b2, b3, b4 of
+%       Section 2.  W7: prop:lorentz parenthetical.  W9: prop:reality(2)
+%       names the rescaled-kappa check.  W10: header of v1.3 corrected below.
+%       W11: degenerate-case guard mirrored in the script.
+%   Script: 69/69 (tags only; no check added or removed).  Compile x3:
+%   0 errors, 0 undefined refs, 30 pages.  No result numbers changed.
+%   Correction to the v1.3 header: Spin(V_C) was closed by definition
+%   (exponentials of all bivectors); no spanning-set remark is stated.
+%   Still for the mechanical pass: B7, N19, V14, N24 (30pp, 69), N25, N29,
+%   N34/N36, N38.  Open for Leon: unchanged.
+% v1.3 (2026-09-02, derivation session, from the v1.2 three-agent re-review):
+%   V1: Section 9 coverage paragraph brought in line with the renamings
+%       ({A_i,B_j} ladder pairs; A^(1), A^(2); -2 det(i xhat); C-form of the
+%       wing composite).  V2: prop:localtwistor proof uses W_C throughout.
+%   V3: script: prop:reality(2) checks now test Sigma(Z2,Z1) =
+%       conj(lambda_0) conj Sigma(Z1,Z2) and the phase mu = e^{-i theta/2} for
+%       lambda = conj(lambda_0); a new check rescales kappa by (3+4i)/5 so the
+%       general clause is tested where the two candidate relations differ.
+%   V4: thm:spinorid(3) statement matches its proof (null lines, double cover
+%       by rays); abstract and Contribution (1) likewise.
+%   V5: the parenthetical on the third identification's sign corrected.
+%   V6: irreducibility argument carries the <e_i,e_i> factors.  V7:
+%       universality stated in place (tensor-algebra quotient).  V8:
+%       Contribution (2) carries the rem:ltconvention caveat.  V9, V10, V15
+%       script-delegation wording.  V11: coordinate conjugation renamed
+%       varsigma, Weyl operator renamed \mathcal{W}, scoping sentence for rho
+%       and sigma against the tractor triple in Section 2.  V12: prop:lorentz
+%       in prose.  V13: prop:blind display split (gather*).  V18: abstract
+%       and Contribution (2) agree on line/ray; "projectivised null cone";
+%       PT^pm defined.  V19: Spin(V_C) generated by exponentials of all
+%       bivectors (closed by definition; no spanning-set remark is stated);
+%       orientation of W_{1,3} fixed; "complexified" in thm:incidence(2),(3).
+%   V16: GA.py section-7 banner attribution corrected (comment only).
+%   V17: compiled three times; final log clean.
+%   Script: 69/69 (68 + the rescaled-kappa check).  Compile: 0 errors,
+%   0 undefined refs, 30 pages.  No result numbers changed.
+%   Still for the mechanical pass: B7 (T10:116), N19 (T11:239, T14:125),
+%   V14 (T12:114 -> Thm.~3.1, Thm.~5.3; T16:100 add Thm.~4.2), N24 (T17 row:
+%   30pp, 69), N25 (T13, T1), N29, N34/N36, N38.  Open for Leon: unchanged.
+% v1.2 (2026-09-01, derivation session, from the v1.1 three-agent review):
+%   B1: prop:localtwistor(3) quantifies the wing constants over the metric-
+%       normalised identification of W_C with S^B x S^{B'} (fixed up to sign),
+%       so the product c_1 c_2 is a genuine invariant; a = AA', c = CC' named
+%       (N35).
+%   B2: prop:reality(2) proof: B' = lambda_0 B gives Sigma(Z2,Z1) =
+%       conj(lambda_0) conj Sigma(Z1,Z2); lambda := conj(lambda_0), and the
+%       Hermitian-making phase is stated for that lambda.
+%   B3: rem:googlyhonest opening made timeless.  B4: Position section: T7
+%       supplies the homogeneity half of successor problem (4), not the
+%       transform; T7 moved out of the predecessor list (four predecessors);
+%       N16/N17 also applied: T10 and T14 added to the dependants (bibitems),
+%       T5's citation described correctly, T11/T12 split, T0 credited where
+%       the conventions are fixed (Section 2), "only" dropped.
+%   B5: fact:completion provenance now Thms 4.2, 4.10, 4.13 of T1.
+%   B6: abstract and Contribution (2): the Poincare PARABOLIC is the
+%       stabiliser of the infinity line/ray.
+%   N7-N10: abstract traded to what is proved (real slice of the Klein
+%       quadric; the -2 in -2s-2; the ordering-blindness the conjecture needs;
+%       twistor space as a chirality half); N26: prop:localtwistor and
+%       prop:blind in the Contribution list, cor:threelang in Scope.
+%   N11: thm:core(3) "in the dual pair of slots".  N12: intro and
+%       rem:touchtractor carry the rem:ltconvention caveat.  N13: spin
+%       assumption stated in prop:localtwistor.  N14: fact:vacuumT6 carries
+%       the converse (T6 Thm 4.7) and cor:threelang defines I_g.  N15:
+%       prop:reality(5) closing sentence no longer mixes bases.  N21:
+%       universality, the antisymmetric normal form, irreducibility of V_C,
+%       and dual complements all argued or located; N6: "null lines".
+%   N18: ButlerT7 title updated; ButlerT3 subtitle added.  N22, N23, N27
+%       (prop:rent ladder operators renamed a, b -> A, B; W_C in
+%       prop:localtwistor), N28 (rho named in the preamble), N30, N31 (A^(1),
+%       A^(2)), N33 (figure referenced), N37 (two words) applied.
+%   Script: 68/68 (was 69): the two rem:signature checks retagged/removed
+%       (N1), the dim tautology removed (N2), the three [R_i,B_i] brackets
+%       added to the so(1,3) table (N3), a CAR check on the generic twistor's
+%       own pair system added (N4), mmul = g.field_mat_mul and kernel promoted
+%       to GA.field_kernel (N5; GA.py append-only).
+%   Compile: pdflatex x2, 0 errors, 0 undefined refs, 30 pages.
+%   Numbering: no result numbers changed (no environments inserted or
+%   removed).  Still for the mechanical pass: T10:116 locator -> Prop.~4.10(1)
+%   (B7); T11:239 and T14:125 section locators -> Thm.~5.3 (N19); T17's T9
+%   row (N24); T13's uncited ButlerT9 bibitem and T1's Butler2026 cite (N25);
+%   N34/N36 (Section 9 as itemize) left as is.
+%   Open for Leon: unchanged (Penrose-Rindler locators; P_ab sign; rule 5).
+% v1.1 (2026-09-01, derivation session, from the v1 review T09_review_v1.md,
+%   all blocking and non-blocking items):
+%   B1: rem:signature replaced by Proposition prop:reality: kappa constructed
+%       explicitly (Gamma c(b_4) J), unique up to scale by Schur, kappa^2 < 0,
+%       Sigma Hermitian (phase argument), Sigma-nullity, signature (2,2) read
+%       off Sigma, real points = Sigma-null lines = anti-Hermitian A, so the
+%       factor i is derived; abstract sentence reworded to what is proved.
+%   B2: prop:blind(2) restated (closure of the ASD subalgebra, commutation with
+%       the SD quadratics, zero adjoint-isotypic component at every order) and
+%       proved; fact:reducibility (complete reducibility for sl2) imported.
+%   B3: prop:localtwistor(3) restated: wings unique up to scale by the
+%       one-dimensional equivariant Hom spaces (lem:homone(2)), the invariant
+%       wing composite computed as (1/2)c(e_a)c(P e_c) on S_omega and script-
+%       checked, the one remaining convention (Penrose-Rindler's P_ab against
+%       the Schouten tensor) declared an import in rem:ltconvention.
+%   B4: thm:incidence(4)(iv) chirality assignment proved (lem:homone(1)).
+%   B5: Position-in-the-series section added (bibitems T0, T11, T12, T16, T17).
+%   B6: drafting-history sentence removed from the verification section.
+%   N1: Leibniz identity printed; isotropic basis given explicitly (a1+b1,
+%       a2+b2, b3+i b4); c(u)^2 computation printed; simplicity via the 64
+%       independent blade images; module uniqueness via matrix units.
+%   N2: Witt/transitivity eliminated: conjugacy of dual pairs by Gram matrices,
+%       injectivity of Psi by a direct Clifford argument, the plane of a null
+%       vector by the radical argument in ex:psi, SL(4) generated by
+%       transvections in prop:spiniso.
+%   N3: thm:states wording (normal ordering, dim <= 3 clause, "maximal" dropped).
+%   N4: lem:quartic(2),(3) restricted to balanced words; interpretive clause
+%       moved to rem:receptacle.  N5: -2s-2 ordering derivation marked as
+%       Penrose-Rindler's.  N6: cor:threelang proof gives the equivariance
+%       argument and forward-references the spin bundle.  N7: Weyl's theorem
+%       imported as fact:weyl; prop:lorentz marked classical.  N8: C = c/sqrt2
+%       stated in Section 2 and Section 9.  N9: slogans moved out of
+%       statements.  N10: rem:dims points to prop:reality.  N11: lem:star
+%       invariant argument.  N12: fact:ltt(ii) locator (Vol. 2, Ch. 6).
+%   Compile: pdflatex x2, 0 errors, 0 undefined refs, 29 pages (was 23).
+%   Script: verify_T09.py 69/69 (14 new checks: real basis,
+%   conjugation, kappa intertwines, kappa^2 and parity, lambda, Sigma Hermitian
+%   (twice), null planes, signature (2,2) from Sigma, su(2,2) invariance, real
+%   points = anti-Hermitian A (twice), wing composite, chiral planes).
+%   Result numbering changed: prop:reality, lem:homone, fact:reducibility,
+%   fact:weyl, rem:receptacle, rem:ltconvention inserted; rem:signature removed.
+%   Cross-references: T9's result numbers moved (see above), so INBOUND
+%   locators from T5, T6, T7, T11, T12, T16, T17 into T9 need re-checking
+%   with verify_crossrefs.py T09 at declare-done (rule 21). Run in this
+%   session: 39/40 OK; the one stale inbound locator is
+%   T10_dark_energy.tex:116 \cite[Prop.~4.8(1)]{ButlerT9}, which must read
+%   Prop.~4.10(1) (prop:localtwistor moved from 4.8 to 4.10). Sections 3 and
+%   5 are unrenumbered, so T7, T11, T12, T14, T16 locators are unaffected.
+%   Open for Leon (rule 9): the Penrose-Rindler locators (Vol. 2, Ch. 6) for
+%   the local twistor transport equation and the helicity operator, and the
+%   sign of their P_ab relative to the Schouten tensor (rem:ltconvention).
+% 2026-09-01 addendum (same day, from the v4 review of T7): the uncited
+%   \bibitem{Butler2026} (the unpublished monograph) removed per rule 17(b),
+%   the same defect T7's v1.1 removed from its own bibliography.
+% 2026-09-01 (T7 knock-on, from the review of T7 v1.1): successor problem 4
+%   still read as fully open and assigned the -2s-2 derivation to T7; T7 v1.1
+%   Prop 5.2 states and proves it from Thm 5.7(4)'s rent. The problem now
+%   records the discharged half with the citation (bibitem ButlerT7 added)
+%   and keeps the transform itself open. No result numbers changed.
+% 2026-08-24: renumbered (was T13) per Leon; title and content unchanged.
+% v1.0 (sprint 2, 2026-08-21): review draft, M1-M6 complete (Fock model,
+% Chevalley pairing + spinor identification, incidence, local twistors,
+% palatial bridge, googly boundary + conjecture, verification, assembly).
+% House rules: no em dashes; short abstract; standard series disclaimer;
+% physics touchpoints kept (rule 10); proof standard per rule 11 (Fact
+% (imported) discipline); verification imports GA.py (rule 12); diagrams
+% per rule 13.
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{question}[theorem]{Question}
+
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\PT}{\mathbb{PT}}
+\newcommand{\Mat}{\mathrm{M}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\nO}{n_0}
+\newcommand{\nInf}{n_\infty}
+\newcommand{\ip}[2]{\langle #1, #2\rangle}
+\newcommand{\Som}{S_\omega}
+\newcommand{\Spi}{S_\pi}
+
+\title{\bfseries The Twistor Correspondence\\[4pt]
+  \large\itshape Ascended Spinors, Incidence, and the Palatial Bridge}
+\author{Leon Butler\\ \normalsize\href{mailto:lbutler.math@gmail.com}{\texttt{lbutler.math@gmail.com}}\\ \normalsize ORCID: \href{https://orcid.org/0009-0006-4449-5617}{0009-0006-4449-5617}}
+\date{Version 1.0, September 2026 \textperiodcentered{} Transport Papers, T9}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\normalsize
+The series' completion of the spacetime algebra is $\Cl(1,3) \to \Cl(2,4)$, forced by division by zero, and the spinor module of the completed algebra carries Penrose's twistor space as a chirality half. This paper proves the correspondence and applies it in both directions. The Chevalley construction realises complexified $\Cl(2,4)$ irreducibly on the Fock space of three fermionic ladder pairs, and the ambient vector space is recovered as $\Lambda^2\T$ with the completion's null lines as the real slice of the Klein quadric: the null lines that resolve division by zero are lines of projective twistor space. The incidence relation $\omega = ix\pi$ is proved to be the completion's chart, term by term: the $(\omega,\pi)$ splitting of a twistor is the Witt completion at spinor level, the Poincar\'e parabolic is the stabiliser of the infinity line, equivalently of the ray of $\nInf$, the factor $i$ is the derived anti-Hermiticity of the real chart for the twistor form, and local twistor transport is the spinor square root of the tractor connection, up to one declared sign convention. On the palatial side: statistics refutes identifying quantised twistors with the completion's ladder pairs, and a two-storey picture is proved instead: twistors are the \emph{states} of three ladder pairs, $\mathfrak{so}(2,4)$ is the shared core of both storeys, and both quantisations incur a half-per-dimension ordering shift, the palatial half of which is the $-2$ in Penrose's homogeneity $-2s-2$. Unexpectedly, the ordering insensitivity the googly conjecture needs is a theorem. Sixty-nine exact checks verify every computation.
+\end{abstract}
+
+\medskip
+\noindent\textbf{MSC 2020.} Primary 15A66, 53C28; Secondary 32L25, 81R25, 83C60.\\
+\textbf{Keywords.} twistor theory; Klein quadric; Clifford algebras; pure spinors; conformal geometry; local twistors; incidence relation; palatial twistor theory; second quantisation.
+
+\newpage
+\textbf{Authorship and disclosure. }The founding idea of the series is the author's: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The direction of investigation and the critical review of the results are likewise the author's. The mathematical development and the drafting of the text were carried out in extended collaboration with Claude Fable 5 (Anthropic), an AI system.
+
+\newpage
+\section{Introduction}\label{sec:intro}
+
+The transport principle \cite{ButlerT1} resolves division by zero in the spacetime algebra $\Cl(1,3)$ by a forced minimal completion into $\Cl(2,4)$, and the series has so far exploited the completion's vector side: the fibre quadric whose points resolve the division \cite{ButlerT1}, the sheaf of completions over a degenerating metric \cite{ButlerT4}, the tower of iterated completions and its CAR limit \cite{ButlerT3}, the vacuum equations as a parallel ideal point of the quadric \cite{ButlerT6}, and T5's chain from the Schwarzschild gauge field to the Page curve \cite{ButlerT5}. This paper develops the completion's \emph{spinor} side, and finds there a formalism that has existed since 1967: Penrose's twistor theory.
+
+The correspondence is not an analogy, and the paper's task is to prove it as a set of theorems and then apply it in both directions. In one direction, the series gains: fifty years of twistor technology (the Klein correspondence, the incidence geometry, local twistor transport, the twistor description of massless fields) becomes available to the transport programme with an explicit dictionary. In the other direction, the series contributes: the completion explains \emph{why} the twistorial objects are what they are. The two distinguished skew lines of projective twistor space are the null pair adjoined by the Witt completion; the incidence relation is the completion's chart, re-derived rather than postulated; and the palatial programme's noncommutative twistor algebra is exactly one quantisation above the completion's ladder pairs, with the conformal algebra as the shared core.
+
+Three questions organise the paper. \emph{What is twistor space, from the algebra alone?} Section \ref{sec:spinors} answers with the Chevalley pure-spinor construction, proved outright at this dimension: the complexified ascended algebra acts irreducibly on the eight-dimensional fermionic Fock space of three null pairs, twistor space and its conjugate dual are the two chirality halves, and the ambient vector space is recovered as $\Lambda^2\T$ with the Klein quadric as its projectivised null cone (Theorem \ref{thm:spinorid}). \emph{Where is the completion, inside twistor geometry?} Section \ref{sec:incidence} computes the Pl\"ucker image of Penrose's incidence relation and finds, term by term, the completion's point embedding: the $(\omega,\pi)$ splitting is the Witt completion at spinor level, and the stabiliser of the infinity line is the Poincar\'e parabolic (Theorem \ref{thm:incidence}); local twistor transport is then identified as the spinor square root of the tractor connection of \cite{ButlerT6}, up to one declared sign convention (Proposition \ref{prop:localtwistor}, Remark \ref{rem:ltconvention}). \emph{What is the relation to quantised twistors?} Section \ref{sec:palatial} first refutes: the palatial algebra is bosonic and admits no finite-dimensional representation, so it cannot be the completion's fermionic pair algebra (Proposition \ref{prop:statistics}). The corrected picture is a two-storey construction: the completion's fermionic quantisation turns ambient directions into twistor \emph{states}; the palatial bosonic quantisation turns twistor states into operators; $\mathfrak{so}(2,4)$ is the invariant core of both storeys, and the ordering shift of a half per dimension recurs at each (Theorem \ref{thm:core}). Section \ref{sec:googly} states the Lorentzian boundary (no real Lorentzian vacuum is half-flat) and poses the googly-at-quartic-order conjecture precisely.
+
+\subsection*{Prior art}
+
+The prior work is extensive and is acknowledged once, here. \emph{Twistor theory} is Penrose's \cite{Penrose1967}, with the standard treatment in Penrose-Rindler \cite{PenroseRindler86}; the incidence relation, twistor space's $SU(2,2)$ structure, the infinity twistor, and the homogeneity $-2s-2$ of massless-field wavefunctions are all classical there. The \emph{Klein correspondence} between lines of $\mathbb{P}^3$ and points of a quadric in $\mathbb{P}^5$ predates all of this \cite{Klein1870}. \emph{Local twistors} and their transport are due to Penrose and collaborators \cite{PenroseMacCallum73, Dighton74}, and their identification with the conformal tractor spin bundle is standard in the tractor literature \cite{BEG1994, CurryGover2018}. The \emph{pure spinor} methods are Cartan's and Chevalley's \cite{Chevalley54}. The \emph{nonlinear graviton} is \cite{Penrose76}, and \emph{palatial twistor theory} is \cite{Penrose15}. What this paper claims as new is the transport reading: the derivation of twistor space as the spinor module of a completion that is \emph{forced} by a division-by-zero problem \cite{ButlerT1}, the term-by-term identification of the incidence relation with the completion's chart and of the $(\omega, \pi)$ splitting with the Witt completion, the statistics refutation of the naive palatial identification together with the proved two-storey replacement, and the quartic-order localisation conjecture for the googly data. Where a statement below is classical, its provenance is marked; where it is a Fact (imported), it is typeset as one.
+
+\subsection*{Contribution}
+
+At the standard of \cite{ButlerT1}, with imports as Facts. (1) The spinor identification proved from the Chevalley construction: complexified $\Cl(2,4)$ acts irreducibly on $\Lambda^\bullet W$ for a maximal isotropic 3-plane $W$; the chirality halves are $\T$ and its conjugate dual; the identification of the completion's null lines with the real slice of the Klein quadric (Section \ref{sec:spinors}), and the real form with its $(2,2)$ Hermitian structure, constructed rather than imported (Section \ref{sec:incidence}). (2) The incidence theorem: the Pl\"ucker bivector of the incidence line equals the completion's point embedding, with all four consequences (skew lines = adjoined null pair, splitting = Witt completion, incidence = chart, Poincar\'e parabolic = stabiliser of the infinity line (equivalently of the ray of $\nInf$)), the three-language dictionary closing the triangle with \cite{ButlerT6}, and local twistor transport as the spinor square root of the tractor connection, up to one declared sign convention (Remark \ref{rem:ltconvention}; Section \ref{sec:incidence}). (3) The relation to palatial twistor theory: the statistics no-go, twistors as states of three ladder pairs, the shared $\mathfrak{so}(2,4)$ core with the ordering-shift dictionary (Section \ref{sec:palatial}). (4) The nonlinear-graviton boundary as it stands, the ordering insensitivity of the anti-self-dual sector, and the googly conjecture at quartic order (Section \ref{sec:googly}). (5) Machine verification of every computational identity in exact arithmetic \cite{ButlerVerifyT9}.
+
+\section{Setting and imports}\label{sec:setting}
+
+The ambient space of the completion is $V := \R^{2,4}$, with the Clifford conventions of the primer T0 \cite{ButlerT0} and the notation of \cite{ButlerT6}: a Witt basis $\nO, \nInf$ (null, $\ip{\nO}{\nInf} = 1$) and a Minkowski complement $W_{1,3} = \{\nO, \nInf\}^\perp \cong \R^{1,3}$; points of conformal Minkowski space are null rays, embedded as $X(x) = \nO + x - \tfrac12\eta(x,x)\,\nInf$ up to the sign conventions fixed there. We write $V_\C := V \otimes_\R \C$ for the complexification, with the $\C$-bilinear extension of the form (not a Hermitian pairing), and $\bar{\phantom{v}}$ for the real structure $v \otimes z \mapsto v \otimes \bar z$.
+
+\begin{fact}[Imported: the forced completion and its fibre quadric]\label{fact:completion}
+Division by a type-N zero divisor in $\Cl(1,3)$ admits no element-level resolution (the transvection no-go), and the minimal completion resolving it is $\Cl(1,3) \hookrightarrow \Cl(2,4)$, unique up to isomorphism; the resolving assignments lie on the quadric of null rays of $\R^{2,4}$, the completion's point space. \emph{Provenance:} \cite[Thms.~4.2, 4.10, 4.13]{ButlerT1}; representation-independent minimality \cite[\S4.6]{ButlerT1}.
+\end{fact}
+
+\begin{fact}[Imported: ladder pairs and Fock modules over the reals]\label{fact:fock}
+A hyperbolic (Witt) pair $e_+, e_-$ in a real Clifford algebra yields the null pair $f = \tfrac12(e_+ + e_-)$, $f^* = \tfrac12(e_+ - e_-)$ with $f^2 = f^{*2} = 0$, $ff^* + f^*f = 1$, and the ladder pairs of a Witt decomposition act on the exterior algebra of the creation span as a fermionic Fock module, irreducibly when the form is split. \emph{Provenance:} \cite[\S7]{ButlerT1}; \cite[\S 4]{ButlerT3}. The complexified version needed below is proved in Theorem \ref{thm:purespinor} rather than imported, since the maximal isotropic planes of $V_\C$ are larger than the real Witt index allows.
+\end{fact}
+
+Two dimension counts we use, $\dim_\R \Cl(2,4) = 2^6 = 64$ and $\dim_\C \Cl(2,4)_\C = 64$ for the complexification $\Cl(2,4)_\C = \Cl(2,4)\otimes_\R\C \cong \Cl_6(\C)$, the second of which is checked in the verification script (the first follows from it, since complexification doubles the real dimension); Remark \ref{rem:dims} records where they place the algebra in the standard tables. Two letters are reused with the tractor literature's meanings wherever a tractor is written in its scale splitting (Facts \ref{fact:vacuumT6} and \ref{fact:ltt}, Corollary \ref{cor:threelang}, Proposition \ref{prop:localtwistor}): inside the tractor triple $(\sigma, \mu, \rho)$, $\sigma$ and $\rho$ are the top and bottom slots, and $\rho_g$ is the bottom slot of the scale tractor; outside a triple, $\rho$ is the spinor action and $\sigma$ the pairing of Proposition \ref{prop:reality}, and $\sigma_a$ with a direction index is the soldering summand of Proposition \ref{prop:localtwistor}. Throughout, ``twistor space'' means the module $\T$ constructed in Theorem \ref{thm:spinorid}; no prior twistor formalism is assumed, and the contact with Penrose's conventions is made in Section \ref{sec:incidence}. We fix once an orthonormal basis $a_1, a_2$ (norm $+1$), $b_1, \dots, b_4$ (norm $-1$) of $V$, with $\nO, \nInf$ in the span of $a_1, b_1$. The verification script works with $C(v) := c(v)/\sqrt2$, for which $\{C(u), C(v)\} = \ip{u}{v}$; every identity below is stated for $c$ and checked for $C$, the two differing only by powers of $\sqrt2$.
+
+\section{Twistors as ascended spinors}\label{sec:spinors}
+
+\subsection{The pure-spinor construction}\label{subsec:purespinor}
+
+\begin{theorem}[The Fock model of the complexified ascended algebra]\label{thm:purespinor}
+Let $W \subset V_\C$ be a maximal totally isotropic subspace ($\dim_\C W = 3$) and $W'$ a complementary maximal isotropic subspace, dual to $W$ under the $\C$-bilinear form (such a pair exists, and any two such pairs are conjugate under $O(V_\C)$). On the exterior algebra $\Lambda^\bullet W$ ($\dim_\C = 2^3 = 8$) define
+\[
+c(w) := \sqrt2\; w \wedge (\cdot) \quad (w \in W),
+\qquad
+c(w') := \sqrt2\; \iota_{w'} \quad (w' \in W'),
+\]
+with $\iota$ contraction through the pairing. Then $c(u)^2 = \ip{u}{u}\,\id$ for every $u \in W \oplus W' = V_\C$, so $c$ extends to an algebra map $\Cl(V_\C) \to \End(\Lambda^\bullet W)$; this map is an isomorphism, and $\Lambda^\bullet W$ is the unique irreducible module of $\Cl(2,4)_\C$: the Dirac spinors of the completion. Vectors act oddly, so the even and odd halves
+\[
+\T := \Lambda^{\mathrm{even}} W, \qquad \T' := \Lambda^{\mathrm{odd}} W,
+\]
+each of complex dimension 4, are modules of the even subalgebra $\Cl^0(2,4)_\C \cong \End(\T) \oplus \End(\T')$: the two chiralities.
+\end{theorem}
+
+\begin{proof}
+Existence of the isotropic pair: in the orthonormal basis of Section \ref{sec:setting} take
+\begin{align*}
+w_1 &:= a_1 + b_1, & w_2 &:= a_2 + b_2, & w_3 &:= b_3 + i\,b_4,\\
+w_1' &:= \tfrac12(a_1 - b_1), & w_2' &:= \tfrac12(a_2 - b_2), & w_3' &:= -\tfrac12(b_3 - i\,b_4).
+\end{align*}
+The first two isotropic vectors pair a plus direction with a minus direction and are real; the third pairs two minus directions and is complex, $\ip{b_3 + ib_4}{b_3 + ib_4} = -1 + 1 = 0$; and $\ip{w_j}{w_k'} = \delta_{jk}$, $\ip{w_j}{w_k} = \ip{w_j'}{w_k'} = 0$ by inspection. This is the basis the verification script uses, over the Gaussian rationals. Conjugacy: two dual pairs $(W, W')$ and $(U, U')$ with dual bases $w_j, w_j'$ and $u_j, u_j'$ have the same Gram matrix $\bigl(\begin{smallmatrix} 0 & I \\ I & 0\end{smallmatrix}\bigr)$, so the linear map $w_j \mapsto u_j$, $w_j' \mapsto u_j'$ is an isometry of $V_\C$ carrying one pair to the other. The Clifford relation: for $w_1, w_2 \in W$, $\{w_1\wedge, w_2\wedge\} = 0$ and $\ip{w_1}{w_2} = 0$; for $w'_1, w'_2 \in W'$ likewise with $\{\iota_{w'_1}, \iota_{w'_2}\} = 0$; and the mixed case is the graded Leibniz identity: contraction is the degree $-1$ derivation extending $\iota_{w'}(w) = \ip{w}{w'}$, so for $\xi \in \Lambda^k W$,
+\[
+\iota_{w'}(w\wedge\xi) = \ip{w}{w'}\,\xi - w\wedge\iota_{w'}\xi, \qquad\text{i.e.}\qquad \{w\wedge, \iota_{w'}\} = \ip{w}{w'}\,\id ,
+\]
+which the script also verifies on every basis state. Expanding $u = w + w'$,
+\[
+c(u)^2 = 2\,(w\wedge + \iota_{w'})^2 = 2\,\{w\wedge, \iota_{w'}\} = 2\ip{w}{w'}\,\id = \ip{u}{u}\,\id ,
+\]
+using $\ip{w+w'}{w+w'} = 2\ip{w}{w'}$. Since $\Cl(V_\C) = T(V_\C)/\langle u\otimes u - \ip{u}{u}\rangle$, a linear map $c: V_\C \to A$ into an algebra with $c(u)^2 = \ip{u}{u}1$ factors uniquely through $\Cl(V_\C)$; so $c$ extends. Isomorphism: $\Cl(V_\C)$ is spanned by the $64$ ordered products of the six basis vectors (the Clifford relations reorder any word into one of them), and the script checks that their $64$ images are linearly independent in $\End(\Lambda^\bullet W)$; so $c$ is injective on a spanning set of size $64 = \dim \End(\Lambda^\bullet W)$, hence bijective, and $\Cl(V_\C) \cong \End(\C^8)$ is simple. Irreducibility and uniqueness: $\End(\C^8)$ acts irreducibly on $\C^8$ (any nonzero vector is carried onto any other by a rank-one map), and every module $M$ of a full matrix algebra is a direct sum of copies of $\C^8$: the matrix units give $M = \bigoplus_i E_{ii}M$ with $E_{1i}: E_{ii}M \to E_{11}M$ and $E_{i1}$ inverse isomorphisms, so $M \cong \C^8 \otimes E_{11}M$, and an irreducible $M$ is $\C^8$. Vectors are odd operators (wedge and contraction each shift exterior degree by one), so the even subalgebra preserves the parity split, and on an 8-dimensional module with a 4+4 split the even part $\Cl^0(V_\C)$, of dimension 32, maps onto $\End(\T)\oplus\End(\T')$, of dimension $16 + 16 = 32$, injectively by simplicity of its two factors and the disjointness of their supports; the script checks the block structure exactly.
+\end{proof}
+
+\begin{remark}[Dimensions, and the real form]\label{rem:dims}
+Over the reals, $\Cl(2,4) \cong \Mat_4(\HH)$ and $\Cl^0(2,4) \cong \Mat_4(\C)$; the paper never uses these classification statements as inputs (the complexified Fock model carries all the structure), but they locate the construction in the standard tables, and the counts $64 = 4^2\cdot 4$ and $32 = 4^2 \cdot 2$ are the ones that make them possible. What the real structure of $V \subset V_\C$ adds is an antilinear conjugation $\kappa$ on the module, constructed explicitly and shown unique up to scale in Proposition \ref{prop:reality}, which pairs $\T$ with $\T'$: this is the statement that dual twistors are conjugate twistors, and it induces on $\T$ the Hermitian form of signature $(2,2)$ preserved by $\mathrm{Spin}(2,4) \cong SU(2,2)$. The signature is computed in the incidence section, where the $(\omega, \pi)$ splitting makes it a two-line count (Proposition \ref{prop:reality}(4)). \emph{Point of contact (per the series' practice):} $\T$ with its $SU(2,2)$ structure is exactly Penrose's twistor space \cite{Penrose1967, PenroseRindler86}, and the conjugation pairing $\T \leftrightarrow \T'$ is his twistor-dual-twistor conjugation.
+\end{remark}
+
+\subsection{The Chevalley pairing}\label{subsec:chevalley}
+
+The passage from the module $\Lambda^\bullet W$ back to the vector space $V_\C$ is a bilinear pairing on spinors that Chevalley's construction carries with it \cite{Chevalley54}. We set it out with every sign computed, since the signs are what the incidence theorem depends on. Fix a generator $w_1 \wedge w_2 \wedge w_3$ of the line $\Lambda^3 W$ and write $\operatorname{top}(\xi)$ for the coefficient of $w_1\wedge w_2\wedge w_3$ in the degree-three component of $\xi \in \Lambda^\bullet W$. Let $\alpha$ be the linear map acting on $\Lambda^k W$ as $(-1)^{k(k-1)/2}$, so $\alpha = +1$ on degrees $0, 1$ and $-1$ on degrees $2, 3$. Throughout, $\mathrm{Spin}(V_\C)$ denotes the group generated by the exponentials of all bivectors $\beta \in \Lambda^2 V_\C$, realised in the Clifford algebra as $\tfrac12 c(u)c(v)$ for orthogonal $u, v$ and their sums, acting on vectors by conjugation ($e^{\beta} c(v) e^{-\beta} = c(e^{\operatorname{ad}\beta} v)$, the vector action being computed in Proposition \ref{prop:spiniso}) and on the module by the given action; $\rho$ denotes the action of bivectors on $\Lambda^\bullet W$ and on its halves, $\rho(u\wedge v) := \tfrac12 c(u)c(v) - \tfrac12\ip{u}{v}$ (Propositions \ref{prop:spiniso} and \ref{prop:rent}).
+
+\begin{lemma}[The Chevalley pairing]\label{lem:chevalley}
+Define $B(x, y) := \operatorname{top}\bigl(\alpha(x) \wedge y\bigr)$ for $x, y \in \Lambda^\bullet W$. Then:
+\begin{enumerate}
+\item $B$ vanishes on $\T \times \T$ and on $\T' \times \T'$, and restricts to a perfect pairing between $\T$ and $\T'$;
+\item $B$ is antisymmetric: $B(y,x) = -B(x,y)$ for all $x, y$;
+\item every vector is $B$-self-transpose: $B\bigl(c(v)x,\, y\bigr) = B\bigl(x,\, c(v)y\bigr)$ for all $v \in V_\C$;
+\item $B$ is infinitesimally $\mathrm{Spin}$-invariant: for the bivector $\beta_{uv} := \tfrac12 c(u)c(v)$ with $\ip{u}{v} = 0$, $B(\beta_{uv}x, y) + B(x, \beta_{uv}y) = 0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) $B(x,y)$ can be nonzero only when $\deg x + \deg y = 3$, which is odd; two elements of the same parity pair to zero. Perfection between $\T$ (degrees $0,2$) and $\T'$ (degrees $3,1$): on the monomial bases, $B(1, w_{123}) = 1$, $B(w_{23}, w_1) = \alpha(w_{23})\wedge w_1$-coefficient $= -\operatorname{top}(w_2\wedge w_3\wedge w_1) = -1$, and cyclically; the Gram matrix of $B$ between the two four-dimensional halves is a signed permutation matrix, hence invertible (the script checks that it has rank four).
+(2) For $x \in \Lambda^k$, $y \in \Lambda^{3-k}$: $B(y,x) = (-1)^{(3-k)(2-k)/2}\operatorname{top}(y \wedge x)$ and $y\wedge x = (-1)^{k(3-k)}x\wedge y$, so $B(y,x)/B(x,y) = (-1)^{(3-k)(2-k)/2 + k(3-k) - k(k-1)/2}$; evaluating the exponent at $k = 0,1,2,3$ gives $3, 3, 1, -3$, odd in every degree, so the ratio is $-1$ throughout.
+(3) For $w \in W$ (wedge case): $\alpha(w \wedge x)\wedge y = (-1)^{k(k+1)/2}\,w\wedge x\wedge y$ while $\alpha(x)\wedge(w\wedge y) = (-1)^{k(k-1)/2}(-1)^k\,w\wedge x\wedge y$; the two sign prefactors agree, since $k(k+1)/2 - k(k-1)/2 - k = 0$. For $w' \in W'$ (contraction case): when $\deg x + \deg y = 4$ the form $\alpha(x)\wedge y$ vanishes (degree exceeds three), so applying the graded Leibniz rule for $\iota_{w'}$ to it gives $0 = \iota_{w'}(\alpha(x))\wedge y + (-1)^k \alpha(x)\wedge \iota_{w'}(y)$, i.e.\ $\iota_{w'}(x)\wedge y = (-1)^{k+1} x \wedge \iota_{w'}(y)$ after dividing by $(-1)^{k(k-1)/2}$. Taking $\operatorname{top}$ and restoring the $\alpha$-prefactors of the two sides ($(-1)^{(k-1)(k-2)/2}$ on the left, $(-1)^{k(k-1)/2}$ on the right, whose ratio is $(-1)^{k-1}$) yields $B(\iota_{w'}x, y) = (-1)^{k+1}(-1)^{k-1} B(x, \iota_{w'}y) = B(x, \iota_{w'}y)$. Both cases scale by the common $\sqrt2$.
+(4) By (3), $B(c(u)c(v)x, y) = B(x, c(v)c(u)y)$, and $c(v)c(u) = -c(u)c(v) + 2\ip{u}{v} = -c(u)c(v)$ for orthogonal $u, v$. The verification script checks (1) to (4) on the full basis in exact arithmetic.
+\end{proof}
+
+\subsection{The Klein quadric is the fibre quadric}\label{subsec:klein}
+
+\begin{theorem}[The spinor identification]\label{thm:spinorid}
+With $\T = \Lambda^{\mathrm{even}} W$ as in Theorem \ref{thm:purespinor}:
+\begin{enumerate}
+\item there is a canonical isomorphism $V_\C \cong \Lambda^2 \T$ of $\mathrm{Spin}$-modules, under which the quadratic form corresponds to $P \mapsto \varepsilon(P \wedge P)$ for a fixed volume functional $\varepsilon$ on $\Lambda^4\T$;
+\item a vector is null exactly when its bivector is simple (decomposable), that is, represents a 2-plane of $\T$, that is, a line of the projective twistor space $\PT := \mathbb{P}(\T)$;
+\item consequently the completion's fibre quadric (Fact \ref{fact:completion}), the space of null rays of $V$, double covers the real slice of the Klein quadric (a ray and its opposite give one point), whose points are the null lines of $V$ and are lines of $\PT$.
+\end{enumerate}
+\end{theorem}
+
+In words: the null lines that resolve division by zero are the lines of projective twistor space.
+
+\begin{proof}
+(1) For $v \in V_\C$ define the bilinear form $G_v$ on $\T'$ by
+\[
+G_v(s_1, s_2) \;:=\; B\bigl(s_1,\, c(v)\,s_2\bigr), \qquad s_1, s_2 \in \T',
+\]
+which is well defined since $c(v)s_2 \in \T$ and $B$ pairs $\T'$ with $\T$ (Lemma \ref{lem:chevalley}(1)). $G_v$ is antisymmetric: $G_v(s_2, s_1) = B(s_2, c(v)s_1) = B(c(v)s_2, s_1) = -B(s_1, c(v)s_2) = -G_v(s_1,s_2)$ by clauses (3) and (2) of the lemma. The perfect pairing $B$ identifies $\T'^{\,*}$ with $\T$, hence $\Lambda^2(\T'^{\,*})$ with $\Lambda^2\T$; let $\Psi(v) \in \Lambda^2\T$ be the image of $G_v$. The map $\Psi: V_\C \to \Lambda^2\T$ is linear, and it is injective: if $\Psi(v) = 0$ then $c(v)$ vanishes on $\T'$ ($B$ is perfect). Choose a non-null $w \perp v$ (the orthogonal complement of $v$ has dimension at least $5$ and a totally null subspace has dimension at most $3$). For $s \in \T'$, $c(v)c(w)s = 2\ip{v}{w}s - c(w)c(v)s = 0$, and $c(w): \T' \to \T$ is bijective because $c(w)^2 = \ip{w}{w} \neq 0$; so $c(v)$ vanishes on $\T$ as well, $c(v) = 0$, and $v = 0$ by injectivity of $c$ (Theorem \ref{thm:purespinor}). Since $\dim_\C \Lambda^2\T = \binom42 = 6 = \dim_\C V_\C$, $\Psi$ is an isomorphism. Equivariance: $\mathrm{Spin}$ acts on $c(v)$ by conjugation, giving $c(gv)$, and on $G_v$ through its module actions; $B$ is invariant (Lemma \ref{lem:chevalley}(4)), so $\Psi(gv) = g\,\Psi(v)$ with the induced action on $\Lambda^2\T$. The form: $(v, v') \mapsto \varepsilon_0(\Psi(v)\wedge\Psi(v'))$, with $\varepsilon_0$ any generator of $(\Lambda^4\T)^*$, is a symmetric $\mathrm{Spin}$-invariant bilinear form on $V_\C$, hence proportional to $\ip{\cdot}{\cdot}$ (the space of invariant symmetric forms on the irreducible $V_\C$ is one-dimensional: an invariant form is $\ip{T\cdot}{\cdot}$ for a $T$ commuting with the action, hence a scalar by Schur; and $V_\C$ is irreducible under $\mathfrak{so}(V_\C)$, since for an invariant $U \ni v \neq 0$ with $v_j := \ip{e_j}{v} \neq 0$ in an orthonormal basis, $(e_k\wedge e_i)(e_i\wedge e_j)v = \ip{e_i}{e_i}\,v_j\,e_k$ for distinct $i, j, k$ and $(e_j\wedge e_k)e_k = \ip{e_k}{e_k}\,e_j$, nonzero multiples in either case, so $U = V_\C$). The constant is not zero and is computed in the standard bases: with $\T$-basis $t_0 = 1$, $t_1 = w_2\wedge w_3$, $t_2 = w_3 \wedge w_1$, $t_3 = w_1\wedge w_2$, $\T'$-basis $(w_1, w_2, w_3, w_{123})$, and $\varepsilon_0(t_0\wedge t_1\wedge t_2\wedge t_3) = 1$, a direct computation (printed in the script, and in Example \ref{ex:psi} below) gives $\Psi(w_1) = -\sqrt2\; t_2\wedge t_3$ and $\Psi(w_1') = \sqrt2\; t_0 \wedge t_1$, whence $\varepsilon_0(\Psi(w_1)\wedge\Psi(w_1')) = -2 = -2\ip{w_1}{w_1'}$. Setting $\varepsilon := -\tfrac12\,\varepsilon_0$ gives $\varepsilon(\Psi(v)\wedge\Psi(v')) = \ip{v}{v'}$ exactly, which the script confirms on all twenty-one basis pairs.
+(2) A bivector $P \in \Lambda^2\T$ on a four-dimensional space is decomposable if and only if $P \wedge P = 0$: decomposable implies $s\wedge t\wedge s\wedge t = 0$; conversely, an antisymmetric bilinear form on $\T^*$ has a basis in which it reads $t_0\wedge t_1$ or $t_0\wedge t_1 + t_2\wedge t_3$ (pick $t_0, t_1$ with $P(t_0,t_1) = 1$ and repeat on their $P$-orthogonal complement), and in the second case $P\wedge P = 2\,t_0\wedge t_1\wedge t_2\wedge t_3 \neq 0$; in coordinates $P\wedge P = 2\,\mathrm{Pf}(P)\, t_0\wedge t_1\wedge t_2 \wedge t_3$ with $\mathrm{Pf}$ the Pfaffian, which the script uses. By (1), $\ip{v}{v} = \varepsilon(\Psi(v)\wedge\Psi(v))$, so $v$ is null iff $\Psi(v)\wedge\Psi(v) = 0$ iff $\Psi(v)$ is simple, i.e.\ represents a $2$-plane of $\T$, i.e.\ a line of $\PT$.
+(3) The fibre quadric is the space of null rays of the real slice $V \subset V_\C$; each null ray spans a complex null line, hence by (2) a point of the Klein quadric $\{[P] : P\wedge P = 0\} \subset \mathbb{P}(\Lambda^2\T)$, i.e.\ a line of $\PT$. The assignment factors through the null lines of $V$ (a ray and its opposite span the same complex line) and is injective on them. Which lines of $\PT$ arise from real points is a reality condition, settled in Proposition \ref{prop:reality}(5).
+\end{proof}
+
+\begin{example}[The isomorphism on the Witt pair]\label{ex:psi}
+Take $\nO := w_1$ and $\nInf := w_1'$, a Witt pair of $V_\C$ ($\ip{\nO}{\nInf} = 1$, both null); Section \ref{sec:incidence} arranges the real Witt pair of $V$ on this model. Then $c(w_1)$ maps the $\T'$-basis to $\sqrt2\,(w_{12}, w_{13})$ on $w_2, w_3$ and annihilates $w_1, w_{123}$; pairing through $B$ gives $G_{w_1}(w_3, w_2) = \sqrt2 = -G_{w_1}(w_2, w_3)$ and all other entries zero, so $\Psi(w_1) = -\sqrt2\,t_2\wedge t_3$: a simple bivector, whose plane is $\operatorname{span}(t_2, t_3) = \operatorname{span}(w_3\wedge w_1,\ w_1\wedge w_2)$, the even blades containing $w_1$. Likewise $c(w_1') = \sqrt2\,\iota_{w_1'}$ sends $w_1 \mapsto \sqrt2\cdot 1$ and $w_{123}\mapsto \sqrt2\,w_{23}$, giving $\Psi(w_1') = \sqrt2\,t_0\wedge t_1$ with plane $\operatorname{span}(1,\ w_2\wedge w_3)$. In both cases the plane of $\Psi(v)$ is the image $c(v)\T'$, equivalently the kernel of $c(v)|_\T$. This description of the line of a null vector is general: for nonzero null $v$ the antisymmetric form $G_v$ has rank $2$ (it is nonzero and simple), so $c(v)|_{\T'}$ has rank $2$ and its kernel $R_v$ is the radical of $G_v$; the plane of the bivector $\Psi(v) \in \Lambda^2\T \cong \Lambda^2(\T'^{\,*})$ is the annihilator of $R_v$, which contains $c(v)\T'$ (as $B(s, c(v)s_2) = B(c(v)s, s_2) = 0$ for $s \in R_v$) and has the same dimension $2$; and $c(v)\T' \subseteq \ker c(v)|_\T$ because $c(v)^2 = 0$, with equality since $c(v)|_\T$ is the $B$-transpose of $c(v)|_{\T'}$ (Lemma \ref{lem:chevalley}(3)) and so also has rank $2$.
+\end{example}
+
+% === Section 4: incidence encodes the completion ===
+\section{Incidence encodes the completion}\label{sec:incidence}
+
+From here on we identify $V_\C$ with $\Lambda^2\T$ through the isomorphism $\Psi$ of Theorem \ref{thm:spinorid} and write the quadratic form as $\ip{P}{P'} = \varepsilon(P \wedge P')$ without further comment. This section locates the entire chart structure of the completion inside the line geometry of $\PT$: the adjoined Witt pair is a pair of skew lines, the affine chart is the space of lines skew to one of them, and the chart map is Penrose's incidence relation.
+
+\subsection{Skew lines are Witt completions}\label{subsec:skew}
+
+\begin{proposition}[Skew lines, splittings, hyperbolic planes: one datum]\label{prop:skewwitt}
+The following three data on $\T$ determine one another naturally:
+\begin{enumerate}
+\item an ordered pair of skew (disjoint) lines $(L_\infty, L_0)$ in $\PT$, with a joint normalisation of scale;
+\item a direct-sum splitting $\T = \Som \oplus \Spi$ into two $2$-planes, with volume elements $N_\infty \in \Lambda^2\Som$, $N_0 \in \Lambda^2\Spi$ normalised by $\varepsilon(N_0 \wedge N_\infty) = 1$;
+\item a hyperbolic plane in $V_\C$ spanned by an ordered pair of null vectors $\nInf, \nO$ with $\ip{\nO}{\nInf} = 1$.
+\end{enumerate}
+Under the correspondence, the mixed subspace $\Som \wedge \Spi \subset \Lambda^2\T$ is exactly the orthogonal complement $\{\nO, \nInf\}^\perp$, of dimension four.
+\end{proposition}
+
+\begin{proof}
+(1) $\leftrightarrow$ (2): a line of $\PT$ is a $2$-plane of $\T$; two lines are skew exactly when the planes meet in $0$, i.e.\ split $\T$; volume elements of the planes are fixed up to scale, and $\varepsilon(N_0\wedge N_\infty) \neq 0$ because the four spanning vectors form a basis, so the joint normalisation is available. (2) $\leftrightarrow$ (3): $N_\infty$ and $N_0$ are simple, hence null vectors of $V_\C$ (Theorem \ref{thm:spinorid}(2)), with $\ip{\nO}{\nInf} = \varepsilon(N_0\wedge N_\infty) = 1$; conversely a null pair with pairing $1$ gives simple bivectors whose planes are complementary (if the planes met, the wedge would vanish). Orthogonality of the mixed slot: a wedge of the form $N_0 \wedge (s\wedge p)$ with $s \in \Som$, $p \in \Spi$ contains three factors from the $2$-plane $\Spi$, hence vanishes; likewise for $N_\infty$. The mixed slot has dimension $2 \cdot 2 = 4$ and the complement has dimension $6 - 2 = 4$; since $\Lambda^2\T = \Lambda^2\Som \oplus (\Som\wedge\Spi) \oplus \Lambda^2\Spi$ and the two extreme summands span a nondegenerate (hyperbolic) plane, the middle summand is the complement exactly.
+\end{proof}
+
+From now on fix the real Witt pair $\nO, \nInf \in V$ of Section \ref{sec:setting} and let $(\Som, \Spi)$ be the corresponding splitting: $\Spi$ is the plane of $N_0 = \Psi(\nO)$ (the \emph{origin line} $L_0$) and $\Som$ the plane of $N_\infty = \Psi(\nInf)$ (the \emph{infinity line} $L_\infty$). In the Fock model with $\nO = w_1$, $\nInf = w_1'$ these are the planes computed in Example \ref{ex:psi}.
+
+\subsection{The incidence theorem}\label{subsec:incidencethm}
+
+\begin{theorem}[The incidence relation is the chart]\label{thm:incidence}
+Fix bases $\pi_1, \pi_2$ of $\Spi$ and $e_1, e_2$ of $\Som$ with $\pi_1\wedge\pi_2 = N_0$ and $e_1 \wedge e_2 = N_\infty$. For a linear map $A: \Spi \to \Som$ let $L_A := \{A\pi + \pi : \pi \in \Spi\}$ be its graph line and
+\[
+P(A) \;:=\; (A\pi_1 + \pi_1)\wedge(A\pi_2 + \pi_2) \;\in\; \Lambda^2\T
+\]
+its Pl\"ucker bivector, normalised by $P(0) = N_0$. Then:
+\begin{enumerate}
+\item \emph{(Expansion.)} $P(A) = N_0 + \varphi(A) + (\det A)\, N_\infty$, where $\varphi(A) := A\pi_1\wedge\pi_2 + \pi_1\wedge A\pi_2$ lies in the mixed slot $\Som\wedge\Spi$ and $\det$ is taken in the chosen bases.
+\item \emph{(The chart, term by term.)} $\varphi$ is a linear isomorphism onto the mixed slot $= \{\nO,\nInf\}^\perp \otimes \C$, and satisfies $\ip{\varphi(A)}{\varphi(A)} = -2\det A$. Writing $m(A) := \varphi(A)$ as a vector of $\{\nO,\nInf\}^\perp\otimes\C$, the Pl\"ucker bivector is exactly the completion's point embedding, complexified:
+\[
+P(A) \;=\; \nO \,+\, m(A)\,-\,\tfrac12\,\ip{m(A)}{m(A)}\,\nInf \;=\; X\bigl(m(A)\bigr).
+\]
+In particular every $P(A)$ is null, as a Pl\"ucker bivector must be, and the nullity of $P(A)$ is equivalent to the identity $\det A = -\tfrac12\ip{m(A)}{m(A)}$: the quadratic term of the chart is a determinant.
+\item \emph{(Coverage.)} $A \mapsto L_A$ is a bijection from $\operatorname{Hom}(\Spi, \Som)$ onto the lines of $\PT$ skew to $L_\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\ip{P}{\nInf} \neq 0$: the affine chart of the complexified conformal compactification, with the lines meeting $L_\infty$ as the points at infinity; the real locus is cut out in Proposition \ref{prop:reality}(5).
+\item \emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\infty, L_0)$ (Proposition \ref{prop:skewwitt}). (ii) The splitting of a twistor into its $(\omega, \pi)$ parts along $\T = \Som\oplus\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) Penrose's incidence relation $\omega = ix\pi$ is the case $A = i\hat x$ of the chart map, with $\hat x$ Hermitian for the twistor form (Proposition \ref{prop:reality}(5)). (iv) The stabiliser of the infinity line $L_\infty$ in $\mathfrak{so}(V_\C)$ is the stabiliser of the ray of $\nInf$: the Poincar\'e parabolic, with its Levi factor acting on $\Som \oplus \Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\mathfrak{sl}(2,\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \ref{lem:homone}(1)).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Expand bilinearly. The $\pi_1\wedge\pi_2$ term is $N_0$. The cross terms give $\varphi(A)$, manifestly in $\Som\wedge\Spi$. The top term is $A\pi_1\wedge A\pi_2$, a bivector of the $2$-plane $\Som$, hence a multiple of $e_1\wedge e_2$; writing $A\pi_i = \sum_j A_{ji}e_j$, the multiple is $A_{11}A_{22} - A_{21}A_{12} = \det A$.
+(2) $P(A)$ is decomposable by construction, hence null (Theorem \ref{thm:spinorid}(2)). Expanding its norm with Proposition \ref{prop:skewwitt} (the mixed slot is orthogonal to the hyperbolic plane):
+\[
+0 \;=\; \ip{P(A)}{P(A)} \;=\; \ip{\varphi(A)}{\varphi(A)} + 2\det A\,\ip{N_0}{N_\infty}
+ \;=\; \ip{\varphi(A)}{\varphi(A)} + 2\det A ,
+\]
+which is the displayed norm identity, and equivalently $\det A = -\tfrac12\ip{m(A)}{m(A)}$; substituting back into (1) yields $P(A) = X(m(A))$ exactly, in the chart normalisation of Section \ref{sec:setting}. Injectivity of $\varphi$: if $\varphi(A) = 0$ then $P(A) = N_0 + (\det A)N_\infty$ is decomposable, but $(N_0 + cN_\infty)\wedge(N_0 + cN_\infty) = 2c\,N_0\wedge N_\infty$, so $\det A = 0$ and $P(A) = N_0$, forcing $L_A = L_0$ and $A = 0$. Since $\dim \operatorname{Hom}(\Spi,\Som) = 4 = \dim(\Som\wedge\Spi)$, $\varphi$ is an isomorphism.
+(3) A $2$-plane $U$ satisfies $U \cap \Som = 0$ if and only if the projection $U \to \Spi$ along $\Som$ is injective, hence bijective, if and only if $U$ is the graph of a unique $A: \Spi \to \Som$; and $U \cap \Som = 0$ is exactly skewness of $\mathbb{P}(U)$ and $L_\infty$. For the quadric statement: for decomposable $P = u_1\wedge u_2$, $\ip{P}{N_\infty} = \varepsilon(u_1\wedge u_2\wedge e_1\wedge e_2)$ vanishes exactly when the four vectors are dependent, i.e.\ when the planes meet; and $\ip{P(A)}{N_\infty} = \varepsilon(N_0\wedge N_\infty) = 1$. Rescaling any quadric point with $\ip{P}{\nInf} \neq 0$ to pairing $1$ places it in the chart, uniquely.
+(4) (i) and (ii) are Proposition \ref{prop:skewwitt} applied to the pair $(\nInf, \nO)$; (iii) is Proposition \ref{prop:reality}(5). (iv): by equivariance of $\Psi$, a spin transformation stabilises the line $L_\infty$ (the plane $\Som$) if and only if it stabilises the ray of the bivector $N_\infty = \Psi(\nInf)$, i.e.\ the ray of $\nInf$ in $V_\C$. That stabiliser is computed in the flat model of \cite{ButlerT6}: the parabolic with Levi factor $\mathfrak{so}(1,3)\oplus\R$ and nilradical the translations, imported here as Fact \ref{fact:parabolic} below. The Levi factor preserves both $\Som$ and $\Spi$ (it stabilises both rays), and the assignment of the two $\mathfrak{sl}(2,\C)$ factors of $\mathfrak{so}(1,3)_\C$ to the two planes is Lemma \ref{lem:homone}(1). The verification script checks all eleven parabolic basis elements preserve $\Som$, that the complementary four do not, and the chiral assignment itself.
+\end{proof}
+
+\begin{fact}[Imported: stabilisers in the flat model]\label{fact:parabolic}
+In $\Lambda^2 V \cong \mathfrak{so}(2,4)$, the stabiliser of the null vector $\nInf$ is $\Lambda^2 W_{1,3} \oplus (\nInf\wedge W_{1,3}) \cong \mathfrak{so}(1,3)\ltimes\R^4$, the Poincar\'e algebra; the stabiliser of the ray $\R^+\nInf$ adds the grading element $\nInf\wedge\nO$ and is the eleven-dimensional maximal parabolic; the nilradical acts on the point space as the translations and consists of the two-step nilpotent transvections of the series' no-go theorem. \emph{Provenance:} \cite[Prop.~4.3]{ButlerT6}; the transvection identification \cite[Thm.~4.2]{ButlerT1}.
+\end{fact}
+
+\begin{lemma}[The chiral planes, and the summand spaces]\label{lem:homone}
+Let $\mathfrak{l} := \Lambda^2 (W_{1,3})_\C \subset \mathfrak{so}(V_\C)$ be the complexified Lorentz algebra of the splitting, acting on $W_\C := (W_{1,3})_\C$ by the bivector action and on $\Som$, $\Spi$ through $\rho$, and let $\mathfrak{l} = \mathfrak{g}^+ \oplus \mathfrak{g}^-$ be its decomposition into two commuting subalgebras each isomorphic to $\mathfrak{sl}(2,\C)$ (Proposition \ref{prop:blind}(1): a statement about $\Lambda^2 W_{1,3}$ alone, whose proof uses nothing from this section). Then:
+\begin{enumerate}
+\item the map $\Som \otimes \Spi \to W_\C$, $\omega\otimes\pi \mapsto \Psi^{-1}(\omega\wedge\pi)$, is an isomorphism of $\mathfrak{l}$-modules, and one of $\mathfrak{g}^\pm$ acts faithfully on $\Som$ and trivially on $\Spi$ while the other acts faithfully on $\Spi$ and trivially on $\Som$: the two planes are the two chiral doublets;
+\item $\operatorname{Hom}_{\mathfrak{l}}(W_\C \otimes \Spi,\ \Som)$ and $\operatorname{Hom}_{\mathfrak{l}}(W_\C \otimes \Som,\ \Spi)$ are one-dimensional.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Two preliminaries. First, $\mathfrak{sl}(2,\C)$ is simple: with the standard basis $e, h, f$, an ideal containing $x = ae + bh + cf \neq 0$ contains $[e,[e,x]] = -2c\,e$ and $[f,[f,x]] = -2a\,f$, so it contains $e$ or $f$ unless $a = c = 0$, in which case it contains $h$ and then $[h,e] = 2e$; and from any one of $e, f, h$ the brackets $[e,f] = h$, $[h,e] = 2e$, $[h,f] = -2f$ produce the other two. Second, the ideals of $\mathfrak{l} = \mathfrak{g}^+\oplus\mathfrak{g}^-$ are $0$, $\mathfrak{g}^+$, $\mathfrak{g}^-$, $\mathfrak{l}$: if an ideal $I$ is not contained in $\mathfrak{g}^-$, its projection to $\mathfrak{g}^+$ is a nonzero ideal of $\mathfrak{g}^+$, hence all of $\mathfrak{g}^+$, and then $\mathfrak{g}^+ = [\mathfrak{g}^+, \mathfrak{g}^+] = [\mathfrak{g}^+, I] \subseteq I$ (the $\mathfrak{g}^-$-components of $I$ commute with $\mathfrak{g}^+$); symmetrically for $\mathfrak{g}^-$.
+
+(1) The Levi factor stabilises the rays of $\nO$ and $\nInf$, so by equivariance of $\Psi$ it preserves the planes $\Spi$ and $\Som$, and $\mathfrak{l}$ acts on both. The map $\omega\otimes\pi \mapsto \omega\wedge\pi$ is equivariant for the induced action on $\Lambda^2\T$ (the action for which $\Psi$ is equivariant) and surjective onto the four-dimensional mixed slot $\Som\wedge\Spi = \Psi(W_\C)$ (Proposition \ref{prop:skewwitt}), so by dimension $\Som\otimes\Spi \cong W_\C$ as $\mathfrak{l}$-modules. The action of $\mathfrak{l}$ on $W_\C$ is faithful: the bivector $e_i\wedge e_j$ of an orthonormal pair acts as $\pm$ the elementary antisymmetric matrix, and the six are linearly independent. Let $\mathfrak{k}_\omega, \mathfrak{k}_\pi \subseteq \mathfrak{l}$ be the kernels of the actions on $\Som$, $\Spi$: ideals. Each is nonzero, since $\dim\mathfrak{l} = 6 > 4 = \dim\mathfrak{gl}(2,\C)$. Neither is $\mathfrak{l}$: if $\mathfrak{l}$ annihilated $\Spi$ it would act on $W_\C \cong \Som\otimes\Spi$ through $\Som$ alone, with image of dimension at most $4 < 6$, contradicting faithfulness; likewise for $\Som$. So $\mathfrak{k}_\omega, \mathfrak{k}_\pi \in \{\mathfrak{g}^+, \mathfrak{g}^-\}$, and they are different, since a common kernel would annihilate $\Som\otimes\Spi = W_\C$. Say $\mathfrak{k}_\pi = \mathfrak{g}^a$ and $\mathfrak{k}_\omega = \mathfrak{g}^b$ with $\{a, b\} = \{+,-\}$. The kernel of $\mathfrak{g}^b$ acting on $\Spi$ is an ideal of $\mathfrak{g}^b$, hence $0$ or $\mathfrak{g}^b$, and not $\mathfrak{g}^b$ (then $\mathfrak{l} = \mathfrak{g}^a + \mathfrak{g}^b$ would annihilate $\Spi$); so $\mathfrak{g}^b$ acts faithfully on $\Spi$, and likewise $\mathfrak{g}^a$ on $\Som$. The verification script exhibits the assignment in the Fock model.
+
+(2) Keep the labelling of (1). A faithful action of $\mathfrak{sl}(2,\C)$ on a $2$-plane $S$ is an isomorphism onto $\mathfrak{sl}(S)$: the image is three-dimensional and consists of traceless operators, because $\mathfrak{sl}(2,\C) = [\mathfrak{sl}(2,\C), \mathfrak{sl}(2,\C)]$ and commutators are traceless, and $\dim\mathfrak{sl}(S) = 3$. An $\mathfrak{l}$-equivariant map $f: W_\C\otimes\Spi \cong \Som\otimes\Spi\otimes\Spi \to \Som$ is therefore a linear map that commutes with $\mathfrak{sl}(\Som)$ acting on the first factor (through $\mathfrak{g}^a$, which acts trivially on the $\Spi$ factors) and is annihilated by $\mathfrak{sl}(\Spi)$ acting as a derivation on the last two factors (through $\mathfrak{g}^b$, trivial on $\Som$). Regard $f$ as a bilinear map $\Spi\times\Spi \to \End(\Som)$, $(\pi,\pi') \mapsto (\omega \mapsto f(\omega\otimes\pi\otimes\pi'))$. Its values commute with $\mathfrak{sl}(\Som)$, hence are scalars (an operator commuting with $E_{12}$, $E_{21}$ and $E_{11} - E_{22}$ is scalar), so $f$ is a bilinear form $\beta$ on $\Spi$ with $\beta(X\pi, \pi') + \beta(\pi, X\pi') = 0$ for all $X \in \mathfrak{sl}(\Spi)$. In a basis $\pi_1, \pi_2$ with $h = \operatorname{diag}(1,-1)$ and $e = E_{12}$: $h$-invariance gives $2\beta(\pi_1,\pi_1) = 0 = -2\beta(\pi_2,\pi_2)$, and $e$-invariance applied to $(\pi_2, \pi_2)$ gives $\beta(\pi_1,\pi_2) + \beta(\pi_2,\pi_1) = 0$. So $\beta$ is a multiple of the determinant form, which is invariant; the space is one-dimensional. The other case is the same with the roles of the planes exchanged.
+\end{proof}
+
+\begin{proposition}[Reality: the conjugation, the twistor form, and the factor $i$]\label{prop:reality}
+Write $v \mapsto \bar v$ for the real structure of $V_\C$ with real points $V$, and $J$ for the antilinear map on $\Lambda^\bullet W$ that conjugates coefficients in the monomial basis built on the isotropic basis of Theorem \ref{thm:purespinor}.
+\begin{enumerate}
+\item (\emph{The conjugation.}) With $\Gamma$ the parity operator ($+1$ on $\T$, $-1$ on $\T'$) and $b_4$ the fourth negative basis vector of Section \ref{sec:setting},
+\[
+\kappa := \Gamma\, c(b_4)\, J
+\]
+is an antilinear bijection of $\Lambda^\bullet W$ with $\kappa\, c(v) = c(\bar v)\, \kappa$ for all $v \in V_\C$; every antilinear map with this property is a complex multiple of $\kappa$; $\kappa$ swaps the chiralities, $\kappa(\T) = \T'$; and $\kappa^2 = -\id$.
+\item (\emph{The twistor form.}) $\Sigma(Z_1, Z_2) := B(\kappa Z_1, Z_2)$ is a nondegenerate sesquilinear form on $\T$ with $\Sigma(Z_2, Z_1) = \lambda\,\overline{\Sigma(Z_1, Z_2)}$ for a constant $\lambda$ of modulus one, so that a rescaling of $\kappa$ by a phase makes $\Sigma$ Hermitian; for the $\kappa$ of (1), $\lambda = 1$ and $\Sigma$ is Hermitian as it stands. The real bivectors act $\Sigma$-anti-Hermitianly, so $\Sigma$ is $\mathrm{Spin}(2,4)$-invariant.
+\item (\emph{Null planes.}) For every real null vector $v$ the plane of $\Psi(v)$ is $\Sigma$-null. In particular $\Som$ and $\Spi$ are $\Sigma$-null.
+\item (\emph{Signature.}) $\Sigma$ has signature $(2,2)$.
+\item (\emph{Reality of the chart, and the factor $i$.}) Let $\sigma(\omega, \pi) := \Sigma(\omega, \pi)$ be the resulting perfect pairing $\Som\times\Spi \to \C$, and call $\hat x: \Spi\to\Som$ \emph{$\sigma$-Hermitian} if $\sigma(\hat x\pi, \pi') = \overline{\sigma(\hat x\pi', \pi)}$ for all $\pi, \pi' \in \Spi$. For $A \in \operatorname{Hom}(\Spi, \Som)$ the following are equivalent: (a) the chart point $m(A)$ of Theorem \ref{thm:incidence} is real, $m(A) \in W_{1,3}$; (b) the line $L_A$ is $\Sigma$-null; (c) $A = i\hat x$ with $\hat x$ $\sigma$-Hermitian. Consequently the real points of the affine chart are exactly the $\Sigma$-null lines skew to $L_\infty$, the incidence relation of a real point reads $\omega = i\hat x\pi$ with $\hat x$ $\sigma$-Hermitian, and on real points the chart norm is $\ip{m}{m} = -2\det A = 2\det\hat x$ in the bases of Theorem \ref{thm:incidence}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) In the monomial basis the operators $c(w_j) = \sqrt2\,w_j\wedge$ and $c(w_j') = \sqrt2\,\iota_{w_j'}$ have real matrices, so $J c(v) J^{-1} = c(v^\varsigma)$, where $\varsigma$ conjugates the coordinates of $v$ in the isotropic basis. Compare $\varsigma$ with the real structure: $w_1, w_1', w_2, w_2'$ are real vectors, fixed by both, while $\bar w_3 = b_3 - ib_4 = -2w_3'$ and $\bar w_3' = -\tfrac12 w_3$ against $w_3^\varsigma = w_3$, $w_3'^\varsigma = w_3'$. The $\C$-linear map $g$ fixing $w_1, w_1', w_2, w_2'$ and sending $w_3 \mapsto -2w_3'$, $w_3' \mapsto -\tfrac12 w_3$ is the reflection $r$ in $b_4 = -\tfrac{i}{2}(w_3 + 2w_3')$: $r(v) = v - 2\ip{b_4}{v}b_4/\ip{b_4}{b_4} = v + 2\ip{b_4}{v}b_4$ fixes $b_4^\perp \ni w_1, w_1', w_2, w_2'$ and gives $r(w_3) = w_3 - 2i\,b_4 = w_3 - (w_3 + 2w_3') = -2w_3'$. Hence $\bar v = r(v^\varsigma) = (rv)^\varsigma$ for all $v$. In the Clifford algebra, $c(b_4)^{-1} = c(b_4)/\ip{b_4}{b_4} = -c(b_4)$ and
+\[
+c(b_4)\,c(u)\,c(b_4)^{-1} = \bigl(2\ip{b_4}{u} - c(u)c(b_4)\bigr)\bigl(-c(b_4)\bigr) = -2\ip{b_4}{u}c(b_4) - c(u) = -c(ru),
+\]
+while $\Gamma c(u)\Gamma^{-1} = -c(u)$ because vectors are odd. Therefore
+\[
+\kappa\,c(v)\,\kappa^{-1} = \Gamma\,c(b_4)\,c(v^\varsigma)\,c(b_4)^{-1}\,\Gamma^{-1} = \Gamma\bigl(-c(r v^\varsigma)\bigr)\Gamma^{-1} = c(r v^\varsigma) = c(\bar v).
+\]
+Uniqueness: if $\kappa'$ is another antilinear intertwiner, $\kappa^{-1}\kappa'$ is a $\C$-linear operator commuting with $c(V_\C)$ on the irreducible module $\Lambda^\bullet W$; an eigenspace of it is a nonzero submodule, hence everything, so $\kappa^{-1}\kappa'$ is a scalar. Parity: $J$ and $\Gamma$ preserve degree parity and $c(b_4)$ reverses it, so $\kappa(\T) = \T'$. The square: $b_4$ has purely imaginary coordinates, so $J c(b_4) J^{-1} = c(b_4^\varsigma) = -c(b_4)$, and with $J^2 = 1$,
+\[
+\kappa^2 = \Gamma c(b_4)\,\Gamma\,\bigl(J c(b_4) J^{-1}\bigr) = \bigl(-c(b_4)\bigr)\bigl(-c(b_4)\bigr) = c(b_4)^2 = \ip{b_4}{b_4} = -1 .
+\]
+The script checks the intertwining relation on every basis state for the six basis vectors and their $i$-multiples, the parity swap, and $\kappa^2$.
+
+(2) $\Sigma$ is well defined and nondegenerate: $\kappa$ maps $\T$ bijectively onto $\T'$ and $B$ is perfect on $\T'\times\T$. Consider $B'(x, y) := \overline{B(\kappa x, \kappa y)}$, a $\C$-bilinear form on $\Lambda^\bullet W$. It vanishes on pairs of equal parity ($\kappa$ swaps parity and $B$ pairs opposite parities only), and every vector is $B'$-self-transpose:
+\[
+B'(c(v)x, y) = \overline{B(c(\bar v)\kappa x, \kappa y)} = \overline{B(\kappa x, c(\bar v)\kappa y)} = \overline{B(\kappa x, \kappa\, c(v) y)} = B'(x, c(v) y),
+\]
+by (1) and Lemma \ref{lem:chevalley}(3). Such forms are unique up to scale: since $B$ is nondegenerate, any bilinear $\beta$ is $\beta(x,y) = B(Tx, y)$ for a unique linear $T$, and if all vectors are self-transpose for both $\beta$ and $B$ then $B(Tc(v)x, y) = \beta(c(v)x, y) = \beta(x, c(v)y) = B(Tx, c(v)y) = B(c(v)Tx, y)$, so $T$ commutes with $c(V_\C)$ and is a scalar by the eigenspace argument of (1). Thus $B' = \lambda_0 B$ for a constant $\lambda_0$, i.e.\ $B(\kappa x, \kappa y) = \bar\lambda_0\,\overline{B(x,y)}$. Applying the construction twice, $\overline{B'(\kappa x, \kappa y)} = B(\kappa^2 x, \kappa^2 y) = B(x, y)$ and also $= \overline{\lambda_0\,B(\kappa x, \kappa y)} = \bar\lambda_0\, B'(x,y) = |\lambda_0|^2 B(x,y)$, so $|\lambda_0| = 1$. Now for $Z_1, Z_2 \in \T$, using antisymmetry of $B$, $Z_1 = -\kappa^2 Z_1$ and antilinearity of $\kappa$,
+\[
+\Sigma(Z_2, Z_1) = B(\kappa Z_2, Z_1) = -B(Z_1, \kappa Z_2) = B(\kappa(\kappa Z_1), \kappa Z_2) = \bar\lambda_0\,\overline{B(\kappa Z_1, Z_2)} = \lambda\,\overline{\Sigma(Z_1, Z_2)},
+\]
+with $\lambda := \bar\lambda_0$.
+If $\lambda = e^{i\theta}$, replacing $\kappa$ by $\mu\kappa$ with $\mu := e^{-i\theta/2}$ replaces $\Sigma$ by $\Sigma' = \mu\Sigma$, and $\Sigma'(Z_2,Z_1) = \mu\lambda\,\overline{\Sigma(Z_1,Z_2)} = (\mu\lambda/\bar\mu)\,\overline{\Sigma'(Z_1,Z_2)} = \overline{\Sigma'(Z_1,Z_2)}$, since $\mu\lambda/\bar\mu = e^{-i\theta/2}e^{i\theta}e^{-i\theta/2} = 1$: Hermitian. The script computes $\lambda_0 = \lambda = 1$ for the $\kappa$ of (1) on the full basis, checks that $\Sigma$ is Hermitian and of rank four, and re-runs the relation and the phase on $\kappa$ rescaled by $(3+4i)/5$, where $\lambda \neq 1$. Invariance: for real orthogonal $u, v$ and $\beta = \tfrac12 c(u)c(v)$, (1) gives $\kappa\rho(\beta) = \rho(\beta)\kappa$, so
+\[
+\Sigma(\rho(\beta)Z_1, Z_2) + \Sigma(Z_1, \rho(\beta)Z_2) = B(\rho(\beta)\kappa Z_1, Z_2) + B(\kappa Z_1, \rho(\beta) Z_2) = 0
+\]
+by Lemma \ref{lem:chevalley}(4); the real bivectors span $\mathfrak{so}(2,4)$ and exponentiate to $\mathrm{Spin}(2,4)$. The script checks all fifteen.
+
+(3) For a real null $v$ the plane of $\Psi(v)$ is $c(v)\T'$ (Example \ref{ex:psi}), and
+\begin{align*}
+\Sigma\bigl(c(v)s_1,\, c(v)s_2\bigr) &= B\bigl(\kappa c(v)s_1,\, c(v)s_2\bigr) = B\bigl(c(v)\kappa s_1,\, c(v)s_2\bigr)\\
+&= B\bigl(\kappa s_1,\, c(v)^2 s_2\bigr) = \ip{v}{v}\,B(\kappa s_1, s_2) = 0 ,
+\end{align*}
+using $\bar v = v$, Lemma \ref{lem:chevalley}(3), and nullity. $\Som$ and $\Spi$ are the planes of $\Psi(\nInf)$ and $\Psi(\nO)$, both real and null.
+
+(4) Take bases $e_1, e_2$ of $\Som$ and $\pi_1, \pi_2$ of $\Spi$. By (3) the Gram matrix of the Hermitian form $\Sigma$ on $\T = \Som\oplus\Spi$ is $\bigl(\begin{smallmatrix} 0 & S \\ S^* & 0\end{smallmatrix}\bigr)$ with $S_{ik} := \Sigma(e_i, \pi_k)$, and nondegeneracy forces $S$ to be invertible. Replacing $\pi_1, \pi_2$ by the basis with $S = I$ turns the Gram matrix into $\bigl(\begin{smallmatrix} 0 & I \\ I & 0\end{smallmatrix}\bigr)$, whose eigenvalues are $+1$ and $-1$, each with multiplicity two: signature $(2,2)$. The script reads the signature off $\Sigma$ itself, through its real form.
+
+(5) (a) $\Rightarrow$ (b): if $m(A)$ is real then $P(A) = X(m(A))$ is $\Psi$ of a real null vector, so its plane $L_A$ is $\Sigma$-null by (3). (b) $\Leftrightarrow$ (c): since $\Som$ and $\Spi$ are $\Sigma$-null and $\Sigma$ is Hermitian,
+\[
+\Sigma(A\pi + \pi,\ A\pi' + \pi') = \Sigma(A\pi, \pi') + \Sigma(\pi, A\pi') = h_A(\pi,\pi') + \overline{h_A(\pi',\pi)}, \qquad h_A(\pi,\pi') := \sigma(A\pi, \pi'),
+\]
+so $L_A$ is $\Sigma$-null exactly when the sesquilinear form $h_A$ on $\Spi$ is anti-Hermitian. With $\hat x := -iA$ and $\sigma$ antilinear in its first slot, $\sigma(\hat x\pi, \pi') = i\,h_A(\pi,\pi')$, and $h_A$ is anti-Hermitian exactly when $\sigma(\hat x\pi,\pi') = \overline{\sigma(\hat x\pi',\pi)}$, i.e.\ when $\hat x$ is $\sigma$-Hermitian. (c) $\Rightarrow$ (a): the set $\{A : m(A) \in W_{1,3}\} = \varphi^{-1}(W_{1,3})$ is a real subspace of $\operatorname{Hom}(\Spi,\Som)$ of real dimension four, because $\varphi$ is a $\C$-linear isomorphism onto $(W_{1,3})_\C$ (Theorem \ref{thm:incidence}(2)); the set $\{i\hat x : \hat x\ \sigma\text{-Hermitian}\}$ is likewise a real subspace of real dimension four (Hermitian forms on a $2$-plane); (a) $\Rightarrow$ (b) $\Leftrightarrow$ (c) shows the first is contained in the second, and equal dimensions give equality. The script exhibits four $\sigma$-Hermitian $\hat x$ (the Pauli forms transported through $\sigma$) with $m(i\hat x)$ real and spanning $W_{1,3}$, and checks that $m(\hat x)$ is not real. The consequences: real chart points are the $\Sigma$-null lines skew to $L_\infty$ by (a) $\Leftrightarrow$ (b) and Theorem \ref{thm:incidence}(3); $\omega = A\pi = i\hat x\pi$ with $\hat x$ $\sigma$-Hermitian is Penrose's incidence relation, his Hermitian matrix being $\hat x$ written in bases adapted to $\sigma$ (which rescale $\det$ by a constant, the spin-frame normalisation of Remark \ref{rem:factori}); and in the bases of Theorem \ref{thm:incidence}, $\ip{m(A)}{m(A)} = -2\det A = -2\det(i\hat x) = 2\det\hat x$ by clause (2) of that theorem, real as it must be.
+\end{proof}
+
+\begin{remark}[What the factor $i$ is, and what remains conventional]\label{rem:factori}
+The $i$ in $\omega = ix\pi$ is thus derived: it is the anti-Hermiticity that reality of the chart point forces on the map $A$ relative to the twistor form, and it can be moved but not removed (a phase change of $\kappa$ rotates $\Sigma$ and $\hat x$ together). It does not encode the Lorentzian signature: both $2\det\hat x$ and $-2\det\hat x$ have Lorentzian signature on Hermitian $\hat x$, and which of them is the Minkowski form $\eta$ of Section \ref{sec:setting} is the choice of spin-frame normalisation in \cite{PenroseRindler86}. That normalisation is the one convention left in the reality dictionary; the paper does not use it. The classical global statement, that the $\Sigma$-null lines of $\PT$ form the whole real conformal compactification $\mathbb{PN}$ and not only its affine chart, is a point of contact here and is not needed \cite{Penrose1967, PenroseRindler86}.
+\end{remark}
+
+\subsection{The three-language dictionary}\label{subsec:threelang}
+
+\begin{fact}[Imported: the vacuum equations and the scale tractor]\label{fact:vacuumT6}
+On a region where the gauge field is invertible, the vacuum field equations are exactly equivalent to the covariant constancy of the null scale tractor $I_g$; the scale tractor of a scale $g$ is the section $I_g = (1, 0, \rho_g)$ in the splitting of that scale, with $\rho_g$ fixed by the scalar curvature of $g$; for an Einstein metric with $\mathrm{Ric} = \Lambda g$ it is parallel with squared norm $\ip{I_g}{I_g} = \Lambda/3$, and conversely a parallel section of the form $(1,0,\rho)$ forces $\rho$ constant and $g$ Einstein with $\Lambda = 6\rho$. \emph{Provenance:} \cite[Thm.~4.5, Thm.~4.7]{ButlerT6}.
+\end{fact}
+
+\begin{corollary}[One statement in three languages]\label{cor:threelang}
+Define the \emph{infinity twistor} of a scale $g$ as $I_{\alpha\beta} := \Psi(I_g) \in \Lambda^2\T$, with $I_g = (1,0,\rho_g)$ the scale tractor of Fact \ref{fact:vacuumT6}. Then, on the region of invertibility:
+\begin{enumerate}
+\item vacuum with $\Lambda = 0$ holds if and only if the infinity twistor is covariantly constant and \emph{simple} (a line of $\PT$: the infinity line);
+\item the Einstein condition with $\Lambda \neq 0$ holds if and only if the infinity twistor is covariantly constant with $\varepsilon(I\wedge I) = \Lambda/3 \neq 0$: a non-simple bivector, which is no line at all.
+\end{enumerate}
+Field equations, tractor parallelism, and infinity-twistor constancy are one statement in three languages, and the classical twistor fact that the infinity twistor is simple precisely when $\Lambda = 0$ is the transport principle's nullity criterion (Theorem \ref{thm:spinorid}(2)) applied to Fact \ref{fact:vacuumT6}.
+\end{corollary}
+
+\begin{proof}
+Combine Fact \ref{fact:vacuumT6} with Theorem \ref{thm:spinorid}. The spin bundle $\T M$ and its connection are those induced from the tractor bundle and connection by the spin representation (Proposition \ref{prop:localtwistor} below sets them up); $\Psi$ is a $\mathrm{Spin}$-equivariant fibrewise map $\mathcal{T}_\C \to \Lambda^2\T M$, and an equivariant fibre map between bundles associated to the same principal bundle commutes with the connections induced from one connection on it, because the induced covariant derivatives are defined through the group action. So $I$ is parallel exactly when $\Psi(I)$ is, and simplicity of $\Psi(I)$ is equivalent to nullity of $I$ (Theorem \ref{thm:spinorid}(2)), whose norm is $\Lambda/3$.
+\end{proof}
+
+\subsection{Local twistors: the ascended spinor connection}\label{subsec:localtwistor}
+
+\begin{fact}[Imported: the tractor connection, and local twistor transport]\label{fact:ltt}
+(i) The conformal class carries a canonical connection on the rank-six tractor bundle whose expression in a scale $g$ is
+\[
+\nabla_a(\sigma, \mu_b, \rho) = \bigl(\nabla_a\sigma - \mu_a,\;\; \nabla_a\mu_b + g_{ab}\rho - \mathrm{P}_{ab}\sigma,\;\; \nabla_a\rho + \mathrm{P}_a{}^b\mu_b\bigr),
+\]
+with $\mathrm{P}$ the Schouten tensor. (ii) The conformal class likewise carries the classical \emph{local twistor} bundle, fibrewise $\C^4$ with the scale splitting $Z = (\omega^B, \pi_{B'})$, and its transport
+\[
+\nabla^{\mathrm{LT}}_a(\omega^B, \pi_{B'}) \;=\; \bigl(\nabla_a \omega^B + i\,\varepsilon_A{}^B\,\pi_{A'},\;\; \nabla_a\pi_{B'} + i\,\mathrm{P}_{AA'BB'}\,\omega^B\bigr),
+\]
+in the index conventions of \cite[Vol.~2, Ch.~6]{PenroseRindler86}; under conformal rescaling $\omega$ is invariant and $\pi$ shifts, so the $\pi$-plane $\{\omega = 0\}$ is the canonical subbundle. \emph{Provenance:} (i) \cite{BEG1994, CurryGover2018}, in the conventions of \cite[Fact 4.1, eq.~(3)]{ButlerT6}; (ii) \cite{PenroseMacCallum73, Dighton74}; the statement that (ii) is the spin representation of (i) is standard in the tractor literature \cite{BEG1994, CurryGover2018}, and is \emph{proved} rather than imported below, since the proof is short in the present framework.
+\end{fact}
+
+\begin{proposition}[Local twistor transport is the ascended spinor connection]\label{prop:localtwistor}
+Let $\mathcal{T}$ be the tractor bundle of \cite[\S 4]{ButlerT6} and $\T M$ its spin bundle: the rank-four complex bundle with fibre $\T$, carried by the fibrewise Fock model of Theorem \ref{thm:purespinor}, associated to a lift of the $SO(2,4)$ tractor bundle to $\mathrm{Spin}(2,4)$. We assume the conformal manifold is spin, so that the lift exists globally; every statement below is local, and locally a lift always exists. At a point, write $X_p$ for the canonical (tautological) null direction of $\mathcal{T}_p$, and, in a scale, $u_p$ for the null direction with $\ip{X_p}{u_p} = 1$ singled out by the splitting. Then:
+\begin{enumerate}
+\item the connection of Fact \ref{fact:ltt}(i) decomposes, in the scale, as
+\[
+\nabla_a \;=\; \nabla^{g}_a \;-\; u_p \wedge e_a \;+\; X_p \wedge \mathrm{P}(e_a),
+\]
+where $\nabla^g$ couples the Levi factor only: the soldering summand is valued in $u_p\wedge W_\C$ and the Schouten summand in $X_p \wedge W_\C$, with $W_\C = (W_{1,3})_\C$ the complexified Minkowski complement, the latter in the nilradical of the parabolic stabilising $X_p$;
+\item on the spinor bundle, with $\Spi$ the plane of $\Psi(X_p)$ (the point's own line: the canonical subbundle) and $\Som$ the plane of $\Psi(u_p)$, the grading element $E := u_p\wedge X_p$ acts with eigenvalue $+\tfrac12$ on $\Som$ and $-\tfrac12$ on $\Spi$; consequently the soldering summand ($E$-weight $+1$) maps $\Spi \to \Som$ and annihilates $\Som$, and the Schouten summand ($E$-weight $-1$) maps $\Som \to \Spi$ and annihilates $\Spi$;
+\item the induced spinor connection therefore has, in the scale splitting $Z = (\omega, \pi)$ with $\omega \in \Som$, $\pi \in \Spi$, the form
+\[
+\nabla^{\T M}_a(\omega, \pi) = \bigl(\nabla^g_a\omega + \sigma_a\pi,\ \nabla^g_a\pi + \tau_a\omega\bigr),
+\]
+where $\sigma_a := \rho(-u_p\wedge e_a)|_{\Spi\to\Som}$ is the soldering summand and $\tau_a := \rho(X_p\wedge\mathrm{P}(e_a))|_{\Som\to\Spi}$ the Schouten summand.
+The summands are Levi-equivariant in the direction $e_a$, so by Lemma \ref{lem:homone}(2) each is the unique map of its type up to a scalar: under Levi-equivariant identifications of $\Som$, $\Spi$ with Penrose's $S^B$, $S_{B'}$, and the \emph{metric-normalised} identification of $W_\C$ with $S^B\otimes S^{B'}$ (the one under which $g_{ab}$ corresponds to $\varepsilon_{AB}\varepsilon_{A'B'}$, Penrose and Rindler's own, fixed up to sign), with $a = AA'$ and $c = CC'$ in the convention of Fact \ref{fact:ltt}(ii), $\sigma_a$ is the $\varepsilon$-contraction $\pi_{A'} \mapsto \varepsilon_A{}^B\pi_{A'}$ times a constant $c_1$ and $\tau_a$ is the Schouten contraction $\omega^B \mapsto \mathrm{P}_{AA'BB'}\omega^B$ times a constant $c_2$. The constants depend on the relative scale of the two spinor identifications, which multiplies $c_1$ by $\lambda$ and $c_2$ by $\lambda^{-1}$ (the sign freedom of the third flips both, so it changes neither their product nor anything not already realised by $\lambda = -1$), so their product is invariant and is fixed by the composite of the summands on $\Som$:
+\[
+\sigma_a\,\tau_c \;=\; \tfrac12\,c(e_a)\,c(\mathrm{P}(e_c))\big|_{\Som} \;=\; \tfrac12\,\mathrm{P}_{ac}\,\id_{\Som} + \rho\bigl(e_a\wedge\mathrm{P}(e_c)\bigr)\big|_{\Som} .
+\]
+Local twistor transport (Fact \ref{fact:ltt}(ii)) has the same form, with summand composite $\omega^B \mapsto -\varepsilon_A{}^B\,\mathrm{P}_{CC'DA'}\,\omega^D$. Hence the local twistor bundle is $\T M$ and local twistor transport is the spinor square root of the tractor connection, exactly when the two composites agree, which is a single convention this identification imports: the sign and normalisation of $\mathrm{P}_{AA'BB'}$ in \cite{PenroseRindler86} relative to the Schouten tensor of Fact \ref{fact:ltt}(i) (Remark \ref{rem:ltconvention}).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) is a computation with the bivector action $(a\wedge b)(v) = \ip{b}{v}a - \ip{a}{v}b$, in the splitting $(\sigma, \mu, \rho)$ with $u_p$ the $\sigma$-direction and $X_p$ the $\rho$-direction. The bivector $u_p\wedge e_a$ maps the $\rho$-direction to $-e_a$ and $e_b$ to $g_{ab}\,u_p$, so $-(u_p\wedge e_a)$ contributes $(-\mu_a)$ to the $\sigma$-slot and $(+g_{ab}\rho)$ to the $\mu$-slot; and $(X_p\wedge \mathrm{P}(e_a))$ maps $u_p \mapsto -\mathrm{P}(e_a)$ and $e_b \mapsto \mathrm{P}_{ab}X_p$, contributing $(-\mathrm{P}_{ab}\sigma)$ to the $\mu$-slot and $(+\mathrm{P}_a{}^b\mu_b)$ to the $\rho$-slot. Summing reproduces the display of Fact \ref{fact:ltt}(i) entry by entry. The summand identifications follow: $X_p\wedge W_\C$ annihilates $X_p$, so it lies in the nilradical of the stabiliser of $X_p$ (Fact \ref{fact:parabolic} with $X_p$ in place of $\nInf$), while $u_p \wedge W_\C$ moves $X_p$: soldering.
+(2) The grading eigenvalues are the two-line Fock computation recorded in Section \ref{sec:palatial} (Proposition \ref{prop:rent}): $E = u_p\wedge X_p = -(X_p\wedge u_p)$ acts on the module as $\tfrac12 c(u_p)c(X_p) - \tfrac12 = \tfrac12 - N$ with $N$ the occupation number of the $X_p$-mode (the two occupation numbers of a pair sum to one), so with eigenvalue $+\tfrac12$ on the states not containing the $X_p$-mode ($\Som$) and $-\tfrac12$ on those containing it ($\Spi$). For the summands: $[E, u_p\wedge w] = (u_p\wedge w)$ and $[E, X_p\wedge w] = -(X_p\wedge w)$ for $w \in W_\C$ ($E$-weights of $u_p, X_p, w$ are $+1, -1, 0$), so the soldering summand shifts the $E$-grading of spinors by $+1$ and the Schouten summand by $-1$; on a module whose $E$-spectrum is $\{\pm\tfrac12\}$, a weight-$(+1)$ operator maps the $(-\tfrac12)$-space to the $(+\tfrac12)$-space and annihilates the latter, and dually. The verification script confirms both summand actions on all four mixed directions in the Fock model.
+(3) The block form is (1) and (2): $\nabla^g$ couples the Levi factor, which preserves both planes, and the two summands are the off-diagonal blocks. Equivariance of the summands: for $\ell$ in the Levi factor, $\ell$ fixes $u_p$ and $X_p$, so $[\rho(\ell), c(u_p)c(e)] = c(u_p)c(\ell e)$ and $[\rho(\ell), c(X_p)c(p)] = c(X_p)c(\ell p)$ by Proposition \ref{prop:spiniso}; thus $e_a \mapsto \sigma_a$ and $p_c := \mathrm{P}(e_c) \mapsto \tau_c$ are Levi-equivariant maps $W_\C \to \operatorname{Hom}(\Spi,\Som)$ and $W_\C\to\operatorname{Hom}(\Som,\Spi)$, i.e.\ elements of the one-dimensional spaces of Lemma \ref{lem:homone}(2), as are Penrose's two contractions; this gives the constants $c_1, c_2$. The composite: with $\rho(u_p\wedge e_a) = \tfrac12 c(u_p)c(e_a)$ and $\rho(X_p\wedge p_c) = \tfrac12 c(X_p)c(p_c)$ (both pairs orthogonal), for $\omega \in \Som$,
+\[
+\sigma_a\tau_c\,\omega = -\tfrac14\,c(u_p)c(e_a)c(X_p)c(p_c)\,\omega = \tfrac14\,c(u_p)c(X_p)\,c(e_a)c(p_c)\,\omega = \tfrac12\,c(e_a)c(p_c)\,\omega ,
+\]
+using $c(e_a)c(X_p) = -c(X_p)c(e_a)$, that $c(e_a)c(p_c)$ preserves $\Som$ (it does not involve the $X_p$-mode), and $c(u_p)c(X_p) = 2$ on $\Som$, which is Proposition \ref{prop:rent} read on the $+\tfrac12$ eigenspace. The decomposition into $\tfrac12\ip{e_a}{p_c}$ and $\rho(e_a\wedge p_c)$ is the definition of $\rho$ on a non-orthogonal pair. The script checks the composite identity on all sixteen pairs of mixed directions. Substituting one summand of Fact \ref{fact:ltt}(ii) into the other gives Penrose's composite $i\,\varepsilon_A{}^B\,(i\,\mathrm{P}_{CC'DA'}\omega^D) = -\varepsilon_A{}^B\mathrm{P}_{CC'DA'}\omega^D$. Curvature is not needed for the identification and is not used.
+\end{proof}
+
+\begin{remark}[Point of contact: what became of the tractor formalism]\label{rem:touchtractor}
+Proposition \ref{prop:localtwistor} completes the identification begun in \cite{ButlerT6}: the ambient bundle of the completion is the standard conformal tractor bundle, and its spin bundle, with the induced connection, is the classical local twistor bundle, up to the one sign convention of Remark \ref{rem:ltconvention}. The series' chain of results is thus: division fails (type N) $\Rightarrow$ ascent to $\Cl(2,4)$ forced \cite{ButlerT1} $\Rightarrow$ vacuum equations are formulated in the completion as a parallel ideal point \cite{ButlerT6} $\Rightarrow$ the spinors of the completion are twistors, and the parallel ideal point is the constant simple infinity twistor (Corollary \ref{cor:threelang}). Each formalism was invented independently (tractors: Thomas, Bailey-Eastwood-Gover; twistors: Penrose); the completion derives both from one division problem.
+\end{remark}
+
+\begin{remark}[The one imported convention in the local twistor identification]\label{rem:ltconvention}
+Proposition \ref{prop:localtwistor}(3) proves the block form, the uniqueness of the summands up to two constants whose product is invariant, and the value of that invariant on the Clifford side. The remaining step, that Penrose's composite $-\varepsilon_A{}^B\mathrm{P}_{CC'DA'}\omega^D$ equals $\tfrac12 c(e_a)c(\mathrm{P}(e_c))$ under Levi-equivariant identifications, is the statement that the tensor written $\mathrm{P}_{ab}$ in \cite{PenroseRindler86} (there $\Phi_{ab} - \Lambda g_{ab}$) is the Schouten tensor of Fact \ref{fact:ltt}(i) with a definite sign fixed by their curvature conventions. The paper imports this identification rather than re-deriving the curvature conventions of \cite{PenroseRindler86}; the algebraic side is proved and script-checked, and nothing later depends on the sign.
+\end{remark}
+
+% === Section 5: the palatial relation ===
+\section{The palatial relation: two quantisations, one core}\label{sec:palatial}
+
+Palatial twistor theory \cite{Penrose15} is Penrose's current approach to the full Einstein equations: it replaces holomorphic functions on twistor space by a \emph{noncommutative} algebra of twistor operators, with $\bar Z$ realised as a derivative and the googly data expected to reside in ordering ambiguities. The transport framework independently produces noncommutative pair structure, the completed ladder pairs with their CAR relations, as the mandatory replacement for classical values at the singular locus \cite{ButlerT1}. It is natural to conjecture that the two structures are the same object. This section proves that the naive form of that conjecture is \emph{false}, for a reason of statistics that admits a one-line proof, and then proves the corrected picture: the two algebras are the two storeys of one tower, meeting at the conformal algebra.
+
+Throughout, the \emph{palatial algebra} $\mathcal{P}$ is the unital associative $\C$-algebra with generators $Z^\alpha, \bar Z_\beta$ ($\alpha, \beta = 1, \dots, 4$) and relations
+\[
+[Z^\alpha, Z^\beta] = 0, \qquad [\bar Z_\alpha, \bar Z_\beta] = 0, \qquad [Z^\alpha, \bar Z_\beta] = \hbar\,\delta^\alpha_\beta ,
+\]
+the twistor canonical commutation relations of \cite{Penrose15} (there realised by $\bar Z_\beta = \hbar\,\partial/\partial Z^\beta$ on holomorphic functions); $\hbar \neq 0$ is a fixed constant.
+
+\subsection{Statistics refutes the naive identification}\label{subsec:statistics}
+
+\begin{proposition}[The statistics no-go]\label{prop:statistics}
+The palatial algebra admits no nonzero finite-dimensional representation, and no embedding of unital algebras into any finite-dimensional algebra; in particular none into $\Cl(2,4)$ or $\Cl(2,4)_\C$, of dimension $64$.
+\end{proposition}
+
+In words: quantised twistors are not the completion's ladder pairs.
+
+\begin{proof}
+In a representation on a nonzero finite-dimensional space $U$, take the trace of $[Z^1, \bar Z_1] = \hbar\,\mathrm{id}_U$: the left side has trace zero (the trace of any commutator of endomorphisms), the right side $\hbar\dim U \neq 0$. For the embedding statement: a unital embedding $\mathcal{P} \hookrightarrow A$ into a finite-dimensional algebra composes with the left regular representation of $A$ to give a finite-dimensional faithful representation of $\mathcal{P}$, which does not exist. The contrast with the fermionic side is instructive and exact: the CAR relation $ff^* + f^*f = 1$ is an \emph{anti}commutator, to which the trace argument does not apply, and indeed the ladder pairs lie in the $64$-dimensional $\Cl(2,4)$ (Fact \ref{fact:fock}). Bose statistics forbids finite dimensions; Fermi statistics is built from them.
+\end{proof}
+
+The manner of the failure locates the true structure one level up: the palatial algebra cannot lie \emph{inside} the completion, so if the two are related at all, one must be built \emph{on} the other. The next two subsections prove that this is exactly what happens: the completion's fermionic quantisation produces twistor \emph{states}; the palatial bosonic quantisation then acts on those states.
+
+\subsection{Twistors are the states of three ladder pairs}\label{subsec:states}
+
+\begin{proposition}[The spin representation is $\mathfrak{sl}(\T)$]\label{prop:spiniso}
+The bivectors of $\Cl(V_\C)$ close under commutator (a copy of $\mathfrak{so}(2,4)_\C := \Lambda^2 V_\C$, acting on vectors by $[\beta, c(w)] = c(\beta w)$), and their action on $\T$ is a Lie algebra isomorphism
+\[
+\rho: \mathfrak{so}(2,4)_\C \;\xrightarrow{\ \sim\ }\; \mathfrak{sl}(\T) .
+\]
+Consequently the image of $\mathrm{Spin}(V_\C)$ in $GL(\T)$ is all of $SL(\T)$, which acts transitively on $\T\setminus\{0\}$.
+\end{proposition}
+
+\begin{proof}
+Closure and the vector action: for $\beta = \tfrac12 c(u)c(v) - \tfrac12\ip{u}{v}$, the Clifford relations give $[\beta, c(w)] = \ip{v}{w}c(u) - \ip{u}{w}c(v) = c\bigl((u\wedge v)w\bigr)$, so $\operatorname{ad}_\beta$ preserves the space of vectors; for a second such $\beta'= \tfrac12 c(u')c(v') - \tfrac12\ip{u'}{v'}$, the derivation property gives $[\beta, \beta'] = \tfrac12\bigl(c(\beta u')c(v') + c(u')c(\beta v')\bigr)$, a sum of products of two vectors whose scalar parts $\tfrac12(\ip{\beta u'}{v'} + \ip{u'}{\beta v'})$ vanish by the antisymmetry of $\beta$ as a map on $V_\C$: the commutator is again a bivector. The bivectors act on $\T$ because they are even. Injectivity and trace-freeness of $\rho$ are finite computations, performed exactly by the script: the fifteen basis bivectors have linearly independent, trace-free actions on $\T$. (Trace-freeness also follows abstractly: closure gives $\rho(\mathfrak{so}) = \rho([\mathfrak{so},\mathfrak{so}]) \subseteq [\mathfrak{gl}(\T), \mathfrak{gl}(\T)] = \mathfrak{sl}(\T)$; the script makes it unconditional.) Since $\dim \mathfrak{so}(2,4)_\C = 15 = \dim\mathfrak{sl}(\T)$, $\rho$ is an isomorphism. Group level: the image of $\mathrm{Spin}(V_\C)$ is the subgroup of $GL(\T)$ generated by the exponentials $e^{\rho(\beta)}$, and since $\rho$ is onto $\mathfrak{sl}(\T)$ and $\mathrm{Spin}(V_\C)$ contains $e^{\beta}$ for every bivector $\beta$, it contains every $e^{tE_{ij}} = 1 + tE_{ij}$ ($i \neq j$); these elementary transvections generate $SL(4,\C)$ (row reduction: any matrix of determinant one is reduced to the identity by them), so the image is all of $SL(\T)$. Transitivity of $SL(4,\C)$ on nonzero vectors is elementary (extend $u/\lambda$ to a basis of determinant one).
+\end{proof}
+
+\begin{theorem}[Twistors are the states of three ladder pairs]\label{thm:states}
+Let $u \in \T\setminus\{0\}$ and define its \emph{annihilator space} $W_u := \{v \in V_\C : c(v)u = 0\}$.
+\begin{enumerate}
+\item $W_u$ is a maximal totally isotropic ($3$-dimensional) subspace of $V_\C$: \emph{every} twistor is a pure spinor. Moreover $W_u$ determines $u$ up to scale (the joint kernel of $c(W_u)$ is the line $\C u$), so $[u] \mapsto W_u$ is an injection of $\PT$ into the maximal isotropic subspaces, equivariant for the spin action.
+\item For any maximal isotropic complement $U'$ dual to $W_u$, the map $\Lambda^\bullet U' \to \Lambda^\bullet W$, $\xi \mapsto c(\xi)u$, is a linear isomorphism: $u$ is the Fock vacuum of the three-ladder-pair system built on $(W_u, U')$, every state of the module is generated from $u$ by its own pair operators, and $\T$ (respectively $\T'$) is what the even (respectively odd) products generate. The pair system is canonical given $u$ up to the choice of dual complement.
+\item Ambient vectors act on twistor states as sums of three fermionic creation and annihilation operators; twistors are therefore not \emph{operators} of the pair algebra but its \emph{states}. The annihilator spaces of $\T$-spinors and of $\T'$-spinors are disjoint families (no maximal isotropic annihilates both a nonzero even and a nonzero odd spinor).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Isotropy is general: $v \in W_u$ gives $\ip{v}{v}u = c(v)^2u = 0$, and $v_1, v_2 \in W_u$ give $2\ip{v_1}{v_2}u = \{c(v_1), c(v_2)\}u = 0$, so $W_u$ is totally isotropic, hence contained in its own orthogonal complement, so $2\dim W_u \le 6$ and $\dim W_u \le 3$. For the vacuum $u_0 = 1 \in \Lambda^0 W$: $c(w')1 = 0$ for $w' \in W'$ and $c(w+w')1 = \sqrt2\,w$, so $W_{u_0} = W'$, of dimension exactly $3$. By Proposition \ref{prop:spiniso} the spin image acts transitively on $\T\setminus\{0\}$, and the construction is equivariant, $W_{gu} = g(W_u)$ (from $c(gv) = g c(v) g^{-1}$), so $\dim W_u = 3$ for every $u \neq 0$. Joint kernel: for $W_{u_0} = W'$ the joint kernel of the three contractions $\iota_{w'}$ is $\Lambda^0 W = \C\cdot 1$ (if $x$ has a nonzero component on a monomial $w_S$ with $S \neq \emptyset$, pick any $i \in S$: the $w_{S\setminus i}$-component of $\iota_{w_i'}x$ comes from $w_S$ alone, since $\iota_{w_i'}w_{S'} = \pm w_{S'\setminus i}$ or $0$ and $S'\setminus i = S\setminus i$ with $i \in S'$ forces $S' = S$, so it is nonzero); equivariance transports the statement to every $u$.
+(2) The image $c\bigl(\Lambda^\bullet U'\bigr)u$ equals $c(\Cl(V_\C))u$: the anticommutation relations reorder any word in the basis vectors of $U' \oplus W_u$ into a combination of normally ordered products $c(\xi')c(\eta)$ with $\xi'$ a monomial in $U'$ and $\eta$ a monomial in $W_u$, so these $8\cdot 8 = 64$ products span $\Cl(V_\C)$; acting on $u$, the right-hand factor $c(\eta)$ gives $0$ unless $\eta = 1$, since $c(W_u)u = 0$; $c(\Cl(V_\C))u$ is a nonzero submodule, hence everything, by irreducibility (Theorem \ref{thm:purespinor}). So the map is surjective from a space of dimension $2^3 = 8$ onto a space of dimension $8$, hence bijective. The parity statement holds because $c(\xi)$ for even (odd) $\xi$ preserves (swaps) the chirality halves and $u$ is even; if $u \in \T'$ instead, the roles swap. Normalising a basis of $W_u$ against the dual basis of $U'$ produces three pairs with $f^2 = f^{*2} = 0$, $ff^* + f^*f = 1$: the ladder pairs of Fact \ref{fact:fock}, here over $\C$; the script checks all CAR relations exactly. Complements dual to $W_u$ exist: for a basis $w_1, w_2, w_3$ of $W_u$ choose $v_j$ with $\ip{w_i}{v_j} = \delta_{ij}$ (the functionals $\ip{w_i}{\cdot}$ are independent) and set $u_j := v_j - \tfrac12\sum_k \ip{v_j}{v_k}\,w_k$; then $\ip{w_i}{u_j} = \delta_{ij}$ and $\ip{u_j}{u_k} = \ip{v_j}{v_k} - \tfrac12\ip{v_k}{v_j} - \tfrac12\ip{v_j}{v_k} = 0$, so $U' := \operatorname{span}(u_j)$ is a dual isotropic complement. Nothing below depends on the choice.
+(3) The first sentence is Theorem \ref{thm:purespinor} read through (2): a vector $v = w + w'$ acts as a creation operator plus an annihilation operator of the $u$-adapted system. Disjointness: if $U = W_{u} = W_{u'}$ with $u \in \T\setminus 0$, $u' \in \T'\setminus 0$, the joint kernel of $c(U)$ would contain the two-dimensional space $\C u \oplus \C u'$, contradicting (1).
+\end{proof}
+
+\begin{remark}[Point of contact: $\alpha$-planes, and the tower]\label{rem:alphaplanes}
+Clause (1) is the classical statement that in six ambient dimensions every chiral spinor is pure (Cartan, Chevalley \cite{Chevalley54}); the annihilator planes of $\T$-spinors are one ruling family of maximal isotropic subspaces, in twistor language the $\alpha$-planes of complexified compactified Minkowski space, and the $\T'$-family are the $\beta$-planes \cite{Penrose1967, PenroseRindler86}. The transport reading adds the physical origin: the three pairs of clause (2) are ladder pairs of exactly the kind the completion produces (Fact \ref{fact:fock}), and the tower paper \cite[\S 4]{ButlerT3} shows each further ascent adjoins one more pair, doubling the half-spinor space: the tower is a qubit register, and twistor space is the chirality half of its three-qubit floor. \emph{First quantisation, in this precise sense, is the Chevalley functor from ambient directions to Fock states; it is forced at the singular locus by the no-go theorem} \cite[Thm.~4.2]{ButlerT1}.
+\end{remark}
+
+\subsection{The shared core and the ordering shift}\label{subsec:core}
+
+\begin{lemma}[Symmetrised quadratics of the palatial algebra]\label{lem:weyl}
+For $M \in \mathfrak{gl}(4,\C)$ with entries $M^\beta{}_\alpha$ set
+\[
+q(M) \;:=\; \tfrac12 \sum_{\alpha,\beta} M^\beta{}_\alpha\,\bigl(Z^\alpha \bar Z_\beta + \bar Z_\beta Z^\alpha\bigr) \;\in\; \mathcal{P}.
+\]
+Then:
+\begin{enumerate}
+\item $[q(M), Z^\gamma] = -\hbar\,(MZ)^\gamma$ and $[q(M), \bar Z_\gamma] = +\hbar\,(M^{\mathsf T}\bar Z)_\gamma$: the adjoint action of $q(M)$ on the linear generators is the linear action of $M$ (in the dual pair of representations), times $\hbar$;
+\item $[q(M), q(N)] = \hbar\, q([M,N])$: the map $M \mapsto q(M)/\hbar$ is an injective Lie algebra homomorphism $\mathfrak{gl}(4,\C) \to \mathcal{P}$;
+\item $q(M) = \sum M^\beta{}_\alpha Z^\alpha \bar Z_\beta - \tfrac{\hbar}{2}\operatorname{tr} M$: the symmetric and normal orderings of a quadratic differ by the central element $\tfrac{\hbar}{2}\operatorname{tr}M$; for the distinguished generator $M = \mathrm{id}$ (the helicity/homogeneity direction) the shift is $2\hbar$: one half of $\hbar$ for each of the four complex dimensions of twistor space.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) $[Z^\alpha\bar Z_\beta, Z^\gamma] = Z^\alpha[\bar Z_\beta, Z^\gamma] = -\hbar\,\delta^\gamma_\beta Z^\alpha$, and the same for the reversed ordering, so $[q(M), Z^\gamma] = -\hbar\sum_\alpha M^\gamma{}_\alpha Z^\alpha$; likewise $[Z^\alpha \bar Z_\beta, \bar Z_\gamma] = \hbar\,\delta^\alpha_\gamma\,\bar Z_\beta$ gives the second display.
+(2) $\operatorname{ad}_{q(M)}$ is a derivation, so by (1),
+\[
+[q(M), q(N)] = \tfrac12\sum N^\beta{}_\alpha\Bigl(\,[q(M),Z^\alpha]\bar Z_\beta + Z^\alpha[q(M),\bar Z_\beta] + [q(M),\bar Z_\beta]Z^\alpha + \bar Z_\beta[q(M),Z^\alpha]\Bigr),
+\]
+and collecting coefficients of the symmetrised monomials gives $-\hbar\,q(NM) + \hbar\,q(MN) = \hbar\,q([M,N])$. Injectivity: the adjoint action (1) recovers $M$. The verification script confirms (2) in the polynomial realisation $Z^\alpha = z_\alpha$, $\bar Z_\beta = -\hbar\,\partial_\beta$ (the sign that realises $[Z^\alpha, \bar Z_\beta] = +\hbar\delta^\alpha_\beta$, checked as an operator identity), where both sides are operators determined by their action on polynomials of degree $\le 2$, checked exactly on that finite basis.
+(3) $\bar Z_\beta Z^\alpha = Z^\alpha \bar Z_\beta - \hbar\delta^\alpha_\beta$, so $\tfrac12(Z^\alpha\bar Z_\beta + \bar Z_\beta Z^\alpha) = Z^\alpha\bar Z_\beta - \tfrac{\hbar}{2}\delta^\alpha_\beta$; summing against $M$ gives the display, and $\operatorname{tr}(\mathrm{id}) = 4$ gives the shift $2\hbar$.
+\end{proof}
+
+\begin{proposition}[The Clifford side of the ordering shift]\label{prop:rent}
+Let $(v, v^*)$ be a null pair of $V$ with $\ip{v}{v^*} = 1$ (an adjoined ladder pair), and let $E := v\wedge v^* \in \mathfrak{so}(2,4)$ be the grading element of the corresponding hyperbolic plane. In the Fock model, the spinor action of $E$ is
+\[
+\rho(E) \;=\; \tfrac12\,c(v)\,c(v^*) - \tfrac12 \;=\; N - \tfrac12 ,
+\]
+where $N$ is the occupation number operator of the mode created by $v$ (eigenvalue $1$ on states containing that mode, $0$ otherwise). The generator of the adjoined plane's boost is the mode's number operator shifted by one half.
+\end{proposition}
+
+\begin{proof}
+The bivector element of $\Cl(V_\C)$ attached to $a\wedge b$ is $\tfrac12 c(a)c(b) - \tfrac12\ip{a}{b}$: its commutator with vectors is the bivector action for any $a, b$, orthogonal or not, as in Proposition \ref{prop:spiniso}. Take $v = w_1$, $v^* = w_1'$ in an adapted model, and write $A_1 := w_1\wedge(\cdot)$, $B_1 := \iota_{w_1'}$, so $c(v)c(v^*) = 2\,A_1 B_1$. On a basis monomial containing $w_1$, $A_1B_1$ removes and restores the $w_1$-factor: eigenvalue $1$; on a monomial without $w_1$, $B_1$ annihilates it: eigenvalue $0$. So $\tfrac12 c(v)c(v^*) = N$ and $\rho(E) = N - \tfrac12$. The script checks the full $8\times 8$ eigenvalue table. The eigenvalues $\pm\tfrac12$ on the two chirality-plane pairs are the grading weights used in Proposition \ref{prop:localtwistor}.
+\end{proof}
+
+\begin{theorem}[The shared core, and the ordering dictionary]\label{thm:core}
+\begin{enumerate}
+\item The symmetrised quadratics of the palatial algebra close under commutator on a copy of $\mathfrak{gl}(4,\C) = \mathfrak{gl}(\T)$ (Lemma \ref{lem:weyl}); the anti-Hermitian part with respect to the Hermitian form $\Sigma$ of Proposition \ref{prop:reality} is $\mathfrak{u}(2,2)$, containing $\mathfrak{su}(2,2) \cong \mathfrak{so}(2,4)$.
+\item The bivectors of $\Cl(2,4)_\C$ close under commutator on $\mathfrak{so}(2,4)_\C$ and act on $\T$ as $\mathfrak{sl}(\T)$ (Proposition \ref{prop:spiniso}).
+\item Under the Klein identification the two copies coincide, compatibly with their actions: the assignment $\beta \mapsto q(\rho(\beta))/\hbar$ is an injective Lie algebra homomorphism $\mathfrak{so}(2,4)_\C \to \mathcal{P}$, and the adjoint action of $q(\rho(\beta))/\hbar$ on the linear twistor generators is the spinor action $\rho(\beta)$ of the Clifford bivector, in the dual pair of slots of Lemma \ref{lem:weyl}(1) ($-\rho(\beta)$ on the $Z$ slot, its transpose on the $\bar Z$ slot).
+\item Both quantisations incur the same ordering shift of one half per dimension: on the palatial storey, symmetric ordering shifts the distinguished $\mathfrak{u}(1)$ generator by $\tfrac{\hbar}{2}$ per complex dimension of $\T$, totalling $2\hbar$ (Lemma \ref{lem:weyl}(3)); on the Clifford storey, the boost generator of each adjoined plane is $N - \tfrac12$: one half per fermionic mode (Proposition \ref{prop:rent}).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) is Lemma \ref{lem:weyl}(2) restricted to the real form: $q$ is defined over any subalgebra of $\mathfrak{gl}(\T)$, and $M \mapsto q(M)/\hbar$ restricts to $\mathfrak{u}(2,2) := \{M : \Sigma(M\cdot,\cdot) + \Sigma(\cdot,M\cdot) = 0\}$, which has real dimension $16$ and contains its traceless part $\mathfrak{su}(2,2)$; the isomorphism $\mathfrak{su}(2,2)\cong\mathfrak{so}(2,4)$ is Proposition \ref{prop:spiniso} restricted to the real bivectors, which act $\Sigma$-anti-Hermitianly and trace-free (Proposition \ref{prop:reality}(2)), so that the injective image of the fifteen-dimensional $\mathfrak{so}(2,4)$ is the fifteen-dimensional $\mathfrak{su}(2,2)$. (2) is Proposition \ref{prop:spiniso}. (3) Compose: $\beta \mapsto \rho(\beta) \in \mathfrak{sl}(\T) \subset \mathfrak{gl}(\T) \mapsto q(\rho(\beta))/\hbar$; both maps are injective Lie homomorphisms (Proposition \ref{prop:spiniso}, Lemma \ref{lem:weyl}(2)), and Lemma \ref{lem:weyl}(1) says the adjoint action on the generator span is $\rho(\beta)$ again (in the dual pair of slots). (4) is the two cited computations side by side; in words, the conformal algebra is the invariant core of both storeys. The homogeneity dictionary is an identity rather than a convention match: in the realisation $\bar Z_\beta = -\hbar\,\partial_\beta$, the one that satisfies the palatial sign $[Z^\alpha, \bar Z_\beta] = +\hbar\delta^\alpha_\beta$, the generator $q(\mathrm{id})$ acts on homogeneity-$h$ functions as $-(h+2)\hbar$, so eigenfunctions of the helicity operator $s = \tfrac12 q(\mathrm{id})$ with eigenvalue $s\hbar$ have homogeneity exactly $h = -2s - 2$ (the script checks this as an operator identity on all monomials of degree $\le 3$): the $-2$ of Penrose's homogeneity \cite{Penrose1967, PenroseRindler86} \emph{is} the ordering shift of Lemma \ref{lem:weyl}(3). This computation is classical: the helicity operator as the symmetrised quadratic $\tfrac14(Z^\alpha\bar Z_\alpha + \bar Z_\alpha Z^\alpha)$ and the resulting $-2s-2$ are Penrose's \cite[Vol.~2, Ch.~6]{PenroseRindler86}; what the series adds is the pairing with the Clifford ordering shift of Proposition \ref{prop:rent}. The residual freedom (which chirality is called helicity $+s$) is conventional; the magnitude, one half per dimension at each storey, is not.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  storey/.style={draw, rounded corners=3pt, align=center, inner sep=7pt, font=\small},
+  lift/.style={-stealth, thick},
+  note/.style={font=\scriptsize, align=left, anchor=west}]
+  % three storeys
+  \node[storey] (V) at (0, 0)
+    {ambient directions\\ $V_\C = \R^{2,4}\otimes\C$, \ $\dim_\C = 6$\\[1pt]
+     \scriptsize classical values; division fails at type N};
+  \node[storey] (T) at (0, 2.6)
+    {twistor \emph{states}\\ $\Lambda^\bullet W = \T \oplus \T'$, \ $\dim_\C = 8$\\[1pt]
+     \scriptsize fermionic Fock space of three ladder pairs (CAR);\\
+     \scriptsize lies inside the $64$-dimensional $\Cl(2,4)_\C$};
+  \node[storey] (P) at (0, 5.2)
+    {quantised twistor \emph{operators}\\ the palatial algebra $\mathcal{P}$, \ $[Z^\alpha, \bar Z_\beta] = \hbar\,\delta^\alpha_\beta$\\[1pt]
+     \scriptsize bosonic (CCR); no finite-dimensional representation};
+  % arrows
+  \draw[lift] (V) -- (T) node[midway, note, xshift=4pt]
+    {first quantisation: the Chevalley functor,\\
+     forced at the singular locus (Thm \ref{thm:purespinor}, Rem \ref{rem:alphaplanes});\\
+     ordering shift: $\rho(v\wedge v^*) = N - \tfrac12$, a half per mode (Prop \ref{prop:rent})};
+  \draw[lift] (T) -- (P) node[midway, note, xshift=4pt]
+    {second quantisation: the palatial (Weyl) storey \cite{Penrose15};\\
+     not an embedding of the first (Prop \ref{prop:statistics});\\
+     ordering shift: $2\hbar$, a half per dimension, $= $ the $-2$ of $-2s-2$ (Thm \ref{thm:core})};
+  % shared core
+  \draw[dashed, thick] (-4.4, -0.85) -- (-4.4, 6.05);
+  \node[rotate=90, font=\scriptsize, anchor=south] at (-4.6, 2.6)
+    {shared core: $\mathfrak{so}(2,4) \cong \mathfrak{su}(2,2)$, acting at every storey (Thm \ref{thm:core})};
+\end{tikzpicture}
+\caption{The two-storey resolution of the palatial conjecture (Section \ref{sec:palatial}). The naive identification of Penrose's quantised twistors with the completion's ladder pairs fails on statistics: the palatial algebra is bosonic and admits no finite-dimensional representation, while the ladder pairs are fermionic and lie inside the $64$-dimensional completed algebra (Proposition \ref{prop:statistics}). The proved replacement is a tower. The fermionic (Clifford) quantisation turns ambient directions into twistor states: every twistor is the Fock vacuum of its own three-pair system (Theorem \ref{thm:states}). The bosonic (Weyl) quantisation of the palatial programme turns those states into operators. The conformal algebra is the invariant core of both storeys, and each storey incurs an ordering shift of one half per dimension: $N - \tfrac12$ per adjoined mode below, the homogeneity shift $-2$ of $-2s-2$ above (Theorem \ref{thm:core}).}
+\label{fig:twostorey}
+\end{figure}
+
+\begin{remark}[The two-storey picture]\label{rem:twostorey}
+The corrected relationship is a proved structure, drawn in Figure \ref{fig:twostorey}. The Clifford (fermionic) quantisation turns ambient directions into twistor \emph{states}: first quantisation, forced at the singular locus (Remark \ref{rem:alphaplanes}). The Weyl (bosonic) quantisation of the palatial programme turns twistor states into the noncommutative algebra of quantised twistors: second quantisation, one storey up, and provably not the first storey under another name (Proposition \ref{prop:statistics}). The conformal algebra $\mathfrak{so}(2,4)$ is the invariant core of both storeys (Theorem \ref{thm:core}), and the ordering shift of a half per dimension recurs at each. What survives of the naive conjecture is its corrected form: the framework's operator-valued completion and Penrose's noncommutative holomorphic geometry are opposite ends of one tower rather than of one identification, meeting at the conformal algebra. Read against the tower paper \cite{ButlerT3}, the completion's ladder pairs supply the states on which the palatial storey acts.
+\end{remark}
+
+% === Section 6: the googly boundary ===
+\section{The nonlinear graviton, the boundary, and the googly conjecture}\label{sec:googly}
+
+The correspondence proved so far is flat-model and connection-level. The question that decides whether twistor geometry can carry \emph{curved} vacuum gravity is Penrose's: which spacetimes globalise the point-line dictionary? The classical answer is exactly the half-flat sector, and this section records that answer with its Lorentzian boundary stated, then poses the series' conjecture about where the missing (googly) half lies in the palatial algebra, together with a proof of the conjecture's algebraic half.
+
+\subsection{The nonlinear graviton, and the Lorentzian boundary}\label{subsec:graviton}
+
+\begin{fact}[Imported: the nonlinear graviton]\label{fact:graviton}
+For a complex $4$-manifold with anti-self-dual (half-flat) vacuum conformal structure, the $\alpha$-plane distribution defined fibrewise by the ruling of the Klein quadric is integrable; the leaf space of the resulting foliation is a complex $3$-manifold, the \emph{curved twistor space}; spacetime points reappear as rational curves with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$; and the conformal structure is recovered from curve intersection. Conversely such a twistor space determines the half-flat spacetime. \emph{Provenance:} \cite{Penrose76}. In the language of this paper: half-flatness is exactly the condition under which the completion's point space, the fibrewise Klein quadric of Theorem \ref{thm:spinorid}, globalises to a deformed twistor space with the incidence dictionary of Theorem \ref{thm:incidence} intact.
+\end{fact}
+
+\begin{fact}[Imported: Weyl commutes with duality]\label{fact:weylstar}
+On an oriented Lorentzian $4$-manifold, the Weyl curvature operator on $2$-forms commutes with the Hodge star. \emph{Provenance:} classical $4$-dimensional curvature decomposition; \cite{PenroseRindler86}.
+\end{fact}
+
+\begin{fact}[Imported: Weyl's theorem]\label{fact:weyl}
+A pseudo-Riemannian metric in dimension at least four is locally conformally flat if and only if its Weyl tensor vanishes. \emph{Provenance:} \cite{Weyl1918}.
+\end{fact}
+
+\begin{lemma}[Lorentzian duality is a complex structure]\label{lem:star}
+On $\Lambda^2$ of an oriented $4$-dimensional Lorentzian vector space, the Hodge star satisfies $\ast^2 = -1$; its $\pm i$ eigenspaces $\Lambda^\pm \subset \Lambda^2_\C$ each have dimension three, and complex conjugation (with respect to the real form $\Lambda^2$) interchanges them.
+\end{lemma}
+
+\begin{proof}
+In an oriented orthonormal frame $e^0, e^1, e^2, e^3$ with $\eta = \operatorname{diag}(+,-,-,-)$: $\ast(e^0\wedge e^i) = -e^j\wedge e^k$ and $\ast(e^j\wedge e^k) = e^0\wedge e^i$ for $(i,j,k)$ cyclic, as follows from $\ast(e^a\wedge e^b) = \tfrac12\epsilon^{ab}{}_{cd}\,e^c\wedge e^d$ with one index raised by $\eta$ on a spatial slot introducing one minus sign; hence $\ast^2 = -1$ on all six basis $2$-forms (the script checks the full table). The basis-free reason: on $k$-forms in dimension $n$, $\ast^2 = (-1)^{k(n-k)}\operatorname{sgn}\det\eta$, which for $k = 2$, $n = 4$ and Lorentzian $\eta$ is $-1$. An operator squaring to $-1$ on a real $6$-dimensional space complexifies to eigenvalues $\pm i$ with conjugate eigenspaces of equal dimension: if $\ast x = ix$ then $\ast \bar x = -i\bar x$ since $\ast$ is real.
+\end{proof}
+
+\begin{proposition}[No real Lorentzian vacuum is half-flat]\label{prop:lorentz}
+On an oriented Lorentzian $4$-manifold, if either duality half of the Weyl tensor vanishes, the Weyl tensor vanishes: a real Lorentzian half-flat metric is conformally flat. (This is classical, and is the reason the nonlinear graviton is stated for complex or Riemannian signature in \cite{Penrose76}; the proof is included because it is four lines.) In particular no real Lorentzian black hole is half-flat: the Schwarzschild and Kerr Weyl operators are nonzero (a nonzero curvature scale times a nonzero type-D bivector off the singular locus, imported from \cite[Prop.~3.3, Fact 6.3]{ButlerT6}).
+\end{proposition}
+
+\begin{proof}
+By Fact \ref{fact:weylstar} the (real) Weyl operator $\mathcal{W}$ preserves the eigenspaces $\Lambda^\pm$ of Lemma \ref{lem:star}; write $\mathcal{W}^\pm$ for its restrictions. $\mathcal{W}$ is real, so it commutes with complex conjugation, which interchanges $\Lambda^+$ and $\Lambda^-$ (Lemma \ref{lem:star}); hence $\mathcal{W}^-$ is the conjugate operator of $\mathcal{W}^+$, and $\mathcal{W}^- = 0$ forces $\mathcal{W}^+ = 0$, forcing $\mathcal{W} = 0$ on $\Lambda^2_\C$ and so on $\Lambda^2$. Conformal flatness of a metric with $\mathcal{W} = 0$ is Weyl's theorem (Fact \ref{fact:weyl}). The black-hole clause imports the nonvanishing curvature scale from the geometry paper.
+\end{proof}
+
+\begin{remark}[The boundary, stated plainly]\label{rem:boundary}
+Facts \ref{fact:graviton} and Proposition \ref{prop:lorentz} together are the boundary of the correspondence: the nonlinear graviton globalises the completion's point space in the Euclidean and complexified sectors, where half-flatness is a nontrivial condition, and \emph{never} for a real Lorentzian black hole. Encoding the full, two-sided Einstein equations in twistor data is the googly problem, open in every formalism, including this one. What the transport framework does capture of the Lorentzian black hole's twistorial nature is the type-D structure: the Kerr conformal scale is the inverse cube of the Walker-Penrose Killing spinor \cite[Prop.~6.8]{ButlerT6}, a statement at the level of Section \ref{sec:incidence}'s dictionary, not of Fact \ref{fact:graviton}'s globalisation.
+\end{remark}
+
+\subsection{Ordering at quartic order, and the ordering insensitivity of the anti-self-dual sector}\label{subsec:quartic}
+
+Palatial twistor theory expects the googly data to be carried by ordering ambiguities of the noncommutative algebra $\mathcal{P}$ \cite{Penrose15}. The next lemma locates exactly where ordering ambiguities \emph{can} carry tensorial information at all.
+
+\begin{lemma}[The ordering filtration]\label{lem:quartic}
+Grade $\mathcal{P}$ by total degree in the generators. Then:
+\begin{enumerate}
+\item any two orderings of a monomial of degree $\le 2$ differ by an element of $\hbar\,\C$: quadratic ordering ambiguities are central scalars and carry no tensorial information;
+\item any two orderings of a monomial of degree $4$ differ by $\hbar\,(\text{a quadratic}) + \hbar^2\,\C$; for a \emph{balanced} monomial (two $Z$'s and two $\bar Z$'s) the quadratic is a mixed one, i.e.\ of the form $q(M) + \hbar\C$ with $M \in \mathfrak{gl}(\T)$, and the ordering discrepancy of a product $q(M)q(N)$ of symmetrised quadratics taken in the two orders is $[q(M), q(N)] = \hbar\,q([M,N])$: balanced quartic ordering ambiguities are valued, through $q$, in $\mathfrak{gl}(\T)$, which contains the conformal algebra $\mathfrak{so}(2,4)_\C \cong \mathfrak{sl}(\T)$;
+\item quartic order is the \emph{first} at which an ordering ambiguity can be $\mathfrak{gl}(\T)$-valued.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Reordering a word is a sequence of adjacent transpositions; transposing $Z^\alpha$ past $\bar Z_\beta$ changes the word by $\hbar\,\delta^\alpha_\beta$ times the word with both letters deleted (the relations; transpositions within the $Z$'s or within the $\bar Z$'s change nothing). (1): for degree $\le 2$ the deleted word is a scalar. (2): for degree $4$ each transposition produces $\hbar$ times a degree-$2$ word, whose own ordering ambiguity is central by (1); deleting one $Z$ and one $\bar Z$ from a balanced word leaves a mixed word $Z^\alpha\bar Z_\beta$, which is $q(E_{\alpha\beta})$ up to a central term by Lemma \ref{lem:weyl}(3); the $q$-computation is Lemma \ref{lem:weyl}(2). (3): by (1) the quadratic ambiguities are scalars, and degree-$3$ monomials reorder with $\hbar\times$(linear) discrepancies, which are vector-valued, not $\mathfrak{gl}(\T)$-valued; degree $4$ is the first with a $\mathfrak{gl}(\T)$-valued discrepancy.
+\end{proof}
+
+\begin{remark}[Where a curvature operator could enter]\label{rem:receptacle}
+The interpretation the conjecture below rests on: a curvature operator is an $\mathfrak{so}$-valued function of $\mathfrak{so}$-arguments (the bivector-valued function of bivectors $R(B)$ of \cite{ButlerT6}), and Lemma \ref{lem:quartic} says that the ordering discrepancy $q(M)q(N) \mapsto \hbar\,q([M,N])$ of two $\mathfrak{so}$-elements is the first slot in the palatial algebra with that shape. This is a reading of the lemma, not part of it.
+\end{remark}
+
+\begin{fact}[Imported: complete reducibility]\label{fact:reducibility}
+Every finite-dimensional representation of $\mathfrak{sl}(2,\C)$ is a direct sum of irreducible representations, and the decomposition of a representation into isotypic components (the sum of all subrepresentations isomorphic to a given irreducible) is canonical. \emph{Provenance:} Weyl's complete reducibility theorem, e.g.\ \cite[\S6.3, \S7]{Humphreys72}.
+\end{fact}
+
+\begin{proposition}[The chirality split, and the ordering insensitivity of the ASD sector]\label{prop:blind}
+Let $\mathfrak{l} := \Lambda^2 (W_{1,3})_\C \cong \mathfrak{so}(1,3)_\C \subset \mathfrak{so}(2,4)_\C$ be the complexified Lorentz subalgebra of the splitting, and $\mathfrak{l} = \mathfrak{g}^+ \oplus \mathfrak{g}^-$ its decomposition into the $\pm i$ eigenspaces of the duality operator of Lemma \ref{lem:star}. Then:
+\begin{enumerate}
+\item each of $\mathfrak{g}^\pm$ is a subalgebra isomorphic to $\mathfrak{sl}(2,\C)$, and $[\mathfrak{g}^+, \mathfrak{g}^-] = 0$: the self-dual and anti-self-dual sectors commute;
+\item (\emph{ordering insensitivity of the ASD sector}) Let $\mathcal{A}^- \subset \mathcal{P}$ be the unital subalgebra generated by $q(\rho(\mathfrak{g}^-))$, and call $q(\rho(\mathfrak{g}^+))$ the \emph{googly slot}. Then: (a) every ordering discrepancy of a word in elements of $q(\rho(\mathfrak{g}^-))$ lies in $\hbar\,\mathcal{A}^-$, and for a word of length two it is exactly $\hbar\,q(\rho([P, Q])) \in \hbar\,q(\rho(\mathfrak{g}^-))$; (b) $\mathcal{A}^-$ commutes with the googly slot, $[\mathcal{A}^-, q(\rho(\mathfrak{g}^+))] = 0$; (c) under the adjoint action of $\mathfrak{g}^+$ through $q\circ\rho/\hbar$, $\mathcal{P}$ is a locally finite $\mathfrak{g}^+$-module, the googly slot is a copy of the adjoint representation inside it, and every element of $\mathcal{A}^-$ (in particular every discrepancy of (a)) has zero component in the adjoint isotypic subspace: reorderings within the anti-self-dual sector never source the googly slot, at quartic order or at any order.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) Fix the orientation of $W_{1,3}$ given by the ordered basis $a_2, b_2, b_3, b_4$ of Section \ref{sec:setting}, written $e_0, \dots, e_3$ below. With boosts $B_i := e_0\wedge e_i$ and rotations $R_i := e_j\wedge e_k$ ($(i,j,k)$ cyclic), the $\mathfrak{so}(1,3)$ brackets are $[R_i, R_j] = \epsilon_{ijk}R_k$, $[R_i, B_j] = \epsilon_{ijk}B_k$, $[B_i, B_j] = -\epsilon_{ijk}R_k$ (the first two are rotations acting on vectors and axial pairs; the third is the boost-boost computation of \cite[Lem.~5.4]{ButlerT6}, reproved by the script). Setting $A^{(1)}_i := \tfrac12(R_i + iB_i)$, $A^{(2)}_i := \tfrac12(R_i - iB_i)$ and using $[B_i, R_j] = +\epsilon_{ijk}B_k$,
+\begin{gather*}
+[A^{(1)}_i, A^{(1)}_j] = \tfrac14\,\epsilon_{ijk}\bigl(R_k + iB_k + iB_k + R_k\bigr) = \epsilon_{ijk}A^{(1)}_k,\\
+[A^{(1)}_i, A^{(2)}_j] = \tfrac14\,\epsilon_{ijk}\bigl(R_k - iB_k + iB_k - R_k\bigr) = 0,
+\end{gather*}
+and likewise $[A^{(2)}_i, A^{(2)}_j] = \epsilon_{ijk}A^{(2)}_k$; the script verifies all fifteen brackets of the $R, B$ table and the nine cross brackets exactly. Duality: $\ast B_i = -R_i$, $\ast R_i = B_i$ (Lemma \ref{lem:star}), so $\ast A^{(1)}_i = \tfrac12(B_i - iR_i) = -iA^{(1)}_i$ and $\ast A^{(2)}_i = +iA^{(2)}_i$: $\mathfrak{g}^+$ is spanned by the $A^{(2)}_i$ and $\mathfrak{g}^-$ by the $A^{(1)}_i$. Which eigenspace is called self-dual is a convention, and nothing below depends on it.
+(2) (a) Two orderings of a word $q(\rho(P_1))\cdots q(\rho(P_r))$, $P_s \in \mathfrak{g}^-$, differ by a sequence of adjacent transpositions, each of which changes the word by the word with the adjacent pair $q(\rho(P_s))q(\rho(P_t))$ replaced by $[q(\rho(P_s)), q(\rho(P_t))] = \hbar\,q(\rho([P_s, P_t]))$ (Lemma \ref{lem:weyl}(2) and Proposition \ref{prop:spiniso}); since $[P_s, P_t] \in \mathfrak{g}^-$ by (1), the result is $\hbar$ times a word in elements of $q(\rho(\mathfrak{g}^-))$, an element of $\hbar\,\mathcal{A}^-$; for $r = 2$ it is the single commutator displayed. (b) For $P \in \mathfrak{g}^-$ and $Q \in \mathfrak{g}^+$, $[q(\rho(P)), q(\rho(Q))] = \hbar\,q(\rho([P,Q])) = 0$ by (1); the centraliser of $q(\rho(\mathfrak{g}^+))$ is a unital subalgebra containing the generators of $\mathcal{A}^-$, hence $\mathcal{A}^-$. (c) By Lemma \ref{lem:weyl}(1), $\operatorname{ad}_{q(\rho(Q))}/\hbar$ acts on the generators $Z^\alpha, \bar Z_\beta$ linearly, so it preserves the span $F_k$ of the words of length at most $k$; each $F_k$ is finite-dimensional, so $\mathcal{P} = \bigcup_k F_k$ is a locally finite $\mathfrak{g}^+$-module and Fact \ref{fact:reducibility} decomposes each $F_k$, compatibly, into isotypic components; write $\mathcal{P} = \mathcal{P}^{\mathfrak{g}^+} \oplus \mathcal{P}_{\mathrm{ad}} \oplus \mathcal{P}_{\mathrm{rest}}$ for the trivial, adjoint and remaining isotypic parts. The map $Q \mapsto q(\rho(Q))$ intertwines the adjoint representation of $\mathfrak{g}^+$ with the adjoint action on $\mathcal{P}$ (Lemma \ref{lem:weyl}(2)) and is injective, so the googly slot is an irreducible subrepresentation isomorphic to the adjoint one, hence contained in $\mathcal{P}_{\mathrm{ad}}$. By (b), $\mathcal{A}^- \subseteq \mathcal{P}^{\mathfrak{g}^+}$, and $\mathcal{P}^{\mathfrak{g}^+} \cap (\mathcal{P}_{\mathrm{ad}} \oplus \mathcal{P}_{\mathrm{rest}}) = 0$; so every element of $\mathcal{A}^-$ has zero adjoint-isotypic component, whatever its degree.
+\end{proof}
+
+\subsection{The googly conjecture, at quartic order}\label{subsec:googlyconj}
+
+\begin{conjecture}[Googly localisation at quartic order]\label{conj:googly}
+There is a palatial construction (a deformation of the holomorphic function algebra of twistor space within $\mathcal{P}$, in the programme of \cite{Penrose15}) with the following two parts. \emph{(a)} Anti-self-dual (nonlinear graviton) curvature data enters at the commutative level: the construction restricted to the ASD sector reduces, at order $\hbar^0$, to the deformed twistor spaces of Fact \ref{fact:graviton}, and its ASD data is insensitive to operator ordering, the consistency of which is Proposition \ref{prop:blind}(2). \emph{(b)} The self-dual, googly data is carried \emph{exactly} by the quartic-order ordering tensor of Lemma \ref{lem:quartic}: the $\mathfrak{so}(2,4)$-valued discrepancy assignments $(M, N) \mapsto$ (reordering defect of $q(M)q(N)$-words in the deformed product), which by Lemma \ref{lem:quartic}(3) lie precisely where curvature operators lie. In particular the googly information resides not in ordering ambiguities generically but at quartic order specifically.
+\end{conjecture}
+
+\begin{remark}[What is proved, and what is conjectured]\label{rem:googlyhonest}
+The conjecture's \emph{algebraic} half is a theorem. Quadratic ambiguities are central and carry nothing; the first tensorial slot is quartic and is $\mathfrak{so}(2,4)$-valued (Lemma \ref{lem:quartic}); the ASD sector closes under ordering discrepancies and never sources the googly slot (Proposition \ref{prop:blind}). These are exactly the consistency conditions clause (a) needs, and they were not automatic: they depended on the chirality split commuting, which is special to four dimensions. What remains open is the \emph{analytic} half: the palatial construction itself, i.e.\ a deformation in which clause (b)'s quartic tensor demonstrably reproduces prescribed self-dual curvature. That construction is the googly problem in palatial form and is beyond this paper; the conjecture registers the precise expectation, and Proposition \ref{prop:blind} is its first falsifiable check, passed.
+\end{remark}
+
+\section{Scope, and successor problems}\label{sec:scope}
+
+\subsection*{What is proved, what is imported, what is conjectured}
+
+\emph{Proved in this paper, at the standard of \cite{ButlerT1}:} the Fock model theorem and the chirality split (Theorem \ref{thm:purespinor}); the Chevalley pairing with its four sign clauses (Lemma \ref{lem:chevalley}); the spinor identification $V_\C \cong \Lambda^2\T$ with the norm correspondence and the Klein-quadric clause (Theorem \ref{thm:spinorid}); the skew-lines/splitting/hyperbolic-plane equivalence (Proposition \ref{prop:skewwitt}); the incidence theorem with the term-by-term chart identification and coverage (Theorem \ref{thm:incidence}); the reality proposition: the conjugation, the Hermitian twistor form, the $\Sigma$-nullity of real incidence lines, the $(2,2)$ signature and the factor $i$ (Proposition \ref{prop:reality}); the chiral planes and the summand spaces (Lemma \ref{lem:homone}); the three-language dictionary (Corollary \ref{cor:threelang}); the tractor-connection decomposition and the local twistor identification up to the one imported convention of Remark \ref{rem:ltconvention} (Proposition \ref{prop:localtwistor}); the statistics no-go (Proposition \ref{prop:statistics}); the spin representation isomorphism (Proposition \ref{prop:spiniso}); the purity and Fock-vacuum theorem (Theorem \ref{thm:states}); the palatial quadratic algebra, the Clifford ordering shift, and the shared-core theorem (Lemma \ref{lem:weyl}, Proposition \ref{prop:rent}, Theorem \ref{thm:core}); the Lorentzian duality lemma and the half-flat no-go (Lemma \ref{lem:star}, Proposition \ref{prop:lorentz}); the ordering filtration and the ASD ordering insensitivity (Lemma \ref{lem:quartic}, Proposition \ref{prop:blind}).
+
+\emph{Imported as Facts with provenance:} the forced completion and the real ladder results (Facts \ref{fact:completion}, \ref{fact:fock}); the flat-model stabilisers (Fact \ref{fact:parabolic}); the vacuum/scale-tractor equivalences (Fact \ref{fact:vacuumT6}); the tractor connection and the classical local twistor formula (Fact \ref{fact:ltt}); the nonlinear graviton (Fact \ref{fact:graviton}); the Weyl-star commutation (Fact \ref{fact:weylstar}); Weyl's theorem (Fact \ref{fact:weyl}); complete reducibility for $\mathfrak{sl}(2,\C)$ (Fact \ref{fact:reducibility}); the sign convention relating Penrose and Rindler's $\mathrm{P}_{ab}$ to the Schouten tensor (Remark \ref{rem:ltconvention}).
+
+\emph{Conjectural, and declared as such:} the googly localisation (Conjecture \ref{conj:googly}), whose ordering-insensitivity consistency conditions are proved (Proposition \ref{prop:blind}) and whose analytic half is open.
+
+\subsection*{Successor problems}
+
+Five problems are named. (1) \emph{The analytic googly half:} construct the palatial deformation of Conjecture \ref{conj:googly}(b), or refute the localisation; Proposition \ref{prop:blind} is the consistency check any construction must pass. (2) \emph{The quantised incidence relation:} promote $\omega = ix\pi$ to an operator equation in $\mathcal{P}$ (the incidence line as a subspace annihilated by operator combinations of the quantised twistor), and determine what replaces the chart of Theorem \ref{thm:incidence} one storey up. (3) \emph{Local twistors over the wall:} extend Proposition \ref{prop:localtwistor} across the degenerate walls of \cite{ButlerT4}, where the tractor bundle persists but the scale splitting fails; the wall sequence should act on the spin bundle by the completion's own ladder operators. (4) \emph{Massless fields:} develop the Penrose transform in the series' language. The homogeneity $-2s-2$ is stated and proved from the ordering shift of Theorem \ref{thm:core}(4) in the spectrum paper T7 \cite[Prop.~5.2]{ButlerT7}; what remains open is the transform itself in the series' language. (5) \emph{The real-form dictionary in full:} the $\mathbb{PN}$ hypersurface as the whole real conformal compactification, the two open regions $\PT^\pm$ where $\Sigma$ is definite, and the two ruling families over the reals, completing Proposition \ref{prop:reality} beyond the affine chart.
+
+\section{Position in the series}\label{sec:position}
+
+This paper is T9 of the series. \emph{It relies on four predecessors:} the primer T0 \cite{ButlerT0} for the Clifford conventions (Section \ref{sec:setting}); the root paper T1 \cite{ButlerT1} for the forced completion, its fibre quadric, the real ladder pairs and the transvection no-go (Facts \ref{fact:completion}, \ref{fact:fock}, \ref{fact:parabolic}); the tower paper T3 \cite{ButlerT3} for the iterated ascent whose rungs are the ladder pairs of Theorem \ref{thm:states} (Fact \ref{fact:fock}, Remark \ref{rem:alphaplanes}); the interior paper T6 \cite{ButlerT6} for the flat-model stabilisers, the scale tractor and the vacuum equations, the tractor connection, and the Kerr Killing spinor (Facts \ref{fact:parabolic}, \ref{fact:vacuumT6}, \ref{fact:ltt}, Remark \ref{rem:boundary}). No result is imported from the spectrum paper T7 \cite{ButlerT7}, which is named in successor problem (4) as the paper that proves its homogeneity half from this paper's ordering shift; the sheaf paper T4 \cite{ButlerT4} is named in the introduction and in successor problem (3), and the singularity paper T5 \cite{ButlerT5} as context.
+
+\emph{Papers that rely on this one:} the singularity paper T5 \cite{ButlerT5} assigns the twistor restatement of its spectrum condition to this paper's setting; the interior paper T6 \cite{ButlerT6} cites the twistor reading of the completion's spinor module as a point of contact; the spectrum paper T7 \cite{ButlerT7} imports the ordering shift of Theorem \ref{thm:core}(4); the action paper T10 \cite{ButlerT10} imports nothing from this paper: the summand decomposition of Proposition \ref{prop:localtwistor}(1) reappears there, in the frozen point's scale, as its own Lemma 2.5(iii), proved directly; the mass paper T11 \cite{ButlerT11} imports the pure-spinor identification of Theorem \ref{thm:states}, the chart normalisation of Theorem \ref{thm:incidence}, and the palatial quadratics of Lemma \ref{lem:weyl}; the standard-model paper T12 \cite{ButlerT12} imports the spinor identification, the pure-spinor theorem and the shared core (Theorems \ref{thm:spinorid}, \ref{thm:states}, \ref{thm:core}); the dark-matter paper T14 \cite{ButlerT14} imports the Witt-flag reading of the ladder pairs; the synthesis paper T16 \cite{ButlerT16} imports the point embedding and the Fock-vacuum reading; and the capstone T17 \cite{ButlerT17} tabulates this paper's claims at their tiers.
+
+\section{Machine verification}\label{sec:verification}
+
+Every computational identity asserted in this paper is verified by the deposited script \verb|verify_T09.py| \cite{ButlerVerifyT9}, which imports the series' shared exact-arithmetic library \verb|GA.py| and runs entirely in exact arithmetic over the Gaussian rationals $\mathbb{Q}(i)$: no floating point appears anywhere, so every check is an identity, not an approximation. The script works with $C(v) = c(v)/\sqrt2$ (Section \ref{sec:setting}), so that $\{C(u), C(v)\} = \ip{u}{v}$ and $C(u)^2 = \ip{u}{u}/2$, and with the isotropic basis of Theorem \ref{thm:purespinor}, which is Gaussian rational. Sixty-nine checks pass. Three reusable routines developed for this paper were promoted into \verb|GA.py| per the series' practice, append-only and backward compatibly: an exact Gaussian-rational field class, generic-field linear algebra (rank, solve) usable over any exact field, and a kernel routine over any exact field.
+
+The coverage, by section. \emph{The Fock model} (Theorem \ref{thm:purespinor}): the CAR relations of the three wedge and contraction pairs $w_j\wedge$, $\iota_{w_j'}$ (Proposition \ref{prop:rent}, there written $A_1$, $B_1$) and all anticommutators on the full state basis; $\{C(u), C(v)\} = \ip{u}{v}$ on all thirty-six basis pairs and $C(u)^2 = \ip{u}{u}/2$ on non-null, complex, and null instances; linear independence of the sixty-four ordered generator products in $\End(\Lambda^\bullet W)$ (rank $64$: simplicity, surjectivity and irreducibility at once); oddness of vectors; the even subalgebra of dimension exactly $32$. \emph{The Chevalley pairing} (Lemma \ref{lem:chevalley}): parity vanishing, perfection of the $\T'\times\T$ block, antisymmetry on all sixty-four pairs, $B$-self-transposedness of all six basis vectors, and invariance under all fifteen antisymmetrised bivectors. \emph{The spinor identification} (Theorem \ref{thm:spinorid}, Example \ref{ex:psi}): antisymmetry of $G_v$; rank six of $\Psi$; the norm correspondence on all twenty-one pairs with the computed constant ($-1$ for the $C$-normalised $\Psi$, i.e.\ $-2$ in the paper's normalisation); the exact values $\Psi_C(w_1) = -t_2\wedge t_3$, $\Psi_C(w_1') = t_0 \wedge t_1$ and their planes; the Pfaffian nullity criterion on null and non-null instances; equivariance $\Psi(\beta v) = \beta\cdot\Psi(v)$ for all fifteen bivectors on all six basis vectors (ninety identities). \emph{Incidence} (Proposition \ref{prop:skewwitt}, Theorem \ref{thm:incidence}, Proposition \ref{prop:reality}): the hyperbolic pair; the expansion, norm identity, chart identification $P(A) = X(m(A))$ and simplicity for four sample maps $A$ (identity, Gaussian-rational, singular, and $i$ times a Hermitian matrix); the sign flip $-2\det(i\hat x) = +2\det\hat x$ on a sample map; the coverage pairing. \emph{Reality} (Proposition \ref{prop:reality}): the real orthonormal basis and its relation to the isotropic one; the conjugation as the reflection in $b_4$ composed with coordinate conjugation; $\kappa\,C(v) = C(\bar v)\,\kappa$ on every basis state for the six basis vectors and their $i$-multiples; $\kappa^2 = -\tfrac12$ (the $C$-normalised $-1$) and the parity swap; the constant $\lambda_0 = \lambda = 1$ on the full basis, and the general relation $\Sigma(Z_2,Z_1) = \lambda\,\overline{\Sigma(Z_1,Z_2)}$ with its phase repair tested on $\kappa$ rescaled by $(3+4i)/5$, where $\lambda \neq 1$; $\Sigma$ Hermitian and of rank four; $\Som$ and $\Spi$ both $\Sigma$-null; the signature $(2,2)$ read off $\Sigma$ through its real form; all fifteen real bivectors $\Sigma$-anti-Hermitian; four $\sigma$-Hermitian $\hat x$ with $m(i\hat x)$ real and spanning $W_{1,3}$, and $m(\hat x)$ not real. \emph{Chiral planes and summands} (Lemma \ref{lem:homone}, Proposition \ref{prop:localtwistor}(3)): each chirality factor annihilates exactly one of $\Som$, $\Spi$ and acts faithfully on the other, the two factors on different planes; the summand composite equals $C(e_a)C(\mathrm{P}(e_c))$, the $C$-form of $\tfrac12 c(e_a)c(\mathrm{P}(e_c))$, on $\Som$ for all sixteen pairs of mixed directions. \emph{Stabilisers and local twistors} (Fact \ref{fact:parabolic}, Proposition \ref{prop:localtwistor}, Proposition \ref{prop:rent}): the commutator identity $[\beta, C(w)] = C(\beta w)$ for all fifteen bivectors; trace-freeness and linear independence of the fifteen spinor actions (the $\mathfrak{sl}(\T)$ isomorphism); the stabiliser census $10 + 1 + 4$ of the infinity direction and the exact match with preservation of the plane $\Som$; both summand actions on all four mixed directions; the full eigenvalue table of $\rho(v\wedge v^*) = N - \tfrac12$. \emph{Twistors as states} (Theorem \ref{thm:states}): the annihilator of the vacuum; purity (dimension three, total isotropy) of a generic even and a generic odd spinor; the joint-kernel line; generation of the whole module from a vacuum by its dual system; the CAR relations of the generic twistor's own pair system, built on its annihilator and the dual complement constructed in the proof. \emph{The palatial algebra} (Lemma \ref{lem:weyl}, Theorem \ref{thm:core}): the relations $[Z^\alpha, \bar Z_\beta] = \hbar\delta$ in the realisation $\bar Z = -\hbar\,\partial$; the homogeneity identity $q(\mathrm{id}) = -(h+2)\hbar$ (the $-2s-2$ point of contact) on all monomials of degree $\le 3$; $[q(M), q(N)] = \hbar\,q([M,N])$ and the adjoint action for explicit Gaussian-rational $M, N$, checked on the determining monomial basis; the symmetric-versus-normal ordering shift. \emph{The chirality split} (Lemma \ref{lem:star}, Proposition \ref{prop:blind}): the full $\mathfrak{so}(1,3)$ bracket table, all fifteen brackets including the three vanishing $[R_i, B_i]$; closure and mutual commutation of the two chirality factors; $\ast^2 = -1$ on all six basis $2$-forms; and the $\pm i$ eigenvector property of the chirality generators $A^{(1)}_i, A^{(2)}_i$, with conjugate eigenvalues. The script exits nonzero on any failure and prints one line per check, tagged by the statement it certifies.
+
+\begin{thebibliography}{99}
+
+\bibitem{ButlerT0}
+L.~Butler,
+\emph{An Introduction to Geometric Algebra: A Primer for the Transport Papers},
+Transport Papers T0 (2026).
+
+\bibitem{ButlerT1}
+L.~Butler,
+\emph{The Transport Principle: Total Division in Clifford Algebras via Minimal Completion},
+Transport Papers T1 (2026).
+
+\bibitem{ButlerT3}
+L.~Butler,
+\emph{The Tower and the CAR Limit: Iterated Transport, the Frozen Clock, and Second Quantisation},
+Transport Papers T3 (2026).
+
+\bibitem{ButlerT4}
+L.~Butler,
+\emph{Clifford Sheaves over Degenerate Metrics: Nilpotent Ideals, One-Sided Completion, and the Exceptional Algebra},
+Transport Papers T4 (2026).
+
+\bibitem{ButlerT5}
+L.~Butler,
+\emph{Division by Zero at the Gravitational Singularity: The Transport Principle Applied to the Black Hole, and the Information Paradox as a Category Error},
+Transport Papers T5 (2026).
+
+\bibitem{ButlerT6}
+L.~Butler,
+\emph{The Geometry of the Black-Hole Interior: Where Division Fails, the Weighted Limit, and the Kerr Tests},
+Transport Papers T6 (2026).
+
+\bibitem{ButlerT7}
+L.~Butler,
+\emph{Hawking Radiation from the Ledger: State, Continuum, Lift, and the Finite-Ledger Seam},
+Transport Papers T7 (2026).
+
+\bibitem{ButlerT10}
+L.~Butler,
+\emph{Dark Energy and the Action of Gravity: MacDowell-Mansouri, the Frozen Point, and One Way to Grip},
+Transport Papers T10 (2026).
+
+\bibitem{ButlerT11}
+L.~Butler,
+\emph{The Origin of Mass: The Weight Dictionary and the Exact Join},
+Transport Papers T11 (2026).
+
+\bibitem{ButlerT12}
+L.~Butler,
+\emph{The Standard Model from the Minimal Massive Composite},
+Transport Papers T12 (2026).
+
+\bibitem{ButlerT14}
+L.~Butler,
+\emph{Dark Matter and the Arrow of Time: The Five Dark Towers},
+Transport Papers T14 (2026).
+
+\bibitem{ButlerT16}
+L.~Butler,
+\emph{Quantum Mechanics and General Relativity from One Relation: The Two Shadows and the Laboratory},
+Transport Papers T16 (2026).
+
+\bibitem{ButlerT17}
+L.~Butler,
+\emph{The Transport Programme: Method, Status, and the Falsifiable Ledger},
+Transport Papers T17 (2026).
+
+\bibitem{Penrose1967}
+R.~Penrose,
+Twistor algebra,
+\emph{J.\ Math.\ Phys.} \textbf{8} (1967), 345--366.
+
+\bibitem{PenroseRindler86}
+R.~Penrose and W.~Rindler,
+\emph{Spinors and Space-Time}, Vols.~1--2,
+Cambridge University Press (1984, 1986).
+
+\bibitem{Klein1870}
+F.~Klein,
+Zur Theorie der Liniencomplexe des ersten und zweiten Grades,
+\emph{Math.\ Ann.} \textbf{2} (1870), 198--226.
+
+\bibitem{PenroseMacCallum73}
+R.~Penrose and M.~A.~H.~MacCallum,
+Twistor theory: an approach to the quantisation of fields and space-time,
+\emph{Phys.\ Rep.} \textbf{6} (1973), 241--316.
+
+\bibitem{Dighton74}
+K.~Dighton,
+An introduction to the theory of local twistors,
+\emph{Int.\ J.\ Theor.\ Phys.} \textbf{11} (1974), 31--43.
+
+\bibitem{BEG1994}
+T.~N.~Bailey, M.~G.~Eastwood and A.~R.~Gover,
+Thomas's structure bundle for conformal, projective and related structures,
+\emph{Rocky Mountain J.\ Math.} \textbf{24} (1994), 1191--1217.
+
+\bibitem{CurryGover2018}
+S.~N.~Curry and A.~R.~Gover,
+An introduction to conformal geometry and tractor calculus, with a view towards analysis on manifolds,
+in \emph{Asymptotic Analysis in General Relativity},
+London Mathematical Society Lecture Note Series 443, Cambridge University Press (2018), 86--170.
+
+\bibitem{Chevalley54}
+C.~Chevalley,
+\emph{The Algebraic Theory of Spinors},
+Columbia University Press (1954).
+
+\bibitem{Penrose76}
+R.~Penrose,
+Nonlinear gravitons and curved twistor theory,
+\emph{Gen.\ Relativ.\ Gravit.} \textbf{7} (1976), 31--52.
+
+\bibitem{Weyl1918}
+H.~Weyl,
+Reine Infinitesimalgeometrie,
+\emph{Math.\ Z.} \textbf{2} (1918), 384--411.
+
+\bibitem{Humphreys72}
+J.~E.~Humphreys,
+\emph{Introduction to Lie Algebras and Representation Theory},
+Graduate Texts in Mathematics 9, Springer (1972).
+
+\bibitem{Penrose15}
+R.~Penrose,
+Palatial twistor theory and the twistor googly problem,
+\emph{Phil.\ Trans.\ R.\ Soc.\ A} \textbf{373} (2015), 20140237.
+
+\bibitem{ButlerVerifyT9}
+L.~Butler,
+\emph{verify\_T09.py: exact-arithmetic verification of the computational identities of ``The Twistor Correspondence''},
+Python script, deposited with this paper alongside the shared library GA.py (2026).
+
+\end{thebibliography}
+
+\end{document}

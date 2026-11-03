@@ -1,0 +1,19 @@
+functions:
+  check_pati_salam_split_of_the_square:
+    kind: exact
+    clauses:
+    - (i) the Pati-Salam split of the degree-four part of T T^dag
+    omits: 'none: operator identities on the finite Fock space'
+  check_rung_vector_times_pair_part_is_georgi_jarlskog:
+    kind: exact
+    clauses:
+    - (ii) w_4 times the (15,1,1) part is -(3/32) T_GJ on the sixteen
+    omits: 'none: operator identity on the sixteen'
+  check_even_and_odd_pair_weightings:
+    kind: sampled
+    clauses:
+    - (iii) even weightings give 10 + GJ forms, odd ones an antisymmetric form
+    omits: checked for sample weightings; the general weighting is the linearity argument of the proof
+untouched_premises:
+  synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5: cited for the scope of the Dirac-neutrino clause
+    (the halving); the check verifies that its sixteen is that half directly

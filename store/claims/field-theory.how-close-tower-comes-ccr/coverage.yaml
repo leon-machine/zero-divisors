@@ -1,0 +1,18 @@
+functions:
+  check_commutator_is_n_minus_number:
+    kind: sampled
+    clauses: ["\"[B, B*] = n - (N_c + N_d)\""]
+    omits: "n = 1, 2, 3, 4 only, not general n"
+  check_quasi_spin_su2:
+    kind: sampled
+    clauses: ["\"(B*, B, K3) is an su(2) quasi-spin\""]
+    omits: "n = 1, 2, 3, 4 only, not general n"
+  check_finite_ladder:
+    kind: sampled
+    clauses: ["\"the ladder has n + 1 states\"", "\"[b, b*] = 1 - 2k/n on k-pair states\""]
+    omits: "n = 1, 2, 3, 4 only; [B, B*] = n - 2k is checked, and the rescaling by b = B/sqrt(n) is read off, not computed; the Inonu-Wigner contraction n -> infinity and the bounded-boson-number operator limit are not tested (the docstring says so)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite-n algebra is exact for n up to 4; the contraction limit is stated in the check as read off and is correctly not claimed as computed"

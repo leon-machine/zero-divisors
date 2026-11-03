@@ -1,0 +1,22 @@
+functions:
+  check_vanishing_and_perfect_on_chiralities:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_antisymmetry:
+    kind: exact
+    clauses: ["(2)"]
+    omits: ""
+  check_vectors_self_transpose:
+    kind: exact
+    clauses: ["(3)"]
+    omits: ""
+  check_bivectors_infinitesimally_invariant:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "orthogonality is needed and shown to be: the non-orthogonal pair u = v = e0 fails"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Bilinear identities checked on all 64 monomial pairs of the 3-mode Fock model, and (4) on all 15 basis bivectors, which span so(2,4); the finite case is the statement."

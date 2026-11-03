@@ -1,0 +1,24 @@
+functions:
+  check_integrand_sees_only_the_lorentz_block_and_the_blade:
+    kind: exact
+    clauses:
+    - '(i) the integrand Gram on Lambda^2 W is Lambda-independent; T(rho id) = 2 rho a^b; the dilation never reaches the Lorentz block; the connection preserves ninf + rho n0 iff S = rho id and beta = 0, with the exact dilation term beta (ninf - rho n0); (v) a special-conformal rotor moves the frozen row to a connection preserving the rotated tractor, not the constant one, with <X, I''> = 1 and Q unchanged'
+    omits: 'the dilation test is at one sample slot and one sample beta (linearity in beta covers the rest); preservation is solved as a linear system in all twenty unknowns; the rotor is tested at one constant xi (no derivative term)'
+  check_free_slot_returns_the_schouten_slot_and_the_weyl_square:
+    kind: sampled
+    clauses:
+    - '(ii) on torsion-free fields the slot quadratic form has rank 16; the free-slot solution is the Schouten map with F_W = -Weyl; the reduced density is |W|^2/4 on all algebraic curvatures; with torsion the antisymmetric part responds'
+    omits: 'S* = Schouten is tested at two sample algebraic curvatures and de Sitter curvature (the uniqueness and the trace argument in the proof cover all); the reduced quadratic form is computed on the whole twenty-dimensional space; the auxiliary-field elimination argument is in the text'
+  check_slot_lattice:
+    kind: complete
+    clauses:
+    - '(iii) all eight rows of the lattice: quadratic part fitted exactly in (|W|^2/4, Weyl-dual, |Ric_0|^2, R^2), linear part a multiple of R, constant; rho = 0 leaves the Euler density alone'
+    omits: 'at rho = 5/11 and -2/3 (the rows are polynomial in rho of degree at most two, fixed by the identities checked) and on torsion-free curvature'
+  check_quadratic_remainders_are_not_variationally_trivial:
+    kind: exact
+    clauses:
+    - '(iv) on S2 x S2 the Euler integral is constant while the R^2, |Ric_0|^2 and |W|^2 remainders vary with K2/K1'
+    omits: 'the Lovelock and Anderson-Duchamp step and the scaling argument are in the text; integrals are in units of 16 pi^2 with the volume 16 pi^2/(K1 K2)'
+untouched_premises:
+  synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point: "cited in (v) for the forcing of S = rho id under (T) (its clause (i)); nothing is computed from it here"
+  synthesis.imported-holonomy-reductions-of-cartan-geometries: "imported Fact cited in (v) for the holonomy-reduction reading of the premise in invariant form; nothing is computed from it"

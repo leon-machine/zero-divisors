@@ -1,0 +1,22 @@
+functions:
+  check_grading_is_rotation_by_pi_in_every_mode_plane:
+    kind: sampled
+    clauses: ["(1) vol = B_1 ... B_n, Ad(vol) negates every Majorana generator", "(1) R_k(pi) = -B_k negates exactly the two generators of plane k"]
+    omits: "exact GA computation in Cl(2n,0) for n = 1, 2, 3 only; the Fock-space implementation by Gamma = prod (1 - 2 N_k) and its identification with Ad(vol) are not tested here (Gamma is built only in the next function); the even-subalgebra fixing is checked for one bivector in Cl(4,0)"
+  check_even_hamiltonian_commutes_with_parity:
+    kind: sampled
+    clauses: ["(1) Gamma = prod (1 - 2 N_k) on Fock space (Jordan-Wigner, CAR checked)", "(2) an even H commutes with Gamma, so functions of H such as Gibbs states are even"]
+    omits: "one three-mode even Hamiltonian with weights, hops and a pairing term (traces pinned), commutation of Gamma with its powers up to 4, and failure when an odd term is added; Gibbs states are covered only through powers of H, not as e^(-beta H)/Z, and beta = 0 is the identity"
+  check_stationary_states_even_iff_no_odd_resonance:
+    kind: sampled
+    clauses: ["(3) spectra on the even and odd sectors are disjoint iff no odd-size signed sum of weights vanishes", "(3) when disjoint, parity is a function of H (Lagrange polynomial)"]
+    omits: "five weight tuples ((1,3,5), (1,2), (2,2,2) disjoint; (1,2,3), (0,1,1) resonant); the Lagrange polynomial equals Gamma for (1,3,5) and (1,2) only; 'every stationary state is even iff the spectra are disjoint' is assembled from this function and the next, not tested as one statement; the claim that alpha is the flow at time pi/omega_0 for odd multiples of omega_0 is not tested"
+  check_counter_states_at_resonance_and_zero_weight:
+    kind: exact
+    clauses: ["(4) weights (1,2,3): (1 + (x + x*)/2)/8 is stationary, positive, not even", "(4) zero-weight mode: (1 + (a + a*)/2)/2 is stationary and not even"]
+    omits: "explicit instances, each verified exactly (positivity through (x + x*)^2 a projection P with (x + x*) P = x + x*, trace 1, commutators); the closing paragraph (G) implies (P), and the remark on which states the premise excludes, are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact on finite mode numbers, with the weights chosen as the statement's own examples; the general 'iff' in (3) rests on combinatorial sampling plus the two counter-states"

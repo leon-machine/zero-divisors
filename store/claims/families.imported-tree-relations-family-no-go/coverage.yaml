@@ -1,0 +1,24 @@
+functions:
+  check_rung_plane_vector_entries:
+    kind: sampled
+    clauses: ["a vector c = a v_4 + b w_4 has mass form entries of magnitude |a| on (L, nu^c), (Q, u^c) and |b| on (L, e^c), (Q, d^c), hence m_nu = m_u and m_e = m_d at tree level"]
+    omits: "four sample (a, b) including both basis vectors (1,0) and (0,1), so the general case follows by linearity, which the code does not state; signed entries of v_4 and w_4 are also matched by hand; species names are Hypothesis (S)'s"
+  check_family_matrix_cannot_split:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "two rational 3 x 3 family matrices F and every signed entry pair of the 10 form: M M^T has equal characteristic invariants for y_e F and y_d F (scaling by equal magnitude); the 126 entries (-1, +-1/3) give different invariants (control); not an argument over all F"
+  check_frozen_point_algebra_eight:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "a single frozen point (a, b, lambda) = (2, 3, 1/7): closure under right multiplication is 8-dimensional, colour singlets 4-dimensional, odd singlets lie in the span of the rung mode vectors; 'no colour-singlet doublet direction beyond the 10' is read as that inclusion"
+  check_bracket_algebra_thirty_two:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the same single frozen point; the 32-dimensional algebra, 16-dimensional colour-singlet part equal to the rung Clifford algebra, the two Y = -1/2, T3 = -1/2 odd elements w_4 and w_4 N_5 with f(w_4 N_5) = f(w_4)/2, and the form of b^dagger v_5 are exact on the module"
+untouched_premises:
+  families.imported-tree-relations-family-no-go-external: "external literature record (Georgi-Jarlskog factor three, record level); not computed, as the docstring says"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Module computations are exact but at sample vectors, matrices and one frozen point; the literature factor three is declared uncomputed."

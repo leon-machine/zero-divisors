@@ -1,0 +1,15 @@
+functions:
+  check_mirror_extensions_causal_convention:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iii)
+    - (iv)
+    - (v)
+    omits: (i) is a statement for all odd n and is checked for n<=9 (all signatures); (iv) for even n<=8; (v) at three values of Lambda; the sentences about which paper reads which convention (and that the Rule 2 note is internally mixed) are textual and untested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact GA computation of the four extensions, residues and reversal pairs; the general-n and general-Lambda parts are sampled.

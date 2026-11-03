@@ -1,0 +1,41 @@
+functions:
+  check_wall_fibre_ideal_and_quotient:
+    kind: sampled
+    clauses:
+    - (2) J(x) = A k = k A
+    - (2) J^2 = 0
+    - (2) dim J = 2^{n-1}
+    - (2) A/J = Cl(T*/L, G-bar) of signature (p-1,q)
+    omits: every (p,q) with p >= 1 and n <= 5 in a diagonal basis, so n > 5 is not covered; non-orthogonal bases
+      are the next function
+  check_non_orthogonal_wall_fibres:
+    kind: sampled
+    clauses:
+    - (2) J = A k = k A, J^2 = 0, dim J = 2^{n-1}
+    omits: four corank-one Gram matrices (n = 3, 4) in the exterior-algebra model; the quotient isomorphism is not
+      tested here
+  check_ideal_supported_exactly_on_the_wall:
+    kind: sampled
+    clauses:
+    - (3) supported exactly on Sigma, fibre 0 elsewhere
+    omits: rank of A k along one family G(tau) = G0 + tau E_kk for n = 3, 4 and four tau; smooth subbundle, finite
+      presentation, bimodule structure and the kernel sheaf K are not computed
+  check_physical_fibres_are_mat2_quaternions:
+    kind: exact
+    clauses:
+    - (1) Cl(1,3) = Mat_2(H) and Cl(0,4) = Mat_2(H)
+    omits: isomorphism inferred from centre R, an idempotent with dim AP = 8 and a quaternion corner of dimension
+      4; simplicity of A is not tested separately; the general off-wall fibre being the nondegenerate Clifford algebra
+      of the local signature is by definition
+untouched_premises:
+  std-algebra.vector-squares: standard algebra cited in the proof; the check computes the statement directly
+  primer.commutation-rule: standard algebra cited in the proof; the check computes the statement directly
+  std-algebra.existence-uniqueness: standard algebra cited in the proof; the check computes the statement directly
+  std-algebra.radical-ideal-and-quotient: cited in the proof for the radical ideal and quotient at a degenerate
+    fibre; the check computes the fibres directly
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Fibrewise claims (1) and (2) are checked on diagonal signatures n<=5, four non-orthogonal Grams, and the
+    physical Cl(1,3), Cl(0,4); the sheaf assembly in (3) is only touched through the rank jump at the wall.

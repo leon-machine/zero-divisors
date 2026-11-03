@@ -1,0 +1,10 @@
+functions:
+  check_euler_shift:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "(i) is verified on three diagonal pair-curvature tensors per signature, branch and l^2, not on every algebraic curvature tensor, and the operator form E4 = -2<R I R I> is not tested; (ii) checks the 2D identity sqrt(h)R = -Lap ln Omega for one conformal factor and zero first variation for one bump, and the formula S = A/4G - 3 pi chi/(2 Lambda G) itself is not computed (it rests on the imported Gauss-Bonnet and Wald facts), only the shift value at chi = 2 and 4; (iii) de Sitter, Nariai and the S^4, S^2 x S^2 actions are exact numbers, the Schwarzschild-de Sitter bound is checked at three masses with a loose tolerance in one assert (the strict hi < 1 assert carries it)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "one function covers all three clauses; every number the statement asserts in (iii) is reproduced, general-tensor and general-surface claims are sampled"

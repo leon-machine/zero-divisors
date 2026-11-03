@@ -1,0 +1,18 @@
+functions:
+  check_weyl_kernel_schwarzschild_and_type_n:
+    kind: sampled
+    clauses: ["\"every point of a Schwarzschild or Schwarzschild-de Sitter exterior with M != 0 has the no-kernel property\"", "\"the no-kernel property fails at points of Petrov type N\""]
+    omits: "Schwarzschild checked at M/r^3 = 1 and 2/5 (rank 4, so no kernel vector) and the Weyl symmetries verified; Schwarzschild-de Sitter is not separately computed (its Weyl tensor has the same electric form); one type N example (a, b) = (1, 1/3) with the null vector in the kernel and rank 3"
+  check_tractor_curvature_common_kernel:
+    kind: sampled
+    clauses: ["\"no-kernel property fails ... on conformally flat regions\"", "\"six-dimensional space of parallel tractors\"", "main claim, first step"]
+    omits: "pointwise linear algebra with the curvature acting as the Weyl tensor on the mu slot (typed in, valid in an Einstein scale): common kernel of the six Omega_ab is 2-dimensional at one Schwarzschild point, 3 at one type N point, 6 for zero Weyl; the six-dimensional space of parallel tractors on a region needs flatness on a region, which is read from the zero curvature, not integrated"
+  check_parallel_tractors_are_multiples_of_I:
+    kind: sampled
+    clauses: ["main claim, second step", "\"Q(I') = c^2 Lambda/3\""]
+    omits: "with mu = 0 imposed, the middle-slot equation has rank-one kernel (1, Lambda/6) at Lambda = 3/7 and Lambda = 0, and Q(cI) = c^2 Lambda/3 for two c; passage from no-kernel at the single point x_0 to mu = 0 on an open set, the scale-factor and zero-set consequences, and the tower clause c_r = +-1 are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the two algebraic halves of the proof are checked at sample points; the point-to-region step and the tower application have no function"

@@ -1,0 +1,42 @@
+{
+ "doc": "trail-zero-divisors",
+ "version": 8,
+ "claims": [
+  "primer.commutation-rule@2",
+  "std-algebra.blade-basis@1",
+  "std-algebra.involution-properties@1",
+  "std-algebra.orthogonal-anticommute@1",
+  "std-algebra.vector-squares@1",
+  "std-algebra.witt-decomposition@1",
+  "transport.centre@4",
+  "transport.classification-real-clifford-algebras@3",
+  "transport.exceptional-division-algebras@3",
+  "transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3",
+  "transport.existence-classification-type-c@4",
+  "transport.existence-locus-type-n@5",
+  "transport.existence-locus-type-p@6",
+  "transport.matrix-units-peirce-isomorphism@3",
+  "transport.no-go-level-elements@4",
+  "transport.no-transport-terminates@4",
+  "transport.noinverse@4",
+  "transport.regularity-localises-zero-divisors-idempotents@2",
+  "transport.rule-2-ideal-fusion-sharp-form@4",
+  "transport.sign@3",
+  "transport.splitting-along-hyperbolic-plane@3",
+  "transport.type-p-self-repairing@2"
+ ],
+ "recipe_hash": "d41cad73194a",
+ "generated": "2026-11-02T16:33:18+00:00",
+ "spine": [
+  "transport.noinverse",
+  "transport.existence-locus-type-n",
+  "transport.exceptional-division-algebras",
+  "transport.existence-classification-type-c",
+  "transport.existence-locus-type-p",
+  "transport.regularity-localises-zero-divisors-idempotents",
+  "transport.exhaustiveness-every-zero-divisor-annihilated-idempotent",
+  "transport.type-p-self-repairing",
+  "transport.no-go-level-elements",
+  "transport.no-transport-terminates"
+ ]
+}

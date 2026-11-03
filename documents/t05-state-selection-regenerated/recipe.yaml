@@ -1,0 +1,47 @@
+doc: t05-state-selection-regenerated
+title: 'Selecting the State: Parity, Regularity, and the Irreducible Calibration behind
+  the Hawking Temperature: A companion note to Transport Papers T5, Step 4d (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- obj.singularity.grading-parity-automorphism
+- singularity.descent-parity-average
+- singularity.descended-form-state-independent
+- singularity.imported-univalence-superselection-rule
+- singularity.ascended-marginals-are-diagonal
+- obj.singularity.geometric-modular-condition-g
+- singularity.kms-uniqueness-factor
+- state-selection.imported-general-statement
+- singularity.universality-temperature-under-g
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+- state-selection.euclidean-partner-curvature-selected
+- state-selection.rate-discharge-hypothesis-iii
+- state-selection.where-fermi-dirac-comes
+- state-selection.partner-purification-are-canonical
+- singularity.exact-equilibrium-over-determines-boundary-modes
+- singularity.number-diagonal-dynamics-models-scrambling-derived
+show: spine-only
+paper: T05-state-selection
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T05_state_selection_note.tex
+  note: Recreate T05-state-selection from the store
+cite: []
+prose: paper
+msc: Primary 83C57, 46L60; Secondary 81T05, 82B10.
+keywords: state selection; Hawking temperature; KMS states; modular theory; fermion
+  parity superselection; Hartle-Hawking state; conditional expectation; Clifford algebra.

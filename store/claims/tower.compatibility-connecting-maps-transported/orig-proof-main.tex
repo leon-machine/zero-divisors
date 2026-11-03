@@ -1,0 +1,15 @@
+Both sides are unital algebra maps into $A \otimes \Mat_{2^{k+1}}$, so it suffices to check them on generators of $A \otimes \Mat_{2^k}$: the elements $x \otimes 1$ for ground generators $x$, and $1 \otimes b$ for $b$ the image of a plane generator $g \in \{e_j, f_j\}$, $j \leq k$.
+
+\emph{Ground generators.} $\varphi_k^{-1}(x \otimes 1) = x^{(k)} = x\,\Omega_k$. In $T_{k+1}$, $\Omega_{k+1} = \Omega_k\, \omega_{k+1}$ and $\omega_{k+1}^2 = 1$ give $x^{(k)} = x^{(k+1)}\, \omega_{k+1}$. Under $\varphi_{k+1}$, $x^{(k+1)} \mapsto x \otimes 1_{2^{k+1}}$ by definition, and $\omega_{k+1} \mapsto 1_A \otimes \operatorname{diag}(-1_{2^k}, +1_{2^k})$ by Fact \claimref{transport.rule-1-morita-trivial} for the outer plane. Hence
+\[
+\psi_k(x \otimes 1) \;=\; x \otimes \operatorname{diag}(-1_{2^k},\, +1_{2^k}).
+\]
+On the other side, $\theta_k(x \otimes 1) = x \otimes 1_{2^{k+1}}$, and conjugating cornerwise by $V_k$: the first corner gives $(u_A \otimes 1)(x \otimes 1)(u_A \otimes 1)^{-1} = u_A x u_A^{-1} \otimes 1 = -x \otimes 1$ (Lemma \claimref{tower.grade-twist-when-it-inner}, $n$ even), the second gives $(1 \otimes \overline\Omega_k)(x \otimes 1)(1 \otimes \overline\Omega_k)^{-1} = x \otimes 1$. The two sides agree.
+
+\emph{Plane generators.} $\varphi_k^{-1}(1 \otimes b) = g$ and $\iota_k(g) = g \in B_{k+1}$. The nesting embeds $B_k$ into $\Mat_2(B_k)$ as the twisted diagonal of Fact \claimref{transport.rule-1-morita-trivial} with base $B_k = \Cl(k,k)$: $g \mapsto \operatorname{diag}(g, \hat g)$, with $\hat{\cdot}$ the grade involution of $B_k$, which by Lemma \claimref{tower.volume-elements-planes} is implemented by $\Omega_k$ (it anticommutes with every plane generator and squares to one). Under $\varphi_{k+1}$ this reads
+\[
+\psi_k(1 \otimes b) \;=\; 1 \otimes \operatorname{diag}\bigl(b,\ \overline\Omega_k\, b\, \overline\Omega_k^{-1}\bigr),
+\]
+and conjugating $\theta_k(1 \otimes b) = 1 \otimes \operatorname{diag}(b, b)$ cornerwise by $V_k$ gives exactly the same: the first corner commutes with $u_A \otimes 1$, the second is conjugated by $\overline\Omega_k$. The two sides agree.
+
+Two unital algebra maps agreeing on a generating set agree, and $V_k$ is invertible as stated. One full stage of this identity, with the corrector exactly as displayed, is verified in exact arithmetic over the ground algebra $\Cl(1,1)$ in the script (Section \ref{sec:verification}).

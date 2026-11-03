@@ -1,0 +1,956 @@
+[
+ {
+  "id": "abstract",
+  "type": "abstract",
+  "text": "The tower of the series has the canonical anticommutation relations as its limit; this note asks whether that limit reaches a quantum field theory. It does, in one way. The palatial storey supplies a positive-energy one-particle space, the Penrose transform supplies the mode functions, and the tower's anticommutation relations are the second quantisation over that space. In real geometric algebra the construction needs one operator imaginary unit, and the pseudoscalar $I_4$ serves: it is Lorentz-invariant, and with it positive frequency is positive helicity for every massless field. A massive fermion is then two right-handed fields joined by the epsilon pairing; tower contact interactions give the textbook scattering laws; a tower pairing interaction condenses into a fermion mass; gauge bosons are adjoined as a bosonic Fock space; and the coupled system gives one-photon exchange exactly, for distinguishable and identical fermions. Pointed at the series' gravity prediction, the field theory is consistent with its matter premises and leaves the registered phase unchanged. Pointed at the Standard-Model paper, the assignments survive, and the paper's undetermined orientation is relocated into the relative sign of the twistor's complex unit and the field's. Almost every result is standard physics in the series' algebra; the series' own content is where the one-particle structure comes from, why the commutation relations must be adjoined, and what one complex unit fixes. Exact-arithmetic checks accompany every claim.",
+  "verbatim": true,
+  "hash": "3bc5a7a9d477"
+ },
+ {
+  "id": "s:paper-1",
+  "type": "section",
+  "title": "Introduction",
+  "hash": "b605350bc002"
+ },
+ {
+  "id": "i:paper-1",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.field-theory.setting-introduction",
+  "type": "note",
+  "claim": "note.field-theory.setting-introduction@1",
+  "title": "Introduction",
+  "text": "The relation of T16, $\\{e_a, e_b\\} = 2g_{ab}$, has two readings: a metric one in an orthogonal basis and the canonical anticommutation relations (CAR) in a Witt basis. The tower of T03 iterates the ascent and has the CAR algebra as its limit. That limit is many-fermion quantum mechanics. Whether it reaches a quantum field theory, with fields on spacetime that are local, covariant and of positive energy, is a different question, and the claim that general relativity and quantum theory are two faces of one object covers field theory only if the answer is yes.\n\nThis note collects the answer, built in eight exact-arithmetic runs on 15 and 16 October 2026, each with a preregistration, an independent adversarial review and its corrections. The answer is yes, in one way. The note is a consolidation: each result is stated at its level and cited to the run and check that establish it, and the runs' findings files carry the detail.\n\nThe plan. the section ``Setting and imports'' fixes the setting and the imports. the section ``Attaching the modes to spacetime'' attaches the modes to spacetime. the section ``The imaginary units in real geometric algebra'' identifies the imaginary units in real geometric algebra. the section ``Second quantisation in one algebra'' second-quantises multivector-valued fields in one algebra with $i = I_4$. the section ``Mass and contact interactions'' treats mass and contact interactions, the section ``Bosons'' the bosons, and the section ``The photon's Fock space and the coupled system'' the photon's Fock space and the coupled system. the section ``Gravity's source: the registered prediction'' and the section ``The Standard-Model paper's chirality'' point the result at two of the series' own claims: the registered gravity prediction and the Standard-Model paper's chirality. the section ``The ledger'' states what is the series' own, what is imported, and what is open.",
+  "gap": false,
+  "level": "formal",
+  "hash": "15edc553ee29"
+ },
+ {
+  "id": "c:note.field-theory.setting-prior-art",
+  "type": "note",
+  "claim": "note.field-theory.setting-prior-art@1",
+  "title": "Prior art",
+  "text": "Second quantisation, Coulomb-gauge quantum electrodynamics and old-fashioned perturbation theory are textbook (Sakurai; Weinberg, \\emph{The Quantum Theory of Fields}, vol.~I). The spacetime algebra, its plane waves, its chirality and its photon polarisations are Hestenes' and Doran and Lasenby's; the geometric-algebra treatment of twistors with the conformal pseudoscalar as imaginary unit is Arcaute, Lasenby and Doran's. Two-component spinor technique is Dreiner, Haber and Martin's. The Nambu-Jona-Lasinio mechanism, Weinberg and Witten's theorem, Bjorken's composite photon and Anderson's quasi-spin are standard and credited where used. What the note claims for the series is the placement of these structures in the series' own algebra and storeys, and the consequences of using a single complex unit for all of them.",
+  "gap": false,
+  "level": "formal",
+  "hash": "8120dc4b186a"
+ },
+ {
+  "id": "s:paper-2",
+  "type": "section",
+  "title": "Setting and imports",
+  "hash": "dd7174dfa00e"
+ },
+ {
+  "id": "i:paper-2",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.field-theory.setting-setting-imports",
+  "type": "note",
+  "claim": "note.field-theory.setting-setting-imports@1",
+  "title": "Setting and imports",
+  "text": "The ground is $\\Cl(1,3)$ with signature $(+,-,-,-)$ and pseudoscalar $I_4 = \\gamma_0\\gamma_1\\gamma_2\\gamma_3$, $I_4^2 = -1$. Tower planes $(e_j, f_j)$ with $e_j^2 = 1$, $f_j^2 = -1$ are adjoined after the ground; $v_j = (e_j + f_j)/2$ creates and $w_j = (e_j - f_j)/2$ annihilates. T03's adjoint $*$ is the antiautomorphism with $x^* = x$ on generators of square $+1$ and $x^* = -x$ on generators of square $-1$; so $I_4^* = -I_4$ and $w_j^* = v_j$. Hestenes' unit $\\IS = \\gamma_2\\gamma_1$ acts on the right. The chirality projectors on even elements are $\\chi_\\pm(\\phi) = (\\phi \\mp I_4\\phi\\IS)/2$, so that $I_4\\phi = \\phi\\IS$ on $\\chi_+$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "7f0f11d5658f"
+ },
+ {
+  "id": "t:^>field-theory.imported-tower-limit",
+  "type": "transition",
+  "between": [
+   null,
+   "field-theory.imported-tower-limit"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.imported-tower-limit",
+  "type": "theorem",
+  "claim": "field-theory.imported-tower-limit@3",
+  "title": "Imported: the tower and its limit",
+  "text": "The planes generate the CAR, $\\{v_j, w_k\\} = \\delta_{jk}$, $v_j^2 = w_j^2 = 0$, and the tower's limit is the CAR algebra. \\emph{Provenance:} T03, Thm.~thm:carlimit.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Restated from \\claimref{tower.car-limit-even-charge} (T03, Thm.~thm:carlimit), where it is proved.\n",
+  "hash": "d08fdccb0fa1",
+  "number": 1
+ },
+ {
+  "id": "t:field-theory.imported-tower-limit>field-theory.imported-statistics-no-go-palatial-algebra",
+  "type": "transition",
+  "between": [
+   "field-theory.imported-tower-limit",
+   "field-theory.imported-statistics-no-go-palatial-algebra"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.imported-statistics-no-go-palatial-algebra",
+  "type": "theorem",
+  "claim": "field-theory.imported-statistics-no-go-palatial-algebra@2",
+  "title": "Imported: the statistics no-go and the palatial algebra",
+  "text": "The palatial algebra $[Z^\\alpha, \\bar Z_\\beta] = \\hbar\\,\\delta^\\alpha_\\beta$ has no nonzero finite-dimensional representation and no embedding into any finite-dimensional algebra. It is realised on polynomials by $\\bar Z_\\beta = -\\hbar\\,\\partial/\\partial Z^\\beta$. \\emph{Provenance:} T09, Prop.~prop:statistics and Lemma lem:weyl. For the bounded CAR algebra the corresponding statement is the Wielandt-Wintner theorem: no bounded operators satisfy $[a, a^*] = 1$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Restated from \\claimref{correspondence.statistics-no-go} (T09, Prop.~prop:statistics) and \\claimref{correspondence.symmetrised-quadratics-palatial-algebra} (T09, Lemma lem:weyl, whose proof uses the polynomial realisation), where they are proved. The closing sentence is the Wielandt-Wintner theorem, which the source cites from the literature.\n",
+  "hash": "436d757a5ef9",
+  "number": 2
+ },
+ {
+  "id": "t:field-theory.imported-statistics-no-go-palatial-algebra>field-theory.imported-one-datum-massive-law",
+  "type": "transition",
+  "between": [
+   "field-theory.imported-statistics-no-go-palatial-algebra",
+   "field-theory.imported-one-datum-massive-law"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.imported-one-datum-massive-law",
+  "type": "theorem",
+  "claim": "field-theory.imported-one-datum-massive-law@2",
+  "title": "Imported: one datum for the massive law",
+  "text": "The massive Dirac law in the spacetime algebra needs one geometric datum beyond the field, and the pseudoscalar cannot serve as it. \\emph{Provenance:} T16, Lemma lem:onedatum.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Restated from \\claimref{one-relation.one-datum-not-two-imaginary-unit} (T16, Lemma lem:onedatum), where it is proved.\n",
+  "hash": "359759969210",
+  "number": 3
+ },
+ {
+  "id": "t:field-theory.imported-one-datum-massive-law>field-theory.imported-standard-field-theory",
+  "type": "transition",
+  "between": [
+   "field-theory.imported-one-datum-massive-law",
+   "field-theory.imported-standard-field-theory"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.imported-standard-field-theory",
+  "type": "fact",
+  "claim": "field-theory.imported-standard-field-theory@2",
+  "title": "Imported: standard field theory",
+  "text": "The Jost-point form of the spin-statistics theorem (Streater and Wightman, ch.~4), whose complex Lorentz path reads in geometric algebra as the rotation of one chirality through $2\\pi$, $(1-\\Pi) + \\Pi\\exp(\\theta\\gamma_1\\gamma_2)$ with $\\Pi = (1 - E)/2$, ending at conjugation by $E$, the total inversion $x \\mapsto -x$ on the conformal model; the Penrose transform, whose kernels the spacetime algebra writes as $x\\psi_0\\gamma_0/Q(x)^2$ (spin $\\tfrac12$), $xBx/Q(x)^3$ (Maxwell) and $1/Q(x)$ (scalar), and its $H^1$ isomorphism with cohomology on regions of the projective spinor space $\\PCS$ (projective twistor space); the Weinberg-Witten theorem (massless particles of spin greater than one half carry no charge under a conserved Lorentz-covariant current); the random-phase Goldstone pole of the Nambu-Jona-Lasinio model; the Coulomb-gauge Hamiltonian of quantum electrodynamics; the Adler-Bell-Jackiw anomaly.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, ch. 4 (the Jost-point form of the spin-statistics theorem; named in the source); The Penrose transform and its H^1 isomorphism (Penrose; named in the source); S. Weinberg and E. Witten, the Weinberg-Witten theorem (named in the source); The random-phase Goldstone pole of the Nambu-Jona-Lasinio model (named in the source); The Coulomb-gauge Hamiltonian of quantum electrodynamics (Sakurai; Weinberg, The Quantum Theory of Fields, vol. I; named in the source); The Adler-Bell-Jackiw anomaly (named in the source)",
+  "hash": "b0b6a343f675",
+  "number": 4
+ },
+ {
+  "id": "s:paper-3",
+  "type": "section",
+  "title": "Attaching the modes to spacetime",
+  "hash": "8bd959c02d91"
+ },
+ {
+  "id": "i:paper-3",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.imported-standard-field-theory>field-theory.ground-does-not-attach-modes",
+  "type": "transition",
+  "between": [
+   "field-theory.imported-standard-field-theory",
+   "field-theory.ground-does-not-attach-modes"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.ground-does-not-attach-modes",
+  "type": "theorem",
+  "claim": "field-theory.ground-does-not-attach-modes@4",
+  "title": "The ground does not attach the modes",
+  "text": "Over the conformal ground every even ground element commutes with every mode operator of every higher plane. In particular the conformal bivectors, the chart translations and the Lorentz rotors act trivially on the modes, so a field $\\psi(x) = \\sum_j u_j(x)a_j$ on which the ground's translations act covariantly has constant mode functions. The obstruction is finite-dimensionality: a noncompact group has no nontrivial unitary representation on a finite floor.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: run \\texttt{qft\\_2026-10-15}, checks A1.1 to A1.8 and A2; the finite-dimensionality obstruction is the corrected form of A2 after review. The first clause is also a consequence of the tower's structure: $\\Omega_{k} = \\omega_{1}\\cdots\\omega_{k}$ squares to one and commutes with every ground generator (Lemma \\claimref{tower.volume-elements-planes}), so an even product of ground generators equals the same product of the twisted generators $x\\,\\Omega_{k}$ and lies in the subalgebra $A_{k}$, which commutes elementwise with the subalgebra $B_{k}$ generated by the planes (Theorem \\claimref{tower.commuting-copies}); every mode operator lies in $B_{k}$.\n",
+  "hash": "ef30db2141f0",
+  "number": 5
+ },
+ {
+  "id": "t:field-theory.ground-does-not-attach-modes>field-theory.twistor-attachment",
+  "type": "transition",
+  "between": [
+   "field-theory.ground-does-not-attach-modes",
+   "field-theory.twistor-attachment"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.twistor-attachment",
+  "type": "theorem",
+  "claim": "field-theory.twistor-attachment@5",
+  "title": "The attachment through conformal spinors",
+  "text": "The attachment available to the series is the one through the conformal spinor space $\\CS$ (the twistor attachment): the palatial storey supplies a positive-energy one-particle space with a conformal-group action, the Penrose transform supplies the mode functions, and the tower's CAR is the second quantisation over that space. In the oscillator model the helicity-$s$ module has energies $|s| + 1 + n$ with multiplicity $(n+1)(n + 2|s| + 1)$; the conformal energy is the palatial quadratic of the reversion form $h$ on $\\CS$ (the twistor form); the sixteen generators of $\\mathfrak{u}(2,2)$, the algebra preserving $h$, preserve each positive-energy, fixed-helicity module. On this attachment the tower's floors are energy cut-offs, not regions of spacetime. Spin-statistics constrains it: a CAR lift is local exactly when $2s$ is odd, and the series' fermion assignments pass.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation for the oscillator statements (\\texttt{qft\\_2026-10-15}, A5.1 to A5.5, B2.1); the parity of the two-point kernel (A4.4 to A4.6); the Jost framing and the Penrose isomorphism imported (Fact \\claimref{field-theory.imported-standard-field-theory}). The second-quantisation clause rests on \\claimref{field-theory.imported-tower-limit}, which supplies the tower's CAR and its limit, the CAR algebra, and the oscillator model on \\claimref{field-theory.imported-statistics-no-go-palatial-algebra}, which supplies the palatial algebra and its realisation on polynomials.\n",
+  "hash": "fa1c8ba24577",
+  "number": 6
+ },
+ {
+  "id": "t:field-theory.twistor-attachment>field-theory.boost-modes",
+  "type": "transition",
+  "between": [
+   "field-theory.twistor-attachment",
+   "field-theory.boost-modes"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.boost-modes",
+  "type": "theorem",
+  "claim": "field-theory.boost-modes@3",
+  "title": "The boost on the modes",
+  "text": "On a plane's mode operators the real-rapidity rotor acts by scaling, preserves the CAR, and is not a $*$-map; uniformly over many planes it has no bounded extension to the CAR algebra. The imaginary-rapidity rotor is unitary and acts by phases. So on the modes the series' geometric boost is the imaginary-time (KMS-strip) map, and the unitary real-time flow is the rotor at imaginary rapidity.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{qft\\_2026-10-15}, B1.0 to B1.8. The computation rests on \\claimref{field-theory.imported-tower-limit}, which supplies the CAR of the plane mode operators and the CAR algebra as the tower's limit. The reading of T05's premise (R) that follows is flagged in that run as assembly-level and a decision for the author.\n",
+  "hash": "1483432ff604",
+  "number": 7
+ },
+ {
+  "id": "t:field-theory.boost-modes>field-theory.path-integral-inside-tower",
+  "type": "transition",
+  "between": [
+   "field-theory.boost-modes",
+   "field-theory.path-integral-inside-tower"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.path-integral-inside-tower",
+  "type": "theorem",
+  "claim": "field-theory.path-integral-inside-tower@3",
+  "title": "The path integral is inside the tower",
+  "text": "Grassmann variables are further rungs. The Grassmann path integral at slicing $M$ gives $\\operatorname{Tr}(1 - \\delta H)^M$ exactly, and $\\operatorname{Tr}\\exp(-\\beta H)$ and the Fermi-Dirac occupation in the limit; its two-point function is antiperiodic for the trace and periodic for the supertrace at every slicing. The period itself is imported.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{qft\\_2026-10-15}, D1 to D4; D5 assembly. Reading the Grassmann variables as further rungs rests on Fact \\claimref{field-theory.imported-tower-limit}: the adjoined null vectors square to zero and anticommute, as Grassmann generators must.\n",
+  "hash": "7368f254e7f3",
+  "number": 8
+ },
+ {
+  "id": "s:paper-4",
+  "type": "section",
+  "title": "The imaginary units in real geometric algebra",
+  "hash": "04bf754bf269"
+ },
+ {
+  "id": "i:paper-4",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.path-integral-inside-tower>field-theory.where-each-lives",
+  "type": "transition",
+  "between": [
+   "field-theory.path-integral-inside-tower",
+   "field-theory.where-each-lives"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.where-each-lives",
+  "type": "theorem",
+  "claim": "field-theory.where-each-lives@3",
+  "title": "Where each imaginary unit lives",
+  "text": "\\begin{enumerate}\n\\item The centre of $\\Cl^+(1,3)$ is $\\mathrm{span}\\{1, I_4\\}$, and the centre of $\\Cl^+(2,4)$ is $\\mathrm{span}\\{1, I_6\\}$ with $I_6 = I_4E$, where $E = e_+e_-$ is the bivector of the ascended plane, $E^2 = 1$, $[I_4, E] = 0$.\n\\item The conformal spinor space (twistor space) $\\CS$ is the minimal left ideal $\\Cl^+(2,4)P$; the commutant of the action of $\\Cl^+(2,4)$ on $\\CS$ is $\\mathrm{span}\\{1, I_6\\}$, so the complex unit of $\\CS$ is $\\pm I_6$.\n\\item At a point, $\\CS$ splits as $L_0 \\oplus L_\\infty$, the $E = \\pm 1$ eigenspaces, both Lorentz-invariant, and $I_6 = +I_4$ on $L_0$ and $-I_4$ on $L_\\infty$: the two chiral doublets.\n\\item For massless fields the field's complex structure is the pseudoscalar: $\\pm I_4$ by helicity sector for Maxwell, and on the chiral subspaces of the Weyl field $I_4$ agrees with Hestenes' right $\\IS$ up to the chirality sign. A mass term anticommutes with $I_4$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{twistor\\_ga\\_2026-10-16}, E1.1 to E1.7 and E3.1, E3.2. Prior art: (1) to (3) are in Arcaute, Lasenby and Doran; (4) is standard spacetime algebra.\n",
+  "hash": "3f20d533d9ed",
+  "number": 9
+ },
+ {
+  "id": "s:paper-5",
+  "type": "section",
+  "title": "Second quantisation in one algebra",
+  "hash": "62923fffb2a9"
+ },
+ {
+  "id": "i:paper-5",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.where-each-lives>obj.field-theory.single-algebra-field",
+  "type": "transition",
+  "between": [
+   "field-theory.where-each-lives",
+   "obj.field-theory.single-algebra-field"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:obj.field-theory.single-algebra-field",
+  "type": "definition",
+  "claim": "obj.field-theory.single-algebra-field@1",
+  "title": "The single-algebra field",
+  "text": "Values are even and chiral elements of the ground; modes are tower planes; the operator imaginary unit is $i = I_4$, which commutes with every mode; physical numbers are read by the projection $\\proj$ onto $\\mathrm{span}\\{1, I_4\\}$. The pairing of values is $\\ip{\\phi}{u} = \\alpha(\\phi, u) + I_4\\,\\alpha(\\phi\\IS, u)$ with $\\alpha(\\phi, u) = \\langle \\phi^*u\\rangle_0$.",
+  "gap": false,
+  "level": "formal",
+  "hash": "4e4d5d3067c8",
+  "number": 10
+ },
+ {
+  "id": "t:obj.field-theory.single-algebra-field>field-theory.second-quantisation",
+  "type": "transition",
+  "between": [
+   "obj.field-theory.single-algebra-field",
+   "field-theory.second-quantisation"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.second-quantisation",
+  "type": "theorem",
+  "claim": "field-theory.second-quantisation@5",
+  "title": "Second quantisation",
+  "text": "With Definition \\claimref{obj.field-theory.single-algebra-field}:\n\\begin{enumerate}\n\\item $\\Lambda(k) = k\\gamma_0/(2k_0)$ is the orthogonal projector onto $\\ker k$.\n\\item The field's anticommutator has no tower part and equals $\\ip{\\phi_1}{\\sum_j 2\\alpha_j\\cos(k_j\\cdot\\xi)\\Lambda(k_j)\\chi\\,\\phi_2}$; in the continuum it is $\\chi(\\nabla D)\\gamma_0$ with $D$ the Pauli-Jordan function, so the field is local.\n\\item The span$\\{1, I_4\\}$ part of $\\Psi^*M\\Psi$ is the second-quantised $d\\Gamma(M)$ on particle modes; antiparticle terms need normal ordering.\n\\item With $i = I_4$ a field carrying both chiralities gives the right-handed part complex-linearly and the left-handed part conjugated. With Hestenes' $i = \\IS$ the same field quantises as a whole Dirac field, at the cost of a frame-dependent unit. The split is forced by the choice $i = I_4$, not by the algebra.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_second\\_quantisation\\_2026-10-16}, Q1 to Q7 (Q4 at assembly level with one import; Q6 corrected after review). The anticommutator computation rests on \\claimref{field-theory.imported-tower-limit}, which supplies the CAR of the tower planes that carry the field's modes.\n",
+  "hash": "ab20062b113c",
+  "number": 11
+ },
+ {
+  "id": "c:note.field-theory.choice-unit",
+  "type": "note",
+  "claim": "note.field-theory.choice-unit@1",
+  "title": "The choice of unit",
+  "text": "The author adopted $i = I_4$ for the series' field theory on 16 October 2026. The reasons are Lorentz invariance and centrality; the cost is that every field is read in one chirality. Proposition \\claimref{field-theory.mass} shows the cost is the standard two-component one.",
+  "gap": false,
+  "level": "formal",
+  "hash": "9962156ad251"
+ },
+ {
+  "id": "s:paper-6",
+  "type": "section",
+  "title": "Mass and contact interactions",
+  "hash": "9885d7472127"
+ },
+ {
+  "id": "i:paper-6",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.second-quantisation>field-theory.mass",
+  "type": "transition",
+  "between": [
+   "field-theory.second-quantisation",
+   "field-theory.mass"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.mass",
+  "type": "theorem",
+  "claim": "field-theory.mass@4",
+  "title": "Mass with $i = I_4$",
+  "text": "For the four even right factors $N \\in \\{\\gamma_0\\gamma_1, \\gamma_0\\gamma_2, \\gamma_1\\gamma_3, \\gamma_2\\gamma_3\\}$ that anticommute with $\\IS$, $B_N(\\psi, \\phi) = \\proj(\\tilde\\psi\\phi N)$ is a nonzero, antisymmetric, nondegenerate, Lorentz-invariant, $I_4$-bilinear pairing on $\\chi_+$: the epsilon pairing $\\lambda^{\\mathsf T}\\epsilon\\lambda$, of charge two under the common phase. A massive Dirac plane wave splits as $\\chi + \\psi_-$ with $\\eta = \\psi_-N \\in \\chi_+$; $\\chi$ and $\\eta$ have opposite $I_4$-charges, the Dirac equation is the coupled pair, and the mass density is $2B(\\chi, \\eta)$. The common $I_4$ phase is axial and the mass breaks it. Fact \\claimref{field-theory.imported-one-datum-massive-law} stands: $I_4$ is the field algebra's unit, not the massive law's complex structure.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_interactions\\_2026-10-16}, M1, M2 (the reading corrected after review). The closing clause rests on \\claimref{field-theory.imported-one-datum-massive-law}, which supplies that the massive Dirac law needs one geometric datum beyond the field and that the pseudoscalar cannot serve as it.\n",
+  "hash": "5ad0354ceb13",
+  "number": 12
+ },
+ {
+  "id": "t:field-theory.mass>field-theory.contact-interactions-tower",
+  "type": "transition",
+  "between": [
+   "field-theory.mass",
+   "field-theory.contact-interactions-tower"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.contact-interactions-tower",
+  "type": "theorem",
+  "claim": "field-theory.contact-interactions-tower@4",
+  "title": "Contact interactions in the tower",
+  "text": "For two right-handed species the current-current density $H = g J_A\\cdot J_B$, built in the single algebra on four particle modes, is self-adjoint, commutes with both charges, and has tower grade four. Its tower matrix element is $\\langle A3, B4|H|A1, B2\\rangle = g J_A(3,1)\\cdot J_B(4,2)$, with $|M|^2/(g^2 s^2) = 1/4$ for spinors normalised to $J^{\\mu}(f, f) = k^{\\mu}$ (in general $|M|^2/(g^2 c_1c_2c_3c_4\\,s^2) = 1/4$ with $J(f_i, f_i) = c_i k_i$) at every configuration tested, in centre-of-mass and boosted frames; with the second species as antiparticles the crossed amplitude gives $|M|^2/(g^2 u^2) = 1/4$ under the same normalisation.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_interactions\\_2026-10-16}, C1 to C3b.\n",
+  "hash": "d60d6297ba64",
+  "number": 13
+ },
+ {
+  "id": "t:field-theory.contact-interactions-tower>field-theory.no-canonical-commutation-relations-tower",
+  "type": "transition",
+  "between": [
+   "field-theory.contact-interactions-tower",
+   "field-theory.no-canonical-commutation-relations-tower"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.no-canonical-commutation-relations-tower",
+  "type": "theorem",
+  "claim": "field-theory.no-canonical-commutation-relations-tower@3",
+  "title": "No canonical commutation relations in the tower",
+  "text": "No floor contains a pair with $[a, a^*] = 1$, and no bounded element of the CAR limit satisfies it. Bosons made of fermions are not excluded by this.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Finite statement proved (\\texttt{ga\\_interactions\\_2026-10-16}, B1, the trace argument of Fact \\claimref{field-theory.imported-statistics-no-go-palatial-algebra}); the bounded statement imported (Wielandt-Wintner). The original wording, ``no bosons'', was refuted on review.\n",
+  "hash": "a29eae987aa8",
+  "number": 14
+ },
+ {
+  "id": "s:paper-7",
+  "type": "section",
+  "title": "Bosons",
+  "hash": "9b33b5948133"
+ },
+ {
+  "id": "i:paper-7",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.no-canonical-commutation-relations-tower>field-theory.composite-scalars-mean-field-level",
+  "type": "transition",
+  "between": [
+   "field-theory.no-canonical-commutation-relations-tower",
+   "field-theory.composite-scalars-mean-field-level"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.composite-scalars-mean-field-level",
+  "type": "theorem",
+  "claim": "field-theory.composite-scalars-mean-field-level@4",
+  "title": "Composite scalars, at mean-field level",
+  "text": "\\begin{enumerate}\n\\item The two-mode block $H = K(n_a + n_c) + \\mu w_aw_c + \\mu^*v_cv_a$, $\\mu \\in \\mathrm{span}\\{1, I_4\\}$, is self-adjoint, with $\\operatorname{ad}_H^2 = K^2 + |\\mu|^2$ on all four mode operators and block spectrum $\\{K - E, K, K, K + E\\}$, $E = \\sqrt{K^2 + |\\mu|^2}$; with $\\mu = mB$ the dispersion is $E^2 = K^2 + m^2$.\n\\item The tower element $H_4 = \\sum_b K(n_a + n_c) - GP^*P$, $P = \\sum_b w_aw_c$, is self-adjoint, conserves the axial number, and has exact pair states of energy $2Kn - Gn(n_b - n + 1)$; pairs enter the ground state exactly when $G > 2K/n_b$, the threshold of the mean-field energy.\n\\item In the block ground state $\\langle w_aw_c\\rangle = -\\mu^*/(2E)$, so the gap equation holds: the fermion mass is $G$ times the pair condensate.\n\\item The axial phase is an inner unitary of the tower, $U H(\\mu) U^* = H(\\mu e^{-2\\theta I_4})$: the mean-field energy has an exactly flat phase direction.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_bosons\\_2026-10-16}, S1.1 to S3 and S2.5. Mean field only; the massless pole is the imported random-phase result; at finite size the exact ground state has $\\langle P\\rangle = 0$; the order parameter is a Lorentz scalar but a single shell is frame-dependent; the axial $U(1)$ is anomalous, so with colour the scalar is massive.\n",
+  "hash": "72b36cb78c44",
+  "number": 15
+ },
+ {
+  "id": "t:field-theory.composite-scalars-mean-field-level>field-theory.composite-gauge-bosons-what-excluded",
+  "type": "transition",
+  "between": [
+   "field-theory.composite-scalars-mean-field-level",
+   "field-theory.composite-gauge-bosons-what-excluded"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.composite-gauge-bosons-what-excluded",
+  "type": "theorem",
+  "claim": "field-theory.composite-gauge-bosons-what-excluded@4",
+  "title": "Composite gauge bosons: what is excluded",
+  "text": "The GA current transforms as a vector, $J(Sf, Sg) = SJ(f,g)\\tilde S$, for every element $S$ of definite parity; so a nonzero vector condensate breaks Lorentz invariance, and a massless composite photon as a Goldstone mode of one (Bjorken) conflicts with the exact Lorentz invariance of the series' exterior. Massless composites charged under a covariant current of the fermions are excluded by Weinberg and Witten. Massive composite vectors and gauge bosons of an emergent gauge symmetry are not addressed. The elementary route was taken because the author chose it, not because it is forced.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "\\texttt{ga\\_bosons\\_2026-10-16}, V2 (near-immediate) and V1 (imported, the Weinberg-Witten theorem of \\claimref{field-theory.imported-standard-field-theory}). The preregistered verdict ``the composite route fails'' was narrowed to this statement on review.\n",
+  "hash": "78aebe8e1262",
+  "number": 16
+ },
+ {
+  "id": "t:field-theory.composite-gauge-bosons-what-excluded>field-theory.elementary-photon-ga",
+  "type": "transition",
+  "between": [
+   "field-theory.composite-gauge-bosons-what-excluded",
+   "field-theory.elementary-photon-ga"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.elementary-photon-ga",
+  "type": "theorem",
+  "claim": "field-theory.elementary-photon-ga@4",
+  "title": "The elementary photon in GA",
+  "text": "With $i = I_4$ and complex coefficients on the left:\n\\begin{enumerate}\n\\item the polarisation $\\epsilon_h = t_1 - hI_4t_2$ satisfies $B_q\\cdot\\epsilon_h = hI_4\\epsilon_h$ for the rotation bivector $B_q$ about $q$, on and off the coordinate axes;\n\\item the geometric product of complex vectors is sesquilinear, $\\proj(J\\epsilon) = J\\cdot\\bar\\epsilon$, because $I_4$ anticommutes with vectors;\n\\item the helicity sum $\\tfrac12\\sum_h\\proj(J_A\\epsilon_h)\\proj(J_B\\epsilon_{-h})$ is the transverse product $J_A^\\perp\\cdot J_B^\\perp$;\n\\item Coulomb-gauge exchange (two time orderings and the instantaneous Coulomb term) equals the covariant $-e^2J_A\\cdot J_B/t$, by current conservation;\n\\item massive vector exchange reduces to the contact term of Proposition \\claimref{field-theory.contact-interactions-tower} with $G = e^2/M^2$.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_bosons\\_2026-10-16}, E0 to E4. (4) is arithmetic conditional on current conservation (E1); the GA content is E1 and E2. Clause (4) rests on \\claimref{field-theory.imported-standard-field-theory}, which supplies the Coulomb-gauge Hamiltonian, and clause (5) on \\claimref{field-theory.contact-interactions-tower}, which supplies the contact term the massive exchange reduces to.\n",
+  "hash": "d71b188b6cd0",
+  "number": 17
+ },
+ {
+  "id": "s:paper-8",
+  "type": "section",
+  "title": "The photon's Fock space and the coupled system",
+  "hash": "ceef5f8c9e36"
+ },
+ {
+  "id": "i:paper-8",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.elementary-photon-ga>field-theory.fock-space-maxwell-modes",
+  "type": "transition",
+  "between": [
+   "field-theory.elementary-photon-ga",
+   "field-theory.fock-space-maxwell-modes"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.fock-space-maxwell-modes",
+  "type": "theorem",
+  "claim": "field-theory.fock-space-maxwell-modes@4",
+  "title": "The Fock space and the Maxwell modes",
+  "text": "\\begin{enumerate}\n\\item On polynomials with $\\mathrm{span}\\{1, I_4\\}$ coefficients, $a_m = \\partial/\\partial z_m$ and $a_m^* = z_m$ satisfy the CCR exactly, and $a_m^*$ is the adjoint of $a_m$ for $\\ip{z^n}{z^{n'}} = n!\\,\\delta$. This is the representation of Fact \\claimref{field-theory.imported-statistics-no-go-palatial-algebra}, with variables indexed by photon modes; the relation to the palatial algebra itself is an analogy, not a construction.\n\\item For null $k$ the bivectors $f$ with $kf = 0$ form a real two-dimensional, $I_4$-stable space: one $I_4$-complex mode per momentum.\n\\item The positive-frequency mode $f\\exp(-I_4k\\cdot x)$ has helicity $+1$. Every massless even spinor, of either chirality, has the left-$I_4$ rotation phase of helicity $+\\tfrac12$. So with $i = I_4$, positive frequency is positive helicity for every massless even field.\n\\item With $i = I_4$ the field operator is the Riemann-Silberstein form $F = \\sum N\\,2X\\,[\\exp(-I_4k\\cdot x)\\,a_+ + \\exp(+I_4k\\cdot x)\\,a_-^*]$: helicity $+1$ annihilated, helicity $-1$ created.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_photon\\_fock\\_2026-10-16}, F1.1, F1.2, M1 to M3.2. The registered prediction that photon and fermion helicities agree in sign (M2c) holds and is structural (M2e).\n",
+  "hash": "b41758a467f9",
+  "number": 18
+ },
+ {
+  "id": "t:field-theory.fock-space-maxwell-modes>field-theory.coupled-system-tree-level",
+  "type": "transition",
+  "between": [
+   "field-theory.fock-space-maxwell-modes",
+   "field-theory.coupled-system-tree-level"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.coupled-system-tree-level",
+  "type": "theorem",
+  "claim": "field-theory.coupled-system-tree-level@3",
+  "title": "The coupled system at tree level",
+  "text": "On the coupled state space (tower element times polynomial), $H_{\\mathrm{int}} = e\\sum J^\\mu A_\\mu$ is self-adjoint and conserves the fermion charges. The second-order amplitude $H_{\\mathrm{int}}(E_i - H_0)^{-1}H_{\\mathrm{int}} + H_C$, with $H_0$ applied as an operator, equals $-e^2J_A(3,1)\\cdot J_B(4,2)/t$ for distinguishable fermions and $-e^2(J_{31}\\cdot J_{42}/t - J_{41}\\cdot J_{32}/u)$ for identical ones, exactly. Dropping the Coulomb term, one helicity, or the fermionic ordering gives a different amplitude.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_photon\\_fock\\_2026-10-16}, C1 to C4c. The computation rests on \\claimref{field-theory.fock-space-maxwell-modes}, which supplies the polynomial Fock space of the photon modes and the field operator, and on \\claimref{field-theory.imported-standard-field-theory}, which supplies the Coulomb-gauge Hamiltonian and so the term $H_C$. The coupling does not test $i = I_4$ as such, since $I_4$ commutes with every tower operator.\n",
+  "hash": "3f425d705e7a",
+  "number": 19
+ },
+ {
+  "id": "t:field-theory.coupled-system-tree-level>field-theory.how-close-tower-comes-ccr",
+  "type": "transition",
+  "between": [
+   "field-theory.coupled-system-tree-level",
+   "field-theory.how-close-tower-comes-ccr"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.how-close-tower-comes-ccr",
+  "type": "theorem",
+  "claim": "field-theory.how-close-tower-comes-ccr@4",
+  "title": "How close the tower comes to the CCR",
+  "text": "For $n$ tower pairs, $B = \\sum_jw_{c_j}w_{d_j}$ gives $[B, B^*] = n - (N_c + N_d)$; with $K_3 = (N_c + N_d - n)/2$ the triple $(B^*, B, K_3)$ is an $\\mathfrak{su}(2)$ quasi-spin, the ladder has $n + 1$ states, and $[b, b^*] = 1 - 2k/n$ on $k$-pair states for $b = B/\\sqrt{n}$. The CCR is the Inonu-Wigner contraction $n \\to \\infty$; the operator limit holds only on states of bounded boson number.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_photon\\_fock\\_2026-10-16}, T1 to T3. The computation rests on Fact \\claimref{field-theory.imported-tower-limit}, which supplies the CAR of the tower pairs from which $[B, B^{*}]$ and the quasi-spin relations are evaluated, and the CAR algebra in which the contraction $n \\to \\infty$ is taken.\n",
+  "hash": "caedd0a81c11",
+  "number": 20
+ },
+ {
+  "id": "s:paper-9",
+  "type": "section",
+  "title": "Gravity's source: the registered prediction",
+  "hash": "94a63d1e3f92"
+ },
+ {
+  "id": "i:paper-9",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.field-theory.setting-gravitys-source-registered-prediction",
+  "type": "note",
+  "claim": "note.field-theory.setting-gravitys-source-registered-prediction@1",
+  "title": "Gravity's source: the registered prediction",
+  "text": "The series registers that gravity entangles two masses, each held in a superposition of two places, by the standard phase $\\Phi = (Gm_Am_B/\\hbar)\\int(1/r_{11} + 1/r_{22} - 1/r_{12} - 1/r_{21})\\,dt$, under the element reading, in which the geometry's coefficients lie in a commuting algebra of the matter's number operators. The masses are the field theory's fermions; gravity is not quantised here.",
+  "gap": false,
+  "level": "formal",
+  "hash": "380ca711c355"
+ },
+ {
+  "id": "t:field-theory.how-close-tower-comes-ccr>field-theory.conserved-numbers-mass-block",
+  "type": "transition",
+  "between": [
+   "field-theory.how-close-tower-comes-ccr",
+   "field-theory.conserved-numbers-mass-block"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.conserved-numbers-mass-block",
+  "type": "theorem",
+  "claim": "field-theory.conserved-numbers-mass-block@3",
+  "title": "Conserved numbers in a mass block",
+  "text": "On the mass block of Proposition \\claimref{field-theory.composite-scalars-mean-field-level}(1) the quasi-particle annihilators $\\gamma_a = \\alpha w_a + \\beta v_c$, $\\gamma_c = \\alpha'w_c + \\beta'v_a$ satisfy $[H, \\gamma] = -E\\gamma$, and $H = E(N_a + N_c) + (K - E)$ exactly, with $N = \\gamma^*\\gamma/\\{\\gamma, \\gamma^*\\}$. A single rung number does not commute with $H$ when $\\mu \\neq 0$, and the massive vacuum has $\\langle n_a\\rangle = (E - K)/(2E)$. The charge $Q = n_a - n_c$ lies in the rung algebra, commutes with $H$, equals $N_a - N_c$ and vanishes on the massive vacuum; one massive quantum is the rung state $v_aP_0$ itself.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_gravity\\_source\\_2026-10-16}, G2, G3, G3b. The computation rests on \\claimref{field-theory.composite-scalars-mean-field-level}, which supplies the two-mode block $H$, its self-adjointness and the energy $E = \\sqrt{K^2 + |\\mu|^2}$.\n",
+  "hash": "935700147cb2",
+  "number": 21
+ },
+ {
+  "id": "t:field-theory.conserved-numbers-mass-block>field-theory.operator-newtonian-coupling",
+  "type": "transition",
+  "between": [
+   "field-theory.conserved-numbers-mass-block",
+   "field-theory.operator-newtonian-coupling"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.operator-newtonian-coupling",
+  "type": "theorem",
+  "claim": "field-theory.operator-newtonian-coupling@4",
+  "title": "The operator Newtonian coupling",
+  "text": "With $H_N = -G\\sum_{i<j}M_iM_jN_iN_j/r_{ij}$ built from commuting conserved numbers (rung numbers of massless modes, quasi-particle numbers or block charges of massive ones), the branch states are eigenstates and the relative phase $\\arg(c_{11}c_{22}/(c_{12}c_{21}))$ under $\\exp(-I_4Ht)$ is $+\\Phi$, the registered phase with its sign. The operator source gives no interaction between a body's own branches, unlike the mean-field (Schr\\\"odinger-Newton) source, which entangles nothing. For rigid composite bodies the phase is that of the total mass plus a correction of relative order $(a/R)^2$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "\\texttt{ga\\_gravity\\_source\\_2026-10-16}, G4 to G6. The coupling commutes with the numbers by construction, these being the conserved numbers of \\claimref{field-theory.conserved-numbers-mass-block}, the masses are inserted, and the composite statement is the Newtonian multipole expansion with additivity and rigidity assumed; the static weak-field limit of the minimal coupling is imported.\n",
+  "hash": "3a598ab70bfa",
+  "number": 22
+ },
+ {
+  "id": "c:note.field-theory.what-does-registration",
+  "type": "note",
+  "claim": "note.field-theory.what-does-registration@1",
+  "title": "What this does to the registration",
+  "text": "Nothing. The registered phase and its wording stand: ``the commuting algebra of the rungs' number operators'' is right when read as the conserved ones, which the block charge supplies inside the rung algebra. A first version of the run proposed changing the wording to quasi-particle numbers; review showed the charge serves equally, and the proposal was withdrawn.",
+  "gap": false,
+  "level": "formal",
+  "hash": "bc274e1bef60"
+ },
+ {
+  "id": "s:paper-10",
+  "type": "section",
+  "title": "The Standard-Model paper's chirality",
+  "hash": "eb3e5ea376eb"
+ },
+ {
+  "id": "i:paper-10",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "t:field-theory.operator-newtonian-coupling>field-theory.assignments-survive",
+  "type": "transition",
+  "between": [
+   "field-theory.operator-newtonian-coupling",
+   "field-theory.assignments-survive"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.assignments-survive",
+  "type": "theorem",
+  "claim": "field-theory.assignments-survive@3",
+  "title": "The Standard-Model assignments survive",
+  "text": "T12's content, hypercharges and anomaly cancellation do not involve the complex unit: its listing and its conjugate differ by the outer automorphism $Y \\mapsto -Y$, $3 \\leftrightarrow \\bar 3$, and both are anomaly-free. Of the 64 conjugation patterns of one generation exactly four are anomaly-free, so every multiplet except the self-conjugate $\\nu^c$ must enter with the same status relative to $I_4$.",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Arithmetic and standard representation theory, computed in run \\texttt{ga\\_sm\\_chirality\\_2026-10-16}, checks C3 and C4. The computation rests on \\claimref{standard-model.quarks-leptons-two-level-fermion-content} and \\claimref{standard-model.hypercharge-global-form-pair-counting-consistency}, which supply the listing of one generation and its hypercharges, and on \\claimref{standard-model.imported-anomaly-coefficients}, which supplies the four anomaly-cancellation conditions applied to each of the 64 conjugation patterns.\n",
+  "hash": "7f28cdb74dd2",
+  "number": 23
+ },
+ {
+  "id": "t:field-theory.assignments-survive>field-theory.orientation-relocated",
+  "type": "transition",
+  "between": [
+   "field-theory.assignments-survive",
+   "field-theory.orientation-relocated"
+  ],
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:field-theory.orientation-relocated",
+  "type": "theorem",
+  "claim": "field-theory.orientation-relocated@6",
+  "title": "The orientation is relocated",
+  "text": "\\begin{enumerate}\n\\item Left multiplication by $e_+$ maps the even half $T$ of the conformal spinor module of $\\Cl(2,4)$ (the twistor module) onto the odd half $T'$, commutes with $I_4$ and with Lorentz rotors, and swaps the $E$-doublets: $i = I_4$ and Lorentz symmetry alone do not tell $T$ from $T'$.\n\\item The conformal spinors' unit that commutes with Clifford multiplication is right multiplication by $I_6$, $J$; with $J$ the two halves are inequivalent (conformal spinors and their duals, the twistors and dual twistors), and on the momentum doublet $\\ker n_0$, the $E = +1$ doublet of both halves, $J = +I_4$ in $T$ and $J = -I_4$ in $T'$.\n\\item The commutant fixes the conformal spinors' unit only up to sign. So with the field's unit $I_4$, which half's momentum spinors are complex-linear is the relative sign of the two units.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "derivation": "main",
+  "proof": "Proof by exact computation: \\texttt{ga\\_sm\\_chirality\\_2026-10-16}, C6a to C6e. The computation rests on \\claimref{field-theory.where-each-lives}, which supplies the central unit $I_6 = I_4E$, the commutant $\\mathrm{span}\\{1, I_6\\}$ of the conformal spinor module, and the splitting at a point into the $E = \\pm 1$ doublets with $I_6 = \\pm I_4$.\n",
+  "hash": "914a2c220bf8",
+  "number": 24
+ },
+ {
+  "id": "c:note.field-theory.what-does-t12",
+  "type": "note",
+  "claim": "note.field-theory.what-does-t12@2",
+  "title": "How the unit choice moves the orientation bit",
+  "text": "T12's orientation bit, which the dark-matter paper shows the descent cannot derive, is not removed by $i = I_4$; it moves into the relative sign of the conformal spinors' unit ($\\pm I_6$, the twistor's unit) and the field's. If the series fixes that sign, and if the label copy's parity is identified with the conformal spinors' (the twistor's; the theorem T12 calls the same missing theorem as Hypothesis (S)), the orientation is fixed, through T12's Fact on the charge and helicity read on the conformal spinor space (twistor charge and helicity), whose conventions were not checked here. Its physical content would be at most the sign of CP violation.",
+  "gap": false,
+  "level": "formal",
+  "hash": "f4a2b4b53ab9"
+ },
+ {
+  "id": "s:paper-11",
+  "type": "section",
+  "title": "The ledger",
+  "hash": "222f81dc0a9a"
+ },
+ {
+  "id": "i:paper-11",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.field-theory.setting-what-series-own",
+  "type": "note",
+  "claim": "note.field-theory.setting-what-series-own@1",
+  "title": "What is the series' own",
+  "text": "Three things. (i) Where the field theory's one-particle structure comes from: the palatial storey, not the tower (Proposition \\claimref{field-theory.twistor-attachment}); the tower supplies the CAR and nothing about spacetime (Proposition \\claimref{field-theory.ground-does-not-attach-modes}). (ii) Why the canonical commutation relations must be adjoined: the tower's own bosons are $\\mathfrak{su}(2)$ quasi-spins (Proposition \\claimref{field-theory.how-close-tower-comes-ccr}), the field-theory form of T09's statistics no-go. (iii) What one complex unit fixes: with $i = I_4$, positive frequency is positive helicity for every massless field, so the opposite helicities and chiralities enter conjugated in one stroke (Propositions \\claimref{field-theory.second-quantisation}(4), \\claimref{field-theory.fock-space-maxwell-modes}(3)). The dictionary of Proposition \\claimref{field-theory.boost-modes}, the boost on the modes as the KMS-strip map, is transport-convenient: its mathematics is that of any hyperbolic plane, its use the series'.",
+  "gap": false,
+  "level": "formal",
+  "hash": "3ea6c5a1160a"
+ },
+ {
+  "id": "c:note.field-theory.setting-what-standard",
+  "type": "note",
+  "claim": "note.field-theory.setting-what-standard@1",
+  "title": "What is standard",
+  "text": "Everything else: two-component mass, Fermi contact scattering, the Nambu-Jona-Lasinio condensate, Coulomb-gauge exchange and the quasi-spin are textbook results reproduced in the series' algebra. None of the runs produced a transport-essential result. The gravity run left the registered prediction unchanged and found its matter premises consistent with the field theory; the Standard-Model run found T12's assignments independent of the unit and relocated, but did not remove, its orientation bit.",
+  "gap": false,
+  "level": "formal",
+  "hash": "7013b1527abf"
+ },
+ {
+  "id": "c:note.field-theory.setting-decisions-taken",
+  "type": "note",
+  "claim": "note.field-theory.setting-decisions-taken@1",
+  "title": "Decisions taken",
+  "text": "The author chose $i = I_4$ (16 October), composite bosons first and elementary bosons on their failure, then the elementary photon, and then to point the field theory at the gravity prediction and at T12.",
+  "gap": false,
+  "level": "formal",
+  "hash": "36e9d0593165"
+ },
+ {
+  "id": "c:note.field-theory.setting-open",
+  "type": "note",
+  "claim": "note.field-theory.setting-open@1",
+  "title": "Open",
+  "text": "(1) Pair creation, antiparticle modes and Compton scattering in the coupled system. (2) Gauge invariance beyond current conservation, and Lorentz covariance of the Coulomb-gauge construction beyond tree level. (3) Loops and renormalisation. (4) Non-abelian gauge fields, which bring the axial anomaly into play. (5) The composite scalar beyond mean field: the Goldstone pole, a covariant regularisation, the sigma mode, and whether the contact term of Proposition \\claimref{field-theory.contact-interactions-tower} has an attractive scalar channel. (6) The map from the palatial ladder module's conformal-energy basis to the plane-wave Fock space, which would turn the analogy of Proposition \\claimref{field-theory.fock-space-maxwell-modes}(1) into a construction. (7) The terminology conflict recorded in the first run: T03 calls the tower second quantisation and T09 calls the palatial storey second quantisation; on the attachment found here the palatial storey supplies the one-particle space and the tower's CAR over it is second quantisation, which is T03's usage. (8) Whether the Higgs is composite, which the tower supports at mean-field level, or elementary: a modelling decision. (9) The relative sign of the twistor's complex unit and the field's, which now carries T12's orientation, and a check of the conventions of T12's Fact on twistor charge and helicity against T09 and T07. (10) For the gravity prediction: retardation and the radiative sector, non-rigid bodies, and the shared spinor factor of two masses in one tower.",
+  "gap": false,
+  "level": "formal",
+  "hash": "779cfbdd55b0"
+ },
+ {
+  "id": "s:paper-12",
+  "type": "section",
+  "title": "Machine verification",
+  "hash": "8f65e827e43e"
+ },
+ {
+  "id": "i:paper-12",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ },
+ {
+  "id": "c:note.field-theory.setting-machine-verification",
+  "type": "note",
+  "claim": "note.field-theory.setting-machine-verification@1",
+  "title": "Machine verification",
+  "text": "Every proposition above is established by exact computation in real geometric algebra, with the series' shared library \\texttt{GA.py} (Fraction coefficients; Gaussian rationals only for bookkeeping); no floating point is used. The derivation scripts and their independent review scripts are:\n\n\\begin{tabularx}{\\textwidth}{@{}lXrr@{}}\n\\toprule\nRun & Derivation script & Checks & Review checks\\\\\n\\midrule\n\\texttt{qft\\_2026-10-15} & \\texttt{verify\\_QFT.py} & 80 & 64\\\\\n\\texttt{twistor\\_ga\\_2026-10-16} & \\texttt{verify\\_TWGA.py} & 55 & 50\\\\\n\\texttt{ga\\_second\\_quantisation\\_2026-10-16} & \\texttt{verify\\_GA2Q.py} & 19 & 25\\\\\n\\texttt{ga\\_interactions\\_2026-10-16} & \\texttt{verify\\_INT.py} & 20 & 31\\\\\n\\texttt{ga\\_bosons\\_2026-10-16} & \\texttt{verify\\_BOS.py} & 23 & 30\\\\\n\\texttt{ga\\_photon\\_fock\\_2026-10-16} & \\texttt{verify\\_PHO.py} & 22 & 41\\\\\n\\texttt{ga\\_gravity\\_source\\_2026-10-16} & \\texttt{verify\\_GRV.py} & 12 & 12\\\\\n\\texttt{ga\\_sm\\_chirality\\_2026-10-16} & \\texttt{verify\\_SMC.py} & 12 & 15\\\\\n\\midrule\nTotal & & 243 & 268\\\\\n\\bottomrule\n\\end{tabularx}\n\nThe consolidated runner \\texttt{verify\\_FT.py} runs the eight derivation scripts from their folders and reports each count; all pass. Each run's findings file lists the checks by class (proof-carrying, near-immediate, controls, imports), records the review's findings and the corrections applied, and states what the checks do not show. All counts above are from runs in exact arithmetic on 15 and 16 October 2026.",
+  "gap": false,
+  "level": "formal",
+  "hash": "f6702084a027"
+ },
+ {
+  "id": "s:cited",
+  "type": "section",
+  "title": "Results cited, not shown",
+  "hash": "4fd887edea86"
+ },
+ {
+  "id": "c:correspondence.statistics-no-go",
+  "type": "fact",
+  "claim": "correspondence.statistics-no-go@2",
+  "title": "The statistics no-go",
+  "text": "The palatial algebra admits no nonzero finite-dimensional representation, and no embedding of unital algebras into any finite-dimensional algebra; in particular none into $\\Cl(2,4)$ or $\\Cl(2,4)_\\C$, of dimension $64$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.statistics-no-go, version 2 (T09 Prop 5.1)",
+  "hash": "c120156dda95",
+  "number": 25
+ },
+ {
+  "id": "c:correspondence.symmetrised-quadratics-palatial-algebra",
+  "type": "fact",
+  "claim": "correspondence.symmetrised-quadratics-palatial-algebra@5",
+  "title": "Symmetrised quadratics of the palatial algebra",
+  "text": "For $M \\in \\mathfrak{gl}(4,\\C)$ with entries $M^\\beta{}_\\alpha$ set\n\\[\nq(M) \\;:=\\; \\tfrac12 \\sum_{\\alpha,\\beta} M^\\beta{}_\\alpha\\,\\bigl(Z^\\alpha \\bar Z_\\beta + \\bar Z_\\beta Z^\\alpha\\bigr) \\;\\in\\; \\mathcal{P}.\n\\]\nThen:\n\\begin{enumerate}\n\\item $[q(M), Z^\\gamma] = -\\hbar\\,(MZ)^\\gamma$ and $[q(M), \\bar Z_\\gamma] = +\\hbar\\,(M^{\\mathsf T}\\bar Z)_\\gamma$: the adjoint action of $q(M)$ on the linear generators is the linear action of $M$ (in the dual pair of representations), times $\\hbar$;\n\\item $[q(M), q(N)] = \\hbar\\, q([M,N])$: the map $M \\mapsto q(M)/\\hbar$ is an injective Lie algebra homomorphism $\\mathfrak{gl}(4,\\C) \\to \\mathcal{P}$;\n\\item $q(M) = \\sum M^\\beta{}_\\alpha Z^\\alpha \\bar Z_\\beta - \\tfrac{\\hbar}{2}\\operatorname{tr} M$: the symmetric and normal orderings of a quadratic differ by the central element $\\tfrac{\\hbar}{2}\\operatorname{tr}M$; for the distinguished generator $M = \\mathrm{id}$ (the helicity/homogeneity direction) the shift is $-2\\hbar$, that is $q(\\mathrm{id}) = \\sum_\\alpha Z^\\alpha\\bar Z_\\alpha - 2\\hbar$: minus one half of $\\hbar$ for each of the four complex dimensions of the conformal spinor space $\\CS$ (twistor space).\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim correspondence.symmetrised-quadratics-palatial-algebra, version 5 (T09 Lem 5.5)",
+  "hash": "c0777350da42",
+  "number": 26
+ },
+ {
+  "id": "c:one-relation.one-datum-not-two-imaginary-unit",
+  "type": "fact",
+  "claim": "one-relation.one-datum-not-two-imaginary-unit@3",
+  "title": "One datum, not two: the imaginary unit is the rest frame read through the law",
+  "text": "Align the representative so that $C = Iu$. The complex structures the descent of step (4) needs are the constant even $J$ with $J^{2} = -1$ commuting with $C$, so that the plane-wave factor $\\exp(-Jp \\cdot x)$ passes through $C$. The commutant of $C$ in $\\Cl^{+}(1,3)$ is four-dimensional, spanned by $1$ and the three bivectors of the $3$-space orthogonal to $u$ (for $u = \\gamma_{3}$: $1, \\gamma_{0}\\gamma_{1}, \\gamma_{0}\\gamma_{2}, \\gamma_{1}\\gamma_{2}$); the pseudoscalar, though even and a square root of $-1$, anticommutes with $C$ and is excluded. On the commutant $J^{2} = -1$ iff the scalar part vanishes and the bivector part has unit timelike-signature norm, a two-sheeted hyperboloid. The map $J \\mapsto \\gamma_{0} := CJ$ is a bijection from that hyperboloid onto the unit timelike vectors orthogonal to $u$, with inverse $J = C^{-1}\\gamma_{0}$. So, given the law, choosing the imaginary unit and choosing the rest frame are one choice, not two. The joint commutant of $(C, J)$ in $\\Cl^{+}(1,3)$ is $\\mathrm{span}\\{1, J\\}$, whose rotors form the $U(1)$ of rotations in the spin plane, Hestenes' electromagnetic phase, which minimal coupling already uses. Any laboratory frame can be aligned: if the laboratory's $\\gamma_{0}$ is not orthogonal to the representative's $u$, a rotor of the freedom of Lemma \\claimref{one-relation.odd-square-roots-chiral-phase} realigns $u$, and that freedom is used up there, once, and is not to be counted again as the empty freedom of step (3).",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim one-relation.one-datum-not-two-imaginary-unit, version 3 (T16 Lem 5.6)",
+  "hash": "90cf9b0a9552",
+  "number": 27
+ },
+ {
+  "id": "c:standard-model.hypercharge-global-form-pair-counting-consistency",
+  "type": "fact",
+  "claim": "standard-model.hypercharge-global-form-pair-counting-consistency@5",
+  "title": "Hypercharge from the global form, pair counting, and consistency",
+  "text": "With $Y$ the hypercharge defined before Proposition \\claimref{standard-model.quarks-leptons-two-level-fermion-content}, and with Hypothesis (S) wherever a doublet at the level of one conformal spinor (a twistor-level doublet) enters:\n\\begin{enumerate}\n\\item (Under (S).) The one-handed listing keeps the states of even total mode number and conjugates the odd ones, or the reverse; the choice is the particle-antiparticle orientation. Write $(j, k)$ for the component of the five-mode state space with $j$ slot modes and $k$ pair modes occupied (mode counts, not the pair of representation dimensions used elsewhere in this paper, for which see the caption of a figure of the original). In the listing that keeps the quark doublet, the component $(1,1)$, as a particle, the lepton doublet is the full conformal spinor, the component $(1,3)$, $Y_{L} = -1/2$, and the empty conformal spinor, the component $(1,0)$, appears only as its conjugate (here both phrases name doublet components of the one-slot listing; the neutrino paper uses ``empty'' and ``filled conformal spinor'' for the grade-zero and grade-three singlets of the single-spinor sector, different objects, Proposition \\claimref{neutrino.empty-twistor}). The $[SU(2)]^{2}U(1)$ anomaly coefficient of the two doublets, $3Y_{Q} + Y_{L}$ with the three the colour multiplicity, is then the identity $3 \\cdot \\tfrac16 - \\tfrac12 = 0$; it would equal $1$ if the empty conformal spinor were listed as the particle instead, so the anomaly confirms the orientation the listing fixed. Pair counting fixes $|Y_{L}/Y_{Q}| = 3$; the parity fixes the sign.\n\\item (Unconditional as a computation on the Fock space of a single conformal spinor, like Proposition \\claimref{standard-model.quarks-leptons-two-level-fermion-content}(3).) Listed by the handedness of (1), the sector of a single conformal spinor gives the singlet spectrum. Here $\\CS = \\Lambda^{\\mathrm{even}}W$, the conformal spinor space, and $\\CSm{} = \\Lambda^{\\mathrm{odd}}W$ are the two chirality halves (Fact \\claimref{standard-model.imported-pair-systems-two-chirality-halves}), and the listing keeping the even grades and conjugating the odd ones gives\n\\[\n(1)_{0} \\;\\oplus\\; (\\bar{3})_{-2/3} \\;\\oplus\\; (\\bar{3})_{+1/3} \\;\\oplus\\; (1)_{+1},\n\\]\nthat is $\\nu^{c}$, $u^{c}$, $d^{c}$, $e^{c}$ with hypercharges $0, -\\tfrac23, +\\tfrac13, +1$: the observed singlet spectrum, with the fourth singlet at hypercharge zero. (The listing by the opposite handedness is the conjugate of this one, the same spectrum in the opposite convention.) Under (S) the grade-$k$ states of a single conformal spinor are the $(0, k)$ components, the states with no slot mode and $k$ pair modes occupied (their content $\\Lambda^{k}\\C^{3}$ and weight $-2k$ match, and irreducibles are determined by content and weight), so their parity is the total parity and this listing is the same listing as in (1).\n\\item (Consistency, and uniqueness given the content; under (S) for the doublets.) With the content of (1) and (2), all four anomaly conditions of Fact \\claimref{standard-model.imported-anomaly-coefficients} hold. Conversely, for the field content $Q = (2,3)$, $L = (2,1)$, $u^{c} = (1,\\bar{3})$, $d^{c} = (1,\\bar{3})$, $e^{c} = (1,1)$, all listed in one handedness, together with a fourth singlet of hypercharge zero or no fourth singlet, and $Y_{Q} = 1/6$ as the normalisation, the four conditions determine $Y_{L}$, $Y(e^{c})$ and $\\{Y(u^{c}), Y(d^{c})\\}$ uniquely, and the solution is the spectrum of (1) and (2). Both hypotheses are necessary: with a fourth singlet of unconstrained hypercharge the conditions admit a one-parameter family, and if the doublets were listed in the opposite handedness from the singlets the $[SU(3)]^{2}U(1)$ and cubic sums would be $-\\tfrac23$ and $+\\tfrac49$ rather than zero.\n\\end{enumerate}",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.hypercharge-global-form-pair-counting-consistency, version 5 (T12 Thm 5.5)",
+  "hash": "800329544c3f",
+  "number": 28
+ },
+ {
+  "id": "c:standard-model.imported-anomaly-coefficients",
+  "type": "fact",
+  "claim": "standard-model.imported-anomaly-coefficients@1",
+  "title": "Imported: the anomaly coefficients",
+  "text": "For a gauge group with a $U(1)$ factor acting on left-handed Weyl fermions, with the $U(1)$ charges $Y$, the four anomaly-cancellation conditions are: $[SU(3)]^{2}U(1)$, the sum of $Y$ over the colour triplets and antitriplets (each weighted by its $SU(2)$ multiplicity) vanishes; $[SU(2)]^{2}U(1)$, the sum of $Y$ over the weak doublets (each weighted by its colour multiplicity) vanishes; $U(1)^{3}$, the sum of $Y^{3}$ over all Weyl fermions vanishes; and mixed gravitational, the sum of $Y$ over all Weyl fermions vanishes. A right-handed Weyl fermion of charge $Y$ enters the conditions as a left-handed one of charge $-Y$ in the conjugate representation. The four conditions are necessary for the consistency of the gauge theory, and a failure of any of them is not lifted by spontaneous breaking: an anomalous $U(1)$ cannot be gauged whether or not it is broken. \\emph{Provenance:} \\cite[\\S 22.4]{WeinbergQFT2}.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University Press (1996)., \\S 22.4",
+  "hash": "17e4bcc14600",
+  "number": 29
+ },
+ {
+  "id": "c:standard-model.quarks-leptons-two-level-fermion-content",
+  "type": "fact",
+  "claim": "standard-model.quarks-leptons-two-level-fermion-content@5",
+  "title": "Quarks and leptons: the two-level fermion content",
+  "text": "Under $S(U(2) \\times U(3))$, with $Y$ the hypercharge just defined:\n\\begin{enumerate}\n\\item (Unconditional.) The pair-level generators, the cells of the tensor state space, transform as $(2, 3)$ with abelian weight $q = 1$, so $Y = 1/6$: the quark doublet's representation. A single pair has one unit of hypercharge.\n\\item (Under Hypothesis (S).) The states with one slot mode occupied and the pair modes in an $SU(3)$-invariant configuration are $\\C^{2} \\otimes \\Lambda^{0}W$, weight $3$ ($Y = +1/2$, total mode number one, odd), and $\\C^{2} \\otimes \\Lambda^{3}W$, weight $-3$ ($Y = -1/2$, total mode number four, even); both transform as $(2, 1)$. Without (S) neither exists in the state space, whose only row-filling states form the quadruplet $(4,1)$ of weight $+3$.\n\\item (Unconditional as a computation on the Fock space of a single conformal spinor, with the pair-slot factor acting alone; that Fock space is not a subspace of the tensor state space, and under (S) it is the row $j = 0$.) In the sector of a single conformal spinor (the single-twistor sector) $\\Lambda^{\\bullet}W = \\Lambda^{\\bullet}\\C^{3}$, the grade-$k$ states transform as $\\Lambda^{k}\\C^{3}$, that is as $1, 3, \\bar{3}, 1$ for $k = 0, 1, 2, 3$, with weight $q = -2k$: $Y = 0, -1/3, -2/3, -1$.\n\\end{enumerate}\nIn particular, under (S), the fermion content of the composite at the particle handedness (Theorem \\claimref{standard-model.hypercharge-global-form-pair-counting-consistency}) is\n\\begin{equation}\n(2,3)_{1/6} \\oplus (2,1)_{-1/2},\n\\end{equation}\nquark doublet plus lepton doublet, with colour neutrality of the lepton the statement that a state with its pair modes full is an $SU(3)$ singlet: a lepton is a complete conformal spinor, one slot with the pair system full, while a quark is one slot with one pair.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim standard-model.quarks-leptons-two-level-fermion-content, version 5 (T12 Prop 5.3)",
+  "hash": "14804cbba7f5",
+  "number": 30
+ },
+ {
+  "id": "c:tower.car-limit-even-charge",
+  "type": "fact",
+  "claim": "tower.car-limit-even-charge@5",
+  "title": "The CAR limit, even charge",
+  "text": "Continue with $p - q$ even. Complexifying and completing in the unique C*-norm of the complexified limit (Lemma \\claimref{tower.structure-tower-c-norms}): the result is\n\\[\n\\Cl(p,q)_\\C \\,\\otimes\\, \\CAR,\n\\]\nwhere $\\CAR$ is the CAR algebra of countably many fermionic modes, the unique Glimm UHF algebra of type $2^\\infty$; the mode operators are represented by the adjoined null vectors themselves via Proposition \\claimref{tower.ladder-pairs-satisfy-car-vectors}, with $w_j = v_j^*$ both for the intrinsic *-structure of Lemma \\claimref{tower.structure-tower-c-norms} and for the Fock inner product. The completed tower is the ground algebra tensored with the algebra of a free fermionic quantum field: iterated transport is second quantisation, one mode per rung.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.car-limit-even-charge, version 5 (T03 Thm 5.6)",
+  "hash": "8292a6495344",
+  "number": 31
+ },
+ {
+  "id": "c:tower.commuting-copies",
+  "type": "fact",
+  "claim": "tower.commuting-copies@5",
+  "title": "Commuting copies",
+  "text": "Inside $T_k$, let $B_k$ be the subalgebra generated by the $2k$ plane generators $e_1, f_1, \\dots, e_k, f_k$, and let $A_k$ be the subalgebra generated by the twisted base generators $x^{(k)} := x\\,\\omega_1 \\omega_2 \\cdots \\omega_k$ for $x$ among the ground generators. Then: $B_k \\cong \\Cl(k,k) \\cong \\Mat_{2^k}(\\R)$; $A_k \\cong \\Cl(p,q)$ via $x \\mapsto x^{(k)}$ (the twisted generators satisfy the ground Clifford relations); $A_k$ and $B_k$ commute elementwise; and multiplication $A_k \\otimes B_k \\to T_k$ is an isomorphism of algebras,\n\\[\n\\Cl(p{+}k, q{+}k) \\;\\cong\\; \\Cl(p,q) \\otimes \\Mat_{2^k}(\\R) \\;=\\; \\Mat_{2^k}(\\Cl(p,q)).\n\\]\nThe isomorphism is canonical given the ordered planes, and compatible with the tower embeddings up to the twist tracked in the section ``The CAR limit''.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.commuting-copies, version 5 (T03 Thm 3.2)",
+  "hash": "316f15229b0f",
+  "number": 32
+ },
+ {
+  "id": "c:tower.volume-elements-planes",
+  "type": "fact",
+  "claim": "tower.volume-elements-planes@5",
+  "title": "Volume elements of the planes",
+  "text": "Let $\\omega_j = e_j f_j$. Then $\\omega_j^2 = 1$; $\\omega_j$ anticommutes with $e_j$ and $f_j$; $\\omega_j$ commutes with $e_i, f_i$ for $i \\neq j$ and with every ground generator; and the $\\omega_j$ commute pairwise. Hence $\\Omega_k := \\omega_1 \\cdots \\omega_k$ satisfies $\\Omega_k^2 = 1$, commutes with all ground generators, and anticommutes with each $e_j, f_j$, $j \\leq k$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim tower.volume-elements-planes, version 5 (T03 Lem 3.1)",
+  "hash": "6a5fc7ddbcac",
+  "number": 33
+ },
+ {
+  "id": "c:refuted.the-raw-representation-content-matches-the-fermi",
+  "type": "refutation",
+  "claim": "refuted.the-raw-representation-content-matches-the-fermi@1",
+  "title": "The raw representation content matches the fermion table entry by entry",
+  "text": "Refuted. The corrected statement: The disagreements are composites; generators, not states, are the content, and the lepton lies one level higher, under the declared hypothesis of slot statistics.",
+  "gap": false,
+  "level": "formal",
+  "refuted_by": [
+   "standard-model.quarks-leptons-two-level-fermion-content"
+  ],
+  "hash": "de20ed6e0d28",
+  "number": 34
+ },
+ {
+  "id": "conclusion",
+  "type": "framing",
+  "text": "",
+  "hash": "e3b0c44298fc"
+ }
+]

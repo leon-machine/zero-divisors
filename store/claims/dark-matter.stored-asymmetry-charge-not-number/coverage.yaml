@@ -1,0 +1,26 @@
+functions:
+  check_charge_reading_against_thermal_reading:
+    kind: partial
+    clauses: ["(i) f_2 = 1 at any mirror temperature", "(iv) thermal reading at most 0.090 under the cap and 10^-7 or less on the interval"]
+    omits: "f_2 = 1 is obtained by setting Q_6 = Q_2 = eps N (the same eps and N under P1), so it holds by construction at the sample xi; exact content is the bracket 0.448^3 in (0.0899, 0.0900) and xi_hot^3 < 1e-7; the cap 0.448 itself is an input"
+  check_origin_gravity_cannot_supply_the_charge:
+    kind: partial
+    clauses: ["(ii) gravitational production more than four orders short of n_B/s = 8.7e-11"]
+    omits: "n_B/s in (8.6, 8.7)e-11 and the ratio above 1e4 are bracketed exactly using the upper coefficient; the quoted yield 1.8 to 2.7e-15 per unit entropy is not itself asserted, only its upper bound; the black-hole sink clause is not touched"
+  check_eta_prime_and_radiation_over_the_interval:
+    kind: exact
+    clauses: ["(iii) eta = 6.1e-10", "(iii) crossover eta^(1/3) = 8.5e-4", "(iii) eta' from 19 to 26 at the floor, about 0.008 at the hot deposit", "(iii) at least 10^7 times ours", "(iii) Delta N_eff eight orders below the cap"]
+    omits: "the floor values xi = 2.8 to 3.2e-4, the hot-deposit xi = 4e-3 and the cap 0.448 are not asserted directly; they enter through the cosmo() export of the coefficients proposition"
+  check_bottom_of_ceiling_range_factor:
+    kind: exact
+    clauses: ["(iii) four parts in a thousand of this at the bottom of the ceiling range"]
+    omits: ""
+untouched_premises:
+  dark-matter.imported-trichotomy-descents-data: "literature restatement; the statement says the incompatibility is arithmetic and the classification is the Fact's"
+  dark-matter.parallel-boundary-mode-spaces-one-wall: "cited only for the black-hole sink clause in (ii), a structural statement with no computable content here"
+  dark-matter.p5-boundary-modes-hold-entropy-not: "hypothesis invoked only for the black-hole sink clause, with no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the arithmetic of (ii) to (iv) is bracketed exactly; the nucleosynthesis caveat, the boundary-mode count and the f_2 = 1 charge reading itself are not computed, as the docstring says. 2026-10-23 (weak checks): check_eta_prime_and_radiation_over_the_interval pins eta exactly (6.12938e-10), the crossover 8.494520e-4, eta' at both floor ends (19.35951, 25.79277) and at the hot deposit (0.00801638), eta'/eta there (1.307862e7) and the Delta N_eff margin (1.24130e8) by hand; the quoted windows and one-sided bounds are implied and were removed."

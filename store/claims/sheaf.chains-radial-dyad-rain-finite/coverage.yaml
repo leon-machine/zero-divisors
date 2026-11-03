@@ -1,0 +1,18 @@
+functions:
+  check_dyad_null_with_constant_rain_components:
+    kind: exact
+    clauses: ["n_+- are G-null", "n_+-(V) = +-1 and n_+-(e_r) = 1", "coordinate legs diverge at the wall"]
+    omits: "identities are exact in u (all radii) but only for m = 1 and m = 3"
+  check_gauge_field_carries_flat_dyad_to_physical_dyad:
+    kind: exact
+    clauses: ["eta(L a, L b) = G(a, b) on coordinate pairs", "L^{-1}(dt + dr) = n_+", "L^{-1}(dt - dr) = -n_-"]
+    omits: "exact in u but only m = 1 and 3; L is written down and shown to satisfy the identity, not shown to be determined by it"
+  check_dyad_in_geometric_algebra:
+    kind: sampled
+    clauses: ["n_+- are G-null", "L^{-1} carries the flat null dyad onto the physical one"]
+    omits: "five sample radii u and two masses in Cl(1,1); repeats the other two functions at points"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Nullity, constant rain components and the gauge-field images of the flat dyad hold as rational-function identities in u at m = 1, 3 (and at sample radii in GA); the gauge field L is supplied, not derived.

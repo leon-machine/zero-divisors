@@ -1,0 +1,22 @@
+functions:
+  check_pure_pair_is_fresh:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "for psi = (3/5)|00> + (4/5)|11>: the identities (P (x) 1) E (P (x) 1) = P (x) <psi|E|psi>_X, tr_WR of it = <psi|E|psi>_X and tr((P (x) 1) E) = tr(P tr_X E) are checked on all 64 matrix units, hence for every rho; the positivity step (tr(((1 - P) (x) 1) rho) = 0 with rho >= 0 forces ((1 - P) (x) 1) rho = 0) is argued, not computed; (c, s) = (3/5, 4/5) only; (ii) (U) plus (F) implies (Pure) is not tested anywhere"
+  check_ghz_counter_model:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "(c, s) = (3/5, 4/5) only: the four-mode state c|0000> + s|1111> is globally pure and even, has marginals diag(c^2, s^2) on W and R, pair purity c^4 + s^4 = 337/625 < 1, and is not a product with X; the non-implication of (F) and (TF) follows from these exact values"
+  check_schmidt_rigidity:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "(c, s) = (3/5, 4/5) only; pure pair states with both marginals diag(c^2, s^2) scanned over real amplitudes on a 17-value grid (four hits diag(+-c, +-s)) and over complex amplitudes r w with r in {0, 9/25, 12/25, 3/5, 16/25, 4/5} and 12 rational unit phases (144 hits, all diagonal with |a00| = c, |a11| = s); amplitudes off the grids are not tested; the 'if' direction is checked for c|00> + w s|11> at the 12 phases"
+  check_zero_weight_form_not_forced:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "(|01> + |10>)/sqrt 2 is pure with both marginals the maximally mixed state and has no |00>, |11> component, so it is not of the form (TF); the zero-weight remark on invariance of the pair state under the boost flow is not tested"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_pure_pair_is_fresh now derives freshness for every rho from linear identities checked on all 64 matrix units (positivity step argued); check_schmidt_rigidity adds a complex scan over 12 rational unit phases (144 hits, all diagonal) and the TF-implies-Pure direction; docstrings (a), (c) reworded"

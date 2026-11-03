@@ -1,0 +1,24 @@
+functions:
+  check_two_spinor_mass_is_twice_squared_bracket:
+    kind: sampled
+    clauses: ["m^2 = 2|<pi1 pi2>|^2 at Lambda = 0"]
+    omits: "Checked on fifteen Gaussian-rational spinor pairs plus proportional pairs and four rational 4-vectors, not as a symbolic identity in the spinor components."
+  check_bracket_transforms_by_the_determinant:
+    kind: sampled
+    clauses: ["the bracket transforms by det(U) under the internal U(2)"]
+    omits: "Five unitary Gaussian-rational U and six spinor pairs only; no free-parameter identity."
+  check_bracket_carries_the_quantum_numbers_of_ec:
+    kind: exact
+    clauses: ["bracket of two conformal spinors transforms as (1,1) with Y = +1, the quantum numbers of e^c, not a weak doublet", "constituents are slot-occupying states of Y = +1/2 each, the +1 is their sum", "not the slot-free grade-zero state (Y = 0)"]
+    omits: "Computed on the five-mode module, whose existence under Hypothesis (S) is assumed; the statements that the bracket is undefined for excited composites or says nothing about two grade-zero states are not finite claims and are not tested."
+  check_single_spinor_sector_hypercharge:
+    kind: exact
+    clauses: ["hypercharge of the cited Fact on the single-spinor sector, Y = -k/3 at grade k"]
+    omits: "Only the pair-mode states of the five-mode module; this restates the imported Fact and is not itself a clause of the new statement."
+untouched_premises:
+  families.imported-face-valued-bracket-quantum-numbers: "Same Fact as this statement from the families paper; the docstring says it is deliberately not called."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four functions test the bracket mass formula, the det(U) law, and the (1,1), Y = +1 assignment; the order-parameter reading and the undefined cases are declared untestable in the docstring."

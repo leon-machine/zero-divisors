@@ -1,0 +1,22 @@
+functions:
+  check_democratic_block_decomposition:
+    kind: sampled
+    clauses: ["(0) democratic block [[0, m_D], [m_D, M_3]] on (nu_u', N_u') with N_perp of mass alpha and no Dirac coupling", "(0) light matrix exactly rank one along u', m_3 = m_D^2/M_3 whatever alpha, alpha = 0 included"]
+    omits: "Four (alpha, beta, d) samples and three generic M_R; the block form and the light matrix (3 d^2/M_3) J are exact on those samples. That Y_D is democratic, that M_R is S_3-invariant (the lemma) and that alpha = 0 under the Gram-square reading are inputs, and the exact small eigenvalue versus m_D^2/M_3 at higher order is not compared here."
+  check_normal_ordering:
+    kind: sampled
+    clauses: ["(1) inverted ordering needs m_1/m_2 >= 0.98", "(1) a rank-one light matrix with small corrections has one heavy and two light states"]
+    omits: "The 0.98 threshold is certified at the extreme splittings; the heavy/light inertia claim is checked for four perturbations at epsilon = 1/100, with no general perturbation bound (\"excluded by rank plus the smallness of the breaking\" is not proved for arbitrary small corrections)."
+  check_sum_and_floor:
+    kind: exact
+    clauses: ["(2) kinematic floor 0.0580-0.0593 eV", "(2) sum in (0.0591, 0.0604) eV at m_1 = 1 meV, above 0.0616 at 3 meV, above 0.0736 at 10 meV", "(2) residue 0.1007 meV and about 0.07 eV in Premise (H)"]
+    omits: "Exact interval arithmetic at the listed m_1 values; the bound for all m_1 >= 0 rests on monotonicity in m_1, not checked beyond those values. Premise (H)'s residue is run at m_1 = 0.1 meV, as the statement now says (m_1/m_2 = 0.01 itself gives about 0.087 meV). m_1 = m_2 = 0 at leading order is not computed here."
+  check_double_beta_values:
+    kind: exact
+    clauses: ["(3) m_bb in 3.5-3.9 meV at relative phase 0 and 1.3-1.7 meV at phase pi, hull 1.3-3.9 meV", "(3) under (H) the m_1 term is below 0.1 meV", "(3) values below the 10-20 meV band and the 28 meV limit"]
+    omits: "Exact interval arithmetic on the stated ranges; that the phases are 0 or pi (real-breaking assumption) is taken as input, the Majorana nature (M) and the quoted sensitivity bands (10 meV, 28 meV) are hard-coded literature values."
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "formal restated: Premise (H)'s residue 0.1007 meV now said to be 'at m_1 = 0.1 meV' (what the check computes) instead of 'at the premise's boundary'. 2026-10-23 (weak checks): check_double_beta_values pins the four ends of the m_bb ranges (3.532412, 3.885044; 1.316972, 1.669605 meV), the m_1 term at 0.1 meV exactly and the shift (0.06672502 to 0.06915728 meV) by hand, in place of loose brackets; the sensitivity values moved to module level."

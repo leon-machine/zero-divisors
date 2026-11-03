@@ -1,0 +1,36 @@
+doc: t00-regenerated
+title: 'An Introduction to Geometric Algebra: A Primer for the Transport Papers (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- primer.commutation-rule
+- primer.twisted-adjoint-action
+- primer.classification-real-clifford-algebras
+- primer.centre
+- primer.sign
+- primer.splitting-along-hyperbolic-plane
+show: spine-only
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T00_ga_primer.tex
+  note: Recreate T00 from the store
+cite: []
+prose: paper
+paper: T00
+sections: paper
+msc: Primary 15A66; Secondary 97H60.
+keywords: geometric algebra; Clifford algebra; null vector; rotor; conformal model;
+  primer.

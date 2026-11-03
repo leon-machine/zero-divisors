@@ -1,0 +1,118 @@
+singularity.envelope-endpoint-why-boundary-mode-locality:
+  main:
+  - singularity.rate-models-kinematic-inputs-l-u
+singularity.eviction-window-thermal-product-radiation-entropy:
+  main:
+  - singularity.rate-models-kinematic-inputs-l-u
+singularity.modular-descent:
+  main:
+  - singularity.r-regularity-fixed-locus
+singularity.no-attic-derived-model:
+  main:
+  - singularity.rate-models-kinematic-inputs-l-u
+singularity.stretched-singularity-count:
+  main:
+  - singularity.c2-cell-density
+standard-model.automorphisms-preserve-slot-pair-split-are:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.bidoublet-complex:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.bracket-composite-lands:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.chain:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.direction-demanded-content-doublet-heavy:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.equal-weight-module:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.family-no-go-vev-cannot-separate:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.fits-record-level:
+  main:
+  - standard-model.hyp-s-slot-statistics
+  - standard-model.premise-ew-equal-weight
+standard-model.four-supersymmetric-splits:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.generation-ten-under-pati-salam:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.grade-three-georgi-jarlskog-direction:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.grip-mass-two-rung-module:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.invariant-operators-module:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.left-right-parity-what-breaks-it:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.lifted-components-read-vevs:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.majorana-element:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.neutrino-dirac-matrix-charged-fermions:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.one-vev-vector-relations-breaking-pattern:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.proton-condition-candidates:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.proton-decay-only-through-slot-pair:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.reduction:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.space-symmetric-doublet-mass-forms-two:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.supersymmetric-row-two-loops:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.table-exact:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.transported-frozen-point-doublet-datum-not:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.under-s-bracket-direction-charged-not:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.under-s-composites-state-space-spinor:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.under-s-frozen-points-split-inverse:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.under-s-state-space-complete-multiplets:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.weak-angle-over-derived-generation:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.what-angle-asks-neutrino-sector:
+  main:
+  - standard-model.hyp-s-slot-statistics
+standard-model.what-direction-made:
+  main:
+  - standard-model.hyp-s-slot-statistics
+state-selection.rate-discharge-hypothesis-iii:
+  main:
+  - state-selection.p-univalence
+tower.answers-iteration-question:
+  main:
+  - sheaf.tameness

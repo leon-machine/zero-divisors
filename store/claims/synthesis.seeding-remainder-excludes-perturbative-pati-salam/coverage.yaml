@@ -1,0 +1,15 @@
+functions:
+  check_seeding_remainder_excludes_perturbative_pati_salam:
+    kind: exact
+    clauses:
+    - intro (A^{1/4} = 1.217e12 GeV)
+    - (i)
+    - (ii)
+    - (iii)
+    - closing margin 2.5 and one-loop remark
+    omits: Exact rational arithmetic on the recorded inputs, each taken at the end of its error interval that weakens the conclusion (v_R = 4.25e10, remainder 4.364 - 0.065, pi < 355/113); every number is a floor or a fourth-power comparison; the yield bound c T_desc^4 >= A/2 and the formula for A (3 kappa M_P^3 times mass per unit entropy) are taken from the cited premises and not derived; the one-loop remark is checked as 3.2e11 / 1.9e10 floored to 16 against the tolerance 2.56, with 1.9e10 not defined in the statement; c*/0.0023 floors to 5867, stated as "about 5900"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: 'Formal and technical statements restated: "about 5800" vector species corrected to "about 5900", matching the computed floor 5867 of c*/0.0023.'

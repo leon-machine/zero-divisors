@@ -1,0 +1,30 @@
+functions:
+  check_asymmetric_share_is_the_mirror_alone:
+    kind: complete
+    clauses: ["(i) the asymmetric dark matter is the mirror tower's alone; residues 0 and 4 sterile", "half a percent on the burning branch"]
+    omits: "f_2 = 1 is the mirror theorem's (P4 and the copy) and is not recomputed; the half-percent bracket is the mean-mass ratio in (0.994, 0.996)"
+  check_observed_ratio_and_uncertainty:
+    kind: exact
+    clauses: ["(i) Omega_c/Omega_b = 5.364 +- 0.065"]
+    omits: "inputs 0.1200 +- 0.0012 and 0.02237 +- 0.00015 are the check's record values"
+  check_remainder:
+    kind: exact
+    clauses: ["(ii) the remainder 4.364 Omega_b, Omega h^2 = 0.0976 +- 0.0012"]
+    omits: "that the remainder is a symmetric relic set by the sector's own dynamics is not computable"
+  check_unit_ball_expression_returns_the_remainder:
+    kind: exact
+    clauses: ["(iii) the unit-ball expression 2 (4/3) + 2 (8/(3 pi)) returns 4.364"]
+    omits: "the unit-ball rule itself, a fitted relation, and the gravitational floor on the odd towers' temperature are not computed here"
+untouched_premises:
+  dark-matter.mirror-tower-copy-one: "f_2 = 1 is cited from the mirror theorem, not recomputed (docstring)"
+  dark-matter.no-coupling-rule-odd-towers-follows: "scope statement in (iii), no computation"
+  dark-matter.projection-every-towers-content-dilutes-ones: "dilution lemma used in the setup, not part of the computable content"
+  dark-matter.superselected-hence-dark-exactly-stable: "the symmetric relic argument in (ii) is qualitative"
+  dark-matter.p1-single-frozen-point: "premise with no computable content here"
+  dark-matter.p2-indifference: "premise with no computable content here"
+  dark-matter.p4-democracy-asymmetry-over-oriented-towers: "premise, discharged for the mirror elsewhere; not recomputed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "only the census, the observed numbers and the unit-ball arithmetic are computed; the docstring says nothing else in (iii) is computable. 2026-10-23 (weak checks): check_observed_ratio_and_uncertainty pins Omega_c/Omega_b to 5.364327 and its uncertainty to 0.0645828 by hand (each rounding to the quoted 5.364 and 0.065), in place of the loose windows."

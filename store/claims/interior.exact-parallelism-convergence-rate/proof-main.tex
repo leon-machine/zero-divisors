@@ -1,0 +1,14 @@
+The proof computes with the Christoffel symbols of the derived metric; by Fact \claimref{synthesis.imported-gtg-dictionary}(ii) these are $g^\rho \cdot D_{e_\mu} g_\nu$, so vanishing of the covariant derivative below is $D$-parallelism of the physical frame. (1) For a synchronous diagonal metric $d\tau^2 - \sum_i a_i^2 (dx^i)^2$ the only Christoffel symbols with a $\tau$ index are $\Gamma^i{}_{\tau i} = \partial_\tau \log a_i$ and $\Gamma^\tau{}_{ii} = a_i\,\partial_\tau a_i$ (no sum), so
+\[
+\nabla_{\partial_\tau}\bigl(a_i^{-1}\partial_i\bigr)
+= (\partial_\tau a_i^{-1})\,\partial_i + a_i^{-1}\,\Gamma^j{}_{\tau i}\,\partial_j
+= -a_i^{-2}(\partial_\tau a_i)\,\partial_i + a_i^{-2}(\partial_\tau a_i)\,\partial_i = 0 ,
+\]
+identically in $\tau$; and $\nabla_{\partial_\tau}\partial_\tau = 0$ as noted in Lemma \claimref{interior.kasner-form-interior}. Here $a_1 = \sqrt{A(\tau)}$, $a_2 = r(\tau)$, $a_3 = r(\tau)\sin\theta$; the $\theta$-dependence of $a_3$ does not enter $\partial_\tau$-derivatives, so the computation applies at each fixed angular position. (2) From $\partial_\tau = \sqrt{A}\,\partial_r$: $\sigma_1 = \sqrt A\,\partial_r \log\sqrt A = A'/(2\sqrt A)$, and with $A = (1-r)/r$, $A' = -1/r^2$, this is $\sigma_1 = -\tfrac12 r^{-3/2}(1-r)^{-1/2}$; likewise $\sigma_2 = \sqrt A / r = r^{-3/2}\sqrt{1-r}$. Multiplying by the series for $\tau$ from Lemma \claimref{interior.kasner-form-interior}:
+\[
+\tau\sigma_1 = -\tfrac13\bigl(1 + \tfrac{3}{10}r\bigr)\bigl(1 + \tfrac12 r\bigr) + O(r^2) = -\tfrac13 - \tfrac{4}{15}r + O(r^2),
+\]
+\[
+\tau\sigma_2 = \tfrac23\bigl(1 + \tfrac{3}{10}r\bigr)\bigl(1 - \tfrac12 r\bigr) + O(r^2) = \tfrac23 - \tfrac{2}{15}r + O(r^2),
+\]
+and substituting $r = R(1 + O(R))$ leaves the displayed constants unchanged at this order. All manipulations are compositions and reversions of power series in $\sqrt r$ with rational coefficients; the script performs them exactly and confirms every printed coefficient. (3) The scale factors: $a_1 = r^{-1/2}\sqrt{1-r}$ and its Kasner comparison $c_1\tau^{-1/3}$ differ by the relative factor $\sqrt{1-r}\,(1 + O(r)) = 1 + O(r) = 1 + O(\tau^{2/3})$, and likewise $a_2 = r$ against $c_2\tau^{2/3}$; the rates are the $\sigma_i$ of part (2), whose relative deviations from $p_i/\tau$ are the displayed $O(\tau^{2/3})$; and the intrinsic curvature of the $S^2$ sections is $r^{-2} = O(\tau^{-4/3})$, a relative $O(\tau^{2/3})$ against the dominant curvature scale $\tau^{-2}$. One rate governs all three items. One-signedness: near $r = 0$ each deviation is a convergent power series in $\sqrt r$ (every manipulation above is a composition or reversion of such series, convergent on $0 \le r < 1$), so it either vanishes identically or carries a nonzero leading coefficient whose sign it takes on a punctured neighbourhood of $0$: each deviation is one-signed for small $\tau$, and no oscillation occurs anywhere in the class.

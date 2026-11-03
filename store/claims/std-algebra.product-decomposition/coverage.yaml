@@ -1,0 +1,9 @@
+functions:
+  check_vector_times_multivector:
+    kind: sampled
+    clauses:
+    - '"aX = a lc X + a ^ X"'
+    - '"a lc X = (aX - X^ a)/2"'
+    - '"a ^ X = (aX + X^ a)/2"'
+    - '"aX_k has only these two grades"'
+    omits: three sampled pairs (a, X) per signature with n <= 4; the two-vector case in one signature

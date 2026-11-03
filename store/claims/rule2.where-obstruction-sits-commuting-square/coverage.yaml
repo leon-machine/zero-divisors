@@ -1,0 +1,26 @@
+functions:
+  check_exactly_one_extension_obstructed:
+    kind: sampled
+    clauses:
+    - (a)
+    omits: all 16 even signatures with n <= 6 only; simplicity of the complex-type extension is not tested (only centre C)
+  check_ideals_are_copies_of_a:
+    kind: sampled
+    clauses:
+    - (b)
+    omits: n <= 6; spanning ranks only for n <= 4; only the eps_+ ideal is tested; eps_+ is checked idempotent; Cl^0(p+1,q) = Cl(q,p) in the timelike case is shown only by the flipped squares (e_i nu)^2 = -s e_i^2 of the bare generators (all i, both cases), and A is exhibited via the omega_A-twisted generators
+  check_opposite_sign_repair_is_rule_one_ascent:
+    kind: sampled
+    clauses:
+    - (c)
+    omits: n <= 6; corner ranks only for n <= 4; "the two amplifications agree" is tested only as equal corner dimension 2^n, not as an isomorphism Mat_2(Cl^0(extension)) = Mat_2(A)
+  check_same_sign_repair_definite_two_residues_away:
+    kind: sampled
+    clauses:
+    - (d)
+    omits: n <= 6; isomorphism with Cl(p+1,q+1) tested only through matrix units and corner dimension 2^n (n <= 4); "admits no Rule 1 reading" is interpretive; null vectors excluded only in the adjoined plane
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_ideals_are_copies_of_a now asserts eps_+ is idempotent (pins the 1/2) and (e_i nu)^2 = -s e_i^2 for every i in both cases (was e_0 only, timelike only); loops and ranks use len(S), combinations and subset products"

@@ -1,0 +1,26 @@
+functions:
+  check_ladder_pairs_satisfy_car:
+    kind: sampled
+    clauses:
+    - '"v_i v_j + v_j v_i = 0, w_i w_j + w_j w_i = 0, v_i w_j + w_j v_i = delta_ij"'
+    omits: Rungs k = 1, 2, 3 over grounds (1,3), (0,0), (2,1) only
+  check_commuting_copies:
+    kind: sampled
+    clauses:
+    - '"the twisted ground generators generate a commuting copy A_k = Cl(p,q) and A_k (x) B_k -> T_k is an isomorphism"'
+    omits: Rungs k = 1, 2 over grounds (1,3), (1,1), (0,2); the isomorphism is shown by 2^(n+2k) distinct blades from the word products
+  check_fock_module_one_qubit_per_rung:
+    kind: sampled
+    clauses:
+    - '"the Chevalley action makes Lambda span(v_1..v_k) an irreducible B_k = Cl(k,k) = M_{2^k}(R) module, one qubit per rung"'
+    omits: k = 1, 2, 3 only; irreducibility is shown by the 4^k words acting as a basis of End, which also gives B_k = Mat_{2^k}(R) for those k
+  check_star_structure:
+    kind: partial
+    clauses:
+    - '"on each complexified floor there is a conjugate-linear antiautomorphism * with v_j* = w_j"'
+    omits: Only the real form is checked (x* = x for x^2 = 1, -x for x^2 = -1, extended antimultiplicatively), on three floors (T_1 over (1,1) and (0,2), T_2 over (0,0)); conjugate-linearity and the complexification are not computed (docstring); uniqueness (not part of this statement) is not tested
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: 'check_star_structure label reworded to what is tested (explicit real-form *, three floors), no uniqueness claim.'

@@ -1,0 +1,34 @@
+functions:
+  check_rung_field_generators_and_form_from_the_clifford_algebra:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the four generators against the stored action at two field points (linear maps, so two generic points with the antisymmetry suffice in practice); Q = c^2 at one point and through the bilinear form; invariance of V at one coupling set and point; invariance of the coupling for all four generators at one point"
+  check_method_reproduces_one_doublet_and_on_coefficients:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "the general formulas are tested on one doublet at one coupling point and on O(1), O(8) at one point each; the formulas themselves are cited"
+  check_one_loop_running_of_the_ten_rung_quartics:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "two coupling sets (one generic with all ten k nonzero and y1 != y2, one on the branch with y1 = y2) at three field points each"
+  check_two_loop_pure_quartic_running_on_the_z2_branch:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "one coupling set on the branch at three field points; branch closure at that set (general closure is read off the closed forms in the proof)"
+  check_flat_direction_running_is_the_scalon_sum:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "three coupling samples from the closed form and from the field computation on the ray; the general polynomial identity is shown in the proof"
+  check_dictionary_to_the_standard_two_doublet_equations:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "two coupling sets on the branch; the standard equations are typed from memory"
+  check_scalon_trilinear_is_five_thirds:
+    kind: complete
+    clauses: ["(iv)"]
+  check_one_loop_quartics_reach_four_pi_within_a_few_tev:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "the two endpoint spectra of the range at one loop, with k1(mu0) = 0; the interior of the surface, the divergence scale and the two-loop shift are from the floating-point scan in the proof text"
+untouched_premises:
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "the premise licenses the Landau-gauge internal gauge lines of the gauge terms, as for the stored running coefficients; nothing in the check computes from the form"

@@ -1,0 +1,18 @@
+functions:
+  check_boundary_gram_and_radical:
+    kind: sampled
+    clauses: ["G symmetric of corank one with radical R k, G(k,k) = 0 at the boundary", "det G = -r off the boundary", "G(0) is the stated matrix with k = rho + m dt_PG"]
+    omits: "Schwarzschild only, at m = 1, 2; det G and G(k,k) = -r are rational-function identities in u = sqrt(r) (exact in r), but the corank-one claim for a general point of Sigma is not exercised."
+  check_completed_form_nondegenerate_on_physical_closure:
+    kind: sampled
+    clauses: ["the completed form h is nondegenerate at every point of the physical closure"]
+    omits: "m = 1, 2 and three couplings; det h = det G (-F) is an identity in u, but F >= 1 inside the horizon is tested at four radii and the signature (2,4) at five radii; general mass and general coupling are not covered."
+  check_ladder_pair_exactly_over_boundary:
+    kind: sampled
+    clauses: ["the ladder pair k* = n0/2nu with k k* + k* k = 1, k^2 = (k*)^2 = 0 exists over Sigma", "exists only over Sigma (k is not null off Sigma)"]
+    omits: "CAR on all 64 states at the boundary for m = 1, 2 with one coupling; off the boundary only k^2 = -u^2 on the vacuum at u = 1/2, 1, from which non-existence follows by k^2 != 0, not by a search over partners."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Imported fact re-derived on Schwarzschild data at two masses with rational-function identities in u; the asserts match the three clauses within that sample, and the two declared premises are each touched."

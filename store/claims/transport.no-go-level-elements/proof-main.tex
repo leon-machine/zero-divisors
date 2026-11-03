@@ -1,0 +1,62 @@
+Fix a null $v \in \Ncone$ and a null partner $w_0$ with $v \cdot w_0 = \tfrac12$, by the hyperbolic-pair construction of Section \ref{subsec:null} (\claimref{std-algebra.witt-decomposition}); write $H_0 = \mathrm{span}\{v, w_0\}$ and $U = \{v, w_0\}^{\perp} \cap \mathbb{V}$, a nondegenerate subspace of $\mathbb{V}$ of dimension $n - 2 \geq 1$. By Definition \claimref{obj.transport.extension-quadratic-spaces} the extension splits as $\mathbb{V}' = \mathbb{V} \perp \mathbb{V}^{\perp}$, so
+\[
+\mathbb{V}' \;=\; H_0 \perp U', \qquad U' \mathrel{:=} U \perp \mathbb{V}^{\perp},
+\]
+and Lemma \claimref{transport.splitting-along-hyperbolic-plane} applies: every candidate $\sigma = \sigma(v) \in \Cl(\mathbb{V}')$ has a unique expansion $\sigma = \alpha + v\beta + w_0\gamma + v w_0 \delta$ with $\alpha, \beta, \gamma, \delta \in \Cl(U')$. Throughout, $\hat{\cdot}$ is the grade involution and we use the commutation rule \eqref{eq:commutation} (Lemma \claimref{primer.commutation-rule}) for $v$ against $\Cl(U')$, together with the hyperbolic-pair identities \eqref{eq:hyperbolicpair}.
+
+\emph{Step 1 (normal form for pseudo-inverses).} Compute $v\sigma v$ term by term:
+\[
+v\,\alpha\, v = v\, (\alpha v) = v\,(v \hat{\alpha}) = v^2 \hat\alpha = 0, \qquad
+v\,(v\beta)\,v = v^2 \beta v = 0, \qquad
+v\,(v w_0 \delta)\,v = v^2 w_0 \delta v = 0,
+\]
+while the third term survives:
+\[
+v\,(w_0 \gamma)\,v \;=\; v w_0\,(\gamma v) \;=\; v w_0\, v \hat{\gamma} \;=\; v \hat{\gamma}
+\]
+by \eqref{eq:hyperbolicpair}. Hence $v \sigma v = v \hat{\gamma}$, and since left multiplication by $v$ is injective on $\Cl(U')$ (Lemma \claimref{transport.splitting-along-hyperbolic-plane}(2)) and $\hat{\cdot}$ is an involution, $v \sigma v = v$ holds if and only if $\gamma = 1$. Every pseudo-inverse of $v$ therefore has the form
+\[
+\sigma \;=\; w_0 + \alpha + v\beta + v w_0 \delta .
+\]
+Note that only the first von Neumann identity is used; the theorem does not even require $\sigma v \sigma = \sigma$.
+
+\emph{Step 2 (null rotations).} For $u \in U$ set $R = 1 + vu$. Since $v \cdot u = 0$ and $v^2 = 0$,
+\[
+(vu)^2 = v\,(uv)\,u = -v\,(vu)\,u = -v^2 u^2 = 0, \qquad \text{and in particular} \quad vuv = -v^2u = 0,
+\]
+so $R = \exp(vu) = \exp(v \wedge u)$, with $R^{-1} = 1 - vu$. $R$ is even, and its reverse is $\widetilde{R} = 1 + uv = 1 - vu = R^{-1}$, so $R \widetilde{R} = 1$ and $R$ is a rotor.
+
+Take from now on $u$ with $Q(u) \neq 0$, which is possible because $U$ is nondegenerate and nonzero; such $u$ span $U$. Then $R$ is a versor outright, not merely a rotor. Indeed the vector $u' \mathrel{:=} u + Q(u)\,v$ satisfies $Q(u') = Q(u) + 2Q(u)\,(u \cdot v) = Q(u) \neq 0$ and
+\begin{equation}\label{eq:versorfactor}
+u'u \;=\; u^2 + Q(u)\,vu \;=\; Q(u)\,(1 + vu), \qquad \text{so} \qquad R \;=\; \frac{u'\,u}{Q(u)},
+\end{equation}
+a product of two invertible vectors of equal square. Normalising both factors to unit square multiplies the product by $|Q(u)|/Q(u) = \pm 1$, and when that sign is $-1$ we have $Q(u) < 0$, so the normalised $\hat{u} = u/\sqrt{|Q(u)|}$ satisfies $\hat{u}^2 = -1$ and the sign is itself a product of unit vectors. Hence $R \in \Spin(p,q)$. The same factorisation applies with $u$ replaced by $tu$ for every $t \neq 0$, so $t \mapsto 1 + t\,vu$ is a continuous path \emph{inside the group} joining $1$ to $R$, and therefore $R \in \Spin^0(p,q)$.
+
+Its action on vectors is computed directly. On $v$:
+\[
+R\,v\,R^{-1} = (1 + vu)\,v\,(1 - vu) = (v + vuv)(1 - vu) = v(1 - vu) = v - v^2u = v ,
+\]
+so $R$ fixes $v$. On $u'' \in U'$, using $u''v = -vu''$, $u u'' v = v u u''$ (two anticommutations) and $vuv = 0$:
+\[
+R\,u''\,R^{-1} = u'' - u''vu + vuu'' - vuu''vu = u'' + v(u''u + uu'') - v(vuu'')u = u'' + 2(u \cdot u'')\,v .
+\]
+On $w_0$, using $w_0 v = 1 - v w_0$ and $u w_0 = -w_0 u$:
+\[
+vuw_0 - w_0vu = -vw_0u - (1 - vw_0)u = -u, \qquad
+vuw_0vu = vu(1 - vw_0)u = vu^2 - (vuv)w_0u = Q(u)\,v,
+\]
+whence
+\[
+R\,w_0\,R^{-1} = w_0 + (vuw_0 - w_0vu) - vuw_0vu = w_0 - u - Q(u)\,v .
+\]
+These are the \emph{null rotations}, the parabolic transvections stabilising the null direction $v$.
+
+\emph{Step 3 (the shear).} Conjugate the normal form of Step 1 by $R$ and collect the $\Cl(U')$-component, i.e.\ the coefficient of $1 \in \Cl(H_0)$ in the unique expansion of Lemma \claimref{transport.splitting-along-hyperbolic-plane}. Term by term, using $\alpha v = v\hat\alpha$, $\delta v = v \hat\delta$, $\beta v = v\hat\beta$ and $vuv = 0$:
+\begin{align*}
+R\,\alpha\,R^{-1} &= \alpha + vu\alpha - \alpha vu - vu\alpha vu
+= \alpha + v\,(u\alpha - \hat{\alpha}u) && (\alpha vu = v\hat\alpha u;\ vu\alpha v = vuv\hat\alpha = 0),\\
+R\,(v\beta)\,R^{-1} &= v\beta + (vuv)\beta - (v\beta v)u - (vuv)\beta vu = v\beta && (v\beta v = v^2\hat\beta = 0),\\
+R\,(v w_0 \delta)\,R^{-1} &= v w_0 \delta - v w_0 \delta v u = v w_0 \delta - v\hat{\delta}u && (v w_0 \delta v u = v w_0 v \hat{\delta} u = v \hat\delta u),\\
+R\,w_0\,R^{-1} &= w_0 - u - Q(u)\,v && \text{(Step 2)}.
+\end{align*}
+Every correction except one retains a left factor of $v$ and therefore lies in the $v$- or $vw_0$-slots of the expansion; the sole contribution to the $\Cl(U')$-component comes from $R w_0 R^{-1}$, and that component of $R\,\sigma(v)\,R^{-1}$ equals $\alpha - u$. But $R$ fixes $v$, so equivariance demands $\tau_R(\sigma(v)) = R\,\sigma(v)\,R^{-1} = \sigma(v)$; comparing $\Cl(U')$-components in the unique expansion gives $\alpha - u = \alpha$, i.e.\ $u = 0$, for \emph{every} $u \in U$ with $Q(u) \neq 0$. Since $U$ is nondegenerate of dimension $n - 2 \geq 1$, such $u$ exist, a contradiction.

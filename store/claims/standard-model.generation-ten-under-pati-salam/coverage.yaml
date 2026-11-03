@@ -1,0 +1,23 @@
+functions:
+  check_casimirs_and_b_minus_l:
+    kind: exact
+    clauses:
+    - '"Casimirs (C_L, C_R) = (3/4, 0) on Q, L and (0, 3/4) on u^c, d^c, e^c, nu^c"'
+    - '"B - L is 1/3, -1 on Q, L and -1/3, -1/3, 1, 1 on the singlets"'
+    omits: ''
+  check_sixteen_is_2_1_4_plus_1_2_4bar:
+    kind: exact
+    clauses:
+    - '"the sixteen decomposes as (2,1,4) + (1,2,4bar)"'
+    omits: Tests the slot split, the B-L weights and that the 15 pair bivectors have a 4-dimensional commutant on each half of eight (which forces two copies of one 4); the su(2)_L and su(2)_R action on the halves is tested in the Casimir function, and 4 versus 4bar is read from the sign flip of the B-L weights
+  check_majoranas_span_bidoublet_and_six:
+    kind: exact
+    clauses:
+    - '"the four slot Majoranas span the bidoublet (2,2,1)"'
+    - '"the six pair Majoranas span the (1,1,6)"'
+    omits: Identification of these four with the rung directions of the transported-ambient proposition is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact computations in the 32-dimensional five-mode module; the decomposition is established through Casimirs, weights and a commutant dimension.

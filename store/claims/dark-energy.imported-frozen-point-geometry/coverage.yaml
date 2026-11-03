@@ -1,0 +1,20 @@
+functions:
+  check_tractor_gauge_field_reproduces_connection:
+    kind: sampled
+    clauses: ["tractor connection formula", "preserves the tractor metric", "P = (Lambda/6) g on the Einstein region"]
+    omits: "algebraic part of the gauge field only, on Kasner, one matter field and two de Sitter fields with two sample tractors; derivative terms are not tested"
+  check_vacuum_iff_null_scale_tractor_parallel:
+    kind: sampled
+    clauses: ["vacuum equations are exactly covariant constancy of the null scale tractor", "Q(I) = Lambda/3 with I parallel"]
+    omits: "the iff is tested on one vacuum and one non-vacuum field; the Einstein condition on two de Sitter fields"
+  check_stabilisers_reductive_and_parabolic:
+    kind: sampled
+    clauses: ["non-null stabiliser dimension ten with complement signature (1,4) or (2,3)", "parabolic-to-reductive rotation"]
+    omits: "two values of Lambda with I = ninf + (Lambda/6) n0 only; sign-fixed-internally is not tested separately from the identity [I ^ u, I ^ v] = -Q(I) u ^ v"
+untouched_premises:
+  dark-energy.imported-frozen-point-geometry-external: "literature restatement of the source paper's Fact 4.1; its computable content is covered by the interior premises"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "checks test the computable content of the Fact at sample fields and sample Lambda"

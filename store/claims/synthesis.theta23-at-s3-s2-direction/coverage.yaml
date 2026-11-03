@@ -1,0 +1,10 @@
+functions:
+  test_theta23:
+    kind: partial
+    clauses: ["(i) m_nu = lambda_D E + lambda_M w-hat w-hat^T, kernel (1,-1,0), heavy eigenvectors in the S2-symmetric plane", "(ii) nearer w-hat iff lambda_M > lambda_D; peak value tan^2(phi/2) at lambda_M = lambda_D; 176.0 and (0.240, 0.241); mirror exchange of the two roots", "(iii) |U_tau3|^2 > 0.76 on the perturbative branch for |delta| <= 1, least value in (0.7687, 0.7688), about 28.7 degrees", "(iii) remark instance: |U_tau3|^2 > 0.96", "(iv) second roots at |delta| = 0.286", "preamble: m_mu/m_tau in (0.0594, 0.0596)"]
+    omits: "this module has no check_* function; its single function test_theta23 mixes kinds: (i) is exact at four (d, r) points with d = alpha = 1; 'nearer w-hat iff lambda_M > lambda_D' is 400 random exact instances; the peak value is evaluated at four deltas but maximality of the peak in M3/alpha is not tested; the mirror map at four points; (iii) is exact for the whole box |delta| <= 1, lambda_D/lambda_M in [0,1] by adaptive interval bisection (outside the modest assumption that the block formulas match, tested on a grid) and the extreme value is exact; not computed: the 11, 13 and 3 degree tilts at the remark instance (only |U|^2 > 0.96 and the charged tilt 2.65-2.66 degrees), the stated values M3/alpha = 469.5 and 530.7 and alpha/M3 about 1.9e-3 (the second roots are obtained by the mirror map and bracketed only through m2/m3 and |U_tau3|^2), and the observed window (0.39, 0.55), which is data in a comment"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the certified part covers the main claim (iii); (iv)'s specific M3/alpha values and the angle figures at the remark instance are not asserted"

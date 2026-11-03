@@ -1,0 +1,22 @@
+functions:
+  check_displayed_connection_slots:
+    kind: sampled
+    clauses: ["the connection acts on (sigma, mu, rho) with slots (-mu_a, rho g_ab - P_ab sigma + Levi-Civita on mu, P_a^b mu_b)", "it preserves the tractor metric"]
+    omits: "two Einstein fields (Schwarzschild-de Sitter, flat de Sitter), four frame directions and two tractors; the slot formula is read from the check's own Omega_T assembly"
+  check_frozen_point_parallel_with_rho_j_over_n:
+    kind: sampled
+    clauses: ["P_ab = (Lambda/6) g_ab and J = 2 Lambda/3 on vacuum Einstein fields", "I = (1, 0, rho_I) with rho_I = J/4 = Lambda/6 is parallel", "Q(I) = 2J/4 = Lambda/3, null exactly when Lambda = 0"]
+    omits: "four fields (Schwarzschild-(A)dS, flat de Sitter, Schwarzschild); the converse half of 'nabla I = 0 is equivalent to the vacuum equations' is supported only by Reissner-Nordstrom having P not a multiple of the identity"
+  check_stabiliser_de_sitter_group_and_sign:
+    kind: sampled
+    clauses: ["for Lambda > 0 the stabiliser has dimension 10 with I-perp of signature (1,4)", "I is null exactly when Lambda = 0, where the stabiliser form has a 4-dimensional radical"]
+    omits: "Lambda in {3/4, 6} and Lambda = 0; stabiliser is the algebra (nondegenerate trace form, signature of I-perp), not the group SO(1,4); the opposite-sign control gives (2,3)"
+  check_general_n_rho_is_j_over_n:
+    kind: sampled
+    clauses: ["general-n form: rho_I = J/n and Q(I) = 2J/n, with g_ab rho_I = P_ab traced"]
+    omits: "n = 3..6 and one curvature constant k = 2/7 for constant-curvature calR(B) = kB; the four-dimensional statement is the case n = 4"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Slot formulas, rho_I = Lambda/6, Q(I) = Lambda/3 and the (1,4) signature are confirmed at sample fields; group-level SO(1,4) is not."

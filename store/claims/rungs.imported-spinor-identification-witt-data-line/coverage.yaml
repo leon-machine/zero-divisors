@@ -1,0 +1,25 @@
+functions:
+  check_irreducible_and_klein_identification:
+    kind: partial
+    clauses:
+    - The complexified Cl(2,4) acts irreducibly on Lambda W
+    - canonical isomorphism V_C = Lambda^2 CS under which the quadratic form is P -> eps(P ^ P)
+    - a vector is null exactly when its bivector is decomposable
+    omits: irreducibility is exact (64 blades independent); Pf(M_v) = -Q(v) and rank 2 iff null are checked at ten sample vectors (a quadratic form in six variables has 21 coefficients); Spin-equivariance and canonicity of the isomorphism are not tested
+  check_witt_pair_is_the_two_summands:
+    kind: sampled
+    clauses:
+    - the lines of P(CS) skew to the line at infinity are the points of the chart
+    - the Witt pair n_0, n_inf consists of the bivectors of the two summands, with Som ^ Spi their common orthogonal complement
+    omits: the complement statement is exact (the kernel of the block functionals is {n0, n_inf}^perp of dimension 4); the skew-line correspondence is tested at eleven sample null vectors
+  check_real_form_and_sigma_null_lines:
+    kind: sampled
+    clauses:
+    - The real form of the ambient spin group is SU(2,2) = Spin(2,4)
+    - a line of P(CS) is a point of the real conformal compactification exactly when it is null for the Hermitian form Sigma
+    omits: Sigma Hermitian of signature (2,2) and fifteen Sigma-anti-Hermitian bivector actions spanning a 15-dimensional real algebra are exact, but tracelessness and the group-level isomorphism SU(2,2) = Spin(2,4) are not tested; the "exactly when" is tested at seven real and four non-real sample lines
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Docstring states the sampling; irreducibility and the Witt complement are exact, the rest sampled.

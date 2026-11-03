@@ -1,0 +1,39 @@
+functions:
+  check_intrinsic_flows_are_bivector_flows:
+    kind: sampled
+    clauses:
+    - (i) the intrinsic flows of a Clifford boundary-mode algebra are rotor (bivector-generated) flows, quadratic in the pair operators
+    omits: 'Cl(3,3) only: for even blades of grade 2k the commutator with a vector has grade 2k - 1 or vanishes, grades 4 and 6 act injectively, even centre is the scalars; one-parameter-group and inner-automorphism definitions are not tested'
+  check_single_pair_is_the_boost:
+    kind: exact
+    clauses:
+    - (ii) for a single completed pair the bivector space is one-dimensional, its flow is the boost, and the conversion runs at kappa = 1/(4M)
+    omits: that the geometric normalisation converts rapidity to Schwarzschild time at kappa is the cited premise; the check computes beta = 2 pi/kappa = 8 pi M from kappa = 1/(4M) only
+  check_inventory_by_clock_criterion:
+    kind: sampled
+    clauses:
+    - (iii) the diagonal E_ii and their equal-coefficient sum, the symmetric E_ij + E_ji and the pairing sector (cd > 0) are clocks; E_ij - E_ji (compact), strictly off-diagonal E_ij (nilpotent) and mixed diagonals with unequal |c_i| are not
+    omits: n = 3 Fock matrices and chosen index pairs and coefficients (one example per case, including E_00 + E_01 - E_10 and E_00 + E_01 + E_11 as further non-clocks); the clock criterion A^3 = tA, t > 0 is the check's own encoding of semisimple with equal-magnitude real eigenvalues
+  check_pairing_trichotomy:
+    kind: sampled
+    clauses:
+    - 'the pairing sector c psi_i^dag psi_j^dag + d psi_j psi_i has adjoint eigenvalues +-sqrt(cd): hyperbolic for cd > 0, compact for cd < 0, nilpotent for cd = 0'
+    omits: one index pair (0,2) of n = 3 modes and a 5 x 5 grid of (c, d); A^3 = cd A holds on the grid (a polynomial identity of degree at most 3 in each variable, so the grid determines it for these modes)
+  check_rotated_modes_atom_boosts_and_so_nn:
+    kind: sampled
+    clauses:
+    - E_ij + E_ji are opposed pairs of boosts of the rotated modes (psi_i +- psi_j)/sqrt(2); the diagonal E_ii are the atoms' boosts
+    - the boundary algebra has dimension n(2n - 1), identified with so(n,n)
+    omits: n = 3 for the rotated modes and n = 2, 3 for the dimension count; so(n,n) is identified by the dimension n(2n-1) of the bivector span and gl(n) + pairing decomposition, not by checking the Lie algebra
+  check_witt_eigenspaces_isotropic_and_dual:
+    kind: partial
+    clauses:
+    - if ad_X is semisimple with spectrum {+c, 0, -c} then the +-c eigenspaces are isotropic and mutually dual for the neutral form, so by Witt extension X is O(n,n)-conjugate to c times a sum of standard atom boosts; the geometric normalisation is invariant under that conjugation
+    omits: isotropy, equal dimension, mutual duality and orthogonality to the kernel are checked for four sample clocks in Cl(3,3); the Witt-extension conjugacy to standard atom boosts and the invariance of the normalisation (hence the single clock rate kappa) are not computed
+untouched_premises:
+  singularity.euclidean-rotor-where-it-lies: not used by any check function here and not cited in the statement; the Euclidean continuation is checked in scrambling.imported-modes-modular-inventory
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Classification examples are exact; the headline of one clock rate rests on the stated invariance of the geometric normalisation, which no function computes beyond the single atom.

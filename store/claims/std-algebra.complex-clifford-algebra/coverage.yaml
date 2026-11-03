@@ -1,0 +1,45 @@
+functions:
+  check_orthogonal_basis_and_witt_basis:
+    kind: sampled
+    clauses:
+    - '"V has a basis with Q(e_i) = 1 and B(e_i, e_j) = 0"'
+    - '"for every totally null W of dimension k there is a totally null W prime"'
+    omits: four complex symmetric Gram matrices orthogonalised exactly over Q(i) (normalisation needs
+      square roots, proved in the text); two totally null planes of C^4 completed by the stated
+      formula; the standard Witt basis for k = 1, 2, 3
+  check_fock_model_is_the_whole_matrix_algebra:
+    kind: complete
+    clauses:
+    - '"Cl(V, Q) = End(Lambda W) = M_2^k(C)"'
+    - '"Cl^+ = End(Lambda^even W) + End(Lambda^odd W)"'
+    omits: k = 1, 2, 3 (n = 2, 4, 6), all 4^k products
+  check_vacuum_idempotent_and_minimal_left_ideal:
+    kind: complete
+    clauses:
+    - '"f is a primitive idempotent and Cl f = Lambda W with basis w_I f"'
+    omits: k = 1, 2, 3; primitivity follows from the dimension of Cl f in the text
+  check_odd_dimension_splits:
+    kind: complete
+    clauses:
+    - '"omega_C central with omega_C^2 = 1"'
+    - '"Cl = Cl P+ + Cl P-, Cl^+ = Cl_2k(C)"'
+    omits: n = 1, 3, 5 with an orthonormal basis; every other nondegenerate complex form reduces to
+      this one by (ii)
+  check_complex_chevalley_pairing:
+    kind: sampled
+    clauses:
+    - '"beta nondegenerate, pairs degree m with k - m, symmetry (-1)^{k(k-1)/2}"'
+    - '"every complex bivector is skew"'
+    - '"for k = 3 antisymmetric, even paired with odd"'
+    omits: k = 1, 2, 3 on the full basis; self-adjointness on every basis vector and one complex
+      vector, skewness on one complex bivector per k
+  check_ascended_witt_basis:
+    kind: complete
+    clauses:
+    - '"the isotropic pair w_3 = b_3 + i b_4 is such a W"'
+    omits: the one basis of Cl(2,4) complexified used in the conformal-spacetime results
+  check_blade_basis_for_a_degenerate_complex_form:
+    kind: sampled
+    clauses:
+    - '"for any basis the 2^n increasing products form a C-basis, degenerate forms included"'
+    omits: one degenerate complex Gram matrix (n = 3, rank 1) in the exterior model over Q(i)

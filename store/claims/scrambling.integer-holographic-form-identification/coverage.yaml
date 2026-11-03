@@ -1,0 +1,21 @@
+functions:
+  check_epoch_volume_is_beta_squared:
+    kind: exact
+    clauses:
+    - (1) the counted three-volume of one epoch is V = (8 pi M) beta = 64 pi^2 M^2 = beta^2 in Planck units
+    omits: restoring the length (V = beta^2 l_P) is not computed; units set l_P = 1
+  check_density_iff_integer_count:
+    kind: exact
+    clauses:
+    - (2) nu = 1/(16 pi) iff N_epoch = nu V = 4 pi M^2 = S_BH, one boundary-mode fermion per four Planck cells of horizon area per modular period
+    omits: S_BH/V = 1/(16 pi) and S_BH/A = 1/4 are computed exactly (the iff is the unique solution; four other sample nu fail); the 1-nat convention and per-mode ln 2 normalisation of the cited Remark are not tested
+  check_naive_overshoot_is_area_coefficient:
+    kind: exact
+    clauses:
+    - (3) the naive nu = 1 reading overshoots by exactly 16 pi, which is the horizon-area coefficient A = 16 pi M^2
+    omits: ''
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact monomial arithmetic matching each numbered clause.

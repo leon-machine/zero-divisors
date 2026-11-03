@@ -1,0 +1,5 @@
+functions:
+  check_unit_ball_clauses_epoch:
+    kind: sampled
+    clauses: ["(i) cell-radius ratios: sheets constant, five-dimensional a^((beta-1)/4), constant only at beta = 1", "(ii) standing R3: w = (beta - 1)/4, dust only at beta = 1, drift integer parts 189 and 168, fraction 0.316", "(iii) deposit R3: dust for every beta", "(iv) counted thickness 2.397e-10 m and decimal order 5 under the 40 micrometre bound"]
+    omits: "exponent laws are verified at four sample scale factors and four sample exponents, not symbolically; the entropy-conservation bound on a_dep and the observational dust bound are in the proof text; the reading of R2 and R3 as standing or deposit clauses is not computable"

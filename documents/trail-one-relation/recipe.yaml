@@ -1,0 +1,27 @@
+doc: trail-one-relation
+title: One relation, read twice
+author: Leon Butler
+level: lay
+spine:
+- one-relation.two-presentations
+- one-relation.two-capacities-three-consequences
+- one-relation.third-constant-conversion-constant-between-charts
+- one-relation.form-law-forced-square
+- one-relation.odd-square-roots-chiral-phase
+- one-relation.one-datum-not-two-imaginary-unit
+- one-relation.schr-odinger-slow-shadow
+- one-relation.measure-indifference-borns-rule-located
+- one-relation.record-chain-votes-measurement-without-collapse
+- pred.no-objective-collapse
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

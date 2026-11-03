@@ -1,0 +1,18 @@
+functions:
+  check_baryon_and_lepton_number_from_chi:
+    kind: exact
+    clauses: ["n_B and n_L formulas reproduce every species' baryon and lepton number", "3 n_B + n_L = chi"]
+    omits: ""
+  check_chi_commutes_with_21_and_anticommutes_with_24:
+    kind: exact
+    clauses: ["the 21 generators commute with chi", "the 24 slot-pair mixing generators anticommute with it"]
+    omits: ""
+  check_proton_channel_needs_mixing:
+    kind: partial
+    clauses: ["p -> e+ pi0 has Delta(B - L) = 0 and Delta(3 n_B + n_L) = -4", "so it is mediated only by the mixing generators"]
+    omits: "'No product of the 21 can mediate it' is tested only on 49 products of two preserving bivectors (it follows from the previous function's commutation); 'gauge bosons massive at M_U' is not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement is a finite computation on the sixteen and the 45 bivectors, tested exhaustively; only the mass-at-M_U remark is untested."

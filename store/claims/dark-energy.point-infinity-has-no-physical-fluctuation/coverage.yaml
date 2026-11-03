@@ -1,0 +1,22 @@
+functions:
+  check_constrained_fluctuations_nine:
+    kind: sampled
+    clauses: ["constrained fluctuation space of (I, V) has dimension 9", "fibres over the five tangential directions of I with four-dimensional affine fibres of dV", "not a direct sum"]
+    omits: "ranks computed at the three sample values of Lambda used, both signs"
+  check_broken_generators_act_bijectively:
+    kind: sampled
+    clauses: ["stabiliser of (I, V) has dimension six, nine broken generators", "xi -> (xi.I, xi.V) is bijective onto the constrained fluctuation space"]
+    omits: "same sample values of Lambda only"
+  check_integrand_invariant_under_ambient_group:
+    kind: sampled
+    clauses: ["invariance of eps(I, V, F, F) under the ambient group acting on all three arguments"]
+    omits: "one rotor, one value of Lambda and one bivector F; the invariance is exact for that data, not in general"
+  check_fluctuation_is_gauge_on_de_sitter_field:
+    kind: sampled
+    clauses: ["every fluctuation of the pair is a gauge transformation, absorbed as the frame freedom of the soldering form"]
+    omits: "one rotor and one de Sitter field at Lambda = 3/4; that the second variation has legs only on the connection and that unitary gauge is complete for every fluctuation beyond the bijectivity count are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the counting and bijectivity are tested at sample Lambda; the second-variation conclusion is not computed"

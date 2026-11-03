@@ -1,0 +1,18 @@
+functions:
+  check_level_line_is_the_meeting_condition:
+    kind: sampled
+    clauses: ["the three couplings meet at one scale iff (f, f') lies on the line", "ln(M_U/M_Z) = 2 pi (a_1 - a_2)/(b_12 + f Dl_12 + f' Dl'_12)"]
+    omits: "The iff is tested on a grid of 455 (f, f') points for a hand instance and four supersymmetric splits, and 30 points exactly on the line; not symbolic in the inputs. Positivity of ln(M_U/M_Z) is not asserted."
+  check_segment_and_reductions:
+    kind: sampled
+    clauses: ["the admissible set is that segment, with exact rational endpoints", "at f' = f it reduces to the one-threshold criterion for Dl + Dl'", "at f' = 0 to the one-threshold criterion for Dl alone"]
+    omits: "Hand instance and four splits only."
+  check_complete_multiplets_inert_at_either_threshold:
+    kind: sampled
+    clauses: ["a complete multiplet added at either threshold leaves the line unchanged"]
+    omits: "A finite list of shifts c on the hand instance and four splits."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational linear algebra at sample inputs supports each clause; no symbolic proof of the iff."

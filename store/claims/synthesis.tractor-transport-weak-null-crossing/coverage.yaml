@@ -1,0 +1,18 @@
+functions:
+  check_general_removal:
+    kind: sampled
+    clauses: ["(1) with f' = nu (S - f^2): the gauged coefficient is E_X + N_R + f [E_X, N_n]", "(1) N_n^2 = 0, N_n E_X N_n = nu N_n, N_n N_R N_n = 0, and A preserves the tractor metric"]
+    omits: "exact polynomial identity in the symbols S and f, but at one explicit instance and 25 deterministic pseudo-random rational (n, X, R) with eta = diag(-1,1,1,1) and the store's matrix convention; existence, continuity and positivity of y, integrability of the coefficient, and uniqueness of the transport across s_c are not tested; the match of the matrix convention with Fact imported-tractor-connection is assumed"
+  check_null_and_radial_frames:
+    kind: sampled
+    clauses: ["(1) in the null generator and radial timelike frames the gauged coefficient is free of S and at most linear in f"]
+    omits: "degree check only, for two vectors X and one n, R; it does not assert the form of the coefficient, which the other function does; the frames of the proof are not otherwise compared"
+  check_model_profile:
+    kind: sampled
+    clauses: ["(3) a profile with S not integrable, |s - s_c||S| integrable and f integrable but unbounded"]
+    omits: "one model y = 1 + sqrt(s_c - s) at six rational t: Riccati f' = S - f^2 (nu = 1) and the integrand identities in ds = 2t dt; unboundedness of f is read off the closed form, not asserted; this is an example for the Tipler condition and for (3), not a test of (3)'s claim about parallel tractor components"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "only the algebra of the removal in (1) and one example are computed; (2) the exp(c N_n) ambiguity, (3) the boundedness criterion and the integrable case, and (4) the Einstein sides have no computation"

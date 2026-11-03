@@ -1,0 +1,22 @@
+functions:
+  check_gns_vector_cyclic_separating:
+    kind: sampled
+    clauses: ["Omega = sum lambda_i |ii> reproduces omega", "Omega is cyclic and separating for pi(A) = A (x) 1"]
+    omits: "three rational weight pairs on Mat_2; orbit rank 4 for both A (x) 1 and 1 (x) A"
+  check_commutant_is_partner_copy_and_J_conjugate:
+    kind: sampled
+    clauses: ["the commutant pi(A)' = 1 (x) A is the partner copy", "pi(A)' = J pi(A) J"]
+    omits: "the commutant computation (a 4-dimensional kernel equal to 1 (x) Mat_2) is exact and independent of the weights; J pi(a) J = 1 (x) conj(a) is checked for two a and two vectors v only, with J the antilinear swap rather than the modular conjugation computed from Omega"
+  check_purifications_differ_by_partner_unitary:
+    kind: partial
+    clauses: ["any two purifications of omega differ by a unitary on the purifying factor alone"]
+    omits: "only the direction that (1 (x) W)Omega, W unitary, is a purification with marginal rho, with W recovered from Psi by the formula valid for vectors already of that form; that every purification has this form is exercised only by one swapped-weights control per weight pair; two W and three weight pairs"
+  check_gibbs_gives_thermofield_double:
+    kind: sampled
+    clauses: ["for the Gibbs state, Omega is the thermofield double with tan(theta) = e^{-omega_k/2T}"]
+    omits: "three values x = e^{-omega/T}; that this is 'exactly the vector Lemma schmidt-forcing produces' is not compared (that lemma is not called), and the last sentence (hypothesis (i) of the descent theorem is a consequence) is not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "functions test what the docstring says they test; the purification-uniqueness direction beyond the control is not covered, and the docstring describes it as a control"

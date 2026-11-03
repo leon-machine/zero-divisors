@@ -1,0 +1,151 @@
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\newlabel{sec:setting}{{2}{5}{Setting and imports}{section.2}{}}
+\newlabel{fact:mass}{{2.1}{5}{imported: mass begins at two}{theorem.2.1}{}}
+\newlabel{fact:pairs}{{2.2}{6}{imported: the pair systems and the two chirality halves}{theorem.2.2}{}}
+\newlabel{fact:helicity}{{2.3}{6}{imported: twistor charge is helicity}{theorem.2.3}{}}
+\newlabel{fact:twokinds}{{2.4}{6}{imported: two kinds of action}{theorem.2.4}{}}
+\newlabel{fact:dictionary}{{2.5}{6}{imported: the frozen point and the dictionary}{theorem.2.5}{}}
+\newlabel{fact:cauchy}{{2.6}{6}{imported: the Cauchy decomposition of an exterior power}{theorem.2.6}{}}
+\newlabel{fact:anomaly}{{2.7}{7}{imported: the anomaly coefficients}{theorem.2.7}{}}
+\newlabel{fact:running}{{2.8}{7}{imported: one-loop running, and the trace ratio of a simple unifying group}{theorem.2.8}{}}
+\newlabel{fact:tractor}{{2.9}{7}{imported: the tractor bundle, its spinor bundle, and their connections}{theorem.2.9}{}}
+\newlabel{fact:rigidity}{{2.10}{7}{imported: the norm of the frozen point is not a field}{theorem.2.10}{}}
+\newlabel{fact:fock}{{2.11}{8}{imported: the Fock representation of a Clifford algebra, and its Bogoliubov group}{theorem.2.11}{}}
+\newlabel{lem:paircount}{{2.12}{8}{The pair count in dimension $n$}{theorem.2.12}{}}
+\newlabel{lem:segre}{{2.13}{8}{The Segre lemma: automorphisms preserving decomposable tensors}{theorem.2.13}{}}
+\newlabel{sec:ladder}{{3}{9}{The internal symmetry ladder}{section.3}{}}
+\newlabel{prop:ladder}{{3.1}{9}{The internal symmetry ladder}{theorem.3.1}{}}
+\newlabel{prop:singlet}{{3.2}{10}{The mass bracket is a charged singlet}{theorem.3.2}{}}
+\newlabel{rem:sixth}{{3.3}{10}{The sixth refutation: the ladder is not the gauge group}{theorem.3.3}{}}
+\newlabel{sec:algebra}{{4}{10}{The gauge algebra and the global form}{section.4}{}}
+\newlabel{thm:algebra}{{4.1}{11}{The gauge algebra of the minimal massive composite}{theorem.4.1}{}}
+\newlabel{eq:algebra}{{1}{11}{The gauge algebra of the minimal massive composite}{equation.4.1}{}}
+\newlabel{thm:global}{{4.2}{11}{The global form: the quotient determined}{theorem.4.2}{}}
+\newlabel{eq:global}{{2}{11}{The global form: the quotient determined}{equation.4.2}{}}
+\newlabel{prop:four}{{4.3}{13}{Four dimensions from the forces, and the converse}{theorem.4.3}{}}
+\newlabel{rem:whatkind}{{4.4}{13}{Point of contact: what kind of explanation this is}{theorem.4.4}{}}
+\newlabel{sec:content}{{5}{14}{Content, charges, chirality}{section.5}{}}
+\newlabel{prop:raw}{{5.1}{14}{The raw representation content of the state space}{theorem.5.1}{}}
+\newlabel{eq:fock}{{3}{14}{The raw representation content of the state space}{equation.5.3}{}}
+\newlabel{rem:eighth}{{5.2}{14}{The eighth refutation: the split conclusion of the decisive test}{theorem.5.2}{}}
+\newlabel{fig:hierarchy}{{1}{15}{The minimal massive hierarchy $\C ^{2} \otimes \C ^{3}$: two twistors (rows), each the vacuum of three ladder pairs (columns). The automorphisms respecting both levels of the partition are $SU(2)$ mixing the twistor slots, $SU(3)$ mixing the pair slots, and the common phase: the Standard Model algebra of Theorem \ref {thm:algebra}. The fermion generators are at the two levels (Proposition \ref {prop:content}): a pair-level generator occupies one cell and transforms as $(2,3)$, in the notation (dimension of the $SU(2)$ representation, dimension of the $SU(3)$ representation), the quark doublet; a twistor-level object enters a whole row as a unit; in the tensor state space the filled row is a quadruplet $(4,1)$ of hypercharge $+1/2$ (Proposition \ref {prop:content}(2)), and it becomes the lepton doublet $(2,1)$ of hypercharge $-1/2$ only under Hypothesis (S), where a row is one slot mode with the three pair modes occupied. A lepton is a complete twistor; a quark is a fractional one; and colour neutrality of the lepton is the figure's statement that a full row is an $SU(3)$ singlet}{figure.1}{}}
+\newlabel{prop:content}{{5.3}{16}{Quarks and leptons: the two-level fermion content}{theorem.5.3}{}}
+\newlabel{eq:content}{{4}{17}{Quarks and leptons: the two-level fermion content}{equation.5.4}{}}
+\newlabel{rem:wound}{{5.4}{17}{The weakness examined: exotics, conjugation, hypercharge}{theorem.5.4}{}}
+\newlabel{thm:hypercharge}{{5.5}{18}{Hypercharge from the global form, pair counting, and consistency}{theorem.5.5}{}}
+\newlabel{prop:chirality}{{5.6}{19}{Chirality: the two halves of the spinor module, and conjugation as duality}{theorem.5.6}{}}
+\newlabel{prop:connection}{{5.7}{20}{The connection is forced}{theorem.5.7}{}}
+\newlabel{prop:sixteen}{{5.8}{21}{Under (S): the composite's state space is the $\mathrm {Spin}(10)$ spinor, and the derived generation is its even half}{theorem.5.8}{}}
+\newlabel{rem:sixteen}{{5.9}{23}{Point of contact: grand unification, and what Hypothesis (S) would yield and what it would cost}{theorem.5.9}{}}
+\newlabel{sec:running}{{6}{24}{Unification and the desert}{section.6}{}}
+\newlabel{prop:unification}{{6.1}{24}{The weak angle over the derived generation}{theorem.6.1}{}}
+\newlabel{eq:angle}{{5}{24}{The weak angle over the derived generation}{equation.6.5}{}}
+\newlabel{prop:desert}{{6.2}{24}{The spectrum run}{theorem.6.2}{}}
+\newlabel{rem:classic}{{6.3}{25}{Point of contact: what the framework adds to a classic account}{theorem.6.3}{}}
+\newlabel{sec:N}{{7}{26}{The one number}{section.7}{}}
+\newlabel{obs:N}{{7.1}{26}{One number to explain}{theorem.7.1}{}}
+\newlabel{obs:whatN}{{7.2}{26}{What $N$ is}{theorem.7.2}{}}
+\newlabel{obs:whylarge}{{7.3}{27}{Why $N$ is large}{theorem.7.3}{}}
+\newlabel{obs:dating}{{7.4}{27}{Dating the descent}{theorem.7.4}{}}
+\newlabel{obs:length}{{7.5}{27}{The largeness of $N$ is the number of the universe's boundary modes}{theorem.7.5}{}}
+\newlabel{prop:trichotomy}{{7.6}{28}{The trichotomy: what kind of number $N$ is}{theorem.7.6}{}}
+\newlabel{sec:partner}{{8}{29}{The partner sector quantified}{section.8}{}}
+\newlabel{fact:index}{{8.1}{29}{imported: the coefficient as a sum of indices}{theorem.8.1}{}}
+\newlabel{fact:towers}{{8.2}{30}{imported: sectors, superselection, and the mirror copy}{theorem.8.2}{}}
+\newlabel{fact:killing}{{8.3}{30}{imported: invariant forms on a simple Lie algebra}{theorem.8.3}{}}
+\newlabel{def:spectrum}{{8.4}{30}{one-threshold spectrum; admissible}{theorem.8.4}{}}
+\newlabel{eq:run}{{6}{30}{one-threshold spectrum; admissible}{equation.8.6}{}}
+\newlabel{subsec:towers}{{8.1}{31}{The towers supply nothing}{subsection.8.1}{}}
+\newlabel{prop:towers}{{8.5}{31}{no tower but this one contributes to this tower's running}{theorem.8.5}{}}
+\newlabel{cor:mirror}{{8.6}{31}{under (S), the mirror inherits the desert}{theorem.8.6}{}}
+\newlabel{rem:closes}{{8.7}{32}{what is settled, and what the gravitational channel cannot do}{theorem.8.7}{}}
+\newlabel{subsec:price}{{8.2}{32}{The exact criterion at one threshold}{subsection.8.2}{}}
+\newlabel{lem:complete}{{8.8}{32}{complete multiplets shift all three coefficients equally}{theorem.8.8}{}}
+\newlabel{thm:criterion}{{8.9}{32}{one threshold: the exact criterion}{theorem.8.9}{}}
+\newlabel{cor:direction}{{8.10}{33}{the direction: the demanded content is doublet-heavy}{theorem.8.10}{}}
+\newlabel{prop:table}{{8.11}{34}{the table, exact}{theorem.8.11}{}}
+\newlabel{rem:sensitivity}{{8.12}{35}{sensitivity: one loop decides nothing about the supersymmetric content, and does decide the rest}{theorem.8.12}{}}
+\newlabel{subsec:tower}{{8.3}{35}{What is left in this tower}{subsection.8.3}{}}
+\newlabel{prop:ledger}{{8.13}{35}{under (S) the state space is complete multiplets, and which splits move the condition}{theorem.8.13}{}}
+\newlabel{obs:seats}{{8.14}{36}{the places outside the state space}{theorem.8.14}{}}
+\newlabel{subsec:twothresholds}{{8.4}{36}{Two thresholds}{subsection.8.4}{}}
+\newlabel{thm:two}{{8.15}{36}{the two-threshold criterion}{theorem.8.15}{}}
+\newlabel{prop:splits}{{8.16}{37}{four supersymmetric splits}{theorem.8.16}{}}
+\newlabel{rem:gluino}{{8.17}{37}{the gluino at the heavier threshold, at the block level}{theorem.8.17}{}}
+\newlabel{subsec:twoloop}{{8.5}{37}{Two loops}{subsection.8.5}{}}
+\newlabel{fact:twoloop}{{8.18}{37}{imported: the two-loop gauge coefficients}{theorem.8.18}{}}
+\newlabel{prop:twoloop}{{8.19}{38}{the supersymmetric row at two loops}{theorem.8.19}{}}
+\newlabel{rem:twoloopscope}{{8.20}{38}{scope}{theorem.8.20}{}}
+\newlabel{subsec:proton}{{8.6}{38}{The proton condition}{subsection.8.6}{}}
+\newlabel{fact:proton}{{8.21}{38}{imported: the proton condition}{theorem.8.21}{}}
+\newlabel{prop:proton}{{8.22}{39}{the proton condition on the candidates}{theorem.8.22}{}}
+\newlabel{rem:dimfive}{{8.23}{39}{what the condition does not cover}{theorem.8.23}{}}
+\newlabel{sec:mechanism}{{9}{39}{The module's mass mechanism and the rung doublet}{section.9}{}}
+\newlabel{fact:tower}{{9.1}{40}{imported: the tower, its commuting copies, and the Fock module}{theorem.9.1}{}}
+\newlabel{fact:twistor}{{9.2}{40}{imported: the Fock model of twistor space}{theorem.9.2}{}}
+\newlabel{fact:grip}{{9.3}{40}{imported: the grip, the area, and the Casimir form}{theorem.9.3}{}}
+\newlabel{fact:model}{{9.4}{40}{imported: the conformal model and totality}{theorem.9.4}{}}
+\newlabel{fact:frozen}{{9.5}{41}{imported: the frozen point, the grip, and the thirteenth refutation}{theorem.9.5}{}}
+\newlabel{fact:bilinears}{{9.6}{41}{imported: the spinor bilinears of $\mathrm {Spin}(10)$}{theorem.9.6}{}}
+\newlabel{fact:neutrino}{{9.7}{41}{imported: the neutrino's Dirac mass}{theorem.9.7}{}}
+\newlabel{def:module}{{9.8}{41}{the two-rung module; sectors; slot components}{theorem.9.8}{}}
+\newlabel{subsec:blind}{{9.1}{42}{The frozen point is insensitive to the slots}{subsection.9.1}{}}
+\newlabel{prop:factor}{{9.9}{42}{the module factorises, and even ground elements act on the pair factor}{theorem.9.9}{}}
+\newlabel{thm:blind}{{9.10}{42}{the moment map, the grip and the mass are insensitive to the slots}{theorem.9.10}{}}
+\newlabel{thm:mass}{{9.11}{43}{the grip mass in the two-rung module at $\Lambda = 0$}{theorem.9.11}{}}
+\newlabel{cor:five}{{9.12}{44}{under (S), the frozen point's split of the $5$ is the inverse of the demanded one}{theorem.9.12}{}}
+\newlabel{rem:lambda}{{9.13}{44}{$\Lambda > 0$, and what ``massless'' means here}{theorem.9.13}{}}
+\newlabel{subsec:books}{{9.2}{44}{What is and is not derived in the series}{subsection.9.2}{}}
+\newlabel{prop:mixing}{{9.14}{44}{the frozen point and the pair mixing}{theorem.9.14}{}}
+\newlabel{prop:bracket}{{9.15}{45}{under (S), the bracket direction is $e^{c}$, charged, and not a one-family order parameter}{theorem.9.15}{}}
+\newlabel{prop:commutant}{{9.16}{45}{the invariant operators on the module}{theorem.9.16}{}}
+\newlabel{obs:higgs}{{9.17}{46}{the configuration sector carries the Higgs doublet's quantum numbers}{theorem.9.17}{}}
+\newlabel{prop:reduction}{{9.18}{46}{the reduction}{theorem.9.18}{}}
+\newlabel{subsec:flags}{{9.3}{47}{The two flags, resolved}{subsection.9.3}{}}
+\newlabel{fact:compact}{{9.19}{47}{imported: maximal compact subgroups}{theorem.9.19}{}}
+\newlabel{prop:notcolour}{{9.20}{47}{the pair mixing is not colour}{theorem.9.20}{}}
+\newlabel{prop:transported}{{9.21}{48}{the transported frozen point is a doublet datum, and not the Yukawa sector}{theorem.9.21}{}}
+\newlabel{subsec:yukawa}{{9.4}{49}{The vector of the module, and the Yukawa pattern}{subsection.9.4}{}}
+\newlabel{prop:ten}{{9.22}{49}{the ten is the transported ambient space, and its doublets are the rungs}{theorem.9.22}{}}
+\newlabel{lem:pairing}{{9.23}{49}{the invariant pairing on five modes}{theorem.9.23}{}}
+\newlabel{thm:yukawa}{{9.24}{50}{the Yukawa pattern of the two-rung module}{theorem.9.24}{}}
+\newlabel{cor:vev}{{9.25}{50}{one vev vector: the $10_{H}$ relations, the breaking pattern, and the split}{theorem.9.25}{}}
+\newlabel{subsec:lift}{{9.5}{51}{The frozen point, transported}{subsection.9.5}{}}
+\newlabel{prop:firstrung}{{9.26}{51}{the frozen point is a first-rung component}{theorem.9.26}{}}
+\newlabel{prop:lift}{{9.27}{51}{the transported frozen point}{theorem.9.27}{}}
+\newlabel{cor:read}{{9.28}{52}{the lifted components read as vevs}{theorem.9.28}{}}
+\newlabel{prop:status}{{9.29}{52}{what is derived and what is not}{theorem.9.29}{}}
+\newlabel{rem:pairings}{{9.30}{53}{two pairings, two patterns}{theorem.9.30}{}}
+\newlabel{subsec:nogo}{{9.6}{53}{What the pattern cannot do: three no-go theorems}{subsection.9.6}{}}
+\newlabel{thm:familynogo}{{9.31}{53}{family no-go: a vev in the $10$ cannot separate the charged leptons from the down quarks}{theorem.9.31}{}}
+\newlabel{prop:twodim}{{9.32}{54}{the space of symmetric doublet mass forms is two-dimensional}{theorem.9.32}{}}
+\newlabel{thm:frozennogo}{{9.33}{54}{no-go: the frozen point and its lifts do not generate the $126$ direction}{theorem.9.33}{}}
+\newlabel{cor:coeff}{{9.34}{55}{the coefficient cannot come from the frozen point}{theorem.9.34}{}}
+\newlabel{thm:bracketnogo}{{9.35}{55}{the bracket composite lands on the $10$}{theorem.9.35}{}}
+\newlabel{cor:onetwentysix}{{9.36}{56}{what the $126$ direction is made of}{theorem.9.36}{}}
+\newlabel{rem:bracket}{{9.37}{56}{what this settles and what it leaves open}{theorem.9.37}{}}
+\newlabel{fact:gj}{{9.38}{56}{imported: the Georgi-Jarlskog direction in the module}{theorem.9.38}{}}
+\newlabel{sec:split}{{10}{57}{An intermediate symmetry: the slot/pair split}{section.10}{}}
+\newlabel{fact:ps}{{10.1}{57}{imported: Pati-Salam representation theory, and the survival hypothesis}{theorem.10.1}{}}
+\newlabel{prop:split}{{10.2}{57}{the automorphisms that preserve the slot/pair split are Pati-Salam}{theorem.10.2}{}}
+\newlabel{rem:splitreading}{{10.3}{58}{a reading of the automorphism rule}{theorem.10.3}{}}
+\newlabel{prop:pscontent}{{10.4}{58}{the generation and the ten under Pati-Salam}{theorem.10.4}{}}
+\newlabel{lem:matching}{{10.5}{58}{the matching, from traces}{theorem.10.5}{}}
+\newlabel{prop:protonchannel}{{10.6}{58}{proton decay only through the slot-pair mixing generators}{theorem.10.6}{}}
+\newlabel{prop:breaking}{{10.7}{59}{the Majorana element is the $(10,1,3)$}{theorem.10.7}{}}
+\newlabel{prop:dparity}{{10.8}{59}{left-right parity, and what breaks it}{theorem.10.8}{}}
+\newlabel{cor:complexrung}{{10.9}{59}{the bidoublet is complex}{theorem.10.9}{}}
+\newlabel{prop:pschains}{{10.10}{60}{the chain}{theorem.10.10}{}}
+\newlabel{rem:psinput}{{10.11}{61}{what the chain decides, and what it leaves}{theorem.10.11}{}}
+\newlabel{sec:angle}{{11}{61}{The weak angle on the Pati-Salam route}{section.11}{}}
+\newlabel{fact:clebsch}{{11.1}{61}{imported: the Clebsch structure and the seesaw}{theorem.11.1}{}}
+\newlabel{prop:requirement}{{11.2}{61}{what the angle asks of the neutrino sector}{theorem.11.2}{}}
+\newlabel{prop:equalweight}{{11.3}{62}{equal weight on the module}{theorem.11.3}{}}
+\newlabel{rem:equalweight}{{11.4}{62}{equal weight is a premise}{theorem.11.4}{}}
+\newlabel{prop:elimination}{{11.5}{62}{the neutrino Dirac matrix from the charged fermions}{theorem.11.5}{}}
+\newlabel{prop:gradethree}{{11.6}{62}{a grade-three Georgi-Jarlskog direction}{theorem.11.6}{}}
+\newlabel{obs:anglefits}{{11.7}{63}{the fits, at record level}{theorem.11.7}{}}
+\newlabel{rem:anglestatus}{{11.8}{63}{what the section settles, and the route the series takes}{theorem.11.8}{}}
+\newlabel{sec:ledger}{{12}{64}{The levels of the results, and successor problems}{section.12}{}}
+\newlabel{sec:position}{{13}{68}{Position in the series}{section.13}{}}
+\newlabel{sec:verification}{{14}{69}{Machine verification}{section.14}{}}

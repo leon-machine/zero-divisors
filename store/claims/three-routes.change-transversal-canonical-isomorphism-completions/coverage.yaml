@@ -1,0 +1,20 @@
+functions:
+  check_intertwiner_on_boundary_data:
+    kind: sampled
+    clauses: ["(1) h_u(Phi_v x, Phi_v y) = h_(u+v)(x, y)", "(2) Phi_v is the identity on W and fixes k", "(3) Phi_v unipotent and invertible"]
+    omits: "Schwarzschild boundary data at m = 1, 2, 3, 1/2 with two transversals, two (mu, nu) pairs and four choices of v (64 cases); not general G, u, v, mu, nu."
+  check_normalised_representative_is_choice_free:
+    kind: sampled
+    clauses: ["(4) canonicity: the normalised vtilde does not depend on the particular solution of the solve"]
+    omits: "Three values of the free parameter t on the same boundary fibres; the independence of the choice of transversal beyond u versus u+v is not tested."
+  check_ladder_carried_to_ladder:
+    kind: sampled
+    clauses: ["(5) ladder (k, n0/2nu) is carried to a CAR pair of h_u for the same k"]
+    omits: "Two cases only (one fibre each, first basis v) in the 64-state exterior model; no completion of the Clifford algebra and no check that the induced map is an algebra isomorphism beyond the CAR relations of the image pair."
+untouched_premises:
+  std-algebra.functoriality: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement is covered at exact sample points; the word 'completed' and the all-v, all-u quantifiers are not exercised, which is recorded in omits and is not an overclaim of the checks."

@@ -1,0 +1,34 @@
+functions:
+  check_mass_entries_of_c_and_its_conjugate_on_the_module:
+    kind: sampled
+    clauses:
+    - (i) mass entries of c and c* on the module (down from w_4, up from v_4)
+    omits: four frames; the general case is linearity in the coefficients
+  check_conjugate_transforms_like_the_field:
+    kind: sampled
+    clauses:
+    - (i) the conjugate's coefficients transform under U(2) as the field's
+    omits: one sample unitary; the general case is the two-line proof
+  check_sum_rules_in_the_rung_invariants:
+    kind: sampled
+    clauses:
+    - (ii) the difference and sum rules in m, N and Q; (iii) the one-matrix case
+    omits: three complex (alpha, beta) with fixed family matrices; the identities are proved in general
+  check_lift_family_balanced_frame_and_the_c_share:
+    kind: sampled
+    clauses:
+    - (iv) the lift family, the balanced frame, the share of M_u through c and its down-type partner
+    omits: four frames and the balanced frame; the general case is the substitution of the proof
+  check_coupling_is_su2r_covariant_and_per_sector_reading_is_not:
+    kind: sampled
+    clauses:
+    - (i) right-handed generators, their commutation with the weak action and the conjugation, B anti-invariance, the kernel argument
+    omits: the generator matrices and B anti-invariance are exact; commutation relations on one generic complex vector, the general case by linearity
+  check_charged_pair_couples_at_yukawa_strength_under_the_covariant_coupling:
+    kind: sampled
+    clauses:
+    - (v) the charged plane at c_lambda and its coupling ratios under the covariant coupling and the per-sector reading
+    omits: one frame for the plane, four frames and two coupling pairs for the closed forms; the general case is the proof's algebra
+untouched_premises:
+  synthesis.rung-field-level-needed-off-balance-and-not-right-invariant: "cited for the identification of R_1, R_2 and Y as the commutant of the weak su(2) and for the level setting m*; check_coupling_is_su2r_covariant_and_per_sector_reading_is_not recomputes the generators and their relations directly"
+  synthesis.imported-left-right-bidoublet-two-yukawa-couplings: "imported Fact: the standard two-coupling bidoublet structure, cited for comparison; the check computes the mass matrices on the module directly"

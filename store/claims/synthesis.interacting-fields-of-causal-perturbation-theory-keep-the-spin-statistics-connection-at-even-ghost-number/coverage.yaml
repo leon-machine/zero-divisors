@@ -1,0 +1,21 @@
+functions:
+  check_rotation_by_two_pi_is_minus_one_on_spinor_values_and_one_on_tensor_values:
+    kind: sampled
+    clauses: ["(i) the 2 pi rotor is -1, fixing vector and bivector values and negating spinor values"]
+    omits: "the loop of four quarter turns in one plane; five vectors, two bivectors and three spinors; that every closed loop of rotations not contractible in SO(3) lifts to -1 is the standard covering argument in the proof"
+  check_interaction_monomials_are_lorentz_scalars_even_in_spinors_and_ghosts:
+    kind: sampled
+    clauses: ["(i) the interaction monomials are Lorentz scalars with even spinor counts and ghost number zero"]
+    omits: "twelve monomials evaluated on three spinors and fixed sample vectors and scalars, under four exact rotors and the 2 pi rotor; spinor, ghost and antighost counts computed as homogeneity degrees; internal indices and structure constants are scalar coefficients and are not represented"
+  check_feynman_gauge_potential_is_local_only_in_the_krein_form:
+    kind: exact
+    clauses: ["(i) the Feynman-gauge potential has polarisation sum -a.b of degree 0, indefinite, and is local as a commuting field in the indefinite form"]
+    omits: "the polarisation sum on five test vectors (bilinear, so on all by linearity); the bracket factor is the stored locality formula at d = 0, c = 1"
+  check_rotation_by_two_pi_equals_the_grading_exactly_at_even_ghost_count:
+    kind: complete
+    clauses: ["(ii) grading and 2 pi eigenvalue agree exactly when the ghost count is even, in particular at ghost number zero"]
+    omits: "a parity identity: Grassmann parity read in a tower model of the anticommuting factors, the 2 pi eigenvalue computed separately from the rotor acting on products of spinors in Cl(1,3), for all n_psi <= 3 and n_c, n_cbar <= 2; the general count is the parity argument in the proof; five pairs of ghost-even monomials for the anticommutation test"
+  check_first_order_interacting_fields_keep_parity_spin_and_graded_locality:
+    kind: partial
+    clauses: ["(iii) first order: graded Jacobi for even L, parity and 2 pi eigenvalue of [L, A], the light-cone lemma"]
+    omits: "algebraic identities in Cl(6,6) for five homogeneous elements, one even L and one odd L (signed identity holds, even form fails); the light-cone lemma on a rational grid for three spacelike pairs with a control for the hypothesis y0 > z0; higher orders and the distributional definition of retarded products are imported (Dutsch-Fredenhagen Prop. 2 and (2.25); Hollands 2008), not checked"

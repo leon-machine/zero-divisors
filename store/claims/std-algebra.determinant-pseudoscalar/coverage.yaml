@@ -1,0 +1,9 @@
+functions:
+  check_determinant_on_pseudoscalar:
+    kind: sampled
+    clauses:
+    - '"f-bar(I) = det(f) I"'
+    - '"det(fg) = det(f) det(g)"'
+    - '"If f is an isometry, f-bar = Cl(f)"'
+    omits: four matrices (one singular) in three signatures each, multiplicativity of det for one pair,
+      one isometry

@@ -1,0 +1,22 @@
+functions:
+  check_coefficients_with_and_without_lepton_doublet:
+    kind: exact
+    clauses: ["coefficients (41/10, -19/6, -7) and r_0 = 218/115 under (S)", "without (S): coefficients (7/2, -25/6, -7), ratio 46/17"]
+    omits: ""
+  check_trace_normalisations:
+    kind: exact
+    clauses: ["the content's own trace normalisation, the ratio 9/26, gives the ratio 740/289"]
+    omits: "Also reproduces k = 5/3 and 3/8 with the lepton doublet."
+  check_anomaly_without_lepton_doublet:
+    kind: exact
+    clauses: ["without the lepton doublet the [SU(2)]^2 U(1)_Y sum is 1/2 per generation"]
+    omits: ""
+  check_mirror_same_equations_no_sharing:
+    kind: sampled
+    clauses: ["the mirror's one-loop equations are this tower's: from any boundary values at which this tower's couplings fail to meet, the mirror's fail in the same way", "no content of this tower enters the mirror's run and none of the mirror's enters this one's"]
+    omits: "Four sample boundary values plus two built to meet. The mirror is a renamed copy of the listing and the other tower's fields are entered by hand as gauge singlets, so equality of the equations holds by construction (the superselection is the imported Fact)."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The numbers are exact rational computations; the mirror-duplication clause is a by-construction check on samples."

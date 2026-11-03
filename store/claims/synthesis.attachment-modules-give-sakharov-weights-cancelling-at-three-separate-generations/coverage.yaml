@@ -1,0 +1,24 @@
+functions:
+  check_module_character_polar_part:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the closed form against the stored multiplicities for thirty energies and the identity (n+1)(n+2|s|+1) = k^2 - s^2, and the exact Laurent coefficients t^-3, t^-2, t^-1 for s = 0, 1/2, 1, 3/2, 2; the statement for every s is the Hurwitz-expansion argument of the proof"
+  check_dictionary_reproduces_a1:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "a1 per field from the module polar parts (0, -1/6, -2/3 in units of R) against tr(E + R/6) with the Lichnerowicz term computed in Cl(4,0) at two constant curvatures and the vector-with-ghosts count; the Mellin relation between the wave trace and the heat trace, the identification of conformal energy with energy on the unit Einstein static field (a frame-dependent reading, on Weyl-flat fields) and the formula a1 = tr(E + R/6) are in the proof, not computed"
+  check_smooth_cutoff_vacuum_energy:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "exact Laurent polynomials for f = (1 - x^2)^m, m = 2, 3, s = 0, 1/2, 1, 3/2 (fitted on 2m + 5 integer cut-offs and confirmed on four more), the moments int x f and int x^3 f, and the exponential cut-off's polar part for s up to 2; the general C^3 cut-off is the Euler-Maclaurin argument of the proof"
+  check_series_content_cancels:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "N_V = 8 + 3 + 1, sixteen Weyl components per generation, the weighted L^2 and L^4 coefficients for N_g = 1 to 5 and N_S = 0, 4, 8 at m = 2, 3, the exponential cut-off at N_g = 2, 3, 4, fifteen Weyl components per generation (no right-handed neutrino) for N_g = 1 to 6, never zero and -1/8 at N_g = 3, m = 2, and a 21-dimensional gauge algebra at three generations; generations as separate slot modules is the reading stated in the claim, not computed; the identification of the L^2 order with the Einstein-Hilbert term is argued in the reading"
+  check_sharp_floor_cutoff_is_not_local:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "the exact L^3 and L coefficients of the sharp cut-off (k < L) and the L^2 edge terms of f = 1 - x^2 for s = 0, 1/2, 1, and the weighted values for the series' content with four rung scalars; that odd powers match no local invariant is argued in the reading"
+untouched_premises:
+  synthesis.imported-sakharov-induced-gravity-coefficients: "imported coefficients cited as the standard form of what the checks compute from the modules and the Lichnerowicz term; no check calls them"
+  synthesis.imported-luscher-mack-conformal-energy-on-the-einstein-static-field: "imported identification of conformal energy with energy on the unit Einstein static field, used in the dictionary of (ii); the checks compute with the module energies and do not call it"

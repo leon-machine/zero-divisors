@@ -1,0 +1,9 @@
+Read in Gauge Theory Gravity: the metric $g$ below is the derived metric of the gravitational field $(\hb, \Omega)$ on flat spacetime, the manifold is the invertible region, and the tractor connection is the flat-space $\Cl(2,4)$ gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}; the index computation below is its reading in the splitting of $g$ (Fact \claimref{synthesis.imported-gtg-dictionary}).
+
+(i) Along any direction $a$, with primes denoting the slots of \claimref{interior.imported-tractor-connection},
+\[
+\tfrac12\,\partial_a Q(T) \;=\; \sigma'\rho + \rho'\sigma + \mu^b\mu'_b
+= (\nabla_a\sigma - \mu_a)\rho + (\nabla_a\rho + \Sch_a{}^b\mu_b)\sigma + \mu^b(\nabla_a\mu_b + g_{ab}\rho - \Sch_{ab}\sigma).
+\]
+The genuine derivative terms assemble to $\tfrac12\partial_a(2\sigma\rho + |\mu|^2)$; the remainder is $-\mu_a\rho + \mu_a \rho + \Sch_a{}^b\mu_b\sigma - \Sch_{ab}\mu^b\sigma = 0$, the two Schouten terms being one contraction written with the index raised on either side, so that no symmetry of $\Sch$ is needed.
+(ii) Tracing $\Sch_{ab} = c\,g_{ab}$ gives $4c = \tfrac12(R - \tfrac{4R}{6}) = \tfrac{R}{6}$, so $c = \tfrac{R}{24}$; substituting back, $\Ric_{ab} = \tfrac{R}{6}g_{ab} + 2c\,g_{ab} = \tfrac{R}{4}g_{ab}$. If $c = 0$ then $R = 24c = 0$ and hence $\Ric = 0$; the converse is immediate.

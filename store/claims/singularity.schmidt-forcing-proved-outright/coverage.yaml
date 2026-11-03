@@ -1,0 +1,18 @@
+functions:
+  check_invariance_forces_one_eigenspace:
+    kind: complete
+    clauses: ["a unit vector invariant up to phase under e^{itG} lies in one eigenspace of G"]
+    omits: "enumerates all 15 nonempty supports in the number basis with one generic coefficient choice (invariance up to phase depends only on the support); the group is probed at the single point u = (3+4i)/5, which is not a root of unity and gives three distinct eigenvalues"
+  check_cyclic_separating_only_on_the_number_basis:
+    kind: complete
+    clauses: ["cyclic and separating for the pair factor", "Omega = cos(theta)|00> + sin(theta)|11> with cos(theta) sin(theta) != 0"]
+    omits: "the determinant a^2 b^2 of the orbit is checked at four sample (a, b), not symbolically; rank on each of the 15 supports uses one generic coefficient choice, and the conclusion that only {|00>,|11>} is both invariant and cyclic-separating follows from that finite enumeration"
+  check_phase_convention_gives_cos_sin:
+    kind: sampled
+    clauses: ["up to a global phase and a phase convention on |11>", "cos(theta) = |a|, sin(theta) = |b|"]
+    omits: "two pairs (a, b) only; the general polar-decomposition step is not enumerated"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the classification over the 15 supports is exhaustive and the remaining identities are checked at samples"

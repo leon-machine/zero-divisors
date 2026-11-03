@@ -1,0 +1,18 @@
+functions:
+  check_signature_constant_on_physical_side:
+    kind: sampled
+    clauses: ["h is nondegenerate of constant signature (p+1, q+1) on the physical side, including Sigma"]
+    omits: "one hand-built polynomial collar family per (p,q), p >= 1, n <= 5, two couplings with mu nu > 0, three tau and four bump values; existence for an arbitrary tame wall with a smooth bump, the triviality w_1(L) = 0 and equality with G + H outside the collar (beta = 0 only) are not tested"
+  check_wrong_coupling_sign_fails:
+    kind: sampled
+    clauses: ["none: a control showing that mu nu > 0 is required, not asserted by this statement"]
+    omits: "mu nu < 0 gives signature (p, q+2) at tau = 1/100 and at the wall; establishes no clause of the statement"
+  check_fibres_locally_free_and_physical_type:
+    kind: sampled
+    clauses: ["C is locally free of constant rank 2^(n+2)", "every fibre is isomorphic to Cl(p+1,q+1)", "physical case Cl(2,4) = Mat_4(H)"]
+    omits: "rank 2^(n+2) checked at three signatures and two points only; the fibre-to-Cl(p+1,q+1) identification rests on the signature from the first function; the Cl(2,4) = Mat_4(H) computation (centre R, idempotent with dim Af = 16, quaternion corner) is exact but simplicity is inferred"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Constant signature (p+1,q+1) on the physical side and at the wall is verified in a generated collar model for all (p,q) with n<=5 and two good couplings; the general existence statement (arbitrary tame wall, gluing outside the collar) and Cl(p+1,q+1) identification beyond signature are only sampled.

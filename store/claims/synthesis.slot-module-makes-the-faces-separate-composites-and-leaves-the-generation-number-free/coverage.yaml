@@ -1,0 +1,23 @@
+functions:
+  check_degree_one_slot_space_is_the_doublet:
+    kind: complete
+    clauses: ["(1)"]
+    omits: "the polynomial irreducibles of GL(2) of degree 0 to 4 enumerated by highest weight with their torus weights and Weyl symmetry; in degree one only the doublet; that every polynomial representation is a sum of these irreducibles is cited in the proof"
+  check_shared_space_breaks_the_slot_module_for_one_face:
+    kind: complete
+    clauses: ["(2)"]
+    omits: "all 64 exterior states of Lambda(C^3 + C^3) for each of the three faces: the states on which the face's centre does not count the slot number, the weight multiplicities (each exactly twice that of the face module), the two slot vacua, the even half carrying the face's particle half once and antiparticle half once, and the injective map x -> s_o ^ x by exact rank"
+  check_separate_copies_are_anomaly_free_for_every_number:
+    kind: exact
+    clauses: ["(3)"]
+    omits: "the 16 particle-half states of one slot module with Y = (3n - 2k)/6; the four anomaly sums of the stored Fact and the colour cubic for n = 1 to 10 copies, and the doublet count 4n; a wrong hypercharge normalisation is anomalous; the statement for every n is the linearity in the proof"
+  check_asymptotic_freedom_bounds_the_number:
+    kind: exact
+    clauses: ["(4)"]
+    omits: "Dynkin sums of one copy from its states; b_3 and b_2 for n = 1 to 12 and n_h = 1, 2; for larger n the coefficients are increasing in n (proof)"
+  check_face_space_is_the_dual_triplet:
+    kind: sampled
+    clauses: ["(5)"]
+    omits: "in Cl(3,0): the face blades span the bivectors, three sampled bivectors square without a grade-four part, the cofactor identity for two rational matrices on all three faces; C(N,2) = N only at N = 3 for N < 30 (the quadratic has roots 0 and 3); the reading of the face space as the generation labels is an argued reading under a further family-symmetry hypothesis, not checked"
+untouched_premises:
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "the premise licenses the covariant-gauge running coefficients of the stored theorem that clause (4) specialises; the check computes the Dynkin sums of the content, not anything of the form"

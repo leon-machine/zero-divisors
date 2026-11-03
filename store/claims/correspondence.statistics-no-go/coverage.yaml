@@ -1,0 +1,18 @@
+functions:
+  check_trace_argument_in_finite_dimensions:
+    kind: sampled
+    clauses: ["no nonzero finite-dimensional representation", "no unital embedding into a finite-dimensional algebra"]
+    omits: "the proof is the trace argument; the check verifies its two ingredients, tr(XY - YX) = 0 for three sample rational pairs of sizes 2, 3, 4 and tr(hbar 1_U) = hbar dim U for dim U = 1..6, not arbitrary finite dimension"
+  check_cl24_commutators_have_no_scalar_part:
+    kind: exact
+    clauses: ["in particular none into Cl(2,4) or Cl(2,4)_C, of dimension 64"]
+    omits: "Cl(2,4)_C follows by linearity and is not computed over Q(i); all 4096 ordered blade pairs have commutators with zero scalar part and tr L_x = 64 <x>_0 on all 64 blades"
+  check_ladder_pairs_satisfy_car_in_cl24:
+    kind: exact
+    clauses: ["whole"]
+    omits: "tests no clause of the statement; it checks the contrast that two real and one complex ladder pair with {f, f*} = 1 exist in Cl(2,4)_C, so the anticommutator escapes the trace argument"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The 64-dimensional case is checked exhaustively; the general finite-dimensional claim is the proof's trace argument, here only sampled."

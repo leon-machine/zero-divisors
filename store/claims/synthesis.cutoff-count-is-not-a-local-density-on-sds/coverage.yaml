@@ -1,0 +1,18 @@
+functions:
+  check_cutoff_volume_rates:
+    kind: sampled
+    clauses: [(i)]
+    omits: mu_E = 12 pi M from exact series in rho = sqrt(r) for M in {2, 8, 9/2, 25/2} (2M a square) and Lambda in {0, 1/100, 3/7, -1/5}, with Lambda first entering at relative order r^3 checked for one (M, Lambda); the (C1) slice identity 16 r_c^4 A = (8M)^2 (1 - r_c/2M + Lambda/3) at nine (r_c, Lambda); general M and Lambda are not enumerated.
+  check_count_over_hole_period:
+    kind: sampled
+    clauses: [(ii)]
+    omits: The ratio M/(kappa_b r_b^2) = u/(3u-2) = 1/(1 - 2 Lambda/(3 w_h)) is exact at five r_b with M = 1 (values 1, 10/9, 2, 10, 100, increasing in Lambda) and the Nariai growth at five approach points; the density is the (C2') calibration nu' = 1/(24 pi), so "leading order for (C1) and (C2)" is not computed; the entropy-per-area form 1/4 over (1 - 2 Lambda/3 w_h) is the same number.
+  check_no_horizon_period_gives_area_law:
+    kind: sampled
+    clauses: [(iii)]
+    omits: 'Five rational SdS families with both horizons rational: needed epoch 2 pi r_b^2/M and kappa_c < kappa_b < M/r_b^2; plus an inequality over 192 ratios r_c/r_b; no general proof of kappa_b < M/r_b^2.'
+  check_mean_entropy_forced_down:
+    kind: sampled
+    clauses: [(iv)]
+    omits: Only the ratio <s>_SdS/<s>_0 = (3u-2)/u (values 1, 9/10, 1/2, 1/10 at four r_b); the "(Q-w)" check is arithmetic kb*k/kb = k and says nothing independent; the monotonicity of s(x) forcing larger weights, the failure of every weight law of the store (including the zero-weight and kappa k cases), and the closing escape discussion are not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The volume rates and the count ratios are exact at sample masses; clause (v) and the weight-law consequences in (iv) have no computation.}

@@ -1,0 +1,29 @@
+functions:
+  check_complexified_algebra_is_m8_on_fock_space:
+    kind: exact
+    clauses:
+    - '"Cl(V_C) = M_8(C) acts irreducibly on Lambda W; chirality halves of dimension 4"'
+    omits: ''
+  check_klein_identification_and_chart:
+    kind: sampled
+    clauses:
+    - '"V_C = Lambda^2 CS, Q(P) = epsilon(P ^ P)"'
+    - '"a vector is null exactly when its bivector is decomposable"'
+    - '"in the chart the bivector of S_omega is n_infinity"'
+    omits: Pf(M_v) = -Q(v) and rank 2 iff null are checked on ten sample vectors, not as a polynomial identity; injectivity and the chart planes are exact; Spin-equivariance of the identification is not tested
+  check_reality_structure_and_twistor_form:
+    kind: sampled
+    clauses:
+    - '"the reality structure pairs CS with CS-"'
+    - '"the twistor form is Hermitian of signature (2,2), preserved by Spin(2,4)"'
+    omits: The intertwining kappa c(v) = c(conj v) kappa is checked at ten sample vectors v (not a real basis of V_C); kappa^2 = -1, hermiticity, signature (4,4) of the realification and anti-hermiticity of the fifteen bivectors are exact; the isomorphism Spin(2,4) = SU(2,2) is not tested
+  check_invariant_pairing_is_the_top_degree_pairing:
+    kind: exact
+    clauses:
+    - '"the Spin-invariant bilinear pairing is the top-degree pairing, pairing CS with CS-, with the reversal sign"'
+    omits: Bivector invariance alone leaves a 2-dimensional space (one scale per off-diagonal block); the single line of B appears only when the vectors are also required to act symmetrically, so uniqueness of "the" pairing needs that convention
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Algebra, pairing and form are exact finite computations in the three-mode Fock model; two statements are tested at sample vectors, which the docstring says for the Pfaffian.

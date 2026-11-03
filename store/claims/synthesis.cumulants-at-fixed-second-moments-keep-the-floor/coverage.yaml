@@ -1,0 +1,10 @@
+functions:
+  check_number_gram_is_family_density:
+    kind: exact
+    clauses: [(i)]
+    omits: The matrix identity Theta_k Theta_l = (1/4)(delta_kl 1 - e_l e_k^T x 1) on the six modes is exact; the consequence 2N_kl = (1/2)(delta_kl n - rho_lk) is verified on four exact Fock states with pinned values, not as an operator statement over all states; the inequalities H >= 1 + (n 1 - rho^T)/2 and lambda_min bound are not asserted here (only the skeleton equality case in the next function).
+  check_floor_at_fixed_second_moments:
+    kind: sampled
+    clauses: [(ii), (iii)]
+    omits: '(ii): the P-coefficient identity x(5+6x) = 4x(1+x) + 2x^2 + x and the number-bound equality 1 + (n - rho_max)/2 = 1 + x hold at three x; H - (1+x)1 >= 0 is shown for two constructed Gram matrices K = G^T G (positive by construction), so K(psi) >= 0 for every state (the connected Gram being PSD) is not computed; (iii): the quoted lower bounds (lambda_tau > 9.31e9, skeleton top < 3.56e6, 7,860 times 2 x^2, 3.05e7) are rigorous rational inequalities from interval inputs for m_e, m_mu, m_tau and x* = 769.3325, exact for those inputs.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The algebraic identities and numerical thresholds are reproduced exactly; the positivity of the connected part for arbitrary states is assumed by construction.}

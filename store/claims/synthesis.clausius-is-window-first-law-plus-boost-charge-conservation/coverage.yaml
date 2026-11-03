@@ -1,0 +1,26 @@
+functions:
+  check_second_quantisation_carries_conservation:
+    kind: sampled
+    clauses: [(1)]
+    omits: The commutator rule d Gamma(a), d Gamma(b) is checked for one pair of 3x3 rational matrices and the iff [v, w + k] = 0 for two couplings (one resonant, one detuned) on three modes; no general proof.
+  check_window_identity_and_joint_identity:
+    kind: sampled
+    clauses: [(2), (3)]
+    omits: 'Three parameter sets (r, p, cos) for one window mode and one resonant matter mode with diagonal product initial states, exact in prime logarithms: Delta S_F = beta dQ - D(rho_F''||rho_I), the joint-entropy identity with mutual information and the balance under (J) hold; nonnegativity of the defect (Klein), "second order in the change", the inequality Delta S_F <= dQ/T and general windows or non-diagonal states are not computed.'
+  check_detuned_coupling_breaks_clausius:
+    kind: sampled
+    clauses: [(4)]
+    omits: 'One detuned parameter set (r_F = 3, r_m = 7): the window''s first law holds exactly and the finite-transfer coefficients ln(r_F) dn and ln(r_m) dn differ (the assert is that the two log vectors are unequal); the statement''s first-order expansion in the coupling is not extracted, and the conclusion that (J) does not follow from the window''s state is read from this single example.'
+  check_zero_weight_window_absorbs_no_heat:
+    kind: sampled
+    clauses: [(5)]
+    omits: 'One model (r = 1, p = 1/9, cos = 3/5): Delta S_F = -D(rho_F''||rho_I) < 0 and ln 2 per mode; "delta Q = 0 for every process under (J)" is seen only because the Boltzmann factor is 1, and the detuned case gives a zero first-order window coefficient against ln 5 dn; no general process.'
+  check_horizon_boost_charge_chiral:
+    kind: sampled
+    clauses: [(6)]
+    omits: Exact polynomial integration for two chiral modes with a (1 - v^2)^2 envelope (values -512/1155 and -1024/3465); the identity is an integration by parts for general psi, and the second quantisation of the generator is not tested.
+  check_continuum_carrier_boost_charge:
+    kind: sampled
+    clauses: [(7)]
+    omits: 'Exact integration over [0,1] for three polynomial modes with a u^2 (1-u)^2 envelope: the boost generator acts as -kappa w on u^{-1/2 + i w} at three w, the flux bilinear equals <f, h g> and is Hermitian, and beta dGamma(h) = 2 pi times the kappa = 1 flux for three kappa (2 pi as a rational stand-in); the first law on the type III algebra comes from the imported Fact and is not computed; the sheet-sharing remark is not tested.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Each numbered clause (1)-(7) has a finite exact model; clause (2) first-order and nonnegativity claims and the closing Einstein-derivation consequence are not computed. The module docstring names the result "...boost-charge-deposit", an older id.'}

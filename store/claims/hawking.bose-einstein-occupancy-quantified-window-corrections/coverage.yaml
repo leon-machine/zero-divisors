@@ -1,0 +1,24 @@
+functions:
+  check_detailed_balance_identity:
+    kind: exact
+    clauses: ["(1)"]
+    omits: "the identity is verified as a rational-function identity in a = x^{-k} (at four values of b = x^{-m}) and in b (at four values of a), not as one two-variable identity, plus exactly at every k in [-12, 12], m <= 5 for four values of x; a wrong-sign control fails"
+  check_bilateral_sum_is_planck_factor:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "windows K = 10, 20 with m <= 4 and four values of x: checks the telescoping identity and the deficit bound 0 < m - tele <= 2m x^{K-m+1}; the bilateral limit K -> infinity itself (the equality to m/(x^{-m} - 1)) is not computed, it follows from the bound"
+  check_wick_formula_on_window:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "8-mode window, m = 1, 2, 3, two values of x; checks the Wick formula <a_m^dagger a_m> = sum n_{k+m}(1 - n_k) on the window product state, not the infinite-volume expectation"
+  check_window_tail_bound:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "K = 12, 18, 25, m <= 3, four values of x; compares the window sum with m/(x^{-m} - 1) (the bilateral value) and checks positivity and the bound 2m x^{K-m}/(1-x)"
+untouched_premises:
+  hawking.imported-s-wave-bosonic-sector: "the linear s-wave weight assignment is a modelling hypothesis of the statement; the check uses only the resulting occupancies n_k = 1/(x^{-k} + 1)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the three clauses are tested exactly at chosen x, m, K; the bilateral limit in (2) is obtained from the tail bound rather than computed"

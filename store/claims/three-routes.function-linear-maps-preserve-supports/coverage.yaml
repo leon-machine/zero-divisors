@@ -1,0 +1,18 @@
+functions:
+  check_function_linear_maps_are_bundle_maps:
+    kind: sampled
+    clauses: ["D is C^infinity(U)-linear (commutes with multiplication by functions)"]
+    omits: "Finite point sets N = 2, 3, 4 with free modules of rank 1, 2 over the point-indicator functions; shows function-linear implies block diagonal, an intermediate step, not the support statement."
+  check_supports_are_preserved:
+    kind: partial
+    clauses: ["supp(Ds) is contained in supp(s) for every section s"]
+    omits: "Algebraic core Ds = f Ds with f the indicator of supp(s) on finite point sets (264 section cases); the bump-function argument on a smooth manifold, general sheaves of modules, and sections with non-closed supports are not tested."
+  check_hopping_is_not_function_linear:
+    kind: sampled
+    clauses: ["control: maps with a cross component move support and are not function-linear"]
+    omits: "Control only; every matrix unit E_ij in the same finite models, no clause of the lemma itself."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring states that the analytic part has no finite content and checks only the algebraic core, which the asserts do; the lemma itself is a sheaf-theoretic statement and is covered only through that core."

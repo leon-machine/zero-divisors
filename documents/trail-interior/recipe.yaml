@@ -1,0 +1,26 @@
+doc: trail-interior
+title: Inside the black hole
+author: Leon Butler
+level: lay
+spine:
+- interior.kasner-form-interior
+- interior.exact-parallelism-convergence-rate
+- interior.interior-connection-exactly
+- interior.weighted-limit-theorem
+- interior.schwarzschild-de-sitter-weighted-limit
+- interior.complex-factorisation-location-ring
+- interior.complex-scale-inverse-cube-killing-spinor
+- interior.filtration-cauchy-horizon-read-literature
+- interior.duality-monodromy-fibration-over-ring
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

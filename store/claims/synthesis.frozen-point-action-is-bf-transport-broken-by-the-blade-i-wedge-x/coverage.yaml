@@ -1,0 +1,37 @@
+functions:
+  check_breaking_term_lives_on_the_blade:
+    kind: complete
+    clauses:
+    - (i) eps(I, V, B, B') = -<B iota B'>_0 on every pair of basis bivectors, symmetric, Stab(I, V)-invariant and odd under the e1 reflection
+    - (i) I ^ V = I ^ X = ninf ^ n0 with square 1, iota = (I ^ V) I6 with square -1
+    omits: finite linear algebra at Lambda = 3/4 and -3/2 (one per sign) for the form; the blade identity at three values of Lambda, linear in Lambda by construction
+  check_eliminating_b_gives_the_frozen_point_integrand:
+    kind: sampled
+    clauses:
+    - (ii) B_L = 2 M^{-1} F_L is the stationary point, unique on the Lorentz block (rank 36), with value (a eps(I,V,F,F) + b <F^F>)/(a^2+b^2)
+    - (ii) a translational component of F leaves a B-independent nonzero gradient (multiplier constraint)
+    - (v) rescaling B by lambda multiplies the value by lambda^2
+    omits: the value identity is checked on one fixed integer table of Lorentz-block field strengths and four (a, b); it is a pointwise quadratic identity proved in the text; the rank is exact
+  check_coupling_is_sixteen_pi_over_n_squared:
+    kind: sampled
+    clauses:
+    - (v) sum omega eps(I,V,R,e^e) = -(1/2) R det and sum omega eps(I,V,e^e,e^e) = 6 det, so (1/Q(I)) eps(I,V,F,F) = (3/Lambda) eps(I,V,R,R) - (R - 2 Lambda) det
+    - (ii) the parity-even pairings <e^e ^ e^e> and <R ^ e^e> vanish on torsion-free fields
+    - (v) |alpha| N^2 / pi = 16 a^2/(a^2+b^2) from the computed Einstein-Hilbert coefficient
+    omits: de Sitter and one generic Bianchi I field at three values of Lambda; the general case follows from invariance (only multiples of the scalar curvature), argued in the proof; the factors pi and G enter through the stored normalisation, not the check
+  check_bf_sector_is_pure_transport_and_torsion:
+    kind: sampled
+    clauses:
+    - (iv) B = 0 on de Sitter and B_L = (2/alpha) iota W, nonzero, commuting with I and V, on a Lambda != 0 field with Kasner Weyl part
+    - (iii) the vacuum connection equation has rank 24 on the torsion components
+    omits: one de Sitter and one Kasner sample for (iv); the rank in (iii) is exact
+  check_translational_term_restores_unconstrained_torsion:
+    kind: sampled
+    clauses:
+    - (iii') the translational form <B_V B'_V>_0 is Stab(I, V)-invariant and nondegenerate
+    - (iii') with c <B_V ^ B_V>_0 added, B_V = 2 F_V/c and the value is S_ab + (1/c) <F_V ^ F_V>_0, a nonzero torsion-squared term
+    omits: one fixed field strength with a translational block, two (a, b), c = 3 and -1/2; the identity is a pointwise quadratic computation proved in the text; the matter-sector consequence (Einstein-Cartan as c grows, Hilbert source at the Lorentz-block restriction) is argued from the imported coupling
+untouched_premises:
+  dark-energy.imported-macdowell-mansouri-theorem-stelle-west: the imported functional whose frozen-point form the checks build directly
+  dark-energy.imported-henneaux-teitelboim-promotion: cited only in the argued reading on the variable conjugate to alpha
+  synthesis.promoted-norm-weyl-clock-flat-weight: cited only in the argued reading on the variable conjugate to alpha

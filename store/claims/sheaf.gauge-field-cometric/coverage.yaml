@@ -1,0 +1,20 @@
+functions:
+  check_unipotent_gauge_field_invertible_off_zero:
+    kind: exact
+    clauses: ["P^2 = 0", "h-bar is invertible in closed form at every r > 0, horizon included"]
+    omits: "exact in u but only m = 1, 2, 3"
+  check_induced_metric_is_painleve_gullstrand:
+    kind: exact
+    clauses: ["the induced metric is ds^2 = dt^2 - (dr + beta dt)^2 - r^2 dOmega^2"]
+    omits: "exact in u but only m = 1, 2, 3, at the equator; the cometric is also checked, which the statement does not assert"
+  check_degeneration_through_a_null_kernel:
+    kind: exact
+    clauses: ["h-bar fails at r = 0 through a null kernel"]
+    omits: "exact in u but only m = 1, 2, 3; the rank-one limit of eps h-bar and the limit metric are computed, 'null' is read as the radical of the limit form"
+untouched_premises:
+  sheaf.gauge-field-cometric-external: "provenance import of the literature statement (ButlerT5 Props. 2.2-2.6, DoranLasenby2003); the check recomputes the finite core directly and calls premise() only for the singularity-paper imports"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The finite core (P^2=0, closed-form inverse, PG line element, null-kernel failure at r=0) is exact in u for masses 1, 2, 3; the provenance and the gauge-theory background are cited, not computed.

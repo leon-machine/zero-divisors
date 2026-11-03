@@ -1,0 +1,29 @@
+functions:
+  check_components_per_rung_sector_and_chirality:
+    kind: partial
+    clauses:
+    - (i) "one slot component per null momentum"
+    - (iv) "binom(n, j) components"
+    - '"every slot component lies in CS or CS-"'
+    omits: The n-rung counts for n = 3, 4 are a combinatorial identity on itertools.combinations; no n-rung module is built. Only n = 2 is a module computation (counts 1, 2, 1 and one pair parity per rung sector)
+  check_grip_mass_of_each_sector:
+    kind: sampled
+    clauses:
+    - (i) "null, future-directed single momenta"
+    - (ii) "m^2 = 0 on a single component"
+    - (iii) "m^2 = 2|<pi1 pi2>|^2, zero exactly when proportional"
+    - (iv) "m^2 = 2 sum_{a<b} |<pi_a pi_b>|^2"
+    omits: Six free sample spinors in Gaussian rationals (not extracted from module states), k = 3, 4, 6 components, two proportional pairs; dual conformal spinor components and conjugate sectors are not separately tested
+  check_sector_labels_under_s:
+    kind: exact
+    clauses:
+    - (ii) "sectors (0,0), (0,2), (2,0), (2,2) are the species nu^c, u^c, e^c, d^c"
+    - (iii) "sectors (1,1), (1,3) are Q and L"
+    omits: Hypercharges are compared as sorted multisets per family of sectors, so which sector is which named species is not asserted individually; conjugates are not tested
+untouched_premises:
+  standard-model.imported-fock-model-twistor-space: literature restatement; the check builds the five-mode Fock module directly
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Module counts, spinor mass identities and sector labels are exact; the general-n and general-spinor statements are samples, as the docstring states.

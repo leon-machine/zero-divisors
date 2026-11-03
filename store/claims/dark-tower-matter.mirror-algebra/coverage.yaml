@@ -1,0 +1,18 @@
+functions:
+  check_even_isomorphism_reversed_signature:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "multiplicativity of e_K -> (-1)^(|K|/2) e_K on every pair of even blades for the 27 signatures with 1 <= p + q <= 6, including Cl^0(3,1) = Cl^0(1,3) and Cl^0(4,2) = Cl^0(2,4); the statement is for every signature"
+  check_pseudoscalars:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: ""
+  check_full_algebras_differ:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the two instances named in (i) and both pseudoscalars are exact; the general-signature claim is checked for p + q <= 6"

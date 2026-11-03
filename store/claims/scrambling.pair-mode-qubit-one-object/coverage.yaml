@@ -1,0 +1,23 @@
+functions:
+  check_two_pairs_satisfy_car_in_cl24:
+    kind: exact
+    clauses:
+    - Cl(2,4) carries two ladder pairs (v_i, w_i) with the CAR relations
+    omits: ''
+  check_no_third_pair:
+    kind: partial
+    clauses:
+    - Cl(2,4) carries exactly two such pairs, its Witt index
+    omits: the creation span W is shown maximal isotropic (W^perp / W negative definite) and no 3-dimensional totally isotropic subspace is found among vectors with coefficients in {-1,0,1}; that every maximal isotropic subspace has dimension 2 is Witt's theorem, not recomputed
+  check_pair_is_one_qubit:
+    kind: exact
+    clauses:
+    - one creation and one annihilation operator, a two-dimensional state space, one qubit, maximal entropy ln 2 nats; the count of pairs is the count of modes
+    omits: the identification of the tower pair with the singularity paper's fermionic mode and with the exceptional-set ladder pair is a statement of sameness, not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The algebra and entropy arithmetic are exact; the sameness of the three descriptions is a reading, not tested.
+untouched_premises:
+  std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"

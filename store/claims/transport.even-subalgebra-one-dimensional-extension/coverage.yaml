@@ -1,0 +1,23 @@
+functions:
+  check_images_satisfy_the_relations:
+    kind: sampled
+    clauses:
+    - e_i nu are even, anticommute, and satisfy the relations of Cl(p,q) (nu^2 = -1) or Cl(q,p) (nu^2 = +1)
+    omits: Forty (p,q,nu^2) cases with 1 <= n <= 5; the negative control (not the other signature) is for p != q
+  check_map_is_a_homomorphism:
+    kind: sampled
+    clauses:
+    - the map extends to an algebra homomorphism (multiplicative on blades)
+    omits: All blade pairs but only n <= 4
+  check_bijective_onto_even_subalgebra:
+    kind: sampled
+    clauses:
+    - 'the image is the whole even subalgebra Cl^0(p,q+1) respectively Cl^0(p+1,q): an isomorphism'
+    omits: Rank 2^n equals the even blade count, n <= 5
+untouched_premises:
+  std-algebra.existence-uniqueness: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Relations, multiplicativity and bijectivity are tested exactly for n <= 5 (n <= 4 for multiplicativity).

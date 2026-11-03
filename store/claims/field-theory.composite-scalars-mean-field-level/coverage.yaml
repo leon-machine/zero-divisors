@@ -1,0 +1,23 @@
+functions:
+  check_block_spectrum_and_dispersion:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "four (K, mu) with rational E (complex mu included): H* = H, ad_H^2 = K^2 + |mu|^2 on w_a, v_a, w_c, v_c and the spectrum {K - E, K, K, K + E} via explicit eigenvectors; the dispersion E^2 = K^2 + m^2 for mu = m B rests on |B(f(k), f(-k))|^2/(alpha alpha) = 1 at six null directions, not for all k"
+  check_pairing_tower_threshold:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "n_b = 2, 3 blocks at four (n_b, K, G) triples: H_4 self-adjoint, commutes with the axial number, the (P*)^n vacuum states are eigenstates of energy 2Kn - G n(n_b - n + 1), and a negative pair energy occurs iff G > 2K/n_b (both sides present among the four); the mean-field energy is pinned exactly at five sample pair amplitudes for one coupling above G_c (minimum away from zero), at G_c (equal to n_b (E - K)^2/(2K), zero only at Delta = 0) and at 0.9 G_c (positive), which is still weaker than a derivation of G_c as the mean-field threshold for every amplitude"
+  check_gap_equation:
+    kind: sampled
+    clauses: ["(3) <w_a w_c> = -mu^*/(2E) in the block ground state"]
+    omits: "three (K, mu); the expectation is exact, but 'the fermion mass is G times the pair condensate' (self-consistency mu = G <condensate>) is not itself computed"
+  check_axial_phase_flat_direction:
+    kind: sampled
+    clauses: ["(4) U H(mu) U* = H(mu e^(-2 theta I4)) with U inner and unitary"]
+    omits: "one phase e^(theta I4) = (3 + 4 I4)/5 and three (K, mu); the 'exactly flat mean-field energy direction' follows from the conjugation and is not computed as an energy scan"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each clause is verified exactly at sample parameters; the mean-field threshold is the loosest check (five pair amplitudes) and the gap-equation self-consistency is not computed. 2026-10-23 weak-checks: check_pairing_tower_threshold now pins the mean-field energies at the five samples exactly (by hand, c = 1) at G above, at and below G_c, in place of sign tests; at G_c they equal n_b (E - K)^2/(2K)."

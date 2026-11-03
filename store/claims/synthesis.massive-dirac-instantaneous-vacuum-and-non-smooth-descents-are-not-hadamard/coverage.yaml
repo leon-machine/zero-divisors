@@ -1,0 +1,28 @@
+functions:
+  check_pauli_two_level_bloch_form:
+    kind: complete
+    clauses: ["setting: I = s1 s2 s3 central with I^2 = -1, H^2 = k^2 + M^2, (ab - ba)/2 = I (a x b), so i u' = H u is s' = 2 h x s"]
+    omits: "the commutator identity is checked on all basis pairs (complete by bilinearity); H^2 at three rational points; the reduction of the Dirac field on a Robertson-Walker field to the two-level system is cited, not checked"
+  check_adiabatic_series_solves_the_bloch_equation:
+    kind: partial
+    clauses: ["(i) c_1 = M s3, c_2 = -M^2/2 s1 + M_1/2 s2", "(i) solvability, unit norm, equation residual and weight homogeneity of the series"]
+    omits: "exact symbolic jet polynomials to order 9; orders above 9 and uniqueness are proved in the text by induction, not checked"
+  check_instantaneous_vacuum_differs_at_order_k_minus_two:
+    kind: partial
+    clauses: ["(ii) h/|h| agrees with s_ad through order 1 and differs at order 2 by M_1/2 s2", "(ii) 1 - s_ad.h/|h| = M_1^2/(8k^4) + (M_2^2/32 - M_1 M_3/16 - 3 M^2 M_1^2/8) k^-6 + O(k^-8)", "(ii) |beta_k|^2 = M_1^2/(16 k^4) + O(k^-6)", "(i) every c_j with j >= 1 vanishes at m = 0"]
+    omits: "exact through order 9; the logarithmic divergence is read off the leading power and the dyadic-shell bound M_1^2/32 is computed, the integral is not; the Hadamard conclusion is given Hollands 2001 and the smooth-difference Fact, argued in the text"
+  check_deposits_diagonal_over_the_instantaneous_vacuum_keep_the_gap:
+    kind: partial
+    clauses: ["(ii) every deposit diagonal over the instantaneous vacuum has the sigma_2 gap M_1/(4k^2) + O(k^-4) against the adiabatic state, whatever its occupations"]
+    omits: "exact through order 9 at five values of t = n_+ + n_- - 1 (including -1, 0, 1); independence of t for all t follows because h/|h| has no sigma_2 part, which is checked at every order; the non-Hadamard conclusion (pseudolocality, monotone convergence) is argued in the text"
+  check_jump_law:
+    kind: partial
+    clauses: ["(i) the only monomial of c_(n+1) containing M_n is lambda_n M_n v_n with |lambda_n| = 2^-n and the recursion lambda_n v_n = -(1/2) lambda_(n-1) s1 x v_(n-1); M_n absent below", "(iii) |beta_k|^2 = (Delta M_n)^2/(2k)^(2n+2) + O(k^(-2n-3))"]
+    omits: "the coefficient law for n <= 8 and the shifted series for every n <= 8, the 1 - s.s expansion for n <= 3 (2n + 2 <= 9); all n by the induction in the text; the moments and the non-Hadamard conclusion are argued in the text"
+  check_stored_sudden_start_differs_from_bunch_davies_unboundedly:
+    kind: sampled
+    clauses: ["(iv) per-mode deficits z^-2 in <chi^2> and z^-4/2 in the energy, |beta|^2 = z^-4/4"]
+    omits: "identities of Laurent polynomials of degree at most 8 in 1/z checked at 11 rational points (9 determine them); the logarithmic divergence of the mode sums is read off the powers; the Hadamard conclusion (infrared-regularised Bunch-Davies comparison state, smooth difference) is argued in the text"
+untouched_premises:
+  synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard: 'imported theorem (Hollands: adiabatic states of infinite order are Hadamard) supplying the Hadamard comparison state in the proof of (ii) and (iii); nothing is computed from it'
+  synthesis.imported-ford-parker-infrared-divergence: 'imported fact (infrared divergence of the massless Bunch-Davies state) cited in (iv) for the need of an infrared-regularised comparison state; nothing is computed from it'

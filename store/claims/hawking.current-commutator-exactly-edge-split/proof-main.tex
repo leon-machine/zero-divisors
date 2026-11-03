@@ -1,0 +1,14 @@
+The fermionic bilinear commutator is $[\psi_a^\dagger\psi_b,\ \psi_c^\dagger\psi_d] = \delta_{bc}\,\psi_a^\dagger\psi_d - \delta_{ad}\,\psi_c^\dagger\psi_b$, an instance of the CAR (\claimref{std-algebra.witt-basis-car}). With $a_m^\dagger = \sum_{l=1}^{L-m}\psi_{l+m}^\dagger\psi_l$:
+\[
+[a_m, a_m^\dagger] = \sum_{k,l=1}^{L-m}\bigl(\delta_{k+m,\,l+m}\,\psi_k^\dagger\psi_l - \delta_{k l}\,\psi_{l+m}^\dagger\psi_{k+m}\bigr)
+= \sum_{k=1}^{L-m} N_k - \sum_{k=m+1}^{L} N_k ,
+\]
+after shifting the index of the second sum. The shared middle range cancels pairwise: for $2m \le L$ the terms $k = m{+}1, \dots, L{-}m$ appear in both sums and cancel, leaving $B_m - T_m$; for $2m > L$ the two sums instead share the empty middle and the overlap $k = L{-}m{+}1, \dots, m$ of $B_m$ and $T_m$ cancels on the right-hand side, so the identity $\sum_{1}^{L-m} N_k - \sum_{m+1}^{L} N_k = B_m - T_m$ holds in both regimes. On an edge-clean state (which requires $2m \le L$ to be non-vacuous), $B_m$ acts as $m$ (each bottom mode occupied) and $T_m$ as $0$. For the cross commutators, the same computation gives
+\[
+[a_m, a_{m'}] = \sum_{k}\psi_k^\dagger\psi_{k+m+m'} - \sum_{k}\psi_k^\dagger\psi_{k+m+m'} = 0
+\]
+exactly, both surviving sums running over the same range $1 \le k \le L - m - m'$; and, for $m > m'$,
+\[
+[a_m, a_{m'}^\dagger] = \sum_{k=1}^{m'}\psi_k^\dagger\psi_{k+m-m'} \;-\; \sum_{k=L-m+1}^{L-m+m'}\psi_k^\dagger\psi_{k+m-m'},
+\]
+every surviving index within $\max(m,m')$ of an edge. Each bottom term annihilates an edge-clean state because its target level $k$ is occupied; each top term because its source level $k + m - m'$ lies in the empty top band. The case $m < m'$ follows by taking adjoints, $[a_m, a_{m'}^\dagger] = [a_{m'}, a_m^\dagger]^\dagger$, with the same band support; it annihilates edge-clean states by the mirrored argument (creation onto an occupied bottom level, lowering of an empty top level). The script verifies the identity on the full Fock space of an eight-mode window, state by state.

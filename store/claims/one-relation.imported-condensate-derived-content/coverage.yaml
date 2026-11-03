@@ -1,0 +1,20 @@
+functions:
+  check_frozen_point_components_and_norm:
+    kind: sampled
+    clauses: ["the frozen point I of the de Sitter scale used by the mass-weight dictionary, with <I,I> = Lambda/3"]
+    omits: "Polynomial identity in the coordinates x, but only two values of Lambda (3/5 and -2); this supports the dictionary check and is not itself a clause of the statement beyond naming I."
+  check_klein_gordon_mass_is_minus_w_w_plus_3_lambda_over_3:
+    kind: sampled
+    clauses: ["on a vacuum Einstein background with frozen point I, a density of weight w coupled by I . D sigma = 0 obeys (box + m^2) sigma = 0 with m^2 = -w(w+3) Lambda/3"]
+    omits: "Exact in the coordinates and in w (six weights fix a degree-two polynomial; the 15 monomials of degree <= 2 fix the second-order operator), but only two values of Lambda; the form of the Thomas D-operator is taken from the docstring's conventions. Controls show the opposite sign fails at w = -1 and m^2 = 0 at w = 0, -3. The observation-level readings (condensation, democracy, minimal coupling) and the join identity have no finite content and are not checked."
+untouched_premises:
+  families.alignment-computed-thirteenth-refutation-democracy-one: "Supports the democratic alignment reading, which the docstring lists among the observation-level readings with no finite content."
+  families.bracket-fixed-join: "The join identity; the docstring says its interpretation has no finite content and is not checked."
+  families.source-term-linear-tilt-mass-functional: "Supports the reading that Lambda != 0 tilts the potential so condensation is unavoidable, an observation-level reading with no finite content."
+  mass.exact-join: "The join identity underlying the bracket; the docstring says it is not checked."
+  standard-model.connection-forced: "Supports the derivation of the gauge content with the forced connection, which the check does not address (only the Klein-Gordon mass dictionary is computed)."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The mass-weight dictionary at Klein-Gordon level is checked exactly in w and the coordinates at two Lambda values; the remaining content is declared unchecked in the docstring."

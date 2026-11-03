@@ -1,0 +1,24 @@
+functions:
+  check_circulants_are_diagonal_in_the_fourier_basis:
+    kind: sampled
+    clauses: ["(i) Fourier eigenvectors of eight random complex circulants and of C C^dag", "(i) the stored representative puts the largest root on f_0", "(i) the sign line is P12-odd; P12-invariant matrices have no component on it (six samples)", "(i) a Hermitian circulant is P12-invariant exactly in span{1, J} (six samples)", "(i) (J + delta_c E)^2 is P12-invariant and not a circulant at four values including -2"]
+    omits: "the isotypic decomposition of the 3x3 matrices under S3 conjugation and the general-delta_c statement are proved in the proof text"
+  check_real_neutrino_frames_give_equal_conjugate_rows:
+    kind: sampled
+    clauses: ["(ii) equal f_1 and f_2 moduli on ten exact real orthogonal frames", "(ii) unistochastic overlaps", "(ii) column phases do not change moduli", "(ii) control: a complex vector breaks the equality"]
+    omits: "the general statement is the one-line identity <f_2, v> = conj <f_1, v> for real v, in the proof text"
+  check_odd_state_column_for_s2_invariant_neutrino_sectors:
+    kind: sampled
+    clauses: ["(iii) kernel and P12-invariance at four rational texture instances, both roots and both signs", "(iii) eigenvector with a P12-invariant real addition", "(iii) the odd column (0, 1/2, 1/2)", "(iii) even-state moduli formula"]
+  check_assignments_against_the_global_fit:
+    kind: complete
+    clauses: ["(iv) the three bounds from the cited ranges, exact", "(iv)(b) tau and mu placements excluded for real sectors", "(iv) electron placement with residual S2 excluded (real case; general case in the next function)", "(iv) the mu-tau identity at rational points of the circles"]
+    omits: "the identity is a polynomial identity checked at three rational points; it is expanded in the proof text"
+  check_every_placement_excluded_for_p12_invariant_sectors:
+    kind: sampled
+    clauses: ["(iii) six complex P12-invariant seesaw instances (Dirac alpha Y + conj(beta) Ytilde, complex M_R): P12-invariance, (1,-1,0) an eigenvector of m and m m^dag", "(iv)(a) electron-row ranges exact; 0 and 1/2 in none of them"]
+    omits: "the general complex statement (odd subspace is one line, Takagi phase) is proved in the proof text"
+untouched_premises:
+  synthesis.imported-nufit-6-oscillation-parameter-ranges: "imported Fact: the check uses the NuFIT edges as literals and verifies the derived element ranges exactly"
+  synthesis.imported-harrison-scott-mu-tau-reflection: "imported Fact: the mu-tau pattern is named in the reading of (iii); the check verifies the equal-moduli identity directly"
+  synthesis.imported-takagi-factorisation: "imported Fact: Takagi vectors define the mixing matrix; the check verifies eigenvector and singular-value properties of its instances directly"

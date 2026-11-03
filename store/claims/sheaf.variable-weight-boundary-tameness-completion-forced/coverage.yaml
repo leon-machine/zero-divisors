@@ -1,0 +1,24 @@
+functions:
+  check_free_module_gram_corank_one:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "three Kasner points with one fixed set of units c1, c2, c3 depending only on tau^(1/D); no genuine x-dependence of exponents or units"
+  check_completion_without_shadow_wall:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "det h identity is exact in w at three Kasner points; F >= 1 and signature (2,4) are checked only at three collar and three interior sample points and two couplings"
+  check_weights_forced_pointwise:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "unique solution of the linear systems at three Kasner points only; the diagonal-rescaling ansatz is assumed, and the 'name the dying axis' proviso is not tested"
+  check_boundary_fibre_ideal_and_ladder:
+    kind: partial
+    clauses: ["Consequently: square-zero ideal with quotient Cl(1,2), ladder pair"]
+    omits: "only the single boundary fibre Gram diag(1,0,-1,-1) (units equal 1 at tau = 0); not the sheaf-level existence with position-dependent exponents or the C-infinity-linearity step"
+untouched_premises:
+  sheaf.function-linearity-tame-constructions: "used only for the closing 'Consequently' globalisation (C-infinity-linearity); the check works on single fibres and sample points"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Docstring states three Kasner points; all four functions test their clauses at those samples, and the position-dependent globalisation is not tested."

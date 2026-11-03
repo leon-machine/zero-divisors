@@ -1,0 +1,20 @@
+functions:
+  check_oriented_and_causal_towers:
+    kind: sampled
+    clauses: ["the odd residues 1, 3, 5, 7 cannot be oriented", "the even P3 representatives are four-dimensional with times 1, 1, 0, 2 at r = 6, 2, 4, 0", "oriented and causal: this one and the mirror"]
+    omits: "oddness of every signature of an odd residue is checked for p + q <= 10 only (it is a parity fact); orientedness is taken as n = 0 mod 4 from the flag-bit theorem, not computed"
+  check_fork_conformal_spinors_are_real:
+    kind: partial
+    clauses: ["(2,2) has ambient R^(3,3) with pseudoscalar squaring to +1", "real four-component spinors: a minimal left ideal of Cl^0(3,3) with corner R", "three pairs", "Spin(2,2) has two real spinor parts"]
+    omits: "the isomorphisms Spin(3,3) = SL(4,R) and Spin(2,2) = SL(2,R) x SL(2,R) are not computed; only the algebra-level facts (omega^2 = +1, dimension 4 with corner R, a maximal isotropic triple, Cl^0(2,2) splitting into two four-dimensional ideals)"
+  check_mass_begins_at_two_on_the_fork:
+    kind: exact
+    clauses: ["det(pi^1 pt^1T + pi^2 pt^2T) = <pi^1 pi^2><pt^1 pt^2>"]
+    omits: "mass beginning at two as a statement about the fork's spectrum, and the Standard-Model gauge algebra, are not computed; only the polynomial identity and the vanishing of the one-spinor determinant"
+untouched_premises:
+  standard-model.four-dimensions-forces-converse: "the gauge algebra on the fork is cited, not computed (the docstring says no premise() call for it)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks cover the algebraic facts behind the orientation sort and the determinant identity; the share-one conditions, the Kleinian Standard Model and the two-time instability import are not computable here"

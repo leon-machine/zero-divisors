@@ -1,0 +1,22 @@
+functions:
+  check_local_boost_period:
+    kind: sampled
+    clauses: ["(i) normal-gauge metric on the boost plane", "(i) F(0) = 0, F'(0) = 1", "(i) off-plane rapidity dependence"]
+    omits: "three rational curvature tensors, five rapidities and three radii, not every field strength; the O(rho^5) third-order terms and the Euclidean-period regularity (taken from the imported proposition) are not computed"
+  check_acceleration_temperature:
+    kind: sampled
+    clauses: ["(i) F'^2 = (1 + 2k rho^2)^2/(1 + k rho^2)", "(i) T = a/2pi at leading order", "(i) 3/2 k rho^2 correction"]
+    omits: "identity is exact in rho but k takes three sample values; a = F'/F and the proper inverse temperature 2 pi F are stated in the docstring, not computed; O(rho^3) remainder not tested"
+  check_diamond_flow_unit_boost:
+    kind: sampled
+    clauses: ["(i) diamond flow zeta is conformal Killing, vanishes on the edge, divergence-free there, unit boost"]
+    omits: "three radii, three interior points and three edge normals; conformal Killing property tested at points, not as a polynomial identity"
+  check_window_kms_iff_modular:
+    kind: sampled
+    clauses: ["(ii) KMS iff modular group on a window; unique Gibbs state", "(iii) joint condition (R_loc) stronger than single-mode form"]
+    omits: "one window of three CAR modes with one set of Boltzmann factors; positive KMS identity for Gibbs not tested (noted in the code), uniqueness shown by trivial centre plus non-Gibbs controls; arbitrary mode sets J and real weights not covered"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "geometry, k = R_0101/3, F'^2 and the 3k coefficient match the statement; the module docstring says 'exact checks' but parameters are sampled, recorded as such"

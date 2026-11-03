@@ -1,0 +1,26 @@
+functions:
+  check_deformed_bracket_is_pairing_with_frozen_point:
+    kind: sampled
+    clauses: ["(1) B_Lambda = <I_Lambda, Z^1 ^ Z^2> = <pi^1 pi^2> + (Lambda/6) [omega^1 omega^2]", "(1) at Lambda = 0 the contraction with n_inf"]
+    omits: "21 pairs from seven Gaussian-rational twistors and four values of Lambda/6; Q(I_Lambda) = Lambda/3 is also checked; the reading of the Lambda = 0 pairing as Penrose's infinity twistor bivector is not tested"
+  check_mass_is_grip_norm_identity_in_lambda:
+    kind: sampled
+    clauses: ["(2) m^2 = Q(P) = 2|B_Lambda|^2 + (Lambda/3) C"]
+    omits: "11 of the 21 pairs; the three Lambda-coefficients of Q(P_inf + lambda P_0) are matched exactly (so the identity is exact in Lambda), P_Lambda = P_inf + lambda P_0 confirmed at two lambda, and P orthogonal to I; the twistor pair is the only sampled input"
+  check_flat_shadow_is_symplectic_area:
+    kind: sampled
+    clauses: ["(3) at Lambda = 0, m^2 = 2 |<pi^1 pi^2>|^2 = p^2"]
+    omits: "seven pairs; compared with the check's own epsilon-contraction p^2 of p = pi^1 conj(pi^1) + pi^2 conj(pi^2)"
+  check_point_supported_composite:
+    kind: sampled
+    clauses: ["(4) Z^1 ^ Z^2 = <pi^1 pi^2> X(x)", "(4) B_Lambda = (1 - Lambda Q(x)/12) <pi^1 pi^2>"]
+    omits: "four sample points x, three twistor pairs on the incidence line, four values of Lambda/6"
+  check_massless_locus:
+    kind: sampled
+    clauses: ["(5) for Lambda > 0, m^2 >= 0 and m^2 = 0 iff B_Lambda = 0 and h is scalar", "(5) doubled composite has B = 0 and m^2 = (Lambda/3)(conj(Z).Z)^2", "(5) non-doubled massless composites exist (Z^1 = e_1 + e_4, Z^2 = alpha e_1 + beta e_4)"]
+    omits: "one Lambda (Lambda/6 = 1/2), 21 pairs plus three massless pairs (m^2 matched to the grip norm, so the coefficients 2 and Q(I) = 2 lam are pinned, and m^2 = 0 attained), five doubled spinors and three (alpha, beta); the step 'that multiple is zero' (so the condition is B = 0 and h = 0) is tested only as non-definiteness of the Hermitian part of the incidence matrix on 71 lines with sigma(x) = 0 (det K <= 0, equality attained by an anti-Hermitian M), not proved, and it is attributed to the cited many-twistor join"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_massless_locus now matches the closed form m^2 = 2|B|^2 + 2 lam C to the grip norm, asserts m^2 >= 0 and det K <= 0 are attained (min 0, max 0) and counts the 71 sigma = 0 lines; samples moved to module level"

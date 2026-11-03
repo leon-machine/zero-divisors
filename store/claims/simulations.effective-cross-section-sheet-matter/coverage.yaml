@@ -1,0 +1,18 @@
+functions:
+  check_number_density_by_counting:
+    kind: sampled
+    clauses: ["n_3 = n_2/s"]
+    omits: "three sample lattices (a, s, L, K) counted by hand; the identity is not proved for general (a, s)"
+  check_collision_rate_equivalence:
+    kind: sampled
+    clauses: ["collision rate equals that of a 3D gas with sigma_eff = lambda s", "sigma_eff/m = lambda s/m"]
+    omits: "two sample parameter sets; the equivalence is the algebra sigma = n2 lambda v tau / (n3 v tau), so the check is close to restating the definition"
+  check_spacing_bounds_under_compression:
+    kind: sampled
+    clauses: ["spacing between d_b Delta^-1/(1+z) and d_b/(1+z)", "s = d_b Delta^(-1/3)/(1+z) for isotropic compression"]
+    omits: "perfect-cube Delta at four redshifts for the isotropic value and three sample splits; general Delta only through the cube inequality at Delta = 2, 5, 10"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three clauses are tested at sample parameters, as the docstring says; the only premise used (R3) enters the spacing function."

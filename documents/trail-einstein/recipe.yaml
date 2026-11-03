@@ -1,0 +1,43 @@
+doc: trail-einstein
+title: Einstein's equations in the completion
+author: Leon Butler
+level: lay
+spine:
+- interior.imported-equivalence-einstein-equations
+- interior.metric-parallelism-trace-schouten-condition
+- interior.covariant-form-vacuum-equations
+- interior.scale-tractor-leaves-cone
+- hawking.imported-exterior-exactly-general-relativity
+- synthesis.c-loc-local-horizon-premise
+- synthesis.einstein-equations-from-c-loc-and-clausius
+- synthesis.n-plus-null-ground-state
+- synthesis.positive-null-energy-gives-r-premises
+- synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
+- synthesis.field-space-premise-parallel-frozen-point
+- synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period
+- synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
+- synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
+- synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
+- synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
+- synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car
+- synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
+- synthesis.hadamard-scaling-limit-premise
+- synthesis.hadamard-deposit-premise
+- synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
+- correspondence.no-real-lorentzian-vacuum-half-flat
+- synthesis.twistor-flat-fields-give-nordstrom-not-einstein
+- synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel
+- synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off
+- synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

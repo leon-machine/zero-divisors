@@ -1,0 +1,28 @@
+functions:
+  check_pairwise_bivectors_null:
+    kind: sampled
+    clauses:
+    - every pairwise bivector Z^i ^ Z^j is a null vector of the complexified ambient space
+    - for n = 2, m^2 = 2|eps(n_inf ^ Z^1 ^ Z^2)|^2
+    omits: four sample twistors, six pairs; "decomposable by construction" is not tested separately; p^2 = 2 det p is a convention (det p = |eps|^2 is what is asserted)
+  check_one_hyperbolic_plane_completion:
+    kind: partial
+    clauses:
+    - Fact applied to R^(2,4) gives one further hyperbolic plane, unique, with a reciprocal total on the whole real cone, whatever n
+    omits: tests only the one hyperbolic plane (R^(3,5) signature, v and w null with vw + wv = 1, orthogonal to the old generators, a null p stays null); uniqueness and totality are the imported fact, and independence of n holds by construction (no count enters)
+  check_one_rung_u2_mixes_chirality:
+    kind: exact
+    clauses:
+    - the one-rung module is C^2 (x) Sp, and the transported algebra supplies a U(2), the unitary group of B_1 (x) C = M_2(C), the commutant of the ground algebra
+    - that U(2) contains odd elements anticommuting with the chirality; its chirality-preserving part is an abelian torus
+    omits: 'algebra level: the commutant span{1, gamma_0, gamma_1, omega} (4-dimensional, from the twisted ground generating M_8(C)) and its chirality-preserving subalgebra span{1, omega} are computed, not the unitary group itself'
+  check_two_rungs_give_chirality_preserving_u2:
+    kind: exact
+    clauses:
+    - a U(2) acting within one chirality is the rung-mixing U(2), available at two rungs
+    omits: Lie algebra level; the identification with the action on Lambda^1 R_2 of the cited theorem is not computed here
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The algebraic claims are exact at one and two rungs; uniqueness and totality of the completion are imported.

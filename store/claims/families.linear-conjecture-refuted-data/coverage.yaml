@@ -1,0 +1,23 @@
+functions:
+  check_equal_split_means_two_thirds:
+    kind: sampled
+    clauses: ["an equal singlet-doublet split predicts Q = 2/3"]
+    omits: "Q_v = |v|^2/(3 s^2) and the iff s^2 = |d|^2 <=> Q_v = 2/3 on four sample vectors (all off the cone) plus one exact cone vector in Z[sqrt 2]; the repair argument (light masses second order, the flagged heavy-family assumption) is a reading and is not computed"
+  check_linear_coordinate_refuted:
+    kind: exact
+    clauses: ["Q_m = 0.8936 (theta_m = 52.4 degrees), refuted at the first decimal"]
+    omits: "rigorous interval bounds: Q_m in [0.89355, 0.89365), more than 1/5 above 2/3, theta_m in [52.35, 52.45) through tan^2 theta = 3Q - 1 with rational pi bounds; the mass values are data"
+  check_sqrt_coordinate_passes:
+    kind: exact
+    clauses: ["Q_sqrt(m) = 0.6666645, equal to 2/3 to two parts in 10^6 (three relative)"]
+    omits: "interval-certified Q in [0.66666445, 0.66666455) and the two deviation brackets; 'within the experimental uncertainty' is not propagated here and is covered only by the tau-mass pull in the next function"
+  check_tau_mass_prediction:
+    kind: exact
+    clauses: ["read as a prediction the relation fixes m_tau = 1776.97 MeV against the measured 1776.93 +- 0.09, agreement at half a standard deviation"]
+    omits: "interval-certified m_tau in [1776.965, 1776.975) (both bounds round to 1776.97) and pull in (0.4, 0.5), rounding to 0.4; the quadratic t^2 - 4 S t + 3 M - 2 S^2 = 0 is shown equal to the Koide condition by an identity checked at four (S, M, t) points"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The numerical claims are certified with rational interval arithmetic and the strict inequalities the statement describes; the repair argument is declared a reading. 2026-10-23 weak-checks pass: the tau prediction now pins its printed value (both bounds round to 1776.97) and the pull (rounds to 0.4) besides the brackets."

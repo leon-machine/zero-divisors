@@ -1,0 +1,30 @@
+functions:
+  check_family_from_densities:
+    kind: sampled
+    clauses: ["T(c) = 1 + 8/(3c) + 16c/(3 pi)"]
+    omits: "exact in pi but c is sampled at five rational values and two unit lengths d; the mirror share 1 and two equal shares per odd pair are modelled inputs from the premises"
+  check_exchange_symmetry:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the identity T(c) = T(pi/(2c)) is exact in pi but checked at five rational c, not for every c > 0"
+  check_minimum:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the perfect-square identity (T - 1)^2 - 4AB = (A/c - Bc)^2 behind single minimum and no thickness gives less is checked at five rational c; c* = 1.2533, T* = 5.2554 and 1.7 sigma are bracketed exactly"
+  check_two_roots:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: ""
+  check_windows:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "the six endpoints 0.943, 1.086, 1.447, 1.667, 0.898, 1.750 are bracketed exactly to 1/2000; that the allowed set is exactly those intervals needs T convex, and the gap between the windows is tested only at c = 1.25"
+  check_self_interacting_fraction:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "that the three-dimensional fraction self-interacts at composite strength is imported and not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "all quoted numbers (5.2554, 1.2533, 5.3643, the windows, 49.7, 40.5, 31.6 percent) are bracketed exactly in pi; the symmetric and minimum identities are checked at rational samples. 2026-10-23 (weak checks): check_self_interacting_fraction pins the three-dimensional fraction to seven figures by hand at c = 1 (0.4971118), c* (0.4048595) and c = pi/2 (0.3164712), each also rounding to the quoted three-figure value."

@@ -1,0 +1,26 @@
+functions:
+  check_two_dilation_groups_generate_translations:
+    kind: sampled
+    clauses: ["(i) dilations about two distinct points compose to a nonzero translation, D_a(l) o D_b(1/l) = T((l - 1)(b - a))"]
+    omits: "three pairs of points and three factors; the identity is affine algebra, true for all values"
+  check_null_vacuum_kernel_is_dilation_invariant_about_every_point:
+    kind: sampled
+    clauses: ["(ii) the null vacuum kernel 1/(u - v) is translation invariant and weight-1/2 dilation invariant about every point, so the null vacuum is KMS at 2 pi about every point"]
+    omits: "three pairs (u, v), four centres, three factors, two translations; the KMS property about 0 is the stored theorem"
+  check_only_period_two_pi_is_translation_invariant:
+    kind: sampled
+    clauses: ["(iv) X = dE/(E - 1), Y = d/(E - 1), XY = d^2 E/(E - 1)^2, so the I-state kernel at fixed separation is 2 sinh(s/2)/(d sinh(pi s/beta))", "(iv) at beta = 2 pi it is 2/d at every position; at beta = 4 pi, 4 pi/3, pi, 2 pi/3, pi/2 it takes distinct values at four positions"]
+    omits: "E = q^4 at four rational q and two separations; for general beta the non-constancy is proved in the text by analyticity and the limits at s -> 0 and s -> oo"
+  check_fermi_transform_residue_series:
+    kind: partial
+    clauses: ["(iv) the residue series of the Fermi transform sums to 1/(2 sinh(pi s/beta)): sum r^(2n+1) = r/(1 - r^2) with exact remainder"]
+    omits: "three rational r and twelve partial sums; the contour argument that the transform is this series is standard and in the text"
+  check_points_bounded_below_do_not_suffice:
+    kind: sampled
+    clauses: ["(iii) a set of points bounded below does not suffice: a symbol with the vacuum's compression on every [a, oo), a >= b, can differ from it"]
+    omits: "one finite model on six sites with a rational rank-3 projector standing for the vacuum symbol; the continuum statement is the product construction in the text"
+untouched_premises:
+  synthesis.positive-null-energy-gives-r-premises: 'stored theorem cited for the identification of the null vacuum as the (N+) state and its I-state restriction at the edge; nothing is computed from it'
+  synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit: 'stored theorem cited for the one-point counterexample in (iii); nothing is computed from it'
+  synthesis.de-sitter-horizon-translation-is-conformal-null-rotation: 'stored theorem cited for comparison in the argued clause (v); nothing is computed from it'
+  angle.imported-theorems-deliver-their-hypotheses: 'imported fact (Borchers, Wiesbrock) cited for context in the novelty statement; nothing is computed from it'

@@ -1,0 +1,6 @@
+functions:
+  check_de_sitter_entropy:
+    kind: sampled
+    clauses: [whole]
+    omits: 'Five Hubble rates and three Planck masses: <I,I> = H^2, sigma = 2 and areal radius R = 1/H on the bifurcation sphere of the conformal chart, N^2 = M_P^2/<I,I>, A = 4 pi N^2 and S = A/4 = pi N^2, and S/pi = N_w^2 + 9/4 with -w(w+3) = 9/4 + nu^2 at three nu. The entropy S = A/4G is the imported Gibbons-Hawking input; the area is read at the conformal-chart bifurcation sphere, not on a cross-section of the future horizon in the Painleve-Gullstrand chart that the statement names (areal radius is the same), and the surface gravity H and Killing-field normality on that horizon are not computed here.'
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: The identities S = pi N^2 and S = pi(N_w^2 + 9/4) follow from the typed area law at sample H and M_P; the PG-chart horizon description is not separately computed.}

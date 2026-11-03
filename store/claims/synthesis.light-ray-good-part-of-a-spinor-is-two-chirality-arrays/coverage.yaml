@@ -1,0 +1,27 @@
+functions:
+  check_canonical_part_is_lambda_m:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "the full 8 x 8 Gram matrices of the flux forms through N_k and N_m equal 2 Lambda(m)^T Lambda(m) and 2 Lambda(k)^T Lambda(k) by exact rational arithmetic, and ker L_m equals the (-1)-eigenspace of L_B (dimensions 4, 4, intersection 4); only k = gamma_0 + gamma_3 is computed, other null directions by the rotor argument; the canonical anticommutator and the constancy of plane waves along the generators are taken from the cited results, not computed"
+  check_boost_weight_of_canonical_part:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the value factors e^{-lambda/2} on Lambda(m) and e^{lambda/2} on Lambda(k) as matrix identities, and the anticommutator factors 1 and e^{2 lambda}, at the one rapidity e^{lambda/2} = 2; the transport factor e^{lambda} of the delta kernel is entered as arithmetic, not derived from a field; the identification with the carrier's boost is by the inverse rotor at that rapidity"
+  check_chirality_splits_canonical_part:
+    kind: exact
+    clauses: ["(iii)", "(v)"]
+    omits: "Gamma^2 = 1, commutation with L_X on all eight even basis blades, with i_H and L_I, both units squaring to -1, and the dimensions 4 and 2 by exact rank; complex invariance of each intersection under both units is argued, not computed"
+  check_helicity_on_canonical_part:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "L_J = -Gamma i_H and L_J = L_I on Lambda(m), the opposite signs on Lambda(k), J = -IB and L_J != +-L_I as exact matrix identities; the exponentiated action e^{-J phi/2} = e^{eps i_H phi/2} and the conjugate entry of the second chirality (second quantisation (4)) follow from these and are not computed"
+  check_vector_channels_have_integer_weight:
+    kind: sampled
+    clauses: ["(vi)"]
+    omits: "conjugation weights 0, 1, -1 on gamma_1, gamma_2, k, m, k wedge gamma_j and the one-sided factor 1/2 on the canonical spinor, at the one rapidity e^{lambda/2} = 2; J^2 = -1 on spinors against the identity on gamma_1 by conjugation"
+  check_count_per_species:
+    kind: sampled
+    clauses: ["(v)", "(vii)"]
+    omits: "the channel counts 2 (Dirac) and 1 (Weyl) from the ranks of the flux form, exact; the array entropy (1/2) ln 2 at (Q) version 3 is entered as the cited value, not recomputed; the per-light-ray total (n_D + n_W/2) ln 2 at four (n_D, n_W) pairs and the residues 1 and 2 in units of 1/(4 ln 2); the reading of one array per complex canonical channel is not tested"
+untouched_premises:
+  singularity.q-joint-quasi-freeness-s-wave: "postulate (Q) version 3, one array per complex channel, used in the count clause only; the check counts channels and does not test (Q)"

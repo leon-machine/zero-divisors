@@ -1,0 +1,20 @@
+functions:
+  check_join_commutes_with_internal_u2:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: One value Lambda = 3 and test monomials of total degree <= 3 in the eight oscillator variables; the commutator [h_il, m^2] is a higher-order differential operator, so vanishing on these monomials is not a proof of the operator identity
+  check_source_carries_determinant_charge:
+    kind: sampled
+    clauses:
+    - (2)
+    - (3)
+    omits: The charge relations are run on monomials of degree <= 3; the source is run with A = Abar = 5/7 (not independent) and the diagonal-block statement on one bidegree (2,1) state; the Hermitian-form argument, the zero expectation on definite-helicity states, the determinant U(1) remark and the statement about zero modes are not tested
+untouched_premises:
+  synthesis.massless-composites-de-sitter-conformal-boundary: cited only for the closing remark on massless composites, which the statement leaves undecided; no computable content in the claim
+  synthesis.operator-join-casimir-shifts: the Casimir ordering constants are not used in a commutation or charge check; the Casimir term enters m^2 only through the stored palatial form
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Commutation of m^2 with h_il and the (-1,-1)/(+1,+1) bidegree shift of the source are checked exactly on low-degree polynomials; the expectation-value conclusion follows by argument and is not computed.

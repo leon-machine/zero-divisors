@@ -1,0 +1,23 @@
+functions:
+  check_unconditional_content:
+    kind: exact
+    clauses: ["pair-level generators transform as (2,3) with Y = 1/6", "single-spinor singlets carry Y = 0, -2/3, 1/3, 1"]
+    omits: "that the single-spinor Fock space is not a subspace of the tensor state space is a structural remark and is not computed"
+  check_lepton_doublet_only_under_s:
+    kind: exact
+    clauses: ["only under Hypothesis (S) does the lepton doublet (2,1) with Y = -1/2 exist"]
+    omits: "exhaustive over the tensor ledger Lambda^k(C^2 (x) C^3) for k = 0..6 (no (2,1)) and over the five-mode sectors (j, k); Hypothesis (S) itself is a premise and is not tested"
+  check_uniqueness_and_necessity:
+    kind: exact
+    clauses: ["the hypercharge spectrum is unique from the four anomaly conditions: Y_L = -1/2, Y_e = 1, {Y_u, Y_d} = {-2/3, 1/3}", "the fourth-singlet and common-handedness hypotheses are both necessary"]
+    omits: "the anomaly equations are solved by the hand-coded elimination in solve_generation (the sums are the imported Fact's); 'without the lepton doublet the equations are different and uniqueness is not claimed' is not tested; necessity of the fourth-singlet hypothesis is a cubic in t checked at five values, so exact, and the opposite handedness gives sums -2/3 and 4/9"
+  check_chirality_halves_inequivalent:
+    kind: exact
+    clauses: ["chirality is the parity grading of the Fock module; its two halves carry inequivalent content"]
+    omits: "the even and odd halves (six sectors each) are shown mutually conjugate and unequal; the identification of this grading with physical chirality is the imported premise"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Every clause is a finite computation on characters of U(2) x U(3) and the anomaly equations, done exactly; the hypothesis itself is a premise."

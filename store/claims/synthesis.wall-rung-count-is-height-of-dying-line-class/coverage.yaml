@@ -1,0 +1,17 @@
+functions:
+  check_wall_block_negative_bundle:
+    kind: sampled
+    clauses: ["(1) the wall block W of rank 2k+1, signature (k+1,k), with isotropic L has N(W) = L + N(L^perp/L), rank N(L^perp/L) = k - 1"]
+    omits: "three rational blocks (k = 1, 2, 3) in one mixed basis; the bundle-level comparison with the exterior through the collar, and the existence of the complement line L'', are argued in the proof"
+  check_whitney_inverse_forces_height:
+    kind: complete
+    clauses: ["(1) w(N) = (1 + x)^(-1), so x^j = 0 for j >= k", "(3) on RP^n the least admissible rank of N is n, so k(Sigma) >= n + 1; on the torus (1 + x)^(-1) = 1 + x"]
+    omits: "the Whitney product formula and the cohomology rings of RP^n and T^2 are classical inputs, not computed; the realisation of the projective wall is argued"
+  check_torus_two_rung_completion:
+    kind: sampled
+    clauses: ["(2), (3) on the stored torus wall the two-rung form with the twist inside the trivial null plane is single valued, restricts to G on T*M, is standard where beta = 0, has det h = 2 mu nu beta^2 - t and signature (4,3) on the physical side and the wall", "(2) at the shadow wall the radical has cotangent part along theta = c dpsi + s dt and rung part along (c, s): L' is a copy of L", "(3) l ^ n = a1 ^ a2: L + N is the trivial plane"]
+    omits: "five rational points of the half-angle circle, three values of beta, five of t, one coupling; the good-coupling bound for general walls and the tameness of the shadow wall are taken from the stored lemmas"
+  check_twisted_hyperbolic_plane_morita_trivial:
+    kind: complete
+    clauses: ["(4) Cl(L (x) R^{1,1}) has the primitive idempotent (1 + l0 l1)/2, invariant under the joint sign flip", "(4) on the torus the jump Cl(L (x) R^{0,2}) is the constant Cl(0,2) with pseudoscalar squaring to -1"]
+    omits: "the graded tensor decomposition of Clifford bundles and the Morita statement are standard algebra, argued in the proof; the Donovan-Karoubi remark is literature and not checked"

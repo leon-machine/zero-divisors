@@ -1,0 +1,9 @@
+The capacity arm is the Schmidt inequality. By hypothesis (i) the joint state on radiation $R$ and partner modes $L$ is pure, so its two marginals have the same nonzero spectrum and
+\[
+S_{\mathrm{rad}} \;=\; S_R \;=\; S_L \;\leq\; \ln\dim L .
+\]
+The partner-mode space is the boundary-mode space of the counted epoch: Proposition \claimref{singularity.stretched-singularity-count} with the epoch gives $\dim L = 2^{N_{\mathrm{6a}}}$, so $\ln\dim L = N_{\mathrm{6a}}\ln 2 = C(t)$, and Proposition \claimref{singularity.area-law-test} identifies this capacity with $S_{\mathrm{BH}}(M(t))$ at leading order. Monotone mass loss makes $C$ decreasing.
+
+The thermal arm is clause (2) of Theorem \claimref{singularity.eviction-window-thermal-product-radiation-entropy}, whose inputs (hypothesis (iii)) include boundary-mode locality: the radiation's entropy is its thermal accumulation $\Sth(t)$, and the emission count supplies $\dim R$, with $\ln\dim R = \Sth(t)$ at leading order. Hence $S_{\mathrm{rad}}(t) \leq \min(\Sth(t), C(t))$.
+
+Saturation is Page's theorem (\claimref{singularity.imported-page-average-entropy-subsystem}): by hypothesis (ii) the joint state is Page-typical, so the smaller marginal's entropy is within $m/2n \leq 1/2$ nat of $\ln\min(\dim R, \dim L)$, a subleading correction. Therefore $S_{\mathrm{rad}}(t) = \min(\Sth(t), C(t))$ up to subleading corrections. The curve rises with $\Sth$ along Hawking's curve, turns over where the two arms cross (about half the initial entropy, as the paper's figure of the envelope shows), falls with the shrinking capacity, and vanishes at complete evaporation, where $C = 0$.

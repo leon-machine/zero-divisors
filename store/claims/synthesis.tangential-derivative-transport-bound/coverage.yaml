@@ -1,0 +1,18 @@
+functions:
+  check_generators_and_model_bound:
+    kind: sampled
+    clauses: ["whole: the Kasner model generator -sum u_i p_i B_i has norm at most 1 (the '1' in e^(lambda(1+eps)))"]
+    omits: "so(1,3) generators checked independent (dimension 6) and the Cauchy-Schwarz bound in the max-row-sum norm at two Kasner points and three rational unit directions; the statement does not fix a norm, and the continuum Hubble-normalised transport is not tested"
+  check_discrete_c1_bound:
+    kind: sampled
+    clauses: ["whole: ||d_y T - d_y T0|| <= e^(lambda(1+eps)) (lambda delta + eps c2 lambda^2)", "delta <= eps_1 c_1 + eps c_2"]
+    omits: "tests the discrete Euler-product analogue (step 1/8, 8 steps) with the growth factor (1 + h(1 + eps))^n, exactly with dual numbers, on one coordinate family with the direction on a circle (c_2 != 0), two Kasner points, two y_0, two field scales, with the Gronwall input ||G_k|| <= 1 + eps at every step and the 1 shown sharp (the model generator attains norm 1 at u = |p|); the continuum bound (variation of constants and Gronwall) and the coordinate-family case c_2 = 0 with bound lambda delta e^(lambda(1+eps)) are not tested; the passage (1 + h(1+eps))^n <= e^(lambda(1+eps)) is not asserted; the consequences (C^1 convergence when delta -> 0, and that admissibility decay does not imply delta -> 0) are not tested"
+  check_bound_terms_needed:
+    kind: sampled
+    clauses: ["whole: the bound holds on a control field and both the eps c_2 lambda^2 term and the growth factor are needed"]
+    omits: "tightness is not a claim of the statement; the control field has delta = 0 and one Kasner point at y_0 = 0 (and y_0 = 1/2 over 24 steps), so it exercises the bound at two configurations only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring states that the continuum bound is proved in the text and only its exact discrete form is checked; nothing claims more. 2026-10-23 weak-checks: check_discrete_c1_bound now asserts the per-step Gronwall input ||G_k|| <= 1 + eps and that the model bound 1 is attained at u = |p|; the growth factor is one module helper; samples moved to module level"

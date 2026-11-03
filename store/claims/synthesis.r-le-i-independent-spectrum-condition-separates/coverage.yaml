@@ -1,0 +1,17 @@
+functions:
+  check_four_models_independence:
+    kind: exact
+    clauses:
+    - (i)
+    omits: 'M1 (all three hold, stationary), M2 (Boulware vacuum: (L_E), (I), (S) hold and (R) fails, shown by the value q against 0 on the pair (a, a*)) and M4 (beam splitter with mixing (3/5,4/5): output occupation differs, so (I) fails) are realised exactly, at weights (1,2), two (q0, q1) pairs and three values of q for M2; M3 is in the next function'
+  check_pairing_ground_state_is_thermal_at_every_q:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iii)
+    omits: 'M3 and the pairing generator at four values of (t, g): unique gapped ground state |00> - t|11> of energy -g t (checked by an LDL signature, not for all t; the even-block eigen-relation is symbolic in t), marginals Boltzmann factor t^2, and (L_E) fails; the degenerate counterexample (N_0 - N_1)^2 with thermal marginals at Boltzmann factor 9/16; the claim that under (S) the number-diagonal (L_E) excludes (R) (pure marginals of a number basis state) is not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Four two-mode models are realised exactly; the independence and the pairing realisation are checked at sample parameters.

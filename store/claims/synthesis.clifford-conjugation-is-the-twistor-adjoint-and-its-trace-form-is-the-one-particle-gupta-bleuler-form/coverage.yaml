@@ -1,0 +1,32 @@
+functions:
+  check_twistor_adjoint_is_clifford_conjugation:
+    kind: complete
+    clauses:
+    - "(i) J^2 = 1, J Hermitian, every generator squares as stated and is Sigma-anti-self-adjoint; J B^dagger J equals the Clifford conjugate of B on all 64 blades; the adjoint is unchanged for Sigma scaled by -3 and 2/7"
+  check_trace_form_on_vectors_is_gupta_bleuler:
+    kind: complete
+    clauses:
+    - "(ii) all 36 Gram entries: the Sigma trace form is -a.b and the h trace form is the identity; the identity on three sample vectors with all six components; J reverses e1 and e+ only; the two forms differ by Ad J"
+    - "(ii) the restriction to e1..e4 is diag(-1, 1, 1, 1)"
+  check_krein_trace_form_is_conformally_invariant_and_positive_one_is_not:
+    kind: sampled
+    clauses:
+    - "(iii) invariance of the Sigma trace form under a boost, a rotation, a translation and a dilation rotor on two sample vectors each; the positive norm of the boosted e1 differs from 1"
+    omits: "sampled rotors and vectors; the general invariance is the one-line argument of Step 3"
+  check_invariant_forms_on_polarisations_are_multiples_of_the_metric:
+    kind: exact
+    clauses:
+    - "(iv) the 96 invariance equations for the six Lorentz bivectors on the vector representation have a one-dimensional solution space spanned by diag(1, -1, -1, -1)"
+  check_fock_form_over_the_trace_form_is_the_stored_krein_form:
+    kind: sampled
+    clauses:
+    - "(v) one-particle norms (-1, 1, 1, 1) from the Sigma trace form; Fock form equals the stored form twisted by (-1)^{n0}; the adjoint of a_mu is -g_mumu z_mu, on all monomials of degree at most three"
+    omits: "degree at most three; all degrees follow from the monomial formula in Step 5"
+  check_ghost_twist_is_a_mode_parity_as_j_is:
+    kind: complete
+    clauses:
+    - "(vi) S^2 = 1, S Hermitian, S b S = d, S = 1 - 2 n_-; c^2 = 0, n_c a projection, J = 2 n_c - 1"
+  check_scalar_part_of_clifford_conjugate_is_minus_the_metric_in_any_signature:
+    kind: complete
+    clauses:
+    - "(ii) the scalar part of conj(e_i) e_j is -Q(e_i) delta_ij in Cl(1,3) and Cl(2,4), computed with no module and no twistor form"

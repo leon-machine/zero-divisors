@@ -1,0 +1,18 @@
+functions:
+  check_ascent_is_matrix_amplification_one_step:
+    kind: sampled
+    clauses: ["the (1,1) ascent Cl(p,q) -> Cl(p+1,q+1) = Mat(2, Cl(p,q)) preserves p - q"]
+    omits: "All ten signatures with p + q <= 3 (not every (p,q)); the isomorphism is shown by commuting twisted copies, matrix units and a blade count."
+  check_period_eight:
+    kind: sampled
+    clauses: ["the real Clifford algebras are periodic modulo eight"]
+    omits: "Cl(8,0) = Cl(0,8) = Mat_16(R) and the twist for the bases (1,0) and (0,1) only; periodicity for every (p,q) is the cited theorem."
+  check_eight_towers:
+    kind: sampled
+    clauses: ["the eight residues label eight parallel towers"]
+    omits: "Signatures with p + q <= 14 are joined by the (1,1) ascent and the shifts by eight inside that window and fall into exactly eight classes, one per residue; the window is finite, not all signatures."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The ascent, the period eight and the eight classes are verified on finite windows of signatures; the docstring says the general statements are the cited theorems."

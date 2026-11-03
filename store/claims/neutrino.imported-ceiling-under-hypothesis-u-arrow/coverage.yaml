@@ -1,0 +1,19 @@
+functions:
+  check_seesaw_inversion_and_light_root:
+    kind: sampled
+    clauses: ["the seesaw m_3 = m_D^2/M_R values M_rung = M_R = m_D^2/m_3"]
+    omits: "three (m_D, M_R) samples; the light root of the 2 x 2 matrix [[0, m_D], [m_D, M_R]] is bracketed within 2 m_D^4/M_R^3 of -m_D^2/M_R; the seesaw is premised as in the cited paper, not derived"
+  check_two_ends_of_the_range:
+    kind: exact
+    clauses: ["M_rung runs from m_b^2/m_3 = 3.5e11 GeV to m_t^2/m_3 = 6e14 GeV, the two readings of Hypothesis (U)"]
+    omits: "m_b = 4.18 GeV, m_t = 172.57 GeV and m_3 = 0.050 eV are typed constants (PDG 2024 central values with their ranges), not read from the store; the ends stay in (3.3, 3.7)e11 and (5.8, 6.1)e14 over the input box and (m_t/m_b)^2 rounds to 1.7e3"
+untouched_premises:
+  dark-matter.asymmetry-arrow-counted-fifteenth-refutation: "stance about the inherited asymmetry, no finite numerical core (docstring: not checked)"
+  dark-matter.orientation-arrow-seventeenth-refutation: "orientation as the only CP-violating mechanism and flag covariance of the nu_R identification, a stance with no computable content (docstring)"
+  standard-model.hyp-s-slot-statistics: "hypothesis under which the flag covariance holds, not computable here"
+  dark-matter.premise-cpt-covariance: "premise about the gauge sector's CPT-evenness, no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Only the numerical valuation (3.5e11 to 6e14 GeV) and the seesaw inversion are tested; the qualitative clauses are declared unchecked."

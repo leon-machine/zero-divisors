@@ -1,0 +1,51 @@
+transport_roots:
+- transport.minimality
+- transport.representation-independent-minimality-completion
+- transport.totality
+- transport.transport-algorithm
+- transport.transport-principle
+legacy_scripts_dir: ../legacy
+# working notes keep their verify scripts beside their runs
+legacy_extra_dirs:
+- Claude outputs/dark_tower_matter_2026-10-20
+- Claude outputs/ga_field_theory_note_2026-10-16
+- Claude outputs/qft_2026-10-15
+- Claude outputs/twistor_ga_2026-10-16
+- Claude outputs/ga_second_quantisation_2026-10-16
+- Claude outputs/ga_interactions_2026-10-16
+- Claude outputs/ga_bosons_2026-10-16
+- Claude outputs/ga_photon_fock_2026-10-16
+- Claude outputs/ga_gravity_source_2026-10-16
+- Claude outputs/ga_sm_chirality_2026-10-16
+house_style:
+  banned_words:
+  - honest
+  - honestly
+  disclaimer: '\textbf{Authorship and disclosure. }The founding idea of the series is the author''s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The direction of investigation and the critical review of the results are likewise the author''s. The mathematical development and the drafting of the text were carried out in extended collaboration with Claude Fable 5 (Anthropic), an AI system.'
+  disclaimer_source: T07 v1 (Sep 2026) verbatim; replace with the v2.0 wording, which adds the Zenodo community link
+governance:
+  maintainers:
+  - leon
+  # GitHub logins with maintainer rights (CI passes the pull request's login as
+  # the author)
+  github_logins:
+  - leon-machine
+  core_regions:
+  - transport
+ai_judge:
+  enabled: false
+# research programmes held side by side in the store (roadmap item 12; rules E218,
+# docs/PROGRAMMES.md). An entity belongs to its own `programme`, else to
+# default_programme; every subject in subjects.yaml names its programme.
+default_programme: transport-papers
+programmes:
+  transport-papers:
+    title: The Transport Papers
+    about: "the Transport Papers series: Clifford-algebra transport, gauge theory gravity (GTG), the completion and what is built on it"
+    maintainers:
+    - leon
+  standard:
+    title: Standard physics
+    about: "standard physics imported once: textbook results, measured quantities and conventions that programmes build on; imported Facts with textbook or DOI provenance, checked where a finite core exists"
+    maintainers:
+    - leon

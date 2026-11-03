@@ -1,0 +1,107 @@
+---
+id: synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
+kind: claim
+version: 2
+title: 'The imported MacDowell-Mansouri functional, in the series'' frozen-point form, is a dynamical principle for the whole gauge field that fixes the trace-free part: its frame equation is twice the dual of $\mathcal{G}(a) + \Lambda a$, ten conditions with the Weyl part dropping out, and its restriction to pure dilations is the single Yamabe trace; with the standard (imported) Einstein-Cartan matter coupling its on-shell Schouten tensor is the stored derivative of the scale tractor, so the infinity-vacuum incidence is its vacuum case'
+status: proved
+region: synthesis
+subject: einstein
+tags: [tractors, curvature-and-field-equations, forcing-and-uniqueness, conformal-model]
+proposed_by:
+  kind: ai
+  session: 2026-10-31-all-open
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: direction
+- name: Claude Opus 5.5
+  role: proposal and drafting
+  source: Co-Authored-By trailer of the commit that added it
+review: draft
+about:
+- obj.synthesis.gtg-flat-spacetime-gauge-fields
+derivations:
+- name: main
+  uses:
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@2
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@1
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
+  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
+  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-einstein-cartan-matter-coupling@1
+  proof: proof-main.tex
+checked_by:
+- kind: check
+  ref: check.py::check_frame_equation_is_twice_the_dual_of_einstein_plus_lambda
+- kind: check
+  ref: check.py::check_frame_identity_on_the_spanning_set
+- kind: check
+  ref: check.py::check_kernel_is_the_weyl_part_and_rank_is_ten
+- kind: check
+  ref: check.py::check_dilation_restriction_is_the_yamabe_trace
+- kind: check
+  ref: check.py::check_on_shell_schouten_is_the_stored_tractor_derivative
+- kind: proof
+  derivation: main
+lineage:
+  motivated_by:
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
+  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale
+  - synthesis.einstein-equations-from-c-loc-and-clausius
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
+extraction:
+  open_problem: op.scale-selection-principle
+  maintainer_pass:
+    by: maintainer-2026-10-31
+    date: '2026-10-31'
+    note: 'Uses edge added to the new imported Fact synthesis.imported-einstein-cartan-matter-coupling, which proof (iv) now cites for the matter coupling in place of the citation from memory; content unchanged. Version 1 -> 2.'
+  note: >-
+    Answers the restated problem's first alternative only given an imported action principle, that is, with
+    Einstein's equations adopted as a variational premise; a principle derived from the series' objects remains
+    open, and the result is transport-absent. The principle is already in the store, from the
+    dark-energy part of the series: the MacDowell-Mansouri functional in its frozen-point form (the frozen
+    point supplies the reduction to the de Sitter group and the prefactor, the canonical tractor the
+    Stelle-West slot). Its field space is the whole pair (hb, Omega). The frame variation is exactly twice the
+    dual of G(a) + Lambda a, rank ten on the curvature at a point with kernel the Weyl tensors, so the nine
+    trace-free conditions are imposed; restricted to pure dilations of the frame it is the single Yamabe trace,
+    which is the stored scale-only no-go read as the same functional with the conformal class frozen. With a
+    matter functional the field equations are clause (7) of the incidence theorem and the on-shell Schouten
+    tensor reproduces the stored derivative of the scale tractor; in vacuum the Schouten slot is Lambda g/6,
+    that of the Stelle-West Cartan connection, so the scale tractor is parallel. The functional is imported
+    (MacDowell-Mansouri 1977, Stelle-West 1980) and the result is transport-absent; the matter coupling of the
+    Einstein-Cartan functional is cited from memory (Kibble 1961; Sciama 1964; Hehl, von der Heyde, Kerlick
+    and Nester 1976; Lasenby, Doran and Gull 1998 for Gauge Theory Gravity). Comparison with the Clausius
+    route: same field equations, different entropy, since the Wald entropy of this action carries the Euler
+    term that (Loc) excludes. Cross-subject: the principle comes from the dark-energy and frozen-point results,
+    not from the Einstein-route claims the problem lists.
+---
+
+## formal
+Units $c = 1$, signature $(1,3)$ (store), Riemann tensor positive on spheres, read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, Einstein tensor $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, Schouten tensor $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$ (Fact \claimref{synthesis.imported-gtg-dictionary}). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$, as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
+\begin{enumerate}
+\item[(i)] \emph{(The frame equation; proved.)} The variation of $S_{\mathrm{MM}}$ with respect to the frame $\hb^{-1}$ is the trivector-valued linear function $E(a) = 2\big(\mathcal{G}(a) + \Lambda a\big)I$. In components (a labelled reading), the three-form of the Fact's second Euler-Lagrange equation is
+\[
+E_{a} := \epsilon_{abcd}\,e^{b}\wedge F^{cd} = 2\,\big(\mathcal{G}(e_{a}) + \Lambda e_{a}\big)\,I .
+\]
+\item[(ii)] \emph{(Ten conditions; proved.)} As a linear map on the twenty-dimensional space of algebraic curvature tensors at a point, $R \mapsto (E_{a})$ has rank $10$ and kernel exactly the Weyl tensors: it is injective on the Ricci part, and the nine trace-free components of $\Ric$ enter as nine independent conditions. In particular a vacuum stationary point has $\Ric = \Lambda g$: the trace-free part vanishes.
+\item[(iii)] \emph{(Restricted to dilations: the one equation of the scale-only no-go; proved.)} If the frame is varied only by pure dilations, $\delta\hb^{-1}(a) = \delta w\,\hb^{-1}(a)$ at fixed conformal class, the frame equation is contracted with the frame: $e^{a}\wedge E_{a} = 2(4\Lambda - \mathcal{R})\,I$, a map of rank $1$ on the curvature, the single trace equation $\mathcal{R} = 4\Lambda$ (the Yamabe equation of Theorem \claimref{synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale}(ii)). The one equation of every scale-only principle and the ten of this one come from the same functional; the nine trace-free conditions are supplied exactly by varying the conformal class.
+\item[(iv)] \emph{(With matter; the algebra proved, the coupling standard.)} Add a matter functional $S_{m}[\hb, \psi]$ whose frame variation defines $T$, with $S_{\mathrm{MM}}$ normalised so that the frame equation reads $\mathcal{G}(a) + \Lambda a + 8\pi G\,T(a) = 0$ ($G$ the normalisation constant of the functional, a free constant, as $1/(4\eta)$ is on the Clausius route). This is exactly clause (7) of Theorem \claimref{synthesis.einstein-condition-is-infinity-vacuum-incidence}, $\Ric + 8\pi G\,T = (\Lambda + 4\pi G\,\tau)\,g$, $\tau = g^{ab}T_{ab}$. On shell
+\[
+\Sch = \tfrac{\Lambda}{6}\,g - 4\pi G\,\big(T - \tfrac{\tau}{3}\,g\big), \qquad \Sch^{\circ} = -4\pi G\,T^{\circ}, \qquad \Lambda = 6\cdot\tfrac{J}{4} - 2\pi G\,\tau ,
+\]
+which is the content of $\nabla_{a}I' = 4\pi G\,(0, T^{\circ}_{ab}, \tfrac{1}{12}\nabla_{a}\tau)$ with $\rho_{I'} = J/4$ in Theorem \claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}(4). In vacuum $\Sch = \tfrac{\Lambda}{6}g$, the Schouten slot of the Stelle-West Cartan connection, so the scale tractor $I'$ is parallel: the own-ray incidence of the infinity vacua (Theorem \claimref{synthesis.einstein-condition-is-infinity-vacuum-incidence}) is the vacuum case of the field equations of $S_{\mathrm{MM}} + S_{m}$, and with matter the stored derivative of the scale tractor is a law, because $T$ is given by $S_{m}$ independently of the vacuum field.
+\end{enumerate}
+\emph{Reading.} $S_{\mathrm{MM}}$ is a dynamical principle for the whole gauge field, not for the scale within a fixed conformal class: its field space is every pair $(\hb, \Omega)$, its field equations are second-order equations with an independently given source, and its zero set is not the parallel-tractor condition, so it is not a rewording of that condition. It is imported (MacDowell-Mansouri, Stelle-West), and the series supplies only its frozen-point presentation, in which the frozen point enters as the constant prefactor $1/Q(I) = 3/\Lambda$; adopting it is adopting Einstein's equations as a variational premise. So it answers the question of a principle for the whole gauge field only given that imported action principle: transport-absent, and a principle derived from the series' objects, from which the incidence would follow rather than being assumed in variational form, remains open. The Stelle-West field $V$ here is a variable of the action ($Q(V) = -3/\Lambda$, $\ip{V}{I} = 0$), not a selected point. Compared with the Clausius route of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius}, the two principles give the same field equations (the Euler term of $S_{\mathrm{MM}}$ is topological in four dimensions), with $\Lambda$ a parameter of the functional here and an integration constant there, and they differ in the entropy: the Wald entropy of $S_{\mathrm{MM}}$ on a local edge carries the Euler density $-\tfrac{3}{4\Lambda}$ times the Cartan curvature of the edge plane, which the clause (Loc) excludes (Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}). The statements hold for $\Lambda \neq 0$; at $\Lambda = 0$ the curvature-squared presentation has a pole and the functional is the Einstein-Cartan limit of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}, with the same frame equation at $\Lambda = 0$. With spinning matter the torsion equation of the Fact is sourced by the spin density and its contact term enters $T$; the trace-free count of (ii) is unchanged.
+
+## technical
+The open problem asks for a principle of the series for the whole gravitational gauge field, not for the scale inside a fixed conformal class, whose field equations fix the trace-free part of the curvature, so that the Einstein condition (the own-ray incidence of the infinity vacua, equivalently a parallel scale tractor) follows rather than being restated. Given an imported action principle, the store already contains one, in the dark-energy part of the series: the MacDowell-Mansouri functional (MacDowell-Mansouri, Stelle-West), the square of the de Sitter curvature seen from the frozen point, with the Stelle-West vector built from the frozen point and the canonical tractor. It varies $\hb$ and $\Omega$ together.
+
+The frame variation of that functional, as a three-form, is exactly twice the dual of $\mathcal{G}(a) + \Lambda a$. As a linear map of the curvature at a point it has rank ten and kernel the Weyl tensors, so it imposes the nine trace-free conditions and the trace. Restricting the variation to pure dilations of the frame contracts it with the frame and leaves only the trace, the Yamabe equation: the stored no-go for scale-only principles is this same functional with the conformal class frozen, and the missing nine conditions are exactly what varying the class supplies. With a matter functional the field equations are the store's clause (7), and on shell the Schouten tensor is $\tfrac{\Lambda}{6}g - 4\pi G(T - \tfrac{\tau}{3}g)$, which is the stored formula for the derivative of the scale tractor; in vacuum it is the Schouten slot of the Stelle-West connection, so the scale tractor is parallel. The principle is imported, with the standard Einstein-Cartan matter coupling, and transport-absent: adopting it adopts Einstein's equations as a variational premise, so a principle derived from the series' objects remains open. It agrees with the Clausius route on the field equations and disagrees on the entropy, since its Wald entropy carries the Euler term that (Loc) excludes. The algebra is checked exactly in $\Cl(1,3)$ on fixed rational curvature tensors and on a spanning set of the curvature space.
+
+## lay
+Einstein's equations say how matter bends spacetime, and ten numbers per point must match. Earlier work showed that any rule which only adjusts the overall size of rulers, keeping the light cones fixed, yields just one of the ten. This result points out that the series already holds, borrowed from the literature, a rule that adjusts everything: the MacDowell-Mansouri action, which the series writes as the square of the curvature seen from its frozen point. Varying it gives all ten equations, with matter entering as an independent source, and when matter is absent it reproduces exactly the series' geometric statement of Einstein's condition. Freezing the light cones in this same action leaves only the one equation found before. The action is taken from the literature rather than derived from the series' transport, and it disagrees with the series' entropy premise about one geometric term in horizon entropy.
+
+## one-liner
+The imported MacDowell-Mansouri functional, in the series' frozen-point form $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$, varies the whole field $(\hb, \Omega)$; its frame equation is $E(a) = 2(\mathcal{G}(a) + \Lambda a)I$ (components: $\epsilon_{abcd}e^{b}\wedge F^{cd}$), rank $10$ on the curvature with kernel the Weyl part, so it fixes the trace-free part, while its restriction to pure dilations is the single Yamabe trace of the scale-only no-go; with the standard (imported) Einstein-Cartan matter coupling and an independent source it gives clause (7), on shell $\Sch = \tfrac{\Lambda}{6}g - 4\pi G(T - \tfrac{\tau}{3}g)$, the stored derivative of the scale tractor, and in vacuum the infinity-vacuum incidence. It settles the search for such a principle only given this imported action principle (Einstein's equations as a variational premise); transport-absent, and its Wald entropy carries the Euler term that (Loc) excludes.

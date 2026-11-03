@@ -1,0 +1,30 @@
+functions:
+  check_floor_keeps_charge_and_continuity:
+    kind: sampled
+    clauses:
+    - "(i) [Q, H] = 0, [Q, rho(p)] = 0, [H, rho(p)] = p rho(p) and rho(p) != 0 for 1 <= |p| <= 2N - 1; rho(2N) = rho(-2N) = 0"
+    omits: "floors with N = 1, 2, 3; the general N is the term-by-term identity in the proof"
+  check_central_term_is_an_edge_operator:
+    kind: sampled
+    clauses:
+    - "(ii) [rho(p), rho(-p)] equals the top-p numbers minus the bottom-p numbers, with zero scalar part, for 1 <= p <= 2N"
+    omits: "N = 1, 2, 3; the general identity is the index shift in the proof"
+  check_sea_value_and_spectral_weight:
+    kind: sampled
+    clauses:
+    - "(iii) on the filled sea rho(-p) annihilates, [rho(-p), rho(p)] = min(p, 2N - p), equal to p for p <= N; rho(p) sea is an H eigenvector at E + p with rho(-p) rho(p) sea = min(p, 2N - p) sea"
+    - "(iii) with the top mode occupied the p = 1 value is 0"
+    omits: "N = 1, 2, 3; the continuum value p is quoted from the CAR limit, not computed as a limit"
+  check_conformal_energy_cut_keeps_no_boost:
+    kind: exact
+    clauses:
+    - "(iv) the commutant of gamma_0 e_+ among the 15 bivectors of Cl(2,4) has dimension 7; it meets the Lorentz bivectors in the three rotations, the boosts, translations and special conformal generators in zero; P_0 + K_0 = 2 gamma_0 e_+"
+  check_no_weighting_of_the_conformal_energy_keeps_a_boost:
+    kind: sampled
+    clauses:
+    - "(v) the commutant of gamma_0 e_+ among the 15 bivectors of Cl(2,4) is 7-dimensional and closed, the anticommuting basis bivectors span 8, and the commutant with any one of those 8 or of the 11 boosts gamma_0 gamma_j, translations gamma_mu n_inf and special conformal generators gamma_mu n_0 generates all 15"
+    omits: "the closure for an arbitrary element outside the commutant is the irreducibility of the 8-dimensional complement, argued in the proof; Schur's lemma and the irreducibility of the attachment's modules are cited"
+untouched_premises:
+  field-theory.no-canonical-commutation-relations-tower: "cited in (ii) for the trace argument; the vanishing scalar part is computed directly"
+  field-theory.how-close-tower-comes-ccr: "cited in the reading as a parallel; nothing is computed from it"
+  synthesis.imported-schwinger-term-and-mattis-lieb-density-algebra: "cited in the proof for the continuum central term and its truncated-band origin; the check computes the floor commutators and the filled-sea values exactly"

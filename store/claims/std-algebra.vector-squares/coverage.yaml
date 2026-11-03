@@ -1,0 +1,7 @@
+functions:
+  check_anticommutator_is_twice_the_polar_form:
+    kind: sampled
+    clauses:
+    - '"uv + vu = 2 B(u, v)"'
+    omits: three 3x3 Gram matrices (one non-diagonal indefinite, two degenerate), nine ordered pairs of
+      vectors, all 8 basis states

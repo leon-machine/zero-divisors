@@ -1,0 +1,18 @@
+functions:
+  check_mode_algebra:
+    kind: sampled
+    clauses: ['"n_j = (e^{beta omega_j} + 1)^{-1}", the setup of (i)-(ii)']
+    omits: CAR and projection property of N in Cl(1,1) are exact; the Gibbs weights and detailed balance are checked at three Boltzmann factors only; no first-law or equilibrium content.
+  check_first_law:
+    kind: sampled
+    clauses: [(i)]
+    omits: Three-mode window with r = 2, 1/3, 7/2 and three traceless diagonal variations; off-diagonal variations (argued to drop out because rho_I is diagonal) and general differentiable families are not tested.
+  check_equilibrium:
+    kind: sampled
+    clauses: [(ii)]
+    omits: Per-mode identity D(q||n_I) = phi(n_I) - phi(q) for four trial occupations at three modes, i.e. product diagonal trial states only; Klein's inequality and uniqueness are not computed (the strict concavity assert -1/(q(1-q)) < 0 is trivial); the multi-mode and non-diagonal identity S - beta Tr(rho H) = ln Z - S(rho||rho_I) and the second-order statement are not tested.
+  check_small_ball_balance:
+    kind: sampled
+    clauses: [(iv)]
+    omits: The coefficients 1/(d^2-1) for delta<K> and delta A|_V and the relation G = 1/(4 eta) are exact at d = 3, 4, 5, 6, 10, but the volume and area expansions of the small ball are hard-coded, not derived; hypotheses (a)-(c), the Jacobson passage (J16), the convention conversion and the Lambda statement are not computed.
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Clauses (i), (ii) and the (iv) coefficients are reproduced on finite or sampled models; clause (iii) (GNS entanglement reading, s <= ln 2 per mode) has no check.'}

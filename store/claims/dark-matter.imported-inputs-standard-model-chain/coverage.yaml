@@ -1,0 +1,24 @@
+functions:
+  check_even_subalgebra_is_mat4_c:
+    kind: exact
+    clauses: ["(a)", "(c) even subalgebra Cl^0(2,4) = Cl(2,3) = Mat(4,C), complex over I_6", "twistor space as the ideal Cl^0 f"]
+    omits: "the spin group SU(2,2) is not computed; Mat(4,C) is read from the dimension count and the corner f Cl^0 f = span(f, I_6 f)"
+  check_helicity_form_lives_on_the_twistor_ideal:
+    kind: sampled
+    clauses: ["(c) the helicity form built from the ambient reversion, read on the ideal and not on the null-blade Fock ideal"]
+    omits: "invariance tested under two sample unit even versors, not the whole spin group; vanishing of the scalar part on the Fock ideal checked for m = 1, 2, 3"
+  check_mass_formula_identity:
+    kind: sampled
+    clauses: ["(d) m^2 = 2 |<pi1 pi2>|^2"]
+    omits: "identity det p = |<pi1 pi2>|^2 verified exactly over Q(i) at the sample spinor pairs in SPINORS, not symbolically in the spinor components"
+  check_fock_module_is_irreducible_spinor_module:
+    kind: exact
+    clauses: ["(g) the Fock representation of three modes with its Clifford algebra"]
+    omits: "three modes only; the Bogoliubov group, the Cauchy decomposition and the anomaly coefficients are not computed"
+untouched_premises:
+  standard-model.hyp-s-slot-statistics: "Hypothesis (S) is a premise with no computable content here (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the statement is a provenance list; (b), (e), (f), (h), (i), (j) and the claim that nothing else is used are not computable, as the docstring says"

@@ -1,0 +1,20 @@
+functions:
+  check_vector_stabiliser_is_poincare:
+    kind: exact
+    clauses: ["(1)"]
+    omits: ""
+  check_ray_stabiliser_is_maximal_parabolic:
+    kind: exact
+    clauses: ["(2)"]
+    omits: "maximality is tested by adjoining each of the four generators n0 ^ e_i to the 11-dimensional algebra and generating all 15 dimensions; an arbitrary element outside p reducing to these under the Levi action is argued, not computed"
+  check_nilradical_null_shears_and_translations:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "N^2(v) = -(ninf . v) Q(w) ninf and N^3 = 0 on the six basis vectors for four coordinate w and five sample w; exp(tN)X(x) = X(x - t w) at two t values and three points; the identification with the transvections of ButlerT1 Thm 4.2 is a citation, not computed"
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "(1) and (2) are exact kernel and closure computations in Cl(2,4); (3) is an identity in w verified at samples."

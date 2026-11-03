@@ -1,0 +1,26 @@
+functions:
+  check_t_pairs_nu_c_with_itself:
+    kind: exact
+    clauses:
+    - (1)
+    omits: ''
+  check_stabiliser_is_standard_model:
+    kind: exact
+    clauses:
+    - (2)
+    omits: Stabiliser is computed on the compact real span of the 21 (real ranks of realified images); over C it is 16-dimensional, which the check records as a control
+  check_orbit_is_10_1_3:
+    kind: exact
+    clauses:
+    - (3)
+    omits: The identification with (10,1,3) is by orbit dimension 30, trivial su(2)_L action, triplet highest weight and the B-L weights of the top eigenspace, not by an explicit isomorphism
+  check_thirteenth_generator_broken:
+    kind: exact
+    clauses:
+    - '"it breaks the thirteenth generator X = 2 T_3R - (3/2)(B - L)"'
+    omits: The sentence that a vev along T breaks Pati-Salam to the Standard Model algebra and gives nu^c its Majorana mass at the same scale is the reading of (1) to (3)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: All four functions are exact computations in the 32-dimensional module; the stabiliser is taken in the compact real form as the statement requires.

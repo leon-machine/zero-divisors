@@ -1,0 +1,25 @@
+functions:
+  check_good_part_projector_drops_the_mass:
+    kind: complete
+    clauses:
+    - (ii) Lambda(m) (p +- m0) e0 Lambda(m) = (p . k) Lambda(m), from the basis identities and linearity; the mass term drops
+    - (i) Lambda(m) is a Dirac-self-adjoint idempotent with a two-channel image
+    omits: the basis identities are exact for all p by linearity; the shell samples are a cross-check
+  check_shell_density_of_the_good_part_is_one_half:
+    kind: sampled
+    clauses:
+    - (ii) on the positive-energy shell p . k > 0 and the compressed density in (p . k, p_perp) is 1/2 for every mass and transverse momentum
+    omits: rational shell points with and without mass; the parametrisation identities are exact rational identities in p+, s
+  check_restricted_vacuum_is_the_null_vacuum_symbol:
+    kind: sampled
+    clauses:
+    - (i) the anticommutator density on the plane is 1 for psi_N, computed from the shell
+    - (ii) the restricted occupation symbol is theta, the null vacuum's, computed at each null frequency from the projector coefficient, the Jacobian and 1/(2 p0)
+    omits: five null frequencies times three (p_perp, m0) samples; the Fourier integrals giving the position-space form of (ii) are standard and proof-only
+  check_shell_energy_bounds_give_decay_at_both_ends:
+    kind: sampled
+    clauses:
+    - (iii) symbol-side form for translation-invariant states, p0 >= p+/2 and p0 >= s/(2 p+)
+    omits: clause (iii) in general (restriction of a smooth kernel, transverse smearing, the stored theorem) is proof-only; only the symbol-side bounds are checked
+untouched_premises:
+  synthesis.imported-null-plane-restriction-of-free-fields-is-mass-independent: "imported light-front statement cited in (ii) as the standard form of what the checks compute directly from the shell; no check calls it"

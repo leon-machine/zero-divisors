@@ -1,0 +1,23 @@
+functions:
+  check_family_breaking_first_fails:
+    kind: sampled
+    clauses: ["family breaking acting on a 10-vev leaves m_mu = m_s and m_e = m_d exactly"]
+    omits: "two rational 3 x 3 family matrices F: M_e M_e^T = M_d M_d^T for every signed entry pair of the 10 form; that the observed second family needs the factor 3 is data/literature and is not computed"
+  check_two_term_structure_fixes_both_ratios:
+    kind: sampled
+    clauses: ["the symmetric doublet mass forms span the two-dimensional space of the 10 form and the T_GJ form", "the ratio of the two coefficients fixes m_mu/m_s and m_e/m_d jointly"]
+    omits: "the space of symmetric doublet forms is read from the export of standard-model.space-symmetric-doublet-mass-forms-two (rank 2 re-checked against the 10 and T_GJ forms); y_e/y_d = (alpha - beta)/(alpha + beta/3) and M_e M_e^T = r^2 M_d M_d^T at three (alpha, beta) pairs and two F; 'only there' beyond this module is not computable"
+  check_one_sided_source_between_families:
+    kind: sampled
+    clauses: ["the one-sided weighting's antisymmetric form gives no one-family mass but entries between families through an antisymmetric family coupling"]
+    omits: "one diagonal family matrix (combined form antisymmetric, no symmetric part) and one antisymmetric family matrix (combined form symmetric, nonzero only between the six off-diagonal family blocks)"
+  check_both_sources_carry_pair_number:
+    kind: exact
+    clauses: ["both sources carry the pair-number current"]
+    omits: "computed as: every GA blade of T_GJ and of w_4 (B - L) contains exactly one pair-mode bivector e_{2i} e_{2i+1}, and w_4 (B - L) = -2/3 w_4 sum v_i ^ w_i; the requirement that the electroweak vev couple as w_4 ^ (v_5 ^ w_5) ^ sum v_i ^ w_i, the ordering of the programme and the capstone table are argument, not computed"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The docstring says the ordering and the reading of the capstone table are argument; the four checks cover the computable core at sample family matrices and coefficient pairs."

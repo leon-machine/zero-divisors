@@ -1,0 +1,14 @@
+functions:
+  check_two_rung_classical_record:
+    kind: sampled
+    clauses: ["the induced map on the pair is the descent", "joint output of a pure input has purity 1/2, against 1 for the lift"]
+    omits: "the induced map is verified on all four even matrix units of the pair; purity 1/2 and 1 at three pure even inputs only, not at odd or general pure inputs"
+  check_one_rung_classical_record:
+    kind: sampled
+    clauses: ["one rung in the maximally mixed state with coupling 1 - 2 P^R_1 N_0 induces the descent", "joint output commutes with the total parity", "purity 1/2"]
+    omits: "the induced map on the four even matrix units; parity commutation and purity at three pure even inputs only; 'two rungs are needed only for the coherent lift' rests on the cited theorem"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "both functions test the statement's clauses exactly on the even sector and at three pure inputs; the minimality claim for the coherent lift is imported"

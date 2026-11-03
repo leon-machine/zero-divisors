@@ -1,0 +1,55 @@
+doc: t07-regenerated
+title: 'Hawking Radiation from the Ledger: State, Continuum, Lift, and the Finite-Ledger Seam (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- hawking.modular-structure-completed-pair
+- hawking.imported-modular-descent-premises-geometric-normalisation
+- hawking.imported-modular-descent-premises-geometric-normalisation-external
+- hawking.imported-algebra-boundary-modes-car-algebra
+- hawking.imported-s-wave-bosonic-sector
+- hawking.imported-s-wave-bosonic-sector-external
+- hawking.imported-exterior-exactly-general-relativity
+- hawking.imported-twistor-storey-ordering-shift
+- obj.hawking.boundary-mode-algebra-windows-boost-dynamics
+- hawking.gibbs-states-are-kms-conversely-finite
+- hawking.kms-restricts-invariant-subalgebras
+- hawking.imported-quasi-free-states-car-algebra
+- hawking.imported-kms-passes-inductive-limits
+- hawking.imported-quasi-free-kms-reduces-two
+- hawking.i-state
+- hawking.imported-ideal-fermi-gas-uniqueness
+- hawking.full-uniqueness-given-dynamics
+- obj.hawking.continuum-mode-space
+- hawking.i-state-continuum
+- hawking.imported-thermal-representation
+- hawking.imported-penrose-transform
+- hawking.homogeneity-ordering-shift
+- hawking.helicity-lift-joints-itemised
+- hawking.greybody-inheritance-under-interface-premise
+- hawking.current-commutator-exactly-edge-split
+- hawking.bose-einstein-occupancy-quantified-window-corrections
+show: spine-only
+paper: T07
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T07_hawking_radiation.tex
+  note: Recreate T07 from the store
+cite: []
+prose: paper
+msc: Primary 81T05, 46L60; Secondary 83C57, 46L30, 81R10.
+keywords: Hawking radiation; KMS states; quasi-free states; CAR algebra; modular theory; thermofield double; Penrose transform; greybody factors; bosonisation.

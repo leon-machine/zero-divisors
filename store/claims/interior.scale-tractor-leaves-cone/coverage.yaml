@@ -1,0 +1,20 @@
+functions:
+  check_einstein_scale_tractor_is_parallel:
+    kind: sampled
+    clauses: ["I_g is parallel", "calR(a) = Lambda a on the Einstein fields"]
+    omits: "five fields (Schwarzschild-(A)dS, flat de Sitter, Schwarzschild) at single points; the tractor connection is the check's own assembly Omega_T"
+  check_only_rho_lambda_over_six_and_only_einstein:
+    kind: sampled
+    clauses: ["(1,0,rho) is parallel iff rho is constant and g is Einstein with Lambda = 6 rho"]
+    omits: "the solution set {Lambda/6} is computed on five Einstein fields, the non-Einstein direction on one Reissner-Nordstrom field and one non-constant rho on de Sitter; no general-field argument"
+  check_norm_is_lambda_over_three:
+    kind: sampled
+    clauses: ["Q(I_g) = Lambda/3", "null exactly at Lambda = 0, off the cone for Lambda != 0"]
+    omits: "evaluates Q at five Lambda values (one of them zero); the identity Q = 2 rho = Lambda/3 is not carried symbolically"
+untouched_premises:
+  dark-energy.imported-frozen-point-geometry-external: "cited only in the standard-route derivation (proof-standard-route.tex); the check follows the main derivation"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three clauses are tested at sample Einstein fields; the iff is evidenced by the Reissner-Nordstrom and non-constant-rho controls but is not proved in general."

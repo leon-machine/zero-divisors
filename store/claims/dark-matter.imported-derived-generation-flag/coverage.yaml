@@ -1,0 +1,16 @@
+functions:
+  check_witt_decomposition_two_real_one_complex:
+    kind: exact
+    clauses: ["the three pairs are a Witt decomposition of the complexified ambient", "two are real hyperbolic planes of R^{2,4}, the third only in V_C"]
+    omits: "that these three pairs are those of the twistor Fock structure (T9 Thm 5.3) is cited, not computed"
+  check_listing_choice_is_particle_antiparticle:
+    kind: complete
+    clauses: ["the visible matter is the derived Standard Model generation", "the one-handed listing choice is the particle-antiparticle orientation"]
+    omits: "the generation multiset is entered by hand and compared with the species of the five-mode module (even half) and its conjugate (odd half); Hypothesis (S) is a premise"
+untouched_premises:
+  families.alignment-computed-thirteenth-refutation-democracy-one: "the condensate alignment is a citation of T13 with no computable content (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable parts are tested; the alignment citation and the reading as the descent's flag are declared uncomputable"

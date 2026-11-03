@@ -1,0 +1,153 @@
+# Changelog: t01-regenerated
+
+## v11 (2026-10-27T16:47:50+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v10 (2026-10-27T15:12:14+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v9 (2026-10-27T13:24:21+00:00)
+
+- bump: major
+- primer.centre: revised-substantive
+- primer.classification-real-clifford-algebras: revised-substantive
+- primer.commutation-rule: revised-substantive
+- primer.sign: revised-substantive
+- primer.splitting-along-hyperbolic-plane: revised-substantive
+- std-algebra.blade-basis: added
+- std-algebra.complexification: added
+- std-algebra.existence-uniqueness: added
+- std-algebra.involution-properties: added
+- std-algebra.morita-amplification: added
+- std-algebra.orthogonal-anticommute: added
+- std-algebra.reflection: added
+- std-algebra.sylvester-inertia: added
+- std-algebra.vector-squares: added
+- std-algebra.witt-decomposition: added
+- std-algebra.z2-grading: added
+- transport.ascent-renders-grade-involution-inner: revised-substantive
+- transport.centre: revised-substantive
+- transport.classification-idempotent-orbits: revised-substantive
+- transport.classification-real-clifford-algebras: revised-substantive
+- transport.cohomological-form-no-go: revised-substantive
+- transport.conformal-gram-matrix: revised-substantive
+- transport.corner-even-subalgebra: revised-substantive
+- transport.decomposition-commutation: revised-substantive
+- transport.density: revised-substantive
+- transport.descent-read-out-map: revised-substantive
+- transport.door-one-way: revised-substantive
+- transport.embedding-independent-minimality-fusion: revised-substantive
+- transport.even-subalgebra-one-dimensional-extension: revised-substantive
+- transport.exceptional-division-algebras: revised-substantive
+- transport.exhaustiveness-every-zero-divisor-annihilated-idempotent: revised-substantive
+- transport.existence-classification-type-c: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.existence-locus-type-p: revised-substantive
+- transport.fusion-occurs-most-once: revised-substantive
+- transport.group-null-rotations: revised-substantive
+- transport.matrix-units-peirce-isomorphism: revised-substantive
+- transport.minimality: revised-substantive
+- transport.no-fourth-rule: revised-substantive
+- transport.no-go-level-elements: revised-substantive
+- transport.no-transport-terminates: revised-substantive
+- transport.noinverse: revised-substantive
+- transport.odd-lorentzian-dimension-exactly-one-real: revised-substantive
+- transport.one-generator-minimal-minimal-completions-classified: revised-substantive
+- transport.pair-canonical-label-bit: revised-substantive
+- transport.pinching-kernel: revised-substantive
+- transport.pseudo-inverse-torsor: revised-substantive
+- transport.regularity-localises-zero-divisors-idempotents: revised-substantive
+- transport.representation-independent-minimality-completion: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+- transport.rule-2-ideal-fusion-sharp-form: revised-substantive
+- transport.sign: revised-substantive
+- transport.splitting-along-hyperbolic-plane: revised-substantive
+- transport.swap-rescale-normal-form: revised-substantive
+- transport.totality: revised-substantive
+- transport.transport-algorithm: revised-substantive
+- transport.transport-principle: revised-substantive
+- transport.units-span: revised-substantive
+- transport.where-obstruction-lies-commuting-square: revised-substantive
+- transport.which-residues-obstruct-which-way: revised-substantive
+- renumbered c:refuted.the-two-one-generator-ascents-differ-as-algebras: 59 -> 70
+
+## v8 (2026-10-23T06:42:45+00:00)
+
+- bump: major
+- transport.rule-1-morita-trivial: revised-substantive
+- transport.which-residues-obstruct-which-way: revised-substantive
+
+## v7 (2026-10-21T16:43:51+00:00)
+
+- bump: major
+- obj.transport.normalised-conformal-chart: revised-substantive
+- obj.transport.transport: revised-substantive
+- primer.commutation-rule: added
+- refuted.the-two-one-generator-ascents-differ-as-algebras: revised-substantive
+- transport.cohomological-form-no-go: revised-substantive
+- transport.existence-classification-type-c: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.existence-locus-type-p: revised-substantive
+- transport.fusion-occurs-most-once: revised-substantive
+- transport.minimality: revised-substantive
+- transport.no-fourth-rule: revised-substantive
+- transport.no-go-level-elements: revised-substantive
+- transport.no-transport-terminates: revised-substantive
+- transport.obstructions-are-moved-never-destroyed: revised-substantive
+- transport.odd-lorentzian-dimension-exactly-one-real: revised-substantive
+- transport.one-generator-minimal-minimal-completions-classified: revised-substantive
+- transport.original-conjecture-refuted-below: revised-substantive
+- transport.pair-canonical-label-bit: revised-substantive
+- transport.representation-independent-minimality-completion: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+- transport.rule-2-ideal-fusion-sharp-form: revised-substantive
+- transport.transport-algorithm: revised-substantive
+- transport.transport-principle: revised-substantive
+- transport.type-p-self-repairing: revised-substantive
+- transport.where-obstruction-lies-commuting-square: revised-substantive
+- transport.which-residues-obstruct-which-way: revised-substantive
+- renumbered c:primer.sign: 56 -> 57
+- renumbered c:primer.splitting-along-hyperbolic-plane: 57 -> 58
+- renumbered c:refuted.the-two-one-generator-ascents-differ-as-algebras: 58 -> 59
+
+## v6 (2026-10-21T15:32:43+00:00)
+
+- bump: major
+- transport.classification-idempotent-orbits: revised-substantive
+- transport.door-one-way: revised-substantive
+- transport.embedding-independent-minimality-fusion: revised-substantive
+- transport.existence-locus-type-p: revised-substantive
+- transport.fusion-occurs-most-once: revised-substantive
+- transport.which-residues-obstruct-which-way: revised-substantive
+
+## v5 (2026-10-21T12:34:45+00:00)
+
+- bump: patch
+- c:note.transport.cl-1-0-cl-2-1: moved to s:paper-3
+- c:note.transport.cl-1-1-n-p-together: moved to s:paper-3
+- c:note.transport.cl-1-3-physical-case-n: moved to s:paper-3
+- c:note.transport.hyperbolic-partner-supplies-annihilating-idempotent: moved to s:paper-3
+- rendering changed (house style or template); no claim changed
+
+## v4 (2026-10-21T11:36:45+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v3 (2026-10-21T11:28:13+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v2 (2026-10-21T10:56:26+00:00)
+
+- bump: patch
+
+## v1 (2026-10-21T10:55:32+00:00)
+
+- first generation: 88 claim blocks
+

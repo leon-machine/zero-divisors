@@ -1,0 +1,40 @@
+---
+id: note.singularity.setting-fixing-rate-where-premise-has-3
+kind: note
+version: 1
+title: Fixing the rate, and where the premise has to lie
+status: setting
+subject: thermality
+proposed_by:
+  kind: extraction
+  session: settings-2026-10-21
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: 'idea, direction and review'
+- name: Claude Fable 5
+  role: mathematics and drafting
+  source: authorship disclosure of T05, deposited version
+comments_on:
+- singularity.rate-discharge-hypothesis-iii
+- singularity.exact-equilibrium-over-determines-boundary-modes
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic
+locators:
+  paper: T05
+  number: Setting
+  section: 'Step 4d: compute in the completion; thermality, and the state that carries it'
+  line: 1878
+  subsection: Fixing the rate, and where the premise has to lie
+---
+
+## formal
+(R) is the KMS condition at a stated period, imposed on the marginals and on nothing else; it is not a condition on the joint state of the boundary modes, and Theorem \claimref{singularity.exact-equilibrium-over-determines-boundary-modes} is the reason it must not be. What it adds to ``KMS at some period'' is exactly the value $2\pi/\kappa$, and Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} says that this is the one datum no condition inside the algebra can supply. The condition makes sense for every state, faithful or not: $F_{a,b}$ is defined by evaluation, not through a modular group. That is what makes the next theorem's last clause a derivation rather than a restatement.
+
+## technical
+pending
+
+## lay
+pending
+
+## one-liner
+pending

@@ -1,0 +1,11 @@
+functions:
+  check_mode_count_placement:
+    kind: exact
+    clauses:
+    - N = 8 pi nu M Delta t / l_P^2, equivalently dN/dt = 8 pi nu M = nu/T_H, to leading order in r_c/2M
+    omits: polynomial identities in r_c along the (C1) locus (2M = r_c^3) plus arithmetic at sample nu and dt; T_H = 1/(8 pi M) is entered; the factor sqrt(1 - r_c/2M) = sqrt(1 - r_c^-2) is checked as an identity at five r_c, its tending to 1 is not computed; (C1), (C2) are postulates
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The count along the (C1) locus is an exact polynomial identity in r_c; postulates and the temperature are inputs.

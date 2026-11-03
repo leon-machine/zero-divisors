@@ -1,0 +1,22 @@
+functions:
+  check_three_eighths_over_generation:
+    kind: exact
+    clauses: ["sum T_3^2 / sum Q^2 = 2/(2 + 10/3) = 3/8 over one derived generation"]
+    omits: "That this is sin^2 theta_W at the unification scale is the hypothesis of the imported trace-ratio Fact (b) and is not computed."
+  check_without_lepton_doublet:
+    kind: exact
+    clauses: ["over the unconditional content alone, the same ratio is 9/26", "the lepton doublet contributes 1/2 to each sum"]
+    omits: ""
+  check_fibre_and_doublets:
+    kind: exact
+    clauses: ["over the fibre C^2 (x) C^3 alone the ratio is 9/10", "over the two doublets alone 3/4"]
+    omits: ""
+untouched_premises:
+  standard-model.imported-fock-representation-clifford-algebra-bogoliubov: "the sums use the generation listing and generator weights directly; the Fock/Clifford identification is not needed"
+  standard-model.imported-one-loop-running-trace-ratio: "cited only for reading 3/8 as the unification-scale sin^2 theta_W; no computable content here"
+  standard-model.under-s-composites-state-space-spinor: "hypercharges are computed from the generator (3j - 2k) on the listed components; the state-space identification is not used"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational sums over enumerated states reproduce each ratio quoted."

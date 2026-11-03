@@ -1,0 +1,31 @@
+functions:
+  check_projectors_remove_the_evanescent_momentum:
+    kind: sampled
+    clauses:
+    - (i) gbar P k gbar P = gbar kbar gbar P for both chiralities; four-vertex loop reduces to barred momenta; khat leaves no scalar part
+    omits: 'D = 6, four index pairs, one loop; general D and momenta by the anticommutation rules of the proof'
+  check_bubble_contraction_is_a_polynomial_in_the_dimension:
+    kind: partial
+    clauses:
+    - (ii) chiral -g, half Dirac (2-D)/2 g, difference (D-4)/2 g
+    omits: 'D = 4 to 8; the continuation in D is the imported scheme'
+  check_four_point_contraction_is_a_polynomial_in_the_dimension:
+    kind: partial
+    clauses:
+    - (iii) chiral l^4 sum zero with its gamma5 part; half Dirac (D-4)(D-2) S
+    omits: 'D = 4 to 7 and seven index tuples (three at D = 7)'
+  check_pole_times_evanescent_factor:
+    kind: sampled
+    clauses:
+    - (ii), (iii) (D-4) Gamma(1-D/2) -> 2 and (D-4) Gamma(2-D/2) -> -2 as rational functions times Gamma(3-D/2)
+    omits: 'five sample D; the Gamma recursion is the proof text'
+  check_counterterm_coefficients:
+    kind: exact
+    clauses:
+    - '(iv) assembly from the computed contractions: Pi_break = -(1/3) e^2 Y^2 qbar^2 gbar/(16 pi^2), Gamma_break = -(2/3) e^4 Y^4 S/(16 pi^2), counterterms -1/6 and 1/12'
+    omits: 'none for the rational coefficients; the master integrals are imported'
+  check_one_generation_sums:
+    kind: exact
+    clauses:
+    - (iv) one generation sum Y^2 = 10/3, sum Y^4 = 95/54, sum Y^3 = 0
+    omits: none

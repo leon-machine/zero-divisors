@@ -1,0 +1,27 @@
+functions:
+  check_isotropic_vector_repaired_on_points:
+    kind: partial
+    clauses: ["isotropic vector: the repair is total on points", "the increment (+1,+1) is forced"]
+    omits: "n <= 3 (three mixed signatures for v^2 = 0; reciprocal [N] -> [e_+ N e_+] sends sample null vectors to nonzero null vectors and the lift of x to the lift of x/Q(x), exact on the samples); 'forced' is tested only as definite planes (2,0) and (0,2) having no null vector, not minimality as a lift or as an ambient quadric; element-level no-go, continuity and uniqueness are not tested"
+  check_central_idempotent_repaired_one_dimension_up:
+    kind: partial
+    clauses: ["central idempotent: the adjoined generator makes the grade involution inner", "the ideals fuse", "the completion is simple (centre R)", "the completion is unique up to isomorphism (the two signs of nu^2)"]
+    omits: "type-C signatures with n <= 3, both signs (six cases) and the null ascent leaving the square-zero ideal on all blade pairs are exact; uniqueness is tested as the isomorphism of the two nondegenerate signs (nu -> w nu, generation by rank); 'minimal among all simple real algebras' is not tested (the docstring says so; the former by-construction dimension assert was removed)"
+  check_non_central_idempotent_is_its_own_repair:
+    kind: sampled
+    clauses: ["non-central idempotent: no repair is needed, the element is its own"]
+    omits: "five signatures with n in {2,3} and p >= 1, one idempotent (1 + e_0)/2 each, one sample conjugating element g; e sigma(e) e = e and sigma(e) e sigma(e) = sigma(e) for sigma = identity are immediate, so the content tested is idempotence, non-centrality and conjugation staying idempotent"
+  check_trichotomy_exhaustive_on_samples:
+    kind: sampled
+    clauses: ["the trichotomy is exhaustive"]
+    omits: "six cases (three mixed signatures, three type-C signatures with n <= 3), one zero divisor of each of three forms: v g annihilated by a conjugated idempotent, a non-central idempotent annihilated by 1 - e, eps_+ x annihilated by eps_-; that every zero divisor has one of these forms, and the 'no fourth case' corollary, are not tested"
+untouched_premises:
+  transport.cohomological-form-no-go: "cited for the element-level no-go at an isotropic vector; the docstring lists it as not checked"
+  transport.no-go-level-elements: "cited for the element-level no-go at an isotropic vector; the docstring lists it as not checked"
+  transport.embedding-independent-minimality-fusion: "cited for the minimality of the fusion among all simple real algebras; not checked"
+  transport.representation-independent-minimality-completion: "cited for the host-independence of the (+1,+1) increment; the docstring lists it as not checked"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_central_idempotent_repaired_one_dimension_up: by-construction dimension assert and minimality wording replaced by a computed isomorphism of the two signs (nu -> w nu generates all 2^(n+1) dimensions); docstring states minimality is not tested."

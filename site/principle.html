@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Transport Principle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* The landing page of Zero Divisors: the transport principle for a reader with no algebra.
+   One screen; the story is told in subtitles and in drawings on a canvas, a step at a time. Next
+   (the button, the arrow keys, or one turn of the wheel or one swipe) cuts to the next step like a
+   slide; the step's own movement then plays slowly, over three to six seconds, and stops. Dark,
+   like The Singularity, and in the site's fonts. */
+:root{
+  --void:#100e0d; --line:#3a332e; --line-2:#574d45;
+  --text:#ece5d9; --text-2:#bfb5a6; --text-3:#8d8377;
+  --red:#e07a55; --blue:#93b4da; --green:#a6c497; --plum:#cf9bb5; --gold:#f0c27a;
+  --serif:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--void);color:var(--text);height:100%;overflow:hidden;overscroll-behavior:none}
+body{font:16px/1.55 var(--sans)}
+a{color:var(--gold)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.story{position:relative;height:100vh;height:100dvh}
+.pin{position:absolute;inset:0;overflow:hidden;touch-action:none}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.track{position:absolute;left:0;right:0;top:0;z-index:6;display:flex;overflow-x:auto;background:rgba(16,14,13,.55);border-bottom:1px solid var(--line);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track button{flex:1 0 auto;background:none;border:0;color:var(--text-3);font:500 .68rem var(--mono);letter-spacing:.07em;text-transform:uppercase;padding:8px 10px;cursor:pointer;position:relative;white-space:nowrap}
+.track button.on{color:var(--text)}
+.track button.on::after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;background:var(--red)}
+.track button.done{color:var(--text-2)}
+.track button b{font-weight:500;color:var(--gold);margin-right:4px}
+.hero{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;pointer-events:none;transition:opacity .25s ease}
+.hero .cell{display:inline-block;position:relative;margin:0 auto;padding:.18em .5em .2em;border:1px solid var(--line-2);background:#191614;font:500 clamp(2.1rem,6vw,4.2rem)/1 var(--mono);color:var(--red);letter-spacing:.02em}
+.hero .cell::before{content:"";position:absolute;left:0;top:0;border-top:10px solid #4c9a4c;border-right:10px solid transparent}
+.hero p{max-width:60ch;margin:26px auto 0;text-align:justify;text-align-last:center;hyphens:none;text-wrap:pretty;font:400 clamp(1.1rem,2.2vw,1.45rem)/1.4 var(--serif);color:var(--text-2)}
+.hero .hint{margin-top:34px;font:500 .72rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.end{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:56px 20px 90px;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s}
+.end.show{opacity:1;visibility:visible}
+.end h2{font:600 clamp(1.8rem,4.6vw,3.2rem)/1.1 var(--serif);margin:0 0 10px}
+.end p{font:400 clamp(1.1rem,2.2vw,1.5rem)/1.4 var(--serif);color:var(--text-2);margin:0 0 26px}
+.end .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{background:rgba(16,14,13,.5);border:1px solid var(--text-2);border-radius:8px;padding:7px 16px;cursor:pointer;font:500 .9rem var(--sans);color:var(--text);text-decoration:none}
+.btn.hot{border-color:var(--red);color:var(--red)}
+.cap{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);transform:translate(-50%,6px);width:min(780px,calc(100% - 36px));text-align:center;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+.cap.show{opacity:1;transform:translate(-50%,0)}
+.cap .line{font:400 clamp(1rem,1.75vw,1.32rem)/1.36 var(--serif);color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+.cap{display:flex;flex-direction:column}
+.cap .tags{order:-1;margin:0 0 7px;display:flex;flex-wrap:wrap;gap:6px 12px;justify-content:center;font:400 .7rem var(--mono);color:var(--text-3);pointer-events:auto}
+.labref{color:inherit;text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer}
+.labref:hover{color:var(--gold)}
+.after{max-width:62ch;margin:34px auto 0;padding-top:16px;font:.78rem/1.55 var(--sans);color:var(--text-3);border-top:1px solid var(--line);text-align:left}
+.end .after p{font:inherit;color:inherit;margin:0 0 .7em}
+.ctl{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 26px);transform:translateX(-50%);z-index:7;display:flex;align-items:center;gap:14px}
+.ctl button{background:rgba(16,14,13,.6);border:1px solid var(--line-2);border-radius:8px;padding:8px 18px;cursor:pointer;font:500 .88rem var(--sans);color:var(--text-2)}
+.ctl button:hover:not(:disabled){border-color:var(--text-2);color:var(--text)}
+.ctl button:disabled{opacity:.35;cursor:default}
+.ctl #next{border-color:var(--gold);color:var(--gold);padding:8px 24px}
+.ctl #next.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(240,194,122,.12)}}
+.ctl .n{font:400 .72rem var(--mono);color:var(--text-3);min-width:4.5em;text-align:center}
+@media (max-width:700px){.track button{font-size:.6rem;padding:7px 8px}.cap{bottom:calc(env(safe-area-inset-bottom,0px) + 78px)}.ctl{bottom:calc(env(safe-area-inset-bottom,0px) + 18px)}}
+@media (prefers-reduced-motion:reduce){.cap,.hero,.end{transition:none}.ctl #next.pulse{animation:none}}
+</style>
+</head>
+<body>
+<section class="story" id="story" aria-label="The transport principle, from a spreadsheet error to spacetime">
+  <div class="pin">
+    <canvas id="cv" aria-hidden="true"></canvas>
+    <nav class="track" id="track" aria-label="Chapters"></nav>
+    <div class="hero" id="hero">
+      <div><span class="cell">#DIV/0!</span></div>
+      <p>Every spreadsheet user is familiar with the infamous division-by-zero error. A forbidden mathematical operation is treated as a boundary beyond which calculation cannot continue. Yet geometers have long known another approach: by adjoining a point at infinity, 1/0 can be given a meaningful interpretation, an idea that Riemann extended to the complex numbers. The Transport Principle generalises this insight and suggests that, when applied to spacetime, it transforms our understanding of what spacetime actually is.</p>
+      <div class="hint">Press Next to begin</div>
+    </div>
+    <div class="end" id="end">
+      <div>
+        <h2>Where does our theory of gravity divide by zero?</h2>
+        <p>At the centre of a black hole.</p>
+        <div class="row">
+          <a class="btn hot" href="#" data-lab="singularity">Fall into a black hole</a>
+          <a class="btn" href="#" data-lab="universe">Explore the Physics Graph</a>
+          <a class="btn" href="#" data-lab="documents">Read the papers</a>
+        </div>
+<div class="after">
+          <p>Each numbered reference under a subtitle opens that result in the Physics Graph, with its statement, proof and machine check. The papers themselves are on Zenodo, in the <a href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Transport Papers community</a>; the guide G00 tells the same story with the mathematics.</p>
+          <p>The founding idea is Leon Butler&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a larger algebra. The mathematical development was carried out in extended collaboration with Claude (Anthropic), an AI system. The papers are independent work and have not been through journal peer review.</p>
+          <p>Portraits from Wikimedia Commons: Bernhard Riemann, 1863; Albert Einstein, about 1904 (ETH-Bibliothek Z&uuml;rich, Bildarchiv) and 1921 (Ferdinand Schmutzer); Hendrik Antoon Lorentz, at the blackboard; all public domain. Roger Penrose, 2005, by Festival della Scienza, CC BY-SA 2.0.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ctl" id="ctl"><button id="back" aria-label="Back one step">Back</button><span class="n" id="stepn"></span><button id="next" class="pulse" aria-label="Next step">Next</button></div>
+    <div class="cap" id="cap" aria-live="polite"><div class="line" id="capLine"></div><div class="tags" id="capTags"></div></div>
+  </div>
+</section>
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// written by tp.site when the site is built: deposited result numbers mapped to results
+const LAB = {"preds":[{"st":"press","title":"Dark energy cannot evolve: w = -1","paper":"T10","note":"The combined Pantheon+ and DES-SN5YR sample (Unite, 2,884 type Ia...","id":"pred.dark-energy-w-minus-one"},{"st":"press","title":"Neutrino mass sum at the oscillation floor","paper":"T15","note":"Planck with Planck and ACT lensing and DESI BAO gives a sum below...","id":"pred.neutrino-mass-sum-floor"},{"st":"hold","title":"Gravity does not settle superpositions","paper":"QG","note":"XENONnT gives R0 above 4.5e-10 m (95%), superseding the Majorana...","id":"pred.no-gravitational-settling"},{"st":"hold","title":"No fractionally charged colour singlet","paper":"T12","note":"No fractionally charged or millicharged particle seen. milliQan sets...","id":"pred.z6-charge-lattice"},{"st":"hold","title":"Direct detection stays null","paper":"T14","note":"One nuclear-recoil-like event at 248 +- 23 +- 23 keV in 220 live...","id":"pred.dark-matter-direct-detection-null"},{"st":"hold","title":"No dark radiation","paper":"T14","note":"N_eff = 2.990 +- 0.070, consistent with the Standard Model 3.044...","id":"pred.no-dark-radiation"},{"st":"hold","title":"No indirect dark-sector signals","paper":"T14","note":"No confirmed signal, but two claimed excesses are live: the Galactic...","id":"pred.no-indirect-dark-signals"},{"st":"hold","title":"The leptonic CP phase is trivial","paper":"T15","note":"For normal ordering the 3 sigma interval for delta_CP is [-1.38 pi...","id":"pred.leptonic-cp-trivial"},{"st":"hold","title":"No neutrinoless double-beta signal at next-generation sensitivity","paper":"T15","note":"Xe-136: T1/2 above 3.8e26 yr (90%), m_bb below 28 to 122 meV. Ge-76...","id":"pred.no-neutrinoless-double-beta"},{"st":"hold","title":"No objective-collapse signature","paper":"T16","note":"No collapse signature. XENONnT bounds Markovian CSL at lambda/rC^2...","id":"pred.no-objective-collapse"},{"st":"hold","title":"The no-echo prediction, registered","paper":"T8","note":"LVK's four echo searches over GWTC-4.0 find no evidence for...","id":"scrambling.no-echo-prediction-registered"},{"st":"wait","title":"Gravity entangles two masses by the standard phase","paper":"QG","note":"No experiment has reached gravity-mediated entanglement. The newest...","id":"pred.gravity-entangles-standard-phase"},{"st":"wait","title":"Dimmed final evaporation bursts","paper":"T14","note":"No final evaporation burst detected. LHAASO limits the local rate...","id":"pred.dimmed-evaporation-bursts"},{"st":"wait","title":"One boundary mode per Bekenstein-Mukhanov area quantum","paper":"T8","note":"No experiment tests a discrete horizon-area spectrum. GW250114...","id":"pred.boundary-mode-density"}],"refs":{"T0":{"1":"primer.commutation-rule","2":"primer.twisted-adjoint-action","6.2":"note.primer.boost-what-it-does-null-direction","4.1":"note.primer.hyperbolic-plane","2.1":"note.primer.euclidean-plane","6.1":"note.primer.rotation-exactly","9.4":"primer.centre","9.3":"primer.classification-real-clifford-algebras","9.1":"primer.commutation-rule","9.5":"primer.sign","9.6":"primer.splitting-along-hyperbolic-plane","9.2":"primer.twisted-adjoint-action"},"T1":{"7.9":"transport.obstructions-are-moved-never-destroyed","4.1":"transport.original-conjecture-refuted-below","5.16":"transport.odd-lorentzian-dimension-exactly-one-real","6.7":"transport.no-fourth-rule","5.15":"transport.which-residues-obstruct-which-way","4.17":"obj.transport.normalised-conformal-chart","2.2":"obj.transport.equivariance","2.3":"obj.transport.extension-quadratic-spaces","4.12":"obj.transport.null-lift-completion","8.1":"obj.transport.transport","3.1":"obj.transport.obstruction-types","10":"transport.swap-rescale-normal-form","9":"transport.totality","5":"note.transport.hyperbolic-atom","4":"transport.no-go-level-elements","3.11":"note.transport.cl-1-0-cl-2-1","3.10":"note.transport.cl-1-1-n-p-together","3.12":"note.transport.cl-1-3-physical-case-n","3.5":"note.transport.nilpotents-without-null-vectors-two-loci","4.20":"note.transport.exotic-embedding-inertness","5.10":"note.transport.three-smallest-fusions","3.4":"note.transport.hyperbolic-partner-supplies-annihilating-idempotent","5.1":"transport.decomposition-commutation","4.6":"transport.group-null-rotations","2.6":"transport.centre","5.3":"transport.corner-even-subalgebra","4.9":"transport.density","4.23":"transport.descent-read-out-map","5.13":"transport.even-subalgebra-one-dimensional-extension","4.18":"transport.conformal-gram-matrix","5.4":"transport.matrix-units-peirce-isomorphism","2.1":"transport.noinverse","2.7":"transport.sign","2.8":"transport.regularity-localises-zero-divisors-idempotents","2.4":"transport.splitting-along-hyperbolic-plane","6.3":"transport.units-span","8.2":"transport.transport-principle","3.2":"transport.exceptional-division-algebras","5.2":"transport.ascent-renders-grade-involution-inner","7.8":"transport.no-transport-terminates","6.5":"transport.pair-canonical-label-bit","7.4":"transport.fusion-occurs-most-once","7.5":"transport.pinching-kernel","6.1":"transport.type-p-self-repairing","4.21":"transport.swap-rescale-normal-form","4.7":"transport.pseudo-inverse-torsor","3.3":"transport.existence-locus-type-n","3.8":"transport.existence-locus-type-p","5.6":"note.transport.2-pattern-two-rules-compared","6.6":"note.transport.moore-penrose-boundary-idempotent-side","4.24":"note.transport.ascend-invert-descend","4.5":"note.transport.hyperbolic-atom","4.25":"note.transport.classical","5.9":"note.transport.second-refuted-conjecture-recorded","4.15":"note.transport.degenerate-adjunctions-why-they-are-excluded","4.11":"note.transport.destination","6.2":"note.transport.why-shear-has-nothing-act-eee","5.8":"note.transport.bit-algebra-forgets","7.3":"note.transport.iteration","4.3":"note.transport.locality-robustness-obstruction","7.2":"note.transport.prior-art-what-new-here","8.4":"note.transport.what-procedure-does-not-do","4.4":"note.transport.obstruction-parabolic","5.12":"note.transport.cost-transport-independently-representation","4.14":"note.transport.signargument","4.22":"note.transport.where-each-stratum-comes","5.17":"note.transport.three-dimensions","7.7":"note.transport.two-sided-reading","3.7":"note.transport.typec-depth","4.16":"note.transport.what-not-unique","8.3":"note.transport.worked-instance","3.9":"transport.exhaustiveness-every-zero-divisor-annihilated-idempotent","4.19":"transport.representation-independent-minimality-completion","2.5":"transport.classification-real-clifford-algebras","4.8":"transport.cohomological-form-no-go","5.11":"transport.embedding-independent-minimality-fusion","5.14":"transport.where-obstruction-lies-commuting-square","5.5":"transport.rule-2-ideal-fusion-sharp-form","4.13":"transport.minimality","7.1":"transport.rule-1-morita-trivial","4.2":"transport.no-go-level-elements","7.6":"transport.door-one-way","6.4":"transport.classification-idempotent-orbits","5.7":"transport.one-generator-minimal-minimal-completions-classified","4.10":"transport.totality","3.6":"transport.existence-classification-type-c"},"T2":{"3.1":"conformal.principal-case","3.2":"note.conformal.dictionary-translators","2.1":"conformal.blade-basis-persists-under-degeneracy","2.2":"conformal.witt-extension-theorem","2.5":"conformal.nilpotent-ideal-becomes-unit-ideal","3.3":"note.conformal.why-pga-cannot-be-repaired-place","2.4":"note.conformal.what-minimality-promises-what-it-does","3.4":"note.conformal.relation-transport-rules","2.3":"conformal.minimal-nondegenerate-completion"},"T3":{"6.2":"tower.answers-iteration-question","2.2":"obj.tower.tower","3.4":"tower.morita-equivalence-algebra-amplification","2.1":"transport.rule-1-morita-trivial","3.5":"transport.existence-classification-type-c","5.5":"tower.glimms-classification-car-uniqueness","6.1":"tower.wall-package","3.3":"tower.matrix-amplification-structural-properties","5.2":"tower.compatibility-connecting-maps-transported","5.4":"tower.structure-tower-c-norms","5.1":"tower.grade-twist-when-it-inner","3.1":"tower.volume-elements-planes","4.1":"tower.ladder-pairs-satisfy-car-vectors","5.8":"q.tower.odd-charge","4.4":"note.tower.what-capacity-theorem-forbids","3.7":"note.tower.eight-towers-signature-change-tower-change","5.7":"note.tower.what-completion-means-here-why-it","2.3":"note.tower.why-tower","5.3":"tower.algebraic-limit-even-charge","4.3":"tower.witt-index-quantum-capacity","5.6":"tower.car-limit-even-charge","3.2":"tower.commuting-copies","4.2":"tower.fock-module-one-qubit-per-rung","3.6":"tower.rigidity-clock-frozen"},"T4":{"7.2":"sheaf.wall-class","8.20":"sheaf.characterisation-forced-within-rain-bounded-class","4.5":"sheaf.localised-transport","7.1":"sheaf.tame-walls-are-two-sided","5.5":"sheaf.infinite-wall-sequence","8.3":"obj.sheaf.weighted-coframe-module","2.7":"obj.sheaf.clifford-sheaf","4.1":"obj.sheaf.collar-data-coupling","8.17":"obj.sheaf.extensions","9.8":"obj.sheaf.log-completion","9.4":"obj.sheaf.relatively-admissible-perturbation","9.1":"obj.sheaf.variable-order-algebra-strict-diagonal-data","1":"sheaf.degeneration-sheaf","8.21":"note.sheaf.eigenvalue-essential","8.19":"note.sheaf.rain-boundedness-essential-null-mixing-extension","3.6":"note.sheaf.physical-fibre","9.6":"note.sheaf.sharpness-relative-order-zero","2.9":"sheaf.imported-classification-values","8.2":"sheaf.kasner-data-interior","2.10":"sheaf.imported-real-line-bundles","8.1":"sheaf.gauge-field-cometric","8.25":"sheaf.weighted-limit","2.1":"sheaf.tameness","2.6":"sheaf.blade-basis-degenerate-forms-included","9.12":"sheaf.collision-census","4.3":"sheaf.determinant-identity-blow-up-expansion","2.2":"sheaf.invariant-form-t3","9.7":"sheaf.log-obstruction","9.2":"sheaf.boundary-units-invert","4.2":"sheaf.wall-gram","5.3":"sheaf.tame-wall-induction","10.2":"sheaf.solve-closed-radical-gauge","10.1":"sheaf.base-unipotents-wall","8.4":"sheaf.basic-properties-operational-characterisation","5.2":"sheaf.conservation-degeneracy-located","8.23":"sheaf.chains-radial-dyad-rain-finite","6.1":"sheaf.exceptional-algebra-deformation-normal-cone","8.26":"sheaf.matching-fibre","9.17":"sheaf.function-linearity-tame-constructions","2.8":"sheaf.local-freeness-constant-rank","8.22":"sheaf.rain-duality","3.4":"sheaf.resolution-ideal-theoretically","8.14":"sheaf.exceptional-algebra-black-hole","8.10":"sheaf.wall-fibre-black-hole","8.15":"sheaf.residue-square-root-twist-black-hole","3.3":"note.sheaf.fibre-over-null-generator-thickening-butlert1","9.16":"note.sheaf.what-section-does-does-not-close","6.4":"note.sheaf.blow-up-dictionary","9.15":"note.sheaf.what-stays-interior-paper","8.8":"note.sheaf.boundary-tameness-stated","5.4":"note.sheaf.setup-generalises-arbitrary-bundles","2.3":"note.sheaf.coordinates-crossing-speed","2.5":"note.sheaf.dimension-signature-generality","3.2":"note.sheaf.non-reducedness-singularity-registers-infinitesimal","8.5":"note.sheaf.bounded-norm-alone-does-not-characterise","9.11":"note.sheaf.answer-smooth-structure-question","8.24":"note.sheaf.kinematic-status-module","8.13":"note.sheaf.conservation-degeneracy-boundary-sharp-example","8.9":"note.sheaf.what-degenerated-physically","8.6":"note.sheaf.what-weights-are","3.5":"note.sheaf.sharpening-no-simplicity-needed","4.6":"note.sheaf.only-product-coupling-constants-matters","2.4":"note.sheaf.scope-tame-class","10.5":"note.sheaf.scope-what-discharges","6.3":"note.sheaf.direction-induced-twist","5.6":"note.sheaf.wall-class-posed","9.14":"note.sheaf.mixmaster-wall-complex","8.28":"note.sheaf.what-remains-matching","5.1":"sheaf.conservation-degeneracy-absolute-form","8.27":"sheaf.matching-connection-level","3.1":"sheaf.degeneration-sheaf","9.9":"sheaf.differential-closure-filtration-conormality","9.13":"sheaf.edge-wall","10.4":"sheaf.no-equivariant-value-wall","4.4":"sheaf.one-sided-completion","9.10":"sheaf.exponent-ratios-are-invariant","6.2":"sheaf.metrics-residue-square-root-twist","8.12":"sheaf.one-sided-completion-singularity","8.7":"sheaf.schwarzschild-degeneration-boundary-tame","9.5":"sheaf.stability-reduction-strict-diagonal-case","10.3":"sheaf.transversal-independence-wall","8.18":"sheaf.uniqueness-weighted-module","9.3":"sheaf.variable-weight-boundary-tameness-completion-forced","8.16":"sheaf.weights-are-forced-are-kasner-exponents"},"T5":{"10.2":"singularity.c2-cell-density","10.1":"singularity.c1-curvature-cutoff","10.3":"singularity.c3-counted-epoch","9.4":"singularity.deficit-carried-quanta-correlations","11.6":"singularity.envelope-endpoint-why-boundary-mode-locality","11.7":"singularity.what-event-returns-radiation","7.32":"singularity.chains-state-class-stability","7.15":"singularity.universality-temperature-under-g","6.4":"singularity.matching-steps-4b-4c-join-equation","7.12":"obj.singularity.geometric-modular-condition-g","5.6":"obj.singularity.grading-parity-automorphism","5.1":"obj.singularity.fibrewise-conformal-lift","C.1":"obj.singularity.two-fibres-two-assemblies","9.1":"obj.singularity.multi-mode-descent","7":"obj.singularity.fibrewise-conformal-lift","13.1":"singularity.imported-interior-collar-kasner-form","B.4":"sheaf.function-linearity-tame-constructions","2.1":"singularity.imported-equivalence-einstein-equations","A.1":"singularity.imported-surface-gravity-redshifted-acceleration","7.14":"singularity.imported-general-form","B.3":"singularity.imported-no-equivariant-value-wall","5.9":"singularity.imported-descent-one-way-conditional-expectation","B.2":"singularity.imported-one-sided-completion-singularity","B.1":"sheaf.schwarzschild-degeneration-boundary-tame","10.5":"singularity.imported-induced-geometry-interior-slice","7.9":"singularity.imported-univalence-superselection-rule","4.1":"singularity.pseudo-inverse-identities-hyperbolic-atom","10.4":"singularity.causal-epoch-computed-exactly","12.1":"singularity.parity-protection","7.2":"singularity.schmidt-forcing-proved-outright","C.6":"singularity.function-linear-endomorphisms-are-bundle-maps","7.1":"singularity.modular-theory-matrix-factor-proved-outright","7.30":"singularity.l-boundary-mode-locality","9.6":"singularity.p-reduced-metric-level-reading-many","7.8":"singularity.p-univalence","8.1":"singularity.q-joint-quasi-freeness-s-wave","11.3":"singularity.rate-models-kinematic-inputs-l-u","7.19":"singularity.r-regularity-fixed-locus","10.7":"singularity.area-law-test","9.2":"singularity.pinching-against-partial-trace-scope-coincidence","10.6":"singularity.stretched-singularity-count","5.5":"singularity.descent-what-it-erases","7.31":"singularity.number-diagonal-dynamics-models-scrambling-derived","7.21":"singularity.euclidean-rotor-where-it-lies","2.5":"singularity.cones-fold","13.2":"singularity.modular-flow-boundary-modes-holonomy-universal","7.25":"singularity.why-calibration-cannot-be-internal","2.7":"singularity.non-removability-invariant-argument","A.2":"singularity.computed","5.2":"singularity.transport-schwarzschild-fibre","2.6":"singularity.degeneration-exactly","C.2":"singularity.sheaf-assembly-sheaf","12.4":"singularity.models-entropy-sequence-exactly","11.4":"singularity.no-attic-derived-model","2.3":"singularity.connection-bivector-computed","6.2":"singularity.plane-rate","C.7":"singularity.bundle-maps-quantise-without-hopping","7.18":"singularity.euclidean-section-period","2.4":"singularity.solution-where-divergence-lies","13.4":"singularity.l-stabiliser-tangent","7.23":"singularity.two-kms-functionals-sign","12.3":"singularity.purity-correlation-transfer-recovery","12.5":"singularity.two-levels-finite-model","3.1":"singularity.type-n-only-type-n","2.2":"singularity.unipotent-ray","13.3":"note.singularity.where-spectrum-would-lie","12.6":"note.singularity.dissolution-now-both-levels","7.11":"note.singularity.what-hypothesis-ii-cost-what-p","7.17":"note.singularity.two-clocks-one-calibration","11.8":"note.singularity.what-was-obtained-what-it-cost","5.8":"note.singularity.metric-level-parity-even-level","6.5":"note.singularity.frame-made-explicit","7.7":"note.singularity.unconditional-reading-how-it-sharpens-gap","C.9":"note.singularity.declared-residual-size","11.2":"note.singularity.island-dictionary-one-dissonance","7.4":"note.singularity.israels-reading-recovered","8.3":"note.singularity.four-dimensional-lift-flagged","5.3":"note.singularity.what-instance-shows-what-it-does","C.5":"note.singularity.what-antecedent-stated-plainly","11.9":"note.singularity.monogamy-firewalls-small-corrections-theorem","7.22":"note.singularity.what-curvature-selected-pair-does-does","7.26":"note.singularity.cost-r-dictionary","12.2":"note.singularity.thermality-records-what-projection-cannot-see","7.29":"note.singularity.why-rescues-rather-than-damages-chain","13.5":"note.singularity.what-does-residual","7.33":"note.singularity.steps-status-what-still-open","7.24":"note.singularity.euclidean-reading-sign-flagged","2.8":"note.singularity.corank-limit-weighted-answer","9.5":"note.singularity.where-descent-acts-hawkings-loss-derived","7.5":"note.singularity.three-wrinkles-recorded","8.2":"singularity.bosonisation-bridge-s-wave-sector","9.3":"singularity.deficit-theorem-cost-descent-exactly","7.3":"singularity.modular-descent","7.10":"singularity.ascended-marginals-are-diagonal","11.5":"singularity.eviction-window-thermal-product-radiation-entropy","7.6":"singularity.descended-form-state-independent","7.27":"singularity.purity-output-partner-commutant","C.8":"singularity.class-relative-no-go-no-supplied","7.13":"singularity.kms-uniqueness-factor","C.4":"singularity.net-assembly-net-it-everything","C.3":"singularity.finite-truncation-meet-big-fibres-equals","6.3":"singularity.modular-structure-completed-pair","5.4":"singularity.imported-no-c-number-repair","7.28":"singularity.exact-equilibrium-over-determines-boundary-modes","11.1":"singularity.assembled-page-curve-up-typicality","5.7":"singularity.descent-parity-average","7.20":"singularity.rate-discharge-hypothesis-iii","7.16":"singularity.rate-rigidity-temperature-not-algebra-intrinsic","6.1":"singularity.curvature-gauge-field-exact-shape-decoupling"},"T6":{"6.6":"interior.duality-monodromy-fibration-over-ring","5.12":"interior.schwarzschild-lines-exactly","5.5":"obj.interior.weighted-blow-up-hubble-normalisation-admissible","3":"interior.imported-tractor-connection","6.10":"interior.imported-mass-inflation-stability","2.1":"interior.imported-equivalence-einstein-equations","6.3":"interior.imported-kerr-curvature","6.1":"interior.imported-kerr-schild-form-kerr-gauge","2.2":"interior.imported-schwarzschild-curvature-spectrum","4.1":"interior.imported-tractor-connection","6.7":"interior.imported-walker-penrose-killing-spinor","5.3":"interior.interior-connection-exactly","4.2":"interior.metric-parallelism-trace-schouten-condition","5.4":"interior.boosts-generate-exactly-levi-factor","5.1":"interior.kasner-form-interior","5.2":"interior.exact-parallelism-convergence-rate","4.8":"interior.sign-fixed-internally","4.3":"interior.stabilisers-flat-model","4.4":"interior.non-null-stabilisers-section-they-act","6.2":"interior.unipotency-across-kerr-family","6.8":"interior.complex-scale-inverse-cube-killing-spinor","6.11":"interior.filtration-cauchy-horizon-read-literature","6.4":"interior.complex-factorisation-location-ring","3.3":"interior.exact-scale-decoupling","4.10":"interior.stabiliser-rotates-parabolic-reductive","3.1":"interior.gauge-trajectory-unipotent-ray","5.7":"note.interior.parabolic-structure-completed","5.8":"note.interior.generic-delimiter-mixmaster","4.6":"note.interior.what-equation-now-says","5.10":"note.interior.what-two-ends-geometry-jointly-say","6.9":"note.interior.points-contact-established-physics-kept-view","4.11":"note.interior.refining-not-contradicting-parabolic-structure","3.2":"note.interior.parabolic-structural-reason","4.9":"note.interior.convention-note-sign-norm","5.13":"note.interior.what-closed-what-remains","3.4":"note.interior.three-readings","6.12":"note.interior.conclusion-two-cautions","6.5":"note.interior.duality-winding-around-ring","5.11":"interior.transport-level-convergence-along-tangential-curves","4.7":"interior.scale-tractor-leaves-cone","4.5":"interior.covariant-form-vacuum-equations","5.9":"interior.schwarzschild-de-sitter-weighted-limit","5.6":"interior.weighted-limit-theorem"},"T7":{"5.4":"hawking.greybody-inheritance-under-interface-premise","5.3":"hawking.helicity-lift-joints-itemised","3.8":"hawking.full-uniqueness-given-dynamics","4.1":"obj.hawking.continuum-mode-space","2.7":"obj.hawking.boundary-mode-algebra-windows-boost-dynamics","4.3":"hawking.imported-thermal-representation","2.4":"hawking.imported-s-wave-bosonic-sector","2.3":"hawking.imported-algebra-boundary-modes-car-algebra","2.2":"hawking.imported-modular-descent-premises-geometric-normalisation","2.5":"hawking.imported-exterior-exactly-general-relativity","3.7":"hawking.imported-ideal-fermi-gas-uniqueness","3.4":"hawking.imported-kms-passes-inductive-limits","5.1":"hawking.imported-penrose-transform","3.3":"hawking.imported-quasi-free-states-car-algebra","2.6":"hawking.imported-twistor-storey-ordering-shift","3.5":"hawking.imported-quasi-free-kms-reduces-two","3.1":"hawking.gibbs-states-are-kms-conversely-finite","3.2":"hawking.kms-restricts-invariant-subalgebras","6.1":"hawking.current-commutator-exactly-edge-split","5.2":"hawking.homogeneity-ordering-shift","2.1":"hawking.modular-structure-completed-pair","6.2":"hawking.bose-einstein-occupancy-quantified-window-corrections","3.9":"note.hawking.what-now-proved-open-problem","5.5":"note.hawking.what-lift-does-does-not-claim","6.3":"note.hawking.p-2-correction-interpreted","4.4":"note.hawking.free-fermion-thermal-field-theory-israels","4.5":"note.hawking.which-dynamics-what-level","6.4":"note.hawking.point-contact-weinberg-witten-triage","4.2":"hawking.i-state-continuum","3.6":"hawking.i-state"},"T8":{"6.2":"scrambling.return-delay-scrambling-log-recovered","6.3":"scrambling.no-attic-route","6.1":"scrambling.spreading-law-chaos-bound-saturated","4.4":"scrambling.integer-holographic-form-identification","3.1":"obj.scrambling.stretched-singularity","2.3":"tower.witt-index-quantum-capacity","4.7":"scrambling.imported-collars-coframe-exceptional-set-helicity","2.4":"interior.imported-schwarzschild-curvature-spectrum","2.2":"scrambling.imported-modes-modular-inventory","5.3":"scrambling.imported-kostant-madore-partition-data","2.1":"singularity.causal-epoch-computed-exactly","5.1":"scrambling.imported-time-plane-modular-data","4.2":"scrambling.clock-inventory-boundary-modes","3.2":"scrambling.scheme-robustness-cutoff","4.1":"scrambling.intrinsic-clock-ic-flagged-premise","5.4":"scrambling.indifference-structural-premise-series","3.5":"scrambling.area-law-test","5.6":"scrambling.consistency-car-construction-i-states-insensitivity","4.10":"scrambling.exactness-excludes-cutoff-dependence","4.8":"scrambling.exact-factorisation-thinning","5.2":"scrambling.boundary-mode-space-matrix","5.7":"scrambling.per-slice-verification-two-failed-aggregations","4.13":"scrambling.no-recount-reaches-quarter","4.11":"scrambling.pair-mode-qubit-one-object","4.12":"scrambling.residue-each-convention","3.6":"scrambling.uniqueness-internal-scaling","3.3":"scrambling.slice-volume-exactly-per-unit-killing","4.9":"scrambling.candidate-principles-their-yields","7.2":"scrambling.catalogue-confronted","7.1":"scrambling.no-echo-prediction-registered","4.14":"note.scrambling.prediction-restated","4.6":"note.scrambling.point-contact-what-kind-statement","4.5":"note.scrambling.circularity-fence","3.7":"note.scrambling.density-factor-stated-full","3.4":"scrambling.mode-count","4.3":"scrambling.epoch-modular-period-two-unknowns-become","5.5":"scrambling.principality-indifference-sphere"},"T9":{"6.11":"correspondence.googly-localisation-quartic-order","4.8":"correspondence.one-statement-three-languages","3.5":"note.correspondence.isomorphism-witt-pair","2.1":"correspondence.imported-forced-completion-fibre-quadric","2.2":"correspondence.imported-ladder-pairs-fock-modules-over","6.1":"correspondence.imported-nonlinear-graviton","4.9":"correspondence.imported-tractor-connection-local-twistor-transport","4.3":"correspondence.imported-stabilisers-flat-model","6.9":"correspondence.imported-complete-reducibility","4.7":"correspondence.imported-vacuum-equations-scale-tractor","6.3":"correspondence.imported-weyls-theorem","6.2":"correspondence.imported-weyl-commutes-duality","3.3":"correspondence.chevalley-pairing","4.4":"correspondence.chiral-planes-summand-spaces","6.7":"correspondence.ordering-filtration","6.4":"correspondence.lorentzian-duality-complex-structure","5.5":"correspondence.symmetrised-quadratics-palatial-algebra","6.10":"correspondence.chirality-split-ordering-insensitivity-asd-sector","4.10":"correspondence.local-twistor-transport-ascended-spinor-connection","6.5":"correspondence.no-real-lorentzian-vacuum-half-flat","4.5":"correspondence.reality-conjugation-twistor-form-factor","5.6":"correspondence.clifford-side-ordering-shift","4.1":"correspondence.skew-lines-splittings-hyperbolic-planes-one","5.2":"correspondence.spin-representation","5.1":"correspondence.statistics-no-go","5.4":"note.correspondence.point-contact-planes-tower","6.6":"note.correspondence.boundary-stated-plainly","3.2":"note.correspondence.dimensions-real-form","4.6":"note.correspondence.what-factor-i-what-remains-conventional","6.12":"note.correspondence.what-proved-what-conjectured","4.12":"note.correspondence.one-imported-convention-local-twistor-identification","6.8":"note.correspondence.where-curvature-operator-could-enter","4.11":"note.correspondence.point-contact-what-became-tractor-formalism","5.8":"note.correspondence.two-storey-picture","5.7":"correspondence.shared-core-ordering-dictionary","4.2":"correspondence.incidence-relation-chart","3.1":"correspondence.fock-model-complexified-ascended-algebra","3.4":"correspondence.spinor-identification","5.3":"correspondence.twistors-are-states-three-ladder-pairs"},"T10":{"4.10":"dark-energy.forcing-half-schwarzschild-wall-residue-sense","5.5":"dark-energy.lift-inherits-no-go-steps-itemised","6.1":"dark-energy.conclusion-does-not-depend-ontology-level","5.6":"obj.dark-energy.four-ways-number-enters-theory-shape","2":"dark-energy.imported-frozen-point-geometry","3":"dark-energy.imported-macdowell-mansouri-theorem-stelle-west","5.1":"dark-energy.imported-conformal-orthogonality-sugawara-construction","2.3":"dark-energy.imported-s-wave-current-algebra","2.1":"dark-energy.imported-frozen-point-geometry","5.11":"dark-energy.imported-henneaux-teitelboim-promotion","2.2":"dark-energy.imported-macdowell-mansouri-theorem-stelle-west","5.10":"standard-model.trichotomy-what-kind-number","2.4":"dark-energy.imported-walls-sphere-theorem","4.7":"dark-energy.imported-weighted-limit-schwarzschild-singularity-matching","2.5":"dark-energy.stelle-west-vector-frozen-point","4.12":"dark-energy.variable-exponents-residue-pointwise-corrections-are","4.11":"dark-energy.wall-counterterm","5.7":"dark-energy.four-alternatives-are-exhaustive-three-are","5.4":"dark-energy.point-infinity-has-no-physical-fluctuation","4.9":"dark-energy.frozen-point-datum-kasner-wall","4.8":"dark-energy.cosmological-constant-does-not-change-residue","5.2":"dark-energy.acoustic-no-go-one-way-grip","5.8":"dark-energy.under-action-written-norm-parameter-laws","4.2":"dark-energy.vacuum-region-registration-condition","4.5":"dark-energy.sheaf-papers-wall-soldering-variables","4.4":"note.dark-energy.point-contact-what-dichotomy-explains","5.9":"note.dark-energy.what-clause-3-requires-what-it","4.13":"note.dark-energy.what-three-discharges-leave","5.3":"note.dark-energy.weakness-dimension-nonlinear-bound-open-items","4.6":"note.dark-energy.what-settles-what-it-reformulates","3.2":"note.dark-energy.point-contact-why-form-not-value","3.1":"dark-energy.frozen-point-makes-stelle-west-vector","4.3":"dark-energy.gravity-pre-metric-forces-degenerate-exactly","4.1":"dark-energy.walls-free-sector"},"T11":{"3.2":"mass.weight-polynomial-two-series","5.4":"obj.mass.grip-mass-composite","5":"mass.mass-symplectic-area-two-twistor-formula","10":"mass.exact-join","3":"mass.mass-weight-dictionary","11":"mass.exact-join","4":"mass.weight-polynomial-two-series","6":"note.mass.what-nullity-fixes","2":"mass.imported-frozen-point-tractor-connection","12":"mass.weight-composite","2.5":"dark-energy.frozen-point-makes-stelle-west-vector","2.3":"mass.imported-flat-model-twistor-chart-infinity","2.6":"mass.imported-unitary-representations-de-sitter-group","2.1":"mass.imported-frozen-point-tractor-connection","2.4":"mass.imported-palatial-quadratics-homogeneity-charge","2.2":"mass.imported-thomas-operator","5.3":"mass.chart-form-spin-isomorphism","5.1":"mass.de-sitter-scale-frozen-point","5.8":"mass.five-broken-generators","2.7":"mass.invariant-forms-simple-lie-algebra","5.5":"mass.grip-real","4.1":"mass.mass-symplectic-area-two-twistor-formula","5.7":"mass.casimir-form-join","5.9":"mass.weight-composite","6.1":"note.mass.point-contact-what-gravity-why-everything","3.4":"note.mass.what-dictionary-does-does-not-yield","5.10":"note.mass.what-join-says","5.2":"note.mass.what-nullity-fixes","3.5":"note.mass.point-contact-dictionary-plain-words","5.11":"note.mass.quantisation-ordering","3.3":"note.mass.conventions-sign","4.2":"note.mass.point-contact-angle-between-two-vacua","3.1":"mass.mass-weight-dictionary","5.6":"mass.exact-join"},"T12":{"9.34":"standard-model.coefficient-cannot-come-frozen-point","10.9":"standard-model.bidoublet-complex","8.10":"standard-model.direction-demanded-content-doublet-heavy","9.12":"standard-model.under-s-frozen-points-split-inverse","8.6":"standard-model.under-s-mirror-inherits-desert","9.36":"standard-model.what-direction-made","9.28":"standard-model.lifted-components-read-vevs","9.25":"standard-model.one-vev-vector-relations-breaking-pattern","9.8":"obj.standard-model.two-rung-module-sectors-slot-components","8.4":"obj.standard-model.one-threshold-spectrum-admissible","1":"standard-model.gauge-algebra-minimal-massive-composite","5":"standard-model.weak-angle-over-derived-generation","4":"standard-model.quarks-leptons-two-level-fermion-content","3":"standard-model.raw-representation-content-state-space","2":"standard-model.global-form-quotient-determined","6":"obj.standard-model.one-threshold-spectrum-admissible","2.7":"standard-model.imported-anomaly-coefficients","9.6":"standard-model.imported-spinor-bilinears","2.6":"standard-model.imported-cauchy-decomposition-exterior-power","11.1":"standard-model.imported-clebsch-structure-seesaw","9.19":"standard-model.imported-maximal-compact-subgroups","2.5":"standard-model.imported-frozen-point-dictionary","2.11":"standard-model.imported-fock-representation-clifford-algebra-bogoliubov","9.5":"standard-model.imported-frozen-point-grip-thirteenth-refutation","9.38":"families.doublet-direction-module-georgi-jarlskog-clebsch","9.3":"standard-model.imported-grip-area-casimir-form","2.3":"standard-model.imported-twistor-charge-helicity","8.1":"standard-model.imported-coefficient-sum-indices","8.3":"standard-model.imported-invariant-forms-simple-lie-algebra","2.1":"mass.mass-symplectic-area-two-twistor-formula","9.4":"transport.totality","9.7":"neutrino.imported-ceiling-under-hypothesis-u-arrow","2.2":"standard-model.imported-pair-systems-two-chirality-halves","8.21":"standard-model.imported-proton-condition","10.1":"standard-model.imported-pati-salam-representation-theory-survival","2.10":"standard-model.imported-norm-frozen-point-not-field","2.8":"standard-model.imported-one-loop-running-trace-ratio","9.1":"standard-model.imported-tower-commuting-copies-fock-module","8.2":"standard-model.imported-sectors-superselection-mirror-copy","2.9":"standard-model.imported-tractor-bundle-spinor-bundle-their","9.2":"standard-model.imported-fock-model-twistor-space","2.4":"dark-energy.gravity-pre-metric-forces-degenerate-exactly","8.18":"standard-model.imported-two-loop-gauge-coefficients","8.8":"standard-model.complete-multiplets-shift-all-three-coefficients","10.5":"standard-model.matching-traces","2.12":"standard-model.pair-count-dimension","9.23":"standard-model.invariant-pairing-five-modes","2.13":"standard-model.segre-lemma-automorphisms-preserving-decomposable-tensors","7.1":"standard-model.one-number-explain","11.7":"standard-model.fits-record-level","7.4":"standard-model.dating-descent","9.17":"standard-model.configuration-sector-carries-higgs-doublets-quantum","7.5":"standard-model.largeness-number-universes-boundary-modes","8.14":"standard-model.places-outside-state-space","7.2":"standard-model.what","7.3":"standard-model.why-large","9.15":"standard-model.under-s-bracket-direction-charged-not","10.7":"standard-model.majorana-element","5.6":"standard-model.chirality-two-halves-spinor-module-conjugation","9.16":"standard-model.invariant-operators-module","5.7":"standard-model.connection-forced","5.3":"standard-model.quarks-leptons-two-level-fermion-content","6.2":"standard-model.spectrum-run","10.8":"standard-model.left-right-parity-what-breaks-it","11.5":"standard-model.neutrino-dirac-matrix-charged-fermions","11.3":"standard-model.equal-weight-module","9.9":"standard-model.module-factorises-even-ground-elements-act","9.26":"standard-model.frozen-point-first-rung-component","4.3":"standard-model.four-dimensions-forces-converse","11.6":"standard-model.grade-three-georgi-jarlskog-direction","3.1":"standard-model.internal-symmetry-ladder","8.13":"standard-model.under-s-state-space-complete-multiplets","9.27":"standard-model.transported-frozen-point","9.14":"standard-model.frozen-point-pair-mixing","9.20":"standard-model.pair-mixing-not-colour","8.22":"standard-model.proton-condition-candidates","10.6":"standard-model.proton-decay-only-through-slot-pair","10.10":"standard-model.chain","10.4":"standard-model.generation-ten-under-pati-salam","5.1":"standard-model.raw-representation-content-state-space","9.18":"standard-model.reduction","11.2":"standard-model.what-angle-asks-neutrino-sector","3.2":"standard-model.mass-bracket-charged-singlet","5.8":"standard-model.under-s-composites-state-space-spinor","10.2":"standard-model.automorphisms-preserve-slot-pair-split-are","8.16":"standard-model.four-supersymmetric-splits","9.29":"standard-model.what-derived-what-not","8.11":"standard-model.table-exact","9.22":"standard-model.ten-transported-ambient-space-doublets-are","8.5":"standard-model.no-tower-but-one-contributes-towers","9.21":"standard-model.transported-frozen-point-doublet-datum-not","7.6":"standard-model.trichotomy-what-kind-number","9.32":"standard-model.space-symmetric-doublet-mass-forms-two","8.19":"standard-model.supersymmetric-row-two-loops","6.1":"standard-model.weak-angle-over-derived-generation","11.8":"note.standard-model.what-section-settles-route-series-takes","9.37":"note.standard-model.what-settles-what-it-leaves-open","6.3":"note.standard-model.point-contact-what-framework-adds-classic","8.7":"note.standard-model.what-settled-what-gravitational-channel-cannot","8.23":"note.standard-model.what-condition-does-not-cover","5.2":"note.standard-model.eighth-refutation-split-conclusion-decisive-test","11.4":"note.standard-model.equal-weight-premise","8.17":"note.standard-model.gluino-heavier-threshold-block-level","9.13":"note.standard-model.0-what-massless-means-here","9.30":"note.standard-model.two-pairings-two-patterns","10.11":"note.standard-model.what-chain-decides-what-it-leaves","8.12":"note.standard-model.sensitivity-one-loop-decides-nothing-about","5.9":"note.standard-model.point-contact-grand-unification-what-hypothesis","3.3":"note.standard-model.sixth-refutation-ladder-not-gauge-group","10.3":"note.standard-model.reading-automorphism-rule","8.20":"note.standard-model.scope","4.4":"note.standard-model.point-contact-what-kind-explanation","5.4":"note.standard-model.weakness-examined-exotics-conjugation-hypercharge","4.1":"standard-model.gauge-algebra-minimal-massive-composite","9.10":"standard-model.moment-map-grip-mass-are-insensitive","9.35":"standard-model.bracket-composite-lands","8.9":"standard-model.one-threshold-exact-criterion","9.31":"standard-model.family-no-go-vev-cannot-separate","9.33":"standard-model.no-go-frozen-point-lifts-do","4.2":"standard-model.global-form-quotient-determined","5.5":"standard-model.hypercharge-global-form-pair-counting-consistency","9.11":"standard-model.grip-mass-two-rung-module","8.15":"standard-model.two-threshold-criterion","9.24":"standard-model.yukawa-pattern-two-rung-module"},"T13":{"3.1":"families.three-generations-faces-maximal-composite","8.3":"families.order-operations-matter-programme","6":"families.skeleton-rank-one-plus-ordering-shift","7":"families.koide-class-crossing-fit-conclusion","1":"families.bracket-fixed-join","5":"families.rigidity-pairing-sector-one-event","3":"families.linear-conjecture-refuted-data","4":"families.chart-computation-sign-twist-bracket-form","2":"families.source-term-linear-tilt-mass-functional","2.1":"families.imported-face-valued-bracket-quantum-numbers","8.5":"families.imported-decomposition-grade-dictionary","2.2":"families.imported-dictionary-exact-join","2.6":"families.imported-squeezed-vacuum-bosonic-pairing","2.3":"families.imported-one-derived-generation-hypothesis-s","8.6":"families.imported-grade-three-direction-between-families","2.5":"families.imported-indifference-instrument","2.4":"standard-model.trichotomy-what-kind-number","8.2":"families.imported-tree-relations-family-no-go","7.4":"families.absolute-scale-clean-negative-result","7.1":"families.one-open-problem-three-forms","7.2":"families.koide-instrument","7.3":"families.selectivity-observation-level","8.1":"families.doublet-direction-module-georgi-jarlskog-clebsch","4.3":"families.alignment-computed-thirteenth-refutation-democracy-one","5.4":"families.chart-computation-sign-twist-bracket-form","6.4":"families.classification-displaced-gaussian-class-solved-level","4.1":"families.bracket-fixed-join","7.5":"families.why-kinematic-attacks-had-fail","6.3":"families.koide-class-crossing-fit-conclusion","3.2":"families.three-identical-families-mixing-shared-slots","5.1":"families.linear-conjecture-refuted-data","5.3":"families.koide-nullity-condition-one-member-invariant","4.4":"families.faces-ordered-what-identification-requires-first","6.1":"families.rigidity-pairing-sector-one-event","4.2":"families.source-term-linear-tilt-mass-functional","8.4":"note.families.what-series-holds-what-bracket-cannot","3.3":"note.families.point-contact-what-kind-answer-three","5.2":"note.families.indifference-route-examined-withdrawn","6.2":"families.skeleton-rank-one-plus-ordering-shift"},"T14":{"7.26":"dark-matter.thickness-not-gravitational-quantity","3.11":"dark-matter.which-towers-can-carry-arrow","2.10":"obj.dark-matter.witt-flag","3.8":"obj.dark-matter.null-blades-fock-ideal-chirality","3.6":"obj.dark-matter.frozen-phase-operators","3.3":"obj.dark-matter.spinor-module-type","1":"dark-matter.population-count-one-share-half-percent","2.6":"dark-matter.imported-gravity-only-coupling","A.1":"dark-matter.imported-massless-graviton-production-rate","7.25":"dark-matter.imported-inverse-square-law-short-range","2.12":"dark-matter.imported-schwinger-discharge-charged-hole","7.18":"dark-matter.imported-frozen-point-de-sitter-radius","2.9":"dark-matter.imported-derived-generation-flag","2.7":"dark-energy.vacuum-region-registration-condition","7.27":"dark-matter.imported-linear-momentum-equation-traceless-field","2.13":"singularity.rate-models-kinematic-inputs-l-u","7.32":"dark-matter.imported-composition-simulated","4.2":"dark-matter.imported-inputs-standard-model-chain","7.21":"dark-matter.imported-induced-equations-hypersurface","2.5":"dark-matter.imported-eight-towers-mod-8-clock","2.8":"dark-matter.imported-trichotomy-descents-data","7.11":"dark-matter.direction-nesting-adds-algebra","6.1":"dark-matter.projection-every-towers-content-dilutes-ones","4.10":"dark-matter.which-towers-are-populated","7.31":"dark-matter.status-rule","7.19":"dark-matter.d-democracy-total-mass","7.2":"dark-matter.r1-equal-mass-per-quantum","7.3":"dark-matter.r2-one-quantum-per-unit-ball","7.4":"dark-matter.r3-one-cell-per-unshared-direction","2.4":"dark-matter.p4-democracy-asymmetry-over-oriented-towers","2.2":"dark-matter.p2-indifference","2.11":"dark-matter.p5-boundary-modes-hold-entropy-not","2.1":"dark-matter.p1-single-frozen-point","2.3":"dark-matter.p3-nearest-dimension-representatives","7.15":"dark-matter.total-function-thickness","5.1":"dark-matter.asymmetry-arrow-counted-fifteenth-refutation","6.2":"dark-matter.radiation-audit-what-theorem-closes-what","6.4":"dark-matter.ceiling-valued-inherited-success","4.6":"dark-matter.stored-asymmetry-charge-not-number","A.3":"dark-matter.coefficients-floors-they-give-what-gravity","4.5":"dark-matter.population-count-one-share-half-percent","7.20":"dark-matter.democracy-de-sitter-radius-unit-ball","3.9":"dark-matter.two-families-are-two-chiralities","3.2":"dark-matter.flag-insensitive-residue-no-flag-level","A.2":"dark-matter.seeding-gravity-floor-dark-towers-temperature","6.5":"dark-matter.parallel-boundary-mode-spaces-one-wall","4.7":"dark-matter.mirror-share-one-how-fragile","7.1":"dark-matter.nesting","A.4":"dark-matter.no-coupling-rule-odd-towers-follows","6.3":"dark-matter.open-channels-their-costs","5.2":"dark-matter.orientation-arrow-seventeenth-refutation","7.16":"dark-matter.two-roots-are-chord-arc-quarter","7.22":"dark-matter.two-reductions","3.1":"dark-matter.towers-are-residues-single-clock-filter","7.6":"dark-matter.unit-ball-rule","7.28":"dark-matter.reduced-response-gravity-needs-supporting-stress","7.24":"dark-matter.sourcing-rule-forced-not-chosen","4.1":"dark-matter.superselected-hence-dark-exactly-stable","7.12":"dark-matter.contact-mechanism-returns-r3","7.13":"note.dark-matter.what-s-uses-what-it-does","7.9":"note.dark-matter.extra-direction-must-co-expand","7.7":"note.dark-matter.why-ball-denominator","3.7":"note.dark-matter.where-flag-defined-what-it-carries","3.13":"note.dark-matter.forks-cost-restated-causal-criterion-theorem","7.10":"note.dark-matter.equivalent-forms-assignment-not","7.30":"note.dark-matter.halo-built-collisionless-sheets-cold-dark","7.29":"note.dark-matter.sheet-family-linear-spectra","7.5":"note.dark-matter.r1-against-series-mass-formulas","5.3":"note.dark-matter.point-contact-one-datum-two-questions","7.23":"note.dark-matter.one-pole-flat-count","7.8":"note.dark-matter.what-rule-has-has-not","7.14":"note.dark-matter.scope-mechanism","4.9":"note.dark-matter.what-share-exposed-what-it-not","7.17":"note.dark-matter.common-thickness-curve-if-two-differ","3.12":"note.dark-matter.point-contact-what-kind-dark-matter","4.3":"dark-matter.mirror-tower-copy-one","4.4":"dark-matter.mode-counts-two-modules-which-one","3.10":"dark-matter.flag-bit-exists-exactly-tower-dimension","4.8":"dark-matter.mirror-share-assembled","3.5":"dark-matter.residue-soldered-invariant-not-algebraic-one","3.4":"dark-matter.type-residue-what-each-tower-can"},"T14a":{"4.2":"odd-extensions.copy-theorems-blind-spot","2.4":"odd-extensions.four-extensions-oriented-pair","7.3":"odd-extensions.not-coupling-between-towers","7.2":"odd-extensions.two-readings-which-which","10.4":"odd-extensions.two-classes-completion","8.3":"odd-extensions.cosmological-constant-undetermined-within-series","6.3":"odd-extensions.cosmological-constant-deforms-wall","2.1":"obj.odd-extensions.single-extension","8.1":"odd-extensions.imported-minimal-completion-degenerate-algebra-rule","1.4":"odd-extensions.imported-conformal-completion","1.3":"odd-extensions.imported-copy-theorem-soldered-residue","1.5":"odd-extensions.imported-frozen-point","9.1":"dark-energy.point-infinity-has-no-physical-fluctuation","6.1":"odd-extensions.imported-frozen-point-degenerate-algebras","1.2":"odd-extensions.imported-representatives-dimension-nearest-four-types","10.1":"odd-extensions.imported-tame-walls-exceptional-algebra-residue","1.1":"odd-extensions.imported-towers-clock","2.2":"odd-extensions.volume-element-odd-dimension","7.1":"odd-extensions.belongs-tower","5.1":"odd-extensions.four-extensions-are-four-odd-towers","9.2":"odd-extensions.boost-dilation-ratio-gauge","3.2":"odd-extensions.translation-bivectors-frozen-point","5.2":"odd-extensions.every-path-mirror-crosses-two-time","10.2":"odd-extensions.line-tame-wall","9.3":"odd-extensions.two-towers-one-curved-universe","7.4":"note.odd-extensions.what-copies-are","4.3":"note.odd-extensions.holographic-coincidence","5.3":"note.odd-extensions.no-mechanism","8.4":"note.odd-extensions.dictionary-ascents-null-pair","9.4":"note.odd-extensions.one-operator-sees-difference","3.3":"note.odd-extensions.what-says-what-it-does-not","2.5":"note.odd-extensions.added-axis-pseudoscalar","8.6":"note.odd-extensions.what-transport-stance-does-does-not","6.4":"note.odd-extensions.what-adds-dark-energy-paper","10.5":"note.odd-extensions.what-section-adds","8.5":"note.odd-extensions.two-bits-compared","8.2":"odd-extensions.transport-constrains-frozen-point-only-through","10.3":"odd-extensions.exceptional-algebra-residue-completion-both-sides","3.1":"odd-extensions.mirror-inside-complexified-extension-absent-doubled","6.2":"odd-extensions.are-ascents-pair-signed","4.1":"odd-extensions.twistor-algebra","2.3":"odd-extensions.doubling-or-complexification"},"T14b":{"3.4":"simulations.confinement-scale-does-not-matter","3.2":"simulations.imported-low-energy-scattering-two-dimensions","2.4":"simulations.imported-bullet-cluster","2.3":"simulations.imported-mirror","2.6":"simulations.imported-milky-ways-mass-budget","2.5":"simulations.imported-cluster-shapes","2.2":"simulations.imported-unit-ball-rule-family","2.1":"dark-matter.superselected-hence-dark-exactly-stable","4.1":"simulations.averaged-pair-operator","9.1":"simulations.mirror-galaxy","7.2":"simulations.halo-shapes","7.1":"simulations.merger","2.12":"simulations.c-odd-towers-collisionless","2.7":"simulations.s1-one-species-per-tower","2.8":"simulations.s2-sheet-fluid","2.9":"simulations.s3-mirror-cluster","2.10":"simulations.s4-our-matter","2.11":"simulations.s5-halos","3.3":"simulations.cluster-bound-two-dimensions","3.1":"simulations.effective-cross-section-sheet-matter","2.13":"note.simulations.what-premise-c-needs"},"T14c":{"8.3":"dark-tower-matter.mirrors-composition","7.2":"dark-tower-matter.same-kind-matter","3.1":"obj.dark-tower-matter.ideals-fields-momentum","2.3":"dark-tower-matter.imported-our-towers-chain","2.2":"dark-tower-matter.imported-clifford-structure","2.4":"dark-tower-matter.imported-unit-ball-rule","2.5":"dark-tower-matter.imported-cluster-simulations","2.1":"dark-tower-matter.imported-towers-their-types","6.2":"note.dark-tower-matter.neutral-row","3.4":"dark-tower-matter.adjoint-norm","11.1":"dark-tower-matter.towers-built","8.4":"dark-tower-matter.mirror-against-record","2.6":"dark-tower-matter.h1-momentum","2.7":"dark-tower-matter.h2-identification","2.8":"dark-tower-matter.hypothesis-s-slot-statistics","2.9":"dark-tower-matter.u-transposition-rule","8.2":"dark-tower-matter.mirrors-temperature-p2","9.4":"dark-tower-matter.r1-has-no-mechanism-odd-towers","6.5":"dark-tower-matter.anomalies","6.1":"dark-tower-matter.three-dimensional-content","6.3":"dark-tower-matter.five-dimensional-content","9.3":"dark-tower-matter.five-dimensional-towers","7.1":"dark-tower-matter.residue-seven-unit","4.1":"dark-tower-matter.pairs","9.1":"dark-tower-matter.three-dimensional-phases","9.5":"dark-tower-matter.population","9.2":"dark-tower-matter.survival-sheets","10.1":"dark-tower-matter.sterile-kinematics","6.4":"note.dark-tower-matter.why-s-fails-three-dimensions-not","3.6":"note.dark-tower-matter.four-dimensional-case-t11s-formula","3.3":"note.dark-tower-matter.t14s-types-are-different-commutant","5.2":"note.dark-tower-matter.branches-break-u-what-they-give","10.2":"note.dark-tower-matter.kleinian-algebra","7.3":"note.dark-tower-matter.r-5-unit-datum-or-field","4.3":"note.dark-tower-matter.two-readings-unit","2.10":"note.dark-tower-matter.why-u","5.1":"dark-tower-matter.gauge-algebras","3.2":"dark-tower-matter.constituents-field","3.7":"dark-tower-matter.ladder","8.1":"dark-tower-matter.mirror-algebra","3.5":"dark-tower-matter.where-mass-begins","4.2":"dark-tower-matter.third-pairs-unit-five-dimensions"},"T15":{"1":"neutrino.seesaw-what-gauge-invariance-proves-what","2.2":"neutrino.imported-mass-bracket-quantum-numbers","2.5":"neutrino.imported-ceiling-under-hypothesis-u-arrow","2.1":"neutrino.imported-derived-content-singlets","2.3":"neutrino.imported-indifference-faces-democratic-alignment-rank","2.4":"mass.exact-join","2.6":"dark-energy.vacuum-region-registration-condition","4.6":"neutrino.breaking-relation","4.3":"neutrino.invariant-symmetric-matrices","4.8":"neutrino.mixing-none-leading-order","4.5":"neutrino.h-second-stage-hierarchical","4.2":"neutrino.m-framework-realises-majorana-term-scale","5.4":"neutrino.r-descent-reheats-below-lower-heavy","5.1":"neutrino.double-prediction-sum-predicted-floor","3.1":"neutrino.empty-twistor","5.3":"neutrino.leptogenesis-suppressed-alignment-reheating-premise-new","4.4":"neutrino.rank-one-seesaw-ordering-sum-double","4.1":"neutrino.seesaw-what-gauge-invariance-proves-what","4.7":"note.neutrino.branch-m-3","5.2":"note.neutrino.confrontation-it-stands-date-stamped","3.2":"note.neutrino.point-contact-why-neutrino-different","4.9":"note.neutrino.valuation-m-both-ends-hypothesis-u"},"T16":{"5.7":"one-relation.arrow-frequency-are-one-bit-level","2.2":"tower.witt-index-quantum-capacity","2.10":"one-relation.imported-cartans-purity-theorem-thouless-form","2.1":"one-relation.imported-completion-ladder","2.6":"one-relation.imported-condensate-derived-content","2.9":"one-relation.imported-null-cone-determines-form-zeemans","2.5":"one-relation.imported-flag-arrow-superselection","2.7":"one-relation.imported-indifference-instrument","2.3":"one-relation.imported-pure-spinors-incidence-chart","2.8":"one-relation.imported-square-roots-real-clifford-algebras","2.4":"one-relation.imported-single-mode-thermality-modular-period","2.11":"one-relation.imported-witts-extension-theorem","6.1":"one-relation.dirac-current-conserved-density","5.5":"one-relation.odd-square-roots-chiral-phase","5.6":"one-relation.one-datum-not-two-imaginary-unit","4.4":"one-relation.third-constant-conversion-constant-between-charts","5.4":"one-relation.form-law-forced-square","5.1":"one-relation.vector-derivative-covariant-first-order-operator","6.3":"one-relation.recording-irreversible-stated-so-it-can","7.1":"one-relation.supervenience-stated-so-it-can-be","6.2":"one-relation.measure-indifference-borns-rule-located","3.2":"one-relation.two-capacities-three-consequences","7.2":"one-relation.character-experience-three-record-chain-theorems","4.2":"one-relation.overlap-table-sorted","5.2":"one-relation.schr-odinger-slow-shadow","3.1":"one-relation.two-presentations","4.1":"one-relation.spacetime-manifold-vacuum-lines","6.5":"one-relation.record-chain-votes-measurement-without-collapse","5.3":"note.one-relation.point-contact-what-has-has-not","4.5":"note.one-relation.where-exhaustiveness-first-fails-4-quadric","6.4":"note.one-relation.measurement-recording-open-remainder","4.3":"note.one-relation.two-residues-named-so-synthesis-can"},"T17":{"1":"refuted.twistors-are-the-ladder-operators"}}};
+function openInLab(hash){ try { if (window.parent && window.parent !== window) { window.parent.location.hash = hash; return; } } catch (e) {}
+  window.open('transport_lab.html' + hash, '_blank', 'noopener'); }
+document.addEventListener('click', e => { const a = e.target.closest('[data-lab]'); if (!a) return; e.preventDefault(); openInLab('#' + a.dataset.lab); });
+
+/* ---------- the timeline, in viewport heights ---------- */
+const SCENES = [
+  ['hero', 130], ['limits', 160], ['why', 110], ['circle', 420], ['pairs', 300], ['flip', 230],
+  ['sphere', 380], ['recipe', 530], ['spacetime', 380], ['principle', 300], ['more', 560], ['everyday', 300], ['approach', 320], ['end', 120]];
+const CHAPTERS = [['I', '#DIV/0!', 'hero'], ['II', 'The circle', 'why'], ['III', 'The sphere', 'sphere'], ['IV', 'Spacetime', 'spacetime'], ['V', 'Not a formalism', 'more'], ['VI', 'Next', 'end']];
+const START = {}; let TOTAL = 0; SCENES.forEach(([k, n]) => { START[k] = TOTAL; TOTAL += n; });
+const LEN = Object.fromEntries(SCENES);
+$('#track').innerHTML = CHAPTERS.map(([n, t, k]) => `<button data-k="${k}"><b>${n}</b>${t}</button>`).join('');
+function phaseAt(v){ let k = 'hero'; SCENES.forEach(([x]) => { if (v >= START[x]) k = x; }); return {k, s: Math.min(1, Math.max(0, (v - START[k]) / LEN[k]))}; }
+
+/* ---------- subtitles: [from, to, text, references] ---------- */
+const CAPS = {
+  limits: [[0.03, 1.01, 'Take a number x and its reciprocal, 1/x. As x tends to zero from the right, 1/x tends to plus infinity; from the left, to minus infinity. The two one-sided limits disagree, so 1/x has no limit at zero.', []]],
+  why: [[0.03, 1.01, 'What is missing is a single point at infinity, reached by going far enough in either direction. The line has nowhere to put it. Geometry has a way: bend the line round until its two ends meet. A projection does exactly that.', []]],
+  circle: [[0.03, 0.28, 'The circle needs a second direction, up the page: call it y, a new direction the line did not have. Set a circle of radius one half on the line, touching it at zero, so that its top is at height y = 1.', []],
+         [0.28, 0.6, 'Draw a straight line from the top of the circle to any number x. It crosses the circle at exactly one other point, so every number has its own point on the circle. This is stereographic projection, known to the Greeks and built into the astrolabe. It is the construction the transport principle generalises.', []],
+         [0.6, 0.84, 'Go far out to the right and the image climbs towards the top. Go far out to the left and it climbs towards the top as well.', []],
+         [0.84, 1.01, 'So plus infinity and minus infinity become one point, the top of the circle: the point at infinity. The line with this point added is the projective line.', []]],
+  pairs: [[0.03, 1.01, 'On the circle, taking the reciprocal is a reflection, top for bottom. Follow x = 2 up to the circle, reflect it, and project back down: you land on 1/2. In the same way −3/2 goes to −2/3.', []]],
+  flip: [[0.03, 0.5, 'Zero sits at the very bottom, so the reflection sends it straight to the top.', []],
+         [0.5, 1.01, 'So 1/0 = ∞. Nothing was broken: the circle simply has one more point than the line.', []]],
+  approach: [[0.03, 0.5, 'Step back and compare the two orders of work. Traditional mathematics starts with a space, defines its operations, finds where they fail, and patches each failure: a point removed, a point added by hand, a quantity cut off. The singularity is a defect of a space already given.', []],
+             [0.5, 1.01, 'The transport principle runs the other way. It starts from the failures, the directions along which inversion breaks, and lets their shape dictate the completion: the smallest space in which inversion works everywhere, unique up to a change of axes. The geometry comes out of the completion, twistors and fermionic switches included. The singularity is not a defect but a signpost.', ['T1 Thm 4.10, 4.13', 'T3 Thm 4.3', 'T9 Thm 4.2']]],
+  everyday: [[0.03, 1.01, 'Back to the spreadsheet. How much the point at infinity gives depends on the algebra it is added to. For our everyday numbers it adds little: expressions such as ∞ − ∞ and 0 × ∞ still have no answer, so the spreadsheet is right to keep its error. In the algebra of space and time the same move gives far more: a larger space with physics in it.', []]],
+  sphere: [[0.03, 0.3, 'In the 1850s Bernhard Riemann was studying functions of the complex numbers, z = x + iy, which fill a plane. Functions such as 1/z run off to infinity at certain points, and Riemann wanted to treat infinity as one more point, so that a function could be followed through it like anywhere else. The picture that made this concrete, set out in print by Carl Neumann in 1865 from Riemann’s ideas, uses the ancient projection: the plane becomes a sphere, now called the Riemann sphere.', []],
+         [0.3, 0.6, 'Projecting from the top again gives every point of the plane its own point on the sphere, and every direction out to infinity ends at the same point, the top.', []],
+         [0.6, 1.01, 'Taking one over a number is again a reflection, top for bottom. The equator, where the numbers of size 1 lie, stays where it is, and zero goes straight to infinity. Strictly, this is one over z with a mirror flip, z/|z|², the form the papers use; plain 1/z turns the sphere half way round instead.', ['T1 §4.8.1']]],
+  recipe: [[0.03, 0.307, 'The papers use Clifford’s geometric algebra, where each direction squares to +1 or −1. The transport principle, for a light-like division: to any space, add one direction of time and one of space. Each point x becomes a light-like vector, X(x) = n₀ + x + ½ Q(x) n∞: stereographic projection, in general form. The reciprocal is then a reflection defined everywhere. Counted as time + space, the line is 0 + 1.', ['T1 Thm 4.10, 4.13']],
+         [0.307, 0.615, 'Back to the simplest case, the line, which has no direction of time at all: 0 + 1 becomes 1 + 2. Light-like directions need at least one direction of each kind, and in 1 + 2 they form a cone. Seen at one moment, the cone is a circle. The line itself, the points n₀ + x, lies in the same moment, touching the circle at 0.', ['T1 Thm 4.13']],
+         [0.615, 1.01, 'Look down the new time direction and nothing has to move: the circle, 0 at the bottom, infinity at the top, and the line touching it at 0. Lifting each x to X(x) is exactly the stereographic projection from before. The radius is forced too: 1/1 = 1, so 1 and −1 stay put on the reflection’s middle line, and with the line touching at 0 the radius is one half.', ['T1 §4.8.1']]],
+  spacetime: [[0.03, 0.34, 'Now spacetime. It measures length in its own way, and in it light is special: a light-like, or null, vector has length zero.', []],
+         [0.34, 0.66, 'So dividing by a light-like vector is dividing by zero, along a whole cone of directions, and one extra point cannot repair it. The drawing shows two of the three directions of space: for spacetime the cone is a picture, with one direction left out.', []],
+         [0.66, 1.01, 'Inside a non-rotating black hole’s horizon both edges of the light cone tip inward, and as the centre is approached they close onto a single direction. In that limit the gravitational field degenerates and stops measuring that direction at all: a division by zero of the same family, which no change of gauge removes.', ['T5 Prop 2.5, 2.6, 2.7']]],
+  principle: [[0.03, 1.01, 'Applied to spacetime, the transport principle adds one direction of time and one of space: 1 + 3 becomes 2 + 4. There the reciprocal, as a map of points, is defined at every light-like vector, sending it to a point at infinity of its own. The papers prove that nothing smaller works and that the smallest enlargement is unique up to a change of axes, exactly as for the line and the plane.', ['T1 Thm 4.10, 4.13, 4.19']]],
+  more: [[0.02, 0.24, 'On the line only zero itself has no reciprocal, and the point at infinity is a convenience. In spacetime the problem is sharper: a light ray is not zero, yet it has no inverse in any larger associative algebra, and no choice of partial inverse respects the symmetries of spacetime. Only the space can grow, and its smallest enlargement is unique.', ['T1 Lem 2.1', 'T1 Thm 4.2, 4.13']],
+         [0.24, 0.48, 'The construction uses only geometry: two new directions, one of time and one of space. Yet they obey exactly the algebra of one fermionic mode, a quantum switch: off or on, never on twice, the exclusion principle. The construction never asked for it: this is an output, not an input. Each enlargement adds exactly one such mode.', ['T3 Prop 4.1', 'T3 Thm 4.3']],
+         [0.48, 0.74, 'There is a precedent for reading mathematics as physical reality. Lorentz had the formulae of relativity by 1904 and treated the time in them as a mathematical aid. Einstein read them as what clocks and rulers actually do. The Transport Papers make the same kind of claim: the larger space is not a trick for getting answers. It is where the physics is.', ['G00 Ch. 1']],
+         [0.74, 1.01, 'The evidence is that the destinations were never chosen. Followed step by step, the construction lands on Penrose’s conformal spinors (his twistors), and turns Einstein’s vacuum equations into one condition, that one particular light-like vector, fixed by the physical scale, is carried unchanged from point to point by the gravitational field: results built for other reasons, found exactly where the algebra was forced to go.', ['T9 Thm 4.2', 'T6 Thm 4.5']]],
+};
+
+/* ---------- the player: a slide show. Each subtitle is a step; Next cuts to the step at once (its
+   subtitle and drawing appear immediately) and then plays the step's own movement, slowly. ---------- */
+const STEPS = [[0, 0]];              // [start, stop] on the timeline, in viewport heights
+SCENES.forEach(([k, n]) => { const list = CAPS[k] || []; list.forEach((c, i) => {
+  const stop = i === list.length - 1 ? Math.min(c[1] - 0.06, 1 - 14 / n) : c[1] - 0.06;
+  STEPS.push([START[k] + (c[0] + 0.004) * n, START[k] + stop * n]); }); });
+STEPS.push([START.end + 8, START.end + 8]);
+const STOPS = STEPS.map(x => x[1]);
+const RATE = 22;                     // viewport heights a second: the pace of the movement inside a step
+let vNow = 0, idx = 0, anim = null;  // anim: {from, to, t0, dur}
+const ease = x => (1 - Math.cos(Math.PI * x)) / 2;
+// forward: cut to the start of the step and play it; back, or a jump: cut to the finished step
+function goStep(i, play = true){
+  i = Math.max(0, Math.min(STEPS.length - 1, i)); idx = i; const [a, b] = STEPS[i];
+  if (!play || reduce || b - a < 1) { anim = null; vNow = b; }
+  else { vNow = a; anim = {from: a, to: b, t0: performance.now(), dur: Math.min(9000, Math.max(2600, (b - a) / RATE * 1000))}; }
+  ui();
+}
+const goStop = (i, instant) => goStep(i, !instant);
+function playerV(now){
+  if (anim) { const x = Math.min(1, (now - anim.t0) / anim.dur); vNow = anim.from + (anim.to - anim.from) * ease(x); if (x >= 1) anim = null; }
+  return vNow;
+}
+function ui(){
+  $('#back').disabled = idx === 0; $('#next').disabled = idx === STOPS.length - 1;
+  $('#next').classList.toggle('pulse', idx === 0); $('#stepn').textContent = `${idx + 1} / ${STOPS.length}`;
+}
+const next = () => goStep(idx + 1), back = () => goStep(idx - 1, false);
+$('#next').addEventListener('click', next); $('#back').addEventListener('click', back);
+$$('#track button').forEach(b => b.addEventListener('click', () => {
+  const v0 = START[b.dataset.k]; goStep(STOPS.findIndex(v => v >= v0)); }));
+addEventListener('keydown', e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key) && !e.target.closest('a,button')) { e.preventDefault(); next(); }
+  else if (['ArrowRight', 'ArrowDown', 'PageDown'].includes(e.key)) { e.preventDefault(); next(); }
+  else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); back(); }
+  else if (e.key === 'Home') goStop(0, true); else if (e.key === 'End') goStop(STOPS.length - 1, true);
+});
+// one turn of the wheel is one step: the next is taken only once the wheel has been still for half
+// a second, so the momentum of a trackpad cannot carry past a step
+let wheelQuiet = 0, wheelArmed = true;
+addEventListener('wheel', e => {
+  if (e.target.closest('.end')) { const el = $('#end'); if (el.scrollHeight > el.clientHeight + 4) return; }
+  e.preventDefault(); const now = performance.now();
+  if (now - wheelQuiet > 500) wheelArmed = true; wheelQuiet = now;
+  if (!wheelArmed || Math.abs(e.deltaY) < 4) return;
+  wheelArmed = false; e.deltaY > 0 ? next() : back();
+}, {passive: false});
+let touchY = null;
+addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => { if (touchY === null) return; const dy = touchY - e.changedTouches[0].clientY; touchY = null;
+  if (e.target.closest('a,button')) return; if (dy > 50) next(); else if (dy < -50) back(); }, {passive: true});
+
+const KIND = {Thm: 1, Prop: 1, Lem: 1, Cor: 1, Fact: 1, Def: 1};
+function refHtml(t){
+  const m = t.match(/^(T\d+[a-c]?)\s+(\w+)\s+([\d.]+(?:,\s*[\d.]+)*)$/);
+  if (!m || !KIND[m[2]] || !LAB.refs[m[1]]) return t;
+  return `${m[1]} ${m[2]} ` + m[3].split(/,\s*/).map(n => { const id = LAB.refs[m[1]][n]; return id ? `<a href="#" class="labref" data-lab="${id}" title="Open in the Physics Graph">${n}</a>` : n; }).join(', ');
+}
+let capKey = null;
+function setCap(key, text, refs){
+  if (key === capKey) return; capKey = key;
+  if (!key) { $('#cap').classList.remove('show'); return; }
+  $('#capLine').textContent = text; $('#capTags').innerHTML = refs.map(r => `<span>${refHtml(r)}</span>`).join(''); $('#cap').classList.add('show');
+}
+
+/* ---------- drawing ---------- */
+const cv = $('#cv'), ox = cv.getContext('2d'); let W = 0, H = 0, HF = 0, TOP = 0;
+function size(){ const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); W = r.width; HF = H = r.height; cv.width = Math.round(W * d); cv.height = Math.round(HF * d); ox.setTransform(d, 0, 0, d, 0, 0); capTops.clear(); }
+// the drawings live between the chapter strip and the top of the tallest subtitle the scene can show,
+// measured with a hidden copy of the subtitle box; the number-line scenes share one frame, so they
+// share one measure and the circle keeps its size from scene to scene
+// every drawing fills the same space: from the chapter strip down to the top of the tallest subtitle in
+// the story, measured with a hidden copy at the current width, so a drawing never moves between steps
+const capTops = new Map();
+const meas = document.createElement('div'); meas.className = 'cap show'; meas.setAttribute('aria-hidden', 'true');
+meas.style.visibility = 'hidden'; meas.innerHTML = '<div class="line"></div><div class="tags"></div>'; $('.pin').appendChild(meas);
+function capTop(){
+  if (capTops.has('all')) return capTops.get('all');
+  const pinTop = $('.pin').getBoundingClientRect().top; let top = HF;
+  Object.values(CAPS).forEach(list => list.forEach(c => {
+    meas.firstChild.textContent = c[2]; meas.lastChild.innerHTML = c[3].map(r => `<span>${refHtml(r)}</span>`).join('');
+    top = Math.min(top, meas.getBoundingClientRect().top - pinTop); }));
+  capTops.set('all', top); return top;
+}
+// the top of the tallest subtitle within one scene: a drawing may reach down to it
+function capTopOf(scene){
+  const key = 's:' + scene; if (capTops.has(key)) return capTops.get(key);
+  const pinTop = $('.pin').getBoundingClientRect().top; let top = HF;
+  (CAPS[scene] || []).forEach(c => { meas.firstChild.textContent = c[2]; meas.lastChild.innerHTML = c[3].map(r => `<span>${refHtml(r)}</span>`).join('');
+    top = Math.min(top, meas.getBoundingClientRect().top - pinTop); });
+  capTops.set(key, top); return top;
+}
+
+const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a', line: '#574d45'};
+const SERIF = '"Source Serif 4", Georgia, serif', MONO = '"IBM Plex Mono", Menlo, monospace';
+const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+const env = (x, a, b, f = 0.22) => { if (x <= a || x >= b) return 0; const w = (b - a) * f; return sm(Math.min(1, (x - a) / w, (b - x) / w)); };
+function text(t, x, y, col, size, align = 'center', font = SERIF, style = ''){ ox.font = `${style} ${size}px ${font}`; ox.textAlign = align; ox.textBaseline = 'middle';
+  ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.8)'; ox.strokeText(t, x, y); ox.fillStyle = col; ox.fillText(t, x, y); }
+function arrow(x1, y1, x2, y2, col, w = 2, head = 10){ ox.strokeStyle = col; ox.fillStyle = col; ox.lineWidth = w; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke();
+  const a = Math.atan2(y2 - y1, x2 - x1); ox.beginPath(); ox.moveTo(x2, y2); ox.lineTo(x2 - head * Math.cos(a - 0.4), y2 - head * Math.sin(a - 0.4)); ox.lineTo(x2 - head * Math.cos(a + 0.4), y2 - head * Math.sin(a + 0.4)); ox.closePath(); ox.fill(); }
+function dot(x, y, r, col){ ox.fillStyle = col; ox.beginPath(); ox.arc(x, y, r, 0, 2 * Math.PI); ox.fill(); }
+const narrow = () => W < HF;
+const fmt = v => Math.abs(v) >= 100 ? v.toFixed(0) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(2);
+
+// the number line: the frame shared by the line, circle and flip scenes; zoom lets the circle grow
+function lineFrame(zoom, alpha){
+  const u = Math.min(W * (narrow() ? 0.17 : 0.11), H * 0.15, 140) * zoom, y0 = H - (narrow() ? 66 : 74), cx = W / 2, x = v => cx + v * u;
+  ox.globalAlpha = alpha; ox.strokeStyle = C.t2; ox.lineWidth = 1.4; ox.beginPath(); ox.moveTo(24, y0); ox.lineTo(W - 24, y0); ox.stroke();
+  arrow(W - 60, y0, W - 22, y0, C.t2, 1.4, 9); arrow(60, y0, 22, y0, C.t2, 1.4, 9);
+  text('+∞', W - 30, y0 - 22, C.t2, narrow() ? 15 : 18, 'center', SERIF); text('−∞', 30, y0 - 22, C.t2, narrow() ? 15 : 18, 'center', SERIF);
+  const lim = Math.floor((W / 2 - 50) / u);
+  for (let k = -lim; k <= lim; k++) { const px = x(k); ox.strokeStyle = k ? C.t3 : C.text; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(px, y0 - 5); ox.lineTo(px, y0 + 5); ox.stroke(); text(String(k).replace('-', '−'), px, y0 + 20, k ? C.t3 : C.text, 13, 'center', MONO); }
+  ox.globalAlpha = 1; return {u, y0, cx, x};
+}
+// the circle of diameter one, touching the line at 0: the point x goes to (x, x^2) / (1 + x^2), in
+// units with y measured up from the line, so the reflection y -> 1 - y is exactly x -> 1/x
+const onCircle = x => [x / (1 + x * x), x * x / (1 + x * x)];
+// the numbers of the reflection examples, written as fractions
+const fracLab = v => ({'0.5': '½', '-1.5': '−3/2'})[String(v)] || (Math.abs(v + 2 / 3) < 1e-9 ? '−⅔' : String(v).replace('-', '−'));
+
+function drawLine(s){
+  const a = env(s, -0.2, 1.1, 0.12), F = lineFrame(1, a); if (a <= 0) return;
+  const {u, y0, x} = F; ox.globalAlpha = a;
+  text('The real number line', W / 2, narrow() ? 30 : 42, C.text, narrow() ? 18 : 24, 'center', SERIF, '600');
+  let xv = null;
+  if (s > 0.24 && s < 0.5) xv = 2 - 1.93 * sm((s - 0.26) / 0.16);
+  else if (s >= 0.5 && s < 0.76) xv = -(2 - 1.93 * sm((s - 0.52) / 0.16));
+  else if (s >= 0.76) xv = 0;
+  if (xv !== null) {
+    const px = x(xv); ox.fillStyle = C.gold; ox.fillRect(px - 6, y0 - 6, 12, 12); text('x', px, y0 - 24, C.gold, 18, 'center', SERIF, 'italic');
+    if (xv !== 0) {
+      const r = 1 / xv, edge = (W / 2 - 70) / u, rx = Math.abs(r) > edge ? x(Math.sign(r) * edge) : x(r);
+      dot(rx, y0, 6, C.blue);
+      if (Math.abs(r) > edge) arrow(rx, y0 - 30, rx + Math.sign(r) * 28, y0 - 30, C.blue, 2, 8);
+      text('1/x', rx, y0 - 50, C.blue, 16, 'center', SERIF, 'italic');
+      text(`x = ${fmt(xv)}      1/x = ${fmt(r)}`.replace(/-/g, '−'), W / 2, y0 - H * 0.2, C.text, narrow() ? 15 : 19, 'center', MONO);
+    } else {
+      text('1 / 0  =  ?', W / 2, y0 - H * 0.2, C.red, narrow() ? 26 : 36, 'center', MONO);
+      const k = sm((s - 0.8) / 0.08); ox.globalAlpha = a * k;
+      arrow(W / 2 + 30, y0 - 46, W - 70, y0 - 46, C.red, 1.6, 9); arrow(W / 2 - 30, y0 - 46, 70, y0 - 46, C.red, 1.6, 9);
+      text('plus infinity?', W * 0.75, y0 - 64, C.red, 14, 'center', SERIF, 'italic'); text('or minus infinity?', W * 0.25, y0 - 64, C.red, 14, 'center', SERIF, 'italic');
+    }
+  }
+  ox.globalAlpha = 1;
+}
+
+// the new direction the circle needs: the vertical axis through zero
+function yAxis(cx, y0, top, alpha){ ox.save(); ox.globalAlpha = alpha; ox.setLineDash([2, 4]); ox.strokeStyle = 'rgba(147,180,218,0.55)'; ox.lineWidth = 1.2;
+  ox.beginPath(); ox.moveTo(cx, y0 + 12); ox.lineTo(cx, top + 8); ox.stroke(); ox.setLineDash([]); arrow(cx, top + 10, cx, top, 'rgba(147,180,218,0.8)', 1.2, 8);
+  text('y', cx - 12, top + 4, C.blue, 16, 'right', SERIF, 'italic'); text('a new direction', cx - 34, top + 4, C.blue, 12, 'right', SERIF, 'italic'); ox.restore(); }
+// the circle scenes zoom in until the circle fills the height above the line, but on a wide screen not so far
+// that two and a quarter units either side of zero leave it, so the reflections can be followed down to the line
+function circleZoom(){ const u1 = Math.min(W * (narrow() ? 0.17 : 0.11), H * 0.15, 140), y0 = H - (narrow() ? 66 : 74);
+  if (narrow()) return 1.9;   // a phone: the width sets it, with room for the labels either side
+  const uH = y0 - 104, uW = (W / 2 - 46) / 2.25;   // the circle's diameter: up to the room above the line
+  return Math.max(1.4, Math.min(uH, uW) / u1); }
+function drawCircle(s){
+  const a = env(s, -0.2, 1.2, 0.08), zoom = 1 + (circleZoom() - 1) * sm(s / 0.2), F = lineFrame(zoom, a); if (a <= 0) return;
+  const {u, y0, cx} = F, P = ([X, Y]) => [cx + X * u, y0 - Y * u], [nx, ny] = P([0, 1]);
+  const ca = env(s, -0.1, 1.2, 0.08) * sm(s / 0.12); yAxis(cx, y0, Math.max(10, ny - 70), ca); ox.globalAlpha = ca;
+  ox.strokeStyle = C.text; ox.lineWidth = 1.6; ox.beginPath(); ox.arc(cx, y0 - u / 2, u / 2, 0, 2 * Math.PI); ox.stroke();
+  dot(cx, y0, 4, C.gold); dot(nx, ny, 4, C.text);
+  text(s > 0.84 ? '' : 'the top', nx + 12, ny - 12, C.t2, 14, 'left', SERIF, 'italic');
+  const ra = sm((s - 0.1) / 0.1) * (s < 0.3 ? 1 : 1 - sm((s - 0.3) / 0.06));    // the radius, while the circle is introduced
+  if (ra > 0) { ox.globalAlpha = ca * ra; const cyc = y0 - u / 2;
+    ox.strokeStyle = C.green; ox.lineWidth = 1.8; ox.beginPath(); ox.moveTo(cx, cyc); ox.lineTo(cx + u / 2, cyc); ox.stroke(); dot(cx, cyc, 3.5, C.green);
+    text('radius ½', cx + u / 4, cyc - 14, C.green, narrow() ? 13 : 15, 'center', SERIF, 'italic');
+    ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.setLineDash([3, 4]); ox.beginPath(); ox.moveTo(cx - u / 2 - 18, ny); ox.lineTo(cx - u / 2 - 18, y0); ox.stroke(); ox.setLineDash([]);
+    text('1', cx - u / 2 - 30, (ny + y0) / 2, C.t3, 13, 'right', MONO); ox.globalAlpha = ca; }
+  const side = (s0, s1, sign) => { if (s < s0 || s > s1 + 0.02) return; const k = sm((s - s0) / (s1 - s0)), xv = sign * 0.7 * Math.pow(30, k);
+    const [qx, qy] = P([xv, 0]), [px, py] = P(onCircle(xv)), vis = Math.abs(qx - cx) < W / 2 - 30;
+    ox.globalAlpha = ca * env(s, s0, s1 + 0.02, 0.15); ox.setLineDash([5, 5]); ox.strokeStyle = C.t2; ox.lineWidth = 1;
+    ox.beginPath(); ox.moveTo(nx, ny); const ex = vis ? qx : px + (px - nx) * 6, ey = vis ? qy : py + (py - ny) * 6; ox.lineTo(ex, ey); ox.stroke(); ox.setLineDash([]);
+    if (vis) { ox.fillStyle = C.gold; ox.fillRect(qx - 5, qy - 5, 10, 10); text('x = ' + fmt(xv).replace('-', '−'), qx, qy + 38, C.gold, 14, 'center', MONO); }
+    dot(px, py, 6, C.blue); if (k < 0.7) text('its point on the circle', px + sign * 12, py - 14, C.blue, 14, sign > 0 ? 'left' : 'right', SERIF, 'italic'); };
+  side(0.3, 0.58, 1); side(0.6, 0.82, -1);
+  if (s > 0.82) { const k = sm((s - 0.83) / 0.04); ox.globalAlpha = ca * k;
+    ox.strokeStyle = C.gold; ox.lineWidth = 2.2; const r = u / 2 + 10;
+    ox.beginPath(); ox.arc(cx, y0 - u / 2, r, 0.15 * Math.PI, -0.42 * Math.PI, true); ox.stroke();
+    ox.beginPath(); ox.arc(cx, y0 - u / 2, r, 0.85 * Math.PI, -0.58 * Math.PI, false); ox.stroke();
+    // arrowheads at the top ends: both ways round climb to the one point
+    const head = (th, dir) => { const ex = cx + r * Math.cos(th), ey = y0 - u / 2 + r * Math.sin(th), tx = dir * -Math.sin(th), ty = dir * Math.cos(th), L = 11, Wd = 5.5;
+      ox.fillStyle = C.gold; ox.beginPath(); ox.moveTo(ex + tx * L * 0.6, ey + ty * L * 0.6); ox.lineTo(ex - tx * L * 0.4 - ty * Wd, ey - ty * L * 0.4 + tx * Wd); ox.lineTo(ex - tx * L * 0.4 + ty * Wd, ey - ty * L * 0.4 - tx * Wd); ox.closePath(); ox.fill(); };
+    head(-0.42 * Math.PI, -1); head(-0.58 * Math.PI, 1);
+    text('∞', nx, ny - 26, C.gold, narrow() ? 24 : 28, 'center', SERIF, '600');
+    text('from +∞', cx + r + 8, y0 - u / 2 + r * 0.5, C.gold, 14, 'left', SERIF, 'italic'); text('from −∞', cx - r - 8, y0 - u / 2 + r * 0.5, C.gold, 14, 'right', SERIF, 'italic'); }
+  ox.globalAlpha = 1;
+}
+
+function drawFlip(s){
+  const a = env(s, -0.2, 1.1, 0.1), F = lineFrame(circleZoom(), a); if (a <= 0) return;
+  const {u, y0, cx} = F, P = ([X, Y]) => [cx + X * u, y0 - Y * u], [nx, ny] = P([0, 1]), cyc = y0 - u / 2;
+  yAxis(cx, y0, Math.max(10, ny - 44), a); ox.globalAlpha = a; ox.strokeStyle = C.text; ox.lineWidth = 1.6; ox.beginPath(); ox.arc(cx, cyc, u / 2, 0, 2 * Math.PI); ox.stroke();
+  ox.setLineDash([4, 5]); ox.strokeStyle = C.t3; ox.beginPath(); ox.moveTo(cx - u * 0.75, cyc); ox.lineTo(cx + u * 0.75, cyc); ox.stroke(); ox.setLineDash([]);
+  text('∞', nx, ny - 26, C.text, 26, 'center', SERIF, '600');
+  const pairs = [[2, 0.5, C.blue], [-1.5, -2 / 3, C.plum]], pa = env(s, -0.05, 0.42, 0.18);
+  if (pa > 0) { ox.globalAlpha = a * pa;
+    pairs.forEach(([p, q, col]) => { const [x1, y1] = P(onCircle(p)), [x2, y2] = P(onCircle(q)); dot(x1, y1, 6, col); dot(x2, y2, 6, col);
+      ox.setLineDash([3, 4]); ox.strokeStyle = col; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke(); ox.setLineDash([]);
+      const lab = fracLab;
+      text(lab(p), x1 + (p > 0 ? 16 : -16), y1, col, 17, p > 0 ? 'left' : 'right', SERIF); text(lab(q), x2 + (q > 0 ? 16 : -16), y2, col, 17, q > 0 ? 'left' : 'right', SERIF);
+      // each point projected from the top of the circle down to its number on the line
+      [p, q].forEach(v => { const [px, py] = P(onCircle(v)), [qx] = P([v, 0]), edge = W / 2 - 34;
+        ox.setLineDash([2, 5]); ox.strokeStyle = col; ox.lineWidth = 1; ox.globalAlpha = a * pa * 0.85; ox.beginPath(); ox.moveTo(nx, ny);
+        if (Math.abs(qx - cx) <= edge) { ox.lineTo(qx, y0); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = a * pa;
+          ox.fillStyle = col; ox.fillRect(qx - 4, y0 - 4, 8, 8); if (!Number.isInteger(v)) text(lab(v), qx, y0 + 20, col, 15, 'center', SERIF); }
+        else { const ex = cx + Math.sign(v) * edge, t = (ex - nx) / (px - nx), ey = ny + t * (py - ny); ox.lineTo(ex, ey); ox.stroke(); ox.setLineDash([]);
+          ox.globalAlpha = a * pa; arrow(ex - Math.sign(v) * 14, ey - 14 * (py - ny) / (px - nx) * Math.sign(v), ex, ey, col, 1.4, 8);
+          text(Math.sign(v) > 0 ? `to ${lab(v)} →` : `← to ${lab(v)}`, ex - Math.sign(v) * 4, ey - 16, col, 14, Math.sign(v) > 0 ? 'right' : 'left', SERIF); } }); });
+    text('one over x: a reflection, top for bottom', cx, y0 + 44, C.t2, narrow() ? 13 : 16, 'center', SERIF, 'italic'); }
+  const za = sm((s - 0.36) / 0.08);
+  if (za > 0) { ox.globalAlpha = a * za; const g = sm((s - 0.4) / 0.2);
+    ox.fillStyle = C.gold; ox.fillRect(cx - 7, y0 - 7, 14, 14); text('0', cx - 18, y0 + 2, C.gold, 18, 'right', SERIF);
+    if (g > 0) arrow(cx + u * 0.62, y0 - 4, cx + u * 0.62, y0 - 4 - (u - 8) * g, C.gold, 2.6, 12);
+    if (g > 0) text('one over', cx + u * 0.62 + 12, cyc, C.gold, 15, 'left', SERIF, 'italic');
+    if (g >= 1) { ox.fillStyle = C.gold; ox.fillRect(nx - 7, ny - 7, 14, 14); } }
+  const fa = sm((s - 0.68) / 0.08);
+  if (fa > 0) { ox.globalAlpha = a * fa; oneOverZero(cx, Math.max(28, ny - (narrow() ? 92 : 118)), narrow() ? 26 : 36, C.gold);
+    const [p1x, p1y] = P(onCircle(1)), [m1x, m1y] = P(onCircle(-1)); dot(p1x, p1y, 4, C.green); dot(m1x, m1y, 4, C.green);
+    text('1', p1x + 12, p1y, C.green, 15, 'left', SERIF); text('−1', m1x - 12, m1y, C.green, 15, 'right', SERIF); }
+  ox.globalAlpha = 1;
+}
+
+// a perspective camera above and in front: X across, Y into the screen, Z up; scale f maps a
+// unit at the origin to `unit` pixels
+function camera(cx, cy, unit, elev, D, yaw = 0){
+  const ce = Math.cos(elev), se = Math.sin(elev), f = unit * D, cy_ = Math.cos(yaw), sy = Math.sin(yaw);
+  return ([X0, Y0, Z]) => { const X = X0 * cy_ - Y0 * sy, Y = X0 * sy + Y0 * cy_, yc = Y * se + Z * ce, zc = D + Y * ce - Z * se; return [cx + f * X / zc, cy - f * yc / zc]; };
+}
+// portraits: public-domain photographs (Wikimedia Commons), drawn once their files have loaded
+const PORTRAITS = {};
+function portrait(im, x0, top, pw, ph, alpha){
+  const sc = Math.max(pw / im.width, ph / im.height), sw = pw / sc, sh = ph / sc;
+  ox.save(); ox.globalAlpha = alpha; ox.beginPath(); ox.roundRect ? ox.roundRect(x0, top, pw, ph, 6) : ox.rect(x0, top, pw, ph); ox.clip();
+  ox.filter = 'grayscale(1) sepia(.25) contrast(1.05)'; ox.drawImage(im, (im.width - sw) / 2, (im.height - sh) * 0.2, sw, sh, x0, top, pw, ph); ox.restore();
+  ox.save(); ox.globalAlpha = alpha; ox.strokeStyle = C.line; ox.lineWidth = 1; ox.strokeRect(x0 + 0.5, top + 0.5, pw - 1, ph - 1); ox.restore();
+}
+['lorentz', 'einstein', 'riemann', 'penrose', 'einstein21'].forEach(n => { const im = new Image(); im.onload = () => { PORTRAITS[n] = im; }; im.src = `img/${n}.jpg`; });
+// 1 / 0 = infinity, in one face, with the infinity sign enlarged to the height of the digits
+function oneOverZero(x, y, fs, col){
+  const a = '1 / 0  =  ', fi = Math.round(fs * 1.3); ox.font = `500 ${fs}px ${SERIF}`; const wa = ox.measureText(a).width; ox.font = `400 ${fi}px ${SERIF}`; const wb = ox.measureText('∞').width;
+  const x0 = x - (wa + wb) / 2; text(a, x0, y, col, fs, 'left', SERIF, '500'); text('∞', x0 + wa, y + fs * 0.02, col, fi, 'left', SERIF, '400');
+}
+// a section title over a run of slides, with the drawing moved down beneath it
+function titled(t1, t2, fn){
+  const nar = narrow(); text(t1, W / 2, nar ? 30 : 42, C.text, nar ? 18 : 24, 'center', SERIF, '600');
+  if (t2) text(t2, W / 2, nar ? 50 : 68, C.t2, nar ? 12 : 15, 'center', SERIF, 'italic');
+  const dy = t2 ? (nar ? 64 : 86) : (nar ? 46 : 62), h0 = H; ox.save(); ox.translate(0, dy); H = h0 - dy; fn(); H = h0; ox.restore();
+}
+// a card heading: bold, with a short rule beneath
+function cardHead(t, x, y, w){ const nar = narrow(); text(t, x, y, C.text, nar ? 15 : 23, 'center', SERIF, '600');
+  ox.save(); ox.strokeStyle = C.gold; ox.globalAlpha *= 0.7; ox.lineWidth = 1.4; const hw = Math.min(w * 0.3, nar ? 40 : 70); ox.beginPath(); ox.moveTo(x - hw, y + (nar ? 15 : 22)); ox.lineTo(x + hw, y + (nar ? 15 : 22)); ox.stroke(); ox.restore(); }
+// a card: the frame each graphic of a set sits in
+function card(x0, y0, w, h){ ox.save(); ox.fillStyle = 'rgba(236,229,217,0.035)'; ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath();
+  ox.roundRect ? ox.roundRect(x0, y0, w, h, 10) : ox.rect(x0, y0, w, h); ox.fill(); ox.stroke(); ox.restore(); }
+const poly = (pts, close) => { ox.beginPath(); pts.forEach(([x, y], i) => i ? ox.lineTo(x, y) : ox.moveTo(x, y)); if (close) ox.closePath(); };
+
+// the plane of complex numbers, seen in perspective, and the Riemann sphere standing on it
+function drawSphere(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2, D = 5.5;
+  const R = nar ? Math.min(W * 0.21, H * 0.17) : Math.min(W, H) * 0.19;   // the sphere's radius on screen
+  const yc = Math.max(R * 1.25 + 70, Math.min(H - R * 1.6 - 34, H * 0.5 + R * 0.05 - (nar ? 18 : 14)));   // centred, with the plane's front edge clear of the subtitle
+  const pr = camera(cx, yc, R * Math.sqrt(D * D - 1) / D, 0.42, D);        // so its outline has radius R
+  const Wp = nar ? 1.6 : 3.3, Yn = 1.4, Yf = 3.4;
+  const onS = (u, v) => { const t = 4 / (u * u + v * v + 4); return [t * u, t * v, 1 - 2 * t]; };
+  // the plane: a translucent sheet, darker with distance, and its grid
+  ox.globalAlpha = a; const c1 = pr([0, -Yn, -1]), c2 = pr([0, Yf, -1]);
+  const gr = ox.createLinearGradient(0, c1[1], 0, c2[1]); gr.addColorStop(0, 'rgba(147,180,218,0.16)'); gr.addColorStop(1, 'rgba(147,180,218,0.02)');
+  ox.fillStyle = gr; poly([pr([-Wp, -Yn, -1]), pr([Wp, -Yn, -1]), pr([Wp, Yf, -1]), pr([-Wp, Yf, -1])], true); ox.fill();
+  const grid = (y0, y1) => {
+    for (let k = -4; k <= 4; k++) { const X = k * Wp / 4, p = pr([X, y0, -1]), q = pr([X, y1, -1]); ox.strokeStyle = `rgba(147,180,218,${k ? 0.32 : 0.5})`; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke(); }
+    for (let Y = Math.ceil(y0 * 2) / 2; Y <= y1 + 1e-9; Y += 0.5) { const p = pr([-Wp, Y, -1]), q = pr([Wp, Y, -1]); ox.strokeStyle = `rgba(147,180,218,${0.42 - 0.08 * Math.max(0, Y)})`; ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke(); } };
+  grid(-Yn, Yf);
+  ox.strokeStyle = 'rgba(147,180,218,0.55)'; ox.lineWidth = 1.2; poly([pr([-Wp, -Yn, -1]), pr([Wp, -Yn, -1]), pr([Wp, Yf, -1]), pr([-Wp, Yf, -1])], true); ox.stroke();
+  text('the complex plane', Math.min(W - 8, pr([Wp, -Yn, -1])[0] - 6), pr([Wp, -Yn, -1])[1] + 16, C.blue, nar ? 12 : 14, 'right', SERIF, 'italic');
+  // the sphere: shaded, with its equator and one meridian, nearer halves solid
+  const sg = ox.createRadialGradient(cx - R * 0.35, yc - R * 0.4, R * 0.1, cx, yc, R);
+  sg.addColorStop(0, 'rgba(236,229,217,0.20)'); sg.addColorStop(0.7, 'rgba(40,36,33,0.88)'); sg.addColorStop(1, 'rgba(16,14,13,0.94)');
+  ox.fillStyle = sg; ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.fill();
+  ox.save(); ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.clip(); grid(-Yn, -0.05); ox.restore();   // the plane in front of the sphere stays in front
+  ox.strokeStyle = 'rgba(236,229,217,0.8)'; ox.lineWidth = 1.4; ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.stroke();
+  const curve = (fn, front) => { ox.beginPath(); let on = false; for (let k = 0; k <= 120; k++) { const t = k / 120 * 2 * Math.PI, P3 = fn(t), vis = front ? P3[1] <= 0 : P3[1] > 0, [x, y] = pr(P3);
+    if (vis) { on ? ox.lineTo(x, y) : ox.moveTo(x, y); on = true; } else on = false; } ox.stroke(); };
+  ox.lineWidth = 1.2; ox.strokeStyle = 'rgba(147,180,218,0.35)'; curve(t => [Math.cos(t), Math.sin(t), 0], false); curve(t => [0, Math.sin(t), Math.cos(t)], false);
+  ox.strokeStyle = 'rgba(147,180,218,0.85)'; curve(t => [Math.cos(t), Math.sin(t), 0], true); ox.strokeStyle = 'rgba(147,180,218,0.4)'; curve(t => [0, Math.sin(t), Math.cos(t)], true);
+  const [nx, ny] = pr([0, 0, 1]), [bx, by] = pr([0, 0, -1]);
+  dot(nx, ny, 3.5, C.text);
+  if (nar) text('the Riemann sphere', cx, Math.max(16, ny - (s > 0.6 ? 96 : 44)), C.text, 15, 'center', SERIF, 'italic');
+  else text('the Riemann sphere', cx + R + 16, yc - R * 0.55, C.text, 17, 'left', SERIF, 'italic');
+  // Bernhard Riemann, while the sphere is introduced
+  const ra = PORTRAITS.riemann ? (s < 0.3 ? 1 : 1 - sm((s - 0.3) / 0.05)) : 0;
+  if (ra > 0) { ox.globalAlpha = a * ra; const ph = nar ? Math.min(110, H * 0.24) : Math.min(190, H * 0.34), pw = ph * 0.8;
+    let x0 = 14, y0p = 6;
+    if (!nar) { const bl = pr([-Wp, Yf, -1]), fl = pr([-Wp, -Yn, -1]), edgeX = y => y <= bl[1] ? bl[0] : y >= fl[1] ? fl[0] : bl[0] + (fl[0] - bl[0]) * (y - bl[1]) / (fl[1] - bl[1]);
+      y0p = Math.max(10, bl[1] - ph * 0.45); x0 = Math.max(16, Math.min(edgeX(Math.min(y0p + ph + 40, fl[1])) - 24, cx - R - 40) - pw); }
+    portrait(PORTRAITS.riemann, x0, y0p, pw, ph, a * ra);
+    text('Bernhard Riemann', x0 + pw / 2, y0p + ph + 16, C.text, nar ? 12 : 15, 'center', SERIF);
+    text('1826 to 1866', x0 + pw / 2, y0p + ph + (nar ? 31 : 35), C.t3, nar ? 11 : 13, 'center', SERIF, 'italic'); ox.globalAlpha = a; }
+  text('∞', nx, ny - 20, C.text, 22, 'center', SERIF, '600');
+  // a point running out across the plane, and its point on the sphere climbing to the top
+  if (s < 0.6) { const k = sm((s - 0.3) / 0.26), ang = 0.55, d = 1.2 * Math.pow(12, k), u = d * Math.cos(ang), v = d * Math.sin(ang);
+    const X = onS(u, v), [qx, qy] = pr([u, v, -1]), [px, py] = pr(X), vis = Math.abs(u) <= Wp && v <= Yf;
+    const la = env(s, 0.26, 0.6, 0.15); ox.globalAlpha = a * la; ox.setLineDash([4, 4]); ox.strokeStyle = C.t2; ox.lineWidth = 1;
+    ox.beginPath(); ox.moveTo(nx, ny); ox.lineTo(vis ? qx : px + (px - nx) * 4, vis ? qy : py + (py - ny) * 4); ox.stroke(); ox.setLineDash([]);
+    if (vis) { ox.fillStyle = C.blue; ox.fillRect(qx - 4, qy - 4, 8, 8); }
+    dot(px, py, 5, C.blue); ox.globalAlpha = a; }
+  const zp = s < 0.62 ? 1 : 1 - sm((s - 0.7) / 0.04); if (zp > 0) { ox.globalAlpha = a * zp; ox.fillStyle = C.gold; ox.fillRect(bx - 6, by - 6, 12, 12); text('0', bx - 14, by + 2, C.gold, 17, 'right', SERIF); ox.globalAlpha = a; }
+  if (s > 0.6) { const g = sm((s - 0.62) / 0.1);
+    // the reciprocal z/|z|^2: the reflection in the equator plane, which holds the unit circle fixed and swaps 0 and infinity
+    ox.globalAlpha = a * g; ox.strokeStyle = C.green; ox.lineWidth = 2.6; ox.beginPath();
+    for (let k = 0; k <= 96; k++) { const t = k / 96 * 2 * Math.PI, [x, y] = pr([Math.cos(t), Math.sin(t), 0]); k ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke();
+    const ex = pr([1, 0, 0]); text(nar ? 'fixed: |z| = 1' : 'held fixed: the unit circle, |z| = 1', ex[0] + 12, ex[1] + 4, C.green, nar ? 12 : 15, 'left', SERIF, 'italic');
+    const ax = cx - R * 1.32; arrow(ax, by - 6, ax, ny + 10, C.gold, 2.4, 11); arrow(ax, ny + 10, ax, by - 6, C.gold, 2.4, 11);
+    text(nar ? 'a reflection' : 'one over: a reflection, top for bottom', ax - 10, ny + 16, C.gold, nar ? 12 : 15, 'right', SERIF, 'italic');
+    if (g >= 1) { const k = sm((s - 0.74) / 0.06); ox.globalAlpha = a * k; ox.fillStyle = C.gold; ox.fillRect(nx - 7, ny - 7, 14, 14); oneOverZero(cx, Math.max(18, ny - (nar ? 64 : 84)), nar ? 24 : 32, C.gold); } }
+  ox.globalAlpha = 1;
+}
+
+// spacetime: a light ray, then the whole cone of them in perspective; then, in the plane of time and
+// the radial direction, the cone near a black hole (T5 Prop 2.5): its edges are the directions
+// e_t + (-beta +- 1) e_r, so as beta grows both tip inward and, at the centre, close onto one direction
+function drawSpacetime(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2, cy = H * 0.5, L = Math.min(W * (nar ? 0.36 : 0.2), H * 0.34);
+  const a3 = s < 0.66 ? 1 : 1 - sm((s - 0.66) / 0.05), a2 = sm((s - 0.69) / 0.05);
+  if (a3 > 0) { ox.globalAlpha = a * a3;
+    const sweep = sm((s - 0.36) / 0.16), el = 0.07 + 0.25 * sweep, cyS = cy + H * 0.06 * (1 - sweep), pr = camera(cx, cyS, L, el, 7, -0.5 * sweep);
+    const rim = (T, phi) => [Math.cos(phi), Math.sin(phi), T];
+    // axes: time up; two directions of space
+    arrow(...pr([0, 0, -1.15]), ...pr([0, 0, 1.3]), C.blue, 1.8, 9); text('time', pr([0, 0, 1.3])[0] + 10, pr([0, 0, 1.3])[1], C.blue, 15, 'left', SERIF, 'italic');
+    arrow(...pr([-1.35, 0, 0]), ...pr([1.35, 0, 0]), C.t2, 1.6, 9); text('space', pr([1.35, 0, 0])[0], pr([1.35, 0, 0])[1] + 18, C.t2, 15, 'right', SERIF, 'italic');
+    if (sweep > 0) { ox.globalAlpha = a * a3 * sweep; arrow(...pr([0, 1.3, 0]), ...pr([0, -1.7, 0]), C.t2, 1.4, 8); text('space', pr([0, -1.7, 0])[0] - 8, pr([0, -1.7, 0])[1] + 4, C.t2, 15, 'right', SERIF, 'italic');
+      if (s > 0.4) text('the third direction of space is not drawn', cx, cyS + L * 1.12 + 16, C.t3, nar ? 12 : 14, 'center', SERIF, 'italic'); ox.globalAlpha = a * a3; }
+    // the two cones, swept out from the light ray as the view tilts
+    const phiMax = 2 * Math.PI * sweep;
+    [[1, 'rgba(224,122,85,'], [-1, 'rgba(224,122,85,']].forEach(([T, col]) => {
+      if (sweep <= 0) return; const apex = pr([0, 0, 0]), pts = []; for (let k = 0; k <= 72; k++) pts.push(pr(rim(T, -Math.PI / 2 + phiMax * k / 72)));
+      const top = pr([0, 0, T]), gr = ox.createLinearGradient(apex[0], apex[1], top[0], top[1]);
+      gr.addColorStop(0, col + (T > 0 ? '0.04)' : '0.02)')); gr.addColorStop(1, col + (T > 0 ? '0.26)' : '0.14)'));
+      ox.fillStyle = gr; ox.beginPath(); ox.moveTo(...apex); pts.forEach(p => ox.lineTo(...p)); ox.closePath(); ox.fill();
+      // rim: nearer half solid, farther half faint
+      for (let k = 0; k < 72; k++) { const ph = -Math.PI / 2 + phiMax * k / 72, near = Math.sin(ph) < 0; ox.strokeStyle = col + (near ? (T > 0 ? '0.85)' : '0.55)') : '0.3)');
+        ox.lineWidth = near ? 1.5 : 1; ox.setLineDash(T < 0 && !near ? [3, 4] : []); ox.beginPath(); ox.moveTo(...pts[k]); ox.lineTo(...pts[k + 1]); ox.stroke(); }
+      ox.setLineDash([]);
+      // light rays on the surface: nearer ones brighter
+      for (let k = 0; k < 12; k++) { const ph = -Math.PI / 2 + 2 * Math.PI * k / 12; if (ph - (-Math.PI / 2) > phiMax + 1e-9) continue; const near = Math.sin(ph) <= 0;
+        ox.strokeStyle = col + (near ? '0.55)' : '0.18)'); ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...apex); ox.lineTo(...pr(rim(T, ph))); ox.stroke(); } });
+    { const f = sm((s - 0.5) / 0.05); if (f > 0) { ox.globalAlpha = a * a3 * f; const sd = nar ? -1 : 1, al = nar ? 'right' : 'left', [fx, fy] = pr([1.02 * sd, 0, 1]), [px, py] = pr([1.02 * sd, 0, -1]);
+      text('the future', fx + 12 * sd, fy - 4, C.text, nar ? 13 : 16, al, SERIF, 'italic'); if (nar) { const [bx, by] = pr([0, -1, -1]); text('the past', cx, by + 16, C.t2, 13, 'center', SERIF, 'italic'); } else text('the past', px + 12, py + 4, C.t2, 16, 'left', SERIF, 'italic'); ox.globalAlpha = a * a3; } }
+    // the light ray in the plane of the screen, always drawn
+    ox.strokeStyle = C.red; ox.lineWidth = 2.2; ox.beginPath(); ox.moveTo(...pr([-1, 0, -1])); ox.lineTo(...pr([1, 0, 1])); ox.moveTo(...pr([1, 0, -1])); ox.lineTo(...pr([-1, 0, 1])); ox.stroke();
+    dot(...pr([0, 0, 0]), 4.5, C.text);
+    if (s < 0.4) { const [lx, ly] = pr([0.62, 0, 0.62]), al = nar ? 'right' : 'left', ox_ = nar ? -12 : 12; text('a light ray', lx + ox_, ly - (nar ? 18 : 0), C.red, 15, al, SERIF, 'italic'); text('length  =  0', lx + ox_, ly + (nar ? 4 : 22), C.red, 14, al, MONO); text('here, now', pr([0, 0, 0])[0] + 10, pr([0, 0, 0])[1] + 16, C.t2, 13, 'left', SERIF, 'italic'); }
+    else { const [tx, ty] = pr([0, 0, 1]); text('every direction on the cone has length zero', cx, Math.max(14, ty - L * 0.32), C.red, nar ? 13 : 16, 'center', SERIF, 'italic'); }
+  }
+  if (a2 > 0) { ox.globalAlpha = a * a2;
+    const beta = 5 * Math.pow(sm((s - 0.71) / 0.14), 1.3), Lr = L * 1.05, cx = W / 2 + (nar ? 12 : 28);
+    arrow(cx, cy + Lr * 0.95, cx, cy - Lr * 1.05, C.blue, 1.8, 9); text('time', cx + 10, cy - Lr * 1.05, C.blue, 15, 'left', SERIF, 'italic');
+    arrow(cx + Lr * 0.4, cy, cx - Lr * 1.15, cy, C.t2, 1.6, 9); text('inward, towards the centre', cx - Lr * 1.15, cy + 20, C.t2, nar ? 12 : 14, 'left', SERIF, 'italic');
+    ox.strokeStyle = C.t3; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(cx + Lr * 0.4, cy); ox.lineTo(cx + Lr * 1.1, cy); ox.stroke(); text('outward', cx + Lr * 1.1, cy + 20, C.t3, nar ? 12 : 14, 'right', SERIF, 'italic');
+    // the two edges, lambda = -beta +- 1, drawn as unit directions from the event
+    const dirs = [1 - beta, -1 - beta].map(l => { const n = Math.hypot(l, 1); return [l / n, 1 / n]; });
+    const end = ([dx, dt], f) => [cx + dx * Lr * f, cy - dt * Lr * f];
+    const ang = dirs.map(([dx, dt]) => Math.atan2(-dt, dx));
+    ox.fillStyle = 'rgba(240,194,122,0.22)'; ox.beginPath(); ox.moveTo(cx, cy); ox.arc(cx, cy, Lr, ang[0], ang[1], true); ox.closePath(); ox.fill();
+    ox.fillStyle = 'rgba(240,194,122,0.08)'; ox.beginPath(); ox.moveTo(cx, cy); ox.arc(cx, cy, Lr * 0.75, ang[0] + Math.PI, ang[1] + Math.PI, true); ox.closePath(); ox.fill();
+    dirs.forEach(d => { ox.strokeStyle = C.gold; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(...end(d, -0.75)); ox.lineTo(...end(d, 1)); ox.stroke(); });
+    dot(cx, cy, 4.5, C.text);
+    if (beta > 3) { const k = sm((beta - 3) / 1); ox.globalAlpha = a * a2 * k; arrow(cx - Lr * 1.02, cy - Lr * 0.42, cx - Lr * 1.02, cy - Lr * 0.2, C.gold, 1.4, 8);
+      text('at the centre: one direction', Math.max(nar ? 92 : 120, cx - Lr * 1.02), cy - Lr * 0.42 - 14, C.gold, nar ? 12 : 14, 'center', SERIF, 'italic'); ox.globalAlpha = a * a2; }
+    const stage = beta < 0.55 ? 'far from the hole: the cone stands upright' : beta < 1.7 ? 'at the horizon: one edge stands still' : 'nearer the centre: both edges tip inward and close up';
+    text(stage, cx, cy + Lr * 0.95 + 26, C.gold, nar ? 13 : 16, 'center', SERIF, 'italic');
+  }
+  ox.globalAlpha = 1;
+}
+
+// 1 + 3 becomes 2 + 4
+function drawPrinciple(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const S = Math.min(W, H), L = S * 0.27, cx = W / 2, cy = H * (narrow() ? 0.54 : 0.58);
+  ox.globalAlpha = a;
+  const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
+  base.forEach(([dx, dy, col, t]) => { ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke(); text(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 15, 'center', SERIF, 'italic'); });
+  const g = sm((s - 0.02) / 0.4);
+  [[-0.62, -0.78, C.red, '+ time'], [0.66, -0.75, C.red, '+ space']].forEach(([dx, dy, col, t]) => { if (g <= 0) return; ox.strokeStyle = col; ox.lineWidth = 2.6; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L * g, cy + dy * L * g); ox.stroke(); if (g > 0.9) text(t, cx + dx * (L + 24), cy + dy * (L + 24), col, 16, 'center', SERIF, 'italic'); });
+  text(g < 1 ? '1 + 3' : '2 + 4', cx, Math.max(48, cy - L - S * 0.1), C.text, Math.round(S * 0.075), 'center', SERIF, '600');
+  if (g < 1) text('the line moved onto the circle; spacetime moves into a larger space', cx, cy + L + 40, C.t2, narrow() ? 12 : 15, 'center', SERIF, 'italic');
+  ox.globalAlpha = 1;
+}
+
+// more than a formalism: four short pictures
+function drawMore(s){
+  const S = Math.min(W, H), cx = W / 2, cy = H * (narrow() ? 0.46 : 0.5), nar = narrow();
+  // 1. repair in place: impossible (the argument, line by line); enlarge the space: one way only
+  let a = env(s, 0.0, 0.25, 0.2);
+  if (a > 0) { ox.globalAlpha = a; const dx = nar ? W * 0.25 : Math.min(W * 0.22, 270), lh = nar ? Math.min(30, (H - 60) / 8) : Math.min(52, (H - 90) / 8), top = Math.max(nar ? 30 : 44, (H - lh * 7.5 - 28) / 2 + 34), fs = nar ? 12 : 22;
+    const L = (i, t0) => sm((s - t0) / 0.012);
+    { const cwid = Math.min(dx * 2 - 24, nar ? W * 0.47 : 460); card(cx - dx - cwid / 2, top - (nar ? 22 : 34), cwid, lh * 7.5 + (nar ? 14 : 28)); card(cx + dx - cwid / 2, top - (nar ? 22 : 34), cwid, lh * 7.5 + (nar ? 14 : 28)); }
+    // left: no inverse for a light-like vector, in any larger algebra
+    cardHead('repair it where it is', cx - dx, top, dx * 2 - 24);
+    [['a light-like vector:  v² = 0,  v ≠ 0', 0.02, C.text], ['suppose  v w = 1', 0.04, C.text], ['then  v = v (v w) = v² w = 0', 0.065, C.red], ['a contradiction in any associative algebra', 0.09, C.red]].forEach(([t, t0, col], i) => {
+      const k = L(i, t0); if (k <= 0) return; ox.globalAlpha = a * k; text(t, cx - dx, top + lh * (1.4 + i), col, i === 3 ? fs - 3 : fs, 'center', SERIF, i === 3 ? 'italic' : ''); });
+    const xk = L(0, 0.1); if (xk > 0) { ox.globalAlpha = a * xk; text('✗', cx - dx, top + lh * 6.6, C.red, nar ? 40 : 64, 'center', SERIF); }
+    // right: grow the space by one direction of each kind
+    ox.globalAlpha = a; cardHead('enlarge the space', cx + dx, top, dx * 2 - 24);
+    const g = sm((s - 0.11) / 0.04), ax = cx + dx, ay = top + lh * 3.1, R = nar ? 34 : 72;
+    [[-1, 0], [1, 0], [0.35, -0.5]].forEach(([ux, uy]) => arrow(ax, ay, ax + ux * R, ay + uy * R, C.t2, 1.4, 7));
+    if (g > 0) { ox.globalAlpha = a * g; arrow(ax, ay, ax - 0.6 * R * g, ay - 0.8 * R * g, C.gold, 2.2, 8); arrow(ax, ay, ax + 0.8 * R * g, ay - 0.6 * R * g, C.gold, 2.2, 8);
+      text('+ time', ax - 0.6 * R - 8, ay - 0.8 * R - 10, C.gold, nar ? 12 : 14, 'right', SERIF, 'italic'); text('+ space', ax + 0.8 * R + 8, ay - 0.6 * R - 10, C.gold, nar ? 12 : 14, 'left', SERIF, 'italic'); }
+    const r1 = L(0, 0.14); if (r1 > 0) { ox.globalAlpha = a * r1; text('Cl(p, q)  →  Cl(p+1, q+1)', cx + dx, top + lh * 4.6, C.text, fs, 'center', SERIF); }
+    const r2 = L(0, 0.155); if (r2 > 0) { ox.globalAlpha = a * r2; text('the smallest way, unique up to isometry', cx + dx, top + lh * 5.3, C.green, fs - 3, 'center', SERIF, 'italic');
+      text('✓', cx + dx, top + lh * 6.6, C.green, nar ? 40 : 60, 'center', SERIF); } }
+  // 2. what went in was geometry; what came out is a fermionic mode (T3 Thm 4.3): output, not input
+  a = env(s, 0.24, 0.49, 0.2);
+  if (a > 0) { ox.globalAlpha = a; const on = Math.floor((performance.now() / 1300)) % 2 === 0 || reduce, R = (t0) => sm((s - t0) / 0.02);
+    const fs = nar ? 13 : 21, lh = nar ? 21 : 40;
+    text('Fermionic structure as output, not input', cx, nar ? 16 : 36, C.gold, nar ? 15 : 23, 'center', SERIF, '600');
+    const gap = nar ? 52 : Math.min(W * 0.13, 170), cw = nar ? W - 28 : Math.min((W - 40 - gap) / 2, 410), ch = nar ? (H - 44 - gap) / 2 : Math.min(H - 110, 400);
+    const top = nar ? 40 : Math.max(76, (H - ch) / 2 + 30);
+    const L0 = nar ? [14, top] : [cx - gap / 2 - cw, top], R0 = nar ? [14, top + ch + gap] : [cx + gap / 2, top];
+    // what went in
+    card(L0[0], L0[1], cw, ch); const lx = L0[0] + cw / 2; cardHead('what went in', lx, L0[1] + (nar ? 20 : 38), cw);
+    { const k = R(0.25); ox.globalAlpha = a * k; const ax = nar ? L0[0] + cw * 0.2 : lx, ay = nar ? L0[1] + ch * 0.62 : L0[1] + ch * 0.44, A = nar ? 34 : 84;
+      arrow(ax, ay, ax + A * 0.71, ay - A * 0.71, C.t2, 2.2, 9); arrow(ax, ay, ax - A * 0.71, ay - A * 0.71, C.blue, 2.2, 9);   // at a right angle: e₊ · e₋ = 0
+      seg(ax + 9, ay - 9, ax, ay - 18, 1, C.t2, 1.2); seg(ax - 9, ay - 9, ax, ay - 18, 1, C.t2, 1.2); dot(ax, ay, 3.5, C.text);
+      text(nar ? 'e₊' : 'e₊  space', ax + A * 0.71 + 8, ay - A * 0.71 - 6, C.t2, nar ? 14 : 22, 'left', SERIF, 'italic'); text(nar ? 'e₋' : 'time  e₋', ax - A * 0.71 - 8, ay - A * 0.71 - 6, C.blue, nar ? 14 : 22, 'right', SERIF, 'italic');
+      const tx = nar ? L0[0] + cw * 0.62 : lx, ty = nar ? L0[1] + ch * 0.42 : L0[1] + ch * 0.62;
+      text('two new directions', tx, ty, C.text, fs, 'center', SERIF);
+      text('e₊² = +1,   e₋² = −1', tx, ty + lh, C.t2, fs, 'center', SERIF, 'italic');
+      text('geometry only: nothing quantum', tx, ty + lh * 2, C.t3, fs - 3, 'center', SERIF, 'italic'); }
+    // the forced construction, no choice made
+    { const k = sm((s - 0.28) / 0.03); if (k > 0) { ox.globalAlpha = a * k;
+      if (nar) { const y1 = L0[1] + ch + 6, y2 = y1 + (gap - 12) * k; arrow(cx, y1, cx, y2, C.gold, 2.4, 10); text('forced, no choice made', cx + 14, (y1 + y1 + gap - 12) / 2, C.t2, 12, 'left', SERIF, 'italic'); }
+      else { const x1 = L0[0] + cw + 10, x2 = x1 + (gap - 20) * k, y = top + ch / 2; arrow(x1, y, x2, y, C.gold, 2.6, 12);
+        text('forced', (x1 + R0[0] - 10) / 2, y - 22, C.t2, 15, 'center', SERIF, 'italic'); text('no choice made', (x1 + R0[0] - 10) / 2, y + 24, C.t3, 13, 'center', SERIF, 'italic'); } } }
+    // what came out
+    { const k = sm((s - 0.31) / 0.02); if (k > 0) { ox.globalAlpha = a * k; card(R0[0], R0[1], cw, ch); const rx = R0[0] + cw / 2; cardHead('what came out', rx, R0[1] + (nar ? 20 : 38), cw);
+      const y = R0[1] + (nar ? 52 : ch * 0.3);
+      [['f = ½ (e₊ + e₋),   f* = ½ (e₊ − e₋)', 0.32, C.text, ''], ['f² = 0,   f*² = 0', 0.34, C.text, 'italic'], ['f f* + f* f = 1', 0.355, C.gold, 'italic'],
+       ['one fermionic mode', 0.37, C.green, 'italic'], ['the same pair as in the lift:  f = ½ n∞,  f* = −n₀', 0.375, C.t2, 'italic']].forEach(([t, t0, col, st], i) => { const q = R(t0); if (q <= 0) return; ox.globalAlpha = a * q; text(t, rx, y + lh * i, col, i === 4 ? (nar ? 11 : fs - 5) : i === 3 ? fs - 2 : fs, 'center', SERIF, st); });
+      const q = R(0.385); if (q > 0) { ox.globalAlpha = a * q; const bx = rx - (nar ? 46 : 70), by = Math.min(R0[1] + ch - (nar ? 18 : 34), y + lh * 5.5);
+        ox.strokeStyle = C.t2; ox.lineWidth = 1.4; ox.beginPath(); ox.roundRect ? ox.roundRect(bx - 30, by - 13, 60, 26, 13) : ox.rect(bx - 30, by - 13, 60, 26); ox.stroke();
+        dot(on ? bx + 15 : bx - 15, by, 10, on ? C.gold : C.t3); text(on ? 'on' : 'off', bx + 40, by, on ? C.gold : C.t3, nar ? 12 : 15, 'left', MONO);
+        text('a switch, never on twice', bx + (nar ? 72 : 92), by, C.t2, nar ? 12 : 15, 'left', SERIF, 'italic'); } } } }
+  // 3. Lorentz and Einstein, with their portraits when the image files are present
+  a = env(s, 0.48, 0.75, 0.2);
+  if (a > 0) { ox.globalAlpha = a; const dx = nar ? W * 0.25 : Math.min(W * 0.2, 230);
+    const pics = PORTRAITS.lorentz && PORTRAITS.einstein, ph = pics ? Math.min(S * 0.56, nar ? W * 0.42 : 300, H - 150) : 0, pw = ph * 0.8;
+    const top = pics ? Math.max(nar ? 52 : 58, (H - (ph + 110)) / 2 + 48) : 0, ny = pics ? top + ph + 22 : cy - S * 0.02;
+    if (pics) [['lorentz', -1], ['einstein', 1]].forEach(([n, sg]) => portrait(PORTRAITS[n], cx + sg * dx - pw / 2, top, pw, ph, a));
+    else { text('1904', cx - dx, cy - S * 0.1, C.t3, nar ? 22 : 30, 'center', SERIF, '600'); text('1905', cx + dx, cy - S * 0.1, C.t3, nar ? 22 : 30, 'center', SERIF, '600'); }
+    text(pics ? 'Lorentz, 1904' : 'Lorentz', cx - dx, ny, C.text, nar ? 15 : 19, 'center', SERIF); text(pics ? 'Einstein, 1905' : 'Einstein', cx + dx, ny, C.text, nar ? 15 : 19, 'center', SERIF);
+    text('the formulae, as an aid', cx - dx, ny + (nar ? 22 : 28), C.t2, nar ? 12 : 15, 'center', SERIF, 'italic'); text('the same formulae, as the world', cx + dx, ny + (nar ? 22 : 28), C.gold, nar ? 12 : 15, 'center', SERIF, 'italic');
+    arrow(cx - dx * 0.45, ny, cx + dx * 0.45, ny, C.t2, 1.6, 9);
+    // the heading of the precedent
+    const qk = 1; if (qk > 0) { ox.globalAlpha = a * qk; const qy = pics ? top - (nar ? 40 : 48) : ny + (nar ? 58 : 70);
+      text('Mathematics as reality', cx, qy, C.gold, nar ? 17 : 24, 'center', SERIF, '600'); } }
+  // 4. destinations not chosen: the forced construction, and where it lands
+  a = env(s, 0.74, 1.1, 0.14);
+  if (a > 0) { ox.globalAlpha = a; const t = cl((s - 0.75) / 0.13), dx = nar ? W * 0.25 : Math.min(W * 0.22, 250);
+    const ty = cy - S * 0.36, by = cy + S * 0.16, fs = nar ? 13 : 17;
+    text('the forced construction', cx, ty, C.text, nar ? 15 : 20, 'center', SERIF, '600');
+    text('1 + 3  →  2 + 4', cx, ty + (nar ? 24 : 30), C.t2, nar ? 13 : 16, 'center', MONO);
+    text('X(x) = n₀ + x + ½ Q(x) n∞', cx, ty + (nar ? 48 : 60), C.text, fs, 'center', SERIF, 'italic');
+    text('every point a light-like direction', cx, ty + (nar ? 68 : 84), C.t3, nar ? 11 : 13, 'center', SERIF, 'italic');
+    const y1 = ty + (nar ? 84 : 104);
+    seg(cx, y1, cx - dx, by - 30, sm(t), C.t2, 1.6); seg(cx, y1, cx + dx, by - 30, sm(t), C.t2, 1.6);
+    if (t >= 1) { arrow(cx - dx + (dx * 0.04), by - 30 - (by - 30 - y1) * 0.04, cx - dx, by - 30, C.t2, 1.6, 10); arrow(cx + dx - (dx * 0.04), by - 30 - (by - 30 - y1) * 0.04, cx + dx, by - 30, C.t2, 1.6, 10); }
+    const f = sm((s - 0.86) / 0.05); ox.globalAlpha = a * f;
+    const pics = PORTRAITS.penrose && PORTRAITS.einstein21, ph = pics ? Math.min(nar ? W * 0.36 : 180, H - (by - 20) - 70) : 0, pw = ph * 0.8;
+    if (pics) { portrait(PORTRAITS.penrose, cx - dx - pw / 2, by - 20, pw, ph, a * f); portrait(PORTRAITS.einstein21, cx + dx - pw / 2, by - 20, pw, ph, a * f); }
+    const ly = by - 20 + ph + (pics ? 20 : 20);
+    text('Penrose’s conformal spinors', cx - dx, ly, C.gold, nar ? 12 : 16, 'center', SERIF, 'italic'); text('(his twistors), 1967', cx - dx, ly + 20, C.t3, nar ? 11 : 13, 'center', SERIF, 'italic');
+    text('Einstein’s vacuum equations', cx + dx, ly, C.gold, nar ? 12 : 16, 'center', SERIF, 'italic'); text('as one condition', cx + dx, ly + 20, C.t3, nar ? 11 : 13, 'center', SERIF, 'italic'); }
+  ox.globalAlpha = 1;
+}
+
+// the two orders of work, side by side: patch the space you were given, or let the failures build the space
+function drawApproach(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2, fs = nar ? 13 : 20, lh = nar ? 22 : 40;
+  ox.globalAlpha = a; text('Reframing division by zero', cx, nar ? 18 : 36, C.gold, nar ? 16 : 24, 'center', SERIF, '600');
+  // the signpost sits in the top right corner of the second card
+  const gap = nar ? 16 : Math.min(W * 0.06, 70), room = 0;
+  const cw = nar ? W - 28 : Math.min((W - 40 - gap - room) / 2, 440), ch = nar ? Math.min((H - 50 - gap) / 2, lh * 7.2) : Math.min(H - 100, lh * 7.6);
+  const top = nar ? 36 : Math.max(70, (H - ch) / 2 + 24), left = nar ? 14 : cx - (2 * cw + gap + room) / 2;
+  const cols = [
+    {x: left, y: top, head: 'Traditional mathematics', col: C.t2, t0: 0.05, end: 'the singularity: a defect to patch', ecol: C.red,
+     items: ['Start with a space.', 'Define operations.', 'Discover singularities.', 'Patch singularities.']},
+    {x: nar ? 14 : left + cw + gap, y: nar ? top + ch + gap : top, head: 'The Transport Principle', col: C.text, t0: 0.52, end: 'the singularity: a signpost to the larger space', ecol: C.green,
+     items: ['Start with singularities.', 'Study where inversion fails.', 'Let those failures dictate the completion.', 'Geometry emerges from the completion.']}];
+  cols.forEach(c => {
+    const k0 = sm((s - c.t0 + 0.04) / 0.04); if (k0 <= 0) return;
+    ox.globalAlpha = a * k0; card(c.x, c.y, cw, ch); cardHead(c.head, c.x + cw / 2, c.y + (nar ? 20 : 34), cw);
+    const ix = c.x + (nar ? 16 : 34);
+    c.items.forEach((t, i) => { const k = sm((s - c.t0 - i * 0.055) / 0.03); if (k <= 0) return; ox.globalAlpha = a * k;
+      text((i + 1) + '.', ix, c.y + (nar ? 50 : 88) + i * lh, c.ecol === C.green ? C.gold : C.t3, fs, 'left', SERIF, '600');
+      text(t, ix + (nar ? 20 : 30), c.y + (nar ? 50 : 88) + i * lh, c.col, fs, 'left', SERIF); });
+    const ke = sm((s - c.t0 - 0.24) / 0.03); if (ke > 0) { ox.globalAlpha = a * ke; text(c.end, c.x + cw / 2, c.y + ch - (nar ? 16 : 30), c.ecol, fs - (nar ? 1 : 3), 'center', SERIF, 'italic'); }
+  });
+  if (!nar) { const k = sm((s - 0.5) / 0.03); if (k > 0) { ox.globalAlpha = a * k; arrow(left + cw + 8, top + ch / 2, left + cw + gap - 8, top + ch / 2, C.gold, 1.8, 8); } }
+  // the signpost: #DIV/0! with an arrow pointing up, out of the space, in a red-ringed road sign
+  const ks = sm((s - 0.78) / 0.05);
+  if (ks > 0) { ox.globalAlpha = a * ks;
+    // beside the first two steps, which are short, clear of the heading
+    const r = nar ? 28 : 32, R0 = cols[1]; roadSign(R0.x + cw - r - (nar ? 8 : 16), nar ? R0.y + r + 8 : R0.y + 88 + lh * 0.5, r, 0); }
+  ox.globalAlpha = 1;
+}
+// a road sign: red ring, white face, an arrow pointing up above '#DIV/0!'; on a post down to `ground` when given
+function roadSign(x, y, r, ground){
+  ox.save();
+  if (ground > y + r) { ox.fillStyle = '#8d8377'; ox.fillRect(x - r * 0.07, y + r * 0.9, r * 0.14, ground - y - r * 0.9); ox.fillStyle = '#5c544c'; ox.fillRect(x - r * 0.07, y + r * 0.9, r * 0.04, ground - y - r * 0.9); }
+  ox.beginPath(); ox.arc(x, y, r, 0, 2 * Math.PI); ox.fillStyle = '#d0312d'; ox.fill();
+  ox.beginPath(); ox.arc(x, y, r * 0.8, 0, 2 * Math.PI); ox.fillStyle = '#f7f3ec'; ox.fill();
+  ox.fillStyle = '#16120f'; const sw = r * 0.11, top = y - r * 0.58, head = r * 0.2;
+  ox.fillRect(x - sw / 2, top + head * 0.9, sw, r * 0.5);
+  ox.beginPath(); ox.moveTo(x, top); ox.lineTo(x + r * 0.2, top + head); ox.lineTo(x - r * 0.2, top + head); ox.closePath(); ox.fill();
+  ox.font = `700 ${Math.round(r * 0.27)}px "IBM Plex Mono", Consolas, monospace`; ox.textAlign = 'center'; ox.textBaseline = 'middle'; ox.fillText('#DIV/0!', x, y + r * 0.36);
+  ox.restore();
+}
+// back to the spreadsheet: everyday sums keep their error
+function drawEveryday(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2, gw = nar ? W - 28 : Math.min(W * 0.66, 780), x0 = cx - gw / 2, rh = nar ? 34 : Math.min(48, H * 0.085);
+  const cw = [nar ? 26 : 40, (gw - (nar ? 26 : 40)) * 0.5, (gw - (nar ? 26 : 40)) * 0.5], fs = nar ? 14 : 20;
+  const rows = [['=1/0', '#DIV/0!', C.red], ['=∞ − ∞', 'no answer', C.red], ['=0 × ∞', 'no answer', C.red], ['=1/0, spacetime', '∞, a place to go', C.gold]];
+  const top = Math.max(8, H * 0.5 - rh * 3.4), shown = Math.min(rows.length, Math.floor(cl((s - 0.04) / 0.5) * rows.length + 0.999));
+  const sel = Math.max(0, shown - 1);
+  ox.globalAlpha = a;
+  // formula bar
+  ox.fillStyle = '#191614'; ox.fillRect(x0, top, gw, rh); ox.strokeStyle = C.line; ox.lineWidth = 1; ox.strokeRect(x0 + 0.5, top + 0.5, gw - 1, rh - 1);
+  text('fx', x0 + cw[0] / 2, top + rh / 2, C.t3, fs - 4, 'center', SERIF, 'italic');
+  seg(x0 + cw[0], top + 6, x0 + cw[0], top + rh - 6, 1, C.line);
+  text(shown ? rows[sel][0] : '', x0 + cw[0] + 12, top + rh / 2, C.text, fs, 'left', MONO);
+  // the sheet
+  const gy = top + rh + 12, cols = ['', 'A', 'B'];
+  for (let r = 0; r <= rows.length; r++) { let x = x0; for (let c = 0; c < 3; c++) {
+    const head = r === 0 || c === 0; ox.fillStyle = head ? '#221e1b' : '#141210'; ox.fillRect(x, gy + r * rh, cw[c], rh); ox.strokeStyle = C.line; ox.strokeRect(x + 0.5, gy + r * rh + 0.5, cw[c] - 1, rh - 1);
+    if (r === 0 && c) text(cols[c], x + cw[c] / 2, gy + rh / 2, C.t3, fs - 6, 'center', MONO);
+    if (c === 0 && r) text(String(r), x + cw[c] / 2, gy + r * rh + rh / 2, C.t3, fs - 6, 'center', MONO);
+    x += cw[c]; } }
+  rows.forEach(([f, v, col], i) => { if (i >= shown) return; const y = gy + (i + 1) * rh + rh / 2;
+    text(f, x0 + cw[0] + 12, y, i === 3 ? C.gold : C.t2, fs - 2, 'left', MONO);
+    text(v, x0 + cw[0] + cw[1] + 12, y, col, fs, 'left', MONO, '500'); });
+  if (shown) { const sy = gy + (sel + 1) * rh, sx = x0 + cw[0] + cw[1]; ox.strokeStyle = '#4c9a4c'; ox.lineWidth = 2.4; ox.strokeRect(sx + 1, sy + 1, cw[2] - 2, rh - 2);
+    ox.fillStyle = '#4c9a4c'; ox.beginPath(); ox.moveTo(sx + 1, sy + 1); ox.lineTo(sx + 11, sy + 1); ox.lineTo(sx + 1, sy + 11); ox.closePath(); ox.fill(); }
+  const k = sm((s - 0.62) / 0.1); if (k > 0) { ox.globalAlpha = a * k;
+    text('everyday numbers: the error stays', cx - gw * 0.22, gy + 5 * rh + 30, C.t2, nar ? 12 : 16, 'center', SERIF, 'italic');
+    text('space and time: a place to go', cx + gw * 0.25, gy + 5 * rh + 30, C.gold, nar ? 12 : 16, 'center', SERIF, 'italic'); }
+  ox.globalAlpha = 1;
+}
+
+
+const cl = x => x <= 0 ? 0 : x >= 1 ? 1 : x;
+// a segment drawn from (x1, y1) a fraction f of the way to (x2, y2)
+function seg(x1, y1, x2, y2, f, col, w = 1, dash = null){ if (f <= 0) return; ox.strokeStyle = col; ox.lineWidth = w; ox.setLineDash(dash || []);
+  ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x1 + (x2 - x1) * f, y1 + (y2 - y1) * f); ox.stroke(); ox.setLineDash([]); }
+
+// the graph of y = 1/x: the right branch climbs to plus infinity, the left falls to minus infinity
+function drawLimits(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2, Hb = H + Math.max(0, capTopOf('limits') - capTop()) - 16, uy = (Hb - H * 0.1076) / 10.65, cy = H * 0.1076 + 5.45 * uy, ux = nar ? W * 0.13 : Math.min(W * 0.1, 130);   // top of the y axis where it was; the graph reaches further down
+  const X = x => cx + x * ux, Y = y => cy - y * uy, xm = 3.2, ym = 5.2;
+  ox.globalAlpha = a;
+  arrow(X(-xm - 0.2), cy, X(xm + 0.25), cy, C.t2, 1.4, 9); arrow(cx, Y(-ym), cx, Y(ym + 0.25), C.t2, 1.4, 9);
+  text('x', X(xm + 0.25), cy + 18, C.t2, 16, 'center', SERIF, 'italic'); text('y', cx + 14, Y(ym + 0.25), C.t2, 16, 'left', SERIF, 'italic');
+  for (let k = -3; k <= 3; k++) if (k) { seg(X(k), cy - 4, X(k), cy + 4, 1, C.t3); text(String(k).replace('-', '−'), X(k), cy + 18, C.t3, 12, 'center', MONO); }
+  for (let k = -4; k <= 4; k += 2) if (k) { seg(cx - 4, Y(k), cx + 4, Y(k), 1, C.t3); text(String(k).replace('-', '−'), cx - 10, Y(k), C.t3, 12, 'right', MONO); }
+  const branch = (sign, p, col) => { if (p <= 0) return; const x0 = sign * 3, x1 = sign * (1 / ym), xe = x0 + (x1 - x0) * p;
+    ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath();
+    for (let i = 0; i <= 80; i++) { const x = x0 + (xe - x0) * i / 80; i ? ox.lineTo(X(x), Y(1 / x)) : ox.moveTo(X(x), Y(1 / x)); } ox.stroke();
+    dot(X(xe), Y(1 / xe), 5, col);
+    if (p > 0.97) arrow(X(x1), Y(1 / x1) + sign * 18, X(x1), Y(1 / x1) - sign * 4, col, 2, 9); };
+  const p1 = sm((s - 0.05) / 0.32), p2 = sm((s - 0.42) / 0.32);
+  branch(1, p1, C.blue); branch(-1, p2, C.plum);
+  text('y = 1/x', X(2.1), Y(1 / 2.1) - 22, C.text, nar ? 15 : 18, 'center', SERIF, 'italic');
+  if (p1 > 0.97) text('x → 0⁺ :  1/x → +∞', X(0.45) + 10, Y(3), C.blue, nar ? 13 : 16, 'left', SERIF);
+  if (p2 > 0.97) text('x → 0⁻ :  1/x → −∞', X(-0.45) - 10, Y(-3), C.plum, nar ? 13 : 16, 'right', SERIF);
+  const q = sm((s - 0.8) / 0.08); if (q > 0) { ox.globalAlpha = a * q; ox.strokeStyle = C.red; ox.lineWidth = 2; ox.beginPath(); ox.arc(cx, cy, 6, 0, 2 * Math.PI); ox.stroke();
+    text('no limit at 0', cx + 12, cy + 34, C.red, nar ? 13 : 15, 'left', SERIF, 'italic'); }
+  ox.globalAlpha = 1;
+}
+
+// the motivation: the two ends of the line want to meet at one point
+function drawWhy(s){
+  const a = env(s, -0.2, 1.1, 0.1), F = lineFrame(1, a); if (a <= 0) return;
+  const {y0, cx} = F, h = Math.min(y0 - 60, Math.max(W * 0.28, H * (narrow() ? 0.6 : 0.42))), L = 34, R_ = W - 34;
+  const curve = (x0, g) => { ox.beginPath(); for (let i = 0; i <= 60 * g; i++) { const t = i / 60, mt = 1 - t;
+      const x = mt * mt * x0 + 2 * mt * t * x0 + t * t * cx, y = mt * mt * y0 + 2 * mt * t * (y0 - h) + t * t * (y0 - h); i ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke(); };
+  const g = sm((s - 0.08) / 0.42); ox.globalAlpha = a; ox.strokeStyle = C.gold; ox.lineWidth = 1.8; ox.setLineDash([6, 6]);
+  if (g > 0) { curve(L, g); curve(R_, g); } ox.setLineDash([]);
+  if (g > 0.15) { text('far to the left', L + 8, y0 - h * 0.45, C.gold, narrow() ? 12 : 14, 'left', SERIF, 'italic'); text('far to the right', R_ - 8, y0 - h * 0.45, C.gold, narrow() ? 12 : 14, 'right', SERIF, 'italic'); }
+  const k = sm((s - 0.52) / 0.1);
+  if (k > 0) { ox.globalAlpha = a * k; dot(cx, y0 - h, 7, C.gold); text('∞', cx, y0 - h - 26, C.gold, narrow() ? 26 : 32, 'center', SERIF, '600');
+    text('one point at infinity, where both ends meet', cx, narrow() ? y0 - h - 58 : y0 - h + 30, C.gold, narrow() ? 13 : 16, 'center', SERIF, 'italic'); }
+  ox.globalAlpha = 1;
+}
+
+// the reflections built one line at a time: up from the number to the circle, across, and back down
+function drawPairs(s){
+  const a = env(s, -0.2, 1.1, 0.1), F = lineFrame(circleZoom(), a); if (a <= 0) return;
+  const {u, y0, cx} = F, P = ([X, Y]) => [cx + X * u, y0 - Y * u], [nx, ny] = P([0, 1]), cyc = y0 - u / 2, edge = W / 2 - 34;
+  yAxis(cx, y0, Math.max(10, ny - 70), a); ox.globalAlpha = a; ox.strokeStyle = C.text; ox.lineWidth = 1.6; ox.beginPath(); ox.arc(cx, cyc, u / 2, 0, 2 * Math.PI); ox.stroke();
+  ox.setLineDash([4, 5]); ox.strokeStyle = C.t3; ox.beginPath(); ox.moveTo(cx - u * 0.75, cyc); ox.lineTo(cx + u * 0.75, cyc); ox.stroke(); ox.setLineDash([]);
+  dot(nx, ny, 4, C.text); text('∞', nx, ny - 22, C.text, 24, 'center', SERIF, '600');
+  const lab = fracLab;
+  // where the line from the top through the circle point meets the number line, or the screen edge
+  const foot = v => { const [px, py] = P(onCircle(v)), [qx] = P([v, 0]);
+    if (Math.abs(qx - cx) <= edge) return [qx, y0, true]; const ex = cx + Math.sign(v) * edge, t = (ex - nx) / (px - nx); return [ex, ny + t * (py - ny), false]; };
+  const mark = (v, col, f) => { if (f <= 0) return; const [fx, fy, on] = foot(v); ox.globalAlpha = a * f;
+    if (on) { ox.fillStyle = col; ox.fillRect(fx - 5, fy - 5, 10, 10); if (!Number.isInteger(v)) text(lab(v), fx, fy + 22, col, 16, 'center', SERIF); }   // whole numbers are already on the scale
+    else text(Math.sign(v) > 0 ? `${lab(v)} →` : `← ${lab(v)}`, fx - Math.sign(v) * 2, fy - 16, col, 15, Math.sign(v) > 0 ? 'right' : 'left', SERIF);
+    ox.globalAlpha = a; };
+  const b = cl((s - 0.05) / 0.75);
+  [[2, 0.5, C.blue], [-1.5, -2 / 3, C.plum]].forEach(([p, q, col], i) => {
+    const t = cl((b - i * 0.5) / 0.5); if (t <= 0) return;
+    const ph = (lo, hi) => sm((t - lo) / (hi - lo));
+    const [fx, fy] = foot(p), [cpx, cpy] = P(onCircle(p)), [cqx, cqy] = P(onCircle(q)), [gx, gy] = foot(q);
+    mark(p, col, ph(0, 0.1));
+    seg(fx, fy, nx, ny, ph(0.1, 0.36), col, 1.2, [3, 4]);                         // up from x to the top of the circle
+    if (t > 0.3) { ox.globalAlpha = a * ph(0.3, 0.38); dot(cpx, cpy, 6, col); text(lab(p), cpx + (p > 0 ? 14 : -14), cpy - 4, col, 17, p > 0 ? 'left' : 'right', SERIF); ox.globalAlpha = a; }
+    seg(cpx, cpy, cqx, cqy, ph(0.42, 0.58), col, 1.6);                            // the reflection, top for bottom
+    if (t > 0.45 && t < 0.98) text('reflect', (cpx + cqx) / 2 + (p > 0 ? 10 : -10), (cpy + cqy) / 2, col, 14, p > 0 ? 'left' : 'right', SERIF, 'italic');
+    if (t > 0.56) { ox.globalAlpha = a * ph(0.56, 0.64); dot(cqx, cqy, 6, col); text(lab(q), cqx + (q > 0 ? 14 : -14), cqy + 4, col, 17, q > 0 ? 'left' : 'right', SERIF); ox.globalAlpha = a; }
+    seg(nx, ny, gx, gy, ph(0.66, 0.92), col, 1.2, [3, 4]);                        // and back down from the top
+    mark(q, col, ph(0.9, 1)); });
+  if (b > 0.98) text('the reciprocal: a reflection, top for bottom', cx, y0 + 58, C.t2, narrow() ? 13 : 16, 'center', SERIF, 'italic');
+  ox.globalAlpha = 1;
+}
+
+// one recipe in three steps: (1) signatures in Clifford's algebra; (2) why a time direction is added even
+// to the line: the light cone of 1 + 2, cut at one moment, is the circle; (3) the recipe in every case
+function drawRecipe(s){
+  const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
+  const nar = narrow(), cx = W / 2;
+  const b1 = s < 0.34 ? 1 : 1 - sm((s - 0.34) / 0.02), b2 = s < 0.34 ? 0 : s < 0.67 ? sm((s - 0.35) / 0.03) : 1 - sm((s - 0.67) / 0.02), b3 = sm((s - 0.68) / 0.03);
+  // (1) each direction squares to a number: three cards, one per space
+  if (b1 > 0) { ox.globalAlpha = a * b1;
+    const cards = [['the real line', '0 + 1', [[1, 0, 'e₁']], ['e₁² = +1']],
+      ['the complex plane', '0 + 2', [[1, 0, 'e₁'], [0.5, -0.8, 'e₂']], ['e₁² = e₂² = +1', 'i = e₁e₂,  i² = −1']],
+      ['spacetime', '1 + 3', [[1, 0, 'e₁'], [0.5, -0.8, 'e₂'], [-0.75, 0.55, 'e₃'], [0, -0.95, 'e₀']], ['e₁² = e₂² = e₃² = +1', 'e₀² = −1  (time)', 'the papers flip both signs: a convention']]];
+    const cw = nar ? W - 28 : Math.min(W * 0.27, 300), ch = nar ? (H - 24) / 3 - 8 : Math.min(H - 40, 420), top = nar ? 10 : Math.max(10, (H - ch) / 2);
+    cards.forEach(([name, sig, dirs, sqs], i) => {
+      const x0 = nar ? 14 : cx + (i - 1.5) * (cw + 22) + 11, y0 = nar ? top + i * (ch + 8) : top;
+      ox.fillStyle = 'rgba(236,229,217,0.035)'; ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.roundRect ? ox.roundRect(x0, y0, cw, ch, 10) : ox.rect(x0, y0, cw, ch); ox.fill(); ox.stroke();
+      const L = nar ? Math.min(ch * 0.3, 44) : Math.min(cw * 0.3, ch * 0.22), fx = nar ? x0 + cw * 0.24 : x0 + cw / 2, fy = nar ? y0 + ch * 0.6 : y0 + ch * 0.47;
+      dirs.forEach(([dx, dy, e]) => { const tm = e === 'e₀', col = tm ? C.blue : C.t2; arrow(fx, fy, fx + dx * L, fy + dy * L, col, nar ? 2 : 2.4, nar ? 9 : 11);
+        text(e, fx + dx * L * 1.25 + (dx > 0.2 ? 6 : dx < -0.2 ? -6 : 0), fy + dy * L * 1.25 - (dy < -0.5 ? 6 : 0), col, nar ? 13 : 18, dx > 0.2 ? 'left' : dx < -0.2 ? 'right' : 'center', SERIF, 'italic'); });
+      dot(fx, fy, 3.5, C.text);
+      const tx = nar ? x0 + cw * 0.52 : x0 + cw / 2, al = nar ? 'left' : 'center';
+      const ty = nar ? y0 + 22 : y0 + 26;
+      text(name, nar ? tx : tx, nar ? ty : ty, C.text, nar ? 15 : 18, al, SERIF, '600');
+      sqs.forEach((q, j) => text(q, tx, (nar ? y0 + ch * 0.48 : y0 + ch * 0.7) + j * (nar ? 18 : 26), q.startsWith('i ') ? C.plum : j === 1 ? C.blue : C.t2, nar ? 13 : 18, al, SERIF, 'italic'));
+      text(sig, tx, nar ? y0 + ch - 20 : y0 + ch - 36, C.gold, nar ? 20 : 30, al, MONO, '500');
+      text('time + space', nar ? tx + 64 : tx, nar ? y0 + ch - 20 : y0 + ch - 12, C.t3, nar ? 10 : 12, al, MONO); }); }
+  // (2) the line gains a time direction; the light cone of 1 + 2 at one moment is the circle
+  if (b2 > 0) { ox.globalAlpha = a * b2; const U = nar ? Math.min(W * 0.26, H * 0.2) : Math.min(H * 0.27, 170), pr = camera(cx + (nar ? 10 : W * 0.04), H * 0.66, U, 0.3, 7, -0.6);
+    arrow(...pr([-1.6, 0, 0]), ...pr([1.7, 0, 0]), C.t2, 1.6, 9); text('space', pr([1.7, 0, 0])[0] + 6, pr([1.7, 0, 0])[1] + 16, C.t2, nar ? 12 : 14, 'right', SERIF, 'italic');
+    seg(...pr([0, 1.4, 0]), ...pr([0, 0, 0]), 1, C.t3, 1.2, [3, 4]); arrow(...pr([0, 0, 0]), ...pr([0, -1.9, 0]), C.text, 1.6, 9);
+    text('new space, out of the page', nar ? Math.max(6, pr([0, -1.9, 0])[0] - 60) : pr([0, -1.9, 0])[0] - 8, pr([0, -1.9, 0])[1] + 14, C.text, nar ? 12 : 14, nar ? 'left' : 'right', SERIF, 'italic');
+    arrow(...pr([0, 0, -0.2]), ...pr([0, 0, 1.55]), C.blue, 1.8, 9); text('new time', pr([0, 0, 1.55])[0] + 8, pr([0, 0, 1.55])[1], C.blue, nar ? 12 : 14, 'left', SERIF, 'italic');
+    const rim = T => Array.from({length: 97}, (_, k) => pr([T * Math.cos(k / 96 * 2 * Math.PI), T * Math.sin(k / 96 * 2 * Math.PI), T]));
+    const apex = pr([0, 0, 0]), r12 = rim(1.25), gr = ox.createLinearGradient(apex[0], apex[1], apex[0], r12[24][1]);
+    gr.addColorStop(0, 'rgba(224,122,85,0.03)'); gr.addColorStop(1, 'rgba(224,122,85,0.18)'); ox.fillStyle = gr; ox.beginPath(); ox.moveTo(...apex); r12.forEach(p => ox.lineTo(...p)); ox.closePath(); ox.fill();
+    for (let k = 0; k < 12; k++) { const ph = k / 12 * 2 * Math.PI; ox.strokeStyle = Math.sin(ph) <= 0 ? 'rgba(224,122,85,0.5)' : 'rgba(224,122,85,0.18)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...apex); ox.lineTo(...pr([1.25 * Math.cos(ph), 1.25 * Math.sin(ph), 1.25])); ox.stroke(); }
+    ox.strokeStyle = 'rgba(224,122,85,0.6)'; ox.lineWidth = 1.2; ox.beginPath(); r12.forEach((p, i) => i ? ox.lineTo(...p) : ox.moveTo(...p)); ox.stroke();
+    const g = sm((s - 0.42) / 0.12), r1 = rim(0.5); ox.strokeStyle = C.gold; ox.lineWidth = 3; ox.beginPath(); r1.slice(0, Math.max(2, Math.round(96 * g) + 1)).forEach((p, i) => i ? ox.lineTo(...p) : ox.moveTo(...p)); ox.stroke();
+    { const lk = sm((s - 0.5) / 0.1); if (lk > 0) { ox.globalAlpha = a * b2 * lk; const L0 = pr([-1.2, -0.5, 0.5]), L1 = pr([1.35, -0.5, 0.5]), z0 = pr([0, -0.5, 0.5]);
+      seg(L0[0], L0[1], L1[0], L1[1], 1, C.text, 2); ox.fillStyle = C.gold; ox.fillRect(z0[0] - 5, z0[1] - 5, 10, 10);
+      [-1, 1].forEach(v => { const t = pr([v, -0.5, 0.5]); dot(t[0], t[1], 3, C.text); });
+      if (nar) text('the line, n₀ + x', L1[0], L1[1] + 16, C.text, 12, 'right', SERIF, 'italic'); else text('the line itself, n₀ + x', L1[0] + 8, L1[1] + 2, C.text, 14, 'left', SERIF, 'italic'); text('0', z0[0], z0[1] + 18, C.gold, 15, 'center', SERIF); ox.globalAlpha = a * b2; } }
+    if (g > 0.9) { const [qx, qy0] = pr([-0.55, 0.35, 0.5]), qy = qy0 - 6; text('the circle: the light cone at time ½', nar ? cx : qx - 10, nar ? pr([0, 0, 1.55])[1] - 22 : qy, C.gold, nar ? 13 : 16, nar ? 'center' : 'right', SERIF, 'italic'); }
+    text('0 + 1  →  1 + 2', cx, nar ? 18 : H * 0.1, C.t2, nar ? 14 : 18, 'center', MONO);
+    text('directions of one kind never square to zero: it takes one of each', cx, (nar ? 18 : H * 0.1) + (nar ? 22 : 28), C.t3, nar ? 11 : 14, 'center', SERIF, 'italic');
+    text('two of space, one of time: every direction drawn, nothing left out', cx, (nar ? 18 : H * 0.1) + (nar ? 40 : 52), C.green, nar ? 11 : 14, 'center', SERIF, 'italic'); }
+  // (3) the recipe, in every case, is the transport principle: one card per case, one bracket under all
+  if (b3 > 0) { ox.globalAlpha = a * b3;
+    const cols = [['the real line', '0 + 1  →  1 + 2', 'a circle', 'circle'], ['the complex plane', '0 + 2  →  1 + 3', 'the Riemann sphere', 'sphere'], ['spacetime', '1 + 3  →  2 + 4', 'light-like directions of 2 + 4', 'cone']];
+    const cw = nar ? W - 28 : Math.min(W * 0.27, 300), ch = nar ? (H - 56) / 3 - 8 : Math.min(H - 90, 380), top = nar ? 10 : Math.max(10, (H - ch - 50) / 2);
+    const I = nar ? Math.min(ch * 0.3, 40) : Math.min(ch * 0.2, cw * 0.22, 70), xs = [];
+    cols.forEach(([t1, t2, t3, icon], i) => {
+      const x0 = nar ? 14 : cx + (i - 1.5) * (cw + 22) + 11, y0 = nar ? top + i * (ch + 8) : top; card(x0, y0, cw, ch); xs.push(x0);
+      const x = nar ? x0 + cw * 0.22 : x0 + cw / 2, y = nar ? y0 + ch / 2 : y0 + ch * 0.36;
+      ox.strokeStyle = C.text; ox.lineWidth = 1.6;
+      if (icon === 'circle') { ox.beginPath(); ox.arc(x, y - I * 0.1, I * 0.55, 0, 2 * Math.PI); ox.stroke(); seg(x - I, y + I * 0.45, x + I, y + I * 0.45, 1, C.t2, 1.4); }
+      else if (icon === 'sphere') { ox.beginPath(); ox.arc(x, y, I * 0.6, 0, 2 * Math.PI); ox.stroke(); ox.strokeStyle = 'rgba(147,180,218,0.8)'; ox.beginPath(); ox.ellipse(x, y, I * 0.6, I * 0.18, 0, 0, 2 * Math.PI); ox.stroke(); }
+      else { ox.strokeStyle = C.red; ox.beginPath(); ox.moveTo(x - I * 0.6, y - I * 0.6); ox.lineTo(x + I * 0.6, y + I * 0.6); ox.moveTo(x + I * 0.6, y - I * 0.6); ox.lineTo(x - I * 0.6, y + I * 0.6); ox.stroke();
+        ox.beginPath(); ox.ellipse(x, y - I * 0.6, I * 0.6, I * 0.16, 0, 0, 2 * Math.PI); ox.stroke(); ox.beginPath(); ox.ellipse(x, y + I * 0.6, I * 0.6, I * 0.16, 0, 0, 2 * Math.PI); ox.stroke(); }
+      const tx = nar ? x0 + cw * 0.46 : x, ty = nar ? y0 + ch * 0.3 : y0 + ch * 0.68, al = nar ? 'left' : 'center';
+      text(t1, tx, ty, C.text, nar ? 14 : 18, al, SERIF, '600'); text(t2, tx, ty + (nar ? 20 : 26), C.gold, nar ? 13 : 16, al, MONO); text(t3, tx, ty + (nar ? 38 : 50), C.t2, nar ? 12 : 14, al, SERIF, 'italic'); });
+    const k = sm((s - 0.76) / 0.06); ox.globalAlpha = a * b3 * k; ox.strokeStyle = C.gold; ox.lineWidth = 2;
+    if (nar) { const y = top + 3 * (ch + 8) + 6; ox.beginPath(); ox.moveTo(14, y - 6); ox.lineTo(14, y); ox.lineTo(W - 14, y); ox.lineTo(W - 14, y - 6); ox.stroke();
+      text('the transport principle: one completion, every space', cx, y + 22, C.gold, 14, 'center', SERIF, 'italic'); }
+    else { const y = top + ch + 16, x0 = xs[0], x1 = xs[2] + cw; ox.beginPath(); ox.moveTo(x0, y - 8); ox.lineTo(x0, y); ox.lineTo(x1, y); ox.lineTo(x1, y - 8); ox.stroke();
+      text('the transport principle: one completion, every space', cx, y + 26, C.gold, 19, 'center', SERIF, 'italic'); } }
+  ox.globalAlpha = 1;
+}
+
+// look down the new time direction at the light cone's circle, then halve it and stand it on the line:
+// it is exactly the circle of the earlier scenes (scaled by one half and lifted, the unit circle's
+// stereographic picture becomes x -> (x, x^2) / (1 + x^2))
+function drawMorph(m){
+  const nar = narrow(), cx = W / 2, U = nar ? Math.min(W * 0.26, H * 0.2) : Math.min(H * 0.27, 170), cyA = H * 0.66, D = 7;
+  const q = sm(m / 0.36), el = 0.3 + (Math.PI / 2 - 0.3) * q, pr = camera(cx, cyA, U, el, D, -0.6 * (1 - q)), fade = 1 - sm(m / 0.3);
+  const u = Math.min(W * (nar ? 0.17 : 0.11), H * 0.15, 140) * circleZoom(), y0 = H - (nar ? 66 : 74);
+  const RA = Math.hypot(pr([0.5, 0, 0.5])[0] - pr([0, 0, 0.5])[0], pr([0.5, 0, 0.5])[1] - pr([0, 0, 0.5])[1]), CA = pr([0, 0, 0.5]);
+  const g = sm((m - 0.42) / 0.26);                                     // 0: seen from above; 1: standing on the line
+  if (m < 0.42) {
+    ox.globalAlpha = fade; arrow(...pr([-1.6, 0, 0]), ...pr([1.7, 0, 0]), C.t3, 1.3, 8);
+    ox.globalAlpha = 1; arrow(...pr([0, -1.3, 0.5]), ...pr([0, 1.8, 0.5]), C.t3, 1.3, 8); text('new space', pr([0, 1.8, 0.5])[0] + 8, pr([0, 1.8, 0.5])[1], C.t3, nar ? 12 : 14, 'left', SERIF, 'italic');
+    { const L0 = pr([-1.6, -0.5, 0.5]), L1 = pr([1.7, -0.5, 0.5]); arrow(L0[0], L0[1], L1[0], L1[1], C.text, 1.8, 9); text(nar ? 'the line' : 'the line itself, n₀ + x', L1[0], L1[1] + 18, C.text, nar ? 12 : 14, 'right', SERIF, 'italic');
+      if (m > 0.26) { ox.globalAlpha = sm((m - 0.26) / 0.08); const c0 = pr([0, 0, 0.5]), l0 = pr([0, -0.5, 0.5]); seg(c0[0] - 5, c0[1], c0[0] + 5, c0[1], 1, C.t3, 1.2);
+        seg(c0[0] - RA - 4, c0[1], c0[0] - 6, c0[1], 1, C.t3, 1, [2, 3]); text('new space = 0', c0[0] - RA - 10, c0[1], C.t3, nar ? 10 : 12, 'right', MONO); text('new space = −½', l0[0] - 12, l0[1] + 16, C.t3, nar ? 10 : 12, 'right', MONO); ox.globalAlpha = 1; } }
+    if (fade > 0) { ox.globalAlpha = fade; arrow(...pr([0, 0, -0.2]), ...pr([0, 0, 1.55]), C.blue, 1.8, 9);
+      for (let k = 0; k < 12; k++) { const ph = k / 12 * 2 * Math.PI; ox.strokeStyle = 'rgba(224,122,85,0.35)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...pr([0, 0, 0])); ox.lineTo(...pr([1.25 * Math.cos(ph), 1.25 * Math.sin(ph), 1.25])); ox.stroke(); } }
+    ox.globalAlpha = 1; ox.strokeStyle = C.gold; ox.lineWidth = 3; ox.beginPath();
+    for (let k = 0; k <= 96; k++) { const p = pr([0.5 * Math.cos(k / 96 * 2 * Math.PI), 0.5 * Math.sin(k / 96 * 2 * Math.PI), 0.5]); k ? ox.lineTo(...p) : ox.moveTo(...p); } ox.stroke();
+    if (m > 0.26) { const k = sm((m - 0.26) / 0.08); ox.globalAlpha = k; const [tx, ty] = pr([0, 0.5, 0.5]), [bx, by] = pr([0, -0.5, 0.5]);
+      text('∞', tx, ty - 18, C.gold, 22, 'center', SERIF, '600'); ox.fillStyle = C.gold; ox.fillRect(bx - 5, by - 5, 10, 10); text('0', bx + 14, by + 16, C.gold, 16, 'left', SERIF);
+      text('looking down the new time direction', cx, nar ? 18 : 22, C.t2, nar ? 13 : 16, 'center', SERIF, 'italic'); }
+  } else {
+    // two-dimensional now: circle centre, radius and the line all move to the picture of the earlier scenes
+    const lineY = (CA[1] + RA) + (y0 - CA[1] - RA) * g, ccx = cx, ccy = CA[1] + ((y0 - u / 2) - CA[1]) * g, r = RA + (u / 2 - RA) * g;
+    // the number line is the line already drawn, touching the circle at 0: it only changes scale, about that point
+    { const sc = 2 * r / u; ox.save(); ox.translate(cx, lineY); ox.scale(sc, sc); ox.translate(-cx, -y0);
+      lineFrame(circleZoom(), Math.max(0.55, g)); yAxis(cx, y0, Math.max(10, (y0 - u) - 70), g); ox.restore(); }
+    ox.globalAlpha = 1; ox.strokeStyle = C.gold; ox.lineWidth = 3 - g * 1.4; ox.beginPath(); ox.arc(ccx, ccy, r, 0, 2 * Math.PI); ox.stroke();
+    text('∞', ccx, ccy - r - 18, C.gold, 22, 'center', SERIF, '600'); ox.fillStyle = C.gold; ox.fillRect(ccx - 5, ccy + r - 5, 10, 10);
+    if (g < 0.5) text('0', ccx, ccy + r + 18, C.gold, 16, 'center', SERIF);
+    const k = sm((m - 0.68) / 0.05);
+    if (k > 0) { ox.globalAlpha = k; dot(ccx - r, ccy, 4.5, C.green); dot(ccx + r, ccy, 4.5, C.green); text('1', ccx + r + 12, ccy, C.green, 15, 'left', SERIF); text('−1', ccx - r - 12, ccy, C.green, 15, 'right', SERIF);
+      text('the circle from before', ccx + r + 18, ccy - r * 0.7, C.gold, nar ? 13 : 16, 'left', SERIF, 'italic');
+      // the reflection's fixed line, across the middle, with 1 and -1 on it
+      const fk = sm((m - 0.74) / 0.08); ox.globalAlpha = k * fk; seg(ccx - r - 34, ccy, ccx + r + 34, ccy, fk, C.green, 1.4, [5, 4]);
+      dot(ccx - r, ccy, 6.5, C.green); dot(ccx + r, ccy, 6.5, C.green);
+      if (nar) text('the reflection’s fixed line', ccx + r + 12, ccy + 16, C.green, 11, 'left', SERIF, 'italic'); else text('where the reflection leaves points in place', ccx - r - 40, ccy - 2, C.green, 14, 'right', SERIF, 'italic');
+      text(nar ? 'the size is set by 1: 1/1 = 1' : 'the size is set by the number 1:  1/1 = 1, so 1 and −1 stay put', cx, y0 + (nar ? 40 : 46), C.green, nar ? 12 : 15, 'center', SERIF, 'italic'); }
+  }
+  ox.globalAlpha = 1;
+}
+
+/* ---------- the loop ---------- */
+const CHAP_OF = k => { let c = 0; CHAPTERS.forEach(([, , ck], i) => { if (START[k] >= START[ck]) c = i; }); return c; };
+function loop(now){
+  const v = playerV(now), {k, s} = phaseAt(v);
+  if (W !== cv.getBoundingClientRect().width || HF !== cv.getBoundingClientRect().height) size();
+  ox.clearRect(0, 0, W, HF);
+  const draw = {line: s => drawLine(0.24 + s * 0.52), limits: drawLimits, why: drawWhy, circle: s => titled('Stereographic projection', '', () => drawCircle(s)), pairs: s => titled('Stereographic projection', '', () => drawPairs(s)), flip: s => titled('Stereographic projection', '', () => drawFlip(0.36 + s * 0.65)), sphere: drawSphere, recipe: s => titled('The Transport Principle', 'a generalisation of the Riemann sphere', () => s < 0.307 ? drawRecipe(0.69 + cl(s / 0.307) * 0.31) : s < 0.615 ? drawRecipe(0.35 + (s - 0.307) / 0.308 * 0.31) : drawMorph((s - 0.615) / 0.385)), spacetime: drawSpacetime, principle: drawPrinciple, more: drawMore, everyday: drawEveryday, approach: drawApproach}[k];
+  if (draw) { TOP = $('#track').offsetHeight + 6; H = Math.max(180, capTop() - 12 - TOP);
+    ox.save(); ox.translate(0, TOP); draw(s); ox.restore(); }
+  $('#hero').style.opacity = k === 'hero' ? String(1 - sm((s - 0.45) / 0.5)) : '0';
+  $('#end').classList.toggle('show', k === 'end' && s > 0.05);
+  const list = CAPS[k] || []; let hit = null; list.forEach((c, i) => { if (s >= c[0] && s < c[1]) hit = i; });
+  if (hit === null) setCap(null); else setCap(k + hit, list[hit][2], list[hit][3]);
+  const ci = CHAP_OF(k);
+  $$('#track button').forEach((b, i) => { b.classList.toggle('on', i === ci); b.classList.toggle('done', i < ci); });
+  requestAnimationFrame(loop);
+}
+addEventListener('resize', size); size(); ui(); requestAnimationFrame(loop);
+window.__story = {START, TOTAL, LEN, STOPS, STEPS, go: goStop, step: goStep, get area(){ return {top: TOP, h: H}; }, get idx(){ return idx; }, get busy(){ return !!anim; }};
+})();
+</script>
+</body>
+</html>

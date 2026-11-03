@@ -1,0 +1,21 @@
+functions:
+  check_transported_connecting_map_is_corrected_doubling:
+    kind: sampled
+    clauses:
+    - whole (comparison squares iota_k = phi_{k+1}^-1 Ad(V_k) theta_k phi_k)
+    omits: 'Finite stages only: Cl(1,1), Cl(2,0) with k <= 2 and Cl(1,3) with k <= 1, on a basis of A (x) Mat_{2^k}; the direct limit and canonicity are not checked; the odd-charge control Cl(1,0) fails as intended'
+  check_intertwiners_make_the_embeddings_block_doublings:
+    kind: sampled
+    clauses:
+    - whole (the two direct systems are isomorphic, so the limit is Cl(p,q) (x) Mat_{2^infty})
+    omits: Same finite grounds and stages (k <= 2, k <= 1 for Cl(1,3)); the isomorphism of the limits follows from the stagewise squares by definition of the limit, which is not itself computed
+  check_limit_is_clifford_algebra_of_the_union:
+    kind: sampled
+    clauses:
+    - '"Equivalently, the limit is the Clifford algebra of R^{p,q} + H_1 + H_2 + ..."'
+    omits: Checks at stages k <= 2 that iota_k preserves generators and squares and dim T_k = dim A 4^k (a count 2^(n+2k) = 2^n 4^k); the infinite-dimensional union is not constructed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Finite-stage squares and intertwiners are tested exactly on chosen grounds; the limit statement is inferred from the stagewise exactness, which is the stated proof route.

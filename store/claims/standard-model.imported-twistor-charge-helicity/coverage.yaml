@@ -1,0 +1,23 @@
+functions:
+  check_identity_charge_is_shifted_euler_operator:
+    kind: sampled
+    clauses:
+    - '"the twistor charge (homogeneity of the palatial quadratics) is helicity: q(id) = -hbar (Euler + 2)"'
+    omits: Realised on Laurent polynomials in Z^0..Z^3 with hbar = 3/7, checked on six test polynomials of mixed degree; not on the module CS itself
+  check_homogeneity_is_minus_two_s_minus_two:
+    kind: sampled
+    clauses:
+    - '"the homogeneity is -2s-2"'
+    omits: Eleven monomials of degrees -6 to 3 (helicities from -5/2 to 2) and one mixed-homogeneity control
+  check_offset_is_the_ordering_shift:
+    kind: sampled
+    clauses:
+    - '"the offset is the ordering shift"'
+    omits: Six test polynomials; symmetric versus normal ordering gives -hbar/2 per dimension, four dimensions
+untouched_premises:
+  hawking.imported-penrose-transform: literature restatement of the Penrose transform; the docstring says it is not called and has no finite core
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Identities on Laurent polynomials are sampled; the Penrose-transform identification is literature with no finite core, as the docstring says.

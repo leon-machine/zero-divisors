@@ -1,0 +1,36 @@
+functions:
+  check_euler_density_is_the_cut_transgression:
+    kind: sampled
+    clauses: ["(i) d omega_Sigma = K e^2 ^ e^3 on the cut", "(i) S_E[P] = alpha oint omega_Sigma on patches with a smooth frame", "(i) a polar cap falls short by one turn (frame index at the pole)"]
+    omits: "rotationally symmetric cuts with five polynomial profiles; K from the Christoffel symbols; rectangles and caps at sample radii"
+  check_edge_term_makes_patch_euler_entropy_topological:
+    kind: sampled
+    clauses: ["(ii) int_P K dA + oint k_g ds + corner turns = 2 pi chi(P)", "(ii) the Euler part with the edge term is 2 pi alpha chi(P)"]
+    omits: "rectangles, polar caps and annuli on five profiles; k_g from the Christoffel symbols; general patches by Gauss-Bonnet (cited)"
+  check_clutching_winding_is_the_euler_number:
+    kind: sampled
+    clauses: ["(iii) cap frames smooth at their poles differ by winding 2 = chi along every separating circle", "(iii) int K dA = 4 pi on closed cuts"]
+    omits: "three closed profiles and three separating circles; genus other than zero not tested"
+  check_edge_term_gauge_and_winding:
+    kind: sampled
+    clauses: ["(i) omega' = omega - d theta under a frame rotation", "(i) a winding w shifts S_E by -2 pi alpha w"]
+    omits: "three rational rotation angles t(s); the winding statement is arithmetic in units of pi at three Lambda"
+  check_counterterm_restores_area_density_on_sds_generators:
+    kind: partial
+    clauses: ["(ii) on radial Schwarzschild-de Sitter generators the bare density -3M/(2 Lambda r^3) varies (with the stored first-order rate) while alpha K tracks it, so the density without the Euler part is 1/4"]
+    omits: "the decisive equality subtracts the Euler density by hand and so is an identity; it does not compute the edge term on a patch of an admissible Schwarzschild-de Sitter cut, whose intrinsic geometry away from the generator is not fixed; the clause delta S' = 0 rests on Gauss-Bonnet (tested in check_edge_term_makes_patch_euler_entropy_topological)"
+  check_closed_cut_residual_is_the_stored_shift:
+    kind: partial
+    clauses: ["(iii) the residual on closed cuts is 2 pi alpha chi = -3 pi chi/(2 Lambda), -chi/2 times 3 pi/Lambda"]
+    omits: "arithmetic only, at three Lambda and chi = 2, 0, -2; the value int K dA = 4 pi on spheres is tested in check_clutching_winding_is_the_euler_number"
+  check_disk_patch_entropy_sign_and_non_additivity:
+    kind: sampled
+    clauses: ["(iii) for Lambda > 0, S' < 0 on disk patches exactly when A < 6 pi/Lambda, half the de Sitter horizon area; positive constant for Lambda < 0", "(iii) S' is not additive under gluing two disks"]
+    omits: "arithmetic in units of pi at three Lambda and five areas"
+  check_wall_counterterm_anomaly_is_the_edge_transgression:
+    kind: sampled
+    clauses: ["(i) delta_lambda Q = d eps(lambda, d omega)", "(i) eps(e0^e1, d omega) = 4 d omega^{23}", "(i) R^{23} - d omega^{23} = -(b2 ^ a3 + a2 ^ b3) on the cut, zero on admissible cuts"]
+    omits: "one polynomial connection and parameter for the variation; one generic connection for the Gauss identity, admissible and not"
+untouched_premises:
+  synthesis.einstein-equations-from-c-loc-and-clausius: "the thin-pencil limit (H2) and the Clausius relation (H1) are used as stated; the check evaluates densities, not the limit"
+  synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term: imported Fact (Gauss-Bonnet with edge and corners, Poincare-Hopf and clutching, the two-dimensional Gibbons-Hawking term) for (ii) to (iv); the checks verify its instances on sample profiles and call no premise for it

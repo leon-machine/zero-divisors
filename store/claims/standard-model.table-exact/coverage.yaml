@@ -1,0 +1,26 @@
+functions:
+  check_table_rows:
+    kind: exact
+    clauses: ["the table: Dl, r_Dl, f and conclusion for every row", "(a)", "(b)"]
+    omits: "The 'any complete multiplet' row is tested at one multiplet size (c = 1/6), not for general c."
+  check_full_supersymmetric_content:
+    kind: exact
+    clauses: ["(c)"]
+    omits: ""
+  check_three_admissible_rows:
+    kind: exact
+    clauses: ["(d)"]
+    omits: ""
+  check_spectrum_run_cross_checks:
+    kind: sampled
+    clauses: ["whole (cross-check of the spectrum-run sin^2 values; full content admissible exactly up to sin^2 = 6539/28320)"]
+    omits: "A cross-check, not a clause of the table statement: the switch at the record value is tested at the threshold and 10^-6 either side."
+  check_admissible_rows_fail_proton_condition:
+    kind: exact
+    clauses: ["(e)"]
+    omits: "Uses the proton condition exported by the proton-condition-candidates check with the upper bound of the rigorous M_U enclosure."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact rational rows from component listings with rigorous GeV enclosures; clauses (a) to (e) are each tested."

@@ -1,0 +1,24 @@
+functions:
+  check_grip_is_the_casimir_difference:
+    kind: sampled
+    clauses:
+    - (i) "the grip P = M(I) with <P,U> = M_{U^I}, m^2 = Q(P)"
+    - (iv) "Q(P) = Q(I)(C_2(so(2,4)) - C_2(so(1,4))), Q(I) = Lambda/3"
+    omits: Four sample antisymmetric moments and seven non-null I (three frozen points at Lambda = 3, -2, 6/5 and four others); the de Sitter signature (1,4) is checked only at Lambda = 3 and 6/5, and the Lambda < 0 case (2,3) is extra to the statement
+  check_flat_grip_is_the_momentum:
+    kind: sampled
+    clauses:
+    - (ii) "at Lambda = 0, I = n_inf, the x-slot part of P is the total momentum and m^2 = p^2"
+    omits: Four sample moments; the declared-levels clause of (ii) is not computable
+  check_spinor_momenta_and_area:
+    kind: sampled
+    clauses:
+    - (iii) "a single conformal spinor carries the null momentum pi pibar and is massless; for two, p^2 = 2|<pi1 pi2>|^2 with <pi1 pi2> = det"
+    omits: Six sample spinors (fifteen pairs) and four rational vectors for the Minkowski reading; the dual-conformal-spinor case through conjugation is not repeated
+untouched_premises:
+  standard-model.imported-fock-model-twistor-space: enters only through the conjugation for the dual spinor, which the docstring says is not repeated
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Each clause is a rational identity checked at sample moments, points and spinors, as the docstring says.

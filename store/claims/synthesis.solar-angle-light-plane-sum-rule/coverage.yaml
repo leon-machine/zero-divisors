@@ -1,0 +1,18 @@
+functions:
+  check_compression_shape:
+    kind: sampled
+    clauses: ["(i) B_s = [[2/3, x_s], [y_s, 0]] in the basis (b_e, b_o)", "(i) Pi A Pi A^T Pi = (Pi A Pi)(Pi A Pi)^T", "(i) symmetric X gives y = x, antisymmetric X gives y = -x"]
+    omits: "exact Fractions on three sample matrices, each projected to an S2-odd part and then to its symmetric and antisymmetric parts, which do not span the S2-odd space; the reading of the light states and masses as singular vectors of B_s (m_e/m_mu = sigma_2/sigma_1, m_1/m_2 = (sigma_2/sigma_1)^2) is from the Lemma and not tested"
+  check_svd_identity:
+    kind: sampled
+    clauses: ["(ii) sigma_2/sigma_1 = |tan theta_L tan theta_R|", "(ii) |theta_L| = |theta_R| when y = +-x", "(iv) y/x = tan theta_L (1 + tan^2 theta_R)/(tan theta_R (1 + tan^2 theta_L))"]
+    omits: "36 rational (theta_L, theta_R) pairs built from half-angle tangents, B parametrised as R(theta_L) diag(sigma_1, sigma_2) R(theta_R)^T with B_22 = 0 imposed, not an arbitrary real B; y = x equal tangents is asserted per sample, y = -x only through three (k, x) quadratic coefficient comparisons; the degenerate k = 0 case is skipped; the quadratics for the heavy-vector tangents are checked on the samples, not derived"
+  check_bound_against_data:
+    kind: partial
+    clauses: ["(iii) Delta < 21.6 degrees and |U_e1|^2 > 0.865 when m_1/m_2 <= 0.01", "(iii) |U_e1|^2 <= 0.711 at the three-sigma edges", "(iv) |tan theta_L/tan theta_R| > 2.95 and |y/x| > 2.35"]
+    omits: "exact rational bracketing of the numbers 0.3944..0.3945, 0.8653, 0.7103, 2.957 and 2.355 from hard-coded PDG masses and fit edges; the inequality Delta <= arctan sqrt(m_e/m_mu) + arctan (m_1/m_2)^(1/4) is taken as input, not tested; tan 21.6 degrees = 0.3959 appears only in a comment; the monotonicity of |y/x| in tan^2 theta_L and rho used at the corner is asserted only through the corner value; the exclusion of one-type second stages is a logical step"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numbers in (iii) and (iv) are pinned exactly; the angle inequality that feeds them and the shape claims are checked on samples"

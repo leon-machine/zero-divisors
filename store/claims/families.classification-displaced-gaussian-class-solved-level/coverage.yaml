@@ -1,0 +1,19 @@
+functions:
+  check_family_factor_doubly_degenerate:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "five Gaussian-rational vectors a: G G^dagger = |a|^2 1 - conj(a) a^T with spectrum {|a|^2, |a|^2, 0}; the fourfold-degenerate event and the Takagi structure of the cited proposition are not tested here"
+  check_light_pair_exactly_degenerate:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "five a and four depths x: the characteristic polynomial and exact light-pair degeneracy of H = cosh^2 r 1 + x(5+6x) P; the closed form of H is taken from the cited theorem, not derived from the displaced-Gaussian or Fock computation; the terminal 'class is solved' statement is not computable"
+  check_quoted_figures_consistent:
+    kind: partial
+    clauses: ["(3) 'short of 206.77 by a factor of 172'"]
+    omits: "only the arithmetic 206.77/1.2032 rounding to 172; the preliminary computations of (2) (best point (101, 19), Q-deformation) and (3) (cap 1.2032, g1/g2 = 207.5, unit sensitivity) are not recomputed, as the statement and docstring say"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clause (1) is checked at sample pairings and depths and clauses (2) and (3) are flagged preliminary in both statement and docstring; the checks claim no more."

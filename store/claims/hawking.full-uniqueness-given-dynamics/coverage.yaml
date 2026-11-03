@@ -1,0 +1,14 @@
+functions:
+  check_kms_state_unique_among_all_states:
+    kind: sampled
+    clauses: ["\"Among all states of A, omega_I is the unique tau-KMS state at beta\""]
+    omits: "finite window analogue only: two fermionic modes, all 16-parameter density matrices, two choices of one-particle dynamics (one non-diagonal); the infinite algebra A and the infinite-volume uniqueness are not tested (the docstring says it is the window case)"
+  check_unique_state_is_quasi_free_with_fermi_dirac_symbol:
+    kind: sampled
+    clauses: ["\"omega_I\""]
+    omits: "two modes and two dynamics only: that the unique KMS state has the Fermi-Dirac two-point symbol, vanishing pairing and the Wick four-point rule"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "both functions test the two-mode window case, which the docstring labels as the window case of the corollary; the infinite-algebra statement is imported"

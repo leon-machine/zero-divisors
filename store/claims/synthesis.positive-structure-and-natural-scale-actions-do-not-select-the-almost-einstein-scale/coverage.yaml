@@ -1,0 +1,13 @@
+functions:
+  check_positive_structure_symmetry_fixes_no_scale:
+    kind: complete
+    clauses: ["(i) the vectors commuting with Z are span(e1, e2, e3, e-), those fixed by its so(4) are span(e0, nu), the centraliser fixes no nonzero vector; signatures of the two spans; n_inf in neither; the Cayley rotation by 1 + tZ; tabulated scales of nu, e0, e-; with the boost e0 e1 the joint fixed space is the ray of nu; Re X(i rho e0) is the de Sitter tractor at L = 12/rho^2"]
+    omits: "the commutant ranks are exact on the whole vector space; the Cayley rotation and the scales are sampled; that the positive structure's symmetry is the centraliser of Z and the transitivity on the tube are argued in the proof"
+  check_yamabe_stationary_scale_is_not_almost_einstein:
+    kind: sampled
+    clauses: ["(ii) sqrt|g| R = -6 phi box phi from the Christoffel symbols of phi^2 eta; box phi = 0 and R = 0 for the two counter-models; nonzero trace-free Ricci at the samples; controls"]
+    omits: "three rational points; the variational step (integration by parts) and the Yamabe reading are argued"
+  check_tractor_dirichlet_stationary_points_are_not_parallel:
+    kind: sampled
+    clauses: ["(iii) the Euler-Lagrange operator is (3/4) box^2 on a degree-four polynomial; 1 + x1 x2 stationary with H0 != 0; (t + x1)^2 stationary with H0 != 0 and H0 : H0 = 0; the almost-Einstein control"]
+    omits: "the identification of the density with the tractor Dirichlet energy of D sigma is argued in the proof; (iv), the Cauchy-Kovalevskaya count, is argued and not computed"

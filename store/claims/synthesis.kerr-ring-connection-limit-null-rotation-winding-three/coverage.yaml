@@ -1,0 +1,25 @@
+functions:
+  check_connection_formula:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "at three rational Kerr-Schild points (one on the r < 0 sheet, one at distance about 10^-3 from the ring): the torsion equation for Omega(b) = grad ^ (H (b.k) k), agreement with an independent Koszul solve, k null and flat-geodesic, and Omega(b).k = -(b.k)(k.grad H) k; the general statement for any potential is proved in the text only"
+  check_frame_components:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "at three rational points (both sheets): Gamma(k; ., .) = 0, Gamma(l; k, e) = 0, Gamma(l; l, e) = e.grad H, Gamma(l; k, l) = -k.grad H, Gamma(e; k, l) = 0, the frame Gram matrix, z^2 = w, H = M Re(1/z) and grad H = -M Re((x, y, Z - i a) z^-3); k.grad z = 1 is proved in the text only"
+  check_forced_normalisation_and_limit:
+    kind: sampled
+    clauses: ["(3)", "(4)"]
+    omits: "along two rational curves to the ring, as exact rational functions of the curve parameter: the top weighted order -2 and exactly where it is attained, every other component of order >= -3/2, the limit identity (gamma_varpi + i gamma_Z)(alpha + i a gamma)^3 = -a M, |L| = M/2 and the radial boost modulus 1/4; uniformity in psi and the angular/normal split of (4) are proved in the text"
+  check_deck_reverses_limit:
+    kind: sampled
+    clauses: ["(5)"]
+    omits: "one curve and its deck image: the leading coefficients of Gamma(l; l, e_i) change sign; the degree argument is in the text"
+  check_linking_loop_generator:
+    kind: sampled
+    clauses: ["(6)"]
+    omits: "along two rational curves, exactly: all frame components of D_T other than (D_T l).e_i are O(t), and G_varpi + i G_Z = i (M/a) e^{-2 i psi} at those directions; the integral over psi and the Gronwall step are in the text"
+  check_null_rotation_plane:
+    kind: exact
+    clauses: ["(4)", "(5)"]
+    omits: "K^e3 = -(K^e2) I with I = e0 e1 e2 e3 and K = e0 + e1, abelian (R_u = 1 + K u compose additively), the boost K^N acting with weight one, I-stable, nilpotent of order three on vectors, annihilates K; in Cl(2,4) commutes with n_inf and n_0 while the soldering term does not"

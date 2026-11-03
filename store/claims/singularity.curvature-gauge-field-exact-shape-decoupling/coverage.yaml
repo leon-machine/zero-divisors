@@ -1,0 +1,23 @@
+functions:
+  check_radial_plane_is_hb_invariant:
+    kind: sampled
+    clauses: ["hb(e_t) ^ hb(e_r) = e_t ^ e_r"]
+    omits: "beta = 0, 1/3, 1, 7/2 (the wedge is linear in beta, but four values are all that is run)"
+  check_shape_operator_matches_gauge_curvature:
+    kind: sampled
+    clauses: ["calR(B) = -(M/r^3) S(B), S = 1 - 3 Pi = -(1/2)(B + 3 sigma_r B sigma_r)", "calR(sigma_r) = +2M/r^3 sigma_r, S(sigma_r) = -2 sigma_r"]
+    omits: "the two forms of S agree on every basis bivector (exact, S is linear); calR(B) = -(M/r^3) S(B) on all six frame planes at the six sample points of the premise engine only, 'exactly and at every radius' not tested symbolically"
+  check_shape_operator_spectrum:
+    kind: exact
+    clauses: ["S^2 + S = 2", "spectrum (-2,-2,1,1,1,1) with the doubled eigenvalue exactly on span{sigma_r, I sigma_r}", "trace-free on Lambda^2, which carries no field equation"]
+    omits: "the aside that the scalar contraction of calR vanishes (scalar curvature) is checked at one sample point only; the imported Einstein-equation equivalence is not used"
+untouched_premises:
+  singularity.imported-equivalence-einstein-equations: "the statement says the operator identity does not carry the field equations; the check confirms only that trace-freeness is automatic for rank-two projections"
+  pairing.imported-weyl-scalars-petrov-type-schwarzschild: "cited only in the standard-route derivation (Weyl scalars, Petrov type D), not the main one"
+  std-algebra.pseudoscalar-commutation: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The operator algebra is exact; the gauge-curvature identification is checked at the premise's six sample points."

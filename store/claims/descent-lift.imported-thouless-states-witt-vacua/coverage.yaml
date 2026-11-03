@@ -1,0 +1,20 @@
+functions:
+  check_thouless_states_are_rotated_vacua:
+    kind: sampled
+    clauses: ["exp(sum A_ij a_i^dag a_j^dag)|0> is the vacuum of a Witt decomposition obtained by the Bogoliubov rotation", "on two modes it is |00> + A_12 |11>"]
+    omits: "one rational antisymmetric A each on nu = 2, 3, 4 modes (series cut at T^2/2); b_i annihilate the state, anticommute, and have positive definite Gram matrix 1 + A A^T, but the Witt decomposition is not built from the standard one by an explicit rotation, and general A is not covered"
+  check_every_even_vector_up_to_three_modes_is_pure:
+    kind: sampled
+    clauses: ["every even state vector of at most three modes is a Witt vacuum (pure, by Cartan)"]
+    omits: "three even vectors on 2 modes and four on 3 modes (annihilator dimension nu, zero-overlap ones included) plus the 4-mode control |0000> + |1111>; nu = 1 not run; Cartan's theorem itself is imported"
+  check_exponential_form_iff_vacuum_overlap:
+    kind: sampled
+    clauses: ["exponential form exactly when the overlap with |0> is nonzero", "|11> on two modes is a Witt vacuum not of this form"]
+    omits: "four sample 3-mode even vectors (two with nonzero overlap reproduced as alpha exp(T)|0>); the 'only if' direction rests on exp(T)|0> having overlap 1, checked on two 2-mode A; general vectors not covered"
+untouched_premises:
+  descent-lift.imported-thouless-states-witt-vacua-external: "external literature record (Thouless 1960); no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The three functions test the finite content the docstring lists at sample matrices and vectors; the general-A statement is sampled."

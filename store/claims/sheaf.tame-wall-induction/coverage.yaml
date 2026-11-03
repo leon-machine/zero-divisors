@@ -1,0 +1,18 @@
+functions:
+  check_shadow_wall_is_a_simple_regular_level_set:
+    kind: sampled
+    clauses: ["(1) the shadow wall {F = 0} is a regular level set with dF = 2 mu nu ds != 0", "(1) the zero of det h across it is simple", "s = 1/lambda + O(1)"]
+    omits: "Model A (s = 1/tau exactly, mu nu = 1/4) has a single far-side zero at tau' = -1/2, which makes 'every zero lies in the monotone zone' trivial; the goodness condition |mu nu| < 1/(2S), the supremum S, the monotone zone and compactness of Sigma are not computed; Model B only checks the determinant identity at two couplings and (tau s)(0) = 1"
+  check_radical_line_is_an_adjugate_column:
+    kind: sampled
+    clauses: ["(2) exactly one h-eigenvalue vanishes", "(2) the radical line is the column space of adj(h), rank one"]
+    omits: "single point tau' of Model A (rank h = 5, adj h of rank one, h adj h = 0, column spans the kernel); first-order vanishing of the eigenvalue is read from corank one plus a simple zero of det h, and smoothness of the line subbundle along a hypersurface is not tested"
+  check_jacobi_formula_gives_transversality:
+    kind: sampled
+    clauses: ["(3) the invariant transversality datum is nowhere zero on Sigma'", "Jacobi: simplicity of the zero of det h is the transversality of the degeneration"]
+    omits: "(det h)' = tr(adj h h') at three points of each of the two models, and at tau' of Model A adj h = c k~ k~^T with h'(k~,k~) != 0 and independent of two extensions; 'nowhere zero' on a hypersurface and iteration to the infinite sequence are not covered"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Simple zero, adjugate radical and Jacobi transversality are verified in one explicit model with a shadow wall at tau'=-1/2 and one general collar; the goodness bound |mu nu| < 1/(2S), the monotone zone, compactness and the smooth-subbundle statements are not computed.

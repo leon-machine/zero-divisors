@@ -1,0 +1,24 @@
+functions:
+  check_coefficients_and_level_line:
+    kind: sampled
+    clauses:
+    - '"the four splits and the one-loop level line"'
+    omits: Level-line identity r(f,f') = R is tested at six values of f per split, and its failure at f' shifted by +-1/4; the content listings (a) to (d) are rebuilt here, not read from an entity
+  check_three_splits_miss_one_has_segment:
+    kind: exact
+    clauses:
+    - '"in (a), (b), (c) the line misses the triangle: no admissible pair at one loop"'
+    - '"(d) the admissible set is the segment from (1, 0.991) to (0.438, 0)"'
+    omits: Endpoint f is bracketed in (0.437, 0.438), which does not by itself fix the printed 0.438 (the value is 0.43772)
+  check_scales_at_the_endpoints:
+    kind: exact
+    clauses:
+    - '"every partner within a factor 1.34 of M_Z"'
+    - '"M_U = 2.0e16 GeV"'
+    - '"electroweak-inos at 7e8 GeV, M_U = 1.6e14 GeV"'
+    omits: Scales are certified only to intervals that contain the printed rounded values (for example 1.95 to 2.05 for 2.0e16)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Rational-arithmetic geometry of the two-threshold line with certified exp and pi bounds; each printed number is shown to lie in a rounding interval.

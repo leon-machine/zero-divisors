@@ -1,0 +1,16 @@
+functions:
+  check_rung_mixing_is_the_ladder_action:
+    kind: sampled
+    clauses:
+    - the rung-mixing U(n) acts on the sector Lambda^1 R_n (x) Lambda^even W = C^n (x) CS as A (x) 1, and the two actions coincide
+    omits: n = 1, 2, 3; Lie algebra level (every elementary gl(n) generator), group by exponentiation; the ladder action U (x) 1 is taken from the premise, the sector identification is the labelling (r, S) -> e_r (x) f_S
+  check_pair_mixing_acts_on_the_spinor_factor:
+    kind: sampled
+    clauses:
+    - the pair-mixing U(3) acts on CS by Lambda^even(B) in both
+    omits: n = 1, 2, 3; Lie algebra level; the ladder-side action ("in both") is not computed
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Both functions verify every elementary generator exactly for n <= 3.

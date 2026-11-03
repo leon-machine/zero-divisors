@@ -1,0 +1,19 @@
+functions:
+  check_real_rapidity_is_not_a_star_map:
+    kind: sampled
+    clauses: ["on a plane's modes the real-rapidity rotor acts by scaling v and v* by inverse factors", "it preserves the CAR but is not a *-map"]
+    omits: "one plane (the atom Cl(1,1)) at three rapidities e^(lambda/2) = 2, 3/2, 5; R = (1/r)(1 + (r^2 - 1) N) (the imaginary-time evolution form) is verified, but the 'imaginary-time (KMS-strip)' identification is a reading"
+  check_uniform_real_boost_unbounded:
+    kind: sampled
+    clauses: ["uniformly over many planes it has no bounded extension to the CAR algebra"]
+    omits: "k = 1..4 planes at the single rapidity r = 2 on Jordan-Wigner matrices: the norm-one partial isometry c_1* ... c_k* goes to r^(2k) times itself; unboundedness for all k is the extrapolation of this pattern, not an enumeration"
+  check_imaginary_rapidity_is_unitary_phase:
+    kind: sampled
+    clauses: ["the imaginary-rapidity rotor is unitary and acts by phases", "the unitary real-time flow is the rotor at imaginary rapidity"]
+    omits: "three rational phases (cos, sin)(phi/2) = (3/5, 4/5), (5/13, 12/13), (8/17, 15/17) over Q(i): R* = R^-1, Ad(R) v = e^(-i phi) v, Ad(R) a *-map, R = e^(-i phi/2) e^(i phi N); the identification of the real-time flow with the physical boost is a reading"
+untouched_premises: {}
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is general in rapidity and in the number of planes; each function is exact at sample rapidities, phases and up to four planes, which is what the docstring records."

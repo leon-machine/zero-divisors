@@ -1,0 +1,25 @@
+functions:
+  check_rung_plane_is_two_conjugate_doublets:
+    kind: exact
+    clauses: ["(ii) R_2 + conj(R_2) = (2,1)_{1/2} + (2,1)_{-1/2}"]
+    omits: ""
+  check_real_rung_vector_stabiliser:
+    kind: sampled
+    clauses: ["(ii) a nonzero real c breaks U(2) to U(1) when beta is a multiple of alpha-bar, completely otherwise"]
+    omits: "Five parallel and three generic real samples (alpha_4, beta_4, alpha_5, beta_5); complex alpha, beta are not sampled."
+  check_mixed_bivectors_join_sectors_off_diagonal:
+    kind: partial
+    clauses: ["(iii) the generators A(U ^ c) change the rung and pair number by one each and have no matrix element within any sector", "(iii) the cross terms join Q to nu^c, u^c, e^c, d^c and L to u^c, d^c only"]
+    omits: "Only the support of the 24 mixed bivectors and the vanishing of their expectation on sector components of two sample states; P = M(I) + M(c), the first-order statement on pure-sector masses and the mass-squared cross terms themselves are not computed."
+  check_bilinear_pairing_joins_yukawa_pairs:
+    kind: exact
+    clauses: ["(iii) through the invariant pairing the same rung component joins exactly the Yukawa pairs"]
+    omits: ""
+untouched_premises:
+  standard-model.imported-grip-area-casimir-form: "cited for the grip's definition; the checks use the mixed bivectors and sector expectation values directly"
+  standard-model.imported-tower-commuting-copies-fock-module: "supports clause (i), whose content is the definition of parallel sections of a flat trivial summand (the docstring says it has no finite content)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Clause (i) is declared unchecked in the docstring; (ii) and (iii) are tested for their matrix-element and quantum-number content, though not the mass-squared cross terms."

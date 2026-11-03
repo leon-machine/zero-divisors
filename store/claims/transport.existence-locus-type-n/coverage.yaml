@@ -1,0 +1,24 @@
+functions:
+  check_definite_forms_have_no_null_vectors:
+    kind: sampled
+    clauses:
+    - Cl(p,q) contains a null vector only if the signature is mixed
+    omits: 1 <= n <= 5; anisotropy is exact (Gram matrix is +-identity), the sample net of vectors with entries in {-2..2} uses only the first three coordinates
+  check_mixed_forms_have_a_null_cone_of_dimension_n_minus_one:
+    kind: sampled
+    clauses:
+    - a null vector exists when pq != 0
+    - the null vectors form a cone of dimension n - 1
+    omits: 1 <= n <= 5; 28 sample null vectors, nonzero gradient (rank 1) at each shows a smooth point of the quadric, not the global dimension of the cone
+  check_null_vectors_are_non_invertible_zero_divisors:
+    kind: sampled
+    clauses:
+    - every null vector is a two-sided zero divisor without left or right inverse in any unital algebra containing Cl(p,q)
+    omits: Mixed signatures with n <= 4; non-invertibility tested in Cl(p,q) and in the two one-generator extensions Cl(p+1,q), Cl(p,q+1), not in an arbitrary unital algebra (the general case follows from v^2 = 0 via the noinverse premise)
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Existence, anisotropy and the zero-divisor property are tested on n <= 5 (n <= 4 for inverse non-existence); the cone dimension is checked only through a nonzero gradient at sampled points. 2026-10-23 weak-checks pass: in check_null_vectors_are_non_invertible_zero_divisors the invertible control now covers both generators of Cl(1,1) on both sides; samples moved to module level"

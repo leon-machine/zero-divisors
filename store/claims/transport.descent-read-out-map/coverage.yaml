@@ -1,0 +1,21 @@
+functions:
+  check_descent_inverts_the_lift:
+    kind: sampled
+    clauses:
+    - (1) dsc is well defined, dsc[X(x)] = x, X(dsc[N]) in [N]
+    omits: Eight signatures, finite point and rescaling samples (160 cases); rays tested are lambda X(x) only, not independently generated null rays (covering all non-ideal null rays rests on the density lemma); continuity and the homeomorphism claim are not tested
+  check_descent_of_transported_point_is_reciprocal:
+    kind: sampled
+    clauses:
+    - (2) dsc(iota[X(x)]) = x/Q(x) = rho(x) for Q(x) != 0
+    omits: Sample points x with Q(x) != 0 in the eight signatures
+  check_composite_defined_exactly_off_the_null_cone:
+    kind: sampled
+    clauses:
+    - (3) the composite is defined exactly on {Q != 0}; for Q(x0) = 0 the value iota[X(x0)] is ideal
+    omits: Twenty null samples (origin in 8 signatures, two null vectors in each of 6 mixed ones) plus non-null samples; ideality via the n0-coefficient -Q(x) = 0
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Clauses (2) and (3) and the algebraic part of (1) are checked on sample points; continuity and the homeomorphism are not.

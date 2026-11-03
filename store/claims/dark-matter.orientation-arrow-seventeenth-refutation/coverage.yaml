@@ -1,0 +1,18 @@
+functions:
+  check_parameter_not_moved:
+    kind: sampled
+    clauses: ["CPT conjugation C = Ad(I6) o kappa is antilinear and leaves the frozen-point part of the action invariant, S_mu o C = S_mu"]
+    omits: "one rational data set for I, V, F and one complexified set; the gauge couplings and the imported gauge sector are the premise's clause, as the docstring says"
+  check_flag_conjugate_odd:
+    kind: exact
+    clauses: ["the orientation bit is C-odd: conjugation exchanges the two orientations"]
+    omits: "computed for one flag on C^{2,4} (v_k = e_{2k} + i e_{2k+1}): C = Ad(I6) o kappa sends v_k to -w_k and the vacuum v0 v1 v2 to -w0 w1 w2, with complementary annihilators; the split-form Cl(3,3) swap is kept as a real model; the neutrino-sector flag-covariance remark (nu_R at grade zero exchanged with grade three) is not tested"
+  check_definition_logic:
+    kind: sampled
+    clauses: ["a C-odd datum on C-stable solution spaces is initial data (I), not dynamically fixed, not a parameter, not kinematic"]
+    omits: "192 toy theories with two parameters and four configurations each, enumerated exhaustively; the actual solution spaces are not modelled"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_flag_conjugate_odd now applies the actual C = Ad(I6) o kappa on C^{2,4} to a Witt flag and its pure vacuum and shows it lands on the conjugate flag's vacuum; the neutrino remark stays untested, as recorded."

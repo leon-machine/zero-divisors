@@ -1,0 +1,25 @@
+functions:
+  check_direct_sum_decomposition:
+    kind: sampled
+    clauses:
+    - B_gamma = A + A nu as a vector space
+    omits: Thirteen base spaces (degenerate bases included) and gamma in {+1,-1,0}; rank 2^(n+1) = 2^n + 2^n shown in each
+  check_commutation_by_grade_involution:
+    kind: sampled
+    clauses:
+    - nu a = a^ nu for a in A
+    omits: Every blade of A (so all of A by linearity) but only for the thirteen base spaces, gamma in {+1,-1,0}; extra controls on odd blades
+  check_inverse_is_gamma_nu:
+    kind: sampled
+    clauses:
+    - for gamma = +-1, nu is invertible with nu^-1 = gamma nu
+    omits: Same thirteen base spaces; gamma = 0 checked as a non-invertible control outside the statement
+untouched_premises:
+  std-algebra.blade-basis: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+  primer.commutation-rule: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Linear identities verified over a full basis on thirteen base spaces; scope is finite but covers degenerate bases beyond the statement.

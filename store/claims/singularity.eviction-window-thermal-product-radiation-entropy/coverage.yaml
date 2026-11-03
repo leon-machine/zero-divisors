@@ -1,0 +1,18 @@
+functions:
+  check_window_is_thermal_product:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "three runs (the model table, a five-pair run, the maximally entangled idealisation) with controlled-Z scrambling; rho_L compared entrywise at every stage; S_R = S_L supported only by equal purity and tr rho^3 where the radiation has at most six qubits"
+  check_envelope_endpoint_and_rising_branch:
+    kind: sampled
+    clauses: ["(2)", "(3)"]
+    omits: "same three runs; S_R is computed as the entropy of the window marginal (taking S_R = S_L from purity), not from the radiation marginal in this function; rising-branch stage counts 2, 3, 3 are asserted per run"
+  check_falling_branch_and_idealisation:
+    kind: sampled
+    clauses: ["(4)"]
+    omits: "same three runs: S_R = C - sum(ln 2 - h_k) exactly, equality iff every window member has c = s, and S_R = min(S_th, C) in the idealisation, at every stage of those runs only"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All four clauses are verified exactly (formal logarithms) on three simulated runs; S_R = S_L is by purity moments and the window entropy stands in for S_R."

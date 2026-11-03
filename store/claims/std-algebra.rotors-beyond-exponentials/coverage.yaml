@@ -1,0 +1,22 @@
+functions:
+  check_split_rotor_has_simple_negative_eigenvalue:
+    kind: exact
+    clauses:
+    - '"(ii) R is a product of six unit vectors and R R~ = 1"'
+    - '"(ii) the eigenvalues of Ad_R and -4 simple"'
+    omits: every signature with p, q >= 2 and n <= 6; larger n is the same computation with extra +1 directions,
+      covered by the proof
+  check_exponential_rotors_have_even_negative_multiplicity:
+    kind: sampled
+    clauses:
+    - '"(i) negative eigenvalues of Ad_{e^B} have even multiplicity"'
+    omits: illustration on quarter-turn exponentials and one commuting product per signature; the general statement
+      is proved, not checked
+  check_low_dimensions:
+    kind: sampled
+    clauses:
+    - '"(iii) n = 1 and Cl(1,1): -1 is a rotor that is not an exponential"'
+    omits: four rational points of the hyperbola; the scalar part of exp(l e1 e2) being cosh l >= 1 is in the proof
+untouched_premises:
+  std-algebra.bivector-exponential-in-spin: cited for the identity Ad of e^B = exp(ad B) in (i); the checks verify
+    the eigenvalue argument and the explicit rotor directly

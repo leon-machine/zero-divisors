@@ -1,0 +1,22 @@
+functions:
+  check_share_without_mechanism:
+    kind: sampled
+    clauses: ["about 81 percent of the dark matter"]
+    omits: "the closed form (8 pi + 16)/(11 pi + 16) is compared with the shares at three rational values of pi, not symbolically; monotonicity in pi is checked at five points (the derivative sign is argued by hand) and the bracket (0.8133, 0.8137) uses pi in (333/106, 355/113); that these towers have no mass mechanism is an assembly-level reading"
+  check_viable_phase_bound:
+    kind: exact
+    clauses: ["the viable phase needs m/e^2 \\lesssim 1.4e-8"]
+    omits: "computes sqrt(2) e-8 from the survival bound (m/e^2)^2 <= 2e-16, which is typed in from the premise; the bracket is (1.41, 1.42)e-8, rounding to 1.4e-8, and its reciprocal exceeds the 7e7 of the premise; 'nothing in the content protects' is a reading"
+  check_coupling_dimension:
+    kind: exact
+    clauses: ["in the three-dimensional towers the coupling is dimensionful, so there is no dimensional transmutation"]
+    omits: "the dimension of e^2 is 1, 0, -1 in d = 3, 4, 5 from [A] = (d - 2)/2; that the three-dimensional gauge algebra is abelian is the premise, and that nothing confines in five dimensions is the cited proposition"
+untouched_premises:
+  dark-matter.mirror-share-one-how-fragile: "cited for the context of the mirror and this tower, whose mass m = c Lambda is a cited result; not recomputed"
+  dark-tower-matter.three-dimensional-content: "cited for the absence of chirality; content not recomputed in this check"
+  dark-tower-matter.anomalies: "cited for parity broken by the forced Chern-Simons level; not recomputed here"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "statement restated at formal and technical levels from 'm/e^2 < 1.4 x 10^-8' to '\\lesssim 1.4 x 10^-8', matching the computed sqrt(2) x 10^-8; check also asserts the reciprocal exceeds the premise's 7e7"

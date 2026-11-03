@@ -1,0 +1,18 @@
+functions:
+  check_rule_one_completion_carries_type_n:
+    kind: sampled
+    clauses: ["Rule-1 completion has mixed signature and carries type N", "adjoined pair f, f* is null"]
+    omits: "only the 15 bases with n <= 4 (not every base, not iterated histories); the rank-of-f test only for n <= 3"
+  check_rule_two_completion_carries_type_p:
+    kind: sampled
+    clauses: ["Rule-2 completion is Mat_2(Cl^0(p,q)) and carries type P"]
+    omits: "only the six type-C bases with n <= 5; matrix units are exact, but the corner dimension 2^(n-1) (identification with Cl^0(p,q) by dimension only) is tested only for n <= 3; deeper histories not tested"
+  check_no_completion_is_a_division_algebra:
+    kind: sampled
+    clauses: ["Transport never reaches a division algebra"]
+    omits: "only the first 10 Rule-1 bases and first 3 Rule-2 bases (Rule 2 with both signs of nu^2); completions of completions (histories of length > 1) are not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement quantifies over every nonempty history; the checks are exact on one-step completions of small bases only, which the kinds record (docstring says exact; sampled over bases). 2026-10-23 weak-checks pass: check_no_completion_is_a_division_algebra now pins the Rule-1 left rank at exactly half (was < full), asserts f null and eps_+ idempotent, and runs Rule 2 with both signs of nu^2"

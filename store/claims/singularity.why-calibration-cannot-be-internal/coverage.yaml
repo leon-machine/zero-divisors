@@ -1,0 +1,22 @@
+functions:
+  check_only_finite_rate_is_the_horizon_rate:
+    kind: sampled
+    clauses: ["on the singular side the connection rate diverges as sqrt(M/2r^3) and offers no finite period", "the horizon rate is the finite kappa = 1/4M, (K.D)K = kappa K"]
+    omits: "five betas inside the horizon at four masses plus the pole of M/(2 r^3) at r = 0; 'the only finite rate the field supplies' is not established by enumeration, the check shows the connection rate is singular and kappa is finite; Omega(e_t), Omega(e_r) are the stored field values"
+  check_cross_section_area_null_normal_killing:
+    kind: sampled
+    clauses: ["the cross-section {t = t0, r = 2M} has area 16 pi M^2", "K = hb^{-1}(e_t) is null and normal to the horizon", "the boost flow is the flow of K and carries cross-sections to cross-sections"]
+    omits: "four masses and three sin(theta) samples; the flow of K is checked only as hb(K) = e_t (translation in t), the carrying of cross-sections is inferred; the remark about the bifurcation surface lying beyond one flat chart is not computable"
+  check_invertible_unimodular_nondegenerate_at_horizon:
+    kind: sampled
+    clauses: ["at the horizon the gauge field is invertible and unimodular and division does not fail"]
+    omits: "beta in {1, 2, 1/2} at four masses; the conclusion that the transport principle makes no statement at the calibration locus and that no strengthening supplies (R) is an argument, not a computation"
+  check_period_is_eight_pi_m:
+    kind: sampled
+    clauses: ["(R) fixes the period 2 pi/kappa = 8 pi M"]
+    omits: "four masses; regularity of the Euclidean section at its tip, which is what fixes the period, enters only through the called premise"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numerical and local-geometry content tested at sample masses; the 'only finite rate' and the closing no-go are structural claims outside the checks"

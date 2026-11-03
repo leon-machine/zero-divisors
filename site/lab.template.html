@@ -1,0 +1,619 @@
+<meta charset="utf-8">
+<title>Transport Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an instrument with five views. The map is a tower read bottom to top
+   (foundations at the base), its subject columns grouped by side; a reading
+   panel sits right and stacks below on phones. The other views are documents. */
+:root {
+  --bg: #eef1f3; --panel: #f8fafb; --ink: #15202a; --muted: #5c6b78; --rule: #d3dae0;
+  --edge: #9aa8b4; --accent: #2d4fd6; --past: #c46a12; --future: #0c7f86;
+  --proved: #2d4fd6; --imported: #8a6bd1; --postulate: #c43d5a; --conj: #c49512;
+  --refuted: #7a7f86; --object: #4c8a5a; --good: #2f8a4c; --warn: #b7791f; --bad: #c43d3d;
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1319; --panel: #141b23; --ink: #dce5ec; --muted: #8b9aa8; --rule: #26313c;
+  --edge: #3d4a57; --accent: #7d97ff; --past: #f0a052; --future: #3fc5cc;
+  --proved: #7d97ff; --imported: #b39cf0; --postulate: #ff7d97; --conj: #e6c04f;
+  --refuted: #8a9099; --object: #79c28a; --good: #5cc17f; --warn: #e3a948; --bad: #ff7b7b;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1319; --panel: #141b23; --ink: #dce5ec; --muted: #8b9aa8; --rule: #26313c;
+  --edge: #3d4a57; --accent: #7d97ff; --past: #f0a052; --future: #3fc5cc;
+  --proved: #7d97ff; --imported: #b39cf0; --postulate: #ff7d97; --conj: #e6c04f;
+  --refuted: #8a9099; --object: #79c28a; --good: #5cc17f; --warn: #e3a948; --bad: #ff7b7b;
+  color-scheme: dark }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.5 var(--body); margin: 0;
+  display: flex; flex-direction: column; overflow: hidden; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px;
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--rule); background: var(--panel); }
+h1 { font: 400 26px/1 var(--display); margin: 0; white-space: nowrap; }
+h1 em { color: var(--accent); }
+nav.views { display: flex; gap: 2px; flex-wrap: wrap; }
+nav.views a { font: 500 13px var(--body); color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 6px; }
+nav.views a[aria-current="page"] { background: var(--ink); color: var(--panel); }
+nav.views a:focus-visible, .lens button:focus-visible, input:focus-visible, button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.stats { font: 12px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; }
+main { flex: 1; min-height: 0; display: flex; }
+section.view { flex: 1; min-height: 0; display: none; }
+section.view.on { display: flex; }
+/* map view */
+#mapview { flex-direction: row; }
+#mapcol { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.maptools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 8px 12px; border-bottom: 1px solid var(--rule); }
+.lens { display: flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.lens button { font: 500 12px var(--body); border: 0; background: transparent; color: var(--muted); padding: 5px 9px; cursor: pointer; }
+.lens button[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+#search { font: 13px var(--body); padding: 5px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); color: var(--ink); width: 220px; max-width: 100%; }
+.hist { display: flex; align-items: center; gap: 8px; font: 12px var(--mono); color: var(--muted); }
+.hist input { width: 160px; }
+#mapwrap { flex: 1; position: relative; min-height: 0; }
+svg#map { width: 100%; height: 100%; display: block; cursor: grab; }
+.legend { position: absolute; left: max(12px, env(safe-area-inset-left, 0px)); bottom: 12px; background: var(--panel); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 6px 10px; font: 11.5px var(--body); color: var(--muted); max-width: calc(100% - 24px); }
+.legend summary { cursor: pointer; font: 600 11px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.lg { display: grid; grid-template-columns: auto auto; gap: 3px 14px; margin-top: 6px; }
+.lg .wide { grid-column: 1 / -1; white-space: normal; max-width: 46ch; }
+.legend span { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+aside { width: 400px; max-width: 42%; border-left: 1px solid var(--rule); background: var(--panel); overflow-y: auto;
+  padding-block: 18px; padding-left: 20px; padding-right: max(20px, env(safe-area-inset-right, 0px)); min-width: 0; }
+aside h2, .doc h2 { font: 400 25px/1.15 var(--display); margin: 4px 0 10px; text-wrap: balance; }
+.eyebrow { font: 500 11px var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+.chip { font: 500 11.5px var(--body); padding: 2px 8px; border-radius: 999px; border: 1px solid var(--rule); background: var(--bg); }
+.chip.good { border-color: var(--good); color: var(--good); } .chip.warn { border-color: var(--warn); color: var(--warn); }
+.chip.bad { border-color: var(--bad); color: var(--bad); } .chip.muted { color: var(--muted); }
+.sec { border-top: 1px solid var(--rule); padding-top: 10px; margin-top: 12px; }
+.sec h3 { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 6px; }
+.prose { max-width: 66ch; overflow-x: auto; } .prose p { margin: 0 0 8px; }
+.formal { font-size: 13px; background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; }
+.pending { color: var(--muted); font-style: italic; }
+ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+a.ref, ul.links a { color: var(--accent); text-decoration: none; cursor: pointer; }
+a.ref:hover, ul.links a:hover { text-decoration: underline; }
+.k { font: 11px var(--mono); color: var(--muted); margin-right: 6px; }
+.note { font-size: 12.5px; color: var(--muted); }
+.flag { color: var(--warn); }
+text.region { font: italic 400 18px var(--display); fill: var(--muted); }
+text.side { font: 600 12px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--ink); }
+text.depth { font: 10px var(--mono); fill: var(--muted); }
+text.lbl { font: 9.5px var(--body); fill: var(--ink); pointer-events: none; }
+/* document views */
+.doc { flex: 1; overflow-y: auto; padding-block: 24px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.doc .inner { max-width: 980px; margin: 0 auto; }
+.doc .lead { font-size: 15px; max-width: 70ch; color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; margin-top: 16px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.card h3 { font: 400 20px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.card .row { font-size: 13px; } .card .row b { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); display: block; }
+.tally { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.tally .t { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 14px; font-variant-numeric: tabular-nums; }
+.tally .t b { font: 400 26px var(--display); display: block; }
+ol.refs { counter-reset: none; padding: 0; list-style: none; display: grid; gap: 12px; margin-top: 18px; }
+ol.refs li { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 14px; background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; }
+ol.refs .n { font: 400 30px/1 var(--display); color: var(--refuted); }
+ol.refs .was { text-decoration: line-through; text-decoration-color: var(--bad); color: var(--muted); }
+ol.refs .now { margin-top: 6px; }
+.tl { display: grid; gap: 14px; margin-top: 18px; }
+.entry { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0 16px; }
+.entry .date { font: 12px var(--mono); color: var(--muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+/* ascent machine */
+.ascent { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.controls label { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+.controls input[type=number] { width: 4.2em; font: 14px var(--mono); padding: 4px 6px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); color: var(--ink); }
+.controls select, .btn { font: 13px var(--body); padding: 5px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.step { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px; }
+.step h3 { font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 6px; color: var(--muted); }
+.step.hot { border-color: var(--bad); } .step.ok { border-color: var(--good); }
+.mathline { font: 14px var(--mono); overflow-x: auto; white-space: nowrap; padding: 4px 0; }
+.caption { font-size: 13px; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 10px; margin-top: 8px; }
+@media (max-width: 800px) {
+  main { flex-direction: column; } #mapview { flex-direction: column; }
+  aside { width: auto; max-width: none; border-left: 0; border-top: 1px solid var(--rule); max-height: 46%; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .ascent { grid-template-columns: minmax(0, 1fr); } .stats { display: none; } #search { width: 100%; }
+  .entry, ol.refs li { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+.nbfilter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.nbfilter button{cursor:pointer;font:inherit;border:1px solid var(--line, #8884);background:transparent;color:inherit}
+.nbfilter button.on{outline:2px solid var(--accent, #6af)}
+.doclist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+#docreader{margin-top:28px}
+#docreader .abstract{font-style:italic}
+.docclaim{border-left:3px solid var(--accent);padding:6px 12px;margin:12px 0;overflow-wrap:anywhere}
+</style>
+
+<header>
+  <h1>Transport <em>Lab</em></h1>
+  <nav class="views" aria-label="Views">
+    <a href="#map" data-view="map">Map</a>
+    <a href="#predictions" data-view="predictions">Predictions</a>
+    <a href="#refutations" data-view="refutations">Refutations</a>
+    <a href="#ascent" data-view="ascent">Ascent machine</a>
+    <a href="#documents" data-view="documents">Documents</a>
+    <a href="#notebook" data-view="notebook">Lab notebook</a>
+  </nav>
+  <div class="stats" id="stats"></div>
+</header>
+<main>
+  <section class="view" id="mapview">
+    <div id="mapcol">
+      <div class="maptools">
+        <input id="search" type="search" placeholder="Search, e.g. Hawking temperature" aria-label="Search claims">
+        <div class="lens" role="group" aria-label="Colour by">
+          <button id="lens-status" data-lens="status" aria-pressed="true">Status</button>
+          <button id="lens-ledger" data-lens="ledger" aria-pressed="false">Ledger</button>
+          <button id="lens-check" data-lens="check" aria-pressed="false">Evidence</button>
+          <button id="lens-review" data-lens="review" aria-pressed="false">Review</button>
+        </div>
+        <label class="hist">Series up to <input id="hist" type="range" min="0" value="0" aria-label="Show the series up to this paper"> <span id="histlabel"></span></label>
+      </div>
+      <div id="mapwrap">
+        <svg id="map" role="img" aria-label="Dependency map of the Transport Papers by subject"></svg>
+        <details class="legend" id="legendbox" open><summary>Key</summary><div id="legend" class="lg"></div></details>
+      </div>
+    </div>
+    <aside id="panel" aria-live="polite"></aside>
+  </section>
+  <section class="view doc" id="predictionsview"><div class="inner" id="predictions"></div></section>
+  <section class="view doc" id="refutationsview"><div class="inner" id="refutations"></div></section>
+  <section class="view doc" id="ascentview"><div class="inner" id="ascent"></div></section>
+  <section class="view doc" id="documentsview"><div class="inner" id="documents"></div></section>
+  <section class="view doc" id="notebookview"><div class="inner" id="notebook"></div></section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const DATA = /*__DATA__*/null;
+(function () {
+  const mac = {};
+  for (const [k, v] of Object.entries(DATA.notation || {})) {
+    const n = (v.match(/#(\d)/g) || []).map(s => +s[1]);
+    mac[k] = n.length ? [v, Math.max(...n)] : v;
+  }
+  // ui/safe strips javascript: links and unsafe attributes from typeset maths
+  window.MathJax = { loader: { load: ["ui/safe"] },
+    tex: { inlineMath: [["$", "$"], ["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], macros: mac,
+           packages: { "[-]": ["require", "html"] } },
+    options: { safeOptions: { allow: { URLs: "none", classes: "safe", cssIDs: "safe", styles: "safe" } } },
+    svg: { fontCache: "global" }, startup: { typeset: false } };
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js"></script>
+<script>
+"use strict";
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const typeset = el => { if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([el]).catch(() => {}); };
+const nodes = DATA.nodes, byId = new Map(nodes.map(n => [n.id, n]));
+const SUBJ = new Map(DATA.subjects.map(s => [s.key, s]));
+const subjTitle = k => (SUBJ.get(k) || { title: "Unplaced" }).title;
+function tex(s) {
+  if (!s || String(s).trim() === "pending") return `<p class="pending">Not written yet.</p>`;
+  let t = esc(s)
+    .replace(/\\claimref\{([^}]+)\}/g, (m, id) => `<a class="ref" data-id="${id}">${esc((byId.get(id) || { title: id }).title)}</a>`)
+    .replace(/\\(?:emph|textit)\{([^{}]*)\}/g, "<em>$1</em>").replace(/\\textbf\{([^{}]*)\}/g, "<b>$1</b>")
+    .replace(/\\cite[pt]?(\[[^\]]*\])?\{([^}]+)\}/g, (m, l, k) => `<span class="note">[${k}${l ? ", " + l.slice(1, -1) : ""}]</span>`)
+    .replace(/\\(?:eqref|ref)\{([^}]+)\}/g, '<span class="note">($1)</span>')
+    .replace(/\\begin\{(enumerate|itemize)\}|\\end\{(enumerate|itemize)\}/g, "").replace(/\\item(\[[^\]]*\])?\s*/g, "<br>• ").replace(/~/g, " ");
+  return t.split(/\n\s*\n/).map(p => `<p>${p}</p>`).join("");
+}
+function go(id) { location.hash = "#" + id; }
+document.addEventListener("click", ev => {
+  const a = ev.target.closest("[data-id]");
+  if (a && byId.has(a.dataset.id)) { ev.preventDefault(); showView("map"); select(a.dataset.id, true); }
+});
+
+// ============================ MAP =====================================
+const LOGICAL = new Set(["uses", "assumes", "specialises"]);
+const edges = DATA.edges.filter(e => byId.has(e.src) && byId.has(e.dst));
+const prem = new Map(), dept = new Map();
+nodes.forEach(n => { prem.set(n.id, []); dept.set(n.id, []); });
+edges.forEach(e => { if (LOGICAL.has(e.kind)) { prem.get(e.src).push(e); dept.get(e.dst).push(e); } });
+const depth = new Map();
+function dd(id, stack = new Set()) {
+  if (depth.has(id)) return depth.get(id);
+  if (stack.has(id)) return 0;
+  stack.add(id); let v = 0;
+  for (const e of prem.get(id)) v = Math.max(v, dd(e.dst, stack) + 1);
+  stack.delete(id); depth.set(id, v); return v;
+}
+nodes.forEach(n => dd(n.id));
+const PAPERS = DATA.papers, paperIx = new Map(PAPERS.map((p, i) => [p.code, i]));
+nodes.forEach(n => { n.pix = paperIx.has((n.locators || {}).paper) ? paperIx.get(n.locators.paper) : PAPERS.length - 1; });
+
+// layout: each side is a row of subject columns; rows stack downward
+const PER = 5, GAPX = 25, SUB = 25, BAND_GAP = 26, PADC = 54, ROW_GAP = 120;
+const rowsOf = {}; DATA.sides.forEach(s => { (rowsOf[s.row] = rowsOf[s.row] || []).push(s.key); });
+const cell = new Map();
+nodes.forEach(n => { const k = (n.subject || "none") + "|" + depth.get(n.id); (cell.get(k) || cell.set(k, []).get(k)).push(n); });
+const colW = {}, layout = { rows: [] };
+let yTop = 0, totalW = 0;
+Object.keys(rowsOf).sort().forEach(r => {
+  const sides = rowsOf[r], cols = DATA.subjects.filter(s => sides.includes(s.side));
+  let maxD = 0; cols.forEach(c => nodes.forEach(n => { if (n.subject === c.key) maxD = Math.max(maxD, depth.get(n.id)); }));
+  const bandRows = Array(maxD + 1).fill(1);
+  cols.forEach(c => { let w = 2; for (let k = 0; k <= maxD; k++) { const m = (cell.get(c.key + "|" + k) || []).length; w = Math.max(w, Math.min(m, PER)); bandRows[k] = Math.max(bandRows[k], Math.ceil(m / PER)); } colW[c.key] = w; });
+  const bandY = []; let acc = 0; for (let k = 0; k <= maxD; k++) { bandY[k] = acc; acc += bandRows[k] * SUB + BAND_GAP; }
+  const h = acc; let x = 0; const colX = {};
+  cols.forEach((c, i) => { if (i && cols[i - 1].side !== c.side) x += 34; colX[c.key] = x; x += colW[c.key] * GAPX + PADC; });
+  totalW = Math.max(totalW, x);
+  const levelY = k => yTop + h - bandY[k] - BAND_GAP / 2;
+  cols.forEach(c => { for (let k = 0; k <= maxD; k++) { const list = cell.get(c.key + "|" + k) || [];
+    list.sort((a, b) => (a.kind === "object") - (b.kind === "object") || a.id.localeCompare(b.id));
+    const w = colW[c.key] * GAPX;
+    list.forEach((n, i) => { const row = Math.floor(i / PER), inRow = Math.min(PER, list.length - row * PER), col = i % PER;
+      n.x = colX[c.key] + (w - (inRow - 1) * GAPX) / 2 + col * GAPX; n.y = levelY(k) - row * SUB - SUB / 2; }); } });
+  layout.rows.push({ r, cols, colX, top: yTop, h, maxD, levelY });
+  yTop += h + ROW_GAP;
+});
+const totalH = yTop - ROW_GAP;
+
+const LENSES = {
+  status: { field: n => n.kind === "object" ? "object" : n.kind === "prediction" ? "prediction" : n.status,
+    keys: [["proved", "--proved", "Proved"], ["imported", "--imported", "Imported"], ["postulate", "--postulate", "Postulate"],
+      ["conjectured", "--conj", "Conjectured"], ["refuted", "--refuted", "Refuted"], ["prediction", "--future", "Prediction"],
+      ["object", "--object", "Definition"], ["open", "--muted", "Open question"]] },
+  ledger: { note: "Transport-essential: every recorded derivation runs through the transport principle or algorithm. Convenient: a standard route is also recorded. Absent: none does.",
+    field: n => n.ledger, keys: [["essential", "--postulate", "Transport-essential"], ["convenient", "--conj", "Transport-convenient"], ["absent", "--edge", "Transport-absent"]] },
+  check: { field: n => n.check, keys: [["pass-legacy", "--good", "Verify-script checks pass"], ["pass", "--good", "Own check passes"],
+      ["proof-only", "--conj", "Proof text only"], ["fail", "--bad", "Check fails"], ["none", "--edge", "No evidence needed or none"]] },
+  review: { field: n => n.review || "none", keys: [["typed", "--accent", "Typed"], ["draft", "--edge", "Draft"], ["reviewed", "--good", "Reviewed"]] },
+};
+let lens = "status", selected = null, histMax = PAPERS.length - 1, zoomK = 1;
+const svg = d3.select("#map"), root = svg.append("g");
+const gR = root.append("g"), gE = root.append("g"), gN = root.append("g"), gL = root.append("g");
+layout.rows.forEach(R => {
+  R.cols.forEach(c => {
+    gR.append("rect").attr("x", R.colX[c.key] - 18).attr("y", R.top - 8).attr("width", colW[c.key] * GAPX + 36).attr("height", R.h + 16).attr("rx", 10).attr("fill", "var(--panel)").attr("stroke", "var(--rule)");
+    const words = c.title.split(" "), lines = []; let cur = "";
+    for (const w of words) { if ((cur + " " + w).trim().length > 14 && cur) { lines.push(cur); cur = w; } else cur = (cur + " " + w).trim(); }
+    if (cur) lines.push(cur);
+    const t = gR.append("text").attr("class", "region").attr("x", R.colX[c.key] - 10).attr("y", R.top + R.h + 30);
+    lines.forEach((l, i) => t.append("tspan").attr("x", R.colX[c.key] - 10).attr("dy", i ? 19 : 0).text(l));
+  });
+  DATA.sides.filter(s => s.row == R.r).forEach(sd => {
+    const cols = R.cols.filter(c => c.side === sd.key); if (!cols.length) return;
+    const a = R.colX[cols[0].key] - 18, last = cols[cols.length - 1], b = R.colX[last.key] + colW[last.key] * GAPX + 18;
+    gR.append("line").attr("x1", a).attr("x2", b).attr("y1", R.top - 24).attr("y2", R.top - 24).attr("stroke", "var(--muted)");
+    gR.append("text").attr("class", "side").attr("x", a).attr("y", R.top - 34).text(sd.title);
+  });
+});
+const edgeSel = gE.selectAll("path").data(edges.filter(e => LOGICAL.has(e.kind))).join("path")
+  .attr("fill", "none").attr("stroke-width", 0.8).attr("stroke-dasharray", e => e.kind === "assumes" ? "3 3" : null)
+  .attr("d", e => { const a = byId.get(e.dst), b = byId.get(e.src), my = (a.y + b.y) / 2; return `M${a.x},${a.y} C${a.x},${my} ${b.x},${my} ${b.x},${b.y}`; });
+const shape = n => n.status === "postulate" ? d3.symbolDiamond : n.kind === "object" ? d3.symbolSquare : n.kind === "prediction" ? d3.symbolStar : n.status === "refuted" ? d3.symbolCross : d3.symbolCircle;
+const nodeSel = gN.selectAll("path").data(nodes).join("path").attr("transform", n => `translate(${n.x},${n.y})`)
+  .attr("d", n => d3.symbol(shape(n), n.status === "postulate" || n.kind === "prediction" ? 130 : 78)()).style("cursor", "pointer")
+  .on("click", (ev, n) => { ev.stopPropagation(); select(n.id, false); });
+nodeSel.append("title").text(n => `${n.title}\n${n.status} · ${subjTitle(n.subject)}`);
+const labelSel = gL.selectAll("text").data(nodes).join("text").attr("class", "lbl").attr("x", n => n.x + 8).attr("y", n => n.y + 3)
+  .text(n => n.title.length > 34 ? n.title.slice(0, 32) + "…" : n.title).attr("opacity", 0);
+function colour(n) { const L = LENSES[lens], k = L.keys.find(x => x[0] === L.field(n)); return css(k ? k[1] : "--edge"); }
+function cones(id) {
+  const past = new Set(), fut = new Set();
+  const walk = (x, map, set, key) => { for (const e of map.get(x)) { const t = e[key]; if (!set.has(t)) { set.add(t); walk(t, map, set, key); } } };
+  if (id) { walk(id, prem, past, "dst"); walk(id, dept, fut, "src"); }
+  return { past, fut };
+}
+function paint() {
+  const { past, fut } = cones(selected), vis = n => n.pix <= histMax;
+  const inP = (a, b) => (past.has(a) || a === selected) && (past.has(b) || b === selected);
+  const inF = (a, b) => (fut.has(a) || a === selected) && (fut.has(b) || b === selected);
+  nodeSel.attr("display", n => vis(n) ? null : "none")
+    .attr("fill", n => n.status === "imported" ? css("--panel") : colour(n)).attr("stroke", n => n.id === selected ? css("--ink") : colour(n))
+    .attr("stroke-width", n => n.id === selected ? 3 : n.status === "imported" ? 1.6 : 1.2)
+    .attr("opacity", n => !selected || n.id === selected || past.has(n.id) || fut.has(n.id) ? 1 : 0.13);
+  edgeSel.attr("display", e => vis(byId.get(e.src)) && vis(byId.get(e.dst)) ? null : "none")
+    .attr("stroke", e => !selected ? css("--edge") : inP(e.src, e.dst) ? css("--past") : inF(e.src, e.dst) ? css("--future") : css("--edge"))
+    .attr("opacity", e => !selected ? 0.3 : inP(e.src, e.dst) || inF(e.src, e.dst) ? 0.95 : 0.04)
+    .attr("stroke-width", e => selected && (e.src === selected || e.dst === selected) ? 1.8 : 0.9);
+  // label the selection and, when zoomed in, its direct premises (and the whole cone
+  // when it is small enough to read); a large future cone stays unlabelled
+  const direct = new Set(selected ? (prem.get(selected) || []).map(e => e.dst) : []);
+  const small = past.size + fut.size <= 24;
+  labelSel.attr("display", n => vis(n) ? null : "none").attr("opacity", n => n.id === selected || (zoomK > 1.7 && (!selected || direct.has(n.id) || (small && (past.has(n.id) || fut.has(n.id))))) ? 1 : 0);
+  const L = LENSES[lens], counts = {};
+  nodes.filter(vis).forEach(n => { const v = L.field(n); counts[v] = (counts[v] || 0) + 1; });
+  document.getElementById("legend").innerHTML = L.keys.filter(k => counts[k[0]]).map(k => `<span><i style="background:var(${k[1]})"></i>${k[2]} <b>${counts[k[0]]}</b></span>`).join("") +
+    (selected ? `<span><i style="background:var(--past)"></i>Rests on (past cone) <b>${past.size}</b></span><span><i style="background:var(--future)"></i>Rests on it (future cone) <b>${fut.size}</b></span>` : "") +
+    (L.note ? `<span class="wide">${L.note}</span>` : "");
+}
+const zoom = d3.zoom().scaleExtent([0.15, 6]).on("zoom", ev => { root.attr("transform", ev.transform); zoomK = ev.transform.k; paint(); });
+svg.call(zoom).on("click", () => select(null, false));
+function fit() {
+  const el = document.getElementById("map"), w = el.clientWidth, h = el.clientHeight; if (!w || !h) return;
+  const k = Math.min(w / (totalW + 100), h / (totalH + 130)) * 0.97;
+  svg.call(zoom.transform, d3.zoomIdentity.translate((w - k * (totalW - 60)) / 2, (h - k * (totalH + 40)) / 2 + 26 * k).scale(k));
+}
+function centre(id) {
+  const n = byId.get(id), el = document.getElementById("map"), k = Math.max(zoomK, 1.8);
+  svg.transition().duration(450).call(zoom.transform, d3.zoomIdentity.translate(el.clientWidth / 2 - k * n.x, el.clientHeight / 2 - k * n.y).scale(k));
+}
+const chip = (l, v, cls = "") => `<span class="chip ${cls}">${l} <b>${esc(v)}</b></span>`;
+function linkList(list, key) {
+  if (!list.length) return `<p class="note">None.</p>`;
+  return `<ul class="links">${list.map(e => { const n = byId.get(e[key]); return `<li><span class="k">${esc(e.kind)}</span><a data-id="${esc(n.id)}">${esc(n.title)}</a></li>`; }).join("")}</ul>`;
+}
+function select(id, fly) {
+  selected = id;
+  if (id && byId.get(id).pix > histMax) { histMax = PAPERS.length - 1; hist.value = histMax; histLabel(); }
+  paint();
+  const p = document.getElementById("panel");
+  if (!id) { p.innerHTML = emptyPanel(); return; }
+  if (fly) centre(id);
+  if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+  const n = byId.get(id), loc = n.locators || {};
+  const imp = (n.imported_from || []).map(i => esc(i.citation) + (i.locator ? ", " + esc(i.locator) : "")).join("<br>");
+  const given = (n.conditional_on || []).filter(x => byId.has(x));
+  p.innerHTML = `<div class="eyebrow">${esc(subjTitle(n.subject))} · source ${esc(loc.paper || "")} ${esc(loc.number || "")}</div>
+    <h2>${esc(n.title)}</h2>
+    <div class="chips">${chip("status", n.status)}${n.effective && n.effective !== n.status && n.kind === "claim" ? chip("effective", n.effective, "warn") : ""}
+      ${n.kind === "claim" ? chip("ledger", n.ledger) : ""}${chip("evidence", n.check)}${chip("review", n.review || "none")}${n.stale ? chip("", "stale", "warn") : ""}</div>
+    ${given.length ? `<p class="note">Holds given ${given.map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(", ")}.</p>` : ""}
+    <div class="sec prose"><h3>In one line</h3><p>${esc(n.one_liner)}</p></div>
+    <div class="sec prose"><h3>Plain words</h3>${tex(n.lay)}</div>
+    <div class="sec prose"><h3>Technical</h3>${tex(n.technical)}</div>
+    <div class="sec prose"><h3>Formal statement</h3><div class="formal">${tex(n.formal)}</div></div>
+    ${n.kind === "prediction" ? `<div class="sec"><h3>Kill condition</h3><p>${esc((n.kill_condition || {}).threshold)}</p></div>` : ""}
+    ${imp ? `<div class="sec prose"><h3>Imported from</h3><p class="note">${imp}</p></div>` : ""}
+    <div class="sec"><h3>Rests on (${prem.get(id).length})</h3>${linkList(prem.get(id), "dst")}</div>
+    <div class="sec"><h3>Used by (${dept.get(id).length})</h3>${linkList(dept.get(id), "src")}</div>
+    ${n.typing_note ? `<div class="sec"><h3>Typing note</h3><p class="note">${esc(n.typing_note)}</p></div>` : ""}
+    ${n.flags && n.flags.length ? `<div class="sec"><h3>Extraction flags</h3><p class="note flag">${n.flags.map(esc).join("<br>")}</p></div>` : ""}
+    <div class="sec"><p class="note" style="font-family:var(--mono)">${esc(n.id)} @${n.version} · link: #${esc(n.id)}</p></div>`;
+  p.scrollTop = 0; typeset(p);
+}
+function emptyPanel() {
+  const s = DATA.summary;
+  return `<div class="eyebrow">The Transport Papers, T0 to T17 and companion notes</div>
+    <h2>Every result, laid out as a tower</h2>
+    <p class="prose">Each mark is one result, placed in the column of its subject and raised by how many results it rests on; foundations sit at the base. The top row is geometry and gravity and the algebra; the lower row is the quantum side, matter and cosmology, and the programme as a whole.</p>
+    <ol class="note"><li>Click a result to light what it rests on (amber) and what rests on it (teal).</li>
+    <li>Change the colouring to see the ledger, the evidence, or what has been typed.</li>
+    <li>Slide the history control to watch the series grow paper by paper.</li></ol>
+    <div class="sec"><h3>The store</h3><p class="note" style="font-family:var(--mono)">${esc(s.line)}</p></div>
+    <div class="sec"><h3>Start here</h3><ul class="links">${DATA.featured.filter(id => byId.has(id)).map(id => `<li><a data-id="${esc(id)}">${esc(byId.get(id).title)}</a></li>`).join("")}</ul></div>`;
+}
+document.querySelectorAll(".lens button").forEach(b => b.addEventListener("click", () => {
+  lens = b.dataset.lens; document.querySelectorAll(".lens button").forEach(x => x.setAttribute("aria-pressed", x === b)); paint();
+  try { localStorage.setItem("tl-lens", lens); } catch (e) {}
+}));
+// search: a small BM25 over title, one-liner and lay text
+const TOK = s => (String(s || "").toLowerCase().match(/[a-z0-9]{2,}/g) || []);
+const idx = nodes.map(n => { const c = {}; TOK([n.title, n.one_liner, n.lay, n.technical].join(" ")).forEach(t => c[t] = (c[t] || 0) + 1); return c; });
+const df = {}; idx.forEach(c => Object.keys(c).forEach(t => df[t] = (df[t] || 0) + 1));
+const avg = idx.reduce((a, c) => a + Object.values(c).reduce((x, y) => x + y, 0), 0) / idx.length;
+function search(q) {
+  const qs = TOK(q), N = idx.length; let best = null, bs = 0;
+  idx.forEach((c, i) => { const L = Object.values(c).reduce((x, y) => x + y, 0); let s = 0;
+    qs.forEach(t => { if (c[t]) { const idf = Math.log(1 + (N - df[t] + 0.5) / (df[t] + 0.5)); s += idf * c[t] * 2.2 / (c[t] + 1.2 * (0.25 + 0.75 * L / avg)); } });
+    if (s > bs) { bs = s; best = nodes[i]; } });
+  return best;
+}
+const searchEl = document.getElementById("search");
+searchEl.addEventListener("keydown", ev => { if (ev.key === "Enter" && searchEl.value.trim()) { const h = search(searchEl.value); if (h) select(h.id, true); } });
+const hist = document.getElementById("hist"); hist.max = PAPERS.length - 1; hist.value = histMax;
+function histLabel() { const p = PAPERS[histMax]; document.getElementById("histlabel").textContent = p.code; }
+hist.addEventListener("input", () => { histMax = +hist.value; histLabel(); paint(); });
+histLabel();
+
+// ============================ PREDICTIONS ==============================
+function renderPredictions() {
+  const preds = nodes.filter(n => n.kind === "prediction");
+  const v = o => ((o.observations || [])[0] || {}).verdict || "pending";
+  const tally = {}; preds.forEach(p => tally[v(p)] = (tally[v(p)] || 0) + 1);
+  const cls = { consistent: "good", confirms: "good", tension: "warn", contested: "warn", refutes: "bad", pending: "muted" };
+  document.getElementById("predictions").innerHTML = `<div class="eyebrow">Live predictions and conditional absences</div>
+    <h2>Scoreboard</h2>
+    <p class="lead">Every prediction the series has registered, with the condition that would kill it and the latest confrontation with data. A single confirmed measurement on the kill line refutes the structure the prediction rests on.</p>
+    <div class="tally">${["consistent", "tension", "contested", "pending", "refutes"].filter(k => tally[k]).map(k => `<div class="t"><b>${tally[k]}</b><span class="chip ${cls[k]}">${k}</span></div>`).join("")}</div>
+    <div class="grid">${preds.map(p => { const o = (p.observations || [])[0] || {}; const basis = prem.get(p.id) || [];
+      return `<article class="card"><div class="eyebrow">${esc(subjTitle(p.subject))} · ${esc((p.locators || {}).paper || "")}</div>
+      <h3>${esc(p.title)}</h3><div>${tex(p.formal)}</div>
+      <div class="row"><b>Kill condition</b>${esc((p.kill_condition || {}).threshold)}</div>
+      <div class="row"><b>Latest data (${esc(o.date || "")})</b>${esc(o.result || "None recorded.")} <span class="chip ${cls[o.verdict] || "muted"}">${esc(o.verdict || "pending")}</span></div>
+      <div class="row"><b>Rests on</b>${basis.length ? basis.map(e => `<a class="ref" data-id="${esc(e.dst)}">${esc(byId.get(e.dst).title)}</a>`).join(", ") : '<span class="note">Basis not yet linked in the store.</span>'}</div>
+      <div class="row"><a class="ref" data-id="${esc(p.id)}">Open on the map</a></div></article>`; }).join("")}</div>`;
+  typeset(document.getElementById("predictions"));
+}
+
+// ============================ REFUTATIONS ==============================
+function renderRefutations() {
+  const refs = nodes.filter(n => n.status === "refuted").map(n => ({ n, row: (n.locators || {}).refutation_row || +(String((n.locators || {}).number || "").match(/refutation (\d+)/) || [0, 99])[1] }))
+    .sort((a, b) => a.row - b.row);
+  document.getElementById("refutations").innerHTML = `<div class="eyebrow">The method, in its failures</div>
+    <h2>The refutation record</h2>
+    <p class="lead">The series was built by conjecturing naturally and failing precisely; each failure located the next statement. These are the natural conjectures the programme tried and refuted, each with the statement that replaced it and the result in the store that carries it.</p>
+    <ol class="refs">${refs.map(({ n, row }) => `<li><div class="n">${row < 99 ? esc(row) : ""}</div><div>
+      <div class="was">${tex(n.formal)}</div>
+      <div class="now">${tex(String(n.technical || "").replace(/^Refuted\. The corrected statement: /, "")) }</div>
+      <div class="note">Replaced by ${(n.refuted_by || []).filter(x => byId.has(x)).map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(", ")}</div></div></li>`).join("")}</ol>`;
+  typeset(document.getElementById("refutations"));
+}
+
+// ============================ NOTEBOOK =================================
+let nbFilter = "";
+function renderNotebook() {
+  const all = DATA.notebook || [];
+  const progs = [...new Set(all.map(e => e.programme).filter(Boolean))];
+  const nb = all.filter(e => !nbFilter || e.programme === nbFilter).sort((a, b) => String(b.run || b.registered || "").localeCompare(String(a.run || a.registered || "")));
+  const cls = { killed: "bad", survived: "good", inverted: "warn", "negative-result": "bad", partial: "warn", open: "muted" };
+  document.getElementById("notebook").innerHTML = `<div class="eyebrow">Pre-registered research runs</div>
+    <h2>Lab notebook</h2>
+    <p class="lead">Each run states its question and its kill conditions before it is run. The outcome is recorded whatever it is, and negative results stay on the record.</p>
+    <div class="nbfilter">${["", ...progs].map(p => `<button class="chip ${p === nbFilter ? "on" : ""}" data-prog="${esc(p)}">${p ? esc(p) : "All programmes"} <span class="note">${p ? all.filter(e => e.programme === p).length : all.length}</span></button>`).join("")}</div>
+    <div class="tl">${nb.length ? nb.map(e => `<div class="entry"><div class="date">${esc(e.registered || "undated")}${e.run && e.run !== e.registered ? "<br>run " + esc(e.run) : ""}</div>
+      <article class="card"><div class="eyebrow">${esc(e.programme || "")}</div><h3>${esc(e.title)}</h3>
+      <div class="row"><b>Question</b>${esc(e.question)}</div>
+      <div class="row"><b>Kill conditions, registered first</b>${(e.kill_conditions || []).map(k => "• " + esc(k)).join("<br>") || '<span class="note">None recorded.</span>'}</div>
+      <div class="row"><b>Outcome</b><span class="chip ${cls[e.outcome] || "muted"}">${esc(e.outcome)}</span> ${esc(e.summary)}</div>${(e.sources || []).length ? `<div class="row"><b>Sources</b><span class="note">${e.sources.map(esc).join("<br>")}</span></div>` : ""}</article></div>`).join("") : '<p class="note">No entries yet.</p>'}</div>`;
+  document.querySelectorAll("#notebook .nbfilter button").forEach(b => b.onclick = () => { nbFilter = b.dataset.prog; renderNotebook(); });
+}
+
+// ============================ ASCENT MACHINE ===========================
+// exact rationals with BigInt, and a blade engine for diagonal signatures
+const gcd = (a, b) => { a = a < 0n ? -a : a; b = b < 0n ? -b : b; while (b) [a, b] = [b, a % b]; return a; };
+class Q { constructor(n, d = 1n) { n = BigInt(n); d = BigInt(d); if (d < 0n) { n = -n; d = -d; } const g = gcd(n, d) || 1n; this.n = n / g; this.d = d / g; }
+  add(o) { return new Q(this.n * o.d + o.n * this.d, this.d * o.d); } mul(o) { return new Q(this.n * o.n, this.d * o.d); }
+  neg() { return new Q(-this.n, this.d); } isZ() { return this.n === 0n; } str() { return this.d === 1n ? String(this.n) : `${this.n}/${this.d}`; } }
+const ZERO = new Q(0), ONE = new Q(1);
+function bladeMul(a, b, sig) {          // a, b bitmasks; sig[i] = +1 or -1
+  let s = 1, x = a >> 1;
+  while (x) { s *= (popc(x & b) % 2) ? -1 : 1; x >>= 1; }
+  const common = a & b; for (let i = 0; i < sig.length; i++) if (common >> i & 1) s *= sig[i];
+  return [s, a ^ b];
+}
+const popc = x => { let c = 0; while (x) { c += x & 1; x >>= 1; } return c; };
+const mvAdd = (A, B) => { const C = new Map(A); B.forEach((v, k) => { const s = (C.get(k) || ZERO).add(v); s.isZ() ? C.delete(k) : C.set(k, s); }); return C; };
+const mvScale = (A, q) => { const C = new Map(); A.forEach((v, k) => { const s = v.mul(q); if (!s.isZ()) C.set(k, s); }); return C; };
+function mvMul(A, B, sig) { let C = new Map(); A.forEach((va, ka) => B.forEach((vb, kb) => { const [s, k] = bladeMul(ka, kb, sig); C = mvAdd(C, new Map([[k, va.mul(vb).mul(new Q(s))]])); })); return C; }
+const vec = (cs) => { const m = new Map(); cs.forEach((c, i) => { if (!c.isZ()) m.set(1 << i, c); }); return m; };
+const NAMES = ["e₁", "e₂", "e₃", "e₄", "e₅", "e₆"];
+function mvStr(A) { if (!A.size) return "0"; return [...A.entries()].sort((a, b) => popc(a[0]) - popc(b[0]) || a[0] - b[0]).map(([k, v]) => {
+  const b = k === 0 ? "" : [...Array(6).keys()].filter(i => k >> i & 1).map(i => NAMES[i]).join(""); const s = v.str();
+  const sv = v.d !== 1n && b ? "(" + s + ")" : s;
+  return (s === "1" && b ? "" : s === "-1" && b ? "-" : sv) + b; }).join(" + ").replace(/\+ -/g, "− ").replace(/\+ \(-/g, "− ("); }
+const dot = (a, b, sig) => a.reduce((s, x, i) => s.add(x.mul(b[i]).mul(new Q(sig[i]))), ZERO);
+function caption(id, level = "lay") { const n = byId.get(id); if (!n) return ""; const t = n[level] && n[level] !== "pending" ? n[level] : n.one_liner;
+  return `<div class="caption">${tex(t)}<a class="ref" data-id="${id}">From the store: ${esc(n.title)}</a></div>`; }
+function renderAscent() {
+  const el = document.getElementById("ascent");
+  el.innerHTML = `<div class="eyebrow">Showcase · computed exactly in your browser</div>
+    <h2>The ascent machine</h2>
+    <p class="lead">Pick a signature and a vector. The machine computes its square exactly. A vector of square zero cannot be divided by, the partners that would repair it cannot be chosen consistently, and the transport adds one hyperbolic plane. Every caption is the store's own text for the result it illustrates.</p>
+    <div class="controls" style="margin-top:14px">
+      <label>Signature<select id="sig"><option value="1,1">Cl(1,1)</option><option value="1,2" selected>Cl(1,2)</option><option value="2,1">Cl(2,1)</option><option value="1,3">Cl(1,3) spacetime</option><option value="2,2">Cl(2,2)</option></select></label>
+      <span id="coefs" class="controls"></span>
+      <button class="btn" id="mknull">Pick a null vector</button>
+    </div>
+    <div class="ascent" id="steps"></div>`;
+  const sigSel = el.querySelector("#sig");
+  function coefInputs() { const [p, q] = sigSel.value.split(",").map(Number), n = p + q;
+    el.querySelector("#coefs").innerHTML = [...Array(n).keys()].map(i => `<label>${NAMES[i]}${i < p ? "²=+1" : "²=−1"}<input type="number" id="c${i}" value="${i === 0 || i === p ? 1 : 0}" step="1"></label>`).join("");
+    el.querySelectorAll("#coefs input").forEach(x => x.addEventListener("input", run)); run(); }
+  el.querySelector("#mknull").addEventListener("click", () => { const [p, q] = sigSel.value.split(",").map(Number);
+    el.querySelectorAll("#coefs input").forEach((x, i) => x.value = (i === 0 || i === p) ? 1 : 0); run(); });
+  sigSel.addEventListener("change", coefInputs);
+  function run() {
+    const [p, q] = sigSel.value.split(",").map(Number), n = p + q, sig = [...Array(n)].map((_, i) => i < p ? 1 : -1);
+    const a = [...Array(n).keys()].map(i => new Q(Math.trunc(+(el.querySelector("#c" + i) || { value: 0 }).value || 0)));
+    const v = vec(a), vv = mvMul(v, v, sig), Qv = dot(a, a, sig), isNull = Qv.isZ() && a.some(x => !x.isZ());
+    let html = `<div class="step ${isNull ? "hot" : "ok"}"><h3>1. Locate</h3>
+      <div class="mathline">v = ${mvStr(v)}</div><div class="mathline">v v = Q(v) = ${mvStr(vv)}</div>`;
+    if (!a.some(x => !x.isZ())) html += `<p>Choose a nonzero vector.</p></div>`;
+    else if (!isNull) { const inv = mvScale(v, new Q(Qv.d, Qv.n));
+      html += `<p>Q(v) is not zero, so v divides: v⁻¹ = v / Q(v).</p><div class="mathline">v⁻¹ = ${mvStr(inv)}</div><div class="mathline">v v⁻¹ = ${mvStr(mvMul(v, inv, sig))}</div></div>`; }
+    else html += `<p>Q(v) = 0, so v is null: a zero divisor, since v times v is zero. No algebra containing this one can invert it: if u v = 1 then v = u v v = 0.</p>${caption("transport.noinverse")}</div>`;
+    if (isNull) {
+      // a Witt partner w: Q(w) = 0 and B(v, w) = 1/2, so vw + wv = 1
+      // w = t e + s v with B(v, w) = 1/2 and Q(w) = 0:  t = 1 / (2 B(v, e)),  s = -t Q(e) / (2 B(v, e))
+      let w = null;
+      for (let i = 0; i < n && !w; i++) {
+        const e = [...Array(n)].map((_, j) => j === i ? ONE : ZERO), be = dot(a, e, sig);
+        if (be.isZ()) continue;
+        const t = new Q(be.d, 2n * be.n), Qe = dot(e, e, sig), sv = t.mul(Qe).neg().mul(new Q(be.d, 2n * be.n));
+        w = e.map((x, j) => x.mul(t).add(a[j].mul(sv)));
+      }
+      const wv = vec(w), anti = mvAdd(mvMul(v, wv, sig), mvMul(wv, v, sig));
+      html += `<div class="step"><h3>2. Diagnose and pair</h3><p>The obstruction is type N: a null vector. In mixed signature it has partners w, also null, with v w + w v = 1: together they are one fermionic mode.</p>
+        <div class="mathline">w = ${mvStr(wv)}</div><div class="mathline">w w = ${mvStr(mvMul(wv, wv, sig))}</div><div class="mathline">v w + w v = ${mvStr(anti)}</div>${caption("transport.existence-locus-type-n", "one_liner")}</div>`;
+      // a null rotation fixing v moves w: R = 1 + t (b v) / 2 with b orthogonal to v
+      if (n >= 3) {
+        // b orthogonal to v and not along it; the rotor 1 + (b v)/2 then fixes v and moves w
+        let b = null;
+        const notAlong = c => a.some((ai, i) => c.some((cj, j) => !ai.mul(cj).add(a[j].mul(c[i]).neg()).isZ()));
+        for (let i = 0; i < n && !b; i++) for (let j = i + 1; j < n && !b; j++) {
+          const c = [...Array(n)].map(() => ZERO); c[i] = a[j].mul(new Q(sig[j])); c[j] = a[i].mul(new Q(-sig[i]));
+          if (c.some(x => !x.isZ()) && dot(a, c, sig).isZ() && notAlong(c)) {
+            const bv = mvMul(vec(c), v, sig);
+            const moved = mvAdd(mvMul(mvMul(mvAdd(new Map([[0, ONE]]), mvScale(bv, new Q(1, 2))), vec(w), sig), mvAdd(new Map([[0, ONE]]), mvScale(mvMul(v, vec(c), sig), new Q(1, 2))), sig), mvScale(vec(w), new Q(-1)));
+            if (moved.size) b = c;
+          } }
+        if (b) {
+          const bv = mvMul(vec(b), v, sig), R = mvAdd(new Map([[0, ONE]]), mvScale(bv, new Q(1, 2))), Rr = mvAdd(new Map([[0, ONE]]), mvScale(mvMul(v, vec(b), sig), new Q(1, 2)));
+          const w2 = mvMul(mvMul(R, wv, sig), Rr, sig), vR = mvMul(mvMul(R, v, sig), Rr, sig);
+          const anti2 = mvAdd(mvMul(v, w2, sig), mvMul(w2, v, sig));
+          html += `<div class="step hot"><h3>3. No element-level repair</h3><p>A null rotation R that fixes v moves the partner to another partner. Partners form an affine family that these rotations translate, with no fixed point, so no partner can be chosen consistently with the symmetry.</p>
+            <div class="mathline">R v R̃ = ${mvStr(vR)}</div><div class="mathline">R w R̃ = ${mvStr(w2)}</div><div class="mathline">v (R w R̃) + (R w R̃) v = ${mvStr(anti2)}</div>${caption("transport.no-go-level-elements")}</div>`;
+        }
+      } else html += `<div class="step"><h3>3. The exception</h3><p>In two dimensions the partner is unique once v is fixed, so the plane is already complete. From three dimensions on there is a whole family of partners, and no consistent choice among them.</p></div>`;
+      const wi = Math.min(p, q);
+      html += `<div class="step ok"><h3>4. Ascend</h3><p>The transport adds one hyperbolic plane, a direction of each sign: Cl(${p},${q}) becomes Cl(${p + 1},${q + 1}), dimension ${2 ** n} becomes ${2 ** (n + 2)}. The repair is delivered on the space of points, and the Witt index, the number of fermionic modes the algebra can hold, rises from ${wi} to ${wi + 1}.</p>${caption("transport.minimality")}${caption("tower.witt-index-quantum-capacity", "one_liner")}</div>`;
+    }
+    el.querySelector("#steps").innerHTML = html; typeset(el.querySelector("#steps"));
+  }
+  coefInputs();
+}
+
+// ============================ DOCUMENTS ================================
+const DOC_LABEL = { theorem: "Theorem", fact: "Fact (imported)", postulate: "Postulate",
+  conjecture: "Conjecture", refutation: "Refutation", prediction: "Prediction", definition: "Definition" };
+function renderDocuments() {
+  const docs = DATA.documents || [];
+  document.getElementById("documents").innerHTML = `<div class="eyebrow">Generated from the store</div>
+    <h2>Documents</h2>
+    <p class="lead">Each document is assembled from a recipe: a spine of results, a level, and where to stop. It is stored, and when the claims under it change it is regenerated against the stored version, so unchanged passages stay word for word and every change is logged.</p>
+    <div class="doclist">${docs.map(d => `<article class="card doccard"><div class="eyebrow">${esc(d.level || "")} level · version ${d.version}</div>
+      <h3><a class="ref" href="#doc:${esc(d.id)}">${esc(d.title)}</a></h3>
+      <div class="row"><b>Contents</b>${d.claims} results from the store, ${d.spine.length} on the spine</div>
+      <div class="row"><b>History</b>${d.history.map(h => `v${h.v} <span class="note">${esc(h.bump)}, ${esc(h.date)}</span>`).join(" · ") || "v1"}</div>
+      <div class="row"><b>Audit</b>${Object.entries(d.audit).map(([c, n]) => `${esc(c)} ×${n}`).join(", ") || "clean"}</div></article>`).join("")}</div>
+    <div id="docreader"></div>`;
+}
+function openDoc(id) {
+  if (!rendered.documents) { rendered.documents = true; renderDocuments(); }
+  const d = (DATA.documents || []).find(x => x.id === id); if (!d) return;
+  const tex = t => esc(String(t || "").replace(/\s*\[\[(?:c:[^\]]+|t)\]\]/g, ""))
+    .replace(/\\claimref\{([^}]+)\}/g, (m, id) => `<a class="ref" data-id="${id}">${esc(byId.has(id) ? byId.get(id).title : id)}</a>`)
+    .replace(/\\(?:emph|textit)\{([^{}]*)\}/g, "<em>$1</em>")
+    .replace(/\\textbf\{([^{}]*)\}/g, "<b>$1</b>")
+    .replace(/\\cite[pt]?(?:\[([^\]]*)\])?\{([^}]+)\}/g, (m, loc, k) => `<span class="note">[${k.replace(/,/g, ", ")}${loc ? ", " + loc.replace(/~/g, " ") : ""}]</span>`)
+    .replace(/\\(?:label|ref|eqref)\{[^}]*\}/g, "")
+    .replace(/~/g, " ");
+  const strip = tex;
+  const html = d.blocks.map(b => {
+    if (b.type === "abstract") return `<p class="abstract"><b>Abstract.</b> ${strip(b.text)}</p>`;
+    if (b.type === "section") return `<h3>${esc(b.title)}</h3>`;
+    if (b.type === "framing" || b.type === "transition") return `<p>${strip(b.text)}</p>`;
+    const cid = (b.claim || "").split("@")[0];
+    return `<div class="docclaim"><b>${esc(b.label || DOC_LABEL[b.type] || b.type)} ${esc(b.number || "")}</b> <a class="ref" data-id="${esc(cid)}">${esc(b.title)}</a>. ${tex(b.text)}${b.provenance ? `<div class="note">Provenance: ${tex(b.provenance)}</div>` : ""}</div>`;
+  }).join("");
+  const r = document.getElementById("docreader");
+  r.innerHTML = `<div class="eyebrow">Reading</div><h2>${esc(d.title)}</h2>${html}`;
+  r.querySelectorAll("a.ref[data-id]").forEach(a => a.onclick = () => { location.hash = a.dataset.id; });
+  typeset(r); r.scrollIntoView({ behavior: "smooth" });
+}
+
+// ============================ VIEWS ====================================
+const rendered = {};
+function showView(v) {
+  document.querySelectorAll("section.view").forEach(s => s.classList.toggle("on", s.id === v + "view"));
+  document.querySelectorAll("nav.views a").forEach(a => a.setAttribute("aria-current", a.dataset.view === v ? "page" : "false"));
+  if (v === "map") { fit(); }
+  if (!rendered[v]) { rendered[v] = true; ({ predictions: renderPredictions, refutations: renderRefutations, notebook: renderNotebook, ascent: renderAscent, documents: renderDocuments })[v]?.(); }
+}
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (byId.has(h)) { showView("map"); select(h, true); return; }
+  if (h.startsWith("doc:")) { showView("documents"); openDoc(h.slice(4)); return; }
+  showView(["predictions", "refutations", "ascent", "notebook", "documents"].includes(h) ? h : "map");
+}
+window.addEventListener("hashchange", route);
+document.getElementById("stats").textContent = DATA.summary.short;
+try { const l = localStorage.getItem("tl-lens"); if (l && LENSES[l]) document.querySelector(`[data-lens="${l}"]`).click(); } catch (e) {}
+if (window.innerWidth < 800) document.getElementById("legendbox").open = false;
+window.addEventListener("resize", () => { if (document.getElementById("mapview").classList.contains("on")) fit(); });
+select(null, false); route();
+</script>

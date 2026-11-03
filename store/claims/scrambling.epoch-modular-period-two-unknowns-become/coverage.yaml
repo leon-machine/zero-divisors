@@ -1,0 +1,19 @@
+functions:
+  check_epoch_is_the_modular_period:
+    kind: exact
+    clauses:
+    - Delta t = beta = 2 pi/kappa = 8 pi M
+    omits: kappa = 1/(4M) is computed from r_s = 2M; the unit-rapidity block A^2 = 1 is computed only on the single atom Cl(1,1) (period 2 pi is then read from (iA)^2 = -1); (IC) is assumed, not checked
+  check_density_prediction_both_directions:
+    kind: exact
+    clauses:
+    - nu = (M/2)/(8 pi M) = 1/(16 pi) in the 1-nat convention
+    - nu = 1/(16 pi ln 2) in the capacity convention
+    omits: the equivalence of the area-law condition with the density is tested at four sample nu (and the solution S_BH/V is computed exactly); that a calibration principle must return the number or refute (IC) is a logical remark, not tested
+untouched_premises:
+  scrambling.intrinsic-clock-ic-flagged-premise: flagged premise (IC), assumed by the statement; the check docstring says it is assumed, not checked
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The two numerical predictions are exact monomial computations; the premise (IC) is explicitly not checked.

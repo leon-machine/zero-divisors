@@ -1,0 +1,22 @@
+functions:
+  check_de_sitter_family_solves_route_equations:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Ric = -Lambda g and the vacuum equation at 3 rational points for Lambda in {3, 12}; the conformal Ricci formula is typed in, not derived from hb(a) = sigma a; conservation of N along each solution is not tested"
+  check_n_not_constant_on_route_solutions:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "two values of Lambda only, so 'N takes every positive value' and the classification as (I) rather than (P) or (D) under the Definition are not tested; arithmetic on N^2 = 3/Lambda"
+  check_de_sitter_lambda_constant_instance:
+    kind: partial
+    clauses: ["(ii)"]
+    omits: "an instance only (the function name and docstring now say so): the Henneaux-Teitelboim promoted equations are never used; the only assert is that the two de Sitter members have a single constant Lambda read off their metric, already (i); set equality of promoted and route solution spaces, the conjugate variable tau and the Liouville density are not tested"
+  check_rung_ratio_register:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "arithmetic with c, d and N in {1, 2}; G v^2 N^2 = (v/H)^2 is a tautology of v/M_P = c/N; 'the rung-unit premise as worded fails' and 'under the action as written both can be parameters' are not tested"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_promoted_solution_space_is_the_routes renamed check_de_sitter_lambda_constant_instance; name, comment and docstring now describe the de Sitter instance it tests, not the (ii) set equality."

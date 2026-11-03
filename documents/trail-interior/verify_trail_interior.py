@@ -1,0 +1,60 @@
+"""Verify script assembled from the claims in this document.
+Runs each claim's own check and the tagged checks of the series verify
+scripts it relies on.  Exact arithmetic throughout (GA.py)."""
+import os, sys
+HERE = os.path.dirname(os.path.abspath(__file__))
+LAB = os.path.abspath(os.path.join(HERE, '..', '..'))
+sys.path[:0] = [os.path.join(LAB, 'lib'), LAB]
+import GA
+from tp import evidence
+from tp.model import load_store
+from tp.validate import legacy_path
+STORE = os.path.join(LAB, 'store')
+LEGACY_DIR = os.path.normpath(os.path.join(STORE, '../legacy'))
+LEGACY = {
+ "verify_T05.py": [
+  "num:3.1"
+ ],
+ "verify_T06.py": [
+  "num:2.2",
+  "num:3.3",
+  "num:4.2",
+  "num:4.3",
+  "num:4.4",
+  "num:4.5",
+  "num:4.7",
+  "num:5.1",
+  "num:5.2",
+  "num:5.4",
+  "num:5.6",
+  "num:5.9",
+  "num:6.4",
+  "num:6.8"
+ ]
+}
+CHECKS = [('interior.kasner-form-interior', 'claims/interior.kasner-form-interior', 'check.py::check_synchronous_derived_metric_and_free_fall'), ('interior.kasner-form-interior', 'claims/interior.kasner-form-interior', 'check.py::check_tau_series_and_inversion'), ('interior.kasner-form-interior', 'claims/interior.kasner-form-interior', 'check.py::check_kasner_exponents_of_the_approach'), ('interior.exact-parallelism-convergence-rate', 'claims/interior.exact-parallelism-convergence-rate', 'check.py::check_frame_exactly_parallel'), ('interior.exact-parallelism-convergence-rate', 'claims/interior.exact-parallelism-convergence-rate', 'check.py::check_rates_converge_to_kasner_exponents'), ('interior.exact-parallelism-convergence-rate', 'claims/interior.exact-parallelism-convergence-rate', 'check.py::check_one_uniform_rate'), ('interior.interior-connection-exactly', 'claims/interior.interior-connection-exactly', 'check.py::check_rotation_gauge_field_from_torsion'), ('interior.interior-connection-exactly', 'claims/interior.interior-connection-exactly', 'check.py::check_frame_parallel_along_free_fall'), ('interior.interior-connection-exactly', 'claims/interior.interior-connection-exactly', 'check.py::check_sphere_coefficient_scales_as_one_over_r'), ('interior.weighted-limit-theorem', 'claims/interior.weighted-limit-theorem', 'check.py::check_connection_shape_and_rates'), ('interior.weighted-limit-theorem', 'claims/interior.weighted-limit-theorem', 'check.py::check_limiting_values_annihilate_scale_tractor'), ('interior.weighted-limit-theorem', 'claims/interior.weighted-limit-theorem', 'check.py::check_holonomy_algebra_is_levi_factor'), ('interior.weighted-limit-theorem', 'claims/interior.weighted-limit-theorem', 'check.py::check_transport_along_abelian_directions'), ('interior.schwarzschild-de-sitter-weighted-limit', 'claims/interior.schwarzschild-de-sitter-weighted-limit', 'check.py::check_sds_field_is_schwarzschild_plus_de_sitter'), ('interior.schwarzschild-de-sitter-weighted-limit', 'claims/interior.schwarzschild-de-sitter-weighted-limit', 'check.py::check_corrections_relative_order_lambda_r3'), ('interior.schwarzschild-de-sitter-weighted-limit', 'claims/interior.schwarzschild-de-sitter-weighted-limit', 'check.py::check_holonomy_inside_reductive_stabiliser'), ('interior.complex-factorisation-location-ring', 'claims/interior.complex-factorisation-location-ring', 'check.py::check_pseudoscalar_subalgebra_is_a_field'), ('interior.complex-factorisation-location-ring', 'claims/interior.complex-factorisation-location-ring', 'check.py::check_kerr_scale_times_shape'), ('interior.complex-factorisation-location-ring', 'claims/interior.complex-factorisation-location-ring', 'check.py::check_noninvertibility_locus_is_the_ring'), ('interior.complex-factorisation-location-ring', 'claims/interior.complex-factorisation-location-ring', 'check.py::check_a_zero_is_schwarzschild_from_gauge_fields'), ('interior.complex-scale-inverse-cube-killing-spinor', 'claims/interior.complex-scale-inverse-cube-killing-spinor', 'check.py::check_scale_is_minus_m_inverse_cube_of_killing_scalar'), ('interior.complex-scale-inverse-cube-killing-spinor', 'claims/interior.complex-scale-inverse-cube-killing-spinor', 'check.py::check_winding_is_three_times_the_spinor_scalar'), ('interior.filtration-cauchy-horizon-read-literature', 'claims/interior.filtration-cauchy-horizon-read-literature', 'check.py::check_boost_weights_of_bivectors'), ('interior.filtration-cauchy-horizon-read-literature', 'claims/interior.filtration-cauchy-horizon-read-literature', 'check.py::check_parabolic_and_its_nilradical'), ('interior.filtration-cauchy-horizon-read-literature', 'claims/interior.filtration-cauchy-horizon-read-literature', 'check.py::check_extreme_weight_curvature_occupies_nilpotent_slots'), ('interior.boosts-generate-exactly-levi-factor', 'claims/interior.boosts-generate-exactly-levi-factor', 'check.py::check_bracket_rule_and_boost_brackets'), ('interior.boosts-generate-exactly-levi-factor', 'claims/interior.boosts-generate-exactly-levi-factor', 'check.py::check_boosts_generate_exactly_lambda2_w'), ('interior.covariant-form-vacuum-equations', 'claims/interior.covariant-form-vacuum-equations', 'check.py::check_derivative_of_the_scale_tractor_is_minus_schouten'), ('interior.covariant-form-vacuum-equations', 'claims/interior.covariant-form-vacuum-equations', 'check.py::check_parallel_iff_vacuum'), ('interior.covariant-form-vacuum-equations', 'claims/interior.covariant-form-vacuum-equations', 'check.py::check_parallel_null_tractor_without_field_equations'), ('interior.covariant-form-vacuum-equations', 'claims/interior.covariant-form-vacuum-equations', 'check.py::check_structure_algebra_so24'), ('interior.exact-scale-decoupling', 'claims/interior.exact-scale-decoupling', 'check.py::check_shape_operator_algebra'), ('interior.exact-scale-decoupling', 'claims/interior.exact-scale-decoupling', 'check.py::check_factorisation_at_every_radius'), ('interior.imported-schwarzschild-curvature-spectrum', 'claims/interior.imported-schwarzschild-curvature-spectrum', 'check.py::check_static_gauge_field_is_torsion_free_with_static_metric'), ('interior.imported-schwarzschild-curvature-spectrum', 'claims/interior.imported-schwarzschild-curvature-spectrum', 'check.py::check_static_spectrum_on_frame_planes'), ('interior.imported-schwarzschild-curvature-spectrum', 'claims/interior.imported-schwarzschild-curvature-spectrum', 'check.py::check_painleve_gullstrand_gauge_gives_the_same_spectrum'), ('interior.imported-schwarzschild-curvature-spectrum', 'claims/interior.imported-schwarzschild-curvature-spectrum', 'check.py::check_top_eigenspace_is_sigma_r_and_its_dual'), ('interior.metric-parallelism-trace-schouten-condition', 'claims/interior.metric-parallelism-trace-schouten-condition', 'check.py::check_tractor_gauge_field_preserves_tractor_metric'), ('interior.metric-parallelism-trace-schouten-condition', 'claims/interior.metric-parallelism-trace-schouten-condition', 'check.py::check_derivative_of_q_along_a_tractor_field'), ('interior.metric-parallelism-trace-schouten-condition', 'claims/interior.metric-parallelism-trace-schouten-condition', 'check.py::check_opposite_schouten_sign_breaks_metric_preservation'), ('interior.metric-parallelism-trace-schouten-condition', 'claims/interior.metric-parallelism-trace-schouten-condition', 'check.py::check_trace_of_schouten_condition'), ('interior.non-null-stabilisers-section-they-act', 'claims/interior.non-null-stabilisers-section-they-act', 'check.py::check_stabiliser_is_so_of_the_complement'), ('interior.non-null-stabilisers-section-they-act', 'claims/interior.non-null-stabilisers-section-they-act', 'check.py::check_section_is_the_pseudosphere_with_transitive_isometries'), ('interior.non-null-stabilisers-section-they-act', 'claims/interior.non-null-stabilisers-section-they-act', 'check.py::check_polar_infinity_spacelike_or_timelike'), ('interior.scale-tractor-leaves-cone', 'claims/interior.scale-tractor-leaves-cone', 'check.py::check_einstein_scale_tractor_is_parallel'), ('interior.scale-tractor-leaves-cone', 'claims/interior.scale-tractor-leaves-cone', 'check.py::check_only_rho_lambda_over_six_and_only_einstein'), ('interior.scale-tractor-leaves-cone', 'claims/interior.scale-tractor-leaves-cone', 'check.py::check_norm_is_lambda_over_three'), ('interior.stabilisers-flat-model', 'claims/interior.stabilisers-flat-model', 'check.py::check_vector_stabiliser_is_poincare'), ('interior.stabilisers-flat-model', 'claims/interior.stabilisers-flat-model', 'check.py::check_ray_stabiliser_is_maximal_parabolic'), ('interior.stabilisers-flat-model', 'claims/interior.stabilisers-flat-model', 'check.py::check_nilradical_null_shears_and_translations'), ('singularity.type-n-only-type-n', 'claims/singularity.type-n-only-type-n', 'check.py::check_no_type_c_and_quaternionic_matrix_form'), ('singularity.type-n-only-type-n', 'claims/singularity.type-n-only-type-n', 'check.py::check_type_n_at_the_singularity'), ('singularity.type-n-only-type-n', 'claims/singularity.type-n-only-type-n', 'check.py::check_type_p_present_and_self_repairing'), ('singularity.type-n-only-type-n', 'claims/singularity.type-n-only-type-n', 'check.py::check_tower_floors_have_no_type_c')]
+
+def main():
+    global _STORE, _LDIR
+    _STORE = load_store(STORE)
+    _LDIR = _STORE.config.get('legacy_scripts_dir')
+    ok = True
+    for script, tags in LEGACY.items():
+        res = evidence.run_legacy(legacy_path(_STORE, _LDIR, script),
+                                  os.path.join(STORE, '.tp-cache'))
+        hits = [(l, r) for l, r in res if evidence.label_keys(l) & set(tags)]
+        bad = [l for l, r in hits if not r]
+        GA.check(f'{script}: {len(hits)} tagged checks', bool(hits) and not bad)
+        ok &= bool(hits) and not bad
+    for cid, folder, ref in CHECKS:
+        fname, func = ref.split('::')
+        path = os.path.join(STORE, folder)
+        src = open(os.path.join(path, fname)).read()
+        r = evidence.run_check(STORE, path, src, func)
+        GA.check(f'{cid}: {ref}', r['ok'])
+        ok &= r['ok']
+    print(('ALL PASS' if ok else 'FAILURES: ' + str(len(GA.FAILURES))))
+    return 0 if ok else 1
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -1,0 +1,16 @@
+functions:
+  check_pair_count_and_even_dimensions:
+    kind: sampled
+    clauses:
+    - (1)
+    omits: Even n = 2, 4, 6, 8 only, not every even n; the pair count is the dimension of an explicit maximal isotropic subspace, not a derivation of Lemma pair-count-dimension; the conditional hypotheses (mass begins at two constituents in dimension n != 4, the identification premise) are declared and not computed
+  check_converse_two_by_three:
+    kind: sampled
+    clauses:
+    - (2)
+    omits: dim = m^2 + k^2 - 1 is computed for 1 <= m, k <= 4 only; the classification {m,k} = {2,3} is complete in that box and the bound m^2 + k^2 = 13 that extends it to all m, k is argued in the docstring, not computed; isomorphism with the Standard Model algebra is checked through dimension, with the 3 + 8 + 1 split computed for (2,3) only
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Both computations are exact (rational linear algebra) on finite ranges of n, m, k; the all-n and all-(m,k) statements rest on the proof for the extension.

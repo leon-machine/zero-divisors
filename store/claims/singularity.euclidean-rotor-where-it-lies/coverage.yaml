@@ -1,0 +1,18 @@
+functions:
+  check_complexified_rotor_period_four_pi:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "sigma^2 = +1, (i sigma)^2 = -1, R_{2 pi i} = -1 and R_{4 pi i} = +1 are exact; unitarity and the composition law are checked at four Pythagorean half-angles, not for general theta; conjugation period 2 pi is read from R_{2 pi i} = -1 and checked in the module function"
+  check_module_form_and_conjugation_period:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "R_{i theta} = diag(e^(-i theta/2), e^(i theta/2)) at four sample half-angles and theta = 2 pi; conjugation by R_{2 pi i} fixes the four matrix units, by R_{i pi} does not (equals the parity Ad_sigma)"
+  check_euclidean_rotation_is_no_real_rotor:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "I sigma = e2 e3 and its rotor (fixes e0, e1, sigma, rotates e2 into e3) at four angles; 'no real rotor' is shown by sample (a,b) elements, three boost matrices (|trace| >= 2) and three rotation matrices failing L^T eta L = eta, not by a general argument"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact values at the special angles plus sampling for general theta; the non-existence of a real Euclidean rotor is illustrated rather than proved, as the docstring's 'rational samples' says."

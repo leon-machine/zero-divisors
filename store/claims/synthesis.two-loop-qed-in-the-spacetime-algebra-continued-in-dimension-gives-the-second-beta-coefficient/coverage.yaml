@@ -1,0 +1,44 @@
+functions:
+  check_contraction_rule_in_integer_dimensions:
+    kind: sampled
+    clauses:
+    - '(1) the d-dimensional contraction rule equals sum_a gamma_a X gamma^a in Cl(D,0), D = 4..8, and Cl(1,D-1), D = 4..6, for words of length 0 to 4; control d = 4 at D = 6 fails'
+    omits: 'one sample set of rational vectors per dimension; the rule is proved by induction in the text'
+  check_diagram_traces_against_clifford_scalar_parts:
+    kind: sampled
+    clauses:
+    - '(1) the traces of the one-loop word and of the three two-loop words (Feynman and gauge parts, delta and q q projections) equal 4 <.>_0 of explicit Clifford products with indices summed, D = 4, 5, 6'
+    omits: 'one sample of rational momenta; degree two in d, so three dimensions fix the d dependence for that sample'
+  check_reduction_benchmarks:
+    kind: complete
+    clauses:
+    - '(2) reduction benchmarks: I(1,1,1,1,0) = M1, I(1,1,1,1,-1) = -M1/2, I(0,1,1,1,1) = M2, the five-line integral 6 zeta_3 + O(eps)'
+    omits: 'the dimensional-regularisation integrals and the bubble formula are imported (cited in the proof)'
+  check_one_loop_beta0_and_finite_part:
+    kind: complete
+    clauses:
+    - '(3) one loop: pole -4/3, beta0 = 4/3, MS-bar constant -20/9'
+    omits: 'the Euler-constant cancellation of the MS-bar normalisation is checked; zeta_2 enters only beyond the order used'
+  check_two_loop_simple_pole_beta1_and_finite_part:
+    kind: complete
+    clauses:
+    - '(4) the three-diagram sum has no 1/eps^3 or 1/eps^2 pole, simple pole -2 a^2, beta1 = 4, MS-bar constant 16 zeta_3 - 55/3, and the coefficients 2/(3 pi), 1/(2 pi^2) in alpha'
+    omits: 'the master ratio uses the imported series of ln Gamma; the Euler constant and zeta_2 are checked to cancel'
+  check_gauge_independence_and_transversality:
+    kind: complete
+    clauses:
+    - '(4) the coefficient of 1 - xi vanishes identically in d; q_mu q_nu Pi^{mu nu} vanishes identically in d in the Feynman and gauge parts; control: the vertex diagram alone depends on xi'
+    omits: 'none at the level of the reduced integrals'
+  check_subdivergences_cancel_between_vertex_and_self_energy:
+    kind: complete
+    clauses:
+    - '(4) Feynman gauge: self-energy insertions +4/3 a^2/eps^2, vertex correction -4/3 a^2/eps^2, no higher poles, sum zero'
+    omits: 'the identification with the one-loop counterterms Z1 - 1 and Z2 - 1 is argued in the proof'
+  check_ward_identity_at_two_loops_integrand_by_integrand:
+    kind: sampled
+    clauses:
+    - '(5) Cl(1,3), massive lines, unit outside the product: insertion sums on the rainbow, crossed and polarisation-insertion open lines equal minus the shifted difference; the closed loop telescopes to a shift difference; dS = -S h S; two controls fail'
+    omits: 'one rational momentum sample and fixed vertex blades; the passage to the regulated integrals (shift invariance) is argued in the proof'
+untouched_premises:
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "the premise that licenses the covariant photon on internal lines; the check computes with its propagator and needs no inner product"
+  synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient: "Ward's identity and the Jost-Luttinger coefficient, cited for comparison; the check computes beta1 and the integrand Ward identity directly"

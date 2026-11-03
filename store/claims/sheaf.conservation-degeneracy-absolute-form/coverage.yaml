@@ -1,0 +1,18 @@
+functions:
+  check_exterior_totals_differ:
+    kind: sampled
+    clauses: ["h standard outside U with sig(K) the same on both exteriors", "the exterior signatures differ"]
+    omits: "150 diagonal models with n <= 5 and rank K <= 3; the general bundle E and non-diagonal exterior forms are not covered"
+  check_every_joining_path_degenerates:
+    kind: sampled
+    clauses: ["h is not nondegenerate everywhere"]
+    omits: "three (p,q,K) cases and three polynomial families h(t) with bisection to width 1/64; arbitrary continuous families rest on the intermediate value theorem, not computed"
+  check_switching_sig_k_avoids_degeneracy:
+    kind: exact
+    clauses: ["sig(K) the same on both exterior regions (hypothesis is needed)"]
+    omits: "one example (p,q) = (2,1) with K switching (1,1) to (2,0); shows the hypothesis cannot be dropped but the statement does not itself claim necessity"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The signature-counting and intermediate-value argument is run on diagonal exterior models and polynomial joining families; arbitrary bundles E and smooth h are not modelled.

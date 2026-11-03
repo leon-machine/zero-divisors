@@ -1,0 +1,22 @@
+functions:
+  check_induced_metric_on_the_slice:
+    kind: sampled
+    clauses: ["the metric induced by hb^{-1} in the PG gauge: g_tt = f, g_tr = -beta, g_rr = -1", "inside the horizon the Killing direction is spacelike"]
+    omits: "six rational beta (three outside, three inside the horizon) and three masses; the three-volume of the slice itself is not computed here"
+  check_slice_volume_identities:
+    kind: exact
+    clauses: ["4 pi r_c^2 sqrt|f(r_c)| = 4 pi sqrt(2M) r_c^{3/2} sqrt(1 - r_c/2M) = 8 pi M sqrt(1 - r_c/2M) along r_c^3 = 2M", "r_c/2M = (2M)^{-2/3}, correction O(M^{-2/3})"]
+    omits: "squares are compared (square roots of nonnegative quantities) and pi is formal; the locus is parametrised symbolically by c = r_c so the identities are exact in c; the O(M^{-2/3}) is the exact identity (1 - r_c/2M) - 1 = -c^{-2}, the expansion of the square root is not computed; the r^4|f| identity is also checked at three masses, with |f| vanishing at the horizon r = 2M"
+  check_mode_rate_keeps_hawking_time:
+    kind: sampled
+    clauses: ["dN/dt = 8 pi nu M sqrt(1 - r_c/2M) = (nu/T_H) sqrt(1 - r_c/2M)", "kappa = 1/(4M), T_H = 1/(8 pi M)"]
+    omits: "identity exact in c along the (C1) locus but nu takes three sample values and dN/dt = nu x volume is the encoding of (C2), not derived; kappa checked at three masses; 'tends to 1 as M to infinity' and 'keeps time with the horizon's own clock' are not computed"
+  check_fixed_cutoff_radius_fails:
+    kind: sampled
+    clauses: ["a mass-independent cutoff radius gives M^{1/2} and can never reach the area law"]
+    omits: "a single mass-independent radius r_0 = 9/4; the squared volume is degree 1 in M for that r_0, not shown for every r_0"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: check_slice_volume_identities now pins the horizon (|f| = 0 at r = 2M, fixing the 2 in 2M that the homogeneous identity could not see) and evaluates the squared volume at sample r_c as the exact (2M)^2 (1 - r_c/2M); the loose bounds 0 < v < (2M)^2, implied by the exact value, were dropped; sample radii moved to module level"

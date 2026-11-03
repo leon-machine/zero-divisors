@@ -1,0 +1,18 @@
+functions:
+  check_descent_is_parity_average:
+    kind: exact
+    clauses: ["E(x) = (1/2)(x + alpha(x)) = (1/2)(x + sigma x sigma) for every x"]
+    omits: "in the one-mode algebra Mat_2 (defining representation); linear identities verified on the four matrix units, hence on every x"
+  check_range_kernel_and_uniqueness:
+    kind: exact
+    clauses: ["E is the unique conditional expectation onto the fixed-point algebra", "range of E is A_ev, kernel exactly A_od"]
+    omits: "in Mat_2; uniqueness is the 16-unknown homogeneous system with only the zero solution (rank 16), with bimodule constraints over a basis of the fixed algebra"
+  check_preserves_alpha_invariant_states:
+    kind: sampled
+    clauses: ["E preserves every state omega with omega o alpha = omega"]
+    omits: "two diagonal density matrices (9/25, 16/25) and (1/3, 2/3) on the four matrix units, plus a coherent control; not the whole one-parameter family"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Statement is about the mode algebra Mat_2; its algebraic content is checked exactly and state preservation on two diagonal samples."

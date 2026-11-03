@@ -1,0 +1,18 @@
+functions:
+  check_fields_by_corner_at_both_levels:
+    kind: complete
+    clauses: ["the table: F(T) = F(S) = D(r + 1) for all eight towers", "dim T and dim S in the table"]
+    omits: ""
+  check_fields_by_direct_commutant:
+    kind: partial
+    clauses: ["the table: the field at tower level and at conformal level"]
+    omits: "an independent route by solving the commutant of the spin action: all nine tower-level cases, but the conformal level only for the seven towers of dimension at most four; the conformal ideals of r = 3, 5 are not solved this way"
+  check_field_is_not_a_function_of_omega_squared:
+    kind: exact
+    clauses: ["Q(omega) = -1 at r = 7 (field R) and at r = 3 (field H)"]
+    omits: ""
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the table is verified for every tower and both levels by the corner route; the commutant route is a partial second check, as its docstring says"

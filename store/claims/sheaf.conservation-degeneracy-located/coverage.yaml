@@ -1,0 +1,22 @@
+functions:
+  check_degeneracy_locus_is_the_zero_of_F:
+    kind: sampled
+    clauses: ["h degenerates exactly on the zero set of F = 1 + 2 mu nu beta^2 s", "simple zero, corank one"]
+    omits: "exact rational function in tau, but for four (p,q) and four (mu,nu,beta) only; collar model with G = diag(tau, G1) on one transversal"
+  check_signatures_mu_nu_positive:
+    kind: sampled
+    clauses: ["signature (p+1,q+1) between Sigma and the shadow wall", "(p,q+2) across the simple zero", "shadow wall on the far side"]
+    omits: "a handful of tau values per case, four signatures, couplings with mu nu > 0 among the four samples"
+  check_signatures_mu_nu_negative_and_schwarzschild:
+    kind: sampled
+    clauses: ["mu nu < 0: h|Sigma has signature (p,q+2)", "shadow wall on the physical side", "Schwarzschild: zero of F at r = 2 mu nu beta^2 < 0, outside the manifold"]
+    omits: "sample tau and couplings only; the Schwarzschild assertion substitutes the formula's own zero into F, so it checks sign and consistency, not an independent geometry"
+  check_no_two_sided_constant_signature:
+    kind: sampled
+    clauses: ["no choice of coupling sign yields a two-sided completion of constant signature"]
+    omits: "exteriors sampled at tau = +-1000 only, assuming |tau'| < 1000 for the chosen couplings"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Determinant factorisation, the signature pattern on both sides of the shadow wall for both coupling signs, and the Schwarzschild r<0 location are verified on four signatures and four coupling triples in the transversal collar model.

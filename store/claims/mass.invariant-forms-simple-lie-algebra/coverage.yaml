@@ -1,0 +1,14 @@
+functions:
+  check_simple_algebras_have_one_invariant_form:
+    kind: sampled
+    clauses: ["on a finite-dimensional simple Lie algebra over C, any two nonzero invariant symmetric bilinear forms are proportional"]
+    omits: "four algebras only (sl(2), sl(3), so(5), so(6) = sl(4)); the space of invariant symmetric forms is computed as an exact kernel and is one-dimensional with the Killing form nondegenerate; for so(5) and so(6) invariance is imposed under a generating set whose generation is checked; no other simple algebras (higher rank or exceptional)"
+  check_non_simple_controls_have_two_forms:
+    kind: sampled
+    clauses: ["whole"]
+    omits: "negative control only: gl(2) and so(4) carry two-dimensional spaces of invariant forms, which shows simplicity is needed; it establishes no part of the statement"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "A textbook theorem checked on four small simple algebras plus controls; the general statement is not exhausted."

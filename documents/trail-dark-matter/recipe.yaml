@@ -1,0 +1,27 @@
+doc: trail-dark-matter
+title: Dark matter and the dark towers
+author: Leon Butler
+level: lay
+spine:
+- dark-matter.towers-are-residues-single-clock-filter
+- dark-matter.mirror-tower-copy-one
+- dark-matter.superselected-hence-dark-exactly-stable
+- pred.dark-matter-direct-detection-null
+- dark-matter.population-count-one-share-half-percent
+- dark-matter.unit-ball-rule
+- dark-matter.status-rule
+- dark-tower-matter.gauge-algebras
+- pred.no-dark-radiation
+- dark-tower-matter.towers-built
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

@@ -1,0 +1,59 @@
+doc: t09-regenerated
+title: 'The Twistor Correspondence: Ascended Spinors, Incidence, and the Palatial Bridge (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- correspondence.imported-forced-completion-fibre-quadric
+- correspondence.imported-ladder-pairs-fock-modules-over
+- correspondence.fock-model-complexified-ascended-algebra
+- correspondence.chevalley-pairing
+- correspondence.spinor-identification
+- correspondence.skew-lines-splittings-hyperbolic-planes-one
+- correspondence.incidence-relation-chart
+- correspondence.imported-stabilisers-flat-model
+- correspondence.chiral-planes-summand-spaces
+- correspondence.reality-conjugation-twistor-form-factor
+- correspondence.imported-vacuum-equations-scale-tractor
+- correspondence.one-statement-three-languages
+- correspondence.imported-tractor-connection-local-twistor-transport
+- correspondence.imported-tractor-connection-local-twistor-transport-external
+- correspondence.local-twistor-transport-ascended-spinor-connection
+- correspondence.statistics-no-go
+- correspondence.spin-representation
+- correspondence.twistors-are-states-three-ladder-pairs
+- correspondence.symmetrised-quadratics-palatial-algebra
+- correspondence.clifford-side-ordering-shift
+- correspondence.shared-core-ordering-dictionary
+- correspondence.imported-nonlinear-graviton
+- correspondence.imported-weyl-commutes-duality
+- correspondence.imported-weyls-theorem
+- correspondence.lorentzian-duality-complex-structure
+- correspondence.no-real-lorentzian-vacuum-half-flat
+- correspondence.ordering-filtration
+- correspondence.imported-complete-reducibility
+- correspondence.chirality-split-ordering-insensitivity-asd-sector
+- correspondence.googly-localisation-quartic-order
+show: spine-only
+paper: T09
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T09_twistor_correspondence.tex
+  note: Recreate T09 from the store
+cite: []
+prose: paper
+msc: Primary 15A66, 53C28; Secondary 32L25, 81R25, 83C60.
+keywords: twistor theory; Klein quadric; Clifford algebras; pure spinors; conformal geometry; local twistors; incidence relation; palatial twistor theory; second quantisation.

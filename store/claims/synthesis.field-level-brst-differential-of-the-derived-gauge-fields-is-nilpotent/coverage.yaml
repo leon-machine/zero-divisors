@@ -1,0 +1,28 @@
+functions:
+  check_gauge_algebra_as_bivectors:
+    kind: complete
+    clauses:
+    - "(i) twelve independent bivectors of Cl(9,0), 58 nonzero structure constants, two ideals with no mixed brackets, centre spanned by J, derived algebra of dimension 11, kappa of signature (12, 0, 0) and ad-invariant, adjoint commutant of the 8-block one-dimensional"
+  check_brst_differential_is_nilpotent:
+    kind: sampled
+    clauses:
+    - "(ii) s^2 = 0 on the 300 generators A^a_mu, c^a with at most one derivative, as polynomials in g; s cb = B"
+    omits: "higher derivatives follow from [s, d_mu] = 0 (proof); other Lie algebras are the general argument in the proof"
+  check_nilpotency_needs_jacobi_the_half_and_the_covariant_term:
+    kind: complete
+    clauses:
+    - "(iii) with the factor 2 for 1/2, s^2 c = 0 and s^2 A = 3 D(s c) exactly; without the covariant term s^2 A = d(s c), nonzero on 44 generators; with one antisymmetric pair of su(3) structure constants shifted, 30 underived generators fail"
+  check_field_strength_is_covariant:
+    kind: complete
+    clauses:
+    - "(iv) s F^a = g f_bc^a F^b c^c for all twelve bivector components; kappa ad-invariant and a perturbed kappa not"
+  check_yang_mills_density_is_invariant_on_the_weak_block:
+    kind: partial
+    clauses:
+    - "(iv) s <kappa F F>_0 = s <kappa F F>_4 = 0 on the su(2) + u(1) block; a perturbed kappa breaks the scalar density"
+    omits: "the full algebra follows from the covariance and ad-invariance checked in check_field_strength_is_covariant"
+  check_gauge_fixing_term_is_exact_with_the_faddeev_popov_operator:
+    kind: exact
+    clauses:
+    - "(v) s Psi equals kappa(B, nabla.A) + (xi/2) kappa(B, B) - kappa(cb, nabla.(D c)) term by term and s(s Psi) = 0, for the full algebra with xi formal"
+untouched_premises: {}

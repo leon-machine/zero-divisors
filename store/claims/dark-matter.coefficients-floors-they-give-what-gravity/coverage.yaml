@@ -1,0 +1,22 @@
+functions:
+  check_nine_vector_floor:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "g_d = 18 and the nine-vector content are inputs; whether those are the tower's light species is the coupling question and is not tested"
+  check_mirror_floor_and_eta_prime:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "species content (4 scalars, 45 Weyl fermions, 12 vectors) taken from the mirror premise; the charge reading of the cited stored-asymmetry proposition is not tested; the crossover 'about 4' is bracketed between c = 4 and 4.1"
+  check_yield_shortfall_and_rescue:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "the final sentence that gravity heats the dark towers and does not populate them with charge is interpretive"
+  check_neff_contributions:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "that the nine-vector coefficient is half the two-polarisation Delta N_eff bracketed in the radiation-audit proposition is not compared"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each numerical claim is bracketed by exact rational interval arithmetic"

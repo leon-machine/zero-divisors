@@ -1,0 +1,24 @@
+functions:
+  check_witt_flags_of_three_pairs:
+    kind: complete
+    clauses: ["\"a choice of half of each pair\" (the Witt flag on the three-pair structure)"]
+    omits: "only the finite algebra of the 8 half-choices on Cl(3,3); none of the premises, the stance or the superselection"
+  check_single_orientation_bit:
+    kind: complete
+    clauses: ["\"whose single orientation bit\" (a Z_2 datum)"]
+    omits: "the identification of the bit with the arrow of time and the particle-antiparticle orientation, and the initial-data argument, are not computable here"
+  check_conjugate_reverses_bit:
+    kind: exact
+    clauses: ["\"a Z_2 datum, an orientation, and not a choice of frame vector\""]
+    omits: "models CPT conjugation by the real isometry reflecting e_(2k+1); the antilinearity and the CPT-covariance argument are not tested"
+untouched_premises:
+  dark-matter.asymmetry-arrow-counted-fifteenth-refutation: "declared stance (inherited asymmetry), no computable content"
+  dark-matter.superselected-hence-dark-exactly-stable: "tower-charge superselection is dynamical, not part of the finite Cl(3,3) core"
+  standard-model.hyp-s-slot-statistics: "hypothesis on fermionic slot statistics, no computable content"
+  dark-matter.premise-cpt-covariance: "hypothesis about the laws, no computable content"
+  dark-matter.premise-flag-as-datum: "reading of the flag as a datum of each solution, no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks test exactly the finite Cl(3,3) core they claim (8 flags, one bit, conjugation reverses it); premises and stance are declared uncomputable"

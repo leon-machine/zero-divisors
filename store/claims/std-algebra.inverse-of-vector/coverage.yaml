@@ -1,0 +1,14 @@
+functions:
+  check_invertible_iff_nonnull:
+    kind: sampled
+    clauses:
+    - '"v is invertible if and only if Q(v) != 0"'
+    - '"v^(-1) = v / Q(v)"'
+    - '"A nonzero null vector satisfies v^2 = 0"'
+    omits: seven vectors truncated to each signature with n <= 4, degenerate included; invertibility decided
+      by the rank of left multiplication
+  check_versor_norm:
+    kind: sampled
+    clauses:
+    - '"g g~ = g~ g = Q(u_1) ... Q(u_k)"'
+    omits: one three-vector versor in three signatures of dimension 4

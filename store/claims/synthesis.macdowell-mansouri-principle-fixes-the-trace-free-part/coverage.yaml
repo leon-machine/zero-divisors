@@ -1,0 +1,29 @@
+functions:
+  check_frame_equation_is_twice_the_dual_of_einstein_plus_lambda:
+    kind: sampled
+    clauses:
+    - (i) E(a) = 2(G(a) + Lambda a) I
+    omits: checked on sample curvatures; the general case is check_frame_identity_on_the_spanning_set plus linearity
+  check_frame_identity_on_the_spanning_set:
+    kind: complete
+    clauses:
+    - (i) E(a) = 2(G(a) + Lambda a) I on every Kulkarni-Nomizu product of the spanning set
+    omits: none at the two values of Lambda checked; linearity extends it
+  check_kernel_is_the_weyl_part_and_rank_is_ten:
+    kind: exact
+    clauses:
+    - (ii) the frame equation has rank ten on the curvature and its kernel is the Weyl part
+    omits: 'none: finite linear algebra'
+  check_dilation_restriction_is_the_yamabe_trace:
+    kind: sampled
+    clauses:
+    - (iii) restricted to pure dilations the functional gives the Yamabe trace
+    omits: checked on sample conformal factors
+  check_on_shell_schouten_is_the_stored_tractor_derivative:
+    kind: sampled
+    clauses:
+    - (iv) the on-shell Schouten tensor is the stored scale-tractor derivative
+    omits: checked on sample sources; the matter coupling is imported
+untouched_premises:
+  synthesis.imported-einstein-cartan-matter-coupling: imported matter coupling used in clause (iv) as stated; the
+    checks verify the frame identity and the vacuum statements

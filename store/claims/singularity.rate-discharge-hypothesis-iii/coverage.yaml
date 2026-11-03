@@ -1,0 +1,22 @@
+functions:
+  check_gluing_fixes_fermi_dirac_gibbs_marginal:
+    kind: sampled
+    clauses: ["at every mode the marginal is the Gibbs state of K_k at beta", "occupancy omega(v*v) = (e^{beta omega} + 1)^{-1} in (0,1)"]
+    omits: "the identity n = x/(1+x) is exact in x, but the gluing condition of (R) is encoded as e^{p omega} n = 1 - n rather than derived, and the single-mode KMS kernel and the boundary-value failures are checked at five sample x"
+  check_faithful_marginal_cyclic_separating:
+    kind: sampled
+    clauses: ["every marginal is faithful, hence cyclic and separating for its mode factor"]
+    omits: "one weight pair (4/5, 3/5) for the faithful case plus the unfaithful control n = 0; faithfulness for every n in (0,1) is not enumerated"
+  check_hawking_temperature_from_the_connection:
+    kind: sampled
+    clauses: ["beta = 2 pi/kappa = 8 pi M", "T = kappa/(2 pi) = 1/(8 pi M)"]
+    omits: "four masses; Omega(e_t) = (M/r^2) sigma_r is hard-coded from the stored field, not recomputed; pi is cancelled (beta kappa/pi = 2) and 'T = T_H' is a naming"
+  check_one_beta_at_every_mode:
+    kind: sampled
+    clauses: ["the temperature is the same at every mode without any condition on the joint state"]
+    omits: "x_k = y^{omega_k} is imposed (same beta is the input), so this checks consistency of the glued marginals at three weights and the existence of one correlated, non-product joint state with those marginals; that (P) forces the common beta is the called premise p-univalence, not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numerical content (8 pi M, Fermi-Dirac occupancy, faithfulness) tested at samples; the implication from (P) and (R) is carried by the premises"

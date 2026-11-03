@@ -1,0 +1,28 @@
+functions:
+  check_towers_are_the_eight_residues:
+    kind: sampled
+    clauses: ["the residue is invariant along every tower; the eight parallel towers are the eight residues"]
+    omits: "rung step checked for p + q <= 10 and the union-find on the grid 0 <= p, q <= 16 only; the period steps are taken from the imported mod-8 clock"
+  check_reversal_convention_and_types:
+    kind: sampled
+    clauses: ["labelling convention: reversal swaps 6 and 2, Cl(1,3) = Mat(2,H) and Cl(3,1) = Mat(4,R) not isomorphic"]
+    omits: "the corner division algebras H (module dimension 8) and R (4) are computed exactly; the reversal r -> -r with causality kept is checked only for p + q <= 10"
+  check_census_lowest_causal:
+    kind: complete
+    clauses: ["(i)"]
+    omits: ""
+  check_sort_under_p3:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "the P3 rule (nearest dimension to four, odd residues three if a causal member exists else five) is encoded in the checker as its reading of the premise; the two-time instability and the mirror's real spinors are not computed here"
+  check_window_sensitivity:
+    kind: complete
+    clauses: ["(iii)"]
+    omits: ""
+untouched_premises:
+  dark-matter.p2-indifference: "reading of the indexical labelling convention, not a computation (the docstring says no premise() call for it)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the census, the P3 sort and the window sensitivity are exhaustive over all signatures with p + q <= 10 and so cover the finite claims of (i) to (iii); the closing remark on which towers the descent populated has no computable content"

@@ -1,0 +1,49 @@
+doc: t11-regenerated
+title: 'The Origin of Mass: The Weight Dictionary and the Exact Join (regenerated
+  from the store)'
+author: Leon Butler
+level: formal
+spine:
+- mass.imported-frozen-point-tractor-connection
+- mass.imported-thomas-operator
+- mass.imported-flat-model-twistor-chart-infinity
+- mass.imported-flat-model-twistor-chart-infinity-external
+- mass.imported-palatial-quadratics-homogeneity-charge
+- mass.imported-unitary-representations-de-sitter-group
+- mass.invariant-forms-simple-lie-algebra
+- mass.mass-weight-dictionary
+- mass.weight-polynomial-two-series
+- mass.mass-symplectic-area-two-twistor-formula
+- mass.de-sitter-scale-frozen-point
+- mass.chart-form-spin-isomorphism
+- obj.mass.grip-mass-composite
+- mass.grip-real
+- mass.exact-join
+- mass.casimir-form-join
+- mass.five-broken-generators
+- mass.weight-composite
+show: spine-only
+paper: T11
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T11_origin_of_mass.tex
+  note: Recreate T11 from the store
+cite:
+- dark-energy.frozen-point-makes-stelle-west-vector
+prose: paper
+msc: Primary 53C80, 81R25; Secondary 53A30, 81T20, 83C60.
+keywords: conformal weight; scale tractor; Thomas operator; two-twistor particle;
+  symplectic area; infinity twistor; de Sitter representations; cosmological constant.

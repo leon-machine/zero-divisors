@@ -1,0 +1,39 @@
+{
+ "doc": "trail-mass",
+ "version": 10,
+ "claims": [
+  "correspondence.incidence-relation-chart@4",
+  "families.absolute-scale-clean-negative-result@2",
+  "mass.chart-form-spin-isomorphism@5",
+  "mass.de-sitter-scale-frozen-point@6",
+  "mass.exact-join@7",
+  "mass.five-broken-generators@6",
+  "mass.imported-flat-model-twistor-chart-infinity@7",
+  "mass.imported-frozen-point-tractor-connection@6",
+  "mass.imported-thomas-operator@2",
+  "mass.imported-unitary-representations-de-sitter-group@3",
+  "mass.mass-symplectic-area-two-twistor-formula@3",
+  "mass.mass-weight-dictionary@4",
+  "mass.weight-composite@6",
+  "mass.weight-polynomial-two-series@5",
+  "pred.z6-charge-lattice@1",
+  "refuted.the-mass-dictionary-coupling-to-the-frozen-point@1",
+  "standard-model.global-form-quotient-determined@3",
+  "standard-model.imported-pair-systems-two-chirality-halves@5",
+  "standard-model.mass-bracket-charged-singlet@4"
+ ],
+ "recipe_hash": "53571476626d",
+ "generated": "2026-11-02T16:30:33+00:00",
+ "spine": [
+  "mass.mass-symplectic-area-two-twistor-formula",
+  "mass.de-sitter-scale-frozen-point",
+  "mass.five-broken-generators",
+  "mass.exact-join",
+  "mass.mass-weight-dictionary",
+  "mass.weight-polynomial-two-series",
+  "mass.weight-composite",
+  "standard-model.mass-bracket-charged-singlet",
+  "refuted.the-mass-dictionary-coupling-to-the-frozen-point",
+  "families.absolute-scale-clean-negative-result"
+ ]
+}

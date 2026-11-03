@@ -1,0 +1,14 @@
+functions:
+  check_wedge_and_contraction_give_the_whole_matrix_algebra:
+    kind: complete
+    clauses:
+    - '"this extends to an algebra isomorphism Cl(V, Q) = End(Lambda W)"'
+    omits: 'k = 1, 2, 3: the generator images satisfy the relations and their 4^k products are independent,
+      which with dimension counting is the isomorphism'
+  check_fock_space_is_the_left_ideal_of_the_vacuum:
+    kind: complete
+    clauses:
+    - '"f is an idempotent with v_i f = 0"'
+    - '"Cl(V, Q) f has dimension 2^k with basis w_I f"'
+    - '"w_I f -> w_i1 ^ ... ^ w_im is an isomorphism of modules"'
+    omits: k = 1, 2, 3; primitivity of f follows from the rank of the left ideal and is not tested separately

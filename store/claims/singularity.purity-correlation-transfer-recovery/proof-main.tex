@@ -1,0 +1,14 @@
+(1) Unitarity and relabelling. (2) Write the four-qubit state $\sum_{b_1 b_2} c^{(1)}_{b_1} c^{(2)}_{b_2} (-1)^{b_1 b_2} |b_1 b_1 b_2 b_2\rangle$ with $c^{(k)}_0 = c_k$, $c^{(k)}_1 = s_k$. Tracing out $(R_2, L_2)$: the coherence of $(R_1, L_1)$ between $|00\rangle$ and $|11\rangle$ picks up $\sum_{b_2} |c^{(2)}_{b_2}|^2 (-1)^{b_2} = c_2^2 - s_2^2 = \gamma$; the populations are untouched. The stated purity is $\tr \rho^2$ for the two-by-two supported block $\begin{psmallmatrix} c_1^2 & c_1 s_1 \gamma \\ c_1 s_1 \gamma & s_1^2 \end{psmallmatrix}$. (3) The computations are short enough to print. Write the scrambled state as $|\Psi\rangle = \sum_{b_1, b_2} c^{(1)}_{b_1} c^{(2)}_{b_2} (-1)^{b_1 b_2} |b_1 b_1 b_2 b_2\rangle$ in the order $(R_1, L_1, R_2, L_2)$. The operator $X_{R_1}X_{L_1}$ flips both bits of the first pair, so
+\[
+\langle X_{R_1}X_{L_1}\rangle
+= \sum_{b_1, b_2} c^{(1)}_{b_1} c^{(1)}_{\bar b_1}\, \bigl(c^{(2)}_{b_2}\bigr)^2\, (-1)^{b_1 b_2}(-1)^{\bar b_1 b_2}
+= 2 c_1 s_1 \sum_{b_2} \bigl(c^{(2)}_{b_2}\bigr)^2 (-1)^{b_2}
+= 2 c_1 s_1 \bigl(c_2^2 - s_2^2\bigr) = 2 c_1 s_1 \gamma ,
+\]
+using $(-1)^{b_1 b_2}(-1)^{\bar b_1 b_2} = (-1)^{b_2}$ since $b_1 + \bar b_1 = 1$. Dressing with $Z_{L_2}$ inserts one more $(-1)^{b_2}$, which cancels the previous one:
+\[
+\langle X_{R_1}X_{L_1} Z_{L_2}\rangle
+= 2 c_1 s_1 \sum_{b_2} \bigl(c^{(2)}_{b_2}\bigr)^2 (-1)^{b_2}(-1)^{b_2}
+= 2 c_1 s_1 .
+\]
+For the unscrambled state the phases are absent and the same two sums give $2 c_1 s_1$ and $2 c_1 s_1 \gamma$ respectively: the pair of correlators $(\langle XX\rangle, \langle XXZ\rangle)$ takes the value $(2c_1s_1,\, 2c_1s_1\gamma)$ without the gate and $(2c_1s_1\gamma,\, 2c_1s_1)$ with it, so the gate pattern is read off from three-qubit correlations, while Lemma \claimref{singularity.parity-protection} fixes every single-qubit marginal at the identical thermal matrix in both histories. With the script's numbers ($c_1, s_1 = \tfrac45, \tfrac35$; $c_2, s_2 = \tfrac45, \tfrac35$; $\gamma = \tfrac{7}{25}$) the two signatures are $(\tfrac{24}{25}, \tfrac{168}{625})$ and $(\tfrac{168}{625}, \tfrac{24}{25})$, confirmed exactly.

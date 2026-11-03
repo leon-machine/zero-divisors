@@ -1,0 +1,9 @@
+functions:
+  check_two_copies_of_the_complex_numbers:
+    kind: complete
+    clauses:
+    - '"Cl(0,1) is isomorphic to C"'
+    - '"Cl+(2,0) is isomorphic to C"'
+    - '"e_1 (a + b e_1 e_2) rotates e_1"'
+    omits: multiplicativity on a 5 x 5 grid of elements; the map is linear and both algebras are two-dimensional,
+      so the grid's basis pairs already decide it

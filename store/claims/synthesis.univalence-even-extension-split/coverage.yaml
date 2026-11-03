@@ -1,0 +1,26 @@
+functions:
+  check_even_part_is_unique_even_extension:
+    kind: sampled
+    clauses: ["(i) omega o E is an even state equal to omega on the even part, and the only such state"]
+    omits: "one generic positive 4 x 4 density on two modes (N = 2): its even part is a state, agrees with it on every even matrix unit and vanishes on odd ones, while the original has a nonzero odd expectation; uniqueness is read off from this unit-by-unit classification and not asserted separately; general N, the one-to-one correspondence with states of the observables and the restatement of (P) are not computed"
+  check_ladder_kms_admits_coherence:
+    kind: sampled
+    clauses: ["(ii) the state [[1-n, c],[c, n]] satisfies the KMS relation for the ladder pairs, has Gibbs descended marginal, and omega(v) = c != 0"]
+    omits: "five weights r (including zero weight r = 1) with up to three values of c each satisfying c^2 <= n(1-n); the failure of full-algebra KMS for the same states is also checked"
+  check_full_kms_forces_single_mode_evenness:
+    kind: sampled
+    clauses: ["(iii) full-factor KMS on one mode forces the Gibbs state, so omega(v) = 0, at every weight, and 1/2 at zero weight"]
+    omits: "exact linear system (rank 4 with the trace condition) at five values of r, so 'at every weight' is sampled; the descended marginal being the Gibbs state of K_k is read as the solution of this system"
+  check_cross_mode_odd_correlation_with_even_gibbs_marginals:
+    kind: sampled
+    clauses: ["(iv) on two modes rho_1 (x) rho_2 + c (v_1 + v_1^*)(1 - 2 v_2^* v_2) is a state with Gibbs single-mode marginals and odd expectation 4c"]
+    omits: "three triples (r_1, r_2, c) with small c; CAR checked in the Jordan-Wigner matrices; N >= 3 and 'single-mode evenness at every mode does not imply (P)' for general N are not tested, nor the closing split of (P) into single-mode and cross-mode parts"
+  check_graded_product_has_one_odd_factor_at_most:
+    kind: sampled
+    clauses: ["(v) a product state over disjoint mode sets has at most one non-even restriction"]
+    omits: "two modes and two coherent Gibbs-type factors: one coherent plus one even factor is a product over all 16 cross-mode matrix-unit pairs, two coherent factors violate the product property on one pair (x, y); the general argument (odd elements of disjoint modes anticommute) is the docstring's, with anticommutation checked once"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "finite-dimensional exact checks at N = 1 and 2 for statements made for general N"

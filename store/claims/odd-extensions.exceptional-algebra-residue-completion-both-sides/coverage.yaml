@@ -1,0 +1,22 @@
+functions:
+  check_rescaled_family_and_exceptional_algebras:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Six Lambda values and four gauges (a): the rescaled Gram is block diagonal diag(1,-1,-1,-1,-+1/3) and the signatures are (2,3) and (1,4); the sqrt 3 factor is compared at the level of squares. Not a symbolic identity in Lambda and a."
+  check_residue_and_stelle_west_norm:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Same Lambda and gauge samples; the residue is the dying entry of the inverse Gram, Lambda (G^-1)_ww = -3, and the equality of -3 w_0 (x) w_0 with -3 I_0 (x) I_0 iff a(0)^2 = 1 is checked for five values of a. The sheaf paper's identification N*Sigma = L^2 (d Lambda = -3 w_0 (x) w_0) and the limit Lambda -> 0 are not computed."
+  check_completion_on_both_sides:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Signature (2,4) of the completed family at six Lambda and four gauges, the Lambda = 0 rank 5 plus phi, and the general R^{p,q} + H model for four (p,q) and five values of t; the statement is for any (p,q), so this is a finite sample of it."
+  check_complement_switches_sign:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "K = Lambda/3 and the totals (2,3)+(0,1) = (1,4)+(1,0) = (2,4) at six Lambda; constant K giving a sign change of the determinant is checked for three values of K. The conservation-of-degeneracy theorem, its hypothesis, and the reduction on the Lambda line are imported and not computed."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four functions check the clauses (i) to (iv) at sampled Lambda, gauge and model values; the imported conservation theorem and the sheaf-paper identification are not computed."

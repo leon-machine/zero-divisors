@@ -1,0 +1,18 @@
+functions:
+  check_expansion_and_chart:
+    kind: sampled
+    clauses: ["(1)", "(2)"]
+    omits: "eight sample A (four matrix units, identity, and three further including singular and complex); phi linear isomorphism is exact (rank 4 on the units), but P(A) = N_0 + phi(A) + det(A) N_inf, Q(m(A)) = -2 det A, P(A) = X(m(A)) and simplicity are polynomial identities in A checked at those samples only; the real locus is cited"
+  check_coverage_of_the_affine_chart:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "<P(A), ninf> = 1 at the eight samples, one line meeting L_inf giving 0, four sample null X with <X, ninf> = 1 recovered as P(A), and two sample planes recovered as graphs; bijection onto the lines skew to L_inf and 'ranges exactly over' are not exhausted"
+  check_consequences_incidence_and_stabilisers:
+    kind: partial
+    clauses: ["(4)(i)", "(4)(iii)", "(4)(iv)"]
+    omits: "(4)(ii) 'the same datum in a third language' is interpretive and not computed; (4)(iii) is checked as A_x = (1/2) c(x) c(ninf) with I_6 acting as -i on CS, at four sample x (graph equals the incidence line, linear in x on one sum), not the identification with I_6 x-hat or the Hermitian property of x-hat, which come from the cited reality proposition; (4)(iv) census of bivectors (10 fix, 1 rescale, 4 move) and dimensions 11 and 7 are exact, the chiral doublet action is delegated to chiral-planes-summand-spaces"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Algebraic identities of the chart are tested at eight samples and the consequences partly by delegation; each recorded limit matches what the asserts do."

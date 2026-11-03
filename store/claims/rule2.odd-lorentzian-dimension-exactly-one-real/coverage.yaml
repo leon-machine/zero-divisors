@@ -1,0 +1,18 @@
+functions:
+  check_real_forms_alternate:
+    kind: sampled
+    clauses:
+    - '"Cl(1,n-1) is type C iff n = 1 mod 4, Cl(n-1,1) is type C iff n = 3 mod 4, and in each case the other real form has complex type"'
+    omits: odd n in {3, 5, 7, 9, 11}; the centre is read from central blades and omega^2 is computed, agreeing with the commuting-square prediction
+  check_same_complexification_split:
+    kind: sampled
+    clauses:
+    - '"The two real forms have the same complexification, which is split for every odd n: omega'' = omega or i omega, whichever has square +1, is central, and (1 +- omega'')/2 are its central idempotents"'
+    omits: odd n <= 11; the independence of the image products (the isomorphism of complexifications) is checked only for n <= 5
+untouched_premises:
+  std-algebra.complexification: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: both clauses are computed exactly at odd n up to 11, which samples the statement for all odd n

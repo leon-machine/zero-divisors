@@ -1,0 +1,28 @@
+functions:
+  check_regular_reparametrisation_keeps_the_ground_state_singularity:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: The squared ratio of the weight-1/2 kernels as an exact rational function of x for three polynomial xi at three base points, with S_xi/6 tabulated and read also as the weight-1 field's diagonal remainder, and the covariance-weight controls on the kernel 1/(U - U'); the general expansion in a, b, c, the weight-h formula and the passage from polynomial to C^3 reparametrisations are argued, not computed
+  check_scaling_limit_is_the_ground_state:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: Invariance of the singular part and the eps-scaling of one polynomial remainder and one degree -1 remainder at three pairs of points, with the weight-0 and weight-1 controls; the bound on a bounded remainder's integral, the finite-rank remark and the extension from two-point functions to the state are argued in the proof, not computed
+  check_kruskal_functions_in_the_painleve_gullstrand_gauge:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: Exponent normalisation at three masses, the two partial fractions as exact identities, the prefactor and exponent algebra of U V, the s-derivative of the prefactor, the sign of U at five values of s and the t-exponents; the null directions of the derived metric are in the proof
+  check_ingoing_generator_crosses_the_horizon_regularly:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: In the chart (v, r) at two masses, g(d_r, d_r) = 0, Gamma^r_rr = 0, Gamma^v_vv = f'/2 with its horizon value tabulated, and the rho-derivative of U along v = const; the identification of the outgoing sector with functions of U near the horizon and the sheet reading are argued, not computed
+  check_exterior_half_is_the_i_state_at_the_hawking_temperature:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: The two-point KMS identity of both half-line symbols at beta kappa = 2 pi and its failure at pi and 4 pi for three rational q, beta = 8 pi M at three masses, and the direction of the flow on each half; the restriction theorem, the s-wave reduction (J3) and Premise (I) are cited hypotheses, not recomputed, and clause (vi) is not tested
+untouched_premises:
+  hawking.joint-j3-s-wave-reduction: "postulate J3, the reduction of the outgoing sector to one chiral CAR field per light ray; the check computes on that reduced field, it does not test the reduction"

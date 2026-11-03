@@ -1,0 +1,14 @@
+functions:
+  check_three_dimensional_parity_anomaly:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the four cells of R^2 (x) R^2 are enumerated and each U(1) has exactly two charged cells, conjugate, charges +1 and -1; integrality of k + sign(m)/2 is tested on the thirteen levels k = -3, -5/2, ..., 3 with the shift 1/2 sign(m) taken from the imported parity anomaly; that the conjugate pair is one two-component fermion, and that parity is broken by the gauge sector, are readings not computed"
+  check_five_dimensional_chern_simons_integrality:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "the SU(3) and mixed levels are not analysed (the statement says so); the species, charges and multiplicities come from the five-dimensional content export"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "sum q'^3 = -6, sum q' = 0 and integrality over all sixteen mass-sign choices are exact; the level test in (i) is a finite grid of an elementary integrality condition"

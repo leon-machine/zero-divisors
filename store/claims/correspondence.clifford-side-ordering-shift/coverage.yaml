@@ -1,0 +1,20 @@
+functions:
+  check_grading_element_of_the_plane:
+    kind: sampled
+    clauses: ["E = v ^ v* is the grading element of the plane"]
+    omits: "aligned pairs v = t w_k, v* = (2/t) w'_k for three modes and four scalings only; arbitrary null pairs with <v, v*> = 1 are not sampled"
+  check_boost_generator_is_number_minus_half:
+    kind: sampled
+    clauses: ["rho(E) = (1/2) c(v) c(v*) - 1/2", "= N - 1/2 with N the occupation number of the mode created by v"]
+    omits: "aligned pairs only (three modes, four scalings); both equalities and the eigenvalues +-1/2 are exact as 8 x 8 matrices there"
+  check_mixed_null_pair:
+    kind: partial
+    clauses: ["rho(E) = (1/2) c(v) c(v*) - 1/2 for a null pair mixing modes"]
+    omits: "one mixed pair; that (1/2) c(v) c(v*) is the occupation number of a mode created by v is replaced by 'idempotent of trace 4'"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Exact matrix identities, but only for aligned pairs and one mixed pair, while the statement is for every null pair with <v, v*> = 1."
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"

@@ -1,0 +1,25 @@
+functions:
+  check_rung_factor_is_residue_independent:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "all six populated representatives, but rung heights h = 1, 2, 3 and Fock factors k = 1, 2, 3 only; capacity 1 + k at general height is the cited tower theorem"
+  check_ground_module_dimensions:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "the six dimensions are compared with the exported type computation of the premise and not recomputed here"
+  check_weightings_depend_on_the_convention:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "computed from the dimensions of (ii); that the weighting counts modes and not anything entering an asymmetric sum is a reading"
+  check_odd_tower_pair_counts:
+    kind: exact
+    clauses: ["(iv) pair counts 2 (three dimensions) and 3 (five dimensions)"]
+    omits: "n_2 = n_6 and the mirror weight 1 belong to the mirror theorem's check; the odd towers' mode counts are declared undetermined and are not computed"
+untouched_premises:
+  dark-matter.mirror-tower-copy-one: "n_2 = n_6 is cited from its own check, not recomputed here"
+  tower.commuting-copies: "rung heights are handled directly as signatures (p+k, q+k) in the isotropic-family test rather than through the premise"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the arithmetic of (ii) and (iii) and the pair counts are tested; the rung factor only at small heights"

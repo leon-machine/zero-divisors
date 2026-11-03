@@ -1,0 +1,18 @@
+functions:
+  check_parallel_frozen_points_and_norms:
+    kind: sampled
+    clauses: ["(i) I_(s,m,r) = (sigma, d sigma, r) is parallel with constant norm 2rs + Q(m)", "background: the tractor form has signature (2,4)"]
+    omits: "exact polynomial identities in x (so exact in the point) but for four constant triples (s, m, r); the Einstein property of sigma^-2 eta with Lambda = 3 Q(I) is not tested"
+  check_two_frozen_points_give_two_metrics:
+    kind: sampled
+    clauses: ["(ii) equal-norm non-proportional I_A, I_B give non-homothetic scales sigma_A, sigma_B", "(ii) example: Q(I_A, I_B) = 3/2 at Lambda = 6", "(i) constant pairing Q(I, I') and not +-Q(I, I)"]
+    omits: "three pairs from {I_A, I_B, I_C}; non-constancy of sigma_A/sigma_B is shown at three sample points, and independence of the polynomials sigma by rank; that both metrics are Einstein with the same Lambda follows from (i), which is not tested, and is not computed here"
+  check_pair_has_one_gauge_invariant:
+    kind: sampled
+    clauses: ["(iii) dim SO(2,4) = 15, stabiliser of one non-null point has dimension 10, of an equal-norm pair spanning a nondegenerate plane has dimension 6", "(iii) pairs of fixed norm form a ten-dimensional space with nine-dimensional orbits, so exactly one invariant"]
+    omits: "exact linear algebra on so(2,4) for the single pair (I_A, I_B); the dimension 10 of the space of pairs is the arithmetic 2 x 5, and genericity of this pair among nondegenerate-plane pairs is not argued; that no gauge transformation changes <I_A, I_B> and the reach of the no-fluctuation proposition are not computed"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clause (iv) (vanishing tractor curvature gives stationarity of the functional) has no computation"

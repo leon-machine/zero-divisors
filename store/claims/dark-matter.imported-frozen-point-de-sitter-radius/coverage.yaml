@@ -1,0 +1,22 @@
+functions:
+  check_parallel_scale_tractor_norm_and_complement:
+    kind: sampled
+    clauses: ["I is parallel", "Q(I) = Lambda/3", "I-perp has signature (1,4)"]
+    omits: "a sample Einstein field with a Weyl part at the sample values of Lambda > 0"
+  check_stabiliser_is_de_sitter_algebra:
+    kind: sampled
+    clauses: ["the stabiliser of I is the de Sitter algebra so(1,4)"]
+    omits: "sample Lambda > 0; the parabolic contrast at Lambda = 0 is extra to the statement"
+  check_section_is_de_sitter_hyperboloid_radius_l:
+    kind: sampled
+    clauses: ["the flat-model section is the de Sitter hyperboloid of radius l with l^2 = 3/Lambda"]
+    omits: "sample points x and sample Lambda; the section is checked pointwise (Q(Y) = -l^2, Lorentzian tangent space), not as a global identification"
+  check_lambda_is_a_parameter_of_the_laws:
+    kind: sampled
+    clauses: ["under the action as written Lambda is a parameter of the laws, not initial data"]
+    omits: "linearised constraint counts (9 with Lambda fixed, 10 with Lambda free, one norm mode) at sample Lambda"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause is checked at sample Lambda > 0 on a sample Einstein field"

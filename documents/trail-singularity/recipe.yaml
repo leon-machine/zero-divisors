@@ -1,0 +1,26 @@
+doc: trail-singularity
+title: The singularity
+author: Leon Butler
+level: lay
+spine:
+- singularity.unipotent-ray
+- singularity.connection-bivector-computed
+- singularity.solution-where-divergence-lies
+- singularity.curvature-gauge-field-exact-shape-decoupling
+- singularity.non-removability-invariant-argument
+- singularity.degeneration-exactly
+- singularity.cones-fold
+- singularity.type-n-only-type-n
+- singularity.imported-one-sided-completion-singularity
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

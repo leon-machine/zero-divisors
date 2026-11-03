@@ -1,0 +1,18 @@
+\textit{Unitary mixings preserve the momentum.}\enspace Using $e_{t}\rev{y} = y^{\dagger}e_{t}$ on each entry of $U$,
+\begin{align*}
+\sum_{i}\psi'_{i}e_{t}\rev{\psi'_{i}} &= \sum_{i}\sum_{k,l}\psi_{k}U_{ki}\,e_{t}\,\rev{U_{li}}\,\rev{\psi_{l}} \\
+&= \sum_{k,l}\psi_{k}\Bigl(\sum_{i}U_{ki}U_{li}^{\dagger}\Bigr)e_{t}\rev{\psi_{l}}.
+\end{align*}
+If $UU^{\dagger} = 1$, that is $\sum_{i}U_{ki}U_{li}^{\dagger} = \delta_{kl}f$, the right-hand side is $\sum_{k}\psi_{k}e_{t}\rev{\psi_{k}}$.
+
+
+
+\emph{Only unitary mixings do.}  Take $\psi_{k} = \psi a_{k}$ for one $\psi \in S$ with $j(\psi) \neq 0$ and a row $a = (a_{k}) \in \F^{n}$. Then $\psi'_{i} = \psi\,(aU)_{i}$, and Lemma \claimref{dark-tower-matter.adjoint-norm}(iii) gives the total momenta before and after as
+\[
+P = \Bigl(\sum_{k}N(a_{k})\Bigr)\,j(\psi), \qquad P' = \Bigl(\sum_{i}N\bigl((aU)_{i}\bigr)\Bigr)\,j(\psi).
+\]
+Their equality for every $a$ says that $U$ preserves the positive definite form $\sum_{k}N(a_{k})$ on $\F^{n}$, whose polarisation is the standard $\F$-Hermitian form; so $UU^{\dagger} = 1$.
+
+
+
+\emph{The groups.}  The isometry groups of the standard forms over $\R$, $\C$, $\HH$ are $O(n)$, $U(n)$, $Sp(n)$, and Theorem \claimref{dark-tower-matter.constituents-field} assigns the fields. The script checks an $\F$-unitary mixing in every causal tower as a polynomial identity (C1) and exhibits a non-unitary mixing that changes the total momentum (C2).

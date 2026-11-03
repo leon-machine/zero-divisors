@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Singularity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one pinned screen. The live view fills it; the story is told in subtitles and in drawings laid over the view.
+   A thin chapter strip under the masthead is the only chrome. Single dark theme by choice. */
+:root{
+  --void:#100e0d; --void-2:#191614; --line:#3a332e; --line-2:#574d45;
+  --text:#ece5d9; --text-2:#bfb5a6; --text-3:#8d8377;
+  --red:#e07a55; --blue:#93b4da; --green:#a6c497; --plum:#cf9bb5; --gold:#f0c27a;
+  --display:"Source Serif 4","Iowan Old Style",Georgia,serif; --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --serif:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --barh:47px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--void);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.55}
+a{color:var(--gold)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(16,14,13,.92);border-bottom:1px solid var(--line)}
+.bar .in{max-width:1180px;margin:0 auto;padding:8px 20px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between}
+.bar .name{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--text)}
+.bar .name .sub{font-family:var(--sans);font-weight:400;font-size:.8rem;color:var(--text-3)}
+
+
+.fall{position:relative;background:#000;height:calc(100vh - var(--barh));height:calc(100dvh - var(--barh))}
+.pin{position:absolute;inset:0;overflow:hidden;touch-action:none}
+body.atend .pin{touch-action:pan-y}
+#sky,#ov{position:absolute;inset:0;width:100%;height:100%;display:block}
+#sky{cursor:grab;touch-action:none;transition:filter .4s ease}
+body.atend #sky{touch-action:pan-y}
+#sky.drag{cursor:grabbing}
+#ov{pointer-events:none}
+#ov.live{pointer-events:auto;cursor:pointer}
+.whiteout{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+
+.track{position:absolute;left:0;right:0;top:0;z-index:6;display:flex;overflow-x:auto;background:rgba(16,14,13,.4);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track button{flex:1 0 auto;background:none;border:0;color:var(--text-3);font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;padding:6px 10px;cursor:pointer;position:relative;white-space:nowrap}
+.track button.on{color:var(--text)}
+.track button.on::after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;background:var(--red)}
+.track button.done{color:var(--text-2)}
+.track button b{font-weight:500;color:var(--gold);margin-right:4px}
+
+.title{position:absolute;left:0;right:0;top:56px;padding-inline:24px;pointer-events:none;transition:opacity .3s}
+.title .in{max-width:1180px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.title h1{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:6px 0 10px;max-width:13ch;text-wrap:balance;text-shadow:0 2px 18px #000}
+.title.compact .eyebrow{margin-bottom:0}@media (max-width:700px){.title.compact p{display:none}}
+.title p{max-width:44ch;color:var(--text-2);margin:0;font-family:var(--sans);font-size:1rem;text-shadow:0 1px 8px #000}
+
+/* subtitles */
+.cap{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 74px);transform:translate(-50%,6px);width:min(820px,calc(100% - 40px));text-align:center;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none}
+.cap.show{opacity:1;transform:translate(-50%,0)}
+.cap .line{font-family:var(--display);font-weight:400;font-size:clamp(1rem,1.75vw,1.32rem);line-height:1.36;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
+.cap .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--text-3);text-shadow:0 1px 6px #000}
+.cap a{pointer-events:auto}
+.cap .acts{margin-top:14px;display:flex;gap:10px;justify-content:center;pointer-events:auto}
+.chip{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;padding:0 6px;border:1px solid currentColor;white-space:nowrap;background:rgba(16,14,13,.5)}
+.chip.std{color:var(--text-3)} .chip.A{color:var(--blue)} .chip.B{color:var(--green)} .chip.C{color:var(--plum)}
+.chip.AB{color:#9fbdb9} .chip.BC{color:#b9b0c6}
+.chip.prem{color:var(--plum);border-style:dashed} .chip.pred{color:var(--red)} .chip.ana{color:var(--gold);border-style:dotted}
+
+/* instruments, quiet */
+.hud{position:absolute;top:40px;right:20px;font-family:var(--mono);font-size:.72rem;color:var(--text-3);text-align:right;text-shadow:0 1px 6px #000;transition:opacity .5s;pointer-events:none}
+.hud b{display:block;font-weight:500;font-size:1.05rem;color:var(--text);font-variant-numeric:tabular-nums;margin-bottom:6px}
+.hud .bar2{width:160px;height:2px;background:var(--line-2);margin:4px 0 2px auto;position:relative}
+.hud .bar2 i{position:absolute;left:0;top:0;bottom:0;background:var(--red)}
+.hud .bar2 u{position:absolute;top:-3px;bottom:-3px;width:1px;background:var(--gold)}
+.controls{position:absolute;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);display:flex;gap:4px;transition:opacity .5s}
+/* Back and Next: the story is a slide show; each subtitle is a step */
+.ctl{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);transform:translateX(-50%);z-index:8;display:flex;align-items:center;gap:12px}
+.ctl button{background:rgba(16,14,13,.6);border:1px solid var(--line-2);border-radius:8px;padding:6px 16px;cursor:pointer;font:500 .85rem var(--sans);color:var(--text-2)}
+.ctl button:hover:not(:disabled){border-color:var(--text-2);color:var(--text)}
+.ctl button:disabled{opacity:.35;cursor:default}
+.ctl #next{border-color:var(--gold);color:var(--gold);padding:6px 22px}
+.ctl #next.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(240,194,122,.12)}}
+.ctl .n{font:400 .7rem var(--mono);color:var(--text-3);min-width:4.5em;text-align:center}
+.controls button{background:rgba(16,14,13,.45);border:1px solid var(--line-2);border-radius:8px;color:var(--text-2);font:500 .78rem var(--sans);padding:4px 10px;cursor:pointer}
+.controls button[aria-pressed="true"]{color:var(--text);border-color:var(--text-2)}
+.controls button.hot{color:var(--red);border-color:var(--red)}
+.foot-note{position:absolute;left:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);font-family:var(--mono);font-size:.66rem;color:var(--text-3);transition:opacity .5s;pointer-events:none}
+.btn{background:rgba(16,14,13,.5);border:1px solid var(--text-2);border-radius:8px;padding:5px 14px;cursor:pointer;font:500 .85rem var(--sans);color:var(--text);text-decoration:none}
+.btn.hot{border-color:var(--red);color:var(--red)}
+.nogl{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:20px;color:var(--text-2)}
+@media (max-width:700px){
+  .bar .name .sub{display:none}
+  body:not(.infall) .cap{bottom:calc(env(safe-area-inset-bottom,0px) + 62px)}
+  .bar .in{padding:6px 12px}
+  .hud{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 50px);right:12px;font-size:.64rem}
+  .hud b{font-size:.9rem;margin-bottom:2px}.hud .bar2{width:110px}
+  .hud .opt{display:none}
+  .cap{bottom:calc(env(safe-area-inset-bottom,0px) + 150px)}
+  .controls{left:12px;right:auto;justify-content:flex-start}
+  .ctl{left:auto;right:12px;transform:none;gap:6px}.ctl .n{display:none}.ctl button{padding:6px 12px}.ctl #next{padding:6px 16px}
+  .hud{bottom:calc(env(safe-area-inset-bottom,0px) + 60px)}
+  .foot-note{display:none}
+  .track button{font-size:.6rem;padding:5px 8px}
+}
+@media (prefers-reduced-motion:reduce){.cap,.title,.hud,.controls{transition:none}.ctl #next.pulse{animation:none}}
+/* the scoreboard of registered claims */
+.board{position:absolute;left:50%;top:46px;transform:translateX(-50%);width:min(860px,calc(100% - 28px));font-family:var(--mono);font-size:.72rem;color:var(--text-2);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;pointer-events:none;background:rgba(16,14,13,.85);border:1px solid var(--line);padding:10px 14px}
+.board.show{opacity:1;visibility:visible}
+.board .bh{color:var(--text-3);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.board .r{display:grid;grid-template-columns:12px minmax(0,1.25fr) 40px minmax(0,1fr);gap:2px 10px;align-items:center;padding:2px 0;border-top:1px solid rgba(58,51,46,.7);opacity:.12;transition:opacity .4s}
+.board .r.in{opacity:1}
+.board .c{color:var(--text);font-family:var(--serif);font-size:.86rem;line-height:1.3}
+.board .p{color:var(--text-3)}
+.board .st{color:var(--text-3);font-size:.66rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board .c{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board .r.hl .c{color:var(--red)}
+.d{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none}
+.d.hold{background:var(--green)} .d.press{background:var(--red)} .d.wait{background:var(--gold)} .d.int{background:var(--text-3)}
+.board .key{margin-top:8px;display:flex;gap:4px 14px;flex-wrap:wrap;color:var(--text-3);font-size:.64rem;align-items:center}
+.board .key span{display:inline-flex;gap:5px;align-items:center}
+@media (max-width:700px){.board{font-size:.62rem;padding:8px 10px}.board .r{grid-template-columns:10px minmax(0,1fr) 30px}.board .st{display:none}.board .c{font-size:.76rem}}
+body.video .controls,body.video #cap,body.video .ctl{display:none}
+body.video *{transition:none!important}
+.vcap,.vend{display:none}
+body.video .vcap{display:block;position:absolute;left:50%;bottom:54px;transform:translateX(-50%);width:min(1100px,calc(100% - 80px));text-align:center;font-family:var(--display);font-weight:500;font-size:1.85rem;line-height:1.24;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
+body.video .vcap .tags{margin-top:8px;display:flex;gap:6px 10px;justify-content:center;font-family:var(--mono);font-size:.75rem;color:var(--text-3)}
+body.video .vcap .chip{font-size:.7rem}
+body.video .vend{display:grid;place-content:center;text-align:center;position:absolute;inset:0;background:var(--void);opacity:0;z-index:30}
+.vend h2{font-family:var(--display);font-weight:600;font-size:4.5rem;margin:10px 0 18px}
+.vend p{color:var(--text-2);font-size:1.25rem;margin:0}.vend .u{font-family:var(--mono);color:var(--gold);font-size:1.05rem;margin-top:14px}
+.vend .eyebrow{font-size:1.1rem}
+.after{max-width:900px;margin:0 auto;padding:28px 20px 48px;font:.84rem/1.55 var(--sans);color:var(--text-3);border-top:1px solid var(--line)}
+.after p{margin:0 0 .7em}
+.labref{color:inherit;text-decoration:underline dotted;text-underline-offset:2px;pointer-events:auto;cursor:pointer}
+.labref:hover{color:var(--gold)}
+.cap .tags{pointer-events:auto}
+body.white .hud *{color:#3a342e!important;text-shadow:none}
+.pin .vign{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.62));pointer-events:none;opacity:0;transition:opacity .4s}
+body.infall:not(.white) .pin .vign{opacity:1}
+body.white .cap .line{color:#141210;text-shadow:none}body.white .cap .tags,body.white .hud{color:#3a342e;text-shadow:none}
+.cap{display:flex;flex-direction:column}
+.cap .tags{order:-1;margin:0 0 7px}
+.cap .ptitle{order:-2;display:none;margin:0 0 10px;text-align:center;font-family:var(--display);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.1;color:var(--text);text-shadow:0 2px 14px #000}
+.cap .ptitle span{display:block;margin-bottom:4px;font:400 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.cap.part .ptitle{display:block}
+.cap .line{text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+</style>
+</head>
+<body>
+<header class="bar"><div class="in">
+  <span class="name">The Singularity <span class="sub">&middot; falling into Sagittarius A*, the black hole at the centre of our Galaxy, 4.3 million suns</span></span>
+
+</div></header>
+<main>
+<section class="fall" id="fall" aria-label="A first-person fall into a black hole, then the Transport Papers in six parts">
+  <div class="pin">
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <canvas id="ov" aria-hidden="true"></canvas>
+    <div class="nogl" id="nogl"><p>This browser cannot draw the live view (WebGL is off). Press Next: the story still plays.</p></div>
+    <div class="vign" aria-hidden="true"></div>
+    <div class="whiteout" id="whiteout"></div>
+    <nav class="track" id="track" aria-label="Chapters"></nav>
+    <div class="title" id="title"><div class="in">
+      <div class="eyebrow">The Transport Papers &middot; Part I &middot; T4 to T6</div>
+      <h1>Fall into a black hole</h1>
+      <p>Press Next, or scroll, to fall. Drag to look around. Every pixel is a ray of light traced backwards around the hole, the way it would reach your eye.</p>
+    </div></div>
+    <div class="hud" id="hud">
+      <span>distance from centre</span><b id="hR"></b>
+      <span>time left on your watch</span><b id="hTau"></b>
+      <span class="opt">falling at</span><b class="opt" id="hV"></b>
+      <div class="bar2"><i id="hBar"></i><u id="hHor"></u></div>
+    </div>
+    <div class="board" id="board" aria-label="The registered predictions and their status"><div class="bh" id="boardHead">Registered in advance &middot; status from the record</div><div id="rows"></div>
+      <div class="key"><span><i class="d hold"></i>holding so far</span><span><i class="d press"></i>under pressure</span><span><i class="d wait"></i>not yet reached by data</span></div></div>
+    <div class="vcap" id="vcap"></div><div class="vend" id="vend"><div class="eyebrow">The Transport Papers</div><h2>The Singularity</h2><p>Explore it yourself: the Physics Graph, the papers and their verification scripts</p><p class="u">zenodo.org/communities/transport-papers</p></div>
+    <div class="cap" id="cap" aria-live="polite"><div class="line" id="capLine"></div><div class="tags" id="capTags"></div><div class="acts" id="capActs"></div><div class="ptitle" id="capPart"></div></div>
+    <div class="controls" id="controls">
+      <button class="hot" id="autoFall">Fall for me</button>
+      <button id="lookBack" aria-pressed="false">Look back</button>
+    </div>
+    <div class="ctl" id="ctl"><button id="back" aria-label="Back one step">Back</button><span class="n" id="stepn"></span><button id="next" class="pulse" aria-label="Next step">Next</button></div>
+  </div>
+</section>
+</main>
+<div class="after">
+  <p>Every numbered reference under a subtitle opens that result in the Physics Graph, with its statement, proof and checks. The predictions board is read from the record when the site is built.</p>
+  <p>The founding conjecture, the direction of investigation and critical review are the author&rsquo;s, Leon Butler. The mathematical development and drafting were produced in extended collaboration with Claude (Anthropic), an AI system. The papers are independent work and have not yet been through journal peer review: <a href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">the Transport Papers on Zenodo</a>.</p>
+  <p>The view is computed by tracing light rays through the Schwarzschild gravitational field in the Painlev&eacute;&ndash;Gullstrand gauge (Gauge Theory Gravity on a flat background), for an observer falling from rest far away, in the plane of a thin disc of hot gas orbiting the hole. The disc is drawn the way most depictions draw it (the film Interstellar among them): its inner edge at the last stable orbit, its glow shifted by the gas&rsquo;s motion and by gravity, and the gas close to you left out as you fall past it, so the view stays clear. Sagittarius A*&rsquo;s own gas is fainter and thicker; its light, bent by the hole, makes the ring the Event Horizon Telescope imaged. Labels: Tier A proved; Tier B assembled from named theorems; Tier C rests on a flagged premise; Tier A/B and B/C are the papers&rsquo; own split grades; Premised means assumed and said so; Prediction means registered in advance; Analogy is a picture, not the mathematics. Numbers use standard constants: Schwarzschild radius 2GM/c&sup2;, Hawking temperature &#295;c&sup3;/8&pi;GMk<sub>B</sub>, entropy A/4 in Planck units, echo delay 8(GM/c&sup3;) ln(M/m<sub>P</sub>) as in T8.</p>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// written by tp.site when the Lab is built: the record's predictions and a map from deposited numbers to results
+const LAB = /*LAB_DATA*/{"preds": [], "refs": {}, "built": ""}/*END_LAB_DATA*/;
+const PRESSED = (() => { const n = LAB.preds.filter(x => x.st === 'press').length, W = ['None', 'One', 'Two', 'Three', 'Four', 'Five', 'Six'];
+  return !n ? 'None is under pressure now.' : (W[n] || String(n)) + (n === 1 ? ' is' : ' are') + ' under pressure now, marked in red.'; })();
+// open a result in the Lab's universe (this page is shown inside the Lab, same origin)
+function openInLab(hash){ try { if (window.parent && window.parent !== window) { window.parent.location.hash = hash; return; } } catch (e) {}
+  window.open('transport_lab.html' + hash, '_blank', 'noopener'); }
+document.addEventListener('click', e => { const a = e.target.closest('[data-lab]'); if (!a) return; e.preventDefault(); openInLab('#' + a.dataset.lab); });
+// video mode (?video): no animation loop; a renderer calls window.__frame(vh, ms, caption) once per frame
+const VIDEO = /[?&]video/.test(location.search); let vVh = 0;
+if (VIDEO) document.body.classList.add('video');
+/* ---------- physics ---------- */
+const G = 6.6743e-11, c = 2.99792458e8, hbar = 1.054571817e-34, kB = 1.380649e-23, Msun = 1.98847e30;
+const mP = Math.sqrt(hbar * c / G), lP = Math.sqrt(hbar * G / c ** 3);
+const massSuns = 4.3e6;             // Sagittarius A*
+const SUP = {'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+function sci(x, d = 2){ const e = Math.floor(Math.log10(Math.abs(x))); return (x / 10 ** e).toFixed(d - 1) + '×10' + String(e).split('').map(ch => SUP[ch]).join(''); }
+function dur(s){
+  if (s < 1e-3) return (s * 1e6).toPrecision(3) + ' microseconds';
+  if (s < 1) return (s * 1e3).toPrecision(3) + ' milliseconds';
+  if (s < 120) return s.toPrecision(3) + ' seconds';
+  if (s < 7200) return (s / 60).toPrecision(3) + ' minutes';
+  if (s < 172800) return (s / 3600).toPrecision(3) + ' hours';
+  if (s < 3.15576e7 * 2) return (s / 86400).toPrecision(3) + ' days';
+  return (s / 3.15576e7).toPrecision(3) + ' years';
+}
+function durShort(s){ return dur(s).replace(' microseconds', ' µs').replace(' milliseconds', ' ms').replace(' seconds', ' s').replace(' minutes', ' min'); }
+function len(m){ if (m < 1e-9) return sci(m) + ' m'; if (m < 1e3) return m.toPrecision(3) + ' m'; if (m < 1e9) return (m / 1e3).toPrecision(3) + ' km'; if (m < 1e12) return (m / 1e9).toPrecision(3) + ' million km'; return sci(m) + ' m'; }
+function temp(T){ if (T < 1e-12) return sci(T) + ' degrees above absolute zero'; return (T * 1e9).toPrecision(2) + ' billionths of a degree above absolute zero'; }
+function NUM(){
+  const M = massSuns * Msun, tM = G * M / c ** 3;
+  return { tM, M, TH: temp(hbar * c ** 3 / (8 * Math.PI * G * M * kB)), S: sci(4 * Math.PI * G * M * M / (hbar * c) / Math.LN2, 3),
+    echo: dur(8 * tM * Math.log(M / mP)), beta: dur(8 * Math.PI * tM), scr: dur(4 * tM * Math.log(4 * Math.PI * G * M * M / (hbar * c))), charge: massSuns < 1.3e5 ? 'Its electric charge comes back too.' : 'Whether its electric charge comes back from a hole this big, the papers leave open.',
+    npred: String(LAB.preds.length), pressed: PRESSED };
+}
+
+
+/* ---------- the live view: ray tracing in Painleve-Gullstrand coordinates ---------- */
+const cv = $('#sky');
+const gl = cv.getContext('webgl', {antialias: false, preserveDrawingBuffer: true}) || cv.getContext('experimental-webgl');
+const RMAX = 40, RMIN = 0.06, INCL = 0.0;
+const VS = 'attribute vec2 a; void main(){ gl_Position = vec4(a, 0.0, 1.0); }';
+  const FS = `
+precision highp float;
+uniform vec2 res; uniform vec3 camPos; uniform mat3 camRot; uniform float halfFov; uniform float tm; uniform float diskOn;
+float erfa(float x){ float z = clamp(2.2567584 * x * (1.0 + 0.0894 * x * x), -30.0, 30.0); float e = exp(z); return (e - 1.0) / (e + 1.0); }
+float hash(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+void deriv(vec3 x, vec3 p, float pt, out vec3 dx, out vec3 dp){
+  float r = length(x); float s = dot(x, p); float beta = sqrt(2.0 / r); vec3 n = x / r;
+  dx = beta * n * pt + p - beta * beta * n * dot(n, p);
+  float r15 = 1.0 / (r * sqrt(r)); float r35 = r15 / (r * r); float r3 = 1.0 / (r * r * r); float r5 = r3 / (r * r);
+  dp = -pt * 1.41421356 * (p * r15 - 1.5 * s * x * r35) + (2.0 * s * p * r3 - 3.0 * s * s * x * r5);
+}
+vec3 starLayer(vec3 d, float k, float thresh){
+  float th = acos(clamp(d.y, -1.0, 1.0)); float ph = atan(d.z, d.x);
+  vec2 uv = vec2(ph / 6.2831853 * k * 2.0, th / 3.1415927 * k);
+  vec2 c = floor(uv); vec2 f = fract(uv);
+  float h = hash(c);
+  if (h < thresh) return vec3(0.0);
+  vec2 sp = vec2(hash(c + 7.1), hash(c + 3.7)) * 0.7 + 0.15;
+  float dd = length((f - sp) * vec2(sin(th) * 2.0, 1.0));
+  float b = pow((h - thresh) / (1.0 - thresh), 2.0) * exp(-dd * dd * 900.0 / (k * 0.01 + 1.0));
+  float w = hash(c + 1.3);
+  return b * mix(vec3(1.0, 0.78, 0.55), vec3(0.7, 0.82, 1.0), w);
+}
+vec3 sky(vec3 d, float g){
+  vec3 col = vec3(0.0);
+  vec3 bn = normalize(vec3(0.35, 0.88, 0.32));
+  float band = exp(-pow(dot(d, bn) / 0.2, 2.0));
+  float aph = atan(d.z, d.x); float mott = 0.62 + 0.38 * sin(aph * 23.0 + sin(d.y * 31.0) * 2.0) * sin(d.y * 17.0 + aph * 5.0);
+  col += vec3(0.055, 0.045, 0.04) * band * mott + vec3(0.006, 0.006, 0.008);
+  col += starLayer(d, 90.0, 0.62) * 2.2 + starLayer(d, 220.0, 0.75) * 1.4;
+  float gg = clamp(g, 0.05, 20.0);
+  vec3 tint = gg > 1.0 ? mix(vec3(1.0), vec3(0.66, 0.8, 1.3), clamp(log(gg) / 1.4, 0.0, 1.0))
+                       : mix(vec3(1.0), vec3(1.4, 0.5, 0.22), clamp(-log(gg) / 1.1, 0.0, 1.0));
+  return col * tint * pow(gg, 1.6);
+}
+// the gas's colour by temperature: deep orange when cool, through gold, to white when hot, bluish only when strongly blueshifted
+vec3 bb(float t){ vec3 c = mix(vec3(1.0, 0.42, 0.12), vec3(1.0, 0.76, 0.42), smoothstep(0.35, 1.0, t)); c = mix(c, vec3(1.0, 0.95, 0.86), smoothstep(1.0, 1.9, t)); c = mix(c, vec3(0.8, 0.88, 1.0), smoothstep(2.4, 4.0, t)); return c * smoothstep(0.06, 0.5, t); }
+void main(){
+  vec2 uv = (gl_FragCoord.xy - 0.5 * res) / (0.5 * res.y);
+  vec3 x = camPos; float R = length(x); vec3 n = x / R; float beta = sqrt(2.0 / R);
+  // never past straight behind: on very wide screens the edges fade to black there instead of repeating the view
+  float ang0 = length(uv) * halfFov, ang = min(ang0, 3.1415927); vec2 dir2 = length(uv) > 1e-6 ? uv / length(uv) : vec2(0.0); vec3 d = normalize(camRot * vec3(dir2 * sin(ang), cos(ang)));
+  vec3 p = -d; float pt = -(1.0 + beta * dot(n, d));
+  float far = max(3.0 * R, 40.0);
+  vec3 col = vec3(0.0); vec3 acc = vec3(0.0); float tr = 1.0; bool done = false;
+  vec3 dx; vec3 dp;
+  for (int i = 0; i < 320; i++) {
+    float r = length(x);
+    float kt = -pt + sqrt(2.0 / r) * dot(x, p) / r;
+    if (abs(kt) > 40.0) { done = true; break; }
+    deriv(x, p, pt, dx, dp);
+    if (r > far && dot(x, -dx) > 0.0) { col = sky(normalize(-dx), 1.0 / max(-pt, 1e-3)); done = true; break; }
+    float h = -(0.06 * r + 0.004) / max(1.0, length(dx));
+    vec3 dx2; vec3 dp2;
+    deriv(x + 0.5 * h * dx, p + 0.5 * h * dp, pt, dx2, dp2);
+    vec3 xn = x + h * dx2; vec3 pn = p + h * dp2;
+    if (diskOn > 0.5) {
+      // a thin disc of hot gas with a little thickness (H = 0.04 r), seen through its column:
+      // a face-on crossing gives the gas's own brightness, a grazing one more, until it turns opaque
+      vec3 xm = 0.5 * (x + xn); float rc = length(xm); float H = 0.028 * rc;
+      if (rc > 5.6 && rc < 21.0 && min(abs(x.y), abs(xn.y)) < 3.0 * H || x.y * xn.y < 0.0 && rc > 5.6 && rc < 21.0) {
+        float ds = length(xn - x); float dy = xn.y - x.y;
+        float col1 = abs(dy) > 1e-4 * ds ? ds / abs(dy) * 0.5 * (erfa(xn.y / H) - erfa(x.y / H)) * sign(dy)
+                                         : ds * exp(-xm.y * xm.y / (H * H)) / 1.7724539;
+        float w = min(col1 / H, 3.0);
+        if (w > 1e-4) {
+          vec3 pc = 0.5 * (p + pn);
+          float E = -pt; float L = xm.z * pc.x - xm.x * pc.z;
+          float Om = 1.0 / (rc * sqrt(rc)); float ut = 1.0 / sqrt(1.0 - 3.0 / rc);
+          float Eem = ut * (E - Om * L); float g = 1.0 / max(Eem, 1e-3);
+          float F = max(0.0, 1.0 - sqrt(6.0 / rc)) / (rc * rc * rc);
+          float T = pow(F / 0.00065, 0.25);
+          float ph = atan(xm.z, xm.x) + Om * tm * 0.6;
+          float streak = 0.84 + 0.1 * sin(ph * 7.0 + rc * 2.3) * sin(ph * 3.0 - rc * 1.1 + 1.3) + 0.06 * sin(rc * 9.0 + ph * 2.0);
+          vec3 em = bb(T * g) * pow(g, 3.0) * F / 0.00065 * streak * 0.75;
+          float edge = smoothstep(6.0, 6.4, rc) * (1.0 - smoothstep(13.0, 20.0, rc));
+          // the gas right around you is left out, so the disc is seen as it is from a distance
+          float dc = length(xm - camPos); edge *= smoothstep(0.6 * R, 1.3 * R, dc);
+          acc += tr * em * edge * w; tr *= exp(-0.7 * w * edge);
+          if (tr < 0.02) { done = true; break; }
+        }
+      }
+    }
+    x = xn; p = pn;
+  }
+  if (!done) { deriv(x, p, pt, dx, dp); col = sky(normalize(-dx), 1.0 / max(-pt, 1e-3)); }
+  col = acc + tr * col;
+  col = 1.0 - exp(-col * 1.6);
+  col *= 1.0 - smoothstep(2.85, 3.1415927, ang0);
+  gl_FragColor = vec4(pow(col, vec3(0.9)), 1.0);
+}`;
+let prog = null; const U = {};
+function compile(){
+  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; };
+  prog = gl.createProgram(); gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+  gl.useProgram(prog);
+  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, -1,1, 1,-1, 1,1]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  ['res','camPos','camRot','halfFov','tm','diskOn'].forEach(k => U[k] = gl.getUniformLocation(prog, k));
+}
+let ok = !!gl;
+if (ok) { try { compile(); } catch (e) { console.error(e); ok = false; } }
+if (!ok) $('#nogl').style.display = 'grid';
+  const SHADOW = [[40.0, 0.1012], [30.1496, 0.1287], [22.7249, 0.1624], [17.1287, 0.2032], [12.9106, 0.2517], [9.7312, 0.3082], [7.3348, 0.3724], [5.5285, 0.4437], [4.1671, 0.5209], [3.1409, 0.6021], [2.3674, 0.6852], [1.7844, 0.7682], [1.345, 0.849], [1.0138, 0.9261], [0.7641, 0.9983], [0.5759, 1.0649], [0.4341, 1.1255], [0.3272, 1.18], [0.2466, 1.2287], [0.1859, 1.2719], [0.1401, 1.3099], [0.1056, 1.3434], [0.0796, 1.3726], [0.06, 1.3982]];
+function shadowAngle(r){ const L = Math.log(r); for (let i = 0; i < SHADOW.length - 1; i++) { const a = SHADOW[i], b = SHADOW[i + 1];
+    if (r <= a[0] && r >= b[0]) { const t = (L - Math.log(a[0])) / (Math.log(b[0]) - Math.log(a[0])); return a[1] + t * (b[1] - a[1]); } }
+  return r > SHADOW[0][0] ? SHADOW[0][1] * SHADOW[0][0] / r : SHADOW[SHADOW.length - 1][1]; }
+// the dark region's share of the screen grows steadily with depth, so the view never seems to pull back
+function fallFov(r){ const s = Math.log(RMAX / r) / Math.log(RMAX / RMIN); const frac = 0.18 + 0.64 * Math.pow(Math.min(1, Math.max(0, s)), 0.7);
+  const aspect = cv.width / Math.max(1, cv.height); const narrow = aspect < 1 ? Math.max(aspect, 0.5) : 1; return Math.min(2.6, shadowAngle(r) / frac / narrow); }
+let R = RMAX, yaw = 0, pitch = 0, lookBack = false, scale = 0.5;
+// the glow's brightness: the camera's exposure follows the light around it, so the ring stays readable as the gas closes in
+const disk = true;                     // a thin disc in the plane of the fall, as most depictions draw it (Interstellar); the notes say how Sagittarius A*'s own gas differs
+let renderR = RMAX, renderDisk = true, renderYaw = 0, renderPitch = 0, fovNow = 0.6, mode = 'fall';
+const camDir = [0, Math.sin(INCL), Math.cos(INCL)];
+function basis(){
+  const f0 = camDir.map(v => -v);
+  let up0 = [0, 1, 0]; const dt = up0[0]*f0[0] + up0[1]*f0[1] + up0[2]*f0[2]; up0 = up0.map((v, i) => v - dt * f0[i]); const lu = Math.hypot(...up0); up0 = up0.map(v => v / lu);
+  const cross = (a, b) => [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
+  const right0 = cross(up0, f0);
+  const cy = Math.cos(renderYaw), sy = Math.sin(renderYaw), cp = Math.cos(renderPitch), sp = Math.sin(renderPitch);
+  const f1 = f0.map((v, i) => cy * v + sy * right0[i]); const r1 = right0.map((v, i) => cy * v - sy * f0[i]);
+  const f = f1.map((v, i) => cp * v + sp * up0[i]); const u = up0.map((v, i) => cp * v - sp * f1[i]);
+  return [...r1, ...u, ...f];
+}
+function resize(){ const r = cv.getBoundingClientRect(); const w = Math.max(160, Math.round(r.width * scale)), h = Math.max(120, Math.round(r.height * scale)); if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; } }
+const T0 = performance.now();
+function draw(now){
+  if (!ok) return;
+  resize(); gl.viewport(0, 0, cv.width, cv.height);
+  const pos = camDir.map(v => v * renderR);
+  gl.uniform2f(U.res, cv.width, cv.height); gl.uniform3f(U.camPos, pos[0], pos[1], pos[2]);
+  gl.uniformMatrix3fv(U.camRot, false, new Float32Array(basis()));
+  gl.uniform1f(U.halfFov, fovNow); gl.uniform1f(U.tm, (now - T0) / 1000); gl.uniform1f(U.diskOn, renderDisk ? 1 : 0);
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
+}
+
+/* ---------- timeline, in viewport heights ---------- */
+const sec = $('#fall');
+const FALL = 700, SCENE = 160, TITLE = 70;
+const PARTS = [
+  {n: 'I', k: 'fall', short: 'The fall', eyebrow: 'The Transport Papers · Part I · T4 to T6', h: 'Fall into a black hole', p: 'Press Next, or scroll, to fall. Drag to look around. Every pixel is a ray of light traced backwards around the hole, the way it would reach your eye.', scenes: []},
+  {n: 'II', k: 't2', short: 'Transport', eyebrow: 'Part II · T1, T5, T9', h: 'The Transport Principle', p: 'Where a calculation divides by zero, the papers do not stop. They move it to a larger space where it can go on, and prove that the smallest such space is unique.', scenes: ['move', 'twistor', 'switches']},
+  {n: 'III', k: 't4', short: 'Information', eyebrow: 'Part III · T5, T7, T8', h: 'The Information Paradox', p: 'A black hole glows, shrinks and vanishes. So where did everything that fell in go?', scenes: ['paradox', 'info', 'fate', 'thermo', 'count', 'scramble']},
+  {n: 'IV', k: 't5', short: 'The tower', eyebrow: 'Part IV · T3, T14', h: 'The Tower and the CAR Limit', p: 'Make the move again and again. Each floor holds one more switch, the algebra of a free fermion field waits at the top, and there turn out to be eight towers.', scenes: ['car', 'dark']},
+  {n: 'V', k: 't6', short: 'Dark ratio', eyebrow: 'Part V · T14', h: 'The Dark Matter Ratio', p: 'Why the dark towers might hold 5.364 times as much matter as ours.', scenes: ['ratio']},
+  {n: 'VI', k: 't7', short: 'Refute it', eyebrow: 'Part VI · T8, T14, T17', h: 'What Would Refute It', p: 'Every claim that touches data, set down in print, with the measurement that would break it.', scenes: ['towers', 'echo', 'score']},
+];
+const SCENES = [], PART_OF = {fall: 0}, TITLES = new Set();
+PARTS.forEach((pt, i) => { if (i) { SCENES.push(pt.k); TITLES.add(pt.k); PART_OF[pt.k] = i; } pt.scenes.forEach(k => { SCENES.push(k); PART_OF[k] = i; }); });
+const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 150, twistor: 210, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
+TITLES.forEach(k => LEN[k] = TITLE);
+const START = {fall: 0}; { let acc = FALL; SCENES.forEach(k => { START[k] = acc; acc += LEN[k] || SCENE; }); }
+const TOTAL = START.score + LEN.score + 100;
+$('#track').innerHTML = PARTS.map((pt, i) => `<button data-p="${i}"><b>${pt.n}</b>${pt.short}</button>`).join('');
+let titleShown = 0;
+// the bottom of a part's title, measured once with a hidden copy, so a drawing can sit clear of it
+const titleBottoms = new Map();
+function titleBottom(i){ const key = i + ':' + innerWidth + 'x' + innerHeight; if (titleBottoms.has(key)) return titleBottoms.get(key);
+  const t = $('#title'), c = t.cloneNode(false); c.id = ''; c.classList.add('compact'); c.style.visibility = 'hidden'; c.style.opacity = 0; const pt = PARTS[i];
+  c.innerHTML = `<div class="in"><div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p></div>`; t.parentNode.appendChild(c);
+  const o = ov.getBoundingClientRect(), kids = Array.from(c.querySelector('.in').children), rg = document.createRange();
+  const right = Math.max(...kids.map(k => { rg.selectNodeContents(k); return rg.getBoundingClientRect().right; })) - o.left;
+  const b = {bottom: c.querySelector('.in').getBoundingClientRect().bottom - o.top, right}; c.remove(); titleBottoms.set(key, b); return b; }
+function fillTitle(i){ const pt = PARTS[i]; $('#title .in').innerHTML = `<div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p>`; }
+function phaseAt(v){
+  if (v < FALL) return {mode: 'fall', s: v / FALL};
+  let k = SCENES[0]; SCENES.forEach(x => { if (v >= START[x]) k = x; });
+  return {mode: k, s: Math.min(1, (v - START[k]) / (LEN[k] || SCENE))};
+}
+const radiusAt = s => RMAX * Math.pow(RMIN / RMAX, s);
+
+/* ---------- subtitles ---------- */
+const T = {std: ['std', 'Standard physics'], A: ['A', 'Tier A'], AB: ['AB', 'Tier A/B'], B: ['B', 'Tier B'], BC: ['BC', 'Tier B/C'], C: ['C', 'Tier C'], prem: ['prem', 'Premised'], pred: ['pred', 'Registered prediction'], ana: ['ana', 'Analogy']};
+const KIND = {Thm: 1, Prop: 1, Lem: 1, Cor: 1, Fact: 1, Def: 1, Rem: 1, Asm: 1, Obs: 1, Rec: 1, Conj: 1, Comp: 1, Premise: 1};
+function refHtml(t){
+  // "T5 Thm 2.5, 2.7 · T6": each number that the deposited paper's label table knows opens that result in the Lab
+  return t.split(' \u00b7 ').map(part => {
+    const m = part.match(/^(T\d+[a-c]?)\s+(\w+)\s+([\d.]+(?:,\s*[\d.]+)*)$/);
+    if (!m || !KIND[m[2]] || !LAB.refs[m[1]]) return part;
+    const nums = m[3].split(/,\s*/).map(n => { const id = LAB.refs[m[1]][n]; return id ? `<a href="#" class="labref" data-lab="${id}" title="Open in the Physics Graph">${n}</a>` : n; });
+    return `${m[1]} ${m[2]} ${nums.join(', ')}`;
+  }).join(' \u00b7 ');
+}
+const tagHtml = tags => tags.map(t => typeof t === 'string' ? `<span>${refHtml(t)}</span>` : `<span class="chip ${T[t[0]][0]}">${T[t[0]][1]}</span>`).join('');
+const FALLCAPS = [
+  {hi: 29, lo: 6.4, t: 'The dark circle is the shadow. Hot gas orbits in a thin disc, and the light from its far side is bent over the top and under the bottom. The disc ends at the last stable orbit; you fall on towards it, ever faster, and the starlight ahead turns blue.', g: [['std'], 'r = 6M']},
+  {hi: 6.4, lo: 1.5, t: 'At the photon sphere, light itself can orbit the hole. Then you cross the horizon and feel nothing, but from here nothing can get back out. Time left on your watch: {tau}.', g: [['std'], 'r = 3M, 2M']},
+  {hi: 1.5, lo: 0.235, t: 'Inside, the centre is a moment in your future, as sure as tomorrow. Tides stretch you along the fall and squeeze you from the sides, by fixed powers of the time left, the Kasner exponents \u22121/3, 2/3, 2/3. Among simple rescalings, the papers show only these let the description reach the centre intact.', g: [['std'], 'T6 Lem 5.1', ['A'], 'T4 Thm 8.7, 8.16']},
+  {hi: 0.235, lo: 0, t: 'In the papers’ description, the light cones fold flat onto a single line. The equations are about to divide by zero.', g: [['B'], 'T5 Prop 2.5, 2.7']},
+];
+const SCAPS = {
+  move: [[0, 1.01, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction of time and one more of space. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']]],
+  twistor: [[0, 0.3, 'The 2 + 4 space is not new. Roger Penrose used it in 1967 to describe rays of light, through its spinors: the conformal spinors (his twistors).', [['std'], 'Penrose 1967']],
+         [0.3, 1.01, 'Up there the reciprocal is defined everywhere. The rule lifts every point of spacetime onto a light ray of the larger space and works with the rays instead. Written out, that lift is Penrose\u2019s founding equation of twistor theory, term for term: the classical Klein correspondence, reached from the other end.', [['A'], 'T1 Thm 4.10 \u00b7 \u00a78.1', ['AB'], 'T9 Thm 4.2']]],
+  switches: [[0, 0.5, 'No ordinary numbers can fill the gap. What the move leaves instead are switches, each on or off and never on twice: the algebra of the Pauli exclusion principle, and nobody put it in.', [['B'], 'T5 §4, Fact 5.4']],
+         [0.5, 1.01, 'Where classical gravity breaks, fermionic structure appears. Click a quantum switch.', []]],
+  paradox: [[0, 1.01, 'Back outside, far away. Hawking found that black holes glow, very faintly, and slowly evaporate, and the glow looks completely random. So when the hole is gone, where is everything that fell in? Quantum theory says information is never destroyed: that is the information paradox.', [['std'], 'Hawking 1975']]],
+  fate: [[0, 0.3, 'And the matter itself? Falling in, its mass adds to the hole\u2019s, so the hole grows. The matter reaches the centre, where the switches are.', [['std'], ['C'], 'T14 Prop 6.5']],
+         [0.3, 1.01, 'Then, very slowly, the glow carries that energy back out and the hole shrinks again; the information climbs into the switches and comes back in the correlations. {charge} Its count of protons and neutrons does not: the glow is far too cold to make them, so that count is lost. That nothing at all is left behind is a further premise.', [['C'], 'T14 Prop 6.5', ['prem'], 'P5 · no remnant']]],
+  thermo: [[0, 1.01, 'From out here each switch looks random: on with a chance set by the temperature, less often the more energy it holds. This one: {TH}. The temperature follows from two stated premises, not from the mathematics alone, and the papers say so.', [['C'], 'T5 Thm 7.20', ['prem'], 'the temperature']]],
+  info: [[0, 0.22, 'Catch the glow one quantum at a time and each looks random, like a coin weighted by the temperature. That is what thermal means.', [['C'], 'T5 Thm 7.20']],
+         [0.22, 0.46, 'But each quantum has a partner, left behind at the centre. On its own, the partner looks just as random.', [['B'], 'T5 Thm 7.27']],
+         [0.46, 0.72, 'Compare them in pairs and the randomness cancels. The message was never in either one. It is in how they are related: the correlations.', [['ana'], 'a one-time pad']],
+         [0.72, 1.01, 'Our four-dimensional books keep only the plain counts, so the message looks lost. The six-dimensional books also keep the quantum correlations, and the papers compute the gap exactly.', [['B'], 'T5 Thm 9.3, Cor 9.4']]],
+  car: [[0, 0.3, 'The larger space has light rays of its own, so the move can be made again: one more direction of time, one more of space. And again. That is a tower.', [['A'], 'T3 Thm 4.2']],
+         [0.3, 1.01, 'Each floor adds exactly one switch: spacetime holds one, and every floor up one more. Climb for ever and the floors together carry the algebra of a free fermion field, as many switches as you like: the CAR algebra.', [['A'], 'T3 Thm 4.2, 4.3, 5.6']]],
+  dark: [[0, 0.31, 'Climbing never changes one number: time directions minus space directions, counted round a clock of eight. The clock is established mathematics: Élie Cartan classified these algebras by that number in 1908, and the same eightfold repetition reappears in topology as Bott periodicity (1959). So there are eight towers (in the same universe), and our world is one of them.', [['std'], 'Cartan 1908 · Bott 1959', ['A'], 'T1 Thm 2.5, 7.1', ['C'], 'T14 Prop 3.1']],
+         [0.31, 0.64, 'Two cannot hold matter: one has no time, one has two. One is a mirror copy of ours, with the same particles and forces. The other four have one space direction fewer, or one more.', [['C'], 'T14 Prop 3.1, Thm 4.3']],
+         [0.64, 1.01, 'The towers touch only through gravity, at first order and under the papers\u2019 premises. Their matter weighs, but never shines and never collides with ours. That is what dark matter would look like.', [['C'], 'T14 Prop 4.1']]],
+  arrow: [[0, 0.3, 'Every switch is a pair of light rays. One creates, the other destroys. But which is which?', [['C'], 'T14 Prop 5.1']],
+         [0.3, 0.62, 'The laws cannot say. Swapping the two everywhere changes no law at all, and the papers prove, under named premises, that no law could ever fix the choice.', [['C'], 'T14 Prop 5.2']],
+         [0.62, 1.01, 'On the papers’ premises, the choice was made once, at the start. It decides which is matter and which antimatter, and it is the direction of time: one bit, read twice.', [['C'], 'T14 Prop 5.2, Rem 5.3']]],
+  ratio: [[0, 0.12, 'Our world and its mirror have the same shape, one the reflection of the other. Laid on top of each other they are one unit ball, holding two worlds.', [['C'], 'T14 Prop 7.1, Fig. 3']],
+         [0.12, 0.25, 'The others nest around the same centre. Hide one dimension and our ball is a slice through the five-dimensional towers\u2019 four-ball, and the three-dimensional towers\u2019 disc is a slice through ours. Each shape again holds two towers.', [['C'], 'T14 Prop 7.1']],
+         [0.25, 0.38, 'Now three assumptions, none derived: every quantum weighs the same; each tower holds one quantum per unit ball of its own space; and each counts through one unit of the direction we lack or it lacks.', [['prem'], 'T14 R1, R2, R3']],
+         [0.38, 0.445, 'One quantum each, but different volumes: the disc has area \u03c0, our ball volume 4\u03c0/3, the four-ball \u03c0\u00b2/2. Density is what to compare: gravity responds to mass per volume, not to mass alone, and what Planck measures is a ratio of densities. Every tower acts on our gravity through our three directions of space, so its density counts in our volume.', [['C'], 'T14 Lem 6.1, Prop 7.6, 7.24']],
+         [0.445, 0.52, 'Compare any tower\u2019s density with ours and the mass m appears top and bottom, so it cancels. Only the volume is left.', [['C'], 'T14 Prop 7.6, 7.12']],
+         [0.52, 0.79, 'So each tower’s share, against ours, is our ball divided by its own: 4/3 for the three-dimensional towers, 8/(3\u03c0) for the five-dimensional ones, 1 for the mirror. Computed: add the five dark shares, 1 + 2 \u00d7 4/3 + 2 \u00d7 8/(3\u03c0) = (11\u03c0 + 16)/(3\u03c0) = 5.364.', [['C'], 'T14 Prop 7.6']],
+         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The rule was found by fitting this number, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['C'], 'T14 Obs 7.31']]],
+  towers: [[0, 0.32, 'All the towers feel one gravitational field, so a black hole\u2019s centre is shared by all of them.', [['C'], 'T14 Prop 6.5']],
+         [0.32, 0.66, 'What falls in gives its energy back as radiation into every populated tower; its information, and for small holes its charge, comes back in its own.', [['C'], 'T14 Prop 6.5']],
+         [0.66, 1.01, 'So the last flash of an evaporating black hole, if small ones exist, is dimmed by a factor between 2 and about 5.5. A registered prediction for the searches.', [['pred'], 'T14 Prop 6.5 \u00b7 T17']]],
+  count: [[0, 1.01, 'If the papers’ count is right, one switch for every 4 ln 2, about 2.8, Planck areas of horizon, each cycle of the hole’s clock: for this black hole, {S} of them. That density is predicted, not derived: it rests on a flagged premise and a calibration still open.', [['C'], 'T8 Cor 4.4', ['pred'], 'T17']]],
+  scramble: [[0, 0.28, 'Drop a message in. How fast does the hole mix it through all its switches?', [['std'], 'Hayden & Preskill 2007']],
+         [0.28, 1.01, 'A touch on one switch spreads to more and more of them, at the rate 2\u03c0T: the hole\u2019s own clock, set by the same premise as its temperature. At that rate the hole mixes a message through all its switches in {scr}. The rate meets the chaos bound, but the switches are not chaotic: real chaos is left open.', [['C'], 'T8 Asm 6.1', ['std'], 'Maldacena, Shenker, Stanford 2016']]],
+  score: [[0, 1.01, 'This framework predicts no echoes; none confirmed so far, and one would refute it. Wherever the papers touch data, they state what would prove them wrong: {npred} predictions are on record. {pressed}', [['pred'], 'T8 Rec 7.1, 7.2 \u00b7 T17 \u00a74'], 'end']],
+  echo: [[0, 0.34, 'When black holes merge, the new one rings like a bell.', [['std']]],
+         [0.34, 1.01, 'If its horizon had structure a Planck length outside it, echoes would follow; for a hole the size of Sagittarius A*, {echo} apart.', ['other proposals']]],
+};
+/* ---------- the player: a slide show. Each subtitle is a step; Next cuts to it at once (its subtitle
+   appears immediately) and then plays the step's own movement slowly, over three to six seconds. ---------- */
+const vOfR = r => FALL * Math.log(RMAX / r) / Math.log(RMAX / RMIN);
+// parts whose title stays on screen over the first step of their first scene, instead of a slide of its own
+// t5's title stays at the top over the tower; t6's and t7's sit as a heading above the subtitle, clear of the drawings
+const MERGED_CAP = new Set(['t6', 't7']);
+const MERGED = new Set(['t5', 't6', 't7']), MERGED_FIRST = {}; PARTS.forEach((pt, i) => { if (MERGED.has(pt.k) && pt.scenes.length) MERGED_FIRST[pt.scenes[0]] = i; });
+const STEPS = [[0, 0]];              // [start, stop] on the timeline, in viewport heights
+FALLCAPS.forEach(cp => STEPS.push([vOfR(cp.hi) + 0.3, cp.lo > 0 ? vOfR(cp.lo) - 0.3 : FALL - 0.5]));
+SCENES.forEach(k => { const n = LEN[k] || SCENE;
+  if (TITLES.has(k)) { if (!MERGED.has(k)) STEPS.push([START[k] + 0.1 * n, START[k] + 0.5 * n]); return; }
+  (SCAPS[k] || []).forEach(c => { const b = Math.min(c[1], 1); STEPS.push([START[k] + (c[0] + 0.004) * n, START[k] + (c[0] + 0.7 * (b - c[0])) * n]); }); });
+const STOPS = STEPS.map(x => x[1]);
+const RATE = 18;                     // viewport heights a second: the pace of the movement inside a step
+let vNow = 0, idx = 0, anim = null, snap = true;
+const ease = x => (1 - Math.cos(Math.PI * x)) / 2;
+function goStep(i, play = true){
+  i = Math.max(0, Math.min(STEPS.length - 1, i)); idx = i; const [a, b] = STEPS[i]; snap = true;
+  if (!play || reduce || b - a < 1) { anim = null; vNow = b; }
+  else { vNow = a; anim = {from: a, to: b, t0: performance.now(), dur: Math.min(6000, Math.max(2600, (b - a) / RATE * 1000))}; }
+  ui();
+}
+function playerV(now){
+  if (VIDEO) return vVh;
+  if (anim) { const x = Math.min(1, (now - anim.t0) / anim.dur); vNow = anim.from + (anim.to - anim.from) * ease(x); if (x >= 1) { anim = null; autoNext(); } }
+  return vNow;
+}
+const LAST = () => idx === STEPS.length - 1;
+function ui(){
+  $('#back').disabled = idx === 0; $('#next').disabled = LAST();
+  $('#next').classList.toggle('pulse', idx === 0); $('#stepn').textContent = `${idx + 1} / ${STEPS.length}`;
+  document.body.classList.toggle('atend', LAST());
+}
+const next = () => goStep(idx + 1), back = () => goStep(idx - 1, false);
+$('#next').addEventListener('click', () => { stopAuto(); next(); }); $('#back').addEventListener('click', () => { stopAuto(); back(); });
+$$('#track button').forEach(b => b.addEventListener('click', () => { stopAuto(); const i = +b.dataset.p;
+  const v0 = i ? START[PARTS[i].k] : 0; goStep(STOPS.findIndex(v => v >= v0), i > 0); }));
+addEventListener('keydown', e => {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  const onCtl = e.target.closest('a,button');
+  if (['ArrowRight', 'ArrowDown', 'PageDown'].includes(e.key) || ((e.key === ' ' || e.key === 'Enter') && !onCtl)) { e.preventDefault(); stopAuto(); next(); }
+  else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); stopAuto(); back(); }
+  else if (e.key === 'Home') { stopAuto(); goStep(0, false); } else if (e.key === 'End') { stopAuto(); goStep(STEPS.length - 1, false); }
+});
+// one turn of the wheel is one step, taken once the wheel has been still for half a second, so the
+// momentum of a trackpad cannot carry past a step; after the last step the page scrolls on to the notes
+let wheelQuiet = 0, wheelArmed = true;
+addEventListener('wheel', e => {
+  if (scrollY > 2 || (LAST() && e.deltaY > 0)) return;
+  e.preventDefault(); const now = performance.now();
+  if (now - wheelQuiet > 500) wheelArmed = true; wheelQuiet = now;
+  if (!wheelArmed || Math.abs(e.deltaY) < 4) return;
+  wheelArmed = false; stopAuto(); e.deltaY > 0 ? next() : back();
+}, {passive: false});
+let touchY = null;
+addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => { if (touchY === null || scrollY > 2) return; const dy = touchY - e.changedTouches[0].clientY; touchY = null;
+  if (e.target.closest('a,button')) return; if (dy > 50 && !LAST()) { stopAuto(); next(); } else if (dy < -50) { stopAuto(); back(); } }, {passive: true});
+// Fall for me: the steps of the fall play one after another, with time to read each
+let auto = false, autoT = null;
+function stopAuto(){ auto = false; clearTimeout(autoT); $('#autoFall').textContent = 'Fall for me'; }
+function autoNext(){ if (!auto) return; if (idx >= FALLCAPS.length) { stopAuto(); return; } autoT = setTimeout(() => { if (auto) next(); }, 1800); }
+$('#autoFall').addEventListener('click', () => { if (auto) return stopAuto(); auto = true; $('#autoFall').textContent = 'Stop'; next(); });
+
+let capKey = null;
+function fill(t, live){ return t.replace(/\{(\w+)\}/g, (_, k) => live[k] !== undefined ? live[k] : ''); }
+function setCap(key, text, tags, acts){
+  const box = $('#cap');
+  if (key === capKey) { if ($('#capLine').textContent !== text) $('#capLine').textContent = text; return; }
+  capKey = key;
+  if (!key) { box.classList.remove('show'); return; }
+  { $('#capLine').textContent = text; $('#capTags').innerHTML = tagHtml(tags);
+    $('#capActs').innerHTML = acts === 'end' ? '<a class="btn" href="#" data-lab="universe">Explore the Physics Graph</a><a class="btn" href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Read the papers</a><button class="btn hot" id="again">Fall again</button>' : '';
+    const ag = $('#again'); if (ag) ag.addEventListener('click', () => { stopAuto(); goStep(0, false); });
+    box.classList.add('show'); }
+}
+
+/* ---------- overlay: drawings anchored in the scene ---------- */
+const ov = $('#ov'), ox = ov.getContext('2d');
+let OW = 0, OH = 0;
+const capMeas = (() => { const m = $('#cap').cloneNode(true); m.id = ''; m.classList.add('show'); m.style.visibility = 'hidden'; m.querySelectorAll('[id]').forEach(e => e.removeAttribute('id')); $('#cap').parentNode.appendChild(m); return m; })();
+const regionCache = new Map();
+function region(scene){
+  if (regionCache.has(scene)) return regionCache.get(scene);
+  const o = ov.getBoundingClientRect(), top = $('#track').getBoundingClientRect().bottom - o.top + 14;
+  let bot = OH - 120;
+  (SCAPS[scene] || []).forEach(c => { capMeas.children[0].textContent = c[2].replace(/\{\w+\}/g, '0.000×10⁰⁰ units'); capMeas.children[1].innerHTML = tagHtml(c[3]); capMeas.children[2].innerHTML = c[4] === 'end' ? '<a class="btn">x</a>' : '';
+    bot = Math.min(bot, capMeas.getBoundingClientRect().top - o.top - 18); });
+  const r = {top, bot}; regionCache.set(scene, r); return r;
+}
+function sizeOv(){ regionCache.clear(); const r = ov.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); OW = r.width; OH = r.height; ov.width = Math.round(OW * d); ov.height = Math.round(OH * d); ox.setTransform(d, 0, 0, d, 0, 0); }
+const env = (x, a, b, f = 0.28) => { if (x < a || x > b) return 0; const w = (b - a) * f; return Math.min(1, (x - a) / w, (b - x) / w); };
+const envLog = (r, hi, lo) => { if (r > hi || r < lo) return 0; const a = Math.log(hi), b = Math.log(Math.max(lo, 1e-3)), x = Math.log(r), w = (a - b) * 0.18; return Math.min(1, (a - x) / w, (x - b) / w); };
+const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a'};
+// a dark plate behind labels that sit over the disc's glow
+function plate(x, y, w, h, a = 0.62){ ox.save(); ox.fillStyle = `rgba(6,5,5,${a})`; ox.beginPath(); ox.roundRect ? ox.roundRect(x, y, w, h, 8) : ox.rect(x, y, w, h); ox.fill(); ox.restore(); }
+function lab(text, x, y, col, align = 'left', size = 15){
+  ox.font = `italic ${size}px "Source Serif 4", Georgia, serif`; ox.textAlign = align; ox.textBaseline = 'middle';
+  ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.75)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y);
+}
+function mono(text, x, y, col, align = 'center', size = 12){ ox.font = `${size}px "IBM Plex Mono", Consolas, monospace`; ox.textAlign = align; ox.textBaseline = 'middle'; ox.lineWidth = 3; ox.strokeStyle = 'rgba(0,0,0,.7)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y); }
+function leader(x1, y1, x2, y2, col){ ox.strokeStyle = col; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke(); ox.fillStyle = col; ox.fillRect(x1 - 2, y1 - 2, 4, 4); }
+function hash(i){ const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+
+function overlayFall(cx, cy, unit){
+  const aligned = Math.max(0, 1 - (Math.abs(yaw) + Math.abs(pitch)) * 6) * (lookBack ? 0 : 1);
+  if (aligned <= 0) { overlayKasner(); return; }
+  const rs = shadowAngle(R) / fovNow * unit;
+  const wideF = OW >= OH;
+  // these stay up to the end of the step, so they can be read while it rests; they go as the next step falls on
+  let a = envLog(R, 30, 4.5) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a;
+    // labels kept on screen: clear of the chapter strip, the readout at top right and the subtitle; each leader runs
+    // from the feature it names to the label's near end. The shadow's points into the dark between the band and its
+    // lensed lower arc; the far side's sits up and to the left, away from the readout
+    const o = ov.getBoundingClientRect(), hb = $('#hud').getBoundingClientRect(), cb = $('#cap').getBoundingClientRect();
+    const yMin = $('#track').getBoundingClientRect().bottom - o.top + 18, yMax = (cb.height ? cb.top - o.top : OH - 140) - 22, hudL = hb.left - o.left - 14, hudB = hb.bottom - o.top + 6;
+    const put = (text, ax, ay, lx0, ly0, align, mono2) => {
+      ox.font = 'italic 15px "Source Serif 4", Georgia, serif'; const w = Math.max(ox.measureText(text).width, mono2 ? mono2.length * 6.6 : 0);
+      let ly = Math.min(yMax - (mono2 ? 20 : 0), Math.max(yMin, ly0)), lx = align === 'right' ? Math.max(16 + w, lx0) : Math.min(OW - 16 - w, lx0);
+      if (ly < hudB && (align === 'right' ? lx : lx + w) > hudL) lx = align === 'right' ? hudL : hudL - w;
+      leader(ax, ay, align === 'right' ? lx + 6 : lx - 6, ly, C.t2); plate((align === 'right' ? lx - w : lx) - 8, ly - 13, w + 16, mono2 ? 46 : 26, 0.5); lab(text, lx, ly, C.text, align);
+      if (mono2) mono(mono2, lx, ly + 20, C.t3, align, 11); };
+    put('the shadow', cx - rs * 0.42, cy + rs * 0.5, cx - rs * 1.6, cy + rs * 1.5, 'right');
+    const gx = Math.min(cx + rs * 1.85, OW - 40); put('hot gas orbiting in a thin disc, seen edge-on', gx, cy, gx + 46, cy + 44, 'left', 'drawn thin; the gas you fall past is left out');
+    const fx = cx + rs * 1.33 * Math.cos(-1.95), fy = cy + rs * 1.33 * Math.sin(-1.95); put('the disc’s far side, its light bent over the top', fx, fy, fx - 56, fy - 40, 'right');
+    // the starlight's: the dark sky just outside the lower right of the lensed ring, raised if the subtitle is near
+    { const r2 = rs * 1.62; let th = 1.0; if (cy + r2 * Math.sin(th) > yMax - 34) th = Math.asin(Math.max(0.15, Math.min(1, (yMax - 34 - cy) / r2)));
+      const qx = cx + r2 * Math.cos(th), qy = cy + r2 * Math.sin(th); put('starlight, bent around the hole', qx, qy, qx + 46, qy + 26, 'left'); }
+  }
+  a = envLog(R, 3.7, 2.45) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a; const px = cx + rs * 1.02 * Math.cos(-2.4), py = cy + rs * 1.02 * Math.sin(-2.4); leader(px, py, px - 56, py - 44, C.t2);
+    lab('light that circled the hole', px - 62, py - 44, C.text, 'right'); }
+  if (R < 2.4 && R > 1.62) { const k = (2.4 - R) / 0.78; ox.globalAlpha = aligned * (1 - k) * Math.min(1, k * 6);
+    const rr = rs * (1.02 + 2.6 * Math.pow(k, 1.4)); ox.strokeStyle = C.gold; ox.lineWidth = 2; ox.beginPath(); ox.arc(cx, cy, rr, 0, 2 * Math.PI); ox.stroke();
+    lab('the horizon, passing you', cx, cy - rr - 14, C.gold, 'center', 16); }
+  a = envLog(R, 1.3, 0.42) * aligned;
+  if (a > 0 && wideF) { ox.globalAlpha = a; const px = cx + rs * 1.07 * Math.cos(-0.6), py = cy + rs * 1.07 * Math.sin(-0.6); leader(px, py, px + 60, py - 40, C.t2); lab('the whole outside universe, squeezed into a ring', px + 66, py - 40, C.text); }
+  a = envLog(R, 0.232, 0.02) * aligned;
+  if (a > 0) { ox.globalAlpha = a;
+    // the future light cone in the papers' (Painleve-Gullstrand) coordinates: light moves at dr/dt = -beta -+ 1 with beta = sqrt(2M/r),
+    // both edges inward inside the horizon, closing onto one line as r -> 0 (T5 Prop 2.5); drawn with r to the right and t up
+    const bt = Math.sqrt(2 / R), L = Math.min(unit * 0.55, 120), ax = cx + L * 0.55, ay = cy + L * 0.45;
+    const n1 = Math.hypot(bt + 1, 1), n2 = Math.hypot(bt - 1, 1), e1 = [-(bt + 1) / n1, -1 / n1], e2 = [-(bt - 1) / n2, -1 / n2];
+    ox.fillStyle = 'rgba(240,194,122,0.22)'; ox.beginPath(); ox.moveTo(ax, ay); ox.lineTo(ax + L * e1[0], ay + L * e1[1]); ox.lineTo(ax + L * e2[0], ay + L * e2[1]); ox.closePath(); ox.fill();
+    ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.beginPath(); ox.moveTo(ax + L * e1[0], ay + L * e1[1]); ox.lineTo(ax, ay); ox.lineTo(ax + L * e2[0], ay + L * e2[1]); ox.stroke();
+    ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(ax + 14, ay); ox.lineTo(ax + 14, ay - 34); ox.stroke(); mono('time', ax + 14, ay - 44, C.t3);
+    lab('a light cone, in the papers’ coordinates', ax + 22, ay + 18, C.gold);
+    const deg = (Math.atan(bt + 1) - Math.atan(bt - 1)) * 180 / Math.PI; mono(deg.toFixed(deg < 1 ? 2 : 1) + '° wide', ax - L * 0.5, ay + 18, C.t2); }
+  ox.globalAlpha = 1;
+  overlayKasner();
+}
+// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13)
+function overlayMove(s){
+  const S = Math.min(OW, OH), narrow = OW < OH, sm = sm01, cx = OW / 2, {top, bot} = region('move');
+  const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return; ox.globalAlpha = a;
+  const head = narrow ? 44 : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
+  const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
+  const add = [[-0.62, -0.78, C.red, '+ time'], [0.66, -0.75, C.red, '+ space']];
+  base.forEach(([dx, dy, col, t]) => { ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke(); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); });
+  const g = sm((s - 0.01) / 0.5);
+  add.forEach(([dx, dy, col, t]) => { if (g <= 0) return; ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L * g, cy + dy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + dx * (L + 22), cy + dy * (L + 22), col, 'center'); });
+  const sig = g < 1 ? '1 + 3' : '2 + 4', fs = Math.round(Math.min(S * 0.065, 56));
+  ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; ox.fillStyle = C.text;
+  if (narrow) { ox.textAlign = 'center'; ox.fillText(sig, cx, top + fs * 0.8); }
+  else { ox.textAlign = 'right'; ox.fillText(sig, cx - L * 1.25, cy - L * 0.35); mono(g < 1 ? 'time + space' : 'one more of each', cx - L * 1.25, cy - L * 0.35 + 24, C.t3, 'right', 11); }
+  mono(g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
+  ox.globalAlpha = 1;
+}
+// switches
+const NSW = 20, swState = Array.from({length: NSW}, (_, i) => hash(i + 3) < 0.4); let swFlash = null;
+function swPos(i, cx, cy){ const rr = Math.min(OW, OH) * 0.27, a = -Math.PI / 2 + i / NSW * 2 * Math.PI; return [cx + rr * Math.cos(a), cy + rr * Math.sin(a)]; }
+function overlaySwitches(s, cx, cy, now){
+  const shown = Math.min(NSW, Math.floor(s / 0.12 * NSW) + 1);
+  for (let i = 0; i < shown; i++) { const [x, y] = swPos(i, cx, cy), on = swState[i];
+    ox.beginPath(); ox.arc(x, y, 9, 0, 2 * Math.PI); ox.lineWidth = 1.6; ox.strokeStyle = on ? C.green : C.t2; ox.fillStyle = on ? C.green : 'rgba(16,14,13,.6)'; ox.fill(); ox.stroke(); }
+  if (s > 0.08) { mono('f*  switches on', cx, cy - 12, C.green, 'center', 13); mono('f   switches off', cx, cy + 12, C.t2, 'center', 13); }
+  if (swFlash && now - swFlash.t < 1600) { const [x, y] = swPos(swFlash.i, cx, cy); ox.globalAlpha = 1 - (now - swFlash.t) / 1600; lab(swFlash.msg, x, y - 22, swFlash.col, 'center', 14); ox.globalAlpha = 1; }
+}
+ov.addEventListener('click', e => {
+  if (mode !== 'switches') return; const r = ov.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, cx = OW / 2, cy = OH * 0.44;
+  for (let i = 0; i < NSW; i++) { const [px, py] = swPos(i, cx, cy); if (Math.hypot(px - x, py - y) < 18) {
+    swState[i] = !swState[i]; swFlash = {i, t: performance.now(), msg: swState[i] ? 'f*: on (once only)' : 'f: off', col: swState[i] ? C.green : C.t2}; dirtyOv = true; return; } }
+});
+// outside scenes: where the hole sits on screen
+function holeOnScreen(cx, cy, unit){ const x = cx - renderYaw / fovNow * unit, y = cy + renderPitch / fovNow * unit; const rs = shadowAngle(renderR) / fovNow * unit; return [x, y, rs]; }
+function overlayThermo(s, hx, hy, rs, now){
+  const n = 28, p = 1 / (Math.E + 1), tick = Math.floor((now - T0) / 650);
+  const a = env(s, 0.02, 1.3, 0.1); if (a <= 0) return; ox.globalAlpha = a;
+  let on = 0;
+  for (let i = 0; i < n; i++) { const ang = i / n * 2 * Math.PI, x = hx + rs * 1.6 * Math.cos(ang), y = hy + rs * 1.6 * Math.sin(ang); const lit = hash(i * 31 + (reduce ? 0 : tick) * 7.3) < p; on += lit;
+    ox.beginPath(); ox.arc(x, y, 5, 0, 2 * Math.PI); ox.fillStyle = lit ? C.green : 'rgba(16,14,13,.5)'; ox.strokeStyle = lit ? C.green : C.t3; ox.lineWidth = 1.2; ox.fill(); ox.stroke(); }
+  mono(on + ' of ' + n + ' on now  ·  27% on average', hx, hy - rs * 1.6 - 22, C.t2, 'center', 12);
+  ox.globalAlpha = 1;
+}
+const MSG = 'NOTHING IS LOST', KEY = Array.from({length: 32}, (_, i) => Math.floor(hash(i + 91) * 256));
+function overlayInfo(s, hx, hy, rs, now){
+  const t = (now - T0) / 1000;
+  // radiation streaming out: bytes leaving the hole
+  ox.globalAlpha = Math.min(1, s * 6);
+  for (let k = 0; k < 26; k++) { const life = ((reduce ? 0.5 : t * 0.12) + hash(k)) % 1, ang = hash(k + 50) * 2 * Math.PI, d = Math.min(rs * (1.1 + life * 3.2), OH * 0.42);
+    const byte = Math.floor(hash(k * 13 + Math.floor((reduce ? 0 : t * 0.12) + hash(k))) * 256);
+    ox.globalAlpha = Math.min(1, s * 6) * (1 - life) * 0.9; mono(byte.toString(16).toUpperCase().padStart(2, '0'), hx + d * Math.cos(ang), hy + d * Math.sin(ang), C.red, 'center', 12); }
+  ox.globalAlpha = 1;
+  // the received line: radiation bytes, decoding once the partner is used
+  const dec = Math.max(0, Math.min(1, (s - 0.5) / 0.35)), n = MSG.length, y = Math.min(OH * 0.66, hy + rs + 44), w = Math.min(OW - 40, n * 34), x0 = OW / 2 - w / 2 + 17;
+  for (let i = 0; i < n; i++) { const ch = MSG.charCodeAt(i), shownPlain = i < Math.floor(dec * n + 0.001);
+    mono(shownPlain ? (MSG[i] === ' ' ? '·' : MSG[i]) : (ch ^ KEY[i]).toString(16).toUpperCase().padStart(2, '0'), x0 + i * (w / n), y, shownPlain ? C.green : C.red, 'center', shownPlain ? 17 : 13); }
+  mono(dec > 0 ? 'decoded with the partner' : 'the radiation, as received', OW / 2, y + 24, C.t3, 'center', 11);
+  if (s > 0.42) { ox.globalAlpha = Math.min(1, (s - 0.42) * 8); ox.beginPath(); ox.arc(hx, hy, 6, 0, 2 * Math.PI); ox.fillStyle = C.plum; ox.fill(); lab('the partner, at the centre', hx + 12, hy - 14, C.plum); ox.globalAlpha = 1; }
+}
+
+// the dark towers and the shared hole (T1 Thm 7.1; T14 Prop 3.1, 4.1, 6.5, 7.1, 7.6)
+const TW = {us: ['#f0c27a', 0.18], mirror: ['#93b4da', 0.18], d3: ['#a6c497', 0.32], d5: ['#cf9bb5', 0.32]};
+function towerOf(k){ const h = hash(k * 7.7 + 2); return h < 0.18 ? 'us' : h < 0.36 ? 'mirror' : h < 0.68 ? 'd3' : 'd5'; }
+const RES = [ // residue: colour, short name, kind
+  ['#8d8377', 'empty: two times', 'sterile'], ['#a6c497', '3D', 'd3'], ['#93b4da', 'the mirror', 'mirror'], ['#cf9bb5', '5D', 'd5'],
+  ['#8d8377', 'empty: no time', 'sterile'], ['#cf9bb5', '5D', 'd5'], ['#f0c27a', 'ours', 'us'], ['#a6c497', '3D', 'd3']];
+function centreGeom(){ const narrow = OW < OH; return {narrow, hx: OW / 2, hy: OH * (narrow ? 0.44 : 0.4), Rb: narrow ? Math.min(OH * 0.18, OW * 0.36) : Math.min(OH * 0.23, OW * 0.36)}; }
+function nest(hx, hy, Rb, a, labels, narrow){
+  const ry = Rb * 0.3, la = 0.62, lx = Rb * Math.cos(la), ly = ry * Math.sin(la);
+  ox.globalAlpha = a;
+  const g = ox.createRadialGradient(hx - Rb * 0.3, hy - Rb * 0.35, Rb * 0.1, hx, hy, Rb);
+  g.addColorStop(0, 'rgba(207,155,181,0.18)'); g.addColorStop(1, 'rgba(207,155,181,0.05)');
+  ox.fillStyle = g; ox.beginPath(); ox.arc(hx, hy, Rb, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(207,155,181,0.75)'; ox.lineWidth = 1.3; ox.stroke();
+  ox.fillStyle = 'rgba(240,194,122,0.10)'; ox.beginPath(); ox.ellipse(hx, hy, Rb, ry, 0, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(240,194,122,0.85)'; ox.lineWidth = 1.4; ox.stroke();
+  ox.strokeStyle = 'rgba(166,196,151,0.95)'; ox.lineWidth = 1.6; ox.beginPath(); ox.moveTo(hx - lx, hy - ly); ox.lineTo(hx + lx, hy + ly); ox.stroke();
+  if (labels > 0) { ox.globalAlpha = a * labels;
+    if (narrow) {
+      lab('five-dimensional towers’ space: a four-ball', hx, hy - Rb - 52, C.plum, 'center', 13);
+      lab('a slice through it: ours, and the mirror’s', hx, hy - Rb - 34, C.gold, 'center', 13);
+      lab('a slice through ours: the three-dimensional towers’', hx, hy - Rb - 16, C.green, 'center', 13);
+    } else {
+      const p1 = [hx + Rb * Math.cos(-0.7), hy + Rb * Math.sin(-0.7)]; leader(p1[0], p1[1], p1[0] + 40, p1[1] - 30, C.plum); lab('the five-dimensional towers’ space: a four-ball', p1[0] + 46, p1[1] - 30, C.plum);
+      const p2 = [hx - Rb, hy]; leader(p2[0], p2[1], p2[0] - 30, p2[1] + 34, C.gold); lab('a slice through it: our space, and the mirror’s', p2[0] - 36, p2[1] + 34, C.gold, 'right');
+      const p3 = [hx + lx, hy + ly]; leader(p3[0], p3[1], p3[0] + 30, p3[1] + 40, C.green); lab('a slice through ours: the three-dimensional towers’', p3[0] + 36, p3[1] + 40, C.green);
+      mono('one centre, one gravity · drawn with two dimensions hidden', hx, hy - Rb - 18, C.t3, 'center', 11);
+    } }
+  ox.globalAlpha = 1;
+  return {ry, la, lx, ly};
+}
+function stack(x, y, w, h, n, col, alpha){ for (let k = 0; k < n; k++) { ox.globalAlpha = alpha * (1 - k * 0.16); ox.fillStyle = col; ox.fillRect(x - w / 2, y - k * (h + 3) - h, w, h); } ox.globalAlpha = 1; }
+function overlayDark(s, now){
+  const {narrow, hx, hy, Rb} = centreGeom(), S = Math.min(OW, OH);
+  // a: one tower, rung by rung
+  const aA = 0;
+  if (aA > 0) { ox.globalAlpha = aA; const rungs = [['1 + 3', 'our spacetime'], ['2 + 4', 'the completion'], ['3 + 5', ''], ['4 + 6', '']], shown = Math.min(4, 1 + Math.floor(s / 0.05)), W0 = S * 0.22, H0 = Math.max(16, S * 0.035);
+    for (let k = 0; k < shown; k++) { const y = hy + S * 0.16 - k * (H0 + 10), w = W0 * (1 + k * 0.18); ox.fillStyle = k === 0 ? 'rgba(240,194,122,0.85)' : 'rgba(224,122,85,' + (0.75 - k * 0.12) + ')'; ox.fillRect(hx - w / 2, y - H0, w, H0);
+      ox.font = '600 12px "IBM Plex Mono", Consolas, monospace'; ox.textAlign = 'center'; ox.textBaseline = 'middle'; ox.fillStyle = '#100e0d'; ox.fillText(rungs[k][0], hx, y - H0 / 2); if (rungs[k][1]) lab(rungs[k][1], hx + w / 2 + 12, y - H0 / 2, k === 0 ? C.gold : C.red); }
+    if (shown > 1) { lab('each rung: one more time direction, one more space direction', hx, hy + S * 0.16 + 26, C.t2, 'center', 14); }
+    ox.globalAlpha = 1; }
+  // b-d: the clock of eight towers
+  const aB = env(s, 0.2, 1.3, 0.08);
+  if (aB > 0) { const Rc = narrow ? OW * 0.27 : Math.min(OH * 0.22, OW * 0.26);
+    const coloured = Math.min(1, Math.max(0, (s - 0.46) / 0.06)), spokes = Math.min(1, Math.max(0, (s - 0.72) / 0.06));
+    ox.globalAlpha = aB; ox.strokeStyle = 'rgba(191,181,166,0.35)'; ox.lineWidth = 1; ox.beginPath(); ox.arc(hx, hy, Rc, 0, 2 * Math.PI); ox.stroke();
+    mono('time minus space, mod 8', hx, hy + (spokes > 0 ? 22 : 0), C.t3, 'center', 11);
+    if (spokes > 0) { lab('gravity', hx, hy - 8, C.text, 'center', 16); }
+    for (let r = 0; r < 8; r++) { const ang = -Math.PI / 2 + r * Math.PI / 4, x = hx + Rc * Math.cos(ang), y = hy + Rc * Math.sin(ang);
+      const [col, name, kind] = RES[r], c0 = r === 6 ? C.gold : C.t2, cc = coloured > 0.5 ? col : c0;
+      if (spokes > 0 && kind !== 'sterile') { ox.globalAlpha = aB * spokes * 0.6; ox.strokeStyle = cc; ox.setLineDash([3, 4]); ox.beginPath(); ox.moveTo(hx + (x - hx) * 0.2, hy + (y - hy) * 0.2); ox.lineTo(x, y); ox.stroke(); ox.setLineDash([]); }
+      ox.globalAlpha = aB; ox.fillStyle = '#100e0d'; ox.strokeStyle = cc; ox.lineWidth = r === 6 ? 2.2 : 1.4; ox.fillRect(x - 13, y - 13, 26, 26); ox.strokeRect(x - 13, y - 13, 26, 26);
+      mono(String(r), x, y, cc, 'center', 13);
+      stack(x, y - 17, 18, 4, 3, cc, aB * (kind === 'sterile' && coloured > 0.5 ? 0.35 : 0.9));
+      const vert = Math.abs(Math.cos(ang)) < 0.2; const lx = vert ? x + 24 : x + Math.cos(ang) * 30, ly = vert ? y : y + Math.sin(ang) * 30;
+      const tag = coloured > 0.5 ? (narrow && r === 2 ? 'mirror' : name) : (r === 6 ? 'ours' : '');
+      if (tag) { ox.globalAlpha = aB * (r === 6 ? 1 : coloured); lab(tag, lx, ly, cc, vert || Math.cos(ang) > 0.3 ? 'left' : 'right', narrow ? 12 : 14); }
+    }
+    ox.globalAlpha = 1; }
+}
+// the ratio, derived step by step (T14 Prop 7.1, R1-R3, Prop 7.6, Prop 7.15, Obs 7.31)
+function ballDraw(x, y, R, col, alpha, eq){ ox.globalAlpha = alpha; const g = ox.createRadialGradient(x - R * 0.3, y - R * 0.35, R * 0.1, x, y, R);
+  g.addColorStop(0, col.replace('1)', '0.28)')); g.addColorStop(1, col.replace('1)', '0.06)')); ox.fillStyle = g; ox.beginPath(); ox.arc(x, y, R, 0, 2 * Math.PI); ox.fill();
+  ox.strokeStyle = col; ox.lineWidth = 1.4; ox.stroke(); if (eq) { ox.setLineDash([3, 4]); ox.beginPath(); ox.ellipse(x, y, R, R * 0.3, 0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]); } ox.globalAlpha = 1; }
+function texL(t, x, y, col, size, align = 'left', weight = 500){ ox.font = `${weight} ${size}px "Source Serif 4", Georgia, serif`; ox.textAlign = align; ox.textBaseline = 'alphabetic'; ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.8)'; ox.strokeText(t, x, y); ox.fillStyle = col; ox.fillText(t, x, y); }
+function labFit(text, x, y, col, align, size){ let z = size; ox.font = `italic ${z}px "Source Serif 4", Georgia, serif`;
+  const room = align === 'right' ? x - 10 : align === 'left' ? OW - 10 - x : 2 * Math.min(x - 10, OW - 10 - x);
+  const w = ox.measureText(text).width; if (w > room) z = Math.max(10, Math.floor(z * room / w)); lab(text, x, y, col, align, z); }
+function overlayRatio(s, now){
+  const narrow = OW < OH;
+  const hx = narrow ? OW / 2 : OW * 0.3, hy = narrow ? OH * 0.39 : OH * 0.38, Rb = narrow ? Math.min(OH * 0.11, OW * 0.25) : Math.min(OH * 0.2, OW * 0.19);
+  const px = narrow ? 20 : OW * 0.55, pw = narrow ? OW - 40 : Math.min(OW * 0.4, 500), py = narrow ? 118 : OH * 0.16;
+  const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+  // A: two unit balls, ours and the mirror's, slide together
+  const m = sm(s / 0.07), squash = sm((s - 0.13) / 0.08), outer = sm((s - 0.16) / 0.07), inner = sm((s - 0.2) / 0.06);
+  const ry = Rb * (1 - 0.7 * squash);
+  if (squash < 1) { const d = Rb * 1.25 * (1 - m);
+    ['rgba(240,194,122,1)', 'rgba(147,180,218,1)'].forEach((col, k) => { const x = hx + (k ? d : -d);
+      ox.save(); ox.translate(x, hy); ox.scale(1, 1 - 0.7 * squash); ballDraw(0, 0, Rb, col, 1 - squash * 0.6, false); ox.restore(); });
+    if (m < 0.95) { lab('our unit ball', hx - d, hy + Rb + 22, C.gold, 'center'); lab('the mirror’s', hx + d, hy + Rb + 22, C.blue, 'center'); }
+    else if (squash < 0.2) { lab('one unit ball, two worlds', hx, hy + Rb + 22, C.text, 'center'); }
+    ox.globalAlpha = (1 - squash) * m; ox.strokeStyle = C.text; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(hx, hy); ox.lineTo(hx + Rb * Math.cos(-2.3), hy + Rb * Math.sin(-2.3)); ox.stroke();
+    lab('radius: one unit', hx + Rb * 0.55 * Math.cos(-2.3) - 6, hy + Rb * 0.55 * Math.sin(-2.3) - 8, C.text, 'right', 13); ox.globalAlpha = 1; }
+  // B: hide one dimension: our ball becomes the slice of the four-ball; the disc a slice of ours
+  if (outer > 0) { ballDraw(hx, hy, Rb, 'rgba(207,155,181,1)', outer, false); }
+  if (squash > 0) { ox.globalAlpha = squash; ox.fillStyle = 'rgba(240,194,122,0.12)'; ox.beginPath(); ox.ellipse(hx, hy, Rb, ry, 0, 0, 2 * Math.PI); ox.fill();
+    ox.strokeStyle = 'rgba(240,194,122,0.9)'; ox.lineWidth = 1.5; ox.stroke(); ox.setLineDash([4, 4]); ox.strokeStyle = 'rgba(147,180,218,0.9)'; ox.beginPath(); ox.ellipse(hx, hy, Rb + 2, ry + 2, 0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = 1; }
+  const la = 0.62, lx = Rb * Math.cos(la), ly = Rb * 0.3 * Math.sin(la);
+  if (inner > 0) { ox.globalAlpha = inner; ox.strokeStyle = 'rgba(166,196,151,1)'; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(hx - lx, hy - ly); ox.lineTo(hx + lx, hy + ly); ox.stroke(); ox.globalAlpha = 1; }
+  ox.fillStyle = C.text; ox.beginPath(); ox.arc(hx, hy, 2.4, 0, 2 * Math.PI); ox.fill();
+  // labels on the shapes: name, then volume, then share
+  const stage = s < 0.38 ? 'name' : s < 0.52 ? 'vol' : 'share';
+  if (outer > 0.5) { const L = {
+      d5: {name: 'four-ball: the two 5D towers (5, 3)', vol: 'four-ball  V₄ = π²/2 = 4.93', share: 'each 5D tower: V₃/V₄ = 8/(3π) = 0.85'},
+      us: {name: 'our ball: us + mirror (6, 2)', vol: 'our ball  V₃ = 4π/3 = 4.19', share: 'mirror: V₃/V₃ = 1'},
+      d3: {name: 'disc: the two 3D towers (7, 1)', vol: 'disc  V₂ = π = 3.14', share: 'each 3D tower: V₃/V₂ = 4/3'} };
+    const a = Math.min(1, (outer - 0.5) * 2) * (s > 0.66 && narrow ? Math.max(0, 1 - (s - 0.66) / 0.04) : 1); ox.globalAlpha = a;
+    const sz = narrow ? 12 : 15;
+    if (narrow) { ox.globalAlpha = a * (1 - env(s, 0.38, 0.53, 0.1)); lab(L.d5[stage], hx, hy - Rb - 14, C.plum, 'center', sz); ox.globalAlpha = a; lab(L.us[stage], hx, hy + Rb + 18, C.gold, 'center', sz); lab(L.d3[stage], hx, hy + Rb + 36, C.green, 'center', sz); }
+    else { labFit(L.d5[stage], hx, hy - Rb - 18, C.plum, 'center', sz);
+      const xr = hx - Rb - 14; labFit(L.us[stage], xr, hy - 14, C.gold, 'right', sz);
+      leader(hx - lx, hy - ly, xr + 4, hy + 16, C.green); labFit(L.d3[stage], xr, hy + 16, C.green, 'right', sz); }
+    if (!narrow && s < 0.38) mono('one centre · every shape a unit ball · one dimension hidden', hx, hy + Rb + 22, C.t3, 'center', 11);
+    ox.globalAlpha = 1; }
+  // C: the three premises
+  const aP = env(s, 0.25, 0.4, 0.14);
+  if (aP > 0 && !narrow) { ox.globalAlpha = aP; mono('THE THREE ASSUMPTIONS (NOT DERIVED)', px, py, C.t3, 'left', 11);
+    [['R1', 'every quantum has the same mass'], ['R2', 'one quantum per unit ball of a tower’s own space'], ['R3', 'each counts through one unit of a missing direction']]
+      .forEach(([k, t], i) => { mono(k, px, py + 30 + i * 28, C.gold, 'left', 12); lab(t, px + 36, py + 30 + i * 28, C.text, 'left', 16); });
+    mono('R1 has no mechanism in the odd towers, about 81% of the dark matter (T14c Prop 9.4)', px, py + 30 + 3 * 28 + 4, C.t3, 'left', 10);
+    ox.globalAlpha = 1; }
+  // C2: compare densities, and watch the mass cancel (T14 Prop 7.6 and its proof)
+  // the density working fades out, then the shares fade in, where they stood
+  const aQ = env(s, 0.38, 0.6, 0.1) * (s > 0.521 ? Math.max(0, 1 - (s - 0.521) / 0.022) : 1);
+  if (aQ > 0) { ox.globalAlpha = aQ; const st = Math.min(1, Math.max(0, (s - 0.445) / 0.03)), x = narrow ? OW / 2 : px, al = narrow ? 'center' : 'left', z = narrow ? 17 : 25, y0 = narrow ? py + 18 : py + 8, M = C.gold;
+    if (!narrow) mono('COMPARING DENSITIES', x, y0, C.t3, 'left', 11);
+    eqLine([['density  =  ', C.text], ['mass', C.text], [' ÷ ', C.text], ['volume', C.text], ['  =  ', C.text], ['m', M], [' / V', C.text]], x, y0 + (narrow ? 4 : 34), z * 0.85, al);
+    eqLine([['ρ', C.text], ['tower', C.text, 'sub'], [' / ρ', C.text], ['ours', C.text, 'sub'], ['  =  (', C.text], ['m', M, '', st], [' / V', C.text], ['D', C.text, 'sub'], [')  ÷  (', C.text], ['m', M, '', st], [' / V', C.text], ['3', C.text, 'sub'], [')', C.text]], x, y0 + (narrow ? 34 : 80), z, al);
+    if (st > 0) { ox.globalAlpha = aQ * st; eqLine([['=  V', C.gold], ['3', C.gold, 'sub'], [' / V', C.gold], ['D', C.gold, 'sub']], x + (narrow ? 0 : 0), y0 + (narrow ? 64 : 124), z, al);
+      if (!narrow) { lab('the mass m cancels: only the volume is left', x, y0 + 162, C.gold, 'left', 16);
+        mono('R3 turns the disc and four-ball counts into densities in our space', x, y0 + 188, C.t3, 'left', 10); }
+      else mono('the mass m cancels', x, y0 + 86, C.gold, 'center', 10); }
+    ox.globalAlpha = 1; }
+  // D: shares and the sum, written out
+  const aS = Math.min(1, Math.max(0, (s - 0.545) / 0.03)) * (s > 0.79 ? Math.max(0, 1 - (s - 0.79) / 0.03) : 1);   // the sum gives way to the comparison
+  if (aS > 0) { ox.globalAlpha = aS; const fs = narrow ? 17 : 24, x0 = narrow ? OW / 2 : px, al = narrow ? 'center' : 'left', y0 = narrow ? py + 14 : py + 10;
+    texL('dark matter  ∕  ordinary matter', x0, y0, C.t2, fs * 0.75, al);
+    const t1 = true, t2 = true, t3 = true;   // shown whole, at once
+    if (!narrow) {
+      let x = x0; const y = y0 + fs * 1.7, under = [];
+      const piece = (t, col, note) => { texL(t, x, y, col, fs, 'left'); const w = ox.measureText(t).width; if (note) under.push([note, x + w / 2, col]); x += w; };
+      piece('=  ', C.text); piece('1', C.text, 'mirror'); if (t1) { piece('  +  2 × ', C.text); piece('4/3', C.text, 'two 3D towers'); } if (t2) { piece('  +  2 × ', C.text); piece('8/(3π)', C.text, 'two 5D towers'); }
+      under.forEach(([t, cx]) => mono(t, cx, y + fs * 0.7, C.t3, 'center', 10));
+      if (t3) { texL('=  (11π + 16) / (3π)', x0, y + fs * 2.0, C.text, fs, 'left'); texL('=  5.364', x0, y + fs * 3.6, C.gold, fs * 1.25, 'left', 600); }
+    } else {
+      texL('= 1 ' + (t1 ? '+ 2×4/3 ' : '') + (t2 ? '+ 2×8/(3π)' : ''), x0, y0 + fs * 1.5, C.text, fs, al);
+      if (t3) texL('= (11π+16)/(3π) = 5.364', x0, y0 + fs * 2.9, C.gold, fs, al, 600); }
+    ox.globalAlpha = 1; }
+  // E: computed against measured, side by side, then both on one number line with the measurement's error band
+  const aM = Math.min(1, Math.max(0, (s - 0.79) / 0.04));
+  if (aM > 0) { ox.globalAlpha = aM;
+    const lx0 = narrow ? 24 : px, lw = narrow ? OW - 48 : pw, by = narrow ? hy + Rb + 34 : py + 20, ly0 = narrow ? by + 92 : by + Math.min(230, Math.max(170, OH * 0.27)), lo = 4.95, hi = 5.75, X = v => lx0 + (v - lo) / (hi - lo) * lw;
+    const mu = 5.364, sd = 0.065, r = 5.3643;
+    // the two numbers
+    const bw = narrow ? (OW - 48) / 2 - 6 : lw / 2 - 8, bh = narrow ? 58 : 96, b2 = lx0 + bw + (narrow ? 12 : 16);
+    [[lx0, C.gold, 'COMPUTED · THE RULE', '5.3643'], [b2, C.blue, 'MEASURED · PLANCK 2018', '5.364 ± 0.065']].forEach(([x, col, k, v]) => {
+      ox.fillStyle = 'rgba(16,14,13,0.72)'; ox.strokeStyle = col; ox.lineWidth = 1.2; ox.beginPath(); ox.roundRect ? ox.roundRect(x, by, bw, bh, 8) : ox.rect(x, by, bw, bh); ox.fill(); ox.stroke();
+      mono(k, x + bw / 2, by + (narrow ? 15 : 22), col, 'center', narrow ? 9 : 12); texL(v, x + bw / 2, by + (narrow ? 40 : 62), col, narrow ? 19 : Math.min(34, bw * 0.15), 'center', 600); });
+    if (!narrow) mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 24, C.t3, 'left', 11);
+    // the number line
+    ox.fillStyle = 'rgba(147,180,218,0.16)'; ox.fillRect(X(mu - 2 * sd), ly0 - 22, X(mu + 2 * sd) - X(mu - 2 * sd), 44);
+    ox.fillStyle = 'rgba(147,180,218,0.38)'; ox.fillRect(X(mu - sd), ly0 - 22, X(mu + sd) - X(mu - sd), 44);
+    ox.strokeStyle = C.t2; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(lx0, ly0); ox.lineTo(lx0 + lw, ly0); ox.stroke();
+    for (let v = 5.0; v <= 5.71; v += 0.1) { const x = X(v); ox.beginPath(); ox.moveTo(x, ly0 - 4); ox.lineTo(x, ly0 + 4); ox.stroke(); mono(v.toFixed(1), x, ly0 + 16, C.t3, 'center', 10); }
+    ox.strokeStyle = C.blue; ox.lineWidth = 1.5; ox.beginPath(); ox.moveTo(X(mu), ly0 - 26); ox.lineTo(X(mu), ly0 + 26); ox.stroke();
+    if (!narrow) { mono('1σ', X(mu + sd * 0.5), ly0 + 32, C.blue, 'center', 9); mono('2σ', X(mu + sd * 1.5), ly0 + 32, C.blue, 'center', 9); }
+    ox.fillStyle = C.gold; ox.beginPath(); ox.moveTo(X(r), ly0 - 8); ox.lineTo(X(r) + 7, ly0); ox.lineTo(X(r), ly0 + 8); ox.lineTo(X(r) - 7, ly0); ox.closePath(); ox.fill();
+    if (!narrow) { lab('◆ computed', X(r) + 12, ly0 - 30, C.gold, 'left', 13); lab('measured, 1σ and 2σ', X(mu) - 12, ly0 - 30, C.blue, 'right', 13);
+      ox.strokeStyle = C.t3; ox.setLineDash([2, 3]); ox.beginPath(); ox.moveTo(X(5.255), ly0 - 22); ox.lineTo(X(5.255), ly0 + 22); ox.stroke(); ox.setLineDash([]);
+      mono('5.255: lowest any thickness gives', X(5.255) - 6, ly0 + 46, C.t3, 'right', 10);
+      if (ly0 + 64 < OH - 150) mono('Planck 2018 with lensing; with BAO added, 5.32 ± 0.05', lx0, ly0 + 64, C.t3, 'left', 10); }
+    ox.globalAlpha = 1; }
+}
+
+function overlayTowers(s, now){
+  const {narrow, hx, hy, Rb} = centreGeom(), t = (now - T0) / 1000;
+  const g = nest(hx, hy, Rb, 1, s < 0.3 ? 1 : Math.max(0, 1 - (s - 0.3) / 0.06), narrow), {ry, la} = g;
+  // the black hole: a black dot at the one centre
+  const rh = Math.max(7, Rb * 0.085), pulse = reduce ? 0 : Math.sin(t * 2) * 0.5 + 0.5;
+  const gl0 = ox.createRadialGradient(hx, hy, rh * 0.9, hx, hy, rh * 2.6); gl0.addColorStop(0, `rgba(240,194,122,${0.35 + 0.15 * pulse})`); gl0.addColorStop(1, 'rgba(240,194,122,0)');
+  ox.fillStyle = gl0; ox.beginPath(); ox.arc(hx, hy, rh * 2.6, 0, 2 * Math.PI); ox.fill();
+  ox.fillStyle = '#000'; ox.beginPath(); ox.arc(hx, hy, rh, 0, 2 * Math.PI); ox.fill(); ox.strokeStyle = 'rgba(240,194,122,0.8)'; ox.lineWidth = 1; ox.stroke();
+  if (s < 0.34) lab('a black hole', hx + rh + 10, hy - rh - 8, C.text, 'left', 14);
+  const aRad = Math.max(0, Math.min(1, (s - 0.3) / 0.08));
+  if (aRad > 0) {
+    for (let k = 0; k < 110; k++) {
+      const tw = towerOf(k), col = TW[tw][0], life = ((reduce ? 0.55 : t * 0.16) + hash(k + 400)) % 1, d = rh * 1.3 + life * (Rb * 1.02 - rh * 1.3);
+      const th = hash(k + 800) * 2 * Math.PI; let x, y;
+      if (tw === 'd3') { const sg = hash(k + 900) < 0.5 ? -1 : 1; x = hx + sg * d * Math.cos(la); y = hy + sg * d * (ry / Rb) * Math.sin(la); }
+      else if (tw === 'd5') { const ph = (hash(k + 950) < 0.5 ? 0.35 : 2.8) + hash(k + 960) * 0.3; x = hx + d * Math.cos(th) * Math.sin(ph); y = hy + d * (ry / Rb) * Math.sin(th) * Math.sin(ph) - d * Math.cos(ph) * 0.95; }
+      else { x = hx + d * Math.cos(th); y = hy + d * (ry / Rb) * Math.sin(th); }
+      ox.globalAlpha = aRad * (1 - life * 0.85); ox.fillStyle = col; const z = tw === 'us' ? 3.4 : 2.6; ox.fillRect(x - z / 2, y - z / 2, z, z);
+    }
+    ox.globalAlpha = aRad * (s > 0.62 && narrow ? Math.max(0, 1 - (s - 0.62) / 0.04) : 1);
+    const lx0 = narrow ? hx : hx - Rb - 24, ly0 = narrow ? hy - Rb - 40 : hy + Rb * 0.45, al = narrow ? 'center' : 'right';
+    if (narrow) { mono('■ ours, the only light we see   ■ the other towers’', lx0, ly0, C.t2, al, 10); }
+    else { [['■ ours: the only light we see', C.gold], ['■ the mirror’s', C.blue], ['■ the three-dimensional towers’', C.green], ['■ the five-dimensional towers’', C.plum]]
+      .forEach(([tx, col], i) => mono(tx, lx0, ly0 + i * 17, col, al, 11)); }
+    ox.globalAlpha = 1;
+  }
+  if (s > 0.66) { const a = Math.min(1, (s - 0.66) / 0.08), u = Math.min(1, (s - 0.7) / 0.22);
+    const dim = 1 / (1 + Math.max(0, u) * 4.5), pulse2 = reduce ? 1 : 0.75 + 0.25 * Math.sin(t * 3);
+    const yF = narrow ? hy - Rb - 70 : hy - Rb * 0.35, xA = narrow ? hx - OW * 0.24 : hx - Rb - Math.min(150, OW * 0.12), xB = narrow ? hx + OW * 0.24 : hx + Rb + Math.min(150, OW * 0.12);
+    const flash = (x, b, label, sub) => { const R0 = 26; const gg = ox.createRadialGradient(x, yF, 0, x, yF, R0 * 1.8);
+      gg.addColorStop(0, `rgba(255,236,200,${0.95 * b * pulse2})`); gg.addColorStop(0.4, `rgba(240,194,122,${0.55 * b * pulse2})`); gg.addColorStop(1, 'rgba(240,194,122,0)');
+      ox.fillStyle = gg; ox.beginPath(); ox.arc(x, yF, R0 * 1.8, 0, 2 * Math.PI); ox.fill(); const ly = narrow ? yF + 40 : yF + 52; lab(label, x, ly, C.text, 'center', narrow ? 12 : 14); mono(sub, x, ly + (narrow ? 16 : 20), C.t3, 'center', narrow ? 10 : 11); };
+    ox.globalAlpha = a; flash(xA, 1, 'one tower alone', 'all the light ours');
+    flash(xB, dim, 'shared among the towers', u < 0.25 ? 'dimmed' : u < 0.6 ? '÷ 2 with the mirror' : '÷ about 5.5 with all six');
+    ox.globalAlpha = 1; }
+}
+
+function overlayCount(s, hx, hy, rs){
+  const g = Math.max(7, Math.min(12, rs / 9)), R0 = rs * 0.97; ox.save(); ox.beginPath(); ox.arc(hx, hy, R0, 0, 2 * Math.PI); ox.clip();
+  ox.strokeStyle = 'rgba(191,181,166,0.28)'; ox.lineWidth = 1;
+  for (let x = hx - R0; x <= hx + R0; x += g) { ox.beginPath(); ox.moveTo(x, hy - R0); ox.lineTo(x, hy + R0); ox.stroke(); }
+  for (let y = hy - R0; y <= hy + R0; y += g) { ox.beginPath(); ox.moveTo(hx - R0, y); ox.lineTo(hx + R0, y); ox.stroke(); }
+  // one switch per 4 ln 2 = 2.77 Planck areas on average: each square holds a dot with that chance
+  let i = 0; for (let x = hx - R0; x <= hx + R0; x += g) for (let y = hy - R0; y <= hy + R0; y += g) { i++;
+    if (hash(i) < Math.min(1, s * 1.6) / (4 * Math.LN2)) { ox.beginPath(); ox.arc(x + g / 2, y + g / 2, Math.max(2, g * 0.26), 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); } }
+  ox.restore();
+  if (OW < OH) { lab('each square: one Planck area', hx, hy - rs * 1.25 - 26, C.t2, 'center', 14); lab('each dot: one switch, one per 2.8 on average', hx, hy - rs * 1.25 - 6, C.green, 'center', 14); }
+  else { plate(hx + rs * 1.1 - 12, hy - rs * 1.55 - 18, 360, 58); lab('each square: one Planck area', hx + rs * 1.1, hy - rs * 1.55, C.t2); lab('each dot: one switch, one per 2.8 on average', hx + rs * 1.1, hy - rs * 1.55 + 22, C.green); }
+}
+function overlayEcho(s, hx, hy, rs){
+  const wide = OW > OH * 1.1; const x0 = wide ? hx + rs * 1.0 : OW * 0.06, x1 = wide ? OW - 36 : OW * 0.94, y0 = wide ? hy - rs * 1.95 : Math.min(hy + rs + OH * 0.12, OH * 0.62), A = Math.min(OH * 0.08, 60), xr = x0 + (x1 - x0) * Math.min(1, s * 1.5);
+  const ring = t => t < 0 ? 0 : Math.exp(-t / 11.2) * Math.cos(0.3737 * t);
+  const delay = 8 * Math.log(massSuns * Msun / mP), tEnd = delay * 3.3, split = 0.24;
+  const X = t => t < 0 ? x0 + (x1 - x0) * split * (1 + t / 400) : x0 + (x1 - x0) * (split + (1 - split) * t / tEnd);
+  const echoA = env(s, 0.34, 1.3, 0.08);
+  const sig = t => { if (t < 0) { const u = -t; return Math.pow(1 + u / 60, -0.25) * 0.9 * Math.cos(4.4 * Math.pow(u, 0.625)); } return ring(t); };
+  ox.strokeStyle = 'rgba(147,180,218,0.25)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x0, y0); ox.lineTo(x1, y0); ox.stroke();
+  ox.strokeStyle = C.blue; ox.lineWidth = 1.6; ox.beginPath(); let first = true;
+  for (let k = 0; k <= 1600; k++) { const t = -400 + (tEnd + 400) * k / 1600, x = X(t); if (x > xr) break; const y = y0 - sig(t) * A; first ? ox.moveTo(x, y) : ox.lineTo(x, y); first = false; }
+  ox.stroke();
+  if (echoA > 0) { ox.globalAlpha = echoA; ox.strokeStyle = C.red; ox.setLineDash([3, 3]); ox.lineWidth = 1.3;
+    for (let k = 1; k <= 3; k++) { const tk = k * delay, x = X(tk); if (x > xr) break; ox.beginPath(); for (let j = 0; j <= 120; j++) { const t = tk + j * 0.6; const y = y0 - 0.42 * Math.pow(0.55, k - 1) * ring(t - tk) * A; j ? ox.lineTo(X(t), y) : ox.moveTo(X(t), y); } ox.stroke(); mono('echo ' + k, x, y0 + A + 14, C.red, 'center', 11); }
+    ox.setLineDash([]); ox.globalAlpha = 1; }
+  if (s > 0.72) { const a = Math.min(1, (s - 0.72) * 6); ox.globalAlpha = a; lab('this framework: the ringing simply dies away', wide ? X(40) : OW * 0.06, y0 + A + 40, C.green); ox.globalAlpha = 1; }
+  mono('inspiral', x0, y0 - A - 14, C.t3, 'left', 11); mono('merger', X(0), y0 - A - 14, C.t3, 'center', 11);
+}
+
+// ---------- helpers for the new chapters ----------
+const sm01 = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+function arrowLine(x1, y1, x2, y2, col, w = 1.6, head = 8){ ox.strokeStyle = col; ox.fillStyle = col; ox.lineWidth = w; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke();
+  const a = Math.atan2(y2 - y1, x2 - x1); ox.beginPath(); ox.moveTo(x2, y2); ox.lineTo(x2 - head * Math.cos(a - 0.4), y2 - head * Math.sin(a - 0.4)); ox.lineTo(x2 - head * Math.cos(a + 0.4), y2 - head * Math.sin(a + 0.4)); ox.closePath(); ox.fill(); }
+const EQF = z => `500 ${z}px "Source Serif 4", Georgia, serif`;
+// one line of mathematics: parts are [text, colour, 'sup' | 'sub' | '']
+function eqLine(parts, x, y, size, align = 'center'){
+  let w = 0; parts.forEach(([t, , k]) => { ox.font = EQF(k ? size * 0.62 : size); w += ox.measureText(t).width; });
+  let xx = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  parts.forEach(([t, col, k, strike]) => { const z = k ? size * 0.62 : size, dy = k === 'sup' ? -size * 0.36 : k === 'sub' ? size * 0.18 : 0; texL(t, xx, y + dy, col, z, 'left'); ox.font = EQF(z); const tw = ox.measureText(t).width;
+    if (strike > 0) { ox.strokeStyle = C.red; ox.lineWidth = Math.max(1.6, size * 0.08); ox.beginPath(); ox.moveTo(xx - 2, y - size * 0.05 + size * 0.22); ox.lineTo(xx - 2 + (tw + 4) * strike, y - size * 0.05 - size * 0.42 * strike + size * 0.22); ox.stroke(); }
+    xx += tw; });
+  return w;
+}
+
+// the fall, inside: a ring of dust stretched and squeezed at the Kasner rates (T6 Lem 5.1, T4 Thm 8.7)
+function overlayKasner(){
+  const a = envLog(R, 0.72, 0.21); if (a <= 0) return;
+  const narrow = OW < OH, x0 = narrow ? OW * 0.42 : OW * 0.13, y0 = narrow ? OH * 0.21 : OH * 0.46, r0 = narrow ? 19 : Math.min(OH * 0.055, 44);
+  const k = Math.min(1, R / 0.72), along = Math.pow(k, -0.5), across = k;
+  ox.globalAlpha = a;
+  ox.setLineDash([2, 4]); ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.arc(x0, y0, r0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]);
+  for (let i = 0; i < 16; i++) { const t = i / 16 * 2 * Math.PI, x = x0 + r0 * across * Math.cos(t), y = y0 + r0 * along * Math.sin(t);
+    ox.fillStyle = C.gold; ox.beginPath(); ox.arc(x, y, 2.6, 0, 2 * Math.PI); ox.fill(); }
+  arrowLine(x0 + r0 * 1.2 + 10, y0 - 18, x0 + r0 * 1.2 + 10, y0 + 22, C.t2, 1.2, 6); mono('to the centre', x0 + r0 * 1.2 + 16, y0 + 2, C.t2, 'left', 10);
+  mono('a ring of dust, side view', x0, y0 - r0 * along - 16, C.text, 'center', 11);
+  mono('stretched ×' + along.toFixed(2) + ' · squeezed ×' + across.toFixed(2), x0, y0 + r0 * along + 16, C.gold, 'center', 10);
+  ox.globalAlpha = 1;
+}
+
+// the move lands on the conformal completion; its lift is the incidence relation of conformal spinors (T9 Thm 4.2)
+// three steps, each one continuous movement: the cone of 2 + 4 draws itself; points of spacetime rise one after another
+// to their light rays; the two equations write themselves out, term by term
+function eqWidth(parts, size){ let w = 0; parts.forEach(([t, , k]) => { ox.font = EQF(k ? size * 0.62 : size); w += ox.measureText(t).width; }); return w; }
+function eqReveal(parts, x, y, size, f){ if (f <= 0) return; const w = eqWidth(parts, size); ox.save(); ox.beginPath(); ox.rect(x - w / 2 - 6, y - size * 1.2, (w + 12) * Math.min(1, f), size * 2.4); ox.clip(); eqLine(parts, x, y, size); ox.restore(); }
+function camS(unit, cx, cy, elev, D, yaw){ const ce = Math.cos(elev), se = Math.sin(elev), f = unit * D, cyw = Math.cos(yaw), syw = Math.sin(yaw);
+  return ([X0, Y0, Z]) => { const X = X0 * cyw - Y0 * syw, Y = X0 * syw + Y0 * cyw, yc = Y * se + Z * ce, zc = D + Y * ce - Z * se; return [cx + f * X / zc, cy - f * yc / zc]; }; }
+// fit a camera's view of the given world points into a screen box
+function fitCam(pts, x0, y0, w, h, elev, D, yaw){ const p1 = camS(1, 0, 0, elev, D, yaw), q = pts.map(p1);
+  const bx0 = Math.min(...q.map(v => v[0])), bx1 = Math.max(...q.map(v => v[0])), by0 = Math.min(...q.map(v => v[1])), by1 = Math.max(...q.map(v => v[1]));
+  const k = Math.min(w / (bx1 - bx0), h / (by1 - by0)), ox_ = x0 + (w - (bx1 - bx0) * k) / 2 - bx0 * k, oy_ = y0 + (h - (by1 - by0) * k) / 2 - by0 * k;
+  return p => { const v = p1(p); return [ox_ + v[0] * k, oy_ + v[1] * k]; }; }
+function overlayTwistor(s){
+  const narrow = OW < OH, cx = OW / 2, sm = sm01, {top, bot} = region('twistor');
+  const eqK = 0, eqH = 0;           // room the equations take at the bottom
+  const dTop = top + (narrow ? 26 : 34), dBot = bot - eqK * eqH - 8;
+  const a0 = sm(s / 0.06), fade = 1 - 0.45 * eqK;
+  // world: the sheet of spacetime (Z = 0) and the light cone of 2 + 4 (apex A, axis up, rim radius = height: light at 45 degrees)
+  // the cone stands above the sheet of spacetime, its tip over the sheet's centre
+  const A = [0, 0, 1.0], H = narrow ? 1.5 : 1.55;
+  const sheet = narrow ? [[-1.7, -1.1], [1.7, 1.1]] : [[-2.5, -1.3], [2.5, 1.3]];
+  const rim = th => [A[0] + H * Math.cos(th), A[1] + H * Math.sin(th), A[2] + H];
+  const keyPts = [[sheet[0][0], sheet[0][1], 0], [sheet[1][0], sheet[0][1], 0], [sheet[0][0], sheet[1][1], 0], [sheet[1][0], sheet[1][1], 0], A];
+  for (let k = 0; k < 16; k++) keyPts.push(rim(k / 16 * 2 * Math.PI));
+  const pr = fitCam(keyPts, narrow ? 18 : OW * 0.2, dTop + (narrow ? 0 : 18), narrow ? OW - 36 : OW * 0.6, Math.max(80, dBot - dTop - (narrow ? 0 : 40)), 0.34, 9, narrow ? -0.15 : -0.18);
+  const P = (u, v) => pr([(sheet[0][0] + sheet[1][0]) / 2 + u * (sheet[1][0] - sheet[0][0]) / 2, v * (sheet[1][1] - sheet[0][1]) / 2, 0]);
+  ox.globalAlpha = a0 * fade;
+  // the sheet
+  { const c = [[sheet[0][0], sheet[0][1], 0], [sheet[1][0], sheet[0][1], 0], [sheet[1][0], sheet[1][1], 0], [sheet[0][0], sheet[1][1], 0]].map(pr);
+    ox.fillStyle = 'rgba(147,180,218,0.07)'; ox.beginPath(); c.forEach(([x, y], i) => i ? ox.lineTo(x, y) : ox.moveTo(x, y)); ox.closePath(); ox.fill(); ox.strokeStyle = 'rgba(147,180,218,0.55)'; ox.lineWidth = 1; ox.stroke();
+    ox.strokeStyle = 'rgba(191,181,166,0.2)'; for (let k = 1; k < 6; k++) { const t = k / 6;
+      let p = pr([sheet[0][0] + t * (sheet[1][0] - sheet[0][0]), sheet[0][1], 0]), q = pr([sheet[0][0] + t * (sheet[1][0] - sheet[0][0]), sheet[1][1], 0]); ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke();
+      p = pr([sheet[0][0], sheet[0][1] + t * (sheet[1][1] - sheet[0][1]), 0]); q = pr([sheet[1][0], sheet[0][1] + t * (sheet[1][1] - sheet[0][1]), 0]); ox.beginPath(); ox.moveTo(...p); ox.lineTo(...q); ox.stroke(); }
+    const lp = pr([(sheet[0][0] + sheet[1][0]) / 2, sheet[0][1], 0]); lab('spacetime, 1 + 3', lp[0], lp[1] + 20, C.blue, 'center', narrow ? 12 : 14); }
+  // the cone: generators sweep round from the tip, then the rim closes; nearer half bright, farther half faint
+  const g = sm((s - 0.02) / 0.16), ap = pr(A), N = 96, rp = Array.from({length: N + 1}, (_, k) => pr(rim(k / N * 2 * Math.PI)));
+  const near = k => Math.sin(k / N * 2 * Math.PI) < 0;                    // Y < 0 is nearer the viewer
+  if (g > 0) {
+    const fillA = sm((s - 0.1) / 0.08); ox.fillStyle = `rgba(224,122,85,${0.13 * fillA})`; ox.beginPath(); ox.moveTo(...ap); rp.forEach(p => ox.lineTo(...p)); ox.closePath(); ox.fill();
+    for (let k = 0; k < N; k++) { if (k / N > g) break; ox.strokeStyle = near(k) ? 'rgba(224,122,85,0.9)' : 'rgba(224,122,85,0.35)'; ox.lineWidth = near(k) ? 1.6 : 1; ox.setLineDash(near(k) ? [] : [3, 4]);
+      ox.beginPath(); ox.moveTo(...rp[k]); ox.lineTo(...rp[k + 1]); ox.stroke(); } ox.setLineDash([]);
+    for (let k = 0; k < 12; k++) { if (k / 12 > g) break; const i = Math.round(k / 12 * N); ox.strokeStyle = near(i) ? 'rgba(224,122,85,0.32)' : 'rgba(224,122,85,0.12)'; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(...rp[i]); ox.stroke(); }
+    // the outline: the two generators that bound the cone on screen
+    let lo = 0, hi = 0, best0 = Infinity, best1 = -Infinity; rp.forEach(([x, y], k) => { const t = Math.atan2(x - ap[0], ap[1] - y); if (t < best0) { best0 = t; lo = k; } if (t > best1) { best1 = t; hi = k; } });
+    ox.strokeStyle = 'rgba(224,122,85,0.9)'; ox.lineWidth = 1.6; [lo, hi].forEach(k => { const e = rp[k]; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(ap[0] + (e[0] - ap[0]) * g, ap[1] + (e[1] - ap[1]) * g); ox.stroke(); });
+    ox.fillStyle = C.red; ox.beginPath(); ox.arc(ap[0], ap[1], 3, 0, 2 * Math.PI); ox.fill();
+    ox.globalAlpha = a0 * fade * sm((s - 0.12) / 0.05); const yTop = Math.min(...rp.map(p => p[1])); if (narrow) lab('the light cone of 2 + 4', ap[0] + 10, ap[1] + 4, C.red, 'left', 12); else lab('the light cone of 2 + 4', ap[0], yTop - 12, C.red, 'center', 14);
+    ox.globalAlpha = a0 * fade; }
+  // four points of spacetime, each carried to its own ray of the cone: a generator, from the tip to the rim exactly
+  const pts = [[0.2, 0.15, -1.15, C.gold], [-0.55, -0.45, -2.2, C.blue], [0.6, -0.5, -0.35, C.green], [-0.35, 0.55, 0.55, C.plum]];
+  pts.forEach(([u, v, th, col], i) => {
+    const t0 = 0.31 + i * 0.035, k = sm((s - t0) / 0.07); if (k <= 0) return;
+    const [px, py] = P(u, v), e = pr(rim(th)), land = [ap[0] + (e[0] - ap[0]) * 0.55, ap[1] + (e[1] - ap[1]) * 0.55];
+    ox.fillStyle = col; ox.beginPath(); ox.arc(px, py, 4, 0, 2 * Math.PI); ox.fill();
+    const qx = (px + land[0]) / 2, qy = Math.min(py, land[1]) - (narrow ? 30 : 60), B = t => [(1 - t) * (1 - t) * px + 2 * (1 - t) * t * qx + t * t * land[0], (1 - t) * (1 - t) * py + 2 * (1 - t) * t * qy + t * t * land[1]];
+    ox.setLineDash([3, 4]); ox.strokeStyle = col; ox.lineWidth = 1.1; ox.beginPath(); for (let j = 0; j <= 30; j++) { const [x, y] = B(k * j / 30); j ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke(); ox.setLineDash([]);
+    if (k < 1) { const [x, y] = B(k); ox.beginPath(); ox.arc(x, y, 3.2, 0, 2 * Math.PI); ox.fill(); }
+    const r = sm((s - t0 - 0.05) / 0.04); if (r > 0) { ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(...ap); ox.lineTo(ap[0] + (e[0] - ap[0]) * r, ap[1] + (e[1] - ap[1]) * r); ox.stroke();
+      if (r >= 1) { ox.beginPath(); ox.arc(e[0], e[1], 3, 0, 2 * Math.PI); ox.fill(); } } });
+  if (s > 0.3) { ox.globalAlpha = a0 * fade * sm((s - 0.3) / 0.03); const [px, py] = P(pts[0][0], pts[0][1]); lab('a point x', px - 8, py + 18, C.gold, 'right', narrow ? 12 : 14);
+    lab(s < 0.36 ? 'x becomes a ray of the cone, X(x)' : 'each point becomes its own ray of the cone', cx, narrow ? top + 8 : P(0, -1)[1] + 46, C.text, 'center', narrow ? 13 : 15); }
+  // the two equations, written out term by term
+  ox.globalAlpha = 1;
+  if (false) { const z = narrow ? 19 : 27, y2 = bot - (narrow ? 34 : 40), y1 = y2 - (narrow ? 58 : 70);
+    const T_ = C.text, X = C.gold, Bc = C.blue;
+    const e1 = [['X(', T_], ['x', X], [') = n', T_], ['o', T_, 'sub'], [' + ', T_], ['x', X], [' + ½ Q(', T_], ['x', X], [') n', T_], ['∞', T_, 'sub']];
+    const e2 = [['ω', Bc], ['A', Bc, 'sup'], [' = i ', T_], ['x', X], ['AA′', X, 'sup'], [' π', Bc], ['A′', Bc, 'sub']];
+    const f1 = sm((s - 0.61) / 0.09), f2 = sm((s - 0.71) / 0.09);
+    ox.globalAlpha = sm((s - 0.6) / 0.03); mono('THE RULE’S LIFT, T1', cx, y1 - z * 1.05, C.t3, 'center', 10); ox.globalAlpha = 1; eqReveal(e1, cx, y1, z, f1);
+    if (f2 > 0) { ox.globalAlpha = sm((s - 0.7) / 0.03); mono('PENROSE’S INCIDENCE RELATION, 1967', cx, y2 - z * 1.05, C.t3, 'center', 10); ox.globalAlpha = 1; eqReveal(e2, cx, y2, z, f2); }
+    const k3 = sm((s - 0.8) / 0.05); if (k3 > 0) { ox.globalAlpha = k3; mono(narrow ? 'the same point x in both' : 'the same point x in both: one written as a ray, one as a pair of spinors', cx, y2 + z * 1.0, C.gold, 'center', narrow ? 10 : 11); } }
+  ox.globalAlpha = 1;
+}
+
+// scrambling at the chaos bound (T8 Asm 6.1)
+const SCR_N = 48, SCR_ORDER = Array.from({length: SCR_N}, (_, i) => i).sort((a, b) => hash(a * 5.3 + 1) - hash(b * 5.3 + 1));
+function overlayScramble(s, hx, hy, rs){
+  const a = env(s, 0.06, 1.3, 0.08); if (a <= 0) return; ox.globalAlpha = a;
+  const wide = OW > OH * 1.1, u = Math.max(0, Math.min(1, (s - 0.24) / 0.5)), reached = Math.max(1, Math.min(SCR_N, Math.round(Math.exp(u * Math.log(SCR_N))))), rr = rs * (wide ? 1.3 : 1.5);
+  const rank = new Array(SCR_N); SCR_ORDER.forEach((k, i) => rank[k] = i);
+  for (let i = 0; i < SCR_N; i++) { const t = i / SCR_N * 2 * Math.PI, x = hx + rr * Math.cos(t), y = hy + rr * Math.sin(t), on = s > 0.12 && rank[i] < reached;
+    ox.beginPath(); ox.arc(x, y, Math.max(2.5, Math.min(5, rs / 18)), 0, 2 * Math.PI); ox.fillStyle = on ? (rank[i] === 0 ? C.text : C.red) : 'rgba(16,14,13,.6)'; ox.strokeStyle = on ? C.red : C.t3; ox.lineWidth = 1.1; ox.fill(); ox.stroke(); }
+  if (s > 0.12) mono('touched: ' + reached + ' of ' + SCR_N, hx, hy - rr - 18, C.text, 'center', 12);
+  // the growth curve
+  const gx0 = wide ? hx + rs * 2.3 : 40, gx1 = wide ? Math.min(OW - 60, gx0 + 460) : OW - 30, gy1 = wide ? hy + rs * 0.9 : OH * 0.36, gy0 = wide ? hy - rs * 1.3 : OH * 0.17;
+  ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(gx0, gy0); ox.lineTo(gx0, gy1); ox.lineTo(gx1, gy1); ox.stroke();
+  const tMax = Math.log(SCR_N), X = t => gx0 + (gx1 - gx0) * t / (tMax * 1.15), Y = n => gy1 - (gy1 - gy0) * (n - 1) / (SCR_N - 1);
+  ox.strokeStyle = C.red; ox.lineWidth = 2; ox.beginPath(); const tNow = u * tMax;
+  for (let j = 0; j <= 80; j++) { const t = tNow * j / 80, x = X(t), y = Y(Math.exp(t)); j ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke();
+  ox.setLineDash([3, 4]); ox.strokeStyle = 'rgba(224,122,85,0.4)'; ox.beginPath(); for (let j = 0; j <= 80; j++) { const t = tMax * j / 80; j ? ox.lineTo(X(t), Y(Math.exp(t))) : ox.moveTo(X(t), Y(Math.exp(t))); } ox.stroke(); ox.setLineDash([]);
+  mono('switches reached', gx0 + 6, gy0 - 10, C.t2, 'left', 10); mono('time', gx1, gy1 + 14, C.t2, 'right', 10);
+  if (s > 0.45) lab('spreading at 2πT, the hole’s clock', X(tMax * 0.08), Y(SCR_N * 0.62), C.red, 'left', wide ? 15 : 12);
+  if (u >= 1) { mono('all of them', X(tMax), Y(SCR_N) - 12, C.text, 'center', 10); }
+  ox.globalAlpha = 1;
+}
+
+// the tower and the CAR limit (T3 Thm 4.2, 4.3, 5.6)
+function overlayCar(s){
+  // the tower sits clear of Part IV's title, which stays over the first step
+  const narrow = OW < OH, W = narrow ? OW * 0.5 : Math.min(OW * 0.24, 300), tb = titleBottom(PART_OF.car), besideX = tb.right + 200 + W / 2;
+  const beside = !narrow && besideX + W / 2 + 100 <= OW;                // room beside the title: the tower stands to its right
+  const cx = beside ? Math.max(OW / 2, besideX) : OW / 2, yb = narrow ? OH * 0.56 : OH * 0.62, yt = beside ? OH * 0.18 : Math.max(narrow ? OH * 0.17 : OH * 0.18, tb.bottom + (narrow ? 22 : 30)), n = 4, gap = (yb - yt) / (n + 0.9);
+  const H = narrow ? 20 : 28, shown = Math.min(n, 1 + Math.floor(Math.max(0, s - 0.02) / 0.09));
+  const names = ['spacetime, 1 + 3', '2 + 4: the completion', '3 + 5', '4 + 6'];
+  for (let k = 0; k < shown; k++) { const y = yb - k * gap;
+    ox.fillStyle = 'rgba(147,180,218,0.1)'; ox.strokeStyle = k ? 'rgba(147,180,218,0.7)' : C.gold; ox.lineWidth = 1.3; ox.fillRect(cx - W / 2, y - H / 2, W, H); ox.strokeRect(cx - W / 2, y - H / 2, W, H);
+    for (let j = 0; j <= k; j++) { const x = cx + (j - k / 2) * Math.min(28, W / (k + 2)); ox.beginPath(); ox.arc(x, y, narrow ? 5 : 6.5, 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); }
+    if (narrow) mono(names[k], cx, y - H / 2 - 9, k ? C.t2 : C.gold, 'center', 10); else lab(names[k], cx - W / 2 - 16, y, k ? C.t2 : C.gold, 'right', 15);
+    lab((k + 1) + (k ? ' switches' : ' switch'), cx + W / 2 + (narrow ? 8 : 16), y, C.green, 'left', narrow ? 12 : 15);
+    if (k > 0) { const xa = cx - W / 2 + 14; arrowLine(xa, y + gap - H / 2 - 2, xa, y + H / 2 + 3, C.red, 1.6, 6); if (k === 1) mono('+1 time, +1 space', xa + 10, y + gap / 2, C.red, 'left', narrow ? 9 : 11); } }
+  if (s > 0.42) { ox.globalAlpha = Math.min(1, (s - 0.42) / 0.05); mono('⋮', cx, yb - n * gap + gap * 0.42, C.t2, 'center', 18); ox.globalAlpha = 1; }
+  const aT = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
+  if (aT > 0) { ox.globalAlpha = aT; const y = yt;
+    const gr = ox.createLinearGradient(cx - W * 0.6, 0, cx + W * 0.6, 0); gr.addColorStop(0, 'rgba(207,155,181,0.05)'); gr.addColorStop(0.5, 'rgba(207,155,181,0.3)'); gr.addColorStop(1, 'rgba(207,155,181,0.05)');
+    ox.fillStyle = gr; ox.fillRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2); ox.strokeStyle = C.plum; ox.lineWidth = 1.4; ox.strokeRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2);
+    for (let j = 0; j < 40; j++) { ox.fillStyle = 'rgba(166,196,151,0.85)'; ox.beginPath(); ox.arc(cx - W * 0.56 + W * 1.12 * hash(j + 70), y - H * 0.45 + H * 0.9 * hash(j + 170), 2, 0, 2 * Math.PI); ox.fill(); }
+    if (narrow) { mono('the CAR limit: every floor at once', cx, y + H * 0.6 + 12, C.plum, 'center', 10); }
+    else if (cx + W * 0.6 + 330 <= OW) { lab('the CAR limit: every floor at once', cx + W * 0.6 + 16, y - 9, C.plum, 'left', 16); mono('as many switches as you like: a free fermion field', cx + W * 0.6 + 16, y + 12, C.t2, 'left', 11); }
+    else { lab('the CAR limit: every floor at once', cx, y + H * 0.6 + 16, C.plum, 'center', 14); }
+    ox.globalAlpha = 1; }
+  if (s > 0.3) { ox.globalAlpha = Math.min(1, (s - 0.3) / 0.05) * 0.9; const xl = narrow ? 14 : cx - W / 2 - 180;
+    ox.strokeStyle = C.green; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(xl, yb + H / 2); ox.lineTo(xl, yt - H / 2); ox.stroke();
+    ox.save(); ox.translate(xl - 7, (yb + yt) / 2); ox.rotate(-Math.PI / 2); mono('time minus space never changes on the way up', 0, 0, C.green, 'center', narrow ? 9 : 11); ox.restore(); ox.globalAlpha = 1; }
+}
+
+// the orientation bit: matter and the arrow of time (T14 Prop 5.1, 5.2, Rem 5.3)
+function overlayArrow(s){
+  const narrow = OW < OH, S = Math.min(OW, OH), R0 = narrow ? Math.min(OW * 0.2, 78) : Math.min(S * 0.16, 125);
+  const pos = narrow ? [[OW / 2, OH * 0.27], [OW / 2, OH * 0.52]] : [[OW * 0.3, OH * 0.42], [OW * 0.7, OH * 0.42]];
+  const aB = Math.min(1, Math.max(0, (s - 0.3) / 0.05)), pick = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
+  const panel = (k, x, y, a) => { if (a <= 0) return; ox.globalAlpha = a * (k === 1 ? 1 - 0.6 * pick : 1); const flip = k === 1;
+    [[-1, 'f'], [1, 'f*']].forEach(([dx, name]) => { const creates = flip ? dx < 0 : dx > 0, col = creates ? C.gold : C.t2, ex = x + dx * R0 * 0.75, ey = y - R0 * 0.75;
+      arrowLine(x, y, ex, ey, col, 2.2, 9); lab(creates ? 'creates' : 'destroys', ex + dx * 8, ey - 10, col, dx > 0 ? 'left' : 'right', narrow ? 12 : 15); mono(name, (x + ex) / 2 - dx * 14, (y + ey) / 2 + 6, col, 'center', 12); });
+    const tl = R0 * 0.9, ty = y + (narrow ? 20 : 28), dir = flip ? -1 : 1; arrowLine(x - dir * tl / 2, ty, x + dir * tl / 2, ty, C.blue, 1.6, 7); mono('time', x, ty + 13, C.blue, 'center', 10);
+    lab(k === 0 ? 'one choice' : 'the other choice', x, ty + (narrow ? 32 : 40), C.text, 'center', narrow ? 13 : 16); };
+  panel(0, ...pos[0], env(s, -0.1, 1.2, 0.08)); panel(1, ...pos[1], aB);
+  if (aB > 0 && pick < 1) { ox.globalAlpha = aB * (1 - pick); const [x1, y1] = pos[0], [x2, y2] = pos[1];
+    if (narrow) { arrowLine(OW * 0.85, y1 + 10, OW * 0.85, y2 - 40, C.t2, 1.2, 6); arrowLine(OW * 0.85, y2 - 40, OW * 0.85, y1 + 10, C.t2, 1.2, 6); mono('swap', OW * 0.85, (y1 + y2) / 2 - 15, C.t2, 'center', 10); }
+    else { const mx = (x1 + x2) / 2; arrowLine(mx - 60, y1 - R0 * 0.3, mx + 60, y1 - R0 * 0.3, C.t2, 1.2, 7); arrowLine(mx + 60, y1 - R0 * 0.3, mx - 60, y1 - R0 * 0.3, C.t2, 1.2, 7);
+      lab('swap them everywhere:', mx, y1 - R0 * 0.3 - 30, C.text, 'center', 15); lab('no law changes', mx, y1 - R0 * 0.3 + 22, C.text, 'center', 15); } }
+  if (pick > 0) { ox.globalAlpha = pick; const [x, y] = pos[0], w = R0 * 2.9, top = y - R0 * 1.1, bot = y + (narrow ? 62 : 82);
+    ox.strokeStyle = C.gold; ox.lineWidth = 1.4; ox.strokeRect(x - w / 2, top, w, bot - top);
+    if (narrow) mono('ours: one bit, set once', x, top - 10, C.gold, 'center', 10);
+    else { const mx = (pos[0][0] + pos[1][0]) / 2; lab('ours: one bit, set once, at the start', mx, bot + 30, C.gold, 'center', 17); mono('which is matter, and which way time runs', mx, bot + 54, C.t2, 'center', 11); } }
+  ox.globalAlpha = 1;
+}
+
+// the paradox stated: something falls in, random glow comes out (Hawking 1975)
+function overlayParadox(s, hx, hy, rs, now){
+  const t = (now - T0) / 1000, aRad = sm01((s - 0.2) / 0.1);
+  if (aRad > 0) for (let k = 0; k < 26; k++) { const life = ((reduce ? 0.5 : t * 0.12) + hash(k)) % 1, ang = hash(k + 50) * 2 * Math.PI, d = Math.min(rs * (1.1 + life * 3.2), OH * 0.42);
+    const byte = Math.floor(hash(k * 13 + Math.floor((reduce ? 0 : t * 0.12) + hash(k))) * 256);
+    ox.globalAlpha = aRad * (1 - life) * 0.9; mono(byte.toString(16).toUpperCase().padStart(2, '0'), hx + d * Math.cos(ang), hy + d * Math.sin(ang), C.red, 'center', 12); }
+  ox.globalAlpha = 1;
+  // a message falls in
+  const u = Math.min(1, Math.max(0, (s - 0.04) / 0.36));
+  if (u > 0 && u < 1) { const sx = Math.min(OW - 80, hx + rs * 3.4), sy = hy - rs * 1.4, x = sx + (hx - sx) * u * u, y = sy + (hy - sy) * u * u, z = 1 - 0.85 * u;
+    ox.globalAlpha = 1 - u * u; ox.fillStyle = 'rgba(240,194,122,0.18)'; ox.strokeStyle = C.gold; ox.lineWidth = 1.2; ox.fillRect(x - 58 * z, y - 16 * z, 116 * z, 32 * z); ox.strokeRect(x - 58 * z, y - 16 * z, 116 * z, 32 * z);
+    if (z > 0.4) mono('NOTHING IS LOST', x, y, C.gold, 'center', Math.max(7, 12 * z)); ox.globalAlpha = 1; }
+  if (s > 0.6) { ox.globalAlpha = Math.min(1, (s - 0.6) / 0.06); lab('where did the message go?', hx, hy - rs - 26, C.gold, 'center', 18); ox.globalAlpha = 1; }
+}
+
+// where the message is: in the pairs, not in either half (T5 Thm 5.7, 7.27, 9.3; the one-time pad is an analogy)
+const ALPH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ', MSGI = MSG.split('').map(ch => ALPH.indexOf(ch));
+function overlayCorr(s, now){
+  const narrow = OW < OH, n = MSG.length, cw = Math.min(48, (OW - 36) / n), x0 = OW / 2 - cw * n / 2 + cw / 2;
+  const gap = narrow ? 78 : 100, y1 = narrow ? OH * 0.2 : OH * 0.2, y2 = y1 + gap, y3 = y2 + gap, fs = narrow ? 15 : 22, ch = fs * 1.55;
+  const tick = reduce ? Math.floor(s * 60) : Math.floor((now - T0) / 450);
+  const aP = sm01((s - 0.22) / 0.05), aL = sm01((s - 0.46) / 0.05), aD = sm01((s - 0.72) / 0.05);
+  const letter = k => k === 26 ? '·' : ALPH[k];
+  const cell = (x, y, txt, col, a, steady) => { ox.globalAlpha = a; ox.fillStyle = 'rgba(16,14,13,0.75)'; ox.fillRect(x - cw / 2 + 2, y - ch / 2, cw - 4, ch);
+    ox.strokeStyle = col; ox.lineWidth = steady ? 1.4 : 1; ox.strokeRect(x - cw / 2 + 2, y - ch / 2, cw - 4, ch); mono(txt, x, y + 1, col, 'center', fs); };
+  const lx = x0 - cw / 2 + 2, rowLab = (t, y, col, a) => { ox.globalAlpha = a; mono(t, lx, y - ch / 2 - 11, col, 'left', narrow ? 10 : 11); };
+  for (let i = 0; i < n; i++) { const x = x0 + i * cw, r = Math.floor(hash(i * 31.7 + tick * 7.13) * 27), p = (r - MSGI[i] + 27) % 27;
+    cell(x, y1, letter(r), C.red, 1, false);
+    if (aP > 0) cell(x, y2, letter(p), C.plum, aP, false);
+    if (aL > 0) { ox.globalAlpha = aL * 0.55; ox.strokeStyle = C.green; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x, y1 + ch / 2); ox.lineTo(x, y2 - ch / 2); ox.moveTo(x, y2 + ch / 2); ox.lineTo(x, y3 - ch / 2); ox.stroke();
+      cell(x, y3, letter(MSGI[i]), C.green, aL, true); } }
+  rowLab(narrow ? 'the radiation, out here: each one random' : 'the radiation, out here: each one any letter, equally likely', y1, C.red, 1);
+  if (aP > 0) rowLab('its partners, at the centre: just as random', y2, C.plum, aP);
+  if (aL > 0) rowLab('compared in pairs: steady, every time', y3, C.green, aL);
+  ox.globalAlpha = 1;
+  if (aD > 0) { ox.globalAlpha = aD; const yb = y3 + ch / 2 + (narrow ? 26 : 34), sz = narrow ? 13 : 16;
+    if (narrow) { lab('4D books: plain counts only, so noise', OW / 2, yb, C.red, 'center', sz); lab('6D books: the correlations too', OW / 2, yb + 22, C.green, 'center', sz);
+      mono('the gap: the quantum correlations, computed', OW / 2, yb + 44, C.t2, 'center', 10); }
+    else { lab('four-dimensional books: the plain counts only, so noise', OW / 2 - 16, yb, C.red, 'right', sz); lab('six-dimensional books: the quantum correlations too', OW / 2 + 16, yb, C.green, 'left', sz);
+      mono('the gap between the two books is the quantum correlations: a relative entropy the papers compute exactly', OW / 2, yb + 28, C.t2, 'center', 11); }
+    ox.globalAlpha = 1; }
+}
+
+
+// what happens to what falls in (T14 Prop 6.5)
+function overlayFate(s, hx, hy, rs){
+  const narrow = OW < OH, u = sm01((s - 0.02) / 0.24);
+  if (u < 1) { const sx = narrow ? OW * 0.8 : Math.min(OW - 120, hx + rs * 3.6), sy = narrow ? hy - rs * 3 : hy - rs * 1.5, x = sx + (hx - sx) * u * u, y = sy + (hy - sy) * u * u, z = 1 - 0.85 * u;
+    ox.globalAlpha = 1 - u * u; ox.fillStyle = 'rgba(240,194,122,0.2)'; ox.strokeStyle = C.gold; ox.lineWidth = 1.2; ox.fillRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z); ox.strokeRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z);
+    if (z > 0.45) mono('a star’s worth of matter', x, y, C.gold, 'center', Math.max(7, 12 * z)); ox.globalAlpha = 1; }
+  // the hole is heavier now: its horizon grows with its mass
+  const g = sm01((s - 0.24) / 0.06);
+  if (g > 0) { const a = g * (1 - 0.6 * sm01((s - 0.5) / 0.1)); ox.globalAlpha = a; ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.setLineDash([4, 4]); ox.beginPath(); ox.arc(hx, hy, rs * (1.02 + 0.06 * g), 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]);
+    lab('its mass adds to the hole’s: M + m', hx, hy - rs * 1.6 - 16, C.gold, 'center', narrow ? 13 : 16); ox.globalAlpha = 1; }
+  const big = massSuns >= 1.3e5;
+  const rows = [['✓', 'its energy', 'held as the hole’s mass, then given back as the glow', C.gold, 0.3], ['✓', 'its information', 'comes back in the correlations', C.green, 0.36],
+    [big ? '?' : '✓', 'its electric charge', big ? 'left open for a hole this big' : 'comes back too, for holes below about 100,000 suns', big ? C.t2 : C.blue, 0.46],
+    ['✗', 'its protons and neutrons', 'not returned: the glow is far too cold to make them', C.red, 0.52], ['–', 'a remnant', 'none is left behind (a premise)', C.t2, 0.58]];
+  const x0 = narrow ? 22 : hx + rs * 2.1, y0 = narrow ? OH * 0.16 : Math.max(OH * 0.17, hy - 150), pitch = narrow ? 38 : 46;
+  { const a = Math.min(1, Math.max(0, (s - rows[0][4]) / 0.04)); if (a > 0) { ox.globalAlpha = a; plate(x0 - 22, y0 - 26, narrow ? OW - 2 * (x0 - 22) : Math.min(OW - x0 + 4, 420), rows.length * pitch + 12); ox.globalAlpha = 1; } }
+  rows.forEach(([ic, name, note, col, t0], i) => { const a = Math.min(1, Math.max(0, (s - t0) / 0.04)); if (a <= 0) return; const y = y0 + i * pitch; ox.globalAlpha = a;
+    if (!narrow) { ox.setLineDash([2, 5]); ox.strokeStyle = col; ox.globalAlpha = a * 0.5; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(hx + rs * 1.05, hy); ox.lineTo(x0 - 10, y); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = a; }
+    mono(ic, x0, y, col, 'center', narrow ? 15 : 18); lab(name, x0 + 18, y - (narrow ? 7 : 8), col, 'left', narrow ? 14 : 17); mono(note, x0 + 18, y + (narrow ? 9 : 12), C.t2, 'left', narrow ? 9 : 11); });
+  ox.globalAlpha = 1;
+}
+
+/* ---------- the loop ---------- */
+let lastSig = '', lastFilt = '', dirty = true, dirtyOv = true, inView = true, frames = [], lastT = performance.now();
+new IntersectionObserver(es => { inView = es[0].isIntersecting; }).observe(sec);
+const CENTRE = new Set(['sing', 'move', 'twistor', 'switches', 't2']), CLEAR = new Set(['paradox', 'fate', 'thermo', 'count', 'scramble', 'echo']);
+const OUTSIDE = new Set(SCENES.filter(k => !CENTRE.has(k)));
+// the predictions as the Lab's record holds them: [status, claim, paper, latest data]
+const CLAIMS = LAB.preds.map(p => [p.st, p.title, p.paper, p.note]);
+$('#rows').innerHTML = CLAIMS.map(([st, c, p, n]) => `<div class="r" data-st="${st}"><i class="d ${st}"></i><span class="c">${c}</span><span class="p">${p}</span><span class="st">${n}</span></div>`).join('');
+let boardStage = -1;
+// the board shrinks, if it must, to stay clear of the subtitle below it
+function fitBoard(){ const bd = $('#board'), cap = $('#cap'); bd.style.transform = 'translateX(-50%)'; bd.style.transformOrigin = 'top center';
+  const r = bd.getBoundingClientRect(), c = cap.classList.contains('show') ? cap.getBoundingClientRect().top : innerHeight - 160, room = c - 14 - r.top;
+  if (r.height > room && room > 60) bd.style.transform = `translateX(-50%) scale(${(room / r.height).toFixed(3)})`; }
+function hudUpdate(){
+  const M = massSuns * Msun, tM = G * M / c ** 3, rm = R * G * M / c ** 2, tau = (2 / 3) * Math.pow(R, 1.5) / Math.SQRT2 * tM;
+  $('#hR').innerHTML = len(rm); $('#hTau').textContent = durShort(tau);
+  $('#hV').textContent = R > 2 ? (Math.sqrt(2 / R) * 100).toFixed(1) + '% of light' : 'inside: no hovering';
+  const f = Math.log(RMAX / R) / Math.log(RMAX / RMIN);
+  $('#hBar').style.width = (f * 100).toFixed(1) + '%'; $('#hHor').style.left = (Math.log(RMAX / 2) / Math.log(RMAX / RMIN) * 100).toFixed(1) + '%';
+  const tide = 2 * G * M * 2 / Math.pow(rm, 3) / 9.81;
+  return {tau: dur(tau), tide: tide < 0.01 ? 'too small to feel' : (tide < 1e3 ? tide.toPrecision(2) : sci(tide, 2)) + ' times Earth’s gravity'};
+}
+function loop(now){
+  if (inView) {
+    const v = playerV(now), ph = phaseAt(v), prev = mode; mode = ph.mode;
+    let animate = false;
+    if (mode === 'fall') {
+      const Rt = radiusAt(ph.s), k = reduce || VIDEO || snap ? 1 : 0.18, Rn = Math.exp(Math.log(R) + (Math.log(Rt) - Math.log(R)) * k);
+      const moved = Math.abs(Rn - R) / R > 1e-4; R = Rn;
+      renderR = R; renderDisk = disk; renderYaw = yaw + (lookBack ? Math.PI : 0); renderPitch = pitch; fovNow = fallFov(R); animate = moved || (disk && !reduce);
+    } else if (OUTSIDE.has(mode)) {
+      R = RMIN; renderR = 26; renderDisk = disk; renderPitch = 0;
+      const wide = cv.width >= cv.height; fovNow = wide ? 0.55 : 0.62 / Math.max(0.5, cv.width / cv.height);
+      renderYaw = mode === 'towers' ? 0 : (wide ? 0.3 : 0) + (reduce || VIDEO ? 0 : Math.sin((now - T0) / 16000) * 0.06); animate = !reduce && !VIDEO && mode !== 'towers' && CLEAR.has(mode);
+    } else { R = RMIN; renderR = RMIN; renderDisk = disk; renderYaw = 0; renderPitch = 0; fovNow = fallFov(RMIN); }
+    if (prev !== mode) dirty = true; if (snap) { snap = false; dirty = true; }
+    if (animate || dirty) { const dt = now - lastT; lastT = now; draw(now); dirty = false;
+      frames.push(dt); if (frames.length > 20) frames.shift();
+      if (!VIDEO && frames.length === 20) { const avg = frames.reduce((a, b) => a + b) / 20; if (avg > 48 && scale > 0.22) { scale *= 0.85; frames = []; } else if (avg < 22 && scale < 0.7) { scale *= 1.08; frames = []; } } }
+    // chrome
+    const inFall = mode === 'fall', live = Object.assign(NUM(), inFall ? hudUpdate() : {});
+    document.body.classList.toggle('infall', inFall);
+    const mFirst = MERGED_FIRST[mode], mEnd = mFirst !== undefined ? ((SCAPS[mode] || [])[0] || [0, 0.3])[1] : 0, mergedOn = mFirst !== undefined && ph.s < mEnd;
+    const ti = TITLES.has(mode) ? PART_OF[mode] : mergedOn ? mFirst : inFall ? 0 : -1;
+    if (ti >= 0 && ti !== titleShown) { fillTitle(ti); titleShown = ti; }
+    const capTitle = mergedOn && MERGED_CAP.has(PARTS[mFirst].k);
+    $('#title').classList.toggle('compact', mergedOn);
+    $('#cap').classList.toggle('part', capTitle); if (capTitle && $('#capPart').dataset.p !== String(mFirst)) { $('#capPart').dataset.p = mFirst; $('#capPart').innerHTML = `<span>Part ${PARTS[mFirst].n}</span>${PARTS[mFirst].h}`; }
+    $('#title').style.opacity = inFall ? (R > 30.5 ? 1 : 0) : capTitle ? 0 : mergedOn ? Math.max(0, Math.min(1, (mEnd - ph.s) / 0.05)) : ti > 0 ? Math.max(0, Math.min(1, ph.s / 0.3, (1 - ph.s) / 0.3)) : 0;
+    const bs = mode === 'score' ? Math.min(13, Math.floor(ph.s / 0.03) + 1) + (ph.s > 0.45 ? 100 : 0) : -1;
+    if (bs >= 0) fitBoard();
+    if (bs !== boardStage) { boardStage = bs; $('#board').classList.toggle('show', bs >= 0);
+      $$('#rows .r').forEach((r, i) => { r.classList.toggle('in', bs >= 100 || i < bs % 100); r.classList.toggle('hl', bs >= 100 && r.dataset.st === 'press'); }); }
+    ['#hud', '#controls'].forEach(s => { const el = $(s); el.style.opacity = inFall ? 1 : 0; el.style.visibility = inFall ? 'visible' : 'hidden'; });
+    let w = 0; if (inFall && R < 0.2) w = Math.pow(Math.min(1, Math.log(0.2 / R) / Math.log(0.2 / 0.0615)), 1.6); if (mode === 't2') w = Math.max(0, 1 - ph.s * 2.5);
+    $('#whiteout').style.opacity = w; document.body.classList.toggle('white', w > 0.55);
+    const filt = inFall ? 'none' : mode === 'ratio' ? 'brightness(.03) blur(5px)' : CENTRE.has(mode) ? 'brightness(.06) blur(4px)' : mode === 'ledger' ? 'brightness(.06) blur(3px)' : mode === 't4' ? 'brightness(.15) blur(1px)' : CLEAR.has(mode) ? 'brightness(.9)' : 'brightness(.035) blur(4px)';   // the hole behind a drawing is dimmed so the drawing reads; its disc is bright
+    if (lastFilt !== filt) { cv.style.filter = filt; lastFilt = filt; }
+    ov.classList.toggle('live', mode === 'switches');
+    const ovVis = TITLES.has(mode) || mode === 'score' || mode === 'ledger' ? 'hidden' : 'visible'; if (ov.style.visibility !== ovVis) ov.style.visibility = ovVis;
+    // subtitles
+    if (inFall) { let k = null; FALLCAPS.forEach((cp, i) => { if (R <= cp.hi && R > cp.lo) k = i; });
+      if (k === null) setCap(null); else setCap('f' + k, fill(FALLCAPS[k].t, live), FALLCAPS[k].g); }
+    else { const list = SCAPS[mode] || []; let hit = null; list.forEach((cp, i) => { if (ph.s >= cp[0] && ph.s < cp[1]) hit = i; });
+      if (hit === null) setCap(null); else { const cp = list[hit]; setCap(mode + hit + massSuns, fill(cp[2], live), cp[3], cp[4]); } }
+    // chapter strip
+    const curP = inFall ? 0 : PART_OF[mode];
+    $$('#track button').forEach(b => { const i = +b.dataset.p, on = i === curP; if (on && !b.classList.contains('on')) { const t = $('#track'); t.scrollLeft = Math.max(0, b.offsetLeft - (t.clientWidth - b.offsetWidth) / 2); }
+      b.classList.toggle('on', on); b.classList.toggle('done', i < curP); });
+    // drawings
+    if (OW !== ov.getBoundingClientRect().width || OH !== ov.getBoundingClientRect().height) { sizeOv(); dirtyOv = true; }
+    const timed = !reduce && (mode === 'thermo' || mode === 'info' || mode === 'paradox' || mode === 'towers' || mode === 'dark' || (mode === 'switches' && swFlash && now - swFlash.t < 1700));
+    const sig = [mode, ph.s.toFixed(4), R.toFixed(5), yaw.toFixed(3), pitch.toFixed(3), lookBack, fovNow.toFixed(4), renderYaw.toFixed(4), swState.join(''), massSuns].join('|');
+    if (!timed && !dirtyOv && sig === lastSig) { if (!VIDEO) requestAnimationFrame(loop); return; }
+    lastSig = sig; dirtyOv = false;
+    ox.clearRect(0, 0, OW, OH);
+    const cx = OW / 2, cyc = OH / 2, unit = OH / 2;
+    if (inFall) overlayFall(cx, cyc, unit);
+    else if (mode === 'move') overlayMove(ph.s);
+    else if (mode === 'switches') overlaySwitches(ph.s, cx, OH * 0.44, now);
+    else if (mode === 'twistor') overlayTwistor(ph.s);
+    else if (OUTSIDE.has(mode) && mode !== 'ledger' && !TITLES.has(mode)) { const [hx, hy, rs] = holeOnScreen(cx, cyc, unit);
+      if (mode === 'thermo') overlayThermo(ph.s, hx, hy, rs, now); else if (mode === 'info') overlayCorr(ph.s, now); else if (mode === 'paradox') overlayParadox(ph.s, hx, hy, rs, now); else if (mode === 'fate') overlayFate(ph.s, hx, hy, rs);
+      else if (mode === 'scramble') overlayScramble(ph.s, hx, hy, rs); else if (mode === 'car') overlayCar(ph.s); else if (mode === 'arrow') overlayArrow(ph.s);
+      else if (mode === 'dark') overlayDark(0.22 + 0.78 * ph.s, now); else if (mode === 'ratio') overlayRatio(ph.s, now); else if (mode === 'towers') overlayTowers(ph.s, now); else if (mode === 'count') overlayCount(ph.s, hx, hy, rs); else if (mode === 'echo') overlayEcho(ph.s, hx, hy, rs); }
+  }
+  if (!VIDEO) requestAnimationFrame(loop);
+}
+/* ---------- controls ---------- */
+let drag = null;
+cv.addEventListener('pointerdown', e => { if (e.pointerType === 'touch' || mode !== 'fall') return; drag = {x: e.clientX, y: e.clientY, yaw, pitch}; cv.classList.add('drag'); cv.setPointerCapture(e.pointerId); });
+cv.addEventListener('pointermove', e => { if (!drag) return; yaw = drag.yaw - (e.clientX - drag.x) * 0.005; pitch = Math.max(-1.3, Math.min(1.3, drag.pitch + (e.clientY - drag.y) * 0.005)); dirty = true; });
+cv.addEventListener('pointerup', () => { drag = null; cv.classList.remove('drag'); });
+cv.addEventListener('dblclick', () => { yaw = 0; pitch = 0; dirty = true; });
+$('#lookBack').addEventListener('click', () => { lookBack = !lookBack; $('#lookBack').setAttribute('aria-pressed', String(lookBack)); dirty = true; });
+
+const barH = () => document.documentElement.style.setProperty('--barh', $('.bar').offsetHeight + 'px'); barH();
+addEventListener('resize', () => { barH(); sizeOv(); dirty = true; });
+sizeOv(); fovNow = fallFov(R); ui(); draw(performance.now()); if (!VIDEO) requestAnimationFrame(loop);
+if (VIDEO) { scale = +(new URLSearchParams(location.search).get('scale') || 0.6);
+  window.__frame = (v, ms, cap, capA, endA) => { vVh = v; const vc = $('#vcap'); if (vc.dataset.k !== cap) { vc.innerHTML = cap; vc.dataset.k = cap; } vc.style.opacity = capA; $('#vend').style.opacity = endA || 0; loop(T0 + ms); return mode; }; }
+window.__fall = { get mode(){ return mode; }, get scale(){ return scale; }, START, TOTAL, STEPS, step: goStep, get idx(){ return idx; }, get busy(){ return !!anim; } };
+})();
+</script>
+
+</body>
+</html>

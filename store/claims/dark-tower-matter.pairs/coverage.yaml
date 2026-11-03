@@ -1,0 +1,18 @@
+functions:
+  check_real_witt_index:
+    kind: complete
+    clauses: ["(i) real Witt index 2 in the three-dimensional towers", "(ii) real Witt index 2 in this tower, the mirror and the five-dimensional towers"]
+    omits: ""
+  check_complex_witt_index:
+    kind: complete
+    clauses: ["(i) complex Witt index 2 in the three-dimensional towers, no unit needed", "(ii) complex Witt index 3 elsewhere, the third pair needs a complex unit"]
+    omits: ""
+  check_unit_fixed_up_to_sign:
+    kind: sampled
+    clauses: ["(ii) in this tower and the mirror the field is C and the unit is fixed up to sign"]
+    omits: "the corner F = span{f, u} with u f = f u = u and u^2 = -f is computed in (1,3) and (3,1); the product formula (alpha f + beta u)^2 = (alpha^2 - beta^2) f + 2 alpha beta u is verified at three (alpha, beta) samples and the conclusion that the solutions are +-u is the hand algebra; controls in the three- and five-dimensional towers are extra"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the Witt indices are enumerated at all six causal towers with explicit pairs and anisotropic remainders; uniqueness of the unit up to sign rests on a short hand computation sampled by the check"

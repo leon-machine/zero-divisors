@@ -1,0 +1,14 @@
+functions:
+  check_variation_of_constants_identity:
+    kind: partial
+    clauses: ["whole"]
+    omits: "checks only the identity T - T0 = T int S (G - H) T0 as power series in lambda to order 7 for three sample generator pairs (linear in s); the norm bound lambda |E| exp(lambda (1 + |E|)), the Gronwall estimates and uniformity over curves in K are analytic and not tested (the docstring says so)"
+  check_model_generator_bounded_by_one:
+    kind: partial
+    clauses: ["whole"]
+    omits: "checks the model transport norm |H| <= 1 (|H|^2 = |w|^2 <= (sum |u_i||p_i|)^2 <= 1) at four rational Kasner points and six unit directions; no admissible field, no E_tau, no tau -> 0 limit and no inequality of the statement itself"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Both functions test algebraic ingredients of the proof and the module docstring says the Gronwall inequalities are not checked; the displayed bound itself is untested."

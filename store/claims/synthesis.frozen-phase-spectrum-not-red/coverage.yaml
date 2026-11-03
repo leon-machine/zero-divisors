@@ -1,0 +1,24 @@
+functions:
+  check_frozen_point_and_slicing:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Q(I_fs) = Lambda/3, sigma = H x0 at four points, and the two-reflection rotation carrying I_Lambda to I_fs, for four values of H; that g = eta/(H x0)^2 is de Sitter space and that the stabiliser is SO(1,4) are imported or not computed"
+  check_stabiliser_contains_slicing_group:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "Lie-algebra level: the ten bivectors orthogonal to e0 commute with I_fs, the 3 rotations, 3 translations and the dilatation (seven) preserve the null ray of ninf, the special conformal ones move it, and time translation does not fix I_fs; exponentiation to the subgroup and the dimension count 7 are not asserted separately"
+  check_dilatation_and_translation_rotors:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the dilatation rotor at one rapidity (ln 4, both signs) maps X(x) to 4 X(x/4) at four points and preserves Q(x)/x0^2; translation rotors for two vectors a at four points; the statement's general lambda and a are not covered"
+  check_index_from_weight:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "(ii): the scaling lemma is checked exactly only for integer weights w = n = 0..4 on regulated |x|^(2n), not for general w, and not the logarithmic w = 0 case with its delta^3(k) term; (iii): the dictionary roots solve the indicial equation at 33 rational w and a principal-series grid, and the bounds -3/2 <= w_lead <= 0, n_s >= 1, red tilt needs m^2 < 0, exceptional n_s - 1 = -2k are checked on grids (k/100, k/1000, k <= 5); the numbers w = 351/20000, m^2/H^2 = -21183201/400000000 and 8.3 < z < 8.4 are exact; 'weights add under products', local polynomials in fields and the k^(+-2 i nu) oscillation are not tested"
+untouched_premises:
+  dark-energy.imported-henneaux-teitelboim-promotion: "cited only for clause (iv), which restates the imported equation d Lambda = 0 (constant Lambda has Fourier support at k = 0); no check function tests (iv)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (i) to (iii) are tested at the recorded kinds; clause (iv) and the closing three-way consequence have no function"

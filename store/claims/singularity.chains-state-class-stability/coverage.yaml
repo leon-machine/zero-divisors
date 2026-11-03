@@ -1,0 +1,18 @@
+functions:
+  check_members_are_even_with_gibbs_kms_marginals:
+    kind: sampled
+    clauses: ["(1): every member of C satisfies (P) and (R)"]
+    omits: "two members only (weights (1,2) thermofield pairs, and the same after a controlled-Z); the converse 'under (P) and (R) the state lies in C' is the cited KMS-uniqueness premise and is not tested; KMS identity checked on single-mode marginals"
+  check_class_invariant_under_number_diagonal_dynamics:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "four diagonal unitaries (two controlled-Z, two phase patterns) applied once to a weights-(1,1) pair state; not 'every dynamics (L_E) permits', not compositions; the hopping control leaves the class, with the moved populations pinned by hand as c^2 p_1 + s^2 p_2 and s^2 p_1 + c^2 p_2"
+  check_product_member_and_unbounded_correlation:
+    kind: partial
+    clauses: ["(3): C contains the product state e^(-beta K_geo)/Z", "C contains states of arbitrarily large total correlation and descent deficit", "(R) constrains none of the correlations"]
+    omits: "uniqueness under (G) holds by reading (G) as rho = e^(-beta K_geo)/Z (exact-equilibrium premise), not computed; the check shows E_N-fixedness does not single the product out (a diagonal correlated member with the same marginals is E_N-fixed) and that pure pair states are not E_N-fixed; the converse of (1) rests on the KMS-uniqueness premise; correlation and deficit are not computed as entropies, only purity, equal Gibbs marginals and the E_N spectrum for k = 1, 2, 3 pairs, with growth in k extrapolated"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "W413 pass 2026-10-23: the hopping control in check_class_invariant_under_number_diagonal_dynamics now pins the moved mode populations exactly (c^2 p_i + s^2 p_j, s^2 p_i + c^2 p_j) instead of only 'leaves the class'; sample phases and the hop moved to module level"

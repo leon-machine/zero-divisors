@@ -1,0 +1,22 @@
+functions:
+  check_doublet_content:
+    kind: exact
+    clauses: ["fermion content (2,3) + (2,1)"]
+    omits: "Computed on the five-mode module of Hypothesis (S) only; that (S) is the right module is the open hypothesis, not tested."
+  check_single_spinor_singlets:
+    kind: exact
+    clauses: ["single-spinor sector 1 + 3 + 3b + 1 with q = -2k and Y = -k/3", "singlet spectrum (1)_0 + (3b)_{-2/3} + (3b)_{+1/3} + (1)_{+1}"]
+    omits: "The remark that the single-spinor Fock space is not a subspace of the tensor state space is not tested; the row j = 0 is read from the five-mode characters."
+  check_anomaly_conditions_hold_and_determine:
+    kind: exact
+    clauses: ["the four anomaly conditions hold on this spectrum", "they determine it up to u^c, d^c relabelling given content, Y_Q = 1/6, and a fourth singlet at Y = 0 or none"]
+    omits: "The elimination in solve_generation is hand-coded, not derived from anomaly_sums, so uniqueness rests on that algebra; only the generation of one family is treated."
+  check_z6_lattice:
+    kind: exact
+    clauses: ["physical representations are confined to the Z_6 lattice"]
+    omits: "Tests the 12 irreducible modules of the five-mode module against 2t + 3 delta + q = 0 mod 6, and that the condition has index six over SU(2) dimensions 1, 2 and trialities 0, 1, 2; not an arbitrary physical representation."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The four functions compute exactly the stated content, singlet listing, anomaly solution and Z_6 membership on the five-mode module; the Hypothesis (S) premise and the Fock-space remark are not tested. 2026-10-23 (weak checks): check_z6_lattice also asserts that the lattice condition has index six (exactly one q = 6Y per period for each SU(2) dimension and triality), so the off-lattice samples are not the only test of the condition; off-lattice samples moved to module level."

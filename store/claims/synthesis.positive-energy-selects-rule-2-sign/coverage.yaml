@@ -1,0 +1,18 @@
+functions:
+  check_repairs_and_centres:
+    kind: exact
+    clauses:
+    - (i)
+    omits: Dimensions of the centre of k, of k and of p for so(2,4), so(4,2), so(1,5), so(3,3) and so(1,3) are exact; which extension is obstructed and which repairs apply are encoded from Rule 2 (a), (c), (d) by the helper functions and not recomputed; (ii) existence of positive energy representations and (iii) non-existence are not tested
+  check_central_element_is_fused_time_plane:
+    kind: exact
+    clauses:
+    - (i)
+    omits: Z = e0 nu in Cl(2,4) and the time-times-extension rotation in Cl(4,2) are central in k with Z^2 = -1 and ad(Z)^2 = -4 on p; e0 nu is a boost in Cl(4,2) and in Cl(1,5); no rotation of Cl(1,5) is central; the identification of Z with the conformal Hamiltonian in (ii) is not tested
+untouched_premises:
+  std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exhaustive bivector computations in the five algebras establish (i); (ii) and (iii) rest on the twistor construction and the imported cone classification.

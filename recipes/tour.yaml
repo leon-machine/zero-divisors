@@ -1,0 +1,34 @@
+doc: tour
+title: 'A tour of the Transport Papers'
+author: Leon Butler
+level: lay
+spine:
+- transport.noinverse
+- transport.no-go-level-elements
+- transport.minimality
+- conformal.minimal-nondegenerate-completion
+- transport.transport-algorithm
+- transport.classification-real-clifford-algebras
+- tower.witt-index-quantum-capacity
+- sheaf.one-sided-completion
+- singularity.type-n-only-type-n
+- interior.covariant-form-vacuum-equations
+- singularity.descent-parity-average
+- hawking.i-state
+- singularity.purity-output-partner-commutant
+- dark-energy.frozen-point-makes-stelle-west-vector
+- mass.mass-symplectic-area-two-twistor-formula
+- standard-model.gauge-algebra-minimal-massive-composite
+- families.three-identical-families-mixing-shared-slots
+- neutrino.rank-one-seesaw-ordering-sum-double
+- dark-matter.mirror-tower-copy-one
+- one-relation.two-capacities-three-consequences
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [150, 250]

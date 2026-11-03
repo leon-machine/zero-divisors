@@ -1,0 +1,26 @@
+functions:
+  check_tau_is_automorphism_and_twisted_adjoint:
+    kind: sampled
+    clauses:
+    - '"each tau_g is an algebra automorphism, and on vectors it restricts to the twisted adjoint Ad_g(x) = g^ x g^-1"'
+    omits: versors made of one, two and three rational invertible vectors in Cl(1,3), Cl(2,1), Cl(0,3), Cl(2,2); multiplicativity on every basis blade pair for those g
+  check_vector_is_reflection:
+    kind: sampled
+    clauses:
+    - '"Ad_u(x) = -u x u^-1 = x - 2 (x.u / Q(u)) u, the reflection in the hyperplane orthogonal to u"'
+    omits: four sample vectors u per signature in the same four signatures (null ones skipped) and a handful of test vectors x
+  check_kernel_is_plus_minus_one:
+    kind: sampled
+    clauses:
+    - '"g -> Ad_g maps Pin(p,q) onto O(p,q) with kernel {+-1}" (kernel part)'
+    omits: every nondegenerate signature with n <= 4; the kernel is computed on all of the algebra, then the Pin normalisation lambda^2 = 1 is read over rational lambda in a small range
+  check_surjectivity_samples:
+    kind: sampled
+    clauses:
+    - '"g -> Ad_g maps Pin(p,q) onto O(p,q)" (onto part)'
+    omits: one Euclidean rotation (3/5, 4/5) and one boost (5/3, 4/3) as products of two reflections; Cartan-Dieudonne is cited, not checked
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: each function tests the clause named at sample versors or small signatures and says so

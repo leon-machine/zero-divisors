@@ -1,0 +1,17 @@
+functions:
+  check_single_null_and_two_spinor_mass:
+    kind: sampled
+    clauses:
+    - a single conformal spinor carries null momentum p = pi pibar
+    - m^2 = p^2 = 2|<pi1 pi2>|^2
+    omits: six spinors, fifteen pairs, four rational vectors for p^2 = det(p^a sigma_a); the reading p^2 = 2 det P is a convention, not derived
+  check_frozen_point_in_the_flat_chart:
+    kind: sampled
+    clauses:
+    - the frozen point is I_Lambda = n_inf + (Lambda/6) n_0, so at Lambda = 0 it is n_inf
+    omits: six values of Lambda and seven points; the scale function sigma = 1 - Lambda Q(x)/12 that defines the frozen point is taken from the cited premise (the check shows I_Lambda reproduces it and is the unique constant vector that does)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Both functions test the restated formulas at exact rational and Gaussian-rational samples.

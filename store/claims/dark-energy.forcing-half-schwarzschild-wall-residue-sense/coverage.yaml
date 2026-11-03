@@ -1,0 +1,18 @@
+functions:
+  check_simple_pole_with_kasner_residue:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "the Kasner model at three sample times with the single exponent triple (-1/3, 2/3, 2/3), torsion-free and t Omega(e_i) = -p_i B_i exactly; regularity of the rest of the datum in the exceptional chart and the O(tau^{2/3}), O(tau^{1/3}) corrections are not tested; the transport to Schwarzschild is only the leading coefficients (-1/3, 2/3, 2/3) of the interior series"
+  check_residues_satisfy_the_field_equations:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "Ricci-flatness of the Kasner field at t = 8 on a grid of 64 exponent triples from {-1/3, 0, 2/3, 1}: exactly seven are vacuum (six obey sum p = sum p^2 = 1, plus p = 0); the unit-boost value B_w^2 = 1 is checked at (-1/3, 2/3, 2/3) only; momentum constraints and the non-diagonal class are outside the claim"
+  check_residues_are_the_completion_weights:
+    kind: partial
+    clauses: ["(3)"]
+    omits: "the weights are computed from the leading powers of the Schwarzschild interior coframe's spatial legs (Laurent series in u = sqrt r, 2M = 1) and agree with the cited theorem's forced weights (-1/2, 1, 1), and the exact proper-time series converts them to the residues (-1/3, 2/3, 2/3); the sheaf completion itself is not rebuilt, and 'its exceptional frame is the frame in which (1) holds' is tested only as the static-to-rain boost being unit and equal to (0, 1) at r = 0, at three sample (m, r)"
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "check_residues_are_the_completion_weights now computes the weights from the interior coframe and the proper-time series instead of entering them; the sheaf completion and frame identification remain partial, as recorded."

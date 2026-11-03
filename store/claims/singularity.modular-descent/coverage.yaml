@@ -1,0 +1,20 @@
+functions:
+  check_invariant_cyclic_state_descends_to_kms_beta_free:
+    kind: sampled
+    clauses: ["pure, boost-invariant, entangling state descends to a KMS state at some beta in R", "beta free, sign included", "descent equals pinching (diagonal)", "(iii) removes exactly the endpoints"]
+    omits: "only the Schmidt-form family |00> + t e^{i chi}|11> at four values of t (beta > 0, < 0, = 0, > 0), not an arbitrary state satisfying (i)-(iii); that every such state has this form is delegated to the called Schmidt-forcing premise"
+  check_hawking_temperature_and_fermi_dirac:
+    kind: sampled
+    clauses: ["beta = 2 pi in rapidity gives T = kappa/(2 pi) = 1/(8 pi M)", "reduced matrix diag(1, e^{-omega/T})/Z with occupancy 1/(e^{omega/T} + 1)"]
+    omits: "pi is replaced by three rational stand-ins and M by three samples; kappa = 1/(4M) is taken from the plane-rate premise; 'exactly the Hawking temperature' is a naming, not compared against an independent value"
+  check_hypotheses_sufficient_not_necessary:
+    kind: exact
+    clauses: ["a state violating (ii) need not descend thermally", "some such states do descend thermally", "the hypotheses are sufficient, not necessary"]
+    omits: "both examples violate (ii) only; no example violating (iii) alone is built (the non-cyclic endpoint |00> appears in the first function)"
+untouched_premises:
+  angle.imported-theorems-deliver-their-hypotheses: "cited only in the standard-route derivation, which carries no computable content"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the finite core (2x2 pair, Schmidt-form states) is tested at sample t; the general 'any state' scope is carried by the called premises"

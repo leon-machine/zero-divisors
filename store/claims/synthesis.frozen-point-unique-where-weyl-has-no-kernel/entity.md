@@ -1,0 +1,86 @@
+---
+id: synthesis.frozen-point-unique-where-weyl-has-no-kernel
+kind: claim
+version: 4
+title: One frozen point up to scale wherever the Weyl tensor has no kernel vector
+status: proved
+region: synthesis
+subject: dark-matter
+tags: [tractors, frozen-point, premises-p1-p5]
+proposed_by:
+  kind: ai
+  session: 2026-10-22-toe
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: direction
+- name: Claude Opus 5.5
+  role: proposal and drafting
+  source: Co-Authored-By trailer of the commit that added it
+review: draft
+derivations:
+- name: main
+  uses:
+  - dark-energy.imported-frozen-point-geometry@6
+  proof: proof-main.tex
+checked_by:
+- kind: check
+  ref: check.py::check_weyl_kernel_schwarzschild_and_type_n
+- kind: check
+  ref: check.py::check_tractor_curvature_common_kernel
+- kind: check
+  ref: check.py::check_parallel_tractors_are_multiples_of_I
+- kind: proof
+  derivation: main
+lineage:
+  motivated_by:
+  - dark-matter.p1-single-frozen-point
+  - dark-energy.point-infinity-has-no-physical-fluctuation
+extraction:
+  maintainer_pass_2:
+    by: maintainer-2026-10-24
+    date: '2026-10-24'
+    note: 'Gauge Theory Gravity wording pass at Leon''s request (2026-10-24): curved-spacetime and conformally-flat wording restated in terms of the gravitational field on flat spacetime (a nonvanishing gravitational field; the Weyl part of the field strength vanishes, the conformally flat derived metric kept as a reading; global content read on an atlas of flat charts patched by gauge transformations). Wording only; statements, proofs'' arguments and checks unchanged. Version 3 -> 4.'
+  maintainer_pass:
+    by: maintainer-2026-10-23-gtg
+    date: '2026-10-23'
+    note: 'Restated in Gauge Theory Gravity: the general conformal manifold is kept and its case for a gravitational field on flat spacetime named (a connected open subset of the invertible region with the conformal class of the derived metric, the tractor connection the Cl(2,4) gauge field, the Weyl tensor the trace-free part of the field strength); content unchanged. Checks untouched. Fix (referee GR2, 2026-10-23): the proof prefix reads the gravitational field on flat spacetime as a case, the statement keeping the general conformal manifold.'
+  notation_pass:
+    by: maintainer-2026-10-23
+    date: '2026-10-23'
+    note: Squares of vectors written Q(v) in place of the inner product of a vector with itself; no change of content.
+  open_problem: pr.p1-single-frozen-point
+  note: >-
+    Reduces the metric clause of P1 to three ingredients, none of which is a choice of frozen point:
+    every tower's frozen point is parallel for the one tractor connection of the shared conformal
+    structure; somewhere the Weyl tensor has no kernel vector (true at every point of a
+    Schwarzschild or Schwarzschild-de Sitter exterior with M not zero, whose tidal tensor is
+    (M/r^3) diag(-2,1,1), cited from memory as standard); and the frozen points share their norm.
+    Then the frozen points are proportional with constant ratio, so the towers' Einstein metrics agree up
+    to a constant factor and their walls coincide; the residue of P1's metric clause is the normalisation
+    constant per tower. Some hypothesis on the Weyl tensor is needed: in a conformally flat region the
+    tractor connection is flat and admits six independent parallel tractors (the de Sitter model filed
+    alongside, synthesis.two-frozen-points-conformally-flat); at a type N point the null propagation
+    vector is a kernel vector, and whether points of type N or III allow several parallel tractors is not
+    decided. The argument covers Lambda = 0 (null frozen point, Ricci-flat scale) as well, so the
+    Schwarzschild exterior itself is an instance. The orientation clause of P1 (one Witt flag) is not addressed. Transport-convenient:
+    the statement is tractor calculus; the transport reading is that one parallel frozen point is all
+    the curved geometry permits. Whether every tower's frozen point is parallel for the same
+    connection (shared conformal structure) is the remaining structural input and a decision for Leon.
+---
+
+## formal
+Let $(M, [g])$ be a connected four-dimensional conformal manifold with its tractor connection $\nabla$ (Fact \claimref{dark-energy.imported-frozen-point-geometry}); for a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $M$ is a connected open subset of the invertible region with the conformal class of the derived metric, $\nabla$ is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, and the Weyl tensor below is the trace-free part $\mathcal{W}$ of the field strength, and let $I$ be a parallel tractor with $Q(I) = \Lambda/3$ ($\Lambda = 0$ allowed, $I$ then null), so that on its Einstein region, in the scale $g$ it determines, $I = (1, 0, \Lambda/6)$, $g$ is Einstein with $\Ric = \Lambda g$ and $P_{ab} = (\Lambda/6) g_{ab}$. Suppose that at some point $x_0$ of that region the Weyl tensor has no kernel vector: $W_{abcd} v^d = 0$ for all $a, b, c$ implies $v = 0$. Then every tractor $I'$ parallel for $\nabla$ is a constant multiple of $I$, $I' = c\, I$. Consequently the Einstein scale of $I'$ is $c$ times that of $I$, the metrics agree up to the constant factor $c^{-2}$, their zero sets (the walls where the scale vanishes) coincide, and $Q(I') = c^2 \Lambda/3$.
+
+Applied to towers: if the frozen points $I_r$ of all towers are parallel for the one tractor connection of a shared conformal structure ($[g]$, or $[-g]$ for the reversed signature, which has the same parallel tractors), and the universe contains one point of the Einstein region at which the Weyl tensor has no kernel vector, then $I_r = c_r I$ for constants $c_r$, and the metric clause of Premise \claimref{dark-matter.p1-single-frozen-point} holds exactly when the frozen points share their norm, $c_r = \pm 1$. Every point of a Schwarzschild ($\Lambda = 0$) or Schwarzschild-de Sitter ($\Lambda > 0$) exterior with $M \neq 0$ has the no-kernel property. The no-kernel property fails at points of Petrov type N (the null propagation vector is a kernel vector) and on regions where the Weyl part of the field strength vanishes (conformally flat derived metric); on the latter uniqueness itself fails, the tractor connection being flat with a six-dimensional space of parallel tractors.
+
+## technical
+A parallel tractor is annihilated by the curvature of the tractor connection, which for a gravitational field on flat spacetime is the field strength of its $\Cl(2,4)$ gauge field. In an Einstein scale that curvature acts as the Weyl tensor on the middle slot of a tractor and kills the other two, the Cotton terms vanishing because the Schouten tensor is a constant multiple of the metric. So where the Weyl tensor has no kernel vector the middle slot of every parallel tractor vanishes; by continuity this holds on an open set, where the parallel transport equations then force the top slot to be constant and the bottom slot to equal $\Lambda/6$ times it. A parallel tractor that is a constant multiple of $I$ on an open set is that multiple everywhere on a connected manifold. Hence the gravitational field admits one frozen point up to a constant factor.
+
+For the towers this reduces the metric clause of P1 to a shared conformal structure, one point where the Weyl tensor has no kernel vector (any point near a black hole qualifies), and a common normalisation of the frozen points; the normalisation is the residue. Some hypothesis on the Weyl tensor is needed: where the Weyl part of the field strength vanishes uniqueness fails, a universe with vanishing Weyl part admitting two frozen points with different Einstein metrics (filed alongside, synthesis.two-frozen-points-conformally-flat); whether points of type N or III also allow several parallel tractors is not decided here. The argument holds for every value of $\Lambda$, zero included. The orientation clause of P1 is a separate matter not treated here.
+
+## lay
+The series assumes that every hidden sector of the universe feels the same gravity, because they all share one special frozen point fixed at the universe's origin. This result shows that much of that assumption follows from the presence of genuine tidal gravity somewhere, such as around any black hole. Where gravity stretches and squeezes in the way it does near a star, the geometry permits only one frozen point, up to an overall scale. So if every sector's frozen point is compatible with the same shape of spacetime, they must all be the same point, apart from a single number per sector setting its scale. In a universe with no tidal gravity at all, by contrast, there would be room for several different frozen points.
+
+## one-liner
+If every tower's frozen point is parallel for one tractor connection and somewhere the Weyl tensor has no kernel vector (as at any Schwarzschild or Schwarzschild-de Sitter exterior point), the frozen points are constant multiples of one another, so P1's metric clause reduces to a common normalisation.

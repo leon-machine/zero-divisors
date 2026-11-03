@@ -1,0 +1,22 @@
+functions:
+  check_quarter_turn_conjugacy:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "over Q(i): sigma_{x,y} = D_{a,b} sigma_{1,1} D_{a,b}^{-1} for the four a, b in {1, i} with x = a/conj(a), y = b/conj(b) (both sides antilinear and checked on a set containing the basis vectors, hence exact); C(D v) = a^2 s^2 + b^2 Q(d) at seven real vectors (follows from C(P_s v, P_d v) = 0, also asserted); Gram signatures (3,0), (1,2), (2,1), (0,3) of the four slices; that these are the only four C-compatible S_3-equivariant real structures is imported from the real-slices theorem"
+  check_physical_vector_never_null:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "C(v) = sum v_k^2 > 0 and C(D_{1,i} v) = q(v) with C-null iff q-null at seven sample real vectors, and D_{1,i} v fixed by sigma_{1,-1}; the physical sqrt(m) vector is not entered, and 'C-null on the slice of no C-compatible real structure' is the positivity argument for real components, not enumerated over structures"
+  check_basis_free_angle_and_lie_real_form:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "two Cayley-transform unitaries and three spectra: tr A and tr A^2 are the eigenvalue sums, D(A) = (tr A/3) 1 + i A_0 is fixed by theta, tr(D(A)^2) = (tr A)^2/3 - tr A_0^2 equals q of the eigenvalue vector; theta is an antilinear involution and Lie automorphism on five sample X and two Y (not all of gl(3,C)); the Gram signatures (1,8) on the real form and (9,0) on Hermitian matrices are exact computations in explicit bases"
+  check_angle_selects_positive_root:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "exact model H = U diag(1,16,81) U^dagger has eight Hermitian roots giving four Koide values (98/196, 98/144, 98/36, 98/16); for the charged leptons rigorous square-root intervals at m_tau = 1776.84, 1776.93, 1777.02 MeV (not shown monotone in between) give Q within 10^-5 of 2/3 for the positive root, Q in (0.70402, 0.70404) for the electron-reversed root and more than 3/100 above 2/3 for every mixed sign; m_e and m_mu are entered at their central values; the conclusion that 'the Gram-square property has no content' is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause (i) to (iv) has a matching function; the closing interpretive paragraph is untested"

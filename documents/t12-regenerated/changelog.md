@@ -1,0 +1,535 @@
+# Changelog: t12-regenerated
+
+## v11 (2026-10-27T17:08:56+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v10 (2026-10-27T16:50:45+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v9 (2026-10-27T15:25:16+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v8 (2026-10-27T15:16:12+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v7 (2026-10-27T13:38:37+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v6 (2026-10-27T13:30:46+00:00)
+
+- bump: major
+- correspondence.fock-model-complexified-ascended-algebra: revised-substantive
+- correspondence.imported-tractor-connection-local-twistor-transport: revised-substantive
+- correspondence.local-twistor-transport-ascended-spinor-connection: revised-substantive
+- correspondence.reality-conjugation-twistor-form-factor: revised-substantive
+- correspondence.shared-core-ordering-dictionary: revised-substantive
+- correspondence.spinor-identification: revised-substantive
+- correspondence.twistors-are-states-three-ladder-pairs: revised-substantive
+- dark-energy.gravity-pre-metric-forces-degenerate-exactly: revised-substantive
+- dark-energy.imported-henneaux-teitelboim-promotion: revised-substantive
+- dark-energy.point-infinity-has-no-physical-fluctuation: revised-substantive
+- dark-energy.vacuum-region-registration-condition: revised-substantive
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- dark-matter.towers-are-residues-single-clock-filter: revised-substantive
+- families.alignment-computed-thirteenth-refutation-democracy-one: revised-substantive
+- families.doublet-direction-module-georgi-jarlskog-clebsch: revised-substantive
+- hawking.homogeneity-ordering-shift: revised-substantive
+- interior.covariant-form-vacuum-equations: revised-substantive
+- interior.imported-tractor-connection: revised-substantive
+- interior.scale-tractor-leaves-cone: revised-substantive
+- mass.casimir-form-join: revised-substantive
+- mass.de-sitter-scale-frozen-point: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-frozen-point-tractor-connection: revised-substantive
+- mass.mass-symplectic-area-two-twistor-formula: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- mass.weight-polynomial-two-series: revised-substantive
+- neutrino.imported-ceiling-under-hypothesis-u-arrow: revised-substantive
+- note.standard-model.second-doublet-coupling-is-a-second-family-matrix: added
+- pred.dark-energy-w-minus-one: revised-substantive
+- standard-model.automorphisms-preserve-slot-pair-split-are: revised-substantive
+- standard-model.bidoublet-complex: revised-substantive
+- standard-model.bracket-composite-lands: revised-substantive
+- standard-model.chain: revised-substantive
+- standard-model.chirality-two-halves-spinor-module-conjugation: revised-substantive
+- standard-model.coefficient-cannot-come-frozen-point: revised-substantive
+- standard-model.complete-multiplets-shift-all-three-coefficients: revised-substantive
+- standard-model.connection-forced: revised-substantive
+- standard-model.dating-descent: revised-substantive
+- standard-model.direction-demanded-content-doublet-heavy: revised-substantive
+- standard-model.equal-weight-module: revised-substantive
+- standard-model.family-no-go-vev-cannot-separate: revised-substantive
+- standard-model.fits-record-level: revised-substantive
+- standard-model.four-dimensions-forces-converse: revised-substantive
+- standard-model.four-supersymmetric-splits: revised-substantive
+- standard-model.frozen-point-first-rung-component: revised-substantive
+- standard-model.frozen-point-pair-mixing: revised-substantive
+- standard-model.gauge-algebra-minimal-massive-composite: revised-substantive
+- standard-model.generation-ten-under-pati-salam: revised-substantive
+- standard-model.global-form-quotient-determined: revised-substantive
+- standard-model.grade-three-georgi-jarlskog-direction: revised-substantive
+- standard-model.grip-mass-two-rung-module: revised-substantive
+- standard-model.hyp-s-slot-statistics: revised-substantive
+- standard-model.hypercharge-global-form-pair-counting-consistency: revised-substantive
+- standard-model.imported-fock-model-twistor-space: revised-substantive
+- standard-model.imported-frozen-point-dictionary: revised-substantive
+- standard-model.imported-frozen-point-grip-thirteenth-refutation: revised-substantive
+- standard-model.imported-grip-area-casimir-form: revised-substantive
+- standard-model.imported-norm-frozen-point-not-field: revised-substantive
+- standard-model.imported-pair-systems-two-chirality-halves: revised-substantive
+- standard-model.imported-sectors-superselection-mirror-copy: revised-substantive
+- standard-model.imported-tower-commuting-copies-fock-module: revised-substantive
+- standard-model.imported-tractor-bundle-spinor-bundle-their: revised-substantive
+- standard-model.imported-twistor-charge-helicity: revised-substantive
+- standard-model.internal-symmetry-ladder: revised-substantive
+- standard-model.invariant-operators-module: revised-substantive
+- standard-model.invariant-pairing-five-modes: revised-substantive
+- standard-model.left-right-parity-what-breaks-it: revised-substantive
+- standard-model.lifted-components-read-vevs: revised-substantive
+- standard-model.majorana-element: revised-substantive
+- standard-model.mass-bracket-charged-singlet: revised-substantive
+- standard-model.matching-traces: revised-substantive
+- standard-model.module-factorises-even-ground-elements-act: revised-substantive
+- standard-model.moment-map-grip-mass-are-insensitive: revised-substantive
+- standard-model.neutrino-dirac-matrix-charged-fermions: revised-substantive
+- standard-model.no-go-frozen-point-lifts-do: revised-substantive
+- standard-model.no-tower-but-one-contributes-towers: revised-substantive
+- standard-model.one-threshold-exact-criterion: revised-substantive
+- standard-model.one-vev-vector-relations-breaking-pattern: revised-substantive
+- standard-model.pair-count-dimension: revised-substantive
+- standard-model.pair-mixing-not-colour: revised-substantive
+- standard-model.proton-condition-candidates: revised-substantive
+- standard-model.proton-decay-only-through-slot-pair: revised-substantive
+- standard-model.quarks-leptons-two-level-fermion-content: revised-substantive
+- standard-model.raw-representation-content-state-space: revised-substantive
+- standard-model.reduction: revised-substantive
+- standard-model.segre-lemma-automorphisms-preserving-decomposable-tensors: revised-substantive
+- standard-model.space-symmetric-doublet-mass-forms-two: revised-substantive
+- standard-model.spectrum-run: revised-substantive
+- standard-model.supersymmetric-row-two-loops: revised-substantive
+- standard-model.table-exact: revised-substantive
+- standard-model.ten-transported-ambient-space-doublets-are: revised-substantive
+- standard-model.transported-frozen-point: revised-substantive
+- standard-model.transported-frozen-point-doublet-datum-not: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- standard-model.two-threshold-criterion: revised-substantive
+- standard-model.under-s-bracket-direction-charged-not: revised-substantive
+- standard-model.under-s-composites-state-space-spinor: revised-substantive
+- standard-model.under-s-frozen-points-split-inverse: revised-substantive
+- standard-model.under-s-mirror-inherits-desert: revised-substantive
+- standard-model.under-s-state-space-complete-multiplets: revised-substantive
+- standard-model.weak-angle-over-derived-generation: revised-substantive
+- standard-model.what-angle-asks-neutrino-sector: revised-substantive
+- standard-model.what-derived-what-not: revised-substantive
+- standard-model.what-direction-made: revised-substantive
+- standard-model.yukawa-pattern-two-rung-module: revised-substantive
+- std-algebra.bivector-lie-algebra: added
+- synthesis.einstein-route-makes-n-initial-data: added
+- synthesis.finite-range-descent-deposit-cannot-seed-cmb: added
+- tower.commuting-copies: revised-substantive
+- tower.fock-module-one-qubit-per-rung: revised-substantive
+- tower.ladder-pairs-satisfy-car-vectors: revised-substantive
+- tower.structure-tower-c-norms: revised-substantive
+- transport.totality: revised-substantive
+- renumbered c:tower.commuting-copies: 129 -> 132
+- renumbered c:tower.fock-module-one-qubit-per-rung: 130 -> 133
+- renumbered c:tower.ladder-pairs-satisfy-car-vectors: 131 -> 134
+- renumbered c:tower.structure-tower-c-norms: 132 -> 135
+- renumbered c:transport.totality: 133 -> 136
+- renumbered c:refuted.the-desert-the-derived-content-alone-connects-th: 134 -> 137
+- renumbered c:refuted.the-internal-forces-are-gauged-polynomially-as-g: 135 -> 138
+- renumbered c:refuted.the-mass-dictionary-coupling-to-the-frozen-point: 136 -> 139
+- renumbered c:refuted.the-number-n-is-a-coincidence-dirac: 137 -> 140
+- renumbered c:refuted.the-number-n-is-a-mystery-of-largeness: 138 -> 141
+- renumbered c:refuted.the-raw-representation-content-matches-the-fermi: 139 -> 142
+- renumbered c:refuted.the-three-twistor-hierarchy-carries-the-standard: 140 -> 143
+- renumbered c:refuted.the-vacuum-omega-area-sets-the-weak-scale: 141 -> 144
+- renumbered c:refuted.twistors-are-the-ladder-operators: 142 -> 145
+- renumbered c:pred.dark-energy-w-minus-one: 143 -> 146
+- renumbered c:pred.dark-matter-direct-detection-null: 144 -> 147
+- renumbered c:pred.no-indirect-dark-signals: 145 -> 148
+
+## v5 (2026-10-23T06:44:45+00:00)
+
+- bump: major
+- correspondence.fock-model-complexified-ascended-algebra: revised-substantive
+- correspondence.reality-conjugation-twistor-form-factor: revised-substantive
+- correspondence.shared-core-ordering-dictionary: revised-substantive
+- correspondence.spinor-identification: revised-substantive
+- correspondence.twistors-are-states-three-ladder-pairs: revised-substantive
+- dark-energy.imported-henneaux-teitelboim-promotion: revised-substantive
+- dark-energy.point-infinity-has-no-physical-fluctuation: revised-substantive
+- dark-energy.vacuum-region-registration-condition: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- families.doublet-direction-module-georgi-jarlskog-clebsch: revised-substantive
+- interior.covariant-form-vacuum-equations: revised-substantive
+- interior.scale-tractor-leaves-cone: revised-substantive
+- mass.casimir-form-join: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-frozen-point-tractor-connection: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- mass.weight-polynomial-two-series: revised-substantive
+- neutrino.imported-ceiling-under-hypothesis-u-arrow: revised-substantive
+- note.standard-model.setting-introduction: revised-substantive
+- note.standard-model.setting-modules-mass-mechanism-rung-doublet-2: revised-substantive
+- note.standard-model.setting-successor-problems: revised-substantive
+- note.synthesis.what-n-is-counted: added
+- pred.dark-matter-direct-detection-null: revised-substantive
+- pred.no-indirect-dark-signals: revised-substantive
+- refuted.the-number-n-is-a-coincidence-dirac: revised-substantive
+- refuted.the-number-n-is-a-mystery-of-largeness: revised-substantive
+- standard-model.automorphisms-preserve-slot-pair-split-are: revised-substantive
+- standard-model.bidoublet-complex: revised-substantive
+- standard-model.bracket-composite-lands: revised-substantive
+- standard-model.chain: revised-substantive
+- standard-model.chirality-two-halves-spinor-module-conjugation: revised-substantive
+- standard-model.equal-weight-module: revised-substantive
+- standard-model.family-no-go-vev-cannot-separate: revised-substantive
+- standard-model.fits-record-level: revised-substantive
+- standard-model.frozen-point-first-rung-component: revised-substantive
+- standard-model.generation-ten-under-pati-salam: revised-substantive
+- standard-model.grade-three-georgi-jarlskog-direction: revised-substantive
+- standard-model.grip-mass-two-rung-module: revised-substantive
+- standard-model.hyp-s-slot-statistics: revised-substantive
+- standard-model.hypercharge-global-form-pair-counting-consistency: revised-substantive
+- standard-model.imported-frozen-point-dictionary: revised-substantive
+- standard-model.imported-frozen-point-dictionary-external: revised-substantive
+- standard-model.imported-frozen-point-grip-thirteenth-refutation: revised-substantive
+- standard-model.imported-grip-area-casimir-form: revised-substantive
+- standard-model.imported-norm-frozen-point-not-field: revised-substantive
+- standard-model.imported-pair-systems-two-chirality-halves: revised-substantive
+- standard-model.invariant-operators-module: revised-substantive
+- standard-model.largeness-number-universes-boundary-modes: revised-substantive
+- standard-model.left-right-parity-what-breaks-it: revised-substantive
+- standard-model.lifted-components-read-vevs: revised-substantive
+- standard-model.majorana-element: revised-substantive
+- standard-model.neutrino-dirac-matrix-charged-fermions: revised-substantive
+- standard-model.no-go-frozen-point-lifts-do: revised-substantive
+- standard-model.one-number-explain: revised-substantive
+- standard-model.one-vev-vector-relations-breaking-pattern: revised-substantive
+- standard-model.proton-decay-only-through-slot-pair: revised-substantive
+- standard-model.quarks-leptons-two-level-fermion-content: revised-substantive
+- standard-model.reduction: revised-substantive
+- standard-model.space-symmetric-doublet-mass-forms-two: revised-substantive
+- standard-model.spectrum-run: revised-substantive
+- standard-model.supersymmetric-row-two-loops: revised-substantive
+- standard-model.transported-frozen-point-doublet-datum-not: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- standard-model.under-s-bracket-direction-charged-not: revised-substantive
+- standard-model.under-s-composites-state-space-spinor: revised-substantive
+- standard-model.under-s-frozen-points-split-inverse: revised-substantive
+- standard-model.under-s-mirror-inherits-desert: revised-substantive
+- standard-model.under-s-state-space-complete-multiplets: revised-substantive
+- standard-model.weak-angle-over-derived-generation: revised-substantive
+- standard-model.what: revised-substantive
+- standard-model.what-angle-asks-neutrino-sector: revised-substantive
+- standard-model.what-derived-what-not: revised-substantive
+- standard-model.what-direction-made: revised-substantive
+- standard-model.why-large: revised-substantive
+- standard-model.yukawa-pattern-two-rung-module: revised-substantive
+- tower.fock-module-one-qubit-per-rung: revised-substantive
+- c:standard-model.hyp-s-slot-statistics: moved to s:cited
+- renumbered c:standard-model.premise-ew-equal-weight: 2 -> 1
+- renumbered c:standard-model.imported-pair-systems-two-chirality-halves: 3 -> 2
+- renumbered c:standard-model.imported-twistor-charge-helicity: 4 -> 3
+- renumbered c:standard-model.imported-frozen-point-dictionary-external: 5 -> 4
+- renumbered c:standard-model.imported-frozen-point-dictionary: 6 -> 5
+- renumbered c:standard-model.imported-cauchy-decomposition-exterior-power: 7 -> 6
+- renumbered c:standard-model.imported-anomaly-coefficients: 8 -> 7
+- renumbered c:standard-model.imported-one-loop-running-trace-ratio: 9 -> 8
+- renumbered c:standard-model.imported-tractor-bundle-spinor-bundle-their: 10 -> 9
+- renumbered c:standard-model.imported-norm-frozen-point-not-field: 11 -> 10
+- renumbered c:standard-model.imported-fock-representation-clifford-algebra-bogoliubov: 12 -> 11
+- renumbered c:standard-model.pair-count-dimension: 13 -> 12
+- renumbered c:standard-model.segre-lemma-automorphisms-preserving-decomposable-tensors: 14 -> 13
+- renumbered c:standard-model.internal-symmetry-ladder: 15 -> 14
+- renumbered c:standard-model.mass-bracket-charged-singlet: 16 -> 15
+- renumbered c:standard-model.gauge-algebra-minimal-massive-composite: 17 -> 16
+- renumbered c:standard-model.global-form-quotient-determined: 18 -> 17
+- renumbered c:standard-model.four-dimensions-forces-converse: 19 -> 18
+- renumbered c:standard-model.raw-representation-content-state-space: 20 -> 19
+- renumbered c:standard-model.quarks-leptons-two-level-fermion-content: 21 -> 20
+- renumbered c:standard-model.hypercharge-global-form-pair-counting-consistency: 22 -> 21
+- renumbered c:standard-model.chirality-two-halves-spinor-module-conjugation: 23 -> 22
+- renumbered c:standard-model.connection-forced: 24 -> 23
+- renumbered c:standard-model.under-s-composites-state-space-spinor: 25 -> 24
+- renumbered c:standard-model.weak-angle-over-derived-generation: 26 -> 25
+- renumbered c:standard-model.spectrum-run: 27 -> 26
+- renumbered c:standard-model.one-number-explain: 28 -> 27
+- renumbered c:standard-model.what: 29 -> 28
+- renumbered c:standard-model.why-large: 30 -> 29
+- renumbered c:standard-model.dating-descent: 31 -> 30
+- renumbered c:standard-model.largeness-number-universes-boundary-modes: 32 -> 31
+- renumbered c:standard-model.trichotomy-what-kind-number: 33 -> 32
+- renumbered c:standard-model.imported-coefficient-sum-indices: 34 -> 33
+- renumbered c:standard-model.imported-sectors-superselection-mirror-copy: 35 -> 34
+- renumbered c:standard-model.imported-invariant-forms-simple-lie-algebra: 36 -> 35
+- renumbered c:obj.standard-model.one-threshold-spectrum-admissible: 37 -> 36
+- renumbered c:standard-model.no-tower-but-one-contributes-towers: 38 -> 37
+- renumbered c:standard-model.under-s-mirror-inherits-desert: 39 -> 38
+- renumbered c:standard-model.complete-multiplets-shift-all-three-coefficients: 40 -> 39
+- renumbered c:standard-model.one-threshold-exact-criterion: 41 -> 40
+- renumbered c:standard-model.direction-demanded-content-doublet-heavy: 42 -> 41
+- renumbered c:standard-model.table-exact: 43 -> 42
+- renumbered c:standard-model.under-s-state-space-complete-multiplets: 44 -> 43
+- renumbered c:standard-model.places-outside-state-space: 45 -> 44
+- renumbered c:standard-model.two-threshold-criterion: 46 -> 45
+- renumbered c:standard-model.four-supersymmetric-splits: 47 -> 46
+- renumbered c:standard-model.imported-two-loop-gauge-coefficients: 48 -> 47
+- renumbered c:standard-model.supersymmetric-row-two-loops: 49 -> 48
+- renumbered c:standard-model.imported-proton-condition: 50 -> 49
+- renumbered c:standard-model.proton-condition-candidates: 51 -> 50
+- renumbered c:standard-model.imported-tower-commuting-copies-fock-module: 52 -> 51
+- renumbered c:standard-model.imported-fock-model-twistor-space: 53 -> 52
+- renumbered c:standard-model.imported-grip-area-casimir-form: 54 -> 53
+- renumbered c:standard-model.imported-frozen-point-grip-thirteenth-refutation: 55 -> 54
+- renumbered c:standard-model.imported-spinor-bilinears: 56 -> 55
+- renumbered c:obj.standard-model.two-rung-module-sectors-slot-components: 57 -> 56
+- renumbered c:standard-model.module-factorises-even-ground-elements-act: 58 -> 57
+- renumbered c:standard-model.moment-map-grip-mass-are-insensitive: 59 -> 58
+- renumbered c:standard-model.grip-mass-two-rung-module: 60 -> 59
+- renumbered c:standard-model.under-s-frozen-points-split-inverse: 61 -> 60
+- renumbered c:standard-model.frozen-point-pair-mixing: 62 -> 61
+- renumbered c:standard-model.under-s-bracket-direction-charged-not: 63 -> 62
+- renumbered c:standard-model.invariant-operators-module: 64 -> 63
+- renumbered c:standard-model.configuration-sector-carries-higgs-doublets-quantum: 65 -> 64
+- renumbered c:standard-model.reduction: 66 -> 65
+- renumbered c:standard-model.imported-maximal-compact-subgroups: 67 -> 66
+- renumbered c:standard-model.pair-mixing-not-colour: 68 -> 67
+- renumbered c:standard-model.transported-frozen-point-doublet-datum-not: 69 -> 68
+- renumbered c:standard-model.ten-transported-ambient-space-doublets-are: 70 -> 69
+- renumbered c:standard-model.invariant-pairing-five-modes: 71 -> 70
+- renumbered c:standard-model.yukawa-pattern-two-rung-module: 72 -> 71
+- renumbered c:standard-model.one-vev-vector-relations-breaking-pattern: 73 -> 72
+- renumbered c:standard-model.frozen-point-first-rung-component: 74 -> 73
+- renumbered c:standard-model.transported-frozen-point: 75 -> 74
+- renumbered c:standard-model.lifted-components-read-vevs: 76 -> 75
+- renumbered c:standard-model.what-derived-what-not: 77 -> 76
+- renumbered c:standard-model.family-no-go-vev-cannot-separate: 78 -> 77
+- renumbered c:standard-model.space-symmetric-doublet-mass-forms-two: 79 -> 78
+- renumbered c:standard-model.no-go-frozen-point-lifts-do: 80 -> 79
+- renumbered c:standard-model.coefficient-cannot-come-frozen-point: 81 -> 80
+- renumbered c:standard-model.bracket-composite-lands: 82 -> 81
+- renumbered c:standard-model.what-direction-made: 83 -> 82
+- renumbered c:standard-model.imported-pati-salam-representation-theory-survival: 84 -> 83
+- renumbered c:standard-model.automorphisms-preserve-slot-pair-split-are: 85 -> 84
+- renumbered c:standard-model.generation-ten-under-pati-salam: 86 -> 85
+- renumbered c:standard-model.matching-traces: 87 -> 86
+- renumbered c:standard-model.proton-decay-only-through-slot-pair: 88 -> 87
+- renumbered c:standard-model.majorana-element: 89 -> 88
+- renumbered c:standard-model.left-right-parity-what-breaks-it: 90 -> 89
+- renumbered c:standard-model.bidoublet-complex: 91 -> 90
+- renumbered c:standard-model.chain: 92 -> 91
+- renumbered c:standard-model.imported-clebsch-structure-seesaw: 93 -> 92
+- renumbered c:standard-model.what-angle-asks-neutrino-sector: 94 -> 93
+- renumbered c:standard-model.equal-weight-module: 95 -> 94
+- renumbered c:standard-model.neutrino-dirac-matrix-charged-fermions: 96 -> 95
+- renumbered c:standard-model.grade-three-georgi-jarlskog-direction: 97 -> 96
+- renumbered c:standard-model.fits-record-level: 98 -> 97
+- renumbered c:pred.z6-charge-lattice: 99 -> 98
+- renumbered c:correspondence.fock-model-complexified-ascended-algebra: 100 -> 99
+- renumbered c:correspondence.imported-tractor-connection-local-twistor-transport: 101 -> 100
+- renumbered c:correspondence.local-twistor-transport-ascended-spinor-connection: 102 -> 101
+- renumbered c:correspondence.reality-conjugation-twistor-form-factor: 103 -> 102
+- renumbered c:correspondence.shared-core-ordering-dictionary: 104 -> 103
+- renumbered c:correspondence.spinor-identification: 105 -> 104
+- renumbered c:correspondence.twistors-are-states-three-ladder-pairs: 106 -> 105
+- renumbered c:dark-energy.gravity-pre-metric-forces-degenerate-exactly: 107 -> 106
+- renumbered c:dark-energy.imported-henneaux-teitelboim-promotion: 108 -> 107
+- renumbered c:dark-energy.point-infinity-has-no-physical-fluctuation: 109 -> 108
+- renumbered c:dark-energy.vacuum-region-registration-condition: 110 -> 109
+- renumbered c:dark-matter.mirror-tower-copy-one: 111 -> 110
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 112 -> 111
+- renumbered c:dark-matter.towers-are-residues-single-clock-filter: 113 -> 112
+- renumbered c:families.alignment-computed-thirteenth-refutation-democracy-one: 114 -> 113
+- renumbered c:families.doublet-direction-module-georgi-jarlskog-clebsch: 115 -> 114
+- renumbered c:hawking.homogeneity-ordering-shift: 116 -> 115
+- renumbered c:hawking.imported-penrose-transform: 117 -> 116
+- renumbered c:interior.covariant-form-vacuum-equations: 118 -> 117
+- renumbered c:interior.imported-tractor-connection: 119 -> 118
+- renumbered c:interior.scale-tractor-leaves-cone: 120 -> 119
+- renumbered c:mass.casimir-form-join: 121 -> 120
+- renumbered c:mass.de-sitter-scale-frozen-point: 122 -> 121
+- renumbered c:mass.exact-join: 123 -> 122
+- renumbered c:mass.imported-frozen-point-tractor-connection: 124 -> 123
+- renumbered c:mass.mass-symplectic-area-two-twistor-formula: 125 -> 124
+- renumbered c:mass.mass-weight-dictionary: 126 -> 125
+- renumbered c:mass.weight-polynomial-two-series: 127 -> 126
+- renumbered c:neutrino.imported-ceiling-under-hypothesis-u-arrow: 128 -> 127
+- renumbered c:standard-model.hyp-s-slot-statistics: 1 -> 128
+
+## v4 (2026-10-21T20:59:26+00:00)
+
+- bump: major
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- neutrino.imported-ceiling-under-hypothesis-u-arrow: revised-substantive
+- standard-model.dating-descent: revised-substantive
+- standard-model.direction-demanded-content-doublet-heavy: revised-substantive
+- standard-model.four-supersymmetric-splits: revised-substantive
+- standard-model.largeness-number-universes-boundary-modes: revised-substantive
+- standard-model.proton-condition-candidates: revised-substantive
+- standard-model.spectrum-run: revised-substantive
+- standard-model.table-exact: revised-substantive
+
+## v3 (2026-10-21T16:45:40+00:00)
+
+- bump: major
+- dark-energy.imported-henneaux-teitelboim-promotion: added
+- refuted.the-desert-the-derived-content-alone-connects-th: revised-substantive
+- refuted.the-internal-forces-are-gauged-polynomially-as-g: revised-substantive
+- refuted.the-vacuum-omega-area-sets-the-weak-scale: revised-substantive
+- standard-model.chain: revised-substantive
+- standard-model.configuration-sector-carries-higgs-doublets-quantum: revised-substantive
+- standard-model.direction-demanded-content-doublet-heavy: revised-substantive
+- standard-model.grip-mass-two-rung-module: revised-substantive
+- standard-model.invariant-operators-module: revised-substantive
+- standard-model.one-threshold-exact-criterion: revised-substantive
+- standard-model.reduction: revised-substantive
+- standard-model.supersymmetric-row-two-loops: revised-substantive
+- standard-model.table-exact: revised-substantive
+- standard-model.transported-frozen-point-doublet-datum-not: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- standard-model.two-threshold-criterion: revised-substantive
+- standard-model.under-s-frozen-points-split-inverse: revised-substantive
+- standard-model.what: revised-substantive
+- tower.commuting-copies: revised-substantive
+- tower.fock-module-one-qubit-per-rung: revised-substantive
+- tower.ladder-pairs-satisfy-car-vectors: revised-substantive
+- tower.structure-tower-c-norms: revised-substantive
+- renumbered c:dark-energy.point-infinity-has-no-physical-fluctuation: 108 -> 109
+- renumbered c:dark-energy.vacuum-region-registration-condition: 109 -> 110
+- renumbered c:dark-matter.mirror-tower-copy-one: 110 -> 111
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 111 -> 112
+- renumbered c:dark-matter.towers-are-residues-single-clock-filter: 112 -> 113
+- renumbered c:families.alignment-computed-thirteenth-refutation-democracy-one: 113 -> 114
+- renumbered c:families.doublet-direction-module-georgi-jarlskog-clebsch: 114 -> 115
+- renumbered c:hawking.homogeneity-ordering-shift: 115 -> 116
+- renumbered c:hawking.imported-penrose-transform: 116 -> 117
+- renumbered c:interior.covariant-form-vacuum-equations: 117 -> 118
+- renumbered c:interior.imported-tractor-connection: 118 -> 119
+- renumbered c:interior.scale-tractor-leaves-cone: 119 -> 120
+- renumbered c:mass.casimir-form-join: 120 -> 121
+- renumbered c:mass.de-sitter-scale-frozen-point: 121 -> 122
+- renumbered c:mass.exact-join: 122 -> 123
+- renumbered c:mass.imported-frozen-point-tractor-connection: 123 -> 124
+- renumbered c:mass.mass-symplectic-area-two-twistor-formula: 124 -> 125
+- renumbered c:mass.mass-weight-dictionary: 125 -> 126
+- renumbered c:mass.weight-polynomial-two-series: 126 -> 127
+- renumbered c:neutrino.imported-ceiling-under-hypothesis-u-arrow: 127 -> 128
+- renumbered c:tower.commuting-copies: 128 -> 129
+- renumbered c:tower.fock-module-one-qubit-per-rung: 129 -> 130
+- renumbered c:tower.ladder-pairs-satisfy-car-vectors: 130 -> 131
+- renumbered c:tower.structure-tower-c-norms: 131 -> 132
+- renumbered c:transport.totality: 132 -> 133
+- renumbered c:refuted.the-desert-the-derived-content-alone-connects-th: 133 -> 134
+- renumbered c:refuted.the-internal-forces-are-gauged-polynomially-as-g: 134 -> 135
+- renumbered c:refuted.the-mass-dictionary-coupling-to-the-frozen-point: 135 -> 136
+- renumbered c:refuted.the-number-n-is-a-coincidence-dirac: 136 -> 137
+- renumbered c:refuted.the-number-n-is-a-mystery-of-largeness: 137 -> 138
+- renumbered c:refuted.the-raw-representation-content-matches-the-fermi: 138 -> 139
+- renumbered c:refuted.the-three-twistor-hierarchy-carries-the-standard: 139 -> 140
+- renumbered c:refuted.the-vacuum-omega-area-sets-the-weak-scale: 140 -> 141
+- renumbered c:refuted.twistors-are-the-ladder-operators: 141 -> 142
+- renumbered c:pred.dark-energy-w-minus-one: 142 -> 143
+- renumbered c:pred.dark-matter-direct-detection-null: 143 -> 144
+- renumbered c:pred.no-indirect-dark-signals: 144 -> 145
+
+## v2 (2026-10-21T15:34:37+00:00)
+
+- bump: major
+- correspondence.imported-tractor-connection-local-twistor-transport: revised-substantive
+- correspondence.local-twistor-transport-ascended-spinor-connection: revised-substantive
+- correspondence.reality-conjugation-twistor-form-factor: revised-substantive
+- correspondence.spinor-identification: revised-substantive
+- dark-energy.gravity-pre-metric-forces-degenerate-exactly: revised-substantive
+- dark-energy.vacuum-region-registration-condition: revised-substantive
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-substantive
+- dark-matter.towers-are-residues-single-clock-filter: revised-substantive
+- families.alignment-computed-thirteenth-refutation-democracy-one: revised-substantive
+- families.doublet-direction-module-georgi-jarlskog-clebsch: revised-substantive
+- hawking.homogeneity-ordering-shift: revised-substantive
+- interior.scale-tractor-leaves-cone: revised-substantive
+- mass.casimir-form-join: revised-substantive
+- mass.exact-join: revised-substantive
+- mass.imported-frozen-point-tractor-connection: revised-substantive
+- mass.mass-weight-dictionary: revised-substantive
+- mass.weight-polynomial-two-series: revised-substantive
+- neutrino.imported-ceiling-under-hypothesis-u-arrow: revised-substantive
+- standard-model.automorphisms-preserve-slot-pair-split-are: revised-substantive
+- standard-model.bidoublet-complex: revised-substantive
+- standard-model.bracket-composite-lands: revised-substantive
+- standard-model.chain: revised-substantive
+- standard-model.chirality-two-halves-spinor-module-conjugation: revised-substantive
+- standard-model.coefficient-cannot-come-frozen-point: revised-substantive
+- standard-model.complete-multiplets-shift-all-three-coefficients: revised-substantive
+- standard-model.direction-demanded-content-doublet-heavy: revised-substantive
+- standard-model.equal-weight-module: revised-substantive
+- standard-model.family-no-go-vev-cannot-separate: revised-substantive
+- standard-model.fits-record-level: revised-substantive
+- standard-model.four-dimensions-forces-converse: revised-substantive
+- standard-model.four-supersymmetric-splits: revised-substantive
+- standard-model.frozen-point-pair-mixing: revised-substantive
+- standard-model.gauge-algebra-minimal-massive-composite: revised-substantive
+- standard-model.generation-ten-under-pati-salam: revised-substantive
+- standard-model.global-form-quotient-determined: revised-substantive
+- standard-model.grade-three-georgi-jarlskog-direction: revised-substantive
+- standard-model.grip-mass-two-rung-module: revised-substantive
+- standard-model.hypercharge-global-form-pair-counting-consistency: revised-substantive
+- standard-model.imported-fock-model-twistor-space: revised-substantive
+- standard-model.imported-frozen-point-dictionary: revised-substantive
+- standard-model.imported-frozen-point-grip-thirteenth-refutation: revised-substantive
+- standard-model.imported-grip-area-casimir-form: revised-substantive
+- standard-model.imported-norm-frozen-point-not-field: revised-substantive
+- standard-model.imported-pair-systems-two-chirality-halves: revised-substantive
+- standard-model.imported-sectors-superselection-mirror-copy: revised-substantive
+- standard-model.imported-tower-commuting-copies-fock-module: revised-substantive
+- standard-model.imported-tractor-bundle-spinor-bundle-their: revised-substantive
+- standard-model.imported-twistor-charge-helicity: revised-substantive
+- standard-model.invariant-operators-module: revised-substantive
+- standard-model.left-right-parity-what-breaks-it: revised-substantive
+- standard-model.lifted-components-read-vevs: revised-substantive
+- standard-model.majorana-element: revised-substantive
+- standard-model.mass-bracket-charged-singlet: revised-substantive
+- standard-model.module-factorises-even-ground-elements-act: revised-substantive
+- standard-model.neutrino-dirac-matrix-charged-fermions: revised-substantive
+- standard-model.no-go-frozen-point-lifts-do: revised-substantive
+- standard-model.one-vev-vector-relations-breaking-pattern: revised-substantive
+- standard-model.proton-condition-candidates: revised-substantive
+- standard-model.proton-decay-only-through-slot-pair: revised-substantive
+- standard-model.quarks-leptons-two-level-fermion-content: revised-substantive
+- standard-model.reduction: revised-substantive
+- standard-model.space-symmetric-doublet-mass-forms-two: revised-substantive
+- standard-model.spectrum-run: revised-substantive
+- standard-model.supersymmetric-row-two-loops: revised-substantive
+- standard-model.table-exact: revised-substantive
+- standard-model.transported-frozen-point: revised-substantive
+- standard-model.transported-frozen-point-doublet-datum-not: revised-substantive
+- standard-model.two-threshold-criterion: revised-substantive
+- standard-model.under-s-bracket-direction-charged-not: revised-substantive
+- standard-model.under-s-composites-state-space-spinor: revised-substantive
+- standard-model.under-s-frozen-points-split-inverse: revised-substantive
+- standard-model.under-s-mirror-inherits-desert: revised-substantive
+- standard-model.under-s-state-space-complete-multiplets: revised-substantive
+- standard-model.weak-angle-over-derived-generation: revised-substantive
+- standard-model.what-angle-asks-neutrino-sector: revised-substantive
+- standard-model.what-derived-what-not: revised-substantive
+- standard-model.what-direction-made: revised-substantive
+- standard-model.yukawa-pattern-two-rung-module: revised-substantive
+- tower.structure-tower-c-norms: revised-substantive
+
+## v1 (2026-10-21T12:39:59+00:00)
+
+- first generation: 198 claim blocks
+

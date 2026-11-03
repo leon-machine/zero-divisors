@@ -1,0 +1,8 @@
+functions:
+  check_symbol_images_independent:
+    kind: sampled
+    clauses:
+    - '"the 2^n ordered products form a basis"'
+    - '"degenerate or not"'
+    omits: five Gram matrices with n = 3, 4 (the zero form, two degenerate, two non-diagonal); spanning
+      is proved in the text

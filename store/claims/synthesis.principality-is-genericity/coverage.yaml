@@ -1,0 +1,17 @@
+functions:
+  check_principal_is_the_unique_full_dimensional_orbit:
+    kind: sampled
+    clauses:
+    - (i)
+    - (iii)
+    omits: 'Every partition of n for each n = 2..6 (exhaustive within that range, the statement is for all n): sl2 relations, centraliser dimension sum of squares of the conjugate partition, orbit dimension n^2 - n only for (n) and zero only for (1^n); the measure-theoretic conclusion (finitely many orbits, principal orbit open and dense, almost sure type (n)), the pointwise-Ad_g-fixed formulation and the n = 2 remark are not computed'
+  check_indistinguishable_blocks_are_the_rectangular_types:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'Every partition for n = 2..6: commutant dimension equals the sum of squared multiplicities and the multiplicity-one-size (rectangular) types are the divisor types, two for n prime; that the commutant permutes blocks of one size transitively and tells different sizes apart is stated in the docstring and not tested (only dimension counts and (2,2) at n = 4)'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact rank computations over all partitions of n <= 6 confirm the orbit dimensions, the commutant dimensions and the list of rectangular types; the genericity (measure) step and the transitivity claim are not computed.

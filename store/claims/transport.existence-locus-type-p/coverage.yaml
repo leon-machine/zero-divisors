@@ -1,0 +1,24 @@
+functions:
+  check_noncentral_idempotent_exactly_off_the_five:
+    kind: sampled
+    clauses:
+    - Cl(p,q) contains a non-central idempotent iff (p,q) is not in {(0,0),(0,1),(0,2),(1,0),(0,3)} iff it is not a direct sum of division algebras
+    omits: All 28 signatures with n <= 6; existence by a blade witness (1+u)/2; absence on the five is by failure of that search compared against the d-table (k = 1), plus the next function
+  check_idempotents_of_the_five_are_central:
+    kind: partial
+    clauses:
+    - (only if) the five exceptional algebras have no non-central idempotent
+    omits: Checks that the listed idempotents (0, 1, eps_+-, sums) are central, but that these are all the idempotents of the five algebras (sums of the central projectors) is taken from the division-algebra premise, not computed
+  check_orthogonal_vector_pair_gives_type_p:
+    kind: sampled
+    clauses:
+    - an invertible orthogonal pair a, b with a^2 b^2 < 0 gives the non-central idempotent (1 + ab)/2 after normalisation
+    - a unit blade u with u^2 = 1 non-central yields one
+    omits: Seven sample pairs in mixed signatures and u = e1e2e3e4 for q = 4, 5, 6; the statement is for a^2 b^2 = -1 exactly, the check normalises ab when -a^2 b^2 is a perfect square; the general "every unit blade" claim is not enumerated
+untouched_premises:
+  std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: The iff is tested for n <= 6 and the concrete constructions on sample pairs; the converse on the five rests on the listed idempotent combinations.

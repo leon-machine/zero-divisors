@@ -1,0 +1,5 @@
+(i) Take a standard basis vector $e_i$. Moving it to position $i$ in $e_i e_1 \cdots e_n$ passes $i - 1$ anticommuting factors (\claimref{std-algebra.orthogonal-anticommute}), and moving it there in $e_1 \cdots e_n e_i$ passes $n - i$. Both products equal $\pm\, e_1 \cdots (e_i e_i) \cdots e_n$, with signs $(-1)^{i-1}$ and $(-1)^{n-i}$, so $e_i I = (-1)^{n-1} I e_i$; this holds also when $Q(e_i) = 0$, when both sides vanish. A $k$-blade $e_K$ is a product of $k$ vectors, giving $(-1)^{k(n-1)}$, and $\Cl^{k}$ is spanned by them (\claimref{std-algebra.grade-decomposition}).
+
+(ii) $I \tilde{I} = e_1 \cdots e_n e_n \cdots e_1$; contracting from the middle gives $\prod_i Q(e_i)$.
+
+(iii) For $r = 0$ this is \claimref{primer.sign}. For $r > 0$, $I^{2} = \pm I \tilde{I}$, because $\tilde{I} = \pm I$, and $I\tilde{I} = 0$ by (ii).

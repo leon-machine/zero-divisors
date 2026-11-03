@@ -1,0 +1,19 @@
+functions:
+  check_adjoint_frame_twisted_by_half_turn:
+    kind: sampled
+    clauses: ["the half-turn rotor B = e2e3 squares to -1", "O(BR) = D O(R) with D = diag(1,-1,-1): rows 2 and 3 are sections of the twisted line bundle on L(4,1)", "O(R) orthogonal of determinant one and even in R"]
+    omits: "checked at sampled rational rotors; that the twisted line is the nonzero class of H^1(L(4,1); Z2) is the proof's"
+  check_indefinite_lens_wall_form_has_trivial_negative_bundle:
+    kind: sampled
+    clauses: ["(1) the wall form h_0 is single valued on L(4,1), symmetric, nondegenerate, of signature (5,3)", "(1) it restricts to the wall cometric with theta in its radical", "(1) its negative subspace has a frame that descends to L(4,1), so N(h_0) is trivial in the instance N(G-bar) trivial"]
+    omits: "the homotopy joining h_0 to h_1 (cases q = 1 and q >= 2) uses (S), (G) and (F) and is proof-only"
+  check_definite_lens_wall_three_rungs:
+    kind: sampled
+    clauses: ["(2) the three-rung coupled form is single valued, restricts to G and has determinant 2 mu nu beta^2 - t", "(2) signature (7,3) on the physical side"]
+    omits: "the lower bound k >= 3 (L + L nontrivial) is the proof's argument"
+  check_torus_comparison_two_rungs_definite:
+    kind: sampled
+    clauses: ["(3) on the three-torus wall the two-rung coupled form is single valued under the monodromy and of signature (6,2)"]
+untouched_premises:
+  std-algebra.radical-ideal-and-quotient: "cited only in the closing remark of the proof (why the invariant is a class of the bundle of algebras), which no check computes"
+  synthesis.imported-stiefel-connectivity-and-grassmannian-classification: "case (1)'s homotopy step uses (S) and (G) and is proof-only; the check verifies the explicit descended frame of N(h_0)"

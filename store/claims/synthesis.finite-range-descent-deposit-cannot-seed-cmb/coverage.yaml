@@ -1,0 +1,22 @@
+functions:
+  check_amplitude_bound_constants:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "only the constants are computed: (4 pi/3)/(2 pi^2) = 2/(3 pi), 8 pi/(2 pi^2) = 4/pi, and int r^2 e^{-r/xi} = 2 xi^3 by an antiderivative identity at three xi; the steps P(k) <= int |C| d^3r and |C| <= sigma^2 are argued in comments, the latter only at three sample covariance pairs"
+  check_descent_hubble_ratio_and_pivot:
+    kind: exact
+    clauses: ["(ii)", "(iii)"]
+    omits: "exact rational inequalities (sixth powers, 3 < pi < 22/7) for k_*/a_0H_0 in (222, 223), rho(1 MeV) > 4.9e7, rho(1e12 GeV) > 7.2e22 and the pivot margins 2.2e5 and 3.2e20, from the pinned record inputs and fixed g_* = 10.75, 106.75; the monotonicity of adot in (ii) is in another function"
+  check_correlation_range_needed:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "R > 460, R > 6.8e17 and xi > 250 in Hubble lengths follow exactly from (i) with sigma^2 <= 1, A_s >= 2.0e-9 and the rho bounds; 'the required range grows linearly with T_d' is not asserted; the reading that the pivot amplitude is the deposit's, carried by adiabatic zeta, is an input"
+  check_no_horizon_exit_after_descent:
+    kind: exact
+    clauses: ["(ii)", "(iv)"]
+    omits: "adot decreasing on (0, 1/2] (convex a^3 f' negative at both ends) and f <= 1 on [1/2, 1] (convexity, f(1/2) < 1, f(1) = 1) are proved from exact endpoint values and the sign of the second derivative (sampled at three points though evident termwise); 'enters once and never leaves' is the reading of these; pivot exit at a/a_0 in (268, 269) in (iv) is exact; the temperature T_Lambda of the cited theorem is not used"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "numerical thresholds are reproduced exactly; the closing consequence (n_s - 1 = 3 in the limit, deposit far below A_s) has no function"

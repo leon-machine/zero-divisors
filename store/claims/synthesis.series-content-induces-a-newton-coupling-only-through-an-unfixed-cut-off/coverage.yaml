@@ -1,0 +1,24 @@
+functions:
+  check_proper_time_integral_gives_the_universal_logarithm:
+    kind: exact
+    clauses:
+    - "(i) E_2' = -E_1, E_1' = -exp(-x)/x, E_2(0) = 1 on the truncated series, with ln x and gamma symbolic"
+    - "(i) the x^1 coefficient gives Lambda^2 - m^2 ln(Lambda^2/m^2) - (1 - gamma) m^2"
+    - "(i) the logarithm's coefficient is the m^2 part of the t^2 heat-kernel term"
+    omits: "series truncated at order nine; the regulator independence of the logarithm is the argument of the proof"
+  check_content_at_the_cut_off:
+    kind: exact
+    clauses:
+    - "(ii) B = 8(1 - 6 xi_R) at the weak scale"
+    - "(ii) B = -36 + sum (1 - 6 xi_R,j) with the chain's 21 vectors and its scalar contents (64, 68, 188 real)"
+    - "(iv) Lambda^2 = (3/2) pi M_P^2 at B = 8"
+    omits: "conformal and minimal couplings only for the chain; the content above M_U is not stored"
+  check_logarithmic_remainder_sign_and_size:
+    kind: sampled
+    clauses:
+    - "(iii)(a) for the weak-scale content alone with B = 0, the remainder is positive for Lambda >= 10 m_t (alpha = 1) and below 1e-31 of M_P^2 at Lambda = M_P"
+    - "(iii)(a) the massive-vector log weight -(3 + 6 xi_R alpha), -4 at xi_R = 1/6 and alpha = 1, and the coefficient of the logarithm still positive at alpha = 5"
+    - "(iii)(a) the tree term -(4/3) pi v^2 at xi_R = 1/6, negative and below 1e-32 of M_P^2"
+    - "(iii)(b) under (S) the fields at M_I enter with both signs and total below 1e-12 of M_P^2 at Lambda = M_P"
+    omits: "stored central values of m_t, m_W, m_Z, v, M_P; the M_I bound uses 6e11 GeV and curvature weights of size at most 1; the content above M_U is not stored"
+untouched_premises: {}

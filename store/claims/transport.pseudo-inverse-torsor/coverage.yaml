@@ -1,0 +1,18 @@
+functions:
+  check_classes_have_unique_normal_form:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "eight (p,q,extension) cases; L meets Cl(U') in 0 is an exact rank test per case, but 'each class contains a representative w0 + alpha' is tested on at most seven kernel elements per case, and affineness on two sample alpha and two sample xi"
+  check_null_rotations_translate_classes:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "eight cases, 32 (case, u, alpha) combinations with sample u and two sample alpha, xi; N_v is represented by the R_u only, and the translation formula is tested on those samples, not on all of S(v)"
+  check_orbit_is_a_torsor_with_tautological_cocycle:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "eight cases, sample u, u' and two base points; injectivity of u -> [sigma0] - u is read from the rank of the sampled u's, additivity and R_u R_u' = R_{u+u'} on sample pairs"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Each numbered clause has one function with exact per-case computations over eight small cases and sample elements; none claims more than that."

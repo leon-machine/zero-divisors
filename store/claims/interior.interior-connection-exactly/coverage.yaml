@@ -1,0 +1,18 @@
+functions:
+  check_rotation_gauge_field_from_torsion:
+    kind: sampled
+    clauses: ["Omega(e_1) = -sigma_1 B_1", "Omega(e_2) = -sigma_2 B_2", "Omega(e_3) = -sigma_3 B_3 + (cot theta / r) R_23", "Omega(e_0) = 0"]
+    omits: "exact torsion equation and injective torsion map (rank 24) only at four rational (r, theta) points, not for general r and theta; sigma_i are taken from the premise rates, not re-derived"
+  check_frame_parallel_along_free_fall:
+    kind: sampled
+    clauses: ["Omega(e_0) = 0", "Omega(e_c) acts on the frame as the connection forms (16 pairs)"]
+    omits: "four sample points only; checks the action table of the stated Omega on the frame, not the sign display of the Definition separately"
+  check_sphere_coefficient_scales_as_one_over_r:
+    kind: sampled
+    clauses: ["the rotation coefficient is cot(theta)/r, O(1/r) on the round two-spheres"]
+    omits: "checks coefficient = cot(theta)/r at five samples and r times it constant at one theta; the O(1/r) claim for any local orthonormal frame on an S^2 patch is not tested"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Boost sign -sigma_i B_i and the cot(theta)/r term match the statement at sample points; the control with +sigma_i B_i fails torsion as the docstring says."

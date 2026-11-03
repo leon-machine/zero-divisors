@@ -1,0 +1,133 @@
+doc: t12-regenerated
+title: The Standard Model from the Minimal Massive Composite (regenerated from the
+  store)
+author: Leon Butler
+level: formal
+spine:
+- pred.z6-charge-lattice
+- standard-model.imported-pair-systems-two-chirality-halves
+- standard-model.imported-twistor-charge-helicity
+- standard-model.imported-frozen-point-dictionary
+- standard-model.imported-frozen-point-dictionary-external
+- standard-model.imported-cauchy-decomposition-exterior-power
+- standard-model.imported-anomaly-coefficients
+- standard-model.imported-one-loop-running-trace-ratio
+- standard-model.imported-tractor-bundle-spinor-bundle-their
+- standard-model.imported-norm-frozen-point-not-field
+- standard-model.imported-fock-representation-clifford-algebra-bogoliubov
+- standard-model.pair-count-dimension
+- standard-model.segre-lemma-automorphisms-preserving-decomposable-tensors
+- standard-model.internal-symmetry-ladder
+- standard-model.mass-bracket-charged-singlet
+- standard-model.gauge-algebra-minimal-massive-composite
+- standard-model.global-form-quotient-determined
+- standard-model.four-dimensions-forces-converse
+- standard-model.raw-representation-content-state-space
+- standard-model.quarks-leptons-two-level-fermion-content
+- standard-model.hypercharge-global-form-pair-counting-consistency
+- standard-model.chirality-two-halves-spinor-module-conjugation
+- standard-model.connection-forced
+- standard-model.under-s-composites-state-space-spinor
+- standard-model.weak-angle-over-derived-generation
+- standard-model.spectrum-run
+- standard-model.one-number-explain
+- standard-model.what
+- standard-model.why-large
+- standard-model.dating-descent
+- standard-model.largeness-number-universes-boundary-modes
+- standard-model.trichotomy-what-kind-number
+- standard-model.imported-coefficient-sum-indices
+- standard-model.imported-sectors-superselection-mirror-copy
+- standard-model.imported-invariant-forms-simple-lie-algebra
+- obj.standard-model.one-threshold-spectrum-admissible
+- standard-model.no-tower-but-one-contributes-towers
+- standard-model.under-s-mirror-inherits-desert
+- standard-model.complete-multiplets-shift-all-three-coefficients
+- standard-model.one-threshold-exact-criterion
+- standard-model.direction-demanded-content-doublet-heavy
+- standard-model.table-exact
+- standard-model.under-s-state-space-complete-multiplets
+- standard-model.places-outside-state-space
+- standard-model.two-threshold-criterion
+- standard-model.four-supersymmetric-splits
+- standard-model.imported-two-loop-gauge-coefficients
+- standard-model.supersymmetric-row-two-loops
+- standard-model.imported-proton-condition
+- standard-model.proton-condition-candidates
+- standard-model.imported-tower-commuting-copies-fock-module
+- standard-model.imported-fock-model-twistor-space
+- standard-model.imported-grip-area-casimir-form
+- standard-model.imported-frozen-point-grip-thirteenth-refutation
+- standard-model.imported-spinor-bilinears
+- obj.standard-model.two-rung-module-sectors-slot-components
+- standard-model.module-factorises-even-ground-elements-act
+- standard-model.moment-map-grip-mass-are-insensitive
+- standard-model.grip-mass-two-rung-module
+- standard-model.under-s-frozen-points-split-inverse
+- standard-model.frozen-point-pair-mixing
+- standard-model.under-s-bracket-direction-charged-not
+- standard-model.invariant-operators-module
+- standard-model.configuration-sector-carries-higgs-doublets-quantum
+- standard-model.reduction
+- standard-model.imported-maximal-compact-subgroups
+- standard-model.pair-mixing-not-colour
+- standard-model.transported-frozen-point-doublet-datum-not
+- standard-model.ten-transported-ambient-space-doublets-are
+- standard-model.invariant-pairing-five-modes
+- standard-model.yukawa-pattern-two-rung-module
+- standard-model.one-vev-vector-relations-breaking-pattern
+- standard-model.frozen-point-first-rung-component
+- standard-model.transported-frozen-point
+- standard-model.lifted-components-read-vevs
+- standard-model.what-derived-what-not
+- standard-model.family-no-go-vev-cannot-separate
+- standard-model.space-symmetric-doublet-mass-forms-two
+- standard-model.no-go-frozen-point-lifts-do
+- standard-model.coefficient-cannot-come-frozen-point
+- standard-model.bracket-composite-lands
+- standard-model.what-direction-made
+- standard-model.imported-pati-salam-representation-theory-survival
+- standard-model.automorphisms-preserve-slot-pair-split-are
+- standard-model.generation-ten-under-pati-salam
+- standard-model.matching-traces
+- standard-model.proton-decay-only-through-slot-pair
+- standard-model.majorana-element
+- standard-model.left-right-parity-what-breaks-it
+- standard-model.bidoublet-complex
+- standard-model.chain
+- standard-model.imported-clebsch-structure-seesaw
+- standard-model.what-angle-asks-neutrino-sector
+- standard-model.equal-weight-module
+- standard-model.neutrino-dirac-matrix-charged-fermions
+- standard-model.grade-three-georgi-jarlskog-direction
+- standard-model.fits-record-level
+show: spine-only
+paper: T12
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T12_standard_model.tex
+  note: Recreate T12 from the store
+cite:
+- families.doublet-direction-module-georgi-jarlskog-clebsch
+- mass.mass-symplectic-area-two-twistor-formula
+- transport.totality
+- neutrino.imported-ceiling-under-hypothesis-u-arrow
+- dark-energy.gravity-pre-metric-forces-degenerate-exactly
+prose: paper
+msc: Primary 81R40, 81V22; Secondary 20G45, 81T50, 81V15.
+keywords: Standard Model gauge group; global gauge group; hypercharge; anomaly cancellation;
+  chirality; grand unification; Pati-Salam; proton decay; weak mixing angle; hierarchy
+  problem.

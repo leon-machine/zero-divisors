@@ -1,0 +1,25 @@
+functions:
+  check_sigma_square_and_boost_bivector:
+    kind: sampled
+    clauses: ["(1)"]
+    omits: "exact in the atom Cl(1,1) (sigma = e0 e1, relabelling gives -sigma); for a general completed pair sigma^2 = 1 is checked only on two further pairs (the rescaled atom and a pair in Cl(2,2))"
+  check_boost_weights_and_rotor_flow:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "three rational rapidities (c, s) with c^2 - s^2 = 1 on the atom and two further pairs, plus one hand case (5/3, 4/3); e^{-lambda} is represented by (c - s)^2, not a free lambda"
+  check_projectors_and_fock_number:
+    kind: sampled
+    clauses: ["(3)", "(4)"]
+    omits: "(3) on the atom and two further pairs; (4) on the 2 x 2 Fock representation of one mode, exact there"
+  check_unique_flow_up_to_reparametrisation:
+    kind: sampled
+    clauses: ["(5)"]
+    omits: "the bivector space of Cl(1,1) is computed to be one-dimensional (exact); the reparametrisation claim is tested at k = 1, 2, -1 at a single rapidity point, giving scale factors (1/4)^k; that the open normalisation of Remark frontier is exactly the speed is not computed"
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"
+  std-algebra.bivector-exponential: "standard algebra cited in the proof; the check computes the statement directly"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "each clause is verified exactly in the atom and at chosen rational rapidities and pairs; the general-pair content is sampled"

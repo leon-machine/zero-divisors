@@ -1,0 +1,26 @@
+functions:
+  check_module_types:
+    kind: complete
+    clauses: ["row: module types, two at r = 1 and one at r = 7", "row: module types, one at r = 3 and two at r = 5"]
+    omits: ""
+  check_slot_rotation_rows:
+    kind: sampled
+    clauses: ["row: slot rotation, the algebra's central unit exact at every rung at r = 7", "row: number-violating masses forbidden by the algebra's unit at r = 7"]
+    omits: "four rungs of each tower; the rotation identity at Cl(1,2) for three rational (c,s) and one sample pair (X,Y); the slot reflection row, the slot rotation as a rotation of two modules at r = 1, and the gauged-by-H2 clause are not computed"
+  check_pair_unit_rows:
+    kind: partial
+    clauses: ["row: the pair unit, I_7 fixed by the algebra at r = 3, not fixed at r = 5"]
+    omits: "Cl(5,2) has a central omega with omega^2 = -1; Cl(2,5) has centre span{1, omega} with omega^2 = +1, whose elements square to (a^2 + b^2) + 2ab omega (checked at three samples), so none has square -1; the point of S^2 at r = 5 and the reversion-type invariant form row are not computed"
+untouched_premises:
+  dark-tower-matter.constituents-field: "the shared row (same constituent field) is not checked here (the docstring says so)"
+  dark-tower-matter.five-dimensional-content: "the shared row (same content) is not checked here"
+  dark-tower-matter.three-dimensional-content: "the shared row (same content) is not checked here"
+  dark-tower-matter.gauge-algebras: "the shared row (same gauge algebra) is not checked here"
+  dark-tower-matter.where-mass-begins: "the shared row (same mass onset) is not checked here"
+  dark-tower-matter.u-transposition-rule: "premise; no computable content in the algebra-level rows"
+  dark-tower-matter.h2-identification: "hypothesis; no computable content in the algebra-level rows"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the checks cover only the algebra-level rows of the difference table; the opening claim (same field, onset, gauge algebra and content for the two towers of each odd dimension) is entirely uncovered by this check, as the docstring states"

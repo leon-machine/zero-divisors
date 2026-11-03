@@ -1,0 +1,15 @@
+functions:
+  check_dual_plane_identity:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "six unit timelike planes (three coordinate, one rotated, two boosted): blade, square, commutation, the vectors of both planes, and the power cycle including I4^k B^k = (B*)^k; the series identity for general theta follows from the power cycle (proof)"
+  check_sign_over_one_modular_period:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "the six sample planes, all eight even basis elements and six basis bivectors, one spinor bilinear, theta = pi, 2 pi, 4 pi from the exact half-angle table; the stored continued rotor of the boost-evolution result read with i = I4 at eight multiples of pi; general spin s by the tensor-product argument of the proof; on vector arguments the boost at rapidity i pi against the dual turn composed with the total inversion, on the vectors of both planes"
+  check_kms_period_is_statistics_blind:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "three values of x = e^{-2 pi w}, one CAR mode (the completed pair in Cl(1,1)) and one CCR mode by its closed-form occupation; clause (iv) is an imported theorem with a representation-theoretic sign and is not checked"
+untouched_premises:
+  synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem: "cited for the Guido-Longo theorem in clause (iv), which is imported and not checked"

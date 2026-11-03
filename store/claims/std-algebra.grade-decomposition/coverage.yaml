@@ -1,0 +1,9 @@
+functions:
+  check_antisymmetrised_products_have_one_grade:
+    kind: sampled
+    clauses:
+    - '"Cl^k is the span of the blades e_I with |I| = k"'
+    - '"dim Cl^k = C(n, k)"'
+    - '"<uv>_0 = B(u, v) and <uv>_2 = (uv - vu)/2"'
+    omits: one sampled antisymmetrised product per grade for every signature with n <= 4; the two-vector
+      formulas in one signature

@@ -1,0 +1,22 @@
+functions:
+  check_tractor_fibre_metric_and_structure_algebra:
+    kind: exact
+    clauses:
+    - '"standard tractor bundle of rank six, metric of signature (2,4), structure algebra so(2,4)"'
+    omits: The group SO(2,4) is read from the Lie algebra; the tractor gauge field Omega_T(a) is shown to be a bivector at three sample directions with sample HINV, PSYM matrices; "preserving that metric" is the skew-adjointness of the 15 bivectors
+  check_spinor_bundle_and_induced_spin_connection:
+    kind: sampled
+    clauses:
+    - '"the spinor bundle has rank four over I_6, fibre CS, Cl(2,4) acting"'
+    - '"the conformal spinor connection is the induced spin connection with Lie algebra so(2,4)"'
+    omits: Rank over I6, faithfulness (operator rank 15) and closure of CS are exact; the Lie-map and spin-lift identities are checked on subsets of bivector pairs, three of the eight basis spinors, and three vectors
+  check_change_of_scale_is_tractor_gauge_transformation:
+    kind: sampled
+    clauses:
+    - '"the canonical connection depends only on the conformal class"'
+    omits: Four directions, one point Y_0 and two Hessians (gradient and non-gradient); the identity is exact at those samples
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Tractor fibre algebra is exact; spinor-bundle and conformal-class identities are checked at samples, with the group-level statements read from the Lie algebra.

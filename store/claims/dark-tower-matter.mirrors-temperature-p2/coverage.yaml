@@ -1,0 +1,17 @@
+functions:
+  check_photon_term_derived:
+    kind: exact
+    clauses: ["Delta N_eff = (8/7)(11/4)^(4/3) + 3.044"]
+    omits: "the photon term is derived in cubed form, (rho_gamma/rho_nu1)^3 = (8/7)^3 (11/4)^4, from the entropy ratio 11/4 across e+e- annihilation; the 3.044 is the standard-model value typed in"
+  check_delta_neff_and_exclusion:
+    kind: exact
+    clauses: ["Delta N_eff = 7.45 at recombination", "excluded by a factor of about 25"]
+    omits: "the P2 reach argument (P2 gives xi = 1, and T14's cold mirror is an exception to P2 that T14 neither states nor costs) is a reading of premises, not computable (the docstring says so); the bound 0.3 is typed in"
+untouched_premises:
+  dark-matter.stored-asymmetry-charge-not-number: "cited for the mirror's cold temperature from the floor upward, which is the premise of the exception argument, not of the number checked"
+  dark-matter.seeding-gravity-floor-dark-towers-temperature: "cited for the gravitational floor; the exception argument is not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the number 7.45 and the factor 25 are bracketed exactly; the claim that the cold mirror is an unstated exception to P2 is an argument at assembly level. 2026-10-23 weak-checks: check_delta_neff_and_exclusion now rounds both ends of each bracket to the stated figure (4.40, 7.45, 25) and pins Delta N_eff/0.3 in (24.8, 24.9) as the docstring states; (11/4)^4 is computed, not typed"

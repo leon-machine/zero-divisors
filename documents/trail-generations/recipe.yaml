@@ -1,0 +1,36 @@
+doc: trail-generations
+title: Families of quarks and leptons
+author: Leon Butler
+level: lay
+spine:
+- families.three-generations-faces-maximal-composite
+- families.three-identical-families-mixing-shared-slots
+- synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group
+- synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation
+- synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
+- synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free
+- families.source-term-linear-tilt-mass-functional
+- refuted.the-vacuum-omega-area-sets-the-weak-scale
+- families.alignment-computed-thirteenth-refutation-democracy-one
+- families.faces-ordered-what-identification-requires-first
+- families.skeleton-rank-one-plus-ordering-shift
+- families.linear-conjecture-refuted-data
+- families.koide-class-crossing-fit-conclusion
+- families.one-open-problem-three-forms
+- synthesis.pair-singlet-mass-form-is-floor-plus-face-density
+- synthesis.mass-squared-reading-needs-millions-of-face-pairs
+section_titles:
+  quantum-fields: Two checks on the count
+  generations: The faces as families
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 60
+  - 160
+trail: true

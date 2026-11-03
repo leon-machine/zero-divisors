@@ -1,0 +1,9 @@
+{
+  "title": "Transport Lab: the claim store of the Transport Papers",
+  "upload_type": "dataset",
+  "description": "A store of granular, verified claims extracted from the Transport Papers (T0 to T17 and companion notes), with the toolkit that validates it, computes its derived state, and generates documents from it.",
+  "creators": [{"name": "Butler, Leon", "orcid": "0009-0006-4449-5617"}],
+  "license": "cc-by-4.0",
+  "communities": [{"identifier": "transport-papers"}],
+  "keywords": ["Clifford algebras", "geometric algebra", "zero divisors", "transport principle", "knowledge graph"]
+}

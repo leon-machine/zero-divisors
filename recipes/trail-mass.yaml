@@ -1,0 +1,25 @@
+doc: trail-mass
+title: 'The origin of mass'
+author: Leon Butler
+level: lay
+spine:
+- mass.mass-symplectic-area-two-twistor-formula
+- mass.de-sitter-scale-frozen-point
+- mass.five-broken-generators
+- mass.exact-join
+- mass.mass-weight-dictionary
+- mass.weight-polynomial-two-series
+- mass.weight-composite
+- standard-model.mass-bracket-charged-singlet
+- refuted.the-mass-dictionary-coupling-to-the-frozen-point
+- families.absolute-scale-clean-negative-result
+show: spine-only
+include:
+  assumptions: always
+  refutations: none
+  predictions: in-cone
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words: [60, 160]
+trail: true

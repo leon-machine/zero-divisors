@@ -1,0 +1,22 @@
+functions:
+  check_flag_conjugate_is_particle_antiparticle:
+    kind: partial
+    clauses: ["(i) the Witt flag is what particle-versus-antiparticle means"]
+    omits: "all eight states of the three-pair Fock ideal are exchanged with their complements by the flag conjugate (exhaustive there); the matching of irreversibility, tower charges and the orientation choice to the Sakharov conditions is interpretive and untested"
+  check_theta_exists_exactly_where_the_bit_does:
+    kind: complete
+    clauses: ["(ii) a theta-term exists exactly where a flag bit does, at the P3 representatives", "odd-dimensional towers carry no continuous theta"]
+    omits: "the neutron dipole bound |theta| < 1e-10 and the alternatives not excluded are empirical or interpretive and not computed"
+  check_asymmetry_confined_to_this_tower_and_the_mirror:
+    kind: complete
+    clauses: ["(iii) the asymmetry is confined to the oriented causal towers, this one and the mirror; odd towers carry none"]
+    omits: "universality of the value (Premise P4), that a flag exists on every rung, and (iv) the stance on epsilon are not computed"
+untouched_premises:
+  dark-matter.imported-trichotomy-descents-data: "(iv) uses the trichotomy's kinematic clause at its observation level; no computable content in this statement"
+  dark-matter.mirror-tower-copy-one: "equality of theta and epsilon across the reversal orbit is cited from its parts (iv) and (v), not recomputed here"
+  dark-matter.p4-democracy-asymmetry-over-oriented-towers: "premise stated as a hypothesis, not a computation (docstring)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the computable parts of (i)-(iii) are tested; the docstring lists what is not computed"

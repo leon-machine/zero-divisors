@@ -1,0 +1,17 @@
+functions:
+  check_spin_connection_form_is_so24:
+    kind: exact
+    clauses:
+    - '"nabla has connection form valued in so(2,4)"'
+    omits: Tangent algebra is taken as the even reverse-odd multivectors whose commutator with every vector is a vector; that the conformal spinor connection lies in the bivector span is tested only at two sample directions with sample matrices HINV and PSYM
+  check_factorisation_preserving_unitary_algebra:
+    kind: exact
+    clauses:
+    - '"D_H = d + A with A valued in su(2) + su(3) + u(1)"'
+    - '"conversely every such pair gives a connection with these properties"'
+    omits: The tangent condition is imposed at 15 rational points (an upper bound, matched by the 12 explicit generators), and the converse is verified at those points, not symbolically; the action of Theorem gauge-algebra-minimal-massive-composite is not examined
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Both Lie-algebra reductions are exact linear-algebra computations in fixed dimensions; the assembly into bundle connections is the proof, not the check.

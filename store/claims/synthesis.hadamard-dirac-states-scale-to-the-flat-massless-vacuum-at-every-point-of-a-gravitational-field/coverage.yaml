@@ -1,0 +1,49 @@
+functions:
+  check_test_fields_are_in_the_store_gauge_and_weyl_curved:
+    kind: complete
+    clauses:
+    - 'set-up: both test fields have hb(x0) = 1, Omega(x0) = 0 (store torsion-free solver), torsion-free, Weyl curvature nonzero at x0; the plane wave Ricci-flat, the generic field not'
+    omits: the theorem is for every field; these are the fields on which the Taylor data are computed
+  check_synge_function_scales_to_half_the_flat_square:
+    kind: sampled
+    clauses:
+    - '(ii) sigma(l y, l y'') = l^2 [Q(d)/2 + l d . [(ybar . grad) hb^{-1}](d) + O(l^2)] on two fields at three pairs, GA form and index reading both'
+    - (ii) the eikonal identity for the computed sigma, exact to order l^3
+    omits: joint smoothness of sigma_l in (l, y, y') for a general field is proof-only (Hadamard's lemma)
+  check_van_vleck_determinant_and_transport_rotor_tend_to_one:
+    kind: sampled
+    clauses:
+    - (ii) Delta = 1 + 0 l + (l^2/6) Ric(d, d) + O(l^3) with the store's Ricci map, on two fields at two pairs
+    - (ii) R = 1 + 0 l - (l^2/2) dOmega(x0)(ybar)(d) + O(l^3) when Omega(x0) = 0, and R = 1 - (l/2) W(d) + O(l^2) when Omega(x0) = W, with R reverse(R) = 1
+    - (iii) with Omega(x0) = W != 0 the O(1) parts of l^-1 d_{y^mu} R and Omega(e_mu)(l y) R/2 cancel for every mu, so the connection and D_x U terms together are O(l^2)
+    omits: the general covariant expansion of Delta is cited, not derived
+  check_scaled_dirac_parametrix_tends_to_the_flat_massless_kernel:
+    kind: sampled
+    clauses:
+    - (i) D_x sigma = hb^{-1}(gamma'(1)) against the reciprocal coframe, as exact l-series
+    - (iii) the scaled leading term has l^0 coefficient -4 d/Q(d)^2 on both fields (Laurent orders from sigma = l^2 sigma_l, D_x sigma = l v, weight 3)
+    - (iii) the l^1 coefficient of the leading term is zero on the plane wave and the stated geometry term on the generic field
+    - (iii) the mass term l^3 m0 U/sigma, its order computed, starts at l^1 with coefficient m0/s0 for m0 = 1/2, 3
+    omits: the D_x U and connection terms are checked in the rotor and scaling-power functions, not here
+  check_flat_massless_kernel_and_normalisation:
+    kind: sampled
+    clauses:
+    - (iii) grad(z/Q^2) = 0 off the cone and grad(2/Q) = -4 z/Q^2 at four points; degree -3 homogeneity
+    - (iii) the constants -(1/8 pi^2)(2/Q) = D_+ and i grad D_+ e0 = (i/2 pi^2) z e0/Q^2 as coefficients of 1/pi^2
+    omits: the Fourier integral giving D_+ is the imported Fact; the i0 prescription is proof-only
+  check_scaling_powers_of_the_hadamard_terms:
+    kind: sampled
+    clauses:
+    - '(iii) Laurent orders on the generic field: leading 0, mass 1, connection 2, D_x U 2 (gauge Omega(x0) = 0)'
+    - '(i), (iii) the flat-field log coefficient V(x0, x0) = -m0^2/2, computed with second-order jets as the V that removes the 1/sigma term of (box + m0^2)(1/sigma + V log sigma); the log term l^3 V D_x sigma/sigma then has order 2 and coefficient -m0^2 d/Q(d)'
+    omits: on a Weyl-curved field V(x0, x0) has a curvature part, not computed (only its boundedness is used); the C^1 remainder's l^3 and the distributional convergence (pullback by diffeomorphisms, time-function independence) are proof-only
+  check_store_dilation_is_normal_dilation_up_to_a_map_tending_to_the_identity:
+    kind: sampled
+    clauses:
+    - (iv) Phi_l(y) = y + (l/2) Gamma(x0)(y, y) + O(l^2) and the Gauss lemma sigma(x0, l y) = l^2 Q(Phi_l(y))/2 to order l^3, on two fields
+    - (iv) Gamma(x0)(a, b) = (a . grad hb^{-1})(b) at x0 when Omega(x0) = 0, all components, on two fields
+    omits: three points per field
+untouched_premises:
+  synthesis.imported-microlocal-hadamard-condition: 'definition of a Hadamard state; the check computes the parametrix that the equivalence Fact attaches to it, not the wave-front set'
+  synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field: 'the field and its CAR algebra are the setting; nothing is computed from them beyond the two-point functions'
+  synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport: 'the leading coefficient U = Delta^(1/2) R and the time-function independence are inputs; the check computes Delta and R from the geodesic but does not derive the parametrix'

@@ -1,0 +1,28 @@
+functions:
+  check_even_part_is_the_generation:
+    kind: exact
+    clauses: ["1"]
+    omits: ""
+  check_fock_space_is_the_cl10_spinor:
+    kind: exact
+    clauses: ["2 (the five-mode Fock space is the Cl(10) spinor module; its two parities are the two 16s)"]
+    omits: "That the two parities are the two half-spinor representations of Spin(10) is read from the Cl(10) relations and the 16 + 16 split; the group-level statements about Pin(10), Spin(10) and the determinant phase are the imported Fact's."
+  check_number_and_split_preserving_bivectors:
+    kind: exact
+    clauses: ["2 (the number-preserving automorphisms form U(5), those also preserving the split U(2) x U(3))", "2 (the determinant phase: n_i - 1/2 lies in Spin(10), n_i does not)"]
+    omits: "Lie algebra dimensions 25 and 13 of the commuting bivectors; the group-level statement and the determinant-one subgroup are not computed."
+  check_abelian_generators_anomalies:
+    kind: exact
+    clauses: ["3(a)"]
+    omits: "The three linear sums are checked at all points of a 13 x 13 integer grid, which fixes the linear forms; the cubic sum is evaluated only at (3, -2), (1, 1) and (1, -1) and not as a cubic form."
+  check_spin10_action_anomaly_free:
+    kind: exact
+    clauses: ["3(b)", "X = j + k - 5/2 = 2Y - (5/2)(B - L) with the stated values", "nu^c nu^c has X = -5, B - L = 2"]
+    omits: "All sums vanish on a 4 x 4 grid of (alpha, beta), which fixes cubic forms in two variables. The sentences that thirteen generators result from the automorphism rule and that the twelve survive below the Majorana scale are not computed."
+untouched_premises:
+  standard-model.imported-cauchy-decomposition-exterior-power: "the check enumerates components (j, k) directly and does not use the Cauchy decomposition"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "All three clauses are exact finite computations on the five-mode module and component table; group-level and Majorana-scale sentences are cited or readings."

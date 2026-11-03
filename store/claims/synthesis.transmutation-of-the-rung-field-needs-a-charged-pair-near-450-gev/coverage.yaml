@@ -1,0 +1,23 @@
+functions:
+  check_weights_from_the_rung_content:
+    kind: exact
+    clauses: ["(i)"]
+  check_charged_mass_scales_with_the_norm_on_the_flat_ray:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "one admissible coupling set at three points of the flat ray: the exact variation along the charged plane, the charged mass 2(2a - e)N proportional to N; the gauge masses are entered by formula and the fermion masses by the stored reading"
+  check_standard_model_content_alone_gives_negative_mass:
+    kind: exact
+    clauses: ["(ii)"]
+  check_positivity_threshold:
+    kind: exact
+    clauses: ["(iii)"]
+  check_measured_higgs_mass_brackets_the_charged_pair:
+    kind: exact
+    clauses: ["(iv)"]
+  check_diphoton_rate_with_the_charged_pair:
+    kind: exact
+    clauses: ["(v)"]
+untouched_premises:
+  synthesis.scale-free-rung-potentials-need-the-flat-physical-branch: "its clauses (3) and (4) are cited for the flat ray and the charged mass; check_charged_mass_scales_with_the_norm_on_the_flat_ray recomputes the charged mass directly instead of calling premise()"
+  synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass: "imported Fact: the scalon formula is the stated hypothesis (GW), entered by formula in the checks, not reached through premise()"

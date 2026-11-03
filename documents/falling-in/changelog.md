@@ -1,0 +1,569 @@
+# Changelog: falling-in
+
+## v18 (2026-10-27T15:10:53+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v17 (2026-10-27T13:22:26+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v16 (2026-10-27T12:38:44+00:00)
+
+- bump: major
+- primer.centre: revised-cosmetic
+- primer.classification-real-clifford-algebras: revised-cosmetic
+- primer.sign: removed
+- std-algebra.blade-basis: revised-cosmetic
+- std-algebra.cl11-matrix: revised-cosmetic
+- std-algebra.existence-uniqueness: revised-cosmetic
+- std-algebra.functoriality: removed
+- std-algebra.grade-decomposition: removed
+- std-algebra.involution-properties: removed
+- std-algebra.matrix-units: removed
+- std-algebra.morita-amplification: revised-cosmetic
+- std-algebra.orthogonal-anticommute: revised-cosmetic
+- std-algebra.polarisation: removed
+- std-algebra.pseudoscalar-commutation: revised-cosmetic
+- std-algebra.sta-matrix: revised-cosmetic
+- std-algebra.sylvester-inertia: removed
+- std-algebra.vector-squares: revised-cosmetic
+- std-algebra.witt-basis-car: revised-cosmetic
+- std-algebra.witt-decomposition: revised-cosmetic
+- std-algebra.z2-grading: removed
+- c:primer.centre: moved to s:cited
+- c:primer.classification-real-clifford-algebras: moved to s:cited
+- c:std-algebra.blade-basis: moved to s:cited
+- c:std-algebra.cl11-matrix: moved to s:cited
+- c:std-algebra.existence-uniqueness: moved to s:cited
+- c:std-algebra.morita-amplification: moved to s:cited
+- c:std-algebra.orthogonal-anticommute: moved to s:cited
+- c:std-algebra.pseudoscalar-commutation: moved to s:cited
+- c:std-algebra.sta-matrix: moved to s:cited
+- c:std-algebra.vector-squares: moved to s:cited
+- c:std-algebra.witt-basis-car: moved to s:cited
+- c:std-algebra.witt-decomposition: moved to s:cited
+- primer.sign: left the document's dependency cone, removed
+- std-algebra.functoriality: left the document's dependency cone, removed
+- std-algebra.polarisation: left the document's dependency cone, removed
+- std-algebra.grade-decomposition: left the document's dependency cone, removed
+- std-algebra.involution-properties: left the document's dependency cone, removed
+- std-algebra.z2-grading: left the document's dependency cone, removed
+- std-algebra.matrix-units: left the document's dependency cone, removed
+- std-algebra.sylvester-inertia: left the document's dependency cone, removed
+- renumbered c:tower.matrix-amplification-structural-properties: 23 -> 4
+- renumbered c:tower.grade-twist-when-it-inner: 24 -> 5
+- renumbered c:tower.volume-elements-planes: 25 -> 6
+- renumbered c:tower.commuting-copies: 26 -> 7
+- renumbered c:tower.rigidity-clock-frozen: 27 -> 8
+- renumbered c:tower.ladder-pairs-satisfy-car-vectors: 28 -> 9
+- renumbered c:tower.witt-index-quantum-capacity: 29 -> 10
+- renumbered c:singularity.degeneration-exactly: 30 -> 11
+- renumbered c:singularity.connection-bivector-computed: 31 -> 12
+- renumbered c:singularity.solution-where-divergence-lies: 32 -> 13
+- renumbered c:singularity.non-removability-invariant-argument: 33 -> 14
+- renumbered c:singularity.cones-fold: 34 -> 15
+- renumbered c:singularity.type-n-only-type-n: 35 -> 16
+- renumbered c:singularity.curvature-gauge-field-exact-shape-decoupling: 36 -> 17
+- renumbered c:interior.metric-parallelism-trace-schouten-condition: 37 -> 18
+- renumbered c:interior.covariant-form-vacuum-equations: 38 -> 19
+- renumbered c:singularity.deficit-theorem-cost-descent-exactly: 39 -> 20
+- renumbered c:singularity.pseudo-inverse-identities-hyperbolic-atom: 40 -> 21
+- renumbered c:singularity.descent-what-it-erases: 41 -> 22
+- renumbered c:singularity.descent-parity-average: 42 -> 23
+- renumbered c:singularity.modular-theory-matrix-factor-proved-outright: 43 -> 24
+- renumbered c:singularity.purity-output-partner-commutant: 44 -> 25
+- renumbered c:singularity.descended-form-state-independent: 45 -> 26
+- renumbered c:singularity.ascended-marginals-are-diagonal: 46 -> 27
+- renumbered c:singularity.modular-structure-completed-pair: 47 -> 28
+- renumbered c:singularity.kms-uniqueness-factor: 48 -> 29
+- renumbered c:hawking.gibbs-states-are-kms-conversely-finite: 49 -> 30
+- renumbered c:hawking.kms-restricts-invariant-subalgebras: 50 -> 31
+- renumbered c:singularity.computed: 51 -> 32
+- renumbered c:singularity.plane-rate: 52 -> 33
+- renumbered c:singularity.rate-discharge-hypothesis-iii: 53 -> 34
+- renumbered c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: 54 -> 35
+- renumbered c:hawking.i-state: 55 -> 36
+- renumbered c:singularity.bosonisation-bridge-s-wave-sector: 56 -> 37
+- renumbered c:hawking.imported-s-wave-bosonic-sector: 57 -> 38
+- renumbered c:hawking.bose-einstein-occupancy-quantified-window-corrections: 58 -> 39
+- renumbered c:hawking.imported-kms-passes-inductive-limits: 59 -> 40
+- renumbered c:hawking.imported-quasi-free-states-car-algebra: 60 -> 41
+- renumbered c:hawking.imported-s-wave-bosonic-sector-external: 61 -> 42
+- renumbered c:interior.imported-equivalence-einstein-equations: 62 -> 43
+- renumbered c:interior.imported-tractor-connection: 63 -> 44
+- renumbered c:primer.centre: 12 -> 45
+- renumbered c:primer.classification-real-clifford-algebras: 18 -> 46
+- renumbered c:sheaf.localised-transport: 64 -> 47
+- renumbered c:sheaf.one-sided-completion: 65 -> 48
+- renumbered c:sheaf.one-sided-completion-singularity: 66 -> 49
+- renumbered c:sheaf.schwarzschild-degeneration-boundary-tame: 67 -> 50
+- renumbered c:singularity.imported-equivalence-einstein-equations: 68 -> 51
+- renumbered c:singularity.imported-surface-gravity-redshifted-acceleration: 69 -> 52
+- renumbered c:std-algebra.blade-basis: 7 -> 53
+- renumbered c:std-algebra.cl11-matrix: 22 -> 54
+- renumbered c:std-algebra.existence-uniqueness: 6 -> 55
+- renumbered c:std-algebra.morita-amplification: 14 -> 56
+- renumbered c:std-algebra.orthogonal-anticommute: 8 -> 57
+- renumbered c:std-algebra.pseudoscalar-commutation: 11 -> 58
+- renumbered c:std-algebra.sta-matrix: 19 -> 59
+- renumbered c:std-algebra.vector-squares: 5 -> 60
+- renumbered c:std-algebra.witt-basis-car: 20 -> 61
+- renumbered c:std-algebra.witt-decomposition: 21 -> 62
+- renumbered c:tower.morita-equivalence-algebra-amplification: 71 -> 63
+- renumbered c:transport.existence-classification-type-c: 72 -> 64
+- renumbered c:transport.existence-locus-type-n: 73 -> 65
+- renumbered c:transport.rule-1-morita-trivial: 74 -> 66
+- renumbered c:transport.type-p-self-repairing: 75 -> 67
+- renumbered c:scrambling.no-echo-prediction-registered: 76 -> 68
+
+## v15 (2026-10-27T12:37:11+00:00)
+
+- bump: major
+- hawking.bose-einstein-occupancy-quantified-window-corrections: revised-substantive
+- hawking.gibbs-states-are-kms-conversely-finite: revised-substantive
+- hawking.i-state: revised-substantive
+- hawking.imported-kms-passes-inductive-limits: revised-cosmetic
+- hawking.imported-quasi-free-states-car-algebra: revised-cosmetic
+- hawking.imported-s-wave-bosonic-sector: revised-substantive
+- hawking.imported-s-wave-bosonic-sector-external: revised-cosmetic
+- hawking.kms-restricts-invariant-subalgebras: revised-substantive
+- interior.covariant-form-vacuum-equations: revised-substantive
+- interior.imported-equivalence-einstein-equations: revised-substantive
+- interior.imported-tractor-connection: revised-substantive
+- interior.metric-parallelism-trace-schouten-condition: revised-substantive
+- primer.centre: added
+- primer.classification-real-clifford-algebras: added
+- primer.sign: added
+- scrambling.no-echo-prediction-registered: revised-cosmetic
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- sheaf.schwarzschild-degeneration-boundary-tame: revised-substantive
+- singularity.ascended-marginals-are-diagonal: revised-substantive
+- singularity.bosonisation-bridge-s-wave-sector: revised-substantive
+- singularity.computed: revised-substantive
+- singularity.cones-fold: revised-substantive
+- singularity.connection-bivector-computed: revised-substantive
+- singularity.curvature-gauge-field-exact-shape-decoupling: revised-substantive
+- singularity.deficit-theorem-cost-descent-exactly: revised-substantive
+- singularity.degeneration-exactly: revised-substantive
+- singularity.descended-form-state-independent: revised-substantive
+- singularity.descent-parity-average: revised-substantive
+- singularity.descent-what-it-erases: revised-substantive
+- singularity.imported-equivalence-einstein-equations: revised-substantive
+- singularity.imported-surface-gravity-redshifted-acceleration: revised-substantive
+- singularity.kms-uniqueness-factor: revised-substantive
+- singularity.modular-structure-completed-pair: revised-substantive
+- singularity.modular-theory-matrix-factor-proved-outright: revised-substantive
+- singularity.non-removability-invariant-argument: revised-substantive
+- singularity.p-univalence: revised-cosmetic
+- singularity.plane-rate: revised-substantive
+- singularity.pseudo-inverse-identities-hyperbolic-atom: revised-substantive
+- singularity.purity-output-partner-commutant: revised-substantive
+- singularity.q-joint-quasi-freeness-s-wave: revised-substantive
+- singularity.r-regularity-fixed-locus: revised-substantive
+- singularity.rate-discharge-hypothesis-iii: revised-substantive
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic: revised-substantive
+- singularity.solution-where-divergence-lies: revised-substantive
+- singularity.type-n-only-type-n: revised-substantive
+- std-algebra.blade-basis: added
+- std-algebra.cl11-matrix: added
+- std-algebra.existence-uniqueness: added
+- std-algebra.functoriality: added
+- std-algebra.grade-decomposition: added
+- std-algebra.involution-properties: added
+- std-algebra.matrix-units: added
+- std-algebra.morita-amplification: added
+- std-algebra.orthogonal-anticommute: added
+- std-algebra.polarisation: added
+- std-algebra.pseudoscalar-commutation: added
+- std-algebra.sta-matrix: added
+- std-algebra.sylvester-inertia: added
+- std-algebra.vector-squares: added
+- std-algebra.witt-basis-car: added
+- std-algebra.witt-decomposition: added
+- std-algebra.z2-grading: added
+- tower.commuting-copies: revised-substantive
+- tower.grade-twist-when-it-inner: revised-substantive
+- tower.ladder-pairs-satisfy-car-vectors: revised-substantive
+- tower.matrix-amplification-structural-properties: revised-substantive
+- tower.morita-equivalence-algebra-amplification: revised-cosmetic
+- tower.rigidity-clock-frozen: revised-substantive
+- tower.volume-elements-planes: revised-substantive
+- tower.witt-index-quantum-capacity: revised-substantive
+- transport.existence-classification-type-c: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+- transport.type-p-self-repairing: revised-cosmetic
+- renumbered c:tower.matrix-amplification-structural-properties: 4 -> 23
+- renumbered c:tower.grade-twist-when-it-inner: 5 -> 24
+- renumbered c:tower.volume-elements-planes: 6 -> 25
+- renumbered c:tower.commuting-copies: 7 -> 26
+- renumbered c:tower.rigidity-clock-frozen: 8 -> 27
+- renumbered c:tower.ladder-pairs-satisfy-car-vectors: 9 -> 28
+- renumbered c:tower.witt-index-quantum-capacity: 10 -> 29
+- renumbered c:singularity.degeneration-exactly: 11 -> 30
+- renumbered c:singularity.connection-bivector-computed: 12 -> 31
+- renumbered c:singularity.solution-where-divergence-lies: 13 -> 32
+- renumbered c:singularity.non-removability-invariant-argument: 14 -> 33
+- renumbered c:singularity.cones-fold: 15 -> 34
+- renumbered c:singularity.type-n-only-type-n: 16 -> 35
+- renumbered c:singularity.curvature-gauge-field-exact-shape-decoupling: 17 -> 36
+- renumbered c:interior.metric-parallelism-trace-schouten-condition: 18 -> 37
+- renumbered c:interior.covariant-form-vacuum-equations: 19 -> 38
+- renumbered c:singularity.deficit-theorem-cost-descent-exactly: 20 -> 39
+- renumbered c:singularity.pseudo-inverse-identities-hyperbolic-atom: 21 -> 40
+- renumbered c:singularity.descent-what-it-erases: 22 -> 41
+- renumbered c:singularity.descent-parity-average: 23 -> 42
+- renumbered c:singularity.modular-theory-matrix-factor-proved-outright: 24 -> 43
+- renumbered c:singularity.purity-output-partner-commutant: 25 -> 44
+- renumbered c:singularity.descended-form-state-independent: 26 -> 45
+- renumbered c:singularity.ascended-marginals-are-diagonal: 27 -> 46
+- renumbered c:singularity.modular-structure-completed-pair: 28 -> 47
+- renumbered c:singularity.kms-uniqueness-factor: 29 -> 48
+- renumbered c:hawking.gibbs-states-are-kms-conversely-finite: 30 -> 49
+- renumbered c:hawking.kms-restricts-invariant-subalgebras: 31 -> 50
+- renumbered c:singularity.computed: 32 -> 51
+- renumbered c:singularity.plane-rate: 33 -> 52
+- renumbered c:singularity.rate-discharge-hypothesis-iii: 34 -> 53
+- renumbered c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: 35 -> 54
+- renumbered c:hawking.i-state: 36 -> 55
+- renumbered c:singularity.bosonisation-bridge-s-wave-sector: 37 -> 56
+- renumbered c:hawking.imported-s-wave-bosonic-sector: 38 -> 57
+- renumbered c:hawking.bose-einstein-occupancy-quantified-window-corrections: 39 -> 58
+- renumbered c:hawking.imported-kms-passes-inductive-limits: 40 -> 59
+- renumbered c:hawking.imported-quasi-free-states-car-algebra: 41 -> 60
+- renumbered c:hawking.imported-s-wave-bosonic-sector-external: 42 -> 61
+- renumbered c:interior.imported-equivalence-einstein-equations: 43 -> 62
+- renumbered c:interior.imported-tractor-connection: 44 -> 63
+- renumbered c:sheaf.localised-transport: 45 -> 64
+- renumbered c:sheaf.one-sided-completion: 46 -> 65
+- renumbered c:sheaf.one-sided-completion-singularity: 47 -> 66
+- renumbered c:sheaf.schwarzschild-degeneration-boundary-tame: 48 -> 67
+- renumbered c:singularity.imported-equivalence-einstein-equations: 49 -> 68
+- renumbered c:singularity.imported-surface-gravity-redshifted-acceleration: 50 -> 69
+- renumbered c:tower.morita-equivalence-algebra-amplification: 51 -> 71
+- renumbered c:transport.existence-classification-type-c: 52 -> 72
+- renumbered c:transport.existence-locus-type-n: 53 -> 73
+- renumbered c:transport.rule-1-morita-trivial: 54 -> 74
+- renumbered c:transport.type-p-self-repairing: 55 -> 75
+- renumbered c:scrambling.no-echo-prediction-registered: 56 -> 76
+
+## v14 (2026-10-23T06:42:09+00:00)
+
+- bump: major
+- interior.covariant-form-vacuum-equations: revised-substantive
+- interior.metric-parallelism-trace-schouten-condition: revised-substantive
+- scrambling.no-echo-prediction-registered: revised-substantive
+- singularity.bosonisation-bridge-s-wave-sector: revised-substantive
+- singularity.q-joint-quasi-freeness-s-wave: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+
+## v13 (2026-10-21T21:03:30+00:00)
+
+- bump: patch
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic: revised-cosmetic
+
+## v12 (2026-10-21T16:43:20+00:00)
+
+- bump: major
+- hawking.imported-quasi-free-states-car-algebra: revised-substantive
+- hawking.imported-s-wave-bosonic-sector: revised-substantive
+- hawking.kms-restricts-invariant-subalgebras: added
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- sheaf.schwarzschild-degeneration-boundary-tame: revised-substantive
+- singularity.ascended-marginals-are-diagonal: revised-substantive
+- singularity.deficit-theorem-cost-descent-exactly: revised-substantive
+- singularity.p-univalence: revised-substantive
+- tower.commuting-copies: revised-substantive
+- tower.grade-twist-when-it-inner: revised-substantive
+- tower.ladder-pairs-satisfy-car-vectors: revised-substantive
+- tower.rigidity-clock-frozen: revised-substantive
+- tower.volume-elements-planes: revised-substantive
+- tower.witt-index-quantum-capacity: revised-substantive
+- transport.existence-classification-type-c: revised-substantive
+- transport.existence-locus-type-n: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+- transport.type-p-self-repairing: revised-substantive
+- renumbered c:singularity.computed: 31 -> 32
+- renumbered c:singularity.plane-rate: 32 -> 33
+- renumbered c:singularity.rate-discharge-hypothesis-iii: 33 -> 34
+- renumbered c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: 34 -> 35
+- renumbered c:hawking.i-state: 35 -> 36
+- renumbered c:singularity.bosonisation-bridge-s-wave-sector: 36 -> 37
+- renumbered c:hawking.imported-s-wave-bosonic-sector: 37 -> 38
+- renumbered c:hawking.bose-einstein-occupancy-quantified-window-corrections: 38 -> 39
+- renumbered c:hawking.imported-kms-passes-inductive-limits: 39 -> 40
+- renumbered c:hawking.imported-quasi-free-states-car-algebra: 40 -> 41
+- renumbered c:hawking.imported-s-wave-bosonic-sector-external: 41 -> 42
+- renumbered c:interior.imported-equivalence-einstein-equations: 42 -> 43
+- renumbered c:interior.imported-tractor-connection: 43 -> 44
+- renumbered c:sheaf.localised-transport: 44 -> 45
+- renumbered c:sheaf.one-sided-completion: 45 -> 46
+- renumbered c:sheaf.one-sided-completion-singularity: 46 -> 47
+- renumbered c:sheaf.schwarzschild-degeneration-boundary-tame: 47 -> 48
+- renumbered c:singularity.imported-equivalence-einstein-equations: 48 -> 49
+- renumbered c:singularity.imported-surface-gravity-redshifted-acceleration: 49 -> 50
+- renumbered c:tower.morita-equivalence-algebra-amplification: 50 -> 51
+- renumbered c:transport.existence-classification-type-c: 51 -> 52
+- renumbered c:transport.existence-locus-type-n: 52 -> 53
+- renumbered c:transport.rule-1-morita-trivial: 53 -> 54
+- renumbered c:transport.type-p-self-repairing: 54 -> 55
+- renumbered c:scrambling.no-echo-prediction-registered: 55 -> 56
+
+## v11 (2026-10-21T15:32:10+00:00)
+
+- bump: major
+- hawking.bose-einstein-occupancy-quantified-window-corrections: revised-substantive
+- hawking.imported-s-wave-bosonic-sector: revised-substantive
+- interior.metric-parallelism-trace-schouten-condition: revised-substantive
+- sheaf.localised-transport: revised-substantive
+- sheaf.one-sided-completion: revised-substantive
+- sheaf.one-sided-completion-singularity: revised-substantive
+- singularity.ascended-marginals-are-diagonal: revised-substantive
+- singularity.bosonisation-bridge-s-wave-sector: revised-substantive
+- singularity.cones-fold: revised-substantive
+- singularity.modular-structure-completed-pair: revised-substantive
+- singularity.plane-rate: revised-substantive
+- singularity.rate-discharge-hypothesis-iii: revised-substantive
+- singularity.type-n-only-type-n: revised-substantive
+
+## v10 (2026-10-21T12:54:46+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v9 (2026-10-21T11:27:58+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v8 (2026-10-21T07:04:40+00:00)
+
+- bump: patch
+
+## v7 (2026-10-21T07:01:18+00:00)
+
+- bump: major
+- scrambling.no-echo-prediction-registered: added
+- singularity.ascended-marginals-are-diagonal: revised-substantive
+- singularity.bosonisation-bridge-s-wave-sector: revised-substantive
+- singularity.curvature-gauge-field-exact-shape-decoupling: revised-substantive
+- singularity.deficit-theorem-cost-descent-exactly: revised-substantive
+- singularity.descended-form-state-independent: revised-substantive
+- singularity.descent-parity-average: revised-substantive
+- singularity.descent-what-it-erases: revised-substantive
+- singularity.kms-uniqueness-factor: revised-substantive
+- singularity.modular-structure-completed-pair: revised-substantive
+- singularity.modular-theory-matrix-factor-proved-outright: revised-substantive
+- singularity.plane-rate: revised-substantive
+- singularity.pseudo-inverse-identities-hyperbolic-atom: revised-substantive
+- singularity.purity-output-partner-commutant: revised-substantive
+- singularity.rate-discharge-hypothesis-iii: revised-substantive
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic: revised-substantive
+- c:hawking.bose-einstein-occupancy-quantified-window-corrections: moved to s:thermality
+- c:hawking.gibbs-states-are-kms-conversely-finite: moved to s:descent
+- c:hawking.i-state: moved to s:thermality
+- c:hawking.imported-s-wave-bosonic-sector: moved to s:thermality
+- c:interior.covariant-form-vacuum-equations: moved to s:einstein
+- c:interior.metric-parallelism-trace-schouten-condition: moved to s:einstein
+- c:singularity.ascended-marginals-are-diagonal: moved to s:descent
+- c:singularity.bosonisation-bridge-s-wave-sector: moved to s:thermality
+- c:singularity.computed: moved to s:thermality
+- c:singularity.deficit-theorem-cost-descent-exactly: moved to s:entropy
+- c:singularity.descended-form-state-independent: moved to s:descent
+- c:singularity.descent-parity-average: moved to s:descent
+- c:singularity.descent-what-it-erases: moved to s:descent
+- c:singularity.kms-uniqueness-factor: moved to s:descent
+- c:singularity.modular-structure-completed-pair: moved to s:descent
+- c:singularity.modular-theory-matrix-factor-proved-outright: moved to s:descent
+- c:singularity.plane-rate: moved to s:thermality
+- c:singularity.pseudo-inverse-identities-hyperbolic-atom: moved to s:zero-divisors
+- c:singularity.purity-output-partner-commutant: moved to s:descent
+- c:singularity.rate-discharge-hypothesis-iii: moved to s:thermality
+- c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: moved to s:thermality
+- c:tower.matrix-amplification-structural-properties: moved to s:clifford-structure
+- t:hawking.imported-s-wave-bosonic-sector>hawking.bose-einstein-occupancy-quantified-window-corrections: moved to s:thermality
+- t:interior.metric-parallelism-trace-schouten-condition>interior.covariant-form-vacuum-equations: moved to s:einstein
+- t:singularity.descended-form-state-independent>singularity.ascended-marginals-are-diagonal: moved to s:descent
+- t:singularity.descent-what-it-erases>singularity.descent-parity-average: moved to s:descent
+- t:singularity.modular-theory-matrix-factor-proved-outright>singularity.purity-output-partner-commutant: moved to s:descent
+- t:singularity.plane-rate>singularity.rate-discharge-hypothesis-iii: moved to s:thermality
+- t:singularity.purity-output-partner-commutant>singularity.descended-form-state-independent: moved to s:descent
+- renumbered c:tower.matrix-amplification-structural-properties: 7 -> 4
+- renumbered c:tower.grade-twist-when-it-inner: 4 -> 5
+- renumbered c:tower.volume-elements-planes: 5 -> 6
+- renumbered c:tower.commuting-copies: 6 -> 7
+- renumbered c:singularity.curvature-gauge-field-exact-shape-decoupling: 27 -> 17
+- renumbered c:interior.metric-parallelism-trace-schouten-condition: 33 -> 18
+- renumbered c:interior.covariant-form-vacuum-equations: 34 -> 19
+- renumbered c:singularity.deficit-theorem-cost-descent-exactly: 19 -> 20
+- renumbered c:singularity.pseudo-inverse-identities-hyperbolic-atom: 25 -> 21
+- renumbered c:singularity.descent-what-it-erases: 17 -> 22
+- renumbered c:singularity.descent-parity-average: 18 -> 23
+- renumbered c:singularity.modular-theory-matrix-factor-proved-outright: 20 -> 24
+- renumbered c:singularity.purity-output-partner-commutant: 21 -> 25
+- renumbered c:singularity.descended-form-state-independent: 22 -> 26
+- renumbered c:singularity.ascended-marginals-are-diagonal: 23 -> 27
+- renumbered c:singularity.modular-structure-completed-pair: 26 -> 28
+- renumbered c:singularity.kms-uniqueness-factor: 30 -> 29
+- renumbered c:hawking.gibbs-states-are-kms-conversely-finite: 35 -> 30
+- renumbered c:singularity.computed: 24 -> 31
+- renumbered c:singularity.plane-rate: 28 -> 32
+- renumbered c:singularity.rate-discharge-hypothesis-iii: 29 -> 33
+- renumbered c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: 31 -> 34
+- renumbered c:hawking.i-state: 36 -> 35
+- renumbered c:singularity.bosonisation-bridge-s-wave-sector: 32 -> 36
+
+## v6 (2026-10-20T20:18:27+00:00)
+
+- bump: patch
+- hawking.bose-einstein-occupancy-quantified-window-corrections: revised-cosmetic
+- hawking.gibbs-states-are-kms-conversely-finite: revised-cosmetic
+- hawking.i-state: revised-cosmetic
+- hawking.imported-kms-passes-inductive-limits: revised-cosmetic
+- hawking.imported-quasi-free-states-car-algebra: revised-cosmetic
+- hawking.imported-s-wave-bosonic-sector: revised-cosmetic
+- hawking.imported-s-wave-bosonic-sector-external: revised-cosmetic
+- interior.covariant-form-vacuum-equations: revised-cosmetic
+- interior.imported-equivalence-einstein-equations: revised-cosmetic
+- interior.imported-tractor-connection: revised-cosmetic
+- interior.metric-parallelism-trace-schouten-condition: revised-cosmetic
+- sheaf.localised-transport: revised-cosmetic
+- sheaf.one-sided-completion: revised-cosmetic
+- sheaf.one-sided-completion-singularity: revised-cosmetic
+- sheaf.schwarzschild-degeneration-boundary-tame: revised-cosmetic
+- singularity.ascended-marginals-are-diagonal: revised-cosmetic
+- singularity.bosonisation-bridge-s-wave-sector: revised-cosmetic
+- singularity.computed: revised-cosmetic
+- singularity.cones-fold: revised-cosmetic
+- singularity.connection-bivector-computed: revised-cosmetic
+- singularity.curvature-gauge-field-exact-shape-decoupling: revised-cosmetic
+- singularity.deficit-theorem-cost-descent-exactly: revised-cosmetic
+- singularity.degeneration-exactly: revised-cosmetic
+- singularity.descended-form-state-independent: revised-cosmetic
+- singularity.descent-parity-average: revised-cosmetic
+- singularity.descent-what-it-erases: revised-cosmetic
+- singularity.imported-equivalence-einstein-equations: revised-cosmetic
+- singularity.imported-surface-gravity-redshifted-acceleration: revised-cosmetic
+- singularity.kms-uniqueness-factor: revised-cosmetic
+- singularity.modular-structure-completed-pair: revised-cosmetic
+- singularity.modular-theory-matrix-factor-proved-outright: revised-cosmetic
+- singularity.non-removability-invariant-argument: revised-cosmetic
+- singularity.p-univalence: revised-cosmetic
+- singularity.plane-rate: revised-cosmetic
+- singularity.pseudo-inverse-identities-hyperbolic-atom: revised-cosmetic
+- singularity.purity-output-partner-commutant: revised-cosmetic
+- singularity.q-joint-quasi-freeness-s-wave: revised-cosmetic
+- singularity.r-regularity-fixed-locus: revised-cosmetic
+- singularity.rate-discharge-hypothesis-iii: revised-cosmetic
+- singularity.rate-rigidity-temperature-not-algebra-intrinsic: revised-cosmetic
+- singularity.solution-where-divergence-lies: revised-cosmetic
+- singularity.type-n-only-type-n: revised-cosmetic
+- tower.commuting-copies: revised-cosmetic
+- tower.grade-twist-when-it-inner: revised-cosmetic
+- tower.ladder-pairs-satisfy-car-vectors: revised-cosmetic
+- tower.matrix-amplification-structural-properties: revised-cosmetic
+- tower.morita-equivalence-algebra-amplification: revised-cosmetic
+- tower.rigidity-clock-frozen: revised-cosmetic
+- tower.volume-elements-planes: revised-cosmetic
+- tower.witt-index-quantum-capacity: revised-cosmetic
+- transport.existence-classification-type-c: revised-cosmetic
+- transport.existence-locus-type-n: revised-cosmetic
+- transport.rule-1-morita-trivial: revised-cosmetic
+- transport.type-p-self-repairing: revised-cosmetic
+
+## v5 (2026-10-20T20:09:52+00:00)
+
+- bump: patch
+- rendering changed (house style or template); no claim changed
+
+## v4 (2026-10-20T20:08:25+00:00)
+
+- bump: patch
+
+## v3 (2026-10-20T20:07:40+00:00)
+
+- bump: patch
+
+## v2 (2026-10-20T20:01:31+00:00)
+
+- bump: major
+- hawking.imported-s-wave-bosonic-sector: revised-cosmetic
+- hawking.imported-s-wave-bosonic-sector-external: revised-cosmetic
+- singularity.bosonisation-bridge-s-wave-sector: revised-cosmetic
+- singularity.p-univalence: revised-cosmetic
+- singularity.pseudo-inverse-identities-hyperbolic-atom: revised-cosmetic
+- singularity.r-regularity-fixed-locus: revised-cosmetic
+- tower.algebraic-limit-even-charge: removed
+- tower.car-limit-even-charge: removed
+- tower.commuting-copies: revised-cosmetic
+- tower.compatibility-connecting-maps-transported: removed
+- tower.fock-module-one-qubit-per-rung: removed
+- tower.glimms-classification-car-uniqueness: removed
+- tower.grade-twist-when-it-inner: revised-cosmetic
+- tower.matrix-amplification-structural-properties: revised-cosmetic
+- tower.morita-equivalence-algebra-amplification: revised-cosmetic
+- tower.rigidity-clock-frozen: revised-cosmetic
+- tower.structure-tower-c-norms: removed
+- tower.volume-elements-planes: revised-cosmetic
+- transport.rule-1-morita-trivial: revised-cosmetic
+- tower.algebraic-limit-even-charge: left the document's dependency cone, removed
+- tower.structure-tower-c-norms: left the document's dependency cone, removed
+- tower.glimms-classification-car-uniqueness: left the document's dependency cone, removed
+- tower.fock-module-one-qubit-per-rung: left the document's dependency cone, removed
+- tower.car-limit-even-charge: left the document's dependency cone, removed
+- tower.compatibility-connecting-maps-transported: left the document's dependency cone, removed
+- renumbered c:singularity.degeneration-exactly: 16 -> 11
+- renumbered c:singularity.connection-bivector-computed: 17 -> 12
+- renumbered c:singularity.solution-where-divergence-lies: 18 -> 13
+- renumbered c:singularity.non-removability-invariant-argument: 19 -> 14
+- renumbered c:singularity.cones-fold: 20 -> 15
+- renumbered c:singularity.type-n-only-type-n: 21 -> 16
+- renumbered c:singularity.descent-what-it-erases: 22 -> 17
+- renumbered c:singularity.descent-parity-average: 23 -> 18
+- renumbered c:singularity.deficit-theorem-cost-descent-exactly: 24 -> 19
+- renumbered c:singularity.modular-theory-matrix-factor-proved-outright: 25 -> 20
+- renumbered c:singularity.purity-output-partner-commutant: 26 -> 21
+- renumbered c:singularity.descended-form-state-independent: 27 -> 22
+- renumbered c:singularity.ascended-marginals-are-diagonal: 28 -> 23
+- renumbered c:singularity.computed: 29 -> 24
+- renumbered c:singularity.pseudo-inverse-identities-hyperbolic-atom: 30 -> 25
+- renumbered c:singularity.modular-structure-completed-pair: 31 -> 26
+- renumbered c:singularity.curvature-gauge-field-exact-shape-decoupling: 32 -> 27
+- renumbered c:singularity.plane-rate: 33 -> 28
+- renumbered c:singularity.rate-discharge-hypothesis-iii: 34 -> 29
+- renumbered c:singularity.kms-uniqueness-factor: 35 -> 30
+- renumbered c:singularity.rate-rigidity-temperature-not-algebra-intrinsic: 36 -> 31
+- renumbered c:singularity.bosonisation-bridge-s-wave-sector: 37 -> 32
+- renumbered c:interior.metric-parallelism-trace-schouten-condition: 38 -> 33
+- renumbered c:interior.covariant-form-vacuum-equations: 39 -> 34
+- renumbered c:hawking.gibbs-states-are-kms-conversely-finite: 40 -> 35
+- renumbered c:hawking.i-state: 41 -> 36
+- renumbered c:hawking.imported-s-wave-bosonic-sector: 42 -> 37
+- renumbered c:hawking.bose-einstein-occupancy-quantified-window-corrections: 43 -> 38
+- renumbered c:hawking.imported-kms-passes-inductive-limits: 44 -> 39
+- renumbered c:hawking.imported-quasi-free-states-car-algebra: 45 -> 40
+- renumbered c:hawking.imported-s-wave-bosonic-sector-external: 46 -> 41
+- renumbered c:interior.imported-equivalence-einstein-equations: 47 -> 42
+- renumbered c:interior.imported-tractor-connection: 48 -> 43
+- renumbered c:sheaf.localised-transport: 49 -> 44
+- renumbered c:sheaf.one-sided-completion: 50 -> 45
+- renumbered c:sheaf.one-sided-completion-singularity: 51 -> 46
+- renumbered c:sheaf.schwarzschild-degeneration-boundary-tame: 52 -> 47
+- renumbered c:singularity.imported-equivalence-einstein-equations: 53 -> 48
+- renumbered c:singularity.imported-surface-gravity-redshifted-acceleration: 54 -> 49
+- renumbered c:tower.morita-equivalence-algebra-amplification: 56 -> 50
+- renumbered c:transport.existence-classification-type-c: 57 -> 51
+- renumbered c:transport.existence-locus-type-n: 58 -> 52
+- renumbered c:transport.rule-1-morita-trivial: 59 -> 53
+- renumbered c:transport.type-p-self-repairing: 60 -> 54
+
+## v1 (2026-10-20T19:55:33+00:00)
+
+- first generation: 60 claim blocks
+

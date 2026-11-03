@@ -1,0 +1,18 @@
+functions:
+  check_block_entropy_and_returned_information:
+    kind: sampled
+    clauses: ["S(rho_A) = h_k + sum_{evicted} h_j", "I(A : R_<) = 2 sum_{evicted} h_j"]
+    omits: "three runs (the model table, a five-pair run with a three-eviction event, the idealisation); S(R_<) and S(A u R_<) are read as the entropies of the window before and after, by global purity, whose equal-purity cross-check is only run where the radiation has at most six qubits"
+  check_evicted_qubit_correlated_with_radiation_not_partner:
+    kind: sampled
+    clauses: ["every evicted qubit arrives fully correlated with the earlier radiation as a whole, I(L_j : R_<) = 2 h_j", "I(L_j : R_j) < 2 h_j once a gate has acted"]
+    omits: "all 4 and 5 evictions of two runs; I(L_j : R_j) < 2 h_j is inferred from the pair marginal having damped coherence and purity below 1, not computed as an entropy difference; that the remainder lies in the multi-qubit correlations of the called proposition is not tested"
+  check_idealisation_returns_two_ln_two:
+    kind: sampled
+    clauses: ["in the maximally entangled idealisation with one eviction per event, I(A : R_<) = 2 ln 2 = S(rho_A)"]
+    omits: "one idealised schedule (2,2,2,2,2,1,0), three events with one eviction; the comparison with the mirror behaviour of HP2007 is not computable"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact entropies on exact rational states; the statement's generality over events and parameters is covered by three runs"

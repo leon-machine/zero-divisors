@@ -1,0 +1,29 @@
+functions:
+  check_car_and_irreducible_spinor_module:
+    kind: sampled
+    clauses:
+    - the Fock space is the irreducible spinor module of the complex Clifford algebra on 2n generators
+    omits: n = 1, 2, 3 only
+  check_parity_grading_is_chirality:
+    kind: sampled
+    clauses:
+    - its parity grading the chirality decomposition
+    omits: n = 1, 2, 3 only
+  check_orthogonal_group_preserves_car_and_pin_implements_it:
+    kind: sampled
+    clauses:
+    - the orthogonal transformations preserving the CAR form the compact O(2n), implemented by Pin(2n), with SO(2n) by Spin(2n)
+    omits: n = 2 only; two Cayley rotations, one reflection, one rotor; the converse (every CAR-preserving transformation is orthogonal) only by one non-orthogonal counterexample; compactness and the covering Pin to O are not tested
+  check_unitary_group_is_number_preserving_part:
+    kind: sampled
+    clauses:
+    - those preserving the complex structure form U(n), acting as Lambda(g) up to a determinant phase
+    omits: n = 2 and 3, one unitary each; the converse (every complex-structure-preserving element is such a Lambda(g)) and the determinant-phase ambiguity of the Spin lift are not tested
+untouched_premises:
+  rungs.imported-fock-representation-bogoliubov-group-external: literature restatement; the check verifies the finite core directly and relies on neither use (docstring)
+  standard-model.imported-fock-representation-clifford-algebra-bogoliubov: literature restatement; the check verifies the finite core directly and relies on neither use (docstring)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Finite core checked at n <= 3 (n = 2 for the Pin/Spin part), as the docstring says; infinite-dimensional and topological parts are not checked.

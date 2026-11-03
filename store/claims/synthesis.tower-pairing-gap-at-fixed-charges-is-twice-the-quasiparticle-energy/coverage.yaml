@@ -1,0 +1,19 @@
+functions:
+  check_closed_spectrum_on_floors:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "complete on the n_b = 2 and 3 floors at eight (K, G), every sector (N_a, N_c): the minimal-polynomial identity puts every eigenvalue in the predicted set and each predicted value occurs; general n_b rests on the quasi-spin argument of the proof, not on the check"
+  check_gap_at_fixed_charges_is_g_nb:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "n_b = 2, 3 at eight (K, G), all 0 < n < n_b, including the band value and band + G n_b as eigenvalues of the sector matrix itself; general n_b by the closed form in the proof"
+  check_mean_field_two_quasiparticle_energy:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "four above-threshold samples with rational E and Delta (one at K = 0): stationarity, convexity, G n_b = 2E and 2E >= 2m with equality iff K = 0; the relation to the relativistic amplitude mode is an analogy, argued in the proof"
+  check_constituent_bound_against_record:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "the stored m_h, m_t and M_Z only; the reading of the neutral mode as a one-species composite at or above the pair-breaking threshold is a hypothesis of (iv), not checked"
+untouched_premises:
+  synthesis.imported-quasi-spin-pairing-and-top-condensation: "cited in the proof for the quasi-spin solution, the NJL analogy and the top-condensation comparison; the check diagonalises the floors exactly and does not rely on it"

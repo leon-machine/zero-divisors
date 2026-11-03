@@ -1,0 +1,15 @@
+functions:
+  check_residue:
+    kind: sampled
+    clauses:
+    - (i)
+    - (ii)
+    - (iv)
+    - (v)
+    - (vi)
+    omits: (i), (ii) and (iv) are run on four sets of entropy ratios t_j = s_j/ln 2 in exact rationals (that zero weight is exactly t = 1 is the cited entropy theorem); (v) checks only 1 + 1/r > 1 at three values of r and TS = M/2 at two masses, not the derivation s(x) - x n = ln(1 + 1/r); (vi) is exact rational interval arithmetic (series bounds on pi, e^x, ln(1+y) and ln 2) giving eps in (0.02724, 0.02726), ln 2 + eps in (0.7203, 0.7205), arrays per Planck area in (0.3469, 0.3471) below 0.3607, each bracket rounding at both ends to the stated figure (0.02725, 0.7204, 0.3470, 0.3607); the bound of (ii) is shown attained (minimum 1/4 over the sets); (iii) is interpretive and untested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The residue algebra is checked at sample entropy sets and the (Q) numbers of (vi) are rigorous rational brackets. 2026-10-23 weak-checks: (vi) brackets now pinned by rounding both ends to the stated figures, (ii) and (iv) bounds pinned as attained minima, and the strict de Sitter ratio pinned at 4/3 on the one all-t < 1 set."

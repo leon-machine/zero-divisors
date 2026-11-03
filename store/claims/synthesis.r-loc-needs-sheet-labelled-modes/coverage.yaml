@@ -1,0 +1,32 @@
+functions:
+  check_two_sheets_have_opposite_boosts:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'The flat-space boost K = x d_t + t d_x along the two null normals of the edge {t = x = 0}, on past and future halves at three affine parameters each: K is tangent, unit surface gravity, the future-directed field is -kappa lambda k on the past half and the two sheets have opposite orientation; the leading-order-in-patch-size statement for a curved background is not tested'
+  check_joint_kms_forces_zero_weight:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iv)
+    omits: 'One two-mode window (H = N_1 + 2 N_2, Boltzmann factor 1/3): the KMS condition for H and -H together has only rho = 0, for H alone the Gibbs line, for a scalar H the trace; the two occupations q/(1+q) and 1/(1+q) of the completed pair differ at q = 1/3; general windows and weights, the identification (N) of the sheet-n flow with the inverse of the sheet-l flow (imposed as the second condition) and the ladder identification of the completed pair with the two null directions are not tested'
+  check_covariant_lifts_on_windows_are_trivial:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'Lorentz side exact: ad of the boost e0 e1 has the real eigenvalues +2 and -2 on two bivectors and the ideal each generates is all six bivectors. Window side sampled: for three non-diagonal self-adjoint h (n = 2, 3, entries in Q(i)) the maps X -> i[h, X] -+ 2X have zero kernel on M_n, which with the homomorphism condition forces D(X+) = 0 and so D = 0; a skew-adjoint control has the eigenvalue. Every self-adjoint h and every window size are not covered.'
+  check_dilation_character_of_the_generator:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: The weight c_l(B) on the stabiliser basis {e0e1, l e2, l e3, e2e3} of [l] is (-1, 0, 0, 0) and vanishes on all brackets (a character); the boosts of three other edges, conjugated by null rotations fixing l, have weight -1 on l, and the opposite sheet gives +1; the product-state conclusion (R_loc for every local Rindler horizon through p at every weight) and the commuting of the per-direction algebras are not tested
+  check_antipodal_de_sitter_observers:
+    kind: sampled
+    clauses:
+    - Consequences (b)
+    omits: 'Three rational points of each antipodal worldline of the embedding hyperboloid and two points of the bifurcation sphere X0 = X4 = 0: the static boost field is future pointing on one and past pointing on the other and vanishes on the sphere; that (R_Lambda) for every observer meets (ii) is not computed; Consequences (a) and (c) are not tested by any function'
+judge:
+  by: fix-round-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: 'check_covariant_lifts_on_windows_are_trivial now computes the window side (no eigenvalue +-2 of i[h, .] for sampled non-diagonal self-adjoint h, with a skew-adjoint control) and its label and docstring say sampled.'

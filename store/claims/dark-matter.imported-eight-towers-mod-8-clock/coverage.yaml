@@ -1,0 +1,22 @@
+functions:
+  check_ascent_is_matrix_amplification_one_step:
+    kind: sampled
+    clauses: ["the (1,1) ascent preserves p - q and Cl(p+1,q+1) = Mat_2(Cl(p,q))"]
+    omits: "all ten signatures with p + q <= 3; general p, q is the cited theorem"
+  check_ascent_is_matrix_amplification_two_steps:
+    kind: sampled
+    clauses: ["Cl(p+k,q+k) = Mat_(2^k)(Cl(p,q)) at k = 2"]
+    omits: "the six signatures with p + q <= 2; general k is the cited theorem"
+  check_period_eight:
+    kind: sampled
+    clauses: ["Bott period eight: Cl(p+8,q) and Cl(p,q+8) are Mat_16(Cl(p,q))"]
+    omits: "Cl(8,0) = Cl(0,8) = Mat_16(R) is verified exactly; the shift is checked on the listed base signatures only, and the statement does not itself state the period-eight clause beyond the eight residues"
+  check_eight_towers:
+    kind: complete
+    clauses: ["the eight residues label eight parallel towers"]
+    omits: "signatures with p + q <= 14 only; the ascent and the shifts by eight are taken as the generating moves, not rederived"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the docstring says the instances are the finite core of the cited theorem"

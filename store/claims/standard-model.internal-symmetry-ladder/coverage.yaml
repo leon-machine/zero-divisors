@@ -1,0 +1,21 @@
+functions:
+  check_momentum_preservation_forces_unitarity:
+    kind: sampled
+    clauses:
+    - '"the mixings preserving total momentum for every configuration form exactly U(n)" (only: preservation forces unitarity)'
+    omits: Rigorous for n = 2 (one configuration with rank 4) and n = 3 (polarisation over rank-one configurations, rank 9) but only those n; n = 1 is trivial and general n is not computed; the helicity-form part is not used here
+  check_unitaries_preserve_and_others_fail:
+    kind: sampled
+    clauses:
+    - '"unitary mixings preserve the total momentum and the total helicity form"'
+    omits: Two n = 2 unitaries, one n = 3 unitary and two non-unitary controls on one configuration each
+  check_un_is_sun_times_u1_mod_zn:
+    kind: partial
+    clauses:
+    - '"U(n) = (SU(n) x U(1))/Z_n, kernel {(mu^-1 I_n, mu) : mu^n = 1} = Z_n"'
+    omits: Only the kernel (exactly n elements, det-one a factors) for n = 2, 3, in Q(zeta_6); that (a, mu) -> mu a is onto U(n) is not tested
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Each case computed is exact; the general-n and ontoness claims are outside the finite cases, which cover the n = 1, 2, 3 ladder the statement lists.

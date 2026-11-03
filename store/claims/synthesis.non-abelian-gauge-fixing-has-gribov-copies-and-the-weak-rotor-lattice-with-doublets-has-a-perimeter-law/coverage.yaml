@@ -1,0 +1,23 @@
+functions:
+  check_identity_rotor_map_is_a_coulomb_copy_of_zero_on_the_three_sphere:
+    kind: exact
+    clauses:
+    - "(i) q q~ = 1 as a polynomial identity; the round-sphere divergence numerator of q~ d_i q vanishes identically; the flat one does not; A_1(0) = 2 B1"
+    omits: "the abelian clause is the integration-by-parts argument of Step 1, not computed"
+  check_lattice_landau_gauge_has_a_copy_of_the_trivial_field_outside_the_gribov_region:
+    kind: exact
+    clauses:
+    - "(ii) on the 4 x 2 lattice the transform of U = 1 by B3^x has links -B3 and 1, both configurations satisfy the lattice Landau condition, F = 16 and 8, Faddeev-Popov signatures (21, 0, 3) and (14, 2, 8)"
+  check_signed_faddeev_popov_count_is_the_euler_characteristic_zero:
+    kind: exact
+    clauses:
+    - "(iii) two sites, two links: M M~ = 64/25, the stationary points +-(5/8) M~ are unit rotors with g M scalar, Faddeev-Popov signatures definite of opposite sign, signed sum 0"
+    omits: "the general signed count on any lattice is cited (Neuberger), not computed"
+  check_doublet_wilson_loop_has_a_perimeter_law_at_beta_zero:
+    kind: partial
+    clauses:
+    - "(iv) Hurwitz units reproduce all Haar moments of degree at most three; the hopping term integrated over both site rotors has the moments of u0 up to the fourth; mean link 0 without the doublet and gluing value 1/4 with it; c(kappa) = kappa/4 - kappa^3/96 to third order; the two-link loop integrated over sites and links without gauge fixing is kappa^2/16 - kappa^4/192 = c^2 to order kappa^4; leading coefficients 4^-4 and 4^-6 for P = 4, 6"
+    omits: "the exactness of c(kappa)^P for all kappa and loops of four or more links is the independence argument of Step 4; the full integration is computed for the two-link loop to order kappa^4"
+untouched_premises:
+  synthesis.imported-brst-kugo-ojima-strocchi-and-gribov: "cited in the reading for the general Gribov ambiguity and the BRST frame; the checks construct their own copies and compute nothing from the Fact"
+  synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity: "Singer, Neuberger and Fradkin-Shenker, cited for the general statements; the checks compute their own copies, signed count and Wilson loop"

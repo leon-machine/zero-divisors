@@ -1,0 +1,22 @@
+functions:
+  check_tiny_composite_still_scatters:
+    kind: sampled
+    clauses: ["whatever the size of a composite"]
+    omits: "one radius a = 1e-30 fm"
+  check_still_a_fluid:
+    kind: sampled
+    clauses: ["any self-interaction of composite strength makes the matter a fluid in clusters"]
+    omits: "one radius a = 1e-30 fm; the table values 9.5e7 and 4.4e10 cm^2/g and the 'fluid' threshold 3e7 cm^2/g are typed inputs"
+  check_size_enters_only_through_the_log:
+    kind: sampled
+    clauses: ["whatever the size of a composite"]
+    omits: "one more radius a = 1e-100 fm (ln(ka/2) = -234.7, lambda = 7.6e-3 fm, 1.6e9 times the cluster bound); the logarithmic dependence itself is the form of the cited formula, not tested"
+  check_phase_shift_limits:
+    kind: exact
+    clauses: ["phase shift below about 2e-7 (isotropic)", "about 4e-6 (normal to the sheets)"]
+    omits: "values quoted to one figure; the normal-compression factor sqrt(4.4e10/9.5e7) = 22 uses the paper's table values as typed inputs"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Size-independence is tested at two sample radii (1e-30 and 1e-100 fm) plus the log form; docstring says table values are inputs. 2026-10-23 weak-check pass: the a = 1e-100 fm check now pins ln(ka/2) = -234.7 and the margin lambda/lambda_max = 1.6e9 (by-hand values) in place of the inequalities ln(ka/2) + gamma < -200 and margin > 1e8, which they imply."

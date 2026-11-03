@@ -1,0 +1,79 @@
+- id: three-routes.sections-are-meet-finite-truncation
+  replaced_by: singularity.finite-truncation-meet-big-fibres-equals
+  date: '2026-10-21'
+  reason: 'duplicate of singularity.finite-truncation-meet-big-fibres-equals: same statement in T05 (Thm C.3)'
+- id: state-selection.p-univalence
+  replaced_by: singularity.p-univalence
+  date: '2026-10-21'
+  reason: 'duplicate of singularity.p-univalence: same statement in T05 (Premise 7.8)'
+- id: dark-matter.premise-trichotomy-exhaustive
+  date: '2026-10-22'
+  reason: 'retired, no replacement: the postulate that the kinematic, dynamical and initial-data alternatives are exhaustive (T14 Prop 5.2, third premise; T12 Prop 7.6(3)) has no user. The corrected seventeenth refutation (dark-matter.orientation-arrow-seventeenth-refutation, v6 on) reaches initial data directly and does not use it, and its two T16 restatements dropped their unused assumes edges; dark-energy.four-alternatives-are-exhaustive-three-are shows it false in general (a parameter of the laws is a fourth case). The trichotomy itself is standard-model.trichotomy-what-kind-number.'
+- id: state-selection.ascended-marginals-are-diagonal
+  replaced_by: singularity.ascended-marginals-are-diagonal
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.ascended-marginals-are-diagonal: the same theorem; the T05 statement adds the
+    zero-weight scope (the note''s unique beta fails at zero weight)'
+- id: state-selection.descended-form-state-independent
+  replaced_by: singularity.descended-form-state-independent
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.descended-form-state-independent: the same theorem; the T05 statement adds the
+    zero-weight scope'
+- id: state-selection.descent-parity-average
+  replaced_by: singularity.descent-parity-average
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.descent-parity-average: the same theorem (T05 adds the sigma-times-sigma form)'
+- id: state-selection.imported-univalence-superselection-rule
+  replaced_by: singularity.imported-univalence-superselection-rule
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.imported-univalence-superselection-rule: the same imported rule (T05 adds a
+    scope remark)'
+- id: state-selection.kms-uniqueness-factor
+  replaced_by: singularity.kms-uniqueness-factor
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.kms-uniqueness-factor: the same theorem'
+- id: state-selection.number-diagonal-dynamics-models-scrambling-derived
+  replaced_by: singularity.number-diagonal-dynamics-models-scrambling-derived
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.number-diagonal-dynamics-models-scrambling-derived: the same proposition (T05
+    adds that populations do not drift); its premise, the note''s (L_E), names the same generator class as T05''s
+    (L_E), which the kept entity assumes'
+- id: state-selection.rate-rigidity-temperature-not-algebra-intrinsic
+  replaced_by: singularity.rate-rigidity-temperature-not-algebra-intrinsic
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.rate-rigidity-temperature-not-algebra-intrinsic: T05''s statement is the note''s
+    clauses (1) and (2) with a reparametrisation clause; the note''s clause (3), quantified over all automorphisms,
+    is not carried'
+- id: state-selection.universality-temperature
+  replaced_by: singularity.universality-temperature-under-g
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.universality-temperature-under-g: the same corollary; the T05 statement adds
+    the nonzero-weight scope'
+- id: obj.state-selection.geometric-modular-condition
+  replaced_by: obj.singularity.geometric-modular-condition-g
+  date: '2026-10-22'
+  reason: 'duplicate of obj.singularity.geometric-modular-condition-g: the same set of states (the note''s definition
+    now says faithful, as T05''s does)'
+- id: obj.state-selection.grading-parity-automorphism
+  replaced_by: obj.singularity.grading-parity-automorphism
+  date: '2026-10-22'
+  reason: 'duplicate of obj.singularity.grading-parity-automorphism: the same definition (the titles differ by a
+    comma)'
+- id: state-selection.exact-equilibrium-over-determines-ledger
+  replaced_by: singularity.exact-equilibrium-over-determines-boundary-modes
+  date: '2026-10-22'
+  reason: 'duplicate of singularity.exact-equilibrium-over-determines-boundary-modes: the same theorem, the note''s
+    ledger being the boundary modes'
+- id: state-selection.r-regularity-fixed-locus
+  replaced_by: singularity.r-regularity-fixed-locus
+  date: '2026-10-22'
+  reason: 'reducible to singularity.r-regularity-fixed-locus: not the same premise: in its one satisfiable contentful
+    reading on the boundary-mode algebra the note''s (R) is T05''s (R) plus vanishing inter-mode two-point functions
+    (synthesis.state-selection-r-and-le-against-t05); its one consumer, state-selection.rate-discharge-hypothesis-iii,
+    uses only the single-mode content T05''s (R) supplies and now assumes T05''s (R)'
+- id: state-selection.l-ledger-locality
+  replaced_by: singularity.l-boundary-mode-locality
+  date: '2026-10-22'
+  reason: 'reducible to singularity.l-boundary-mode-locality: the same generator class (synthesis.state-selection-r-and-le-against-t05
+    (v)); its one consumer, state-selection.number-diagonal-dynamics-models-scrambling-derived, is merged into singularity.number-diagonal-dynamics-models-scrambling-derived,
+    which assumes T05''s (L_E)'

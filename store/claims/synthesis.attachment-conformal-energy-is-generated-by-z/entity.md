@@ -1,0 +1,92 @@
+---
+id: synthesis.attachment-conformal-energy-is-generated-by-z
+kind: claim
+version: 1
+title: The twistor form on the conformal spinor space is the grading of the central rotation $Z = e_{0}\nu$ against the Hilbert form of the ladder-pair module, so the twistor attachment's conformal energy $|s| + 1 + n$ is the nonnegative generator of $Z$; every future translation, null special conformal transformation and de Sitter horizon generator is nonnegative on its modules, and the attachment's Fock vacuum satisfies the positivity and invariance clause of (N$_{+}$) on the local horizons of Minkowski space (and of de Sitter space for conformally invariant fields); on those horizons (N$_{+}$) is the choice of that vacuum as the state of the light rays, a restatement of the premise and not a derivation of it
+status: proved
+region: synthesis
+subject: conformal-spacetime
+tags: [conformal-spinors, thermal-premises, representation-theory, horizons, forcing-and-uniqueness]
+proposed_by:
+  kind: ai
+  session: 2026-10-24-all-open
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: direction
+- name: Claude Opus 5.5
+  role: proposal and drafting
+  source: Co-Authored-By trailer of the commit that added it
+review: draft
+derivations:
+- name: main
+  uses:
+  - correspondence.twistors-are-states-three-ladder-pairs@6
+  - field-theory.twistor-attachment@6
+  - synthesis.positive-energy-selects-rule-2-sign@3
+  - hawking.helicity-lift-joints-itemised@5
+  - synthesis.positive-conformal-energy-gives-positive-null-translations@5
+  - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
+  - synthesis.positive-null-energy-gives-r-premises@4
+  - field-theory.imported-standard-field-theory@4
+  proof: proof-main.tex
+checked_by:
+- kind: check
+  ref: check.py::check_clifford_module_and_chirality
+- kind: check
+  ref: check.py::check_invariant_form_is_the_grading_of_z
+- kind: check
+  ref: check.py::check_future_translations_share_the_sign_of_z
+- kind: check
+  ref: check.py::check_oscillator_energy_is_generated_by_z
+- kind: check
+  ref: check.py::check_null_translations_are_nonnegative_on_the_modules
+- kind: proof
+  derivation: main
+lineage:
+  motivated_by:
+  - synthesis.n-plus-null-ground-state
+  - note.singularity.cost-r-dictionary
+extraction:
+  open_problem: op.r-premises-external
+  note: >-
+    The problem's first line of attack, which is also item (i) of the open problem on null positivity at horizons of nonvanishing field strength. The stored
+    rule-2 result left the identification of the attachment's energy with the generator of Z as argued, and (N+)
+    records that the series' modes were not shown to carry a representation with nonnegative conformal energy;
+    both are settled here at the one-particle level, exactly, and at the Fock level through standard second
+    quantisation. The consequence for (N+) is that the attachment's vacuum satisfies it on cases (b) and (c), so
+    there the premise becomes the choice of that vacuum; it is restated, not derived. Transport-convenient: Z is the series' central rotation of the Rule 1 ascent and the module is
+    the stored ladder-pair module; the representation theory is standard (the ladder representations of SU(2,2)).
+    Literature cited from memory: integration of the oscillator representation of su(2,2) to a unitary
+    representation of SU(2,2) = Spin+(2,4) on each helicity module (Mack and Todorov 1969; Mack 1977); the
+    second-quantisation functor (a unitary U on the one-particle space gives Gamma(U) on Fock space fixing the
+    vacuum, with nonnegative generators going to nonnegative generators); the restriction of a free massless
+    field's vacuum to a null plane as the null-plane ground state of its light rays (Wall 2011; Casini, Teste and
+    Torroba 2017), used only in the reading of (v). Case (a) of (N+), the eternal hole, is not reached.
+---
+## formal
+Work in $\Cl(2,4)$ with the conventions of Proposition \claimref{synthesis.positive-conformal-energy-gives-positive-null-translations}: $e_{0}^{2} = \nu^{2} = 1$, $e_{1}^{2} = e_{2}^{2} = e_{3}^{2} = e_{-}^{2} = -1$, $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, $P_{a} = \tfrac12 a\nInf$ for $a \in \R^{1,3}$, $Z = e_{0}\nu$. Let $S$ be the module of three ladder pairs (Proposition \claimref{correspondence.twistors-are-states-three-ladder-pairs}) with its Hilbert form $\ip{\psi}{\phi}$, in which the frame generators squaring to $+1$ act self-adjointly and those squaring to $-1$ anti-self-adjointly, and $\CS$, $\CSm$ its two chirality halves. A bivector $B$ acts on $S$ by left multiplication, generating the rotor flow $\exp(tB)$.
+\begin{enumerate}
+\item[(i)] \emph{(The twistor form is the grading of $Z$.)} On $\CS$ (and on $\CSm$) the Hermitian forms invariant under all fifteen bivectors form a real line, spanned by $h(\psi, \phi) = \ip{\psi}{iZ\phi}$. It has signature $(2,2)$, and $Z$ acts as $-i$ on its positive plane $T_{+}$ and as $+i$ on its negative plane $T_{-}$. So the twistor form of Proposition \claimref{field-theory.twistor-attachment}, an invariant Hermitian form on $\CS$, is a real multiple of $h$: the central rotation $Z$ of Proposition \claimref{synthesis.positive-energy-selects-rule-2-sign}(i) is the grading that turns it into the Hilbert form, $h(\psi, iZ\phi) = \ip{\psi}{\phi}$.
+\item[(ii)] \emph{(Signs on the one-particle space.)} For a bivector $B$ put $q_{B}(\psi) = i\,h(\psi, B\psi)$, a Hermitian form. Then $q_{Z} = \ip{\psi}{\psi}$ is positive definite; for every future timelike or null $a$, $q_{P_{a}}$ and $q_{a\nO}$ are positive semidefinite, as is $q_{B}$ for the de Sitter horizon generator $B = P_{n} + \tfrac{\Lambda}{12}n\nO$ of Proposition \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation} ($n$ future null, $\Lambda > 0$); for past $a$ they are negative semidefinite; for spacelike $a$, and for the boosts and the dilation, they are indefinite.
+\item[(iii)] \emph{(The oscillator model.)} Quantise $\CS$ with twistor operators $\hat Z^{\alpha}$, $[\hat Z^{\alpha}, \hat Z^{\beta\,*}] = (h^{-1})^{\alpha\beta}$, the components along $T_{+}$ annihilating ($a_{1}, a_{2}$) and those along $T_{-}$ creating ($b_{1}^{*}, b_{2}^{*}$), on the Fock space of four oscillators, and put $Q(M) = \sum_{\alpha\beta}\hat Z^{\alpha\,*}(hM)_{\alpha\beta}\hat Z^{\beta}$. Then $Q$ is a Lie homomorphism on $\so(2,4)$; the rotor flow $\exp(\tfrac{\tau}{2}Z)$, rotation through conformal time $\tau$, is generated by
+\[
+Q(\tfrac12 Z) = -iE, \qquad E = \tfrac12(N_{a} + N_{b}) + 1 ,
+\]
+and the Weyl-ordered central charge is $s = \tfrac12(N_{a} - N_{b})$. On the module of helicity $s$ the spectrum of $E$ is $|s| + 1 + n$, $n = 0, 1, 2, \dots$, with multiplicity $(n + 1)(n + 2|s| + 1)$: the conformal energy of the twistor attachment, with the helicity of Proposition \claimref{hawking.helicity-lift-joints-itemised}. So that energy is the generator of the central rotation, and $E \ge 1$. In the other quantisation (components along $T_{+}$ creating, which quantises $-h$) the same flow has generator $-E$, bounded above. In the first quantisation $iQ(P_{a}) = \sum_{k}\lambda_{k}c_{k}^{*}c_{k} \ge 0$ for every future $a$.
+\item[(iv)] \emph{(The series' modes meet the hypothesis.)} The oscillator representation integrates on each helicity module to a unitary representation of $\mathrm{Spin}^{+}(2,4) \cong SU(2,2)$ (cited) with $Z$ in its cone of nonnegative generators. The tower's CAR is the second quantisation over these modules (Proposition \claimref{field-theory.twistor-attachment}); second quantisation carries the representation to the Fock space with nonnegative generators preserved and the Fock vacuum invariant. So the Fock vacuum's GNS representation is a unitary representation of $\mathrm{Spin}^{+}(2,4)$ with nonnegative conformal energy and invariant GNS vector, the hypothesis of the stored positivity result, and by it every null translation of the flat background has a nonnegative generator fixing the vacuum.
+\item[(v)] \emph{(What it gives for (N$_{+}$).)} Read on the light rays of a local Rindler horizon of Minkowski space (vanishing field strength), with the horizon modes the series' field on those rays (the reading of the adopted premise), the Fock vacuum is gauge-invariant (it commutes with the number charge), quasi-free, invariant under the affine null translations and a ground state for them: the attachment's vacuum satisfies the positivity and invariance clause of (N$_{+}$) in case (c), and no temperature, period or Euclidean section enters. The canonical light-ray component on which the modes are read is the one fixed on the null plane by clause (i) of the result filed alongside (synthesis.boost-evolution-on-generators-is-one-unitary-group). With (ii) and the stored de Sitter result the same holds in case (b) for the conformally invariant fields of the attachment. By Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i) the state (N$_{+}$) admits is unique, so on these cases (N$_{+}$) says exactly that the state of the light rays is the attachment's vacuum restricted to them (in case (b), the conformal vacuum): a consistency result together with a restatement of the premise as the choice of that vacuum. The choice itself is not derived here. Case (a), the eternal hole, is not reached: its horizon translations are not background conformal transformations.
+\end{enumerate}
+
+## technical
+The stored positivity result reduces the ground-state premise (N$_{+}$) on the local horizons of Minkowski space to one hypothesis: the state's GNS space carries a unitary representation of the conformal spin group with nonnegative conformal energy, the generator of the central rotation $Z = e_{0}\nu$. The premise itself recorded that the series' modes were not shown to do so, and the rule-2 result called the identification of the twistor attachment's energy with $Z$ argued.
+
+This claim closes that gap at the level of the twistor module. On the module of three ladder pairs the conformal spinors carry one invariant Hermitian form up to a real factor, and it is $\ip{\psi}{iZ\phi}$: the central rotation is exactly the grading that turns the indefinite twistor form into the positive Hilbert form. That single identity does the work. Quantising twistors in the usual way, the quadratic generated by $Z$ is the sum of the oscillator numbers plus one, $E = \tfrac12(N_{a} + N_{b}) + 1$, whose values on helicity $s$ are $|s| + 1 + n$ with the stored multiplicities. Every future translation, every null special conformal transformation and the de Sitter horizon's generator give positive semidefinite quadratics of the same sign, so in the quantisation that makes the conformal energy positive they are all nonnegative.
+
+Second quantisation then gives a vacuum that is invariant and has nonnegative conformal energy, and the stored cone argument gives a ground state for every null translation. On the light rays of Minkowski local horizons this vacuum satisfies the condition (N$_{+}$) imposes in case (c), and with the stored de Sitter result in case (b) for conformal fields. Since the state the condition admits is unique, on those horizons (N$_{+}$) becomes the choice of the attachment's vacuum: the premise is restated, not removed. The eternal hole is not reached. The one-particle statements are checked exactly with Gaussian-rational matrices and polynomial oscillators; the integration to the group, the second-quantisation functor and the null-plane restriction are cited from memory.
+
+## lay
+The series needs the quantum fields near a horizon to carry no negative energy along its light rays. An earlier result showed this follows if the fields have nonnegative energy for one special symmetry, a rotation that mixes time with an extra direction of the series' enlarged algebra. Whether the series' own fields have that property had been left open. They do. The twistors from which the series builds its fields carry a quantity that can be positive or negative, and that special rotation is exactly what converts it into an ordinary positive length. Quantised, the rotation's energy comes out as the energies already stored for the fields, all positive, and every push along a light ray costs nonnegative energy too. So the vacuum of the series' fields satisfies the no-negative-energy condition on horizons in empty space, and on the horizon of an expanding universe for the fields that ignore rescaling, without assuming any temperature. That the fields are actually in that vacuum is still an assumption: the condition becomes the choice of this one state. Black holes are still not covered.
+
+## one-liner
+On the conformal spinor space the invariant Hermitian form is, up to a real factor, $\ip{\psi}{iZ\phi}$ with $Z = e_{0}\nu$, so $Z$ grades the twistor form into the Hilbert form; quantised, $Z$ generates the twistor attachment's conformal energy $\tfrac12(N_{a} + N_{b}) + 1 = |s| + 1 + n$ with the stored multiplicities, future translations, null special conformal transformations and the de Sitter horizon generator are nonnegative with it, and the attachment's Fock vacuum satisfies the positivity and invariance clause of (N$_{+}$) on Minkowski local horizons (and de Sitter for conformal fields) with no thermal input; on those horizons (N$_{+}$) becomes the choice of that vacuum, a restatement and not a derivation of the premise; the eternal hole is not reached.

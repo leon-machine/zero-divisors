@@ -1,0 +1,18 @@
+functions:
+  check_every_single_qubit_marginal_is_thermal:
+    kind: sampled
+    clauses: ["at every stage, for any sequence of number-basis-diagonal window unitaries, each single-qubit reduced density matrix is exactly diag(c_k^2, s_k^2)"]
+    omits: "four fixed programs of diagonal gates (cz, phases, controlled phase, ccz, sign flip) over two pair lists, not every diagonal unitary sequence or pair list"
+  check_support_constraint_and_populations:
+    kind: sampled
+    clauses: ["mechanism: diagonal, with the original populations, regardless of the scrambling"]
+    omits: "same eight runs; checks R_k = L_k support and product weights of each configuration, which is the mechanism, not a proof for all diagonal unitaries"
+  check_non_diagonal_unitaries_break_protection:
+    kind: exact
+    clauses: ["(control, not a clause) number-diagonality is needed for the protection"]
+    omits: "two explicit non-diagonal rotations with exact resulting populations; the statement does not itself assert necessity"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the general 'any sequence' is tested on four diagonal programs; exact rational arithmetic throughout"

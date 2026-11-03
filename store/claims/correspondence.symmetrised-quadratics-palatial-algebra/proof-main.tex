@@ -1,0 +1,7 @@
+(1) $[Z^\alpha\bar Z_\beta, Z^\gamma] = Z^\alpha[\bar Z_\beta, Z^\gamma] = -\hbar\,\delta^\gamma_\beta Z^\alpha$, and the same for the reversed ordering, so $[q(M), Z^\gamma] = -\hbar\sum_\alpha M^\gamma{}_\alpha Z^\alpha$; likewise $[Z^\alpha \bar Z_\beta, \bar Z_\gamma] = \hbar\,\delta^\alpha_\gamma\,\bar Z_\beta$ gives the second display.
+(2) $\operatorname{ad}_{q(M)}$ is a derivation, so by (1),
+\[
+[q(M), q(N)] = \tfrac12\sum N^\beta{}_\alpha\Bigl(\,[q(M),Z^\alpha]\bar Z_\beta + Z^\alpha[q(M),\bar Z_\beta] + [q(M),\bar Z_\beta]Z^\alpha + \bar Z_\beta[q(M),Z^\alpha]\Bigr),
+\]
+and collecting coefficients of the symmetrised monomials gives $-\hbar\,q(NM) + \hbar\,q(MN) = \hbar\,q([M,N])$. Injectivity: the adjoint action (1) recovers $M$. The verification script confirms (2) in the polynomial realisation $Z^\alpha = z_\alpha$, $\bar Z_\beta = -\hbar\,\partial_\beta$ (the sign that realises $[Z^\alpha, \bar Z_\beta] = +\hbar\delta^\alpha_\beta$, checked as an operator identity), where both sides are operators determined by their action on polynomials of degree $\le 2$, checked exactly on that finite basis.
+(3) $\bar Z_\beta Z^\alpha = Z^\alpha \bar Z_\beta - \hbar\delta^\alpha_\beta$, so $\tfrac12(Z^\alpha\bar Z_\beta + \bar Z_\beta Z^\alpha) = Z^\alpha\bar Z_\beta - \tfrac{\hbar}{2}\delta^\alpha_\beta$; summing against $M$ gives the display, and $\operatorname{tr}(\mathrm{id}) = 4$ gives the shift $-2\hbar$, $q(\mathrm{id}) = \sum_\alpha Z^\alpha\bar Z_\alpha - 2\hbar$.

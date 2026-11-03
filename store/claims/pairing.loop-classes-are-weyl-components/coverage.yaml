@@ -1,0 +1,22 @@
+functions:
+  check_six_loop_classes:
+    kind: exact
+    clauses:
+    - '"the six loops of the null tetrad then have classes (l,m): Psi_0, (l,mb): 0, (m,mb): -Psi_1, (l,n): Psi_1, (n,m): 0, (n,mb): -Psi_2"'
+    omits: the identification calR = W for a vacuum field is the cited dictionary; the table is verified on all 10 basis Weyl maps, which suffices because every class is linear in the Weyl map
+  check_null_cone_classes_vanish_iff_repeated_pnd:
+    kind: exact
+    clauses:
+    - '"every loop in the null cone of l has zero class if and only if Psi_0 = Psi_1 = 0"'
+    - '"the radial loop then has zero class as well, and only Psi_2 remains"'
+    omits: Psi_0 = Psi_1 = 0 iff l is a repeated principal null direction is the imported Weyl-scalar fact, not computed here
+  check_schwarzschild_type_d:
+    kind: sampled
+    clauses:
+    - '"the radial loop then has zero class as well, and only Psi_2 remains" (Schwarzschild instance)'
+    omits: an instance of the statement at three values of M/r^3 (the statement itself is for general vacuum fields, covered by the first two functions)
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: the table and the iff are linear in the Weyl map and are checked on a full basis exactly; the Schwarzschild function is an instance

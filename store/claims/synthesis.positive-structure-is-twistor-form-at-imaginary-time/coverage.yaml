@@ -1,0 +1,30 @@
+functions:
+  check_positive_structure_is_polarised_at_imaginary_time:
+    kind: exact
+    clauses:
+    - (i)
+    - (ii)
+    omits: 'Exact in the eight-dimensional Fock model: uniqueness of the generator-unitary Hermitian form (one real line), J^2 = 1, J h-Hermitian and even, X(+-i e1) = e+(1 -+ J), the two lines, h = +-Sigma on them and their Sigma-orthogonality; the Sigma-invariance and signature are in the next function'
+  check_sigma_is_the_twistor_form:
+    kind: exact
+    clauses:
+    - (i)
+    omits: Sigma Hermitian, bivectors Sigma-anti-Hermitian, signature (2,2) and one real line of invariant Hermitian forms, on the positive chirality half only (the statement says each half); the identification with the twistor form of the cited proposition up to a real factor is by the premise, not computed
+  check_tube_points_polarise_sigma:
+    kind: partial
+    clauses:
+    - (iii)
+    - (v)
+    omits: 'Seven sample points m (future, past, spacelike and real imaginary part): Sigma-adjoint of real vectors, X(m) null of rank 4, Sigma(L(m), L(m-bar)) = 0, Sigma-positivity on L(m) for future tube points and the Gram determinant ratio formula; the converse of (iii) (every positive Hermitian form with h''^-1 Sigma an involution is h_m for exactly one m, and the time orientation condition) and the positivity and involution property of h_m itself are not tested; (v) is checked at three angles and at rho = 1 only'
+  check_no_state_for_an_indefinite_form:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'The single instance of signature (2,2) on the four-dimensional half: with a Sigma-orthonormal basis E_ij^# E_ij = (eps_i/eps_j) E_jj forces omega(E_jj) = 0 and so omega(1) = 0; the general finite-dimensional if-and-only-if (definite s admits a state), the complexified Clifford algebra consequence and the boost statement beyond (e1 e2)^2 = 1 are not tested'
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Exact Gaussian-rational computations in the eight-dimensional Fock module establish (i), (ii) and the (2,2) instance of (iv); (iii) is tested at sample points without its converse.
+untouched_premises:
+  std-algebra.vector-squares: "standard algebra cited in the proof; the check computes the statement directly"

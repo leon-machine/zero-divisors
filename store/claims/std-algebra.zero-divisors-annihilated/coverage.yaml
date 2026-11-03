@@ -1,0 +1,14 @@
+functions:
+  check_nondegenerate_zero_divisors_kill_idempotents:
+    kind: sampled
+    clauses:
+    - '"(a) x is not invertible"'
+    - '"(d) xe = 0 for a nonzero idempotent e; (e) fx = 0"'
+    omits: three chosen zero divisors (a null vector of Cl(1,1) and of Cl(1,3), 1 + e_1 in Cl(2,0)) with
+      hand-chosen idempotents, and one invertible element; the general statement is proved in the text
+  check_degenerate_annihilators_hold_no_idempotent:
+    kind: exact
+    clauses:
+    - '"For degenerate (V, Q), (d) and (e) can fail"'
+    omits: the null generator of Cl(0,0,1) and of Cl(1,0,1); the right annihilator is computed exactly
+      and shown to square to zero

@@ -1,0 +1,22 @@
+functions:
+  check_projector_identity_and_null_flux_of_the_dirac_current:
+    kind: sampled
+    clauses:
+    - (b), (c) the canonical projector of a null k, Lam = n k/2 = e0 k/(2 k.e0), is a Hermitian idempotent with Lam k = 0, k Lam = k and Lam p k = 2 (p.k) Lam, the algebra behind the step coefficient (Step 3) and the numerator order (Step 5)
+    - (c) the projector identity (k.e0) Lam p e0 Lam = (p.k) Lam for every vector p, which fixes the coefficient of the null singularity as that of W0 Lam (Step 5)
+    - (b) the null flux of the Dirac current is 2 (k.e0) |Lam psi|^2, the integrand of the flux contraction (Step 3)
+    omits: four null directions, four regulators and two spinors; the flux contraction itself (divergence theorem on a Lipschitz region) is proof-only, in the flux-contraction result
+  check_null_hypersurface_identity_on_the_light_cone:
+    kind: sampled
+    clauses:
+    - (b), (c) the identity Delta^(1/2)/sqrt(det M) = (a(u) a(u'))^(-1/2) of Step 2, on the future light cone of a point of the flat field (Delta = 1), with M computed from the Synge function by exact truncated series and a^2 the determinant of the induced metric of the cut
+    - (b), (c) sigma has no constant or linear term in the label offset on a null hypersurface
+    - (b), (c) a(u) = u^2 a(1), so theta = 2/u and (d_u + theta/2)(a a')^(-1/2) = 0, the vanishing of the step and log coefficients
+    omits: one exact model with Delta = 1 and three point pairs; fields with field strength along the generators are checked in the null-singularity result, the generator-CAR result and the bound result, not here
+  check_time_function_kernel_is_bounded_and_scales_away:
+    kind: sampled
+    clauses:
+    - (c) on the flat null plane with t = u + c u^2 the epsilon-regularised restriction carries the smooth kernel t_u/(t(u) - t(u')) - 1/(u - u') = c/(1 + c(u + u')) = d_u log phi_t, bounded on a compact interval
+    - (b), (c) a bounded kernel scales away at rate lambda at (u0 + lambda x, u0 + lambda x') while lambda W0 is dilation invariant, so the generator scaling limit is the null vacuum
+    omits: three point pairs, one value of c and three values of lambda; the bounds on r and on the regularised remainder are proof-only, in the bound and generator-CAR results
+untouched_premises: {}

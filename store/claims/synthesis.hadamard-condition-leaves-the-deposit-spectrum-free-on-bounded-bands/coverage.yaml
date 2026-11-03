@@ -1,0 +1,42 @@
+functions:
+  check_conformal_mode_equation_and_complex_unit:
+    kind: sampled
+    clauses:
+    - "setup: for w = -1 the dictionary's m^2 a^2 cancels a''/a, so chi'' + k^2 chi = 0; the massless point keeps -2/eta^2"
+    - "setup: complex numbers read as a + b I4 with I4^2 = -1 multiply as Gaussian rationals"
+    omits: "three values of H and three of eta for the cancellation (an identity in eta after clearing denominators); the plane-wave mode equation at four k and six circle points; the I4 product on nine pairs"
+  check_every_positive_ratio_is_reached_on_a_band:
+    kind: sampled
+    clauses:
+    - "(i) the pure data alpha = cosh s, beta = +-sinh s times a phase keep the Wronskian and give rho = q^2 or 1/q^2 on the slice"
+    omits: "nine rational q from 1/3 to 1000, both signs, four k and six phases; that every continuous positive rho is reached follows since q is arbitrary; the smoothness half of (i) is check_band_difference_kernel_is_regular and the proof"
+  check_price_of_a_ratio:
+    kind: sampled
+    clauses:
+    - "(ii) 4 n rho >= (rho - 1)^2 for every admissible (n, c, phase), with equality for the pure states of (i)"
+    omits: "five n, the admissible ones of twenty c, six phases (over 100 cases); the inequality is a one-line identity in the proof"
+  check_conformal_energy_has_no_cross_term:
+    kind: sampled
+    clauses:
+    - "(iii) the energy combination of the conformal field has Fourier weight 2 k n_k with no cross term: chi'^2 + k^2 chi^2 = 0 and |u'|^2 + k^2 |u|^2 = k (|alpha|^2 + |beta|^2)"
+    omits: "three Bogoliubov pairs at four k and six phases; the control that the massless point's mode has a nonzero cross term at three z; the Fourier-positivity step from smoothness to finite moments is in the proof"
+  check_band_difference_kernel_is_regular:
+    kind: partial
+    clauses:
+    - "(i) the equal-time difference kernel of a constant occupation on a shell is (cos k1 r - cos k2 r)/r^2 times n/(2 pi^2 a^2), regular at r = 0 with value (k2^2 - k1^2)/2 (times the prefactor)"
+    omits: "one instance (constant n, c = 0) of the smoothness of (i), by Taylor coefficients to r^22 at three shells, for the conformal vacuum as reference; the general smoothness by differentiation under the integral, for any homogeneous Hadamard reference, and the wave front set step through the imported Fact, are in the proof, not the check"
+  check_power_laws_fail_the_energy_moment:
+    kind: sampled
+    clauses:
+    - "(iii) a ratio law rho = k^q, q != 0, has energy-moment shell bounds growing without limit, for q = -20351/10000, -1, 1/2"
+    - "(iii) a constant occupation (the dilatation-invariant case) and a constant ratio C != 1 (q = 0) have growing shell bounds; a shell-supported occupation a finite moment"
+    omits: "three shells per exponent with base 2^10000; arithmetic proxies only: the distributional step (Hadamard implies a smooth difference, hence finite moments by Fourier positivity) is in the proof, not the check; the general q and the higher moments j > 0 follow in the proof"
+  check_red_law_has_no_infrared_end:
+    kind: sampled
+    clauses:
+    - "(iv) int_eps^1 k^(s-1) dk is unbounded as eps -> 0 for s = -351/10000 and for s = 0, bounded by 1/2 for the vacuum's s = 2"
+    - "(iv) a blue law reaching k = 0 is allowed: rho = 1/k on (0, 1] is realised by pure data with int k n dk = 1/12, int k |c| dk = 1/6 and finite variance"
+    omits: "four eps values for s < 0, forty dyadic shells for s = 0, five sample k for the pure data; arithmetic proxies only: the reduction of the slice-field variance to int Delta^2 dk/k and the smoothness of the blue example's difference kernel are in the proof"
+untouched_premises:
+  synthesis.imported-ford-parker-infrared-divergence: 'imported fact (the infrared divergence of red and scale-invariant laws) cited as the standard ingredient of (iv); the check computes the integrals of (iv) directly'
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: 'imported theorem (conformal covariance of the conformally coupled field) used to read the conformal vacuum on other Robertson-Walker fields in (iii); nothing is computed from it'

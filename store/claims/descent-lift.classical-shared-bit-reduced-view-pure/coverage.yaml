@@ -1,0 +1,14 @@
+functions:
+  check_joint_state_and_marginals:
+    kind: exact
+    clauses: ["lift is the pure even four-mode state", "pair marginal diag(16/25, 9/25) equal to the descent of the pair", "single-mode marginals diag(16/25, 9/25)", "record marginal has spectrum (16/25, 9/25)"]
+    omits: ""
+  check_schmidt_coefficients_move_to_pair_record_cut:
+    kind: exact
+    clauses: ["Schmidt coefficients (c, s) across the mode-mode cut reappear across the pair-record cut"]
+    omits: "compared through (trace, determinant) of the 2 x 2 blocks, which fixes the spectrum; run at the sample (4/5, 3/5) and a control (5/13, 12/13)"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The statement is about the single sample state (4/5, 3/5); both functions compute every asserted number exactly in Fractions."

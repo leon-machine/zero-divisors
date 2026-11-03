@@ -1,0 +1,21 @@
+functions:
+  check_fock_module_irreducible_with_two_halves:
+    kind: exact
+    clauses:
+    - '"the algebra acts irreducibly on Lambda W; the halves CS, CS- each have dimension four"'
+    omits: ''
+  check_each_conformal_spinor_is_a_fock_vacuum:
+    kind: sampled
+    clauses:
+    - '"every nonzero conformal spinor u is a pure spinor: the Fock vacuum of three ladder pairs on its own annihilator W_u"'
+    omits: Seven sample conformal spinors, not every nonzero u in CS
+  check_excitations_from_a_dual_complement_span_the_module:
+    kind: sampled
+    clauses:
+    - '"every state of the module is generated from u by those pair operators; even products generate CS, odd CS-"'
+    omits: Same seven samples, with a complement chosen from seven candidate odd spinors; the control that products from W_u reach only the line of u is extra to the statement
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Algebra is exact; the pure-spinor and generation statements are checked at seven sample spinors, as the docstring says.

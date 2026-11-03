@@ -1,0 +1,18 @@
+functions:
+  check_shares_are_sphere_ratios:
+    kind: sampled
+    clauses: ["the shares are |S^4|/|S^n|"]
+    omits: "M and l cancellation tested at two sample values each for n = 3, 4, 5; the density M/(|S^n| l^n) is Premise D and taken as given"
+  check_sphere_form_is_ball_form:
+    kind: exact
+    clauses: ["the sphere form of the Remark equals the ball form"]
+    omits: ""
+  check_total_is_unit_ball_rule:
+    kind: exact
+    clauses: ["the total is that of the unit-ball rule, 11/3 + 16/(3 pi)"]
+    omits: "evaluated at one sample M and l, the result being independent of both"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "exact in Q(pi) given the premises D and R3"
