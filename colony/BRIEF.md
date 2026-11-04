@@ -60,7 +60,9 @@ Per problem:
 5. Checks: exact arithmetic only (no float literals, float(), math, random, int true division),
    `import GA`, call premise() inside each check function for every premise it relies on, and make
    sure perturbing integer literals breaks it. Numerical integration goes in the proof text, not the
-   check.
+   check. Statements and proofs are in geometric algebra (no Pauli or Dirac matrices, cross products
+   or complex numbers where the algebra does the work); where that is not possible, declare
+   `outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}` (E609 otherwise).
 6. Cap: about 3 proposals per cluster side; prefer one strong proposal per problem. Read your
    sibling's findings file midway and never file what they filed. File only established results (a
    new `synthesis.*` claim, or a corrected entity with version+1 that keeps every stored file),

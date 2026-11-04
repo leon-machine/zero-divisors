@@ -52,6 +52,30 @@ nav.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #
 @media (max-width: 1240px) { header { gap: 6px 14px; } nav a { padding: 6px 9px; font-size: 13.5px; } }
 nav a { font: 500 14px var(--sans); color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 8px; white-space: nowrap; flex: none; }
 nav a[aria-current="page"] { background: var(--ink); color: var(--panel); }
+/* the Physics Graph and its menu (documents, the record, open problems) */
+.navgroup { display: inline-flex; flex: none; border-radius: 8px; }
+.navgroup > a { border-radius: 8px 0 0 8px; padding-right: 6px !important; }
+.navcaret { border: 0; background: none; color: var(--muted); padding: 0 8px 0 4px; border-radius: 0 8px 8px 0; cursor: pointer; display: inline-flex; align-items: center; }
+.navcaret:hover, .navgroup > a:hover { color: var(--ink); }
+.navgroup.on { background: var(--ink); }
+.navgroup.on > a, .navgroup.on .navcaret { color: var(--panel); background: none; }
+.navcaret[aria-expanded="true"] svg { transform: rotate(180deg); }
+.navmenu { position: fixed; z-index: 60; width: 300px; max-width: calc(100vw - 24px); background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 6px; box-shadow: 0 10px 34px rgba(0,0,0,.35); }
+.navmenu a { display: block; padding: 7px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; font: 500 14px var(--sans); }
+.navmenu a small { display: block; font: 400 12.5px var(--sans); color: var(--muted); margin-top: 1px; }
+.navmenu a:hover, .navmenu a:focus-visible { background: color-mix(in srgb, var(--ink) 8%, transparent); outline: none; }
+.navmenu a[aria-current="page"] { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.navver { border-top: 1px solid var(--rule); margin: 6px 4px 0; padding: 8px 6px 4px; font: 12.5px var(--sans); color: var(--muted); }
+.navver b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.navmenu .navver a.navrel { display: inline; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; background: none; }
+/* release notes */
+.relnote { border-top: 1px solid var(--rule); padding: 14px 0 6px; scroll-margin-top: 12px; }
+.relnote h3 { font: 600 20px var(--serif); margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.relnote h3 .reldate { font: 400 13px var(--sans); color: var(--muted); }
+.relnote h3 .relcur { font: 500 11.5px var(--sans); color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; }
+.relnote h4 { font: 600 13px var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 0 6px; }
+.relnote ul { margin: 0 0 8px; padding-left: 20px; } .relnote li { margin: 3px 0; }
+.relnote.unrel { border: 1px dashed var(--rule); border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; }
 #themebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; margin-left: auto; }
 #sharebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; }
 .stats + #sharebtn, #sharebtn { margin-left: auto; } #sharebtn + #themebtn { margin-left: 0; }
@@ -74,6 +98,8 @@ details.pgwhy { margin: 6px 0 14px; padding: 8px 12px; border: 1px solid var(--r
 details.pgwhy ul { padding-left: 18px; margin: 6px 0; }
 .view.story { background: #100e0d; }
 .view.story iframe { flex: 1; width: 100%; height: 100%; border: 0; display: block; background: #100e0d; }
+/* the Transport Principle shares the Physics Graph's background */
+#principleview, #principleview iframe { background: #060a10; }
 /* universe */
 #universeview { --rw: 480px; position: relative; }
 #universeview.on { display: grid; grid-template-columns: 290px minmax(0, 1fr) var(--rw); }
@@ -353,10 +379,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <nav aria-label="Views">
     <a href="#principle" data-view="principle">The Transport Principle</a>
     <a href="#singularity" data-view="singularity">The Singularity</a>
-    <a href="#universe" data-view="universe">Physics Graph</a>
-    <a href="#documents" data-view="documents">Documents</a>
-    <a href="#record" data-view="record">The record</a>
-    <a href="#problems" data-view="problems">Open problems</a>
+    <span class="navgroup" id="graphgroup"><a href="#universe" data-view="universe">Physics Graph</a><button class="navcaret" id="graphcaret" aria-haspopup="true" aria-expanded="false" aria-controls="graphmenu" aria-label="More of the Physics Graph: documents, the record, open problems"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
     <a href="#contribute" data-view="contribute">Explore with AI</a>
   </nav>
   <div class="stats" id="stats"></div>
@@ -364,6 +387,13 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <button class="btn" id="themebtn" aria-label="Switch between dark and light" title="Switch between dark and light"></button>
 </header>
 <div class="sharemenu" id="sharemenu" role="dialog" aria-label="Share" hidden></div>
+<div class="navmenu" id="graphmenu" aria-label="The Physics Graph" hidden>
+  <a href="#universe" data-view="universe">The graph<small>every result and how they connect</small></a>
+  <a href="#documents" data-view="documents">Documents<small>the papers and guides, written from the graph</small></a>
+  <a href="#record" data-view="record">The record<small>what has been checked, and by what</small></a>
+  <a href="#problems" data-view="problems">Open problems<small>what the papers leave open</small></a>
+  <div class="navver"><span id="graphver"></span> <a class="navrel" href="#releases" data-view="releases">Release notes</a></div>
+</div>
 <main>
   <section class="view" id="universeview">
     <aside class="rail" aria-label="Explore">
@@ -420,6 +450,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <section class="view page" id="documentsview"><div class="inner" id="documents"></div></section>
   <section class="view page" id="recordview"><div class="inner" id="record"></div></section>
   <section class="view page" id="problemsview"><div class="inner" id="problems"></div></section>
+  <section class="view page" id="releasesview"><div class="inner" id="releases"></div></section>
   <section class="view page" id="contributeview"><div class="inner" id="contribute"></div></section>
 </main>
 
@@ -1941,6 +1972,8 @@ const byline = n => { const cr = n.credit || []; if (!cr.length) return "";
   const verb = { correction: "corrected", restatement: "restated" };
   const tail = [...amend.entries()].sort((a, b) => a[0] - b[0]).map(([v, ns]) => `${verb[kindOf(v)] || "amended"} in v${v} by ${ns.map(esc).join(", ")}`);
   return `<p class="byline" title="${esc(cr.map(c => c.name + ": " + c.role + (c.version ? " (v" + c.version + ")" : "")).join("; "))}">${[head, ...tail].filter(Boolean).join(" · ")}</p>`; };
+const GA_KIND = { imported: "an imported result, stated in its source's language", "complex-analysis": "complex analysis or Hilbert-space structure", bridge: "a bridge to the standard formalism", other: "" };
+const gaNote = n => n.outside_ga ? `<p class="note">Stated outside geometric algebra${GA_KIND[n.outside_ga.kind] ? ": " + esc(GA_KIND[n.outside_ga.kind]) : ""}. ${esc(n.outside_ga.why)}${/[.!?]$/.test(n.outside_ga.why) ? "" : "."}</p>` : "";
 const amendNote = n => (n.amendments || []).length ? `<p class="note">Amendments:</p><ul class="hist">${[...n.amendments].sort((a, b) => a.version - b.version).map(a => `<li><span class="v">v${esc(a.version)}</span><span><b>${a.kind === "restatement" ? "Restatement" : "Correction"}</b>${(() => { const by = (n.credit || []).filter(c => c.version === a.version).map(c => c.name); return by.length ? " by " + by.map(esc).join(", ") : ""; })()}: ${esc(a.defect)}${a.evidence ? ` (shown by <code>${esc(a.evidence)}</code>)` : ""}</span></li>`).join("")}</ul>` : "";
 const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
 function resultHead(n) {
@@ -2022,6 +2055,7 @@ function renderResult(n, fly) {
       ${n.typing_note ? `<p class="note">${esc(n.typing_note)}</p>` : ""}
       ${creditNote(n)}
       ${amendNote(n)}
+      ${gaNote(n)}
       ${n.cov ? `<p class="note">${n.cov === "sampled" ? "Its check covers sample cases only" : "Its check covers part of the statement"}: a check of the general case would strengthen it. <a href="#contribute/build">How to contribute</a></p>` : ""}
       <p class="note">Trust: ${n.trust ? `${esc(TRUST_WORD[n.trust] || n.trust)}. ${esc(TRUST_ABOUT[n.trust] || "")}` : "not recorded."}${signs.length ? "" : " No human sign-off is recorded."}</p>
       ${signs.length ? `<ul class="hist">${signs.map(x => `<li><span class="d">${esc(x.date)}</span><span class="v">v${esc(x.version)}</span><span><b>${esc(TRUST_WORD[x.level] || x.level)}</b> by ${esc(x.by)}${x.note ? ": " + esc(x.note) : ""}</span></li>`).join("")}</ul>` : ""}
@@ -2363,7 +2397,8 @@ function renderProblems() {
   const open = nodes.filter(n => n.status === "conjectured" || (n.kind === "question" && n.status === "open"));
   const tabs = [["curated", `Problems to attack (${ops.length})`], ["conjectures", `Every conjecture and open question (${open.length})`]];
   el.innerHTML = `<div class="eyebrow">For other agents and readers</div><h2>Open problems</h2>
-    <p class="lead">What the store does not yet settle: the papers' own successor problems, the conjectures, and the tensions and gaps found by review. Each problem says why it matters, what is known, where to start and what would settle it.</p>
+    <p class="lead">A selection of what the store does not yet settle: the papers' own successor problems, the conjectures, and the tensions and gaps found by review. Each problem says why it matters, what is known, where to start and what would settle it.</p>
+    <p class="note">The open questions are without end, and this list is not a complete catalogue. It holds the problems that have been written up so far. A problem you find that is not here is as welcome as one that is: <a href="#contribute/build">how to contribute</a>.</p>
     <details class="agentbox"><summary><b>Working on one?</b></summary> An AI agent can read these through the graph's MCP server: <code>list_open_problems</code> (filter by area, kind, difficulty or status) and <code>get_open_problem</code>. Work on one comes into the graph as a pull request. <a href="#contribute/build">How to contribute</a>.</details>
     <div class="tabs">${tabs.map(([k, l]) => `<button data-optab="${k}" aria-pressed="${k === opTab}">${esc(l)}</button>`).join("")}</div><div id="opbody"></div>`;
   el.querySelectorAll("[data-optab]").forEach(b => b.onclick = () => { opTab = b.dataset.optab; renderProblems(); });
@@ -2424,8 +2459,41 @@ let docSel = null;
 // which release of the Physics Graph this site was built from; each release is archived on Zenodo
 function releaseLine() {
   const r = DATA.release;
-  if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet.</p>`;
-  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""}</p>`;
+  if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet. <a href="#releases">Release notes</a></p>`;
+  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""} <a href="#releases">Release notes</a></p>`;
+}
+// release notes: releases/vX.Y.Z.md, written at each release (RELEASING.md); a small Markdown subset
+function relInline(t) {
+  return esc(t).replace(/`([^`]+)`/g, (m, c) => byId.has(c) ? `<a href="#${esc(c)}"><code>${c}</code></a>` : `<code>${c}</code>`)
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+function relMarkdown(md, tag) {
+  const out = []; let para = [], list = null;
+  const flush = () => { if (para.length) { out.push(`<p>${relInline(para.join(" "))}</p>`); para = []; } if (list) { out.push(`<ul>${list.join("")}</ul>`); list = null; } };
+  for (const raw of md.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
+    const ln = raw.trimEnd();
+    if (!ln.trim()) { flush(); continue; }
+    let m;
+    if ((m = ln.match(/^# (.+)$/))) { flush(); const d = m[1].match(/^(\S+)\s+\((.+)\)$/);
+      out.push(`<h3>${esc(d ? d[1] : m[1])}${d ? `<span class="reldate">${esc(d[2])}</span>` : ""}${DATA.release && DATA.release.tag === tag ? '<span class="relcur">this site</span>' : ""}</h3>`); continue; }
+    if ((m = ln.match(/^#{2,3} (.+)$/))) { flush(); out.push(`<h4>${relInline(m[1])}</h4>`); continue; }
+    if ((m = ln.match(/^\s*[-*] (.+)$/))) { if (para.length) { out.push(`<p>${relInline(para.join(" "))}</p>`); para = []; } (list = list || []).push(`<li>${relInline(m[1])}</li>`); continue; }
+    if (list && /^\s{2,}\S/.test(raw)) { list[list.length - 1] = list[list.length - 1].replace(/<\/li>$/, " " + relInline(ln.trim()) + "</li>"); continue; }
+    if (list) flush();
+    para.push(ln.trim());
+  }
+  flush();
+  return out.join("");
+}
+function renderReleases() {
+  const rs = DATA.releases || [], un = DATA.unreleased;
+  document.getElementById("releases").innerHTML = `<div class="eyebrow">The Physics Graph</div><h2>Release notes</h2>
+    <p class="lead">What changed in each release: results added, corrected, restated and retired, and who was credited. Each release is archived on Zenodo as a version of "Zero Divisors: Physics Graph"; merged changes wait for the next release.</p>
+    <p class="note">${versionText(false).replace(/^Version/, "This site shows version")}</p>
+    ${un ? `<article class="relnote unrel" id="rel-unreleased">${relMarkdown(un, "")}</article>` : ""}
+    ${rs.length ? rs.map(r => `<article class="relnote" id="rel-${esc(r.tag)}">${relMarkdown(r.md, r.tag)}</article>`).join("")
+      : `<p class="note">No release yet. The notes of each release will appear here, newest first, starting with v1.0.0.</p>`}`;
 }
 function renderDocuments() {
   const docs = DATA.documents || [];
@@ -2600,7 +2668,7 @@ function renderContribute() {
   const ex = DATA.contrib_example || {};
   el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers, researchers and their AI</div><h2>Explore with AI</h2>
     <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
-    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
+    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
     <div class="ways">
       <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>
       <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer.</p></div>
@@ -2624,6 +2692,7 @@ function renderContribute() {
         <ul>
           <li><code>entity.md</code>: the statement at four levels, the results it rests on, each pinned to the version read (<code>id@n</code>), who proposed it, whether an AI was involved, and a <code>credit</code> list: your name as you want it shown, and the AI model, with its version, that drafted the proof or amendment;</li>
           <li><code>proof-main.tex</code>: the proof, citing each premise with <code>\\claimref{id}</code>;</li>
+          <li>all of it in geometric algebra, the graph's language. Where that is not the right language (a result imported in its source's terms, complex analysis, a bridge to the standard formalism), the result says so in <code>outside_ga: {kind, why}</code>, and the checks refuse one that leaves the algebra without saying why;</li>
           <li><code>check.py</code>: a machine check in exact arithmetic, using the series' <code>GA.py</code>.</li>
         </ul>
         An amendment is judged by what it fixes, not by how much it changes. A wording change keeps the version and earns no credit entry. A <b>correction</b> (a proof step, a check, the status or a link was wrong; the statement stands) or a <b>restatement</b> (the statement itself was wrong) raises the version and adds an <code>amendments</code> entry saying what was wrong with the accepted version, <code>{version, kind, defect, evidence}</code>, where the evidence is a check of the result that shows the fix. It keeps every credit entry already there, so the original author stays named, and adds one for you and one for the AI that drafted the change, each with the new version. A different or stronger conclusion is a new result, linked to the original. <code>validate_draft</code> refuses an amendment that drops an earlier credit, adds none of its own, does not say what it fixes, or declares a kind that does not match what changed. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
@@ -2651,15 +2720,57 @@ function renderContribute() {
   </div>`;
   if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
+// the Physics Graph's own pages sit under its menu in the header
+const GRAPH_VIEWS = ["universe", "documents", "record", "problems", "releases"];
+// the graph's version: the release this site was built from (RELEASING.md)
+function versionText(short) {
+  const r = DATA.release;
+  if (!r) return short ? "Pre-release" : "Pre-release: the Physics Graph has not had its first release yet.";
+  const v = esc(r.tag) + (r.ahead ? ` + ${r.ahead} unreleased change${r.ahead === 1 ? "" : "s"}` : "");
+  return short ? v : `Version <b>${v}</b>, released ${esc(r.date)}. Archived on Zenodo as "Zero Divisors: Physics Graph".`;
+}
+function openGraphMenu() {
+  const m = document.getElementById("graphmenu"), b = document.getElementById("graphcaret"),
+        g = document.getElementById("graphgroup"), n = g.parentElement;
+  // bring the whole group into view first when the header row is scrolled
+  const gl = g.offsetLeft - n.offsetLeft;
+  if (gl < n.scrollLeft || gl + g.offsetWidth > n.scrollLeft + n.clientWidth) n.scrollLeft = Math.max(0, gl + g.offsetWidth - n.clientWidth);
+  document.getElementById("graphver").innerHTML = versionText(false);
+  m.hidden = false; b.setAttribute("aria-expanded", "true");
+  placeGraphMenu();
+  (m.querySelector('a[aria-current="page"]') || m.querySelector("a")).focus({ preventScroll: true });
+}
+function placeGraphMenu() {
+  const m = document.getElementById("graphmenu"), r = document.getElementById("graphgroup").getBoundingClientRect();
+  m.style.top = (r.bottom + 6) + "px";
+  m.style.left = Math.max(12, Math.min(r.left, innerWidth - m.offsetWidth - 12)) + "px";
+}
+function closeGraphMenu() { const m = document.getElementById("graphmenu"); if (m && !m.hidden) { m.hidden = true; document.getElementById("graphcaret").setAttribute("aria-expanded", "false"); } }
+document.getElementById("graphcaret").onclick = ev => { ev.stopPropagation(); document.getElementById("graphmenu").hidden ? openGraphMenu() : closeGraphMenu(); };
+document.addEventListener("click", ev => { if (!ev.target.closest("#graphmenu, #graphcaret")) closeGraphMenu(); });
+document.addEventListener("keydown", ev => {
+  const m = document.getElementById("graphmenu"); if (m.hidden) return;
+  if (ev.key === "Escape") { closeGraphMenu(); document.getElementById("graphcaret").focus(); }
+  if (ev.key === "ArrowDown" || ev.key === "ArrowUp") { ev.preventDefault();
+    const as = [...m.querySelectorAll("a")], i = as.indexOf(document.activeElement);
+    as[(i + (ev.key === "ArrowDown" ? 1 : as.length - 1)) % as.length].focus(); }
+});
+window.addEventListener("resize", closeGraphMenu);
+document.getElementById("graphmenu").addEventListener("click", ev => { if (ev.target.closest("a")) closeGraphMenu(); });
+document.querySelector("header nav").addEventListener("scroll", () => { if (!document.getElementById("graphmenu").hidden) placeGraphMenu(); }, { passive: true });
 function showView(v) {
   document.querySelectorAll("main > .view").forEach(s => s.classList.toggle("on", s.id === v || s.id === v + "view"));
-  document.querySelectorAll("nav a").forEach(a => a.setAttribute("aria-current", a.dataset.view === v ? "page" : "false"));
-  const cur = document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - (n.clientWidth - cur.offsetWidth) / 2; }; navEdges();
+  document.querySelectorAll("nav a, #graphmenu a").forEach(a => a.setAttribute("aria-current", a.dataset.view === v ? "page" : "false"));
+  const inGraph = GRAPH_VIEWS.includes(v);
+  document.getElementById("graphgroup").classList.toggle("on", inGraph);
+  document.querySelector('nav a[data-view="universe"]').setAttribute("aria-current", inGraph ? "page" : "false");
+  closeGraphMenu();
+  const cur = inGraph ? document.getElementById("graphgroup") : document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - Math.max(0, (n.clientWidth - cur.offsetWidth) / 2); }; navEdges();
   if (v === "universe") { resize(); }
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
   for (const [view, id, src] of [["principle", "princframe", "principle.html"], ["singularity", "singframe", "singularity.html"]]) {
     const f = document.getElementById(id); if (v === view && !f.getAttribute("src")) f.setAttribute("src", src); }
-  if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute })[v]?.(); }
+  if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute, releases: renderReleases })[v]?.(); }
 }
 function route() {
   const h = decodeURIComponent(location.hash.slice(1));
@@ -2674,8 +2785,10 @@ function route() {
     if (!f.getAttribute("src")) f.setAttribute("src", want);
     else { try { if (f.contentWindow.location.hash !== "#" + sl[2]) f.contentWindow.location.hash = sl[2]; } catch (e) { f.setAttribute("src", want); } }
     showView(sl[1]); return; }
+  const rl = h.match(/^releases\/(v\d+\.\d+\.\d+|unreleased)$/);
+  if (rl) { showView("releases"); const t = document.getElementById("rel-" + rl[1]); if (t) t.scrollIntoView({ block: "start" }); return; }
   if (h.startsWith("op.")) { opTab = "curated"; opSel = h; Object.keys(opFilter).forEach(k => opFilter[k] = ""); showView("problems"); renderProblems(); return; }
-  showView(["principle", "singularity", "universe", "documents", "record", "problems", "contribute"].includes(h) ? h : (h ? "universe" : "principle"));
+  showView(["principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute"].includes(h) ? h : (h ? "universe" : "principle"));
 }
 window.addEventListener("hashchange", route);
 window.addEventListener("resize", () => { resize(); applyRW(); document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); });
@@ -2744,8 +2857,9 @@ function fitStats(){ statsEl.classList.remove("nofit");
   for (const t of statsForms) { statsEl.textContent = t; if (statsEl.scrollWidth <= statsEl.clientWidth + 1) return; }
   statsEl.classList.add("nofit"); }
 window.addEventListener("resize", fitStats);
-statsForms = [`${S.results} results · ${S.links} links · ${S.proofs} with proofs · ${S.verified - (S.sampled_only || 0)} machine-checked${S.sampled_only ? ` · ${S.sampled_only} checked at samples or in part` : ""}`,
-  `${S.results} results · ${S.links} links · ${S.verified} machine-checked`, `${S.results} results · ${S.links} links`, `${S.results} results`];
+const VER = versionText(true);
+statsForms = [`${VER} · ${S.results} results · ${S.links} links · ${S.proofs} with proofs · ${S.verified - (S.sampled_only || 0)} machine-checked${S.sampled_only ? ` · ${S.sampled_only} checked at samples or in part` : ""}`,
+  `${VER} · ${S.results} results · ${S.links} links · ${S.verified} machine-checked`, `${VER} · ${S.results} results · ${S.links} links`, `${VER} · ${S.results} results`, VER];
 fitStats(); if (document.fonts) document.fonts.ready.then(fitStats);
 renderCats(); legend(); overlay(); showHome(); route();
 resize(); requestAnimationFrame(frame);

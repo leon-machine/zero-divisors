@@ -649,6 +649,13 @@ def layer2(store: Store, rep: Report):
                 if unclaimed:
                     rep.add("W221", eid, f"version {e.version} has no credit entry of its own",
                             f"add to credit: {{name: <who>, role: <what was done>, version: {e.version}}}")
+        # the language is geometric algebra: a new or changed entity that leaves it says why
+        if store.lock and (old is None or e.substantive_hash() != old["hash"]):
+            from .galang import scan, declared
+            hits = [] if declared(e) else scan(e)
+            if hits:
+                rep.add("W222", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
+                        "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")
 
 
 def programmes(store):
@@ -1481,6 +1488,11 @@ def layer6(store: Store, rep: Report, author: str | None):
             if new["assumes"]:
                 rep.add("E601", eid, "only a maintainer may add a postulate dependency "
                         "(assumes)")
+            from .galang import scan, declared
+            hits = [] if declared(e) else scan(e)
+            if hits:
+                rep.add("E609", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
+                        "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")
             continue
         if (new["status"] == "proved" and old.get("status") != "proved"
                 and e.meta.get("region") in core):
@@ -1504,6 +1516,13 @@ def layer6(store: Store, rep: Report, author: str | None):
                         "credit entry of its own",
                         f"add to credit: {{name: <your name>, role: <what you changed>, version: {new['version']}}}, "
                         "and one for the AI model that drafted it")
+        # the language is geometric algebra: a changed entity that leaves it says why
+        if e.substantive_hash() != old["hash"]:
+            from .galang import scan, declared
+            hits = [] if declared(e) else scan(e)
+            if hits:
+                rep.add("E609", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
+                        "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")
         # an amendment says what it fixes, and its kind matches what changed (tp/amend.py)
         from .amend import findings as amendment_findings
         for code, msg, fix in amendment_findings(old, e):
@@ -1554,11 +1573,12 @@ def validate(store: Store, layers=(1, 2, 3, 4, 5, 6), keep_going=False,
 
 # warnings, most important first: a weak or untestable check outranks a quiet premise
 WARNING_ORDER = ("W413", "W408", "W125", "W510", "W414", "W306", "W411", "W503", "W124", "W127",
-                 "W405", "W215", "W501", "W209", "W210", "W212", "W220", "W221")
+                 "W405", "W215", "W501", "W209", "W210", "W212", "W220", "W221", "W222")
 
 CODE_TITLES = {
     "W220": "a credit entry of the accepted version is missing or changed",
     "W221": "an amendment with no credit entry of its own",
+    "W222": "written outside geometric algebra without saying why",
     "W413": "weak check: most literal perturbations still pass",
     "W408": "check has no integer literal to perturb",
     "W125": "judge: statement overclaims or is misstated",

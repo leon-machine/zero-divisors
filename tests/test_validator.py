@@ -668,6 +668,31 @@ class Layer6People(StoreCase):
         self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
         self.assertNotIn("E605", self.codes(self.run_layers((6,), author="leon")))
 
+    # the language is geometric algebra (tp/galang.py)
+    def test_E609_change_outside_ga_undeclared(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nIn the Pauli matrices, ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertFires("E609", (6,), author="contributor")
+        self.assertFires("W222", (1, 2))
+
+    def test_E609_new_entity_outside_ga(self):
+        write_lock(load_store(self.root))
+        shutil.copytree(self.folder("fx.thermo.entropy-tick"), E(self.root, "claims", "fx.thermo.entropy-two"))
+        self.edit("fx.thermo.entropy-two", "id: fx.thermo.entropy-tick", "id: fx.thermo.entropy-two")
+        self.edit("fx.thermo.entropy-two", "## formal\n", "## formal\nOver $\\mathbb{C}$, ")
+        self.assertFires("E609", (6,), author="contributor")
+
+    def test_outside_ga_declared_passes(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nIn the Pauli matrices, ")
+        self.edit("fx.thermo.entropy-tick", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\noutside_ga:\n  kind: bridge\n"
+                  "  why: it states the result in the matrix form physicists use\n")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        rep = self.run_layers((1, 2, 6), author="contributor")
+        self.assertFalse({"E609", "W222"} & self.codes(rep), "\n".join(f.render() for f in rep.findings))
+
     def test_E601_removal_without_tombstone(self):
         write_lock(load_store(self.root))
         shutil.rmtree(self.folder("fx.parity.grading"))

@@ -103,6 +103,39 @@ conventions of notation and of the imaginary units that the texts assume.
   T07, T16). T14's $W$ annihilates the vacuum where T09's and T12's $W$
   creates.
 
+## The language: geometric algebra
+
+The graph's language is real geometric algebra. Statements (`formal`, `technical`),
+proofs and checks are written in it: checks import `GA.py` (E403), and statements and
+proofs use the algebra's own objects rather than the usual stand-ins for them: no Pauli
+or Dirac (gamma) matrices where the vectors of $\Cl(3,0)$ or $\Cl(1,3)$ do the work, no
+complex numbers where a bivector or pseudoscalar squares to $-1$, no cross product where
+the outer product (or its dual) does. Ordinary scalar mathematics is geometric algebra
+already (grade 0) and needs nothing; so do the Gram matrix of a form, a mass matrix, and
+components such as $F^{\mu\nu}$ or structure constants $\epsilon_{ijk}$, which the
+algebra uses too.
+
+Where geometric algebra is not the right language, the entity says so:
+
+```yaml
+outside_ga:
+  kind: imported            # imported | complex-analysis | bridge | other
+  why: the classification is quoted as its source states it
+```
+
+- `imported`: a result taken from elsewhere, stated in its source's language;
+- `complex-analysis`: analytic continuation, contour arguments, Hilbert-space structure
+  (the next section lists where a bare $i$ stays);
+- `bridge`: a result whose point is to connect geometric algebra with the standard
+  formalism, such as a statement and its Dirac-matrix form side by side;
+- `other`: anything else, with the reason judged in review.
+
+The checks look for the unambiguous signs (Pauli or Dirac matrices named as such, a cross
+product, $\mathbb{C}$ or $\sqrt{-1}$) in a new or changed entity: E609 refuses a
+contributor's that carries them without `outside_ga`; for a maintainer it is the warning
+W222. The result's page shows the declaration. `python -m tp ga-report` lists the entities
+already in the store that use such notation and declare nothing.
+
 ## The imaginary units
 
 The store states results in real geometric algebra wherever the series

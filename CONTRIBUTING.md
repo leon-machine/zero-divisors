@@ -45,6 +45,24 @@ and added directly: one folder per result, `store/<kind>/<id>/`, containing
 The format is set out in `docs/CONTRIBUTING-rules.md`, with a complete worked
 example in `docs/example-contribution/`.
 
+### The language is geometric algebra
+
+Statements, proofs and checks are written in real geometric algebra: the vectors of
+the algebra rather than Pauli or Dirac matrices, a bivector or pseudoscalar rather than
+an imaginary unit, the outer product rather than the cross product. Where geometric
+algebra is not the right language (a result imported in its source's language, complex
+analysis or Hilbert-space structure, a bridge to the standard formalism, or another
+reason) the result says so, and the checks refuse one that leaves the algebra without
+saying why:
+
+```yaml
+outside_ga:
+  kind: bridge              # imported | complex-analysis | bridge | other
+  why: it states the result alongside its Dirac-matrix form, for readers who use that
+```
+
+The conventions (section "The language: geometric algebra") say what counts.
+
 ### Correcting an existing result
 
 An amendment is judged by what it fixes, not by how much it changes: a one-symbol fix

@@ -69,6 +69,12 @@ with the server.
   every entry already there and adds its own, each with `version:` set to the version
   it made (E603 if an earlier entry is dropped or altered, E604 if the version is raised
   with no entry for it; for maintainers these are the warnings W220 and W221).
+- `outside_ga` (when the result is not written in geometric algebra): `{kind, why}`,
+  `kind` one of `imported`, `complex-analysis`, `bridge`, `other`, and `why` the reason
+  in at least 20 characters. A new or changed entity whose statements or proofs use
+  Pauli or Dirac matrices, a cross product, $\mathbb{C}$ or $\sqrt{-1}$ without it is
+  refused (E609; for maintainers the warning W222). See the conventions, "The language:
+  geometric algebra".
 - `amendments` (on a contributor's new version of an accepted result): one entry per
   version, `{version, kind, defect, evidence?}`. `kind` is `correction` (the formal
   statement is unchanged; a proof, a check, the status or a link was wrong) or

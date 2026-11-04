@@ -58,7 +58,8 @@ store/conventions.md "Gravity"; read those for sources):
 - C9 G = c = 1; C7 keep (+,-,-,-) or the statement's declared signature."""
 
 CHECK_RULES = """1. Header docstring: what the check tests, and which part if it tests only part.
-2. `import GA` (static rule E403); shared engines from lib/ (`import gtg`, `fock`, `series`
+2. `import GA` (static rule E403); the graph's language is geometric algebra, in checks as in
+   statements and proofs (an entity that leaves it declares `outside_ga`, E609). Shared engines from lib/ (`import gtg`, `fock`, `series`
    where present), never pasted copies.
 3. Functions named `check_*`; every one contains an `assert` (E408).
 4. Exact arithmetic only: Fraction, int, GA. No float literals, float(), math, cmath, numpy,

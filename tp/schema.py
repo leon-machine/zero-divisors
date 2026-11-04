@@ -128,6 +128,10 @@ ENTITY = {
                            "defect": {"type": "string", "minLength": 30},
                            # optional: a check of this result that shows the defect is fixed
                            "evidence": {"type": "string"}}}},
+        # where geometric algebra is not the language of the result, and why (tp/galang.py)
+        "outside_ga": {"type": "object", "required": ["kind", "why"], "additionalProperties": False,
+                       "properties": {"kind": {"enum": ["imported", "complex-analysis", "bridge", "other"]},
+                                      "why": {"type": "string", "minLength": 20}}},
         "review": {"enum": ["draft", "typed", "reviewed"]},
         # how far a human has taken it (roadmap item 8); signoffs record each sign-off
         "trust": {"enum": ["ai-proposed", "ai-refereed", "human-read", "human-checked",

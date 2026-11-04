@@ -23,18 +23,24 @@ taken when enough has been merged to be worth a new version.
 ## Each release
 
 1. On `main`: `python -m tp check --store store --keep-going`, the unit tests, `python -m tp build`,
-   `python -m tp.layout`, `python -m tp.site`; commit anything they change.
-2. On GitHub, Releases, Draft a new release:
-   - a new tag, `vMAJOR.MINOR.PATCH`: `v1.0.0` for the first release; raise MINOR when results are
-     added or changed in substance; raise PATCH for corrections of wording, notation or citations;
-   - Generate release notes (the merged pull requests since the last release), and add a line on
-     the main changes;
-   - Publish. Zenodo issues the new version's DOI within minutes.
-3. Build and publish the public site from the tag (with `site_url` in `store/config.yaml` set to the
+   `python -m tp.layout`; commit anything they change.
+2. Choose the tag, `vMAJOR.MINOR.PATCH`: `v1.0.0` for the first release; raise MINOR when results
+   are added, corrected or restated; raise PATCH for corrections of wording, notation or citations.
+3. Draft the release notes: `python -m tp release-notes vX.Y.Z`. It writes `releases/vX.Y.Z.md`,
+   listing the results added, the corrections and restatements (each with the defect it fixed and
+   who made it), other revisions, the results retired and everyone credited for the first time,
+   all compared with the previous release. Add a line or two on the main changes where the comment
+   says, then `python -m tp.site` and commit both. The site shows every file in `releases/` on its
+   Release notes page (from the Physics Graph menu).
+4. On GitHub, Releases, Draft a new release: the tag from step 2, on `main`; paste the notes file
+   (without its first line) as the description, and optionally Generate release notes below it for
+   the list of merged pull requests; Publish. Zenodo issues the new version's DOI within minutes
+   and keeps the description with the version.
+5. Build and publish the public site from the tag (with `site_url` in `store/config.yaml` set to the
    site's public address, so shared links and link previews use it and each result gets its share
    page `site/r/<id>.html`):
    `git checkout vX.Y.Z && python -m tp.site`, then deploy `site/`, then `git checkout main`.
-4. If the papers' deposits changed in the same period, record them first with
+6. If the papers' deposits changed in the same period, record them first (before step 3) with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.
 
 The history of the repository before its first public release is not kept.

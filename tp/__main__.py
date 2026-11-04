@@ -6,6 +6,8 @@
   python -m tp doc    RECIPE.yaml [--store store]       generate and store a document
   python -m tp regen  DOC_ID [--store store]            regenerate from the stored version
   python -m tp credit [--store store] [--dry-run]       fill in who did what, and which model
+  python -m tp release-notes vX.Y.Z [--store store]     draft releases/vX.Y.Z.md
+  python -m tp ga-report [--store store]                entities written outside geometric algebra, undeclared
 """
 import argparse
 import os
@@ -31,7 +33,7 @@ EXTENSIONS = {
     "bump": "edit", "note": "edit", "wire-check": "edit", "restate": "edit",
     "sign": "edit", "trust": "trust",
     "lint": "lint", "context": "context", "checkruns": "checkruns", "quantity": "quantity",
-    "mutants": "mutants", "credit": "credit",
+    "mutants": "mutants", "credit": "credit", "release-notes": "releases", "ga-report": "galang",
 }
 
 
