@@ -43,8 +43,28 @@ and added directly: one folder per result, `store/<kind>/<id>/`, containing
 - `check.py`: a machine check in exact arithmetic, using `GA.py`.
 
 The format is set out in `docs/CONTRIBUTING-rules.md`, with a complete worked
-example in `docs/example-contribution/`. A correction to an existing result can be
-the edited `entity.md`, with its `version` raised, and a note of what changed and why.
+example in `docs/example-contribution/`. A correction to an existing result is the
+edited `entity.md`, with its `version` raised, and a note of what changed and why.
+It keeps every credit entry already there, so the original author stays named, and
+adds one for you and one for the AI model that drafted the change, each with the new
+version:
+
+```yaml
+credit:
+- name: Leon Butler                 # the original credit, unchanged
+  role: idea, direction and review
+- name: Claude Fable 5
+  role: mathematics and drafting
+- name: Ada Lovelace                # the amendment that made version 4
+  role: correction of the proof's second step
+  version: 4
+- name: Claude Opus 5.5
+  role: drafting of the correction
+  version: 4
+```
+
+The checks refuse a pull request that drops or alters an earlier credit entry, or
+raises the version without a credit entry for it.
 
 ```yaml
 credit:

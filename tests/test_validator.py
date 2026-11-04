@@ -582,6 +582,37 @@ class Layer6People(StoreCase):
         rep = self.run_layers((6,), author="leon")
         self.assertNotIn("E601", self.codes(rep))
 
+    CREDIT = ("ai_involved: 'no'\ncredit:\n- name: Original Author\n  role: the result\n")
+
+    def credited(self, eid="fx.thermo.entropy-tick"):
+        self.edit(eid, "ai_involved: 'no'\n", self.CREDIT)
+        write_lock(load_store(self.root))
+
+    def test_E603_amendment_drops_original_credit(self):
+        self.credited()
+        self.edit("fx.thermo.entropy-tick", "- name: Original Author\n  role: the result\n",
+                  "- name: Amender\n  role: correction\n  version: 2\n")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertFires("E603", (6,), author="contributor")
+        self.assertFires("W220", (1, 2))
+
+    def test_E604_amendment_without_own_credit(self):
+        self.credited()
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertFires("E604", (6,), author="contributor")
+        self.assertFires("W221", (1, 2))
+
+    def test_amendment_that_adds_its_credit_passes(self):
+        self.credited()
+        self.edit("fx.thermo.entropy-tick", "  role: the result\n",
+                  "  role: the result\n- name: Amender\n  role: correction\n  version: 2\n")
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        rep = self.run_layers((1, 2, 6), author="contributor")
+        self.assertFalse({"E603", "E604", "W220", "W221"} & self.codes(rep),
+                         "\n".join(f.render() for f in rep.findings))
+
     def test_E601_removal_without_tombstone(self):
         write_lock(load_store(self.root))
         shutil.rmtree(self.folder("fx.parity.grading"))

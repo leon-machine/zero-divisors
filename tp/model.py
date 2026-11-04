@@ -229,7 +229,10 @@ def lock_entry(e: Entity) -> dict:
                       for a in (d.get("assumes") or [])})
     return {"version": e.version, "hash": e.substantive_hash(),
             "status": e.status, "assumes": assumes,
-            "ledger": e.meta.get("ledger")}
+            "ledger": e.meta.get("ledger"),
+            # who did what, kept so that an amendment can be checked to keep every earlier credit
+            "credit": [[str(c.get("name", "")), str(c.get("role", "")), c.get("version")]
+                       for c in (e.meta.get("credit") or []) if isinstance(c, dict)]}
 
 
 def write_lock(store: Store) -> None:

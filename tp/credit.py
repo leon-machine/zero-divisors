@@ -76,6 +76,28 @@ def for_ai(path, root=REPO):
     return [lead, {"name": UNRECORDED, "role": "proposal and drafting"}]
 
 
+def compare(old_credit, new_credit, old_version, new_version):
+    """An amendment keeps every earlier credit entry and adds its own.
+
+    old_credit and new_credit are lists of [name, role, version] (as the lock records them) or
+    of credit mappings. Returns (removed, unclaimed): the earlier entries missing or changed in the
+    new list, and whether the version went up with no credit entry for the new version."""
+    def key(c):
+        if isinstance(c, dict):
+            return (str(c.get("name", "")), str(c.get("role", "")), c.get("version"))
+        return (str(c[0]), str(c[1]), c[2] if len(c) > 2 else None)
+    new_keys = {key(c) for c in (new_credit or [])}
+    removed = [key(c) for c in (old_credit or []) if key(c) not in new_keys]
+    unclaimed = bool(new_version and old_version and new_version > old_version
+                     and not any(k[2] == new_version for k in new_keys))
+    return removed, unclaimed
+
+
+def describe(entry):
+    name, role, version = entry
+    return f"{name} ({role}{', v' + str(version) if version else ''})"
+
+
 def _yaml_block(credit):
     def q(s):
         return "'" + s.replace("'", "''") + "'" if re.search(r"[:#'\"\[\]{}&*!|>%@`]", s) else s

@@ -66,7 +66,9 @@ Per problem:
    new `synthesis.*` claim, or a corrected entity with version+1 that keeps every stored file),
    with `extraction.open_problem: op.x`, `proposed_by: {kind: ai, session: <run>}`,
    `ai_involved: 'yes'`, `credit: [{name: Leon Butler, role: direction}, {name: <the model this
-   session runs on, e.g. Claude Opus 5.5>, role: proposal and drafting, source: run <run>}]`,
+   session runs on, e.g. Claude Opus 5.5>, role: proposal and drafting, source: run <run>}]`
+   (a corrected entity keeps its credit list and adds `{name: <model>, role: <what changed>,
+   version: <new version>, source: run <run>}`),
    after `check4.py` exits 0 (apart from environmental E401) and
    validate_draft is ok. Copy the format of an existing AI-contributed claim.
 7. Read any message from the bridge-hunter and test the leads it sends you.

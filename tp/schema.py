@@ -115,7 +115,9 @@ ENTITY = {
             "type": "object", "required": ["name", "role"], "additionalProperties": False,
             "properties": {"name": {"type": "string", "minLength": 1},
                            "role": {"type": "string", "minLength": 1},
-                           "source": {"type": "string"}}}},
+                           "source": {"type": "string"},
+                           # the version an amendment produced; absent for the original credit
+                           "version": {"type": "integer", "minimum": 1}}}},
         "review": {"enum": ["draft", "typed", "reviewed"]},
         # how far a human has taken it (roadmap item 8); signoffs record each sign-off
         "trust": {"enum": ["ai-proposed", "ai-refereed", "human-read", "human-checked",

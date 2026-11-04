@@ -12,6 +12,8 @@ store/<kind>/<id>/. For a correction, say what changed and why. -->
 - [ ] Every new claim has a `credit` list: your name as you want it shown, and the AI model,
       with its version, that drafted the proof or amendment (shown as you give it)
 - [ ] Substantive edits (statement, derivations, status, evidence) bump `version`
+- [ ] A corrected result keeps every existing credit entry and adds its own, with `version:` set to
+      the new version
 - [ ] New claims have `subject`, and their levels are written or marked `pending`
 - [ ] No new `assumes` edge or postulate unless a maintainer has agreed it
 - [ ] I agree to the result being published under CC BY 4.0, credited as stated

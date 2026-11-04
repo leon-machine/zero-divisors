@@ -1932,8 +1932,14 @@ const evidChip = n => passing(n) && n.cov ? `<span class="chip warn" title="${es
   : EVID_WORD[n.check] ? `<span class="chip ${passing(n) ? "good" : ""}">${EVID_WORD[n.check]}</span>` : "";
 const trustChip = n => n.trust ? `<span class="chip ${n.trust === "human-checked" || n.trust === "published" ? "good" : ""}" title="Trust: ${esc(TRUST_ABOUT[n.trust] || "")}">${esc(TRUST_WORD[n.trust] || n.trust)}</span>` : "";
 // who did what: the names in the heading, the roles and the evidence for the model under Source
-const byline = n => (n.credit || []).length ? `<p class="byline" title="${esc(n.credit.map(c => c.name + ": " + c.role).join("; "))}">${esc(n.credit[0].name)}${n.credit.length > 1 ? " · with " + n.credit.slice(1).map(c => esc(c.name)).join(", ") : ""}</p>` : "";
-const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
+// the original credit first ("Leon Butler · with Claude Fable 5"), then each amendment by the version it made
+const byline = n => { const cr = n.credit || []; if (!cr.length) return "";
+  const orig = cr.filter(c => !c.version), amend = new Map();
+  cr.filter(c => c.version).forEach(c => { if (!amend.has(c.version)) amend.set(c.version, []); amend.get(c.version).push(c.name); });
+  const head = orig.length ? esc(orig[0].name) + (orig.length > 1 ? " · with " + orig.slice(1).map(c => esc(c.name)).join(", ") : "") : "";
+  const tail = [...amend.entries()].sort((a, b) => a[0] - b[0]).map(([v, ns]) => `amended in v${v} by ${ns.map(esc).join(", ")}`);
+  return `<p class="byline" title="${esc(cr.map(c => c.name + ": " + c.role + (c.version ? " (v" + c.version + ")" : "")).join("; "))}">${[head, ...tail].filter(Boolean).join(" · ")}</p>`; };
+const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
 function resultHead(n) {
   return `<div class="eyebrow" style="margin-top:${trail ? 12 : 0}px"><span style="color:${subjColour(n.subject)}">●</span> ${esc(subjTitle(n.subject))}${PROGS.size && n.programme ? ` · ${esc(progTitle(n.programme))}` : ""}</div>
     <h2>${esc(n.title)}</h2>
@@ -2616,7 +2622,7 @@ function renderContribute() {
           <li><code>proof-main.tex</code>: the proof, citing each premise with <code>\\claimref{id}</code>;</li>
           <li><code>check.py</code>: a machine check in exact arithmetic, using the series' <code>GA.py</code>.</li>
         </ul>
-        A correction to an existing result is the edited <code>entity.md</code>, with its version raised and a note of what changed and why. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
+        A correction to an existing result is the edited <code>entity.md</code>, with its version raised and a note of what changed and why. It keeps every credit entry already there, so the original author stays named, and adds one for you and one for the AI that drafted the change, each with the new version: <code>{name, role, version}</code>. The checks refuse an amendment that drops or alters an earlier credit, or adds none of its own. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
       <li><b>Check it yourself.</b> <code>validate_draft</code> runs the graph's rules against your draft and reports every problem it introduces, including any it causes in other results. Then run the evidence on your copy: <code>python -m tp check --store store --keep-going</code>.</li>
       <li><b>Open a pull request.</b> Fork <a href="https://github.com/leon-machine/phys-graph" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request against <code>main</code>. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with the rules taken from <code>main</code> and every contributed <code>check.py</code> sealed off from the network. Nothing is merged until it has been reviewed.</li>
     </ol>
