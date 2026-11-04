@@ -2044,6 +2044,7 @@ function pageBase() {
   let base = null;
   try { base = (window.top === window ? location.href : window.top.location.href).split("#")[0]; } catch (e) { /* a viewer on another origin */ }
   if (!base && /^https:\/\/claude\.ai\/.*artifact/.test(document.referrer || "")) base = document.referrer.split("#")[0];
+  if ((!base || !/^https?:/.test(base)) && DATA.preview_url) base = DATA.preview_url;   // the private preview: its own address is hidden from the page
   return base && /^https?:/.test(base) ? base : null;
 }
 function linkFor(hash) {

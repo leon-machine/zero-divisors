@@ -54,3 +54,6 @@ programmes:
 # when set, shared links use it, link previews name absolute images, and each result gets a small
 # share page r/<id>.html carrying its own preview. Empty until the site is hosted.
 site_url: ""
+# the private preview of the site (the claude.ai artifact): used for shared links while site_url is
+# empty and the viewer cannot see the page's own address
+preview_url: "https://claude.ai/artifact/U5uQ2AitmiRZCwEDFEa8qQ"

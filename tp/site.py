@@ -913,7 +913,8 @@ def main(build="build", site="site", store="store", template="universe.template.
             "mcp_tools": _mcp_tools(),
             "contrib_example": _contrib_example(),
             "release": _release(lab),
-            "site_url": _site_url(st.config)}
+            "site_url": _site_url(st.config),
+            "preview_url": str(st.config.get("preview_url") or "")}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
     tpl = open(os.path.join(site, template), encoding="utf-8").read()
     html = tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, default=str,
