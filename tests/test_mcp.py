@@ -119,6 +119,16 @@ class McpHardening(unittest.TestCase):
         self.assertFalse(r["ok"])
         self.assertIn("E605", {f["code"] for f in r["findings"]})
 
+    def test_draft_outside_ga_must_say_why(self):
+        draft = self.draft.replace("id: fx.parity.grading", "id: fx.parity.grading-two").replace(
+            "## formal\n", "## formal\nIn the Pauli matrices, ")
+        r = self.lab.validate_draft(draft)
+        self.assertIn("E609", {f["code"] for f in r["findings"]})
+        ok = draft.replace("ai_involved: 'no'\n", "ai_involved: 'no'\noutside_ga:\n  kind: bridge\n"
+                           "  why: it states the result in the matrix form physicists use\n")
+        r = self.lab.validate_draft(ok)
+        self.assertNotIn("E609", {f["code"] for f in r["findings"]})
+
     def test_document_ids_are_checked(self):
         with self.assertRaises(ValueError):
             self.lab.generate_doc("doc: ../store/config\nspine: []\n")

@@ -637,6 +637,15 @@ class Lab:
                 open(os.path.join(folder, name), "w").write(text)
             if check_py:
                 open(os.path.join(folder, "check.py"), "w").write(check_py)
+            # the language is geometric algebra: a draft that leaves it says why (E609)
+            from .galang import scan, declared
+            from .model import load_entity as _le
+            _draft = _le(folder)
+            _hits = [] if declared(_draft) else scan(_draft)
+            if _hits:
+                credit_findings.append({"code": "E609", "severity": "error", "entity": eid,
+                                        "message": f"written outside geometric algebra ({', '.join(_hits)}) without saying why",
+                                        "fix": "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}"})
             if old_state:
                 # an amendment says what it fixes, and its kind matches what changed (E605-E608)
                 from .amend import findings as amendment_findings
