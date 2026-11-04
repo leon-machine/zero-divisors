@@ -43,13 +43,33 @@ and added directly: one folder per result, `store/<kind>/<id>/`, containing
 - `check.py`: a machine check in exact arithmetic, using `GA.py`.
 
 The format is set out in `docs/CONTRIBUTING-rules.md`, with a complete worked
-example in `docs/example-contribution/`. A correction to an existing result is the
-edited `entity.md`, with its `version` raised, and a note of what changed and why.
-It keeps every credit entry already there, so the original author stays named, and
-adds one for you and one for the AI model that drafted the change, each with the new
-version:
+example in `docs/example-contribution/`.
+
+### Correcting an existing result
+
+An amendment is judged by what it fixes, not by how much it changes: a one-symbol fix
+to a sign can matter more than a rewritten proof. Decide first which of these it is.
+
+| What you are changing | What it is | Version | Credit |
+|---|---|---|---|
+| Wording, notation, a typo, clarity | a wording change | kept | none (thanked in the review) |
+| A proof step, a check, the status or a link; the statement stands | a **correction** | raised | added |
+| The statement itself: a missing hypothesis, a conclusion too strong | a **restatement** | raised | added |
+| A different or stronger conclusion | a **new result**, linked to the original | its own | yours |
+
+A correction or a restatement is the edited `entity.md` with its `version` raised. It
+says what was wrong with the accepted version, specifically, in an `amendments`
+entry, and may name a check of the result that shows the fix (ideally one that fails
+on the old version and passes on the new). It keeps every credit entry already there,
+so the original author stays named, and adds one for you and one for the AI model
+that drafted the change, each with the new version:
 
 ```yaml
+amendments:
+- version: 4
+  kind: correction                  # or restatement
+  defect: the second step divides by e0 + e1, which is a null vector and has no inverse
+  evidence: check.py::test_second_step   # optional
 credit:
 - name: Leon Butler                 # the original credit, unchanged
   role: idea, direction and review
@@ -63,8 +83,15 @@ credit:
   version: 4
 ```
 
-The checks refuse a pull request that drops or alters an earlier credit entry, or
-raises the version without a credit entry for it.
+The checks refuse a pull request that drops or alters an earlier credit entry, raises
+the version without a credit entry or an `amendments` entry for it, raises it for a
+wording change, declares a kind that does not match what changed (a "correction"
+whose statement changed, a "restatement" whose statement did not), or names as
+evidence something that is not one of the result's checks. After a correction, the
+results that rely on it keep the statement they used, so moving their pins to the new
+version is a formality; after a restatement, each of them has to be re-checked
+against the new statement first. Whether a changed statement is still the same theorem, or is a new result, is
+decided in review.
 
 ```yaml
 credit:

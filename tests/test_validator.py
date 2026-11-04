@@ -606,12 +606,67 @@ class Layer6People(StoreCase):
     def test_amendment_that_adds_its_credit_passes(self):
         self.credited()
         self.edit("fx.thermo.entropy-tick", "  role: the result\n",
-                  "  role: the result\n- name: Amender\n  role: correction\n  version: 2\n")
+                  "  role: the result\n- name: Amender\n  role: correction\n  version: 2\n"
+                  + self.RESTATED)
         self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
         self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
         rep = self.run_layers((1, 2, 6), author="contributor")
-        self.assertFalse({"E603", "E604", "W220", "W221"} & self.codes(rep),
+        bad = {"E603", "E604", "E605", "E606", "E607", "E608", "W220", "W221"} & self.codes(rep)
+        self.assertFalse(bad, "\n".join(f.render() for f in rep.findings))
+
+    # amendments say what they fix (tp/amend.py)
+    RESTATED = ("amendments:\n- version: 2\n  kind: restatement\n"
+                "  defect: the stated rate holds only for a non-rotating hole\n")
+
+    def amend(self, eid, block, version=2):
+        self.edit(eid, "ai_involved: 'no'\n", "ai_involved: 'no'\n" + block)
+        self.edit(eid, "version: 1", f"version: {version}")
+
+    def test_E605_amendment_without_declaration(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertFires("E605", (6,), author="contributor")
+
+    def test_E606_wording_change_keeps_the_version(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## lay\npending", "## lay\nIt ticks.")
+        self.amend("fx.thermo.entropy-tick", self.RESTATED)
+        self.assertFires("E606", (6,), author="contributor")
+
+    def test_E607_correction_that_changes_the_statement(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.amend("fx.thermo.entropy-tick", self.RESTATED.replace("restatement", "correction"))
+        self.assertFires("E607", (6,), author="contributor")
+
+    def test_E607_restatement_that_keeps_the_statement(self):
+        write_lock(load_store(self.root))
+        self.write("fx.boost.sigma", "proof-direct.tex", "A corrected second step.\n")
+        self.amend("fx.boost.sigma", self.RESTATED)
+        self.assertFires("E607", (6,), author="contributor")
+
+    def test_E608_evidence_is_not_a_check(self):
+        write_lock(load_store(self.root))
+        self.write("fx.boost.sigma", "proof-direct.tex", "A corrected second step.\n")
+        self.amend("fx.boost.sigma", self.RESTATED.replace("restatement", "correction")
+                   + "  evidence: check.py::test_missing\n")
+        self.assertFires("E608", (6,), author="contributor")
+
+    def test_correction_with_evidence_passes(self):
+        write_lock(load_store(self.root))
+        self.write("fx.boost.sigma", "proof-direct.tex", "A corrected second step.\n")
+        self.amend("fx.boost.sigma", self.RESTATED.replace("restatement", "correction")
+                   + "  evidence: check.py::test_sigma\n")
+        rep = self.run_layers((6,), author="contributor")
+        self.assertFalse({"E605", "E606", "E607", "E608"} & self.codes(rep),
                          "\n".join(f.render() for f in rep.findings))
+
+    def test_maintainer_amendment_needs_no_declaration(self):
+        write_lock(load_store(self.root))
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertNotIn("E605", self.codes(self.run_layers((6,), author="leon")))
 
     def test_E601_removal_without_tombstone(self):
         write_lock(load_store(self.root))

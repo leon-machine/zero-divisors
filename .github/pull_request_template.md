@@ -14,6 +14,8 @@ store/<kind>/<id>/. For a correction, say what changed and why. -->
 - [ ] Substantive edits (statement, derivations, status, evidence) bump `version`
 - [ ] A corrected result keeps every existing credit entry and adds its own, with `version:` set to
       the new version
+- [ ] A corrected result has an `amendments` entry for the new version: its kind (correction or
+      restatement) and what was wrong with the accepted version. A wording change keeps the version
 - [ ] New claims have `subject`, and their levels are written or marked `pending`
 - [ ] No new `assumes` edge or postulate unless a maintainer has agreed it
 - [ ] I agree to the result being published under CC BY 4.0, credited as stated

@@ -768,6 +768,8 @@ def main(build="build", site="site", store="store", template="universe.template.
             d["trust"] = _trust(e)
             if e.meta.get("credit"):
                 full["credit"] = [dict(c) for c in e.meta["credit"] if isinstance(c, dict)]
+            if e.meta.get("amendments"):
+                full["amendments"] = [dict(x) for x in e.meta["amendments"] if isinstance(x, dict)]
             if e.meta.get("signoffs"):
                 full["signoffs"] = [dict(s) for s in e.meta["signoffs"] if isinstance(s, dict)]
             if e.meta.get("quantities"):

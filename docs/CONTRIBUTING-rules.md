@@ -69,6 +69,15 @@ with the server.
   every entry already there and adds its own, each with `version:` set to the version
   it made (E603 if an earlier entry is dropped or altered, E604 if the version is raised
   with no entry for it; for maintainers these are the warnings W220 and W221).
+- `amendments` (on a contributor's new version of an accepted result): one entry per
+  version, `{version, kind, defect, evidence?}`. `kind` is `correction` (the formal
+  statement is unchanged; a proof, a check, the status or a link was wrong) or
+  `restatement` (the formal statement changed). `defect` says what was wrong with the
+  accepted version, in at least 30 characters. `evidence`, if given, is an entry of
+  `checked_by`. A wording change keeps the version and needs no entry. E605: the
+  version was raised with no entry for it; E606: it was raised with nothing
+  substantive changed; E607: the kind does not match what changed; E608: the evidence
+  is not one of the result's checks.
 - Its premises in `derivations` (`uses`, and `assumes` for postulates), each
   pinned to a version (`id@n`).
 - Evidence in `checked_by`: a `check.py` function, a series verify script

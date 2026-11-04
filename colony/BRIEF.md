@@ -68,7 +68,8 @@ Per problem:
    `ai_involved: 'yes'`, `credit: [{name: Leon Butler, role: direction}, {name: <the model this
    session runs on, e.g. Claude Opus 5.5>, role: proposal and drafting, source: run <run>}]`
    (a corrected entity keeps its credit list and adds `{name: <model>, role: <what changed>,
-   version: <new version>, source: run <run>}`),
+   version: <new version>, source: run <run>}`, and an `amendments` entry `{version: <new
+   version>, kind: correction | restatement, defect: <what was wrong>, evidence: <a check of it>}`),
    after `check4.py` exits 0 (apart from environmental E401) and
    validate_draft is ok. Copy the format of an existing AI-contributed claim.
 7. Read any message from the bridge-hunter and test the leads it sends you.

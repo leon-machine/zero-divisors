@@ -613,7 +613,10 @@ class Lab:
                                                    "message": "bad id", "fix": ""}]}
             existing = os.path.exists(folder)
             credit_findings = []
+            old_state = None
             if existing:
+                from .model import load_entity, lock_entry
+                old_state = lock_entry(load_entity(folder))
                 # an amendment keeps every earlier credit and adds its own (E603, E604)
                 from .credit import compare, describe
                 with open(os.path.join(folder, "entity.md"), encoding="utf-8") as fh:
@@ -634,6 +637,12 @@ class Lab:
                 open(os.path.join(folder, name), "w").write(text)
             if check_py:
                 open(os.path.join(folder, "check.py"), "w").write(check_py)
+            if old_state:
+                # an amendment says what it fixes, and its kind matches what changed (E605-E608)
+                from .amend import findings as amendment_findings
+                from .model import load_entity
+                credit_findings += [{"code": c, "severity": "error", "entity": eid, "message": m, "fix": f}
+                                    for c, m, f in amendment_findings(old_state, load_entity(folder))]
             rep = validate(load_store(root), layers=layers, keep_going=True,
                            run_mutants=False)
         new = [f for f in rep.findings if (f.code, f.entity, f.message) not in base

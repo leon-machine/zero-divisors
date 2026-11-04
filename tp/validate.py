@@ -1504,6 +1504,17 @@ def layer6(store: Store, rep: Report, author: str | None):
                         "credit entry of its own",
                         f"add to credit: {{name: <your name>, role: <what you changed>, version: {new['version']}}}, "
                         "and one for the AI model that drafted it")
+        # an amendment says what it fixes, and its kind matches what changed (tp/amend.py)
+        from .amend import findings as amendment_findings
+        for code, msg, fix in amendment_findings(old, e):
+            if code == "E605":
+                rep.add("E605", eid, msg, fix)
+            elif code == "E606":
+                rep.add("E606", eid, msg, fix)
+            elif code == "E607":
+                rep.add("E607", eid, msg, fix)
+            else:
+                rep.add("E608", eid, msg, fix)
     for gone in sorted(set(store.lock) - set(store.entities)):
         if gone not in store.tombstones:
             rep.add("E601", gone, "entity removed without being retired to tombstones.yaml")
