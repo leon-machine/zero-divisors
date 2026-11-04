@@ -4,6 +4,9 @@ import json
 import os
 import re
 import sys
+import shutil
+import urllib.parse
+import html as html_lib
 
 import yaml
 
@@ -909,14 +912,17 @@ def main(build="build", site="site", store="store", template="universe.template.
             "featured": [f for f in FEATURED if f in keep],
             "mcp_tools": _mcp_tools(),
             "contrib_example": _contrib_example(),
-            "release": _release(lab)}
+            "release": _release(lab),
+            "site_url": _site_url(st.config)}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
     tpl = open(os.path.join(site, template), encoding="utf-8").read()
     html = tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, default=str,
                                                       separators=(",", ":")).replace("<", "\\u003c"))
+    html = html.replace("/*SITE_URL*/", _site_url(st.config))
     path = os.path.join(site, out)
     open(path, "w", encoding="utf-8").write(html)
-    _singularity(site, nodes, store)
+    _share_pages(site, nodes, _site_url(st.config))
+    _singularity(site, nodes, store, _site_url(st.config))
     _publish_list(site)
     return path
 
@@ -925,7 +931,69 @@ VERDICT_STATE = {"consistent": "hold", "confirms": "hold", "survived": "hold", "
                  "contested": "press", "refutes": "press", "killed": "press"}
 
 
-def _singularity(site, nodes, store):
+def _site_url(config):
+    """store/config.yaml site_url, the public address of the page, ending in a slash; '' if unset."""
+    u = str((config or {}).get("site_url") or "").strip()
+    return u if not u or u.endswith("/") else u + "/"
+
+
+TEX_SYM = {"neq": "≠", "ne": "≠", "leq": "≤", "le": "≤", "geq": "≥", "ge": "≥", "to": "→", "times": "×",
+           "infty": "∞", "pi": "π", "cdot": "·", "pm": "±", "sim": "~", "approx": "≈", "in": "∈", "ell": "ℓ",
+           "hbar": "ħ"}
+
+
+def _plain_tex(t):
+    """A one-liner as plain text for a link preview: TeX symbols to characters, commands to names."""
+    t = re.sub(r"\\(?:mathbb|mathrm|mathcal|operatorname|text|mathbf)\{([^}]*)\}", r"\1", t)
+    t = re.sub(r"\\frac\{([^}]*)\}\{([^}]*)\}", r"\1/\2", t)
+    t = re.sub(r"\\([A-Za-z]+)", lambda m: TEX_SYM.get(m.group(1), m.group(1)), t)
+    return re.sub(r"\s+", " ", t.replace("$", "").replace("{", "").replace("}", "")).strip()
+
+
+def _share_pages(site, nodes, site_url):
+    """site/r/<id>.html, one per result, only when the site has a public address: a small page whose
+    link preview names the result (title, one-liner, the site's image) and which opens the result
+    on the main page. Links shared from a result point here, since a preview cannot see a hash."""
+    folder = os.path.join(site, "r")
+    if not site_url:
+        if os.path.isdir(folder):
+            shutil.rmtree(folder)
+        return 0
+    os.makedirs(folder, exist_ok=True)
+    keep = set()
+    for n in nodes:
+        nid = n["id"]
+        if n.get("kind") == "note":
+            continue
+        title = _display_title(n.get("title")) or nid
+        desc = _plain_tex(n.get("one_liner") or "")[:280]
+        target = site_url + "#" + urllib.parse.quote(nid)
+        e = html_lib.escape
+        page = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
+                f'<meta name="viewport" content="width=device-width,initial-scale=1">'
+                f'<title>{e(title)} | Zero Divisors</title>'
+                f'<meta name="description" content="{e(desc)}">'
+                f'<link rel="canonical" href="{e(target)}">'
+                f'<meta property="og:type" content="article"><meta property="og:site_name" content="Zero Divisors">'
+                f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">'
+                f'<meta property="og:url" content="{e(site_url + "r/" + urllib.parse.quote(nid) + ".html")}">'
+                f'<meta property="og:image" content="{e(site_url)}img/share.jpg">'
+                f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+                f'<meta name="twitter:card" content="summary_large_image">'
+                f'<meta http-equiv="refresh" content="0; url={e(target)}">'
+                f'<script>location.replace({json.dumps(target)});</script></head>'
+                f'<body><p><a href="{e(target)}">{e(title)}</a></p></body></html>')
+        name = nid + ".html"
+        keep.add(name)
+        with open(os.path.join(folder, name), "w", encoding="utf-8") as fh:
+            fh.write(page)
+    for f in os.listdir(folder):
+        if f not in keep:
+            os.remove(os.path.join(folder, f))
+    return len(keep)
+
+
+def _singularity(site, nodes, store, site_url=""):
     """site/singularity.html, the Lab's introduction (a first-person fall into a black hole),
     from site/singularity.template.html: its predictions board is read from the record, and
     the deposited result numbers its subtitles cite (T5 Thm 2.5) are mapped to the results."""
@@ -966,6 +1034,7 @@ def _singularity(site, nodes, store):
             continue
         tpl = open(tp_, encoding="utf-8").read()
         html = re.sub(r"/\*LAB_DATA\*/.*?/\*END_LAB_DATA\*/", lambda _m: blob, tpl, count=1, flags=re.S)
+        html = html.replace("/*SITE_URL*/", site_url)
         out = os.path.join(site, name + ".html")
         open(out, "w", encoding="utf-8").write(html)
     return out

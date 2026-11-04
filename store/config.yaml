@@ -49,3 +49,8 @@ programmes:
     about: "standard physics imported once: textbook results, measured quantities and conventions that programmes build on; imported Facts with textbook or DOI provenance, checked where a finite core exists"
     maintainers:
     - leon
+
+# the public address of the site (the page that serves transport_lab.html), e.g. https://zerodivisors.org/
+# when set, shared links use it, link previews name absolute images, and each result gets a small
+# share page r/<id>.html carrying its own preview. Empty until the site is hosted.
+site_url: ""

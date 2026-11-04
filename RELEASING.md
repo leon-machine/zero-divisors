@@ -30,7 +30,9 @@ taken when enough has been merged to be worth a new version.
    - Generate release notes (the merged pull requests since the last release), and add a line on
      the main changes;
    - Publish. Zenodo issues the new version's DOI within minutes.
-3. Build and publish the public site from the tag:
+3. Build and publish the public site from the tag (with `site_url` in `store/config.yaml` set to the
+   site's public address, so shared links and link previews use it and each result gets its share
+   page `site/r/<id>.html`):
    `git checkout vX.Y.Z && python -m tp.site`, then deploy `site/`, then `git checkout main`.
 4. If the papers' deposits changed in the same period, record them first with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.

@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Singularity</title>
+<meta name="description" content="A fall into a black hole, and what the Transport Papers say happens where the equations divide by zero.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Zero Divisors">
+<meta property="og:title" content="The Singularity"><meta property="og:description" content="A fall into a black hole, and what the Transport Papers say happens where the equations divide by zero.">
+<meta property="og:image" content="/*SITE_URL*/img/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -498,10 +503,18 @@ function playerV(now){
   return vNow;
 }
 const LAST = () => idx === STEPS.length - 1;
+// each slide has its own address: #n on this page, #singularity/n on the page that holds it, so a slide can be shared
+const DECK = 'singularity', HASH0 = location.hash;
+function noteSlide(){ const n = idx + 1;
+  try { history.replaceState(null, '', '#' + n); } catch (e) {}
+  try { const P = window.parent; if (P && P !== window) { const h = P.location.hash;
+    if ((DECK === 'principle' && h === '') || new RegExp('^#' + DECK + '(/\\d+)?$').test(h)) P.history.replaceState(null, '', '#' + DECK + (n > 1 ? '/' + n : '')); } } catch (e) {} }
+addEventListener('hashchange', () => { const m = location.hash.match(/^#(\d+)$/); if (m && +m[1] - 1 !== idx) goStep(+m[1] - 1, false); });
 function ui(){
   $('#back').disabled = idx === 0; $('#next').disabled = LAST();
   $('#next').classList.toggle('pulse', idx === 0); $('#stepn').textContent = `${idx + 1} / ${STEPS.length}`;
   document.body.classList.toggle('atend', LAST());
+  noteSlide();
 }
 const next = () => goStep(idx + 1), back = () => goStep(idx - 1, false);
 $('#next').addEventListener('click', () => { stopAuto(); next(); }); $('#back').addEventListener('click', () => { stopAuto(); back(); });
@@ -1252,7 +1265,7 @@ $('#lookBack').addEventListener('click', () => { lookBack = !lookBack; $('#lookB
 
 const barH = () => document.documentElement.style.setProperty('--barh', $('.bar').offsetHeight + 'px'); barH();
 addEventListener('resize', () => { barH(); sizeOv(); dirty = true; });
-sizeOv(); fovNow = fallFov(R); ui(); draw(performance.now()); if (!VIDEO) requestAnimationFrame(loop);
+sizeOv(); fovNow = fallFov(R); ui(); if (!VIDEO) { const m = HASH0.match(/^#(\d+)$/); if (m) goStep(Math.min(STEPS.length, +m[1]) - 1, false); } draw(performance.now()); if (!VIDEO) requestAnimationFrame(loop);
 if (VIDEO) { scale = +(new URLSearchParams(location.search).get('scale') || 0.6);
   window.__frame = (v, ms, cap, capA, endA) => { vVh = v; const vc = $('#vcap'); if (vc.dataset.k !== cap) { vc.innerHTML = cap; vc.dataset.k = cap; } vc.style.opacity = capA; $('#vend').style.opacity = endA || 0; loop(T0 + ms); return mode; }; }
 window.__fall = { get mode(){ return mode; }, get scale(){ return scale; }, START, TOTAL, STEPS, step: goStep, get idx(){ return idx; }, get busy(){ return !!anim; } };

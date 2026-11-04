@@ -1,6 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zero Divisors</title>
+<meta name="description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zero Divisors">
+<meta property="og:title" content="Zero Divisors">
+<meta property="og:description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta property="og:image" content="/*SITE_URL*/img/share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <script>(function () { var t = "dark"; try { var v = localStorage.getItem("tp-theme"); if (v === "light" || v === "dark") t = v; } catch (e) {} document.documentElement.setAttribute("data-tp-theme", t); })();</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +53,14 @@ nav.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #
 nav a { font: 500 14px var(--sans); color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 8px; white-space: nowrap; flex: none; }
 nav a[aria-current="page"] { background: var(--ink); color: var(--panel); }
 #themebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; margin-left: auto; }
+#sharebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; }
+.stats + #sharebtn, #sharebtn { margin-left: auto; } #sharebtn + #themebtn { margin-left: 0; }
+@media (max-width: 760px) { #sharebtn span { display: none; } }
+.sharemenu { position: fixed; z-index: 60; min-width: 230px; max-width: calc(100vw - 24px); background: var(--panel, #191614); border: 1px solid var(--line, #3a332e); border-radius: 10px; padding: 8px; box-shadow: 0 10px 34px rgba(0,0,0,.45); font: 14px var(--sans); }
+.sharemenu .sh-t { padding: 4px 8px 8px; color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+.sharemenu button, .sharemenu a { display: flex; width: 100%; box-sizing: border-box; align-items: center; gap: 10px; padding: 7px 8px; border: 0; background: none; color: var(--text, inherit); font: inherit; text-decoration: none; border-radius: 6px; cursor: pointer; text-align: left; }
+.sharemenu button:hover, .sharemenu a:hover, .sharemenu button:focus-visible, .sharemenu a:focus-visible { background: rgba(236,229,217,.08); }
+.sharemenu .sh-ok { padding: 4px 8px; color: var(--muted); font-size: 12.5px; min-height: 1em; }
 /* the counts sit between the views and the switch, and are shown only when they fit whole */
 .stats { flex: 1 1 0; min-width: 0; overflow: hidden; white-space: nowrap; text-align: right; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .stats + #themebtn { margin-left: 0; }
@@ -338,8 +354,10 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
     <a href="#contribute" data-view="contribute">Explore with AI</a>
   </nav>
   <div class="stats" id="stats"></div>
+  <button class="btn" id="sharebtn" aria-label="Share this page" title="Share this page"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Share</span></button>
   <button class="btn" id="themebtn" aria-label="Switch between dark and light" title="Switch between dark and light"></button>
 </header>
+<div class="sharemenu" id="sharemenu" role="dialog" aria-label="Share" hidden></div>
 <main>
   <section class="view" id="universeview">
     <aside class="rail" aria-label="Explore">
@@ -1992,12 +2010,12 @@ function renderResult(n, fly) {
       ${signs.length ? `<ul class="hist">${signs.map(x => `<li><span class="d">${esc(x.date)}</span><span class="v">v${esc(x.version)}</span><span><b>${esc(TRUST_WORD[x.level] || x.level)}</b> by ${esc(x.by)}${x.note ? ": " + esc(x.note) : ""}</span></li>`).join("")}</ul>` : ""}
       <p class="note" style="font-family:var(--mono)">${esc(n.id)} · version ${n.version}</p></details>
     ${tnav("bottom")}
-    <div class="row" style="margin-top:14px"><button class="btn" id="copyai">Copy for an AI</button><button class="btn" id="copylink">Copy link</button><span class="note" id="copied"></span></div>`;
+    <div class="row" style="margin-top:14px"><button class="btn" id="copyai">Copy for an AI</button><button class="btn" id="copylink">Share this result</button><span class="note" id="copied"></span></div>`;
   wireSections(reader);
   reader.querySelectorAll("[data-tnav]").forEach(b => b.onclick = () => trailFull(b.dataset.tnav === "next" ? 1 : -1));
   const bt = document.getElementById("backtrail"); if (bt) bt.onclick = () => { selected = null; computeNear(); showTrailStep(); dirty = true; overlay(); };
   document.getElementById("copyai").onclick = () => copyForAI(id);
-  document.getElementById("copylink").onclick = () => copyLink(id);
+  document.getElementById("copylink").onclick = ev => openShare(ev.currentTarget, shareInfo(id));
   wireNotes(); wireCheck(n);
   reader.scrollTop = 0; typeset(reader);
   if (fly && innerWidth <= 860 && document.activeElement === sky) reader.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
@@ -2017,6 +2035,70 @@ function copyForAI(id) {
 }
 // a link to the result: the page's own address with #<id>. Inside the artifact viewer the page runs
 // in an inner frame whose address is not the artifact's link; then only #<id> can be given.
+// ============================ SHARING =====================================
+// Every view, result, document and slide has its own address. With site_url set (the public site),
+// a result's link is its share page r/<id>.html, which carries the result's own link preview and
+// opens the result; otherwise the link is this page's address with the view in the hash.
+function pageBase() {
+  if (DATA.site_url) return DATA.site_url.replace(/\/?$/, "/");
+  let base = null;
+  try { base = (window.top === window ? location.href : window.top.location.href).split("#")[0]; } catch (e) { /* a viewer on another origin */ }
+  if (!base && /^https:\/\/claude\.ai\/.*artifact/.test(document.referrer || "")) base = document.referrer.split("#")[0];
+  return base && /^https?:/.test(base) ? base : null;
+}
+function linkFor(hash) {
+  const b = pageBase(); if (!b) return null;
+  if (DATA.site_url && byId.has(hash)) return b + "r/" + encodeURIComponent(hash) + ".html";
+  return b + (hash ? "#" + hash : "");
+}
+const VIEW_TITLE = { principle: "The Transport Principle: dividing by zero, from a line to spacetime", singularity: "The Singularity: a fall into a black hole, and the Transport Papers",
+  universe: "The Physics Graph: every result of the Transport Papers, with its proof and check", documents: "The Transport Papers, generated from the Physics Graph",
+  record: "The record: what the Transport Papers predicted, and what the data say", problems: "Open problems of the Transport Papers", contribute: "Explore the Physics Graph with an AI" };
+// what to share: a result (by id), or whatever the page is showing now
+// a one-liner as plain text for a message: TeX symbols to characters, commands to their names
+const TEX_SYM = { neq: "≠", ne: "≠", leq: "≤", le: "≤", geq: "≥", ge: "≥", to: "→", times: "×", infty: "∞", pi: "π", cdot: "·", pm: "±", sim: "~", approx: "≈", in: "∈", ell: "ℓ", hbar: "ħ" };
+const plainTex = t => (t || "").replace(/\\(?:mathbb|mathrm|mathcal|operatorname|text|mathbf)\{([^}]*)\}/g, "$1").replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, "$1/$2")
+  .replace(/\\([A-Za-z]+)/g, (m, c) => TEX_SYM[c] || c).replace(/[$]/g, "").replace(/[{}]/g, "").replace(/\s+/g, " ").trim();
+function shareInfo(id) {
+  if (id && byId.has(id)) { const n = byId.get(id); return { hash: id, title: n.title, text: plainTex(n.one_liner) }; }
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (byId.has(h)) return shareInfo(h);
+  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
+  if (sl) return { hash: h, title: VIEW_TITLE[sl[1]].split(":")[0] + ", slide " + sl[2], text: VIEW_TITLE[sl[1]] };
+  if (h.startsWith("doc:")) { const d = (DATA.documents || []).find(x => x.id === h.slice(4)); return { hash: h, title: d ? d.title : "A Transport Paper", text: "Generated from the Physics Graph" }; }
+  const v = VIEW_TITLE[h] ? h : (document.querySelector("main > .view.on") || {}).id?.replace(/view$/, "") || "principle";
+  return { hash: VIEW_TITLE[v] ? v : "", title: VIEW_TITLE[v] || "Zero Divisors", text: "" };
+}
+const SHARE_TO = [
+  ["Email", (u, t, x) => `mailto:?subject=${encodeURIComponent(t)}&body=${encodeURIComponent((x ? x + "\n\n" : "") + u)}`],
+  ["X", (u, t) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(u)}&text=${encodeURIComponent(t)}`],
+  ["LinkedIn", u => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(u)}`],
+  ["Bluesky", (u, t) => `https://bsky.app/intent/compose?text=${encodeURIComponent(t + " " + u)}`],
+  ["Facebook", u => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(u)}`],
+  ["Reddit", (u, t) => `https://www.reddit.com/submit?url=${encodeURIComponent(u)}&title=${encodeURIComponent(t)}`],
+  ["WhatsApp", (u, t) => `https://wa.me/?text=${encodeURIComponent(t + " " + u)}`]];
+function openShare(anchor, info) {
+  const m = document.getElementById("sharemenu"), url = linkFor(info.hash), r = anchor.getBoundingClientRect();
+  const copyText = url || ("#" + info.hash);
+  m.innerHTML = `<div class="sh-t">${esc(info.title)}</div>
+    <button data-act="copy">Copy link</button>
+    ${url ? SHARE_TO.map(([name, f]) => `<a href="${esc(f(url, info.title, info.text))}" target="_blank" rel="noopener">${esc(name)}</a>`).join("") : ""}
+    ${url && navigator.share ? `<button data-act="native">More…</button>` : ""}
+    <div class="sh-ok" id="shok">${url ? "" : "This viewer does not show the page its own address: copy the link and add it to the end of the page's address."}</div>`;
+  m.hidden = false;
+  const w = m.offsetWidth, h = m.offsetHeight;
+  m.style.left = Math.max(12, Math.min(innerWidth - w - 12, r.right - w)) + "px";
+  m.style.top = (r.bottom + 6 + h < innerHeight ? r.bottom + 6 : Math.max(12, r.top - h - 6)) + "px";
+  m.querySelector('[data-act="copy"]').onclick = () => { const ok = () => document.getElementById("shok").textContent = "Link copied.";
+    if (navigator.clipboard) navigator.clipboard.writeText(copyText).then(ok, () => fallback(copyText, ok)); else fallback(copyText, ok); };
+  const nat = m.querySelector('[data-act="native"]'); if (nat) nat.onclick = () => navigator.share({ title: info.title, text: info.text || info.title, url }).catch(() => {});
+  m.querySelectorAll("a").forEach(x => x.addEventListener("click", () => closeShare()));
+  m.querySelector("button").focus();
+}
+function closeShare() { const m = document.getElementById("sharemenu"); if (m && !m.hidden) m.hidden = true; }
+document.addEventListener("click", ev => { const m = document.getElementById("sharemenu"); if (!m.hidden && !m.contains(ev.target) && !ev.target.closest("#sharebtn, #copylink")) closeShare(); });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeShare(); });
+document.getElementById("sharebtn").onclick = ev => { const m = document.getElementById("sharemenu"); if (!m.hidden) { closeShare(); return; } openShare(ev.currentTarget, shareInfo()); };
 function resultLink(id) {
   let base = null;
   try { base = (window.top === window ? location.href : window.top.location.href).split("#")[0]; } catch (e) { /* a viewer on another origin */ }
@@ -2550,6 +2632,12 @@ function route() {
   if (h.startsWith("doc:")) { showView("documents"); openDoc(h.slice(4)); return; }
   if (byQ.has(h)) { showView("universe"); showQuantity(h); return; }
   if (NOTES[h] && noteHost(NOTES[h])) { showView("universe"); openNote(h); return; }
+  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
+  if (sl) { const f = document.getElementById(sl[1] === "principle" ? "princframe" : "singframe");
+    const want = (sl[1] === "principle" ? "principle.html" : "singularity.html") + "#" + sl[2];
+    if (!f.getAttribute("src")) f.setAttribute("src", want);
+    else { try { if (f.contentWindow.location.hash !== "#" + sl[2]) f.contentWindow.location.hash = sl[2]; } catch (e) { f.setAttribute("src", want); } }
+    showView(sl[1]); return; }
   if (h.startsWith("op.")) { opTab = "curated"; opSel = h; Object.keys(opFilter).forEach(k => opFilter[k] = ""); showView("problems"); renderProblems(); return; }
   showView(["principle", "singularity", "universe", "documents", "record", "problems", "contribute"].includes(h) ? h : (h ? "universe" : "principle"));
 }
