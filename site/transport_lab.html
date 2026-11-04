@@ -52,6 +52,21 @@ nav.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #
 @media (max-width: 1240px) { header { gap: 6px 14px; } nav a { padding: 6px 9px; font-size: 13.5px; } }
 nav a { font: 500 14px var(--sans); color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 8px; white-space: nowrap; flex: none; }
 nav a[aria-current="page"] { background: var(--ink); color: var(--panel); }
+/* the Physics Graph and its menu (documents, the record, open problems) */
+.navgroup { display: inline-flex; flex: none; border-radius: 8px; }
+.navgroup > a { border-radius: 8px 0 0 8px; padding-right: 6px !important; }
+.navcaret { border: 0; background: none; color: var(--muted); padding: 0 8px 0 4px; border-radius: 0 8px 8px 0; cursor: pointer; display: inline-flex; align-items: center; }
+.navcaret:hover, .navgroup > a:hover { color: var(--ink); }
+.navgroup.on { background: var(--ink); }
+.navgroup.on > a, .navgroup.on .navcaret { color: var(--panel); background: none; }
+.navcaret[aria-expanded="true"] svg { transform: rotate(180deg); }
+.navmenu { position: fixed; z-index: 60; width: 300px; max-width: calc(100vw - 24px); background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 6px; box-shadow: 0 10px 34px rgba(0,0,0,.35); }
+.navmenu a { display: block; padding: 7px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; font: 500 14px var(--sans); }
+.navmenu a small { display: block; font: 400 12.5px var(--sans); color: var(--muted); margin-top: 1px; }
+.navmenu a:hover, .navmenu a:focus-visible { background: color-mix(in srgb, var(--ink) 8%, transparent); outline: none; }
+.navmenu a[aria-current="page"] { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.navver { border-top: 1px solid var(--rule); margin: 6px 4px 0; padding: 8px 6px 4px; font: 12.5px var(--sans); color: var(--muted); }
+.navver b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 #themebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; margin-left: auto; }
 #sharebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; }
 .stats + #sharebtn, #sharebtn { margin-left: auto; } #sharebtn + #themebtn { margin-left: 0; }
@@ -353,10 +368,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <nav aria-label="Views">
     <a href="#principle" data-view="principle">The Transport Principle</a>
     <a href="#singularity" data-view="singularity">The Singularity</a>
-    <a href="#universe" data-view="universe">Physics Graph</a>
-    <a href="#documents" data-view="documents">Documents</a>
-    <a href="#record" data-view="record">The record</a>
-    <a href="#problems" data-view="problems">Open problems</a>
+    <span class="navgroup" id="graphgroup"><a href="#universe" data-view="universe">Physics Graph</a><button class="navcaret" id="graphcaret" aria-haspopup="true" aria-expanded="false" aria-controls="graphmenu" aria-label="More of the Physics Graph: documents, the record, open problems"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
     <a href="#contribute" data-view="contribute">Explore with AI</a>
   </nav>
   <div class="stats" id="stats"></div>
@@ -364,6 +376,13 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <button class="btn" id="themebtn" aria-label="Switch between dark and light" title="Switch between dark and light"></button>
 </header>
 <div class="sharemenu" id="sharemenu" role="dialog" aria-label="Share" hidden></div>
+<div class="navmenu" id="graphmenu" aria-label="The Physics Graph" hidden>
+  <a href="#universe" data-view="universe">The graph<small>every result and how they connect</small></a>
+  <a href="#documents" data-view="documents">Documents<small>the papers and guides, written from the graph</small></a>
+  <a href="#record" data-view="record">The record<small>what has been checked, and by what</small></a>
+  <a href="#problems" data-view="problems">Open problems<small>what the papers leave open</small></a>
+  <div class="navver" id="graphver"></div>
+</div>
 <main>
   <section class="view" id="universeview">
     <aside class="rail" aria-label="Explore">
@@ -2651,10 +2670,52 @@ function renderContribute() {
   </div>`;
   if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
+// the Physics Graph's own pages sit under its menu in the header
+const GRAPH_VIEWS = ["universe", "documents", "record", "problems"];
+// the graph's version: the release this site was built from (RELEASING.md)
+function versionText(short) {
+  const r = DATA.release;
+  if (!r) return short ? "Pre-release" : "Pre-release: the Physics Graph has not had its first release yet.";
+  const v = esc(r.tag) + (r.ahead ? ` + ${r.ahead} unreleased change${r.ahead === 1 ? "" : "s"}` : "");
+  return short ? v : `Version <b>${v}</b>, released ${esc(r.date)}. Archived on Zenodo as "Zero Divisors: Physics Graph".`;
+}
+function openGraphMenu() {
+  const m = document.getElementById("graphmenu"), b = document.getElementById("graphcaret"),
+        g = document.getElementById("graphgroup"), n = g.parentElement;
+  // bring the whole group into view first when the header row is scrolled
+  const gl = g.offsetLeft - n.offsetLeft;
+  if (gl < n.scrollLeft || gl + g.offsetWidth > n.scrollLeft + n.clientWidth) n.scrollLeft = Math.max(0, gl + g.offsetWidth - n.clientWidth);
+  document.getElementById("graphver").innerHTML = versionText(false);
+  m.hidden = false; b.setAttribute("aria-expanded", "true");
+  placeGraphMenu();
+  (m.querySelector('a[aria-current="page"]') || m.querySelector("a")).focus({ preventScroll: true });
+}
+function placeGraphMenu() {
+  const m = document.getElementById("graphmenu"), r = document.getElementById("graphgroup").getBoundingClientRect();
+  m.style.top = (r.bottom + 6) + "px";
+  m.style.left = Math.max(12, Math.min(r.left, innerWidth - m.offsetWidth - 12)) + "px";
+}
+function closeGraphMenu() { const m = document.getElementById("graphmenu"); if (m && !m.hidden) { m.hidden = true; document.getElementById("graphcaret").setAttribute("aria-expanded", "false"); } }
+document.getElementById("graphcaret").onclick = ev => { ev.stopPropagation(); document.getElementById("graphmenu").hidden ? openGraphMenu() : closeGraphMenu(); };
+document.addEventListener("click", ev => { if (!ev.target.closest("#graphmenu, #graphcaret")) closeGraphMenu(); });
+document.addEventListener("keydown", ev => {
+  const m = document.getElementById("graphmenu"); if (m.hidden) return;
+  if (ev.key === "Escape") { closeGraphMenu(); document.getElementById("graphcaret").focus(); }
+  if (ev.key === "ArrowDown" || ev.key === "ArrowUp") { ev.preventDefault();
+    const as = [...m.querySelectorAll("a")], i = as.indexOf(document.activeElement);
+    as[(i + (ev.key === "ArrowDown" ? 1 : as.length - 1)) % as.length].focus(); }
+});
+window.addEventListener("resize", closeGraphMenu);
+document.getElementById("graphmenu").addEventListener("click", ev => { if (ev.target.closest("a")) closeGraphMenu(); });
+document.querySelector("header nav").addEventListener("scroll", () => { if (!document.getElementById("graphmenu").hidden) placeGraphMenu(); }, { passive: true });
 function showView(v) {
   document.querySelectorAll("main > .view").forEach(s => s.classList.toggle("on", s.id === v || s.id === v + "view"));
-  document.querySelectorAll("nav a").forEach(a => a.setAttribute("aria-current", a.dataset.view === v ? "page" : "false"));
-  const cur = document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - (n.clientWidth - cur.offsetWidth) / 2; }; navEdges();
+  document.querySelectorAll("nav a, #graphmenu a").forEach(a => a.setAttribute("aria-current", a.dataset.view === v ? "page" : "false"));
+  const inGraph = GRAPH_VIEWS.includes(v);
+  document.getElementById("graphgroup").classList.toggle("on", inGraph);
+  document.querySelector('nav a[data-view="universe"]').setAttribute("aria-current", inGraph ? "page" : "false");
+  closeGraphMenu();
+  const cur = inGraph ? document.getElementById("graphgroup") : document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - Math.max(0, (n.clientWidth - cur.offsetWidth) / 2); }; navEdges();
   if (v === "universe") { resize(); }
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
   for (const [view, id, src] of [["principle", "princframe", "principle.html"], ["singularity", "singframe", "singularity.html"]]) {
@@ -2744,8 +2805,9 @@ function fitStats(){ statsEl.classList.remove("nofit");
   for (const t of statsForms) { statsEl.textContent = t; if (statsEl.scrollWidth <= statsEl.clientWidth + 1) return; }
   statsEl.classList.add("nofit"); }
 window.addEventListener("resize", fitStats);
-statsForms = [`${S.results} results · ${S.links} links · ${S.proofs} with proofs · ${S.verified - (S.sampled_only || 0)} machine-checked${S.sampled_only ? ` · ${S.sampled_only} checked at samples or in part` : ""}`,
-  `${S.results} results · ${S.links} links · ${S.verified} machine-checked`, `${S.results} results · ${S.links} links`, `${S.results} results`];
+const VER = versionText(true);
+statsForms = [`${VER} · ${S.results} results · ${S.links} links · ${S.proofs} with proofs · ${S.verified - (S.sampled_only || 0)} machine-checked${S.sampled_only ? ` · ${S.sampled_only} checked at samples or in part` : ""}`,
+  `${VER} · ${S.results} results · ${S.links} links · ${S.verified} machine-checked`, `${VER} · ${S.results} results · ${S.links} links`, `${VER} · ${S.results} results`, VER];
 fitStats(); if (document.fonts) document.fonts.ready.then(fitStats);
 renderCats(); legend(); overlay(); showHome(); route();
 resize(); requestAnimationFrame(frame);
