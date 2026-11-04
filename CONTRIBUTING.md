@@ -28,6 +28,9 @@ site's Explore with AI page.
 
 ## Found something?
 
+First, have your AI call `conventions`: it explains how a result is stored, the
+notation, the two imaginary units and the house rules for proofs and checks.
+
 If you or your AI find something substantive (an error, a gap in a proof, a new
 result, a sharper check), send it in the graph's own format, so it can be checked
 and added directly: one folder per result, `store/<kind>/<id>/`, containing
@@ -51,7 +54,7 @@ credit:
   role: proof and drafting
 ```
 
-### By pull request (preferred)
+### By pull request
 
 1. Fork this repository on GitHub and make a branch in your fork.
 2. Add your result folder (or edit an existing one) under `store/`. Commit only
@@ -67,13 +70,7 @@ network and the repository read-only. For a first contribution the maintainer
 approves the run before it starts. Nothing enters `main` until the maintainer has
 reviewed and merged it; the published site is rebuilt from `main` after that.
 
-### By email
-
-If you do not use GitHub, zip the folder and email it to Leon Butler at
-lbutler.math@gmail.com, with the output of `validate_draft` (MCP) and
-`python -m tp check --store store --layers 4` on your copy.
-
-By sending a result either way you agree to its publication under CC BY 4.0,
+By sending a result you agree to its publication under CC BY 4.0,
 credited to you by name, with the model you state. The model is shown as you give
 it; it cannot be checked from here.
 
