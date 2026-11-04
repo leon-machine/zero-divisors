@@ -67,6 +67,15 @@ nav a[aria-current="page"] { background: var(--ink); color: var(--panel); }
 .navmenu a[aria-current="page"] { background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .navver { border-top: 1px solid var(--rule); margin: 6px 4px 0; padding: 8px 6px 4px; font: 12.5px var(--sans); color: var(--muted); }
 .navver b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.navmenu .navver a.navrel { display: inline; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; background: none; }
+/* release notes */
+.relnote { border-top: 1px solid var(--rule); padding: 14px 0 6px; scroll-margin-top: 12px; }
+.relnote h3 { font: 600 20px var(--serif); margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.relnote h3 .reldate { font: 400 13px var(--sans); color: var(--muted); }
+.relnote h3 .relcur { font: 500 11.5px var(--sans); color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; }
+.relnote h4 { font: 600 13px var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 0 6px; }
+.relnote ul { margin: 0 0 8px; padding-left: 20px; } .relnote li { margin: 3px 0; }
+.relnote.unrel { border: 1px dashed var(--rule); border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; }
 #themebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; margin-left: auto; }
 #sharebtn { padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; }
 .stats + #sharebtn, #sharebtn { margin-left: auto; } #sharebtn + #themebtn { margin-left: 0; }
@@ -381,7 +390,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <a href="#documents" data-view="documents">Documents<small>the papers and guides, written from the graph</small></a>
   <a href="#record" data-view="record">The record<small>what has been checked, and by what</small></a>
   <a href="#problems" data-view="problems">Open problems<small>what the papers leave open</small></a>
-  <div class="navver" id="graphver"></div>
+  <div class="navver"><span id="graphver"></span> <a class="navrel" href="#releases" data-view="releases">Release notes</a></div>
 </div>
 <main>
   <section class="view" id="universeview">
@@ -439,6 +448,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
   <section class="view page" id="documentsview"><div class="inner" id="documents"></div></section>
   <section class="view page" id="recordview"><div class="inner" id="record"></div></section>
   <section class="view page" id="problemsview"><div class="inner" id="problems"></div></section>
+  <section class="view page" id="releasesview"><div class="inner" id="releases"></div></section>
   <section class="view page" id="contributeview"><div class="inner" id="contribute"></div></section>
 </main>
 
@@ -2443,8 +2453,41 @@ let docSel = null;
 // which release of the Physics Graph this site was built from; each release is archived on Zenodo
 function releaseLine() {
   const r = DATA.release;
-  if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet.</p>`;
-  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""}</p>`;
+  if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet. <a href="#releases">Release notes</a></p>`;
+  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""} <a href="#releases">Release notes</a></p>`;
+}
+// release notes: releases/vX.Y.Z.md, written at each release (RELEASING.md); a small Markdown subset
+function relInline(t) {
+  return esc(t).replace(/`([^`]+)`/g, (m, c) => byId.has(c) ? `<a href="#${esc(c)}"><code>${c}</code></a>` : `<code>${c}</code>`)
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+function relMarkdown(md, tag) {
+  const out = []; let para = [], list = null;
+  const flush = () => { if (para.length) { out.push(`<p>${relInline(para.join(" "))}</p>`); para = []; } if (list) { out.push(`<ul>${list.join("")}</ul>`); list = null; } };
+  for (const raw of md.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
+    const ln = raw.trimEnd();
+    if (!ln.trim()) { flush(); continue; }
+    let m;
+    if ((m = ln.match(/^# (.+)$/))) { flush(); const d = m[1].match(/^(\S+)\s+\((.+)\)$/);
+      out.push(`<h3>${esc(d ? d[1] : m[1])}${d ? `<span class="reldate">${esc(d[2])}</span>` : ""}${DATA.release && DATA.release.tag === tag ? '<span class="relcur">this site</span>' : ""}</h3>`); continue; }
+    if ((m = ln.match(/^#{2,3} (.+)$/))) { flush(); out.push(`<h4>${relInline(m[1])}</h4>`); continue; }
+    if ((m = ln.match(/^\s*[-*] (.+)$/))) { if (para.length) { out.push(`<p>${relInline(para.join(" "))}</p>`); para = []; } (list = list || []).push(`<li>${relInline(m[1])}</li>`); continue; }
+    if (list && /^\s{2,}\S/.test(raw)) { list[list.length - 1] = list[list.length - 1].replace(/<\/li>$/, " " + relInline(ln.trim()) + "</li>"); continue; }
+    if (list) flush();
+    para.push(ln.trim());
+  }
+  flush();
+  return out.join("");
+}
+function renderReleases() {
+  const rs = DATA.releases || [], un = DATA.unreleased;
+  document.getElementById("releases").innerHTML = `<div class="eyebrow">The Physics Graph</div><h2>Release notes</h2>
+    <p class="lead">What changed in each release: results added, corrected, restated and retired, and who was credited. Each release is archived on Zenodo as a version of "Zero Divisors: Physics Graph"; merged changes wait for the next release.</p>
+    <p class="note">${versionText(false).replace(/^Version/, "This site shows version")}</p>
+    ${un ? `<article class="relnote unrel" id="rel-unreleased">${relMarkdown(un, "")}</article>` : ""}
+    ${rs.length ? rs.map(r => `<article class="relnote" id="rel-${esc(r.tag)}">${relMarkdown(r.md, r.tag)}</article>`).join("")
+      : `<p class="note">No release yet. The notes of each release will appear here, newest first, starting with v1.0.0.</p>`}`;
 }
 function renderDocuments() {
   const docs = DATA.documents || [];
@@ -2671,7 +2714,7 @@ function renderContribute() {
   if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
 // the Physics Graph's own pages sit under its menu in the header
-const GRAPH_VIEWS = ["universe", "documents", "record", "problems"];
+const GRAPH_VIEWS = ["universe", "documents", "record", "problems", "releases"];
 // the graph's version: the release this site was built from (RELEASING.md)
 function versionText(short) {
   const r = DATA.release;
@@ -2720,7 +2763,7 @@ function showView(v) {
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
   for (const [view, id, src] of [["principle", "princframe", "principle.html"], ["singularity", "singframe", "singularity.html"]]) {
     const f = document.getElementById(id); if (v === view && !f.getAttribute("src")) f.setAttribute("src", src); }
-  if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute })[v]?.(); }
+  if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute, releases: renderReleases })[v]?.(); }
 }
 function route() {
   const h = decodeURIComponent(location.hash.slice(1));
@@ -2735,8 +2778,10 @@ function route() {
     if (!f.getAttribute("src")) f.setAttribute("src", want);
     else { try { if (f.contentWindow.location.hash !== "#" + sl[2]) f.contentWindow.location.hash = sl[2]; } catch (e) { f.setAttribute("src", want); } }
     showView(sl[1]); return; }
+  const rl = h.match(/^releases\/(v\d+\.\d+\.\d+|unreleased)$/);
+  if (rl) { showView("releases"); const t = document.getElementById("rel-" + rl[1]); if (t) t.scrollIntoView({ block: "start" }); return; }
   if (h.startsWith("op.")) { opTab = "curated"; opSel = h; Object.keys(opFilter).forEach(k => opFilter[k] = ""); showView("problems"); renderProblems(); return; }
-  showView(["principle", "singularity", "universe", "documents", "record", "problems", "contribute"].includes(h) ? h : (h ? "universe" : "principle"));
+  showView(["principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute"].includes(h) ? h : (h ? "universe" : "principle"));
 }
 window.addEventListener("hashchange", route);
 window.addEventListener("resize", () => { resize(); applyRW(); document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); });

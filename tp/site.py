@@ -683,6 +683,9 @@ def _contrib_example(folder=os.path.join("docs", "example-contribution")):
     return out
 
 
+from . import releases as _releases
+
+
 def main(build="build", site="site", store="store", template="universe.template.html",
          out="transport_lab.html"):
     from .model import ID_RE, load_store
@@ -915,6 +918,9 @@ def main(build="build", site="site", store="store", template="universe.template.
             "mcp_tools": _mcp_tools(),
             "contrib_example": _contrib_example(),
             "release": _release(lab),
+            # release notes (releases/*.md), and what a preview holds beyond the newest release
+            "releases": _releases.published(lab),
+            "unreleased": _releases.unreleased(lab, store, st),
             "site_url": _site_url(st.config),
             "preview_url": str(st.config.get("preview_url") or "")}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
