@@ -19,7 +19,7 @@
    slide; the step's own movement then plays slowly, over three to six seconds, and stops. Dark,
    like The Singularity, and in the site's fonts. */
 :root{
-  --void:#100e0d; --line:#3a332e; --line-2:#574d45;
+  --void:#060a10; --line:#2a3442; --line-2:#465364;
   --text:#ece5d9; --text-2:#bfb5a6; --text-3:#8d8377;
   --red:#e07a55; --blue:#93b4da; --green:#a6c497; --plum:#cf9bb5; --gold:#f0c27a;
   --serif:"Source Serif 4","Iowan Old Style",Georgia,serif;
@@ -36,7 +36,7 @@ button{font:inherit;color:inherit}
 .story{position:relative;height:100vh;height:100dvh}
 .pin{position:absolute;inset:0;overflow:hidden;touch-action:none}
 #cv{position:absolute;inset:0;width:100%;height:100%;display:block}
-.track{position:absolute;left:0;right:0;top:0;z-index:6;display:flex;overflow-x:auto;background:rgba(16,14,13,.55);border-bottom:1px solid var(--line);scrollbar-width:none}
+.track{position:absolute;left:0;right:0;top:0;z-index:6;display:flex;overflow-x:auto;background:rgba(6,10,16,.55);border-bottom:1px solid var(--line);scrollbar-width:none}
 .track::-webkit-scrollbar{display:none}
 .track button{flex:1 0 auto;background:none;border:0;color:var(--text-3);font:500 .68rem var(--mono);letter-spacing:.07em;text-transform:uppercase;padding:8px 10px;cursor:pointer;position:relative;white-space:nowrap}
 .track button.on{color:var(--text)}
@@ -44,7 +44,7 @@ button{font:inherit;color:inherit}
 .track button.done{color:var(--text-2)}
 .track button b{font-weight:500;color:var(--gold);margin-right:4px}
 .hero{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;pointer-events:none;transition:opacity .25s ease}
-.hero .cell{display:inline-block;position:relative;margin:0 auto;padding:.18em .5em .2em;border:1px solid var(--line-2);background:#191614;font:500 clamp(2.1rem,6vw,4.2rem)/1 var(--mono);color:var(--red);letter-spacing:.02em}
+.hero .cell{display:inline-block;position:relative;margin:0 auto;padding:.18em .5em .2em;border:1px solid var(--line-2);background:#121921;font:500 clamp(2.1rem,6vw,4.2rem)/1 var(--mono);color:var(--red);letter-spacing:.02em}
 .hero .cell::before{content:"";position:absolute;left:0;top:0;border-top:10px solid #4c9a4c;border-right:10px solid transparent}
 .hero p{max-width:60ch;margin:26px auto 0;text-align:justify;text-align-last:center;hyphens:none;text-wrap:pretty;font:400 clamp(1.1rem,2.2vw,1.45rem)/1.4 var(--serif);color:var(--text-2)}
 .hero .hint{margin-top:34px;font:500 .72rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
@@ -53,7 +53,7 @@ button{font:inherit;color:inherit}
 .end h2{font:600 clamp(1.8rem,4.6vw,3.2rem)/1.1 var(--serif);margin:0 0 10px}
 .end p{font:400 clamp(1.1rem,2.2vw,1.5rem)/1.4 var(--serif);color:var(--text-2);margin:0 0 26px}
 .end .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{background:rgba(16,14,13,.5);border:1px solid var(--text-2);border-radius:8px;padding:7px 16px;cursor:pointer;font:500 .9rem var(--sans);color:var(--text);text-decoration:none}
+.btn{background:rgba(6,10,16,.5);border:1px solid var(--text-2);border-radius:8px;padding:7px 16px;cursor:pointer;font:500 .9rem var(--sans);color:var(--text);text-decoration:none}
 .btn.hot{border-color:var(--red);color:var(--red)}
 .cap{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);transform:translate(-50%,6px);width:min(780px,calc(100% - 36px));text-align:center;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none}
 .cap.show{opacity:1;transform:translate(-50%,0)}
@@ -65,7 +65,7 @@ button{font:inherit;color:inherit}
 .after{max-width:62ch;margin:34px auto 0;padding-top:16px;font:.78rem/1.55 var(--sans);color:var(--text-3);border-top:1px solid var(--line);text-align:left}
 .end .after p{font:inherit;color:inherit;margin:0 0 .7em}
 .ctl{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 26px);transform:translateX(-50%);z-index:7;display:flex;align-items:center;gap:14px}
-.ctl button{background:rgba(16,14,13,.6);border:1px solid var(--line-2);border-radius:8px;padding:8px 18px;cursor:pointer;font:500 .88rem var(--sans);color:var(--text-2)}
+.ctl button{background:rgba(6,10,16,.6);border:1px solid var(--line-2);border-radius:8px;padding:8px 18px;cursor:pointer;font:500 .88rem var(--sans);color:var(--text-2)}
 .ctl button:hover:not(:disabled){border-color:var(--text-2);color:var(--text)}
 .ctl button:disabled{opacity:.35;cursor:default}
 .ctl #next{border-color:var(--gold);color:var(--gold);padding:8px 24px}
@@ -260,7 +260,7 @@ function capTopOf(scene){
   capTops.set(key, top); return top;
 }
 
-const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a', line: '#574d45'};
+const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a', line: '#465364'};
 const SERIF = '"Source Serif 4", Georgia, serif', MONO = '"IBM Plex Mono", Menlo, monospace';
 const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
 const env = (x, a, b, f = 0.22) => { if (x <= a || x >= b) return 0; const w = (b - a) * f; return sm(Math.min(1, (x - a) / w, (b - x) / w)); };
@@ -446,7 +446,7 @@ function drawSphere(s){
   text('the complex plane', Math.min(W - 8, pr([Wp, -Yn, -1])[0] - 6), pr([Wp, -Yn, -1])[1] + 16, C.blue, nar ? 12 : 14, 'right', SERIF, 'italic');
   // the sphere: shaded, with its equator and one meridian, nearer halves solid
   const sg = ox.createRadialGradient(cx - R * 0.35, yc - R * 0.4, R * 0.1, cx, yc, R);
-  sg.addColorStop(0, 'rgba(236,229,217,0.20)'); sg.addColorStop(0.7, 'rgba(40,36,33,0.88)'); sg.addColorStop(1, 'rgba(16,14,13,0.94)');
+  sg.addColorStop(0, 'rgba(236,229,217,0.20)'); sg.addColorStop(0.7, 'rgba(24,30,38,0.88)'); sg.addColorStop(1, 'rgba(6,10,16,0.94)');
   ox.fillStyle = sg; ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.fill();
   ox.save(); ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.clip(); grid(-Yn, -0.05); ox.restore();   // the plane in front of the sphere stays in front
   ox.strokeStyle = 'rgba(236,229,217,0.8)'; ox.lineWidth = 1.4; ox.beginPath(); ox.arc(cx, yc, R, 0, 2 * Math.PI); ox.stroke();
@@ -699,14 +699,14 @@ function drawEveryday(s){
   const sel = Math.max(0, shown - 1);
   ox.globalAlpha = a;
   // formula bar
-  ox.fillStyle = '#191614'; ox.fillRect(x0, top, gw, rh); ox.strokeStyle = C.line; ox.lineWidth = 1; ox.strokeRect(x0 + 0.5, top + 0.5, gw - 1, rh - 1);
+  ox.fillStyle = '#121921'; ox.fillRect(x0, top, gw, rh); ox.strokeStyle = C.line; ox.lineWidth = 1; ox.strokeRect(x0 + 0.5, top + 0.5, gw - 1, rh - 1);
   text('fx', x0 + cw[0] / 2, top + rh / 2, C.t3, fs - 4, 'center', SERIF, 'italic');
   seg(x0 + cw[0], top + 6, x0 + cw[0], top + rh - 6, 1, C.line);
   text(shown ? rows[sel][0] : '', x0 + cw[0] + 12, top + rh / 2, C.text, fs, 'left', MONO);
   // the sheet
   const gy = top + rh + 12, cols = ['', 'A', 'B'];
   for (let r = 0; r <= rows.length; r++) { let x = x0; for (let c = 0; c < 3; c++) {
-    const head = r === 0 || c === 0; ox.fillStyle = head ? '#221e1b' : '#141210'; ox.fillRect(x, gy + r * rh, cw[c], rh); ox.strokeStyle = C.line; ox.strokeRect(x + 0.5, gy + r * rh + 0.5, cw[c] - 1, rh - 1);
+    const head = r === 0 || c === 0; ox.fillStyle = head ? '#1a2330' : '#0d131a'; ox.fillRect(x, gy + r * rh, cw[c], rh); ox.strokeStyle = C.line; ox.strokeRect(x + 0.5, gy + r * rh + 0.5, cw[c] - 1, rh - 1);
     if (r === 0 && c) text(cols[c], x + cw[c] / 2, gy + rh / 2, C.t3, fs - 6, 'center', MONO);
     if (c === 0 && r) text(String(r), x + cw[c] / 2, gy + r * rh + rh / 2, C.t3, fs - 6, 'center', MONO);
     x += cw[c]; } }
