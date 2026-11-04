@@ -612,7 +612,24 @@ class Lab:
                 return {"ok": False, "findings": [{"code": "E102", "severity": "error",
                                                    "message": "bad id", "fix": ""}]}
             existing = os.path.exists(folder)
+            credit_findings = []
+            old_state = None
             if existing:
+                from .model import load_entity, lock_entry
+                old_state = lock_entry(load_entity(folder))
+                # an amendment keeps every earlier credit and adds its own (E603, E604)
+                from .credit import compare, describe
+                with open(os.path.join(folder, "entity.md"), encoding="utf-8") as fh:
+                    old_meta, _, _ = parse_entity_text(fh.read())
+                removed, unclaimed = compare(old_meta.get("credit"), meta.get("credit"),
+                                             int(old_meta.get("version") or 0), int(meta.get("version") or 0))
+                credit_findings += [{"code": "E603", "severity": "error", "entity": eid,
+                                     "message": f"a credit entry of the stored version is missing or changed: {describe(r)}",
+                                     "fix": "keep every earlier credit entry as it was"} for r in removed]
+                if unclaimed:
+                    credit_findings.append({"code": "E604", "severity": "error", "entity": eid,
+                                            "message": f"version {meta.get('version')} has no credit entry of its own",
+                                            "fix": "add {name, role, version} for yourself and for the AI model that drafted it"})
                 shutil.rmtree(folder)      # inside the temporary copy only
             os.makedirs(folder)
             open(os.path.join(folder, "entity.md"), "w").write(entity_md)
@@ -620,14 +637,20 @@ class Lab:
                 open(os.path.join(folder, name), "w").write(text)
             if check_py:
                 open(os.path.join(folder, "check.py"), "w").write(check_py)
+            if old_state:
+                # an amendment says what it fixes, and its kind matches what changed (E605-E608)
+                from .amend import findings as amendment_findings
+                from .model import load_entity
+                credit_findings += [{"code": c, "severity": "error", "entity": eid, "message": m, "fix": f}
+                                    for c, m, f in amendment_findings(old_state, load_entity(folder))]
             rep = validate(load_store(root), layers=layers, keep_going=True,
                            run_mutants=False)
         new = [f for f in rep.findings if (f.code, f.entity, f.message) not in base
                or f.entity.split("@")[0] == eid]
-        out = {"ok": not any(f.severity == "error" for f in new),
+        out = {"ok": not any(f.severity == "error" for f in new) and not credit_findings,
                "layers_run": list(layers), "replaces_existing": existing,
-               "findings": [{"code": f.code, "severity": f.severity, "entity": f.entity,
-                             "message": f.message, "fix": f.fix} for f in new]}
+               "findings": credit_findings + [{"code": f.code, "severity": f.severity, "entity": f.entity,
+                                               "message": f.message, "fix": f.fix} for f in new]}
         if check_py:
             out["note"] = ("check.py was stored but not run: evidence checks run when a "
                            "maintainer reviews the proposal")

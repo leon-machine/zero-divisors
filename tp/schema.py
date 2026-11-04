@@ -115,7 +115,19 @@ ENTITY = {
             "type": "object", "required": ["name", "role"], "additionalProperties": False,
             "properties": {"name": {"type": "string", "minLength": 1},
                            "role": {"type": "string", "minLength": 1},
-                           "source": {"type": "string"}}}},
+                           "source": {"type": "string"},
+                           # the version an amendment produced; absent for the original credit
+                           "version": {"type": "integer", "minimum": 1}}}},
+        # what each amendment did (tp/amend.py): a correction fixes a proof, a check, a status or a
+        # link and leaves the statement; a restatement changes the statement
+        "amendments": {"type": "array", "items": {
+            "type": "object", "required": ["version", "kind", "defect"], "additionalProperties": False,
+            "properties": {"version": {"type": "integer", "minimum": 2},
+                           "kind": {"enum": ["correction", "restatement"]},
+                           # what was wrong with the accepted version, specifically
+                           "defect": {"type": "string", "minLength": 30},
+                           # optional: a check of this result that shows the defect is fixed
+                           "evidence": {"type": "string"}}}},
         "review": {"enum": ["draft", "typed", "reviewed"]},
         # how far a human has taken it (roadmap item 8); signoffs record each sign-off
         "trust": {"enum": ["ai-proposed", "ai-refereed", "human-read", "human-checked",

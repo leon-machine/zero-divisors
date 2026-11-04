@@ -110,6 +110,15 @@ class McpHardening(unittest.TestCase):
                                     layers="4")
         self.assertNotIn(4, r["layers_run"])
 
+    def test_amendment_draft_must_say_what_it_fixes(self):
+        from tp.model import load_store, write_lock
+        write_lock(load_store(self.root))
+        draft = self.draft.replace("version: 1", "version: 2").replace(
+            "## formal\n", "## formal\nCorrected: ")
+        r = self.lab.validate_draft(draft, proofs={"proof-direct.tex": "Direct.\n"})
+        self.assertFalse(r["ok"])
+        self.assertIn("E605", {f["code"] for f in r["findings"]})
+
     def test_document_ids_are_checked(self):
         with self.assertRaises(ValueError):
             self.lab.generate_doc("doc: ../store/config\nspine: []\n")

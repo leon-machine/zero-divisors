@@ -60,6 +60,7 @@ nav a[aria-current="page"] { background: var(--ink); color: var(--panel); }
 .sharemenu .sh-t { padding: 4px 8px 8px; color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
 .sharemenu button, .sharemenu a { display: flex; width: 100%; box-sizing: border-box; align-items: center; gap: 10px; padding: 7px 8px; border: 0; background: none; color: var(--text, inherit); font: inherit; text-decoration: none; border-radius: 6px; cursor: pointer; text-align: left; }
 .sharemenu button:hover, .sharemenu a:hover, .sharemenu button:focus-visible, .sharemenu a:focus-visible { background: rgba(236,229,217,.08); }
+.sharemenu svg { width: 16px; height: 16px; flex: none; fill: currentColor; opacity: .85; }
 .sharemenu .sh-ok { padding: 4px 8px; color: var(--muted); font-size: 12.5px; min-height: 1em; }
 /* the counts sit between the views and the switch, and are shown only when they fit whole */
 .stats { flex: 1 1 0; min-width: 0; overflow: hidden; white-space: nowrap; text-align: right; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -214,6 +215,11 @@ table.metrics td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .contrib .args { color: var(--muted); font: 12px var(--mono); }
 .contrib .callout { border-left: 3px solid var(--accent); padding: 8px 12px; margin: 12px 0; background: var(--chipbg); border-radius: 0 8px 8px 0; font-size: 14.5px; }
 .contrib details { margin: 8px 0; }
+.contrib .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 18px 0 6px; }
+.contrib .ways > div { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; background: var(--chipbg); }
+.contrib .ways b { font: 600 16px var(--serif); }
+.contrib .ways p { margin: 6px 0 0; font-size: 14.5px; }
+.contrib .callout.first { font-size: 15.5px; border-left-width: 4px; margin: 18px 0 8px; }
 .agentbox { border: 1px dashed var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 14px; font: 14.5px/1.5 var(--sans); }
 .agentbox code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--chipbg); padding: 1px 5px; border-radius: 5px; }
 ol.refs { list-style: none; padding: 0; display: grid; gap: 12px; margin-top: 16px; }
@@ -1926,8 +1932,17 @@ const evidChip = n => passing(n) && n.cov ? `<span class="chip warn" title="${es
   : EVID_WORD[n.check] ? `<span class="chip ${passing(n) ? "good" : ""}">${EVID_WORD[n.check]}</span>` : "";
 const trustChip = n => n.trust ? `<span class="chip ${n.trust === "human-checked" || n.trust === "published" ? "good" : ""}" title="Trust: ${esc(TRUST_ABOUT[n.trust] || "")}">${esc(TRUST_WORD[n.trust] || n.trust)}</span>` : "";
 // who did what: the names in the heading, the roles and the evidence for the model under Source
-const byline = n => (n.credit || []).length ? `<p class="byline" title="${esc(n.credit.map(c => c.name + ": " + c.role).join("; "))}">${esc(n.credit[0].name)}${n.credit.length > 1 ? " · with " + n.credit.slice(1).map(c => esc(c.name)).join(", ") : ""}</p>` : "";
-const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
+// the original credit first ("Leon Butler · with Claude Fable 5"), then each amendment by the version it made
+const byline = n => { const cr = n.credit || []; if (!cr.length) return "";
+  const orig = cr.filter(c => !c.version), amend = new Map();
+  cr.filter(c => c.version).forEach(c => { if (!amend.has(c.version)) amend.set(c.version, []); amend.get(c.version).push(c.name); });
+  const head = orig.length ? esc(orig[0].name) + (orig.length > 1 ? " · with " + orig.slice(1).map(c => esc(c.name)).join(", ") : "") : "";
+  const kindOf = v => ((n.amendments || []).find(a => a.version === v) || {}).kind;
+  const verb = { correction: "corrected", restatement: "restated" };
+  const tail = [...amend.entries()].sort((a, b) => a[0] - b[0]).map(([v, ns]) => `${verb[kindOf(v)] || "amended"} in v${v} by ${ns.map(esc).join(", ")}`);
+  return `<p class="byline" title="${esc(cr.map(c => c.name + ": " + c.role + (c.version ? " (v" + c.version + ")" : "")).join("; "))}">${[head, ...tail].filter(Boolean).join(" · ")}</p>`; };
+const amendNote = n => (n.amendments || []).length ? `<p class="note">Amendments:</p><ul class="hist">${[...n.amendments].sort((a, b) => a.version - b.version).map(a => `<li><span class="v">v${esc(a.version)}</span><span><b>${a.kind === "restatement" ? "Restatement" : "Correction"}</b>${(() => { const by = (n.credit || []).filter(c => c.version === a.version).map(c => c.name); return by.length ? " by " + by.map(esc).join(", ") : ""; })()}: ${esc(a.defect)}${a.evidence ? ` (shown by <code>${esc(a.evidence)}</code>)` : ""}</span></li>`).join("")}</ul>` : "";
+const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
 function resultHead(n) {
   return `<div class="eyebrow" style="margin-top:${trail ? 12 : 0}px"><span style="color:${subjColour(n.subject)}">●</span> ${esc(subjTitle(n.subject))}${PROGS.size && n.programme ? ` · ${esc(progTitle(n.programme))}` : ""}</div>
     <h2>${esc(n.title)}</h2>
@@ -2006,6 +2021,8 @@ function renderResult(n, fly) {
       <p class="note">${colls.length ? "In: " + colls.map(c => esc(c.title)).join("; ") + "." : ""}${loc.number ? ` Numbered ${esc(loc.number)} there.` : ""}</p>
       ${n.typing_note ? `<p class="note">${esc(n.typing_note)}</p>` : ""}
       ${creditNote(n)}
+      ${amendNote(n)}
+      ${n.cov ? `<p class="note">${n.cov === "sampled" ? "Its check covers sample cases only" : "Its check covers part of the statement"}: a check of the general case would strengthen it. <a href="#contribute/build">How to contribute</a></p>` : ""}
       <p class="note">Trust: ${n.trust ? `${esc(TRUST_WORD[n.trust] || n.trust)}. ${esc(TRUST_ABOUT[n.trust] || "")}` : "not recorded."}${signs.length ? "" : " No human sign-off is recorded."}</p>
       ${signs.length ? `<ul class="hist">${signs.map(x => `<li><span class="d">${esc(x.date)}</span><span class="v">v${esc(x.version)}</span><span><b>${esc(TRUST_WORD[x.level] || x.level)}</b> by ${esc(x.by)}${x.note ? ": " + esc(x.note) : ""}</span></li>`).join("")}</ul>` : ""}
       <p class="note" style="font-family:var(--mono)">${esc(n.id)} · version ${n.version}</p></details>
@@ -2044,6 +2061,7 @@ function pageBase() {
   let base = null;
   try { base = (window.top === window ? location.href : window.top.location.href).split("#")[0]; } catch (e) { /* a viewer on another origin */ }
   if (!base && /^https:\/\/claude\.ai\/.*artifact/.test(document.referrer || "")) base = document.referrer.split("#")[0];
+  if ((!base || !/^https?:/.test(base)) && DATA.preview_url) base = DATA.preview_url;   // the private preview: its own address is hidden from the page
   return base && /^https?:/.test(base) ? base : null;
 }
 function linkFor(hash) {
@@ -2069,6 +2087,8 @@ function shareInfo(id) {
   const v = VIEW_TITLE[h] ? h : (document.querySelector("main > .view.on") || {}).id?.replace(/view$/, "") || "principle";
   return { hash: VIEW_TITLE[v] ? v : "", title: VIEW_TITLE[v] || "Zero Divisors", text: "" };
 }
+// icons: Font Awesome Free 6.7.2 by @fontawesome, https://fontawesome.com, CC BY 4.0 (brand marks belong to their owners)
+const SHARE_ICON = {"Copy link": "<svg viewBox=\"0 0 640 512\" aria-hidden=\"true\"><path d=\"M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z\"/></svg>", "Email": "<svg viewBox=\"0 0 512 512\" aria-hidden=\"true\"><path d=\"M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z\"/></svg>", "X": "<svg viewBox=\"0 0 512 512\" aria-hidden=\"true\"><path d=\"M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z\"/></svg>", "LinkedIn": "<svg viewBox=\"0 0 448 512\" aria-hidden=\"true\"><path d=\"M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z\"/></svg>", "Bluesky": "<svg viewBox=\"0 0 512 512\" aria-hidden=\"true\"><path d=\"M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z\"/></svg>", "Facebook": "<svg viewBox=\"0 0 512 512\" aria-hidden=\"true\"><path d=\"M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z\"/></svg>", "Reddit": "<svg viewBox=\"0 0 512 512\" aria-hidden=\"true\"><path d=\"M0 256C0 114.6 114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256L37.1 512c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zM349.6 153.6c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34c-34.5 3.7-61.4 33-61.4 68.4l0 .2c-37.5 1.6-71.8 12.3-99 29.1c-10.1-7.8-22.8-12.5-36.5-12.5c-33 0-59.8 26.8-59.8 59.8c0 24 14.1 44.6 34.4 54.1c2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54c0-33-26.8-59.8-59.8-59.8c-13.7 0-26.3 4.6-36.4 12.4c-27.4-17-62.1-27.7-100-29.1l0-.2c0-25.4 18.9-46.5 43.4-49.9l0 0c4.4 18.8 21.3 32.8 41.5 32.8zM177.1 246.9c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6s-31.4-8.8-30.4-30.5s15.4-38.3 32.1-38.3zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9 .8-6.2 3.9-6.5c18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1 .3 5.1 3.6 3.9 6.5z\"/></svg>", "WhatsApp": "<svg viewBox=\"0 0 448 512\" aria-hidden=\"true\"><path d=\"M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z\"/></svg>", "More…": "<svg viewBox=\"0 0 448 512\" aria-hidden=\"true\"><path d=\"M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z\"/></svg>"};
 const SHARE_TO = [
   ["Email", (u, t, x) => `mailto:?subject=${encodeURIComponent(t)}&body=${encodeURIComponent((x ? x + "\n\n" : "") + u)}`],
   ["X", (u, t) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(u)}&text=${encodeURIComponent(t)}`],
@@ -2081,9 +2101,9 @@ function openShare(anchor, info) {
   const m = document.getElementById("sharemenu"), url = linkFor(info.hash), r = anchor.getBoundingClientRect();
   const copyText = url || ("#" + info.hash);
   m.innerHTML = `<div class="sh-t">${esc(info.title)}</div>
-    <button data-act="copy">Copy link</button>
-    ${url ? SHARE_TO.map(([name, f]) => `<a href="${esc(f(url, info.title, info.text))}" target="_blank" rel="noopener">${esc(name)}</a>`).join("") : ""}
-    ${url && navigator.share ? `<button data-act="native">More…</button>` : ""}
+    <button data-act="copy">${SHARE_ICON["Copy link"]}Copy link</button>
+    ${url ? SHARE_TO.map(([name, f]) => `<a href="${esc(f(url, info.title, info.text))}" target="_blank" rel="noopener">${SHARE_ICON[name] || ""}${esc(name)}</a>`).join("") : ""}
+    ${url && navigator.share ? `<button data-act="native">${SHARE_ICON["More…"]}More…</button>` : ""}
     <div class="sh-ok" id="shok">${url ? "" : "This viewer does not show the page its own address: copy the link and add it to the end of the page's address."}</div>`;
   m.hidden = false;
   const w = m.offsetWidth, h = m.offsetHeight;
@@ -2344,7 +2364,7 @@ function renderProblems() {
   const tabs = [["curated", `Problems to attack (${ops.length})`], ["conjectures", `Every conjecture and open question (${open.length})`]];
   el.innerHTML = `<div class="eyebrow">For other agents and readers</div><h2>Open problems</h2>
     <p class="lead">What the store does not yet settle: the papers' own successor problems, the conjectures, and the tensions and gaps found by review. Each problem says why it matters, what is known, where to start and what would settle it.</p>
-    <details class="agentbox"><summary><b>Working on one?</b></summary> An AI agent can read these through the graph's MCP server: <code>list_open_problems</code> (filter by area, kind, difficulty or status) and <code>get_open_problem</code>. Anything substantive can be sent as a pull request, or by email. <a href="#contribute">Explore with AI: set-up and how to send findings</a>.</details>
+    <details class="agentbox"><summary><b>Working on one?</b></summary> An AI agent can read these through the graph's MCP server: <code>list_open_problems</code> (filter by area, kind, difficulty or status) and <code>get_open_problem</code>. Work on one comes into the graph as a pull request. <a href="#contribute/build">How to contribute</a>.</details>
     <div class="tabs">${tabs.map(([k, l]) => `<button data-optab="${k}" aria-pressed="${k === opTab}">${esc(l)}</button>`).join("")}</div><div id="opbody"></div>`;
   el.querySelectorAll("[data-optab]").forEach(b => b.onclick = () => { opTab = b.dataset.optab; renderProblems(); });
   const body = document.getElementById("opbody");
@@ -2380,7 +2400,7 @@ function renderProblems() {
       ${(o.attack || []).length ? `<div class="field"><b>Routes of attack</b><ul>${o.attack.map(a => `<li class="prose">${tex(a)}</li>`).join("")}</ul></div>` : ""}
       ${o.success ? `<div class="field"><b>What would settle it</b><div class="prose">${tex(o.success)}</div></div>` : ""}
       <div class="field"><b>Start from</b>${ents.map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(" · ") || "None listed"}</div>
-      <div class="note">Source: ${esc(o.source || "")} · id <code>${esc(o.id)}</code></div>`; };
+      <div class="note">Source: ${esc(o.source || "")} · id <code>${esc(o.id)}</code> · <a href="#contribute/build">Working on it?</a></div>`; };
   const draw = () => {
     const q = opFilter.q.toLowerCase();
     const shown = ops.filter(o => (!opFilter.area || o.area === opFilter.area) && (!opFilter.kind || o.kind === opFilter.kind)
@@ -2569,16 +2589,23 @@ const TOOL_GROUPS = [
   ["Open problems", ["list_open_problems", "get_open_problem"]],
   ["Check and submit", ["validate_draft", "propose_claim", "list_proposals"]],
   ["Documents", ["generate_doc", "regenerate_doc"]]];
+let pendingAnchor = null;
 function renderContribute() {
   const el = document.getElementById("contribute");
   const tools = DATA.mcp_tools || [], byName = new Map(tools.map(t => [t.name, t]));
-  const groups = TOOL_GROUPS.slice(0, 4).map(([g, names]) => [g, names.filter(n => byName.has(n)).map(n => byName.get(n))]);
+  const groups = TOOL_GROUPS.slice(0, 4).concat([["Check a draft", ["validate_draft"]]]).map(([g, names]) => [g, names.filter(n => byName.has(n)).map(n => byName.get(n))]);
   const toolRows = groups.filter(g => g[1].length).map(([g, ts]) => `<tr><th colspan="2">${esc(g)}</th></tr>` + ts.map(t =>
     `<tr><td><code>${esc(t.name)}</code></td><td>${esc(t.description)}${t.args.length ? `<div class="args">${t.args.map(a => esc(a) + (t.required.includes(a) ? "" : "?")).join(", ")}</div>` : ""}</td></tr>`).join("")).join("");
   const code = s => `<pre><code>${esc(s)}</code></pre>`;
-  el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers and their AI</div><h2>Explore with AI</h2>
-    <p class="lead">The Physics Graph can be read by an AI assistant directly. Connect it to the graph's MCP server and it can look up any result with its statement, proof and machine check, follow what a result rests on and what rests on it, search by meaning, and read the open problems. Everything runs on your own machine, from a copy of the repository.</p>
-    <p>It is also a good way simply to browse. Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at whatever level you ask for: a short summary, a plain-language explanation, or the full proof with its premises. Follow up with "what does that rest on?" or "what comes next?" to walk the material in your own order, and ask for a reading list or a summary of any subject.</p>
+  const ex = DATA.contrib_example || {};
+  el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers, researchers and their AI</div><h2>Explore with AI</h2>
+    <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
+    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
+    <div class="ways">
+      <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>
+      <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer.</p></div>
+      <div><b>Build</b><p>Take an open problem, a weak check or a gap you have found, write a new result in the graph's form, and send it. <a href="#contribute/build">How to contribute</a></p></div>
+    </div>
 
     <h3>Set up</h3>
     <p>Python 3.11 or later, then:</p>
@@ -2588,33 +2615,41 @@ function renderContribute() {
     <p><b>The Claude desktop app, or any client that runs stdio MCP servers</b>: add this to its server list, with your own path. On Windows, <code>register_mcp.ps1</code> does it for the desktop app.</p>
     ${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}
 
+    <h3 id="build">Working on something?</h3>
+    <p>If you or your AI are working on an open problem, a check that could be sharper, an error or a gap in a proof, or a new result, it can come into the graph. Every result is reviewed before it enters: nothing is added, and the site does not change, until it has been read and accepted. Your name, and the AI model that drafted the work, are shown on every result you add.</p>
+    <ol class="route">
+      <li><b>Read the conventions first</b>: <code>conventions</code>, then <code>notation</code> for the macros a statement may use.</li>
+      <li><b>Pick a target.</b> <code>list_open_problems</code> and <code>get_open_problem</code> for the problems the papers leave open (or the Open problems page here); a result marked "Checked at samples" or "Partly checked" for a check to strengthen; or a gap you have found. Read what it rests on with <code>get_claim</code>, <code>get_proof</code> and <code>cone</code>.</li>
+      <li><b>Write it as a folder</b>, <code>store/&lt;kind&gt;/&lt;id&gt;/</code>, one per result:
+        <ul>
+          <li><code>entity.md</code>: the statement at four levels, the results it rests on, each pinned to the version read (<code>id@n</code>), who proposed it, whether an AI was involved, and a <code>credit</code> list: your name as you want it shown, and the AI model, with its version, that drafted the proof or amendment;</li>
+          <li><code>proof-main.tex</code>: the proof, citing each premise with <code>\\claimref{id}</code>;</li>
+          <li><code>check.py</code>: a machine check in exact arithmetic, using the series' <code>GA.py</code>.</li>
+        </ul>
+        An amendment is judged by what it fixes, not by how much it changes. A wording change keeps the version and earns no credit entry. A <b>correction</b> (a proof step, a check, the status or a link was wrong; the statement stands) or a <b>restatement</b> (the statement itself was wrong) raises the version and adds an <code>amendments</code> entry saying what was wrong with the accepted version, <code>{version, kind, defect, evidence}</code>, where the evidence is a check of the result that shows the fix. It keeps every credit entry already there, so the original author stays named, and adds one for you and one for the AI that drafted the change, each with the new version. A different or stronger conclusion is a new result, linked to the original. <code>validate_draft</code> refuses an amendment that drops an earlier credit, adds none of its own, does not say what it fixes, or declares a kind that does not match what changed. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
+      <li><b>Check it yourself.</b> <code>validate_draft</code> runs the graph's rules against your draft and reports every problem it introduces, including any it causes in other results. Then run the evidence on your copy: <code>python -m tp check --store store --keep-going</code>.</li>
+      <li><b>Open a pull request.</b> Fork <a href="https://github.com/leon-machine/phys-graph" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request against <code>main</code>. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with the rules taken from <code>main</code> and every contributed <code>check.py</code> sealed off from the network. Nothing is merged until it has been reviewed.</li>
+    </ol>
+    ${ex["entity.md"] ? `<details><summary><b>A worked example</b>: a small result in the graph's form, which passes every check</summary>
+      <p><code>entity.md</code></p>${code(ex["entity.md"])}
+      <p><code>proof-main.tex</code></p>${code(ex["proof-main.tex"] || "")}
+      <p><code>check.py</code></p>${code(ex["check.py"] || "")}</details>` : ""}
+    <p class="note">Results are licensed CC BY 4.0 and the code MIT; by sending a result you agree to it being published under CC BY 4.0, credited to you by name, with the model you state. The model is shown as you give it; it cannot be checked from here.</p>
+
     <h3>Things to ask</h3>
     <ul>
       <li>"Call <code>conventions</code>, then explain the transport principle and the results it rests on."</li>
       <li>"What does the dark matter ratio of 5.364 depend on? Show me the premises and which of them are assumed."</li>
       <li>"List the open problems about black hole entropy and summarise what is known for each."</li>
       <li>"Is anything in the graph in tension with current data? Check the registered predictions."</li>
+      <li>"Which results are only checked at samples? Pick one and write a check that covers the general case."</li>
     </ul>
 
-    <h3>What the agent can read</h3>
+    <h3>What the agent can use</h3>
     <p class="note">The server's own list, read from it when this site was built. A name ending in ? is optional.</p>
     <table class="metrics tools"><tbody>${toolRows}</tbody></table>
-
-    <h3>Found something?</h3>
-    <p>If you or your AI find something substantive, an error, a gap in a proof, a new result or a sharper check, please send it. Every result is reviewed before it enters the graph: nothing is added, and the site does not change, until it has been read and accepted.</p>
-    <p><b>Send it in the graph's own format</b>, so that it can be checked and added directly. Each result is one folder, <code>store/&lt;kind&gt;/&lt;id&gt;/</code>, containing:</p>
-    <ul>
-      <li><code>entity.md</code>: the statement at four levels (formal, technical, lay, one-liner), the results it rests on, each pinned to the version read (<code>id@n</code>), who proposed it, with whether an AI was involved, and a <code>credit</code> list: your name as you want it shown on the result, and the AI model, with its version, that drafted the proof or amendment (for example Claude Opus 5.5);</li>
-      <li><code>proof-main.tex</code>: the proof, citing each premise with <code>\\claimref{id}</code>;</li>
-      <li><code>check.py</code>: a machine check in exact arithmetic, using the series' <code>GA.py</code>.</li>
-    </ul>
-    <p>Your AI can produce this for you. Ask it to read <code>docs/CONTRIBUTING-rules.md</code> and the worked example in <code>docs/example-contribution/</code>, write the folder, and run <code>validate_draft</code> on it and <code>python -m tp check --store store --keep-going</code> on your copy. A correction to an existing result can be the edited <code>entity.md</code>, with its version raised, and a note of what changed and why.</p>
-    <p><b>By pull request</b> (preferred): fork <a href="https://github.com/leon-machine/phys-graph" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with every contributed <code>check.py</code> sealed off from the network, and nothing is merged until it has been reviewed.</p>
-    <p><b>By email</b>, if you do not use GitHub: zip the folder and send it with the validator's output.</p>
-    <p><button class="btn" id="mailbtn">Show the address</button> <span id="mailto"></span></p>
-    <p class="note">Results are licensed CC BY 4.0 and the code MIT; by sending a result you agree to it being published under CC BY 4.0, credited to you by name, with the model you state. The model is shown as you give it; it cannot be checked from here.</p>
   </div>`;
-  document.getElementById("mailbtn").onclick = () => { const a = ["lbutler.math", "gmail.com"].join("@"); document.getElementById("mailto").innerHTML = `<a href="mailto:${a}?subject=Physics%20Graph">${a}</a>`; document.getElementById("mailbtn").remove(); };
+  if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
 function showView(v) {
   document.querySelectorAll("main > .view").forEach(s => s.classList.toggle("on", s.id === v || s.id === v + "view"));
@@ -2632,6 +2667,7 @@ function route() {
   if (h.startsWith("doc:")) { showView("documents"); openDoc(h.slice(4)); return; }
   if (byQ.has(h)) { showView("universe"); showQuantity(h); return; }
   if (NOTES[h] && noteHost(NOTES[h])) { showView("universe"); openNote(h); return; }
+  if (h === "contribute/build") { pendingAnchor = "build"; if (rendered.contribute) { const t = document.getElementById("build"); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
   const sl = h.match(/^(principle|singularity)\/(\d+)$/);
   if (sl) { const f = document.getElementById(sl[1] === "principle" ? "princframe" : "singframe");
     const want = (sl[1] === "principle" ? "principle.html" : "singularity.html") + "#" + sl[2];

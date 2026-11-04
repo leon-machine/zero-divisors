@@ -96,8 +96,8 @@ AI-written prose that the audit checks against the claims.
 Register `python -m tp.mcp_server --store <path to store>` as a stdio MCP
 server, with this folder as the working directory (or with PYTHONPATH set to
 it). CONTRIBUTING.md has the set-up for Claude Code and other clients. Findings
-can be sent as a pull request, or by email for those who do not use GitHub (see
-CONTRIBUTING.md); nothing enters until the maintainer has reviewed it.
+come in as pull requests (see CONTRIBUTING.md); nothing enters until the maintainer
+has reviewed it.
 Tools: conventions, notation, list_programmes, list_subjects, find_text,
 list_papers, list_entities, get_claims, list_tags, list_open_problems,
 get_open_problem, search_claims, get_claim, cone, neighbourhood, get_proof,

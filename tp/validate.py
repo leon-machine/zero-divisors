@@ -640,6 +640,15 @@ def layer2(store: Store, rep: Report):
             elif e.version == old["version"] and e.substantive_hash() != old["hash"]:
                 rep.add("E206", eid, "substantive fields changed without a version bump",
                         f"set version: {e.version + 1}")
+            if "credit" in old:
+                from .credit import compare, describe
+                removed, unclaimed = compare(old["credit"], e.meta.get("credit"), old["version"], e.version)
+                for r in removed:
+                    rep.add("W220", eid, f"a credit entry of the accepted version is missing or changed: {describe(r)}",
+                            "keep every earlier credit entry; an amendment adds its own")
+                if unclaimed:
+                    rep.add("W221", eid, f"version {e.version} has no credit entry of its own",
+                            f"add to credit: {{name: <who>, role: <what was done>, version: {e.version}}}")
 
 
 def programmes(store):
@@ -1484,6 +1493,28 @@ def layer6(store: Store, rep: Report, author: str | None):
             rep.add("E601", eid, "only a maintainer may remove an assumes edge")
         if new.get("ledger") != old.get("ledger"):
             rep.add("E601", eid, "only a maintainer may change a declared ledger class")
+        if "credit" in old:
+            from .credit import compare, describe
+            removed, unclaimed = compare(old["credit"], new["credit"], old.get("version"), new["version"])
+            for r in removed:
+                rep.add("E603", eid, f"only a maintainer may remove or change a credit entry: {describe(r)}",
+                        "keep every earlier credit entry as it was")
+            if unclaimed:
+                rep.add("E604", eid, f"an amendment must credit itself: version {new['version']} has no "
+                        "credit entry of its own",
+                        f"add to credit: {{name: <your name>, role: <what you changed>, version: {new['version']}}}, "
+                        "and one for the AI model that drafted it")
+        # an amendment says what it fixes, and its kind matches what changed (tp/amend.py)
+        from .amend import findings as amendment_findings
+        for code, msg, fix in amendment_findings(old, e):
+            if code == "E605":
+                rep.add("E605", eid, msg, fix)
+            elif code == "E606":
+                rep.add("E606", eid, msg, fix)
+            elif code == "E607":
+                rep.add("E607", eid, msg, fix)
+            else:
+                rep.add("E608", eid, msg, fix)
     for gone in sorted(set(store.lock) - set(store.entities)):
         if gone not in store.tombstones:
             rep.add("E601", gone, "entity removed without being retired to tombstones.yaml")
@@ -1523,9 +1554,11 @@ def validate(store: Store, layers=(1, 2, 3, 4, 5, 6), keep_going=False,
 
 # warnings, most important first: a weak or untestable check outranks a quiet premise
 WARNING_ORDER = ("W413", "W408", "W125", "W510", "W414", "W306", "W411", "W503", "W124", "W127",
-                 "W405", "W215", "W501", "W209", "W210", "W212")
+                 "W405", "W215", "W501", "W209", "W210", "W212", "W220", "W221")
 
 CODE_TITLES = {
+    "W220": "a credit entry of the accepted version is missing or changed",
+    "W221": "an amendment with no credit entry of its own",
     "W413": "weak check: most literal perturbations still pass",
     "W408": "check has no integer literal to perturb",
     "W125": "judge: statement overclaims or is misstated",

@@ -79,6 +79,21 @@ class Entity:
         return list(self.meta.get(key) or [])
 
     def substantive_hash(self) -> str:
+        return _digest(self._substantive())
+
+    def substantive_parts(self) -> dict:
+        """Digests of the parts of the substantive content, so that an amendment can be checked
+        against the kind it declares: the statement (the formal level), the proofs (with the
+        derivations naming them), the checks (with checked_by) and the rest (status, links)."""
+        sub = self._substantive()
+        groups = {"statement": ("formal",), "proofs": ("proofs", "derivations"),
+                  "checks": ("check_files", "checked_by")}
+        out = {g: _digest({k: sub.get(k) for k in ks}) for g, ks in groups.items()}
+        taken = {k for ks in groups.values() for k in ks}
+        out["rest"] = _digest({k: v for k, v in sub.items() if k not in taken})
+        return out
+
+    def _substantive(self) -> dict:
         sub = {k: self.meta.get(k) for k in SUBSTANTIVE_FIELDS}
         # fields added to the list later must not change the hash of an
         # entity that does not use them
@@ -98,11 +113,15 @@ class Entity:
                     with open(fp, "rb") as fh:
                         checks[fname] = hashlib.sha256(fh.read()).hexdigest()
         sub["check_files"] = checks
-        blob = json.dumps(sub, sort_keys=True, default=str)
-        # moving a pin to a premise's new version is a review act, not a change of
-        # content: pins are left out, the ids they point at are kept
-        blob = re.sub(r'"([a-z][a-z0-9-]*(?:\.[a-z0-9][a-z0-9-]*)+)@[1-9][0-9]*"', r'"\1"', blob)
-        return hashlib.sha256(blob.encode()).hexdigest()[:16]
+        return sub
+
+
+def _digest(sub) -> str:
+    blob = json.dumps(sub, sort_keys=True, default=str)
+    # moving a pin to a premise's new version is a review act, not a change of
+    # content: pins are left out, the ids they point at are kept
+    blob = re.sub(r'"([a-z][a-z0-9-]*(?:\.[a-z0-9][a-z0-9-]*)+)@[1-9][0-9]*"', r'"\1"', blob)
+    return hashlib.sha256(blob.encode()).hexdigest()[:16]
 
 
 SECTION_RE = re.compile(r"^## (formal|technical|lay|one-liner)\s*$", re.M)
@@ -229,7 +248,12 @@ def lock_entry(e: Entity) -> dict:
                       for a in (d.get("assumes") or [])})
     return {"version": e.version, "hash": e.substantive_hash(),
             "status": e.status, "assumes": assumes,
-            "ledger": e.meta.get("ledger")}
+            "ledger": e.meta.get("ledger"),
+            # who did what, kept so that an amendment can be checked to keep every earlier credit
+            "credit": [[str(c.get("name", "")), str(c.get("role", "")), c.get("version")]
+                       for c in (e.meta.get("credit") or []) if isinstance(c, dict)],
+            # what each part looked like, so that an amendment can be checked against its kind
+            "parts": e.substantive_parts()}
 
 
 def write_lock(store: Store) -> None:

@@ -34,6 +34,27 @@ class CreditTest(unittest.TestCase):
                 if named and meta.get("proposed_by", {}).get("kind") != "human":
                     self.assertTrue(c.get("source"), f"{path}: a model named without a source")
 
+    def test_amendment_keeps_earlier_credit(self):
+        old = [["Leon Butler", "idea, direction and review", None],
+               ["Claude Fable 5", "mathematics and drafting", None]]
+        kept = [{"name": "Leon Butler", "role": "idea, direction and review"},
+                {"name": "Claude Fable 5", "role": "mathematics and drafting"},
+                {"name": "Ada Lovelace", "role": "correction", "version": 4}]
+        self.assertEqual(credit.compare(old, kept, 3, 4), ([], False))
+        dropped = kept[1:]
+        removed, _ = credit.compare(old, dropped, 3, 4)
+        self.assertEqual(removed, [("Leon Butler", "idea, direction and review", None)])
+        self.assertEqual(credit.compare(old, kept[:2], 3, 4), ([], True))
+        self.assertEqual(credit.compare(old, kept[:2], 3, 3), ([], False))
+
+    def test_lock_records_credit(self):
+        import json
+        with open(os.path.join(LAB, "store", ".tp-lock.json"), encoding="utf-8") as fh:
+            lock = json.load(fh)
+        entries = lock.get("entities", lock)
+        some = next(iter(entries.values()))
+        self.assertTrue(some.get("credit"))
+
 
 if __name__ == "__main__":
     unittest.main()
