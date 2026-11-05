@@ -1072,8 +1072,15 @@ function overlayCar(s){
   // the tower sits clear of Part IV's title, which stays over the first step
   const narrow = OW < OH, W = narrow ? OW * 0.5 : Math.min(OW * 0.24, 300), tb = titleBottom(PART_OF.car), besideX = tb.right + 200 + W / 2;
   const beside = !narrow && besideX + W / 2 + 100 <= OW;                // room beside the title: the tower stands to its right
-  const cx = beside ? Math.max(OW / 2, besideX) : OW / 2, yb = narrow ? OH * 0.56 : OH * 0.62, yt = beside ? OH * 0.18 : Math.max(narrow ? OH * 0.17 : OH * 0.18, tb.bottom + (narrow ? 22 : 30)), n = 4, gap = (yb - yt) / (n + 0.9);
-  const H = narrow ? 20 : 28, shown = Math.min(n, 1 + Math.floor(Math.max(0, s - 0.02) / 0.09));
+  const cx = beside ? Math.max(OW / 2, besideX) : OW / 2, yb = narrow ? OH * 0.56 : OH * 0.62, n = 4, H = narrow ? 20 : 28;
+  // below the title only while it shows (the scene's first subtitle), rising with it as it fades; never so far
+  // down that the floors close up, which a tall title on a narrow window would otherwise do
+  const yFree = narrow ? OH * 0.17 : OH * 0.18, titleK = beside ? 0 : Math.max(0, Math.min(1, (0.3 - s) / 0.05));
+  const yTitle = Math.min(Math.max(yFree, tb.bottom + (narrow ? 22 : 30)), yb - (n + 0.9) * H * 1.3), yt = yFree + (yTitle - yFree) * titleK, gap = (yb - yt) / (n + 0.9);
+  // with no room for the tower beside or below the title, it waits for the title to go and builds as it fades
+  const cramped = !beside && tb.bottom + (narrow ? 22 : 30) > yb - (n + 0.9) * H * 1.6, carA = cramped ? 1 - titleK : 1;
+  if (carA <= 0) return; ox.globalAlpha = carA;
+  const shown = Math.min(n, 1 + Math.floor(Math.max(0, s - 0.02) / 0.09));
   const names = ['spacetime, 1 + 3', '2 + 4: the completion', '3 + 5', '4 + 6'];
   for (let k = 0; k < shown; k++) { const y = yb - k * gap;
     ox.fillStyle = 'rgba(147,180,218,0.1)'; ox.strokeStyle = k ? 'rgba(147,180,218,0.7)' : C.gold; ox.lineWidth = 1.3; ox.fillRect(cx - W / 2, y - H / 2, W, H); ox.strokeRect(cx - W / 2, y - H / 2, W, H);
@@ -1081,19 +1088,19 @@ function overlayCar(s){
     if (narrow) mono(names[k], cx, y - H / 2 - 9, k ? C.t2 : C.gold, 'center', 10); else lab(names[k], cx - W / 2 - 16, y, k ? C.t2 : C.gold, 'right', 15);
     lab((k + 1) + (k ? ' switches' : ' switch'), cx + W / 2 + (narrow ? 8 : 16), y, C.green, 'left', narrow ? 12 : 15);
     if (k > 0) { const xa = cx - W / 2 + 14; arrowLine(xa, y + gap - H / 2 - 2, xa, y + H / 2 + 3, C.red, 1.6, 6); if (k === 1) mono('+1 time, +1 space', xa + 10, y + gap / 2, C.red, 'left', narrow ? 9 : 11); } }
-  if (s > 0.42) { ox.globalAlpha = Math.min(1, (s - 0.42) / 0.05); mono('⋮', cx, yb - n * gap + gap * 0.42, C.t2, 'center', 18); ox.globalAlpha = 1; }
+  if (s > 0.42) { ox.globalAlpha = carA * (Math.min(1, (s - 0.42) / 0.05)); mono('⋮', cx, yb - n * gap + gap * 0.42, C.t2, 'center', 18); ox.globalAlpha = carA * (1); }
   const aT = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
-  if (aT > 0) { ox.globalAlpha = aT; const y = yt;
+  if (aT > 0) { ox.globalAlpha = carA * (aT); const y = yt;
     const gr = ox.createLinearGradient(cx - W * 0.6, 0, cx + W * 0.6, 0); gr.addColorStop(0, 'rgba(207,155,181,0.05)'); gr.addColorStop(0.5, 'rgba(207,155,181,0.3)'); gr.addColorStop(1, 'rgba(207,155,181,0.05)');
     ox.fillStyle = gr; ox.fillRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2); ox.strokeStyle = C.plum; ox.lineWidth = 1.4; ox.strokeRect(cx - W * 0.6, y - H * 0.6, W * 1.2, H * 1.2);
     for (let j = 0; j < 40; j++) { ox.fillStyle = 'rgba(166,196,151,0.85)'; ox.beginPath(); ox.arc(cx - W * 0.56 + W * 1.12 * hash(j + 70), y - H * 0.45 + H * 0.9 * hash(j + 170), 2, 0, 2 * Math.PI); ox.fill(); }
     if (narrow) { mono('the CAR limit: every floor at once', cx, y + H * 0.6 + 12, C.plum, 'center', 10); }
     else if (cx + W * 0.6 + 330 <= OW) { lab('the CAR limit: every floor at once', cx + W * 0.6 + 16, y - 9, C.plum, 'left', 16); mono('as many switches as you like: a free fermion field', cx + W * 0.6 + 16, y + 12, C.t2, 'left', 11); }
     else { lab('the CAR limit: every floor at once', cx, y + H * 0.6 + 16, C.plum, 'center', 14); }
-    ox.globalAlpha = 1; }
-  if (s > 0.3) { ox.globalAlpha = Math.min(1, (s - 0.3) / 0.05) * 0.9; const xl = narrow ? 14 : cx - W / 2 - 180;
+    ox.globalAlpha = carA * (1); }
+  if (s > 0.3) { ox.globalAlpha = carA * (Math.min(1, (s - 0.3) / 0.05) * 0.9); const xl = narrow ? 14 : cx - W / 2 - 180;
     ox.strokeStyle = C.green; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(xl, yb + H / 2); ox.lineTo(xl, yt - H / 2); ox.stroke();
-    ox.save(); ox.translate(xl - 7, (yb + yt) / 2); ox.rotate(-Math.PI / 2); mono('time minus space never changes on the way up', 0, 0, C.green, 'center', narrow ? 9 : 11); ox.restore(); ox.globalAlpha = 1; }
+    ox.save(); ox.translate(xl - 7, (yb + yt) / 2); ox.rotate(-Math.PI / 2); mono('time minus space never changes on the way up', 0, 0, C.green, 'center', narrow ? 9 : 11); ox.restore(); ox.globalAlpha = carA * (1); }
 }
 
 // the orientation bit: matter and the arrow of time (T14 Prop 5.1, 5.2, Rem 5.3)
