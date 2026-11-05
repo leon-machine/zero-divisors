@@ -392,7 +392,7 @@ function drawFlip(s){
     if (g > 0) text('one over', cx + u * 0.62 + 12, cyc, C.gold, 15, 'left', SERIF, 'italic');
     if (g >= 1) { ox.fillStyle = C.gold; ox.fillRect(nx - 7, ny - 7, 14, 14); } }
   const fa = sm((s - 0.68) / 0.08);
-  if (fa > 0) { ox.globalAlpha = a * fa; oneOverZero(cx, Math.max(28, ny - (narrow() ? 92 : 118)), narrow() ? 26 : 36, C.gold);
+  if (fa > 0) { ox.globalAlpha = a * fa; oneOverZero(cx, Math.max(14, ny - (narrow() ? 74 : 86)), narrow() ? 18 : 22, C.gold);   // under the title and smaller than it, clear of the axis label
     const [p1x, p1y] = P(onCircle(1)), [m1x, m1y] = P(onCircle(-1)); dot(p1x, p1y, 4, C.green); dot(m1x, m1y, 4, C.green);
     text('1', p1x + 12, p1y, C.green, 15, 'left', SERIF); text('−1', m1x - 12, m1y, C.green, 15, 'right', SERIF); }
   ox.globalAlpha = 1;
