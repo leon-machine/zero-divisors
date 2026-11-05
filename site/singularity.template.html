@@ -43,6 +43,7 @@ body.atend .pin{touch-action:pan-y}
 body.atend #sky{touch-action:pan-y}
 #sky.drag{cursor:grabbing}
 #ov{pointer-events:none}
+#sky.fit,#ov.fit{-webkit-mask-image:linear-gradient(#000 74%,transparent 98%);mask-image:linear-gradient(#000 74%,transparent 98%)}
 #ov.live{pointer-events:auto;cursor:pointer}
 .whiteout{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
 
@@ -64,7 +65,7 @@ body.atend #sky{touch-action:pan-y}
 /* subtitles */
 .cap{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 74px);transform:translate(-50%,6px);width:min(820px,calc(100% - 40px));text-align:center;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none}
 .cap.show{opacity:1;transform:translate(-50%,0)}
-.cap .line{font-family:var(--display);font-weight:400;font-size:clamp(1rem,1.75vw,1.32rem);line-height:1.36;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
+.cap .line{font-family:var(--display);font-weight:400;font-size:clamp(.95rem,min(1.75vw,2.9vh),1.32rem);line-height:1.36;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
 .cap .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--text-3);text-shadow:0 1px 6px #000}
 .cap a{pointer-events:auto}
 .cap .acts{margin-top:14px;display:flex;gap:10px;justify-content:center;pointer-events:auto}
@@ -403,12 +404,12 @@ $('#track').innerHTML = PARTS.map((pt, i) => `<button data-p="${i}"><b>${pt.n}</
 let titleShown = 0;
 // the bottom of a part's title, measured once with a hidden copy, so a drawing can sit clear of it
 const titleBottoms = new Map();
-function titleBottom(i){ const key = i + ':' + innerWidth + 'x' + innerHeight; if (titleBottoms.has(key)) return titleBottoms.get(key);
+function titleBottom(i){ const key = i + ':' + innerWidth + 'x' + innerHeight + ':' + FITZ; if (titleBottoms.has(key)) return titleBottoms.get(key);
   const t = $('#title'), c = t.cloneNode(false); c.id = ''; c.classList.add('compact'); c.style.visibility = 'hidden'; c.style.opacity = 0; const pt = PARTS[i];
   c.innerHTML = `<div class="in"><div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p></div>`; t.parentNode.appendChild(c);
   const o = ov.getBoundingClientRect(), kids = Array.from(c.querySelector('.in').children), rg = document.createRange();
   const right = Math.max(...kids.map(k => { rg.selectNodeContents(k); return rg.getBoundingClientRect().right; })) - o.left;
-  const b = {bottom: c.querySelector('.in').getBoundingClientRect().bottom - o.top, right}; c.remove(); titleBottoms.set(key, b); return b; }
+  const b = {bottom: (c.querySelector('.in').getBoundingClientRect().bottom - o.top) / FITZ, right: right / FITZ}; c.remove(); titleBottoms.set(key, b); return b; }
 function fillTitle(i){ const pt = PARTS[i]; $('#title .in').innerHTML = `<div class="eyebrow">${pt.eyebrow}</div><h1>${pt.h}</h1><p>${pt.p}</p>`; }
 function phaseAt(v){
   if (v < FALL) return {mode: 'fall', s: v / FALL};
@@ -567,13 +568,29 @@ const capMeas = (() => { const m = $('#cap').cloneNode(true); m.id = ''; m.class
 const regionCache = new Map();
 function region(scene){
   if (regionCache.has(scene)) return regionCache.get(scene);
-  const o = ov.getBoundingClientRect(), top = $('#track').getBoundingClientRect().bottom - o.top + 14;
+  const o = ov.getBoundingClientRect(), top = ($('#track').getBoundingClientRect().bottom - o.top) / FITZ + 14;
   let bot = OH - 120;
   (SCAPS[scene] || []).forEach(c => { capMeas.children[0].textContent = c[2].replace(/\{\w+\}/g, '0.000×10⁰⁰ units'); capMeas.children[1].innerHTML = tagHtml(c[3]); capMeas.children[2].innerHTML = c[4] === 'end' ? '<a class="btn">x</a>' : '';
-    bot = Math.min(bot, capMeas.getBoundingClientRect().top - o.top - 18); });
+    bot = Math.min(bot, (capMeas.getBoundingClientRect().top - o.top) / FITZ - 18); });
   const r = {top, bot}; regionCache.set(scene, r); return r;
 }
-function sizeOv(){ regionCache.clear(); const r = ov.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); OW = r.width; OH = r.height; ov.width = Math.round(OW * d); ov.height = Math.round(OH * d); ox.setTransform(d, 0, 0, d, 0, 0); }
+function sizeOv(){ regionCache.clear(); const d = Math.min(2, devicePixelRatio || 1) * FITZ; OW = ov.offsetWidth; OH = ov.offsetHeight; ov.width = Math.round(OW * d); ov.height = Math.round(OH * d); ox.setTransform(d, 0, 0, d, 0, 0); }
+// short screens: outside the fall, the picture and the drawing on it shrink together into the room above
+// the tallest subtitle of the scene, so a drawing stays on the hole and clear of the words. FIT_F is how far
+// down the screen a scene's drawing reaches when it has the whole height
+const FIT_F = {all: 0.7, info: 0.8}, fitCache = new Map(); let FITZ = 1;
+function fitZ(m){
+  if (m === 'fall' || TITLES.has(m) || m === 'score' || VIDEO) return 1;
+  const key = m + ':' + innerWidth + 'x' + innerHeight; if (fitCache.has(key)) return fitCache.get(key);
+  const pin = $('.pin').getBoundingClientRect(); let top = pin.height;
+  (SCAPS[m] || []).forEach(c => { capMeas.children[0].textContent = c[2].replace(/\{\w+\}/g, '0.000×10⁰⁰ units'); capMeas.children[1].innerHTML = tagHtml(c[3]); capMeas.children[2].innerHTML = c[4] === 'end' ? '<a class="btn">x</a>' : '';
+    top = Math.min(top, capMeas.getBoundingClientRect().top - pin.top); });
+  const z = (top - 10) / ((FIT_F[m] || FIT_F.all) * pin.height), r = z > 0.97 ? 1 : Math.max(0.5, z); fitCache.set(key, r); return r;
+}
+function applyFit(z){ if (z === FITZ) return; FITZ = z;
+  [cv, ov].forEach(el => { el.style.width = z < 1 ? (100 / z) + '%' : ''; el.style.transform = z < 1 ? `scale(${z})` : ''; el.style.transformOrigin = '0 0'; el.classList.toggle('fit', z < 1); });
+  sizeOv(); dirty = true; dirtyOv = true; }
+addEventListener('resize', () => fitCache.clear());
 const env = (x, a, b, f = 0.28) => { if (x < a || x > b) return 0; const w = (b - a) * f; return Math.min(1, (x - a) / w, (b - x) / w); };
 const envLog = (r, hi, lo) => { if (r > hi || r < lo) return 0; const a = Math.log(hi), b = Math.log(Math.max(lo, 1e-3)), x = Math.log(r), w = (a - b) * 0.18; return Math.min(1, (a - x) / w, (x - b) / w); };
 const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a'};
@@ -663,7 +680,7 @@ function overlaySwitches(s, cx, cy, now){
   if (swFlash && now - swFlash.t < 1600) { const [x, y] = swPos(swFlash.i, cx, cy); ox.globalAlpha = 1 - (now - swFlash.t) / 1600; lab(swFlash.msg, x, y - 22, swFlash.col, 'center', 14); ox.globalAlpha = 1; }
 }
 ov.addEventListener('click', e => {
-  if (mode !== 'switches') return; const r = ov.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, cx = OW / 2, cy = OH * 0.44;
+  if (mode !== 'switches') return; const r = ov.getBoundingClientRect(), x = (e.clientX - r.left) / FITZ, y = (e.clientY - r.top) / FITZ, cx = OW / 2, cy = OH * 0.44;
   for (let i = 0; i < NSW; i++) { const [px, py] = swPos(i, cx, cy); if (Math.hypot(px - x, py - y) < 18) {
     swState[i] = !swState[i]; swFlash = {i, t: performance.now(), msg: swState[i] ? 'f*: on (once only)' : 'f: off', col: swState[i] ? C.green : C.t2}; dirtyOv = true; return; } }
 });
@@ -1191,7 +1208,7 @@ function hudUpdate(){
 }
 function loop(now){
   if (inView) {
-    const v = playerV(now), ph = phaseAt(v), prev = mode; mode = ph.mode;
+    const v = playerV(now), ph = phaseAt(v), prev = mode; mode = ph.mode; applyFit(fitZ(mode));
     let animate = false;
     if (mode === 'fall') {
       const Rt = radiusAt(ph.s), k = reduce || VIDEO || snap ? 1 : 0.18, Rn = Math.exp(Math.log(R) + (Math.log(Rt) - Math.log(R)) * k);
@@ -1237,7 +1254,7 @@ function loop(now){
     $$('#track button').forEach(b => { const i = +b.dataset.p, on = i === curP; if (on && !b.classList.contains('on')) { const t = $('#track'); t.scrollLeft = Math.max(0, b.offsetLeft - (t.clientWidth - b.offsetWidth) / 2); }
       b.classList.toggle('on', on); b.classList.toggle('done', i < curP); });
     // drawings
-    if (OW !== ov.getBoundingClientRect().width || OH !== ov.getBoundingClientRect().height) { sizeOv(); dirtyOv = true; }
+    if (OW !== ov.offsetWidth || OH !== ov.offsetHeight) { sizeOv(); dirtyOv = true; }
     const timed = !reduce && (mode === 'thermo' || mode === 'info' || mode === 'paradox' || mode === 'towers' || mode === 'dark' || (mode === 'switches' && swFlash && now - swFlash.t < 1700));
     const sig = [mode, ph.s.toFixed(4), R.toFixed(5), yaw.toFixed(3), pitch.toFixed(3), lookBack, fovNow.toFixed(4), renderYaw.toFixed(4), swState.join(''), massSuns].join('|');
     if (!timed && !dirtyOv && sig === lastSig) { if (!VIDEO) requestAnimationFrame(loop); return; }
