@@ -148,7 +148,7 @@ const CAPS = {
          [0.3, 0.6, 'Projecting from the top again gives every point of the plane its own point on the sphere, and every direction out to infinity ends at the same point, the top.', []],
          [0.6, 1.01, 'Taking one over a number is again a reflection, top for bottom. The equator, where the numbers of size 1 lie, stays where it is, and zero goes straight to infinity. Strictly, this is one over z with a mirror flip, z/|z|², the form the papers use; plain 1/z turns the sphere half way round instead.', ['T1 §4.8.1']]],
   recipe: [[0.03, 0.307, 'The transport principle turns this into a recipe for any space where division fails along light-like directions: add one direction of time and one of space, and lift each point to a light-like vector in the larger space. That is stereographic projection in general form, and in the larger space the reciprocal is a reflection defined everywhere.', ['T1 Thm 4.10, 4.13']],
-         [0.307, 0.615, 'Back to the simplest case, the line: counted as time + space it is 0 + 1, and it becomes 1 + 2. Light-like directions need one of each kind, so even the plain numbers need a direction of time to be completed, in keeping with Garret Sobczyk’s view that numbers are geometric algebra. In 1 + 2 they form a cone; at one moment, a circle, touching the line at 0.', ['T1 Thm 4.13']],
+         [0.307, 0.615, 'Back to the simplest case, the line: counted as time + space it is 0 + 1, and it becomes 1 + 2. Light-like directions need one of each kind, so even the plain numbers need a direction of time to be completed, in keeping with Garret Sobczyk’s view that numbers are fundamentally geometric objects represented within geometric algebra. In 1 + 2 they form a cone; at one moment, a circle, touching the line at 0.', ['T1 Thm 4.13']],
          [0.615, 1.01, 'Look down the new time direction and nothing has to move: the circle, 0 at the bottom, infinity at the top, and the line touching it at 0. Lifting each point that way is exactly the stereographic projection from before. The radius is forced too: 1/1 = 1, so 1 and −1 stay put on the reflection’s middle line, and with the line touching at 0 the radius is one half.', ['T1 §4.8.1']]],
   spacetime: [[0.03, 0.34, 'Now spacetime. It measures length in its own way, and in it light is special: a light-like, or null, vector has length zero.', []],
          [0.34, 0.66, 'So dividing by a light-like vector is dividing by zero, along a whole cone of directions, and one extra point cannot repair it. The drawing shows two of the three directions of space: for spacetime the cone is a picture, with one direction left out.', []],
@@ -772,8 +772,7 @@ function drawLimits(s){
   const branch = (sign, p, col) => { if (p <= 0) return; const x0 = sign * 3, x1 = sign * (1 / ym), xe = x0 + (x1 - x0) * p;
     ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath();
     for (let i = 0; i <= 80; i++) { const x = x0 + (xe - x0) * i / 80; i ? ox.lineTo(X(x), Y(1 / x)) : ox.moveTo(X(x), Y(1 / x)); } ox.stroke();
-    dot(X(xe), Y(1 / xe), 5, col);
-    if (p > 0.97) arrow(X(x1), Y(1 / x1) + sign * 18, X(x1), Y(1 / x1) - sign * 4, col, 2, 9); };
+    dot(X(xe), Y(1 / xe), 5, col); };
   const p1 = sm((s - 0.05) / 0.32), p2 = sm((s - 0.42) / 0.32);
   branch(1, p1, C.blue); branch(-1, p2, C.plum);
   text('y = 1/x', X(2.1), Y(1 / 2.1) - 22, C.text, nar ? 15 : 18, 'center', SERIF, 'italic');
@@ -872,7 +871,11 @@ function drawRecipe(s){
       seg(L0[0], L0[1], L1[0], L1[1], 1, C.text, 2); ox.fillStyle = C.gold; ox.fillRect(z0[0] - 5, z0[1] - 5, 10, 10);
       [-1, 1].forEach(v => { const t = pr([v, -0.5, 0.5]); dot(t[0], t[1], 3, C.text); });
       if (nar) text('the line', L1[0], L1[1] + 16, C.text, 12, 'right', SERIF, 'italic'); else text('the line itself', L1[0] + 8, L1[1] + 2, C.text, 14, 'left', SERIF, 'italic'); text('0', z0[0], z0[1] + 18, C.gold, 15, 'center', SERIF); ox.globalAlpha = a * b2; } }
-    if (g > 0.9) { const [qx, qy0] = pr([-0.55, 0.35, 0.5]), qy = qy0 - 6; text('the circle: the light cone at time ½', nar ? cx : qx - 10, nar ? pr([0, 0, 1.55])[1] - 22 : qy, C.gold, nar ? 13 : 16, nar ? 'center' : 'right', SERIF, 'italic'); }
+    if (g > 0.9) { const lab = 'the circle: the light cone at time ½', [qx, qy0] = pr([-0.55, 0.35, 0.5]), qy = qy0 - 6;
+      // left of the circle, unless that reaches the notes column on a narrow window: then to its right
+      ox.font = `italic 16px ${SERIF}`; const lw = ox.measureText(lab).width; ox.font = `italic 14px ${SERIF}`;
+      const notesR = Math.max(20, W * 0.06) + ox.measureText('directions of one kind never square to zero:').width + 16, right = !nar && qx - 10 - lw < notesR;
+      text(lab, nar ? cx : right ? pr([0.55, 0.35, 0.5])[0] + 10 : qx - 10, nar ? pr([0, 0, 1.55])[1] - 22 : qy, C.gold, nar ? 13 : 16, nar ? 'center' : right ? 'left' : 'right', SERIF, 'italic'); }
     // on a phone above the cone; on a wider screen in a column to its left, so a short screen keeps them clear of it
     const lx = nar ? cx : Math.max(20, W * 0.06), la = nar ? 'center' : 'left', ly = nar ? 18 : Math.max(16, H * 0.14);
     text('0 + 1  →  1 + 2', lx, ly, C.t2, nar ? 14 : 18, la, MONO);
