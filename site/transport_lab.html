@@ -361,6 +361,7 @@ footer .about:hover, footer .about[aria-current="page"] { color: var(--ink); tex
 .aboutpage p { font-size: 16px; max-width: 680px; }
 .aboutpage a { color: var(--accent); }
 .aboutpage h3 { font: 600 20px/1.25 var(--serif); margin: 30px 0 8px; }
+.aboutpage .aboutnote { margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
 footer .bmc { display: inline-flex; align-items: center; gap: 7px; padding: 4px 12px 4px 9px; border-radius: 8px; background: #FFDD00; color: #000; font-weight: 600; text-decoration: none; white-space: nowrap; }
 footer .bmc:hover { filter: brightness(0.95); }
 footer .bmc:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -446,7 +447,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
       <p class="note" style="margin:6px 2px 0">Arrowheads point the way the reasoning runs, from a result to what is built on it.</p>
     </aside>
     <div class="stage">
-      <canvas id="sky" tabindex="0" aria-label="The Physics Graph, every result as a point: drag to turn, scroll to zoom, click a point to read it"></canvas>
+      <canvas id="sky" tabindex="0" aria-label="The Physics Graph, every result as a point: drag to turn, Shift and drag to move, scroll to zoom, click a point to read it; arrow keys turn, Shift and arrow keys move"></canvas>
       <div class="tooltip" id="tip"></div>
       <div class="overlay" id="overlay"></div>
       <div class="zoombox" role="group" aria-label="Zoom">
@@ -454,7 +455,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
         <button class="btn" id="zout" title="Zoom out" aria-label="Zoom out">&minus;</button>
         <button class="btn" id="zfit" title="Fit every result in view" aria-label="Fit">Fit</button>
       </div>
-      <div class="hint">Drag to turn · scroll, pinch or the buttons to zoom · click a point</div>
+      <div class="hint">Drag to turn · Shift + drag or right-drag to move · scroll or pinch to zoom · click a point</div>
     </div>
     <aside class="reader" id="reader" aria-live="polite"></aside>
     <div class="grip" id="grip" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="reader" aria-label="Resize the reading pane: drag, or use the left and right arrow keys; double-click to reset" aria-valuemin="320" aria-valuemax="1080" aria-valuenow="480" title="Drag to resize the reading pane; double-click to reset"></div>
@@ -467,10 +468,11 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   <section class="view page" id="releasesview"><div class="inner" id="releases"></div></section>
   <section class="view page" id="aboutview"><div class="inner aboutpage">
     <div class="eyebrow">About</div><h2>How the work came to be</h2>
-    <p>The founding idea of the series is Leon Butler&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. Leon has a BSc (Hons) in Mathematics from the University of Manchester and an A&#8209;level in Physics (amongst others). The mathematics was developed in collaboration with Claude, Anthropic&rsquo;s AI system. An extended session with Claude Fable 5, running over several weeks, produced the first version of a monograph, <i>Zero Divisors as Signposts</i>.</p>
+    <p>The founding idea of the series is Leon Butler&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The mathematics was developed in collaboration with Claude, Anthropic&rsquo;s AI system. An extended session with Claude Fable 5, running over several weeks, produced the first version of a monograph, <i>Zero Divisors as Signposts</i>.</p>
     <p>The monograph went through many iterations as exploratory work was done and new chapters and results were added, until it became too unwieldy to verify as a single document. It was then split into a series of papers, the Transport Papers (T0 to T17), with two guides. At that point a much more rigorous way of working was set up. Each paper carries a script that checks its results in exact arithmetic, and results proved in a paper are kept apart from those taken from the literature. Within this framework the AI was largely responsible for the proofs and the drafting. Leon directed the work, spot-checked it rather than re-deriving it, and intervened when the reasoning went wrong. The models were the latest available in the summer of 2026, and a good deal more capable at sustained mathematics than the systems of two years earlier. The papers are deposited on Zenodo and have not yet been through journal peer review.</p>
     <h3>The graph</h3>
     <p>A series of papers turned out to have the monograph&rsquo;s problem on a larger scale. A result stated in one paper is used in several others, and a correction to it has to be found and carried through each of them by hand. The Physics Graph is the answer to that. Each result is held once, with its statement, its proof, the results it rests on and the check that verifies it. The papers are generated from the graph, so a correction reaches every document that uses the result. The graph was also designed with the AI, in the form it judged easiest for itself to navigate: separate results linked to what they rest on, which an AI reads through a set of tools rather than by searching long documents. That same design opens it to others. Anyone working with an AI of their own can propose a new result or a correction, which is checked before it is accepted and is credited to them.</p>
+    <p class="aboutnote">Leon Butler holds a BSc (Hons) in Mathematics from the University of Manchester and studied Physics to A&#8209;level.</p>
   </div></section>
   <section class="view page" id="contributeview"><div class="inner" id="contribute"></div></section>
 </main>
@@ -1288,16 +1290,36 @@ function frame() {
   if (moving || dirty) draw();
   requestAnimationFrame(frame);
 }
+// panning moves the centre of view across the screen, at the depth of that centre; zooming at a point keeps
+// that point where it is on screen. Both work on the targets, so they ease with the rest of the view
+const scaleAt = z => Math.min(W, H) / 2.35 * z;
+function panBy(dx, dy, target) {   // dx, dy in screen pixels: the graph follows the pointer
+  const s = scaleAt(zoom), d = [0, 1, 2].map(j => (-dx * R[0][j] + dy * R[1][j]) / s);
+  focusT = focusT.map((v, j) => v + d[j]); const m = Math.hypot(...focusT);
+  if (m > 2) focusT = focusT.map(v => v * 2 / m);   // never so far out that the graph is lost
+  if (!target) focus = focusT.slice(); dirty = true;
+}
+function zoomAt(z2, mx, my) {
+  z2 = Math.max(0.6, Math.min(7, z2)); const s1 = scaleAt(zoomT), s2 = scaleAt(z2), ox = mx - W / 2, oy = my - H / 2;
+  // the depth of what is under the pointer: the nearest result within reach, else the centre's own depth
+  let k = 1, bd = 60 * 60; for (const q of proj.values()) { const d = (q.x - mx) ** 2 + (q.y - my) ** 2; if (d < bd) { bd = d; k = q.k; } }
+  const u = (ox / s1 - ox / s2) / k, v = -(oy / s1 - oy / s2) / k;
+  focusT = [0, 1, 2].map(j => focusT[j] + u * R[0][j] + v * R[1][j]); zoomT = z2;
+  const m = Math.hypot(...focusT); if (m > 2) focusT = focusT.map(x => x * 2 / m);
+}
 function pick(x, y) {
   let best = null, bd = 14 * 14;
   for (const n of nodes) { if (!visible(n)) continue; const p = proj.get(n.id); if (!p) continue; const d = (p.x - x) ** 2 + (p.y - y) ** 2;
     if (d < bd || (d === bd && best && p.z > proj.get(best).z)) { bd = d; best = n.id; } }
   return best;
 }
-// pointer: drag turns, wheel and pinch zoom, a click without a drag picks
-const ptrs = new Map(); let dragDist = 0, pinch0 = 0, zoom0 = 1;
+// pointer: drag turns; Shift + drag, right-drag or a two-finger drag moves the view; wheel and pinch zoom at the
+// pointer; a click without a drag picks
+const ptrs = new Map(); let dragDist = 0, pinch0 = 0, zoom0 = 1, panning = false, mid0 = null;
+sky.addEventListener("contextmenu", ev => ev.preventDefault());
 sky.addEventListener("pointerdown", ev => { sky.focus({ preventScroll: true }); sky.setPointerCapture(ev.pointerId); ptrs.set(ev.pointerId, { x: ev.clientX, y: ev.clientY }); dragDist = 0; lastTouch = performance.now();
-  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = Math.hypot(a.x - b.x, a.y - b.y); zoom0 = zoomT; } sky.classList.add("dragging"); });
+  if (ptrs.size === 1) panning = ev.shiftKey || ev.button === 2 || ev.button === 1;
+  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; pinch0 = Math.hypot(a.x - b.x, a.y - b.y); zoom0 = zoomT; mid0 = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }; } sky.classList.add("dragging"); });
 sky.addEventListener("pointermove", ev => {
   const r = sky.getBoundingClientRect();
   if (!ptrs.has(ev.pointerId)) { const h = pick(ev.clientX - r.left, ev.clientY - r.top);
@@ -1307,17 +1329,22 @@ sky.addEventListener("pointermove", ev => {
     else tip.style.display = "none";
     return; }
   const prev = ptrs.get(ev.pointerId); ptrs.set(ev.pointerId, { x: ev.clientX, y: ev.clientY }); lastTouch = performance.now();
-  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()]; const d = Math.hypot(a.x - b.x, a.y - b.y); if (pinch0) zoomT = Math.max(0.6, Math.min(7, zoom0 * d / pinch0)); dirty = true; return; }
+  if (ptrs.size === 2) { const [a, b] = [...ptrs.values()], d = Math.hypot(a.x - b.x, a.y - b.y), mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+    if (pinch0) zoomT = Math.max(0.6, Math.min(7, zoom0 * d / pinch0));
+    if (mid0) { panBy(mid.x - mid0.x, mid.y - mid0.y); mid0 = mid; } dragDist += 10; dirty = true; return; }
   const dx = ev.clientX - prev.x, dy = ev.clientY - prev.y; dragDist += Math.abs(dx) + Math.abs(dy);
-  R = mm(rotX(dy * 0.006), mm(rotY(dx * 0.006), R)); dirty = true; tip.style.display = "none";
+  if (panning || ev.shiftKey) panBy(dx, dy); else R = mm(rotX(dy * 0.006), mm(rotY(dx * 0.006), R));
+  dirty = true; tip.style.display = "none";
 });
-function up(ev) { const wasClick = ptrs.size === 1 && dragDist < 6; ptrs.delete(ev.pointerId); sky.classList.remove("dragging"); pinch0 = 0;
+function up(ev) { const wasClick = ptrs.size === 1 && dragDist < 6 && ev.button === 0; ptrs.delete(ev.pointerId); if (!ptrs.size) { sky.classList.remove("dragging"); panning = false; } pinch0 = 0; mid0 = null;
   if (wasClick && ev.type === "pointerup") { const r = sky.getBoundingClientRect(); const h = pick(ev.clientX - r.left, ev.clientY - r.top); if (h) select(h, true); else if (selected) select(null); } }
 sky.addEventListener("pointerup", up); sky.addEventListener("pointercancel", up);
 sky.addEventListener("pointerleave", () => { hover = null; tip.style.display = "none"; dirty = true; });
-sky.addEventListener("wheel", ev => { ev.preventDefault(); zoomT = Math.max(0.6, Math.min(7, zoomT * Math.exp(-ev.deltaY * 0.0012))); lastTouch = performance.now(); }, { passive: false });
-sky.addEventListener("keydown", ev => { const k = ev.key, a = 0.12;
-  if (k === "ArrowLeft") R = mm(rotY(-a), R); else if (k === "ArrowRight") R = mm(rotY(a), R);
+sky.addEventListener("wheel", ev => { ev.preventDefault(); const r = sky.getBoundingClientRect();
+  zoomAt(zoomT * Math.exp(-ev.deltaY * 0.0012), ev.clientX - r.left, ev.clientY - r.top); lastTouch = performance.now(); }, { passive: false });
+sky.addEventListener("keydown", ev => { const k = ev.key, a = 0.12, step = Math.min(W, H) * 0.08;
+  if (ev.shiftKey && k.startsWith("Arrow")) panBy(k === "ArrowLeft" ? step : k === "ArrowRight" ? -step : 0, k === "ArrowUp" ? step : k === "ArrowDown" ? -step : 0, true);
+  else if (k === "ArrowLeft") R = mm(rotY(-a), R); else if (k === "ArrowRight") R = mm(rotY(a), R);
   else if (k === "ArrowUp") R = mm(rotX(-a), R); else if (k === "ArrowDown") R = mm(rotX(a), R);
   else if (k === "+" || k === "=") zoomT = Math.min(7, zoomT * 1.2); else if (k === "-") zoomT = Math.max(0.6, zoomT / 1.2);
   else return; ev.preventDefault(); lastTouch = performance.now(); dirty = true; });
