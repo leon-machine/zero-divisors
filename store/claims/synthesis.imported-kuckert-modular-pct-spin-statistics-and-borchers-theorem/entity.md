@@ -2,7 +2,7 @@
 id: synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem
 kind: claim
 version: 1
-title: 'Imported: Kuckert''s spin-statistics theorem from modular P$_{1}$CT symmetry (if the modular conjugation of a wedge algebra acts on the local algebras as the wedge''s reflection, then, with covariance under the covering group, the spectrum condition and compact internal symmetries, the rotation by $2\pi$ is the Bose-Fermi operator), and Borchers'' theorem on half-sided translations ($\Delta^{it}U(s)\Delta^{-it} = U(e^{-2\pi t}s)$, $JU(s)J = U(-s)$)'
+title: 'Imported: Kuckert''s modular spin-statistics theorem and Borchers'' theorem'
 status: imported
 region: synthesis
 subject: quantum-fields

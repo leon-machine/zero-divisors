@@ -2,7 +2,7 @@
 id: synthesis.majorana-scale-is-126-doublet-vev
 kind: claim
 version: 2
-title: On the Pati-Salam route the Majorana matrix is the symmetric 126 difference, also with a 120; under (EW) its heavy-direction entry is m_t v_R/4w_u, so the Majorana scale and the 126 doublet admixture are one unknown
+title: 'The Majorana scale is set by the 126 doublet admixture'
 status: proved
 region: synthesis
 subject: neutrinos

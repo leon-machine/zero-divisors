@@ -2,7 +2,7 @@
 id: synthesis.state-selection-r-and-le-against-t05
 kind: claim
 version: 3
-title: On the boundary-mode algebra the folded note's (R) lies strictly between T05's (R) and (R) with (Q), and the two (L_E) premises admit the same generators
+title: 'The folded note''s (R) and (L$_E$) against T05''s'
 status: proved
 region: synthesis
 subject: thermality

@@ -2,7 +2,7 @@
 id: synthesis.rung-unit-transverse-to-norm
 kind: claim
 version: 3
-title: A change of rung unit is a lift-preserving isometry transverse to the norm, and it carries one doublet lift to the other
+title: 'A change of rung unit is transverse to the norm'
 status: proved
 region: synthesis
 subject: standard-model

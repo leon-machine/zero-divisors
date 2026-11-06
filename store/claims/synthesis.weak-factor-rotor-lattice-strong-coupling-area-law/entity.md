@@ -2,7 +2,7 @@
 id: synthesis.weak-factor-rotor-lattice-strong-coupling-area-law
 kind: claim
 version: 2
-title: In Wilson's lattice form, which needs no gauge fixing for any compact group, the weak factor of the derived gauge algebra has rotor links, its Haar gluing rule is $\int\langle XU\rangle_0\langle\widetilde{U}Y\rangle_0\,dU = \tfrac14\langle XY\rangle_0$, and every rectangular Wilson loop has leading strong-coupling coefficient $(\beta/4)^{A}$, the same area law as compact $U(1)$ with $(\beta/2)^{A}$
+title: 'Rotor lattice for the weak factor: a strong-coupling area law'
 status: proved
 region: synthesis
 subject: quantum-fields

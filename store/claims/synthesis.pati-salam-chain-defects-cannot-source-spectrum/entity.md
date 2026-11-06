@@ -2,7 +2,7 @@
 id: synthesis.pati-salam-chain-defects-cannot-source-spectrum
 kind: claim
 version: 2
-title: The stored Pati-Salam chain has topologically stable $\mathbb{Z}_{2}$ strings besides its monopoles, but under Premise (R), unless the chain's restoration temperature is below $0.0176\,v_{R}$, neither forms after the descent, and a deposited string network has $G\mu < 1.5 \times 10^{-15}$, so no defect network of the chain supplies more than $10^{-16}$ of the CMB temperature power at $\ell = 10$
+title: 'Pati-Salam chain defects cannot source the spectrum'
 status: proved
 region: synthesis
 subject: dark-energy

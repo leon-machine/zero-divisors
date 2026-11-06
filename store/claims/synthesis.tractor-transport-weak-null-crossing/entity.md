@@ -2,7 +2,7 @@
 id: synthesis.tractor-transport-weak-null-crossing
 kind: claim
 version: 4
-title: Tractor transport across a null crossing with rank-one Tipler-integrable Schouten divergence is defined modulo one nilpotent direction
+title: 'Tractor transport across a weak null crossing'
 status: proved
 region: synthesis
 subject: interior

@@ -2,7 +2,7 @@
 id: synthesis.c-loc-entropy-clause-curvature-independent-density
 kind: claim
 version: 3
-title: If the entropy density of a small horizon patch depends only on its flat tangent data (null ray and edge plane), and not on the curvature, matter or boost normalisation at the point, it is one universal constant; calibrated on the Schwarzschild family under (P), (R) and Hawking's hypothesis, with the hole's entropy taken to be the integral of that density, it is 1/4 with no count
+title: 'A curvature-independent horizon entropy density is one constant, 1/4'
 status: proved
 region: synthesis
 subject: einstein

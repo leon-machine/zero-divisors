@@ -2,7 +2,7 @@
 id: synthesis.promoted-norm-weyl-clock-flat-weight
 kind: claim
 version: 6
-title: For the frozen-point action the Euclidean action of an Einstein instanton at matching $\Lambda$ is $(\ell^{2}/64\pi G)\int|W|^{2}$, and the time conjugate to the promoted norm advances by the Weyl-squared integral in vacuum and by the Euler-density excess $E - 8\Lambda^{2}/3$ with matter, so it runs on every FLRW cosmology with dust or radiation
+title: 'The promoted norm''s clock: Weyl square in vacuum, Euler excess with matter'
 status: proved
 region: synthesis
 subject: dark-energy

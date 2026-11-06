@@ -2,7 +2,7 @@
 id: synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
 kind: claim
 version: 4
-title: 'On a globally hyperbolic Weyl-flat region of a gravitational field every quasi-free Hadamard state of the massless Dirac field has the flat massless vacuum as its scaling limit and, with the comoving transverse labels, the generator microlocal condition in the physical affine parameter, so the local form of (N$_{+}$), at the leading order at which local Rindler horizons are defined, holds there for the massless field without the scaling-limit premise; on a Robertson-Walker field the conformal vacuum differs on every null generator from the null vacuum of the physical affine parameter by the Schwarzian kernel of $S = 2a''''/a - 4(a''/a)^{2}$ (conformal time), which vanishes identically exactly on de Sitter and flat fields'
+title: 'No scaling-limit premise on Weyl-flat fields; the Robertson-Walker Schwarzian'
 status: proved
 region: synthesis
 subject: thermality

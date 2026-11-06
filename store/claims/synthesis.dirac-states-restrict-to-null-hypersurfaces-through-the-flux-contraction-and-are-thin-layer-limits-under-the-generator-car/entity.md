@@ -2,7 +2,7 @@
 id: synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car
 kind: claim
 version: 2
-title: 'Every state of the Dirac field on a gravitational field restricts to a null hypersurface through the flux contraction of the conserved current, with no characteristic Cauchy problem, its restricted kernels have generator scaling degree at most one, and restricted kernels of Hadamard states differ by smooth pullbacks; if the generator anticommutation relations hold on nearby null hypersurfaces (proved in the literature for light cones), the restriction is the thin-layer limit of the bulk two-point function, and the restricted Hadamard parametrix then has a regularisation-free definition, whose agreement with the regularised one used in (HS) is argued'
+title: 'Dirac states restrict to null hypersurfaces through the flux contraction'
 status: proved
 region: synthesis
 subject: thermality

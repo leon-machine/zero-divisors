@@ -2,7 +2,7 @@
 id: synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field
 kind: claim
 version: 2
-title: 'Imported: on every gravitational field with a globally hyperbolic derived metric the free Dirac field exists as field operators with a causal anticommutator, and its CAR algebras of local observables satisfy a generalised form of the Haag-Kastler axioms; the causal propagator reproduces every solution from its Cauchy data, and the anticommutator pairing is the conserved Cauchy inner product of the solutions the test spinors define (Dimock 1982)'
+title: 'Imported: the Dirac CAR algebra on a gravitational field (Dimock 1982)'
 status: imported
 region: synthesis
 subject: quantum-fields

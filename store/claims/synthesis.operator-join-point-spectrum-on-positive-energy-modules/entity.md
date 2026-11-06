@@ -2,7 +2,7 @@
 id: synthesis.operator-join-point-spectrum-on-positive-energy-modules
 kind: claim
 version: 1
-title: On the positive-energy modules of two constituents ($\Lambda > 0$) the bracket and its conjugate span a unitary $\mathfrak{su}(1,1)$ with $K_{0} = \tr\hat h/2\hbar$, the operator join is $\tfrac{\Lambda}{3}\hbar^{2}(K_{0}^{2} - C_{\mathfrak{su}(1,1)} + j(j+1) - 2)$, and modulo the decomposition of $D^{+} \otimes D^{-}$ for $SL(2,\R)$ (cited from memory) its point spectrum lies in $[\tfrac{\Lambda}{3}\hbar^{2}, \infty)$ with the bound attained; so the join has no normalisable zero mode in any helicity sector, and the seed cannot be carried by normalisable massless states of the join
+title: 'The operator join''s point spectrum is bounded away from zero'
 status: proved
 region: synthesis
 subject: mass

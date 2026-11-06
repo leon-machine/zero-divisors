@@ -2,7 +2,7 @@
 id: synthesis.dimmed-burst-time-rescaled-copy
 kind: claim
 version: 2
-title: The dimmed final burst is the standard burst rescaled in time; its primary high-energy tail is dimmed by the full ratio, its energy in a fixed final window only by the two-thirds power
+title: 'The dimmed final burst is a time-rescaled copy'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.slot-module-light-ray-arrays-are-weyl-components
 kind: claim
 version: 1
-title: The light-ray arrays of the slot-module matter are its Weyl components, sixteen per generation for every CPT halving and every mass term, so a generation registers eight units of ln 2; the particle half is chiral in every halving, so the counted species are not gauge-covariant Dirac species, and with a nonzero Majorana term not Dirac species by mass either
+title: 'Light-ray arrays of the slot module are its Weyl components'
 status: proved
 region: synthesis
 subject: entropy

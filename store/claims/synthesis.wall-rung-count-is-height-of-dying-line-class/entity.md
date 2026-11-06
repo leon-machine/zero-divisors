@@ -2,7 +2,7 @@
 id: synthesis.wall-rung-count-is-height-of-dying-line-class
 kind: claim
 version: 1
-title: The number of rungs a tame wall needs is bounded below by the height of its dying line's class and above by its embedding rank, and the Clifford sheaves see the dying line only through L + L, trivial on the torus wall
+title: 'A tame wall''s rung count and the height of its dying line''s class'
 status: proved
 region: synthesis
 subject: walls

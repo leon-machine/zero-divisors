@@ -2,7 +2,7 @@
 id: synthesis.hadamard-deposit-premise
 kind: claim
 version: 3
-title: '(HD), the Hadamard deposit premise: the descent''s deposited state is a Hadamard state on a Cauchy collar of the descent, for the Dirac field and for the scalar fields of the descended phase; the occupation profile over an admissible reference vacuum stays free data'
+title: '(HD), the Hadamard deposit premise'
 status: postulate
 region: synthesis
 subject: quantum-fields

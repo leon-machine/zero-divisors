@@ -2,7 +2,7 @@
 id: synthesis.imported-one-loop-integrals-and-pauli-villars-regulators
 kind: claim
 version: 1
-title: 'Imported: the one-loop machinery of covariant perturbation theory: Feynman parametrisation, the Wick-rotated integrals of $(\ell^{2} - \Delta)^{-n}$ with symmetric integration, Pauli-Villars regulator fields of either sign of weight (Pauli and Villars 1949), the covariant photon propagator with gauge-parameter independence of on-shell amplitudes, and on-shell external states'
+title: 'Imported: one-loop integrals and Pauli-Villars regulators'
 status: imported
 region: synthesis
 subject: quantum-fields

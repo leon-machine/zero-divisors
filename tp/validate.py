@@ -77,6 +77,9 @@ class Report:
 _validator = jsonschema.Draft7Validator(ENTITY)
 
 
+TITLE_MAX = 90   # a title names the result; the statement belongs in the levels
+
+
 def _schema_code(err) -> str:
     path = list(err.absolute_path)
     if err.validator == "required":
@@ -136,6 +139,10 @@ def layer1(store: Store, rep: Report):
             fix = ("YAML reads a bare yes, no, on or off as true or false: write 'yes' or 'no' in quotes"
                    if isinstance(err.instance, bool) else "")
             rep.add(_schema_code(err), eid, f"{loc}: {err.message}", fix)
+        tl = len(str(e.meta.get("title") or ""))
+        if tl > TITLE_MAX:
+            rep.add("E124", eid, f"title is {tl} characters, over {TITLE_MAX}: it states the result instead of naming it",
+                    "write a short name, as a theorem is named in a paper; the claim itself goes in the one-liner and formal levels")
         if e.kind in STATUSES and e.status not in STATUSES[e.kind]:
             rep.add("E105", eid, f"status '{e.status}' is not allowed for a {e.kind}",
                     f"use one of {', '.join(STATUSES[e.kind])}")

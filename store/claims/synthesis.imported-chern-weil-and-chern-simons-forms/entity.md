@@ -2,7 +2,7 @@
 id: synthesis.imported-chern-weil-and-chern-simons-forms
 kind: claim
 version: 1
-title: 'Imported: invariant polynomials of a field strength are closed and locally exact, the exterior derivative of a Chern-Simons (transgression) form, so they have no field equations; the Chern-Simons form changes under gauge transformations by an exact form (Chern-Weil; Chern and Simons)'
+title: 'Imported: Chern-Weil and Chern-Simons forms'
 status: imported
 region: synthesis
 subject: einstein

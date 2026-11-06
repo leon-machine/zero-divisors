@@ -2,7 +2,7 @@
 id: synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries
 kind: claim
 version: 1
-title: 'The tube-point clause (costed): a state''s tube point is invariant under the symmetries of the gravitational field that commute with its wedge''s boost'
+title: 'The tube-point clause: invariance under boost-commuting symmetries'
 status: postulate
 region: synthesis
 subject: one-relation

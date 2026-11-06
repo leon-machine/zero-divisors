@@ -2,7 +2,7 @@
 id: synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
 kind: claim
 version: 2
-title: '(KF), the Krein-form premise for gauge fields: on the palatial storey the gauge fields, their ghosts and their Pauli-Villars regulator fields carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\dagger}] = -u\cdot w$ on the polarisations, and the physical space is positive through the quartet mechanism'
+title: 'Premise (KF): an indefinite Krein form for gauge fields'
 status: postulate
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.imported-haefner-nicolas-dirac-characteristic-problem-on-light-cones-near-the-vertex
 kind: claim
 version: 1
-title: 'Imported: on an arbitrary four-dimensional spacetime, near the vertex of the future light cone of a point (inside a geodesically convex, globally hyperbolic neighbourhood), the trace of a Dirac field on the cone, its two transverse spinor components, is an L2 isometry from data on a spacelike slice (the flux identity of the conserved current), the characteristic Cauchy problem on the cone is uniquely solvable for L2 data, and the trace is an isomorphism of H1 onto the space of cone data (Haefner and Nicolas 2011, Theorems 1 and 2)'
+title: 'Imported: Dirac characteristic problem on a light cone (Haefner and Nicolas)'
 status: imported
 region: synthesis
 subject: quantum-fields

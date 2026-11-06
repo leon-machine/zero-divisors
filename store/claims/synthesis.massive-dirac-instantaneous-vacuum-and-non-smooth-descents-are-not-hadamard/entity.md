@@ -2,7 +2,7 @@
 id: synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard
 kind: claim
 version: 2
-title: On a spatially flat Robertson-Walker field, for a massive Dirac field, at an instant where $ma' \neq 0$ the instantaneous vacuum differs from an adiabatic state of infinite order by $|\beta_{k}|^{2} = M'^{2}/16k^{4}$ (finite number, logarithmically divergent energy) and is not Hadamard, nor is any deposit diagonal over it; a state adiabatic of infinite order before a descent across which the $n$-th derivative of $M = ma$ jumps has $|\beta_{k}| = |\Delta M^{(n)}|/(2k)^{n+1}$ after it and is not Hadamard for any finite $n$
+title: 'Massive Dirac: instantaneous vacua and non-smooth descents are not Hadamard'
 status: proved
 region: synthesis
 subject: quantum-fields

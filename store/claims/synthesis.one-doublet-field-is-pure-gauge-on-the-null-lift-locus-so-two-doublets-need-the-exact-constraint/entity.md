@@ -2,7 +2,7 @@
 id: synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint
 kind: claim
 version: 2
-title: 'A one-doublet field is pure gauge on the null-lift locus: the real four-dimensional $U(2)$-invariant subspaces of the complexified rung summand are the two complex doublets, on which $Q$ vanishes, and the graphs $\beta = a\bar{\alpha}$, which meet the locus in one gauge orbit at one frame; so a field whose restriction to the exact locus carries the rung unit and the charged pair takes values in the whole summand, and two doublets follow only if the null-lift constraint is exact, the Higgs is exactly the rung unit and the field is linear; at finite constraint coupling a one-doublet field reproduces the rung-unit direction to relative order $H^{2}/v^{2}$'
+title: 'A one-doublet field is pure gauge on the null-lift locus'
 status: proved
 region: synthesis
 subject: quantum-fields

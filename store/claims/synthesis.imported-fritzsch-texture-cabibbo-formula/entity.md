@@ -2,7 +2,7 @@
 id: synthesis.imported-fritzsch-texture-cabibbo-formula
 kind: claim
 version: 1
-title: 'Imported: for nearest-neighbour (Fritzsch) quark textures each light-plane angle obeys tan^2 theta = m_light/m_heavy (Gatto, Sartori and Tonin 1968; Fritzsch 1978), and the Cabibbo element is sin theta_C = |R_u - R_d e^{-i psi}| with a phase psi near 90 degrees (Fritzsch and Xing 1999)'
+title: 'Imported: the Fritzsch-texture Cabibbo formula (Fritzsch and Xing 1999)'
 status: imported
 region: synthesis
 subject: generations

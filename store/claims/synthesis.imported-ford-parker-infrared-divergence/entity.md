@@ -2,7 +2,7 @@
 id: synthesis.imported-ford-parker-infrared-divergence
 kind: claim
 version: 1
-title: 'Imported: on spatially flat Robertson-Walker fields a homogeneous scalar state whose modes grow as $k^{-\nu}$ with $\nu \ge \tfrac32$ at small momentum has an infrared-divergent two-point function, so the massless minimally coupled Bunch-Davies state is not a state on slice fields of nonzero mean (Ford and Parker 1977)'
+title: 'Imported: infrared divergence of red scalar spectra (Ford and Parker 1977)'
 status: imported
 region: synthesis
 subject: dark-energy

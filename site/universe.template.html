@@ -114,6 +114,11 @@ canvas#sky.dragging { cursor: grabbing; }
 .eyebrow { font: 600 12px var(--sans); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
 .byline { margin: -4px 0 8px; font: 500 13px var(--sans); color: var(--muted); }
 h2 { font: 600 26px/1.2 var(--serif); margin: 4px 0 10px; text-wrap: balance; }
+h2.t-mid { font-size: 21px; line-height: 1.25; }
+h2.t-long { font-size: 18px; line-height: 1.3; text-wrap: pretty; margin-bottom: 2px; }
+h2.t-clamp { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.titlemore { background: none; border: 0; padding: 0; margin: 0 0 10px; font: 500 12.5px var(--sans); color: var(--accent); cursor: pointer; }
+.titlemore:hover { text-decoration: underline; }
 h3 { font: 600 15px var(--sans); margin: 18px 0 6px; }
 .rail h3 { font: 600 12px var(--sans); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 18px 0 8px; }
 input[type=search], select { width: 100%; font: 14px var(--sans); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); color: var(--ink); }
@@ -2030,9 +2035,18 @@ const GA_KIND = { imported: "an imported result, stated in its source's language
 const gaNote = n => n.outside_ga ? `<p class="note">Stated outside geometric algebra${GA_KIND[n.outside_ga.kind] ? ": " + esc(GA_KIND[n.outside_ga.kind]) : ""}. ${esc(n.outside_ga.why)}${/[.!?]$/.test(n.outside_ga.why) ? "" : "."}</p>` : "";
 const amendNote = n => (n.amendments || []).length ? `<p class="note">Amendments:</p><ul class="hist">${[...n.amendments].sort((a, b) => a.version - b.version).map(a => `<li><span class="v">v${esc(a.version)}</span><span><b>${a.kind === "restatement" ? "Restatement" : "Correction"}</b>${(() => { const by = (n.credit || []).filter(c => c.version === a.version).map(c => c.name); return by.length ? " by " + by.map(esc).join(", ") : ""; })()}: ${esc(a.defect)}${a.evidence ? ` (shown by <code>${esc(a.evidence)}</code>)` : ""}</span></li>`).join("")}</ul>` : "";
 const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
+// a result's title as its heading; some titles are whole statements, so a long one is set smaller and held to
+// three lines, with a control to show it in full (the statement itself follows below in any case)
+function titleHead(t) {
+  const len = (t || "").length, size = len > 160 ? "t-long" : len > 80 ? "t-mid" : "";
+  return size === "t-long" ? `<h2 class="t-long t-clamp">${esc(t)}</h2><button class="titlemore" type="button" aria-expanded="false">Show the full title</button>`
+                           : `<h2${size ? ` class="${size}"` : ""}>${esc(t)}</h2>`;
+}
+document.addEventListener("click", ev => { const b = ev.target.closest(".titlemore"); if (!b) return; const h = b.previousElementSibling;
+  const open = h.classList.toggle("t-clamp") === false; b.setAttribute("aria-expanded", String(open)); b.textContent = open ? "Show less" : "Show the full title"; });
 function resultHead(n) {
   return `<div class="eyebrow" style="margin-top:${trail ? 12 : 0}px"><span style="color:${subjColour(n.subject)}">●</span> ${esc(subjTitle(n.subject))}${PROGS.size && n.programme ? ` · ${esc(progTitle(n.programme))}` : ""}</div>
-    <h2>${esc(n.title)}</h2>
+    ${titleHead(n.title)}
     ${byline(n)}
     ${coreWords(n) ? `<p class="note" style="margin:2px 0 6px">${esc(coreWords(n))}</p>` : ""}
     <div class="chips"><span class="chip">${esc(STATUS_WORD[n.status] || n.status)}</span>${evidChip(n)}${trustChip(n)}${n.kind === "claim" && n.ledger === "essential" ? `<span class="chip">Needs the completion</span>` : ""}${n.coverage && n.coverage.judge && n.coverage.judge.verdict !== "agrees" ? `<span class="chip warn" title="${esc(n.coverage.judge.note)}">${esc(JUDGE_WORD[n.coverage.judge.verdict] || "Coverage judge: " + n.coverage.judge.verdict)}</span>` : ""}</div>`;

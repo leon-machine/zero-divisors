@@ -2,7 +2,7 @@
 id: synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms
 kind: claim
 version: 2
-title: 'With $I_{4}$ as the four-dimensional chirality element of dimensional regularisation and the unit outside the product, the chiral projectors delete the evanescent loop momentum, and a massless chiral abelian field breaks the photon two- and four-point Ward identities by local finite terms, cancelled by the counterterms $\frac{1}{16\pi^{2}}\bigl[-\tfrac{e^{2}}{6}\sum Y^{2}\,\bar A\cdot\bar\partial^{2}\bar A + \tfrac{e^{4}}{12}\sum Y^{4}(\bar A^{2})^{2}\bigr]$, which, when every field carries a chiral vertex, never cancel between fields (standard values)'
+title: 'Chiral abelian loops in BMHV need finite symmetry-restoring counterterms'
 status: proved
 region: synthesis
 subject: quantum-fields

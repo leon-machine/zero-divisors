@@ -2,7 +2,7 @@
 id: synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
 kind: claim
 version: 1
-title: Under the interface premise a populated five-dimensional tower radiates through its Kaluza-Klein levels, so a hole's emission coefficient grows as the fifth direction's extent over the mass; below a crossover mass the burst follows M^4 = 4B tau and its primary high-energy tail steepens from E^-3 to E^-4
+title: 'Kaluza-Klein channels of a five-dimensional tower steepen the burst'
 status: proved
 region: synthesis
 subject: dark-matter

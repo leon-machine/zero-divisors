@@ -2,7 +2,7 @@
 id: synthesis.killing-horizon-value-factor-is-the-generator-boost
 kind: claim
 version: 1
-title: At every Killing horizon with nonzero surface gravity, off its bifurcation surface, in a gravitational field of any field strength and with or without rotation, the Killing flow acts on the canonical light-ray component of a spinor field, relative to frames parallel along the generators, by the boost of the generator's null plane at the surface gravity, weight $e^{-\kappa t/2}$; the rotation one-form of the horizon reaches only the constrained component, so the boost time evolution of the generators is the stored unitary dilation group with no further helicity phase
+title: 'At a Killing horizon the value factor is the generator boost'
 status: proved
 region: synthesis
 subject: thermality

@@ -2,7 +2,7 @@
 id: synthesis.imported-haar-average-purity
 kind: claim
 version: 1
-title: 'Imported: the average purity of a subsystem of a random pure state is $(m + n)/(mn + 1)$ (Lubkin 1978)'
+title: 'Imported: average purity of a random pure state (Lubkin 1978)'
 status: imported
 region: synthesis
 subject: entropy

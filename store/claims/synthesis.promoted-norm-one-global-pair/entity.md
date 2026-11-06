@@ -2,7 +2,7 @@
 id: synthesis.promoted-norm-one-global-pair
 kind: claim
 version: 4
-title: Under the Henneaux-Teitelboim promotion the norm mode becomes the one global pair of that reduction, the Goldstone count stays nine against nine, and N becomes initial data
+title: 'The promoted norm as the one global pair of the reduction'
 status: proved
 region: synthesis
 subject: dark-energy

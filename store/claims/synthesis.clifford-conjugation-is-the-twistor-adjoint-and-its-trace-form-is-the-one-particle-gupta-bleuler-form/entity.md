@@ -2,7 +2,7 @@
 id: synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form
 kind: claim
 version: 1
-title: 'Clifford conjugation of the conformal spinor algebra is the adjoint of the twistor form, and its trace form on vectors is minus the metric; on spacetime vectors this is the one-particle Gupta-Bleuler form $-u\cdot w$ of clause (K1) of the Krein premise, the unique Lorentz-invariant form up to a real factor, and the positive structure gives the Euclidean form of its time, the two related by the involution $J$, whose second quantisation is the fundamental symmetry $(-1)^{n_{0}}$; this restates the one-particle content of (K1), and that the unphysical modes are quantised with the indefinite form, and clauses (K2) to (K4), remain premises'
+title: 'Clifford conjugation as twistor adjoint and the Gupta-Bleuler form'
 status: proved
 region: synthesis
 subject: quantum-fields

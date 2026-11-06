@@ -2,7 +2,7 @@
 id: synthesis.imported-witten-global-su2-anomaly
 kind: claim
 version: 1
-title: 'Imported: Witten''s global $SU(2)$ anomaly; a four-dimensional $SU(2)$ gauge theory with an odd number of left-handed fermion doublets (and no other representations) is inconsistent, so a consistent theory has an even number of them (Witten 1982)'
+title: 'Imported: Witten''s global $SU(2)$ anomaly (Witten 1982)'
 status: imported
 region: synthesis
 subject: standard-model

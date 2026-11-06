@@ -2,7 +2,7 @@
 id: synthesis.majorana-scale-free-on-pati-salam-route
 kind: claim
 version: 2
-title: On the Pati-Salam route the stored relations are invariant under f to lam f, w to w/lam except the light seesaw masses, so the Majorana scale is a free input valued only by m_3, and fixing the triplet vev by the weak angle does not fix it
+title: 'The Majorana scale is free on the Pati-Salam route'
 status: proved
 region: synthesis
 subject: neutrinos

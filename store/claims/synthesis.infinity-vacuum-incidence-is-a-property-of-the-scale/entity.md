@@ -2,7 +2,7 @@
 id: synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale
 kind: claim
 version: 3
-title: 'The infinity vacua''s own-ray incidence is a property of the scale, which the conformally invariant CAR data cannot see; by the almost-Einstein characterisation it holds exactly when the scale tractor $I'' = I_{g} + \tfrac{J}{4}X$, of which $I_{g}$ is the null projection, is parallel (the frozen point), and with matter the scale tractor''s derivative is the trace-free stress tensor'
+title: 'Infinity-vacuum incidence is a property of the scale'
 status: proved
 region: synthesis
 subject: einstein

@@ -2,7 +2,7 @@
 id: synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise
 kind: claim
 version: 3
-title: A quasi-free deposit on the fermionic boundary-mode algebra is its vacuum plus shot noise, whatever its correlation range or partner placement; for the I-state, or any quasi-free deposit with at least one thermal species' number of quanta at thermal energies, the shot term at the pivot is below $10^{-77}$
+title: 'A quasi-free deposit is the vacuum plus shot noise'
 status: proved
 region: synthesis
 subject: dark-energy

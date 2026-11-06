@@ -2,7 +2,7 @@
 id: synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness
 kind: claim
 version: 1
-title: 'Imported: a four-dimensional gravitational field with vanishing Weyl curvature is locally a conformal rescaling of the flat field (Weyl, Schouten), and in four dimensions the conformally coupled massless scalar (weight 1), the massless Dirac field (weight 3/2) and the Maxwell and Yang-Mills fields (weight 0) are conformally covariant'
+title: 'Imported: conformal covariance of massless fields and local conformal flatness'
 status: imported
 region: synthesis
 subject: quantum-fields

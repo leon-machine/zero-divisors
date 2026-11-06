@@ -90,6 +90,10 @@ class Layer1Shape(StoreCase):
         self.edit("fx.witt.car", "id: fx.witt.car", "id: FX_witt")
         self.assertFires("E103")
 
+    def test_E124_title_states_the_result(self):
+        self.edit("fx.witt.car", "title: ", "title: " + "a title that runs on and on " * 4)
+        self.assertFires("E124", (1,))
+
     def test_E104_bad_kind(self):
         self.edit("fx.witt.car", "kind: claim", "kind: lemma")
         self.assertFires("E104")

@@ -2,7 +2,7 @@
 id: synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window
 kind: claim
 version: 2
-title: If thermal fluctuations with an area-law heat capacity are converted at Hubble exit as in string-gas cosmology, the spectrum is exactly scale invariant at fixed temperature, eight standard deviations from the measured index, and, with a heat capacity at most the area entropy ($\lambda \le 1$), its amplitude at any temperature in the descent's window (under Premise (R)) or at the frozen point's horizon temperature (under (F)) falls short of the measured one by about ten orders or more
+title: 'Holographic thermal fluctuations fall short of the measured spectrum'
 status: proved
 region: synthesis
 subject: dark-energy

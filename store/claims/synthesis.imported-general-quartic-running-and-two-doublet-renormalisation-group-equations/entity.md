@@ -2,7 +2,7 @@
 id: synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations
 kind: claim
 version: 1
-title: 'Imported: the running of scalar quartic couplings in a general gauge theory at one loop and of its pure-quartic part at two loops (Machacek and Vaughn 1985; Luo, Wang and Xiao 2003), and the one-loop renormalisation-group equations of the two-Higgs-doublet model with a discrete symmetry and type-II Yukawa couplings (Haber and Hempfling 1993; Branco et al. 2012)'
+title: 'Imported: quartic running and the two-doublet renormalisation-group equations'
 status: imported
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.majorana-scale-not-carried-by-rung-frame-boost
 kind: claim
 version: 1
-title: Extended to both rung slots and as the identity on the pair slots, the rung-frame boost is the flow of twice the right-handed isospin, so the hypercharge-neutral directions carrying lepton number two have frame weight two; a Majorana vev of weight two whose size is fixed in Hubble units in one frame and read in the weak frame would obey $M^{2} = \kappa^{2}(v^{4}/(2H^{2}) - H^{2})$ ($v^{2} = 2N$), and for $\kappa$ and the Majorana couplings of order one the record excludes it, so the frame boost does not tie the Majorana scale to $v/H$
+title: 'The rung-frame boost does not carry the Majorana scale'
 status: proved
 region: synthesis
 subject: standard-model

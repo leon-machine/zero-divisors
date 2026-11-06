@@ -2,7 +2,7 @@
 id: synthesis.imported-large-scale-potential-and-sachs-wolfe-relations
 kind: claim
 version: 1
-title: 'Imported: on super-Hubble scales the Bardeen potential is (2/3) of the curvature perturbation in the radiation era and (3/5) in the matter era, and the large-angle temperature anisotropy of mixed adiabatic and matter-isocurvature modes (Langlois and Riazuelo 2000)'
+title: 'Imported: super-Hubble potential and Sachs-Wolfe relations'
 status: imported
 region: synthesis
 subject: dark-energy

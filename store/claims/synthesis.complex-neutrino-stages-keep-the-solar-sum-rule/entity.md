@@ -2,7 +2,7 @@
 id: synthesis.complex-neutrino-stages-keep-the-solar-sum-rule
 kind: claim
 version: 2
-title: For a complex neutrino coefficient the solar sum rule holds with the neutrino tilt bound $\tan^{2}\theta_{\nu} \le \sqrt{\rho}(1 + \sqrt{\rho})/(1 - \sqrt{\rho})$, $\rho = m_{1}/m_{2}$, attained at a purely imaginary relative coefficient; if $m_{1}/m_{2} \le 0.01$, every second stage of one type in modulus in both sectors keeps $\Delta < 23.3^{\circ}$ at the breaking lemma's order, so second stages from the $10$ couplings, among them the $\su(2)_{R}$-covariant completion's second family matrix, are not the lopsided stage
+title: 'Complex neutrino stages keep the solar sum rule'
 status: proved
 region: synthesis
 subject: neutrinos

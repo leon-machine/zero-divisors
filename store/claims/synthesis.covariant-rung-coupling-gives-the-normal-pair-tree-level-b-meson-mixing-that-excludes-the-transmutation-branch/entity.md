@@ -2,7 +2,7 @@
 id: synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
 kind: claim
 version: 2
-title: 'Under the covariant coupling of the rung field to its conjugate with complex symmetric family matrices (the rung $10$), the neutral normal pair couples to down quarks through the up-quark mass matrix, $\sqrt2\,V^{\dagger}\hat{M}_{u}V^{*}/v$, so its $sb$ and $db$ entries exceed $5.18$ and $1.07$ GeV for every phase; at tree level a normal pair with both masses at most $542$ GeV gives $B_{s}$ and $B_{d}$ mixing more than $50$ times the measured mass differences for every splitting of its two masses, computed with imported hadronic inputs and quark mixing from tree-level measurements and unitarity; so if the Gildener-Weinberg formula and decoupling hold, the transmutation branch is excluded under this coupling, and on the branch with a level the second doublet is at least about $2.5$ TeV with conservative inputs and no QCD running'
+title: 'B-meson mixing excludes the transmutation branch under covariant coupling'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.quadratic-flows-cannot-thermalise-descent
 kind: claim
 version: 1
-title: Under quadratic or number-diagonal dynamics no descent state relaxes to the I-state; its occupations must be deposited
+title: 'Quadratic dynamics cannot thermalise a descent state'
 status: proved
 region: synthesis
 subject: entropy

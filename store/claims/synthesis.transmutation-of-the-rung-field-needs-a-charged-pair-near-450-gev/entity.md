@@ -2,7 +2,7 @@
 id: synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
 kind: claim
 version: 4
-title: Given the Gildener-Weinberg one-loop scalon formula, and with the Majorana and Pati-Salam sectors decoupled from the rung field, on its flat physical branch the Standard Model content alone gives a negative scalon mass squared, about $-(46\ \mathrm{GeV})^{2}$; the charged pair makes it positive exactly when $m_{\pm}$ exceeds a threshold between $249$ and $268$ GeV, above $m_{t} - m_{b}$, and the measured Higgs mass then requires $450 < m_{\pm} < 456$ GeV and gives $h \to \gamma\gamma$ at $0.898$ to $0.900$ of the Standard Model rate
+title: 'Rung-field transmutation needs a charged pair near 450 GeV, now excluded'
 status: proved
 region: synthesis
 subject: standard-model

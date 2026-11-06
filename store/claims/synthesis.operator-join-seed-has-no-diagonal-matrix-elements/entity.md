@@ -2,7 +2,7 @@
 id: synthesis.operator-join-seed-has-no-diagonal-matrix-elements
 kind: claim
 version: 1
-title: The operator join commutes with the constituents' internal U(2) while the condensation source carries its determinant charge, so the seed has zero expectation on every state of definite constituent helicities, massless or not; a nonzero seed needs a superposition of helicity sectors that breaks the determinant U(1)
+title: 'The operator join''s seed has no diagonal matrix elements'
 status: proved
 region: synthesis
 subject: mass

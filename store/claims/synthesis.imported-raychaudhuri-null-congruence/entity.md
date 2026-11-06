@@ -2,7 +2,7 @@
 id: synthesis.imported-raychaudhuri-null-congruence
 kind: claim
 version: 2
-title: 'Imported: the focusing and shear equations for a null geodesic congruence (Raychaudhuri 1955, Sachs 1961)'
+title: 'Imported: the Raychaudhuri and Sachs equations for null congruences'
 status: imported
 region: synthesis
 subject: einstein

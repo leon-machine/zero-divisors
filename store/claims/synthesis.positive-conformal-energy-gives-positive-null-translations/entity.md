@@ -2,7 +2,7 @@
 id: synthesis.positive-conformal-energy-gives-positive-null-translations
 kind: claim
 version: 5
-title: In $\Cl(2,4)$ every future translation is a limit of positive multiples of conjugates of the central rotation $Z = e_{0}\nu$, so a unitary representation of $\mathrm{Spin}^{+}(2,4)$ on a state's GNS space with nonnegative conformal energy has its translation spectrum in the closed forward cone and a nonnegative generator for the null translations of every local Rindler horizon of Minkowski space
+title: 'Positive conformal energy gives positive null translations'
 status: proved
 region: synthesis
 subject: conformal-spacetime

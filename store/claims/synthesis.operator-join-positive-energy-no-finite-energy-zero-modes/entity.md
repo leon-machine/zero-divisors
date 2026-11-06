@@ -2,7 +2,7 @@
 id: synthesis.operator-join-positive-energy-no-finite-energy-zero-modes
 kind: claim
 version: 1
-title: In the oscillator realisation of the positive-energy modules the operator join is $2\hat{B}^{\dagger}\hat{B} + \tfrac{\Lambda}{3}\hbar^{2}(s_{1} + s_{2} + j(j+1) - 2)$ on each isotype, so for $\Lambda > 0$ its massless locus needs $2\max(s_{1}, s_{2}) + (s_{1} - s_{2})^{2} \le 2$ (a bound the continuum threshold sharpens); for $\Lambda \ge 0$ its band raising the oscillator number by four is the product of the two creation brackets, so it has no eigenvector of finite energy content in any sector and the polynomial realisation's zero modes have no counterpart; for $\Lambda < 0$ at the Fock scale matched to the frozen point ($\lambda s^{4} = -1$) the join preserves the oscillator number and has zero modes of finite energy content
+title: 'No finite-energy zero modes of the oscillator join for $\Lambda \ge 0$'
 status: proved
 region: synthesis
 subject: mass

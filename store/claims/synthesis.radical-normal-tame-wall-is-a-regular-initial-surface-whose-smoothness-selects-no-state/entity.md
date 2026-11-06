@@ -2,7 +2,7 @@
 id: synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state
 kind: claim
 version: 2
-title: 'At an aligned tame corank-one wall whose radical is the conormal, the physical side is in its proper time $\tau = 2\sqrt{t}$ a flat half-spacetime whose constant-$\tau$ slices are Cauchy surfaces, while the bulk fields smooth across the wall in the wall''s own coordinate $t$ are a Lagrangian half of the scalar data and, for the Dirac field in the flat frame, zero, so smoothness at the wall selects no state; with the radical tangent the wall is a curvature singularity; and in cosmic time only the radiation-dominated power-law field has a conformal bracket that is a tame wall'
+title: 'A radical-normal tame wall is a regular initial surface that selects no state'
 status: proved
 region: synthesis
 subject: quantum-fields

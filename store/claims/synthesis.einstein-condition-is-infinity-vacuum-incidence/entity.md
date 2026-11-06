@@ -2,7 +2,7 @@
 id: synthesis.einstein-condition-is-infinity-vacuum-incidence
 kind: claim
 version: 3
-title: 'The standard null-cone form of the Einstein condition, translated into vacuum language: infinity vacua unexcited along their own light rays'
+title: 'The Einstein condition read as infinity-vacuum incidence'
 status: proved
 region: synthesis
 subject: einstein

@@ -2,7 +2,7 @@
 id: synthesis.coherent-face-vector-real-slices
 kind: claim
 version: 1
-title: The coherent face vector meets no real slice, and its Koide number is fixed by the feeding ratio
+title: 'The coherent face vector meets no real slice'
 status: proved
 region: synthesis
 subject: generations

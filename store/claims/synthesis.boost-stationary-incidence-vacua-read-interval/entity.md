@@ -2,7 +2,7 @@
 id: synthesis.boost-stationary-incidence-vacua-read-interval
 kind: claim
 version: 2
-title: Under the positive Hermitian structure, incidence vacua with boost-constant ascent marginal read the Lorentz interval and entangle the spectator
+title: 'Boost-stationary incidence vacua read the Lorentz interval'
 status: proved
 region: synthesis
 subject: one-relation

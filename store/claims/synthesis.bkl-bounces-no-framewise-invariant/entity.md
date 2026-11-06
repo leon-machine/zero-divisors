@@ -2,7 +2,7 @@
 id: synthesis.bkl-bounces-no-framewise-invariant
 kind: claim
 version: 2
-title: If the approach follows the BKL transition law, no framewise limit and no continuous invariant of the exponents survives; rational orbits end at Schwarzschild's exponents and then the Taub point
+title: 'Under the BKL transition law: no framewise limit, no continuous invariant'
 status: proved
 region: synthesis
 subject: interior

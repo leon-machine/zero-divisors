@@ -2,7 +2,7 @@
 id: synthesis.collar-kms-extension-completion-locus
 kind: claim
 version: 1
-title: Under hypothesis (E), the exceptional set's modes carried along the tau-lines, the horizon KMS state is KMS for every slice's holonomy flow and reads 6 pi in Hubble time at the exceptional set
+title: 'Under (E), the horizon''s KMS state reads $6\pi$ at the exceptional set'
 status: proved
 region: synthesis
 subject: thermality

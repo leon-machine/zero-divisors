@@ -2,7 +2,7 @@
 id: synthesis.positive-energy-selects-rule-2-sign
 kind: claim
 version: 3
-title: Positive energy selects the sign of the Rule 2 generator, by the imported invariant-cone classification
+title: 'Positive energy selects the sign of Rule 2'
 status: proved
 region: synthesis
 subject: completion

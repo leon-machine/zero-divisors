@@ -2,7 +2,7 @@
 id: synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits
 kind: claim
 version: 1
-title: 'Imported: ATLAS limits on charged Higgs bosons from top decays and $H^{\pm} \to \tau\nu$ at $13$ TeV with $140$ fb$^{-1}$; for $80 \le m_{H^{\pm}} \le 160$ GeV, $\mathcal{B}(t \to bH^{+})\,\mathcal{B}(H^{+} \to \tau\nu)$ below values between $0.27\%$ and $0.02\%$'
+title: 'Imported: ATLAS limits on charged Higgs bosons in top decays'
 status: imported
 region: synthesis
 subject: standard-model

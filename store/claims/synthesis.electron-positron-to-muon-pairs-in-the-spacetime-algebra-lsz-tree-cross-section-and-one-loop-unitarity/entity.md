@@ -2,7 +2,7 @@
 id: synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity
 kind: claim
 version: 2
-title: 'The standard S-matrix of $e^{+}e^{-} \to \mu^{+}\mu^{-}$ recovered in the spacetime algebra: LSZ reduction with the propagator residues $p \pm m$ as twice the mass times idempotents of trace two, the tree cross section $\sigma = \tfrac{4\pi\alpha^{2}}{3s}\,\beta(3 - \beta^{2})/2$ from two Clifford traces, and at one loop the on-shell polarisation insertion, whose absorptive part $(\alpha/3)\beta(3 - \beta^{2})/2$ equals $s\sigma_{\mathrm{tree}}/(4\pi\alpha)$ (the s-channel optical-theorem relation for the photon self-energy) and whose large-$s$ form is $(\alpha/(3\pi))(\ln(s/m^{2}) - 5/3)$ (Lehmann, Symanzik and Zimmermann 1955; standard textbook results)'
+title: '$e^{+}e^{-} \to \mu^{+}\mu^{-}$ in the spacetime algebra: tree and one loop'
 status: proved
 region: synthesis
 subject: quantum-fields

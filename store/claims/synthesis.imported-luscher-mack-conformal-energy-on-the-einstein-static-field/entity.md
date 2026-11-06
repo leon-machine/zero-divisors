@@ -2,7 +2,7 @@
 id: synthesis.imported-luscher-mack-conformal-energy-on-the-einstein-static-field
 kind: claim
 version: 1
-title: 'Imported: a conformally invariant quantum field theory on Minkowski space extends to the universal covering of its conformal compactification, the Einstein static field $\mathbb{R}\times S^{3}$, with the universal covering of the conformal group acting, and its conformal energy $\tfrac12(P_{0} + K_{0})$ is the energy of the unit Einstein static field (L\"uscher and Mack 1975)'
+title: 'Imported: conformal energy on the Einstein static field (L\"uscher and Mack)'
 status: imported
 region: synthesis
 subject: quantum-fields

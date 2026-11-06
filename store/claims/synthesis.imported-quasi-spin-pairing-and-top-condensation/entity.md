@@ -2,7 +2,7 @@
 id: synthesis.imported-quasi-spin-pairing-and-top-condensation
 kind: claim
 version: 1
-title: 'Imported: the quasi-spin (seniority) solution of the degenerate pairing model (Kerman 1961), with energies $-\tfrac{G}{4}(n - v)(2\Omega - n - v + 2)$; the Nambu-Jona-Lasinio relation $m_{\sigma} = 2m$ (1961); and top-quark condensation (Bardeen, Hill and Lindner 1990), whose leading prediction $m_{h} = 2m_{t}$ two-condensate models lower to $125$ GeV (Osipov et al. 2019)'
+title: 'Imported: quasi-spin pairing, the NJL relation and top condensation'
 status: imported
 region: synthesis
 subject: quantum-fields

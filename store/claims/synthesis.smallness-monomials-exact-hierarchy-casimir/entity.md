@@ -2,7 +2,7 @@
 id: synthesis.smallness-monomials-exact-hierarchy-casimir
 kind: claim
 version: 2
-title: The smallness problems as exact monomials in N, the hierarchy entry through the weight's Casimir
+title: 'The smallness problems as exact monomials in $N$'
 status: proved
 region: synthesis
 subject: dark-energy

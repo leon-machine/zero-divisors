@@ -2,7 +2,7 @@
 id: synthesis.positive-null-energy-gives-r-premises
 kind: claim
 version: 4
-title: A ground state for the affine null translations of a horizon's generators restricts on either side of the edge to the continuum I-state at rapidity period $2\pi$, so the continuum restatements of (R) for the eternal hole, (R$_{\Lambda}$), (R$_{\mathrm{loc}}$) and the joint KMS part of (Q) follow from one premise with no temperature in it, posable only on the continuum
+title: 'Positive null energy gives the (R) premises'
 status: proved
 region: synthesis
 subject: thermality

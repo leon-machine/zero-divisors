@@ -2,7 +2,7 @@
 id: synthesis.imported-heat-kernel-coefficients-and-background-field-gauge
 kind: claim
 version: 1
-title: 'Imported: the heat-kernel (Seeley-DeWitt) coefficients of a Laplace-type operator, whose field-strength part on a flat background is $\tfrac{1}{12}\Omega_{\mu\nu}\Omega^{\mu\nu} + \tfrac12E^{2}$ ($a_{2}$ in DeWitt''s numbering, $a_{4}$ in Vassilevich''s), and the background-field gauge with Faddeev-Popov ghosts and the one-loop determinant weights (Abbott 1981)'
+title: 'Imported: heat-kernel coefficients and the background-field gauge'
 status: imported
 region: synthesis
 subject: quantum-fields

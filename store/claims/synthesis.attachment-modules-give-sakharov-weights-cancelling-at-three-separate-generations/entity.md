@@ -2,7 +2,7 @@
 id: synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations
 kind: claim
 version: 2
-title: 'On the attachment''s helicity modules, the $L^{2}$ coefficient of the zero-point energy regulated by a smooth cut-off $L$ on conformal energy is $-(N_{V} - N_{W}/4)$ times one moment of the cut-off, reproducing the standard Sakharov weights; with $N_{V} = 12$, sixteen Weyl fields (right-handed neutrino included) in each of $N_{g}$ separate generations and conformally coupled scalars it vanishes exactly at $N_{g} = 3$, and a sharp cut-off at a floor adds terms that are not local'
+title: 'Sakharov weights on the attachment cancel at three separate generations'
 status: proved
 region: synthesis
 subject: einstein

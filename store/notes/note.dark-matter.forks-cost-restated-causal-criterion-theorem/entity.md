@@ -2,8 +2,7 @@
 id: note.dark-matter.forks-cost-restated-causal-criterion-theorem
 kind: note
 version: 1
-title: 'The fork''s cost restated: the causal criterion is a theorem, and the bit on the fork is read
-  once'
+title: 'The fork''s cost restated: the causal criterion as a theorem'
 status: remark
 subject: dark-matter
 proposed_by:

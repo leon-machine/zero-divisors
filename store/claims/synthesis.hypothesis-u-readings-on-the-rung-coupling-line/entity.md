@@ -2,7 +2,7 @@
 id: synthesis.hypothesis-u-readings-on-the-rung-coupling-line
 kind: claim
 version: 4
-title: On one family structure the top reading of Hypothesis (U) holds at the pure-ten point and the bottom reading at M_I at no distinguished point
+title: 'Hypothesis (U) on the rung coupling line: the top reading at the pure ten'
 status: proved
 region: synthesis
 subject: neutrinos

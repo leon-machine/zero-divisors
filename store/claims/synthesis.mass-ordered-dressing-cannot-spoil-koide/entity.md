@@ -2,7 +2,7 @@
 id: synthesis.mass-ordered-dressing-cannot-spoil-koide
 kind: claim
 version: 1
-title: A dressing that is flavour-blind or favours the lighter quarks can only lower the Koide quotient, so perturbative QCD running, pole conversion and constituent dressing (argued, standard QCD) cannot turn Koide brackets into the measured quark masses
+title: 'Mass-ordered dressing cannot turn Koide brackets into quark masses'
 status: proved
 region: synthesis
 subject: generations

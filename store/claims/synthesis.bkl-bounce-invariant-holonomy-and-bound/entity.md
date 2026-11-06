@@ -2,7 +2,7 @@
 id: synthesis.bkl-bounce-invariant-holonomy-and-bound
 kind: claim
 version: 2
-title: What of the weighted limit survives the BKL bounces, for approaches that return to non-Taub Kasner models
+title: 'The weighted limit across BKL bounces, for non-Taub returns'
 status: proved
 region: synthesis
 subject: interior

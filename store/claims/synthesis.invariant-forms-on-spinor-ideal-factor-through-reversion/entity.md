@@ -2,7 +2,7 @@
 id: synthesis.invariant-forms-on-spinor-ideal-factor-through-reversion
 kind: claim
 version: 1
-title: Every spin-invariant bilinear form on a spinor ideal is a linear functional of the reversion pairing, so at residues 0 and 4 a single ideal admits no mass term of any kind
+title: 'Invariant forms on a spinor ideal factor through reversion'
 status: proved
 region: synthesis
 subject: dark-matter

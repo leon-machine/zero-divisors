@@ -2,7 +2,7 @@
 id: rungs.mass-bracket-frozen-points-grip-slot
 kind: claim
 version: 3
-title: The mass bracket is the frozen point's grip on the slot-antisymmetric bivector, at $\Lambda = 0$
+title: 'Mass bracket at $\Lambda = 0$: the frozen point''s grip on the slot bivector'
 status: proved
 region: rungs
 subject: mass

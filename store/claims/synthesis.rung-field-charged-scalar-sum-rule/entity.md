@@ -2,7 +2,7 @@
 id: synthesis.rung-field-charged-scalar-sum-rule
 kind: claim
 version: 2
-title: For the rung field's D-term action with an added invariant $W(N)$ of the norm alone, the charged pair and the neutral mode obey the tree-level sum rule $(m_{\pm}^{2} - M_{W}^{2}) - (m_{h}^{2} - M_{Z}^{2}) = 2(m^{*}/N^{*})^{2}(W' - N^{*}W'')$; $W = \kappa N^{2}$, the only such $W$ of $N$ alone with no dimensionful constant and no dependence on the level, gives $m_{\pm}^{2} = M_{W}^{2} + m_{h}^{2} - M_{Z}^{2}$ at tree level, about $117$ GeV
+title: 'A tree-level sum rule for the rung field''s charged pair'
 status: proved
 region: synthesis
 subject: standard-model

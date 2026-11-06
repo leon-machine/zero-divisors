@@ -2,7 +2,7 @@
 id: synthesis.eviction-keeps-one-replica-saddle
 kind: claim
 version: 2
-title: 'At Renyi index two the eviction mechanism keeps one of the two replica saddles: at zero weight its radiation purity is exactly $\max(2^{-j}, 2^{-n})$ after $j$ quanta with capacity bound $n\ln 2$, against the two-saddle value $2^{-j} + 2^{-n}$, which is the replica-wormhole purity on the reading $e^{S_{0}} = 2^{n}$, and the exact Haar average $(2^{j} + 2^{n})/(2^{j + n} + 1)$, so at the crossing the eviction Renyi-2 entropy exceeds the two-saddle one by exactly $\ln 2$; at every weight its falling branch is the window''s thermal entropy with no correction'
+title: 'At Renyi index two, eviction keeps one of two replica saddles'
 status: proved
 region: synthesis
 subject: entropy

@@ -2,7 +2,7 @@
 id: synthesis.majorana-scale-free-input
 kind: claim
 version: 2
-title: 'The Majorana scale along the heavy direction (the $126$ Yukawa coupling, equivalently the $126$ doublet admixture $w_{u}$) is an input of the laws beside $N$ and $v/H$, fixed in value by $m_{3}$'
+title: 'Premise: the Majorana scale is a free input'
 status: postulate
 region: synthesis
 subject: neutrinos

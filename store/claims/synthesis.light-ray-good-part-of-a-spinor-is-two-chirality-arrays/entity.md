@@ -2,7 +2,7 @@
 id: synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays
 kind: claim
 version: 2
-title: On a horizon's null plane the canonical part of a spacetime-algebra spinor is the image of Lambda(m), two complex channels, one per chirality, with helicity about the generators equal to minus the chirality; so, given one (Q) version 3 array per complex channel, one massless Dirac species supplies two arrays per light ray (ln 2 at the Hawking temperature) and one Weyl field one
+title: 'The light-ray good part of a spinor is two chirality arrays'
 status: proved
 region: synthesis
 subject: entropy

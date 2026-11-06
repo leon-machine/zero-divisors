@@ -2,7 +2,7 @@
 id: synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off
 kind: claim
 version: 3
-title: 'Read as a sharp mode cut-off (the result holds for any finite truncation of a chiral band, the floors of the tower included), a floor keeps the charge and the free continuity equation exactly; for a one-chirality field on a window of $2N$ momentum modes the central term of the density algebra is an edge operator, equal on the filled sea (and on states whose window edges are filled below and empty above) to its continuum value $p$ exactly for $p \le N$ and to $\min(p, 2N - p)$ in general (it differs on states excited at the edges), the one-loop density response lying at energy exactly $p$ with that weight; and the conformal-energy cut of the twistor attachment keeps the spatial rotations but no boost; nor does any weighting of the floors by conformal energy, sharp or smooth (closure of the commutant with one boost, and Schur''s lemma)'
+title: 'A floor keeps the charge and, below the cut-off, the central term'
 status: proved
 region: synthesis
 subject: quantum-fields

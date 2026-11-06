@@ -2,7 +2,7 @@
 id: synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
 kind: claim
 version: 2
-title: The neutral-singlet bit of the grading clause is fixed by a gauge algebra between the Standard Model and $\so(10)$ exactly when it leaves the number-conserving $\uu(5)$
+title: 'A gauge algebra decides the neutral-singlet bit exactly when it leaves $\uu(5)$'
 status: proved
 region: synthesis
 subject: standard-model

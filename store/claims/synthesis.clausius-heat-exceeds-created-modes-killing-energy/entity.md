@@ -2,7 +2,7 @@
 id: synthesis.clausius-heat-exceeds-created-modes-killing-energy
 kind: claim
 version: 2
-title: With the temperature clause of (C$_{\mathrm{loc}}$) holding at every instant with fixed weights, a fixed window of boundary modes absorbs no heat, so Clausius entropy enters as created modes, and the heat exceeds their Killing energy by $T\ln(1 + e^{-x})$ per mode, all of it at zero weight; keeping a fixed window instead breaks the temperature clause at first order
+title: 'Clausius heat exceeds the created modes'' Killing energy'
 status: proved
 region: synthesis
 subject: einstein

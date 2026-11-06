@@ -2,7 +2,7 @@
 id: synthesis.einstein-equations-from-c-loc-and-clausius
 kind: claim
 version: 7
-title: 'Under (C$_{\mathrm{loc}}$) and the Clausius relation, Jacobson''s argument gives Einstein''s equations with $\Lambda$ an integration constant and $G_{\mathrm{cl}} = 1/(4\eta)$; every further hypothesis named'
+title: 'Einstein''s equations from (C$_{\mathrm{loc}}$) and Clausius'
 status: proved
 region: synthesis
 subject: einstein

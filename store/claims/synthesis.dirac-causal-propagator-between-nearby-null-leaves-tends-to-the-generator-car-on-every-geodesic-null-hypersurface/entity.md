@@ -2,7 +2,7 @@
 id: synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
 kind: claim
 version: 2
-title: 'On every geodesic null hypersurface of a gravitational field the causal propagator of the Dirac field, restricted between the hypersurface and a nearby leaf of a null foliation, tends to the canonical delta kernel of the generators, the step term cancelling by the half-density law; with the flux contraction of the conserved current, the generator anticommutation relations hold there, and the restricted Hadamard parametrix in the thin-layer definition is the null vacuum plus a bounded kernel'
+title: 'The Dirac propagator tends to the generator CAR on null hypersurfaces'
 status: proved
 region: synthesis
 subject: thermality

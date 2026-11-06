@@ -2,7 +2,7 @@
 id: synthesis.no-120-excludes-hierarchical-second-stage
 kind: claim
 version: 1
-title: At the S3 to S2 direction and the breaking lemma's order, on real textures, no 120 makes every second stage one type, so the solar angle excludes Premise (H) and (H) needs a 120
+title: 'Without a 120 the solar angle excludes Premise (H)'
 status: proved
 region: synthesis
 subject: neutrinos

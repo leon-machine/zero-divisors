@@ -2,7 +2,7 @@
 id: synthesis.black-hole-data-do-not-fix-field-equations
 kind: claim
 version: 6
-title: The series' black-hole thermodynamics holds unchanged in every Ricci-polynomial extension of Einstein's theory, so on its own it cannot yield Einstein's equations
+title: 'Black-hole thermodynamics does not fix Einstein''s equations'
 status: proved
 region: synthesis
 subject: einstein

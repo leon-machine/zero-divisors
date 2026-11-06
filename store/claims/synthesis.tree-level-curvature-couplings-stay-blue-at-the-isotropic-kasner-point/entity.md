@@ -2,7 +2,7 @@
 id: synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
 kind: claim
 version: 2
-title: At tree level, on a metric Kasner approach before the descent (hypothesis (P1)), the curvature couplings that the stored actions give a scalar ($0$) and those the mass-weight dictionary gives off the Einstein region with the frozen point in its stored form ($-w/6$ with the transport's Thomas operator, $0$ with the field-space connection) are real only on the unitary real weights, where they lie in $[0, \tfrac12]$; among the Kasner points the store fixes, a coupling acts only at the isotropic disk point, where these couplings give index at least $3 - \sqrt{3}$ for a scalar with no hidden-scale weight and at least $3 - \sqrt{7}$ with the stored weights; the fitted coupling needs a real weight below $-9$, outside both unitary series
+title: 'Tree-level curvature couplings stay blue at the isotropic Kasner point'
 status: proved
 region: synthesis
 subject: dark-energy

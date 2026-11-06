@@ -2,7 +2,7 @@
 id: synthesis.local-conversion-cannot-redden-a-gaussian-spectator
 kind: claim
 version: 2
-title: A local conversion of a Gaussian field into the curvature perturbation, as in the curvaton and modulated-reheating mechanisms, cannot lower the field's spectral index (the classical Hermite-rank result), so under hypothesis (F) any field of the series read on the descent slice through the frozen point's invariant state gives an index of 2 up to corrections of order $(k|x_{d}|)^{-2}$ on observed scales
+title: 'A local conversion cannot redden a Gaussian spectator'
 status: proved
 region: synthesis
 subject: dark-energy

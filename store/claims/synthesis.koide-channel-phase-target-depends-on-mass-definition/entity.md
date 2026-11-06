@@ -2,7 +2,7 @@
 id: synthesis.koide-channel-phase-target-depends-on-mass-definition
 kind: claim
 version: 2
-title: 'In the $\sqrt{m}$ (circulant) reading the channel-phase target is a pole-mass statement: at first order in $\alpha$ the one-loop QED relation between pole and $\overline{\mathrm{MS}}$ masses moves the Koide phase reproducing $m_{\mu}/m_{e}$ at a common scale to $(0.22254, 0.22258)$, more than $1800$ times the distance of $\tfrac29$ from $\delta_{*}$, and puts Koide''s $Q$ off $\tfrac23$ by $(1.0, 1.3) \times 10^{-3}$'
+title: 'The Koide phase target depends on the mass definition'
 status: proved
 region: synthesis
 subject: generations

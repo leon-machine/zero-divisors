@@ -2,7 +2,7 @@
 id: synthesis.imported-wands-duality-of-perturbation-spectra
 kind: claim
 version: 1
-title: 'Imported: the spectrum of a massless field on a power-law expansion or contraction is invariant under p -> (1 - 2p)/(2 - 3p), with the stiff case p = 1/3 self-dual (Wands 1999)'
+title: 'Imported: duality of perturbation spectra (Wands 1999)'
 status: imported
 region: synthesis
 subject: dark-energy

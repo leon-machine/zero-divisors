@@ -2,7 +2,7 @@
 id: synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
 kind: claim
 version: 3
-title: On the null-lift locus every $U(2)$-invariant potential of the rung field is a function of the Hermitian norm $N$ and the hypercharge moment map $m$ on the orbit space $N^{2} - m^{2} \ge H^{4}$, whose boundary is the charge-preserving lift family; the hypercharge D-term action puts the vacuum on that boundary at the level $m^{*} = g'^{2}\xi/(g^{2} + g'^{2})$, so $v/H$ enters only through the input $\xi$, and gives the neutral mode the mass $M_{Z}$ and the charged pair $M_{W}$ at tree level in every frame; an added invariant $W(N)$ shifts them to $M_{Z}^{2} + 2W''m^{*2}/N^{*} + 2W'H^{4}/N^{*2}$ and $M_{W}^{2} + 2W'$, the latter twice the outward derivative of the potential, so local stability against charge breaking is the positivity of the charged mass; the rung field carries a physical charged scalar pair besides the neutral mode
+title: 'The rung field''s D-term action and tree masses on the lift locus'
 status: proved
 region: synthesis
 subject: standard-model

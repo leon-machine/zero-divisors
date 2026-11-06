@@ -2,7 +2,7 @@
 id: synthesis.pati-salam-monopoles-bound-descent-history
 kind: claim
 version: 1
-title: Given the monopole literature inputs, on the stored Pati-Salam chain with no inflation after the descent the Pati-Salam monopoles exceed the flux limit unless they form below 0.48 v_R = 2.0 x 10^10 GeV, so the seeding origin of the odd-tower remainder fails independently of Premise (R) and of perturbative couplings, unless the transition is cold, the symmetry is not restored at high temperature, or the monopoles are removed by a temporary breaking of electromagnetism
+title: 'Pati-Salam monopoles bound the descent history'
 status: proved
 region: synthesis
 subject: dark-matter

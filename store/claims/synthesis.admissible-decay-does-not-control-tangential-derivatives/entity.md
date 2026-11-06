@@ -2,7 +2,7 @@
 id: synthesis.admissible-decay-does-not-control-tangential-derivatives
 kind: claim
 version: 1
-title: The decay clauses of admissibility do not control tangential derivatives of the error or of the transport
+title: 'Admissible decay does not control tangential derivatives'
 status: proved
 region: synthesis
 subject: interior

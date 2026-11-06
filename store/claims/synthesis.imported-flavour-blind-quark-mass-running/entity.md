@@ -2,7 +2,7 @@
 id: synthesis.imported-flavour-blind-quark-mass-running
 kind: claim
 version: 1
-title: 'Imported: in the $\overline{\mathrm{MS}}$ scheme the QCD running of quark masses and their decoupling at heavy-quark thresholds are the same for every flavour'
+title: 'Imported: flavour-blind running of quark masses'
 status: imported
 region: synthesis
 subject: generations

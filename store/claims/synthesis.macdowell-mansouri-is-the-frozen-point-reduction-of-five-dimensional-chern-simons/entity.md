@@ -2,7 +2,7 @@
 id: synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons
 kind: claim
 version: 2
-title: 'The frozen-point MacDowell-Mansouri density is the reduction, along the frozen point, of the five-dimensional Chern-Simons form of the Pfaffian of $\Cl(2,4)$, and its ratio $1:2:1$ is exactly the Chern-Simons locus among reduced Lovelock densities; the reduction is consistent only with the scale of the reduced direction held fixed, since its equation $\epsilon(I, V, F, F) = 0$ fails at every point of Schwarzschild-de Sitter, and for $\Lambda > 0$ the parent space has signature $(2,3)$'
+title: 'MacDowell-Mansouri as the reduction of five-dimensional Chern-Simons'
 status: proved
 region: synthesis
 subject: einstein

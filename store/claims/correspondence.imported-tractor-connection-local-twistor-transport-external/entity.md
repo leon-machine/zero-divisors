@@ -2,7 +2,7 @@
 id: correspondence.imported-tractor-connection-local-twistor-transport-external
 kind: claim
 version: 1
-title: 'Imported: the tractor connection, and the conformal spinor connection (local twistor transport), external ingredients'
+title: 'Imported: tractor and conformal spinor connections, external sources'
 status: imported
 region: correspondence
 subject: einstein

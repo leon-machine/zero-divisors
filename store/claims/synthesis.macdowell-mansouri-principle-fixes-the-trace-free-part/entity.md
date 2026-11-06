@@ -2,7 +2,7 @@
 id: synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
 kind: claim
 version: 2
-title: 'The imported MacDowell-Mansouri functional, in the series'' frozen-point form, is a dynamical principle for the whole gauge field that fixes the trace-free part: its frame equation is twice the dual of $\mathcal{G}(a) + \Lambda a$, ten conditions with the Weyl part dropping out, and its restriction to pure dilations is the single Yamabe trace; with the standard (imported) Einstein-Cartan matter coupling its on-shell Schouten tensor is the stored derivative of the scale tractor, so the infinity-vacuum incidence is its vacuum case'
+title: 'The MacDowell-Mansouri principle fixes the trace-free part'
 status: proved
 region: synthesis
 subject: einstein

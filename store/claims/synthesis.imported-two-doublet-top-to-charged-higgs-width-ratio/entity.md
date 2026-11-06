@@ -2,7 +2,7 @@
 id: synthesis.imported-two-doublet-top-to-charged-higgs-width-ratio
 kind: claim
 version: 1
-title: 'Imported: in a two-Higgs-doublet model at tree level, $\Gamma(t \to bH^{+})/\Gamma(t \to bW^{+}) = \cot^{2}\beta\,(1 - x)^{2}/((1 - y)^{2}(1 + 2y))$ with $x = m_{H^{\pm}}^{2}/m_{t}^{2}$, $y = M_{W}^{2}/m_{t}^{2}$, when the bottom-mass terms are neglected'
+title: 'Imported: the two-doublet width ratio of top to charged Higgs at tree level'
 status: imported
 region: synthesis
 subject: standard-model

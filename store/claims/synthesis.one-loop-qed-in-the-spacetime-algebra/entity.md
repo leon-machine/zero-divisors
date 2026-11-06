@@ -2,7 +2,7 @@
 id: synthesis.one-loop-qed-in-the-spacetime-algebra
 kind: claim
 version: 2
-title: 'One-loop electrodynamics in the spacetime algebra, in a covariant gauge with imported Pauli-Villars regulators: transverse vacuum polarisation with coefficient $e^{2}/(12\pi^{2})$, $F_{2}(0) = \alpha/(2\pi)$ through the real bivector $\gamma^{\mu} \wedge q$, $Z_{1} = Z_{2}$, and the unit outside the product on massive lines'
+title: 'One-loop electrodynamics in the spacetime algebra'
 status: proved
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.point-spectrum-boost-admits-no-half-sided-translations
 kind: claim
 version: 3
-title: On a mode space where the boost acts by phases, it dilates no translation group, so the Borchers route to (R) needs the continuum
+title: 'A point-spectrum boost admits no half-sided translations'
 status: proved
 region: synthesis
 subject: thermality

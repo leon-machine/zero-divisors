@@ -2,7 +2,7 @@
 id: synthesis.imported-replica-wormhole-two-saddle-purity
 kind: claim
 version: 1
-title: 'Imported: in the end-of-the-world-brane model the radiation''s purity is the disconnected saddle plus the replica wormhole, $1/k + Z_{2}/Z_{1}^{2}$, and the planar microcanonical spectrum is Page''s (Penington, Shenker, Stanford and Yang 2019)'
+title: 'Imported: two-saddle purity with the replica wormhole (Penington et al. 2019)'
 status: imported
 region: synthesis
 subject: entropy

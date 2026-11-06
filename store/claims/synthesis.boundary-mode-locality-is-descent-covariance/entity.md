@@ -2,7 +2,7 @@
 id: synthesis.boundary-mode-locality-is-descent-covariance
 kind: claim
 version: 1
-title: On finite windows, boundary-mode locality is equivalent to the dynamics commuting with the descent for all times
+title: 'Boundary-mode locality is covariance under the descent'
 status: proved
 region: synthesis
 subject: thermality

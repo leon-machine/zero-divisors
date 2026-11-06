@@ -2,7 +2,7 @@
 id: synthesis.imported-left-right-bidoublet-two-yukawa-couplings
 kind: claim
 version: 1
-title: 'Imported: in the left-right symmetric model the quark bidoublet $\Phi$ couples through two family matrices, $h$ on $\Phi$ and $\tilde{h}$ on $\tilde{\Phi} = \tau_{2}\Phi^{*}\tau_{2}$, giving $M_{U} = \kappa h + \kappa''e^{-\mathrm{i}\theta}\tilde{h}$ and $M_{D} = \kappa''e^{\mathrm{i}\theta}h + \kappa\tilde{h}$'
+title: 'Imported: the left-right bidoublet''s two Yukawa couplings'
 status: imported
 region: synthesis
 subject: standard-model

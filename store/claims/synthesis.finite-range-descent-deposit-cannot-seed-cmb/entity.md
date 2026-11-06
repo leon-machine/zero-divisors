@@ -2,7 +2,7 @@
 id: synthesis.finite-range-descent-deposit-cannot-seed-cmb
 kind: claim
 version: 4
-title: A descent deposit whose correlations have finite range R gives Delta^2(k) at most (2/3 pi) <zeta^2> (kR)^3, so without a later horizon exit or active source, and with <zeta^2> at most one, the measured amplitude at the pivot needs correlations over more than 460 (T_desc = 1 MeV) to 6.8 x 10^17 (T_desc = 10^12 GeV) Hubble lengths of the descent
+title: 'A finite-range descent deposit cannot seed the measured amplitude'
 status: proved
 region: synthesis
 subject: dark-energy

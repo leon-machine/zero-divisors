@@ -2,7 +2,7 @@
 id: synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching
 kind: claim
 version: 2
-title: Modes of every Bessel order leave a Kasner approach's Hubble length only while it contracts toward its wall; on the expanding branch no mode of order other than $\tfrac12$ has an adiabatic state at the wall, in the Liouville form in $s$; and every Kasner wall except the flat Milne points is a curvature singularity; with the descent at the origin and the descended phase expanding from it, a Kasner source of the primordial spectrum needs (argued) a metric stage contracting toward a wall before the descent and a rule carrying its state into the descended phase
+title: 'Kasner exit needs a contracting stage and a wall matching'
 status: proved
 region: synthesis
 subject: dark-energy

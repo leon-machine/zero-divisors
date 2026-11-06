@@ -2,7 +2,7 @@
 id: synthesis.imported-null-plane-modular-hamiltonian-first-law
 kind: claim
 version: 1
-title: 'Imported: the null-plane modular Hamiltonian of a free field is $2\pi$ times the boost energy on the generators, and with Araki''s relative entropy it gives the first law for entropy differences on a null cut (Wall 2011; Casini, Teste and Torroba 2017; Faulkner et al. 2016)'
+title: 'Imported: the null-plane modular Hamiltonian and the first law'
 status: imported
 region: synthesis
 subject: thermality

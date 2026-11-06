@@ -2,7 +2,7 @@
 id: synthesis.euler-term-horizon-entropy-shift
 kind: claim
 version: 4
-title: Assuming Wald entropy, the Euler term of the series' action shifts each horizon's entropy by a topological constant, invisible to every first law or Clausius relation that compares cuts of one closed topology and visible in nucleation
+title: 'The Euler term shifts horizon entropy by a topological constant'
 status: proved
 region: synthesis
 subject: entropy

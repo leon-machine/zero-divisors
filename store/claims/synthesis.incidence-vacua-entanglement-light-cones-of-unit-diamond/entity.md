@@ -2,7 +2,7 @@
 id: synthesis.incidence-vacua-entanglement-light-cones-of-unit-diamond
 kind: claim
 version: 2
-title: Between them, the two distinguished incidence vacua are maximally entangled exactly on the light cones of the tips of the unit causal diamond fixed by the Hermitian structure
+title: 'Incidence vacua are maximally entangled on the unit diamond''s light cones'
 status: proved
 region: synthesis
 subject: thermality

@@ -2,7 +2,7 @@
 id: synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
 kind: claim
 version: 3
-title: Quantised as an elementary field with $i = I_{4}$, the rung field is linear on all eight real components of the complexified rung summand, and on that summand (on values, not on spacetime points) the hypercharge rotation is the rung boost at $I_{4}$-imaginary rapidity; besides the stored neutral mode and charged pair it carries a neutral normal pair, the directions that change $Q$, of mass squared $2W' + 4N(k_{10} \pm r)$, and the null-lift constraint is the limit $k_{10} \to \infty$; under the Gildener-Weinberg formula and decoupling the normal pair enters the scalon sum (the standard two-doublet sum rule), so the charged pair lies below $456$ GeV (below $383$ GeV when the normal pair is the heavier), the normal pair below $542$ GeV, and $h \to \gamma\gamma$ below $0.900$ of the Standard Model rate for every charged mass between $m_{h}/2$ and $456$ GeV
+title: 'The linear rung field adds a neutral normal pair to the scalon sum'
 status: proved
 region: synthesis
 subject: quantum-fields

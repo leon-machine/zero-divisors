@@ -2,7 +2,7 @@
 id: synthesis.imported-adler-bell-jackiw-axial-anomaly
 kind: claim
 version: 1
-title: 'Imported: the axial anomaly of spinor electrodynamics (Adler 1969; Bell and Jackiw 1969): when the vector current is kept conserved, the divergence of the axial current of a Dirac fermion has, besides the mass term, the anomalous term $(\alpha/4\pi)\,\epsilon^{\xi\sigma\tau\rho}F_{\xi\sigma}F_{\tau\rho}$ from the triangle graph, which accounts for the decay of the neutral pion into two photons'
+title: 'Imported: the axial anomaly (Adler 1969; Bell and Jackiw 1969)'
 status: imported
 region: synthesis
 subject: quantum-fields

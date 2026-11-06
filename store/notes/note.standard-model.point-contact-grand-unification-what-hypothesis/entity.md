@@ -2,7 +2,7 @@
 id: note.standard-model.point-contact-grand-unification-what-hypothesis
 kind: note
 version: 2
-title: 'Point of contact: grand unification, and what Hypothesis (S) would yield and what it would cost'
+title: 'Point of contact with grand unification under Hypothesis (S)'
 status: remark
 subject: standard-model
 proposed_by:

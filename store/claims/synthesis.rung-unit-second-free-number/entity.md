@@ -2,7 +2,7 @@
 id: synthesis.rung-unit-second-free-number
 kind: claim
 version: 3
-title: 'The weak scale is a second free number beside $N$: its constant of the laws is the D-term level $\xi$ (strictly $\xi G$), so under the promoted action $v/M_{P}$ is the law up to relative order $(H/v)^{4}$ and the rung-frame boost $v/H$ is initial data'
+title: 'The weak scale as a second free number beside $N$'
 status: postulate
 region: synthesis
 subject: standard-model

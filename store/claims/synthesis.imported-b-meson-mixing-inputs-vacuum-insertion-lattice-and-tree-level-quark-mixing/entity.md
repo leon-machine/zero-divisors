@@ -2,7 +2,7 @@
 id: synthesis.imported-b-meson-mixing-inputs-vacuum-insertion-lattice-and-tree-level-quark-mixing
 kind: claim
 version: 1
-title: 'Imported: the inputs of a neutral-meson mixing bound; the $\Delta F = 2$ operators and their vacuum-insertion matrix elements (Gabbiani et al. 1996), the lattice decay constants (FLAG 2024) and bag parameters (HPQCD 2019), the measured $B_{s}$ and $B_{d}$ mass differences (PDG 2025), and the quark-mixing determinations that do not use $B$ mixing (tree-level $|V_{cb}|$, $|V_{ub}|$, $\gamma$ and the other direct moduli, PDG 2025), with three-family unitarity'
+title: 'Imported: the inputs of a neutral-meson mixing bound'
 status: imported
 region: synthesis
 subject: standard-model

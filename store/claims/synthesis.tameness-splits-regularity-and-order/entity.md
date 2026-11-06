@@ -2,7 +2,7 @@
 id: synthesis.tameness-splits-regularity-and-order
 kind: claim
 version: 3
-title: Tameness splits into a regularity clause and an order clause; the one-sided completion needs no order and the wall iteration only finite order
+title: 'Tameness splits into regularity and order'
 status: proved
 region: synthesis
 subject: walls

@@ -2,7 +2,7 @@
 id: synthesis.univalence-from-even-stationary-dynamics
 kind: claim
 version: 2
-title: Univalence holds for every Gibbs state of an even generator and for every state stationary under an even generator with disjoint even and odd spectra
+title: 'Univalence from even stationary dynamics'
 status: proved
 region: synthesis
 subject: descent

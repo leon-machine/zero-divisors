@@ -2,7 +2,7 @@
 id: synthesis.slot-parity-decides-hypothesis-s
 kind: claim
 version: 3
-title: For two-level slots in the tower, slot parity decides Hypothesis (S); the statistics no-go does not, and hypercharge anomaly cancellation, with the tower grading as chirality, does
+title: 'Slot parity decides Hypothesis (S)'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands
 kind: claim
 version: 1
-title: R2 and R3 hold at more than one epoch only if the five-dimensional towers' hidden direction co-expands; with a static hidden direction they are deposit clauses, and a standing R3 gives that matter an effective equation of state w = -1/4
+title: 'The unit-ball clauses hold at one epoch unless the hidden direction co-expands'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.collar-isotropy-selects-t-boost
 kind: claim
 version: 1
-title: On the frame atom Cl(1,3)_C at a collar point, spherical isotropy admits faithful KMS states of bivector flows for the t-boost and for no sphere boost
+title: 'Collar isotropy selects the $t$-boost'
 status: proved
 region: synthesis
 subject: thermality

@@ -60,7 +60,9 @@ with the server.
 - `id`: a dotted slug naming the idea, never a paper number. Retired ids
   (`store/tombstones.yaml`) can never be reused.
 - `kind`, `status`, `version` (1 for a new entity), `title`, `subject` (one of
-  `store/subjects.yaml`).
+  `store/subjects.yaml`). The title names the result, as a theorem is named in a
+  paper ("Neutrino mass sum at the oscillation floor"), in at most 90 characters
+  (E124); the claim itself goes in the one-liner and formal levels.
 - `proposed_by` (`kind: human` or `ai`, with `author`) and `ai_involved`
   (`'yes'`, `'no'` or `'unknown'`). Both are mandatory. Quote the value:
   YAML reads a bare `yes` as true, and the validator rejects it (E116).

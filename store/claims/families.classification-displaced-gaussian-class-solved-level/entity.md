@@ -2,7 +2,7 @@
 id: families.classification-displaced-gaussian-class-solved-level
 kind: claim
 version: 3
-title: 'The classification: the displaced-Gaussian class is solved, at the level of its weakest clause'
+title: 'The displaced-Gaussian class, at its weakest clause, derives no lepton spectrum'
 status: proved
 region: families
 subject: generations

@@ -2,7 +2,7 @@
 id: hawking.imported-modular-descent-premises-geometric-normalisation-external
 kind: claim
 version: 1
-title: 'Imported: modular descent, its premises, and the geometric normalisation (external ingredients)'
+title: 'Imported: modular descent and its geometric normalisation (external)'
 status: imported
 region: hawking
 subject: descent

@@ -2,7 +2,7 @@
 id: synthesis.real-structure-breaks-source-stabiliser-to-z2
 kind: claim
 version: 2
-title: Every $S_{3}$-equivariant real structure breaks the coherent source's stabiliser to $\mathbb{Z}_{2}$, forcing exactly one eigenvector of the mass form (the reflection of the Koide vector through the democratic axis; at the floor, so the lowest, in every state built from the source, its conjugate and the invariant quartic word, and not in general) and leaving a five-parameter block that the state alone fixes; the channel phase is invisible to it and a cubic family word forces nothing, so the $207$ cannot come from the real structure or the cubic family word acting by covariance
+title: 'The real structure leaves a $\mathbb{Z}_{2}$ stabiliser and cannot give 207'
 status: proved
 region: synthesis
 subject: generations

@@ -2,7 +2,7 @@
 id: synthesis.imported-maxwell-stress-spacetime-algebra
 kind: claim
 version: 1
-title: 'Imported: the stress of an electromagnetic field $F$ is $T(a) = -\tfrac12 FaF$ (Hestenes; Doran and Lasenby)'
+title: 'Imported: the Maxwell stress in the spacetime algebra'
 status: imported
 region: synthesis
 subject: interior

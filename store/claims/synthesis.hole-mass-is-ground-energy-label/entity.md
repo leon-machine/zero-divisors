@@ -2,7 +2,7 @@
 id: synthesis.hole-mass-is-ground-energy-label
 kind: claim
 version: 3
-title: Read as a Gibbs state at the series' temperature, a hole carries more than half its mass as ground energy, all of it at zero weight
+title: 'A Gibbs-state hole carries more than half its mass as ground energy'
 status: proved
 region: synthesis
 subject: entropy

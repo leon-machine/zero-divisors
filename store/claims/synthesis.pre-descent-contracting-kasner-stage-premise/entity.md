@@ -2,7 +2,7 @@
 id: synthesis.pre-descent-contracting-kasner-stage-premise
 kind: claim
 version: 1
-title: '(P1) of the Kasner exit: before the descent there is a metric stage on which the gravitational field approaches a Kasner wall while contracting toward it'
+title: '(P1) of the Kasner exit: a contracting Kasner stage before the descent'
 status: postulate
 region: synthesis
 subject: dark-energy

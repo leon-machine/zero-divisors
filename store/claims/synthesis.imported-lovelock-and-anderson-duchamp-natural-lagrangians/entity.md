@@ -2,7 +2,7 @@
 id: synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians
 kind: claim
 version: 1
-title: 'Imported: in four dimensions the natural second-order field equations of a metric are the Einstein map plus a constant (Lovelock), and the natural Lagrangians with no field equations are the Euler and Pontryagin densities up to divergences (Anderson and Duchamp; Anderson)'
+title: 'Imported: Lovelock''s theorem and natural Lagrangians without field equations'
 status: imported
 region: synthesis
 subject: einstein

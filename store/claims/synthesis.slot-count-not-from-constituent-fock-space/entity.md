@@ -2,7 +2,7 @@
 id: synthesis.slot-count-not-from-constituent-fock-space
 kind: claim
 version: 1
-title: The slot count of Hypothesis (S) is not an SL(4)-equivariant constituent count, whatever the statistics
+title: 'The slot count of (S) is not a constituent Fock count'
 status: proved
 region: synthesis
 subject: standard-model

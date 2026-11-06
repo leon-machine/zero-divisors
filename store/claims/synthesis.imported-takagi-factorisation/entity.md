@@ -2,7 +2,7 @@
 id: synthesis.imported-takagi-factorisation
 kind: claim
 version: 1
-title: 'Imported: every complex symmetric matrix is U Sigma U^T with U unitary and Sigma the nonnegative diagonal of its singular values (Autonne-Takagi factorisation)'
+title: 'Imported: the Autonne-Takagi factorisation'
 status: imported
 region: synthesis
 subject: generations

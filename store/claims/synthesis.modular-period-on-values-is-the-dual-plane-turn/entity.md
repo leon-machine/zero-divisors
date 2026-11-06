@@ -2,7 +2,7 @@
 id: synthesis.modular-period-on-values-is-the-dual-plane-turn
 kind: claim
 version: 2
-title: With the field theory's unit $I_{4}$, the boost rotor of a wedge plane $B$ continued to imaginary rapidity is, on every value in the even subalgebra, the real rotor of the dual plane $I_{4}B$, so one modular period $2\pi$ acts on a spin-$s$ value as $(-1)^{2s}$ and half a period as the turn by $\pi$ of the dual plane; the KMS condition at period $2\pi$ holds for a CAR mode and a CCR mode alike, so (R$_{\mathrm{loc}}$) and the KMS period do not fix statistics; under modular covariance of the wedge algebras, which is not a premise of the store, an imported theorem gives the spin-statistics connection, with the $(-1)^{2s}$ coming from representation theory and the dual-plane form only re-expressing it
+title: 'The modular period on values is the dual-plane turn'
 status: proved
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.imported-einstein-cartan-matter-coupling
 kind: claim
 version: 1
-title: 'Imported: the Einstein-Cartan matter coupling, in Gauge Theory Gravity form (Kibble 1961, Sciama 1964, Hehl, von der Heyde, Kerlick and Nester 1976, Lasenby, Doran and Gull 1998)'
+title: 'Imported: the Einstein-Cartan matter coupling, in Gauge Theory Gravity form'
 status: imported
 region: synthesis
 subject: einstein

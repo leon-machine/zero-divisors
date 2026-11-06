@@ -2,7 +2,7 @@
 id: synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass
 kind: claim
 version: 1
-title: 'Imported: radiative symmetry breaking (Coleman and Weinberg 1973) and, on a flat direction of a scale-free tree potential, the scalon mass $8\pi^{2}v^{2}m_{S}^{2} = 3\sum_{V}M^{4} + \sum_{S}M^{4} - 4\sum_{F}M^{4}$ (Gildener and Weinberg 1976)'
+title: 'Imported: radiative breaking and the scalon mass (Gildener and Weinberg 1976)'
 status: imported
 region: synthesis
 subject: standard-model

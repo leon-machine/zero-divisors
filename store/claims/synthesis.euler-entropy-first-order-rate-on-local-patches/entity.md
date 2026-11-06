@@ -2,7 +2,7 @@
 id: synthesis.euler-entropy-first-order-rate-on-local-patches
 kind: claim
 version: 2
-title: On a local Rindler patch the Euler (Jacobson-Myers) entropy of the series' action changes at first order in the patch's affine extent, at a rate fixed by the Ricci and Weyl curvature, the patch's second extrinsic curvature and normal connection, and the curvature gradient; so the Clausius relation imposed on every open patch admits the Euler term only where the curvature at the point is of constant-curvature type, and, for entropies that are functionals of the cut, within the series' entropy family it forces the curvature-independent density of (Loc)
+title: 'The Euler entropy''s first-order rate on local patches'
 status: proved
 region: synthesis
 subject: einstein

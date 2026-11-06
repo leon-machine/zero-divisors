@@ -2,7 +2,7 @@
 id: synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands
 kind: claim
 version: 2
-title: 'Measured against a homogeneous Hadamard reference state, the Hadamard condition leaves a homogeneous deposit''s spectrum free on every bounded band of scales; for the conformally coupled field it allows a power-law ratio on no band unbounded toward short scales, and, for slice fields of nonzero mean, a red law on no band reaching k = 0, so a red band needs an ultraviolet and an infrared end, neither of which the condition fixes'
+title: 'The Hadamard condition leaves the deposit spectrum free on bounded bands'
 status: proved
 region: synthesis
 subject: dark-energy

@@ -2,7 +2,7 @@
 id: synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
 kind: claim
 version: 2
-title: The coupling of the sixteen to the rung field with $Y$ on $c$ and $\tilde{Y}$ on its conjugate $c^{*}$ (complex symmetric for a $10$) is the $\su(2)_{R}$-covariant completion of the per-sector conjugate reading, which is not covariant; it reproduces the per-sector masses up to relative $e^{-2\eta}$ and differs in the charged pair's couplings, which are of Yukawa strength; $\tr H_{u} - \tr H_{d} = 2m(c)(\|Y\|^{2} - \|\tilde{Y}\|^{2})$ with $m$ the hypercharge moment map, the split vanishes at the balanced frame for every coupling, $\tilde{Y} = Y$ gives $m_{u} = m_{d}$ exactly, and the part of $M_{u}$ read through $c$ is suppressed by $e^{-2\eta}$, so the top mass cannot come from it
+title: 'The covariant completion of the conjugate reading: a second family matrix'
 status: proved
 region: synthesis
 subject: standard-model

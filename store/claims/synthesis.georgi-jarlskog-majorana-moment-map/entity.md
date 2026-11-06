@@ -2,7 +2,7 @@
 id: synthesis.georgi-jarlskog-majorana-moment-map
 kind: claim
 version: 3
-title: The Georgi-Jarlskog form from the Pati-Salam components of the Majorana element's moment map
+title: 'The Georgi-Jarlskog form from the Majorana element''s moment map'
 status: proved
 region: synthesis
 subject: standard-model

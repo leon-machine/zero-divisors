@@ -2,7 +2,7 @@
 id: synthesis.imported-null-plane-restriction-of-free-fields-is-mass-independent
 kind: claim
 version: 1
-title: 'Imported: light-front quantisation of free fields: on a null plane the free fields of different masses are unitarily equivalent and generate an irreducible algebra (Leutwyler, Klauder and Streit 1970), and the restriction of a free field to a null surface carries no mass except in zero modes, the mass entering the Dirac field only through its constrained half (Wall 2012)'
+title: 'Imported: mass independence of free fields on a null plane'
 status: imported
 region: synthesis
 subject: thermality

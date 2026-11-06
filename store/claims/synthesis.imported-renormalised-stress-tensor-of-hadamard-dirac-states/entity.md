@@ -2,7 +2,7 @@
 id: synthesis.imported-renormalised-stress-tensor-of-hadamard-dirac-states
 kind: claim
 version: 1
-title: 'Imported: for the Dirac field on a globally hyperbolic gravitational field, Wick polynomials defined by Hadamard point splitting give Hadamard states a covariantly conserved renormalised stress-energy tensor, whose trace anomaly is computed (Dappiaggi, Hack and Pinamonti 2009)'
+title: 'Imported: the renormalised stress tensor of Hadamard Dirac states'
 status: imported
 region: synthesis
 subject: quantum-fields

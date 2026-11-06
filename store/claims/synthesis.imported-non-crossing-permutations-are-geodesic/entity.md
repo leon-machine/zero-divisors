@@ -2,7 +2,7 @@
 id: synthesis.imported-non-crossing-permutations-are-geodesic
 kind: claim
 version: 1
-title: 'Imported: $\#(\sigma) + \#(\sigma^{-1}\eta) \le n + 1$ for $\sigma \in S_{n}$, with equality exactly for the non-crossing permutations, $C_{n}$ in number (Biane)'
+title: 'Imported: non-crossing permutations as geodesics (Biane)'
 status: imported
 region: synthesis
 subject: entropy

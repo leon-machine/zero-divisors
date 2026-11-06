@@ -2,7 +2,7 @@
 id: synthesis.two-loop-running-cannot-fix-majorana-coupling
 kind: claim
 version: 1
-title: At two loops only the Majorana Yukawa moves the Pati-Salam scales, and the running of the three measured gauge couplings fixes the scales as functions of it, never the coupling itself; a supplied M_I would fix its trace only to about 0.4 per sigma of alpha_s
+title: 'Two-loop running cannot fix the Majorana coupling'
 status: proved
 region: synthesis
 subject: neutrinos

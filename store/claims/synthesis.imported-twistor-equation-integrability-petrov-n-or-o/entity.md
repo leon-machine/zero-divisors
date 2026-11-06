@@ -2,7 +2,7 @@
 id: synthesis.imported-twistor-equation-integrability-petrov-n-or-o
 kind: claim
 version: 1
-title: 'Imported: the integrability condition of the twistor equation, $\Psi_{ABCD}\omega^{D} = 0$, restricts the Weyl curvature at every point where a nonzero solution exists to Petrov type N (with $\omega$ a repeated principal spinor) or O (Penrose; Penrose and Rindler; Gasperin and Pais)'
+title: 'Imported: twistor integrability forces Petrov type N or O (Penrose and Rindler)'
 status: imported
 region: synthesis
 subject: conformal-spacetime

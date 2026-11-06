@@ -2,7 +2,7 @@
 id: synthesis.up-down-split-under-conjugate-reading-needs-su2r-odd-weighting
 kind: claim
 version: 3
-title: Under (S) and the conjugate reading of up-type masses applied to composites of the rung vector, a diagonal weighting even in $T_{3R}$, the $10$ and every function of $B - L$ (the Georgi-Jarlskog composite included) gives equal up-type and down-type entries; only $T_{3R}$-odd weightings split them, and the degree-four part of the square of the Majorana element (a truncation no stored dynamics selects; the whole square gives no entry on the sixteen) supplies one, giving up-type and Dirac-neutrino entries only, with $|m_{\nu}^{D}| = 3|m_{u}|$, and no down-type or charged-lepton entry
+title: 'An up-down split under the conjugate reading needs $T_{3R}$-odd weighting'
 status: proved
 region: synthesis
 subject: standard-model

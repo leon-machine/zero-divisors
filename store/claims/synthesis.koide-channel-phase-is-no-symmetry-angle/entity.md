@@ -2,7 +2,7 @@
 id: synthesis.koide-channel-phase-is-no-symmetry-angle
 kind: claim
 version: 2
-title: 'In the $\sqrt{m}$ (circulant) reading of the projected coherent vector at the Koide depth, the measured muon-electron ratio (three standard deviations of $m_{\mu}$) fixes the channel phase to $\delta_{*} \in (0.22222204589, 0.22222204830)$, which is not $\tfrac29$, not a rational of denominator below $630131$ and, on its whole relabelling orbit, not a rational multiple of $\pi$ of denominator at most $4208$, so no phase fixed by a symmetry of order up to $4208$ (argued: such phases are rational multiples of $\pi$) and no rational of denominator below $630131$ supplies the $207$ at exact Koide'
+title: 'The Koide channel phase is no symmetry angle'
 status: proved
 region: synthesis
 subject: generations

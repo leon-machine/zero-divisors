@@ -2,7 +2,7 @@
 id: synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 kind: claim
 version: 3
-title: 'On the flat gravitational field every gauge-invariant quasi-free Dirac state differing from a vacuum by a smooth kernel restricts on every null plane to a state satisfying the generator microlocal condition, the vacuum itself to the null vacuum, so it has the local form of (N$_{+}$) on every local Rindler horizon; not the ground-state clause, not nonzero field strength'
+title: 'Flat-field Hadamard states meet the generator condition on null planes'
 status: proved
 region: synthesis
 subject: thermality

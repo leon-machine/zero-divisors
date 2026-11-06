@@ -2,7 +2,7 @@
 id: synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number
 kind: claim
 version: 2
-title: 'If the interacting fields are built from the series'' attached free fields by causal perturbation theory (Bogoliubov''s formula, time-ordered products that are graded symmetric, preserve the Grassmann parity, factorise causally, satisfy the Wick expansion and are covariant under the covering group of the Poincare group), and the free Feynman-gauge potential is taken in its indefinite form, then to every order the rotation by $2\pi$ equals the statistics grading on every interacting field with an even number of ghost factors, in particular at ghost number zero: every monomial of the series'' interaction density, for any number of scalar doublets, is a Lorentz scalar with even spinor and ghost counts, an interacting field keeps the Grassmann parity and the $2\pi$ eigenvalue $(-1)^{n_{\psi}}$ of its Wick polynomial, and interacting fields are graded-local with that parity; so in perturbation theory the Jost-point import is replaced by the free-field locality result and the imported axioms, and ghost fields of odd ghost count carry the opposite sign'
+title: 'Causal perturbation theory keeps spin-statistics at even ghost number'
 status: proved
 region: synthesis
 subject: quantum-fields

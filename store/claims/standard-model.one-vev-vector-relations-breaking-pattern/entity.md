@@ -2,7 +2,7 @@
 id: standard-model.one-vev-vector-relations-breaking-pattern
 kind: claim
 version: 7
-title: 'One vev vector: the $10_{H}$ relations with up-type masses read through the conjugate, the breaking pattern, and the split'
+title: 'One vev vector under (S): tree relations, breaking pattern and splitting'
 status: proved
 region: standard-model
 subject: standard-model

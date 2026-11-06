@@ -2,7 +2,7 @@
 id: synthesis.tangential-derivative-transport-bound
 kind: claim
 version: 3
-title: Tangential derivatives of the transport converge when the error's derivative along the family does
+title: 'A bound on tangential derivatives of the transport'
 status: proved
 region: synthesis
 subject: interior

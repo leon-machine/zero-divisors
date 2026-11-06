@@ -2,7 +2,7 @@
 id: synthesis.imported-kaluza-klein-ansatz
 kind: claim
 version: 1
-title: 'Imported: the Kaluza-Klein ansatz for a five-dimensional metric and its reduction to four-dimensional gravity, a Maxwell field weighted by the cube of the hidden scale, and a scalar (Kaluza 1921, Klein 1926)'
+title: 'Imported: the Kaluza-Klein ansatz (Kaluza 1921, Klein 1926)'
 status: imported
 region: synthesis
 subject: dark-energy

@@ -2,7 +2,7 @@
 id: synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation
 kind: claim
 version: 2
-title: On the conformal ambient, the field action of CPT conjugation is the pseudoscalar rotor times complex conjugation
+title: 'CPT conjugation as the pseudoscalar rotor times complex conjugation'
 status: proved
 region: synthesis
 subject: clifford-structure

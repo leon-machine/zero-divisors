@@ -2,7 +2,7 @@
 id: synthesis.incidence-vacua-thermofield-real-capacity
 kind: claim
 version: 5
-title: No incidence vacuum is real; each incidence line is spanned by two thermofield doubles of the ascent mode with the boost qubit
+title: 'No incidence vacuum is real; incidence lines as thermofield doubles'
 status: proved
 region: synthesis
 subject: one-relation

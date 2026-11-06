@@ -2,7 +2,7 @@
 id: synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
 kind: claim
 version: 4
-title: 'On a horizon generator the generator analogue of the microlocal (Hadamard) condition, on both orderings of the two-point kernel, is equivalent to a smooth difference from the null vacuum, so with no stationarity and no temperature it gives the local form of (N$_{+}$) at every point (with the stored theorem and boost stationarity at the edge, (N$_{+}$)); the affine-KMS states satisfy it, so it does not select the ground state'
+title: 'The microlocal condition on a generator gives the local null ground state'
 status: proved
 region: synthesis
 subject: thermality

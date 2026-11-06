@@ -2,7 +2,7 @@
 id: synthesis.residual-s2-fixes-120-family-form
 kind: claim
 version: 1
-title: The residual S_2 fixes the 120's family form to the second-third coupling, and an S_3-invariant Majorana sector keeps the 126 family-blind on the light plane, so it cannot act on the second family alone
+title: 'The residual $S_{2}$ fixes the 120''s family form'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.unit-boost-residue-needs-nonpositive-exponent
 kind: claim
 version: 3
-title: A Kasner residue is a unit boost only if some exponent is nonpositive, and a massless scalar shortens it
+title: 'A unit-boost Kasner residue needs a nonpositive exponent'
 status: proved
 region: synthesis
 subject: interior

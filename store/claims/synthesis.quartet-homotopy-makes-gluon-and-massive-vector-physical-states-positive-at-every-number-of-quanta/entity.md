@@ -2,7 +2,7 @@
 id: synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta
 kind: claim
 version: 2
-title: 'Under clauses (K1) and (K2) of the Krein-form premise (the polarisation states carry the Gupta-Bleuler form $-u\cdot w$, the ghost pair the pairing $\langle c, \bar c\rangle_K = 1$), the free BRST charge of the gluons (at null momenta) and of the massive W and Z in the Feynman-''t Hooft gauge (with their Goldstone modes) has a one-particle contracting homotopy whose second quantisation counts the unphysical quanta, so at every number of quanta its cohomology is the Fock space of the transverse polarisations, two per gluon and three per massive vector, and the Krein form is positive on it with radical the image of the charge'
+title: 'Gluon and massive-vector BRST cohomology is positive at all numbers of quanta'
 status: proved
 region: synthesis
 subject: quantum-fields

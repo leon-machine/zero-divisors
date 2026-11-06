@@ -2,7 +2,7 @@
 id: synthesis.charged-vaidya-cauchy-horizon-tractor-threshold
 kind: claim
 version: 1
-title: On the charged Vaidya gravitational field fed by an ingoing null-dust tail, every hypothesis of the weak null crossing theorem except continuation across holds on the approach to the Cauchy horizon, the Tipler-type integral is comparable to the accreted mass, and tractor transport reaches the horizon with a unique limit exactly when the blue-shifted flux $\int m'(v)\,e^{\kappa_{-}v}\,dv$ is finite; inverse-power tails give the nilpotent-slot divergence, exponential tails give uniqueness exactly when $\beta = \alpha/\kappa_{-} > \tfrac12$
+title: 'Tractor transport to the charged Vaidya Cauchy horizon: a flux threshold'
 status: proved
 region: synthesis
 subject: interior

@@ -2,7 +2,7 @@
 id: synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient
 kind: claim
 version: 1
-title: 'Imported: the reduction formula of Lehmann, Symanzik and Zimmermann (1955), S-matrix elements as residues at the one-particle poles of the time-ordered functions with one normalisation factor per leg; Ward''s identity (1950), the vertex at zero momentum transfer equal to minus the momentum derivative of the self-energy, so that $Z_{1} = Z_{2}$ in electrodynamics; and the order-$e^{4}$ charge renormalisation of electrodynamics (Jost and Luttinger 1950), the second coefficient of the beta function'
+title: 'Imported: LSZ reduction, the Ward identity and the second QED beta coefficient'
 status: imported
 region: synthesis
 subject: quantum-fields

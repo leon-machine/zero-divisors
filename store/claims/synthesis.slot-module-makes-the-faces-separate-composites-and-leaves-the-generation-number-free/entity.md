@@ -2,7 +2,7 @@
 id: synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free
 kind: claim
 version: 2
-title: 'Under the slot-module hypothesis the shared three-slot space of the faces is no slot module even for the gauge group of one face (a slot of weight zero, or two slot vacua with every species twice and a vectorlike chirality half), complementing the stored result that the faces are generations only as separate composites; the number of separate composites is independent of the premise and of anomaly freedom, and if both non-abelian factors are to be asymptotically free it is at most five at one or two doublets (both standard); that it is three is only an argued reading resting on the imported observation-level three-spinor bound, whose face space is the dual triplet of the slot space'
+title: 'Slot module: the faces are separate composites, generation number free'
 status: proved
 region: synthesis
 subject: generations

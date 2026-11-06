@@ -2,7 +2,7 @@
 id: synthesis.univalence-even-extension-split
 kind: claim
 version: 1
-title: Univalence is the choice of the even extension, and splits into a single-mode part and a cross-mode part
+title: 'Univalence as the choice of the even extension'
 status: proved
 region: synthesis
 subject: descent

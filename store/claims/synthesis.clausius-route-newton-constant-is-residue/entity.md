@@ -2,7 +2,7 @@
 id: synthesis.clausius-route-newton-constant-is-residue
 kind: claim
 version: 4
-title: On Jacobson's Clausius route the epoch count returns Newton's constant only through the area-law condition, a consistency; the missing step is a count on non-Killing horizons
+title: 'Newton''s constant on the Clausius route is a consistency only'
 status: proved
 region: synthesis
 subject: entropy

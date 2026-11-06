@@ -2,7 +2,7 @@
 id: synthesis.array-ln2-is-zero-mode-doublet-one-tower
 kind: claim
 version: 4
-title: Under (Q) an array's ln 2 is its zero-mode charge doublet, which no current with m != 0 connects, and its current sector is one oscillator tower
+title: 'Under (Q), an array''s ln 2 is its zero-mode charge doublet'
 status: proved
 region: synthesis
 subject: thermality

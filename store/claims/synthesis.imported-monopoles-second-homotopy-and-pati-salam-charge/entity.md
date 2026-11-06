@@ -2,7 +2,7 @@
 id: synthesis.imported-monopoles-second-homotopy-and-pati-salam-charge
 kind: claim
 version: 1
-title: 'Imported: for a simply connected gauge group G broken to H, pi_2(G/H) = pi_1(H) and each class carries a finite-energy monopole; the Pati-Salam monopole carries two Dirac units (Lazarides, Magg and Shafi 1980)'
+title: 'Imported: monopoles from the second homotopy group; the Pati-Salam charge'
 status: imported
 region: synthesis
 subject: dark-matter

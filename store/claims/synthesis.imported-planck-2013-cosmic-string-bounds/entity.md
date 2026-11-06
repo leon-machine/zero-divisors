@@ -2,7 +2,7 @@
 id: synthesis.imported-planck-2013-cosmic-string-bounds
 kind: claim
 version: 1
-title: 'Imported: Planck bounds on cosmic strings, $G\mu < 1.5 \times 10^{-7}$ ($f_{10} < 0.015$) for Nambu-Goto and $G\mu < 3.2 \times 10^{-7}$ ($f_{10} < 0.028$) for Abelian-Higgs strings (Planck 2013 XXV)'
+title: 'Imported: Planck 2013 cosmic-string bounds'
 status: imported
 region: synthesis
 subject: dark-energy

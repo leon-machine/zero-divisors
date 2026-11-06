@@ -2,7 +2,7 @@
 id: synthesis.imported-nordstrom-scalar-theory-einstein-fokker-form
 kind: claim
 version: 1
-title: 'Imported: Nordstr\"om''s scalar theory of gravitation in the Einstein-Fokker form (vanishing Weyl curvature, scalar curvature proportional to the stress trace), which deflects no light and gives minus one sixth of Einstein''s perihelion advance, so is excluded by observation'
+title: 'Imported: Nordstrom''s scalar gravity and its observational exclusion'
 status: imported
 region: synthesis
 subject: einstein

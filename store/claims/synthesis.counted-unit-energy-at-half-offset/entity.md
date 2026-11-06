@@ -2,7 +2,7 @@
 id: synthesis.counted-unit-energy-at-half-offset
 kind: claim
 version: 1
-title: 'At the weights of (Q) version 3 a counted unit of two arrays carries Killing energy exactly $\kappa/12$ above its sea at the Hawking temperature, so under the area law the counted units carry $\pi M/(12\ln 2) \approx 0.378\,M$ and the ground-energy label of a Gibbs hole is $M(1 - \pi/(12\ln 2)) \approx 0.622\,M$; in the zeta-regularised symmetric ordering the unit has $Z = 2$, $E = 0$, $S = \ln 2$, as a zero-weight mode does, and differs from one only in its energy fluctuation'
+title: 'A counted unit''s Killing energy at the weights of (Q)'
 status: proved
 region: synthesis
 subject: entropy

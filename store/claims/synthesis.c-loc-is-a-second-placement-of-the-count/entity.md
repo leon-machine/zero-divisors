@@ -2,7 +2,7 @@
 id: synthesis.c-loc-is-a-second-placement-of-the-count
 kind: claim
 version: 2
-title: (C$_{\mathrm{loc}}$)(i) is a second placement of the count, not an extension of (C1) and (C2); at a hole's horizon, independent placements double Newton's constant under the total-entropy reading, and the literal Kerr count's conflict with $A_{+}/4$, present in every reading, counts against the cutoff placement, not against (C$_{\mathrm{loc}}$)
+title: '(C$_{\mathrm{loc}}$) is a second placement of the count'
 status: proved
 region: synthesis
 subject: einstein

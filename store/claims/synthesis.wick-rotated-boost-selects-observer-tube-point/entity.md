@@ -2,7 +2,7 @@
 id: synthesis.wick-rotated-boost-selects-observer-tube-point
 kind: claim
 version: 1
-title: The tube points whose positive structure makes the Wick-rotated boost unitary are the points $x_{\perp} + i\rho u$ over the bifurcation plane, each a quarter turn from one real point of the wedge; at that observer's point every incidence vacuum carries the tracial ascent marginal that the boost-KMS condition forces exactly when its foot on the bifurcation plane is the base point of the ascent pair and the tube point is its own; the foot is fixed by the ascent pair, and only the scale is a datum the boost and KMS data do not fix
+title: 'The Wick-rotated boost selects the observer''s tube point'
 status: proved
 region: synthesis
 subject: one-relation

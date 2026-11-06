@@ -2,7 +2,7 @@
 id: synthesis.mass-squared-reading-needs-millions-of-face-pairs
 kind: claim
 version: 2
-title: 'Under the mass-squared reading of the face mass form, every state on the span of face words has $(\lambda_{2} + \lambda_{3})/\lambda_{1} \le (2 + \tfrac52\langle D\rangle + \langle D^{2}\rangle)/(1 + \tfrac12\langle D\rangle)$, and a state supported on pair numbers at most $K$ has it at most $2K + 1 + 2/(K + 2)$, so the measured charged-lepton masses at the pole masses need a frozen vacuum with weight at pair numbers of at least $6065574$ (an estimated $6.4$ million at common-scale running masses, first order in $\alpha$)'
+title: 'The mass-squared reading needs millions of face pairs'
 status: proved
 region: synthesis
 subject: generations

@@ -2,7 +2,7 @@
 id: synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions
 kind: claim
 version: 1
-title: 'Imported: a continuous positive-definite function is the Fourier transform of a finite positive measure (Bochner); a derivative of even order $2k$ of that transform at the origin gives a finite moment of order $2k$ (the moment lemma, Lukacs); a smooth even function of one variable is a smooth function of its square (Whitney 1943)'
+title: 'Imported: Bochner''s theorem, the moment lemma and Whitney''s even functions'
 status: imported
 region: synthesis
 subject: quantum-fields

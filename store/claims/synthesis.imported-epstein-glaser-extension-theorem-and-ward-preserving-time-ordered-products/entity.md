@@ -2,7 +2,7 @@
 id: synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products
 kind: claim
 version: 1
-title: 'Imported: causal perturbation theory (Epstein and Glaser 1973) with the extension theorem for distributions of finite scaling degree (Brunetti and Fredenhagen 2000, Thms. 5.2 and 5.3), the existence of time-ordered products of electrodynamics obeying perturbative gauge invariance and the Ward identities (Scharf 1995), the local construction of interacting fields and of the BRST structure of electrodynamics (Duetsch and Fredenhagen 1999), and renormalised Yang-Mills fields with Ward identities keeping the interacting BRST charge nilpotent (Hollands 2008)'
+title: 'Imported: Epstein-Glaser extension and Ward-preserving time-ordered products'
 status: imported
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.imported-one-loop-qed-pole-mass-relation
 kind: claim
 version: 1
-title: 'Imported: at one loop in QED the pole mass of a charged lepton is m_pole = [1 + (alpha/pi)(1 + (3/4) ln(mu^2/mbar^2))] mbar(mu), and Koide''s relation written in running masses is shifted by about 0.1 percent (Sumino 2009)'
+title: 'Imported: the one-loop QED pole mass and Koide''s relation (Sumino 2009)'
 status: imported
 region: synthesis
 subject: generations

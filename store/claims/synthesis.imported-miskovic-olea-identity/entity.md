@@ -2,7 +2,7 @@
 id: synthesis.imported-miskovic-olea-identity
 kind: claim
 version: 3
-title: 'Imported: on shell the Euler-regularised anti-de Sitter action is the Weyl-squared action (Miskovic-Olea)'
+title: 'Imported: the Miskovic-Olea identity for Euler-regularised gravity'
 status: imported
 region: synthesis
 subject: dark-energy

@@ -2,7 +2,7 @@
 id: synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy
 kind: claim
 version: 2
-title: Beyond mean field, the tower's pairing element on a floor of $n_{b}$ blocks has the closed quasi-spin spectrum $K(2p + s) - G(j + j_{z})(j - j_{z} + 1)$ in every sector of fixed numbers, and at equal numbers the lowest excitation, the pair-breaking (two-quasiparticle) threshold, lies exactly $Gn_{b}$ above the pair band, which is $2E = 2\sqrt{K^{2} + \Delta^{2}}$ of the mean-field gap equation; read by analogy with Nambu's relation, a rung field taken as a tower composite of one fermion species needs that species below half the Higgs mass, which excludes the top quark as sole constituent at this level (one species, single shell)
+title: 'The tower''s pairing gap at fixed charges is twice the quasiparticle energy'
 status: proved
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen
 kind: claim
 version: 2
-title: 'Field spaces of the frozen-point integrand on torsion-free fields: varying the whole special-conformal slot of the $\Cl(2,4)$ gauge field returns the Schouten slot of the normal tractor connection and the Weyl square, and the integrand gives Einstein''s equations with the frozen point''s $\Lambda$ exactly when the symmetric part of the slot is frozen at a nonzero constant multiple of the frame; the dilation and the antisymmetric slot are inert, and the no-inverse-frame hypothesis does not separate these field spaces'
+title: 'The frozen-point integrand gives Einstein only with the symmetric slot frozen'
 status: proved
 region: synthesis
 subject: einstein

@@ -2,7 +2,7 @@
 id: synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature
 kind: claim
 version: 1
-title: In the collapse of a null shell the vacuum before the collapse is in the short-distance ground-state class at the future horizon, its outgoing flux is exactly $-\tfrac{1}{24\pi}\{v, u\} = \tfrac{m(4s - 3m)}{192\pi s^{4}}$ at every retarded time and tends to the chiral flux at $\kappa/2\pi$; and, for states that are KMS for the Killing translations at late times, finite null energy across the future horizon holds only at the temperature $\kappa/2\pi$; on per-light-ray chiral modes (the s-wave reduction of the postulate J3)
+title: 'Null-shell collapse: horizon regularity selects the Hawking temperature'
 status: proved
 region: synthesis
 subject: thermality

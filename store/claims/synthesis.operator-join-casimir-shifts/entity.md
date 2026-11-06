@@ -2,7 +2,7 @@
 id: synthesis.operator-join-casimir-shifts
 kind: claim
 version: 2
-title: On one conformal spinor the operator join's ordering constant is the quantum shift of both Casimirs, and the grip differs from the de Sitter mass by H^2 times the conformal Casimir, in the field normalisation of the de Sitter Casimir
+title: 'Casimir shifts of the operator join'
 status: proved
 region: synthesis
 subject: mass

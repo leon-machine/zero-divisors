@@ -2,7 +2,7 @@
 id: synthesis.r-loc-needs-sheet-labelled-modes
 kind: claim
 version: 3
-title: If a boost acts on a mode it fixes through its vector field alone, the two local horizons of one edge, having opposite boosts, admit (R$_{\mathrm{loc}}$) on modes they share only at zero weight; modes labelled by null direction carry it at every weight
+title: '(R$_{\mathrm{loc}}$) needs modes labelled by null direction'
 status: proved
 region: synthesis
 subject: einstein

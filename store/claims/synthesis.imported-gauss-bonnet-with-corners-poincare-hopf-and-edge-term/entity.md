@@ -2,7 +2,7 @@
 id: synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term
 kind: claim
 version: 1
-title: 'Imported: Gauss-Bonnet for a surface with piecewise smooth edge, the Poincare-Hopf theorem with the clutching number of the sphere, and the two-dimensional Gibbons-Hawking edge term'
+title: 'Imported: Gauss-Bonnet with corners, Poincare-Hopf and the edge term'
 status: imported
 region: synthesis
 subject: einstein

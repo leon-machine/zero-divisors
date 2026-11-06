@@ -2,7 +2,7 @@
 id: synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra
 kind: claim
 version: 1
-title: 'Imported: Mehler''s formula, the Hermite rank of a function of a Gaussian field, and the spectrum of a power-law correlation (Mehler 1866; Taqqu 1975; Dobrushin and Major 1979)'
+title: 'Imported: Mehler''s formula, Hermite rank and power-law spectra'
 status: imported
 region: synthesis
 subject: dark-energy

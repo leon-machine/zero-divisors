@@ -2,7 +2,7 @@
 id: synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term
 kind: claim
 version: 2
-title: 'The Euler part of the series'' horizon entropy on a patch of a cut is an edge term, $\alpha$ times the holonomy angle of the cut''s own rotation-gauge field around the patch edge; with the edge''s geodesic-curvature term (the two-dimensional Gibbons-Hawking term, a choice within the edge ambiguity of the Noether charge, argued not derived) it becomes the constant $2\pi\alpha\chi(P) = -3\pi\chi(P)/2\Lambda$, so with that edge term the Wald reading of the series'' action and the Clausius route agree on every entropy change of an open patch and differ by a topological constant that no additive edge term built from the field and the cut removes, and which for $\Lambda > 0$ makes the entropy negative on every disk patch of area below $6\pi/\Lambda$'
+title: 'The Euler entropy of a horizon patch is an edge term'
 status: proved
 region: synthesis
 subject: einstein

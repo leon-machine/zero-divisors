@@ -2,7 +2,7 @@
 id: synthesis.imported-one-loop-pole-mass-relation
 kind: claim
 version: 1
-title: 'Imported: the pole mass of a heavy quark exceeds its $\overline{\mathrm{MS}}$ mass, $M_{Q} = m_{Q}(m_{Q})(1 + 4\alpha_{s}/3\pi + O(\alpha_{s}^{2}))$'
+title: 'Imported: the one-loop QCD pole-mass relation'
 status: imported
 region: synthesis
 subject: generations

@@ -2,7 +2,7 @@
 id: synthesis.imported-theta-function-identities
 kind: claim
 version: 1
-title: 'Imported: the classical identities of the Jacobi theta functions and the Dedekind eta function'
+title: 'Imported: the Jacobi theta and Dedekind eta identities'
 status: imported
 region: synthesis
 subject: entropy

@@ -2,7 +2,7 @@
 id: synthesis.kerr-ring-connection-limit-null-rotation-winding-three
 kind: claim
 version: 1
-title: At the Kerr ring the weighted limit of the rotation-gauge field is a null rotation about the principal null direction carrying half the normalised field-strength scale, so its values on tangential directions span the duality-complex null-rotation plane and wind three times
+title: 'The Kerr ring''s connection limit is a null rotation winding three times'
 status: proved
 region: synthesis
 subject: interior

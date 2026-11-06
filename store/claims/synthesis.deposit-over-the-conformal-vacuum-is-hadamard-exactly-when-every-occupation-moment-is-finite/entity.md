@@ -2,7 +2,7 @@
 id: synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite
 kind: claim
 version: 2
-title: 'On a descended field of Robertson-Walker form with smooth scale factor (as for a descent of radiation type, a stated hypothesis), a homogeneous deposit of the massless Dirac field diagonal in the conformal vacuum''s quasi-particle modes (no pair coherence) is Hadamard exactly when every moment of its occupation profile is finite, the standard flat criterion carried by conformal covariance: the thermal deposit is Hadamard, while the number and energy spread of the quanta, the data of the stored shot-noise bound, do not decide it'
+title: 'A diagonal deposit is Hadamard exactly when its moments are finite'
 status: proved
 region: synthesis
 subject: quantum-fields

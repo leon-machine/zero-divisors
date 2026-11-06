@@ -2,7 +2,7 @@
 id: synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike
 kind: claim
 version: 2
-title: 'Under the Gupta-Bleuler form of the Krein premise, the Krein quartet of a covariantly gauge-fixed vector drops level by level from the induced Einstein-Hilbert coefficient under an energy cut-off on the Einstein static field, but under a heat-kernel cut-off on the gauge-fixed operators the vector''s weight is $\alpha - 5$, equal to the two-helicity value $-4$ only at the Gupta-Bleuler value $\alpha = 1$; so under that cut-off the series'' content induces $12(\alpha - 1) + 8(1 - 6\xi_{R})$ minimal-scalar units, fixed by the content only together with the regulator and the gauge'
+title: 'The Krein quartet''s induced-gravity weight depends on the regulator'
 status: proved
 region: synthesis
 subject: einstein

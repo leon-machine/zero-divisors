@@ -2,7 +2,7 @@
 id: synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue
 kind: claim
 version: 2
-title: In the homogeneous diagonal Kasner class an aligned Maxwell field and a perfect fluid at rest are potentials on the logarithmic scales; the Maxwell field is a wall on the hyperplane of the curvature wall of its axis and reflects the weights by the BKL law, a fluid with w < 1 is subleading, and among these sources only stiff matter moves the residue off the unit boosts
+title: 'Matter at a Kasner wall: Maxwell bounces, only stiff matter moves the residue'
 status: proved
 region: synthesis
 subject: interior

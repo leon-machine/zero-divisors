@@ -2,7 +2,7 @@
 id: synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 kind: claim
 version: 2
-title: 'A nonzero BRST charge that is self-adjoint, as the Kugo-Ojima physical-state condition requires, cannot exist on the positive forms of the tower and the palatial polynomials; with the standard Gupta-Bleuler (Krein) form, the Minkowski metric of the polarisations, and a tower pair as ghosts the charge at a null momentum is nilpotent and self-adjoint, its ghost-number-zero cohomology (computed up to three quanta) is positive with one-particle space the stored photon modes $\{f : kf = 0\}$, and for the derived gauge algebra the standard constraint charge with ghosts on twelve tower pairs squares to zero exactly when its cubic ghost term is kept'
+title: 'A self-adjoint BRST charge needs a Krein form; the tower supplies the ghosts'
 status: proved
 region: synthesis
 subject: quantum-fields

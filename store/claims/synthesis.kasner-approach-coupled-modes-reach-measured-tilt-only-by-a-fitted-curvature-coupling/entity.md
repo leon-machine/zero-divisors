@@ -2,7 +2,7 @@
 id: synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
 kind: claim
 version: 2
-title: On a Kasner approach the gravitational field's off-diagonal modes and curvature-coupled scalars exit with Bessel orders $|P_{a} - P_{b}|/(1 - P_{j})$ and $\sqrt{\xi}|c|/(1 - P_{j})$; red strain spectra occur only with indices spreading by at least $4$ between axes, the hidden direction's Kaluza-Klein vector has a blue field strength (index at least $1$) at every point with equal observed exponents, and the measured tilt is reached only by a curvature coupling $\xi \in [1.5225, 1.5481]$ fitted to it
+title: 'Kasner coupled modes reach the measured tilt only by a fitted coupling'
 status: proved
 region: synthesis
 subject: dark-energy

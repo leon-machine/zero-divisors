@@ -2,7 +2,7 @@
 id: synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 kind: claim
 version: 1
-title: 'For a hole formed by collapse, with the outgoing sector reduced to one chiral CAR field per light ray (J3), the ground-state condition of (N$_{+}$) posed in its short-distance form on the ingoing sheet through each point of the future horizon, whose generator has both halves, gives the late-time state of the near-horizon exterior outgoing modes as the continuum I-state at $\beta = 2\pi/\kappa$: in the Painlev\''e-Gullstrand gauge the Kruskal function $U = -e^{-\kappa t}(s-1)e^{s^{2}/2+s}$ is a regular parameter on that generator, dilated at rate $\kappa$ by the symmetry, so the late-time limit is exactly the scaling limit, which is the ground state for every kernel of the form ground-state singularity plus a remainder bounded near the horizon point, a class the same in every regular parameter for the weight-$\tfrac12$ kernel (sufficient condition; the null-shell realisation and the forcing of the temperature are a companion result)'
+title: 'Late-time Hawking state from the ground state on the ingoing sheet'
 status: proved
 region: synthesis
 subject: thermality

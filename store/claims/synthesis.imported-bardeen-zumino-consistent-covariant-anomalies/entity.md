@@ -2,7 +2,7 @@
 id: synthesis.imported-bardeen-zumino-consistent-covariant-anomalies
 kind: claim
 version: 1
-title: 'Imported: consistent and covariant anomalies differ by the divergence of a local polynomial in the potentials, and for gravitational anomalies they belong to different stress tensors (Bardeen and Zumino 1984)'
+title: 'Imported: consistent and covariant anomalies (Bardeen and Zumino 1984)'
 status: imported
 region: synthesis
 subject: dark-matter

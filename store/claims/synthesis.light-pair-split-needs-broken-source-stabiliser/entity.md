@@ -2,7 +2,7 @@
 id: synthesis.light-pair-split-needs-broken-source-stabiliser
 kind: claim
 version: 1
-title: Frozen vacua invariant under the stabiliser of their source keep the light pair degenerate at every order of cumulants; a split must break that stabiliser
+title: 'Splitting the light pair needs a broken source stabiliser'
 status: proved
 region: synthesis
 subject: generations

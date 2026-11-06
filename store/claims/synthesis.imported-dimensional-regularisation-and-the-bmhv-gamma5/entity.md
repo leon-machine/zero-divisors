@@ -2,7 +2,7 @@
 id: synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5
 kind: claim
 version: 2
-title: 'Imported: dimensional regularisation (''t Hooft and Veltman 1972) and its treatment of $\gamma_{5}$ (Breitenlohner and Maison 1977): the metric and the Dirac matrices split into four-dimensional and evanescent parts, $\{\gamma_{5}, \bar\gamma^{\mu}\} = 0$, $[\gamma_{5}, \hat\gamma^{\mu}] = 0$, which breaks the BRST symmetry of chiral gauge theories and needs finite symmetry-restoring counterterms (at one and at two loops in the abelian case); and the $d$-dimensional integral rules: translation invariance, vanishing scale-free integrals, integration by parts (Chetyrkin and Tkachov 1981), the radial integral, symmetric integration, the massless bubble $G(a_{1}, a_{2})$ and the two-loop benchmark $6\zeta_{3}$'
+title: 'Imported: dimensional regularisation with the Breitenlohner-Maison $\gamma_{5}$'
 status: imported
 region: synthesis
 subject: quantum-fields

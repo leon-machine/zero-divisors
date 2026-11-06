@@ -2,7 +2,7 @@
 id: synthesis.exceptional-boundary-measure-one-calibration
 kind: claim
 version: 2
-title: At leading order the slice of (C1) can be dropped, the modes counted on the exceptional set with its Kasner measure
+title: 'Counting on the exceptional set, with the slice dropped'
 status: proved
 region: synthesis
 subject: entropy

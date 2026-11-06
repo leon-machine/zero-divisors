@@ -2,7 +2,7 @@
 id: synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
 kind: claim
 version: 1
-title: 'On a horizon generator closed by its Moebius covariance, the Hilbert-Schmidt form of local normality to the null vacuum on every interval, the arcs through the point at infinity included, is a globally square-integrable two-point difference; for pure gauge-invariant quasi-free states this is global quasi-equivalence with the null vacuum, the folium form of (N$_{+}$) with the affine translations positive in the state''s representation, and it gives (N$_{+}$) itself only with translation or boost stationarity; it excludes the affine-KMS states on one far end, while normality at every finite point, the vacuum on each far end separately and implementability of the affine group do not fix the folium'
+title: 'Normality on the closed generator gives the vacuum folium, not the ground state'
 status: proved
 region: synthesis
 subject: thermality

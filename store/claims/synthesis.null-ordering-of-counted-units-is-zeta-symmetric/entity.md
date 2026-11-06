@@ -2,7 +2,7 @@
 id: synthesis.null-ordering-of-counted-units-is-zeta-symmetric
 kind: claim
 version: 2
-title: Measured from the null ground state of (N$_{+}$), the boost ground state carries Killing energy $-\kappa/24$ per complex component over one recurrence window $2\pi/\kappa$ of an array, which equals the array's zeta-regularised sea energy exactly at the half offset and at no other offset; so, if an array's Killing energy is read as the continuum's over that window (the window reading), the zeta-regularised symmetric ordering is the null ordering at the weights of (Q) version 3, the counted units carry zero mean Killing energy and the constant of the hole's Hamiltonian is all of $M$
+title: 'The null ordering of counted units is zeta-symmetric'
 status: proved
 region: synthesis
 subject: thermality

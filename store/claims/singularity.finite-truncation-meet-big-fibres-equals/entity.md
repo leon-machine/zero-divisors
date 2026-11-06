@@ -2,7 +2,7 @@
 id: singularity.finite-truncation-meet-big-fibres-equals
 kind: claim
 version: 6
-title: On a finite truncation, meet of the big fibres equals join of the small fibres equals $\operatorname{range}(E_F)$
+title: 'Three fibre algebras coincide on a finite truncation'
 status: proved
 region: singularity
 subject: descent

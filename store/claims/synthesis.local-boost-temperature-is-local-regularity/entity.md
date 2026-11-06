@@ -2,7 +2,7 @@
 id: synthesis.local-boost-temperature-is-local-regularity
 kind: claim
 version: 3
-title: On local Rindler horizons and small diamonds, clauses (ii) and (iii) of (C$_{\mathrm{loc}}$), with (iii) read on the patch's whole mode algebra and the boost acting on the modes by phases, are one condition, joint KMS for the local boost at rapidity period $2\pi$, the period at which the local boost's Euclidean section is regular at leading order
+title: 'Local boost temperature is local regularity'
 status: proved
 region: synthesis
 subject: einstein
