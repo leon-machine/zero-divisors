@@ -6,7 +6,7 @@ title: At tree level, on a metric Kasner approach before the descent (hypothesis
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [kasner, no-go, confronted-with-data]
+tags: [kasner, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-xi-ledger

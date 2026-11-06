@@ -6,7 +6,7 @@ title: 'Read as the charged-lepton matrix in the family basis of the neutrino te
 status: proved
 region: synthesis
 subject: neutrinos
-tags: [flavour-and-mixing, no-go, confronted-with-data]
+tags: [flavour-and-mixing, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

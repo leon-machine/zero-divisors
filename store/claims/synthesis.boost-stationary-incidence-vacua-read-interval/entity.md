@@ -6,11 +6,7 @@ title: Under the positive Hermitian structure, incidence vacua with boost-consta
 status: proved
 region: synthesis
 subject: one-relation
-tags:
-- conformal-model
-- two-readings
-- witt-index
-- entanglement
+tags: [needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

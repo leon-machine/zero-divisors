@@ -6,7 +6,7 @@ title: A quasi-free deposit on the fermionic boundary-mode algebra is its vacuum
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [no-go, confronted-with-data, car-algebra, modular-theory]
+tags: [no-go, confronted-with-data, car-algebra, modular-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

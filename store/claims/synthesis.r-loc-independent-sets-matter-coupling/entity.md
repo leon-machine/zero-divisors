@@ -6,7 +6,7 @@ title: (R$_{\mathrm{loc}}$), with the local-horizon modes labelled by null direc
 status: proved
 region: synthesis
 subject: einstein
-tags: [thermal-premises, horizons, curvature-and-field-equations, modular-theory]
+tags: [thermal-premises, horizons, curvature-and-field-equations, modular-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

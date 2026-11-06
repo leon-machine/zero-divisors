@@ -6,7 +6,7 @@ title: A sudden descent into the frozen phase with an instantaneous-vacuum start
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [frozen-point, cosmological-constant, no-go, confronted-with-data]
+tags: [frozen-point, cosmological-constant, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

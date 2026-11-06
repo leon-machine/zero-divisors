@@ -6,7 +6,7 @@ title: Premise (Q) splits into the maximum-entropy member of the (P),(R) class a
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, car-algebra, boundary-modes, bosonisation, undetermined-input]
+tags: [thermal-premises, car-algebra, boundary-modes, bosonisation, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

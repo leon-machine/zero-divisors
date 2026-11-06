@@ -6,7 +6,7 @@ title: If a boost acts on a mode it fixes through its vector field alone, the tw
 status: proved
 region: synthesis
 subject: einstein
-tags: [thermal-premises, horizons, modular-theory, no-go, null-directions]
+tags: [thermal-premises, horizons, modular-theory, no-go, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

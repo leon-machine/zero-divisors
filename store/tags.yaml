@@ -343,3 +343,7 @@
   title: Scattering and interactions
   group: physics
   about: Results computing interactions, scattering or tree-level amplitudes of the series' fields (contact terms, the coupled photon system).
+- id: needs-continuum
+  title: Needs the continuum
+  group: record
+  about: 'Results whose statement or proof needs a scalar outside Q(i) irreducibly: through sphere or ball measure, the exponential chart of the rotor group (rapidity periods, thermal weights), continuum analysis (integrals, limits, Hadamard kernels, spectral theory, entropy logarithms), imported standard-physics constants, or roots of unity beyond the fourth. Marks the boundary between the algebraic and the thermodynamic or cosmological layers (finitist-scalars audit, 6 November 2026; classification in seed/). Not applied where the continuum enters only through a normalisation, a rational rotor, a group-element label, bits versus nats, data, a formal variational integral, or notation.'

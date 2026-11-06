@@ -6,7 +6,7 @@ title: 'Given the Hadamard parametrix of the squared Dirac operator (imported), 
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra]
+tags: [thermal-premises, horizons, car-algebra, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-hs-scaling

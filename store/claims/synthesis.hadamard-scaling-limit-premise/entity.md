@@ -6,7 +6,7 @@ title: '(HS), the Hadamard scaling limit, a theorem (formerly a premise): for ev
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, null-directions]
+tags: [thermal-premises, horizons, car-algebra, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: maintainer-2026-11-01

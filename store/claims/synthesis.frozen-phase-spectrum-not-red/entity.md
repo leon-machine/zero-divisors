@@ -6,7 +6,7 @@ title: No field of the frozen phase's unitary series tilts the spectrum red
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [frozen-point, cosmological-constant, representation-theory, no-go, confronted-with-data, rotors-and-stabilisers]
+tags: [frozen-point, cosmological-constant, representation-theory, no-go, confronted-with-data, rotors-and-stabilisers, needs-continuum]
 proposed_by:
   kind: ai
   session: colony-2026-10-22

@@ -6,7 +6,7 @@ title: On a horizon generator the boost is the anticommutator-preserving scaling
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, modular-theory, car-algebra, forcing-and-uniqueness, no-go]
+tags: [thermal-premises, horizons, modular-theory, car-algebra, forcing-and-uniqueness, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

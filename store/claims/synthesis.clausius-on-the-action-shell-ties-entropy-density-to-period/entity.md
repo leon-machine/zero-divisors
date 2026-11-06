@@ -6,7 +6,7 @@ title: 'If the field equations are those of the field-space action with one norm
 status: proved
 region: synthesis
 subject: einstein
-tags: [thermal-premises, horizons, curvature-and-field-equations, no-go]
+tags: [thermal-premises, horizons, curvature-and-field-equations, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

@@ -6,7 +6,7 @@ title: For the frozen-point action the Euclidean action of an Einstein instanton
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [cosmological-constant, the-number-n, frozen-point, curvature-and-field-equations, kasner, no-go]
+tags: [cosmological-constant, the-number-n, frozen-point, curvature-and-field-equations, kasner, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

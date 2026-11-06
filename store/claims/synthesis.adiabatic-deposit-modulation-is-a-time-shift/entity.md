@@ -6,7 +6,7 @@ title: Under the charge reading and the mirror's deposit law, a classical modula
 status: proved
 region: synthesis
 subject: dark-matter
-tags: [no-go, confronted-with-data]
+tags: [no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

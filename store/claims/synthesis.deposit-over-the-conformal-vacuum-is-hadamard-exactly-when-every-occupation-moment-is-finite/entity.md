@@ -6,7 +6,7 @@ title: 'On a descended field of Robertson-Walker form with smooth scale factor (
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [car-algebra, horizons, thermal-premises, confronted-with-data]
+tags: [car-algebra, horizons, thermal-premises, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-deposit-state

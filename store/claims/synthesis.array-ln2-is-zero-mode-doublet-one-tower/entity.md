@@ -6,7 +6,7 @@ title: Under (Q) an array's ln 2 is its zero-mode charge doublet, which no curre
 status: proved
 region: synthesis
 subject: thermality
-tags: [boundary-modes, mode-counting, car-algebra, counting-rules]
+tags: [boundary-modes, mode-counting, car-algebra, counting-rules, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

@@ -6,7 +6,7 @@ title: 'For the fermionic (CAR) modes of a horizon generator, a state whose rest
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, modular-theory, car-algebra, forcing-and-uniqueness]
+tags: [thermal-premises, horizons, modular-theory, car-algebra, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

@@ -6,7 +6,7 @@ title: 'In the Feynman gauge with a proper-time cut-off $\Lambda$ the series'' c
 status: proved
 region: synthesis
 subject: einstein
-tags: [curvature-and-field-equations, mode-counting, no-go, undetermined-input]
+tags: [curvature-and-field-equations, mode-counting, no-go, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

@@ -6,7 +6,7 @@ title: The calibration residue re-expressed as a reciprocal mode entropy
 status: proved
 region: synthesis
 subject: entropy
-tags: [mode-counting, boundary-modes, counting-rules, undetermined-input]
+tags: [mode-counting, boundary-modes, counting-rules, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: residue-2026-10-22

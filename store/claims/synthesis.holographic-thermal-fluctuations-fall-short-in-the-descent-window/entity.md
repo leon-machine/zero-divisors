@@ -6,7 +6,7 @@ title: If thermal fluctuations with an area-law heat capacity are converted at H
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [no-go, confronted-with-data]
+tags: [no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

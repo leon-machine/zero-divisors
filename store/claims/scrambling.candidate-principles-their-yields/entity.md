@@ -6,7 +6,7 @@ title: The candidate principles and their yields
 status: proved
 region: scrambling
 subject: entropy
-tags: [mode-counting, boundary-modes]
+tags: [mode-counting, boundary-modes, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

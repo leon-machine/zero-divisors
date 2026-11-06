@@ -6,10 +6,7 @@ title: 'The trichotomy: what kind of number $N$ is'
 status: proved
 region: standard-model
 subject: dark-energy
-tags:
-- the-number-n
-- undetermined-input
-- classification
+tags: [needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

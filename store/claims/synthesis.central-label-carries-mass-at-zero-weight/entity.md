@@ -6,7 +6,7 @@ title: An explicit microcanonical model of the hole's mass label, with zero-weig
 status: proved
 region: synthesis
 subject: entropy
-tags: [boundary-modes, finite-models, superselection, mode-counting]
+tags: [boundary-modes, finite-models, superselection, mode-counting, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

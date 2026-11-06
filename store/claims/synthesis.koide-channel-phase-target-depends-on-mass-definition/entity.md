@@ -6,7 +6,7 @@ title: 'In the $\sqrt{m}$ (circulant) reading the channel-phase target is a pole
 status: proved
 region: synthesis
 subject: generations
-tags: [flavour-and-mixing, confronted-with-data]
+tags: [flavour-and-mixing, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

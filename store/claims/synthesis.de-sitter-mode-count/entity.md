@@ -6,7 +6,7 @@ title: The cosmological horizon's mode count under the black hole's rule
 status: proved
 region: synthesis
 subject: entropy
-tags: [the-number-n, mode-counting, horizons, boundary-modes]
+tags: [the-number-n, mode-counting, horizons, boundary-modes, needs-continuum]
 proposed_by:
   kind: ai
   session: de-sitter-count-2026-10-22

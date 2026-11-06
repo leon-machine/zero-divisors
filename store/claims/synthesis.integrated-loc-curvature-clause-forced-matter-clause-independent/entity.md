@@ -6,7 +6,7 @@ title: On the integrated reading of (Loc), the Clausius relation with the de Sit
 status: proved
 region: synthesis
 subject: einstein
-tags: [thermal-premises, horizons, curvature-and-field-equations, counting-rules]
+tags: [thermal-premises, horizons, curvature-and-field-equations, counting-rules, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

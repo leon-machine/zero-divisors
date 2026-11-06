@@ -6,7 +6,7 @@ title: The two roots are the chord and the arc of a quarter turn
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [counting-rules, dark-matter-ratio]
+tags: [counting-rules, dark-matter-ratio, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

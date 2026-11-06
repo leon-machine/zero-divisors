@@ -6,7 +6,7 @@ title: A descent deposit whose correlations have finite range R gives Delta^2(k)
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [no-go, confronted-with-data, frozen-point, cosmological-constant]
+tags: [no-go, confronted-with-data, frozen-point, cosmological-constant, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

@@ -6,7 +6,7 @@ title: The curvature-independence clause (Loc) is independent of the Clausius re
 status: proved
 region: synthesis
 subject: einstein
-tags: [horizons, curvature-and-field-equations, thermal-premises, counting-rules]
+tags: [horizons, curvature-and-field-equations, thermal-premises, counting-rules, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

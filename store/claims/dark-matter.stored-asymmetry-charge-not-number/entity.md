@@ -6,7 +6,7 @@ title: The stored asymmetry is a charge, not a number
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [matter-asymmetry, mirror-sector, dark-matter-ratio]
+tags: [matter-asymmetry, mirror-sector, dark-matter-ratio, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

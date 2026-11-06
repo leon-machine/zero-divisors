@@ -6,7 +6,7 @@ title: 'Imported: the unit-ball rule and its family'
 status: proved
 region: simulations
 subject: dark-matter
-tags: [dark-matter-ratio, counting-rules]
+tags: [dark-matter-ratio, counting-rules, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

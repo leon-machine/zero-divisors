@@ -6,7 +6,7 @@ title: 'Under the Gupta-Bleuler form of the Krein premise, the Krein quartet of 
 status: proved
 region: synthesis
 subject: einstein
-tags: [gauge-fields, mode-counting, curvature-and-field-equations, no-go, undetermined-input]
+tags: [gauge-fields, mode-counting, curvature-and-field-equations, no-go, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

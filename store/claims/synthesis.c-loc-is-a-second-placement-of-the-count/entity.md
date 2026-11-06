@@ -6,7 +6,7 @@ title: (C$_{\mathrm{loc}}$)(i) is a second placement of the count, not an extens
 status: proved
 region: synthesis
 subject: einstein
-tags: [counting-rules, horizons, kerr, mode-counting, no-go]
+tags: [counting-rules, horizons, kerr, mode-counting, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-cloc

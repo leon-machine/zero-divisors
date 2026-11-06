@@ -6,7 +6,7 @@ title: Under the Wald functional of the series' action, the entropy of a radial 
 status: proved
 region: synthesis
 subject: einstein
-tags: [horizons, curvature-and-field-equations, no-go, thermal-premises]
+tags: [horizons, curvature-and-field-equations, no-go, thermal-premises, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

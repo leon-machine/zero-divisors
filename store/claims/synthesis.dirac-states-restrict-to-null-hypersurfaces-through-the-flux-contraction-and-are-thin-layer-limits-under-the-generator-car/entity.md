@@ -6,7 +6,7 @@ title: 'Every state of the Dirac field on a gravitational field restricts to a n
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, null-directions]
+tags: [thermal-premises, horizons, car-algebra, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-hs-bound

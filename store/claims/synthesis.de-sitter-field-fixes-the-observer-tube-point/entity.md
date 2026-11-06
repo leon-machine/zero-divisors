@@ -6,7 +6,7 @@ title: In the de Sitter gravitational field the symmetries commuting with a wedg
 status: proved
 region: synthesis
 subject: one-relation
-tags: [conformal-spinors, conformal-model, frozen-point, horizons, modular-theory]
+tags: [conformal-spinors, conformal-model, frozen-point, horizons, modular-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

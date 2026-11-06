@@ -6,7 +6,7 @@ title: "Under (B'), in the boundary-mode model of a reversal pair: on finite win
 status: proved
 region: synthesis
 subject: dark-matter
-tags: [mirror-sector, indifference, superselection, car-algebra, modular-theory, premises-p1-p5]
+tags: [mirror-sector, indifference, superselection, car-algebra, modular-theory, premises-p1-p5, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

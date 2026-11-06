@@ -6,7 +6,7 @@ title: 'Standard method (Epstein and Glaser 1973; Freedman, Johnson and Latorre 
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [recovers-known-physics, scattering-amplitudes, running-and-unification]
+tags: [recovers-known-physics, scattering-amplitudes, running-and-unification, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

@@ -6,7 +6,7 @@ title: 'On a horizon generator the generator analogue of the microlocal (Hadamar
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, forcing-and-uniqueness]
+tags: [thermal-premises, horizons, car-algebra, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

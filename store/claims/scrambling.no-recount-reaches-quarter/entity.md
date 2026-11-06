@@ -6,7 +6,7 @@ title: No recount reaches the quarter
 status: proved
 region: scrambling
 subject: entropy
-tags: [no-go, mode-counting]
+tags: [no-go, mode-counting, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

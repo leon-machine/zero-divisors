@@ -5,11 +5,7 @@ version: 2
 title: The mirror's asymmetry by the audit route, and what that route needs
 status: proved
 subject: dark-matter
-tags:
-- mirror-sector
-- matter-asymmetry
-- indifference
-- premises-p1-p5
+tags: [needs-continuum]
 proposed_by:
   kind: ai
   session: synthesis-gaps-2026-10-21

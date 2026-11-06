@@ -6,7 +6,7 @@ title: 'If the interacting fields are built from the series'' attached free fiel
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [car-algebra, gauge-fields, recovers-known-physics, superselection]
+tags: [car-algebra, gauge-fields, recovers-known-physics, superselection, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

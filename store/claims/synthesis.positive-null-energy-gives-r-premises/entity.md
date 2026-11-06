@@ -6,7 +6,7 @@ title: A ground state for the affine null translations of a horizon's generators
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, modular-theory, horizons, hawking-temperature, car-algebra, forcing-and-uniqueness]
+tags: [thermal-premises, modular-theory, horizons, hawking-temperature, car-algebra, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

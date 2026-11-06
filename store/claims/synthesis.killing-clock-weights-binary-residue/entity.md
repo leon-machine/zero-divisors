@@ -6,7 +6,7 @@ title: If the Killing flow on the counted modes is a clock at unit rapidity, eac
 status: proved
 region: synthesis
 subject: entropy
-tags: [mode-counting, boundary-modes, undetermined-input, forcing-and-uniqueness]
+tags: [mode-counting, boundary-modes, undetermined-input, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

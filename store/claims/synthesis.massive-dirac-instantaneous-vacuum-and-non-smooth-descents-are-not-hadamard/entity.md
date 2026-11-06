@@ -6,7 +6,7 @@ title: On a spatially flat Robertson-Walker field, for a massive Dirac field, at
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [car-algebra, no-go, pairing-and-bogoliubov, frozen-point]
+tags: [car-algebra, no-go, pairing-and-bogoliubov, frozen-point, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-deposit-state

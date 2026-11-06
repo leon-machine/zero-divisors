@@ -6,7 +6,7 @@ title: Under hypothesis (F), that the descended universe's late de Sitter stage 
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [frozen-point, cosmological-constant, conformal-model, no-go, confronted-with-data, rotors-and-stabilisers]
+tags: [frozen-point, cosmological-constant, conformal-model, no-go, confronted-with-data, rotors-and-stabilisers, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

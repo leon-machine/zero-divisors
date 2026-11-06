@@ -6,11 +6,7 @@ title: No incidence vacuum is real; each incidence line is spanned by two thermo
 status: proved
 region: synthesis
 subject: one-relation
-tags:
-- witt-index
-- conformal-model
-- entanglement
-- two-readings
+tags: [needs-continuum]
 proposed_by:
   kind: ai
   session: colony-2026-10-22

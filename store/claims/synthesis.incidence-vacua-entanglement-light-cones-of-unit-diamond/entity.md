@@ -6,7 +6,7 @@ title: Between them, the two distinguished incidence vacua are maximally entangl
 status: proved
 region: synthesis
 subject: thermality
-tags: [entanglement, conformal-model, modular-theory, spinor-modules]
+tags: [entanglement, conformal-model, modular-theory, spinor-modules, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

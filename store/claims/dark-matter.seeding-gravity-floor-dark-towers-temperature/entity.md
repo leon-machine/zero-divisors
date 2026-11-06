@@ -6,7 +6,7 @@ title: 'Seeding by gravity: the floor on a dark tower''s temperature'
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [matter-asymmetry, quantum-gravity]
+tags: [matter-asymmetry, quantum-gravity, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

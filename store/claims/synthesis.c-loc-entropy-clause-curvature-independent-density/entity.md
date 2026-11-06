@@ -6,7 +6,7 @@ title: If the entropy density of a small horizon patch depends only on its flat 
 status: proved
 region: synthesis
 subject: einstein
-tags: [counting-rules, horizons, entropy-premises, forcing-and-uniqueness, curvature-and-field-equations]
+tags: [counting-rules, horizons, entropy-premises, forcing-and-uniqueness, curvature-and-field-equations, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-cloc

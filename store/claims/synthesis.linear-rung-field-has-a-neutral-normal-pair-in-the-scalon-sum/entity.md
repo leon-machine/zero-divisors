@@ -6,7 +6,7 @@ title: Quantised as an elementary field with $i = I_{4}$, the rung field is line
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [symmetry-breaking, gauge-fields, pseudoscalar-and-centre, mass-generation]
+tags: [symmetry-breaking, gauge-fields, pseudoscalar-and-centre, mass-generation, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-qft

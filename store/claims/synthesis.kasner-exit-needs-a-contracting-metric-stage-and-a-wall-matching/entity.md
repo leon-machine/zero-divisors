@@ -6,7 +6,7 @@ title: Modes of every Bessel order leave a Kasner approach's Hubble length only 
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [kasner, no-go]
+tags: [kasner, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-xi-ledger

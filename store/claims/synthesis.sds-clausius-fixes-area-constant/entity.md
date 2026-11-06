@@ -6,7 +6,7 @@ title: Under the series' horizon temperatures, Clausius on the Schwarzschild-de 
 status: proved
 region: synthesis
 subject: entropy
-tags: [hawking-temperature, horizons, cosmological-constant, the-number-n]
+tags: [hawking-temperature, horizons, cosmological-constant, the-number-n, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

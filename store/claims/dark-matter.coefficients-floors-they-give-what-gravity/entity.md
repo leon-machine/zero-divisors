@@ -6,7 +6,7 @@ title: The coefficients, the floors they give, and what gravity cannot supply
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [matter-asymmetry, mirror-sector, quantum-gravity]
+tags: [matter-asymmetry, mirror-sector, quantum-gravity, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

@@ -6,7 +6,7 @@ title: On a principal mode space a rotation-invariant quasi-free counted sector 
 status: proved
 region: synthesis
 subject: entropy
-tags: [mode-counting, boundary-modes, counting-rules, undetermined-input]
+tags: [mode-counting, boundary-modes, counting-rules, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: colony-2026-10-22
