@@ -6,7 +6,7 @@ title: Read as a Gibbs state at the series' temperature, a hole carries more tha
 status: proved
 region: synthesis
 subject: entropy
-tags: [boundary-modes, mode-counting, hawking-temperature, undetermined-input]
+tags: [boundary-modes, mode-counting, hawking-temperature, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

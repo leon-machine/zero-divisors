@@ -6,7 +6,7 @@ title: The cosmological horizon's boost is the frozen point's time translation
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [frozen-point, horizons, rotors-and-stabilisers, cosmological-constant]
+tags: [frozen-point, horizons, rotors-and-stabilisers, cosmological-constant, needs-continuum]
 proposed_by:
   kind: ai
   session: synthesis-bridges-2026-10-21

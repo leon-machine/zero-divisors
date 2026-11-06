@@ -6,10 +6,7 @@ title: 'Imported: the single-mode thermality and the modular period'
 status: proved
 region: one-relation
 subject: thermality
-tags:
-- hawking-temperature
-- modular-theory
-- descent-map
+tags: [needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

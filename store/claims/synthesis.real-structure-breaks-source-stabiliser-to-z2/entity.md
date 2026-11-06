@@ -6,7 +6,7 @@ title: Every $S_{3}$-equivariant real structure breaks the coherent source's sta
 status: proved
 region: synthesis
 subject: generations
-tags: [pairing-and-bogoliubov, flavour-and-mixing, no-go, representation-theory]
+tags: [pairing-and-bogoliubov, flavour-and-mixing, no-go, representation-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

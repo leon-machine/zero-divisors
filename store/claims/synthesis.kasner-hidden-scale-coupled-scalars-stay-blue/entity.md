@@ -6,7 +6,7 @@ title: On a Kasner approach whose hidden direction moves, a scalar whose four-di
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [kasner, no-go, confronted-with-data]
+tags: [kasner, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

@@ -6,7 +6,7 @@ title: 'On the attachment''s helicity modules, the $L^{2}$ coefficient of the ze
 status: proved
 region: synthesis
 subject: einstein
-tags: [conformal-spinors, mode-counting, curvature-and-field-equations, no-go, undetermined-input]
+tags: [conformal-spinors, mode-counting, curvature-and-field-equations, no-go, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-qft

@@ -6,7 +6,7 @@ title: 'Under (C$_{\mathrm{loc}}$) and the Clausius relation, Jacobson''s argume
 status: proved
 region: synthesis
 subject: einstein
-tags: [curvature-and-field-equations, horizons, thermal-premises, null-directions]
+tags: [curvature-and-field-equations, horizons, thermal-premises, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-cloc

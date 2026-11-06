@@ -6,7 +6,7 @@ title: At the Kerr ring the weighted limit of the rotation-gauge field is a null
 status: proved
 region: synthesis
 subject: interior
-tags: [kerr, null-directions, limits, curvature-and-field-equations]
+tags: [kerr, null-directions, limits, curvature-and-field-equations, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

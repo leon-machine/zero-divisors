@@ -6,7 +6,7 @@ title: 'The Euler part of the series'' horizon entropy on a patch of a cut is an
 status: proved
 region: synthesis
 subject: einstein
-tags: [horizons, curvature-and-field-equations, thermal-premises, no-go]
+tags: [horizons, curvature-and-field-equations, thermal-premises, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-gravity-action

@@ -6,7 +6,7 @@ title: The cosmological horizon's descent temperature is the frozen point's norm
 status: proved
 region: synthesis
 subject: thermality
-tags: [hawking-temperature, frozen-point, modular-theory, horizons]
+tags: [hawking-temperature, frozen-point, modular-theory, horizons, needs-continuum]
 proposed_by:
   kind: ai
   session: synthesis-bridges-2026-10-21

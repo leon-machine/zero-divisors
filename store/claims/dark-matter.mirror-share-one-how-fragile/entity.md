@@ -6,7 +6,7 @@ title: The mirror share is one, and how fragile that is
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [dark-matter-ratio, mirror-sector, hypothesis-u]
+tags: [dark-matter-ratio, mirror-sector, hypothesis-u, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

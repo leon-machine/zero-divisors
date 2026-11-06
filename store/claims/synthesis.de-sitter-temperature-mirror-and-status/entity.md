@@ -6,7 +6,7 @@ title: The cosmological horizon's temperature in the mirror, and its status
 status: proved
 region: synthesis
 subject: thermality
-tags: [hawking-temperature, mirror-sector, frozen-point, undetermined-input]
+tags: [hawking-temperature, mirror-sector, frozen-point, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: de-sitter-temperature-2026-10-21

@@ -6,7 +6,7 @@ title: The stored Pati-Salam chain has topologically stable $\mathbb{Z}_{2}$ str
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [no-go, confronted-with-data, cosmological-constant]
+tags: [no-go, confronted-with-data, cosmological-constant, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

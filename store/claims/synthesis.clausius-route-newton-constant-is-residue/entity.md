@@ -6,7 +6,7 @@ title: On Jacobson's Clausius route the epoch count returns Newton's constant on
 status: proved
 region: synthesis
 subject: entropy
-tags: [mode-counting, curvature-and-field-equations, counting-rules, hawking-temperature]
+tags: [mode-counting, curvature-and-field-equations, counting-rules, hawking-temperature, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

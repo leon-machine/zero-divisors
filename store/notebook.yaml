@@ -375,3 +375,59 @@
     and the action to quantise is fixed. 14 exact checks.'
   sources:
   - 'Project: claude/QG_peierls_findings.md'
+
+# ---- emergent-scalars runs, 2026-11-06
+- id: finitist-scalars
+  title: Do the transport-essential results need the continuum?
+  programme: Emergent scalars
+  registered: '2026-11-06'
+  question: 'The emergent-scalar reading takes the scalar ring to be what the directional generators produce: the centre,
+    Q(i) once superposition is allowed. Does any ledger-essential result require, irreducibly, a scalar outside Q(i)?'
+  kill_conditions:
+  - 'K1 Statement: an essential claim or live prediction whose statement contains a scalar outside Q(i) not removable by a
+    unit choice, a restatement as a ratio in Q(i), or a rational Cayley rotor.'
+  - 'K2 Proof: an essential claim every derivation of which needs completeness of R or C (limits, compactness, spectral theory,
+    integrals) with no algebraic route visible.'
+  - 'K3 Verification: a check tagged by an essential claim uses floating point or an irrational constant in the check itself.'
+  run: '2026-11-06'
+  outcome: killed
+  summary: 'Run first on the OneDrive copy of the store (204 essential results: 113 clean, 48 eliminable, 36 killed by statement,
+    7 by proof), then carried to main at b26098a (336 essential results: E0 122, E1 109, E2 56, E3 49). K1, K2 and K3 all
+    triggered (K3 by the T14 dark-matter legacy checks in Decimal and one T13 record in floating point; every store check.py
+    is exact and encloses pi, e and ln 2 by rationals). The algebraic spine (T01, T03, T16, T12 bar one, T12-rungs, T14a,
+    T17-rule2, T07, the T05 notes, T09, T11, T13, T15) is finitist in statement and proof; every kill is thermodynamic, cosmological
+    or quantum-field-theoretic. Doors, by count of killed results: continuum analysis 56, the exponential chart of the rotor
+    group 34 (rapidity period 2 pi, thermal weights), sphere and ball measure 25, imported standard-physics constants 17,
+    data 16, roots of unity beyond the fourth 3 (the Z_3 of the circulant and S_3 readings). Recorded as the tag needs-continuum
+    on the 105 E2/E3 results, with the classification in seed/. The finitist branch of the reading is dead; what survives
+    is units and signature from the algebra and the continuum from the rotor group and the logarithm; the series'' own checks
+    are constructive (rational enclosures), not finitist.'
+  sources:
+  - seed/needs_continuum_classification_2026-11-06.md
+  - seed/tag_assignment_needs-continuum.yaml
+  - 'Leon''s suite: Claude outputs/finitist_scalars_2026-11-06/ (pre-registration, scan script, findings)'
+- id: modular-continuity
+  title: Can premise (R) be derived by modular theory from the series' objects (Route 1)?
+  programme: Emergent scalars
+  registered: '2026-11-06'
+  question: A faithful state gives GNS, Tomita-Takesaki a modular flow, Bisognano-Wichmann the boost at 2 pi. For the boundary-mode
+    algebra with its Fock vacuum, is the vacuum cyclic and separating for the one-sided algebra, is the modular group the
+    boost, and is the parameter 2 pi/kappa with (R) unused?
+  kill_conditions:
+  - K1 Finite stage never separating.
+  - K2 Modular theory fixes no beta.
+  - K3 Circularity on (R).
+  - K4 Prior art (BW, Borchers, Sewell 1982, Kay-Wald 1991, or the series' own results).
+  - K5 Spectrum condition imported.
+  run: '2026-11-06'
+  outcome: killed
+  summary: 'Killed by results already in the store: T05 Thm 7.3 (beta free), Thm 7.16 (rigidity), T05-angle Prop 4.1 (spectrum
+    condition selects Boulware), synthesis.point-spectrum-boost-admits-no-half-sided-translations (K2, K4, K5). A follow-up
+    on the continuum (h-plus) found that positivity of the translation generator is free on the bilateral continuum and that
+    (R) there is equivalent to half-sidedness of the one-sided algebra under the ascent''s null translation, which needs a
+    position of the modes along the generator. Both runs were made against the OneDrive copy; main already held the answer
+    as (N+) (synthesis.n-plus-null-ground-state) with modes on L^2(R, du) and synthesis.positive-null-energy-gives-r-premises,
+    so the two claims and the open problem drafted from the runs were not submitted. Method note: query the graph before proposing
+    a route; the route was in it.'
+  sources:
+  - 'Leon''s suite: Claude outputs/modular_continuity_2026-11-06/ (pre-registrations, findings, lab pull)'

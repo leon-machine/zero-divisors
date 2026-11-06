@@ -6,7 +6,7 @@ title: 'For a hole formed by collapse, with the outgoing sector reduced to one c
 status: proved
 region: synthesis
 subject: thermality
-tags: [horizons, thermal-premises, hawking-temperature, car-algebra, modular-theory]
+tags: [horizons, thermal-premises, hawking-temperature, car-algebra, modular-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

@@ -6,7 +6,7 @@ title: The mirror's temperature and premise P2
 status: proved
 region: dark-tower-matter
 subject: dark-matter
-tags: [premises-p1-p5, mirror-sector, confronted-with-data]
+tags: [premises-p1-p5, mirror-sector, confronted-with-data, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

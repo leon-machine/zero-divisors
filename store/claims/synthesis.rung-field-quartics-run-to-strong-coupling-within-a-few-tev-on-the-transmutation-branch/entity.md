@@ -6,7 +6,7 @@ title: 'For the scale-free linear rung field with gauge generators read as rung 
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [symmetry-breaking, running-and-unification, mass-generation, confronted-with-data]
+tags: [symmetry-breaking, running-and-unification, mass-generation, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full

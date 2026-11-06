@@ -6,7 +6,7 @@ title: On a local Rindler patch the Euler (Jacobson-Myers) entropy of the series
 status: proved
 region: synthesis
 subject: einstein
-tags: [horizons, entropy-premises, curvature-and-field-equations, no-go, thermal-premises]
+tags: [horizons, entropy-premises, curvature-and-field-equations, no-go, thermal-premises, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

@@ -6,7 +6,7 @@ title: A local conversion of a Gaussian field into the curvature perturbation, a
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [no-go, confronted-with-data]
+tags: [no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

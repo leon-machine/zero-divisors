@@ -6,7 +6,7 @@ title: With the sea level between sites the s-wave array carries exactly half of
 status: proved
 region: synthesis
 subject: entropy
-tags: [mode-counting, boundary-modes, bosonisation, counting-rules, undetermined-input]
+tags: [mode-counting, boundary-modes, bosonisation, counting-rules, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

@@ -6,7 +6,7 @@ title: 'On a globally hyperbolic Weyl-flat region of a gravitational field every
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, null-directions]
+tags: [thermal-premises, horizons, car-algebra, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-deposit-state

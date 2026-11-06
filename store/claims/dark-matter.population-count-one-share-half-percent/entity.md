@@ -6,7 +6,7 @@ title: 'The population count: one share to half a percent, and a symmetric remai
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [dark-matter-ratio, mirror-sector, open-problem]
+tags: [dark-matter-ratio, mirror-sector, open-problem, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

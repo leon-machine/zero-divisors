@@ -6,7 +6,7 @@ title: The cosmological horizon's entropy is pi N^2
 status: proved
 region: synthesis
 subject: entropy
-tags: [the-number-n, horizons, cosmological-constant, frozen-point]
+tags: [the-number-n, horizons, cosmological-constant, frozen-point, needs-continuum]
 proposed_by:
   kind: ai
   session: de-sitter-count-2026-10-22

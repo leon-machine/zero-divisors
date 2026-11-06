@@ -6,7 +6,7 @@ title: At two loops only the Majorana Yukawa moves the Pati-Salam scales, and th
 status: proved
 region: synthesis
 subject: neutrinos
-tags: [seesaw-and-majorana, undetermined-input, running-and-unification]
+tags: [seesaw-and-majorana, undetermined-input, running-and-unification, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

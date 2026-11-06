@@ -6,7 +6,7 @@ title: 'On a horizon generator closed by its Moebius covariance, the Hilbert-Sch
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, superselection, forcing-and-uniqueness]
+tags: [thermal-premises, horizons, car-algebra, superselection, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-five-fronts

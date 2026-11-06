@@ -6,7 +6,7 @@ title: On a Kasner approach to a wall a massless minimally coupled scalar's mode
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [kasner, no-go, confronted-with-data]
+tags: [kasner, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

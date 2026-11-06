@@ -6,7 +6,7 @@ title: Given the monopole literature inputs, on the stored Pati-Salam chain with
 status: proved
 region: synthesis
 subject: dark-matter
-tags: [no-go, confronted-with-data, symmetry-breaking, dark-matter-ratio]
+tags: [no-go, confronted-with-data, symmetry-breaking, dark-matter-ratio, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

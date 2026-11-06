@@ -6,7 +6,7 @@ title: 'At the weights of (Q) version 3 a counted unit of two arrays carries Kil
 status: proved
 region: synthesis
 subject: entropy
-tags: [boundary-modes, mode-counting, hawking-temperature, bosonisation, undetermined-input]
+tags: [boundary-modes, mode-counting, hawking-temperature, bosonisation, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

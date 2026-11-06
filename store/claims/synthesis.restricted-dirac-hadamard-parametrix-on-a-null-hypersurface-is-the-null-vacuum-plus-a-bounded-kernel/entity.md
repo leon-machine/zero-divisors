@@ -6,7 +6,7 @@ title: 'On every piece of a geodesic null hypersurface of a gravitational field 
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, null-directions]
+tags: [thermal-premises, horizons, car-algebra, null-directions, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-hs-bound

@@ -6,7 +6,7 @@ title: 'Given the temperature clause as the window''s state before the crossing,
 status: proved
 region: synthesis
 subject: einstein
-tags: [thermal-premises, boundary-modes, horizons, car-algebra, mode-counting]
+tags: [thermal-premises, boundary-modes, horizons, car-algebra, mode-counting, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

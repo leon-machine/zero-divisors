@@ -6,7 +6,7 @@ title: Measured from the null ground state of (N$_{+}$), the boost ground state 
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, boundary-modes, mode-counting, hawking-temperature]
+tags: [thermal-premises, boundary-modes, mode-counting, hawking-temperature, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

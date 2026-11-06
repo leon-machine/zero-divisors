@@ -6,7 +6,7 @@ title: The total as a function of the thickness
 status: proved
 region: dark-matter
 subject: dark-matter
-tags: [dark-matter-ratio, confronted-with-data]
+tags: [dark-matter-ratio, confronted-with-data, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

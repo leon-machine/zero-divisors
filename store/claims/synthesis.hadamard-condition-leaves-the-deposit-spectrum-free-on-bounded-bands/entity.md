@@ -6,7 +6,7 @@ title: 'Measured against a homogeneous Hadamard reference state, the Hadamard co
 status: proved
 region: synthesis
 subject: dark-energy
-tags: [frozen-point, no-go, pairing-and-bogoliubov, undetermined-input]
+tags: [frozen-point, no-go, pairing-and-bogoliubov, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-deposit-state

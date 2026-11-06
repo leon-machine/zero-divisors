@@ -6,7 +6,7 @@ title: The s-wave array is a boundary-mode set, with the tower as its model and 
 status: proved
 region: synthesis
 subject: thermality
-tags: [boundary-modes, car-algebra, modular-theory]
+tags: [boundary-modes, car-algebra, modular-theory, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

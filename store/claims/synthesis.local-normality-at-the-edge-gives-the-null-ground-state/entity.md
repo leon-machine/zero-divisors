@@ -6,7 +6,7 @@ title: 'On a horizon generator the weight-$\tfrac12$ scaling preserves the Hilbe
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, horizons, car-algebra, modular-theory, superselection, forcing-and-uniqueness]
+tags: [thermal-premises, horizons, car-algebra, modular-theory, superselection, forcing-and-uniqueness, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

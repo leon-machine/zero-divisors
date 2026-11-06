@@ -6,7 +6,7 @@ title: Equilibrium for a shared boost clock gives the reversal pair one temperat
 status: proved
 region: synthesis
 subject: dark-matter
-tags: [mirror-sector, indifference, modular-theory, superselection, premises-p1-p5]
+tags: [mirror-sector, indifference, modular-theory, superselection, premises-p1-p5, needs-continuum]
 proposed_by:
   kind: ai
   session: colony-2026-10-22

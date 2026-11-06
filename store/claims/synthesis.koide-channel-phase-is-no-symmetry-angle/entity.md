@@ -6,7 +6,7 @@ title: 'In the $\sqrt{m}$ (circulant) reading of the projected coherent vector a
 status: proved
 region: synthesis
 subject: generations
-tags: [flavour-and-mixing, no-go, confronted-with-data]
+tags: [flavour-and-mixing, no-go, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-31-all-open

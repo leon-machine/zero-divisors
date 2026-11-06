@@ -6,7 +6,7 @@ title: Given the Gildener-Weinberg one-loop scalon formula, and with the Majoran
 status: proved
 region: synthesis
 subject: standard-model
-tags: [symmetry-breaking, undetermined-input, gauge-fields, confronted-with-data]
+tags: [symmetry-breaking, undetermined-input, gauge-fields, confronted-with-data, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-01-weak-scale

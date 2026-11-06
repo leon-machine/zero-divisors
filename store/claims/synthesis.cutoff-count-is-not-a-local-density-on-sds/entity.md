@@ -6,7 +6,7 @@ title: On a Schwarzschild-de Sitter hole the cutoff count over the hole's modula
 status: proved
 region: synthesis
 subject: einstein
-tags: [counting-rules, horizons, mode-counting, entropy-premises, no-go]
+tags: [counting-rules, horizons, mode-counting, entropy-premises, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-23-toe

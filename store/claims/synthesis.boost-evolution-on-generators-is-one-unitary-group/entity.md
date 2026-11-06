@@ -6,7 +6,7 @@ title: On the continuum of a horizon's null generators the boost time evolution 
 status: proved
 region: synthesis
 subject: thermality
-tags: [thermal-premises, modular-theory, horizons, car-algebra, rotors-and-stabilisers, dictionaries]
+tags: [thermal-premises, modular-theory, horizons, car-algebra, rotors-and-stabilisers, dictionaries, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-24-all-open

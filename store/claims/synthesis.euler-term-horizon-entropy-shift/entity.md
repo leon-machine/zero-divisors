@@ -6,7 +6,7 @@ title: Assuming Wald entropy, the Euler term of the series' action shifts each h
 status: proved
 region: synthesis
 subject: entropy
-tags: [horizons, curvature-and-field-equations, cosmological-constant, no-go]
+tags: [horizons, curvature-and-field-equations, cosmological-constant, no-go, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-10-22-toe

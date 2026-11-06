@@ -6,7 +6,7 @@ title: The residue in each convention
 status: proved
 region: scrambling
 subject: entropy
-tags: [mode-counting]
+tags: [mode-counting, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

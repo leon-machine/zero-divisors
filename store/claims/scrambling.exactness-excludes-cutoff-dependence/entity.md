@@ -6,7 +6,7 @@ title: Exactness excludes cutoff dependence
 status: proved
 region: scrambling
 subject: entropy
-tags: [mode-counting, entropy-premises]
+tags: [mode-counting, entropy-premises, needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

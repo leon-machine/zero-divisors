@@ -6,10 +6,7 @@ title: 'The radiation audit: what the type-by-residue theorem closes, and what s
 status: proved
 region: dark-matter
 subject: dark-matter
-tags:
-- ledger-audit
-- open-problem
-- live-prediction
+tags: [needs-continuum]
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20

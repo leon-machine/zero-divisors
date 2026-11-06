@@ -6,7 +6,7 @@ title: 'The state selected by the Dirac field''s own spin product (the Fewster-L
 status: proved
 region: synthesis
 subject: quantum-fields
-tags: [car-algebra, no-go, pairing-and-bogoliubov, undetermined-input]
+tags: [car-algebra, no-go, pairing-and-bogoliubov, undetermined-input, needs-continuum]
 proposed_by:
   kind: ai
   session: 2026-11-02-qft-full
