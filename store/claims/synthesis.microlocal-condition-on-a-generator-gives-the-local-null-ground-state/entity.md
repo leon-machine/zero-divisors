@@ -30,7 +30,7 @@ derivations:
   - synthesis.imported-local-quasi-equivalence-of-hadamard-states@1
   - synthesis.imported-kay-wald-uniqueness-and-no-go@1
   - synthesis.imported-propagation-of-hadamard-form@1
-  - synthesis.imported-powers-stormer-takesaki-disjointness@2
+  - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
 checked_by:
 - kind: check

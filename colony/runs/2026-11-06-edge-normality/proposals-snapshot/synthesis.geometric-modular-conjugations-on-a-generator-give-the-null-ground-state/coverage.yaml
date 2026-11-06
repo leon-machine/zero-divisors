@@ -1,0 +1,31 @@
+functions:
+  check_the_form_is_a_loewner_kernel:
+    kind: sampled
+    clauses:
+    - (iii) the Gram kernel of the natural-cone form on exponentials is the double Laplace transform of sin(p(u + w)) and a Loewner kernel (g_p(a) - g_p(b))/(b - a)
+    omits: identities checked at rational points; Loewner's theorem and the boundary-value step are in the proof
+  check_the_vacuum_form_is_positive_and_fixes_the_sign:
+    kind: partial
+    clauses:
+    - (iii) the null vacuum's form on u^m e^{-u} is m! n!/(m + n + 1), positive, with Lebesgue Laplace measure
+    - (iv) positivity fixes eta = -1 for the null vacuum and eta = +1 for its time reverse
+    omits: a 5 x 5 section of the form; positivity on all of L^2(0, inf) is the Carleman form, standard
+  check_charge_symmetry_and_the_states_it_admits:
+    kind: sampled
+    clauses:
+    - (ii) the condition theta(-p) = 1 - theta(p) holds for the vacuum, its reverse, the swapped band and the translation-KMS symbols and fails for the Fermi-level states
+    - (vi)(b) KMS symbols are not projections and have 1 - 2 theta >= 0 at positive momentum
+    omits: symbols evaluated at rational momenta and at rational values of e^{beta p}
+  check_the_swapped_band_state_breaks_the_positivity:
+    kind: partial
+    clauses:
+    - (vi)(c) the swapped-band form takes the values -3/5 and 3/20 on e^{-u} and e^{-4u}, so it is indefinite for either sign
+    - (vi)(c) its kernel difference from the vacuum is entire (series coefficients)
+    omits: two diagonal entries suffice for indefiniteness; local normality from the bounded difference is standard
+  check_two_cuts_do_not_give_stationarity:
+    kind: sampled
+    clauses:
+    - (vi)(a) a unimodular gauge function symmetric about the cuts 0 and 1 keeps the hypothesis there, and the gauged vacuum kernel is invariant under translation by 2 but not by 1/2
+    omits: symmetry checked on a rational grid
+untouched_premises:
+  angle.imported-theorems-deliver-their-hypotheses: enters the converse (v) only, through the Bisognano-Wichmann property of the chiral Fermi field

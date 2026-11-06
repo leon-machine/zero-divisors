@@ -1,0 +1,1 @@
+{"t": 1794002968.6702664, "problem": "op.r-premises-external", "tokens": 1030000, "outcome": "proved-partial", "proposal": "synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state; synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i", "verdict": "fixes; restated (accepted)"}

@@ -1,0 +1,4 @@
+I405  synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state
+      angle.imported-theorems-deliver-their-hypotheses is declared and untouched, as expected: coverage.yaml: enters the converse (v) only, through the Bisognano-Wichmann property of the chiral Fermi field
+
+synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state: 0 error(s), 1 other finding(s); check result: pass

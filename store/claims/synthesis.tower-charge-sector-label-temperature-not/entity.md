@@ -30,7 +30,7 @@ derivations:
   - synthesis.cold-mirror-needs-non-equilibrium-descent@1
   - synthesis.mirror-asymmetry-route-one@2
   - dark-matter.mirror-tower-copy-one@8
-  - synthesis.imported-powers-stormer-takesaki-disjointness@2
+  - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
 checked_by:
 - kind: check

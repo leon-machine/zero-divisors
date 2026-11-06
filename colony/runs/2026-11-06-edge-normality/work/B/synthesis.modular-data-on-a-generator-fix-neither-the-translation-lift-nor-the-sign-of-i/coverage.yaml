@@ -1,0 +1,20 @@
+functions:
+  check_polar_part_gives_the_modular_conjugation:
+    kind: sampled
+    clauses: ["(vi) for Slater states on 1 + 1 and 2 + 2 modes, J a(f) J = (-1)^(n0) Gamma a*(W f) with W the polar part of the cross-cut block: the candidate is an antiunitary involution fixing Omega and J_c S is positive definite, so it is the modular conjugation by uniqueness of the polar decomposition"]
+    omits: "two finite examples with Gaussian-rational data; the continuum form used for the explicit phases in (iii) is argued in the text"
+  check_fermi_sea_is_a_local_gauge_transform_of_the_vacuum:
+    kind: sampled
+    clauses: ["(ii) the local gauge transform by e^{iku} carries the symbol chi(P < 0) to chi(P < k)", "(ii) the elementwise reflection phase e^{2ik(a - u)} is constant in u only for k = 0", "(ii) charge-zero excitations of chi(P < k) have positive energy, single holes at 0 < p < k negative energy", "(ii) charge density k/(2 pi) and energy density k^2/(4 pi); with eigenvalues +-k the charges cancel"]
+    omits: "sampled momenta, cuts and positions; the net-level identity (i) and the ground-state property on the gauge-invariant subalgebra are structural and proved in the text"
+  check_hankel_phases_of_the_vacuum_and_the_filled_sea:
+    kind: sampled
+    clauses: ["(iii) the reflected cross-cut kernels are -i/(2 pi t) for the vacuum and +i/(2 pi t) for the filled sea, positive after the phases c = -i and c-bar = +i, and the wrong phase gives a negative kernel", "(iii) a charge-symmetric odd band, S = (-oo, -1) u (0, 1), has a cross-cut kernel of both signs on the diagonal, so no constant phase is positive for it (contrast)"]
+    omits: "three values of t and Taylor bounds at two points; Abel-regularised Fourier integrals evaluated in the text"
+  check_lift_and_sign_data_in_geometric_algebra:
+    kind: sampled
+    clauses: ["(iv) in Cl(1,3), I_4 B = J, J^2 = -1, J commutes with B; the transverse rotor fixes n and B and turns the transverse frame; the transverse reflection fixes n and B and reverses J and I_4", "(iv) reflections about two cuts compose to a translation; the collapse-type inversions compose to dilations"]
+    omits: "one Pythagorean rotor; affine identities at sample points"
+untouched_premises:
+  synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state: 'stored theorem cited for the definition of the generator microlocal condition (a smooth kernel difference) in (ii); nothing is computed from it'
+  synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state: 'stored theorem cited for the slope-jump counter-model in (v); the affine argument is in the text'

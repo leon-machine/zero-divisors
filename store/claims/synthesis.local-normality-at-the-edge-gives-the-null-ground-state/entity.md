@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
   - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet@1
-  - synthesis.imported-powers-stormer-takesaki-disjointness@2
+  - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.positive-null-energy-gives-r-premises@4
   - synthesis.imported-haag-local-normality@1
   proof: proof-main.tex

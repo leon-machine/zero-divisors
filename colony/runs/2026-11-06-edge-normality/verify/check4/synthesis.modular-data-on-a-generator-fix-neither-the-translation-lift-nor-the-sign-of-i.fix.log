@@ -1,0 +1,8 @@
+W413  synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
+      5 of 8 perturbations of check_fermi_sea_is_a_local_gauge_transform_of_the_vacuum's literals still pass: the check is weak
+I405  synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
+      synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state is declared and untouched, as expected: coverage.yaml: stored theorem cited for the definition of the generator microlocal condition (a smooth kernel difference) in (ii); nothing is computed from it
+I405  synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
+      synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state is declared and untouched, as expected: coverage.yaml: stored theorem cited for the slope-jump counter-model in (v); the affine argument is in the text
+
+synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i: 0 error(s), 3 other finding(s); check result: pass

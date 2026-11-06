@@ -1,8 +1,8 @@
 ---
 id: synthesis.imported-powers-stormer-takesaki-disjointness
 kind: claim
-version: 2
-title: 'Imported: Powers-Stormer quasi-equivalence and Takesaki disjointness'
+version: 3
+title: 'Imported: Powers-Stormer quasi-equivalence, Araki purity and Takesaki disjointness'
 status: imported
 region: synthesis
 subject: thermality
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: import of the purity criterion, clause (d)
+  version: 3
+  source: run 2026-11-06-edge-normality (maintainer pass)
 review: draft
 imported_from:
 - citation: 'R. T. Powers and E. Stormer, Free states of the canonical anticommutation relations, Commun. Math. Phys. 16 (1970), 1--33.'
@@ -24,6 +28,10 @@ imported_from:
 - citation: 'M. Takesaki, Disjointness of the KMS-states of different temperatures, Commun. Math. Phys. 17 (1970), 33--41.'
   key: Takesaki1970
   doi: 10.1007/BF01649582
+- citation: 'H. Araki, On quasifree states of CAR and Bogoliubov automorphisms, Publ. Res. Inst. Math. Sci. 6 (1970/71), 385--442.'
+  key: Araki1970
+  locator: 'the purity criterion for quasi-free states (clause (d)); the place in the paper not checked'
+  doi: 10.2977/prims/1195193913
 extraction:
   note: >-
     Imported for the result that compares the tower charge and the mirror's temperature as
@@ -33,6 +41,22 @@ extraction:
     (arXiv:2402.14794, Sec. 4.1). For Powers-Stormer the title, journal and volume were checked
     against the Project Euclid listing; the pages and the statement of clause (a) are cited from
     memory, not checked against the source.
+  maintainer_pass_2026_11_06:
+    by: maintainer-2026-11-06
+    date: '2026-11-06'
+    note: >-
+      Version 2 -> 3, routine import, so that the result on field-level geometric
+      modular conjugations on a horizon generator cites the purity criterion as a Fact rather than from memory:
+      clause (d) added (a gauge-invariant quasi-free state is pure if and only if its symbol is a projection;
+      Araki 1970/71); clauses (a) to (c) unchanged. Checked: the bibliographic data of Araki's paper (journal,
+      volume 6, issue 3, pages 385-442, DOI) against the Crossref record; the statement secondhand, in its
+      self-dual form, "a quasi-free state is pure iff it is a Fock state" (that is, iff its covariance is a basis
+      projection), stated without reference in M. Keyl, T. Matsui, D. Schlingemann and R. F. Werner,
+      arXiv:math-ph/0604071, Sec. 6.1, and the direction "a basis projection gives a pure (Fock) state",
+      attributed to Araki, in J. Boeckenhauer, arXiv:hep-th/9407079, Sec. 3.1. Cited from memory, not checked
+      against the source: where in Araki's paper the criterion stands, and the passage from the self-dual form to
+      the gauge-invariant form of clause (d) (the self-dual covariance of omega_A is a basis projection exactly
+      when A is a projection).
   maintainer_pass_2026_11_01:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -58,14 +82,15 @@ extraction:
 \item[(a)] (Powers-Stormer.) For operators $0 \le A, B \le 1$ on a Hilbert space $\mathcal{K}$, the gauge-invariant quasi-free states $\omega_{A}$, $\omega_{B}$ of the CAR algebra over $\mathcal{K}$ are factor states, and they are quasi-equivalent if and only if $A^{1/2} - B^{1/2}$ and $(1 - A)^{1/2} - (1 - B)^{1/2}$ are Hilbert-Schmidt; being factor states, they are disjoint whenever they are not quasi-equivalent.
 \item[(b)] (Takesaki.) Let $\alpha$ be a one-parameter group of $*$-automorphisms of a C*-algebra and let $\omega$, $\omega'$ be $(\alpha, \beta)$- and $(\alpha, \beta')$-KMS states with $\beta \neq \beta'$. If the von Neumann algebra generated in the GNS representation of one of them is of type III, then $\omega$ and $\omega'$ are disjoint.
 \item[(c)] (The Powers-Stormer inequality.) For bounded positive operators $A$, $B$ on a Hilbert space, $\|A^{1/2} - B^{1/2}\|_{2}^{2} \le \|A - B\|_{1}$, with $\|\cdot\|_{2}$ the Hilbert-Schmidt norm and $\|\cdot\|_{1}$ the trace norm, either side possibly infinite; in particular, if $A - B$ is trace class then $A^{1/2} - B^{1/2}$ is Hilbert-Schmidt. In the form for a von Neumann algebra in standard form, for normal positive functionals $\varphi$, $\psi$ with representing vectors $\xi_{\varphi}$, $\xi_{\psi}$ in the natural cone, $\|\xi_{\varphi} - \xi_{\psi}\|^{2} \le \|\varphi - \psi\| \le \|\xi_{\varphi} - \xi_{\psi}\|\,\|\xi_{\varphi} + \xi_{\psi}\|$.
+\item[(d)] (Purity; Araki.) For an operator $0 \le A \le 1$ on $\mathcal{K}$, the gauge-invariant quasi-free state $\omega_{A}$ of the CAR algebra over $\mathcal{K}$ is pure if and only if $A$ is a projection; it is then a Fock state.
 \end{enumerate}
-\emph{Provenance:} \cite{PowersStormer1970, Takesaki1970}.
+\emph{Provenance:} \cite{PowersStormer1970, Takesaki1970}; clause (d) \cite{Araki1970}.
 
 ## technical
-Two results on when thermal states of an infinite system belong to different sectors. Powers and Størmer showed that the gauge-invariant quasi-free states of the fermion (CAR) algebra are factor states, and that two of them, with one-particle density operators $A$ and $B$, are quasi-equivalent exactly when $A^{1/2} - B^{1/2}$ and $(1 - A)^{1/2} - (1 - B)^{1/2}$ are Hilbert-Schmidt; otherwise they are disjoint. Takesaki showed that KMS states of the same dynamics at different temperatures are disjoint when the von Neumann algebra induced by one of them is of type III. The Powers-Størmer inequality bounds the Hilbert-Schmidt distance of the square roots of two positive operators by the trace distance of the operators, so that states close in norm have close square roots; for one-particle operators between $0$ and $1$ whose difference is trace class it gives the Hilbert-Schmidt condition on the square roots in (a).
+Results on when thermal states of an infinite system belong to different sectors. Powers and Størmer showed that the gauge-invariant quasi-free states of the fermion (CAR) algebra are factor states, and that two of them, with one-particle density operators $A$ and $B$, are quasi-equivalent exactly when $A^{1/2} - B^{1/2}$ and $(1 - A)^{1/2} - (1 - B)^{1/2}$ are Hilbert-Schmidt; otherwise they are disjoint. Araki's criterion says that such a state is pure exactly when its one-particle density operator is a projection. Takesaki showed that KMS states of the same dynamics at different temperatures are disjoint when the von Neumann algebra induced by one of them is of type III. The Powers-Størmer inequality bounds the Hilbert-Schmidt distance of the square roots of two positive operators by the trace distance of the operators, so that states close in norm have close square roots; for one-particle operators between $0$ and $1$ whose difference is trace class it gives the Hilbert-Schmidt condition on the square roots in (a).
 
 ## lay
-For a system with infinitely many parts, two states can be so different that no measurement on finitely many parts relates them: they live in separate sectors. These two classical theorems say when that happens for fermions in thermal-like states, through a condition on how much their occupations differ in total (with an inequality that turns a small total difference into a small difference of square roots), and that equilibrium states at different temperatures are separated in this way in the typical infinite case. They are taken from the literature.
+For a system with infinitely many parts, two states can be so different that no measurement on finitely many parts relates them: they live in separate sectors. A further classical result says when such a state is pure, as sharp as quantum mechanics allows: exactly when every one-particle level is either fully occupied or empty. These two classical theorems say when that happens for fermions in thermal-like states, through a condition on how much their occupations differ in total (with an inequality that turns a small total difference into a small difference of square roots), and that equilibrium states at different temperatures are separated in this way in the typical infinite case. They are taken from the literature.
 
 ## one-liner
-Gauge-invariant quasi-free CAR states $\omega_{A}$, $\omega_{B}$ are factor states, quasi-equivalent iff $A^{1/2} - B^{1/2}$ and $(1 - A)^{1/2} - (1 - B)^{1/2}$ are Hilbert-Schmidt and otherwise disjoint, and $\|A^{1/2} - B^{1/2}\|_{2}^{2} \le \|A - B\|_{1}$ for bounded positive $A$, $B$ (Powers-Størmer); KMS states at different temperatures are disjoint when one induces a type III algebra (Takesaki).
+Gauge-invariant quasi-free CAR states $\omega_{A}$, $\omega_{B}$ are factor states, quasi-equivalent iff $A^{1/2} - B^{1/2}$ and $(1 - A)^{1/2} - (1 - B)^{1/2}$ are Hilbert-Schmidt and otherwise disjoint, and pure iff $A$ is a projection (Araki); $\|A^{1/2} - B^{1/2}\|_{2}^{2} \le \|A - B\|_{1}$ for bounded positive $A$, $B$ (Powers-Størmer); KMS states at different temperatures are disjoint when one induces a type III algebra (Takesaki).

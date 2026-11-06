@@ -670,7 +670,7 @@
   kind: research
   difficulty: frontier
   status: reformulated
-  source: "The null ground-state premise (N+) and the conformal-energy result, 23 October; the twistor attachment's conformal energy and the collapse results, 26 October; the Schwarzschild conformal-symmetry and local-normality results and Leon's decision, 31 October"
+  source: "The null ground-state premise (N+) and the conformal-energy result, 23 October; the twistor attachment's conformal energy and the collapse results, 26 October; the Schwarzschild conformal-symmetry and local-normality results and Leon's decision, 31 October; the field-level and net-level modular-conjugation results and Leon's decisions, 6 November"
   statement: >-
     Item (i) of this problem, that the series' modes carry a unitary
     representation of $\mathrm{Spin}^{+}(2,4)$ with nonnegative conformal
@@ -687,6 +687,12 @@
     of the generators. For holes formed by collapse the ingoing-sheet
     condition replaces it and no positivity on the horizon's own generators
     is used.
+    (6 November) Item (ii) can also be posed as field-level geometric
+    modular action on the generators, which gives the positivity with no
+    stationarity or conformal symmetry within gauge-invariant quasi-free
+    states; that condition is posed, not derived, on the eternal hole, and
+    no condition on the net of local algebras alone can give the
+    positivity.
   why: >-
     With (ii) the positivity at the eternal hole's horizon would no longer be
     part of (N$_{+}$); it is the last case in which the premise still assumes
@@ -746,6 +752,24 @@
     chiral field: a physical state with negative averaged null energy on the
     horizon, so positivity on the eternal horizon is a property of the
     Hartle-Hawking-type state, not of every physical state.
+    (Marked, 6 November.) A further state condition gives the positivity
+    with no stationarity and no conformal symmetry: within gauge-invariant
+    quasi-free states on one generator, field-level geometric modular
+    action of the half-line modular conjugations at a set of cuts whose
+    differences generate a dense subgroup, with the sign $\eta = -1$,
+    gives the null vacuum, positivity included
+    (\claimref{synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state}).
+    It needs only the generator algebra, so it can be posed on the eternal
+    hole's generators; there it is posed, not derived, and the orientation
+    of the positivity enters as the assumed sign $\eta = -1$ (the
+    orientation of the imaginary unit relative to time, which the series
+    does not fix). Conditions on the net of local algebras of the
+    generator cannot give the positivity: the translation-invariant Fermi
+    seas satisfy all of them and have negative-energy excitations
+    (\claimref{synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i}).
+    Item (ii) stays open, restated as field-level geometric modular action
+    on the eternal hole's generators; positivity is not shown to be a
+    permanent part of the premise.
   attack:
     - >-
       Derive local normality at the bifurcation surface of the eternal hole
@@ -1787,7 +1811,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T05, Prop 7.25 and Rem 7.33(a); T07, successor problem (1) and Rem 3.9; T17, open direction 5; BUILD_REPORT, the de Sitter temperature (21 October); the null ground-state premise, 23 October; the edge-scaling and attachment results, 26 October; the local-normality result and Leon's decision, 31 October; the closed-generator and generator Hadamard results and Leon's decisions, 1 November; the flat-null-plane restriction result and the Hadamard scaling-limit premise, 1 November; the Hadamard deposit premise and the deposit-state results, 1 November; the Hadamard scaling results and Leon's decisions of 2 November ((HS) restated as a statement about the field); the Hadamard scaling-bound results and Leon's decisions of 2 November ((HS) retired to a theorem)"
+  source: "T05, Prop 7.25 and Rem 7.33(a); T07, successor problem (1) and Rem 3.9; T17, open direction 5; BUILD_REPORT, the de Sitter temperature (21 October); the null ground-state premise, 23 October; the edge-scaling and attachment results, 26 October; the local-normality result and Leon's decision, 31 October; the closed-generator and generator Hadamard results and Leon's decisions, 1 November; the flat-null-plane restriction result and the Hadamard scaling-limit premise, 1 November; the Hadamard deposit premise and the deposit-state results, 1 November; the Hadamard scaling results and Leon's decisions of 2 November ((HS) restated as a statement about the field); the Hadamard scaling-bound results and Leon's decisions of 2 November ((HS) retired to a theorem); the field-level and net-level modular-conjugation results and Leon's decisions, 6 November"
   statement: >-
     The continuum restatements of (R) for the eternal hole and of
     (R$_{\Lambda}$), with the joint KMS part of (Q), follow from one premise
@@ -1930,7 +1954,60 @@
     (\claimref{synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet}).
     The transport principle makes no statement at the bifurcation surface
     (\claimref{singularity.why-calibration-cannot-be-internal}).
+    (Marked, 6 November.) Field-level geometric modular action: within
+    gauge-invariant quasi-free states on one generator, the condition that
+    the modular conjugation of the algebra beyond each cut act on the
+    fields as the twisted charge-conjugating reflection about the cut,
+    with a sign $\eta$, at a set of cuts whose differences generate a
+    dense subgroup of $\R$, gives (N$_{+}$) for $\eta = -1$ and its time
+    reverse for $\eta = +1$, with no stationarity, temperature or modular
+    group assumed: twisted Haag duality at one cut forces purity, the
+    reflections give stationarity and charge symmetry, and the
+    natural-cone positivity is a Loewner condition whose boundary values
+    are the occupation numbers; two commensurable cuts, or the positivity
+    without purity, do not suffice, and the converse (the null vacuum
+    satisfies the condition) is imported
+    (\claimref{synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state}).
+    It is the first stationarity-free form that reaches the ground-state
+    clause, and it is recorded on (N$_{+}$) as an equivalent form within
+    that class, as the KMS form
+    (\claimref{synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state})
+    was, not as a premise: its principle is not one the series adopts, and
+    against the KMS form it trades the modular group for the class
+    assumption. Net-level routes are closed: every local gauge transform
+    of the null vacuum, among them the translation-invariant Fermi seas
+    $\chi(P < \kappa)$ (pure, generator-Hadamard, locally normal, not
+    ground states for the field translations), has the vacuum's local
+    algebras and modular objects, so no condition on the net and the
+    vector (geometric modular action in the Buchholz-Summers form, modular
+    stability, twisted duality, a positive implementer of the net
+    translations) implies the ground-state clause; complex conjugation of
+    the Majorana algebra gives the filled positive-energy sea, with the
+    same net-level data and the conjugate field-level phase
+    (\claimref{synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i}).
+    Any derivation must supply two data: the lift of the affine
+    translations to the fields, which (N$_{+}$) now names as parallel
+    transport along the generator, excluding the Fermi seas; and the
+    orientation of the imaginary unit relative to time (the null vacuum
+    versus the filled sea), the sign $\eta$ of the field-level form, which
+    the series does not fix and (N$_{+}$) assumes. For scalar $\kappa$ the
+    Fermi seas are ground states on the gauge-invariant observables, so
+    the clause must stay posed on the field algebra.
   attack:
+    - >-
+      The remaining target (6 November): derive field-level geometric
+      modular action of the half-line modular conjugations, or the
+      ground-state clause directly, from a principle of the series,
+      together with the orientation datum (the sign $\eta$, the
+      orientation of $i$ relative to time), which no net-level condition
+      supplies; the net-level modular routes (geometric modular action
+      in the Buchholz-Summers form, modular stability, twisted duality,
+      positive net translations) are closed
+      (\claimref{synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i}).
+      The series' wedge-reflection result, where modular P$_{1}$CT
+      symmetry is a premise of the same kind
+      (\claimref{synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics}),
+      is a place to look for the field-level form.
     - >-
       Find a principle stated in the series' algebra that gives local
       normality at the bifurcation surface: for example the frozen point or
@@ -1961,15 +2038,25 @@
     would record (N$_{+}$) as a permanent import. The stationarity-free folium
     form now stated does not meet this: its principle is imported, and it
     does not give the ground-state clause.
+    (6 November) The field-level modular form
+    (\claimref{synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state})
+    does not meet it either: it is an equivalent form of (N$_{+}$) within
+    gauge-invariant quasi-free states, its principle is not one the series
+    adopts, its converse is imported and its sign $\eta = -1$ is assumed.
+    What is asked now is a derivation of field-level geometric modular
+    action, or of the ground-state clause, from a principle of the series,
+    with the orientation datum; a no-go would have to reach beyond
+    net-level principles, which are already excluded
+    (\claimref{synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i}).
   entities:
     - synthesis.n-plus-null-ground-state
     - synthesis.local-normality-at-the-edge-gives-the-null-ground-state
     - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
     - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
     - synthesis.imported-haag-local-normality
-    - synthesis.imported-kay-wald-uniqueness-and-no-go
     - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
-    - synthesis.attachment-conformal-energy-is-generated-by-z
+    - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state
+    - synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
   added: '2026-10-22'
 
 - id: op.helicity-per-boundary-mode

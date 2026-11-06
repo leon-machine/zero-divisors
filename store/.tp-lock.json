@@ -17025,6 +17025,31 @@
   "status": "setting",
   "version": 1
  },
+ "note.one-relation.two-presentations-differ-over-the-integers": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "6740c67bf9ffab1f",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "a335002c7195cdb8",
+   "statement": "e8789a2ea3f29d9d"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.one-relation.two-residues-named-so-synthesis-can": {
   "assumes": [],
   "credit": [
@@ -44437,6 +44462,31 @@
   "status": "proved",
   "version": 6
  },
+ "synthesis.blade-square-signs-f2-quadratic-form": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "ece880ffc71f0816",
+  "ledger": null,
+  "parts": {
+   "checks": "222290d69e11bc36",
+   "proofs": "92734f38479fe2d8",
+   "rest": "d3b65c89b700e77b",
+   "statement": "37d29c86d513ef60"
+  },
+  "status": "proved",
+  "version": 2
+ },
  "synthesis.boost-evolution-on-generators-is-one-unitary-group": {
   "assumes": [],
   "credit": [
@@ -46662,6 +46712,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "10c6eed25e9c3d72",
+  "ledger": null,
+  "parts": {
+   "checks": "3bed1f6c3e77491b",
+   "proofs": "b3a0f806f7d8e1ef",
+   "rest": "79fedc53279b9903",
+   "statement": "4724aac6759a0046"
+  },
+  "status": "proved",
+  "version": 2
+ },
  "synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square": {
   "assumes": [],
   "credit": [
@@ -47235,6 +47310,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "a44d5e5103f5b4a3",
    "statement": "f2eb751faa5635ba"
+  },
+  "status": "imported",
+  "version": 1
+ },
+ "synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "919a3a5cf82a7aa6",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "ebb5809b325029b1",
+   "statement": "bf4f3b82c08d21fa"
   },
   "status": "imported",
   "version": 1
@@ -48464,6 +48564,31 @@
   "status": "imported",
   "version": 1
  },
+ "synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "2eb9702d3f436ccf",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "02acad476be4b201",
+   "statement": "d047ae6c81be3b9e"
+  },
+  "status": "imported",
+  "version": 1
+ },
  "synthesis.imported-long-lived-charged-particle-stau-limits": {
   "assumes": [],
   "credit": [
@@ -48713,6 +48838,31 @@
   },
   "status": "imported",
   "version": 3
+ },
+ "synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "12bd589565173bb0",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "fd39cee4c78397a1",
+   "statement": "fcae26db7674bcec"
+  },
+  "status": "imported",
+  "version": 1
  },
  "synthesis.imported-monopoles-second-homotopy-and-pati-salam-charge": {
   "assumes": [],
@@ -49101,18 +49251,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "import of the purity criterion, clause (d)",
+    3
    ]
   ],
-  "hash": "39598eeeede2a0c3",
+  "hash": "31e729a921d7ea8d",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
-   "rest": "436ec529c17b6dd4",
-   "statement": "e6f48f2c981fdd2e"
+   "rest": "2038e797fb6e537b",
+   "statement": "8d886b2f4b0e72a2"
   },
   "status": "imported",
-  "version": 2
+  "version": 3
  },
  "synthesis.imported-preskill-monopole-annihilation-floor": {
   "assumes": [],
@@ -49213,6 +49368,31 @@
   },
   "status": "imported",
   "version": 2
+ },
+ "synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a3443f3d7923ee8c",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "f4cb970588f68d74",
+   "statement": "c25cfed8b1f1ae42"
+  },
+  "status": "imported",
+  "version": 1
  },
  "synthesis.imported-renormalised-stress-tensor-of-hadamard-dirac-states": {
   "assumes": [],
@@ -51153,6 +51333,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f39f9c379395f938",
+  "ledger": null,
+  "parts": {
+   "checks": "457da19e26faf3c7",
+   "proofs": "5c2c01128cc05ce6",
+   "rest": "eae88243719e4ed2",
+   "statement": "a10e14a2724d12f1"
+  },
+  "status": "proved",
+  "version": 2
+ },
  "synthesis.modular-period-on-values-is-the-dual-plane-turn": {
   "assumes": [],
   "credit": [
@@ -51190,18 +51395,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Leon Butler",
+    "decisions on the lift, the field-level modular form and the orientation of i",
+    10
+   ],
+   [
+    "Claude Opus 5.5",
+    "drafting of the maintainer pass",
+    10
    ]
   ],
-  "hash": "f4b3f6d774d4276c",
+  "hash": "1882d98ba06d2407",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "c0df8cdcc9eedc62",
-   "statement": "1ac442b8fc7ed34b"
+   "statement": "8a7096a7d47b8b75"
   },
   "status": "postulate",
-  "version": 9
+  "version": 10
  },
  "synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5": {
   "assumes": [],
@@ -51227,6 +51442,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.nilpotent-steps-derivative-exponential-and-boost": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "b3b0fa20300c2065",
+  "ledger": null,
+  "parts": {
+   "checks": "5ff5b200e7f6d17e",
+   "proofs": "806518e439f3024f",
+   "rest": "d3b65c89b700e77b",
+   "statement": "d03d5fc329829cf7"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.no-120-excludes-hierarchical-second-stage": {
   "assumes": [],
@@ -51965,7 +52205,7 @@
  },
  "synthesis.positive-null-energy-gives-r-premises": {
   "assumes": [
-   "synthesis.n-plus-null-ground-state@9"
+   "synthesis.n-plus-null-ground-state@10"
   ],
   "credit": [
    [

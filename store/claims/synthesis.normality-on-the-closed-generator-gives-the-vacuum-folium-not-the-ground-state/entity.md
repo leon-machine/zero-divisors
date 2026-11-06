@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@2
-  - synthesis.imported-powers-stormer-takesaki-disjointness@2
+  - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
   - synthesis.positive-null-energy-gives-r-premises@4
   - synthesis.attachment-conformal-energy-is-generated-by-z@1

@@ -1,0 +1,20 @@
+functions:
+  check_polar_part_gives_the_modular_conjugation:
+    kind: sampled
+    clauses: ["(vi) for Slater states on 1 + 1 and 2 + 2 modes, J a(f) J = Gamma_Omega a*(W f), Gamma_Omega = (-1)^r Gamma fixing Omega, W the polar part of the cross-cut block: the candidate is an antiunitary involution fixing Omega and J_c S is positive definite, so it is the modular conjugation by uniqueness of the polar decomposition", "(iii) finite analogue of the sign: the swapped 1 + 1 state has the conjugate polar phase"]
+    omits: "three finite examples with Gaussian-rational data; the general finite case and the continuum form are argued in the text"
+  check_fermi_sea_is_a_local_gauge_transform_of_the_vacuum:
+    kind: sampled
+    clauses: ["(ii) the local gauge transform by e^{iku} carries the symbol chi(P < 0) to chi(P < k)", "(ii) the elementwise reflection phase e^{2ik(a - u)} is constant in u only for k = 0", "(ii), (iv) the lift alpha_m^{-1} tau_t alpha_m is tau_t followed by e^{-itk}, one-particle generator p - k, with ground-state symbol chi(P < k); the e^{+itk} lift has a different ground state", "(ii) charge-zero excitations of chi(P < k) have positive energy, single holes at 0 < p < k negative energy", "(ii) charge density k/(2 pi) and energy density k^2/(4 pi); with eigenvalues +-k the charges cancel"]
+    omits: "sampled momenta, cuts and positions; the net-level identity (i) and the ground-state property on the gauge-invariant subalgebra are structural and proved in the text"
+  check_hankel_phases_of_the_vacuum_and_the_filled_sea:
+    kind: sampled
+    clauses: ["(iii) the reflected cross-cut kernels are -i/(2 pi t) for the vacuum and +i/(2 pi t) for the filled sea, positive after the phases c = -i and c-bar = +i, and the wrong phase gives a negative kernel", "(iii) the filled sea's phase is c-bar, from inverting the vacuum relation and conjugating by the grading"]
+    omits: "three values of t; the Abel-regularised Fourier integrals and the continuum polar part are in the text (argued); the vacuum's phase is proved in the field-level result filed alongside"
+  check_lift_and_sign_data_in_geometric_algebra:
+    kind: sampled
+    clauses: ["(iv) in Cl(1,3) (identities; their reading is argued), I_4 B = J, J^2 = -1, J commutes with B; the transverse rotor fixes n and B and turns the transverse frame; the transverse reflection fixes n and B and reverses J and I_4", "(iv) reflections about two cuts compose to a translation; the collapse-type inversions compose to dilations"]
+    omits: "one Pythagorean rotor; affine identities at sample points"
+untouched_premises:
+  synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state: 'stored theorem cited for the definition of the generator microlocal condition (a smooth kernel difference) in (ii); nothing is computed from it'
+  synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state: 'stored theorem cited for the slope-jump counter-model in (v); the affine argument is in the text'

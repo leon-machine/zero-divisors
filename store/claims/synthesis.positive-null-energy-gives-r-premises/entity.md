@@ -34,7 +34,7 @@ derivations:
   - angle.imported-theorems-deliver-their-hypotheses@1
   - mass.chart-form-spin-isomorphism@5
   assumes:
-  - synthesis.n-plus-null-ground-state@9
+  - synthesis.n-plus-null-ground-state@10
   proof: proof-main.tex
 checked_by:
 - kind: check
