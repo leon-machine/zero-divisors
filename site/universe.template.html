@@ -39,6 +39,8 @@
   color-scheme: dark }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+/* links take the theme's accent; without this some browsers keep their default dark blue on the dark theme */
+a { color: var(--accent); }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); display: flex; flex-direction: column; overflow: hidden; }
 header { display: flex; align-items: center; flex-wrap: nowrap; gap: 6px 22px; height: 52px; box-sizing: border-box; flex: none; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); background: var(--panel); border-bottom: 1px solid var(--rule); }
 h1 { font: 600 22px/1 var(--serif); margin: 0; letter-spacing: 0.01em; white-space: nowrap; flex: none; }
@@ -358,6 +360,7 @@ footer .about { margin-right: auto; color: var(--muted); text-decoration: none; 
 footer .about:hover, footer .about[aria-current="page"] { color: var(--ink); text-decoration: underline; }
 .aboutpage p { font-size: 16px; max-width: 680px; }
 .aboutpage a { color: var(--accent); }
+.aboutpage h3 { font: 600 20px/1.25 var(--serif); margin: 30px 0 8px; }
 footer .bmc { display: inline-flex; align-items: center; gap: 7px; padding: 4px 12px 4px 9px; border-radius: 8px; background: #FFDD00; color: #000; font-weight: 600; text-decoration: none; white-space: nowrap; }
 footer .bmc:hover { filter: brightness(0.95); }
 footer .bmc:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -464,7 +467,12 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   <section class="view page" id="releasesview"><div class="inner" id="releases"></div></section>
   <section class="view page" id="aboutview"><div class="inner aboutpage">
     <div class="eyebrow">About</div><h2>Leon Butler</h2>
-    <p>I have a BSc (Hons) in Mathematics from the University of Manchester (2001) and an A&#8209;level in Physics (amongst others). I am from Hull (UK) and currently live just outside of London in the shires. When I am not programming insurance pricing models in Python (day job), or beavering away on this project, I also like to <a href="https://www.leonbutlermusic.com" target="_blank" rel="noopener">compose music</a>.</p>
+    <p>Leon has a BSc (Hons) in Mathematics from the University of Manchester (2001) and an A&#8209;level in Physics (amongst others). He is from Hull (UK) and currently lives just outside of London in the shires. When he is not programming insurance pricing models in Python (his day job), or beavering away on this project, he also likes to <a href="https://www.leonbutlermusic.com" target="_blank" rel="noopener">compose music</a>.</p>
+    <h3>How the work came to be</h3>
+    <p>The founding idea of the series is Leon&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. Leon is not a professional physicist, and it is AI that has made it possible for him to test the idea: the mathematics was developed in collaboration with Claude, Anthropic&rsquo;s AI system. An extended session with Claude Fable 5, running over several weeks, produced the first version of a monograph, <i>Zero Divisors as Signposts</i>.</p>
+    <p>The monograph went through many iterations as exploratory work was done and new chapters and results were added, until it became too unwieldy to verify as a single document. It was then split into a series of papers, the Transport Papers (T0 to T17), with two guides. At that point a much more rigorous way of working was set up. Each paper carries a script that checks its results in exact arithmetic, and results proved in a paper are kept apart from those taken from the literature. Within this framework the AI was largely responsible for the proofs and the drafting. Leon directed the work, spot-checked it rather than re-deriving it, and intervened when the reasoning went wrong. The models were the latest available in the summer of 2026, and a good deal more capable at sustained mathematics than the systems of two years earlier. The papers are deposited on Zenodo and have not yet been through journal peer review.</p>
+    <h3>The graph</h3>
+    <p>A series of papers turned out to have the monograph&rsquo;s problem on a larger scale. A result stated in one paper is used in several others, and a correction to it has to be found and carried through each of them by hand. The Physics Graph is the answer to that. Each result is held once, with its statement, its proof, the results it rests on and the check that verifies it. The papers are generated from the graph, so a correction reaches every document that uses the result. The graph was also designed with the AI, in the form it judged easiest for itself to navigate: separate results linked to what they rest on, which an AI reads through a set of tools rather than by searching long documents. That same design opens it to others. Anyone working with an AI of their own can propose a new result or a correction, which is checked before it is accepted and is credited to them.</p>
   </div></section>
   <section class="view page" id="contributeview"><div class="inner" id="contribute"></div></section>
 </main>
@@ -2688,7 +2696,7 @@ function renderContribute() {
   const code = s => `<pre><code>${esc(s)}</code></pre>`;
   const ex = DATA.contrib_example || {};
   el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers, researchers and their AI</div><h2>Explore with AI</h2>
-    <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
+    <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. It is also a good way into the ideas themselves: ask the AI to explain a result back to you and it can pitch the explanation to your level, from beginner to expert. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
     <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
     <div class="ways">
       <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>

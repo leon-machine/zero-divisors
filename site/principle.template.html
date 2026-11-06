@@ -98,7 +98,7 @@ button{font:inherit;color:inherit}
         </div>
 <div class="after">
           <p>Each numbered reference under a subtitle opens that result in the Physics Graph, with its statement, proof and machine check. The papers themselves are on Zenodo, in the <a href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Transport Papers community</a>; the guide G00 tells the same story with the mathematics.</p>
-          <p>The founding idea is Leon Butler&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a larger algebra. The mathematical development was carried out in extended collaboration with Claude (Anthropic), an AI system. The papers are independent work and have not been through journal peer review.</p>
+          <p>The founding idea is Leon Butler&rsquo;s: that division by zero in a Clifford algebra should be read not as a prohibition but as a transport into a higher-dimensional algebra, and that the transported division need not be accompanied by an inverse operation. The mathematical development was carried out in extended collaboration with Claude (Anthropic), an AI system. The papers are independent work and have not been through journal peer review.</p>
           <p>Portraits from Wikimedia Commons: Bernhard Riemann, 1863; Albert Einstein, about 1904 (ETH-Bibliothek Z&uuml;rich, Bildarchiv) and 1921 (Ferdinand Schmutzer); Hendrik Antoon Lorentz, at the blackboard; all public domain. Roger Penrose, 2005, by Festival della Scienza, CC BY-SA 2.0. William Kingdon Clifford, the frontispiece of his <i>Lectures and Essays</i>, public domain. David Hestenes, March 2019, at the SciAPP conference, Arizona State University.</p>
           <p>Share icons from Font Awesome Free (fontawesome.com), CC BY 4.0; the brand marks belong to their owners.</p>
         </div>
@@ -140,16 +140,16 @@ const CAPS = {
   pairs: [[0.03, 1.01, 'On the circle, taking the reciprocal is a reflection, top for bottom. Follow x = 2 up to the circle, reflect it, and project back down: you land on 1/2. In the same way −3/2 goes to −2/3.', []]],
   flip: [[0.03, 0.5, 'Zero sits at the very bottom, so the reflection sends it straight to the top.', []],
          [0.5, 1.01, 'So 1/0 = ∞. Nothing was broken: the circle simply has one more point than the line.', []]],
-  clifford: [[0.03, 1.01, 'In 1878 William Kingdon Clifford joined Grassmann’s algebra of directions with Hamilton’s quaternions: directions multiply, each squaring to +1 or −1. From the 1960s David Hestenes rebuilt it as geometric algebra, and has argued that it is a unified language for the whole of physics, since so much of the mathematics physics uses drops out of it.', []]],
+  clifford: [[0.03, 1.01, 'The language of the series is geometric algebra. It began in 1878, when William Kingdon Clifford joined Grassmann’s algebra of directions with Hamilton’s quaternions: directions multiply, each squaring to +1 or −1. From the 1960s David Hestenes has argued that it is a unified language for the whole of physics, since so much of the mathematics physics uses drops out of it.', []]],
   approach: [[0.03, 0.5, 'Step back and compare the two orders of work. Traditional mathematics starts with a space, defines its operations, finds where they fail, and patches each failure: a point removed, a point added by hand, a quantity cut off. The singularity is a defect of a space already given.', []],
              [0.5, 1.01, 'The transport principle runs the other way. It starts from the failures, the directions along which inversion breaks, and lets their shape dictate the completion: the smallest space in which inversion works everywhere, unique up to a change of axes. The geometry comes out of the completion, twistors and fermionic switches included. The singularity is not a defect but a signpost.', ['T1 Thm 4.10, 4.13', 'T3 Thm 4.3', 'T9 Thm 4.2']]],
   everyday: [[0.03, 1.01, 'Back to the spreadsheet. How much the point at infinity gives depends on the algebra it is added to. For our everyday numbers it adds little: expressions such as ∞ − ∞ and 0 × ∞ still have no answer, so the spreadsheet is right to keep its error. In the algebra of space and time the same move gives far more: a larger space with physics in it.', []]],
   sphere: [[0.03, 0.3, 'In the 1850s Bernhard Riemann was studying functions of the complex numbers, z = x + iy, which fill a plane. Functions such as 1/z run off to infinity at certain points, and Riemann wanted to treat infinity as one more point, so that a function could be followed through it like anywhere else. The picture that made this concrete, set out in print by Carl Neumann in 1865 from Riemann’s ideas, uses the ancient projection: the plane becomes a sphere, now called the Riemann sphere.', []],
          [0.3, 0.6, 'Projecting from the top again gives every point of the plane its own point on the sphere, and every direction out to infinity ends at the same point, the top.', []],
          [0.6, 1.01, 'Taking one over a number is again a reflection, top for bottom. The equator, where the numbers of size 1 lie, stays where it is, and zero goes straight to infinity. Strictly, this is one over z with a mirror flip, z/|z|², the form the papers use; plain 1/z turns the sphere half way round instead.', ['T1 §4.8.1']]],
-  recipe: [[0.03, 0.307, 'The transport principle turns this into a recipe for any space where division fails along light-like directions: add one direction of time and one of space, and lift each point x to a light-like vector, X(x) = n₀ + x + ½ Q(x) n∞, with Q(x) the square of x. That is stereographic projection in general form, and in the larger space the reciprocal is a reflection defined everywhere.', ['T1 Thm 4.10, 4.13']],
+  recipe: [[0.03, 0.307, 'The transport principle turns this into a recipe for any space where division fails along light-like directions: add one direction of time and one of space, and lift each point to a light-like vector in the larger space. That is stereographic projection in general form, and in the larger space the reciprocal is a reflection defined everywhere.', ['T1 Thm 4.10, 4.13']],
          [0.307, 0.615, 'Back to the simplest case, the line: counted as time + space it is 0 + 1, and it becomes 1 + 2. Light-like directions need one of each kind, so even the plain numbers need a direction of time to be completed, in keeping with Garret Sobczyk’s view that numbers are geometric algebra. In 1 + 2 they form a cone; at one moment, a circle, touching the line at 0.', ['T1 Thm 4.13']],
-         [0.615, 1.01, 'Look down the new time direction and nothing has to move: the circle, 0 at the bottom, infinity at the top, and the line touching it at 0. Lifting each x to X(x) is exactly the stereographic projection from before. The radius is forced too: 1/1 = 1, so 1 and −1 stay put on the reflection’s middle line, and with the line touching at 0 the radius is one half.', ['T1 §4.8.1']]],
+         [0.615, 1.01, 'Look down the new time direction and nothing has to move: the circle, 0 at the bottom, infinity at the top, and the line touching it at 0. Lifting each point that way is exactly the stereographic projection from before. The radius is forced too: 1/1 = 1, so 1 and −1 stay put on the reflection’s middle line, and with the line touching at 0 the radius is one half.', ['T1 §4.8.1']]],
   spacetime: [[0.03, 0.34, 'Now spacetime. It measures length in its own way, and in it light is special: a light-like, or null, vector has length zero.', []],
          [0.34, 0.66, 'So dividing by a light-like vector is dividing by zero, along a whole cone of directions, and one extra point cannot repair it. The drawing shows two of the three directions of space: for spacetime the cone is a picture, with one direction left out.', []],
          [0.66, 1.01, 'Inside a non-rotating black hole’s horizon both edges of the light cone tip inward, and as the centre is approached they close onto a single direction. In that limit the gravitational field degenerates and stops measuring that direction at all: a division by zero of the same family, which no change of gauge removes.', ['T5 Prop 2.5, 2.6, 2.7']]],
@@ -276,7 +276,7 @@ function text(t, x, y, col, size, align = 'center', font = SERIF, style = ''){ o
 function arrow(x1, y1, x2, y2, col, w = 2, head = 10){ ox.strokeStyle = col; ox.fillStyle = col; ox.lineWidth = w; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke();
   const a = Math.atan2(y2 - y1, x2 - x1); ox.beginPath(); ox.moveTo(x2, y2); ox.lineTo(x2 - head * Math.cos(a - 0.4), y2 - head * Math.sin(a - 0.4)); ox.lineTo(x2 - head * Math.cos(a + 0.4), y2 - head * Math.sin(a + 0.4)); ox.closePath(); ox.fill(); }
 function dot(x, y, r, col){ ox.fillStyle = col; ox.beginPath(); ox.arc(x, y, r, 0, 2 * Math.PI); ox.fill(); }
-let NARROW = false; const narrow = () => NARROW;
+let NARROW = false, ZF = 1; const narrow = () => NARROW;
 const fmt = v => Math.abs(v) >= 100 ? v.toFixed(0) : Math.abs(v) >= 10 ? v.toFixed(1) : v.toFixed(2);
 
 // the number line: the frame shared by the line, circle and flip scenes; zoom lets the circle grow
@@ -392,7 +392,7 @@ function drawFlip(s){
     if (g > 0) text('one over', cx + u * 0.62 + 12, cyc, C.gold, 15, 'left', SERIF, 'italic');
     if (g >= 1) { ox.fillStyle = C.gold; ox.fillRect(nx - 7, ny - 7, 14, 14); } }
   const fa = sm((s - 0.68) / 0.08);
-  if (fa > 0) { ox.globalAlpha = a * fa; oneOverZero(cx, Math.max(28, ny - (narrow() ? 92 : 118)), narrow() ? 26 : 36, C.gold);
+  if (fa > 0) { ox.globalAlpha = a * fa; oneOverZero(cx, Math.max(14, ny - (narrow() ? 74 : 86)), narrow() ? 18 : 22, C.gold);   // under the title and smaller than it, clear of the axis label
     const [p1x, p1y] = P(onCircle(1)), [m1x, m1y] = P(onCircle(-1)); dot(p1x, p1y, 4, C.green); dot(m1x, m1y, 4, C.green);
     text('1', p1x + 12, p1y, C.green, 15, 'left', SERIF); text('−1', m1x - 12, m1y, C.green, 15, 'right', SERIF); }
   ox.globalAlpha = 1;
@@ -615,7 +615,7 @@ function drawMore(s){
     { const k = sm((s - 0.31) / 0.02); if (k > 0) { ox.globalAlpha = a * k; card(R0[0], R0[1], cw, ch); const rx = R0[0] + cw / 2; cardHead('what came out', rx, R0[1] + (nar ? 20 : 38), cw);
       const y = R0[1] + (nar ? 52 : ch * 0.3);
       [['f = ½ (e₊ + e₋),   f* = ½ (e₊ − e₋)', 0.32, C.text, ''], ['f² = 0,   f*² = 0', 0.34, C.text, 'italic'], ['f f* + f* f = 1', 0.355, C.gold, 'italic'],
-       ['one fermionic mode', 0.37, C.green, 'italic'], ['the same pair as in the lift:  f = ½ n∞,  f* = −n₀', 0.375, C.t2, 'italic']].forEach(([t, t0, col, st], i) => { const q = R(t0); if (q <= 0) return; ox.globalAlpha = a * q; text(t, rx, y + lh * i, col, i === 4 ? (nar ? 11 : fs - 5) : i === 3 ? fs - 2 : fs, 'center', SERIF, st); });
+       ['one fermionic mode', 0.37, C.green, 'italic']].forEach(([t, t0, col, st], i) => { const q = R(t0); if (q <= 0) return; ox.globalAlpha = a * q; text(t, rx, y + lh * i, col, i === 4 ? (nar ? 11 : fs - 5) : i === 3 ? fs - 2 : fs, 'center', SERIF, st); });
       const q = R(0.385); if (q > 0) { ox.globalAlpha = a * q; const bx = rx - (nar ? 46 : 70), by = Math.min(R0[1] + ch - (nar ? 18 : 34), y + lh * 5.5);
         ox.strokeStyle = C.t2; ox.lineWidth = 1.4; ox.beginPath(); ox.roundRect ? ox.roundRect(bx - 30, by - 13, 60, 26, 13) : ox.rect(bx - 30, by - 13, 60, 26); ox.stroke();
         dot(on ? bx + 15 : bx - 15, by, 10, on ? C.gold : C.t3); text(on ? 'on' : 'off', bx + 40, by, on ? C.gold : C.t3, nar ? 12 : 15, 'left', MONO);
@@ -639,9 +639,8 @@ function drawMore(s){
     const ty = cy - S * 0.36, by = cy + S * 0.16, fs = nar ? 13 : 17;
     text('the forced construction', cx, ty, C.text, nar ? 15 : 20, 'center', SERIF, '600');
     text('1 + 3  →  2 + 4', cx, ty + (nar ? 24 : 30), C.t2, nar ? 13 : 16, 'center', MONO);
-    text('X(x) = n₀ + x + ½ Q(x) n∞', cx, ty + (nar ? 48 : 60), C.text, fs, 'center', SERIF, 'italic');
-    text('every point a light-like direction', cx, ty + (nar ? 68 : 84), C.t3, nar ? 11 : 13, 'center', SERIF, 'italic');
-    const y1 = ty + (nar ? 84 : 104);
+    text('every point lifted to a light-like direction', cx, ty + (nar ? 48 : 58), C.text, fs, 'center', SERIF, 'italic');
+    const y1 = ty + (nar ? 68 : 82);
     seg(cx, y1, cx - dx, by - 30, sm(t), C.t2, 1.6); seg(cx, y1, cx + dx, by - 30, sm(t), C.t2, 1.6);
     if (t >= 1) { arrow(cx - dx + (dx * 0.04), by - 30 - (by - 30 - y1) * 0.04, cx - dx, by - 30, C.t2, 1.6, 10); arrow(cx + dx - (dx * 0.04), by - 30 - (by - 30 - y1) * 0.04, cx + dx, by - 30, C.t2, 1.6, 10); }
     const f = sm((s - 0.86) / 0.05); ox.globalAlpha = a * f;
@@ -654,9 +653,9 @@ function drawMore(s){
 }
 
 // Clifford and Hestenes, and what drops out of the algebra
-const GA_ROWS = [['e₁e₂ e₁e₂ = −1', 'the plane’s i: the complex numbers'], ['e₂e₃,  e₃e₁,  e₁e₂', 'Hamilton’s quaternions'],
-  ['e₁,  e₂,  e₃', 'Pauli’s matrices, written as matrices'], ['γ₀,  γ₁,  γ₂,  γ₃', 'Dirac’s matrices, the same for spacetime'],
-  ['∇F = J', 'Maxwell’s four equations, as one'], ['R v R̃', 'every rotation and every Lorentz boost']];
+// what drops out, by name; one formula only, Maxwell's, which reads at a glance
+const GA_ROWS = [['the complex numbers', ''], ['Hamilton’s quaternions', ''], ['Pauli’s spin matrices', ''], ['Dirac’s matrices, for spacetime', ''],
+  ['Maxwell’s four equations, as one:', '∇F = J'], ['every rotation and every Lorentz boost', '']];
 function drawClifford(s){
   const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return; ox.globalAlpha = a;
   const nar = narrow(), people = [['clifford', nar ? 'W. K. Clifford' : 'William Kingdon Clifford', '1845 to 1879'], ['hestenes', 'David Hestenes', 'born 1933']];
@@ -673,8 +672,9 @@ function drawClifford(s){
   const cx0 = nar ? 14 : x0 + 2 * pw + gap + 60, cy0 = nar ? top + ph + 44 : top + Math.max(0, (Math.max(ph + 50, cardH) - cardH) / 2);
   card(cx0, cy0, cardW, cardH); cardHead('what drops out', cx0 + cardW / 2, cy0 + (nar ? 20 : 32), cardW);
   const fx = cx0 + (nar ? 14 : 26), dxp = cx0 + cardW * (nar ? 0.44 : 0.4);
-  GA_ROWS.forEach(([f, d], i) => { const y = cy0 + (nar ? 52 : 78) + lh * i;
-    text(f, fx, y, C.gold, fs, 'left', SERIF, 'italic'); text(d, dxp, y, C.t2, nar ? 11.5 : fs - 2, 'left', SERIF); });
+  GA_ROWS.forEach(([d, f], i) => { const y = cy0 + (nar ? 52 : 78) + lh * i, ds = nar ? 12.5 : fs - 1;
+    ox.font = `${ds}px ${SERIF}`; const w = ox.measureText(d).width;
+    dot(fx + 3, y, 2.5, C.gold); text(d, fx + 16, y, C.t2, ds, 'left', SERIF); if (f) text(f, fx + 16 + w + 10, y, C.gold, fs, 'left', SERIF, 'italic'); });
   ox.globalAlpha = 1;
 }
 
@@ -762,7 +762,7 @@ function seg(x1, y1, x2, y2, f, col, w = 1, dash = null){ if (f <= 0) return; ox
 // the graph of y = 1/x: the right branch climbs to plus infinity, the left falls to minus infinity
 function drawLimits(s){
   const a = env(s, -0.2, 1.1, 0.1); if (a <= 0) return;
-  const nar = narrow(), cx = W / 2, Hb = H + Math.max(0, capTopOf('limits') - capTop()) - 16, uy = (Hb - H * 0.1076) / 10.65, cy = H * 0.1076 + 5.45 * uy, ux = nar ? W * 0.13 : Math.min(W * 0.1, 130);   // top of the y axis where it was; the graph reaches further down
+  const nar = narrow(), cx = W / 2, Hb = H + Math.max(0, capTopOf('limits') - sceneCapTop('limits')) / ZF - 16, uy = (Hb - H * 0.1076) / 10.65, cy = H * 0.1076 + 5.45 * uy, ux = nar ? W * 0.13 : Math.min(W * 0.1, 130);   // top of the y axis where it was; the graph reaches further down
   const X = x => cx + x * ux, Y = y => cy - y * uy, xm = 3.2, ym = 5.2;
   ox.globalAlpha = a;
   arrow(X(-xm - 0.2), cy, X(xm + 0.25), cy, C.t2, 1.4, 9); arrow(cx, Y(-ym), cx, Y(ym + 0.25), C.t2, 1.4, 9);
@@ -871,7 +871,7 @@ function drawRecipe(s){
     { const lk = sm((s - 0.5) / 0.1); if (lk > 0) { ox.globalAlpha = a * b2 * lk; const L0 = pr([-1.2, -0.5, 0.5]), L1 = pr([1.35, -0.5, 0.5]), z0 = pr([0, -0.5, 0.5]);
       seg(L0[0], L0[1], L1[0], L1[1], 1, C.text, 2); ox.fillStyle = C.gold; ox.fillRect(z0[0] - 5, z0[1] - 5, 10, 10);
       [-1, 1].forEach(v => { const t = pr([v, -0.5, 0.5]); dot(t[0], t[1], 3, C.text); });
-      if (nar) text('the line, n₀ + x', L1[0], L1[1] + 16, C.text, 12, 'right', SERIF, 'italic'); else text('the line itself, n₀ + x', L1[0] + 8, L1[1] + 2, C.text, 14, 'left', SERIF, 'italic'); text('0', z0[0], z0[1] + 18, C.gold, 15, 'center', SERIF); ox.globalAlpha = a * b2; } }
+      if (nar) text('the line', L1[0], L1[1] + 16, C.text, 12, 'right', SERIF, 'italic'); else text('the line itself', L1[0] + 8, L1[1] + 2, C.text, 14, 'left', SERIF, 'italic'); text('0', z0[0], z0[1] + 18, C.gold, 15, 'center', SERIF); ox.globalAlpha = a * b2; } }
     if (g > 0.9) { const [qx, qy0] = pr([-0.55, 0.35, 0.5]), qy = qy0 - 6; text('the circle: the light cone at time ½', nar ? cx : qx - 10, nar ? pr([0, 0, 1.55])[1] - 22 : qy, C.gold, nar ? 13 : 16, nar ? 'center' : 'right', SERIF, 'italic'); }
     // on a phone above the cone; on a wider screen in a column to its left, so a short screen keeps them clear of it
     const lx = nar ? cx : Math.max(20, W * 0.06), la = nar ? 'center' : 'left', ly = nar ? 18 : Math.max(16, H * 0.14);
@@ -915,7 +915,7 @@ function drawMorph(m){
   if (m < 0.42) {
     ox.globalAlpha = fade; arrow(...pr([-1.6, 0, 0]), ...pr([1.7, 0, 0]), C.t3, 1.3, 8);
     ox.globalAlpha = 1; arrow(...pr([0, -1.3, 0.5]), ...pr([0, 1.8, 0.5]), C.t3, 1.3, 8); text('new space', pr([0, 1.8, 0.5])[0] + 8, pr([0, 1.8, 0.5])[1], C.t3, nar ? 12 : 14, 'left', SERIF, 'italic');
-    { const L0 = pr([-1.6, -0.5, 0.5]), L1 = pr([1.7, -0.5, 0.5]); arrow(L0[0], L0[1], L1[0], L1[1], C.text, 1.8, 9); text(nar ? 'the line' : 'the line itself, n₀ + x', L1[0], L1[1] + 18, C.text, nar ? 12 : 14, 'right', SERIF, 'italic');
+    { const L0 = pr([-1.6, -0.5, 0.5]), L1 = pr([1.7, -0.5, 0.5]); arrow(L0[0], L0[1], L1[0], L1[1], C.text, 1.8, 9); text(nar ? 'the line' : 'the line itself', L1[0], L1[1] + 18, C.text, nar ? 12 : 14, 'right', SERIF, 'italic');
       if (m > 0.26) { ox.globalAlpha = sm((m - 0.26) / 0.08); const c0 = pr([0, 0, 0.5]), l0 = pr([0, -0.5, 0.5]); seg(c0[0] - 5, c0[1], c0[0] + 5, c0[1], 1, C.t3, 1.2);
         seg(c0[0] - RA - 4, c0[1], c0[0] - 6, c0[1], 1, C.t3, 1, [2, 3]); text('new space = 0', c0[0] - RA - 10, c0[1], C.t3, nar ? 10 : 12, 'right', MONO); text('new space = −½', l0[0] - 12, l0[1] + 16, C.t3, nar ? 10 : 12, 'right', MONO); ox.globalAlpha = 1; } }
     if (fade > 0) { ox.globalAlpha = fade; arrow(...pr([0, 0, -0.2]), ...pr([0, 0, 1.55]), C.blue, 1.8, 9);
@@ -961,7 +961,7 @@ function loop(now){
   if (draw) { TOP = $('#track').offsetHeight + 6; H = Math.max(120, sceneCapTop(k) - 12 - TOP); NARROW = W < HF;
     // a drawing is laid out for at least its design height; on a shorter screen the whole of it, text
     // included, is scaled down to fit, so its lines never close up on one another
-    const tab = NARROW ? MINH_NARROW : MINH, m = tab[k] || tab.all, need = typeof m === 'function' ? m(s) : m, z = Math.min(1, H / need);
+    const tab = NARROW ? MINH_NARROW : MINH, m = tab[k] || tab.all, need = typeof m === 'function' ? m(s) : m, z = Math.min(1, H / need); ZF = z;
     ox.save(); ox.translate(0, TOP);
     if (z < 1) { const W0 = W, H0 = H; ox.scale(z, z); W = W0 / z; H = need; try { draw(s); } finally { W = W0; H = H0; } }
     else draw(s);
