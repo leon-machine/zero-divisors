@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation
 kind: claim
 version: 2
-title: 'On the gauge fields valued in the stabiliser of a constant tractor $I_{\rho} = \nInf + \rho\nO$, which under GTG''s rotation and displacement gauges are exactly the pairs $(\hb, \Omega)$, the $\Omega$-equation of the frozen-point functional is the torsion equation; so for $\rho \neq 0$ its torsion-free subfamily still gives Einstein''s equations, and the frozen special-conformal slot $\rho\,\hb^{-1}$, not the independence of $\Omega$, carries them'
+title: 'The frozen-point field space as GTG''s pair, and the torsion equation'
 status: proved
 region: synthesis
 subject: einstein

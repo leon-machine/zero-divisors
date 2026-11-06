@@ -2,7 +2,7 @@
 id: synthesis.c-loc-modular-clause-moves-no-nested-patch
 kind: claim
 version: 1
-title: A boost acting by phases moves no C$^{*}$-subalgebra, and in a GNS representation no weakly closed subalgebra, properly into itself, so clause (iii) of (C$_{\mathrm{loc}}$) cannot act geometrically on nested sub-patches of the mode algebra its clause (i) cites
+title: 'The modular clause of (C$_{\mathrm{loc}}$) moves no nested patch'
 status: proved
 region: synthesis
 subject: einstein

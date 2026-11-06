@@ -2,7 +2,7 @@
 id: lepton.imported-twistor-state-pair-system-excitations
 kind: claim
 version: 4
-title: "Imported: a conformal spinor is a state of its pair system, and its excitations are the Dirac module"
+title: 'Imported: a conformal spinor as the vacuum of its pair system'
 status: proved
 region: lepton
 subject: conformal-spacetime

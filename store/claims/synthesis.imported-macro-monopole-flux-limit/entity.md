@@ -2,7 +2,7 @@
 id: synthesis.imported-macro-monopole-flux-limit
 kind: claim
 version: 1
-title: 'Imported: the MACRO final upper limit on the flux of magnetic monopoles, 1.4 x 10^-16 cm^-2 s^-1 sr^-1 at 90% confidence for 4 x 10^-5 < beta < 1 (MACRO Collaboration 2002)'
+title: 'Imported: the MACRO monopole flux limit (MACRO Collaboration 2002)'
 status: imported
 region: synthesis
 subject: dark-matter

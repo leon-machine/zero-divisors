@@ -2,7 +2,7 @@
 id: synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
 kind: claim
 version: 3
-title: 'Given the Hadamard parametrix of the squared Dirac operator (imported), every gauge-invariant quasi-free Hadamard state of the Dirac field of mass m0 >= 0 on a globally hyperbolic gravitational field scales, under the store''s dilation in a gauge with hb(x0) = 1, to the flat field''s massless vacuum on both orderings (standard: Sahlmann and Verch 2001, Prop. 5.6, re-derived in the spacetime algebra for Dirac spinors), so clause (a) of (HS) holds and the premise''s content is its generator clause (b)'
+title: 'Hadamard Dirac states scale to the flat massless vacuum at every point'
 status: proved
 region: synthesis
 subject: thermality

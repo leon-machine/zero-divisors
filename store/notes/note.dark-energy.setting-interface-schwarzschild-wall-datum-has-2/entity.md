@@ -2,8 +2,7 @@
 id: note.dark-energy.setting-interface-schwarzschild-wall-datum-has-2
 kind: note
 version: 1
-title: 'The interface at the Schwarzschild wall: the datum has a pole, and its residue is the completion''s
-  weight'
+title: 'Schwarzschild wall interface: the divergent value and variable exponents'
 status: setting
 subject: walls
 proposed_by:

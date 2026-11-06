@@ -2,7 +2,7 @@
 id: synthesis.kerr-ring-blow-up-forced-cover-fixed-order
 kind: claim
 version: 3
-title: At the level of the cometric, among diagonal rescalings of a null frame, the Kerr ring's blow-up needs the double cover and has fixed order on it
+title: 'The Kerr ring''s blow-up needs the double cover, at the level of the cometric'
 status: proved
 region: synthesis
 subject: interior

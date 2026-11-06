@@ -2,7 +2,7 @@
 id: synthesis.stored-fits-are-models-of-not-u
 kind: claim
 version: 1
-title: The stored Pati-Salam fits are models in which Hypothesis (U) fails at M_I in both readings
+title: 'The stored Pati-Salam fits are models of not-(U)'
 status: proved
 region: synthesis
 subject: neutrinos

@@ -2,7 +2,7 @@
 id: synthesis.imported-mssm-charged-higgs-tree-sum-rule
 kind: claim
 version: 1
-title: 'Imported: in the minimal supersymmetric Standard Model, at tree level, $m_{H^{\pm}}^{2} = m_{A}^{2} + M_{W}^{2}$'
+title: 'Imported: the MSSM charged-Higgs tree-level sum rule'
 status: imported
 region: synthesis
 subject: standard-model

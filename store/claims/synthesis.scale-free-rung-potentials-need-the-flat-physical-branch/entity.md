@@ -2,7 +2,7 @@
 id: synthesis.scale-free-rung-potentials-need-the-flat-physical-branch
 kind: claim
 version: 2
-title: A rung potential with no dimensionful constant restricts on the null-lift locus to $aN^{2} + bm^{2} + eNm + H^{2}(dN + fm)$ plus a constant and sees the rung unit only through the frame; a charge-preserving tree-level vacuum at the weak scale needs the physical-branch coefficient $a + b - e$ to vanish to about $10^{-88}$ of the other couplings, and on the cone $Q = 0$ that Gildener-Weinberg flat ray is bounded below exactly when $e \ge 0$ and $2a \ge e$, with a massless neutral mode and a charged pair at $(2a - e)v^{2}$ at tree level; the level-zero D-term with $\kappa N^{2}$ fails it, with $m_{\pm}^{2} = M_{W}^{2} - M_{Z}^{2}$
+title: 'Scale-free rung potentials need the flat physical branch'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport
 kind: claim
 version: 2
-title: 'Imported: the Hadamard parametrix of a normally hyperbolic operator on a vector bundle has leading coefficient the square root of the Van Vleck determinant times the parallel transport of the operator''s connection (Friedlander 1975; Bar, Ginoux and Pfaffle 2007, Ch. 2); for the squared Dirac operator that connection is the spin connection (Lichnerowicz), so U = Delta^(1/2) R; the Hadamard form does not depend on the time function of its i0 prescription (Kay and Wald 1991; Sahlmann and Verch 2001, Sec. 5.1); and in four dimensions the retarded and advanced fundamental solutions on a causal domain are (1/4 pi) theta(+-(t - t'')) [U delta(sigma) + V theta(sigma)] with V smooth (Friedlander 1975; Bar, Ginoux and Pfaffle 2007, Ch. 2)'
+title: 'Imported: the Hadamard parametrix of the squared Dirac operator'
 status: imported
 region: synthesis
 subject: quantum-fields

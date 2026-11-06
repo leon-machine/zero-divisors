@@ -2,7 +2,7 @@
 id: synthesis.tower-charge-sector-label-temperature-not
 kind: claim
 version: 2
-title: "Under (B'), in the boundary-mode model of a reversal pair: on finite windows the tower charge is a superselection label and the mirror's temperature is not; on the full algebra the temperature is a label in the disjointness sense exactly when the Powers-Stormer sum diverges"
+title: 'The tower charge is a sector label; the temperature is not'
 status: proved
 region: synthesis
 subject: dark-matter

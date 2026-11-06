@@ -2,7 +2,7 @@
 id: synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement
 kind: claim
 version: 1
-title: 'Imported: Wilson''s lattice gauge theory (1974) with $\beta = 2N/g^{2}$, $4/g^{2}$ for $SU(2)$, needing no gauge fixing; reflection positivity and the strong-coupling area law (Osterwalder and Seiler 1978); Elitzur''s theorem (1975); and the deconfined phase of four-dimensional compact $U(1)$ at weak coupling (Guth 1980; Fr\"ohlich and Spencer 1982)'
+title: 'Imported: Wilson''s lattice gauge theory and strong-coupling confinement'
 status: imported
 region: synthesis
 subject: quantum-fields

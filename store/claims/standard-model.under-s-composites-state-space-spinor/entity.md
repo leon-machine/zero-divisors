@@ -2,8 +2,7 @@
 id: standard-model.under-s-composites-state-space-spinor
 kind: claim
 version: 6
-title: 'Under (S): the composite''s state space is the $\mathrm{Spin}(10)$ spinor, and the derived generation
-  is its even half'
+title: 'Under (S): the composite''s state space is the $\mathrm{Spin}(10)$ spinor'
 status: proved
 region: standard-model
 subject: standard-model

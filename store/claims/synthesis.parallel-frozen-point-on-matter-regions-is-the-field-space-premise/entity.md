@@ -2,7 +2,7 @@
 id: synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise
 kind: claim
 version: 2
-title: 'In the physical scale the frozen point is parallel for a soldered $\Cl(2,4)$ connection exactly when its special-conformal slot is $\tfrac{\Lambda}{6}$ times the identity and its dilation slot vanishes, the field space of connections preserving $I$; on shell for the frozen-point functional with the imported matter coupling the series'' transport differs from it by $4\pi G(T - \tfrac{\tau}{3}g)$; adopting that field space implies the registration condition of the $w = -1$ prediction, the converse holding when the condition is read as fixing which connection carries the frozen point, not when it is read only of solutions; on that space $\Lambda$ is a constant parameter and $w = -1$ is the $\Lambda$CDM equation of state'
+title: 'A parallel frozen point on matter regions is the field-space premise'
 status: proved
 region: synthesis
 subject: einstein

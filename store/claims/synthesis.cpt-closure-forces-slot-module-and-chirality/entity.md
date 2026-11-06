@@ -2,7 +2,7 @@
 id: synthesis.cpt-closure-forces-slot-module-and-chirality
 kind: claim
 version: 1
-title: For a slot module generated from one vacuum by one doublet of slot creation operators, CPT closure forces the fermionic slot module and anomaly freedom forces the chirality to be the mode-number parity away from the neutral singlets
+title: 'CPT closure forces the slot module; anomaly freedom, the chirality'
 status: proved
 region: synthesis
 subject: standard-model

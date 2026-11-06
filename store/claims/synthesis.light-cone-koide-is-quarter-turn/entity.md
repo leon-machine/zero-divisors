@@ -2,7 +2,7 @@
 id: synthesis.light-cone-koide-is-quarter-turn
 kind: claim
 version: 1
-title: The Lorentzian slice of face space is a quarter-turn of the doublet, and the Koide angle holds only for the positive square root
+title: 'The Lorentzian Koide slice is a quarter-turn of the doublet'
 status: proved
 region: synthesis
 subject: generations

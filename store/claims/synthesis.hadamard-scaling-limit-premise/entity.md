@@ -2,7 +2,7 @@
 id: synthesis.hadamard-scaling-limit-premise
 kind: claim
 version: 4
-title: '(HS), the Hadamard scaling limit, a theorem (formerly a premise): for every gauge-invariant quasi-free Hadamard state of the Dirac field of any mass on a gravitational field, at every point of every local Rindler horizon, the bulk scaling limit is the flat massless vacuum and the restriction to the generators through the flux trace has the null vacuum as its generator scaling limit, the epsilon-regularised restriction of the parametrix agreeing with it modulo a bounded time-function-dependent kernel; hence the local form of (N$_{+}$) at every such point for these states'
+title: '(HS), the Hadamard scaling limit, now a theorem'
 status: proved
 region: synthesis
 subject: thermality

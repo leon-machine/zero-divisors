@@ -2,7 +2,7 @@
 id: synthesis.field-space-premise-parallel-frozen-point
 kind: claim
 version: 1
-title: '(FS), the field-space premise of the gravitational action: the varied gravitational connection, a $\Cl(2,4)$ gauge field with nondegenerate soldering, admits a parallel tractor $I$ with $\ip{X}{I} = 1$ (the physical scale), a holonomy reduction to the stabiliser of $I$'
+title: '(FS): the field-space premise of a parallel frozen point'
 status: postulate
 region: synthesis
 subject: einstein

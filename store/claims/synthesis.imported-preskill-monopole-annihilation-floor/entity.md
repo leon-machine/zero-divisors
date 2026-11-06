@@ -2,7 +2,7 @@
 id: synthesis.imported-preskill-monopole-annihilation-floor
 kind: claim
 version: 1
-title: 'Imported: monopole-antimonopole annihilation in the hot plasma acts only above a monopole-to-entropy ratio of about 10^-10 and reduces it no further (Preskill 1979)'
+title: 'Imported: the monopole annihilation floor (Preskill 1979)'
 status: imported
 region: synthesis
 subject: dark-matter

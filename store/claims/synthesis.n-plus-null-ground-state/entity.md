@@ -2,7 +2,7 @@
 id: synthesis.n-plus-null-ground-state
 kind: claim
 version: 9
-title: '(N$_{+}$): on the continuum of a horizon''s null generators the state of the modes is a gauge-invariant quasi-free ground state for the affine null translations along the generators'
+title: 'Premise (N$_{+}$): the null ground state on horizon generators'
 status: postulate
 region: synthesis
 subject: thermality

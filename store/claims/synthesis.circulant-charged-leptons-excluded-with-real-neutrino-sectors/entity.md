@@ -2,7 +2,7 @@
 id: synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors
 kind: claim
 version: 2
-title: 'Read as the charged-lepton matrix in the family basis of the neutrino textures, the Koide circulant is excluded by the global fit at every placement for every $P_{12}$-invariant neutrino sector, real or complex, and, for a real neutrino mass matrix (as in the stored textures), with the tau (the stored placement) or the muon on the democratic line at every order; with the electron there and a real $P_{12}$-breaking neutrino sector it gives mu-tau reflection, $\sin^{2}\theta_{23} = \tfrac12$ and $\cos\delta_{CP} = 0$; for a complex $P_{12}$-breaking neutrino sector, which the $\su(2)_{R}$-covariant completion gives generically, it makes no statement'
+title: 'The Koide circulant as charged-lepton matrix against the global fit'
 status: proved
 region: synthesis
 subject: neutrinos

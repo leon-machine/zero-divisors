@@ -2,7 +2,7 @@
 id: synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation
 kind: claim
 version: 2
-title: 'The triangle anomaly in the spacetime algebra with imported Pauli-Villars regulators (standard: Adler; Bell and Jackiw): the vector Ward identities hold integrand by integrand, the axial divergence is the regulator-mass limit $(1/(2\pi^{2}))\langle I_{4}\gamma^{\nu}k_{1}\gamma^{\rho}k_{2}\rangle_{0}$ per Dirac fermion for any weights with $\sum_{i} c_{i} = 0$, the bilinear form of the pseudoscalar part of $F^{2}$, and for one stored generation the gauge anomaly tensor vanishes on the whole gauge algebra (standard per-generation cancellation)'
+title: 'The triangle anomaly in the spacetime algebra, cancelling per generation'
 status: proved
 region: synthesis
 subject: quantum-fields

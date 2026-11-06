@@ -2,7 +2,7 @@
 id: synthesis.injection-freshness-is-pair-purity
 kind: claim
 version: 2
-title: Under global purity and unequal thermal marginals, the rate model's freshness, the purity of the injected pair and its thermofield form are one assumption
+title: 'Freshness of injection is the purity of the injected pair'
 status: proved
 region: synthesis
 subject: entropy

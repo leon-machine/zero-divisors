@@ -2,7 +2,7 @@
 id: synthesis.pre-descent-state-carried-into-descended-phase-premise
 kind: claim
 version: 1
-title: '(P2) of the Kasner exit: a rule carries the state of the contracting pre-descent stage into the descended phase, across the singular wall if the approach reaches it, or across the descent itself if the descent ends the approach'
+title: '(P2) of the Kasner exit: a rule carrying the pre-descent state across'
 status: postulate
 region: synthesis
 subject: dark-energy

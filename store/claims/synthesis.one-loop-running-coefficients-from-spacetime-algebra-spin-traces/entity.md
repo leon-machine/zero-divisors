@@ -2,7 +2,7 @@
 id: synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
 kind: claim
 version: 2
-title: 'The one-loop running coefficients from spin traces in the spacetime algebra, in a covariant gauge under the indefinite-form premise: the Lorentz generator of the field-strength bivector gives spin weights $0$, $-1$ and $-4$ for scalars, Weyl spinors (a minimal left ideal with the unit $I_{4}$) and vectors, the imported heat-kernel coefficient turns them into $\tfrac13$, $\tfrac23$ and $-\tfrac{11}{3}$ per unit index, and under (S), with $n_{g}$ generations and $n_{h}$ doublets as inputs, the coefficients are $(\tfrac{4n_{g}}{3} + \tfrac{n_{h}}{10}, -\tfrac{22}{3} + \tfrac{4n_{g}}{3} + \tfrac{n_{h}}{6}, -11 + \tfrac{4n_{g}}{3})$, asymptotically free in both non-abelian factors for $n_{g} = 3$ and every $n_{h} \leq 19$'
+title: 'One-loop running coefficients from spacetime-algebra spin traces'
 status: proved
 region: synthesis
 subject: quantum-fields

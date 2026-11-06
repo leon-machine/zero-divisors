@@ -2,7 +2,7 @@
 id: synthesis.imported-long-lived-charged-particle-stau-limits
 kind: claim
 version: 1
-title: 'Imported: searches for heavy long-lived charged particles exclude directly pair-produced long-lived staus below $339$ GeV (CMS, $7$ and $8$ TeV) and below $430$ GeV (ATLAS, $13$ TeV, $36.1$ fb$^{-1}$)'
+title: 'Imported: collider limits on long-lived staus'
 status: imported
 region: synthesis
 subject: standard-model

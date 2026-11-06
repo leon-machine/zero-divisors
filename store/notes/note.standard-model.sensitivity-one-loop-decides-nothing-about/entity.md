@@ -2,7 +2,7 @@
 id: note.standard-model.sensitivity-one-loop-decides-nothing-about
 kind: note
 version: 1
-title: 'sensitivity: one loop decides nothing about the supersymmetric content, and does decide the rest'
+title: 'Sensitivity: one loop cannot decide the supersymmetric content'
 status: remark
 subject: standard-model
 proposed_by:

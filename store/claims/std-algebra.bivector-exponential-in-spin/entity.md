@@ -2,7 +2,7 @@
 id: std-algebra.bivector-exponential-in-spin
 kind: claim
 version: 2
-title: The exponential of every bivector of a nondegenerate real space is a rotor, and which Lorentzian rotors are exponentials
+title: 'Exponentials of bivectors are rotors; the Lorentzian exceptions'
 status: proved
 region: std-algebra
 programme: standard

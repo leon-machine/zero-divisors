@@ -2,7 +2,7 @@
 id: synthesis.imported-bessel-reduction-and-small-argument-hankel-forms
 kind: claim
 version: 1
-title: 'Imported: the equation y'''' + ((1 - 2a)/x) y'' + c^2 x^(2c - 2) y = 0 is solved by x^a Z(x^c) with Z a Bessel function of order |a/c|, and the small-argument forms of the Hankel functions'
+title: 'Imported: Bessel reduction and small-argument Hankel forms (DLMF)'
 status: imported
 region: synthesis
 subject: dark-energy

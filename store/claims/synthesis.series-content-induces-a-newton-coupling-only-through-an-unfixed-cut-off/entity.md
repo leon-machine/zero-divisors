@@ -2,7 +2,7 @@
 id: synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off
 kind: claim
 version: 2
-title: 'In the Feynman gauge with a proper-time cut-off $\Lambda$ the series'' content induces $1/G = [B\Lambda^{2} - \sum w m^{2}\ln(\Lambda^{2}/m^{2})]/(12\pi) + O(m^{2})$, with $B = -36$ plus the scalars'' weights for the chain''s Pati-Salam content under Hypothesis (S); the logarithmic remainder is repulsive if the content below $\Lambda$ is the weak-scale content alone with $B = 0$, its sign is not fixed by the store for a cut-off above $M_{I}$ under (S), and it stays far below $1/G$; where $B > 0$ matching $G$ fixes $\Lambda$, so the route gives $G$ only by choosing the cut-off'
+title: 'The series'' content induces $G$ only through an unfixed cut-off'
 status: proved
 region: synthesis
 subject: einstein

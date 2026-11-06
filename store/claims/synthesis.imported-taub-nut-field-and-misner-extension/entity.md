@@ -2,7 +2,7 @@
 id: synthesis.imported-taub-nut-field-and-misner-extension
 kind: claim
 version: 1
-title: 'Imported: the Taub-NUT vacuum field and Misner''s extension, whose Taub region ends at Cauchy horizons $t = t_{\pm}$ (Taub 1951; Newman, Tamburino and Unti 1963; Misner 1963)'
+title: 'Imported: the Taub-NUT field and Misner''s extension (Taub; NUT; Misner)'
 status: imported
 region: synthesis
 subject: interior

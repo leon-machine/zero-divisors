@@ -2,7 +2,7 @@
 id: synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point
 kind: claim
 version: 2
-title: 'An equivalent reading of the field-space premise in the gauge group of gauge theory gravity: a $\Cl(2,4)$ gauge field assembled from $(\hb, \Omega)$ and no further field (T), covariant under that group, soldered, and either polynomial with no inverse frame (P) or built without derivatives (O), is $\Omega - \nInf \wedge e + \rho\,\nO \wedge e$ with $\rho$ constant, which preserves the constant tractor $I_{\rho} = \nInf + \rho\,\nO$, $\ip{X}{I_{\rho}} = 1$, for every gravitational field; neither (P) nor (O) suffices without (T), the series'' tractor transport violates both and meets the family exactly on Einstein fields, and under the parabolic group the reduction is a gauge choice, so this is a premise exchange, not a derivation'
+title: 'Premise exchange: tractor gauge fields without inverse frame keep a frozen point'
 status: proved
 region: synthesis
 subject: einstein

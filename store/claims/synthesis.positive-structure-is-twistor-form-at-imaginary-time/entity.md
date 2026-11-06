@@ -2,7 +2,7 @@
 id: synthesis.positive-structure-is-twistor-form-at-imaginary-time
 kind: claim
 version: 3
-title: The positive Hermitian structure is the twistor form polarised at the imaginary unit time point; the positive structures compatible with the twistor form are the points of the forward tube, and only positive structures carry states
+title: 'The positive structure is the twistor form at imaginary time'
 status: proved
 region: synthesis
 subject: one-relation

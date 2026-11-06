@@ -2,7 +2,7 @@
 id: synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard
 kind: claim
 version: 2
-title: 'Imported: for the Dirac field the Hadamard form is equivalent to the wave front set condition and propagates from a neighbourhood of one Cauchy surface to the whole field (Kratzert 2000; Hollands 2001; Sahlmann and Verch 2001), on Robertson-Walker fields the Dirac states adiabatic of infinite order are Hadamard (Hollands 2001), and quasi-free Hadamard states have as normal-coordinate scaling limit the flat massless Dirac two-point function (Sahlmann and Verch 2001, Prop. 5.6, posed for Majorana spinors)'
+title: 'Imported: the Dirac Hadamard form propagates; adiabatic states are Hadamard'
 status: imported
 region: synthesis
 subject: quantum-fields

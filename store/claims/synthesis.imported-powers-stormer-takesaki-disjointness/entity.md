@@ -2,7 +2,7 @@
 id: synthesis.imported-powers-stormer-takesaki-disjointness
 kind: claim
 version: 2
-title: 'Imported: quasi-equivalence of quasi-free CAR states and the Powers-Stormer inequality (Powers-Stormer), and disjointness of KMS states at different temperatures (Takesaki)'
+title: 'Imported: Powers-Stormer quasi-equivalence and Takesaki disjointness'
 status: imported
 region: synthesis
 subject: thermality

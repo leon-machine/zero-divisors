@@ -2,7 +2,7 @@
 id: synthesis.collar-kms-extension-three-flows
 kind: claim
 version: 1
-title: Under a slice-product collar algebra, the horizon's KMS state extends along the Killing flow but does not give 6 pi
+title: 'Under a slice-product collar, the horizon''s KMS state does not give $6\pi$'
 status: proved
 region: synthesis
 subject: thermality

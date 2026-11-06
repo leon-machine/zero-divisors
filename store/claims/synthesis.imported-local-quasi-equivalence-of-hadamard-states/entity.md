@@ -2,7 +2,7 @@
 id: synthesis.imported-local-quasi-equivalence-of-hadamard-states
 kind: claim
 version: 1
-title: 'Imported: quasi-free Hadamard states are locally quasi-equivalent, for the Klein-Gordon field (Verch 1994) and for the Dirac field (D''Antoni and Hollands 2006)'
+title: 'Imported: local quasi-equivalence of Hadamard states'
 status: imported
 region: synthesis
 subject: thermality

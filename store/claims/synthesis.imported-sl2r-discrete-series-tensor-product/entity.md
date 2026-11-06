@@ -2,7 +2,7 @@
 id: synthesis.imported-sl2r-discrete-series-tensor-product
 kind: claim
 version: 1
-title: 'Imported: the tensor product of a positive and a negative discrete series of $SL(2,\R)$ is finitely many discrete series plus an absolutely continuous direct integral of principal series (Pukanszky 1961, Repka 1978)'
+title: 'Imported: tensor products of $SL(2,\R)$ discrete series (Pukanszky; Repka)'
 status: imported
 region: synthesis
 subject: mass

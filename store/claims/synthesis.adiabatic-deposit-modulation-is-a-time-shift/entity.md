@@ -2,7 +2,7 @@
 id: synthesis.adiabatic-deposit-modulation-is-a-time-shift
 kind: claim
 version: 2
-title: Under the charge reading and the mirror's deposit law, a classical modulation of the descent's deposit is adiabatic only along a local time shift of the descent; a modulation of the deposit per unit charge alone gives the photons and the charge carriers no curvature perturbation of their own (a pure mirror-radiation isocurvature mode), and one of the reheating temperature at fixed charge gives the charge carriers an isocurvature of minus three times zeta
+title: 'A deposit modulation is adiabatic only as a local time shift'
 status: proved
 region: synthesis
 subject: dark-matter

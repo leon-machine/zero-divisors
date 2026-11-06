@@ -2,7 +2,7 @@
 id: synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors
 kind: claim
 version: 1
-title: 'Imported: a D-term level (Fayet-Iliopoulos term), a constant shift of a gauge moment map in the D-term potential, is gauge invariant only along the centre of the gauge algebra, so it exists only for abelian factors (Fayet and Iliopoulos 1974)'
+title: 'Imported: Fayet-Iliopoulos levels only for abelian factors'
 status: imported
 region: synthesis
 subject: standard-model

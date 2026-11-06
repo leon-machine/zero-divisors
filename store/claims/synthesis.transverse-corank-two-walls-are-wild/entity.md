@@ -2,7 +2,7 @@
 id: synthesis.transverse-corank-two-walls-are-wild
 kind: claim
 version: 2
-title: Tameness is not generic from dimension three, and next to (1,3) its stable failures open a two-time region
+title: 'Transverse corank-two walls are wild: tameness is not generic'
 status: proved
 region: synthesis
 subject: walls

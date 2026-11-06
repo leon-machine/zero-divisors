@@ -2,7 +2,7 @@
 id: synthesis.imported-de-sitter-invariant-hadamard-state-unique
 kind: claim
 version: 2
-title: 'Imported: for a massive scalar field on de Sitter the de Sitter-invariant states form the alpha-family, of which only the Euclidean state is Hadamard; the others are singular at antipodal points (Allen 1985)'
+title: 'Imported: the unique de Sitter-invariant Hadamard state (Allen 1985)'
 status: imported
 region: synthesis
 subject: dark-energy

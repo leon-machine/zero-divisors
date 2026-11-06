@@ -2,7 +2,7 @@
 id: synthesis.imported-haar-moments-of-random-pure-state
 kind: claim
 version: 1
-title: 'Imported: the $n$-th moment of a Haar-random pure state is the symmetrizer over $D(D + 1)\cdots(D + n - 1)$, so $\langle\operatorname{tr}\rho_{A}^{n}\rangle$ is a sum over permutations (Schur-Weyl duality)'
+title: 'Imported: Haar moments of a random pure state (Schur-Weyl duality)'
 status: imported
 region: synthesis
 subject: entropy

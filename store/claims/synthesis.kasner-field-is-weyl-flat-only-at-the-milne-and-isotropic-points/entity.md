@@ -2,7 +2,7 @@
 id: synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points
 kind: claim
 version: 1
-title: 'On a four-dimensional diagonal Kasner field with $\sum p = 1$ the Weyl curvature is $t^{-2}$ times two conics in the exponents, which meet exactly at the three flat Milne points and the isotropic point $(\tfrac13, \tfrac13, \tfrac13)$; so at every other Kasner point the attachment supplies no state near the wall, and in cosmic time the Weyl-flat points are not tame walls'
+title: 'Kasner fields are Weyl-flat only at the Milne and isotropic points'
 status: proved
 region: synthesis
 subject: quantum-fields

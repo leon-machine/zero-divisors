@@ -2,7 +2,7 @@
 id: synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity
 kind: claim
 version: 4
-title: Plane-wave gravitational fields with vanishing Weyl part realise the weak null crossing, and the transport ambiguity there is a null shell at the crossing
+title: 'Plane waves realise the weak null crossing, its ambiguity a null shell'
 status: proved
 region: synthesis
 subject: interior

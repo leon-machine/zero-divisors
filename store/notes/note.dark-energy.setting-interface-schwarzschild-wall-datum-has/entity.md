@@ -2,8 +2,7 @@
 id: note.dark-energy.setting-interface-schwarzschild-wall-datum-has
 kind: note
 version: 1
-title: 'The interface at the Schwarzschild wall: the datum has a pole, and its residue is the completion''s
-  weight'
+title: 'Schwarzschild wall interface: the datum''s pole and the completion''s weight'
 status: setting
 subject: interior
 proposed_by:

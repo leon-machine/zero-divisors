@@ -2,7 +2,7 @@
 id: synthesis.imported-kay-wald-uniqueness-and-no-go
 kind: claim
 version: 1
-title: 'Imported: on a spacetime with a bifurcate Killing horizon there is at most one stationary quasi-free Hadamard state, KMS at the Hawking temperature on a wedge; none exists on extended Schwarzschild-de Sitter, and on Kerr none is argued (Kay and Wald 1991, with Kay and Lupo 2016)'
+title: 'Imported: Kay-Wald uniqueness and the no-go on Schwarzschild-de Sitter'
 status: imported
 region: synthesis
 subject: thermality

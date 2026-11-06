@@ -2,7 +2,7 @@
 id: synthesis.kasner-curvature-wall-is-negative-weight-helicity
 kind: claim
 version: 1
-title: At a non-diagonal Kasner wall the slices' curvature is subleading exactly when the negative-weight covector's helicity obeys tau^(2p_1) h_1 -> 0 (for a time-independent coframe, has no helicity), and otherwise, in the homogeneous model, the wall is a Bianchi II bounce obeying the BKL law
+title: 'The Kasner curvature wall is the negative-weight helicity'
 status: proved
 region: synthesis
 subject: interior

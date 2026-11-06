@@ -2,7 +2,7 @@
 id: synthesis.imported-whitney-product-formula-and-projective-space
 kind: claim
 version: 1
-title: 'Imported: the Whitney product formula, H*(RP^n; Z_2) = Z_2[a]/(a^(n+1)), and T RP^n + 1 = (n+1) gamma, so w(RP^n) = (1 + a)^(n+1) (Milnor and Stasheff, Section 4)'
+title: 'Imported: the Whitney product formula and the classes of projective space'
 status: imported
 region: synthesis
 subject: walls

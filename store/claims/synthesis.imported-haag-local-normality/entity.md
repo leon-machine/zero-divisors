@@ -2,7 +2,7 @@
 id: synthesis.imported-haag-local-normality
 kind: claim
 version: 1
-title: 'Imported: the local normality principle of algebraic quantum field theory (Haag), and local quasi-equivalence in a gravitational background (Haag, Narnhofer and Stein 1984)'
+title: 'Imported: local normality (Haag; Haag, Narnhofer and Stein 1984)'
 status: imported
 region: synthesis
 subject: thermality

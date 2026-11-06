@@ -2,7 +2,7 @@
 id: synthesis.boundary-mode-premises-finite-models
 kind: claim
 version: 3
-title: Finite stationary models separate the boundary-mode premises (P), (R), (L$_E$) and (Q), except that (Q) contains (P) and (R)
+title: 'Finite models separate the boundary-mode premises'
 status: proved
 region: synthesis
 subject: thermality

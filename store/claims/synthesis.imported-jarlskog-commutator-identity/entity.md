@@ -2,7 +2,7 @@
 id: synthesis.imported-jarlskog-commutator-identity
 kind: claim
 version: 1
-title: 'Imported: the determinant of the commutator of the quark mass squares is $2iJ$ times the six mass-squared differences (Jarlskog 1985)'
+title: 'Imported: the Jarlskog commutator identity (Jarlskog 1985)'
 status: imported
 region: synthesis
 subject: standard-model

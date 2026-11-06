@@ -2,7 +2,7 @@
 id: synthesis.r-loc-independent-sets-matter-coupling
 kind: claim
 version: 3
-title: (R$_{\mathrm{loc}}$), with the local-horizon modes labelled by null direction, is independent of the present premises, and what it adds off Killing horizons is the matter coupling; a local rapidity period $2\pi c$ gives Einstein's equations with $G_{\mathrm{cl}} = cG$
+title: '(R$_{\mathrm{loc}}$) is independent and fixes the matter coupling'
 status: proved
 region: synthesis
 subject: einstein

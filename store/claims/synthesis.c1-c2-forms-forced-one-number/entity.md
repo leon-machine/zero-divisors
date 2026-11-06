@@ -2,7 +2,7 @@
 id: synthesis.c1-c2-forms-forced-one-number
 kind: claim
 version: 3
-title: The forms of (C1) and (C2) are forced by an algebraic curvature criterion and isometry invariance, leaving one number
+title: 'The forms of (C1) and (C2) are forced, up to one number'
 status: proved
 region: synthesis
 subject: entropy

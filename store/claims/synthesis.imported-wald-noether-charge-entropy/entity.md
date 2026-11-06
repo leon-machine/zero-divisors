@@ -2,7 +2,7 @@
 id: synthesis.imported-wald-noether-charge-entropy
 kind: claim
 version: 3
-title: 'Imported: Wald''s Noether-charge entropy and its Jacobson-Myers form for a Gauss-Bonnet term'
+title: 'Imported: Wald''s Noether-charge entropy and its Jacobson-Myers form'
 status: imported
 region: synthesis
 subject: entropy

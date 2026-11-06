@@ -2,7 +2,7 @@
 id: synthesis.number-n-registered-free-input
 kind: claim
 version: 1
-title: 'The large number $N = M_{P}/H$ is a registered free number of the series: with $\Lambda = 3Q(I)$ fixed by the frozen point, $N$ (equivalently $G\Lambda = 3N^{-2}$) is not derived; it is a parameter of the laws under the action as written and initial data under the Henneaux-Teitelboim promotion the series adopts'
+title: 'Premise (N): the large number N is a registered free input'
 status: postulate
 region: synthesis
 subject: dark-energy

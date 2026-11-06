@@ -2,7 +2,7 @@
 id: synthesis.imported-propagation-of-hadamard-form
 kind: claim
 version: 1
-title: 'Imported: the Hadamard form of a two-point function in a neighbourhood of one Cauchy surface propagates to the whole spacetime (Fulling, Sweeny and Wald 1978)'
+title: 'Imported: propagation of the scalar Hadamard form (Fulling, Sweeny and Wald)'
 status: imported
 region: synthesis
 subject: thermality

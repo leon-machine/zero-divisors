@@ -2,7 +2,7 @@
 id: synthesis.local-normality-at-the-edge-gives-the-null-ground-state
 kind: claim
 version: 2
-title: 'On a horizon generator the weight-$\tfrac12$ scaling preserves the Hilbert-Schmidt norm of a kernel shrunk onto a point, so a gauge-invariant quasi-free state locally normal to the null vacuum at a point is locally the null vacuum there in every regular parameter, and a stationary gauge-invariant quasi-free state locally normal to it at the edge is the null vacuum of (N$_{+}$), positivity included; every other stationary gauge-invariant quasi-free state, the half-thermal products at every period included, is locally disjoint from it at the edge'
+title: 'Local normality at the edge gives the null ground state'
 status: proved
 region: synthesis
 subject: thermality

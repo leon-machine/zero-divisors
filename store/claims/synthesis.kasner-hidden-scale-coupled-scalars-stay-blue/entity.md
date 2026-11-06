@@ -2,7 +2,7 @@
 id: synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
 kind: claim
 version: 2
-title: On a Kasner approach whose hidden direction moves, a scalar whose four-dimensional action carries the hidden scale to the power $\lambda$ obeys Bessel's equation of order $|\lambda - 1||p_{h}|/(2(1 - p_{i}))$ along the axis $i$; for $|\lambda - 1| \le 2$, which covers every scalar the stored content supplies ($\lambda = 0$, $-1$, and $1$ for a generic bulk scalar), at every Kasner point at least one observed axis has index at least 1 within an epoch, and with the observed exponents equal every axis does
+title: 'Scalars coupled to the hidden scale stay blue on a Kasner approach'
 status: proved
 region: synthesis
 subject: dark-energy

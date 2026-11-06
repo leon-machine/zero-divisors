@@ -2,7 +2,7 @@
 id: synthesis.number-diagonal-dynamics-spreads-nothing
 kind: claim
 version: 1
-title: Number-diagonal dynamics carries operator support only to directly coupled modes, with no exponential growth, so no dynamics (L_E) admits realises the kappa^{-1} ln N spreading law in real time
+title: 'Number-diagonal dynamics has no exponential operator spreading'
 status: proved
 region: synthesis
 subject: entropy

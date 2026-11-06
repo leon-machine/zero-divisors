@@ -2,7 +2,7 @@
 id: synthesis.einstein-route-makes-n-initial-data
 kind: claim
 version: 4
-title: On the Clausius route alone N is initial data without the promotion, and the route's solution set is the promoted one; with N initial data, v/H and v/M_P cannot both be parameters of the laws
+title: 'On the Clausius route, N is initial data without promotion'
 status: proved
 region: synthesis
 subject: dark-energy

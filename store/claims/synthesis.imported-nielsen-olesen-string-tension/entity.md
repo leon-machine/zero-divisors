@@ -2,7 +2,7 @@
 id: synthesis.imported-nielsen-olesen-string-tension
 kind: claim
 version: 1
-title: 'Imported: the tension of a Nielsen-Olesen string is $\mu = 2\pi\epsilon(\beta)\eta^{2}$, with $\epsilon(1) = 1$ at the Bogomolny point and $\epsilon$ growing only logarithmically in $\beta$ (Nielsen and Olesen 1973; Bogomolny 1976)'
+title: 'Imported: the Nielsen-Olesen string tension'
 status: imported
 region: synthesis
 subject: dark-energy

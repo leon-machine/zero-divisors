@@ -2,7 +2,7 @@
 id: synthesis.rung-field-level-needed-off-balance-and-not-right-invariant
 kind: claim
 version: 2
-title: On the null-lift locus, a charge-preserving vacuum of the rung field away from the balanced frame needs a nonzero hypercharge level whatever invariant $W(N)$ is added, with $m_{\pm}^{2} = (M_{Z}^{2} - M_{W}^{2})(\xi/m^{*} - 1)$; the level is not invariant under the right-handed $\su(2)$ that commutes with the weak $\su(2)$ on the rung summand and contains the hypercharge, whose element $2R_{1}$ followed by a slot swap in $U(2)$ is the mirror involution of the units
+title: 'Off balance the rung vacuum needs a level, which is not right-invariant'
 status: proved
 region: synthesis
 subject: standard-model

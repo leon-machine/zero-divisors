@@ -2,7 +2,7 @@
 id: synthesis.imported-line-bundles-classified-and-cellular-approximation
 kind: claim
 version: 1
-title: 'Imported: real line bundles are pulled back from the tautological bundle of RP^infinity, and by cellular approximation every real line bundle over a d-dimensional CW complex is a subbundle of the trivial bundle of rank d+1 (Milnor and Stasheff, Section 5; cellular approximation)'
+title: 'Imported: classification of real line bundles and cellular approximation'
 status: imported
 region: synthesis
 subject: walls

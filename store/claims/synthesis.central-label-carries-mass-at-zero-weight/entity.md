@@ -2,7 +2,7 @@
 id: synthesis.central-label-carries-mass-at-zero-weight
 kind: claim
 version: 2
-title: An explicit microcanonical model of the hole's mass label, with zero-weight counted modes carrying the entropy, and the energy tension under both orderings
+title: 'A microcanonical hole with its mass on a central label'
 status: proved
 region: synthesis
 subject: entropy

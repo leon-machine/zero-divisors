@@ -2,7 +2,7 @@
 id: synthesis.imported-flag-2024-light-quark-mass-ratios
 kind: claim
 version: 1
-title: 'Imported: the FLAG 2024 lattice averages of the light-quark mass ratios, m_s/m_ud = 27.227(81), m_u/m_d = 0.465(24), m_c/m_s = 11.766(30) for N_f = 2+1+1 (FLAG Review 2024)'
+title: 'Imported: FLAG 2024 light-quark mass ratios'
 status: imported
 region: synthesis
 subject: generations

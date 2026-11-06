@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x
 kind: claim
 version: 1
-title: 'In BF form with breaking on the Lorentz block, the frozen-point MacDowell-Mansouri functional is flat transport broken on the blade $I \wedge X = \ninf\wedge\nO$: eliminating $B$ returns $\epsilon(I, V, F, F)$ with a zero-torsion constraint, so the two agree in vacuum, while with spinning matter the BF form keeps zero torsion and differs from the Einstein-Cartan coupling; the coupling $|\alpha| = 16\pi/N^{2}$ is a normalisation, not a relation'
+title: 'The frozen-point action as BF transport broken on $I \wedge X$'
 status: proved
 region: synthesis
 subject: einstein

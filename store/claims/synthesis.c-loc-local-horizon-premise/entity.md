@@ -2,7 +2,7 @@
 id: synthesis.c-loc-local-horizon-premise
 kind: claim
 version: 6
-title: '(C$_{\mathrm{loc}}$): on every local Rindler horizon the entropy of a cut is the integral of a curvature-independent area density (Loc) and, before matter crosses, the modes on the light rays are jointly thermal for the local boost (R$_{\mathrm{loc}}$)'
+title: '(C$_{\mathrm{loc}}$): the local-horizon premise'
 status: postulate
 region: synthesis
 subject: einstein

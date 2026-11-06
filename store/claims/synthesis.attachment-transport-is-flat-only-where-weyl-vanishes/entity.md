@@ -2,7 +2,7 @@
 id: synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 kind: claim
 version: 2
-title: 'On a gravitational field the conformal spinors of the attachment are parallel for the tractor gauge field only where the Weyl curvature vanishes: at a type N point a two-dimensional subspace can be, at points of type I, II, D or III none, and no conformal-energy generator commutes with a nonzero Weyl curvature, so off Weyl-flat regions the tractor transport of the attachment supplies no state'
+title: 'The attachment''s transport supplies a state only where Weyl vanishes'
 status: proved
 region: synthesis
 subject: quantum-fields

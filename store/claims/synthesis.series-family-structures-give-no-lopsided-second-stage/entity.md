@@ -2,7 +2,7 @@
 id: synthesis.series-family-structures-give-no-lopsided-second-stage
 kind: claim
 version: 2
-title: With the circulant shift of the $\sqrt{m}$ (circulant) reading of the projected coherent vector included, the series' family structures carry a single $S_{2}$-odd line, the sign representation, on which the Koide channel phase sits; at the breaking lemma's order, under Premise (H) and with a real neutrino coefficient, no stage linear in these structures reaches the measured solar angle, the sum rule extending to complex one-type and Hermitian charged-lepton stages
+title: 'The series'' family structures give no lopsided second stage'
 status: proved
 region: synthesis
 subject: neutrinos

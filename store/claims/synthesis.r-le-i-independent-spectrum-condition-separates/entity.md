@@ -2,7 +2,7 @@
 id: synthesis.r-le-i-independent-spectrum-condition-separates
 kind: claim
 version: 2
-title: On finite windows (R), (L_E) and (I) are mutually independent, and a unique-ground-state condition makes (R) and (L_E) exclusive
+title: '(R), (L$_E$) and (I) are independent; a ground-state condition separates two'
 status: proved
 region: synthesis
 subject: thermality

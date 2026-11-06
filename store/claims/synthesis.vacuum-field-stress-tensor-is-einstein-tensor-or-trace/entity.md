@@ -2,7 +2,7 @@
 id: synthesis.vacuum-field-stress-tensor-is-einstein-tensor-or-trace
 kind: claim
 version: 3
-title: A stress tensor read linearly and covariantly off the first-order classes of the infinity and point vacua is, wherever the own-ray matter clause holds with it, either a relabelling of the curvature (the Einstein tensor plus a cosmological term if it is conserved) or pure trace, so with such a tensor the matter clause is a definition or a vacuum condition, never a law
+title: 'A vacuum-read stress tensor is the Einstein tensor or pure trace'
 status: proved
 region: synthesis
 subject: einstein

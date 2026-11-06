@@ -2,7 +2,7 @@
 id: synthesis.duality-complex-structure-does-not-reach-the-frozen-point
 kind: claim
 version: 2
-title: 'The duality complex structure acts only on the Lorentz algebra: the stabiliser of the frozen point, the parabolic algebra and $\so(2,4)$ admit no complex structure commuting with their brackets, and in the self-dual form of the frozen-point integrand a varied special-conformal slot still returns the Schouten map on torsion-free fields (at the chiral values up to a free antisymmetric slot that leaves the equations unchanged), so the duality complex structure does not supply the reduction by the frozen point'
+title: 'The duality complex structure does not reach the frozen point'
 status: proved
 region: synthesis
 subject: einstein

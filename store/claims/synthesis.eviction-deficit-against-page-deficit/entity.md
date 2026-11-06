@@ -2,7 +2,7 @@
 id: synthesis.eviction-deficit-against-page-deficit
 kind: claim
 version: 3
-title: At zero weight, and at large windows with weights bounded away from zero, the eviction falling branch and the Page-typical one differ, by a deficit that is zero or extensive against one that is positive and below one nat
+title: 'The eviction deficit against the Page deficit'
 status: proved
 region: synthesis
 subject: entropy

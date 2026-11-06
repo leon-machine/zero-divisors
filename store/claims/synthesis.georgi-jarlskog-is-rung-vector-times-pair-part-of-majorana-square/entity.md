@@ -2,7 +2,7 @@
 id: synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square
 kind: claim
 version: 2
-title: Under (S), the degree-four part of the square of the Majorana element splits into Pati-Salam parts $(15,1,1)$, $(15,1,3)$ and $(1,1,1)$; the rung vector times the pair part $(15,1,1)$ is exactly the Georgi-Jarlskog operator on the sixteen, with no $10$ and no $120$ component, because pair elements of degree two and four are traceless on the Pati-Salam quartet; the symmetric forms of the three parts cancel, so the square does not fix the $126$ coefficient relative to the $10$
+title: 'Pure Georgi-Jarlskog from the pair part of the Majorana square, under (S)'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent
 kind: claim
 version: 2
-title: 'For the gauge algebra $\mathfrak{su}(2) \oplus \mathfrak{su}(3) \oplus \mathfrak{u}(1)$ of the minimal massive composite, realised up to isomorphism by bivectors of $\Cl(9,0)$, the field-level BRST differential of the Lie-algebra-valued vector potential, $sA = \nabla c + g[A, c]$ (the covariant derivative of the ghost) with $sc = -\tfrac{g}{2}[c, c]$, squares to zero on all fields and their derivatives for every coupling, needs the Jacobi identity, the factor $\tfrac12$ and the covariant term, transforms the bivector field strength covariantly, and makes the Yang-Mills density plus an exact gauge-fixing term with the Faddeev-Popov operator invariant'
+title: 'The BRST differential of the derived gauge fields is nilpotent'
 status: proved
 region: synthesis
 subject: quantum-fields

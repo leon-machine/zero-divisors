@@ -2,7 +2,7 @@
 id: programme.n-parameter-of-the-laws
 kind: claim
 version: 7
-title: 'The number N: a parameter of the laws under the action as written, initial data under the promoted action the series adopts'
+title: 'The number N: a law under the action as written, initial data once promoted'
 status: conjectured
 subject: dark-energy
 tags:

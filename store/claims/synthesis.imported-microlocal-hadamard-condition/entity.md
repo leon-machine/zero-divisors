@@ -2,7 +2,7 @@
 id: synthesis.imported-microlocal-hadamard-condition
 kind: claim
 version: 2
-title: 'Imported: the microlocal form of the Hadamard condition (Radzikowski 1996), and for the Dirac field on both orderings of the two-point function (Hollands 2001), under which Hadamard states differ by smooth kernels'
+title: 'Imported: the microlocal Hadamard condition (Radzikowski; Hollands)'
 status: imported
 region: synthesis
 subject: thermality

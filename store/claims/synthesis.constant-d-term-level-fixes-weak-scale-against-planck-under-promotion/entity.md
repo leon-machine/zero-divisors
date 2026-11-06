@@ -2,7 +2,7 @@
 id: synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion
 kind: claim
 version: 2
-title: Under the Henneaux-Teitelboim promotion, the rung field's D-term action with its level a constant of the action fixes $\xi G$, hence the weak scale against the Planck mass up to relative order $(H/v)^{4}$, while $v/H$ is initial data; $v/H$ is the same on every solution only if the level is proportional to $\Lambda$, and $Gv^{2}N^{2} = (v/H)^{2}$ is an identity, a constant of the laws exactly when $v/H$ is, so it does not decide the branch
+title: 'A constant D-term level fixes the weak scale under promotion'
 status: proved
 region: synthesis
 subject: standard-model

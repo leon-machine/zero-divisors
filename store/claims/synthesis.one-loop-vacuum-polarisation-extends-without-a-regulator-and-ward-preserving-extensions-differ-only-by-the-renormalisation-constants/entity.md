@@ -2,7 +2,7 @@
 id: synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants
 kind: claim
 version: 2
-title: 'Standard method (Epstein and Glaser 1973; Freedman, Johnson and Latorre 1992) carried out in the spacetime algebra, under the imported extension theorem: the one-loop vacuum polarisation of electrodynamics extends across the coincident point with no regulator to a Lorentz-covariant, transverse kernel whose scale derivative gives the standard log coefficient of magnitude $e^{2}/(12\pi^{2})$ per Dirac fermion with no Pauli-Villars field and no Krein form; any two covariant one-loop extensions obeying the Ward identities and the reflection differ only by $Z_{3}$, $\delta m$ and $Z_{2} = Z_{1}$, and at most one three-current extension conserves both vector currents, so all such extensions have the same axial divergence (existence of Ward-preserving extensions beyond the vacuum polarisation imported, not proved; the self-energy and vertex kernels rest on the Krein-form premise)'
+title: 'Regulator-free one-loop vacuum polarisation and Ward-preserving extensions'
 status: proved
 region: synthesis
 subject: quantum-fields

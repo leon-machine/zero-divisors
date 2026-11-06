@@ -2,7 +2,7 @@
 id: synthesis.rule-2-fusing-plane-lorentzian
 kind: claim
 version: 2
-title: The Rule 2 fusing directions form a Lorentzian plane, and the sign chooses which of its axes is the vector
+title: 'The Rule 2 fusing directions form a Lorentzian plane'
 status: proved
 region: synthesis
 subject: completion

@@ -2,7 +2,7 @@
 id: synthesis.imported-five-dimensional-chern-simons-gravity
 kind: claim
 version: 1
-title: 'Imported: five-dimensional Chern-Simons gravity, the Chern-Simons five-form of the cubic invariant of the conformal algebra, which split by a vector is the Lovelock combination with ratios $1 : \tfrac23\ell^{-2} : \tfrac15\ell^{-4}$ (Chamseddine)'
+title: 'Imported: five-dimensional Chern-Simons gravity (Chamseddine)'
 status: imported
 region: synthesis
 subject: einstein

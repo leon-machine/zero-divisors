@@ -2,7 +2,7 @@
 id: synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing
 kind: claim
 version: 1
-title: Under the $c^{*}$ reading a second doublet vev of the same family coupling, as in a complex bidoublet with one Yukawa matrix, makes $M_{u}$ a multiple of $M_{d}$, so every family has the same up/down mass ratio and the CKM matrix is the identity, against the record; the up/down split needs a second family matrix independent of the first, and fully $S_{3}$-invariant couplings give two degenerate families in every sector
+title: 'A second doublet of one family coupling gives no quark mixing'
 status: proved
 region: synthesis
 subject: standard-model

@@ -2,7 +2,7 @@
 id: synthesis.slot-covariance-forces-gram-square
 kind: claim
 version: 2
-title: For face forms sesquilinear in the face vector, slot-mixing covariance and the face-wise diagonal force the Gram square, which the permutations alone do not
+title: 'Slot covariance forces the Gram square'
 status: proved
 region: synthesis
 subject: generations

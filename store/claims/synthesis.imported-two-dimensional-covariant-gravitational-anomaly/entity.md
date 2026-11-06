@@ -2,7 +2,7 @@
 id: synthesis.imported-two-dimensional-covariant-gravitational-anomaly
 kind: claim
 version: 1
-title: 'Imported: in two dimensions a chiral field has covariant gravitational anomaly proportional to the gradient of the scalar curvature, with coefficient 1/96 pi per unit of central charge (Iso, Umetsu and Wilczek 2006)'
+title: 'Imported: the two-dimensional covariant gravitational anomaly (Iso et al. 2006)'
 status: imported
 region: synthesis
 subject: dark-matter

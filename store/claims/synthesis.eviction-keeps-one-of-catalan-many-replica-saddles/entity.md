@@ -2,7 +2,7 @@
 id: synthesis.eviction-keeps-one-of-catalan-many-replica-saddles
 kind: claim
 version: 2
-title: 'At every Renyi index the eviction mechanism keeps one replica saddle where the planar replica sum keeps the Catalan number of them: at the crossing the eviction radiation entropy exceeds the planar (Page) one by $\ln C_{n}/(n-1)$, which is $\ln 2$ at $n = 2$, rises to $\ln 4$, and continues to the stored half nat at $n = 1$'
+title: 'Eviction keeps one of Catalan-many replica saddles'
 status: proved
 region: synthesis
 subject: entropy

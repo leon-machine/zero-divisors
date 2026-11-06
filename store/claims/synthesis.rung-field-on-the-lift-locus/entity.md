@@ -2,7 +2,7 @@
 id: synthesis.rung-field-on-the-lift-locus
 kind: claim
 version: 2
-title: On the null-lift locus the rung field's one neutral mode is the rung unit, the weak boson masses have the electroweak pattern at scale H^2 cosh 2 eta in the Hermitian reading (-Lambda/3 in the bilinear one), and every charge-preserving point has doublet lengths with product Lambda/3
+title: 'The rung field on the null-lift locus'
 status: proved
 region: synthesis
 subject: standard-model

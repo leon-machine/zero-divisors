@@ -2,7 +2,7 @@
 id: synthesis.imported-high-temperature-symmetry-restoration-and-exceptions
 kind: claim
 version: 1
-title: 'Imported: thermal corrections generically restore a spontaneously broken gauge symmetry above a temperature of order its scale, with exceptions when scalar cross-couplings are negative, including a range of minimal SU(5) (Kirzhnits and Linde 1972, Dolan and Jackiw 1974, Weinberg 1974, Dvali, Melfo and Senjanovic 1995)'
+title: 'Imported: high-temperature symmetry restoration and its exceptions'
 status: imported
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 kind: claim
 version: 2
-title: 'In the spacetime algebra the reflection of a wedge is conjugation by its boost bivector $B$ ($B^{2} = 1$, $B\tilde B = -1$); it reverses the edge''s null translations, which the wedge''s boosts dilate; the reflections of the wedge and of its copy turned by a quarter turn compose, whichever signs the two versors carry, to a rotor whose square is $-1$, the rotation by $2\pi$ in the spin group (along the turned wedges $B_{\theta}B = \cos\theta + \sin\theta\,\gamma_{1}\gamma_{2}$, whose lift by continuity reaches $-1$ at the causal complement); with $i = I_{4}$ the twist $V = (1 + I_{4}k)(1 + I_{4})^{-1}$ squares to the grading $k$; so, under the spectrum condition and the other hypotheses of an imported theorem, if the modular conjugations of the wedge algebras act on the local algebras as the wedge reflections (weaker than modular covariance), the rotation by $2\pi$ is the statistics operator of the interacting field net; nothing in the store supplies that action on the local algebras'
+title: 'Wedge reflections compose to the $2\pi$ rotor; spin-statistics if geometric'
 status: proved
 region: synthesis
 subject: quantum-fields

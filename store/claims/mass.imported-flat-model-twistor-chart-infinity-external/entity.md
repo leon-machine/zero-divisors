@@ -2,7 +2,7 @@
 id: mass.imported-flat-model-twistor-chart-infinity-external
 kind: claim
 version: 1
-title: "Imported: the flat model, the conformal spinor chart, and the infinity bivector (external ingredients)"
+title: 'Imported: flat model, conformal spinor chart and infinity bivector (external)'
 status: imported
 region: mass
 subject: conformal-spacetime

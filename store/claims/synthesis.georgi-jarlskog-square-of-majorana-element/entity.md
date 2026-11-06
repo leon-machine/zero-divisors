@@ -2,7 +2,7 @@
 id: synthesis.georgi-jarlskog-square-of-majorana-element
 kind: claim
 version: 3
-title: Under (S), the Georgi-Jarlskog composite is the (15,1,3) part of the square of the Majorana element
+title: 'The Georgi-Jarlskog composite at second order in the Majorana vev, under (S)'
 status: proved
 region: synthesis
 subject: standard-model

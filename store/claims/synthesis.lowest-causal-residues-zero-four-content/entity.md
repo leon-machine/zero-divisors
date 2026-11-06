@@ -2,7 +2,7 @@
 id: synthesis.lowest-causal-residues-zero-four-content
 kind: claim
 version: 1
-title: Under T14c's constituent definitions with H1 extended to dimensions two and six, the lowest causal signature of residue 0 holds no massive composite of one spinor ideal and those of residue 4 do; under R1 to R3 the unit-ball fit needs residue 4 empty by premise
+title: 'Mass content of the lowest causal signatures at residues 0 and 4'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.imported-brannen-charged-lepton-phase
 kind: claim
 version: 1
-title: 'Imported: Brannen''s circulant form of the charged-lepton square-root masses, with phase $\delta = 0.2222220(19)$, close to $\tfrac29$ (Brannen 2006)'
+title: 'Imported: Brannen''s charged-lepton phase (Brannen 2006)'
 status: imported
 region: synthesis
 subject: generations

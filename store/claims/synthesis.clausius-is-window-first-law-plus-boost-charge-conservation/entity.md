@@ -2,7 +2,7 @@
 id: synthesis.clausius-is-window-first-law-plus-boost-charge-conservation
 kind: claim
 version: 2
-title: 'Given the temperature clause as the window''s state before the crossing, the Clausius hypothesis at first order follows from the window''s first law and conservation of the patch''s boost charge (J); without (J) it fails, and a fixed window of zero-weight modes absorbs no heat'
+title: 'Clausius from the window''s first law and boost-charge conservation'
 status: proved
 region: synthesis
 subject: einstein

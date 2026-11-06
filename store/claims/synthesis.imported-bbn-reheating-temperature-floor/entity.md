@@ -2,7 +2,7 @@
 id: synthesis.imported-bbn-reheating-temperature-floor
 kind: claim
 version: 1
-title: 'Imported: big-bang nucleosynthesis bounds the reheating temperature below by a few MeV (Hasegawa et al. 2019)'
+title: 'Imported: the reheating floor from nucleosynthesis (Hasegawa et al. 2019)'
 status: imported
 region: synthesis
 subject: dark-energy

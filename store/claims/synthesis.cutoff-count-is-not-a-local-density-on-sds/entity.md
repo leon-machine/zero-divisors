@@ -2,7 +2,7 @@
 id: synthesis.cutoff-count-is-not-a-local-density-on-sds
 kind: claim
 version: 3
-title: On a Schwarzschild-de Sitter hole the cutoff count over the hole's modular period is $u/(3u - 2)$ times $A_{b}/4$, $u = 2M/r_{b}$, an entropy per unit horizon area $1/(4(1 - 2\Lambda/3w_{h}))$, $w_{h} = 2M/r_{b}^{3}$, unbounded towards the Nariai limit; so the count per unit area is not curvature-independent and clause (Loc) cannot be obtained from (C1), (C2) and (IC) read with a horizon's modular period under one mode set
+title: 'On Schwarzschild-de Sitter the cutoff count is not a local density'
 status: proved
 region: synthesis
 subject: einstein

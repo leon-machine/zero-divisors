@@ -2,7 +2,7 @@
 id: synthesis.principality-is-genericity
 kind: claim
 version: 1
-title: Principality is genericity, not symmetry (invariance selects the zero map, indistinguishable blocks allow every rectangular type)
+title: 'Principality is genericity, not symmetry'
 status: proved
 region: synthesis
 subject: programme

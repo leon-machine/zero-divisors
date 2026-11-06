@@ -2,7 +2,7 @@
 id: synthesis.twistor-flat-fields-give-nordstrom-not-einstein
 kind: claim
 version: 2
-title: 'On the gravitational fields where twistor transport is path independent, exactly those with vanishing Weyl curvature, Einstein''s equations admit no perfect fluid whose density varies on its rest spaces and no vacuum field but constant curvature, while Nordstr\"om''s trace equation is solvable for every stress trace with no condition on the matter; so the consistency conditions of a coupled system on these fields (Bianchi identities, conservation, second order, the Newtonian limit) do not give Einstein''s equations without the clause that the whole stress map is the source'
+title: 'Twistor-flat fields give Nordstrom, not Einstein'
 status: proved
 region: synthesis
 subject: einstein

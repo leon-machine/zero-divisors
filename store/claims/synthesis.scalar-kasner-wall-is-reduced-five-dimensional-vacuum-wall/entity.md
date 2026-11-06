@@ -2,7 +2,7 @@
 id: synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
 kind: claim
 version: 1
-title: Every diagonal (synchronous Bianchi I) Kasner wall of a gravitational field coupled to a massless scalar is the Einstein-frame reduction, along a fixed axis, of exactly one five-dimensional vacuum Kasner wall, and its residue, a boost of norm below one in $\Cl(1,3)$, completes to a unit boost $B_w + c\,e_0e_4$ in $\Cl(1,4)$ whose extra component $c = \sqrt{8\pi G}\,q$ is the scalar's logarithmic rate
+title: 'The scalar Kasner wall as a reduced five-dimensional vacuum wall'
 status: proved
 region: synthesis
 subject: interior

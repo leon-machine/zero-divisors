@@ -2,7 +2,7 @@
 id: synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd
 kind: claim
 version: 1
-title: Under the per-sector conjugate reading (down entries from $c_{k}g_{k}$, up entries from $c_{k}^{*}g_{k}$, one family matrix per composite; a reading that is not $\su(2)_{R}$ covariant), for composites $c_{k}g_{k}$ of rung-$4$ vectors with diagonal weightings $h_{k}(T_{3R}, B - L)$ the up-down split is carried by $T_{3R}$-odd weightings or by the product of two CP-odd relative phases; for $T_{3R}$-even composites, those of one rung vector give $M_{u}$ proportional to $M_{d}$ whatever their family matrices, relatively real family matrices give $H_{u} = \overline{H_{d}}$, and a $10$ with one $120$ keeps $\tr H_{u} = \tr H_{d}$
+title: 'Under the conjugate reading, the up-down split is $T_{3R}$-odd or CP-odd'
 status: proved
 region: synthesis
 subject: standard-model

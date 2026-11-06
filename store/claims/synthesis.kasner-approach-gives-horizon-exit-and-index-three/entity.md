@@ -2,7 +2,7 @@
 id: synthesis.kasner-approach-gives-horizon-exit-and-index-three
 kind: claim
 version: 2
-title: On a Kasner approach to a wall a massless minimally coupled scalar's modes leave the Hubble length, but along each principal axis their equation is Bessel's of order zero for every exponent set with $\sum p = 1$, so within an epoch the exited spectrum has index between 2 and 3, tending to 3, and no red tilt
+title: 'A Kasner approach gives horizon exit with index three and no red tilt'
 status: proved
 region: synthesis
 subject: dark-energy

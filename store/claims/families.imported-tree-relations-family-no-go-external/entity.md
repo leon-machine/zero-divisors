@@ -2,7 +2,7 @@
 id: families.imported-tree-relations-family-no-go-external
 kind: claim
 version: 1
-title: 'Imported: the tree relations, the family no-go, and the two other no-gos (external ingredients)'
+title: 'Imported: the tree relations and the family no-gos (external ingredients)'
 status: imported
 region: families
 subject: generations

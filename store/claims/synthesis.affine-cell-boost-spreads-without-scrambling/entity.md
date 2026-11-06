@@ -2,7 +2,7 @@
 id: synthesis.affine-cell-boost-spreads-without-scrambling
 kind: claim
 version: 1
-title: The real-time boost spreads an affine cell over e^(kappa t) cells while every local anticommutator decays
+title: 'The boost spreads affine cells without scrambling'
 status: proved
 region: synthesis
 subject: thermality

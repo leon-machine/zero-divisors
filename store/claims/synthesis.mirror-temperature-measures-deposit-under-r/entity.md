@@ -2,7 +2,7 @@
 id: synthesis.mirror-temperature-measures-deposit-under-r
 kind: claim
 version: 1
-title: Under Premise (R) the gravitational floor is negligible, and the mirror's temperature measures the descent's deposit per unit charge in units of the reheating temperature
+title: 'Under (R) the mirror temperature measures the deposit'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 kind: claim
 version: 2
-title: 'On the tractor gauge field of every torsion-free field the frozen-point MacDowell-Mansouri integrand is a quarter of the Weyl square (store orientation) and sees the frozen point only through $\ip{X}{I}$; with the canonical tractor alone, on that locus, the only density quadratic in $F$ beyond the Chern form is the Weyl square, which is not topological, and no such density with frame legs has an Einstein-Hilbert term, so the Einstein equations of the frozen-point functional come from varying it over connections preserving $I$'
+title: 'On transport the frozen-point integrand is a quarter of the Weyl square'
 status: proved
 region: synthesis
 subject: einstein

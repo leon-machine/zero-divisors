@@ -2,7 +2,7 @@
 id: synthesis.twistor-form-states-only-off-the-real-slice
 kind: claim
 version: 1
-title: Under the invariant twistor form, incidence lines of real points carry no states, and the lines along an imaginary boost are definite on each half strip, of opposite signs
+title: 'Twistor-form states live only off the real slice'
 status: proved
 region: synthesis
 subject: one-relation

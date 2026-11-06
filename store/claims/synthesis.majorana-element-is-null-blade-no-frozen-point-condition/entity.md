@@ -2,7 +2,7 @@
 id: synthesis.majorana-element-is-null-blade-no-frozen-point-condition
 kind: claim
 version: 2
-title: The Majorana element is a null five-blade of nonzero $B - L$ weight, so the Clifford norm of the frozen-point kind vanishes on it and on the whole self-dual $126$, and every invariant polynomial, holomorphic or of the real form, vanishes on it and its orbit; only the Fock norm, which needs the Hermitian structure, survives, so no condition of the frozen-point kind fixes the Majorana scale
+title: 'The Majorana element is a null blade; no frozen-point condition fixes its scale'
 status: proved
 region: synthesis
 subject: neutrinos

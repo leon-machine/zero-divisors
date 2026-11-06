@@ -2,7 +2,7 @@
 id: synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch
 kind: claim
 version: 2
-title: 'For the scale-free linear rung field with gauge generators read as rung bivectors and the covariant third-family coupling (which gives both doublets top strength), the one-loop running of all ten quartics is given in closed form (the standard two-doublet equations under an explicit dictionary; the gauge contributions, with internal gauge lines in Landau gauge, under the Krein premise), the two-loop pure-quartic running on the branch $k_{4} = k_{5} = k_{6} = k_{7} = 0$ is given exactly, and the running of the flat-direction quartic is the stored scalon sum, $m_{h}^{2} = 4v^{2}\beta_{k_{2}}$, with a scalon self-coupling $\tfrac53$ of its tree value (standard); under the Gildener-Weinberg formula and decoupling, on the scalon-sum surface the quartics reach $4\pi$ between about $0.8$ and $4$ TeV at one loop (computed)'
+title: 'On the transmutation branch the rung quartics turn strong within a few TeV'
 status: proved
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.lens-space-wall-rung-count-sees-the-integral-twist
 kind: claim
 version: 2
-title: On a tame wall with cross-section L(4,1) and twisted dying line in four dimensions, two rungs suffice when the physical side is indefinite (the mod-2 lower bound is attained) and three are needed when it is definite; with a definite side the rung count is therefore not a function of the mod-2 data, since a three-torus wall with the same data needs two, and is decided by whether the doubled dying line is trivial (classically, by the integral Bockstein of its class)
+title: 'Lens-space wall: the rung count sees the integral twist'
 status: proved
 region: synthesis
 subject: walls

@@ -2,7 +2,7 @@
 id: synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
 kind: claim
 version: 2
-title: On a horizon generator the boost is the anticommutator-preserving scaling about the edge, so a stationary gauge-invariant quasi-free state is its own scaling limit there and is the null vacuum of (N$_{+}$) exactly when it is locally the null vacuum at the edge; stationary states thermal on each half at any period, with or without cross-edge correlation, are locally the null vacuum at every other point, so the content of (N$_{+}$) beyond stationarity sits at the bifurcation surface alone
+title: 'A stationary horizon state is its own edge scaling limit'
 status: proved
 region: synthesis
 subject: thermality

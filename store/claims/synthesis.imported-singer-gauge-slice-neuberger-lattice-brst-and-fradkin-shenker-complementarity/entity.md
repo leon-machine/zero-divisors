@@ -2,7 +2,7 @@
 id: synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity
 kind: claim
 version: 1
-title: 'Imported: no continuous gauge-fixing condition exists for a non-abelian gauge field on the three- or four-sphere (Singer 1978); a lattice BRST gauge fixing of a compact gauge group gives a vanishing partition function and expectation values 0/0, the Gribov copies cancelling in pairs with the signs of the Faddeev-Popov determinant (Neuberger 1987); and with Higgs fields of fixed length in the fundamental representation the Higgs and confinement regions of a lattice gauge theory are analytically connected (Fradkin and Shenker 1979)'
+title: 'Imported: no global gauge slice, lattice BRST 0/0, Higgs-confinement continuity'
 status: imported
 region: synthesis
 subject: quantum-fields

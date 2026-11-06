@@ -2,7 +2,7 @@
 id: synthesis.stelle-west-norm-is-no-local-output
 kind: claim
 version: 2
-title: 'In the constant-coupling family $c_{1}L_{1} + c_{3}L_{3} + c_{5}L_{5}$ the Stelle-West norm is no local output: released as a local field in the frozen-point MacDowell-Mansouri functional its equation is the Weyl-square density, which no Stelle-West vector satisfies on the Schwarzschild-de Sitter field; without the MacDowell-Mansouri term ($c_{1} = 0$) the norm is fixed by the ratio $c_{5}/c_{3}$, and with it a constant-norm solution needs $|W|^{2}$ constant'
+title: 'The Stelle-West norm is no local output'
 status: proved
 region: synthesis
 subject: einstein

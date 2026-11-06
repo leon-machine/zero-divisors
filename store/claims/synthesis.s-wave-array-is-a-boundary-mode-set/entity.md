@@ -2,7 +2,7 @@
 id: synthesis.s-wave-array-is-a-boundary-mode-set
 kind: claim
 version: 3
-title: The s-wave array is a boundary-mode set, with the tower as its model and one zero mode in its trace state
+title: 'The s-wave array is a boundary-mode set'
 status: proved
 region: synthesis
 subject: thermality

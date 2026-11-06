@@ -2,7 +2,7 @@
 id: synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
 kind: claim
 version: 2
-title: Under the Wald functional of the series' action, the entropy of a radial local Rindler horizon of every Schwarzschild-de Sitter hole changes with no area change and no matter flux, upward outward and downward inward; so, with entropy a functional of the cut, the Euler term is visible on open patches and the Wald reading contradicts (Loc) and the Clausius relation on open patches
+title: 'Wald entropy changes without flux on local horizons, against (Loc)'
 status: proved
 region: synthesis
 subject: einstein

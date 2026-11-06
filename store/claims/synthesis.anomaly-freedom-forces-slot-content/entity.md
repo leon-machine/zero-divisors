@@ -2,7 +2,7 @@
 id: synthesis.anomaly-freedom-forces-slot-content
 kind: claim
 version: 3
-title: Anomaly freedom forces odd slot parity and the slot content of Hypothesis (S), up to multiplicity
+title: 'Anomaly freedom forces odd slots and the slot content of (S)'
 status: proved
 region: synthesis
 subject: standard-model

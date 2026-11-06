@@ -2,7 +2,7 @@
 id: synthesis.massless-composites-de-sitter-conformal-boundary
 kind: claim
 version: 2
-title: Massless composites sit on the conformal boundary of de Sitter space, and the condensation source vanishes at those with zero flat bracket
+title: 'Massless composites sit on the conformal boundary of de Sitter space'
 status: proved
 region: synthesis
 subject: mass

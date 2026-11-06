@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-complement-window-lowest-causal
 kind: claim
 version: 1
-title: If every tower's spacetime is, up to sign, a nondegenerate subspace of the frozen point's complement (a candidate premise restating P3's window), each residue other than 4 has exactly one causal representative, its lowest, and residue 4 has no causal one; with a cosmological constant that is not positive the five-dimensional towers drop out as well
+title: 'The frozen point''s complement as window: lowest causal representatives'
 status: proved
 region: synthesis
 subject: dark-matter

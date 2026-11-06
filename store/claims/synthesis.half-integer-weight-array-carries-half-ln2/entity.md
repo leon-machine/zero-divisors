@@ -2,7 +2,7 @@
 id: synthesis.half-integer-weight-array-carries-half-ln2
 kind: claim
 version: 4
-title: With the sea level between sites the s-wave array carries exactly half of ln 2 at the Hawking temperature
+title: 'With half-integer weights the s-wave array carries half of ln 2'
 status: proved
 region: synthesis
 subject: entropy

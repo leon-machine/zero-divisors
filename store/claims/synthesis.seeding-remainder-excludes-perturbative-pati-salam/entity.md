@@ -2,7 +2,7 @@
 id: synthesis.seeding-remainder-excludes-perturbative-pati-salam
 kind: claim
 version: 2
-title: If the odd-tower remainder is a gravitational-seeding relic, Premise (R) excludes the perturbative Pati-Salam branch at the two-loop record level
+title: 'A seeding-relic remainder excludes perturbative Pati-Salam'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: synthesis.imported-schwinger-term-and-mattis-lieb-density-algebra
 kind: claim
 version: 1
-title: 'Imported: the Schwinger term (Schwinger 1959) and the density algebra of a chiral band (Tomonaga 1950; Mattis and Lieb 1965): with the sea filled, $[\rho(-p), \rho(p)] = p$ for the Fourier modes of the density, a central term that arises from the normal ordering of an unbounded band and is absent for any finite band'
+title: 'Imported: the Schwinger term and the chiral density algebra (Mattis and Lieb)'
 status: imported
 region: synthesis
 subject: quantum-fields

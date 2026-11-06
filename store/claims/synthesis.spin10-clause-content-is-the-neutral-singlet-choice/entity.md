@@ -2,7 +2,7 @@
 id: synthesis.spin10-clause-content-is-the-neutral-singlet-choice
 kind: claim
 version: 2
-title: On the five-mode module the gauge algebra, the number-conserving bilinears $\uu(5)$ and $\so(10)$ leave commutants of dimensions $14$, $6$ and $2$; the CPT halvings commuting with the gauge algebra are $32$ sign patterns times a free pair of lines in the neutral block, $\uu(5)$ (the total mode number alone suffices for the final count) and anomaly freedom cut them to four, differing only in whether the empty or the full state is the particle half's neutral singlet, two choices conjugate under a gauge-commuting swap, and $\Spin(10)$ to the two halvings $\pm(-1)^{N}$, which are exactly the involutions for which the ten generators of the joint Clifford system are odd
+title: 'The Spin(10) clause''s content is the choice of neutral singlet'
 status: proved
 region: synthesis
 subject: standard-model

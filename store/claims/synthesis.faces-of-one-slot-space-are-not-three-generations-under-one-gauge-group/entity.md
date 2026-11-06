@@ -2,7 +2,7 @@
 id: synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group
 kind: claim
 version: 1
-title: 'Read in one state space, the three faces of the three-spinor composite are not three generations under one gauge group: any Lie algebra acting linearly on the three slots has at most one face plane as an irreducible invariant subspace, so at most one face is a weak doublet, and the faces'' chirality halves overlap: with one pair system shared by the faces they span 28 of the 32 even states of $\Lambda^{\bullet}(\C^{3} \oplus W)$ (at most 40 with halves chosen face by face), with separate pair modes per face 46 (at most 47), in every case short of the 48 of three generations'
+title: 'The faces of one slot space are not three generations'
 status: proved
 region: synthesis
 subject: generations

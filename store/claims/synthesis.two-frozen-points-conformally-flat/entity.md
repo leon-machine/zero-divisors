@@ -2,7 +2,7 @@
 id: synthesis.two-frozen-points-conformally-flat
 kind: claim
 version: 3
-title: On the de Sitter vacuum two frozen points of one norm are allowed, so the metric clause of P1 is an independent choice there
+title: 'Two frozen points of one norm on conformally flat fields'
 status: proved
 region: synthesis
 subject: dark-matter

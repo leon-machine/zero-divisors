@@ -2,7 +2,7 @@
 id: synthesis.q-splits-maximum-entropy-affine-weights
 kind: claim
 version: 4
-title: Premise (Q) splits into the maximum-entropy member of the (P),(R) class and an affine weight law with two free data
+title: 'Premise (Q) splits into maximum entropy and an affine weight law'
 status: proved
 region: synthesis
 subject: thermality

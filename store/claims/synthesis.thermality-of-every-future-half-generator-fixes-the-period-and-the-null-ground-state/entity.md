@@ -2,7 +2,7 @@
 id: synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
 kind: claim
 version: 2
-title: 'For the fermionic (CAR) modes of a horizon generator, a state whose restriction to the future half beyond each point of a set unbounded below is KMS, at some period, for the boost about that point is the null vacuum of (N$_{+}$), and every period is $2\pi$: two points already fix the period, so (N$_{+}$) on a generator is equivalent to temperature-free thermality of its future halves, with no stationarity or quasi-freeness assumed; it applies on generators each of whose points is the edge of a Killing wedge (Minkowski null planes; de Sitter horizons, argued), not on the eternal hole'
+title: 'Thermal future halves fix the period and the null ground state'
 status: proved
 region: synthesis
 subject: thermality

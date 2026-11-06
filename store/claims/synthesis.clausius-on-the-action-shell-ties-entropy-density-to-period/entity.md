@@ -2,7 +2,7 @@
 id: synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period
 kind: claim
 version: 1
-title: 'If the field equations are those of the field-space action with one normalisation $G$ and $\Lambda \neq 0$, and the Clausius relation holds on local patches at rapidity period $2\pi c$, then at every point where the stress is not a multiple of the metric the Clausius relation is exactly $\eta = c/(4G)$ (Jacobson''s identification at period $2\pi c$); so, given the calibration $\eta = \tfrac14$ with the action''s $G$ in the same units ($G = 1$), the one-coupling clause of (Loc) and the period of (R$_{\mathrm{loc}}$) imply each other where matter crosses and the stored independence model of each fails there given the other datum, while on matter-free regions the relation is empty'
+title: 'On the action shell, Clausius ties entropy density to the period'
 status: proved
 region: synthesis
 subject: einstein

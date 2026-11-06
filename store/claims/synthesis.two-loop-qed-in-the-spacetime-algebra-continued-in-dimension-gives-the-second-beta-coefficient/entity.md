@@ -2,7 +2,7 @@
 id: synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient
 kind: claim
 version: 2
-title: 'Two-loop electrodynamics in the spacetime algebra continued in dimension, under the Krein-form premise and in dimensional regularisation: the vacuum polarisation of a massless Dirac fermion is transverse and independent of the gauge parameter identically in $d$, has a simple pole only because the vertex and self-energy subdivergences cancel, and recovers the standard second coefficient $\beta_{1} = 4$ per fermion (Jost and Luttinger 1950) ($\mu\,d\alpha/d\mu = 2\alpha^{2}/(3\pi) + \alpha^{3}/(2\pi^{2})$) with the $\overline{\mathrm{MS}}$ constant $16\zeta_{3} - 55/3$; the Ward-Takahashi identity holds integrand by integrand at two loops, so $Z_{1} = Z_{2}$ there (argued for the integrals)'
+title: 'Two-loop QED in the spacetime algebra gives the second beta coefficient'
 status: proved
 region: synthesis
 subject: quantum-fields

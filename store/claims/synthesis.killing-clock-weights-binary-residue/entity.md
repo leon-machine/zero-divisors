@@ -2,7 +2,7 @@
 id: synthesis.killing-clock-weights-binary-residue
 kind: claim
 version: 3
-title: If the Killing flow on the counted modes is a clock at unit rapidity, each has weight zero or one surface gravity; under the area-law hypothesis the residue lies on one curve, binary under rotation invariance
+title: 'Killing-clock weights make the residue binary'
 status: proved
 region: synthesis
 subject: entropy

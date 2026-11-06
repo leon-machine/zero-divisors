@@ -2,7 +2,7 @@
 id: synthesis.imported-planck-2018-lcdm-parameters
 kind: claim
 version: 2
-title: 'Imported: the base-$\Lambda$CDM parameters of Planck 2018 (Planck Collaboration 2020) and the radiation density they imply'
+title: 'Imported: the Planck 2018 base-$\Lambda$CDM parameters'
 status: imported
 region: synthesis
 subject: dark-energy

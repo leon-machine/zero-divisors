@@ -73,7 +73,8 @@ Per problem:
    version: <new version>, source: run <run>}`, and an `amendments` entry `{version: <new
    version>, kind: correction | restatement, defect: <what was wrong>, evidence: <a check of it>}`),
    after `check4.py` exits 0 (apart from environmental E401) and
-   validate_draft is ok. Copy the format of an existing AI-contributed claim.
+   validate_draft is ok. Copy the format of an existing AI-contributed claim. The title is a
+   short name for the result (at most 90 characters, E124), never the statement itself.
 7. Read any message from the bridge-hunter and test the leads it sends you.
 Write `runs/<run>/findings/attack-<name>.md` early and keep it current: per problem, routes,
 choice, kill condition, what was established (labelled), proposal id, next step; then

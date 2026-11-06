@@ -2,7 +2,7 @@
 id: synthesis.imported-holonomy-reductions-of-cartan-geometries
 kind: claim
 version: 1
-title: 'Imported: a parallel section of a tractor bundle of a Cartan geometry, normal or not, is a holonomy reduction, and the manifold splits into curved orbits, each with an induced Cartan geometry; for a normal conformal Cartan connection with a parallel standard tractor of nonzero norm the open curved orbits carry Einstein metrics (Cap, Gover and Hammerl)'
+title: 'Imported: holonomy reductions of Cartan geometries (Cap, Gover and Hammerl)'
 status: imported
 region: synthesis
 subject: einstein

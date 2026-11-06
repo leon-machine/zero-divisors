@@ -2,7 +2,7 @@
 id: synthesis.cold-mirror-needs-non-equilibrium-descent
 kind: claim
 version: 1
-title: Equilibrium for a shared boost clock gives the reversal pair one temperature, without applying P2 to the deposit
+title: 'A cold mirror needs a non-equilibrium descent'
 status: proved
 region: synthesis
 subject: dark-matter

@@ -2,7 +2,7 @@
 id: standard-model.slot-module-hypothesis
 kind: claim
 version: 4
-title: 'The slot-module hypothesis: the weaker constituent hypothesis behind (S), with the slot module generated from a unique vacuum and the chirality a CPT halving commuting with the Pati-Salam algebra'
+title: 'The slot-module hypothesis behind (S)'
 status: postulate
 region: standard-model
 subject: standard-model

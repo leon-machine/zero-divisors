@@ -2,7 +2,7 @@
 id: synthesis.imported-hadamard-stress-tensor-diverges-at-the-reissner-nordstrom-de-sitter-cauchy-horizon
 kind: claim
 version: 1
-title: 'Imported: on the Reissner-Nordstrom-de Sitter field, for a free scalar field in any state that is Hadamard in the domain of dependence of the initial data, the expected stress tensor diverges at the Cauchy horizon as $C/V^{2}$ in an affine parameter, with $C$ independent of the state and generically nonzero (Hollands, Wald and Zahn 2020)'
+title: 'Imported: the Cauchy-horizon stress divergence (Hollands, Wald and Zahn 2020)'
 status: imported
 region: synthesis
 subject: quantum-fields

@@ -2,8 +2,7 @@
 id: refuted.the-three-twistor-hierarchy-carries-the-standard
 kind: claim
 version: 2
-title: The hierarchy of three conformal spinors $\mathbb{C}^{3}\otimes\mathbb{C}^{3}$ carries the Standard
-  Model
+title: 'No Standard Model algebra on the three-spinor hierarchy'
 status: refuted
 subject: standard-model
 tags:

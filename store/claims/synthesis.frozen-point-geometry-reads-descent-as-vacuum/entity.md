@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-geometry-reads-descent-as-vacuum
 kind: claim
 version: 1
-title: Under hypothesis (F), that the descended universe's late de Sitter stage is the frozen point's own field, a deposit correlated by the frozen point's stabiliser has range beyond the stored requirement by over $4 \times 10^{5}$ but reads every observed mode as inside the frozen point's horizon, so its spectrum is the vacuum's, $n_{s} - 1 = 2$
+title: 'Under (F), the frozen point reads the descent deposit as vacuum'
 status: proved
 region: synthesis
 subject: dark-energy

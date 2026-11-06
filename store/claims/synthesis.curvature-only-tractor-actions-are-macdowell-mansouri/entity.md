@@ -2,7 +2,7 @@
 id: synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
 kind: claim
 version: 3
-title: 'Curvature-only actions of the tractor gauge field (polynomial, inverse-frame-free, gauge invariant, depending on the field only through its strength): they are topological for pure transport and for the frozen point alone; with the canonical tractor alone and the field strength unrestricted none is odd under the internal reflection; with the connection reduced by the frozen point and the canonical tractor added, they are spanned by the Chern-Weil form, a Holst-type form inert without torsion and $\epsilon(I, X, F, F)$, so, given invariance under the combined spacetime and internal parity, the frozen-point MacDowell-Mansouri functional is the unique one up to normalisation, and inside this class it carries the Euler term with a coefficient fixed by $\Lambda$'
+title: 'Curvature-only tractor actions: MacDowell-Mansouri is unique under parity'
 status: proved
 region: synthesis
 subject: einstein

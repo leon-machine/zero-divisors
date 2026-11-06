@@ -2,7 +2,7 @@
 id: synthesis.kerr-ring-count-misses-area-law
 kind: claim
 version: 5
-title: For Kerr with a >= 2(2M)^{2/3} the curvature-cutoff locus is a timelike tube beyond the inner horizon, and the counting rule read literally misses the area law by a factor of order M^{-1/3}
+title: 'For Kerr the literal curvature-cutoff count misses the area law'
 status: proved
 region: synthesis
 subject: entropy

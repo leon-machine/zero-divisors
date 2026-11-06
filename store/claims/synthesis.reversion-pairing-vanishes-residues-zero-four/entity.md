@@ -2,7 +2,7 @@
 id: synthesis.reversion-pairing-vanishes-residues-zero-four
 kind: claim
 version: 1
-title: In every dimension the reversion pairing on a causal tower's spinor ideal vanishes identically exactly at residues 0 and 4, where T14c's pair law and the momentum of H1 part company
+title: 'The reversion pairing vanishes exactly at residues 0 and 4'
 status: proved
 region: synthesis
 subject: dark-matter

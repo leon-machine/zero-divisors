@@ -2,7 +2,7 @@
 id: synthesis.loc-independent-of-clausius-and-killing-data
 kind: claim
 version: 4
-title: The curvature-independence clause (Loc) is independent of the Clausius relation, of (R$_{\mathrm{loc}}$) and of every $\Lambda$-vacuum horizon datum of the store; a density $\tfrac14(1 + c\,S_{ab}S^{ab})$ passes all of them and differs from $\tfrac14$ in the Einstein static universe, and on the integrated reading such failures are confined to spacetimes with no calibrated vacuum point
+title: '(Loc) is independent of Clausius and the Killing data'
 status: proved
 region: synthesis
 subject: einstein

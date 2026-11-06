@@ -2,7 +2,7 @@
 id: synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent
 kind: claim
 version: 1
-title: On the integrated reading of (Loc), the Clausius relation with the de Sitter calibration forces a continuous entropy density to 1/4 on every admissible field whose local data approach calibrated data; so a continuous density depending on curvature alone that keeps the flat Friedmann fields with $w \in [0,1]$ and $\Lambda \ge 0$ admissible is 1/4 at every curvature they pass through, the Einstein static universe's among them; a density that depends on matter as well escapes with every field satisfying Einstein's equations at the calibrated coupling admissible
+title: 'Integrated (Loc): curvature-only densities are forced to 1/4, matter ones escape'
 status: proved
 region: synthesis
 subject: einstein

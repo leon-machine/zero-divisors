@@ -2,7 +2,7 @@
 id: synthesis.quartic-ordering-tensor-locally-trivial
 kind: claim
 version: 3
-title: A deformation closing on the quadratics has a locally trivial quartic ordering tensor; googly data there is a redefinition
+title: 'The quartic ordering tensor is locally trivial'
 status: proved
 region: synthesis
 subject: conformal-spacetime

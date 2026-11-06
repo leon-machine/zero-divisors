@@ -2,7 +2,7 @@
 id: synthesis.inverse-problem-for-the-clausius-route
 kind: claim
 version: 2
-title: 'Inverting the Clausius route: with the metric as the varied field, of the algebraic rewritings $M_{\beta}(\mathcal{G} + \Lambda)$ of the route''s equations only the Einstein form passes the Helmholtz condition (other forms pass for reparametrised fields, except the $\Lambda$-free trace-free form); the route''s solution set with $\Lambda$ an integration constant is not that of any natural variational problem of order at most two for the metric alone (Lovelock), so a metric action needs a fixed $\Lambda$, which the frozen point''s constraint carries as an input; given Lovelock and Anderson-Duchamp, such an action is Einstein-Hilbert with $G = 1/(4\eta)$ up to Euler, Pontryagin (and, on the $I$-preserving first-order field space, Holst-type and Chern-Weil) terms the route does not see; and the coupled system is variational if and only if the heat tensor is the Hilbert stress up to a matter-independent term'
+title: 'The inverse problem for the Clausius route'
 status: proved
 region: synthesis
 subject: einstein

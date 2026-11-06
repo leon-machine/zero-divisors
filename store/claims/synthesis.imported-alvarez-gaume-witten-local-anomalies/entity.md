@@ -2,7 +2,7 @@
 id: synthesis.imported-alvarez-gaume-witten-local-anomalies
 kind: claim
 version: 1
-title: 'Imported: the local gauge and rotation-gauge anomalies of chiral fields come from the degree-(n+2) part of the A-hat genus times the Chern character, and purely gravitational ones occur only in dimensions 4k+2 (Alvarez-Gaume and Witten 1984)'
+title: 'Imported: local anomalies from the A-hat genus (Alvarez-Gaume and Witten 1984)'
 status: imported
 region: synthesis
 subject: dark-matter

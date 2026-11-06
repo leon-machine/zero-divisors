@@ -2,7 +2,7 @@
 id: synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet
 kind: claim
 version: 1
-title: Read as an element of the tower, the rung field is odd, so it has zero expectation in every grading-invariant state while its invariants $N$, $m$ and $Q$ are even bilinears; the even part of the algebra of the two rung planes is five isospin singlets and one triplet, so no element built from the rung modes alone is a bosonic doublet; an even doublet needs an odd generator from outside the rung planes, and with one it obeys the canonical anticommutation relations, not the canonical commutation relations
+title: 'The rung field is odd in the tower; no even doublet in its modes'
 status: proved
 region: synthesis
 subject: quantum-fields

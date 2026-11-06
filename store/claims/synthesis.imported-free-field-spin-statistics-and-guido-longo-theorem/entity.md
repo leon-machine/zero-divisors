@@ -2,7 +2,7 @@
 id: synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem
 kind: claim
 version: 1
-title: 'Imported: the massless two-point function $D_{+}$, real and even at spacelike separation; Pauli''s free-field spin-statistics argument (1940); and the algebraic spin-statistics theorem of Guido and Longo (1995): for a modular covariant net of field algebras with the Reeh-Schlieder property and normal commutation relations the statistics grading is $\Gamma = U(2\pi)$'
+title: 'Imported: free-field spin-statistics and the Guido-Longo theorem'
 status: imported
 region: synthesis
 subject: quantum-fields

@@ -2,7 +2,7 @@
 id: synthesis.de-sitter-field-fixes-the-observer-tube-point
 kind: claim
 version: 2
-title: In the de Sitter gravitational field the symmetries commuting with a wedge's boost fix exactly one orbit of compatible tube points, foot at the scale's centre and $\rho^{2} = 12/\Lambda$; there $\operatorname{Re}X(m) = \tfrac{6}{\Lambda}I_{\Lambda}$ and the complexified Stelle-West vector $X(m)/\sigma(m) - \tfrac{3}{\Lambda}I_{\Lambda}$ is purely imaginary, $i\ell u$; on it the boost generator's physical norm is maximal and equal to $1/\kappa$, the orbit is in free fall, and the bifurcation plane is a round sphere with its equator there, so the frozen-point and surface-gravity candidates for the scale are one tube point when $\rho = 1/\kappa$ is read as the physical norm of the boost generator, while in chart length $\rho_{\Lambda} = 2/\kappa$, the factor $2$ being the local scale $\sigma = 2$; the coincidence is that of a field with one horizon; for $\Lambda \le 0$ no tube point is fixed
+title: 'The de Sitter field fixes the observer''s tube point'
 status: proved
 region: synthesis
 subject: one-relation

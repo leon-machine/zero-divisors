@@ -2,7 +2,7 @@
 id: synthesis.schwarzschild-horizon-translations-are-no-conformal-symmetry
 kind: claim
 version: 1
-title: Every conformal symmetry of the Schwarzschild field, on any connected open part of its invertible region, is a constant combination of its time translation and rotations, because $\hat g = (2M/r)^{3}g$, a constant multiple of the square root of the field's Weyl square times $g$, is invariant under every conformal map of the field and has scalar curvature $(27M - \tfrac92 r)/(2M)^{3}$; so on no open piece of the horizon are the affine translations of the generators the restriction of a conformal symmetry, and the positivity of item (ii) of (N$_{+}$) case (a) cannot come from the field's conformal structure
+title: 'Schwarzschild horizon translations are no conformal symmetry'
 status: proved
 region: synthesis
 subject: thermality

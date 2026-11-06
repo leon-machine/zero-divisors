@@ -2,7 +2,7 @@
 id: synthesis.window-reading-array-killing-energy
 kind: claim
 version: 1
-title: 'The window reading: an array''s Killing energy is the continuum''s energy over one recurrence window $2\pi/\kappa$, measured from the null ground state of (N$_{+}$)'
+title: 'The window reading of an array''s Killing energy'
 status: postulate
 region: synthesis
 subject: thermality

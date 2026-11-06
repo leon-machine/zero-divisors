@@ -2,7 +2,7 @@
 id: synthesis.imported-brst-kugo-ojima-strocchi-and-gribov
 kind: claim
 version: 1
-title: 'Imported: covariant quantisation of gauge fields: BRST symmetry (Becchi, Rouet and Stora 1976; Tyutin 1975), the Kugo-Ojima quartet mechanism (1979), Strocchi''s theorem that a local covariant vector potential obeying Maxwell''s equations needs an indefinite metric (1967 to 1970), and the Gribov ambiguity of non-abelian gauge fixing (1978)'
+title: 'Imported: BRST, Kugo-Ojima, Strocchi and the Gribov ambiguity'
 status: imported
 region: synthesis
 subject: quantum-fields

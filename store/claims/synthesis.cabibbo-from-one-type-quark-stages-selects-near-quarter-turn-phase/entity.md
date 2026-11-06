@@ -2,7 +2,7 @@
 id: synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
 kind: claim
 version: 2
-title: 'If the quark sectors carry one-type second stages at the $S_{3} \to S_{2}$ direction, the stored light-plane relation is the Gatto-Sartori-Tonin relation and the measured $|V_{us}|$ selects the up-down relative phase $\phi$ (one free number for one observable, not a prediction): real stages and $\cos\phi = \pm\tfrac12$ are excluded and the data need an up-down phase within $30^{\circ}$ of a quarter turn, $|\cos\phi| < \tfrac12$'
+title: 'Cabibbo angle from one-type quark stages selects a near quarter-turn phase'
 status: proved
 region: synthesis
 subject: generations

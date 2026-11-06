@@ -2,7 +2,7 @@
 id: synthesis.imported-harrison-scott-mu-tau-reflection
 kind: claim
 version: 1
-title: 'Imported: mu-tau reflection symmetry, |U_mu i| = |U_tau i| for every i, the exchange of mu and tau combined with CP, gives theta23 = pi/4 and delta = +-pi/2 in the standard parametrisation (Harrison and Scott 2002)'
+title: 'Imported: mu-tau reflection symmetry (Harrison and Scott 2002)'
 status: imported
 region: synthesis
 subject: neutrinos

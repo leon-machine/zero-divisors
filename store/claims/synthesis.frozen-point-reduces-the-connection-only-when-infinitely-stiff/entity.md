@@ -2,7 +2,7 @@
 id: synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff
 kind: claim
 version: 2
-title: 'Read as a Higgs field on unreduced $\Cl(2,4)$ connections, the frozen point reduces the connection, for the stored Stelle-West family and any curvature-independent slot potential, only when infinitely stiff: the family keeps the frozen special-conformal slot stationary only on Einstein fields, or on one line of couplings where the frozen value is the Euler form; a polynomial stiffness penalty interpolates from conformal gravity to the frozen-point functional, and a multiplier imposing $DI = 0$ is the same premise'
+title: 'The frozen point reduces the connection only when infinitely stiff'
 status: proved
 region: synthesis
 subject: einstein

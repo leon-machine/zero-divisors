@@ -2,7 +2,7 @@
 id: synthesis.residues-zero-four-real-chirality-anomaly
 kind: claim
 version: 1
-title: In every window the causal towers of real chirality are residues 0 and 4; in the lowest-causal window one spinor ideal is anomalous at (1,1) in the one metric's field and at (1,5), (5,1) only under (G6), a reading chosen knowing that the unit-ball fit needs residue 4 empty
+title: 'Real chirality at residues 0 and 4, and the spinor-ideal anomaly'
 status: proved
 region: synthesis
 subject: dark-matter

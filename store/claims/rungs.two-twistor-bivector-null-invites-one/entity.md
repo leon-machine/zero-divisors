@@ -2,7 +2,7 @@
 id: rungs.two-twistor-bivector-null-invites-one
 kind: claim
 version: 4
-title: 'The bivector of two conformal spinors is null, invites one rung, and that rung''s $U(2)$ mixes chirality'
+title: 'Two conformal spinors invite one rung, whose $U(2)$ mixes chirality'
 status: proved
 region: rungs
 subject: standard-model

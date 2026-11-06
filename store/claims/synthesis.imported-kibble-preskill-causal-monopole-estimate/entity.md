@@ -2,7 +2,7 @@
 id: synthesis.imported-kibble-preskill-causal-monopole-estimate
 kind: claim
 version: 1
-title: 'Imported: a broken phase formed by a causal process leaves about one defect per correlation volume, at most a Hubble volume, with probability of order one tenth per volume for monopoles (Kibble 1976, Preskill 1979)'
+title: 'Imported: the causal monopole estimate (Kibble 1976, Preskill 1979)'
 status: imported
 region: synthesis
 subject: dark-matter

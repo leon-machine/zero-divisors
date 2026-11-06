@@ -2,7 +2,7 @@
 id: synthesis.plane-grading-records-residue-sign
 kind: claim
 version: 1
-title: "Over the reals, for $r \\not\\equiv 0, 4 \\pmod 8$, the planes' own grading, or any clock on them with no zero mode for isomorphisms that map the ground into the clock's fixed points, records the sign of the residue at the tower top"
+title: 'The plane grading records the sign of the residue'
 status: proved
 region: synthesis
 subject: tower

@@ -2,7 +2,7 @@
 id: synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading
 kind: claim
 version: 2
-title: Under the per-sector Yukawa reading (down-type entries from $c$, up-type entries from $c^{*}$; not $su(2)_{R}$ covariant) every fermion entry of the rung field is a function of its $\beta$ half alone, while at the vacuum $c_{\lambda}$ the charged pair lies in the $\alpha$ half up to the admixture $H^{2}/\lambda^{2} = e^{-2\eta}$; under that reading its fermion couplings and its $W h$ vertex carry that factor, a phase on $\alpha$ alone is broken only by the lift constraint $Q(c) = -H^{2}$, and $t \to bH^{+}$ has branching below $10^{-176}$
+title: 'The charged pair decouples from fermions under the per-sector reading'
 status: proved
 region: synthesis
 subject: standard-model

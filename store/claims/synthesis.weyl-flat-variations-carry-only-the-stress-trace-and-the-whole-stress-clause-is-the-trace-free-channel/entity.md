@@ -2,7 +2,7 @@
 id: synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel
 kind: claim
 version: 1
-title: 'At first order, at each non-null momentum, the classes of gravitational fields that are closed under displacements and covariant under the stabiliser of the momentum are exactly four (at null momentum there are further classes, among them gauge plus the two helicity-two directions); varying the field only within the Weyl-flat class, the domain of the twistor attachment, couples it to the stress trace alone, and the Maxwell field not at all, so displacement gauge invariance does not give the whole-stress clause; the clause is the trace-free channel, which the null fluxes see exactly and which with conservation fixes a conserved source at every nonzero momentum'
+title: 'Weyl-flat variations carry only the stress trace'
 status: proved
 region: synthesis
 subject: einstein

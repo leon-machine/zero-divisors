@@ -2,7 +2,7 @@
 id: synthesis.imported-curvaton-and-modulated-reheating-coefficients
 kind: claim
 version: 1
-title: 'Imported: a dominant curvaton gives zeta = (2/3) X - (1/3) X^2 + (2/9) X^3 + ... in X = delta sigma/sigma, and a modulated decay rate gives zeta = -(1/6) delta Gamma/Gamma at first order (Choi and Seto 2012)'
+title: 'Imported: curvaton and modulated-reheating coefficients (Choi and Seto 2012)'
 status: imported
 region: synthesis
 subject: dark-energy

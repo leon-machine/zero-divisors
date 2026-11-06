@@ -2,7 +2,7 @@
 id: synthesis.sudden-descent-feature-not-tilt
 kind: claim
 version: 3
-title: A sudden descent into the frozen phase with an instantaneous-vacuum start leaves a feature, not a red tilt
+title: 'A sudden descent leaves a feature, not a red tilt'
 status: proved
 region: synthesis
 subject: dark-energy

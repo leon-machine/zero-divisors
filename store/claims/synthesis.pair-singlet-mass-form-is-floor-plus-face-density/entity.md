@@ -2,7 +2,7 @@
 id: synthesis.pair-singlet-mass-form-is-floor-plus-face-density
 kind: claim
 version: 1
-title: On the span of face words the mass form is the floor $1 + \langle N\rangle/4$ plus a weighted face density, so the forced eigenvector is the lowest in every source-built state and, under the mass-squared reading of the mass form, the split is a population ratio of the selected state
+title: 'The pair-singlet mass form is a floor plus a face density'
 status: proved
 region: synthesis
 subject: generations

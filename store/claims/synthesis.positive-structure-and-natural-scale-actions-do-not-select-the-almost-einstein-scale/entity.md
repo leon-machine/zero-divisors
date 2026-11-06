@@ -2,7 +2,7 @@
 id: synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 kind: claim
 version: 1
-title: The symmetry of the positive Hermitian structure fixes no scale tractor (it can fix only the two norms of its projections); the Einstein-Hilbert action restricted to the conformal class and the tractor Dirichlet functional have stationary scales that are not almost-Einstein; and (argued) any local functional of the scale whose Euler-Lagrange equation is noncharacteristic somewhere has an infinite-dimensional stationary set
+title: 'Positive structure and natural actions leave the almost-Einstein scale free'
 status: proved
 region: synthesis
 subject: einstein

@@ -2,7 +2,7 @@
 id: synthesis.crossing-transport-tipler-threshold-sharp
 kind: claim
 version: 4
-title: At a null crossing the Tipler condition is sharp, and beyond it the middle slot's null component has no finite nonzero limit (unbounded for the defocusing sign, crushed to zero at the inverse-square edge for the focusing sign)
+title: 'The Tipler condition is sharp at a null crossing'
 status: proved
 region: synthesis
 subject: interior

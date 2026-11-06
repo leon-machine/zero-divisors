@@ -2,7 +2,7 @@
 id: synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field
 kind: claim
 version: 1
-title: 'Imported: on an ultrastatic slab with compact spatial sections the pure quasi-free state of the free Dirac field extracted from the fermionic projector, the positive part of the weighted spacetime spin product, generically fails to be Hadamard, while the softened states built with a smooth compactly supported time weight are Hadamard (Fewster and Lang 2015)'
+title: 'Imported: spin-product states of the Dirac field (Fewster and Lang 2015)'
 status: imported
 region: synthesis
 subject: quantum-fields

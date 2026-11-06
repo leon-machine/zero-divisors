@@ -2,7 +2,7 @@
 id: synthesis.imported-superhorizon-zeta-conservation
 kind: claim
 version: 3
-title: 'Imported: the curvature perturbation on uniform-density slices is conserved outside the Hubble length for adiabatic perturbations, and so is each non-interacting species'' own curvature perturbation (Wands, Malik, Lyth and Liddle 2000)'
+title: 'Imported: superhorizon conservation of the curvature perturbation (Wands et al.)'
 status: imported
 region: synthesis
 subject: dark-energy

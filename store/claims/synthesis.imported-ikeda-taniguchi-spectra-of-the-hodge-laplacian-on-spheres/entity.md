@@ -2,7 +2,7 @@
 id: synthesis.imported-ikeda-taniguchi-spectra-of-the-hodge-laplacian-on-spheres
 kind: claim
 version: 1
-title: 'Imported: the spectra of the Hodge Laplacian on functions and one-forms of the round sphere $S^{n}$; on coexact one-forms the eigenvalues are $(l + 1)(l + n - 2)$, $l \ge 1$, so $(l + 1)^{2}$ with multiplicity $2l(l + 2)$ on $S^{3}$ and $(l + 1)(l + 2)$ with multiplicity $\tfrac12 l(l + 3)(2l + 3)$ on $S^{4}$ (Ikeda and Taniguchi 1978)'
+title: 'Imported: Hodge Laplacian spectra on spheres (Ikeda and Taniguchi 1978)'
 status: imported
 region: synthesis
 subject: einstein

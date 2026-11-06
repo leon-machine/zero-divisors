@@ -2,7 +2,7 @@
 id: synthesis.channel-phase-invisible-to-axially-covariant-completions
 kind: claim
 version: 2
-title: The channel phase cannot move the mass-form spectrum unless the completion breaks rotations about the democratic axis
+title: 'The channel phase is invisible to axially covariant completions'
 status: proved
 region: synthesis
 subject: generations

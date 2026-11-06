@@ -2,7 +2,7 @@
 id: note.singularity.setting-steps-4b-4c-compute-completion
 kind: note
 version: 1
-title: 'Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator'
+title: 'Steps 4b and 4c: the curvature factorises and its shape selects the plane'
 status: setting
 subject: singularity
 proposed_by:

@@ -2,7 +2,7 @@
 id: synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns
 kind: claim
 version: 1
-title: Couplings that respect the residual $S_{2}$ share the odd eigenvector $(1,-1,0)$ in every mass matrix, quark and lepton, so one row and one column of each mixing matrix are trivial; when that state is the lightest in both sectors of a pair, as the stored textures make it for the leptons, $V_{us} = V_{ub} = V_{cd} = V_{td} = 0$ and $\theta_{12} = \theta_{13} = 0$; a second stage must break $S_{2}$ in the charged-fermion couplings, and the single residual-$S_{2}$ $120$ cannot supply it
+title: 'The residual $S_{2}$ decouples the first family from CKM and PMNS mixing'
 status: proved
 region: synthesis
 subject: neutrinos

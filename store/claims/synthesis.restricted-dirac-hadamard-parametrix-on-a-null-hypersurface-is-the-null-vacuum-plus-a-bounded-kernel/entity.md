@@ -2,7 +2,7 @@
 id: synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
 kind: claim
 version: 1
-title: 'On every piece of a geodesic null hypersurface of a gravitational field whose distinct generators are spacelike separated (every small enough piece, every local Rindler horizon), the Dirac Hadamard parametrix, restricted to the generators in the canonical normalisation as the epsilon-regularised transverse-smeared limit, is the null vacuum plus a bounded kernel: the log epsilon terms cancel identically, so the remainder bound posed by (HS) holds for every mass'
+title: 'Dirac parametrix on a null hypersurface: the null vacuum plus a bounded kernel'
 status: proved
 region: synthesis
 subject: thermality

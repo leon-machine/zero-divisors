@@ -2,7 +2,7 @@
 id: synthesis.even-slots-need-a-spectator-generator
 kind: claim
 version: 2
-title: Two-level slots in the composite's own five-rung floor are odd, giving Hypothesis (S) with the tower grading as chirality; even slots need a spectator generator
+title: 'Even slots need a spectator generator'
 status: proved
 region: synthesis
 subject: standard-model

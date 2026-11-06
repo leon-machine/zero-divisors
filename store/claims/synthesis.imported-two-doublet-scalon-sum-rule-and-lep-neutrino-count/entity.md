@@ -2,7 +2,7 @@
 id: synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count
 kind: claim
 version: 1
-title: 'Imported: the Gildener-Weinberg sum rule of the scale-invariant two-doublet model, $(\sum M_{\mathcal H}^{4})^{1/4} = 540$ GeV over the extra scalars for $m_{h} = 125$ GeV (Lee and Pilaftsis 2012; Lane and Shepherd 2018), and the number of light neutrino species from the $Z$ resonance, $N_{\nu} = 2.9840 \pm 0.0082$ (LEP and SLD 2006)'
+title: 'Imported: the two-doublet scalon sum rule and the LEP neutrino count'
 status: imported
 region: synthesis
 subject: standard-model

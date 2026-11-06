@@ -2,7 +2,7 @@
 id: synthesis.sds-clausius-fixes-area-constant
 kind: claim
 version: 4
-title: Under the series' horizon temperatures, Clausius on the Schwarzschild-de Sitter family fixes the quarter; zero-mass and Nariai normalisations fix the constants
+title: 'Clausius on Schwarzschild-de Sitter fixes the area constant'
 status: proved
 region: synthesis
 subject: entropy

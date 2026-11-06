@@ -2,7 +2,7 @@
 id: synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
 kind: claim
 version: 1
-title: 'Imported: the Weyl-squared functional in four dimensions has the fourth-order Bach equations, which every Einstein field and every field conformal to one satisfies (Bach), and it is the gauge theory of the conformal group, the epsilon-contracted square of the conformal curvature under the conventional constraints (Kaku, Townsend and van Nieuwenhuizen)'
+title: 'Imported: conformal gravity, its Bach equations and conformal gauge form'
 status: imported
 region: synthesis
 subject: einstein

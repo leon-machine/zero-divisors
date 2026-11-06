@@ -2,7 +2,7 @@
 id: synthesis.residue-common-weight-particle-hole
 kind: claim
 version: 4
-title: On a principal mode space a rotation-invariant quasi-free counted sector has one weight, and the registered residue is particle-hole invariance
+title: 'The registered residue is particle-hole invariance'
 status: proved
 region: synthesis
 subject: entropy

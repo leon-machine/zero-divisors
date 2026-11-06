@@ -2,7 +2,7 @@
 id: synthesis.untuned-fit-caps-lightest-heavy-neutrino
 kind: claim
 version: 1
-title: On the stored untuned Pati-Salam fit (Premise (EW)) the lightest heavy neutrino lies below 7.3e8 GeV, so under Premise (R) the odd-tower remainder is not a seeding relic
+title: 'The untuned fit caps the lightest heavy neutrino'
 status: proved
 region: synthesis
 subject: neutrinos

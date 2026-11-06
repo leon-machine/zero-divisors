@@ -2,7 +2,7 @@
 id: synthesis.imported-lovelock-cartan-four-forms-and-holst-term
 kind: claim
 version: 1
-title: 'Imported: the Lorentz-invariant four-forms of a frame and a rotation-gauge field with no inverse frame (Mardones and Zanelli), and the Holst term, inert on the vacuum field equations (Holst)'
+title: 'Imported: the Lorentz-invariant four-forms and the Holst term'
 status: imported
 region: synthesis
 subject: einstein

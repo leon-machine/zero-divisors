@@ -2,7 +2,7 @@
 id: synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four
 kind: claim
 version: 2
-title: The unit $i = I_4$ keeps its three four-dimensional properties in $\Cl(1, D-1)$ only when $D \equiv 0 \pmod 4$, so a continuation through the integer-dimensional algebras gives up Lorentz covariance in the mixed planes or the anticommutation with vectors
+title: 'The unit $i = I_4$ keeps its properties only in dimension 0 mod 4'
 status: proved
 region: synthesis
 subject: quantum-fields

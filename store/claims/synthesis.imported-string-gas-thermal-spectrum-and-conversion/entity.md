@@ -2,7 +2,7 @@
 id: synthesis.imported-string-gas-thermal-spectrum-and-conversion
 kind: claim
 version: 1
-title: 'Imported: in string-gas cosmology thermal fluctuations with an area-law heat capacity give a scale-invariant Bardeen-potential spectrum, P_Phi = (l_pl/l_s)^4 (T/T_H)/(1 - T/T_H) (Brandenberger 2015)'
+title: 'Imported: the string-gas thermal spectrum (Brandenberger 2015)'
 status: imported
 region: synthesis
 subject: dark-energy

@@ -2,7 +2,7 @@
 id: synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
 kind: claim
 version: 2
-title: 'For the series'' attached free massless fields with positive norm ($c > 0$), given the massless two-point function, locality of the attached field fixes its statistics: the stored polarisation sums have degree $d = 2s$ in $k$ (the scalar $1$, the spinor $2k_{0}\Lambda(k)$, the photon''s bivector sum), the bracket at spacelike separation is a nonzero multiple of $1 + \eta c(-1)^{d}$, so in a positive-norm space the tower''s CAR ($\eta = +1$) gives a local field only for the spinor and the palatial CCR ($\eta = -1$) only for the scalar and the photon, and an elementary local rung scalar of positive norm is palatial; with an indefinite form ($c = -1$) the locality condition flips and a CAR scalar is local, as Faddeev-Popov ghosts are'
+title: 'Locality fixes the statistics of the attached free fields'
 status: proved
 region: synthesis
 subject: quantum-fields

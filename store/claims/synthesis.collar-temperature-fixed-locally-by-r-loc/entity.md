@@ -2,7 +2,7 @@
 id: synthesis.collar-temperature-fixed-locally-by-r-loc
 kind: claim
 version: 2
-title: Under (R$_{\mathrm{loc}}$) and the flow form of the stored collar theorems, with the completed pair at each collar point attached to one $t$-plane sheet, the collar's modes are at rapidity period $2\pi$ on every slice, Hubble-normalised $6\pi(1 - \tfrac45 r + \cdots)$ and $6\pi$ at the exceptional set; on one mode set this conflicts with (R) at the cutoff placement
+title: '(R$_{\mathrm{loc}}$) fixes the collar temperature locally'
 status: proved
 region: synthesis
 subject: thermality

@@ -2,7 +2,7 @@
 id: synthesis.imported-nufit-6-oscillation-parameter-ranges
 kind: claim
 version: 1
-title: 'Imported: the three-sigma ranges of the lepton mixing angles in the NuFIT 6.0 global fit, sin^2 theta12 in [0.275, 0.345], sin^2 theta23 in [0.430, 0.597], sin^2 theta13 in [0.02023, 0.02409] over its four data sets (Esteban et al. 2024)'
+title: 'Imported: NuFIT 6.0 oscillation parameter ranges (Esteban et al. 2024)'
 status: imported
 region: synthesis
 subject: neutrinos

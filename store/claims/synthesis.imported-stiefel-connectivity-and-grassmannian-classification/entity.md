@@ -2,7 +2,7 @@
 id: synthesis.imported-stiefel-connectivity-and-grassmannian-classification
 kind: claim
 version: 1
-title: 'Imported: the Stiefel manifold $V_{k}(\R^{m})$ is $(m - k - 1)$-connected, and over a complex of dimension less than $m - k$ rank-$k$ bundles are classified by maps into $\mathrm{Gr}_{k}(\R^{m})$ (Milnor and Stasheff; Husemoller)'
+title: 'Imported: Stiefel connectivity and the Grassmannian classification of bundles'
 status: imported
 region: synthesis
 subject: walls

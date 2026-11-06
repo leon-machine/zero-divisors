@@ -2,7 +2,7 @@
 id: synthesis.wick-rotor-chiral-angular-rotor
 kind: claim
 version: 3
-title: With the conformal spinors' unit, the Wick-rotated boost is the angular rotor on each chiral half
+title: 'The Wick-rotated boost as the angular rotor on each chiral half'
 status: proved
 region: synthesis
 subject: thermality

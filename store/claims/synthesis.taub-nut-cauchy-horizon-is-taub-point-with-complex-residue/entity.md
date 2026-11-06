@@ -2,7 +2,7 @@
 id: synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
 kind: claim
 version: 1
-title: On the Taub region of Taub-NUT, a vacuum gravitational field in synchronous gauge, the Hubble-normalised rotation-gauge field converges at t = t_+ (the Cauchy horizon, cited) to the complex boost -(1 - cot(phi/2) I) B_3, phi = arg(m + il), not to the Taub Kasner model, and generates a one-dimensional algebra
+title: 'The Taub-NUT Cauchy horizon as a Taub point with complex residue'
 status: proved
 region: synthesis
 subject: interior

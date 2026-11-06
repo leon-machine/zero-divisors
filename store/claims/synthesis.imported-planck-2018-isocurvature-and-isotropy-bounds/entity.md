@@ -2,7 +2,7 @@
 id: synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds
 kind: claim
 version: 1
-title: 'Imported: Planck 2018 limits the non-adiabatic share of the CMB temperature variance to 1.3 percent (dark-matter density), 1.7 percent (neutrino density) and 1.7 percent (neutrino velocity) at 95 percent confidence, and constrains a quadrupolar modulation of the primordial spectrum (Planck Collaboration 2020, X)'
+title: 'Imported: Planck 2018 isocurvature and isotropy bounds'
 status: imported
 region: synthesis
 subject: dark-energy

@@ -2,7 +2,7 @@
 id: synthesis.matter-asymmetry-registered-free-input
 kind: claim
 version: 1
-title: 'The matter asymmetry $\epsilon$ is a registered free number of the series: the asymmetry per mode of the oriented towers, inherited and not generated, is not derived; it is initial data of the descent, and its value is taken from the measured baryon density'
+title: 'Premise: the matter asymmetry is a registered free input'
 status: postulate
 region: synthesis
 subject: dark-matter

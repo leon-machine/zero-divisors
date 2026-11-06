@@ -2,7 +2,7 @@
 id: synthesis.imported-sakharov-induced-gravity-coefficients
 kind: claim
 version: 1
-title: 'Imported: the one-loop induced Einstein-Hilbert coefficient of Sakharov''s induced gravity, proportional to $N_{0} + N_{1/2} - 4N_{1}$ (Broda and Szanecki), with the curvature-linear heat-kernel density $\mathrm{tr}(E + R/6)$ (Vassilevich), the count $n_{1/2} = 4n_{1}$, $48 = 4 \times 12$, for the Standard Model with right-handed neutrinos (Boyle and Turok), and no Einstein-tensor ambiguity for massless fields (Tichy and Flanagan)'
+title: 'Imported: one-loop coefficients of Sakharov''s induced gravity'
 status: imported
 region: synthesis
 subject: einstein

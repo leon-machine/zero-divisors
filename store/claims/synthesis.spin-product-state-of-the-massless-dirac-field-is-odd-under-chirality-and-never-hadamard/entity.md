@@ -2,7 +2,7 @@
 id: synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard
 kind: claim
 version: 2
-title: 'The state selected by the Dirac field''s own spin product (the Fewster-Lang weighted spin-product state on a collar, the finite-time form of the fermionic projector state) is odd under chirality for the massless field and so is Hadamard on no open set of any collar on which its operator is injective, with occupation one half over the conformal vacuum on Robertson-Walker collars for every weight; for massive fields it is Hadamard only with a smooth time weight; so the spin product does not select the deposit that (HD) assumes'
+title: 'The massless Dirac spin-product state is never Hadamard'
 status: proved
 region: synthesis
 subject: quantum-fields

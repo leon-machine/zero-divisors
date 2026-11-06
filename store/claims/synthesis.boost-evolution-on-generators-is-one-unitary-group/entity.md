@@ -2,7 +2,7 @@
 id: synthesis.boost-evolution-on-generators-is-one-unitary-group
 kind: claim
 version: 2
-title: On the continuum of a horizon's null generators the boost time evolution is one unitary dilation group, the product of the boost rotor on the field's canonical null component and the transport of the affine parameter, neither of which preserves the anticommutator alone; it is the phase flow on Mellin modes and the Euclidean rotor at imaginary rapidity, so the chaos-bound comparison is one group's dilation rate against its own KMS period, the real-time Lyapunov exponent of this quasi-free dynamics (on linear elements) is zero, and the bound is met, not saturated, contrary to the earlier wording of the stored saturation sentence, since corrected
+title: 'Boost evolution on horizon generators is one unitary dilation group'
 status: proved
 region: synthesis
 subject: thermality

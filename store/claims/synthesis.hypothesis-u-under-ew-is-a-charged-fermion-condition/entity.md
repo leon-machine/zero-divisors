@@ -2,7 +2,7 @@
 id: synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition
 kind: claim
 version: 1
-title: Without a 120, under (S) and (EW), Hypothesis (U) is a condition on the down-minus-lepton matrix, and at diagonal order and M_I neither reading meets it
+title: 'Under (EW), (U) is a charged-fermion condition, unmet at diagonal order'
 status: proved
 region: synthesis
 subject: neutrinos
