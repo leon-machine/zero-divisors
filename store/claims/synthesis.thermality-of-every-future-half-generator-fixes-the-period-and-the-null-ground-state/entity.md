@@ -57,14 +57,11 @@ lineage:
   - synthesis.hadamard-deposit-premise
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays only in Step 1 of the proof, the Fourier integral over the Mellin weight w and its residue sum at w = i pi(2n + 1)/beta, a contour argument written there for the unit I_4 of span{1, I_4}'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The unit of the continuum mode space is written as the field unit I_4 (P = I_4 d/du, the Mellin modes, the two-point kernels with numbers read in span{1, I_4}); i stays only in the Fourier integral and residue sum of Step 1, a contour argument (declared complex-analysis).'
+    note: 'P = I_4 d/du, the Mellin modes and every two-point kernel are written with I_4; by Leon''s ruling R4 (one unit per entity) the Fourier integral and residue sum of Step 1, (X/Y)^{I_4 w} with poles at w = I_4 pi(2n + 1)/beta, are written with I_4 too and the bridging remark that they were written with i for I_4 is removed, exact since span{1, I_4} is the complex numbers; no bare i remains, so the declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

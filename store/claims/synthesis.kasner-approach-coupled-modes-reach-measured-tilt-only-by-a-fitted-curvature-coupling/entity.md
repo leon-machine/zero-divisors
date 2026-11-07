@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
 kind: claim
-version: 2
+version: 3
 title: 'Kasner coupled modes reach the measured tilt only by a fitted coupling'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -56,7 +60,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: the i of the Hankel Wronskian -4i/(pi s) is complex analysis of Bessel functions; declared (version and levels unchanged).'
+    note: 'By Leon''s ruling R4 (scalar mode functions and Hankel Wronskians are written with the field theory''s unit, one reading with synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching and the other scalar-mode entities): the Hankel Wronskian W[H^(1), H^(2)](s) = -4 I_4/(pi s) are written with I_4 (proof), numbers read in span{1, I_4}, exact since that span is the complex numbers; no bare i remains, so the declaration is removed.'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes the part the stored Kasner result left out for two families: the gravitational field's off-diagonal
@@ -83,9 +87,6 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2: the Kaluza-Klein ansatz, the small-argument Hankel forms and the statistical isotropy of the record, cited from memory in version 1, now cite the imported Facts (uses edges added, claimrefs in the proof); the Planck parameters pin moved to version 2 (baryon and dark matter densities added there, not used here); the five-dimensional stiff wall stays a flagged citation. No clause changed.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the normalisation of the scalar modes uses the Hankel Wronskian W[H^(1), H^(2)](s) = -4i/(pi s): complex analysis of Bessel functions, whose unit is the one of the mode functions themselves'
 ---
 
 ## formal

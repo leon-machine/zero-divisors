@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
 kind: claim
-version: 2
+version: 3
 title: 'Scalars coupled to the hidden scale stay blue on a Kasner approach'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -56,7 +60,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: the plane-wave modes, the canonical normalisation i and the Hankel Wronskian are complex analysis of scalar and Bessel functions sharing one unit; the axis label i is an index; declared (version and levels unchanged).'
+    note: 'By Leon''s ruling R4 (scalar mode functions and Hankel Wronskians are written with the field theory''s unit, one reading with synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching and the other scalar-mode entities): the modes e^{I_4 k x^i}, the canonical normalisation tau^alpha(phi phi-dot* - phi* phi-dot) = I_4, the Hankel Wronskian -4 I_4/(pi s) and the product -4 I_4 q |N|^2/pi are written with I_4 (proof), numbers read in span{1, I_4}, exact since that span is the complex numbers; no bare i remains, so the declaration is removed.'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes the scalar part of what the stored Kasner result lists as not covered: fields coupled to the
@@ -95,9 +99,6 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2: the Bessel reduction and small-argument Hankel forms, the Kaluza-Klein ansatz and the statistical isotropy of the record, cited from memory in version 1, now cite the imported Facts (uses edges added, claimrefs in the proof); the Planck parameters pin moved to version 2 (baryon and dark matter densities added there, not used here); the five-dimensional stiff Kasner relations stay a flagged citation; the pin to synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise moved to its version 2 (a pointer note added there). No clause changed.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the scalar modes e^{ikx}, their canonical normalisation tau^alpha(phi phi-dot* - phi* phi-dot) = i and the Hankel Wronskian W = -4i/(pi s) are one complex analysis of scalar mode functions and Bessel functions, sharing one unit'
 ---
 
 ## formal

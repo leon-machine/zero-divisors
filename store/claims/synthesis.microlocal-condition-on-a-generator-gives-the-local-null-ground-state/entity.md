@@ -25,6 +25,10 @@ credit:
   role: unit conventions per Leon's rulings of 7 November 2026 (R2, R4)
   version: 5
   source: maintainer pass 2026-11-07 (unit rulings)
+- name: Claude Opus 5.5
+  role: premise repointed to the carrier content split out of the stationary-horizon result
+  version: 5
+  source: maintainer pass 2026-11-07 (third cut)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -32,7 +36,7 @@ derivations:
 - name: main
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@3
+  - synthesis.stationary-generator-states-and-the-edge-scaling@1
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-local-quasi-equivalence-of-hadamard-states@1
@@ -58,6 +62,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 extraction:
+  maintainer_pass_clause_split_3:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Third cut, at Leon''s decision of 7 November 2026, folded into version 5 of this pass: this result cited synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit only for its carrier content (the weight-1/2 boost as the scaling about the edge, scaling limits and the local form, a stationary state as its own edge scaling limit, the half-thermal products), now the separate result synthesis.stationary-generator-states-and-the-edge-scaling (i) to (iii); the uses edge, the claimrefs and the checks'' premise calls are repointed to it, so this result no longer inherits (N+) through that one. The proof of the stationary corollary cited the old result''s "(iv)" for omega = omega_0, which is its (ii); the citation now names (ii) of the new result. No assumes edge added or removed; statement unchanged.'
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -127,7 +135,7 @@ Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$
 \begin{enumerate}
 \item[(i)] \emph{(Equivalence; proved.)} $\omega$ satisfies the microlocal spectrum condition on $J$ if and only if $R$ is smooth on $J \times J$. The condition is the same in every smooth regular parameter.
 \item[(ii)] \emph{(Consequences; proved, a corollary of the stored theorem.)} If $\omega$ satisfies the condition on $J$, it satisfies the local Hilbert-Schmidt condition on every closed bounded subinterval of $J$, so by Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state}(ii) its scaling limit at every point of $J$ is $\omega_{0}$: the local form of (N$_{+}$) holds at every point of $J$, with no stationarity and no temperature assumed. With that theorem's (iv): if the horizon is in the scope of (N$_{+}$), $J$ contains the edge and $\omega$ is stationary for the boost, then $\omega = \omega_{0}$.
-\item[(iii)] \emph{(Examples; computed exactly.)} (a) Every state KMS for the affine translations at inverse temperature $\beta$, $W_{\beta}(u, v) = \tfrac{I_{4}}{2\beta}\sinh\!\big(\pi(u - v + I_{4}0)/\beta\big)^{-1}$, satisfies the condition on every interval: $R$ is real-analytic on the whole plane, with leading term $-\tfrac{I_{4}\pi}{12\beta^{2}}(u - v)$. (b) For $0 \le t < 1$ the states with occupation symbol $t\,\theta(p) + (1 - t)\,\theta(-p)$, gauge-invariant, quasi-free and invariant under the affine translations, have $R = -(1 - t)\tfrac{I_{4}}{\pi}\,\mathrm{PV}(u - v)^{-1}$ and fail the condition and the local Hilbert-Schmidt condition at every point. (c) The stationary half-thermal products $\omega_{c}^{\times}$ of Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit} satisfy the condition on every interval not containing the edge and fail it on every interval that contains it. (d) The state with occupation symbol $\theta(p) - \mathrm{sign}(p)\,c/(1 + |p|)$, $0 < c \le \tfrac12$, has a bounded, square-integrable remainder with a jump across the diagonal, $R(u, v) \to -\tfrac{I_{4}c}{2}\,\mathrm{sign}(u - v)$ as $u - v \to 0$; it satisfies the local Hilbert-Schmidt condition and the bounded-remainder condition and fails the microlocal spectrum condition at every point. So the microlocal condition is strictly stronger than both.
+\item[(iii)] \emph{(Examples; computed exactly.)} (a) Every state KMS for the affine translations at inverse temperature $\beta$, $W_{\beta}(u, v) = \tfrac{I_{4}}{2\beta}\sinh\!\big(\pi(u - v + I_{4}0)/\beta\big)^{-1}$, satisfies the condition on every interval: $R$ is real-analytic on the whole plane, with leading term $-\tfrac{I_{4}\pi}{12\beta^{2}}(u - v)$. (b) For $0 \le t < 1$ the states with occupation symbol $t\,\theta(p) + (1 - t)\,\theta(-p)$, gauge-invariant, quasi-free and invariant under the affine translations, have $R = -(1 - t)\tfrac{I_{4}}{\pi}\,\mathrm{PV}(u - v)^{-1}$ and fail the condition and the local Hilbert-Schmidt condition at every point. (c) The stationary half-thermal products $\omega_{c}^{\times}$ of Theorem \claimref{synthesis.stationary-generator-states-and-the-edge-scaling} satisfy the condition on every interval not containing the edge and fail it on every interval that contains it. (d) The state with occupation symbol $\theta(p) - \mathrm{sign}(p)\,c/(1 + |p|)$, $0 < c \le \tfrac12$, has a bounded, square-integrable remainder with a jump across the diagonal, $R(u, v) \to -\tfrac{I_{4}c}{2}\,\mathrm{sign}(u - v)$ as $u - v \to 0$; it satisfies the local Hilbert-Schmidt condition and the bounded-remainder condition and fails the microlocal spectrum condition at every point. So the microlocal condition is strictly stronger than both.
 \item[(iv)] \emph{(No selection; proved, from (iii)(a).)} The microlocal spectrum condition, and with it the local Hilbert-Schmidt condition, holds at every point for every affine-KMS state with $\beta < \infty$, which is not a ground state; neither selects the state of (N$_{+}$) without a global datum, such as boost stationarity at the edge in (ii).
 \end{enumerate}
 \emph{Note (the bulk link; added 1 November).} The restriction of bulk Hadamard states to the generator algebra, recorded in the technical level as not in the store, is now computed on the flat field for the Dirac field on every null plane, with the transverse labels as $K$ and no s-wave reduction: every gauge-invariant quasi-free Hadamard state restricts to a state satisfying the condition of (i) on every interval of every generator (Theorem \claimref{synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes}(iii)). Where the field strength is nonzero, the consequence (ii), the local form of (N$_{+}$) at each point, follows for such states by Theorem \claimref{synthesis.hadamard-scaling-limit-premise}, (HS) (formerly a premise); the condition of (i) on intervals is not derived there. So the open premise that the series' states satisfy this condition reduces, for the use the store makes of it, to their being Hadamard plus (HS). Statement and proof unchanged.

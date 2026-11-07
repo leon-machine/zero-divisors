@@ -57,6 +57,7 @@ def _overlap(a, b, c, d):
 
 
 def check_boost_is_the_car_scaling_about_the_edge():
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("hawking.i-state-continuum")
     premise("synthesis.positive-null-energy-gives-r-premises")
     l = _vec(1, 1)
@@ -122,6 +123,7 @@ TOTAL_PIN = F(-12558241730728763541611829537321485179020408336995194668401152390
 
 
 def check_kernels_homogeneous_and_differ_only_at_the_edge_scale():
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("hawking.i-state-continuum")
     premise("hawking.imported-quasi-free-kms-reduces-two")
     cases = [(F(1, 2), 1), (F(1), 2), (F(2), 2), (F(3), 3), (F(1, 3), 1)]
@@ -204,6 +206,7 @@ def _g_series(gamma, N):
 
 
 def check_off_the_edge_every_member_is_locally_the_vacuum():
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("hawking.i-state-continuum")
     N = 12
     for gamma in (F(0), F(1, 4), F(1, 9), F(4), F(1)):
@@ -250,6 +253,7 @@ def check_null_energy_of_the_family():
 
 
 def check_cross_edge_block():
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("hawking.i-state-continuum")
     # vacuum cross block (2 pi / i) omega_1(psi*(v) psi(u)) = 1/(u - v) for u > 0 > v (no coincidence)
     pts = [(F(1), F(-1)), (F(2), F(-3)), (F(1, 2), F(-5, 7))]

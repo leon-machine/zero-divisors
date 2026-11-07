@@ -86,7 +86,7 @@ KERNELS = [
 
 
 def check_weight_half_preserves_the_local_hilbert_schmidt_norm():
-    premise("synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit")
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     l, n = _vec(1, 1), _vec(1, -1)
     for r in ROTOR_R:
@@ -162,7 +162,7 @@ def _log_arg(a, b, c, d):
 
 
 def check_homogeneous_remainder_is_not_square_integrable_at_the_edge():
-    premise("synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit")
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("synthesis.null-vacuum-on-a-horizon-generator")
     # the log arguments are multiplicative over adjacent rectangles (additivity of the integral), in both legs
     for (a, b, e, c, d, g) in RECTS:

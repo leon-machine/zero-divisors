@@ -1,7 +1,7 @@
 ---
 id: synthesis.sudden-descent-feature-not-tilt
 kind: claim
-version: 3
+version: 4
 title: 'A sudden descent leaves a feature, not a red tilt'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -48,7 +52,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: the Bunch-Davies mode, its Wronskian 2i and the Bogoliubov coefficients are complex analysis of scalar mode functions sharing one unit; declared (version and levels unchanged).'
+    note: 'By Leon''s ruling R4 (one unit per entity, and the same mode functions as synthesis.frozen-point-geometry-reads-descent-as-vacuum, which writes them with I_4): the instantaneous-vacuum data chi'' = -I_4 k (2k)^{-1/2}, the Bunch-Davies solution u(z) = e^{-I_4 z}(1 - I_4/z), its Wronskian 2 I_4, the matching chi_z = -I_4 and the Bogoliubov coefficients alpha = e^{-I_4 x}A, A = 1 - I_4/x - 1/(2x^2), beta = -e^{I_4 x}B are written with I_4, numbers read in span{1, I_4}, exact since that span is the complex numbers; no bare i remains, so the declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -59,19 +63,16 @@ extraction:
     note: 'Version 2 -> 3, at Leon''s decisions of 2026-11-01 (deposit state): a marked note after the formal statement records that the model''s instantaneous-vacuum start is not a Hadamard state (clause (iv) of synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard), so the model describes a state the adopted Hadamard deposit premise excludes; the spectrum computation and every clause are unchanged.'
   open_problem: op.descent-state-and-spectrum
   note: 'Sharpens the first escape of the frozen-phase no-go (the descent state must break the slicing dilatation): if the descent is a single event into the frozen phase and the field starts there in the instantaneous vacuum, the spectrum is flat at small scales, suppressed at large scales and ringing in between, and no 7-e-fold window carries the measured red index (exact rational enclosures for every window). Read as a pointer, not a theorem: dilatation breaking that produces the measured tilt would have to persist while the whole observed window is set. The mode computation is standard de Sitter field theory and transport-absent; the series supplies the setting (frozen phase in flat slicing, the massless point of its weight dictionary, the descent as the origin). The de Sitter scale during the descent is not addressed.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the scalar mode analysis keeps i: the Bunch-Davies solution u(z) = e^{-iz}(1 - i/z), its Wronskian 2i, the matching conditions chi_z = -i and the Bogoliubov coefficients alpha = e^{-ix}A, A = 1 - i/x - 1/(2x^2), are complex analysis of scalar functions sharing one unit'
 ---
 
 ## formal
-Work in the frozen phase in its flat slicing, the setting of Proposition \claimref{synthesis.frozen-phase-spectrum-not-red} (de Sitter space $\eta/(Hx_0)^2$ of Lemma \claimref{mass.de-sitter-scale-frozen-point}, conformal time $\eta = x_0 < 0$, scale factor $a = -1/(H\eta)$), and model the descent as an event at conformal time $\eta_d < 0$: before it the field has no propagating modes, and at it a massless scalar $\phi$ (the massless point of the series' weight dictionary, weight $0$) is set, mode by mode, to the instantaneous vacuum of $\chi = a\phi$, namely $\chi = (2k)^{-1/2}$, $\chi' = -ik(2k)^{-1/2}$. Write $x = k|\eta_d|$ and let $\Delta^{2}(k)$ be the late-time ($\eta \to 0$) dimensionless spectrum of $\phi$.
+Work in the frozen phase in its flat slicing, the setting of Proposition \claimref{synthesis.frozen-phase-spectrum-not-red} (de Sitter space $\eta/(Hx_0)^2$ of Lemma \claimref{mass.de-sitter-scale-frozen-point}, conformal time $\eta = x_0 < 0$, scale factor $a = -1/(H\eta)$), and model the descent as an event at conformal time $\eta_d < 0$: before it the field has no propagating modes, and at it a massless scalar $\phi$ (the massless point of the series' weight dictionary, weight $0$) is set, mode by mode, to the instantaneous vacuum of $\chi = a\phi$, namely $\chi = (2k)^{-1/2}$, $\chi' = -I_{4}k(2k)^{-1/2}$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$). Write $x = k|\eta_d|$ and let $\Delta^{2}(k)$ be the late-time ($\eta \to 0$) dimensionless spectrum of $\phi$.
 \begin{enumerate}
 \item[(i)] \emph{(Exact spectrum.)} $\Delta^{2}(k) = (H/2\pi)^{2}F(x)$ with
 \[
 F(x) \;=\; 1 + \frac{1}{2x^{4}} + \frac{1}{x^{2}}\Bigl[\Bigl(1 - \frac{1}{2x^{2}}\Bigr)\cos 2x - \frac{1}{x}\sin 2x\Bigr],
 \]
-the Bogoliubov coefficients relative to the Bunch-Davies modes being $\alpha = e^{-ix}A$, $\beta = -e^{ix}B$ with $A = 1 - i/x - 1/(2x^{2})$, $B = 1/(2x^{2})$, and $|\alpha|^{2} - |\beta|^{2} = 1$.
+the Bogoliubov coefficients relative to the Bunch-Davies modes being $\alpha = e^{-I_{4} x}A$, $\beta = -e^{I_{4} x}B$ with $A = 1 - I_{4}/x - 1/(2x^{2})$, $B = 1/(2x^{2})$, and $|\alpha|^{2} - |\beta|^{2} = 1$.
 \item[(ii)] \emph{(Modes outside at the descent.)} $F(x) = \tfrac49 x^{2} - \tfrac1{15}x^{4} + \tfrac{8}{1575}x^{6} + O(x^{8})$, so for $k|\eta_d| \ll 1$ the local index is $n_s - 1 \to +2$: large scales are suppressed, a blue cutoff.
 \item[(iii)] \emph{(Modes inside at the descent.)} $(|A| - B)^{2} \le F(x) \le (|A| + B)^{2}$ with $|A|^{2} = 1 + 1/(4x^{4})$, so $F \to 1$ with oscillations of envelope $x^{-2}$.
 \item[(iv)] \emph{(Every window.)} For every $x_1 > 0$, $\ln F(x_1) - \ln F(e^{7}x_1) < 7 \times 0.0267$, the smallest red drop the measured $n_s = 0.9649 \pm 0.0042$ \cite{Planck2018} allows at two standard deviations over seven e-folds of $k$ (the measured range $\ell \approx 2$ to $2500$ spans about $7.1$ e-folds). So no window of that width has a mean index inside the measured band.

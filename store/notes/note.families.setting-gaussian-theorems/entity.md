@@ -33,7 +33,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The channel phase e^{i chi} in the channel vector a = a_A + lambda e^{i chi} a_B became e^{I_4 chi}, numbers read in span{1, I_4}; no bare i remains.'
+    note: 'The channel phase e^{i chi} in the channel vector a = a_A + lambda e^{i chi} a_B became e^{I_4 chi}, numbers read in span{1, I_4}; no bare i remains. By Leon''s ruling R3 the face-space reading is stated once in R3''s words: numbers and the module''s complex structure in span{1, I_4}, the module read on the tower''s floors (notational).'
 ---
 
 ## formal
@@ -45,7 +45,7 @@ the operator form of Proposition \claimref{families.chart-computation-sign-twist
 \[
 \xi \;=\; \tau\,\bigl(G \otimes \varepsilon\bigr), \qquad G = [a]_{\times}, \qquad a = a_{A} + \lambda e^{I_4\chi}a_{B},
 \]
-where a family wedge $p \wedge q$ acts on the family space as the cross-product matrix $[p \times q]_{\times}$ and the two channels are the wedges $f_{+} \wedge f_{-}$, the $S_{3}$-safe channel available to the uncaused vacuum, with $a_{A} = f_{+} \times f_{-}$ normalised, and $u' \wedge f_{+}$, $u' = (1,1,1)$, the channel that uses the descent's orientation bit, with $a_{B} = u' \times f_{+}$ normalised; $\tau > 0$ is the strength, $\lambda \ge 0$ the feeding ratio, $\chi$ the channel phase (numbers are read in $\mathrm{span}\{1, I_4\}$), and $\lambda = 1$ the universal-strength point. The reading is the gauge-invariant symmetric square, forced by the bracket's gauge phase and the mass paper's $m^{2} = 2|B_{\Lambda}|^{2}$: the mass form is
+where a family wedge $p \wedge q$ acts on the family space as the cross-product matrix $[p \times q]_{\times}$ and the two channels are the wedges $f_{+} \wedge f_{-}$, the $S_{3}$-safe channel available to the uncaused vacuum, with $a_{A} = f_{+} \times f_{-}$ normalised, and $u' \wedge f_{+}$, $u' = (1,1,1)$, the channel that uses the descent's orientation bit, with $a_{B} = u' \times f_{+}$ normalised; $\tau > 0$ is the strength, $\lambda \ge 0$ the feeding ratio, $\chi$ the channel phase (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors), and $\lambda = 1$ the universal-strength point. The reading is the gauge-invariant symmetric square, forced by the bracket's gauge phase and the mass paper's $m^{2} = 2|B_{\Lambda}|^{2}$: the mass form is
 \[
 H_{kl} \;=\; \tfrac12\,\bigl\langle \hat\Omega_{k}^{\dagger}\hat\Omega_{l} + \hat\Omega_{l}\hat\Omega_{k}^{\dagger}\bigr\rangle,
 \]

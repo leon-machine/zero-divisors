@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants
 kind: claim
-version: 2
+version: 3
 title: 'Regulator-free one-loop vacuum polarisation and Ward-preserving extensions'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.tower.tower
@@ -69,6 +73,10 @@ lineage:
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off
   - synthesis.hadamard-scaling-limit-premise
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R4 (one unit per entity): the Fourier rule of the proof''s scaling step, written d -> iq, is now d_mu -> I_4 q_mu on components, numbers read in span{1, I_4}; written componentwise so that it is not confused with the left-multiplication term q I_4 of (iii); no bare i remains in the levels or proofs, so no declaration.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

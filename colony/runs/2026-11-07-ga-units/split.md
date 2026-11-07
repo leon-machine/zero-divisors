@@ -212,3 +212,65 @@ None of these pinning entities is mine.
 ## Not done
 - **The third cut** (above), left for Leon's decision.
 - **Commits:** I made none.
+
+# Round 3: the third cut, option (b), and a check of the five outside entities
+
+## Result
+Target met. synthesis.hadamard-scaling-limit-premise, the microlocal theorem, local-normality, bulk-Hadamard and hadamard-dirac-states-scale now hold given nothing. The HS premise's past cone (65 entities) contains no postulate, so no path to (N+) remains. tp check layers 1 to 3: 0 errors, 0 warnings.
+
+## The five entities outside SPLIT_OWNED: repoints confirmed
+I checked each file as it stands now. In each, the uses edges point to the new entities, the claimrefs carry the new ids with the renumbered clauses, and the premise() calls are the new ones. The only remaining mention of an old id in each is the text of my own extraction note. Nothing needed redoing.
+
+| Entity | Version | Repoint found intact |
+|---|---|---|
+| modular-data | 3 | uses null-vacuum@1, 2 claimrefs (ii), 2 premise calls |
+| attachment-conformal | 3 | uses null-vacuum@1, 2 claimrefs (ii), 1 premise call |
+| geometric-modular | 3 | uses null-vacuum@1, 2 claimrefs (ii), 5 premise calls |
+| weyl-flat | 6 | uses null-vacuum@1, 2 claimrefs (ii), 1 premise call |
+| normality-on-the-closed-generator | 3 | uses null-vacuum@1 and the cut-2 entity@1, 3 claimrefs to null-vacuum (ii) and 2 to cut-2 (i), 4 premise calls |
+
+In normality-on-the-closed-generator I also moved its pin to stationary-horizon from @3 to @4 (statement unchanged) and added that to its round-2 note. I did not touch its unit text.
+
+## Cut 3: the carrier content of stationary-horizon
+- **New entity:** synthesis.stationary-generator-states-and-the-edge-scaling, version 1. It is proved and holds given nothing. It uses synthesis.null-vacuum-on-a-horizon-generator@1, hawking.i-state-continuum@5 and hawking.imported-quasi-free-kms-reduces-two@2.
+  - **(i):** the boost β_t is the scaling σ^0 about the edge. Only the weight 1/2 preserves the anticommutator. The Cl(1,3) rotor dilates each generator of a null plane about its edge point.
+  - **(ii):** a stationary gauge-invariant quasi-free state is its own scaling limit at the edge. So it is locally the null vacuum there if and only if it is ω_0, the ground state of the cut-1 entity's (ii); a bounded difference from W_0 is enough. ω_0 is its own scaling limit at every point.
+  - **(iii):** the stationary half-thermal products ω_c^×.
+  - **Why (iii) is included, beyond option (b):** the microlocal theorem's example (iii)(c) and local-normality use the half-thermal products. Without (iii), microlocal would have kept the link to stationary-horizon, and (N+) with it.
+  - **What stays in stationary-horizon:** the identification of each horizon's flow with β_t (through positive-null-energy), the reading of (ii) as (N+), and its clauses (iv) and (v).
+  - The proofs were moved.
+  - **Checks:** four of stationary-horizon's check functions were copied (the weight and rotor, the kernels, off the edge, the cross-edge block), with the premise call moved from positive-null-energy to the null-vacuum entity.
+  - **Units:** I_4 throughout (R2, R4); nothing is declared.
+- **stationary-horizon, 3 → 4.**
+  - It uses the new entity@1; its pin to positive-null-energy moves from 4 to 6, and that link is kept.
+  - The statements of (i) to (iii) now cite the new entity, and so do their proofs. The proof of (i) keeps the horizon-kinematics sentence. The proof of (iii) keeps claimrefs to hawking.i-state-continuum and the quasi-free Fact, which it still uses.
+  - Its checks are kept, and the four copied ones also record the new premise.
+  - It still holds given (N+), as intended.
+- **local-normality and the microlocal theorem:**
+  - **Repointed:** stationary-horizon → the new entity in the uses edge, the claimrefs (4 in local-normality, 3 in microlocal) and the premise() calls (2 and 1).
+  - **Bookkeeping:** I folded this into their current versions of this pass (local-normality v3, microlocal v5) rather than bumping again. That avoids a further cascade of repins in their users. Each has a credit entry and an `extraction.maintainer_pass_clause_split_3` note.
+  - **Citation fix in microlocal:** the proof of its stationary corollary cited the old result's "(iv)" for ω = ω_0. That is its (ii), and the citation now names (ii) of the new entity. This is recorded in the note.
+
+## Validation
+- **runcheck:** 0 failures on the new entity, stationary-horizon, local-normality and microlocal.
+- **check4:** 0 errors on all four. The new entity has 0 findings; the others have only I405 "as expected".
+- **tp check layers 1 to 3:** 0 errors, 0 warnings.
+
+## holds_given now
+| Entity | holds_given |
+|---|---|
+| synthesis.hadamard-scaling-limit-premise | none |
+| microlocal theorem | none |
+| local-normality | none |
+| bulk-Hadamard | none |
+| hadamard-dirac-states-scale | none |
+| The four split-out entities (canonical-part, null-vacuum, null-vacuum-singularity, stationary-generator-states) | none |
+| stationary-horizon | (N+) |
+| positive-null-energy | (N+) |
+
+## Stale pins added this round (all formal repins; statements unchanged)
+- stationary-horizon (now v4) is still pinned @2 by null-ordering and thermality. These pins were already stale before this round.
+- Everything listed in round 2 still applies. Since microlocal and local-normality kept their versions, no new stale pins point at them.
+
+## Not done
+- **Commits:** I made none.

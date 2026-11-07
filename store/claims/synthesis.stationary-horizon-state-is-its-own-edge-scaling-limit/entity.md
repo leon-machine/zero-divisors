@@ -1,7 +1,7 @@
 ---
 id: synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
 kind: claim
-version: 3
+version: 4
 title: 'A stationary horizon state is its own edge scaling limit'
 status: proved
 region: synthesis
@@ -21,15 +21,20 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: the carrier content of (i) to (iii) split out into synthesis.stationary-generator-states-and-the-edge-scaling, which the proof now cites
+  version: 4
+  source: maintainer pass 2026-11-07
 review: draft
 about:
 - obj.hawking.continuum-mode-space
 derivations:
 - name: main
   uses:
+  - synthesis.stationary-generator-states-and-the-edge-scaling@1
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.positive-null-energy-gives-r-premises@6
   - singularity.why-calibration-cannot-be-internal@6
   proof: proof-main.tex
 checked_by:
@@ -54,6 +59,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - angle.imported-theorems-deliver-their-hypotheses
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4, at Leon''s decision of 7 November 2026 (third cut, option (b)): the carrier content of (i) to (iii) (the weight-1/2 boost is the scaling about the edge; a stationary state is its own scaling limit there, so locally the null vacuum at the edge means the null vacuum; the half-thermal products are locally the vacuum off the edge and not at it), which uses no premise, is now the separate result synthesis.stationary-generator-states-and-the-edge-scaling, its (i) to (iii); the proofs of (i) to (iii) cite it, and this result keeps the identification of each horizon''s flow with the boost (through synthesis.positive-null-energy-gives-r-premises, pin moved from 4 to 6, statement unchanged there) and the reading of (ii) as (N+). Statement unchanged; no assumes edge added or removed; the four checks of (i) to (iii) are kept and also record the new premise. Units already I_4 throughout (rulings R2, R4); nothing to change.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -90,9 +99,9 @@ extraction:
 ## formal
 Units $\hbar = c = 1$. Let $\mathcal{H}$ be a horizon in the scope of Premise \claimref{synthesis.n-plus-null-ground-state}, with the affine parameter $u \in \R$ on each generator, $u = 0$ on the edge (bifurcation) surface, and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, $\{\psi(u), \psi^{*}(v)\} = \delta(u - v)\otimes\id_{K}$. The boost acts as $\beta_{t}(\psi(u)) = e^{\kappa t/2}\psi(e^{\kappa t}u)$ (the boost $\beta_{t}$ of the setup of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}, for the Killing flows of the eternal hole and of de Sitter space and the local boost of Minkowski space). Write $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$, and $\omega_{0}$ for the gauge-invariant quasi-free state with $W_{0}(u, v) = \tfrac{I_{4}}{2\pi}(u - v + I_{4}0)^{-1}\otimes\id_{K}$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$, $I_{4}$ the unit of the mode space), the state that (N$_{+}$) selects (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)). For a point $u_{0}$ of a generator and $\lambda > 0$ let $\sigma^{u_{0}}_{\lambda}(\psi(u_{0} + x)) = \lambda^{1/2}\psi(u_{0} + \lambda x)$; the \emph{scaling limit} of $\omega$ at $u_{0}$ is the gauge-invariant quasi-free state with two-point function $\lim_{\lambda \to 0^{+}}\lambda\,W_{\omega}(u_{0} + \lambda x, u_{0} + \lambda y)$ (as distributions), when the limit exists. Read the local form of (N$_{+}$) at $u_{0}$ as: the scaling limit at $u_{0}$ exists and is $\omega_{0}$ (\emph{locally the null vacuum at $u_{0}$}). Call $\omega$ stationary if $\omega\circ\beta_{t} = \omega$ for all $t$.
 \begin{enumerate}
-\item[(i)] \emph{(The boost is the scaling about the edge.)} $\beta_{t} = \sigma^{0}_{e^{\kappa t}}$. Among the weights $\lambda^{p}$, only $p = \tfrac12$ makes $\sigma_{\lambda}$ preserve the anticommutator. In $\Cl(1,3)$ (store signature) the rotor $B = \cosh\tfrac{\lambda}{2} + \sinh\tfrac{\lambda}{2}\,e_{1}e_{0}$ sends $\ell = e_{0} + e_{1}$ to $e^{\lambda}\ell$, $n = e_{0} - e_{1}$ to $e^{-\lambda}n$ and fixes $e_{2}, e_{3}$: on the null plane $\{u\ell + y\}$ it dilates every generator about its own edge point. (The same weight-$\tfrac12$ dilation, with its Mellin and rotor factorisations, is the subject of the result filed alongside, synthesis.boost-evolution-on-generators-is-one-unitary-group, in fuller form; here only the identification with the scaling map is used.)
-\item[(ii)] \emph{(Stationarity plus the edge is (N$_{+}$).)} A stationary gauge-invariant quasi-free $\omega$ is its own scaling limit at the edge. Hence $\omega$ is locally the null vacuum at the edge if and only if $\omega = \omega_{0}$, that is, if and only if $\omega$ satisfies (N$_{+}$). The same holds with the weaker condition that $W_{\omega} - W_{0}$ be a bounded function on some neighbourhood of $(0, 0)$ (in each $K$-component): a function homogeneous of degree $-1$ and bounded near the origin vanishes.
-\item[(iii)] \emph{(Off the edge every stationary thermal state is locally the vacuum.)} For $c \in (0, \infty]$ let $\omega_{c}^{\times}$ be the product, over the two halves $u > 0$ and $u < 0$, of the quasi-free states KMS at rapidity period $2\pi c$ for the boost future-directed on each half ($c = \infty$: the ground state of that boost). Each is stationary, even and gauge-invariant quasi-free. On $u, v > 0$, with $y = \ln(u/v)$,
+\item[(i)] \emph{(The boost is the scaling about the edge.)} (Theorem \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}(i).) $\beta_{t} = \sigma^{0}_{e^{\kappa t}}$. Among the weights $\lambda^{p}$, only $p = \tfrac12$ makes $\sigma_{\lambda}$ preserve the anticommutator. In $\Cl(1,3)$ (store signature) the rotor $B = \cosh\tfrac{\lambda}{2} + \sinh\tfrac{\lambda}{2}\,e_{1}e_{0}$ sends $\ell = e_{0} + e_{1}$ to $e^{\lambda}\ell$, $n = e_{0} - e_{1}$ to $e^{-\lambda}n$ and fixes $e_{2}, e_{3}$: on the null plane $\{u\ell + y\}$ it dilates every generator about its own edge point. (The same weight-$\tfrac12$ dilation, with its Mellin and rotor factorisations, is the subject of the result filed alongside, synthesis.boost-evolution-on-generators-is-one-unitary-group, in fuller form; here only the identification with the scaling map is used.)
+\item[(ii)] \emph{(Stationarity plus the edge is (N$_{+}$).)} (Theorem \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}(ii).) A stationary gauge-invariant quasi-free $\omega$ is its own scaling limit at the edge. Hence $\omega$ is locally the null vacuum at the edge if and only if $\omega = \omega_{0}$, that is, if and only if $\omega$ satisfies (N$_{+}$). The same holds with the weaker condition that $W_{\omega} - W_{0}$ be a bounded function on some neighbourhood of $(0, 0)$ (in each $K$-component): a function homogeneous of degree $-1$ and bounded near the origin vanishes.
+\item[(iii)] \emph{(Off the edge every stationary thermal state is locally the vacuum.)} (Theorem \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}(iii).) For $c \in (0, \infty]$ let $\omega_{c}^{\times}$ be the product, over the two halves $u > 0$ and $u < 0$, of the quasi-free states KMS at rapidity period $2\pi c$ for the boost future-directed on each half ($c = \infty$: the ground state of that boost). Each is stationary, even and gauge-invariant quasi-free. On $u, v > 0$, with $y = \ln(u/v)$,
 \[
 W_{c}(u, v) = \frac{I_{4}}{2\pi}\,\frac{(uv)^{-1/2}}{2c\,\sinh\!\big((y + I_{4}0)/2c\big)}, \qquad \text{Mellin symbol } (1 + e^{-2\pi c w})^{-1} \text{ on } u^{-1/2 + I_{4}w},
 \]

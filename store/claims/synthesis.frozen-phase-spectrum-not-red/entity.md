@@ -51,16 +51,13 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The principal-series weights -3/2 +- i nu, physical numbers, are written -3/2 +- I_4 nu, and the oscillating factors k^{+-2 i nu} they put in P as k^{+-2 I_4 nu}, numbers read in span{1, I_4} (formal and proof); the kernel e^{-i k.x} of the Fourier transforms of the scalar correlators in (ii) of the proof keeps i (Fourier analysis of scalar functions) and is declared.'
+    note: 'The principal-series weights -3/2 +- i nu, physical numbers, are written -3/2 +- I_4 nu, and the oscillating factors k^{+-2 i nu} they put in P as k^{+-2 I_4 nu}, numbers read in span{1, I_4} (formal and proof); by Leon''s ruling R4 (one unit per entity) the Fourier kernel of the scalar correlators in proof (ii) is written e^{-I_4 k.x} too, exact since span{1, I_4} is the complex numbers; no bare i remains, so no declaration.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
     note: Squares of vectors written Q(v) in place of the inner product of a vector with itself; no change of content.
   open_problem: op.descent-state-and-spectrum
   note: 'A no-go that sharpens the descent-spectrum problem: the spectral index of a source in the frozen phase is a weight, and the measured red tilt is not the weight of any field in the unitary series the store uses, so the tilt must come from the descent state breaking the slicing dilatation, from a weight-shifting map to the curvature perturbation, or from a source outside the series'' fields. The scaling step is the standard de Sitter dilatation Ward identity; the transport content is that the symmetry is the frozen point''s stabiliser and that the index is read off the series'' own weight dictionary.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the kernel e^{-i k.x} of the Fourier transforms of the scalar boundary correlators in the proof of (ii) keeps i: it is Fourier analysis of scalar functions in their own right, on which no pseudoscalar acts'
 ---
 
 ## formal

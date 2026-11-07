@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The unit in the channel vectors -i(1,1,1)/sqrt3, -i f_+/sqrt3, in zeta^2 - zeta = -i sqrt3 and in the channel phase e^{i chi} became I_4, with numbers and family-vector components read in span{1, I_4}; no bare i remains.'
+    note: 'The unit in the channel vectors -i(1,1,1)/sqrt3, -i f_+/sqrt3, in zeta^2 - zeta = -i sqrt3 and in the channel phase e^{i chi} became I_4, with numbers and family-vector components read in span{1, I_4}; no bare i remains. By Leon''s ruling R3 the face-space reading is stated once in R3''s words: numbers and the module''s complex structure in span{1, I_4}, the module read on the tower''s floors (notational).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -71,7 +71,7 @@ outside_ga:
 ---
 
 ## formal
-Every pairing the descent can write in the antisymmetric sector, any complex combination of the channels at any strengths, has family factor $G = [a]_{\times}$, the cross-product matrix of some complex $3$-vector $a$ (numbers and the components of family vectors are read in $\mathrm{span}\{1, I_4\}$), and
+Every pairing the descent can write in the antisymmetric sector, any complex combination of the channels at any strengths, has family factor $G = [a]_{\times}$, the cross-product matrix of some complex $3$-vector $a$ (numbers, the components of family vectors and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors), and
 \begin{equation}
 G G^{\dagger} \;=\; |a|^{2}\,\mathbb{1} \;-\; \bar{a}\,a^{\mathsf{T}}, \qquad \mathrm{spec} = \{\,|a|^{2},\ |a|^{2},\ 0\,\},
 \end{equation}

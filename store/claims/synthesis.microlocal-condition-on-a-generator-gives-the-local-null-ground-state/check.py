@@ -172,7 +172,7 @@ def _rotor(r):
 
 
 def check_half_thermal_products_fail_the_condition_at_the_edge_only():
-    premise("synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit")
+    premise("synthesis.stationary-generator-states-and-the-edge-scaling")
     premise("synthesis.local-normality-at-the-edge-gives-the-null-ground-state")
     l = GA.add(GA.gen(0), GA.gen(1))
     for r in ROTOR_R:

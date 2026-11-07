@@ -1,0 +1,17 @@
+functions:
+  check_boost_is_the_car_scaling_about_the_edge:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the rotor identities B l B~ = r^2 l, B n B~ = r^-2 n, fixed e_2, e_3 and the dilation of u l + y e_2 at three rational rapidities and three points; the weight 1/2 singled out among p = k/4, k = 0..4, on indicator functions of four rational intervals at two scales; other weights and general functions are not tested"
+  check_kernels_homogeneous_and_differ_only_at_the_edge_scale:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "the kernels W_c at five periods c (with k/c an integer) and four point pairs: c = 1 equal to the null vacuum, homogeneity of degree -1 of W_c and of D_c at three scales, D_c = 0 exactly when c = 1, growth of D_c towards the edge at two depths, the diagonal normalisation within 1/N, and the Mellin KMS identity at period 2 pi c (not at 2 pi) at three q; that a stationary state is its own scaling limit at the edge, and the bounded-difference variant of (ii), are argued from homogeneity, not computed as distributions"
+  check_off_the_edge_every_member_is_locally_the_vacuum:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the series of g_c to order 12 in y at gamma = 1/c^2 in {0, 1/4, 1/9, 4, 1}: zero constant term, even, first coefficient -(gamma - 1)/24, vanishing identically only at gamma = 1, with the control that dropping 1/c leaves a pole; analyticity in the strip and the scaling limit off the edge are argued from the series, not computed"
+  check_cross_edge_block:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the vacuum cross block 1/(u - v) at three pairs u > 0 > v, its homogeneity at three scales, and the product state's zero cross block differing from it by a difference growing as 1/s at the edge; the half restrictions of the product states are not recomputed here"

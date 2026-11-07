@@ -33,7 +33,7 @@ derivations:
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@3
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.attachment-conformal-energy-is-generated-by-z@3
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
@@ -63,7 +63,7 @@ extraction:
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum and its ground-state property) and synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet only for its lemma (iii); these are now synthesis.null-vacuum-on-a-horizon-generator (ii) and synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation (i), and the two uses edges, the claimrefs and the checks'' premise calls are repointed to them, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.local-normality-at-the-edge-gives-the-null-ground-state 2 -> 3; synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit 2 -> 3; synthesis.attachment-conformal-energy-is-generated-by-z 1 -> 3.'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum and its ground-state property) and synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet only for its lemma (iii); these are now synthesis.null-vacuum-on-a-horizon-generator (ii) and synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation (i), and the two uses edges, the claimrefs and the checks'' premise calls are repointed to them, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit 3 -> 4 (third cut); synthesis.local-normality-at-the-edge-gives-the-null-ground-state 2 -> 3; synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit 2 -> 3; synthesis.attachment-conformal-energy-is-generated-by-z 1 -> 3.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

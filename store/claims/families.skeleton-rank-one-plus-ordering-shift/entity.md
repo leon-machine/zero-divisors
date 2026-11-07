@@ -48,7 +48,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The channel phases e^{i chi} in {1, zeta, zeta^2} became e^{I_4 chi}, numbers read in span{1, I_4} as stated in the proof; no bare i remains.'
+    note: 'The channel phases e^{i chi} in {1, zeta, zeta^2} became e^{I_4 chi}, numbers read in span{1, I_4} as stated in the proof; no bare i remains. By Leon''s ruling R3 the face-space reading is stated once in R3''s words: numbers and the module''s complex structure in span{1, I_4}, the module read on the tower''s floors (notational).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
