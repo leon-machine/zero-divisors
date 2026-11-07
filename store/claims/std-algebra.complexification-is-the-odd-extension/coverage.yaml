@@ -1,0 +1,17 @@
+functions:
+  check_added_vector_makes_a_central_unit:
+    kind: exact
+    clauses: ["(i)", "(v)"]
+    omits: "every signature of dimension 2 and 4 and the conformal signature (1,5) in dimension 6: epsilon_V against the formula, I_W^2 = -1 with Q(e) = -epsilon_V and +1 with the other sign, I_W commuting with every generator; the centre computed as a commutant of dimension 2 only for n = 2, 4 (for n = 6 it is the stored centre theorem); Q(e) = +1 for Cl(1,3) and Cl(2,4)"
+  check_complexification_map_is_an_isomorphism:
+    kind: exact
+    clauses: ["(ii)", "(v)"]
+    omits: "for Cl(1,3) -> Cl(2,3) and Cl(2,4) -> Cl(3,4): the Clifford relations of the image generators, I_W central of square -1, rank 2^(n+1) of the images of the real basis, Cl(W) = Cl^0(W) + Cl^0(W) I_W; multiplicativity on all 32 x 32 basis pairs only for Cl(1,3) -> Cl(2,3) (for Cl(2,4) it follows from the generators and centrality, as in the proof); the matrix form is the stored complexification theorem"
+  check_complex_vectors_and_shifted_squares:
+    kind: exact
+    clauses: ["(iii)", "(v)"]
+    omits: "in Cl(2,3) only: the square of a + I_5 b for three rational pairs, the null vector e_2 + I_5 e_3, the contrast e_2 + I_4 e_3, and the shifted square (y + eps I_5 e_0)^2 with its field inverse at two rational points; functions of the square beyond the field inverse are argued in the proof"
+  check_relation_to_the_right_unit:
+    kind: exact
+    clauses: ["(iv)", "(v)"]
+    omits: "for Cl(1,3) in Cl(2,3) and Cl(2,4) in Cl(3,4): P_+- idempotent and commuting with I_V, (x P_+-) I_W = +-(x I_V) P_+- on every blade, the left form on even blades and the opposite sign on vectors, injectivity of x -> x P_+ by rank; the general even n is the proof"

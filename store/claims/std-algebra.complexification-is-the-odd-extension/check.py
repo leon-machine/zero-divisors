@@ -142,12 +142,15 @@ def check_complex_vectors_and_shifted_squares():
     sq = [1, -1, -1, -1]
     sqw, i5 = tuple(sq + [1]), top(5)
     i4 = top(4)
-    samples = [([1, 2, 0, -3], [0, 1, 4, 1]), ([F(1, 2), 0, 3, 1], [2, -1, 0, F(2, 3)]),
-               ([0, 0, 1, 0], [0, 0, 0, 1])]
-    for a, b in samples:
+    # each sample with its square computed by hand: (Q(a) - Q(b), 2<a, b>)
+    samples = [([1, 2, 0, -3], [0, 1, 4, 1], F(6), F(2)),
+               ([F(1, 2), 0, 3, 1], [2, -1, 0, F(2, 3)], F(-443, 36), F(2, 3)),
+               ([0, 0, 1, 0], [0, 0, 0, 1], F(0), F(0))]
+    for a, b, p0, q0 in samples:
         z = GA.add(vec(a), GA.mul(i5, vec(b), sqw))
         want = GA.add(GA.sc(form(a, a, sq) - form(b, b, sq)), GA.scal(2 * form(a, b, sq), i5))
         ok &= sq_of(z, sqw) == want
+        ok &= sq_of(z, sqw) == GA.add(GA.sc(p0), GA.scal(q0, i5))
     # complex null vector e_2 + I_5 e_3; the left unit I_4 does not complexify vectors
     z = GA.add(GA.gen(2), GA.mul(i5, GA.gen(3), sqw))
     ok &= sq_of(z, sqw) == {}
@@ -155,11 +158,13 @@ def check_complex_vectors_and_shifted_squares():
     w2 = sq_of(w, sqw)
     ok &= w2 == GA.add(GA.sc(-2), GA.scal(2, GA.mul(GA.gen(0), GA.gen(1), sqw)))
     # the shift: (y + eps I_5 e_0)^2 = Q(y) - eps^2 + 2 eps y_0 I_5, a number of span{1, I_5}
-    for y, eps in (([3, 1, -2, 5], F(1, 3)), ([F(1, 2), 4, 0, -1], F(-2, 7))):
+    for y, eps, p0, q0 in (([3, 1, -2, 5], F(1, 3), F(-190, 9), F(2)),
+                           ([F(1, 2), 4, 0, -1], F(-2, 7), F(-3299, 196), F(-2, 7))):
         a = [1, 0, 0, 0]
         z = GA.add(vec(y), GA.scal(eps, GA.mul(i5, vec(a), sqw)))
         p = form(y, y, sq) - eps * eps * form(a, a, sq)
         qq = 2 * eps * form(y, a, sq)
+        ok &= (p, qq) == (p0, q0)
         ok &= sq_of(z, sqw) == GA.add(GA.sc(p), GA.scal(qq, i5))
         num = GA.add(GA.sc(p), GA.scal(qq, i5))
         conj = GA.sub(GA.sc(p), GA.scal(qq, i5))

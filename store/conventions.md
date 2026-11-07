@@ -146,10 +146,12 @@ already in the store that use such notation and declare nothing.
 ## The imaginary units
 
 The store states results in real geometric algebra wherever the series
-allows it. Two units, deliberately distinct (the working note "One Complex
-Unit", 16 October 2026):
+allows it. The field theory and the conformal spinors have two units,
+deliberately distinct (the working note "One Complex Unit", 16 October 2026);
+the unit principle below adds the units used where those two cannot act ($J$
+on the radial atom, $I_5$ and $I_7$ for complexifications):
 
-- **The field theory's unit is $i = I_4 = \gamma_0\gamma_1\gamma_2\gamma_3$.**
+- **The field theory's unit is $I_4 = \gamma_0\gamma_1\gamma_2\gamma_3$.**
   $I_4^2 = -1$; it is central in the even spacetime algebra and commutes with
   every vector orthogonal to spacetime (the ascended plane, every tower plane,
   every tower mode operator); it anticommutes with the four spacetime vectors.
@@ -161,26 +163,63 @@ Unit", 16 October 2026):
   identified.
 - A complexified plane orthogonal to spacetime is $H \oplus I_4H$. No
   pseudoscalar of $\Cl(2,4)$ commutes with the spacetime vectors, so
-  $V_\mathbb{C}$, $\Cl(p,q)_\mathbb{C}$ and the Dirac module keep their plain
-  complexification.
-- **No bare imaginary unit where a pseudoscalar does the work (Leon's rule,
-  7 November 2026).** A result never writes $i$ (or $\mathrm{i}$, $\sqrt{-1}$)
-  where a geometric-algebra pseudoscalar can stand for it exactly: the field
-  theory's unit is written $I_4$ on even values and as the right unit
-  $x \mapsto xI_4$ on others; the conformal spinors' unit as right
-  multiplication by $I_6$; a phase in a real two-plane as $e^{B\theta}$ with
-  $B$ the plane's unit bivector (its pseudoscalar); a physical number in
-  $\mathrm{span}\{1, I_4\}$; the complex structure of the series' own mode
-  and Fock spaces as $I_4$ (so $e^{-I_4Ht}$, $\Delta^{I_4t}$); an imaginary
-  rapidity as the rotation in the dual plane, $I_4B$. A bare $i$ stays only
-  where no pseudoscalar can replace it: complex analysis in its own right
-  (contours, theta functions, modular forms), a complexification that must
-  commute with vectors (a complex null vector, $V_\mathbb{C}$), and an imported
-  Fact quoted in its source's language. Such an entity declares
-  `outside_ga` (kind `complex-analysis` or `imported`) with the reason, and the
-  language check flags a bare $i$ in a new or changed entity that does not
-  (E609 for a contributor, W222 for a maintainer). The store was converted to
-  this rule on 7 November 2026.
+  $V_\mathbb{C}$, $\Cl(p,q)_\mathbb{C}$ and the Dirac module are complexified
+  by the central pseudoscalar of the odd extension, $I_5$ or $I_7$ (U3 below).
+- **The unit principle (Leon's rule, 7 November 2026: "Try to resolve all
+  imaginary units").** No result writes a bare imaginary unit $i$ (or
+  $\mathrm{i}$, $\sqrt{-1}$) in its formal, technical, lay or one-liner level
+  or its proofs. A complex number must commute with everything it multiplies,
+  so the unit is the pseudoscalar that commutes with every element the scalars
+  act on. (U1) $I_4$, left on even values and the right unit $x \mapsto xI_4$
+  on others, when the numbers multiply even elements, scalars, tower-plane
+  elements or abstract spaces built from them: the field theory, the horizon's
+  continuum modes, the Hadamard chain, the series' own mode and Fock spaces
+  ($e^{-I_4Ht}$, $\Delta^{I_4t}$) and numbers in general; $\mathrm{span}\{1,
+  I_4\}$ is the complex field and the default scalars of an abstract complex
+  Hilbert space or matrix algebra, a qubit, a window, complex analysis of
+  scalar functions, theta functions and modular forms (the point $\tau = I_4$,
+  $q = e^{2\pi I_4\tau}$). A phase in a real two-plane is $e^{B\theta}$ with $B$
+  the plane's unit bivector, and an imaginary rapidity is the rotation in the
+  dual plane, $I_4B$. (U2) $J = e_2e_3$, the pseudoscalar of the plane
+  orthogonal to the atom's plane, for the completed-pair atom and the boundary
+  modes in the radial plane $\sigma = e_0e_1$: $J^2 = -1$, $J$ commutes with
+  the atom, $J\sigma = +I_4$; the phase flow is $\operatorname{Ad}(e^{JtK})$,
+  $K = \sigma/2$, with $v \mapsto e^{-Jt}v$ and $v^* \mapsto e^{+Jt}v^*$, the
+  rotor flow $e^{\lambda K}$ is its value at $t = -J\lambda$, the KMS
+  relation is $\omega_\beta(x\,\tau_{J\beta}(y)) = \omega_\beta(yx)$ with
+  $\tau_{J\beta} = \operatorname{Ad}(e^{-\beta K})$, and the modular flow of
+  the Gibbs state is $\tau_{-\beta t}$; left $I_4$ is no scalar there,
+  $(I_4v)(I_4w) = +vw$
+  (`synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom`).
+  (U3) The central pseudoscalar of the odd extension, where the unit must
+  commute with every vector ($V_\mathbb{C}$, complex null vectors,
+  $\Cl(p,q)_\mathbb{C}$, the Dirac module's complexification, tube points,
+  $i0$ shifts): for $V$ of even dimension adjoin $e \perp V$ with
+  $Q(e) = -I_V^2$; then $I_V e$ is central with square $-1$ and
+  $\Cl(V \oplus \mathbb{R}e) = \Cl(V) \oplus \Cl(V)I_Ve$ is the
+  complexification of $\Cl(V)$
+  (`std-algebra.complexification-is-the-odd-extension`). Spacetime: $\Cl(2,3)$,
+  unit $I_5 = I_4e$, so $e_2 + I_5e_3$ and $Q(y - y' - \epsilon I_5e_0)$, a
+  number of $\mathrm{span}\{1, I_5\}$; conformal space: $\Cl(3,4)$, unit
+  $I_7 = I_6e$, so $m = x + I_7y$. Through $\tfrac12(1 \pm e)$, $I_5$ acts as
+  the right unit $\pm xI_4$ and $I_7$ as $\pm$ right multiplication by $I_6$:
+  related with a sign, never identified. (U4) An imported Fact is restated in
+  geometric algebra with the unit chosen by U1 to U3; the source's own form
+  moves to `extraction.source_formal` (an existing one is kept) with the
+  sentence "the source writes $i$ for <unit>"; the status stays imported and
+  the declaration goes. (U5) A bridge result states the geometric-algebra side
+  in its levels; a standard-formalism expression with $i$ either uses the unit
+  by U1 to U3 (matrices with entries in $\mathrm{span}\{1, I_4\}$, the Dirac
+  matrices with $i$ read as $I_5$) or moves to `extraction.source_formal`.
+  (U6) An occurrence that cannot be resolved exactly, because the replacement
+  would change what is claimed, stays, and the entity declares `outside_ga`
+  with the precise reason; no statement is weakened or changed to remove an
+  $i$. Two different units ($I_4$, $I_5$, $I_6$, $I_7$, $J$) are never
+  identified: where two appear in one entity both are kept and the entity says
+  which acts where. Index letters and Hamilton's named quaternion units are
+  not imaginary units. The language check flags a bare $i$ in a new or changed
+  entity that does not declare `outside_ga` (E609 for a contributor, W222 for
+  a maintainer).
 - **Where the unit stands (1 November 2026).** The field theory's unit is
   $I_4$ on even values. On anything else, in particular on a massive Dirac
   line, whose numerator $k + m$ is not even, it sits outside the Clifford
@@ -214,17 +253,21 @@ Known limits of these conventions (recorded findings, not settled):
 
 1. T05's atom is built in the spacetime radial plane $\sigma = e_0e_1$; $I_4$
    anticommutes with its mode operators, so "$I_4$ commutes with every mode"
-   holds for tower planes, not for that atom.
-2. The boundary-mode algebra is defined over $\mathbb{C}$ in the Hawking paper
-   and as a real Clifford algebra (scalar centre) in the scrambling results.
+   holds for tower planes, not for that atom. Its complex unit is the
+   transverse bivector $J = e_2e_3 = I_4\sigma$, which commutes with the atom
+   (`synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom`).
+2. The boundary-mode algebra is defined over the complex numbers in the
+   Hawking paper and as a real Clifford algebra (scalar centre) in the
+   scrambling results; in the store its scalars are $\mathrm{span}\{1, J\}$
+   for modes of the radial atom and $\mathrm{span}\{1, I_4\}$ otherwise.
 3. T12's rungs note writes the Majorana generators $\gamma_{2i+1}$ with the
    opposite sign to T12's bidoublet and parity proofs; each is consistent
    within itself (the stored texts now carry $I_4$ for the unit).
 4. The series calls two different flows "the boost flow": the real rotor
    flow $\exp(\lambda\sigma/2)$ of T05 and T08, which rescales the modes, and
-   the phase flow $e^{-i\omega t}$ on the modes of T05 Thm 7.16 and T07, which
+   the phase flow $e^{-J\omega t}$ on the modes of T05 Thm 7.16 and T07, which
    T05 Prop 7.21 identifies as the Euclidean rotation. They share the
-   generator $K = \sigma/2$ and are related by $\lambda = it$; the KMS and
+   generator $K = \sigma/2$ and are related by $\lambda = Jt$; the KMS and
    modular analysis uses the phase flow, the clock inventory and the
    scrambling law the rotor flow. The remark `note.decisions.two-boost-flows`
    states the distinction, and each result that speaks of the boost flow

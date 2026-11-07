@@ -1,0 +1,21 @@
+functions:
+  check_transverse_plane_is_a_central_unit_of_the_atom:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "the CAR relations of v, v*, sigma = e_0 e_1, J^2 = -1, J commuting with e_0, e_1, v, v*, sigma, J sigma = sigma J = +I_4 and J = I_4 sigma; A of dimension 8, closed under all 64 basis products, centre of dimension 2 by exact linear solve, spanned over span{1, J} by 1, v, v*, v* v by rank; the isomorphism with 2 x 2 matrices is argued from the dimension, not computed"
+  check_frame_star_is_conjugate_linear_in_the_unit:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "x* = e_0 rev(x) e_0 fixes e_0, negates e_1, e_2, e_3, reverses all 256 products of blades, sends v to v*, fixes sigma and K, sends J, JK and I_4 to their negatives; that it is the stored frame *-structure is by its defining values"
+  check_left_i4_is_not_a_scalar_of_the_atom:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "I_4 anticommuting with e_0, e_1, v, v*; (I_4 a)(I_4 b) = ab and (J a)(J b) = -ab on all pairs of five vectors of the radial plane; I_4 P_+ = J P_+ and I_4 P_- = -J P_-"
+  check_phase_flow_with_unit_J:
+    kind: exact
+    clauses: ["(iv)", "(v)"]
+    omits: "the infinitesimal signs [JK, v] = -Jv and [JK, v*] = +Jv*, JK = I_4/2, (2JK)^2 = -1; the finite flow only at three rational points of the circle (Cayley form), with unitarity, the wrong-sign contrast and the addition law; the rotor flow at two rational values of e^(lambda/2); the series collapse and real t are the proof"
+  check_gibbs_state_is_kms_for_the_J_flow:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "at y = e^beta = 3 and 2/7 only: T is span{1, J}-valued and cyclic on the real basis, omega(v* v) = 1/(1 + y), KMS for Ad(rho) on all 64 basis pairs and its failure for Ad(rho^-1), positivity on ten elements, the KMS densities a real plane (the J-line of rho); the modular flow at one rational point of the circle; uniqueness among all states is the cited theorem"
