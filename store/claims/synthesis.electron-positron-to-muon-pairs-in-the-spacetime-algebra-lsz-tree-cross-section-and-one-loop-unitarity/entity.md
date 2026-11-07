@@ -1,7 +1,7 @@
 ---
 id: synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity
 kind: claim
-version: 2
+version: 3
 title: '$e^{+}e^{-} \to \mu^{+}\mu^{-}$ in the spacetime algebra: tree and one loop'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -57,7 +61,14 @@ checked_by:
 lineage:
   motivated_by:
   - field-theory.coupled-system-tree-level
+outside_ga:
+  kind: complex-analysis
+  why: 'the absorptive part is read from the boundary value Pi(s + i0) of a scalar function in the complex s-plane, with the branch ln(m^2/(A - i0)) = ln(m^2/|A|) + i pi; that is contour analysis of a scalar function in its own right'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the photon two-point function''s Feynman rule is now the field theory''s unit I_4 (numbers in span{1, I_4}); the i0 boundary values, the branch of the logarithm (ln(m^2/(A - i0)) = ln(m^2/|A|) + i pi) and the absorptive part Im Pi(s + i0) stay: they are the analytic structure of a scalar function in the complex s-plane.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

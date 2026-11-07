@@ -1,7 +1,7 @@
 ---
 id: mass.exact-join
 kind: claim
-version: 7
+version: 8
 title: The exact join
 status: proved
 region: mass
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.mass.grip-mass-composite
@@ -50,6 +54,10 @@ locators:
   label: thm:grip
   line: 706
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The chart''s complex unit, which the proof''s convention line already read as I_6 but wrote i, is now written I_6 in p(x), k(x), their components, the pairings and t_jj = r_j + I_6 s_j, numbers read in span{1, I_6}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
