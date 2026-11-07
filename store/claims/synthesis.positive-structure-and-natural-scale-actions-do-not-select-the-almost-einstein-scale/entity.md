@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 kind: claim
-version: 2
+version: 3
 title: 'Positive structure and natural actions leave the almost-Einstein scale free'
 status: proved
 region: synthesis
@@ -27,7 +27,7 @@ credit:
   source: maintainer pass 2026-11-07 (consistency)
 - name: Claude Opus 5.5
   role: 'GTG proof of (ii) (dilation field, torsion-solved Omega, Kulkarni-Nomizu field strength, store-sign scalar) and of (iii) (tractor derivative in Cl(2,4)); decision A3 applied (store-sign scalar and Euler-Lagrange equation in (ii))'
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:

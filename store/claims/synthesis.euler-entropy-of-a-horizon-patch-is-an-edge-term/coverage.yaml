@@ -31,6 +31,18 @@ functions:
     kind: sampled
     clauses: ["(i) delta_lambda Q = d eps(lambda, d omega)", "(i) eps(e0^e1, d omega) = 4 d omega^{23}", "(i) R^{23} - d omega^{23} = -(b2 ^ a3 + a2 ^ b3) on the cut, zero on admissible cuts"]
     omits: "one polynomial connection and parameter for the variation; one generic connection for the Gauss identity, admissible and not"
+  check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature:
+    kind: sampled
+    clauses:
+    - "(i) d omega_S = K e^2 ^ e^3"
+    - "(i) under a rotation of the frame by theta, omega_S -> omega_S - d theta"
+    - "(ii) k_g the geodesic curvature of the edge"
+    omits: "five polynomial profiles at three points each, the cut built as a 2D gauge field with Omega solved from the torsion equation; integrals over patches and closed cuts are in the earlier functions"
+  check_gtg_binormal_contraction_is_four_times_the_cut_component:
+    kind: exact
+    clauses:
+    - "(i) eps_abcd lambda^ab d omega^cd is 4 d omega^23 for lambda the binormal e_0 ^ e_1"
+    omits: "the algebraic contraction only, on three bivectors (linear, so exact on a spanning set with the sixth coefficient varied); the Chern-Simons variation itself is in the earlier function"
 untouched_premises:
   synthesis.einstein-equations-from-c-loc-and-clausius: "the thin-pencil limit (H2) and the Clausius relation (H1) are used as stated; the check evaluates densities, not the limit"
   synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term: imported Fact (Gauss-Bonnet with edge and corners, Poincare-Hopf and clutching, the two-dimensional Gibbons-Hawking term) for (ii) to (iv); the checks verify its instances on sample profiles and call no premise for it

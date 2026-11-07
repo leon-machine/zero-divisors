@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i), (ii): the cut as a two-dimensional gauge field, abelian field strength as the transgression, the rotor gauge law, k_g from (T.D)T; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -56,12 +60,20 @@ checked_by:
   ref: check.py::check_wall_counterterm_anomaly_is_the_edge_transgression
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature
+- kind: check
+  ref: check.py::check_gtg_binormal_contraction_is_four_times_the_cut_component
 lineage:
   motivated_by:
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
   - dark-energy.wall-counterterm
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof of (i), (ii) rewritten in GTG: the cut as a two-dimensional gauge field on a flat Riemannian plane (frame e_2, e_3, J = e_2 e_3), Omega_S(a) = -omega_S(a) J (Cartan sign, C10), field strength with no commutator term, R_S(a ^ b) = -(d omega_S)(a, b) J, so calR_S(J) = K J is d omega_S = K e^2 ^ e^3; the holonomy rotor exp((1/2) J oint omega_S); the frame rotation by theta as the gauge transformation with R = exp(-J theta/2), giving omega_S -> omega_S - d theta; k_g = -((T.D)T) . N; the binormal contraction eps_abcd lambda^ab Y^cd = 4 <lambda I^{-1} Y> = 4 Y^23. The Chern-Simons variation and the Gauss-equation identity of the (i) reading, Gauss-Bonnet with corners and (iii), (iv) stay as before; the Christoffel and form computations kept as a labelled reading. Checked exactly: check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature (five profiles, three points: torsion-solved Omega_S(e_s) = 0, Omega_S(e_phi) = rho'' J, no commutator, field strength rho'''' J, calR_S(J) = K J with K = -rho''''/rho, k_g = -rho''/rho for N = e_2, and the gauge law Omega''(e_s) = theta'' J for three rotations) and check_gtg_binormal_contraction_is_four_times_the_cut_component (4 <lambda I^{-1} Y> = 4 Y^23 on three bivectors). Version kept at 3 (already above the lock in this run). outside_ga narrowed to the reading of (i) and the imported surface theorems.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -100,7 +112,7 @@ extraction:
     the gauge variation of a Chern-Simons form is \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}.
 outside_ga:
   kind: other
-  why: 'The Euler density and its edge term are written as Cartan forms (epsilon_{abcd} lambda^{ab} d omega^{cd}, two-dimensional rotation one-forms) and computed from Christoffel symbols of the derived metric; the forms are the computation (reader R03).'
+  why: 'The reading in (i) (the Chern-Simons gauge variation and the Gauss-equation identity with the extrinsic forms a_A, b_A) is stated and checked as identities of Cartan forms, and Gauss-Bonnet with corners is imported in its surface-geometry form; the transgression, the gauge law and the edge curvature are computed in GTG.'
 ---
 
 ## formal

@@ -19,6 +19,11 @@ functions:
     clauses:
     - (iv) V-perp signature (2,3) for Lambda > 0 and (1,4) for Lambda < 0; Cl(1,5) parent Lorentzian with de Sitter I-perp
     omits: 'none: finite linear algebra at four values of Lambda; the sign pattern depends only on the sign of Lambda'
+  check_gtg_reduction_with_base_forms_as_background_multivectors:
+    kind: sampled
+    clauses:
+    - (i) in the multivector reading of the base forms
+    omits: three samples; the outer product of disjoint background blades coincides with the Grassmann product, so this records the reading rather than testing new content
 untouched_premises:
   dark-energy.imported-macdowell-mansouri-theorem-stelle-west: cited for the normalisation of the connection and of the Lorentz block; the reduced density is compared with eps(I, V, F, F) directly
   synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part: cited for the frame equation vanishing on Einstein fields; the check recomputes it at the Schwarzschild point
