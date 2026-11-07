@@ -2,7 +2,7 @@
 id: synthesis.array-ln2-is-zero-mode-doublet-one-tower
 kind: claim
 version: 4
-title: 'Under (Q), an array''s ln 2 is its zero-mode charge doublet'
+title: 'Under (Q) version 2, an array''s ln 2 is its zero-mode charge doublet'
 status: proved
 region: synthesis
 subject: thermality
@@ -46,6 +46,10 @@ lineage:
   - synthesis.residue-from-mode-entropy
   - hawking.joint-j3-s-wave-reduction
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Title, one-liner and lay said Under (Q) while the statement is at (Q) version 2 (weights kappa k), the offset at which the doublet exists; at version 3 (kappa(k + 1/2)) there is no doublet (clause (ii) already says so). They now name version 2. The formal and technical levels still say (Q) without a version; listed for Leon.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -96,7 +100,7 @@ Consequently, in the arrays reading of the residue, the two-fold degeneracy that
 The boson-fermion correspondence splits the series' s-wave array into two independent parts: a charge sector, labelled by the number of fermions added to or removed from the sea, and one tower of bosonic oscillators, which is what the currents create. With the (Q) weights, the lowest energy at charge $Q$ is $Q(Q-1)/2$ in units of $\kappa$, so charges $0$ and $1$ are degenerate at zero energy: the zero mode can be empty or filled for free. That two-fold degeneracy is where the $\ln 2$ per array lives; with the sea placed between sites instead, the other particle-hole symmetric choice, there is no zero mode, no degeneracy, and the array carries half as much. The currents conserve charge: the charge current reads which of the two states the array is in, and no other current can move between them. The oscillators, which become the s-wave photons under Joint J3, carry only the tower's entropy, a small fraction of $\ln 2$ at the Hawking temperature. Since the current sector has one oscillator per frequency, an array supplies one helicity channel; the two helicities of a partial wave need two towers, whose state counts differ already at the first level. The capacity per array is a charge-sector quantity, so no reading of J3 can change it, and a residue built from helicity channels of the current would be far from both registered values.
 
 ## lay
-The series models the boundary modes as a single row of fermion slots, and shows that their collective ripples behave like particles of light. Assuming, as the series does for this step, that the modes are jointly in the simplest thermal state (Premise (Q)), this result separates the row's information into two parts. Almost all of it, one bit, sits in a single question: whether the slot exactly at the zero level is filled. The ripples, which are the light, cannot change that answer, and they carry only a small fraction of the information. The row also turns out to contain exactly one kind of ripple at each frequency, which is enough for one polarisation of light but not for both. So the earlier question of whether one boundary mode holds one polarisation or two does not affect the count that fixes the series' calibration, and one row of modes supplies one polarisation.
+The series models the boundary modes as a single row of fermion slots, and shows that their collective ripples behave like particles of light. Assuming, as the series does for this step, that the modes are jointly in the simplest thermal state (Premise (Q), in its earlier form, with one slot at exactly zero energy), this result separates the row's information into two parts. Almost all of it, one bit, sits in a single question: whether the slot exactly at the zero level is filled. The ripples, which are the light, cannot change that answer, and they carry only a small fraction of the information. The row also turns out to contain exactly one kind of ripple at each frequency, which is enough for one polarisation of light but not for both. So the earlier question of whether one boundary mode holds one polarisation or two does not affect the count that fixes the series' calibration, and one row of modes supplies one polarisation. In the premise's present form no slot sits at zero energy; there is then no such bit, a row holds half a bit, and the single kind of ripple per frequency is unchanged.
 
 ## one-liner
-Under (Q) the s-wave array is charge sectors times one oscillator tower: the per-array $\ln 2$ is the two-fold degeneracy of the zero-mode charge doublet of (Q)'s offset, which no current with $m \neq 0$ connects, the current boson carries only the tower's entropy, and one array supplies one helicity channel, not two.
+Under (Q) in its version 2 (weights $\kappa k$) the s-wave array is charge sectors times one oscillator tower: the per-array $\ln 2$ is the two-fold degeneracy of the zero-mode charge doublet of that offset, absent at the present offset $\kappa(k + \tfrac12)$, which no current with $m \neq 0$ connects, the current boson carries only the tower's entropy, and one array supplies one helicity channel, not two.

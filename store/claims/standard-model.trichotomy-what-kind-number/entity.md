@@ -1,7 +1,7 @@
 ---
 id: standard-model.trichotomy-what-kind-number
 kind: claim
-version: 10
+version: 11
 title: 'The trichotomy: what kind of number $N$ is'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, proof rung arithmetic brought to the corrected value'
+  version: 11
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -49,6 +53,10 @@ locators:
   label: prop:trichotomy
   line: 1259
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof, last sentence: the rung count still read R ~ 2*60/log10(2) ~ 400 from the old N ~ 10^60, against the corrected statement R = log2 N^2 ~ 405; exact interval arithmetic with M_P = 1.221e19 GeV, H_0 = 67.4 km/s/Mpc, Omega_Lambda = 0.685 gives 2^405 < N^2 < 2^406 and 2^407 < pi N^2/ln 2 < 2^408 (consistency run scratch v3.py); the sentence now states that and that the script checks only the coarse pair for N ~ 10^60.'
   maintainer_pass_weak_scale:
     by: maintainer-2026-11-01
     date: '2026-11-01'

@@ -1,7 +1,7 @@
 ---
 id: dark-energy.variable-exponents-residue-pointwise-corrections-are
 kind: claim
-version: 4
+version: 5
 title: 'Variable exponents: the residue is pointwise, the corrections are subleading'
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (connection one-forms as the bivectors Omega(hb(gamma_a)))
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -43,6 +47,10 @@ locators:
   label: lem:varexp
   line: 953
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA: the connection is stated on the physical frame, omega(gamma_0) = 0, omega(gamma_i) = -(p_i/tau) B_i - log(tau) hb^T(grad p_i) ^ gamma_i, with hb^T(grad p_i) = -sum_j tau^{-p_j} (d_j p_i) gamma_j the physical gradient of the exponent; the one-forms and the coframe stay as a labelled component reading (formal, technical); the proof solves the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) term by term and states the order counting on the physical frame planes. Equivalence checked exactly with lib/GA.py and lib/gtg.py in the maintainer scratch: at the four points and two log placeholders of the check, the closed GA form equals the bivectors the check assembles from the stored one-forms and satisfies the GA structure equation, and the opposite sign does not. Mathematics unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

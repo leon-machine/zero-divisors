@@ -1,7 +1,7 @@
 ---
 id: synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form
 kind: claim
-version: 2
+version: 3
 title: 'Clifford conjugation as twistor adjoint and the Gupta-Bleuler form'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (metric components as frame products)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -54,6 +58,10 @@ lineage:
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The metric components of the polarisation algebra are written as products of the spacetime algebra''s frame vectors, g_{mu mu} = Q(gamma_mu) and g_{mu nu} = gamma_mu . gamma_nu (the same numbers; for the propagator, -gamma_mu . gamma_nu/k^2 is the component reading of a -> -a/k^2); the remaining indices are components on the frame gamma_mu, the algebra''s own vectors; notation only.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -90,7 +98,7 @@ Units and signature of the store. Complex scalars are $\mathrm{span}\{1, I_{7}\}
 \item[(ii)] \emph{(Its trace form on vectors is minus the metric; proved.)} For real vectors $a, b$ of $\Cl(2,4)$, $\tau(a^{\sharp}b) = \langle\bar ab\rangle_{0} = -a\cdot b$, of signature $(4, 2)$; the identity $\langle\bar ab\rangle_{0} = -a\cdot b$ holds in every Clifford algebra, with no module and no twistor form. $\tau(a^{\dagger}b)$ is the Euclidean form in which the six generators are orthonormal. The two are related by $J$: $\tau(a^{\sharp}b) = \tau(a^{\dagger}JbJ)$, where $b \mapsto JbJ$ reverses $e_{1}$ and $e_{+}$ and fixes $e_{2}, e_{3}, e_{4}, e_{-}$. On polarisation vectors the first is the one-particle Gupta-Bleuler form $-u\cdot w$, negative on $e_{1}$ and positive on $e_{2}, e_{3}, e_{4}$ (the sign from the store's signature, the normalisation by the choice of $\tau$); the second is the Euclidean form of the time $e_{1}$; and $J$ acts as $u \mapsto -e_{1}ue_{1}$.
 \item[(iii)] \emph{(Invariance; proved.)} $\tau(a^{\sharp}b)$ is invariant under every rotor of $\Cl(2,4)$; the positive form $\tau(a^{\dagger}b)$ is not invariant under the boost $\tfrac54 + \tfrac34e_{1}e_{2}$, which takes $e_{1}$ to a vector of positive norm $\tfrac{257}{32}$.
 \item[(iv)] \emph{(Uniqueness; proved.)} The real bilinear forms on the polarisation space invariant under the six Lorentz bivectors form a one-dimensional space spanned by the metric. Hence every Lorentz-invariant Hermitian form on the complex polarisations is a real multiple of $-u\cdot w$, and none is definite.
-\item[(v)] \emph{(Second quantisation; proved.)} On the polynomials in $z_{0}, \dots, z_{3}$ with the form $\langle z^{\alpha}, z^{\beta}\rangle = \alpha!\,\delta_{\alpha\beta}$ (Proposition \claimref{field-theory.fock-space-maxwell-modes}), the bosonic Fock form over the one-particle form $\tau(u^{\sharp}w)$ is $\langle z^{\alpha}, (-1)^{n_{0}}z^{\beta}\rangle$, and for it the adjoint of $a_{\mu} = \partial/\partial z_{\mu}$ is $-g_{\mu\mu}z_{\mu}$, so $[a(u), a(w)^{\dagger}] = -u\cdot w$ on all four polarisations: the Feynman-gauge ($\alpha = 1$) realisation of the form in clause (K1) of Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, with fundamental symmetry the second quantisation of $b \mapsto JbJ$. Covariant gauges with $\alpha \neq 1$ use the dipole state space with an auxiliary field, not a Fock space over a one-particle form, and are not described here.
+\item[(v)] \emph{(Second quantisation; proved.)} On the polynomials in $z_{0}, \dots, z_{3}$ with the form $\langle z^{\alpha}, z^{\beta}\rangle = \alpha!\,\delta_{\alpha\beta}$ (Proposition \claimref{field-theory.fock-space-maxwell-modes}), the bosonic Fock form over the one-particle form $\tau(u^{\sharp}w)$ is $\langle z^{\alpha}, (-1)^{n_{0}}z^{\beta}\rangle$, and for it the adjoint of $a_{\mu} = \partial/\partial z_{\mu}$ is $-Q(\gamma_{\mu})z_{\mu}$, so $[a(u), a(w)^{\dagger}] = -u\cdot w$ on all four polarisations: the Feynman-gauge ($\alpha = 1$) realisation of the form in clause (K1) of Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, with fundamental symmetry the second quantisation of $b \mapsto JbJ$. Covariant gauges with $\alpha \neq 1$ use the dipole state space with an auxiliary field, not a Fock space over a one-particle form, and are not described here.
 \item[(vi)] \emph{(The ghost twist; computed.)} $J = 2n_{c} - 1$, with $n_{c}$ the number operator of the mode $c = \tfrac12(e_{1} + I_{7}e_{+})$; on a floor of two tower modes $b, d$ (Fact \claimref{field-theory.imported-tower-limit}) the ghost twist $S = 1 - (b^{*} - d^{*})(b - d)$ of (K2) is $1 - 2n_{-}$, the parity of the mode $(b - d)/\sqrt2$. Both twists are parities of one mode; every fundamental symmetry of this kind on a fermion floor has that form, so this does not single out (K2).
 \end{enumerate}
 \emph{Reading (argued).} The one-particle form of (K1) is minus the store's metric, the trace form of Clifford conjugation in any Clifford algebra; the twistor form supplies the involution $J$ that relates it to the positive polarisation form, so the frame that the positive form singles out is the attachment's imaginary time point. Clause (K1) as a premise, that the polarisation and ghost state spaces carry the indefinite form, is not derived, and neither are (K2) to (K4). The covariant and the positive forms are both present in the attachment, as in Theorem \claimref{synthesis.positive-structure-is-twistor-form-at-imaginary-time}(iv), where the covariant form is the one on the whole space and states exist only for positive structures. Standard; transport-absent.

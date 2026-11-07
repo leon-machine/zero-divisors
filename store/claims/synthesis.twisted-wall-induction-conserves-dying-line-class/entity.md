@@ -1,7 +1,7 @@
 ---
 id: synthesis.twisted-wall-induction-conserves-dying-line-class
 kind: claim
-version: 1
+version: 2
 title: The twisted wall induction carries the dying line's class to every shadow wall
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (wording of proof (3) aligned with the cited rung result, at reader R09''s request)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -48,6 +52,10 @@ lineage:
   - sheaf.wall-class
   - synthesis.wall-class-one-rung-obstruction
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Reader issue (ga-issues-R09.md): proof (3) said the clock coordinates shift by the rung; the rung (1,1) leaves both clock positions fixed, as the cited synthesis.wall-class-one-rung-obstruction states, and the proof now says so. Wording only, the argument unchanged. The Gram matrices and determinants of the entity stay (Gram matrices of forms, which the conventions allow).'
   open_problem: op.wall-class-invariant
   note: >-
     Supplies clause (b) of the wall-class conjecture for the pair W = (signature mismatch, w_1 of the

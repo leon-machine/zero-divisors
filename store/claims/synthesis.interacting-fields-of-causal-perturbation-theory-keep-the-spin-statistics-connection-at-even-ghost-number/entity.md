@@ -1,7 +1,7 @@
 ---
 id: synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number
 kind: claim
-version: 3
+version: 4
 title: 'Causal perturbation theory keeps spin-statistics at even ghost number'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (metric components as frame products)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'M. Dütsch and K. Fredenhagen, A local (perturbative) construction of observables in gauge theories: the example of QED, Commun. Math. Phys. 203 (1999), 71--105; arXiv:hep-th/9807078.'
@@ -67,6 +71,10 @@ lineage:
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The metric components of the polarisation algebra are written as products of the spacetime algebra''s frame vectors, g_{mu mu} = Q(gamma_mu) and g_{mu nu} = gamma_mu . gamma_nu (the same numbers; for the propagator, -gamma_mu . gamma_nu/k^2 is the component reading of a -> -a/k^2); the remaining indices are components on the frame gamma_mu, the algebra''s own vectors; notation only.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

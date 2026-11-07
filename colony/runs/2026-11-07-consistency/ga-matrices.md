@@ -21,6 +21,7 @@ Validation: `tp check --layers 1,2,3 --author leon` filtered to ids_ga_matrices.
 - synthesis.majorana-scale-is-126-doublet-vev 2 -> 3, synthesis.no-120-excludes-hierarchical-second-stage 1 -> 2, synthesis.one-type-second-stages-are-twins 1 -> 2: "Dirac matrices" (meaning the Dirac mass matrices) now reads "Dirac mass matrices". This removes a detector false positive. Wording only.
 - synthesis.slot-module-light-ray-arrays-are-weyl-components 2 -> 3: one sentence names the two units, at reader R08's request (see below). Its mass matrices stay.
 - note.primer.setting-products-vectors-one-rule-3 1 -> 2: adds a ^ b = I(a x b). Declared bridge.
+- synthesis.twisted-wall-induction-conserves-dying-line-class 1 -> 2: at reader R09's request, proof (3) now says that the rung (1,1) preserves both clock positions, matching the cited rung result. Wording only. Its Gram matrices stay.
 
 ## Declared, text unchanged (version +1, declaration only)
 
@@ -30,7 +31,7 @@ Validation: `tp check --layers 1,2,3 --author leon` filtered to ids_ga_matrices.
 
 ## Not rewritten (no change, no version bump)
 
-- Gram matrices, Schur complements and determinants of forms, which the conventions allow: sheaf.determinant-identity-blow-up-expansion, sheaf.schwarzschild-degeneration-boundary-tame, sheaf.wall-gram, three-routes.imported-boundary-gram-ladder, synthesis.tameness-splits-regularity-and-order, synthesis.transverse-corank-two-walls-are-wild (the stratification of symmetric matrices is the point), synthesis.twisted-wall-induction-conserves-dying-line-class.
+- Gram matrices, Schur complements and determinants of forms, which the conventions allow: sheaf.determinant-identity-blow-up-expansion, sheaf.schwarzschild-degeneration-boundary-tame, sheaf.wall-gram, three-routes.imported-boundary-gram-ladder, synthesis.tameness-splits-regularity-and-order, synthesis.transverse-corank-two-walls-are-wild (the stratification of symmetric matrices is the point). Reader R09 checked the mathematics of these and found no issue.
 - Explicit numerical matrices that are the point of the result: synthesis.adiabatic-deposit-modulation-is-a-time-shift (rank and kernel of a 2 x 3 matrix), synthesis.clausius-is-window-first-law-plus-boost-charge-conservation (a rational rotation on two modes, a 4 x 4 density matrix).
 - Mass and family matrices: synthesis.imported-left-right-bidoublet-two-yukawa-couplings (also the 2 x 2 bidoublet and epsilon of the source's model; reader R04 found no issue).
 - Already declared bridge, nothing further to do: synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation.
@@ -49,3 +50,4 @@ Validation: `tp check --layers 1,2,3 --author leon` filtered to ids_ga_matrices.
 - ga-issues-R08: slot-module, two units with no sentence saying which acts where. Fixed (version 3): Hestenes' right unit I_4 sigma_3 acts on the spinor values and span{1, I_4} on the slot module. They are not identified, and the count is independent of the choice. families and note.families: no remaining issue.
 - ga-issues-R10 item 3: mass.chart-form-spin-isomorphism. No sentence added. Its levels use no imaginary unit, because the chart maps are real-linear in the frame. The I_6 versus I_7 orientation sign belongs with synthesis.attachment-... (R10 item 2, not mine). R10 found no issue on majorana, no-120 or one-type.
 - ga-issues-R04: the bidoublet Fact. No issue.
+- ga-issues-R09: twisted-wall, proof (3) wording. Fixed (see above). descent-what-it-erases: the stale unit_note ("stays a scalar i") is annotated as superseded (no i remains; the radial atom's unit is J = e2e3), within its version 6. descent-parity-average and the Gram entities: no issue.

@@ -1,7 +1,7 @@
 ---
 id: interior.gauge-trajectory-unipotent-ray
 kind: claim
-version: 8
+version: 9
 title: The gauge trajectory is a unipotent ray
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, kernel direction stated as null for the limit form; garbled proof expression repaired'
+  version: 9
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -74,6 +78,10 @@ extraction:
     cited:
     - singularity.non-removability-invariant-argument
     - singularity.type-n-only-type-n
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 8 -> 9. Wording and a typo only: clause (4) said the cones fold onto "the single null direction of the kernel", but e_r is null only for the rescaled limit form (singularity.degeneration-exactly(3); g(e_r, e_r) = -1 at every r > 0, as the proof already says), so the clause now says so; in the proof the expression 1 - beta^2 - 2 lambda beta - lambda^2 . 1 . (-1)(-1) is written as (e_t + (lambda + beta) e_r)^2 = 1 - (lambda + beta)^2, the same polynomial. Statement, status and links unchanged.'
 ---
 
 ## formal
@@ -82,7 +90,7 @@ The map $P$ is nilpotent, $P^2 = 0$, exactly and at every radius. Consequently:
 \item the maps $\{1 + sP : s \in \R\}$ form a one-parameter unipotent group, $(1 + sP)(1 + s'P) = 1 + (s + s')P$, and the entire history of the gauge field, from spatial infinity to the singularity, is the ray $s = -\beta(r) \in (-\infty, 0]$ in this group;
 \item $\hb$ is invertible at every $r > 0$ in closed form, $\hb^{-1} = 1 + \beta P$, the horizon $\beta = 1$ included: the horizon is algebraically unremarkable;
 \item the metric $g(a,b) = \hb^{-1}(a)\cdot\hb^{-1}(b)$ is the Painlev\'e-Gullstrand line element: $g(\et,\et) = 1 - \beta^2 = 1 - 2M/r$, $g(\et,\er) = -\beta$, $g(\er,\er) = -1$, angular directions untouched;
-\item the singularity is the divergence $s \to -\infty$ of the shear parameter: division fails nowhere at $r > 0$ and unavoidably at $r = 0$, where the light cones of $g$ fold onto the single null direction of the kernel, a type-N degeneration \cite[Props.~2.4-2.6, 3.1]{ButlerT5}.
+\item the singularity is the divergence $s \to -\infty$ of the shear parameter: division fails nowhere at $r > 0$ and unavoidably at $r = 0$, where the light cones of $g$ fold onto the single kernel direction $\er$, null for the rescaled limit form (Proposition \claimref{singularity.degeneration-exactly}(3); $g(\er, \er) = -1$ at every $r > 0$), a type-N degeneration \cite[Props.~2.4-2.6, 3.1]{ButlerT5}.
 \end{enumerate}
 
 ## technical

@@ -1,7 +1,7 @@
 ---
 id: synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 kind: claim
-version: 3
+version: 4
 title: 'A self-adjoint BRST charge needs a Krein form; the tower supplies the ghosts'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (metric components as frame products)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -56,6 +60,10 @@ lineage:
   - field-theory.fock-space-maxwell-modes
   - field-theory.path-integral-inside-tower
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The metric components of the polarisation algebra are written as products of the spacetime algebra''s frame vectors, g_{mu mu} = Q(gamma_mu) and g_{mu nu} = gamma_mu . gamma_nu (the same numbers; for the propagator, -gamma_mu . gamma_nu/k^2 is the component reading of a -> -a/k^2); the remaining indices are components on the frame gamma_mu, the algebra''s own vectors; notation only.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -87,7 +95,7 @@ extraction:
 Units and signature of the store; $k$ a null vector, $Q(k) = 0$. Polarisation modes $a_\mu = \partial/\partial z_\mu$ on the palatial polynomial representation (Fact \claimref{field-theory.imported-statistics-no-go-palatial-algebra}) with its positive form $\langle z^n, z^m\rangle = n!\,\delta_{nm}$; ghost modes $b, d$ on two tower planes with the CAR of Fact \claimref{field-theory.imported-tower-limit} and the floor's positive trace form.
 \begin{enumerate}
 \item[(i)] \emph{(A self-adjoint BRST charge needs an indefinite form; proved.)} On a space with a positive-definite form an operator $Q$ with $Q^{*} = Q$ and $Q^2 = 0$ is zero. The tower's trace form ($\langle x^{*}y\rangle_0$, the basis blades orthonormal) and the palatial form are positive definite, so a nonzero nilpotent charge is not self-adjoint for either, and the self-adjoint BRST charge of the Kugo-Ojima framework does not exist on them. Nilpotent charges that are not self-adjoint do exist on positive spaces; that a local covariant vector potential needs an indefinite metric in general is Strocchi's theorem (Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}(iii)), not proved here.
-\item[(ii)] \emph{(Gupta-Bleuler BRST at a null momentum; proved.)} Let $\eta = (-1)^{n_0} \otimes S$, with $S = 1 - (b^{*} - d^{*})(b - d)$ the inner involution of the ghost floor exchanging $b$ and $d$, and $\langle x, y\rangle_K = \langle x, \eta y\rangle$. Then $a_\mu^{\dagger} = -g_{\mu\mu}z_\mu$ and $b^{\dagger} = d^{*}$, so $[a(u), a(w)^{\dagger}] = -u\cdot w$ for polarisation vectors $u, w$: the one-particle Krein form is the Minkowski metric of the polarisations, the standard Gupta-Bleuler form, invariant under boost rotors (the positive form is not). With $L = \sum_\mu g_{\mu\mu}k^\mu a_\mu$, $Q = L^{\dagger}b + d^{*}L$ satisfies $Q^2 = 0$ and $Q^{\dagger} = Q$.
+\item[(ii)] \emph{(Gupta-Bleuler BRST at a null momentum; proved.)} Let $\eta = (-1)^{n_0} \otimes S$, with $S = 1 - (b^{*} - d^{*})(b - d)$ the inner involution of the ghost floor exchanging $b$ and $d$, and $\langle x, y\rangle_K = \langle x, \eta y\rangle$. Then $a_\mu^{\dagger} = -Q(\gamma_{\mu})z_\mu$ and $b^{\dagger} = d^{*}$, so $[a(u), a(w)^{\dagger}] = -u\cdot w$ for polarisation vectors $u, w$: the one-particle Krein form is the Minkowski metric of the polarisations, the standard Gupta-Bleuler form, invariant under boost rotors (the positive form is not). With $L = \sum_\mu Q(\gamma_{\mu})k^\mu a_\mu$, $Q = L^{\dagger}b + d^{*}L$ satisfies $Q^2 = 0$ and $Q^{\dagger} = Q$.
 \item[(iii)] \emph{(Positive cohomology; computed up to three quanta.)} $Q$ preserves the total number $T$ (bosons plus ghosts). At ghost number $N_d - N_b = 0$ and $T = 0, 1, 2, 3$ the cohomology of $Q$ has dimensions $1, 2, 3, 4$, those of the symmetric powers of a two-dimensional space, and the Krein form restricted to $\ker Q$ has signature $(\dim H, 0, \dim \operatorname{im} Q)$: positive definite on the cohomology, with radical $\operatorname{im} Q$.
 \item[(iv)] \emph{(The physical modes are the stored photon modes; proved.)} The one-particle cohomology is $k^{\perp}/\mathrm{span}\{k\}$, and $\epsilon \mapsto k\epsilon$ maps it isomorphically onto the bivectors $\{f : kf = 0\}$, the mode space of Proposition \claimref{field-theory.fock-space-maxwell-modes}(2).
 \item[(v)] \emph{(The constraint charge of the derived algebra on tower ghosts; proved, standard for any Lie algebra.)} For the derived gauge algebra $\mathfrak{su}(2) \oplus \mathfrak{su}(3) \oplus \mathfrak{u}(1)$ of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} acting on the finite-dimensional matter representation $\C^{2} \otimes \C^{3}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors), with ghosts $c^a$ and antighosts $\bar c_a$ the creation and annihilation operators of twelve tower planes, the charge $Q = c^aT_a - \tfrac12 f_{ab}{}^{c}\,c^ac^b\bar c_c$ satisfies $Q^2 = 0$; without the cubic ghost term $Q^2 \neq 0$, and changing one structure constant gives $Q^2 \neq 0$.

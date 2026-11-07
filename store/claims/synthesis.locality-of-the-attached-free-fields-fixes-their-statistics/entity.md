@@ -1,7 +1,7 @@
 ---
 id: synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
 kind: claim
-version: 4
+version: 5
 title: 'Locality fixes the statistics of the attached free fields'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (metric components as frame products)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -53,6 +57,10 @@ lineage:
   - field-theory.twistor-attachment
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The metric components of the polarisation algebra are written as products of the spacetime algebra''s frame vectors, g_{mu mu} = Q(gamma_mu) and g_{mu nu} = gamma_mu . gamma_nu (the same numbers; for the propagator, -gamma_mu . gamma_nu/k^2 is the component reading of a -> -a/k^2); the remaining indices are components on the frame gamma_mu, the algebra''s own vectors; notation only.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

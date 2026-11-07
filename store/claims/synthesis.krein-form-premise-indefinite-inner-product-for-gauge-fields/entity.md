@@ -1,7 +1,7 @@
 ---
 id: synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
 kind: claim
-version: 2
+version: 3
 title: 'Premise (KF): an indefinite Krein form for gauge fields'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (metric components as frame products)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -28,6 +32,10 @@ lineage:
   - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The metric components of the polarisation algebra are written as products of the spacetime algebra''s frame vectors, g_{mu mu} = Q(gamma_mu) and g_{mu nu} = gamma_mu . gamma_nu (the same numbers; for the propagator, -gamma_mu . gamma_nu/k^2 is the component reading of a -> -a/k^2); the remaining indices are components on the frame gamma_mu, the algebra''s own vectors; notation only.'
   maintainer_pass_2026_11_02:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -54,7 +62,7 @@ extraction:
 \item[(K4)] \emph{(Positive physical space.)} the BRST charge $Q_{B}$ is nilpotent and self-adjoint for $\langle\,,\rangle_{K}$, the physical space is its cohomology $\ker Q_{B}/\operatorname{im}Q_{B}$ at ghost number zero, and the form is positive definite there: the unphysical modes (timelike and longitudinal polarisations, ghosts, antighosts) occur only in zero-norm quartets (Kugo and Ojima, Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}), and physical amplitudes are taken between physical states, from which the regulator fields decouple as their masses go to infinity.
 \end{enumerate}
 
-\emph{What it is for.} One premise covers two standard uses of an indefinite metric that the store's positive representations cannot carry. (a) Covariant gauge fixing: a nonzero self-adjoint nilpotent BRST charge does not exist on a positive space (Theorem \claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}(i)), and a local covariant vector potential obeying Maxwell's equations has no positive-metric realisation with nonzero field strength (Strocchi, Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}); with (KF) the covariant photon propagator $-g_{\mu\nu}/k^{2}$ may be used on internal lines and the background Feynman gauge with Faddeev-Popov ghosts may be used in loops. (b) Covariant regularisation: Pauli-Villars fields of negative weight. Where the store's photon (Proposition \claimref{field-theory.elementary-photon-ga}(4)) gives the covariant form only at tree level on conserved currents, (KF) is what licenses it inside loops.
+\emph{What it is for.} One premise covers two standard uses of an indefinite metric that the store's positive representations cannot carry. (a) Covariant gauge fixing: a nonzero self-adjoint nilpotent BRST charge does not exist on a positive space (Theorem \claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}(i)), and a local covariant vector potential obeying Maxwell's equations has no positive-metric realisation with nonzero field strength (Strocchi, Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}); with (KF) the covariant photon propagator $-\gamma_{\mu}\cdot\gamma_{\nu}/k^{2}$ may be used on internal lines and the background Feynman gauge with Faddeev-Popov ghosts may be used in loops. (b) Covariant regularisation: Pauli-Villars fields of negative weight. Where the store's photon (Proposition \claimref{field-theory.elementary-photon-ga}(4)) gives the covariant form only at tree level on conserved currents, (KF) is what licenses it inside loops.
 
 \emph{Results that use it} (each states it as a hypothesis at every level and has an assumes edge to it): one-loop electrodynamics in the spacetime algebra, in a covariant gauge with Pauli-Villars regulators (Theorem \claimref{synthesis.one-loop-qed-in-the-spacetime-algebra}); the one-loop running coefficients in the background Feynman gauge (Theorem \claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces}); the self-adjoint BRST charge with tower ghosts and its positive cohomology at a null momentum (Theorem \claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}, whose clauses (ii) to (v) are computations in the form (K1), (K2) and are read as the series' gauge fixing under (KF)). By the decision of 2 November 2026 the following also carry an assumes edge to it, each stating it as the hypothesis of a clause: the two-loop vacuum polarisation in dimensional regularisation (Theorem \claimref{synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient}, its covariant internal photon); the free positivity of gluon and massive-vector physical states at every number of quanta (Theorem \claimref{synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta}, clauses (K1), (K2)); the annihilation of an electron-positron pair into muons (Theorem \claimref{synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity}, only its charge-renormalisation sentence); the regulator-free vacuum polarisation (Theorem \claimref{synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants}, only the self-energy and vertex parts of its clause (iii); its vacuum polarisation uses neither (KF) nor a regulator); the running of the rung-field quartics (\claimref{synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch}, its gauge terms); the Krein quartet in the induced Einstein-Hilbert coefficient (\claimref{synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike}); the gauge parts of the one-loop coefficients of the slot-module result (\claimref{synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free}); and the interacting spin-statistics of causal perturbation theory (\claimref{synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number}). In the locality analysis of the attached free fields the Krein case $c = -1$ is the stated exception in which an anticommuting scalar, the ghost, is local (Theorem \claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}(2)); that result does not rest on (KF).
 

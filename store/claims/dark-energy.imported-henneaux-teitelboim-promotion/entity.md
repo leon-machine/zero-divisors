@@ -1,7 +1,7 @@
 ---
 id: dark-energy.imported-henneaux-teitelboim-promotion
 kind: claim
-version: 5
+version: 6
 title: 'Imported: the Henneaux-Teitelboim promotion'
 status: imported
 region: dark-energy
@@ -19,6 +19,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, technical and lay levels brought to the formal and the store decision'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
 - citation: M. Henneaux and C. Teitelboim, The cosmological constant and general covariance, Phys. Lett.
@@ -30,6 +34,10 @@ locators:
   label: fact:ht
   line: 1059
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The technical and lay levels still called the transcription to the Stelle-West norm an open decision; the formal says the series keeps Lambda fixed by the frozen point and records the promotion as the variational form of the Clausius route, and the store adopted the promotion on 2026-10-23 (programme.n-parameter-of-the-laws, synthesis.number-n-registered-free-input); the imported statement is unchanged.'
   maintainer_pass_2026_10_31:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -71,10 +79,10 @@ In the unimodular formulation of general relativity the cosmological constant is
 \emph{Note (a local release is not this promotion).} The promotion is global: $\Lambda$ is constant by its own equation of motion, with a conjugate three-form (a cosmic time) carrying the variational freedom. Releasing the norm of the Stelle-West vector locally instead, with no three-form, so that its value varies pointwise, gives for the frozen-point functional the pointwise equation $\epsilon(I, V, F, F) = 0$, which fails at every point of the Schwarzschild-de Sitter field with nonzero mass, and in the constant-coupling family with the MacDowell-Mansouri term a solution of constant norm needs the Weyl square constant, which that field also violates; such a release excludes Schwarzschild-de Sitter (Theorem \claimref{synthesis.stelle-west-norm-is-no-local-output}(iv)).
 
 ## technical
-In the unimodular formulation of general relativity the cosmological constant is not a parameter of the action but the value of a Lagrange-multiplier field, conjugate to a cosmic-time variable, whose constancy $d\Lambda = 0$ is an equation of motion. $\Lambda$ is then a constant of integration, a label of the solution rather than of the theory, and the formulation is generally covariant. Transcribing this to the Stelle-West norm, by promoting the value $\Lambda/3$ of the constraint $Q(I) = \Lambda/3$ to such a field, is a separate decision that is left open. Released locally instead, without the three-form, the norm obeys a pointwise equation that every Schwarzschild-de Sitter black hole violates, so a local release excludes those fields.
+In the unimodular formulation of general relativity the cosmological constant is not a parameter of the action but the value of a Lagrange-multiplier field, conjugate to a cosmic-time variable, whose constancy $d\Lambda = 0$ is an equation of motion. $\Lambda$ is then a constant of integration, a label of the solution rather than of the theory, and the formulation is generally covariant. Transcribing this to the Stelle-West norm, by promoting the value $\Lambda/3$ of the constraint $Q(I) = \Lambda/3$ to such a field, is the series' own step, not the source's: the series keeps $\Lambda$ fixed by the frozen point, the registered input, and records the promotion as the variational form of the Clausius route. Released locally instead, without the three-form, the norm obeys a pointwise equation that every Schwarzschild-de Sitter black hole violates, so a local release excludes those fields.
 
 ## lay
-In a well-known reformulation of general relativity, the cosmological constant stops being a fixed setting of the theory and becomes a quantity that the equations hold constant, much like a conserved charge. Different solutions can then carry different values. Whether to make the same move for the frozen point's length is recorded as an open choice.
+In a well-known reformulation of general relativity, the cosmological constant stops being a fixed setting of the theory and becomes a quantity that the equations hold constant, much like a conserved charge. Different solutions can then carry different values. The series makes the same move for the frozen point's length, keeping the cosmological constant fixed by it, and reads the move as the variational form of its thermodynamic route to Einstein's equations.
 
 ## one-liner
 In the Henneaux-Teitelboim unimodular formulation of general relativity, $\Lambda$ is a constant of integration fixed by an equation of motion rather than a parameter of the action.

@@ -74,7 +74,8 @@ extraction:
   unit_note: 'The imaginary unit here stays a scalar i: this atom is built in the spacetime radial plane
     sigma = e0 e1, where the field theory''s unit I4 anticommutes with the mode operators, so the convention
     i = I4 (which needs a plane orthogonal to spacetime) does not apply. Recorded 21 October 2026; see
-    store/conventions.md, known limit 1.'
+    store/conventions.md, known limit 1. Superseded on 7 November 2026 (version 6): no imaginary unit remains in
+    this entity, and on this radial atom the unit principle''s unit is J = e2 e3 (conventions, U2).'
 ---
 
 ## formal
