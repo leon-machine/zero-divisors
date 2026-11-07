@@ -1,7 +1,7 @@
 ---
 id: synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
 kind: claim
-version: 3
+version: 4
 title: 'The linear rung field adds a neutral normal pair to the scalon sum'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -61,6 +65,10 @@ lineage:
   - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
   - field-theory.composite-scalars-mean-field-level
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The statements ''the field theory''s unit i = I_4'' now name the unit I_4 directly, and the hypercharge generator is Y = (1/2) I_4 1; no bare i remains (the name R_C of the complexified rung summand is kept as stored; clause (1) shows it is span{1, I_4} tensor (H_4 + H_5)).'
   maintainer_pass_qft_full:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -100,7 +108,7 @@ extraction:
 ---
 
 ## formal
-In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the complexified rung summand $\mathcal{R}_{\C}$ with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ with generators $T_{j}$ and $Y$, the rung boost $e^{tK}$, the D-term potential $V_{D}$ at level $\xi = 2\zeta$, the null-lift locus $L = \{Q = -H^{2}\}$, its cone $L_{0} = \{Q = 0\}$ (the limit $H \to 0$) and the physical family point $\alpha = 0$, $\beta = (-\lambda, 0)$ of $L_{0}$, with $N^{*} = \tfrac12\lambda^{2}$, $M_{W}^{2} = \tfrac12 g^{2}N^{*}$, $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})N^{*}$, $v^{2} = 2N^{*}$. Take the field theory's unit $i = I_{4}$ (\claimref{obj.field-theory.single-algebra-field}). The \emph{linear rung field} is the field with values in all of $\mathcal{R}_{\C}$, eight real components, with a real $U(2)$-invariant polynomial potential; the \emph{constrained field} is its restriction to $L$ or $L_{0}$. Masses are eigenvalues of the Hessian divided by the kinetic coefficient of the stored Hermitian term. Write $r = \sqrt{k_{8}^{2} + k_{9}^{2}}$.
+In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the complexified rung summand $\mathcal{R}_{\C}$ with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ with generators $T_{j}$ and $Y$, the rung boost $e^{tK}$, the D-term potential $V_{D}$ at level $\xi = 2\zeta$, the null-lift locus $L = \{Q = -H^{2}\}$, its cone $L_{0} = \{Q = 0\}$ (the limit $H \to 0$) and the physical family point $\alpha = 0$, $\beta = (-\lambda, 0)$ of $L_{0}$, with $N^{*} = \tfrac12\lambda^{2}$, $M_{W}^{2} = \tfrac12 g^{2}N^{*}$, $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})N^{*}$, $v^{2} = 2N^{*}$. Take the field theory's unit to be $I_{4}$ (\claimref{obj.field-theory.single-algebra-field}). The \emph{linear rung field} is the field with values in all of $\mathcal{R}_{\C}$, eight real components, with a real $U(2)$-invariant polynomial potential; the \emph{constrained field} is its restriction to $L$ or $L_{0}$. Masses are eigenvalues of the Hessian divided by the kinetic coefficient of the stored Hermitian term. Write $r = \sqrt{k_{8}^{2} + k_{9}^{2}}$.
 \begin{enumerate}
 \item \emph{(The unit.)} In $\Cl(3,5)$, spacetime with the two rung planes, $I_{4}^{2} = -1$ and $I_{4}$ commutes with every $v_{a}$, $w_{a}$; so $\mathcal{R}_{\C} = \mathrm{span}\{1, I_{4}\}\otimes(H_{4} \oplus H_{5})$ inside the algebra, $c^{2} = Q(c)$ is $I_{4}$-bilinear, and the field has four $I_{4}$-complex modes per momentum. With $b = \sum_{a}v_{a}\wedge w_{a}$, $\mathrm{Ad}(e^{tb})$ is the rung boost $e^{tK}$, and $\mathrm{Ad}(e^{\phi I_{4}b})$ multiplies each $v_{a}$ by $e^{\phi I_{4}}$ and each $w_{a}$ by $e^{-\phi I_{4}}$, which is $e^{2\phi Y}$: on the rung summand the hypercharge rotation is the rung boost at $I_{4}$-imaginary rapidity, the reading \claimref{field-theory.boost-modes} gives on the modes. Since $I_{4}b$ anticommutes with every spacetime vector, $\mathrm{Ad}(e^{\phi I_{4}b})$ does not fix the spacetime vectors (it moves $\gamma_{0}$ for $\cos\phi = -\tfrac{7}{25}$), so the identification holds on rung values, not on spacetime points.
 \item \emph{(Spectrum of the linear field.)} Let $V = V_{D} + W(N) + k_{8}\operatorname{Re}Q^{2} + k_{9}\operatorname{Im}Q^{2} + k_{10}|Q|^{2}$, with the level fixed by the stored vacuum condition so that the family point is critical. Its eight masses there are $0$ three times (the gauge orbit), $m_{h}^{2} = M_{Z}^{2} + 2N^{*}W''$ and $m_{\pm}^{2} = M_{W}^{2} + 2W'$ twice, as on $L$, and the \emph{normal pair}, spanned by the two directions of $\alpha_{1}$, the only directions that change $Q$ at first order, with
@@ -119,7 +127,7 @@ With the stored input box of that result ($m_{h} \in [125, 125.4]$, $v \in [246,
 
 \emph{Note (the transmutation branch excluded, 2 November 2026).} Under the decided coupling reading, the $\su(2)_{R}$-covariant completion $Yc + \tilde{Y}c^{*}$ with complex symmetric family matrices (the rung $10$), the scale-free (transmutation) branch of clauses (3) to (5) is recorded as excluded, by three independent strikes: (a) $h \to \gamma\gamma$: the bound $\mu_{\gamma\gamma} < 0.900$ of (5) lies $3.3$ standard deviations below the Particle Data Group 2026 average $1.10 \pm 0.06$ (pdglive node S126SGG, read on 2 November 2026; inputs ATLAS 2023 $1.04^{+0.10}_{-0.09}$, CMS 2022 $1.13 \pm 0.09$, ATLAS and CMS Run 1 $1.14^{+0.19}_{-0.18}$); (b) $B$-meson mixing: with the normal pair below $542$ GeV, as (4) requires, its tree-level exchange exceeds the measured $B_{s}$ and $B_{d}$ mass differences more than $50$ times for every splitting of $m_{H}$ and $m_{A}$ (more than $52$ and $50$), with quark mixing from tree-level determinations and three-family unitarity (\claimref{synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch}); (c) strong coupling: on the surface of (4) the quartic couplings reach $4\pi$ between about $0.8$ and $4$ TeV at one loop (\claimref{synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch}). Clauses (1) to (5) and their mathematics are unchanged: (1) and (2) hold for the linear field on every branch, and (3) to (5) stand as statements about the scale-free linear field under (GW) and (D); what is excluded is that branch as the origin of the weak scale under that coupling reading. The branch with a level, on which the normal pair and the charged pair are heavy (about $2.5$ to $3.5$ TeV), is the working branch.
 ## technical
-Take the field theory's unit $i = I_{4}$. In the algebra of spacetime and the two rung planes, $I_{4}$ commutes with the rung vectors, so the rung field's complex coefficients are $\mathrm{span}\{1, I_{4}\}$-valued inside the algebra, $c^{2} = Q(c)$ is bilinear over them, and the field carries four $I_{4}$-complex modes per momentum; on the rung summand the hypercharge rotation is the rung boost $\mathrm{Ad}(e^{tb})$, $b = \sum_{a}v_{a}\wedge w_{a}$, taken at imaginary rapidity $t = \phi I_{4}$. The continued rotor moves the spacetime vectors ($I_{4}b$ anticommutes with them), so this holds on rung values, not on spacetime points.
+Take the field theory's unit to be $I_{4}$. In the algebra of spacetime and the two rung planes, $I_{4}$ commutes with the rung vectors, so the rung field's complex coefficients are $\mathrm{span}\{1, I_{4}\}$-valued inside the algebra, $c^{2} = Q(c)$ is bilinear over them, and the field carries four $I_{4}$-complex modes per momentum; on the rung summand the hypercharge rotation is the rung boost $\mathrm{Ad}(e^{tb})$, $b = \sum_{a}v_{a}\wedge w_{a}$, taken at imaginary rapidity $t = \phi I_{4}$. The continued rotor moves the spacetime vectors ($I_{4}b$ anticommutes with them), so this holds on rung values, not on spacetime points.
 
 A polynomial (elementary) quantum field is linear: it takes values in all eight real components, not on the quadric $Q = -H^{2}$. For $V = V_{D} + W(N) + k_{8}\operatorname{Re}Q^{2} + k_{9}\operatorname{Im}Q^{2} + k_{10}|Q|^{2}$ at the stored family point on the cone, the stored masses $m_{h}^{2} = M_{Z}^{2} + 2N^{*}W''$ and $m_{\pm}^{2} = M_{W}^{2} + 2W'$ survive, and a neutral normal pair appears, the two directions that change $Q$, with $m_{H,A}^{2} = 2W' + 4N^{*}(k_{10} \pm r)$, $r = \sqrt{k_{8}^{2} + k_{9}^{2}}$; it is massless for the pure D-term, and the constrained field is the limit $k_{10} \to \infty$ (the linear vacuum sits at $Q = -H^{2}(1 - 2W'/m_{H}^{2})$ to first order in $H^{2}$).
 

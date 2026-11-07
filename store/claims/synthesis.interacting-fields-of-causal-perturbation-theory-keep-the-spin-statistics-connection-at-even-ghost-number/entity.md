@@ -1,7 +1,7 @@
 ---
 id: synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number
 kind: claim
-version: 2
+version: 3
 title: 'Causal perturbation theory keeps spin-statistics at even ghost number'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'M. Dütsch and K. Fredenhagen, A local (perturbative) construction of observables in gauge theories: the example of QED, Commun. Math. Phys. 203 (1999), 71--105; arXiv:hep-th/9807078.'
@@ -63,6 +67,10 @@ lineage:
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of Bogoliubov''s interacting-field formula and of its n-th order coefficient I_4^n/n! is now the field theory''s unit I_4, the complex unit of the free fields'' Fock space (numbers read in span{1, I_4}); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
