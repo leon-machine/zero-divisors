@@ -1,7 +1,7 @@
 ---
 id: field-theory.where-each-lives
 kind: claim
-version: 3
+version: 4
 title: Where each imaginary unit lives
 status: proved
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, how the conformal spinors'' unit acts stated'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -111,18 +115,22 @@ extraction:
       (4) to standard spacetime algebra; neither is in the store as an imported claim, so no standard-route
       derivation was added. Levels pass: levels written from scratch, keeping every condition and level
       qualifier of the formal statement.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Clarification: clause (2) and the technical level now say that the unit I6 of CS acts by right multiplication (the store conventions), equal on CS to left multiplication since I6 is central in Cl+(2,4) (clause (1)). Mathematics, status and links unchanged.'
 ---
 
 ## formal
 \begin{enumerate}
 \item The centre of $\Cl^+(1,3)$ is $\mathrm{span}\{1, I_4\}$, and the centre of $\Cl^+(2,4)$ is $\mathrm{span}\{1, I_6\}$ with $I_6 = I_4E$, where $E = e_+e_-$ is the bivector of the ascended plane, $E^2 = 1$, $[I_4, E] = 0$.
-\item The conformal spinor space (twistor space) $\CS$ is the minimal left ideal $\Cl^+(2,4)P$; the commutant of the action of $\Cl^+(2,4)$ on $\CS$ is $\mathrm{span}\{1, I_6\}$, so the complex unit of $\CS$ is $\pm I_6$.
+\item The conformal spinor space (twistor space) $\CS$ is the minimal left ideal $\Cl^+(2,4)P$; the commutant of the action of $\Cl^+(2,4)$ on $\CS$ is $\mathrm{span}\{1, I_6\}$, so the complex unit of $\CS$ is $\pm I_6$, acting by right multiplication (on $\CS$ the same as left multiplication, $I_6$ being central in $\Cl^+(2,4)$), the conventions' unit of the conformal spinors.
 \item At a point, $\CS$ splits as $L_0 \oplus L_\infty$, the $E = \pm 1$ eigenspaces, both Lorentz-invariant, and $I_6 = +I_4$ on $L_0$ and $-I_4$ on $L_\infty$: the two chiral doublets.
 \item For massless fields the field's complex structure is the pseudoscalar: $\pm I_4$ by helicity sector for Maxwell, and on the chiral subspaces of the Weyl field $I_4$ agrees with Hestenes' right $\IS$ up to the chirality sign. A mass term anticommutes with $I_4$.
 \end{enumerate}
 
 ## technical
-The centre of $\Cl^+(1,3)$ is $\mathrm{span}\{1, I_4\}$ and that of $\Cl^+(2,4)$ is $\mathrm{span}\{1, I_6\}$, with $I_6 = I_4E$ for the ascended plane's bivector $E = e_+e_-$, $E^2 = 1$, $[I_4, E] = 0$. The conformal spinor space $\CS = \Cl^+(2,4)P$ has commutant $\mathrm{span}\{1, I_6\}$, so its complex unit is $\pm I_6$; at a point it splits into the Lorentz-invariant $E = \pm 1$ eigenspaces $L_0 \oplus L_\infty$, on which $I_6 = +I_4$ and $-I_4$: the two chiral doublets.
+The centre of $\Cl^+(1,3)$ is $\mathrm{span}\{1, I_4\}$ and that of $\Cl^+(2,4)$ is $\mathrm{span}\{1, I_6\}$, with $I_6 = I_4E$ for the ascended plane's bivector $E = e_+e_-$, $E^2 = 1$, $[I_4, E] = 0$. The conformal spinor space $\CS = \Cl^+(2,4)P$ has commutant $\mathrm{span}\{1, I_6\}$, so its complex unit is $\pm I_6$, acting by right multiplication; at a point it splits into the Lorentz-invariant $E = \pm 1$ eigenspaces $L_0 \oplus L_\infty$, on which $I_6 = +I_4$ and $-I_4$: the two chiral doublets.
 
 For massless fields the complex structure is the pseudoscalar, $\pm I_4$ by helicity sector for Maxwell, and on the chiral subspaces of the Weyl field $I_4$ agrees with Hestenes' right $\IS$ up to the chirality sign; a mass term anticommutes with $I_4$.
 

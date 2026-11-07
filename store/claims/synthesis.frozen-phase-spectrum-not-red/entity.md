@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-phase-spectrum-not-red
 kind: claim
-version: 3
+version: 4
 title: No field of the frozen phase's unitary series tilts the spectrum red
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, sign of the translation rotor corrected in the proof'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -48,6 +52,10 @@ lineage:
   - standard-model.dating-descent
   - note.one-relation.two-residues-named-so-synthesis-can
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof (i): the rotor 1 + n_inf a/2 maps X(x) to X(x - a), not X(x + a), in the stated conventions (n_0.n_inf = 1, X = n_0 + x - Q(x) n_inf/2); exact computation in Cl(2,4) (consistency run scratch v2.py); the translation by +a is 1 - n_inf a/2, the rotor the frozen-point descent result also uses. The check accepts either sandwich, so it is unaffected; the statement (translations lie in the stabiliser) is unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

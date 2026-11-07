@@ -1,7 +1,7 @@
 ---
 id: synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 kind: claim
-version: 2
+version: 3
 title: 'The attachment''s transport supplies a state only where Weyl vanishes'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, which unit acts where stated'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -76,10 +80,14 @@ extraction:
     note: 'Version 1 -> 2, at Leon''s decisions of 2026-11-01 importing the cited literature as Facts: a uses edge to synthesis.imported-twistor-equation-integrability-petrov-n-or-o@1 replaces the citation of Penrose-Rindler and Gasperin-Pais in the proof of (ii); Dimock 1982 is now cited as the Fact synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field in the Reading, without a uses edge, since the result does not use it. Statement, proof and checks otherwise unchanged.'
   flags:
   - 'algebraic integrability only: the dimensions are those of the subspace annihilated by the curvature at a point, an upper bound for the parallel subspace; existence of the two type N parallel directions on a region is not claimed'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Unit principle: the formal level used I_4 (W is I_4-linear on spacetime bivectors) and complex dimensions on CS (whose unit is I_6, as the proof says) without saying which unit acts where; one sentence now says so. Mathematics, status and links unchanged.'
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a torsion-free gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $\Omega_{T}$ its tractor gauge field and $F_{T}$ the field strength of $\Omega_{T}$ (Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), and let a bivector of $\Cl(2,4)$ act on the conformal spinor space $\CS$ (Proposition \claimref{field-theory.where-each-lives}) by left multiplication, so that a $\CS$-valued field is parallel when $a\cdot\nabla\psi + \tfrac12\Omega_{T}(a)\psi = 0$ for every $a$, and a bivector field $X$ (an adjoint tractor) when $a\cdot\nabla X + \Omega_{T}(a)\times X = 0$. Write $\mathcal{W}$ for the Weyl curvature, an $I_{4}$-linear map on spacetime bivectors, and give each point the Petrov type of $\mathcal{W}$ there.
+Let $(\hb, \Omega)$ be a torsion-free gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $\Omega_{T}$ its tractor gauge field and $F_{T}$ the field strength of $\Omega_{T}$ (Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), and let a bivector of $\Cl(2,4)$ act on the conformal spinor space $\CS$ (Proposition \claimref{field-theory.where-each-lives}) by left multiplication, so that a $\CS$-valued field is parallel when $a\cdot\nabla\psi + \tfrac12\Omega_{T}(a)\psi = 0$ for every $a$, and a bivector field $X$ (an adjoint tractor) when $a\cdot\nabla X + \Omega_{T}(a)\times X = 0$. Write $\mathcal{W}$ for the Weyl curvature, an $I_{4}$-linear map on spacetime bivectors, and give each point the Petrov type of $\mathcal{W}$ there. Two units act here and are not identified: $I_{4}$ acts on spacetime bivectors by left multiplication (duality), for which $\mathcal{W}$ is linear, and complex dimensions of subspaces of $\CS$ are taken over the conformal spinors' unit $I_{6} = I_{4}E$ acting by right multiplication (Proposition \claimref{field-theory.where-each-lives}(1), (2)).
 \begin{enumerate}
 \item[(i)] \emph{(Ricci blindness; proved.)} $F_{T}(A\wedge B) = -\mathcal{W}(A\wedge B) + \nO\wedge C(A, B)$, with $C$ the Cotton term: the Schouten map, hence the Ricci curvature, enters only through $C$, which vanishes on every Einstein space (Ricci curvature proportional to the metric, $\Sch = \tfrac{\Lambda}{6}\id$); under Einstein's equations with matter it does not vanish in general.
 \item[(ii)] \emph{(Parallel conformal spinors; proved.)} A parallel $\CS$-valued field is annihilated by every $F_{T}(A\wedge B)$ at every point. The subspace of $\CS$ annihilated by the Weyl bivectors has complex dimension $4$ at type O points, $2$ at type N points, where it is the subspace annihilated by left multiplication by the repeated principal null vector $k$, and $0$ at points of type I, II, D and III; a nonzero Cotton term can only reduce it. Where $F_{T} = 0$ on a simply connected region (in four dimensions this is the case exactly where $\mathcal{W} = 0$, by the twistor-flat result (\claimref{synthesis.twistor-flat-fields-give-nordstrom-not-einstein})) the parallel conformal spinors form a space of complex dimension $4$ carrying the attachment's $\mathfrak{u}(2,2)$ action, form $h$ and grading $Z$ unchanged.

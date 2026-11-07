@@ -1,7 +1,7 @@
 ---
 id: dark-matter.no-coupling-rule-odd-towers-follows
 kind: claim
-version: 4
+version: 5
 title: No coupling rule for the odd towers follows from the series
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (Hodge-star scaling as the scaling of hb^T on bivectors)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -39,6 +43,10 @@ locators:
   label: prop:norule
   line: 1517
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in the proof of (a): the Yang-Mills density is det(hb)^{-1} <(hb^T F)^2>_0, and under g -> lambda^2 g (hb^{-1} -> lambda hb^{-1}) the volume factor scales as lambda^d and the outermorphism hb^T on bivectors as lambda^{-2}, so the action scales as lambda^{d-4}; the component form (the two inverse metrics in the star) stays as a labelled reading. A notation change: the scaling is immediate from the linearity of hb^T, and the existing check confirms the component scaling lambda^{d-4} in d = 3 to 6. Statement unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

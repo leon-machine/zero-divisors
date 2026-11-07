@@ -1,7 +1,7 @@
 ---
 id: synthesis.crossing-transport-tipler-threshold-sharp
 kind: claim
-version: 4
+version: 5
 title: 'The Tipler condition is sharp at a null crossing'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, unit of the complex exponents named'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -41,6 +45,10 @@ lineage:
   - interior.filtration-cauchy-horizon-read-literature
   - interior.imported-mass-inflation-stability
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex exponents 1/2 +- I omega used an undeclared I; they are numbers of span{1, I_4}, the field theory unit (conventions U1), now written so; notation only.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -95,7 +103,7 @@ with $S$ locally integrable off $s_c$ and of fixed sign near $s_c$. In the store
 \begin{enumerate}
 \item \emph{(The gauge equation is a transport equation.)} $w' = -\nu\rho$ and $\rho' = -\nu S w$, so $w'' = \nu^2 S\,w$ and $\rho = -w'/\nu$: the equation $y'' = \nu^2 S y$ of the stored theorem is the transport equation of the $n$-component of the middle slot.
 \item \emph{(Trichotomy, on a side of $s_c$.)} (a) If $\int |S| < \infty$, every $w$ and $\rho$ has a finite limit at $s_c$. (b) If $\int |S| = \infty$ but $\int |s - s_c|\,|S| < \infty$, every $w$ has a finite limit, and $\rho$ is unbounded unless $w(s_c) = 0$, a condition cutting out a line in the $(w, \rho)$-data. (c) If $\int |s - s_c|\,|S| = \infty$, no $w$ has a finite nonzero limit at $s_c$, so no solution of $y'' = \nu^2 S y$ stays positive with a positive limit and the removal of the stored theorem is unavailable. For $S \ge 0$ (defocusing) the tractors with $w$ bounded have $(w, \rho)$-data on at most a line, and for all others $\ip{n}{\mu}$ is unbounded. Hence the Tipler-type condition is exactly the threshold between a divergence confined to the bottom slot $\rho$ (removable modulo $\exp(\R N_n)$) and the loss of the middle slot's null component.
-\item \emph{(The edge profile.)} For $S = \pm C|s - s_c|^{-2}$, $C > 0$, the solutions are $w = |s - s_c|^{e}$ with $e(e - 1) = \pm\nu^2 C$. Defocusing ($+$): $e = k$ or $1 - k$ with $k > 1$, so $w$ is unbounded off a line. Focusing ($-$): $\mathrm{Re}\,e \in (0, 1)$ for both roots (real if $\nu^2 C \le \tfrac14$, equal to $\tfrac12 \pm I\omega$ with $\omega^2 = \nu^2 C - \tfrac14$ otherwise), so every $w$ tends to $0$ (the null component of the middle slot is crushed) while $\rho = -w'/\nu$ diverges like $|s - s_c|^{\mathrm{Re}\,e - 1}$; for $\nu^2 C > \tfrac14$ every solution has zeros accumulating at $s_c$. When $e$ is real, $y = |s - s_c|^{e}$ gives $|f| = e/(\nu|s - s_c|)$, and in the variables $(1 - fN_n)x$ the coefficient is $E_{\gamma'} + f\,D$ with $D = [E_{\gamma'}, N_n]$ in the Levi part $\mathfrak g_0$, $D^3 = \nu^2 D$, eigenvalues $0, \nu, -\nu$, each twice: the residual singularity is a simple pole in $\mathfrak g_0$ with residue eigenvalues $0, \pm e$.
+\item \emph{(The edge profile.)} For $S = \pm C|s - s_c|^{-2}$, $C > 0$, the solutions are $w = |s - s_c|^{e}$ with $e(e - 1) = \pm\nu^2 C$. Defocusing ($+$): $e = k$ or $1 - k$ with $k > 1$, so $w$ is unbounded off a line. Focusing ($-$): $\mathrm{Re}\,e \in (0, 1)$ for both roots (real if $\nu^2 C \le \tfrac14$, equal to $\tfrac12 \pm I_{4}\omega$ (numbers read in $\mathrm{span}\{1, I_{4}\}$) with $\omega^2 = \nu^2 C - \tfrac14$ otherwise), so every $w$ tends to $0$ (the null component of the middle slot is crushed) while $\rho = -w'/\nu$ diverges like $|s - s_c|^{\mathrm{Re}\,e - 1}$; for $\nu^2 C > \tfrac14$ every solution has zeros accumulating at $s_c$. When $e$ is real, $y = |s - s_c|^{e}$ gives $|f| = e/(\nu|s - s_c|)$, and in the variables $(1 - fN_n)x$ the coefficient is $E_{\gamma'} + f\,D$ with $D = [E_{\gamma'}, N_n]$ in the Levi part $\mathfrak g_0$, $D^3 = \nu^2 D$, eigenvalues $0, \nu, -\nu$, each twice: the residual singularity is a simple pole in $\mathfrak g_0$ with residue eigenvalues $0, \pm e$.
 \item \emph{(Profile classes.)} For $|S| = C|s - s_c|^{2\beta - 2}$, $C, \beta > 0$: the Tipler integral is finite for every $\beta$; case (a) holds iff $\beta > \tfrac12$; for $\beta < \tfrac12$ the gauge function behaves as $|f| \sim \nu C|s - s_c|^{2\beta - 1}/(1 - 2\beta)$, the bottom-slot divergence rate. For $|S| = C|s - s_c|^{-2}(\log 1/|s - s_c|)^{-q}$, $q > 0$: $S$ is never integrable; case (b) iff $q > 1$, case (c) iff $q \le 1$.
 \end{enumerate}
 

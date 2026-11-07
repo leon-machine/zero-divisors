@@ -44,6 +44,10 @@ locators:
   - key: Lam2005
     locator: 'Ch. V (Clifford algebras: the tensor product rules)'
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No version bump (plain levels or extraction only). One-liner: the chained isomorphism dropped the hypotheses q >= 1 and p >= 1 of the formal level; restored.'
   by: algebra-core-2026-10-26
 ---
 
@@ -61,4 +65,4 @@ Fix a non-null vector $e$. Multiplying each vector of its orthogonal complement 
 The even part of the algebra of a space is itself the full algebra of a space with one fewer direction. In space-time, for instance, the even part, where rotations and boosts live, is the algebra of ordinary three-dimensional space.
 
 ## one-liner
-For $Q(e) = s \ne 0$, $u \mapsto ue$ gives $\Cl(e^{\perp}, -sQ) \cong \Cl^{+}(V, Q)$; so $\Cl^{+}(p,q,r) \cong \Cl(p,q{-}1,r) \cong \Cl(q,p{-}1,r)$.
+For $Q(e) = s \ne 0$, $u \mapsto ue$ gives $\Cl(e^{\perp}, -sQ) \cong \Cl^{+}(V, Q)$; so $\Cl^{+}(p,q,r) \cong \Cl(p,q{-}1,r)$ for $q \ge 1$ and $\Cl^{+}(p,q,r) \cong \Cl(q,p{-}1,r)$ for $p \ge 1$.

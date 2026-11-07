@@ -1,7 +1,7 @@
 ---
 id: note.primer.setting-blades-grades
 kind: note
-version: 1
+version: 2
 title: Blades and grades
 status: setting
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T00, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, stale count of where the degenerate dimension count is used'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - primer.commutation-rule
 locators:
@@ -22,6 +26,11 @@ locators:
   number: Setting
   section: Blades and grades
   line: 287
+extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Stale wording: the degenerate 2^n count is used by T1 twice (splitting lemma, null-generator ascent) and throughout T2 and T4 (std-algebra.blade-basis and its restatements), not exactly once.'
 ---
 
 ## formal
@@ -33,7 +42,7 @@ are the \emph{basis blades}, and they form a linear basis of the algebra: one bl
 \[
 \dim \Cl(\mathbb{V}, Q) \;=\; 2^{n} .
 \]
-This count holds even when $Q$ is degenerate \cite{Chevalley1997}, a fact the series needs exactly once, in an essential step of one of T1's proofs.
+This count holds even when $Q$ is degenerate \cite{Chevalley1997}, a fact T1 needs in an essential step (the splitting lemma, \claimref{primer.splitting-along-hyperbolic-plane}) and for its null-generator ascent, and that the degenerate algebras of T2 and T4 rest on throughout (\claimref{std-algebra.blade-basis}).
 
 A blade built from $k$ distinct vectors has \emph{grade} $k$, and the grades are exactly the objects Section \ref{sec:product} built: scalars are grade 0, vectors grade 1, the bivectors grade 2, the trivectors grade 3, and so on up to the single top blade $\omega = e_1 e_2 \cdots e_n$, the \emph{pseudoscalar}, which represents the oriented volume of the whole space and is the top element that section's dependence argument located. Grade is basis-independent \cite{Porteous1995}, so the algebra splits into graded pieces, one for each dimension of geometric object it can represent: points of measure, directions, planes, volumes, and so on up to the space itself. The geometric product moves between the grades; the inner and outer products of Section \ref{sec:product} are its grade-lowering and grade-raising parts.
 

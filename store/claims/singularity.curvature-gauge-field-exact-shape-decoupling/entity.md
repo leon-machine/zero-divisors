@@ -1,7 +1,7 @@
 ---
 id: singularity.curvature-gauge-field-exact-shape-decoupling
 kind: claim
-version: 4
+version: 5
 title: 'The curvature of the gauge field: exact shape decoupling'
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, curvature sign of the statement attributed to the store convention, not to the background field strength'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -68,6 +72,10 @@ extraction:
     - transport.transport-algorithm
     instantiates: 'T05 states (its algorithm table) that this section executes a step of the T1 transport
       algorithm from Step 3 on: apply the rule, compute in the completion, descend, iterate'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Citation of the sign corrected, formula unchanged: the statement said its sign convention was that of singularity.solution-where-divergence-lies(1) and of the Cartan appendix, "which agree"; but (1) displays the background field strength R in LDG sign (dictionary C5), whose radial eigenvalue is -2M/r^3, while calR = -(M/r^3)S with calR(sigma_r) = +2M/r^3 sigma_r is the store sign (dictionary C6), that of the Cartan appendix. The statement now names the store sign and says how (1) reads; the proof''s assembly step gets the same sentence. the computation recorded: in lib/GA.py (Cl(1,3)), sigma_r = e_r e_t = -(e_t wedge e_r) with sigma_r^2 = 1, hb(e_t) wedge hb(e_r) = e_t wedge e_r for hb(a) = a - beta (a.e_t) e_r, and with the background field strength R(e_t wedge e_r) = (2M/r^3) sigma_r (the displayed value, commutator term zero) the LDG-sign eigenvalue on that plane is -2M/r^3 and the store sign gives calR(sigma_r) = -R(hb(sigma_r)) = +(2M/r^3) sigma_r, checked at M = 1, r = 2; the orientation sigma_r = e_r e_t is the one docs/gtg-dictionary.md C6 and C10 record for singularity.connection-bivector-computed.'
 ---
 
 ## formal
@@ -80,7 +88,7 @@ so the coordinate and physical radial planes coincide and $\sigma_r$ needs no ch
 \mathcal{R}(B) \;=\; -\,\frac{M}{r^3}\,S(B), \qquad
 S \;:=\; 1 - 3\Pi \;=\; -\tfrac12\bigl(B \mapsto B + 3\,\sigma_r B \sigma_r\bigr),
 \]
-in the sign convention of Proposition \claimref{singularity.solution-where-divergence-lies}(1) and of the Cartan computation of Appendix \ref{app:schw}, which agree: $\mathcal{R}(\sigma_r) = +2M/r^{3}\,\sigma_r$ while $S(\sigma_r) = -2\sigma_r$ (only the eigenvalue ratio, the trace, and the identity of the distinguished plane pair enter the chain, and each is convention-free). The shape operator satisfies
+in the store's curvature sign $\mathcal{R}(B) = -R(\hb(B))$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), which is that of the Cartan computation of Appendix \ref{app:schw}: $\mathcal{R}(\sigma_r) = +2M/r^{3}\,\sigma_r$ while $S(\sigma_r) = -2\sigma_r$ (Proposition \claimref{singularity.solution-where-divergence-lies}(1) displays the background field strength $R$ in Lasenby, Doran and Gull's sign, whose eigenvalue on the radial plane, $\sigma_r = \er\et = -\partial_t\wedge\partial_r$, is $-2M/r^{3}$: the same statement) (only the eigenvalue ratio, the trace, and the identity of the distinguished plane pair enter the chain, and each is convention-free). The shape operator satisfies
 \[
 S^2 + S = 2 ,
 \]

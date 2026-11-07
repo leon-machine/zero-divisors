@@ -21,6 +21,7 @@ credit:
   role: 'consistency pass, the time-negative labelling of the plane stated against the store signature'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+outside_ga: {kind: bridge, why: 'clause (i) compares the two ideals with the two two-component representations of planar physics, which fix the time gamma matrix as minus or plus the spatial bivector; the algebra itself is worked in GA'}
 review: typed
 derivations:
 - name: main
@@ -53,7 +54,7 @@ extraction:
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 -> 4. Convention mixing: the entity labels Cl(2,1) with time of square -1 (the mirror''s labelling, stated only in note.rule2.setting-planar-fermions), while the theorem it cites calls generators of square -1 spacelike; the technical level and the proof now say which reading acts where. Mathematics unchanged.'
+    note: 'Version 3 -> 4. Convention mixing: the entity labels Cl(2,1) with time of square -1 (the mirror''s labelling, stated only in note.rule2.setting-planar-fermions), while the theorem it cites calls generators of square -1 spacelike; the technical level and the proof now say which reading acts where. outside_ga declared (bridge), as in rule2.rule-2-kaluza-klein-algebra, for the comparison with the gamma matrices of planar physics that clause (i) already made. Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.setting-palatial-relation-two-quantisations-one
 kind: note
-version: 1
+version: 2
 title: 'The palatial relation: two quantisations, one core'
 status: setting
 subject: conformal-spacetime
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, sign of the quoted realisation of the palatial relations stated against the displayed relation'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - correspondence.statistics-no-go
 locators:
@@ -22,6 +26,11 @@ locators:
   number: Setting
   section: 'The palatial relation: two quantisations, one core'
   line: 634
+extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The note displayed [Z, Zbar] = +hbar and said it is realised by Zbar = hbar d/dZ, which gives -hbar ([z, hbar d/dz] f = -hbar f); the sentence now says so and names the realisation Zbar = -hbar d/dZ used by correspondence.symmetrised-quadratics-palatial-algebra and its check.'
 ---
 
 ## formal
@@ -31,7 +40,7 @@ Throughout, the \emph{palatial algebra} $\mathcal{P}$ is the unital associative 
 \[
 [Z^\alpha, Z^\beta] = 0, \qquad [\bar Z_\alpha, \bar Z_\beta] = 0, \qquad [Z^\alpha, \bar Z_\beta] = \hbar\,\delta^\alpha_\beta ,
 \]
-the twistor canonical commutation relations of \cite{Penrose15} (there realised by $\bar Z_\beta = \hbar\,\partial/\partial Z^\beta$ on holomorphic functions); $\hbar \neq 0$ is a fixed constant.
+the twistor canonical commutation relations of \cite{Penrose15} (there realised on holomorphic functions by $\bar Z_\beta = \hbar\,\partial/\partial Z^\beta$, which gives the commutator in the opposite order, $[Z^\alpha, \bar Z_\beta] = -\hbar\,\delta^\alpha_\beta$; the sign displayed is realised by $\bar Z_\beta = -\hbar\,\partial/\partial Z^\beta$, as in Lemma \claimref{correspondence.symmetrised-quadratics-palatial-algebra}); $\hbar \neq 0$ is a fixed constant.
 
 ## technical
 pending

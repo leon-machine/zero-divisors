@@ -1,7 +1,7 @@
 ---
 id: dark-matter.mirror-tower-copy-one
 kind: claim
-version: 8
+version: 9
 title: The mirror tower is a copy of this one
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (Hodge star as duality with the pseudoscalar)
+  version: 9
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -46,6 +50,10 @@ locators:
   label: thm:mirror
   line: 325
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in the proof: the Hodge star on two-forms is multiplication by the pseudoscalar I on the bivector field F, and the densities F ^ *F and F ^ F are <F^2>_0 and <I F^2>_0 times the volume factor; their reversal invariance is shown from the even number of vector squares in each term; the component formula of the star stays as a labelled reading. Checked exactly with lib/GA.py in the maintainer scratch: for five sample component arrays F_ab both densities agree in Cl(1,3) and Cl(3,1). Statement unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

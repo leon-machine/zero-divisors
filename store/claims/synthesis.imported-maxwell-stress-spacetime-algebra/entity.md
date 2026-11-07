@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-maxwell-stress-spacetime-algebra
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Maxwell stress in the spacetime algebra'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, Poynting vector written as a dual instead of a cross product'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'D. Hestenes, Space-Time Algebra, Gordon and Breach (1966).'
@@ -24,6 +28,11 @@ imported_from:
 - citation: 'C. Doran and A. Lasenby, Geometric Algebra for Physicists, Cambridge University Press (2003), Section 7.4.'
   key: DoranLasenby2003
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The Poynting vector E x B is written as the relative vector -I<EB>_2, the dual of the bivector part of the product of the relative vectors (conventions, no cross product where the outer product or its dual does); checked exactly in Cl(1,3): -I<EB>_2 and the relative vector of T(e_0) ^ e_0 both equal the cross product, and T(e_0).e_0 = (E^2 + B^2)/2 (consistency run scratch v1.py); the source form is kept in source_formal.'
+  source_formal: 'The sources write the Poynting vector as the cross product $\mathbf{E} \times \mathbf{B}$ of the relative vectors; in the spacetime algebra it is $-I\langle\mathbf{E}\mathbf{B}\rangle_{2}$.'
   note: >-
     Imported so that the matter-wall classification of Kasner walls can pin the stress of its aligned
     Maxwell field instead of citing it from memory. Units with the vacuum permittivity one. The
@@ -44,10 +53,10 @@ Let $F$ be the electromagnetic field, a bivector-valued field of the spacetime a
 \[
 T(a) \;=\; -\tfrac12\,F a F,
 \]
-symmetric ($T(a) \cdot b = a \cdot T(b)$) and trace-free, with $T(e_{0}) \cdot e_{0} = \tfrac12(\mathbf{E}^{2} + \mathbf{B}^{2})$ the energy density and the relative vector of $T(e_{0}) \wedge e_{0}$ the Poynting vector $\mathbf{E} \times \mathbf{B}$. For a field aligned with one axis, $F = (E + IB)\,e_{1}e_{0}$ with scalars $E$, $B$, the frame components are $T(e_{a}) \cdot e_{b} = \mathrm{diag}(\rho, -\rho, \rho, \rho)$ with $\rho = \tfrac12(E^{2} + B^{2})$. On a gravitational field the same formula holds with $a$ and $F$ physical. \emph{Provenance:} \cite{Hestenes1966}; \cite[Section 7.4]{DoranLasenby2003}.
+symmetric ($T(a) \cdot b = a \cdot T(b)$) and trace-free, with $T(e_{0}) \cdot e_{0} = \tfrac12(\mathbf{E}^{2} + \mathbf{B}^{2})$ the energy density and the relative vector of $T(e_{0}) \wedge e_{0}$ the Poynting vector $-I\langle\mathbf{E}\mathbf{B}\rangle_{2}$, the dual of the bivector part of the product of the relative vectors. For a field aligned with one axis, $F = (E + IB)\,e_{1}e_{0}$ with scalars $E$, $B$, the frame components are $T(e_{a}) \cdot e_{b} = \mathrm{diag}(\rho, -\rho, \rho, \rho)$ with $\rho = \tfrac12(E^{2} + B^{2})$. On a gravitational field the same formula holds with $a$ and $F$ physical. \emph{Provenance:} \cite{Hestenes1966}; \cite[Section 7.4]{DoranLasenby2003}.
 
 ## technical
-In the spacetime algebra the electromagnetic field is one bivector $F = \mathbf{E} + I\mathbf{B}$, and its energy-momentum tensor is the single product $T(a) = -\tfrac12 FaF$: feeding in the time direction gives the energy density $\tfrac12(E^{2} + B^{2})$ and the Poynting momentum $\mathbf{E} \times \mathbf{B}$; the map is symmetric and trace-free. For a field along one axis it is the familiar tension along the field lines and pressure across them, $\mathrm{diag}(\rho, -\rho, \rho, \rho)$.
+In the spacetime algebra the electromagnetic field is one bivector $F = \mathbf{E} + I\mathbf{B}$, and its energy-momentum tensor is the single product $T(a) = -\tfrac12 FaF$: feeding in the time direction gives the energy density $\tfrac12(E^{2} + B^{2})$ and the Poynting momentum $-I\langle\mathbf{E}\mathbf{B}\rangle_{2}$, dual to the bivector part of $\mathbf{E}\mathbf{B}$; the map is symmetric and trace-free. For a field along one axis it is the familiar tension along the field lines and pressure across them, $\mathrm{diag}(\rho, -\rho, \rho, \rho)$.
 
 ## lay
 An electric or magnetic field carries energy and momentum and pushes on its surroundings: it pulls along its field lines and pushes sideways. Geometric algebra writes all of this as one short product of the field with itself, which is the standard formula the series uses whenever an electromagnetic field enters gravity's equations.
