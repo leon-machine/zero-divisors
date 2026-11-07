@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.towers-built
 kind: claim
-version: 1
+version: 2
 title: The dark towers as built, against the data
 status: conjectured
 region: dark-tower-matter
@@ -19,6 +19,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the cold-mirror exception stated at P2''s version-1 reach, with P2 as scoped leaving xi free'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 lineage:
   motivated_by:
@@ -35,6 +39,10 @@ locators:
   label: obs:data
   line: 877
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'G1 (DECISIONS; R05 item 2): the cold-mirror exception now says that it is an exception to P2 at its version-1 reach, that P2 as scoped (version 2, labels not states) leaves xi free (synthesis.tower-charge-sector-label-temperature-not), and that the cold mirror then needs a non-equilibrium descent (synthesis.cold-mirror-needs-non-equilibrium-descent); P2 is unchanged by Leon''s answer 2, so the sentence stands.'
   env: observation
   context_refs:
   - dark-tower-matter.imported-cluster-simulations
@@ -68,12 +76,12 @@ R1 & a premise about bare masses in the odd towers; it holds only for the mirror
 \bottomrule
 \end{tabular}
 \end{center}
-No configuration of the five towers as built is compatible with every test at face value. The least exposed configuration needs four choices the series does not make (a P2 exception for the mirror's temperature, boosted mirror feedback, strong coupling with an unprotected light mass in the three-dimensional towers, and collisionless five-dimensional relics), and even with them it stays marginal, $1.24$ above Roux and Cline's limit. Observation level.
+No configuration of the five towers as built is compatible with every test at face value. The least exposed configuration needs four choices the series does not make (a P2 exception for the mirror's temperature, boosted mirror feedback, strong coupling with an unprotected light mass in the three-dimensional towers, and collisionless five-dimensional relics), and even with them it stays marginal, $1.24$ above Roux and Cline's limit. The P2 exception for the mirror's temperature is one at P2's version-1 reach; P2 as scoped leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). Observation level.
 
 ## technical
 Observation level. The radiation bound $\Delta\Neff < 0.3$ is met on every branch except a hot mirror ($\xi = 1$, giving $7.45$) and a five-dimensional sector decoupled at a GeV (about $670$). Cluster mergers pass in the simulation runs only if the mirror is the only colliding component, which needs both three-dimensional towers in phase (T) at strong coupling with an unprotected light mass and both five-dimensional towers collisionless; charged relics with zero modes in both five-dimensional towers give a colliding fraction of $50.2$ percent, and in one $34.4$ percent, above the $31.6$ percent run that already loses about half the subcluster's central mass, and the extrapolation from fluids to a plasma is unproved. The mirror bounds are marginal at best and need an exception to P2, and R1 holds only for the mirror.
 
-No configuration of the five towers as built is compatible with every test at face value. The least exposed one needs four choices the series does not make (a P2 exception, boosted mirror feedback, strong coupling with an unprotected light mass, and collisionless five-dimensional relics), and even then it stays $1.24$ above Roux and Cline's limit.
+No configuration of the five towers as built is compatible with every test at face value. The least exposed one needs four choices the series does not make (a P2 exception, boosted mirror feedback, strong coupling with an unprotected light mass, and collisionless five-dimensional relics), and even then it stays $1.24$ above Roux and Cline's limit. The P2 exception is one at P2's version-1 reach; indifference as scoped leaves the mirror's temperature free, and the cold mirror then needs a non-equilibrium descent.
 
 ## lay
 At the level of observation, this table checks the five dark towers, as the series builds them, against radiation limits, colliding galaxy clusters, the mirror's astrophysics and the equal-mass rule. No arrangement passes every test as it stands. The best one needs four extra choices that the series does not make, and even then remains in mild tension with one published limit.

@@ -248,3 +248,57 @@ def check_bracket_of_soldering_bivectors():
                 ok = ok and GA.eq(lhs, GA.scal(lam / 3, wedge(ea, eb)))
     GA.check("[e_a ^ W, e_b ^ W] = (Lambda/3) e_a ^ e_b", ok)
     assert ok
+
+
+# ---------------------------------------------------------------------------
+# GTG proof (2026-11-07): the tractor connection of the Fact is the Cl(2,4) gauge field
+# Omega_T(a) = Omega(a) - ninf ^ A + n0 ^ P(A), A = hb^{-1}(a), slot by slot, for a generic Schouten map P
+# and rotation-gauge bivector Omega(a); the bracket of the action convention is the commutator product.
+# Sample data sit at module level so that the mutation test perturbs the formula's constants only.
+# ---------------------------------------------------------------------------
+P_MATRIX = [[2, -1, 0, 3], [1, 4, -2, 0], [0, 1, 5, -1], [-3, 0, 2, 1]]   # P(e_j) = sum_i P[i][j] e_i
+OMEGA_SAMPLES = [GA.add(GA.scal(F(2), GA.mul(E[0], E[1], S)), GA.scal(F(-1), GA.mul(E[2], E[3], S)),
+                        GA.scal(F(3), GA.mul(E[1], E[3], S))),
+                 GA.add(GA.scal(F(1, 2), GA.mul(E[0], E[2], S)), GA.scal(F(5), GA.mul(E[1], E[2], S)))]
+A_SAMPLES = [vec4([1, 2, 0, -1]), vec4([F(1, 3), 0, -2, 5])]
+SLOT_SAMPLES = [(F(3), vec4([1, -1, 2, 0]), F(-2)), (F(-1, 2), vec4([0, 3, 1, 1]), F(7))]
+LAMS = [F(3, 4), F(12), F(-3, 2)]
+C24_BIVECTORS = [GA.add(wedge(E[0], E[4]), GA.scal(F(2), wedge(E[1], E[5])), wedge(E[2], E[3])),
+                 GA.add(GA.scal(F(-1), wedge(E[3], E[4])), wedge(E[0], E[5]), GA.scal(F(3), wedge(E[1], E[2])))]
+
+
+def p_map(a):
+    return GA.add(*[GA.scal(sum((F(P_MATRIX[i][j]) * a.get((j,), F(0)) for j in range(4)), F(0)), E[i])
+                    for i in range(4)])
+
+
+def check_tractor_gauge_field_slots_and_bracket():
+    premise("dark-energy.imported-frozen-point-geometry")
+    ok = True
+    for A in A_SAMPLES:
+        for Om in OMEGA_SAMPLES:
+            ok = ok and GA.is_zero(comm(Om, N0)) and GA.is_zero(comm(Om, NI))
+            OT = GA.add(Om, GA.neg(wedge(NI, A)), wedge(N0, p_map(A)))
+            for s, mu, r in SLOT_SAMPLES:
+                Z = comm(OT, tractor(s, mu, r))
+                ok = ok and dot(Z, N0) == -dot(A, mu) and dot(Z, NI) == dot(p_map(A), mu)
+                ok = ok and GA.eq(grade({b: c for b, c in Z.items() if b and max(b) < 4}, 1),
+                                  GA.add(comm(Om, mu), GA.scal(r, A), GA.scal(-s, p_map(A))))
+        for lam in LAMS:
+            W = GA.sub(NI, GA.scal(lam / 6, N0))
+            theta = GA.add(GA.neg(wedge(NI, A)), wedge(N0, GA.scal(lam / 6, A)))
+            ok = ok and GA.eq(theta, wedge(A, W)) and dot(W, W) == -lam / 3
+            ok = ok and GA.eq(comm(wedge(A, W), N0), A)
+            for B in A_SAMPLES:
+                ok = ok and GA.eq(comm(wedge(A, W), wedge(B, W)), GA.scal(lam / 3, wedge(A, B)))
+    # the bracket of operators Y -> B . Y is the commutator product, and the four-vector formula
+    B1, B2 = C24_BIVECTORS
+    for w in E:
+        lhs = GA.sub(comm(B1, comm(B2, w)), comm(B2, comm(B1, w)))
+        ok = ok and GA.eq(lhs, comm(comm(B1, B2), w))
+    u, w, y, z = A_SAMPLES[0], tractor(F(2), vec4([0, 1, 0, 0]), F(-1)), A_SAMPLES[1], SLOT_SAMPLES[1][1]
+    rhs = GA.add(GA.scal(dot(w, y), wedge(u, z)), GA.scal(-dot(w, z), wedge(u, y)),
+                 GA.scal(-dot(u, y), wedge(w, z)), GA.scal(dot(u, z), wedge(w, y)))
+    ok = ok and GA.eq(comm(wedge(u, w), wedge(y, z)), rhs)
+    GA.check("Omega_T reproduces the Fact's slots; Theta = A ^ W; bracket = commutator product", ok)
+    assert ok

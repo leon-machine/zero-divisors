@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - mass.de-sitter-scale-frozen-point@6
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   - synthesis.cosmological-horizon-completed-pair@3
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
   - mass.chart-form-spin-isomorphism@5

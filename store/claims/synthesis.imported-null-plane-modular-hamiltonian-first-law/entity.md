@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-null-plane-modular-hamiltonian-first-law
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the null-plane modular Hamiltonian and the first law'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, text citation repointed at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 imported_from:
 - citation: 'A. C. Wall, A proof of the generalized second law for rapidly changing fields and arbitrary horizon slices, Phys. Rev. D 85 (2012), 104049; arXiv:1105.3445.'
@@ -37,6 +41,10 @@ imported_from:
   key: Araki1975
   doi: 10.2977/prims/1195191148
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item D5 (routine): the technical level''s text citation for the KMS property of the chiral fermion on one generator moves from synthesis.positive-null-energy-gives-r-premises (ii) to the premise-free synthesis.null-vacuum-on-a-horizon-generator (iii), which states that computation since the 7 November split; no edge, status stays imported.'
   note: >-
     Imported, by Leon's decision on the Clausius result, so that the continuum first law in clause (7) of
     synthesis.clausius-is-window-first-law-plus-boost-charge-conservation rests on a stated Fact instead
@@ -84,7 +92,7 @@ is the von Neumann entropy difference whenever both entropies are finite (for de
 \end{enumerate}
 
 ## technical
-These are known results of quantum field theory on a null plane. For a free field in its vacuum, the algebra of the field on the part of a null plane beyond a cut is thermal at temperature $1/2\pi$ for the dilations of the light rays about the cut, so its modular Hamiltonian is $2\pi$ times the boost energy $\int(u - u_{0})T_{uu}$ on the generators, ray by ray. Wall proved this from axioms of the horizon algebra, via Sewell's form of the Bisognano-Wichmann theorem with the positivity of null translations in place of the spectrum condition, and verified the axioms for the free scalar, stating them for higher spins; Casini, Teste and Torroba record the formula as proved for free fields and derive it for conformal theories, and Faulkner, Leigh, Parrikar and Wang give its first-order form for deformed cuts. Araki's relative entropy, defined for any pair of normal states of a von Neumann algebra, is nonnegative, zero only for equal states and monotone under restriction. With the modular Hamiltonian it defines the entropy difference of an excited state, $\Delta S = 2\pi\Delta\langle K\rangle - S(\rho\,\|\,\omega)$, the only meaning entropy has on these type III algebras; at first order in a perturbation the relative entropy drops out and $\Delta S = 2\pi\Delta\langle K\rangle$, the first law of entanglement. In the store the KMS property of (i) for the chiral fermion on one generator, in the store's conventions, is the computation of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(ii).
+These are known results of quantum field theory on a null plane. For a free field in its vacuum, the algebra of the field on the part of a null plane beyond a cut is thermal at temperature $1/2\pi$ for the dilations of the light rays about the cut, so its modular Hamiltonian is $2\pi$ times the boost energy $\int(u - u_{0})T_{uu}$ on the generators, ray by ray. Wall proved this from axioms of the horizon algebra, via Sewell's form of the Bisognano-Wichmann theorem with the positivity of null translations in place of the spectrum condition, and verified the axioms for the free scalar, stating them for higher spins; Casini, Teste and Torroba record the formula as proved for free fields and derive it for conformal theories, and Faulkner, Leigh, Parrikar and Wang give its first-order form for deformed cuts. Araki's relative entropy, defined for any pair of normal states of a von Neumann algebra, is nonnegative, zero only for equal states and monotone under restriction. With the modular Hamiltonian it defines the entropy difference of an excited state, $\Delta S = 2\pi\Delta\langle K\rangle - S(\rho\,\|\,\omega)$, the only meaning entropy has on these type III algebras; at first order in a perturbation the relative entropy drops out and $\Delta S = 2\pi\Delta\langle K\rangle$, the first law of entanglement. In the store the KMS property of (i) for the chiral fermion on one generator, in the store's conventions, is the computation of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(iii), which assumes no premise.
 
 ## lay
 A quantum field in empty space, looked at only on the part of a light-like surface beyond some cut, looks thermal: it has a temperature with respect to stretching the light rays away from the cut. The quantity that generates this stretching is a weighted total of the field's energy flowing along the rays, and it plays the role that energy plays for an ordinary hot system. A standard measure of distance between quantum states, Araki's relative entropy, then gives the entropy change of any disturbance of the field, and for small disturbances the entropy change equals that energy change divided by the temperature. These are established results of quantum field theory, imported here as facts.

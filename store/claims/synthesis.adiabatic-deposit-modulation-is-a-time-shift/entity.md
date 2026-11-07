@@ -27,7 +27,7 @@ derivations:
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-superhorizon-zeta-conservation@3
-  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@1
+  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@2
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1
   proof: proof-main.tex
 checked_by:

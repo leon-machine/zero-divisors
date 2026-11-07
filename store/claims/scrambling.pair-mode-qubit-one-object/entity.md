@@ -1,7 +1,7 @@
 ---
 id: scrambling.pair-mode-qubit-one-object
 kind: claim
-version: 4
+version: 5
 title: 'Pair, mode, qubit: one object'
 status: proved
 region: scrambling
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the exceptional-set count corrected with a uses edge at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -25,6 +29,7 @@ derivations:
   - tower.ladder-pairs-satisfy-car-vectors@4
   - tower.witt-index-quantum-capacity@4
   - std-algebra.witt-basis-car@1
+  - sheaf.schwarzschild-degeneration-boundary-tame@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,6 +48,10 @@ locators:
   label: prop:pair
   line: 808
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item D7 (routine): ''one ladder pair per point of the exceptional set'' was attributed to tower.witt-index-quantum-capacity, which states only the vector capacity min(p,q); it is T04 Thm 8.7, sheaf.schwarzschild-degeneration-boundary-tame (corank exactly one at every point of the blown-up boundary), now cited in the formal, technical and proof with a uses edge (@6); the Witt-index edge stays for the capacity the proof and check use.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -58,10 +67,10 @@ extraction:
 ---
 
 ## formal
-The tower's ladder pair $(v_i, w_i)$, the singularity paper's ``fermionic mode'', and the ``one ladder pair per point of the exceptional set'' of Fact \claimref{tower.witt-index-quantum-capacity} are the same object: one creation and one annihilation operator, a two-dimensional state space, one qubit, maximal entropy $\ln 2$ nats. In particular $\Cl(2,4)$ carries exactly two such pairs, its Witt index, and the count of pairs is the count of modes: no factor of two enters between the tower and this paper's count.
+The tower's ladder pair $(v_i, w_i)$, the singularity paper's ``fermionic mode'', and the ``one ladder pair per point of the exceptional set'' (the degeneration there has corank exactly one at every point, Theorem \claimref{sheaf.schwarzschild-degeneration-boundary-tame}(2), so the completion adds one ladder pair per point) are the same object: one creation and one annihilation operator, a two-dimensional state space, one qubit, maximal entropy $\ln 2$ nats. In particular $\Cl(2,4)$ carries exactly two such pairs, its Witt index, and the count of pairs is the count of modes: no factor of two enters between the tower and this paper's count.
 
 ## technical
-The tower's ladder pair $(v_i, w_i)$, the singularity analysis's fermionic mode, and the one ladder pair per point of the exceptional set in the Witt-index capacity result are one object: one creation and one annihilation operator, a two-dimensional state space $\{\ket{0}, v_i\ket{0}\}$, one qubit, of maximal entropy $\ln 2$ nats.
+The tower's ladder pair $(v_i, w_i)$, the singularity analysis's fermionic mode, and the one ladder pair per point of the exceptional set (the singular boundary degenerates with corank exactly one at every point) are one object: one creation and one annihilation operator, a two-dimensional state space $\{\ket{0}, v_i\ket{0}\}$, one qubit, of maximal entropy $\ln 2$ nats.
 
 In particular $\Cl(2,4)$ carries exactly two such pairs, its Witt index, and the count of pairs is the count of modes, with no factor of two between the tower's count and the entropy count.
 

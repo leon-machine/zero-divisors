@@ -35,7 +35,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.wall-rung-count-is-height-of-dying-line-class@1
+  - synthesis.wall-rung-count-is-height-of-dying-line-class@2
   - synthesis.wall-class-one-rung-obstruction@2
   - sheaf.one-sided-completion@4
   - sheaf.degeneration-sheaf@6

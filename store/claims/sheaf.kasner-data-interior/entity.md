@@ -1,7 +1,7 @@
 ---
 id: sheaf.kasner-data-interior
 kind: claim
-version: 2
+version: 3
 title: Kasner data of the interior
 status: imported
 region: sheaf
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -30,6 +34,10 @@ locators:
   label: fact:kasner
   line: 867
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Decision item E4 (routine; no retirement): equivalent_to interior.kasner-form-interior@6 added. This imported Kasner form (Kasner 1921) is what interior.kasner-form-interior proves with rates, the proved home; both are kept (this one''s users pin it, and making it proved would be a status change), and the link marks the restatement so the two are counted once.'
   typing:
     by: ai-typing-pass
     note: 'Imported fact with no derivation; nothing to edge.'
@@ -38,6 +46,8 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the metric is the derived metric of the Schwarzschild gravitational field (hb, Omega) on flat spacetime. Exponents and proper time unchanged.'
+equivalent_to:
+- interior.kasner-form-interior@6
 ---
 
 ## formal

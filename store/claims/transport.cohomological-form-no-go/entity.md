@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - transport.group-null-rotations@4
+  - transport.group-null-rotations@5
   - transport.pseudo-inverse-torsor@2
   proof: proof-main.tex
 checked_by:

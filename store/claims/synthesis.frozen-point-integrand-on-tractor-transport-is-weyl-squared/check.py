@@ -25,12 +25,16 @@ rational symmetric matrices; W is the Weyl part, R - KN(P, eta) with P the Schou
     (4/3)(K1 + K2)^2/(K1 K2), which changes with K2/K1, while the Euler integral over 16 pi^2 is 8.
 (7) The Chern form is exact: <F ^ F>_0 = d CS(A), CS = <A ^ dA> + (1/3)<A ^ (A x A)>, on a fixed
     2-jet of a so(2,4) connection.
+(8) The proof's GTG route: ten independent Weyl maps of Cl(1,3) as linear functions on bivectors (lib/gtg.py,
+    Weyl parts of Kulkarni-Nomizu operators), eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)> on all 55 pairs;
+    the S^2 x S^2 densities pointwise from the product operator of Cl(4,0).
 Exact arithmetic only (Fractions); fixed tables, no randomness.
 """
 from fractions import Fraction as Fr
 from itertools import combinations, permutations
 import GA
 from tp_premise import premise
+import gtg
 
 SQ = (1, -1, -1, -1, 1, -1)
 ETA = (1, -1, -1, -1)
@@ -539,3 +543,108 @@ if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("check_") and callable(fn):
             fn()
+
+
+# ---- the proof's GTG route: Weyl maps as linear functions on bivectors (lib/gtg.py) ----
+def _sym_maps():
+    """The ten basis symmetric maps T of spacetime vectors (T(e_a) . e_b symmetric), as callables."""
+    out = []
+    for i in R4:
+        for j in range(i, 4):
+            def T(v, i=i, j=j):
+                res = {}
+                for (k,), c in v.items():
+                    # matrix with (i, j) and (j, i) entries 1 on lowered components: T(e_k) = sum_l M_kl e^l
+                    for (a, b) in ({(i, j), (j, i)}):
+                        if a == k:
+                            res = GA.add(res, GA.scal(c * Fr(1, ETA[b]), GA.gen(b)))
+                return res
+            out.append(T)
+    return out
+
+
+def _weyl_map_basis():
+    """Ten independent Weyl maps W = weyl_op(KN(S, T)) of Cl(1,3), as frame-plane dicts."""
+    S = _sym_maps()
+    blades = gtg.bivector_blades(4)
+    basis, rows = [], []
+    for A in S:
+        for B in S:
+            Wp = gtg.weyl_op(_kn_pair(A, B), gtg.S13)
+            row = [c for pl in sorted(Wp) for c in [Wp[pl].get(bl, Fr(0)) for bl in blades]]
+            trial = rows + [row]
+            if GA.rank_of_vectors([list(r) for r in trial]) > len(rows):
+                rows, basis = trial, basis + [Wp]
+    return basis
+
+
+def _kn_pair(A, B):
+    """The Kulkarni-Nomizu-type operator a ^ b -> A(a) ^ B(b) + B(a) ^ A(b) (symmetric in A, B)."""
+    def R(Xb):
+        out = {}
+        for (m, n), c in Xb.items():
+            em, en = GA.gen(m), GA.gen(n)
+            out = GA.add(out, GA.scal(c, GA.add(gtg.wedge(A(em), B(en)), gtg.wedge(B(em), A(en)))))
+        return out
+    return R
+
+
+def _F_from_weyl_map(W, C=None):
+    """Frame components F_ef = -W(e_e ^ e_f) (plus the Cotton block n0 ^ c) in Cl(2,4)."""
+    def Fc(e, f):
+        if e == f:
+            return {}
+        out = GA.neg(gtg.apply_op(W, gtg.biv(e, f)))
+        if C is not None:
+            c = {}
+            for a in R4:
+                c = GA.add(c, GA.scal(C[e][a] - C[f][a], E[a]))
+            out = GA.add(out, _wedge(N0, c))
+        return out
+    return Fc
+
+
+def _half_weyl_square(W1, W2):
+    """(1/2) <W1(a ^ b) W2(d_b ^ d_a)>, summed over the frame (the scalar of the Weyl map pair)."""
+    tot = Fr(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                rb = GA.scal(Fr(1, ETA[a] * ETA[b]), gtg.biv(b, a))
+                tot += gtg.sp(GA.mul(gtg.apply_op(W1, gtg.biv(a, b)), gtg.apply_op(W2, rb), gtg.S13))
+    return tot / 2
+
+
+def check_gtg_weyl_square_of_weyl_maps():
+    """(iii) with the Weyl part as a linear map on bivectors: on ten independent Weyl maps of Cl(1,3) (built by
+    the library from Kulkarni-Nomizu operators) and their 55 pairs, eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)>
+    for F = -W (and with a Cotton block); the Weyl maps are trace-free and I-linear. (v) pointwise, on the
+    product operator calR = K1 on e1 ^ e2, K2 on e3 ^ e4 of Cl(4,0): Weyl square 2 <W W> = (4/3)(K1 + K2)^2 and
+    Euler density 8 K1 K2, so the integrals over 16 pi^2 are (4/3)(K1 + K2)^2/(K1 K2) and 8."""
+    _premises_locus()
+    premise("dark-energy.frozen-point-makes-stelle-west-vector")
+    basis = _weyl_map_basis()
+    ok = len(basis) == 10
+    I4 = gtg.pseudoscalar(gtg.S13)
+    for W in basis:
+        ok = ok and all(gtg.ricci(W, GA.gen(m)) == {} for m in R4)
+        ok = ok and all(GA.eq(gtg.apply_op(W, GA.mul(I4, gtg.biv(a, b), gtg.S13)),
+                              GA.mul(I4, gtg.apply_op(W, gtg.biv(a, b)), gtg.S13)) for a in R4 for b in range(a + 1, 4))
+    Fs = [_F_from_weyl_map(W) for W in basis]
+    n = 0
+    for i in range(len(basis)):
+        for j in range(i, len(basis)):
+            ok = ok and _eps_X(Fs[i], Fs[j]) == _half_weyl_square(basis[i], basis[j])
+            n += 1
+    ok = ok and n == 55
+    ok = ok and _eps_X(_F_from_weyl_map(basis[3], COTTON), _F_from_weyl_map(basis[3], COTTON)) == \
+        _half_weyl_square(basis[3], basis[3])
+    sq4 = GA.sig(4, 0)
+    for k1, k2 in ((Fr(1), Fr(1)), (Fr(1), Fr(2)), (Fr(2), Fr(6))):
+        def R(Xb, k1=k1, k2=k2):
+            return GA.add(GA.scal(k1 * Xb.get((0, 1), Fr(0)), gtg.biv(0, 1, sq4)),
+                          GA.scal(k2 * Xb.get((2, 3), Fr(0)), gtg.biv(2, 3, sq4)))
+        Wp = gtg.weyl_op(R, sq4)
+        ok = ok and gtg.kretschmann(Wp, sq4) == Fr(4, 3) * (k1 + k2) ** 2
+        ok = ok and gtg.euler_density(R, sq4) == 8 * k1 * k2
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_weyl_square_of_weyl_maps"; return _tp_rv

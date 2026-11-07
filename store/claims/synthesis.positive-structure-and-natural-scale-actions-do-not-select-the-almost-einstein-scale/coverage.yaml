@@ -1,4 +1,10 @@
 functions:
+  check_gtg_dilation_field_scalar_and_tractor_dirichlet:
+    kind: sampled
+    clauses:
+    - '(ii) sqrt|g| calR = 6 phi box phi in the store sign, the Euler-Lagrange equation box phi = (2/3) Lambda phi^3 (de Sitter scale instance), the trace-free Ricci map of the stationary scales'
+    - '(iii) the derivative of the tractor D sigma has middle slot H0 and vanishing top slot, and the tractor Dirichlet density is H0 : H0'
+    omits: 'the dilation field of three polynomial scales and the tractor of three scales at two rational points each, on exact jets; the variational step is the proof''s integration by parts'
   check_positive_structure_symmetry_fixes_no_scale:
     kind: complete
     clauses: ["(i) the vectors commuting with Z are span(e1, e2, e3, e-), those fixed by its so(4) are span(e0, nu), the centraliser fixes no nonzero vector; signatures of the two spans; n_inf in neither; the Cayley rotation by 1 + tZ; tabulated scales of nu, e0, e-; with the boost e0 e1 the joint fixed space is the ray of nu; Re X(i rho e0) is the de Sitter tractor at L = 12/rho^2"]

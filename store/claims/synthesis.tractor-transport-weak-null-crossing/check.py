@@ -24,6 +24,7 @@ from fractions import Fraction as F
 from itertools import product
 import GA  # noqa: F401  (house rule; the computation is polynomial algebra over Fractions)
 from tp_premise import premise
+import gtg
 
 
 class Det:
@@ -277,3 +278,73 @@ def check_model_profile():
         assert t * t * abs(S) * 2 * t == 1 / (2 * (1 + t))
         assert abs(f) * 2 * t == 1 / (1 + t)
     return True
+
+
+# ---- (GTG) the same algebra in Cl(2,4): tractors V = sigma ninf + mu + rho n0, bivectors acting by x ----
+SQC = gtg.S24
+N0C, NIC = gtg.null_pair(SQC)
+
+
+def _v(c):
+    return {(i,): F(x) for i, x in enumerate(c) if x}
+
+
+GTG_DATA = [  # (gamma' (timelike or null), n (null), R, test tractors (sigma, mu, rho))
+    (_v([2, 1, 0, 0]), _v([1, 1, 0, 0]), _v([F(1, 3), -1, 2, F(1, 2)]),
+     [(F(1), _v([F(1, 2), 3, -1, 2]), F(-2)), (F(-3, 4), _v([0, 1, F(2, 5), -1]), F(5))]),
+    (_v([1, 0, 1, 0]), _v([3, 0, F(-9, 5), F(12, 5)]), _v([0, 2, F(-1, 7), 1]),
+     [(F(2), _v([1, 1, 1, 1]), F(1, 3)), (F(0), _v([F(-1, 2), 0, 3, 1]), F(-1))]),
+]
+
+
+def _tr(sig, mu, rho):
+    return GA.add(GA.scal(sig, NIC), mu, GA.scal(rho, N0C))
+
+
+def _E(gp, V):
+    return gtg.comm(gtg.wedge(NIC, gp, SQC), V, SQC)
+
+
+def _N(v, V):
+    return GA.neg(gtg.comm(gtg.wedge(N0C, v, SQC), V, SQC))
+
+
+def check_gtg_tractor_transport_in_cl24():
+    """The proof's GTG steps in Cl(2,4): in a D-parallel frame the transport generator -Omega_T(x') . V
+    (Omega_T = -ninf ^ gamma' + n0 ^ p there) is E V + N_p V with E = (ninf ^ gamma') . and N_v = -(n0 ^ v) .,
+    giving sigma' = gamma' . mu, mu' = -rho gamma' + sigma p, rho' = -p . mu; (a) N_v N_w V = -sigma (v . w) n0,
+    N_n^2 = 0; (b) N_n E N_n = nu N_n; (c) N_n N_R N_n = 0; A preserves the tractor metric; the gauge identity
+    (1 - f N_n) A (1 + f N_n) - f' N_n = E + N_R + f [E, N_n] for f' = nu (S - f^2); (4) Einstein sides have
+    P = (Lambda/6) id."""
+    premise("interior.imported-tractor-connection")
+    ok = True
+    for gp, n, R, tests in GTG_DATA:
+        nu = gtg.vdot(n, gp, SQC)
+        ok = ok and gtg.vdot(n, n, SQC) == 0 and nu != 0
+        for S, f in ((F(2), F(1, 3)), (F(-5, 2), F(3))):
+            p = GA.add(GA.scal(S * nu, n), R)
+            fp = nu * (S - f * f)
+            OmT = GA.add(GA.neg(gtg.wedge(NIC, gp, SQC)), gtg.wedge(N0C, p, SQC))
+
+            def A(V):
+                return GA.add(_E(gp, V), _N(p, V))
+            for sig, mu, rho in tests:
+                V = _tr(sig, mu, rho)
+                ok = ok and GA.eq(GA.neg(gtg.comm(OmT, V, SQC)), A(V))
+                slots = _tr(gtg.vdot(gp, mu, SQC), GA.add(GA.scal(-rho, gp), GA.scal(sig, p)), -gtg.vdot(p, mu, SQC))
+                ok = ok and GA.eq(A(V), slots)
+                ok = ok and GA.eq(_N(R, _N(n, V)), GA.scal(-sig * gtg.vdot(R, n, SQC), N0C))
+                ok = ok and _N(n, _N(n, V)) == {} and _N(n, _N(R, _N(n, V))) == {}
+                ok = ok and GA.eq(_N(n, _E(gp, _N(n, V))), GA.scal(nu, _N(n, V)))
+                for s2, m2, r2 in tests:
+                    W = _tr(s2, m2, r2)
+                    ok = ok and gtg.vdot(A(V), W, SQC) + gtg.vdot(V, A(W), SQC) == 0
+                lhs = GA.add(A(GA.add(V, GA.scal(f, _N(n, V)))))
+                lhs = GA.sub(lhs, GA.scal(f, _N(n, lhs)))
+                lhs = GA.sub(lhs, GA.scal(fp, _N(n, V)))
+                rhs = GA.add(_E(gp, V), _N(R, V), GA.scal(f, GA.sub(_E(gp, _N(n, V)), _N(n, _E(gp, V)))))
+                ok = ok and GA.eq(lhs, rhs)
+    for lam in (F(3), F(-6, 5)):
+        P = gtg.schouten(gtg.op_const(lam / 3))
+        ok = ok and all(GA.eq(P(GA.gen(m)), GA.scal(lam / 6, GA.gen(m))) for m in range(4))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_tractor_transport_in_cl24"; return _tp_rv

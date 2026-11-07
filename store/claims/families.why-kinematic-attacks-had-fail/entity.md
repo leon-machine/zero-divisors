@@ -28,7 +28,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - families.imported-dictionary-exact-join@6
+  - families.imported-dictionary-exact-join@7
   - standard-model.trichotomy-what-kind-number@10
   proof: proof-main.tex
 checked_by:

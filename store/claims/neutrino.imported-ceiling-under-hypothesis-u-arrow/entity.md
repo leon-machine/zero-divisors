@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@5
   - dark-matter.ceiling-valued-inherited-success@5
-  - dark-matter.orientation-arrow-seventeenth-refutation@9
+  - dark-matter.orientation-arrow-seventeenth-refutation@10
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.hyp-u-equal-rank-one-eigenvalues@3

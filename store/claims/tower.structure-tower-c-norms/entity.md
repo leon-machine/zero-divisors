@@ -41,8 +41,8 @@ derivations:
   uses:
   - tower.algebraic-limit-even-charge@3
   - tower.commuting-copies@5
-  - tower.compatibility-connecting-maps-transported@6
-  - transport.rule-1-morita-trivial@5
+  - tower.compatibility-connecting-maps-transported@7
+  - transport.rule-1-morita-trivial@6
   - std-algebra.involution-properties@1
   proof: proof-main.tex
 checked_by:

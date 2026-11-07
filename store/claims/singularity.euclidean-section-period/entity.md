@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.computed@4
+  - singularity.computed@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

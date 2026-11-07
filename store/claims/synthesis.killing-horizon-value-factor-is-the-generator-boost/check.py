@@ -17,7 +17,8 @@ synthesis.imported-gtg-dictionary (vi)), B_r the boost with B k B~ = r^2 k (r = 
     r sin th dph satisfy Cartan's first structure equations exactly at sample points; contracted with the
     Killing vector d/dt only the radial boost survives, with coefficient -beta beta' = f'/2
     (Q(beta) = 1 - f). At a horizon (f = 0, Q(beta) = 1) the t-line is a null generator with physical
-    tangent k = e0 + beta e1 and (K.D)K = (f'/2) K: Schwarzschild kappa = 1/4M, de Sitter -H, and both
+    tangent k = e0 + beta e1 and (K.D)K = (f'/2) K: Schwarzschild kappa = 1/4M, de Sitter -H (beta = +rH, the chart of
+    the past cosmological horizon; +H in the expanding chart beta = -rH), and both
     horizons of a Schwarzschild-de Sitter field with rational horizon radii.
 (4) Composition: the value factor r^{-1} on Lambda(m) with the transport of the affine parameter by r^2
     preserves the canonical kernel (the stored unitary dilation), for both signs of kappa.
@@ -136,7 +137,7 @@ def check_killing_bivector_shape_on_the_horizon():
 
 def check_canonical_block_is_the_generator_boost():
     premise("field-theory.second-quantisation")
-    premise("synthesis.boost-evolution-on-generators-is-one-unitary-group")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     for (k, m, a, b) in FRAMES:
         Lm, Lk = _lam(m), _lam(k)
         N = _wedge(k, m)
@@ -306,8 +307,7 @@ def check_pg_rotation_field_on_the_killing_line():
 
 
 def check_value_factor_and_transport_compose_to_the_dilation():
-    premise("synthesis.boost-evolution-on-generators-is-one-unitary-group")
-    premise("synthesis.affine-cell-boost-spreads-without-scrambling")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     k, m = FRAMES[0][0], FRAMES[0][1]
     Lm = _lam(m)
     cells = [(F(1, 3), F(2)), (F(5), F(17, 2))]
@@ -376,3 +376,80 @@ def check_closed_form_and_frame_independence():
             GA.check("m2 null, k.m2 = 1", _sc(_m(m2, m2)) == 0 and _dot(k, m2) == 1)
             GA.check("k N_s = k: the intrinsic projection k psi does not see the choice of m", GA.eq(_m(k, Nr), k))
     return True
+
+
+# ---------------------------------------------------------------------------
+# GTG proof of (iv) (2026-11-07): the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a)
+# on the constant physical frame, for hb(a) = a - beta (a.e_t) e_r with beta(r) arbitrary, is solved by
+# omega(gamma_0) = 0, omega(gamma_1) = -beta' sigma_r, omega(gamma_2) = (beta gamma_0 + gamma_1) ^ gamma_2 / r,
+# omega(gamma_3) = (beta gamma_0 + gamma_1) ^ gamma_3 / r + (cot/r) gamma_2 ^ gamma_3; Omega(e_t) = -beta beta' sigma_r.
+# The left side is computed from the coframe's jets (labels t, r, theta, phi), not from the closed form.
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+PG_SAMPLES = [(F(1, 3), F(-2, 5), F(3), (F(3, 5), F(4, 5))), (F(-7, 4), F(5, 9), F(2, 7), (F(5, 13), F(12, 13))),
+              (F(1), F(-1, 4), F(2), (F(8, 17), F(15, 17)))]
+
+
+HORIZONS = [(lambda r: (2 / r).pw(F(1, 2)), F(2), F(1, 2), F(1, 4)),                 # Schwarzschild M = 1
+            (lambda r: F(2, 3) * r, F(3, 2), F(-4, 3), F(-2, 3)),                       # de Sitter H = 2/3, beta = +rH
+            (lambda r: -F(2, 3) * r, F(3, 2), F(-4, 3), F(2, 3))]                       # expanding chart, beta = -rH
+
+
+def _closed_omega(b, db, r, cot, radial=None):
+    radial = -db if radial is None else radial
+    sig_r = gtg.biv(1, 0)
+    u = gtg.vec([b, 1, 0, 0])
+    w2 = gtg.m_scal(1 / r, gtg.wedge(u, gtg.e(2)))
+    w3 = gtg.m_add(gtg.m_scal(1 / r, gtg.wedge(u, gtg.e(3))), gtg.m_scal(cot / r, gtg.wedge(gtg.e(2), gtg.e(3))))
+    return [{}, gtg.m_scal(radial, sig_r), w2, w3]
+
+
+def _torsion_sides(fld, om):
+    """Left and right sides of the torsion equation for a = 0..3 (values at the point)."""
+    Hi = fld.hb_matrix()
+    gup = [gtg.vec([Hi[mu][c] for c in range(4)]) for mu in range(4)]      # coefficients of gamma^c
+    gup = [{bl: c * gtg.S13[bl[0]] for bl, c in v.items()} for v in gup]    # gamma^c = gamma_c / Q(gamma_c)
+    lhs, rhs = [], []
+    for a in range(4):
+        L = {}
+        for mu in range(4):
+            for nu in range(4):
+                c = gtg._val(fld.TH[a][nu].d(mu))
+                if c:
+                    L = gtg.m_add(L, gtg.m_scal(c, gtg.wedge(gup[mu], gup[nu])))
+        R = gtg.m_add(*[gtg.wedge(gtg.er(b), gtg.bdot(om[b], gtg.er(a))) for b in range(4) if om[b]])
+        lhs.append(L)
+        rhs.append(R)
+    return lhs, rhs
+
+
+def check_gtg_pg_torsion_equation_and_killing_line():
+    premise("synthesis.imported-gtg-dictionary")
+    premise("singularity.plane-rate")
+    ok = True
+    for b, db, r0, (sn, cs) in PG_SAMPLES:
+        fld = gtg.pg_field(r0, sn, cs, lambda r, b=b, db=db, r0=r0: b + db * (r - r0))
+        om = _closed_omega(b, db, r0, cs / sn)
+        lhs, rhs = _torsion_sides(fld, om)
+        ok = ok and all(gtg.m_sub(x, y) == {} for x, y in zip(lhs, rhs)) and any(lhs)
+        ok = ok and fld.torsion_free() and all(gtg.m_sub(fld.omega(c), om[c]) == {} for c in range(4))
+        bad = _closed_omega(b, db, r0, cs / sn, radial=-db + 1)
+        lhs2, rhs2 = _torsion_sides(fld, bad)
+        ok = ok and any(gtg.m_sub(x, y) != {} for x, y in zip(lhs2, rhs2))
+        # Omega(e_t) = omega(gamma_0) + beta omega(gamma_1) = -beta beta' sigma_r, no angular part
+        ok = ok and gtg.m_sub(fld.Omega(0), gtg.m_scal(-b * db, gtg.biv(1, 0))) == {}
+        K = gtg.vec([1, b, 0, 0])
+        ok = ok and gtg.m_sub(fld.hb_inv(gtg.e(0)), K) == {}
+    # horizons (item A6): (K . D) K = beta(r_h) f'(r_h)/2 K; de Sitter beta = +rH (past horizon) gives -H,
+    # the expanding chart beta = -rH (future horizon) gives +H; Schwarzschild beta = +sqrt(2M/r) gives 1/4M
+    for beta_fn, rh, fprime, want in HORIZONS:
+        fld = gtg.pg_field(rh, F(3, 5), F(4, 5), beta_fn)
+        r = gtg.Jet.var(1, rh, 4, 2)
+        bj = beta_fn(r)
+        K = {(0,): gtg.Jet.const(1, 4), (1,): bj}
+        ok = ok and gtg.vdot(gtg.m_val(K), gtg.m_val(K)) == 0
+        ok = ok and gtg.m_sub(fld.cov(0, K), gtg.m_scal(bj.v * fprime / 2, gtg.m_val(K))) == {}
+        ok = ok and bj.v * fprime / 2 == want
+    GA.check("GTG: the PG torsion equation is solved by the closed-form omega; Omega(e_t) = -beta beta' sigma_r", ok)
+    assert ok

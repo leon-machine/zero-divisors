@@ -31,7 +31,7 @@ derivations:
   - standard-model.imported-frozen-point-dictionary@8
   - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - synthesis.promoted-norm-weyl-clock-flat-weight@6
   proof: proof-main.tex
 checked_by:

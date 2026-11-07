@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@2
+  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra@2

@@ -15,6 +15,10 @@ functions:
     kind: sampled
     clauses: ["(iv)"]
     omits: "five sample values of Lambda of both signs on de Sitter frames"
+  check_tractor_gauge_field_slots_and_bracket:
+    kind: exact
+    clauses: ["(iii) the connection of the Fact as the gauge field Omega_T", "(iv) the bracket as the commutator product"]
+    omits: "slot identity on two rational frame vectors, two rotation bivectors, two tractors and one generic Schouten matrix; it is linear in each, so the samples test the formula, not every field"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

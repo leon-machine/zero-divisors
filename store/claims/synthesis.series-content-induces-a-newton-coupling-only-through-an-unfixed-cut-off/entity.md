@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.imported-sakharov-induced-gravity-coefficients@1
+  - synthesis.imported-sakharov-induced-gravity-coefficients@2
   - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
   - standard-model.connection-forced@4
   - standard-model.chain@8

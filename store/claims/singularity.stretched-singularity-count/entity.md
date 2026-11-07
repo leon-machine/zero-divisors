@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - singularity.imported-induced-geometry-interior-slice@2
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   assumes:
   - singularity.c1-curvature-cutoff@4
   - singularity.c2-cell-density@4

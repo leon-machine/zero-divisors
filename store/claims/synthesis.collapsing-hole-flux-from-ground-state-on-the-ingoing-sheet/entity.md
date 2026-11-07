@@ -1,7 +1,7 @@
 ---
 id: synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 kind: claim
-version: 2
+version: 3
 title: 'Late-time Hawking state from the ground state on the ingoing sheet'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (ii): the ingoing generator''s velocity hb^{-1}(x'') is D-parallel; (K . D) K = kappa K'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -58,6 +62,8 @@ checked_by:
   ref: check.py::check_ingoing_generator_crosses_the_horizon_regularly
 - kind: check
   ref: check.py::check_exterior_half_is_the_i_state_at_the_hawking_temperature
+- kind: check
+  ref: check.py::check_gtg_ingoing_generator_is_affine_and_horizon_rate
 - kind: proof
   derivation: main
 lineage:
@@ -67,6 +73,10 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Clause (ii) of the proof rewritten in Gauge Theory Gravity: the ingoing radial null worldline parametrised by r has physical velocity k = hb^{-1}(x'') = (gamma_1 - gamma_0)/(1 + beta), and with the PG rotation-gauge field on the radial plane (Omega(e_t) = (M/r^2) sigma_r, Omega(e_r) = -beta'' sigma_r) D_{x''} k = dk/dr + Omega(x'') x k = 0, so r is affine; the horizon rate is (K . D) K = Omega(e_t) x K = K/(4M) at r = 2M. The Christoffel symbols Gamma^r_rr = 0 and Gamma^v_vv = f''/2 of the chart (v, r) are kept as a labelled reading (the formal level''s parenthesis is unchanged), with their old check. Original proof kept as orig-proof-main.tex. New exact check check_gtg_ingoing_generator_is_affine_and_horizon_rate (two masses, three radii each with rational beta: the engine''s PG field torsion-free, its radial-plane connection, Q(k) = 0, hb^{-1}(x'') = k, D_{x''} k = 0, a non-affine control in the t parametrisation, (K . D) K = K/(4M) on the horizon and its off-horizon value). outside_ga withdrawn: no stand-in remains in the proof''s main line.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -122,9 +132,6 @@ extraction:
     per complex chiral fermion that the I-state at 2 pi/kappa carries is the two-dimensional anomaly flux of
     Robinson and Wilczek (2005), which a result filed alongside on the residue-0 chirality anomaly
     reaches from the other side.
-outside_ga:
-  kind: other
-  why: 'The affine parametrisation of the horizon generators is computed from the Christoffel symbols of the ingoing chart (Gamma^r_rr) in components, as a labelled reading of (K.D)K beside the GTG statement.'
 ---
 ## formal
 Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}d\Omega^{2}$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$.

@@ -239,3 +239,55 @@ def check_exterior_half_is_the_i_state_at_the_hawking_temperature():
     for kap, U, want in ((F(1, 4), F(-1), F(1, 4)), (F(1, 6), F(-3, 2), F(1, 4)), (F(1, 4), F(-6), F(3, 2))):
         GA.check("tabulated dU/dtau = -kappa U on U < 0", -kap * U == want and want > 0)
         GA.check("control: on U > 0 the flow moves away from the horizon", -kap * (-U) == -want)
+
+
+# ---------------------------------------------------------------------------
+# GTG proof of (ii) (2026-11-07): in the Painleve-Gullstrand gauge field on flat spacetime, the ingoing
+# radial null worldline parametrised by r has physical velocity k = hb^{-1}(x') = (gamma_1 - gamma_0)/(1 + beta)
+# and D_{x'} k = 0 (r affine); the horizon generator K = hb^{-1}(e_t) has (K . D) K = K/(4M) at r = 2M.
+# The rotation-gauge field is the engine's torsion-free PG field (checked torsion-free here).
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+PG_CASES = [(F(1), [F(2), F(8), F(1, 2)]), (F(3, 2), [F(3), F(12), F(3, 4)])]   # beta = sqrt(2M/r) rational
+PG_ANGLE = (F(3, 5), F(4, 5))
+
+
+def check_gtg_ingoing_generator_is_affine_and_horizon_rate():
+    premise("synthesis.imported-gtg-dictionary")
+    premise("singularity.euclidean-section-period")
+    ok = True
+    horizons = 0
+    for M, radii in PG_CASES:
+        for r0 in radii:
+            fld = gtg.schwarzschild_pg(M, r0, PG_ANGLE[0], PG_ANGLE[1])
+            ok = ok and fld.torsion_free()
+            r = gtg.Jet.var(1, r0, 4, 2)
+            beta = (2 * M / r).pw(F(1, 2))
+            b0, db0 = beta.v, beta.d(1).v
+            ok = ok and db0 == -b0 / (2 * r0)
+            sig_r = gtg.biv(1, 0)                                   # sigma_r = e_r e_t
+            ok = ok and gtg.m_sub(fld.Omega(0), gtg.m_scal(M / (r0 * r0), sig_r)) == {}
+            ok = ok and gtg.m_sub(gtg.grade({bl: c for bl, c in fld.Omega(1).items() if bl == (0, 1)}, 2),
+                                  gtg.m_scal(-db0, sig_r)) == {}
+            k = {(0,): -1 / (1 + beta), (1,): 1 / (1 + beta)}
+            ok = ok and gtg.vdot(gtg.m_val(k), gtg.m_val(k)) == 0
+            xp = [-1 / (1 + b0), F(1), F(0), F(0)]                 # x' = e_r - e_t/(1 + beta)
+            ok = ok and gtg.m_sub(fld.hb_inv(gtg.vec(xp)), gtg.m_val(k)) == {}
+            Dk = gtg.m_add(*[gtg.m_scal(xp[mu], fld.cov(mu, k)) for mu in range(2)])
+            ok = ok and Dk == {}                                    # r is affine
+            # control: the same worldline parametrised by t is not affinely parametrised
+            kt = {(0,): gtg.Jet.const(1, 4), (1,): -1 - beta}
+            xt = [F(1), -1 - b0, F(0), F(0)]
+            Dkt = gtg.m_add(*[gtg.m_scal(xt[mu], fld.cov(mu, kt)) for mu in range(2)])
+            ok = ok and Dkt != {}
+            K = {(0,): gtg.Jet.const(1, 4), (1,): beta}
+            DK = fld.cov(0, K)
+            if r0 == 2 * M:
+                ok = ok and gtg.m_sub(DK, gtg.m_scal(1 / (4 * M), gtg.m_val(K))) == {}
+                horizons += 1
+            else:
+                ok = ok and gtg.m_sub(DK, gtg.m_scal(M / (r0 * r0), gtg.vec([b0, 1, 0, 0]))) == {}
+    ok = ok and horizons == 2
+    GA.check("GTG: D_{x'} k = 0 along the ingoing generator; (K . D) K = K/(4M) on the horizon", ok)
+    assert ok

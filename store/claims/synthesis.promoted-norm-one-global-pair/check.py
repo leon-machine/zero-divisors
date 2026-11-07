@@ -143,3 +143,59 @@ def check_liouville_density_depends_on_multiplier():
         assert lam / F(1) == F(3) / N2
     GA.check("the Liouville density in Lambda is flat for the promoted norm and 3/Lambda^2 for promoted l^2",
              True)
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# (i) in the conformal model Cl(2,4) of lib/gtg.py: the frozen point I = ninf + (Lambda/6) n0 (Q(I) = Lambda/3),
+# the canonical tractor X = n0, the Stelle-West vector V = X - (3/Lambda) I; gauge directions B . I, B . V for the
+# fifteen bivector blades B of Cl(2,4) (commutator action). (ii) with T a trivector field: the T-variation of
+# c int lambda <(grad ^ T) I^{-1}> is, up to a divergence, -c int <(grad lambda ^ dT) I^{-1}>, and the map
+# dT -> <(g ^ dT) I^{-1}> on trivectors vanishes exactly when the vector g = grad lambda does.
+import gtg  # noqa: E402
+
+S24 = gtg.S24
+
+
+def vec_coords(x):
+    return [x.get((a,), F(0)) for a in range(6)]
+
+
+def check_gtg_pointwise_count_in_cl24():
+    premise("dark-energy.point-infinity-has-no-physical-fluctuation")
+    premise("dark-energy.under-action-written-norm-parameter-laws")
+    ok = True
+    for lam in (F(3), F(12), F(3, 4), F(-6)):
+        I = gtg.scale_tractor(lam)
+        V = GA.sub(gtg.N0, GA.scal(3 / lam, I))
+        ok = ok and gtg.vdot(I, I, S24) == lam / 3 and gtg.vdot(V, V, S24) == -3 / lam and gtg.vdot(I, V, S24) == 0
+        ci, cv = vec_coords(I), vec_coords(V)
+        sq = list(S24)
+        rows = [[2 * sq[a] * ci[a] for a in range(6)] + [F(0)] * 6 + [F(-1, 3)],
+                [sq[a] * cv[a] for a in range(6)] + [sq[a] * ci[a] for a in range(6)] + [F(0)],
+                [F(0)] * 6 + [2 * sq[a] * cv[a] for a in range(6)] + [F(-3) / (lam * lam)]]
+        ok = ok and mat_rank(rows) == 3
+        gauge = []
+        for a, b in gtg.bivector_blades(6):
+            B = {(a, b): F(1)}
+            gauge.append(vec_coords(gtg.comm(B, I, S24)) + vec_coords(gtg.comm(B, V, S24)) + [F(0)])
+        ok = ok and len(gauge) == 15 and mat_rank(gauge) == 9
+        ok = ok and all(sum(r[i] * g[i] for i in range(13)) == 0 for r in rows for g in gauge)
+        norm = [c / (2 * lam) for c in ci] + [-c / (2 * lam) for c in cv] + [F(1)]
+        ok = ok and all(sum(r[i] * norm[i] for i in range(13)) == 0 for r in rows)
+        ok = ok and mat_rank(gauge + [norm]) == 10
+    assert ok
+    return ok
+
+
+def check_gtg_multiplier_equation_is_grad_lambda_zero():
+    premise("dark-energy.imported-henneaux-teitelboim-promotion")
+    S13 = gtg.S13
+    I4inv = GA.scal(F(-1), gtg.pseudoscalar(S13))            # I_4^{-1} = -I_4
+    tri = [(0, 1, 2), (0, 1, 3), (0, 2, 3), (1, 2, 3)]
+    ok = True
+    for comps, rank in (((1, 0, 0, 0), 1), ((0, 2, -1, 0), 1), ((1, 1, 0, 0), 1), ((3, 0, 4, 5), 1), ((0, 0, 0, 0), 0)):
+        g = gtg.vec([F(c) for c in comps])
+        row = [gtg.sp(GA.mul(gtg.outer(g, {t: F(1)}, S13), I4inv, S13)) for t in tri]
+        ok = ok and mat_rank([row]) == rank
+    assert ok
+    return ok

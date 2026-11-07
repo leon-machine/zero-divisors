@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.imported-massless-graviton-production-rate@1
   - dark-matter.mirror-tower-copy-one@8
-  - dark-matter.open-channels-their-costs@5
+  - dark-matter.open-channels-their-costs@6
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   proof: proof-main.tex
 checked_by:

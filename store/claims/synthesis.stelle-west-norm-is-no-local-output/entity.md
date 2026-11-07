@@ -29,7 +29,7 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - singularity.non-removability-invariant-argument@2
   - synthesis.promoted-norm-weyl-clock-flat-weight@6
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.rung-unit-transverse-to-norm@3
   proof: proof-main.tex

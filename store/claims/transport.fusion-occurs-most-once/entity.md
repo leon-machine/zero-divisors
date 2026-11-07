@@ -26,7 +26,7 @@ derivations:
   uses:
   - transport.classification-real-clifford-algebras@3
   - transport.existence-classification-type-c@4
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

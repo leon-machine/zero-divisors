@@ -29,7 +29,7 @@ derivations:
   - families.skeleton-rank-one-plus-ordering-shift@6
   - synthesis.face-mass-form-unit-plus-gram@2
   - synthesis.cumulants-at-fixed-second-moments-keep-the-floor@1
-  - synthesis.real-structure-breaks-source-stabiliser-to-z2@3
+  - synthesis.real-structure-breaks-source-stabiliser-to-z2@4
   proof: proof-main.tex
 checked_by:
 - kind: check

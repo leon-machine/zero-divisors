@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - odd-extensions.transport-constrains-frozen-point-only-through@2
+  - odd-extensions.transport-constrains-frozen-point-only-through@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

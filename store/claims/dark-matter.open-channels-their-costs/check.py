@@ -4,8 +4,8 @@
 through fourth powers. Delta N_eff of a two-polarisation boson at T_gamma is (8/7)(11/4)^(4/3).
 Mirror (premise: its relativistic content is a copy of ours, one photon and three neutrinos):
 N_eff_tot = (8/7)(11/4)^(4/3) + 3.044 in (7.446, 7.448); the cap 0.3 needs T'/T_gamma below a value in
-(0.4480, 0.4481); with the heaviest neutrino non-relativistic the coefficient is 4.403 + 2 in
-(6.40, 6.41) and the threshold in (0.464, 0.466) ("0.47"); at the hot-deposit estimate xi^4 = 4 (n_B/s) g*/g_d
+(0.4480, 0.4481); with the heaviest neutrino non-relativistic the coefficient is 4.403 + 2(3.044/3) in
+(6.43, 6.44) and the threshold in (0.464, 0.466) ("0.47"); at the hot-deposit estimate xi^4 = 4 (n_B/s) g*/g_d
 (xi = 4.24e-3, the hot end; n_B/s = 0.1413 x 2.74e-8 x 0.02237, g* = 100, g_d = 106.75) the mirror is
 more than eight orders below the cap; P2's xi = 1 gives 7.447, excluded.
 Five-dimensional towers: (4/7)(11/4)^(4/3) per polarisation in (2.201, 2.203) ("2.2 g"); one species
@@ -94,10 +94,11 @@ def check_mirror_radiation_and_threshold():
     ok = all(F(7447204, 10 ** 6) < m < F(7447205, 10 ** 6) for m in (m_lo, m_hi))
     # threshold (0.3/7.4472046)^(1/4) = 0.44800410... (the quoted 0.448)
     ok = ok and F(448004, 10 ** 6) ** 4 < CAP / m_hi and CAP / m_lo < F(448005, 10 ** 6) ** 4
-    n_lo, n_hi = p_lo + 2, p_hi + 2
-    # heaviest neutrino non-relativistic: 4.4032046 + 2 = 6.4032046..., threshold 0.46524420... ("0.47")
-    ok = ok and all(F(6403204, 10 ** 6) < n < F(6403205, 10 ** 6) for n in (n_lo, n_hi))
-    ok = ok and F(465244, 10 ** 6) ** 4 < CAP / n_hi and CAP / n_lo < F(465245, 10 ** 6) ** 4
+    n_lo, n_hi = p_lo + 2 * NNU / 3, p_hi + 2 * NNU / 3
+    # heaviest neutrino non-relativistic, the two others at 3.044/3 each:
+    # 4.4032046 + 2.0293333 = 6.4325379..., threshold 0.46471289... ("0.47")
+    ok = ok and all(F(6432537, 10 ** 6) < n < F(6432539, 10 ** 6) for n in (n_lo, n_hi))
+    ok = ok and F(464712, 10 ** 6) ** 4 < CAP / n_hi and CAP / n_lo < F(464713, 10 ** 6) ** 4
     # the hot-deposit estimate xi^4 = 4 (n_B/s) g*/g_d, the hotter end of the interval;
     # by hand xi = 4.2443...e-3 (the quoted 4.24e-3)
     xi_hot4 = 4 * NB_OVER_S * G_STAR / G_D

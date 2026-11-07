@@ -1,7 +1,7 @@
 ---
 id: synthesis.affine-cell-boost-spreads-without-scrambling
 kind: claim
-version: 3
+version: 4
 title: 'The boost spreads affine cells without scrambling'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: 'unit resolution pass, the modular group written with the unit I_4'
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, uses edge to the now-conjectured spreading law turned into a mention at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -36,7 +40,6 @@ derivations:
 - name: main
   uses:
   - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
-  - scrambling.spreading-law-chaos-bound-saturated@5
   - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex
 checked_by:
@@ -50,6 +53,10 @@ lineage:
   motivated_by:
   - synthesis.phase-flow-is-time-rotor-flow-kms-continuation
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Consequence of Leon''s answer 4 (B1): scrambling.spreading-law-chaos-bound-saturated is now conjectured; this result analyses that law''s growth step and does not rest on its truth, so the uses edge to it becomes a text mention (the proof''s \claimref stays as a citation for comparison) and the check''s premise() call for it is removed; mathematics unchanged, status stays proved.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

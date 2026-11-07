@@ -243,3 +243,56 @@ def curvature_constant(xs, L):
                         c = k
                     assert k == c
     return c
+
+
+# ---------------------------------------------------------------------------
+# GTG proof of Step 1 (2026-11-07): the de Sitter field of the scale as the dilation hb^{-1}(a) = a/sigma,
+# sigma = 1 - Lambda Q(x)/12, on flat spacetime; Omega solved from the torsion condition equals
+# (c/sigma) x ^ a with c = -Lambda/6; the store-sign curvature is calR(B) = (Lambda/3) B, the Weyl part
+# vanishes, and the round-sphere-positive Riemann tensor of C11 is -(Lambda/3)(g_ac g_bd - g_ad g_bc).
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+GTG_LAMS = [F(3, 4), F(12), F(12, 49)]                     # Lambda = 3 h^2, h = 1/2, 2, 2/7
+GTG_PTS = [(F(0), F(0), F(0), F(0)), (F(1, 3), F(-1, 4), F(1, 5), F(0)), (F(-1, 2), F(0), F(2, 3), F(1, 7))]
+GTG_PLANES = gtg.bivector_blades(4)
+GTG_QUADS = [(0, 1, 0, 1), (1, 2, 1, 2), (0, 3, 3, 0), (1, 2, 2, 3)]
+
+
+def _dilation(lam, x0):
+    def rows(X):
+        qx = X[0] * X[0] - X[1] * X[1] - X[2] * X[2] - X[3] * X[3]
+        inv = (1 - (lam / 12) * qx).inv()
+        return [[inv if a == mu else F(0) for a in range(4)] for mu in range(4)]
+    return gtg.field_from_hbinv(rows, x0)
+
+
+def check_gtg_dilation_field_curvature_selects_no_plane():
+    premise("mass.de-sitter-scale-frozen-point")
+    premise("dark-energy.imported-frozen-point-geometry")
+    ok = True
+    done = 0
+    for lam in GTG_LAMS:
+        for x0 in GTG_PTS:
+            x = gtg.vec(list(x0))
+            sigma = 1 - (lam / 12) * gtg.vdot(x, x)
+            fld = _dilation(lam, x0)
+            ok = ok and fld.torsion_free()
+            for mu in range(4):
+                ok = ok and gtg.m_sub(fld.Omega(mu), gtg.m_scal(-lam / (6 * sigma), gtg.wedge(x, gtg.e(mu)))) == {}
+            Rc = fld.curvature()
+            ok = ok and all(gtg.m_sub(Rc[pl], gtg.m_scal(lam / 3, gtg.biv(*pl))) == {} for pl in GTG_PLANES)
+            ok = ok and all(not v for v in gtg.weyl_op(Rc).values())
+            ok = ok and all(gtg.m_sub(gtg.ricci(Rc, gtg.e(m)), gtg.m_scal(lam, gtg.e(m))) == {} for m in range(4))
+            for u, v, w, z in GTG_QUADS:
+                eu, ev, ew, ez = gtg.e(u), gtg.e(v), gtg.e(w), gtg.e(z)
+                want = -(lam / 3) * (gtg.vdot(eu, ew) * gtg.vdot(ev, ez) - gtg.vdot(eu, ez) * gtg.vdot(ev, ew))
+                ok = ok and gtg.riem_o(Rc, eu, ev, ew, ez) == want
+            done += 1
+    # hand value: Lambda = 3/4 at x = (1/3, -1/4, 1/5, 0): Q(x) = 1/9 - 1/16 - 1/25, sigma = 1 - Q(x)/16
+    x = gtg.vec(list(GTG_PTS[1]))
+    ok = ok and gtg.vdot(x, x) == F(31, 3600) and done == 9
+    ok = ok and gtg.m_sub(_dilation(F(3, 4), GTG_PTS[1]).Omega(0),
+                          gtg.m_scal(F(-1, 8) / (1 - F(31, 57600)), gtg.wedge(x, gtg.e(0)))) == {}
+    GA.check("GTG: dilation field Omega = -(Lambda/6 sigma) x ^ a, calR = (Lambda/3) id, Weyl zero", ok)
+    assert ok

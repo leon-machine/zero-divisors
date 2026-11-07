@@ -34,7 +34,7 @@ derivations:
   - standard-model.imported-frozen-point-dictionary@8
   - mass.weight-polynomial-two-series@6
   - mass.imported-unitary-representations-de-sitter-group@4
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   proof: proof-main.tex
 checked_by:
 - kind: check

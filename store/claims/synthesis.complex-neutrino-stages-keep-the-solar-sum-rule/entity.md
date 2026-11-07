@@ -27,7 +27,7 @@ derivations:
   uses:
   - neutrino.breaking-relation@3
   - synthesis.solar-angle-light-plane-sum-rule@1
-  - synthesis.one-type-second-stages-are-twins@1
+  - synthesis.one-type-second-stages-are-twins@2
   - synthesis.series-family-structures-give-no-lopsided-second-stage@3
   - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
   - standard-model.imported-clebsch-structure-seesaw@1

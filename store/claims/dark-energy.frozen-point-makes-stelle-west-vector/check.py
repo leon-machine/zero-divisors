@@ -337,3 +337,66 @@ def check_action_prefactor_expansion_and_invariance():
     ok = ok and eps(ev(I), ev(V), ev(RB), ev(EE)) == nrm ** 4 * eps(I, V, RB, EE)
     GA.check("action: prefactor 1/Q(I) = 3/Lambda, MacDowell-Mansouri expansion, ambient invariance", ok)
     assert ok
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# Both branches on Einstein fields with Weyl curvature, through the shared engine (lib/gtg.py, same Cl(2,4)
+# conventions: n0 = (e+ + e-)/2, ninf = e+ - e-): Kottler fields in the Painleve-Gullstrand chart,
+# beta^2 = 2M/r + Lambda r^2/3, for Lambda > 0 (Schwarzschild-de Sitter) and Lambda < 0 (Schwarzschild-anti-de
+# Sitter); P = (Lambda/6) id from each field strength; the tractor gauge field Omega_T, its action on I and V,
+# the reduced form Omega(a) - hb^{-1}(a) ^ V/l^2, and the tractor field strength with derivative terms.
+import gtg  # noqa: E402
+
+
+def kottler(M, lam, r0, order=1):
+    return gtg.pg_field(r0, F(3, 5), F(4, 5), gtg.beta_kottler(M, lam), order)
+
+
+KOTTLER = [(F(39, 200), F(3, 4), F(1)), (F(11, 400), F(3), F(1, 2)), (F(13, 32), F(-3, 4), F(1)),
+           (F(5, 8), F(-3, 4), F(1))]     # (M, Lambda, r): beta = 4/5, 3/5, 3/4, 1
+
+
+def check_gtg_stelle_west_datum_on_einstein_fields_both_branches():
+    premise("dark-energy.stelle-west-vector-frozen-point")
+    premise("dark-energy.imported-frozen-point-geometry")
+    ok = True
+    S24 = gtg.S24
+    for M, lam, r0 in KOTTLER:
+        fld = kottler(M, lam, r0)
+        Rc = fld.curvature()
+        P = gtg.schouten(Rc)
+        I = gtg.scale_tractor(lam)
+        V = GA.sub(gtg.N0, GA.scal(3 / lam, I))
+        ok = ok and gtg.vdot(I, I, S24) * gtg.vdot(V, V, S24) == -1 and gtg.vdot(I, V, S24) == 0
+        ok = ok and GA.eq(gtg.outer(I, V, S24), gtg.wedge(gtg.NINF, gtg.N0, S24))      # I ^ V = ninf ^ n0 = e+ e-
+        for c in range(4):
+            ok = ok and GA.eq(P(GA.gen(c)), GA.scal(lam / 6, GA.gen(c)))
+            ok = ok and gtg.dT_const(fld, c, P, I) == {}
+            ok = ok and GA.eq(gtg.dT_const(fld, c, P, V), GA.gen(c))
+            red = GA.sub(fld.omega(c), GA.scal(lam / 3, gtg.comm(GA.gen(c), V, S24)))
+            ok = ok and GA.eq(gtg.omega_T(fld, c, P), red)
+        W = gtg.weyl_op(Rc)
+        ok = ok and any(v != {} for v in W.values())
+    assert ok
+    return ok
+
+
+def check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp():
+    premise("dark-energy.imported-frozen-point-geometry")
+    premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
+    ok = True
+    S24 = gtg.S24
+    for M, lam, r0 in KOTTLER[:3]:
+        fld = kottler(M, lam, r0, order=2)
+        I = gtg.scale_tractor(lam)
+        V = GA.sub(gtg.N0, GA.scal(3 / lam, I))
+        FT = gtg.tractor_curvature(fld)
+        W = gtg.weyl_op(fld.curvature())
+        for key, Fb in FT.items():
+            ok = ok and gtg.comm(Fb, I, S24) == {} and gtg.comm(Fb, V, S24) == {}
+            ok = ok and GA.eq(Fb, GA.neg(W[key]))
+        ok = ok and any(Fb != {} for Fb in FT.values())
+        # the transverse plane: the Weyl eigenvalue of the Kottler field is 2M/r^3, so F_T = -(2M/r^3) e2 ^ e3
+        ok = ok and GA.eq(FT[(2, 3)], GA.scal(-2 * M / r0 ** 3, gtg.wedge(GA.gen(2), GA.gen(3))))
+    assert ok
+    return ok

@@ -24,6 +24,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i), (ii): I and V as Cl(2,4) vectors with the bivector action, T a trivector field; exact checks'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 derivations:
 - name: main
@@ -39,6 +43,10 @@ checked_by:
   ref: check.py::check_multiplier_sector_one_global_pair
 - kind: check
   ref: check.py::check_liouville_density_depends_on_multiplier
+- kind: check
+  ref: check.py::check_gtg_pointwise_count_in_cl24
+- kind: check
+  ref: check.py::check_gtg_multiplier_equation_is_grad_lambda_zero
 lineage:
   motivated_by:
   - dark-energy.under-action-written-norm-parameter-laws
@@ -46,6 +54,10 @@ about:
 - obj.dark-energy.four-ways-number-enters-theory-shape
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof of (i), (ii) rewritten in GTG and the conformal model: the constraints Q(I) = lambda/3, I . V = 0, Q(V) = -3/lambda on Cl(2,4) vectors, the gauge images B . I, B . V of the fifteen bivectors (rank 9), the norm mode; the 3-form T a trivector field with dT = grad ^ T, so the T-variation gives -c int <(grad lambda ^ dT) I^{-1}> and grad lambda = 0. (iii) is global (compact slice, de Rham cohomology) and stays in forms, read on the assembled manifold; (iv), (v) unchanged. Checked exactly: check_gtg_pointwise_count_in_cl24 (I = ninf + (Lambda/6) n0, V = n0 - (3/Lambda) I from the shared engine at Lambda = 3, 12, 3/4, -6: norms, ranks 3, 9, 10, gauge images and norm mode in the constraint kernel) and check_gtg_multiplier_equation_is_grad_lambda_zero (the map dT -> <(g ^ dT) I^{-1}> on trivectors has rank 1 for timelike, spacelike and null g and 0 for g = 0). Version kept at 5 (already above the lock in this run). outside_ga narrowed to clause (iii).'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -68,7 +80,7 @@ extraction:
     note: 'Restated in Gauge Theory Gravity (FLAG): the spacetime M carries a gravitational field (hb, Omega) on flat spacetime; the compact spatial slice Sigma of M = R x Sigma, on which the reduced phase space H^0 x H^3 gives the one global pair, carries the Section 14 flag and a flags entry; the pointwise count (i) and d lambda = 0 of (ii) are local. Clauses (i)-(v) unchanged.'
 outside_ga:
   kind: other
-  why: 'The global pairing uses a 3-form and de Rham cohomology, topological data of the forms on a closed manifold, beyond one flat chart (reader R07).'
+  why: 'Clause (iii) uses de Rham cohomology (H^0 and H^3) of the compact spatial slice, topological data beyond one flat chart, stated and proved in the language of forms on the assembled manifold; the local clauses are in GA (T a trivector field, dT = grad ^ T).'
 ---
 
 ## formal

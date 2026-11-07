@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (unit of the gauge generators)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -32,7 +36,7 @@ derivations:
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.imported-one-loop-running-trace-ratio@1
-  - synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@1
+  - synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@2
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
   proof: proof-main.tex
@@ -52,6 +56,10 @@ lineage:
   - standard-model.imported-coefficient-sum-indices
   - standard-model.spectrum-run
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,9 +100,9 @@ extraction:
 ---
 
 ## formal
-Work in a covariant gauge (the background Feynman gauge with Faddeev-Popov ghosts), under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}. Let $F = \sum_{\mu<\nu}F^{\mu\nu}\gamma_{\mu}\gamma_{\nu}$ be a field-strength bivector of $\Cl(1,3)$ and $X = F_{\mu\nu}F^{\mu\nu}$, so that $\langle F^{2}\rangle_{0} = -X/2$. Let $M(F)$ be its Lorentz generator in a field's spin representation: $a \mapsto a\cdot F$ on vectors, $\psi \mapsto \tfrac12F\psi$ on the minimal left ideal $\Cl^{+}(1,3)P$, $P = \tfrac12(1 + \gamma_{3}\gamma_{0})$, which is $I_{4}$-stable and so, with the unit $i = I_{4}$ of Definition \claimref{obj.field-theory.single-algebra-field}, a two-dimensional complex space (one Weyl spinor). Define the spin weight $s = 4\,\mathrm{Re}\,\mathrm{tr}\,M(F)^{2}/X$. Then:
+Work in a covariant gauge (the background Feynman gauge with Faddeev-Popov ghosts), under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}. Let $F = \sum_{\mu<\nu}F^{\mu\nu}\gamma_{\mu}\gamma_{\nu}$ be a field-strength bivector of $\Cl(1,3)$ and $X = F_{\mu\nu}F^{\mu\nu}$, so that $\langle F^{2}\rangle_{0} = -X/2$. Let $M(F)$ be its Lorentz generator in a field's spin representation: $a \mapsto a\cdot F$ on vectors, $\psi \mapsto \tfrac12F\psi$ on the minimal left ideal $\Cl^{+}(1,3)P$, $P = \tfrac12(1 + \gamma_{3}\gamma_{0})$, which is $I_{4}$-stable and so, with the unit $I_{4}$ of Definition \claimref{obj.field-theory.single-algebra-field}, a two-dimensional complex space (one Weyl spinor). Define the spin weight $s = 4\,\mathrm{Re}\,\mathrm{tr}\,M(F)^{2}/X$. Then:
 \begin{enumerate}
-\item $s = 0$ for a scalar, $-1$ for the Weyl ideal, $-2$ for the whole even algebra (a Dirac field of Proposition \claimref{field-theory.second-quantisation}, two ideals of one chirality with $i = I_{4}$) and $-4$ for a vector; on the Weyl ideal the $I_{4}$-complex trace of the squared spin coupling $E = 2M(F)$ is $2F^{2} \in \mathrm{span}\{1, I_{4}\}$, whose $I_{4}$ part is the parity-odd $F \wedge F$.
+\item $s = 0$ for a scalar, $-1$ for the Weyl ideal, $-2$ for the whole even algebra (a Dirac field of Proposition \claimref{field-theory.second-quantisation}, two ideals of one chirality with the unit $I_{4}$) and $-4$ for a vector; on the Weyl ideal the $I_{4}$-complex trace of the squared spin coupling $E = 2M(F)$ is $2F^{2} \in \mathrm{span}\{1, I_{4}\}$, whose $I_{4}$ part is the parity-odd $F \wedge F$.
 \item With the heat-kernel coefficient $\tfrac{1}{12}\Omega_{\mu\nu}\Omega^{\mu\nu} + \tfrac12E^{2}$ of a Laplace-type operator on a flat background (imported, Fact \claimref{synthesis.imported-heat-kernel-coefficients-and-background-field-gauge}; $a_{2}$ in DeWitt's numbering, $a_{4}$ in Vassilevich's), a field with $n$ components, statistics $\sigma$ and determinant weight $w$ contributes $b = \tfrac13\sigma w(n + 6s)$ per unit index: $\tfrac13$ for a complex scalar, $\tfrac23$ for a Weyl spinor, $\tfrac43$ for a Dirac spinor, $-\tfrac{10}{3}$ for the gauge vector in the background Feynman gauge and $-\tfrac13$ for its Faddeev-Popov ghosts, so $-\tfrac{11}{3}$ for the gauge field, split as $+\tfrac13$ orbital and $-4$ spin.
 \item For the derived algebra $\su(2) \oplus \su(3) \oplus \uu(1)$ of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} acting on $\C^{2}$ and on $\Lambda^{k}\C^{3}$: $T = \tfrac12$ on $\C^{2}$, $\C^{3}$ and $\Lambda^{2}\C^{3}$, $T = 0$ on $\Lambda^{0}$ and $\Lambda^{3}$, and $C_{2} = 2$, $3$ for the adjoints; for $\su(2)$ as the bivectors of $\Cl(3,0)$ acting on the even algebra (a doublet with the central unit $e_{1}e_{2}e_{3}$) and on the bivectors, $C_{2}/T = 4$.
 \item Under (S), with $n_{g}$ copies of the content of Theorem \claimref{standard-model.hypercharge-global-form-pair-counting-consistency} and $n_{h}$ complex doublets of hypercharge $\tfrac12$, both counts inputs, in the normalisation $a_{1} = \tfrac35\alpha_{Y}^{-1}$ of Fact \claimref{standard-model.imported-one-loop-running-trace-ratio},

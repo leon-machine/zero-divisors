@@ -7,6 +7,8 @@ functions:
     kind: complete
     clauses: ["(c) the odd towers are off the reversal orbit of (1,3) and inequivalent to it"]
     omits: "inequivalence as soldered algebras is reduced to non-isometry of the generating subspaces (dimension 3 or 5 against 4); the soldered-invariant theorem is the cited premise; (b) and the conclusion that no rule follows are not computed"
+untouched_premises:
+  synthesis.common-ceiling-coupling-premise: "(c) cites its scope (the reversal orbit only); nothing to compute"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

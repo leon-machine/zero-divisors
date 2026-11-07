@@ -30,7 +30,7 @@ derivations:
   - transport.even-subalgebra-one-dimensional-extension@4
   - transport.existence-classification-type-c@4
   - transport.matrix-units-peirce-isomorphism@3
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - transport.rule-2-ideal-fusion-sharp-form@4
   - transport.sign@3
   proof: proof-main.tex

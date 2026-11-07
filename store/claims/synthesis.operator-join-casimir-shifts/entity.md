@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-casimir-shifts
 kind: claim
-version: 2
+version: 3
 title: 'Casimir shifts of the operator join'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, normalisation hypothesis stated in (iii) at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
@@ -41,6 +45,10 @@ lineage:
   - synthesis.operator-join-ordering-constants
   - mass.casimir-form-join
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Decision item B6 (routine): (iii) now states the normalisation hypothesis in full (C_2(I_Lambda-perp) of mass.casimir-form-join in the scalar-module normalisation of the imported classification, with no shift) and says it is not proved and not part of the import; the imported Fact no longer asserts it. A hypothesis made explicit; mathematics unchanged.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -54,7 +62,7 @@ Quantise a single conformal spinor ($N = 1$) with the palatial ordering of Propo
 \begin{enumerate}
 \item[(i)] in the oscillator algebra, $\hat{m}^{2} = \tfrac{\Lambda}{12}(\hat{h}^{2} - 4\hbar^{2})$, $\hat{C}_{\mathrm{conf}} = \tfrac34(\hat{h}^{2} - 4\hbar^{2})$ and $\hat{C}_{\mathrm{dS}} = \tfrac12(\hat{h}^{2} - 4\hbar^{2})$, whose classical values are $\tfrac{\Lambda}{12}h^{2}$, $\tfrac34 h^{2}$ and $\tfrac12 h^{2}$;
 \item[(ii)] on functions of homogeneity $n$, where $\hat{h} = -(n + 2)\hbar = 2s\hbar$ (Fact \claimref{mass.imported-palatial-quadratics-homogeneity-charge}), $\hat{m}^{2} = H^{2}(s^{2} - 1)\hbar^{2}$, $\hat{C}_{\mathrm{conf}} = 3(s^{2} - 1)\hbar^{2}$ and $\hat{C}_{\mathrm{dS}} = 2(s^{2} - 1)\hbar^{2}$: in all three the ordering replaces $s^{2}$ by $s^{2} - 1$;
-\item[(iii)] on the scalar module, $n = -2$, $s = 0$, the Penrose transform's conformally invariant scalar (Fact \claimref{field-theory.imported-standard-field-theory}), $\hat{C}_{\mathrm{dS}} = -2\hbar^{2}$. If the moment normalisation of the de Sitter Casimir is the scalar-module one of Fact \claimref{mass.imported-unitary-representations-de-sitter-group} (acting as $-m^{2}/H^{2}$), this is $m^{2} = 2H^{2}\hbar^{2}$, $\Delta \in \{1, 2\}$, the conformally coupled value $-w(w+3)H^{2}$ at $w = -1$ of Theorem \claimref{mass.mass-weight-dictionary} and Corollary \claimref{mass.weight-polynomial-two-series}(2), whereas the grip is $\hat{m}^{2} = -H^{2}\hbar^{2}$ and the classical de Sitter Casimir gives $0$.
+\item[(iii)] on the scalar module, $n = -2$, $s = 0$, the Penrose transform's conformally invariant scalar (Fact \claimref{field-theory.imported-standard-field-theory}), $\hat{C}_{\mathrm{dS}} = -2\hbar^{2}$. Under the \emph{normalisation hypothesis}, stated here and not proved (it is not part of the imported classification), that the moment normalisation of the de Sitter Casimir $C_{2}(I_{\Lambda}^{\perp})$ of Proposition \claimref{mass.casimir-form-join} is the scalar-module one of Fact \claimref{mass.imported-unitary-representations-de-sitter-group} (acting as $-m^{2}/H^{2}$), with no shift between the two, this is $m^{2} = 2H^{2}\hbar^{2}$, $\Delta \in \{1, 2\}$, the conformally coupled value $-w(w+3)H^{2}$ at $w = -1$ of Theorem \claimref{mass.mass-weight-dictionary} and Corollary \claimref{mass.weight-polynomial-two-series}(2), whereas the grip is $\hat{m}^{2} = -H^{2}\hbar^{2}$ and the classical de Sitter Casimir gives $0$.
 \end{enumerate}
 For any number of constituents the de Sitter reading $-H^{2}\hat{C}_{\mathrm{dS}}$ and the grip differ by $H^{2}\hat{C}_{\mathrm{conf}}$; under the same normalisation hypothesis, the grip is the de Sitter mass only on states with $\hat{C}_{\mathrm{conf}} = 0$, which for one spinor means $|s| = 1$.
 

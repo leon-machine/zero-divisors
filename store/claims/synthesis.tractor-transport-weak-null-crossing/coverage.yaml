@@ -1,4 +1,11 @@
 functions:
+  check_gtg_tractor_transport_in_cl24:
+    kind: sampled
+    clauses:
+    - '"Write the tractor transport along gamma ... as x'' = A x with A = E_{gamma''} + N_{P(gamma'',.)}" (derived from Omega_T in Cl(2,4))'
+    - '(1) the gauge identity behind the removal, with the Riccati equation f'' = nu (S - f^2)'
+    - '(4) Einstein sides: P = (Lambda/6) id'
+    omits: 'two rational tangents with null conormals, two values of (S, f), test tractors; the analysis (Volterra, Wronskian, integrability) is the proof''s'
   check_general_removal:
     kind: sampled
     clauses: ["(1) with f' = nu (S - f^2): the gauged coefficient is E_X + N_R + f [E_X, N_n]", "(1) N_n^2 = 0, N_n E_X N_n = nu N_n, N_n N_R N_n = 0, and A preserves the tractor metric"]

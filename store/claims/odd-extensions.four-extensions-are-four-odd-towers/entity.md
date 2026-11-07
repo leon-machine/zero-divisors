@@ -26,7 +26,7 @@ derivations:
   - odd-extensions.belongs-tower@5
   - odd-extensions.imported-representatives-dimension-nearest-four-types@4
   - odd-extensions.imported-towers-clock@4
-  - odd-extensions.translation-bivectors-frozen-point@3
+  - odd-extensions.translation-bivectors-frozen-point@4
   - odd-extensions.four-extensions-oriented-pair@5
   - odd-extensions.imported-conformal-completion@5
   proof: proof-main.tex

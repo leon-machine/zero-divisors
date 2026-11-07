@@ -1,7 +1,7 @@
 ---
 id: synthesis.modular-period-on-values-is-the-dual-plane-turn
 kind: claim
-version: 4
+version: 5
 title: 'The modular period on values is the dual-plane turn'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
@@ -34,7 +38,7 @@ derivations:
   - field-theory.boost-modes@3
   - hawking.modular-structure-completed-pair@3
   - synthesis.local-boost-temperature-is-local-regularity@4
-  - synthesis.boost-evolution-on-generators-is-one-unitary-group@4
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group@5
   - singularity.euclidean-rotor-where-it-lies@5
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   proof: proof-main.tex
@@ -52,6 +56,10 @@ lineage:
   - field-theory.imported-standard-field-theory
   - synthesis.boost-evolution-on-generators-is-one-unitary-group
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,7 +100,7 @@ Work in $\Cl(1,3)$ with the store's signature, $I_{4} = e_{0}e_{1}e_{2}e_{3}$, a
 \end{enumerate}
 
 ## technical
-With the field theory's unit $i = I_{4}$, which commutes with every even element, a boost rotor $\exp(-\lambda B/2)$ continued to imaginary rapidity $I_{4}\theta$ is $\exp(-\theta I_{4}B/2)$, and $I_{4}B = B^{*}$ is the unit spacelike plane dual to $B$. So on values the continuation is a real rotation of the dual plane: one full modular period $2\pi$ is the rotation by $2\pi$, which is $-1$ on spinor values and $+1$ on bivector and scalar values, $(-1)^{2s}$ in general, and half a period is the turn by $\pi$ of the dual plane, the rotation in the Bisognano-Wichmann form of the modular conjugation. On points the continuation is no real rotor, as stored for the Euclidean rotor at the bifurcation sphere; on vector arguments the half period is the dual turn composed with the total inversion.
+With the field theory's unit $I_{4}$, which commutes with every even element, a boost rotor $\exp(-\lambda B/2)$ continued to imaginary rapidity $I_{4}\theta$ is $\exp(-\theta I_{4}B/2)$, and $I_{4}B = B^{*}$ is the unit spacelike plane dual to $B$. So on values the continuation is a real rotation of the dual plane: one full modular period $2\pi$ is the rotation by $2\pi$, which is $-1$ on spinor values and $+1$ on bivector and scalar values, $(-1)^{2s}$ in general, and half a period is the turn by $\pi$ of the dual plane, the rotation in the Bisognano-Wichmann form of the modular conjugation. On points the continuation is no real rotor, as stored for the Euclidean rotor at the bifurcation sphere; on vector arguments the half period is the dual turn composed with the total inversion.
 
 The KMS condition at period $2\pi$ is satisfied by a fermionic and a bosonic mode alike, so the stored local premise (R$_{\mathrm{loc}}$), which is stated on CAR windows, takes the statistics as given. Modular covariance of the wedge algebras with the boost acting on values would fix them: the imported theorem of Guido and Longo gives that the statistics grading is the rotation by $2\pi$, which is $(-1)^{2s}$ by representation theory and which the dual-plane form re-expresses as the continued boost over one modular period. The field theory's spin-statistics input could be traded for that premise, which the store does not adopt; it is not derived from the stored premises. For the attached free fields, locality with a positive norm fixes the statistics directly (\claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}).
 
@@ -102,4 +110,4 @@ In this framework the imaginary unit of quantum theory is the four-dimensional v
 The thermal condition alone does not care whether a particle is a fermion or a boson. What links spin to statistics is the stronger assumption that the vacuum's thermal flow in every wedge is the geometric boost, acting on the fields' values; a known theorem then gives the usual link. So the link could be traded for that assumption, but the framework's present assumptions do not supply it; for free fields a separate argument from locality does.
 
 ## one-liner
-With $i = I_{4}$ the continued wedge boost on even values is the real rotor of the dual plane $I_{4}B$, so one modular period is $(-1)^{2s}$ and half a period the turn by $\pi$; KMS at $2\pi$ holds for CAR and CCR modes alike, so (R$_{\mathrm{loc}}$) does not fix statistics; they follow under modular covariance (not a store premise) via an imported theorem, the dual-plane form only re-expressing the representation-theoretic $(-1)^{2s}$.
+With the unit $I_{4}$ the continued wedge boost on even values is the real rotor of the dual plane $I_{4}B$, so one modular period is $(-1)^{2s}$ and half a period the turn by $\pi$; KMS at $2\pi$ holds for CAR and CCR modes alike, so (R$_{\mathrm{loc}}$) does not fix statistics; they follow under modular covariance (not a store premise) via an imported theorem, the dual-plane form only re-expressing the representation-theoretic $(-1)^{2s}$.

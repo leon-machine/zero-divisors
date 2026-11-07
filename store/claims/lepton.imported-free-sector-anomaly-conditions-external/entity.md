@@ -1,7 +1,7 @@
 ---
 id: lepton.imported-free-sector-anomaly-conditions-external
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the free sector and the anomaly conditions (external ingredients)'
 status: imported
 region: lepton
@@ -17,11 +17,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-lepton, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate reference key merged at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: 'S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University
     Press (1996).'
-  key: WeinbergQFT1
+  key: WeinbergQFT2
   locator: \S 22.4
 locators:
   paper: T12-lepton
@@ -29,6 +33,10 @@ locators:
   label: ''
   line: 196
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item D12 (routine): the reference key WeinbergQFT1 (a duplicate of WeinbergQFT2, both Weinberg QFT Vol. 2, 1996) is merged into WeinbergQFT2.'
   typing:
     by: ai-typing-pass
     note: External-ingredient entry with no derivation; nothing to edge.

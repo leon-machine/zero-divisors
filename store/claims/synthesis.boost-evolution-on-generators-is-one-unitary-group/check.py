@@ -220,7 +220,7 @@ def check_real_time_anticommutators_stay_bounded():
 
 
 def check_one_group_comparison():
-    premise("scrambling.spreading-law-chaos-bound-saturated")
+    # the chaos-bound estimate (scrambling.spreading-law-chaos-bound-saturated) is compared with, not used
     premise("hawking.i-state-continuum")
     premise("synthesis.positive-null-energy-gives-r-premises")
     # beta stored in units of pi: (N+) gives rapidity period 2 pi, so beta = 2 pi / kappa

@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: forms as multivector fields, the curvature contractions and densities as maps of the curvature operator'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -46,6 +50,8 @@ checked_by:
   ref: check.py::check_stiffness_interpolates_conformal_gravity_and_the_frozen_functional
 - kind: check
   ref: check.py::check_frame_equation_is_the_frozen_slot_equation
+- kind: check
+  ref: check.py::check_gtg_readings_of_the_curvature_operator
 - kind: proof
   derivation: main
 lineage:
@@ -55,6 +61,10 @@ lineage:
   - synthesis.stelle-west-norm-is-no-local-output
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: forms as multivector fields (one- and two-forms as linear maps of physical vectors and bivectors, four-form densities as the alternating product on the physical frame); the curvature of Omega as the store-sign operator calR(A ^ B) without pair symmetry when Omega has torsion, its Ricci map d_a . calR(a ^ b) (equal to the index reading sum_a eta^aa R_adab also with torsion), Schouten, Einstein and Weyl maps, traces d_a . M(a), the slot derivative as the map D with dL = d_a . D(dS(a)), the Weyl square (1/2) <W(a ^ b) W(d_b ^ d_a)> and the Euler density from the dictionary; the index expressions of the formal level are their labelled readings. The arguments of (i)-(v) were already in Cl(2,4) and are unchanged. Original proof kept as orig-proof-main.tex. New exact check check_gtg_readings_of_the_curvature_operator (Ricci map and Schouten map against the index readings for a torsion-free and a torsionful curvature, scalar, Weyl square and Euler density in GA against the index values, Q2 by GA traces, L1 at the Schouten slot = Weyl square and at the frozen slot = E/4 - (Lambda/3)(calR - 2 Lambda), and the slot derivative 2(calG + Lambda id) as a map, at two values of rho). outside_ga withdrawn: no stand-in remains in the proof; the formal level''s index expressions are labelled readings.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,9 +101,6 @@ extraction:
     equation, by the frame-slot symmetry of the Lorentz block. Transport-convenient: the chart, X and I are
     the series' objects; transport does not choose mu. Quadratic gravity as fourth order (Stelle 1977, cited
     from memory) is mentioned only in the reading.
-outside_ga:
-  kind: other
-  why: 'The action and its elimination are written in forms and frame components (W_abcd W^abcd, R_abcd R^abcd, eta^{aa} R_{adab}, two-forms F = (1/2) F_ab e^a ^ e^b); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map, but the elimination is computed on the components.'
 ---
 
 ## formal

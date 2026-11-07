@@ -1,7 +1,7 @@
 ---
 id: one-relation.measure-indifference-borns-rule-located
 kind: claim
-version: 2
+version: 3
 title: 'The measure from indifference: Born''s rule located'
 status: proved
 region: one-relation
@@ -17,12 +17,17 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, uses edge to the imported envariance Fact at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
   uses:
   - one-relation.dirac-current-conserved-density@3
   - one-relation.imported-indifference-instrument@4
+  - one-relation.imported-envariance-born-rule@1
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -41,6 +46,10 @@ locators:
   label: prop:born
   line: 817
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Decision item B5 (routine): the fine-graining and continuity steps, Zurek''s envariance argument imported with its critique, now pin the new Fact one-relation.imported-envariance-born-rule (uses edge added, cited in the formal and the proof); statement unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -58,7 +67,7 @@ extraction:
 ---
 
 ## formal
-The unique conserved density among constant sesquilinear ones is the Dirac density of Lemma \claimref{one-relation.dirac-current-conserved-density}, the $\gamma_{0}$ component of the geometric current $J = \psi\gamma_{0}\tilde{\psi}$: positivity, conservation and uniqueness in that class are proved. The current is fixed up to scale; the \emph{density} is its component along a timelike $\gamma_{0}$, which is the laboratory's rest frame, declared unsourced in Proposition \claimref{one-relation.schr-odinger-slow-shadow}(3): the located Born density is frame-relative, and the paper says so here rather than leaving it implicit in the lemma. What remains of Born's rule is the identification of this density with occupation weight, and the framework closes part of the remaining gap with its founding principle, the indifference premise (Fact \claimref{one-relation.imported-indifference-instrument}, a structural premise of the series and not a theorem): for a superposition of equal-norm, flag-degenerate components, any unequal weight assignment would instantiate a preference nothing caused, so indifference forces equality; rational weights follow by fine-graining into equal-norm constituents permuted by Witt rotations that are exact symmetries of the frozen vacuum; and continuity completes the squared-norm measure as the only assignment consistent with vacuum indifference. This is the envariance argument \cite{Zurek2005} transplanted into the framework's vocabulary, and it inherits that argument's standing critique: the fine-graining step presupposes that weights compose additively, which is a fragment of the probabilistic reading it derives. That presupposition is hereby isolated as the residual postulate, smaller than Born and not zero: \emph{that weights exist and add}. Structural-conditional level, with the refutation condition stated: exhibit a weight assignment respecting vacuum indifference that is not the squared norm, and the reduction fails.
+The unique conserved density among constant sesquilinear ones is the Dirac density of Lemma \claimref{one-relation.dirac-current-conserved-density}, the $\gamma_{0}$ component of the geometric current $J = \psi\gamma_{0}\tilde{\psi}$: positivity, conservation and uniqueness in that class are proved. The current is fixed up to scale; the \emph{density} is its component along a timelike $\gamma_{0}$, which is the laboratory's rest frame, declared unsourced in Proposition \claimref{one-relation.schr-odinger-slow-shadow}(3): the located Born density is frame-relative, and the paper says so here rather than leaving it implicit in the lemma. What remains of Born's rule is the identification of this density with occupation weight, and the framework closes part of the remaining gap with its founding principle, the indifference premise (Fact \claimref{one-relation.imported-indifference-instrument}, a structural premise of the series and not a theorem): for a superposition of equal-norm, flag-degenerate components, any unequal weight assignment would instantiate a preference nothing caused, so indifference forces equality; rational weights follow by fine-graining into equal-norm constituents permuted by Witt rotations that are exact symmetries of the frozen vacuum; and continuity completes the squared-norm measure as the only assignment consistent with vacuum indifference. This is the envariance argument (Fact \claimref{one-relation.imported-envariance-born-rule}, \cite{Zurek2005}) transplanted into the framework's vocabulary, and it inherits that argument's standing critique: the fine-graining step presupposes that weights compose additively, which is a fragment of the probabilistic reading it derives. That presupposition is hereby isolated as the residual postulate, smaller than Born and not zero: \emph{that weights exist and add}. Structural-conditional level, with the refutation condition stated: exhibit a weight assignment respecting vacuum indifference that is not the squared norm, and the reduction fails.
 
 ## technical
 The unique conserved density among constant sesquilinear ones is the Dirac density, the $\gamma_{0}$ component of the geometric current $J = \psi\gamma_{0}\tilde{\psi}$; it is positive, conserved and unique in that class, and frame-relative, since $\gamma_{0}$ is the laboratory's unsourced rest frame. Identifying it with occupation weight uses the indifference premise: equal-norm, flag-degenerate components related by exact vacuum symmetries must receive equal weight; fine-graining then gives rational weights and continuity the squared-norm measure.

@@ -32,7 +32,7 @@ derivations:
   - hawking.gibbs-states-are-kms-conversely-finite@4
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   - hawking.modular-structure-completed-pair@3
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   proof: proof-main.tex
 checked_by:
 - kind: check

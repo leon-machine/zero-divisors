@@ -1,7 +1,7 @@
 ---
 id: singularity.bosonisation-bridge-s-wave-sector
 kind: claim
-version: 7
+version: 8
 title: The bosonisation bridge, s-wave sector
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the weights kappa k labelled as version 2 of premise (Q); the Planck value holds at both offsets'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: thm:bosonisation
   line: 2014
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version labels (DECISIONS G7; Leon''s 23 October ''note only'' decision; R01 item 2): Premise (Q) singularity.q-joint-quasi-freeness-s-wave is at version 3 with weights kappa(k + 1/2), while this entity states version 2''s weights kappa k (sea at a site); the displays now say ''version 2 of premise (Q)'' where they use kappa k. Statement content, edges and pins unchanged. The Planck value m/(e^{beta kappa m} - 1) holds at both offsets: with F(x) = (e^x + 1)^{-1}, F(x + m)(1 - F(x)) = (F(x) - F(x + m))/(e^m - 1), and the sum over x in Z + c telescopes to m for every offset c (checked by hand here; the reader''s planck_offset.py checked detailed balance and window sums exactly at both).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -90,8 +98,8 @@ extraction:
 Let $\{\psi_k, \psi^\dagger_k\}_{k \in \mathbb{Z}}$ be the boundary modes, as fermion operators on the filled-sea Fock space (the infinite filled-sea array whose algebraic model is the completed tower limit of \cite[Thm.~5.6]{ButlerT3}, cited for the structure; its provenance here is the s-wave aggregation declared above, not a tower, the mod-8 clock having stopped after one ascent), and define the currents $a_m := \sum_k :\psi^\dagger_k\,\psi_{k+m}:$ with $:\;:$ normal ordering at the sea level; with the sea filled below the level, $a_m$ annihilates the sea for $m > 0$ and $a_{-m} = a_m^{\dagger}$ creates particle-hole pairs. (The opposite index convention flips the sign of the central term; the verification script fixes the convention by computation.) Then:
 \begin{enumerate}
 \item (Current algebra.) $[a_m, a_n] = m\,\delta_{m+n,0}\,\id$ on the infinite array; on a finite window the commutator equals $m\,\delta_{m+n,0}\,\id$ plus an \emph{exactly identified} edge operator ($B_m - T_m - m$ in the proof's notation), supported on the bottom and top $m$ sites and vanishing on all bulk states: the number-conserving bilinears satisfy the canonical commutation relations of a free boson. A boson is a pair of the pair.
-\item (KMS restriction.) Each bilinear $\psi^\dagger_k\psi_{k+m}$ carries a definite boost weight, fixed by the difference $\omega_{k+m} - \omega_k$ of its two modes' weights. Under (Q)'s weight clause, $\omega_k = \kappa k$, that difference is $\kappa m$ for every $k$, so each current $a_m$ is itself a weight vector and the current subalgebra is globally invariant under the modular flow of Theorem \claimref{singularity.modular-structure-completed-pair}; for weights that are not affine in $k$ the summands of $a_m$ rotate at different rates and the span of the currents need not be invariant, so this invariance uses (Q). Under (Q) the joint state is KMS for that flow, and a KMS state restricted to a flow-invariant subalgebra is KMS at the same temperature for the restricted flow. Without (Q) no joint KMS state is available: (R) is imposed on the marginals alone, and Theorem \claimref{singularity.exact-equilibrium-over-determines-boundary-modes} is the reason its joint form is rejected elsewhere in the chain.
-\item (The Planck factor.) Under (Q), with the marginal occupancies $n_k = (e^{\beta\omega_k} + 1)^{-1} = (e^{\beta\kappa k} + 1)^{-1}$ at the premise's linear weights, the current occupancy is, exactly,
+\item (KMS restriction.) Each bilinear $\psi^\dagger_k\psi_{k+m}$ carries a definite boost weight, fixed by the difference $\omega_{k+m} - \omega_k$ of its two modes' weights. Under (Q)'s weight clause, affine in $k$ ($\omega_k = \kappa k$ at version 2, $\kappa(k + \tfrac12)$ at version 3; the displays below use version 2's), that difference is $\kappa m$ for every $k$, so each current $a_m$ is itself a weight vector and the current subalgebra is globally invariant under the modular flow of Theorem \claimref{singularity.modular-structure-completed-pair}; for weights that are not affine in $k$ the summands of $a_m$ rotate at different rates and the span of the currents need not be invariant, so this invariance uses (Q). Under (Q) the joint state is KMS for that flow, and a KMS state restricted to a flow-invariant subalgebra is KMS at the same temperature for the restricted flow. Without (Q) no joint KMS state is available: (R) is imposed on the marginals alone, and Theorem \claimref{singularity.exact-equilibrium-over-determines-boundary-modes} is the reason its joint form is rejected elsewhere in the chain.
+\item (The Planck factor.) Under (Q), with the marginal occupancies $n_k = (e^{\beta\omega_k} + 1)^{-1} = (e^{\beta\kappa k} + 1)^{-1}$ at the premise's linear weights (version 2's; at version 3's offset the sum telescopes to the same value), the current occupancy is, exactly,
 \[
 \langle a_{-m} a_m \rangle \;=\; \sum_{k \in \mathbb{Z}} n_{k+m}\,(1 - n_k) \;=\; \frac{m}{e^{\beta\kappa m} - 1} \qquad (m > 0) ,
 \]
@@ -100,9 +108,9 @@ with no vacuum piece in this convention ($a_m$ annihilates the sea): Bose-Einste
 The single assembly-level ingredient in the section is the charge-zero Fock isomorphism (the charge-zero sector of the fermionic Fock space is canonically the bosonic Fock space, with fermions recovered as vertex operators), cited to \cite{PressleySegal1986} and used only for the completeness statement that the two descriptions are one algebra; parts (1)-(3) are proved outright.
 
 ## technical
-Take the boundary modes $\psi_k, \psi_k^\dagger$, $k \in \Z$, as fermion operators on the filled-sea Fock space, and the normal-ordered currents $a_m = \sum_k :\psi_k^\dagger \psi_{k+m}:$, so that $a_m$ annihilates the sea for $m > 0$ and $a_{-m} = a_m^\dagger$. On the infinite array $[a_m, a_n] = m\,\delta_{m+n,0}\,\id$, the free-boson relations; on a finite window the commutator differs from this by an exactly identified edge operator supported on the bottom and top $m$ sites, which vanishes on all bulk states. Each bilinear has definite boost weight, the difference of its two modes' weights; under the weight clause of Premise (Q), $\omega_k = \kappa k$, that difference depends only on $m$, so each current is a weight vector and the current subalgebra is globally invariant under the modular flow (for weights not affine in $k$ it need not be).
+Take the boundary modes $\psi_k, \psi_k^\dagger$, $k \in \Z$, as fermion operators on the filled-sea Fock space, and the normal-ordered currents $a_m = \sum_k :\psi_k^\dagger \psi_{k+m}:$, so that $a_m$ annihilates the sea for $m > 0$ and $a_{-m} = a_m^\dagger$. On the infinite array $[a_m, a_n] = m\,\delta_{m+n,0}\,\id$, the free-boson relations; on a finite window the commutator differs from this by an exactly identified edge operator supported on the bottom and top $m$ sites, which vanishes on all bulk states. Each bilinear has definite boost weight, the difference of its two modes' weights; under the weight clause of Premise (Q), affine in $k$ ($\omega_k = \kappa k$ at version 2, $\kappa(k + \tfrac12)$ at version 3), that difference depends only on $m$, so each current is a weight vector and the current subalgebra is globally invariant under the modular flow (for weights not affine in $k$ it need not be).
 
-Under Premise (Q) the joint state is KMS for that flow, so its restriction to the currents is KMS at the same temperature, and the marginal occupancies $n_k = (e^{\beta\kappa k} + 1)^{-1}$ give exactly $\langle a_{-m} a_m \rangle = \sum_k n_{k+m}(1 - n_k) = m/(e^{\beta\kappa m} - 1)$ for $m > 0$: Bose-Einstein occupancy at $\TH$ for the s-wave sector. Without (Q) no joint KMS state is available, and for a general state of the class connected correlators enter and no exact spectrum is claimed.
+Under Premise (Q) the joint state is KMS for that flow, so its restriction to the currents is KMS at the same temperature, and the marginal occupancies $n_k = (e^{\beta\kappa k} + 1)^{-1}$ (version 2's weights; the value is the same at version 3's) give exactly $\langle a_{-m} a_m \rangle = \sum_k n_{k+m}(1 - n_k) = m/(e^{\beta\kappa m} - 1)$ for $m > 0$: Bose-Einstein occupancy at $\TH$ for the s-wave sector. Without (Q) no joint KMS state is available, and for a general state of the class connected correlators enter and no exact spectrum is claimed.
 
 ## lay
 Pairs of the fermion-like boundary modes, one created and one removed, behave exactly like a boson, apart from edge effects on any finite window that are identified precisely. If the boundary modes are assumed to be jointly in the simplest kind of thermal state, these boson-like pairs inherit the same temperature and follow the Bose-Einstein occupation law at the Hawking temperature. This derives the Planck spectrum of bosonic Hawking radiation for the spherically symmetric (s-wave) sector, under that assumption only.

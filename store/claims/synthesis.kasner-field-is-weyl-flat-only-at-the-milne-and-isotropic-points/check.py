@@ -10,6 +10,7 @@ Exact arithmetic only (Fractions); no transcendental number is evaluated.
 from fractions import Fraction as F
 import GA
 from tp_premise import premise
+import gtg
 
 # ---------------------------------------------------------------- Laurent "polynomials" in t, rational exponents
 def lp(c, e):
@@ -260,3 +261,63 @@ def check_weyl_flat_points_in_cosmic_and_conformal_time():
     GA.check("Weyl-flat Kasner points: isotropic point flat bracket, order 2/3 in cosmic time, radical-normal wall in "
              "t' = eta^2/4; Milne point flat with degenerate metric; short route gives exactly these points", ok)
     return ok
+
+
+GTG_POINTS = ((F(2, 7), F(3, 7)), (F(-1, 3), F(2, 3)), (F(1, 2), F(1, 2)), (F(3, 4), F(-1, 8)), (F(1, 3), F(1, 3)),
+              (F(1), F(0)), (F(0), F(0)))
+
+
+def check_gtg_kasner_field_strength_and_weyl_map():
+    """The proof's GTG computation for the synchronous gauge field hb^{-1}(e_t) = e0, hb^{-1}(e_i) = t^{p_i} e_i
+    (derived metric -g_p): Omega solved from the torsion equation is -p_i t^{p_i - 1} B_i on e_{x^i} and 0 on
+    e_t; calR(B_i) = p_i (p_i - 1) t^-2 B_i, calR(e_i ^ e_j) = p_i p_j t^-2 e_i ^ e_j; Ricci calR(e0) =
+    (S - 1) t^-2 e0, calR(e_j) = 0; scalar (S - 1) t^-2; Weyl map W(B_i) = lambda_i B_i and W(I4 B_i) =
+    lambda_i I4 B_i with t^2 lambda_1 = E1/3, t^2 lambda_2 = -E2/3, trace zero; zero exactly at the Weyl-flat
+    points; field strength zero at the Milne points."""
+    premise("synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching")
+    ok = True
+    sq = gtg.S13
+    I4 = gtg.pseudoscalar(sq)
+    for (p1, p2) in GTG_POINTS:
+        p = (p1, p2, 1 - p1 - p2)
+        S = sum(x * x for x in p)
+        tau, given = gtg.kasner_field(p, 2)
+        fld = gtg.Field(given.TH)                          # Omega from the torsion equation alone
+        ok &= fld.torsion_free()
+        B = [None] + [gtg.biv(0, i) for i in (1, 2, 3)]
+        ok &= fld.Omega(0) == {}
+        for i in (1, 2, 3):
+            tp = given.TH[i][i].v                          # t^{p_i}
+            ok &= GA.eq(fld.Omega(i), GA.scal(-p[i - 1] * tp / tau, B[i]))
+            ok &= GA.eq(fld.omega(i), GA.scal(-p[i - 1] / tau, B[i]))
+        Rc = fld.curvature()
+        t2 = 1 / (tau * tau)
+        for i in (1, 2, 3):
+            ok &= GA.eq(Rc[(0, i)], GA.scal(p[i - 1] * (p[i - 1] - 1) * t2, B[i]))
+            for j in range(i + 1, 4):
+                ok &= GA.eq(Rc[(i, j)], GA.scal(p[i - 1] * p[j - 1] * t2, gtg.biv(i, j)))
+        ok &= GA.eq(gtg.ricci(Rc, GA.gen(0)), GA.scal((S - 1) * t2, GA.gen(0)))
+        ok &= all(gtg.ricci(Rc, GA.gen(j)) == {} for j in (1, 2, 3))
+        ok &= gtg.ricci_scalar(Rc) == (S - 1) * t2
+        ok &= GA.eq(gtg.einstein(Rc, GA.gen(0)), GA.scal(F(1, 2) * (S - 1) * t2, GA.gen(0)))
+        W = gtg.weyl_op(Rc)
+        lam = [(x * x - x + F(1, 3) * (1 - S)) * t2 for x in p]
+        for i in (1, 2, 3):
+            ok &= GA.eq(gtg.apply_op(W, B[i]), GA.scal(lam[i - 1], B[i]))
+            dual = GA.mul(I4, B[i], sq)
+            ok &= GA.eq(gtg.apply_op(W, dual), GA.scal(lam[i - 1], dual))
+        ok &= lam[0] == F(1, 3) * E1(p1, p2) * t2 and lam[1] == F(-1, 3) * E2(p1, p2) * t2 and sum(lam) == 0
+        ok &= all(v == {} for v in W.values()) == ((p1, p2) in WEYL_FLAT)
+        if (p1, p2) in WEYL_FLAT and (p1, p2) != (F(1, 3), F(1, 3)):
+            ok &= all(v == {} for v in Rc.values())        # Milne points: zero field strength
+    # the isotropic bracket -t^(-2/3) dt^2 + delta: hb^{-1}(e_t) = t^(-1/3) e0, Omega = 0, zero field strength
+    T = gtg.Jet.var(0, F(8), 4, 2)
+    TH = [[F(0)] * 4 for _ in range(4)]
+    TH[0][0] = T.pw(F(-1, 3), F(1, 2))
+    for i in (1, 2, 3):
+        TH[i][i] = F(1)
+    br = gtg.Field(TH)
+    ok &= all(br.Omega(mu) == {} for mu in range(4)) and all(v == {} for v in br.curvature().values())
+    GA.check("Kasner plane in GTG: torsion-solved Omega, store-sign field strength, Ricci map and Weyl map "
+             "with eigenvalues E1/3, -E2/3 on B_i and I4 B_i", ok)
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_kasner_field_strength_and_weyl_map"; return _tp_rv

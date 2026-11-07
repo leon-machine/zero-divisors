@@ -23,11 +23,11 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.weighted-limit-theorem@5
-  - interior.kasner-form-interior@5
+  - interior.weighted-limit-theorem@6
+  - interior.kasner-form-interior@6
   - sheaf.collision-census@2
   - dark-energy.wall-counterterm@4
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.boosts-generate-exactly-levi-factor@5
   proof: proof-main.tex
 checked_by:
 - kind: check

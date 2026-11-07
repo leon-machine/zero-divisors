@@ -32,7 +32,7 @@ derivations:
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - synthesis.rung-field-on-the-lift-locus@3
   - standard-model.one-vev-vector-relations-breaking-pattern@7
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.imported-tower-commuting-copies-fock-module@5
   - synthesis.rung-field-charged-scalar-sum-rule@2
   - synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits@1

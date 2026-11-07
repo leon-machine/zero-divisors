@@ -1,7 +1,7 @@
 ---
 id: three-routes.base-unipotents-their-action-candidates
 kind: claim
-version: 4
+version: 5
 title: The base unipotents, and their action on candidates
 status: proved
 region: three-routes
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.candidates-base-unipotents
@@ -37,6 +41,10 @@ locators:
   label: lem:unipotents
   line: 180
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item E6 (routine; no retirement): equivalent_to sheaf.base-unipotents-wall@3 added. The same result as the sheaf entity, which is kept as the home.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -53,6 +61,8 @@ extraction:
     date: 2026-10-21
     cited:
     - three-routes.imported-boundary-gram-ladder
+equivalent_to:
+- sheaf.base-unipotents-wall@3
 ---
 
 ## formal

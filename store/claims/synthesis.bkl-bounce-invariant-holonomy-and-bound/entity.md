@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - interior.weighted-limit-theorem@5
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.weighted-limit-theorem@6
+  - interior.boosts-generate-exactly-levi-factor@5
   - interior.transport-level-convergence-along-tangential-curves@4
   proof: proof-main.tex
 checked_by:

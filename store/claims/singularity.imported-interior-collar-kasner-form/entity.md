@@ -26,8 +26,8 @@ derivations:
   uses:
   - interior.exact-parallelism-convergence-rate@5
   - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
-  - interior.weighted-limit-theorem@5
+  - interior.kasner-form-interior@6
+  - interior.weighted-limit-theorem@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

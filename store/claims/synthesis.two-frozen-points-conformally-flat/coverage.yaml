@@ -11,6 +11,10 @@ functions:
     kind: sampled
     clauses: ["(iii) dim SO(2,4) = 15, stabiliser of one non-null point has dimension 10, of an equal-norm pair spanning a nondegenerate plane has dimension 6", "(iii) pairs of fixed norm form a ten-dimensional space with nine-dimensional orbits, so exactly one invariant"]
     omits: "exact linear algebra on so(2,4) for the single pair (I_A, I_B); the dimension 10 of the space of pairs is the arithmetic 2 x 5, and genericity of this pair among nondegenerate-plane pairs is not argued; that no gauge transformation changes <I_A, I_B> and the reach of the no-fluctuation proposition are not computed"
+  check_gtg_parallel_tractors_flat_strength_and_einstein_scale:
+    kind: sampled
+    clauses: ["(i) parallel tractors of the gauge field -ninf ^ a, constant norm, flat connection", "(i) the scale sigma^-2 eta is Einstein with Lambda = 3 Q(I)", "(iii) stabiliser dimensions as bivectors of Cl(2,4)"]
+    omits: "four triples (s, m, r) at three points each; the Einstein property only where sigma != 0 at those points; (iv) is not computed"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

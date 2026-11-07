@@ -29,7 +29,7 @@ derivations:
   - synthesis.georgi-jarlskog-square-of-majorana-element@3
   - standard-model.automorphisms-preserve-slot-pair-split-are@6
   - standard-model.generation-ten-under-pati-salam@7
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
   - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@3
   proof: proof-main.tex

@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: field strength of the SdS gauge field in the PG chart, sectional curvature as <calR(B) B^-1>, surface gravity as (xi.D)xi; G6 applied; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -43,11 +47,23 @@ checked_by:
   ref: check.py::check_entropy_change_without_flux
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_sds_field_strength_on_radial_generators
+- kind: check
+  ref: check.py::check_gtg_horizon_cross_section_surface_gravity_and_value
 lineage:
   motivated_by:
   - synthesis.euler-term-horizon-entropy-shift
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item G6 (DECISIONS.md, Leon 7 November): proof (i) evaluates on a cross-section {t = t_0, r = r_b} of the horizon locus in the Painleve-Gullstrand chart (both null second fundamental forms vanish on the Killing horizon) in place of the bifurcation sphere, as the formal level and the dictionary''s bifurcation rule have it. Wording in the proof; the value A/4 - 3 pi/Lambda is unchanged (checked at three rational horizons by check_gtg_horizon_cross_section_surface_gravity_and_value).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG (store signature; the quantities used, K = <calR(B) B^{-1}> of a spacelike plane, K - Lambda/3 and the vanishing of (k ^ B) . calR(k ^ A), are the same in the statement''s signature): SdS in the PG chart, calR(B) = (M/2r^3)(B + 3 sigma B sigma) + (Lambda/3) B, K = 2M/r^3 + Lambda/3 on e_2 ^ e_3, calR(k ^ A) = (Lambda/3 - M/r^3) k ^ A for k radial null and A transverse, so R(k, A, k, B) = R(k, A, B, C) = 0; k_+ = (e_0 + e_1)/(1 - beta), k_- = (e_0 - e_1)/(1 + beta); the transverse frame is D-parallel along both (Omega(hb(e_1)) = -beta'' e_1 e_0 commutes with e_2, e_3). Item G6 applied (maintainer_pass_decisions): proof (i) on a cross-section {t = t_0, r = r_b} of the horizon locus in the PG chart, with xi = hb^{-1}(e_t) null and (xi.D)xi = kappa_b xi there. The Christoffel computation is kept as a labelled reading. Checked exactly: check_gtg_sds_field_strength_on_radial_generators (three points of the static region: Ricci map Lambda a, the transverse eigenvalue, the two vanishing contractions for both signs, sectional curvature unchanged at three tilts, transverse frame parallel, the density -3M/(2 Lambda r^3); de Sitter K = Lambda/3 on two planes) and check_gtg_horizon_cross_section_surface_gravity_and_value (three rational horizons: beta = 1, xi null, (xi.D)xi = (f''(r_b)/2) xi, and 4 r_b^2 s = r_b^2 - 3/Lambda in units of pi). Version kept at 3 (already above the lock in this run). outside_ga narrowed to the component Gauss and Sachs equations.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -77,7 +93,7 @@ extraction:
     note: 'Restated in Gauge Theory Gravity: the Lagrangian is that of a gravitational field on flat spacetime, the Cartan curvature is the Lorentz block of the MacDowell-Mansouri field strength (R(B) - (Lambda/3) B in the store''s sign), de Sitter space is the de Sitter field, and Schwarzschild-de Sitter is the field in the Painleve-Gullstrand gauge beta^2 = 1 - f. Following Leon''s decision on bifurcation surfaces (DICTIONARY), the integral over the bifurcation sphere in (i) is restated on a cross-section of the horizon locus r = r_b in the Painleve-Gullstrand chart (same area, same surface gravity, same value A/4 - 3 pi/Lambda), with the note that the bifurcation surface itself is beyond one chart. Signature (-,+,+,+) kept as declared. Clauses (i) to (iii) and their strength unchanged; proof given a pointer to the dictionary Fact. Fix (referee GR1, 2026-10-23): the Killing field renamed xi (K is the sectional curvature) with kappa_b = f''(r_b)/2 defined; F is minus the Lorentz block of the MacDowell-Mansouri field strength, matching the Fact''s -(R(B) - B/l^2).'
 outside_ga:
   kind: other
-  why: 'The Wald-entropy computation works in the components of the Riemann tensor of the derived metric (F_abcd, h^{ac} h^{bd} R_{abcd}, binormals) in the source''s signature (-,+,+,+), as the Wald formula is stated; the components are the computation.'
+  why: 'The Gauss equation of the cut and the Sachs equation are used in their component form (h^{ac} h^{bd} R_abcd, chi_AB, theta), as the standard Gauss equation and the imported Raychaudhuri Fact state them; the curvature computation itself is in GTG.'
 ---
 
 ## formal

@@ -1,7 +1,7 @@
 ---
 id: scrambling.epoch-modular-period-two-unknowns-become
 kind: claim
-version: 5
+version: 6
 title: The epoch is the modular period; two unknowns become one
 status: proved
 region: scrambling
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the exceptional-set count corrected at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: thm:epoch
   line: 692
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Decision item D7 (routine): the exceptional set''s one ladder pair per point was cited to tower.witt-index-quantum-capacity (which states only the vector capacity min(p,q)); the citation now names T04 Thm 8.7, sheaf.schwarzschild-degeneration-boundary-tame (2), corank exactly one at every point; a text citation, no edge (as the decision asks for this entity).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -77,7 +85,7 @@ The conversion is exact and holds in both directions: with the epoch fixed, the 
 \[
 \nu \;=\; \frac{M/2}{8\pi M} \;=\; \frac{1}{16\pi}
 \]
-in the 1-nat convention ($\nu = 1/(16\pi\ln 2)$ in T5's capacity convention, Remark \ref{rem:nu}; Section \ref{subsec:calibration} shows the capacity convention is the one with physical content and restates the prediction there), and a calibration principle for the exceptional set (Fact \claimref{tower.witt-index-quantum-capacity}; Section \ref{subsec:calibration} says what it must produce) must return that number \emph{or refute the premise (IC)}. Two unknowns have become one equation and one falsifiable identification; the count's remaining condition is a single dimensionless number with a named derivation route and a named failure mode. The scale $\Delta t \sim M$ is thereby derived rather than imported, cohering with Theorem \claimref{scrambling.mode-count}'s own observation that the accrual rate is set by the horizon's temperature: the singularity keeps the horizon's scale.
+in the 1-nat convention ($\nu = 1/(16\pi\ln 2)$ in T5's capacity convention, Remark \ref{rem:nu}; Section \ref{subsec:calibration} shows the capacity convention is the one with physical content and restates the prediction there), and a calibration principle for the exceptional set (which carries one ladder pair per point, its degeneration having corank exactly one there, Theorem \claimref{sheaf.schwarzschild-degeneration-boundary-tame}(2); Section \ref{subsec:calibration} says what it must produce) must return that number \emph{or refute the premise (IC)}. Two unknowns have become one equation and one falsifiable identification; the count's remaining condition is a single dimensionless number with a named derivation route and a named failure mode. The scale $\Delta t \sim M$ is thereby derived rather than imported, cohering with Theorem \claimref{scrambling.mode-count}'s own observation that the accrual rate is set by the horizon's temperature: the singularity keeps the horizon's scale.
 
 ## technical
 Under the intrinsic-clock premise (IC), the counted epoch is the modular period, $\Delta t = \beta = 2\pi/\kappa = 8\pi M$ for Schwarzschild, because every clock of the boundary modes has that period. Substituting into the area-law condition $\nu\,\Delta t = M/2$ gives $\nu = 1/16\pi$ in the 1-nat convention, and $\nu = 1/(16\pi\ln 2)$ in the capacity convention.

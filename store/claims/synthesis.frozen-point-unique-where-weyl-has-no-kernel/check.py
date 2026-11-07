@@ -15,11 +15,16 @@ before use. Ranks are exact (Gaussian elimination over Fractions).
       rho slots; at the type N point it is three-dimensional.
   (3) A tractor with vanishing mu slot on an open set is parallel only if rho = (Lambda/6) sigma
       with sigma constant: I_r = sigma_r I, <I_r, I_r> = sigma_r^2 Lambda/3, at Lambda = 3/7.
+  (4) The proof's GTG route (lib/gtg.py): the tractor field strength of the static Schwarzschild-de Sitter
+      field is -W on the physical planes with no n0 or ninf block; the Weyl map has rank-four kernel map
+      (no kernel vector); a type N Weyl map has its null direction as a kernel vector; the algebraic step
+      on sigma ninf + rho n0.
 """
 from fractions import Fraction as F
 from itertools import product
 import GA  # noqa: F401  (house rule; the computation is tensor algebra over Fractions)
 from tp_premise import premise
+import gtg
 
 ETA = [F(1), F(-1), F(-1), F(-1)]
 
@@ -191,3 +196,77 @@ def check_parallel_tractors_are_multiples_of_I():
     for c in (F(2), F(-3, 5)):
         Ir = [c * x for x in I]
         assert tractor_ip(Ir, Ir) == c * c * lam / 3
+
+
+# ---- the proof's GTG route (lib/gtg.py): tractor field strength of the stored static fields ----
+GTG_POINTS = [(F(3, 7), F(1), F(1, 2), F(3, 5), F(4, 5)), (F(0), F(3), F(1, 2), F(4, 5), F(3, 5))]   # (Lambda, r, sqrt f, sin, cos)
+
+
+ALG_A = GA.add(GA.gen(0), GA.scal(F(2), GA.gen(3)))
+ALG_S = F(2)
+ALG_OFF = (F(1), F(5))
+
+
+def _kernel_rank(Wop, sq):
+    """Rank of v -> (W(e_a ^ e_b) . v)_{a<b} on the four spacetime vectors."""
+    rows = []
+    for a in range(4):
+        for b in range(a + 1, 4):
+            Wab = Wop(gtg.biv(a, b, sq))
+            for k in range(4):
+                rows.append([gtg.bdot(Wab, GA.gen(m), sq).get((k,), F(0)) for m in range(4)])
+    return GA.rank_of_vectors([list(c) for c in zip(*rows)])
+
+
+def check_gtg_tractor_field_strength_is_minus_weyl():
+    """On the Einstein region the tractor gauge field is Omega(a) + u ^ hb^{-1}(a), u = (Lambda/6) n0 - ninf; its
+    field strength (computed by the library from the static Schwarzschild-de Sitter field on exact jets) is
+    F_T(e_mu ^ e_nu) = -W(g_mu ^ g_nu): spacetime bivectors only (no n0 or ninf block); the Weyl map has no
+    kernel vector (rank four); type N has its null direction as a kernel vector; the algebraic step: on
+    sigma ninf + rho n0 the connection's algebraic part is -(u . V) A, zero exactly on the line of I, and
+    Q(c I) = c^2 Lambda/3."""
+    premise("dark-energy.imported-frozen-point-geometry")
+    ok = True
+    sq = gtg.S13
+    sqc = gtg.S24
+    n0, ni = gtg.null_pair(sqc)
+    for lam, r0, w, s0, c0 in GTG_POINTS:
+        M = gtg.mass_for_root(r0, w, lam)
+        ok = ok and M > 0
+        fld = gtg.static_field(r0, s0, c0, gtg.f_static(M, lam), order=2)
+        Rc = fld.curvature()
+        ok = ok and all(GA.eq(gtg.ricci(Rc, GA.gen(m)), GA.scal(lam, GA.gen(m))) for m in range(fld.d))
+        W = gtg.weyl_op(Rc)
+        k = M / r0 ** 3
+        sig_r = GA.mul(GA.gen(1), GA.gen(0), sq)
+        ok = ok and all(GA.eq(W[pl], gtg.op_type_d(k / 2, sig_r)(gtg.biv(*pl))) for pl in W)
+        u = GA.sub(GA.scal(lam / 6, n0), ni)
+        ok = ok and gtg.vdot(u, u, sqc) == -lam / 3
+        for mu in range(fld.d):
+            for nu in range(mu + 1, fld.d):
+                FT = gtg.tractor_strength(fld, mu, nu)
+                gmn = gtg.wedge(fld.hb_inv(GA.gen(mu)), fld.hb_inv(GA.gen(nu)), sq)
+                ok = ok and GA.eq(FT, GA.neg(gtg.apply_op(W, gmn)))
+                ok = ok and all(max(bl) < 4 for bl in FT)
+        ok = ok and _kernel_rank(lambda X: gtg.apply_op(W, X), sq) == 4
+        # algebraic step with mu' = 0: D^T_a (s ninf + p n0) has algebraic part -(u . V) A
+        A = ALG_A
+        for s_, p_ in ((ALG_S, ALG_S * lam / 6), ALG_OFF):
+            V = GA.add(GA.scal(s_, ni), GA.scal(p_, n0))
+            alg = gtg.comm(gtg.wedge(u, A, sqc), V, sqc)
+            ok = ok and GA.eq(alg, GA.scal(-gtg.vdot(u, V, sqc), A))
+            ok = ok and ((alg == {}) == (p_ == lam * s_ / 6))
+        I = gtg.scale_tractor(lam)
+        ok = ok and gtg.vdot(GA.scal(3, I), GA.scal(3, I), sqc) == 9 * lam / 3
+    # type N: W(X) = (X . N) N - (X . I N) I N, N = k ^ e2, k = e0 + e1: a Weyl map with k in its kernel
+    I4 = gtg.pseudoscalar(sq)
+    kv = GA.add(GA.gen(0), GA.gen(1))
+    N = gtg.wedge(kv, GA.gen(2), sq)
+    IN = GA.mul(I4, N, sq)
+
+    def WN(X):
+        return GA.sub(GA.scal(gtg.sp(GA.mul(X, N, sq)), N), GA.scal(gtg.sp(GA.mul(X, IN, sq)), IN))
+    ok = ok and all(gtg.ricci(WN, GA.gen(m)) == {} for m in range(4))
+    ok = ok and _kernel_rank(WN, sq) == 3
+    ok = ok and all(gtg.bdot(WN(gtg.biv(a, b, sq)), kv, sq) == {} for a in range(4) for b in range(a + 1, 4))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_tractor_field_strength_is_minus_weyl"; return _tp_rv

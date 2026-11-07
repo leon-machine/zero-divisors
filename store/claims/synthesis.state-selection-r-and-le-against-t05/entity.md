@@ -5,7 +5,7 @@ version: 4
 title: 'The folded note''s (R) and (L$_E$) against T05''s'
 status: proved
 region: synthesis
-subject: thermality
+subject: descent
 tags: [thermal-premises, entropy-premises, modular-theory, finite-models, ledger-audit]
 proposed_by:
   kind: ai
@@ -50,6 +50,10 @@ lineage:
   - singularity.rate-discharge-hypothesis-iii
   - state-selection.rate-discharge-hypothesis-iii
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Subject moved from thermality to descent (DECISIONS H12, xsubject-R02 item 6): its logical neighbours are in descent (I213). Not a substantive field; no version change.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

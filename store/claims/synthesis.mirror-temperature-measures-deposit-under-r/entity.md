@@ -25,7 +25,7 @@ derivations:
   - dark-matter.coefficients-floors-they-give-what-gravity@4
   - dark-matter.stored-asymmetry-charge-not-number@8
   - dark-tower-matter.mirrors-composition@3
-  - dark-matter.open-channels-their-costs@5
+  - dark-matter.open-channels-their-costs@6
   - dark-matter.mirror-tower-copy-one@8
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1

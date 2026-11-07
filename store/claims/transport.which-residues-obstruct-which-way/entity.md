@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - transport.where-obstruction-lies-commuting-square@4
   proof: proof-main.tex
 checked_by:

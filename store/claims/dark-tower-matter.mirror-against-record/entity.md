@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.mirror-against-record
 kind: claim
-version: 2
+version: 3
 title: The mirror against the astrophysical record
 status: conjectured
 region: dark-tower-matter
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the cold-mirror exception stated at P2''s version-1 reach, with P2 as scoped leaving xi free'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 locators:
   paper: T14c
@@ -27,6 +31,10 @@ locators:
   label: obs:mirror
   line: 799
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'G1 (DECISIONS; R05 item 2): the cold-mirror exception now says that it is an exception to P2 at its version-1 reach, that P2 as scoped (version 2, labels not states) leaves xi free (synthesis.tower-charge-sector-label-temperature-not), and that the cold mirror then needs a non-equilibrium descent (synthesis.cold-mirror-needs-non-equilibrium-descent); P2 is unchanged by Leon''s answer 2, so the sentence stands.'
   env: observation
   outside_pilot_cites:
   - ButlerT14b
@@ -58,12 +66,12 @@ lineage:
 ---
 
 ## formal
-On every branch the mirror recombines early (at a visible temperature of $0.04$ to $3$ keV) and is cold dark matter for the microwave background and large-scale structure, and in galaxies it is a collisional gas that cools by bremsstrahlung in a few gigayears, settles partly and forms stars. Against the Gaia thin-disk bounds \cite{Widmark2021} and Roux and Cline's limit $\Omega_{b'} \lesssim 0.8\,\Omega_{b}$ \cite{RouxCline2020}, only the helium interval has room: there T14b's Galaxy models pass at the Sun only with helium-star feedback \cite[Obs.~9.1]{ButlerT14b}, and Roux and Cline's limit, which covers the whole helium interval, is exceeded by a factor $1.24$. Nothing in the construction lowers the mirror's share below $0.995$ or changes its microphysics without a further exception to P2: the copy is exact and the tension T14 records stands. Observation level, on imported galaxy modelling.
+On every branch the mirror recombines early (at a visible temperature of $0.04$ to $3$ keV) and is cold dark matter for the microwave background and large-scale structure, and in galaxies it is a collisional gas that cools by bremsstrahlung in a few gigayears, settles partly and forms stars. Against the Gaia thin-disk bounds \cite{Widmark2021} and Roux and Cline's limit $\Omega_{b'} \lesssim 0.8\,\Omega_{b}$ \cite{RouxCline2020}, only the helium interval has room: there T14b's Galaxy models pass at the Sun only with helium-star feedback \cite[Obs.~9.1]{ButlerT14b}, and Roux and Cline's limit, which covers the whole helium interval, is exceeded by a factor $1.24$. Nothing in the construction lowers the mirror's share below $0.995$ or changes its microphysics without a further exception to P2: the copy is exact and the tension T14 records stands. (The cold mirror itself is an exception to P2 at its version-1 reach; P2 as scoped leaves $\xi$ free, Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}, and the cold mirror then needs a non-equilibrium descent, Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}.) Observation level, on imported galaxy modelling.
 
 ## technical
 Observation level, on imported galaxy modelling. On every branch the mirror recombines early, at a visible temperature of $0.04$ to $3$ keV, and is cold dark matter for the microwave background and large-scale structure; in galaxies it is a collisional gas that cools by bremsstrahlung in a few gigayears, settles partly and forms stars. Against the Gaia thin-disk bounds and Roux and Cline's limit $\Omega_{b'} \lesssim 0.8\,\Omega_b$ only the helium interval has room: there the Galaxy models pass at the Sun only with helium-star feedback, and Roux and Cline's limit, which covers the whole helium interval, is exceeded by a factor $1.24$.
 
-Nothing in the construction lowers the mirror's share below $0.995$ or changes its microphysics without a further exception to P2: the copy is exact, and the tension the dark-matter paper records stands.
+Nothing in the construction lowers the mirror's share below $0.995$ or changes its microphysics without a further exception to P2: the copy is exact, and the tension the dark-matter paper records stands. The cold mirror itself is an exception to P2 at its version-1 reach only; P2 as scoped leaves $\xi$ free, and the cold mirror then needs a non-equilibrium descent.
 
 ## lay
 At the level of observation, and relying on imported models of galaxies, the mirror tower behaves like ordinary cold dark matter on cosmic scales but like gas inside galaxies, where it cools, settles and forms stars. Observations of our Galaxy's disk and of mirror-matter cosmology leave room only if the mirror is mostly helium, and even then one published limit is exceeded by about a quarter. The construction offers no way to shrink the mirror's share.

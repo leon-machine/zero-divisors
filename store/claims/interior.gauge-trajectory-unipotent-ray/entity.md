@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, kernel direction stated as null for the limit form; garbled proof expression repaired'
   version: 9
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, uses edges to the restated singularity results at Leon''s decisions'
+  version: 9
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -31,6 +35,8 @@ derivations:
   - singularity.type-n-only-type-n@5
   - singularity.non-removability-invariant-argument@2
   - std-algebra.orthogonal-anticommute@1
+  - singularity.unipotent-ray@4
+  - singularity.cones-fold@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -51,6 +57,10 @@ locators:
   label: prop:unipotent
   line: 381
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 9 (already raised in this run). Decision items D10 and E2 (routine): clauses (1), (2) and (4) restate singularity.unipotent-ray (T05 Prop 2.2) and singularity.cones-fold (T05 Prop 2.5); uses edges to both (@4) are added and the proof says so, keeping the group law along the ray as this result''s own content; the singularity originals are the homes.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

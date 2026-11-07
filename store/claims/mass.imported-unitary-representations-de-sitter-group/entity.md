@@ -1,7 +1,7 @@
 ---
 id: mass.imported-unitary-representations-de-sitter-group
 kind: claim
-version: 4
+version: 5
 title: 'Imported: the unitary representations of the de Sitter group'
 status: imported
 region: mass
@@ -21,6 +21,10 @@ credit:
   role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, a series hypothesis moved out of the imported Fact at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: J. Dixmier, Repr'esentations int'egrables du groupe de De Sitter, Bull. Soc. Math. France
@@ -36,6 +40,10 @@ locators:
   label: fact:dixmier
   line: 434
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item B6 (routine): the series-internal sentence that mass.casimir-form-join''s C_2(I_Lambda-perp) is ''in this same normalisation, with no shift'' moves out of this imported Fact (formal and technical): it is the normalisation hypothesis that synthesis.operator-join-casimir-shifts (iii) states and does not prove, and the Fact now says so and points there; Dixmier''s classification as imported is unchanged, status stays imported.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -71,12 +79,12 @@ extraction:
 ---
 
 ## formal
-Among the unitary irreducible representations of $SO(1,4)$ carried by scalar fields, with the Casimir normalised so that it acts as $-m^{2}/H^{2}$ and $m^{2} = \Delta(3-\Delta)H^{2}$, are: the principal series, $m^{2} \ge \tfrac94 H^{2}$, parametrised by $\Delta = \tfrac32 + I_4\nu$ with $m^{2} = (\tfrac94 + \nu^{2})H^{2}$ (numbers, and the scalars of the representation spaces, are read in $\mathrm{span}\{1, I_4\}$, conventions U1; the source writes $i$ for $I_4$); the complementary series, $0 < m^{2} < \tfrac94 H^{2}$, with $\Delta$ real in $(0,3)$; and the massless point $m = 0$. No representation of the principal or complementary series has $m^{2} < 0$; the exceptional (discrete) series, which also contains scalar members at $\Delta = 3 + k$, $k = 1, 2, \dots$, with $m^{2} = -k(k+3)H^{2}$, is not used in this paper. \emph{Provenance:} the classification of the unitary representations is Dixmier's \cite[\S\S3--4]{Dixmier1961}; the $\Delta$-parametrisation and the mass formula for the scalar series of $SO(N,1)$ are the modern presentation, for which see \cite{Higuchi1987}. The Casimir normalisation here is the field-theoretic one on a scalar module. The de Sitter Casimir $C_{2}(I_{\Lambda}^{\perp})$ of Proposition \claimref{mass.casimir-form-join}, a quadratic form on the moment components of a composite, is in this same normalisation, with no shift between the two. What differs from the de Sitter mass is that Proposition's grip: by its clause (1) the grip equals the de Sitter mass plus $Q(I_{\Lambda}) = H^{2}$ times the composite's conformal Casimir $C_{2}(\Lambda^{2}\CS)$. Used to read Corollary \claimref{mass.weight-polynomial-two-series}, which proves the algebra of $-w(w+3)$ and imports the names of the series from here.
+Among the unitary irreducible representations of $SO(1,4)$ carried by scalar fields, with the Casimir normalised so that it acts as $-m^{2}/H^{2}$ and $m^{2} = \Delta(3-\Delta)H^{2}$, are: the principal series, $m^{2} \ge \tfrac94 H^{2}$, parametrised by $\Delta = \tfrac32 + I_4\nu$ with $m^{2} = (\tfrac94 + \nu^{2})H^{2}$ (numbers, and the scalars of the representation spaces, are read in $\mathrm{span}\{1, I_4\}$, conventions U1; the source writes $i$ for $I_4$); the complementary series, $0 < m^{2} < \tfrac94 H^{2}$, with $\Delta$ real in $(0,3)$; and the massless point $m = 0$. No representation of the principal or complementary series has $m^{2} < 0$; the exceptional (discrete) series, which also contains scalar members at $\Delta = 3 + k$, $k = 1, 2, \dots$, with $m^{2} = -k(k+3)H^{2}$, is not used in this paper. \emph{Provenance:} the classification of the unitary representations is Dixmier's \cite[\S\S3--4]{Dixmier1961}; the $\Delta$-parametrisation and the mass formula for the scalar series of $SO(N,1)$ are the modern presentation, for which see \cite{Higuchi1987}. The Casimir normalisation here is the field-theoretic one on a scalar module. Whether the de Sitter Casimir $C_{2}(I_{\Lambda}^{\perp})$ of Proposition \claimref{mass.casimir-form-join}, a quadratic form on the moment components of a composite, is in this same normalisation is not part of this Fact: it is the normalisation hypothesis stated, and not proved, in Proposition \claimref{synthesis.operator-join-casimir-shifts}(iii). What that Proposition's split sets beside the de Sitter Casimir is its grip: by its clause (1) the grip equals the de Sitter mass plus $Q(I_{\Lambda}) = H^{2}$ times the composite's conformal Casimir $C_{2}(\Lambda^{2}\CS)$. Used to read Corollary \claimref{mass.weight-polynomial-two-series}, which proves the algebra of $-w(w+3)$ and imports the names of the series from here.
 
 ## technical
 An imported classification. With the Casimir of $SO(1,4)$ normalised to act as $-m^{2}/H^{2}$ and $m^{2} = \Delta(3-\Delta)H^{2}$, the unitary irreducible representations carried by scalar fields include the principal series, $m^{2} \ge \tfrac94 H^{2}$, with $\Delta = \tfrac32 + I_4\nu$ in $\mathrm{span}\{1, I_4\}$ and $m^{2} = (\tfrac94 + \nu^{2})H^{2}$; the complementary series, $0 < m^{2} < \tfrac94 H^{2}$, with $\Delta$ real in $(0,3)$; and the massless point $m = 0$. Neither series contains a representation with $m^{2} < 0$.
 
-The exceptional (discrete) series also has scalar members at $\Delta = 3 + k$, $k = 1, 2, \dots$, with $m^{2} = -k(k+3)H^{2}$, but it is not used. The Casimir here is the field-theoretic one on a scalar module; the de Sitter Casimir of a composite, a quadratic form on its moment components, is in the same normalisation. The composite's grip is the de Sitter mass plus $H^{2}$ times its conformal Casimir.
+The exceptional (discrete) series also has scalar members at $\Delta = 3 + k$, $k = 1, 2, \dots$, with $m^{2} = -k(k+3)H^{2}$, but it is not used. The Casimir here is the field-theoretic one on a scalar module. Whether the de Sitter Casimir of a composite, a quadratic form on its moment components, is in the same normalisation is not part of the imported classification; the operator-join results state it as a hypothesis. By the Casimir form's split, the composite's grip is its de Sitter reading plus $H^{2}$ times its conformal Casimir.
 
 ## lay
 Quantum particles in a universe with a positive cosmological constant are classified by the symmetry group of de Sitter space. For scalar particles this classical result sorts the allowed masses into families: heavy particles above a threshold set by the expansion rate, light ones below it, and the massless case. None of the families used here allows a negative mass squared.

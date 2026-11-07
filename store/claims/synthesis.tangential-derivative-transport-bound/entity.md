@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - interior.transport-level-convergence-along-tangential-curves@4
-  - interior.weighted-limit-theorem@5
+  - interior.weighted-limit-theorem@6
   proof: proof-main.tex
 checked_by:
 - kind: check

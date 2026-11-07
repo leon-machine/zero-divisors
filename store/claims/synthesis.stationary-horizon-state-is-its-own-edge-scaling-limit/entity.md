@@ -1,7 +1,7 @@
 ---
 id: synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
 kind: claim
-version: 4
+version: 5
 title: 'A stationary horizon state is its own edge scaling limit'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: the carrier content of (i) to (iii) split out into synthesis.stationary-generator-states-and-the-edge-scaling, which the proof now cites
   version: 4
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: 'maintainer pass, restated clauses marked with their premise-free home at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -59,6 +63,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - angle.imported-theorems-deliver-their-hypotheses
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item E11 (routine; no retirement): clauses (i) to (iii) restate synthesis.stationary-generator-states-and-the-edge-scaling (i) to (iii) after the 7 November split; a marked Restatement sentence in the formal names the premise-free home so counts take each once (the uses edge already exists). The store has no clause-level restates link, so the build''s restatement count is unchanged; the marking is in the text.'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -110,6 +118,8 @@ the I-state of Theorem \claimref{hawking.i-state-continuum} at period $2\pi c$ (
 \item[(v)] \emph{(What form a principle must take.)} By (ii) and (iii), within the stationary gauge-invariant quasi-free class, (N$_{+}$) is equivalent to one temperature-free local condition at the edge, and no condition on the scaling limits at points off the edge, with stationarity, implies it, nor implies (R) on a half-generator (the family $\omega_{c}^{\times}$ restricted to $u > 0$ meets every such condition at every period); by (iv) neither does the further condition of vanishing null energy. On the eternal hole the half-generators $u > 0$ are on the Painlev\'e-Gullstrand chart of the store and the edge is not, so a principle stated at the points of that chart, with stationarity, through the scaling limits or the null energy, cannot supply (N$_{+}$) or (R): it must be posed at the bifurcation surface (on the manifold assembled from several charts), or fix the whole Mellin symbol on the chart, which is (R) itself. On a local Rindler horizon of Minkowski space the edge is an ordinary point of the flat chart, and for a boost-invariant state (N$_{+}$) is the local form of (N$_{+}$) at that one point.
 \end{enumerate}
 \emph{Beyond one flat chart.} The bifurcation surface of the eternal hole (case (a)) and of de Sitter space (case (b)), where (ii) is posed, is not carried by a single gravitational field $(\hb, \Omega)$ on flat spacetime; the half-generators of (iii) to (v) are.
+
+\emph{Restatement.} Clauses (i) to (iii) restate clauses (i) to (iii) of Theorem \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}, which assumes no premise and is their home in the store; they are kept here in the scope of (N$_{+}$) and counted once, at the home.
 
 ## technical
 The store's premise (N$_{+}$) says that the modes on a horizon's light rays are in the ground state for sliding along the rays, and records that this relocates the thermal input to regularity across the bifurcation surface. This result makes that relocation exact within the stationary class. On every horizon in the premise's scope the boost acts on a light ray as a rescaling of its affine parameter about the edge, with exactly the weight that preserves the anticommutator, so the boost is the scaling map that defines a state's short-distance limit at the edge. A state invariant under the boost is therefore its own short-distance limit there: if it looks like the null vacuum at short distances at the edge, it is the null vacuum everywhere, and (N$_{+}$) holds. Boundedness of the difference from the vacuum near the edge is already enough, because the difference is homogeneous of degree $-1$.

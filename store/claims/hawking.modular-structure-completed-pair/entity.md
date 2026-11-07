@@ -1,7 +1,7 @@
 ---
 id: hawking.modular-structure-completed-pair
 kind: claim
-version: 3
+version: 4
 title: Modular structure of the completed pair
 status: proved
 region: hawking
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: prop:mode
   line: 393
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item E6 (routine; no retirement): equivalent_to singularity.modular-structure-completed-pair@5 added. The same result as the singularity entity, kept as the home since it carries the rotor-group caveat.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -66,6 +74,8 @@ extraction:
     date: '2026-10-21'
     decision: 4
     note: 'The two boost flows: flow_note recorded.'
+equivalent_to:
+- singularity.modular-structure-completed-pair@5
 ---
 
 ## formal

@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, citation typography in the formal level'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: '''E. Cartan, Lecons sur la th''eorie des spineurs, Hermann, Paris (1938).'
@@ -36,6 +40,13 @@ locators:
   label: ''
   line: 184
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 2 (already raised in this run). Decision item E9 (routine; no retirement): this citation list gives the sources of one-relation.imported-cartans-purity-theorem-thouless-form, the home; recorded under extraction.overlaps_with (a citation list against a Fact with content, no pinned link).'
+  overlaps_with:
+  - id: one-relation.imported-cartans-purity-theorem-thouless-form
+    note: 'Decision E9: this external entry lists the sources of the Cartan purity Fact, which is kept as the home.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

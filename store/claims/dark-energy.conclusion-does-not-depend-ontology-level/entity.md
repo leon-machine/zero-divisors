@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.acoustic-no-go-one-way-grip@5
+  - dark-energy.acoustic-no-go-one-way-grip@6
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   proof: proof-main.tex

@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.invariant-pairing-five-modes@5
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
   - standard-model.generation-ten-under-pati-salam@7
   - standard-model.automorphisms-preserve-slot-pair-split-are@6
@@ -31,7 +31,7 @@ derivations:
   - synthesis.up-down-split-under-conjugate-reading-needs-su2r-odd-weighting@3
   - standard-model.imported-clebsch-structure-seesaw@1
   - standard-model.imported-spinor-bilinears@1
-  - synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing@1
+  - synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing@2
   proof: proof-main.tex
 checked_by:
 - kind: check

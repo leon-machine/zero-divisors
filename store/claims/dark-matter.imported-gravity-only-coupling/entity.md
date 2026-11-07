@@ -1,7 +1,7 @@
 ---
 id: dark-matter.imported-gravity-only-coupling
 kind: claim
-version: 3
+version: 4
 title: Gravity-only coupling at first order, restated from the acoustic no-go
 status: proved
 region: dark-matter
@@ -17,7 +17,13 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the sector decomposition at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
+about:
+- obj.dark-matter.frozen-phase-operators
 derivations:
 - name: main
   uses:
@@ -36,6 +42,10 @@ locators:
   label: fact:acoustic
   line: 116
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item D8 (routine): ''its only contact with us'' is the sector decomposition, Definition obj.dark-matter.frozen-phase-operators (the operational reading of P1), not P1''s formal (one metric and one flag); the formal and the proof now cite the Definition (about link added), and the assumes edge to P1 stays. Wording and an about link; statement unchanged.'
   open_problem: op.dark-sector-scopes
   env: fact
   outside_pilot_cites:
@@ -69,7 +79,7 @@ extraction:
 ---
 
 ## formal
-Under the entropy paper's Indifference premise (for the sphere step of the four-dimensional lift) and, wherever the thermal state is used, the singularity paper's premise (Q), and with the other hypotheses the acoustic chain carries: within the s-wave current algebra and its assembled four-dimensional lift, every gauge-charged or charge-conjugation-odd probe has zero linear overlap with the graviton mode, so at first order only the charge-conjugation-even neutral sector couples; in the conformal vacuum its overlap is carried by $T$ alone, and Proposition \claimref{dark-energy.conclusion-does-not-depend-ontology-level} reads it as the one coupling sector, stress-energy (Proposition \claimref{dark-energy.acoustic-no-go-one-way-grip}, Assembly \claimref{dark-energy.lift-inherits-no-go-steps-itemised}). Hence matter that gravitates on this metric and carries no gauge charge shared with us acts on us, through the metric-forming correlations, by its stress-energy alone, at first order. With Premise \claimref{dark-matter.p1-single-frozen-point}, which makes these correlations its only contact with us, it does nothing else observable at first order. \emph{Provenance:} the series' acoustic no-go \cite[\S5]{ButlerT10} restated, at its mixed level.
+Under the entropy paper's Indifference premise (for the sphere step of the four-dimensional lift) and, wherever the thermal state is used, the singularity paper's premise (Q), and with the other hypotheses the acoustic chain carries: within the s-wave current algebra and its assembled four-dimensional lift, every gauge-charged or charge-conjugation-odd probe has zero linear overlap with the graviton mode, so at first order only the charge-conjugation-even neutral sector couples; in the conformal vacuum its overlap is carried by $T$ alone, and Proposition \claimref{dark-energy.conclusion-does-not-depend-ontology-level} reads it as the one coupling sector, stress-energy (Proposition \claimref{dark-energy.acoustic-no-go-one-way-grip}, Assembly \claimref{dark-energy.lift-inherits-no-go-steps-itemised}). Hence matter that gravitates on this metric and carries no gauge charge shared with us acts on us, through the metric-forming correlations, by its stress-energy alone, at first order. With Premise \claimref{dark-matter.p1-single-frozen-point}, read operationally as the sector decomposition of Definition \claimref{obj.dark-matter.frozen-phase-operators}, which makes these correlations its only contact with us, it does nothing else observable at first order. \emph{Provenance:} the series' acoustic no-go \cite[\S5]{ButlerT10} restated, at its mixed level.
 
 ## technical
 Under the Indifference premise (sphere step of the lift) and premise (Q) (the induced thermal state), and with the further hypotheses of the acoustic chain: in the s-wave current algebra and its assembled four-dimensional lift, every gauge-charged or charge-conjugation-odd probe has zero linear overlap with the graviton mode, so at first order only the charge-conjugation-even neutral sector couples. In the conformal vacuum that overlap is carried by the stress tensor alone, and the ontology proposition reads it as the one coupling sector, stress-energy. Matter that gravitates on this metric and shares no gauge charge with us therefore acts on us through the metric-forming correlations by its stress-energy alone, at first order; with Premise P1, which makes these correlations its only contact with us, it does nothing else observable at first order. This is the series' acoustic no-go restated at its mixed level.

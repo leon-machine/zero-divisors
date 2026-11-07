@@ -1,7 +1,7 @@
 ---
 id: standard-model.imported-tower-commuting-copies-fock-module
 kind: claim
-version: 5
+version: 6
 title: 'Imported: the tower, its commuting copies, and the Fock module'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: fact:tower
   line: 1531
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Decision item E9 (routine; no retirement): specialises rungs.imported-tower-one-qubit-per-rung@4 added. Its content is a subset of the rungs Fact, which is kept as the home.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,6 +69,8 @@ extraction:
     note: 'Added the CAR-relations proposition and the *-structure lemma, since the fact restates their
       content (the anticommutation relations and the adjointness of the ladder pairs) although its provenance
       cites only the commuting-copies and Fock-module theorems. Levels pass: conditions already kept.'
+specialises:
+- rungs.imported-tower-one-qubit-per-rung@4
 ---
 
 ## formal

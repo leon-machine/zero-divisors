@@ -24,6 +24,18 @@ functions:
     clauses:
     - (iv) the on-shell Schouten tensor is the stored scale-tractor derivative
     omits: checked on sample sources; the matter coupling is imported
+  check_gtg_frame_trivector_is_twice_dual_einstein_plus_lambda:
+    kind: exact
+    clauses:
+    - "(i) The variation of S_MM with respect to the frame is the trivector-valued linear function E(a) = 2 (G(a) + Lambda a) I"
+    - "(i) the component three-form E_a = eps_abcd e^b ^ F^cd"
+    omits: "exact by linearity: the identity operator, the ten Kulkarni-Nomizu operators of the basis symmetric maps, and the Weyl part through W(IB) = I W(B) (checked on three gauge fields' Weyl operators) and trace-freeness; the equality with the component three-form on three sample curvatures"
+  check_gtg_frame_equation_on_gauge_fields_and_dilation_trace:
+    kind: sampled
+    clauses:
+    - "(ii) rank 10, injective on the Ricci part"
+    - "(iii) e^a ^ E_a = 2(4 Lambda - R) I"
+    omits: "rank on the ten Kulkarni-Nomizu operators; the dilation trace on two gauge fields at two Lambda; the de Sitter gauge field at its Lambda and a wrong one"
 untouched_premises:
   synthesis.imported-einstein-cartan-matter-coupling: imported matter coupling used in clause (iv) as stated; the
     checks verify the frame identity and the vacuum statements

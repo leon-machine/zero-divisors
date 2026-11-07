@@ -1,7 +1,7 @@
 ---
 id: singularity.universality-temperature-under-g
 kind: claim
-version: 3
+version: 4
 title: Universality of the temperature under (G)
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the weights kappa k labelled as version 2 of premise (Q)'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -40,6 +44,10 @@ locators:
   label: cor:universal
   line: 1822
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version labels (DECISIONS G7; Leon''s 23 October ''note only'' decision; R01 item 2): Premise (Q) singularity.q-joint-quasi-freeness-s-wave is at version 3 with weights kappa(k + 1/2), while this entity states version 2''s weights kappa k (sea at a site); the displays now say ''version 2 of premise (Q)'' where they use kappa k. Statement content, edges and pins unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

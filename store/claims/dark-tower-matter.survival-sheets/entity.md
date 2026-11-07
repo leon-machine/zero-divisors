@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-tower-matter.imported-unit-ball-rule@4
   - dark-tower-matter.three-dimensional-phases@4
-  - simulations.cluster-bound-two-dimensions@3
+  - simulations.cluster-bound-two-dimensions@4
   assumes:
   - dark-matter.r2-one-quantum-per-unit-ball@2
   proof: proof-main.tex

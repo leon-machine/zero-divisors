@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, bare imaginary unit replaced by the central volume element (U3)'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.odd-extensions.single-extension
@@ -48,6 +52,13 @@ locators:
   label: thm:split
   line: 441
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 6 (already raised in this run). Decision item E7 (routine; no retirement): specialises std-algebra.even-subalgebra-isomorphism@1 added. Clause (iii) here (Cl^0 = Cl(p,q) or Cl(q,p) via e_i e_n) is the odd-dimensional case of the standard even-subalgebra isomorphism, so this result joins the existing chain (rule2.even-subalgebra-one-dimensional-extension already specialises it); the overlap of clauses (i), (ii) with std-algebra.complexification (ii) is recorded under extraction.overlaps_with.'
+  overlaps_with:
+  - id: std-algebra.complexification
+    note: 'Decision E7: clauses (i), (ii) here overlap clause (ii) of std-algebra.complexification; kept both.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -75,6 +86,8 @@ extraction:
     date: '2026-10-21'
     cited:
     - odd-extensions.volume-element-odd-dimension
+specialises:
+- std-algebra.even-subalgebra-isomorphism@1
 ---
 
 ## formal

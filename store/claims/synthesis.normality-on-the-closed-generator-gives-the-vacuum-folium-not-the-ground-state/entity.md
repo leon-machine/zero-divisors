@@ -29,6 +29,14 @@ credit:
   role: 'GA rewrite (the SL(2, R) matrices as a labelled reading of the rotors'' Moebius maps)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, premise repointed to the premise-free stationary-generator result at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, notation clash resolved at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -37,7 +45,7 @@ derivations:
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
+  - synthesis.stationary-generator-states-and-the-edge-scaling@1
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.attachment-conformal-energy-is-generated-by-z@4
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
@@ -64,6 +72,10 @@ lineage:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state
   - synthesis.attachment-conformal-energy-is-generated-by-z
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 4 (already raised in this run). Decision items D4 and C6 (routine): the citation of synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4 (for the boost as the weight-1/2 dilation about the edge, its (i)) is repointed to the premise-free synthesis.stationary-generator-states-and-the-edge-scaling@1 (i), which states it (beta_t = sigma^0_{e^{kappa t}}), so (N+) no longer reaches this result through that edge. The edge to synthesis.attachment-conformal-energy-is-generated-by-z (cited for the rotor realisation of the Moebius closing, which the check computes itself) is kept: no premise-free stored statement of that realisation was found (C6: keep the edge otherwise). Decision item H5 (from AP1''s items, routine notation): in formal (i) the composite inversion rotor is renamed J -> R_inv, as the proof already writes it (J is the boundary-mode unit, U2, and J_a the modular conjugations), and a parenthesis says nu is the added vector of square +1 (the conventions'' e_+), not a null translation. No content change.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -104,7 +116,7 @@ extraction:
 ## formal
 Units $\hbar = c = 1$. On a generator with affine parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with two-point kernel $W_{\omega}$, $\omega_{0}$ the null vacuum, $W_{0}(u, v) = \tfrac{I_{4}}{2\pi}(u - v + I_{4}0)^{-1}\otimes\id_{K}$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$, $I_{4}$ the unit of the mode space) (Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)), $R = W_{\omega} - W_{0}$, and the local Hilbert-Schmidt condition on a set $A$ as in Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state} ($R$ square integrable on $A \times A$). The \emph{closed generator} is $\R \cup \{\infty\}$; its intervals are the bounded intervals and the complements of bounded intervals (the arcs through $\infty$).
 \begin{enumerate}
-\item[(i)] \emph{(The attachment closes the generator; proved.)} In $\Cl(2,4)$ with $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$ and the points $X(s) = \nO + s n$ of the null line of $n = e_{0} + e_{1}$ ($Q(X(s)) = 0$), the rotors $1 + \tfrac{t}{2}n\nInf$, $1 + \tfrac{c}{2}m\nO$ ($m = e_{0} - e_{1}$) and $\cosh\theta + \sinh\theta\,\nu e_{-}$ act on the line by $s \mapsto s + t$, $s \mapsto s/(1 - 2cs)$ and $s \mapsto e^{-2\theta}s$; the composite $J$ of a translation by $-1$, a special conformal map with $c = -\tfrac12$ and a translation by $-1$ acts by $s \mapsto -1/s$ and sends $\nO$ to a multiple of $n$, the point at infinity of the line. The null vacuum kernel with the spinor weight is invariant under every $g(s) = (as + b)/(cs + d)$, $ad - bc = 1$: $(cu + d)^{-1}(cv + d)^{-1}\,(g(u) - g(v))^{-1} = (u - v)^{-1}$. So $\infty$ is a regular point of the closed generator for $\omega_{0}$, and the local Hilbert-Schmidt condition on an arc through it is posed as on any other interval. The property used is the $SL(2, \R)$ covariance of the chiral vacuum, which holds on every generator; the conformal rotors are its realisation on null lines of Minkowski space, and on the eternal hole only the abstract covariance is available.
+\item[(i)] \emph{(The attachment closes the generator; proved.)} In $\Cl(2,4)$ with $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$ (here $\nu$ is the added vector of square $+1$, the $e_{+}$ of the conventions, and not a null translation) and the points $X(s) = \nO + s n$ of the null line of $n = e_{0} + e_{1}$ ($Q(X(s)) = 0$), the rotors $1 + \tfrac{t}{2}n\nInf$, $1 + \tfrac{c}{2}m\nO$ ($m = e_{0} - e_{1}$) and $\cosh\theta + \sinh\theta\,\nu e_{-}$ act on the line by $s \mapsto s + t$, $s \mapsto s/(1 - 2cs)$ and $s \mapsto e^{-2\theta}s$; the composite $R_{\mathrm{inv}}$ of a translation by $-1$, a special conformal map with $c = -\tfrac12$ and a translation by $-1$ acts by $s \mapsto -1/s$ and sends $\nO$ to a multiple of $n$, the point at infinity of the line. The null vacuum kernel with the spinor weight is invariant under every $g(s) = (as + b)/(cs + d)$, $ad - bc = 1$: $(cu + d)^{-1}(cv + d)^{-1}\,(g(u) - g(v))^{-1} = (u - v)^{-1}$. So $\infty$ is a regular point of the closed generator for $\omega_{0}$, and the local Hilbert-Schmidt condition on an arc through it is posed as on any other interval. The property used is the $SL(2, \R)$ covariance of the chiral vacuum, which holds on every generator; the conformal rotors are its realisation on null lines of Minkowski space, and on the eternal hole only the abstract covariance is available.
 \item[(ii)] \emph{(Local on the closed generator is global; proved.)} If $\omega$ satisfies the local Hilbert-Schmidt condition on every interval of the closed generator, in particular if it is locally normal to $\omega_{0}$ on each (Powers-Stormer, as in the theorem cited above), then $R$ is square integrable on $\R \times \R$: with $E_{1} = \{|u| > L\}$ and two disjoint bounded intervals $E_{2}, E_{3} \subset [-L, L]$, every pair of points avoids some $E_{k}$, and the complements $A_{k}$ are intervals of the closed generator. For a pure state ($W_{\omega}$ a projection) this is equivalent to quasi-equivalence, hence unitary equivalence, with $\omega_{0}$ on the whole generator algebra (Fact \claimref{synthesis.imported-powers-stormer-takesaki-disjointness}(a)): on the closed generator the condition is global normality restated. For mixed states it gives the square-integrable difference only, not quasi-equivalence.
 \item[(iii)] \emph{(Stationary states; proved, the boost case a corollary of the stored theorem.)} If $R$ is square integrable on a far end and $\omega$ is stationary for the affine translations, then $\omega = \omega_{0}$; if instead $\omega$ is stationary for the boost about a point, $\omega = \omega_{0}$ already by Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state}(iv), of which this is a corollary. So the condition gives (N$_{+}$) itself only together with one of the two stationarities.
 \item[(iv)] \emph{(The folium form of (N$_{+}$); proved for pure states, standard once (ii) holds.)} A pure $\omega$ with the condition of (ii) is a vector state of the null vacuum's representation, in which the affine translations are implemented with nonnegative generator $P$; so the positivity clause of (N$_{+}$) holds in the representation of $\omega$, and the averaged null energy along the complete generator relative to $\omega_{0}$, $\omega(P)$, is nonnegative wherever defined. The ground-state clause, $\omega = \omega_{0}$, is not implied: no condition depending only on the folium can single out $\omega_{0}$, since its normal excitations share it (the state with projection $P_{0} + |g\rangle\langle g|$).

@@ -1,7 +1,7 @@
 ---
 id: three-routes.join-disqualified-wrong-stalks
 kind: claim
-version: 3
+version: 4
 title: 'The join is disqualified: wrong stalks'
 status: proved
 region: three-routes
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.ladder-bundle-even-subbundle
@@ -39,6 +43,13 @@ locators:
   label: thm:join
   line: 160
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item E6 (routine; no retirement): near-duplicate of singularity.net-assembly-net-it-everything recorded under extraction.overlaps_with (no pinned link: the two overlap in part, so neither equivalent_to nor specialises holds); this entity carries the 23 October correction.'
+  overlaps_with:
+  - id: singularity.net-assembly-net-it-everything
+    note: 'Near-duplicate (decision E6): the singularity entity''s net assembly states the same disqualification of the join; this three-routes entity carries the 23 October correction. Kept both; no clause-level link kind exists, so the overlap is recorded here.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

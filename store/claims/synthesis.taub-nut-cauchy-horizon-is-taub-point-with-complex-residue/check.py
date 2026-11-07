@@ -296,3 +296,89 @@ def check_generated_algebra():
     ok &= lie_dim([{}, {}, scal(-1, B3)]) == 1
     GA.check("horizon values (0, 0, -(1 - kappa I) B_3) generate a 1-dim algebra; Kasner values at p(1) generate 6", ok)
     return ok
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The same Bianchi IX field built as a gauge field on flat spacetime with the shared engine (lib/gtg.py): labels
+# (T, psi, theta, phi) = 0..3 about (T0, 0, pi/2, 0); coframe hb^{-1}(e_mu) = sum_a TH[a][mu] gamma_a with
+# f^0 = N grad T, f^l = a_l sigma_l; the rotation-gauge field is SOLVED from the torsion equation (Field with no
+# om) and the curvature is the store's calR(B) = -R(hb(B)) of its field strength. No Christoffel symbol is used.
+import gtg  # noqa: E402
+
+
+def gtg_bianchi_ix(a, da, dda):
+    """Field from instant data a_l, alpha_l' = da_l, alpha_l'' = dda_l (harmonic time, N = a1 a2 a3)."""
+    J = gtg.J
+    sc = [J.from_taylor(0, [a[l], a[l] * da[l], a[l] * (dda[l] + da[l] * da[l]) / 2]) for l in range(3)]
+    N = sc[0] * sc[1] * sc[2]
+    sps, cps = gtg.sincos(1, F(0), F(1), 4, 2)
+    sth, cth = gtg.sincos(2, F(1), F(0), 4, 2)
+    z = J.const(0)
+    TH = [[N, z, z, z],
+          [z, z, sc[0] * sps, -(sc[0] * cps * sth)],
+          [z, z, sc[1] * cps, sc[1] * sps * sth],
+          [z, sc[2], z, sc[2] * cth]]
+    return gtg.Field(TH), N.v
+
+
+def check_gtg_bianchi_ix_torsion_solution_and_field_strength():
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    for (a, da, dda) in JETS:
+        fld, N = gtg_bianchi_ix(a, da, dda)
+        ok = ok and fld.torsion_free() and fld.torsion_rank() == 24
+        mu = [a[i] / (a[(i + 1) % 3] * a[(i + 2) % 3]) for i in range(3)]
+        ok = ok and fld.omega(0) == {}
+        for k in range(3):
+            i, j = (k + 1) % 3, (k + 2) % 3
+            want = add(scal(-da[k] / N, mul(gen(0), gen(k + 1), SIG)),
+                       scal((mu[i] + mu[j] - mu[k]) / 2, mul(gen(i + 1), gen(j + 1), SIG)))
+            ok = ok and GA.eq(fld.omega(k + 1), want)
+        Rc = fld.curvature()
+        V, gdV = vix([x * x for x in a])
+        rico = [[gtg.ric_o(Rc, gen(x), gen(y)) for y in range(4)] for x in range(4)]
+        ok = ok and all(N * N * rico[l + 1][l + 1] == dda[l] + gdV[l] for l in range(3))
+        ok = ok and N * N * rico[0][0] == -sum(dda) + 2 * cross(da)
+        ok = ok and all(rico[x][y] == 0 for x in range(4) for y in range(4) if x != y)
+    assert ok
+    return ok
+
+
+def check_gtg_taub_nut_is_a_vacuum_gauge_field():
+    premise("synthesis.imported-gtg-dictionary")
+    ok, ran = True, 0
+    # (m, l, t) with t^2 + l^2 and U(t) rational squares, t_- < t < t_+
+    for m, l, t in ((F(2), F(3), F(4)), (F(3), F(4), F(3)), (F(6), F(5), F(12)), (F(0), F(1), F(0)),
+                    (F(5), F(12), F(5))):
+        U, Ut, da, dda, e2 = taub_nut(t, m, l)
+        roots = [isq(x) for x in e2]
+        ok = ok and U > 0 and None not in roots
+        if not ok:
+            break
+        ran += 1
+        fld, N = gtg_bianchi_ix(roots, da, dda)
+        ok = ok and gtg.ricci_flat(fld.curvature())
+        fw, Nw = gtg_bianchi_ix(roots, da, [dda[0], dda[1], dda[2] + F(1, 3)])
+        ok = ok and not gtg.ricci_flat(fw.curvature())
+    ok = ok and ran == 5
+    assert ok
+    return ok
+
+
+def _isqrt(n):
+    lo, hi = 0, n + 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if mid * mid < n:
+            lo = mid + 1
+        else:
+            hi = mid
+    return lo
+
+
+def isq(x):
+    """Exact rational square root of a nonnegative rational, or None."""
+    if x < 0:
+        return None
+    u, v = _isqrt(x.numerator), _isqrt(x.denominator)
+    return F(u, v) if F(u * u, v * v) == x else None

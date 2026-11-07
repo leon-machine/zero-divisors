@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 9
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: lift and reflection in e+ in Cl(2,4), dual norm as Q(hb^T(xi)) from the gauge field; exact check'
+  version: 9
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: typed
 about:
 - obj.singularity.fibrewise-conformal-lift
@@ -49,12 +53,18 @@ checked_by:
   ref: check.py::check_null_directions_go_ideal
 - kind: check
   ref: check.py::check_dying_direction_dual_norm_and_read_out
+- kind: check
+  ref: check.py::check_gtg_dual_norm_of_the_dying_direction_from_the_engine
 locators:
   paper: T05
   number: Prop 5.2
   label: prop:lift
   line: 1535
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG and the conformal model: (1) X_p(x) = n0 + hb^{-1}(x) + Q_p(x) ninf/2 is null, iota is the reflection N -> e+ N e+ = -(2t n0 + X + (s/2) ninf), a versor (quadric preserved, involution); (2), (3) read-out X/s; (4) the one-forms read as background gradients (dr = -e_r, dt_PG = e_t), hb^T(a) = a - beta (a . e_r) e_t gives hb^T(xi) = -sqrt(r) e_r and Q*(xi) = -r at every radius, the static labels giving the same value through hb^T(grad t_s) = gamma^0/sqrt f, hb^T(grad r) = sqrt f gamma^1; cometric and Gram components kept as a labelled reading. Checked exactly: the existing GA checks for (1) to (4) and the new check_gtg_dual_norm_of_the_dying_direction_from_the_engine (hb^T from the shared engine''s PG and static gauge fields: hb^T(xi) = -sqrt(r) e_r, Q* = -r at 3 masses x 4 radii, inside, on and outside the horizon; Q*(grad t_s) = 1/f; read-out -hb^T(xi)/r). Version kept at 9 (already above the lock in this run). outside_ga narrowed to the definition of xi in the imported weighted coframe.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,7 +102,7 @@ extraction:
     note: 'GTG restatement: the point p lies in the invertible region of the Schwarzschild gravitational field (hb, Omega) on flat spacetime, the fibre is the background vectors at p, Q_p(x) = Q(hb^{-1}(x)) is the square of the physical vector over x (whose Gram in the static gauge is the derived metric g_p), and the dual norm is Q^*_p(xi) = Q(hb^T(xi)), the derived cometric. Clauses (1)-(4) unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
 outside_ga:
   kind: other
-  why: 'Clause (4) and the proof work with the weighted Painleve-Gullstrand coframe and the cometric components ((g_p^{-1})^{tt} = 1/f, (g_p^{-1})^{rr} = -f) of the sheaf construction, whose GTG reading Q*_p(k) = Q(hb^T(k)) is stated; the weighted coframe is a construction on the degenerate cometric, outside the invertible region (reader R11).'
+  why: 'Clause (4) names the generator xi by its one-form in the weighted Painleve-Gullstrand coframe of the imported sheaf theorem (T4 Thm 8.7), a construction on the degenerate cometric at E outside the invertible region; the computation itself is in GA (xi a background gradient with physical covector hb^T(xi) = -sqrt(r) e_r).'
 ---
 
 ## formal

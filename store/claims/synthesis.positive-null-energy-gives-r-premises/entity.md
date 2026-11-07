@@ -41,6 +41,10 @@ credit:
   role: 'GA rewrite (surface gravity as (K.D)K)'
   version: 8
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, restated clauses marked with their premise-free home at Leon''s decisions'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -90,6 +94,10 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 8 (already raised in this run). Decision item E11 (routine; no retirement): clauses (i), (ii) restate synthesis.null-vacuum-on-a-horizon-generator (ii), (iii) after the 7 November split; a marked Restatement sentence in the formal names the premise-free home so counts take each once (the uses edge already exists). The store has no clause-level restates link, so the build''s restatement count is unchanged; the marking is in the text.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -155,6 +163,8 @@ Let $\mathcal{H}$ be one of: (a) the future event horizon of the eternal (Kruska
 \end{enumerate}
 
 \emph{Beyond one flat chart.} The whole generator of the eternal horizon (case (a)) and of the de Sitter cosmological horizon (case (b)), through its bifurcation surface, is global and is not carried by a single gravitational field $(\hb, \Omega)$ on flat spacetime; the statements above that hold on the invertible region are in GTG, and the whole generator, through its bifurcation surface, is read on the manifold assembled from the derived metric's charts.
+
+\emph{Restatement.} Clauses (i) and (ii) restate clauses (ii) and (iii) of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}, which assumes no premise and is their home in the store; they are kept here for the horizon cases (a) to (c) and counted once, at the home.
 
 ## technical
 The series carries three thermal premises of one shape: (R) at the black-hole horizon, (R$_{\Lambda}$) at the cosmological horizon, and (R$_{\mathrm{loc}}$) on every local Rindler horizon. Each asserts that boundary modes are KMS for a boost at the period where the boost's Euclidean section is smooth. This result restates them on the continuum of a horizon's null generators and derives that restated content from one premise with no temperature in it. Place the modes on the generators, with the affine null translations along them. Premise (N$_{+}$) asks that a gauge-invariant quasi-free state be a ground state for those translations: invariant, with positive generator. That fixes the state as the filled sea of every generator. Restricted to either side of the edge, it is the continuum I-state at rapidity period exactly $2\pi$ for the boost that is future-directed on that side. The local-horizon premise and the Einstein derivation use the past side, the generators ending on the edge.

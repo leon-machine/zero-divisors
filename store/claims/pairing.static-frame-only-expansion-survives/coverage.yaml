@@ -22,6 +22,18 @@ functions:
     clauses:
     - '"Every class vanishes at F = 0, and at r = 25/16 (F = 3/5) the transverse class is -48/125"'
     omits: -48/125 is an exact value at r = 25/16; vanishing at F = 0 (the singular horizon, where the jets divide by F) is reached only through the polynomial -F(1 - F^2) at M = 1/2, matched at the sample points F = 3/5 and 4/5
+  check_gtg_torsion_solution_is_the_stated_gauge_field:
+    kind: sampled
+    clauses:
+    - '"the bivectors Omega(e_c) reproduce the covariant derivatives (e_c . D) e_b = omega^a_b(e_c) e_a for all b, c"'
+    omits: four rational points; the gauge field is solved from the coframe by the torsion equation (rank 24, unique) and compared with the four displayed bivectors
+  check_gtg_classes_with_the_central_unit_of_cl23:
+    kind: sampled
+    clauses:
+    - '"pv(Omega(e_0)) = pv(Omega(e_1)) = 0, pv(Omega(e_2)) = -sqrt f/r, pv(Omega(e_3)) = -I_5 sqrt f/r"'
+    - '"pv(Omega(l)) = pv(Omega(n)) = pv(Omega(m)) = 0 and pv(Omega(mb)) = -2 sqrt f/r"'
+    - '"at r = 25/16 (F = 3/5) the transverse class is -48/125"'
+    omits: the same four points; classes computed in Cl(2,3) with I_5 central, from the solved gauge field
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

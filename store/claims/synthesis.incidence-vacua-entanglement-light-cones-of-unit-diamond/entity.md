@@ -5,7 +5,7 @@ version: 2
 title: 'Incidence vacua are maximally entangled on the unit diamond''s light cones'
 status: proved
 region: synthesis
-subject: thermality
+subject: conformal-spacetime
 tags: [entanglement, conformal-model, modular-theory, spinor-modules, needs-continuum]
 proposed_by:
   kind: ai
@@ -34,6 +34,10 @@ lineage:
   motivated_by:
   - synthesis.incidence-vacua-thermofield-real-capacity
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Subject moved from thermality to conformal-spacetime (DECISIONS H12, xsubject-R02 item 6): its logical neighbours are in conformal-spacetime (I213). Not a substantive field; no version change.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

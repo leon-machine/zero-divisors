@@ -25,7 +25,7 @@ derivations:
   uses:
   - tower.grade-twist-when-it-inner@4
   - tower.volume-elements-planes@5
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - std-algebra.existence-uniqueness@1
   - std-algebra.blade-basis@1
   proof: proof-main.tex

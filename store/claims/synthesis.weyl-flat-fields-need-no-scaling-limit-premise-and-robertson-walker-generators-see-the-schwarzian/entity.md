@@ -35,7 +35,7 @@ derivations:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - field-theory.second-quantisation@5
   - synthesis.imported-gtg-dictionary@1

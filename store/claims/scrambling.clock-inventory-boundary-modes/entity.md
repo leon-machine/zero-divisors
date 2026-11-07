@@ -29,7 +29,7 @@ derivations:
   - scrambling.boundary-mode-space-matrix@4
   - scrambling.imported-modes-modular-inventory@5
   - singularity.euclidean-rotor-where-it-lies@5
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

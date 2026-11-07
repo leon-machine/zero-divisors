@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, citation typography in the formal level'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: 'W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics
@@ -36,6 +40,10 @@ locators:
   label: ''
   line: 221
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 2 (already raised in this run). Decision item E9 (routine; no retirement): equivalent_to standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1 added. An exact duplicate of the standard-model Fact, which is kept as the home; a later dedupe pass may retire this one under POLICIES section 4.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -48,6 +56,8 @@ extraction:
   typing:
     by: ai-typing-pass
     note: External-ingredients record; levels only.
+equivalent_to:
+- standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
 ---
 
 ## formal

@@ -11,6 +11,18 @@ functions:
     kind: sampled
     clauses: ["(3)"]
     omits: "one diagonal model with a simple pole in one leg at three values of s; tameness in general, and the claim that the topological theta-terms are what crosses, are not tested"
+  check_gtg_star_free_density_is_a_divergence:
+    kind: sampled
+    clauses: ["(1) second route, with forms as multivector fields"]
+    omits: "two su(2)-valued polynomial fields (one abelian), not every simple factor; the first route is structural and untested"
+  check_gtg_hodge_star_is_the_cometric_duality:
+    kind: sampled
+    clauses: ["(2)"]
+    omits: "three sample fields, two scale factors and one boost; gravity's action being pre-metric rests on the cited theorem"
+  check_gtg_star_has_no_limit_at_a_corank_one_wall:
+    kind: sampled
+    clauses: ["(3)"]
+    omits: "one diagonal model approaching the wall at three values of s; tameness in general and that the theta-terms are what crosses are not tested"
 untouched_premises:
   dark-energy.frozen-point-makes-stelle-west-vector: "used only for the pre-metric character of gravity's action, whose content is checked in that entity"
 judge:

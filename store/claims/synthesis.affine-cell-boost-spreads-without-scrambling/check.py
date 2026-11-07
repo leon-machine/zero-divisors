@@ -46,7 +46,6 @@ def support(f):
 def check_affine_cells_spread_at_rate_kappa():
     premise("synthesis.phase-flow-is-time-rotor-flow-kms-continuation")
     premise("angle.imported-theorems-deliver-their-hypotheses")
-    premise("scrambling.spreading-law-chaos-bound-saturated")
     # (a) isometry on the cells that stay inside the window, and the flow property
     for j in (0, 1, 3, 7):
         f = chi(j)

@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   - state-selection.euclidean-partner-curvature-selected@5
   proof: proof-main.tex
 checked_by:

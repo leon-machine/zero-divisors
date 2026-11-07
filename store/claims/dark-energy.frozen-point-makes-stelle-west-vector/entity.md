@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Omega_T in Cl(2,4), DI = 0, DV = hb^{-1}(a), reduced field Omega - hb^{-1}(a) ^ V/l^2, eps(I, V, X, Y) = <(X ^ Y) I_4^{-1}>; exact checks on both branches'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: typed
 derivations:
 - name: main
@@ -41,12 +45,20 @@ checked_by:
   ref: check.py::check_stelle_west_datum_and_lorentz_block
 - kind: check
   ref: check.py::check_action_prefactor_expansion_and_invariance
+- kind: check
+  ref: check.py::check_gtg_stelle_west_datum_on_einstein_fields_both_branches
+- kind: check
+  ref: check.py::check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp
 locators:
   paper: T10
   number: Thm 3.1
   label: thm:action
   line: 685
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG and Cl(2,4): D_a I = Omega_T(a) . I = 0 on the Einstein region (the two (Lambda/6) A terms cancel), F_T . I = 0 so F_T is a bivector of I-perp (B = I ^ u + B'''' gives B . I = -Q(I) u); V = n0/2 - (3/Lambda) ninf with I ^ V = e+ ^ e- on both branches, D_a V = hb^{-1}(a); Omega_T(a) = Omega(a) - hb^{-1}(a) ^ V/l^2 exactly, with (A ^ V) x (B ^ V) = l^2 A ^ B giving the Lorentz block R + l^-2 e ^ e; eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}>, the Stelle-West contraction; the Gauss-Bonnet variation through the second Bianchi identity dot-D ^ dot-R = 0; index and form computations kept as a labelled reading. Checked exactly: the existing Cl(2,4) checks and the new check_gtg_stelle_west_datum_on_einstein_fields_both_branches (shared engine, Kottler fields in the PG chart with Lambda = 3/4, 3 and -3/4: P = (Lambda/6) id from the field strength, D I = 0, D V = hb^{-1}(a), Omega_T = Omega - hb^{-1} ^ V/l^2, I ^ V = ninf ^ n0, Q(I) Q(V) = -1, Weyl part nonzero) and check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp (tractor field strength with derivatives on three Kottler fields equals -W and commutes with I and V). This covers the anti-de Sitter branch and a field with Weyl curvature, which the earlier checks did not. Version kept at 6 (already above the lock in this run). outside_ga narrowed to the form display of consequence (2).'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -77,7 +89,7 @@ extraction:
   eqrefs: 2
 outside_ga:
   kind: other
-  why: 'The functional and its variation are written in the language of the MacDowell-Mansouri Fact, as integrals of four-forms built from the frame and curvature forms with the fibre symbol epsilon_{abcd} (its GTG reading is the scalar of the I_4 part of the product of bivector-valued forms); the proof varies those forms.'
+  why: 'Consequence (2) displays the imported expansion of the MacDowell-Mansouri Fact as four-forms (epsilon_abcd R^ab ^ R^cd, e^a ^ e^b ^ R^cd, e^a ^ e^b ^ e^c ^ e^d), the Fact''s own language; the proof computes with eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}> in GA.'
 ---
 
 ## formal

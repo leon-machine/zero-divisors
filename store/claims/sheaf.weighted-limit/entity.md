@@ -24,11 +24,11 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.boosts-generate-exactly-levi-factor@5
   - interior.exact-parallelism-convergence-rate@5
   - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
-  - interior.weighted-limit-theorem@5
+  - interior.kasner-form-interior@6
+  - interior.weighted-limit-theorem@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

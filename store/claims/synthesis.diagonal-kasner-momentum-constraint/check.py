@@ -11,10 +11,15 @@
     s_i t_i = 0, and t_i = 0 exactly at the collisions.
 (c) Exponent fields depending on one coordinate: the explicit scale functions solve the constraint.
 (d) The wall counterterm's scale factor a1 a2 a3.
+(e) The proof's GTG route: the synchronous gauge field hb^{-1}(e_tau) = e0, hb^{-1}(e_i) = A_i e_i built from
+    exact jets (lib/gtg.py), Omega solved from the torsion equation against its closed form, the boost row of
+    the field strength and R_0i = -g_0 . calR(g_i) from the engine's Ricci map; and t = -I3 ((1,1,1) ^ p).
 """
 from fractions import Fraction as F
 from GA import field_solve, field_rank
 from tp_premise import premise
+import GA
+import gtg
 
 # fixed second derivatives (they must not enter R_0i); module level, not test data
 DDP = [[[F(1, 3), F(-2), F(5, 7)], [F(2, 9), F(1), F(-1, 4)], [F(3, 2), F(0), F(1, 5)]],
@@ -187,3 +192,89 @@ def check_counterterm_scale_factor():
         assert sum(p) - 3 == -2
         assert p[0] * p[1] * p[2] * a[0] * a[1] * a[2] == expected
     return True
+
+
+# (e) data for the GTG route: exponent fields on the circle through the parametrisation p(u), u = u(x) a jet
+GTG_DATA = [
+    # (tau0, L, u0, du (3), ddu (3x3 upper), db (3x3: db[k][j] = d_j b_k), ddb, A values)
+    (F(2), F(3, 5), F(1, 2), [F(1, 3), F(-2), F(1, 4)], [F(1, 2), F(0), F(-1, 3), F(2), F(1, 5), F(0)],
+     [[F(1, 2), F(-1), F(2, 3)], [F(0), F(3, 4), F(-1, 5)], [F(2), F(1, 7), F(1)]],
+     [F(1, 3), F(-1, 2), F(2), F(0), F(1, 4), F(-3)], [F(2), F(1, 3), F(5, 4)]),
+    (F(1, 3), F(-7, 4), F(-3, 2), [F(2, 5), F(1), F(-1, 2)], [F(0), F(1, 3), F(2), F(-1), F(0), F(1, 2)],
+     [[F(-1, 3), F(0), F(1)], [F(2, 5), F(-2), F(1, 3)], [F(0), F(1, 2), F(-3, 4)]],
+     [F(0), F(2), F(-1, 3), F(1, 5), F(0), F(1)], [F(3, 7), F(2), F(1)]),
+]
+
+
+def _quad(c0, lin, qd, X, x0):
+    """c0 + sum lin_j (x_j - x0_j) + upper-triangular quadratic qd, as a jet in the labels X."""
+    out = gtg.Jet.const(c0, 4)
+    for j in range(3):
+        out = out + lin[j] * (X[j + 1] - x0[j])
+    idx = [(a, b) for a in range(3) for b in range(a, 3)]
+    for (a, b), c in zip(idx, qd):
+        out = out + c * (X[a + 1] - x0[a]) * (X[b + 1] - x0[b])
+    return out
+
+
+def check_gtg_rotation_gauge_field_and_mixed_ricci():
+    """The proof's GTG route: for hb^{-1}(e_tau) = e0, hb^{-1}(e_i) = A_i e_i with A_k = a_k tau^{p_k}, p on the
+    Kasner circle (p = p(u(x)) exactly) and log tau an independent symbol value L: the torsion equation gives
+    Omega(e_tau) = 0, Omega(e_{x^i}) = -d_tau A_i B_i - sum_j (d_j A_i / A_j) e_i ^ e_j; the boost row of the
+    field strength gives e0 . calR(e_i) = sum_k (1/A_k) d_tau(d_i A_k / A_i); and tau R_0i = -tau A_i e0 .
+    calR(e_i) equals d_i p_i + sum_j (p_i - p_j) d_i b_j for two values of L (the log tau terms cancel)."""
+    premise("dark-energy.variable-exponents-residue-pointwise-corrections-are")
+    ok = True
+    x0 = [F(1, 2), F(-1, 3), F(2)]
+    for (tau0, L, u0, du, ddu, db, ddb, Avals) in GTG_DATA:
+        results = []
+        for Lv in (L, L + 1):
+            X = [gtg.Jet.var(0, tau0, 4, 2)] + [gtg.Jet.var(i + 1, x0[i], 4, 2) for i in range(3)]
+            u = _quad(u0, du, ddu, X, x0)
+            den = 1 + u + u * u
+            p = [(F(0) - u) / den, (1 + u) / den, (u + u * u) / den]
+            dt = X[0] - tau0
+            logt = Lv + dt / tau0 - dt * dt / (2 * tau0 * tau0)
+            A = []
+            for k in range(3):
+                b = _quad(F(0), db[k], ddb, X, x0)
+                A.append(gtg.jexp(b + p[k] * logt, Avals[k]))
+            TH = [[F(0)] * 4 for _ in range(4)]
+            TH[0][0] = F(1)
+            for k in range(3):
+                TH[k + 1][k + 1] = A[k]
+            fld = gtg.Field(TH)
+            ok = ok and fld.torsion_free() and fld.Omega(0) == {}
+            for i in range(3):
+                want = GA.scal(F(0) - A[i].d(0).v, gtg.biv(0, i + 1))
+                for j in range(3):
+                    if j != i:
+                        want = GA.add(want, GA.scal(F(0) - A[i].d(j + 1).v / A[j].v, gtg.biv(i + 1, j + 1)))
+                ok = ok and GA.eq(fld.Omega(i + 1), want)
+            Rc = fld.curvature()
+            row = []
+            for i in range(3):
+                e0R = GA.dot(GA.gen(0), gtg.ricci(Rc, GA.gen(i + 1)), gtg.S13)
+                ratio = [(A[k].d(i + 1) / A[i]) for k in range(3)]
+                boost = sum(((ratio[k].d(0)).v / A[k].v for k in range(3) if k != i), F(0))
+                ok = ok and e0R == boost
+                tR = F(0) - tau0 * A[i].v * e0R                 # tau R_0i, round-sphere-positive sign
+                pv = [x.v for x in p]
+                dpi = [x.d(i + 1).v for x in p]
+                want = dpi[i] + sum((pv[i] - pv[j]) * db[j][i] for j in range(3))
+                ok = ok and tR == want
+                row.append(tR)
+            results.append(row)
+            ok = ok and sum(x.v for x in p) == 1 and sum(x.v * x.v for x in p) == 1
+        ok = ok and results[0] == results[1] and any(x != 0 for x in results[0])
+    # (i) the tangent t = (1,1,1) x p is the dual -I3 ((1,1,1) ^ p) in Cl(3,0)
+    sq3 = GA.sig(3, 0)
+    I3 = GA.mul(GA.mul(GA.gen(0), GA.gen(1), sq3), GA.gen(2), sq3)
+    for pr in ((F(-1, 3), F(2, 3), F(2, 3)), (F(-2, 7), F(3, 7), F(6, 7))):
+        uvec = GA.add(GA.gen(0), GA.gen(1), GA.gen(2))
+        pvec = GA.add(*[GA.scal(pr[k], GA.gen(k)) for k in range(3)])
+        w = GA.scal(F(1, 2), GA.sub(GA.mul(uvec, pvec, sq3), GA.mul(pvec, uvec, sq3)))
+        t = GA.neg(GA.mul(I3, w, sq3))
+        ok = ok and GA.eq(t, GA.add(GA.scal(pr[2] - pr[1], GA.gen(0)), GA.scal(pr[0] - pr[2], GA.gen(1)),
+                                    GA.scal(pr[1] - pr[0], GA.gen(2))))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_rotation_gauge_field_and_mixed_ricci"; return _tp_rv

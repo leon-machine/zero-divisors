@@ -1,9 +1,9 @@
 ---
 id: scrambling.spreading-law-chaos-bound-saturated
 kind: claim
-version: 5
+version: 6
 title: The spreading law, and the chaos bound met, not saturated
-status: proved
+status: conjectured
 region: scrambling
 subject: entropy
 tags: [boundary-modes, recovers-known-physics]
@@ -17,10 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, status lowered to conjectured at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, status lowered to conjectured at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
-  proof: proof-main.tex
+  note: the argument as stored, an order-of-magnitude estimate; its 'follows from' text is kept in proof-main.tex, no longer attached as a proof since the status is conjectured
   uses:
   - scrambling.area-law-test@4
   - scrambling.clock-inventory-boundary-modes@6
@@ -37,12 +45,21 @@ checked_by:
   ref: check.py::check_spreading_threshold_is_log_n
 - kind: check
   ref: check.py::check_rate_is_modular_rate
+lineage:
+  motivated_by:
+  - scrambling.clock-inventory-boundary-modes
+  - scrambling.imported-modes-modular-inventory
+  - scrambling.mode-count
 locators:
   paper: T08
   number: Asm 6.1
   label: asm:spreading
   line: 910
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Leon''s answer 4 (B1): status lowered from proved to conjectured. The spreading law is an order-of-magnitude estimate (the standard doubling estimate under a generic quadratic coupling, ''Tier, declared'' in its own formal level) and its proof is ''Follows from ..., as the source states'', so the proof does not reach the strict standard of proved. The four proved results that cited it as a premise for comparison (synthesis.phase-flow-is-time-rotor-flow-kms-continuation, synthesis.number-diagonal-dynamics-spreads-nothing, synthesis.affine-cell-boost-spreads-without-scrambling, synthesis.boost-evolution-on-generators-is-one-unitary-group) analyse its growth step and do not rest on its truth; their uses edges become text mentions. Status change at Leon''s decision; statement unchanged. Layer-1 consequence of the status change: a conjecture carries no proof text (E108) and needs lineage.motivated_by (E107), so derivation main keeps its premises and a note but no longer attaches proof-main.tex (the file is kept, unchanged), and lineage.motivated_by names the inventory, the modular inventory and the mode count that prompted it.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

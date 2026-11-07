@@ -29,12 +29,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
-  - interior.kasner-form-interior@5
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
+  - interior.kasner-form-interior@6
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - dark-tower-matter.five-dimensional-content@5
   - dark-tower-matter.five-dimensional-towers@4
-  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
+  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2

@@ -36,13 +36,13 @@ derivations:
   - transport.fusion-occurs-most-once@5
   - transport.minimality@4
   - transport.no-fourth-rule@4
-  - transport.no-go-level-elements@4
+  - transport.no-go-level-elements@5
   - transport.no-transport-terminates@4
   - transport.noinverse@4
   - transport.one-generator-minimal-minimal-completions-classified@5
   - transport.pinching-kernel@3
   - transport.representation-independent-minimality-completion@4
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - transport.rule-2-ideal-fusion-sharp-form@4
   - transport.swap-rescale-normal-form@4
   - transport.totality@3

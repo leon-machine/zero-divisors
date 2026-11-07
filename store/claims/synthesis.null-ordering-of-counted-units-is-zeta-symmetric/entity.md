@@ -33,7 +33,7 @@ derivations:
   uses:
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
   - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@2
-  - synthesis.counted-unit-energy-at-half-offset@2
+  - synthesis.counted-unit-energy-at-half-offset@3
   - synthesis.imported-theta-function-identities@2
   - synthesis.hole-mass-is-ground-energy-label@3
   - synthesis.residue-from-mode-entropy@4

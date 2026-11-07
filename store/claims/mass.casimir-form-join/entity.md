@@ -25,6 +25,10 @@ credit:
   role: 'GA rewrite (Casimir contraction with the reciprocal basis)'
   version: 8
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the grading element''s matrix and the ambient basis named separately (wording)'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.mass.grip-mass-composite
@@ -55,6 +59,10 @@ locators:
   label: prop:casimir
   line: 766
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Wording in the proof (DECISIONS H5, ga-issues-R10 item 6): ''E = diag(-1/2, -1/2, 1/2, 1/2), the grading element, in the basis n_inf, n_0, x-slot'' mixed a matrix on CS with the ambient basis; it now says E is diag(-1/2, -1/2, 1/2, 1/2) on CS in the frame e_1, ..., e_4, and that the sum is over the ambient basis n_inf, n_0, x-slot. No content change.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

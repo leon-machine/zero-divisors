@@ -54,7 +54,7 @@ derivations:
 - name: main
   uses:
   - synthesis.one-loop-qed-in-the-spacetime-algebra@4
-  - field-theory.coupled-system-tree-level@3
+  - field-theory.coupled-system-tree-level@4
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
   - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1

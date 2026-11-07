@@ -1,7 +1,7 @@
 ---
 id: rungs.generators-outside-gauge-algebra
 kind: claim
-version: 7
+version: 8
 title: The generators outside the gauge algebra
 status: proved
 region: rungs
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-rungs, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, which-unit sentence in the proof at Leon''s decisions'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -39,6 +43,10 @@ locators:
   label: prop:outside
   line: 291
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 7 -> 8. Decision item C3 (routine): the proof''s unit sentence (''the imaginary unit is I_4, which commutes with every mode operator'') now says which unit acts where: on the five-mode Fock module numbers, I_4 among them, act as scalars (U1); as Clifford elements I_4 commutes with the rung vectors, and the pair vectors of V_C (with which obj.standard-model.two-rung-module-sectors-slot-components and standard-model.ten-transported-ambient-space-doublets-are identify the ten) are complexified by I_7 (std-algebra.complexification-is-the-odd-extension), which is not used here. A which-unit sentence; it identifies nothing and the mathematics is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

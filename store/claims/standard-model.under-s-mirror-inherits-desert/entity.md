@@ -1,7 +1,7 @@
 ---
 id: standard-model.under-s-mirror-inherits-desert
 kind: claim
-version: 5
+version: 6
 title: Under (S), the mirror inherits the desert
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, mention of the coupling premise brought in line with Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.standard-model.one-threshold-spectrum-admissible
@@ -48,6 +52,10 @@ locators:
   label: cor:mirror
   line: 1317
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Leon''s answer 2 (C1): the proof''s mention of the mirror''s coupling values now says the common ceiling and coupling are the store''s own premise (synthesis.common-ceiling-coupling-premise), not T14''s Premise P2, which as scoped does not reach a coupling; the corollary still asserts nothing about coupling values and takes no edge to it. Wording of a mention.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

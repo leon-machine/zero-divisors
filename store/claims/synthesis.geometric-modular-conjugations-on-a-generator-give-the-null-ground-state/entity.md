@@ -33,6 +33,10 @@ credit:
   role: 'GA rewrite (the complex field named by its unit)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, repin after the premise repoint at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -66,7 +70,7 @@ derivations:
   - synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion@2
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@2
   - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@3
-  - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state@3
+  - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state@4
   - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex
 checked_by:
@@ -88,6 +92,10 @@ lineage:
   - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
   - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 5 (already raised in this run). Decision item D3 (routine): pin to synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state moved 3 -> 4, the version whose premises are repointed to the premise-free null-vacuum and stationary-generator results, so (N+) no longer reaches this result through it; that statement is unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

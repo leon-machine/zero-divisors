@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.boosts-generate-exactly-levi-factor@5
   - interior.covariant-form-vacuum-equations@5
   - interior.exact-parallelism-convergence-rate@5
   - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
+  - interior.kasner-form-interior@6
   - interior.metric-parallelism-trace-schouten-condition@6
   - interior.non-null-stabilisers-section-they-act@4
   - interior.scale-tractor-leaves-cone@7

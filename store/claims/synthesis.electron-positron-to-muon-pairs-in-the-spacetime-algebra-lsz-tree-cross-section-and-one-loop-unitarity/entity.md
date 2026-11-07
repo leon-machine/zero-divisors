@@ -40,7 +40,7 @@ derivations:
 - name: main
   uses:
   - field-theory.second-quantisation@5
-  - field-theory.coupled-system-tree-level@3
+  - field-theory.coupled-system-tree-level@4
   - synthesis.one-loop-qed-in-the-spacetime-algebra@4
   - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1

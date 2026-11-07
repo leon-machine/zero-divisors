@@ -3056,16 +3056,6 @@ Weinberg1974:
   doi: null
   first_in: synthesis
   latex: S. Weinberg, Gauge and global symmetries at high temperature, Phys. Rev. D 9 (1974), 3357--3378.
-WeinbergQFT1:
-  citation: 'S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University
-    Press (1996).'
-  doi: null
-  first_in: T12-lepton
-  latex: 'S.~Weinberg,
-
-    \emph{The Quantum Theory of Fields, Vol. 2: Modern Applications},
-
-    Cambridge University Press (1996).'
 WeinbergQFT2:
   citation: 'S. Weinberg, The Quantum Theory of Fields, Vol. 2: Modern Applications, Cambridge University
     Press (1996).'

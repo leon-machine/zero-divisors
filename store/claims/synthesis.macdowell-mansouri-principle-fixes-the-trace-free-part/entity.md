@@ -25,6 +25,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i)-(iii): frame equation E(a) = 2 d_b ^ F(I(a ^ b)) = 2(G(a) + Lambda a) I from the curvature operator; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -53,6 +57,10 @@ checked_by:
   ref: check.py::check_on_shell_schouten_is_the_stored_tractor_derivative
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_frame_trivector_is_twice_dual_einstein_plus_lambda
+- kind: check
+  ref: check.py::check_gtg_frame_equation_on_gauge_fields_and_dilation_trace
 lineage:
   motivated_by:
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
@@ -60,6 +68,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof of (i) to (iii) rewritten in GTG: the frame equation as the trivector-valued function E(a) = 2 d_b ^ F(I(a ^ b)) of the curvature operator F = calR - (Lambda/3) id, with the GA identities d_b ^ calR(I(a ^ b)) = calG(a) I (Weyl part by W(IB) = I W(B) and trace-freeness, Kulkarni-Nomizu part on the ten basis symmetric maps) and d_b ^ (I(a ^ b)) = -3 a I, so E(a) = 2(calG(a) + Lambda a) I; rank 10 because E factors through the Einstein map; the dilation trace d_a ^ E(a) = 2(4 Lambda - calR) I. (iv) and the Reading unchanged; the three-form and index computation kept as a labelled reading. Checked exactly: check_gtg_frame_trivector_is_twice_dual_einstein_plus_lambda (identity operator; the ten Kulkarni-Nomizu operators; Weyl duality and d_b ^ W(I(a ^ b)) = 0 on the Weyl operators of Schwarzschild, Kasner and a non-vacuum synchronous gauge field; the component three-form of the Fact equals 2 d_b ^ F(I(a ^ b)) and 2(G + Lambda) I on the three sample curvatures at three Lambda) and check_gtg_frame_equation_on_gauge_fields_and_dilation_trace (de Sitter gauge field: E = 0 at its Lambda, not at Lambda + 1; rank 10 on the Ricci part; d_a ^ E(a) = 2(4 Lambda - calR) I on FLRW and Schwarzschild gauge fields). Version kept at 3 (already above the lock in this run). outside_ga removed: the formal is GA-primary with the components as labelled readings, and the proof and rank count are now in GA.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,9 +104,6 @@ extraction:
     route: same field equations, different entropy, since the Wald entropy of this action carries the Euler
     term that (Loc) excludes. Cross-subject: the principle comes from the dark-energy and frozen-point results,
     not from the Einstein-route claims the problem lists.
-outside_ga:
-  kind: other
-  why: 'The result is stated and proved in the MacDowell-Mansouri curvature components F_{abcd} = R_{abcd} - (Lambda/3)(g_ac g_bd - g_ad g_bc), the four-forms epsilon_{abcd} e^b ^ F^{cd} and the tractor slots; the GTG operator F(B) = -(R(B) - B/l^2) is their reading (dictionary row 13), and the rank counts are made on the components.'
 ---
 
 ## formal

@@ -20,7 +20,7 @@ functions:
     clauses: ["(iii) a set of points bounded below does not suffice: a symbol with the vacuum's compression on every [a, oo), a >= b, can differ from it"]
     omits: "one finite model on six sites with a rational rank-3 projector standing for the vacuum symbol; the continuum statement is the product construction in the text"
 untouched_premises:
-  synthesis.positive-null-energy-gives-r-premises: 'stored theorem cited for the identification of the null vacuum as the (N+) state and its I-state restriction at the edge; nothing is computed from it'
-  synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit: 'stored theorem cited for the one-point counterexample in (iii); nothing is computed from it'
+  synthesis.null-vacuum-on-a-horizon-generator: 'premise-free theorem cited for the null vacuum as the unique ground state of the null translations and its I-state restriction at the edge; nothing is computed from it'
+  synthesis.stationary-generator-states-and-the-edge-scaling: 'premise-free theorem cited for the one-point counterexample in (iii), its half-thermal products; nothing is computed from it'
   synthesis.de-sitter-horizon-translation-is-conformal-null-rotation: 'stored theorem cited for comparison in the argued clause (v); nothing is computed from it'
   angle.imported-theorems-deliver-their-hypotheses: 'imported fact (Borchers, Wiesbrock) cited for context in the novelty statement; nothing is computed from it'

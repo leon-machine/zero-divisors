@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@5
+  - interior.kasner-form-interior@6
   - sheaf.weights-are-forced-are-kasner-exponents@5
   - sheaf.kasner-data-interior@2
   - scrambling.slice-volume-exactly-per-unit-killing@4

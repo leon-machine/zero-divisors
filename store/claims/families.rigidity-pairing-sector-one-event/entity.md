@@ -25,6 +25,10 @@ credit:
   role: GA rewrite (cross products as the dual of the outer product)
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the two uses of epsilon distinguished (notation)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -50,6 +54,10 @@ locators:
   label: prop:rigidity
   line: 785
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5, ga-matrices item 3): the entity writes epsilon for the 2 x 2 spinor form and epsilon_{ijk} for the structure constants; the formal now says which is which. No content change.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,7 +100,7 @@ v_{k} \;=\; \langle \hat\Omega_{k}\rangle \;=\; 2\,\sinh r\cosh r\;n_{k}, \qquad
 which at the universal point reads $v_{k} = -I_4\sqrt{\tfrac{2}{3}}\,\sinh r\cosh r\,\bigl(1 + e^{I_4\chi}\zeta^{k}\bigr)$ and in general $v_{k} \propto 1 + \lambda e^{I_4\chi}\zeta^{k}$.
 
 ## technical
-Every pairing the descent can write in the antisymmetric sector has family factor $G = [a]_{\times}$, the contraction $w \mapsto w \cdot (I_{f}a) = -I_{f}(a \wedge w)$ by the family bivector dual to a complex family vector $a$ ($I_{f}$ the family pseudoscalar, components read in $\mathrm{span}\{1, I_4\}$), and $GG^{\dagger}(w) = |a|^{2}w - \bar{a}\,(a \cdot w)$ has spectrum $\{|a|^{2}, |a|^{2}, 0\}$ for every $a$. Tensoring with the spinor $\varepsilon$, the Takagi spectrum of the full pairing is $\{\sigma, \sigma, \sigma, \sigma, 0, 0\}$ with $\sigma = \tau|a|$, at every $(\lambda, \chi)$.
+Every pairing the descent can write in the antisymmetric sector has family factor $G = [a]_{\times}$, the contraction $w \mapsto w \cdot (I_{f}a) = -I_{f}(a \wedge w)$ by the family bivector dual to a complex family vector $a$ ($I_{f}$ the family pseudoscalar, components read in $\mathrm{span}\{1, I_4\}$), and $GG^{\dagger}(w) = |a|^{2}w - \bar{a}\,(a \cdot w)$ has spectrum $\{|a|^{2}, |a|^{2}, 0\}$ for every $a$. Tensoring with the spinor $\varepsilon$ (without indices, the $2 \times 2$ spinor form; $\varepsilon_{ijk}$ with indices are the structure constants), the Takagi spectrum of the full pairing is $\{\sigma, \sigma, \sigma, \sigma, 0, 0\}$ with $\sigma = \tau|a|$, at every $(\lambda, \chi)$.
 
 The freezing is therefore one Bogoliubov event with a single depth $r = \sigma$, which for the two channels is $r = \tau\sqrt{1 + \lambda^{2}}$; the two channels have equal gain to all orders; and the coherent face vector is $v_{k} = 2\sinh r\cosh r\,n_{k}$ with $n = a/|a|$, which in general is proportional to $1 + \lambda e^{I_4\chi}\zeta^{k}$.
 

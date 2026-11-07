@@ -26,9 +26,9 @@ derivations:
   - odd-extensions.four-extensions-oriented-pair@5
   - dark-matter.towers-are-residues-single-clock-filter@5
   - dark-matter.nesting@3
-  - rule2.where-obstruction-sits-commuting-square@5
+  - rule2.where-obstruction-sits-commuting-square@6
   - rule2.which-residues-obstruct-which-way@6
-  - rule2.rule-2-plane@3
+  - rule2.rule-2-plane@4
   - odd-extensions.two-towers-one-curved-universe@6
   proof: proof-main.tex
 checked_by:

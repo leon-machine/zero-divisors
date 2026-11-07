@@ -23,10 +23,10 @@ derivations:
   uses:
   - singularity.area-law-test@5
   - synthesis.untuned-fit-caps-lightest-heavy-neutrino@1
-  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@2
+  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-string-gas-thermal-spectrum-and-conversion@1
-  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@1
+  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@2
   proof: proof-main.tex
 checked_by:
 - kind: check

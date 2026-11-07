@@ -11,6 +11,19 @@ functions:
     kind: sampled
     clauses: ["(ii) s(lambda) = -3M/(2 Lambda r^3), delta A = 0, delta Q = 0", "(ii) Delta S closed form, positive outward and negative inward", "(ii) first-order rate +-9M/(2 Lambda r0^4)", "(iii) defect (k.grad s) lambda_0 of the integrated reading"]
     omits: "three (M, Lambda, r0) points, two lambda_0 values, four marching steps; the O(lambda_0^2) remainder is not tested beyond the jet derivative; (iii) consequences (refutation condition (a), failure of (H1), no d_iS >= 0 reading, other entropy functionals) are logical, not computed"
+  check_gtg_sds_field_strength_on_radial_generators:
+    kind: sampled
+    clauses:
+    - "(i) for the de Sitter field every plane has K = Lambda/3, so s = 0"
+    - "(ii) R(k, A, k, B) = 0 and R(k, A, B, C) = 0 along the generator"
+    - "(ii) s(lambda) = -3M/(2 Lambda r(lambda)^3)"
+    omits: "three points of the static region from the PG gauge field; tilt invariance at three tilts; the Sachs integration along the generator is in the earlier function"
+  check_gtg_horizon_cross_section_surface_gravity_and_value:
+    kind: sampled
+    clauses:
+    - "(i) on the cross-section, xi = hb^{-1}(e_t) is null with (xi . D) xi = kappa_b xi, kappa_b = f'(r_b)/2"
+    - "s gives A/4 - 3 pi/Lambda"
+    omits: "three rational horizons; pi carried as a formal factor"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

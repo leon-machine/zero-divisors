@@ -56,6 +56,10 @@ locators:
   label: prop:counterterm
   line: 935
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'DECISIONS A16 checked, no change needed: the proposed fix assumed the omega^{ab} were the Cartan forms with minus Omega on vectors. Exact computation (lib/GA.py, lib/gtg.py, Fractions, at p = (-1/3, 2/3, 2/3) and (-2/7, 3/7, 6/7)): with the Definition''s Omega(hb(gamma_i)) = -(p_i/tau) B_i, B_i = gamma_0 gamma_i (gtg C10), the cubic term 2 <Omega(e_1), Omega(e_2) x Omega(e_3)>_eps with <X, Y>_eps = 4 <X I_4^{-1} Y> and background factors tau^{p_i} gives 8 p1 p2 p3 tau^{-2}, the stated value; and the standard Cartan forms of the Kasner coframe (de^a = -omega^a_b ^ e^b) are omega^{i0} = (p_i/tau) e^i, whose assembly (1/2) omega^{ab} gamma_a ^ gamma_b is that same Omega (the check''s components). So the identification the forms rewriter wrote (omega^{ab} the components of Omega in the Definition''s sign) is right and the value +8 p1 p2 p3 stands; the right-action values would give -8.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -27,7 +27,7 @@ derivations:
   - interior.schwarzschild-de-sitter-weighted-limit@7
   - singularity.stretched-singularity-count@7
   - scrambling.epoch-modular-period-two-unknowns-become@5
-  - synthesis.sds-clausius-fixes-area-constant@4
+  - synthesis.sds-clausius-fixes-area-constant@5
   - synthesis.residue-from-mode-entropy@4
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.q-splits-maximum-entropy-affine-weights@5

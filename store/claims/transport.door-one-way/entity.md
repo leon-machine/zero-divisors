@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - transport.classification-real-clifford-algebras@3
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - transport.rule-2-ideal-fusion-sharp-form@4
   proof: proof-main.tex
 checked_by:

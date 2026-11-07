@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: the tractor gauge field on the Einstein region as Omega(a) + u ^ hb^{-1}(a), its field strength -W computed in Cl(2,4), the kernel argument on Cl(2,4) vectors; slot route kept as a labelled reading'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 derivations:
 - name: main
@@ -36,11 +40,17 @@ checked_by:
   ref: check.py::check_parallel_tractors_are_multiples_of_I
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_tractor_field_strength_is_minus_weyl
 lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
   - dark-energy.point-infinity-has-no-physical-fluctuation
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: on the Einstein region P = (Lambda/6) id, so Omega_T(a) = Omega(a) + u ^ hb^{-1}(a) with the constant u = (Lambda/6) n0 - ninf, Q(u) = -Lambda/3; its field strength is R(a ^ b) + u ^ (torsion) + (Lambda/3) hb^{-1}(a) ^ hb^{-1}(b), so F_T(hb(X)) = -calR(X) + (Lambda/3) X = -W(X) (no Cotton or ninf block); a parallel I'' has W(X) . mu'' = 0, the no-kernel hypothesis gives mu'' = 0 near x0, and D^T_a I'' = (a . grad sigma'') ninf + (a . grad rho'') n0 - (u . I'') A forces I'' = c I. The examples use the store-sign Schwarzschild operator; the slot computation is kept as a labelled reading. New check check_gtg_tractor_field_strength_is_minus_weyl (library tractor field strength of the static Schwarzschild-de Sitter field at Lambda = 3/7 and 0 on exact jets equals -W with spacetime blades only, rank-four kernel map, a type N Weyl map with k in its kernel, the algebraic step); runcheck 4/4, check4 clean on a proposals copy. The proof cites the dictionary Fact for the Weyl decomposition, not in uses (a links question left for Leon). outside_ga removed: no stand-in remains. Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -75,9 +85,6 @@ extraction:
     the statement is tractor calculus; the transport reading is that one parallel frozen point is all
     the curved geometry permits. Whether every tower's frozen point is parallel for the same
     connection (shared conformal structure) is the remaining structural input and a decision for Leon.
-outside_ga:
-  kind: other
-  why: 'The proof integrates the tractor parallelism equations in scale-g components (Schouten tensor P_ab, Weyl tensor W_{cabd}, commutators of nabla_a); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component integration is the evidence (reader R05).'
 ---
 
 ## formal

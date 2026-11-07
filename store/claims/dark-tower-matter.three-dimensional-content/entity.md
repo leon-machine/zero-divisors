@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-tower-matter.gauge-algebras@5
-  - dark-matter.two-families-are-two-chiralities@6
+  - dark-matter.two-families-are-two-chiralities@7
   proof: proof-main.tex
 checked_by:
 - kind: proof

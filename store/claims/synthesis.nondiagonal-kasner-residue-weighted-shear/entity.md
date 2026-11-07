@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: the boost block from the torsion equation on the constant physical frame; Ricci and constraint along gamma_0'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -43,10 +47,16 @@ checked_by:
   ref: check.py::check_counterexample_rate
 - kind: check
   ref: check.py::check_residue_relations_on_kasner_circle
+- kind: check
+  ref: check.py::check_gtg_torsion_equation_gives_the_boost_block
 lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: the field hb^{-1}(e_tau) = gamma_0, hb^{-1}(e_i) = sum_l E_li gamma_l, E = Delta G theta0; the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) gives, from its a = 0 part, no boost in omega(gamma_0) and a symmetric boost block, and from the gamma^0-legs of a = l, omega(gamma_m) = -(1/tau) sum_l sym(B)_lm gamma_0 ^ gamma_l + spatial and omega(gamma_0) = (1/tau) antisym(B) (the definite sign of the statement''s ''up to the sign convention''); the second fundamental form as A -> (A . D) gamma_0 = sym(B)/tau in the physical frame; (iv) through gamma_0 . calR(gamma_0) = d_tau tr K + tr K^2 and -2 gamma_0 . calG(gamma_0) = (tr K)^2 - tr K^2 + s R3 in the store sign. Cartan forms and coordinate K kept as labelled readings; (ii), (iii) unchanged (matrices of real components of linear maps). Original proof kept as orig-proof-main.tex. New exact check check_gtg_torsion_equation_gives_the_boost_block (engine-solved rotation-gauge field at tau0 = 1 and 2^7, three shears, x-dependent theta0: boost block, omega(gamma_0), (gamma_m . D) gamma_0; on flat slices the Ricci 00 and constraint identities), which computes the connection identification the coverage judge had listed as argued only. outside_ga withdrawn: no stand-in remains.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -57,9 +67,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the Kasner-like metric is the derived metric of a gravitational field on flat spacetime; the Levi-Civita connection is its rotation-gauge field in connection one-forms of the orthonormal coframe (with a note that the matrix Omega of the statement is the coframe''s logarithmic rate, not the rotation-gauge field); Ric = Lambda g becomes R(a) = Lambda a. Clauses (i)-(iv) and the closing paragraph unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact. Check entries synced with check.py: +1, -1 (added check_residue_relations_on_kasner_circle; removed check_residue_field_equations). Version 2 -> 3. check_boost_block_identity strengthened: (tau d_tau E) E^{-1} = B and tau K in the orthonormal frame = sym(B) asserted entrywise at the 12 sample cases; check_residue_field_equations renamed check_residue_relations_on_kasner_circle (it tests the residue relations only); docstrings (a), (d) reworded.'
-outside_ga:
-  kind: other
-  why: 'The result works with connection one-forms omega in a coframe e, the matrix G of the derived metric and the extrinsic-curvature matrix K (traces tr K^2, tr R); the matrix and form computation is the content.'
 ---
 
 ## formal

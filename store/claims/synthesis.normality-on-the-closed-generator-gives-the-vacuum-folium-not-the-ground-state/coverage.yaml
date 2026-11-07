@@ -31,5 +31,5 @@ functions:
     - (vi) conjugated translations and dilations have equal slopes at both ends and change the vacuum by a square-integrable kernel on the far blocks
     omits: the bounded and mixed blocks are estimated in the proof, not checked
 untouched_premises:
-  synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit: enters through clause (iv) of the local-normality theorem, which the checks reach by premise()
+  synthesis.stationary-generator-states-and-the-edge-scaling: enters through clause (iv) of the local-normality theorem, which the checks reach by premise()
   synthesis.imported-haag-local-normality: imported principle cited in the reading; the checks verify the covering, disjointness and implementability statements directly

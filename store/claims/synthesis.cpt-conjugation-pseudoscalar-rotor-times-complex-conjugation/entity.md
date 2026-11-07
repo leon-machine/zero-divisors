@@ -33,7 +33,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-matter.two-families-are-two-chiralities@6
+  - dark-matter.two-families-are-two-chiralities@7
   - singularity.euclidean-rotor-where-it-lies@5
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - std-algebra.involution-properties@1

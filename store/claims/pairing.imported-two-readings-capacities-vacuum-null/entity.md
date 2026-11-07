@@ -25,7 +25,7 @@ derivations:
   - one-relation.spacetime-manifold-vacuum-lines@6
   - one-relation.two-capacities-three-consequences@6
   - one-relation.two-presentations@5
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

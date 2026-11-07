@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.imported-towers-clock
 kind: claim
-version: 4
+version: 5
 title: 'Imported: the towers and the clock'
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: fact:towers
   line: 407
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item E9 (routine; no retirement): equivalent_to dark-matter.imported-eight-towers-mod-8-clock@4 added. It restates the dark-matter Fact, which is kept as the home.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -55,6 +63,8 @@ extraction:
     by: ai-typing-pass
     note: The three uses are exactly the cited provenance and are kept; mod-8 periodicity is classical
       but no imported periodicity claim exists in the store, so no standard-route derivation was added.
+equivalent_to:
+- dark-matter.imported-eight-towers-mod-8-clock@4
 ---
 
 ## formal

@@ -227,3 +227,97 @@ def check_residue_relations_on_kasner_circle():
     assert sum(Q) ** 2 - sum(x * x for x in Q) == F(18, 49)
     assert trR - trR2 == 0 and trR ** 2 - trR2 == 0 and P[0] * P[1] * P[2] == F(-36, 343)
     return True
+
+
+# ---------------------------------------------------------------------------
+# GTG proof (2026-11-07): the gravitational field hb^{-1}(e_tau) = gamma_0, hb^{-1}(e_i) = sum_l E_li gamma_l with
+# E = Delta G theta0, on flat spacetime (labels tau, x1, x2, x3); its rotation-gauge field solved exactly from
+# the torsion condition by the engine. The torsion equation, read on the constant physical frame, gives
+#   omega(gamma_m) = -(1/tau) sum_l sym(B)_lm gamma_0 ^ gamma_l + (a spatial rotation part),
+#   omega(gamma_0) = (1/tau) sum_{l<m} antisym(B)_lm gamma_l ^ gamma_m,   (gamma_m . D) gamma_0 = (1/tau) sum_l sym(B)_lm gamma_l,
+# also for x-dependent theta0; and on flat slices (constant theta0) the store-sign Ricci and Einstein maps give
+#   gamma_0 . calR(gamma_0) = d_tau tr K + tr K^2,   -2 gamma_0 . calG(gamma_0) = (tr K)^2 - tr K^2,   K = sym(B)/tau.
+# tau0 = 1 or 2^7, where every power tau^{p_l} (p_l in Z/7) is rational.
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+GTG_P = [F(-2, 7), F(3, 7), F(6, 7)]
+GTG_N_UP = [[0, 1, 2], [0, 0, -1], [0, 0, 0]]                     # strictly triangular, in the order of the weights
+GTG_N_DOWN = [[0, 0, 0], [3, 0, 0], [1, -2, 0]]                   # strictly triangular, against it
+GTG_C = F(3, 5)
+GTG_X0 = [F(0), F(1, 2), F(1, 3), F(1, 4)]
+
+
+def _theta0(X, varying):
+    if not varying:
+        return [[F(1), F(1, 2), F(0)], [F(0), F(1), F(-1, 3)], [F(2), F(0), F(1)]]
+    return [[F(1), X[3] / 2, F(0)], [F(0), F(1), X[1] / 3], [X[2] / 5, F(0), F(1)]]
+
+
+def _shear(T, kind):
+    """G(tau) as jets: exp(c log tau N) (tau0 = 1, log tau as its Taylor jet) or 1 + tau^(3/7) E_12."""
+    one = [[F(1) if i == j else F(0) for j in range(3)] for i in range(3)]
+    if kind == "rate":
+        return [[one[i][j] + (T.pw(F(3, 7)) if (i, j) == (0, 1) else 0) for j in range(3)] for i in range(3)]
+    N = GTG_N_UP if kind == "up" else GTG_N_DOWN
+    ell = gtg.Jet.from_taylor(0, [0, 1, F(-1, 2), F(1, 3)], 4)
+    N2 = [[sum(N[i][k] * N[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+    return [[one[i][j] + GTG_C * ell * N[i][j] + (GTG_C * GTG_C / 2) * ell * ell * N2[i][j] for j in range(3)]
+            for i in range(3)]
+
+
+def _jm(A, B):
+    return [[sum((A[i][k] * B[k][j] for k in range(3)), gtg.Jet.const(0, 4)) for j in range(3)] for i in range(3)]
+
+
+def _setup(tau0, kind, varying):
+    x0 = [F(tau0)] + GTG_X0[1:]
+    holder = {}
+
+    def rows(X):
+        T = X[0]
+        Dl = [[T.pw(GTG_P[i]) if i == j else F(0) for j in range(3)] for i in range(3)]
+        G = _shear(T, kind)
+        E = _jm(_jm(Dl, G), _theta0(X, varying))
+        holder["T"], holder["Dl"], holder["G"] = T, Dl, G
+        return [[F(1), F(0), F(0), F(0)]] + [[F(0)] + [E[l][i] for l in range(3)] for i in range(3)]
+    fld = gtg.field_from_hbinv(rows, x0)
+    T, Dl, G = holder["T"], holder["Dl"], holder["G"]
+    G = [[gtg._jc(G[i][j], 4) for j in range(3)] for i in range(3)]
+    Om = _jm([[T * G[i][j].d(0) for j in range(3)] for i in range(3)], gtg.mat_inv(G))     # tau (d_tau G) G^{-1}
+    B = [[(GTG_P[i] if i == j else 0) + (Dl[i][i] * Om[i][j] / Dl[j][j]) for j in range(3)] for i in range(3)]
+    return fld, B, T
+
+
+def check_gtg_torsion_equation_gives_the_boost_block():
+    premise("dark-energy.variable-exponents-residue-pointwise-corrections-are")
+    premise("synthesis.diagonal-kasner-momentum-constraint")
+    ok = True
+    for tau0, kind, varying in [(1, "up", True), (1, "down", True), (1, "rate", True), (128, "rate", True),
+                                (1, "up", False), (128, "rate", False)]:
+        fld, B, T = _setup(tau0, kind, varying)
+        ok = ok and fld.torsion_free()
+        Bv = [[gtg._val(B[i][j]) for j in range(3)] for i in range(3)]
+        sym = [[(Bv[i][j] + Bv[j][i]) / 2 for j in range(3)] for i in range(3)]
+        asym = [[(Bv[i][j] - Bv[j][i]) / 2 for j in range(3)] for i in range(3)]
+        t = F(tau0)
+        for m in range(3):
+            w = fld.omega(m + 1)
+            ok = ok and all(w.get((0, l + 1), F(0)) == -sym[l][m] / t for l in range(3))
+            Dg0 = fld.cov_phys([0] + [1 if k == m else 0 for k in range(3)], {(0,): gtg.Jet.const(1, 4)})
+            ok = ok and gtg.m_sub(Dg0, gtg.vec([0] + [sym[l][m] / t for l in range(3)])) == {}
+        w0 = fld.omega(0)
+        ok = ok and gtg.m_sub(w0, {(l + 1, m + 1): asym[l][m] / t for l in range(3) for m in range(l + 1, 3)
+                                   if asym[l][m]}) == {}
+        ok = ok and any(asym[l][m] for l in range(3) for m in range(3)) and any(sym[0][1:])
+        if not varying:
+            # store-sign Ricci and Einstein maps along gamma_0 on flat slices
+            Rc = fld.curvature()
+            g0 = gtg.e(0)
+            K = [[(B[i][j] + B[j][i]) / (2 * T) for j in range(3)] for i in range(3)]
+            trK = K[0][0] + K[1][1] + K[2][2]
+            trK2 = sum((gtg._val(K[i][j]) * gtg._val(K[j][i]) for i in range(3) for j in range(3)), F(0))
+            ok = ok and gtg.vdot(g0, gtg.ricci(Rc, g0)) == trK.d(0).v + trK2
+            ok = ok and -2 * gtg.vdot(g0, gtg.einstein(Rc, g0)) == trK.v * trK.v - trK2
+    GA.check("GTG: omega(gamma_m) boost block -sym(B)/tau, omega(gamma_0) = antisym(B)/tau, Ricci 00 and the constraint", ok)
+    assert ok

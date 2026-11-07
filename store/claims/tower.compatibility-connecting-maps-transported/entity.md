@@ -28,7 +28,7 @@ derivations:
   uses:
   - tower.grade-twist-when-it-inner@4
   - tower.volume-elements-planes@5
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - tower.commuting-copies@5
   proof: proof-main.tex
 checked_by:

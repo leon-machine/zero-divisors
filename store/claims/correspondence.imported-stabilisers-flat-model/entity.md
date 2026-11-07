@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - interior.stabilisers-flat-model@5
-  - transport.no-go-level-elements@4
+  - transport.no-go-level-elements@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

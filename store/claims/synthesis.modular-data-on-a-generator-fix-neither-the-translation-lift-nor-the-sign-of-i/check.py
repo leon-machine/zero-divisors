@@ -275,7 +275,7 @@ def check_hankel_phases_of_the_vacuum_and_the_filled_sea():
 
 
 def check_lift_and_sign_data_in_geometric_algebra():
-    premise("synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics")
+    premise("synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom")
     sq = GA.sig(1, 3)
     g = [GA.gen(i) for i in range(4)]
 

@@ -1,7 +1,7 @@
 ---
 id: pairing.regular-frame-class-vanishes-horizon-changes
 kind: claim
-version: 6
+version: 7
 title: 'The regular frame: the class vanishes on the horizon and changes sign inside'
 status: proved
 region: pairing
@@ -25,6 +25,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: gauge field solved from the torsion equation, classes in Cl(2,3) with I_5; exact checks'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -50,12 +54,20 @@ checked_by:
   ref: check.py::check_static_and_regular_frames_agree
 - kind: check
   ref: check.py::check_curvature_classes_do_not_vanish_on_the_horizon
+- kind: check
+  ref: check.py::check_gtg_torsion_solution_is_the_pg_gauge_field
+- kind: check
+  ref: check.py::check_gtg_classes_and_loop_class_in_cl23
 locators:
   paper: T05-pairing
   number: Prop 5.3
   label: prop:pg
   line: 327
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: the PG gauge field hb^{-1}(e_t) = e_0 + beta e_1, the rotation-gauge field solved from the torsion equation hb^T(grad ^ f^a) = sum_b e^b ^ (Omega(e_b) . e^a) (unique, rank 24): Omega(e_0) = 0, Omega(e_1) = -beta'' e_1 e_0, Omega(e_2) = (beta e_0 + e_1) ^ e_2/r, Omega(e_3) = (beta e_0 + e_1) ^ e_3/r + (cot theta/r) e_2 ^ e_3; classes as symmetric products in Cl(2,3) with the central unit I_5 ((u ^ e_2) . l = -(u . l) e_2); the static frame built inside the same gauge for the covariance; the loop class from the field strength of the solved field. Structure equations kept as a labelled reading. Checked exactly: check_gtg_torsion_solution_is_the_pg_gauge_field (solve from the coframe alone, rank 24, the four bivectors at five points beta = 4/5, 1, 2, 1/3, 3/5) and check_gtg_classes_and_loop_class_in_cl23 (I_5 central of square -1; outgoing and ingoing classes, (l.D)l = (beta^3/4M) l, the values 144/125, 2, 12 and the loop class 2M/r^3, all from the solved field). Version 6 -> 7; outside_ga removed (the forms are now a reading).'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,9 +103,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Painleve-Gullstrand frame is the orthonormal physical frame of the gauge hb = 1 - beta P (coframe = components of hb^{-1}(dx)); Omega(e_c) named as the rotation-gauge field along the physical vector e_c, i.e. Omega(hb(e_c)); nabla_l l -> (l.D)l; curvature -> field strength; horizon -> horizon locus. Formulas and values unchanged; proof given a pointer.'
-outside_ga:
-  kind: other
-  why: 'The proof works with the coframe and connection one-forms (beta'' dr ^ dT) of the Painleve-Gullstrand frame; the forms are the computation.'
 ---
 
 ## formal

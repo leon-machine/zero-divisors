@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   - synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom@1
   - std-algebra.complexification-is-the-odd-extension@1
   proof: proof-main.tex

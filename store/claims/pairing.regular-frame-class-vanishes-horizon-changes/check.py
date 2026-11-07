@@ -153,3 +153,66 @@ def check_curvature_classes_do_not_vanish_on_the_horizon():
         if b0 == 1 and M == F(1, 2):
             ok = ok and pv(GA.neg(apply_op(Rc, nb))) == GA.QI(1)
     _tp_rv = (ok); assert _tp_rv is not False, "check_curvature_classes_do_not_vanish_on_the_horizon"; return _tp_rv
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The rotation-gauge field is solved from the torsion equation of the definition (lib/gtg.py Field with no om:
+# the exact linear solve of D_mu g_nu = D_nu g_mu from the coframe alone); the classes are computed in the odd
+# extension Cl(2,3) (generator 4 = e, Q(e) = +1), I_5 = I_4 e central, m = e2 + I_5 e3, the span{1, I_5}-bilinear
+# scalar product being the symmetric product (vm + mv)/2.
+S23 = (1, -1, -1, -1, 1)
+I5 = {(0, 1, 2, 3, 4): F(1)}
+
+
+def i5_class(B, l, m):
+    """<B . l, m> = sym(B . l, m) in Cl(2,3)."""
+    return gtg.sym(gtg.comm(B, l, S23), m, S23)
+
+
+def solved_pg(b0, s0, c0, M):
+    """The PG coframe of the stored gauge with Omega solved from the torsion equation alone."""
+    r0 = 2 * M / (b0 * b0)
+    return gtg.Field(gtg.schwarzschild_pg(M, r0, s0, c0).TH), r0
+
+
+def check_gtg_torsion_solution_is_the_pg_gauge_field():
+    premise("pairing.imported-schwarzschild-connection-curvature")
+    ok = True
+    for b0, s0, c0, M in PG_SAMPLES:
+        fld, r0 = solved_pg(b0, s0, c0, M)
+        ok = ok and fld.torsion_free() and fld.torsion_rank() == 24
+        bp = -b0 ** 3 / (4 * M)
+        u = GA.add(GA.scal(b0, GA.gen(0)), GA.gen(1))
+        want = [{}, GA.scal(-bp, gbiv(1, 0)), GA.scal(1 / r0, gtg.wedge(u, GA.gen(2))),
+                GA.add(GA.scal(1 / r0, gtg.wedge(u, GA.gen(3))), GA.scal((c0 / s0) / r0, gbiv(2, 3)))]
+        ok = ok and all(GA.eq(fld.omega(c), want[c]) for c in range(4))
+    assert ok
+    return ok
+
+
+def check_gtg_classes_and_loop_class_in_cl23():
+    premise("pairing.pairing-class-transverse-derivative-null-direction")
+    premise("pairing.imported-schwarzschild-connection-curvature")
+    ok = GA.eq(GA.mul(I5, I5, S23), GA.sc(-1)) and all(GA.commutes(I5, GA.gen(j), S23) for j in range(5))
+    l = GA.add(GA.gen(0), GA.gen(1))
+    n = GA.sub(GA.gen(0), GA.gen(1))
+    m = GA.add(GA.gen(2), GA.mul(I5, GA.gen(3), S23))
+    seen = {}
+    for b0, s0, c0, M in PG_SAMPLES:
+        fld, r0 = solved_pg(b0, s0, c0, M)
+        ko, ki = (1 - b0) / r0, (1 + b0) / r0
+        om = [fld.omega(c) for c in range(4)]
+        out = [i5_class(om[c], l, m) for c in range(4)]
+        ok = ok and out[0] == {} and out[1] == {} and GA.eq(out[2], GA.sc(-ko)) and GA.eq(out[3], GA.scal(-ko, I5))
+        inn = [i5_class(om[c], n, m) for c in (2, 3)]
+        ok = ok and GA.eq(inn[0], GA.sc(ki)) and GA.eq(inn[1], GA.scal(ki, I5))
+        acc = gtg.bdot(GA.add(om[0], om[1]), l)
+        ok = ok and GA.eq(acc, GA.scal(b0 ** 3 / (4 * M), l))
+        Rc = fld.curvature()
+        loop = GA.neg(gtg.apply_op(Rc, GA.mul(n, GA.gen(2), S13)))
+        ok = ok and GA.eq(i5_class(loop, l, m), GA.sc(2 * M / r0 ** 3))
+        if M == F(1, 2):
+            seen[b0] = inn[0].get((), F(0))
+    ok = ok and seen == {F(4, 5): F(144, 125), F(1): F(2), F(2): F(12)}
+    assert ok
+    return ok

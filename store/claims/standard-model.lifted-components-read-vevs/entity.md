@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
-  - standard-model.transported-frozen-point@5
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.transported-frozen-point@6
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
   proof: proof-main.tex
 checked_by:

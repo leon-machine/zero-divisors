@@ -1,4 +1,11 @@
 functions:
+  check_gtg_kasner_field_strength_and_weyl_map:
+    kind: sampled
+    clauses:
+    - '(i) the Weyl map has e_0 ^ e_i and I_4 e_0 ^ e_i as eigenvectors with eigenvalue lambda_i = (p_i^2 - p_i + (1 - S)/3) t^-2, lambda_1 = E_1/(3t^2), lambda_2 = -E_2/(3t^2), sum zero'
+    - '(ii) the field strength vanishes at the Milne points; the scalar is -2/3 t^-2 at the isotropic point'
+    - '(iv) the isotropic bracket has zero field strength'
+    omits: 'seven rational points of the plane (t = 2^D, rational powers); the closed forms in t are derived in the proof and matched at each point'
   check_kasner_weyl_components_match_the_two_conics:
     kind: sampled
     clauses:

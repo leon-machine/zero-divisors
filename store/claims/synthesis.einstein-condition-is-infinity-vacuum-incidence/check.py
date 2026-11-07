@@ -304,3 +304,121 @@ def check_matter_and_bianchi():
 if __name__ == "__main__":
     for f in (check_classes, check_own_ray, check_fixed_vacuum, check_fock, check_real_direction, check_matter_and_bianchi):
         print(f.__name__, f())
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# Tractors as vectors of Cl(2,4) (lib/gtg.py: generators 0..3 spacetime, 4 = e+, 5 = e-; n0 = (e+ + e-)/2,
+# ninf = e+ - e-, n0 . ninf = 1), I_g = ninf, X = n0, the tractor gauge field
+# Omega_T(hb(v)) = Omega(hb(v)) - ninf ^ v + n0 ^ P(v) of actual gravitational fields on flat spacetime, with the
+# Schouten map P computed from the field strength of each field. The classes are (D_v w) . w'.
+import gtg  # noqa: E402
+
+S24 = gtg.S24
+NULLS = [(F(1), F(1), F(0), F(0)), (F(1), F(0), F(-1), F(0)), (F(1), F(3, 5), F(4, 5), F(0)),
+         (F(1), F(0), F(12, 13), F(-5, 13)), (F(1), F(-2, 3), F(1, 3), F(2, 3))]
+
+
+def gtg_fields():
+    """(name, field, Lambda or None): de Sitter (flat slicing, H = 1/2), Schwarzschild-de Sitter in the PG
+    chart (M = 3/8, Lambda = 3/4, r = 1, beta = 1: on the horizon locus), Schwarzschild (PG, beta = 4/5),
+    flat FLRW with a = 1, adot = 1/3, addot = -1/5 (not Einstein), Kasner (2/3, 2/3, -1/3) at t = 1."""
+    return [("dS", gtg.de_sitter_flat(F(1, 2), F(2)), F(3, 4)),
+            ("SdS", gtg.pg_field(F(1), F(3, 5), F(4, 5), gtg.beta_kottler(F(3, 8), F(3, 4))), F(3, 4)),
+            ("Schw", gtg.schwarzschild_pg(F(1, 2), F(25, 16), F(3, 5), F(4, 5)), F(0)),
+            ("FLRW", gtg.flrw_flat(F(1), F(1, 3), F(-1, 5)), None),
+            ("Kasner", gtg.synchronous_from_data([(F(1), F(2, 3), F(-2, 9)), (F(1), F(2, 3), F(-2, 9)),
+                                                  (F(1), F(-1, 3), F(4, 9))]), F(0))]
+
+
+U_T = GA.add(GA.scal(F(2), gtg.N0), GA.gen(1), GA.scal(F(-1, 3), gtg.NINF))
+W_T = GA.add(GA.scal(F(1, 2), gtg.NINF), GA.gen(0), GA.gen(3))
+
+
+def check_gtg_tractor_gauge_field_moves_ig_and_x():
+    premise("interior.imported-tractor-connection")
+    premise("interior.covariant-form-vacuum-equations")
+    premise("interior.metric-parallelism-trace-schouten-condition")
+    n0, ni = gtg.N0, gtg.NINF
+    ok = gtg.vdot(ni, ni, S24) == 0 and gtg.vdot(n0, n0, S24) == 0 and gtg.vdot(n0, ni, S24) == 1
+    fields = gtg_fields()
+    ok = ok and len(fields) == 5
+    for name, fld, lam in fields:
+        P = gtg.schouten(fld.curvature())
+        for c in range(4):
+            ok = ok and GA.eq(gtg.dT_const(fld, c, P, ni), GA.neg(P(GA.gen(c))))
+            ok = ok and GA.eq(gtg.dT_const(fld, c, P, n0), GA.gen(c))
+            Ot = gtg.omega_T(fld, c, P)
+            ok = ok and gtg.vdot(gtg.comm(Ot, U_T, S24), W_T, S24) + gtg.vdot(U_T, gtg.comm(Ot, W_T, S24), S24) == 0
+    # the two pinned Schouten values: de Sitter Lambda = 3/4 gives P = (1/8) id; the Kasner vacuum gives P = 0
+    Pds = gtg.schouten(fields[0][1].curvature())
+    Pk = gtg.schouten(fields[4][1].curvature())
+    ok = ok and GA.eq(gtg.dT_const(fields[0][1], 2, Pds, ni), GA.scal(F(-1, 8), GA.gen(2)))
+    ok = ok and gtg.dT_const(fields[4][1], 3, Pk, ni) == {}
+    assert ok
+    return ok
+
+
+def check_gtg_own_ray_classes_on_gauge_fields():
+    premise("interior.covariant-form-vacuum-equations")
+    premise("interior.metric-parallelism-trace-schouten-condition")
+    ni = gtg.NINF
+    ok = True
+    for name, fld, lam in gtg_fields():
+        Rc = fld.curvature()
+        P = gtg.schouten(Rc)
+        own = []
+        for comps in NULLS:
+            l = gtg.vec(list(comps))
+            ok = ok and gtg.vdot(l, l) == 0
+            Dl = GA.add(*[GA.scal(comps[c], gtg.dT_const(fld, c, P, ni)) for c in range(4) if comps[c]])
+            own.append(gtg.vdot(Dl, l, S24))
+            # matter reading: 8 pi T(a) := -(G(a) + Lambda a) with Lambda = 0 for the non-Einstein field
+            Tt = GA.neg(gtg.einstein_residual(Rc, l, lam if lam is not None else 0))
+            ok = ok and own[-1] == gtg.vdot(Tt, l) / 2
+        if lam is not None:
+            ok = ok and all(x == 0 for x in own)
+            ok = ok and all(GA.eq(P(GA.gen(c)), GA.scal(lam / 6, GA.gen(c))) for c in range(4))
+            ok = ok and gtg.ricci_scalar(Rc) == 4 * lam
+        else:
+            ok = ok and any(x != 0 for x in own)
+    assert ok
+    return ok
+
+
+# The complexification with its unit (U3): Cl(3,4) = Cl(2,4) + e' (generator 6, Q(e') = -I_6^2 = +1),
+# I_7 = I_6 e' central with I_7^2 = -1; complexified tractors are V + I_7 V', and the span{1, I_7}-bilinear
+# form is the symmetric product (xy + yx)/2.
+S34 = S24 + (1,)
+I6 = {(0, 1, 2, 3, 4, 5): F(1)}
+I7 = {(0, 1, 2, 3, 4, 5, 6): F(1)}
+SCREENS = [((F(0), F(1), F(0), F(0)), (F(0), F(0), F(1), F(0)), (F(0), F(0), F(0), F(1))),
+           ((F(0), F(3, 5), F(4, 5), F(0)), (F(0), F(-4, 5), F(3, 5), F(0)), (F(0), F(0), F(0), F(1))),
+           ((F(0), F(0), F(-1), F(0)), (F(0), F(1), F(0), F(0)), (F(0), F(0), F(0), F(1)))]
+
+
+def check_gtg_infinity_vacua_with_the_unit_i7():
+    premise("interior.covariant-form-vacuum-equations")
+    premise("one-relation.imported-pure-spinors-incidence-chart")
+    ok = GA.eq(GA.mul(I6, I6, S34), GA.sc(-1)) and GA.eq(GA.mul(I7, I7, S34), GA.sc(-1))
+    ok = ok and all(GA.commutes(I7, GA.gen(j), S34) for j in range(7))
+    ni = gtg.NINF
+    fields = [(n, f, lam) for (n, f, lam) in gtg_fields() if n in ("dS", "FLRW")]
+    for nvec, s1, s2 in SCREENS:
+        l = GA.add(GA.gen(0), gtg.vec(list(nvec)))
+        m = GA.add(gtg.vec(list(s1)), GA.mul(I7, gtg.vec(list(s2)), S34))
+        W = [ni, l, m]
+        ok = ok and all(gtg.sym(x, y, S34) == {} for x in W for y in W)
+        for name, fld, lam in fields:
+            P = gtg.schouten(fld.curvature())
+            comps = [GA.dot(GA.gen(c), l, gtg.S13) * gtg.S13[c] for c in range(4)]
+            Dl = GA.add(*[GA.scal(comps[c], gtg.dT_const(fld, c, P, ni)) for c in range(4) if comps[c]])
+            cls = [gtg.sym(Dl, w, S34) for w in (l, m)]
+            want_m = GA.neg(GA.add(GA.sc(gtg.vdot(P(l), gtg.vec(list(s1)))),
+                                   GA.scal(gtg.vdot(P(l), gtg.vec(list(s2))), I7)))
+            ok = ok and GA.eq(cls[1], want_m)
+            if lam is not None:
+                ok = ok and cls[0] == {} and cls[1] == {}
+            else:
+                ok = ok and cls[0] != {}
+    assert ok
+    return ok

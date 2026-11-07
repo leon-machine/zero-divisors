@@ -23,8 +23,8 @@ about:
 derivations:
 - name: main
   uses:
-  - rule2.where-obstruction-sits-commuting-square@5
-  - transport.rule-1-morita-trivial@5
+  - rule2.where-obstruction-sits-commuting-square@6
+  - transport.rule-1-morita-trivial@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

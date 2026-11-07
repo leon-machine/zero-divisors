@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of the curvature step: the dilation field, Omega from the torsion equation, calR = (Lambda/3) id'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 derivations:
 - name: main
@@ -34,6 +38,8 @@ derivations:
 checked_by:
 - kind: check
   ref: check.py::check_completed_pair
+- kind: check
+  ref: check.py::check_gtg_dilation_field_curvature_selects_no_plane
 - kind: proof
   derivation: main
 lineage:
@@ -42,6 +48,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - standard-model.what
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Step 1 of the proof rewritten in Gauge Theory Gravity: the de Sitter field of the scale as the dilation hb^{-1}(a) = a/sigma; the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) solved by omega(A) = grad sigma ^ A, so Omega(a) = -(Lambda/(6 sigma)) x ^ a; the field strength computed in GA to R(a ^ b) = -(Lambda/3) sigma^-2 a ^ b, hence calR(B) = (Lambda/3) B, Schouten (Lambda/6) id, Weyl zero; the Christoffel computation and the -Lambda/3 of the round-sphere-positive convention kept as a labelled reading (C11). Steps 2-5 were already in Cl(2,4) and are unchanged. Original proof kept as orig-proof-main.tex. New exact check check_gtg_dilation_field_curvature_selects_no_plane (Omega solved from torsion at nine rational points, its closed form, calR = (Lambda/3) id, Ricci map Lambda a, Weyl operator zero, riem_o = -(Lambda/3)(g_ac g_bd - g_ad g_bc)). outside_ga withdrawn: no stand-in remains in the proof''s main line.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -56,9 +66,6 @@ extraction:
     note: Squares of vectors written Q(v) in place of the inner product of a vector with itself; no change of content.
   flow_note: rotor flow exp(t B_Lambda / 2) = exp(kappa_Lambda t u / 2), which rescales the pair (the T05 Thm 6.3 sense), the flow of minus the Killing field X . B_Lambda.
   note: Built at Leon's request (21 October 2026) to supply the boundary-mode algebra that the de Sitter temperature conjecture lacked. The Schwarzschild chain selects the pair's plane by curvature and localises its modes at the singular boundary; at the cosmological horizon curvature selects nothing, the static observer selects the plane, and the pair's two null vectors are the observer's endpoints on conformal infinity.
-outside_ga:
-  kind: other
-  why: 'The proof''s curvature check computes the Riemann tensor of the derived metric from its Christoffel symbols in components; the GTG statement is in the formal level.'
 ---
 
 ## formal

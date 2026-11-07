@@ -1,7 +1,7 @@
 ---
 id: dark-matter.residue-soldered-invariant-not-algebraic-one
 kind: claim
-version: 3
+version: 4
 title: The residue is a soldered invariant, not an algebraic one
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the quaternionic matrix algebra written with the stored macros (notation)'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: thm:soldered
   line: 195
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5): Mat(2, \mathbb{H}) written \Mat_2(\HH), the stored macros. No content change.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -62,7 +70,7 @@ extraction:
 Let $(A, V)$ denote a Clifford algebra together with its generating vector subspace $V \subset A$ (the soldering: $V$ is the image of the metric's tangent space, and $v^{2} = g(v,v)$ for $v \in V$). Then:
 \begin{enumerate}
 \item[(i)] any algebra isomorphism $(A, V) \to (A', V')$ carrying $V$ onto $V'$ preserves the signature $(p,q)$, hence the residue: the residue is an invariant of the soldered algebra;
-\item[(ii)] as abstract algebras, residues $0$ and $2$, $3$ and $7$, and $4$ and $6$ are pairwise isomorphic at equal dimension, $\Cl(1,1) \cong \Cl(2,0)$, $\Cl(1,2) \cong \Cl(3,0)$, $\Cl(1,3) \cong \Cl(0,4) \cong \Mat(2, \mathbb{H})$; in particular this world's algebra and the $r = 4$ tower's are the same algebra, and no isomorphism between them carries vectors to vectors.
+\item[(ii)] as abstract algebras, residues $0$ and $2$, $3$ and $7$, and $4$ and $6$ are pairwise isomorphic at equal dimension, $\Cl(1,1) \cong \Cl(2,0)$, $\Cl(1,2) \cong \Cl(3,0)$, $\Cl(1,3) \cong \Cl(0,4) \cong \Mat_2(\HH)$; in particular this world's algebra and the $r = 4$ tower's are the same algebra, and no isomorphism between them carries vectors to vectors.
 \end{enumerate}
 So the tower charge is an invariant of the operator algebra soldered to the metric, not of the algebra: what forbids a portal in Section \ref{sec:count} is the one metric, P1.
 

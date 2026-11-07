@@ -16,6 +16,7 @@ functions:
     clauses: ["(ii) a factor 2.45 per unit at b = 7", "within ten percent of one only for |delta| < 0.106"]
     omits: "window edge bracketed between 0.106 and 0.107 on the upward side, which is the binding one"
 untouched_premises:
+  synthesis.common-ceiling-coupling-premise: "the common ceiling and coupling are an input of (i) and of the one-loop bound in (ii), not computed; the departure window prices a violation of it"
   dark-matter.no-coupling-rule-odd-towers-follows: "(iii) is a scope statement and is not computed (docstring)"
 judge:
   by: coverage-judge-2026-10-23

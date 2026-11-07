@@ -29,7 +29,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   - singularity.imported-one-sided-completion-singularity@5
   proof: proof-main.tex
 checked_by:

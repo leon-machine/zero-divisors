@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: C as a bilinear form of the Weyl map, the trace d_a . W(a ^ b) = 0 in the null tetrad''s reciprocal frame, pair symmetry from the symmetry of W'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -40,12 +44,18 @@ checked_by:
   ref: check.py::check_null_cone_classes_vanish_iff_repeated_pnd
 - kind: check
   ref: check.py::check_schwarzschild_type_d
+- kind: check
+  ref: check.py::check_gtg_trace_and_pair_symmetry
 locators:
   paper: T05-pairing
   number: Lem 5.7
   label: lem:weylclasses
   line: 360
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: C(u, v, w, z) = -W(u ^ v) . (w ^ z) for the vacuum operator calR = W, the pair symmetry from <A W(B)> = <W(A) B>, and the tracelessness as d_a . W(a ^ u) = 0 read in the reciprocal frame of the null tetrad (l -> n/2, n -> l/2, m -> -mbar/2, mbar -> -m/2 for l . n = 2, m . mbar = -2), which gives the source''s trace formula exactly; the six classes follow as before; the eta^{ab} form is kept as a labelled reading. New check check_gtg_trace_and_pair_symmetry (exact, ten basis Weyl maps, a generic one and a non-Weyl map for the trace identity); runcheck 4/4, check4 clean on a proposals copy. outside_ga removed: no stand-in remains. Statement, status, links unchanged; orig-proof-main.tex kept.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -69,9 +79,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: a Ricci-flat spacetime is a vacuum gravitational field on flat spacetime (R(a) = 0), the curvature bivector R(u, v) of a loop is the covariant field strength on the physical plane u ^ v, R(hb(u ^ v)) = -R(u ^ v) in the store''s sign (as in pairing.curvature-which-loops-move-vacuum), and the pairing <.,.> is the flat product of physical vectors. Classes, identities and conclusions unchanged; the dictionary Fact added to uses for the identification; proof given a pointer.'
-outside_ga:
-  kind: other
-  why: 'The proof identifies loop classes with Weyl components in a frame (eta^{ab}); the components are the content (reader R03).'
 ---
 
 ## formal

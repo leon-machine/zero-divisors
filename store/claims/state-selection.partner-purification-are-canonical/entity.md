@@ -21,6 +21,10 @@ credit:
   role: consistency pass, scalars of the mode factor and the meaning of J stated
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -46,6 +50,10 @@ locators:
   label: thm:gns
   line: 314
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 5 (already raised in this run). Decision item E6 (routine; no retirement): equivalent_to singularity.purity-output-partner-commutant@5 added. The same result as the singularity entity, which is kept as the home.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -60,6 +68,8 @@ extraction:
     - singularity.schmidt-forcing-proved-outright
     note: Removed the Schmidt-forcing lemma because clause (4) only compares the GNS vector with the state that lemma produces and the proof does not use it; the GNS, Tomita and thermofield-double results are standard but no imported claim for them exists in the store, so no standard route was added.
   env: theorem
+equivalent_to:
+- singularity.purity-output-partner-commutant@5
 ---
 
 ## formal

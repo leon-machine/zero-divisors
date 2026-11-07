@@ -25,7 +25,7 @@ derivations:
   - dark-matter.type-residue-what-each-tower-can@5
   - tower.commuting-copies@5
   - tower.fock-module-one-qubit-per-rung@6
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   assumes:
   - dark-matter.p1-single-frozen-point@1
   - dark-matter.p2-indifference@2

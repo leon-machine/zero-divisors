@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: tractors as Cl(2,4) vectors, the flat-scale connection as the gauge field -ninf ^ a, stabilisers as bivectors'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 derivations:
 - name: main
@@ -35,12 +39,18 @@ checked_by:
   ref: check.py::check_two_frozen_points_give_two_metrics
 - kind: check
   ref: check.py::check_pair_has_one_gauge_invariant
+- kind: check
+  ref: check.py::check_gtg_parallel_tractors_flat_strength_and_einstein_scale
 - kind: proof
   derivation: main
 lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: tractors as Cl(2,4) vectors sigma ninf + mu + rho n0; the flat-scale tractor connection of the frozen-point Fact as the gauge field Omega_T(a) = -ninf ^ a (hb = 1, Omega = 0, Schouten map 0), giving the parallel tractors I(x) = sigma(x) ninf + (m - r x) + r n0 and the norm 2rs + Q(m) in one line; the field strength (ninf ^ a) x (ninf ^ b) = 0; the Einstein scale read as the dilation field hb^{-1}(a) = a/sigma; the pairing constant because Omega_T is bivector-valued; the stabilisers as the bivectors of I-perp and of the complement of the plane. Component reading kept, shortened, at the end; the original proof kept as orig-proof-main.tex. New exact check check_gtg_parallel_tractors_flat_strength_and_einstein_scale (parallelism as exact jets at three points for four tractors, constant norm, flat strength, the dilation field''s store-sign curvature calR(B) = Q(I) B with Omega solved from the torsion condition at twelve points, which the coverage judge had listed as untested, and the stabiliser dimensions 15, 10, 6 by rank on the bivectors of Cl(2,4)). outside_ga withdrawn: no stand-in remains.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -62,9 +72,6 @@ extraction:
     model lives on conformally flat regions, which include the
     de Sitter vacuum of the dark-energy paper. The orientation clause of P1 (one Witt flag) is
     not addressed. Transport-convenient: tractor geometry, no Clifford input.
-outside_ga:
-  kind: other
-  why: 'The proof solves the tractor parallelism equations in flat components (eta_ab, partial_a partial_b sigma); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component solution is the evidence (reader R05).'
 ---
 
 ## formal

@@ -32,7 +32,7 @@ derivations:
 - name: main
   uses:
   - synthesis.cosmological-horizon-completed-pair@3
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   - singularity.ascended-marginals-are-diagonal@5
   - singularity.descended-form-state-independent@4
   - singularity.kms-uniqueness-factor@6

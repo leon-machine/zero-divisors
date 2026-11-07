@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (Ricci square; coordinate curvature engine declared)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of the curvature statements of (i), (iii), (iv): diagonal gauge fields, torsion-solved Omega, store-sign field strength, Ricci and Einstein maps; coordinate engine kept as a confirming reading'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -50,6 +54,8 @@ checked_by:
   ref: check.py::check_radiation_field_smoothness_in_t_depends_on_the_conformal_weight
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_wall_field_strengths
 lineage:
   motivated_by:
   - standard-model.dating-descent
@@ -57,6 +63,10 @@ lineage:
   - dark-energy.gravity-pre-metric-forces-degenerate-exactly
   - synthesis.pre-descent-state-carried-into-descended-phase-premise
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof for the curvature content: every metric of the result is (up to the sign of C7) the derived metric of a diagonal gauge field hb^{-1}(e_t) = N e0, hb^{-1}(e_i) = A_i e_i; the torsion equation gives Omega(e_{x^i}) = -(dA_i/N) B_i, and the store-sign operator is diagonal with calR(B_i) = d_t(dA_i/N)/(N A_i), calR(e_i ^ e_j) = dA_i dA_j/(N^2 A_i A_j); from it (i) the radical-normal side is flat (Omega = 0), (iii) R = (b/2)(b + 2 - a) t^(a - 2), 3/2 t^-2 for (0, 1), (iv) the Einstein map gives p = 2/(3(1 + w)) and the radiation field has R = 0, Ricci square 3/4 t^-4; the sign agreement with the (-,+,+,+) index convention is derived. The Dirac and scalar analysis was already in GA and scalar calculus. The coordinate engine stays as a confirming reading. New check check_gtg_wall_field_strengths; runcheck 6/6, check4 clean on a proposals copy. outside_ga removed: the curvature values now come from the gauge field, and the line elements and cometric components are the definition''s readings (tameness is defined on the cometric). Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -94,9 +104,6 @@ extraction:
   - 'aligned models only: the cometric is diagonal with the degeneration in one coordinate; tame walls whose radical is neither the conormal nor tangent are not classified here'
   - 'flat transverse block in the proved clauses; transverse metrics depending on t are treated in argued remarks only'
   - 'smoothness in t is coordinate- and weight-dependent: tameness of a power-law bracket holds in cosmic time only, and which solutions are smooth in t depends on the conformal weight and, for spinors, on the frame'
-outside_ga:
-  kind: other
-  why: 'The scalar and Ricci curvatures and the Einstein components of the proof are those returned by the check''s coordinate curvature engine, which works from the Christoffel symbols of metrics written in the signature (-,+,+,+) and states its own sign convention; the proof describes that computation in components, and a derivation through the rotation-gauge field would be a different proof.'
 ---
 
 ## formal

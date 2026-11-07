@@ -92,7 +92,7 @@ def check_scalar_curvature_of_the_invariant_metric_separates_radii():
 
 
 def check_killing_time_on_the_horizon_is_a_dilation():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.imported-gtg-dictionary")
     ok = True
     for z, sign in [(F(1), 0), (F(4), 1), (F(1, 4), -1)]:

@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - synthesis.wall-class-one-rung-obstruction@2
-  - synthesis.twisted-wall-induction-conserves-dying-line-class@1
+  - synthesis.twisted-wall-induction-conserves-dying-line-class@2
   - sheaf.one-sided-completion@4
   - sheaf.tame-wall-induction@5
   - sheaf.degeneration-sheaf@6

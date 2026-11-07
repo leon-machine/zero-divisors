@@ -26,7 +26,7 @@ derivations:
   - synthesis.einstein-equations-from-c-loc-and-clausius@7
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
   - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - synthesis.einstein-route-makes-n-initial-data@4
   - synthesis.promoted-norm-one-global-pair@4
   - synthesis.euler-term-horizon-entropy-shift@4

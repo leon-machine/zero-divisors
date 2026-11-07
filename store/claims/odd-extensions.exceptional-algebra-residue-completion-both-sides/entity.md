@@ -26,7 +26,7 @@ derivations:
   - odd-extensions.imported-minimal-completion-degenerate-algebra-rule@5
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
   - odd-extensions.line-tame-wall@4
-  - odd-extensions.transport-constrains-frozen-point-only-through@2
+  - odd-extensions.transport-constrains-frozen-point-only-through@3
   - standard-model.imported-frozen-point-dictionary@8
   proof: proof-main.tex
 checked_by:

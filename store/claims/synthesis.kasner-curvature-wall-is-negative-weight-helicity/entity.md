@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG evidence for (i) and (iv): the slice and Bianchi II gauge fields, torsion-solved Omega, store-sign scalar and Ricci map; frame formula kept, declaration narrowed'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -45,10 +49,16 @@ checked_by:
   ref: check.py::check_liouville_bounce_is_bkl_law
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_slice_and_bianchi_ii_field_strength
 lineage:
   motivated_by:
   - synthesis.nondiagonal-kasner-residue-weighted-shear
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Partial GTG proof: the field and each slice are stated as gauge fields (the slice field hb_tau^{-1}(e_i) = sum_l tau^{p_l} theta^l_i e_l in Cl(0,3), store-sign scalar positive on the round sphere), the frame formula of (i) is now verified against the scalar of the torsion-solved slice field strength (and still against the coordinate scalar), and (iv) reads the Bianchi II equations off the Ricci map of the gauge field N e0, a1 (dx - z dy) e1, a2 e2, a3 e3 with R_mu nu = -g_mu . calR(g_nu). Not achieved: a GA derivation of the Ellis-MacCallum formula from the torsion equation (the scaling argument of (i) is on structure functions, the language of the statement), so the declaration is kept and narrowed to that. New check check_gtg_slice_and_bianchi_ii_field_strength (nine slice fields on exact jets; two generic and two solution Bianchi II jets); runcheck 6/6, check4 clean on a proposals copy. Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -82,7 +92,7 @@ extraction:
     Transport-absent: a statement about the field equations, bearing on the connection's residue.
 outside_ga:
   kind: other
-  why: 'The proof works with the structure functions c_{mn}^l of an orthonormal coframe, the frame curvature components and their matrix decomposition; the components are the computation.'
+  why: 'The result is posed on a coframe of the slices (theta^k ^ d theta^k, the structure functions c_mn^l), and clause (i) rests on the Ellis-MacCallum orthonormal-frame formula for the scalar curvature in those structure functions, cited from memory: it is verified exactly against the GTG field strength of the slice gauge field (Cl(0,3), Omega from the torsion equation) at sample coframes, but its derivation in geometric algebra is not given. The curvature values of (iv) are those of the gauge field''s Ricci map.'
 ---
 
 ## formal

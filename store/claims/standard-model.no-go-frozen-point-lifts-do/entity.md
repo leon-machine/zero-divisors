@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.transported-frozen-point@5
+  - standard-model.transported-frozen-point@6
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
   proof: proof-main.tex
 checked_by:

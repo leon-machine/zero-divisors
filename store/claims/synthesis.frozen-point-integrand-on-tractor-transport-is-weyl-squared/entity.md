@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (Weyl square as a scalar of the Weyl map)'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG reading of the proof: two-forms as linear maps on physical bivectors, the Weyl-square identity on Weyl maps, (v) pointwise from the product operator; declaration narrowed'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -54,12 +58,18 @@ checked_by:
   ref: check.py::check_chern_form_is_the_chern_simons_derivative
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_weyl_square_of_weyl_maps
 lineage:
   motivated_by:
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
   - synthesis.imported-miskovic-olea-identity
   - synthesis.promoted-norm-weyl-clock-flat-weight
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Partial GTG proof: the proof''s algebra was already in Cl(2,4); now the two-forms are read as linear maps B -> F(B) on physical bivectors, the identity of (iii) is stated and checked as eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)> on ten independent Weyl maps built by the library (Weyl parts of Kulkarni-Nomizu operators; trace-free and I-linear confirmed), all 55 pairs and with the Cotton block, and (v) computes the Weyl square (4/3)(K1 + K2)^2 and Euler density 8 K1 K2 pointwise from the product operator of Cl(4,0), with the Beyond-one-flat-chart sentence for the integrals; the component Weyl tensors stay as the confirming reading. Not achieved without a formal change: the statement itself is written in two-forms and four-forms, and (v) is a global integral, so the declaration is kept, narrowed. New check check_gtg_weyl_square_of_weyl_maps; runcheck 8/8, check4 clean on a proposals copy. Statement, status, links unchanged (the flag entry for (v) is not added; listed for Leon).'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -100,7 +110,7 @@ extraction:
 
 outside_ga:
   kind: other
-  why: 'The proof and its check work with the field strength as a bivector-valued two-form in frame components and with a basis of Weyl tensors built as component arrays (Kulkarni-Nomizu products), and clause (v) integrates the component Weyl square over the closed Riemannian S^2 x S^2, beyond one flat chart; the statement''s Weyl square is given as the scalar of the Weyl map.'
+  why: 'The statement is posed on bivector-valued two-forms and four-forms (frame components of the field strength summed over complementary coordinate planes) and states the Chern-Simons form of (iv) as a form, and clause (v) integrates over the closed Riemannian S^2 x S^2, beyond one flat chart. The proof''s algebra is in Cl(2,4), and the Weyl-square identity of (iii) and the pointwise densities of (v) are computed on Weyl maps as linear functions of bivectors.'
 ---
 
 ## formal

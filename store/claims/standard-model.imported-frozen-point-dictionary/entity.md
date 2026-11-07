@@ -1,7 +1,7 @@
 ---
 id: standard-model.imported-frozen-point-dictionary
 kind: claim
-version: 8
+version: 9
 title: 'Imported: the frozen point and the dictionary'
 status: proved
 region: standard-model
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 8
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, normalisation of the chart form named at Leon''s decisions'
+  version: 9
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -49,6 +53,10 @@ locators:
   label: fact:dictionary
   line: 883
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 8 -> 9. Decision item F1 (routine): the chart form of the frozen point now names its normalisation, n_0 . n_inf = +1, in which Q(I_Lambda) = (Lambda/3) n_0 . n_inf = +Lambda/3, against -Lambda/3 in T01''s (the conventions line added with it); checked by hand: Q(n_inf + (Lambda/6) n_0) = 2 (Lambda/6) n_0 . n_inf. Statement unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -107,7 +115,7 @@ extraction:
 ---
 
 ## formal
-On the Einstein region with $\Lambda \neq 0$ of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the frozen point $I$ is the scale tractor parallel for the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, of squared norm $Q(I) = \Lambda/3 = H^{2}$, and in the flat chart of the conformal model (the flat twistor chart, the flat background itself) its frozen point is $I_{\Lambda} = n_{\infty} + (\Lambda/6)\,n_{0}$. Mass is conformal weight read against it: a density of weight $w$ coupled to the frozen point obeys the Klein-Gordon equation with
+On the Einstein region with $\Lambda \neq 0$ of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the frozen point $I$ is the scale tractor parallel for the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, of squared norm $Q(I) = \Lambda/3 = H^{2}$, and in the flat chart of the conformal model (the flat twistor chart, the flat background itself) its frozen point is $I_{\Lambda} = n_{\infty} + (\Lambda/6)\,n_{0}$, in the normalisation $n_{0}\cdot n_{\infty} = +1$ (there $Q(I_{\Lambda}) = \Lambda/3$; in T01's normalisation the same vector has $Q(I_{\Lambda}) = -\Lambda/3$). Mass is conformal weight read against it: a density of weight $w$ coupled to the frozen point obeys the Klein-Gordon equation with
 \[
 m^{2} = -\,w(w+3)\,\frac{\Lambda}{3} = \Delta(3-\Delta)\,H^{2}, \qquad \Delta = -w,
 \]

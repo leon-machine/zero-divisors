@@ -25,7 +25,7 @@ derivations:
   uses:
   - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3
   - transport.no-transport-terminates@4
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - transport.transport-algorithm@3
   - transport.type-p-self-repairing@2
   proof: proof-main.tex

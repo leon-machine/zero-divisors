@@ -1,7 +1,7 @@
 ---
 id: synthesis.phase-flow-is-time-rotor-flow-kms-continuation
 kind: claim
-version: 3
+version: 4
 title: The phase flow is the time evolution; the rotor flow is its KMS continuation
 status: proved
 region: synthesis
@@ -21,6 +21,14 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, uses edge to the now-conjectured spreading law turned into a mention at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, which-labelling sentence in (iii) at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -33,7 +41,6 @@ derivations:
   - singularity.kms-uniqueness-factor@6
   - singularity.euclidean-rotor-where-it-lies@5
   - rungs.imported-fock-representation-bogoliubov-group@4
-  - scrambling.spreading-law-chaos-bound-saturated@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,6 +60,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Consequence of Leon''s answer 4 (B1): scrambling.spreading-law-chaos-bound-saturated is now conjectured; this result analyses that law''s growth step and does not rest on its truth, so the uses edge to it becomes a text mention (the proof''s \claimref stays as a citation for comparison) and the check''s premise() call for it is removed; mathematics unchanged, status stays proved. Decision item F9 (ladder labelling): clause (iii) now says which labelling its N_j uses, N_j = a_j^* a_j with a_j the annihilator as on the radial atom (K = sigma/2 = N - 1/2), against the tower-plane labelling where v = (e + f)/2 creates and N_j - 1/2 = -K_j; checked exactly in Cl(1,1) with lib/GA.py in the maintainer scratch (v = (e0 + e1)/2, v* = (e0 - e1)/2: vv* + v*v = 1, v*v - vv* = sigma, sigma/2 = v*v - 1/2). A which-labelling sentence; mathematics unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -93,7 +104,7 @@ Let $\Cl(p,q)$, $p + q \ge 2$, carry the frame $*$-structure of Theorem \claimre
 \begin{enumerate}
 \item[(i)] For every bivector $B$, $\operatorname{ad}_{B}$ preserves $V$ and its $E$-adjoint is $\operatorname{ad}_{B^{*}}$. Every bivector splits uniquely as $B = B_{c} + B_{b}$ with $B_{c}^{*} = -B_{c}$ (spanned by $e_{i}e_{j}$ with $Q(e_{i}) = Q(e_{j})$) and $B_{b}^{*} = B_{b}$ (spanned by $e_{i}e_{j}$ with $Q(e_{i}) = -Q(e_{j})$, the boosts). The rotor flow $\operatorname{Ad}(e^{\lambda B})$ is a $*$-automorphism for all $\lambda$ if and only if $B_{b} = 0$, and then it acts on $V$ by $E$-orthogonal maps, with $\operatorname{ad}_{B}$ of purely imaginary spectrum.
 \item[(ii)] No clock in the sense of Lemma \claimref{scrambling.clock-inventory-boundary-modes}(ii) (adjoint action semisimple with a nonzero real eigenvalue) generates a $*$-automorphic flow, for any frame $*$-structure. The atom boost $\sigma = v^{*}v - vv^{*}$ is $*$-symmetric, $\operatorname{ad}_{\sigma}$ has weights $-2, +2$ on $v, v^{*}$, and its rotor flow $v \mapsto e^{-\lambda}v$, $v^{*} \mapsto e^{\lambda}v^{*}$ is not a $*$-map.
-\item[(iii)] Let $H = H^{*}$ be a quadratic element of a complexified window (for instance $K = \sigma/2$, $\sum_{j}\omega_{j}K_{j}$, or these plus any hop or pairing coupling). Then $\operatorname{ad}_{H}$ is $h$-Hermitian on $V_{\C}$, $\operatorname{Ad}(e^{JtH})$ is a $*$-automorphism acting on $V_{\C}$ by $h$-unitary maps (the compact Bogoliubov group, Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and $\operatorname{Ad}(e^{\lambda H})$ with $\lambda$ real and nonzero is not a $*$-map unless $H$ is a scalar. If $H = \kappa K_{\mathrm{tot}} + W$ with $K_{\mathrm{tot}} = \sum_{j}(N_{j} - \tfrac12)$ and $W$ gauge-invariant, the boost multiplies every evolved mode operator by the common phase $e^{-J\kappa t}$ and the moduli of its coefficients do not depend on $\kappa$. If $W = g(a_{1}^{*}a_{2}^{*} + a_{2}a_{1})$ on two modes, $\operatorname{ad}_{H}$ on $(a_{1}, a_{2}^{*})$ is $\left(\begin{smallmatrix}-\kappa & -g\\ -g & \kappa\end{smallmatrix}\right)$ with square $\Omega^{2} = \kappa^{2} + g^{2}$: the unitary flow is trigonometric at frequency $\Omega$ and moves at most $g^{2}/(\kappa^{2} + g^{2})$ of the weight of $a_{1}$ onto $a_{2}^{*}$, so in real time the boost detunes, while the real-parameter flow grows as $\cosh(\Omega\lambda)$.
+\item[(iii)] Let $H = H^{*}$ be a quadratic element of a complexified window (for instance $K = \sigma/2$, $\sum_{j}\omega_{j}K_{j}$, or these plus any hop or pairing coupling). Then $\operatorname{ad}_{H}$ is $h$-Hermitian on $V_{\C}$, $\operatorname{Ad}(e^{JtH})$ is a $*$-automorphism acting on $V_{\C}$ by $h$-unitary maps (the compact Bogoliubov group, Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and $\operatorname{Ad}(e^{\lambda H})$ with $\lambda$ real and nonzero is not a $*$-map unless $H$ is a scalar. If $H = \kappa K_{\mathrm{tot}} + W$ with $K_{\mathrm{tot}} = \sum_{j}(N_{j} - \tfrac12)$ and $W$ gauge-invariant (here $N_{j} = a_{j}^{*}a_{j}$ with $a_{j}$ the annihilator, the labelling of the radial atom, where $v$ annihilates and $K = \sigma/2 = N - \tfrac12$; in the tower-plane labelling, where $v = \tfrac12(e + f)$ creates, $N_{j} - \tfrac12 = -K_{j}$ instead), the boost multiplies every evolved mode operator by the common phase $e^{-J\kappa t}$ and the moduli of its coefficients do not depend on $\kappa$. If $W = g(a_{1}^{*}a_{2}^{*} + a_{2}a_{1})$ on two modes, $\operatorname{ad}_{H}$ on $(a_{1}, a_{2}^{*})$ is $\left(\begin{smallmatrix}-\kappa & -g\\ -g & \kappa\end{smallmatrix}\right)$ with square $\Omega^{2} = \kappa^{2} + g^{2}$: the unitary flow is trigonometric at frequency $\Omega$ and moves at most $g^{2}/(\kappa^{2} + g^{2})$ of the weight of $a_{1}$ onto $a_{2}^{*}$, so in real time the boost detunes, while the real-parameter flow grows as $\cosh(\Omega\lambda)$.
 \item[(iv)] The common-rapidity rotor flow $\alpha_{\lambda}(a_{j}) = e^{-\lambda}a_{j}$ does not map states to states: for every $\lambda \neq 0$ there are an even pure two-mode state $\omega = c\ket{00} + s\ket{11}$ (a thermofield pair, $c\cosh 2\lambda > 1$) and $X = a_{1}a_{2} - t$ with $\omega(\alpha_{\lambda}(X^{*}X)) = s^{2}(1 - c^{2}\cosh^{2}2\lambda) < 0$.
 \item[(v)] The rotor flow is the phase flow $\tau_{t} = \operatorname{Ad}(e^{JtK})$ at imaginary parameter, $\operatorname{Ad}(e^{\lambda K}) = \tau_{-J\lambda}$ (with $\tau_{z} = \operatorname{Ad}(e^{JzK})$ for $z \in \mathrm{span}\{1, J\}$), and at rapidity $\beta$ it is the KMS swap of the Gibbs state $\omega_{\beta}$ of $K$: with $\tau_{J\beta} = \operatorname{Ad}(e^{-\beta K})$, $\omega_{\beta}(A\,\tau_{J\beta}(B)) = \omega_{\beta}(BA)$ for all $A, B$ (for real $\beta \neq 0$ this is the KMS condition at $\beta$; at $\beta = 0$ it is the trace property).
 \end{enumerate}

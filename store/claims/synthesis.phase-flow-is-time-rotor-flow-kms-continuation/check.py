@@ -214,7 +214,6 @@ def check_rotor_at_beta_is_kms_swap():
 
 def check_detuned_pairing_and_hop():
     premise("rungs.imported-fock-representation-bogoliubov-group")
-    premise("scrambling.spreading-law-chaos-bound-saturated")
     Ktot = madd(mm(c1, a1), mm(c2, a2), msc(-1, I4))          # n1 + n2 - 1
     W = madd(mm(c1, c2), mm(a2, a1))                            # pairing, self-adjoint
     assert W == T(W)

@@ -25,6 +25,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 7
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Ricci map and curvature operator of the PG fields; the Wald contraction as a derivative along -<B sigma> sigma'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -39,12 +43,18 @@ derivations:
 checked_by:
 - kind: check
   ref: check.py::check_black_hole_data
+- kind: check
+  ref: check.py::check_gtg_black_hole_data
 - kind: proof
   derivation: main
 lineage:
   motivated_by:
   - synthesis.quarter-from-temperature
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: f as a polynomial in the frame components of the Ricci map, its field equations by varying hb with Omega torsion-free (the derivative map P_f of degree >= 1 in the Ricci map, its second D-derivatives and products with the field strength), so every vacuum field solves them; Schwarzschild and Reissner-Nordstrom as Painleve-Gullstrand gauge fields with store-sign curvature operator (M/2r^3)(B + 3 sigma_r B sigma_r), Kretschmann 2 <calR(a ^ b) calR(d_b ^ d_a)> = 48 M^2/r^6, radial eigenvalue 2M/r^3 = sqrt(K/12), and the RN Ricci map -Q^2/r^4 on the radial plane; Wald''s contraction E^{abcd} eps_ab eps_cd read as the derivative of the Lagrangian along the curvature operator S(B) = -<B sigma> sigma (sigma the unit bivector of the normal plane; Ricci map -P_sigma, scalar -2), which gives A/4G for the Einstein term, zero for Ricci monomials on a vacuum horizon, and -2 beta (R^t_t + R^r_r) for beta Ric^2, the sign fixed by the Einstein term and confirmed against the component contraction. Component computation kept as a labelled reading; original proof kept as orig-proof-main.tex. New exact check check_gtg_black_hole_data (PG fields torsion-free at five Schwarzschild points and two RN points, curvature operator, Ricci flatness, Kretschmann, radial eigenvalue, (K . D) K = K/4M at the two horizons, the Wald direction''s Ricci map, the Wald contractions of R, R^2, Ric^2 and the RN entropy shift -8 pi beta Q^2 A/r_+^4). outside_ga withdrawn: no stand-in remains in the proof''s main line.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -76,9 +86,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Lagrangians L_f are densities of a gravitational field on flat spacetime, f a polynomial in the Ricci map of the field strength, with field equations from varying hb with Omega the torsion-free field of hb (equivalently, varying the derived metric); Ricci-flat metrics are vacuum fields, Schwarzschild and Reissner-Nordstrom are the corresponding fields, and flat space is a region of vanishing field strength. Signature (-,+,+,+) kept as declared. Clauses (i) to (iv), the remark and their strength unchanged; proof given a pointer to the dictionary Fact. check_black_hole_data strengthened: kappa and horizon derived from f, Hawking integral computed and compared with A/4 at five masses, Wald (ii) for Einstein part and two quadratic monomials, RN horizon value computed; docstring names (iii) as untested. Version 4 -> 5. Check maintenance: comparisons over zip now also compare lengths, so a length mismatch cannot pass on a shorter prefix; no change to what is claimed. Version 5 -> 6.'
-outside_ga:
-  kind: other
-  why: 'The result compares field equations of higher-curvature actions in the components of the Ricci and Riemann tensors of the derived metric, with the signature and sign conversions stated (reader R03 fix); the variational and Wald-entropy computations are component computations.'
 ---
 
 ## formal

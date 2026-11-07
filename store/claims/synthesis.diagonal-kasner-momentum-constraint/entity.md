@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga (coordinate Ricci computation))'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Omega from the torsion equation of the synchronous gauge field, the boost row of the field strength and the mixed Ricci component; cross product written as a dual; Christoffel route kept as a labelled reading'
+  version: 4
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -42,10 +46,16 @@ checked_by:
   ref: check.py::check_counterterm_scale_factor
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_rotation_gauge_field_and_mixed_ricci
 lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: for hb^{-1}(e_tau) = e0, hb^{-1}(e_i) = A_i e_i the torsion equation gives Omega(e_tau) = 0, Omega(e_{x^i}) = -d_tau A_i B_i - sum_j (d_j A_i/A_j) e_i ^ e_j; the boost row calR(e0 ^ e_k) = -A_k^{-1} d_tau Omega(e_{x^k}), the symmetric Ricci map gives e0 . calR(e_i) = sum_{k != i} A_k^{-1} d_tau(d_i A_k/A_i), and R_0i = -g_0 . calR(g_i) reproduces the formula (log tau cancelling on the circle); (i) writes t = (1,1,1) x p as the dual -I3((1,1,1) ^ p) in Cl(3,0); (ii) states the boost block -(p_i/tau) B_i and the slice volume through hb^{-1}; the Christoffel computation is kept as a labelled reading. New check check_gtg_rotation_gauge_field_and_mixed_ricci (exact jets with p exactly on the circle, two values of L; also the dual form of t); runcheck 5/5, check4 clean on a proposals copy. outside_ga removed: no stand-in remains (R_0i are components with their GTG reading). Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -59,9 +69,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the metric is the derived metric of a gravitational field (hb, Omega) on flat spacetime; R_0i are the coordinate components of the round-sphere-positive Ricci tensor of the derived metric, R_0i = -g_0 . R(g_i) in the store sign (the sign of the check''s Christoffel formula); Ric = Lambda g becomes R(a) = Lambda a; the connection one-forms are the rotation-gauge field. Formula, (M) and clauses unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
-outside_ga:
-  kind: other
-  why: 'The result is a statement about the mixed coordinate components R_{0i} of the Ricci curvature of the derived metric (read in GTG as R_{0i} = -g_0 . R(g_i), round-sphere-positive sign, Fact synthesis.imported-gtg-dictionary), and its proof and check compute them from the Christoffel symbols of the diagonal metric; the coordinate computation is the content, and a GTG derivation through the rotation-gauge field would be a different proof.'
 ---
 
 ## formal

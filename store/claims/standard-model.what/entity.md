@@ -1,7 +1,7 @@
 ---
 id: standard-model.what
 kind: claim
-version: 3
+version: 4
 title: What $N$ is
 status: conjectured
 region: standard-model
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the adopted Henneaux-Teitelboim promotion named in clause (ii)'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 lineage:
   motivated_by:
@@ -32,6 +36,10 @@ locators:
   label: obs:whatN
   line: 1243
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale wording (DECISIONS G4, R07 item 3): the Henneaux-Teitelboim promotion was adopted on 2026-10-23 (programme.n-parameter-of-the-laws); the levels that still read it as an open decision now add that the store adopts it. The T10 paper text in source_formal and in the setting notes is kept.'
   env: observation
   context_refs:
   - dark-energy.vacuum-region-registration-condition
@@ -71,10 +79,10 @@ about:
 ---
 
 ## formal
-(i) The boundary-mode count of the entropy paper T8 \cite[\S 3, Thm.~3.4]{ButlerT8}, applied to the cosmological horizon rather than to the black-hole singularity, was offered here as a preliminary indication that the de Sitter horizon entropy is of order $N^{2}$, so that $N$ is the square root of the pair capacity of the universe's own boundary mode space. No paper of the series performs that application; it is now performed in the store. Under the Einstein-Hilbert area law the horizon entropy is exactly $S_{\Lambda} = \pi N^{2}$ (Theorem \claimref{synthesis.de-sitter-entropy-pi-n-squared}), and if the horizon's modes are counted by the black hole's rule they number $|J| = \pi N^{2}/\ln 2$, about $4.8 \times 10^{122}$, with capacity $C = |J|\ln 2 = S_{\Lambda}$, so that $N = \sqrt{C/\pi}$ (Theorem \claimref{synthesis.de-sitter-mode-count}). The indication therefore holds exactly for the entropy and up to the factor $\sqrt{\pi}$ for the capacity; $N$, about $1.0 \times 10^{61}$, is not itself the number of the universe's boundary modes but the square root of that number up to $\sqrt{\pi/\ln 2}$. (ii) This bears on the question as posed. The ascended action is polynomial with no dimensionless constants, and every scale enters through the frozen point. Under the action as written, with the frozen point's norm fixed before variation, $N$ is a parameter of the laws, an import recorded in Proposition \claimref{standard-model.trichotomy-what-kind-number}(4); under the promoted action, where the norm is the value of a Lagrange-multiplier field, the frozen point is a property of the selected descent, $N$ is a state-count and not a coupling, and to ask that it be derived from the laws is to ask a question that refutes itself as posed. Which reading holds is the decision Proposition \claimref{standard-model.trichotomy-what-kind-number}(4) records open, and the capstone \cite[Table~1]{ButlerT17} keeps the count. (iii) The Dirac coincidence ($N$ is also, at present, the age of the universe in Planck units) would suggest $N$ is a clock and $\Lambda$ decays as $1/t^{2}$; but the series' registered prediction $w = -1$ exactly \cite[Prop.~4.2(iii)]{ButlerT10}, itself registered and conditional there, forbids this: the frozen point is frozen. The framework predicts that the coincidence is epochal, and that prediction is tested by the dark-energy measurement of $w$ already registered in the series.
+(i) The boundary-mode count of the entropy paper T8 \cite[\S 3, Thm.~3.4]{ButlerT8}, applied to the cosmological horizon rather than to the black-hole singularity, was offered here as a preliminary indication that the de Sitter horizon entropy is of order $N^{2}$, so that $N$ is the square root of the pair capacity of the universe's own boundary mode space. No paper of the series performs that application; it is now performed in the store. Under the Einstein-Hilbert area law the horizon entropy is exactly $S_{\Lambda} = \pi N^{2}$ (Theorem \claimref{synthesis.de-sitter-entropy-pi-n-squared}), and if the horizon's modes are counted by the black hole's rule they number $|J| = \pi N^{2}/\ln 2$, about $4.8 \times 10^{122}$, with capacity $C = |J|\ln 2 = S_{\Lambda}$, so that $N = \sqrt{C/\pi}$ (Theorem \claimref{synthesis.de-sitter-mode-count}). The indication therefore holds exactly for the entropy and up to the factor $\sqrt{\pi}$ for the capacity; $N$, about $1.0 \times 10^{61}$, is not itself the number of the universe's boundary modes but the square root of that number up to $\sqrt{\pi/\ln 2}$. (ii) This bears on the question as posed. The ascended action is polynomial with no dimensionless constants, and every scale enters through the frozen point. Under the action as written, with the frozen point's norm fixed before variation, $N$ is a parameter of the laws, an import recorded in Proposition \claimref{standard-model.trichotomy-what-kind-number}(4); under the promoted action, where the norm is the value of a Lagrange-multiplier field, the frozen point is a property of the selected descent, $N$ is a state-count and not a coupling, and to ask that it be derived from the laws is to ask a question that refutes itself as posed. Which reading holds is the decision Proposition \claimref{standard-model.trichotomy-what-kind-number}(4) records open, which the store adopts (\claimref{programme.n-parameter-of-the-laws}), and the capstone \cite[Table~1]{ButlerT17} keeps the count. (iii) The Dirac coincidence ($N$ is also, at present, the age of the universe in Planck units) would suggest $N$ is a clock and $\Lambda$ decays as $1/t^{2}$; but the series' registered prediction $w = -1$ exactly \cite[Prop.~4.2(iii)]{ButlerT10}, itself registered and conditional there, forbids this: the frozen point is frozen. The framework predicts that the coincidence is epochal, and that prediction is tested by the dark-energy measurement of $w$ already registered in the series.
 
 ## technical
-At observation level. The paper offered, as a preliminary indication, that the boundary-mode count of the entropy paper applied to the cosmological horizon gives an entropy of order $N^{2}$, making $N$ the square root of the pair capacity of the universe's own boundary mode space. That application is now performed: the horizon entropy is exactly $\pi N^{2}$ under the Einstein-Hilbert area law, and under the black hole's counting rule the horizon carries about $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$ modes, so $N \approx 1.0 \times 10^{61}$ is the square root of the capacity up to $\sqrt{\pi}$ and of the mode count up to $\sqrt{\pi/\ln 2}$, not the mode count itself. Under the action as written $N$ is a parameter of the laws; under the promoted action, where the norm is a Lagrange-multiplier field, $N$ is a state-count of the selected descent and not a coupling. Which reading holds is recorded open.
+At observation level. The paper offered, as a preliminary indication, that the boundary-mode count of the entropy paper applied to the cosmological horizon gives an entropy of order $N^{2}$, making $N$ the square root of the pair capacity of the universe's own boundary mode space. That application is now performed: the horizon entropy is exactly $\pi N^{2}$ under the Einstein-Hilbert area law, and under the black hole's counting rule the horizon carries about $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$ modes, so $N \approx 1.0 \times 10^{61}$ is the square root of the capacity up to $\sqrt{\pi}$ and of the mode count up to $\sqrt{\pi/\ln 2}$, not the mode count itself. Under the action as written $N$ is a parameter of the laws; under the promoted action, where the norm is a Lagrange-multiplier field, $N$ is a state-count of the selected descent and not a coupling. Which reading holds is recorded open; the store adopts the promoted action (\claimref{programme.n-parameter-of-the-laws}).
 
 The Dirac coincidence would suggest that $N$ is a clock and $\Lambda$ decays as $1/t^{2}$, but the series' registered conditional prediction $w = -1$ forbids this. The framework therefore predicts that the coincidence is epochal, which the measurement of $w$ tests.
 

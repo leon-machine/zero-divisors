@@ -16,11 +16,15 @@
     N = a1 a2 a3, vanishes at jets obeying the stated equations and not at perturbed jets.
 (e) The Liouville solution, the constraint BC = v^2, the limiting epochs and the BKL transition law (and u -> u - 1),
     with the negative weight of the earlier epoch on a helicity-free axis.
+(f) The GTG route (lib/gtg.py): the slice gauge field in Cl(0,3) and the Bianchi II gauge field on exact jets,
+    Omega solved from the torsion equation; the slice scalar equals the frame formula, and the Bianchi II Ricci
+    map gives the stated equations.
 """
 from fractions import Fraction as F
 import GA
 from GA import field_solve, mul, gen, add, scal
 from tp_premise import premise
+import gtg
 
 N3 = 3
 
@@ -330,4 +334,83 @@ def check_liouville_bounce_is_bkl_law():
         q = bkl(p)
         ok &= sorted(q) == sorted(kasner(u - 1) if u >= 2 else kasner(1 / (u - 1)))
     GA.check("Liouville wall: late epoch p_1<0 -> earlier epoch = BKL law (u -> u-1); new negative weight on a free axis", ok)
+    return ok
+
+
+# ---------------------------------------------------------------- the GTG route (lib/gtg.py)
+SQ_SLICE = GA.sig(0, 3)            # the slice's physical vectors: the spacetime vectors orthogonal to gamma_0
+
+
+def slice_field(a, A0, A1, A2):
+    """The slice gauge field hb^{-1}(e_i) = sum_l a_l theta^l_i(x) gamma_l (Cl(0,3)) on exact second-order jets."""
+    X = [gtg.Jet.var(i, F(0), N3, 2) for i in range(N3)]
+    TH = [[None] * N3 for _ in range(N3)]
+    for l in range(N3):
+        for i in range(N3):
+            j = gtg.Jet.const(A0[l][i], N3)
+            for k in range(N3):
+                j = j + A1[k][l][i] * X[k]
+                for m in range(N3):
+                    j = j + (A2[k][m][l][i] / 2) * X[k] * X[m]
+            TH[l][i] = a[l] * j
+    return gtg.Field(TH, sq=SQ_SLICE)
+
+
+def bianchi2_field(a, da, dda):
+    """N gamma0, a1 (dx - z dy) gamma1, a2 dy gamma2, a3 dz gamma3 on jets in (T, z) about T = 0, z = 0."""
+    T = gtg.Jet.var(0, F(0), 4, 2)
+    z = gtg.Jet.var(3, F(0), 4, 2)
+    aj = [a[i] + a[i] * da[i] * T + (a[i] * (dda[i] + da[i] * da[i]) / 2) * T * T for i in range(3)]
+    TH = [[F(0)] * 4 for _ in range(4)]
+    TH[0][0] = aj[0] * aj[1] * aj[2]
+    TH[1][1] = aj[0]
+    TH[1][2] = F(0) - aj[0] * z
+    TH[2][2] = aj[1]
+    TH[3][3] = aj[2]
+    return gtg.Field(TH)
+
+
+B2_GENERIC = (([F(2, 3), F(5, 4), F(3, 7)], [F(-1, 5), F(2, 3), F(1, 4)], [F(1, 2), F(-3), F(2, 7)]),
+              ([F(3, 2), F(1, 2), F(4)], [F(1), F(-2, 3), F(5)], [F(-1), F(1, 3), F(2)]))
+B2_SOLUTIONS = (([F(2, 3), F(5, 4), F(3, 7)], F(-1, 5), F(2, 3)), ([F(3, 2), F(1, 2), F(4)], F(-2, 7), F(5, 3)))
+B2_KICK = F(1, 7)
+
+
+def check_gtg_slice_and_bianchi_ii_field_strength():
+    """(i) R^(3) is the store-sign scalar of the slice gauge field (Omega solved from the torsion equation,
+    physical vectors in Cl(0,3)); it equals the frame formula and the coordinate scalar at the sample coframes
+    and weights. (iv) The Bianchi II gauge field's Ricci map: R^o_{mu nu} = -g_mu . calR(g_nu) gives
+    R^o_TT = N^2 R^o(e0, e0) = -(E1 + E2 + E3)/2 + C/2, N^2 R^o(e_l, e_l) = E_l/2, off-diagonal zero; calR(a) = 0
+    on the stated solution jets and not on perturbed ones."""
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    for seed in SEEDS:
+        A0, A1, A2 = coframe(seed)
+        for a in WEIGHTS[:3]:
+            fld = slice_field(a, A0, A1, A2)
+            ok &= fld.torsion_free()
+            R3 = gtg.ricci_scalar(fld.curvature(), SQ_SLICE)
+            ok &= R3 == scalar_frame(a, A0, A1, A2)[0] and R3 == scalar_coord(a, A0, A1, A2)
+    for a, da, dda in B2_GENERIC:
+        fld = bianchi2_field(a, da, dda)
+        ok &= fld.torsion_free()
+        Rc = fld.curvature()
+        g = [fld.hb_inv(GA.gen(m)) for m in range(4)]
+        Ro = [[F(0) - gtg.vdot(g[m], gtg.ricci(Rc, g[n]), gtg.S13) for n in range(4)] for m in range(4)]
+        q = a[0] ** 4
+        N2 = (a[0] * a[1] * a[2]) ** 2
+        E = [2 * dda[0] + q, 2 * dda[1] - q, 2 * dda[2] - q]
+        Cc = 4 * (da[0] * da[1] + da[1] * da[2] + da[2] * da[0]) - q
+        ok &= Ro[0][0] == -sum(E) / 2 + Cc / 2          # coordinate R_TT = N^2 R(e0, e0)
+        ok &= all(N2 * Ro[l + 1][l + 1] / a[l] ** 2 == E[l] / 2 for l in range(3))
+        ok &= all(Ro[i][j] == 0 for i in range(4) for j in range(4) if i != j)
+        ok &= Ro == bianchi2_ricci(a, da, dda)
+    for a, al, be in B2_SOLUTIONS:
+        q = a[0] ** 4
+        ga = (q / 4 - al * be) / (al + be)
+        Rc = bianchi2_field(a, [al, be, ga], [-q / 2, q / 2, q / 2]).curvature()
+        ok &= all(gtg.ricci(Rc, GA.gen(m)) == {} for m in range(4))
+        Rp = bianchi2_field(a, [al, be, ga], [-q / 2, q / 2 + B2_KICK, q / 2]).curvature()
+        ok &= any(gtg.ricci(Rp, GA.gen(m)) != {} for m in range(4))
+    GA.check("GTG: slice scalar = frame formula = coordinate scalar; Bianchi II Ricci map gives E_l, C", ok)
     return ok

@@ -23,7 +23,7 @@ derivations:
   uses:
   - odd-extensions.four-extensions-oriented-pair@5
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
-  - odd-extensions.transport-constrains-frozen-point-only-through@2
+  - odd-extensions.transport-constrains-frozen-point-only-through@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

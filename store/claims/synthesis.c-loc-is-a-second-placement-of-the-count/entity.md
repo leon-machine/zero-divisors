@@ -27,7 +27,7 @@ derivations:
   uses:
   - singularity.stretched-singularity-count@7
   - scrambling.epoch-modular-period-two-unknowns-become@5
-  - scrambling.area-law-test@4
+  - scrambling.area-law-test@5
   - synthesis.clausius-route-newton-constant-is-residue@4
   - synthesis.imported-jacobson-clausius-1995@2
   - synthesis.kerr-ring-count-misses-area-law@5

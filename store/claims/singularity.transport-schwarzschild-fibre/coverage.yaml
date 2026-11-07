@@ -15,6 +15,12 @@ functions:
     kind: sampled
     clauses: ["(4) Q*_p(xi) = -r exactly at every radius, the horizon included", "iota(X_p(xi)) descends at every r > 0 to dsc = -xi/r (the physical covector -hb^T(xi)/r) and converges as r -> 0+ to an ideal point", "the read-out fails exactly on E"]
     omits: "dual norm checked at 3 masses x 4 radii in the PG gauge, at three static points, and as exact identities in Q(r) for the static form and PG Gram; 'nowhere else in the physical closure' is read from s = r != 0 at samples, the u -> 0 limit from four values of u"
+  check_gtg_dual_norm_of_the_dying_direction_from_the_engine:
+    kind: sampled
+    clauses:
+    - "(4) Q*_p(xi) = -r exactly at every radius, the horizon included"
+    - "iota(X_p(xi)) descends at every r > 0 to dsc = -xi/r (the physical covector -hb^T(xi)/r)"
+    omits: "hb^T from the shared engine's PG gauge at 3 masses x 4 radii (inside, on and outside the horizon) and its static gauge at three points; the r -> 0 limit is tested by the earlier function"
 untouched_premises:
   sheaf.one-sided-completion-singularity: "the check builds the Cl(2,4) completion directly; the completion theorem is cited for the setting"
   singularity.cones-fold: "cited for context in the derivation; no check function computes a cone fold"

@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - tower.commuting-copies@5
-  - tower.compatibility-connecting-maps-transported@6
+  - tower.compatibility-connecting-maps-transported@7
   proof: proof-main.tex
 checked_by:
 - kind: check

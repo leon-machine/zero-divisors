@@ -7,11 +7,16 @@ exact engine for diagonal metrics whose entries are monomials c t^e with rationa
 Ricci tensor, R and Ric.Ric); the expected values are derived by hand in the proof and compared exactly.
 The Dirac part works in the spacetime algebra Cl(1,3) of GA.py in Hestenes form (unit imaginary I sigma3 on
 the right); the conclusion uses only M^2 = -(k^2 + m^2), not the choice of unit imaginary.
+The proof's GTG route (check_gtg_wall_field_strengths): each metric as the derived metric of a diagonal gauge field
+on exact jets (lib/gtg.py), Omega solved from the torsion equation, store-sign field strength, Ricci and Einstein
+maps; it reproduces the flat bracket, the scalars of the five pairs, the Friedmann exponents and the radiation
+Ricci square.
 Exact arithmetic only (Fractions); no transcendental number is evaluated.
 """
 from fractions import Fraction as F
 import GA
 from tp_premise import premise
+import gtg
 
 # ---------------------------------------------------------------- Laurent "polynomials" in t, rational exponents
 def lp(c, e):
@@ -315,3 +320,58 @@ if __name__ == "__main__":
     check_wall_smooth_scalar_solutions_are_a_lagrangian_half()
     check_wall_smooth_dirac_solutions_are_static_zero_modes()
     print("FAILURES:", GA.FAILURES)
+
+
+# ---------------------------------------------------------------- the proof's GTG route (lib/gtg.py)
+WALL_PAIRS = ((1, 0), (0, 1), (2, 0), (0, 2), (1, 1))
+FLRW_W = (F(0), F(1, 3), F(1), F(-1, 3), F(1, 2))
+
+
+def _diag_field(N, As):
+    TH = [[F(0)] * 4 for _ in range(4)]
+    TH[0][0] = N
+    for i in range(3):
+        TH[i + 1][i + 1] = As[i]
+    return gtg.Field(TH)
+
+
+def check_gtg_wall_field_strengths():
+    """Diagonal gauge fields hb^{-1}(e_t) = N e0, hb^{-1}(e_i) = A_i e_i on exact jets, Omega solved from the
+    torsion equation: Omega(e_t) = 0, Omega(e_{x^i}) = -(dA_i/N) B_i; (i) the radical-normal bracket
+    (N = t^(-1/2)) has zero field strength; (iii) for (a, b) the scalar is (b/2)(b + 2 - a) t^(a - 2),
+    3/2 t^-2 for (0, 1); (iv) the field A_i = t^p has Einstein map G(e0) = -3p^2 t^-2 e0,
+    G(e_j) = p(2 - 3p) t^-2 e_j, so P = w rho exactly at p = 2/(3(1 + w)); at p = 1/2 the scalar is 0 and the
+    Ricci square 3/4 t^-4."""
+    premise("dark-energy.imported-walls-sphere-theorem")
+    ok = True
+    t0 = F(16)
+    T = gtg.Jet.var(0, t0, 4, 2)
+    for (a, b) in WALL_PAIRS:
+        N = T.pw(F(-a, 2), F(1, 4) ** a)          # t0^(-a/2), t0 = 16
+        A1 = T.pw(F(-b, 2), F(1, 4) ** b)
+        fld = _diag_field(N, [A1, F(1), F(1)])
+        ok = ok and fld.Omega(0) == {} and GA.eq(fld.Omega(1), GA.scal(-A1.d(0).v / N.v, gtg.biv(0, 1)))
+        Rc = fld.curvature()
+        kappa = F(b, 4) * (b + 2 - a) * t0 ** (a - 2)
+        ok = ok and GA.eq(Rc[(0, 1)], GA.scal(kappa, gtg.biv(0, 1)))
+        ok = ok and gtg.ricci_scalar(Rc) == F(b, 2) * (b + 2 - a) * t0 ** (a - 2)
+        if (a, b) == (1, 0):
+            ok = ok and all(fld.Omega(m) == {} for m in range(4)) and all(v == {} for v in Rc.values())
+        if (a, b) == (0, 1):
+            ok = ok and gtg.ricci_scalar(Rc) == F(3, 2) / t0 ** 2
+    for w in FLRW_W:
+        p = 2 / (3 * (1 + w))
+        tau, fld0 = gtg.kasner_field((p, p, p), 2)
+        fld = gtg.Field(fld0.TH)
+        Rc = fld.curvature()
+        t2 = 1 / tau ** 2
+        ok = ok and GA.eq(gtg.einstein(Rc, GA.gen(0)), GA.scal(-3 * p * p * t2, GA.gen(0)))
+        G1 = gtg.einstein(Rc, GA.gen(1))
+        ok = ok and GA.eq(G1, GA.scal(p * (2 - 3 * p) * t2, GA.gen(1)))
+        rho, P = 3 * p * p * t2, p * (2 - 3 * p) * t2
+        ok = ok and P == w * rho
+        ok = ok and gtg.ricci_scalar(Rc) == 6 * p * (2 * p - 1) * t2
+        if p == F(1, 2):
+            sq_ = sum((gtg.vdot(gtg.ricci(Rc, gtg.er(m)), gtg.ricci(Rc, GA.gen(m)), gtg.S13) for m in range(4)), F(0))
+            ok = ok and gtg.ricci_scalar(Rc) == 0 and sq_ == F(3, 4) * t2 * t2
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_wall_field_strengths"; return _tp_rv

@@ -2,7 +2,7 @@
 id: field-theory.mass
 kind: claim
 version: 5
-title: Mass with $i = I_4$
+title: Mass with the unit $I_4$
 status: proved
 region: field-theory
 subject: quantum-fields
@@ -56,6 +56,10 @@ locators:
   label: prop:mass
   line: 159
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -97,4 +101,4 @@ So the common $I_4$ phase is axial and the mass breaks it, and the one-datum fac
 With the spacetime volume element as imaginary unit every field is read in one chirality, and a mass couples a left-handed part to a right-handed one. The mass term then takes exactly the standard two-component form. The unit belongs to the field algebra, not to the massive equation, which still needs its own geometric datum.
 
 ## one-liner
-With $i = I_4$ a Dirac mass is the standard two-component epsilon pairing $2B(\chi, \eta)$ between opposite $I_4$-charges, breaking the axial phase, and $I_4$ is not the massive law's complex structure.
+With the unit $I_4$ a Dirac mass is the standard two-component epsilon pairing $2B(\chi, \eta)$ between opposite $I_4$-charges, breaking the axial phase, and $I_4$ is not the massive law's complex structure.

@@ -1,4 +1,10 @@
 functions:
+  check_gtg_rotation_gauge_field_and_mixed_ricci:
+    kind: sampled
+    clauses:
+    - '"tau R_0i = d_i p_i + sum_j (p_i - p_j) d_i b_j, the terms in log tau cancelling identically by the Kasner relations" (GTG route, R_0i = -g_0 . calR(g_i))'
+    - '(i) the tangent t as the dual of (1,1,1) ^ p'
+    omits: 'two fixed rational jets of exponent fields on the circle and of scale functions, each at two values of L = log tau; the identity in general is the proof''s derivation'
   check_momentum_constraint_formula:
     kind: sampled
     clauses: [main formula tau R_0i, (M), (i)]

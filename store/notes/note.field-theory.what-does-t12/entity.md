@@ -1,7 +1,7 @@
 ---
 id: note.field-theory.what-does-t12
 kind: note
-version: 2
+version: 3
 title: How the unit choice moves the orientation bit
 status: remark
 subject: quantum-fields
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - field-theory.orientation-relocated
 - standard-model.imported-twistor-charge-helicity
@@ -26,6 +30,10 @@ locators:
   label: rem:t12
   line: 285
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   source_formal: T12's orientation bit, which the dark-matter paper shows the descent cannot derive, is
     not removed by $i = I_4$; it moves into the relative sign of the twistor's unit and the field's. If
     the series fixes that sign, and if the label copy's parity is identified with the twistor's (the theorem
@@ -52,7 +60,7 @@ review: typed
 ---
 
 ## formal
-T12's orientation bit, which the dark-matter paper shows the descent cannot derive, is not removed by $i = I_4$; it moves into the relative sign of the conformal spinors' unit ($\pm I_6$, the twistor's unit) and the field's. If the series fixes that sign, and if the label copy's parity is identified with the conformal spinors' (the twistor's; the theorem T12 calls the same missing theorem as Hypothesis (S)), the orientation is fixed, through T12's Fact on the charge and helicity read on the conformal spinor space (twistor charge and helicity), whose conventions were not checked here. Its physical content would be at most the sign of CP violation.
+T12's orientation bit, which the dark-matter paper shows the descent cannot derive, is not removed by the unit $I_4$; it moves into the relative sign of the conformal spinors' unit ($\pm I_6$, the twistor's unit) and the field's. If the series fixes that sign, and if the label copy's parity is identified with the conformal spinors' (the twistor's; the theorem T12 calls the same missing theorem as Hypothesis (S)), the orientation is fixed, through T12's Fact on the charge and helicity read on the conformal spinor space (twistor charge and helicity), whose conventions were not checked here. Its physical content would be at most the sign of CP violation.
 
 ## technical
 pending

@@ -1,7 +1,7 @@
 ---
 id: pairing.static-frame-only-expansion-survives
 kind: claim
-version: 7
+version: 8
 title: 'The static frame: only the expansion survives'
 status: proved
 region: pairing
@@ -25,6 +25,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 7
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: gauge field solved from the torsion equation, classes in Cl(2,3) with I_5; exact checks'
+  version: 8
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -46,12 +50,20 @@ checked_by:
   ref: check.py::check_transport_along_l_and_the_stabiliser
 - kind: check
   ref: check.py::check_horizon_limit_and_sample_value
+- kind: check
+  ref: check.py::check_gtg_torsion_solution_is_the_stated_gauge_field
+- kind: check
+  ref: check.py::check_gtg_classes_with_the_central_unit_of_cl23
 locators:
   paper: T05-pairing
   number: Prop 5.1
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: the static gauge field hb^{-1}, the rotation-gauge field solved from the torsion equation hb^T(grad ^ f^a) = sum_b e^b ^ (Omega(e_b) . e^a) (unique, rank 24), Omega(e_0) = (f''/2 sqrt f) e_1 e_0, Omega(e_1) = 0, Omega(e_2) = (sqrt f/r) e_1 ^ e_2, Omega(e_3) = (sqrt f/r) e_1 ^ e_3 + (cot theta/r) e_2 ^ e_3, and the classes as symmetric products in Cl(2,3) with the central unit I_5; connection forms and spin coefficients kept as a labelled reading. Checked exactly: check_gtg_torsion_solution_is_the_stated_gauge_field (the solve from the coframe alone, rank 24, the four bivectors at four points) and check_gtg_classes_with_the_central_unit_of_cl23 (I_5 central of square -1, the classes on e_c and on the tetrad, -48/125 at r = 25/16). Version 7 -> 8; outside_ga removed (no stand-in remains).'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -95,9 +107,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: static frame = orthonormal physical frame of the static gauge of the Schwarzschild field on flat spacetime; Omega(e_c) named as Omega(hb(e_c)); nabla -> D. Formulas and values unchanged; proof given a pointer.'
-outside_ga:
-  kind: other
-  why: 'The proof works with the block connection one-forms omega_{ab} of the static frame and frame components; the forms are the computation.'
 ---
 
 ## formal

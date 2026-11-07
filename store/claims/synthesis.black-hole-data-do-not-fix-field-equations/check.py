@@ -203,3 +203,71 @@ def check_black_hole_data():
     entropy = GA.ps_int(poly)                     # S(M) = int dM / T with S(0) = 0
     assert (len(masses) == len(quarter_area) and all(GA.peval(entropy, m) == qa for m, qa in zip(masses, quarter_area)))
     return True
+
+
+# ---------------------------------------------------------------------------
+# GTG proof (2026-11-07): Schwarzschild and Reissner-Nordstrom as Painleve-Gullstrand gauge fields on flat
+# spacetime (rotation-gauge field from the engine, checked torsion-free), their store-sign curvature operators,
+# Ricci maps and Kretschmann scalars 2 <calR(a ^ b) calR(d_b ^ d_a)>, and the Wald contraction read as the
+# derivative of the Lagrangian along the curvature operator S(B) = -<B sigma> sigma, sigma = gamma_1 gamma_0 the
+# unit bivector of the horizon's normal plane: -1/(8 pi G) for the Einstein term (so A/4G), zero for Ricci
+# monomials on a vacuum field, and -2 beta (R^t_t + R^r_r) for beta Ric^2 at the Reissner-Nordstrom horizon.
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+SCHW = [(F(1), [F(2), F(8), F(1, 2)]), (F(3, 2), [F(3), F(12)])]        # beta = sqrt(2M/r) rational
+RN_M, RN_Q2, RN_R = F(3, 2), F(5, 4), [F(5, 2), F(9, 2)]                 # beta = sqrt(3/r - 5/(4 r^2)) rational
+ANGLE = (F(3, 5), F(4, 5))
+SIGMA = gtg.biv(1, 0)                                                    # sigma = gamma_1 gamma_0, sigma^2 = 1
+
+
+def _wald_op(B):
+    return gtg.m_scal(-gtg.sp(gtg.m_mul(B, SIGMA)), SIGMA)
+
+
+def _along(L, R):
+    """d/ds L(R + s S) at s = 0 for L a polynomial of degree <= 2 in the curvature operator."""
+    up = L(gtg.op_add(R, _wald_op))
+    dn = L(gtg.op_add(R, lambda B: gtg.m_neg(_wald_op(B))))
+    return (up - dn) / 2
+
+
+def check_gtg_black_hole_data():
+    premise("synthesis.imported-wald-noether-charge-entropy")
+    premise("singularity.rate-discharge-hypothesis-iii")
+    ok = True
+    ric2 = lambda R: gtg.ricci_sq(R)                                     # noqa: E731
+    for M, radii in SCHW:
+        for r0 in radii:
+            fld = gtg.schwarzschild_pg(M, r0, *ANGLE)
+            ok = ok and fld.torsion_free()
+            Rc = fld.curvature()
+            typ = gtg.op_planes(gtg.op_type_d(M / (2 * r0 ** 3), SIGMA))
+            ok = ok and all(gtg.m_sub(Rc[pl], typ[pl]) == {} for pl in Rc)
+            ok = ok and gtg.ricci_flat(Rc) and gtg.kretschmann(Rc) == 48 * M * M / r0 ** 6
+            lam_r = gtg.sp(gtg.m_mul(gtg.apply_op(Rc, SIGMA), SIGMA))       # radial eigenvalue 2M/r^3
+            ok = ok and lam_r == 2 * M / r0 ** 3 and lam_r * lam_r == gtg.kretschmann(Rc) / 12
+            ok = ok and _along(ric2, Rc) == 0 and _along(lambda R: gtg.ricci_scalar(R) ** 2, Rc) == 0
+            ok = ok and _along(gtg.ricci_scalar, Rc) == -2                 # Einstein: E.eps.eps = -2/(16 pi G)
+            if r0 == 2 * M:                                                 # horizon: (K . D) K = K/(4M)
+                r = gtg.Jet.var(1, r0, 4, 2)
+                K = {(0,): gtg.Jet.const(1, 4), (1,): (2 * M / r).pw(F(1, 2))}
+                ok = ok and gtg.m_sub(fld.cov(0, K), gtg.m_scal(1 / (4 * M), gtg.m_val(K))) == {}
+    # the Wald direction S(B) = -<B sigma> sigma has Ricci map -P_sigma (minus the projector on the normal plane)
+    ok = ok and all(gtg.m_sub(gtg.ricci(_wald_op, gtg.e(a)), gtg.m_scal(-1 if a < 2 else 0, gtg.e(a))) == {}
+                    for a in range(4))
+    beta_rn = lambda r: (2 * RN_M / r - RN_Q2 / (r * r)).pw(F(1, 2))      # noqa: E731
+    for r0 in RN_R:
+        fld = gtg.pg_field(r0, ANGLE[0], ANGLE[1], beta_rn)
+        ok = ok and fld.torsion_free()
+        Rc = fld.curvature()
+        q = RN_Q2 / r0 ** 4
+        for a, lam in enumerate([-q, -q, q, q]):
+            ok = ok and gtg.m_sub(gtg.ricci(Rc, gtg.e(a)), gtg.m_scal(lam, gtg.e(a))) == {}
+        wald = _along(lambda R: gtg.ricci_sq(R), Rc)                       # per unit beta
+        ok = ok and wald == -2 * (-q - q) and _along(gtg.ricci_scalar, Rc) == -2
+        if r0 == RN_M + 1:                                               # r_+ = M + sqrt(M^2 - Q^2) = 5/2
+            ok = ok and 1 - 2 * RN_M / r0 + RN_Q2 / (r0 * r0) == 0
+            ok = ok and -2 * wald == -8 * RN_Q2 / r0 ** 4                   # entropy shift / (pi beta A)
+    GA.check("GTG: Schwarzschild and RN curvature, Kretschmann, and the Wald contraction along -<B sigma> sigma", ok)
+    assert ok

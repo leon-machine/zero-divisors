@@ -31,7 +31,7 @@ about:
 derivations:
 - name: main
   uses:
-  - rule2.where-obstruction-sits-commuting-square@5
+  - rule2.where-obstruction-sits-commuting-square@6
   - std-algebra.complexification@3
   proof: proof-main.tex
 checked_by:

@@ -32,11 +32,11 @@ derivations:
   - synthesis.wick-rotated-boost-selects-observer-tube-point@2
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@2
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   - synthesis.imported-gtg-dictionary@1
   - one-relation.spacetime-manifold-vacuum-lines@6
   - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   assumes:
   - synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries@2
   proof: proof-main.tex

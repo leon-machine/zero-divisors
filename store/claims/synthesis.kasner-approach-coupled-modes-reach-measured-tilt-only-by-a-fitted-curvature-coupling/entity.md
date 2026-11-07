@@ -25,12 +25,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
-  - interior.kasner-form-interior@5
+  - interior.kasner-form-interior@6
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
-  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
+  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2

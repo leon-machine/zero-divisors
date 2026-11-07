@@ -1,7 +1,7 @@
 ---
 id: note.conformal.abstract
 kind: note
-version: 1
+version: 2
 title: Abstract
 status: setting
 subject: clifford-structure
@@ -15,13 +15,23 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T02, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, comments_on link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - conformal.blade-basis-persists-under-degeneracy
+- conformal.minimal-nondegenerate-completion
 locators:
   paper: T02
   number: Abstract
   section: Abstract
   line: 120
+extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item D11 (routine): comments_on link added to conformal.minimal-nondegenerate-completion, the abstract''s subject. Paper text unchanged.'
 ---
 
 ## formal

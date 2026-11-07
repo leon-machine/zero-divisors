@@ -42,6 +42,10 @@ locators:
   label: lem:paircount
   line: 923
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Extraction only (DECISIONS G13, R04 item 6): the two 7 November notes contradicted each other; the maintainer_pass_ga_units note (the i stays and is declared) is marked superseded by maintainer_pass_resolve_units (the i written with I_W, declaration removed), which the text agrees with. No version change.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -49,7 +53,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does.'
+    note: 'Superseded by maintainer_pass_resolve_units: Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

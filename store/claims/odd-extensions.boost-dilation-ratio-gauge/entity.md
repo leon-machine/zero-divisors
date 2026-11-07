@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
-  - odd-extensions.transport-constrains-frozen-point-only-through@2
+  - odd-extensions.transport-constrains-frozen-point-only-through@3
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.bivector-exponential@3
   proof: proof-main.tex

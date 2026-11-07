@@ -1,4 +1,10 @@
 functions:
+  check_gtg_weyl_square_of_weyl_maps:
+    kind: exact
+    clauses:
+    - '(iii) eps_X(F, F) = (1/2) <W(a ^ b) W(d_b ^ d_a)>_0 times the volume form, the Cotton block not contributing'
+    - '(v) the pointwise Weyl square (4/3)(K1 + K2)^2 and Euler density 8 K1 K2 of S^2(K1) x S^2(K2), whose integrals over 16 pi^2 are the stated ones'
+    omits: 'complete for (iii) by bilinearity (ten independent Weyl maps, all 55 pairs); the integration over the closed product uses the areas 4 pi/K_i (beyond one flat chart)'
   check_tractor_field_strength_of_torsion_free_field_annihilates_x:
     kind: sampled
     clauses:

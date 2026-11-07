@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: the transport equation derived from the Cl(2,4) gauge field Omega_T in a D-parallel frame, E and N_v as bivector actions and facts (a) to (c) as Cl(2,4) identities; slot route kept as a labelled reading'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -38,11 +42,17 @@ checked_by:
   ref: check.py::check_model_profile
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_tractor_transport_in_cl24
 lineage:
   motivated_by:
   - interior.filtration-cauchy-horizon-read-literature
   - interior.imported-mass-inflation-stability
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: tractors as Cl(2,4) vectors V = sigma ninf + mu + rho n0, transport D^T_{x''} V = 0 with Omega_T(x'') = Omega(x'') - ninf ^ gamma'' + n0 ^ P(gamma''), the Omega(x'') term absorbed by the D-parallel frame, so x'' = A x with E = (ninf ^ gamma'') . and N_v = -(n0 ^ v) . (the statement''s maps); facts (a) N_v N_w V = -sigma (v . w) n0, (b) N_n E N_n = nu N_n, (c) N_n N_R N_n = 0 computed in Cl(2,4); (4) from the Schouten map P(a) = (calR(a) - calR a/6)/2. The analysis (Volterra, Riccati, Wronskian) is unchanged scalar mathematics; the slot form is kept as a labelled reading. New check check_gtg_tractor_transport_in_cl24 (generator against E + N_p and the slot formulas, (a)-(c), metric preservation, the gauge identity, P = (Lambda/6) id); runcheck 4/4, check4 clean on a proposals copy. outside_ga removed: the regularity hypotheses are statements about the rotation-gauge field and the Schouten map along the worldline, and no stand-in remains. Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -81,9 +91,6 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement of the non-tractor language: the causal geodesic is a causal worldline of D-parallel velocity of a gravitational field (hb, Omega) on flat spacetime, the metric is its derived metric, Levi-Civita transport is D-transport, Christoffel symbols are connection components, Ric = Lambda g becomes R(a) = Lambda a; the tractor connection, splitting and nilradical are left in their own language for the lead. Clauses (1)-(4) unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
-outside_ga:
-  kind: other
-  why: 'The result is about the regularity of the Christoffel symbols and the Schouten tensor of the derived metric across a weak null singularity (their local square-integrability), properties of components as such.'
 ---
 
 ## formal

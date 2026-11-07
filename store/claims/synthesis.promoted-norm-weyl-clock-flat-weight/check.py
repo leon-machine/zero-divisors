@@ -463,3 +463,111 @@ if __name__ == "__main__":
                check_matter_density_frame_independent, check_lorentzian_decomposition_with_source):
         fn()
         print("PASS", fn.__name__)
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The instantons as gauge fields on the flat Euclidean background Cl(4,0) (lib/gtg.py, sq = (1,1,1,1)), with the
+# rotation-gauge field SOLVED from the torsion equation and the store curvature calR(B) = -R(hb(B)) of its field
+# strength: the round S^4 and S^2 x S^2 in stereographic gauges, CP^2 (Fubini-Study) in the cohomogeneity-one
+# gauge f^0 = dr/(1 + r^2), f^{1,2} = r sigma_{1,2}/(2 sqrt(1 + r^2)), f^3 = r sigma_3/(2(1 + r^2)) at
+# psi = 0, theta = pi/2. The GA density Q(X, Y) = 2 <X(a ^ b) I^{-1} Y(I d_b ^ d_a)> is eps_abcd X^ab ^ Y^cd / vol.
+import gtg  # noqa: E402
+
+E4 = (1, 1, 1, 1)
+
+
+def q_ga(X, Y, sq):
+    """Q(X, Y) = 2 <X(a ^ b) I^{-1} Y(I d_b ^ d_a)> for curvature operators given as frame-plane dicts."""
+    I = gtg.pseudoscalar(sq)
+    Ii = GA.scal(1 / gtg.sp(GA.mul(I, I, sq)), I)
+    tot = F(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                Xab = gtg.apply_op(X, gtg.wedge(gen(a), gen(b), sq))
+                Yb = gtg.apply_op(Y, GA.mul(I, gtg.wedge(gtg.er(b, sq), gtg.er(a, sq), sq), sq))
+                tot += gtg.sp(GA.mul(GA.mul(Xab, Ii, sq), Yb, sq))
+    return 2 * tot
+
+
+def euclid_var(i, x0):
+    return gtg.J.var(i, x0, 4, 2)
+
+
+def gauge_s4(x0):
+    X = [euclid_var(i, x0[i]) for i in R4]
+    phi = 2 / (1 + X[0] * X[0] + X[1] * X[1] + X[2] * X[2] + X[3] * X[3])
+    z = gtg.J.const(0)
+    return gtg.Field([[phi if a == m else z for m in R4] for a in R4], sq=E4)
+
+
+def gauge_s2s2(x0):
+    X = [euclid_var(i, x0[i]) for i in R4]
+    p, q = 2 / (1 + X[0] * X[0] + X[1] * X[1]), 2 / (1 + X[2] * X[2] + X[3] * X[3])
+    z, d = gtg.J.const(0), [p, p, q, q]
+    return gtg.Field([[d[a] if a == m else z for m in R4] for a in R4], sq=E4)
+
+
+def gauge_cp2(r0, root):
+    r, z = euclid_var(0, r0), gtg.J.const(0)
+    sps, cps = gtg.sincos(1, F(0), F(1), 4, 2)
+    sth, cth = gtg.sincos(2, F(1), F(0), 4, 2)
+    w = 1 + r * r
+    A, C = r / (2 * w.pw(F(1, 2), root)), r / (2 * w)
+    TH = [[1 / w, z, z, z], [z, z, A * sps, -(A * cps * sth)], [z, z, A * cps, A * sps * sth], [z, C, z, C * cth]]
+    return gtg.Field(TH, sq=E4)
+
+
+def check_gtg_instantons_as_euclidean_gauge_fields():
+    premise("synthesis.imported-chern-gauss-bonnet")
+    premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
+    premise("synthesis.de-sitter-entropy-pi-n-squared")
+    ok = True
+    D = gtg.op_planes(gtg.op_const(-1), E4)          # the unit sphere's operator in the store sign on (4,0)
+    out = []
+    for fld, chi in ((gauge_s4([F(1, 2), F(0), F(1, 3), F(0)]), 2), (gauge_s2s2([F(1, 2), F(1, 3), F(0), F(2)]), 4),
+                     (gauge_cp2(F(3, 4), F(5, 4)), 3)):
+        ok = ok and fld.torsion_free()
+        Rc = fld.curvature()
+        lam = -gtg.ricci(Rc, gen(0), E4).get((0,), F(0))   # Einstein: calR(a) = -Lambda a on (4,0)
+        ok = ok and all(GA.eq(gtg.ricci(Rc, gen(c), E4), GA.scal(-lam, gen(c))) for c in R4)
+        Fop = gtg.op_planes(gtg.op_add(Rc, gtg.op_const(lam / 3)), E4)    # F = calR - (Lambda/3) D
+        W = gtg.weyl_op(Rc, E4)
+        W2, E = gtg.kretschmann(W, E4), gtg.euler_density(Rc, E4)
+        ok = ok and q_ga(Fop, Fop, E4) == W2 and q_ga(Rc, Rc, E4) == E and E == W2 + F(8, 3) * lam * lam
+        ok = ok and q_ga(Rc, D, E4) == -2 * gtg.ricci_scalar(Rc, E4)
+        out.append((chi * W2 / (2 * E), -4 * chi * lam * lam / (3 * E)))
+    ok = ok and q_ga(D, D, E4) == 24
+    ok = ok and out == [(F(0), F(-1)), (F(4, 3), F(-2, 3)), (F(3, 4), F(-3, 4))]
+    assert ok
+    return ok
+
+
+def check_gtg_kasner_and_flrw_densities_from_gauge_fields():
+    premise("dark-energy.frozen-point-datum-kasner-wall")
+    premise("dark-energy.imported-henneaux-teitelboim-promotion")
+    ok = True
+    for tau in (F(1), F(2), F(1, 3)):
+        p = [F(2, 3), F(2, 3), F(-1, 3)]
+        # a_i = tau^{p_i} with the spatial labels rescaled so that a_i = 1 at the instant: adot/a = p/tau
+        fld = gtg.synchronous_from_data([(F(1), p[i] / tau, p[i] * (p[i] - 1) / tau ** 2) for i in range(3)])
+        Rc = fld.curvature()
+        ok = ok and gtg.ricci_flat(Rc) and gtg.kretschmann(gtg.weyl_op(Rc)) == F(64, 27) / tau ** 4
+    # (Lambda, rho~, p~, H) with H^2 = (Lambda + rho~)/3
+    for lam, rho, prs, H in ((F(1, 2), F(1, 4), F(0), F(1, 2)), (F(1, 2), F(1, 4), F(1, 12), F(1, 2)),
+                             (F(3), F(0), F(2), F(1)), (F(2), F(1), F(-1, 3), F(1)), (F(-1), F(4), F(1, 3), F(1))):
+        h = (lam + rho) / 3
+        ok = ok and H * H == h
+        q = lam / 3 - (rho + 3 * prs) / 6
+        fld = gtg.flrw_flat(F(1), H, q)
+        Rc = fld.curvature()
+        for c in R4:
+            a = gen(c)
+            Tt = GA.sub(GA.scal((rho + prs) * GA.dot(a, gen(0), gtg.S13), gen(0)), GA.scal(prs, a))
+            ok = ok and GA.eq(gtg.einstein_residual(Rc, a, lam), GA.neg(Tt))
+        ok = ok and gtg.weyl_op(Rc) == {k: {} for k in gtg.weyl_op(Rc)}
+        E = gtg.euler_density(Rc)
+        ok = ok and E == 24 * h * q and q_ga(Rc, Rc, gtg.S13) == E
+        ok = ok and E - F(8, 3) * lam * lam == F(4, 3) * (lam * (rho - 3 * prs) - rho * (rho + 3 * prs))
+    assert ok
+    return ok

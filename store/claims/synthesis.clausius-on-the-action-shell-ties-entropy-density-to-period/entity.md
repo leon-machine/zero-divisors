@@ -29,7 +29,7 @@ derivations:
   - synthesis.einstein-equations-from-c-loc-and-clausius@7
   - synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent@1
   - synthesis.loc-independent-of-clausius-and-killing-data@4
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@2
   - synthesis.imported-gtg-dictionary@1
   - synthesis.imported-jacobson-clausius-1995@2

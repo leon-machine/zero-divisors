@@ -24,5 +24,11 @@ functions:
     clauses:
     - (v)
     omits: The two-point KMS identity of both half-line symbols at beta kappa = 2 pi and its failure at pi and 4 pi for three rational q, beta = 8 pi M at three masses, and the direction of the flow on each half; the restriction theorem, the s-wave reduction (J3) and Premise (I) are cited hypotheses, not recomputed, and clause (vi) is not tested
+  check_gtg_ingoing_generator_is_affine_and_horizon_rate:
+    kind: sampled
+    clauses:
+    - (ii) the ingoing generator is a free-fall null worldline with r affine, crossing the horizon
+    - (ii) the horizon generator's non-affinity is kappa = 1/(4M)
+    omits: Two masses at three radii each where beta is rational; exact jets at those points, not identities in r
 untouched_premises:
   hawking.joint-j3-s-wave-reduction: "postulate J3, the reduction of the outgoing sector to one chiral CAR field per light ray; the check computes on that reduced field, it does not test the reduction"

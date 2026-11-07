@@ -30,7 +30,7 @@ derivations:
   - singularity.plane-rate@4
   - state-selection.euclidean-partner-curvature-selected@5
   - singularity.kms-uniqueness-factor@6
-  - singularity.universality-temperature-under-g@3
+  - singularity.universality-temperature-under-g@4
   assumes:
   - singularity.p-univalence@2
   - singularity.r-regularity-fixed-locus@4

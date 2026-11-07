@@ -1,7 +1,7 @@
 ---
 id: three-routes.no-equivariant-value-boundary
 kind: claim
-version: 3
+version: 4
 title: No equivariant value at the boundary
 status: proved
 region: three-routes
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.candidates-base-unipotents
@@ -42,6 +46,10 @@ locators:
   label: thm:nogo
   line: 212
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item E6 (routine; no retirement): specialises sheaf.no-equivariant-value-wall@5 added. The sheaf result is the general statement and the home; this one is its case.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -62,6 +70,8 @@ extraction:
     cited:
     - three-routes.change-transversal-canonical-isomorphism-completions
     - three-routes.imported-collar-data-coupling
+specialises:
+- sheaf.no-equivariant-value-wall@5
 ---
 
 ## formal

@@ -24,3 +24,11 @@ functions:
     clauses:
     - (v) frame derivative with S = rho H tied is 2 rho times the slot derivative 2(G + Lambda); over Q(I) the stored frame equation
     omits: one torsion-free curvature at rho in {3/7, -2/5}; the general case is the frame-slot symmetry of the block argued in the proof
+  check_gtg_readings_of_the_curvature_operator:
+    kind: sampled
+    clauses:
+    - "setting: the index readings of the Ricci, Schouten and Weyl maps, the Weyl square and the Euler density"
+    - (iii) L1 at the Schouten slot is the Weyl square
+    - (iv) L1 at the frozen slot
+    - (v) the slot derivative 2(calG + Lambda id) as a map
+    omits: "one torsion-free and one torsionful curvature sample, one slot matrix for Q2, two values of rho"

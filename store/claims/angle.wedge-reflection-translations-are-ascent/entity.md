@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - angle.imported-conformal-model-null-rotations@5
+  - angle.imported-conformal-model-null-rotations@6
   - std-algebra.complexification-is-the-odd-extension@1
   proof: proof-main.tex
 checked_by:

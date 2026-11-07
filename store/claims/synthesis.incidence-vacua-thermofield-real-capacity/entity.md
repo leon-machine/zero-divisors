@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - one-relation.two-capacities-three-consequences@6
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   - one-relation.imported-pure-spinors-incidence-chart@5
   - one-relation.spacetime-manifold-vacuum-lines@6
   - singularity.descended-form-state-independent@4

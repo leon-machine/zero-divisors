@@ -1,7 +1,7 @@
 ---
 id: field-theory.elementary-photon-ga
 kind: claim
-version: 4
+version: 5
 title: The elementary photon in GA
 status: proved
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.field-theory.single-algebra-field
@@ -61,6 +65,10 @@ locators:
   label: prop:photon
   line: 201
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -86,7 +94,7 @@ extraction:
 ---
 
 ## formal
-With $i = I_4$ and complex coefficients on the left:
+With the unit $I_4$ and complex coefficients on the left:
 \begin{enumerate}
 \item the polarisation $\epsilon_h = t_1 - hI_4t_2$ satisfies $B_q\cdot\epsilon_h = hI_4\epsilon_h$ for the rotation bivector $B_q$ about $q$, on and off the coordinate axes;
 \item the geometric product of complex vectors is sesquilinear, $\proj(J\epsilon) = J\cdot\bar\epsilon$, because $I_4$ anticommutes with vectors;
@@ -96,7 +104,7 @@ With $i = I_4$ and complex coefficients on the left:
 \end{enumerate}
 
 ## technical
-With $i = I_4$ and complex coefficients on the left, the polarisation $\epsilon_h = t_1 - hI_4t_2$ satisfies $B_q\cdot\epsilon_h = hI_4\epsilon_h$ for the rotation bivector $B_q$ about $q$, on and off the coordinate axes; the geometric product of complex vectors is sesquilinear, $\proj(J\epsilon) = J\cdot\bar\epsilon$, because $I_4$ anticommutes with vectors; and the helicity sum $\tfrac12\sum_h\proj(J_A\epsilon_h)\proj(J_B\epsilon_{-h})$ is the transverse product $J_A^\perp\cdot J_B^\perp$.
+With the unit $I_4$ and complex coefficients on the left, the polarisation $\epsilon_h = t_1 - hI_4t_2$ satisfies $B_q\cdot\epsilon_h = hI_4\epsilon_h$ for the rotation bivector $B_q$ about $q$, on and off the coordinate axes; the geometric product of complex vectors is sesquilinear, $\proj(J\epsilon) = J\cdot\bar\epsilon$, because $I_4$ anticommutes with vectors; and the helicity sum $\tfrac12\sum_h\proj(J_A\epsilon_h)\proj(J_B\epsilon_{-h})$ is the transverse product $J_A^\perp\cdot J_B^\perp$.
 
 Coulomb-gauge exchange, two time orderings and the instantaneous Coulomb term, equals the covariant $-e^2J_A\cdot J_B/t$, given current conservation, and massive vector exchange reduces to the contact term with $G = e^2/M^2$.
 
@@ -104,4 +112,4 @@ Coulomb-gauge exchange, two time orderings and the instantaneous Coulomb term, e
 Taking the photon as a fundamental field, its polarisations and helicities can be written in geometric algebra with the volume element as imaginary unit. With them, photon exchange between two currents reproduces the standard result, given that the currents are conserved, and a heavy force carrier reduces to the contact interaction.
 
 ## one-liner
-With $i = I_4$ the photon's helicity polarisations and helicity sum are geometric-algebra objects, and Coulomb-gauge exchange gives $-e^2J_A\cdot J_B/t$, given current conservation.
+With the unit $I_4$ the photon's helicity polarisations and helicity sum are geometric-algebra objects, and Coulomb-gauge exchange gives $-e^2J_A\cdot J_B/t$, given current conservation.

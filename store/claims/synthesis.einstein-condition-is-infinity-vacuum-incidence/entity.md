@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (declared outside_ga)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: tractors as Cl(2,4) vectors with the tractor gauge field, Schouten and Ricci maps, complexification by I_7; exact checks'
+  version: 4
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 derivations:
 - name: main
@@ -45,12 +49,22 @@ checked_by:
   ref: check.py::check_matter_and_bianchi
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_tractor_gauge_field_moves_ig_and_x
+- kind: check
+  ref: check.py::check_gtg_own_ray_classes_on_gauge_fields
+- kind: check
+  ref: check.py::check_gtg_infinity_vacua_with_the_unit_i7
 lineage:
   motivated_by:
   - pairing.displacement-pairs-point-mode-vacuum-parallel
   - correspondence.one-statement-three-languages
   - one-relation.two-presentations
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: tractors sigma ninf + mu + rho n0 of Cl(2,4) with the flat product as tractor form, Omega_T(hb(v)) = Omega(hb(v)) - ninf ^ v + n0 ^ P(v), so D_v ninf = (n0 ^ P(v)) . ninf = -P(v) and D_v n0 = v; P, Ric and T as symmetric linear maps (the null-cone lemma for S, the one-vacuum argument as P vanishing on A + conj(A) = the complexified l-perp, so P(a) = c (a . l) l), the contracted Bianchi identity as dot-calR(dot-D) = D calR/2 with the physical gradient; complexification with the central unit I_7 = I_6 e'' of Cl(3,4) (U3); index components kept as a labelled reading. Checked exactly: check_gtg_tractor_gauge_field_moves_ig_and_x (Omega_T on de Sitter, SdS, Schwarzschild, FLRW and Kasner gauge fields with P from each field strength: D_v ninf = -P(v), D_v n0 = v, flat product preserved), check_gtg_own_ray_classes_on_gauge_fields (own-ray classes zero on the Einstein fields, with P = (Lambda/6) id and calR = 4 Lambda, nonzero on FLRW, equal to (1/2) l . T~(l) with T~ = -(G + Lambda) on all), check_gtg_infinity_vacua_with_the_unit_i7 (I_7 central of square -1 in Cl(3,4); W = span(I_g, l, s1 + I_7 s2) totally isotropic; the (I_g, m) class -l.P(s1) - I_7 l.P(s2), zero on de Sitter). Version kept at 4 (already above the lock in this run). outside_ga narrowed to the formal level''s unnamed unit of the complexifications.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -81,7 +95,7 @@ extraction:
     Penrose's, cited from memory. The transport ledger is left to the build.
 outside_ga:
   kind: other
-  why: 'Clause (7) and the proof work with the Ricci, Schouten and stress tensors of the derived metric in components (l-flat tensor l-flat, g^{ab} T_{ab}, nabla^a Ric_ab) and with the complexified tangent and tractor spaces; the GTG field-equation form is stated beside them, and the complexifications T_x M (x) C and T_x (x) C have the units I_5 and I_7 by U3, not yet written in (reader R03).'
+  why: 'The formal level writes the complexified tractor and tangent spaces as T_x (x) C and T_xM (x) C without naming the unit; by U3 it is the central unit I_7 of Cl(3,4), named and used in the proof and the GTG checks (the earlier checks compute span{1, I_7} as Gaussian rationals); the formal text is kept until a decided restatement.'
 ---
 
 ## formal

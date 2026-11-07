@@ -112,7 +112,6 @@ def q(x, c=1):
 def check_real_time_dressing_exact():
     premise("singularity.number-diagonal-dynamics-models-scrambling-derived")
     premise("synthesis.phase-flow-is-time-rotor-flow-kms-continuation")
-    premise("scrambling.spreading-law-chaos-bound-saturated")
     c, s = F(3, 5), F(4, 5)
     assert c * c + s * s == 1
     I = GA.QI(0, 1)

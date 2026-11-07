@@ -36,7 +36,7 @@ derivations:
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.premise-cpt-covariance@3
-  - dark-matter.premise-flag-as-datum@3
+  - dark-matter.premise-flag-as-datum@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

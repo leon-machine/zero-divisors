@@ -34,7 +34,7 @@ derivations:
   - synthesis.kerr-ring-blow-up-forced-cover-fixed-order@3
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - transport.group-null-rotations@4
+  - transport.group-null-rotations@5
   proof: proof-main.tex
 checked_by:
 - kind: check

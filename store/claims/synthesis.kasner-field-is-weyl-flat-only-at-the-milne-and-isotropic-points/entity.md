@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (Weyl eigenvalue stated for the Weyl map; proof route declared)'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i): Omega from the torsion equation of the synchronous gauge field, store-sign field strength, Ricci and Weyl maps; coordinate route kept as a labelled reading'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -40,12 +44,18 @@ checked_by:
   ref: check.py::check_weyl_flat_points_in_cosmic_and_conformal_time
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_kasner_field_strength_and_weyl_map
 lineage:
   motivated_by:
   - synthesis.pre-descent-contracting-kasner-stage-premise
   - synthesis.pre-descent-state-carried-into-descended-phase-premise
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof for (i): the synchronous gauge field hb^{-1}(e_t) = e0, hb^{-1}(e_i) = t^{p_i} e_i (derived metric -g_p, dictionary C7), Omega(e_{x^i}) = -p_i t^{p_i - 1} B_i from the torsion equation, the field strength and calR(B_i) = p_i(p_i - 1) t^-2 B_i, calR(e_i ^ e_j) = p_i p_j t^-2 e_i ^ e_j, the Ricci map (S - 1) t^-2 on e0 and 0 on e_j, scalar (S - 1) t^-2, and the Weyl map W(B_i) = W(I4 B_i)/I4 = lambda_i with the sign of the (-,+,+,+) mixed component derived from C11; (ii) and (iv) read flatness off the field strength (the isotropic bracket has Omega = 0); the Christoffel route is kept as a labelled reading. New check check_gtg_kasner_field_strength_and_weyl_map (seven rational points of the plane, torsion-solved Omega on exact jets, the bracket field); runcheck 4/4, check4 clean on a proposals copy. The proof cites the dictionary Fact for the Weyl formula, which is not in uses (a links question left for Leon). outside_ga removed: no stand-in remains. Statement, status, links unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -68,9 +78,6 @@ extraction:
   flags:
   - 'four-dimensional diagonal Kasner fields only; the stored setting also allows hidden directions (the five-dimensional end (0, 0, 0, 1) of (P2)), Bianchi I fields with rotating axes and the BKL sequence, none of which is covered'
   - 'the not-tame clause holds in the smooth structure of cosmic time; in conformal time the isotropic point is the radical-normal wall'
-outside_ga:
-  kind: other
-  why: 'The statement is in GTG (the Weyl map on bivectors and its eigenvalues), but the proof and its check obtain the eigenvalues from the coordinate Christoffel symbols, Riemann, Ricci and Weyl components of the diagonal derived metric; that coordinate computation is the evidence, and a derivation through the rotation-gauge field would be a different proof.'
 ---
 
 ## formal

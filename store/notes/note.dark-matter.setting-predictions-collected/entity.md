@@ -1,7 +1,7 @@
 ---
 id: note.dark-matter.setting-predictions-collected
 kind: note
-version: 2
+version: 3
 title: The predictions collected
 status: setting
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, a dated bracket on row 12: the mirror-alone dimming is just below 2'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - dark-matter.population-count-one-share-half-percent
 - dark-matter.mirror-share-assembled
@@ -27,6 +31,10 @@ locators:
   line: 1314
   subsection: The predictions collected
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Dated bracket added to the paper text, which is kept (DECISIONS G11, R05 item 8): row 12 gives the burst dimming between 2 (the mirror alone) and about 5.5; synthesis.dimmed-burst-time-rescaled-copy (iv) gives D = (2 + g + o)/(1 + g), so with the odd towers emitting nothing D = 2 - g/(1 + g), just below 2.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'VALUES L4: says this paper''s (T14''s) refutation conditions 6, 7, 2, 3 and 4, so they are not read as the series'' sixth refutation and its neighbours.'
@@ -59,7 +67,7 @@ Everything the paper predicts, in one place, with its level and its test; this p
 9 & $\Neff$ at the Standard-Model value if the dark sectors are heated by gravity alone; the mirror below $0.448$ of our temperature in any case & derived given the audit (Propositions \claimref{dark-matter.radiation-audit-what-theorem-closes-what}, \claimref{dark-matter.open-channels-their-costs}) & CMB and BBN; an excess measures the deposit energy (refutation 4) \\[2pt]
 10 & No departure from the inverse-square law and no extra-dimension signature at any scale & derived (Corollary \claimref{dark-matter.thickness-not-gravitational-quantity}) & short-range gravity tests \\[2pt]
 11 & The linear CMB and matter power spectra are the standard model's, with the sheets moving; a reduced response of the three-dimensional towers above half a percent is excluded & derived with a recorded computation (Proposition \claimref{dark-matter.reduced-response-gravity-needs-supporting-stress}, Figure \ref{fig:boltzmann}) & Planck, ACT, SPT, weak lensing; a prediction of no deviation \\[2pt]
-12 & The final burst of an evaporating black hole is dimmed by a factor between $2$ (the mirror alone) and about $5.5$ (all six towers by mode count) & observation level (Proposition \claimref{dark-matter.parallel-boundary-mode-spaces-one-wall}) & burst searches, conditional on primordial black holes (successor (4)) \\[2pt]
+12 & The final burst of an evaporating black hole is dimmed by a factor between $2$ (the mirror alone) and about $5.5$ (all six towers by mode count; status now, 7 November 2026: with the gravitational sector counted, the mirror alone gives $D = 2 - g/(1 + g)$, just below $2$, Proposition \claimref{synthesis.dimmed-burst-time-rescaled-copy}(iv)) & observation level (Proposition \claimref{dark-matter.parallel-boundary-mode-spaces-one-wall}) & burst searches, conditional on primordial black holes (successor (4)) \\[2pt]
 13 & Every dark quantum has the proton's mass, in all six towers & rule (R1) & not testable for a gravity-only sector; stated because the rule implies it \\[2pt]
 14 & The mirror sector is helium-dominated with $\eta'$ between about $0.008$ and $26$; its compact objects are bounded by microlensing & derived on the burning branch (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}) & the settled-phase model of refutation 6 \\[2pt]
 15 & The asymmetric dark matter is the mirror's alone; the odd towers are symmetric relics & theorem (Theorem \claimref{dark-matter.flag-bit-exists-exactly-tower-dimension}, Corollary \claimref{dark-matter.which-towers-can-carry-arrow}) & no asymmetric signature beyond the mirror's; exact stability of every tower \\

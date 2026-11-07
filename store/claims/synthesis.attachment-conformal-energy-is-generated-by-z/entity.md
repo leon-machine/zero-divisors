@@ -33,6 +33,10 @@ credit:
   role: 'GA rewrite (which unit reads the positivity cone)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, orientation of I_6 named in the attachment''s frame at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
@@ -64,6 +68,10 @@ lineage:
   - synthesis.n-plus-null-ground-state
   - note.singularity.cost-r-dictionary
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 5 (already raised in this run). Decision item C4 (routine): one sentence in the formal names the orientation of I_6 in the frame (e_0, e_1, e_2, e_3, nu, e_-): with nu as e_+, I_6 = I_4 E = e_0 e_1 e_2 e_3 nu e_- acts on CS by left multiplication as +I_7 and on CS^- as -I_7, the opposite orientation I_4 e_- nu as -I_7 on CS, so the z-adapted result''s reading of the attachment''s unit as +I_6 is a consequence of the orientation. Checked exactly (Gaussian rationals) in the entity''s own Jordan-Wigner realisation, extending colony/runs/2026-11-07-consistency/work-R10/i6_on_cs.py to this frame (work-R10/i6_attachment_frame.py): I_6 = I_7 times the chirality sigma_z (x) sigma_z (x) sigma_z, so +I_7 on the even half CS; e := chirality has e^2 = 1, anticommutes with the six generators and I_6 e = I_7. Mathematics unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -97,7 +105,7 @@ extraction:
     Torroba 2017), used only in the reading of (v). Case (a) of (N+), the eternal hole, is not reached.
 ---
 ## formal
-Work in $\Cl(2,4)$ with the conventions of Proposition \claimref{synthesis.positive-conformal-energy-gives-positive-null-translations}: $e_{0}^{2} = \nu^{2} = 1$, $e_{1}^{2} = e_{2}^{2} = e_{3}^{2} = e_{-}^{2} = -1$, $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, $P_{a} = \tfrac12 a\nInf$ for $a \in \R^{1,3}$, $Z = e_{0}\nu$. Let $S$ be the module of three ladder pairs (Proposition \claimref{correspondence.twistors-are-states-three-ladder-pairs}) with its Hilbert form $\ip{\psi}{\phi}$, in which the frame generators squaring to $+1$ act self-adjointly and those squaring to $-1$ anti-self-adjointly, and $\CS$, $\CSm$ its two chirality halves. The module is complex with scalars $\mathrm{span}\{1, I_{7}\}$, $I_{7} = I_{6}e$ the central pseudoscalar of the odd extension $\Cl(3,4) = \Cl(2,4)_{\C}$, which commutes with every vector acting on the module (\claimref{std-algebra.complexification-is-the-odd-extension}); $I_{7}$ is the complex unit throughout, on $S$, on $\CS$ and on the oscillator Fock space of (iii). A bivector $B$ acts on $S$ by left multiplication, generating the rotor flow $\exp(tB)$.
+Work in $\Cl(2,4)$ with the conventions of Proposition \claimref{synthesis.positive-conformal-energy-gives-positive-null-translations}: $e_{0}^{2} = \nu^{2} = 1$, $e_{1}^{2} = e_{2}^{2} = e_{3}^{2} = e_{-}^{2} = -1$, $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, $P_{a} = \tfrac12 a\nInf$ for $a \in \R^{1,3}$, $Z = e_{0}\nu$. Let $S$ be the module of three ladder pairs (Proposition \claimref{correspondence.twistors-are-states-three-ladder-pairs}) with its Hilbert form $\ip{\psi}{\phi}$, in which the frame generators squaring to $+1$ act self-adjointly and those squaring to $-1$ anti-self-adjointly, and $\CS$, $\CSm$ its two chirality halves. The module is complex with scalars $\mathrm{span}\{1, I_{7}\}$, $I_{7} = I_{6}e$ the central pseudoscalar of the odd extension $\Cl(3,4) = \Cl(2,4)_{\C}$, which commutes with every vector acting on the module (\claimref{std-algebra.complexification-is-the-odd-extension}); $I_{7}$ is the complex unit throughout, on $S$, on $\CS$ and on the oscillator Fock space of (iii). In this frame $\nu$ plays $e_{+}$, and $I_{6} = I_{4}E = e_{0}e_{1}e_{2}e_{3}\,\nu e_{-}$ ($E = \nu e_{-}$) acts by left multiplication as $+I_{7}$ on $\CS$ and as $-I_{7}$ on $\CSm$; the opposite orientation, $I_{4}\,e_{-}\nu$, acts as $-I_{7}$ on $\CS$. So reading the attachment's unit as $+I_{6}$ on $\CS$ (as Proposition \claimref{synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit} does) is a consequence of this orientation, the two units related by it and not identified. A bivector $B$ acts on $S$ by left multiplication, generating the rotor flow $\exp(tB)$.
 \begin{enumerate}
 \item[(i)] \emph{(The twistor form is the grading of $Z$.)} On $\CS$ (and on $\CSm$) the Hermitian forms invariant under all fifteen bivectors form a real line, spanned by $h(\psi, \phi) = \ip{\psi}{I_{7}Z\phi}$. It has signature $(2,2)$, and $Z$ acts as $-I_{7}$ on its positive plane $T_{+}$ and as $+I_{7}$ on its negative plane $T_{-}$. So the twistor form of Proposition \claimref{field-theory.twistor-attachment}, an invariant Hermitian form on $\CS$, is a real multiple of $h$: the central rotation $Z$ of Proposition \claimref{synthesis.positive-energy-selects-rule-2-sign}(i) is the grading that turns it into the Hilbert form, $h(\psi, I_{7}Z\phi) = \ip{\psi}{\phi}$.
 \item[(ii)] \emph{(Signs on the one-particle space.)} For a bivector $B$ put $q_{B}(\psi) = I_{7}\,h(\psi, B\psi)$, a Hermitian form. Then $q_{Z} = \ip{\psi}{\psi}$ is positive definite; for every future timelike or null $a$, $q_{P_{a}}$ and $q_{a\nO}$ are positive semidefinite, as is $q_{B}$ for the de Sitter horizon generator $B = P_{n} + \tfrac{\Lambda}{12}n\nO$ of Proposition \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation} ($n$ future null, $\Lambda > 0$); for past $a$ they are negative semidefinite; for spacelike $a$, and for the boosts and the dilation, they are indefinite.

@@ -20,6 +20,10 @@ credit:
   role: consistency pass, proof brought into line with the corrected statement on the even part
   version: 7
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 7
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.ladder-bundle-even-subbundle
@@ -51,6 +55,13 @@ locators:
   label: prop:issheaf
   line: 132
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 7 (already raised in this run). Decision item E6 (routine; no retirement): partial overlap with singularity.sheaf-assembly-sheaf recorded under extraction.overlaps_with (no pinned link: the overlap is partial); this entity carries the 23 October correction.'
+  overlaps_with:
+  - id: singularity.sheaf-assembly-sheaf
+    note: 'Near-duplicate in part (decision E6): with its sibling, this entity restates part of the singularity entity''s sheaf assembly and carries the 23 October correction. Kept both; recorded here since no clause-level link kind exists.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

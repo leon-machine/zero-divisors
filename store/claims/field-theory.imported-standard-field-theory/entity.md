@@ -1,7 +1,7 @@
 ---
 id: field-theory.imported-standard-field-theory
 kind: claim
-version: 4
+version: 5
 title: 'Imported: standard field theory'
 status: imported
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, marked pointer to the anomaly Fact at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, ch. 4 (the Jost-point
@@ -33,6 +37,10 @@ locators:
   label: fact:standard
   line: 86
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item E3 (routine): a dated, marked pointer after the Adler-Bell-Jackiw anomaly names synthesis.imported-adler-bell-jackiw-axial-anomaly, which imports it with its citations and equation and is kept as its home; no link edge (a Fact listing), no retirement.'
   maintainer_pass_qft_full:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -72,7 +80,7 @@ The Jost-point form of the spin-statistics theorem (Streater and Wightman, ch.~4
 
 \emph{Note (the Jost import, 2 November 2026).} The Jost-point form is needed only beyond perturbation theory: in causal perturbation theory the interacting fields keep the spin-statistics connection of the free fields to every order, on every field with an even number of ghost factors (\claimref{synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number}). Beyond perturbation theory a premise remains. Kuckert's modular P$_{1}$CT symmetry (the modular conjugation of each wedge algebra acts on the local algebras as the wedge's reflection), with covariance under the covering group, the spectrum condition and compact internal symmetries, is a weaker alternative premise from which the connection follows (Fact \claimref{synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem}; its spacetime-algebra form, \claimref{synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics}); it is recorded here as a note only, not adopted, and nothing in the store supplies it. The imports listed above are unchanged.
 ## technical
-Six standard results that the field-theory note imports: the Jost-point form of the spin-statistics theorem; the Penrose transform and its $H^1$ isomorphism; the Weinberg-Witten theorem, that massless particles of spin greater than one half carry no charge under a conserved Lorentz-covariant current; the random-phase Goldstone pole of the Nambu-Jona-Lasinio model; the Coulomb-gauge Hamiltonian of quantum electrodynamics; and the Adler-Bell-Jackiw anomaly. (Note, 2026-11-01: for the attached free fields the spin-statistics connection follows from locality with a positive norm, \claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}; the Jost-point import is kept for interacting fields, and the thermal period alone does not fix statistics, \claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}.) (Note, 2 November 2026: the Jost-point import is needed only beyond perturbation theory, since causal perturbation theory carries the free fields' spin-statistics connection to interacting fields order by order, \claimref{synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number}; Kuckert's modular P$_{1}$CT symmetry with the spectrum condition would be a weaker premise there, noted and not adopted, \claimref{synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics}.)
+Six standard results that the field-theory note imports: the Jost-point form of the spin-statistics theorem; the Penrose transform and its $H^1$ isomorphism; the Weinberg-Witten theorem, that massless particles of spin greater than one half carry no charge under a conserved Lorentz-covariant current; the random-phase Goldstone pole of the Nambu-Jona-Lasinio model; the Coulomb-gauge Hamiltonian of quantum electrodynamics; and the Adler-Bell-Jackiw anomaly. (Note, 7 November 2026: the Adler-Bell-Jackiw anomaly is imported with its sources and its equation in Fact \claimref{synthesis.imported-adler-bell-jackiw-axial-anomaly}, which is its home in the store; it is named here as the note names it.) (Note, 2026-11-01: for the attached free fields the spin-statistics connection follows from locality with a positive norm, \claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}; the Jost-point import is kept for interacting fields, and the thermal period alone does not fix statistics, \claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}.) (Note, 2 November 2026: the Jost-point import is needed only beyond perturbation theory, since causal perturbation theory carries the free fields' spin-statistics connection to interacting fields order by order, \claimref{synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number}; Kuckert's modular P$_{1}$CT symmetry with the spectrum condition would be a weaker premise there, noted and not adopted, \claimref{synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics}.)
 
 In geometric algebra Jost's complex Lorentz path is the rotation of one chirality through $2\pi$, ending at conjugation by the ascent bivector $E$, and the Penrose transform's kernels are $x\psi_0\gamma_0/Q(x)^2$ for spin $\tfrac12$, $xBx/Q(x)^3$ for Maxwell and $1/Q(x)$ for the scalar, with the cohomology taken on regions of the projective spinor space $\PCS$.
 
