@@ -1,7 +1,7 @@
 ---
 id: singularity.l-stabiliser-tangent
 kind: claim
-version: 6
+version: 7
 title: (L$_E$) as the stabiliser and the tangent
 status: proved
 region: singularity
@@ -26,7 +26,7 @@ credit:
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
   role: 'GA rewrite (the complex field named by its unit)'
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
@@ -56,7 +56,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 6 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, J} (U2), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
+    note: 'Version 6 -> 7. The complex-field stand-in \C is tied to its unit, span{1, J} (U2), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
 kind: claim
-version: 4
+version: 5
 title: 'The rung field''s D-term action and tree masses on the lift locus'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'GA rewrite (the weak generators as slot bilinears)'
-  version: 4
+  version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
@@ -51,7 +51,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 4 kept (already bumped in this run). The weak generators, written as Pauli matrices on the coefficient doublet (T_j = (I_4/2) sigma_j, Y = (I_4/2) 1), are now Clifford elements in the slot generators E_ab = v_a w_b: T_1 = (I_4/2)(E_45 + E_54), T_2 = (1/2)(E_45 - E_54), T_3 = (I_4/2)(E_44 - E_55), Y = (I_4/2)(E_44 + E_55), as reader R04 proposed; the matrices on alpha stay as a labelled reading. Verified exactly with lib/GA.py in Cl(2,2) (v_a w_b + w_b v_a = delta_ab, [E_ab, v_c] = delta_bc v_a, [E_ab, w_c] = -delta_ac w_b) and by the matrix identities (I_4/2) sigma_j = the stated combinations of matrix units. The proof''s moment maps and Fierz identity stay in the coefficient reading.'
+    note: 'Version 4 -> 5. The weak generators, written as Pauli matrices on the coefficient doublet (T_j = (I_4/2) sigma_j, Y = (I_4/2) 1), are now Clifford elements in the slot generators E_ab = v_a w_b: T_1 = (I_4/2)(E_45 + E_54), T_2 = (1/2)(E_45 - E_54), T_3 = (I_4/2)(E_44 - E_55), Y = (I_4/2)(E_44 + E_55), as reader R04 proposed; the matrices on alpha stay as a labelled reading. Verified exactly with lib/GA.py in Cl(2,2) (v_a w_b + w_b v_a = delta_ab, [E_ab, v_c] = delta_bc v_a, [E_ab, w_c] = -delta_ac w_b) and by the matrix identities (I_4/2) sigma_j = the stated combinations of matrix units. The proof''s moment maps and Fierz identity stay in the coefficient reading.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
