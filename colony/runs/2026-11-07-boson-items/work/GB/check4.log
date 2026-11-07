@@ -1,0 +1,15 @@
+E402  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      from math import at line 26
+W413  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      5 of 8 perturbations of check_window_commutator_identity's literals still pass: the check is weak
+E402  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      from math import at line 26
+E402  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      from math import at line 26
+E402  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      from math import at line 26
+E402  synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero
+      from math import at line 26
+
+synthesis.exact-pair-bosons-on-a-null-generator-have-helicity-zero: 5 error(s), 1 other finding(s); check result: fail
+exit 1

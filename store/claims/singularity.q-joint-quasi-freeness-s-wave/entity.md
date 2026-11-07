@@ -46,6 +46,15 @@ extraction:
       stated at the strength of the stored results. The source's Premise 8.1 (weights kappa k) is kept as
       source_formal and is version 2; results computed under kappa k (the residue value 0.3470, the
       zero-mode charge doublet, the one-channel-per-mode count) refer to version 2 and carry notes saying so.
+  maintainer_pass_2026_11_07:
+    by: ai-maintainer-pass
+    note: >-
+      Leon's decision of 7 November (a note, the premise unchanged): the half-integer offset kappa(k + 1/2) of the
+      weight clause appears exactly as the band centre when the null momentum of a horizon generator is compressed
+      to band modes of width Delta, whose weights are Delta(k + 1/2)
+      (synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves (iii)). The
+      compression is not invariant under the null translations, so this is a second reading of the offset beside
+      the boost-weight reading of version 3, not a derivation of it.
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'Folded-state-selection (R) fix: the formal level''s (R) now carries a claimref to T05''s premise singularity.r-regularity-fixed-locus, so it is not read as the folded note''s regularity premise.'

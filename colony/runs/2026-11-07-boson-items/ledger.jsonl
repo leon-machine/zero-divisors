@@ -1,0 +1,9 @@
+{"t": 1794087737.7351813, "problem": "bos.unit", "tokens": 0, "outcome": "settled", "proposal": "synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.7670395, "problem": "bos.qclt-states", "tokens": 0, "outcome": "proved-partial", "proposal": "synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.801571, "problem": "bos.qclt-states", "tokens": 0, "outcome": "negative", "proposal": "synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.8358686, "problem": "bos.dynamics", "tokens": 0, "outcome": "proved-partial", "proposal": "synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.8703516, "problem": "bos.spin-statistics", "tokens": 0, "outcome": "settled", "proposal": "synthesis.ladder-bosons-inherit-spin-statistics-from-the-single-modes", "verdict": "OVERSTATED"}
+{"t": 1794087737.9065652, "problem": "bos.gauge-bosons", "tokens": 0, "outcome": "proved-partial", "proposal": "synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.9354978, "problem": "bos.gauge-bosons", "tokens": 0, "outcome": "negative", "proposal": "synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins", "verdict": "SOUND WITH FIXES"}
+{"t": 1794087737.9623125, "problem": "bos.dimension", "tokens": 0, "outcome": "proved-partial", "proposal": "synthesis.density-modes-bosonise-only-along-one-null-direction", "verdict": "OVERSTATED"}
+{"t": 1794087737.9894984, "problem": "op.r-premises-external", "tokens": 0, "outcome": "findings", "proposal": "", "verdict": ""}

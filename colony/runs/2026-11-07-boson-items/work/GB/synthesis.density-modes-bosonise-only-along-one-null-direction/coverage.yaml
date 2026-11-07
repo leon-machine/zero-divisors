@@ -1,0 +1,17 @@
+functions:
+  check_window_identity_any_dimension:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "the identity in the algebra on a 2 x 3 window (one channel, six q) and a 2 x 2 window with two channels (M = 1, M' = 1, sigma_3, sigma_1, three q); the strip sizes |W cap (W - q)| = |W cap (W + q)| by counting for boxes in d = 1, 2, 3 and an irregular window; general windows and channel counts are the proof"
+  check_uniform_occupation_gives_zero_form:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "four momenta, two channels, q = 1, 2, 3: zero form for the 1+1 Dirac sea and for a sea with the rotated channel state (3/5, 4/5) at two momenta; one chirality alone gives min(q, 4 - q); counting in d = 3 (N = 3) for a bounded sea and for uniform filling; the general statement is the proof"
+  check_half_space_sea_value:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "counting for N = 2, 3, d = 2, 3, every q in the window's difference range; in the algebra on the 4 x 2 window for six q (values 2, 4, 2, 0, 1, 2); the action on vectors agreeing with the sea on the strips is the proof"
+  check_density_current_term:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "d = 1 on six momenta, q = 1, 2: value 2q in the algebra; the Pauli projector identities at three rational unit vectors; d = 3, N = 2, 3, 4, every q < N: the strip count 2q(2N)^2 and the termwise bounds as integer inequalities; the irrational sum itself is not evaluated, only bounded"

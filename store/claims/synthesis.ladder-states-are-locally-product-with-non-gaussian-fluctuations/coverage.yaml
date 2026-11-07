@@ -1,0 +1,13 @@
+functions:
+  check_ladder_moments_are_boson_number_moments:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "blades orthonormal for N = 1, 2; N = 1, 2, 3 blocks, all k <= N: K P = 0, K psi_k = k(N - k + 1) psi_(k-1), the norm recursion, the moments for m = 0..N + 1, omega_k(B) = omega_k(B^2) = 0; general N and the eigenvalue argument for a != c are the proof"
+  check_ladder_marginals_tend_to_the_polarised_product_state:
+    kind: exact
+    clauses: ["(ii)", "(iv)"]
+    omits: "N = 1, 2, 3, all k: one-block occupations k/N and (N - k)/N, the m-block polarised weight C(N - m, k)/C(N, k) for all m <= N, the off-diagonal moments for a != c <= 2, the pair correlation and the pair occupation; minimality P X P = omega_0(X) P on the sixteen blades of one block; the Bernoulli bound, the Cauchy-Schwarz bound and the limit are the proof"
+  check_limit_moments_are_not_quasi_free:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "k = 1..40: k(k - 1) != 2 k^2, (k)_(k+1) = 0 < (k + 1)! k^(k+1); the limit of the exact moments and the pairing count m! x^m of a quasi-free state are the proof"

@@ -1,0 +1,4 @@
+W413  synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins
+      4 of 7 perturbations of check_sea_annihilates_and_forms_are_nonnegative's literals still pass: the check is weak
+
+synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins: 0 error(s), 1 other finding(s); check result: pass

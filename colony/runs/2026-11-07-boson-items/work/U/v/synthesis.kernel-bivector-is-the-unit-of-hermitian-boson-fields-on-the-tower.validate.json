@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower",
+   "message": "only 10% of its 10 logical neighbours share its subject; most are in 'tower'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom",
+   "message": "only 22% of its 9 logical neighbours share its subject; most are in 'descent'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 1 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was stored but not run: evidence checks run when a maintainer reviews the proposal"
+}

@@ -217,6 +217,15 @@ on the radial atom, $I_5$ and $I_7$ for complexifications):
   the Gibbs state is $\tau_{-\beta t}$; left $I_4$ is no scalar there,
   $(I_4v)(I_4w) = +vw$
   (`synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom`).
+  The same $J$ is the unit on a tower level $\Cl(N, N{+}2)$ whenever the
+  radial atom's modes are among the modes: the transverse plane is the level's
+  anisotropic kernel, $\pm J$ is the only even unit of the commutant of the
+  transport planes, and it is the unit of Hermitian boson fields built from the
+  modes, $\phi = X + X^*$, $\pi = J(X^* - X)$, with phase circle $e^{\theta J}$
+  (`synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower`);
+  the level pseudoscalar is $I_n = \pm J\Gamma$, equal to $\pm J$ on each
+  fermion-parity sector and not identified with it. The horizon's continuum
+  modes keep $I_4$ (U1).
   (U3) The central pseudoscalar of the odd extension, where the unit must
   commute with every vector ($V_\mathbb{C}$, complex null vectors,
   $\Cl(p,q)_\mathbb{C}$, the Dirac module's complexification, tube points,

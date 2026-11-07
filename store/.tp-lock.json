@@ -47532,6 +47532,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0a727a05be445721",
+  "ledger": null,
+  "parts": {
+   "checks": "5a1ff10437f4007e",
+   "proofs": "e3be85fab8b0def1",
+   "rest": "33009deb10105397",
+   "statement": "e97fbb65425dacd9"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.channel-phase-invisible-to-axially-covariant-completions": {
   "assumes": [],
   "credit": [
@@ -48726,6 +48751,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.density-modes-bosonise-only-along-one-null-direction": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7256fea269f92f02",
+  "ledger": null,
+  "parts": {
+   "checks": "a89117f5795eb10e",
+   "proofs": "30362327e0a8cd85",
+   "rest": "33009deb10105397",
+   "statement": "e8c265f848f53332"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite": {
   "assumes": [],
   "credit": [
@@ -49284,6 +49334,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "6c5ac003f73fe9c0",
+  "ledger": null,
+  "parts": {
+   "checks": "32718498306a80fa",
+   "proofs": "2610525d2f0206b3",
+   "rest": "33009deb10105397",
+   "statement": "4e96e2d9a98047a3"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.exceptional-boundary-measure-one-calibration": {
   "assumes": [],
@@ -50253,6 +50328,31 @@
   },
   "status": "proved",
   "version": 5
+ },
+ "synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "aeddbe4054db4eac",
+  "ledger": null,
+  "parts": {
+   "checks": "3afa3d9ccf05f143",
+   "proofs": "7012161dd930622a",
+   "rest": "33009deb10105397",
+   "statement": "ec6f6465c517750f"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.hole-mass-is-ground-energy-label": {
   "assumes": [],
@@ -53998,6 +54098,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "e733d9e9171edce7",
+  "ledger": null,
+  "parts": {
+   "checks": "6ac075cc01798b80",
+   "proofs": "13b10d5a74493084",
+   "rest": "33009deb10105397",
+   "statement": "4b95af6139e2c244"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.kerr-ring-blow-up-forced-cover-fixed-order": {
   "assumes": [],
   "credit": [
@@ -54299,6 +54424,56 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.ladder-bosons-inherit-spin-statistics-from-the-single-modes": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0414d4b6862bdbbc",
+  "ledger": null,
+  "parts": {
+   "checks": "bb1ffac07695ff74",
+   "proofs": "55e88c32c93fbf33",
+   "rest": "33009deb10105397",
+   "statement": "2ae5cff574707c5f"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "e13dcda27ac16abf",
+  "ledger": null,
+  "parts": {
+   "checks": "8da321e4bfd76e92",
+   "proofs": "7781f68b876ec942",
+   "rest": "33009deb10105397",
+   "statement": "0028dbeb0c8b34da"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.lens-space-wall-rung-count-sees-the-integral-twist": {
   "assumes": [
@@ -55646,6 +55821,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "89e5f404b04d0687",
+  "ledger": null,
+  "parts": {
+   "checks": "8d98f46a009dcc47",
+   "proofs": "9405a58a36d00bf8",
+   "rest": "33009deb10105397",
+   "statement": "ccc227b62f01cc70"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.null-vacuum-on-a-horizon-generator": {
   "assumes": [],

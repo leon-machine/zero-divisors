@@ -1,0 +1,21 @@
+functions:
+  check_window_commutator_identity:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "window N = 2, two channels, q = 1, 2, nine pairs of six matrices (Cartan, flip, J times flip, rank-one nilpotent rational, the linear doublet); the CAR of the modes and J commuting with them; general N, channel count and the bilinear-commutator lemma are the proof"
+  check_edge_clean_value_and_normality:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "q = 1, N = 2: the commutator times the edge-clean projector equals (q tr(M*M) + rho_0([M, M*])) times it for six matrices, scalar for the three normal ones; the flip takes the values q + 1 and q - 1 on two edge-clean states; the converse for general M, M' is the proof"
+  check_helicity_one_is_nilpotent_and_not_normal:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "weights +-1/2: the flip has helicity +1 and J E_{-+} helicity -1, both nilpotent and not normal; the doublet M_1, M_2 rotates as a vector, [M_1, M_2*] != 0, M_1 - J M_2 = 2 E_{+-}; five integer matrices on four channels projected to helicity +1 are nonzero, square to zero and are not normal; the mode rotation at half angle (12/13, 5/13) is a CAR map, multiplies rho_1(E_{+-}) by e^{theta J}, fixes rho_1(E_{++}) and turns the doublet; the normal-nilpotent lemma and the doublet argument for general weights are the proof"
+  check_helicity_one_mode_is_a_quasi_spin:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "q = 1, 2 on the window N = 2 with the spectator modes factored out: |B^p Omega|^2 = (p!)^2 C(q, p) for p = 0..q+1, B^(q+1) Omega = 0, [rho_q, B] B^p Omega = (q - 2p) B^p Omega; Cartan |D Omega|^2 = 1, |D^2 Omega|^2 = 2 at q = 1; rank-one nilpotent rational M with B^2 Omega = 0 at q = 1; rank-two helicity-one M = [[0, K], [0, 0]] on four channels (K = [[1, J], [0, 2]]) with norms 1, 6, 16, 0 at q = 1; the general singular-value count and the strict inequality are the proof"
+  check_sea_annihilates_and_forms_are_nonnegative:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "q = 1, 2, six matrices: rho_q(M) annihilates the chiral sea and rho_q(M)* the reversed sea, omega([rho, rho*]) = q tr(M M*) on the sea and -q tr(M M*) on the reversed sea, omega(rho rho*) = q tr(M M*); the Krein counter-model (eta = 1 - 2 n_2, X = a_1* a_2, [X, eta X* eta] = -1 on |1, 0>, X annihilating it); the positivity lemma is the proof"

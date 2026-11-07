@@ -1,0 +1,17 @@
+functions:
+  check_two_pi_rotation_is_the_product_of_half_integer_plane_volumes:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "N = 1, 2, 3 and all 5^N assignments with weights in {-1/2, 0, 1/2, 1, 3/2}: the CAR, n_j = (1 - omega_j)/2, U(pi)^2 = U(2 pi), unitarity, commutation with J, the action on v_j and w_j at theta = pi, and the product formula at 2 pi; general N and theta, and the exponential form, are the proof"
+  check_spin_statistics_holds_exactly_when_every_mode_is_half_integer:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "N = 1, 2, 3, same assignments: Ad U(2 pi) agrees with Ad Gamma on all modes exactly for the 39 all-half-integer assignments; U(2 pi) = Gamma for weights 1/2; all hopping and pairing products fixed and all modes negated; graded commutation of disjoint supports and general N are the proof"
+  check_half_integer_spin_boson_from_a_spinor_and_a_scalar_mode:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "N_b = 1, 2, 3 blocks: each b_i negated by Ad U(2 pi), commutation across blocks, the spin-0 mode fixed and anticommuting with the other modes, the ladder N[B, B*] = N - 2k on (B*)^k P_pol and its end; the limit is the cited theorem"
+  check_rotations_of_the_level_itself_give_integer_spin:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "J^2 = -1 and J commuting with every plane generator (N = 1, 2); for two modes L = (e_0e_1 - f_0f_1)/2, the two bivectors commuting with square -1, the weights +-1, exp(pi L) = omega_0 omega_1 negating all modes and its square 1; the value of the exponential is the cited theorem"

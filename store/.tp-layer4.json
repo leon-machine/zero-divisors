@@ -32718,6 +32718,61 @@
 }
 ]
 },
+"synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit": {
+"failed": false,
+"findings": [],
+"key": "8f7e7d05299953ae",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_graded_locality_reduces_collective_brackets_to_single_blocks",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.witt-basis-car",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
+]
+},
+{
+"derivation": null,
+"func": "check_commutators_have_no_scalar_part_and_anticommutators_can",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.no-canonical-commutation-relations-tower"
+]
+},
+{
+"derivation": null,
+"func": "check_fluctuation_cumulants_scale_exactly_and_the_second_carries_the_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
+]
+},
+{
+"derivation": null,
+"func": "check_the_extended_state_is_positive_blades_unitary_and_uncertainty_holds",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
+]
+},
+{
+"derivation": null,
+"func": "check_polarised_fluctuations_tend_to_the_fock_vacuum",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
+]
+}
+]
+},
 "synthesis.channel-phase-invisible-to-axially-covariant-completions": {
 "failed": false,
 "findings": [],
@@ -34539,6 +34594,54 @@
 }
 ]
 },
+"synthesis.density-modes-bosonise-only-along-one-null-direction": {
+"failed": false,
+"findings": [],
+"key": "9ec0add77d2639f1",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_window_identity_any_dimension",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_uniform_occupation_gives_zero_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_half_space_sea_value",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_density_current_term",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.orthogonal-anticommute",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+}
+]
+},
 "synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite": {
 "failed": false,
 "findings": [],
@@ -35483,6 +35586,54 @@
 "touched": [
 "singularity.eviction-window-thermal-product-radiation-entropy",
 "singularity.imported-page-average-entropy-subsystem"
+]
+}
+]
+},
+"synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves": {
+"failed": false,
+"findings": [],
+"key": "94b50c2883029a87",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_window_sugawara_identity_holds_as_an_algebra_identity",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"std-algebra.witt-basis-car"
+]
+},
+{
+"derivation": null,
+"func": "check_linear_dispersion_and_the_phase_flow_with_the_kernel_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
+]
+},
+{
+"derivation": null,
+"func": "check_band_compression_of_the_null_momentum_has_half_integer_weights",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_luttinger_normal_modes_on_edge_clean_vectors",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
 ]
 }
 ]
@@ -37112,6 +37263,65 @@
 "singularity.bosonisation-bridge-s-wave-sector",
 "state-selection.where-fermi-dirac-comes",
 "synthesis.imported-theta-function-identities"
+]
+}
+]
+},
+"synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins": {
+"failed": false,
+"findings": [],
+"key": "1caaf69209fdde19",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_window_commutator_identity",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"std-algebra.orthogonal-anticommute",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_edge_clean_value_and_normality",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_helicity_one_is_nilpotent_and_not_normal",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.orthogonal-anticommute",
+"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays"
+]
+},
+{
+"derivation": null,
+"func": "check_helicity_one_mode_is_a_quasi_spin",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_sea_annihilates_and_forms_are_nonnegative",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"tower.ladder-pairs-satisfy-car-vectors"
 ]
 }
 ]
@@ -38980,6 +39190,92 @@
 }
 ]
 },
+"synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower": {
+"failed": false,
+"findings": [],
+"key": "393b0c2357905417",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_hyperbolic_tower_has_no_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.orthogonal-anticommute",
+"synthesis.plane-commutant-even-ground",
+"tower.volume-elements-planes"
+]
+},
+{
+"derivation": null,
+"func": "check_kernel_bivector_commutes_with_transport_and_is_antihermitian",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom",
+"tower.ladder-pairs-satisfy-car-vectors",
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_commutant_of_transport_is_a_quaternion_algebra",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.bivector-exponential",
+"std-algebra.orthogonal-anticommute",
+"synthesis.plane-commutant-even-ground",
+"synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_level_pseudoscalar_is_J_on_each_parity_sector",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.pseudoscalar-commutation",
+"synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom",
+"tower.structure-tower-c-norms",
+"tower.volume-elements-planes"
+]
+},
+{
+"derivation": null,
+"func": "check_hermitian_pair_with_unit_J",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_density_modes_with_unit_J",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_sign_of_J_and_the_phase_circle",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.bivector-exponential",
+"synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom",
+"tower.structure-tower-c-norms"
+]
+}
+]
+},
 "synthesis.kerr-ring-blow-up-forced-cover-fixed-order": {
 "failed": false,
 "findings": [],
@@ -39533,6 +39829,99 @@
 "synthesis.imported-sakharov-induced-gravity-coefficients",
 "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
 "synthesis.slot-module-light-ray-arrays-are-weyl-components"
+]
+}
+]
+},
+"synthesis.ladder-bosons-inherit-spin-statistics-from-the-single-modes": {
+"failed": false,
+"findings": [],
+"key": "e6ead44ee0dbbff7",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_two_pi_rotation_is_the_product_of_half_integer_plane_volumes",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.bivector-exponential",
+"tower.ladder-pairs-satisfy-car-vectors",
+"tower.volume-elements-planes"
+]
+},
+{
+"derivation": null,
+"func": "check_spin_statistics_holds_exactly_when_every_mode_is_half_integer",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.volume-elements-planes"
+]
+},
+{
+"derivation": null,
+"func": "check_bosons_obey_the_connection_exactly_for_uniform_assignments",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.volume-elements-planes"
+]
+},
+{
+"derivation": null,
+"func": "check_half_integer_spin_boson_from_a_spinor_and_a_scalar_mode",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_rotations_of_the_level_itself_give_integer_spin",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.bivector-exponential",
+"std-algebra.spin-double-cover"
+]
+}
+]
+},
+"synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations": {
+"failed": false,
+"findings": [],
+"key": "14eed169af71bc93",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_ladder_moments_are_boson_number_moments",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_ladder_marginals_tend_to_the_polarised_product_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_limit_moments_are_not_quasi_free",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum"
 ]
 }
 ]
@@ -41221,6 +41610,70 @@
 "touched": [
 "synthesis.hole-mass-is-ground-energy-label",
 "synthesis.residue-from-mode-entropy"
+]
+}
+]
+},
+"synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators": {
+"failed": false,
+"findings": [],
+"key": "cce48d927de15fa6",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_maxwell_symplectic_current_identity",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_null_flux_has_only_transverse_data",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_null_energy_duality_and_helicity_phase",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.fock-space-maxwell-modes"
+]
+},
+{
+"derivation": null,
+"func": "check_two_channel_currents_on_a_window",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"hawking.current-commutator-exactly-edge-split",
+"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays"
+]
+},
+{
+"derivation": null,
+"func": "check_densities_are_helicity_zero_and_flips_helicity_one",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays"
+]
+},
+{
+"derivation": null,
+"func": "check_flip_defect_and_the_generator_bound",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 }
 ]

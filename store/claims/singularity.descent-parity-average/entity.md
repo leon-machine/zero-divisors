@@ -84,7 +84,7 @@ extraction:
     about:
     - obj.state-selection.grading-parity-automorphism
     uses:
-    - singularity.descent-what-it-erases@5
+    - singularity.descent-what-it-erases@6
     checked_by: verify_state_selection.py num:2.2
     proof_files:
     - orig-proof-main.tex (kept here as merged-state-selection.descent-parity-average-orig-proof-main.tex)

@@ -1,0 +1,35 @@
+PASS  U is unitary: U U^-1 = 1, U* = U^-1
+PASS  densities rho_+, rho_- (m = 1, 0) are invariant: helicity 0
+PASS  z_+^2 = (-7 + 24 J)/25
+PASS  J^{+-}_m -> z_+^2 J^{+-}_m and J^{-+}_m -> z_-^2 J^{-+}_m (helicity +1, -1), m = -1, 0, 1
+PASS check_densities_are_helicity_zero_and_flips_helicity_one   premises touched: ['field-theory.imported-tower-limit', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays']
+PASS  [J^{+-}_0, J^{-+}_-1] = J^{++}_-1 - J^{--}_-1 = 2 J^3_-1
+PASS  one copy: ||[J^+_0, J^-_-1] Omega||^2 = 2
+PASS  one copy, L = 4, depth 2: ||[J^+_m, J^-_n] Omega||^2 = 2|m + n| = 2, 4, 4
+PASS  two generators: ||D Omega||^2 = 2 ||M M*||_F^2, central value tr(M M*), bound 2 tr^2 / 2 attained only at M = 1
+PASS  three generators, uniform: ||D Omega||^2 = 6, central value 3: normalised defect 2/3
+PASS  [H, J^ab_m] = -m J^ab_m for all a, b and m = -2..2 (linear dispersion along the generator)
+PASS check_flip_defect_and_the_generator_bound   premises touched: ['field-theory.imported-tower-limit', 'synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes', 'synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum', 'synthesis.null-vacuum-on-a-horizon-generator']
+PASS  div(F1.A2 - F2.A1) = (div F1).A2 - (div F2).A1
+PASS  the test fields are not free (div F1 != 0), so the identity is not vacuous
+PASS  the cancelled term <F1 F2>_0 is nonzero
+PASS check_maxwell_symplectic_current_identity   premises touched: []
+PASS  n.(n.F) = 0, n.F = alpha n + Eperp, n.T(n) = -Eperp^2 > 0 (three bivectors)
+PASS  I4 (n ^ a) = (n ^ a) J = n ^ (a J) = -J (n ^ a) for transverse a
+PASS  eps = g1 Eperp lies in span{1, J}
+PASS  R Eperp R~ gives eps (R~)^2: the rotation about the generator is a phase on eps
+PASS check_null_energy_duality_and_helicity_phase   premises touched: []
+PASS  n.A = 0 identically for the gauge fields
+PASS  n.omega = d_n A1perp . A2perp - d_n A2perp . A1perp identically
+PASS  n.F = d_n A identically in this gauge
+PASS  the gauge fields have a nonzero n-component
+PASS  F is unchanged by A -> A + nabla chi
+PASS check_null_flux_has_only_transverse_data   premises touched: []
+PASS  [J^ab_m, J^cd_n] = window identity, all a, b, c, d, |m|, |n| <= 1, L = 3
+PASS  on the 4 edge-clean basis states [J^ab_1, J^ba_-1] = 1 + J^aa_0 - J^bb_0 (level one)
+PASS  pair currents of disjoint channels commute
+PASS check_two_channel_currents_on_a_window   premises touched: ['field-theory.imported-tower-limit', 'hawking.current-commutator-exactly-edge-split', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays']
+
+real	0m0.383s
+user	0m0.363s
+sys	0m0.004s

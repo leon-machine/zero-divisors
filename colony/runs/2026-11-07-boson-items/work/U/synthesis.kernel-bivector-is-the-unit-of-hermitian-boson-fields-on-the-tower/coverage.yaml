@@ -1,0 +1,29 @@
+functions:
+  check_hyperbolic_tower_has_no_unit:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "N = 1, 2, 3 only: conjugation by a basis blade is diagonal on all blade pairs, the blades commuting with every bivector are exactly 1 and the full blade, which equals Gamma with Gamma^2 = 1, and the square of alpha + beta Gamma at four rational points; general N and the impossibility of alpha^2 + beta^2 = -1 are the proof"
+  check_kernel_bivector_commutes_with_transport_and_is_antihermitian:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "N = 1, 2, 3: the CAR of the ladder, v* = w, J^2 = -1, J* = -J, J commuting with every plane generator, J = I_4 sigma and J sigma = I_4; the antiautomorphism property of * on all blade pairs for N = 1, 2 only"
+  check_commutant_of_transport_is_a_quaternion_algebra:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "N = 1, 2, 3: the commutant blades of the plane generators (four of them), the quaternion relations, the even part span{1, J}, the kernel rotor at (3/5, 4/5) fixing J and turning Gamma e_2 through twice the angle; the stored N = 1 centraliser; the contrast at N = 2 with (e_0, e_1) in the ground (16 blades, 8 even, the even blades of square -1 being I_4, e_1e_2, e_1e_3, J); the classification of units of a quaternion algebra and the limit are the proof and the cited theorem"
+  check_level_pseudoscalar_is_J_on_each_parity_sector:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "N = 1, 2, 3: I_n = J Gamma, I_n^2 = -1, I_n* = -I_n, Gamma* = Gamma = prod(1 - 2 n_j), Gamma anticommuting with every mode and commuting with every product of two, I_n (1 +- Gamma)/2 = +-J (1 +- Gamma)/2, Ad(I_n) negating every generator"
+  check_hermitian_pair_with_unit_J:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "M = 1, 2 blocks: phi and pi self-adjoint, [S, S*] = sum (n_2k - n_2k+1), [phi, pi] = 2 J sum (n_2k - n_2k+1), S P_pol = 0, [phi, pi] X_j = 2 (M - 2j) J X_j with X_j nonzero for j = 0..M and X_(M+1) = 0; the identity [X + X*, J(X* - X)] = 2 J [X, X*] on one generic element of B_2; general M, the normalisation by sqrt(2M) and the limit are the proof"
+  check_density_modes_with_unit_J:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "a window of four modes, q = 1, 2: [phi_q, pi_q] = 2 J (edge operator), its value 2 q J on the edge-clean projector, [rho_1, rho_2] = 0 and the three mixed identities; the lemma for an abstract unit u and its application on the domain D of the cited theorem are the proof"
+  check_sign_of_J_and_the_phase_circle:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "M = 2 (N = 4): alpha (e_3 -> -e_3) multiplicative on all pairs of blades of grade at most 3 and commuting with * on all blades, fixing every plane generator and sigma, negating J, I_4, I_n and pi, fixing phi; at the rational point (5/13, 12/13) of the half-angle circle: U unitary, U S U* = e^(theta J) S, the turn of (phi, pi) and the invariance of [phi, pi], Ad(e^(theta J)) fixing every plane generator, J^2 = -1; the reading of the sign as the (N+) datum is argued, not checked"

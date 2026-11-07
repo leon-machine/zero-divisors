@@ -2071,6 +2071,20 @@
     map flips the frequency sign and not the chirality. So the datum is not the chirality of
     massless even spinors (identifying that chirality with the doublets' handedness would be a further
     assumption), and no CP-invariant interaction can fix it.
+
+    (7 November, bosons; argued, with the flip computed for $N = 1, 2, 3$.) On a tower level the unit of the
+    Hermitian boson fields is the kernel bivector $J$, the only even unit of the commutant of transport, and its
+    sign is the orientation datum, now shared by fermions and bosons
+    (\claimref{synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower}(vi)). Bosonic
+    positivity adds no datum: the reflection that reverses $J$ is inner, $\operatorname{Ad}(\Gamma g)$ with $g$ a
+    unit kernel vector, so it fixes every fermion operator and every state on them, and maps the $J$-dynamics to
+    the time-reversed one; positive boson energy selects the null vacuum given the orientation and its conjugate,
+    the filled sea, given the other, so it is the fermionic ground-state clause read on pairs. The automorphisms
+    fixing transport and parity act on the even unit as $O(2)$ (rotations about $J$ and half-turns reversing it), so
+    the fermion data fix the boson unit up to its sign and nothing more. For the photon's null data the sign of the
+    relations is fixed by positive null energy whatever the orientation of the unit
+    (\claimref{synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators}). The orientation of the
+    unit relative to time stays the one datum (N$_{+}$) assumes.
   attack:
     - >-
       The remaining target (6 November): derive field-level geometric
