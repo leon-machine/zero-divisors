@@ -45,7 +45,14 @@ locators:
   number: Prop 6.8
   label: prop:killing
   line: 872
+outside_ga:
+  kind: bridge
+  why: 'the result identifies span{1, I} with the complex numbers, matching I with the i of the imported Walker-Penrose Killing-spinor scalar r - ia cos(theta), which stays in its source''s form; that comparison is the content'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i that stays is the imported Walker-Penrose scalar r - ia cos(theta), stated in its source''s complex form, which the result identifies with the scale r - I a cos(theta) in span{1, I} by matching I with i; the identification is the content, so it is declared as a bridge (version unchanged, levels unchanged).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

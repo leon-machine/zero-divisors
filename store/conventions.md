@@ -131,7 +131,8 @@ outside_ga:
 - `other`: anything else, with the reason judged in review.
 
 The checks look for the unambiguous signs (Pauli or Dirac matrices named as such, a cross
-product, $\mathbb{C}$ or $\sqrt{-1}$) in a new or changed entity: E609 refuses a
+product, $\mathbb{C}$, $\sqrt{-1}$, or a bare imaginary unit $i$ used as a number or a
+complex structure rather than as an index) in a new or changed entity: E609 refuses a
 contributor's that carries them without `outside_ga`; for a maintainer it is the warning
 W222. The result's page shows the declaration. `python -m tp ga-report` lists the entities
 already in the store that use such notation and declare nothing.
@@ -155,9 +156,25 @@ Unit", 16 October 2026):
 - A complexified plane orthogonal to spacetime is $H \oplus I_4H$. No
   pseudoscalar of $\Cl(2,4)$ commutes with the spacetime vectors, so
   $V_\mathbb{C}$, $\Cl(p,q)_\mathbb{C}$ and the Dirac module keep their plain
-  complexification, and a bare $i$ remains where it is complex analysis (KMS
-  strips, Wick rotation), an imported Hilbert space, a number, or next to a
-  spacetime vector. Each such entity records why under `extraction`.
+  complexification.
+- **No bare imaginary unit where a pseudoscalar does the work (Leon's rule,
+  7 November 2026).** A result never writes $i$ (or $\mathrm{i}$, $\sqrt{-1}$)
+  where a geometric-algebra pseudoscalar can stand for it exactly: the field
+  theory's unit is written $I_4$ on even values and as the right unit
+  $x \mapsto xI_4$ on others; the conformal spinors' unit as right
+  multiplication by $I_6$; a phase in a real two-plane as $e^{B\theta}$ with
+  $B$ the plane's unit bivector (its pseudoscalar); a physical number in
+  $\mathrm{span}\{1, I_4\}$; the complex structure of the series' own mode
+  and Fock spaces as $I_4$ (so $e^{-I_4Ht}$, $\Delta^{I_4t}$); an imaginary
+  rapidity as the rotation in the dual plane, $I_4B$. A bare $i$ stays only
+  where no pseudoscalar can replace it: complex analysis in its own right
+  (contours, theta functions, modular forms), a complexification that must
+  commute with vectors (a complex null vector, $V_\mathbb{C}$), and an imported
+  Fact quoted in its source's language. Such an entity declares
+  `outside_ga` (kind `complex-analysis` or `imported`) with the reason, and the
+  language check flags a bare $i$ in a new or changed entity that does not
+  (E609 for a contributor, W222 for a maintainer). The store was converted to
+  this rule on 7 November 2026.
 - **Where the unit stands (1 November 2026).** The field theory's unit is
   $I_4$ on even values. On anything else, in particular on a massive Dirac
   line, whose numerator $k + m$ is not even, it sits outside the Clifford

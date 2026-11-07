@@ -1,7 +1,7 @@
 ---
 id: neutrino.rank-one-seesaw-ordering-sum-double
 kind: claim
-version: 8
+version: 9
 title: 'The rank-one seesaw: ordering, sum, and the double-beta values'
 status: proved
 region: neutrino
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T15, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 9
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -47,6 +51,10 @@ locators:
   label: prop:rankone
   line: 630
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The PMNS and Majorana phases in the formal level, (3), and in the proof are written with I_4 (numbers read in span{1, I_4}): e^{I_4 phi/2}, e^{-I_4 delta_CP}, e^{I_4 phi}, e^{I_4 phi prime}; nothing stays.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21
@@ -131,7 +139,7 @@ The breaking $S_{3} \to S_{2} \to 1$ lifts $m_{1}$ by a factor small compared wi
 \end{premise}
 \begin{enumerate}
 \setcounter{enumi}{2}
-\item \emph{(The double-beta values.)} $m_{\beta\beta} = |\sum_{i}U_{ei}^{2}m_{i}|$ with $U_{e1} = c_{12}c_{13}$, $U_{e2} = s_{12}c_{13}e^{i\phi/2}$, $U_{e3} = s_{13}e^{-i\delta_{CP}}$ up to the second Majorana phase; under (H) the $m_{1}$ term is below $0.1$ meV. If the breaking is real in the vacuum's basis (the real-breaking assumption of Proposition \claimref{neutrino.leptogenesis-suppressed-alignment-reheating-premise-new}(3)), the phases are $0$ or $\pi$ and $m_{\beta\beta}$ is one of two values: $3.5$-$3.9$ meV at relative phase $0$ or $1.3$-$1.7$ meV at relative phase $\pi$, at $\sin^{2}\theta_{12} \in (0.295, 0.319)$ and $\sin^{2}\theta_{13} \in (0.0216, 0.0227)$ \cite{NuFIT2024}; without that assumption it ranges over the hull, $1.3$-$3.9$ meV. Either way the decay exists, the masses being Majorana under (M), and lies below the reach of the next generation of searches, whose projected sensitivity is a band near $10$-$20$ meV, its width the nuclear matrix element, against a current limit of $28$-$122$ meV \cite{LEGEND2021, KamLANDZen2023}: a conditional absence.
+\item \emph{(The double-beta values.)} $m_{\beta\beta} = |\sum_{i}U_{ei}^{2}m_{i}|$ with $U_{e1} = c_{12}c_{13}$, $U_{e2} = s_{12}c_{13}e^{I_4\phi/2}$, $U_{e3} = s_{13}e^{-I_4\delta_{CP}}$ up to the second Majorana phase (numbers are read in $\mathrm{span}\{1, I_4\}$); under (H) the $m_{1}$ term is below $0.1$ meV. If the breaking is real in the vacuum's basis (the real-breaking assumption of Proposition \claimref{neutrino.leptogenesis-suppressed-alignment-reheating-premise-new}(3)), the phases are $0$ or $\pi$ and $m_{\beta\beta}$ is one of two values: $3.5$-$3.9$ meV at relative phase $0$ or $1.3$-$1.7$ meV at relative phase $\pi$, at $\sin^{2}\theta_{12} \in (0.295, 0.319)$ and $\sin^{2}\theta_{13} \in (0.0216, 0.0227)$ \cite{NuFIT2024}; without that assumption it ranges over the hull, $1.3$-$3.9$ meV. Either way the decay exists, the masses being Majorana under (M), and lies below the reach of the next generation of searches, whose projected sensitivity is a band near $10$-$20$ meV, its width the nuclear matrix element, against a current limit of $28$-$122$ meV \cite{LEGEND2021, KamLANDZen2023}: a conditional absence.
 \end{enumerate}
 
 ## technical

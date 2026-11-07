@@ -1,0 +1,16 @@
+synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
+synthesis.n-plus-null-ground-state
+synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
+synthesis.null-ordering-of-counted-units-is-zeta-symmetric
+synthesis.phase-flow-is-time-rotor-flow-kms-continuation
+synthesis.point-spectrum-boost-admits-no-half-sided-translations
+synthesis.positive-null-energy-gives-r-premises
+synthesis.q-splits-maximum-entropy-affine-weights
+synthesis.r-lambda-regularity-cosmological-horizon
+synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
+synthesis.s-wave-array-is-a-boundary-mode-set
+synthesis.state-selection-r-and-le-against-t05
+synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
+synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
+synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
+synthesis.wick-rotor-chiral-angular-rotor

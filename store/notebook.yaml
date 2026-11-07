@@ -431,3 +431,57 @@
     a route; the route was in it.'
   sources:
   - 'Leon''s suite: Claude outputs/modular_continuity_2026-11-06/ (pre-registrations, findings, lab pull)'
+
+# ---- bridge survey and the handedness test, 2026-11-07
+- id: bridge-survey-three-premises
+  title: Cross-subject bridges for (S), (N+) and the Hadamard deposit premise
+  programme: Transport Papers
+  registered: '2026-11-07'
+  question: 'For the three open problems whose premises carry the most of the graph (op.hypothesis-s, op.r-premises-external,
+    op.deposit-state-is-hadamard), do results in other subjects supply a premise, a technique, an obstruction or an independence
+    argument?'
+  kill_conditions:
+  - 'Far-side continuation (deposit): the bounded far-side Euclidean Dirac solutions across the radical-normal wall, continued
+    through t, are not a positive-energy subspace for either branch of sqrt t.'
+  - 'Finite deposit (deposit): the attachment floor read on a flat collar does not bound the comoving momentum.'
+  - 'Hadamard carries the sign ((N+)): a gauge-invariant quasi-free state with field-level modular action of the opposite sign
+    at dense cuts is locally normal to the null vacuum at some point.'
+  - 'Fock clause ((S)): a stored result needs a slot module that is not a Fock module over its one-slot space.'
+  run: '2026-11-07'
+  outcome: partial
+  summary: 'No premise is derived. Found: the Hadamard chain inherited (N+), (S) and sixteen other postulates only through
+    citations of algebraic clauses (clause split on 7 November); given that, the Hadamard deposit premise carries the orientation
+    datum of (N+) on every field it reaches, the eternal hole and eternal de Sitter excepted; the three problems each need
+    a bit that every structure blind to it cannot fix (the null vacuum against the filled sea, occupation one half, the neutral
+    singlet), and on the Witt flags adapted to the conformal energy the energy sign (s0) and the stored family bit (s0 s1 s2)
+    are independent; leads: the branch of sqrt t at the radical-normal wall selects the conformal vacuum or the filled sea
+    (screened for the massless mode), a finite deposit is Hadamard if the finiteness of P2 applies per window to field modes,
+    and for (S) a Fock clause forces one doublet and clause (f) is a Klein convention. Obstructions to deriving the deposit
+    premise from indifference, the wall pair, entropy counts or symmetry are recorded on the problem. Flag: the stored CPT
+    conjugation fixes every conformal generator and is antilinear, so it reverses the energy.'
+  sources:
+  - colony/runs/2026-11-07-ga-units/survey/bridge_survey_2026-11-07.md
+  - colony/runs/2026-11-07-ga-units/survey/op.hypothesis-s.md
+  - colony/runs/2026-11-07-ga-units/survey/op.r-premises-external.md
+  - colony/runs/2026-11-07-ga-units/survey/op.deposit-state-is-hadamard.md
+- id: orientation-datum-is-doublet-handedness
+  title: Is the (N+) orientation datum the handedness of the weak doublets, with the field's unit I4?
+  programme: Transport Papers
+  registered: '2026-11-07'
+  question: 'With the field theory''s unit I4 (the emergent-scalar reading: the unit is a pseudoscalar, so its sign is an
+    orientation), is the orientation datum of (N+) (null vacuum against filled sea) the same bit as the handedness of the
+    doublets?'
+  kill_conditions:
+  - 'K1 Some discrete kinematic symmetry of the massless field (psi(x) -> a psi(Lambda^{-1} x) b, a and b blades, Lambda
+    one of 1, P, T, PT) flips the frequency sign relative to I4 and not the doublet handedness, or the reverse.'
+  run: '2026-11-07'
+  outcome: killed
+  summary: 'K1 triggered (exact, 55 checks): Hestenes charge conjugation psi -> psi sigma1 flips the chirality and not the
+    frequency sign; a CP map flips the frequency sign and not the chirality. What holds: on the modes of each future null
+    momentum, L_B = 1 and L_J = -L_I4 (I4 B = J), so helicity is locked to the frequency sign; L_I4 = -Gamma R_{I sigma3};
+    every map commuting with the Lorentz rotors is I4-linear; the frequency sign flips exactly under reversal of spatial orientation.
+    So the datum is odd under P and under CP, not the doublet chirality, and no CP-invariant interaction fixes it; it belongs
+    with the CP-odd data, the descent''s flag first.'
+  sources:
+  - colony/runs/2026-11-07-ga-units/survey/PREREG.md
+  - colony/runs/2026-11-07-ga-units/survey/handedness.py

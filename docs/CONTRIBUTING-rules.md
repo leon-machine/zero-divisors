@@ -74,9 +74,12 @@ with the server.
 - `outside_ga` (when the result is not written in geometric algebra): `{kind, why}`,
   `kind` one of `imported`, `complex-analysis`, `bridge`, `other`, and `why` the reason
   in at least 20 characters. A new or changed entity whose statements or proofs use
-  Pauli or Dirac matrices, a cross product, $\mathbb{C}$ or $\sqrt{-1}$ without it is
-  refused (E609; for maintainers the warning W222). See the conventions, "The language:
-  geometric algebra".
+  Pauli or Dirac matrices, a cross product, $\mathbb{C}$, $\sqrt{-1}$ or a bare imaginary
+  unit $i$ without it is refused (E609; for maintainers the warning W222). Write the
+  pseudoscalar the unit stands for: $I_4$ for the field theory's unit (the right unit
+  $xI_4$ on values that are not even), right multiplication by $I_6$ for the conformal
+  spinors, the unit bivector of the plane for a phase. See the conventions, "The language:
+  geometric algebra" and "The imaginary units".
 - `amendments` (on a contributor's new version of an accepted result): one entry per
   version, `{version, kind, defect, evidence?}`. `kind` is `correction` (the formal
   statement is unchanged; a proof, a check, the status or a link was wrong) or

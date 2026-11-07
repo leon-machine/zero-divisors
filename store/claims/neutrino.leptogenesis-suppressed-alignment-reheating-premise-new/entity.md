@@ -1,7 +1,7 @@
 ---
 id: neutrino.leptogenesis-suppressed-alignment-reheating-premise-new
 kind: claim
-version: 7
+version: 8
 title: 'Leptogenesis suppressed: the alignment, the reheating premise, and a new stance'
 status: proved
 region: neutrino
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T15, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -49,6 +53,10 @@ locators:
   label: prop:leptogenesis
   line: 733
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the complex breaking phase in the proof, step (3), is written as I_4 (numbers read in span{1, I_4}): e^{I_4 theta} = (3 + 4 I_4)/5; nothing stays.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21

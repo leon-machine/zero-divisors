@@ -1,0 +1,16 @@
+synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i	store/claims/synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i	43
+synthesis.n-plus-null-ground-state	store/claims/synthesis.n-plus-null-ground-state	1
+synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state	store/claims/synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state	13
+synthesis.null-ordering-of-counted-units-is-zeta-symmetric	store/claims/synthesis.null-ordering-of-counted-units-is-zeta-symmetric	1
+synthesis.phase-flow-is-time-rotor-flow-kms-continuation	store/claims/synthesis.phase-flow-is-time-rotor-flow-kms-continuation	9
+synthesis.point-spectrum-boost-admits-no-half-sided-translations	store/claims/synthesis.point-spectrum-boost-admits-no-half-sided-translations	2
+synthesis.positive-null-energy-gives-r-premises	store/claims/synthesis.positive-null-energy-gives-r-premises	63
+synthesis.q-splits-maximum-entropy-affine-weights	store/claims/synthesis.q-splits-maximum-entropy-affine-weights	7
+synthesis.r-lambda-regularity-cosmological-horizon	store/claims/synthesis.r-lambda-regularity-cosmological-horizon	1
+synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel	store/claims/synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel	30
+synthesis.s-wave-array-is-a-boundary-mode-set	store/claims/synthesis.s-wave-array-is-a-boundary-mode-set	5
+synthesis.state-selection-r-and-le-against-t05	store/claims/synthesis.state-selection-r-and-le-against-t05	4
+synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit	store/claims/synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit	23
+synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state	store/claims/synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state	13
+synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian	store/claims/synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian	6
+synthesis.wick-rotor-chiral-angular-rotor	store/claims/synthesis.wick-rotor-chiral-angular-rotor	1
