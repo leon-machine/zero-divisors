@@ -531,3 +531,19 @@ content change).
 5. B3. one-relation record chain: enter rem:recording as a postulate with assumes edges from the two record-chain results;
    move overlap-table-sorted's (ii), (iii) and the constants clause into a Reading.
 6. B4. sheaf.wall-class: restate clause (a) as the one-rung completion; it stays conjectured.
+
+## Leon's answers (7 November 2026)
+1. Apply all: the 16 formal corrections of category A and the 90 routine items.
+2. C1 (mirror's common ceiling coupling): a separate, costed, named postulate (the common ceiling coupling of the
+   deposited dynamics) with assumes edges from the six results; P2 stays as it is.
+3. C2 (delta_CP): state the assumption: add "and the charged-lepton matrix is real in the same basis" to
+   neutrino.real-breaking-assumption and carry it into pred.leptonic-cp-trivial's plain levels.
+4. B1 (two scrambling estimates): lower both to conjectured; restate return-delay as a modular-time (rotor-flow)
+   estimate with a flow note.
+5. B2 (no-coupling rule): restate the formal level as its three established facts, move the unproved part into a
+   remark; keep proved.
+6. B3 (record chain): enter rem:recording as a postulate with assumes edges from the two record-chain results;
+   move overlap-table-sorted's (ii), (iii) and its constants clause into a Reading.
+7. B4 (wall class): restate clause (a) as the one-rung completion, fix the clock wording; keep conjectured.
+8. The gravity entities declared because their proofs work in components, forms or tractor slots: write GTG proofs,
+   checked exactly and reviewed blind before they replace the component proofs (gtg_targets.txt).
