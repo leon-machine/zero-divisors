@@ -25,11 +25,17 @@ credit:
   role: 'GTG proof: the tractor gauge field on the Einstein region as Omega(a) + u ^ hb^{-1}(a), its field strength -W computed in Cl(2,4), the kernel argument on Cl(2,4) vectors; slot route kept as a labelled reading'
   version: 5
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): uses edges to the GTG dictionary and the tractor gauge-field theorem; the choice of representative of the conformal class justified'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 derivations:
 - name: main
   uses:
   - dark-energy.imported-frozen-point-geometry@6
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -47,6 +53,10 @@ lineage:
   - dark-matter.p1-single-frozen-point
   - dark-energy.point-infinity-has-no-physical-fluctuation
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with fixes. Applied (5a): the proof cites Fact synthesis.imported-gtg-dictionary (v) for the Weyl decomposition with Sch = (Lambda/6) id; added to uses at version 2 (imported). Applied (5b): one sentence now says why computing with the field whose derived metric is the Einstein scale g loses nothing (another representative of [g] has a tractor gauge field related by a parabolic gauge rotor U, Theorem synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection (i) and its closing gauge law, and V -> U V U~ carries parallel tractors to parallel tractors); that Theorem, proved, is cited for this step and was added to uses at version 1. No mathematics changed; check unchanged (the referee recomputed the Schwarzschild-de Sitter tractor field strength -W, the rank-4 kernel map and the type N kernel symbolically, and two mutations of check_gtg_tractor_field_strength_is_minus_weyl fail). Not applied (formal, for Leon): the Consequently clauses need c != 0.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

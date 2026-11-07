@@ -25,15 +25,20 @@ credit:
   role: 'GTG proof: Omega from the torsion equation of the synchronous gauge field, the boost row of the field strength and the mixed Ricci component; cross product written as a dual; Christoffel route kept as a labelled reading'
   version: 4
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): uses edge to the GTG dictionary; source of the Ricci symmetry and of the mixed-component sign cited; stale pins reviewed'
+  version: 4
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.variable-exponents-residue-pointwise-corrections-are@4
+  - dark-energy.variable-exponents-residue-pointwise-corrections-are@5
   - sheaf.collision-census@2
-  - dark-energy.wall-counterterm@4
+  - dark-energy.wall-counterterm@6
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -52,6 +57,14 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with two fixes. Applied (3a): the proof reads R_0i = -g_0 . calR(g_i) and the Ricci map through Fact synthesis.imported-gtg-dictionary (iv), which was not in uses; added at its current version 2 (an imported Fact, so no postulate enters). Applied (3b): the symmetry of the Ricci map now cites clause (iv) (it is the Ricci tensor R_mu nu = g_mu . calR(g_nu)), and the sign of the mixed component is tied to the clause: its null-vector form -k . calR(k), polarised, fixes -u . calR(v) up to a multiple of u . v, which vanishes for g_0 . g_i = 0. The referee checked the formula symbolically (general A_k(tau, x), and -A_i e0 . calR(e_i) equal to the Christoffel R_0i identically); no mathematics changed, check unchanged.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): dark-energy.variable-exponents-residue-pointwise-corrections-are 4 -> 5 is the GA rewrite of its connection display (omega(gamma_i) = -(p_i/tau) B_i - log tau grad p_i ^ gamma_i, the one-forms omega^{i0} = (p_i/tau) e^i kept as reading, values unchanged), and dark-energy.wall-counterterm 4 -> 6 the GA rewrite of its Chern-Simons form (CS on the slice 8 p1 p2 p3 eps^-2, unchanged): notation (N), the proof already quotes both in the new form; repinned.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -350,6 +350,7 @@ def sect(Rc, B):
 
 def check_gtg_sds_field_strength_on_radial_generators():
     premise("synthesis.imported-raychaudhuri-null-congruence")
+    premise("synthesis.imported-gtg-dictionary")      # C11: R(k, A, k, B) = (k ^ B) . calR(k ^ A)
     premise("synthesis.euler-term-horizon-entropy-shift")
     ok = True
     e = [GA.gen(i) for i in range(4)]

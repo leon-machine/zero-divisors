@@ -542,6 +542,7 @@ def dQ_linear(om, dom_):
 
 def check_wall_counterterm_anomaly_is_the_edge_transgression():
     premise("dark-energy.wall-counterterm")
+    premise("synthesis.imported-chern-weil-and-chern-simons-forms")   # (c): the Chern-Simons gauge variation
     for (a, b, c, d) in [(0, 1, 2, 3), (1, 0, 2, 3), (2, 3, 0, 1), (3, 1, 0, 2)]:
         assert eps_from_GA(a, b, c, d) == eps4(a, b, c, d)
     om = generic_connection()

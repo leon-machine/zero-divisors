@@ -33,6 +33,10 @@ credit:
   role: 'GTG proof: Omega from the torsion equation, field strength and loop classes in GA; component route kept as a labelled reading'
   version: 6
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): the unit I5 named in the check docstring; stale pins reviewed'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -40,13 +44,13 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@5
-  - synthesis.imported-gtg-dictionary@1
+  - pairing.imported-schwarzschild-connection-curvature@6
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@2
-  - pairing.loop-classes-are-weyl-components@4
+  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@3
+  - pairing.loop-classes-are-weyl-components@5
   proof: proof-standard-route.tex
 checked_by:
 - kind: proof
@@ -67,6 +71,14 @@ locators:
   label: prop:curvature
   line: 343
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3 accepted the GTG proof (own torsion solve, field strengths, classes and loops, two mutations of check_gtg_connection_and_field_strength failing). Applied: the check.py docstring wrote m = e2 + i e3 and classes i M/r^3; now m = e2 + I5 e3, mbar = e2 - I5 e3, classes I5 M/r^3, -I5 M/r^3, with I5 named as the central unit of Cl(2,3) (docstring only; runcheck 5/5 unchanged).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): pairing.imported-schwarzschild-connection-curvature 5 -> 6 and pairing.loop-classes-are-weyl-components 4 -> 5 have byte-identical formal levels (N); pairing.imported-weyl-scalars-petrov-type-schwarzschild 2 -> 3 names the unit I5 of the Weyl scalars (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) as calR(g_mu ^ g_nu) = -R(e_mu ^ e_nu) in the store sign (R): this proof cites (ii) and (iv) for the covariant derivative and R(u, v) = R(hb(u ^ v)) = -calR(u ^ v), which is the restated reading, so the use holds; all four repinned.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

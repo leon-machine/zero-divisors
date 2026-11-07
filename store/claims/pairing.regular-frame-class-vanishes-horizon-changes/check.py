@@ -192,6 +192,7 @@ def check_gtg_torsion_solution_is_the_pg_gauge_field():
 
 def check_gtg_classes_and_loop_class_in_cl23():
     premise("pairing.pairing-class-transverse-derivative-null-direction")
+    premise("std-algebra.complexification-is-the-odd-extension")   # the central unit I_5 of Cl(2,3)
     premise("pairing.imported-schwarzschild-connection-curvature")
     ok = GA.eq(GA.mul(I5, I5, S23), GA.sc(-1)) and all(GA.commutes(I5, GA.gen(j), S23) for j in range(5))
     l = GA.add(GA.gen(0), GA.gen(1))

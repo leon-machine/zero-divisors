@@ -25,15 +25,20 @@ credit:
   role: 'GTG proof of (i): Omega from the torsion equation of the synchronous gauge field, store-sign field strength, Ricci and Weyl maps; coordinate route kept as a labelled reading'
   version: 2
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): uses edge to the GTG dictionary; stale pins reviewed'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@3
-  - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes@2
+  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@4
+  - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes@3
   - dark-energy.imported-walls-sphere-theorem@6
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -52,6 +57,14 @@ lineage:
   - synthesis.pre-descent-state-carried-into-descended-phase-premise
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with one link fix. Applied (7a): the proof computes the Weyl map from the formula of Fact synthesis.imported-gtg-dictionary (v), which was not in uses; added at its current version 2 (imported). No text or check change (the referee recomputed Omega, the Ricci and Weyl maps and the resultant -9 p1^2 (p1 - 1)(3 p1 - 1) symbolically, and a mutation 1/3 -> 1/6 in lambda fails).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching 3 -> 4 writes its frame curvature components of (iii) as the store-sign field strength (values unchanged), and synthesis.attachment-transport-is-flat-only-where-weyl-vanishes 2 -> 3 adds the sentence naming the units I4 and I6: notation (N); repinned.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

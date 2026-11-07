@@ -358,6 +358,7 @@ KOTTLER = [(F(39, 200), F(3, 4), F(1)), (F(11, 400), F(3), F(1, 2)), (F(13, 32),
 
 def check_gtg_stelle_west_datum_on_einstein_fields_both_branches():
     premise("dark-energy.stelle-west-vector-frozen-point")
+    premise("synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection")   # Omega_T on flat spacetime
     premise("dark-energy.imported-frozen-point-geometry")
     ok = True
     S24 = gtg.S24

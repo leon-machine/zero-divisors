@@ -20,7 +20,8 @@ the stored de Sitter tractor n_inf + (L/6) n0.
     that is not almost-Einstein.
 (3) Tractor Dirichlet functional S[sigma] = int H0 : H0, H0 the trace-free Hessian (the middle slot of the
     derivative of D sigma in the flat splitting): Euler-Lagrange equation (3/2) box^2 sigma = 0; sigma = 1 + x1 x2
-    is stationary with H0 != 0; sigma = (t + x1)^2 has H0 = 2 l l (l null) != 0 and H0 : H0 = 0, so in Lorentzian
+    is stationary with H0 != 0; sigma = (t + x1)^2 has H0(a) = 2 (a . l) l, l = grad(t + x1) = e0 - e1 null, so H0 != 0
+    and H0 : H0 = 0, so in Lorentzian
     signature even a vanishing action does not force parallelism.
 (4) The proof's GTG route: the dilation field hb^{-1}(a) = phi a on exact jets (lib/gtg.py), Omega solved from the
     torsion equation equals a ^ grad ln phi, the store-sign scalar is 6 box phi/phi^3 and the Ricci map
@@ -305,6 +306,7 @@ def _grad(j):
     return {(mu,): ETA[mu] * j.d(mu) for mu in range(4)}
 
 
+L_NULL = {(0,): F(1), (1,): F(-1)}          # l = grad(t + x1) = e^0 + e^1 = e0 - e1, null
 GTG_PTS = [(F(1, 2), F(1, 3), F(-2, 5), F(1)), (F(-1), F(2), F(1, 7), F(3, 4))]
 GTG_PHIS = [_poly([(ONE, 1), ((0, 1, 1, 0), 1)]),
             _poly([(ONE, 1), ((1, 0, 0, 0), F(1, 3)), ((0, 2, 0, 1), 1), ((0, 0, 2, 1), -1)]),
@@ -319,7 +321,8 @@ def check_gtg_dilation_field_scalar_and_tractor_dirichlet():
     Ricci map (2 K(b) + tr K b)/phi^2, K(a) = a . grad w - (w . a) w + Q(w) a/2; the de Sitter scale
     phi = 1/(1 - Lambda Q/12) obeys box phi = (2/3) Lambda phi^3 (store sign). (iii) in Cl(2,4): with
     Omega_T(a) = -ninf ^ a, D_a D sigma = H0(a) - (1/4)(a . grad box sigma) n0 and
-    sum_mu eta^{mu mu} <D_mu D sigma, D_mu D sigma> = H0 : H0."""
+    sum_mu eta^{mu mu} <D_mu D sigma, D_mu D sigma> = H0 : H0; for sigma = (t + x1)^2, H0(a) = 2 (a . l) l with
+    l = grad(t + x1) = e0 - e1 null."""
     premise("synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale")
     premise("correspondence.imported-vacuum-equations-scale-tractor")
     premise("synthesis.imported-gtg-dictionary")
@@ -375,4 +378,9 @@ def check_gtg_dilation_field_scalar_and_tractor_dirichlet():
                 ok = ok and GA.eq(DV, want)
                 total += ETA[mu] * gtg.vdot(DV, DV, sqc)
             ok = ok and total == _contract(H0)
+            if sg is sigs[1]:
+                for mu in range(4):
+                    Hm = {(nu,): ETA[nu] * H0[mu][nu] for nu in range(4) if H0[mu][nu]}
+                    ok = ok and GA.eq(Hm, GA.scal(2 * gtg.vdot(GA.gen(mu), L_NULL, sq), L_NULL))
+                ok = ok and gtg.vdot(L_NULL, L_NULL, sq) == 0
     _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_dilation_field_scalar_and_tractor_dirichlet"; return _tp_rv

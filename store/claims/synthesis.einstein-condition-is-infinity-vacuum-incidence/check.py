@@ -336,6 +336,7 @@ W_T = GA.add(GA.scal(F(1, 2), gtg.NINF), GA.gen(0), GA.gen(3))
 
 def check_gtg_tractor_gauge_field_moves_ig_and_x():
     premise("interior.imported-tractor-connection")
+    premise("synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection")   # Omega_T on flat spacetime
     premise("interior.covariant-form-vacuum-equations")
     premise("interior.metric-parallelism-trace-schouten-condition")
     n0, ni = gtg.N0, gtg.NINF
@@ -360,6 +361,7 @@ def check_gtg_tractor_gauge_field_moves_ig_and_x():
 
 def check_gtg_own_ray_classes_on_gauge_fields():
     premise("interior.covariant-form-vacuum-equations")
+    premise("synthesis.imported-gtg-dictionary")      # store-sign Ricci map
     premise("interior.metric-parallelism-trace-schouten-condition")
     ni = gtg.NINF
     ok = True
@@ -398,6 +400,7 @@ SCREENS = [((F(0), F(1), F(0), F(0)), (F(0), F(0), F(1), F(0)), (F(0), F(0), F(0
 
 def check_gtg_infinity_vacua_with_the_unit_i7():
     premise("interior.covariant-form-vacuum-equations")
+    premise("std-algebra.complexification-is-the-odd-extension")   # the central unit I_7 of Cl(3,4)
     premise("one-relation.imported-pure-spinors-incidence-chart")
     ok = GA.eq(GA.mul(I6, I6, S34), GA.sc(-1)) and GA.eq(GA.mul(I7, I7, S34), GA.sc(-1))
     ok = ok and all(GA.commutes(I7, GA.gen(j), S34) for j in range(7))

@@ -29,17 +29,21 @@ credit:
   role: 'GTG proof of (ii) (dilation field, torsion-solved Omega, Kulkarni-Nomizu field strength, store-sign scalar) and of (iii) (tractor derivative in Cl(2,4)); decision A3 applied (store-sign scalar and Euler-Lagrange equation in (ii))'
   version: 3
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): the null vector of the (t + x1)^2 counter-model corrected in the proof and asserted in the check; stale pins reviewed'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
+  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@4
   - correspondence.imported-vacuum-equations-scale-tractor@6
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -59,6 +63,14 @@ lineage:
   - mass.imported-frozen-point-tractor-connection
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with one fix (8a), confirmed. For sigma = (t + x1)^2, grad sigma = 2(t + x1)(e^0 + e^1) with e^0 = e0, e^1 = -e1, so H(a) = a . grad grad sigma = 2 (a . l) l with l = e0 - e1, not e0 + e1: H(e0) = 2(e0 - e1), while 2 (e0 . (e0 + e1))(e0 + e1) = 2(e0 + e1). The vector is still null, so H0 != 0 and H0 : H0 = 0 stand. Applied: proof (iii) now has l = grad(t + x1) = e^0 + e^1 = e0 - e1; check_gtg_dilation_field_scalar_and_tractor_dirichlet now asserts H0(e_mu) = 2 (e_mu . l) l with l = e0 - e1 null at both points (runcheck 4/4; the mutant l = e0 + e1 fails). The formal level (iii) has the same slip; not edited (a formal change, listed for Leon with the text l = e_0 - e_1).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale 3 -> 4 is the GA rewrite of its tractors and slots (middle slot of nabla_v I still -Sch0(v), which proof (iii) quotes; N) and synthesis.positive-structure-is-twistor-form-at-imaginary-time 4 -> 5 has a byte-identical formal (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): (ii) and its check use the Ricci map and the store-sign scalar of clause (iv), unchanged, so the use holds; all three repinned.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -3,9 +3,9 @@
 The vacuum curvature operators at a point are the algebraic Weyl maps of Cl(1,3) (GA.py, (+,-,-,-)): the
 10-dimensional exact kernel of symmetry, Ricci trace-freeness d_a . W(a ^ b) = 0 and first Bianchi; for a
 vacuum field calR = W. The loop bivector is R(u, v) = -calR(u ^ v) (LDG sign) and
-C(u, v, w, z) = <R(u, v) . w, z>, complex-bilinear (Gaussian rationals). Unit tetrad l = e0 + e1,
-n = (e0 - e1)/2 (l . n = 1), m = (e2 + i e3)/sqrt 2 (m . mbar = -1); computed with m0 = e2 + i e3 and the
-powers of sqrt 2 cleared, so every identity below is exact. Psi0 = C(l, m, l, m), Psi1 = C(l, n, l, m),
+C(u, v, w, z) = <R(u, v) . w, z>, bilinear over span{1, I5} (I5 the central unit of Cl(2,3), carried as pairs).
+Unit tetrad l = e0 + e1, n = (e0 - e1)/2 (l . n = 1), m = (e2 + I5 e3)/sqrt 2 (m . mbar = -1); computed with
+m0 = e2 + I5 e3 and the powers of sqrt 2 cleared, so every identity below is exact. Psi0 = C(l, m, l, m), Psi1 = C(l, n, l, m),
 Psi2 = C(l, m, mbar, n), as in the premise Fact. Computed:
 (1) on all 10 basis Weyl maps and on a generic combination: the classes C(u, v, l, m) of the six tetrad
     loops are Psi0, 0, -Psi1, Psi1, 0, -Psi2 for (l, m), (l, mbar), (m, mbar), (l, n), (n, m), (n, mbar);

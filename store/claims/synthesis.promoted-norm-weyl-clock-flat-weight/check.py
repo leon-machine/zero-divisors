@@ -532,6 +532,7 @@ INSTANTON_LAMBDAS = (F(3), F(1), F(6))   # S^4, S^2 x S^2, CP^2 in these normali
 
 def check_gtg_instantons_as_euclidean_gauge_fields():
     premise("synthesis.imported-chern-gauss-bonnet")
+    premise("synthesis.imported-gtg-dictionary")      # store-sign field strength, Weyl duality (row 5)
     premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
     premise("synthesis.de-sitter-entropy-pi-n-squared")
     ok = True
