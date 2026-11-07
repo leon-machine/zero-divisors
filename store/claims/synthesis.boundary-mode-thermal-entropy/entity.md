@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.rate-discharge-hypothesis-iii@5
+  - singularity.rate-discharge-hypothesis-iii@6
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -27,7 +27,7 @@ derivations:
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.internal-symmetry-ladder@4
-  - standard-model.pair-count-dimension@3
+  - standard-model.pair-count-dimension@4
   - standard-model.quarks-leptons-two-level-fermion-content@5
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - tower.ladder-pairs-satisfy-car-vectors@4

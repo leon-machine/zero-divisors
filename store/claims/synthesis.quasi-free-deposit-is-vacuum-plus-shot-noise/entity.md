@@ -26,11 +26,11 @@ derivations:
 - name: main
   uses:
   - hawking.imported-quasi-free-states-car-algebra@2
-  - hawking.i-state@3
-  - synthesis.quadratic-flows-cannot-thermalise-descent@1
+  - hawking.i-state@4
+  - synthesis.quadratic-flows-cannot-thermalise-descent@2
   - singularity.descent-parity-average@4
   - singularity.imported-descent-one-way-conditional-expectation@7
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@2
   - synthesis.imported-planck-2018-lcdm-parameters@3
   proof: proof-main.tex

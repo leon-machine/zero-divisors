@@ -36,7 +36,7 @@ derivations:
   uses:
   - synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four@2
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.anomaly-freedom-forces-slot-content@3
   proof: proof-main.tex
 checked_by:

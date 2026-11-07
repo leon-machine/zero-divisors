@@ -18,7 +18,7 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
 - name: Claude Opus 5.5
-  role: 'unit resolution pass, clauses (1) and (2) written with the transverse unit J'
+  role: 'unit resolution pass, clauses (1) and (2) written with the transverse unit J, clause (3) with the central unit I_5 of Cl(2,3)'
   version: 5
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed

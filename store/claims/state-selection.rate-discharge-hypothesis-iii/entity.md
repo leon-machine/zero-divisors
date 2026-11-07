@@ -28,12 +28,12 @@ derivations:
 - name: main
   uses:
   - singularity.plane-rate@4
-  - state-selection.euclidean-partner-curvature-selected@4
-  - singularity.kms-uniqueness-factor@5
+  - state-selection.euclidean-partner-curvature-selected@5
+  - singularity.kms-uniqueness-factor@6
   - singularity.universality-temperature-under-g@3
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

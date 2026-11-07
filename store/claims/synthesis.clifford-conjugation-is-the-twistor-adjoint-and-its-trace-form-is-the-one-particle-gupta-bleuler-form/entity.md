@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@3
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
   - field-theory.fock-space-maxwell-modes@4
   - field-theory.imported-tower-limit@3
   proof: proof-main.tex

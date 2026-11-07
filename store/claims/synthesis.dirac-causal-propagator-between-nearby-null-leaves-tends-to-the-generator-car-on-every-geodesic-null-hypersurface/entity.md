@@ -51,14 +51,14 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@2
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@3
-  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@2
+  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@4
+  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@5
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
-  - synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car@3
-  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@2
+  - synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car@4
+  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@3
   proof: proof-main.tex
 checked_by:
 - kind: check

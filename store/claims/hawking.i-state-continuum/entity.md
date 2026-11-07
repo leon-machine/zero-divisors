@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.i-state@3
+  - hawking.i-state@4
   - hawking.imported-quasi-free-kms-reduces-two@2
   - hawking.imported-quasi-free-states-car-algebra@2
   - hawking.imported-ideal-fermi-gas-uniqueness@2

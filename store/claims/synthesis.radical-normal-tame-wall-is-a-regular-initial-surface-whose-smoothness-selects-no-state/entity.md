@@ -27,7 +27,7 @@ derivations:
   - sheaf.metrics-residue-square-root-twist@5
   - synthesis.imported-propagation-of-hadamard-form@1
   - transport.pinching-kernel@3
-  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@1
+  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@2
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
   - synthesis.imported-hadamard-stress-tensor-diverges-at-the-reissner-nordstrom-de-sitter-cauchy-horizon@1
   assumes:

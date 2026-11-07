@@ -35,7 +35,7 @@ derivations:
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - synthesis.attachment-conformal-energy-is-generated-by-z@3
+  - synthesis.attachment-conformal-energy-is-generated-by-z@4
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
   - synthesis.imported-haag-local-normality@1
   proof: proof-main.tex

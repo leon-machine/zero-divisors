@@ -31,9 +31,9 @@ derivations:
   - dark-tower-matter.five-dimensional-content@5
   - dark-tower-matter.five-dimensional-towers@4
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@1
+  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
   - synthesis.imported-kaluza-klein-ansatz@1
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1
   proof: proof-main.tex

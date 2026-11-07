@@ -30,7 +30,7 @@ derivations:
   - standard-model.what-angle-asks-neutrino-sector@4
   - synthesis.untuned-fit-caps-lightest-heavy-neutrino@1
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - std-algebra.spin-double-cover@1
   - synthesis.imported-macro-monopole-flux-limit@1
   - synthesis.imported-nielsen-olesen-string-tension@1

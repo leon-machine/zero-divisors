@@ -25,7 +25,7 @@ derivations:
   - odd-extensions.volume-element-odd-dimension@3
   - primer.centre@2
   - odd-extensions.doubling-or-complexification@5
-  - std-algebra.complexification@2
+  - std-algebra.complexification@3
   proof: proof-main.tex
 checked_by:
 - kind: check

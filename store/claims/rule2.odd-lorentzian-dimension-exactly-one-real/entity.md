@@ -1,7 +1,7 @@
 ---
 id: rule2.odd-lorentzian-dimension-exactly-one-real
 kind: claim
-version: 6
+version: 7
 title: 'Odd Lorentzian dimension: exactly one real form is split'
 status: proved
 region: rule2
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 6
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -28,7 +32,7 @@ derivations:
 - name: main
   uses:
   - rule2.where-obstruction-sits-commuting-square@5
-  - std-algebra.complexification@2
+  - std-algebra.complexification@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -68,7 +72,7 @@ extraction:
       step is self-contained. Linked equivalent_to transport.odd-lorentzian-dimension-exactly-one-real:
       the companion note restates it.'
 equivalent_to:
-- transport.odd-lorentzian-dimension-exactly-one-real@5
+- transport.odd-lorentzian-dimension-exactly-one-real@6
 ---
 
 ## formal

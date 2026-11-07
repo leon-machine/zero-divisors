@@ -25,12 +25,12 @@ review: typed
 derivations:
 - name: main
   uses:
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   - mass.mass-weight-dictionary@4
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   proof: proof-standard-route.tex
 checked_by:
 - kind: legacy

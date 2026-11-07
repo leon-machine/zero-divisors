@@ -39,10 +39,10 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@3
+  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@4
   - field-theory.second-quantisation@5
   - field-theory.imported-tower-limit@3
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@3
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@3
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
   assumes:

@@ -34,7 +34,7 @@ derivations:
   - synthesis.stationary-generator-states-and-the-edge-scaling@1
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
-  - synthesis.positive-null-energy-gives-r-premises@6
+  - synthesis.positive-null-energy-gives-r-premises@7
   - singularity.why-calibration-cannot-be-internal@6
   proof: proof-main.tex
 checked_by:

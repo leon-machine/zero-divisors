@@ -36,7 +36,7 @@ derivations:
   - synthesis.plane-commutant-even-ground@3
   - synthesis.tower-top-pair-forgets-reversal@2
   - transport.classification-real-clifford-algebras@3
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -24,8 +24,8 @@ derivations:
   - synthesis.mirror-temperature-measures-deposit-under-r@1
   - dark-matter.stored-asymmetry-charge-not-number@8
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-superhorizon-zeta-conservation@3
   - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@1
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1

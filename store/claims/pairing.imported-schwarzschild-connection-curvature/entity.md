@@ -25,7 +25,7 @@ derivations:
 - name: main
   uses:
   - singularity.curvature-gauge-field-exact-shape-decoupling@4
-  - singularity.euclidean-rotor-where-it-lies@4
+  - singularity.euclidean-rotor-where-it-lies@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

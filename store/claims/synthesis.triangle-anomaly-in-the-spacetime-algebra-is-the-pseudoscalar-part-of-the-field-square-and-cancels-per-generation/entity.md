@@ -31,8 +31,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@3
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.anomaly-freedom-forces-slot-content@3
   - synthesis.imported-adler-bell-jackiw-axial-anomaly@1
   proof: proof-main.tex

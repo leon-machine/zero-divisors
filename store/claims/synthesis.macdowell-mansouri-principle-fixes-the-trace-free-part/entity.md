@@ -26,7 +26,7 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@2
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@1
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@2
   - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
   - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
   - synthesis.imported-gtg-dictionary@1

@@ -27,7 +27,7 @@ derivations:
   uses:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
-  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@1
+  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
   - dark-energy.frozen-point-datum-kasner-wall@7
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
   proof: proof-main.tex

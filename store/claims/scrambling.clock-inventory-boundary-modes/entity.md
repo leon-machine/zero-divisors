@@ -27,8 +27,8 @@ derivations:
   uses:
   - hawking.modular-structure-completed-pair@3
   - scrambling.boundary-mode-space-matrix@4
-  - scrambling.imported-modes-modular-inventory@4
-  - singularity.euclidean-rotor-where-it-lies@4
+  - scrambling.imported-modes-modular-inventory@5
+  - singularity.euclidean-rotor-where-it-lies@5
   - tower.witt-index-quantum-capacity@4
   proof: proof-main.tex
 checked_by:

@@ -24,8 +24,8 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.pairing-functional-pair-creation-amplitude@5
-  - pairing.static-frame-only-expansion-survives@6
+  - pairing.pairing-functional-pair-creation-amplitude@6
+  - pairing.static-frame-only-expansion-survives@7
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   proof: proof-main.tex
 checked_by:

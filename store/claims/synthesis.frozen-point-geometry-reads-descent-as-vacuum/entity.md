@@ -30,11 +30,11 @@ derivations:
   - standard-model.imported-frozen-point-dictionary@8
   - synthesis.frozen-phase-spectrum-not-red@3
   - synthesis.sudden-descent-feature-not-tilt@4
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
-  - synthesis.quadratic-flows-cannot-thermalise-descent@1
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
+  - synthesis.quadratic-flows-cannot-thermalise-descent@2
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bbn-reheating-temperature-floor@1
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   proof: proof-main.tex
 checked_by:
 - kind: check

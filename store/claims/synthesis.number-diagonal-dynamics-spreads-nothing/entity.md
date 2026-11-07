@@ -27,7 +27,7 @@ derivations:
   uses:
   - singularity.modular-structure-completed-pair@5
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
   - scrambling.spreading-law-chaos-bound-saturated@5
   proof: proof-main.tex
 checked_by:

@@ -33,13 +33,13 @@ derivations:
 - name: main
   uses:
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
-  - synthesis.positive-null-energy-gives-r-premises@6
+  - synthesis.positive-null-energy-gives-r-premises@7
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
   - sheaf.gauge-field-cometric@3
   - synthesis.imported-gtg-dictionary@1
-  - singularity.euclidean-section-period@5
-  - synthesis.r-loc-needs-sheet-labelled-modes@3
+  - singularity.euclidean-section-period@6
+  - synthesis.r-loc-needs-sheet-labelled-modes@4
   assumes:
   - hawking.joint-j3-s-wave-reduction@1
   proof: proof-main.tex

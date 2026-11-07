@@ -23,8 +23,8 @@ derivations:
   uses:
   - one-relation.imported-cartans-purity-theorem-thouless-form@1
   - one-relation.spacetime-manifold-vacuum-lines@6
-  - one-relation.two-capacities-three-consequences@5
-  - one-relation.two-presentations@4
+  - one-relation.two-capacities-three-consequences@6
+  - one-relation.two-presentations@5
   - tower.witt-index-quantum-capacity@4
   proof: proof-main.tex
 checked_by:

@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-left-right-bidoublet-two-yukawa-couplings
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the left-right bidoublet''s two Yukawa couplings'
 status: imported
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'G. Senjanovic and R. N. Mohapatra, Exact left-right symmetry and spontaneous violation of parity, Phys. Rev. D 12 (1975), 1502.'

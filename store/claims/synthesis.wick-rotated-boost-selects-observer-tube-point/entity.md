@@ -25,10 +25,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@3
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
   - one-relation.spacetime-manifold-vacuum-lines@6
-  - synthesis.twistor-form-states-only-off-the-real-slice@1
-  - synthesis.incidence-vacua-thermofield-real-capacity@5
+  - synthesis.twistor-form-states-only-off-the-real-slice@2
+  - synthesis.incidence-vacua-thermofield-real-capacity@6
   - synthesis.boost-stationary-incidence-vacua-read-interval@2
   proof: proof-main.tex
 checked_by:

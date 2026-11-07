@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.imported-de-sitter-invariant-hadamard-state-unique@2
+  - synthesis.imported-de-sitter-invariant-hadamard-state-unique@3
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@2
   - standard-model.imported-frozen-point-dictionary@8
   - synthesis.imported-ford-parker-infrared-divergence@1

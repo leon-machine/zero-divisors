@@ -32,7 +32,7 @@ derivations:
   - standard-model.invariant-pairing-five-modes@5
   - standard-model.hyp-s-slot-statistics@9
   - synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@3
-  - synthesis.imported-left-right-bidoublet-two-yukawa-couplings@2
+  - synthesis.imported-left-right-bidoublet-two-yukawa-couplings@3
   proof: proof-main.tex
 checked_by:
 - kind: check

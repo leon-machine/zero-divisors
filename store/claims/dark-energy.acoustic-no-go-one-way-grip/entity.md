@@ -1,7 +1,7 @@
 ---
 id: dark-energy.acoustic-no-go-one-way-grip
 kind: claim
-version: 4
+version: 5
 title: 'The acoustic no-go: one way to grip'
 status: proved
 region: dark-energy
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main

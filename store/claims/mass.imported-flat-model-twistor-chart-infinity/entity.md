@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - correspondence.fock-model-complexified-ascended-algebra@8
-  - correspondence.incidence-relation-chart@5
+  - correspondence.fock-model-complexified-ascended-algebra@9
+  - correspondence.incidence-relation-chart@6
   - correspondence.one-statement-three-languages@5
   - correspondence.spin-representation@6
   - correspondence.spinor-identification@7

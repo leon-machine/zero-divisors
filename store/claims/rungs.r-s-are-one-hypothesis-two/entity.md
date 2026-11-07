@@ -26,7 +26,7 @@ derivations:
   - rungs.imported-tower-one-qubit-per-rung@4
   - rungs.ladder-group-rung-mixing-group-one@4
   - rungs.mass-bracket-frozen-points-grip-slot@3
-  - rungs.rung-spinor-module-mixings@5
+  - rungs.rung-spinor-module-mixings@6
   - standard-model.under-s-composites-state-space-spinor@6
   proof: proof-main.tex
 checked_by:

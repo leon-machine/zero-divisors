@@ -22,13 +22,13 @@ derivations:
 - name: main
   uses:
   - one-relation.third-constant-conversion-constant-between-charts@6
-  - one-relation.two-presentations@4
-  - one-relation.two-capacities-three-consequences@5
+  - one-relation.two-presentations@5
+  - one-relation.two-capacities-three-consequences@6
   - one-relation.imported-completion-ladder@6
-  - standard-model.pair-count-dimension@3
+  - standard-model.pair-count-dimension@4
   - one-relation.imported-single-mode-thermality-modular-period@6
   - correspondence.clifford-side-ordering-shift@3
-  - dark-energy.acoustic-no-go-one-way-grip@4
+  - dark-energy.acoustic-no-go-one-way-grip@5
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - std-algebra.periodicity@1
   proof: proof-main.tex

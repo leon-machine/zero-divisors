@@ -25,11 +25,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.incidence-vacua-thermofield-real-capacity@5
+  - synthesis.incidence-vacua-thermofield-real-capacity@6
   - one-relation.spacetime-manifold-vacuum-lines@6
-  - correspondence.reality-conjugation-twistor-form-factor@7
-  - correspondence.incidence-relation-chart@5
-  - synthesis.twistor-form-states-only-off-the-real-slice@1
+  - correspondence.reality-conjugation-twistor-form-factor@8
+  - correspondence.incidence-relation-chart@6
+  - synthesis.twistor-form-states-only-off-the-real-slice@2
   - std-algebra.vector-squares@1
   proof: proof-main.tex
 checked_by:

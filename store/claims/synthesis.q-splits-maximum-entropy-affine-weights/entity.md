@@ -29,14 +29,14 @@ derivations:
   uses:
   - singularity.chains-state-class-stability@7
   - singularity.exact-equilibrium-over-determines-boundary-modes@5
-  - singularity.kms-uniqueness-factor@5
+  - singularity.kms-uniqueness-factor@6
   - singularity.deficit-carried-quanta-correlations@5
   - singularity.deficit-theorem-cost-descent-exactly@4
   - hawking.imported-quasi-free-states-car-algebra@2
   - singularity.bosonisation-bridge-s-wave-sector@7
   - scrambling.boundary-mode-space-matrix@4
   - scrambling.principality-indifference-sphere@4
-  - synthesis.residue-common-weight-particle-hole@4
+  - synthesis.residue-common-weight-particle-hole@5
   - synthesis.residue-from-mode-entropy@4
   proof: proof-main.tex
 checked_by:

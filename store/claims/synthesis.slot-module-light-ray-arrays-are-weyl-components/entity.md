@@ -34,7 +34,7 @@ derivations:
   - field-theory.second-quantisation@5
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
-  - synthesis.half-integer-weight-array-carries-half-ln2@4
+  - synthesis.half-integer-weight-array-carries-half-ln2@5
   - standard-model.majorana-element@7
   - synthesis.lowest-causal-residues-zero-four-content@1
   proof: proof-main.tex

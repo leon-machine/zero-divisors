@@ -29,7 +29,7 @@ derivations:
   - sheaf.kasner-data-interior@2
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
   proof: proof-main.tex

@@ -32,13 +32,13 @@ about:
 derivations:
 - name: main
   uses:
-  - scrambling.clock-inventory-boundary-modes@5
+  - scrambling.clock-inventory-boundary-modes@6
   - hawking.modular-structure-completed-pair@3
   - scrambling.boundary-mode-space-matrix@4
   - singularity.plane-rate@4
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.residue-from-mode-entropy@4
-  - synthesis.residue-common-weight-particle-hole@4
+  - synthesis.residue-common-weight-particle-hole@5
   proof: proof-main.tex
 checked_by:
 - kind: check

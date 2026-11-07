@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - tower.structure-tower-c-norms@8
-  - scrambling.clock-inventory-boundary-modes@5
+  - tower.structure-tower-c-norms@9
+  - scrambling.clock-inventory-boundary-modes@6
   - field-theory.boost-modes@3
-  - singularity.kms-uniqueness-factor@5
-  - singularity.euclidean-rotor-where-it-lies@4
+  - singularity.kms-uniqueness-factor@6
+  - singularity.euclidean-rotor-where-it-lies@5
   - rungs.imported-fock-representation-bogoliubov-group@4
   - scrambling.spreading-law-chaos-bound-saturated@5
   proof: proof-main.tex

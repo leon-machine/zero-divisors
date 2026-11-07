@@ -28,8 +28,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.boundary-mode-first-law-of-entanglement@6
-  - hawking.i-state@3
+  - synthesis.boundary-mode-first-law-of-entanglement@7
+  - hawking.i-state@4
   - field-theory.second-quantisation@5
   - hawking.i-state-continuum@5
   - synthesis.boundary-mode-thermal-entropy@2

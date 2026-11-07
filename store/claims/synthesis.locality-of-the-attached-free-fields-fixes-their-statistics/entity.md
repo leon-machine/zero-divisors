@@ -36,7 +36,7 @@ derivations:
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.no-canonical-commutation-relations-tower@3
   - field-theory.how-close-tower-comes-ccr@4
-  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1
+  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   proof: proof-main.tex
 checked_by:
 - kind: check

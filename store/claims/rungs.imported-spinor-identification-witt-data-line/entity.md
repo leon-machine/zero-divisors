@@ -21,9 +21,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - correspondence.fock-model-complexified-ascended-algebra@8
-  - correspondence.incidence-relation-chart@5
-  - correspondence.reality-conjugation-twistor-form-factor@7
+  - correspondence.fock-model-complexified-ascended-algebra@9
+  - correspondence.incidence-relation-chart@6
+  - correspondence.reality-conjugation-twistor-form-factor@8
   - correspondence.skew-lines-splittings-hyperbolic-planes-one@4
   - correspondence.spinor-identification@7
   proof: proof-main.tex

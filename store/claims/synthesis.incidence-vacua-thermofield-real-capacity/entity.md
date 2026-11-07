@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - one-relation.two-capacities-three-consequences@5
+  - one-relation.two-capacities-three-consequences@6
   - tower.witt-index-quantum-capacity@4
   - one-relation.imported-pure-spinors-incidence-chart@5
   - one-relation.spacetime-manifold-vacuum-lines@6

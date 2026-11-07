@@ -25,8 +25,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.euclidean-rotor-where-it-lies@4
-  - state-selection.euclidean-partner-curvature-selected@4
+  - singularity.euclidean-rotor-where-it-lies@5
+  - state-selection.euclidean-partner-curvature-selected@5
   - field-theory.where-each-lives@3
   - odd-extensions.imported-conformal-completion@5
   proof: proof-main.tex

@@ -27,10 +27,10 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.i-state@3
+  - hawking.i-state@4
   - hawking.imported-algebra-boundary-modes-car-algebra@5
-  - scrambling.clock-inventory-boundary-modes@5
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
+  - scrambling.clock-inventory-boundary-modes@6
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   proof: proof-main.tex
 checked_by:

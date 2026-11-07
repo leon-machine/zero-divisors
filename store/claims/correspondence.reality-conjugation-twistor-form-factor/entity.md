@@ -30,8 +30,8 @@ derivations:
 - name: main
   uses:
   - correspondence.chevalley-pairing@4
-  - correspondence.incidence-relation-chart@5
-  - correspondence.fock-model-complexified-ascended-algebra@8
+  - correspondence.incidence-relation-chart@6
+  - correspondence.fock-model-complexified-ascended-algebra@9
   - std-algebra.inverse-of-vector@1
   - std-algebra.reflection@1
   proof: proof-main.tex

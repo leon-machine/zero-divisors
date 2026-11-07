@@ -29,16 +29,16 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.euclidean-section-period@5
-  - singularity.modular-descent@6
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
-  - singularity.schmidt-forcing-proved-outright@5
+  - singularity.euclidean-section-period@6
+  - singularity.modular-descent@7
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
+  - singularity.schmidt-forcing-proved-outright@6
   - singularity.class-relative-no-go-no-supplied@3
   - singularity.computed@4
   assumes:
   - singularity.l-boundary-mode-locality@2
   - singularity.q-joint-quasi-freeness-s-wave@3
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

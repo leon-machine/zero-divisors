@@ -38,6 +38,30 @@ right; imported Facts in their source's form), and each such entity declares out
 check (tp/galang.py) now flags a bare imaginary unit; tests in tests/test_galang.py. Conventions and the
 contributing rules state the rule.
 
+## 5a. Every imaginary unit resolved (Leon, 11:16: "Try to resolve all imaginary units")
+RESOLVE.md (the unit principle U1-U6, superseding R1 and the "what stays" lists), core.md, referee-core.md,
+resolve-G1.md to resolve-G5.md. A complex number is written with the pseudoscalar that commutes with
+everything it multiplies: I4 (left on even values, the right unit on others; numbers, abstract Hilbert
+spaces, the continuum modes, complex analysis of scalar functions, theta functions); the transverse
+bivector J = e2 e3 = I4 sigma on the radial atom and its boundary modes (the even unit of the atom's
+quaternionic centraliser); the central pseudoscalar of the odd extension, I5 in Cl(2,3) and I7 in Cl(3,4),
+where the unit must commute with every vector (complexifications, complex null vectors, tube points, i0
+shifts of vectors, the continued rotor on vectors); hat-I = I_V e for the cosmological horizon's atom, which
+has no single transverse plane; imported Facts restated with their source's form kept in
+extraction.source_formal. Two new core results carry the units, both reviewed blind (SOUND WITH FIXES,
+fixes applied) and holding given no postulate: std-algebra.complexification-is-the-odd-extension and
+synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom. The store now has no bare imaginary
+unit in any level or proof of any entity; the seven outside_ga declarations left are for Pauli or Dirac
+matrices, a cross product or a named field, none for i. The language check flags a bare imaginary unit even
+when outside_ga is declared.
+
+Readings recorded for Leon (each entity states its reading): n-mode boundary spaces are read with J (they
+are built from the radial atom and tower planes); abstract complexifications over an arbitrary tower ground
+use the scalar span{1, I4}; the Pati-Salam defining representations are read in span{1, I4} (I6 if the 16 is
+meant as the conformal spinor); letter clashes with J were renamed (g, L_a, \mathcal{J}). Further possible
+sign slips recorded, not fixed: hadamard-dirac-states-scale proof step 7, and the coherence-phase sign in
+quadratic-flows (already listed).
+
 ## 6. Leon's decisions this run
 Unit rulings R1-R4; proposal 2 accepted under a new id; the CPT premise's sentence on the CPT operator of
 quantum field theory restated (dark-matter.premise-cpt-covariance v3); P2's scope not extended; a note on

@@ -28,7 +28,7 @@ derivations:
   uses:
   - dark-energy.imported-henneaux-teitelboim-promotion@5
   - synthesis.einstein-route-makes-n-initial-data@4
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   note: 'Premise-only derivation, no proof text (a conjecture carries none): the dating of clause (ii)
     holds under the Henneaux-Teitelboim promotion, which T10 imports as Fact 5.11 and records as an
     open decision (Rem 5.9) and which the series adopts (decision of 23 October), with the register

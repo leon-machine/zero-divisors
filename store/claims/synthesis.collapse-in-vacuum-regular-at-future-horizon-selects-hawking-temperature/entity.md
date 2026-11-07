@@ -32,7 +32,7 @@ derivations:
   - synthesis.imported-gtg-dictionary@1
   - hawking.i-state-continuum@5
   - hawking.imported-ideal-fermi-gas-uniqueness@2
-  - angle.imported-theorems-deliver-their-hypotheses@2
+  - angle.imported-theorems-deliver-their-hypotheses@3
   assumes:
   - hawking.joint-j3-s-wave-reduction@1
   proof: proof-main.tex

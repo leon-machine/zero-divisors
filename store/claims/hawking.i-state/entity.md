@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.gibbs-states-are-kms-conversely-finite@3
+  - hawking.gibbs-states-are-kms-conversely-finite@4
   - hawking.imported-kms-passes-inductive-limits@1
   - hawking.imported-quasi-free-states-car-algebra@2
   proof: proof-main.tex

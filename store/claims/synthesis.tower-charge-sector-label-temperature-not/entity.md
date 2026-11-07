@@ -32,10 +32,10 @@ derivations:
 - name: main
   uses:
   - hawking.imported-quasi-free-states-car-algebra@2
-  - hawking.i-state@3
+  - hawking.i-state@4
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-matter.stored-asymmetry-charge-not-number@8
-  - synthesis.cold-mirror-needs-non-equilibrium-descent@2
+  - synthesis.cold-mirror-needs-non-equilibrium-descent@3
   - synthesis.mirror-asymmetry-route-one@2
   - dark-matter.mirror-tower-copy-one@8
   - synthesis.imported-powers-stormer-takesaki-disjointness@3

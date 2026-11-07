@@ -131,7 +131,8 @@ outside_ga:
 
 - `imported`: a result taken from elsewhere, stated in its source's language;
 - `complex-analysis`: analytic continuation, contour arguments, Hilbert-space structure
-  (the next section lists where a bare $i$ stays);
+  where some other stand-in remains (a bare $i$ never stays: the next section's unit
+  principle writes every imaginary unit as a pseudoscalar);
 - `bridge`: a result whose point is to connect geometric algebra with the standard
   formalism, such as a statement and its Dirac-matrix form side by side;
 - `other`: anything else, with the reason judged in review.
@@ -140,7 +141,8 @@ The checks look for the unambiguous signs (Pauli or Dirac matrices named as such
 product, $\mathbb{C}$, $\sqrt{-1}$, or a bare imaginary unit $i$ used as a number or a
 complex structure rather than as an index) in a new or changed entity: E609 refuses a
 contributor's that carries them without `outside_ga`; for a maintainer it is the warning
-W222. The result's page shows the declaration. `python -m tp ga-report` lists the entities
+W222. A bare imaginary unit is flagged even when `outside_ga` is declared (7 November 2026:
+the unit is always written as the pseudoscalar it stands for). The result's page shows the declaration. `python -m tp ga-report` lists the entities
 already in the store that use such notation and declare nothing.
 
 ## The imaginary units

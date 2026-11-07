@@ -28,11 +28,11 @@ derivations:
   - dark-matter.imported-inputs-standard-model-chain@6
   - standard-model.chirality-two-halves-spinor-module-conjugation@6
   - dark-energy.four-alternatives-are-exhaustive-three-are@2
-  - synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation@3
+  - synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation@4
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.premise-cpt-covariance@3
-  - dark-matter.premise-flag-as-datum@2
+  - dark-matter.premise-flag-as-datum@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

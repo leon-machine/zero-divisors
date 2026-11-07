@@ -49,10 +49,10 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@3
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
   - field-theory.coupled-system-tree-level@3
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2

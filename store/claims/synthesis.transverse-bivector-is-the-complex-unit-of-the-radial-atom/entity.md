@@ -23,9 +23,9 @@ derivations:
   uses:
   - singularity.modular-structure-completed-pair@5
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
-  - std-algebra.bivector-exponential@2
-  - tower.structure-tower-c-norms@8
-  - singularity.kms-uniqueness-factor@5
+  - std-algebra.bivector-exponential@3
+  - tower.structure-tower-c-norms@9
+  - singularity.kms-uniqueness-factor@6
   - primer.centre@2
   proof: proof-main.tex
 checked_by:

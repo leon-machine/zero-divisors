@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - pairing.imported-null-flags@1
-  - pairing.pairing-functional-pair-creation-amplitude@5
+  - pairing.pairing-functional-pair-creation-amplitude@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

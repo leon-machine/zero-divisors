@@ -24,14 +24,14 @@ derivations:
 - name: main
   uses:
   - singularity.exact-equilibrium-over-determines-boundary-modes@5
-  - singularity.kms-uniqueness-factor@5
+  - singularity.kms-uniqueness-factor@6
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   - singularity.parity-protection@2
-  - singularity.rate-discharge-hypothesis-iii@5
+  - singularity.rate-discharge-hypothesis-iii@6
   proof: proof-main.tex
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   - singularity.l-boundary-mode-locality@2
 checked_by:
 - kind: legacy

@@ -31,7 +31,7 @@ derivations:
   uses:
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   - singularity.imported-interior-collar-kasner-form@6
-  - singularity.kms-uniqueness-factor@5
+  - singularity.kms-uniqueness-factor@6
   - singularity.imported-general-form@1
   proof: proof-main.tex
 checked_by:

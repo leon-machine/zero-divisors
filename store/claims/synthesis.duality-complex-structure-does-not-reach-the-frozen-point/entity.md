@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - correspondence.lorentzian-duality-complex-structure@4
+  - correspondence.lorentzian-duality-complex-structure@5
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.frozen-point-makes-stelle-west-vector@5

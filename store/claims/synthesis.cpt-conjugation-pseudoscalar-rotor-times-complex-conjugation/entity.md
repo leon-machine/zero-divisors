@@ -1,7 +1,7 @@
 ---
 id: synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation
 kind: claim
-version: 3
+version: 4
 title: 'CPT conjugation as the pseudoscalar rotor times complex conjugation'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.dark-matter.witt-flag
@@ -30,10 +34,10 @@ derivations:
 - name: main
   uses:
   - dark-matter.two-families-are-two-chiralities@6
-  - singularity.euclidean-rotor-where-it-lies@4
+  - singularity.euclidean-rotor-where-it-lies@5
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - std-algebra.involution-properties@1
-  - std-algebra.bivector-exponential@2
+  - std-algebra.bivector-exponential@3
   - std-algebra.pseudoscalar-commutation@1
   assumes: []
   proof: proof-main.tex

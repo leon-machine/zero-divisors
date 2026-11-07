@@ -30,15 +30,15 @@ derivations:
 - name: main
   uses:
   - singularity.modular-structure-completed-pair@5
-  - singularity.modular-theory-matrix-factor-proved-outright@5
+  - singularity.modular-theory-matrix-factor-proved-outright@6
   - singularity.plane-rate@4
-  - singularity.schmidt-forcing-proved-outright@5
+  - singularity.schmidt-forcing-proved-outright@6
   proof: proof-main.tex
   assumes:
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
 - name: standard-route
   uses:
-  - angle.imported-theorems-deliver-their-hypotheses@2
+  - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-standard-route.tex
 checked_by:
 - kind: legacy

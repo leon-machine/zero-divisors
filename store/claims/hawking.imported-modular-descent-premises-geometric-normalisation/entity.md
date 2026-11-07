@@ -33,14 +33,14 @@ derivations:
   - hawking.modular-structure-completed-pair@3
   - singularity.computed@4
   - singularity.descended-form-state-independent@4
-  - singularity.euclidean-section-period@5
-  - singularity.matching-steps-4b-4c-join-equation@6
-  - singularity.modular-descent@6
-  - singularity.rate-discharge-hypothesis-iii@5
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
+  - singularity.euclidean-section-period@6
+  - singularity.matching-steps-4b-4c-join-equation@7
+  - singularity.modular-descent@7
+  - singularity.rate-discharge-hypothesis-iii@6
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

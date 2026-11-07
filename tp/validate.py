@@ -658,8 +658,8 @@ def layer2(store: Store, rep: Report):
                             f"add to credit: {{name: <who>, role: <what was done>, version: {e.version}}}")
         # the language is geometric algebra: a new or changed entity that leaves it says why
         if store.lock and (old is None or e.substantive_hash() != old["hash"]):
-            from .galang import scan, declared
-            hits = [] if declared(e) else scan(e)
+            from .galang import unexcused
+            hits = unexcused(e)
             if hits:
                 rep.add("W222", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
                         "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")
@@ -1495,8 +1495,8 @@ def layer6(store: Store, rep: Report, author: str | None):
             if new["assumes"]:
                 rep.add("E601", eid, "only a maintainer may add a postulate dependency "
                         "(assumes)")
-            from .galang import scan, declared
-            hits = [] if declared(e) else scan(e)
+            from .galang import unexcused
+            hits = unexcused(e)
             if hits:
                 rep.add("E609", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
                         "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")
@@ -1525,8 +1525,8 @@ def layer6(store: Store, rep: Report, author: str | None):
                         "and one for the AI model that drafted it")
         # the language is geometric algebra: a changed entity that leaves it says why
         if e.substantive_hash() != old["hash"]:
-            from .galang import scan, declared
-            hits = [] if declared(e) else scan(e)
+            from .galang import unexcused
+            hits = unexcused(e)
             if hits:
                 rep.add("E609", eid, f"written outside geometric algebra ({', '.join(hits)}) without saying why",
                         "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}")

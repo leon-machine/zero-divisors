@@ -27,14 +27,14 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-microlocal-hadamard-condition@2
-  - hawking.i-state@3
+  - hawking.i-state@4
   - field-theory.second-quantisation@5
   - synthesis.imported-gtg-dictionary@1
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian@6
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
-  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@1
+  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@2
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -29,10 +29,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.positive-energy-selects-rule-2-sign@3
+  - synthesis.positive-energy-selects-rule-2-sign@4
   - mass.chart-form-spin-isomorphism@5
-  - angle.imported-theorems-deliver-their-hypotheses@2
-  - std-algebra.bivector-exponential@2
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - std-algebra.bivector-exponential@3
   proof: proof-main.tex
 checked_by:
 - kind: check

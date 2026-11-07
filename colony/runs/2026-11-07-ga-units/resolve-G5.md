@@ -93,3 +93,17 @@ Units chosen, by family:
 
 ## Validation
 `tp check --layers 1,2,3 --keep-going --author leon` gives no error or warning on any G5 entity. The 8 I213 infos are the same as in baseline.log. The detector finds no bare unit left except in scrambling.imported-modes-modular-inventory (declared, U6).
+
+## Addendum: coordinator ruling on the Euclidean rotor
+This applies the same ruling as for G1's singularity.euclidean-rotor-where-it-lies (3). T05 Prop. 7.21(3) concerns the continued rotor acting on spacetime vectors, the (rho, tau) plane. So by U3 the unit is I_5, the central pseudoscalar of Cl(2,3).
+- scrambling.imported-modes-modular-inventory: 4 -> 5. The U6 entry above is withdrawn.
+  - In the formal and technical levels and the proof, i sigma is now written I_5 sigma, and the text says it lies outside the real algebra Cl(1,3). This cites std-algebra.complexification-is-the-odd-extension.
+  - One sentence is added: on the atom's modes the unit is J, and the continued flow there is conjugation by e^{I_4 theta/2}, a different object.
+  - The source's form is now in source_formal. The declaration (complex-analysis) is removed.
+- note.singularity.euclidean-reading-sign-flagged: 3 -> 4.
+  - The Euclidean rotation of the (rho, tau) plane is now written R_{I_5 theta} = cos(theta/2) + I_5 sigma sin(theta/2). The text says it is not R_{J theta}, which equals e^{I_4 theta/2} in Cl(1,3).
+  - The sign remark now reads R_{2 pi I_5} = -1, which holds.
+  - This replaces the R_{J theta} reading of the first edit.
+- tp check (layers 1, 2, 3): 0 errors and 0 warnings store-wide. The only finding on either entity is the I213 info on scrambling, which was already there before.
+
+Could not resolve (G5): none now.

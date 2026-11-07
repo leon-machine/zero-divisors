@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - correspondence.fock-model-complexified-ascended-algebra@8
-  - correspondence.reality-conjugation-twistor-form-factor@7
+  - correspondence.fock-model-complexified-ascended-algebra@9
+  - correspondence.reality-conjugation-twistor-form-factor@8
   - correspondence.spinor-identification@7
   proof: proof-main.tex
 checked_by:

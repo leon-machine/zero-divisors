@@ -34,7 +34,7 @@ derivations:
   - field-theory.second-quantisation@5
   - field-theory.elementary-photon-ga@4
   - field-theory.coupled-system-tree-level@3
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
   proof: proof-main.tex

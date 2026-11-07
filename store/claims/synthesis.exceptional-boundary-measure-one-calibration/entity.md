@@ -29,7 +29,7 @@ derivations:
   - interior.imported-schwarzschild-curvature-spectrum@6
   - singularity.stretched-singularity-count@7
   - singularity.area-law-test@5
-  - singularity.modular-descent@6
+  - singularity.modular-descent@7
   proof: proof-main.tex
 checked_by:
 - kind: check

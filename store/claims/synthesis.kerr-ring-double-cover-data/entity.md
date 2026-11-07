@@ -25,8 +25,8 @@ derivations:
   uses:
   - interior.imported-kerr-schild-form-kerr-gauge@1
   - interior.unipotency-across-kerr-family@5
-  - interior.complex-factorisation-location-ring@5
-  - interior.complex-scale-inverse-cube-killing-spinor@5
+  - interior.complex-factorisation-location-ring@6
+  - interior.complex-scale-inverse-cube-killing-spinor@6
   - interior.imported-kerr-curvature@2
   proof: proof-main.tex
 checked_by:

@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@5
+  - singularity.kms-uniqueness-factor@6
   - hawking.modular-structure-completed-pair@3
   - scrambling.boundary-mode-space-matrix@4
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4

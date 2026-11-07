@@ -31,8 +31,8 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.i-state@3
-  - hawking.gibbs-states-are-kms-conversely-finite@3
+  - hawking.i-state@4
+  - hawking.gibbs-states-are-kms-conversely-finite@4
   - hawking.imported-kms-passes-inductive-limits@1
   - hawking.imported-quasi-free-states-car-algebra@2
   - dark-matter.superselected-hence-dark-exactly-stable@5

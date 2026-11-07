@@ -34,9 +34,9 @@ derivations:
   uses:
   - synthesis.imported-gtg-dictionary@1
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@2
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@3
-  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@2
+  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
   proof: proof-main.tex

@@ -33,7 +33,7 @@ derivations:
   - field-theory.second-quantisation@5
   - field-theory.where-each-lives@3
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - synthesis.half-integer-weight-array-carries-half-ln2@4
+  - synthesis.half-integer-weight-array-carries-half-ln2@5
   - synthesis.residue-from-mode-entropy@4
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3

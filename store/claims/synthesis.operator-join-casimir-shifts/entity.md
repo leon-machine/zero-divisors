@@ -24,7 +24,7 @@ derivations:
   - synthesis.operator-join-ordering-constants@3
   - mass.casimir-form-join@7
   - mass.imported-palatial-quadratics-homogeneity-charge@4
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   - mass.mass-weight-dictionary@4
   - mass.weight-polynomial-two-series@6
   - field-theory.imported-standard-field-theory@4

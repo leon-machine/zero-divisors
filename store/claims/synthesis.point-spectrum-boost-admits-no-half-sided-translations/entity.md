@@ -29,8 +29,8 @@ derivations:
   uses:
   - hawking.imported-algebra-boundary-modes-car-algebra@5
   - hawking.modular-structure-completed-pair@3
-  - angle.imported-theorems-deliver-their-hypotheses@2
-  - singularity.modular-theory-matrix-factor-proved-outright@5
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - singularity.modular-theory-matrix-factor-proved-outright@6
   proof: proof-main.tex
 checked_by:
 - kind: check

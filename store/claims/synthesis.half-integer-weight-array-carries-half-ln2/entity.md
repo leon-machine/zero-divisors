@@ -29,7 +29,7 @@ derivations:
   - synthesis.residue-from-mode-entropy@4
   - state-selection.where-fermi-dirac-comes@5
   - singularity.bosonisation-bridge-s-wave-sector@7
-  - synthesis.imported-theta-function-identities@1
+  - synthesis.imported-theta-function-identities@2
   proof: proof-main.tex
 checked_by:
 - kind: check

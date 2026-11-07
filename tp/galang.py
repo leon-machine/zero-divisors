@@ -51,7 +51,7 @@ _MATH = re.compile(
 _TOKEN = re.compile(r"(?<![A-Za-z\\_^@])i(?![A-Za-z_'])")
 _INDEX_AFTER = re.compile(r"\s*(=|\\in\b|\\ne(q)?\b|<|>|\\le(q)?\b|\\ge(q)?\b|\\to\b|,\s*[jklmn]\b|\\dots|\\ldots|"
                           r"\\cdots|\+\s*1\b|-\s*1\b\s*([,}\)]|$))")
-_INDEX_AFTER2 = re.compile(r"\s*(\\notin\b|\\leftrightarrow\b|\\\}|:|/\s*[0-9]|\^\{?[-+0]\}?|\s*(\\,|\\;)?\s*[a-z]\s*\})")
+_INDEX_AFTER2 = re.compile(r"\s*(\\notin\b|\\leftrightarrow\b|\\\}|:|/\s*[0-9]|\^\{?([-+0]|\\[mp][pm])\}?|\s*(\\,|\\;)?\s*[a-z]\s*\})")
 _INDEX_BEFORE = re.compile(r"(\\setminus|\\\{|\\ket\{|\\bra\{|\\ne(q)?|\\mathbf\{|[_^]?\{[0-9]|^\s*0)\s*$"
                            r"|\\(mu|nu|alpha|beta|rho|sigma)\s*=\s*$")
 # an i followed by a letter where it can only be the unit: e^{it}, \Delta^{is}, \exp(it ...), \alpha_{i\beta}
@@ -68,6 +68,8 @@ def bare_unit_hits(text):
         seg = next(g for g in (m.group(1), m.group(2), m.group(3), m.group(4), m.group(6)) if g is not None)
         if seg.strip() in ("i", "i,", "i, j", "i,j"):
             continue
+        if re.search(r"\(\s*i\s*[-+]\s*1\s*\)", seg):
+            continue                                      # i is an index throughout: (i+1)(d-1-i)
         for u in _UNIT_BEFORE_LETTER.finditer(seg):
             ctx_before = seg[max(0, u.start() - 12):u.start()]
             if not u.group(0).startswith("_{i\\beta") and re.search(r"_\{\s*$", ctx_before):
@@ -88,7 +90,7 @@ def bare_unit_hits(text):
                 continue
             if _INDEX_AFTER.match(after) or _INDEX_AFTER2.match(after) or _INDEX_BEFORE.search(before):
                 continue
-            if re.search(r"[a-z0-9]\s*[-+]\s*$", before) and re.match(r"\s*([)\]},]|$)", after):
+            if re.search(r"(?<![A-Za-z\\])[nmdjklNM0-9]\s*[-+]\s*$", before) and re.match(r"\s*([)\]},]|$)", after):
                 continue                                  # index arithmetic such as n - i, d-1-i
             if re.search(r"[\(\[]\s*$", before) and re.match(r"\s*,", after):
                 continue                                  # a pair label such as (i, A)
@@ -114,6 +116,19 @@ def scan(e):
     if bare_unit_hits(blob):
         found.add("a bare imaginary unit")
     return sorted(found)
+
+
+UNIT = "a bare imaginary unit"
+
+
+def unexcused(e):
+    """The stand-ins that count against an entity: everything scan finds, unless outside_ga is declared;
+    a bare imaginary unit counts even then (Leon's rule of 7 November 2026: the unit is always written as
+    the pseudoscalar it stands for, by the unit principle of the conventions)."""
+    hits = scan(e)
+    if declared(e):
+        hits = [h for h in hits if h == UNIT]
+    return hits
 
 
 def declared(e):

@@ -28,15 +28,15 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.euclidean-section-period@5
-  - angle.imported-theorems-deliver-their-hypotheses@2
-  - singularity.kms-uniqueness-factor@5
-  - hawking.gibbs-states-are-kms-conversely-finite@3
-  - singularity.modular-theory-matrix-factor-proved-outright@5
+  - singularity.euclidean-section-period@6
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - singularity.kms-uniqueness-factor@6
+  - hawking.gibbs-states-are-kms-conversely-finite@4
+  - singularity.modular-theory-matrix-factor-proved-outright@6
   - hawking.kms-restricts-invariant-subalgebras@3
   - hawking.imported-kms-passes-inductive-limits@1
   - hawking.full-uniqueness-given-dynamics@3
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - correspondence.clifford-side-ordering-shift@3
-  - correspondence.reality-conjugation-twistor-form-factor@7
+  - correspondence.reality-conjugation-twistor-form-factor@8
   - correspondence.spin-representation@6
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   proof: proof-main.tex

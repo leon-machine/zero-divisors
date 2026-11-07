@@ -35,9 +35,9 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
   - scrambling.spreading-law-chaos-bound-saturated@5
-  - angle.imported-theorems-deliver-their-hypotheses@2
+  - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -23,14 +23,14 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.de-sitter-temperature-frozen-point-norm@6
+  - synthesis.de-sitter-temperature-frozen-point-norm@7
   - synthesis.cosmological-horizon-completed-pair@3
   - odd-extensions.two-towers-one-curved-universe@6
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   assumes:
   - singularity.p-univalence@2
-  - synthesis.r-lambda-regularity-cosmological-horizon@4
+  - synthesis.r-lambda-regularity-cosmological-horizon@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

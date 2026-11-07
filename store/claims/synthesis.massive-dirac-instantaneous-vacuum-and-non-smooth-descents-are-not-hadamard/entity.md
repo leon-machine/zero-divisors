@@ -29,7 +29,7 @@ derivations:
   uses:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.sudden-descent-feature-not-tilt@4
-  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@2
+  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
   - synthesis.imported-ford-parker-infrared-divergence@1
   proof: proof-main.tex
 checked_by:

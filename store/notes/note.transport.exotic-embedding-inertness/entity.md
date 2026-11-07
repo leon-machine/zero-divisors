@@ -1,7 +1,7 @@
 ---
 id: note.transport.exotic-embedding-inertness
 kind: note
-version: 2
+version: 3
 title: An exotic embedding, and its inertness
 status: example
 subject: clifford-structure
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - transport.classification-real-clifford-algebras
 - transport.representation-independent-minimality-completion

@@ -25,10 +25,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - correspondence.reality-conjugation-twistor-form-factor@7
-  - correspondence.incidence-relation-chart@5
-  - synthesis.incidence-vacua-thermofield-real-capacity@5
-  - one-relation.two-capacities-three-consequences@5
+  - correspondence.reality-conjugation-twistor-form-factor@8
+  - correspondence.incidence-relation-chart@6
+  - synthesis.incidence-vacua-thermofield-real-capacity@6
+  - one-relation.two-capacities-three-consequences@6
   proof: proof-main.tex
 checked_by:
 - kind: check

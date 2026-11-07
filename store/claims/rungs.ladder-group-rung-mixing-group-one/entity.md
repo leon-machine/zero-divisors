@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - rungs.imported-ladder-automorphism-group-no-lepton@4
-  - rungs.rung-spinor-module-mixings@5
+  - rungs.rung-spinor-module-mixings@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

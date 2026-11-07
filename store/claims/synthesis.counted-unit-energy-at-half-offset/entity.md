@@ -26,8 +26,8 @@ derivations:
 - name: main
   uses:
   - synthesis.boundary-mode-thermal-entropy@2
-  - synthesis.half-integer-weight-array-carries-half-ln2@4
-  - synthesis.imported-theta-function-identities@1
+  - synthesis.half-integer-weight-array-carries-half-ln2@5
+  - synthesis.imported-theta-function-identities@2
   - synthesis.residue-from-mode-entropy@4
   - synthesis.quarter-from-temperature@1
   - synthesis.hole-mass-is-ground-energy-label@3

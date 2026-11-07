@@ -28,7 +28,7 @@ derivations:
   - mass.imported-thomas-operator@2
   - mass.mass-weight-dictionary@4
   - mass.weight-polynomial-two-series@6
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   - synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise@2
   - interior.kasner-form-interior@5
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2

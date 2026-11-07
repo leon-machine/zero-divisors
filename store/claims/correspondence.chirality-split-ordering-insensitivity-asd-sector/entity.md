@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - correspondence.imported-complete-reducibility@1
-  - correspondence.lorentzian-duality-complex-structure@4
+  - correspondence.lorentzian-duality-complex-structure@5
   - correspondence.spin-representation@6
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   - interior.boosts-generate-exactly-levi-factor@4

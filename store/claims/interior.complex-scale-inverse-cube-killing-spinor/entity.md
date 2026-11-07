@@ -25,13 +25,13 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.complex-factorisation-location-ring@5
+  - interior.complex-factorisation-location-ring@6
   - interior.imported-kerr-curvature@2
-  - interior.imported-walker-penrose-killing-spinor@2
+  - interior.imported-walker-penrose-killing-spinor@3
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - interior.imported-walker-penrose-killing-spinor@2
+  - interior.imported-walker-penrose-killing-spinor@3
   - interior.imported-kerr-curvature@2
   - interior.imported-schwarzschild-curvature-spectrum-external@1
   proof: proof-standard-route.tex

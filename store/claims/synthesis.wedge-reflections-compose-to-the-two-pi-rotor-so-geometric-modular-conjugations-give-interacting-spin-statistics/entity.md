@@ -40,11 +40,11 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.modular-period-on-values-is-the-dual-plane-turn@3
-  - angle.imported-theorems-deliver-their-hypotheses@2
-  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1
-  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@3
-  - synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@2
+  - synthesis.modular-period-on-values-is-the-dual-plane-turn@4
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
+  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@4
+  - synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@3
   proof: proof-main.tex
 checked_by:
 - kind: check

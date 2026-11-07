@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.incidence-vacua-thermofield-real-capacity@5
+  - synthesis.incidence-vacua-thermofield-real-capacity@6
   - one-relation.spacetime-manifold-vacuum-lines@6
   - singularity.descended-form-state-independent@4
-  - std-algebra.bivector-exponential@2
+  - std-algebra.bivector-exponential@3
   proof: proof-main.tex
 checked_by:
 - kind: check

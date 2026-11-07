@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - interior.imported-kerr-schild-form-kerr-gauge@1
-  - interior.complex-scale-inverse-cube-killing-spinor@5
+  - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.kerr-ring-double-cover-data@3
   - singularity.stretched-singularity-count@7
   - scrambling.epoch-modular-period-two-unknowns-become@5

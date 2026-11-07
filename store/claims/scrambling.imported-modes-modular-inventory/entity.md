@@ -1,7 +1,7 @@
 ---
 id: scrambling.imported-modes-modular-inventory
 kind: claim
-version: 4
+version: 5
 title: 'Imported: the mode''s modular inventory'
 status: proved
 region: scrambling
@@ -21,12 +21,16 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (ruling on the Euclidean rotor)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
   - hawking.modular-structure-completed-pair@3
-  - singularity.euclidean-rotor-where-it-lies@4
+  - singularity.euclidean-rotor-where-it-lies@5
   - singularity.computed@4
   proof: proof-main.tex
 checked_by:
@@ -45,14 +49,13 @@ locators:
   number: Fact 2.2
   label: fact:inventory
   line: 592
-outside_ga:
-  kind: complex-analysis
-  why: 'the clause states that the continuation''s generator i sigma lies outside the real algebra Cl(1,3) (T5 Prop. 7.21(3)); with the atom''s unit J (U2) it is J sigma = I_4 and with I_4 it is e_2 e_3, both in Cl(1,3), so no pseudoscalar of the algebra can stand for this i without making the statement false'
 extraction:
+  source_formal: |-
+    For a completed pair, the boost bivector $\sigma$ satisfies $\sigma^2 = 1$, generates the rotor flow with weights $\mp 1$ on the pair, has the occupation projectors as spectral projectors, acts in Fock representation through $\tfrac12\sigma = N - \tfrac12$, and is the unique one-parameter rotor flow of the atom \emph{up to reparametrisation of the flow parameter and orientation} (the bivector space is one-dimensional: the algebra fixes the orbits, not the speed, which is the normalisation the geometry supplies). The geometric normalisation converts rapidity to Schwarzschild time at the surface gravity $\kappa = 1/4M$. Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\pi$; the continuation's generator $i\sigma$ lies outside the real algebra, so the cycle belongs to the clock's Euclidean continuation, not to any intrinsic flow of the boundary modes. \emph{Provenance:} \cite[Prop.~2.1]{ButlerT7} (proved self-contained there); the normalisation \cite[App.~A]{ButlerT5}; the continuation and its $2\pi$ conjugation period \cite[Prop.~7.21(1)]{ButlerT5}; the exclusion of $i\sigma$ from the real algebra \cite[Prop.~7.21(3)]{ButlerT5}.
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 4 kept (already raised in this pass). Not resolved (U6). The clause states that the continuation''s generator i sigma lies outside the real algebra (T5 Prop. 7.21(3), singularity.euclidean-rotor-where-it-lies (3): outside Cl(1,3)). With the atom''s unit J of U2 the generator is J sigma = I_4, and with I_4 it is I_4 sigma = e_2 e_3; both lie in Cl(1,3), so either replacement makes the statement false. The central I_5 of Cl(2,3) would keep it true but would give the complexified atom a unit other than the J that U2 assigns to it. The bare i stays and the declaration is kept with its reason narrowed. Text unchanged.'
+    note: 'Version 4 -> 5. At the coordinator''s ruling (as for singularity.euclidean-rotor-where-it-lies (3)): T05 Prop. 7.21(3) concerns the continued rotor acting on spacetime vectors (the (rho, tau) plane), so by U3 its unit is I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention), and I_5 sigma lies outside Cl(1,3) exactly; the generator i sigma is written I_5 sigma in the formal and technical levels and the proof, with one sentence that on the atom''s modes the unit is J and the continued flow there is conjugation by e^{I_4 theta/2}, a different object. The source''s form (the formal level as first stored) moves to extraction.source_formal; the source writes i for I_5. The earlier U6 entry is withdrawn. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -94,12 +97,12 @@ extraction:
 ---
 
 ## formal
-For a completed pair, the boost bivector $\sigma$ satisfies $\sigma^2 = 1$, generates the rotor flow with weights $\mp 1$ on the pair, has the occupation projectors as spectral projectors, acts in Fock representation through $\tfrac12\sigma = N - \tfrac12$, and is the unique one-parameter rotor flow of the atom \emph{up to reparametrisation of the flow parameter and orientation} (the bivector space is one-dimensional: the algebra fixes the orbits, not the speed, which is the normalisation the geometry supplies). The geometric normalisation converts rapidity to Schwarzschild time at the surface gravity $\kappa = 1/4M$. Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\pi$; the continuation's generator $i\sigma$ lies outside the real algebra, so the cycle belongs to the clock's Euclidean continuation, not to any intrinsic flow of the boundary modes. \emph{Provenance:} \cite[Prop.~2.1]{ButlerT7} (proved self-contained there); the normalisation \cite[App.~A]{ButlerT5}; the continuation and its $2\pi$ conjugation period \cite[Prop.~7.21(1)]{ButlerT5}; the exclusion of $i\sigma$ from the real algebra \cite[Prop.~7.21(3)]{ButlerT5}.
+For a completed pair, the boost bivector $\sigma$ satisfies $\sigma^2 = 1$, generates the rotor flow with weights $\mp 1$ on the pair, has the occupation projectors as spectral projectors, acts in Fock representation through $\tfrac12\sigma = N - \tfrac12$, and is the unique one-parameter rotor flow of the atom \emph{up to reparametrisation of the flow parameter and orientation} (the bivector space is one-dimensional: the algebra fixes the orbits, not the speed, which is the normalisation the geometry supplies). The geometric normalisation converts rapidity to Schwarzschild time at the surface gravity $\kappa = 1/4M$. Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\pi$; the continuation's generator $I_{5}\sigma$, with $I_{5} = I_{4}e$ the central pseudoscalar of the odd extension $\Cl(2,3)$, the unit of the continued rotor acting on spacetime vectors (the $(\varrho, \tau)$ plane, \claimref{std-algebra.complexification-is-the-odd-extension}), lies outside the real algebra $\Cl(1,3)$, so the cycle belongs to the clock's Euclidean continuation, not to any intrinsic flow of the boundary modes. On the atom's own modes the complex unit is $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), and the continued flow there is conjugation by $e^{I_{4}\theta/2}$, a different object. \emph{Provenance:} \cite[Prop.~2.1]{ButlerT7} (proved self-contained there); the normalisation \cite[App.~A]{ButlerT5}; the continuation and its $2\pi$ conjugation period \cite[Prop.~7.21(1)]{ButlerT5}; the exclusion of $I_{5}\sigma$ from the real algebra \cite[Prop.~7.21(3)]{ButlerT5}.
 
 ## technical
 For a completed pair, the boost bivector $\sigma = v^{*}v - vv^{*}$ satisfies $\sigma^{2} = 1$, generates the rotor flow under which the two ladder elements carry weights $\mp 1$, has the occupation projectors as its spectral projectors, and in the Fock representation satisfies $\tfrac12\sigma = N - \tfrac12$. It is the unique one-parameter rotor flow of the atom up to reparametrisation of the flow parameter and orientation: the bivector space is one-dimensional, so the algebra fixes the orbits but not the speed, and the geometric normalisation converts rapidity to Schwarzschild time at surface gravity $\kappa = 1/4M$.
 
-Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\pi$. Its generator $i\sigma$ lies outside the real algebra, so this cycle belongs to the clock's Euclidean continuation and not to any intrinsic flow of the boundary modes.
+Continued to imaginary rapidity, the boost rotor becomes a unitary of the complexified atom whose conjugation action has period exactly $2\pi$. Its generator $I_{5}\sigma$, $I_{5} = I_{4}e$ the central unit of $\Cl(2,3)$ for the continued rotor acting on spacetime vectors, lies outside the real algebra $\Cl(1,3)$, so this cycle belongs to the clock's Euclidean continuation and not to any intrinsic flow of the boundary modes.
 
 ## lay
 Each boundary mode carries a built-in clock: one element that generates boosts, counts whether the mode is occupied, and supplies the projections used to discard coherence. The algebra fixes the shape of this clock's motion but not its rate; the black hole's geometry sets the rate through its surface gravity. Continuing the clock to imaginary time gives a cycle of period $2\pi$, but that cycle lies outside the real algebra, so it is not a genuine motion of the modes.

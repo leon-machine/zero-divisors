@@ -31,8 +31,8 @@ derivations:
   - tower.ladder-pairs-satisfy-car-vectors@4
   - hawking.imported-algebra-boundary-modes-car-algebra@5
   - tower.answers-iteration-question@5
-  - hawking.gibbs-states-are-kms-conversely-finite@3
-  - hawking.i-state@3
+  - hawking.gibbs-states-are-kms-conversely-finite@4
+  - hawking.i-state@4
   proof: proof-main.tex
 checked_by:
 - kind: check

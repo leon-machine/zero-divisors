@@ -39,15 +39,15 @@ derivations:
 - name: main
   uses:
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - angle.imported-theorems-deliver-their-hypotheses@2
+  - angle.imported-theorems-deliver-their-hypotheses@3
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
-  - singularity.modular-theory-matrix-factor-proved-outright@5
-  - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics@3
+  - singularity.modular-theory-matrix-factor-proved-outright@6
+  - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics@4
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
   - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@3
   - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@4
-  - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@1
-  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@2
+  - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@2
+  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@3
   proof: proof-main.tex
 checked_by:
 - kind: check

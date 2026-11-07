@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.r-loc-independent-sets-matter-coupling@4
+  - synthesis.r-loc-independent-sets-matter-coupling@5
   - synthesis.einstein-equations-from-c-loc-and-clausius@7
   - synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent@1
   - synthesis.loc-independent-of-clausius-and-killing-data@4
