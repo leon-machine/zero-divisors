@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-alvarez-gaume-witten-local-anomalies
 kind: claim
-version: 2
+version: 3
 title: 'Imported: local anomalies from the A-hat genus (Alvarez-Gaume and Witten 1984)'
 status: imported
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -35,7 +35,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). Restated by U4: the anomaly polynomial tr e^{iF/2 pi} and its pure-gauge part are written with I_4, the default scalar unit of an abstract complex matrix algebra (U1), the representation''s numbers read in span{1, I_4}; the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
+    note: 'Version 2 -> 3. Restated by U4: the anomaly polynomial tr e^{iF/2 pi} and its pure-gauge part are written with I_4, the default scalar unit of an abstract complex matrix algebra (U1), the representation''s numbers read in span{1, I_4}; the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
   source_formal: |-
     Let $\psi$ be a chiral (Weyl) spin-$\tfrac12$ field in even dimension $n$, coupled to a gravitational field (the rotation-gauge field, with field strength $\mathcal{R}$, the curvature) and to a gauge field with field strength $F$ acting in a representation $\rho$. Its local anomalies, the failure of the effective action to be invariant under infinitesimal rotation-gauge (local Lorentz and coordinate) and gauge transformations, are given by descent from the anomaly polynomial
     \[

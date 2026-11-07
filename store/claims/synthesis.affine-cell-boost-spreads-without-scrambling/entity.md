@@ -1,7 +1,7 @@
 ---
 id: synthesis.affine-cell-boost-spreads-without-scrambling
 kind: claim
-version: 2
+version: 3
 title: 'The boost spreads affine cells without scrambling'
 status: proved
 region: synthesis
@@ -27,7 +27,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the modular group written with the unit I_4'
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:

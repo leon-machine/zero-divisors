@@ -1,7 +1,7 @@
 ---
 id: pairing.stabiliser-parabolic-algebra-null-direction
 kind: claim
-version: 5
+version: 6
 title: The stabiliser is the parabolic algebra of the null direction
 status: proved
 region: pairing
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -53,7 +53,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). Every bare i was the scalar of the complexified spacetime C^4 on which the complex null tetrad m = e_2 + i e_3 lives; by U3 it is the central pseudoscalar I_5 = I_4 e of the odd extension Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention): m = e_2 + I_5 e_3, pv(e_03) = I_5, pv(e_13) = -I_5, pv(n e_3) = 2 I_5, so(4,C) with coefficients in span{1, I_5}. The check (Gaussian rationals) is unchanged and computes the same numbers. Declaration removed.'
+    note: 'Version 5 -> 6. Every bare i was the scalar of the complexified spacetime C^4 on which the complex null tetrad m = e_2 + i e_3 lives; by U3 it is the central pseudoscalar I_5 = I_4 e of the odd extension Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention): m = e_2 + I_5 e_3, pv(e_03) = I_5, pv(e_13) = -I_5, pv(n e_3) = 2 I_5, so(4,C) with coefficients in span{1, I_5}. The check (Gaussian rationals) is unchanged and computes the same numbers. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

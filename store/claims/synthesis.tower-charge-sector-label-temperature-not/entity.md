@@ -1,7 +1,7 @@
 ---
 id: synthesis.tower-charge-sector-label-temperature-not
 kind: claim
-version: 3
+version: 4
 title: 'The tower charge is a sector label; the temperature is not'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -55,7 +55,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). The charge rotations e^{i theta} act on the boundary-mode CAR algebra, so by U2 their unit is the transverse bivector J = e_2 e_3 of synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom (cited as a mention), written out as e_2 e_3 because J names the mode set in this entity: a_j -> e^{theta e_2 e_3} a_j, conjugation by e^{theta e_2 e_3 Q_F}, scalars span{1, e_2 e_3}. Declaration removed.'
+    note: 'Version 3 -> 4. The charge rotations e^{i theta} act on the boundary-mode CAR algebra, so by U2 their unit is the transverse bivector J = e_2 e_3 of synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom (cited as a mention), written out as e_2 e_3 because J names the mode set in this entity: a_j -> e^{theta e_2 e_3} a_j, conjugation by e^{theta e_2 e_3 Q_F}, scalars span{1, e_2 e_3}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
 kind: claim
-version: 4
+version: 5
 title: 'Field strength cancels from the leading null singularity of Hadamard kernels'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 4
+  version: 5
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -73,7 +73,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 4 of this pass. The infinitesimal shift of the spacetime separation along a time function is written in scalar form with the field unit, the I_4 0 of the boundary values and the regulator sigma_epsilon = sigma + I_4 epsilon s with its transverse integrand (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), so the regulator and the evaluated kernels and logarithms, already in span{1, I_4}, carry one unit. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 4 -> 5. The infinitesimal shift of the spacetime separation along a time function is written in scalar form with the field unit, the I_4 0 of the boundary values and the regulator sigma_epsilon = sigma + I_4 epsilon s with its transverse integrand (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), so the regulator and the evaluated kernels and logarithms, already in span{1, I_4}, carry one unit. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

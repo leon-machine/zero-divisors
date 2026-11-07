@@ -1,7 +1,7 @@
 ---
 id: obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 kind: object
-version: 2
+version: 3
 title: The boundary-mode algebra, windows, and the boost dynamics
 status: defined
 region: hawking
@@ -17,16 +17,21 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the boost dynamics written with the transverse unit'
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'the algebra is defined as the CAR algebra over the complex space l^2(J) with windows End(Lambda C^F), and the boost dynamics tau_t(a_j) = e^{-i omega_j t}a_j is the scalar phase of that complex algebra; its modes descend from the atom of the spacetime radial plane, which anticommutes with I_4 (conventions, known limits 1 and 2), so I_4 is not shown to be its unit'
 locators:
   paper: T07
   number: Def 2.7
   label: def:ledger
   line: 430
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the boost dynamics'' phase is written with the boundary modes'' complex unit, the transverse bivector e_2 e_3 of the radial plane (written J in synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention, and in the conventions; written e_2 e_3 here because J is this definition''s mode set): tau_t(a_j) = e^{-e_2 e_3 omega_j t} a_j, with the scalars of the CAR algebra over l^2(J) and of the windows End(Lambda C^F) read in span{1, e_2 e_3}; it commutes with the further modes, which in the tower model lie in planes orthogonal to spacetime. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -84,10 +89,10 @@ extraction:
 ---
 
 ## formal
-Fix a countable mode set $J$ with Schwarzschild frequencies $\omega_j > 0$ ($j \in J$), the frequencies the geometry assigns to the boundary modes (Fact \claimref{hawking.imported-modular-descent-premises-geometric-normalisation}). \emph{Provenance of $J$:} the boundary modes are the ladder pairs of the blown-up singular boundary, one per point, aggregated over the s-wave channels into the countable array of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector}, an identification the singularity paper makes and flags. By convention here (it is in neither the singularity paper nor the thermality paper, and reconciles the array's weights $\kappa k$, $k \in \mathbb{Z}$, with $\omega_j > 0$), the modes below the level enter $J$ through their particle-hole conjugates, so that every frequency is positive, and the one zero-frequency mode of the array lies outside $J$; the bookkeeping is filed alongside (synthesis.s-wave-array-is-a-boundary-mode-set). The tower of iterated completions is the algebra's model, not the source of its countability: its limit is the CAR algebra with the adjoined null pairs as modes (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), while on the physical closure one ascent completes the description and further rungs lie on shadow walls outside the physical region (Corollary \claimref{tower.answers-iteration-question}). The \emph{boundary-mode algebra} $\mathfrak{A}$ is the CAR algebra over $\ell^2(J)$ (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), the C*-inductive limit of the \emph{window algebras} $\mathfrak{A}_F$, $F \subset J$ finite, each $\mathfrak{A}_F \cong \End(\Lambda^\bullet \C^F)$ of dimension $4^{|F|}$. The \emph{boost dynamics} is the one-parameter group $\tau_t$ acting on generators by $\tau_t(a_j) = e^{-i\omega_j t}\,a_j$, with $t$ Schwarzschild time: the quasi-free flow whose one-particle Hamiltonian is $h = \mathrm{diag}(\omega_j)$; it preserves every window. In rapidity $\lambda = \kappa t$ the same flow has boost weights $\omega_j/\kappa$ and modular temperature $2\pi$ (Fact \claimref{hawking.imported-modular-descent-premises-geometric-normalisation}); in Schwarzschild time the inverse temperature is $\beta = 1/\TH = 2\pi/\kappa$, and this normalisation is used throughout.
+Fix a countable mode set $J$ with Schwarzschild frequencies $\omega_j > 0$ ($j \in J$), the frequencies the geometry assigns to the boundary modes (Fact \claimref{hawking.imported-modular-descent-premises-geometric-normalisation}). \emph{Provenance of $J$:} the boundary modes are the ladder pairs of the blown-up singular boundary, one per point, aggregated over the s-wave channels into the countable array of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector}, an identification the singularity paper makes and flags. By convention here (it is in neither the singularity paper nor the thermality paper, and reconciles the array's weights $\kappa k$, $k \in \mathbb{Z}$, with $\omega_j > 0$), the modes below the level enter $J$ through their particle-hole conjugates, so that every frequency is positive, and the one zero-frequency mode of the array lies outside $J$; the bookkeeping is filed alongside (synthesis.s-wave-array-is-a-boundary-mode-set). The tower of iterated completions is the algebra's model, not the source of its countability: its limit is the CAR algebra with the adjoined null pairs as modes (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), while on the physical closure one ascent completes the description and further rungs lie on shadow walls outside the physical region (Corollary \claimref{tower.answers-iteration-question}). The \emph{boundary-mode algebra} $\mathfrak{A}$ is the CAR algebra over $\ell^2(J)$ (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), its scalars, and those of every window, read in the field $\mathrm{span}\{1, e_{2}e_{3}\} \cong \C$: the complex unit is the transverse bivector $e_{2}e_{3}$ of the radial plane $e_{0}e_{1}$ in which each mode is built, the complex unit of one mode by Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom} (written $J$ there; here $J$ is the mode set), and it commutes with the further modes, which in the tower model lie in planes orthogonal to spacetime, the C*-inductive limit of the \emph{window algebras} $\mathfrak{A}_F$, $F \subset J$ finite, each $\mathfrak{A}_F \cong \End(\Lambda^\bullet \C^F)$ of dimension $4^{|F|}$. The \emph{boost dynamics} is the one-parameter group $\tau_t$ acting on generators by $\tau_t(a_j) = e^{-e_{2}e_{3}\omega_j t}\,a_j$, with $t$ Schwarzschild time: the quasi-free flow whose one-particle Hamiltonian is $h = \mathrm{diag}(\omega_j)$; it preserves every window. In rapidity $\lambda = \kappa t$ the same flow has boost weights $\omega_j/\kappa$ and modular temperature $2\pi$ (Fact \claimref{hawking.imported-modular-descent-premises-geometric-normalisation}); in Schwarzschild time the inverse temperature is $\beta = 1/\TH = 2\pi/\kappa$, and this normalisation is used throughout.
 
 ## technical
-Fix a countable mode set $J$ with Schwarzschild frequencies $\omega_{j} > 0$. The set $J$ indexes the s-wave aggregate of the ladder pairs of the blown-up singular boundary, one pair per point, as the singularity paper identifies them, with, by this definition's own convention, the modes below the level entering through their particle-hole conjugates and the single zero-frequency mode left outside; the tower of iterated completions supplies the algebra's form, not the count, since the physical closure needs one ascent only. The boundary-mode algebra $\mathfrak{A}$ is the CAR algebra over $\ell^{2}(J)$, the C*-inductive limit of the window algebras $\mathfrak{A}_{F} \cong \End(\Lambda^{\bullet}\C^{F})$ for finite $F \subset J$, each of dimension $4^{|F|}$. The boost dynamics is the quasi-free flow $\tau_{t}(a_{j}) = e^{-i\omega_{j}t}a_{j}$ in Schwarzschild time $t$, with one-particle Hamiltonian $h = \mathrm{diag}(\omega_{j})$; it preserves every window.
+Fix a countable mode set $J$ with Schwarzschild frequencies $\omega_{j} > 0$. The set $J$ indexes the s-wave aggregate of the ladder pairs of the blown-up singular boundary, one pair per point, as the singularity paper identifies them, with, by this definition's own convention, the modes below the level entering through their particle-hole conjugates and the single zero-frequency mode left outside; the tower of iterated completions supplies the algebra's form, not the count, since the physical closure needs one ascent only. The boundary-mode algebra $\mathfrak{A}$ is the CAR algebra over $\ell^{2}(J)$, with complex unit the transverse bivector $e_{2}e_{3}$ of the modes' radial plane (the letter $J$ is the mode set), the C*-inductive limit of the window algebras $\mathfrak{A}_{F} \cong \End(\Lambda^{\bullet}\C^{F})$ for finite $F \subset J$, each of dimension $4^{|F|}$. The boost dynamics is the quasi-free flow $\tau_{t}(a_{j}) = e^{-e_{2}e_{3}\omega_{j}t}a_{j}$ in Schwarzschild time $t$, with one-particle Hamiltonian $h = \mathrm{diag}(\omega_{j})$; it preserves every window.
 
 In rapidity $\lambda = \kappa t$ the same flow has boost weights $\omega_{j}/\kappa$ and modular temperature $2\pi$; in Schwarzschild time the inverse temperature is $\beta = 1/\TH = 2\pi/\kappa$, the normalisation used throughout.
 
@@ -95,4 +100,4 @@ In rapidity $\lambda = \kappa t$ the same flow has boost weights $\omega_{j}/\ka
 This definition sets up the algebra describing a black hole's horizon modes: a collection of fermion modes, each with a frequency fixed by the geometry, built up from finite groups of modes. The modes come from the singularity's boundary, one pair per point, gathered into a countable list by keeping the spherically symmetric part; the tower of repeated completions is used only as a mathematical model of the algebra they form, not as the reason there are countably many. It also fixes how the modes evolve in time, each rotating at its own frequency, and the temperature scale that goes with that evolution.
 
 ## one-liner
-The boundary-mode algebra is the CAR algebra over a countable mode set, built from finite windows, with boost dynamics $\tau_{t}(a_{j}) = e^{-i\omega_{j}t}a_{j}$ at inverse temperature $\beta = 2\pi/\kappa$.
+The boundary-mode algebra is the CAR algebra over a countable mode set, built from finite windows, with boost dynamics $\tau_{t}(a_{j}) = e^{-e_{2}e_{3}\omega_{j}t}a_{j}$, $e_{2}e_{3}$ the modes' complex unit, at inverse temperature $\beta = 2\pi/\kappa$.

@@ -1,7 +1,7 @@
 ---
 id: correspondence.incidence-relation-chart
 kind: claim
-version: 5
+version: 6
 title: "The incidence relation is the chart"
 status: proved
 region: correspondence
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -54,7 +54,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). Clause (4)(iii): Penrose''s omega = ix pi now stands only in the existing extraction.source_formal (the source writes i for I_6, the complex unit of CS, U5), and ''I_6 acts as -i on CS'' is written ''I_6 acts on CS as -I_7'', with I_7 = I_6 e the central pseudoscalar of Cl(3,4) = Cl(2,4)_C, the module''s scalar unit (U3, std-algebra.complexification-is-the-odd-extension, cited as a mention); the text says that I_6 acts by left multiplication and I_7 is the scalar, never identified. Declaration removed.'
+    note: 'Version 5 -> 6. Clause (4)(iii): Penrose''s omega = ix pi now stands only in the existing extraction.source_formal (the source writes i for I_6, the complex unit of CS, U5), and ''I_6 acts as -i on CS'' is written ''I_6 acts on CS as -I_7'', with I_7 = I_6 e the central pseudoscalar of Cl(3,4) = Cl(2,4)_C, the module''s scalar unit (U3, std-algebra.complexification-is-the-odd-extension, cited as a mention); the text says that I_6 acts by left multiplication and I_7 is the scalar, never identified. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

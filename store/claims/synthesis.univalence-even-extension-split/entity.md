@@ -1,7 +1,7 @@
 ---
 id: synthesis.univalence-even-extension-split
 kind: claim
-version: 2
+version: 3
 title: 'Univalence as the choice of the even extension'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -55,7 +55,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). The Killing flow Ad(e^{it omega N}) on the completed modes'' factor and its continuation alpha_{ip}: by U2 the unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t omega_k N_k}), alpha_{Jp}, mode factor over span{1, J}. Declaration removed.'
+    note: 'Version 2 -> 3. The Killing flow Ad(e^{it omega N}) on the completed modes'' factor and its continuation alpha_{ip}: by U2 the unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t omega_k N_k}), alpha_{Jp}, mode factor over span{1, J}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

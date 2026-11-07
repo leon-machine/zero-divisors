@@ -1,7 +1,7 @@
 ---
 id: singularity.rate-discharge-hypothesis-iii
 kind: claim
-version: 5
+version: 6
 title: The rate, and the discharge of hypothesis (iii)
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the flow and the KMS gluing written with the transverse unit J'
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:

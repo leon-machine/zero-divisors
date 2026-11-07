@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-temperature-fixed-locally-by-r-loc
 kind: claim
-version: 3
+version: 4
 title: '(R$_{\mathrm{loc}}$) fixes the collar temperature locally'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the pair flows written with the transverse unit J'
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:

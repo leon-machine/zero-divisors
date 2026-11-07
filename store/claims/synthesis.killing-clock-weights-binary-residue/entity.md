@@ -1,7 +1,7 @@
 ---
 id: synthesis.killing-clock-weights-binary-residue
 kind: claim
-version: 4
+version: 5
 title: 'Killing-clock weights make the residue binary'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g

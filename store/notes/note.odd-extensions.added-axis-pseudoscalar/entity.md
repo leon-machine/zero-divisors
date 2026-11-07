@@ -1,7 +1,7 @@
 ---
 id: note.odd-extensions.added-axis-pseudoscalar
 kind: note
-version: 2
+version: 3
 title: the added axis is the pseudoscalar
 status: remark
 subject: tower
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - odd-extensions.four-extensions-oriented-pair
 locators:

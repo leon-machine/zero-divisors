@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-kms-extension-completion-locus
 kind: claim
-version: 2
+version: 3
 title: 'Under (E), the horizon''s KMS state reads $6\pi$ at the exceptional set'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the holonomy phase flows written with the transverse unit J'
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:

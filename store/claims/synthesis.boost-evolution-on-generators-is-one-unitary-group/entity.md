@@ -1,7 +1,7 @@
 ---
 id: synthesis.boost-evolution-on-generators-is-one-unitary-group
 kind: claim
-version: 3
+version: 4
 title: 'Boost evolution on horizon generators is one unitary dilation group'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the quoted window dynamics written with the transverse unit J'
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:

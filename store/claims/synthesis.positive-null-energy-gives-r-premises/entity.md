@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-null-energy-gives-r-premises
 kind: claim
-version: 6
+version: 7
 title: 'Positive null energy gives the (R) premises'
 status: proved
 region: synthesis
@@ -31,7 +31,7 @@ credit:
   source: maintainer pass 2026-11-07 (unit rulings)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -85,7 +85,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 6 of this pass. The last bare i, in the Borchers relation quoted in the proof of (v) from the imported Fact angle.imported-theorems-deliver-their-hypotheses, is written with the field unit (U1): Delta^{I_4 s} U(a) Delta^{-I_4 s} = U(e^{-2 pi s} a), the unit of an abstract complex Hilbert space being I_4, as for the continuum mode space h. The window commutator [K, P] = i c P of the obstruction lives in check.py only (not edited). No i remains in the levels or proofs; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 6 -> 7. The last bare i, in the Borchers relation quoted in the proof of (v) from the imported Fact angle.imported-theorems-deliver-their-hypotheses, is written with the field unit (U1): Delta^{I_4 s} U(a) Delta^{-I_4 s} = U(e^{-2 pi s} a), the unit of an abstract complex Hilbert space being I_4, as for the continuum mode space h. The window commutator [K, P] = i c P of the obstruction lives in check.py only (not edited). No i remains in the levels or proofs; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07
     date: '2026-11-07'

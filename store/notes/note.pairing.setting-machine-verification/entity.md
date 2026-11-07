@@ -1,7 +1,7 @@
 ---
 id: note.pairing.setting-machine-verification
 kind: note
-version: 2
+version: 3
 title: Machine verification
 status: setting
 subject: conformal-spacetime
@@ -21,7 +21,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - pairing.imported-null-flags
@@ -37,7 +37,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). The class value 2i of n e_3 is a value of the functional pv on the spacetime complexification of the complex null tetrad m = e_2 + i e_3; by U3 its unit is the central I_5 of Cl(2,3), as in pairing.stabiliser-parabolic-algebra-null-direction: written 2 I_5. Declaration removed.'
+    note: 'Version 2 -> 3. The class value 2i of n e_3 is a value of the functional pv on the spacetime complexification of the complex null tetrad m = e_2 + i e_3; by U3 its unit is the central I_5 of Cl(2,3), as in pairing.stabiliser-parabolic-algebra-null-direction: written 2 I_5. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

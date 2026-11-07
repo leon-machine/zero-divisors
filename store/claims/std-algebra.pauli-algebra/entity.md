@@ -1,7 +1,7 @@
 ---
 id: std-algebra.pauli-algebra
 kind: claim
-version: 2
+version: 3
 title: 'The Pauli algebra: Cl(3,0) and 2 x 2 complex matrices'
 status: proved
 region: std-algebra
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 trust: ai-proposed
 about:

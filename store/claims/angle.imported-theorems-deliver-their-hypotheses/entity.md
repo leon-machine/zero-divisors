@@ -1,7 +1,7 @@
 ---
 id: angle.imported-theorems-deliver-their-hypotheses
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the theorems that deliver $2\pi$, and their hypotheses'
 status: imported
 region: angle
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the modular group written with the unit I_4 of span{1, I_4}'
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 imported_from:

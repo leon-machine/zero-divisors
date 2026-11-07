@@ -1,7 +1,7 @@
 ---
 id: singularity.kms-uniqueness-factor
 kind: claim
-version: 5
+version: 6
 title: KMS uniqueness at a factor
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -47,7 +47,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). The inner flow Ad(e^{itK}) and its continuation alpha_{i beta} on a general complex matrix factor: by U1 the factor''s scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tK}), alpha_{I_4 beta}(a) = e^{-beta K} a e^{beta K} (also in the merged proof file). The result is used for factors over other complex fields (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom uses it over span{1, J}); being a statement about complex matrix algebras it transfers through the isomorphism of the fields, which identifies no two units of the algebra. Declaration removed.'
+    note: 'Version 5 -> 6. The inner flow Ad(e^{itK}) and its continuation alpha_{i beta} on a general complex matrix factor: by U1 the factor''s scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tK}), alpha_{I_4 beta}(a) = e^{-beta K} a e^{beta K} (also in the merged proof file). The result is used for factors over other complex fields (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom uses it over span{1, J}); being a statement about complex matrix algebras it transfers through the isomorphism of the fields, which identifies no two units of the algebra. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

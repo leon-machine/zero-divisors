@@ -1,7 +1,7 @@
 ---
 id: synthesis.clausius-heat-exceeds-created-modes-killing-energy
 kind: claim
-version: 3
+version: 4
 title: 'Clausius heat exceeds the created modes'' Killing energy'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main

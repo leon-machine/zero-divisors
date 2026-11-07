@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-conformal-energy-gives-positive-null-translations
 kind: claim
-version: 6
+version: 7
 title: 'Positive conformal energy gives positive null translations'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
@@ -53,7 +53,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 6 kept (already raised in this pass). The self-adjoint generators -i d pi(Y) of an arbitrary unitary representation on a GNS Hilbert space: by U1 the scalars of an abstract complex Hilbert space are span{1, I_4}, so the generators are -I_4 d pi(Y) (the formal level and every occurrence in the proof), with a sentence fixing the scalars. Declaration removed.'
+    note: 'Version 6 -> 7. The self-adjoint generators -i d pi(Y) of an arbitrary unitary representation on a GNS Hilbert space: by U1 the scalars of an abstract complex Hilbert space are span{1, I_4}, so the generators are -I_4 d pi(Y) (the formal level and every occurrence in the proof), with a sentence fixing the scalars. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

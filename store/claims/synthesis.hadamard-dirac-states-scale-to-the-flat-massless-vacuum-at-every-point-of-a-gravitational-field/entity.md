@@ -1,7 +1,7 @@
 ---
 id: synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
 kind: claim
-version: 4
+version: 5
 title: 'Hadamard Dirac states scale to the flat massless vacuum at every point'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 4
+  version: 5
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -74,7 +74,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 4 of this pass. The infinitesimal shift of the spacetime separation is written in scalar form with the field unit (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain): the boundary values sigma_{+-} with the -+ I_4 0 of a time function, the regulators sigma_l + I_4 epsilon h_l and Q(z)/2 + I_4 0 h, the flat boundary value Q(y - y) - I_4 0 <y - y, e_0> (from Q(y - y - i0 e_0): the square of the shifted vector is Q(xi) - 2 i 0 xi_0, so the scalar form is exact) and D_+(xi) = -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)) of the imported Fact. A vector-form shift with I_5 is not used, since the kernels already carry I_4 and the two units must not meet in one distribution (I_4 I_5 = -e, not -1). No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 4 -> 5. The infinitesimal shift of the spacetime separation is written in scalar form with the field unit (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain): the boundary values sigma_{+-} with the -+ I_4 0 of a time function, the regulators sigma_l + I_4 epsilon h_l and Q(z)/2 + I_4 0 h, the flat boundary value Q(y - y) - I_4 0 <y - y, e_0> (from Q(y - y - i0 e_0): the square of the shifted vector is Q(xi) - 2 i 0 xi_0, so the scalar form is exact) and D_+(xi) = -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)) of the imported Fact. A vector-form shift with I_5 is not used, since the kernels already carry I_4 and the two units must not meet in one distribution (I_4 I_5 = -e, not -1). No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

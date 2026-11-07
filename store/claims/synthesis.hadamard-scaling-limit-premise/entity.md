@@ -1,7 +1,7 @@
 ---
 id: synthesis.hadamard-scaling-limit-premise
 kind: claim
-version: 5
+version: 6
 title: '(HS), the Hadamard scaling limit, now a theorem'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -63,7 +63,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 5 of this pass. The infinitesimal shift of the spacetime separation that regularises the bulk kernels (the I_4 0-regularised restriction of (c) and of the setting note) is written with the field unit in scalar form (U1, the Hadamard chain; U3, scalar form of a shifted vector), as in synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel, so every number is in span{1, I_4}. No i remains; declaration removed. Premise content, status and links unchanged.'
+    note: 'Version 5 -> 6. The infinitesimal shift of the spacetime separation that regularises the bulk kernels (the I_4 0-regularised restriction of (c) and of the setting note) is written with the field unit in scalar form (U1, the Hadamard chain; U3, scalar form of a shifted vector), as in synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel, so every number is in span{1, I_4}. No i remains; declaration removed. Premise content, status and links unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

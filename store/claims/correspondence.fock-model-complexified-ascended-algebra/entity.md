@@ -1,7 +1,7 @@
 ---
 id: correspondence.fock-model-complexified-ascended-algebra
 kind: claim
-version: 8
+version: 9
 title: "The Fock model of the complexified ascended algebra"
 status: proved
 region: correspondence
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 8
+  version: 9
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -54,7 +54,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 8 kept (already raised in this pass). The scalar of V_C and of the complex isotropic vector w_3 = b_3 + i b_4 must commute with the vectors; by U3 it is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C (std-algebra.complexification-is-the-odd-extension, cited as a mention in the formal level and the proof, whose formula (a + I b)^2 = Q(a) - Q(b) + 2<a,b> I gives Q(w_3) = 0): w_3 = b_3 + I_7 b_4, w_3'' = -(b_3 - I_7 b_4)/2, V_C = V + I_7 V, scalars span{1, I_7}. Declaration removed.'
+    note: 'Version 8 -> 9. The scalar of V_C and of the complex isotropic vector w_3 = b_3 + i b_4 must commute with the vectors; by U3 it is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C (std-algebra.complexification-is-the-odd-extension, cited as a mention in the formal level and the proof, whose formula (a + I b)^2 = Q(a) - Q(b) + 2<a,b> I gives Q(w_3) = 0): w_3 = b_3 + I_7 b_4, w_3'' = -(b_3 - I_7 b_4)/2, V_C = V + I_7 V, scalars span{1, I_7}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

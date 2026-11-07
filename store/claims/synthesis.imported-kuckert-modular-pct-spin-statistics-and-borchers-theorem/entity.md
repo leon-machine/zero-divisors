@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem
 kind: claim
-version: 2
+version: 3
 title: 'Imported: Kuckert''s modular spin-statistics theorem and Borchers'' theorem'
 status: imported
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
@@ -43,7 +43,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). Restated by U4: the modular groups Delta^{it} of these abstract Hilbert spaces are written Delta^{I_4 t}, I_4 the default scalar unit of an abstract complex Hilbert space (U1), with a sentence that the scalars are span{1, I_4} and that J is a modular conjugation (not the transverse bivector); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
+    note: 'Version 2 -> 3. Restated by U4: the modular groups Delta^{it} of these abstract Hilbert spaces are written Delta^{I_4 t}, I_4 the default scalar unit of an abstract complex Hilbert space (U1), with a sentence that the scalars are span{1, I_4} and that J is a modular conjugation (not the transverse bivector); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
   source_formal: |-
     \begin{enumerate}
     \item[(i)] \emph{(Kuckert.)} Let $\mathcal{A}$ be a net of local observables on Minkowski space in its vacuum sector $\mathcal{H}_{0}$ with vacuum $\Omega$. Assume: (I) $\mathcal{H}_{0}$ carries a strongly continuous unitary representation $U$ of the universal covering of the restricted Poincar\'e group under which $\mathcal{A}$ is covariant and $\Omega$ invariant, and the joint spectrum of the generators of the translations lies in the closed forward cone; (II) modular P$_{1}$CT symmetry: for the standard wedge $W$, the modular conjugation $J$ of $(\mathcal{A}(W), \Omega)$ satisfies $J\mathcal{A}(\mathcal{O})J = \mathcal{A}(j\mathcal{O})$ for every double cone $\mathcal{O}$, with $j$ the reflection reversing the two coordinates of the boost plane of $W$ (P$_{1}$T); (III) the group of internal symmetries is compact in the strong operator topology. Then, with $r(\varphi)$ the rotations in the spatial plane spanned by the boost direction of $W$ and one edge direction, $W_{\varphi} = r(\varphi)W$, $J_{\varphi}$ the modular conjugation of $(\mathcal{A}(W_{\varphi}), \Omega)$ and $R(\varphi) = U(r(\varphi))$, $R(\varphi) = J_{\varphi/2}J$ (Corollary 3.2), so $R(2\pi) = 1$ on $\mathcal{H}_{0}$; and on the field algebra of the parabosonic and parafermionic charges of finite statistics, built by Doplicher and Roberts \cite{DoplicherRoberts1990} (twisted duality being their theorem, not an assumption), the rotation by $2\pi$ equals the Bose-Fermi operator $k$ (Theorem 3.4, Corollary 3.5): the spin-statistics connection \cite{Kuckert1995}. The modular groups $\Delta^{it}$ need not act geometrically on the net; the argument also works in $1 + 2$ dimensions.

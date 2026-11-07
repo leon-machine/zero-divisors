@@ -1,7 +1,7 @@
 ---
 id: note.singularity.euclidean-reading-sign-flagged
 kind: note
-version: 2
+version: 3
 title: The Euclidean reading of the sign, flagged
 status: remark
 subject: descent
@@ -21,7 +21,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - singularity.two-kms-functionals-sign
@@ -35,7 +35,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). The rotor at imaginary rapidity R_{i theta} of singularity.euclidean-rotor-where-it-lies (2), an element of the atom''s complexification, is written R_{J theta} with lambda = J theta, J = e_2 e_3 the atom''s complex unit (U2, synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), and R_{2 pi i} = -1 as R_{2 pi J} = -1; the declaration, whose reason was that unit, is removed.'
+    note: 'Version 2 -> 3. The rotor at imaginary rapidity R_{i theta} of singularity.euclidean-rotor-where-it-lies (2), an element of the atom''s complexification, is written R_{J theta} with lambda = J theta, J = e_2 e_3 the atom''s complex unit (U2, synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), and R_{2 pi i} = -1 as R_{2 pi J} = -1; the declaration, whose reason was that unit, is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

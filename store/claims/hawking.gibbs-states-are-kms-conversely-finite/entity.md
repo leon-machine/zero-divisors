@@ -1,7 +1,7 @@
 ---
 id: hawking.gibbs-states-are-kms-conversely-finite
 kind: claim
-version: 3
+version: 4
 title: Gibbs states are KMS, and conversely, in finite dimensions
 status: proved
 region: hawking
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -47,7 +47,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). The flow Ad(e^{itH}) and its continuation alpha_{i beta} on the general matrix algebra End(C^m): by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tH}), alpha_{I_4 beta}(x) = e^{-beta H} x e^{beta H}. Declaration removed.'
+    note: 'Version 3 -> 4. The flow Ad(e^{itH}) and its continuation alpha_{i beta} on the general matrix algebra End(C^m): by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tH}), alpha_{I_4 beta}(x) = e^{-beta H} x e^{beta H}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

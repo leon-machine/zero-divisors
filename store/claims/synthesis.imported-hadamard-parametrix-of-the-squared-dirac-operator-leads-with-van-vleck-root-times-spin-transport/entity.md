@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport
 kind: claim
-version: 3
+version: 4
 title: 'Imported: the Hadamard parametrix of the squared Dirac operator'
 status: imported
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -59,7 +59,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). Restated by U4: the i0 prescription of clause (c) and the one-liner is the shift of a spacetime vector, so by U3 its unit is I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention), written the I_5 0 prescription, with the flat-field regularisation (1/2) Q(x - x'' - eps I_5 e_0) named; the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_5. The massive Dirac line''s right unit R_{I_4} is unchanged; the two units act in different places (I_5 on the shifted vector, I_4 on the right of spinor values) and are not identified. Status stays imported. Declaration removed.'
+    note: 'Version 3 -> 4. Restated by U4: the i0 prescription of clause (c) and the one-liner is the shift of a spacetime vector, so by U3 its unit is I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention), written the I_5 0 prescription, with the flat-field regularisation (1/2) Q(x - x'' - eps I_5 e_0) named; the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_5. The massive Dirac line''s right unit R_{I_4} is unchanged; the two units act in different places (I_5 on the shifted vector, I_4 on the right of spinor values) and are not identified. Status stays imported. Declaration removed.'
   source_formal: |-
     Let $(\hb, \Omega)$ be a gravitational field on four-dimensional flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric $g$ is smooth and globally hyperbolic on a region $U$ of its invertible region, $N \subset U$ geodesically convex, $\sigma$ the Synge function of $g$ on $N\times N$ ($\sigma = \tfrac12 Q(x - x')$ on the flat field) and $\Delta$ its Van Vleck determinant.
     \begin{enumerate}

@@ -1,7 +1,7 @@
 ---
 id: correspondence.chirality-split-ordering-insensitivity-asd-sector
 kind: claim
-version: 5
+version: 6
 title: "The chirality split, and the ordering insensitivity of the ASD sector"
 status: proved
 region: correspondence
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -56,7 +56,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). The i of the duality eigenspaces and of A^(1,2)_i = (R_i +- i B_i)/2 is the scalar of the complexified Lorentz algebra inside so(2,4)_C; by U3 it is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C (std-algebra.complexification-is-the-odd-extension, cited as a mention), central, so every bracket computation is unchanged; the duality lemma is read with this complexification. Declaration removed.'
+    note: 'Version 5 -> 6. The i of the duality eigenspaces and of A^(1,2)_i = (R_i +- i B_i)/2 is the scalar of the complexified Lorentz algebra inside so(2,4)_C; by U3 it is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C (std-algebra.complexification-is-the-odd-extension, cited as a mention), central, so every bracket computation is unchanged; the duality lemma is read with this complexification. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

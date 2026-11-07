@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.setting-machine-verification
 kind: note
-version: 3
+version: 4
 title: Machine verification
 status: setting
 subject: conformal-spacetime
@@ -21,7 +21,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - correspondence.fock-model-complexified-ascended-algebra
@@ -37,7 +37,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). The script''s scalars Q(i), the sample maps i x-hat, the i-multiples, the rescaling (3+4i)/5 and the +-i eigenvalues are in the scalar field of the complexified Fock model over V_C; by U3 its unit is I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C, as in the results the note covers (std-algebra.complexification-is-the-odd-extension, cited as a mention): Q(I_7), I_7 x-hat, (3+4 I_7)/5, +-I_7. Declaration removed.'
+    note: 'Version 3 -> 4. The script''s scalars Q(i), the sample maps i x-hat, the i-multiples, the rescaling (3+4i)/5 and the +-i eigenvalues are in the scalar field of the complexified Fock model over V_C; by U3 its unit is I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C, as in the results the note covers (std-algebra.complexification-is-the-odd-extension, cited as a mention): Q(I_7), I_7 x-hat, (3+4 I_7)/5, +-I_7. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

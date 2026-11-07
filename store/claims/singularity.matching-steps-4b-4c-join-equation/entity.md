@@ -1,7 +1,7 @@
 ---
 id: singularity.matching-steps-4b-4c-join-equation
 kind: claim
-version: 6
+version: 7
 title: 'The matching: Steps 4b and 4c join by equation'
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the phase flow written with the transverse unit J'
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:

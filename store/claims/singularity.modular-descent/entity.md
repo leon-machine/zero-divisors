@@ -1,7 +1,7 @@
 ---
 id: singularity.modular-descent
 kind: claim
-version: 6
+version: 7
 title: Modular descent
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -60,7 +60,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 6 kept (already raised in this pass). The phase flow Ad(e^{it sigma/2}) and the modular flow Ad(rho^{it}) act on the completed-pair atom, so by U2 their unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t sigma/2}), Ad(rho^{J t}); the proof says that the matrix-factor lemma, stated over span{1, I_4}, is read over span{1, J}. proof-standard-route.tex has no unit. Declaration removed.'
+    note: 'Version 6 -> 7. The phase flow Ad(e^{it sigma/2}) and the modular flow Ad(rho^{it}) act on the completed-pair atom, so by U2 their unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t sigma/2}), Ad(rho^{J t}); the proof says that the matrix-factor lemma, stated over span{1, I_4}, is read over span{1, J}. proof-standard-route.tex has no unit. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

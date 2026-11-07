@@ -1,7 +1,7 @@
 ---
 id: correspondence.lorentzian-duality-complex-structure
 kind: claim
-version: 4
+version: 5
 title: Lorentzian duality is a complex structure
 status: proved
 region: correspondence
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 4
+  version: 5
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 4 kept (already raised in this pass). The i of the +-i eigenspaces is the scalar of the complexification of the real space of 2-forms, which must commute with the Hodge star; by U3 it is the central pseudoscalar I_5 = I_4 e of the odd extension (std-algebra.complexification-is-the-odd-extension, cited as a mention): Lambda^2_C = Lambda^2 + I_5 Lambda^2, eigenvalues +-I_5; the text says that the star itself is multiplication by I_4 on real bivectors, a different element. Correspondence.chirality-split-ordering-insensitivity-asd-sector reads the lemma inside so(2,4)_C with that algebra''s unit I_7. Declaration removed.'
+    note: 'Version 4 -> 5. The i of the +-i eigenspaces is the scalar of the complexification of the real space of 2-forms, which must commute with the Hodge star; by U3 it is the central pseudoscalar I_5 = I_4 e of the odd extension (std-algebra.complexification-is-the-odd-extension, cited as a mention): Lambda^2_C = Lambda^2 + I_5 Lambda^2, eigenvalues +-I_5; the text says that the star itself is multiplication by I_4 on real bivectors, a different element. Correspondence.chirality-split-ordering-insensitivity-asd-sector reads the lemma inside so(2,4)_C with that algebra''s unit I_7. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

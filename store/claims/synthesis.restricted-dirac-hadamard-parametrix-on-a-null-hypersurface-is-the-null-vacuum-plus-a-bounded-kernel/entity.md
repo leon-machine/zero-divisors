@@ -1,7 +1,7 @@
 ---
 id: synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
 kind: claim
-version: 2
+version: 3
 title: 'Dirac parametrix on a null hypersurface: the null vacuum plus a bounded kernel'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -67,7 +67,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 2 of this pass. The regulator sigma_epsilon = sigma + I_4 epsilon(t(x) - t(x)) - epsilon^2/2 is written in scalar form with the field unit (U3, scalar form of an infinitesimal shift of the separation; U1, the Hadamard chain), citing std-algebra.complexification-is-the-odd-extension(iii) for the square of a shifted vector being a number; every epsilon-expression it generates (the gradient nabla sigma + epsilon(nabla t)I_4 with the unit on the right, the model A_epsilon, the shift eta -> eta + I_4 lambda epsilon M^{-1}s_1 of the integration plane, C_epsilon, s_0 + I_4 g epsilon) and the imported I_4 0 prescription are in span{1, I_4}, acting on the right as the entity already states, so the regularised kernels and their limits carry one unit throughout. Typo in the proof (The the) fixed. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 2 -> 3. The regulator sigma_epsilon = sigma + I_4 epsilon(t(x) - t(x)) - epsilon^2/2 is written in scalar form with the field unit (U3, scalar form of an infinitesimal shift of the separation; U1, the Hadamard chain), citing std-algebra.complexification-is-the-odd-extension(iii) for the square of a shifted vector being a number; every epsilon-expression it generates (the gradient nabla sigma + epsilon(nabla t)I_4 with the unit on the right, the model A_epsilon, the shift eta -> eta + I_4 lambda epsilon M^{-1}s_1 of the integration plane, C_epsilon, s_0 + I_4 g epsilon) and the imported I_4 0 prescription are in span{1, I_4}, acting on the right as the entity already states, so the regularised kernels and their limits carry one unit throughout. Typo in the proof (The the) fixed. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

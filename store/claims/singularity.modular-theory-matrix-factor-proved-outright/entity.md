@@ -1,7 +1,7 @@
 ---
 id: singularity.modular-theory-matrix-factor-proved-outright
 kind: claim
-version: 5
+version: 6
 title: Modular theory of a matrix factor, proved outright
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). Tomita-Takesaki theory on the abstract complex Hilbert space C^n (x) C^n of a full matrix factor: by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex Hilbert space and matrix algebra, so rho^{it}, Delta^{it} become rho^{I_4 t}, Delta^{I_4 t}, with a sentence fixing the scalars and naming J as the modular conjugation. Declaration removed.'
+    note: 'Version 5 -> 6. Tomita-Takesaki theory on the abstract complex Hilbert space C^n (x) C^n of a full matrix factor: by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex Hilbert space and matrix algebra, so rho^{it}, Delta^{it} become rho^{I_4 t}, Delta^{I_4 t}, with a sentence fixing the scalars and naming J as the modular conjugation. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

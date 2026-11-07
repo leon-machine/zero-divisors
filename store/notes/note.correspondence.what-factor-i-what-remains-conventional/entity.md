@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.what-factor-i-what-remains-conventional
 kind: note
-version: 3
+version: 4
 title: "What the factor $I_6$ is, and what remains conventional"
 status: remark
 subject: conformal-spacetime
@@ -21,7 +21,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - correspondence.reality-conjugation-twistor-form-factor
@@ -34,7 +34,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). Penrose''s i in omega = ix pi, the last bare i, now stands only in the existing extraction.source_formal (the source writes i for I_6, the complex unit of CS, U5); the text names I_6 as the factor Penrose writes as his imaginary unit. Declaration removed.'
+    note: 'Version 3 -> 4. Penrose''s i in omega = ix pi, the last bare i, now stands only in the existing extraction.source_formal (the source writes i for I_6, the complex unit of CS, U5); the text names I_6 as the factor Penrose writes as his imaginary unit. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

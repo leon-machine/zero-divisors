@@ -1,7 +1,7 @@
 ---
 id: synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 kind: claim
-version: 3
+version: 4
 title: 'Wedge reflections compose to the $2\pi$ rotor; spin-statistics if geometric'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
@@ -66,7 +66,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). Borchers'' relation in the proof of (ii), Delta^{it} U(a) Delta^{-it} = U(e^{-2 pi t} a), is written Delta^{I_4 t}, I_4 the default scalar unit of the abstract Hilbert space (U1) and the unit the entity already uses in (iv), as the restated Kuckert-Borchers Fact has it. Declaration removed.'
+    note: 'Version 3 -> 4. Borchers'' relation in the proof of (ii), Delta^{it} U(a) Delta^{-it} = U(e^{-2 pi t} a), is written Delta^{I_4 t}, I_4 the default scalar unit of the abstract Hilbert space (U1) and the unit the entity already uses in (iv), as the restated Kuckert-Borchers Fact has it. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

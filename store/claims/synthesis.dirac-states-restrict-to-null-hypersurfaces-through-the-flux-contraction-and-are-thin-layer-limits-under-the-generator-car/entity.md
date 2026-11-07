@@ -1,7 +1,7 @@
 ---
 id: synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car
 kind: claim
-version: 3
+version: 4
 title: 'Dirac states restrict to null hypersurfaces through the flux contraction'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -78,7 +78,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 3 of this pass. The I_4 epsilon regulator of the bulk parametrix, sigma + I_4 epsilon s with s from a time function, and the I_4 0 it produces are written in scalar form with the field unit (U3 scalar form of an infinitesimal shift of the separation, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), including the prose mentions in the technical level; the Kay-Wald form (U_1 - U_2 - I_4 epsilon)^{-2} quoted from the literature in the proof is written with I_4, the unit of the horizon continuum (U4: the source writes i for I_4). No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 3 -> 4. The I_4 epsilon regulator of the bulk parametrix, sigma + I_4 epsilon s with s from a time function, and the I_4 0 it produces are written in scalar form with the field unit (U3 scalar form of an infinitesimal shift of the separation, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), including the prose mentions in the technical level; the Kay-Wald form (U_1 - U_2 - I_4 epsilon)^{-2} quoted from the literature in the proof is written with I_4, the unit of the horizon continuum (U4: the source writes i for I_4). No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

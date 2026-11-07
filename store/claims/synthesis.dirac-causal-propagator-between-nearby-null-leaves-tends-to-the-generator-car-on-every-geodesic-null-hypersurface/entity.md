@@ -1,7 +1,7 @@
 ---
 id: synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
 kind: claim
-version: 3
+version: 4
 title: 'The Dirac propagator tends to the generator CAR on null hypersurfaces'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -85,7 +85,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 3 of this pass. The regulator sigma + I_4 epsilon(t(x) - t(x)) of the bulk kernels and the I_4 0 sgn v it carries through the Morse-coordinate computation of the layer kernel (the Sokhotski-type integrals (s - t -+ I_4 0)^{-1}, the logarithms log(s -+ I_4 0), the pole term) are written in scalar form with the field unit (U3 scalar form of an infinitesimal shift of the separation, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), the unit the layer limit and the null vacuum already carry, numbers acting on the right as stated. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 3 -> 4. The regulator sigma + I_4 epsilon(t(x) - t(x)) of the bulk kernels and the I_4 0 sgn v it carries through the Morse-coordinate computation of the layer kernel (the Sokhotski-type integrals (s - t -+ I_4 0)^{-1}, the logarithms log(s -+ I_4 0), the pole term) are written in scalar form with the field unit (U3 scalar form of an infinitesimal shift of the separation, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), the unit the layer limit and the null vacuum already carry, numbers acting on the right as stated. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

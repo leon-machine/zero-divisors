@@ -1,7 +1,7 @@
 ---
 id: hawking.imported-modular-descent-premises-geometric-normalisation
 kind: claim
-version: 7
+version: 8
 title: 'Imported: modular descent, its premises, and the geometric normalisation'
 status: proved
 region: hawking
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 7
+  version: 8
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -60,7 +60,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 7 kept (already raised in this pass). The phase flow Ad(e^{it sigma/2}) of the completed pair: by U2 its unit is J = e_2 e_3, which commutes with the atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention, where Ad(e^{J t sigma/2}) is proved to be the store''s phase flow); written Ad(e^{J t sigma/2}) in the formal and technical levels and the proof. Declaration removed.'
+    note: 'Version 7 -> 8. The phase flow Ad(e^{it sigma/2}) of the completed pair: by U2 its unit is J = e_2 e_3, which commutes with the atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention, where Ad(e^{J t sigma/2}) is proved to be the store''s phase flow); written Ad(e^{J t sigma/2}) in the formal and technical levels and the proof. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

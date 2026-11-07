@@ -1,7 +1,7 @@
 ---
 id: singularity.schmidt-forcing-proved-outright
 kind: claim
-version: 5
+version: 6
 title: Schmidt forcing, proved outright
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 kept (already raised in this pass). The unitary group e^{itG} acts on the doubled atom mode (pair and partner, each a module of the completed-pair atom), so by U2 its unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), on both factors: e^{J t G}, scalars span{1, J}. The basis label G|ij> = (i - j)|ij> is written G|jk> = (j - k)|jk> (index letters only) so that no letter i is read as a unit. Declaration removed.'
+    note: 'Version 5 -> 6. The unitary group e^{itG} acts on the doubled atom mode (pair and partner, each a module of the completed-pair atom), so by U2 its unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), on both factors: e^{J t G}, scalars span{1, J}. The basis label G|ij> = (i - j)|ij> is written G|jk> = (j - k)|jk> (index letters only) so that no letter i is read as a unit. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

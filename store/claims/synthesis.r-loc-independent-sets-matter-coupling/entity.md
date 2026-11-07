@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-loc-independent-sets-matter-coupling
 kind: claim
-version: 4
+version: 5
 title: '(R$_{\mathrm{loc}}$) is independent and fixes the matter coupling'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,10 +53,11 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.clausius-route-newton-constant-is-residue
   - synthesis.boundary-mode-premises-finite-models
-outside_ga:
-  kind: complex-analysis
-  why: 'the boost a_j -> e^{-is w_j}a_j acts on a window of local-horizon modes in their complex occupation basis, a space the store does not tie to I_4 here'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) numbers on a window of local-horizon modes are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom from which the boundary modes descend (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof): the boost a_j -> e^{-isw_j}a_j became a_j -> e^{-Jsw_j}a_j; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

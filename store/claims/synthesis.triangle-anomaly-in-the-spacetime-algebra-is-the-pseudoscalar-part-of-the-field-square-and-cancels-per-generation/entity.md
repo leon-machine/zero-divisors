@@ -1,7 +1,7 @@
 ---
 id: synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation
 kind: claim
-version: 3
+version: 4
 title: 'The triangle anomaly in the spacetime algebra, cancelling per generation'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -57,8 +61,12 @@ lineage:
   - standard-model.imported-anomaly-coefficients
 outside_ga:
   kind: bridge
-  why: 'i stays only in the Dirac matrices over Q(i) against which the check compares the trace (the matrix reading set beside the algebra), where it is the matrices'' complex scalar'
+  why: 'the proof compares the spacetime-algebra trace with Dirac matrices (the matrix reading set beside the algebra, their complex scalar read as I_5); the mathematics is done in the spacetime algebra'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The scalar field Q(i) of the Dirac matrices the check compares with is the Dirac module''s complexification, so by U3 and U5 it is read as span_Q{1, I_5}, I_5 = I_4 e central in Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention); this removes a bare \mathbb{C}-type field name. No bare i remains; the declaration (bridge) is kept, its reason narrowed to the Dirac-matrix reading.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

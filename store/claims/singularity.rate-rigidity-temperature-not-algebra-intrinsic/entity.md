@@ -1,7 +1,7 @@
 ---
 id: singularity.rate-rigidity-temperature-not-algebra-intrinsic
 kind: claim
-version: 5
+version: 6
 title: 'Rate rigidity: the temperature is not algebra intrinsic'
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the phase flow written with the transverse unit J'
-  version: 5
+  version: 6
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:

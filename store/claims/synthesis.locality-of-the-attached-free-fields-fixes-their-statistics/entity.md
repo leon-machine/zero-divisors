@@ -1,7 +1,7 @@
 ---
 id: synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
 kind: claim
-version: 3
+version: 4
 title: 'Locality fixes the statistics of the attached free fields'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
@@ -56,7 +56,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 kept (already raised in this pass). The i0 prescription of the imported two-point function in the proof is written in scalar form with the field theory''s unit I_4, which the entity already uses for D_+ = int d mu e^{-I_4 k.xi} (U1; one unit per entity): -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)), as the Fact now states it. Declaration removed.'
+    note: 'Version 3 -> 4. The i0 prescription of the imported two-point function in the proof is written in scalar form with the field theory''s unit I_4, which the entity already uses for D_+ = int d mu e^{-I_4 k.xi} (U1; one unit per entity): -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)), as the Fact now states it. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

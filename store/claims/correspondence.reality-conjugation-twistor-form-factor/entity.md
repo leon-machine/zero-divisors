@@ -1,7 +1,7 @@
 ---
 id: correspondence.reality-conjugation-twistor-form-factor
 kind: claim
-version: 7
+version: 8
 title: "Reality: the conjugation, the invariant Hermitian form, and the factor $I_6$"
 status: proved
 region: correspondence
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 7
+  version: 8
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -57,7 +57,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 7 kept (already raised in this pass). The Fock module''s scalar, the last bare i (b_3 - i b_4, b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta}, the rescaling (3+4i)/5, the i-multiples, m(i x-hat)), is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C by U3 (std-algebra.complexification-is-the-odd-extension, cited as a mention in clause (5) and its proof); I_6 stays the factor of the incidence relation, acting by left multiplication, and clause (5) says that on CS it equals +-I_7, related there and not identified. Declaration removed.'
+    note: 'Version 7 -> 8. The Fock module''s scalar, the last bare i (b_3 - i b_4, b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta}, the rescaling (3+4i)/5, the i-multiples, m(i x-hat)), is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C by U3 (std-algebra.complexification-is-the-odd-extension, cited as a mention in clause (5) and its proof); I_6 stays the factor of the incidence relation, acting by left multiplication, and clause (5) says that on CS it equals +-I_7, related there and not identified. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

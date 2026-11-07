@@ -1,7 +1,7 @@
 ---
 id: singularity.two-kms-functionals-sign
 kind: claim
-version: 6
+version: 7
 title: The two KMS functionals, and the sign in $Z$
 status: proved
 region: singularity
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
@@ -51,7 +51,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 6 kept (already raised in this pass). The flow Ad(e^{it omega K}) and its continuation alpha_{i beta} act on the completed-pair atom''s mode factor, so by U2 the unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t omega K}), alpha_{J beta}(a) = e^{-beta omega K} a e^{beta omega K}, the KMS relation in the core result''s form; the proof reads singularity.kms-uniqueness-factor (stated over span{1, I_4}) over span{1, J}, said where. Declaration removed.'
+    note: 'Version 6 -> 7. The flow Ad(e^{it omega K}) and its continuation alpha_{i beta} act on the completed-pair atom''s mode factor, so by U2 the unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t omega K}), alpha_{J beta}(a) = e^{-beta omega K} a e^{beta omega K}, the KMS relation in the core result''s form; the proof reads singularity.kms-uniqueness-factor (stated over span{1, I_4}) over span{1, J}, said where. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

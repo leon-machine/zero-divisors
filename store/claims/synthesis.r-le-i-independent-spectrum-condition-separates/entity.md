@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-le-i-independent-spectrum-condition-separates
 kind: claim
-version: 3
+version: 4
 title: '(R), (L$_E$) and (I) are independent; a ground-state condition separates two'
 status: proved
 region: synthesis
@@ -27,7 +27,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
-  version: 3
+  version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
@@ -50,7 +50,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Folded into version 3 of this pass. The window is boundary modes (U2): its numbers are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level), the source unit i read as J; the Killing flows Ad(e^{J t omega_k K_k}) and the continuation to imaginary time Jp (alpha^k_{Jp}(a_k) = q_k^{-1} a_k, the signs of that result) are written with J; the Jordan-Wigner space C^2 (x) C^2 has this field as scalars. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+    note: 'Version 3 -> 4. The window is boundary modes (U2): its numbers are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level), the source unit i read as J; the Killing flows Ad(e^{J t omega_k K_k}) and the continuation to imaginary time Jp (alpha^k_{Jp}(a_k) = q_k^{-1} a_k, the signs of that result) are written with J; the Jordan-Wigner space C^2 (x) C^2 has this field as scalars. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

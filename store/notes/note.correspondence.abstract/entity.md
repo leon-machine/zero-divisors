@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.abstract
 kind: note
-version: 2
+version: 3
 title: Abstract
 status: setting
 subject: completion
@@ -21,7 +21,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - correspondence.imported-forced-completion-fibre-quadric
@@ -34,7 +34,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). Penrose''s form omega = ix pi, the last bare i, is moved to extraction.source_formal (the T09 abstract as first stored; the source writes i for I_6, the complex unit of CS, right multiplication by I_6 on the conformal spinors, U5); the text now says that his unit is written I_6. Declaration removed.'
+    note: 'Version 2 -> 3. Penrose''s form omega = ix pi, the last bare i, is moved to extraction.source_formal (the T09 abstract as first stored; the source writes i for I_6, the complex unit of CS, right multiplication by I_6 on the conformal spinors, U5); the text now says that his unit is written I_6. Declaration removed.'
   source_formal: |-
     The series' completion of the spacetime algebra is $\Cl(1,3) \to \Cl(2,4)$, forced by division by zero, and the spinor module of the completed algebra carries Penrose's twistor space as a chirality half. This paper proves the correspondence and applies it in both directions. The Chevalley construction realises complexified $\Cl(2,4)$ irreducibly on the Fock space of three fermionic ladder pairs, and the ambient vector space is recovered as $\Lambda^2\T$ with the completion's null lines as the real slice of the Klein quadric: the null lines that resolve division by zero are lines of projective twistor space. The incidence relation $\omega = ix\pi$ is proved to be the completion's chart, term by term: the $(\omega,\pi)$ splitting of a twistor is the Witt completion at spinor level, the Poincar\'e parabolic is the stabiliser of the infinity line, equivalently of the ray of $\nInf$, the factor $i$ is the derived anti-Hermiticity of the real chart for the twistor form, and local twistor transport is the spinor square root of the tractor connection, up to one declared sign convention. On the palatial side: statistics refutes identifying quantised twistors with the completion's ladder pairs, and a two-storey picture is proved instead: twistors are the \emph{states} of three ladder pairs, $\mathfrak{so}(2,4)$ is the shared core of both storeys, and both quantisations incur a half-per-dimension ordering shift, the palatial half of which is the $-2$ in Penrose's homogeneity $-2s-2$. Unexpectedly, the ordering insensitivity the googly conjecture needs is a theorem. Sixty-nine exact checks verify every computation.
   maintainer_pass_ga_units:

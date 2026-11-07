@@ -1,7 +1,7 @@
 ---
 id: synthesis.cold-mirror-needs-non-equilibrium-descent
 kind: claim
-version: 2
+version: 3
 title: 'A cold mirror needs a non-equilibrium descent'
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: notation pass, imaginary units resolved by the unit principle
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
@@ -54,7 +54,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). The imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras: by U2 the boundary modes'' unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), written out as e_2 e_3 because J names the mode set here, so tau_{beta e_2 e_3}(A) = e^{-beta H} A e^{beta H}, the KMS continuation in the core result''s form. Declaration removed.'
+    note: 'Version 2 -> 3. The imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras: by U2 the boundary modes'' unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), written out as e_2 e_3 because J names the mode set here, so tau_{beta e_2 e_3}(A) = e^{-beta H} A e^{beta H}, the KMS continuation in the core result''s form. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

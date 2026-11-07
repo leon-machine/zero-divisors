@@ -1,7 +1,7 @@
 ---
 id: note.mass.setting-machine-verification
 kind: note
-version: 3
+version: 4
 title: Machine verification
 status: setting
 subject: einstein
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - mass.imported-frozen-point-tractor-connection
 - mass.imported-thomas-operator

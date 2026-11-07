@@ -1,7 +1,7 @@
 ---
 id: rungs.rung-spinor-module-mixings
 kind: claim
-version: 5
+version: 6
 title: The $n$-rung spinor module and its mixings
 status: proved
 region: rungs
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 5
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main

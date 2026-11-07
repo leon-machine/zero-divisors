@@ -1,7 +1,7 @@
 ---
 id: obj.synthesis.cosmological-horizon-boundary-modes
 kind: object
-version: 2
+version: 3
 title: The boundary modes of the cosmological horizon
 status: defined
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the complexification written with the central unit of the odd extension'
-  version: 2
+  version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:

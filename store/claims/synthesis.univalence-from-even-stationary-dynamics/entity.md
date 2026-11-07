@@ -1,7 +1,7 @@
 ---
 id: synthesis.univalence-from-even-stationary-dynamics
 kind: claim
-version: 3
+version: 4
 title: 'Univalence from even stationary dynamics'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -43,10 +47,11 @@ checked_by:
 lineage:
   motivated_by:
   - singularity.p-univalence
-outside_ga:
-  kind: complex-analysis
-  why: 'the boundary modes are realised on a complex Fock space (e_{2k} = i(a_k^* - a_k), e^{i theta N_k}, the modular group rho^{it}); I_4 anticommutes with the atom mode operators (conventions, known limit 1), so it is not their unit'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The boundary modes'' complex Fock space (e_{2k} = i(a_k^* - a_k), e^{i theta N_k}, the flows Ad(e^{itH}), the modular group rho^{it}): by U2 its unit is J = e_2 e_3, which commutes with the mode operators (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): e_{2k} = J(a_k^* - a_k), -J e_{2k-1} e_{2k} = 1 - 2N_k, prod(1 - 2N_k) = (-J)^n B_1...B_n, Ad(e^{J theta N_k}) a_k = e^{-J theta} a_k, e^{J pi N_k} = 1 - 2N_k, Ad(e^{JtH}), Ad(rho^{Jt}), the scalar e^{J t gamma}; Fock scalars span{1, J}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -77,11 +82,11 @@ extraction:
 ---
 
 ## formal
-Let the boundary modes $a_1, \dots, a_n$ generate the CAR algebra, realised on Fock space as the spinor module of the Clifford algebra of their $2n$ Majorana generators $e_{2k-1} = a_k + a_k^*$, $e_{2k} = i(a_k^* - a_k)$, with parity the chirality (Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and let $\alpha$ be the grading.
+Let the boundary modes $a_1, \dots, a_n$ generate the CAR algebra, realised on Fock space as the spinor module of the Clifford algebra of their $2n$ Majorana generators $e_{2k-1} = a_k + a_k^*$, $e_{2k} = J(a_k^* - a_k)$, with $J = e_{2}e_{3}$ the complex unit of the boundary modes, which commutes with them and squares to $-1$, the Fock space's scalars being $\mathrm{span}\{1, J\}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), with parity the chirality (Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and let $\alpha$ be the grading.
 \begin{enumerate}
 \item The grading is inner and is the rotation by $\pi$ in every mode plane: with $B_k = e_{2k-1}e_{2k}$ and $R_k(\theta) = \cos(\theta/2) - B_k\sin(\theta/2)$, $R_k(\pi) = -B_k$ negates the two generators of the $k$-th plane and fixes the others, and $\alpha = \operatorname{Ad}(B_1 \cdots B_n)$, the volume element of the mode space; on Fock space it is implemented by $\Gamma = \prod_k (1 - 2N_k)$.
 \item If $H = H^*$ is even, $\alpha(H) = H$, every state with density a function of $H$, in particular every Gibbs state $e^{-\beta H}/Z$ at real $\beta$ ($\beta = 0$ included), is even: $\omega \circ \alpha = \omega$.
-\item Every state invariant under the flow $\operatorname{Ad}(e^{itH})$ of an even $H$ is even if and only if the spectra of $H$ on the even and odd Fock sectors are disjoint. For $H = \sum_k \omega_k N_k$ this holds if and only if no signed sum $\sum_{k \in S} \varepsilon_k\omega_k$, $\varepsilon_k = \pm 1$, over a set $S$ of odd size vanishes. It holds when every weight is an odd multiple of one $\omega_0 \neq 0$ (a common nonzero weight in particular), and then $\alpha$ is the flow itself at time $\pi/\omega_0$.
+\item Every state invariant under the flow $\operatorname{Ad}(e^{JtH})$ of an even $H$ is even if and only if the spectra of $H$ on the even and odd Fock sectors are disjoint. For $H = \sum_k \omega_k N_k$ this holds if and only if no signed sum $\sum_{k \in S} \varepsilon_k\omega_k$, $\varepsilon_k = \pm 1$, over a set $S$ of odd size vanishes. It holds when every weight is an odd multiple of one $\omega_0 \neq 0$ (a common nonzero weight in particular), and then $\alpha$ is the flow itself at time $\pi/\omega_0$.
 \item It fails at a zero-weight mode, where $\tfrac12(1 + \tfrac12(a + a^*))$ is stationary and not even, and at an odd resonance: for weights $(1,2,3)$ the state $\tfrac18(1 + \tfrac12(x + x^*))$, $x = a_1a_2a_3^*$, is stationary, positive and not even.
 \end{enumerate}
 For the boundary modes' boost generator $K_{\mathrm{geo}} = \sum_k \omega_k K_k$ of the geometric modular condition (G) (Definition \claimref{obj.singularity.geometric-modular-condition-g}), with mode-dependent weights $\omega_k$, every stationary state is even if and only if no signed sum of an odd number of the $\omega_k$ vanishes; zero-weight modes violate this, and a common nonzero weight is an example that satisfies it. Every faithful state satisfying (G) is a Gibbs state of the even generator $K_{\mathrm{geo}}$, hence even by (2): (G) implies Premise \claimref{singularity.p-univalence}. Beyond these classes the premise excludes exactly the odd coherences at zero weight and at odd resonances, and it constrains states that are not stationary.

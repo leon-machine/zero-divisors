@@ -1,7 +1,7 @@
 ---
 id: angle.imported-singularity-papers-state-selection
 kind: claim
-version: 11
+version: 12
 title: 'Imported: the singularity paper''s state selection'
 status: proved
 region: angle
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the phase flow written with the transverse unit J'
-  version: 11
+  version: 12
   source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:

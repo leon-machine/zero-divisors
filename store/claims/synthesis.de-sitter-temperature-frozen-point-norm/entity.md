@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-temperature-frozen-point-norm
 kind: claim
-version: 6
+version: 7
 title: The cosmological horizon's descent temperature is the frozen point's norm over 2 pi
 status: proved
 region: synthesis
@@ -23,7 +23,7 @@ credit:
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
   role: 'unit resolution pass, the Killing flow written with the central unit of the odd extension'
-  version: 6
+  version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
