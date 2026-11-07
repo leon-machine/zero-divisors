@@ -30,7 +30,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, a bare imaginary unit left in the proof of (M2), alpha_{ip}, written as alpha^k_{Jp} as in the rest of the proof
+  role: 'consistency pass, a bare imaginary unit left in the proof of (M2), alpha_{ip}, written as alpha^k_{Jp} as in the rest of the proof'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

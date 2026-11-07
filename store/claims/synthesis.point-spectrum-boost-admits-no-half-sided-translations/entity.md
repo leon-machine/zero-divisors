@@ -22,7 +22,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, the weights of Premise (Q) brought to its version 3 in the formal and technical levels (the technical level said the flow of (Q) returns to the identity after one period, true only for version 2)
+  role: 'consistency pass, the weights of Premise (Q) brought to its version 3 in the formal and technical levels (the technical level said the flow of (Q) returns to the identity after one period, true only for version 2)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

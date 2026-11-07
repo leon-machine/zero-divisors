@@ -22,7 +22,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, the conclusions under Premise (Q) labelled as its version 2 (weights kappa k), since version 3 has no zero-weight mode
+  role: 'consistency pass, the conclusions under Premise (Q) labelled as its version 2 (weights kappa k), since version 3 has no zero-weight mode'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

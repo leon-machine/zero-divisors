@@ -30,7 +30,7 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07 (third cut)
 - name: Claude Opus 5.5
-  role: consistency pass, the flat-chart sentence for the edge (flagged, sentence missing) and the difference quotient Q(u, v) renamed q(u, v) against the house symbol Q(v)
+  role: 'consistency pass, the flat-chart sentence for the edge (flagged, sentence missing) and the difference quotient Q(u, v) renamed q(u, v) against the house symbol Q(v)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

@@ -22,7 +22,7 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, a garbled sentence of the technical level repaired and the cited edge-scaling result named as the Theorem it is
+  role: 'consistency pass, a garbled sentence of the technical level repaired and the cited edge-scaling result named as the Theorem it is'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

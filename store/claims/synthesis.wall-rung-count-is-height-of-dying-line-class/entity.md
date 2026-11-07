@@ -18,7 +18,7 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 - name: Claude Opus 5.5
-  role: consistency pass, torus-wall half-angle sine renamed sigma, freeing s for G^{-1}(u,u)
+  role: 'consistency pass, torus-wall half-angle sine renamed sigma, freeing s for G^{-1}(u,u)'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

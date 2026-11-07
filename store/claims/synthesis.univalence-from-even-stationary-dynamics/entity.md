@@ -26,7 +26,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, Majorana generators renamed mu_j, apart from the spacetime vectors in J = e_2e_3
+  role: 'consistency pass, Majorana generators renamed mu_j, apart from the spacetime vectors in J = e_2e_3'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

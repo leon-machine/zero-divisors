@@ -1,7 +1,7 @@
 ---
 id: synthesis.charged-vaidya-cauchy-horizon-tractor-threshold
 kind: claim
-version: 1
+version: 2
 title: 'Tractor transport to the charged Vaidya Cauchy horizon: a flux threshold'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (Schouten map and conormal as physical vectors, tensors as labelled readings)
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -47,6 +51,10 @@ lineage:
   - interior.filtration-cauchy-horizon-read-literature
   - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms and tensors to GA in the statements: the Schouten tensor becomes the Schouten map P(a) = (Lambda/6) a - (m/r^2)(a . N) N + (e^2/2r^4)(P_S(a) - P_2(a)) with N = hb^T(grad v) the physical null gradient of the label v and P_2, P_S the projections on the (v, r) and sphere planes; the conormal dv/w becomes the physical vector N/w and gamma^flat the physical tangent k = hb^{-1}(gamma), so P(gamma, .) = S nu n + R reads P(k) = S nu n + R with R = (Lambda/6 - e^2/2r^4) k; the tensor and covector forms stay as labelled readings. A notation change through the dictionary (covectors are physical vectors via hb^T, g(u, v) = u . v on physical vectors; the identities (dv dv)(u, v) = (u . N)(v . N) and n . k = 1 follow from hb(u) . grad v = u . hb^T(grad v)); the proof keeps its component computation, now saying so in its opening, and the check is unchanged.'
   open_problem: op.cauchy-horizon-transport
   flags:
   - 'beyond one flat chart: the Cauchy horizon is the boundary v -> infinity of the region-II chart of background labels (v, r, x, y); clauses (1)-(4) are statements on the approach side, and a crossing needs a continuation of the gravitational field beyond that boundary, which is not constructed here'

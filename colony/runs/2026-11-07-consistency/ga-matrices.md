@@ -1,6 +1,6 @@
 # GA rewrite, kind = matrices (36 entities)
 
-Validation: `tp check --layers 1,2,3 --author leon` filtered to ids_ga_matrices.txt shows only the three I213 findings already in baseline.log (mass.chart-form-spin-isomorphism, synthesis.clausius-..., synthesis.slot-module-...). A W222 on synthesis.duality-... from a second sl(2, C) in its proof was fixed. galang.scan: no unexcused stand-in on any of the 36 entities. Every equivalence beyond notation was verified exactly with lib/GA.py (scripts in the scratch folder gamat/v_*.py). check.py files were not touched, and no status, link, pin, assumes or ledger was changed.
+Validation: `tp check --layers 1,2,3 --author leon` filtered to ids_ga_matrices.txt shows only the three I213 findings already in baseline.log (mass.chart-form-spin-isomorphism, synthesis.clausius-..., synthesis.slot-module-...). A W222 on synthesis.duality-... from a second sl(2, C) in its proof was fixed. The edits made after my third and last check run (the reader-issue fixes on slot-module, twisted-wall and duality, and the descent unit_note) were validated only by loading the store, galang.scan, and latexcheck's structural and macro checks, all clean. They need one more layer 1-3 run. galang.scan: no unexcused stand-in on any of the 36 entities. Every equivalence beyond notation was verified exactly with lib/GA.py (scripts in the scratch folder gamat/v_*.py). check.py files were not touched, and no status, link, pin, assumes or ledger was changed.
 
 ## Rewritten (old -> new version)
 

@@ -26,7 +26,7 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, a bare imaginary unit in the proof's conventions written as I_4, and the lay level updated (the agreement of the two restrictions is now shown elsewhere modulo a bounded kernel)
+  role: 'consistency pass, a bare imaginary unit in the proof''s conventions written as I_4, and the lay level updated (the agreement of the two restrictions is now shown elsewhere modulo a bounded kernel)'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

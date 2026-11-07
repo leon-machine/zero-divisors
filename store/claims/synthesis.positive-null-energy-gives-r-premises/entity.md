@@ -34,7 +34,7 @@ credit:
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, the last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows' unit J
+  role: 'consistency pass, the last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows'' unit J'
   version: 8
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

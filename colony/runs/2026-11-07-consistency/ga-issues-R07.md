@@ -1,0 +1,11 @@
+# GA issues from reader R07 for the rewriters (entities in GA_OWNED.txt; not edited by R07)
+
+- dark-energy.frozen-point-datum-kasner-wall: W222 in the current check (index false positives R^{0i}, {0,i}; clear it with the rewrite). Formal (i) is in Cartan forms omega^{i0}, R^{i0}, R^{ij}; (ii) in frame Ricci components R_00, R_ii; (iii) in epsilon_abcd densities. GA forms: Omega(gamma_i) = -(p_i/tau) gamma_0 ^ gamma_i, field strength R(B) on e_0 ^ e_i and e_i ^ e_j, Ricci map R(a). All numbers checked correct by R07 (Kretschmann -16 p1p2p3 tau^-4, GB density -16 p1p2p3 tau^-3, 64/27 at Schwarzschild).
+- dark-energy.variable-exponents-residue-pointwise-corrections-are: W222 (index false positives). Formal is in connection one-forms omega^{ij}; checked correct by R07 (torsion-free by hand).
+- interior.interior-connection-exactly: W222 (index false positives). Proof in Cartan structure equations; the assembly sign to -sigma_i B_i and +cot(theta)/r R_23 checked consistent by R07. Note that interior.weighted-limit-theorem's proof had the phi-line boost with the wrong sign (fixed by R07).
+- dark-energy.cosmological-constant-does-not-change-residue: coframe e^i = a_i dx^i and omega^{i0} as a parenthetical reading; fine to keep as a reading.
+- note.mass.what-nullity-fixes: explicit 2x2 matrices with entries in span{1, I_6}; the incidence factor is identified with +I_6. correspondence.incidence-relation-chart now says the sign of I_6 against I_7 on CS is orientation-dependent; keep this note consistent with whatever that item settles.
+- synthesis.diagonal-kasner-momentum-constraint: proof uses the cross product t = (1,1,1) x p (write as the dual of (1,1,1) ^ p in Cl(3,0)) and Christoffel symbols.
+- synthesis.kerr-ring-connection-limit-null-rotation-winding-three: formal defines the frame by cross products, e_2 = z^ x v/|z^ x v|, e_1 = v x e_2 (galang flags it); write as duals of outer products of the relative vectors at e_0.
+- synthesis.imported-kaluza-klein-ansatz: metric as a 5x5 block matrix g_AB (imported; GA reading of the fifth direction, source form to source_formal).
+- note.dark-energy.setting-machine-verification: matrix counts of the checks (likely a labelled reading; no issue found otherwise).

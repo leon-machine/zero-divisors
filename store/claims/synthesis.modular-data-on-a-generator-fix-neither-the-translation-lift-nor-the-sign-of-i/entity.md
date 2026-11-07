@@ -26,7 +26,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
-  role: consistency pass, the bare i of the title written as the unit, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used
+  role: 'consistency pass, the bare i of the title written as the unit, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

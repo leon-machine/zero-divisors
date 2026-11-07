@@ -26,7 +26,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
-  role: consistency pass, the clause number of the sharpness step (v -> vi), a stray parenthesis, and the digamma function no longer written with the field letter in the formal level
+  role: 'consistency pass, the clause number of the sharpness step (v -> vi), a stray parenthesis, and the digamma function no longer written with the field letter in the formal level'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

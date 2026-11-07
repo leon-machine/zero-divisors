@@ -22,7 +22,7 @@ credit:
   version: 5
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: consistency pass, the text of Premise (Q) labelled with its version: the weights kappa k and the sea at a site are its version 2, the sea between sites its version 3
+  role: 'consistency pass, the text of Premise (Q) labelled with its version: the weights kappa k and the sea at a site are its version 2, the sea between sites its version 3'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

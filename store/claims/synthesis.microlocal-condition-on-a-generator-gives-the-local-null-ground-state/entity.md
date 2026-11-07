@@ -30,7 +30,7 @@ credit:
   version: 5
   source: maintainer pass 2026-11-07 (third cut)
 - name: Claude Opus 5.5
-  role: consistency pass, the flat-chart sentence for the edge (flagged, sentence missing) and a dated marker on the stale sentence of the Reading
+  role: 'consistency pass, the flat-chart sentence for the edge (flagged, sentence missing) and a dated marker on the stale sentence of the Reading'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
 review: draft
