@@ -648,3 +648,73 @@ def check_gtg_weyl_square_of_weyl_maps():
         ok = ok and gtg.kretschmann(Wp, sq4) == Fr(4, 3) * (k1 + k2) ** 2
         ok = ok and gtg.euler_density(R, sq4) == 8 * k1 * k2
     _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_weyl_square_of_weyl_maps"; return _tp_rv
+
+
+def _frame_plane_op(R):
+    """The frame-plane dict {(a, b): R(e_a ^ e_b)} of a callable bivector map R of Cl(1,3)."""
+    return {bl: R(gtg.biv(*bl)) for bl in gtg.bivector_blades(4)}
+
+
+def _bianchi_free(W):
+    """First Bianchi identity d_a ^ W(a ^ b) = 0 for every frame vector b."""
+    for m in R4:
+        tot = {}
+        for a in R4:
+            if a != m:
+                tot = gtg.m_add(tot, gtg.outer(gtg.er(a), gtg.apply_op(W, gtg.wedge(GA.gen(a), GA.gen(m))), gtg.S13))
+        if tot:
+            return False
+    return True
+
+
+def _leg_traces(W):
+    """(<W(a ^ b)(d_b ^ d_a)>, <I4 W(a ^ b)(d_b ^ d_a)>) summed over the frame."""
+    I4 = gtg.pseudoscalar(gtg.S13)
+    s0, sI = Fr(0), Fr(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                rb = GA.scal(Fr(1, ETA[a] * ETA[b]), gtg.biv(b, a))
+                P = GA.mul(gtg.apply_op(W, gtg.biv(a, b)), rb, gtg.S13)
+                s0 += gtg.sp(P)
+                sI += gtg.sp(GA.mul(I4, P, gtg.S13))
+    return s0, sI
+
+
+def check_gtg_frame_legs_and_weyl_space():
+    """(iv) frame legs in GA: for a bivector map R with Lorentz block F = -R (Cotton block present),
+    K(DX ^ DX, F) = -<I4 R(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -<R(a ^ b)(d_b ^ d_a)> = -calR (the scalar),
+    on a Kulkarni-Nomizu map with a Ricci part, on B -> I4 B and on their sum (both sides nonzero there), and both
+    vanish on the ten basis Weyl maps (first Bianchi identity, trace-freeness). (iii) the Weyl space: the basis
+    Weyl maps obey the first Bianchi identity d_a ^ W(a ^ b) = 0; B -> I4 B is symmetric, trace-free and I-linear
+    but violates it, so those three conditions alone do not cut out the Weyl maps."""
+    _premises_locus()
+    I4 = gtg.pseudoscalar(gtg.S13)
+    S = _sym_maps()
+    kn = _frame_plane_op(_kn_pair(S[0], S[4]))
+    imap = _frame_plane_op(lambda B: GA.mul(I4, B, gtg.S13))
+    both = {bl: GA.add(kn[bl], imap[bl]) for bl in kn}
+
+    def ee(e, f):
+        return {} if e == f else GA.scal(2, _wedge(E[e], E[f]))
+
+    def legs(W):
+        Fc = _F_from_weyl_map(W, COTTON)
+        return _form(ee, Fc, lambda F1, F2: _m(F1, F2).get((), Fr(0))), _eps_X(ee, Fc)
+    ok = True
+    vals = []
+    for W in (kn, imap, both):
+        K, ex = legs(W)
+        s0, sI = _leg_traces(W)
+        ok = ok and K == -sI and ex == -s0 and s0 == gtg.ricci_scalar(W, gtg.S13)
+        vals.append((K, ex))
+    ok = ok and vals == [(Fr(0), Fr(2)), (Fr(12), Fr(0)), (Fr(12), Fr(2))]
+    ok = ok and _bianchi_free(kn) and not _bianchi_free(imap)
+    for bl in gtg.bivector_blades(4):
+        for bl2 in gtg.bivector_blades(4):
+            A, B = gtg.biv(*bl), gtg.biv(*bl2)
+            ok = ok and gtg.sp(GA.mul(A, gtg.apply_op(imap, B), gtg.S13)) == gtg.sp(GA.mul(gtg.apply_op(imap, A), B, gtg.S13))
+    ok = ok and all(gtg.ricci(imap, GA.gen(m)) == {} for m in R4)
+    for W in _weyl_map_basis():
+        ok = ok and _bianchi_free(W) and legs(W) == (Fr(0), Fr(0))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_frame_legs_and_weyl_space"; return _tp_rv
