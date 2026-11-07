@@ -1,7 +1,7 @@
 ---
 id: angle.imported-conformal-model-null-rotations
 kind: claim
-version: 5
+version: 6
 title: 'Imported: the conformal model and the null rotations'
 status: proved
 region: angle
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, wording, the space U defined in the proof as in the formal level'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.transport.normalised-conformal-chart
@@ -41,6 +45,10 @@ locators:
   label: fact:T1
   line: 120
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The proof restated the isomorphism of (U, +) without saying what U is; it now carries the formal level''''s definition (a null partner w of v and U the orthogonal complement of v and w); no change of content.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

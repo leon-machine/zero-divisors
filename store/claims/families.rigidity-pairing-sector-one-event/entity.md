@@ -1,7 +1,7 @@
 ---
 id: families.rigidity-pairing-sector-one-event
 kind: claim
-version: 4
+version: 5
 title: 'Rigidity: the pairing sector is one event'
 status: proved
 region: families
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: GA rewrite (cross products as the dual of the outer product)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -46,6 +50,10 @@ locators:
   label: prop:rigidity
   line: 785
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The cross-product matrix [a]_x is written as the contraction w -> w.(I_f a) = -I_f(a ^ w) by the family bivector dual to a (I_f the family pseudoscalar), the channel cross products as -I_f(f_+ ^ f_-) and -I_f(u'' ^ f_+), and the triple-product identity as a.(abar ^ w) = |a|^2 w - abar (a.w); the matrix form of G G^dag stays as a labelled reading, and the Takagi factorisation of the pairing matrix and the 2 x 2 spinor epsilon stay (the Bogoliubov pairing matrix is the point of the result). The equivalences (the epsilon_{ijk} components, the contraction form, the triple-product identity, the action of a family wedge) were verified exactly with lib/GA.py in Cl(3,0) and extend bilinearly over span{1, I_4}. The outside_ga declaration is removed: no cross product and no bare unit remain.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -65,16 +73,18 @@ extraction:
   typing:
     by: ai-typing-pass
     note: "The squeezed-vacuum edge is the premise for applying functions in the Takagi basis and was kept; its E204 is cleared by removing the ordering-dictionary edge from that fact."
-outside_ga:
-  kind: other
-  why: 'no bare i remains; the family-space algebra is written, as in its source, with the three-dimensional cross product (the cross-product matrices [a]_x, the channel cross products f_+ x f_- and u'' x f_+, the triple-product identity) on family vectors with components in span{1, I_4}'
 ---
 
 ## formal
-Every pairing the descent can write in the antisymmetric sector, any complex combination of the channels at any strengths, has family factor $G = [a]_{\times}$, the cross-product matrix of some complex $3$-vector $a$ (numbers, the components of family vectors and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors), and
+Every pairing the descent can write in the antisymmetric sector, any complex combination of the channels at any strengths, has family factor $G = [a]_{\times}$, the contraction by the family bivector $I_{f}a$ dual to some complex family vector $a$,
+\[
+G(w) \;=\; w \cdot (I_{f}a) \;=\; -I_{f}\,(a \wedge w), \qquad I_{f} = f_{1}f_{2}f_{3},
+\]
+the dual of the outer product with $a$ ($f_{1}, f_{2}, f_{3}$ the orthonormal family directions, $I_{f}$ the family pseudoscalar; in components $(Gw)_{i} = \varepsilon_{ijk}a_{j}w_{k}$) (numbers, the components of family vectors and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors, so outer and inner products of family vectors extend over $\mathrm{span}\{1, I_4\}$), and, with $\bar a$ the conjugate ($I_4 \mapsto -I_4$) and $|a|^{2} = a \cdot \bar a$,
 \begin{equation}
-G G^{\dagger} \;=\; |a|^{2}\,\mathbb{1} \;-\; \bar{a}\,a^{\mathsf{T}}, \qquad \mathrm{spec} = \{\,|a|^{2},\ |a|^{2},\ 0\,\},
+G G^{\dagger}(w) \;=\; a \cdot (\bar{a} \wedge w) \;=\; |a|^{2}\,w \;-\; \bar{a}\,(a \cdot w), \qquad \mathrm{spec} = \{\,|a|^{2},\ |a|^{2},\ 0\,\},
 \end{equation}
+(as a matrix, $GG^{\dagger} = |a|^{2}\,\mathbb{1} - \bar{a}\,a^{\mathsf{T}}$)
 doubly degenerate identically in $a$. Consequently the Takagi spectrum of the full pairing is fourfold degenerate at every $(\lambda, \chi)$, $\{\sigma, \sigma, \sigma, \sigma, 0, 0\}$ with $\sigma = \tau|a|$; the freezing is exactly one Bogoliubov event with one depth $r = \sigma$, which for the two channels is $r = \tau\sqrt{1 + \lambda^{2}}$ ($\lambda$ is a relabelling of $\tau$ plus a rotation of the coherent ray); the equal-gain identity of the two channels holds to all orders; and the coherent face vector is
 \[
 v_{k} \;=\; \langle \hat\Omega_{k}\rangle \;=\; 2\,\sinh r\cosh r\;n_{k}, \qquad n = a/|a|,
@@ -82,7 +92,7 @@ v_{k} \;=\; \langle \hat\Omega_{k}\rangle \;=\; 2\,\sinh r\cosh r\;n_{k}, \qquad
 which at the universal point reads $v_{k} = -I_4\sqrt{\tfrac{2}{3}}\,\sinh r\cosh r\,\bigl(1 + e^{I_4\chi}\zeta^{k}\bigr)$ and in general $v_{k} \propto 1 + \lambda e^{I_4\chi}\zeta^{k}$.
 
 ## technical
-Every pairing the descent can write in the antisymmetric sector has family factor $G = [a]_{\times}$, the cross-product matrix of a complex $3$-vector $a$ (components read in $\mathrm{span}\{1, I_4\}$), and $GG^{\dagger} = |a|^{2}\,I - \bar{a}\,a^{\mathsf{T}}$ has spectrum $\{|a|^{2}, |a|^{2}, 0\}$ for every $a$. Tensoring with the spinor $\varepsilon$, the Takagi spectrum of the full pairing is $\{\sigma, \sigma, \sigma, \sigma, 0, 0\}$ with $\sigma = \tau|a|$, at every $(\lambda, \chi)$.
+Every pairing the descent can write in the antisymmetric sector has family factor $G = [a]_{\times}$, the contraction $w \mapsto w \cdot (I_{f}a) = -I_{f}(a \wedge w)$ by the family bivector dual to a complex family vector $a$ ($I_{f}$ the family pseudoscalar, components read in $\mathrm{span}\{1, I_4\}$), and $GG^{\dagger}(w) = |a|^{2}w - \bar{a}\,(a \cdot w)$ has spectrum $\{|a|^{2}, |a|^{2}, 0\}$ for every $a$. Tensoring with the spinor $\varepsilon$, the Takagi spectrum of the full pairing is $\{\sigma, \sigma, \sigma, \sigma, 0, 0\}$ with $\sigma = \tau|a|$, at every $(\lambda, \chi)$.
 
 The freezing is therefore one Bogoliubov event with a single depth $r = \sigma$, which for the two channels is $r = \tau\sqrt{1 + \lambda^{2}}$; the two channels have equal gain to all orders; and the coherent face vector is $v_{k} = 2\sinh r\cosh r\,n_{k}$ with $n = a/|a|$, which in general is proportional to $1 + \lambda e^{I_4\chi}\zeta^{k}$.
 
@@ -90,4 +100,4 @@ The freezing is therefore one Bogoliubov event with a single depth $r = \sigma$,
 This result looks at every way the vacuum can pair up particles within one sector and shows that, however the ingredients are mixed, the outcome is always the same kind of single event, governed by one depth parameter. Of the three underlying numbers, two always come out equal and the third zero, whatever the mix. This rigidity means the different pairing channels cannot be played off against each other, and it fixes the direction the vacuum picks out in family space.
 
 ## one-liner
-Every antisymmetric pairing has family factor $[a]_{\times}$ with $GG^{\dagger}$ spectrum $\{|a|^{2}, |a|^{2}, 0\}$, so the freezing is a single fourfold-degenerate Bogoliubov event of depth $r = \tau|a|$.
+Every antisymmetric pairing has family factor $[a]_{\times}: w \mapsto -I_{f}(a \wedge w)$, contraction by a family bivector, with $GG^{\dagger}$ spectrum $\{|a|^{2}, |a|^{2}, 0\}$, so the freezing is a single fourfold-degenerate Bogoliubov event of depth $r = \tau|a|$.

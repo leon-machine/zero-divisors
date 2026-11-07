@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-jarlskog-commutator-identity
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Jarlskog commutator identity (Jarlskog 1985)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, imaginary unit written as I_4 (unit principle U4)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'C. Jarlskog, Commutator of the quark mass matrices in the standard electroweak model and a measure of maximal CP nonconservation, Phys. Rev. Lett. 55 (1985), 1039--1042.'
@@ -27,6 +31,16 @@ imported_from:
   locator: 'Review 12, CKM quark-mixing matrix, Sec. 12.4 (definition of J)'
   doi: 10.1103/PhysRevD.110.030001
 extraction:
+  source_formal: |-
+    Let $H_{u}$, $H_{d}$ be $3 \times 3$ Hermitian matrices with eigenvalues $m_{u}^{2} < m_{c}^{2} < m_{t}^{2}$ and $m_{d}^{2} < m_{s}^{2} < m_{b}^{2}$, $H_{q} = U_{q}\,\mathrm{diag}(\cdot)\,U_{q}^{\dagger}$ with $U_{q}$ unitary, and $V = U_{u}^{\dagger}U_{d}$ (rows $u, c, t$, columns $d, s, b$). Let $J$ be defined by $\mathrm{Im}[V_{ij}V_{kl}V_{il}^{*}V_{kj}^{*}] = J\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}$, so that $J = \mathrm{Im}(V_{us}V_{cb}V_{ub}^{*}V_{cs}^{*})$; it does not depend on the phases of the columns of $U_{u}$ and $U_{d}$. Then
+    \[
+    \det[H_{u}, H_{d}] = 2iJ\,F_{u}F_{d},\qquad F_{u} = (m_{t}^{2} - m_{c}^{2})(m_{t}^{2} - m_{u}^{2})(m_{c}^{2} - m_{u}^{2}),\quad F_{d} = (m_{b}^{2} - m_{s}^{2})(m_{b}^{2} - m_{d}^{2})(m_{s}^{2} - m_{d}^{2}).
+    \]
+    In particular, with nondegenerate masses in each sector, $J = 0$ if and only if $\det[H_{u}, H_{d}] = 0$; a common eigenvector of $H_{u}$ and $H_{d}$ gives $\det[H_{u}, H_{d}] = 0$ and so $J = 0$. \emph{Provenance:} \cite{Jarlskog1985}; the definition of $J$ as in \cite{PDG2024}.
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U4 with U1 (the conventions and the unit sweep''s rule that mass-matrix entries are numbers read in span{1, I_4}): the bare i of det[H_u, H_d] = 2iJ F_u F_d is written I_4, with a sentence saying numbers and matrix entries are read in span{1, I_4}, Im is the I_4-part and the source writes i for I_4; the source''s form moves to source_formal. This supersedes the extraction note''s sentence that the i is not I_4. The exact check is unchanged (a complex number of span{1, I_4} is the same computation).'
   note: >-
     Imported for the up/down mixing results (synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing
     and synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns), which cite the identity from
@@ -46,17 +60,17 @@ extraction:
 ---
 
 ## formal
-Let $H_{u}$, $H_{d}$ be $3 \times 3$ Hermitian matrices with eigenvalues $m_{u}^{2} < m_{c}^{2} < m_{t}^{2}$ and $m_{d}^{2} < m_{s}^{2} < m_{b}^{2}$, $H_{q} = U_{q}\,\mathrm{diag}(\cdot)\,U_{q}^{\dagger}$ with $U_{q}$ unitary, and $V = U_{u}^{\dagger}U_{d}$ (rows $u, c, t$, columns $d, s, b$). Let $J$ be defined by $\mathrm{Im}[V_{ij}V_{kl}V_{il}^{*}V_{kj}^{*}] = J\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}$, so that $J = \mathrm{Im}(V_{us}V_{cb}V_{ub}^{*}V_{cs}^{*})$; it does not depend on the phases of the columns of $U_{u}$ and $U_{d}$. Then
+Numbers, and the entries of the matrices, are read in $\mathrm{span}\{1, I_{4}\}$ (conventions U1; the source writes $i$ for $I_{4}$, $\mathrm{Im}$ is the $I_{4}$-part and $^{*}$ conjugates $I_{4} \mapsto -I_{4}$). Let $H_{u}$, $H_{d}$ be $3 \times 3$ Hermitian matrices with eigenvalues $m_{u}^{2} < m_{c}^{2} < m_{t}^{2}$ and $m_{d}^{2} < m_{s}^{2} < m_{b}^{2}$, $H_{q} = U_{q}\,\mathrm{diag}(\cdot)\,U_{q}^{\dagger}$ with $U_{q}$ unitary, and $V = U_{u}^{\dagger}U_{d}$ (rows $u, c, t$, columns $d, s, b$). Let $J$ be defined by $\mathrm{Im}[V_{ij}V_{kl}V_{il}^{*}V_{kj}^{*}] = J\sum_{m,n}\epsilon_{ikm}\epsilon_{jln}$, so that $J = \mathrm{Im}(V_{us}V_{cb}V_{ub}^{*}V_{cs}^{*})$; it does not depend on the phases of the columns of $U_{u}$ and $U_{d}$. Then
 \[
-\det[H_{u}, H_{d}] = 2iJ\,F_{u}F_{d},\qquad F_{u} = (m_{t}^{2} - m_{c}^{2})(m_{t}^{2} - m_{u}^{2})(m_{c}^{2} - m_{u}^{2}),\quad F_{d} = (m_{b}^{2} - m_{s}^{2})(m_{b}^{2} - m_{d}^{2})(m_{s}^{2} - m_{d}^{2}).
+\det[H_{u}, H_{d}] = 2I_{4}J\,F_{u}F_{d},\qquad F_{u} = (m_{t}^{2} - m_{c}^{2})(m_{t}^{2} - m_{u}^{2})(m_{c}^{2} - m_{u}^{2}),\quad F_{d} = (m_{b}^{2} - m_{s}^{2})(m_{b}^{2} - m_{d}^{2})(m_{s}^{2} - m_{d}^{2}).
 \]
 In particular, with nondegenerate masses in each sector, $J = 0$ if and only if $\det[H_{u}, H_{d}] = 0$; a common eigenvector of $H_{u}$ and $H_{d}$ gives $\det[H_{u}, H_{d}] = 0$ and so $J = 0$. \emph{Provenance:} \cite{Jarlskog1985}; the definition of $J$ as in \cite{PDG2024}.
 
 ## technical
-Quark mixing violates the symmetry between matter and antimatter through one number, the Jarlskog invariant $J$, read from the mixing matrix as the imaginary part of a product of four of its entries. Jarlskog showed that it can be read from the mass matrices directly, without diagonalising them: the determinant of the commutator of the up-type and down-type mass squares equals $2iJ$ times the product of all six mass-squared differences within the two sectors. So, when no two masses in a sector are equal, CP violation in quark mixing is absent exactly when that determinant vanishes, and in particular whenever the two mass squares share an eigenvector.
+Quark mixing violates the symmetry between matter and antimatter through one number, the Jarlskog invariant $J$, read from the mixing matrix as the imaginary part of a product of four of its entries. Jarlskog showed that it can be read from the mass matrices directly, without diagonalising them: the determinant of the commutator of the up-type and down-type mass squares equals $2I_{4}J$ times the product of all six mass-squared differences within the two sectors. So, when no two masses in a sector are equal, CP violation in quark mixing is absent exactly when that determinant vanishes, and in particular whenever the two mass squares share an eigenvector.
 
 ## lay
 The way quarks of different families mix carries one number that measures how much nature distinguishes matter from antimatter in this sector. This standard identity shows that the number can be computed straight from the quark mass matrices, from how far the up-type and down-type matrices fail to commute. If they share even one common direction, the number is zero.
 
 ## one-liner
-$\det[H_{u}, H_{d}] = 2iJ\,(m_{t}^{2} - m_{c}^{2})(m_{t}^{2} - m_{u}^{2})(m_{c}^{2} - m_{u}^{2})(m_{b}^{2} - m_{s}^{2})(m_{b}^{2} - m_{d}^{2})(m_{s}^{2} - m_{d}^{2})$ with $J = \mathrm{Im}(V_{us}V_{cb}V_{ub}^{*}V_{cs}^{*})$, so $J = 0$ when the mass squares share an eigenvector (Jarlskog 1985).
+$\det[H_{u}, H_{d}] = 2I_{4}J\,(m_{t}^{2} - m_{c}^{2})(m_{t}^{2} - m_{u}^{2})(m_{c}^{2} - m_{u}^{2})(m_{b}^{2} - m_{s}^{2})(m_{b}^{2} - m_{d}^{2})(m_{s}^{2} - m_{d}^{2})$ with $J = \mathrm{Im}(V_{us}V_{cb}V_{ub}^{*}V_{cs}^{*})$, so $J = 0$ when the mass squares share an eigenvector (Jarlskog 1985).

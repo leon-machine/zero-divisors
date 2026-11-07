@@ -1,7 +1,7 @@
 ---
 id: note.primer.setting-products-vectors-one-rule-3
 kind: note
-version: 1
+version: 2
 title: Products of vectors, and the one rule
 status: setting
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T00, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the bivector as the dual of the cross product)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - primer.commutation-rule
 locators:
@@ -22,6 +26,14 @@ locators:
   number: Setting
   section: Products of vectors, and the one rule
   line: 213
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The sentence that a bivector carries the information of a x b in three dimensions now states the duality a ^ b = I (a x b), I = e_1e_2e_3 (verified exactly with lib/GA.py in Cl(3,0)); the comparison with the cross product, the subject of the passage, stays and is declared outside_ga (bridge).'
+outside_ga:
+  kind: bridge
+  why: 'the passage is the primer''s motivation of the geometric product, which compares it with the inner and cross products of three-dimensional vector algebra that it replaces; the cross product is the subject of the comparison, not a stand-in'
 ---
 
 ## formal
@@ -29,7 +41,7 @@ locators:
 \[
 a \wedge b \;=\; -\, b \wedge a , \qquad \text{and in particular} \qquad a \wedge a \;=\; 0 .
 \]
-Only the plane, the area and the sense are recorded, not the particular parallelogram: $a \wedge (b + \lambda a) = a \wedge b$ for every scalar $\lambda$, so sliding one edge along the other changes nothing. Because the definition never mentions a perpendicular direction, it makes sense in every dimension. The object it produces is a \emph{bivector}, and it is not a vector. In three dimensions a bivector carries the same information as $a \times b$, which is why the cross product serves so well there, and why it does not generalise.
+Only the plane, the area and the sense are recorded, not the particular parallelogram: $a \wedge (b + \lambda a) = a \wedge b$ for every scalar $\lambda$, so sliding one edge along the other changes nothing. Because the definition never mentions a perpendicular direction, it makes sense in every dimension. The object it produces is a \emph{bivector}, and it is not a vector. In three dimensions a bivector carries the same information as $a \times b$ (the vector is its dual, $a \wedge b = I\,(a \times b)$ with $I = e_{1}e_{2}e_{3}$), which is why the cross product serves so well there, and why it does not generalise.
 
 The construction does not stop at two vectors. The outer product is associative, so three vectors give $a \wedge b \wedge c$, the oriented parallelepiped they span: a three-dimensional subspace, the volume of that parallelepiped, and a handedness. That object is a \emph{trivector}. Four vectors give an oriented four-dimensional volume, and so on, the outer product of $k$ independent vectors representing the oriented $k$-dimensional subspace they span, weighted by its $k$-dimensional content. The antisymmetry that gave $a \wedge a = 0$ makes the outer product of any linearly dependent set vanish, so in an $n$-dimensional space the sequence ends at $k = n$: scalars, vectors, bivectors, trivectors, and upward to a single top object with nothing above it. That ceiling is not a convention. It is the statement that any $n+1$ vectors of an $n$-dimensional space are dependent.
 

@@ -1,7 +1,7 @@
 ---
 id: note.descent-lift.setting-machine-verification
 kind: note
-version: 1
+version: 2
 title: Machine verification
 status: setting
 subject: descent
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-descent-lift, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, bare imaginary unit written as I_4
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - descent-lift.imported-pinching-one-way-door
 - descent-lift.imported-thouless-states-witt-vacua
@@ -25,6 +29,11 @@ locators:
   number: Setting
   section: Machine verification
   line: 316
+extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The Part D description wrote the Hermitian quartic element with a bare i; it is now I_4, the unit the stored proposition descent-lift.within-supplied-dynamics-descent-has-no uses (it commutes with the rung mode operators and with N_0), a pure notation change."
 ---
 
 ## formal
@@ -36,7 +45,7 @@ Every computational identity asserted in this note has been verified in exact ar
 
 \emph{Part C: the lift of the pair.} $W = 1 \otimes \ket{00} + \G_{0} \otimes \ket{11}$ is even, has $W^{\dagger}W = 2$ with $W\ket{00} \perp W\ket{11}$, and induces $2\EN$ on the even sector's matrix units; the tensor-product partial trace agrees with the algebraic restriction on the lifted states; $C = 1 - 2P^{R}_{11}N_{0}$ is diagonal, equals $1 - \tfrac14(1-\G_{0})(1-\G_{2})(1-\G_{3})$, commutes with every $N_{k}$ and the total parity, squares to $1$; and $W = C(\,\cdot \otimes \varphi)$ on both even basis states and on the pair.
 
-\emph{Part D: the preparation.} $\varphi$ is even and a Witt vacuum with Thouless amplitude $1$; the hops, the annihilation and the Cartan elements annihilate the record vacuum while the pair creation carries it to $\ket{11}$; the rational pairing rotor is unitary, even, and carries $\ket{00}$ to $\tfrac35\ket{00} + \tfrac45\ket{11}$; ten number-conserving generators commute with the total number, and the enumeration of joint basis states at the required number and parity leaves only the record vacuum for both even system states; a beam splitter between the pair and a rung at $(\tfrac35, \tfrac45)$ moves weight $\tfrac{16}{25}$ out of $\ket{11}$; the system pairing $1 + (a^{\dagger}_{0}a^{\dagger}_{1} - a_{1}a_{0})$, conjugated by the two system-record swaps and followed by $C$, is an even map inducing $2\EN$ on the even sector; the annihilation $a_{2}a_{3}$ kills the record vacuum while its Hermitian completion $a_{2}a_{3} + a^{\dagger}_{3}a^{\dagger}_{2}$ carries it to $\ket{11}$; the quartic element $iN_{0}(a^{\dagger}_{2}a^{\dagger}_{3} - a_{3}a_{2})$ is Hermitian, even, kills the joint vacuum and fails to commute with the total number, and its rotation at $\pi/2$, entered in closed form, is a unitary, even map carrying $\psi \otimes \ket{00}$ to the two-rung occupation copy, which is even, induces $\EN$, and equals $W$ in the record basis $\ket{00} \pm \ket{11}$.
+\emph{Part D: the preparation.} $\varphi$ is even and a Witt vacuum with Thouless amplitude $1$; the hops, the annihilation and the Cartan elements annihilate the record vacuum while the pair creation carries it to $\ket{11}$; the rational pairing rotor is unitary, even, and carries $\ket{00}$ to $\tfrac35\ket{00} + \tfrac45\ket{11}$; ten number-conserving generators commute with the total number, and the enumeration of joint basis states at the required number and parity leaves only the record vacuum for both even system states; a beam splitter between the pair and a rung at $(\tfrac35, \tfrac45)$ moves weight $\tfrac{16}{25}$ out of $\ket{11}$; the system pairing $1 + (a^{\dagger}_{0}a^{\dagger}_{1} - a_{1}a_{0})$, conjugated by the two system-record swaps and followed by $C$, is an even map inducing $2\EN$ on the even sector; the annihilation $a_{2}a_{3}$ kills the record vacuum while its Hermitian completion $a_{2}a_{3} + a^{\dagger}_{3}a^{\dagger}_{2}$ carries it to $\ket{11}$; the quartic element $I_{4}N_{0}(a^{\dagger}_{2}a^{\dagger}_{3} - a_{3}a_{2})$ is Hermitian, even, kills the joint vacuum and fails to commute with the total number, and its rotation at $\pi/2$, entered in closed form, is a unitary, even map carrying $\psi \otimes \ket{00}$ to the two-rung occupation copy, which is even, induces $\EN$, and equals $W$ in the record basis $\ket{00} \pm \ket{11}$.
 
 \emph{Part E: the stored coherence.} The lifted pair is pure and even; its pair marginal is the classical shared bit and equals the descent; the marginal of each of the two modes is $\operatorname{diag}(\tfrac{16}{25}, \tfrac{9}{25})$; the record marginal has trace $1$ and determinant $\tfrac{144}{625}$; the lifted state equals $c\ket{00}\ket{+} + s\ket{11}\ket{-}$; the partial-lift factors $1, \tfrac{7}{25}, 0, -\tfrac{7}{25}$ at $A = 0, \tfrac34, 1, \tfrac43$.
 

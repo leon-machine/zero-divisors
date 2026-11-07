@@ -1,7 +1,7 @@
 ---
 id: synthesis.no-120-excludes-hierarchical-second-stage
 kind: claim
-version: 1
+version: 2
 title: 'Without a 120 the solar angle excludes Premise (H)'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Dirac mass matrices named as such)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -38,6 +42,10 @@ lineage:
   - synthesis.solar-angle-light-plane-sum-rule
   - neutrino.h-second-stage-hierarchical
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The phrase "the Dirac matrices", which here means the Dirac mass matrices of the charged fermions and neutrinos (family matrices, which the conventions allow), is written "the Dirac mass matrices", so that it is not read as the Dirac gamma matrices; wording only, the mathematics unchanged.'
   open_problem: op.second-order-breaking
   note: >-
     Largely a corollary of the stored solar-angle sum rule, whose clauses (iii) and (iv) already

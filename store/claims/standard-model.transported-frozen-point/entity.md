@@ -1,7 +1,7 @@
 ---
 id: standard-model.transported-frozen-point
 kind: claim
-version: 5
+version: 6
 title: The transported frozen point
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, notation, Q(I) for the square of a vector in the proof
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -45,6 +49,10 @@ locators:
   label: prop:lift
   line: 1768
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. In the proof the square of the vector I, written as the inner product of I with itself, is now Q(I) (house style); no change of content.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

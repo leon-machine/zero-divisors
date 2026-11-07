@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 kind: claim
-version: 2
+version: 3
 title: 'On transport the frozen-point integrand is a quarter of the Weyl square'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Weyl square as a scalar of the Weyl map)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -56,6 +60,10 @@ lineage:
   - synthesis.imported-miskovic-olea-identity
   - synthesis.promoted-norm-weyl-clock-flat-weight
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The Weyl square in (iii) and the one-liner is written (1/2)<W(a ^ b) W(d_b ^ d_a)>_0 for the Weyl map W, which equals (1/4) W_{abcd} W^{abcd} (the dictionary''s Kretschmann identity applied to W; checked exactly in scratch on a random pair-symmetric operator on the bivectors of Cl(1,3), 212 = 212), the components kept as a labelled reading; (v), on the closed Riemannian S^2 x S^2, and the proof''s bivector-valued two-forms and component Weyl basis stay, declared outside_ga (other).'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -90,6 +98,9 @@ extraction:
     \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}; Chern and Simons 1974 is
     \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}.
 
+outside_ga:
+  kind: other
+  why: 'The proof and its check work with the field strength as a bivector-valued two-form in frame components and with a basis of Weyl tensors built as component arrays (Kulkarni-Nomizu products), and clause (v) integrates the component Weyl square over the closed Riemannian S^2 x S^2, beyond one flat chart; the statement''s Weyl square is given as the scalar of the Weyl map.'
 ---
 
 ## formal
@@ -101,9 +112,9 @@ Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tra
 \epsilon(I, V, F, F) \;=\; \epsilon(I, X, F, F) \;=\; \ip{X}{I}\,\epsilon_{X}(F, F)
 \]
 for every such $I$ and every $\Lambda$.
-\item[(iii)] \emph{(It is the Weyl square; proved.)} $\epsilon_{X}(F, F) = \tfrac14\,W_{abcd}W^{abcd}$ times the volume form (components in an orthonormal frame of the derived metric, a labelled reading of the Weyl part $\mathcal{W}$); the Cotton block does not contribute. So for the frozen point ($Q(I) = \Lambda/3$, $\ip{X}{I} = 1$) the frozen-point functional evaluated on the series' transport is, in the stored normalisation up to the overall constant,
+\item[(iii)] \emph{(It is the Weyl square; proved.)} $\epsilon_{X}(F, F) = \tfrac12\langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0}$ times the volume form, $\mathcal{W}$ the Weyl part of the curvature (in components $\tfrac14\,W_{abcd}W^{abcd}$ in an orthonormal frame of the derived metric); the Cotton block does not contribute. So for the frozen point ($Q(I) = \Lambda/3$, $\ip{X}{I} = 1$) the frozen-point functional evaluated on the series' transport is, in the stored normalisation up to the overall constant,
 \[
-\frac{1}{Q(I)}\int \epsilon(I, V, F, F) \;=\; \frac{3}{4\Lambda}\int W_{abcd}W^{abcd}\,\mathrm{vol},
+\frac{1}{Q(I)}\int \epsilon(I, V, F, F) \;=\; \frac{3}{2\Lambda}\int \langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0}\,\mathrm{vol} \;=\; \frac{3}{4\Lambda}\int W_{abcd}W^{abcd}\,\mathrm{vol},
 \]
 the Weyl (conformal gravity) action with coupling fixed by the prefactor, for every torsion-free field, Einstein or not.
 \item[(iv)] \emph{(The quadratic densities on the locus; proved.)} The bilinear forms on $\Lambda^{2}(X^{\perp})$ invariant under the stabiliser of $X$ are: symmetric, a two-dimensional space spanned by the Killing form $K(F, G) = \langle FG\rangle_{0}$ and $\epsilon_{X}$; antisymmetric, none. Under the internal reflection in a spacetime vector, with the spacetime orientation fixed, $K$ is even and $\epsilon_{X}$ odd; under parity in the usual combined sense $\epsilon_{X}(F, F)$, the Weyl square, is even and $K(F \wedge F)$, on the locus the Pontryagin density of the Weyl curvature, is odd. In four dimensions $K(F \wedge F)$ is the Chern form, $d$ of the Chern-Simons form $\langle A \wedge dA\rangle_{0} + \tfrac13\langle A \wedge (A \times A)\rangle_{0}$ of any $\Cl(2,4)$ connection $A$. The pairings of $F$ with the frame legs $DX \wedge DX$ allowed by the same forms, $K(DX \wedge DX, F)$ and $\epsilon_{X}(DX \wedge DX, F)$, vanish on the locus.
@@ -118,4 +129,4 @@ The open problem asks whether transport fixes the frozen-point MacDowell-Mansour
 The series writes its gravitational action as a squared curvature seen from a special fixed point, the frozen point. This result asks what that action becomes when it is fed the series' own notion of transport, the connection that carries the conformal geometry of spacetime. The answer is that the frozen point drops out except as an overall factor, and what remains is the action of a different theory, conformal gravity, which only measures tidal distortion and whose equations are of fourth order. With only the series' transport and its canonical marker, this is the one action of its kind that is not purely topological. Einstein's equations appear only when the action is varied over a larger family of connections that keep the frozen point fixed. So the frozen point's job in the action is to choose which fields are varied, not to shape the formula.
 
 ## one-liner
-On the tractor gauge field of every torsion-free field ($F \cdot X = 0$), $\epsilon(Y, X, F, F)$ is independent of $Y$ beyond $\ip{X}{Y}$, so in the store's orientation the frozen-point integrand is $\epsilon(I, V, F, F) = \epsilon(I, X, F, F) = \ip{X}{I}\,\tfrac14 W_{abcd}W^{abcd}$ for every $I$ and $\Lambda$: on transport the frozen-point functional is $\tfrac{3}{4\Lambda}$ times the conformal-gravity action; with the canonical tractor alone the only density quadratic in $F$ beyond the Chern form on that locus is this Weyl square (not topological), and none with frame legs has an Einstein-Hilbert term, so the Einstein equations come from varying over connections preserving $I$.
+On the tractor gauge field of every torsion-free field ($F \cdot X = 0$), $\epsilon(Y, X, F, F)$ is independent of $Y$ beyond $\ip{X}{Y}$, so in the store's orientation the frozen-point integrand is $\epsilon(I, V, F, F) = \epsilon(I, X, F, F) = \ip{X}{I}\,\tfrac12\langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0}$ (the Weyl square, $\tfrac14 W_{abcd}W^{abcd}$) for every $I$ and $\Lambda$: on transport the frozen-point functional is $\tfrac{3}{4\Lambda}$ times the conformal-gravity action; with the canonical tractor alone the only density quadratic in $F$ beyond the Chern form on that locus is this Weyl square (not topological), and none with frame legs has an Einstein-Hilbert term, so the Einstein equations come from varying over connections preserving $I$.

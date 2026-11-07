@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-heat-kernel-coefficients-and-background-field-gauge
 kind: claim
-version: 1
+version: 2
 title: 'Imported: heat-kernel coefficients and the background-field gauge'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'D. V. Vassilevich, Heat kernel expansion: user''s manual, Phys. Rep. 388 (2003), 279--360, arXiv:hep-th/0306138.'
@@ -28,6 +32,10 @@ imported_from:
   key: Abbott1981
   doi: 10.1016/0550-3213(81)90371-0
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (imported) and left in the source''s language: the heat-kernel coefficients are quoted for a Laplace-type operator on a vector bundle over a manifold without boundary, in the sources'' tensor notation and curvature sign, and the global trace over a closed manifold is beyond one flat chart; a GTG restatement of a_4 would need the Euclidean-signature curvature sign, which the store does not fix, so no translation is made; status imported.'
   note: >-
     Imported so that the one-loop running coefficients can pin the heat-kernel coefficient, the background-field
     gauge and the determinant weights instead of citing them from memory. Checked on 2026-11-01 against
@@ -45,6 +53,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Created by the maintainer pass of 2026-11-01 (the heat-kernel coefficient and the background-field gauge as a Fact, by Leon''s list of imports).'
+outside_ga:
+  kind: imported
+  why: 'The heat-kernel coefficients are quoted as Vassilevich and DeWitt state them, for a Laplace-type operator on a vector bundle over a manifold without boundary in tensor notation (g^{mu nu}, E_{;kk}, Ric, Riem, Omega_{ij}) and the sources'' Euclidean curvature sign, for which the store fixes no GTG sign; the global trace over a closed manifold is beyond one flat chart, and the coefficients are used as numbers.'
 ---
 
 ## formal

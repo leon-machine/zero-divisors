@@ -1,7 +1,7 @@
 ---
 id: synthesis.univalence-from-even-stationary-dynamics
 kind: claim
-version: 4
+version: 5
 title: 'Univalence from even stationary dynamics'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, Majorana generators renamed mu_j, apart from the spacetime vectors in J = e_2e_3
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -48,6 +52,10 @@ lineage:
   motivated_by:
   - singularity.p-univalence
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The Majorana generators were written e_{2k-1}, e_{2k}, so e_2 and e_3 named mode generators while J = e_2e_3 names the spacetime transverse bivector in the same statement; the Majoranas are now mu_j, and the proof of (4) writes a + a* where it had sigma_x, sigma_k being the parity element here; a pure notation change."
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -82,9 +90,9 @@ extraction:
 ---
 
 ## formal
-Let the boundary modes $a_1, \dots, a_n$ generate the CAR algebra, realised on Fock space as the spinor module of the Clifford algebra of their $2n$ Majorana generators $e_{2k-1} = a_k + a_k^*$, $e_{2k} = J(a_k^* - a_k)$, with $J = e_{2}e_{3}$ the complex unit of the boundary modes, which commutes with them and squares to $-1$, the Fock space's scalars being $\mathrm{span}\{1, J\}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), with parity the chirality (Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and let $\alpha$ be the grading.
+Let the boundary modes $a_1, \dots, a_n$ generate the CAR algebra, realised on Fock space as the spinor module of the Clifford algebra of their $2n$ Majorana generators $\mu_{2k-1} = a_k + a_k^*$, $\mu_{2k} = J(a_k^* - a_k)$, with $J = e_{2}e_{3}$ the complex unit of the boundary modes, which commutes with them and squares to $-1$, the Fock space's scalars being $\mathrm{span}\{1, J\}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), with parity the chirality (Fact \claimref{rungs.imported-fock-representation-bogoliubov-group}), and let $\alpha$ be the grading.
 \begin{enumerate}
-\item The grading is inner and is the rotation by $\pi$ in every mode plane: with $B_k = e_{2k-1}e_{2k}$ and $R_k(\theta) = \cos(\theta/2) - B_k\sin(\theta/2)$, $R_k(\pi) = -B_k$ negates the two generators of the $k$-th plane and fixes the others, and $\alpha = \operatorname{Ad}(B_1 \cdots B_n)$, the volume element of the mode space; on Fock space it is implemented by $\Gamma = \prod_k (1 - 2N_k)$.
+\item The grading is inner and is the rotation by $\pi$ in every mode plane: with $B_k = \mu_{2k-1}\mu_{2k}$ and $R_k(\theta) = \cos(\theta/2) - B_k\sin(\theta/2)$, $R_k(\pi) = -B_k$ negates the two generators of the $k$-th plane and fixes the others, and $\alpha = \operatorname{Ad}(B_1 \cdots B_n)$, the volume element of the mode space; on Fock space it is implemented by $\Gamma = \prod_k (1 - 2N_k)$.
 \item If $H = H^*$ is even, $\alpha(H) = H$, every state with density a function of $H$, in particular every Gibbs state $e^{-\beta H}/Z$ at real $\beta$ ($\beta = 0$ included), is even: $\omega \circ \alpha = \omega$.
 \item Every state invariant under the flow $\operatorname{Ad}(e^{JtH})$ of an even $H$ is even if and only if the spectra of $H$ on the even and odd Fock sectors are disjoint. For $H = \sum_k \omega_k N_k$ this holds if and only if no signed sum $\sum_{k \in S} \varepsilon_k\omega_k$, $\varepsilon_k = \pm 1$, over a set $S$ of odd size vanishes. It holds when every weight is an odd multiple of one $\omega_0 \neq 0$ (a common nonzero weight in particular), and then $\alpha$ is the flow itself at time $\pi/\omega_0$.
 \item It fails at a zero-weight mode, where $\tfrac12(1 + \tfrac12(a + a^*))$ is stationary and not even, and at an odd resonance: for weights $(1,2,3)$ the state $\tfrac18(1 + \tfrac12(x + x^*))$, $x = a_1a_2a_3^*$, is stationary, positive and not even.

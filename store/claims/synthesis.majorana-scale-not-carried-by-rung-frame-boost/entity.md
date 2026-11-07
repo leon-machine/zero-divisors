@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-not-carried-by-rung-frame-boost
 kind: claim
-version: 2
+version: 3
 title: 'The rung-frame boost does not carry the Majorana scale'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, notation clash on N resolved'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -63,6 +67,10 @@ lineage:
   - synthesis.majorana-scale-free-input
   - synthesis.majorana-scale-free-on-pati-salam-route
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The statement uses N for the Hermitian norm of the rung component (N = ||c||_*, v^2 = 2N); one sentence of the proof used N for the ratio M_P/H; it now says N = M_P/H there.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

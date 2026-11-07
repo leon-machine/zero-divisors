@@ -24,6 +24,10 @@ lineage:
   - synthesis.slot-parity-decides-hypothesis-s
   - synthesis.anomaly-freedom-forces-slot-content
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'One-liner only: it said the premise by itself forces odd slots and the chirality of (S), dropping the hypotheses under which the cited theorem (synthesis.even-slots-need-a-spectator-generator (ii), (iii)) derives that; they are restored. No version change (one-liner only).'
   maintainer_pass_2026_10_23_b:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -48,4 +52,4 @@ The composite's three pair modes sit on three rungs of a floor of the tower, and
 Each particle in this framework is built from a few basic quantum modes, sitting on a few levels of a ladder of mathematical structures. This assumption says that the operators describing two particular modes of a particle, its slots, are built only from the levels that particle itself occupies, and borrow nothing from the shared spacetime levels underneath. With that restriction the slots must behave like fermions of a particular kind, which gives the handedness of particles the framework needs. It is a second, independent argument for the same conclusion that anomaly cancellation gives.
 
 ## one-liner
-Premise: a composite's slot operators lie in the floor of its own five rungs and borrow no generator from the conformal base $\Cl(2,4)$, which by itself forces odd slots and (S)'s chirality.
+Premise: a composite's slot operators lie in the floor of its own five rungs and borrow no generator from the conformal base $\Cl(2,4)$; for two-level, $U(2)$-covariant slot operators that commute or anticommute with every pair operator, this forces odd slots and (S)'s chirality as the tower grading.

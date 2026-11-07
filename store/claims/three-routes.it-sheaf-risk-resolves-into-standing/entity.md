@@ -1,7 +1,7 @@
 ---
 id: three-routes.it-sheaf-risk-resolves-into-standing
 kind: claim
-version: 6
+version: 7
 title: It is a sheaf, and the risk resolves into the standing hypothesis
 status: proved
 region: three-routes
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, proof brought into line with the corrected statement on the even part
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.three-routes.ladder-bundle-even-subbundle
@@ -47,6 +51,10 @@ locators:
   label: prop:issheaf
   line: 132
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The last sentence of the proof still said that the even part A^+ exists only in the twisted sense, against the statement as corrected on 2026-10-23 (the even part glues on a twisted ladder bundle and does not see the twist); it now says that the sign of the ladder leaves sigma, hence A^+, unchanged and that only the ladder bundle needs the twist. Statement unchanged."
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport
 kind: claim
-version: 4
+version: 5
 title: 'Imported: the Hadamard parametrix of the squared Dirac operator'
 status: imported
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (principal part as the physical gradient)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -56,6 +60,10 @@ imported_from:
   locator: 'Eqs. (14), (26), (52)'
   doi: 10.1103/PhysRevD.101.125019
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The principal part of the normalised operator is written (g^mu . g^nu) d_mu d_nu, the square of the physical gradient hb^T(nabla) at principal order, with g^{mu nu} d_mu d_nu as a labelled reading (g^{mu nu} = g^mu . g^nu by the GTG definition); the existing source_formal is kept; status imported.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -149,7 +157,7 @@ Let $(\hb, \Omega)$ be a gravitational field on four-dimensional flat spacetime 
 \item[(a)] \emph{(Bundle parametrix; Friedlander; B\"ar, Ginoux and Pf\"affle, Ch.~2.)} A normally hyperbolic operator $P$ on a vector bundle over $N$ (principal part that of the d'Alembertian of $g$) is, uniquely, the d'Alembertian of a connection $\nabla^{P}$ plus a zero-order term. Its Hadamard coefficients are the unique sections fixed by transport equations along the geodesics from $x'$ with the identity at coincidence, and the leading one is $\Delta^{1/2}(x, x')\,\Pi(x, x')$, $\Pi(x, x')$ the parallel transport of $\nabla^{P}$ along the geodesic from $x'$ to $x$. In four dimensions the Hadamard parametrix of $P$ is, up to its normalising constant, $U/\sigma + V\log\sigma + W$ with $U = \Delta^{1/2}\Pi$ and $V$, $W$ smooth.
 \item[(b)] \emph{(The squared Dirac operator; Lichnerowicz.)} Let $\psi$ be the free Dirac field of mass $m \ge 0$ on $(\hb, \Omega)$, with covariant derivative $D_{a}\psi = a\cdot\nabla\psi + \tfrac12\Omega(a)\psi$ and Dirac operator $D = g^{\mu}D_{e_{\mu}}$, $g^{\mu} = \hb^{T}(e^{\mu})$; on massive lines the field theory's unit stands outside the Clifford product, as the right unit $R_{I_{4}}: \psi \mapsto \psi I_{4}$. The squared operator $(R_{I_{4}}D - m)(R_{I_{4}}D + m) = -(D^{2} + m^{2})$ is normally hyperbolic, and by the Lichnerowicz formula ($D^{2}$ is the d'Alembertian of the spin connection plus a multiple of the scalar curvature) its connection $\nabla^{P}$ is the spin connection. So $\Pi(x, x')$ is left multiplication by the rotor $R$ of the geodesic $\gamma$ from $x'$ ($t = 0$) to $x$ ($t = 1$), $\dot R = -\tfrac12\Omega(\dot\gamma)R$, $R = 1$ at $t = 0$ (parallel transport, Fact \claimref{synthesis.imported-gtg-dictionary}(ii)), and the leading Hadamard coefficient of the squared Dirac operator is $U = \Delta^{1/2}R$.
 \item[(c)] \emph{(The $I_{5}0$ prescription; Kay and Wald; Sahlmann and Verch, Sec.~5.1.)} The distributions $1/\sigma$ and $\log\sigma$ of the Hadamard form are the $\epsilon \to 0^{+}$ limits of their regularisations by $\epsilon(t(x) - t(x'))$ and $\epsilon^{2}$, the infinitesimal shift being that of a spacetime vector, so that its unit is the central pseudoscalar $I_{5} = I_{4}e$ of the odd extension $\Cl(2,3)$, which commutes with every vector, and the regularised $\sigma$ a number of $\mathrm{span}\{1, I_{5}\}$ (on the flat field $\tfrac12 Q(x - x' - \epsilon I_{5}e_{0})$, \claimref{std-algebra.complexification-is-the-odd-extension}), for a time function $t$ (a smooth function with future-directed timelike unit gradient), as in the source; the Hadamard form so defined, for the scalar field and for vector-valued fields such as the Dirac field, does not depend on the choice of time function. This concerns the bulk distributions on $N\times N$.
-\item[(d)] \emph{(Fundamental solutions in four dimensions; Friedlander; B\"ar, Ginoux and Pf\"affle, Ch.~2; for scalar and vector fields Poisson, Secs.~4.3.2, 4.4.2.)} On a geodesically convex, causally convex domain $N$ (a causal domain), with $\sigma$ positive on timelike separation, a time function $t$, and $P$ normalised so that its principal part is $g^{\mu\nu}\partial_{\mu}\partial_{\nu}$ (on the flat field the d'Alembertian $\partial_{t}^{2} - \nabla^{2}$), the retarded and advanced fundamental solutions of $P$ ($PG_{\pm} = \delta$, $G_{\pm}(\cdot, x')$ supported in $J^{\pm}(x')$) are
+\item[(d)] \emph{(Fundamental solutions in four dimensions; Friedlander; B\"ar, Ginoux and Pf\"affle, Ch.~2; for scalar and vector fields Poisson, Secs.~4.3.2, 4.4.2.)} On a geodesically convex, causally convex domain $N$ (a causal domain), with $\sigma$ positive on timelike separation, a time function $t$, and $P$ normalised so that its principal part is $(g^{\mu}\cdot g^{\nu})\,\partial_{\mu}\partial_{\nu}$, the square of the physical gradient $\hb^{T}(\nabla) = g^{\mu}\partial_{\mu}$ at principal order (in components $g^{\mu\nu}\partial_{\mu}\partial_{\nu}$; on the flat field the d'Alembertian $\partial_{t}^{2} - \nabla^{2}$), the retarded and advanced fundamental solutions of $P$ ($PG_{\pm} = \delta$, $G_{\pm}(\cdot, x')$ supported in $J^{\pm}(x')$) are
 \[
 G_{\pm}(x, x') = \frac{1}{4\pi}\,\theta\bigl(\pm(t(x) - t(x'))\bigr)\bigl[U(x, x')\,\delta(\sigma) + V(x, x')\,\theta(\sigma)\bigr],
 \]

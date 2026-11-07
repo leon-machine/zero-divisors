@@ -1,7 +1,7 @@
 ---
 id: interior.exact-parallelism-convergence-rate
 kind: claim
-version: 5
+version: 6
 title: Exact parallelism, and the convergence rate
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Christoffel computation as D on the physical frame)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -43,6 +47,10 @@ locators:
   label: lem:parallel
   line: 612
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof step (1) is written with the covariant derivative D on the physical frame g_mu = hb^{-1}(e_mu) instead of Christoffel symbols: the Koszul identity for a torsion-free, product-preserving D gives D_{e_tau} g_i = (d_tau log a_i) g_i, which is the old Gamma^i_{tau i} = d_tau log a_i by Fact (ii) (Gamma^rho_{mu nu} = g^rho . D_{e_mu} g_nu), kept as a labelled reading; the same computation, so the mathematics is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

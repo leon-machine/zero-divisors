@@ -1,7 +1,7 @@
 ---
 id: synthesis.sds-clausius-fixes-area-constant
 kind: claim
-version: 4
+version: 5
 title: 'Clausius on Schwarzschild-de Sitter fixes the area constant'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: consistency pass, normalisation of the null pair stated in proof (iv)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -39,6 +43,10 @@ lineage:
   motivated_by:
   - synthesis.de-sitter-entropy-pi-n-squared
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof (iv): the value Q(I_Lambda) = Lambda/3 of the frozen point n_inf + (Lambda/6) n_0 holds in the normalisation n_0.n_inf = +1 that the check uses (n_0 = (e_+ + e_-)/2, n_inf = e_+ - e_-) and is -Lambda/3 in T01s n_0.n_inf = -1; the proof now says which (conventions, notation, the two normalisations); the mathematics is unchanged.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

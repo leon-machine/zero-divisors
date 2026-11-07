@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-type-second-stages-are-twins
 kind: claim
-version: 1
+version: 2
 title: An antisymmetric one-type second stage is the twin of a symmetric one at all orders
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Dirac mass matrices named as such)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -36,6 +40,10 @@ lineage:
   motivated_by:
   - synthesis.solar-angle-light-plane-sum-rule
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The phrase "the Dirac matrices", which here means the Dirac mass matrices of the charged fermions and neutrinos (family matrices, which the conventions allow), is written "the Dirac mass matrices", so that it is not read as the Dirac gamma matrices; wording only, the mathematics unchanged.'
   open_problem: op.second-order-breaking
   note: Constructive route on op.second-order-breaking, asking whether the solar sum rule's exclusion of one-type second stages is two statements or one, and what part of a second stage the data can see. The content is the exact twin identity, valid at all orders. Whether the one-type exclusion survives beyond the breaking lemma's order, in particular on the far root, is not decided here; a floating-point exploration is reported in the proof text only, with a counterexample region.
 ---

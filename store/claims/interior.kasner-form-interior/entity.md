@@ -1,7 +1,7 @@
 ---
 id: interior.kasner-form-interior
 kind: claim
-version: 5
+version: 6
 title: Kasner form of the interior
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (geodesic condition as D-parallelism)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -42,6 +46,10 @@ locators:
   label: lem:kasnerform
   line: 581
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The proof''s geodesic step is written as D_{e_tau} g_tau = 0 on the physical frame, from Q(g_tau) = 1 and g_tau . g_nu = 0 by the Koszul identity for the torsion-free, product-preserving D, with Gamma^mu_{tau tau} = 0 as a labelled reading; the same computation.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing
 kind: claim
-version: 1
+version: 2
 title: 'A second doublet of one family coupling gives no quark mixing'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, imaginary unit in the Jarlskog identity written as I_4'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -38,6 +42,10 @@ lineage:
   motivated_by:
   - standard-model.bidoublet-complex
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The proof''s quotation of Jarlskog''s identity writes the unit as I_4 (det[H_u, H_d] = 2 I_4 J prod ...), matching the restated Fact synthesis.imported-jarlskog-commutator-identity (numbers in span{1, I_4}).'
   open_problem: op.rung-unit
   note: >-
     The problem's third line of attack (find the second coupling that splits up-type from down-type

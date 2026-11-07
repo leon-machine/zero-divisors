@@ -38,6 +38,10 @@ lineage:
   - pred.boundary-mode-density
   - synthesis.de-sitter-temperature-frozen-point-norm
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'One-liner: Q(I) is written Q(I_Lambda), the frozen point of the formal level, so that the bare I is not read as the pseudoscalar; no version change.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -66,4 +70,4 @@ The count of the horizon's boundary modes needs one hypothesis: that they are co
 The series condenses the smallness of the cosmological constant into one large number, $N$, about $10^{61}$. An earlier paper guessed that $N$ counts the universe's own horizon modes, roughly as the square root of their number, but never did the count. With the horizon's modes now built, the count can be done. The horizon's entropy comes out as exactly $\pi$ times $N$ squared, about $3 \times 10^{122}$. If the horizon's modes are counted the way the series counts a black hole's, their number is $\pi N^{2}/\ln 2$. So the guess was right in form: $N$ is, up to a factor of about $1.8$, the square root of the horizon's information capacity. What fixes the counting rule's coefficient is still open, as it is for black holes.
 
 ## one-liner
-The cosmological horizon's entropy is exactly $\pi N^{2} = \pi M_{P}^{2}/Q(I)$, and under the black hole's counting rule its mode count is $4\pi\kappa_{c}N^{2}$, so in the capacity convention $N = \sqrt{C/\pi}$ for its capacity $C$.
+The cosmological horizon's entropy is exactly $\pi N^{2} = \pi M_{P}^{2}/Q(I_{\Lambda})$, and under the black hole's counting rule its mode count is $4\pi\kappa_{c}N^{2}$, so in the capacity convention $N = \sqrt{C/\pi}$ for its capacity $C$.

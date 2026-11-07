@@ -1,7 +1,7 @@
 ---
 id: correspondence.one-statement-three-languages
 kind: claim
-version: 5
+version: 6
 title: "One statement in three languages"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (twistor-index name of the infinity bivector)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -39,6 +43,10 @@ locators:
   label: cor:threelang
   line: 566
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The infinity bivector is named I := Psi(I_g) in the formal and technical levels (it was written I_{alpha beta}, a twistor-index name; the formal already wrote eps(I ^ I)); the index form stays as a labelled reading; notation only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -70,7 +78,7 @@ extraction:
 ---
 
 ## formal
-Define the \emph{infinity bivector} of a scale $g$ (Penrose's infinity twistor) as $I_{\alpha\beta} := \Psi(I_g) \in \Lambda^2\CS$, a bivector of the conformal spinor space, with $I_g = (1,0,\rho_g)$ the scale tractor of Fact \claimref{correspondence.imported-vacuum-equations-scale-tractor}. Then, on the region of invertibility of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with covariant constancy taken for the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} and its action on $\CS$:
+Define the \emph{infinity bivector} of a scale $g$ (Penrose's infinity twistor, $I_{\alpha\beta}$ in twistor indices) as $I := \Psi(I_g) \in \Lambda^2\CS$, a bivector of the conformal spinor space, with $I_g = (1,0,\rho_g)$ the scale tractor of Fact \claimref{correspondence.imported-vacuum-equations-scale-tractor}. Then, on the region of invertibility of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with covariant constancy taken for the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} and its action on $\CS$:
 \begin{enumerate}
 \item vacuum with $\Lambda = 0$ holds if and only if the infinity bivector is covariantly constant and \emph{simple} (a line of $\PCS$: the infinity line);
 \item the Einstein condition with $\Lambda \neq 0$ holds if and only if the infinity bivector is covariantly constant with $\varepsilon(I\wedge I) = \Lambda/3 \neq 0$: a non-simple bivector, which is no line at all.
@@ -78,7 +86,7 @@ Define the \emph{infinity bivector} of a scale $g$ (Penrose's infinity twistor) 
 Field equations, tractor parallelism, and infinity-bivector constancy are one statement in three languages, and the classical fact of twistor theory that the infinity bivector is simple precisely when $\Lambda = 0$ is the transport principle's nullity criterion (Theorem \claimref{correspondence.spinor-identification}(2)) applied to Fact \claimref{correspondence.imported-vacuum-equations-scale-tractor}.
 
 ## technical
-For a gravitational field on flat spacetime, the infinity bivector of a scale $g$ of its derived metric (Penrose's infinity twistor) is $I_{\alpha\beta} = \Psi(I_g) \in \Lambda^2\CS$, the image under the spinor identification of the scale tractor $I_g = (1, 0, \rho_g)$. On the region of invertibility, vacuum with $\Lambda = 0$ holds if and only if the infinity bivector is covariantly constant for the tractor gauge field $\Omega_{T}$ acting on conformal spinors and simple, a line of $\PCS$ (the infinity line); the Einstein condition with $\Lambda \neq 0$ holds if and only if it is covariantly constant with $\varepsilon(I\wedge I) = \Lambda/3 \neq 0$, a non-simple bivector that is no line at all.
+For a gravitational field on flat spacetime, the infinity bivector of a scale $g$ of its derived metric (Penrose's infinity twistor) is $I = \Psi(I_g) \in \Lambda^2\CS$, the image under the spinor identification of the scale tractor $I_g = (1, 0, \rho_g)$. On the region of invertibility, vacuum with $\Lambda = 0$ holds if and only if the infinity bivector is covariantly constant for the tractor gauge field $\Omega_{T}$ acting on conformal spinors and simple, a line of $\PCS$ (the infinity line); the Einstein condition with $\Lambda \neq 0$ holds if and only if it is covariantly constant with $\varepsilon(I\wedge I) = \Lambda/3 \neq 0$, a non-simple bivector that is no line at all.
 
 So field equations, tractor parallelism and infinity-bivector constancy are one statement in three languages, and the classical fact that the infinity bivector is simple exactly when $\Lambda = 0$ is the nullity criterion of the spinor identification (null vectors are simple bivectors) applied to the scale tractor.
 

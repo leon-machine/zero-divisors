@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
 kind: claim
-version: 3
+version: 4
 title: 'Scalars coupled to the hidden scale stay blue on a Kasner approach'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (scalar kinetic term in GTG)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -57,6 +61,10 @@ lineage:
   - standard-model.dating-descent
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The spectator scalar''s kinetic term is written -Q(hb^T(nabla phi))/2 with the volume factor sqrt|g_4| = det(hb_4)^{-1}, and the proof''s inverse-metric weight g^{tau tau} g^{jj} as Q(g^tau) Q(g^j) for the physical coframe g^mu = hb^T(e^mu) (the same scalars for a diagonal field), the components kept as labelled readings; F_{mu y} F^{mu y} stays (field-strength components, which the conventions allow); notation only.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -102,7 +110,7 @@ extraction:
 ---
 
 ## formal
-Let a gravitational field on flat spacetime have, near a wall at $\tau = 0$, the synchronous diagonal derived metric $d\tau^{2} - \sum_{j=1}^{3}\tau^{2p_{j}}(dx^{j})^{2} - \tau^{2p_{h}}dy^{2}$, with three observed directions and the hidden direction $y$ of Proposition \claimref{synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands}, scale $b = \tau^{p_{h}}$, and $p_{1} + p_{2} + p_{3} + p_{h} = 1$, $p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + p_{h}^{2} \le 1$: the five-dimensional vacuum points (equality) and the points that five-dimensional stiff matter reaches (strict inequality; the analogue of Theorem \claimref{synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue} in five dimensions, standard and not in the store, which holds no five-dimensional stiff source). Let $\phi$ be a massless spectator scalar, constant along $y$, with four-dimensional action $\int d\tau\,d^{3}x\,\sqrt{|g_{4}|}\,b^{\lambda}\,(-\tfrac12 g^{\mu\nu}\partial_{\mu}\phi\,\partial_{\nu}\phi)$, $g_{4}$ the derived metric on the observed directions, and let $k$ lie along the principal axis $i$, $q = 1 - p_{i} > 0$, $s = k\tau^{q}/q$.
+Let a gravitational field on flat spacetime have, near a wall at $\tau = 0$, the synchronous diagonal derived metric $d\tau^{2} - \sum_{j=1}^{3}\tau^{2p_{j}}(dx^{j})^{2} - \tau^{2p_{h}}dy^{2}$, with three observed directions and the hidden direction $y$ of Proposition \claimref{synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands}, scale $b = \tau^{p_{h}}$, and $p_{1} + p_{2} + p_{3} + p_{h} = 1$, $p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + p_{h}^{2} \le 1$: the five-dimensional vacuum points (equality) and the points that five-dimensional stiff matter reaches (strict inequality; the analogue of Theorem \claimref{synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue} in five dimensions, standard and not in the store, which holds no five-dimensional stiff source). Let $\phi$ be a massless spectator scalar, constant along $y$, with four-dimensional action $\int d\tau\,d^{3}x\,\sqrt{|g_{4}|}\,b^{\lambda}\,(-\tfrac12 Q(\hb^{T}(\nabla\phi)))$, $g_{4}$ the derived metric on the observed directions and $\sqrt{|g_{4}|} = \det(\hb_{4})^{-1}$ its volume factor (in components $Q(\hb^{T}(\nabla\phi)) = g^{\mu\nu}\partial_{\mu}\phi\,\partial_{\nu}\phi$), and let $k$ lie along the principal axis $i$, $q = 1 - p_{i} > 0$, $s = k\tau^{q}/q$.
 \begin{enumerate}
 \item[(i)] \emph{(Order.)} The mode equation is $\ddot\phi + \alpha\dot\phi/\tau + k^{2}\tau^{-2p_{i}}\phi = 0$ with $\alpha = 1 + (\lambda - 1)p_{h}$; with $\phi = \tau^{(1-\alpha)/2}Z(s)$, $Z$ obeys Bessel's equation of order $\nu_{i} = |\lambda - 1|\,|p_{h}|/(2q)$. The order is $0$, the case of Theorem \claimref{synthesis.kasner-approach-gives-horizon-exit-and-index-three}, exactly when $(\lambda - 1)p_{h} = 0$.
 \item[(ii)] \emph{(Spectrum within an epoch.)} The adiabatic normalisation of $\phi = N\tau^{(1-\alpha)/2}H^{(1)}_{\nu}(s)$ has $|N|^{2} = \pi/(4q)$, free of $k$, and for $\nu_{i} > 0$ the exited spectrum along the axis $i$ has index $n - 1 = 3 - 2\nu_{i}$.

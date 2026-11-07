@@ -1,7 +1,7 @@
 ---
 id: mass.casimir-form-join
 kind: claim
-version: 7
+version: 8
 title: The Casimir form of the join
 status: proved
 region: mass
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 7
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Casimir contraction with the reciprocal basis)'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.mass.grip-mass-composite
@@ -51,6 +55,10 @@ locators:
   label: prop:casimir
   line: 766
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The Casimir C_2(W) and the invariant form Phi are written as sums over a basis of W paired with its reciprocal basis, (1/2) sum M_{e_alpha ^ e_beta} M_{e^alpha ^ e^beta}, which is the old (1/2) g^{alpha alpha''} g^{beta beta''} M_{alpha beta} M_{alpha'' beta''} by bilinearity of M (kept as a labelled reading); proof (1) and the evaluation of Phi(E, E) are rewritten the same way, the latter now stating the factor 1/2 explicitly (two products -1, Phi = -1, as before); the Gram matrix h and the matrices A(B) on CS stay (Gram and representation matrices the result is about); the mathematics is unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -100,7 +108,7 @@ extraction:
 ---
 
 ## formal
-Fix a composite $Z^{1}, \dots, Z^{N}$ of conformal spinors with Hermitian Gram matrix $h_{il} = \bar{Z}^{i}\cdot Z^{l}$. For a nondegenerate subspace $W$ of the ambient space with basis $(e_{\alpha})$ and inverse Gram matrix $(g^{\alpha\beta})$, put $M_{\alpha\beta} := M_{e_{\alpha}\wedge e_{\beta}}$ and $C_{2}(W) := \tfrac12\, g^{\alpha\alpha'}g^{\beta\beta'}M_{\alpha\beta}M_{\alpha'\beta'}$, the quadratic Casimir of the rotations of $W$ evaluated on the composite; $C_{2}(\Lambda^{2}\CS)$ is the conformal Casimir $C_{2}(\mathfrak{so}(2,4))$ of the composite, and for the frozen point $C_{2}(I_{\Lambda}^{\perp})$ is its de Sitter Casimir $C_{2}(\mathfrak{so}(1,4))$, both as quadratic forms on the moment components; in this normalisation $C_{2}(I_{\Lambda}^{\perp})$ is the de Sitter Casimir of the scalar-module convention of Fact \claimref{mass.imported-unitary-representations-de-sitter-group} (acting as $-m^{2}/H^{2}$). Let $I$ be a nonzero non-null ambient vector and $P = M(I)$ the grip of Definition \claimref{obj.mass.grip-mass-composite}. Then:
+Fix a composite $Z^{1}, \dots, Z^{N}$ of conformal spinors with Hermitian Gram matrix $h_{il} = \bar{Z}^{i}\cdot Z^{l}$. For a nondegenerate subspace $W$ of the ambient space with basis $(e_{\alpha})$ and reciprocal basis $(e^{\alpha})$, $\ip{e^{\alpha}}{e_{\beta}} = \delta^{\alpha}_{\beta}$, put $C_{2}(W) := \tfrac12 \sum_{\alpha,\beta} M_{e_{\alpha}\wedge e_{\beta}}\,M_{e^{\alpha}\wedge e^{\beta}}$ (in components $\tfrac12\, g^{\alpha\alpha'}g^{\beta\beta'}M_{\alpha\beta}M_{\alpha'\beta'}$, with $M_{\alpha\beta} := M_{e_{\alpha}\wedge e_{\beta}}$ and $(g^{\alpha\beta})$ the inverse Gram matrix), the quadratic Casimir of the rotations of $W$ evaluated on the composite; $C_{2}(\Lambda^{2}\CS)$ is the conformal Casimir $C_{2}(\mathfrak{so}(2,4))$ of the composite, and for the frozen point $C_{2}(I_{\Lambda}^{\perp})$ is its de Sitter Casimir $C_{2}(\mathfrak{so}(1,4))$, both as quadratic forms on the moment components; in this normalisation $C_{2}(I_{\Lambda}^{\perp})$ is the de Sitter Casimir of the scalar-module convention of Fact \claimref{mass.imported-unitary-representations-de-sitter-group} (acting as $-m^{2}/H^{2}$). Let $I$ be a nonzero non-null ambient vector and $P = M(I)$ the grip of Definition \claimref{obj.mass.grip-mass-composite}. Then:
 \begin{enumerate}
 \item $Q(P) = Q(I)\,\bigl(C_{2}(\Lambda^{2}\CS) - C_{2}(I^{\perp})\bigr)$;
 \item $C_{2}(\Lambda^{2}\CS) = \tr(h^{2}) - \tfrac14(\tr h)^{2}$, for any number of constituents;

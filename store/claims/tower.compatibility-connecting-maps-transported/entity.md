@@ -1,7 +1,7 @@
 ---
 id: tower.compatibility-connecting-maps-transported
 kind: claim
-version: 6
+version: 7
 title: 'Compatibility: the connecting maps, transported'
 status: proved
 region: tower
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T03, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: a statement in the matrix picture of the tower)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.tower.tower
@@ -44,6 +48,10 @@ locators:
   label: lem:compat
   line: 358
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7. Not rewritten: the result is the tower embedding transported into the matrix picture A (x) Mat_{2^k}(R) of the commuting-copies identifications (block doubling and the cornerwise corrector V_k), a statement about block matrices over the ground algebra as such; its proof already works with the Clifford elements (the twisted generators, the volume elements u_A and Omega_k, the plane idempotents) and reads their images. Declared outside_ga (bridge).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -60,6 +68,9 @@ extraction:
     date: 2026-10-21
     cited:
     - tower.commuting-copies
+outside_ga:
+  kind: bridge
+  why: 'the result is the tower embedding transported into the matrix picture A (x) Mat_{2^k}(R) of the commuting-copies identifications, block doubling followed by conjugation by a cornerwise block matrix over the ground algebra; the Clifford side (twisted generators, the volume elements u_A and Omega_k) is in the proof, and the statement is about the block matrices as such'
 ---
 
 ## formal

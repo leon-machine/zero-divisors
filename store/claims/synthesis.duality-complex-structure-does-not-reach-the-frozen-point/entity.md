@@ -1,7 +1,7 @@
 ---
 id: synthesis.duality-complex-structure-does-not-reach-the-frozen-point
 kind: claim
-version: 2
+version: 3
 title: 'The duality complex structure does not reach the frozen point'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field of sl(2, C) written as span{id, J})'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -47,6 +51,10 @@ lineage:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The standard identification so(1,3) = sl(2, C) is written with its complex unit named: so(1,3) with J = i_4 (left multiplication by the spacetime pseudoscalar on bivectors) as complex unit is sl(2) over span{id, J}; exact, since J^2 = -id and J commutes with the bracket by clause (i). What stays: the Gram matrices and Hessians of the pairings and the real 32 x 32 matrix of (iii), explicit matrices that are the point of the computation; the commutator product x times y is the GA commutator, not a cross product. The formal unit j of clauses (ii) to (iv), a scalar adjoined to the real pairing parameter tau, is left as it stands (outside this pass; listed for Leon).'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01
@@ -76,7 +84,7 @@ extraction:
 ## formal
 Work in $\Cl(2,4)$ in the chart of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} with $X = \nO$ and $I = \nInf + \rho\nO$ (Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector} for $\rho = \Lambda/6 \neq 0$). Let $i_{4} = e_{0}e_{1}e_{2}e_{3}$ and $J(B) = i_{4}B$ on spacetime bivectors, the Hodge star of Lemma \claimref{correspondence.lorentzian-duality-complex-structure}. For a Lie algebra $\mathfrak{g}$ of bivectors (commutator product) its commutant is the set of linear maps $T$ of $\mathfrak{g}$ with $T[x, y] = [x, Ty]$ for all $x, y$; a complex structure on $\mathfrak{g}$ making it a complex Lie algebra lies in it.
 \begin{enumerate}
-\item[(i)] \emph{(Duality is the Lorentz commutant; proved, standard.)} The commutant of $\so(1,3)$ is spanned by $\id$ and $J$, with $J^{2} = -\id$. The commutant of the stabiliser of $I$ (ten-dimensional) is $\mathbb{R}\,\id$ for every $\rho$, of de Sitter, anti-de Sitter and Poincar\'e type, and so are those of the parabolic algebra stabilising the line of $X$ (eleven-dimensional, the algebra that gauges the tractor field) and of $\so(2,4)$. Hence none of these carries a complex structure commuting with its bracket, and $J$ preserves neither the stabiliser of $I$ nor the parabolic algebra. This is the standard fact that $\so(1,3) \cong \mathfrak{sl}(2, \mathbb{C})$ is a complex Lie algebra and the others are not.
+\item[(i)] \emph{(Duality is the Lorentz commutant; proved, standard.)} The commutant of $\so(1,3)$ is spanned by $\id$ and $J$, with $J^{2} = -\id$. The commutant of the stabiliser of $I$ (ten-dimensional) is $\mathbb{R}\,\id$ for every $\rho$, of de Sitter, anti-de Sitter and Poincar\'e type, and so are those of the parabolic algebra stabilising the line of $X$ (eleven-dimensional, the algebra that gauges the tractor field) and of $\so(2,4)$. Hence none of these carries a complex structure commuting with its bracket, and $J$ preserves neither the stabiliser of $I$ nor the parabolic algebra. This is the standard fact that $\so(1,3)$, with $J$ as its complex unit, is a complex Lie algebra (the complex Lie algebra $\mathfrak{sl}(2)$ over $\mathrm{span}\{\id, J\}$) and the others are not.
 \item[(ii)] \emph{(The frozen-point pairing is the duality pairing; proved.)} On spacetime bivectors $\epsilon_{X}(B, B') := \epsilon(I, X, B, B') = -\langle B\,i_{4}\,B'\rangle_{0} = -K(B, JB')$ with $K(B, B') = \langle BB'\rangle_{0}$, for every $\rho$. With a formal unit $j$, $j^{2} = -1$, the pairings $\epsilon_{X} + \tau K$ at $\tau = \pm j$ are $\pm j K(B, (1 \pm jJ)B')$, the self-dual and anti-self-dual pairings.
 \item[(iii)] \emph{(Slot Hessian of the chiral family; proved.)} Vary the special-conformal slot $S$ of the unreduced field $\Omega - \nInf \wedge \hb^{-1} + \nO \wedge S$ (frame components, $\hb = 1$ at a point), whose spacetime block is $-\mathcal{R} + T_{S}$. The Hessian of $K(T_{S} \wedge T_{S})$ vanishes on the symmetric slot (lowered indices), the symmetric and antisymmetric slots decouple for both pairings, the Hessian of $\epsilon_{X}$ has rank sixteen, and on the antisymmetric slot $\det(H_{\epsilon} + \tau H_{K}) = -4096\,(1 + \tau^{2})^{3}$. So the slot Hessian of $\epsilon_{X} + \tau K$ is nondegenerate for every real $\tau$ and degenerate exactly at the chiral values $\tau = \pm j$, with a complex kernel of dimension three in the antisymmetric slot.
 \item[(iv)] \emph{(Every chirality returns the Schouten slot; proved, standard in content.)} At $\tau = 0$ the Schouten slot is the unique stationary slot of $\epsilon_{X}$ (Theorem \claimref{synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff}(iii)); the extension claimed here is to the chiral family. For torsion-free $\Omega$ the slot gradient of $K(F \wedge F)$ also vanishes at the Schouten slot $S = \Sch$. Hence $\Sch$ is a stationary slot of $\epsilon_{X} + \tau K$ for every $\tau$: the only one for real $\tau$, and at $\tau = \pm j$ the only one up to a free antisymmetric slot in the kernel of (iii), which leaves the density and its equations unchanged (the connection, not the equations, is undetermined there). At $\Sch$ the spacetime block is $-\mathcal{W}$ and the density is $\tfrac14 W_{abcd}W^{abcd} + \tau K(\mathcal{W} \wedge \mathcal{W})$, the Weyl square plus $\tau$ times the Pontryagin-type density of the Weyl curvature, the standard statement that the chiral Weyl square is the Weyl square plus a Pontryagin term. With torsion the $K$ gradient at the corresponding Schouten slot does not vanish.

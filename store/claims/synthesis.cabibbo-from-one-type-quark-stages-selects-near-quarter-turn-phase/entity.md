@@ -1,7 +1,7 @@
 ---
 id: synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
 kind: claim
-version: 3
+version: 4
 title: 'Cabibbo angle from one-type quark stages selects a near quarter-turn phase'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: consistency pass, Pauli-matrix reading of the light-plane block in proof (i) written in Cl(3,0)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -57,6 +61,10 @@ lineage:
   - families.faces-ordered-what-identification-requires-first
   - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof (i): the 2 x 2 Hermitian block H = (a + d)/2 + h.sigma with Pauli matrices is written as the Cl(3,0) paravector (a + d)/2 + h, h = Re b e_1 - Im b e_2 + (a - d)/2 e_3, eigenprojectors (1 +- h/|h|)/2 and trace 2<.>_0, so tr(P_-^u P_+^d) = (1 - hat h_u . hat h_d)/2 as before; a pure notation change, the mathematics and the check unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

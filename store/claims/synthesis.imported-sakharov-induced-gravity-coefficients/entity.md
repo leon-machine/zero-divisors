@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-sakharov-induced-gravity-coefficients
 kind: claim
-version: 1
+version: 2
 title: 'Imported: one-loop coefficients of Sakharov''s induced gravity'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'D. V. Vassilevich, Heat kernel expansion: user''s manual, Phys. Rep. 388 (2003), 279--360; arXiv:hep-th/0306138.'
@@ -34,6 +38,10 @@ imported_from:
   locator: 'Sec. I.A, Eqs. (1.3)--(1.5)'
   doi: 10.1103/PhysRevD.58.124007
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (imported) and left in the source''s language: the curvature-linear heat-kernel coefficient, the induced Einstein-Hilbert term and the Wald ambiguity tensors H^{(1)}_{ab}, H^{(2)}_{ab} are quoted in the sources'' Euclidean tensor notation and sphere-positive sign on a closed Riemannian manifold, beyond one flat chart; the species counts are the content used; status imported.'
   note: >-
     Imported so that the result on the attachment's modules and the Sakharov weights can pin the standard
     induced-gravity coefficients, the heat-kernel density they come from, the Boyle-Turok count and the
@@ -52,6 +60,9 @@ extraction:
     coefficient). Cited from memory, not checked: the journal volume and pages of Vassilevich and of Broda and
     Szanecki, and the journal version of Boyle and Turok. The factor (1 - 6 xi) for a scalar coupled to the
     curvature with strength xi is a consequence of clause (a) with E = -xi R, not a statement of the sources.
+outside_ga:
+  kind: imported
+  why: 'The four results are quoted as their sources state them, in tensor notation on a closed Riemannian manifold with the sources'' sphere-positive Euclidean curvature sign (g^{mu nu} nabla_mu nabla_nu, the local conserved tensors H^{(1)}_{ab} and H^{(2)}_{ab}); the closed manifold is beyond one flat chart, the store fixes no GTG sign for Euclidean signature, and what the series uses are the species counts and coefficients, which are numbers.'
 ---
 
 ## formal

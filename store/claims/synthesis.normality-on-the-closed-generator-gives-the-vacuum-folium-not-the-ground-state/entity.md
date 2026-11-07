@@ -1,7 +1,7 @@
 ---
 id: synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
 kind: claim
-version: 3
+version: 4
 title: 'Normality on the closed generator gives the vacuum folium, not the ground state'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: premises repointed to the premise-free results split out of the null-energy and collapse results
   version: 3
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the SL(2, R) matrices as a labelled reading of the rotors'' Moebius maps)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -60,6 +64,10 @@ lineage:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state
   - synthesis.attachment-conformal-energy-is-generated-by-z
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The proof states the rotors'' action on the null line as the Moebius maps s -> s + t, s -> s/(1 - 2cs), s -> e^{-2 theta}s and the inversion s -> -1/s as their composite, with the SL(2, R) matrices kept as a labelled reading. Pure wording: the rotors T_t, K_c, D_theta and J were already the GA objects computed in the check. (The composite: s -> s - 1 -> (s - 1)/s -> (s - 1)/s - 1 = -1/s.)'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'

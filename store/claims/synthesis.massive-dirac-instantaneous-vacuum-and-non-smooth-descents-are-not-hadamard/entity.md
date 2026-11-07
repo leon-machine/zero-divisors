@@ -1,7 +1,7 @@
 ---
 id: synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard
 kind: claim
-version: 3
+version: 4
 title: 'Massive Dirac: instantaneous vacua and non-smooth descents are not Hadamard'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, cross products written as the dual of the outer product'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -100,10 +104,14 @@ extraction:
   flags:
   - 'the reduction of the Dirac field on a spatially flat Robertson-Walker field to the two-level system is standard and cited, not derived in the spacetime algebra'
   - 'the Hadamard conclusions of (ii), (iii) are given Hollands 2001 (adiabatic states of infinite order of the Dirac field are Hadamard; imported Fact synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard, clause (c)); that of (iv) is given the smooth-difference property of scalar Hadamard states and the Hadamard property of an infrared-regularised Bunch-Davies comparison state'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Notation only: every cross product of the formal level and the proof (s'' = 2h x s, the recursion and the leading-monomial step) is written as the dual of the outer product in the Pauli algebra, a x b = -I(a wedge b), I = sigma_1 sigma_2 sigma_3; verified exactly with lib/GA.py (a x b = -I(a wedge b) on sample vectors, s'' = -I[h, s] = -2I(h wedge s) = 2 h x s, x = (1/2) I sigma_1 X solving -2I(sigma_1 wedge x) = X, I sigma_1 sigma_3 = sigma_2, I sigma_1 sigma_2 = -sigma_3, and lambda_n v_n = (-1)^floor(n/2) 2^-n v_n for n = 1..6). Mathematics, status, links and check unchanged.'
 ---
 
 ## formal
-Let the descended field be a spatially flat Robertson-Walker gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with conformal time $\eta$ and scale factor $a(\eta)$, and let $\psi$ be a free Dirac field of mass $m \ge 0$. With $\chi = a^{3/2}\psi$, each momentum $\vec k$, $k = |\vec k|$, and helicity sector is the two-level system $I u' = Hu$, $H = M\sigma_{3} + k\sigma_{1}$, $M = ma(\eta)$, in the Pauli algebra with unit its pseudoscalar $I = \sigma_{1}\sigma_{2}\sigma_{3}$ ($I_{4}$ read in the even subalgebra); for a pure state $\rho = \tfrac12(1 + s)$, $s$ a unit vector, it reads $s' = 2h \times s$ with $h = k\sigma_{1} + M\sigma_{3}$. Write $M_{j} = d^{j}M/d\eta^{j}$, $\hat h = h/|h|$, and $|\beta_{k}|^{2} = \tfrac12(1 - s\cdot s')$ for the Bogoliubov coefficient between the pure states of Bloch vectors $s$ and $s'$.
+Let the descended field be a spatially flat Robertson-Walker gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with conformal time $\eta$ and scale factor $a(\eta)$, and let $\psi$ be a free Dirac field of mass $m \ge 0$. With $\chi = a^{3/2}\psi$, each momentum $\vec k$, $k = |\vec k|$, and helicity sector is the two-level system $I u' = Hu$, $H = M\sigma_{3} + k\sigma_{1}$, $M = ma(\eta)$, in the Pauli algebra with unit its pseudoscalar $I = \sigma_{1}\sigma_{2}\sigma_{3}$ ($I_{4}$ read in the even subalgebra); for a pure state $\rho = \tfrac12(1 + s)$, $s$ a unit vector, it reads $s' = -2I(h\wedge s)$ (twice the dual of the outer product, $I^{-1} = -I$) with $h = k\sigma_{1} + M\sigma_{3}$. Write $M_{j} = d^{j}M/d\eta^{j}$, $\hat h = h/|h|$, and $|\beta_{k}|^{2} = \tfrac12(1 - s\cdot s')$ for the Bogoliubov coefficient between the pure states of Bloch vectors $s$ and $s'$.
 \begin{enumerate}
 \item[(i)] \emph{(Adiabatic series.)} The equation has a unique formal solution $s_{\mathrm{ad}} = \sum_{j \ge 0}k^{-j}c_{j}$ with $c_{0} = \sigma_{1}$, each $c_{j}$ a vector polynomial in $M_{0}, \dots, M_{j-1}$, homogeneous of weight $j$ when $M_{i}$ has weight $i + 1$, and $|s_{\mathrm{ad}}| = 1$ order by order: $c_{1} = M\sigma_{3}$, $c_{2} = -\tfrac12 M^{2}\sigma_{1} + \tfrac12 M_{1}\sigma_{2}$. The only monomial of $c_{n+1}$ containing $M_{n}$ is $\lambda_{n}M_{n}v_{n}$ with $v_{n} = \sigma_{3}$ for $n$ even, $\sigma_{2}$ for $n$ odd, and $\lambda_{n} = (-1)^{\lfloor n/2\rfloor}2^{-n}$; $M_{n}$ does not occur in $c_{j}$ for $j \le n$. At $m = 0$ every $c_{j}$ with $j \ge 1$ vanishes.
 \item[(ii)] \emph{(The instantaneous vacuum.)} $\hat h$ agrees with $s_{\mathrm{ad}}$ through order $k^{-1}$ and differs from it at order $k^{-2}$ by $\tfrac12M_{1}\sigma_{2}$; $1 - s_{\mathrm{ad}}\cdot\hat h = M_{1}^{2}/(8k^{4}) + \bigl(\tfrac1{32}M_{2}^{2} - \tfrac1{16}M_{1}M_{3} - \tfrac38M^{2}M_{1}^{2}\bigr)k^{-6} + O(k^{-8})$. So, at an instant where $M_{1} = ma' \neq 0$, the instantaneous vacuum has $|\beta_{k}|^{2} = M_{1}^{2}/(16k^{4}) + O(k^{-6})$ against an adiabatic state of infinite order: a finite number density of quanta above that state, but a point-split energy density relative to it that diverges to $-\infty$ logarithmically. Given that adiabatic states of infinite order of the Dirac field are Hadamard (Fact \claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}(c)), the instantaneous vacuum is not Hadamard. Every gauge-invariant quasi-free deposit diagonal over it, whatever its occupations, has the same $\sigma_{2}$ gap $\tfrac14M_{1}k^{-2} + O(k^{-4})$ in its one-particle symbol against the adiabatic state, and is not Hadamard either.

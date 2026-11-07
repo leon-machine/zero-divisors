@@ -1,7 +1,7 @@
 ---
 id: standard-model.automorphisms-preserve-slot-pair-split-are
 kind: claim
-version: 6
+version: 7
 title: The automorphisms that preserve the slot/pair split are Pati-Salam
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, Q(i) written as Q(I_4); the rung parity named where first used'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: prop:split
   line: 1890
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The proof''s field Q(i) is written Q(I_4) = span_Q{1, I_4}, and the formal level names chi as the rung parity (+1 on slot doublets, -1 on slot singlets, as the proof computes) where it first appears; no mathematics changed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -95,7 +103,7 @@ and $\su(4)$ the fifteen pair bivectors, which contain $\su(3)$ and $B - L$. The
 \[
 Y \;=\; T_{3R} + \tfrac12\,(B - L)
 \]
-exactly, with $T_{3R} = \tfrac12(N_{4} + N_{5} - 1)$. The other $24$ bivectors mix slots with pairs. On the sixteen, the commutant of the $21$ is spanned by $1$ and $\chi$. Hence the automorphisms of the five-mode state space induced by orthogonal maps of the ten that preserve the slot/pair split, but not the mode number, form $\mathrm{Spin}(4) \times \mathrm{Spin}(6)$, the Pati-Salam group, the stabiliser of the rung parity; preserving the mode number as well gives the $U(2) \times U(3)$ of Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(2).
+exactly, with $T_{3R} = \tfrac12(N_{4} + N_{5} - 1)$. The other $24$ bivectors mix slots with pairs. On the sixteen, the commutant of the $21$ is spanned by $1$ and the rung parity $\chi$ ($+1$ on the slot-doublet states, $-1$ on the slot-singlet states). Hence the automorphisms of the five-mode state space induced by orthogonal maps of the ten that preserve the slot/pair split, but not the mode number, form $\mathrm{Spin}(4) \times \mathrm{Spin}(6)$, the Pati-Salam group, the stabiliser of the rung parity; preserving the mode number as well gives the $U(2) \times U(3)$ of Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(2).
 
 ## technical
 Under (S), write the ten Majorana generators of the five modes as four slot and six pair Majoranas. The bivectors $\tfrac12\gamma_{m}\gamma_{n}$ that preserve this split are $6 + 15 = 21$ of the $45$; they close into $\su(2)_{L} \oplus \su(2)_{R} \oplus \su(4)$, with $\su(2)_{L}$ the slot mixing, $\su(4)$ the fifteen pair bivectors, containing $\su(3)$ and $B - L$, and hypercharge exactly $Y = T_{3R} + \tfrac12(B - L)$ with $T_{3R} = \tfrac12(N_{4} + N_{5} - 1)$.

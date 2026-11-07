@@ -1,7 +1,7 @@
 ---
 id: synthesis.diagonal-kasner-momentum-constraint
 kind: claim
-version: 3
+version: 4
 title: The momentum constraints of the diagonal variable-exponent class
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga (coordinate Ricci computation))'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -42,6 +46,10 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left as written: the result states the mixed coordinate Ricci components R_{0i} of the derived metric, with their GTG reading R_{0i} = -g_0 . R(g_i) already given, and the proof and its check are a coordinate Christoffel computation of those components; a GTG proof through the rotation-gauge field would be a different derivation, not a rewrite of notation, and is listed for Leon.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'W503: technical and one-liner now state the open-Kasner-circle hypothesis, and the technical level the leading-order qualifier on the counterterm density.'
@@ -51,6 +59,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the metric is the derived metric of a gravitational field (hb, Omega) on flat spacetime; R_0i are the coordinate components of the round-sphere-positive Ricci tensor of the derived metric, R_0i = -g_0 . R(g_i) in the store sign (the sign of the check''s Christoffel formula); Ric = Lambda g becomes R(a) = Lambda a; the connection one-forms are the rotation-gauge field. Formula, (M) and clauses unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
+outside_ga:
+  kind: other
+  why: 'The result is a statement about the mixed coordinate components R_{0i} of the Ricci curvature of the derived metric (read in GTG as R_{0i} = -g_0 . R(g_i), round-sphere-positive sign, Fact synthesis.imported-gtg-dictionary), and its proof and check compute them from the Christoffel symbols of the diagonal metric; the coordinate computation is the content, and a GTG derivation through the rotation-gauge field would be a different proof.'
 ---
 
 ## formal

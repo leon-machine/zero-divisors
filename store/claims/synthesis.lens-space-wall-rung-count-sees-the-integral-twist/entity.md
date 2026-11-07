@@ -1,7 +1,7 @@
 ---
 id: synthesis.lens-space-wall-rung-count-sees-the-integral-twist
 kind: claim
-version: 4
+version: 5
 title: 'Lens-space wall: the rung count sees the integral twist'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, formal now cites the imported Stiefel and Grassmannian Fact its proof uses
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -58,6 +62,10 @@ lineage:
   - sheaf.wall-class
   - synthesis.wall-rung-count-is-height-of-dying-line-class
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The closing sentence of the formal level said the classical inputs were cited from memory and not imported, but the derivation uses synthesis.imported-stiefel-connectivity-and-grassmannian-classification and the proof cites it as a Fact; the sentence now names that Fact, and the remark on the complex structure of L + L uses (y1, y2) for fibre coordinates instead of (s, t), t being the cometric parameter. The extraction note above it predates the import."
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -90,7 +98,7 @@ Let $(M, G)$ be a tame corank-one degeneration (\claimref{sheaf.tameness}) with 
 \item \emph{(Definite side.)} If $q = 0$, then $k(\Sig) = 3 = e(\shL) > \operatorname{ht}(x)$.
 \item \emph{(The deciding datum.)} The wall $T^{3}$ with $x \neq 0 = x^{2}$ pulled back from a circle has $k = 2$ with a definite physical side. So two walls with the same mod-2 data ($w(\Sig) = 1$, $x \neq 0 = x^{2}$) and the same signature need different numbers of rungs: in the definite case the rung count is not a function of $W(\Sig) = (w(\Sig), x)$ and the signature; what separates the two walls is whether $\shL \oplus \shL$ is trivial, which on $L(4,1)$ it is not.
 \end{enumerate}
-Classical inputs (cited from memory, not imported): $V_{k}(\R^{m})$ is $(m-k-1)$-connected, and $[X, \mathrm{Gr}_{k}(\R^{m})]$ is the set of isomorphism classes of rank-$k$ bundles over a complex $X$ of dimension less than $m - k$.
+Classical inputs, imported as Fact \claimref{synthesis.imported-stiefel-connectivity-and-grassmannian-classification}: $V_{k}(\R^{m})$ is $(m-k-1)$-connected, and $[X, \mathrm{Gr}_{k}(\R^{m})]$ is the set of isomorphism classes of rank-$k$ bundles over a complex $X$ of dimension less than $m - k$.
 
 ## technical
 The parent claim bounds the rung count of a tame wall between the height of the dying line's class and the least rank of a trivial bundle containing the dying line, and leaves the lens space $L(4,1)$ open: there the class squares to zero, so the lower bound is two, but the doubled dying line is not trivial, so the dying line does not sit in the trivial bundle of rank two that two rungs offer. The key is the adjoint map of rotors. On unit rotors of $\Cl(3,0)$, left multiplication by the half-turn rotor $e_2e_3$, whose square is $-1$, generates the $\mathbb{Z}_4$ with quotient $L(4,1)$, and the frame $R e_a \tilde R$ transforms by $\mathrm{diag}(1,-1,-1)$: its first row is a global section of the trivial line and its other two rows are sections of the dying line, so $\underline{\R} \oplus \shL \oplus \shL$ is trivial with an explicit frame.

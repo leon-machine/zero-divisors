@@ -1,7 +1,7 @@
 ---
 id: singularity.modular-descent
 kind: claim
-version: 7
+version: 8
 title: Modular descent
 status: proved
 region: singularity
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, modular flow no longer written with the letter of the boost element sigma
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -57,6 +61,10 @@ locators:
   label: thm:descent
   line: 1725
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The proof wrote the modular flow as sigma_t while sigma is the boost element v*v - vv* of the same entity; it is now written t -> Ad(rho^{Jt}), a pure notation change."
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
