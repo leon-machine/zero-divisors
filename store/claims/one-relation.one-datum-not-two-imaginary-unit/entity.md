@@ -1,7 +1,7 @@
 ---
 id: one-relation.one-datum-not-two-imaginary-unit
 kind: claim
-version: 3
+version: 4
 title: 'One datum, not two: the imaginary unit is the rest frame read through the law'
 status: proved
 region: one-relation
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, which unit acts where: the right unit J related to the field theory''s unit I_4'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: lem:onedatum
   line: 787
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The lemma names a right-acting bivector J (Hestenes'' I sigma_3 = gamma_2 gamma_1 at u = gamma_3) as the descent''s complex structure and excludes the pseudoscalar, while the conventions name I_4 as the field theory''s unit; the technical level now says which acts where, with the stored relation L_{I_4} = -Gamma R_{I sigma_3} on even spinors (synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality (ii)), checked exactly with lib/GA.py on all even blades of Cl(1,3), together with C J = gamma_0 at C = I gamma_3, J = gamma_1 gamma_2; mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -64,6 +72,8 @@ Align the representative so that $C = Iu$. The complex structures the descent of
 Align the representative so that $C = Iu$. The complex structures the descent needs are the constant even $J$ with $J^{2} = -1$ commuting with $C$. The commutant of $C$ in $\Cl^{+}(1,3)$ is four-dimensional, spanned by $1$ and the three bivectors of the $3$-space orthogonal to $u$; the pseudoscalar anticommutes with $C$ and is excluded. On the commutant, $J^{2} = -1$ cuts out a two-sheeted hyperboloid, and $J \mapsto \gamma_{0} = CJ$ is a bijection onto the unit timelike vectors orthogonal to $u$, with inverse $J = C^{-1}\gamma_{0}$.
 
 So, given the law, choosing the imaginary unit and choosing the rest frame are one choice, not two. The joint commutant of $C$ and $J$ is $\mathrm{span}\{1, J\}$, whose rotors are the $U(1)$ of the spin plane, the electromagnetic phase. A laboratory frame not orthogonal to $u$ is aligned once by the rotor freedom of the odd-roots lemma, which is then used up.
+
+Which unit acts where: $J$ acts on the right, $\psi \mapsto \psi J$ (Hestenes' $I\sigma_{3} = \gamma_{2}\gamma_{1}$ for $u = \pm\gamma_{3}$). It is not the field theory's unit $I_{4}$ of the conventions, which on even spinors acts by left multiplication and equals $-\Gamma R_{I\sigma_{3}}$, $\Gamma\psi = I_{4}\psi I\sigma_{3}$ (\claimref{synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality}(ii)); the two are not identified.
 
 ## lay
 Quantum mechanics uses an imaginary unit, and nonrelativistic physics uses a rest frame. In this algebraic form of the electron's equation, once the law is fixed, picking one automatically picks the other. So the imaginary unit is not an extra ingredient that has to be put in by hand.

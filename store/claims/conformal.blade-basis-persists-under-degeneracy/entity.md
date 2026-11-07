@@ -1,7 +1,7 @@
 ---
 id: conformal.blade-basis-persists-under-degeneracy
 kind: claim
-version: 4
+version: 5
 title: The blade basis persists under degeneracy
 status: proved
 region: conformal
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T02, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, blades of a non-orthogonal basis named as ordered products'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -35,6 +39,10 @@ locators:
   label: fact:blades
   line: 145
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Notation, as in sheaf.blade-basis-degenerate-forms-included: the ordered products e_I of a possibly non-orthogonal basis are named as such, since obj.std-algebra.blade reserves blade for outer products. Statement unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -56,7 +64,7 @@ extraction:
 ---
 
 ## formal
-Let $B$ be any symmetric bilinear form on a real space $W$ of dimension $m$, and let $e_1, \dots, e_m$ be any basis of $W$. Then the $2^m$ blades $e_I = e_{i_1} \cdots e_{i_k}$, $I = \{i_1 < \dots < i_k\}$, form a linear basis of $\Cl(W, B)$; in particular $\dim \Cl(W,B) = 2^m$ whether or not $B$ is degenerate. \emph{Provenance:} \cite[Lem.~2.6]{ButlerT4}; classical, \cite{Chevalley1997}.
+Let $B$ be any symmetric bilinear form on a real space $W$ of dimension $m$, and let $e_1, \dots, e_m$ be any basis of $W$. Then the $2^m$ blades $e_I = e_{i_1} \cdots e_{i_k}$, $I = \{i_1 < \dots < i_k\}$ (ordered geometric products, outer-product blades only for an orthogonal basis), form a linear basis of $\Cl(W, B)$; in particular $\dim \Cl(W,B) = 2^m$ whether or not $B$ is degenerate. \emph{Provenance:} \cite[Lem.~2.6]{ButlerT4}; classical, \cite{Chevalley1997}.
 
 ## technical
 Let $B$ be any symmetric bilinear form on a real space $W$ of dimension $m$, degenerate or not, and let $e_1, \dots, e_m$ be any basis of $W$. Then the $2^m$ blades $e_I = e_{i_1} \cdots e_{i_k}$, one for each increasing index set $I$, form a linear basis of $\Cl(W,B)$, so $\dim \Cl(W,B) = 2^m$ in every case.

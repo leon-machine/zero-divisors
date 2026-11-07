@@ -1,7 +1,7 @@
 ---
 id: pred.no-indirect-dark-signals
 kind: prediction
-version: 3
+version: 4
 title: No indirect dark-sector signals
 status: live
 subject: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, the asymmetric-relic clause restricted to the mirror
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 kill_condition:
   threshold: Any confirmed indirect signal
@@ -42,6 +46,10 @@ locators:
   number: T17 stance 8
   label: tab:stances
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal, technical and lay levels described all dark matter as a charge-asymmetric relic with negligible anti-dark density; that holds for the mirror only, the odd towers'' matter being symmetric (dark-matter.population-count-one-share-half-percent(ii)). The stance is unchanged, since graviton exchange alone suppresses visible annihilation; wording only, kill condition untouched.'
   small_findings_pass:
     by: ai-small-findings-pass
     date: 2026-10-22
@@ -64,13 +72,13 @@ derivations:
 ---
 
 ## formal
-No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$ on a charge-asymmetric relic.
+No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$, and for the mirror, a charge-asymmetric relic, further by its negligible anti-mirror density.
 
 ## technical
-In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$ and acting on a charge-asymmetric relic with negligible anti-dark density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}). Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q).
+In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$; for the mirror it acts on a charge-asymmetric relic with negligible anti-mirror density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), while the odd towers' matter, if any, is a symmetric relic (Proposition \claimref{dark-matter.population-count-one-share-half-percent}(ii)) whose annihilation into this tower is held down by the graviton suppression alone. Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q).
 
 ## lay
-Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen, and that there is almost no anti-dark matter for it to meet, so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.
+Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen (and that in the mirror world there is almost no anti-matter for its matter to meet), so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.
 
 ## one-liner
 Conditionally on the single-frozen-point premise, and on the series' acoustic no-go (s-wave current algebra, Indifference premise, premise (Q)), indirect-detection surveys should see no dark-sector decay products, and no annihilation products above the gravitationally suppressed rate of a charge-asymmetric relic.

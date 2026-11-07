@@ -1,7 +1,7 @@
 ---
 id: std-algebra.complexification-is-the-odd-extension
 kind: claim
-version: 1
+version: 2
 title: 'Complexification is the odd extension'
 status: proved
 region: std-algebra
@@ -18,6 +18,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: 'consistency pass, even subalgebra written Cl^+ as in the standard-algebra objects'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -39,6 +43,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Notation: the even subalgebra was written Cl^0(W), against obj.std-algebra.grade-projection (Cl^0 = R, grade zero) and obj.std-algebra.even-subalgebra (Cl^+); now Cl^+, with the cited T14a theorem''s Cl^0 named once. Mathematics unchanged.'
   note: >-
     The complexification of a Clifford algebra of even dimension, written inside real geometric
     algebra: adjoining one orthogonal vector of the right square makes the new pseudoscalar a
@@ -63,7 +71,7 @@ extraction:
 Let $(V, Q)$ be a nondegenerate real quadratic space of even dimension $n \geq 2$, with an orthonormal basis $e_{1}, \dots, e_{n}$ ($Q(e_{k}) = \pm 1$, $q$ of them $-1$) and pseudoscalar $I_{V} = e_{1}\cdots e_{n}$, so that $I_{V}^{2} = \varepsilon_{V} := (-1)^{n(n-1)/2 + q}$. Let $W = V \oplus \R e$ with $e$ orthogonal to $V$ and $Q(e) = -\varepsilon_{V}$, and $I_{W} = I_{V}e$. Then:
 \begin{enumerate}
 \item[(i)] \emph{(The unit.)} $I_{W}^{2} = -1$, and this is the only sign of $Q(e)$ that gives it ($Q(e) = +\varepsilon_{V}$ gives $I_{W}^{2} = +1$). $I_{W}$ commutes with every vector of $W$, so it is central in $\Cl(W)$, and the centre of $\Cl(W)$ is $\mathrm{span}\{1, I_{W}\}$, a field isomorphic to $\C$.
-\item[(ii)] \emph{(The complexification.)} The multiplication map $\Cl(V) \otimes_{\R} \mathrm{span}\{1, I_{W}\} \to \Cl(W)$, $a \otimes z \mapsto az$, is an isomorphism of real algebras; equivalently $\Cl(W) = \Cl(V) \oplus \Cl(V)I_{W}$ as real vector spaces, with $\Cl(V)$ a real subalgebra commuting with $I_{W}$, and $e_{k} \mapsto e_{k}$ with the complex unit sent to $I_{W}$ extends to an isomorphism from the complexification of $\Cl(V)$ onto $\Cl(W)$. So $\Cl(W)$ is the complexification of $\Cl(V)$ with complex unit $I_{W}$, a full matrix algebra of size $2^{n/2}$ over the field $\mathrm{span}\{1, I_{W}\}$ (Theorem \claimref{std-algebra.complexification}(i)). Also $\Cl(W) = \Cl^{0}(W) \oplus \Cl^{0}(W)I_{W}$ (Theorem \claimref{odd-extensions.doubling-or-complexification}(ii)): the even subalgebra of $W$ is a second real form with the same complexification.
+\item[(ii)] \emph{(The complexification.)} The multiplication map $\Cl(V) \otimes_{\R} \mathrm{span}\{1, I_{W}\} \to \Cl(W)$, $a \otimes z \mapsto az$, is an isomorphism of real algebras; equivalently $\Cl(W) = \Cl(V) \oplus \Cl(V)I_{W}$ as real vector spaces, with $\Cl(V)$ a real subalgebra commuting with $I_{W}$, and $e_{k} \mapsto e_{k}$ with the complex unit sent to $I_{W}$ extends to an isomorphism from the complexification of $\Cl(V)$ onto $\Cl(W)$. So $\Cl(W)$ is the complexification of $\Cl(V)$ with complex unit $I_{W}$, a full matrix algebra of size $2^{n/2}$ over the field $\mathrm{span}\{1, I_{W}\}$ (Theorem \claimref{std-algebra.complexification}(i)). Also $\Cl(W) = \Cl^{+}(W) \oplus \Cl^{+}(W)I_{W}$ (Theorem \claimref{odd-extensions.doubling-or-complexification}(ii)): the even subalgebra of $W$ is a second real form with the same complexification.
 \item[(iii)] \emph{(Complex vectors and shifted squares.)} Write $V_{\C} = V \oplus I_{W}V$. For $a, b \in V$, $(a + I_{W}b)^{2} = Q(a) - Q(b) + 2\ip{a}{b}\,I_{W}$, so squaring in $\Cl(W)$ is the complex-bilinear extension of $Q$ to $V_{\C}$, with values in $\mathrm{span}\{1, I_{W}\}$; $a + I_{W}b$ is null if and only if $Q(a) = Q(b)$ and $\ip{a}{b} = 0$. In particular, for $y, a \in V$ and real $\epsilon$, $(y + \epsilon I_{W}a)^{2} = Q(y) - \epsilon^{2}Q(a) + 2\epsilon\ip{y}{a}\,I_{W}$: a scalar function of the square of a shifted vector (a polynomial, a quotient, or a power series in that square with coefficients in $\mathrm{span}\{1, I_{W}\}$) is the same function evaluated at a number of the field $\mathrm{span}\{1, I_{W}\}$, the shift written in that field, and since $I_{W}$ is central it may be read as the complex unit of any such scalar computation.
 \item[(iv)] \emph{(Relation to the unit of $V$.)} Suppose $\varepsilon_{V} = -1$, so $Q(e) = +1$, and let $P_{\pm} = \tfrac12(1 \pm e)$. These are idempotents commuting with $I_{V}$; $x \mapsto xP_{\pm}$ is an injective map of left $\Cl(V)$-modules from $\Cl(V)$ onto the left ideal $\Cl(W)P_{\pm}$, and
 \[

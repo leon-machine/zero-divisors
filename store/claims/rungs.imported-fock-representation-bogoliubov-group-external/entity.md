@@ -1,7 +1,7 @@
 ---
 id: rungs.imported-fock-representation-bogoliubov-group-external
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Fock representation and its Bogoliubov group (external ingredients)'
 status: imported
 region: rungs
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-rungs, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation typography in the formal level'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
 - citation: 'W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics
@@ -32,6 +36,10 @@ locators:
   label: ''
   line: 221
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The citation list in the formal level carried doubled stops before the locators; removed; no change of content.'
   env: fact
   context_refs:
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov
@@ -43,7 +51,7 @@ extraction:
 ---
 
 ## formal
-The results from outside the series on which \claimref{rungs.imported-fock-representation-bogoliubov-group} draws, as cited there: W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991)., Lecture~20; H. B. Lawson and M.-L. Michelsohn, Spin Geometry, Princeton University Press (1989)., Ch.~I, \S\S 2, 5.
+The results from outside the series on which \claimref{rungs.imported-fock-representation-bogoliubov-group} draws, as cited there: W. Fulton and J. Harris, Representation Theory: A First Course, Graduate Texts in Mathematics 129, Springer (1991), Lecture~20; H. B. Lawson and M.-L. Michelsohn, Spin Geometry, Princeton University Press (1989), Ch.~I, \S\S 2, 5.
 
 ## technical
 This entry records the sources from outside the series of the Fock-representation fact: Fulton and Harris for the spinor module as an exterior algebra $\Lambda^{\bullet}E$ and its half-spin decomposition, and Lawson and Michelsohn for $\mathrm{Spin}(2n)$ as the double cover of $SO(2n)$ and its spin representation.

@@ -1,7 +1,7 @@
 ---
 id: sheaf.blade-basis-degenerate-forms-included
 kind: claim
-version: 4
+version: 5
 title: Blade basis, degenerate forms included
 status: proved
 region: sheaf
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, blades of a non-orthogonal basis named as ordered products; proof wording on the two operations'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: lem:blades
   line: 425
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Notation: the paper calls the ordered products e_I blades; obj.std-algebra.blade reserves the word for outer products, which they are only for an orthogonal basis, so the formal level now says so. Proof: exterior multiplication is not an anti-derivation; the sentence now says contraction is. Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -56,7 +64,7 @@ extraction:
 ---
 
 ## formal
-Let $B$ be any symmetric bilinear form on $W$, $\dim W = n$, and let $e_1, \dots, e_n$ be \emph{any} basis of $W$ (orthogonality is not assumed and may be unavailable smoothly in families). Then the $2^n$ blades $e_I = e_{i_1} \cdots e_{i_k}$, $I = \{i_1 < \dots < i_k\}$, form a linear basis of $\Cl(W, B)$. Moreover the structure constants of the algebra in this basis are polynomial in the entries $B(e_i, e_j)$.
+Let $B$ be any symmetric bilinear form on $W$, $\dim W = n$, and let $e_1, \dots, e_n$ be \emph{any} basis of $W$ (orthogonality is not assumed and may be unavailable smoothly in families). Then the $2^n$ blades $e_I = e_{i_1} \cdots e_{i_k}$, $I = \{i_1 < \dots < i_k\}$ (ordered geometric products; for a non-orthogonal basis they are not the outer-product blades of \claimref{obj.std-algebra.blade}), form a linear basis of $\Cl(W, B)$. Moreover the structure constants of the algebra in this basis are polynomial in the entries $B(e_i, e_j)$.
 
 ## technical
 For any symmetric bilinear form $B$ on an $n$-dimensional space $W$, degenerate or not, and any basis $e_1, \dots, e_n$ of $W$ (orthogonal or not), the $2^n$ ordered products $e_I = e_{i_1} \cdots e_{i_k}$ with $i_1 < \dots < i_k$ form a linear basis of $\Cl(W, B)$, and the structure constants in this basis are polynomial in the entries $B(e_i, e_j)$.

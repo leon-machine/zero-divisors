@@ -1,7 +1,7 @@
 ---
 id: simulations.averaged-pair-operator
 kind: claim
-version: 5
+version: 6
 title: The averaged pair operator
 status: proved
 region: simulations
@@ -18,6 +18,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14b, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, the pair operator written as a linear map of vectors, the cross product as the dual of the outer product
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: lem:projector
   line: 308
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Technical level and proof: the matrix form I - (n n^T + n n^T)/2, whose I is the identity and clashes with the pseudoscalar symbol, is written as the linear map v -> v - ((v.n_i)n_i + (v.n_j)n_j)/2; the direction fixed in (iii), written n_i x n_j, is the dual of n_i ^ n_j; idempotence is stated as n_i = +-n_j. Pure notation.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -73,7 +81,7 @@ extraction:
 \end{enumerate}
 
 ## technical
-In the simulations the sheet fluid's pair forces are contracted with $P_{ij} = I - \tfrac{1}{2}(\mathbf{n}_{i}\mathbf{n}_{i}^{\mathsf T} + \mathbf{n}_{j}\mathbf{n}_{j}^{\mathsf T})$, the mean of the two particles' in-plane projectors. Since $P_{ij} = P_{ji}$ and the kernel gradient is antisymmetric, the contracted pair forces conserve momentum exactly and, in the equations before time integration and with the smoothing lengths held fixed within a step, total energy. For parallel normals with $Q(\mathbf{n}) = 1$, $P_{ij}$ is the rejection $\mathbf{v} \mapsto (\mathbf{v}\wedge\mathbf{n})\,\mathbf{n}$, the projection onto the sheet, and annihilates $\mathbf{n}$. For orthogonal normals its eigenvalues are $1, \tfrac{1}{2}, \tfrac{1}{2}$, keeping half of each normal component, and it is idempotent only when $\mathbf{n}_{i} = \pm\mathbf{n}_{j}$.
+In the simulations the sheet fluid's pair forces are contracted with $P_{ij}(\mathbf{v}) = \mathbf{v} - \tfrac{1}{2}\bigl((\mathbf{v}\cdot\mathbf{n}_{i})\mathbf{n}_{i} + (\mathbf{v}\cdot\mathbf{n}_{j})\mathbf{n}_{j}\bigr)$, the mean of the two particles' in-plane projectors. Since $P_{ij} = P_{ji}$ and the kernel gradient is antisymmetric, the contracted pair forces conserve momentum exactly and, in the equations before time integration and with the smoothing lengths held fixed within a step, total energy. For parallel normals with $Q(\mathbf{n}) = 1$, $P_{ij}$ is the rejection $\mathbf{v} \mapsto (\mathbf{v}\wedge\mathbf{n})\,\mathbf{n}$, the projection onto the sheet, and annihilates $\mathbf{n}$. For orthogonal normals its eigenvalues are $1, \tfrac{1}{2}, \tfrac{1}{2}$, keeping half of each normal component, and it is idempotent only when $\mathbf{n}_{i} = \pm\mathbf{n}_{j}$.
 
 ## lay
 The simulations model three-dimensional dark matter as sheets that can only push along their own surface. Forces between two such particles are filtered through an averaged projection that keeps the part lying in the sheets. This result checks that the filter still conserves momentum and, within each step, energy, that it is an exact projection when the sheets are parallel, and that it is only a partial one when they are not.

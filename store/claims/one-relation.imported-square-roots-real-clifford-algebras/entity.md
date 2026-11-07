@@ -1,7 +1,7 @@
 ---
 id: one-relation.imported-square-roots-real-clifford-algebras
 kind: claim
-version: 1
+version: 2
 title: 'Imported: square roots of $-1$ in real Clifford algebras'
 status: imported
 region: one-relation
@@ -17,10 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation typos (author name, publisher)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
-- citation: E. Hitzer, R. Abamowicz, and S. J. Sangwine, Square roots of $-1$ in real Clifford algebras,
-    in Quaternion and Clifford Fourier Transforms and Wavelets, Birkh"auser (2013) 123--153.
+- citation: E. Hitzer, R. Ablamowicz, and S. J. Sangwine, Square roots of $-1$ in real Clifford algebras,
+    in Quaternion and Clifford Fourier Transforms and Wavelets, Birkhaeuser (2013) 123--153.
   key: HitzerAblamowiczSangwine2013
 locators:
   paper: T16
@@ -28,6 +32,10 @@ locators:
   label: fact:roots
   line: 534
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Citation typos: the second author is Ablamowicz (the technical level already spelled it so), and a lost backslash left Birkh"auser, written Birkhaeuser.'
   env: fact
   context_refs:
   - one-relation.odd-square-roots-chiral-phase

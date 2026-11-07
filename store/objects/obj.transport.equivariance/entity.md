@@ -1,7 +1,7 @@
 ---
 id: obj.transport.equivariance
 kind: object
-version: 1
+version: 2
 title: Equivariance
 status: defined
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the action tau on the algebra named (primer.twisted-adjoint-action)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.transport.extension-quadratic-spaces
@@ -26,6 +30,10 @@ locators:
   label: def:equivariance
   line: 490
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The formal and technical levels used tau without defining it; the definition of T01 eq. (tau), stored as primer.twisted-adjoint-action, is now stated and cited (mention only, no edge). Definition unchanged.'
   env: definition
   typing:
     by: ai-typing-pass
@@ -41,13 +49,13 @@ extraction:
 ---
 
 ## formal
-Let $\mathbb{V}' \supseteq \mathbb{V}$ be an extension of quadratic spaces (Definition \claimref{obj.transport.extension-quadratic-spaces}) and $G$ a subgroup of $\Pin(p,q)$, acting on the null cone $\Ncone \subset \mathbb{V}$ by $\Ad$ (which preserves $\mathbb{V}$ and its null cone, being an isometry of $\mathbb{V}$) and on $\Cl(\mathbb{V}')$ by $\tau$ through the inclusion $\Cl(\mathbb{V}) \subseteq \Cl(\mathbb{V}')$. A map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ is \emph{$G$-equivariant} if
+Let $\mathbb{V}' \supseteq \mathbb{V}$ be an extension of quadratic spaces (Definition \claimref{obj.transport.extension-quadratic-spaces}) and $G$ a subgroup of $\Pin(p,q)$, acting on the null cone $\Ncone \subset \mathbb{V}$ by $\Ad$ (which preserves $\mathbb{V}$ and its null cone, being an isometry of $\mathbb{V}$) and on $\Cl(\mathbb{V}')$ by $\tau$ through the inclusion $\Cl(\mathbb{V}) \subseteq \Cl(\mathbb{V}')$, where $\tau_g(x) = g\,x\,g^{-1}$ for even $g$ and $g\,\hat{x}\,g^{-1}$ for odd $g$, the algebra automorphism restricting to $\Ad_g$ on vectors (Lemma \claimref{primer.twisted-adjoint-action}). A map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ is \emph{$G$-equivariant} if
 \[
 \sigma\bigl(\Ad_g(v)\bigr) \;=\; \tau_g\bigl(\sigma(v)\bigr) \qquad \text{for all } g \in G,\ v \in \Ncone .
 \]
 
 ## technical
-Given an extension $\mathbb{V}' \supseteq \mathbb{V}$ of quadratic spaces and a subgroup $G$ of $\Pin(p,q)$, the group acts on the null cone $\Ncone \subset \mathbb{V}$ by $\Ad$, which is an isometry of $\mathbb{V}$ and so preserves $\Ncone$, and acts on $\Cl(\mathbb{V}')$ by $\tau$ through the inclusion $\Cl(\mathbb{V}) \subseteq \Cl(\mathbb{V}')$. A map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ is $G$-equivariant when $\sigma(\Ad_g(v)) = \tau_g(\sigma(v))$ for all $g \in G$ and all null $v$.
+Given an extension $\mathbb{V}' \supseteq \mathbb{V}$ of quadratic spaces and a subgroup $G$ of $\Pin(p,q)$, the group acts on the null cone $\Ncone \subset \mathbb{V}$ by $\Ad$, which is an isometry of $\mathbb{V}$ and so preserves $\Ncone$, and acts on $\Cl(\mathbb{V}')$ by the twisted adjoint action $\tau$ of the primer (conjugation for even $g$, conjugation of $\hat{x}$ for odd $g$) through the inclusion $\Cl(\mathbb{V}) \subseteq \Cl(\mathbb{V}')$. A map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ is $G$-equivariant when $\sigma(\Ad_g(v)) = \tau_g(\sigma(v))$ for all $g \in G$ and all null $v$.
 
 This is the sense in which a rule assigning an algebra element to each null vector is required to respect the symmetry of the geometry: transforming the input by $g$ transforms the output by the same $g$.
 

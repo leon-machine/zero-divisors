@@ -1,7 +1,7 @@
 ---
 id: std-algebra.bivector-exponential
 kind: claim
-version: 3
+version: 4
 title: Exponentials of bivectors with scalar square
 status: proved
 region: std-algebra
@@ -28,6 +28,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, unit vectors no longer written with the grade-involution hat'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 trust: ai-proposed
 about:
@@ -56,6 +60,10 @@ locators:
   - key: HestenesSobczyk1984
     locator: Ch. 3 (versors, rotors and the bivector algebra)
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Notation clash: the formal level wrote unit vectors as hat-a, hat-b, while hat is the grade involution (obj.std-algebra.grade-involution); renamed a_1, b_1. Statement unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -78,7 +86,7 @@ e^{A} =
 1 + A, & \lambda = 0 .
 \end{cases}
 \end{equation}
-In each case $e^{A} (e^{A})^{\sim} = e^{A} e^{-A} = 1$. For orthogonal $a, b$ with $Q(a) \ne 0$, $e^{\phi\, \hat{a}\hat{b}}$ (unit $\hat{a}, \hat{b}$, or $\hat{b}$ null) is the product of two invertible vectors, hence a rotor (\claimref{obj.std-algebra.rotor}): a rotation when $(a \wedge b)^{2} < 0$, a boost when $> 0$, and a null rotation or translation when $= 0$.
+In each case $e^{A} (e^{A})^{\sim} = e^{A} e^{-A} = 1$. For orthogonal $a, b$ with $Q(a) \ne 0$, $e^{\phi\, a_{1}b_{1}}$ ($a_{1}, b_{1}$ the vectors $a, b$ scaled to $Q = \pm 1$, or $b_{1} = b$ when $b$ is null) is the product of two invertible vectors, hence a rotor (\claimref{obj.std-algebra.rotor}): a rotation when $(a \wedge b)^{2} < 0$, a boost when $> 0$, and a null rotation or translation when $= 0$.
 
 ## technical
 When a bivector squares to a number, its exponential series collapses to two terms. A negative square gives the trigonometric form (a rotation), a positive square the hyperbolic form (a boost), and a zero square, a null bivector, gives exactly $1 + A$ (a null rotation, or a translation in a degenerate algebra). The exponential's reverse is its inverse, and for a simple bivector it is a product of two vectors, so it is a rotor.

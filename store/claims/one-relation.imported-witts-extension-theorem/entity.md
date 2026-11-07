@@ -1,7 +1,7 @@
 ---
 id: one-relation.imported-witts-extension-theorem
 kind: claim
-version: 2
+version: 3
 title: 'Imported: Witt''s extension theorem'
 status: imported
 region: one-relation
@@ -17,9 +17,13 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation typo (journal title)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
-- citation: E. Witt, Theorie der quadratischen Formen in beliebigen K"orpern, J. Reine Angew. Math. 176
+- citation: E. Witt, Theorie der quadratischen Formen in beliebigen Koerpern, J. Reine Angew. Math. 176
     (1937) 31--44.
   key: Witt1937
 - citation: T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67,
@@ -32,6 +36,10 @@ locators:
   label: fact:witt
   line: 546
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Citation typo: a lost backslash left K"orpern; written Koerpern as in std-algebra.witt-extension.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

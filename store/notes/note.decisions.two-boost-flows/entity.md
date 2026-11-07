@@ -1,7 +1,7 @@
 ---
 id: note.decisions.two-boost-flows
 kind: note
-version: 3
+version: 4
 title: The two boost flows
 status: remark
 subject: thermality
@@ -19,6 +19,10 @@ credit:
   role: 'unit resolution pass, the phase flow and continuation written with the transverse unit J'
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, stale description of the Euclidean-rotor proposition's clause (3) updated
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - singularity.modular-structure-completed-pair
 - scrambling.clock-inventory-boundary-modes
@@ -28,6 +32,10 @@ comments_on:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - singularity.euclidean-rotor-where-it-lies
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The parenthetical on singularity.euclidean-rotor-where-it-lies (3) said that clause keeps its source''s formal unit; that clause is now written with I_5 = I_4 e of Cl(2,3) (generator I_5 sigma = e_2 e_3 e outside Cl(1,3)), and the parenthetical says so.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -54,7 +62,7 @@ The series calls two different one-parameter groups ``the boost flow''. Both are
 
 The \emph{rotor flow} is $\operatorname{Ad}(R_\lambda)$, $R_\lambda = \exp(\lambda\sigma/2)$, a real rotor flow of the atom: it acts by $v \mapsto e^{-\lambda}v$, $v^{*} \mapsto e^{+\lambda}v^{*}$, so it rescales the modes, its adjoint eigenvalues are real, and it has no period. This is the flow of Theorem \claimref{singularity.modular-structure-completed-pair}(2) and (5), the only one-parameter flow implemented by real rotors of the atom, and of the clocks of Lemma \claimref{scrambling.clock-inventory-boundary-modes}, intrinsic flows of the real Clifford boundary-mode algebra with real adjoint eigenvalues. The scrambling law of \claimref{scrambling.spreading-law-chaos-bound-saturated} uses this flow: a quadratic generator containing the boost scales the ladder operators by $e^{\pm\kappa t}$, and that real growth, exponentiated across the window, gives $t_{*} = \kappa^{-1}\ln N$.
 
-The \emph{phase flow} is $\operatorname{Ad}(e^{JtK})$, written with the complex unit of the atom and the boundary modes, $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which on the modes is $a_j \mapsto e^{-J\omega_j t}a_j$: a unitary group whose adjoint eigenvalues are imaginary, multiples of $J$, periodic in the parameter for each single mode. This is the flow of Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic}, $\alpha_t = \operatorname{Ad}(e^{JtK})$, and the boost dynamics $\tau_t(a_j) = e^{-J\omega_j t}a_j$ of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}. The KMS analysis uses this flow: the descended state of Theorem \claimref{singularity.modular-descent} is KMS for it, the modular flow in its proof being $\operatorname{Ad}(\rho^{Jt})$, and the rigidity theorem, the geometric modular condition and the Hawking paper's I-state are stated for it. Proposition \claimref{singularity.euclidean-rotor-where-it-lies} identifies it as the Euclidean rotation: the boost rotor continued to imaginary rapidity, $R_{J\theta} = \exp(J\theta\sigma/2) = \exp(\theta I_{4}/2)$, whose generator $J\sigma = I_{4}$ is not in the atom's real algebra $\Cl(1,1)$ and which is realised by no real rotor of $\Cl(1,3)$ (the proposition's clause (3), in its source's formal unit, states that the generator lies outside $\Cl(1,3)$).
+The \emph{phase flow} is $\operatorname{Ad}(e^{JtK})$, written with the complex unit of the atom and the boundary modes, $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which on the modes is $a_j \mapsto e^{-J\omega_j t}a_j$: a unitary group whose adjoint eigenvalues are imaginary, multiples of $J$, periodic in the parameter for each single mode. This is the flow of Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic}, $\alpha_t = \operatorname{Ad}(e^{JtK})$, and the boost dynamics $\tau_t(a_j) = e^{-J\omega_j t}a_j$ of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}. The KMS analysis uses this flow: the descended state of Theorem \claimref{singularity.modular-descent} is KMS for it, the modular flow in its proof being $\operatorname{Ad}(\rho^{Jt})$, and the rigidity theorem, the geometric modular condition and the Hawking paper's I-state are stated for it. Proposition \claimref{singularity.euclidean-rotor-where-it-lies} identifies it as the Euclidean rotation: the boost rotor continued to imaginary rapidity, $R_{J\theta} = \exp(J\theta\sigma/2) = \exp(\theta I_{4}/2)$, whose generator $J\sigma = I_{4}$ is not in the atom's real algebra $\Cl(1,1)$ and which is realised by no real rotor of $\Cl(1,3)$ (the proposition's clause (3) writes the continuation on vectors with the central unit $I_{5} = I_{4}e$ of $\Cl(2,3)$, whose generator $I_{5}\sigma = e_{2}e_{3}e$ lies outside $\Cl(1,3)$).
 
 The two are related by analytic continuation of the parameter, $\lambda = Jt$: $\operatorname{Ad}(e^{JtK}) = \operatorname{Ad}(R_{Jt})$. The rotor flow fixes the orbits and, through the geometric normalisation, the rate $\kappa = 1/4M$ that converts rapidity to Schwarzschild time, $\lambda = \kappa t$; the phase flow carries the period, $2\pi$ in rapidity for the conjugation action on each atom, which under premise (R) is the modular period $\beta = 2\pi/\kappa = 8\pi M$ in Schwarzschild time. The chaos-bound statement compares one with the other: the rotor flow's growth rate $\kappa$ against $2\pi T$, the phase flow's KMS temperature, which are equal. Where the boundary-mode algebra is complex (the Hawking paper) the phase flow acts within it; where it is a real Clifford algebra (the scrambling results) its generator, $J$ times a bivector, is excluded ($J$ is not in that real algebra) and only the rotor flow is intrinsic, which is the dynamical face of the second known limit in the conventions. The Hawking paper's dynamics is the phase flow, while the scrambling assumption runs the window's dynamics on the rotor flow. Which of the two is the physical time evolution of a window, in the one Schwarzschild time $t$ that both papers use, is settled by Proposition \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}: taking a time evolution to be a group of $*$-automorphisms preserving the states, the phase flow is the window's time evolution and the rotor flow its KMS-strip continuation, so for the quadratic dynamics the scrambling law assumes its growth $e^{\kappa t}$ is an imaginary-time rate on the CAR windows; real-time spreading is left open there.
 

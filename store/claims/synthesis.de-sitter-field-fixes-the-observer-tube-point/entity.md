@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-field-fixes-the-observer-tube-point
 kind: claim
-version: 3
+version: 4
 title: 'The de Sitter field fixes the observer''s tube point'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the normalisation of K against the cited theorem stated in the formal level'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -64,6 +68,10 @@ lineage:
   - synthesis.wick-rotated-boost-selects-observer-tube-point
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The formal level says it uses the labels of synthesis.wick-rotated-boost-selects-observer-tube-point, whose K is (1/2) e_1 e_2, and then sets K = e_1 e_2; the proof already says ''twice the stored generator'', and clause (iii) needs the unit-rapidity one (Q(K . x) = rho^2 for K = e_1 e_2, rho^2/4 for (1/2) e_1 e_2, checked exactly with lib/GA.py); the formal level now says so; mathematics unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -104,7 +112,7 @@ extraction:
 ---
 
 ## formal
-Use the labels of Theorem \claimref{synthesis.wick-rotated-boost-selects-observer-tube-point}: $\Cl(2,4)$ with $e_{1}$ (square $+1$, time), $e_{2}, e_{3}, e_{4}$ (square $-1$), $e_{+}$ ($+1$), $e_{-}$ ($-1$), $\nO = \tfrac12(e_{+} + e_{-})$, $\ninf = e_{+} - e_{-}$, $X(x) = \nO + x - \tfrac12 Q(x)\ninf$; $K = e_{1}e_{2}$, the boost of the $(e_{1}, e_{2})$ plane with bifurcation plane $\operatorname{span}(e_{3}, e_{4})$; the compatible tube points $m = x_{\perp} + I_{7}\rho u$ (complex unit $I_{7} = I_{6}e$, the central pseudoscalar of $\Cl(2,4)_{\C} = \Cl(3,4)$, which commutes with every vector; Theorem \claimref{std-algebra.complexification-is-the-odd-extension}), $u = \cosh\eta\,e_{1} + \sinh\eta\,e_{2}$, $\rho > 0$, with observers $x(m) = x_{\perp} + \rho(\sinh\eta\,e_{1} + \cosh\eta\,e_{2})$. For real $\Lambda$ let $I_{\Lambda} = \ninf + \tfrac{\Lambda}{6}\nO$, $W = \ninf - \tfrac{\Lambda}{6}\nO$, $\sigma(x) = \ip{X(x)}{I_{\Lambda}} = 1 - \tfrac{\Lambda}{12}Q(x)$, and for $\Lambda > 0$ let $(\hb, \Omega)$, $\hb(a) = \sigma a$, $\Omega(a) = -(a \wedge \nabla\sigma)/\sigma$ on $\sigma > 0$, be the de Sitter gravitational field of Theorem \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation}, $H = (\Lambda/3)^{1/2}$, $\kappa_{\Lambda} = H$ its surface gravity (Theorem \claimref{synthesis.de-sitter-static-boost-frozen-point}), $\ell = 1/H$ and $\rho_{\Lambda} = (12/\Lambda)^{1/2} = 2\ell$.
+Use the labels of Theorem \claimref{synthesis.wick-rotated-boost-selects-observer-tube-point}: $\Cl(2,4)$ with $e_{1}$ (square $+1$, time), $e_{2}, e_{3}, e_{4}$ (square $-1$), $e_{+}$ ($+1$), $e_{-}$ ($-1$), $\nO = \tfrac12(e_{+} + e_{-})$, $\ninf = e_{+} - e_{-}$, $X(x) = \nO + x - \tfrac12 Q(x)\ninf$; $K = e_{1}e_{2}$ (twice that theorem's generator, normalised to unit rapidity), the boost of the $(e_{1}, e_{2})$ plane with bifurcation plane $\operatorname{span}(e_{3}, e_{4})$; the compatible tube points $m = x_{\perp} + I_{7}\rho u$ (complex unit $I_{7} = I_{6}e$, the central pseudoscalar of $\Cl(2,4)_{\C} = \Cl(3,4)$, which commutes with every vector; Theorem \claimref{std-algebra.complexification-is-the-odd-extension}), $u = \cosh\eta\,e_{1} + \sinh\eta\,e_{2}$, $\rho > 0$, with observers $x(m) = x_{\perp} + \rho(\sinh\eta\,e_{1} + \cosh\eta\,e_{2})$. For real $\Lambda$ let $I_{\Lambda} = \ninf + \tfrac{\Lambda}{6}\nO$, $W = \ninf - \tfrac{\Lambda}{6}\nO$, $\sigma(x) = \ip{X(x)}{I_{\Lambda}} = 1 - \tfrac{\Lambda}{12}Q(x)$, and for $\Lambda > 0$ let $(\hb, \Omega)$, $\hb(a) = \sigma a$, $\Omega(a) = -(a \wedge \nabla\sigma)/\sigma$ on $\sigma > 0$, be the de Sitter gravitational field of Theorem \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation}, $H = (\Lambda/3)^{1/2}$, $\kappa_{\Lambda} = H$ its surface gravity (Theorem \claimref{synthesis.de-sitter-static-boost-frozen-point}), $\ell = 1/H$ and $\rho_{\Lambda} = (12/\Lambda)^{1/2} = 2\ell$.
 \begin{enumerate}
 \item[(i)] \emph{(Symmetries commuting with the boost.)} The bivectors commuting with $I_{\Lambda}$ and $K$ are spanned by $K$, $e_{3}e_{4}$, $e_{3}W$, $e_{4}W$, with $Q(W) = -\Lambda/3$ and $[e_{3}W, e_{4}W] = -2Q(W)\,e_{3}e_{4}$: the three transverse ones span $\so(3)$ for $\Lambda > 0$, $\so(1,2)$ for $\Lambda < 0$, and for $\Lambda = 0$ ($W$ replaced by $\ninf$) the rotation and translations of the bifurcation plane.
 \item[(ii)] \emph{(The fixed tube points.)} For $\Lambda > 0$ a compatible tube point is fixed by the three transverse symmetries if and only if $x_{\perp} = 0$ and $\rho = \rho_{\Lambda}$; then $\operatorname{Re}X(m) = \tfrac{\rho_{\Lambda}^{2}}{2}I_{\Lambda}$. These points form one orbit of the boost, the tube points of the observers on the hyperbola $Q(x) = -12/\Lambda$ of the right wedge.

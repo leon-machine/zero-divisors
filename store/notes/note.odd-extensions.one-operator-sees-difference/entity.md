@@ -1,7 +1,7 @@
 ---
 id: note.odd-extensions.one-operator-sees-difference
 kind: note
-version: 3
+version: 4
 title: the one operator that sees the difference
 status: remark
 subject: tower
@@ -23,6 +23,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the gamma_5 convention of the physicists'' reading stated'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - odd-extensions.two-towers-one-curved-universe
 - odd-extensions.belongs-tower
@@ -33,6 +37,10 @@ locators:
   label: rem:onesees
   line: 725
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The note sets the real pseudoscalar against gamma_5 and the pseudoscalar times the central unit against I_5 gamma_5, which holds for gamma_5 = gamma_0 gamma_1 gamma_2 gamma_3 = omega''; with the store''s chiral-loop gamma_5 = I_5 omega'' the two readings exchange (checked exactly with lib/GA.py in Cl(2,3): I_5 (I_5 omega'') = -omega''). The note now states its convention; content unchanged.'
   source_formal: |-
     ... $e_{5}$ is the real pseudoscalar in one tower and the pseudoscalar times a central complex unit in the other, which in the physicists' notation is $\gamma_{5}$ against $i\gamma_{5}$, an anti-Hermitian against a Hermitian bilinear. ...
 
@@ -55,7 +63,7 @@ extraction:
 ---
 
 ## formal
-An operator linear in $e_{5}$ alone, a term $\bar\psi e_{5}\psi$, is the one place the doubling would show: $e_{5}$ is the real pseudoscalar in one tower and the pseudoscalar times a central complex unit in the other, the central pseudoscalar of the complexified extension (\claimref{std-algebra.complexification-is-the-odd-extension}; $I_5$ when the extension is $\Cl(2,3)$), which in the physicists' notation, with their complex unit read as that central pseudoscalar, is $\gamma_{5}$ against $I_5\gamma_{5}$, an anti-Hermitian against a Hermitian bilinear. But $e_{5}$ is the unit Stelle-West direction, unsoldered by Proposition \claimref{odd-extensions.belongs-tower}(i) and pure gauge by Fact \ref{fact:goldstone}; so either a coupling to it can be physical, in which case Fact \ref{fact:goldstone} is being read too strongly in Proposition \claimref{odd-extensions.boost-dilation-ratio-gauge}(iii), or it cannot, in which case the mirror sector is observationally identical to this one at every level the series reaches. The note takes the second reading, consistently with Proposition \claimref{odd-extensions.boost-dilation-ratio-gauge}, and records the operator as the one place the first reading would show; the Hermiticity statement depends on a Dirac-representation convention the note does not fix.
+An operator linear in $e_{5}$ alone, a term $\bar\psi e_{5}\psi$, is the one place the doubling would show: $e_{5}$ is the real pseudoscalar in one tower and the pseudoscalar times a central complex unit in the other, the central pseudoscalar of the complexified extension (\claimref{std-algebra.complexification-is-the-odd-extension}; $I_5$ when the extension is $\Cl(2,3)$), which in the physicists' notation, with their complex unit read as that central pseudoscalar, is $\gamma_{5}$ against $I_5\gamma_{5}$ for $\gamma_{5} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$ (with the Hermitian $\gamma_{5} = I_{5}\gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$ of the store's chiral-loop convention the two exchange), an anti-Hermitian against a Hermitian bilinear. But $e_{5}$ is the unit Stelle-West direction, unsoldered by Proposition \claimref{odd-extensions.belongs-tower}(i) and pure gauge by Fact \ref{fact:goldstone}; so either a coupling to it can be physical, in which case Fact \ref{fact:goldstone} is being read too strongly in Proposition \claimref{odd-extensions.boost-dilation-ratio-gauge}(iii), or it cannot, in which case the mirror sector is observationally identical to this one at every level the series reaches. The note takes the second reading, consistently with Proposition \claimref{odd-extensions.boost-dilation-ratio-gauge}, and records the operator as the one place the first reading would show; the Hermiticity statement depends on a Dirac-representation convention the note does not fix.
 
 ## technical
 pending

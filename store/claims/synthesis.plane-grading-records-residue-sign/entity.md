@@ -1,7 +1,7 @@
 ---
 id: synthesis.plane-grading-records-residue-sign
 kind: claim
-version: 3
+version: 4
 title: 'The plane grading records the sign of the residue'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the ladder labelling of the common-rate step stated against the tower''s'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -55,6 +59,10 @@ lineage:
 about:
 - obj.tower.tower
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The half-period step reads N_j - 1/2 = K_j with v_j = (e_j + f_j)/2 as the annihilator (N_j = v_j^* v_j, the atom labelling of synthesis.phase-flow-is-time-rotor-flow-kms-continuation), while in the tower''s labelling v_j creates (tower.car-limit-even-charge) and N_j - 1/2 = -K_j; exact computation with lib/GA.py: v w = (1 - ef)/2, so v w - 1/2 = -K and w v - 1/2 = +K. The proof now says which labelling it uses and that the other gives m_j = -1, again odd, so nothing changes; the statement is unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: sheaf.imported-classification-values
 kind: claim
-version: 4
+version: 5
 title: 'Imported: classification values'
 status: proved
 region: sheaf
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the complex field written with the declared macro'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -35,6 +39,10 @@ locators:
   label: fact:classvalues
   line: 457
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Notation: \mathbb{C} written with the declared macro \C, as in the technical level; the entry names the type of an algebra in the classification, not a complex structure, so no unit is involved.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -56,7 +64,7 @@ tags: [clifford-classification]
 ---
 
 ## formal
-Among the nondegenerate real Clifford algebras: $\Cl(1,3) \cong \Mat_2(\HH)$, $\Cl(0,4) \cong \Mat_2(\HH)$, $\Cl(0,3) \cong \HH \oplus \HH$, $\Cl(2,4) \cong \Mat_4(\HH)$, and $\Cl(1,2) \cong \Mat_2(\mathbb{C})$. \emph{Provenance:} the classification of real Clifford algebras, proved in the primer \cite[Thm.~9.3]{ButlerT0}; classical references \cite{Porteous1995, Lounesto2001}.
+Among the nondegenerate real Clifford algebras: $\Cl(1,3) \cong \Mat_2(\HH)$, $\Cl(0,4) \cong \Mat_2(\HH)$, $\Cl(0,3) \cong \HH \oplus \HH$, $\Cl(2,4) \cong \Mat_4(\HH)$, and $\Cl(1,2) \cong \Mat_2(\C)$. \emph{Provenance:} the classification of real Clifford algebras, proved in the primer \cite[Thm.~9.3]{ButlerT0}; classical references \cite{Porteous1995, Lounesto2001}.
 
 ## technical
 Five values from the classification of nondegenerate real Clifford algebras: $\Cl(1,3) \cong \Mat_2(\HH)$, $\Cl(0,4) \cong \Mat_2(\HH)$, $\Cl(0,3) \cong \HH \oplus \HH$, $\Cl(2,4) \cong \Mat_4(\HH)$ and $\Cl(1,2) \cong \Mat_2(\C)$. They are imported from the classification theorem proved in the series' primer, with classical references.

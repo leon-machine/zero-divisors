@@ -46,6 +46,10 @@ locators:
   label: fact:flag
   line: 521
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The correction note of 2026-10-22 says the assumes edge to dark-matter.premise-trichotomy-exhaustive is kept pending a maintainer decision; that edge is no longer in the derivation (assumes: CPT covariance and the flag as a datum), so the note records history only; extraction only, no version change."
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

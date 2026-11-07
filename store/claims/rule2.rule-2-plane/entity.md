@@ -1,7 +1,7 @@
 ---
 id: rule2.rule-2-plane
 kind: claim
-version: 3
+version: 4
 title: Rule 2 in the plane
 status: proved
 region: rule2
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, the time-negative labelling of the plane stated against the store signature'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -46,6 +50,10 @@ locators:
   label: prop:planar
   line: 245
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Convention mixing: the entity labels Cl(2,1) with time of square -1 (the mirror''s labelling, stated only in note.rule2.setting-planar-fermions), while the theorem it cites calls generators of square -1 spacelike; the technical level and the proof now say which reading acts where. Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -69,7 +77,7 @@ In $A_3 = \Cl(2,1)$:
 \end{enumerate}
 
 ## technical
-In $A_3 = \Cl(2,1)$, with $Q(e_x) = Q(e_y) = +1$ and $Q(e_t) = -1$, the volume element $\omega = e_xe_ye_t$ is central with $\omega^2 = +1$, so $A_3 = \varepsilon_+A_3 \oplus \varepsilon_-A_3$, each ideal a copy of $\Cl^0(2,1) \cong \Cl(2,0) \cong \Mat_2(\R)$. Since $\varepsilon_\pm e_t = \mp\varepsilon_\pm e_xe_y$, the ideals are the two inequivalent two-component representations, and the reflection of one spatial axis, $\hat{\cdot}\circ\mathrm{Ad}_{e_x}$, negates $\omega$, exchanges them and is outer.
+In $A_3 = \Cl(2,1)$, with $Q(e_x) = Q(e_y) = +1$ and $Q(e_t) = -1$ (the mirror's labelling, time of square $-1$, note.rule2.setting-planar-fermions; in the store signature, where spacelike means square $-1$, the words space and time below are exchanged), the volume element $\omega = e_xe_ye_t$ is central with $\omega^2 = +1$, so $A_3 = \varepsilon_+A_3 \oplus \varepsilon_-A_3$, each ideal a copy of $\Cl^0(2,1) \cong \Cl(2,0) \cong \Mat_2(\R)$. Since $\varepsilon_\pm e_t = \mp\varepsilon_\pm e_xe_y$, the ideals are the two inequivalent two-component representations, and the reflection of one spatial axis, $\hat{\cdot}\circ\mathrm{Ad}_{e_x}$, negates $\omega$, exchanges them and is outer.
 
 The Rule 2 repairs are $\Cl(3,1)$, where $Q(\nu) = +1$ is a third spatial direction, and $\Cl(2,2)$, where $Q(\nu) = -1$ is a second time, both $\cong \Mat_4(\R)$. In them conjugation by $\nu$ is the grade involution of $A_3$ and conjugation by $\nu e_x$ is the planar reflection: a rotation in $\Cl(3,1)$ and a boost in $\Cl(2,2)$. $\Cl(3,1)$ is the Rule 1 ascent of $\Cl(2,0)$, with residues $2 \to 1 \to 2$ or $2 \to 1 \to 0$. The time-positive form $\Cl(1,2) \cong \Mat_2(\C)$ has $\omega^2 = -1$ and no real splitting; the splitting appears on complexification.
 

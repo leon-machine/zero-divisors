@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.cosmological-constant-deforms-wall
 kind: claim
-version: 2
+version: 3
 title: The cosmological constant deforms the wall
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the generator whose square is -Lambda/3 named in the proof'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: cor:wall
   line: 591
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The statement gives the ascent generator the square -Lambda/3 while the proof displayed only I = c e_+ + d e_-, of square +Lambda/3; the proof now names the generator meant, J = d e_+ + c e_-, orthogonal to I, J^2 = d^2 - c^2 = -Lambda/3, equal to +-I at Lambda = 0 (checked exactly with lib/GA.py at (c,d) = (2,1), (1,3), (5,5), (3,-3)); the statement is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

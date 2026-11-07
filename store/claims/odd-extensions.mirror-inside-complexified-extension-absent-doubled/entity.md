@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.mirror-inside-complexified-extension-absent-doubled
 kind: claim
-version: 4
+version: 5
 title: The mirror inside the complexified extension, and absent from the doubled one
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the two complex units of clauses (iii) and (iv) named'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.odd-extensions.single-extension
@@ -43,6 +47,10 @@ locators:
   label: thm:mirror
   line: 481
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Clause (iii) reads Cl^0(1,3) as Mat(2,C) and clause (iv) calls the Wick map complex-linear, two different units: the formal level now names the first as the shadow''s pseudoscalar e_1e_2e_3e_4 (central in the even part) and the second as the central omega = +-I_5 of Cl(2,3), not identified; mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -62,8 +70,8 @@ In $\Cl(2,3)$, the time extension of this world with $e_{5}^{2} = +1$:
 \begin{enumerate}
 \item[(i)] the generators $e_{1}, \ldots, e_{4}$ generate a copy of $\Cl(1,3)$, this world's shadow;
 \item[(ii)] the bivectors $e_{\mu}e_{5}$, $\mu = 1, \ldots, 4$, anticommute pairwise, square to $(-1, +1, +1, +1)$, and generate the whole even subalgebra, which is a copy of $\Cl(3,1)$, the mirror's shadow;
-\item[(iii)] the two copies meet exactly in the even part of the shadow, $\Cl^{0}(1,3) \cong \Mat(2,\C)$, of dimension eight, the Lorentz algebra with its Weyl spinors; and together with $\omega$ they span everything, $\Cl(2,3) = \Cl(1,3) \oplus \omega\,\Cl(1,3)$;
-\item[(iv)] no automorphism of $\Cl(2,3)$ carries the copy of $\Cl(1,3)$ onto the copy of $\Cl(3,1)$; the natural map between their generating sets is multiplication by the central $\omega$, $e_{\mu} \mapsto \omega e_{\mu}$, which squares to $-e_{\mu}^{2}$ (the Wick rotation) and is complex-linear, not an automorphism of the real algebra.
+\item[(iii)] the two copies meet exactly in the even part of the shadow, $\Cl^{0}(1,3) \cong \Mat(2,\C)$ (its complex unit the shadow's pseudoscalar $e_{1}e_{2}e_{3}e_{4}$, central in the even part), of dimension eight, the Lorentz algebra with its Weyl spinors; and together with $\omega$ they span everything, $\Cl(2,3) = \Cl(1,3) \oplus \omega\,\Cl(1,3)$;
+\item[(iv)] no automorphism of $\Cl(2,3)$ carries the copy of $\Cl(1,3)$ onto the copy of $\Cl(3,1)$; the natural map between their generating sets is multiplication by the central $\omega$, $e_{\mu} \mapsto \omega e_{\mu}$, which squares to $-e_{\mu}^{2}$ (the Wick rotation) and is complex-linear for the central unit $\omega = \pm I_{5}$, a different unit from that of (iii) and not identified with it, not an automorphism of the real algebra.
 \end{enumerate}
 In $\Cl(1,4)$, the space extension with $e_{5}^{2} = -1$: the generators $e_{\mu}$ and the bivectors $e_{\mu}e_{5}$ both generate copies of $\Cl(1,3)$, the elements $\omega e_{\mu}$ generate a third, and $\Cl(3,1)$ admits no unital embedding into $\Cl(1,4)$ at all. The same statements hold for the mirror's two extensions with the roles of $\Cl(1,3)$ and $\Cl(3,1)$ exchanged.
 

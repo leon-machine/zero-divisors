@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.neutral-row
 kind: note
-version: 2
+version: 3
 title: The neutral row
 status: remark
 subject: dark-matter
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: consistency pass, which unit acts where stated
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - dark-tower-matter.five-dimensional-content
 - dark-tower-matter.gauge-algebras
@@ -28,6 +32,10 @@ locators:
   label: lem:neutralrow
   line: 599
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle: the note, written over span{1, I_4} by ruling R3, now says that the five-dimensional towers'' pairs are built with the hierarchy''s unit u (I_7 of Cl(5,2) at r = 3, a chosen quaternionic unit at r = 5) and that I_4 is the multiplicity spaces'' unit, not identified with u. No change of mathematics.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -53,7 +61,7 @@ review: typed
 ---
 
 ## formal
-In a hierarchy $\C^{1} \otimes \C^{k}$ whose central generator acts by $k$ on the slot and $-1$ on each pair, the state with the slot and all $k$ pairs occupied has weight $k - k = 0$. The constituent-level generator of a one-constituent hierarchy is therefore neutral: the trace-free central generator of $\uu(1) \oplus \uu(k)$ on $\C^{1} \oplus \C^{k}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) is $(k\,I_{4}, -I_{4}\,1_{k})$ up to scale, and weights add. Arithmetic.
+In a hierarchy $\C^{1} \otimes \C^{k}$ whose central generator acts by $k$ on the slot and $-1$ on each pair, the state with the slot and all $k$ pairs occupied has weight $k - k = 0$. The constituent-level generator of a one-constituent hierarchy is therefore neutral: the trace-free central generator of $\uu(1) \oplus \uu(k)$ on $\C^{1} \oplus \C^{k}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) is $(k\,I_{4}, -I_{4}\,1_{k})$ up to scale, and weights add. In the five-dimensional towers the pairs themselves are built with the unit $u$ of the hierarchy's scalars $\mathrm{span}\{1, u\}$ ($u = I_{7}$, the pseudoscalar of $\Cl(5,2)$, at $r = 3$; a chosen unit of $\HH$ at $r = 5$; Theorem \claimref{dark-tower-matter.third-pairs-unit-five-dimensions}); here $I_{4}$ is the unit of the multiplicity spaces only, and the two are not identified. Arithmetic.
 
 ## technical
 pending

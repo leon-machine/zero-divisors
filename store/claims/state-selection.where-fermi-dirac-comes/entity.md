@@ -1,7 +1,7 @@
 ---
 id: state-selection.where-fermi-dirac-comes
 kind: claim
-version: 5
+version: 6
 title: Where the $+1$ of Fermi-Dirac comes from
 status: proved
 region: state-selection
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, the action of R_{2 pi} on the two sectors named (factorwise, not conjugation)
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.singularity.grading-parity-automorphism
@@ -41,6 +45,10 @@ locators:
   label: cor:statistics
   line: 294
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal, technical and proof said that R_{2 pi} = -1 acts as +1 on the even and -1 on the odd sector without naming the action; conjugation by -1 is trivial on both (state-selection.euclidean-partner-curvature-selected (2), singularity.euclidean-rotor-where-it-lies (2)), so read as conjugation the statement contradicted those clauses; the action meant, and the one check_even_sector_periodic_odd_sector_antiperiodic tests, is the factorwise action on ladder words, which is the grading automorphism. Wording only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -68,10 +76,10 @@ extraction:
 ---
 
 ## formal
-The rotor implementing one Euclidean period is $R_{2\pi} = -1$, which acts as $+1$ on the even sector $\Aev$ and as $-1$ on the odd sector $\Aod$. The ladder's own generators are odd, so their correlation functions are antiperiodic around the modular period while the metric-level observables are periodic. This is the structural origin of the Fermi-Dirac denominator $e^{\omega/T} + 1$ rather than the Bose-Einstein $e^{\omega/T} - 1$, and hence of the first wrinkle recorded in \cite[Rem.~7.5]{ButlerT5}: the statistics of the directly produced spectrum is fixed by the double cover, and the bosonic sector has to be reached by bosonisation, as Step 4e does.
+The rotor implementing one Euclidean period is $R_{2\pi} = -1$. Applied factor by factor to ladder words, each ladder generator taken as a vector of the spinor module, it acts as $+1$ on the even sector $\Aev$ and as $-1$ on the odd sector $\Aod$: the grading automorphism (its conjugation action is the identity on both sectors, Proposition \claimref{state-selection.euclidean-partner-curvature-selected}(2)). The ladder's own generators are odd, so their correlation functions are antiperiodic around the modular period while the metric-level observables are periodic. This is the structural origin of the Fermi-Dirac denominator $e^{\omega/T} + 1$ rather than the Bose-Einstein $e^{\omega/T} - 1$, and hence of the first wrinkle recorded in \cite[Rem.~7.5]{ButlerT5}: the statistics of the directly produced spectrum is fixed by the double cover, and the bosonic sector has to be reached by bosonisation, as Step 4e does.
 
 ## technical
-The rotor implementing one Euclidean period on spinors, where the curvature-selected Euclidean rotor carries the continued boost on each chiral half, is $R_{2\pi} = -1$, which acts as $+1$ on the even sector $\Aev$ and as $-1$ on the odd sector $\Aod$. The ladder's generators are odd, so their correlation functions are antiperiodic around the modular period, while the metric-level observables, which live in the even sector, are periodic.
+The rotor implementing one Euclidean period on spinors, where the curvature-selected Euclidean rotor carries the continued boost on each chiral half, is $R_{2\pi} = -1$. Applied factor by factor to ladder words, each generator taken in the spinor module, it acts as $+1$ on the even sector $\Aev$ and as $-1$ on the odd sector $\Aod$, the grading automorphism; its conjugation action is trivial on both. The ladder's generators are odd, so their correlation functions are antiperiodic around the modular period, while the metric-level observables, which live in the even sector, are periodic.
 
 Read through the standard Matsubara correspondence, this antiperiodicity is the structural origin of the Fermi-Dirac denominator $e^{\omega/T} + 1$ rather than the Bose-Einstein $e^{\omega/T} - 1$: the statistics of the directly produced spectrum is fixed by the double cover, and the bosonic sector has to be reached by bosonisation.
 

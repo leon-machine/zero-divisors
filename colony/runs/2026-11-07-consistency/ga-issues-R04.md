@@ -1,6 +1,6 @@
 # GA issues found by reader R04 (standard-model)
 
-GA-owned entities in R04's list (note.neutrino.abstract, note.programme.setting-falsifiable-claims, note.programme.setting-machine-verification, note.programme.setting-series-paper-paper-2, synthesis.imported-left-right-bidoublet-two-yukawa-couplings): read; no issue beyond what the rewriters' detectors list (the bidoublet Fact already writes epsilon Phi^* epsilon^T with tau_2 = -I_4 epsilon and keeps its 2 x 2 matrices as the source's model data). Not edited.
+GA-owned entities in R04's list (note.neutrino.abstract, note.programme.setting-falsifiable-claims, note.programme.setting-machine-verification, note.programme.setting-series-paper-paper-2, synthesis.imported-left-right-bidoublet-two-yukawa-couplings): read; no issue beyond what the rewriters' detectors list (the bidoublet Fact already writes epsilon Phi^* epsilon^T with tau_2 = -I_4 epsilon and keeps its 2 x 2 matrices as the source's model data). Not edited. One non-GA issue for the owner of note.programme.setting-series-paper-paper-2: its T15 row says "(the filled twistor is $e^{c}$ at $Y = -1$)"; the grade-three state $(1)_{-1}$ is $e_{R}$, the conjugate of $e^{c}$ ($e^{c}$ has $Y = +1$, standard-model.hypercharge-global-form-pair-counting-consistency (2)). Proposed: "(the filled twistor, at $Y = -1$, is $e_{R}$, the conjugate of $e^{c}$)".
 
 Not GA-owned, not rewritten (more than a notation change), for whoever takes them:
 

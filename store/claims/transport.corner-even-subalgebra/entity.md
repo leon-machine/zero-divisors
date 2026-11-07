@@ -1,7 +1,7 @@
 ---
 id: transport.corner-even-subalgebra
 kind: claim
-version: 4
+version: 5
 title: The corner is the even subalgebra
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, standing hypotheses of the section stated in the formal level'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: lem:corner
   line: 1157
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The formal level used A, eps_pm and B_gamma from the paper''s section setting (note.transport.setting-setting-one-adjoined-generator) without stating them; the standing hypothesis p - q = 1 mod 4, already in the technical level and one-liner, is now in the formal level. No change of mathematics; no edge added.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -58,7 +66,7 @@ extraction:
 ---
 
 ## formal
-The map $\phi : \Cl^0(p,q) \to \varepsilon_+ A$, $\phi(a) = \varepsilon_+ a$, is an isomorphism of unital algebras (with unit $\varepsilon_+$ on the right-hand side). Moreover $\varepsilon_+ B_\gamma\, \varepsilon_+ = \varepsilon_+ A$.
+Let $A = \Cl(p,q)$ with $p - q \equiv 1 \pmod 4$, split by the central idempotents $\varepsilon_\pm = \tfrac12(1 \pm \omega)$, let $\Cl^0(p,q)$ be its even subalgebra, and let $B_\gamma = A \oplus A\nu$ be its one-generator ascent. The map $\phi : \Cl^0(p,q) \to \varepsilon_+ A$, $\phi(a) = \varepsilon_+ a$, is an isomorphism of unital algebras (with unit $\varepsilon_+$ on the right-hand side). Moreover $\varepsilon_+ B_\gamma\, \varepsilon_+ = \varepsilon_+ A$.
 
 ## technical
 In the setting where $A = \Cl(p,q)$ with $p - q \equiv 1 \pmod 4$ splits along the central idempotents $\varepsilon_\pm = \tfrac12(1 \pm \omega)$, and $B_\gamma$ is its extension by an orthogonal generator $\nu$, the map $\phi(a) = \varepsilon_+ a$ is an isomorphism of unital algebras from the even subalgebra $\Cl^{0}(p,q)$ onto the corner $\varepsilon_+ A$, whose unit is $\varepsilon_+$. Injectivity uses that $\omega$ is odd, and surjectivity a dimension count.

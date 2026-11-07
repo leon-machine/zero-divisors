@@ -1,7 +1,7 @@
 ---
 id: tower.structure-tower-c-norms
 kind: claim
-version: 9
+version: 10
 title: The *-structure of the tower, and its C*-norms
 status: proved
 region: tower
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 9
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the scalar unit distinguished from the ground volume element, and the conjugation step written with the scalar as a factor'
+  version: 10
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.tower.tower
@@ -56,6 +60,10 @@ locators:
   label: lem:cstar
   line: 409
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 9 -> 10. The formal level now says that the scalar 1 (x) I_4 is not, for the physical ground, the ground volume element u_A = gamma_0 gamma_1 gamma_2 gamma_3 (two units, said which acts where); the proof wrote x = -y (x) I_4 with y already in the complexified floor, now x = -y(1 (x) I_4) and x^* = (1 (x) I_4) y = -x, checked exactly with lib/GA.py on a model with a central unit u, u^2 = -1 (y = xu squares to 1 and x = -yu); mathematics unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -103,7 +111,7 @@ extraction:
 ---
 
 ## formal
-Fix the tower's frames: an orthogonal ground frame $x_1, \dots, x_n$ diagonalising $Q$, and the plane frames $e_j, f_j$. Each complexified floor is $T_k^{\,\C} = T_k \otimes_\R \C$ with $\C$ read as $\mathrm{span}\{1, I_4\}$ in the second factor (conventions, the unit principle, U1): its unit $1 \otimes I_4$ commutes with every ground and plane generator by construction and is not an element of the floor (the odd extensions of U3 are floor by floor and exist only for even $m$); complex matrices are read with entries in the same field. On each complexified floor $T_k^{\,\C}$ there is a unique conjugate-linear antiautomorphism $*$ with $x^* = x$ for every frame generator with $x^2 = 1$ and $x^* = -x$ for every frame generator with $x^2 = -1$. Under it: every frame generator, every blade in the frame, and every ground or plane volume element is unitary ($z^* z = 1$); the ladder pairs are mutually adjoint, $v_j^* = w_j$; the connecting maps $\iota_k$, the identifications $\varphi_k$ of Theorem \claimref{tower.commuting-copies}, the block doublings $\theta_k$, and the correctors $V_k$ and $W_k$ of Lemma \claimref{tower.compatibility-connecting-maps-transported} and Theorem \claimref{tower.algebraic-limit-even-charge} are all compatible with $*$ (the maps are *-homomorphisms, the correctors unitary). If moreover $p - q$ is even, each $T_k^{\,\C}$ is *-isomorphic to $\Mat_{2^{m/2}}(\C)$, $m := n + 2k$, with $*$ the conjugate transpose; consequently each floor carries a unique C*-norm, every unital *-monomorphism between floors is isometric, and the increasing union $\bigcup_k T_k^{\,\C}$ carries a unique C*-norm.
+Fix the tower's frames: an orthogonal ground frame $x_1, \dots, x_n$ diagonalising $Q$, and the plane frames $e_j, f_j$. Each complexified floor is $T_k^{\,\C} = T_k \otimes_\R \C$ with $\C$ read as $\mathrm{span}\{1, I_4\}$ in the second factor (conventions, the unit principle, U1): its unit $1 \otimes I_4$ commutes with every ground and plane generator by construction and is not an element of the floor (the odd extensions of U3 are floor by floor and exist only for even $m$); for the physical ground $\Cl(1,3)$ it is a unit of the scalar factor, not the ground volume element $u_A = \gamma_0\gamma_1\gamma_2\gamma_3$, which lies in the floor and anticommutes with the ground generators, and the two are not identified; complex matrices are read with entries in the same field. On each complexified floor $T_k^{\,\C}$ there is a unique conjugate-linear antiautomorphism $*$ with $x^* = x$ for every frame generator with $x^2 = 1$ and $x^* = -x$ for every frame generator with $x^2 = -1$. Under it: every frame generator, every blade in the frame, and every ground or plane volume element is unitary ($z^* z = 1$); the ladder pairs are mutually adjoint, $v_j^* = w_j$; the connecting maps $\iota_k$, the identifications $\varphi_k$ of Theorem \claimref{tower.commuting-copies}, the block doublings $\theta_k$, and the correctors $V_k$ and $W_k$ of Lemma \claimref{tower.compatibility-connecting-maps-transported} and Theorem \claimref{tower.algebraic-limit-even-charge} are all compatible with $*$ (the maps are *-homomorphisms, the correctors unitary). If moreover $p - q$ is even, each $T_k^{\,\C}$ is *-isomorphic to $\Mat_{2^{m/2}}(\C)$, $m := n + 2k$, with $*$ the conjugate transpose; consequently each floor carries a unique C*-norm, every unital *-monomorphism between floors is isometric, and the increasing union $\bigcup_k T_k^{\,\C}$ carries a unique C*-norm.
 
 ## technical
 On each complexified floor $T_k^{\,\C}$ of the tower, with frame generators fixed, there is a unique conjugate-linear antiautomorphism $*$ fixing every frame generator with $Q(x) = 1$ and negating every frame generator with $Q(x) = -1$. Under it every frame generator, frame blade and ground or plane volume element is unitary, $z^* z = 1$; the ladder pairs are mutually adjoint, $v_j^* = w_j$; the connecting maps $\iota_k$, the identifications $\varphi_k$ and the block doublings $\theta_k$ are *-homomorphisms; and the correctors $V_k$, $W_k$ are unitary.

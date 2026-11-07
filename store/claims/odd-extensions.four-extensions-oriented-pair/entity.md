@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.four-extensions-oriented-pair
 kind: claim
-version: 5
+version: 6
 title: The four extensions of the oriented pair
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the complex unit of the complexified rows named'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.odd-extensions.single-extension
@@ -45,6 +49,10 @@ locators:
   label: cor:four
   line: 454
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The table writes Cl(1,3) (x) C and Cl(3,1) (x) C without the unit; the formal level now says it is the extension''s central volume element omega (omega^2 = -1, commuting with every vector; +-I_5 for Cl(2,3)), not the shadow''s pseudoscalar; mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -78,7 +86,7 @@ The single extensions of this world and its mirror are, with their residues,
 \bottomrule
 \end{array}
 \]
-In both towers the generator of the time sign complexifies and the generator of the space sign doubles. The labels follow the uniform convention (time a generator of square $+1$, space one of square $-1$, in both towers); in T14's causal convention the mirror's time is its minus sign, so its space and time extensions are $\Cl(4,1)$ and $\Cl(3,2)$, each the reversal of ours of the same kind, and the convention-free rule is that a generator of square $-1$ doubles and one of square $+1$ complexifies (Proposition \claimref{synthesis.mirror-extensions-causal-convention}).
+In both towers the generator of the time sign complexifies and the generator of the space sign doubles. In the complexified rows the complex unit is the extension's central volume element $\omega$ ($\omega^{2} = -1$, commuting with every vector; $\omega = \pm I_{5}$ for $\Cl(2,3)$, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}), not the shadow's pseudoscalar $e_{1}e_{2}e_{3}e_{4}$. The labels follow the uniform convention (time a generator of square $+1$, space one of square $-1$, in both towers); in T14's causal convention the mirror's time is its minus sign, so its space and time extensions are $\Cl(4,1)$ and $\Cl(3,2)$, each the reversal of ours of the same kind, and the convention-free rule is that a generator of square $-1$ doubles and one of square $+1$ complexifies (Proposition \claimref{synthesis.mirror-extensions-causal-convention}).
 
 ## technical
 The single extensions of this world's $\Cl(1,3)$ and the mirror's $\Cl(3,1)$ are: this world plus space, $\Cl(1,4)$ with $\omega^{2} = +1$, doubled to $\Cl(1,3) \oplus \Cl(1,3)$, residue $5$; this world plus time, $\Cl(2,3)$ with $\omega^{2} = -1$, equal to $\Cl(1,3) \otimes \C \cong \Mat(4,\C)$ with even part $\Cl(3,1)$, residue $7$; mirror plus space, $\Cl(3,2)$ with $\omega^{2} = +1$, doubled to $\Cl(3,1) \oplus \Cl(3,1)$, residue $1$; mirror plus time, $\Cl(4,1)$ with $\omega^{2} = -1$, equal to $\Cl(3,1) \otimes \C \cong \Mat(4,\C)$ with even part $\Cl(1,3)$, residue $3$.
