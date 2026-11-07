@@ -43,3 +43,24 @@ R10 edited none of them.
 
 ## 4. No other GA issue found on these ids at the depth read (formal and one-liner levels; proofs of
    correspondence.one-statement-three-languages and correspondence.ordering-filtration read in full and found sound).
+
+## Second pass (proofs read in full)
+5. synthesis.attachment-conformal-energy-is-generated-by-z, clause (iv): it places Z in the cone C_pi of
+   synthesis.positive-conformal-energy-gives-positive-null-translations because "I_7 Q(Z/2) = E >= 1". That cone is
+   defined by -I_4 d pi(Y) >= 0 on the GNS space (scalars span{1, I_4}). With d pi(Y) = Q(Y) (Q(Z/2) = -I_7 E,
+   anti-Hermitian), the two agree only if the GNS scalar I_4 acts on the attachment's module as -I_7; with
+   I_4 = +I_7 the same computation puts Z in -C_pi (the backward cone, which that proposition calls the choice of time
+   orientation). The attachment's own clause (ii) (I_7 h P_a positive semidefinite for future a) is consistent in its
+   own convention; the bridge sentence needs "the Hilbert space's unit, written I_4 there, is -I_7 here" (or the cone
+   rewritten as I_7 d pi(Y) >= 0). No sign of a stated result changes once the identification is written.
+6. mass.casimir-form-join, proof (2), "The constant": "E = diag(-1/2, -1/2, 1/2, 1/2), the grading element, in the
+   basis n_inf, n_0, x-slot" mixes a CS matrix with the ambient basis; read "E, diag(...) on CS in the frame
+   e_1, ..., e_4; the sum over the ambient basis n_inf, n_0, x-slot". Wording only.
+7. Checked in full and found sound (no GA issue beyond the above): proofs of correspondence.one-statement-three-languages,
+   correspondence.ordering-filtration, mass.chart-form-spin-isomorphism (all three blocks recomputed),
+   mass.casimir-form-join (constant kappa = -1 and clause (3)), neutrino.rank-one-seesaw-ordering-sum-double,
+   pairing.displacement-pairs-point-mode-vacuum-parallel (values recomputed), synthesis.majorana-scale-is-126-doublet-vev,
+   synthesis.no-120-excludes-hierarchical-second-stage (b^4 > 0.0874), synthesis.one-type-second-stages-are-twins,
+   synthesis.operator-join-ordering-constants (every constant recomputed: -N Lambda hbar^2/3, -(5 Lambda/12) hbar :tr h:,
+   Weyl -5N Lambda hbar^2/12), synthesis.two-loop-running-cannot-fix-majorana-coupling (v = (6, 0, 15/4), determinant
+   coefficient 201/4).

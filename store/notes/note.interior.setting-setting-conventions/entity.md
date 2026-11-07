@@ -41,7 +41,7 @@ In gauge theory gravity, gravity is a pair of gauge fields on the flat backgroun
 D_a M = a \cdot \nabla M + \Omega(a) \times M, \qquad
 R(a \wedge b) = a\cdot\nabla\,\Omega(b) - b\cdot\nabla\,\Omega(a) + \Omega(a) \times \Omega(b),
 \]
-with $A \times B := \tfrac12(AB - BA)$, and the field equations are $R(a) - \tfrac12 a R = \kappa\, T(a)$ together with the vanishing of torsion, which determines $\Omega$ algebraically from $\hb$; the metric is $g(a,b) = \hb^{-1}(a) \cdot \hb^{-1}(b)$ \cite{LDG1998}. Every operation in these displays is interior to $\Cl(1,3)$: nothing invokes a curved manifold beyond the flat background. The theory is a field theory of an invertibility-demanding map, which is exactly the condition the transport principle addresses.
+with $A \times B := \tfrac12(AB - BA)$, and the field equations are, in the store's curvature sign, $\mathcal{R}(a) - \tfrac12 a\,\mathcal{R} = -\kappa\, T(a)$ for $\mathcal{R}(B) = -R(\hb(B))$ (in the sign of \cite{LDG1998}, $R(a) - \tfrac12 a R = \kappa\, T(a)$), together with the vanishing of torsion, which determines $\Omega$ algebraically from $\hb$; the metric is $g(a,b) = \hb^{-1}(a) \cdot \hb^{-1}(b)$ \cite{LDG1998}. Every operation in these displays is interior to $\Cl(1,3)$: nothing invokes a curved manifold beyond the flat background. The theory is a field theory of an invertibility-demanding map, which is exactly the condition the transport principle addresses.
 
 ## technical
 pending

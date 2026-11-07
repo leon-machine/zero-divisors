@@ -82,3 +82,51 @@ formula in rungs.imported-mass-symplectic-area (original mass.mass-symplectic-ar
 Entities read: 205 (129 claims, 1 object, 3 predictions, 72 notes; depth above). Changed: 14 (5 claims, 9 notes).
 For Leon: 4. Cross-subject: 2 (xsubject-R10.md). GA issues sent: 3 entities (ga-issues-R10.md). Duplicates: 0.
 tp check runs used: 1.
+
+## Second pass (coordinator's request: the full read)
+What was read: the proofs, in full, of all 86 of the 112 remaining claims, objects and predictions that have proofs
+(every step and every number of the T09, T11, T12, T13, T15 and synthesis proofs on R10's list); the full formal
+level of the 26 without proofs (Facts, postulates, predictions, conjectures, refutations); the full formal level of
+all 72 notes. Each was checked against points 1-8 of CONSISTENCY.md. Arithmetic recomputed by hand where the
+proof states it (examples: exact-join's component identity; the many-twistor remainder and its positivity; every
+constant of the operator join; the point-spectrum bound mu >= 1; the three-twistor worked example m^2 = 52/9; the
+anomaly solution set of the empty twistor; tan 2(theta_e - theta_u) = 286 sqrt2/4357; the solar and complex sum-rule
+bounds; the two-loop coefficients). No proof was found to fail its statement.
+
+### Fixed in the second pass
+15. note.correspondence.setting-palatial-relation-two-quantisations-one 1 -> 2: the note displayed
+    [Z, Zbar] = +hbar and said it is realised by Zbar = hbar d/dZ, which gives -hbar; now says so and names the
+    realisation Zbar = -hbar d/dZ of the Lemma and its check.
+16. note.mass.what-join-says 3 -> 4: "massless exactly when B = 0 and scalar Gram matrix" brought to the current
+    exact-join (5): the multiple is zero (h = 0).
+17. note.correspondence.setting-what-proved-what-imported-what (already 1 -> 2 in the first pass; no second bump):
+    "the factor $i$" (a bare imaginary unit) is now "the factor $I_6$", as the reality proposition states it.
+
+### New For-Leon items
+L5. synthesis.attachment-conformal-energy-is-generated-by-z (GA-owned) (iv) puts Z in the cone C_pi of
+    synthesis.positive-conformal-energy-gives-positive-null-translations via I_7 Q(Z/2) = E >= 1, while C_pi is
+    defined by -I_4 d pi(Y) >= 0. With d pi = Q this needs the GNS scalar I_4 to act as -I_7 on the module; with
+    +I_7 the same step gives the backward cone. Unstated identification of two units on which a sign (the time
+    orientation of the conclusion) depends. Proposed fix: one sentence in the attachment's (iv) naming
+    I_4 = -I_7 on that space, or the cone written with the module's unit. (Also in ga-issues-R10.md, item 5.)
+L6. mass.imported-unitary-representations-de-sitter-group (status imported, Dixmier) carries in its formal level a
+    series-internal assertion: that mass.casimir-form-join's C_2(I_perp) is "in this same normalisation, with no
+    shift". synthesis.operator-join-casimir-shifts (iii) says this normalisation hypothesis "is not proved here" and
+    gives an argument; synthesis.operator-join-point-spectrum-on-positive-energy-modules uses it for sharpness. An
+    import is carrying a series claim that the store elsewhere calls argued. Proposed fix: move the sentence to a
+    remark (or to casimir-shifts as its stated hypothesis), keeping the Fact to Dixmier's classification; formal
+    text of an imported Fact, not edited.
+
+### Observations (no action)
+- note.mass.setting-successor-problems (5) still says the many-twistor extension is "not proved or scripted here
+  beyond N = 2"; true of T11 at deposit, since proved in synthesis.many-twistor-join. Paper running text, left.
+- The positive-energy oscillator realisations differ in scale between synthesis.operator-join-point-spectrum-...
+  ([a, a+] = 1, scale s) and synthesis.operator-join-positive-energy-no-finite-energy-zero-modes ([a, a+] = hbar/2,
+  s = 1); consistent (lambda s^4 = -1 against lambda = -1 at the matched scale).
+- note.correspondence.setting-machine-verification reads the reality chart with I_7 (m(I_7 x-hat), -2 det(I_7 x-hat)
+  = 2 det x-hat) where the proposition writes I_6; consistent, since I_6 = +-I_7 on CS and the identities are even in
+  the unit.
+
+### Counts after both passes
+Entities read in full: 205. Changed: 16 (5 claims, 11 notes). For Leon: 6 (L1-L6). Cross-subject: 2. GA issues sent:
+5 entities. Duplicates: 0. tp check runs: 2 (no error or warning on any R10 entity).

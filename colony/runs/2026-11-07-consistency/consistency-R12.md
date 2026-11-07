@@ -137,7 +137,7 @@ The following were recomputed by hand or exactly:
 - the rung dimensions and $I_{6+2n}^2 = -1$.
 
 ## Counts
-- Entities read: 119 (65 claims/objects/questions/predictions, 54 notes).
+- Entities read: 119 (69 claims, objects, questions and predictions; 50 notes).
 - Changed: 17 (16 with a version bump, 1 in lay level and one-liner only).
 - For Leon: 6 items.
 - Duplicates: 4 pairs.

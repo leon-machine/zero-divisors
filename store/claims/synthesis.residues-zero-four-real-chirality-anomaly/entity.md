@@ -1,7 +1,7 @@
 ---
 id: synthesis.residues-zero-four-real-chirality-anomaly
 kind: claim
-version: 3
+version: 4
 title: 'Real chirality at residues 0 and 4, and the spinor-ideal anomaly'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (reader fixes: scalar-curvature sign remark, J named)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -53,6 +57,10 @@ lineage:
   - synthesis.lowest-causal-residues-zero-four-content
   - dark-matter.p3-nearest-dimension-representatives
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Two reader fixes of notation (R05): the proof''s remark on the curvature sign now says that the store''s scalar curvature has the de Sitter-positive sign of the source (conventions C6), so the displayed values are already in the store''s sign (the old remark called the store''s sign opposite); the formal level says that its J is the unshared-plane bivector, not the unit J = e_2 e_3; the forms (A-hat genus, tr_R F^k) are characteristic-class expressions of the anomaly polynomial and stay; the mathematics is unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -82,7 +90,7 @@ Use the spinor ideal $S = \Cl^{0}(V)f$ of Definition \claimref{obj.dark-tower-ma
 \item[(i)] \emph{(Every window; proved.)} A causal tower is really chiral if and only if its dimension is $n \equiv 2 \pmod 4$, if and only if its residue is $0$ or $4$ (the splitting is that of Theorem \claimref{synthesis.oriented-causal-towers-mirror-pair-every-window}(ii); its form for the single ideal is the lemma of the result filed alongside, synthesis.reversion-pairing-vanishes-residues-zero-four). There $S$ is an eigenspace of left multiplication by $I$ with a real eigenvalue ($+1$ at $(1,1)$, $c$ at $(1,5)$ and $(5,1)$), the two eigenvalues give non-isomorphic $\Cl^{0}(V)$-modules, and any conjugation keeps the eigenvalue.
 \item[(ii)] \emph{(Anomaly forms; computed, conditional on (A).)} The pure rotation-gauge anomaly form of one chiral spin-$\tfrac12$ field in dimension $n$ is the degree-$(n+2)$ part of $\hat{A} = \prod_{i}(x_{i}/2)/\sinh(x_{i}/2)$, nonzero exactly when $n \equiv 2 \pmod 4$: $-p_{1}/24$ for $n = 2$, $(7p_{1}^{2} - 4p_{2})/5760$ for $n = 6$. The pure-gauge part is $\mathrm{tr}_{R}\,F^{(n+2)/2}/((n+2)/2)!$, an even power exactly when $n \equiv 2 \pmod 4$. In a really chiral tower the single-ideal content and its conjugates have one chirality, so these forms add: the rotation-gauge part is $N$ times that of one field and the gauge part is positive on every nonzero element of a gauge algebra acting nontrivially. Gauge vectors are not chiral, and the content has no gravitino and no two-form field, so nothing cancels them.
 \item[(iii)] \emph{(Residue $0$, lowest-causal window.)} At $(1,1)$, $I = e_{t}e_{a}$ is the bivector of the tower's own plane, both of whose directions are shared; on the sourcing rule's reading the tower's matter lives on planes of this tower's spacetime and meets the field of the one metric induced on them. Such fields have non-constant scalar curvature: in conformal time, $R = -2\eta^{-4}$ (radiation era) and $R = -4\eta^{-6}$ (matter era) on a coordinate plane of a spatially flat expanding field, and $R = 4M/r^{3}$ on the $t$-$r$ plane of the Schwarzschild field (de Sitter's $R = 2H^{2}$ is constant). Where $R$ varies the anomaly makes the covariant divergence of the stress nonzero, so single-ideal tower matter of residue $0$ at $(1,1)$, massive or massless, has no conserved rotation-covariant stress and cannot source the field equations, whose left side is divergence-free identically (Proposition \claimref{dark-matter.sourcing-rule-forced-not-chosen}). The clause concerns the tower's single-ideal matter only: content with equal chiral weight on the two sheets of an edge has $c_{L} = c_{R}$ and no anomaly.
-\item[(iv)] \emph{(Residue $4$, lowest-causal window.)} At $(1,5)$ and $(5,1)$, on $S$ the pseudoscalar $I_{4}$ of the four shared directions equals $-cJ$, $J$ the unit bivector of the two unshared directions, $J^{2} = -1$. The one metric rotates only shared directions (the unshared ones are not gravitational, Proposition \claimref{dark-matter.thickness-not-gravitational-quantity}), and in four dimensions the rotation-gauge anomaly form vanishes, so the one metric's field meets no obstruction at residue $4$. Under (G6), the reading that the tower's own gauge fields are fields on its six-dimensional space and act nontrivially on its constituents, the gauge part of (ii) is nonzero and single-ideal matter of residue $4$ is anomalous. Without (G6) nothing here empties residue $4$.
+\item[(iv)] \emph{(Residue $4$, lowest-causal window.)} At $(1,5)$ and $(5,1)$, on $S$ the pseudoscalar $I_{4}$ of the four shared directions equals $-cJ$, $J$ the unit bivector of the two unshared directions, $J^{2} = -1$ (here $J$ is the unshared-plane bivector, not the unit $J = e_2e_3$ of the conventions' unit principle). The one metric rotates only shared directions (the unshared ones are not gravitational, Proposition \claimref{dark-matter.thickness-not-gravitational-quantity}), and in four dimensions the rotation-gauge anomaly form vanishes, so the one metric's field meets no obstruction at residue $4$. Under (G6), the reading that the tower's own gauge fields are fields on its six-dimensional space and act nontrivially on its constituents, the gauge part of (ii) is nonzero and single-ideal matter of residue $4$ is anomalous. Without (G6) nothing here empties residue $4$.
 \end{enumerate}
 Consequently, in the lowest-causal window and given (A), the single-ideal clause empties residue $0$ through the one metric alone and residue $4$ through (G6). At higher causal members of residue $0$, such as $(1,9)$ and $(9,1)$, only four directions are shared and, as in (iv), the one metric meets no obstruction; at the non-causal representatives of Premise \claimref{dark-matter.p3-nearest-dimension-representatives} nothing here applies. The result filed alongside shows that with one ideal the emptiness of residues $0$ and $4$ holds under the pairing reading of mass and fails at residue $4$ under the momentum reading; under (G6), (iv) closes that escape at residue $4$. If both ideals are admitted at $n \equiv 2 \pmod 4$, the content of residues $0$ and $4$ is vector-like and anomaly-free.
 
