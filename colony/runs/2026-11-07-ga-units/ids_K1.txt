@@ -18,3 +18,5 @@ synthesis.residue-common-weight-particle-hole
 scrambling.clock-inventory-boundary-modes
 singularity.l-stabiliser-tangent
 synthesis.collar-isotropy-selects-t-boost
+synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
+synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel

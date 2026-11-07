@@ -2061,8 +2061,9 @@
     locked to its frequency sign; every map commuting with the Lorentz rotors is $I_4$-linear; and among
     the discrete maps of the massless field the frequency sign flips exactly under reversal of spatial
     orientation. Hestenes' charge conjugation flips the chirality and not the frequency sign, and a CP
-    map flips the frequency sign and not the chirality. So the datum is not the chirality of the
-    doublets, and no CP-invariant interaction can fix it.
+    map flips the frequency sign and not the chirality. So the datum is not the chirality of
+    massless even spinors (identifying that chirality with the doublets' handedness would be a further
+    assumption), and no CP-invariant interaction can fix it.
   attack:
     - >-
       The remaining target (6 November): derive field-level geometric
@@ -2102,11 +2103,12 @@
       \claimref{note.singularity.cost-r-dictionary}, which T05 assigns to the
       twistor paper T09, posed at the edge of the continuum mode space.
     - >-
-      Look for the orientation datum among CP-odd data, the descent's flag first
-      (\claimref{dark-matter.premise-flag-as-datum}): on the Witt flags adapted to the conformal energy
-      $Z$, the energy sign of the flag's vacuum and the stored family bit are independent, and coincide
-      exactly when the flag's orientation on the four-space orthogonal to $Z$ is fixed (computed, under
-      review).
+      Look for the orientation datum in the descent's flag (\claimref{dark-matter.premise-flag-as-datum}):
+      on the Witt flags adapted to the conformal energy $Z$, the energy sign of a flag's vacuum and the
+      stored family bit flip together on each pair of conjugate flags, so read as the energy sign of the
+      flag's vacuum the datum is the stored flag bit up to the descent's kinematic sign on the four-space
+      orthogonal to $Z$, as \claimref{one-relation.arrow-frequency-are-one-bit-level} states (computed,
+      under review); what remains is to show that the generators' modes inherit the descent's flag.
     - >-
       A module-level image of field-level modular action: the Wick-rotated boost continued to rapidity
       $\pi$ is the wedge reflection, unitary for the twistor form exactly at the tube points it fixes
