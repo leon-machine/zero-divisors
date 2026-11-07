@@ -177,6 +177,8 @@ def check_exponent_set_never_drops():
     for op in (a_dx, a_dx, a_tau_dtau, a_dx):
         w = op(w)
     ok = ok and exps(w) == {E1, E2}
+    # the two exponents, hand-stated: x and 1 + 2x^2
+    ok = ok and E1 == (F(0), F(1)) and E2 == (F(1), F(0), F(2))
     GA.check("no derivative lowers the exponent set (the algebraic content of conormality)", ok)
     return ok
 

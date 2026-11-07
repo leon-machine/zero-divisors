@@ -1,5 +1,11 @@
 # Changelog: t06-regenerated
 
+## v8 (2026-11-07T06:42:15+00:00)
+
+- bump: major
+- interior.duality-monodromy-fibration-over-ring: revised-substantive
+- note.interior.setting-unipotent-ray: revised-substantive
+
 ## v7 (2026-10-27T16:49:06+00:00)
 
 - bump: patch

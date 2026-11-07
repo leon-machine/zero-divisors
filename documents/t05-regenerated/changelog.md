@@ -1,5 +1,40 @@
 # Changelog: t05-regenerated
 
+## v13 (2026-11-07T06:41:51+00:00)
+
+- bump: major
+- note.singularity.setting-steps-4b-4c-compute-completion: revised-cosmetic
+- note.singularity.setting-steps-4b-4c-compute-completion-2: revised-cosmetic
+- note.singularity.two-clocks-one-calibration: revised-substantive
+- note.state-selection.two-clocks-one-calibration: removed
+- singularity.euclidean-rotor-where-it-lies: revised-substantive
+- singularity.finite-truncation-meet-big-fibres-equals: revised-cosmetic
+- singularity.modular-structure-completed-pair: revised-substantive
+- singularity.unipotent-ray: revised-substantive
+- std-algebra.bivector-exponential: added
+- note.state-selection.two-clocks-one-calibration: left the document's dependency cone, removed
+- renumbered c:std-algebra.bivector-lie-algebra: 98 -> 99
+- renumbered c:std-algebra.cl11-matrix: 99 -> 100
+- renumbered c:std-algebra.orthogonal-anticommute: 100 -> 101
+- renumbered c:std-algebra.pseudoscalar-commutation: 101 -> 102
+- renumbered c:std-algebra.pure-spinors: 102 -> 103
+- renumbered c:std-algebra.sta-matrix: 103 -> 104
+- renumbered c:std-algebra.vector-squares: 104 -> 105
+- renumbered c:std-algebra.witt-basis-car: 105 -> 106
+- renumbered c:tower.rigidity-clock-frozen: 106 -> 107
+- renumbered c:transport.cohomological-form-no-go: 107 -> 108
+- renumbered c:transport.descent-read-out-map: 108 -> 109
+- renumbered c:transport.door-one-way: 109 -> 110
+- renumbered c:transport.existence-classification-type-c: 110 -> 111
+- renumbered c:transport.existence-locus-type-n: 111 -> 112
+- renumbered c:transport.no-go-level-elements: 112 -> 113
+- renumbered c:transport.pinching-kernel: 113 -> 114
+- renumbered c:transport.swap-rescale-normal-form: 114 -> 115
+- renumbered c:transport.totality: 115 -> 116
+- renumbered c:transport.transport-algorithm: 116 -> 117
+- renumbered c:transport.type-p-self-repairing: 117 -> 118
+- renumbered c:transport.original-conjecture-refuted-below: 118 -> 119
+
 ## v12 (2026-10-27T17:07:08+00:00)
 
 - bump: patch

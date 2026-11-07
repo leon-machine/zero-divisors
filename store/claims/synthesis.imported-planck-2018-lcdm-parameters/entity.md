@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-planck-2018-lcdm-parameters
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the Planck 2018 base-$\Lambda$CDM parameters'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: wording of the neutrino number as the baseline model's fixed value
+  version: 3
+  source: maintainer pass of 7 November 2026
 review: draft
 imported_from:
 - citation: 'N. Aghanim et al. (Planck Collaboration), Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys. 641 (2020), A6.'
@@ -42,6 +46,10 @@ extraction:
     by: maintainer-2026-10-23
     date: '2026-10-23'
     note: 'Created by the maintainer pass (the fix round asked for the Planck record values that the finite-range descent result cites from memory to be imported as a Fact).'
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3: the sentence on the radiation density now says that N_eff = 3.046 is the value the Planck 2018 baseline model fixes (the older Standard-Model value), so it is a model input and not a record of the quantity, whose current Standard-Model value is 3.044 (quantity.effective-neutrino-number); Omega_r h^2 = 4.18 x 10^-5 is unchanged at the displayed precision with either value.'
   maintainer_pass_five_fronts:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -49,7 +57,7 @@ extraction:
 ---
 
 ## formal
-In the base six-parameter $\Lambda$CDM model fitted to the Planck 2018 temperature, polarisation and lensing data (TT,TE,EE+lowE+lensing, 68\% limits), with three neutrino species (two massless and one of mass $0.06$ eV) and CMB temperature $T_{0} = 2.7255$ K \cite{Fixsen2009}: the Hubble constant is $H_{0} = 67.36 \pm 0.54$ km s$^{-1}$ Mpc$^{-1}$ (quoted in the abstract as $67.4 \pm 0.5$), the matter density parameter $\Omega_{m} = 0.3153 \pm 0.0073$ (quoted in the abstract as $0.315 \pm 0.007$), the amplitude of the primordial curvature perturbations at the pivot $k_{*} = 0.05$ Mpc$^{-1}$ is $\ln(10^{10}A_{s}) = 3.044 \pm 0.014$, that is $A_{s} = (2.100 \pm 0.030) \times 10^{-9}$, the scalar spectral index is $n_{s} = 0.9649 \pm 0.0042$, the physical baryon density $\Omega_{b}h^{2} = 0.02237 \pm 0.00015$ and the physical cold dark matter density $\Omega_{c}h^{2} = 0.1200 \pm 0.0012$ (Table 1 of the A\&A version, the Plik column); the model is spatially flat, $\Omega_{\Lambda} = 1 - \Omega_{m} - \Omega_{r}$. The radiation density these imply, photons at $T_{0}$ with three neutrino species relativistic at $N_{\mathrm{eff}} = 3.046$, is $\Omega_{r}h^{2} = \Omega_{\gamma}h^{2}\bigl(1 + \tfrac78(\tfrac{4}{11})^{4/3}N_{\mathrm{eff}}\bigr) = 4.18 \times 10^{-5}$ with $\Omega_{\gamma}h^{2} = 2.47 \times 10^{-5}$, so $\Omega_{r} = 9.2 \times 10^{-5}$ at $h = 0.674$. \emph{Provenance:} \cite{Planck2018} (abstract, Section 2.1, Tables 1 and 2); \cite{Fixsen2009} for $T_{0}$; the radiation density is the standard computation from $T_{0}$, not a Planck parameter.
+In the base six-parameter $\Lambda$CDM model fitted to the Planck 2018 temperature, polarisation and lensing data (TT,TE,EE+lowE+lensing, 68\% limits), with three neutrino species (two massless and one of mass $0.06$ eV) and CMB temperature $T_{0} = 2.7255$ K \cite{Fixsen2009}: the Hubble constant is $H_{0} = 67.36 \pm 0.54$ km s$^{-1}$ Mpc$^{-1}$ (quoted in the abstract as $67.4 \pm 0.5$), the matter density parameter $\Omega_{m} = 0.3153 \pm 0.0073$ (quoted in the abstract as $0.315 \pm 0.007$), the amplitude of the primordial curvature perturbations at the pivot $k_{*} = 0.05$ Mpc$^{-1}$ is $\ln(10^{10}A_{s}) = 3.044 \pm 0.014$, that is $A_{s} = (2.100 \pm 0.030) \times 10^{-9}$, the scalar spectral index is $n_{s} = 0.9649 \pm 0.0042$, the physical baryon density $\Omega_{b}h^{2} = 0.02237 \pm 0.00015$ and the physical cold dark matter density $\Omega_{c}h^{2} = 0.1200 \pm 0.0012$ (Table 1 of the A\&A version, the Plik column); the model is spatially flat, $\Omega_{\Lambda} = 1 - \Omega_{m} - \Omega_{r}$. The radiation density these imply in the baseline model, photons at $T_{0}$ with three neutrino species relativistic at the model's fixed $N_{\mathrm{eff}} = 3.046$ (the older Standard-Model value; the current one is $3.044$, \claimref{quantity.effective-neutrino-number}), is $\Omega_{r}h^{2} = \Omega_{\gamma}h^{2}\bigl(1 + \tfrac78(\tfrac{4}{11})^{4/3}N_{\mathrm{eff}}\bigr) = 4.18 \times 10^{-5}$ with $\Omega_{\gamma}h^{2} = 2.47 \times 10^{-5}$, so $\Omega_{r} = 9.2 \times 10^{-5}$ at $h = 0.674$. \emph{Provenance:} \cite{Planck2018} (abstract, Section 2.1, Tables 1 and 2); \cite{Fixsen2009} for $T_{0}$; the radiation density is the standard computation from $T_{0}$, not a Planck parameter.
 
 ## technical
 These are the standard values of the cosmological parameters from the Planck satellite's final data release, in the six-parameter model with a cosmological constant and cold dark matter: the expansion rate today, the matter fraction, the amplitude and tilt of the primordial curvature perturbations at the pivot scale $0.05$ Mpc$^{-1}$, and a spatially flat universe. The present radiation density, photons and three relativistic neutrino species, follows from the measured temperature of the background radiation. The store uses them as record inputs in horizon arithmetic: how far outside the Hubble length the pivot scale lay at an early epoch, and what amplitude a primordial source must supply.

@@ -229,14 +229,14 @@
  {
   "id": "c:singularity.unipotent-ray",
   "type": "theorem",
-  "claim": "singularity.unipotent-ray@3",
+  "claim": "singularity.unipotent-ray@4",
   "title": "The unipotent ray",
   "text": "$P^2 = 0$ exactly, at every radius; consequently $\\hb$ is invertible at every $r > 0$, in closed form,\n\\[\n\\hb^{-1} \\;=\\; 1 + \\beta P ,\n\\]\nhorizon included. The Schwarzschild gauge trajectory $\\{1 - \\beta P : \\beta \\geq 0\\}$ is a ray of unipotent maps, and the horizon ($\\beta = 1$) is algebraically unremarkable: division does not fail there.",
   "gap": false,
   "level": "formal",
   "derivation": "main",
   "proof": "$P^2(a) = P\\bigl((a\\cdot\\et)\\er\\bigr) = (a\\cdot\\et)(\\er\\cdot\\et)\\,\\er = 0$ since $\\er \\cdot \\et = 0$. Then $(1 - \\beta P)(1 + \\beta P) = 1 - \\beta^2 P^2 = 1$.\n",
-  "hash": "7f87ff2d8cb1",
+  "hash": "1bad78831d12",
   "number": 10
  },
  {
@@ -731,11 +731,11 @@
   "id": "c:note.singularity.setting-steps-4b-4c-compute-completion",
   "type": "note",
   "claim": "note.singularity.setting-steps-4b-4c-compute-completion@1",
-  "title": "Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator",
+  "title": "Steps 4b and 4c: the curvature factorises and its shape selects the plane",
   "text": "Step 4b is stated first in its gauge-theoretic form: the curvature of the gauge field factorises exactly, at every radius, into a divergent scalar times a fixed shape operator, and the shape operator is what selects the plane. The appendix's Cartan computation is an independent cross-check in the metric picture.",
   "gap": false,
   "level": "formal",
-  "hash": "a5b3b85254ef"
+  "hash": "f8cf7421f7a2"
  },
  {
   "id": "t:singularity.imported-descent-one-way-conditional-expectation>singularity.curvature-gauge-field-exact-shape-decoupling",
@@ -764,11 +764,11 @@
   "id": "c:note.singularity.setting-steps-4b-4c-compute-completion-2",
   "type": "note",
   "claim": "note.singularity.setting-steps-4b-4c-compute-completion-2@1",
-  "title": "Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator",
+  "title": "Steps 4b and 4c: the spectrum as Petrov type D, in classical language",
   "text": "In classical language the spectrum is the Petrov type-D structure of Schwarzschild, $\\Psi_2 = -M/r^{3}$ its one nonvanishing Weyl scalar \\cite{Chandrasekhar1983}; the theorem's contribution is the derivation inside the gauge formalism and the exact operator identity $S^{2} + S = 2$, not the spectrum itself.",
   "gap": false,
   "level": "formal",
-  "hash": "dbe4f2ad9eee"
+  "hash": "8353780dee2a"
  },
  {
   "id": "t:singularity.curvature-gauge-field-exact-shape-decoupling>singularity.plane-rate",
@@ -806,14 +806,14 @@
  {
   "id": "c:singularity.modular-structure-completed-pair",
   "type": "theorem",
-  "claim": "singularity.modular-structure-completed-pair@4",
+  "claim": "singularity.modular-structure-completed-pair@5",
   "title": "Modular structure of the completed pair",
-  "text": "Let $(v, v^*)$ satisfy $v^2 = (v^*)^2 = 0, \\qquad v v^* + v^* v = 1$ and define $\\sigma := v^* v - v v^*$. Then:\n\\begin{enumerate}\n\\item $\\sigma^2 = 1$; and in the hyperbolic atom of Lemma \\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}, $\\sigma = e_0 e_1$ exactly, the unit boost bivector of the plane;\n\\item the rotor flow $R_\\lambda = \\exp(\\lambda\\sigma/2)$ acts by $v \\mapsto e^{-\\lambda} v$ and $v^* \\mapsto e^{+\\lambda} v^*$: the pair diagonalises the boost with opposite weights, the structure of outgoing and ingoing horizon modes;\n\\item the spectral projectors $\\tfrac12(1 \\pm \\sigma)$ of the boost are identically the occupation projectors $v^* v$ and $v v^*$: the descent projectors of Proposition \\claimref{singularity.descent-what-it-erases};\n\\item in the fermionic representation $\\sigma = 2N - 1$: the generator of the geometric boost is, up to normalisation, the number operator, $K := \\tfrac{\\sigma}{2} = N - \\tfrac12$;\n\\item $\\mathrm{Spin}^+(1,1)$ is one-dimensional, so the boost flow is the \\emph{only} one-parameter flow implemented by real rotors of the atom. The scope matters and is stated: the mode algebra $\\Mat_2(\\C)$ admits a three-parameter family of one-parameter unitary groups, and the uniqueness claimed is within the class the geometry supplies, real rotor flows of $\\Cl(1,1)$; Proposition \\claimref{singularity.euclidean-rotor-where-it-lies} later leaves that class deliberately, its Euclidean rotor being complex.\n\\end{enumerate}\nOne object, three readings: boost generator, number operator, generator of the descent projectors.",
+  "text": "Let $(v, v^*)$ satisfy $v^2 = (v^*)^2 = 0, \\qquad v v^* + v^* v = 1$ and define $\\sigma := v^* v - v v^*$. Then:\n\\begin{enumerate}\n\\item $\\sigma^2 = 1$; and in the hyperbolic atom of Lemma \\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}, $\\sigma = e_0 e_1$ exactly, the unit boost bivector of the plane;\n\\item the rotor flow $R_\\lambda = \\exp(\\lambda\\sigma/2)$ acts by $v \\mapsto e^{-\\lambda} v$ and $v^* \\mapsto e^{+\\lambda} v^*$: the pair diagonalises the boost with opposite weights, the structure of outgoing and ingoing horizon modes;\n\\item the spectral projectors $\\tfrac12(1 \\pm \\sigma)$ of the boost are identically the occupation projectors $v^* v$ and $v v^*$: the descent projectors of Proposition \\claimref{singularity.descent-what-it-erases};\n\\item in the fermionic representation $\\sigma = 2N - 1$: the generator of the geometric boost is, up to normalisation, the number operator, $K := \\tfrac{\\sigma}{2} = N - \\tfrac12$;\n\\item $\\mathrm{Spin}^+(1,1)$ is one-dimensional, so the boost flow is the \\emph{only} one-parameter flow implemented by real rotors of the atom, up to reparametrisation of the flow parameter and orientation. The scope matters and is stated: the mode algebra $\\Mat_2(\\C)$ admits a three-parameter family of one-parameter unitary groups, and the uniqueness claimed is within the class the geometry supplies, real rotor flows of $\\Cl(1,1)$; Proposition \\claimref{singularity.euclidean-rotor-where-it-lies} later leaves that class deliberately, its Euclidean rotor being complex.\n\\end{enumerate}\nOne object, three readings: boost generator, number operator, generator of the descent projectors.",
   "gap": false,
   "level": "formal",
   "derivation": "main",
-  "proof": "(1) $\\sigma^2 = (v^*v)^2 + (vv^*)^2 - v^*v\\,vv^* - vv^*\\,v^*v = v^*v + vv^* - 0 - 0 = 1$, using idempotency (Proposition \\claimref{singularity.descent-what-it-erases}) and $v^2 = (v^*)^2 = 0$ to remove the cross terms. In the atom (\\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}): $v v^* = \\tfrac14(e_0 + e_1)(e_0 - e_1) = \\tfrac14(1 - e_0e_1 + e_1e_0 + 1) = \\tfrac12(1 - e_0e_1)$, so $v^*v = 1 - vv^* = \\tfrac12(1 + e_0e_1)$ and $\\sigma = e_0 e_1$. (2) From $\\sigma v = -v$ and $v\\sigma = v$ (in the atom: $e_0e_1(e_0 + e_1) = -(e_1 + e_0)$ and $(e_0+e_1)e_0e_1 = e_1 + e_0$; abstractly from $v^2 = (v^*)^2 = 0, \\qquad v v^* + v^* v = 1$), and $\\sigma^2 = 1$ giving $e^{-\\lambda\\sigma} = \\cosh\\lambda - \\sigma\\sinh\\lambda$:\n\\[\ne^{\\lambda\\sigma/2}\\,v\\,e^{-\\lambda\\sigma/2} = v\\,e^{-\\lambda\\sigma} = v\\cosh\\lambda - v\\sigma\\,\\sinh\\lambda = (\\cosh\\lambda - \\sinh\\lambda)\\,v = e^{-\\lambda}v ,\n\\]\nusing $v\\sigma = v$ once; mirror-symmetrically for $v^*$. (3) is $v^*v = \\tfrac12(1 + \\sigma)$. (4) $N = v^*v$ counts occupation in the two-state module, and $\\sigma = 2v^*v - 1$. (5) The rotor group of $\\Cl(1,1)$ is generated by its single unit bivector.\n",
-  "hash": "ee1c52f8b5c7",
+  "proof": "(1) $\\sigma^2 = (v^*v)^2 + (vv^*)^2 - v^*v\\,vv^* - vv^*\\,v^*v = v^*v + vv^* - 0 - 0 = 1$, using idempotency (Proposition \\claimref{singularity.descent-what-it-erases}) and $v^2 = (v^*)^2 = 0$ to remove the cross terms. In the atom (\\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}): $v v^* = \\tfrac14(e_0 + e_1)(e_0 - e_1) = \\tfrac14(1 - e_0e_1 + e_1e_0 + 1) = \\tfrac12(1 - e_0e_1)$, so $v^*v = 1 - vv^* = \\tfrac12(1 + e_0e_1)$ and $\\sigma = e_0 e_1$. (2) From $\\sigma v = -v$ and $v\\sigma = v$ (in the atom: $e_0e_1(e_0 + e_1) = -(e_1 + e_0)$ and $(e_0+e_1)e_0e_1 = e_1 + e_0$; abstractly from $v^2 = (v^*)^2 = 0, \\qquad v v^* + v^* v = 1$), and $\\sigma^2 = 1$ giving $e^{-\\lambda\\sigma} = \\cosh\\lambda - \\sigma\\sinh\\lambda$ (as for any element of square one; in the atom $\\sigma = e_0 e_1$ is a bivector with scalar square, the case of \\claimref{std-algebra.bivector-exponential}):\n\\[\ne^{\\lambda\\sigma/2}\\,v\\,e^{-\\lambda\\sigma/2} = v\\,e^{-\\lambda\\sigma} = v\\cosh\\lambda - v\\sigma\\,\\sinh\\lambda = (\\cosh\\lambda - \\sinh\\lambda)\\,v = e^{-\\lambda}v ,\n\\]\nusing $v\\sigma = v$ once; mirror-symmetrically for $v^*$. (3) is $v^*v = \\tfrac12(1 + \\sigma)$. (4) $N = v^*v$ counts occupation in the two-state module, and $\\sigma = 2v^*v - 1$. (5) The even subalgebra of $\\Cl(1,1)$ is $\\operatorname{span}\\{1, \\sigma\\}$ with $\\tilde\\sigma = -\\sigma$, so the rotors are the elements $a + b\\sigma$ with $(a + b\\sigma)(a - b\\sigma) = a^2 - b^2 = 1$: a one-dimensional group whose tangent line at $1$ is $\\R\\sigma$. A continuous one-parameter group of rotors is therefore $\\lambda \\mapsto \\exp(c\\lambda\\sigma/2)$ for a real $c$, which by the closed form (\\claimref{std-algebra.bivector-exponential}) is $\\cosh\\tfrac{c\\lambda}{2} + \\sigma\\sinh\\tfrac{c\\lambda}{2}$: the boost flow at a rescaled parameter. The rotor group itself has two components, $a \\ge 1$ and $a \\le -1$; the exponentials fill only the first, and $-1$ is a rotor that is no exponential. A one-parameter flow stays in the identity component, so the uniqueness of (5) is unaffected; it is not the statement that every rotor of the atom is $\\exp(\\lambda\\sigma/2)$.\n",
+  "hash": "486c5f36e329",
   "number": 28
  },
  {
@@ -1193,12 +1193,12 @@
  {
   "id": "c:note.singularity.two-clocks-one-calibration",
   "type": "note",
-  "claim": "note.singularity.two-clocks-one-calibration@1",
+  "claim": "note.singularity.two-clocks-one-calibration@2",
   "title": "Two clocks, one calibration",
   "text": "Theorem \\claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} is a no-go, and a constructive one: it says exactly what kind of input is needed and how much of it. The inverse temperature is a ratio of two clocks, the modular clock of the state and the geometric clock of the Killing boost, and a ratio of clocks is meaningless until one is calibrated. The chain calibrates exactly once, in Proposition \\claimref{singularity.plane-rate}: an interval of $2\\pi$ in rapidity is $2\\pi/\\kappa = 8\\pi M$ of Schwarzschild time. Everything numerical in this step passes through that conversion, as the step already said, and the rigidity theorem now proves that no rearrangement of the algebra can remove the need for it. The residual sign in clause (2) is not new either: it is the orientation of the boost, the labelling of outgoing against ingoing, flagged in Remark \\claimref{note.singularity.frame-made-explicit} as the $\\mathbb{Z}_2$ attached to the weights of $v$ and $v^{*}$. The rigidity theorem identifies that $\\mathbb{Z}_2$ as the entire automorphism-theoretic freedom in the temperature.",
   "gap": false,
   "level": "formal",
-  "hash": "1e3b1f01a972"
+  "hash": "dd3142b2d851"
  },
  {
   "id": "c:note.singularity.setting-fixing-rate-where-premise-has",
@@ -1299,14 +1299,14 @@
  {
   "id": "c:singularity.euclidean-rotor-where-it-lies",
   "type": "theorem",
-  "claim": "singularity.euclidean-rotor-where-it-lies@3",
+  "claim": "singularity.euclidean-rotor-where-it-lies@4",
   "title": "The Euclidean rotor, and where it lies",
-  "text": "Let $\\sigma = e_0e_1$ be the boost bivector of the hyperbolic atom in the radial plane, with $\\sigma^{2} = +1$, and let $\\Aa \\cong \\Mat_2(\\C)$ be the mode algebra, the complexification of the atom.\n\\begin{enumerate}\n\\item The boost rotor $R_\\lambda = \\exp(\\lambda\\sigma/2)$ continues to imaginary rapidity $\\lambda = i\\theta$ as $R_{i\\theta} = \\exp(i\\theta\\sigma/2) = \\cos(\\theta/2) + i\\sigma\\sin(\\theta/2)$, a unitary of $\\Aa$ whose generator $i\\sigma$ squares to $-1$; $R_{2\\pi i} = -1$ and $R_{4\\pi i} = +1$, so the rotor has period $4\\pi$ and its conjugation action period $2\\pi$.\n\\item On the two-dimensional module on which $v, v^{*}$ act as ladder operators, $R_{i\\theta} = \\operatorname{diag}(e^{-i\\theta/2}, e^{i\\theta/2})$: a rotation through $2\\pi$ multiplies every spinor by $-1$, while its conjugation action on $\\Aa$ is the identity.\n\\item The generator $i\\sigma$ is not an element of the real algebra $\\Cl(1,3)$. The dual member of the curvature-selected pair, $I\\sigma_r = e_0e_1e_2e_3\\,e_0e_1 = e_2e_3$, is the \\emph{angular} plane: its rotor $\\exp(\\theta I\\sigma_r/2)$ fixes $e_0$, $e_1$ and $\\sigma_r$ and rotates $e_2$ into $e_3$, a rotation along the bifurcation sphere, not around it. The Euclidean rotation around the bifurcation sphere is therefore realised by no real rotor of $\\Cl(1,3)$, and in particular not by the curvature-selected pair $\\{\\sigma_r, I\\sigma_r\\}$; it is realised by the unitary $R_{i\\theta}$ of the complexified radial plane.\n\\end{enumerate}",
+  "text": "Let $\\sigma = e_0e_1$ be the boost bivector of the hyperbolic atom in the radial plane, with $\\sigma^{2} = +1$, and let $\\Aa \\cong \\Mat_2(\\C)$ be the mode algebra, the complexification of the atom.\n\\begin{enumerate}\n\\item The boost rotor $R_\\lambda = \\exp(\\lambda\\sigma/2)$ continues to imaginary rapidity $\\lambda = i\\theta$ as $R_{i\\theta} = \\exp(i\\theta\\sigma/2) = \\cos(\\theta/2) + i\\sigma\\sin(\\theta/2)$, a unitary of $\\Aa$ whose generator $i\\sigma$ squares to $-1$; $R_{2\\pi i} = -1$ and $R_{4\\pi i} = +1$, so the rotor has period $4\\pi$ and its conjugation action period $2\\pi$.\n\\item On the two-dimensional module on which $v, v^{*}$ act as ladder operators, $R_{i\\theta} = \\operatorname{diag}(e^{-i\\theta/2}, e^{i\\theta/2})$: a rotation through $2\\pi$ multiplies every spinor by $-1$, while its conjugation action on $\\Aa$ is the identity.\n\\item The generator $i\\sigma$ is not an element of the real algebra $\\Cl(1,3)$. The dual member of the curvature-selected pair, $I\\sigma_r = e_0e_1e_2e_3\\,e_0e_1 = e_2e_3$, is the \\emph{angular} plane: its rotor $\\exp(\\theta I\\sigma_r/2)$ fixes $e_0$, $e_1$ and $\\sigma_r$ and rotates $e_2$ into $e_3$, a rotation along the bifurcation sphere, not around it. The Euclidean rotation around the bifurcation sphere is therefore realised by no real rotor of $\\Cl(1,3)$, and in particular not by the curvature-selected pair $\\{\\sigma_r, I\\sigma_r\\}$; it is realised by the unitary $R_{i\\theta}$ of the complexified radial plane.\n\\end{enumerate}\n\n\\emph{Note (the unit on values, 2026-11-01).} Clause (3) is stated for points, and for the formal unit $i$ of the atom's complexification. Read with the field theory's unit $i = I_{4}$ acting on values, $i\\sigma_{r} = I_{4}e_{0}e_{1} = e_{2}e_{3}$ does lie in $\\Cl(1,3)$, and the boost rotor continued to imaginary rapidity is, on even values, the real rotor of that dual plane (\\claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}); on points it is not, since $I_{4}$ anticommutes with vectors, so the stored statement holds for points.",
   "gap": false,
   "level": "formal",
   "derivation": "main",
   "proof": "(1) With $(i\\sigma)^{2} = -\\sigma^{2} = -1$ the exponential series splits into cosine and sine, giving the displayed form; it is unitary because $i\\sigma$ is skew-adjoint ($\\sigma$ is self-adjoint, being $2N - 1$); $R_{2\\pi i} = \\cos\\pi + i\\sigma\\sin\\pi = -1$ and $R_{4\\pi i} = +1$. (2) $\\sigma = \\operatorname{diag}(-1, 1)$ on the module (Theorem \\claimref{singularity.descent-parity-average}'s proof), so $e^{i\\theta\\sigma/2} = \\operatorname{diag}(e^{-i\\theta/2}, e^{i\\theta/2})$, which is $-1$ at $\\theta = 2\\pi$; conjugation by a scalar is trivial. (3) The even part of $\\Cl(1,3)$ is spanned by $1$, the six frame bivectors and $I$, all with real coefficients, and $i\\sigma_r$ is none of these: the bivectors of $\\Cl(1,3)$ with square $-1$ are the spatial planes. $I\\sigma_r = e_2e_3$ is one line of blade multiplication, and a rotor of the plane $e_2e_3$ fixes every vector orthogonal to that plane, $e_0$ and $e_1$ included, hence fixes $\\sigma_r = e_0e_1$; the script verifies $I\\sigma_r = e_2e_3$, the action of its rotor on all four frame vectors, and the unitary rotor's algebra on the module, blade-exactly.\n",
-  "hash": "7f8032d750f0",
+  "hash": "fdb44c97e5e8",
   "number": 43
  },
  {
@@ -2643,13 +2643,13 @@
   "id": "c:singularity.finite-truncation-meet-big-fibres-equals",
   "type": "theorem",
   "claim": "singularity.finite-truncation-meet-big-fibres-equals@6",
-  "title": "On a finite truncation, meet of the big fibres equals join of the small fibres equals $\\operatorname{range}(E_F)$",
+  "title": "Three fibre algebras coincide on a finite truncation",
   "text": "For finite $F = \\{x_1, \\dots, x_N\\} \\subseteq E$,\n\\[\n\\bigcap_{j} B_j \\;=\\; \\Bigl\\langle \\bigcup_j \\Aa_{x_j}^{+} \\Bigr\\rangle \\;=\\; \\operatorname{range}(E_F),\n\\]\nthe joint-number-diagonal algebra, of dimension $2^N$: the meet of the big fibres and the join of the small fibres coincide, and both are the algebra of compatible evaluations of $\\mathfrak{M}$ at the points of $F$. Here $\\langle\\,\\cdot\\,\\rangle$ denotes the generated subalgebra.",
   "gap": false,
   "level": "formal",
   "derivation": "main",
   "proof": "The meet: an element fixed by every $\\operatorname{Ad}\\sigma(x_j)$ is diagonal in the joint number basis, and conversely (Proposition \\claimref{singularity.p-reduced-metric-level-reading-many}), and $\\operatorname{range}(E_F)$ is that algebra, of dimension $2^N$. The join: the $\\sigma(x_j)$ commute, are single-site in the Jordan-Wigner representation (the strings cancel in $v^{*}v - vv^{*}$), and generate the $2^N$ independent monomials $\\prod_{j \\in S}\\sigma(x_j)$, $S \\subseteq F$, each joint-diagonal; so the join is a subalgebra of the meet of the same dimension. Compatible evaluations of $\\mathfrak{M}$ at the points of $F$ are exactly tuples in $\\prod_j \\Aa_{x_j}^{+}$ (every tuple occurs, by bump functions), and the algebra they generate is the join.\n",
-  "hash": "8b4559fdaa00",
+  "hash": "762c5771129d",
   "number": 78
  },
  {
@@ -2785,16 +2785,6 @@
   "gap": false,
   "level": "formal",
   "hash": "95a1edc07240"
- },
- {
-  "id": "c:note.state-selection.two-clocks-one-calibration",
-  "type": "note",
-  "claim": "note.state-selection.two-clocks-one-calibration@2",
-  "title": "Two clocks, one calibration",
-  "text": "Theorem \\claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} is the note's no-go, and it is a constructive one: it says exactly what kind of input is needed and how much. The inverse temperature is the ratio of two clocks, the modular clock of the state and the geometric clock of the Killing boost, and a ratio of clocks is meaningless until one of them is calibrated. The chain calibrates exactly once, in \\cite[Prop.~6.2]{ButlerT5}: an interval of $2\\pi$ in rapidity is $2\\pi/\\kappa = 8\\pi M$ of Schwarzschild time. Everything numerical in Step 4d passes through that one conversion, as the paper already says, and Theorem \\claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} now proves that no rearrangement of the algebra can remove the need for it. The residual sign in (2) is not new either: it is the orientation of the boost, the labelling of outgoing against ingoing, which \\cite[Rem.~6.5]{ButlerT5} already flags as the $\\mathbb{Z}_2$ attached to the weights of $v$ and $v^{*}$. The rigidity theorem identifies that $\\mathbb{Z}_2$ as the entire automorphism-theoretic freedom in the temperature.",
-  "gap": false,
-  "level": "formal",
-  "hash": "c02f98d0e214"
  },
  {
   "id": "s:descent",
@@ -3057,6 +3047,18 @@
   "number": 97
  },
  {
+  "id": "c:std-algebra.bivector-exponential",
+  "type": "fact",
+  "claim": "std-algebra.bivector-exponential@1",
+  "title": "Exponentials of bivectors with scalar square",
+  "text": "Let $A \\in \\Cl^{2}(V, Q)$ with $A^{2} = \\lambda \\in \\R$ (true for every simple bivector $A = a \\wedge b$, and for every bivector when $n \\le 3$). Then $A^{2k} = \\lambda^{k}$, $A^{2k+1} = \\lambda^{k} A$, and $e^{A} = \\sum_k A^{k}/k!$ is\n\\begin{equation}\ne^{A} =\n\\begin{cases}\n\\cos\\theta + \\dfrac{\\sin\\theta}{\\theta} A, & \\lambda = -\\theta^{2} < 0,\\\\[6pt]\n\\cosh\\theta + \\dfrac{\\sinh\\theta}{\\theta} A, & \\lambda = \\theta^{2} > 0,\\\\[6pt]\n1 + A, & \\lambda = 0 .\n\\end{cases}\n\\end{equation}\nIn each case $e^{A} (e^{A})^{\\sim} = e^{A} e^{-A} = 1$. For orthogonal $a, b$ with $Q(a) \\ne 0$, $e^{\\phi\\, \\hat{a}\\hat{b}}$ (unit $\\hat{a}, \\hat{b}$, or $\\hat{b}$ null) is the product of two invertible vectors, hence a rotor (\\claimref{obj.std-algebra.rotor}): a rotation when $(a \\wedge b)^{2} < 0$, a boost when $> 0$, and a null rotation or translation when $= 0$.",
+  "gap": false,
+  "level": "formal",
+  "provenance": "Transport Lab claim std-algebra.bivector-exponential, version 1",
+  "hash": "b1d0d6f4da96",
+  "number": 98
+ },
+ {
   "id": "c:std-algebra.bivector-lie-algebra",
   "type": "fact",
   "claim": "std-algebra.bivector-lie-algebra@1",
@@ -3066,7 +3068,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.bivector-lie-algebra, version 1",
   "hash": "be30725817c1",
-  "number": 98
+  "number": 99
  },
  {
   "id": "c:std-algebra.cl11-matrix",
@@ -3078,7 +3080,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.cl11-matrix, version 1",
   "hash": "fba9c994242f",
-  "number": 99
+  "number": 100
  },
  {
   "id": "c:std-algebra.orthogonal-anticommute",
@@ -3090,7 +3092,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.orthogonal-anticommute, version 1",
   "hash": "38fb33887d2f",
-  "number": 100
+  "number": 101
  },
  {
   "id": "c:std-algebra.pseudoscalar-commutation",
@@ -3102,7 +3104,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.pseudoscalar-commutation, version 1",
   "hash": "e8c83de3157a",
-  "number": 101
+  "number": 102
  },
  {
   "id": "c:std-algebra.pure-spinors",
@@ -3114,7 +3116,7 @@
   "level": "formal",
   "provenance": "E. Cartan, Lecons sur la theorie des spineurs, Hermann (1938)., pure spinors and their dimension count; C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954)., Ch. III (pure spinors); D. J. Thouless, Stability conditions and nuclear rotations in the Hartree-Fock theory, Nucl. Phys. 21 (1960) 225., the Thouless form",
   "hash": "f061b5262ee6",
-  "number": 102
+  "number": 103
  },
  {
   "id": "c:std-algebra.sta-matrix",
@@ -3126,7 +3128,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.sta-matrix, version 1",
   "hash": "863bea6fcd00",
-  "number": 103
+  "number": 104
  },
  {
   "id": "c:std-algebra.vector-squares",
@@ -3138,7 +3140,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.vector-squares, version 1",
   "hash": "e21309730378",
-  "number": 104
+  "number": 105
  },
  {
   "id": "c:std-algebra.witt-basis-car",
@@ -3150,7 +3152,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim std-algebra.witt-basis-car, version 1",
   "hash": "4bfaf1829940",
-  "number": 105
+  "number": 106
  },
  {
   "id": "c:tower.rigidity-clock-frozen",
@@ -3162,7 +3164,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim tower.rigidity-clock-frozen, version 5 (T03 Thm 3.6)",
   "hash": "3c285cf9807c",
-  "number": 106
+  "number": 107
  },
  {
   "id": "c:transport.cohomological-form-no-go",
@@ -3174,7 +3176,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.cohomological-form-no-go, version 4 (T01 Thm 4.8)",
   "hash": "ef123879dc74",
-  "number": 107
+  "number": 108
  },
  {
   "id": "c:transport.descent-read-out-map",
@@ -3186,7 +3188,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.descent-read-out-map, version 2 (T01 Lem 4.23)",
   "hash": "2c50efa6315f",
-  "number": 108
+  "number": 109
  },
  {
   "id": "c:transport.door-one-way",
@@ -3198,7 +3200,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.door-one-way, version 5 (T01 Thm 7.6)",
   "hash": "ac24e78fe901",
-  "number": 109
+  "number": 110
  },
  {
   "id": "c:transport.existence-classification-type-c",
@@ -3210,7 +3212,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6)",
   "hash": "3ae4b786a5c0",
-  "number": 110
+  "number": 111
  },
  {
   "id": "c:transport.existence-locus-type-n",
@@ -3222,7 +3224,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.existence-locus-type-n, version 5 (T01 Prop 3.3)",
   "hash": "e33d5c2b9e65",
-  "number": 111
+  "number": 112
  },
  {
   "id": "c:transport.no-go-level-elements",
@@ -3234,7 +3236,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.no-go-level-elements, version 4 (T01 Thm 4.2)",
   "hash": "05becf0ab308",
-  "number": 112
+  "number": 113
  },
  {
   "id": "c:transport.pinching-kernel",
@@ -3246,7 +3248,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.pinching-kernel, version 3 (T01 Prop 7.5)",
   "hash": "60bbae44ea4f",
-  "number": 113
+  "number": 114
  },
  {
   "id": "c:transport.swap-rescale-normal-form",
@@ -3258,7 +3260,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.swap-rescale-normal-form, version 4 (T01 Prop 4.21)",
   "hash": "72fd1235c777",
-  "number": 114
+  "number": 115
  },
  {
   "id": "c:transport.totality",
@@ -3270,7 +3272,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.totality, version 3 (T01 Thm 4.10)",
   "hash": "2df3d232c571",
-  "number": 115
+  "number": 116
  },
  {
   "id": "c:transport.transport-algorithm",
@@ -3282,7 +3284,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.transport-algorithm, version 3 (T01 Sec 8.1)",
   "hash": "e7d79de6ae33",
-  "number": 116
+  "number": 117
  },
  {
   "id": "c:transport.type-p-self-repairing",
@@ -3294,7 +3296,7 @@
   "level": "formal",
   "provenance": "Transport Lab claim transport.type-p-self-repairing, version 2 (T01 Prop 6.1)",
   "hash": "e835f222817f",
-  "number": 117
+  "number": 118
  },
  {
   "id": "c:transport.original-conjecture-refuted-below",
@@ -3308,7 +3310,7 @@
    "transport.no-go-level-elements"
   ],
   "hash": "2babc5bb9e00",
-  "number": 118
+  "number": 119
  },
  {
   "id": "conclusion",

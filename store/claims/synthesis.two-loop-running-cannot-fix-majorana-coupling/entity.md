@@ -29,7 +29,7 @@ derivations:
   - standard-model.matching-traces@4
   - standard-model.spectrum-run@6
   - standard-model.chain@8
-  - synthesis.majorana-scale-free-on-pati-salam-route@2
+  - synthesis.majorana-scale-free-on-pati-salam-route@3
   proof: proof-main.tex
 checked_by:
 - kind: check

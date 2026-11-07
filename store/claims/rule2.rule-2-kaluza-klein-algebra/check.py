@@ -105,6 +105,8 @@ def check_fifth_parity_is_outer():
     ok = ok and GA.eq(reflect_e4(EPP), EPM) and GA.eq(reflect_e4(EPM), EPP)
     # any inner automorphism fixes the central omega; R does not
     ok = ok and not GA.eq(reflect_e4(OMEGA), OMEGA)
+    # R negates exactly the 16 of the 32 basis blades that contain e4
+    ok = ok and len(B5) == 32 and sum(1 for b in B5 if GA.eq(reflect_e4(bl(b)), GA.neg(bl(b)))) == 16
     _tp_rv = (ok); assert _tp_rv is not False, "check_fifth_parity_is_outer"; return _tp_rv
 
 

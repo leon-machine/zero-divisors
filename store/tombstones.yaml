@@ -77,3 +77,7 @@
   reason: 'reducible to singularity.l-boundary-mode-locality: the same generator class (synthesis.state-selection-r-and-le-against-t05
     (v)); its one consumer, state-selection.number-diagonal-dynamics-models-scrambling-derived, is merged into singularity.number-diagonal-dynamics-models-scrambling-derived,
     which assumes T05''s (L_E)'
+- id: note.state-selection.two-clocks-one-calibration
+  replaced_by: note.singularity.two-clocks-one-calibration
+  date: '2026-11-07'
+  reason: 'duplicate of note.singularity.two-clocks-one-calibration: the same remark in T05 (Rem 7.17) and the state-selection note (Rem 4.6)'

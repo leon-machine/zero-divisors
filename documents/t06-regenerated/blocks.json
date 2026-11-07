@@ -162,12 +162,12 @@
  {
   "id": "c:note.interior.setting-unipotent-ray",
   "type": "note",
-  "claim": "note.interior.setting-unipotent-ray@1",
+  "claim": "note.interior.setting-unipotent-ray@2",
   "title": "The unipotent ray",
-  "text": "For Schwarzschild in the Newtonian (Painlev\\'e-Gullstrand) gauge the gauge field is\n\\begin{equation}\n\\hb \\;=\\; 1 - \\beta\\,P, \\qquad \\beta(r) = \\sqrt{2M/r}, \\qquad P(a) := (a \\cdot \\et)\\,\\er .\n\\end{equation}",
+  "text": "T06 works with the gauge field of the Schwarzschild solution in the Newtonian (Painlev\\'e-Gullstrand) gauge exactly as T05 sets it up (\\claimref{note.singularity.setting-schwarzschild-gauge-field-connection-where}): the identity minus $\\beta$ times the projector $P$, which squares to zero. T06 calls this one-parameter family the unipotent ray and reads it as a trajectory in the gauge group (\\claimref{interior.gauge-trajectory-unipotent-ray}).",
   "gap": false,
   "level": "formal",
-  "hash": "966659e01fec"
+  "hash": "aa1d606e38b9"
  },
  {
   "id": "t:interior.imported-schwarzschild-curvature-spectrum-external>interior.gauge-trajectory-unipotent-ray",
@@ -922,12 +922,12 @@
  {
   "id": "c:interior.duality-monodromy-fibration-over-ring",
   "type": "conjecture",
-  "claim": "interior.duality-monodromy-fibration-over-ring@4",
+  "claim": "interior.duality-monodromy-fibration-over-ring@5",
   "title": "Duality-monodromy fibration over the ring",
-  "text": "The exceptional structure of the completion over the Kerr ring (the ring of the flat background where the Kerr-Schild gauge field $\\hb$ of Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}, unimodular wherever it is defined, is singular: its potential $H$ diverges) is a duality-monodromy fibration: a bundle of exceptional algebras over the ring in the sense of \\cite[Prop.~6.1]{ButlerT4}, refined by codimension two and carrying the monodromy of Remark \\claimref{note.interior.duality-winding-around-ring}, whose holonomy connects the sheets of the maximal extension. Equivalently: the codimension-two blow-up that replaces T4's hypersurface wall theory over rotating singularities has structure group containing the duality circle, and the winding number three of the Kerr scale is an invariant of the fibration. \\emph{Beyond one flat chart.} The sheets of the Kerr maximal extension that the holonomy connects are global and are not carried by a single gravitational field $(\\hb, \\Omega)$ on flat spacetime; the ring, the Kerr scale and its winding around the ring are in Gauge Theory Gravity on the invertible region, and the sheets are read on the manifold assembled from the derived metric's charts.",
+  "text": "The exceptional structure of the completion over the Kerr ring (the ring of the flat background where the Kerr-Schild gauge field $\\hb$ of Definition \\claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}, unimodular wherever it is defined, is singular: its potential $H$ diverges) is a duality-monodromy fibration: a bundle of exceptional algebras over the ring in the sense of \\cite[Prop.~6.1]{ButlerT4}, refined by codimension two and carrying the monodromy of Remark \\claimref{note.interior.duality-winding-around-ring}, whose holonomy connects the sheets of the maximal extension. Equivalently: the codimension-two blow-up that replaces T4's hypersurface wall theory over rotating singularities has structure group containing the duality circle, and the winding number three of the Kerr scale is an invariant of the fibration. \\emph{Note.} Theorem \\claimref{synthesis.kerr-ring-connection-limit-null-rotation-winding-three} computes the limit of the rotation-gauge field at the ring on the forced cover. The transport holonomy of small loops linking the ring tends to the identity (its clause (6)), so a connection between the sheets is carried by the limiting data, not by transport round the ring: the deck transformation acts by $-1$ on the limit section, which is the adjoint action of the rotor $\\hat\\varpi\\hat z$, the rotation by $\\pi$ of the plane transverse to the principal null direction; and at the level of connection values the fibre is the plane $\\mathfrak n$ of null rotations about the principal null direction on tangential directions ($\\mathfrak n + \\R\\,F_K \\wedge F_N$ with the normal direction), a complex line under the pseudoscalar on which the limit has degree $-3$. The bundle of exceptional algebras in the sense above and its structure group are not addressed there; the conjecture is unchanged. \\emph{Beyond one flat chart.} The sheets of the Kerr maximal extension that the holonomy connects are global and are not carried by a single gravitational field $(\\hb, \\Omega)$ on flat spacetime; the ring, the Kerr scale and its winding around the ring are in Gauge Theory Gravity on the invertible region, and the sheets are read on the manifold assembled from the derived metric's charts.",
   "gap": false,
   "level": "formal",
-  "hash": "cd0959f3de26",
+  "hash": "8ef540dd901a",
   "number": 27
  },
  {

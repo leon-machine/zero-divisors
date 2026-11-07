@@ -1,12 +1,12 @@
 {
  "doc": "t06-regenerated",
- "version": 7,
+ "version": 8,
  "claims": [
   "interior.boosts-generate-exactly-levi-factor@4",
   "interior.complex-factorisation-location-ring@5",
   "interior.complex-scale-inverse-cube-killing-spinor@5",
   "interior.covariant-form-vacuum-equations@5",
-  "interior.duality-monodromy-fibration-over-ring@4",
+  "interior.duality-monodromy-fibration-over-ring@5",
   "interior.exact-parallelism-convergence-rate@5",
   "interior.exact-scale-decoupling@4",
   "interior.filtration-cauchy-horizon-read-literature@7",
@@ -58,7 +58,7 @@
   "note.interior.setting-tractor-bundle-scale@2",
   "note.interior.setting-transport-along-tangential-curves-lines-2@1",
   "note.interior.setting-transport-along-tangential-curves-lines@2",
-  "note.interior.setting-unipotent-ray@1",
+  "note.interior.setting-unipotent-ray@2",
   "note.interior.setting-what-proved-what-imported-what@1",
   "note.interior.three-readings@1",
   "note.interior.what-closed-what-remains@1",
@@ -75,7 +75,7 @@
   "std-algebra.sylvester-inertia@1"
  ],
  "recipe_hash": "999bc45dd920",
- "generated": "2026-10-27T16:49:06+00:00",
+ "generated": "2026-11-07T06:42:15+00:00",
  "spine": [
   "interior.imported-equivalence-einstein-equations",
   "interior.imported-schwarzschild-curvature-spectrum",

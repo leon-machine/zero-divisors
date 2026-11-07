@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-free-on-pati-salam-route
 kind: claim
-version: 2
+version: 3
 title: 'The Majorana scale is free on the Pati-Salam route'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: strengthened check and wording
+  version: 3
+  source: maintainer pass of 7 November 2026
 review: draft
 derivations:
 - name: main
@@ -50,12 +54,16 @@ lineage:
   - neutrino.m-framework-realises-majorana-term-scale
   - standard-model.what-angle-asks-neutrino-sector
 extraction:
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3: check_light_masses_scale_mixing_invariant now also checks the explicit scale 2 (I1 falls by 4, the determinant by 64), so the mutation test has literals to perturb; the fermion mass matrices are now called Dirac mass matrices throughout, to avoid confusion with gamma matrices.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2: a marked note fixes the Hubble unit of v/H (H^2 = Lambda/3, that is H_0 sqrt(Omega_Lambda), against H_0; a factor of order one, about 0.2 in ln(v/H)); a marked note says that the registered free numbers are now N and the level xi G (synthesis.rung-unit-second-free-number version 3) and that clause (v), stated at fixed N and v/H, holds in either register. Nothing else is changed.'
   open_problem: op.majorana-scale
-  note: 'Independence result for the problem''s second success branch. The stored work reduced the Majorana scale to one unknown (the 126 doublet admixture w_u); this shows that unknown is free with respect to every stored relation: a one-parameter group (f to lam f, w_u and w_d to w/lam, triplet vev, 10 and 120 data fixed) leaves the four Dirac matrices, (EW), the Dirac-eigenvalue reading of Hypothesis (U), the chain and seventeen of the eighteen fitted observables unchanged, and moves only M_R (by lam) and the light masses (by 1/lam). So the only stored datum that fixes the scale is the observed m_3, and the problem''s premise that one vev sets both M_I and M_R, so that deriving it would predict the weak angle, holds for v_R and not for M_R: the vev and the Majorana coupling are two numbers. Neither N nor v/H enters any relation the group acts on, so M is an input beside the two registered free numbers, related to neither by any stored relation. The electroweak normalisation of the doublet vevs, not a stored relation, is restored by composing with a rescaling of the 10 (and 120) couplings against their vevs. The symmetry is of the stored relations only: the two-loop gauge running with Yukawa terms (not in the store) would break it at order Tr(f f^dag)/(16 pi^2) relative to the one-loop terms, a weak over-determination that has not been computed. Transport-absent (standard Pati-Salam Clebsch algebra); the transport content is upstream, in the Majorana element and the chain.'
+  note: 'Independence result for the problem''s second success branch. The stored work reduced the Majorana scale to one unknown (the 126 doublet admixture w_u); this shows that unknown is free with respect to every stored relation: a one-parameter group (f to lam f, w_u and w_d to w/lam, triplet vev, 10 and 120 data fixed) leaves the four Dirac mass matrices, (EW), the Dirac-eigenvalue reading of Hypothesis (U), the chain and seventeen of the eighteen fitted observables unchanged, and moves only M_R (by lam) and the light masses (by 1/lam). So the only stored datum that fixes the scale is the observed m_3, and the problem''s premise that one vev sets both M_I and M_R, so that deriving it would predict the weak angle, holds for v_R and not for M_R: the vev and the Majorana coupling are two numbers. Neither N nor v/H enters any relation the group acts on, so M is an input beside the two registered free numbers, related to neither by any stored relation. The electroweak normalisation of the doublet vevs, not a stored relation, is restored by composing with a rescaling of the 10 (and 120) couplings against their vevs. The symmetry is of the stored relations only: the two-loop gauge running with Yukawa terms (not in the store) would break it at order Tr(f f^dag)/(16 pi^2) relative to the one-loop terms, a weak over-determination that has not been computed. Transport-absent (standard Pati-Salam Clebsch algebra); the transport content is upstream, in the Majorana element and the chain.'
 ---
 
 ## formal
@@ -71,7 +79,7 @@ Assume Fact \claimref{standard-model.imported-clebsch-structure-seesaw}: with $1
 \emph{Note (the Hubble unit).} Here $H$ is the de Sitter rate of $\Lambda$, $H^{2} = \Lambda/3$, that is $H_{0}\sqrt{\Omega_{\Lambda}}$, the $H$ of $N = M_{P}/H$; some texts quote $v/H$ with $H_{0}$, which differs from it by the factor $\sqrt{\Omega_{\Lambda}}$, of order one ($v/H \approx 2.1 \times 10^{44}$ against $v/H_{0} \approx 1.7 \times 10^{44}$; $\ln(v/H)$ changes by about $0.2$). No number here depends on the choice. \emph{Note (register, 2026-11-01).} The two registered free numbers are $N$ and, since version 3 of \claimref{synthesis.rung-unit-second-free-number}, the D-term level $\xi G$ in place of $v/H$; the group of (v) acts at fixed $N$ and $v/H$, hence at fixed $v/M_{P} = (v/H)/N$, so (v) holds in either register.
 
 ## technical
-Every quantity that the Pati-Salam Clebsch structure feeds into the store's Dirac sector contains the $126$ coupling only through the products $w_{u}f$ and $w_{d}f$. So rescaling $f$ by $\lambda$ and both $126$ doublet admixtures by $1/\lambda$ changes no Dirac matrix, multiplies the Majorana matrix $M_{R} = v_{R}f$ by $\lambda$, and divides the light matrix by $\lambda$. Premise (EW), the Dirac reading of Hypothesis (U), the chain's scales, and seventeen of the eighteen fitted observables are unchanged; only the overall light scale $m_{3}$ moves. The check verifies this exactly on complex rational instances with two $10$s, a $126$ and a $120$, for three values of $\lambda$ (one complex), including an instance with (EW) imposed, and verifies that scaling $f$ alone is not a symmetry.
+Every quantity that the Pati-Salam Clebsch structure feeds into the store's Dirac sector contains the $126$ coupling only through the products $w_{u}f$ and $w_{d}f$. So rescaling $f$ by $\lambda$ and both $126$ doublet admixtures by $1/\lambda$ changes no Dirac mass matrix, multiplies the Majorana matrix $M_{R} = v_{R}f$ by $\lambda$, and divides the light matrix by $\lambda$. Premise (EW), the Dirac reading of Hypothesis (U), the chain's scales, and seventeen of the eighteen fitted observables are unchanged; only the overall light scale $m_{3}$ moves. The check verifies this exactly on complex rational instances with two $10$s, a $126$ and a $120$, for three values of $\lambda$ (one complex), including an instance with (EW) imposed, and verifies that scaling $f$ alone is not a symmetry.
 
 So the Majorana scale is fixed on the stored relations only by the observed $m_{3}$, and between the bounds perturbativity and $|w_{u}| \le v$ put on it, which span about two orders of magnitude. The triplet vev of the chain sets $M_{I}$ through the gauge coupling and $M_{R}$ through $f$: deriving the vev would predict the weak angle and leave $M_{R}$ open, so "one vev sets both" is one vev and two numbers. Neither $N$ nor $v/H$ enters these relations; the electroweak normalisation of the doublet vevs, which is not stored, is kept by composing with a rescaling of the $10$ and $120$ couplings against their vevs. The symmetry is of the stored relations only; two-loop Yukawa terms in the gauge running, which the store does not include, would break it weakly.
 

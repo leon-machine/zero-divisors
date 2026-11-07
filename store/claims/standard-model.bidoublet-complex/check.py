@@ -271,6 +271,8 @@ def check_one_rung_vector_gives_equal_up_and_down_masses():
             ok = ok and down[("Q", "dc")] == m and down[("L", "ec")] == m
             # control: read through c itself, the up-type entry is |a|, which separates the complex samples
             ok = ok and (down[("Q", "uc")] == down[("Q", "dc")]) == real
+    # the common mass squared |b|^2 of each sample, hand-stated
+    ok = ok and [norm2(b) for a, b in ONE_REAL + ONE_COMPLEX] == [F(34), F(85, 9), F(1), F(16), F(5, 4)]
     GA.check("one rung vector, real or complex: through c*, m_u = m_d = |b| at tree level", ok)
     return ok
 

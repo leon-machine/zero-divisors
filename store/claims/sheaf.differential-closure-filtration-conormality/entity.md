@@ -1,7 +1,7 @@
 ---
 id: sheaf.differential-closure-filtration-conormality
 kind: claim
-version: 3
+version: 4
 title: Differential closure, filtration, conormality
 status: proved
 region: sheaf
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: strengthened check
+  version: 4
+  source: maintainer pass of 7 November 2026
 review: typed
 about:
 - obj.sheaf.log-completion
@@ -42,6 +46,10 @@ locators:
   label: thm:diffclosure
   line: 1256
 extraction:
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4: check_exponent_set_never_drops now also asserts the two exponents x and 1 + 2x^2 by hand-stated value, so the mutation test has literals to perturb.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

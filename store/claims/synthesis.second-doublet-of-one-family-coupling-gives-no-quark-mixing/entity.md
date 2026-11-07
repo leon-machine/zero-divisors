@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
-  - standard-model.bidoublet-complex@10
+  - standard-model.bidoublet-complex@11
   - standard-model.imported-clebsch-structure-seesaw@1
   - synthesis.residual-s2-fixes-120-family-form@1
   - neutrino.breaking-relation@3

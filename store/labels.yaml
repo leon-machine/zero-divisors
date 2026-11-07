@@ -2672,7 +2672,7 @@ T05-state-selection:rem:bought:
   kind: theorem
   number: '3.6'
 T05-state-selection:rem:clocks:
-  entity: note.state-selection.two-clocks-one-calibration
+  entity: note.singularity.two-clocks-one-calibration
   kind: theorem
   number: '4.6'
 T05-state-selection:rem:dictionary:

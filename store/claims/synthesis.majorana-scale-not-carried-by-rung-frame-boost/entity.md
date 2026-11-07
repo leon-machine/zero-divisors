@@ -28,7 +28,7 @@ derivations:
   - standard-model.majorana-element@7
   - synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square@2
   - standard-model.what-angle-asks-neutrino-sector@4
-  - synthesis.majorana-scale-free-on-pati-salam-route@2
+  - synthesis.majorana-scale-free-on-pati-salam-route@3
   - standard-model.imported-clebsch-structure-seesaw@1
   proof: proof-main.tex
 quantities:

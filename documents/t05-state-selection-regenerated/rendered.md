@@ -106,8 +106,6 @@ This is a sharpening of the gap and not a closing of it, and it is worth being e
 
 *Provenance:* O. Bratteli and D. W. Robinson, Operator Algebras and Quantum Statistical Mechanics 2: Equilibrium States. Models in Quantum Statistical Mechanics, 2nd ed., Springer (1997)., Thm.~5.3.30; R. Haag, N. M. Hugenholtz and M. Winnink, On the equilibrium states in quantum statistical mechanics, Commun. Math. Phys. 5 (1967), 215--236.; A. Connes, Une classification des facteurs de type III, Ann. Sci. 'Ec. Norm. Sup'er. (4) 6 (1973), 133--252., Thm.~1.2.1.
 
-**Remark  (Two clocks, one calibration).** Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} is the note's no-go, and it is a constructive one: it says exactly what kind of input is needed and how much. The inverse temperature is the ratio of two clocks, the modular clock of the state and the geometric clock of the Killing boost, and a ratio of clocks is meaningless until one of them is calibrated. The chain calibrates exactly once, in \cite[Prop.~6.2]{ButlerT5}: an interval of $2\pi$ in rapidity is $2\pi/\kappa = 8\pi M$ of Schwarzschild time. Everything numerical in Step 4d passes through that one conversion, as the paper already says, and Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} now proves that no rearrangement of the algebra can remove the need for it. The residual sign in (2) is not new either: it is the orientation of the boost, the labelling of outgoing against ingoing, which \cite[Rem.~6.5]{ButlerT5} already flags as the $\mathbb{Z}_2$ attached to the weights of $v$ and $v^{*}$. The rigidity theorem identifies that $\mathbb{Z}_2$ as the entire automorphism-theoretic freedom in the temperature.
-
 ## Fixing the rate: one premise, and its habitat inside the framework
 
 
@@ -406,7 +404,9 @@ Descent retains the occupation data and erases the coherences $b, c$.
 \item The generator $i\sigma$ is not an element of the real algebra $\Cl(1,3)$. The dual member of the curvature-selected pair, $I\sigma_r = e_0e_1e_2e_3\,e_0e_1 = e_2e_3$, is the \emph{angular} plane: its rotor $\exp(\theta I\sigma_r/2)$ fixes $e_0$, $e_1$ and $\sigma_r$ and rotates $e_2$ into $e_3$, a rotation along the bifurcation sphere, not around it. The Euclidean rotation around the bifurcation sphere is therefore realised by no real rotor of $\Cl(1,3)$, and in particular not by the curvature-selected pair $\{\sigma_r, I\sigma_r\}$; it is realised by the unitary $R_{i\theta}$ of the complexified radial plane.
 \end{enumerate}
 
-*Provenance:* Transport Lab claim singularity.euclidean-rotor-where-it-lies, version 3 (T05 Prop 7.21).
+\emph{Note (the unit on values, 2026-11-01).} Clause (3) is stated for points, and for the formal unit $i$ of the atom's complexification. Read with the field theory's unit $i = I_{4}$ acting on values, $i\sigma_{r} = I_{4}e_{0}e_{1} = e_{2}e_{3}$ does lie in $\Cl(1,3)$, and the boost rotor continued to imaginary rapidity is, on even values, the real rotor of that dual plane (\claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}); on points it is not, since $I_{4}$ anticommutes with vectors, so the stored statement holds for points.
+
+*Provenance:* Transport Lab claim singularity.euclidean-rotor-where-it-lies, version 4 (T05 Prop 7.21).
 
 **Fact (imported) 25 (Modular theory of a matrix factor, proved outright).** Let $H = \C^n \otimes \C^n$, let $M = \Mat_n(\C) \otimes 1$ act on the first factor, and let $\Omega = \sum_i \lambda_i\, |ii\rangle$ with all $\lambda_i > 0$ and $\sum \lambda_i^2 = 1$ (any cyclic separating vector of $M$ has this form in its Schmidt basis). Define the Tomita operator as the closure of $S : a\Omega \mapsto a^*\Omega$ ($a \in M$). Then its polar decomposition $S = J\Delta^{1/2}$ has
 \[

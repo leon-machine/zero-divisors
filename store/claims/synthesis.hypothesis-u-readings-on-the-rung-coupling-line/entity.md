@@ -24,7 +24,7 @@ derivations:
   - standard-model.equal-weight-module@5
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
   - standard-model.one-vev-vector-relations-breaking-pattern@7
-  - standard-model.bidoublet-complex@10
+  - standard-model.bidoublet-complex@11
   proof: proof-main.tex
 checked_by:
 - kind: check

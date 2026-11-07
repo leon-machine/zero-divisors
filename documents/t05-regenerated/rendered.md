@@ -404,7 +404,7 @@ This restates \claimref{singularity.imported-descent-one-way-conditional-expecta
 
 
 
-**setting  (Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator).** Step 4b is stated first in its gauge-theoretic form: the curvature of the gauge field factorises exactly, at every radius, into a divergent scalar times a fixed shape operator, and the shape operator is what selects the plane. The appendix's Cartan computation is an independent cross-check in the metric picture.
+**setting  (Steps 4b and 4c: the curvature factorises and its shape selects the plane).** Step 4b is stated first in its gauge-theoretic form: the curvature of the gauge field factorises exactly, at every radius, into a divergent scalar times a fixed shape operator, and the shape operator is what selects the plane. The appendix's Cartan computation is an independent cross-check in the metric picture.
 
 
 
@@ -430,7 +430,7 @@ has spectrum $(-2, -2, 1, 1, 1, 1)$ with the doubled eigenvalue attained exactly
 The mixed and angular planes are computed in the section ``The curvature operator, by the Cartan structure equations'' by the Cartan structure equations in the static chart, giving $-M/r^3$ on the four mixed planes and the doubled value again on the angular dual; curvature is a pointwise invariant, and the two pictures agree on the invertible region by Fact \claimref{singularity.imported-equivalence-einstein-equations}. The eigenvalue ratio is $-2 : 1$, which is the ratio of $S$'s spectrum. \emph{Assembly.} An operator diagonal on the six planes with eigenvalues proportional to $(-2,-2,1,1,1,1)$ is $\pm(M/r^3)(1 - 3\Pi)$, and the sign is fixed by the radial plane: $\mathcal{R}(\sigma_r) = +2M/r^{3}\,\sigma_r$ against $S(\sigma_r) = -2\sigma_r$ gives the minus sign, and the mixed planes, $-M/r^{3}$ against $S = +1$, confirm it. The $\hb$-invariance display is one line of anticommutation ($\er \wedge \er = 0$). The script checks the conjugation table, the operator identities, the spectrum and trace, the eigenvalue ratio against the appendix's rational-function values, the sign of the identity on the radial and mixed planes, and the invariance display, blade-exactly.
 
 
-**setting  (Steps 4b and 4c: compute in the completion; the plane, the rate, and the boost as number operator).** In classical language the spectrum is the Petrov type-D structure of Schwarzschild, $\Psi_2 = -M/r^{3}$ its one nonvanishing Weyl scalar \cite{Chandrasekhar1983}; the theorem's contribution is the derivation inside the gauge formalism and the exact operator identity $S^{2} + S = 2$, not the spectrum itself.
+**setting  (Steps 4b and 4c: the spectrum as Petrov type D, in classical language).** In classical language the spectrum is the Petrov type-D structure of Schwarzschild, $\Psi_2 = -M/r^{3}$ its one nonvanishing Weyl scalar \cite{Chandrasekhar1983}; the theorem's contribution is the derivation inside the gauge formalism and the exact operator identity $S^{2} + S = 2$, not the spectrum itself.
 
 
 
@@ -451,15 +451,15 @@ The geometric normalisation this fixes: an interval of $2\pi$ in rapidity corres
 \item the rotor flow $R_\lambda = \exp(\lambda\sigma/2)$ acts by $v \mapsto e^{-\lambda} v$ and $v^* \mapsto e^{+\lambda} v^*$: the pair diagonalises the boost with opposite weights, the structure of outgoing and ingoing horizon modes;
 \item the spectral projectors $\tfrac12(1 \pm \sigma)$ of the boost are identically the occupation projectors $v^* v$ and $v v^*$: the descent projectors of Proposition \claimref{singularity.descent-what-it-erases};
 \item in the fermionic representation $\sigma = 2N - 1$: the generator of the geometric boost is, up to normalisation, the number operator, $K := \tfrac{\sigma}{2} = N - \tfrac12$;
-\item $\mathrm{Spin}^+(1,1)$ is one-dimensional, so the boost flow is the \emph{only} one-parameter flow implemented by real rotors of the atom. The scope matters and is stated: the mode algebra $\Mat_2(\C)$ admits a three-parameter family of one-parameter unitary groups, and the uniqueness claimed is within the class the geometry supplies, real rotor flows of $\Cl(1,1)$; Proposition \claimref{singularity.euclidean-rotor-where-it-lies} later leaves that class deliberately, its Euclidean rotor being complex.
+\item $\mathrm{Spin}^+(1,1)$ is one-dimensional, so the boost flow is the \emph{only} one-parameter flow implemented by real rotors of the atom, up to reparametrisation of the flow parameter and orientation. The scope matters and is stated: the mode algebra $\Mat_2(\C)$ admits a three-parameter family of one-parameter unitary groups, and the uniqueness claimed is within the class the geometry supplies, real rotor flows of $\Cl(1,1)$; Proposition \claimref{singularity.euclidean-rotor-where-it-lies} later leaves that class deliberately, its Euclidean rotor being complex.
 \end{enumerate}
 One object, three readings: boost generator, number operator, generator of the descent projectors.
 
-*Proof.* (1) $\sigma^2 = (v^*v)^2 + (vv^*)^2 - v^*v\,vv^* - vv^*\,v^*v = v^*v + vv^* - 0 - 0 = 1$, using idempotency (Proposition \claimref{singularity.descent-what-it-erases}) and $v^2 = (v^*)^2 = 0$ to remove the cross terms. In the atom (\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}): $v v^* = \tfrac14(e_0 + e_1)(e_0 - e_1) = \tfrac14(1 - e_0e_1 + e_1e_0 + 1) = \tfrac12(1 - e_0e_1)$, so $v^*v = 1 - vv^* = \tfrac12(1 + e_0e_1)$ and $\sigma = e_0 e_1$. (2) From $\sigma v = -v$ and $v\sigma = v$ (in the atom: $e_0e_1(e_0 + e_1) = -(e_1 + e_0)$ and $(e_0+e_1)e_0e_1 = e_1 + e_0$; abstractly from $v^2 = (v^*)^2 = 0, \qquad v v^* + v^* v = 1$), and $\sigma^2 = 1$ giving $e^{-\lambda\sigma} = \cosh\lambda - \sigma\sinh\lambda$:
+*Proof.* (1) $\sigma^2 = (v^*v)^2 + (vv^*)^2 - v^*v\,vv^* - vv^*\,v^*v = v^*v + vv^* - 0 - 0 = 1$, using idempotency (Proposition \claimref{singularity.descent-what-it-erases}) and $v^2 = (v^*)^2 = 0$ to remove the cross terms. In the atom (\claimref{singularity.pseudo-inverse-identities-hyperbolic-atom}): $v v^* = \tfrac14(e_0 + e_1)(e_0 - e_1) = \tfrac14(1 - e_0e_1 + e_1e_0 + 1) = \tfrac12(1 - e_0e_1)$, so $v^*v = 1 - vv^* = \tfrac12(1 + e_0e_1)$ and $\sigma = e_0 e_1$. (2) From $\sigma v = -v$ and $v\sigma = v$ (in the atom: $e_0e_1(e_0 + e_1) = -(e_1 + e_0)$ and $(e_0+e_1)e_0e_1 = e_1 + e_0$; abstractly from $v^2 = (v^*)^2 = 0, \qquad v v^* + v^* v = 1$), and $\sigma^2 = 1$ giving $e^{-\lambda\sigma} = \cosh\lambda - \sigma\sinh\lambda$ (as for any element of square one; in the atom $\sigma = e_0 e_1$ is a bivector with scalar square, the case of \claimref{std-algebra.bivector-exponential}):
 \[
 e^{\lambda\sigma/2}\,v\,e^{-\lambda\sigma/2} = v\,e^{-\lambda\sigma} = v\cosh\lambda - v\sigma\,\sinh\lambda = (\cosh\lambda - \sinh\lambda)\,v = e^{-\lambda}v ,
 \]
-using $v\sigma = v$ once; mirror-symmetrically for $v^*$. (3) is $v^*v = \tfrac12(1 + \sigma)$. (4) $N = v^*v$ counts occupation in the two-state module, and $\sigma = 2v^*v - 1$. (5) The rotor group of $\Cl(1,1)$ is generated by its single unit bivector.
+using $v\sigma = v$ once; mirror-symmetrically for $v^*$. (3) is $v^*v = \tfrac12(1 + \sigma)$. (4) $N = v^*v$ counts occupation in the two-state module, and $\sigma = 2v^*v - 1$. (5) The even subalgebra of $\Cl(1,1)$ is $\operatorname{span}\{1, \sigma\}$ with $\tilde\sigma = -\sigma$, so the rotors are the elements $a + b\sigma$ with $(a + b\sigma)(a - b\sigma) = a^2 - b^2 = 1$: a one-dimensional group whose tangent line at $1$ is $\R\sigma$. A continuous one-parameter group of rotors is therefore $\lambda \mapsto \exp(c\lambda\sigma/2)$ for a real $c$, which by the closed form (\claimref{std-algebra.bivector-exponential}) is $\cosh\tfrac{c\lambda}{2} + \sigma\sinh\tfrac{c\lambda}{2}$: the boost flow at a rescaled parameter. The rotor group itself has two components, $a \ge 1$ and $a \le -1$; the exponentials fill only the first, and $-1$ is a rotor that is no exponential. A one-parameter flow stays in the identity component, so the uniqueness of (5) is unaffected; it is not the statement that every rotor of the atom is $\exp(\lambda\sigma/2)$.
 
 
 
@@ -656,6 +656,8 @@ which is the Fermi-Dirac occupancy at inverse temperature $p$, strictly between 
 \item On the two-dimensional module on which $v, v^{*}$ act as ladder operators, $R_{i\theta} = \operatorname{diag}(e^{-i\theta/2}, e^{i\theta/2})$: a rotation through $2\pi$ multiplies every spinor by $-1$, while its conjugation action on $\Aa$ is the identity.
 \item The generator $i\sigma$ is not an element of the real algebra $\Cl(1,3)$. The dual member of the curvature-selected pair, $I\sigma_r = e_0e_1e_2e_3\,e_0e_1 = e_2e_3$, is the \emph{angular} plane: its rotor $\exp(\theta I\sigma_r/2)$ fixes $e_0$, $e_1$ and $\sigma_r$ and rotates $e_2$ into $e_3$, a rotation along the bifurcation sphere, not around it. The Euclidean rotation around the bifurcation sphere is therefore realised by no real rotor of $\Cl(1,3)$, and in particular not by the curvature-selected pair $\{\sigma_r, I\sigma_r\}$; it is realised by the unitary $R_{i\theta}$ of the complexified radial plane.
 \end{enumerate}
+
+\emph{Note (the unit on values, 2026-11-01).} Clause (3) is stated for points, and for the formal unit $i$ of the atom's complexification. Read with the field theory's unit $i = I_{4}$ acting on values, $i\sigma_{r} = I_{4}e_{0}e_{1} = e_{2}e_{3}$ does lie in $\Cl(1,3)$, and the boost rotor continued to imaginary rapidity is, on even values, the real rotor of that dual plane (\claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}); on points it is not, since $I_{4}$ anticommutes with vectors, so the stored statement holds for points.
 
 *Proof.* (1) With $(i\sigma)^{2} = -\sigma^{2} = -1$ the exponential series splits into cosine and sine, giving the displayed form; it is unitary because $i\sigma$ is skew-adjoint ($\sigma$ is self-adjoint, being $2N - 1$); $R_{2\pi i} = \cos\pi + i\sigma\sin\pi = -1$ and $R_{4\pi i} = +1$. (2) $\sigma = \operatorname{diag}(-1, 1)$ on the module (Theorem \claimref{singularity.descent-parity-average}'s proof), so $e^{i\theta\sigma/2} = \operatorname{diag}(e^{-i\theta/2}, e^{i\theta/2})$, which is $-1$ at $\theta = 2\pi$; conjugation by a scalar is trivial. (3) The even part of $\Cl(1,3)$ is spanned by $1$, the six frame bivectors and $I$, all with real coefficients, and $i\sigma_r$ is none of these: the bivectors of $\Cl(1,3)$ with square $-1$ are the spatial planes. $I\sigma_r = e_2e_3$ is one line of blade multiplication, and a rotor of the plane $e_2e_3$ fixes every vector orthogonal to that plane, $e_0$ and $e_1$ included, hence fixes $\sigma_r = e_0e_1$; the script verifies $I\sigma_r = e_2e_3$, the action of its rotor on all four frame vectors, and the unitary rotor's algebra on the module, blade-exactly.
 
@@ -1302,7 +1304,7 @@ exists exactly over $E$. The ascent $\Cl(1,3) \to \Cl(2,4)$, i.e.\ $\Mat_2(\HH) 
 
 
 
-**Theorem 78 (On a finite truncation, meet of the big fibres equals join of the small fibres equals $\operatorname{range}(E_F)$).** For finite $F = \{x_1, \dots, x_N\} \subseteq E$,
+**Theorem 78 (Three fibre algebras coincide on a finite truncation).** For finite $F = \{x_1, \dots, x_N\} \subseteq E$,
 \[
 \bigcap_{j} B_j \;=\; \Bigl\langle \bigcup_j \Aa_{x_j}^{+} \Bigr\rangle \;=\; \operatorname{range}(E_F),
 \]
@@ -1354,8 +1356,6 @@ The \emph{rotor flow} is $\operatorname{Ad}(R_\lambda)$, $R_\lambda = \exp(\lamb
 The \emph{phase flow} is $\operatorname{Ad}(e^{itK})$, which on the modes is $a_j \mapsto e^{-i\omega_j t}a_j$: a unitary group whose adjoint eigenvalues are imaginary, periodic in the parameter for each single mode. This is the flow of Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic}, $\alpha_t = \operatorname{Ad}(e^{itK})$, and the boost dynamics $\tau_t(a_j) = e^{-i\omega_j t}a_j$ of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}. The KMS analysis uses this flow: the descended state of Theorem \claimref{singularity.modular-descent} is KMS for it, the modular flow in its proof being $\operatorname{Ad}(\rho^{it})$, and the rigidity theorem, the geometric modular condition and the Hawking paper's I-state are stated for it. Proposition \claimref{singularity.euclidean-rotor-where-it-lies} identifies it as the Euclidean rotation: the boost rotor continued to imaginary rapidity, $R_{i\theta} = \exp(i\theta\sigma/2)$, whose generator $i\sigma$ is not in the real algebra and which is realised by no real rotor of $\Cl(1,3)$.
 
 The two are related by analytic continuation of the parameter, $\lambda = it$: $\operatorname{Ad}(e^{itK}) = \operatorname{Ad}(R_{it})$. The rotor flow fixes the orbits and, through the geometric normalisation, the rate $\kappa = 1/4M$ that converts rapidity to Schwarzschild time, $\lambda = \kappa t$; the phase flow carries the period, $2\pi$ in rapidity for the conjugation action on each atom, which under premise (R) is the modular period $\beta = 2\pi/\kappa = 8\pi M$ in Schwarzschild time. The chaos-bound statement compares one with the other: the rotor flow's growth rate $\kappa$ against $2\pi T$, the phase flow's KMS temperature, which are equal. Where the boundary-mode algebra is complex (the Hawking paper) the phase flow acts within it; where it is a real Clifford algebra (the scrambling results) its generator, $i$ times a bivector, is excluded and only the rotor flow is intrinsic, which is the dynamical face of the second known limit in the conventions. The Hawking paper's dynamics is the phase flow, while the scrambling assumption runs the window's dynamics on the rotor flow. Which of the two is the physical time evolution of a window, in the one Schwarzschild time $t$ that both papers use, is settled by Proposition \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}: taking a time evolution to be a group of $*$-automorphisms preserving the states, the phase flow is the window's time evolution and the rotor flow its KMS-strip continuation, so for the quadratic dynamics the scrambling law assumes its growth $e^{\kappa t}$ is an imaginary-time rate on the CAR windows; real-time spreading is left open there.
-
-**Remark  (Two clocks, one calibration).** Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} is the note's no-go, and it is a constructive one: it says exactly what kind of input is needed and how much. The inverse temperature is the ratio of two clocks, the modular clock of the state and the geometric clock of the Killing boost, and a ratio of clocks is meaningless until one of them is calibrated. The chain calibrates exactly once, in \cite[Prop.~6.2]{ButlerT5}: an interval of $2\pi$ in rapidity is $2\pi/\kappa = 8\pi M$ of Schwarzschild time. Everything numerical in Step 4d passes through that one conversion, as the paper already says, and Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} now proves that no rearrangement of the algebra can remove the need for it. The residual sign in (2) is not new either: it is the orientation of the boost, the labelling of outgoing against ingoing, which \cite[Rem.~6.5]{ButlerT5} already flags as the $\mathbb{Z}_2$ attached to the weights of $v$ and $v^{*}$. The rigidity theorem identifies that $\mathbb{Z}_2$ as the entire automorphism-theoretic freedom in the temperature.
 
 ## Descent, parity and states
 
@@ -1526,7 +1526,20 @@ so a typical pure state's smaller marginal is within $m/2n \leq 1/2$ nat of the 
 
 *Provenance:* D. N. Page, Average entropy of a subsystem, Phys. Rev. Lett. 71 (1993), 1291--1294.; S. K. Foong and S. Kanno, Proof of Page's conjecture on the average entropy of a subsystem, Phys. Rev. Lett. 72 (1994), 1148--1151.; J. Sanchez-Ruiz, Simple proof of Page's conjecture on the average entropy of a subsystem, Phys. Rev. E 52 (1995), 5653--5655.; S. Sen, Average entropy of a quantum subsystem, Phys. Rev. Lett. 77 (1996), 1--3..
 
-**Fact (imported) 98 (Bivectors form the Lie algebra of the orthogonal group).** For $A, C \in \Cl^{2}(V, Q)$ and $x \in V$, with the commutator product $A \times X = \tfrac12(AX - XA)$:
+**Fact (imported) 98 (Exponentials of bivectors with scalar square).** Let $A \in \Cl^{2}(V, Q)$ with $A^{2} = \lambda \in \R$ (true for every simple bivector $A = a \wedge b$, and for every bivector when $n \le 3$). Then $A^{2k} = \lambda^{k}$, $A^{2k+1} = \lambda^{k} A$, and $e^{A} = \sum_k A^{k}/k!$ is
+\begin{equation}
+e^{A} =
+\begin{cases}
+\cos\theta + \dfrac{\sin\theta}{\theta} A, & \lambda = -\theta^{2} < 0,\\[6pt]
+\cosh\theta + \dfrac{\sinh\theta}{\theta} A, & \lambda = \theta^{2} > 0,\\[6pt]
+1 + A, & \lambda = 0 .
+\end{cases}
+\end{equation}
+In each case $e^{A} (e^{A})^{\sim} = e^{A} e^{-A} = 1$. For orthogonal $a, b$ with $Q(a) \ne 0$, $e^{\phi\, \hat{a}\hat{b}}$ (unit $\hat{a}, \hat{b}$, or $\hat{b}$ null) is the product of two invertible vectors, hence a rotor (\claimref{obj.std-algebra.rotor}): a rotation when $(a \wedge b)^{2} < 0$, a boost when $> 0$, and a null rotation or translation when $= 0$.
+
+*Provenance:* Transport Lab claim std-algebra.bivector-exponential, version 1.
+
+**Fact (imported) 99 (Bivectors form the Lie algebra of the orthogonal group).** For $A, C \in \Cl^{2}(V, Q)$ and $x \in V$, with the commutator product $A \times X = \tfrac12(AX - XA)$:
 \begin{equation}
 A \times C = \langle A C \rangle_2 \in \Cl^{2}, \qquad A \times x = \langle A x \rangle_1 \in V, \qquad B(A \times x, y) + B(x, A \times y) = 0 .
 \end{equation}
@@ -1534,7 +1547,7 @@ So $\Cl^{2}$ is a Lie algebra under $\times$, and $A \mapsto (x \mapsto A \times
 
 *Provenance:* Transport Lab claim std-algebra.bivector-lie-algebra, version 1.
 
-**Fact (imported) 99 (Cl(1,1) and Cl(2,0) are the real 2x2 matrices).** The Clifford algebra of any hyperbolic plane $H$ is isomorphic to $\Mat_2(\R)$: if $(u, w)$ is a hyperbolic pair spanning $H$, the assignment
+**Fact (imported) 100 (Cl(1,1) and Cl(2,0) are the real 2x2 matrices).** The Clifford algebra of any hyperbolic plane $H$ is isomorphic to $\Mat_2(\R)$: if $(u, w)$ is a hyperbolic pair spanning $H$, the assignment
 \begin{equation}
 u \mapsto \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}, \qquad w \mapsto \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}
 \end{equation}
@@ -1542,11 +1555,11 @@ extends to an isomorphism $\Cl(H) \to \Mat_2(\R)$, under which $uw$ and $wu$ are
 
 *Provenance:* Transport Lab claim std-algebra.cl11-matrix, version 1.
 
-**Fact (imported) 100 (Orthogonal vectors anticommute).** For $u, v \in V$: $u v = -v u$ if and only if $B(u, v) = 0$. In an orthogonal basis $e_1, \dots, e_n$, $e_i e_j = -e_j e_i$ for $i \ne j$ and $e_i^{2} = Q(e_i)$, and the product of two basis blades is $e_I e_J = \pm \bigl(\prod_{i \in I \cap J} Q(e_i)\bigr)\, e_{I \triangle J}$, the sign being $(-1)$ to the number of pairs $(i, j) \in I \times J$ with $i > j$.
+**Fact (imported) 101 (Orthogonal vectors anticommute).** For $u, v \in V$: $u v = -v u$ if and only if $B(u, v) = 0$. In an orthogonal basis $e_1, \dots, e_n$, $e_i e_j = -e_j e_i$ for $i \ne j$ and $e_i^{2} = Q(e_i)$, and the product of two basis blades is $e_I e_J = \pm \bigl(\prod_{i \in I \cap J} Q(e_i)\bigr)\, e_{I \triangle J}$, the sign being $(-1)$ to the number of pairs $(i, j) \in I \times J$ with $i > j$.
 
 *Provenance:* Transport Lab claim std-algebra.orthogonal-anticommute, version 1.
 
-**Fact (imported) 101 (How the pseudoscalar commutes).** In $\Cl(p, q, r)$, $n = p + q + r$, with unit pseudoscalar $I$:
+**Fact (imported) 102 (How the pseudoscalar commutes).** In $\Cl(p, q, r)$, $n = p + q + r$, with unit pseudoscalar $I$:
 \begin{enumerate}
 \item[(i)] $I X_k = (-1)^{k(n-1)} X_k I$ for $X_k \in \Cl^{k}$; so $I$ commutes with $\Cl^{+}$, and with $\Cl^{-}$ when $n$ is odd, while it anticommutes with $\Cl^{-}$ when $n$ is even. Equivalently $I X = X I$ for $n$ odd and $I X = \hat{X} I$ for $n$ even.
 \item[(ii)] $I \tilde{I} = \prod_{i} Q(e_i)$, which is $(-1)^{q}$ when $r = 0$ and $0$ when $r > 0$.
@@ -1555,7 +1568,7 @@ extends to an isomorphism $\Cl(H) \to \Mat_2(\R)$, under which $uw$ and $wu$ are
 
 *Provenance:* Transport Lab claim std-algebra.pseudoscalar-commutation, version 1.
 
-**Fact (imported) 102 (Pure spinors, Cartan's purity theorem and the Thouless form).** In the Fock model of \claimref{std-algebra.fock-representation}, for a nonzero spinor $\psi \in \Lambda W$ let $N_\psi = \{x \in V : x \psi = 0\}$. Then:
+**Fact (imported) 103 (Pure spinors, Cartan's purity theorem and the Thouless form).** In the Fock model of \claimref{std-algebra.fock-representation}, for a nonzero spinor $\psi \in \Lambda W$ let $N_\psi = \{x \in V : x \psi = 0\}$. Then:
 \begin{enumerate}
 \item[(i)] $N_\psi$ is totally null, so $\dim N_\psi \le k$; $\psi$ is \emph{pure} when $\dim N_\psi = k$;
 \item[(ii)] every maximal totally null subspace of $V$ is $N_\psi$ for a pure $\psi$, unique up to a scalar;
@@ -1565,11 +1578,11 @@ extends to an isomorphism $\Cl(H) \to \Mat_2(\R)$, under which $uw$ and $wu$ are
 
 *Provenance:* E. Cartan, Lecons sur la theorie des spineurs, Hermann (1938)., pure spinors and their dimension count; C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954)., Ch. III (pure spinors); D. J. Thouless, Stability conditions and nuclear rotations in the Hartree-Fock theory, Nucl. Phys. 21 (1960) 225., the Thouless form.
 
-**Fact (imported) 103 (The spacetime algebra as a matrix algebra, and the spacetime split).** (i) $\Cl(1,3) \cong \Mat_2(\HH)$: with quaternion units $\mathbf{q}_1, \mathbf{q}_2, \mathbf{q}_3$, the assignment $\gamma_0 \mapsto \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma_k \mapsto \begin{psmallmatrix} 0 & \mathbf{q}_k \\ \mathbf{q}_k & 0 \end{psmallmatrix}$ extends to an isomorphism. (ii) As a labelled reading, the Dirac matrices $\gamma^{D}_0 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma^{D}_k = \begin{psmallmatrix} 0 & \sigma_k \\ -\sigma_k & 0 \end{psmallmatrix}$ ($2 \times 2$ blocks) give a faithful representation $\Cl(1,3) \to \Mat_4(\C)$ whose complex span is all of $\Mat_4(\C)$: $\C \otimes \Cl(1,3) \cong \Mat_4(\C)$. (iii) The relative vectors $\sigma_k = \gamma_k \gamma_0$ satisfy $\sigma_j \sigma_k + \sigma_k \sigma_j = 2\delta_{jk}$ and $\sigma_1 \sigma_2 \sigma_3 = I$, and generate the even subalgebra: $\Cl^{+}(1,3) \cong \Cl(3,0)$, so the spacetime pseudoscalar is the pseudoscalar of the observer's space.
+**Fact (imported) 104 (The spacetime algebra as a matrix algebra, and the spacetime split).** (i) $\Cl(1,3) \cong \Mat_2(\HH)$: with quaternion units $\mathbf{q}_1, \mathbf{q}_2, \mathbf{q}_3$, the assignment $\gamma_0 \mapsto \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma_k \mapsto \begin{psmallmatrix} 0 & \mathbf{q}_k \\ \mathbf{q}_k & 0 \end{psmallmatrix}$ extends to an isomorphism. (ii) As a labelled reading, the Dirac matrices $\gamma^{D}_0 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$, $\gamma^{D}_k = \begin{psmallmatrix} 0 & \sigma_k \\ -\sigma_k & 0 \end{psmallmatrix}$ ($2 \times 2$ blocks) give a faithful representation $\Cl(1,3) \to \Mat_4(\C)$ whose complex span is all of $\Mat_4(\C)$: $\C \otimes \Cl(1,3) \cong \Mat_4(\C)$. (iii) The relative vectors $\sigma_k = \gamma_k \gamma_0$ satisfy $\sigma_j \sigma_k + \sigma_k \sigma_j = 2\delta_{jk}$ and $\sigma_1 \sigma_2 \sigma_3 = I$, and generate the even subalgebra: $\Cl^{+}(1,3) \cong \Cl(3,0)$, so the spacetime pseudoscalar is the pseudoscalar of the observer's space.
 
 *Provenance:* Transport Lab claim std-algebra.sta-matrix, version 1.
 
-**Fact (imported) 104 (The product of two vectors).** In $\Cl(V, Q)$, for all $u, v \in V$,
+**Fact (imported) 105 (The product of two vectors).** In $\Cl(V, Q)$, for all $u, v \in V$,
 \begin{equation}
 v^{2} = Q(v), \qquad u v + v u = 2 B(u, v).
 \end{equation}
@@ -1577,7 +1590,7 @@ In particular $u v = B(u, v) + \tfrac12(u v - v u)$, the sum of a scalar and an 
 
 *Provenance:* Transport Lab claim std-algebra.vector-squares, version 1.
 
-**Fact (imported) 105 (Null pairs satisfy the canonical anticommutation relations).** Let $v_1, \dots, v_k, w_1, \dots, w_k \in V$ be a \emph{Witt basis} of their span: $B(v_i, v_j) = B(w_i, w_j) = 0$ and $B(v_i, w_j) = \tfrac12 \delta_{ij}$. Then in $\Cl(V, Q)$
+**Fact (imported) 106 (Null pairs satisfy the canonical anticommutation relations).** Let $v_1, \dots, v_k, w_1, \dots, w_k \in V$ be a \emph{Witt basis} of their span: $B(v_i, v_j) = B(w_i, w_j) = 0$ and $B(v_i, w_j) = \tfrac12 \delta_{ij}$. Then in $\Cl(V, Q)$
 \begin{equation}
 v_i v_j + v_j v_i = 0, \qquad w_i w_j + w_j w_i = 0, \qquad v_i w_j + w_j v_i = \delta_{ij},
 \end{equation}
@@ -1585,11 +1598,11 @@ the canonical anticommutation relations for $k$ modes (read $v_i$ as annihilator
 
 *Provenance:* Transport Lab claim std-algebra.witt-basis-car, version 1.
 
-**Fact (imported) 106 (Rigidity; the clock is frozen).** Along the tower: the transport charge $d = p - q \bmod 8$ is constant; the division-ring type, simplicity class, and centre of every floor equal those of the ground floor; every floor is Morita equivalent to the ground floor; and the obstruction taxonomy of \cite{ButlerT1} is floor-independent: in particular a type-C obstruction (a central idempotent) never arises by transport from a simple ground algebra, at any height. The physical tower is $\Cl(1{+}k, 3{+}k) \cong \Mat_{2^{k+1}}(\HH)$, frozen at clock position $6$. Bott periodicity manifests as immediate freeze, not eventual return.
+**Fact (imported) 107 (Rigidity; the clock is frozen).** Along the tower: the transport charge $d = p - q \bmod 8$ is constant; the division-ring type, simplicity class, and centre of every floor equal those of the ground floor; every floor is Morita equivalent to the ground floor; and the obstruction taxonomy of \cite{ButlerT1} is floor-independent: in particular a type-C obstruction (a central idempotent) never arises by transport from a simple ground algebra, at any height. The physical tower is $\Cl(1{+}k, 3{+}k) \cong \Mat_{2^{k+1}}(\HH)$, frozen at clock position $6$. Bott periodicity manifests as immediate freeze, not eventual return.
 
 *Provenance:* Transport Lab claim tower.rigidity-clock-frozen, version 5 (T03 Thm 3.6).
 
-**Fact (imported) 107 (Cohomological form of the no-go).** With trivial coefficients, $H^1(N_v;\, U) = \mathrm{Hom}(N_v, U)$, one-coboundaries vanishing; and the class of the pseudo-inverse torsor is the tautological homomorphism $\theta$, which is nonzero whenever $U \neq 0$. An $N_v$-invariant pseudo-inverse of $v$ exists, in the given extension, if and only if this class vanishes, if and only if $U = 0$, i.e.\ $n = 2$: the hyperbolic atom of Remark \claimref{note.transport.hyperbolic-atom} is recovered as the exact vanishing locus of the class. Three consequences:
+**Fact (imported) 108 (Cohomological form of the no-go).** With trivial coefficients, $H^1(N_v;\, U) = \mathrm{Hom}(N_v, U)$, one-coboundaries vanishing; and the class of the pseudo-inverse torsor is the tautological homomorphism $\theta$, which is nonzero whenever $U \neq 0$. An $N_v$-invariant pseudo-inverse of $v$ exists, in the given extension, if and only if this class vanishes, if and only if $U = 0$, i.e.\ $n = 2$: the hyperbolic atom of Remark \claimref{note.transport.hyperbolic-atom} is recovered as the exact vanishing locus of the class. Three consequences:
 \begin{enumerate}
 \item \emph{Enlargement-independence, cohomologically.} The group $N_v$, the coefficient module $U$, and the class $\theta$ are all constructed inside $\Cl(\mathbb{V})$ and act identically in every extension; the obstruction is pulled back unchanged along every ascent, which is the cohomological restatement of the quantification over all ascents in Theorem \claimref{transport.no-go-level-elements}.
 \item \emph{Levi equivariance.} By Lemma \claimref{transport.group-null-rotations}, $\theta$ intertwines the conjugation action of $\Spin(U)$ on $N_v$ with its vector action on $U$: the class is equivariant for the Levi factor of the stabiliser.
@@ -1598,7 +1611,7 @@ the canonical anticommutation relations for $k$ modes (read $v_i$ as annihilator
 
 *Provenance:* Transport Lab claim transport.cohomological-form-no-go, version 4 (T01 Thm 4.8).
 
-**Fact (imported) 108 (Descent: the read-out map).** Define $\dsc : \mathcal{Q} \setminus \{\text{ideal points}\} \to \mathbb{V}$ by
+**Fact (imported) 109 (Descent: the read-out map).** Define $\dsc : \mathcal{Q} \setminus \{\text{ideal points}\} \to \mathbb{V}$ by
 \[
 \dsc\,[\, s\,\nO + x + t\,\nInf \,] \;=\; x/s .
 \]
@@ -1614,11 +1627,11 @@ Then:
 
 *Provenance:* Transport Lab claim transport.descent-read-out-map, version 2 (T01 Lem 4.23).
 
-**Fact (imported) 109 (The door is one-way).** Let $A = \Cl(p,q)$ be nondegenerate and let $B$ be either minimal completion of this paper: the Rule-1 ascent $\Cl(p{+}1,q{+}1) \cong \Mat_2(A)$, or (when $p - q \equiv 1 \bmod 4$) a Rule-2 ascent $\cong \Mat_2(\Cl^0(p,q))$. Then there is no unital algebra homomorphism $B \to A$ whatsoever. Every descent is therefore non-multiplicative; the conditional expectation of Proposition \claimref{transport.pinching-kernel} is the canonical linear surrogate, and its loss, the erasure of the ladder sector, is forced by the algebra, not chosen by the formalism.
+**Fact (imported) 110 (The door is one-way).** Let $A = \Cl(p,q)$ be nondegenerate and let $B$ be either minimal completion of this paper: the Rule-1 ascent $\Cl(p{+}1,q{+}1) \cong \Mat_2(A)$, or (when $p - q \equiv 1 \bmod 4$) a Rule-2 ascent $\cong \Mat_2(\Cl^0(p,q))$. Then there is no unital algebra homomorphism $B \to A$ whatsoever. Every descent is therefore non-multiplicative; the conditional expectation of Proposition \claimref{transport.pinching-kernel} is the canonical linear surrogate, and its loss, the erasure of the ladder sector, is forced by the algebra, not chosen by the formalism.
 
 *Provenance:* Transport Lab claim transport.door-one-way, version 5 (T01 Thm 7.6).
 
-**Fact (imported) 110 (Existence and classification of type C).** $\Cl(p,q)$ ($n \geq 1$) contains a nontrivial central idempotent if and only if
+**Fact (imported) 111 (Existence and classification of type C).** $\Cl(p,q)$ ($n \geq 1$) contains a nontrivial central idempotent if and only if
 \[
 p - q \equiv 1 \pmod 4 ,
 \]
@@ -1630,15 +1643,15 @@ which are exchanged by the grade involution $\hat{\cdot}$ (an \emph{outer} autom
 
 *Provenance:* Transport Lab claim transport.existence-classification-type-c, version 4 (T01 Thm 3.6).
 
-**Fact (imported) 111 (Existence locus of type N).** $\Cl(p,q)$ contains a null vector if and only if the signature is mixed, $pq \neq 0$. In that case the null vectors form a cone of dimension $n - 1$, and every null vector is a two-sided zero divisor without left or right inverse in any unital algebra containing $\Cl(p,q)$.
+**Fact (imported) 112 (Existence locus of type N).** $\Cl(p,q)$ contains a null vector if and only if the signature is mixed, $pq \neq 0$. In that case the null vectors form a cone of dimension $n - 1$, and every null vector is a two-sided zero divisor without left or right inverse in any unital algebra containing $\Cl(p,q)$.
 
 *Provenance:* Transport Lab claim transport.existence-locus-type-n, version 5 (T01 Prop 3.3).
 
-**Fact (imported) 112 (No-go at the level of elements).** Let $(\mathbb{V}, Q)$ be nondegenerate of mixed signature $(p,q)$, $p, q \geq 1$, with $n = p + q \geq 3$, and let $\Ncone \subset \mathbb{V}$ be its null cone. Let $(\mathbb{V}', Q')$ be \emph{any} extension of $(\mathbb{V}, Q)$ in the sense of Definition \claimref{obj.transport.extension-quadratic-spaces}, possibly $\mathbb{V}$ itself. Then there is no map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ satisfying $v\,\sigma(v)\,v = v$ for every null $v$ that is equivariant, in the sense of Definition \claimref{obj.transport.equivariance}, even under the identity component $\Spin^0(p,q)$; a fortiori none equivariant under $\Spin(p,q)$ or $\Pin(p,q)$. Equivariant division by zero is impossible at the level of elements, in the Clifford algebra of every ascent, however large.
+**Fact (imported) 113 (No-go at the level of elements).** Let $(\mathbb{V}, Q)$ be nondegenerate of mixed signature $(p,q)$, $p, q \geq 1$, with $n = p + q \geq 3$, and let $\Ncone \subset \mathbb{V}$ be its null cone. Let $(\mathbb{V}', Q')$ be \emph{any} extension of $(\mathbb{V}, Q)$ in the sense of Definition \claimref{obj.transport.extension-quadratic-spaces}, possibly $\mathbb{V}$ itself. Then there is no map $\sigma : \Ncone \to \Cl(\mathbb{V}')$ satisfying $v\,\sigma(v)\,v = v$ for every null $v$ that is equivariant, in the sense of Definition \claimref{obj.transport.equivariance}, even under the identity component $\Spin^0(p,q)$; a fortiori none equivariant under $\Spin(p,q)$ or $\Pin(p,q)$. Equivariant division by zero is impossible at the level of elements, in the Clifford algebra of every ascent, however large.
 
 *Provenance:* Transport Lab claim transport.no-go-level-elements, version 4 (T01 Thm 4.2).
 
-**Fact (imported) 113 (The pinching, and its kernel).** Define the pinching $E : B \to B$, $E(x) = PxP + (1-P)x(1-P)$. Then:
+**Fact (imported) 114 (The pinching, and its kernel).** Define the pinching $E : B \to B$, $E(x) = PxP + (1-P)x(1-P)$. Then:
 \begin{enumerate}
 \item $E$ is an idempotent linear map whose image is the commutant $C = \{x \in B : xP = Px\} = A \oplus A\,ff^*$, on which it restricts to the identity, and $E$ is a $C$-bimodule map: $E(cxc') = c\,E(x)\,c'$ for $c, c' \in C$, with $E(1) = 1$: a conditional expectation onto $C$.
 \item Its kernel is exactly the adjoined ladder sector:
@@ -1654,7 +1667,7 @@ D(xy) - D(x)D(y) \;=\; P\,x\,(1-P)\,y\,P .
 
 *Provenance:* Transport Lab claim transport.pinching-kernel, version 3 (T01 Prop 7.5).
 
-**Fact (imported) 114 (Swap-and-rescale normal form).** In the setting of Theorem \claimref{transport.totality}, represent elements of the quadric by homogeneous triples $(s, x, t)$ with $s,t \in \R$ and $x \in \mathbb{V}$, standing for $N = s\,\nO + x + t\,\nInf$ and defined up to overall scale, subject to the incidence (nullity) condition
+**Fact (imported) 115 (Swap-and-rescale normal form).** In the setting of Theorem \claimref{transport.totality}, represent elements of the quadric by homogeneous triples $(s, x, t)$ with $s,t \in \R$ and $x \in \mathbb{V}$, standing for $N = s\,\nO + x + t\,\nInf$ and defined up to overall scale, subject to the incidence (nullity) condition
 \begin{equation}
 Q(x) = 2st .
 \end{equation}
@@ -1672,7 +1685,7 @@ which preserves the incidence condition, is total, and recovers the reciprocal u
 
 *Provenance:* Transport Lab claim transport.swap-rescale-normal-form, version 4 (T01 Prop 4.21).
 
-**Fact (imported) 115 (Totality).** Let $(\mathbb{V}, Q)$ be nondegenerate, with the completion $\Cl(p{+}1,q{+}1)$ and quadric $\mathcal{Q}$ of the section ``The completion: the conformal model''. Define $\iota : \mathcal{Q} \to \mathcal{Q}$ by $\iota[N] = [\,e_+ N e_+\,]$. Then:
+**Fact (imported) 116 (Totality).** Let $(\mathbb{V}, Q)$ be nondegenerate, with the completion $\Cl(p{+}1,q{+}1)$ and quadric $\mathcal{Q}$ of the section ``The completion: the conformal model''. Define $\iota : \mathcal{Q} \to \mathcal{Q}$ by $\iota[N] = [\,e_+ N e_+\,]$. Then:
 \begin{enumerate}
 \item $\iota$ is well defined, total and continuous on $\mathcal{Q}$, and an involution.
 \item For every $x$ with $Q(x) \neq 0$, \; $\iota[X(x)] = [X(x/Q(x))]$: on invertible vectors $\iota$ is the geometric reciprocal $\rho$.
@@ -1681,7 +1694,7 @@ which preserves the incidence condition, is total, and recovers the reciprocal u
 
 *Provenance:* Transport Lab claim transport.totality, version 3 (T01 Thm 4.10).
 
-**Fact (imported) 116 (The transport algorithm).** The Principle says what is true; practice needs to know what to do. The theorems distil into a six-step procedure, and every step names the theorem, proved above, that licenses it. the table accompanying \claimref{transport.transport-algorithm} is the one-page version: the theorems in operational form. That the steps form a decision procedure with no gaps is itself a theorem, Corollary \claimref{transport.no-fourth-rule}.
+**Fact (imported) 117 (The transport algorithm).** The Principle says what is true; practice needs to know what to do. The theorems distil into a six-step procedure, and every step names the theorem, proved above, that licenses it. the table accompanying \claimref{transport.transport-algorithm} is the one-page version: the theorems in operational form. That the steps form a decision procedure with no gaps is itself a theorem, Corollary \claimref{transport.no-fourth-rule}.
 
 
 
@@ -1721,7 +1734,7 @@ which preserves the incidence condition, is total, and recovers the reciprocal u
 
 *Provenance:* Transport Lab claim transport.transport-algorithm, version 3 (T01 Sec 8.1).
 
-**Fact (imported) 117 (Type P is self-repairing).** Let $A$ be any unital ring, $\mathcal{E}(A)$ its set of idempotents, and $A' \supseteq A$ any unital extension. The identity assignment
+**Fact (imported) 118 (Type P is self-repairing).** Let $A$ be any unital ring, $\mathcal{E}(A)$ its set of idempotents, and $A' \supseteq A$ any unital extension. The identity assignment
 \[
 \sigma : \mathcal{E}(A) \to A' , \qquad \sigma(e) = e,
 \]
@@ -1729,6 +1742,6 @@ satisfies both von Neumann identities, $e\,\sigma(e)\,e = e$ and $\sigma(e)\,e\,
 
 *Provenance:* Transport Lab claim transport.type-p-self-repairing, version 2 (T01 Prop 6.1).
 
-**Refutation 118 (The original conjecture, refuted below).** Division by zero promotes the element. For every null vector $v$ of $\Cl(p,q)$ there is, in the minimal ascent $\Cl(p{+}1,q{+}1)$, a canonically chosen partner $\sigma(v)$ satisfying $v\,\sigma(v)\,v = v$, the choice equivariant under the symmetries of the original algebra: the impossible division is repaired, element by element, one ascent up.
+**Refutation 119 (The original conjecture, refuted below).** Division by zero promotes the element. For every null vector $v$ of $\Cl(p,q)$ there is, in the minimal ascent $\Cl(p{+}1,q{+}1)$, a canonically chosen partner $\sigma(v)$ satisfying $v\,\sigma(v)\,v = v$, the choice equivariant under the symmetries of the original algebra: the impossible division is repaired, element by element, one ascent up.
 
 

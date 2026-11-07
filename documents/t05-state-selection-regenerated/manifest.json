@@ -1,9 +1,9 @@
 {
  "doc": "t05-state-selection-regenerated",
- "version": 8,
+ "version": 9,
  "claims": [
   "note.singularity.metric-level-parity-even-level@1",
-  "note.singularity.two-clocks-one-calibration@1",
+  "note.singularity.two-clocks-one-calibration@2",
   "note.singularity.unconditional-reading-how-it-sharpens-gap@1",
   "note.singularity.what-hypothesis-ii-cost-what-p@1",
   "note.singularity.why-rescues-rather-than-damages-chain@1",
@@ -26,7 +26,6 @@
   "note.state-selection.status-l-e@2",
   "note.state-selection.true-price-r@1",
   "note.state-selection.true-reading-why-it-sharpens-gap@2",
-  "note.state-selection.two-clocks-one-calibration@2",
   "note.state-selection.what-says-about-two-ledgers@2",
   "note.state-selection.what-was-bought@2",
   "note.state-selection.why-rescues-rather-than-damages-chain@2",
@@ -39,7 +38,7 @@
   "singularity.descended-form-state-independent@4",
   "singularity.descent-parity-average@4",
   "singularity.descent-what-it-erases@5",
-  "singularity.euclidean-rotor-where-it-lies@3",
+  "singularity.euclidean-rotor-where-it-lies@4",
   "singularity.exact-equilibrium-over-determines-boundary-modes@5",
   "singularity.imported-univalence-superselection-rule@2",
   "singularity.kms-uniqueness-factor@4",
@@ -58,7 +57,7 @@
   "state-selection.where-fermi-dirac-comes@5"
  ],
  "recipe_hash": "b48ef15248bb",
- "generated": "2026-10-27T15:14:07+00:00",
+ "generated": "2026-11-07T06:42:03+00:00",
  "spine": [
   "obj.singularity.grading-parity-automorphism",
   "singularity.descent-parity-average",

@@ -61,6 +61,8 @@ def check_p_squares_to_zero():
     Pm = pmat()
     assert all(x.is_zero() for row in mm(Pm, Pm) for x in row)
     assert not all(x.is_zero() for row in Pm for x in row)
+    # P is a single elementary nilpotent: one nonzero entry in its 4 x 4 matrix
+    assert len(Pm) == 4 and sum(1 for row in Pm for x in row if not x.is_zero()) == 1
     return True
 
 

@@ -1,5 +1,13 @@
 # Changelog: t05-state-selection-regenerated
 
+## v9 (2026-11-07T06:42:03+00:00)
+
+- bump: major
+- note.singularity.two-clocks-one-calibration: revised-substantive
+- note.state-selection.two-clocks-one-calibration: removed
+- singularity.euclidean-rotor-where-it-lies: revised-substantive
+- note.state-selection.two-clocks-one-calibration: left the document's dependency cone, removed
+
 ## v8 (2026-10-27T15:14:07+00:00)
 
 - bump: patch

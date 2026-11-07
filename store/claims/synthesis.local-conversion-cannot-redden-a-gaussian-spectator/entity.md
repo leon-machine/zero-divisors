@@ -23,7 +23,7 @@ derivations:
   uses:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@1
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
-  - synthesis.imported-planck-2018-lcdm-parameters@2
+  - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra@1
   - synthesis.imported-curvaton-and-modulated-reheating-coefficients@1
   proof: proof-main.tex

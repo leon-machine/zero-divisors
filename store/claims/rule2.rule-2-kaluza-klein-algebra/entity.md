@@ -1,7 +1,7 @@
 ---
 id: rule2.rule-2-kaluza-klein-algebra
 kind: claim
-version: 5
+version: 6
 title: Rule 2 in the Kaluza-Klein algebra
 status: proved
 region: rule2
@@ -17,6 +17,13 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: strengthened check and wording
+  version: 6
+  source: maintainer pass of 7 November 2026
+outside_ga:
+  kind: bridge
+  why: 'the two ideals are compared with the five-dimensional Dirac (gamma-matrix) representations of the imported Fact, stated in that source''s language; the algebra itself is worked in GA'
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -55,6 +62,10 @@ locators:
   label: thm:KK
   line: 197
 extraction:
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6: check_fifth_parity_is_outer now also asserts that the reflection negates exactly 16 of the 32 basis blades (a hand-stated count the mutation test can perturb); outside_ga declared for the comparison with the Dirac representations of the imported gamma-matrix Fact.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

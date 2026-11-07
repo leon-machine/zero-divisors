@@ -14787,18 +14787,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "cross-reference to the T05 setting in place of a restated formula",
+    2
    ]
   ],
-  "hash": "a09c21957da29a72",
+  "hash": "3734f60615ad88ce",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "dab6382ebd8e0ca7",
-   "statement": "a3e90fae3ef72710"
+   "statement": "9763ac890dd4aefb"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.interior.setting-what-proved-what-imported-what": {
   "assumes": [],
@@ -24612,6 +24617,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "merge of the duplicate state-selection remark",
+    2
    ]
   ],
   "hash": "82438988c28e1d27",
@@ -24623,7 +24633,7 @@
    "statement": "d1ae32ea142a3056"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.singularity.unconditional-reading-how-it-sharpens-gap": {
   "assumes": [],
@@ -26771,31 +26781,6 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "662f304c0309eecb",
    "statement": "da084d5315e1394d"
-  },
-  "status": "remark",
-  "version": 2
- },
- "note.state-selection.two-clocks-one-calibration": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "idea, direction and review",
-    null
-   ],
-   [
-    "Claude Fable 5",
-    "mathematics and drafting",
-    null
-   ]
-  ],
-  "hash": "0708932e3ea0dceb",
-  "ledger": null,
-  "parts": {
-   "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "9e2792d108347942",
-   "statement": "7b0915b086a19c10"
   },
   "status": "remark",
   "version": 2
@@ -35413,18 +35398,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "strengthened check and wording",
+    6
    ]
   ],
-  "hash": "5c865b89cb9863dc",
+  "hash": "64db185704270cb5",
   "ledger": null,
   "parts": {
-   "checks": "c2f16954979f8683",
+   "checks": "56d3526cd449e1c5",
    "proofs": "36134f8fd67ab0dd",
    "rest": "aa112b7c075a171e",
    "statement": "d6528764ce3537f4"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "rule2.rule-2-plane": {
   "assumes": [],
@@ -36950,18 +36940,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "strengthened check",
+    4
    ]
   ],
-  "hash": "d1c962492c89fc43",
+  "hash": "a3c549fddace50b4",
   "ledger": null,
   "parts": {
-   "checks": "a180031dec97984e",
+   "checks": "a1ffe109bc0bdbe2",
    "proofs": "a4c8a6c5b1f9486f",
    "rest": "77b61cbd7a820242",
    "statement": "fa50f4c658c74fce"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "sheaf.edge-wall": {
   "assumes": [],
@@ -40340,18 +40335,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "strengthened check",
+    4
    ]
   ],
-  "hash": "cfb1391c92cc20e0",
+  "hash": "05c94ba98012983e",
   "ledger": null,
   "parts": {
-   "checks": "5f79e3daeb3ff30d",
+   "checks": "942f597ca00f26de",
    "proofs": "4e4f90d3ef0bacb6",
    "rest": "d3b65c89b700e77b",
    "statement": "cfb0aa37cefe2676"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "singularity.universality-temperature-under-g": {
   "assumes": [],
@@ -40465,18 +40465,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "strengthened check",
+    11
    ]
   ],
-  "hash": "0a267c4b99c09df4",
+  "hash": "6574e5cbc95edf1a",
   "ledger": null,
   "parts": {
-   "checks": "207efbc1f07d93eb",
+   "checks": "e0ccfd41d01f5ed3",
    "proofs": "99453ffde9310975",
    "rest": "d3b65c89b700e77b",
    "statement": "f94d8c416012c3e7"
   },
   "status": "proved",
-  "version": 10
+  "version": 11
  },
  "standard-model.bracket-composite-lands": {
   "assumes": [],
@@ -49226,18 +49231,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "wording of the neutrino number as the baseline model's fixed value",
+    3
    ]
   ],
-  "hash": "e5f7fcbbe68bd46d",
+  "hash": "1ee2eec83b08f363",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "dc93eeb75dc7a2c1",
-   "statement": "856698b5b537fc00"
+   "statement": "74f5cfc8ca200e9f"
   },
   "status": "imported",
-  "version": 2
+  "version": 3
  },
  "synthesis.imported-powers-stormer-takesaki-disjointness": {
   "assumes": [],
@@ -51016,18 +51026,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "strengthened check and wording",
+    3
    ]
   ],
-  "hash": "45f7588b1b946fe3",
+  "hash": "54680d80cb9ae993",
   "ledger": null,
   "parts": {
-   "checks": "0ba967806d4ba74b",
-   "proofs": "8f2b84bd91c633f1",
+   "checks": "5d5746185f3ca7fc",
+   "proofs": "71679f0fc21d1349",
    "rest": "d3b65c89b700e77b",
    "statement": "c20a42f6940960a9"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.majorana-scale-is-126-doublet-vev": {
   "assumes": [

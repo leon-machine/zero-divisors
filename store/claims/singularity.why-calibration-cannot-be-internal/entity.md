@@ -26,7 +26,7 @@ derivations:
   - singularity.connection-bivector-computed@4
   - singularity.euclidean-section-period@5
   - singularity.solution-where-divergence-lies@3
-  - singularity.unipotent-ray@3
+  - singularity.unipotent-ray@4
   - transport.transport-algorithm@3
   proof: proof-main.tex
 checked_by:

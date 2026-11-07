@@ -1,7 +1,7 @@
 ---
 id: note.singularity.two-clocks-one-calibration
 kind: note
-version: 1
+version: 2
 title: Two clocks, one calibration
 status: remark
 subject: thermality
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: merge of the duplicate state-selection remark
+  version: 2
+  source: maintainer pass of 7 November 2026
 comments_on:
 - singularity.rate-rigidity-temperature-not-algebra-intrinsic
 - singularity.plane-rate
@@ -23,6 +27,19 @@ locators:
   number: Rem 7.17
   label: rem:clocks
   line: 1844
+extraction:
+  merged_from:
+  - id: note.state-selection.two-clocks-one-calibration
+    version: 2
+    locators:
+      paper: T05-state-selection
+      number: Rem 4.6
+      label: rem:clocks
+      line: 256
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2: the state-selection note''s copy of this remark (Rem 4.6, similarity 0.94) was retired into this one, as the other state-selection duplicates of T05 entities were on 22 October; its locator is kept under merged_from and its label points here.'
 ---
 
 ## formal

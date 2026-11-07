@@ -25,7 +25,7 @@ derivations:
   - singularity.cones-fold@4
   - singularity.degeneration-exactly@2
   - singularity.solution-where-divergence-lies@3
-  - singularity.unipotent-ray@3
+  - singularity.unipotent-ray@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

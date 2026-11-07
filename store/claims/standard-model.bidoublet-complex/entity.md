@@ -1,7 +1,7 @@
 ---
 id: standard-model.bidoublet-complex
 kind: claim
-version: 10
+version: 11
 title: A second doublet coupling is needed; the complex bidoublet supplies it
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: strengthened check
+  version: 11
+  source: maintainer pass of 7 November 2026
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: cor:complexrung
   line: 1972
 extraction:
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 11: check_one_rung_vector_gives_equal_up_and_down_masses now also asserts the common mass squared |b|^2 of each sample by hand-stated value, so the mutation test has literals to perturb.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

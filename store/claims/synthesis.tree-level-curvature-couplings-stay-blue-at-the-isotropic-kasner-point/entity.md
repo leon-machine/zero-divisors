@@ -31,7 +31,7 @@ derivations:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
   - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@2
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@2
-  - synthesis.imported-planck-2018-lcdm-parameters@2
+  - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
   proof: proof-main.tex

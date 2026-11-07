@@ -25,7 +25,7 @@ derivations:
   - standard-model.majorana-element@7
   - standard-model.imported-pati-salam-representation-theory-survival@1
   - synthesis.seeding-remainder-excludes-perturbative-pati-salam@2
-  - synthesis.imported-planck-2018-lcdm-parameters@2
+  - synthesis.imported-planck-2018-lcdm-parameters@3
   proof: proof-main.tex
 checked_by:
 - kind: check

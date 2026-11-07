@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.differential-closure-filtration-conormality@3
+  - sheaf.differential-closure-filtration-conormality@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

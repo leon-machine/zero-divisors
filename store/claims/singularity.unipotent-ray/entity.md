@@ -1,7 +1,7 @@
 ---
 id: singularity.unipotent-ray
 kind: claim
-version: 3
+version: 4
 title: The unipotent ray
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: strengthened check
+  version: 4
+  source: maintainer pass of 7 November 2026
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: prop:unipotent
   line: 1333
 extraction:
+  maintainer_pass_warnings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4: check_p_squares_to_zero now also asserts that P is a single elementary nilpotent (one nonzero entry in its 4 x 4 matrix), so the mutation test has literals to perturb.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

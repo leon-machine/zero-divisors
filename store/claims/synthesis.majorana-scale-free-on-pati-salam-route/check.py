@@ -142,6 +142,11 @@ def check_light_masses_scale_mixing_invariant():
         GA.check("scale-free invariants I2/I1^2, I3/I1^3 unchanged (mass ratios)",
                  J2 * I1 * I1 == I2 * J1 * J1 and J3 * I1 * I1 * I1 == I3 * J1 * J1 * J1)
         GA.check("overall scale moves: I1 -> I1/|lam|^2", J1 * a2 == I1 and J1 != I1)
+    # explicit scale 2: I1 falls by 4 and the determinant by 64
+    Y_, f_, h_, vu_, vd_, wu_, wd_, c_, vR_ = scaled(qi(2))
+    _, Mn_, _, _ = clebsch(Y_, f_, h_, vu_, vd_, wu_, wd_, c_)
+    H2 = mmul(light(Mn_, msc(vR_, f_)), dag(light(Mn_, msc(vR_, f_))))
+    GA.check("scale 2: I1 -> I1/4, I3 -> I3/64", trace(H2) * 4 == I1 and det3(H2) * 64 == I3)
     return True
 
 

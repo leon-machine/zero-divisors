@@ -24,7 +24,7 @@ derivations:
   - synthesis.frozen-phase-spectrum-not-red@2
   - synthesis.quadratic-flows-cannot-thermalise-descent@1
   - synthesis.de-sitter-temperature-frozen-point-norm@5
-  - synthesis.imported-planck-2018-lcdm-parameters@2
+  - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bbn-reheating-temperature-floor@1
   - synthesis.imported-superhorizon-zeta-conservation@3
   proof: proof-main.tex

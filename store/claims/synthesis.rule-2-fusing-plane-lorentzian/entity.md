@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - rule2.rule-2-kaluza-klein-algebra@5
+  - rule2.rule-2-kaluza-klein-algebra@6
   - rule2.imported-rule-2-matrix-units-forgotten@3
   - synthesis.plane-commutant-even-ground@3
   - odd-extensions.twistor-algebra@6

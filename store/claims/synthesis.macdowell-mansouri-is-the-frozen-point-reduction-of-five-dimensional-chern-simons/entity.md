@@ -27,7 +27,7 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
-  - rule2.rule-2-kaluza-klein-algebra@5
+  - rule2.rule-2-kaluza-klein-algebra@6
   - synthesis.imported-five-dimensional-chern-simons-gravity@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   proof: proof-main.tex
