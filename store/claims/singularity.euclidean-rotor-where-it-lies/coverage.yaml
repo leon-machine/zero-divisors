@@ -11,6 +11,9 @@ functions:
     kind: sampled
     clauses: ["(3)"]
     omits: "I sigma = e2 e3 and its rotor (fixes e0, e1, sigma, rotates e2 into e3) at four angles; 'no real rotor' is shown by sample (a,b) elements, three boost matrices (|trace| >= 2) and three rotation matrices failing L^T eta L = eta, not by a general argument"
+untouched_premises:
+  std-algebra.complexification-is-the-odd-extension: "supplies the unit I_5 of clause (3), the continued rotor on vectors; the check computes the rotor and the no-real-rotor samples directly"
+  synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom: "supplies the unit J of clauses (1)-(2) on the atom; the checks compute the continued rotor and its module form directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
