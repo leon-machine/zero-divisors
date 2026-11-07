@@ -1,7 +1,7 @@
 ---
 id: synthesis.euler-term-horizon-entropy-shift
 kind: claim
-version: 4
+version: 5
 title: 'The Euler term shifts horizon entropy by a topological constant'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (MacDowell-Mansouri square as the Euler form of the curvature operator)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -41,6 +45,10 @@ lineage:
   - synthesis.de-sitter-entropy-pi-n-squared
   - dark-energy.wall-counterterm
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in (i), formal and proof: the MacDowell-Mansouri identity is stated for the Euler form E[X] = 2 <X(a ^ b) I^{-1} X(I d_b ^ d_a)> of linear maps on bivectors, l^2 E[F] = -4 s (R - 2 Lambda + alpha E_4) with F = calR - s l^{-2} id and E_4 = E[calR]; the proof expands E bilinearly with E[calR, id] = E[id, calR] = 2R and E[id] = 24; the two-forms, epsilon contractions and the component Euler density stay as labelled readings. Checked exactly with lib/GA.py in the maintainer scratch, in Cl(1,3) and Cl(4,0): E equals the check''s eps-eps contraction and the component Euler density R_abcd R^abcd - 4 R_ab R^ab + R^2 on constant-curvature and generic Gauss-type operators X(a ^ b) = sum_k c_k h_k(a) ^ h_k(b), the contractions are 2R and 24, and the identity holds on both branches. The previous formal level wrote E_4 = -2 <calR(a ^ b) I calR(I d_b ^ d_a)> in a statement that also covers Euclidean signature; that form is right only where I^2 = -1 (in Euclidean signature it gives -E_4), and the I^{-1} form replaces it. Proof (ii): the conformal factor of the induced metric, written Omega against the rotation-gauge field, renamed varrho. Statement otherwise unchanged.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'

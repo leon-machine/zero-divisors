@@ -1,6 +1,6 @@
 # GA rewrite, kind tensor (run 2026-11-07-consistency)
 
-53 entities (the 52 of ga_tensor.txt plus synthesis.kerr-ring-count-misses-area-law, added by the coordinator from R08). 36 changed (version + 1 each, credit and extraction note maintainer_pass_ga_rewrite, every file kept, no status, link, pin, assumes or ledger change, no check.py edited); 9 of them now declare outside_ga; 17 unchanged.
+53 entities (the 52 of ga_tensor.txt plus synthesis.kerr-ring-count-misses-area-law, added by the coordinator from R08). 37 changed (version + 1 each, credit and extraction note maintainer_pass_ga_rewrite, every file kept, no status, link, pin, assumes or ledger change, no check.py edited); 9 of them now declare outside_ga; 16 unchanged.
 
 Validation: `tp check --layers 1,2,3 --author leon` filtered on my ids: no error or warning (only the pre-existing I213 subject notes on three entities); galang.unexcused empty on all 53. The W222 that the first run showed on one-relation.schr-odinger-slow-shadow (the phrase cross product) is cleared. The one error in the full run (E206, synthesis.charged-vaidya-cauchy-horizon-tractor-threshold) is not on my list.
 
@@ -45,9 +45,11 @@ Criterion used: gravity in GTG (metric, Christoffel, Riemann/Ricci/Weyl componen
 - synthesis.residues-zero-four-real-chirality-anomaly: 3 -> 4; reader fixes: scalar-curvature sign remark, J named. R05 fixes only (no tensor rewrite needed): store scalar-curvature sign remark corrected, its J named as the unshared-plane bivector; anomaly-polynomial forms stay.
 - synthesis.operator-join-ordering-constants: 3 -> 4; which unit acts where. R10 fix: sentence on I_6 (moment factor) vs I_4 (Fock scalars); oscillator indices are basis labels.
 
+- synthesis.attachment-conformal-energy-is-generated-by-z: 4 -> 5; priority reader fix (R10, L5): (iv) and its proof now say that the scalar I_4 of the representation space in the cone C_pi = {Y : -I_4 d pi(Y) >= 0} of the positivity result is read on the module as -I_7, so -I_4 d pi(Z/2) = I_7 Q(Z/2) = E >= 1 and -I_4 d pi(P_a) = I_7 Q(P_a) >= 0 for future a. Verified exactly in scratch with the entity's own Jordan-Wigner/oscillator model: on four Fock states <-I_4 d pi(Y)> = 1, 2, 5, 9 for Y = Z/2, P_{e0+e1}, P_{e0} with I_4 -> -I_7, and -1, -2, -5, -9 (backward cone) with I_4 -> +I_7. So -I_7 is the reading consistent with the direct computation of (iii), and (iv) holds as stated with it; formal statement's mathematics unchanged. The store does not otherwise fix I_4 against I_7 (conventions: related by a sign, never identified). Oscillator indices are basis labels and stay.
+
 ## Not rewritten (unchanged, with reasons)
 
-- correspondence.ordering-filtration, synthesis.attachment-conformal-energy-is-generated-by-z: indices are basis labels of the palatial / twistor oscillators (Z^alpha, Zbar_beta, h^{-1} Gram), as in their premises; no tensor calculus.
+- correspondence.ordering-filtration: indices are basis labels of the palatial oscillators (Z^alpha, Zbar_beta), as in its premises; no tensor calculus.
 - neutrino.rank-one-seesaw-ordering-sum-double, note.neutrino.abstract, pred.no-neutrinoless-double-beta, note.programme.setting-falsifiable-claims, note.programme.setting-machine-verification, note.programme.setting-series-paper-paper-2: false positives (m_{beta beta}, m_mu, U_{ei} are labels; the Dirac matrix is a mass matrix).
 - note.singularity.setting-gauge-theory-exactly, obj.synthesis.gtg-flat-spacetime-gauge-fields: already GTG, components only as labelled readings.
 - note.one-relation.setting-machine-verification: gamma^mu are STA vectors and {gamma^mu, gamma^nu} = 2 eta^{mu nu} is the defining relation; describes the legacy script.
@@ -66,7 +68,7 @@ Criterion used: gravity in GTG (metric, Christoffel, Riemann/Ricci/Weyl componen
 - R05 2, 3, 5 (dark-matter Facts and sourcing rule): done as part of the rewrite. R05 7 (a), (b) (residues): fixed; (c) forms kept (characteristic classes). R05 8 (2D anomaly sign sentence): fixed.
 - R08 (kerr-ring): rewritten.
 - R09 (walls-free-sector Cartan sign; sheaf-papers-wall): fixed / nothing further.
-- R10 1 (operator-join units): sentence added. R10 2 (attachment I_6 vs I_7 orientation): not applied; R10's exact computation should be re-run before a sentence is added (for Leon). R10 3: mass.chart-form-spin-isomorphism is the matrices rewriter's.
+- R10 1 (operator-join units): sentence added. R10 2 (attachment I_6 vs I_7 orientation of the frame): not applied, it is a separate point from the cone fix and needs its own exact check (for Leon). R10 L5 (the cone unit in (iv)): fixed and verified, see above. R10 3: mass.chart-form-spin-isomorphism is the matrices rewriter's.
 - R12 (Schrodinger cross product and unit sentence): fixed. R12 dirac-current: for Leon. R12 note.one-relation 'twistor space': no such phrase found in the stored text; nothing changed.
 - R01, R04: nothing on my entities requiring change.
 
