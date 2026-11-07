@@ -74,7 +74,7 @@ def bare_unit_hits(text):
             continue                                      # i is an index throughout: (i+1)(d-1-i)
         for u in _UNIT_EXTRA.finditer(seg):
             out.append(seg[max(0, u.start() - 12):u.end() + 8])
-        if re.fullmatch(r"\s*-?\s*i[a-z]\s*", seg):
+        if re.fullmatch(r"\s*-?\s*i[a-hopq-z]\s*", seg):
             out.append(seg)                               # a unit times a letter alone: $iq$
         for u in _UNIT_BEFORE_LETTER.finditer(seg):
             ctx_before = seg[max(0, u.start() - 12):u.start()]

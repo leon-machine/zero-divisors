@@ -56,5 +56,5 @@ def test_bare_unit_numeral_and_field_forms():
     from tp.galang import bare_unit_hits
     for t in ["$(3iI_{2}, -2iI_{3})$", "$2iJ F_u$", "$iq$", "over $\\mathbb{Q}(i)$", "$Q(i)$"]:
         assert bare_unit_hits(t), t
-    for t in ["$x_{3i}$", "$e_{2i}$", "$\\sum_{i} a_i$", "$2I_4 J$", "$Q(v)$"]:
+    for t in ["$ij$", "$x_{3i}$", "$e_{2i}$", "$\\sum_{i} a_i$", "$2I_4 J$", "$Q(v)$"]:
         assert not bare_unit_hits(t), t
