@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - odd-extensions.four-extensions-oriented-pair@6
-  - odd-extensions.imported-frozen-point@7
+  - odd-extensions.imported-frozen-point@8
   - odd-extensions.imported-frozen-point-degenerate-algebras@4
   proof: proof-main.tex
 checked_by:

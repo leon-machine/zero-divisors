@@ -38,7 +38,7 @@ derivations:
   - field-theory.boost-modes@3
   - hawking.modular-structure-completed-pair@4
   - synthesis.local-boost-temperature-is-local-regularity@5
-  - synthesis.boost-evolution-on-generators-is-one-unitary-group@5
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group@6
   - singularity.euclidean-rotor-where-it-lies@5
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   proof: proof-main.tex

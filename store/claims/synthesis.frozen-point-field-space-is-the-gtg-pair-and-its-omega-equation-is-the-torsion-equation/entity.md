@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.imported-einstein-cartan-matter-coupling@1

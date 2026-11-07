@@ -1,7 +1,7 @@
 ---
 id: synthesis.boost-evolution-on-generators-is-one-unitary-group
 kind: claim
-version: 5
+version: 6
 title: 'Boost evolution on horizon generators is one unitary dilation group'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: 'maintainer pass on Leon''s decisions, the smeared form of the boost evolution in (ii) corrected to a(D_{-lambda} f), with the antilinear step of (iii) written out (restatement), and the spreading-law citation made a mention'
   version: 5
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: consistency pass, the boost rotor renamed G_lambda
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -65,6 +69,10 @@ lineage:
   - note.decisions.two-boost-flows
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5, second round answer 8, as D3 did in positive-null-energy): the boost rotor B_lambda is renamed G_lambda, since B is the boost bivector and, in the proof, the operator a^*(g). No content change. Version 5 -> 6.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -101,10 +109,10 @@ extraction:
     to the maintainer.
 ---
 ## formal
-Work in the spacetime algebra $\Cl(1,3)$ of the flat background with the store's signature, on a local Rindler horizon of a region of vanishing field strength (for the Killing horizons see (vi)). Let $k$ be a future null vector, $m$ the null vector with $\ip{k}{m} = 1$ in the plane of $k$ and $e_{0}$, $N_{k} = \{x : \ip{x}{k} = 0\} = \{u\,k + x_{\perp}\}$ the null plane with generators along $k$ and affine parameter $u$, edge $u = 0$. Let $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Proposition \claimref{field-theory.second-quantisation}(1)), $x^{*}$ the frame $*$-structure (Theorem \claimref{tower.structure-tower-c-norms}), and $B_{\lambda} = \exp(\tfrac{\lambda}{2}\,k\wedge m)$ normalised so that $B_{\lambda}kB_{\lambda}^{\sim} = e^{\lambda}k$ and $B_{\lambda}mB_{\lambda}^{\sim} = e^{-\lambda}m$ (for $k = e_{0} + e_{1}$: $B_{\lambda} = \cosh\tfrac{\lambda}{2} + e_{1}e_{0}\sinh\tfrac{\lambda}{2}$), the boost of the horizon, with rapidity $\lambda = \kappa t$.
+Work in the spacetime algebra $\Cl(1,3)$ of the flat background with the store's signature, on a local Rindler horizon of a region of vanishing field strength (for the Killing horizons see (vi)). Let $k$ be a future null vector, $m$ the null vector with $\ip{k}{m} = 1$ in the plane of $k$ and $e_{0}$, $N_{k} = \{x : \ip{x}{k} = 0\} = \{u\,k + x_{\perp}\}$ the null plane with generators along $k$ and affine parameter $u$, edge $u = 0$. Let $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Proposition \claimref{field-theory.second-quantisation}(1)), $x^{*}$ the frame $*$-structure (Theorem \claimref{tower.structure-tower-c-norms}), and $G_{\lambda} = \exp(\tfrac{\lambda}{2}\,k\wedge m)$ normalised so that $G_{\lambda}kG_{\lambda}^{\sim} = e^{\lambda}k$ and $G_{\lambda}mG_{\lambda}^{\sim} = e^{-\lambda}m$ (for $k = e_{0} + e_{1}$: $G_{\lambda} = \cosh\tfrac{\lambda}{2} + e_{1}e_{0}\sinh\tfrac{\lambda}{2}$), the boost of the horizon, with rapidity $\lambda = \kappa t$.
 \begin{enumerate}
 \item[(i)] \emph{(The canonical component.)} $\Lambda(m)\,a\gamma_{0}\,\Lambda(m) = 0$ for $a = k$ and for $a \perp k, m$, and $\Lambda(m)\,m\gamma_{0}\,\Lambda(m) = \Lambda(m)$. With $\nabla = k\,(m\cdot\nabla) + m\,(k\cdot\nabla) + \nabla_{\perp}$, the stored anticommutator $\chi(\nabla D)\gamma_{0}$ compressed to $\Lambda(m)$ is $\chi\,(k\cdot\nabla D)\,\Lambda(m)$: it involves only the derivative along the generators, so $\psi_{m} = \Lambda(m)\psi$ is the canonical component on $N_{k}$, with kernel a multiple of $\delta(u - v)\delta^{2}(x_{\perp} - y_{\perp})\Lambda(m)$, and on each generator its algebra is the continuum mode space $\CAR(L^{2}(\R, du)\otimes\Lambda(m)S)$ of Definition \claimref{obj.hawking.continuum-mode-space}. The other component $\Lambda(k)\psi$ keeps only the $m\cdot\nabla$ part, a derivative off the plane.
-\item[(ii)] \emph{(Two factors, one automorphism.)} The covariant action $\psi(x) \mapsto B_{\lambda}\psi(B_{\lambda}^{\sim}xB_{\lambda})$ is, on $\psi_{m}$ along a generator, the product of two factors: the rotor on values, $B_{\lambda}\Lambda(m) = e^{-\lambda/2}\Lambda(m)$, with $B_{\lambda}^{*} = B_{\lambda}$ and $B_{\lambda}\Lambda(m)B_{\lambda}^{*} = e^{-\lambda}\Lambda(m)$; and the transport of the affine parameter, $B_{\lambda}^{\sim}(uk)B_{\lambda} = e^{-\lambda}u\,k$, which multiplies the delta kernel by $e^{\lambda}$. Their product is
+\item[(ii)] \emph{(Two factors, one automorphism.)} The covariant action $\psi(x) \mapsto G_{\lambda}\psi(G_{\lambda}^{\sim}xG_{\lambda})$ is, on $\psi_{m}$ along a generator, the product of two factors: the rotor on values, $G_{\lambda}\Lambda(m) = e^{-\lambda/2}\Lambda(m)$, with $G_{\lambda}^{*} = G_{\lambda}$ and $G_{\lambda}\Lambda(m)G_{\lambda}^{*} = e^{-\lambda}\Lambda(m)$; and the transport of the affine parameter, $G_{\lambda}^{\sim}(uk)G_{\lambda} = e^{-\lambda}u\,k$, which multiplies the delta kernel by $e^{\lambda}$. Their product is
 \[
 \alpha_{\lambda}(\psi_{m}(u)) = e^{-\lambda/2}\psi_{m}(e^{-\lambda}u), \qquad \alpha_{\lambda}(a(f)) = a(D_{-\lambda}f),\quad (D_{\lambda}f)(u) = e^{-\lambda/2}f(e^{-\lambda}u),
 \]

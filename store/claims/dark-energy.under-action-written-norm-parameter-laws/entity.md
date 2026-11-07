@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.four-alternatives-are-exhaustive-three-are@2
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - standard-model.trichotomy-what-kind-number@11

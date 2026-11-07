@@ -35,7 +35,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.de-sitter-entropy-pi-n-squared@6

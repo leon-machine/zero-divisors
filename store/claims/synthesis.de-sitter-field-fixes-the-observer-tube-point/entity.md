@@ -35,7 +35,7 @@ derivations:
   - synthesis.de-sitter-static-boost-frozen-point@6
   - synthesis.imported-gtg-dictionary@2
   - one-relation.spacetime-manifold-vacuum-lines@6
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   assumes:
   - synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries@2

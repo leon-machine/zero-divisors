@@ -35,7 +35,7 @@ derivations:
   uses:
   - dark-matter.two-families-are-two-chiralities@7
   - singularity.euclidean-rotor-where-it-lies@5
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - std-algebra.involution-properties@1
   - std-algebra.bivector-exponential@4
   - std-algebra.pseudoscalar-commutation@1

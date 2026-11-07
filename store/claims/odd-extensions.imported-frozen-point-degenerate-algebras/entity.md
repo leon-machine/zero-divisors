@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-frozen-point-geometry@7
   - sheaf.degeneration-sheaf@6
   - sheaf.one-sided-completion@4

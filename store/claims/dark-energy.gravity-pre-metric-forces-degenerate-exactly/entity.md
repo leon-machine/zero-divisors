@@ -33,7 +33,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-walls-sphere-theorem@6
   proof: proof-main.tex
 checked_by:

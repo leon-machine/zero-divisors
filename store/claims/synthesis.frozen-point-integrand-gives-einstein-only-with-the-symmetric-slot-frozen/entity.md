@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.imported-gtg-dictionary@2
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4

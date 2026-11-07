@@ -43,8 +43,8 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@3
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@4
   - synthesis.einstein-condition-is-infinity-vacuum-incidence@4

@@ -1440,18 +1440,23 @@
     "Claude Opus 5.5",
     "GTG review fixes (referee F2): translational-term sign and the factor 4 of the Stelle-West contraction in the proof; outside_ga made exact",
     6
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the sign of l^2 named on the anti-de Sitter branch",
+    7
    ]
   ],
-  "hash": "851c3f5d5a767fee",
+  "hash": "ed9ba0b49fa8bf8b",
   "ledger": null,
   "parts": {
    "checks": "e987b8ae971eff7e",
    "proofs": "67980a6b6392c24d",
    "rest": "d3b65c89b700e77b",
-   "statement": "a635b3f66dcf688e"
+   "statement": "3716eeec1e039049"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-energy.gravity-pre-metric-forces-degenerate-exactly": {
   "assumes": [],
@@ -1615,18 +1620,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the sign of l^2 named on the anti-de Sitter branch",
+    4
    ]
   ],
-  "hash": "31f2143f70a3f86f",
+  "hash": "d87a5a3ed625b717",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "1d095a5f12423528",
-   "statement": "1cda92da9150a14c"
+   "statement": "8003445ecbd4686f"
   },
   "status": "imported",
-  "version": 3
+  "version": 4
  },
  "dark-energy.imported-s-wave-current-algebra": {
   "assumes": [
@@ -33054,18 +33064,23 @@
     "Claude Opus 5.5",
     "consistency pass, notation clash in the soldering form resolved",
     7
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the sign of l^2 named on the anti-de Sitter branch",
+    8
    ]
   ],
-  "hash": "4b0fb27cf35bc254",
+  "hash": "9cde11e72486bf01",
   "ledger": null,
   "parts": {
    "checks": "1dbf100ab57c1251",
    "proofs": "7283d5c9a4a90351",
    "rest": "d3b65c89b700e77b",
-   "statement": "bd054a134d3a0a18"
+   "statement": "f298217de31deb03"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "odd-extensions.imported-frozen-point-degenerate-algebras": {
   "assumes": [],
@@ -47041,18 +47056,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the smeared form of the boost evolution in (ii) corrected to a(D_{-lambda} f), with the antilinear step of (iii) written out (restatement), and the spreading-law citation made a mention",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the boost rotor renamed G_lambda",
+    6
    ]
   ],
-  "hash": "e05a857f2a1831cf",
+  "hash": "118a6fc84205b75b",
   "ledger": null,
   "parts": {
    "checks": "c82a8a5fd401b96b",
-   "proofs": "251be723472e15f6",
+   "proofs": "4282f033dc276839",
    "rest": "0805b3758af17c51",
-   "statement": "b87c05324cbdc7a1"
+   "statement": "66dc56c97ce53fb0"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.boost-stationary-incidence-vacua-read-interval": {
   "assumes": [],
@@ -50161,18 +50181,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the version history names the statement version (wording)",
     7
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the region renamed O",
+    8
    ]
   ],
-  "hash": "841b52f5912a3296",
+  "hash": "2891016fb01aa038",
   "ledger": null,
   "parts": {
    "checks": "f9fa63c4d39b0f1b",
    "proofs": "49ad7c7b17575dff",
    "rest": "f3e4dea33f4dfed7",
-   "statement": "bf97a46d719afbb5"
+   "statement": "9a86b94915b6c383"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "synthesis.half-integer-weight-array-carries-half-ln2": {
   "assumes": [],
@@ -54663,18 +54688,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): vacuous check removed; outside_ga withdrawn",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "consistency pass, the sign of l^2 named on the anti-de Sitter branch",
+    4
    ]
   ],
-  "hash": "9530c77732ab9f6c",
+  "hash": "04d6ba502be0fcf6",
   "ledger": null,
   "parts": {
    "checks": "899239c3a6bb8d14",
    "proofs": "f01acecf765283eb",
    "rest": "36880587349d3e5c",
-   "statement": "7b1a7f29dc59e5bf"
+   "statement": "416f204e2eaeda48"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part": {
   "assumes": [],

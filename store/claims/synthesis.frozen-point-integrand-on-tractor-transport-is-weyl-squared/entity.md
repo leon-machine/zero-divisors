@@ -40,7 +40,7 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-gtg-dictionary@2
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-miskovic-olea-identity@3

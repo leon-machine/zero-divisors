@@ -34,7 +34,7 @@ derivations:
   - correspondence.lorentzian-duality-complex-structure@5
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
   - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@4
   proof: proof-main.tex

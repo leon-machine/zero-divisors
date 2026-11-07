@@ -31,7 +31,7 @@ derivations:
   - synthesis.de-sitter-temperature-frozen-point-norm@7
   - standard-model.imported-frozen-point-dictionary@9
   - synthesis.boundary-mode-thermal-entropy@2
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-wald-noether-charge-entropy@3
   proof: proof-main.tex
 checked_by:

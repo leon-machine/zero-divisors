@@ -26,7 +26,7 @@ derivations:
   - odd-extensions.doubling-or-complexification@6
   - odd-extensions.four-extensions-oriented-pair@6
   - odd-extensions.imported-copy-theorem-soldered-residue@5
-  - odd-extensions.imported-frozen-point@7
+  - odd-extensions.imported-frozen-point@8
   - odd-extensions.belongs-tower@5
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   proof: proof-main.tex

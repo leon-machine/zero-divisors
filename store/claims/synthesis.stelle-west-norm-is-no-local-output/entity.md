@@ -25,8 +25,8 @@ derivations:
   uses:
   - dark-energy.stelle-west-vector-frozen-point@6
   - dark-energy.imported-frozen-point-geometry@7
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - singularity.non-removability-invariant-argument@3
   - synthesis.promoted-norm-weyl-clock-flat-weight@7
   - dark-energy.imported-henneaux-teitelboim-promotion@6

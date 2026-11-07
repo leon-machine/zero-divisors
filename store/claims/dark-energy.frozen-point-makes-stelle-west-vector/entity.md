@@ -1,7 +1,7 @@
 ---
 id: dark-energy.frozen-point-makes-stelle-west-vector
 kind: claim
-version: 6
+version: 7
 title: The frozen point makes the Stelle-West vector
 status: proved
 region: dark-energy
@@ -29,12 +29,16 @@ credit:
   role: 'GTG review fixes (referee F2): translational-term sign and the factor 4 of the Stelle-West contraction in the proof; outside_ga made exact'
   version: 6
   source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: consistency pass, the sign of l^2 named on the anti-de Sitter branch
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: typed
 derivations:
 - name: main
   uses:
   - dark-energy.imported-frozen-point-geometry@7
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - dark-energy.imported-walls-sphere-theorem@6
   - dark-energy.stelle-west-vector-frozen-point@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
@@ -60,6 +64,10 @@ locators:
   label: thm:action
   line: 685
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'l^2 = 3/Lambda with its sign named (negative for Lambda < 0), so V/Q(V) = -V/l^2 holds on both branches. Version 6 -> 7.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -109,7 +117,7 @@ outside_ga:
 On the Einstein region with $\Lambda \neq 0$ of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), whose tractor connection is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, in the notation of Lemma \claimref{dark-energy.stelle-west-vector-frozen-point}:
 \begin{enumerate}
 \item[(i)] \emph{(Reduction; proved.)} Parallelism of $I$ reduces the ambient $SO(2,4)$-structure to the stabiliser of $I$, the de Sitter group $SO(1,4)$ for $\Lambda > 0$ and the anti-de Sitter group $SO(2,3)$ for $\Lambda < 0$, and the tractor connection to a metric connection on the rank-five bundle $I^\perp$, of signature $(1,4)$ or $(2,3)$ respectively; the ambient curvature takes values in $\Lambda^2 I^\perp$. (The de Sitter names are used below; the anti-de Sitter branch reads identically with these substitutions, and every statement that follows uses only $\{I,V\}^\perp$, whose signature is $(1,3)$ on both branches.)
-\item[(ii)] \emph{(The Stelle-West datum; proved.)} $V$ is a section of $I^\perp$ of fixed squared norm $-3/\Lambda = -\ell^2$, its stabiliser in $SO(1,4)$ (or $SO(2,3)$) is the Lorentz group of $\{I, V\}^\perp$, of signature $(1,3)$, its covariant derivative is the soldering form, the physical frame $\hb^{-1}(a)$, and the reduced connection is $D + e\wedge V/Q(V)$, on flat spacetime the gauge field $\Omega(a) - \hb^{-1}(a) \wedge V/\ell^{2}$, with Lorentz curvature block $R + \ell^{-2}\,e\wedge e$. The pair (reduced connection, $V$) is exactly the datum of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. The Stelle-West vector is therefore not the frozen point, which is parallel; it is made from the frozen point and the canonical tractor, $V = X - (3/\Lambda)\,I$.
+\item[(ii)] \emph{(The Stelle-West datum; proved.)} $V$ is a section of $I^\perp$ of fixed squared norm $-3/\Lambda = -\ell^2$ ($\ell^{2} = 3/\Lambda$, negative for $\Lambda < 0$), its stabiliser in $SO(1,4)$ (or $SO(2,3)$) is the Lorentz group of $\{I, V\}^\perp$, of signature $(1,3)$, its covariant derivative is the soldering form, the physical frame $\hb^{-1}(a)$, and the reduced connection is $D + e\wedge V/Q(V)$, on flat spacetime the gauge field $\Omega(a) - \hb^{-1}(a) \wedge V/\ell^{2}$, with Lorentz curvature block $R + \ell^{-2}\,e\wedge e$. The pair (reduced connection, $V$) is exactly the datum of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. The Stelle-West vector is therefore not the frozen point, which is parallel; it is made from the frozen point and the canonical tractor, $V = X - (3/\Lambda)\,I$.
 \item[(iii)] \emph{(The action; proved, with the Stelle-West contraction of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west} as the imported input.)} The MacDowell-Mansouri functional of that datum is
 \[
 \begin{aligned}

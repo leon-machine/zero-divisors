@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons
 kind: claim
-version: 3
+version: 4
 title: 'MacDowell-Mansouri as the reduction of five-dimensional Chern-Simons'
 status: proved
 region: synthesis
@@ -29,14 +29,18 @@ credit:
   role: 'GTG review (referee F1): vacuous check removed; outside_ga withdrawn'
   version: 3
   source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: consistency pass, the sign of l^2 named on the anti-de Sitter branch
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - rule2.rule-2-kaluza-klein-algebra@7
@@ -60,6 +64,10 @@ lineage:
   - rule2.imported-five-dimensional-chern-simons-shift
   - rule2.rule-2-kaluza-klein-algebra
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'l^2 = -Q(V) = 3/Lambda with its sign named (negative for Lambda < 0) where the normalisation of the Fact is quoted. Version 3 -> 4.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -101,7 +109,7 @@ extraction:
 ---
 
 ## formal
-Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, $\Lambda \neq 0$, frozen point $I = \nInf + \tfrac{\Lambda}{6}\nO$ ($Q(I) = \Lambda/3$), canonical tractor $X = \nO$ and Stelle-West vector $V = X - \tfrac{3}{\Lambda}I$ ($Q(V) = -3/\Lambda$, $\ip{I}{V} = 0$), as in Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}; $W = \{I, V\}^{\perp}$, of signature $(1,3)$. Orientation as in the stored check of that theorem: generators $e_{0}$ ($+1$), $e_{1}, e_{2}, e_{3}$ ($-1$), $e_{4}$ ($+1$), $e_{5}$ ($-1$), $\nO = \tfrac12(e_{4} + e_{5})$, $\nInf = e_{4} - e_{5}$, $I_{6} = e_{0}e_{1}e_{2}e_{3}e_{4}e_{5}$; two-forms are combined by the exterior product of their form parts (a sum over ordered planes), so that $\epsilon(I, V, e\wedge e, e\wedge e) = 6$ times the volume form. Let $P(B_{1}, B_{2}, B_{3}) = \langle B_{1}B_{2}B_{3}\rangle_{6}\,I_{6}^{-1}$ be the Pfaffian (cubic invariant) of the bivectors, so that $\epsilon(I, V, F, G) = P(I\wedge V, F, G)$. On a five-dimensional base with coordinates $(x, y)$, let $\theta$ be a vector-valued one-form with values in $V^{\perp}$ (the frame), $E = \theta\wedge V/Q(V)$ (the translational part of the connection, in the normalisation $A = \Omega - \hb^{-1}\wedge V/\ell^{2}$ of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), $K = E\times E$, and $R$ the curvature of the Lorentz part. The five-dimensional Chern-Simons form of $P$, written through its transgression from the Lorentz connection (Facts \claimref{synthesis.imported-five-dimensional-chern-simons-gravity} and \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}(b)), is, modulo exact forms,
+Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, $\Lambda \neq 0$, frozen point $I = \nInf + \tfrac{\Lambda}{6}\nO$ ($Q(I) = \Lambda/3$), canonical tractor $X = \nO$ and Stelle-West vector $V = X - \tfrac{3}{\Lambda}I$ ($Q(V) = -3/\Lambda$, $\ip{I}{V} = 0$), as in Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}; $W = \{I, V\}^{\perp}$, of signature $(1,3)$. Orientation as in the stored check of that theorem: generators $e_{0}$ ($+1$), $e_{1}, e_{2}, e_{3}$ ($-1$), $e_{4}$ ($+1$), $e_{5}$ ($-1$), $\nO = \tfrac12(e_{4} + e_{5})$, $\nInf = e_{4} - e_{5}$, $I_{6} = e_{0}e_{1}e_{2}e_{3}e_{4}e_{5}$; two-forms are combined by the exterior product of their form parts (a sum over ordered planes), so that $\epsilon(I, V, e\wedge e, e\wedge e) = 6$ times the volume form. Let $P(B_{1}, B_{2}, B_{3}) = \langle B_{1}B_{2}B_{3}\rangle_{6}\,I_{6}^{-1}$ be the Pfaffian (cubic invariant) of the bivectors, so that $\epsilon(I, V, F, G) = P(I\wedge V, F, G)$. On a five-dimensional base with coordinates $(x, y)$, let $\theta$ be a vector-valued one-form with values in $V^{\perp}$ (the frame), $E = \theta\wedge V/Q(V)$ (the translational part of the connection, in the normalisation $A = \Omega - \hb^{-1}\wedge V/\ell^{2}$, $\ell^{2} = -Q(V) = 3/\Lambda$ (negative for $\Lambda < 0$), of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), $K = E\times E$, and $R$ the curvature of the Lorentz part. The five-dimensional Chern-Simons form of $P$, written through its transgression from the Lorentz connection (Facts \claimref{synthesis.imported-five-dimensional-chern-simons-gravity} and \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}(b)), is, modulo exact forms,
 \[
 L_{5} = 3\int_{0}^{1} P\big(E;\, (R + t^{2}K)\wedge(R + t^{2}K)\big)\,dt = P\big(E;\, 3\,R\wedge R + 2\,R\wedge K + \tfrac35\,K\wedge K\big).
 \]

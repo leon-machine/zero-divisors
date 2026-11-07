@@ -40,12 +40,12 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.stelle-west-norm-is-no-local-output@2
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -38,6 +38,10 @@ locators:
   label: def:blowup
   line: 674
 extraction:
+  maintainer_pass_flag_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Dictionary section 14 checked (small items, 7 November): no beyond-one-flat-chart flag. The exceptional boundary tau = 0 is adjoined as the limit of the collar (0, tau_0] x B, which section 14 lists as not beyond one chart (collars of the singularity); everything stated at the boundary (admissibility, the boundary bundle, the boundary holonomy algebra) is a limit of components in the chart, and the S^2 frame is patchwise, which is local.'
   maintainer_pass_decisions_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'

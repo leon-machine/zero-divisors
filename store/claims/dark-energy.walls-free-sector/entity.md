@@ -31,8 +31,8 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-gibbons-hawking-entropy@3
   - synthesis.de-sitter-entropy-pi-n-squared@6
   - dark-energy.wall-counterterm@6

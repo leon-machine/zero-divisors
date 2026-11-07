@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - odd-extensions.are-ascents-pair-signed@4
-  - odd-extensions.imported-frozen-point@7
+  - odd-extensions.imported-frozen-point@8
   - odd-extensions.imported-minimal-completion-degenerate-algebra-rule@5
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
   - odd-extensions.line-tame-wall@4

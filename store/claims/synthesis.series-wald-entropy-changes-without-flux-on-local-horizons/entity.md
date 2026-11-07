@@ -37,7 +37,7 @@ derivations:
   uses:
   - synthesis.euler-term-horizon-entropy-shift@5
   - synthesis.imported-wald-noether-charge-entropy@3
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.imported-raychaudhuri-null-congruence@2
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
   - synthesis.sds-clausius-fixes-area-constant@5

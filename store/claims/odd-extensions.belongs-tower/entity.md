@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - odd-extensions.are-ascents-pair-signed@4
-  - odd-extensions.imported-frozen-point@7
+  - odd-extensions.imported-frozen-point@8
   - odd-extensions.imported-copy-theorem-soldered-residue@5
   assumes:
   - dark-matter.p1-single-frozen-point@1

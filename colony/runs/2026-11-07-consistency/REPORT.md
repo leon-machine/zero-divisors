@@ -115,6 +115,11 @@ letters (apply-AP1.md). references.yaml would restore WeinbergQFT1 on a rebuild 
 - Pins: every pin on a changed entity reviewed (36 + 102 + 13), 0 stale; build 0 stale claims.
 - Checks: all six layers (layer-4 cache), 0 errors, 0 warnings (final-check-2.log); build 0 errors; lock
   rewritten; 393 tests pass.
-- Left: the same letter clashes in boost-evolution (rotor B_lambda) and hadamard-scaling-limit (region U), not on
-  the readers' lists; whether the weighted blow-up object's tau = 0 boundary takes the beyond-one-flat-chart flag;
-  an optional sentence in the five anti-de Sitter-capable texts that l^2 < 0 there.
+- Small items (Leon, 18:25: "Do the small items"): boost-evolution's rotor B_lambda renamed G_lambda (5 -> 6)
+  and hadamard-scaling-limit's region U renamed \mathcal{O} (7 -> 8); the sign of l^2 = 3/Lambda (negative on
+  the anti-de Sitter branch) named in the four texts that use l (imported MacDowell-Mansouri 3 -> 4,
+  frozen-point-makes-stelle-west 6 -> 7, odd-extensions frozen point 7 -> 8, the five-dimensional reduction 3 -> 4;
+  frozen-point-action-is-bf writes no l in its levels); the weighted blow-up object checked against dictionary
+  section 14 and not flagged (the tau = 0 boundary is a limit of the collar, which section 14 lists as not beyond
+  one chart), recorded in its extraction. 44 dependant pins repinned (notation only). All six layers 0 errors,
+  0 warnings (final-check-3.log); build 0 stale claims; lock rewritten; 393 tests pass.

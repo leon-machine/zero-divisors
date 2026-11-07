@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - odd-extensions.imported-frozen-point@7
+  - odd-extensions.imported-frozen-point@8
   - odd-extensions.mirror-inside-complexified-extension-absent-doubled@5
   proof: proof-main.tex
 checked_by:
