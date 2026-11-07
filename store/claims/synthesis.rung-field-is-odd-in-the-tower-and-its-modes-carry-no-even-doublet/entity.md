@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@4
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - field-theory.imported-tower-limit@3
   - synthesis.even-slots-need-a-spectator-generator@3

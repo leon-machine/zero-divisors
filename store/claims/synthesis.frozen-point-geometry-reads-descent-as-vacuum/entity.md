@@ -31,14 +31,14 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - dark-matter.imported-frozen-point-de-sitter-radius@6
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - synthesis.frozen-phase-spectrum-not-red@4
   - synthesis.sudden-descent-feature-not-tilt@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.quadratic-flows-cannot-thermalise-descent@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bbn-reheating-temperature-floor@1
-  - mass.imported-unitary-representations-de-sitter-group@4
+  - mass.imported-unitary-representations-de-sitter-group@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -60,6 +60,10 @@ lineage:
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb
   - synthesis.frozen-phase-spectrum-not-red
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-unitary-representations-de-sitter-group repinned 4 -> 5 after reviewing its B6 restatement (the sentence giving the Casimir the same normalisation with no shift moved out to the stated, unproved hypothesis of synthesis.operator-join-casimir-shifts (iii); the classification, the two series and the mass formula are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

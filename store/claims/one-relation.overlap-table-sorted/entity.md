@@ -32,9 +32,9 @@ derivations:
   - standard-model.pair-count-dimension@4
   - one-relation.imported-single-mode-thermality-modular-period@6
   - correspondence.clifford-side-ordering-shift@3
-  - dark-energy.acoustic-no-go-one-way-grip@5
+  - dark-energy.acoustic-no-go-one-way-grip@6
   - dark-energy.lift-inherits-no-go-steps-itemised@2
-  - std-algebra.periodicity@1
+  - std-algebra.periodicity@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -51,6 +51,10 @@ locators:
   label: prop:overlap
   line: 697
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-energy.acoustic-no-go-one-way-grip repinned 5 -> 6 after reviewing its H2 restatement (the converse of the equivalence principle now reads no channel outside the C-even neutral sector, where it said no other channel); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

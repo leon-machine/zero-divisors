@@ -40,8 +40,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
   - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
   - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@5
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
@@ -72,6 +72,10 @@ lineage:
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

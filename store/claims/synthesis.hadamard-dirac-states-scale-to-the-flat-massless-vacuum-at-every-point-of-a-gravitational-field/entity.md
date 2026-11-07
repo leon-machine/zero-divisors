@@ -43,12 +43,12 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
-  - field-theory.second-quantisation@5
+  - field-theory.second-quantisation@6
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
   proof: proof-main.tex
@@ -75,6 +75,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

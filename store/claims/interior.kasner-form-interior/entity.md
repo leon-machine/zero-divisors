@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.imported-schwarzschild-curvature-spectrum@6
+  - interior.imported-schwarzschild-curvature-spectrum@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy

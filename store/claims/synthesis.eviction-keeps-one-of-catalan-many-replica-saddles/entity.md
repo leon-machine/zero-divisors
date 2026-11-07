@@ -25,13 +25,13 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.eviction-keeps-one-replica-saddle@2
+  - synthesis.eviction-keeps-one-replica-saddle@3
   - singularity.eviction-window-thermal-product-radiation-entropy@7
-  - synthesis.eviction-deficit-against-page-deficit@3
+  - synthesis.eviction-deficit-against-page-deficit@4
   - singularity.imported-page-average-entropy-subsystem@1
-  - synthesis.imported-haar-average-purity@1
+  - synthesis.imported-haar-average-purity@2
   - synthesis.imported-replica-wormhole-two-saddle-purity@1
-  - synthesis.imported-haar-moments-of-random-pure-state@1
+  - synthesis.imported-haar-moments-of-random-pure-state@2
   - synthesis.imported-non-crossing-permutations-are-geodesic@1
   proof: proof-main.tex
 checked_by:

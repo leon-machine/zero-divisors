@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.imported-penrose-transform@2
+  - hawking.imported-penrose-transform@3
   - hawking.imported-twistor-storey-ordering-shift@6
   - hawking.homogeneity-ordering-shift@6
   - hawking.imported-s-wave-bosonic-sector@6

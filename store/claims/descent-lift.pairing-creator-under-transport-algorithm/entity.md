@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - descent-lift.imported-pinching-one-way-door@3
+  - descent-lift.imported-pinching-one-way-door@4
   - descent-lift.imported-taxonomy-type-p-rule-algorithm@3
   proof: proof-main.tex
 checked_by:

@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.imported-tractor-connection@2
+  - interior.imported-tractor-connection@3
   - interior.metric-parallelism-trace-schouten-condition@6
   proof: proof-main.tex
 - name: standard-route

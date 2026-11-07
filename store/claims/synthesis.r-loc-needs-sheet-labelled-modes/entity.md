@@ -25,13 +25,13 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.c-loc-is-a-second-placement-of-the-count@2
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.c-loc-is-a-second-placement-of-the-count@3
   - hawking.kms-restricts-invariant-subalgebras@3
   - singularity.kms-uniqueness-factor@6
   - hawking.gibbs-states-are-kms-conversely-finite@4
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - synthesis.de-sitter-static-boost-frozen-point@6
   proof: proof-main.tex
 checked_by:

@@ -39,10 +39,10 @@ derivations:
   - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
-  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@5
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
+  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@6
   - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@5
-  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@3
+  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@4
   - synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car@4
   - synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface@4
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
@@ -64,6 +64,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field repinned 5 -> 6 after reviewing the change that (HS), which it cited as a premise, is now Theorem synthesis.hadamard-scaling-limit-premise; the statement is unchanged; the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -23,16 +23,16 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.r-loc-independent-sets-matter-coupling@5
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
   - synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent@1
   - synthesis.loc-independent-of-clausius-and-killing-data@4
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
-  - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@2
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-jacobson-clausius-1995@2
+  - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@3
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.imported-jacobson-clausius-1995@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,6 +53,10 @@ lineage:
   - synthesis.r-loc-independent-sets-matter-coupling
   - synthesis.field-space-premise-parallel-frozen-point
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.derive-loc-and-r-loc
   note: >-
     Reads the two independence results of the thermal route against the gravitational action now in

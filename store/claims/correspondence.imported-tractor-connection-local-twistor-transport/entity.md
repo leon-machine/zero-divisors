@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - correspondence.imported-tractor-connection-local-twistor-transport-external@1
-  - interior.imported-tractor-connection@2
+  - interior.imported-tractor-connection@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

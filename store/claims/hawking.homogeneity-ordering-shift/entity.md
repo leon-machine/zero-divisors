@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - hawking.imported-twistor-storey-ordering-shift@6
-  - hawking.imported-penrose-transform@2
+  - hawking.imported-penrose-transform@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

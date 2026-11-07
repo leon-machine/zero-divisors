@@ -25,10 +25,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.cosmological-constant-does-not-change-residue@6
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.cosmological-constant-does-not-change-residue@7
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching@5
-  - sheaf.matching-fibre@4
+  - sheaf.matching-fibre@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

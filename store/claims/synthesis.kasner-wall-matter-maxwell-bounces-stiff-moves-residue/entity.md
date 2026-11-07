@@ -27,12 +27,12 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.kasner-curvature-wall-is-negative-weight-helicity@1
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.kasner-curvature-wall-is-negative-weight-helicity@2
   - synthesis.bkl-bounces-no-framewise-invariant@2
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
-  - synthesis.unit-boost-residue-needs-nonpositive-exponent@3
-  - synthesis.imported-maxwell-stress-spacetime-algebra@1
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
+  - synthesis.unit-boost-residue-needs-nonpositive-exponent@4
+  - synthesis.imported-maxwell-stress-spacetime-algebra@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -52,6 +52,10 @@ lineage:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
   - synthesis.kasner-curvature-wall-is-negative-weight-helicity
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

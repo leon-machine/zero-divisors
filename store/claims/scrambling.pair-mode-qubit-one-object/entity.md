@@ -27,7 +27,7 @@ derivations:
   uses:
   - tower.fock-module-one-qubit-per-rung@6
   - tower.ladder-pairs-satisfy-car-vectors@4
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   - std-algebra.witt-basis-car@1
   - sheaf.schwarzschild-degeneration-boundary-tame@6
   proof: proof-main.tex

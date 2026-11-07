@@ -29,19 +29,19 @@ review: draft
 derivations:
 - name: main
   uses:
-  - mass.imported-thomas-operator@2
+  - mass.imported-thomas-operator@3
   - mass.mass-weight-dictionary@4
   - mass.weight-polynomial-two-series@6
-  - mass.imported-unitary-representations-de-sitter-group@4
-  - synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise@2
+  - mass.imported-unitary-representations-de-sitter-group@5
+  - synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise@3
   - interior.kasner-form-interior@6
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
-  - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@3
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
+  - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@4
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -61,6 +61,10 @@ lineage:
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-thomas-operator repinned 2 -> 3 after reviewing its correction of the consistency remark (at w = 1 on the constant density the display returns (n, 0, J), so (1/n) D sigma = (1, 0, J/4) = (1, 0, Lambda/6) in dimension four); the operator is unchanged; the use here holds as cited. Pin review: mass.imported-unitary-representations-de-sitter-group repinned 4 -> 5 after reviewing its B6 restatement (the sentence giving the Casimir the same normalisation with no shift moved out to the stated, unproved hypothesis of synthesis.operator-join-casimir-shifts (iii); the classification, the two series and the mass formula are unchanged); the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

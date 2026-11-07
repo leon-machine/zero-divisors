@@ -33,7 +33,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.tensor-rules@1
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   - std-algebra.blade-basis@1
   proof: proof-main.tex
 checked_by:

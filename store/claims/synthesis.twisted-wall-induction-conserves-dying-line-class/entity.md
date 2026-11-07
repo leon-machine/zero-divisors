@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - sheaf.tame-wall-induction@5
-  - synthesis.wall-class-one-rung-obstruction@2
+  - synthesis.wall-class-one-rung-obstruction@3
   - sheaf.one-sided-completion@4
   - sheaf.infinite-wall-sequence@4
   - sheaf.imported-real-line-bundles@1

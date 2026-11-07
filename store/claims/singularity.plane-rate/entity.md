@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - singularity.computed@5
-  - singularity.curvature-gauge-field-exact-shape-decoupling@4
+  - singularity.curvature-gauge-field-exact-shape-decoupling@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

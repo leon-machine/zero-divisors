@@ -19,7 +19,7 @@ review: typed
 derivations:
 - name: basis
   uses:
-  - interior.imported-equivalence-einstein-equations@2
+  - interior.imported-equivalence-einstein-equations@3
   assumes:
   - singularity.c1-curvature-cutoff@4
 locators:

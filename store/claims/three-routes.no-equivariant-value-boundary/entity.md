@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - three-routes.base-unipotents-their-action-candidates@4
-  - three-routes.change-transversal-canonical-isomorphism-completions@5
+  - three-routes.base-unipotents-their-action-candidates@5
+  - three-routes.change-transversal-canonical-isomorphism-completions@6
   - three-routes.imported-collar-data-coupling@1
   proof: proof-main.tex
 checked_by:

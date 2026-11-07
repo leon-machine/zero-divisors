@@ -33,7 +33,7 @@ derivations:
 - name: main
   uses:
   - scrambling.clock-inventory-boundary-modes@6
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - scrambling.boundary-mode-space-matrix@4
   - singularity.plane-rate@4
   - synthesis.boundary-mode-thermal-entropy@2

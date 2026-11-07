@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - scrambling.pair-mode-qubit-one-object@4
+  - scrambling.pair-mode-qubit-one-object@5
   - synthesis.residue-from-mode-entropy@4
   - scrambling.residue-each-convention@4
   - scrambling.mode-count@2

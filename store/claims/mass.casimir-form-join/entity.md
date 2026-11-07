@@ -35,7 +35,7 @@ about:
 derivations:
 - name: main
   uses:
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - mass.exact-join@8
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.invariant-forms-simple-lie-algebra@2

@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - lepton.imported-free-sector-anomaly-conditions-external@1
+  - lepton.imported-free-sector-anomaly-conditions-external@2
   - standard-model.imported-anomaly-coefficients@1
   - standard-model.quarks-leptons-two-level-fermion-content@5
   proof: proof-main.tex

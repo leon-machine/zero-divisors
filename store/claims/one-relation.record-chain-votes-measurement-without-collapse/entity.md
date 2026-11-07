@@ -27,15 +27,15 @@ derivations:
   uses:
   - one-relation.imported-flag-arrow-superselection@7
   - one-relation.imported-indifference-instrument@4
-  - one-relation.measure-indifference-borns-rule-located@2
-  - standard-model.trichotomy-what-kind-number@10
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@5
-  - dark-matter.orientation-arrow-seventeenth-refutation@9
+  - one-relation.measure-indifference-borns-rule-located@3
+  - standard-model.trichotomy-what-kind-number@11
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@6
+  - dark-matter.orientation-arrow-seventeenth-refutation@10
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - one-relation.recording-irreversible-stated-so-it-can@1
   - dark-matter.premise-cpt-covariance@3
-  - dark-matter.premise-flag-as-datum@3
+  - dark-matter.premise-flag-as-datum@4
   - one-relation.recorded-sectors-superselected-premise@1
   proof: proof-main.tex
 checked_by:

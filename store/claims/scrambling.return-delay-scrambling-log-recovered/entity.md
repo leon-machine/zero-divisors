@@ -30,7 +30,7 @@ derivations:
 - name: main
   note: the argument as stored, an order-of-magnitude estimate; its 'follows from' text is kept in proof-main.tex, no longer attached as a proof since the status is conjectured
   uses:
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - scrambling.spreading-law-chaos-bound-saturated@6
 checked_by:
 - kind: check

@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - standard-model.imported-cauchy-decomposition-exterior-power@1
-  - standard-model.imported-tower-commuting-copies-fock-module@5
+  - standard-model.imported-tower-commuting-copies-fock-module@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

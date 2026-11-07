@@ -24,7 +24,7 @@ derivations:
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - dark-energy.imported-frozen-point-geometry@6
   - interior.covariant-form-vacuum-equations@5
-  - interior.scale-tractor-leaves-cone@7
+  - interior.scale-tractor-leaves-cone@8
   proof: proof-main.tex
 checked_by:
 - kind: proof

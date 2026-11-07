@@ -24,7 +24,7 @@ derivations:
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - odd-extensions.transport-constrains-frozen-point-only-through@3
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

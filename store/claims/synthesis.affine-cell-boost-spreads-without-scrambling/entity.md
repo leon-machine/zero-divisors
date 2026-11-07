@@ -39,7 +39,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
   - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex
 checked_by:

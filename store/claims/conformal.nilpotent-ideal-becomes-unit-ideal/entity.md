@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - conformal.blade-basis-persists-under-degeneracy@4
+  - conformal.blade-basis-persists-under-degeneracy@5
   - std-algebra.vector-squares@1
   - std-algebra.radical-ideal-and-quotient@1
   proof: proof-main.tex

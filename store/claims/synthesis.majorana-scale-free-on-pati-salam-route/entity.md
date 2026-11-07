@@ -34,7 +34,7 @@ derivations:
 - name: main
   uses:
   - standard-model.imported-clebsch-structure-seesaw@1
-  - synthesis.majorana-scale-is-126-doublet-vev@2
+  - synthesis.majorana-scale-is-126-doublet-vev@3
   - synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition@1
   - standard-model.fits-record-level@6
   - standard-model.what-angle-asks-neutrino-sector@4

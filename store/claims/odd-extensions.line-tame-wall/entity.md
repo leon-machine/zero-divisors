@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - odd-extensions.four-extensions-oriented-pair@5
+  - odd-extensions.four-extensions-oriented-pair@6
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
   - odd-extensions.transport-constrains-frozen-point-only-through@3
   proof: proof-main.tex

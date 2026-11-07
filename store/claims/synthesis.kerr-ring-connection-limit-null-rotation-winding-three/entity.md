@@ -27,9 +27,9 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.imported-kerr-schild-form-kerr-gauge@1
-  - interior.unipotency-across-kerr-family@5
-  - synthesis.imported-gtg-dictionary@1
+  - interior.imported-kerr-schild-form-kerr-gauge@2
+  - interior.unipotency-across-kerr-family@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.kerr-ring-double-cover-data@3
   - synthesis.kerr-ring-blow-up-forced-cover-fixed-order@3
   - interior.complex-scale-inverse-cube-killing-spinor@6
@@ -57,6 +57,10 @@ lineage:
   - interior.weighted-limit-theorem
   - note.sheaf.setting-scope-successor-problems
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -46,15 +46,15 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - field-theory.coupled-system-tree-level@3
+  - field-theory.second-quantisation@6
+  - field-theory.coupled-system-tree-level@4
   - field-theory.twistor-attachment@6
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off@3
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
-  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@5
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
+  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@6
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -77,6 +77,10 @@ lineage:
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off
   - synthesis.hadamard-scaling-limit-premise
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field repinned 5 -> 6 after reviewing the change that (HS), which it cited as a premise, is now Theorem synthesis.hadamard-scaling-limit-premise; the statement is unchanged; the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

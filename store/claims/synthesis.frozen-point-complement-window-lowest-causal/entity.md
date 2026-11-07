@@ -21,9 +21,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - std-algebra.sylvester-inertia@1
-  - synthesis.residues-zero-four-real-chirality-anomaly@3
+  - synthesis.residues-zero-four-real-chirality-anomaly@4
   proof: proof-main.tex
 checked_by:
 - kind: check

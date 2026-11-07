@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.unit-boost-residue-needs-nonpositive-exponent@3
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - synthesis.unit-boost-residue-needs-nonpositive-exponent@4
+  - dark-energy.frozen-point-datum-kasner-wall@8
   proof: proof-main.tex
 checked_by:
 - kind: check

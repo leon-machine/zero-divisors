@@ -35,12 +35,12 @@ about:
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - field-theory.elementary-photon-ga@4
+  - field-theory.second-quantisation@6
+  - field-theory.elementary-photon-ga@5
   - field-theory.coupled-system-tree-level@4
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@3
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -53,13 +53,13 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@5
   - field-theory.coupled-system-tree-level@4
-  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
+  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@3
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@3
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

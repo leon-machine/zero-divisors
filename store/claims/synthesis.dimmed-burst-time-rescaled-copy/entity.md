@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.parallel-boundary-mode-spaces-one-wall@5
   - hawking.greybody-inheritance-under-interface-premise@6
-  - dark-matter.mirror-tower-copy-one@8
+  - dark-matter.mirror-tower-copy-one@9
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -38,6 +38,10 @@ lineage:
   motivated_by:
   - pred.dimmed-evaporation-bursts
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

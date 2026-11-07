@@ -25,14 +25,14 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.imported-equivalence-einstein-equations@2
-  - singularity.solution-where-divergence-lies@3
+  - singularity.imported-equivalence-einstein-equations@3
+  - singularity.solution-where-divergence-lies@4
   - std-algebra.pseudoscalar-commutation@1
   - std-algebra.orthogonal-anticommute@1
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@2
+  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@3
   proof: proof-standard-route.tex
 checked_by:
 - kind: legacy

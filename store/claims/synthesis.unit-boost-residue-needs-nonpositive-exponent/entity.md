@@ -25,9 +25,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense@4
-  - synthesis.diagonal-kasner-momentum-constraint@3
+  - synthesis.diagonal-kasner-momentum-constraint@4
   assumes: []
   proof: proof-main.tex
 checked_by:

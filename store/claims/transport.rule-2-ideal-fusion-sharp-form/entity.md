@@ -26,7 +26,7 @@ derivations:
   - transport.ascent-renders-grade-involution-inner@3
   - transport.centre@4
   - transport.classification-real-clifford-algebras@3
-  - transport.corner-even-subalgebra@4
+  - transport.corner-even-subalgebra@5
   - transport.matrix-units-peirce-isomorphism@3
   - std-algebra.morita-amplification@1
   proof: proof-main.tex
@@ -47,6 +47,10 @@ locators:
   label: thm:fusion
   line: 1204
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: transport.corner-even-subalgebra repinned 4 -> 5 after reviewing the change that its setting (A = Cl(p,q) with p - q = 1 mod 4, the central idempotents, the even subalgebra and the one-generator ascent) is now stated in the formal; the isomorphism is unchanged; the use here holds as cited.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

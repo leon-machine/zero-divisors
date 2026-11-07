@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-jacobson-clausius-1995@2
-  - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
+  - synthesis.imported-jacobson-clausius-1995@3
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence@4
   - synthesis.imported-raychaudhuri-null-congruence@2
   assumes:
   - synthesis.c-loc-local-horizon-premise@6

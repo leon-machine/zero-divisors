@@ -30,6 +30,10 @@ locators:
   label: obs:merger
   line: 445
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: simulations.imported-mirror repinned 5 -> 6 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the simulated content is unchanged); the use here holds as cited.'
   typing:
     by: ai-typing-pass
     note: 'Kept conjectured: a simulation output the paper labels observation level, with no proof text
@@ -60,7 +64,7 @@ derivations:
 - name: simulation
   uses:
   - simulations.imported-unit-ball-rule-family@4
-  - simulations.imported-mirror@5
+  - simulations.imported-mirror@6
   assumes:
   - simulations.s1-one-species-per-tower@2
   - simulations.s2-sheet-fluid@2

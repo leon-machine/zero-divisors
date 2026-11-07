@@ -28,10 +28,10 @@ derivations:
 - name: main
   uses:
   - mass.exact-join@8
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - mass.de-sitter-scale-frozen-point@6
   - mass.imported-flat-model-twistor-chart-infinity@7
-  - mass.casimir-form-join@7
+  - mass.casimir-form-join@8
   proof: proof-main.tex
 checked_by:
 - kind: check

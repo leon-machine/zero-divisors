@@ -1,7 +1,7 @@
 ---
 id: synthesis.tower-charge-sector-label-temperature-not
 kind: claim
-version: 4
+version: 5
 title: 'The tower charge is a sector label; the temperature is not'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'pin review, the Reading and the proof''s reading now say that the scoping was first offered in the route-one proposition at its version 2 and is P2 at its version 2'
+  version: 5
+  source: maintainer pass 2026-11-07 (pin review)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -34,10 +38,10 @@ derivations:
   - hawking.imported-quasi-free-states-car-algebra@2
   - hawking.i-state@4
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.stored-asymmetry-charge-not-number@9
   - synthesis.cold-mirror-needs-non-equilibrium-descent@3
-  - synthesis.mirror-asymmetry-route-one@2
-  - dark-matter.mirror-tower-copy-one@8
+  - synthesis.mirror-asymmetry-route-one@3
+  - dark-matter.mirror-tower-copy-one@9
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
 checked_by:
@@ -52,6 +56,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited. Pin review: synthesis.mirror-asymmetry-route-one repinned 2 -> 3 after reviewing its G2 restatement (the scoping of P2 it offered without proof is now P2 at version 2, so clause (v) of the copy theorem has both routes); the Reading (formal) and the proof''s reading quoted the scoping as offered and not proved and now say that it was first offered there at its version 2 and is P2 at version 2; the result, which analyses that scoping, is unchanged. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Version 4 -> 5.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -87,7 +95,7 @@ extraction:
 \item[(ii)] \emph{(The temperature is not, on windows.)} Every product of Gibbs states of the two towers' boost clocks at inverse temperatures $\beta, \beta'$, equal or not, has invertible density and gives positive weight to every joint charge sector; so any two of them have the same central support, $1$, and no central projection of the observable window algebra separates two values of $\xi = \beta/\beta'$.
 \item[(iii)] \emph{(The temperature on the full algebra.)} For the I-states $\omega_{\beta}$, $\omega_{\beta'}$ of one tower (Theorem \claimref{hawking.i-state}) with $\beta \neq \beta'$, let $a_{j} = \sqrt{n_{j}n'_{j}} + \sqrt{(1 - n_{j})(1 - n'_{j})}$ be the Hellinger affinity of mode $j$; $a_{j} < 1$ for every mode of nonzero frequency, and $1 - a_{j} \le |n_{j} - n'_{j}|$. By the Powers-Stormer criterion the two states are quasi-equivalent if $\sum_{j}(1 - a_{j}) < \infty$ and disjoint otherwise. Hence if infinitely many frequencies $\omega_{j}$ lie in a compact subset of $(0, \infty)$ the two I-states are disjoint, and the temperature is a label of the full algebra in the disjointness sense, which on the full algebra is also the sense in which charge sectors are labels; if $\sum_{j}(n_{j} + n'_{j}) < \infty$ they are quasi-equivalent. The stored charge is a finite label (an eigenvalue of an element of the observable algebra) only on windows: a thermal state over infinitely many modes has no finite total charge, and there the charge too can be a label only in the disjointness sense, as a charge density. So the comparison of (i) with (iii) is between like and like exactly when the deposited mode set is finite, or when both are read as densities.
 \end{enumerate}
-\emph{Reading.} The scoping offered in Proposition \claimref{synthesis.mirror-asymmetry-route-one}, under which P2 equates the superselection labels of the descent and not the state within the selected sector, is well defined and leaves $\xi$ free on every finite window, and on the full algebra exactly when the sum in (iii) converges; when infinitely many boundary modes share a frequency band, the same scoping reaches $\xi$ and gives $\xi = 1$, the value Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent} reads as excluded under its hypothesis (M). Which case holds is decided by whether the deposited sector's mode set is finite, as the series' count of about $\pi N^{2}/\ln 2$ boundary modes for the cosmological horizon suggests (an observation-level count, not a premise here), or infinite, as the countable $J$ of the Definition allows. The scoping reaches the stored charge $Q = \epsilon N$ (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), but not the ceiling coupling, which is not a charge.
+\emph{Reading.} The scoping first offered, without proof, in Proposition \claimref{synthesis.mirror-asymmetry-route-one} at its version 2, and stated by P2 at its version 2 (labels, not states), under which P2 equates the superselection labels of the descent and not the state within the selected sector, is well defined and leaves $\xi$ free on every finite window, and on the full algebra exactly when the sum in (iii) converges; when infinitely many boundary modes share a frequency band, the same scoping reaches $\xi$ and gives $\xi = 1$, the value Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent} reads as excluded under its hypothesis (M). Which case holds is decided by whether the deposited sector's mode set is finite, as the series' count of about $\pi N^{2}/\ln 2$ boundary modes for the cosmological horizon suggests (an observation-level count, not a premise here), or infinite, as the countable $J$ of the Definition allows. The scoping reaches the stored charge $Q = \epsilon N$ (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), but not the ceiling coupling, which is not a charge.
 
 ## technical
 The question is whether the mirror's temperature is the same kind of quantity as the stored asymmetry, so that one rule could equate the second and not the first. In the boundary-mode model the asymmetry is a superselected charge: on every finite set of modes the observables split into blocks labelled by the two towers' charges, and states of different charge can be told apart by a central element. The temperatures are not labels of that kind: thermal states of the pair at any two temperatures give weight to every block, so no central element distinguishes them; within one block the temperature is a property of the state. On the infinite algebra the situation changes when infinitely many modes have frequencies in a bounded band away from zero: then, by the Powers-Stormer criterion, thermal states at different temperatures are disjoint, and the temperature becomes a label as well, in the same disjointness sense in which a charge density is one there (a thermal state over infinitely many modes has no finite total charge). A rule of indifference applied to labels of the descent and not to states can therefore free the mirror's temperature if the deposited sector has finitely many modes, as the series' mode count suggests, and cannot if it has infinitely many in a band. Such a rule reaches the asymmetry but not the ceiling coupling.

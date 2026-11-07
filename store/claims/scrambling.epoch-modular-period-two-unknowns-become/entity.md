@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - scrambling.area-law-test@4
+  - scrambling.area-law-test@5
   - scrambling.clock-inventory-boundary-modes@6
   - singularity.euclidean-rotor-where-it-lies@5
   assumes:
@@ -46,6 +46,10 @@ locators:
   label: thm:epoch
   line: 692
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: scrambling.area-law-test repinned 4 -> 5 after reviewing its A15 correction (the 1-nat convention, and nu Delta t = M/(2 ln 2) in the capacity convention, are now stated in the formal); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

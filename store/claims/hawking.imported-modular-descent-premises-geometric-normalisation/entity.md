@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - hawking.imported-modular-descent-premises-geometric-normalisation-external@1
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - singularity.computed@5
   - singularity.descended-form-state-independent@4
   - singularity.euclidean-section-period@6

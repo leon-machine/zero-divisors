@@ -41,7 +41,7 @@ derivations:
   - singularity.deficit-carried-quanta-correlations@5
   - singularity.deficit-theorem-cost-descent-exactly@4
   - hawking.imported-quasi-free-states-car-algebra@2
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - scrambling.boundary-mode-space-matrix@4
   - scrambling.principality-indifference-sphere@4
   - synthesis.residue-common-weight-particle-hole@5

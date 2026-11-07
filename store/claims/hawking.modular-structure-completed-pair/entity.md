@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.vector-squares@1
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

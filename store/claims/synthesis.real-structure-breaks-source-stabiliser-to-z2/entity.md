@@ -31,7 +31,7 @@ derivations:
   uses:
   - synthesis.light-pair-split-needs-broken-source-stabiliser@2
   - synthesis.coherent-face-vector-real-slices@2
-  - families.rigidity-pairing-sector-one-event@4
+  - families.rigidity-pairing-sector-one-event@5
   - synthesis.face-mass-form-unit-plus-gram@2
   - families.skeleton-rank-one-plus-ordering-shift@6
   - families.imported-squeezed-vacuum-bosonic-pairing@3

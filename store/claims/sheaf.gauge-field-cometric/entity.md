@@ -28,7 +28,7 @@ derivations:
   - sheaf.gauge-field-cometric-external@1
   - singularity.cones-fold@4
   - singularity.degeneration-exactly@2
-  - singularity.solution-where-divergence-lies@3
+  - singularity.solution-where-divergence-lies@4
   - singularity.unipotent-ray@4
   proof: proof-main.tex
 checked_by:

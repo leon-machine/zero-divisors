@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
   - interior.kasner-form-interior@6
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
@@ -34,7 +34,7 @@ derivations:
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
-  - synthesis.imported-kaluza-klein-ansatz@1
+  - synthesis.imported-kaluza-klein-ansatz@2
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1
   proof: proof-main.tex
 checked_by:

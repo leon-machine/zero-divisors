@@ -25,12 +25,12 @@ review: typed
 derivations:
 - name: main
   uses:
-  - field-theory.fock-space-maxwell-modes@4
-  - field-theory.imported-standard-field-theory@4
+  - field-theory.fock-space-maxwell-modes@5
+  - field-theory.imported-standard-field-theory@5
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - field-theory.imported-standard-field-theory@4
+  - field-theory.imported-standard-field-theory@5
   proof: proof-standard-route.tex
 checked_by:
 - kind: proof

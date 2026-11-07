@@ -41,7 +41,7 @@ derivations:
   - rule2.imported-rule-2-matrix-units-forgotten@3
   - rule2.where-obstruction-sits-commuting-square@6
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.sta-matrix@1
+  - std-algebra.sta-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

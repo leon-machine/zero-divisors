@@ -26,7 +26,7 @@ derivations:
   - tower.commuting-copies@5
   - tower.fock-module-one-qubit-per-rung@6
   - tower.ladder-pairs-satisfy-car-vectors@4
-  - tower.structure-tower-c-norms@9
+  - tower.structure-tower-c-norms@10
   - tower.witt-index-quantum-capacity@5
   proof: proof-main.tex
 checked_by:

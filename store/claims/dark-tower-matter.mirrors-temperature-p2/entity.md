@@ -21,12 +21,16 @@ credit:
   role: 'maintainer pass on Leon''s decisions, the cold-mirror exception stated at P2''s version-1 reach, with P2 as scoped leaving xi free'
   version: 7
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'pin review, the proof''s sentence on the reach of P2 now says it quotes the copy theorem as T14 states it'
+  version: 7
+  source: maintainer pass 2026-11-07 (pin review)
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@8
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.stored-asymmetry-charge-not-number@9
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   proof: proof-main.tex
 checked_by:
@@ -52,6 +56,10 @@ locators:
   label: prop:P2
   line: 757
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the proof''s sentence that (iv) and (v) rest on P2''s clause quoted the theorem as T14 states it (version 8) and now says so, the current (iv) being the common-ceiling-coupling premise; the argument, which is about P2''s version-1 reach, is unchanged. Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited. Version kept at 7 (already raised in this run).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

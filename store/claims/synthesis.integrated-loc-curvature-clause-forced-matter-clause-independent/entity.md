@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.c-loc-entropy-clause-curvature-independent-density@3
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
+  - synthesis.c-loc-entropy-clause-curvature-independent-density@4
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
   - synthesis.loc-independent-of-clausius-and-killing-data@4
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -49,6 +49,10 @@ lineage:
   - synthesis.euler-entropy-first-order-rate-on-local-patches
   - synthesis.de-sitter-entropy-pi-n-squared
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.derive-loc-and-r-loc
   flags:
   - 'beyond one flat chart: the Einstein static universe of (iii) and (v) has closed spatial sections; the statements are local and are made on its stereographic chart, an open part of flat spacetime'

@@ -28,7 +28,7 @@ derivations:
   - hawking.greybody-inheritance-under-interface-premise@6
   - dark-matter.parallel-boundary-mode-spaces-one-wall@5
   - dark-tower-matter.five-dimensional-towers@4
-  - dark-matter.sourcing-rule-forced-not-chosen@3
+  - dark-matter.sourcing-rule-forced-not-chosen@4
   - synthesis.dimmed-burst-time-rescaled-copy@2
   proof: proof-main.tex
 checked_by:

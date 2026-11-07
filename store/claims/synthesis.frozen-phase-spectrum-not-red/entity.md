@@ -31,9 +31,9 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - dark-matter.imported-frozen-point-de-sitter-radius@6
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - mass.weight-polynomial-two-series@6
-  - mass.imported-unitary-representations-de-sitter-group@4
+  - mass.imported-unitary-representations-de-sitter-group@5
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   proof: proof-main.tex
 checked_by:
@@ -52,6 +52,10 @@ lineage:
   - standard-model.dating-descent
   - note.one-relation.two-residues-named-so-synthesis-can
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-unitary-representations-de-sitter-group repinned 4 -> 5 after reviewing its B6 restatement (the sentence giving the Casimir the same normalisation with no shift moved out to the stated, unproved hypothesis of synthesis.operator-join-casimir-shifts (iii); the classification, the two series and the mass formula are unchanged); the use here holds as cited.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

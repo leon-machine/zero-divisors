@@ -23,7 +23,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.imported-tower-commuting-copies-fock-module@5
+  - standard-model.imported-tower-commuting-copies-fock-module@6
   - standard-model.under-s-composites-state-space-spinor@6
   - standard-model.hyp-s-slot-statistics@9
   proof: proof-main.tex

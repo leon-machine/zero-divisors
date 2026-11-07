@@ -33,7 +33,7 @@ derivations:
   - transport.existence-locus-type-n@5
   - transport.type-p-self-repairing@2
   - primer.classification-real-clifford-algebras@3
-  - std-algebra.sta-matrix@1
+  - std-algebra.sta-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

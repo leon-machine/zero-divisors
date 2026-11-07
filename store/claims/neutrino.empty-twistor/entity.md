@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - neutrino.imported-ceiling-under-hypothesis-u-arrow@6
-  - neutrino.imported-derived-content-singlets@7
+  - neutrino.imported-derived-content-singlets@8
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -45,6 +45,10 @@ locators:
   label: prop:empty
   line: 580
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: neutrino.imported-derived-content-singlets repinned 7 -> 8 after reviewing its G3 restatement (Hypothesis (S) is now derived in the store from the slot-module premise, where it was called open; the derived content is unchanged); the use here holds as cited.'
   env: proposition
   context_refs:
   - neutrino.imported-ceiling-under-hypothesis-u-arrow

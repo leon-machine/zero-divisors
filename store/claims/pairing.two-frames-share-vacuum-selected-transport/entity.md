@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - pairing.pairing-functional-pair-creation-amplitude@6
-  - pairing.static-frame-only-expansion-survives@7
+  - pairing.static-frame-only-expansion-survives@8
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   proof: proof-main.tex
 checked_by:

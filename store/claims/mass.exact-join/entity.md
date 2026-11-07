@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - correspondence.incidence-relation-chart@6
-  - mass.chart-form-spin-isomorphism@5
+  - correspondence.incidence-relation-chart@7
+  - mass.chart-form-spin-isomorphism@6
   - mass.de-sitter-scale-frozen-point@6
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.mass-symplectic-area-two-twistor-formula@3

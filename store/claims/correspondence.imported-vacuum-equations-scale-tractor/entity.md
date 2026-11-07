@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - interior.covariant-form-vacuum-equations@5
-  - interior.scale-tractor-leaves-cone@7
+  - interior.scale-tractor-leaves-cone@8
   proof: proof-main.tex
 checked_by:
 - kind: proof

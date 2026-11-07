@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.imported-tractor-connection@2
+  - interior.imported-tractor-connection@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -26,11 +26,11 @@ derivations:
 - name: main
   uses:
   - singularity.stretched-singularity-count@7
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - scrambling.area-law-test@5
   - synthesis.clausius-route-newton-constant-is-residue@4
-  - synthesis.imported-jacobson-clausius-1995@2
-  - synthesis.kerr-ring-count-misses-area-law@5
+  - synthesis.imported-jacobson-clausius-1995@3
+  - synthesis.kerr-ring-count-misses-area-law@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
   - synthesis.quarter-from-temperature@1
   proof: proof-main.tex

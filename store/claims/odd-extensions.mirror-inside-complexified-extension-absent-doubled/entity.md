@@ -27,10 +27,10 @@ about:
 derivations:
 - name: main
   uses:
-  - odd-extensions.doubling-or-complexification@5
+  - odd-extensions.doubling-or-complexification@6
   - odd-extensions.imported-representatives-dimension-nearest-four-types@4
-  - std-algebra.sta-matrix@1
-  - std-algebra.pauli-algebra@3
+  - std-algebra.sta-matrix@2
+  - std-algebra.pauli-algebra@4
   proof: proof-main.tex
 checked_by:
 - kind: check

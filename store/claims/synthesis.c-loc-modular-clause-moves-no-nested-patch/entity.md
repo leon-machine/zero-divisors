@@ -31,7 +31,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@4
+  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@5
   proof: proof-main.tex
 checked_by:
 - kind: check

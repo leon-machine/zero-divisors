@@ -25,9 +25,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - interior.imported-tractor-connection@2
-  - synthesis.tractor-transport-weak-null-crossing@4
-  - interior.sign-fixed-internally@4
+  - interior.imported-tractor-connection@3
+  - synthesis.tractor-transport-weak-null-crossing@5
+  - interior.sign-fixed-internally@5
   proof: proof-main.tex
 checked_by:
 - kind: check

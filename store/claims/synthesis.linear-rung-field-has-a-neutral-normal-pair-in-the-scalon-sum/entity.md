@@ -27,10 +27,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@3
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
   - synthesis.scale-free-rung-potentials-need-the-flat-physical-branch@2
-  - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev@4
+  - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev@5
   - synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass@1
   - field-theory.boost-modes@3
   - synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count@1

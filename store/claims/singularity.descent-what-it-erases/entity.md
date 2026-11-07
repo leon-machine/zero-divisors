@@ -27,7 +27,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.witt-basis-car@1
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

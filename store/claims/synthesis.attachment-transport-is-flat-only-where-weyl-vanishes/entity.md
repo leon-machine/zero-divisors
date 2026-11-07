@@ -28,10 +28,10 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - field-theory.twistor-attachment@6
-  - synthesis.attachment-conformal-energy-is-generated-by-z@4
-  - field-theory.where-each-lives@3
+  - synthesis.attachment-conformal-energy-is-generated-by-z@5
+  - field-theory.where-each-lives@4
   - synthesis.imported-twistor-equation-integrability-petrov-n-or-o@1
   proof: proof-main.tex
 checked_by:
@@ -53,6 +53,10 @@ lineage:
   - field-theory.ground-does-not-attach-modes
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Answers the first attack line of op.qft-on-gtg-fields (attach the modes through the tractor transport

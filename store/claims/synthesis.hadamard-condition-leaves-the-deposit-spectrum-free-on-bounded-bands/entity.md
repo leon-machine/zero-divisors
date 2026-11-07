@@ -28,7 +28,7 @@ derivations:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-de-sitter-invariant-hadamard-state-unique@3
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@3
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - synthesis.imported-ford-parker-infrared-divergence@1
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
   proof: proof-main.tex

@@ -25,7 +25,7 @@ derivations:
   uses:
   - interior.kasner-form-interior@6
   - sheaf.weights-are-forced-are-kasner-exponents@5
-  - sheaf.kasner-data-interior@2
+  - sheaf.kasner-data-interior@3
   - scrambling.slice-volume-exactly-per-unit-killing@4
   - singularity.imported-induced-geometry-interior-slice@2
   proof: proof-main.tex

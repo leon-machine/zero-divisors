@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - dark-energy.wall-counterterm@4
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - dark-energy.wall-counterterm@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -35,8 +35,8 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.imported-algebra-boundary-modes-car-algebra@5
-  - hawking.modular-structure-completed-pair@3
+  - hawking.imported-algebra-boundary-modes-car-algebra@6
+  - hawking.modular-structure-completed-pair@4
   - angle.imported-theorems-deliver-their-hypotheses@3
   - singularity.modular-theory-matrix-factor-proved-outright@6
   proof: proof-main.tex
@@ -52,6 +52,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: hawking.imported-algebra-boundary-modes-car-algebra repinned 5 -> 6 after reviewing its correction that the transport charge is p - q mod 8, which the completions preserve (it said advance); the CAR limit is unchanged; the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

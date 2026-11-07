@@ -32,7 +32,7 @@ derivations:
   - std-algebra.orthogonal-anticommute@1
   - primer.sign@2
   - std-algebra.pseudoscalar-commutation@1
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

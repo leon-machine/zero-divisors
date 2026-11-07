@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.fits-record-level@6
   - standard-model.chain@8
-  - dark-matter.imported-massless-graviton-production-rate@1
+  - dark-matter.imported-massless-graviton-production-rate@2
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex
@@ -33,6 +33,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.imported-massless-graviton-production-rate repinned 1 -> 2 after reviewing the F14 change writing the rate with the reduced Planck mass bar M_P, the source''s M_P (any M_P here that is evaluated is 2.435e18 GeV, the reduced mass); the use here holds as cited.'
   open_problem: op.pre-descent-theory
   note: >-
     Filed alongside synthesis.seeding-remainder-excludes-perturbative-pati-salam. Kept separate

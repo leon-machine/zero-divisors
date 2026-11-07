@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.euler-term-horizon-entropy-shift@4
+  - synthesis.euler-term-horizon-entropy-shift@5
   - synthesis.imported-wald-noether-charge-entropy@3
   - synthesis.imported-raychaudhuri-null-congruence@2
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.imported-jacobson-clausius-1995@2
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.imported-jacobson-clausius-1995@3
   proof: proof-main.tex
 checked_by:
 - kind: check

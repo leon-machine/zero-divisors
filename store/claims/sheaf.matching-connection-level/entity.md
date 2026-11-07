@@ -29,7 +29,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.matching-fibre@4
+  - sheaf.matching-fibre@5
   - sheaf.schwarzschild-degeneration-boundary-tame@6
   - sheaf.weighted-limit@6
   proof: proof-main.tex

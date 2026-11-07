@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3
+  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@4
   - transport.no-transport-terminates@4
   - transport.rule-1-morita-trivial@6
   - transport.transport-algorithm@3

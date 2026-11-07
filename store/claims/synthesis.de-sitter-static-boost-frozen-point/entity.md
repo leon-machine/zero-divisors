@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - mass.de-sitter-scale-frozen-point@6
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.stelle-west-vector-frozen-point@6
   - singularity.imported-surface-gravity-redshifted-acceleration@2
   - singularity.euclidean-section-period@6
   proof: proof-main.tex

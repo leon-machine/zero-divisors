@@ -25,8 +25,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.gauge-trajectory-unipotent-ray@8
-  - interior.imported-kerr-schild-form-kerr-gauge@1
+  - interior.gauge-trajectory-unipotent-ray@9
+  - interior.imported-kerr-schild-form-kerr-gauge@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -45,6 +45,10 @@ locators:
   label: prop:kerrschild
   line: 786
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: interior.gauge-trajectory-unipotent-ray repinned 8 -> 9 after reviewing its correction of clause (iv) (the light cones fold onto the kernel direction e_r, null for the rescaled limit form and spacelike at every r > 0); clauses (1) to (3) are unchanged; the use here holds as cited.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

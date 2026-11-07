@@ -26,9 +26,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - odd-extensions.volume-element-odd-dimension@3
+  - odd-extensions.volume-element-odd-dimension@4
   - primer.centre@2
-  - odd-extensions.doubling-or-complexification@5
+  - odd-extensions.doubling-or-complexification@6
   - std-algebra.complexification@3
   proof: proof-main.tex
 checked_by:

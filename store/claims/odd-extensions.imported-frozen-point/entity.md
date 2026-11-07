@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-frozen-point-geometry@6
   - odd-extensions.imported-frozen-point-external@1
   proof: proof-main.tex

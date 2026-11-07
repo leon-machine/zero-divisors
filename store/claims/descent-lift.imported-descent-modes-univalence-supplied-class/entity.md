@@ -26,9 +26,9 @@ derivations:
   - singularity.descent-parity-average@5
   - singularity.envelope-endpoint-why-boundary-mode-locality@7
   - singularity.imported-univalence-superselection-rule@2
-  - singularity.l-stabiliser-tangent@6
+  - singularity.l-stabiliser-tangent@7
   - singularity.p-reduced-metric-level-reading-many@7
-  - singularity.purity-output-partner-commutant@4
+  - singularity.purity-output-partner-commutant@5
   - singularity.schmidt-forcing-proved-outright@6
   assumes:
   - singularity.l-boundary-mode-locality@2

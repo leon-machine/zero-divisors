@@ -38,8 +38,8 @@ derivations:
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - field-theory.second-quantisation@5
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
+  - field-theory.second-quantisation@6
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@6
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-null-plane-restriction-of-free-fields-is-mass-independent@1
   proof: proof-main.tex

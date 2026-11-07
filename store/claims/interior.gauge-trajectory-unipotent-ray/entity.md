@@ -33,7 +33,7 @@ derivations:
   uses:
   - singularity.degeneration-exactly@2
   - singularity.type-n-only-type-n@5
-  - singularity.non-removability-invariant-argument@2
+  - singularity.non-removability-invariant-argument@3
   - std-algebra.orthogonal-anticommute@1
   - singularity.unipotent-ray@4
   - singularity.cones-fold@4

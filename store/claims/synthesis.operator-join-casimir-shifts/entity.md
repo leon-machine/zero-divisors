@@ -25,15 +25,15 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@3
-  - mass.casimir-form-join@7
+  - synthesis.operator-join-ordering-constants@4
+  - mass.casimir-form-join@8
   - mass.imported-palatial-quadratics-homogeneity-charge@4
-  - mass.imported-unitary-representations-de-sitter-group@4
+  - mass.imported-unitary-representations-de-sitter-group@5
   - mass.mass-weight-dictionary@4
   - mass.weight-polynomial-two-series@6
-  - field-theory.imported-standard-field-theory@4
+  - field-theory.imported-standard-field-theory@5
   - mass.de-sitter-scale-frozen-point@6
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -45,6 +45,10 @@ lineage:
   - synthesis.operator-join-ordering-constants
   - mass.casimir-form-join
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-unitary-representations-de-sitter-group repinned 4 -> 5 after reviewing its B6 restatement (the sentence giving the Casimir the same normalisation with no shift moved out to the stated, unproved hypothesis of synthesis.operator-join-casimir-shifts (iii); the classification, the two series and the mass formula are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

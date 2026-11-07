@@ -28,7 +28,7 @@ derivations:
   uses:
   - transport.cohomological-form-no-go@4
   - transport.embedding-independent-minimality-fusion@4
-  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3
+  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@4
   - transport.minimality@4
   - transport.no-fourth-rule@4
   - transport.no-go-level-elements@5

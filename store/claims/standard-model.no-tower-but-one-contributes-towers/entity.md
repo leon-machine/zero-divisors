@@ -21,10 +21,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.connection-forced@4
+  - standard-model.connection-forced@5
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - standard-model.imported-coefficient-sum-indices@1
-  - standard-model.imported-sectors-superselection-mirror-copy@3
+  - standard-model.imported-sectors-superselection-mirror-copy@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

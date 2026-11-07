@@ -26,11 +26,11 @@ derivations:
   - synthesis.exceptional-boundary-measure-one-calibration@2
   - interior.schwarzschild-de-sitter-weighted-limit@7
   - singularity.stretched-singularity-count@7
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.sds-clausius-fixes-area-constant@5
   - synthesis.residue-from-mode-entropy@4
   - synthesis.boundary-mode-thermal-entropy@2
-  - synthesis.q-splits-maximum-entropy-affine-weights@5
+  - synthesis.q-splits-maximum-entropy-affine-weights@6
   proof: proof-main.tex
 checked_by:
 - kind: check

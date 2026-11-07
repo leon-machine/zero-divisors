@@ -23,9 +23,9 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.connection-bivector-computed@4
+  - singularity.connection-bivector-computed@5
   - singularity.euclidean-section-period@6
-  - singularity.solution-where-divergence-lies@3
+  - singularity.solution-where-divergence-lies@4
   - singularity.unipotent-ray@4
   - transport.transport-algorithm@3
   proof: proof-main.tex

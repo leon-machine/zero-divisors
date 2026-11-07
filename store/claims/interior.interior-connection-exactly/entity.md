@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.exact-parallelism-convergence-rate@5
+  - interior.exact-parallelism-convergence-rate@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

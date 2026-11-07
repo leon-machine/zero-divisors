@@ -32,8 +32,8 @@ derivations:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
   proof: proof-main.tex
 checked_by:
 - kind: check

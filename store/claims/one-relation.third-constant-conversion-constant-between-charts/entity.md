@@ -23,7 +23,7 @@ derivations:
   uses:
   - one-relation.imported-null-cone-determines-form-zeemans@3
   - one-relation.imported-witts-extension-theorem@3
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

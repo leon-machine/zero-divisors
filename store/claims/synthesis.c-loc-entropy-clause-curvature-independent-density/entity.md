@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-jacobson-clausius-1995@2
+  - synthesis.imported-jacobson-clausius-1995@3
   - synthesis.quarter-from-temperature@1
   - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.imported-kerr-surface-gravity-entropy@2

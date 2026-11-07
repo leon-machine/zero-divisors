@@ -30,11 +30,11 @@ derivations:
   uses:
   - synthesis.boundary-mode-first-law-of-entanglement@7
   - hawking.i-state@4
-  - field-theory.second-quantisation@5
+  - field-theory.second-quantisation@6
   - hawking.i-state-continuum@5
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.residue-from-mode-entropy@4
-  - synthesis.imported-null-plane-modular-hamiltonian-first-law@1
+  - synthesis.imported-null-plane-modular-hamiltonian-first-law@2
   proof: proof-main.tex
 checked_by:
 - kind: check

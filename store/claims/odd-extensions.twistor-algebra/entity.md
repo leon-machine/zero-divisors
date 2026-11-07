@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - odd-extensions.doubling-or-complexification@5
-  - odd-extensions.four-extensions-oriented-pair@5
+  - odd-extensions.doubling-or-complexification@6
+  - odd-extensions.four-extensions-oriented-pair@6
   - odd-extensions.imported-conformal-completion@5
   - std-algebra.pseudoscalar-commutation@1
   - primer.sign@2

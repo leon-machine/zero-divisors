@@ -57,11 +57,11 @@ derivations:
   - hawking.imported-quasi-free-kms-reduces-two@2
   - hawking.imported-ideal-fermi-gas-uniqueness@2
   - singularity.euclidean-section-period@6
-  - synthesis.de-sitter-static-boost-frozen-point@5
-  - synthesis.local-boost-temperature-is-local-regularity@4
-  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@4
+  - synthesis.de-sitter-static-boost-frozen-point@6
+  - synthesis.local-boost-temperature-is-local-regularity@5
+  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@5
   - angle.imported-theorems-deliver-their-hypotheses@3
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   assumes:
   - synthesis.n-plus-null-ground-state@11
   proof: proof-main.tex

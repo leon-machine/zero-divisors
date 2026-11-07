@@ -25,7 +25,7 @@ derivations:
   uses:
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.imported-frozen-point-tractor-connection@6
-  - mass.imported-thomas-operator@2
+  - mass.imported-thomas-operator@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -46,6 +46,10 @@ locators:
   label: lem:dsscale
   line: 575
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-thomas-operator repinned 2 -> 3 after reviewing its correction of the consistency remark (at w = 1 on the constant density the display returns (n, 0, J), so (1/n) D sigma = (1, 0, J/4) = (1, 0, Lambda/6) in dimension four); the operator is unchanged; the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

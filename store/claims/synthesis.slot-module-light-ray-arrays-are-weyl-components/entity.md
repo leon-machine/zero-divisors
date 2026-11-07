@@ -35,7 +35,7 @@ derivations:
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
   - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@5
-  - field-theory.second-quantisation@5
+  - field-theory.second-quantisation@6
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
   - synthesis.half-integer-weight-array-carries-half-ln2@5

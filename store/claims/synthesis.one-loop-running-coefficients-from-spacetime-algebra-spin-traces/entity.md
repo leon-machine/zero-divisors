@@ -31,14 +31,14 @@ about:
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - field-theory.fock-space-maxwell-modes@4
+  - field-theory.second-quantisation@6
+  - field-theory.fock-space-maxwell-modes@5
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.imported-one-loop-running-trace-ratio@1
   - synthesis.imported-heat-kernel-coefficients-and-background-field-gauge@2
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

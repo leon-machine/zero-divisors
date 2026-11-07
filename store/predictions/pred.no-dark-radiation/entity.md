@@ -44,6 +44,10 @@ locators:
   number: T17 stance 9
   label: tab:stances
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.radiation-audit-what-theorem-closes-what repinned 7 -> 8 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the numbers are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -70,7 +74,7 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - dark-matter.radiation-audit-what-theorem-closes-what@7
+  - dark-matter.radiation-audit-what-theorem-closes-what@8
 ---
 
 ## formal

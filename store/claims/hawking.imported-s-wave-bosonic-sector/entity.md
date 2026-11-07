@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - hawking.imported-s-wave-bosonic-sector-external@1
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - hawking.kms-restricts-invariant-subalgebras@3
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3

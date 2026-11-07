@@ -51,9 +51,9 @@ derivations:
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - singularity.modular-theory-matrix-factor-proved-outright@6
   - synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom@1
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
-  - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@3
-  - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@4
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@6
+  - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@4
+  - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@5
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@2
   - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@3
   proof: proof-main.tex

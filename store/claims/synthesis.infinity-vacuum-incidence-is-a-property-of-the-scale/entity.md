@@ -25,8 +25,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
-  - interior.imported-tractor-connection@2
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence@4
+  - interior.imported-tractor-connection@3
   - correspondence.imported-vacuum-equations-scale-tractor@6
   - mass.imported-frozen-point-tractor-connection@6
   - one-relation.imported-pure-spinors-incidence-chart@5

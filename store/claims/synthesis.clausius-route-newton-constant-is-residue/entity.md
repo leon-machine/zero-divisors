@@ -24,11 +24,11 @@ derivations:
 - name: main
   uses:
   - scrambling.mode-count@2
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.residue-from-mode-entropy@4
   - synthesis.quarter-from-temperature@1
   - angle.imported-theorems-deliver-their-hypotheses@3
-  - synthesis.imported-jacobson-clausius-1995@2
+  - synthesis.imported-jacobson-clausius-1995@3
   proof: proof-main.tex
 checked_by:
 - kind: check

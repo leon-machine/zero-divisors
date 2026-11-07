@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.tractor-transport-weak-null-crossing@4
-  - synthesis.crossing-transport-tipler-threshold-sharp@4
-  - interior.imported-tractor-connection@2
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity@4
+  - synthesis.tractor-transport-weak-null-crossing@5
+  - synthesis.crossing-transport-tipler-threshold-sharp@5
+  - interior.imported-tractor-connection@3
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,6 +51,10 @@ lineage:
   - interior.filtration-cauchy-horizon-read-literature
   - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

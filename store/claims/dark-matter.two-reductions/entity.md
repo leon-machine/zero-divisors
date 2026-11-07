@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.imported-induced-equations-hypersurface@2
+  - dark-matter.imported-induced-equations-hypersurface@3
   assumes:
   - dark-matter.d-democracy-total-mass@1
   proof: proof-main.tex

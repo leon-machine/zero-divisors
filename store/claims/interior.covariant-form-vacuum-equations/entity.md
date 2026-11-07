@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.imported-equivalence-einstein-equations@2
-  - interior.imported-tractor-connection@2
+  - interior.imported-equivalence-einstein-equations@3
+  - interior.imported-tractor-connection@3
   - interior.metric-parallelism-trace-schouten-condition@6
   proof: proof-main.tex
 checked_by:

@@ -31,7 +31,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.bivector-lie-algebra@1
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.bivector-exponential-in-spin@2
   proof: proof-main.tex

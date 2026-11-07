@@ -35,7 +35,7 @@ about:
 derivations:
 - name: main
   uses:
-  - tower.structure-tower-c-norms@9
+  - tower.structure-tower-c-norms@10
   - scrambling.clock-inventory-boundary-modes@6
   - field-theory.boost-modes@3
   - singularity.kms-uniqueness-factor@6

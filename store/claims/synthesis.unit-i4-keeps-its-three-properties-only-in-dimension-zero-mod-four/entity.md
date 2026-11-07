@@ -30,7 +30,7 @@ derivations:
   - field-theory.imported-tower-limit@3
   - primer.sign@2
   - std-algebra.pseudoscalar-commutation@1
-  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
+  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@3
   proof: proof-main.tex
 checked_by:
 - kind: check

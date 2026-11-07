@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - families.rigidity-pairing-sector-one-event@4
+  - families.rigidity-pairing-sector-one-event@5
   - families.skeleton-rank-one-plus-ordering-shift@6
   proof: proof-main.tex
 checked_by:

@@ -31,7 +31,7 @@ derivations:
   uses:
   - singularity.modular-structure-completed-pair@5
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
   proof: proof-main.tex
 checked_by:
 - kind: check

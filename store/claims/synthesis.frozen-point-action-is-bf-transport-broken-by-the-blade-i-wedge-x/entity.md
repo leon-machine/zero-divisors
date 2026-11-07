@@ -23,16 +23,16 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - dark-energy.stelle-west-vector-frozen-point@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - dark-energy.imported-henneaux-teitelboim-promotion@6
-  - synthesis.promoted-norm-weyl-clock-flat-weight@6
+  - synthesis.promoted-norm-weyl-clock-flat-weight@7
   proof: proof-main.tex
 checked_by:
 - kind: check

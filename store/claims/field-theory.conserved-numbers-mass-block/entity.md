@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - field-theory.composite-scalars-mean-field-level@4
+  - field-theory.composite-scalars-mean-field-level@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

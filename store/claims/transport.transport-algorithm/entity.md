@@ -30,7 +30,7 @@ derivations:
   - transport.cohomological-form-no-go@4
   - transport.descent-read-out-map@2
   - transport.door-one-way@5
-  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3
+  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@4
   - transport.existence-classification-type-c@4
   - transport.existence-locus-type-n@5
   - transport.fusion-occurs-most-once@5

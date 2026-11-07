@@ -25,15 +25,15 @@ derivations:
 - name: main
   uses:
   - interior.boosts-generate-exactly-levi-factor@5
-  - interior.exact-parallelism-convergence-rate@5
-  - interior.interior-connection-exactly@7
+  - interior.exact-parallelism-convergence-rate@6
+  - interior.interior-connection-exactly@8
   - interior.kasner-form-interior@6
   - interior.schwarzschild-de-sitter-weighted-limit@7
   - interior.schwarzschild-lines-exactly@5
   - interior.transport-level-convergence-along-tangential-curves@4
   - interior.weighted-limit-theorem@6
-  - sheaf.matching-connection-level@7
-  - sheaf.matching-fibre@4
+  - sheaf.matching-connection-level@8
+  - sheaf.matching-fibre@5
   - sheaf.weights-are-forced-are-kasner-exponents@5
   proof: proof-main.tex
 checked_by:

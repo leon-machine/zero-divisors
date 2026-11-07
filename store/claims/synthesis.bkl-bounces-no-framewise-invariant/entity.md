@@ -26,7 +26,7 @@ derivations:
   - interior.weighted-limit-theorem@6
   - interior.kasner-form-interior@6
   - sheaf.collision-census@2
-  - dark-energy.wall-counterterm@4
+  - dark-energy.wall-counterterm@6
   - interior.boosts-generate-exactly-levi-factor@5
   proof: proof-main.tex
 checked_by:

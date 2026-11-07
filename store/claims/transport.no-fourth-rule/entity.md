@@ -26,7 +26,7 @@ derivations:
   proof: proof-main.tex
   uses:
   - transport.embedding-independent-minimality-fusion@4
-  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@3
+  - transport.exhaustiveness-every-zero-divisor-annihilated-idempotent@4
   - transport.minimality@4
   - transport.no-go-level-elements@5
   - transport.one-generator-minimal-minimal-completions-classified@5

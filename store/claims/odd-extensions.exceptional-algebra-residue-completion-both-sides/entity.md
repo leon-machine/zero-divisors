@@ -22,12 +22,12 @@ derivations:
 - name: main
   uses:
   - odd-extensions.are-ascents-pair-signed@4
-  - odd-extensions.imported-frozen-point@6
+  - odd-extensions.imported-frozen-point@7
   - odd-extensions.imported-minimal-completion-degenerate-algebra-rule@5
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
   - odd-extensions.line-tame-wall@4
   - odd-extensions.transport-constrains-frozen-point-only-through@3
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   proof: proof-main.tex
 checked_by:
 - kind: proof

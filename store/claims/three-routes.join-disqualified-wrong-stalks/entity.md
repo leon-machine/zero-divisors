@@ -26,7 +26,7 @@ about:
 derivations:
 - name: main
   uses:
-  - three-routes.stalks-are-pointwise-metric-levels@4
+  - three-routes.stalks-are-pointwise-metric-levels@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

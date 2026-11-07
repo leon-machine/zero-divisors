@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@6
+  - dark-matter.mirror-share-one-how-fragile@7
   - dark-tower-matter.gauge-algebras@5
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.anomalies@3
@@ -49,6 +49,10 @@ locators:
   label: prop:R1
   line: 834
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-share-one-how-fragile repinned 6 -> 7 after reviewing its C1 restatement ((i) now rests on the common-ceiling-coupling premise, with an assumes edge, where it said P2-protected; the values are unchanged); the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

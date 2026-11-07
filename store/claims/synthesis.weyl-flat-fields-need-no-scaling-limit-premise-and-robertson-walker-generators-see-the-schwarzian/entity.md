@@ -34,11 +34,11 @@ derivations:
   uses:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@6
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - field-theory.second-quantisation@5
-  - synthesis.imported-gtg-dictionary@1
+  - field-theory.second-quantisation@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
   proof: proof-main.tex
 checked_by:
@@ -62,6 +62,10 @@ lineage:
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

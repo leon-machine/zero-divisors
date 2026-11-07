@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

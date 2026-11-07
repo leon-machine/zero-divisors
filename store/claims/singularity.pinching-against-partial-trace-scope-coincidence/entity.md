@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   - singularity.purity-correlation-transfer-recovery@3
   - singularity.two-levels-finite-model@6
   proof: proof-main.tex

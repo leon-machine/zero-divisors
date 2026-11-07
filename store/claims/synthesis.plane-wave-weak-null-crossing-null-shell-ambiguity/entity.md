@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.tractor-transport-weak-null-crossing@4
-  - interior.imported-tractor-connection@2
+  - synthesis.tractor-transport-weak-null-crossing@5
+  - interior.imported-tractor-connection@3
   proof: proof-main.tex
 checked_by:
 - kind: check

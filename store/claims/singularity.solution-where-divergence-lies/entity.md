@@ -25,8 +25,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.connection-bivector-computed@4
-  - singularity.imported-equivalence-einstein-equations@2
+  - singularity.connection-bivector-computed@5
+  - singularity.imported-equivalence-einstein-equations@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

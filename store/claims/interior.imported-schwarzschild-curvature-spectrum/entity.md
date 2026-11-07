@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.imported-equivalence-einstein-equations@2
-  - singularity.solution-where-divergence-lies@3
+  - interior.imported-equivalence-einstein-equations@3
+  - singularity.solution-where-divergence-lies@4
   proof: proof-main.tex
 - name: standard-route
   uses:

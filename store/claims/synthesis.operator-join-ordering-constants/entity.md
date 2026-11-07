@@ -33,7 +33,7 @@ derivations:
   uses:
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   - correspondence.shared-core-ordering-dictionary@4
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.de-sitter-scale-frozen-point@6
   - mass.exact-join@8

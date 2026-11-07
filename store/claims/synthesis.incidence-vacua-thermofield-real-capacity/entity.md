@@ -30,7 +30,7 @@ derivations:
   - one-relation.imported-pure-spinors-incidence-chart@5
   - one-relation.spacetime-manifold-vacuum-lines@6
   - singularity.descended-form-state-independent@4
-  - state-selection.partner-purification-are-canonical@4
+  - state-selection.partner-purification-are-canonical@5
   - std-algebra.vector-squares@1
   proof: proof-main.tex
 checked_by:

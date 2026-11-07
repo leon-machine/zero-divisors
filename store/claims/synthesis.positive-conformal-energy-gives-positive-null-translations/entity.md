@@ -30,9 +30,9 @@ derivations:
 - name: main
   uses:
   - synthesis.positive-energy-selects-rule-2-sign@4
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - angle.imported-theorems-deliver-their-hypotheses@3
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: check

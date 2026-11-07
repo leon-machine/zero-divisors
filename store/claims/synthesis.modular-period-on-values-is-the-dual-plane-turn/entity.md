@@ -33,11 +33,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - field-theory.where-each-lives@3
+  - field-theory.second-quantisation@6
+  - field-theory.where-each-lives@4
   - field-theory.boost-modes@3
-  - hawking.modular-structure-completed-pair@3
-  - synthesis.local-boost-temperature-is-local-regularity@4
+  - hawking.modular-structure-completed-pair@4
+  - synthesis.local-boost-temperature-is-local-regularity@5
   - synthesis.boost-evolution-on-generators-is-one-unitary-group@5
   - singularity.euclidean-rotor-where-it-lies@5
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2

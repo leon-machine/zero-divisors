@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.stabilisers-flat-model@5
+  - interior.stabilisers-flat-model@6
   - transport.no-go-level-elements@5
   proof: proof-main.tex
 checked_by:

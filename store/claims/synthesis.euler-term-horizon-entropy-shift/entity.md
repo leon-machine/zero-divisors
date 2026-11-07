@@ -28,10 +28,10 @@ derivations:
 - name: main
   uses:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.imported-gibbons-hawking-entropy@3
   - synthesis.de-sitter-entropy-pi-n-squared@6
-  - dark-energy.wall-counterterm@4
+  - dark-energy.wall-counterterm@6
   - synthesis.imported-wald-noether-charge-entropy@3
   - synthesis.imported-chern-gauss-bonnet@3
   proof: proof-main.tex

@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - families.imported-one-derived-generation-hypothesis-s@6
+  - families.imported-one-derived-generation-hypothesis-s@7
   - families.imported-face-valued-bracket-quantum-numbers@5
   - standard-model.hyp-s-slot-statistics@9
   proof: proof-main.tex
@@ -42,6 +42,10 @@ locators:
   label: prop:identical
   line: 617
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: families.imported-one-derived-generation-hypothesis-s repinned 6 -> 7 after reviewing its G3 restatement (Hypothesis (S) is now derived in the store from the slot-module premise, where it was called a structural premise; the construction is unchanged); the use here holds as cited.'
   maintainer_pass_qft_full:
     by: maintainer-2026-11-02
     date: '2026-11-02'

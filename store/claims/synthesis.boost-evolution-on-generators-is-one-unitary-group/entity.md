@@ -36,13 +36,13 @@ about:
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - tower.structure-tower-c-norms@9
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
-  - synthesis.affine-cell-boost-spreads-without-scrambling@3
-  - synthesis.number-diagonal-dynamics-spreads-nothing@2
+  - field-theory.second-quantisation@6
+  - tower.structure-tower-c-norms@10
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
+  - synthesis.affine-cell-boost-spreads-without-scrambling@4
+  - synthesis.number-diagonal-dynamics-spreads-nothing@3
   - singularity.euclidean-rotor-where-it-lies@5
-  - synthesis.positive-null-energy-gives-r-premises@7
+  - synthesis.positive-null-energy-gives-r-premises@8
   - hawking.i-state-continuum@5
   proof: proof-main.tex
 checked_by:

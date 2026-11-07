@@ -30,7 +30,7 @@ derivations:
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.imported-coefficient-sum-indices@1
   - standard-model.imported-one-loop-running-trace-ratio@1
-  - standard-model.imported-sectors-superselection-mirror-copy@3
+  - standard-model.imported-sectors-superselection-mirror-copy@4
   - standard-model.no-tower-but-one-contributes-towers@3
   - standard-model.weak-angle-over-derived-generation@5
   - standard-model.hyp-s-slot-statistics@9

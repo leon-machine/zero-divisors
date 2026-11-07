@@ -26,8 +26,8 @@ derivations:
   - odd-extensions.two-towers-one-curved-universe@6
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - dark-matter.flag-bit-exists-exactly-tower-dimension@3
-  - dark-matter.mirror-tower-copy-one@8
-  - dark-tower-matter.mirrors-temperature-p2@6
+  - dark-matter.mirror-tower-copy-one@9
+  - dark-tower-matter.mirrors-temperature-p2@7
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -38,6 +38,10 @@ lineage:
 about:
 - obj.dark-matter.witt-flag
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Pin review: dark-tower-matter.mirrors-temperature-p2 repinned 6 -> 7 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; xi = 1 and 7.45 under the version-1 reach are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

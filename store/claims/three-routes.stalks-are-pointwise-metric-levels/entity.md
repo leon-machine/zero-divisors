@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - sheaf.function-linearity-tame-constructions@2
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

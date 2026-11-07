@@ -25,12 +25,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@3
+  - synthesis.operator-join-ordering-constants@4
   - mass.imported-palatial-quadratics-homogeneity-charge@4
   - families.source-term-linear-tilt-mass-functional@4
   - families.imported-face-valued-bracket-quantum-numbers@5
   - synthesis.massless-composites-de-sitter-conformal-boundary@2
-  - synthesis.operator-join-casimir-shifts@2
+  - synthesis.operator-join-casimir-shifts@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +44,10 @@ lineage:
   - synthesis.massless-composites-de-sitter-conformal-boundary
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.operator-join-casimir-shifts repinned 2 -> 3 after reviewing its B6 restatement (clause (iii) and the closing sentence now hold under an explicitly stated, unproved normalisation hypothesis; (i) and (ii) are unchanged); the use here holds as cited.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

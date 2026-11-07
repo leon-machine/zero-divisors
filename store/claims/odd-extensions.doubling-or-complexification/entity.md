@@ -31,7 +31,7 @@ about:
 derivations:
 - name: main
   uses:
-  - odd-extensions.volume-element-odd-dimension@3
+  - odd-extensions.volume-element-odd-dimension@4
   - std-algebra.z2-grading@1
   - std-algebra.orthogonal-anticommute@1
   proof: proof-main.tex

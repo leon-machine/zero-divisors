@@ -23,18 +23,18 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   - synthesis.einstein-route-makes-n-initial-data@4
-  - synthesis.promoted-norm-one-global-pair@4
-  - synthesis.euler-term-horizon-entropy-shift@4
+  - synthesis.promoted-norm-one-global-pair@5
+  - synthesis.euler-term-horizon-entropy-shift@5
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
   proof: proof-main.tex
 checked_by:
 - kind: check

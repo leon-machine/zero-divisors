@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.automorphisms-preserve-slot-pair-split-are@6
+  - standard-model.automorphisms-preserve-slot-pair-split-are@7
   - standard-model.hyp-s-slot-statistics@9
   proof: proof-main.tex
 checked_by:

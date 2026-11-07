@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - field-theory.composite-scalars-mean-field-level@4
+  - field-theory.composite-scalars-mean-field-level@5
   - field-theory.imported-tower-limit@3
   - field-theory.how-close-tower-comes-ccr@4
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
   - synthesis.imported-quasi-spin-pairing-and-top-condensation@1
   proof: proof-main.tex
 quantities:

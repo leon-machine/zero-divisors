@@ -23,14 +23,14 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-lovelock-cartan-four-forms-and-holst-term@1
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
   proof: proof-main.tex
 checked_by:
 - kind: check

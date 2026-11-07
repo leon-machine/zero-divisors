@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.solution-where-divergence-lies@3
+  - singularity.solution-where-divergence-lies@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

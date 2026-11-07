@@ -38,7 +38,7 @@ derivations:
   - dark-tower-matter.constituents-field@2
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.thickness-not-gravitational-quantity@5
-  - dark-matter.sourcing-rule-forced-not-chosen@3
+  - dark-matter.sourcing-rule-forced-not-chosen@4
   - standard-model.imported-anomaly-coefficients@1
   proof: proof-main.tex
 about:

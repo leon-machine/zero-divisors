@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
@@ -50,6 +50,10 @@ lineage:
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
   - synthesis.stelle-west-norm-is-no-local-output
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01

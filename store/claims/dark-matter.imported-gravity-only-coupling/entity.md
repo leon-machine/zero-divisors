@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.acoustic-no-go-one-way-grip@5
+  - dark-energy.acoustic-no-go-one-way-grip@6
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - dark-energy.conclusion-does-not-depend-ontology-level@1
   assumes:
@@ -42,6 +42,10 @@ locators:
   label: fact:acoustic
   line: 116
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-energy.acoustic-no-go-one-way-grip repinned 5 -> 6 after reviewing its H2 restatement (the converse of the equivalence principle now reads no channel outside the C-even neutral sector, where it said no other channel); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

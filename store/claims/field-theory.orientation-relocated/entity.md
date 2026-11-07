@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - field-theory.where-each-lives@3
+  - field-theory.where-each-lives@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

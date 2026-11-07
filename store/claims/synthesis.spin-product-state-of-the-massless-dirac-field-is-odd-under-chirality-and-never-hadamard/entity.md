@@ -37,10 +37,10 @@ derivations:
   uses:
   - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard@3
+  - synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard@4
   - synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite@3
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
-  - synthesis.attachment-conformal-energy-is-generated-by-z@4
+  - synthesis.attachment-conformal-energy-is-generated-by-z@5
   - synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field@1
   proof: proof-main.tex
 checked_by:

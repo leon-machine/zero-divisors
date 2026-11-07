@@ -29,7 +29,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@4
   - synthesis.rung-unit-is-frame-boost@3
   assumes:
   - synthesis.rung-unit-second-free-number@3

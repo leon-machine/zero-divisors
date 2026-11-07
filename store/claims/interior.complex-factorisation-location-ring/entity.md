@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.exact-scale-decoupling@4
+  - interior.exact-scale-decoupling@5
   - interior.imported-kerr-curvature@2
   proof: proof-main.tex
 checked_by:

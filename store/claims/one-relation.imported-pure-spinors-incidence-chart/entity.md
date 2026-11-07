@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - correspondence.fock-model-complexified-ascended-algebra@9
-  - correspondence.incidence-relation-chart@6
+  - correspondence.incidence-relation-chart@7
   - correspondence.spinor-identification@7
   - correspondence.twistors-are-states-three-ladder-pairs@6
   - mass.imported-flat-model-twistor-chart-infinity@7

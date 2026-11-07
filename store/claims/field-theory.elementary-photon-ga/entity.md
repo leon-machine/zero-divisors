@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - field-theory.contact-interactions-tower@4
-  - field-theory.imported-standard-field-theory@4
+  - field-theory.imported-standard-field-theory@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

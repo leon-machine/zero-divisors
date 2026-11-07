@@ -23,13 +23,13 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - synthesis.de-sitter-static-boost-frozen-point@6
-  - synthesis.cosmological-horizon-completed-pair@3
+  - synthesis.cosmological-horizon-completed-pair@4
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
-  - mass.chart-form-spin-isomorphism@5
-  - synthesis.imported-gtg-dictionary@1
+  - mass.chart-form-spin-isomorphism@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - singularity.curvature-gauge-field-exact-shape-decoupling@4
-  - std-algebra.bivector-exponential@3
+  - singularity.curvature-gauge-field-exact-shape-decoupling@5
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -56,6 +56,10 @@ lineage:
   - synthesis.positive-null-energy-gives-r-premises
   - synthesis.r-lambda-regularity-cosmological-horizon
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   correction:
     by: ai-correction
     date: '2026-10-31'

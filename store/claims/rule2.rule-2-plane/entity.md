@@ -29,9 +29,9 @@ derivations:
   - rule2.even-subalgebra-one-dimensional-extension@4
   - rule2.imported-classification-centre-type-c@3
   - rule2.imported-rule-2-matrix-units-forgotten@3
-  - rule2.rule-2-kaluza-klein-algebra@6
+  - rule2.rule-2-kaluza-klein-algebra@7
   - rule2.where-obstruction-sits-commuting-square@6
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   - primer.classification-real-clifford-algebras@3
   proof: proof-main.tex
 checked_by:

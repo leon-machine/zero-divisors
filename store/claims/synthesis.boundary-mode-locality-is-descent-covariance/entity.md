@@ -29,7 +29,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   - singularity.modular-structure-completed-pair@5
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   proof: proof-main.tex

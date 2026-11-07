@@ -29,11 +29,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
-  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
+  - synthesis.rung-field-on-the-lift-locus@4
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.yukawa-pattern-two-rung-module@6
-  - standard-model.imported-tower-commuting-copies-fock-module@5
+  - standard-model.imported-tower-commuting-copies-fock-module@6
   - synthesis.rung-field-charged-scalar-sum-rule@2
   - synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits@1
   - synthesis.imported-long-lived-charged-particle-stau-limits@1

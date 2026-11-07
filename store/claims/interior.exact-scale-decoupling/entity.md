@@ -27,7 +27,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.imported-schwarzschild-curvature-spectrum@6
+  - interior.imported-schwarzschild-curvature-spectrum@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -68,7 +68,7 @@ extraction:
       across subjects (einstein, singularity) by the crossover scan of 21 October; not merged, since T05's statement
       is strictly stronger.
 specialises:
-- singularity.curvature-gauge-field-exact-shape-decoupling@4
+- singularity.curvature-gauge-field-exact-shape-decoupling@5
 ---
 
 ## formal

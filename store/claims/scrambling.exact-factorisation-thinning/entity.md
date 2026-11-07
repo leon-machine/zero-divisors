@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - scrambling.slice-volume-exactly-per-unit-killing@4
   proof: proof-main.tex
 checked_by:

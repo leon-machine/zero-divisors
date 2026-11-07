@@ -31,9 +31,9 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - tower.ladder-pairs-satisfy-car-vectors@4
-  - hawking.imported-algebra-boundary-modes-car-algebra@5
+  - hawking.imported-algebra-boundary-modes-car-algebra@6
   - tower.answers-iteration-question@5
   - hawking.gibbs-states-are-kms-conversely-finite@4
   - hawking.i-state@4
@@ -51,6 +51,10 @@ lineage:
   motivated_by:
   - note.hawking.setting-mode-continuum
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: hawking.imported-algebra-boundary-modes-car-algebra repinned 5 -> 6 after reviewing its correction that the transport charge is p - q mod 8, which the completions preserve (it said advance); the CAR limit is unchanged; the use here holds as cited.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

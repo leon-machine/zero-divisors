@@ -26,7 +26,7 @@ derivations:
   - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
   - standard-model.generation-ten-under-pati-salam@7
-  - standard-model.automorphisms-preserve-slot-pair-split-are@6
+  - standard-model.automorphisms-preserve-slot-pair-split-are@7
   - synthesis.georgi-jarlskog-majorana-moment-map@3
   - synthesis.up-down-split-under-conjugate-reading-needs-su2r-odd-weighting@3
   - standard-model.imported-clebsch-structure-seesaw@1

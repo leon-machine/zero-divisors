@@ -28,9 +28,9 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gibbons-hawking-entropy@3
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - synthesis.de-sitter-static-boost-frozen-point@6
-  - synthesis.cosmological-horizon-completed-pair@3
+  - synthesis.cosmological-horizon-completed-pair@4
   proof: proof-main.tex
 checked_by:
 - kind: check

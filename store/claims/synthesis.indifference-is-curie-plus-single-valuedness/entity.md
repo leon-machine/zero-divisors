@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.residue-soldered-invariant-not-algebraic-one@3
-  - dark-tower-matter.mirrors-temperature-p2@6
+  - dark-matter.residue-soldered-invariant-not-algebraic-one@4
+  - dark-tower-matter.mirrors-temperature-p2@7
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -39,6 +39,10 @@ lineage:
   - dark-matter.p2-indifference
   - families.imported-indifference-instrument
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-tower-matter.mirrors-temperature-p2 repinned 6 -> 7 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; xi = 1 and 7.45 under the version-1 reach are unchanged); the use here holds as cited.'
   open_problem: pr.indifference
   note: >-
     Answers the premise target on indifference by a formalisation and a split. A construction that uses

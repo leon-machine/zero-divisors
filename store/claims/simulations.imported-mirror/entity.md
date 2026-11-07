@@ -25,10 +25,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@6
-  - dark-matter.mirror-tower-copy-one@8
-  - dark-matter.radiation-audit-what-theorem-closes-what@7
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.mirror-share-one-how-fragile@7
+  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.radiation-audit-what-theorem-closes-what@8
+  - dark-matter.stored-asymmetry-charge-not-number@9
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -47,6 +47,10 @@ locators:
   label: fact:mirror
   line: 100
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-share-one-how-fragile repinned 6 -> 7 after reviewing its C1 restatement ((i) now rests on the common-ceiling-coupling premise, with an assumes edge, where it said P2-protected; the values are unchanged); the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Pin review: dark-matter.radiation-audit-what-theorem-closes-what repinned 7 -> 8 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the numbers are unchanged); the use here holds as cited. Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

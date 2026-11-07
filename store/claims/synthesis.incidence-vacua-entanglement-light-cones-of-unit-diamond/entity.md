@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.incidence-vacua-thermofield-real-capacity@6
-  - state-selection.partner-purification-are-canonical@4
+  - state-selection.partner-purification-are-canonical@5
   - one-relation.spacetime-manifold-vacuum-lines@6
   proof: proof-main.tex
 checked_by:

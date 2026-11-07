@@ -25,13 +25,13 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@3
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.invariant-pairing-five-modes@5
   - standard-model.hyp-s-slot-statistics@9
-  - synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@3
+  - synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@4
   - synthesis.imported-left-right-bidoublet-two-yukawa-couplings@3
   proof: proof-main.tex
 checked_by:

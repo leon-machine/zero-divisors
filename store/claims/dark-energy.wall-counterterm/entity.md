@@ -35,9 +35,9 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.cosmological-constant-does-not-change-residue@6
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.cosmological-constant-does-not-change-residue@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

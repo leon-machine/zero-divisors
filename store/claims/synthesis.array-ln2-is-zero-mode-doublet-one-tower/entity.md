@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - hawking.imported-s-wave-bosonic-sector@6
   - hawking.current-commutator-exactly-edge-split@4
   - synthesis.residue-from-mode-entropy@4

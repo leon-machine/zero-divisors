@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-matter.imported-linear-momentum-equation-traceless-field@2
+  - dark-matter.imported-linear-momentum-equation-traceless-field@3
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   proof: proof-main.tex
 checked_by:

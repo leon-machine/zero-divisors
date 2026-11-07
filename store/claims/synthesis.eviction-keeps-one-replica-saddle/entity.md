@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - singularity.eviction-window-thermal-product-radiation-entropy@7
-  - synthesis.eviction-deficit-against-page-deficit@3
+  - synthesis.eviction-deficit-against-page-deficit@4
   - singularity.imported-page-average-entropy-subsystem@1
   proof: proof-main.tex
 checked_by:

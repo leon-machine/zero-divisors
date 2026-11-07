@@ -24,9 +24,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

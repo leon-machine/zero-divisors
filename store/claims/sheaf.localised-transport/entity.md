@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.blade-basis-degenerate-forms-included@4
+  - sheaf.blade-basis-degenerate-forms-included@5
   - sheaf.degeneration-sheaf@6
   - sheaf.determinant-identity-blow-up-expansion@3
   - sheaf.resolution-ideal-theoretically@4

@@ -30,7 +30,7 @@ derivations:
   - transport.classification-real-clifford-algebras@3
   - transport.existence-classification-type-c@4
   - transport.existence-locus-type-n@5
-  - transport.regularity-localises-zero-divisors-idempotents@2
+  - transport.regularity-localises-zero-divisors-idempotents@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

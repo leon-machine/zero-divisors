@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - interior.kasner-form-interior@6
-  - sheaf.kasner-data-interior@2
+  - sheaf.kasner-data-interior@3
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5

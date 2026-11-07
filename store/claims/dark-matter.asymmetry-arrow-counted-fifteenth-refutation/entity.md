@@ -1,7 +1,7 @@
 ---
 id: dark-matter.asymmetry-arrow-counted-fifteenth-refutation
 kind: claim
-version: 5
+version: 6
 title: 'The asymmetry: the arrow counted, and the fifteenth refutation'
 status: proved
 region: dark-matter
@@ -17,14 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'pin review, the remark on the mirror''s angle in (ii) now names the common ceiling coupling of the copy theorem''s (iv), where it quoted P2'
+  version: 6
+  source: maintainer pass 2026-11-07 (pin review)
 review: typed
 derivations:
 - name: main
   uses:
   - dark-matter.flag-bit-exists-exactly-tower-dimension@3
   - dark-matter.imported-derived-generation-flag@6
-  - dark-matter.imported-trichotomy-descents-data@5
-  - dark-matter.mirror-tower-copy-one@8
+  - dark-matter.imported-trichotomy-descents-data@6
+  - dark-matter.mirror-tower-copy-one@9
   assumes:
   - dark-matter.p4-democracy-asymmetry-over-oriented-towers@1
   proof: proof-main.tex
@@ -45,6 +49,10 @@ locators:
   label: prop:arrow
   line: 504
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.imported-trichotomy-descents-data repinned 5 -> 6 after reviewing its restatement of clause (2) (the norm of the frozen point is not a field, fixed by a constraint with pure-gauge fluctuations, where it said the frozen action is N-insensitive); clauses (1), (3) and (4) are unchanged; the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the remark in (ii) that the mirror''s angle equals ours only by P2 along the reversal orbit quoted the old (iv) and now names the common ceiling coupling of (iv), a premise of its own there; the claim is unchanged. Version 5 -> 6.'
   maintainer_pass_xi_ledger:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -81,7 +89,7 @@ extraction:
 The framework does not generate its asymmetry; it inherits it.
 \begin{enumerate}
 \item[(i)] \emph{(Sakharov.)} The Sakharov conditions are for generating an asymmetry dynamically from a symmetric state; a universe whose asymmetry is initial data does not need them. The descent supplies the reason the initial data need not be symmetric: it is irreversible (the lossy projection of the taxonomy paper's descent theorem \cite{ButlerT1}), it creates the tower charges, and it makes one orientation choice, the Witt flag, which is what particle-versus-antiparticle means (Fact \claimref{dark-matter.imported-derived-generation-flag}). Each matches a Sakharov condition in name; none is a mechanism producing a number.
-\item[(ii)] \emph{(The fifteenth refutation.)} A pre-descent $\theta$-term would source asymmetry through the topology of gauge bundles; but it integrates a characteristic class, of even degree, so the odd-dimensional towers carry no continuous $\theta$, and at the P3 representatives a $\theta$-term exists exactly where a flag bit does. In this tower it is excluded empirically: a $\theta$-routed asymmetry needs an angle of order one at the descent that does not relax before it acts, and the neutron dipole bound $|d_{n}| < 1.8 \times 10^{-26}\,e\,$cm \cite{Abel2020} gives $|\theta| \lesssim 10^{-10}$ today (through a hadronic matrix element with its own uncertainty). Not excluded, and not claimed: an angle that relaxes or rolls; and the mirror's angle, which equals ours only by P2 along the reversal orbit (Theorem \claimref{dark-matter.mirror-tower-copy-one}(iv)), the copy being of the functional, not its coefficient. Internally the paper says only that the orientation is the one mechanism the framework itself supplies; that locates the mechanism and does not refute the alternative.
+\item[(ii)] \emph{(The fifteenth refutation.)} A pre-descent $\theta$-term would source asymmetry through the topology of gauge bundles; but it integrates a characteristic class, of even degree, so the odd-dimensional towers carry no continuous $\theta$, and at the P3 representatives a $\theta$-term exists exactly where a flag bit does. In this tower it is excluded empirically: a $\theta$-routed asymmetry needs an angle of order one at the descent that does not relax before it acts, and the neutron dipole bound $|d_{n}| < 1.8 \times 10^{-26}\,e\,$cm \cite{Abel2020} gives $|\theta| \lesssim 10^{-10}$ today (through a hadronic matrix element with its own uncertainty). Not excluded, and not claimed: an angle that relaxes or rolls; and the mirror's angle, which equals ours only by the common ceiling coupling along the reversal orbit (Theorem \claimref{dark-matter.mirror-tower-copy-one}(iv), a premise of its own there, not P2), the copy being of the functional, not its coefficient. Internally the paper says only that the orientation is the one mechanism the framework itself supplies; that locates the mechanism and does not refute the alternative.
 \item[(iii)] \emph{(Confinement and universality.)} The orientation route is one bit spent once (uniqueness among all conceivable mechanisms is not claimed). A flag exists on every rung of every tower (Remark \ref{rem:flaglives}), but the flag \emph{bit} only in the even residues at their P3 representatives (Theorem \claimref{dark-matter.flag-bit-exists-exactly-tower-dimension}), so the asymmetry is confined to the oriented causal towers, this one and the mirror, and the odd towers carry none by either route. Universality of the value is Premise \claimref{dark-matter.p4-democracy-asymmetry-over-oriented-towers}, a theorem for the mirror (Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)) and not extendable to inequivalent towers, the asymmetry per mode depending on the tower's own charge structure.
 \item[(iv)] \emph{(The value, a stance.)} $\epsilon$ is not derived here and not classified. The trichotomy's kinematic clause runs for it as for $N$ ($\epsilon$ is continuous), at that Fact's observation level; the dynamical clause does not, since generating an asymmetry from CPT-invariant dynamics is exactly what the Sakharov mechanism does. \emph{Stance, flagged and attacked in Section \ref{sec:premises}:} the framework inherits its asymmetry, and $\epsilon$ is initial data of the descent, refuted by any in-framework calculation that produces $\epsilon$ dynamically. The count uses only the equality of $\epsilon$ across the reversal orbit (Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)), not its provenance. On the stance the unexplained numbers are two, $N$ and $\epsilon$, with the orientation bit of Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation} a third datum of the same event. \emph{Note (register, 2026-11-01).} The value $\epsilon$ is now a registered free input of the series, Premise \claimref{synthesis.matter-asymmetry-registered-free-input}, which takes this stance as its statement and its refutation condition; the stance is unchanged.
 \end{enumerate}

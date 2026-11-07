@@ -33,14 +33,14 @@ derivations:
   uses:
   - field-theory.imported-tower-limit@3
   - field-theory.imported-statistics-no-go-palatial-algebra@2
-  - field-theory.fock-space-maxwell-modes@4
+  - field-theory.fock-space-maxwell-modes@5
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - field-theory.twistor-attachment@6
   - field-theory.path-integral-inside-tower@3
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -25,12 +25,12 @@ derivations:
   - standard-model.imported-anomaly-coefficients@1
   - synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group@2
   - families.three-identical-families-mixing-shared-slots@8
-  - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@2
+  - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - synthesis.imported-witten-global-su2-anomaly@1
   assumes:
   - standard-model.slot-module-hypothesis@4
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

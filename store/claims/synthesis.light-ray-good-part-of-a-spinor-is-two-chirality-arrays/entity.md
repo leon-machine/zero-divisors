@@ -34,8 +34,8 @@ derivations:
 - name: main
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
-  - field-theory.second-quantisation@5
-  - field-theory.where-each-lives@3
+  - field-theory.second-quantisation@6
+  - field-theory.where-each-lives@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.half-integer-weight-array-carries-half-ln2@5
   - synthesis.residue-from-mode-entropy@4

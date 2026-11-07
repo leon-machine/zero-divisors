@@ -43,11 +43,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.stationary-generator-states-and-the-edge-scaling@1
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - synthesis.attachment-conformal-energy-is-generated-by-z@4
+  - synthesis.attachment-conformal-energy-is-generated-by-z@5
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
   - synthesis.imported-haag-local-normality@1
   proof: proof-main.tex
@@ -72,6 +72,10 @@ lineage:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state
   - synthesis.attachment-conformal-energy-is-generated-by-z
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.local-normality-at-the-edge-gives-the-null-ground-state repinned 3 -> 4 after reviewing its A7 correction (the value ln(9/8) in (v) is now stated for |2 pi R/I_4|^2, that of |R|^2 being (2 pi)^-2 ln(9/8), and a Beyond-one-flat-chart sentence was added; (i), (ii), (iv) and the obstruction of (v) are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

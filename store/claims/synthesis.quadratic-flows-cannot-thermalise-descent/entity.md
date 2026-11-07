@@ -32,9 +32,9 @@ derivations:
 - name: main
   uses:
   - hawking.i-state@4
-  - hawking.imported-algebra-boundary-modes-car-algebra@5
+  - hawking.imported-algebra-boundary-modes-car-algebra@6
   - scrambling.clock-inventory-boundary-modes@6
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   proof: proof-main.tex
 checked_by:
@@ -53,6 +53,10 @@ lineage:
   - synthesis.frozen-phase-spectrum-not-red
   - singularity.l-boundary-mode-locality
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: hawking.imported-algebra-boundary-modes-car-algebra repinned 5 -> 6 after reviewing its correction that the transport charge is p - q mod 8, which the completions preserve (it said advance); the CAR limit is unchanged; the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -25,15 +25,15 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@5
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@6
   - dark-matter.imported-derived-generation-flag@6
   - dark-matter.imported-inputs-standard-model-chain@6
-  - dark-matter.mirror-share-one-how-fragile@6
-  - dark-matter.mirror-tower-copy-one@8
+  - dark-matter.mirror-share-one-how-fragile@7
+  - dark-matter.mirror-tower-copy-one@9
   - dark-matter.mode-counts-two-modules-which-one@6
-  - dark-matter.population-count-one-share-half-percent@5
+  - dark-matter.population-count-one-share-half-percent@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.stored-asymmetry-charge-not-number@9
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.p1-single-frozen-point@1
@@ -53,6 +53,10 @@ locators:
   label: thm:share
   line: 474
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-share-one-how-fragile repinned 6 -> 7 after reviewing its C1 restatement ((i) now rests on the common-ceiling-coupling premise, with an assumes edge, where it said P2-protected; the values are unchanged); the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Pin review: dark-matter.population-count-one-share-half-percent repinned 5 -> 6 after reviewing its C1 restatement (the share of one now rests also on the common-ceiling-coupling premise, with an assumes edge; the numbers are unchanged); the use here holds as cited. Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

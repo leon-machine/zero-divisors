@@ -27,8 +27,8 @@ derivations:
   uses:
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.residue-from-mode-entropy@4
-  - state-selection.where-fermi-dirac-comes@5
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - state-selection.where-fermi-dirac-comes@6
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - synthesis.imported-theta-function-identities@2
   proof: proof-main.tex
 checked_by:

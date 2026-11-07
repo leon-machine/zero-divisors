@@ -21,9 +21,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - odd-extensions.volume-element-odd-dimension@3
-  - odd-extensions.doubling-or-complexification@5
-  - odd-extensions.four-extensions-oriented-pair@5
+  - odd-extensions.volume-element-odd-dimension@4
+  - odd-extensions.doubling-or-complexification@6
+  - odd-extensions.four-extensions-oriented-pair@6
   - dark-matter.towers-are-residues-single-clock-filter@5
   - dark-matter.nesting@3
   - rule2.where-obstruction-sits-commuting-square@6

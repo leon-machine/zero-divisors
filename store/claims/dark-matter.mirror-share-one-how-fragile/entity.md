@@ -25,8 +25,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@8
-  - dark-matter.no-coupling-rule-odd-towers-follows@4
+  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.no-coupling-rule-odd-towers-follows@5
   - dark-matter.ceiling-valued-inherited-success@5
   assumes:
   - synthesis.common-ceiling-coupling-premise@1
@@ -50,6 +50,10 @@ locators:
   label: prop:massbound
   line: 439
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Pin review: dark-matter.no-coupling-rule-odd-towers-follows repinned 4 -> 5 after reviewing its B2 restatement (the formal is now the three established facts (a) to (c), the claim that no rule follows from the series moved to a marked remark, and (c) names P2, which equates labels and not couplings, and the common-ceiling-coupling premise, both along the reversal orbit only); the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.stelle-west-vector-frozen-point@5
-  - dark-energy.walls-free-sector@5
+  - dark-energy.stelle-west-vector-frozen-point@6
+  - dark-energy.walls-free-sector@6
   - sheaf.metrics-residue-square-root-twist@5
   - sheaf.localised-transport@5
   assumes:

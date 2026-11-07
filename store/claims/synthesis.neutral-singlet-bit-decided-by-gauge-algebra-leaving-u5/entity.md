@@ -29,7 +29,7 @@ derivations:
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
   - standard-model.invariant-pairing-five-modes@5
-  - standard-model.automorphisms-preserve-slot-pair-split-are@6
+  - standard-model.automorphisms-preserve-slot-pair-split-are@7
   proof: proof-main.tex
 checked_by:
 - kind: check

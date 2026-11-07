@@ -48,7 +48,7 @@ derivations:
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - field-theory.imported-standard-field-theory@4
+  - field-theory.imported-standard-field-theory@5
   proof: proof-main.tex
 checked_by:
 - kind: check

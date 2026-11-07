@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.under-action-written-norm-parameter-laws@4
-  - standard-model.trichotomy-what-kind-number@10
+  - standard-model.trichotomy-what-kind-number@11
   proof: proof-main.tex
 checked_by:
 - kind: proof

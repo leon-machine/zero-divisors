@@ -33,12 +33,12 @@ derivations:
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
-  - interior.scale-tractor-leaves-cone@7
-  - interior.imported-tractor-connection@2
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - interior.scale-tractor-leaves-cone@8
+  - interior.imported-tractor-connection@3
   - dark-energy.imported-frozen-point-geometry@6
   - odd-extensions.transport-constrains-frozen-point-only-through@3
-  - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@2
+  - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@3
   proof: proof-main.tex
 checked_by:
 - kind: check

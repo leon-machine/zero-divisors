@@ -31,14 +31,14 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@3
+  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@4
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.imported-tower-limit@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

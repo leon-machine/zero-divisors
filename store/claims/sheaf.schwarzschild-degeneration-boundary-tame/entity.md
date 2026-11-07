@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.gauge-field-cometric@3
+  - sheaf.gauge-field-cometric@4
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -47,6 +47,10 @@ locators:
   label: thm:schwtame
   line: 913
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: sheaf.gauge-field-cometric repinned 3 -> 4 after reviewing its correction of the degeneration at r = 0 (the rescaled map tends to the rank-one -P, whose kernel contains e_r, null for the limit form); the gauge field and the line element are unchanged; the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

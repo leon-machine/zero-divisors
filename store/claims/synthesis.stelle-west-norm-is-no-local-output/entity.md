@@ -23,12 +23,12 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.stelle-west-vector-frozen-point@6
   - dark-energy.imported-frozen-point-geometry@6
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - singularity.non-removability-invariant-argument@2
-  - synthesis.promoted-norm-weyl-clock-flat-weight@6
+  - singularity.non-removability-invariant-argument@3
+  - synthesis.promoted-norm-weyl-clock-flat-weight@7
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.rung-unit-transverse-to-norm@3

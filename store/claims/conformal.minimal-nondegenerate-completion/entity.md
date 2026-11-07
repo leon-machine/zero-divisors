@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - conformal.blade-basis-persists-under-degeneracy@4
-  - conformal.witt-extension-theorem@1
+  - conformal.blade-basis-persists-under-degeneracy@5
+  - conformal.witt-extension-theorem@2
   - std-algebra.functoriality@1
   proof: proof-main.tex
 checked_by:

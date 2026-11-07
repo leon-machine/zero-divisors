@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
-  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
+  - synthesis.rung-field-on-the-lift-locus@4
   proof: proof-main.tex
 quantities:
 - quantity.z-boson-mass@2

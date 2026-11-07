@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - standard-model.transported-frozen-point@6
-  - standard-model.imported-tower-commuting-copies-fock-module@5
+  - standard-model.imported-tower-commuting-copies-fock-module@6
   - standard-model.ten-transported-ambient-space-doublets-are@2
   proof: proof-main.tex
 checked_by:

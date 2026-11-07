@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - conformal.blade-basis-persists-under-degeneracy-external@1
-  - sheaf.blade-basis-degenerate-forms-included@4
+  - sheaf.blade-basis-degenerate-forms-included@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

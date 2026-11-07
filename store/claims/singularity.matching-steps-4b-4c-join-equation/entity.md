@@ -31,7 +31,7 @@ derivations:
   uses:
   - sheaf.localised-transport@5
   - sheaf.one-sided-completion@4
-  - singularity.curvature-gauge-field-exact-shape-decoupling@4
+  - singularity.curvature-gauge-field-exact-shape-decoupling@5
   - singularity.degeneration-exactly@2
   - singularity.modular-structure-completed-pair@5
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
