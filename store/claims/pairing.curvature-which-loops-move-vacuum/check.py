@@ -5,8 +5,9 @@ Schwarzschild field of the premise Fact (pairing.imported-schwarzschild-connecti
 points (sqrt f, sin, cos rational), exact first-order jets. The field strength R(e_mu ^ e_nu) is computed
 from Omega by d_mu Omega_nu - d_nu Omega_mu + Omega_mu x Omega_nu; the curvature bivector of the loop of
 physical vectors (u, v) is R(u, v) = R(hb(u ^ v)) = -calR(u ^ v) (LDG sign), extended complex-bilinearly.
-pv(B) = <B . l, m>, l = e0 + e1, n = e0 - e1, m = e2 + i e3, mbar = e2 - i e3. Computed:
-(1) the six frame-plane classes: 0, 0, M/r^3, -M/r^3, i M/r^3, -i M/r^3;
+pv(B) = <B . l, m>, l = e0 + e1, n = e0 - e1, m = e2 + I5 e3, mbar = e2 - I5 e3 (I5 the central unit of Cl(2,3)).
+Computed:
+(1) the six frame-plane classes: 0, 0, M/r^3, -M/r^3, I5 M/r^3, -I5 M/r^3;
 (2) R(l, e2) = (M/r^3) l e2, a null rotation about l ((l e2)^2 = 0, (l e2) . l = 0) of zero class;
     R(n, e2) has class 2M/r^3;
 (3) the complex loops: (l, m), (l, mbar), (m, mbar), (n, m) have class 0, (n, mbar) has 4M/r^3, (l, n) has 0;
@@ -35,7 +36,7 @@ M_TR = (GA.gen(2), GA.gen(3))
 
 
 def pv(B, l=L_OUT, m=M_TR):
-    """Pairing class pv(B) = <B . l, m> (real bivector B or complex pair), m = e2 + i e3."""
+    """Pairing class pv(B) = <B . l, m> (real bivector B or complex pair), m = e2 + I5 e3."""
     if isinstance(B, dict):
         B = (B, {})
     return gtg.cdot(gtg.cbdot(B, l), m)
