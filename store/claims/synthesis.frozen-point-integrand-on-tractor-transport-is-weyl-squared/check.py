@@ -28,6 +28,9 @@ rational symmetric matrices; W is the Weyl part, R - KN(P, eta) with P the Schou
 (8) The proof's GTG route: ten independent Weyl maps of Cl(1,3) as linear functions on bivectors (lib/gtg.py,
     Weyl parts of Kulkarni-Nomizu operators), eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)> on all 55 pairs;
     the S^2 x S^2 densities pointwise from the product operator of Cl(4,0).
+(9) The frame legs in GA: K(DX ^ DX, F) = -<I4 R(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -<R(a ^ b)(d_b ^ d_a)> = -calR
+    for F = -R (Cotton block present), zero on the Weyl maps; the Weyl maps obey the first Bianchi identity and
+    B -> I4 B (symmetric, trace-free, I-linear) does not.
 Exact arithmetic only (Fractions); fixed tables, no randomness.
 """
 from fractions import Fraction as Fr
@@ -619,7 +622,8 @@ def check_gtg_weyl_square_of_weyl_maps():
     """(iii) with the Weyl part as a linear map on bivectors: on ten independent Weyl maps of Cl(1,3) (built by
     the library from Kulkarni-Nomizu operators) and their 55 pairs, eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)>
     for F = -W (and with a Cotton block); the Weyl maps are trace-free and I-linear. (v) pointwise, on the
-    product operator calR = K1 on e1 ^ e2, K2 on e3 ^ e4 of Cl(4,0): Weyl square 2 <W W> = (4/3)(K1 + K2)^2 and
+    product operator calR = -K1 on e1 ^ e2, -K2 on e3 ^ e4 of Cl(4,0) (store sign; the torsion-solved field of
+    S^2(1) x S^2(1/4) gives it): Weyl square 2 <W W> = (4/3)(K1 + K2)^2 and
     Euler density 8 K1 K2, so the integrals over 16 pi^2 are (4/3)(K1 + K2)^2/(K1 K2) and 8."""
     _premises_locus()
     premise("dark-energy.frozen-point-makes-stelle-west-vector")
@@ -642,11 +646,19 @@ def check_gtg_weyl_square_of_weyl_maps():
     sq4 = GA.sig(4, 0)
     for k1, k2 in ((Fr(1), Fr(1)), (Fr(1), Fr(2)), (Fr(2), Fr(6))):
         def R(Xb, k1=k1, k2=k2):
-            return GA.add(GA.scal(k1 * Xb.get((0, 1), Fr(0)), gtg.biv(0, 1, sq4)),
-                          GA.scal(k2 * Xb.get((2, 3), Fr(0)), gtg.biv(2, 3, sq4)))
+            return GA.add(GA.scal(-k1 * Xb.get((0, 1), Fr(0)), gtg.biv(0, 1, sq4)),
+                          GA.scal(-k2 * Xb.get((2, 3), Fr(0)), gtg.biv(2, 3, sq4)))
         Wp = gtg.weyl_op(R, sq4)
         ok = ok and gtg.kretschmann(Wp, sq4) == Fr(4, 3) * (k1 + k2) ** 2
         ok = ok and gtg.euler_density(R, sq4) == 8 * k1 * k2
+    s1, c1 = gtg.sincos(0, Fr(3, 5), Fr(4, 5), 4, 2)
+    s2, c2 = gtg.sincos(2, Fr(5, 13), Fr(12, 13), 4, 2)
+    TH = [[Fr(0)] * 4 for _ in R4]
+    TH[0][0], TH[1][1], TH[2][2], TH[3][3] = Fr(1), s1, Fr(2), Fr(2) * s2      # radii 1 and 2: K1 = 1, K2 = 1/4
+    Rs = gtg.Field(TH, sq=sq4).curvature()
+    ok = ok and Rs[(0, 1)] == {(0, 1): Fr(-1)} and Rs[(2, 3)] == {(2, 3): Fr(-1, 4)}
+    ok = ok and all(Rs[k] == {} for k in Rs if k not in ((0, 1), (2, 3)))
+    ok = ok and gtg.kretschmann(gtg.weyl_op(Rs, sq4), sq4) == Fr(25, 12) and gtg.euler_density(Rs, sq4) == 2
     _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_weyl_square_of_weyl_maps"; return _tp_rv
 
 

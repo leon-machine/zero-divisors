@@ -1,4 +1,10 @@
 functions:
+  check_gtg_frame_legs_and_weyl_space:
+    kind: exact
+    clauses:
+    - '(iv) the frame-leg pairings in GA: K(DX ^ DX, F) = -<I4 calR(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -calR for F = -calR, both zero on the Weyl maps'
+    - '(iii) the Weyl maps obey the first Bianchi identity; B -> I4 B is symmetric, trace-free and I-linear and violates it'
+    omits: 'the two identities on three curvature maps (a Kulkarni-Nomizu map with a Ricci part, B -> I4 B, their sum) with the Cotton block, and the vanishing on the ten basis Weyl maps (complete by linearity); the general identities are the Bianchi and trace arguments in the proof'
   check_gtg_weyl_square_of_weyl_maps:
     kind: exact
     clauses:

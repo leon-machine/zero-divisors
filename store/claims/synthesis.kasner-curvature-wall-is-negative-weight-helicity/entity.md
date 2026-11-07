@@ -25,16 +25,20 @@ credit:
   role: 'GTG evidence for (i) and (iv): the slice and Bianchi II gauge fields, torsion-solved Omega, store-sign scalar and Ricci map; frame formula kept, declaration narrowed'
   version: 2
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): the Ellis-MacCallum frame formula derived from the torsion equation with an exact polynomial check; the closed form of the Bianchi II rotation-gauge field displayed and checked; declaration narrowed to the coframe language and the quoted Gauss identity; stale pins reviewed'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.nondiagonal-kasner-residue-weighted-shear@3
+  - synthesis.nondiagonal-kasner-residue-weighted-shear@4
   - synthesis.bkl-bounces-no-framewise-invariant@2
-  - synthesis.unit-boost-residue-needs-nonpositive-exponent@3
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.unit-boost-residue-needs-nonpositive-exponent@4
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,10 +55,20 @@ checked_by:
   derivation: main
 - kind: check
   ref: check.py::check_gtg_slice_and_bianchi_ii_field_strength
+- kind: check
+  ref: check.py::check_gtg_ellis_maccallum_frame_formula
 lineage:
   motivated_by:
   - synthesis.nondiagonal-kasner-residue-weighted-shear
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with fixes. (6b) The frame formula of (i) was cited from memory and the proof said it was not used as a premise, though the scaling argument is read off it. Now derived in GTG: for an orthonormal frame e_l of Cl(0,3) with background fields e^_l = hb(e_l) and [e^_m, e^_n] = c^_mn^l e^_l, the torsion equation omega_m x e_n - omega_n x e_m = c^_mn^l e_l makes omega_m = Omega(e^_m) linear in c^, and calR(e_m ^ e_n) = -(e^_m(omega_n) - e^_n(omega_m) + omega_m x omega_n - c^_mn^l omega_l); new check check_gtg_ellis_maccallum_frame_formula computes the store-sign scalar as an exact polynomial in the nine c^ and their 27 frame derivatives (independent variables, Jets of infinite order) and finds it equal to 4 e_i(acc_i) - 6 acc.acc - (1/2)(2 n:n - (tr n)^2) coefficient by coefficient (21 monomials, 6 derivative ones; no Jacobi identity needed), n^ symmetric, the unit three-sphere giving 6. So no import and no premise from memory remain; the sentence was corrected, as was the same claim in the extraction note. (6a) Proof (iv) now displays the closed form of the torsion-solved Bianchi II rotation-gauge field at every z (the referees, recomputed symbolically in alpha_l(T) in scratch: the Ricci identities then hold identically), and check_gtg_slice_and_bianchi_ii_field_strength compares the solved field with it, value and first derivatives in T and z. (6c) The Hamiltonian constraint of (iii) is now written as the gamma_0 component of the Einstein map with the Gauss identity cited to the proof of synthesis.nondiagonal-kasner-residue-weighted-shear (iv) (already in uses), and the declaration names it. runcheck 7/7; six mutants (three closed-form terms, three coefficients of the frame formula and its field strength) each fail the new or tightened function.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.nondiagonal-kasner-residue-weighted-shear 3 -> 4 has a byte-identical formal (N); synthesis.unit-boost-residue-needs-nonpositive-exponent 3 -> 4 writes its Kasner ansatz as the synchronous gauge field (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): this proof cites (ii) for the rotation-gauge field as the Levi-Civita connection and reads Ricci components through C11/G2, which the change does not touch, so the use holds; all three repinned.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -82,8 +96,8 @@ extraction:
     omega_1 ^ d omega_1 = 0 on the covector of the smallest exponent (read from the arXiv text). What the
     entity adds to the store: the necessity of that condition for the residue-sense forcing half, in the
     store's setting, and the exact statement that its failure is a BKL bounce rather than a different
-    residue. The orthonormal-frame curvature formula (Ellis and MacCallum form, cited from memory) is not
-    used as a premise: the check confirms it against the coordinate Ricci scalar. The non-diagonal momentum
+    residue. The orthonormal-frame curvature formula (Ellis and MacCallum form) is derived from the torsion
+    equation of the slice gauge field (fix round 2026-11-07) and confirmed against the coordinate Ricci scalar. The non-diagonal momentum
     constraints and the inhomogeneous bounce (whether generic data follow the BKL law) remain open.
     Complementary to the diagonal wall with a massless scalar (filed alongside,
     synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall): on the part of the scalar disk where
@@ -92,7 +106,7 @@ extraction:
     Transport-absent: a statement about the field equations, bearing on the connection's residue.
 outside_ga:
   kind: other
-  why: 'The result is posed on a coframe of the slices (theta^k ^ d theta^k, the structure functions c_mn^l), and clause (i) rests on the Ellis-MacCallum orthonormal-frame formula for the scalar curvature in those structure functions, cited from memory: it is verified exactly against the GTG field strength of the slice gauge field (Cl(0,3), Omega from the torsion equation) at sample coframes, but its derivation in geometric algebra is not given. The curvature values of (iv) are those of the gauge field''s Ricci map.'
+  why: 'The result is posed on a coframe of the slices (the forms theta^k and theta^k ^ d theta^k, the structure functions c_mn^l), the language of the statement; and (iii) quotes, without a GA derivation for curved slices, the Gauss identity -2 gamma_0 . calG(gamma_0) = (tr K)^2 - tr K^2 + s R^(3) for the gamma_0 component of the Einstein map, with the extrinsic-curvature matrix K, as the proof of synthesis.nondiagonal-kasner-residue-weighted-shear (iv) states it. The frame formula of (i) is derived from the torsion equation of the slice gauge field (Cl(0,3)), and the curvature values of (iv) are those of the Bianchi II gauge field''s Ricci map.'
 ---
 
 ## formal
