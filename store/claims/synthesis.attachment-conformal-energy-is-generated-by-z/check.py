@@ -359,7 +359,7 @@ def _fock_ip(p, q):
 def check_null_translations_are_nonnegative_on_the_modules():
     premise("synthesis.positive-conformal-energy-gives-positive-null-translations")
     premise("field-theory.twistor-attachment")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     states = [_monomial([0, 0, 0, 0]), _monomial([1, 0, 1, 0]), _padd(_monomial([1, 0, 0, 0]), _monomial([0, 0, 1, 0]), QI(2, -1)),
               _padd(_monomial([0, 1, 0, 2]), _monomial([1, 1, 1, 0]), QI(F(-3, 2), 1)), _padd(_monomial([2, 0, 0, 0]), _monomial([0, 0, 0, 1]), QI(0, 5))]
     table = {(1, 1, 0, 0): [F(1), F(2), F(9), F(105, 8), F(83, 2)],

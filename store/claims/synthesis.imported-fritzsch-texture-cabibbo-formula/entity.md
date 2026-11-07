@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-fritzsch-texture-cabibbo-formula
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Fritzsch-texture Cabibbo formula (Fritzsch and Xing 1999)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'R. Gatto, G. Sartori and M. Tonin, Weak self-masses, Cabibbo angle, and broken SU(2) x SU(2), Phys. Lett. B 28 (1968), 128--130.'
@@ -28,6 +32,24 @@ imported_from:
   locator: 'eqs. (3.8) to (3.10), Section 5.1'
   doi: 10.1016/S0550-3213(99)00337-5
 extraction:
+  source_formal: |-
+    For quark mass matrices whose light $2 \times 2$ block has the nearest-neighbour (Fritzsch) form, zero in the light-light entry and equal moduli off the diagonal, each sector's light-plane rotation angle obeys $\tan\theta_{u} = \sqrt{m_{u}/m_{c}}$, $\tan\theta_{d} = \sqrt{m_{d}/m_{s}}$ (the Gatto-Sartori-Tonin relation for the texture of Fritzsch), and with $\psi$ the relative phase of the two sectors' off-diagonal entries the Cabibbo element is
+    \[
+    \sin\theta_{C} = |R_{u} - R_{d}\,e^{-i\psi}|,\qquad
+    R_{u} = \sqrt{\tfrac{m_{u}}{m_{u} + m_{c}}}\sqrt{\tfrac{m_{s}}{m_{d} + m_{s}}},\quad
+    R_{d} = \sqrt{\tfrac{m_{c}}{m_{u} + m_{c}}}\sqrt{\tfrac{m_{d}}{m_{d} + m_{s}}},
+    \]
+    in the limit where the heavy family decouples; equivalently, with $x = m_{u}/m_{c}$ and $y = m_{d}/m_{s}$, $\sin^{2}\theta_{C} = (x + y - 2\sqrt{xy}\cos\psi)/((1 + x)(1 + y))$. The measured $|V_{us}|$ with the light-quark mass ratios selects $\psi$ near $90^{\circ}$ (about $79^{\circ}$ at the central inputs of 1999, $38^{\circ}$ to $115^{\circ}$ over them). Here $i$ is the unit of the imported complex mass matrices. \emph{Provenance:} \cite{GST1968}, \cite{Fritzsch1978}, \cite{FritzschXing1999} (eqs. (3.8) to (3.10), Section 5.1).
+
+    The source writes $i$ for the unit of the complex mass matrices' entries, read in the store as $I_4$ (span{1, I_4}).
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Imported Fact restated by the unit principle (U4, U1): the mass-matrix entries and the relative phase are numbers read in span{1, I_4}, so the Cabibbo formula reads sin theta_C = |R_u - R_d e^{-I_4 psi}| in the formal level and the one-liner; the source''s form moves to source_formal; the status stays imported and the outside_ga declaration is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten: the relative phase e^{-i psi} is kept as Fritzsch and Xing state it, and the entity declares outside_ga (imported); the store result that uses it writes its phases with I_4.'
   note: >-
     Imported so that synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
     can pin the formula it reads in the store's light-plane block. Checked on 2026-11-01 against
@@ -50,11 +72,11 @@ extraction:
 ## formal
 For quark mass matrices whose light $2 \times 2$ block has the nearest-neighbour (Fritzsch) form, zero in the light-light entry and equal moduli off the diagonal, each sector's light-plane rotation angle obeys $\tan\theta_{u} = \sqrt{m_{u}/m_{c}}$, $\tan\theta_{d} = \sqrt{m_{d}/m_{s}}$ (the Gatto-Sartori-Tonin relation for the texture of Fritzsch), and with $\psi$ the relative phase of the two sectors' off-diagonal entries the Cabibbo element is
 \[
-\sin\theta_{C} = |R_{u} - R_{d}\,e^{-i\psi}|,\qquad
+\sin\theta_{C} = |R_{u} - R_{d}\,e^{-I_4\psi}|,\qquad
 R_{u} = \sqrt{\tfrac{m_{u}}{m_{u} + m_{c}}}\sqrt{\tfrac{m_{s}}{m_{d} + m_{s}}},\quad
 R_{d} = \sqrt{\tfrac{m_{c}}{m_{u} + m_{c}}}\sqrt{\tfrac{m_{d}}{m_{d} + m_{s}}},
 \]
-in the limit where the heavy family decouples; equivalently, with $x = m_{u}/m_{c}$ and $y = m_{d}/m_{s}$, $\sin^{2}\theta_{C} = (x + y - 2\sqrt{xy}\cos\psi)/((1 + x)(1 + y))$. The measured $|V_{us}|$ with the light-quark mass ratios selects $\psi$ near $90^{\circ}$ (about $79^{\circ}$ at the central inputs of 1999, $38^{\circ}$ to $115^{\circ}$ over them). Here $i$ is the unit of the imported complex mass matrices. \emph{Provenance:} \cite{GST1968}, \cite{Fritzsch1978}, \cite{FritzschXing1999} (eqs. (3.8) to (3.10), Section 5.1).
+in the limit where the heavy family decouples; equivalently, with $x = m_{u}/m_{c}$ and $y = m_{d}/m_{s}$, $\sin^{2}\theta_{C} = (x + y - 2\sqrt{xy}\cos\psi)/((1 + x)(1 + y))$. The measured $|V_{us}|$ with the light-quark mass ratios selects $\psi$ near $90^{\circ}$ (about $79^{\circ}$ at the central inputs of 1999, $38^{\circ}$ to $115^{\circ}$ over them). The mass-matrix entries and the phase are numbers, read in $\mathrm{span}\{1, I_4\}$ (conventions, the unit principle, U1). \emph{Provenance:} \cite{GST1968}, \cite{Fritzsch1978}, \cite{FritzschXing1999} (eqs. (3.8) to (3.10), Section 5.1).
 
 ## technical
 The oldest successful quark-mass relation says that the Cabibbo angle is about the square root of the down to strange mass ratio. In the nearest-neighbour textures of Fritzsch it holds sector by sector, and the Cabibbo angle is the modulus of the difference of the up-sector and down-sector contributions, which depends on one relative phase. Fritzsch and Xing showed that the data put that phase near a right angle, which also makes the unitarity triangle nearly rectangular.
@@ -63,4 +85,4 @@ The oldest successful quark-mass relation says that the Cabibbo angle is about t
 A classic observation in particle physics links how strongly quarks of different families mix to the ratios of their masses. In one well-known family of models the mixing comes out as the difference of two such square-root ratios, offset by a phase, and the measured mixing wants that phase to be close to a right angle.
 
 ## one-liner
-For Fritzsch textures $\tan^{2}\theta = m_{\mathrm{light}}/m_{\mathrm{heavy}}$ in each sector and $\sin\theta_{C} = |R_{u} - R_{d}e^{-i\psi}|$, with $\psi$ near $90^{\circ}$ fitted to $|V_{us}|$ (Fritzsch and Xing 1999).
+For Fritzsch textures $\tan^{2}\theta = m_{\mathrm{light}}/m_{\mathrm{heavy}}$ in each sector and $\sin\theta_{C} = |R_{u} - R_{d}e^{-I_4\psi}|$ (numbers in $\mathrm{span}\{1, I_4\}$), with $\psi$ near $90^{\circ}$ fitted to $|V_{us}|$ (Fritzsch and Xing 1999).

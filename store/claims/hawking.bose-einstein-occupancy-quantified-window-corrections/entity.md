@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - hawking.i-state@3
+  - hawking.i-state@4
   - hawking.imported-s-wave-bosonic-sector@6
   proof: proof-main.tex
 checked_by:

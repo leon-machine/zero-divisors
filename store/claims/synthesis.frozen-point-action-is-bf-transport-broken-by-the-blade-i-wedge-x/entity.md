@@ -28,8 +28,8 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - standard-model.imported-frozen-point-dictionary@7
-  - synthesis.de-sitter-entropy-pi-n-squared@5
+  - standard-model.imported-frozen-point-dictionary@8
+  - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - dark-energy.imported-henneaux-teitelboim-promotion@5
   - synthesis.promoted-norm-weyl-clock-flat-weight@6

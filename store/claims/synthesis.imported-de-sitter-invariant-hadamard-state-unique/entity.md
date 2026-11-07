@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-de-sitter-invariant-hadamard-state-unique
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the unique de Sitter-invariant Hadamard state (Allen 1985)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -27,6 +31,18 @@ imported_from:
 - citation: 'R. Brunetti, K. Fredenhagen and S. Hollands, A remark on alpha vacua for quantum field theories on de Sitter space, J. High Energy Phys. 2005, no. 05, 063; arXiv:hep-th/0503022.'
   key: BrunettiFredenhagenHollands2005
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U4 with U1: the large-argument Hankel expansion is restated with I_4, the mode functions of the scalar field and numbers being read in span{1, I_4}; the source''s form moves to extraction.source_formal, and the formal level says the source writes i for I_4. No bare i remains, so the outside_ga declaration (imported, for i only) is removed; status stays imported.'
+  source_formal: |-
+    Let $\phi$ be a free real scalar field of mass $m^{2} > 0$ (curvature coupling absorbed into $m^{2}$) on the de Sitter gravitational field of Hubble rate $H$ (a gravitational field on flat spacetime, Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The pure quasi-free states invariant under the connected de Sitter group form a one-complex-parameter family, the $\alpha$-vacua, obtained from the Euclidean state $\omega_{0}$ (the analytic continuation of the Euclidean theory on the sphere) by a frequency-independent Bogoliubov transformation; for real $\alpha$ their symmetric two-point functions are $G_{\alpha}(x,y) = \cosh 2\alpha\,G_{0}(x,y) + \sinh 2\alpha\,G_{0}(x,\bar y)$, $\bar y$ the antipode of $y$. The Euclidean state is Hadamard; every other member is singular also at antipodal points, and since two Hadamard two-point functions differ by a smooth function, none of them is Hadamard. So for $m^{2} > 0$ the de Sitter-invariant Hadamard state is unique. In the flat slicing, with conformal time $\eta < 0$ and scale factor $a = -1/(H\eta)$, it is the Bunch-Davies state, the mode of the rescaled field $a\phi$ being $\chi_{k} \propto (-\eta)^{1/2}H^{(1)}_{\nu}(-k\eta)$, $\nu^{2} = \tfrac94 - m^{2}/H^{2}$, whose large-argument expansion $H^{(1)}_{\nu}(z) \sim \sqrt{2/\pi z}\,e^{i(z - \nu\pi/2 - \pi/4)}\bigl(1 + i(4\nu^{2} - 1)/8z + O(z^{-2})\bigr)$ fixes its short-distance behaviour. For the massless minimally coupled field there is no de Sitter-invariant Fock vacuum; states invariant under the Euclidean group $E(3)$ of the flat slicing exist, the Bunch-Davies state among them. \emph{Provenance:} \cite{Allen1985}; \cite{BrunettiFredenhagenHollands2005} (the antipodal singularity and the failure of the Hadamard condition, as attributed there to Allen).
+
+    \emph{Note (the massless case; added 1 November).} The $E(3)$-invariant Bunch-Davies state of the massless minimally coupled field ($\nu = \tfrac32$) is infrared-divergent: its slice fields smeared with test functions of nonzero mean have infinite variance, those of zero mean or derivatives finite variance (Ford and Parker, Fact \claimref{synthesis.imported-ford-parker-infrared-divergence}). It is a state only on the algebra of the latter, and a comparison with it needs an infrared regularisation. The massive statement above, and the index-$2$ conclusion of the frozen-point reading of the descent, which uses it for fields with $m^{2} > 0$ (the conformal weight, $m^{2} = 2H^{2}$, $\nu = \tfrac12$, among them), are unaffected.
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Hankel expansion is quoted from the literature in complex-analysis form; declared (version and levels unchanged).'
   note: >-
     Imported so that synthesis.frozen-point-geometry-reads-descent-as-vacuum can cite the
     uniqueness of the stabiliser-invariant Hadamard state and the non-Hadamard character of the
@@ -51,7 +67,7 @@ extraction:
 ---
 
 ## formal
-Let $\phi$ be a free real scalar field of mass $m^{2} > 0$ (curvature coupling absorbed into $m^{2}$) on the de Sitter gravitational field of Hubble rate $H$ (a gravitational field on flat spacetime, Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The pure quasi-free states invariant under the connected de Sitter group form a one-complex-parameter family, the $\alpha$-vacua, obtained from the Euclidean state $\omega_{0}$ (the analytic continuation of the Euclidean theory on the sphere) by a frequency-independent Bogoliubov transformation; for real $\alpha$ their symmetric two-point functions are $G_{\alpha}(x,y) = \cosh 2\alpha\,G_{0}(x,y) + \sinh 2\alpha\,G_{0}(x,\bar y)$, $\bar y$ the antipode of $y$. The Euclidean state is Hadamard; every other member is singular also at antipodal points, and since two Hadamard two-point functions differ by a smooth function, none of them is Hadamard. So for $m^{2} > 0$ the de Sitter-invariant Hadamard state is unique. In the flat slicing, with conformal time $\eta < 0$ and scale factor $a = -1/(H\eta)$, it is the Bunch-Davies state, the mode of the rescaled field $a\phi$ being $\chi_{k} \propto (-\eta)^{1/2}H^{(1)}_{\nu}(-k\eta)$, $\nu^{2} = \tfrac94 - m^{2}/H^{2}$, whose large-argument expansion $H^{(1)}_{\nu}(z) \sim \sqrt{2/\pi z}\,e^{i(z - \nu\pi/2 - \pi/4)}\bigl(1 + i(4\nu^{2} - 1)/8z + O(z^{-2})\bigr)$ fixes its short-distance behaviour. For the massless minimally coupled field there is no de Sitter-invariant Fock vacuum; states invariant under the Euclidean group $E(3)$ of the flat slicing exist, the Bunch-Davies state among them. \emph{Provenance:} \cite{Allen1985}; \cite{BrunettiFredenhagenHollands2005} (the antipodal singularity and the failure of the Hadamard condition, as attributed there to Allen).
+Let $\phi$ be a free real scalar field of mass $m^{2} > 0$ (curvature coupling absorbed into $m^{2}$) on the de Sitter gravitational field of Hubble rate $H$ (a gravitational field on flat spacetime, Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The pure quasi-free states invariant under the connected de Sitter group form a one-complex-parameter family, the $\alpha$-vacua, obtained from the Euclidean state $\omega_{0}$ (the analytic continuation of the Euclidean theory on the sphere) by a frequency-independent Bogoliubov transformation; for real $\alpha$ their symmetric two-point functions are $G_{\alpha}(x,y) = \cosh 2\alpha\,G_{0}(x,y) + \sinh 2\alpha\,G_{0}(x,\bar y)$, $\bar y$ the antipode of $y$. The Euclidean state is Hadamard; every other member is singular also at antipodal points, and since two Hadamard two-point functions differ by a smooth function, none of them is Hadamard. So for $m^{2} > 0$ the de Sitter-invariant Hadamard state is unique. In the flat slicing, with conformal time $\eta < 0$ and scale factor $a = -1/(H\eta)$, it is the Bunch-Davies state, the mode of the rescaled field $a\phi$ being $\chi_{k} \propto (-\eta)^{1/2}H^{(1)}_{\nu}(-k\eta)$, $\nu^{2} = \tfrac94 - m^{2}/H^{2}$, whose large-argument expansion $H^{(1)}_{\nu}(z) \sim \sqrt{2/\pi z}\,e^{I_4(z - \nu\pi/2 - \pi/4)}\bigl(1 + I_4(4\nu^{2} - 1)/8z + O(z^{-2})\bigr)$ fixes its short-distance behaviour (complex numbers, the mode functions' values among them, are read in $\mathrm{span}\{1, I_4\}$, the field theory's complex field, conventions U1; the source writes $i$ for $I_4$). For the massless minimally coupled field there is no de Sitter-invariant Fock vacuum; states invariant under the Euclidean group $E(3)$ of the flat slicing exist, the Bunch-Davies state among them. \emph{Provenance:} \cite{Allen1985}; \cite{BrunettiFredenhagenHollands2005} (the antipodal singularity and the failure of the Hadamard condition, as attributed there to Allen).
 
 \emph{Note (the massless case; added 1 November).} The $E(3)$-invariant Bunch-Davies state of the massless minimally coupled field ($\nu = \tfrac32$) is infrared-divergent: its slice fields smeared with test functions of nonzero mean have infinite variance, those of zero mean or derivatives finite variance (Ford and Parker, Fact \claimref{synthesis.imported-ford-parker-infrared-divergence}). It is a state only on the algebra of the latter, and a comparison with it needs an infrared regularisation. The massive statement above, and the index-$2$ conclusion of the frozen-point reading of the descent, which uses it for fields with $m^{2} > 0$ (the conformal weight, $m^{2} = 2H^{2}$, $\nu = \tfrac12$, among them), are unaffected.
 

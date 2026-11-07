@@ -97,7 +97,7 @@
 "angle.imported-singularity-papers-state-selection": {
 "failed": false,
 "findings": [],
-"key": "b81da374b3dc5a6a",
+"key": "bfc731ebf35d58a2",
 "result": "pass",
 "runs": [
 {
@@ -162,7 +162,7 @@
 "angle.imported-theorems-deliver-their-hypotheses": {
 "failed": false,
 "findings": [],
-"key": "8a575d0def7fc96d",
+"key": "476f1779b50d423e",
 "result": "none",
 "runs": []
 },
@@ -198,7 +198,7 @@
 "angle.wedge-reflection-translations-are-ascent": {
 "failed": false,
 "findings": [],
-"key": "0717c8703fe25400",
+"key": "28f5c4e43027282f",
 "result": "pass",
 "runs": [
 {
@@ -493,7 +493,7 @@
 ""
 ]
 ],
-"key": "8f89aa5bbd1f1823",
+"key": "e36baa3401ea9d75",
 "result": "pass",
 "runs": [
 {
@@ -581,7 +581,7 @@
 ""
 ]
 ],
-"key": "b5a4f0e9fde6f634",
+"key": "0f435872ebfe4ab2",
 "result": "pass",
 "runs": [
 {
@@ -717,7 +717,7 @@
 "correspondence.imported-tractor-connection-local-twistor-transport": {
 "failed": false,
 "findings": [],
-"key": "bcdef538981a50b3",
+"key": "f04974d09dfd18e8",
 "result": "pass",
 "runs": [
 {
@@ -826,7 +826,7 @@
 ""
 ]
 ],
-"key": "f864937b7200e529",
+"key": "f608f226c012e3d9",
 "result": "pass",
 "runs": [
 {
@@ -872,7 +872,7 @@
 ""
 ]
 ],
-"key": "89d30ea7d535723d",
+"key": "1daf88ef47da159f",
 "result": "pass",
 "runs": [
 {
@@ -924,7 +924,7 @@
 ""
 ]
 ],
-"key": "e82a6c82a2ba7556",
+"key": "14db113c01b1f507",
 "result": "pass",
 "runs": [
 {
@@ -1082,7 +1082,7 @@
 ""
 ]
 ],
-"key": "9dc2d1ed19750fd7",
+"key": "dec604fddb982a54",
 "result": "pass",
 "runs": [
 {
@@ -1411,7 +1411,7 @@
 ""
 ]
 ],
-"key": "ceaf04b8ae1e37d6",
+"key": "52f0d127de52b96f",
 "result": "pass",
 "runs": [
 {
@@ -3169,7 +3169,7 @@
 ""
 ]
 ],
-"key": "07208fbd1ede0623",
+"key": "723843f7bc52d16e",
 "result": "pass",
 "runs": [
 {
@@ -3334,14 +3334,14 @@
 "dark-matter.premise-cpt-covariance": {
 "failed": false,
 "findings": [],
-"key": "ba45354aa6c0ed0d",
+"key": "9af767d195f4d2cd",
 "result": "none",
 "runs": []
 },
 "dark-matter.premise-flag-as-datum": {
 "failed": false,
 "findings": [],
-"key": "02966249c5876fbc",
+"key": "c2a210baa7c7b231",
 "result": "none",
 "runs": []
 },
@@ -5696,7 +5696,7 @@
 ""
 ]
 ],
-"key": "9098b261860dd46d",
+"key": "5cd685cfb3cab002",
 "result": "pass",
 "runs": [
 {
@@ -5738,7 +5738,7 @@
 ""
 ]
 ],
-"key": "55da421f548f04b8",
+"key": "63fb178f47647ef5",
 "result": "pass",
 "runs": [
 {
@@ -5899,7 +5899,7 @@
 ""
 ]
 ],
-"key": "1658eed1fee25fd6",
+"key": "12952e699e288133",
 "result": "pass",
 "runs": [
 {
@@ -6360,7 +6360,7 @@
 ""
 ]
 ],
-"key": "fbd31124db925f5d",
+"key": "6b671a6c86405231",
 "result": "pass",
 "runs": [
 {
@@ -6414,7 +6414,7 @@
 ""
 ]
 ],
-"key": "e00d9b21fcaede12",
+"key": "539e1279401d124b",
 "result": "pass",
 "runs": [
 {
@@ -6552,7 +6552,7 @@
 ""
 ]
 ],
-"key": "bee7f936a738b3e4",
+"key": "c53638370995603d",
 "result": "pass",
 "runs": [
 {
@@ -7646,7 +7646,7 @@
 ""
 ]
 ],
-"key": "4780cc78cc9203a6",
+"key": "0efcc0a2d2dd3912",
 "result": "pass",
 "runs": [
 {
@@ -7788,7 +7788,7 @@
 ""
 ]
 ],
-"key": "f63cbb77c2f0e52e",
+"key": "d23df6aa8a2f55e7",
 "result": "pass",
 "runs": [
 {
@@ -7918,7 +7918,7 @@
 "hawking.imported-modular-descent-premises-geometric-normalisation": {
 "failed": false,
 "findings": [],
-"key": "f3057e088d5556c4",
+"key": "c7015fbda9704d3a",
 "result": "pass",
 "runs": [
 {
@@ -8205,7 +8205,7 @@
 ""
 ]
 ],
-"key": "48cad28fb38f9a53",
+"key": "77b7b6b2ac26570d",
 "result": "pass",
 "runs": [
 {
@@ -8255,7 +8255,7 @@
 ""
 ]
 ],
-"key": "2d37c9dce502f22b",
+"key": "41eaec5390f84378",
 "result": "pass",
 "runs": [
 {
@@ -8579,7 +8579,7 @@
 "interior.imported-walker-penrose-killing-spinor": {
 "failed": false,
 "findings": [],
-"key": "2461428d7524590b",
+"key": "fbe5bffb3bfa29c2",
 "result": "none",
 "runs": []
 },
@@ -9514,7 +9514,7 @@
 ""
 ]
 ],
-"key": "1c7ed247e302d90e",
+"key": "ed4f3f68d95f70f8",
 "result": "pass",
 "runs": [
 {
@@ -9665,7 +9665,7 @@
 ""
 ]
 ],
-"key": "c8b77fc75631adcf",
+"key": "808e365bbd26737f",
 "result": "pass",
 "runs": [
 {
@@ -9778,7 +9778,7 @@
 ""
 ]
 ],
-"key": "d80f488fa770db94",
+"key": "18b5b65d6fa4708a",
 "result": "pass",
 "runs": [
 {
@@ -9963,7 +9963,7 @@
 "mass.imported-unitary-representations-de-sitter-group": {
 "failed": false,
 "findings": [],
-"key": "ce222ef957ceef2e",
+"key": "76ac9fb3dec310ee",
 "result": "none",
 "runs": []
 },
@@ -10070,7 +10070,7 @@
 ""
 ]
 ],
-"key": "7c798699807ada0b",
+"key": "f715457bf65ebc0b",
 "result": "pass",
 "runs": [
 {
@@ -10114,7 +10114,7 @@
 ""
 ]
 ],
-"key": "165eb4972d8a88b1",
+"key": "ed2566ed427ea2f8",
 "result": "pass",
 "runs": [
 {
@@ -10223,7 +10223,7 @@
 ""
 ]
 ],
-"key": "baff4b18137bd920",
+"key": "ba79cd3726c9b77f",
 "result": "pass",
 "runs": [
 {
@@ -10272,7 +10272,7 @@
 "neutrino.imported-ceiling-under-hypothesis-u-arrow": {
 "failed": false,
 "findings": [],
-"key": "17f35a87014ced3d",
+"key": "c167679f4f31e3bd",
 "result": "pass",
 "runs": [
 {
@@ -10470,7 +10470,7 @@
 ""
 ]
 ],
-"key": "57dc20dcbbe45639",
+"key": "4de3d59429fce20d",
 "result": "pass",
 "runs": [
 {
@@ -10544,7 +10544,7 @@
 ""
 ]
 ],
-"key": "0a36b914fdbb48b0",
+"key": "800de791755aa0d2",
 "result": "pass",
 "runs": [
 {
@@ -10648,7 +10648,7 @@
 "note.angle.abstract": {
 "failed": false,
 "findings": [],
-"key": "0c7351afae34283d",
+"key": "e07b57c9b5f2491f",
 "result": "none",
 "runs": []
 },
@@ -10676,7 +10676,7 @@
 "note.angle.setting-claim-kill-conditions-fixed-before-2": {
 "failed": false,
 "findings": [],
-"key": "6cbdbe1ee7debda0",
+"key": "94144dc60a766a54",
 "result": "none",
 "runs": []
 },
@@ -10739,7 +10739,7 @@
 "note.angle.what-supplies-what-it-does-not": {
 "failed": false,
 "findings": [],
-"key": "3d2c8d18985a45f8",
+"key": "dae91e70afc814bf",
 "result": "none",
 "runs": []
 },
@@ -10823,7 +10823,7 @@
 "note.correspondence.abstract": {
 "failed": false,
 "findings": [],
-"key": "32b2c3f720b568b2",
+"key": "f9e456276584cd0a",
 "result": "none",
 "runs": []
 },
@@ -10907,7 +10907,7 @@
 "note.correspondence.setting-machine-verification": {
 "failed": false,
 "findings": [],
-"key": "53471ebe058343a2",
+"key": "6b2595fa0f29b6ca",
 "result": "none",
 "runs": []
 },
@@ -10977,7 +10977,7 @@
 "note.correspondence.setting-successor-problems": {
 "failed": false,
 "findings": [],
-"key": "16d2ffb0e282f0a0",
+"key": "8ef35760d47edc9f",
 "result": "none",
 "runs": []
 },
@@ -10998,7 +10998,7 @@
 "note.correspondence.what-factor-i-what-remains-conventional": {
 "failed": false,
 "findings": [],
-"key": "056a83caf08e9a76",
+"key": "4d128cd2ad5bbbb8",
 "result": "none",
 "runs": []
 },
@@ -11572,7 +11572,7 @@
 "note.dark-tower-matter.neutral-row": {
 "failed": false,
 "findings": [],
-"key": "da607544e286dd84",
+"key": "8339150511a4163b",
 "result": "none",
 "runs": []
 },
@@ -11726,7 +11726,7 @@
 "note.decisions.two-boost-flows": {
 "failed": false,
 "findings": [],
-"key": "50bd416c750aa6ff",
+"key": "178f037c9e9a7e7f",
 "result": "none",
 "runs": []
 },
@@ -11873,7 +11873,7 @@
 "note.families.setting-gaussian-theorems": {
 "failed": false,
 "findings": [],
-"key": "a86fd0e45ccd68dc",
+"key": "83cd27573852bdd4",
 "result": "none",
 "runs": []
 },
@@ -12517,7 +12517,7 @@
 "note.mass.abstract": {
 "failed": false,
 "findings": [],
-"key": "76f79b3bdbde8d4d",
+"key": "98c5ce82445a93ec",
 "result": "none",
 "runs": []
 },
@@ -12580,7 +12580,7 @@
 "note.mass.setting-grip-composite-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "9ed96f615f63af82",
+"key": "2dcb66750f82da9c",
 "result": "none",
 "runs": []
 },
@@ -12601,7 +12601,7 @@
 "note.mass.setting-introduction": {
 "failed": false,
 "findings": [],
-"key": "aafce3cd2490123a",
+"key": "3a2b0f3fd06513f7",
 "result": "none",
 "runs": []
 },
@@ -12615,7 +12615,7 @@
 "note.mass.setting-machine-verification": {
 "failed": false,
 "findings": [],
-"key": "3e69304efed26f0b",
+"key": "331c948dc50cb230",
 "result": "none",
 "runs": []
 },
@@ -12671,7 +12671,7 @@
 "note.mass.what-nullity-fixes": {
 "failed": false,
 "findings": [],
-"key": "6c7cd72fe58e1168",
+"key": "ef74ee465d2165a2",
 "result": "none",
 "runs": []
 },
@@ -12776,7 +12776,7 @@
 "note.odd-extensions.added-axis-pseudoscalar": {
 "failed": false,
 "findings": [],
-"key": "ee4d4ee3f1f11631",
+"key": "ced09a6293089ef6",
 "result": "none",
 "runs": []
 },
@@ -12804,7 +12804,7 @@
 "note.odd-extensions.one-operator-sees-difference": {
 "failed": false,
 "findings": [],
-"key": "4a9a038e19f1da69",
+"key": "9682e3b6075dcda2",
 "result": "none",
 "runs": []
 },
@@ -13091,7 +13091,7 @@
 "note.pairing.setting-machine-verification": {
 "failed": false,
 "findings": [],
-"key": "ca877dc99c2129e2",
+"key": "deb6fce2f747e7f2",
 "result": "none",
 "runs": []
 },
@@ -13112,14 +13112,14 @@
 "note.pairing.setting-setting-what-imported": {
 "failed": false,
 "findings": [],
-"key": "4c47233b3910b973",
+"key": "3283dddacfe175c4",
 "result": "none",
 "runs": []
 },
 "note.pairing.setting-transport-moves-vacuum-transverse-derivative": {
 "failed": false,
 "findings": [],
-"key": "3132fc82b4d4cc30",
+"key": "7fbdc3e5d96a5672",
 "result": "none",
 "runs": []
 },
@@ -13455,7 +13455,7 @@
 "note.programme.setting-machine-verification": {
 "failed": false,
 "findings": [],
-"key": "371e3b197dded106",
+"key": "f2e751dc476fdd1e",
 "result": "none",
 "runs": []
 },
@@ -13504,14 +13504,14 @@
 "note.programme.setting-series-paper-paper-2": {
 "failed": false,
 "findings": [],
-"key": "8b68ac5b7d42460f",
+"key": "5357af799afff815",
 "result": "none",
 "runs": []
 },
 "note.programme.setting-seventeen-refutations": {
 "failed": false,
 "findings": [],
-"key": "a6fef8e305d65a86",
+"key": "ef2b304cb882ef5b",
 "result": "none",
 "runs": []
 },
@@ -14722,7 +14722,7 @@
 "note.singularity.euclidean-reading-sign-flagged": {
 "failed": false,
 "findings": [],
-"key": "8844861daa4919c1",
+"key": "33ad44375aed8c1b",
 "result": "none",
 "runs": []
 },
@@ -15310,7 +15310,7 @@
 "note.standard-model.setting-content-charges-chirality-2": {
 "failed": false,
 "findings": [],
-"key": "d21435d9a58de76f",
+"key": "15e275be1c92e8e7",
 "result": "none",
 "runs": []
 },
@@ -15359,7 +15359,7 @@
 "note.standard-model.setting-intermediate-symmetry-slot-pair-split": {
 "failed": false,
 "findings": [],
-"key": "f43b618b9647bf07",
+"key": "5cc1a5e9e33538a8",
 "result": "none",
 "runs": []
 },
@@ -15769,6 +15769,13 @@
 "result": "none",
 "runs": []
 },
+"note.synthesis.n-plus-orientation-datum": {
+"failed": false,
+"findings": [],
+"key": "13c7ad93f62d01af",
+"result": "none",
+"runs": []
+},
 "note.synthesis.residue-and-the-prediction": {
 "failed": false,
 "findings": [],
@@ -16059,7 +16066,7 @@
 "note.transport.exotic-embedding-inertness": {
 "failed": false,
 "findings": [],
-"key": "6af851388d8d3504",
+"key": "a837be3fbc88a458",
 "result": "none",
 "runs": []
 },
@@ -16199,7 +16206,7 @@
 "note.transport.setting-euclidean-plane-inversion-circle-riemann": {
 "failed": false,
 "findings": [],
-"key": "49a42b42a6ebb37b",
+"key": "f2cc7989551089b5",
 "result": "none",
 "runs": []
 },
@@ -16598,14 +16605,14 @@
 "obj.hawking.boundary-mode-algebra-windows-boost-dynamics": {
 "failed": false,
 "findings": [],
-"key": "493445a6e07a11b4",
+"key": "d21fffec3a2b69cd",
 "result": "none",
 "runs": []
 },
 "obj.hawking.continuum-mode-space": {
 "failed": false,
 "findings": [],
-"key": "cdee981b197d1532",
+"key": "e635ad2947d65898",
 "result": "none",
 "runs": []
 },
@@ -16703,7 +16710,7 @@
 "obj.singularity.geometric-modular-condition-g": {
 "failed": false,
 "findings": [],
-"key": "e98fc94c8de0390d",
+"key": "3c8b915386d83560",
 "result": "none",
 "runs": []
 },
@@ -16913,7 +16920,7 @@
 "obj.synthesis.cosmological-horizon-boundary-modes": {
 "failed": false,
 "findings": [],
-"key": "78f0b528719b0aa6",
+"key": "7746f833e56288e6",
 "result": "none",
 "runs": []
 },
@@ -18036,7 +18043,7 @@
 "one-relation.arrow-frequency-are-one-bit-level": {
 "failed": false,
 "findings": [],
-"key": "b5b69f795b072ed0",
+"key": "b8060584915bc7b8",
 "result": "pass",
 "runs": [
 {
@@ -18067,7 +18074,7 @@
 "one-relation.character-experience-three-record-chain-theorems": {
 "failed": false,
 "findings": [],
-"key": "9432faf61fa065b6",
+"key": "1649cf07f5f41773",
 "result": "proof-only",
 "runs": []
 },
@@ -18081,7 +18088,7 @@
 ""
 ]
 ],
-"key": "23ccbbc480b1d996",
+"key": "acd2382e7daed986",
 "result": "pass",
 "runs": [
 {
@@ -18215,7 +18222,7 @@
 "one-relation.imported-flag-arrow-superselection": {
 "failed": false,
 "findings": [],
-"key": "afaccc5f2ce78fb2",
+"key": "78c549c2ed2e9e6c",
 "result": "pass",
 "runs": [
 {
@@ -18340,7 +18347,7 @@
 "one-relation.imported-single-mode-thermality-modular-period": {
 "failed": false,
 "findings": [],
-"key": "49dd2f4964fa6626",
+"key": "7bc75cd385c932d6",
 "result": "pass",
 "runs": [
 {
@@ -18520,7 +18527,7 @@
 ""
 ]
 ],
-"key": "8ed09bcccfe09d21",
+"key": "ee58d2d86d9e6087",
 "result": "pass",
 "runs": [
 {
@@ -18548,7 +18555,7 @@
 "one-relation.record-chain-votes-measurement-without-collapse": {
 "failed": false,
 "findings": [],
-"key": "fbdb67d5ac48e1f6",
+"key": "70ebf58bee358529",
 "result": "proof-only",
 "runs": []
 },
@@ -18569,7 +18576,7 @@
 ""
 ]
 ],
-"key": "dcf22d29629a7b24",
+"key": "4b86a1fb313b4029",
 "result": "pass",
 "runs": [
 {
@@ -18722,7 +18729,7 @@
 ""
 ]
 ],
-"key": "215ab63c8a761745",
+"key": "4bdbd3124e49fb7c",
 "result": "pass",
 "runs": [
 {
@@ -18783,7 +18790,7 @@
 ""
 ]
 ],
-"key": "d3054b0ff5414324",
+"key": "c28aa24f2d389873",
 "result": "pass",
 "runs": [
 {
@@ -18852,7 +18859,7 @@
 "pairing.curvature-which-loops-move-vacuum": {
 "failed": false,
 "findings": [],
-"key": "36d1d68580d1a18b",
+"key": "4a395f13396807e9",
 "result": "pass",
 "runs": [
 {
@@ -18974,7 +18981,7 @@
 "pairing.imported-schwarzschild-connection-curvature": {
 "failed": false,
 "findings": [],
-"key": "0bbefb254083ae37",
+"key": "756705fbbc861aeb",
 "result": "pass",
 "runs": [
 {
@@ -19189,7 +19196,7 @@
 "pairing.pairing-functional-pair-creation-amplitude": {
 "failed": false,
 "findings": [],
-"key": "ad8fa0b22e3e339a",
+"key": "054dbd9c5eed22d9",
 "result": "pass",
 "runs": [
 {
@@ -19211,7 +19218,7 @@
 "pairing.regular-frame-class-vanishes-horizon-changes": {
 "failed": false,
 "findings": [],
-"key": "b20e22174dc2a241",
+"key": "c31a25ac9ac87d7f",
 "result": "pass",
 "runs": [
 {
@@ -19300,7 +19307,7 @@
 "pairing.stabiliser-parabolic-algebra-null-direction": {
 "failed": false,
 "findings": [],
-"key": "3282b69febd1e283",
+"key": "c3c90dae6827fcb2",
 "result": "pass",
 "runs": [
 {
@@ -19340,7 +19347,7 @@
 "pairing.static-frame-only-expansion-survives": {
 "failed": false,
 "findings": [],
-"key": "ce5d73ce6462e651",
+"key": "059ef4a926680bae",
 "result": "pass",
 "runs": [
 {
@@ -19383,7 +19390,7 @@
 "pairing.two-frames-share-vacuum-selected-transport": {
 "failed": false,
 "findings": [],
-"key": "3a498f505a3f1b5d",
+"key": "eeb448ba47e4f685",
 "result": "pass",
 "runs": [
 {
@@ -19418,7 +19425,7 @@
 "pred.boundary-mode-density": {
 "failed": false,
 "findings": [],
-"key": "69ca90ee8cfcabb3",
+"key": "caec476fbcfb15b3",
 "result": "none",
 "runs": []
 },
@@ -19453,7 +19460,7 @@
 "pred.leptonic-cp-trivial": {
 "failed": false,
 "findings": [],
-"key": "897165d54d4666b0",
+"key": "b3002462513e9aa2",
 "result": "none",
 "runs": []
 },
@@ -19495,7 +19502,7 @@
 "pred.no-objective-collapse": {
 "failed": false,
 "findings": [],
-"key": "2ff76d26c2d9af18",
+"key": "d747cb3df38da07c",
 "result": "none",
 "runs": []
 },
@@ -20311,7 +20318,7 @@
 ""
 ]
 ],
-"key": "a5d2999b777c5732",
+"key": "0f03281b3fa42580",
 "result": "pass",
 "runs": [
 {
@@ -21029,7 +21036,7 @@
 ""
 ]
 ],
-"key": "3f4c268f0dd0b4c4",
+"key": "b7859759a40393be",
 "result": "pass",
 "runs": [
 {
@@ -21276,7 +21283,7 @@
 ""
 ]
 ],
-"key": "c88afbe6a7277338",
+"key": "aff2b0bf90c3424e",
 "result": "pass",
 "runs": [
 {
@@ -21326,7 +21333,7 @@
 ""
 ]
 ],
-"key": "4915de6211274262",
+"key": "d4181d6f2d7b2db2",
 "result": "pass",
 "runs": [
 {
@@ -21437,7 +21444,7 @@
 ""
 ]
 ],
-"key": "0221f18b2d5ae211",
+"key": "c3cc926953abc7ed",
 "result": "pass",
 "runs": [
 {
@@ -21471,7 +21478,7 @@
 ""
 ]
 ],
-"key": "d2125ae18f55fe25",
+"key": "149bdac544ee2f3c",
 "result": "pass",
 "runs": [
 {
@@ -21514,7 +21521,7 @@
 ""
 ]
 ],
-"key": "8f05f7589ca3ea3f",
+"key": "d2433a898f48c1a6",
 "result": "pass",
 "runs": [
 {
@@ -21592,7 +21599,7 @@
 "scrambling.imported-modes-modular-inventory": {
 "failed": false,
 "findings": [],
-"key": "8ebbb4b507bd7a40",
+"key": "7be1738e0a2b5e67",
 "result": "pass",
 "runs": [
 {
@@ -21657,7 +21664,7 @@
 ""
 ]
 ],
-"key": "bcb34336520d06db",
+"key": "8a9d8e786a390a9d",
 "result": "pass",
 "runs": [
 {
@@ -21746,7 +21753,7 @@
 ""
 ]
 ],
-"key": "dfe7c467b6672863",
+"key": "00cd98a8670aca9f",
 "result": "pass",
 "runs": [
 {
@@ -21830,7 +21837,7 @@
 ""
 ]
 ],
-"key": "129a8052f15ebec7",
+"key": "a2a26b99d3ce3303",
 "result": "pass",
 "runs": [
 {
@@ -21915,7 +21922,7 @@
 ""
 ]
 ],
-"key": "e784c82b776ca3d4",
+"key": "176b465303596f8b",
 "result": "pass",
 "runs": [
 {
@@ -21950,7 +21957,7 @@
 "scrambling.return-delay-scrambling-log-recovered": {
 "failed": false,
 "findings": [],
-"key": "f32049d164c4e1b4",
+"key": "b9c8f1a3469ee23b",
 "result": "pass",
 "runs": [
 {
@@ -22051,7 +22058,7 @@
 ""
 ]
 ],
-"key": "a26ebd00f494f86d",
+"key": "156f18caee6307ca",
 "result": "pass",
 "runs": [
 {
@@ -24873,7 +24880,7 @@
 ""
 ]
 ],
-"key": "797d87bdd396af75",
+"key": "b7039f88a7e0d105",
 "result": "pass",
 "runs": [
 {
@@ -24911,7 +24918,7 @@
 ""
 ]
 ],
-"key": "2a91bf121c1c71ad",
+"key": "e484ec7e0835ed4b",
 "result": "pass",
 "runs": [
 {
@@ -25383,7 +25390,7 @@
 ""
 ]
 ],
-"key": "5fd1407d0f8471ca",
+"key": "6187ed5f8cf1499b",
 "result": "pass",
 "runs": [
 {
@@ -25419,7 +25426,7 @@
 ""
 ]
 ],
-"key": "bb4308e1b59bc4ec",
+"key": "cca3c3eac341c54b",
 "result": "pass",
 "runs": [
 {
@@ -25455,7 +25462,7 @@
 ""
 ]
 ],
-"key": "e90606651c0d16a1",
+"key": "dec715cd76744ac8",
 "result": "pass",
 "runs": [
 {
@@ -25540,7 +25547,7 @@
 ""
 ]
 ],
-"key": "6a95e201ad1c0ae4",
+"key": "b4130ab2f2968c3c",
 "result": "pass",
 "runs": [
 {
@@ -25682,7 +25689,7 @@
 ""
 ]
 ],
-"key": "c0a4b985a964d1a9",
+"key": "6c568c65cc606d99",
 "result": "pass",
 "runs": [
 {
@@ -26154,7 +26161,7 @@
 "singularity.r-regularity-fixed-locus": {
 "failed": false,
 "findings": [],
-"key": "a696d165e66abc35",
+"key": "398cc11427e508de",
 "result": "none",
 "runs": []
 },
@@ -26168,7 +26175,7 @@
 ""
 ]
 ],
-"key": "c6055bd16a813ba9",
+"key": "4c4ec72dae778718",
 "result": "pass",
 "runs": [
 {
@@ -26228,7 +26235,7 @@
 ""
 ]
 ],
-"key": "0faa4ae5938bc0b8",
+"key": "567cab5c59d28438",
 "result": "pass",
 "runs": [
 {
@@ -26279,7 +26286,7 @@
 ""
 ]
 ],
-"key": "2bd88a75d595d29a",
+"key": "57c9a83365a25e06",
 "result": "pass",
 "runs": [
 {
@@ -26493,7 +26500,7 @@
 ""
 ]
 ],
-"key": "b46f1edbca30832f",
+"key": "e6a536451a48cf79",
 "result": "pass",
 "runs": [
 {
@@ -27092,7 +27099,7 @@
 "standard-model.dating-descent": {
 "failed": false,
 "findings": [],
-"key": "65a2332093eaf79b",
+"key": "6b9307fff00c890c",
 "result": "none",
 "runs": []
 },
@@ -27466,7 +27473,7 @@
 ""
 ]
 ],
-"key": "a57cad6e83b03626",
+"key": "f99f9597f3cfa998",
 "result": "pass",
 "runs": [
 {
@@ -27779,7 +27786,7 @@
 "standard-model.imported-frozen-point-dictionary": {
 "failed": false,
 "findings": [],
-"key": "f9a1e39a6a300a16",
+"key": "2d460724b5c4e3f6",
 "result": "pass",
 "runs": [
 {
@@ -28171,7 +28178,7 @@
 ""
 ]
 ],
-"key": "270448afd8361e27",
+"key": "11657ea7f67a9944",
 "result": "pass",
 "runs": [
 {
@@ -28723,7 +28730,7 @@
 "standard-model.pair-count-dimension": {
 "failed": false,
 "findings": [],
-"key": "a470765c86eba6cf",
+"key": "1f2f689a42584620",
 "result": "pass",
 "runs": [
 {
@@ -28941,7 +28948,7 @@
 ""
 ]
 ],
-"key": "4c7f7ea67162403b",
+"key": "583ba0d69c2de17f",
 "result": "pass",
 "runs": [
 {
@@ -29924,7 +29931,7 @@
 ""
 ]
 ],
-"key": "5dfb8a8d7921baff",
+"key": "a389dd379db158ea",
 "result": "pass",
 "runs": [
 {
@@ -30018,7 +30025,7 @@
 "state-selection.rate-discharge-hypothesis-iii": {
 "failed": false,
 "findings": [],
-"key": "766952f10c3baf2f",
+"key": "218bde3601cde052",
 "result": "pass",
 "runs": [
 {
@@ -30064,7 +30071,7 @@
 "state-selection.where-fermi-dirac-comes": {
 "failed": false,
 "findings": [],
-"key": "04930fb7d2b93238",
+"key": "e7ab216cb84809b1",
 "result": "pass",
 "runs": [
 {
@@ -30312,7 +30319,7 @@
 "std-algebra.complex-clifford-algebra": {
 "failed": false,
 "findings": [],
-"key": "9208bb73020b516e",
+"key": "09c963d826addb89",
 "result": "pass",
 "runs": [
 {
@@ -30392,7 +30399,7 @@
 "std-algebra.complex-numbers": {
 "failed": false,
 "findings": [],
-"key": "065c6c9d8a0b1438",
+"key": "dd3afd7e0f9cd208",
 "result": "pass",
 "runs": [
 {
@@ -30410,7 +30417,7 @@
 "std-algebra.complexification": {
 "failed": false,
 "findings": [],
-"key": "80fbae118e280df5",
+"key": "2ca5c9bd6cc7ba83",
 "result": "pass",
 "runs": [
 {
@@ -30433,6 +30440,50 @@
 "primer.sign",
 "std-algebra.z2-grading"
 ]
+}
+]
+},
+"std-algebra.complexification-is-the-odd-extension": {
+"failed": false,
+"findings": [],
+"key": "48bf24c7a466642f",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_added_vector_makes_a_central_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"odd-extensions.volume-element-odd-dimension",
+"primer.centre"
+]
+},
+{
+"derivation": null,
+"func": "check_complexification_map_is_an_isomorphism",
+"ok": true,
+"quantities": [],
+"touched": [
+"odd-extensions.doubling-or-complexification",
+"std-algebra.complexification"
+]
+},
+{
+"derivation": null,
+"func": "check_complex_vectors_and_shifted_squares",
+"ok": true,
+"quantities": [],
+"touched": [
+"odd-extensions.volume-element-odd-dimension"
+]
+},
+{
+"derivation": null,
+"func": "check_relation_to_the_right_unit",
+"ok": true,
+"quantities": [],
+"touched": []
 }
 ]
 },
@@ -30758,7 +30809,7 @@
 "std-algebra.pauli-algebra": {
 "failed": false,
 "findings": [],
-"key": "78b60cfc17914f92",
+"key": "450a929de9626d76",
 "result": "pass",
 "runs": [
 {
@@ -31060,7 +31111,7 @@
 "std-algebra.square-roots-of-minus-one": {
 "failed": false,
 "findings": [],
-"key": "e5ea8dbbfe8660a1",
+"key": "4a04a192e0a707fa",
 "result": "pass",
 "runs": [
 {
@@ -31287,7 +31338,7 @@
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
-"key": "6109af0cb6fd7135",
+"key": "b826fdd8065ec29b",
 "result": "pass",
 "runs": [
 {
@@ -31360,7 +31411,7 @@
 "synthesis.affine-cell-boost-spreads-without-scrambling": {
 "failed": false,
 "findings": [],
-"key": "6174772633bef5ad",
+"key": "e9f49088013d304d",
 "result": "pass",
 "runs": [
 {
@@ -31408,7 +31459,7 @@
 "synthesis.array-ln2-is-zero-mode-doublet-one-tower": {
 "failed": false,
 "findings": [],
-"key": "168018732d902aff",
+"key": "36b2c7326b28f96c",
 "result": "pass",
 "runs": [
 {
@@ -31449,7 +31500,7 @@
 "synthesis.attachment-conformal-energy-is-generated-by-z": {
 "failed": false,
 "findings": [],
-"key": "0f83022126fbe1bf",
+"key": "91370a6857d7950e",
 "result": "pass",
 "runs": [
 {
@@ -31499,8 +31550,8 @@
 "quantities": [],
 "touched": [
 "field-theory.twistor-attachment",
-"synthesis.positive-conformal-energy-gives-positive-null-translations",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator",
+"synthesis.positive-conformal-energy-gives-positive-null-translations"
 ]
 }
 ]
@@ -31508,7 +31559,7 @@
 "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations": {
 "failed": false,
 "findings": [],
-"key": "00f5ae7ca117d872",
+"key": "7763751f00446a1a",
 "result": "pass",
 "runs": [
 {
@@ -31563,7 +31614,7 @@
 "synthesis.attachment-transport-is-flat-only-where-weyl-vanishes": {
 "failed": false,
 "findings": [],
-"key": "d476a586abc2315c",
+"key": "909401e9a749b83d",
 "result": "pass",
 "runs": [
 {
@@ -31773,7 +31824,7 @@
 "synthesis.boost-evolution-on-generators-is-one-unitary-group": {
 "failed": false,
 "findings": [],
-"key": "591a6896b421dece",
+"key": "89c4743562b298d0",
 "result": "pass",
 "runs": [
 {
@@ -31869,7 +31920,7 @@
 "synthesis.boundary-mode-first-law-of-entanglement": {
 "failed": false,
 "findings": [],
-"key": "70b677d9dbce19f5",
+"key": "b8a4d52c590b2aba",
 "result": "pass",
 "runs": [
 {
@@ -31929,7 +31980,7 @@
 "synthesis.boundary-mode-locality-is-descent-covariance": {
 "failed": false,
 "findings": [],
-"key": "d10d9ab0a1e805ee",
+"key": "65fdc77be28ae1fa",
 "result": "pass",
 "runs": [
 {
@@ -31966,7 +32017,7 @@
 "synthesis.boundary-mode-premises-finite-models": {
 "failed": false,
 "findings": [],
-"key": "80598fdb92d6a24e",
+"key": "fbf10a25bb3b1ffa",
 "result": "pass",
 "runs": [
 {
@@ -32058,7 +32109,7 @@
 "synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes": {
 "failed": false,
 "findings": [],
-"key": "89f287e2d50597f1",
+"key": "6898cdffc0db6614",
 "result": "pass",
 "runs": [
 {
@@ -32068,9 +32119,8 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
-"synthesis.positive-null-energy-gives-r-premises",
-"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -32080,9 +32130,8 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
-"synthesis.positive-null-energy-gives-r-premises",
-"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -32092,9 +32141,8 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
-"synthesis.positive-null-energy-gives-r-premises",
-"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -32104,11 +32152,10 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane",
 "synthesis.imported-microlocal-hadamard-condition",
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
 "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state",
-"synthesis.positive-null-energy-gives-r-premises",
-"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 }
 ]
@@ -32116,7 +32163,7 @@
 "synthesis.c-loc-entropy-clause-curvature-independent-density": {
 "failed": false,
 "findings": [],
-"key": "888a88f64ff0a829",
+"key": "6fe4ff8057e3932f",
 "result": "pass",
 "runs": [
 {
@@ -32163,7 +32210,7 @@
 "synthesis.c-loc-is-a-second-placement-of-the-count": {
 "failed": false,
 "findings": [],
-"key": "1c8727d2f0d04678",
+"key": "d83f5442422c949e",
 "result": "pass",
 "runs": [
 {
@@ -32221,7 +32268,7 @@
 "synthesis.c-loc-modular-clause-moves-no-nested-patch": {
 "failed": false,
 "findings": [],
-"key": "afb6b0b727b99606",
+"key": "63b68d1ed9dd9f32",
 "result": "pass",
 "runs": [
 {
@@ -32302,7 +32349,7 @@
 "synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase": {
 "failed": false,
 "findings": [],
-"key": "bd02118c0d1e3f45",
+"key": "d1ae50aed26f6f99",
 "result": "pass",
 "runs": [
 {
@@ -32367,10 +32414,63 @@
 }
 ]
 },
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane": {
+"failed": false,
+"findings": [],
+"key": "7b048d4cd7a7eddb",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_projectors_are_complementary_dirac_self_adjoint_idempotents",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation"
+]
+},
+{
+"derivation": null,
+"func": "check_flux_through_the_plane_is_twice_the_norm_of_the_canonical_part",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation"
+]
+},
+{
+"derivation": null,
+"func": "check_canonical_part_is_two_complex_channels",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation"
+]
+},
+{
+"derivation": null,
+"func": "check_mass_terms_enter_only_the_constraint",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation"
+]
+},
+{
+"derivation": null,
+"func": "check_covariant_maps_are_right_multiplications",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation"
+]
+}
+]
+},
 "synthesis.capacity-per-mode-independent-of-helicity": {
 "failed": false,
 "findings": [],
-"key": "4bf937a0379a7842",
+"key": "754033d52e09cb3a",
 "result": "pass",
 "runs": [
 {
@@ -32458,7 +32558,7 @@
 "synthesis.channel-phase-invisible-to-axially-covariant-completions": {
 "failed": false,
 "findings": [],
-"key": "a5c63a41657379b0",
+"key": "4a3e008df66dcfb1",
 "result": "pass",
 "runs": [
 {
@@ -32542,7 +32642,7 @@
 "synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms": {
 "failed": false,
 "findings": [],
-"key": "ee80555ffc251fc3",
+"key": "b4961a715f7e356f",
 "result": "pass",
 "runs": [
 {
@@ -32606,7 +32706,7 @@
 "synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors": {
 "failed": false,
 "findings": [],
-"key": "8b07895919102029",
+"key": "e35039ae61880043",
 "result": "pass",
 "runs": [
 {
@@ -32663,7 +32763,7 @@
 "synthesis.clausius-heat-exceeds-created-modes-killing-energy": {
 "failed": false,
 "findings": [],
-"key": "7efac639e85783b3",
+"key": "306d61565c16d584",
 "result": "pass",
 "runs": [
 {
@@ -32701,7 +32801,7 @@
 "synthesis.clausius-is-window-first-law-plus-boost-charge-conservation": {
 "failed": false,
 "findings": [],
-"key": "d71f2e47e5bdfbf1",
+"key": "986edddeb2d635b4",
 "result": "pass",
 "runs": [
 {
@@ -32768,7 +32868,7 @@
 "synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period": {
 "failed": false,
 "findings": [],
-"key": "b43e92bddb1a8c77",
+"key": "b850a0a371952f30",
 "result": "pass",
 "runs": [
 {
@@ -32830,7 +32930,7 @@
 "synthesis.clausius-route-newton-constant-is-residue": {
 "failed": false,
 "findings": [],
-"key": "b975cbb248cbb657",
+"key": "7a8f86165261ba1d",
 "result": "pass",
 "runs": [
 {
@@ -32866,7 +32966,7 @@
 "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form": {
 "failed": false,
 "findings": [],
-"key": "5f24190bbabe79c6",
+"key": "d64fc8e667cadfee",
 "result": "pass",
 "runs": [
 {
@@ -32935,7 +33035,7 @@
 "synthesis.coherent-face-vector-real-slices": {
 "failed": false,
 "findings": [],
-"key": "8b6393a4361a7f44",
+"key": "2c5dc0dc29de28b2",
 "result": "pass",
 "runs": [
 {
@@ -32972,7 +33072,7 @@
 "synthesis.cold-mirror-needs-non-equilibrium-descent": {
 "failed": false,
 "findings": [],
-"key": "db3516fc93bb53bb",
+"key": "195f0a05d2e62c34",
 "result": "pass",
 "runs": [
 {
@@ -33028,7 +33128,7 @@
 "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
 "failed": false,
 "findings": [],
-"key": "800027f6ab133967",
+"key": "0f4838813bbade0a",
 "result": "pass",
 "runs": [
 {
@@ -33097,7 +33197,7 @@
 "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
 "failed": false,
 "findings": [],
-"key": "5fcf060663e274bb",
+"key": "d75da07efe9a7ade",
 "result": "pass",
 "runs": [
 {
@@ -33106,6 +33206,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation",
 "synthesis.positive-null-energy-gives-r-premises"
 ]
 },
@@ -33116,6 +33217,7 @@
 "quantities": [],
 "touched": [
 "hawking.imported-quasi-free-kms-reduces-two",
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation",
 "synthesis.positive-null-energy-gives-r-premises"
 ]
 },
@@ -33158,7 +33260,7 @@
 "synthesis.collar-isotropy-selects-t-boost": {
 "failed": false,
 "findings": [],
-"key": "ce2ebb2d61f91c34",
+"key": "fccd89e9267f1465",
 "result": "pass",
 "runs": [
 {
@@ -33196,7 +33298,7 @@
 "synthesis.collar-kms-extension-completion-locus": {
 "failed": false,
 "findings": [],
-"key": "9463a70e9cccb464",
+"key": "48bf74fd19f00c39",
 "result": "pass",
 "runs": [
 {
@@ -33227,7 +33329,7 @@
 "synthesis.collar-kms-extension-three-flows": {
 "failed": false,
 "findings": [],
-"key": "cda1e483d3809e5b",
+"key": "f3780df55e3df102",
 "result": "pass",
 "runs": [
 {
@@ -33255,7 +33357,7 @@
 "synthesis.collar-temperature-fixed-locally-by-r-loc": {
 "failed": false,
 "findings": [],
-"key": "63b114fd310cbaf9",
+"key": "dfbb5e2c9d41a02e",
 "result": "pass",
 "runs": [
 {
@@ -33322,7 +33424,7 @@
 "synthesis.complex-neutrino-stages-keep-the-solar-sum-rule": {
 "failed": false,
 "findings": [],
-"key": "b4c54d4af7f9aaf9",
+"key": "20d086e46f7d4b45",
 "result": "pass",
 "runs": [
 {
@@ -33507,7 +33609,7 @@
 "synthesis.counted-unit-energy-at-half-offset": {
 "failed": false,
 "findings": [],
-"key": "d946a1190ea15bff",
+"key": "df49b58f3eda12e1",
 "result": "pass",
 "runs": [
 {
@@ -33557,7 +33659,7 @@
 "synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch": {
 "failed": false,
 "findings": [],
-"key": "77f6c5f1b91e2386",
+"key": "9a9b7c1cf068ee0b",
 "result": "pass",
 "runs": [
 {
@@ -33658,7 +33760,7 @@
 "synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation": {
 "failed": false,
 "findings": [],
-"key": "beda61ba63c52ead",
+"key": "858b1319ea5993a8",
 "result": "pass",
 "runs": [
 {
@@ -33847,7 +33949,7 @@
 "synthesis.cutoff-count-is-not-a-local-density-on-sds": {
 "failed": false,
 "findings": [],
-"key": "35a9aeea50d43814",
+"key": "e6aaeef2ddd6b181",
 "result": "pass",
 "runs": [
 {
@@ -33902,7 +34004,7 @@
 "synthesis.de-sitter-entropy-pi-n-squared": {
 "failed": false,
 "findings": [],
-"key": "63293e0015358372",
+"key": "11f1b7e8a09310e5",
 "result": "pass",
 "runs": [
 {
@@ -33922,7 +34024,7 @@
 "synthesis.de-sitter-field-fixes-the-observer-tube-point": {
 "failed": false,
 "findings": [],
-"key": "46b57f63e9fefdab",
+"key": "9272623c0b7ba5dc",
 "result": "pass",
 "runs": [
 {
@@ -34114,7 +34216,7 @@
 "synthesis.de-sitter-mode-count": {
 "failed": false,
 "findings": [],
-"key": "4ef21850a092db24",
+"key": "08cacdd0fdabbac5",
 "result": "pass",
 "runs": [
 {
@@ -34191,7 +34293,7 @@
 "synthesis.de-sitter-temperature-frozen-point-norm": {
 "failed": false,
 "findings": [],
-"key": "8771709f1ae52850",
+"key": "31d60678621cdf75",
 "result": "pass",
 "runs": [
 {
@@ -34241,7 +34343,7 @@
 "synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite": {
 "failed": false,
 "findings": [],
-"key": "63c5eac324c1e74d",
+"key": "8c7f1e57e588f747",
 "result": "pass",
 "runs": [
 {
@@ -34373,7 +34475,7 @@
 "synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface": {
 "failed": false,
 "findings": [],
-"key": "ee2c90e9acc18b9b",
+"key": "92bf0d47f39eb3f5",
 "result": "pass",
 "runs": [
 {
@@ -34443,7 +34545,7 @@
 "synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car": {
 "failed": false,
 "findings": [],
-"key": "4fdcbefd12c4109f",
+"key": "bb642be2ae632305",
 "result": "pass",
 "runs": [
 {
@@ -34741,7 +34843,7 @@
 "synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity": {
 "failed": false,
 "findings": [],
-"key": "9a3bfc4042e172d1",
+"key": "cc128390dd22aa14",
 "result": "pass",
 "runs": [
 {
@@ -34980,7 +35082,7 @@
 "synthesis.even-slots-need-a-spectator-generator": {
 "failed": false,
 "findings": [],
-"key": "b9815caaa2c719f8",
+"key": "40158b2631040bfa",
 "result": "pass",
 "runs": [
 {
@@ -35029,7 +35131,7 @@
 "synthesis.eviction-keeps-one-of-catalan-many-replica-saddles": {
 "failed": false,
 "findings": [],
-"key": "8bec46145535b9c8",
+"key": "b856bf54a8c6c4b4",
 "result": "pass",
 "runs": [
 {
@@ -35181,7 +35283,7 @@
 "synthesis.face-mass-form-unit-plus-gram": {
 "failed": false,
 "findings": [],
-"key": "249aeaae587923ae",
+"key": "269e404960d034ac",
 "result": "pass",
 "runs": [
 {
@@ -35208,7 +35310,7 @@
 "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group": {
 "failed": false,
 "findings": [],
-"key": "0aff8411d06e2d21",
+"key": "a3c795d622a6e35a",
 "result": "pass",
 "runs": [
 {
@@ -35329,7 +35431,7 @@
 "synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces": {
 "failed": false,
 "findings": [],
-"key": "683c939bfc998a92",
+"key": "d2e8dcdb6235808e",
 "result": "pass",
 "runs": [
 {
@@ -35431,7 +35533,7 @@
 "synthesis.finite-range-descent-deposit-cannot-seed-cmb": {
 "failed": false,
 "findings": [],
-"key": "13d123af7a5818af",
+"key": "0d40b0d647679147",
 "result": "pass",
 "runs": [
 {
@@ -35482,7 +35584,7 @@
 "synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst": {
 "failed": false,
 "findings": [],
-"key": "6b40f60ae694f8df",
+"key": "6314bcebdcf719cc",
 "result": "pass",
 "runs": [
 {
@@ -35573,10 +35675,45 @@
 }
 ]
 },
+"synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet": {
+"failed": false,
+"findings": [],
+"key": "7161914dfea72495",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_exterior_fock_module_is_cpt_closed_only_for_one_doublet",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality"
+]
+},
+{
+"derivation": null,
+"func": "check_symmetric_fock_module_is_never_cpt_closed",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality"
+]
+},
+{
+"derivation": null,
+"func": "check_weak_triplet_in_the_two_slot_space_by_null_pairs",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality"
+]
+}
+]
+},
 "synthesis.frozen-phase-spectrum-not-red": {
 "failed": false,
 "findings": [],
-"key": "b0399d3cebeed1dd",
+"key": "32169d085caf5527",
 "result": "pass",
 "runs": [
 {
@@ -35766,7 +35903,7 @@
 "synthesis.frozen-point-geometry-reads-descent-as-vacuum": {
 "failed": false,
 "findings": [],
-"key": "d634c572f7a5eaf6",
+"key": "0105dcb992eac113",
 "result": "pass",
 "runs": [
 {
@@ -36094,7 +36231,7 @@
 "synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "99541bb3a1099cb1",
+"key": "ba92e720aed8e57a",
 "result": "pass",
 "runs": [
 {
@@ -36103,7 +36240,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -36112,7 +36249,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises",
+"synthesis.null-vacuum-on-a-horizon-generator",
 "synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state"
 ]
 },
@@ -36123,7 +36260,7 @@
 "quantities": [],
 "touched": [
 "synthesis.imported-powers-stormer-takesaki-disjointness",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -36132,7 +36269,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -36141,7 +36278,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 }
 ]
@@ -36310,7 +36447,7 @@
 "synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands": {
 "failed": false,
 "findings": [],
-"key": "e266cbc5545cf1ac",
+"key": "825e9694a58e7480",
 "result": "pass",
 "runs": [
 {
@@ -36391,7 +36528,7 @@
 "synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field": {
 "failed": false,
 "findings": [],
-"key": "271af1f854ad2cfc",
+"key": "18af4ecf7ae2fc45",
 "result": "pass",
 "runs": [
 {
@@ -36471,7 +36608,7 @@
 "synthesis.hadamard-scaling-limit-premise": {
 "failed": false,
 "findings": [],
-"key": "63d8ec59f9316e82",
+"key": "1012adb54e84607d",
 "result": "pass",
 "runs": [
 {
@@ -36517,7 +36654,7 @@
 "synthesis.half-integer-weight-array-carries-half-ln2": {
 "failed": false,
 "findings": [],
-"key": "360b9759df3beee6",
+"key": "fbf5ed8a03082872",
 "result": "pass",
 "runs": [
 {
@@ -36604,7 +36741,7 @@
 "synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window": {
 "failed": false,
 "findings": [],
-"key": "ac5356653b669226",
+"key": "59f57d372a550570",
 "result": "pass",
 "runs": [
 {
@@ -36721,7 +36858,7 @@
 "synthesis.imported-alvarez-gaume-witten-local-anomalies": {
 "failed": false,
 "findings": [],
-"key": "b002430ff7d9d953",
+"key": "b9b0ca2007ad4393",
 "result": "none",
 "runs": []
 },
@@ -36756,14 +36893,14 @@
 "synthesis.imported-bessel-reduction-and-small-argument-hankel-forms": {
 "failed": false,
 "findings": [],
-"key": "2c7c36d21786320a",
+"key": "1e7bfe1a74226fcc",
 "result": "none",
 "runs": []
 },
 "synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions": {
 "failed": false,
 "findings": [],
-"key": "d89f7950dc4f4755",
+"key": "0469ac661cdfbb25",
 "result": "none",
 "runs": []
 },
@@ -36784,7 +36921,7 @@
 "synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability": {
 "failed": false,
 "findings": [],
-"key": "0b9e4b5a79c7f68e",
+"key": "c7357adda6968932",
 "result": "none",
 "runs": []
 },
@@ -36833,7 +36970,7 @@
 "synthesis.imported-de-sitter-invariant-hadamard-state-unique": {
 "failed": false,
 "findings": [],
-"key": "c441a02b6180271e",
+"key": "bdd9ec3f975e89cb",
 "result": "none",
 "runs": []
 },
@@ -36847,14 +36984,14 @@
 "synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field": {
 "failed": false,
 "findings": [],
-"key": "08959ffce6dd06e1",
+"key": "8007f68978b09bfd",
 "result": "none",
 "runs": []
 },
 "synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard": {
 "failed": false,
 "findings": [],
-"key": "5b187e1265ef7ae7",
+"key": "438780891a5e7512",
 "result": "none",
 "runs": []
 },
@@ -36917,14 +37054,14 @@
 "synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem": {
 "failed": false,
 "findings": [],
-"key": "6e4bb7adb2006c80",
+"key": "d9ca030217d9fa2c",
 "result": "none",
 "runs": []
 },
 "synthesis.imported-fritzsch-texture-cabibbo-formula": {
 "failed": false,
 "findings": [],
-"key": "96641cba600a0f58",
+"key": "3030539e4c50762e",
 "result": "none",
 "runs": []
 },
@@ -36980,7 +37117,7 @@
 "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport": {
 "failed": false,
 "findings": [],
-"key": "1325b92bd9babb59",
+"key": "453811b6d03f962d",
 "result": "none",
 "runs": []
 },
@@ -37099,7 +37236,7 @@
 "synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem": {
 "failed": false,
 "findings": [],
-"key": "eabc1e42a4379ddd",
+"key": "6616591716387411",
 "result": "none",
 "runs": []
 },
@@ -37113,7 +37250,7 @@
 "synthesis.imported-left-right-bidoublet-two-yukawa-couplings": {
 "failed": false,
 "findings": [],
-"key": "e415457b0d98b059",
+"key": "a5aecfd4424e468e",
 "result": "none",
 "runs": []
 },
@@ -37134,7 +37271,7 @@
 "synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion": {
 "failed": false,
 "findings": [],
-"key": "c7338b3aafe2dd44",
+"key": "13bfbf659c8647db",
 "result": "none",
 "runs": []
 },
@@ -37190,7 +37327,7 @@
 "synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra": {
 "failed": false,
 "findings": [],
-"key": "88980d896d17dcfb",
+"key": "7cf9721bce030216",
 "result": "none",
 "runs": []
 },
@@ -37211,7 +37348,7 @@
 "synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection": {
 "failed": false,
 "findings": [],
-"key": "5a9bba8ab6134595",
+"key": "aa56819b3c8271b9",
 "result": "none",
 "runs": []
 },
@@ -37274,7 +37411,7 @@
 "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators": {
 "failed": false,
 "findings": [],
-"key": "83c1bafec1bcda1d",
+"key": "cd18a581ee6d1c64",
 "result": "none",
 "runs": []
 },
@@ -37442,7 +37579,7 @@
 "synthesis.imported-theta-function-identities": {
 "failed": false,
 "findings": [],
-"key": "abba663a658d2756",
+"key": "6de076af18ba827f",
 "result": "none",
 "runs": []
 },
@@ -37538,7 +37675,7 @@
 "synthesis.incidence-vacua-thermofield-real-capacity": {
 "failed": false,
 "findings": [],
-"key": "8a3af82159fbfd76",
+"key": "0feb5cdabf44fa78",
 "result": "pass",
 "runs": [
 {
@@ -37656,7 +37793,7 @@
 "synthesis.injection-freshness-is-pair-purity": {
 "failed": false,
 "findings": [],
-"key": "9565cab150284578",
+"key": "6d1d3fc1535f5044",
 "result": "pass",
 "runs": [
 {
@@ -37700,7 +37837,7 @@
 "synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent": {
 "failed": false,
 "findings": [],
-"key": "1a1d0b3aa6897be7",
+"key": "67ac1fe4407f1ce9",
 "result": "pass",
 "runs": [
 {
@@ -37767,7 +37904,7 @@
 "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number": {
 "failed": false,
 "findings": [],
-"key": "6b00ffeed49dd207",
+"key": "6dce96e10cf5a8d0",
 "result": "pass",
 "runs": [
 {
@@ -37984,10 +38121,45 @@
 }
 ]
 },
+"synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space": {
+"failed": false,
+"findings": [],
+"key": "acfc760066d18367",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_both_slot_conventions_obey_the_car_and_differ_by_the_pair_parity",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.even-slots-need-a-spectator-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_split_preserving_bivectors_and_grading_are_convention_free",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.even-slots-need-a-spectator-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_the_klein_twist_is_unique_up_to_sign",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.blade-square-signs-f2-quadratic-form"
+]
+}
+]
+},
 "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
 "failed": false,
 "findings": [],
-"key": "dd9bee1b31dc5947",
+"key": "b4f369b3ea874a39",
 "result": "pass",
 "runs": [
 {
@@ -38054,7 +38226,7 @@
 "synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
 "failed": false,
 "findings": [],
-"key": "8b538db558168dab",
+"key": "ce0d3178fd15fbb2",
 "result": "pass",
 "runs": [
 {
@@ -38160,7 +38332,7 @@
 "synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching": {
 "failed": false,
 "findings": [],
-"key": "e14f8aef1ef114e1",
+"key": "12f5ca8f5b365f76",
 "result": "pass",
 "runs": [
 {
@@ -38197,7 +38369,7 @@
 "synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points": {
 "failed": false,
 "findings": [],
-"key": "cd99def22fced5de",
+"key": "c666a664e02626d5",
 "result": "pass",
 "runs": [
 {
@@ -38233,7 +38405,7 @@
 "synthesis.kasner-hidden-scale-coupled-scalars-stay-blue": {
 "failed": false,
 "findings": [],
-"key": "2a983ffeb6f1d16e",
+"key": "76582ac401e54b92",
 "result": "pass",
 "runs": [
 {
@@ -38466,7 +38638,7 @@
 "synthesis.kerr-ring-count-misses-area-law": {
 "failed": false,
 "findings": [],
-"key": "3e344775d3e42349",
+"key": "5b906d7f25041f76",
 "result": "pass",
 "runs": [
 {
@@ -38562,7 +38734,7 @@
 "synthesis.killing-clock-weights-binary-residue": {
 "failed": false,
 "findings": [],
-"key": "2541a66b9eaf1955",
+"key": "aa74ba7baeb3a910",
 "result": "pass",
 "runs": [
 {
@@ -38630,7 +38802,7 @@
 "synthesis.killing-horizon-value-factor-is-the-generator-boost": {
 "failed": false,
 "findings": [],
-"key": "67b0bf400b4d4380",
+"key": "34351a0c87fb4a70",
 "result": "pass",
 "runs": [
 {
@@ -38687,7 +38859,7 @@
 "synthesis.koide-channel-phase-is-no-symmetry-angle": {
 "failed": false,
 "findings": [],
-"key": "9b4a4273dfdd02a7",
+"key": "0face0454fead260",
 "result": "pass",
 "runs": [
 {
@@ -38837,7 +39009,7 @@
 "synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike": {
 "failed": false,
 "findings": [],
-"key": "c15a58066fe880db",
+"key": "96c19d764438a7c3",
 "result": "pass",
 "runs": [
 {
@@ -38907,7 +39079,7 @@
 "synthesis.lens-space-wall-rung-count-sees-the-integral-twist": {
 "failed": false,
 "findings": [],
-"key": "2ec81b28261d4fab",
+"key": "adc4df47be69b890",
 "result": "pass",
 "runs": [
 {
@@ -38960,7 +39132,7 @@
 "synthesis.light-cone-koide-is-quarter-turn": {
 "failed": false,
 "findings": [],
-"key": "496ddd8e5de0272e",
+"key": "53494208958ad006",
 "result": "pass",
 "runs": [
 {
@@ -39010,7 +39182,7 @@
 "synthesis.light-pair-split-needs-broken-source-stabiliser": {
 "failed": false,
 "findings": [],
-"key": "313b627e80769199",
+"key": "ce060f57bd5d558a",
 "result": "pass",
 "runs": [
 {
@@ -39049,7 +39221,7 @@
 "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays": {
 "failed": false,
 "findings": [],
-"key": "c418978b9fcdeafe",
+"key": "a329f8e588ddbc0b",
 "result": "pass",
 "runs": [
 {
@@ -39059,7 +39231,7 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane"
 ]
 },
 {
@@ -39069,7 +39241,7 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -39117,7 +39289,7 @@
 "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum": {
 "failed": false,
 "findings": [],
-"key": "afd0203d2ad8b3eb",
+"key": "de419e593999ddf2",
 "result": "pass",
 "runs": [
 {
@@ -39197,7 +39369,7 @@
 "synthesis.loc-independent-of-clausius-and-killing-data": {
 "failed": false,
 "findings": [],
-"key": "345277f90a5f65f2",
+"key": "4d2f9078473443e3",
 "result": "pass",
 "runs": [
 {
@@ -39226,7 +39398,7 @@
 "synthesis.local-boost-temperature-is-local-regularity": {
 "failed": false,
 "findings": [],
-"key": "d379bbeb0d88000b",
+"key": "1b277f93b2e97788",
 "result": "pass",
 "runs": [
 {
@@ -39279,7 +39451,7 @@
 "synthesis.local-conversion-cannot-redden-a-gaussian-spectator": {
 "failed": false,
 "findings": [],
-"key": "82732de11a802c29",
+"key": "0939c5b6a5544d8f",
 "result": "pass",
 "runs": [
 {
@@ -39333,7 +39505,7 @@
 "synthesis.local-normality-at-the-edge-gives-the-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "558b9b3c197a4bf0",
+"key": "2837e04046cf5d3e",
 "result": "pass",
 "runs": [
 {
@@ -39342,8 +39514,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet",
-"synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit"
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
 ]
 },
 {
@@ -39361,8 +39533,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises",
-"synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit"
+"synthesis.null-vacuum-on-a-horizon-generator",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
 ]
 },
 {
@@ -39371,7 +39543,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet"
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation"
 ]
 }
 ]
@@ -39379,7 +39551,7 @@
 "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics": {
 "failed": false,
 "findings": [],
-"key": "ef6213e89fcfb39e",
+"key": "3a8a29b98115af7c",
 "result": "pass",
 "runs": [
 {
@@ -39555,7 +39727,7 @@
 "synthesis.majorana-element-is-null-blade-no-frozen-point-condition": {
 "failed": false,
 "findings": [],
-"key": "f2cd9c5e4b8a8e3b",
+"key": "12b5702e84c95aa5",
 "result": "pass",
 "runs": [
 {
@@ -39599,7 +39771,7 @@
 "synthesis.majorana-scale-free-on-pati-salam-route": {
 "failed": false,
 "findings": [],
-"key": "d1166ce8c46c41dc",
+"key": "cbbffa2baca1e685",
 "result": "pass",
 "runs": [
 {
@@ -39685,7 +39857,7 @@
 "synthesis.majorana-scale-not-carried-by-rung-frame-boost": {
 "failed": false,
 "findings": [],
-"key": "0649f617a9094099",
+"key": "08bd968c584febe9",
 "result": "pass",
 "runs": [
 {
@@ -39763,7 +39935,7 @@
 "synthesis.many-twistor-join": {
 "failed": false,
 "findings": [],
-"key": "8aeddd3e3c73e506",
+"key": "372ab452cabe64bc",
 "result": "pass",
 "runs": [
 {
@@ -39877,7 +40049,7 @@
 "synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard": {
 "failed": false,
 "findings": [],
-"key": "3c91de92442aa95d",
+"key": "b9fc43cb0d851c8c",
 "result": "pass",
 "runs": [
 {
@@ -39953,6 +40125,48 @@
 }
 ]
 },
+"synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality": {
+"failed": false,
+"findings": [],
+"key": "dfd1a180348e44eb",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_null_kernel_locks_helicity_to_the_frequency_sign",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.fock-space-maxwell-modes"
+]
+},
+{
+"derivation": null,
+"func": "check_the_unit_is_minus_chirality_times_the_charge_rotation",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.fock-space-maxwell-modes"
+]
+},
+{
+"derivation": null,
+"func": "check_lorentz_covariant_maps_are_right_multiplications",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_discrete_maps_flip_frequency_sign_and_chirality_independently",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.fock-space-maxwell-modes"
+]
+}
+]
+},
 "synthesis.matter-asymmetry-registered-free-input": {
 "failed": false,
 "findings": [],
@@ -39963,7 +40177,7 @@
 "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "64f30860fb274890",
+"key": "33f54a02761250c2",
 "result": "pass",
 "runs": [
 {
@@ -39973,7 +40187,7 @@
 "quantities": [],
 "touched": [
 "synthesis.local-normality-at-the-edge-gives-the-null-ground-state",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -39983,7 +40197,7 @@
 "quantities": [],
 "touched": [
 "synthesis.local-normality-at-the-edge-gives-the-null-ground-state",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -40002,7 +40216,7 @@
 "quantities": [],
 "touched": [
 "synthesis.local-normality-at-the-edge-gives-the-null-ground-state",
-"synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit"
+"synthesis.stationary-generator-states-and-the-edge-scaling"
 ]
 }
 ]
@@ -40010,7 +40224,7 @@
 "synthesis.mirror-asymmetry-route-one": {
 "failed": false,
 "findings": [],
-"key": "fbef1245fc86daf1",
+"key": "4aede9d21f28444c",
 "result": "pass",
 "runs": [
 {
@@ -40079,7 +40293,7 @@
 "synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i": {
 "failed": false,
 "findings": [],
-"key": "f5c46f3668671a1f",
+"key": "2df8f3d815f706f5",
 "result": "pass",
 "runs": [
 {
@@ -40098,7 +40312,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -40108,7 +40322,7 @@
 "quantities": [],
 "touched": [
 "angle.imported-theorems-deliver-their-hypotheses",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -40125,7 +40339,7 @@
 "synthesis.modular-period-on-values-is-the-dual-plane-turn": {
 "failed": false,
 "findings": [],
-"key": "ecfb0caca6c8acce",
+"key": "22708735f10802c6",
 "result": "pass",
 "runs": [
 {
@@ -40166,14 +40380,14 @@
 "synthesis.n-plus-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "4b2314ffeb39931d",
+"key": "dfc5bf66737258d6",
 "result": "none",
 "runs": []
 },
 "synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5": {
 "failed": false,
 "findings": [],
-"key": "1115b7dc8c1cbe1c",
+"key": "fed155ba0fab058b",
 "result": "pass",
 "runs": [
 {
@@ -40409,7 +40623,7 @@
 "synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state": {
 "failed": false,
 "findings": [],
-"key": "a266e6b1b195e71e",
+"key": "55400bd15210cee7",
 "result": "pass",
 "runs": [
 {
@@ -40419,7 +40633,7 @@
 "quantities": [],
 "touched": [
 "synthesis.attachment-conformal-energy-is-generated-by-z",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -40438,7 +40652,7 @@
 "quantities": [],
 "touched": [
 "synthesis.local-normality-at-the-edge-gives-the-null-ground-state",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -40447,8 +40661,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet",
-"synthesis.local-normality-at-the-edge-gives-the-null-ground-state"
+"synthesis.local-normality-at-the-edge-gives-the-null-ground-state",
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation"
 ]
 },
 {
@@ -40467,8 +40681,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet",
-"synthesis.imported-powers-stormer-takesaki-disjointness"
+"synthesis.imported-powers-stormer-takesaki-disjointness",
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation"
 ]
 }
 ]
@@ -40476,7 +40690,7 @@
 "synthesis.null-ordering-of-counted-units-is-zeta-symmetric": {
 "failed": false,
 "findings": [],
-"key": "20b20ef8f22d4aea",
+"key": "a87b17f57e39105b",
 "result": "pass",
 "runs": [
 {
@@ -40520,10 +40734,96 @@
 }
 ]
 },
+"synthesis.null-vacuum-on-a-horizon-generator": {
+"failed": false,
+"findings": [],
+"key": "c30605cd97ae9e34",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_boost_dilates_the_null_translations",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_ground_state_symbol_is_the_filled_sea",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_null_vacuum_kernel_and_anticommutator",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_half_generator_strip_is_kms_at_two_pi",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"hawking.imported-quasi-free-kms-reduces-two"
+]
+},
+{
+"derivation": null,
+"func": "check_past_half_is_kms_for_the_future_boost",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"hawking.imported-quasi-free-kms-reduces-two"
+]
+},
+{
+"derivation": null,
+"func": "check_mellin_symbol_is_the_i_state_at_two_pi",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"hawking.imported-ideal-fermi-gas-uniqueness"
+]
+}
+]
+},
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation": {
+"failed": false,
+"findings": [],
+"key": "60c32944a41c1a55",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_regular_reparametrisation_keeps_the_ground_state_singularity",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_scaling_limit_is_the_ground_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.imported-quasi-free-kms-reduces-two",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+}
+]
+},
 "synthesis.number-diagonal-dynamics-spreads-nothing": {
 "failed": false,
 "findings": [],
-"key": "98acbb90b2b0c11f",
+"key": "9b8ebd0b66224a59",
 "result": "pass",
 "runs": [
 {
@@ -40559,7 +40859,7 @@
 "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint": {
 "failed": false,
 "findings": [],
-"key": "e730d605de75291c",
+"key": "3f3d1ca21a8374e7",
 "result": "pass",
 "runs": [
 {
@@ -40608,7 +40908,7 @@
 "synthesis.one-loop-qed-in-the-spacetime-algebra": {
 "failed": false,
 "findings": [],
-"key": "0470f5d11b5fae71",
+"key": "a2c597441aab9f7a",
 "result": "pass",
 "runs": [
 {
@@ -40722,7 +41022,7 @@
 "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants": {
 "failed": false,
 "findings": [],
-"key": "86d4dbc900f464ed",
+"key": "74b686dbab6ef48f",
 "result": "pass",
 "runs": [
 {
@@ -40842,7 +41142,7 @@
 "synthesis.operator-join-ordering-constants": {
 "failed": false,
 "findings": [],
-"key": "a442620757431bb9",
+"key": "06fc1f6fc497d130",
 "result": "pass",
 "runs": [
 {
@@ -40941,7 +41241,7 @@
 "synthesis.operator-join-positive-energy-no-finite-energy-zero-modes": {
 "failed": false,
 "findings": [],
-"key": "14006d289877b15b",
+"key": "e51a404da2a7bccc",
 "result": "pass",
 "runs": [
 {
@@ -40990,7 +41290,7 @@
 "synthesis.operator-join-seed-has-no-diagonal-matrix-elements": {
 "failed": false,
 "findings": [],
-"key": "912a0b6cffa2c8a2",
+"key": "493789ebc1648157",
 "result": "pass",
 "runs": [
 {
@@ -41039,7 +41339,7 @@
 "synthesis.pair-singlet-mass-form-is-floor-plus-face-density": {
 "failed": false,
 "findings": [],
-"key": "50d9bd31994a96b1",
+"key": "f4201b3cc7b3c571",
 "result": "pass",
 "runs": [
 {
@@ -41127,7 +41427,7 @@
 "synthesis.pati-salam-chain-defects-cannot-source-spectrum": {
 "failed": false,
 "findings": [],
-"key": "79a1a889e6a7ce47",
+"key": "9d376c116dd13440",
 "result": "pass",
 "runs": [
 {
@@ -41252,7 +41552,7 @@
 "synthesis.phase-flow-is-time-rotor-flow-kms-continuation": {
 "failed": false,
 "findings": [],
-"key": "256a9c7b3d4963ef",
+"key": "8bd452d4e449238b",
 "result": "pass",
 "runs": [
 {
@@ -41349,7 +41649,7 @@
 "synthesis.plane-grading-records-residue-sign": {
 "failed": false,
 "findings": [],
-"key": "687c76d6634d3676",
+"key": "5b4e293aeca64cdd",
 "result": "pass",
 "runs": [
 {
@@ -41450,7 +41750,7 @@
 "synthesis.point-spectrum-boost-admits-no-half-sided-translations": {
 "failed": false,
 "findings": [],
-"key": "1d960740fe45e4fd",
+"key": "df2be2b7e84cbaa0",
 "result": "pass",
 "runs": [
 {
@@ -41479,7 +41779,7 @@
 "synthesis.positive-conformal-energy-gives-positive-null-translations": {
 "failed": false,
 "findings": [],
-"key": "5a3dabe5a3df561f",
+"key": "50e440e1777972b7",
 "result": "pass",
 "runs": [
 {
@@ -41517,7 +41817,7 @@
 "synthesis.positive-energy-selects-rule-2-sign": {
 "failed": false,
 "findings": [],
-"key": "19ebf92b4adcf1b3",
+"key": "100700eab340235b",
 "result": "pass",
 "runs": [
 {
@@ -41547,7 +41847,7 @@
 "synthesis.positive-null-energy-gives-r-premises": {
 "failed": false,
 "findings": [],
-"key": "904a17c3d739b772",
+"key": "935c77191e9b3614",
 "result": "pass",
 "runs": [
 {
@@ -41558,7 +41858,8 @@
 "touched": [
 "hawking.i-state-continuum",
 "hawking.imported-quasi-free-kms-reduces-two",
-"synthesis.n-plus-null-ground-state"
+"synthesis.n-plus-null-ground-state",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -41568,7 +41869,8 @@
 "quantities": [],
 "touched": [
 "hawking.i-state-continuum",
-"hawking.imported-quasi-free-kms-reduces-two"
+"hawking.imported-quasi-free-kms-reduces-two",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -41579,7 +41881,8 @@
 "touched": [
 "hawking.i-state-continuum",
 "hawking.imported-ideal-fermi-gas-uniqueness",
-"synthesis.n-plus-null-ground-state"
+"synthesis.n-plus-null-ground-state",
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -41626,7 +41929,7 @@
 "synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale": {
 "failed": false,
 "findings": [],
-"key": "415d4c1b9f2cdb80",
+"key": "8445d366d37f3227",
 "result": "pass",
 "runs": [
 {
@@ -41666,7 +41969,7 @@
 "synthesis.positive-structure-is-twistor-form-at-imaginary-time": {
 "failed": false,
 "findings": [],
-"key": "059486cb59d841c0",
+"key": "d3cd4d0b22ddae5c",
 "result": "pass",
 "runs": [
 {
@@ -41896,7 +42199,7 @@
 "synthesis.q-splits-maximum-entropy-affine-weights": {
 "failed": false,
 "findings": [],
-"key": "7b85d6a9e64a094a",
+"key": "47ecddfcee185922",
 "result": "pass",
 "runs": [
 {
@@ -41960,7 +42263,7 @@
 "synthesis.quadratic-flows-cannot-thermalise-descent": {
 "failed": false,
 "findings": [],
-"key": "6ecf59bbf142a387",
+"key": "cd670da07e947e1a",
 "result": "pass",
 "runs": [
 {
@@ -42018,7 +42321,7 @@
 "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta": {
 "failed": false,
 "findings": [],
-"key": "41a458fe2df2193e",
+"key": "53275bcac5fa079d",
 "result": "pass",
 "runs": [
 {
@@ -42093,7 +42396,7 @@
 "synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise": {
 "failed": false,
 "findings": [],
-"key": "bf4ecf58dcfc4819",
+"key": "5ba01b9b32f411de",
 "result": "pass",
 "runs": [
 {
@@ -42154,14 +42457,14 @@
 "synthesis.r-lambda-regularity-cosmological-horizon": {
 "failed": false,
 "findings": [],
-"key": "3ed7838668132f89",
+"key": "08fdf7064a9b9d61",
 "result": "none",
 "runs": []
 },
 "synthesis.r-le-i-independent-spectrum-condition-separates": {
 "failed": false,
 "findings": [],
-"key": "44b41b4792b2e8c2",
+"key": "1c5b40ba9f6c025f",
 "result": "pass",
 "runs": [
 {
@@ -42188,7 +42491,7 @@
 "synthesis.r-loc-independent-sets-matter-coupling": {
 "failed": false,
 "findings": [],
-"key": "6f5664c79c90329c",
+"key": "b35bc716c15a7cb8",
 "result": "pass",
 "runs": [
 {
@@ -42234,7 +42537,7 @@
 "synthesis.r-loc-needs-sheet-labelled-modes": {
 "failed": false,
 "findings": [],
-"key": "07053fda3ddfe34b",
+"key": "9e6c23497713f7c2",
 "result": "pass",
 "runs": [
 {
@@ -42344,7 +42647,7 @@
 "synthesis.real-structure-breaks-source-stabiliser-to-z2": {
 "failed": false,
 "findings": [],
-"key": "f88f8220bff37789",
+"key": "887f2428a393ad9f",
 "result": "pass",
 "runs": [
 {
@@ -42396,7 +42699,7 @@
 "synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns": {
 "failed": false,
 "findings": [],
-"key": "54e4abd825aa19be",
+"key": "12a9a05f06d119a5",
 "result": "pass",
 "runs": [
 {
@@ -42456,7 +42759,7 @@
 "synthesis.residue-common-weight-particle-hole": {
 "failed": false,
 "findings": [],
-"key": "9704ce052b29f98f",
+"key": "f706b0b461260f5d",
 "result": "pass",
 "runs": [
 {
@@ -42543,7 +42846,7 @@
 "synthesis.residues-zero-four-real-chirality-anomaly": {
 "failed": false,
 "findings": [],
-"key": "a2c98fbbce7c5912",
+"key": "ba1dcdb32c81f184",
 "result": "pass",
 "runs": [
 {
@@ -42582,7 +42885,7 @@
 "synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel": {
 "failed": false,
 "findings": [],
-"key": "0598f38c3d965247",
+"key": "b9fbdc6b006c45ec",
 "result": "pass",
 "runs": [
 {
@@ -42738,7 +43041,7 @@
 "synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading": {
 "failed": false,
 "findings": [],
-"key": "c4cc3e6e0737a182",
+"key": "90d5bfe6ea8ad66f",
 "result": "pass",
 "runs": [
 {
@@ -42875,7 +43178,7 @@
 "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix": {
 "failed": false,
 "findings": [],
-"key": "a6d915d782753785",
+"key": "9c57b386ab2faa07",
 "result": "pass",
 "runs": [
 {
@@ -42946,7 +43249,7 @@
 "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": {
 "failed": false,
 "findings": [],
-"key": "45fa2aa4b5715a86",
+"key": "97074ce7ddda88ab",
 "result": "pass",
 "runs": [
 {
@@ -42982,7 +43285,7 @@
 "synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet": {
 "failed": false,
 "findings": [],
-"key": "f4edc15bed8b7136",
+"key": "6e1d50269f69fac5",
 "result": "pass",
 "runs": [
 {
@@ -43037,7 +43340,7 @@
 "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant": {
 "failed": false,
 "findings": [],
-"key": "d730c55e2b0ba170",
+"key": "7bc614f18addf5b2",
 "result": "pass",
 "runs": [
 {
@@ -43085,7 +43388,7 @@
 "synthesis.rung-field-on-the-lift-locus": {
 "failed": false,
 "findings": [],
-"key": "cc13c99f085bf4a2",
+"key": "1b13ad0000e3b386",
 "result": "pass",
 "runs": [
 {
@@ -43158,7 +43461,7 @@
 "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch": {
 "failed": false,
 "findings": [],
-"key": "4b7fda8accee935c",
+"key": "15b821a77fc3fe93",
 "result": "pass",
 "runs": [
 {
@@ -43249,7 +43552,7 @@
 "synthesis.rung-unit-is-frame-boost": {
 "failed": false,
 "findings": [],
-"key": "350cee050c24e893",
+"key": "3b330e2f6c9d4574",
 "result": "pass",
 "runs": [
 {
@@ -43295,7 +43598,7 @@
 "synthesis.s-wave-array-is-a-boundary-mode-set": {
 "failed": false,
 "findings": [],
-"key": "60e808fda80ad488",
+"key": "bdb5e1bcc5bf62c2",
 "result": "pass",
 "runs": [
 {
@@ -43443,7 +43746,7 @@
 "synthesis.schwarzschild-horizon-translations-are-no-conformal-symmetry": {
 "failed": false,
 "findings": [],
-"key": "0890f9dbf797859f",
+"key": "3c276d938654ac3e",
 "result": "pass",
 "runs": [
 {
@@ -43575,7 +43878,7 @@
 "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts": {
 "failed": false,
 "findings": [],
-"key": "6492c16e5391687d",
+"key": "6784a26586ae50bb",
 "result": "pass",
 "runs": [
 {
@@ -43633,7 +43936,7 @@
 "synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off": {
 "failed": false,
 "findings": [],
-"key": "992bf456853123b5",
+"key": "d35ec4d03dc185e1",
 "result": "pass",
 "runs": [
 {
@@ -43681,7 +43984,7 @@
 "synthesis.series-family-structures-give-no-lopsided-second-stage": {
 "failed": false,
 "findings": [],
-"key": "cbbd4b957ec48377",
+"key": "fe1bc4c2afc6e530",
 "result": "pass",
 "runs": [
 {
@@ -43834,7 +44137,7 @@
 "synthesis.slot-module-light-ray-arrays-are-weyl-components": {
 "failed": false,
 "findings": [],
-"key": "639f042008ced259",
+"key": "63db66d954a2ba3b",
 "result": "pass",
 "runs": [
 {
@@ -43844,7 +44147,7 @@
 "quantities": [],
 "touched": [
 "field-theory.second-quantisation",
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays"
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane"
 ]
 },
 {
@@ -43853,7 +44156,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
+"synthesis.canonical-part-of-a-spinor-on-a-null-plane",
 "synthesis.lowest-causal-residues-zero-four-content"
 ]
 },
@@ -43962,7 +44265,7 @@
 "synthesis.slot-parity-decides-hypothesis-s": {
 "failed": false,
 "findings": [],
-"key": "26215acd633f20e7",
+"key": "b987ebfb30462e90",
 "result": "pass",
 "runs": [
 {
@@ -43983,7 +44286,7 @@
 "synthesis.smallness-monomials-exact-hierarchy-casimir": {
 "failed": false,
 "findings": [],
-"key": "18577340a60fc49a",
+"key": "ba80224c829f72a9",
 "result": "pass",
 "runs": [
 {
@@ -44041,7 +44344,7 @@
 "synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard": {
 "failed": false,
 "findings": [],
-"key": "c5cfb08fdc79afab",
+"key": "95ebd17c4c795220",
 "result": "pass",
 "runs": [
 {
@@ -44143,7 +44446,7 @@
 "synthesis.state-selection-r-and-le-against-t05": {
 "failed": false,
 "findings": [],
-"key": "4e14ebf1460f1226",
+"key": "bc07557a66de874a",
 "result": "pass",
 "runs": [
 {
@@ -44184,10 +44487,10 @@
 }
 ]
 },
-"synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit": {
+"synthesis.stationary-generator-states-and-the-edge-scaling": {
 "failed": false,
 "findings": [],
-"key": "327dfb01d7bd56f3",
+"key": "42c004e076df5811",
 "result": "pass",
 "runs": [
 {
@@ -44197,7 +44500,7 @@
 "quantities": [],
 "touched": [
 "hawking.i-state-continuum",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -44221,6 +44524,55 @@
 },
 {
 "derivation": null,
+"func": "check_cross_edge_block",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum"
+]
+}
+]
+},
+"synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit": {
+"failed": false,
+"findings": [],
+"key": "09bab91113dc6552",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_boost_is_the_car_scaling_about_the_edge",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"synthesis.positive-null-energy-gives-r-premises",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
+]
+},
+{
+"derivation": null,
+"func": "check_kernels_homogeneous_and_differ_only_at_the_edge_scale",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"hawking.imported-quasi-free-kms-reduces-two",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
+]
+},
+{
+"derivation": null,
+"func": "check_off_the_edge_every_member_is_locally_the_vacuum",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
+]
+},
+{
+"derivation": null,
 "func": "check_null_energy_of_the_family",
 "ok": true,
 "quantities": [],
@@ -44234,7 +44586,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"hawking.i-state-continuum"
+"hawking.i-state-continuum",
+"synthesis.stationary-generator-states-and-the-edge-scaling"
 ]
 },
 {
@@ -44310,7 +44663,7 @@
 "synthesis.stored-fits-are-models-of-not-u": {
 "failed": false,
 "findings": [],
-"key": "ed7481a910eb0614",
+"key": "5d298929718c7435",
 "result": "pass",
 "runs": [
 {
@@ -44338,7 +44691,7 @@
 "synthesis.sudden-descent-feature-not-tilt": {
 "failed": false,
 "findings": [],
-"key": "759bce31bfa98679",
+"key": "3bf679602f6bf650",
 "result": "pass",
 "runs": [
 {
@@ -44516,7 +44869,7 @@
 "synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue": {
 "failed": false,
 "findings": [],
-"key": "0791319e4592088b",
+"key": "72a16950113debbb",
 "result": "pass",
 "runs": [
 {
@@ -44560,7 +44913,7 @@
 "synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "997952b8b7bd2d05",
+"key": "eec588dc813e8429",
 "result": "pass",
 "runs": [
 {
@@ -44614,7 +44967,7 @@
 "synthesis.theta23-at-s3-s2-direction": {
 "failed": false,
 "findings": [],
-"key": "ef3f7447c8b826bd",
+"key": "b5c252fe54d1c981",
 "result": "pass",
 "runs": [
 {
@@ -44650,7 +45003,7 @@
 "synthesis.tower-charge-sector-label-temperature-not": {
 "failed": false,
 "findings": [],
-"key": "5b7251dd19e41cc3",
+"key": "74f37d7f5777cefd",
 "result": "pass",
 "runs": [
 {
@@ -44928,6 +45281,63 @@
 }
 ]
 },
+"synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom": {
+"failed": false,
+"findings": [],
+"key": "0c137c30deca8811",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_transverse_plane_is_a_central_unit_of_the_atom",
+"ok": true,
+"quantities": [],
+"touched": [
+"primer.centre",
+"singularity.modular-structure-completed-pair",
+"singularity.pseudo-inverse-identities-hyperbolic-atom"
+]
+},
+{
+"derivation": null,
+"func": "check_frame_star_is_conjugate_linear_in_the_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_left_i4_is_not_a_scalar_of_the_atom",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.modular-structure-completed-pair"
+]
+},
+{
+"derivation": null,
+"func": "check_phase_flow_with_unit_J",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.modular-structure-completed-pair",
+"std-algebra.bivector-exponential"
+]
+},
+{
+"derivation": null,
+"func": "check_gibbs_state_is_kms_for_the_J_flow",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.kms-uniqueness-factor",
+"singularity.modular-structure-completed-pair"
+]
+}
+]
+},
 "synthesis.transverse-corank-two-walls-are-wild": {
 "failed": false,
 "findings": [],
@@ -44984,7 +45394,7 @@
 "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
 "failed": false,
 "findings": [],
-"key": "8ee040b060dbdd38",
+"key": "12d718a2d4b763bf",
 "result": "pass",
 "runs": [
 {
@@ -45052,7 +45462,7 @@
 "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation": {
 "failed": false,
 "findings": [],
-"key": "4783951ef22c9ca6",
+"key": "39b7b1854554a1b1",
 "result": "pass",
 "runs": [
 {
@@ -45132,7 +45542,7 @@
 "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries": {
 "failed": false,
 "findings": [],
-"key": "af21052d75651336",
+"key": "57e75e1ddc444f22",
 "result": "none",
 "runs": []
 },
@@ -45238,7 +45648,7 @@
 "synthesis.twistor-form-states-only-off-the-real-slice": {
 "failed": false,
 "findings": [],
-"key": "134b5f9ab4c8060b",
+"key": "e36cae48eab1a643",
 "result": "pass",
 "runs": [
 {
@@ -45314,7 +45724,7 @@
 "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient": {
 "failed": false,
 "findings": [],
-"key": "96ef699ae10d470d",
+"key": "2c1c036f0d41e872",
 "result": "pass",
 "runs": [
 {
@@ -45405,7 +45815,7 @@
 "synthesis.two-loop-running-cannot-fix-majorana-coupling": {
 "failed": false,
 "findings": [],
-"key": "0344af10261f4a7b",
+"key": "ffe14f55e3885139",
 "result": "pass",
 "runs": [
 {
@@ -45592,7 +46002,7 @@
 "synthesis.univalence-even-extension-split": {
 "failed": false,
 "findings": [],
-"key": "60ed196ad127e4a9",
+"key": "295f590827e52cfd",
 "result": "pass",
 "runs": [
 {
@@ -45650,7 +46060,7 @@
 "synthesis.univalence-from-even-stationary-dynamics": {
 "failed": false,
 "findings": [],
-"key": "9a6720a9097d992a",
+"key": "e3bfb66940a4f7c4",
 "result": "pass",
 "runs": [
 {
@@ -45957,7 +46367,7 @@
 "synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics": {
 "failed": false,
 "findings": [],
-"key": "23995b6afe0ed717",
+"key": "5f5f2739ed6ddf33",
 "result": "pass",
 "runs": [
 {
@@ -46004,7 +46414,7 @@
 "synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian": {
 "failed": false,
 "findings": [],
-"key": "d9c605c7e25a66f6",
+"key": "9b8604a41a88306c",
 "result": "pass",
 "runs": [
 {
@@ -46034,7 +46444,7 @@
 "quantities": [],
 "touched": [
 "synthesis.imported-gtg-dictionary",
-"synthesis.positive-null-energy-gives-r-premises"
+"synthesis.null-vacuum-on-a-horizon-generator"
 ]
 },
 {
@@ -46136,7 +46546,7 @@
 "synthesis.wick-rotated-boost-selects-observer-tube-point": {
 "failed": false,
 "findings": [],
-"key": "83e07b2d2a5834dd",
+"key": "b548f28a5fd89345",
 "result": "pass",
 "runs": [
 {
@@ -46194,7 +46604,7 @@
 "synthesis.wick-rotor-chiral-angular-rotor": {
 "failed": false,
 "findings": [],
-"key": "904da4f307236896",
+"key": "45a024842cb0ab6c",
 "result": "pass",
 "runs": [
 {
@@ -46234,6 +46644,41 @@
 "key": "14f3f6308dda9c23",
 "result": "none",
 "runs": []
+},
+"synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
+"failed": false,
+"findings": [],
+"key": "02d995316f08bbe1",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_the_flag_operators_are_isotropic_with_an_eight_dimensional_kernel",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.two-families-are-two-chiralities"
+]
+},
+{
+"derivation": null,
+"func": "check_the_conformal_energy_is_minus_s0_times_the_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.positive-conformal-energy-gives-positive-null-translations"
+]
+},
+{
+"derivation": null,
+"func": "check_the_family_is_the_orientation_and_flips_with_the_energy_sign_on_conjugate_pairs",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.two-families-are-two-chiralities"
+]
+}
+]
 },
 "three-routes.base-unipotents-their-action-candidates": {
 "failed": false,
@@ -47061,7 +47506,7 @@
 ""
 ]
 ],
-"key": "31f7d139801ace79",
+"key": "a1fcd7e6443b3fc6",
 "result": "pass",
 "runs": [
 {
@@ -48154,7 +48599,7 @@
 ""
 ]
 ],
-"key": "fbcfa41ffa58677b",
+"key": "8a9a495ac6b5097c",
 "result": "pass",
 "runs": [
 {

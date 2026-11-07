@@ -11,6 +11,8 @@ functions:
     kind: sampled
     clauses: ["(iii)"]
     omits: "three sample translations a, three sample points x and the one sample boost rotor R; the statement is for all a in the base, all x, and the base's boost rotor"
+untouched_premises:
+  std-algebra.complexification-is-the-odd-extension: "supplies the unit I_5 in which the imaginary rapidity is written; the checks compute the boost, the reflection and the translations directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

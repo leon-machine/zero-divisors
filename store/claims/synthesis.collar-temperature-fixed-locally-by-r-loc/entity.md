@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-temperature-fixed-locally-by-r-loc
 kind: claim
-version: 2
+version: 4
 title: '(R$_{\mathrm{loc}}$) fixes the collar temperature locally'
 status: proved
 region: synthesis
@@ -17,16 +17,24 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the pair flows written with the transverse unit J'
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
   uses:
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
-  - synthesis.collar-kms-extension-three-flows@1
-  - synthesis.collar-kms-extension-completion-locus@1
-  - synthesis.collar-isotropy-selects-t-boost@1
-  - singularity.kms-uniqueness-factor@4
-  - synthesis.local-boost-temperature-is-local-regularity@3
+  - synthesis.collar-kms-extension-three-flows@3
+  - synthesis.collar-kms-extension-completion-locus@3
+  - synthesis.collar-isotropy-selects-t-boost@2
+  - singularity.kms-uniqueness-factor@6
+  - synthesis.local-boost-temperature-is-local-regularity@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -45,6 +53,14 @@ lineage:
   - synthesis.collar-kms-extension-three-flows
   - synthesis.collar-kms-extension-completion-locus
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the flows Ad(e^{+-isK}) on the completed pair read by both t-plane horizons (proof of (iv)) are written Ad(e^{+-J s K}) with J = e_2 e_3, the pair''s complex unit, the factor Mat_2(C) being taken over span{1, J} (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention). Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the flows Ad(e^{+-isK}) and KMS uniqueness are taken on the frame atom Cl(1,3)_C and the factor Mat_2(C), whose scalar commutes with the spacetime vectors, which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

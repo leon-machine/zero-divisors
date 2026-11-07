@@ -1,7 +1,7 @@
 ---
 id: synthesis.many-twistor-join
 kind: claim
-version: 2
+version: 3
 title: The join for many conformal spinors
 status: proved
 region: synthesis
@@ -17,17 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.mass.grip-mass-composite
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.chart-form-spin-isomorphism@5
   - mass.de-sitter-scale-frozen-point@6
   - mass.imported-flat-model-twistor-chart-infinity@7
-  - mass.casimir-form-join@6
+  - mass.casimir-form-join@7
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -38,6 +42,10 @@ lineage:
   motivated_by:
   - mass.exact-join
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The chart''s complex unit, which the convention line already read as I_6 but wrote i, is now written I_6 in the moment M_A and the slot-form components, numbers read in span{1, I_6}, and the coefficient space C^N is written span{1, I_6}^N; no bare i remains.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

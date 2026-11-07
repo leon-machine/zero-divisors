@@ -23,8 +23,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.many-twistor-join@2
-  - mass.exact-join@7
+  - synthesis.many-twistor-join@3
+  - mass.exact-join@8
   - mass.de-sitter-scale-frozen-point@6
   proof: proof-main.tex
 checked_by:

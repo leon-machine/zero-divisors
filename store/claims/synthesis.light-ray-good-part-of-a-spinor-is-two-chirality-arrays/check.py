@@ -131,7 +131,7 @@ def canonical():
 
 def check_canonical_part_is_lambda_m():
     premise("field-theory.second-quantisation")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
     ok = GA.mat_eq(GA.mat_mul(LB, LB), E8)
     # projectors: Lambda(k) = k gamma_0 / 2 = (1 + B)/2, Lambda(m) = m gamma_0 / 2 = (1 - B)/2
     ok = ok and GA.eq(GA.scal(F(1, 2), m(K, g(0))), GA.scal(F(1, 2), GA.add(GA.sc(1), B)))
@@ -158,7 +158,7 @@ def check_canonical_part_is_lambda_m():
 
 
 def check_boost_weight_of_canonical_part():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("field-theory.second-quantisation")
     c, s = F(5, 4), F(3, 4)                     # e^{l/2} = c + s = 2
     R = GA.add(GA.sc(c), GA.scal(s, B))

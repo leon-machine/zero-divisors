@@ -24,8 +24,8 @@ derivations:
 - name: main
   uses:
   - synthesis.quarter-from-temperature@1
-  - synthesis.de-sitter-temperature-frozen-point-norm@5
-  - standard-model.imported-frozen-point-dictionary@7
+  - synthesis.de-sitter-temperature-frozen-point-norm@7
+  - standard-model.imported-frozen-point-dictionary@8
   - synthesis.boundary-mode-thermal-entropy@2
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - synthesis.imported-wald-noether-charge-entropy@3

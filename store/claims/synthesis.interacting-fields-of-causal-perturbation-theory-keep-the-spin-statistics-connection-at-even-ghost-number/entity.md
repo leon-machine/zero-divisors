@@ -1,7 +1,7 @@
 ---
 id: synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number
 kind: claim
-version: 2
+version: 3
 title: 'Causal perturbation theory keeps spin-statistics at even ghost number'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'M. Dütsch and K. Fredenhagen, A local (perturbative) construction of observables in gauge theories: the example of QED, Commun. Math. Phys. 203 (1999), 71--105; arXiv:hep-th/9807078.'
@@ -35,11 +39,11 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@2
+  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@4
   - field-theory.second-quantisation@5
   - field-theory.imported-tower-limit@3
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@2
-  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
+  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@3
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
@@ -63,6 +67,10 @@ lineage:
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of Bogoliubov''s interacting-field formula and of its n-th order coefficient I_4^n/n! is now the field theory''s unit I_4, the complex unit of the free fields'' Fock space (numbers read in span{1, I_4}); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -94,7 +102,7 @@ extraction:
 ---
 
 ## formal
-Units and signature of the store; $\Cl(1,3)$ with $I_{4} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$. The attached free fields are the Dirac spinor values $\psi$ of Proposition \claimref{field-theory.second-quantisation}, on which a Lorentz rotor $R$ acts by $\psi \mapsto R\psi$; the gauge potentials and their gradients, vector values with $x \mapsto Rx\tilde R$; palatial scalars, any number of doublets; and the Faddeev-Popov ghosts $c$, $\bar c$, scalar CAR modes on tower planes (\claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}, Fact \claimref{field-theory.imported-tower-limit}). Their statistics are those of \claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}: anticommuting spinors, commuting scalars and field strengths, anticommuting ghosts in the indefinite form; for the potential itself in Feynman gauge, which that result does not cover, we assume the Gupta-Bleuler (indefinite) form, clause (K1) of Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, in which its polarisation sum is $-a\cdot b$, of degree $0$ in $k$, and it is local as a commuting field (computed in (i)). Let the interaction density $\mathcal{L}$ be a sum of the monomials (i) below, and let the interacting field of a Wick polynomial $A$ be Bogoliubov's $A_{\mathrm{int}}(x) = \frac{\delta}{i\,\delta h(x)}S(\mathcal{L})^{-1}S(\mathcal{L} + hA)\big|_{h = 0}$, a formal power series, with time-ordered products that are graded symmetric and preserve the Grassmann parity, factorise causally, satisfy the Wick expansion (the free-field condition (N3) of \cite{DutschFredenhagen1999}), and, as an assumption, are covariant under a representation $U$ of the covering group of the Poincar\'e group (\cite{DutschFredenhagen1999} state covariance, (N1), for the Poincar\'e group itself; Epstein and Glaser \cite{EpsteinGlaser1973}, Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}; \cite{DutschFredenhagen1999}, (2.2), (2.3), (2.7)). Then:
+Units and signature of the store; $\Cl(1,3)$ with $I_{4} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$. The attached free fields are the Dirac spinor values $\psi$ of Proposition \claimref{field-theory.second-quantisation}, on which a Lorentz rotor $R$ acts by $\psi \mapsto R\psi$; the gauge potentials and their gradients, vector values with $x \mapsto Rx\tilde R$; palatial scalars, any number of doublets; and the Faddeev-Popov ghosts $c$, $\bar c$, scalar CAR modes on tower planes (\claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}, Fact \claimref{field-theory.imported-tower-limit}). Their statistics are those of \claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}: anticommuting spinors, commuting scalars and field strengths, anticommuting ghosts in the indefinite form; for the potential itself in Feynman gauge, which that result does not cover, we assume the Gupta-Bleuler (indefinite) form, clause (K1) of Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, in which its polarisation sum is $-a\cdot b$, of degree $0$ in $k$, and it is local as a commuting field (computed in (i)). Let the interaction density $\mathcal{L}$ be a sum of the monomials (i) below, and let the interacting field of a Wick polynomial $A$ be Bogoliubov's $A_{\mathrm{int}}(x) = \frac{\delta}{I_{4}\,\delta h(x)}S(\mathcal{L})^{-1}S(\mathcal{L} + hA)\big|_{h = 0}$ (the complex unit of the free fields' Fock space is the field theory's unit $I_{4}$, numbers read in $\mathrm{span}\{1, I_{4}\}$), a formal power series, with time-ordered products that are graded symmetric and preserve the Grassmann parity, factorise causally, satisfy the Wick expansion (the free-field condition (N3) of \cite{DutschFredenhagen1999}), and, as an assumption, are covariant under a representation $U$ of the covering group of the Poincar\'e group (\cite{DutschFredenhagen1999} state covariance, (N1), for the Poincar\'e group itself; Epstein and Glaser \cite{EpsteinGlaser1973}, Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}; \cite{DutschFredenhagen1999}, (2.2), (2.3), (2.7)). Then:
 \begin{enumerate}
 \item[(i)] \emph{(The interaction density; computed.)} The rotor of the loop of four quarter turns in the plane $\gamma_{1}\gamma_{2}$ is $-1$: it fixes every vector and bivector value and negates every spinor value. The vector vertex $\langle\psi\gamma_{0}\tilde\psi A\rangle_{0}$, the axial vertex $\langle\psi\gamma_{3}\tilde\psi A\rangle_{0}$, the scalar and pseudoscalar Yukawa terms and mass insertions $\langle\psi\tilde\psi\rangle_{0}\phi$, $\langle\psi\tilde\psi I_{4}\rangle_{0}\phi$, the scalar gauge couplings, the quartic, the non-abelian cubic and quartic terms, the gauge fixing $\langle\nabla A\rangle_{0}^{2}$ and the ghost terms $\langle\nabla\bar c\,\nabla c\rangle_{0}$, $\langle\nabla\bar c\,A\rangle_{0}c$ are Lorentz scalars, each with an even number of spinor factors (so $U(2\pi)$ acts on $\mathcal{L}$ as $+1$) and with as many ghost as antighost factors; nothing depends on the number of scalar doublets. The free Feynman-gauge potential has the polarisation sum $-a\cdot b$, independent of $k$ and indefinite, and the bracket factor of the stored locality result vanishes for it as a commuting field.
 \item[(ii)] \emph{(Wick monomials; proved.)} On a Wick monomial with $n_{\psi}$ spinor and $n_{c} + n_{\bar c}$ ghost factors, $U(2\pi)$ acts as $(-1)^{n_{\psi}}$ and the Grassmann parity is $(-1)^{n_{\psi} + n_{c} + n_{\bar c}}$; they agree if and only if $n_{c} + n_{\bar c}$ is even, in particular at ghost number zero, and two such monomials on disjoint modes anticommute exactly when both have $U(2\pi) = -1$.

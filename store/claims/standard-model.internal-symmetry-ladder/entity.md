@@ -1,7 +1,7 @@
 ---
 id: standard-model.internal-symmetry-ladder
 kind: claim
-version: 3
+version: 4
 title: The internal symmetry ladder
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: prop:ladder
   line: 941
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F: the polarisation vector e_j + i e_k of the proof is written e_j + e_k I_6: the numbers of v and U multiply twistor components, so by R3''s twistor clause they carry the conformal-spinor unit I_6 (right multiplication), numbers read in span{1, I_6}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

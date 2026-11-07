@@ -28,7 +28,7 @@ derivations:
   - synthesis.imported-gtg-dictionary@1
   - synthesis.kerr-ring-double-cover-data@3
   - synthesis.kerr-ring-blow-up-forced-cover-fixed-order@3
-  - interior.complex-scale-inverse-cube-killing-spinor@5
+  - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - transport.group-null-rotations@4
   proof: proof-main.tex

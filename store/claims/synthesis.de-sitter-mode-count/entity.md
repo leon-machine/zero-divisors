@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.de-sitter-entropy-pi-n-squared@5
+  - synthesis.de-sitter-entropy-pi-n-squared@6
   - scrambling.residue-each-convention@4
   proof: proof-main.tex
 checked_by:

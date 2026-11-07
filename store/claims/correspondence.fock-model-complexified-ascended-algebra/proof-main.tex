@@ -1,11 +1,11 @@
 Existence of the isotropic pair: in the orthonormal basis of Section \ref{sec:setting} take
 \begin{align*}
-w_1 &:= a_1 + b_1, & w_2 &:= a_2 + b_2, & w_3 &:= b_3 + i\,b_4,\\
-w_1' &:= \tfrac12(a_1 - b_1), & w_2' &:= \tfrac12(a_2 - b_2), & w_3' &:= -\tfrac12(b_3 - i\,b_4).
+w_1 &:= a_1 + b_1, & w_2 &:= a_2 + b_2, & w_3 &:= b_3 + I_7\,b_4,\\
+w_1' &:= \tfrac12(a_1 - b_1), & w_2' &:= \tfrac12(a_2 - b_2), & w_3' &:= -\tfrac12(b_3 - I_7\,b_4).
 \end{align*}
-The first two isotropic vectors pair a plus direction with a minus direction and are real; the third pairs two minus directions and is complex, $Q(b_3 + ib_4) = -1 + 1 = 0$; and $\ip{w_j}{w_k'} = \delta_{jk}$, $\ip{w_j}{w_k} = \ip{w_j'}{w_k'} = 0$ by inspection. This is the basis the verification script uses, over the Gaussian rationals. Conjugacy: two dual pairs $(W, W')$ and $(U, U')$ with dual bases $w_j, w_j'$ and $u_j, u_j'$ have the same Gram matrix $\bigl(\begin{smallmatrix} 0 & I \\ I & 0\end{smallmatrix}\bigr)$, so the linear map $w_j \mapsto u_j$, $w_j' \mapsto u_j'$ is an isometry of $V_\C$ carrying one pair to the other. The Clifford relation: for $w_1, w_2 \in W$, $\{w_1\wedge, w_2\wedge\} = 0$ and $\ip{w_1}{w_2} = 0$; for $w'_1, w'_2 \in W'$ likewise with $\{\iota_{w'_1}, \iota_{w'_2}\} = 0$; and the mixed case is the graded Leibniz identity: contraction is the degree $-1$ derivation extending $\iota_{w'}(w) = \ip{w}{w'}$, so for $\xi \in \Lambda^k W$,
+The first two isotropic vectors pair a plus direction with a minus direction and are real; the third pairs two minus directions and is complex, with $I_7 = I_6e$ the central unit of $\Cl(3,4) = \Cl(2,4)_\C$ (\claimref{std-algebra.complexification-is-the-odd-extension}): $Q(b_3 + I_7b_4) = Q(b_3) - Q(b_4) + 2\ip{b_3}{b_4}I_7 = -1 + 1 = 0$; and $\ip{w_j}{w_k'} = \delta_{jk}$, $\ip{w_j}{w_k} = \ip{w_j'}{w_k'} = 0$ by inspection. This is the basis the verification script uses, over the Gaussian rationals $\mathrm{span}_{\mathbb{Q}}\{1, I_7\}$. Conjugacy: two dual pairs $(W, W')$ and $(U, U')$ with dual bases $w_j, w_j'$ and $u_j, u_j'$ have the same Gram matrix $\bigl(\begin{smallmatrix} 0 & I \\ I & 0\end{smallmatrix}\bigr)$, so the linear map $w_j \mapsto u_j$, $w_j' \mapsto u_j'$ is an isometry of $V_\C$ carrying one pair to the other. The Clifford relation: for $w_1, w_2 \in W$, $\{w_1\wedge, w_2\wedge\} = 0$ and $\ip{w_1}{w_2} = 0$; for $w'_1, w'_2 \in W'$ likewise with $\{\iota_{w'_1}, \iota_{w'_2}\} = 0$; and the mixed case is the graded Leibniz identity: contraction is the degree $-1$ derivation extending $\iota_{w'}(w) = \ip{w}{w'}$, so for $\xi \in \Lambda^k W$,
 \[
-\iota_{w'}(w\wedge\xi) = \ip{w}{w'}\,\xi - w\wedge\iota_{w'}\xi, \qquad\text{i.e.}\qquad \{w\wedge, \iota_{w'}\} = \ip{w}{w'}\,\id ,
+\iota_{w'}(w\wedge\xi) = \ip{w}{w'}\,\xi - w\wedge\iota_{w'}\xi, \qquad\text{that is}\qquad \{w\wedge, \iota_{w'}\} = \ip{w}{w'}\,\id ,
 \]
 which the script also verifies on every basis state. Expanding $u = w + w'$,
 \[

@@ -43,7 +43,14 @@ lineage:
   motivated_by:
   - rule2.where-obstruction-sits-commuting-square
   - note.rule2.forgotten-bit-read
+outside_ga:
+  kind: other
+  why: 'C names only the isomorphism type of the centre span{1, omega x} of the completion''s even part and of Cl^0(2,4) = Mat(4, C), a statement about which algebras arise; the unit itself is the volume element'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit to replace (the detector''s hit is the index in ''i not in S''); C stays as the isomorphism type of the even part''s centre span{1, omega x} and of Cl^0(2,4) = Mat(4, C), a classification statement, declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

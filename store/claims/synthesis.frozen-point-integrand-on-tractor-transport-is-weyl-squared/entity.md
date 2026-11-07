@@ -28,7 +28,7 @@ derivations:
   - synthesis.imported-gtg-dictionary@1
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
   - synthesis.imported-miskovic-olea-identity@3
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@1
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@2
   - synthesis.promoted-norm-weyl-clock-flat-weight@6
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1

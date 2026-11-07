@@ -21,16 +21,16 @@ review: typed
 derivations:
 - name: main
   uses:
-  - scrambling.clock-inventory-boundary-modes@5
+  - scrambling.clock-inventory-boundary-modes@6
   - sheaf.one-sided-completion-singularity@4
   - singularity.imported-descent-one-way-conditional-expectation@7
-  - singularity.modular-descent@5
+  - singularity.modular-descent@7
   - transport.door-one-way@5
   - transport.pinching-kernel@3
   - singularity.why-calibration-cannot-be-internal@6
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

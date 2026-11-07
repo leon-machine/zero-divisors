@@ -1,7 +1,7 @@
 ---
 id: dark-matter.premise-cpt-covariance
 kind: claim
-version: 2
+version: 3
 title: 'CPT covariance of the kinematic structures and of every action'
 status: postulate
 region: dark-matter
@@ -17,6 +17,13 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Leon Butler
+  role: decision to restate the relation to the CPT operator of quantum field theory
+  version: 3
+- name: Claude Opus 5.5
+  role: drafting of the restated sentence
+  version: 3
+  source: maintainer pass 2026-11-07
 review: typed
 locators:
   paper: T14
@@ -27,6 +34,10 @@ about:
 - obj.dark-matter.witt-flag
 - obj.dark-energy.four-ways-number-enters-theory-shape
 extraction:
+  maintainer_pass_cpt_sentence:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s decision of 7 November: the sentence saying the conjugation realising the CPT operator of quantum field theory is argued is restated; the conjugation fixes every conformal generator and is antilinear, so it reverses the energy and is not that operator; the covariance clause itself is unchanged.'
   env: premise named in a proposition
   also_stated:
   - 'T14 proof of Prop 5.2: "the gauge sector''s CPT-evenness is imported and carried as a premise", line 529'
@@ -53,7 +64,7 @@ extraction:
 
 \emph{Action clause.} For every action functional $S_{\mu}$ of Definition \claimref{obj.dark-energy.four-ways-number-enters-theory-shape}, the gauge couplings among its parameters $\mu$ included, $S_{\mu} \circ C = S_{\mu}$; in particular $C$ does not move $\mu$.
 
-\emph{What is checked and what is premised.} Checked: the fibre metric, the completion, the pairing on the Fock module, and the frozen point's action, which with every functional of real tensor fields invariant under constant $SO_{0}(2,4)$ satisfies the action clause in this convention by the cited result's clause (5). Premised: the imported gauge sector, spinor and fermion fields, and structures later papers add. For the gauge sector the standard CPT theorem for local Lorentz-invariant actions concerns the antiunitary CPT operator of quantum field theory; that this conjugation realises that operator is argued, not proved, so the gauge sector's invariance ``is imported and carried as a premise''.
+\emph{What is checked and what is premised.} Checked: the fibre metric, the completion, the pairing on the Fock module, and the frozen point's action, which with every functional of real tensor fields invariant under constant $SO_{0}(2,4)$ satisfies the action clause in this convention by the cited result's clause (5). Premised: the imported gauge sector, spinor and fermion fields, and structures later papers add. For the gauge sector the standard CPT theorem for local Lorentz-invariant actions concerns the antiunitary CPT operator of quantum field theory, and this conjugation is not that operator (argued): it fixes every bivector of $\Cl(2,4)$ ($I_{6}$ commutes with the even algebra), so every conformal generator and in particular every translation, and it is antilinear, so on a Hilbert space that carries the translations it reverses their generator and with it the energy, whereas the CPT operator of quantum field theory reverses the translations and keeps the energy positive. The gauge sector's invariance under this conjugation is therefore not supplied by the CPT theorem; it ``is imported and carried as a premise''.
 
 ## technical
 The premise is that CPT conjugation, the composite of grade involution, reversal and the flag conjugate on each tower's Clifford bundle, is an isomorphism of every kinematic structure of the framework and leaves every action functional, together with the values of its parameters, unchanged. The gauge couplings are among those parameters, so the clause is that conjugation maps every theory of the family onto itself, not merely that it fixes the frozen point's action.

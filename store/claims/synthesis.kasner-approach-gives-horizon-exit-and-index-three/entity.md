@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-approach-gives-horizon-exit-and-index-three
 kind: claim
-version: 2
+version: 3
 title: 'A Kasner approach gives horizon exit with index three and no red tilt'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -25,7 +29,7 @@ derivations:
   - sheaf.kasner-data-interior@2
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
   proof: proof-main.tex
@@ -48,6 +52,10 @@ lineage:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
   - dark-energy.frozen-point-datum-kasner-wall
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R4 (scalar mode functions and Hankel Wronskians are written with the field theory''s unit, one reading with synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching and the other scalar-mode entities): the modes e^{I_4 k x^i}, the canonical normalisation tau(phi phi-dot* - phi* phi-dot) = I_4 and the Hankel Wronskians -2 I_4 W[J_0, Y_0] = -4 I_4/(pi s) are written with I_4 (proof), numbers read in span{1, I_4}, exact since that span is the complex numbers; no bare i remains, so the declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

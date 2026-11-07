@@ -25,7 +25,7 @@ derivations:
   uses:
   - correspondence.imported-weyl-commutes-duality@2
   - correspondence.imported-weyls-theorem@2
-  - correspondence.lorentzian-duality-complex-structure@3
+  - correspondence.lorentzian-duality-complex-structure@5
   - interior.exact-scale-decoupling@4
   - interior.imported-kerr-curvature@2
   proof: proof-main.tex

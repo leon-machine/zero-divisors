@@ -1,7 +1,7 @@
 ---
 id: correspondence.incidence-relation-chart
 kind: claim
-version: 4
+version: 6
 title: "The incidence relation is the chart"
 status: proved
 region: correspondence
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -43,6 +51,14 @@ locators:
   label: thm:incidence
   line: 445
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Clause (4)(iii): Penrose''s omega = ix pi now stands only in the existing extraction.source_formal (the source writes i for I_6, the complex unit of CS, U5), and ''I_6 acts as -i on CS'' is written ''I_6 acts on CS as -I_7'', with I_7 = I_6 e the central pseudoscalar of Cl(3,4) = Cl(2,4)_C, the module''s scalar unit (U3, std-algebra.complexification-is-the-odd-extension, cited as a mention); the text says that I_6 acts by left multiplication and I_7 is the scalar, never identified. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): clause (4)(iii) sets Penrose''s incidence relation omega = i x pi, in its source''s notation, beside its real-algebra form, and records that I_6 acts as -i on the complex module CS of Cl(2,4)_C.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -106,13 +122,13 @@ P(A) \;=\; \nO \,+\, m(A)\,-\,\tfrac12\,Q(m(A))\,\nInf \;=\; X\bigl(m(A)\bigr).
 \]
 In particular every $P(A)$ is null, as a Pl\"ucker bivector must be, and the nullity of $P(A)$ is equivalent to the identity $\det A = -\tfrac12Q(m(A))$: the quadratic term of the chart is a determinant.
 \item \emph{(Coverage.)} $A \mapsto L_A$ is a bijection from $\operatorname{Hom}(\Spi, \Som)$ onto the lines of $\PCS$ skew to $L_\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\ip{P}{\nInf} \neq 0$: the affine chart of the complexified conformal compactification, with the lines meeting $L_\infty$ as the points at infinity; the real locus is cut out in Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5).
-\item \emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\infty, L_0)$ (Proposition \claimref{correspondence.skew-lines-splittings-hyperbolic-planes-one}). (ii) The splitting of a conformal spinor (a twistor) into its $(\omega, \pi)$ parts along $\CS = \Som\oplus\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) The incidence relation (Penrose's $\omega = ix\pi$; in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$, real-linear in $x$) is the case $A = I_6\hat x$ of the chart map, with $I_6$ the complex unit of $\CS$ (a factor of $i$: with $I_6 = e_0e_1e_2e_3e_4e_5$, $I_6$ acts as $-i$ on $\CS$) and $\hat x$ Hermitian for the invariant Hermitian form $\Sigma$ (the twistor form) of Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5)). (iv) The stabiliser of the infinity line $L_\infty$ in $\mathfrak{so}(V_\C)$ is the stabiliser of the ray of $\nInf$: the Poincar\'e parabolic, with its Levi factor acting on $\Som \oplus \Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\mathfrak{sl}(2,\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \claimref{correspondence.chiral-planes-summand-spaces}(1)).
+\item \emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\infty, L_0)$ (Proposition \claimref{correspondence.skew-lines-splittings-hyperbolic-planes-one}). (ii) The splitting of a conformal spinor (a twistor) into its $(\omega, \pi)$ parts along $\CS = \Som\oplus\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) The incidence relation (Penrose's, whose imaginary unit is the factor $I_6$ below; in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$, real-linear in $x$) is the case $A = I_6\hat x$ of the chart map, with $I_6$ the complex unit of $\CS$ (with $I_6 = e_0e_1e_2e_3e_4e_5$, $I_6$ acts on $\CS$ as $-I_7$, where $I_7 = I_6e$, the central pseudoscalar of the odd extension $\Cl(3,4)$, is the scalar unit of the complexified module, $V_\C = V \oplus I_7V$ and $\Cl(2,4)_\C = \Cl(3,4)$ (\claimref{std-algebra.complexification-is-the-odd-extension}); $I_6$ acts on the module by left multiplication, $I_7$ is its scalar, and the two are not identified) and $\hat x$ Hermitian for the invariant Hermitian form $\Sigma$ (the twistor form) of Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5)). (iv) The stabiliser of the infinity line $L_\infty$ in $\mathfrak{so}(V_\C)$ is the stabiliser of the ray of $\nInf$: the Poincar\'e parabolic, with its Levi factor acting on $\Som \oplus \Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\mathfrak{sl}(2,\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \claimref{correspondence.chiral-planes-summand-spaces}(1)).
 \end{enumerate}
 
 ## technical
 Fix bases with $\pi_1\wedge\pi_2 = N_0$ in $\Spi$ and $e_1\wedge e_2 = N_\infty$ in $\Som$. For a linear map $A: \Spi\to\Som$ the graph line $L_A$ has Pl\"ucker bivector $P(A) = (A\pi_1 + \pi_1)\wedge(A\pi_2 + \pi_2)$, which expands as $P(A) = N_0 + \varphi(A) + (\det A)\,N_\infty$ with $\varphi(A)$ in the mixed slot $\Som\wedge\Spi$. The map $\varphi$ is a linear isomorphism onto $\{\nO,\nInf\}^\perp\otimes\C$ with $Q(\varphi(A)) = -2\det A$, so writing $m(A) = \varphi(A)$ one gets $P(A) = \nO + m(A) - \tfrac12 Q(m(A))\,\nInf = X(m(A))$: the Pl\"ucker bivector is exactly the completion's point embedding, complexified, and its nullity is the identity $\det A = -\tfrac12 Q(m(A))$.
 
-The map $A \mapsto L_A$ is a bijection onto the lines of $\PCS$ skew to $L_\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\ip{P}{\nInf} \neq 0$, the affine chart of the complexified conformal compactification. Consequently the adjoined null pair is the pair of skew lines $(L_\infty, L_0)$, the splitting of a conformal spinor into $(\omega, \pi)$ is the Witt completion at spinor level, the incidence relation (Penrose's $\omega = ix\pi$, in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$) is the chart map at $A = I_6\hat x$ with $I_6$ the complex unit of $\CS$ and $\hat x$ Hermitian for the invariant form $\Sigma$, and the stabiliser of $L_\infty$ is the Poincar\'e parabolic, whose Levi factor acts on $\Som$ and $\Spi$ as the two chiral doublets.
+The map $A \mapsto L_A$ is a bijection onto the lines of $\PCS$ skew to $L_\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\ip{P}{\nInf} \neq 0$, the affine chart of the complexified conformal compactification. Consequently the adjoined null pair is the pair of skew lines $(L_\infty, L_0)$, the splitting of a conformal spinor into $(\omega, \pi)$ is the Witt completion at spinor level, the incidence relation (Penrose's, in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$) is the chart map at $A = I_6\hat x$ with $I_6$ the complex unit of $\CS$ and $\hat x$ Hermitian for the invariant form $\Sigma$, and the stabiliser of $L_\infty$ is the Poincar\'e parabolic, whose Levi factor acts on $\Som$ and $\Spi$ as the two chiral doublets.
 
 ## lay
 Penrose described a spacetime point by a line in a three-dimensional complex projective space, through his incidence relation. This theorem shows that, written out term by term, the coordinates of that line are exactly the null vector by which the completed algebra represents the point, so the incidence relation is the completion's coordinate chart. The quadratic term of the chart is a determinant, the lines meeting a fixed line at infinity are the points at infinity, and the symmetries fixing that line are those of flat spacetime.

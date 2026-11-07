@@ -1,7 +1,7 @@
 ---
 id: synthesis.complex-neutrino-stages-keep-the-solar-sum-rule
 kind: claim
-version: 2
+version: 3
 title: 'Complex neutrino stages keep the solar sum rule'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -24,8 +28,8 @@ derivations:
   - neutrino.breaking-relation@3
   - synthesis.solar-angle-light-plane-sum-rule@1
   - synthesis.one-type-second-stages-are-twins@1
-  - synthesis.series-family-structures-give-no-lopsided-second-stage@2
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@2
+  - synthesis.series-family-structures-give-no-lopsided-second-stage@3
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
   - standard-model.imported-clebsch-structure-seesaw@1
   - synthesis.imported-takagi-factorisation@1
   - synthesis.imported-nufit-6-oscillation-parameter-ranges@1
@@ -49,6 +53,10 @@ lineage:
   - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
   - synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex second-stage parameter x = t e^{I_4 varphi} and the phases of the lightest states in the proof are written with I_4 (numbers read in span{1, I_4}); the grid index i in s = i/300 is an index and stays.'
   open_problem: op.second-order-breaking
   note: >-
     Decides the problem's fourth line of attack (the solar-angle bound for a complex neutrino

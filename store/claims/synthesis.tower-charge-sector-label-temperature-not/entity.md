@@ -1,7 +1,7 @@
 ---
 id: synthesis.tower-charge-sector-label-temperature-not
 kind: claim
-version: 2
+version: 4
 title: 'The tower charge is a sector label; the temperature is not'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -24,10 +32,10 @@ derivations:
 - name: main
   uses:
   - hawking.imported-quasi-free-states-car-algebra@2
-  - hawking.i-state@3
+  - hawking.i-state@4
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-matter.stored-asymmetry-charge-not-number@8
-  - synthesis.cold-mirror-needs-non-equilibrium-descent@1
+  - synthesis.cold-mirror-needs-non-equilibrium-descent@3
   - synthesis.mirror-asymmetry-route-one@2
   - dark-matter.mirror-tower-copy-one@8
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
@@ -44,6 +52,14 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The charge rotations e^{i theta} act on the boundary-mode CAR algebra, so by U2 their unit is the transverse bivector J = e_2 e_3 of synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom (cited as a mention), written out as e_2 e_3 because J names the mode set in this entity: a_j -> e^{theta e_2 e_3} a_j, conjugation by e^{theta e_2 e_3 Q_F}, scalars span{1, e_2 e_3}. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the charge rotations e^{i theta} act on the boundary-mode CAR algebra over l^2(J), defined over C, with windows End(Lambda C^F); the boundary modes are the atom''s ladder pairs, with whose mode operators I_4 anticommutes (conventions, known limit 1), so it is not their unit.'
   maintainer_pass:
     by: maintainer-2026-10-22
     date: '2026-10-22'
@@ -65,7 +81,7 @@ extraction:
 ---
 
 ## formal
-\emph{Hypothesis (B').} The reversal pair carries the joint boundary-mode algebra, the CAR algebra over $\ell^{2}(J) \oplus \ell^{2}(J')$ (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} for each tower), and the superselection of the tower charge (Proposition \claimref{dark-matter.superselected-hence-dark-exactly-stable}) is represented by taking as observables the elements invariant under each tower's charge rotation $a_{j} \mapsto e^{i\theta}a_{j}$ ($j \in J$), $a'_{j} \mapsto e^{i\theta'}a'_{j}$ ($j \in J'$), with $\theta, \theta'$ independent.
+\emph{Hypothesis (B').} The reversal pair carries the joint boundary-mode algebra, the CAR algebra over $\ell^{2}(J) \oplus \ell^{2}(J')$ (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} for each tower), and the superselection of the tower charge (Proposition \claimref{dark-matter.superselected-hence-dark-exactly-stable}) is represented by taking as observables the elements invariant under each tower's charge rotation $a_{j} \mapsto e^{\theta e_{2}e_{3}}a_{j}$ ($j \in J$), $a'_{j} \mapsto e^{\theta' e_{2}e_{3}}a'_{j}$ ($j \in J'$), with $\theta, \theta'$ independent. Here the complex unit of the boundary modes is the transverse bivector $e_{2}e_{3}$, which commutes with the radial-plane modes and squares to $-1$, and their scalars are $\mathrm{span}\{1, e_{2}e_{3}\}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}, where it is called $J$; it is written out here because $J$ names the mode set).
 \begin{enumerate}
 \item[(i)] \emph{(The charge is a sector label on windows.)} On every window $\mathfrak{A}_{F} \otimes \mathfrak{A}'_{F'}$ the observable algebra is the direct sum, over the joint charge values $(q, q')$, of the full matrix algebras of the joint charge eigenspaces; its centre is spanned by the joint charge projections, and window states of different charge are disjoint.
 \item[(ii)] \emph{(The temperature is not, on windows.)} Every product of Gibbs states of the two towers' boost clocks at inverse temperatures $\beta, \beta'$, equal or not, has invertible density and gives positive weight to every joint charge sector; so any two of them have the same central support, $1$, and no central projection of the observable window algebra separates two values of $\xi = \beta/\beta'$.

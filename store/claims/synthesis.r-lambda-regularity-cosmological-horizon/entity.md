@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-lambda-regularity-cosmological-horizon
 kind: claim
-version: 4
+version: 5
 title: '(R$_{\Lambda}$): regularity at the cosmological horizon''s fixed locus'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.cosmological-horizon-boundary-modes
@@ -25,6 +29,14 @@ lineage:
   derived_from:
   - singularity.r-regularity-fixed-locus
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The boundary-mode algebra of the cosmological horizon is defined as the complexification of Cl(|J|,|J|), whose mode planes include Pi_Lambda = span{e_0, e_W} in conformal space, so neither I_4 nor the radial transverse bivector J = e_2 e_3 is shown to commute with its modes; the exact unit is that of U3, the central pseudoscalar hat{I} of the odd extension (std-algebra.complexification-is-the-odd-extension, cited in the formal level), to which the complex unit is sent by that theorems isomorphism. The Killing flow Ad(e^{hat{I} t omega_j K_j}) and the continuation F_{a,b}(t + hat{I} p) are written with it (the letter J is the Definitions mode set here, so the unit is not called J). No i remains; declaration removed. Premise content, status and links unchanged. The Definition obj.synthesis.cosmological-horizon-boundary-modes should carry the same unit.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the boundary-mode algebra of the cosmological horizon is the plain complexification of Cl(|J|,|J|) its template plane span{e_0, e_W} containing a spacetime vector, so the store does not show I_4 to be its unit; i stays in the Killing flow Ad(e^{i t omega_j K_j}) and in the imaginary-time continuation F(t + i p) (declared complex-analysis).'
   maintainer_pass_gtg_l0:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -42,9 +54,9 @@ extraction:
 ---
 
 ## formal
-For every mode $j$ of the boundary modes of the cosmological horizon (Definition \claimref{obj.synthesis.cosmological-horizon-boundary-modes}) and every pair $a, b$ of elements of its ladder $\{v_{j}, v_{j}^{*}\}$, the correlation function $F_{a,b}(t) := \omega\bigl(a\,\alpha_{t}(b)\bigr)$ of the static Killing flow $\alpha_{t} = \operatorname{Ad}(e^{it\omega_{j}K_{j}})$, an entire function of $t$, continues in imaginary Killing time to a single-valued function on the regular Euclidean section of the static patch of the de Sitter gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}; its static Painlev\'e-Gullstrand chart, Wick-rotated), and its two orderings meet after one period:
+For every mode $j$ of the boundary modes of the cosmological horizon (Definition \claimref{obj.synthesis.cosmological-horizon-boundary-modes}) and every pair $a, b$ of elements of its ladder $\{v_{j}, v_{j}^{*}\}$, the correlation function $F_{a,b}(t) := \omega\bigl(a\,\alpha_{t}(b)\bigr)$ of the static Killing flow $\alpha_{t} = \operatorname{Ad}(e^{\hat{I}t\omega_{j}K_{j}})$, an entire function of $t$ (the boundary-mode algebra, the complexification of $\Cl(|J|, |J|)$, is its odd extension, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}, with central unit $\hat{I}$, the pseudoscalar of the $2|J|$ mode-plane vectors times the adjoined vector; the continuation is to $t$ in $\mathrm{span}\{1, \hat{I}\}$), continues in imaginary Killing time to a single-valued function on the regular Euclidean section of the static patch of the de Sitter gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}; its static Painlev\'e-Gullstrand chart, Wick-rotated), and its two orderings meet after one period:
 \[
-F_{a,b}\bigl(t + i\,p\bigr) \;=\; \omega\bigl(\alpha_{t}(b)\,a\bigr), \qquad p \;=\; \frac{2\pi}{\kappa_{\Lambda}} ,
+F_{a,b}\bigl(t + \hat{I}\,p\bigr) \;=\; \omega\bigl(\alpha_{t}(b)\,a\bigr), \qquad p \;=\; \frac{2\pi}{\kappa_{\Lambda}} ,
 \]
 the period at which the Euclidean section is smooth at its tip (Proposition \claimref{synthesis.de-sitter-static-boost-frozen-point}(iii)); for a state that is KMS for the Killing flow, this is also the period at which it is regular across the horizon locus in the Painlev\'e-Gullstrand chart. The horizon locus is met on a cross-section of the cosmological horizon locus $r = 1/H$ in the static Painlev\'e-Gullstrand chart of de Sitter space ($\hb = 1 - \beta P$, $\beta = -rH$, the expanding chart, whose free-fall observers have $dr/dt = Hr$ and which contains the static observer's future horizon), of area $4\pi/H^{2}$, on which the static Killing field is null and normal with surface gravity $H$. In words: each single-mode marginal is KMS for the static Killing flow at exactly the period the smoothness of the Euclidean de Sitter section at its tip dictates; the condition is local, posed at the tip, and the closed Euclidean section as a whole is not used.
 

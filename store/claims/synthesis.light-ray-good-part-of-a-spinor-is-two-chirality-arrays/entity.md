@@ -1,7 +1,7 @@
 ---
 id: synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays
 kind: claim
-version: 2
+version: 4
 title: 'The light-ray good part of a spinor is two chirality arrays'
 status: proved
 region: synthesis
@@ -17,14 +17,23 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: clause (i) split out into synthesis.canonical-part-of-a-spinor-on-a-null-plane, which the proof now cites
+  version: 3
+  source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 4
+  source: maintainer pass 2026-11-07
 review: draft
 derivations:
 - name: main
   uses:
+  - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
   - field-theory.second-quantisation@5
   - field-theory.where-each-lives@3
-  - synthesis.positive-null-energy-gives-r-premises@4
-  - synthesis.half-integer-weight-array-carries-half-ln2@4
+  - synthesis.null-vacuum-on-a-horizon-generator@1
+  - synthesis.half-integer-weight-array-carries-half-ln2@5
   - synthesis.residue-from-mode-entropy@4
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
@@ -51,11 +60,19 @@ lineage:
   - synthesis.capacity-per-mode-independent-of-helicity
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_clause_split_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for the carrier''s boost beta_t (weight 1/2, preserving the anticommutator), which is now synthesis.null-vacuum-on-a-horizon-generator (i); the uses edge, the claimrefs and the check''s premise call are repointed to it, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it.'
   open_problem: op.residue-killing-weights
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
     note: 'Note added to (vii): the slot module excludes a fifteen-component generation (its light-ray arrays are its Weyl components, sixteen per generation, synthesis.slot-module-light-ray-arrays-are-weyl-components), so the half unit of a Weyl-only neutrino does not occur in the series'' matter. Cited in the text, not a uses edge (that result uses this one). Statement of (i) to (vii) unchanged. Version 1 -> 2.'
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: the algebra of clause (i) (the projectors Lambda(k), Lambda(m), the flux identity J.k = 2|Lambda(m) psi|^2 and the dimension count) is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane, its clauses (i) and (ii), and the proof of (i) cites it, so that results needing only that algebra no longer inherit (Q) and (N+) through this one. Statement of (i) to (vii) unchanged; the check of (i) is kept and now records the new premise in place of synthesis.positive-null-energy-gives-r-premises, which it never used. No bare imaginary unit in the text (the units are I_4 and Hestenes'' right unit).'
   note: >-
     The problem's first line of attack: follow the arrays of a counted unit to the field theory's
     spinor fields on the light rays, the reading behind (Q) version 3. On the horizon's null plane
@@ -79,8 +96,8 @@ extraction:
 ## formal
 Work in the spacetime algebra $\Cl(1,3)$, $\gamma_{0}^{2} = 1$, $\gamma_{i}^{2} = -1$, with $I = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$ and $\sigma_{3} = \gamma_{3}\gamma_{0}$, at a point of a horizon generator in a gauge with $\hb(x_{0}) = 1$, $\Omega(x_{0}) = 0$ there. Let the generators of the null plane $N_{k} = \{x : \ip{x}{k} = 0\}$ run along $k = \gamma_{0} + \gamma_{3}$ (any future null direction is carried to this one by a rotor), let $m = \gamma_{0} - \gamma_{3}$ be the second null direction of the plane of $k$ and $\gamma_{0}$, and let $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Theorem \claimref{field-theory.second-quantisation}(1)), so $\Lambda(k) = (1 + B)/2$ and $\Lambda(m) = (1 - B)/2$ with $B = \gamma_{3}\gamma_{0}$ the boost bivector of the generator ($B^{2} = 1$, $e^{B\lambda/2}k\,e^{-B\lambda/2} = e^{\lambda}k$). Spinors are even multivectors $\psi \in \Cl^{+}(1,3)$ (real dimension $8$), on which a rotor $R$ acts by $\psi \mapsto R\psi$. Let $J = \gamma_{1}\gamma_{2} = -IB$ be the bivector of the transverse plane, $L_{X}\psi = X\psi$, $i_{H} = R_{I\sigma_{3}}$ Hestenes' unit, and $\Gamma\psi = I\psi I\sigma_{3}$ the chirality. Then:
 \begin{enumerate}
-\item[(i)] (the canonical part on $N_{k}$) the flux of the Dirac current $J_{\psi} = \psi\gamma_{0}\tilde{\psi}$ through $N_{k}$ is $J_{\psi}\cdot k = 2\,|\Lambda(m)\psi|^{2}$, the squared Euclidean norm in the blade basis: it vanishes identically on the image of $\Lambda(k)$ and is positive definite on the image of $\Lambda(m)$, which is $\ker L_{m}$, the $(-1)$-eigenspace of $L_{B}$, of real dimension $4$. Symmetrically the flux through $N_{m}$ is $2|\Lambda(k)\psi|^{2}$. So the canonical part of a spinor field on $N_{k}$ is $\Lambda(m)\psi$; $\Lambda(k)$ is the spinor of plane waves of momentum $k$ (Theorem \claimref{field-theory.second-quantisation}(1), (2)), which are constant along the generators;
-\item[(ii)] (its boost weight) the covariant boost $B_{\lambda} = \cosh\tfrac{\lambda}{2} + B\sinh\tfrac{\lambda}{2}$ acts on the values of $\Lambda(m)\psi$ by $e^{-\lambda/2}$ and on those of $\Lambda(k)\psi$ by $e^{+\lambda/2}$, while the transport $u \mapsto e^{-\lambda}u$ of the generators' affine parameter multiplies the delta kernel by $e^{\lambda}$. The anticommutator is therefore preserved on the canonical part, the unitary dilation $\psi_{m}(u) \mapsto e^{-\lambda/2}\psi_{m}(e^{-\lambda}u)$, which at $\lambda = -\kappa t$ is the boost $\beta_{t}(\psi(u)) = e^{\kappa t/2}\psi(e^{\kappa t}u)$ of the continuum carrier (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}), of weight $\tfrac12$; on $\Lambda(k)\psi$ it is scaled by $e^{2\lambda}$;
+\item[(i)] (the canonical part on $N_{k}$) the flux of the Dirac current $J_{\psi} = \psi\gamma_{0}\tilde{\psi}$ through $N_{k}$ is $J_{\psi}\cdot k = 2\,|\Lambda(m)\psi|^{2}$, the squared Euclidean norm in the blade basis: it vanishes identically on the image of $\Lambda(k)$ and is positive definite on the image of $\Lambda(m)$, which is $\ker L_{m}$, the $(-1)$-eigenspace of $L_{B}$, of real dimension $4$. Symmetrically the flux through $N_{m}$ is $2|\Lambda(k)\psi|^{2}$ (Theorem \claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}(i), (ii)). So the canonical part of a spinor field on $N_{k}$ is $\Lambda(m)\psi$; $\Lambda(k)$ is the spinor of plane waves of momentum $k$ (Theorem \claimref{field-theory.second-quantisation}(1), (2)), which are constant along the generators;
+\item[(ii)] (its boost weight) the covariant boost $B_{\lambda} = \cosh\tfrac{\lambda}{2} + B\sinh\tfrac{\lambda}{2}$ acts on the values of $\Lambda(m)\psi$ by $e^{-\lambda/2}$ and on those of $\Lambda(k)\psi$ by $e^{+\lambda/2}$, while the transport $u \mapsto e^{-\lambda}u$ of the generators' affine parameter multiplies the delta kernel by $e^{\lambda}$. The anticommutator is therefore preserved on the canonical part, the unitary dilation $\psi_{m}(u) \mapsto e^{-\lambda/2}\psi_{m}(e^{-\lambda}u)$, which at $\lambda = -\kappa t$ is the boost $\beta_{t}(\psi(u)) = e^{\kappa t/2}\psi(e^{\kappa t}u)$ of the continuum carrier (Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(i)), of weight $\tfrac12$; on $\Lambda(k)\psi$ it is scaled by $e^{2\lambda}$;
 \item[(iii)] (two chirality channels) $\Gamma^{2} = 1$, $\Gamma$ commutes with every $L_{X}$, $X \in \Cl^{+}(1,3)$ (so it is Lorentz invariant), with $i_{H}$ and with the central unit $I$ of Theorem \claimref{field-theory.where-each-lives}; its eigenspaces $W_{\pm}$ (the Weyl spinors) have real dimension $4$ and meet the canonical part in real dimension $2$ each: the canonical part is one complex channel of each chirality, under either unit;
 \item[(iv)] (helicity) on the canonical part $L_{J} = -\Gamma\,i_{H}$ and $L_{J} = L_{I}$; the transverse rotation $e^{-J\phi/2}$ acts on the channel of chirality $\epsilon$ as $e^{+\epsilon i_{H}\phi/2}$: helicity about the generator direction $k$ is minus the chirality, equivalently the chirality about $m$. On the image of $\Lambda(k)$ the opposite signs hold, and neither identity holds on all of $\Cl^{+}(1,3)$. With the central unit both canonical channels are complex-linear for $L_{J} = L_{I}$, the other chirality's particle content entering conjugated, the split of Theorem \claimref{field-theory.second-quantisation}(4);
 \item[(v)] (Weyl against Dirac) a Weyl spinor field has one complex canonical channel on each light ray of $N_{k}$, a Hestenes (Dirac) spinor field two, one of each chirality and so of opposite helicities;

@@ -1,7 +1,7 @@
 ---
 id: note.standard-model.setting-intermediate-symmetry-slot-pair-split
 kind: note
-version: 1
+version: 2
 title: 'An intermediate symmetry: the slot/pair split'
 status: setting
 subject: standard-model
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - standard-model.imported-pati-salam-representation-theory-survival
 - standard-model.spectrum-run
@@ -25,6 +29,11 @@ locators:
   number: Setting
   section: 'An intermediate symmetry: the slot/pair split'
   line: 1876
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the Majorana generators gamma_{2a-1} = I_4 (v_a - w_a), a = 1..5, the five-mode module read over span{1, I_4} on the tower''s floors (stated once; notational, nothing about Hypothesis (S) follows); no bare i remains, so the earlier declaration is removed.'
 ---
 
 ## formal
@@ -32,9 +41,9 @@ Proposition \claimref{standard-model.spectrum-run} leaves two ways for the runni
 
 Everything here assumes Hypothesis (S), which supplies the five-mode state space, and uses the module of Definition \claimref{obj.standard-model.two-rung-module-sectors-slot-components}: its mode operators $v_{a}$, $w_{a}$, its rung parity $\chi = -(-1)^{N_{R}}$ and $B - L = 1 - \tfrac23 N_{W}$ (Fact \ref{fact:gj}). The ten Majorana generators of the module are
 \[
-\gamma_{2a-2} = w_{a} + v_{a}, \qquad \gamma_{2a-1} = i\,(v_{a} - w_{a}), \qquad a = 1, \ldots, 5,
+\gamma_{2a-2} = w_{a} + v_{a}, \qquad \gamma_{2a-1} = I_{4}(v_{a} - w_{a}), \qquad a = 1, \ldots, 5,
 \]
-six pair Majoranas $\gamma_{0}, \ldots, \gamma_{5}$ and four slot Majoranas $\gamma_{6}, \ldots, \gamma_{9}$. Two imports carry the section.
+six pair Majoranas $\gamma_{0}, \ldots, \gamma_{5}$ and four slot Majoranas $\gamma_{6}, \ldots, \gamma_{9}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors). Two imports carry the section.
 
 ## technical
 pending

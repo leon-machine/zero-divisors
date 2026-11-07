@@ -31,7 +31,7 @@ derivations:
   - standard-model.generation-ten-under-pati-salam@7
   - standard-model.yukawa-pattern-two-rung-module@5
   - standard-model.hyp-s-slot-statistics@9
-  - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@2
+  - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@3
   proof: proof-main.tex
 checked_by:
 - kind: check

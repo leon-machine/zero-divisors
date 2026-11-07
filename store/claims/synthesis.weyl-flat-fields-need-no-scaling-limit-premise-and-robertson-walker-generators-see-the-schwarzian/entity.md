@@ -1,7 +1,7 @@
 ---
 id: synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
 kind: claim
-version: 4
+version: 6
 title: 'No scaling-limit premise on Weyl-flat fields; the Robertson-Walker Schwarzian'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 6
+  source: maintainer pass 2026-11-07
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -25,10 +33,10 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@3
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@4
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@2
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - field-theory.second-quantisation@5
   - synthesis.imported-gtg-dictionary@1
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
@@ -54,6 +62,14 @@ lineage:
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum as the ground state of the affine translations), which is now synthesis.null-vacuum-on-a-horizon-generator (ii); the uses edge, the claimrefs and the check''s premise call are repointed to it, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes 3 -> 5; synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state 4 -> 5; synthesis.local-normality-at-the-edge-gives-the-null-ground-state 2 -> 3.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The two-point kernels on the generator modes (continuum mode space) are written with the field unit I_4, numbers read in span{1, I_4}: the null-vacuum kernel and the Schwarzian kernel; nothing stays (e_i is an index).'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Step (3) of op.deposit-state-is-hadamard on the Weyl-flat part of the chain. Clause (i) is the
@@ -110,11 +126,11 @@ Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a gravitational field on flat spac
 \begin{enumerate}
 \item[(i)] \emph{(Conformal transfer and bulk scaling limit; standard, re-derived.)} The flat null lines with $d\tilde\lambda = \varphi^{2}d\lambda$ are the affine null geodesics of the derived metric and carry the flat covectors, so a state of $\psi = \varphi^{-3/2}\chi$ is Hadamard exactly when the corresponding state of the flat field $\chi$ is. For every gauge-invariant quasi-free Hadamard state $\omega$ and every $x_{0} \in U$, the scaling limit of $\omega$ at $x_{0}$ (weight $\tfrac32$ per leg) is the flat massless vacuum in the local inertial coordinates $\varphi(x_{0})(x - x_{0})$.
 \item[(ii)] \emph{(Generators; proved.)} On every null generator in $U$ the physical affine parameter $\tilde\lambda$ satisfies $d\tilde\lambda = \varphi^{2}d\lambda$, $\lambda$ the flat one. With the comoving transverse labels fixed as the multiplicity space (the physical area element $\varphi^{2}d^{2}y$ changes along an expanding generator), the CAR makes the generator field carry weight $\tfrac12$ in $\tilde\lambda$, and the restriction of $\omega$ satisfies the generator microlocal condition in $\tilde\lambda$. Hence the local form of (N$_{+}$) holds at every point of every null plane of the chart in $U$, for every such state, with no further premise. The chart's null planes through $x_{0}$ agree with the local Rindler horizons at $x_{0}$ (expansion-free there) at the leading order, tangent at $x_{0}$, at which the scaling-limit premise (HS) and (C$_{\mathrm{loc}}$) define them; at that order the conclusion of (HS) is, on Weyl-flat regions, a theorem for the massless Dirac field.
-\item[(iii)] \emph{(Robertson-Walker generators; proved and computed.)} For $\varphi = a(t)$, $t = x\cdot e_{0}$, the restriction of the conformal vacuum to a null generator, read in $\tilde\lambda = \Psi(\lambda)$ with $\Psi' = a^{2}$, is the null vacuum of $\tilde\lambda$ plus the Schwarzian kernel of $\Phi = \Psi^{-1}$, whose leading term is $\tfrac{i}{2\pi}\cdot\tfrac{1}{12}S_{\Phi}\,(u - v)$ with $S_{\Phi} = -S/a^{4}$, where
+\item[(iii)] \emph{(Robertson-Walker generators; proved and computed.)} For $\varphi = a(t)$, $t = x\cdot e_{0}$, the restriction of the conformal vacuum to a null generator, read in $\tilde\lambda = \Psi(\lambda)$ with $\Psi' = a^{2}$, is the null vacuum of $\tilde\lambda$ plus the Schwarzian kernel of $\Phi = \Psi^{-1}$, whose leading term is $\tfrac{I_{4}}{2\pi}\cdot\tfrac{1}{12}S_{\Phi}\,(u - v)$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$, $I_{4}$ the unit of the mode space) with $S_{\Phi} = -S/a^{4}$, where
 \[
 S = S_{\Psi} = \frac{\Psi'''}{\Psi'} - \frac32\Bigl(\frac{\Psi''}{\Psi'}\Bigr)^{2} = \frac{2a''}{a} - 4\Bigl(\frac{a'}{a}\Bigr)^{2} = -2a\Bigl(\frac1a\Bigr)'' ,
 \]
-derivatives in conformal time, $a$ at the point. $S$ vanishes on an interval exactly when $1/a$ is linear in $t$ there: de Sitter ($a = -1/(Ht)$) or the flat field. For $a = t^{n}$, $S = -2n(n + 1)/t^{2}$: radiation $-4/t^{2}$, matter $-12/t^{2}$. So the conformal vacuum is the ground state of the physical affine translations on every null generator exactly on de Sitter and flat fields (the ground-state clause of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i) in $\tilde\lambda$); on a radiation- or matter-dominated field it satisfies only the local form.
+derivatives in conformal time, $a$ at the point. $S$ vanishes on an interval exactly when $1/a$ is linear in $t$ there: de Sitter ($a = -1/(Ht)$) or the flat field. For $a = t^{n}$, $S = -2n(n + 1)/t^{2}$: radiation $-4/t^{2}$, matter $-12/t^{2}$. So the conformal vacuum is the ground state of the physical affine translations on every null generator exactly on de Sitter and flat fields (the ground-state clause of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii) in $\tilde\lambda$); on a radiation- or matter-dominated field it satisfies only the local form.
 \end{enumerate}
 \emph{Note (2 November).} Clause (i) is subsumed by Theorem \claimref{synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field}: every gauge-invariant quasi-free Hadamard state of the Dirac field, of every mass, has the flat massless vacuum as its scaling limit at every point of every globally hyperbolic gravitational field, whatever the Weyl curvature (standard, Sahlmann and Verch, re-derived). The conformal-covariance part of (i), which (ii) and the deposit result use, and clauses (ii) and (iii) stand: the generator statement (ii) is not given by that theorem. The premise (HS), \claimref{synthesis.hadamard-scaling-limit-premise}, has since been restated (version 3) as a statement about the Hadamard parametrix restricted to horizon generators; "the conclusion of (HS)" in (ii) is the scaling limit on the generators, the clause (b) of its version 2. The statements above are unchanged. \emph{(Added 2 November, later.)} (HS) is now a theorem (version 4 of \claimref{synthesis.hadamard-scaling-limit-premise}): its conclusion holds at every point of every local Rindler horizon, for every mass and whatever the Weyl curvature; this result stands as a separate route on Weyl-flat regions and does not use it.
 

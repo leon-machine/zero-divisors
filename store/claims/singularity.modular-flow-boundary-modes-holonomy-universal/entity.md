@@ -26,7 +26,7 @@ derivations:
   - singularity.modular-structure-completed-pair@5
   - singularity.plane-rate@4
   assumes:
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

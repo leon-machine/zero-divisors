@@ -1,7 +1,7 @@
 ---
 id: mass.grip-real
 kind: claim
-version: 7
+version: 8
 title: The grip is real
 status: proved
 region: mass
@@ -17,13 +17,17 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.mass.grip-mass-composite
 derivations:
 - name: main
   uses:
-  - correspondence.reality-conjugation-twistor-form-factor@6
+  - correspondence.reality-conjugation-twistor-form-factor@8
   - mass.chart-form-spin-isomorphism@5
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.imported-frozen-point-tractor-connection@6
@@ -45,6 +49,10 @@ locators:
   label: lem:real
   line: 677
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The chart''s complex unit, which the proof''s convention line already read as I_6 but wrote i, is now written I_6 in the slice x = (I_6/sqrt2) K epsilon and the translation and special conformal blocks, matrix entries read in span{1, I_6}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - one-relation.dirac-current-conserved-density@2
+  - one-relation.dirac-current-conserved-density@3
   - one-relation.imported-indifference-instrument@4
   proof: proof-main.tex
 checked_by:

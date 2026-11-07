@@ -1,0 +1,21 @@
+functions:
+  check_projectors_are_complementary_dirac_self_adjoint_idempotents:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "the multivector identities Lambda(k) = k gamma_0/2 = (1 + B)/2 = k m/4 and Lambda(m) = m gamma_0/2 = (1 - B)/2 = m k/4, idempotence, sum 1, product 0 and Dirac self-adjointness exactly; ker L_m, the (-1)-eigenspace of L_B and the image of Lambda(m) (and the same for k) by exact rank; only k = gamma_0 + gamma_3 is computed, other null directions by the rotor argument"
+  check_flux_through_the_plane_is_twice_the_norm_of_the_canonical_part:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the full 8 x 8 Gram matrices of the flux forms through N_k and N_m equal 2 Lambda(m)^T Lambda(m) and 2 Lambda(k)^T Lambda(k) by exact rational arithmetic, with a contrast (the gamma_0 flux) and one explicit spinor; the constancy of plane waves along the generators is taken from the cited result, not computed"
+  check_canonical_part_is_two_complex_channels:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "L_{I_4} and R_{I_4 sigma_3} square to -1, commute with L_B and preserve the image of Lambda(m), exactly, with a non-central contrast; the complex dimension 2 is half the real rank 4"
+  check_mass_terms_enter_only_the_constraint:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "k^2 = 0, k m = 2 + 2B, the splitting of each gamma_mu along k, m and the transverse plane, k anticommuting with gamma_1, gamma_2, rank(L_k Lambda(k)) = 0, rank(L_k Lambda(m)) = 4 and rank(L_k R_X Lambda(k)) = 0 for all sixteen basis blades X, by exact rank; the integration of the constraint along a generator is argued in the proof, not computed"
+  check_covariant_maps_are_right_multiplications:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "the solution space of F L_X = L_X F for the six basis bivectors X, over all 16 x 8 matrices F, has dimension 16 and is spanned by the sixteen right multiplications, exactly; that rotors span the even algebra is argued, not computed"

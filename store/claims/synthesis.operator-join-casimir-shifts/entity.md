@@ -21,12 +21,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@2
-  - mass.casimir-form-join@6
+  - synthesis.operator-join-ordering-constants@3
+  - mass.casimir-form-join@7
   - mass.imported-palatial-quadratics-homogeneity-charge@4
-  - mass.imported-unitary-representations-de-sitter-group@3
+  - mass.imported-unitary-representations-de-sitter-group@4
   - mass.mass-weight-dictionary@4
-  - mass.weight-polynomial-two-series@5
+  - mass.weight-polynomial-two-series@6
   - field-theory.imported-standard-field-theory@4
   - mass.de-sitter-scale-frozen-point@6
   - mass.chart-form-spin-isomorphism@5

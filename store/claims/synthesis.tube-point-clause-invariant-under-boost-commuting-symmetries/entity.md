@@ -1,7 +1,7 @@
 ---
 id: synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries
 kind: claim
-version: 1
+version: 2
 title: 'The tube-point clause: invariance under boost-commuting symmetries'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -26,6 +30,14 @@ lineage:
   - synthesis.wick-rotated-boost-selects-observer-tube-point
   - synthesis.imported-de-sitter-invariant-hadamard-state-unique
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the tube point m = x_perp + i rho u is written x_perp + I_7 rho u, with I_7 = I_6 e the central pseudoscalar of Cl(3,4) = Cl(2,4)_C, which commutes with every vector (std-algebra.complexification-is-the-odd-extension, cited as a mention); the clause, its cost and its refutation condition are unchanged, and the status stays postulate. No bare i remains, so the outside_ga declaration (complex-analysis, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the tube point m = x_perp + i rho u belongs to the complexified spacetime (forward tube), whose unit must commute with the vectors; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -39,7 +51,7 @@ extraction:
 ---
 
 ## formal
-\emph{The tube-point clause (costed).} Let a state of the series' modes and a wedge with boost $K$ be given, with the compatible tube point $m = x_{\perp} + i\rho u$ over the wedge's bifurcation plane that the boost-KMS data and the ascent pair fix up to the scale $\rho$ (Theorem \claimref{synthesis.wick-rotated-boost-selects-observer-tube-point}). In a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) of which $K$ generates a symmetry, $m$ is invariant under every symmetry of the field that commutes with $K$, acting on tube points complex-linearly.
+\emph{The tube-point clause (costed).} Let a state of the series' modes and a wedge with boost $K$ be given, with the compatible tube point $m = x_{\perp} + I_{7}\rho u$ over the wedge's bifurcation plane ($I_{7} = I_{6}e$ the central pseudoscalar of $\Cl(2,4)_{\C} = \Cl(3,4)$, which commutes with every vector, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}) that the boost-KMS data and the ascent pair fix up to the scale $\rho$ (Theorem \claimref{synthesis.wick-rotated-boost-selects-observer-tube-point}). In a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) of which $K$ generates a symmetry, $m$ is invariant under every symmetry of the field that commutes with $K$, acting on tube points complex-linearly.
 
 \emph{What it is for.} It is the selection rule of the reading of Theorem \claimref{synthesis.de-sitter-field-fixes-the-observer-tube-point}, adopted. In the de Sitter field ($\Lambda > 0$) the symmetries commuting with $K$ are $K$ and a transverse $\so(3)$, and the compatible tube points they fix are exactly one boost orbit, foot at the scale's centre and $\rho^{2} = 12/\Lambda$ (that theorem, (i) and (ii)); so the clause fixes $\rho$ there, and the frozen-point and surface-gravity candidates are one tube point when $\rho = 1/\kappa$ is read as the physical norm of the boost generator (in chart length $\rho_{\Lambda} = 2/\kappa$, the factor $2$ being the local scale $\sigma = 2$). In that field the condition is equivalent to the complexified Stelle-West vector $X(m)/\sigma(m) - \tfrac{3}{\Lambda}I_{\Lambda}$ being purely imaginary (that theorem, (vii)). For the pure-dilation fields with $\Lambda \le 0$ it fixes no tube point and $\rho$ stays free (that theorem, (vi)). It decides fields with one horizon only: in a static region bounded by two horizons it does not say which horizon's boost is the observer's, and the candidates separate there, as in the Schwarzschild-de Sitter field with lapse $f = 1 - 2M/r - \tfrac{\Lambda}{3}r^{2}$ at $\Lambda = M = \tfrac37$, horizons at $r = 1$ and $r = 2$ and $\kappa_{b}/\kappa_{c} = \tfrac85$; for the Schwarzschild field it is not computed. Where it decides, it ties the scale to $\Lambda$ and supplies no unit independent of it.
 

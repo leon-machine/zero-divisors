@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem
 kind: claim
-version: 1
+version: 2
 title: 'Imported: free-field spin-statistics and the Guido-Longo theorem'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'W. Pauli, The connection between spin and statistics, Phys. Rev. 58 (1940), 716--722.'
@@ -30,6 +34,21 @@ imported_from:
 - citation: 'R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, Benjamin (1964).'
   key: StreaterWightman1964
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Restated by U4: the i0 prescription of the massless two-point function is written in scalar form with the field theory''s unit I_4, D_+(xi) = -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)), numbers in span{1, I_4}, the unit the results that use this Fact write D_+ = int d mu e^{-I_4 k.xi} with (U1, and U3''s allowance for the scalar form of a shifted vector); the text says that as a shift of the vector xi its unit is the central I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention). The source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
+  source_formal: |-
+    Signature $(+,-,-,-)$.
+    \begin{enumerate}
+    \item[(i)] \emph{(The massless two-point function.)} The vacuum two-point function of the free massless scalar field is $D_{+}(\xi) = -\dfrac{1}{4\pi^{2}\bigl(Q(\xi) - i0\,\xi_{0}\bigr)}$; on the open spacelike set $\{Q(\xi) < 0\}$ it is the real function $-1/(4\pi^{2}Q(\xi))$, even under $\xi \to -\xi$ \cite{Shalabi2024, StreaterWightman1964}.
+    \item[(ii)] \emph{(Pauli's argument.)} For a free field whose particle and antiparticle parts carry a polarisation sum that is a polynomial $P(k)$ homogeneous of degree $d$, the commutator or anticommutator at spacelike separation is a multiple of $(1 \pm (-1)^{d})P(\partial)D_{+}$; with positive metric, locality forces commutators for integer spin and anticommutators for half-integer spin \cite{Pauli1940}.
+    \item[(iii)] \emph{(Guido and Longo.)} Let a net of field algebras on the spacelike cones of Minkowski space have the Reeh-Schlieder property and normal commutation relations (Bose and Fermi parts graded by a self-adjoint unitary $\Gamma$ fixing the vacuum), and be modular covariant: the modular group of the vacuum for each wedge algebra acts as the wedge's boosts, rescaled by $-2\pi$. Then the net carries a positive-energy representation $U$ of the covering group of the Poincar\'e group, and $\Gamma = U(2\pi)$ \cite{GuidoLongo1995}.
+    \end{enumerate}
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the massless two-point function D_+(xi) = -1/(4 pi^2 (Q(xi) - i0 xi_0)) is quoted with its source''s i0 prescription, a boundary value of a scalar distribution. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the locality result and the modular-period result can pin the two-point function, Pauli's
     argument and the Guido-Longo theorem instead of citing them from memory. Checked on 2026-11-01: the bibliographic
@@ -53,7 +72,7 @@ extraction:
 ## formal
 Signature $(+,-,-,-)$.
 \begin{enumerate}
-\item[(i)] \emph{(The massless two-point function.)} The vacuum two-point function of the free massless scalar field is $D_{+}(\xi) = -\dfrac{1}{4\pi^{2}\bigl(Q(\xi) - i0\,\xi_{0}\bigr)}$; on the open spacelike set $\{Q(\xi) < 0\}$ it is the real function $-1/(4\pi^{2}Q(\xi))$, even under $\xi \to -\xi$ \cite{Shalabi2024, StreaterWightman1964}.
+\item[(i)] \emph{(The massless two-point function.)} The vacuum two-point function of the free massless scalar field is $D_{+}(\xi) = -\dfrac{1}{4\pi^{2}\bigl(Q(\xi) - I_{4}0\,\xi_{0}\bigr)}$, numbers read in $\mathrm{span}\{1, I_{4}\}$, the field theory's unit, with the infinitesimal shift written in scalar form (as a shift of the vector $\xi$ by $-0\,e_{0}$ its unit is the central pseudoscalar $I_{5} = I_{4}e$ of the odd extension $\Cl(2,3)$, which commutes with $\xi$, \claimref{std-algebra.complexification-is-the-odd-extension}); on the open spacelike set $\{Q(\xi) < 0\}$ it is the real function $-1/(4\pi^{2}Q(\xi))$, even under $\xi \to -\xi$ \cite{Shalabi2024, StreaterWightman1964}.
 \item[(ii)] \emph{(Pauli's argument.)} For a free field whose particle and antiparticle parts carry a polarisation sum that is a polynomial $P(k)$ homogeneous of degree $d$, the commutator or anticommutator at spacelike separation is a multiple of $(1 \pm (-1)^{d})P(\partial)D_{+}$; with positive metric, locality forces commutators for integer spin and anticommutators for half-integer spin \cite{Pauli1940}.
 \item[(iii)] \emph{(Guido and Longo.)} Let a net of field algebras on the spacelike cones of Minkowski space have the Reeh-Schlieder property and normal commutation relations (Bose and Fermi parts graded by a self-adjoint unitary $\Gamma$ fixing the vacuum), and be modular covariant: the modular group of the vacuum for each wedge algebra acts as the wedge's boosts, rescaled by $-2\pi$. Then the net carries a positive-energy representation $U$ of the covering group of the Poincar\'e group, and $\Gamma = U(2\pi)$ \cite{GuidoLongo1995}.
 \end{enumerate}
@@ -65,4 +84,4 @@ The free massless field's vacuum correlation is $-1/(4\pi^{2})$ over the spaceti
 Particles of whole-number spin behave as bosons and those of half-number spin as fermions. For free particles this follows from a short argument of Pauli using the standard formula for how a field's values at two points are correlated. For interacting fields Guido and Longo proved it from a property of the vacuum: that its natural flow in each wedge of spacetime is the geometric boost. The series takes these results as given.
 
 ## one-liner
-$D_{+}(\xi) = -1/(4\pi^{2}(Q(\xi) - i0\,\xi_{0}))$, real and even at spacelike $\xi$; Pauli's free-field spin-statistics argument; and Guido-Longo: modular covariance, Reeh-Schlieder and normal commutation relations give $\Gamma = U(2\pi)$ with positive energy derived.
+$D_{+}(\xi) = -1/(4\pi^{2}(Q(\xi) - I_{4}0\,\xi_{0}))$, real and even at spacelike $\xi$; Pauli's free-field spin-statistics argument; and Guido-Longo: modular covariance, Reeh-Schlieder and normal commutation relations give $\Gamma = U(2\pi)$ with positive energy derived.

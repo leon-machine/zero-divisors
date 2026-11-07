@@ -1,7 +1,7 @@
 ---
 id: families.bracket-fixed-join
 kind: claim
-version: 4
+version: 5
 title: The bracket is fixed by the join
 status: proved
 region: families
@@ -17,11 +17,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T13, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
   uses:
-  - families.imported-dictionary-exact-join@5
+  - families.imported-dictionary-exact-join@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -40,6 +44,10 @@ locators:
   label: prop:condensation
   line: 631
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -84,10 +92,10 @@ For the composite of two conformal spinors (twistors) of mass $m$ at $\Lambda > 
 \begin{equation}
 |B_{\Lambda}|^{2} \;=\; \frac{m^{2}}{2} - \frac{\Lambda}{6}\,C \;=\; \frac{\Lambda}{6}\Bigl(\nu^{2} + \frac{9}{4} - C\Bigr),
 \end{equation}
-the second form for a composite on the principal series, $w = -\tfrac32 \pm i\nu$. Consequently $B_{\Lambda} \ne 0$ if and only if $m^{2} > \Lambda C/3$, which for $C$ of order one is every composite heavier than the Hubble scale; the flat bracket $\br{\pi^{1}\pi^{2}}$ is then nonzero up to the $\Lambda$-suppressed $\omega$-area of the join. The identity is a rewriting of the join and says nothing about a vacuum: it converts the matter programme's open equation into the equation the broken phase must satisfy, at consistency level, without supplying the potential that selects the phase, the $W$ and $Z$ masses, or the weak mixing angle. At observation level, and flagged as such: read with Fact \claimref{families.imported-face-valued-bracket-quantum-numbers}, the nonvanishing bracket is a charged singlet with a fixed modulus, the shape of a condensed order parameter, with the reservation recorded in that Fact about what it is an order parameter \emph{of}.
+the second form for a composite on the principal series, $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$). Consequently $B_{\Lambda} \ne 0$ if and only if $m^{2} > \Lambda C/3$, which for $C$ of order one is every composite heavier than the Hubble scale; the flat bracket $\br{\pi^{1}\pi^{2}}$ is then nonzero up to the $\Lambda$-suppressed $\omega$-area of the join. The identity is a rewriting of the join and says nothing about a vacuum: it converts the matter programme's open equation into the equation the broken phase must satisfy, at consistency level, without supplying the potential that selects the phase, the $W$ and $Z$ masses, or the weak mixing angle. At observation level, and flagged as such: read with Fact \claimref{families.imported-face-valued-bracket-quantum-numbers}, the nonvanishing bracket is a charged singlet with a fixed modulus, the shape of a condensed order parameter, with the reservation recorded in that Fact about what it is an order parameter \emph{of}.
 
 ## technical
-For a two-spinor composite of mass $m$ at $\Lambda > 0$, the exact join $m^{2} = 2|B_{\Lambda}|^{2} + \tfrac{\Lambda}{3}C$ can be solved for the deformed bracket: $|B_{\Lambda}|^{2} = \tfrac{m^{2}}{2} - \tfrac{\Lambda}{6}C = \tfrac{\Lambda}{6}\bigl(\nu^{2} + \tfrac94 - C\bigr)$, the second form for a composite on the principal series $w = -\tfrac32 \pm i\nu$. Hence $B_{\Lambda} \neq 0$ exactly when $m^{2} > \Lambda C/3$, which for $C$ of order one is every composite heavier than the Hubble scale, and the flat bracket $\br{\pi^{1}\pi^{2}}$ is then nonzero up to the $\Lambda$-suppressed $\omega$-area.
+For a two-spinor composite of mass $m$ at $\Lambda > 0$, the exact join $m^{2} = 2|B_{\Lambda}|^{2} + \tfrac{\Lambda}{3}C$ can be solved for the deformed bracket: $|B_{\Lambda}|^{2} = \tfrac{m^{2}}{2} - \tfrac{\Lambda}{6}C = \tfrac{\Lambda}{6}\bigl(\nu^{2} + \tfrac94 - C\bigr)$, the second form for a composite on the principal series $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$). Hence $B_{\Lambda} \neq 0$ exactly when $m^{2} > \Lambda C/3$, which for $C$ of order one is every composite heavier than the Hubble scale, and the flat bracket $\br{\pi^{1}\pi^{2}}$ is then nonzero up to the $\Lambda$-suppressed $\omega$-area.
 
 The identity is a rewriting of the join and says nothing about a vacuum: it gives, at consistency level, the equation a broken phase must satisfy, without the potential that selects the phase, the $W$ and $Z$ masses or the weak mixing angle. At observation level only, read with the bracket's quantum numbers, the nonzero bracket has the shape of a condensed order parameter, a charged singlet of fixed modulus, with the question of what it is an order parameter of left open.
 

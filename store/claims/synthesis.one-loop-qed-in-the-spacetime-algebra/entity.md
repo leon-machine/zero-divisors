@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-loop-qed-in-the-spacetime-algebra
 kind: claim
-version: 2
+version: 4
 title: 'One-loop electrodynamics in the spacetime algebra'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -26,7 +34,7 @@ derivations:
   - field-theory.second-quantisation@5
   - field-theory.elementary-photon-ga@4
   - field-theory.coupled-system-tree-level@3
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
   proof: proof-main.tex
@@ -48,7 +56,18 @@ checked_by:
 lineage:
   motivated_by:
   - field-theory.coupled-system-tree-level
+outside_ga:
+  kind: bridge
+  why: 'the levels and proof set the Dirac-matrix reading beside the algebra (the check''s Dirac matrices, with their complex scalar read as I_5, the Gordon term in sigma^{mu nu} form); the mathematics is done in the spacetime algebra'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The matrix reading''s complex scalar (gamma_5 = i gamma_0 gamma_1 gamma_2 gamma_3, the Gordon term -i sigma^{mu nu} q_nu) is the Dirac module''s complexification, so by U3 and U5 it is read as the central I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention): I_5 gamma_0 gamma_1 gamma_2 gamma_3, -I_5 sigma^{mu nu} q_nu, I_5 sigma^{mu nu} = -gamma^mu ^ gamma^nu; the proof says that through (1 + e)/2 it acts as the right unit x I_4, related and not identified. No bare i remains; the declaration (bridge) is kept, its reason narrowed to the Dirac-matrix reading set beside the algebra.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The units of the Feynman rules and of the Wick rotation, the values of the Wick-rotated integrals and the chiral traces now use the field theory''s unit I_4 (numbers read in span{1, I_4}, acting on Clifford products as the right unit, the propagator and vertex units written on the right of the product), and the chirality is written x -> I_4 x I_4; i stays only in the Dirac-matrix reading (the check''s matrices over Q(i), gamma_5 = i gamma_0 gamma_1 gamma_2 gamma_3, and gamma^mu ^ q = -i sigma^{mu nu} q_nu), declared as a bridge.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -78,17 +97,17 @@ extraction:
 ---
 
 ## formal
-Work in a covariant gauge, under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (imported, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}: the covariant propagator $-g_{\mu\nu}/k^{2}$ on internal lines; the photon of Proposition \claimref{field-theory.elementary-photon-ga}(4) gives the covariant form only at tree level on conserved currents). Take the Dirac matrices as the spacetime algebra's product (vectors $\gamma_{\mu}$ of $\Cl(1,3)$, reciprocal frame $\gamma^{\mu}$), the propagator numerator of momentum $k$ as the multivector $k + m$, the vertex as $\gamma^{\mu}$ with the coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, and the units of the Feynman rules and of the Wick rotation as coefficients collected in front of the Clifford product. Regulate with imported Pauli-Villars fields of weights $c_{i}$ (negative weights included), $\sum_{i} c_{i} = \sum_{i} c_{i}M_{i}^{2} = 0$ ($c_{0} = 1$, $M_{0} = m$): fermions on the fermion loop in (2), a photon on the photon line in (3) and (4). Then:
+Work in a covariant gauge, under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (imported, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}: the covariant propagator $-g_{\mu\nu}/k^{2}$ on internal lines; the photon of Proposition \claimref{field-theory.elementary-photon-ga}(4) gives the covariant form only at tree level on conserved currents). Take the Dirac matrices as the spacetime algebra's product (vectors $\gamma_{\mu}$ of $\Cl(1,3)$, reciprocal frame $\gamma^{\mu}$), the propagator numerator of momentum $k$ as the multivector $k + m$, the vertex as $\gamma^{\mu}$ with the coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, and the units of the Feynman rules and of the Wick rotation as the field theory's unit $I_{4}$ acting as the right unit, a coefficient collected outside the Clifford product (numbers, including the values of the Wick-rotated integrals, are read in $\mathrm{span}\{1, I_{4}\}$). Regulate with imported Pauli-Villars fields of weights $c_{i}$ (negative weights included), $\sum_{i} c_{i} = \sum_{i} c_{i}M_{i}^{2} = 0$ ($c_{0} = 1$, $M_{0} = m$): fermions on the fermion loop in (2), a photon on the photon line in (3) and (4). Then:
 \begin{enumerate}
-\item (Traces.) The matrix trace of $X \in \Cl(1,3)$ is $4\langle X\rangle_{0}$, and the chiral traces are $2(\langle X\rangle_{0} \mp i\,x_{4})$, $x_{4}$ the coefficient of $I_{4}$ in $X$: twice $\proj(X)$ of Definition \claimref{obj.field-theory.single-algebra-field}, read with $I_{4} \mapsto \mp i$.
+\item (Traces.) The matrix trace of $X \in \Cl(1,3)$ is $4\langle X\rangle_{0}$, and the chiral traces are the numbers $2(\langle X\rangle_{0} \mp x_{4}I_{4})$, $x_{4}$ the coefficient of $I_{4}$ in $X$: twice $\proj(X)$ of Definition \claimref{obj.field-theory.single-algebra-field}, read with the pseudoscalar of $X$ sent to $\mp$ the unit.
 \item (Vacuum polarisation.) With $k = \ell - xq$, $k' = \ell + (1-x)q$ and four-dimensional symmetric integration, the numerator $4\langle\gamma^{\mu}(k+m)\gamma^{\nu}(k'+m)\rangle_{0}$, read as the map $a \mapsto \sum_{\mu\nu}a_{\mu}N^{\mu\nu}\gamma_{\nu}$, is $a \mapsto -2Q(\ell)a + 8x(1-x)(Q(q)a - (a\cdot q)q) + 4\Delta a$, $\Delta = m^{2} - x(1-x)Q(q)$. The part proportional to $a$ has Euclidean radial integral $L - \Delta + \Delta^{2}/(L + \Delta)$ at squared cut-off $L$, so under the regulators it vanishes as $L \to \infty$; the polarisation is transverse, $\Pi(a) = (Q(q)a - (a\cdot q)q)\Pi(q^{2})$, with $\Pi(q^{2}) = -\tfrac{e^{2}}{2\pi^{2}}\int_{0}^{1}x(1-x)\ln(M^{2}/\Delta)\,dx$ up to a constant, $M$ the regulator scale. The coefficient of the logarithm is $e^{2}/(12\pi^{2})$ per Dirac fermion, its rational part $\tfrac{1}{16}\int_{0}^{1}8x(1-x)\,dx = \tfrac{1}{12}$. For a massless chiral fermion the numerator (not the regulated loop, whose regulators carry Dirac masses) has $I_{4}$ part zero after the shift and symmetric integration, and scalar part half the Dirac one.
-\item (Vertex.) In four dimensions $\gamma^{\nu}a\gamma_{\nu} = -2a$, $\gamma^{\nu}ab\gamma_{\nu} = 4a\cdot b$, $\gamma^{\nu}abc\gamma_{\nu} = -2cba$. With Feynman parameters $(x, y, z)$, $k = \ell - yq + zp$, $k' = \ell + (1-y)q + zp$, $p' = p + q$ on shell, the $\ell$-free part of $\gamma^{\nu}(k'+m)\gamma^{\mu}(k+m)\gamma_{\nu}$ between $(p'+m)$ and $(p+m)$ equals $a\gamma^{\mu} + b(p+p')^{\mu} + c\,q^{\mu}$ with $b = 2mz(1-z)$ and $c = -2m(z-2)(x-y)$, odd under $x \leftrightarrow y$; the $Q(\ell)$ part is $Q(\ell)\gamma^{\mu}$. Between the same projectors $(p+p')^{\mu} = 2m\gamma^{\mu} + \gamma^{\mu} \wedge q$ (the Gordon identity; $\gamma^{\mu} \wedge q$ is $-i\sigma^{\mu\nu}q_{\nu}$ in the matrix reading). The magnetic form factor is $F_{2}(0) = \tfrac{e^{2}}{8\pi^{2}}\,m\int b/\Delta = \tfrac{e^{2}}{8\pi^{2}} = \tfrac{\alpha}{2\pi}$, the parameter integral being exactly $1$.
+\item (Vertex.) In four dimensions $\gamma^{\nu}a\gamma_{\nu} = -2a$, $\gamma^{\nu}ab\gamma_{\nu} = 4a\cdot b$, $\gamma^{\nu}abc\gamma_{\nu} = -2cba$. With Feynman parameters $(x, y, z)$, $k = \ell - yq + zp$, $k' = \ell + (1-y)q + zp$, $p' = p + q$ on shell, the $\ell$-free part of $\gamma^{\nu}(k'+m)\gamma^{\mu}(k+m)\gamma_{\nu}$ between $(p'+m)$ and $(p+m)$ equals $a\gamma^{\mu} + b(p+p')^{\mu} + c\,q^{\mu}$ with $b = 2mz(1-z)$ and $c = -2m(z-2)(x-y)$, odd under $x \leftrightarrow y$; the $Q(\ell)$ part is $Q(\ell)\gamma^{\mu}$. Between the same projectors $(p+p')^{\mu} = 2m\gamma^{\mu} + \gamma^{\mu} \wedge q$ (the Gordon identity; $\gamma^{\mu} \wedge q$ is $-I_{5}\sigma^{\mu\nu}q_{\nu}$ in the matrix reading, the Dirac matrices with their $i$ read as the central $I_{5} = I_{4}e$ of $\Cl(2,3)$, \claimref{std-algebra.complexification-is-the-odd-extension}). The magnetic form factor is $F_{2}(0) = \tfrac{e^{2}}{8\pi^{2}}\,m\int b/\Delta = \tfrac{e^{2}}{8\pi^{2}} = \tfrac{\alpha}{2\pi}$, the parameter integral being exactly $1$.
 \item (Ward identity.) $S(k) = (k - m)^{-1} = (k + m)/(Q(k) - m^{2})$ satisfies $S(k + h) - S(k) = -S(k+h)\,h\,S(k)$, so with the regulator on the photon line only the self-energy integrand obeys $\Sigma(p + h) - \Sigma(p) = -h_{\mu}\Lambda^{\mu}(p + h, p)$ integrand by integrand: the Ward-Takahashi identity, and at $h \to 0$, $\Sigma'(p) = -\Lambda(p, p)$, so $Z_{1} = Z_{2}$.
 \item (Where the unit stands.) If the unit is instead placed as $I_{4}$ inside the product at each propagator, the polarisation numerator becomes $-N + 8m^{2}\,\mathrm{id}$ ($N$ the numerator of (2), $\mathrm{id}$ the identity map on vectors): it agrees for massless lines, and for a massive loop the extra term leaves a non-transverse remainder proportional to $\sum_{i} c_{i}M_{i}^{2}\ln\Delta_{i}$, not zero. So on a massive Dirac line the unit is a coefficient outside the Clifford product (equivalently the right unit).
 \end{enumerate}
 
 ## technical
-In a covariant gauge, under the indefinite-form (Krein) premise for the gauge field (\claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}; the covariant photon propagator inside loops is imported, \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}), with the Dirac matrices as the spacetime algebra's product, propagator numerators $k + m$, the vertex $\gamma^{\mu}$, the units of the Feynman rules and the Wick rotation collected in front of the Clifford product, and imported Pauli-Villars regulators of positive and negative weight ($\sum c_{i} = \sum c_{i}M_{i}^{2} = 0$; fermions on the fermion loop, a photon on the photon line), one-loop electrodynamics reproduces the standard results with exact rational coefficients. The trace is four times the scalar part, and the chiral traces are $2\proj$ read with $I_{4} \mapsto \mp i$.
+In a covariant gauge, under the indefinite-form (Krein) premise for the gauge field (\claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}; the covariant photon propagator inside loops is imported, \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}), with the Dirac matrices as the spacetime algebra's product, propagator numerators $k + m$, the vertex $\gamma^{\mu}$, the units of the Feynman rules and the Wick rotation written as the right unit $I_{4}$, outside the Clifford product, and imported Pauli-Villars regulators of positive and negative weight ($\sum c_{i} = \sum c_{i}M_{i}^{2} = 0$; fermions on the fermion loop, a photon on the photon line), one-loop electrodynamics reproduces the standard results with exact rational coefficients. The trace is four times the scalar part, and the chiral traces are $2\proj$ read with the pseudoscalar sent to $\mp$ the unit $I_{4}$.
 
 The vacuum-polarisation numerator after the shift is $a \mapsto -2Q(\ell)a + 8x(1-x)(Q(q)a - (a\cdot q)q) + 4\Delta a$; the part proportional to $a$ has radial integral $L - \Delta + \Delta^{2}/(L+\Delta)$ and cancels under the regulators, leaving a transverse polarisation whose logarithm has coefficient $e^{2}/(12\pi^{2})$ per Dirac fermion ($\int_{0}^{1}x(1-x)\,dx = 1/6$). For a massless chiral fermion the numerator's $I_{4}$ part vanishes after the shift and symmetric integration and its scalar part is half; this is a statement about the numerator, since the regulators carry Dirac masses.
 

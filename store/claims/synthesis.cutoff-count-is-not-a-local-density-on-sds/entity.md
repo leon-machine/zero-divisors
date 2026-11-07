@@ -30,7 +30,7 @@ derivations:
   - synthesis.sds-clausius-fixes-area-constant@4
   - synthesis.residue-from-mode-entropy@4
   - synthesis.boundary-mode-thermal-entropy@2
-  - synthesis.q-splits-maximum-entropy-affine-weights@4
+  - synthesis.q-splits-maximum-entropy-affine-weights@5
   proof: proof-main.tex
 checked_by:
 - kind: check

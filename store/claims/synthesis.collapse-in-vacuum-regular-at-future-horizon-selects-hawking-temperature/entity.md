@@ -1,7 +1,7 @@
 ---
 id: synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature
 kind: claim
-version: 1
+version: 2
 title: 'Null-shell collapse: horizon regularity selects the Hawking temperature'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -28,7 +32,7 @@ derivations:
   - synthesis.imported-gtg-dictionary@1
   - hawking.i-state-continuum@5
   - hawking.imported-ideal-fermi-gas-uniqueness@2
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - angle.imported-theorems-deliver-their-hypotheses@3
   assumes:
   - hawking.joint-j3-s-wave-reduction@1
   proof: proof-main.tex
@@ -54,6 +58,10 @@ lineage:
   - singularity.r-regularity-fixed-locus
   - synthesis.positive-conformal-energy-gives-positive-null-translations
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R2 (7 November 2026) the generator''s mode space carries the field theory''s unit I_4 throughout: the null-vacuum and thermal kernels (I_4/2 pi)(... + I_4 0)^{-1}, the KMS continuation by -I_4 beta, and the deficiency equation I_4 f'' = +-I_4 f of I_4 d/d lambda, numbers read in span{1, I_4}. Nothing stays; the earlier declaration is removed.'
   open_problem: op.collapsing-hole-state
   note: >-
     Companion to synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet, filed alongside, which states the short-distance condition on the ingoing
@@ -76,7 +84,7 @@ extraction:
 ---
 
 ## formal
-Work on flat spacetime with gravity the gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The collapse field is the null-shell (Vaidya) field: vanishing field strength for advanced time $v < v_{0}$, and for $v > v_{0}$ the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$, $\beta^{2} = 2M/r$, with the rotation-gauge field of Proposition \claimref{singularity.connection-bivector-computed}, $\Omega(e_{t}) = -\beta\beta'\sigma_{r}$, $\Omega(e_{r}) = -\beta'\sigma_{r}$; $\kappa = 1/4M$, $m := 2M$, $T_{H} = \kappa/2\pi$. On each radial light ray the modes are the continuum mode space of Definition \claimref{obj.hawking.continuum-mode-space}: a complex chiral CAR field of weight $\tfrac12$ in a parameter $\lambda$ of the ray, with null vacuum kernel $\omega(\psi^{*}(\lambda_{2})\psi(\lambda_{1})) = \tfrac{i}{2\pi}(\lambda_{1} - \lambda_{2} + i0)^{-1}$; a reparametrisation $\lambda = f(\mu)$ acts by $\psi_{\mu}(\mu) = f'(\mu)^{1/2}\psi_{\lambda}(f(\mu))$. Say a state of the outgoing modes on an ingoing ray is in the short-distance class at a point $\lambda = 0$ if its kernel is $\tfrac{i}{2\pi}[(\lambda_{1} - \lambda_{2} + i0)^{-1} + R(\lambda_{1}, \lambda_{2})]$ with $R$ continuous near $(0,0)$. Write $\{f, x\} = f'''/f' - \tfrac32(f''/f')^{2}$ for the Schwarzian; the null energy flux of the state is $-\tfrac{1}{24\pi}$ times the Schwarzian of the map from its vacuum's parameter to the observer's (normal ordered at the observer's vacuum).
+Work on flat spacetime with gravity the gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The collapse field is the null-shell (Vaidya) field: vanishing field strength for advanced time $v < v_{0}$, and for $v > v_{0}$ the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$, $\beta^{2} = 2M/r$, with the rotation-gauge field of Proposition \claimref{singularity.connection-bivector-computed}, $\Omega(e_{t}) = -\beta\beta'\sigma_{r}$, $\Omega(e_{r}) = -\beta'\sigma_{r}$; $\kappa = 1/4M$, $m := 2M$, $T_{H} = \kappa/2\pi$. On each radial light ray the modes are the continuum mode space of Definition \claimref{obj.hawking.continuum-mode-space}: a complex chiral CAR field of weight $\tfrac12$ in a parameter $\lambda$ of the ray (its complex unit the field theory's unit $I_{4}$; numbers are read in $\mathrm{span}\{1, I_{4}\}$), with null vacuum kernel $\omega(\psi^{*}(\lambda_{2})\psi(\lambda_{1})) = \tfrac{I_{4}}{2\pi}(\lambda_{1} - \lambda_{2} + I_{4}0)^{-1}$; a reparametrisation $\lambda = f(\mu)$ acts by $\psi_{\mu}(\mu) = f'(\mu)^{1/2}\psi_{\lambda}(f(\mu))$. Say a state of the outgoing modes on an ingoing ray is in the short-distance class at a point $\lambda = 0$ if its kernel is $\tfrac{I_{4}}{2\pi}[(\lambda_{1} - \lambda_{2} + I_{4}0)^{-1} + R(\lambda_{1}, \lambda_{2})]$ with $R$ continuous near $(0,0)$. Write $\{f, x\} = f'''/f' - \tfrac32(f''/f')^{2}$ for the Schwarzian; the null energy flux of the state is $-\tfrac{1}{24\pi}$ times the Schwarzian of the map from its vacuum's parameter to the observer's (normal ordered at the observer's vacuum).
 Two facts of the Painlev\'e-Gullstrand field are used and recomputed here from the stored rotation-gauge field (they are clauses (i) and (ii) of the result filed alongside, synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet, which states the short-distance condition and derives the late-time I-state from it): on the ingoing radial null worldlines the physical tangent $k = (\gamma_{0} - \gamma_{1})/(1 + \beta)$ is parallel, so $r$ is affine there; and on such a worldline $U := -\rho\,e^{\rho/2M}$, $\rho = r - 2M$, satisfies $dU/du = -\kappa U$ for the outgoing worldlines' Killing label $u$, with $dU/dr = -1$ at the crossing.
 \begin{enumerate}
 \item[(i)] \emph{(The collapse state is in the class.)} The ray that entered from past null infinity at advanced time $v < v_{H} := v_{0} - 4M$ and leaves the centre outgoing in the flat region leaves the shell at radius $s = (v_{0} - v)/2 > m$; its retarded Killing time is $u = v_{0} - 2s - 2m\ln(s/m - 1)$ and its Kruskal label is an analytic function of $v$ with nonzero derivative at $v_{H}$, of the form $C\,e^{z}z$, $z = s/m - 1$. If the ingoing modes at past null infinity are in the null vacuum for the affine translations of $v$ (the vacuum of the region before the shell), then on every ingoing ray crossing the future horizon the outgoing modes are in the short-distance class at the crossing in the affine parameter $r$, with remainder $R(\lambda_{1}, \lambda_{2}) = \tfrac{1}{12}\{f, \lambda\}(\lambda_{1} - \lambda_{2}) + O(|\lambda|^{2})$ vanishing at the crossing ($\{z e^{z}, z\}_{z=0} = -3$, $\{U, v\}_{v_{H}} = -3/(4m^{2})$, finite).
@@ -84,7 +92,7 @@ Two facts of the Painlev\'e-Gullstrand field are used and recomputed here from t
 \[
 \{v, u\} = -\frac{m(4s - 3m)}{8s^{4}}\qquad\text{exactly}, \qquad \lim_{u\to\infty}\{v, u\} = -\frac{1}{8m^{2}} = -\frac{\kappa^{2}}{2},
 \]
-approached as $O(s - m) = O(e^{-\kappa u})$, so the late flux is $\kappa^{2}/48\pi = \tfrac{\pi}{12}T_{H}^{2}$, that of a complex chiral fermion at $T_{H}$. The late-time two-point function in $u$ is the pull-back of the null vacuum by $U = -e^{-\kappa u}/\kappa$, which is exactly $\tfrac{i}{2\pi}\tfrac{\kappa}{2}\sinh(\tfrac{\kappa}{2}(u_{1} - u_{2}) + i0)^{-1}$, the continuum I-state at $\beta = 2\pi/\kappa$ (Theorem \claimref{hawking.i-state-continuum}), unique by Fact \claimref{hawking.imported-ideal-fermi-gas-uniqueness}; the remainder contributes $O(e^{-2\kappa t})$ to the kernel at shift $t$ (for this state; the result filed alongside shows the limit for every state of the class).
+approached as $O(s - m) = O(e^{-\kappa u})$, so the late flux is $\kappa^{2}/48\pi = \tfrac{\pi}{12}T_{H}^{2}$, that of a complex chiral fermion at $T_{H}$. The late-time two-point function in $u$ is the pull-back of the null vacuum by $U = -e^{-\kappa u}/\kappa$, which is exactly $\tfrac{I_{4}}{2\pi}\tfrac{\kappa}{2}\sinh(\tfrac{\kappa}{2}(u_{1} - u_{2}) + I_{4}0)^{-1}$, the continuum I-state at $\beta = 2\pi/\kappa$ (Theorem \claimref{hawking.i-state-continuum}), unique by Fact \claimref{hawking.imported-ideal-fermi-gas-uniqueness}; the remainder contributes $O(e^{-2\kappa t})$ to the kernel at shift $t$ (for this state; the result filed alongside shows the limit for every state of the class).
 \item[(iii)] \emph{(Regularity selects $T_{H}$.)} Let a state of the outgoing modes have late-time flux $\tfrac{\pi}{12}(\theta T_{H})^{2}$, $\theta \ge 0$. Its flux in the frame of the $U$-vacuum is $F_{U} = (\theta^{2} - 1)/(48\pi U^{2})$ at leading order as $U \to 0^{-}$, bounded across the future horizon if and only if $\theta = 1$. The Boulware state (the $u$-vacuum, $\theta = 0$) has $\{u, U\} = 1/(2U^{2})$ and diverges there. So, among states that are KMS for the Killing translations at late times, finite null energy across the future horizon holds only at temperature $\kappa/2\pi$. Only the flux is used: bounded $F_{U}$ is a necessary condition, and it is neither the short-distance class nor sufficient for it. (Filed alongside, synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet, shows that the Boulware-type state is outside the class and that no exact null-translation ground state can be posed on the collapse geometry's half-line rays.)
 \end{enumerate}
 Hypotheses: the in-region state (a ground state for the affine advanced time, the Minkowski vacuum of the region before the shell); the per-light-ray chiral reduction, which is the s-wave reduction of the postulate J3 (\claimref{hawking.joint-j3-s-wave-reduction}) in its geometric-optics form, with no greybody factors; and the transformation law of the null energy of a chiral field (the coefficient of the linear remainder, cited from memory).

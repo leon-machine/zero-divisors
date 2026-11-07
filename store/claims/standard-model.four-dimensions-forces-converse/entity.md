@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - standard-model.pair-count-dimension@3
+  - standard-model.pair-count-dimension@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

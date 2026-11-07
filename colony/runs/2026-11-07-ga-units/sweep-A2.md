@@ -1,0 +1,39 @@
+# Sweep A2: imaginary unit written as the GA pseudoscalar (2026-11-07)
+
+16 entities. 11 changed with a version bump (9 fully replaced, 2 partly replaced and declared). 5 declared only (no replacement, so no version bump, which E606 would refuse; outside_ga and the extraction note are not substantive fields). 0 unchanged. `tp check --layers 1,2,3 --author leon`: no error or warning on any A2 entity (only the old I213 info on state-selection). Detector: every entity still listed carries outside_ga; s-wave and point-spectrum show only index letters (v_i, y_i, delta_{ij}, "for all $i$").
+
+Pins: I left pins unchanged as instructed. Entities that pin positive-null-energy@4, n-plus@10 and the others now point at an older version than the current one.
+
+## Per entity
+
+- synthesis.n-plus-null-ground-state, 10 -> 11: P = I_4 d/du; "the orientation of $i$" (3x) became "the orientation of the unit $I_{4}$"; nothing stays.
+- synthesis.null-ordering-of-counted-units-is-zeta-symmetric, 2 -> 3: proof, twist phase e^{2 pi I_4 delta} (the field's unit); nothing stays.
+- synthesis.wick-rotor-chiral-angular-rotor, 3 -> 4: the continuation's external unit, which the entity already sets equal to I_6, is now written as I_6: lambda -> I_6 theta, R_{I_6 theta}, "With the unit of the continuation taken as $I_{6}$" (one-liner), and the technical level's "external unit $i$" became "external imaginary unit"; nothing stays.
+- synthesis.point-spectrum-boost-admits-no-half-sided-translations, 3 -> 4: boost phases e^{-I_4 omega t}, [K, P] = I_4 c P, Ad(e^{I_4 tK}), P = X + I_4 Y, Delta^{I_4 s}, rho^{I_4 s}, e^{-2 pi I_4 k}, e^{-I_4 pi(2k+1)}; \C defined as span_R{1, I_4} at first use; nothing stays.
+- synthesis.q-splits-maximum-entropy-affine-weights, 4 -> 5: e^{I_4 t K_geo} conjugations and the boost phases; \C read as span_R{1, I_4} (formal (v), proof); nothing stays.
+- synthesis.s-wave-array-is-a-boundary-mode-set, 3 -> 4: boost phases on b_k and psi_k and the one-mode tau_t, in I_4; nothing stays.
+- synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state, 1 -> 2: all two-point kernels and differences (I_4/2 pi)(... + I_4 0)^{-1}, sinh(pi T(s + I_4 0)), 2 pi(W_f - W_0)/I_4, U(b) = e^{I_4 bP}; nothing stays.
+- synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit, 2 -> 3: kernels (prefactor and I_4 0), Mellin modes u^{-1/2 + I_4 w}, (2 pi/I_4)W_c, shifts y -> y - 2 pi I_4 c, zeros 2 pi I_4 c k, T_uu = (I_4/2)(...); nothing stays.
+- synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian, 4 -> 5: null-vacuum and Schwarzian kernels in I_4; nothing stays (e_i is an index).
+- synthesis.positive-null-energy-gives-r-premises, 4 -> 5: changed in formal, technical and proof (i): P = I_4 d/du, e^{I_4 aP}, the vacuum kernel (I_4/2 pi)(u - v + I_4 0)^{-1}, Mellin modes u^{-1/2 + I_4 w}, rotated ray e^{I_4 theta}R_+, the ground-state derivation (-I_4 omega(x* delta x) >= 0, delta(a(g)) = a(I_4 P g)), the Fourier kernel of chi(P), the flow convention e^{I_4 th}; "contour rotation by e^{-i pi}" became "contour rotation through the angle pi". Stays: the proof of (ii) (Mellin multiplier, contour rotation x = r e^{-i pi}, strip continuation lambda + i theta, Gaussian-rational points), with an added sentence saying that it is written with i for the unit I_4 of span{1, I_4}; also the Borchers relation Delta^{is}U(a)Delta^{-is}, quoted in the imported Fact's form. Declared complex-analysis.
+- synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state, 2 -> 3: P = I_4 d/du, Mellin modes, every two-point kernel in I_4. Stays: the Fourier integral and residue sum of Step 1 (w = i pi(2n+1)/beta), a contour argument, with a bridging remark. Declared complex-analysis.
+- synthesis.r-lambda-regularity-cosmological-horizon, 4 (declared only): the Killing flow Ad(e^{i t omega K}) and F(t + i p) keep i. The cosmological-horizon boundary-mode algebra is defined as the plain complexification of Cl(|J|,|J|), and its template plane span{e_0, e_W} contains e_0, so the store does not show the unit to be I_4. complex-analysis.
+- synthesis.phase-flow-is-time-rotor-flow-kms-continuation, 2 (declared only): i is the unit of the complexified general Cl(p,q) and of V_C. The frame *-structure is conjugate-linear in it, and it must commute with the mode vectors, which no pseudoscalar does. The phase flow, the phases, tau_{-i lambda} and the check over Q(i) all keep it. complex-analysis.
+- synthesis.state-selection-r-and-le-against-t05, 3 (declared only): the window is built from completed pairs of the hyperbolic atom, and I_4 anticommutes with the radial-plane mode operators (conventions, known limit 1). The Killing flow, the ladder phases and F(t + i p) keep i. complex-analysis.
+- synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel, 1 (declared only): i stays in the Dirac numerator (i D_x + m_0) of a bispinor kernel, where the store fixes no placement of the right unit; in sigma_epsilon = sigma + i epsilon(t - t'), the i0 and log(-i s) prescriptions, and the complex shift of the Gaussian integral; and in W_0, because the result equates W_0 with that kernel. complex-analysis.
+- synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i, 2 (declaration updated only): all 43 i kept. Its existing complex-analysis `why` now also says that the result is about which element the unit is and its orientation. The conventions give I_4, while its argued reading in (iv) and Step 4 gives J = I_4 B, so writing either would prejudge that reading.
+
+## Possible errors found
+
+None in the mathematics of these 16.
+
+## Unsure (for Leon to rule)
+
+1. modular-data entity: should i be I_4 (rule 4 names the continuum mode space), or stay because of the entity's own reading i = J = I_4 B? If I_4, the wording of (iv) and Step 4 ("if the field's i is read as J") needs reframing as an alternative to I_4. Note that n-plus now says "the orientation of the unit $I_{4}$".
+2. Boundary-value prescription written $+ I_{4}0$ in kernels (normality, positive-null-energy, thermality, stationary-horizon, weyl-flat). This is exact if kernels take values in span{1, I_4}. The alternative is to keep i0 as complex analysis, but then the prefactor and the prescription would use different units.
+3. The split in positive-null-energy and thermality: operator and kernel statements use I_4, while the contour computations keep i with a sentence that they are written with i for the unit I_4. Writing all of it with I_4 would also be exact; writing all of it with i would match rule 5 more literally.
+4. Hawking boundary-mode algebra (point-spectrum, s-wave, q-splits) taken to have unit I_4 per rule 4. But known limits 1 and 2 (the T05 radial atom anticommutes with I_4; the algebra is defined over C in the Hawking paper) may apply. state-selection (completed pairs) and r-lambda (cosmological modes) were kept with i. The two treatments may be inconsistent.
+5. Cross-entity inconsistency on W_0: restricted-dirac keeps i (parametrix, right-unit placement unresolved), while weyl-flat and the others write the same null-vacuum kernel with I_4.
+6. ℂ (\C) defined as span_R{1, I_4} at first use (point-spectrum, q-splits) rather than declared.
+7. The Borchers relation Delta^{is}U(a)Delta^{-is} is kept as the imported Fact's form in positive-null-energy's proof, while point-spectrum writes Delta^{I_4 s} when it applies the same Fact.
+8. wick-rotor writes the continuation as lambda -> I_6 theta with I_6 on the left. Its proof notes that left and right multiplication by I_6 agree on the conformal spinors (I_6 is central in the even algebra), so the rule-2 right unit is respected there.

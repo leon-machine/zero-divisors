@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - families.alignment-computed-thirteenth-refutation-democracy-one@4
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.imported-frozen-point-tractor-connection@6
   - mass.mass-symplectic-area-two-twistor-formula@3
   proof: proof-main.tex

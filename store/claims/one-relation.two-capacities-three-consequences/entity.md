@@ -1,7 +1,7 @@
 ---
 id: one-relation.two-capacities-three-consequences
 kind: claim
-version: 5
+version: 6
 title: The two capacities, and three consequences
 status: proved
 region: one-relation
@@ -17,12 +17,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
   - one-relation.imported-witts-extension-theorem@2
-  - one-relation.two-presentations@4
+  - one-relation.two-presentations@5
   - tower.witt-index-quantum-capacity@4
   - std-algebra.vector-squares@1
   - std-algebra.witt-decomposition@1
@@ -48,6 +52,14 @@ locators:
   label: prop:capacity
   line: 606
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the complex null pairs (e + ie'')/2, -(e - ie'')/2 of V_C are written with I_hatV, the central pseudoscalar of the odd extension of V (of V + R f when d is odd), which squares to -1 and commutes with every vector, so V_C = V + I_hatV V (std-algebra.complexification-is-the-odd-extension, cited as a mention). No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the null pairs (e + ie'')/2, -(e - ie'')/2 are complex null vectors of the complexified space V_C; their i must commute with the vectors e, e'', which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

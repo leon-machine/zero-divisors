@@ -26,7 +26,7 @@ derivations:
   - odd-extensions.doubling-or-complexification@5
   - odd-extensions.imported-representatives-dimension-nearest-four-types@4
   - std-algebra.sta-matrix@1
-  - std-algebra.pauli-algebra@1
+  - std-algebra.pauli-algebra@3
   proof: proof-main.tex
 checked_by:
 - kind: check

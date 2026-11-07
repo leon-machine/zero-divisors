@@ -1,7 +1,7 @@
 ---
 id: singularity.schmidt-forcing-proved-outright
 kind: claim
-version: 4
+version: 6
 title: Schmidt forcing, proved outright
 status: proved
 region: singularity
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -38,6 +46,14 @@ locators:
   label: lem:schmidt
   line: 1713
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The unitary group e^{itG} acts on the doubled atom mode (pair and partner, each a module of the completed-pair atom), so by U2 its unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), on both factors: e^{J t G}, scalars span{1, J}. The basis label G|ij> = (i - j)|ij> is written G|jk> = (j - k)|jk> (index letters only) so that no letter i is read as a unit. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boost acts on the doubled mode C^2 (x) C^2 by the unitary group e^{itG} in the cyclic-and-separating setting of modular theory; these are atom modes, with which I_4 anticommutes, so I_4 is not their unit.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -68,16 +84,16 @@ extraction:
 ---
 
 ## formal
-Realise the boost on the doubled system by the one-parameter unitary group $e^{i t G}$, $G = N \otimes 1 - 1 \otimes N$ (the pair carries the flow of Theorem \claimref{singularity.modular-structure-completed-pair}, the partner the mirrored flow). If a unit vector $\Omega \in \C^2 \otimes \C^2$ is invariant up to phase under this group and is cyclic and separating for the pair factor, then
+Realise the boost on the doubled system by the one-parameter unitary group $e^{J t G}$, with the scalars of the doubled mode $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the complex unit of the atom (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), on both factors, $G = N \otimes 1 - 1 \otimes N$ (the pair carries the flow of Theorem \claimref{singularity.modular-structure-completed-pair}, the partner the mirrored flow). If a unit vector $\Omega \in \C^2 \otimes \C^2$ is invariant up to phase under this group and is cyclic and separating for the pair factor, then
 \[
 \Omega \;=\; \cos\theta\,|00\rangle + \sin\theta\,|11\rangle \qquad \text{with } \cos\theta\sin\theta \neq 0 ,
 \]
 up to a global phase and a phase convention on $|11\rangle$: the Schmidt basis is the number basis.
 
 ## technical
-Let the boost act on the doubled mode $\C^2 \otimes \C^2$ by the unitary group $e^{itG}$ with $G = N \otimes 1 - 1 \otimes N$. If a unit vector $\Omega$ is invariant up to phase under this group and is cyclic and separating for the pair factor, then up to a global phase and a phase convention on $|11\rangle$, $\Omega = \cos\theta\,|00\rangle + \sin\theta\,|11\rangle$ with $\cos\theta\sin\theta \neq 0$.
+Let the boost act on the doubled mode $\C^2 \otimes \C^2$, with scalars $\mathrm{span}\{1, J\}$ ($J = e_2e_3$, the atom's complex unit), by the unitary group $e^{JtG}$ with $G = N \otimes 1 - 1 \otimes N$. If a unit vector $\Omega$ is invariant up to phase under this group and is cyclic and separating for the pair factor, then up to a global phase and a phase convention on $|11\rangle$, $\Omega = \cos\theta\,|00\rangle + \sin\theta\,|11\rangle$ with $\cos\theta\sin\theta \neq 0$.
 
-Invariance up to phase makes $\Omega$ an eigenvector of $G$, which acts as $G|ij\rangle = (i - j)|ij\rangle$. The eigenvectors for $\pm 1$ are product vectors, which cannot be cyclic and separating, so $\Omega$ lies in the zero eigenspace spanned by $|00\rangle$ and $|11\rangle$, and both coefficients must be nonzero for the same reason. The Schmidt basis is therefore the number basis.
+Invariance up to phase makes $\Omega$ an eigenvector of $G$, which acts as $G|jk\rangle = (j - k)|jk\rangle$. The eigenvectors for $\pm 1$ are product vectors, which cannot be cyclic and separating, so $\Omega$ lies in the zero eigenspace spanned by $|00\rangle$ and $|11\rangle$, and both coefficients must be nonzero for the same reason. The Schmidt basis is therefore the number basis.
 
 ## lay
 Take one mode together with its partner. If their joint state is unchanged by the boost, apart from an overall phase, and is genuinely entangled, then there is no freedom in which basis the entanglement uses: it must pair empty with empty and occupied with occupied. Only the balance between those two terms is left free.

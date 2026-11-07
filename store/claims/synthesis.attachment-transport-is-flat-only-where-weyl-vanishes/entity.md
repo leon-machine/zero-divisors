@@ -26,7 +26,7 @@ derivations:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.imported-gtg-dictionary@1
   - field-theory.twistor-attachment@6
-  - synthesis.attachment-conformal-energy-is-generated-by-z@1
+  - synthesis.attachment-conformal-energy-is-generated-by-z@4
   - field-theory.where-each-lives@3
   - synthesis.imported-twistor-equation-integrability-petrov-n-or-o@1
   proof: proof-main.tex

@@ -54,6 +54,7 @@ def _sign(x):
 
 
 def check_half_generator_strip_is_kms_at_two_pi():
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.n-plus-null-ground-state")
     premise("hawking.imported-quasi-free-kms-reduces-two")
     premise("hawking.i-state-continuum")
@@ -100,6 +101,7 @@ def check_half_generator_strip_is_kms_at_two_pi():
 
 
 def check_past_half_is_kms_for_the_future_boost():
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("hawking.imported-quasi-free-kms-reduces-two")
     premise("hawking.i-state-continuum")
     # past half u, v < 0, future-directed boost there: u -> e^{-lambda} u, weight e^{-lambda/2}.
@@ -130,6 +132,7 @@ def check_past_half_is_kms_for_the_future_boost():
 
 
 def check_mellin_symbol_is_the_i_state_at_two_pi():
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.n-plus-null-ground-state")
     premise("hawking.i-state-continuum")
     premise("hawking.imported-ideal-fermi-gas-uniqueness")

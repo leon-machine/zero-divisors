@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - correspondence.imported-tractor-connection-local-twistor-transport@6
+  - correspondence.imported-tractor-connection-local-twistor-transport@7
   - correspondence.imported-weyls-theorem@2
   - synthesis.imported-gtg-dictionary@1
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1

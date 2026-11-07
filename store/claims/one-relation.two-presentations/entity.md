@@ -1,7 +1,7 @@
 ---
 id: one-relation.two-presentations
 kind: claim
-version: 4
+version: 5
 title: The two presentations
 status: proved
 region: one-relation
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,14 @@ locators:
   label: prop:twopresentations
   line: 552
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the complex Witt pair (e_2 + ie_3)/2, -(e_2 - ie_3)/2 of Cl(1,3)_C is written with I_5 = I_4 e, the central pseudoscalar of Cl(2,3), and the complex unit of Cl(2,4)_C is named as I_7 = I_6 e (std-algebra.complexification-is-the-odd-extension, cited as a mention); the two units act in their own algebras and are not identified. No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the complex Witt pair (e_2 + ie_3)/2, -(e_2 - ie_3)/2 of Cl(1,3)_C and Cl(2,4)_C is a pair of complex null vectors; their i must commute with the spacetime vectors, which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

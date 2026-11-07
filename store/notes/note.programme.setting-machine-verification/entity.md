@@ -1,7 +1,7 @@
 ---
 id: note.programme.setting-machine-verification
 kind: note
-version: 2
+version: 3
 title: Machine verification
 status: setting
 subject: standard-model
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T17, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - programme.n-parameter-of-the-laws
 locators:
@@ -23,6 +27,10 @@ locators:
   section: Machine verification
   line: 676
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the complex principal-series weight is written as I_4 (numbers read in span{1, I_4}): w = -3/2 + I_4 nu; nothing stays.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -38,7 +46,7 @@ A survey proves little and quotes much, so its script has a different task from 
 
 \emph{Part C: the dark count.} The sterile residues computed as the fixed points of $r \mapsto -r$ mod 8 (exactly $\{0, 4\}$); the count of five dark causal residues; and the ratio arithmetic T14 states, with five entering none of it: the symmetric remainder $4.364 = 5.364 - 1$ once the mirror's one share is removed; that remainder as $\Omega h^{2} = 4.364 \times 0.02237$, inside $0.0976 \pm 0.0012$; and the mirror's share of the dark density, $1/5.364$, between $18.6$ and $18.7$ percent.
 
-\emph{Part D: the matter numbers.} The two exact one-loop rationals ($78761/379488$ and $6539/28320$) bracketed to four decimals, with the over-twenty-times-closer inequality against the measured angle; the integer bracket $2^{398} < 10^{120} < 2^{399}$; the hypercharge quadratic's roots, sum, and product; $3/8$ as the exact trace ratio; the frozen-point norm $Q(I) = \Lambda/3$ as a rational-function identity in formal $\Lambda$, and the dictionary's sign, $m^{2} = -w(w+3)\Lambda/3$, positive at the midpoint $w = -\tfrac32$ of the real interval $[-3, 0]$ and negative at $w = 1$ outside it, with the principal-series form $m^{2} = (\nu^{2} + \tfrac94)\Lambda/3$ at $w = -\tfrac32 + i\nu$ as a polynomial identity in formal $\nu$; and the compression identity $G\Lambda N^{2} = 3$.
+\emph{Part D: the matter numbers.} The two exact one-loop rationals ($78761/379488$ and $6539/28320$) bracketed to four decimals, with the over-twenty-times-closer inequality against the measured angle; the integer bracket $2^{398} < 10^{120} < 2^{399}$; the hypercharge quadratic's roots, sum, and product; $3/8$ as the exact trace ratio; the frozen-point norm $Q(I) = \Lambda/3$ as a rational-function identity in formal $\Lambda$, and the dictionary's sign, $m^{2} = -w(w+3)\Lambda/3$, positive at the midpoint $w = -\tfrac32$ of the real interval $[-3, 0]$ and negative at $w = 1$ outside it, with the principal-series form $m^{2} = (\nu^{2} + \tfrac94)\Lambda/3$ at $w = -\tfrac32 + I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) as a polynomial identity in formal $\nu$; and the compression identity $G\Lambda N^{2} = 3$.
 
 \emph{Part E: the neutrino numbers}, by certified interval arithmetic (integer-square-root brackets on the mass-squared splittings): the normal-ordering floor confined to $(0.057, 0.061)$ eV and containing the predicted $0.059$; the $0.052$ eV zero-extending-prior bound strictly below the floor; the $0.092$ eV physical-prior bound above it; the inverted-ordering requirement above $0.097$ eV; the two $m_{\beta\beta}$ values recomputed from the splittings and the mixing brackets under the hierarchy premise and real breaking, bracketing $1.5$ and $3.7$ meV inside the hull $1.3$ to $3.9$ meV and below next-generation sensitivity; the quoted Koide value inside $2/3 \pm 10^{-5}$; and the Cabibbo bracket containing $0.225$.
 

@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants
 kind: claim
-version: 2
+version: 3
 title: 'Regulator-free one-loop vacuum polarisation and Ward-preserving extensions'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.tower.tower
@@ -42,8 +46,8 @@ derivations:
   - field-theory.coupled-system-tree-level@3
   - field-theory.twistor-attachment@6
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off@3
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@2
-  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@3
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@5
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
@@ -69,6 +73,10 @@ lineage:
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off
   - synthesis.hadamard-scaling-limit-premise
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R4 (one unit per entity): the Fourier rule of the proof''s scaling step, written d -> iq, is now d_mu -> I_4 q_mu on components, numbers read in span{1, I_4}; written componentwise so that it is not confused with the left-multiplication term q I_4 of (iii); no bare i remains in the levels or proofs, so no declaration. Wording only, to clear W222 once the entity changed: ''(the Dirac matrices in the matrix reading)'' now reads ''(the gamma^mu of the matrix reading)'', same meaning.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -113,7 +121,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. Work on the Euclidean section of the flat field (the Feynman distributions follow by the standard Wick rotation), with $s = Q(x)$ for the square of the vector $x$, $\partial^{2} = \nabla^{2}$ and $L_{\mu} = \ln(\mu^{2}s)$. Symmetric two-tensor kernels are written as linear functions of a vector $a$; the transverse operator is $T(f)(a) = (a\cdot\nabla)\nabla f - a\,\nabla^{2}f$ (in index reading $(\partial_{\mu}\partial_{\nu} - g_{\mu\nu}\partial^{2})f$). Take the Dirac field of Proposition \claimref{field-theory.second-quantisation}, the vertex and coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, the vectors of $\Cl(4,0)$ (Euclidean section) or $\Cl(1,3)$ with their Clifford product (the Dirac matrices in the matrix reading), and the massless propagator $S_{0}(x) = x/(2\pi^{2}s^{2})$ as a vector-valued kernel. Assume the extension theorem (Epstein and Glaser \cite{EpsteinGlaser1973}; Brunetti and Fredenhagen \cite{BrunettiFredenhagen2000}, Thms. 5.2, 5.3; Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}(i), (ii)): a distribution on $\R^{n}\setminus\{0\}$ of scaling degree $\mathrm{sd} < n$ has a unique extension of the same degree; for $\mathrm{sd} \ge n$ extensions exist and two differ by $\sum_{|a| \le \omega}c_{a}\partial^{a}\delta$, $\omega = \mathrm{sd} - n$. The method and every value below are standard; the statement records them in the series' algebra.
+Units $\hbar = c = 1$. Work on the Euclidean section of the flat field (the Feynman distributions follow by the standard Wick rotation), with $s = Q(x)$ for the square of the vector $x$, $\partial^{2} = \nabla^{2}$ and $L_{\mu} = \ln(\mu^{2}s)$. Symmetric two-tensor kernels are written as linear functions of a vector $a$; the transverse operator is $T(f)(a) = (a\cdot\nabla)\nabla f - a\,\nabla^{2}f$ (in index reading $(\partial_{\mu}\partial_{\nu} - g_{\mu\nu}\partial^{2})f$). Take the Dirac field of Proposition \claimref{field-theory.second-quantisation}, the vertex and coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, the vectors of $\Cl(4,0)$ (Euclidean section) or $\Cl(1,3)$ with their Clifford product (the $\gamma^{\mu}$ of the matrix reading), and the massless propagator $S_{0}(x) = x/(2\pi^{2}s^{2})$ as a vector-valued kernel. Assume the extension theorem (Epstein and Glaser \cite{EpsteinGlaser1973}; Brunetti and Fredenhagen \cite{BrunettiFredenhagen2000}, Thms. 5.2, 5.3; Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}(i), (ii)): a distribution on $\R^{n}\setminus\{0\}$ of scaling degree $\mathrm{sd} < n$ has a unique extension of the same degree; for $\mathrm{sd} \ge n$ extensions exist and two differ by $\sum_{|a| \le \omega}c_{a}\partial^{a}\delta$, $\omega = \mathrm{sd} - n$. The method and every value below are standard; the statement records them in the series' algebra.
 \begin{enumerate}
 \item[(i)] \emph{(Traces and degrees; computed.)} $\langle\gamma_{\mu}x\gamma_{\nu}x\rangle_{0} = 2x_{\mu}x_{\nu} - g_{\mu\nu}Q(x)$, $\langle\gamma_{\mu}x\gamma_{\nu}\rangle_{0} = 0$, $\gamma^{\mu}x\gamma_{\mu} = -2x$, and the matrix trace on the Dirac module is $4\langle X\rangle_{0}$. $S_{0}$ is homogeneous of degree $-3$. The one-loop kernels have scaling degree $6$ (vacuum polarisation), $5$ (self-energy), $4$ (scalar bubble), so $\omega = 2, 1, 0$; by additivity the vertex, three- and four-photon kernels have $\omega = 0, 1, 0$.
 \item[(ii)] \emph{(Vacuum polarisation; proved given the imported theorem.)} With the massive propagator $S = (\frac{1}{2\pi^{2}s^{2}} - \frac{m^{2}}{8\pi^{2}s})x + \frac{m}{4\pi^{2}s} + R$, where the $m^{2}$ coefficient follows from the Klein-Gordon recursion and $R$ is of scaling degree at most $0$ (the Hadamard form, Fact \claimref{synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport}, on the flat field), the kernel $\Pi(a) = -e^{2}\sum_{\mu\nu}a^{\mu}\,4\langle\gamma_{\mu}S(x)\gamma_{\nu}S(-x)\rangle_{0}\,\gamma^{\nu}$ on $x \neq 0$ is

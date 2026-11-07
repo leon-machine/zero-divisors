@@ -1,7 +1,7 @@
 ---
 id: synthesis.univalence-even-extension-split
 kind: claim
-version: 1
+version: 3
 title: 'Univalence as the choice of the even extension'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.singularity.grading-parity-automorphism
@@ -44,6 +52,14 @@ lineage:
   - singularity.p-univalence
   - singularity.r-regularity-fixed-locus
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The Killing flow Ad(e^{it omega N}) on the completed modes'' factor and its continuation alpha_{ip}: by U2 the unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): Ad(e^{J t omega_k N_k}), alpha_{Jp}, mode factor over span{1, J}. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the proof continues the Killing flow Ad(e^{it omega N}) on the complex mode factor Mat_2(C) to imaginary time (alpha_{ip}) for the KMS relation; the store does not tie that factor''s complex structure to I_4.'
   open_problem: pr.p-univalence
   note: >-
     Isolates what (P) adds beyond the observable clause of the imported superselection rule:

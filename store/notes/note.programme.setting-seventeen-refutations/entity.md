@@ -1,7 +1,7 @@
 ---
 id: note.programme.setting-seventeen-refutations
 kind: note
-version: 2
+version: 3
 title: Seventeen conjectures, sixteen refutations
 status: setting
 subject: conformal-spacetime
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T17, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - refuted.twistors-are-the-ladder-operators
 locators:
@@ -24,6 +28,10 @@ locators:
   line: 484
   subsection: Seventeen refutations
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex conformal weight -3/2 +- i nu of refutation 5 is written -3/2 +- I_4 nu, a physical number read in span{1, I_4}; no bare i remains.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'VALUES L5: row 14 now gives the miss as about 10.2 percent with the exact one-loop rational; VALUES L4: title now says seventeen conjectures, sixteen refutations, matching the text (locator subsection unchanged).'
@@ -42,7 +50,7 @@ Table \claimref{refuted.twistors-are-the-ladder-operators} is the refutation tab
 \endhead
 1 & Dividing by a zero divisor can be repaired at the element: some extension inverts the null vector & No extension inverts it (the no-go is cohomological: the tautological class of the stabiliser's unipotent radical); division transports the space instead, uniquely and minimally, with no inverse operation & T1 \\
 2--4 & Early forms refuted during the programme's development, among them: the two one-generator ascents differ as algebras; twistors are the ladder operators (the naive palatial identification); the wall twist is $N^{*}\Sigma \cong (L^{*})^{\otimes 2}$ & The ascents are always isomorphic (the sign is a geometric bit the algebra forgets); twistors are the \emph{states} of three ladder pairs, the two-level architecture; the twist is $N^{*}\Sigma \cong L^{\otimes 2}$ (dying line = square root of the conormal) & T1, T9, T4 \\
-5 & The mass dictionary, coupling to the frozen point, explains the observed masses & It restates the hierarchy problem: every known massive particle has complex weight $-\tfrac32 \pm i\nu$ with $\nu \approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units & T11 \\
+5 & The mass dictionary, coupling to the frozen point, explains the observed masses & It restates the hierarchy problem: every known massive particle has complex weight $-\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu \approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units & T11 \\
 6 & The internal ladder acts on the whole tower at once & It acts sector-wise; the right object is the automorphism group of the two-level hierarchy & T12 \\
 7 & The three-twistor hierarchy $\C^{3}\otimes\C^{3}$ carries the Standard Model & Its automorphism algebra is seventeen-dimensional, not twelve; the minimal \emph{massive} composite $\C^{2}\otimes\C^{3}$ carries exactly $su(2)\oplus su(3)\oplus u(1)$ & T12 \\
 8 & The raw representation content matches the fermion table entry by entry & The list of disagreements is a list of composites; generators, not states, are the content, and the lepton lies one level higher, under the standard-model paper's declared hypothesis of slot statistics & T12 \\

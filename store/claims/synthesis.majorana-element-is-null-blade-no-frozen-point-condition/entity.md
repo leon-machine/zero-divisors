@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-element-is-null-blade-no-frozen-point-condition
 kind: claim
-version: 2
+version: 3
 title: 'The Majorana element is a null blade; no frozen-point condition fixes its scale'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
   - standard-model.majorana-element@7
   - mass.imported-frozen-point-tractor-connection@6
-  - synthesis.majorana-scale-free-on-pati-salam-route@3
+  - synthesis.majorana-scale-free-on-pati-salam-route@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -39,6 +43,10 @@ lineage:
   - synthesis.majorana-scale-free-input
   - synthesis.majorana-scale-free-on-pati-salam-route
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the B - L phase exp(I_4 theta (B - L)), the orbit e^{-2 I_4 theta} T and the compact real form (I_4 times the Hermitian elements of the 21) are written with I_4, which commutes with the ten tower vectors and so with T; the Fock module of the ten is read over span{1, I_4} on the tower''s floors (stated once in the formal level; notational); no bare i remains, so the earlier declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -72,7 +80,7 @@ Under Hypothesis (S), let $T = v_{1}v_{2}v_{3}v_{4}v_{5}$ be the Majorana elemen
 \begin{enumerate}
 \item[(i)] \emph{(A null blade.)} $T^{2} = 0$: $T$ is a zero divisor, and $Q(T) = 0$ (reversion is the identity on grade five). Its Fock norm is $\langle TT^{\dagger}\rangle_{0} = \tfrac{1}{32}$, $TT^{\dagger}$ being the projector on the full state. And $[B - L, T] = -2T$ (Proposition \claimref{standard-model.majorana-element}(2)).
 \item[(ii)] \emph{(The whole $126$ is isotropic.)} $I_{10}^{2} = 1$, $I_{10}$ anticommutes with every generator, and left multiplication by $I_{10}$ is an anti-isometry of $Q$ on grade five, $Q(I_{10}A, I_{10}B) = -Q(A, B)$. Hence $Q$ vanishes identically on each of the two $126$-dimensional eigenspaces of $I_{10}$ on the five-vectors and pairs them nondegenerately, $Q(A_{+}, A_{-}) = \tfrac12 Q(A)$. $T$ lies in the $+1$ eigenspace, the self-dual half (over $\C$ the $126$ of Proposition \claimref{standard-model.majorana-element}(3), whose $(10,1,3)$ is the orbit of $T$), $T^{\dagger}$ in the other, and $Q(T, T^{\dagger}) = \tfrac{1}{32}$ is the Fock norm.
-\item[(iii)] \emph{(No invariant polynomial at all on $T$.)} Every polynomial $P$ on the five-vectors invariant under the compact Pati-Salam group, or under any group containing $\exp(i\theta(B - L))$, satisfies $P(T) = P(0)$: the $U(1)_{B - L}$ orbit of $T$ is $e^{-2i\theta}T$, so each homogeneous component of positive degree vanishes on $T$, and by invariance on the whole orbit $gTg^{-1}$. Since $B - L$ is a real element of the $\mathfrak{so}(5,5)$ of this module, $\exp(t(B - L))$, $t \in \R$, lies in the real spin group and scales $T$ by $e^{-2t}$, so every continuous invariant of the real form, not only the holomorphic ones, takes its value at $0$ on $T$: $T$ lies in the null cone. This is a statement about $T$ and its orbit, not about the $126$, whose invariant ring is not trivial; and the $126$ carries no invariant bilinear form at all, Clifford or other, because it is not isomorphic to its dual (checked for $Q$ on five rotors of the $21$).
+\item[(iii)] \emph{(No invariant polynomial at all on $T$.)} Every polynomial $P$ on the five-vectors invariant under the compact Pati-Salam group, or under any group containing $\exp(I_{4}\theta(B - L))$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors), satisfies $P(T) = P(0)$: the $U(1)_{B - L}$ orbit of $T$ is $e^{-2I_{4}\theta}T$, so each homogeneous component of positive degree vanishes on $T$, and by invariance on the whole orbit $gTg^{-1}$. Since $B - L$ is a real element of the $\mathfrak{so}(5,5)$ of this module, $\exp(t(B - L))$, $t \in \R$, lies in the real spin group and scales $T$ by $e^{-2t}$, so every continuous invariant of the real form, not only the holomorphic ones, takes its value at $0$ on $T$: $T$ lies in the null cone. This is a statement about $T$ and its orbit, not about the $126$, whose invariant ring is not trivial; and the $126$ carries no invariant bilinear form at all, Clifford or other, because it is not isomorphic to its dual (checked for $Q$ on five rotors of the $21$).
 \item[(iv)] \emph{(What survives, and what it needs.)} The invariants that do not vanish on $T$ involve $T^{\dagger}$, that is the module's Hermitian structure: the adjoint fixes $\gamma_{2m}$ and negates $\gamma_{2m+1}$, so it is the Clifford reversion composed with the reflection of the five negative-square generators, not an anti-automorphism of the Clifford algebra of the ten, and it depends on the split of the ten into the two fives, the choice of a maximal isotropic subspace (the particle modes). A condition $\langle TT^{\dagger}\rangle_{0} = M^{2}$ fixes the magnitude of a vev along $T$ against $M$ and nothing fixes $M$: in the classification of the series' rung-unit premise (synthesis.rung-unit-second-free-number, a postulate, not assumed here) the Majorana scale is a datum of the sesquilinear kind, like the rung unit $v/H$, not of the bilinear kind, like $\Lambda$, whose frozen-point norm is the scale.
 \end{enumerate}
 So a condition of the frozen-point kind, an invariant algebraic equation on the element alone, cannot fix the Majorana scale: on $T$ every such equation reads $0 = 0$. This is the general fact that a vev carrying a $U(1)$ charge lies in the null cone and has no invariant norm except a sesquilinear one, applied to the series' own element. Together with the invariance of the stored relations under the rescaling of the $126$ coupling (Proposition \claimref{synthesis.majorana-scale-free-on-pati-salam-route}) and the companion result that the two-loop running of the gauge couplings does not fix that coupling either (filed alongside, synthesis.two-loop-running-cannot-fix-majorana-coupling), this closes the three lines of attack on the derivation of the scale and supports registering it as an input.

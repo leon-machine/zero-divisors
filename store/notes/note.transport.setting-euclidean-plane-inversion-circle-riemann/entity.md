@@ -1,7 +1,7 @@
 ---
 id: note.transport.setting-euclidean-plane-inversion-circle-riemann
 kind: note
-version: 1
+version: 2
 title: 'The Euclidean plane: inversion in a circle on the Riemann sphere'
 status: setting
 subject: completion
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - transport.swap-rescale-normal-form
 - transport.totality
@@ -26,10 +30,19 @@ locators:
   section: 'Type N: the isotropic obstruction, and Rule 1'
   line: 1071
   subsection: 'The Euclidean plane: inversion in a circle on the Riemann sphere'
+extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The identification z = x + iy of the Euclidean plane with the complex plane is written z = e_1(x e_1 + y e_2) = x + I_2 y with I_2 = e_1 e_2 the plane''s unit bivector (a phase in a real two-plane, U1); the rest of the note is unchanged. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (bridge): the note identifies the Euclidean plane with the complex plane by z = x + iy to set the inversion beside the classical Riemann-sphere picture; the i is the unit of that classical side.'
 ---
 
 ## formal
-Take the base $\mathbb{V} = \R^2$ with $Q$ positive definite (signature $(2,0)$), and identify $\mathbb{V}$ with $\C$ by $z = x + iy$, so that $Q(z) = |z|^2$. Definite signature has no null vectors, so the partial locus of $\rho(z) = z/Q(z)$ is the origin alone: this is the oldest division by zero there is. Note which hypotheses are at work. The no-go theorem requires $p, q \geq 1$ and $n \geq 3$ and does not apply here, since with no null vectors there is no element-level question to obstruct, while the theorems this example exercises (totality, minimality, the normal form) hold in every nondegenerate signature, as recorded in the scope paragraph of Section \ref{subsec:quadratic}.
+Take the base $\mathbb{V} = \R^2$ with $Q$ positive definite (signature $(2,0)$), and identify $\mathbb{V}$ with $\C = \mathrm{span}\{1, I_{2}\}$, $I_{2} = e_{1}e_{2}$ the unit bivector of the plane ($I_{2}^{2} = -1$), by $z = e_{1}(xe_{1} + ye_{2}) = x + I_{2}y$, so that $Q(z) = |z|^2$. Definite signature has no null vectors, so the partial locus of $\rho(z) = z/Q(z)$ is the origin alone: this is the oldest division by zero there is. Note which hypotheses are at work. The no-go theorem requires $p, q \geq 1$ and $n \geq 3$ and does not apply here, since with no null vectors there is no element-level question to obstruct, while the theorems this example exercises (totality, minimality, the normal form) hold in every nondegenerate signature, as recorded in the scope paragraph of Section \ref{subsec:quadratic}.
 
 The completion is $\Cl(3,1)$. Because $Q$ is definite, the incidence condition \eqref{eq:incidence} with $s = 0$ forces $z = 0$: the ideal strata (i) and (ii) of Proposition \claimref{transport.swap-rescale-normal-form} are empty, and the only ideal point is $[\nInf]$, stratum (iii). The quadric $\mathcal{Q}$ is therefore the plane with a single point adjoined, and the map
 \[

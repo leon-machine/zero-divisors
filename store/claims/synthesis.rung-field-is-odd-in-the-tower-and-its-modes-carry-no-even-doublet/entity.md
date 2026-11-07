@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet
 kind: claim
-version: 1
+version: 2
 title: 'The rung field is odd in the tower; no even doublet in its modes'
 status: proved
 region: synthesis
@@ -17,14 +17,18 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@2
+  - synthesis.rung-field-on-the-lift-locus@3
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - field-theory.imported-tower-limit@3
-  - synthesis.even-slots-need-a-spectator-generator@2
+  - synthesis.even-slots-need-a-spectator-generator@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +48,10 @@ lineage:
   - field-theory.composite-scalars-mean-field-level
   - field-theory.how-close-tower-comes-ccr
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit in the check''s real generator t_2'' = [t_3, t_1] = I_4 t_2 is now the field theory''s unit I_4, which commutes with the rung vectors (coefficients read in span{1, I_4}, as the proof already states); no bare i remains.'
   open_problem: op.qft-bosons-and-the-rung-field
   note: >-
     The problem asks whether the Higgs is elementary (palatial) or composite (tower). The rung field's values are

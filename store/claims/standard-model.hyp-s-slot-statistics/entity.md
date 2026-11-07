@@ -23,7 +23,7 @@ derivations:
   uses:
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - standard-model.imported-anomaly-coefficients@1
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
   assumes:

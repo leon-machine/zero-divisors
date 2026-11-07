@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.modular-theory-matrix-factor-proved-outright@4
+  - singularity.modular-theory-matrix-factor-proved-outright@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

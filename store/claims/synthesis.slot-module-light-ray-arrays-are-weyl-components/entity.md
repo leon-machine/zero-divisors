@@ -1,7 +1,7 @@
 ---
 id: synthesis.slot-module-light-ray-arrays-are-weyl-components
 kind: claim
-version: 1
+version: 2
 title: 'Light-ray arrays of the slot module are its Weyl components'
 status: proved
 region: synthesis
@@ -17,15 +17,24 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: clause (i) split out into synthesis.canonical-part-of-a-spinor-on-a-null-plane, which the proof now cites; notation declaration
+  version: 2
+  source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: unit conventions per Leon's rulings of 7 November 2026 (R3)
+  version: 2
+  source: maintainer pass 2026-11-07 (unit rulings)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@2
+  - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
+  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@4
   - field-theory.second-quantisation@5
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
-  - synthesis.half-integer-weight-array-carries-half-ln2@4
+  - synthesis.half-integer-weight-array-carries-half-ln2@5
   - standard-model.majorana-element@7
   - synthesis.lowest-causal-residues-zero-four-content@1
   proof: proof-main.tex
@@ -51,7 +60,15 @@ lineage:
   - synthesis.residue-from-mode-entropy
   - pred.boundary-mode-density
 extraction:
+  maintainer_pass_unit_rulings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s rulings R1-R4 of 7 November 2026, folded into version 2 of this pass: R3: the slot module V and its CPT halvings are read over span{1, I_4} on the tower floors (stated once in the formal level); no bare i remains, declaration removed'
   open_problem: op.residue-killing-weights
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee fix folded into version 2: (i) now records the one boundary value of Lambda(k) psi per generator that the constraint leaves free, as in the cited result. Version 1 -> 2, at Leon''s decision of 7 November 2026: the algebra of clause (i) (mass terms reach only the constraint) is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane, its clause (iv), with the flux identity its clause (ii), and the proof of (i) cites it; the pin to the light-ray result moves to its version 3 (the same split, statement unchanged). The two checks of (i) are kept and record the new premise in place of the light-ray result, which the check of (iv) still records. Statement unchanged. Notation: no bare imaginary unit; the complex field stays in the slot module V and is declared under outside_ga. Pins moved to current versions (statements unchanged): synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays 3 -> 4.'
   note: >-
     The problem's first line of attack, with the field content imported from the Standard Model
     subject: compute the light-ray array content of the series' matter per generation from the slot
@@ -74,9 +91,9 @@ extraction:
 ---
 
 ## formal
-Work as in Theorem \claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}: the spacetime algebra $\Cl(1,3)$, a horizon's null plane $N_{k}$ with generators along $k = \gamma_{0} + \gamma_{3}$ and second null direction $m = \gamma_{0} - \gamma_{3}$, $B = \gamma_{3}\gamma_{0}$, $\Lambda(k) = \tfrac12(1 + B)$, $\Lambda(m) = \tfrac12(1 - B)$, so that the canonical part of a spinor on $N_{k}$ is $\Lambda(m)\psi$, one complex channel per chirality. Let $V = \Lambda^{\bullet}\C^{5}$ be the fermionic slot module (modes $1, 2$ the slots, $3, 4, 5$ the pairs) with the gauge algebra $\mathfrak{s}(\uu(2) \oplus \uu(3))$ and $Y = (3n - 2k)/6$ on states with $n$ slots and $k$ pairs (Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}), and call a CPT halving any involution $\Gamma$ commuting with the gauge algebra whose $-1$ eigenspace $V_{-}$ is isomorphic to the conjugate of its $+1$ eigenspace $V_{+}$ (Theorem \claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}). Read one generation as the left-handed Weyl fields valued in $V_{+}$, its antiparticles in $V_{-}$. Then:
+Work as in Theorem \claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}: the spacetime algebra $\Cl(1,3)$, a horizon's null plane $N_{k}$ with generators along $k = \gamma_{0} + \gamma_{3}$ and second null direction $m = \gamma_{0} - \gamma_{3}$, $B = \gamma_{3}\gamma_{0}$, $\Lambda(k) = \tfrac12(1 + B)$, $\Lambda(m) = \tfrac12(1 - B)$, so that the canonical part of a spinor on $N_{k}$ is $\Lambda(m)\psi$, one complex channel per chirality. Let $V = \Lambda^{\bullet}\C^{5}$ be the fermionic slot module (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) (modes $1, 2$ the slots, $3, 4, 5$ the pairs) with the gauge algebra $\mathfrak{s}(\uu(2) \oplus \uu(3))$ and $Y = (3n - 2k)/6$ on states with $n$ slots and $k$ pairs (Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}), and call a CPT halving any involution $\Gamma$ commuting with the gauge algebra whose $-1$ eigenspace $V_{-}$ is isomorphic to the conjugate of its $+1$ eigenspace $V_{+}$ (Theorem \claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}). Read one generation as the left-handed Weyl fields valued in $V_{+}$, its antiparticles in $V_{-}$. Then:
 \begin{enumerate}
-\item[(i)] \emph{(Mass terms reach only the constraint.)} With $\ip{k}{m} = 2$, every vector splits as $a = \tfrac12 m\,\ip{k}{a} + \tfrac12 k\,\ip{m}{a} + a_{\perp}$, so $k\nabla = \tfrac12 km\,(k\cdot\nabla) + k\nabla_{\perp}$ contains no derivative off $N_{k}$; $km = 4\Lambda(k)$, $k$ anticommutes with $\gamma_{1}, \gamma_{2}$, and $k\Lambda(k) = 0$, so $k\psi X = k\Lambda(m)\psi X$ for every multivector $X$ acting from the right, and $L_{k}$ is injective on the image of $\Lambda(m)$. Every Lorentz-covariant mass term, of Dirac or of Majorana type, acts from the right, so on $N_{k}$ it enters only the equation that fixes $\Lambda(k)\psi$ from $\Lambda(m)\psi$: the free data on $N_{k}$ are $\Lambda(m)\psi$ for every mass matrix, one complex channel per Weyl component. In the count of the light-ray result, $2n_{D} + n_{W}$ is the number of Weyl components, and whether they are grouped as Dirac or Majorana species is a property of the mass matrix that the count does not see.
+\item[(i)] \emph{(Mass terms reach only the constraint.)} With $\ip{k}{m} = 2$, every vector splits as $a = \tfrac12 m\,\ip{k}{a} + \tfrac12 k\,\ip{m}{a} + a_{\perp}$, so $k\nabla = \tfrac12 km\,(k\cdot\nabla) + k\nabla_{\perp}$ contains no derivative off $N_{k}$; $km = 4\Lambda(k)$, $k$ anticommutes with $\gamma_{1}, \gamma_{2}$, and $k\Lambda(k) = 0$, so $k\psi X = k\Lambda(m)\psi X$ for every multivector $X$ acting from the right, and $L_{k}$ is injective on the image of $\Lambda(m)$. Every Lorentz-covariant mass term, of Dirac or of Majorana type, acts from the right, so on $N_{k}$ it enters only the equation that fixes $\Lambda(k)\psi$ from $\Lambda(m)\psi$: the free data on $N_{k}$ are $\Lambda(m)\psi$, with one boundary value of $\Lambda(k)\psi$ per generator, for every mass matrix (Theorem \claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}(iv)), one complex channel per Weyl component. In the count of the light-ray result, $2n_{D} + n_{W}$ is the number of Weyl components, and whether they are grouped as Dirac or Majorana species is a property of the mass matrix that the count does not see.
 \item[(ii)] \emph{(Sixteen per generation.)} The gauge-commuting CPT halvings are the $2^{5}$ choices of one member from each of the five conjugate pairs of non-neutral isotypic components of $V$, times a line in the two-dimensional neutral block; for each of them $\dim_{\C}V_{+} = 16$ and the weights of $V_{-}$ are the negatives of those of $V_{+}$. So a generation supplies $16$ arrays per light ray, $8\ln 2$ at the Hawking temperature with one (Q) version 3 array per channel (Theorem \claimref{synthesis.half-integer-weight-array-carries-half-ln2}(i)), that is $8$ registered units of two arrays, an integer, for every choice of the neutral singlet; $N_{g}$ generations give $16N_{g}$ arrays and $8N_{g}$ units. A generation without the neutral singlet, fifteen components, is not a CPT halving of $V$; it would give $\tfrac{15}{2}$ units.
 \item[(iii)] \emph{(The particle half is chiral.)} In every such halving no nonzero weight of $V_{+}$ under the Cartan algebra of $\mathfrak{s}(\uu(2) \oplus \uu(3))$ has its negative in $V_{+}$, and the zero weight occurs once (the neutral singlet). A Hestenes spinor field valued in a representation $R$ carries $R$ on both chiralities, so its left-handed content is $R \oplus \bar{R}$; hence no gauge-covariant Dirac field can be formed from a generation except from neutral singlets, and among $N_{g}$ generations at most $\lfloor N_{g}/2 \rfloor$ such pairs. At the anomaly-free halving $\pm(-1)^{n + k}$ the hypercharges of $V_{+}$ are $0$ (once), $-\tfrac23$ (three times), $\tfrac16$ (six), $-\tfrac12$ (two), $1$ (once), $\tfrac13$ (three), and no nonzero value occurs with its negative.
 \item[(iv)] \emph{(After electroweak breaking.)} Labelled by electric charge $T_{3} + Y$ and colour, the half $V_{+}$ of the halving $(-1)^{n + k}$ pairs into exactly $7$ charged Dirac species (up and down quarks in three colours, the electron) and $2$ neutral components. With a nonzero Majorana term, the $\nu^{c}\nu^{c}$ entry of Theorem \claimref{standard-model.majorana-element}(1), the neutral components are two Majorana species, $n_{D} = 7$ and $n_{W} = 2$; with none, and a Dirac entry pairing the neutral singlet with the doublet's neutral member, they form one Dirac species, $n_{D} = 8$; both give $16$ arrays. This clause is stated for the halvings $\pm(-1)^{n + k}$ only: whether such a Dirac entry exists in the halving with the other neutral line is not decided here, and if it does not, $n_{D} = 7$, $n_{W} = 2$ there too, again $16$ arrays.

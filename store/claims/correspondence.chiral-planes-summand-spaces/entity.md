@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - correspondence.skew-lines-splittings-hyperbolic-planes-one@4
-  - correspondence.chirality-split-ordering-insensitivity-asd-sector@4
+  - correspondence.chirality-split-ordering-insensitivity-asd-sector@6
   - std-algebra.bivector-lie-algebra@1
   proof: proof-main.tex
 checked_by:

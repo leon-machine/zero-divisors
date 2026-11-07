@@ -1,7 +1,7 @@
 ---
 id: refuted.the-mass-dictionary-coupling-to-the-frozen-point
 kind: claim
-version: 1
+version: 2
 title: The mass dictionary, coupling to the frozen point, explains the observed masses
 status: refuted
 subject: mass
@@ -22,6 +22,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T17, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 locators:
   paper: T17
@@ -29,6 +33,10 @@ locators:
   label: tab:refutations
   carried_by: T11
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4}; no bare i remains.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21
@@ -58,7 +66,7 @@ extraction:
 The mass dictionary, coupling to the frozen point, explains the observed masses
 
 ## technical
-Refuted. The corrected statement: It restates the hierarchy problem: every known massive particle has complex weight $-\tfrac32 \pm i\nu$ with $\nu \approx m/H$, and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units.
+Refuted. The corrected statement: It restates the hierarchy problem: every known massive particle has complex weight $-\tfrac32 \pm I_4\nu$ with $\nu \approx m/H$ (numbers are read in $\mathrm{span}\{1, I_4\}$), and the question becomes why the imaginary parts of the conformal weights are so large in Hubble units.
 
 ## lay
 It was natural to hope that tying every field to the single cosmological scale would explain why particles have the masses they do. It does not: that scale is so small that ordinary particles need enormous weights, so the old puzzle of why matter is so heavy compared with it simply comes back in a new form.

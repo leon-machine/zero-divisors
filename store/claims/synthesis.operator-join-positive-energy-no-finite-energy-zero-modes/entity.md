@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-positive-energy-no-finite-energy-zero-modes
 kind: claim
-version: 1
+version: 2
 title: 'No finite-energy zero modes of the oscillator join for $\Lambda \ge 0$'
 status: proved
 region: synthesis
@@ -17,16 +17,20 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@2
-  - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@1
+  - synthesis.operator-join-ordering-constants@3
+  - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@2
   - synthesis.operator-join-casimir-shifts@2
   - mass.imported-palatial-quadratics-homogeneity-charge@4
   - field-theory.twistor-attachment@6
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@3
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +48,10 @@ lineage:
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the palatial Fock space F is read over span{1, I_4} on the tower''s floors (stated once in the formal level; notational), so the generalised state exp((2 I_4/hbar) sum a^dagger b^dagger) and the factor I_4 b^dagger of proof (v) carry I_4 and the spectral parameter mu lies in span{1, I_4}; no bare i remains, so the earlier declaration is removed.'
   open_problem: op.operator-join
   note: >-
     The problem's second line of attack (decide whether the polynomial and positive-energy
@@ -75,7 +83,7 @@ extraction:
 ---
 
 ## formal
-Let $Z^{\alpha}_{i}$, $\bar{Z}_{i\alpha}$ ($i = 1, 2$; $\alpha = 0, \dots, 3$) be the palatial oscillators of two constituents, $[Z^{\alpha}_{i}, \bar{Z}_{l\beta}] = \hbar\,\delta_{il}\delta^{\alpha}_{\beta}$, with $\omega^{A} = Z^{A}$, $\pi_{A'} = Z^{A+2}$, and the stored conjugation $Z^{\alpha} \mapsto \bar{Z}_{\sigma(\alpha)}$, $\sigma = (0\,2)(1\,3)$ (so that $\bar{Z}_{A} = \bar{\pi}_{A}$, $\bar{Z}_{A+2} = \bar{\omega}^{A'}$). Let $\hat{B} = \br{\pi^{1}\pi^{2}} + \lambda[\omega^{1}\omega^{2}]$, $\lambda = \Lambda/6$, $\hat{B}^{\dagger}$ its conjugate, $\hat{h}_{il}$ the symmetrised Gram operators, $\hat{C} = \tfrac12\sum_{i,l}\hat{h}_{il}\hat{h}_{li} - \tfrac14(\tr\hat{h})^{2}$, and $\hat{m}^{2} = \hat{B}^{\dagger}\hat{B} + \hat{B}\hat{B}^{\dagger} + \tfrac{\Lambda}{3}\hat{C} - \tfrac{2\Lambda}{3}\hbar^{2}$ the operator join of Proposition \claimref{synthesis.operator-join-ordering-constants}(3). The positive-energy realisation is the oscillator model of Proposition \claimref{field-theory.twistor-attachment}: for each constituent, $Z^{A} = a_{A} + b^{\dagger}_{A}$, $Z^{A+2} = a_{A} - b^{\dagger}_{A}$, $\bar{Z}_{A} = a^{\dagger}_{A} - b_{A}$, $\bar{Z}_{A+2} = a^{\dagger}_{A} + b_{A}$, with $a_{A}$, $b_{A}$ ($A = 0, 1$) four annihilation operators, $[a_{A}, a^{\dagger}_{B}] = [b_{A}, b^{\dagger}_{B}] = \tfrac{\hbar}{2}\delta_{AB}$, on the Fock space $\mathcal{F}$ of their vacuum; $\mathcal{F}_{0} \subset \mathcal{F}$ is the algebraic Fock space, the finite linear combinations of number states (the states of finite energy content). The sector $(s_{1}, s_{2})$ is the joint eigenspace $\hat{h}_{ii} = 2s_{i}\hbar$, and an isotype $(s_{1}, s_{2}, j)$ its intersection with the spin-$j$ isotypic component of the internal $\mathfrak{su}(2)$ spanned by $\hat{h}_{12}$, $\hat{h}_{21}$, $\tfrac12(\hat{h}_{11} - \hat{h}_{22})$.
+Let $Z^{\alpha}_{i}$, $\bar{Z}_{i\alpha}$ ($i = 1, 2$; $\alpha = 0, \dots, 3$) be the palatial oscillators of two constituents, $[Z^{\alpha}_{i}, \bar{Z}_{l\beta}] = \hbar\,\delta_{il}\delta^{\alpha}_{\beta}$, with $\omega^{A} = Z^{A}$, $\pi_{A'} = Z^{A+2}$, and the stored conjugation $Z^{\alpha} \mapsto \bar{Z}_{\sigma(\alpha)}$, $\sigma = (0\,2)(1\,3)$ (so that $\bar{Z}_{A} = \bar{\pi}_{A}$, $\bar{Z}_{A+2} = \bar{\omega}^{A'}$). Let $\hat{B} = \br{\pi^{1}\pi^{2}} + \lambda[\omega^{1}\omega^{2}]$, $\lambda = \Lambda/6$, $\hat{B}^{\dagger}$ its conjugate, $\hat{h}_{il}$ the symmetrised Gram operators, $\hat{C} = \tfrac12\sum_{i,l}\hat{h}_{il}\hat{h}_{li} - \tfrac14(\tr\hat{h})^{2}$, and $\hat{m}^{2} = \hat{B}^{\dagger}\hat{B} + \hat{B}\hat{B}^{\dagger} + \tfrac{\Lambda}{3}\hat{C} - \tfrac{2\Lambda}{3}\hbar^{2}$ the operator join of Proposition \claimref{synthesis.operator-join-ordering-constants}(3). The positive-energy realisation is the oscillator model of Proposition \claimref{field-theory.twistor-attachment}: for each constituent, $Z^{A} = a_{A} + b^{\dagger}_{A}$, $Z^{A+2} = a_{A} - b^{\dagger}_{A}$, $\bar{Z}_{A} = a^{\dagger}_{A} - b_{A}$, $\bar{Z}_{A+2} = a^{\dagger}_{A} + b_{A}$, with $a_{A}$, $b_{A}$ ($A = 0, 1$) four annihilation operators, $[a_{A}, a^{\dagger}_{B}] = [b_{A}, b^{\dagger}_{B}] = \tfrac{\hbar}{2}\delta_{AB}$, on the Fock space $\mathcal{F}$ of their vacuum (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors); $\mathcal{F}_{0} \subset \mathcal{F}$ is the algebraic Fock space, the finite linear combinations of number states (the states of finite energy content). The sector $(s_{1}, s_{2})$ is the joint eigenspace $\hat{h}_{ii} = 2s_{i}\hbar$, and an isotype $(s_{1}, s_{2}, j)$ its intersection with the spin-$j$ isotypic component of the internal $\mathfrak{su}(2)$ spanned by $\hat{h}_{12}$, $\hat{h}_{21}$, $\tfrac12(\hat{h}_{11} - \hat{h}_{22})$.
 \begin{enumerate}
 \item[(i)] \emph{(Setting.)} In the oscillator realisation the Hilbert adjoint of $Z^{\alpha}_{i}$ is $\bar{Z}_{i\sigma(\alpha)}$ (the adjoint of $a + b^{\dagger}$ is $a^{\dagger} + b$); that this realisation is the attachment's positive-energy module, with the twistor form the grading of the central rotation, energies $|s| + 1 + n$ and multiplicities $(n+1)(n + 2|s| + 1)$, is proved once (filed alongside, synthesis.attachment-conformal-energy-is-generated-by-z) and is used here, not re-proved. Hence $\hat{B}^{\dagger}$ is the adjoint of $\hat{B}$, each $\hat{h}_{ii} = \hbar(N_{a,i} - N_{b,i})$ is self-adjoint with spectrum $\hbar\Z$, so $s_{i} \in \tfrac12\Z$, and $\hat{h}_{12}^{\dagger} = \hat{h}_{21}$; the $\hat{h}_{il}$ preserve the oscillator number $N = \sum_{i}(N_{a,i} + N_{b,i})$ and generate a unitary action of the internal $U(2)$ on each finite-dimensional level of $\mathcal{F}_{0}$. The realisation is at the Fock scale of the units chosen; $\lambda = \Lambda/6$ is measured in that scale.
 \item[(ii)] \emph{(The join on an isotype.)} In every realisation of the canonical relations, $\hat{m}^{2} = 2\hat{B}^{\dagger}\hat{B} + \hbar\lambda\tr\hat{h} + \tfrac{\Lambda}{3}\hat{C} - \tfrac{2\Lambda}{3}\hbar^{2}$, and $\hat{C}$ is the Casimir of the internal $\mathfrak{su}(2)$, equal to $j(j+1)\hbar^{2}$ on the spin-$j$ isotype. Hence on the isotype $(s_{1}, s_{2}, j)$, with $j \ge |s_{1} - s_{2}|$ and $j - (s_{1} - s_{2}) \in \Z$,

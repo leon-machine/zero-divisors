@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-kms-extension-completion-locus
 kind: claim
-version: 1
+version: 3
 title: 'Under (E), the horizon''s KMS state reads $6\pi$ at the exceptional set'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the holonomy phase flows written with the transverse unit J'
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -25,8 +33,8 @@ derivations:
   - singularity.imported-one-sided-completion-singularity@5
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   - singularity.modular-structure-completed-pair@5
-  - singularity.kms-uniqueness-factor@4
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
+  - singularity.kms-uniqueness-factor@6
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -36,6 +44,14 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the holonomy phase flows on the CAR algebra of the completed-pair atoms at P are written Ad(e^{J s f(r) K_P}) with J = e_2 e_3, the atoms'' complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention); hypothesis (E) is otherwise unchanged. Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the holonomy phase flows Ad(e^{is f(r) K_P}), K_p = sigma_p/2, act on the CAR algebra of the atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit.'
   open_problem: op.collar-kms-extension
   flow_note: phase; every flow here is the phase flow Ad(e^{isfK}) of the stated rate f (see synthesis.phase-flow-is-time-rotor-flow-kms-continuation).
   note: >-
@@ -62,7 +78,7 @@ extraction:
 ## formal
 Work in units $2M = 1$ on the collar of Fact \claimref{singularity.imported-interior-collar-kasner-form}, with $\kappa = \tfrac12$, $A = 1/r - 1$, and the rates of Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal}: $\rho(r) = 1/(2r^{2})$ per unit Killing time and, for $r < 1$, $\rho_{\mathrm{H}}(r) = \tfrac13 S(r)(1-r)^{-1/2} = \tfrac13 + \tfrac{4}{15}r + \cdots$ per unit Hubble-normalised parameter. By Fact \claimref{singularity.imported-one-sided-completion-singularity} the ladder pair of the completion exists exactly over the exceptional set $E = \{\tau = 0\}\times\R_{t}\times S^{2}$, and each line of constant $(t, \theta, \varphi)$ in the collar is a $\tau$-line ending at the point $(t, \theta, \varphi)$ of $E$. Assume:
 \begin{enumerate}
-\item[(E)] the boundary-mode atom read at a collar point is the atom (the completed pair of Theorem \claimref{singularity.modular-structure-completed-pair}) of the point of $E$ on its $\tau$-line, carried along that line by the parallel transport of the synchronous frame; on a finite set $P \subset E$ the algebra is the CAR algebra of the atoms at $P$, a matrix factor; and the $t$-line holonomy flow of the slice $r$ acts on it as the phase flow $\operatorname{Ad}(e^{isf(r)K_{P}})$ with $K_{P} = \sum_{p \in P}K_{p}$, $K_{p} = \sigma_{p}/2$, where $f = \rho$ (the Killing parametrisation) or $f = \rho_{\mathrm{H}}$ (the Hubble parametrisation, $r < 1$).
+\item[(E)] the boundary-mode atom read at a collar point is the atom (the completed pair of Theorem \claimref{singularity.modular-structure-completed-pair}) of the point of $E$ on its $\tau$-line, carried along that line by the parallel transport of the synchronous frame; on a finite set $P \subset E$ the algebra is the CAR algebra of the atoms at $P$, a matrix factor; and the $t$-line holonomy flow of the slice $r$ acts on it as the phase flow $\operatorname{Ad}(e^{Jsf(r)K_{P}})$ with $K_{P} = \sum_{p \in P}K_{p}$, $K_{p} = \sigma_{p}/2$, written with the boundary modes' complex unit $J = e_{2}e_{3}$, which commutes with the atoms (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), where $f = \rho$ (the Killing parametrisation) or $f = \rho_{\mathrm{H}}$ (the Hubble parametrisation, $r < 1$).
 \end{enumerate}
 Then:
 \begin{enumerate}

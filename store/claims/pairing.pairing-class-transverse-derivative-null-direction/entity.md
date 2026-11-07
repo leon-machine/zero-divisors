@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.stabiliser-parabolic-algebra-null-direction@4
+  - pairing.stabiliser-parabolic-algebra-null-direction@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

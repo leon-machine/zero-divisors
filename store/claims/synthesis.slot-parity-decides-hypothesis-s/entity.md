@@ -1,7 +1,7 @@
 ---
 id: synthesis.slot-parity-decides-hypothesis-s
 kind: claim
-version: 3
+version: 4
 title: 'Slot parity decides Hypothesis (S)'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -25,7 +29,7 @@ derivations:
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.imported-cauchy-decomposition-exterior-power@1
   - standard-model.imported-anomaly-coefficients@1
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -37,6 +41,10 @@ lineage:
   - standard-model.hyp-s-slot-statistics
   - field-theory.no-canonical-commutation-relations-tower
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'In the proof of (i) the complex rotation s'''' = c s_1 + I_4 d s_2 of the slot modes uses the unit of the tower''s canonical anticommutation algebra, the field theory''s I_4, which commutes with every tower mode operator; nothing stays.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

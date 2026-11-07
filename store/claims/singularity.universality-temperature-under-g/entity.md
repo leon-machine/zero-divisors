@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

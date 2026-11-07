@@ -1,7 +1,7 @@
 ---
 id: singularity.rate-rigidity-temperature-not-algebra-intrinsic
 kind: claim
-version: 4
+version: 6
 title: 'Rate rigidity: the temperature is not algebra intrinsic'
 status: proved
 region: singularity
@@ -17,11 +17,19 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the phase flow written with the transverse unit J'
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -42,6 +50,14 @@ locators:
   label: thm:rigidity
   line: 1830
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the phase flow on the single-mode algebra of the radial atom is written Ad(e^{J t K}) with J = e_2 e_3, the atom''s complex unit, over whose field span{1, J} the algebra is a 2 x 2 matrix factor (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention); the proof''s determinants are taken over that field. Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{itK}) acts on the complex single-mode matrix factor of the atom, whose modes anticommute with I_4 (conventions, known limit 1); the proof also uses complex determinants of e^{itK}.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -109,7 +125,7 @@ extraction:
 ---
 
 ## formal
-Let $\alpha_t = \operatorname{Ad}(e^{itK})$ be the boost flow of the single-mode algebra $\Aa$, let $\theta$ be a $*$-automorphism of $\Aa$, and let $\omega_\beta$ denote the $\beta$-KMS state of $\alpha$.
+Let $\alpha_t = \operatorname{Ad}(e^{JtK})$ be the boost flow of the single-mode algebra $\Aa$, written with the atom's complex unit $J = e_{2}e_{3}$, over whose field $\mathrm{span}\{1, J\}$ the algebra $\Aa$ is a full $2 \times 2$ matrix algebra (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), let $\theta$ be a $*$-automorphism of $\Aa$, and let $\omega_\beta$ denote the $\beta$-KMS state of $\alpha$.
 \begin{enumerate}
 \item If $\theta$ commutes with the flow then it fixes every Gibbs state of $K$: $\omega_\beta \circ \theta = \omega_\beta$ for every $\beta$.
 \item If $\theta$ reverses the flow, $\theta\circ\alpha_t = \alpha_{-t}\circ\theta$, then $\omega_\beta\circ\theta = \omega_{-\beta}$.
@@ -118,7 +134,7 @@ Let $\alpha_t = \operatorname{Ad}(e^{itK})$ be the boost flow of the single-mode
 \end{enumerate}
 
 ## technical
-Let $\alpha_t = \operatorname{Ad}(e^{itK})$ be the boost's phase flow on the single-mode algebra $\Aa$, the rotor flow $\exp(\lambda\sigma/2)$ continued to imaginary rapidity, with $\beta$-KMS states $\omega_\beta$; every automorphism of this matrix factor is inner, $\theta = \operatorname{Ad}(U)$. An automorphism commuting with the flow fixes every $\omega_\beta$; one reversing the flow sends $\omega_\beta$ to $\omega_{-\beta}$; and a constant reparametrisation $\alpha_t \mapsto \alpha_{ct}$ with $c > 0$ leaves $\omega_\beta$ unchanged while rescaling its inverse temperature to $\beta/c$.
+Let $\alpha_t = \operatorname{Ad}(e^{JtK})$ be the boost's phase flow on the single-mode algebra $\Aa$, with $J = e_{2}e_{3}$ the atom's complex unit, the rotor flow $\exp(\lambda\sigma/2)$ continued to imaginary rapidity, with $\beta$-KMS states $\omega_\beta$; every automorphism of this matrix factor is inner, $\theta = \operatorname{Ad}(U)$. An automorphism commuting with the flow fixes every $\omega_\beta$; one reversing the flow sends $\omega_\beta$ to $\omega_{-\beta}$; and a constant reparametrisation $\alpha_t \mapsto \alpha_{ct}$ with $c > 0$ leaves $\omega_\beta$ unchanged while rescaling its inverse temperature to $\beta/c$.
 
 Hence automorphisms intertwining the flow act on the line of KMS states with orbits $\{\beta, -\beta\}$: $|\beta|$ is an invariant of the pair (state, parametrised flow), and the line carries no automorphism-theoretic structure beyond the orientation flip. A condition singling out one point of the line must either stipulate the state or refer to data outside $(\Aa, \alpha)$, and the value of $|\beta|$ is meaningful only relative to a parametrisation of the flow, which the algebra does not supply.
 
@@ -126,4 +142,4 @@ Hence automorphisms intertwining the flow act on the line of KMS states with orb
 For a single quantum mode with a given time evolution, the symmetries of the algebra that respect the time evolution, or reverse it, can at most flip the sign of an equilibrium state's inverse temperature; they never change its size. Rescaling the clock rescales the temperature while leaving the state itself alone. So the algebra on its own cannot pick out a particular temperature: that needs outside information, namely how the evolution's parameter is converted into physical time.
 
 ## one-liner
-Automorphisms of the single-mode algebra that intertwine the boost's phase flow $\operatorname{Ad}(e^{itK})$ move its KMS states only by $\beta \mapsto \pm\beta$, so the value of the temperature depends on a parametrisation of the flow that the algebra does not supply.
+Automorphisms of the single-mode algebra that intertwine the boost's phase flow $\operatorname{Ad}(e^{JtK})$, $J = e_{2}e_{3}$ the atom's complex unit, move its KMS states only by $\beta \mapsto \pm\beta$, so the value of the temperature depends on a parametrisation of the flow that the algebra does not supply.

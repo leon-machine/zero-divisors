@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - scrambling.area-law-test@4
-  - scrambling.clock-inventory-boundary-modes@5
-  - singularity.euclidean-rotor-where-it-lies@4
+  - scrambling.clock-inventory-boundary-modes@6
+  - singularity.euclidean-rotor-where-it-lies@5
   assumes:
   - scrambling.intrinsic-clock-ic-flagged-premise@3
   proof: proof-main.tex

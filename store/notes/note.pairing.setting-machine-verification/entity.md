@@ -1,7 +1,7 @@
 ---
 id: note.pairing.setting-machine-verification
 kind: note
-version: 1
+version: 3
 title: Machine verification
 status: setting
 subject: conformal-spacetime
@@ -15,6 +15,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - pairing.imported-null-flags
 - pairing.imported-spin-coefficients-null-tetrad
@@ -25,12 +33,21 @@ locators:
   number: Setting
   section: Machine verification
   line: 438
+extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The class value 2i of n e_3 is a value of the functional pv on the spacetime complexification of the complex null tetrad m = e_2 + i e_3; by U3 its unit is the central I_5 of Cl(2,3), as in pairing.stabiliser-parabolic-algebra-null-direction: written 2 I_5. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the class value 2i of n e_3 is a value of the complex functional pi on so(4,C), built on the complex null tetrad m = e_2 + i e_3, where i stands next to a spacetime vector.'
 ---
 
 ## formal
 Every computational identity asserted in this note has been verified in exact arithmetic by the script \texttt{verify\_T05\_pairing.py} \cite{ButlerVerifyT05pairing}, which imports the series' shared library \texttt{GA.py}: its basis-blade Clifford engine over the rationals, its Gaussian rationals for the complex Witt vectors, its rational functions in one variable for the two Schwarzschild frames, and its exact ranks and kernels. Identities in $\Q(F)$ or $\Q(\beta)$ are verified as identities where the text says so, and at rational sample points where the text says so. No floating point is used anywhere; the script exits nonzero on any failure. Fifty-three checks, all passing, in eight parts. On the $(t, r, \vartheta)$ and $(T, r, \vartheta)$ blocks the check covers, the connection forms of both frames are verified against the first structure equations, which with antisymmetry determines them there, the curvature forms are derived from them by the second structure equations, and the block one-forms are tied to the frame matrices that the classes are computed from. The pre-registration is deposited beside the script \cite{ButlerPreregT05pairing}.
 
-\emph{Part A: the stabiliser.} The tetrad's pairings; the action $\tfrac12[e_{a}e_{b}, e_{c}] = \eta_{bc}e_{a} - \eta_{ac}e_{b}$ on all basis bivectors and vectors; the six values of $\pv$ with the two transverse images $e_{02}\cdot\ell = -e_{2}$, $e_{12}\cdot\ell = e_{2}$; the equivalence of $B\cdot W \subseteq W$ with $\pv(B) = 0$ on twenty random complex bivectors, none of which stabilises, with the projection $B + \pv(B)e_{12}$ always stabilising; the null rotations $\ell e_{2}$, $\ell e_{3}$ as bivectors fixing $\ell$; the rank two of $(\operatorname{Re}\pv, \operatorname{Im}\pv)$, the rank four of $\{e_{01}, e_{23}, \ell e_{2}, \ell e_{3}\}$ and the rank five with $e_{02}$ appended; the classes $2$, $2i$ of $ne_{2}$, $ne_{3}$ and $0$, $4$ of $n m$, $n\mb$.
+\emph{Part A: the stabiliser.} The tetrad's pairings; the action $\tfrac12[e_{a}e_{b}, e_{c}] = \eta_{bc}e_{a} - \eta_{ac}e_{b}$ on all basis bivectors and vectors; the six values of $\pv$ with the two transverse images $e_{02}\cdot\ell = -e_{2}$, $e_{12}\cdot\ell = e_{2}$; the equivalence of $B\cdot W \subseteq W$ with $\pv(B) = 0$ on twenty random complex bivectors, none of which stabilises, with the projection $B + \pv(B)e_{12}$ always stabilising; the null rotations $\ell e_{2}$, $\ell e_{3}$ as bivectors fixing $\ell$; the rank two of $(\operatorname{Re}\pv, \operatorname{Im}\pv)$, the rank four of $\{e_{01}, e_{23}, \ell e_{2}, \ell e_{3}\}$ and the rank five with $e_{02}$ appended; the classes $2$, $2I_{5}$ of $ne_{2}$, $ne_{3}$ (values in $\mathrm{span}\{1, I_{5}\}$, the complexification of spacetime by the central $I_{5}$ of $\Cl(2,3)$, in which $m = e_{2} + I_{5}e_{3}$) and $0$, $4$ of $n m$, $n\mb$.
 
 \emph{Part B: the Fock dictionary.} The Clifford relations of the four Jordan-Wigner operators; $c(\ell)$, $c(m)$ annihilating the vacuum and $c(n)$, $c(\mb)$ creating; $\bra{12}B\ket{0} = -\pv(B)$ on all six basis bivectors; the $2 \times 2$ structure of the even sector, including $a_{1}a_{2}\ket{12} = -\ket{0}$.
 

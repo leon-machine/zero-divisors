@@ -1,7 +1,7 @@
 ---
 id: synthesis.null-ordering-of-counted-units-is-zeta-symmetric
 kind: claim
-version: 2
+version: 3
 title: 'The null ordering of counted units is zeta-symmetric'
 status: proved
 region: synthesis
@@ -17,19 +17,23 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
 derivations:
 - name: main
   uses:
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
-  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@1
-  - synthesis.counted-unit-energy-at-half-offset@1
-  - synthesis.imported-theta-function-identities@1
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
+  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@2
+  - synthesis.counted-unit-energy-at-half-offset@2
+  - synthesis.imported-theta-function-identities@2
   - synthesis.hole-mass-is-ground-energy-label@3
   - synthesis.residue-from-mode-entropy@4
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.positive-null-energy-gives-r-premises@7
   assumes:
   - synthesis.window-reading-array-killing-energy@1
   proof: proof-main.tex
@@ -49,6 +53,14 @@ lineage:
   - synthesis.counted-unit-energy-at-half-offset
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The one bare i, the twist phase of the window condition psi(tau + L) = e^{2 pi I_4 delta} psi(tau) in the proof, is the unit of a chiral component of the horizon continuum on a Killing-time window, so it is the field unit I_4 (U1; the continuum mode space carries I_4, as in synthesis.positive-null-energy-gives-r-premises). No i remains; declaration removed. Mathematics, links and checks unchanged.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the twist phase e^{2 pi i delta} of the chiral component on one window keeps i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2). Declared (version and levels unchanged).'
   open_problem: op.counted-mode-energy
   maintainer_pass:
     by: maintainer-2026-10-31

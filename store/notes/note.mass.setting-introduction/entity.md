@@ -1,7 +1,7 @@
 ---
 id: note.mass.setting-introduction
 kind: note
-version: 2
+version: 3
 title: Introduction
 status: setting
 subject: einstein
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - mass.imported-frozen-point-tractor-connection
 locators:
@@ -23,6 +27,10 @@ locators:
   section: Introduction
   line: 372
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex weight -3/2 +- i nu is now -3/2 +- I_4 nu, a physical number read in span{1, I_4}; no bare i remains.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -36,7 +44,7 @@ The results come in three steps. \emph{The dictionary} (Section \ref{sec:diction
 \[
 m^{2} = -w(w+n-1)\,Q(I),
 \]
-in dimension four $m^{2} = -w(w+3)\Lambda/3$. With $H^{2} = \Lambda/3$ and $\Delta = -w$ this is the de Sitter mass formula $m^{2} = \Delta(3-\Delta)H^{2}$, and it carries its own classification: masslessness is $w \in \{0, -3\}$, the conformally coupled scalar $w = -1$ has $m^{2} = 2H^{2}$, a real weight gives $m^{2} \ge 0$ only for $w \in [-3, 0]$ and then $m \le 3H/2$, and every heavier field has complex weight $w = -\tfrac32 \pm i\nu$. Since $3H/2$ is about $10^{-33}\,\mathrm{eV}$, every known massive particle is of the last kind, with $\nu \approx m/H$, about $3 \times 10^{38}$ for the electron. The natural conjecture, that coupling to the frozen point explains the observed masses, fails: what the dictionary yields is the hierarchy problem restated as the size of an imaginary weight. \emph{The area} (Section \ref{sec:area}): a single twistor is massless; a two-twistor composite has $m^{2} = 2|\br{\pi^{1}\pi^{2}}|^{2}$, the squared symplectic area between its constituents' spinor parts. \emph{The join} (Section \ref{sec:join}): the de Sitter scale in the flat conformal chart is $\sigma = 1 - \Lambda Q/12$, and its frozen point in the twistor chart is $I_{\Lambda} = n_{\infty} + (\Lambda/6)\,n_{0}$, derived rather than assumed. The composite's grip on it, the ambient vector $P = M(I_{\Lambda})$ built from the conformal moment map, is the de Sitter momentum, and its squared length is computed in closed form:
+in dimension four $m^{2} = -w(w+3)\Lambda/3$. With $H^{2} = \Lambda/3$ and $\Delta = -w$ this is the de Sitter mass formula $m^{2} = \Delta(3-\Delta)H^{2}$, and it carries its own classification: masslessness is $w \in \{0, -3\}$, the conformally coupled scalar $w = -1$ has $m^{2} = 2H^{2}$, a real weight gives $m^{2} \ge 0$ only for $w \in [-3, 0]$ and then $m \le 3H/2$, and every heavier field has complex weight $w = -\tfrac32 \pm I_4\nu$ (numbers read in $\mathrm{span}\{1, I_4\}$). Since $3H/2$ is about $10^{-33}\,\mathrm{eV}$, every known massive particle is of the last kind, with $\nu \approx m/H$, about $3 \times 10^{38}$ for the electron. The natural conjecture, that coupling to the frozen point explains the observed masses, fails: what the dictionary yields is the hierarchy problem restated as the size of an imaginary weight. \emph{The area} (Section \ref{sec:area}): a single twistor is massless; a two-twistor composite has $m^{2} = 2|\br{\pi^{1}\pi^{2}}|^{2}$, the squared symplectic area between its constituents' spinor parts. \emph{The join} (Section \ref{sec:join}): the de Sitter scale in the flat conformal chart is $\sigma = 1 - \Lambda Q/12$, and its frozen point in the twistor chart is $I_{\Lambda} = n_{\infty} + (\Lambda/6)\,n_{0}$, derived rather than assumed. The composite's grip on it, the ambient vector $P = M(I_{\Lambda})$ built from the conformal moment map, is the de Sitter momentum, and its squared length is computed in closed form:
 \[
 m^{2} \;=\; 2\,|B_{\Lambda}|^{2} + Q(I_{\Lambda})\,C, \qquad B_{\Lambda} = \ip{I_{\Lambda}}{Z^{1}\wedge Z^{2}} = \br{\pi^{1}\pi^{2}} + \tfrac{\Lambda}{6}[\omega^{1}\omega^{2}],
 \]

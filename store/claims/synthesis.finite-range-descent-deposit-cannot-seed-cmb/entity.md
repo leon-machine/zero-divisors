@@ -1,7 +1,7 @@
 ---
 id: synthesis.finite-range-descent-deposit-cannot-seed-cmb
 kind: claim
-version: 4
+version: 5
 title: 'A finite-range descent deposit cannot seed the measured amplitude'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.frozen-phase-spectrum-not-red@2
-  - synthesis.quadratic-flows-cannot-thermalise-descent@1
-  - synthesis.de-sitter-temperature-frozen-point-norm@5
+  - synthesis.frozen-phase-spectrum-not-red@3
+  - synthesis.quadratic-flows-cannot-thermalise-descent@2
+  - synthesis.de-sitter-temperature-frozen-point-norm@7
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bbn-reheating-temperature-floor@1
   - synthesis.imported-superhorizon-zeta-conservation@3
@@ -45,6 +49,14 @@ lineage:
   - synthesis.sudden-descent-feature-not-tilt
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U1: the Fourier kernel e^{-ik.r} of the scalar correlator is written e^{-I_4 k.r}, Fourier analysis of a scalar function with values in span{1, I_4}. No bare i remains, so the outside_ga declaration (complex-analysis, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i is the kernel e^{-i k.r} of the Fourier transform of a scalar correlator; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   maintainer_pass:
     by: maintainer-2026-10-23
@@ -62,7 +74,7 @@ extraction:
 ---
 
 ## formal
-Let the descent deposit, on the comoving slice of the descent, a scalar perturbation $\zeta$ whose two-point function is homogeneous and isotropic, $C(r) = \langle\zeta(\vec x)\zeta(\vec x + \vec r)\rangle$, with one-point variance $\sigma^{2} = C(0)$, power spectrum $P(k) = \int C(r)e^{-i\vec k\cdot\vec r}\,d^{3}r$ and dimensionless spectrum $\Delta^{2}(k) = k^{3}P(k)/2\pi^{2}$.
+Let the descent deposit, on the comoving slice of the descent, a scalar perturbation $\zeta$ whose two-point function is homogeneous and isotropic, $C(r) = \langle\zeta(\vec x)\zeta(\vec x + \vec r)\rangle$, with one-point variance $\sigma^{2} = C(0)$, power spectrum $P(k) = \int C(r)e^{-I_4\vec k\cdot\vec r}\,d^{3}r$ (the Fourier transform of a scalar function, valued in $\mathrm{span}\{1, I_4\}$, conventions U1) and dimensionless spectrum $\Delta^{2}(k) = k^{3}P(k)/2\pi^{2}$.
 \begin{enumerate}
 \item[(i)] \emph{(Finite range.)} If $C(r) = 0$ for $r > R$ (comoving), then for every $k$, $\Delta^{2}(k) \le \tfrac{2}{3\pi}\,\sigma^{2}(kR)^{3}$. If instead $|C(r)| \le \sigma^{2}e^{-r/\xi}$, then $\Delta^{2}(k) \le \tfrac{4}{\pi}\,\sigma^{2}(k\xi)^{3}$.
 \item[(ii)] \emph{(No exit after the descent.)} Let the descended phase, from the descent to today, be a flat FLRW universe with $\dot a^{2}/H_{0}^{2} = \Omega_{r}a^{-2} + \Omega_{m}a^{-1} + \Omega_{\Lambda}a^{2}$ ($a_{0} = 1$, $\Omega_{m} = 0.315$, $\Omega_{r} = 9.2 \times 10^{-5}$, $\Omega_{\Lambda} = 1 - \Omega_{m} - \Omega_{r}$, the record values of Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}). Then $\dot a$ decreases on $(0, \tfrac12]$ and $\dot a \le H_{0}$ on $[\tfrac12, 1]$, so a mode with $k > a_{0}H_{0}$ that is outside the Hubble length at the descent enters once and never leaves it again before today. The pivot $k_{*} = 0.05\ \mathrm{Mpc}^{-1}$ has $k_{*}/a_{0}H_{0} \in (222, 223)$.

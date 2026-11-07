@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.neutral-row
 kind: note
-version: 1
+version: 2
 title: The neutral row
 status: remark
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - dark-tower-matter.five-dimensional-content
 - dark-tower-matter.gauge-algebras
@@ -24,6 +28,10 @@ locators:
   label: lem:neutralrow
   line: 599
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the central generator of u(1) + u(k) is (k I_4, -I_4 1_k), the slot and pair multiplicity spaces C^1 + C^k read over span{1, I_4} on the tower''s floors (stated once; notational); no bare i remains, so the earlier declaration is removed.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21
@@ -45,7 +53,7 @@ review: typed
 ---
 
 ## formal
-In a hierarchy $\C^{1} \otimes \C^{k}$ whose central generator acts by $k$ on the slot and $-1$ on each pair, the state with the slot and all $k$ pairs occupied has weight $k - k = 0$. The constituent-level generator of a one-constituent hierarchy is therefore neutral: the trace-free central generator of $\uu(1) \oplus \uu(k)$ on $\C^{1} \oplus \C^{k}$ is $(k\,i, -i\,1_{k})$ up to scale, and weights add. Arithmetic.
+In a hierarchy $\C^{1} \otimes \C^{k}$ whose central generator acts by $k$ on the slot and $-1$ on each pair, the state with the slot and all $k$ pairs occupied has weight $k - k = 0$. The constituent-level generator of a one-constituent hierarchy is therefore neutral: the trace-free central generator of $\uu(1) \oplus \uu(k)$ on $\C^{1} \oplus \C^{k}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) is $(k\,I_{4}, -I_{4}\,1_{k})$ up to scale, and weights add. Arithmetic.
 
 ## technical
 pending

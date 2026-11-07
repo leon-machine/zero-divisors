@@ -27,7 +27,7 @@ derivations:
   - odd-extensions.imported-tame-walls-exceptional-algebra-residue@4
   - odd-extensions.line-tame-wall@4
   - odd-extensions.transport-constrains-frozen-point-only-through@2
-  - standard-model.imported-frozen-point-dictionary@7
+  - standard-model.imported-frozen-point-dictionary@8
   proof: proof-main.tex
 checked_by:
 - kind: proof

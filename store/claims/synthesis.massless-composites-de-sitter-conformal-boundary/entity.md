@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.de-sitter-scale-frozen-point@6
   - families.source-term-linear-tilt-mass-functional@4
-  - synthesis.many-twistor-join@2
+  - synthesis.many-twistor-join@3
   proof: proof-main.tex
 checked_by:
 - kind: check

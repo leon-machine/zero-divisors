@@ -1,7 +1,7 @@
 ---
 id: synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns
 kind: claim
-version: 1
+version: 2
 title: 'The residual $S_{2}$ decouples the first family from CKM and PMNS mixing'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -42,6 +46,10 @@ lineage:
   - synthesis.residual-s2-fixes-120-family-form
   - synthesis.theta23-at-s3-s2-direction
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The column phases of the diagonalising unitaries and the complex rational test values of the check (h, the vevs, the 120 coefficients) are written with I_4 (numbers, and C, read in span{1, I_4}); nothing stays. Wording, to clear W222: "Dirac matrices" (the Dirac mass matrices, not gamma matrices) now reads "Dirac mass matrices".'
   open_problem: op.second-order-breaking
   note: >-
     One statement of the residual-S2 lemma for both mixing matrices, with the seesaw included so
@@ -62,7 +70,7 @@ extraction:
 ## formal
 Let $P$ be the exchange of $e_{1}$ and $e_{2}$, the residual $S_{2}$ of the $S_{3} \to S_{2}$ direction $e_{3}e_{3}^{\mathsf T}$ of Lemma \claimref{neutrino.breaking-relation}, acting on family matrices by $X \mapsto PXP$, and let $a = (1,-1,0)$ span its odd line and $b_{1} = (1,1,0)$, $b_{2} = e_{3}$ its even plane, as in Proposition \claimref{synthesis.residual-s2-fixes-120-family-form}. Call a matrix $S_{2}$-invariant when $PXP = X$.
 \begin{enumerate}
-\item[(i)] \emph{(The odd eigenvector.)} The $S_{2}$-invariant complex matrices form a five-dimensional algebra, closed under products, adjoints, transposes and inverses, and every member has $a$ as an eigenvector, $Xa = (X_{11} - X_{12})\,a$, with no coupling between $a$ and the even plane. Hence if the Yukawa matrices of the $10$s, the $126$ and the $120$ are $S_{2}$-invariant, then for arbitrary complex vevs and $120$ coefficients the Dirac matrices $M_{u}, M_{d}, M_{e}, M_{\nu}$ and the Majorana matrix $M_{R}$ of Fact \claimref{standard-model.imported-clebsch-structure-seesaw}, the Hermitian squares $M M^{\dagger}$ and the seesaw matrix $m_{\nu} = -M_{\nu}M_{R}^{-1}M_{\nu}^{\mathsf T}$ are all $S_{2}$-invariant and have $a$ as a common eigenvector.
+\item[(i)] \emph{(The odd eigenvector.)} The $S_{2}$-invariant complex matrices form a five-dimensional algebra, closed under products, adjoints, transposes and inverses, and every member has $a$ as an eigenvector, $Xa = (X_{11} - X_{12})\,a$, with no coupling between $a$ and the even plane. Hence if the Yukawa matrices of the $10$s, the $126$ and the $120$ are $S_{2}$-invariant, then for arbitrary complex vevs and $120$ coefficients the Dirac mass matrices $M_{u}, M_{d}, M_{e}, M_{\nu}$ and the Majorana matrix $M_{R}$ of Fact \claimref{standard-model.imported-clebsch-structure-seesaw}, the Hermitian squares $M M^{\dagger}$ and the seesaw matrix $m_{\nu} = -M_{\nu}M_{R}^{-1}M_{\nu}^{\mathsf T}$ are all $S_{2}$-invariant and have $a$ as a common eigenvector.
 \item[(ii)] \emph{(Both mixing matrices.)} When the eigenvalue of $a$ is simple in each Hermitian square (the generic case once the second stage has lifted the degeneracies; at a degenerate eigenvalue the mixing is undetermined, the leading-order situation), every diagonalising unitary has $a$ as a column up to phase, so the CKM and the PMNS matrix each have one entry of modulus one with its row and column otherwise zero, and vanishing Jarlskog invariant: one row and one column of each mixing matrix are trivial. Which row and column is an extra input, the position of $a$ in each mass ordering; its eigenvalue $X_{11} - X_{12}$ need not be the smallest. When $a$ is the lightest state in both sectors of a pair, which it is for the leptons at the $S_{2}$ stage ($a$ is a null vector of $M_{D}$ and of $M_{e}$ there, Proposition \claimref{synthesis.residual-s2-fixes-120-family-form}(ii)), the trivial row and column are the first: $U_{e2} = U_{e3} = U_{\mu 1} = U_{\tau 1} = 0$, that is $\theta_{12} = \theta_{13} = 0$, and with the same ordering for the quarks $V_{us} = V_{ub} = V_{cd} = V_{td} = 0$, with the $2$-$3$ mixing free in each; any other position of $a$ puts the zeros in another row and column, equally excluded by the record.
 \item[(iii)] \emph{(What the second stage must do.)} A second stage $S_{2} \to 1$ whose charged-fermion and neutrino couplings all respect $S_{2}$ produces neither the Cabibbo angle nor $\theta_{12}$, $\theta_{13}$. The $120$ whose family form is fixed by Proposition \claimref{synthesis.residual-s2-fixes-120-family-form}(ii), the line $(e_{1} + e_{2})\wedge e_{3}$, is $S_{2}$-invariant and annihilates $a$, so it is not a second stage: the family form is fixed only at the $S_{2}$ stage, and the second stage must carry $S_{2}$-odd entries in the charged-fermion couplings themselves (an $S_{2}$-odd Majorana sector with $S_{2}$-invariant Dirac couplings, $w_{u} = w_{d} = 0$ for the $126$, changes $m_{\nu}$ and no charged square). Since one-type $S_{2}$-odd stages are excluded by the solar sum rule at the order of Lemma \claimref{neutrino.breaking-relation} and under Premise (H) (Proposition \claimref{synthesis.solar-angle-light-plane-sum-rule}), under those two conditions the second stage must be $S_{2}$-odd and lopsided.
 \item[(iv)] \emph{(Instances; computed, exact.)} For $S_{2}$-invariant complex Yukawas with generic complex vevs and $120$ coefficients, all nine matrices of (i) commute with $P$, have $a$ as an eigenvector with no coupling to the even plane, and the eigenvalue of $a$ is simple in $H_{u}, H_{d}, H_{e}, m_{\nu}$ and $m_{\nu}m_{\nu}^{\dagger}$ ($H_{e}a = 205\,a$ in the instance); adding one $S_{2}$-odd entry $\tfrac13\,e_{1}\wedge e_{3}$ to the $120$ couples $a$ to the even plane in $H_{e}$, $H_{d}$ and $m_{\nu}$. The stored textures $M_{D} = d(\J + \delta\,e_{3}e_{3}^{\mathsf T})$, $M_{R} = \alpha\Pi + M_{3}\J/3 + \varepsilon\,e_{3}e_{3}^{\mathsf T}$, $M_{e} = \J + \delta_{c}\,e_{3}e_{3}^{\mathsf T}$ are $S_{2}$-invariant, with $a$ a null vector of $M_{D}$, $M_{e}$ and $m_{\nu}$ and $M_{R}a = \alpha a$.

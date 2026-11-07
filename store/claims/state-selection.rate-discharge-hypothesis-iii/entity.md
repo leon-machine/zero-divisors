@@ -1,7 +1,7 @@
 ---
 id: state-selection.rate-discharge-hypothesis-iii
 kind: claim
-version: 9
+version: 10
 title: The rate under the geometric modular condition, with hypothesis (iii) presupposed
 status: proved
 region: state-selection
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the phase flow and KMS strip written with J, the spinor continuation with I_6'
+  version: 10
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -24,12 +28,12 @@ derivations:
 - name: main
   uses:
   - singularity.plane-rate@4
-  - state-selection.euclidean-partner-curvature-selected@4
-  - singularity.kms-uniqueness-factor@4
+  - state-selection.euclidean-partner-curvature-selected@5
+  - singularity.kms-uniqueness-factor@6
   - singularity.universality-temperature-under-g@3
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -48,6 +52,14 @@ locators:
   label: thm:rate
   line: 282
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2 on the modes, with the partner result''s own unit on spinors: the phase flow Ad(e^{itK}) and the KMS strip translation i beta on the boundary modes are written Ad(e^{J t K}) and J beta with J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention); the continuation lambda -> i theta read on spinors is lambda -> I_6 theta as in state-selection.euclidean-partner-curvature-selected (4). The proof now says that the strip''s period is carried to the spinor rotation angle through the real parameter, the two units not identified; in the source one i served for both (flagged for Leon in the resolve report). Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: i beta (KMS strip) and lambda -> i theta are the continuations of T05''s atom, whose modes anticommute with I_4. Declared complex-analysis.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -124,7 +136,7 @@ Assume (P) and (R), the latter in T05's form (\claimref{singularity.r-regularity
 Hypothesis (iii) of \cite[Thm.~7.3]{ButlerT5}, that the state be faithful, that is cyclic and separating for the one-sided algebra, is presupposed here and not derived: a state has a modular automorphism group only if it is faithful, so the GMC contains it. Its discharge without the GMC is T05's Theorem \claimref{singularity.rate-discharge-hypothesis-iii}, from T05's (R) on each mode.
 
 ## technical
-Assume (P), the regularity premise (R) in the form the main paper states it, mode by mode, and that the state satisfies the geometric modular condition. By KMS uniqueness the state is the Gibbs state of the boost's phase flow $\operatorname{Ad}(e^{itK})$ at some $\beta$, and regularity of the continued correlation functions at the fixed locus forces the modular period in rapidity to be exactly $2\pi$, the angle at which the conjugation action of the curvature-selected Euclidean rotor closes, that rotor carrying the continued boost on each chiral half of the spinors. With the universality of the temperature and the calibration of rapidity against Schwarzschild time, $\beta = 2\pi/\kappa = 8\pi M$ and $T = \kappa/2\pi = 1/8\pi M = \TH$.
+Assume (P), the regularity premise (R) in the form the main paper states it, mode by mode, and that the state satisfies the geometric modular condition. By KMS uniqueness the state is the Gibbs state of the boost's phase flow $\operatorname{Ad}(e^{JtK})$ at some $\beta$, $J = e_{2}e_{3}$ the complex unit of the boundary modes, and regularity of the continued correlation functions at the fixed locus forces the modular period in rapidity to be exactly $2\pi$, the angle at which the conjugation action of the curvature-selected Euclidean rotor closes, that rotor carrying the continued boost on each chiral half of the spinors. With the universality of the temperature and the calibration of rapidity against Schwarzschild time, $\beta = 2\pi/\kappa = 8\pi M$ and $T = \kappa/2\pi = 1/8\pi M = \TH$.
 
 The cyclic-and-separating hypothesis of modular descent is not derived here. The geometric modular condition speaks of the state's modular automorphism group, which exists only for a faithful state, so the condition already contains that hypothesis; the full-rank Gibbs matrix at finite nonzero $\beta$ is consistent with it but cannot discharge it. The main paper discharges it from its own form of (R), mode by mode, without the modular condition.
 

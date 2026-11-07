@@ -1,7 +1,7 @@
 ---
 id: synthesis.lens-space-wall-rung-count-sees-the-integral-twist
 kind: claim
-version: 2
+version: 4
 title: 'Lens-space wall: the rung count sees the integral twist'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -50,6 +58,14 @@ lineage:
   - sheaf.wall-class
   - synthesis.wall-rung-count-is-height-of-dying-line-class
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle (U1, a plane''s unit bivector): the classical remark, not used in the proof, now writes the complexification of the real line bundle L as L + L with the fibrewise complex structure (s, t) -> (-t, s), the unit bivector of each fibre plane, in place of the realification of L (x) C. No complex field or bare i remains, so the outside_ga declaration (other, for C only) is removed. Version kept at 3, already bumped in this pass.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The quaternion unit of the lens-space action is now the bivector B = e_2e_3 ((z_1, z_2) -> (B z_1, B z_2) on R = z_1 + z_2 e_1e_2, z_j in span{1, B}), and the nowhere-zero section is valued in span{1, B} with phase e^{B phi}; C stays only in the classical remark (not used) that L + L is the realification of the complex line bundle L tensor C, with its first Chern class.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

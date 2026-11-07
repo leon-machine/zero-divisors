@@ -24,7 +24,7 @@ derivations:
   - synthesis.quarter-from-temperature@1
   - synthesis.residue-from-mode-entropy@4
   - synthesis.boundary-mode-thermal-entropy@2
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@6
   proof: proof-main.tex
 checked_by:
 - kind: check

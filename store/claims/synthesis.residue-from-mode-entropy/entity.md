@@ -25,12 +25,12 @@ derivations:
   uses:
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.quarter-from-temperature@1
-  - synthesis.de-sitter-entropy-pi-n-squared@5
-  - synthesis.de-sitter-temperature-frozen-point-norm@5
+  - synthesis.de-sitter-entropy-pi-n-squared@6
+  - synthesis.de-sitter-temperature-frozen-point-norm@7
   assumes:
   - singularity.p-univalence@2
-  - singularity.r-regularity-fixed-locus@3
-  - synthesis.r-lambda-regularity-cosmological-horizon@4
+  - singularity.r-regularity-fixed-locus@4
+  - synthesis.r-lambda-regularity-cosmological-horizon@5
   proof: proof-main.tex
 checked_by:
 - kind: check

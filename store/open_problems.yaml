@@ -233,6 +233,10 @@
     generators (for the local form of (N$_{+}$), now supplied by (HD), the
     propagation Facts and (HS), given the radiation-type descent; the
     ground-state clause is not reached).
+
+    (7 November.) The Hadamard results that give the local form of (N$_{+}$) inherited (N$_{+}$) and the
+    slot-module hypothesis among their premises only through citations of algebraic clauses; see
+    op.r-premises-external, 7 November.
   attack:
     - >-
       The one-coupling clause where the joint set with the action is silent:
@@ -770,6 +774,10 @@
     Item (ii) stays open, restated as field-level geometric modular action
     on the eternal hole's generators; positivity is not shown to be a
     permanent part of the premise.
+
+    (7 November.) The orientation datum of item (ii) is the one examined under op.r-premises-external on
+    7 November: on fields reached by the Hadamard deposit premise it is carried by that premise; on the
+    eternal hole it stays assumed.
   attack:
     - >-
       Derive local normality at the bifurcation surface of the eternal hole
@@ -1484,11 +1492,54 @@
     this is the generator form of geometric modular action, available on Minkowski null planes and,
     argued, on de Sitter horizons, not on the eternal hole; it is recorded on (N$_{+}$) as an
     equivalent form of the clause, not as a premise.
+
+    (7 November; argued, from a survey of the store.) Five obstructions to selecting the occupation
+    profile. (O1) A selection that makes no undetermined distinction gives the tracial state: real
+    states fill only the real capacity, with occupation one half
+    (\claimref{synthesis.incidence-vacua-thermofield-real-capacity}); lifting the deposit off one half
+    needs the orientation datum that (N$_{+}$) assumes. (O2) Modular descent at the wall's pair deposits
+    a trace: the one generator the wall opens is the ladder pair's boost, a gauge generator
+    (\claimref{dark-energy.sheaf-papers-wall-soldering-variables}), and no ladder partner is canonical
+    (\claimref{sheaf.no-equivariant-value-wall}). (O3) Every finite-moment bound in the store
+    (mode-entropy counts, the area law, the cell density, the shot-noise bound, local quasi-equivalence)
+    excludes the trace but not a power-law tail. (O4) For massless fields conformal invariance reduces
+    the premise to the inherited state, which the Kasner field carries through only at the Milne and
+    isotropic points
+    (\claimref{synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points}). (O5) The
+    quasi-free states invariant under the conformal group are the constant-occupation family, and the
+    Hadamard ones among them are the vacuum alone, so a hot deposit is never stabiliser-invariant and
+    \claimref{synthesis.frozen-point-geometry-reads-descent-as-vacuum}, which assumes the Hadamard
+    property, cannot supply it. The premise is also the carrier of (N$_{+}$)'s orientation datum on the
+    fields it reaches (op.r-premises-external, 7 November), so deriving it would source that datum.
   attack:
     - "Select the profile from the series' structures: a principle of the series that fixes the deposit's occupation profile over the reference vacuum on the collar (for example a deposited I-state at the descent temperature, Hadamard for the massless Dirac field), so that (HD) becomes derived rather than adopted; the Dirac spin product is ruled out as the selector for massless fields."
     - "Dirac propagation into the horizon results: with the Dirac propagation now imported, carry the propagated deposit to the generators of the collapse result's ingoing sheet through its s-wave reduction, and state a massive reference on a collar of a radiation origin (where M = ma vanishes linearly in conformal time and is smooth)."
     - "The Kasner branch: decide whether a state carried by (P2) across a Weyl-curved Kasner wall can be Hadamard on a collar after the descent, and what reference vacuum it is measured against there."
     - "The ground-state clause of (N+): no Hadamard condition gives it, and on Robertson-Walker generators the conformal vacuum meets it only on de Sitter and flat fields; find the global datum (such as stationarity at the edge) that the deposit would have to carry; on generators each of whose points is the edge of a Killing wedge the clause is equivalent to geometric modular action, which a modular-covariance premise would supply, while the eternal hole is not reached that way."
+    - >-
+      The Riemannian far side of the radical-normal wall
+      (\claimref{synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state}),
+      continued through the wall's smooth coordinate $t$ ($\tau = 2\sqrt t$): a mode analytic in $t$
+      continues with its even part to $\cosh k\tau_E$ and its odd part to $\pm B\sinh k\tau_E$, $B$ the
+      unit bivector of the mode's phase plane and the sign the branch of $\sqrt t$ (computed for the
+      massless mode to order twelve), so requiring boundedness on the far side selects the conformal
+      vacuum for one branch and the filled sea for the other. Decide the Dirac case (weight $t^{-3/4}$);
+      kill condition: the bounded far-side Euclidean Dirac solutions, continued, are not a positive-energy
+      subspace for either branch. It gives the vacuum, not a temperature.
+    - >-
+      A finite deposit over the attachment's flag vacuum: the tower's floors are conformal-energy cut-offs
+      (\claimref{field-theory.twistor-attachment}), a deposit on finitely many modes of a floor differs
+      from the vacuum by a finite-rank smooth kernel and is Hadamard, as in the bounded-band result
+      (\claimref{synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands}). It
+      needs a scope decision: whether the finiteness declaration of P2
+      (\claimref{dark-matter.p2-indifference}) applies per window to field modes; that window bound is the
+      ultraviolet end op.descent-state-and-spectrum asks for.
+    - >-
+      A maximum-entropy or KMS deposit for the collar's conformal-time flow, as the quasi-free clause of
+      (Q) is maximum entropy at fixed marginals
+      (\claimref{synthesis.q-splits-maximum-entropy-affine-weights}): any finite set of moment constraints
+      with a positive leading power gives an exponential tail and every moment finite, but the principle
+      needs a new collar premise naming the flow, since the wall's own pair boost is gauge.
   success: >-
     A derivation of (HD) from the series' structure, that is, a selection of
     the deposit's occupation profile over an admissible reference vacuum on a
@@ -1993,6 +2044,33 @@
     the series does not fix and (N$_{+}$) assumes. For scalar $\kappa$ the
     Fermi seas are ground states on the gauge-invariant observables, so
     the clause must stay posed on the field algebra.
+
+    (7 November; argued, from a survey of the store.) On every field that the Hadamard deposit premise
+    (\claimref{synthesis.hadamard-deposit-premise}) and the propagation Facts reach, the orientation
+    datum is carried by that premise: field-level geometric modular action of either sign gives the null
+    vacuum or the filled positive-energy sea
+    (\claimref{synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state}); the
+    filled sea differs from the null vacuum by the kernel of the sign of the null momentum, which is not
+    Hilbert-Schmidt on any interval, so it is locally disjoint from the vacuum at every point, while
+    every Hadamard Dirac state has the null vacuum as its generator scaling limit
+    (\claimref{synthesis.hadamard-scaling-limit-premise}). So field-level modular action at dense cuts,
+    of either sign, together with the Hadamard deposit premise gives (N$_{+}$) on those fields; the
+    eternal hole and eternal de Sitter, which no descent reaches, keep the datum. This reduction
+    rests on no postulate: the Hadamard results inherited (N$_{+}$) and seventeen other postulates
+    only through citations of algebraic and analytic clauses, which now stand as their own results
+    (\claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane},
+    \claimref{synthesis.null-vacuum-on-a-horizon-generator},
+    \claimref{synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation},
+    \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}), and
+    \claimref{synthesis.hadamard-scaling-limit-premise} now holds given nothing. With the field
+    theory's unit $I_4$ (\claimref{synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality}): on the modes of each future null momentum $k$,
+    with boost bivector $B$, $L_B = 1$ and $L_J = -L_{I_4}$ for $J = -I_4B$, so every mode's helicity is
+    locked to its frequency sign; every map commuting with the Lorentz rotors is $I_4$-linear; and among
+    the discrete maps of the massless field the frequency sign flips exactly under reversal of spatial
+    orientation. Hestenes' charge conjugation flips the chirality and not the frequency sign, and a CP
+    map flips the frequency sign and not the chirality. So the datum is not the chirality of
+    massless even spinors (identifying that chirality with the doublets' handedness would be a further
+    assumption), and no CP-invariant interaction can fix it.
   attack:
     - >-
       The remaining target (6 November): derive field-level geometric
@@ -2031,6 +2109,18 @@
       The spectrum-condition restatement of
       \claimref{note.singularity.cost-r-dictionary}, which T05 assigns to the
       twistor paper T09, posed at the edge of the continuum mode space.
+    - >-
+      Look for the orientation datum in the descent's flag (\claimref{dark-matter.premise-flag-as-datum}):
+      on the Witt flags adapted to the conformal energy $Z$, the energy sign of a flag's vacuum and the
+      stored family bit flip together on each pair of conjugate flags, so read as the energy sign of the
+      flag's vacuum the datum is the stored flag bit up to the descent's kinematic sign on the four-space
+      orthogonal to $Z$, as \claimref{one-relation.arrow-frequency-are-one-bit-level} states (\claimref{synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit}); what remains is to show that the generators' modes inherit the descent's flag.
+    - >-
+      A module-level image of field-level modular action: the Wick-rotated boost continued to rapidity
+      $\pi$ is the wedge reflection, unitary for the twistor form exactly at the tube points it fixes
+      (\claimref{synthesis.wick-rotated-boost-selects-observer-tube-point}); lifted through the Penrose
+      transform it could replace the imported converse, but it is blind to the sign and reaches Minkowski
+      and de Sitter only.
   success: >-
     A theorem deriving local normality at the edge, or a stationarity-free
     form of (N$_{+}$), from a principle of the series with no thermal input;
@@ -2597,44 +2687,73 @@
   why: The lepton doublet, the common handedness of doublets and singlets, $\mathrm{Spin}(10)$, the values $3/8$ and $3/4$,
     and every result naming a species rest on it; without it the tensor state space contains no lepton, and the families
     and neutrino papers must re-examine what they import.
-  known: 'CPT closure of a slot module tensored with the pair system, with hypercharge from the centre, holds exactly for
-    $F \cong a\Lambda^{0}\C^{2} \oplus b\Lambda^{1}\C^{2} \oplus a\Lambda^{2}\C^{2}$; with one vacuum, anomaly-free halvings
-    need $b$ odd, the extra doublets entering in vectorlike pairs; for a slot module generated from its vacuum by one doublet,
-    CPT closure alone forces the fermionic module with exclusion; and for that module anomaly freedom forces the chirality
-    $\pm(-1)^{n + k}$ except for a free line in the neutral-singlet block (\claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}).
-    On that basis the premise was restated (23 October). The clause fixing the neutral-singlet line, first stated as commuting
-    with $\mathrm{Spin}(10)$, is now stated as "the chirality is the grading of the joint Clifford system" (every slot and
-    pair Majorana generator is odd for it), proved equivalent for a CPT halving; version 3 of the premise (26 October).
-    Its content beyond the other clauses is known exactly (\claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}).
-    On the five-mode module the gauge algebra, the number-conserving bilinears $\mathfrak{u}(5)$ and $\mathfrak{so}(10)$
-    leave commutants of dimensions $14$, $6$ and $2$. The gauge-commuting CPT halvings are $32$ sign patterns times a free
-    pair of lines in the neutral block. Commuting with the total mode number and anomaly freedom cut them to four, differing
-    only in whether the empty or the full five-mode state is the particle half''s neutral singlet; the two are exchanged
-    by a swap that commutes with the gauge algebra, so no gauge quantum number decides between them. The grading clause
-    selects the empty state. So the clause is one bit of premise, not derivable from CPT, anomaly freedom and the generation
-    clause (the vacuum-swapped halving satisfies them all); the first line of attack is answered in the negative and the
-    clause stays a premise. Earlier: anomaly freedom with the tower grading as chirality forces odd slot parity and the
-    slot module $(\Lambda^{\bullet}\C^{2})^{\oplus m}$ (\claimref{synthesis.anomaly-freedom-forces-slot-content}); for two-level
-    slots, slot parity decides (S) (\claimref{synthesis.slot-parity-decides-hypothesis-s}); inside the composite''s own
-    five-rung floor two-level slots are odd, and even slots need a spectator generator (\claimref{synthesis.even-slots-need-a-spectator-generator}),
-    whence the no-spectator premise (\claimref{standard-model.no-spectator-slots}). The negative clause of \claimref{standard-model.quarks-leptons-two-level-fermion-content}(2)
-    shows any derivation of the lepton must change the state space. A module generated from one vacuum by a doublet of creation
-    operators is a Fock module of the algebra core (\claimref{std-algebra.fock-representation}), and its creation and annihilation
-    operators obey the canonical anticommutation relations (\claimref{std-algebra.witt-basis-car}). The intermediate gauge
-    algebras are now decided, as a dichotomy: hypercharge grades $\so(10)$ into the number-conserving $\uu(5)$, pair creation
-    and pair annihilation with three disjoint eigenvalue sets, so a gauge algebra between the Standard Model and $\so(10)$
-    either lies in $\uu(5)$, and then the vacuum-swapped halving commutes with it and the bit is free, or contains a pair-creation
-    bilinear and its adjoint, and then that pair with the anomaly-fixed charged chirality forces $\pm(-1)^{N}$, with no
-    use of number conservation. The Pati-Salam, left-right, $\su(4) \oplus \su(2)_{L} \oplus \uu(1)$ and flipped $\uu(5)$
-    stages decide the bit; the Georgi-Glashow $\uu(5)$, and the Standard Model algebra with $B - L$ or the total mode number
-    adjoined, do not (\claimref{synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5}). On that basis the clause
-    was restated (Leon, 31 October; version 4 of the premise) as "the chirality commutes with the Pati-Salam algebra of
-    the chain", equivalent to the grading form for an anomaly-free halving; anomaly freedom is now used to exclude the pair-parity
-    halving $\pm(-1)^{k}$, which also commutes with the Pati-Salam algebra and is anomalous. Since the chain is itself derived
-    under (S), this exchanges the bare choice of the empty state for a requirement on the chain''s intermediate stage; it
-    is not a derivation. Other structure is blind to the bit: under the swapped halving the odd-grade Yukawa forms give
-    the neutral singlet no Dirac coupling to the lepton doublet, the Clifford CPT antiunitary treats both halvings alike
-    (same result), and the light-ray array count is sixteen per generation for every CPT halving (\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}).'
+  known: >-
+    CPT closure of a slot module tensored with the pair system, with hypercharge from the centre, holds
+    exactly for $F \cong a\Lambda^{0}\C^{2} \oplus b\Lambda^{1}\C^{2} \oplus a\Lambda^{2}\C^{2}$; with
+    one vacuum, anomaly-free halvings need $b$ odd, the extra doublets entering in vectorlike pairs; for
+    a slot module generated from its vacuum by one doublet, CPT closure alone forces the fermionic
+    module with exclusion; and for that module anomaly freedom forces the chirality $\pm(-1)^{n + k}$
+    except for a free line in the neutral-singlet block
+    (\claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}). On that basis the premise was
+    restated (23 October). The clause fixing the neutral-singlet line, first stated as commuting with
+    $\mathrm{Spin}(10)$, is now stated as "the chirality is the grading of the joint Clifford system"
+    (every slot and pair Majorana generator is odd for it), proved equivalent for a CPT halving; version
+    3 of the premise (26 October). Its content beyond the other clauses is known exactly
+    (\claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}). On the five-mode module
+    the gauge algebra, the number-conserving bilinears $\mathfrak{u}(5)$ and $\mathfrak{so}(10)$ leave
+    commutants of dimensions $14$, $6$ and $2$. The gauge-commuting CPT halvings are $32$ sign patterns
+    times a free pair of lines in the neutral block. Commuting with the total mode number and anomaly
+    freedom cut them to four, differing only in whether the empty or the full five-mode state is the
+    particle half's neutral singlet; the two are exchanged by a swap that commutes with the gauge
+    algebra, so no gauge quantum number decides between them. The grading clause selects the empty
+    state. So the clause is one bit of premise, not derivable from CPT, anomaly freedom and the
+    generation clause (the vacuum-swapped halving satisfies them all); the first line of attack is
+    answered in the negative and the clause stays a premise. Earlier: anomaly freedom with the tower
+    grading as chirality forces odd slot parity and the slot module $(\Lambda^{\bullet}\C^{2})^{\oplus
+    m}$ (\claimref{synthesis.anomaly-freedom-forces-slot-content}); for two-level slots, slot parity
+    decides (S) (\claimref{synthesis.slot-parity-decides-hypothesis-s}); inside the composite's own
+    five-rung floor two-level slots are odd, and even slots need a spectator generator
+    (\claimref{synthesis.even-slots-need-a-spectator-generator}), whence the no-spectator premise
+    (\claimref{standard-model.no-spectator-slots}). The negative clause of
+    \claimref{standard-model.quarks-leptons-two-level-fermion-content}(2) shows any derivation of the
+    lepton must change the state space. A module generated from one vacuum by a doublet of creation
+    operators is a Fock module of the algebra core (\claimref{std-algebra.fock-representation}), and its
+    creation and annihilation operators obey the canonical anticommutation relations
+    (\claimref{std-algebra.witt-basis-car}). The intermediate gauge algebras are now decided, as a
+    dichotomy: hypercharge grades $\so(10)$ into the number-conserving $\uu(5)$, pair creation and pair
+    annihilation with three disjoint eigenvalue sets, so a gauge algebra between the Standard Model and
+    $\so(10)$ either lies in $\uu(5)$, and then the vacuum-swapped halving commutes with it and the bit
+    is free, or contains a pair-creation bilinear and its adjoint, and then that pair with the
+    anomaly-fixed charged chirality forces $\pm(-1)^{N}$, with no use of number conservation. The
+    Pati-Salam, left-right, $\su(4) \oplus \su(2)_{L} \oplus \uu(1)$ and flipped $\uu(5)$ stages decide
+    the bit; the Georgi-Glashow $\uu(5)$, and the Standard Model algebra with $B - L$ or the total mode
+    number adjoined, do not
+    (\claimref{synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5}). On that basis the
+    clause was restated (Leon, 31 October; version 4 of the premise) as "the chirality commutes with the
+    Pati-Salam algebra of the chain", equivalent to the grading form for an anomaly-free halving;
+    anomaly freedom is now used to exclude the pair-parity halving $\pm(-1)^{k}$, which also commutes
+    with the Pati-Salam algebra and is anomalous. Since the chain is itself derived under (S), this
+    exchanges the bare choice of the empty state for a requirement on the chain's intermediate stage; it
+    is not a derivation. Other structure is blind to the bit: under the swapped halving the odd-grade
+    Yukawa forms give the neutral singlet no Dirac coupling to the lepton doublet, the Clifford CPT
+    antiunitary treats both halvings alike (same result), and the light-ray array count is sixteen per
+    generation for every CPT halving
+    (\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}).
+
+    (7 November; argued and computed, from a survey of the store.) What
+    \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality} leaves open is the neutral-singlet
+    bit, clause (G) (a unique vacuum, one doublet), clause (f) and the clauses (a) and (b). The
+    neutral-singlet bit is invisible to every structure the swap of the two candidate singlets commutes
+    with: CPT, anomaly freedom, (G), the light-ray count and the Clifford CPT antiunitary all fail to
+    decide it, and no structure in the thermality, entropy, descent or wall subjects breaks the swap,
+    since all of them see only number-conserving or count data. Computed: the gauge algebra with the
+    even pair algebra leaves exactly $\pm(-1)^{N}$ among the anomaly-free CPT halvings and excludes the
+    vacuum-swapped one, and the $\mathfrak{su}(4)$ half of Pati-Salam suffices. Since $\mathfrak{su}(4)$
+    and the conformal algebra $\mathfrak{so}(2,4)$ are real forms of one complex algebra
+    (\claimref{standard-model.pair-mixing-not-colour}), the Pati-Salam clause is the conformal
+    invariance of the chirality on the pair factor; what it still needs is the identification of the
+    label copy's parity with the twistor's, which the store's notes call the same missing theorem as (S)
+    and which, with the relative unit sign, would also fix the orientation bit.
   attack:
   - Derive the single doublet of slot creation operators ($b = 1$) from the label copy of the pair space that the hierarchy
     bundle carries.
@@ -2644,6 +2763,18 @@
     the generation clause, the light-ray count and the Clifford CPT antiunitary cannot decide the bit.
   - Resolve the tension that the tower reading at three constituents gives the $32$ of $\mathrm{Spin}(12)$, one generation
     and its conjugate, not three families.
+  - >-
+    Clause (G) as a Fock clause: if the slot module is a Fock module of either statistics over its
+    one-slot space, CPT closure forces one doublet and the exterior algebra of it (for two or more
+    doublets the two-slot space carries weak spin one; a symmetric Fock module is infinite-dimensional),
+    so the statistics and the doublet count become outputs (the unique vacuum is part of the Fock clause) and the clause holds
+    automatically if the slot quanta are tower modes (\claimref{synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet}).
+  - >-
+    Clause (f) as a Klein convention: the Klein-twisted slot operators obey the same relations as the
+    slot operators, the Pati-Salam generators and the grading are the same operators in both
+    conventions, and the twist is unique up to a central phase, so on the composite's module the joint Clifford
+    system exists canonically (\claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space};
+    \claimref{synthesis.even-slots-need-a-spectator-generator} already uses the twist).
   success: A theorem deriving (S) or its weaker form from stated structure, or one of the five outcomes adopted and recorded
     in the tier declaration with its consequences carried to T13 and T15.
   entities:

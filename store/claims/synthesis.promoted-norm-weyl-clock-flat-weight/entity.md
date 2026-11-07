@@ -26,7 +26,7 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - dark-energy.imported-henneaux-teitelboim-promotion@5
   - dark-energy.under-action-written-norm-parameter-laws@4
-  - synthesis.de-sitter-entropy-pi-n-squared@5
+  - synthesis.de-sitter-entropy-pi-n-squared@6
   - dark-energy.frozen-point-datum-kasner-wall@7
   - synthesis.imported-chern-gauss-bonnet@3
   proof: proof-main.tex

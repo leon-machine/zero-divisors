@@ -1,7 +1,7 @@
 ---
 id: families.skeleton-rank-one-plus-ordering-shift
 kind: claim
-version: 5
+version: 6
 title: 'The skeleton: rank one plus the ordering shift, and the unbreakable $S_{2}$'
 status: proved
 region: families
@@ -17,12 +17,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T13, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
   uses:
   - families.imported-squeezed-vacuum-bosonic-pairing@3
-  - families.rigidity-pairing-sector-one-event@3
+  - families.rigidity-pairing-sector-one-event@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -41,6 +45,10 @@ locators:
   label: thm:skeleton
   line: 801
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The channel phases e^{i chi} in {1, zeta, zeta^2} became e^{I_4 chi}, numbers read in span{1, I_4} as stated in the proof; no bare i remains. By Leon''s ruling R3 the face-space reading is stated once in R3''s words: numbers and the module''s complex structure in span{1, I_4}, the module read on the tower''s floors (notational).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

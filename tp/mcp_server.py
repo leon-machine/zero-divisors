@@ -638,10 +638,10 @@ class Lab:
             if check_py:
                 open(os.path.join(folder, "check.py"), "w").write(check_py)
             # the language is geometric algebra: a draft that leaves it says why (E609)
-            from .galang import scan, declared
+            from .galang import unexcused
             from .model import load_entity as _le
             _draft = _le(folder)
-            _hits = [] if declared(_draft) else scan(_draft)
+            _hits = unexcused(_draft)
             if _hits:
                 credit_findings.append({"code": "E609", "severity": "error", "entity": eid,
                                         "message": f"written outside geometric algebra ({', '.join(_hits)}) without saying why",

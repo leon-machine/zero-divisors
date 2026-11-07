@@ -1,7 +1,7 @@
 ---
 id: synthesis.eviction-keeps-one-of-catalan-many-replica-saddles
 kind: claim
-version: 2
+version: 3
 title: 'Eviction keeps one of Catalan-many replica saddles'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -46,6 +50,14 @@ lineage:
   - note.singularity.island-dictionary-one-dissonance
   - synthesis.eviction-keeps-one-replica-saddle
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U1) the abstract Hilbert spaces C^d (x) C^d and C^D of the Haar computation have their numbers read in span{1, I_4}, stated once in clause (iii); the entity wrote no bare i (the detector''s hits were the product index of the Haar denominator, renamed l); the outside_ga declaration, whose reason was that Hilbert-space structure, is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the C^d of the Haar-random states is an abstract Hilbert space, not built from GA modes; the i in prod_{i<n}(d^2 + i) is an index; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -66,7 +78,7 @@ Work at zero weight under the hypotheses of \claimref{singularity.eviction-windo
 \begin{enumerate}
 \item[(i)] (eviction) the radiation spectrum is flat of rank $2^{\min(j,c)}$, so $\operatorname{tr}\rho_{R}^{n} = 2^{-(n-1)\min(j,c)} = \max\bigl(2^{-(n-1)j},\, 2^{-(n-1)c}\bigr)$: the larger of the two extremal replica terms (identity and cyclic), as in clause (ii) of \claimref{synthesis.eviction-keeps-one-replica-saddle} at $n = 2$;
 \item[(ii)] (planar saddles) $\#(\sigma) + \#(\sigma^{-1}\eta) \leq n + 1$ for every $\sigma \in S_{n}$, with equality for exactly $C_{n} = \binom{2n}{n}/(n+1)$ permutations (the non-crossing ones); at the crossing $j = c = m$, $d = 2^{m}$, each contributes $d^{1-n}$ to the replica sum $\sum_{\sigma} k^{\#(\sigma) - n} d^{\#(\sigma^{-1}\eta) - n}$ at $k = d$, the others are suppressed by powers of $d^{-2}$;
-\item[(iii)] (Haar) for a random pure state on $\C^{d} \otimes \C^{d}$, $\langle \operatorname{tr}\rho^{n} \rangle = \sum_{\sigma} d^{\#(\sigma^{-1}\eta) + \#(\sigma)} / \prod_{i=0}^{n-1}(d^{2} + i)$, which at $n = 2$ is the stored Haar purity, lies strictly between $d^{1-n}$ and $C_{n}d^{1-n}$, and satisfies $d^{n-1}\langle \operatorname{tr}\rho^{n}\rangle \to C_{n}$;
+\item[(iii)] (Haar) for a random pure state on $\C^{d} \otimes \C^{d}$ (an abstract Hilbert space, its numbers read in $\mathrm{span}\{1, I_4\}$, conventions, the unit principle, U1), $\langle \operatorname{tr}\rho^{n} \rangle = \sum_{\sigma} d^{\#(\sigma^{-1}\eta) + \#(\sigma)} / \prod_{l=0}^{n-1}(d^{2} + l)$, which at $n = 2$ is the stored Haar purity, lies strictly between $d^{1-n}$ and $C_{n}d^{1-n}$, and satisfies $d^{n-1}\langle \operatorname{tr}\rho^{n}\rangle \to C_{n}$;
 \item[(iv)] (the gap) hence at the crossing, to leading order in $d$, the eviction Renyi entropy exceeds the planar replica (and Haar) one by
 \[
 \Delta S_{n} = \frac{\ln C_{n}}{n - 1}, \qquad \Delta S_{2} = \ln 2,\quad \Delta S_{3} = \tfrac12 \ln 5,\quad \Delta S_{n} \uparrow \ln 4,

@@ -1,7 +1,7 @@
 ---
 id: synthesis.point-spectrum-boost-admits-no-half-sided-translations
 kind: claim
-version: 3
+version: 4
 title: 'A point-spectrum boost admits no half-sided translations'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -25,8 +29,8 @@ derivations:
   uses:
   - hawking.imported-algebra-boundary-modes-car-algebra@5
   - hawking.modular-structure-completed-pair@3
-  - angle.imported-theorems-deliver-their-hypotheses@1
-  - singularity.modular-theory-matrix-factor-proved-outright@4
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - singularity.modular-theory-matrix-factor-proved-outright@6
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -40,6 +44,14 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The boundary-mode algebra and its GNS spaces have their numbers read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (U2; synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level), the source unit i read as J: the boost dynamics e^{-J omega_j t}, Ad(e^{JtK}) on the windows, [K, P] = JcP with P = X + JY in the proof, the modular unitaries Delta^{Js}, rho^{Js} and the periodicity phases e^{-2 pi J k}, e^{-J pi(2k+1)} are written with J, and the Borchers relation of the imported Fact angle.imported-theorems-deliver-their-hypotheses is read in the GNS space with that unit. The Definitions mode-set letter J is named once as such. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the boundary-mode algebra''s phase flow e^{-i omega_j t}, Ad(e^{itK}) on the windows, [K, P] = icP, the GNS unitaries and the modular group Delta^{is} keep i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2). Declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -62,11 +74,11 @@ extraction:
 ---
 
 ## formal
-Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set $J$ (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-i\omega_{j}t}a_{j}$ with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa k$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
+Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set (the set called $J$ in the Definition; below, $J$ is the unit) (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), its numbers read in $\mathrm{span}\{1, J\}$ with $J = e_{2}e_{3}$ the complex unit of the boundary modes' radial atom (Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode; it is also the unit of every GNS space below, and the imported theorem of (iii) is read with it, with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-J\omega_{j}t}a_{j}$ with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa k$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
 \begin{enumerate}
-\item[(i)] every window is $\tau$-invariant and every element of $\bigcup_{F}\mathfrak{A}_{F}$ has a relatively compact $\tau$-orbit; on a window no nonzero $P$ satisfies $[K, P] = icP$ with $c$ real and nonzero, $K = \sum_{j \in F}\omega_{j}N_{j}$;
+\item[(i)] every window is $\tau$-invariant and every element of $\bigcup_{F}\mathfrak{A}_{F}$ has a relatively compact $\tau$-orbit; on a window no nonzero $P$ satisfies $[K, P] = JcP$ with $c$ real and nonzero, $K = \sum_{j \in F}\omega_{j}N_{j}$;
 \item[(ii)] if $(\gamma_{a})_{a \in \R}$ is a one-parameter group of $*$-automorphisms of $\mathfrak{A}$, strongly continuous ($a \mapsto \gamma_{a}(x)$ norm continuous for each $x$), with $\tau_{t}\circ\gamma_{a}\circ\tau_{-t} = \gamma_{e^{ct}a}$ for all $t, a$ and some real $c \neq 0$, then $\gamma_{a} = \id$ for every $a$;
-\item[(iii)] let $\omega$ be a $\tau$-invariant state with GNS triple $(\mathcal{H}, \pi, \Omega)$ and $V_{t}$ the unitary group with $V_{t}\pi(x)\Omega = \pi(\tau_{t}(x))\Omega$. If $(U(a))_{a \in \R}$ is a strongly continuous unitary group on $\mathcal{H}$ with $V_{t}U(a)V_{-t} = U(e^{ct}a)$ for all $t, a$ and some real $c \neq 0$, then $U(a) = 1$ for every $a$. In particular, if the modular unitaries of $(\pi(\mathfrak{A})'', \Omega)$ act through the boost, $\Delta^{is} = V_{-\beta s}$ for some $\beta \neq 0$, as they do when $\omega$ is a faithful $(\tau, \beta)$-KMS state, then every unitary group satisfying the hypotheses of the abstract theorem of Fact \claimref{angle.imported-theorems-deliver-their-hypotheses} (positive generator, $U(a)\Omega = \Omega$, half-sided inclusion) is trivial, since by that theorem it satisfies $\Delta^{is}U(a)\Delta^{-is} = U(e^{-2\pi s}a)$, which is the hypothesis of (iii) with $c = 2\pi/\beta$;
+\item[(iii)] let $\omega$ be a $\tau$-invariant state with GNS triple $(\mathcal{H}, \pi, \Omega)$ and $V_{t}$ the unitary group with $V_{t}\pi(x)\Omega = \pi(\tau_{t}(x))\Omega$. If $(U(a))_{a \in \R}$ is a strongly continuous unitary group on $\mathcal{H}$ with $V_{t}U(a)V_{-t} = U(e^{ct}a)$ for all $t, a$ and some real $c \neq 0$, then $U(a) = 1$ for every $a$. In particular, if the modular unitaries of $(\pi(\mathfrak{A})'', \Omega)$ act through the boost, $\Delta^{Js} = V_{-\beta s}$ for some $\beta \neq 0$, as they do when $\omega$ is a faithful $(\tau, \beta)$-KMS state, then every unitary group satisfying the hypotheses of the abstract theorem of Fact \claimref{angle.imported-theorems-deliver-their-hypotheses} (positive generator, $U(a)\Omega = \Omega$, half-sided inclusion) is trivial, since by that theorem it satisfies $\Delta^{Js}U(a)\Delta^{-Js} = U(e^{-2\pi s}a)$, which is the hypothesis of (iii) with $c = 2\pi/\beta$;
 \item[(iv)] for the weights $\kappa k$ the flow is periodic, $\tau_{2\pi/\kappa} = \id$, so (i) to (iii) hold with every orbit periodic; for weights in $\kappa(\Z + \tfrac12)$, $\tau_{2\pi/\kappa}$ is the parity automorphism.
 \end{enumerate}
 Consequently the mechanism by which the Bisognano-Wichmann and Borchers theorems produce the factor $2\pi$ cannot be realised on the windows, on the countable mode space, or on the array of (Q): a principle deriving (R) along that route must be posed on a one-particle space on which the boost has no eigenvectors spanning the relevant vectors, such as the continuum mode space of Definition \claimref{obj.hawking.continuum-mode-space} with a Hamiltonian of continuous spectrum. This result does not show that the route succeeds there.

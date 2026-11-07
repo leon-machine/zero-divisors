@@ -1,7 +1,7 @@
 ---
 id: synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
 kind: claim
-version: 1
+version: 2
 title: 'The Taub-NUT Cauchy horizon as a Taub point with complex residue'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -43,6 +47,10 @@ lineage:
   motivated_by:
   - synthesis.bkl-bounce-invariant-holonomy-and-bound
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F: the complex mass m + il (formal, technical, one-liner) is written m + Il with the entity''s pseudoscalar I = e0e1e2e3 = I_4, the unit of the duality component it already uses (kappa I B_3), numbers read in span{1, I}; no bare i remains.'
   open_problem: op.generic-weighted-limit
   note: >-
     The new content is the limit at a non-flat Taub point. The Taub region of Taub-NUT is a vacuum Bianchi IX
@@ -80,16 +88,16 @@ Let $\sigma_{1}, \sigma_{2}, \sigma_{3}$ be the left-invariant one-forms of $SU(
 \[
 \widehat\Omega_{\tau}(e_{1}),\ \widehat\Omega_{\tau}(e_{2}) \to 0, \qquad \widehat\Omega_{\tau}(e_{3}) \to -B_{3} + \kappa\,e_{1}e_{2} = -(1 - \kappa I)B_{3}, \qquad \kappa = \frac{t_{+}}{l} = \cot\frac{\varphi}{2},
 \]
-with $\varphi = \arg(m + il) \in (0, \pi)$. The limit values generate the one-dimensional Lie algebra $\R(1 - \kappa I)B_{3}$, and the error relative to the Taub Kasner model $-B_{3}\otimes\hat\theta^{3}$ tends to $\kappa IB_{3}\otimes\hat\theta^{3} \neq 0$.
+with $\varphi = \arg(m + Il) \in (0, \pi)$. The limit values generate the one-dimensional Lie algebra $\R(1 - \kappa I)B_{3}$, and the error relative to the Taub Kasner model $-B_{3}\otimes\hat\theta^{3}$ tends to $\kappa IB_{3}\otimes\hat\theta^{3} \neq 0$.
 \item[(iv)] \emph{(Consequence.)} The approach never returns close to a Kasner model with $1 \le u \le 2$, and the conclusion of clause (iii) of \claimref{synthesis.bkl-bounce-invariant-holonomy-and-bound} (accumulation values generating $\Lambda^{2}W$) fails for it: the return hypothesis cannot be dropped, as the flat Kasner field $(1, 0, 0)$ of \claimref{synthesis.bkl-bounces-no-framewise-invariant}(ii) already shows; Taub-NUT is a non-flat witness. Its one-dimensional algebra is the Taub point's $\R B_{3}$ rotated by the duality factor $1 - \kappa I$, which is absent for the flat Kasner field ($\kappa I B_{3}$ is the slices' rotation term).
 \end{enumerate}
 The sign of $\kappa$ against $I$ depends on the orientation of $\sigma$ relative to the frame and on the sign of $l$; its magnitude does not. The locus $t = t_{+}$ is the Cauchy horizon of Taub-NUT (Misner 1963, cited from memory, not proved here and not used in (i) to (iv)).
 
 ## technical
-Taub-NUT's Taub region is an exact vacuum solution with the symmetry of the three-sphere and two equal scale factors. In the synchronous gauge of its homogeneous slices the approach to $t = t_{+}$ shrinks one direction linearly while the other two stay finite, so its Kasner weights tend to the Taub point of the Kasner circle. The normalised connection converges there, but not to the flat Kasner value: on the shrinking axis it is the boost along that axis plus a rotation in the plane of the other two, a complex boost $-(1 - \kappa I)B_{3}$, because the slices' connection on that axis is of the same order as the expansion. The coefficient $\kappa$ is the cotangent of half the argument of the complex mass $m + il$, so the NUT parameter appears in the limit as a duality component. One element generates a one-dimensional algebra, not $\Lambda^{2}W$; this is a second, non-flat witness, after the flat Kasner field, that the bounce-invariant holonomy result needs its return hypothesis. The locus reached is the Cauchy horizon of Taub-NUT, beyond which the field continues (cited from the literature, not proved here).
+Taub-NUT's Taub region is an exact vacuum solution with the symmetry of the three-sphere and two equal scale factors. In the synchronous gauge of its homogeneous slices the approach to $t = t_{+}$ shrinks one direction linearly while the other two stay finite, so its Kasner weights tend to the Taub point of the Kasner circle. The normalised connection converges there, but not to the flat Kasner value: on the shrinking axis it is the boost along that axis plus a rotation in the plane of the other two, a complex boost $-(1 - \kappa I)B_{3}$, because the slices' connection on that axis is of the same order as the expansion. The coefficient $\kappa$ is the cotangent of half the argument of the complex mass $m + Il$ (numbers are read in $\mathrm{span}\{1, I\}$, $I = e_{0}e_{1}e_{2}e_{3}$), so the NUT parameter appears in the limit as a duality component. One element generates a one-dimensional algebra, not $\Lambda^{2}W$; this is a second, non-flat witness, after the flat Kasner field, that the bounce-invariant holonomy result needs its return hypothesis. The locus reached is the Cauchy horizon of Taub-NUT, beyond which the field continues (cited from the literature, not proved here).
 
 ## lay
 Near the special direction-pattern where only one direction collapses, the simplest model is empty flat space seen from a moving family of observers. This result looks at a genuinely curved solution, Taub-NUT, that reaches the same pattern. Its rescaled gravitational field settles to a boost combined with a twist, where the flat model has no twist, and the size of the twist is set by the solution's two charges, its mass and its NUT parameter. The field there produces only a single transformation, not every Lorentz transformation. In the literature the place reached is a horizon beyond which spacetime continues, not a true singularity.
 
 ## one-liner
-On the Taub region of Taub-NUT, a vacuum field in synchronous gauge, the Hubble-normalised rotation-gauge field converges at $t = t_{+}$ to the Taub point with values $(0, 0, -(1 - \kappa I)B_{3})$, $\kappa = t_{+}/l = \cot(\varphi/2)$, $\varphi = \arg(m + il)$, not to the Taub Kasner model, and generates a one-dimensional algebra; the Taub point there is a Cauchy horizon (Misner 1963, cited from memory).
+On the Taub region of Taub-NUT, a vacuum field in synchronous gauge, the Hubble-normalised rotation-gauge field converges at $t = t_{+}$ to the Taub point with values $(0, 0, -(1 - \kappa I)B_{3})$, $\kappa = t_{+}/l = \cot(\varphi/2)$, $\varphi = \arg(m + Il)$, not to the Taub Kasner model, and generates a one-dimensional algebra; the Taub point there is a Cauchy horizon (Misner 1963, cited from memory).

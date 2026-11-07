@@ -1,7 +1,7 @@
 ---
 id: synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
 kind: claim
-version: 2
+version: 4
 title: 'Locality fixes the statistics of the attached free fields'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -28,7 +36,7 @@ derivations:
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.no-canonical-commutation-relations-tower@3
   - field-theory.how-close-tower-comes-ccr@4
-  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1
+  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -45,6 +53,14 @@ lineage:
   - field-theory.twistor-attachment
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The i0 prescription of the imported two-point function in the proof is written in scalar form with the field theory''s unit I_4, which the entity already uses for D_+ = int d mu e^{-I_4 k.xi} (U1; one unit per entity): -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)), as the Fact now states it. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The plane-wave phases of the free fields and of the two-point function, the momentum substitution P(I_4 d) and the overall factor -I_4^d/(4 pi^2) now use the field theory''s unit I_4 (numbers read in span{1, I_4}); the i0 of the imported boundary value -1/(4 pi^2 (Q(xi) - i0 xi_0)) stays, a boundary-value prescription quoted from the Fact.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -72,7 +88,7 @@ extraction:
 Let $f(\xi) = 1/Q(\xi)$, and take the massless two-point function $D_{+}$, which on the open spacelike set equals $-f/(4\pi^{2})$ and is even under $\xi \to -\xi$ (standard; Fact \claimref{synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem}(i)). For an attached free field with particle and antiparticle parts carrying a polarisation sum $P$, a polynomial in $k$ homogeneous of degree $d$, with weights $1$ and $c \neq 0$ ($c > 0$ when the field's Fock space has a positive norm), and with bracket sign $\eta = +1$ (CAR, anticommutator) or $-1$ (CCR, commutator):
 \begin{enumerate}
 \item The stored fields' sums are $P = 1$ (scalar, $d = 0$), $P(k) = k\gamma_{0} = 2k_{0}\Lambda(k)$ with $\Lambda$ the projector of Proposition \claimref{field-theory.second-quantisation} ($d = 1$), and for the Riemann-Silberstein photon of Proposition \claimref{field-theory.fock-space-maxwell-modes}, on bivectors $A$, $B$, $P(k)[A, B] = \sum_{\epsilon}\langle A(k \wedge \epsilon)\rangle_{0}\langle B(k \wedge \epsilon)\rangle_{0}$ over transverse $\epsilon$, which on the null cone equals the quadratic $-\langle A(k \wedge \gamma_{0})\rangle_{0}\langle B(k \wedge \gamma_{0})\rangle_{0} + \sum_{i}\langle A(k \wedge \gamma_{i})\rangle_{0}\langle B(k \wedge \gamma_{i})\rangle_{0}$ ($d = 2$). So $d = 2s$ and $P(-k) = (-1)^{2s}P(k)$.
-\item At spacelike $\xi$ the bracket equals $-\tfrac{i^{d}}{4\pi^{2}}\bigl(1 + \eta c(-1)^{d}\bigr)P(\partial)f(\xi)$, and $P(\partial)f$ is nonzero there for each of the three sums ($-2\xi\gamma_{0}/Q(\xi)^{2}$ for the spinor). Hence, with positive norm ($c > 0$), the field is local exactly when $c = 1$ and $\eta = -(-1)^{2s}$; with an indefinite (Krein) form and $c = -1$ it is local exactly when $\eta = (-1)^{2s}$, so an anticommuting scalar is then local (the Faddeev-Popov ghost case).
+\item At spacelike $\xi$ the bracket equals $-\tfrac{I_{4}^{d}}{4\pi^{2}}\bigl(1 + \eta c(-1)^{d}\bigr)P(\partial)f(\xi)$, and $P(\partial)f$ is nonzero there for each of the three sums ($-2\xi\gamma_{0}/Q(\xi)^{2}$ for the spinor). Hence, with positive norm ($c > 0$), the field is local exactly when $c = 1$ and $\eta = -(-1)^{2s}$; with an indefinite (Krein) form and $c = -1$ it is local exactly when $\eta = (-1)^{2s}$, so an anticommuting scalar is then local (the Faddeev-Popov ghost case).
 \item The tower plane ($Q(v) = Q(w) = 0$, $\{v, w\} = 1$, Fact \claimref{field-theory.imported-tower-limit}) has $\eta = +1$; the palatial pair on polynomials has $\eta = -1$. So, with positive norm, a CAR (tower) lift is local only for the spinor and a CCR (palatial) lift only for the scalar and the photon; with Proposition \claimref{field-theory.no-canonical-commutation-relations-tower}, an elementary local scalar of positive norm, such as a quantised rung field, is palatial.
 \end{enumerate}
 

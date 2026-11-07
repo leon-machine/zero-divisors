@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
 kind: claim
-version: 2
+version: 3
 title: 'Scalars coupled to the hidden scale stay blue on a Kasner approach'
 status: proved
 region: synthesis
@@ -17,19 +17,23 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@2
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
   - interior.kasner-form-interior@5
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - dark-tower-matter.five-dimensional-content@5
   - dark-tower-matter.five-dimensional-towers@4
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@1
+  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
   - synthesis.imported-kaluza-klein-ansatz@1
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1
   proof: proof-main.tex
@@ -53,6 +57,10 @@ lineage:
   - standard-model.dating-descent
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R4 (scalar mode functions and Hankel Wronskians are written with the field theory''s unit, one reading with synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching and the other scalar-mode entities): the modes e^{I_4 k x^i}, the canonical normalisation tau^alpha(phi phi-dot* - phi* phi-dot) = I_4, the Hankel Wronskian -4 I_4/(pi s) and the product -4 I_4 q |N|^2/pi are written with I_4 (proof), numbers read in span{1, I_4}, exact since that span is the complex numbers; no bare i remains, so the declaration is removed.'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes the scalar part of what the stored Kasner result lists as not covered: fields coupled to the

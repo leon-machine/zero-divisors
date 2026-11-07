@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - correspondence.chevalley-pairing@4
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.fock-model-complexified-ascended-algebra@9
   - correspondence.imported-forced-completion-fibre-quadric@6
   - std-algebra.vector-squares@1
   - std-algebra.inverse-of-vector@1

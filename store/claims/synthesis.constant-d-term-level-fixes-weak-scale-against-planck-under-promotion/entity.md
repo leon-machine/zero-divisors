@@ -21,9 +21,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - synthesis.einstein-route-makes-n-initial-data@4
-  - synthesis.smallness-monomials-exact-hierarchy-casimir@2
+  - synthesis.smallness-monomials-exact-hierarchy-casimir@3
   proof: proof-main.tex
 checked_by:
 - kind: check

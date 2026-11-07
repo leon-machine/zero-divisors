@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-isotropy-selects-t-boost
 kind: claim
-version: 1
+version: 2
 title: 'Collar isotropy selects the $t$-boost'
 status: proved
 region: synthesis
@@ -21,14 +21,19 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the frame atom complexified by the central unit I_5 of Cl(2,3)'
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
   uses:
   - singularity.imported-interior-collar-kasner-form@6
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
-  - singularity.kms-uniqueness-factor@4
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
+  - singularity.kms-uniqueness-factor@6
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
+  - std-algebra.complexification-is-the-odd-extension@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -43,12 +48,20 @@ lineage:
   motivated_by:
   - synthesis.collar-kms-extension-three-flows
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the pointwise frame atom is the complexification Cl(1,3)_C, whose unit must commute with every frame vector (the flow acts on odd elements too); it is the central unit I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited and added as a pinned uses edge, since the proof uses I_5 central with square -1), with e a frame generator so that I_5* = -I_5 (computed in the proof). K = (B_b + I_5 B_c)/2 and alpha_t = Ad(e^{I_5 t K}); the formal level says that this unit is not the boundary modes'' J = e_2 e_3, which does not commute with e_2, e_3. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: K = (B_b + iB_c)/2 and Ad(e^{itK}) live in the plain complexification Cl(1,3)_C, whose i must commute with the vectors. Declaration kind set to complex-analysis by Leon''s ruling R1 (atom, boundary-mode and window flows keep i).'
   open_problem: op.collar-kms-extension
   note: Answers the problem's second attack bullet (the SO(3)-invariant states on the sphere holonomies compatible with KMS for B1) positively for B1, on the pointwise frame atom Cl(1,3)_C, a model choice that is neither the completed-pair atom nor an algebra the series constructs for the collar. Invariance under rotations mixing the t-direction with a sphere direction would exclude every faithful KMS state, but those rotations are not symmetries of the collar. It does not decide the extension question, which still rests on hypothesis (C) of the stored three-flows result. Transport-essential in its input (the collar's holonomy boosts and Kasner rates), elementary in its algebra.
 ---
 
 ## formal
-At a point of the collar of Fact \claimref{singularity.imported-interior-collar-kasner-form}, with adapted frame $e_{0}$ (along $\partial_{\tau}$, $Q(e_{0}) = 1$), $e_{1}$ (the $t$-direction) and $e_{2}, e_{3}$ (the sphere directions), let the atom be the frame algebra $\Cl(1,3)_{\C} \cong \Mat_{4}(\C)$ with the frame $*$-structure (a model choice: this pointwise frame atom is not the completed-pair atom of Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal}, on which only $B_{1}$ acts, nor an algebra the series constructs for the collar), the boosts $B_{i} = e_{0}e_{i}$ ($*$-symmetric) and the rotations $R_{jk} = e_{j}e_{k}$ ($*$-antisymmetric), as in Theorem \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}(i). The holonomy boosts of Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal} are $B_{1}$ along the $t$-lines and $B_{2}, B_{3}$ along the sphere. Let $K = \tfrac12(B_{b} + iB_{c})$ with $B_{b}$ a boost bivector and $B_{c}$ a rotation bivector, so $K = K^{*}$ and $\alpha_{t} = \operatorname{Ad}(e^{itK})$ is a flow of $*$-automorphisms.
+At a point of the collar of Fact \claimref{singularity.imported-interior-collar-kasner-form}, with adapted frame $e_{0}$ (along $\partial_{\tau}$, $Q(e_{0}) = 1$), $e_{1}$ (the $t$-direction) and $e_{2}, e_{3}$ (the sphere directions), let the atom be the frame algebra $\Cl(1,3)_{\C} \cong \Mat_{4}(\C)$, realised as $\Cl(2,3) = \Cl(1,3) \oplus \Cl(1,3)I_{5}$ with the central unit $I_{5} = I_{4}e$ of the odd extension ($e$ orthogonal to the frame, $Q(e) = +1$, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}), with the frame $*$-structure ($e$ taken as a frame generator, so $I_{5}^{*} = -I_{5}$) (a model choice: this pointwise frame atom is not the completed-pair atom of Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal}, on which only $B_{1}$ acts, nor an algebra the series constructs for the collar), the boosts $B_{i} = e_{0}e_{i}$ ($*$-symmetric) and the rotations $R_{jk} = e_{j}e_{k}$ ($*$-antisymmetric), as in Theorem \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}(i). The holonomy boosts of Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal} are $B_{1}$ along the $t$-lines and $B_{2}, B_{3}$ along the sphere. Let $K = \tfrac12(B_{b} + I_{5}B_{c})$ with $B_{b}$ a boost bivector and $B_{c}$ a rotation bivector, so $K = K^{*}$ and $\alpha_{t} = \operatorname{Ad}(e^{I_{5}tK})$ is a flow of $*$-automorphisms. The unit here is $I_{5}$, which commutes with every frame vector, not the boundary modes' unit $J = e_{2}e_{3}$, which does not commute with $e_{2}$, $e_{3}$; the two are not identified.
 \begin{enumerate}
 \item[(i)] \emph{(Isotropy.)} The rotations of the $(e_{2}, e_{3})$ plane fix the Kasner rate tensor $\operatorname{diag}(p_{1}, p_{2}, p_{3}) = \operatorname{diag}(-\tfrac13, \tfrac23, \tfrac23)$ and the collar's first-order rates $\operatorname{diag}(-\tfrac13 - \tfrac{4}{15}R, \tfrac23 - \tfrac{2}{15}R, \tfrac23 - \tfrac{2}{15}R)$; no rotation of the $(e_{1}, e_{2})$ plane with nonzero angle mod $\pi$ fixes either.
 \item[(ii)] \emph{(Selection.)} A faithful state on the atom that is $(\alpha, \beta)$-KMS at some $\beta \ne 0$ and invariant under the isotropy rotations $\exp(\theta R_{23}/2)$ exists if and only if $B_{b} \in \R B_{1}$ and $B_{c} \in \R R_{23}$. In particular, among the boost flows ($B_{c} = 0$) only the $t$-boost qualifies: for every $\beta$ its KMS state $e^{-\beta B_{1}/2}/\Tr e^{-\beta B_{1}/2}$ is isotropy-invariant, while the sphere boosts $B_{2}$, $B_{3}$, and every boost with a sphere component, have no isotropy-invariant faithful KMS state at any $\beta \ne 0$.

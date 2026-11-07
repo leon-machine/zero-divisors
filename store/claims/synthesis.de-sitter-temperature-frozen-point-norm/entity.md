@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-temperature-frozen-point-norm
 kind: claim
-version: 5
+version: 7
 title: The cosmological horizon's descent temperature is the frozen point's norm over 2 pi
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the Killing flow written with the central unit of the odd extension'
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.cosmological-horizon-boundary-modes
@@ -27,10 +35,10 @@ derivations:
   - synthesis.de-sitter-static-boost-frozen-point@5
   - singularity.ascended-marginals-are-diagonal@5
   - singularity.descended-form-state-independent@4
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@6
   assumes:
   - singularity.p-univalence@2
-  - synthesis.r-lambda-regularity-cosmological-horizon@4
+  - synthesis.r-lambda-regularity-cosmological-horizon@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -45,6 +53,14 @@ lineage:
   - mass.de-sitter-scale-frozen-point
   - standard-model.what
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3, as in the defining object: the static Killing flow on the cosmological boundary modes and the gluing in the proof are written with hat-I, the central unit of the odd extension of the modes'' Clifford algebra (obj.synthesis.cosmological-horizon-boundary-modes; std-algebra.complexification-is-the-odd-extension, cited as a mention): alpha_t(v) = e^{-hat-I t omega} v, F(t) = e^{-hat-I t omega} n. Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the Killing flow alpha_t(v) = e^{-it omega}v acts on the cosmological boundary modes, defined on the complexification of Cl(|J|,|J|), which contains no I_4.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

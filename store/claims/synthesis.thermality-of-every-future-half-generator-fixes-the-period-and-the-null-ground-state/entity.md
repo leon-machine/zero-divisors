@@ -1,7 +1,7 @@
 ---
 id: synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
 kind: claim
-version: 2
+version: 3
 title: 'Thermal future halves fix the period and the null ground state'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -29,10 +33,10 @@ derivations:
   uses:
   - hawking.i-state-continuum@5
   - hawking.imported-ideal-fermi-gas-uniqueness@2
-  - synthesis.positive-null-energy-gives-r-premises@4
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
+  - synthesis.positive-null-energy-gives-r-premises@7
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -54,6 +58,10 @@ lineage:
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'P = I_4 d/du, the Mellin modes and every two-point kernel are written with I_4; by Leon''s ruling R4 (one unit per entity) the Fourier integral and residue sum of Step 1, (X/Y)^{I_4 w} with poles at w = I_4 pi(2n + 1)/beta, are written with I_4 too and the bridging remark that they were written with i for I_4 is removed, exact since span{1, I_4} is the complex numbers; no bare i remains, so the declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -76,12 +84,12 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On one generator of a horizon, affine parameter $u \in \R$, let $\CAR(L^{2}(\R, du)\otimes K)$ be the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $\mathfrak{A}_{a}$ its subalgebra over $L^{2}((a, \infty))\otimes K$, $\beta^{(a)}_{t}(\psi(u)) = e^{t/2}\psi(a + e^{t}(u - a))$ the boost about $a$, and $\omega_{0}$ the null vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty,0)}(P)\otimes\id_{K}$, $P = i\,d/du$, the state of Premise \claimref{synthesis.n-plus-null-ground-state} (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)).
+Units $\hbar = c = 1$. On one generator of a horizon, affine parameter $u \in \R$, let $\CAR(L^{2}(\R, du)\otimes K)$ be the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $\mathfrak{A}_{a}$ its subalgebra over $L^{2}((a, \infty))\otimes K$, $\beta^{(a)}_{t}(\psi(u)) = e^{t/2}\psi(a + e^{t}(u - a))$ the boost about $a$, and $\omega_{0}$ the null vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty,0)}(P)\otimes\id_{K}$, $P = I_{4}\,d/du$ (the unit of the mode space is $I_{4}$; numbers are read in $\mathrm{span}\{1, I_{4}\}$), the state of Premise \claimref{synthesis.n-plus-null-ground-state} (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)).
 \begin{enumerate}
 \item[(i)] \emph{(Two points fix the period.)} If, for two points $a < b$, the restriction of a state $\omega$ to $\mathfrak{A}_{a}$ is KMS at some $\beta_{a} > 0$ for $\beta^{(a)}$ and its restriction to $\mathfrak{A}_{b}$ is KMS at some $\beta_{b} > 0$ for $\beta^{(b)}$, then $\beta_{a} = \beta_{b} = 2\pi$ and $\omega = \omega_{0}$ on $\mathfrak{A}_{a}$.
 \item[(ii)] \emph{(The ground-state clause.)} If $A \subset \R$ is unbounded below and, for every $a \in A$, the restriction of $\omega$ to $\mathfrak{A}_{a}$ is KMS at some period for $\beta^{(a)}$, then $\omega = \omega_{0}$: $\omega$ is gauge-invariant, quasi-free, invariant under the null translations with positive generator. Conversely $\omega_{0}$ is KMS at $2\pi$ about every point. No stationarity, quasi-freeness, gauge invariance or temperature is assumed. The mirror statement holds for past halves and sets unbounded above.
 \item[(iii)] \emph{(Sharpness.)} One point does not suffice (the half-thermal products of Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}), nor does a set bounded below (states equal to $\omega_{0}$ beyond its infimum and arbitrary before it).
-\item[(iv)] \emph{(The kernel.)} Off the diagonal, with $X = u - a$, $Y = v - a$, $s = \ln(X/Y)$, $d = u - v$: the unique KMS state at $\beta$ about $a$ has $\omega(\psi^{*}(v)\psi(u)) = \frac{i}{2\beta}(XY)^{-1/2}/\sinh(\pi s/\beta) = \frac{i}{\beta d}\sinh(s/2)/\sinh(\pi s/\beta)$, which at fixed $d$ does not depend on the position exactly when $\beta = 2\pi$, where it is $\frac{i}{2\pi d}$.
+\item[(iv)] \emph{(The kernel.)} Off the diagonal, with $X = u - a$, $Y = v - a$, $s = \ln(X/Y)$, $d = u - v$: the unique KMS state at $\beta$ about $a$ has $\omega(\psi^{*}(v)\psi(u)) = \frac{I_{4}}{2\beta}(XY)^{-1/2}/\sinh(\pi s/\beta) = \frac{I_{4}}{\beta d}\sinh(s/2)/\sinh(\pi s/\beta)$, which at fixed $d$ does not depend on the position exactly when $\beta = 2\pi$, where it is $\frac{I_{4}}{2\pi d}$.
 \item[(v)] \emph{(De Sitter, argued.)} If the state of a free field on de Sitter space has geometric modular action for the de Sitter wedges (each wedge algebra's modular group is its Killing boost at rapidity period $2\pi$; \cite{BorchersBuchholz1999}, cited from memory, for the de Sitter-invariant vacua) and each wedge algebra is generated by the modes on the future half of its horizon, then, every point of a horizon generator being the edge of such a wedge, (ii) gives (N$_{+}$) on the cosmological horizon for that field, massive fields included (Theorem \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation} reaches only conformally invariant fields). Here the period $2\pi$ is already part of the hypothesis (geometric modular action is essentially the Bisognano-Wichmann property), so the derived period does no work; the gain over the stored conformal route is the massive case only, and it rests on the assumption, not proved here, that the horizon modes generate the wedge algebras (for massive fields the restriction to the horizon is not automatic). The eternal hole is not reached: only its bifurcation surface carries a Killing boost.
 \end{enumerate}
 Status: (i) to (iv) proved, with exact checks of the affine algebra, the kernel identities, the residue series and the finite counter-model; (v) argued, given two hypotheses not proved here. Standard: the I-state kernel and the forward direction. Transport-absent.

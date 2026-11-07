@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.pair-singlet-mass-form-is-floor-plus-face-density@1
+  - synthesis.pair-singlet-mass-form-is-floor-plus-face-density@2
   - synthesis.koide-channel-phase-target-depends-on-mass-definition@2
   - synthesis.imported-one-loop-qed-pole-mass-relation@1
   proof: proof-main.tex

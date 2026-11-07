@@ -1,7 +1,7 @@
 ---
 id: correspondence.local-twistor-transport-ascended-spinor-connection
 kind: claim
-version: 7
+version: 9
 title: "The conformal spinor connection is Penrose's local twistor transport"
 status: proved
 region: correspondence
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 9
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -24,9 +32,9 @@ derivations:
   - correspondence.chiral-planes-summand-spaces@5
   - correspondence.clifford-side-ordering-shift@3
   - correspondence.imported-stabilisers-flat-model@3
-  - correspondence.imported-tractor-connection-local-twistor-transport@6
+  - correspondence.imported-tractor-connection-local-twistor-transport@7
   - correspondence.spin-representation@6
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.fock-model-complexified-ascended-algebra@9
   - std-algebra.bivector-lie-algebra@1
   proof: proof-main.tex
 - name: standard-route
@@ -52,6 +60,14 @@ locators:
   label: prop:localtwistor
   line: 593
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 8 -> 9. The composite i epsilon (i P omega) quoted from the imported Fact''s two-spinor form: Penrose''s i multiplies local twistor components, which the Levi-equivariant linear identifications carry to the fibre CS of the Fock module, whose scalar unit is I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C by U3 (std-algebra.complexification-is-the-odd-extension, cited as a mention); written I_7 epsilon (I_7 P omega) = -epsilon P omega, with the sentence that his unit acts there as I_7. The Fact itself (correspondence.imported-tractor-connection-local-twistor-transport) is not on this list and is not changed. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): the composite i epsilon (i P omega) in the proof is quoted in the two-spinor notation of the imported Fact (Penrose and Rindler), whose i is a scalar of that formalism; the bundle is the complex Fock module over W_C.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

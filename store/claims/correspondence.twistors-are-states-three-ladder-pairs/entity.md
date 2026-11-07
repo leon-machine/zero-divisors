@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.fock-model-complexified-ascended-algebra@9
   - correspondence.imported-ladder-pairs-fock-modules-over@1
   - correspondence.spin-representation@6
   - std-algebra.vector-squares@1

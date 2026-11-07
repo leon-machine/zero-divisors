@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the Dirac CAR algebra on a gravitational field (Dimock 1982)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -26,6 +30,21 @@ imported_from:
   doi: 10.1090/S0002-9947-1982-0637032-8
   locator: 'Sec. II.A (S = S+ - S-, after Thm. 2.1); Sec. II.B (Prop. 2.2, Thm. 2.3, Prop. 2.4(b)-(d)); Sec. III.A (the inner product on Cauchy data); Sec. III.B and Thm. 3.1 (the anticommutator)'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Restated by U4: the factor -i of Dimock''s normalisation u = -i S p'' gamma u_0 is the Dirac field''s unit, I_4 on the (even) spinor values (U1, as in the Hadamard chain); the text now says that the source''s formula carries a factor -I_4 that the store''s normalisation of S removes, and the source''s form (the formal level as first stored) moves to extraction.source_formal; the source writes i for I_4. Status stays imported. Declaration removed.'
+  source_formal: |-
+    Let $(\hb, \Omega)$ be a gravitational field on four-dimensional flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric is globally hyperbolic, read on several charts where its global structure needs them, and consider the free Dirac field of mass $m_{0} \ge 0$ on it.
+    \begin{enumerate}
+    \item[(a)] \emph{(The field algebra.)} (Dimock) There are field operators $\psi(f)$ satisfying the Dirac equation with a causal anticommutator: $\{\psi(f), \psi(h)^{*}\}$ is the pairing given by the causal propagator of the Dirac operator and vanishes when the supports of $f$ and $h$ are spacelike separated. Formulated through the C$^{*}$-algebras of local observables (the CAR algebras of regions), the construction is free of ambiguity, and the net of these algebras satisfies a generalised form of the Haag-Kastler axioms (isotony, causality, covariance under the isometries of the field). No state is selected.
+    \item[(b)] \emph{(Reproducing formula; Dimock, Prop.~2.4, Sec.~III, Thm.~3.1.)} Let $S_{\pm}$ be the retarded and advanced fundamental solutions of the Dirac operator and $S = S_{+} - S_{-}$ the causal propagator. For a Cauchy surface $\Sigma$ with future unit normal $n$, the inner product of solutions $(\Phi, \Phi')$, the polarisation of the flux $\int_{\Sigma}J_{\Phi}\cdot n\,d\Sigma$ of the conserved current $J_{\Phi} = \Phi e_{0}\tilde\Phi$, does not depend on $\Sigma$; every solution is reproduced from its Cauchy data by $S$, $\Phi(x) = \int_{\Sigma}S(x, x')\,n(x')\,\Phi(x')\,d\Sigma'$ (in the source's normalisation $u = -iSp'\gamma u_{0}$, with $p'$ the adjoint of the restriction to $\Sigma$; the store normalises $S$ so that no factor $-i$ appears); and the anticommutator pairing of (a) is the inner product of the solutions the test spinors define, $\{\psi(f), \psi(h)^{*}\} = (Sf, Sh)$, with $(Sf, \Phi) = \int f^{\dagger}\Phi$ for smooth solutions $\Phi$.
+    \end{enumerate}
+    \emph{Provenance:} \cite{Dimock1982}. \emph{Beyond one flat chart.} Global hyperbolicity and the Cauchy surfaces are global; the algebra of a region is read on one chart.
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the only i is in the source''s normalisation u = -iSp'' gamma u_0, quoted as Dimock states it, beside the store''s normalisation of S, in which no such factor appears. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the results on the field theory on a gravitational field can cite the existence of the
     Dirac field algebra, as distinct from a state on it, instead of citing it from memory. Checked on
@@ -58,7 +77,7 @@ extraction:
 Let $(\hb, \Omega)$ be a gravitational field on four-dimensional flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric is globally hyperbolic, read on several charts where its global structure needs them, and consider the free Dirac field of mass $m_{0} \ge 0$ on it.
 \begin{enumerate}
 \item[(a)] \emph{(The field algebra.)} (Dimock) There are field operators $\psi(f)$ satisfying the Dirac equation with a causal anticommutator: $\{\psi(f), \psi(h)^{*}\}$ is the pairing given by the causal propagator of the Dirac operator and vanishes when the supports of $f$ and $h$ are spacelike separated. Formulated through the C$^{*}$-algebras of local observables (the CAR algebras of regions), the construction is free of ambiguity, and the net of these algebras satisfies a generalised form of the Haag-Kastler axioms (isotony, causality, covariance under the isometries of the field). No state is selected.
-\item[(b)] \emph{(Reproducing formula; Dimock, Prop.~2.4, Sec.~III, Thm.~3.1.)} Let $S_{\pm}$ be the retarded and advanced fundamental solutions of the Dirac operator and $S = S_{+} - S_{-}$ the causal propagator. For a Cauchy surface $\Sigma$ with future unit normal $n$, the inner product of solutions $(\Phi, \Phi')$, the polarisation of the flux $\int_{\Sigma}J_{\Phi}\cdot n\,d\Sigma$ of the conserved current $J_{\Phi} = \Phi e_{0}\tilde\Phi$, does not depend on $\Sigma$; every solution is reproduced from its Cauchy data by $S$, $\Phi(x) = \int_{\Sigma}S(x, x')\,n(x')\,\Phi(x')\,d\Sigma'$ (in the source's normalisation $u = -iSp'\gamma u_{0}$, with $p'$ the adjoint of the restriction to $\Sigma$; the store normalises $S$ so that no factor $-i$ appears); and the anticommutator pairing of (a) is the inner product of the solutions the test spinors define, $\{\psi(f), \psi(h)^{*}\} = (Sf, Sh)$, with $(Sf, \Phi) = \int f^{\dagger}\Phi$ for smooth solutions $\Phi$.
+\item[(b)] \emph{(Reproducing formula; Dimock, Prop.~2.4, Sec.~III, Thm.~3.1.)} Let $S_{\pm}$ be the retarded and advanced fundamental solutions of the Dirac operator and $S = S_{+} - S_{-}$ the causal propagator. For a Cauchy surface $\Sigma$ with future unit normal $n$, the inner product of solutions $(\Phi, \Phi')$, the polarisation of the flux $\int_{\Sigma}J_{\Phi}\cdot n\,d\Sigma$ of the conserved current $J_{\Phi} = \Phi e_{0}\tilde\Phi$, does not depend on $\Sigma$; every solution is reproduced from its Cauchy data by $S$, $\Phi(x) = \int_{\Sigma}S(x, x')\,n(x')\,\Phi(x')\,d\Sigma'$ (in the source's normalisation the formula carries a factor $-I_{4}$, $I_{4}$ the field's unit on the spinor values, with $p'$ the adjoint of the restriction to $\Sigma$; the store normalises $S$ so that no such factor appears); and the anticommutator pairing of (a) is the inner product of the solutions the test spinors define, $\{\psi(f), \psi(h)^{*}\} = (Sf, Sh)$, with $(Sf, \Phi) = \int f^{\dagger}\Phi$ for smooth solutions $\Phi$.
 \end{enumerate}
 \emph{Provenance:} \cite{Dimock1982}. \emph{Beyond one flat chart.} Global hyperbolicity and the Cauchy surfaces are global; the algebra of a region is read on one chart.
 

@@ -1,7 +1,7 @@
 ---
 id: note.pairing.setting-setting-what-imported
 kind: note
-version: 1
+version: 2
 title: Setting, and what is imported
 status: setting
 subject: one-relation
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - pairing.imported-stabiliser-tangent
 locators:
@@ -22,6 +26,15 @@ locators:
   number: Setting
   section: Setting, and what is imported
   line: 170
+extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the null tetrad m, mb = e_2 +- i e_3, the complexification C^4 of the vectors and the Majorana reading e_3 = -i(a_2 + a_2^dagger) are written with I_5 = I_4 e, the central pseudoscalar of the odd extension Cl(2,3), which commutes with every vector (std-algebra.complexification-is-the-odd-extension, cited as a mention). No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the null tetrad m = e_2 + i e_3, of C^4 and of e_3 = -i(a_2 + a_2^dagger) stands next to spacetime vectors (no pseudoscalar commutes with them), so it stays and is declared (version and levels unchanged).'
 ---
 
 ## formal
@@ -31,11 +44,11 @@ This note asks where, in the framework's own data, a pairing generator would hav
 
 Three things are said on this page because the rest depends on them. First, the space. The singularity paper's premise governs the Fock space of its boundary modes, one ladder pair attached to each point of the exceptional set $E$ \cite[Prem.~7.30, Fact~5.9]{ButlerT5}, on which a pairing $v^{*}_{x}v^{*}_{y}$ is cross-point by construction and a single point carries no pairing at all. The fibre of this note is a different space: the pre-ascent Dirac spinor at an exterior point, read as two fermionic modes, the complex capacity two of the laboratory paper \cite[Prop.~3.2(1)]{ButlerT16}. What is found here is found on that fibre, and Section \ref{sec:verdict} says what it does and does not imply for the premise. Second, the risk. The positive claim's kill conditions could not have fired (Section \ref{sec:verdict}); the registration fixed the computation and its conventions in advance, and the note's content is a dictionary between the series' objects and known ones, not a derivation that might have failed. Third, the vocabulary, for a reader of general relativity and geometric algebra who has not read the series: the \emph{ascent} is the adjunction of a hyperbolic plane $(1,1)$ that the transport principle forces where division fails \cite[Thm.~4.13]{ButlerT1}, the \emph{completion} is its result, the \emph{exceptional set} $E$ is the locus where it happens \cite[Thm.~8.12]{ButlerT4}, the \emph{descent} is the one-way map back \cite[Thm.~7.3]{ButlerT5}, the \emph{flag bit} is the orientation choosing which half of a null pair creates \cite[Def.~2.10]{ButlerT14}, and the two-ledger words \emph{transport-essential}, \emph{convenient} and \emph{absent} grade a result by whether the $(1,1)$ increment does irreplaceable work in it, some work, or none \cite{ButlerT17}.
 
-Notation follows the series. $\Cl(1,3)$ has $e_0^2 = 1$ and $e_i^2 = -1$; $\ip{a}{b} = \tfrac12(ab + ba)$ is the scalar product of vectors, extended bilinearly (not sesquilinearly) to $\C^4$; a bivector $B$ acts on vectors by $B\cdot v = \tfrac12[B, v]$, which is the $\so(1,3)$ action. The null tetrad is
+Notation follows the series. $\Cl(1,3)$ has $e_0^2 = 1$ and $e_i^2 = -1$; $\ip{a}{b} = \tfrac12(ab + ba)$ is the scalar product of vectors, extended bilinearly (not sesquilinearly) to $\C^4 = V \oplus I_5V$, the complexification of the vectors $V$ of $\Cl(1,3)$ inside its odd extension $\Cl(2,3)$, whose central pseudoscalar $I_5 = I_4e$ ($e$ the adjoined unit vector, $Q(e) = +1$) is the complex unit and commutes with every vector (Theorem \claimref{std-algebra.complexification-is-the-odd-extension}); a bivector $B$ acts on vectors by $B\cdot v = \tfrac12[B, v]$, which is the $\so(1,3)$ action. The null tetrad is
 \[
-\ell = e_0 + e_1, \qquad n = e_0 - e_1, \qquad m = e_2 + i e_3, \qquad \mb = e_2 - i e_3,
+\ell = e_0 + e_1, \qquad n = e_0 - e_1, \qquad m = e_2 + I_5e_3, \qquad \mb = e_2 - I_5e_3,
 \]
-with $\ip{\ell}{n} = 2$, $\ip{m}{\mb} = -2$ and all other pairings zero. The framework's vacuum at a point is the maximal isotropic subspace $W = \operatorname{span}\{\ell, m\}$ of $\C^4$: $\ell$ is the radial null direction of the descent, the ladder vector of the singularity paper's Step 3 up to the flag bit \cite[Sec.~4, Lem.~4.1]{ButlerT5}, and the sign of $i$ in $m$ is the chirality bit. The Fock module is that of two modes with annihilators $a_1 = c(\ell)/2$, $a_2 = c(m)/2$ and creators $a_1^{\dagger} = c(n)/2$, $a_2^{\dagger} = -c(\mb)/2$, so that $e_0 = a_1 + a_1^{\dagger}$, $e_1 = a_1 - a_1^{\dagger}$, $e_2 = a_2 - a_2^{\dagger}$, $e_3 = -i(a_2 + a_2^{\dagger})$; this is the two-mode reading of the Dirac spinor, the complex capacity two of the laboratory paper.
+with $\ip{\ell}{n} = 2$, $\ip{m}{\mb} = -2$ and all other pairings zero. The framework's vacuum at a point is the maximal isotropic subspace $W = \operatorname{span}\{\ell, m\}$ of $\C^4$: $\ell$ is the radial null direction of the descent, the ladder vector of the singularity paper's Step 3 up to the flag bit \cite[Sec.~4, Lem.~4.1]{ButlerT5}, and the sign of $I_5$ in $m$ is the chirality bit. The Fock module is that of two modes with annihilators $a_1 = c(\ell)/2$, $a_2 = c(m)/2$ and creators $a_1^{\dagger} = c(n)/2$, $a_2^{\dagger} = -c(\mb)/2$, so that $e_0 = a_1 + a_1^{\dagger}$, $e_1 = a_1 - a_1^{\dagger}$, $e_2 = a_2 - a_2^{\dagger}$, $e_3 = -I_5(a_2 + a_2^{\dagger})$, with $I_5$ acting on the module, complexified by it, as its central unit; this is the two-mode reading of the Dirac spinor, the complex capacity two of the laboratory paper.
 
 ## technical
 pending

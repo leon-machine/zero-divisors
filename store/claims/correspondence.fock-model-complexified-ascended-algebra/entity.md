@@ -1,7 +1,7 @@
 ---
 id: correspondence.fock-model-complexified-ascended-algebra
 kind: claim
-version: 7
+version: 9
 title: "The Fock model of the complexified ascended algebra"
 status: proved
 region: correspondence
@@ -17,12 +17,20 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 9
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
   - std-algebra.existence-uniqueness@1
-  - std-algebra.complex-clifford-algebra@1
+  - std-algebra.complex-clifford-algebra@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,6 +51,14 @@ locators:
   label: thm:purespinor
   line: 337
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 8 -> 9. The scalar of V_C and of the complex isotropic vector w_3 = b_3 + i b_4 must commute with the vectors; by U3 it is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C (std-algebra.complexification-is-the-odd-extension, cited as a mention in the formal level and the proof, whose formula (a + I b)^2 = Q(a) - Q(b) + 2<a,b> I gives Q(w_3) = 0): w_3 = b_3 + I_7 b_4, w_3'' = -(b_3 - I_7 b_4)/2, V_C = V + I_7 V, scalars span{1, I_7}. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the Fock model is built over V_C, and its complex isotropic vector w_3 = b_3 + i b_4 needs a scalar that commutes with the vectors, which no pseudoscalar of Cl(2,4) does.'
   maintainer_pass_2026_10_31:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -90,7 +106,7 @@ extraction:
 ---
 
 ## formal
-Let $W \subset V_\C$ be a maximal totally isotropic subspace ($\dim_\C W = 3$) and $W'$ a complementary maximal isotropic subspace, dual to $W$ under the $\C$-bilinear form (such a pair exists, and any two such pairs are conjugate under $O(V_\C)$). On the exterior algebra $\Lambda^\bullet W$ ($\dim_\C = 2^3 = 8$) define
+Here $V_\C = V \oplus I_7V$ is the complexification of $V = \R^{2,4}$ by the central pseudoscalar $I_7 = I_6e$ of the odd extension $\Cl(3,4) = \Cl(2,4)_\C$, whose scalars are $\C = \mathrm{span}\{1, I_7\}$ (\claimref{std-algebra.complexification-is-the-odd-extension}). Let $W \subset V_\C$ be a maximal totally isotropic subspace ($\dim_\C W = 3$) and $W'$ a complementary maximal isotropic subspace, dual to $W$ under the $\C$-bilinear form (such a pair exists, and any two such pairs are conjugate under $O(V_\C)$). On the exterior algebra $\Lambda^\bullet W$ ($\dim_\C = 2^3 = 8$) define
 \[
 c(w) := \sqrt2\; w \wedge (\cdot) \quad (w \in W),
 \qquad

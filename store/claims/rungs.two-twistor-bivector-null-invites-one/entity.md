@@ -25,7 +25,7 @@ derivations:
   - rungs.imported-totality-minimality-completion@6
   - rungs.imported-tower-one-qubit-per-rung@4
   - rungs.mass-bracket-frozen-points-grip-slot@3
-  - rungs.rung-spinor-module-mixings@4
+  - rungs.rung-spinor-module-mixings@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

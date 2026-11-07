@@ -1,7 +1,7 @@
 ---
 id: synthesis.half-integer-weight-array-carries-half-ln2
 kind: claim
-version: 4
+version: 5
 title: 'With half-integer weights the s-wave array carries half of ln 2'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -25,7 +29,7 @@ derivations:
   - synthesis.residue-from-mode-entropy@4
   - state-selection.where-fermi-dirac-comes@5
   - singularity.bosonisation-bridge-s-wave-sector@7
-  - synthesis.imported-theta-function-identities@1
+  - synthesis.imported-theta-function-identities@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -41,6 +45,14 @@ lineage:
   - singularity.q-joint-quasi-freeness-s-wave
   - synthesis.residue-from-mode-entropy
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle two units act, kept distinct and named once in the proof: the array''s Killing flow on its modes uses the boundary modes'' unit J = e_2 e_3 (U2; synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom): e^{-J omega_k t}, e^{-2 pi J(k + delta)}, e^{2 pi J K}; the theta-function computation is complex analysis of scalar functions with numbers in span{1, I_4} (U1): tau = I_4 y/2 pi, q = e^{2 pi I_4 tau}, sqrt(-I_4 tau) and the self-dual point tau = I_4 (also in the technical level); the outside_ga declaration is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the Killing flow e^{-i omega_k t} on the array''s modes, e^{-2 pi i(k + delta)} and the window element e^{2 pi iK} keep i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2); the theta-function computation keeps i as complex analysis of modular forms. Declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -77,7 +89,7 @@ For $\delta = \tfrac12$ the Killing flow at one modular period is the parity aut
 ## technical
 The weights $\omega_k = \kappa k$ of Premise (Q) are one of two evenly spaced, particle-hole symmetric ways to lay out the s-wave fermion array; the other shifts every weight by $\kappa/2$, so that the sea level falls between two modes and no mode has zero weight. The store's reformulation of the calibration residue showed that the first choice, read literally, misses the registered value: one array carries $\ln 2 + \varepsilon$ nats at the Hawking temperature, between $0.7203966$ and $0.7203967$.
 
-For the second choice the array carries exactly $\tfrac12\ln 2$. The array's partition function at the Hawking temperature is the ratio $\vartheta_{3}/\eta$ at the point $\tau = i$, where the time after which the array's flow returns to itself equals the thermal period; that ratio is invariant under the exchange of the two periods, which removes the energy term from the entropy, and the classical theta identities give the ratio $\sqrt{2}$ there. Independently of those identities, rigorous rational bounds place the entropy within $10^{-57}$ of $\tfrac12\ln 2$. Under the entropy-matching hypothesis, two such arrays carry exactly the capacity of one registered boundary mode. The second choice also matches the series' account of why the spectrum is Fermi-Dirac: after one modular period its flow is minus the identity on the fermions, the sign one Euclidean period carries; its weights $\kappa(k + \tfrac12) = 2\pi T_{\mathrm{H}}(k + \tfrac12)$ are the fermionic Matsubara frequencies, while (Q)'s $\kappa k$ are the bosonic ones.
+For the second choice the array carries exactly $\tfrac12\ln 2$. The array's partition function at the Hawking temperature is the ratio $\vartheta_{3}/\eta$ at the point $\tau = I_4$, where the time after which the array's flow returns to itself equals the thermal period; that ratio is invariant under the exchange of the two periods, which removes the energy term from the entropy, and the classical theta identities give the ratio $\sqrt{2}$ there. Independently of those identities, rigorous rational bounds place the entropy within $10^{-57}$ of $\tfrac12\ln 2$. Under the entropy-matching hypothesis, two such arrays carry exactly the capacity of one registered boundary mode. The second choice also matches the series' account of why the spectrum is Fermi-Dirac: after one modular period its flow is minus the identity on the fermions, the sign one Euclidean period carries; its weights $\kappa(k + \tfrac12) = 2\pi T_{\mathrm{H}}(k + \tfrac12)$ are the fermionic Matsubara frequencies, while (Q)'s $\kappa k$ are the bosonic ones.
 
 ## lay
 The series models the quantum modes at a black hole's boundary as an evenly spaced ladder of energies, and one of its assumptions fixes where the ladder sits: with a rung at exactly zero energy. The other natural choice puts zero midway between two rungs. This result computes what that second choice would mean. At the Hawking temperature each ladder then holds exactly half a bit of entropy, a consequence of classical identities of special functions, so two ladders hold one bit, the amount the series assigns to each counted boundary mode; with the series' current choice no whole number of ladders matches. The second choice also fits the series' explanation of why the radiation obeys fermion statistics. It does not settle which choice nature makes or what is being counted.

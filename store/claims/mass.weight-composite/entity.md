@@ -1,7 +1,7 @@
 ---
 id: mass.weight-composite
 kind: claim
-version: 6
+version: 7
 title: The weight of a composite
 status: proved
 region: mass
@@ -19,12 +19,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 7
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
-  - mass.weight-polynomial-two-series@5
+  - mass.exact-join@8
+  - mass.weight-polynomial-two-series@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,6 +47,10 @@ locators:
   label: prop:weight
   line: 806
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -97,12 +105,12 @@ about:
 ## formal
 Let $\Lambda > 0$. Define the \emph{induced weight} of a composite of mass $m$ as the weight of a density with that mass under the dictionary, that is, a solution $w$ of $-w(w+3)H^{2} = m^{2}$. For the composite of two conformal spinors with $m^{2}$ given by \eqref{eq:grip}:
 \begin{equation}
-w = -\frac32 \pm i\nu, \qquad \nu^{2} = \frac{6\,|B_{\Lambda}|^{2}}{\Lambda} + C - \frac94,
+w = -\frac32 \pm I_4\nu, \qquad \nu^{2} = \frac{6\,|B_{\Lambda}|^{2}}{\Lambda} + C - \frac94,
 \end{equation}
-the weight being real exactly when $6|B_{\Lambda}|^{2}/\Lambda + C \le \tfrac94$, and otherwise on the principal series with $\nu = m/H - \tfrac98 H/m + O((H/m)^{3})$. The real part is $-\tfrac32$ for every composite heavier than $3H/2$; the mass lies in the imaginary part, and for $|B_{\Lambda}| \gg H\sqrt{C}$, which is the regime of every known particle when $C$ is of order one, $\mathrm{Im}\,w = \sqrt{2}\,|B_{\Lambda}|/H$ at leading order.
+numbers being read in $\mathrm{span}\{1, I_4\}$, the weight being real exactly when $6|B_{\Lambda}|^{2}/\Lambda + C \le \tfrac94$, and otherwise on the principal series with $\nu = m/H - \tfrac98 H/m + O((H/m)^{3})$. The real part is $-\tfrac32$ for every composite heavier than $3H/2$; the mass lies in the imaginary part, and for $|B_{\Lambda}| \gg H\sqrt{C}$, which is the regime of every known particle when $C$ is of order one, $\mathrm{Im}\,w = \sqrt{2}\,|B_{\Lambda}|/H$ at leading order.
 
 ## technical
-For $\Lambda > 0$ the induced weight of a composite of mass $m$ is a solution $w$ of $-w(w+3)H^{2} = m^{2}$. For a composite of two conformal spinors with mass given by the exact join, $w = -\tfrac32 \pm i\nu$ with $\nu^{2} = 6|B_{\Lambda}|^{2}/\Lambda + C - \tfrac94$. The weight is real exactly when $6|B_{\Lambda}|^{2}/\Lambda + C \le \tfrac94$, and otherwise lies on the principal series with $\nu = m/H - \tfrac98 H/m + O((H/m)^{3})$.
+For $\Lambda > 0$ the induced weight of a composite of mass $m$ is a solution $w$ of $-w(w+3)H^{2} = m^{2}$. For a composite of two conformal spinors with mass given by the exact join, $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu^{2} = 6|B_{\Lambda}|^{2}/\Lambda + C - \tfrac94$. The weight is real exactly when $6|B_{\Lambda}|^{2}/\Lambda + C \le \tfrac94$, and otherwise lies on the principal series with $\nu = m/H - \tfrac98 H/m + O((H/m)^{3})$.
 
 Every composite heavier than $3H/2$ has real part $-\tfrac32$ and carries its mass in the imaginary part; when $|B_{\Lambda}| \gg H\sqrt{C}$, the regime of every known particle when $C$ is of order one, $\mathrm{Im}\,w = \sqrt{2}\,|B_{\Lambda}|/H$ at leading order.
 
@@ -110,4 +118,4 @@ Every composite heavier than $3H/2$ has real part $-\tfrac32$ and carries its ma
 With a positive cosmological constant, each composite particle can be given a weight: the number that would produce its mass under the framework's mass rule. For anything heavier than a tiny threshold set by the expansion of the universe, that weight is complex. Its real part is the same for every such particle, and its imaginary part is essentially the mass measured in cosmological units, an enormous number for every known particle.
 
 ## one-liner
-For $\Lambda > 0$ the induced weight of a composite of two conformal spinors is $w = -\tfrac32 \pm i\nu$ with $\nu^{2} = 6|B_{\Lambda}|^{2}/\Lambda + C - \tfrac94$, so a composite heavier than $3H/2$ carries its mass in $\mathrm{Im}\,w$, which at leading order is $\sqrt{2}\,|B_{\Lambda}|/H$ when $|B_{\Lambda}| \gg H\sqrt{C}$.
+For $\Lambda > 0$ the induced weight of a composite of two conformal spinors is $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu^{2} = 6|B_{\Lambda}|^{2}/\Lambda + C - \tfrac94$, so a composite heavier than $3H/2$ carries its mass in $\mathrm{Im}\,w$, which at leading order is $\sqrt{2}\,|B_{\Lambda}|/H$ when $|B_{\Lambda}| \gg H\sqrt{C}$.

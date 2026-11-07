@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Bochner''s theorem, the moment lemma and Whitney''s even functions'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'S. Bochner, Monotone Funktionen, Stieltjessche Integrale und harmonische Analyse, Math. Ann. 108 (1933), 378--410.'
@@ -27,6 +31,21 @@ imported_from:
 - citation: 'H. Whitney, Differentiable even functions, Duke Math. J. 10 (1943), 159--160.'
   key: Whitney1943
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Restated by U4: Bochner''s Fourier transform f(tau) = int e^{-i nu tau} d mu is complex analysis of a scalar function, so by U1 its unit is I_4: f: R -> span{1, I_4}, e^{-I_4 nu tau} (the users read their numbers in span{1, I_4}); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4; unit_note updated. Status stays imported. Declaration removed.'
+  source_formal: |-
+    \begin{enumerate}
+    \item[(a)] \emph{(Bochner.)} A function $f: \R \to \mathbb{C}$ is of the form $f(\tau) = \int e^{-i\nu\tau}\,d\mu(\nu)$ for a finite positive Borel measure $\mu$ on $\R$ exactly when it is continuous and positive definite ($\sum_{j,l}\bar c_{j}c_{l}f(\tau_{l} - \tau_{j}) \ge 0$ for all finite families); then $\mu(\R) = f(0)$.
+    \item[(b)] \emph{(The moment lemma; Lukacs, ch.~2.)} If $\mu$ is a finite positive Borel measure on $\R$ and its Fourier transform $f$ has a derivative of order $2k$ at $\tau = 0$, then $\int \nu^{2k}\,d\mu(\nu) < \infty$; then $f$ is of class $C^{2k}$ and $f^{(2k)}(0) = (-1)^{k}\int\nu^{2k}\,d\mu$.
+    \item[(c)] \emph{(Whitney.)} If $f$ is a smooth even function on an open interval symmetric about $0$, there is a smooth $g$ with $f(x) = g(x^{2})$; if $f$ is smooth and odd, $f(x) = x\,g(x^{2})$ with $g$ smooth (apply the even case to $f(x)/x$, smooth and even by Hadamard's lemma).
+    \end{enumerate}
+    \emph{Provenance:} \cite{Bochner1933}; \cite[ch.~2]{Lukacs1970}; \cite{Whitney1943}.
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: Bochner''s theorem for functions R -> C, f(tau) = int e^{-i nu tau} d mu, is quoted as its source states it, Fourier analysis of scalar functions in their own right; the results that use it read the numbers in span{1, I_4}. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the occupation-moment criterion (the necessity of finite moments) and the wall result
     (the smoothness in t of solutions even in the proper time) cite these classical lemmas as a Fact instead
@@ -39,7 +58,7 @@ extraction:
     arXiv:alg-geom/9506001. Cited from memory, not checked: the bibliographic data of Bochner 1933 and of
     Whitney 1943, and the theorem number in Lukacs (Thm. 2.3.1 of the second edition). The finite-measure
     forms below are the probability statements scaled by the total mass.
-  unit_note: 'Fourier transforms keep a scalar i: complex analysis on the real line, not the field theory''s unit I4.'
+  unit_note: 'Until the resolve pass of 2026-11-07 the Fourier transforms kept a scalar i; they are now written with I_4, the default scalar unit of complex analysis of scalar functions (U1), the unit the results that use this Fact read their numbers in.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -48,7 +67,7 @@ extraction:
 
 ## formal
 \begin{enumerate}
-\item[(a)] \emph{(Bochner.)} A function $f: \R \to \mathbb{C}$ is of the form $f(\tau) = \int e^{-i\nu\tau}\,d\mu(\nu)$ for a finite positive Borel measure $\mu$ on $\R$ exactly when it is continuous and positive definite ($\sum_{j,l}\bar c_{j}c_{l}f(\tau_{l} - \tau_{j}) \ge 0$ for all finite families); then $\mu(\R) = f(0)$.
+\item[(a)] \emph{(Bochner.)} A function $f: \R \to \mathrm{span}\{1, I_4\}$ (the complex numbers, read in $\mathrm{span}\{1, I_4\}$) is of the form $f(\tau) = \int e^{-I_4\nu\tau}\,d\mu(\nu)$ for a finite positive Borel measure $\mu$ on $\R$ exactly when it is continuous and positive definite ($\sum_{j,l}\bar c_{j}c_{l}f(\tau_{l} - \tau_{j}) \ge 0$ for all finite families); then $\mu(\R) = f(0)$.
 \item[(b)] \emph{(The moment lemma; Lukacs, ch.~2.)} If $\mu$ is a finite positive Borel measure on $\R$ and its Fourier transform $f$ has a derivative of order $2k$ at $\tau = 0$, then $\int \nu^{2k}\,d\mu(\nu) < \infty$; then $f$ is of class $C^{2k}$ and $f^{(2k)}(0) = (-1)^{k}\int\nu^{2k}\,d\mu$.
 \item[(c)] \emph{(Whitney.)} If $f$ is a smooth even function on an open interval symmetric about $0$, there is a smooth $g$ with $f(x) = g(x^{2})$; if $f$ is smooth and odd, $f(x) = x\,g(x^{2})$ with $g$ smooth (apply the even case to $f(x)/x$, smooth and even by Hadamard's lemma).
 \end{enumerate}

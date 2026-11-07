@@ -1,7 +1,7 @@
 ---
 id: synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
 kind: claim
-version: 2
+version: 4
 title: 'The Dirac propagator tends to the generator CAR on null hypersurfaces'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -43,14 +51,14 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@2
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@2
-  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@2
+  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@4
+  - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@3
-  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@3
-  - synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car@2
-  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@1
+  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@5
+  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
+  - synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car@4
+  - synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -74,6 +82,14 @@ lineage:
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The regulator sigma + I_4 epsilon(t(x) - t(x)) of the bulk kernels and the I_4 0 sgn v it carries through the Morse-coordinate computation of the layer kernel (the Sokhotski-type integrals (s - t -+ I_4 0)^{-1}, the logarithms log(s -+ I_4 0), the pole term) are written in scalar form with the field unit (U3 scalar form of an infinitesimal shift of the separation, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), the unit the layer limit and the null vacuum already carry, numbers acting on the right as stated. No i remains; declaration removed. Mathematics, links and checks unchanged.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R2 (7 November 2026) the Hadamard chain carries the field theory''s unit I_4: the null vacuum W_0 = (I_4/2 pi)(u - u'' + I_4 0)^{-1} and its i0 in the layer limit, the right unit of the conventions, the jump -2 pi I_4 delta(u - u''), the coefficient (I_4/2 pi)Lambda and the logarithm log(I_4 s) of the restriction, numbers read in span{1, I_4}. Stays: the regulator sigma + i epsilon(t(x) - t(x'')) and the i0 sgn v it carries through the Morse-coordinate computation and onto the light cone (a shift of the spacetime separation); declared complex-analysis.'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Bears on the passage from the premise (HS), synthesis.hadamard-scaling-limit-premise (version 3), to states.
@@ -124,7 +140,7 @@ c_{0}(u, u') = -\mathrm{sgn}(v)\,a(u')\Bigl(\partial_{u} + \tfrac12\theta(u)\Big
 \]
 the derivative along the generator, the projected transverse connection (expansion only) and the first-order transport (which drops out) as in the log coefficient of the restricted parametrix; it vanishes because $\Delta^{1/2}/\sqrt{\det M} = (a(u)a(u'))^{-1/2}$ and $\theta = a'/a$ (the half-density law). The tail $V\theta(\sigma)$, the curvature terms and the mass term vanish in the limit ($\Lambda k = 0$).
 \item[(ii)] \emph{(The generator anticommutation relations; proved, with the flux contraction.)} The flux traces $T_{v}^{*}\Phi = \sqrt{2a_{v}}\,\Lambda\Phi|_{\mathcal{H}_{v}}$ (canonical normalisation) extend to contractions, the flux of the future-causal Dirac current through a null piece being at most the norm (the flux contraction, Theorem \claimref{synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car}(i)), and $T^{*}T = 1$ on $L^{2}(\mathcal{H}_{c})$ for every compact $\mathcal{H}_{c}$ in the piece: $\{\psi_{\mathcal{H}}(u, y), \psi_{\mathcal{H}}(u', y')^{*}\} = \delta(u - u')\,\delta^{2}(y - y')\,\Lambda$, on every geodesic null hypersurface (small pieces), local Rindler horizons through $x_{0}$ of Premise \claimref{synthesis.c-loc-local-horizon-premise} included, whatever the field strength, expansion or shear. Independently of the vanishing of the step coefficient, causality (finite propagation speed, the foliation function monotone along causal curves) together with the flux contraction makes $T^{*}T$ a multiplication operator $0 \le m \le 1$; with the coincidence coefficient $m = 1$, and the step coefficient is forced to vanish, which, given the jet formula of (i) for that coefficient, returns the identity $\Delta^{1/2}/\sqrt{\det M} = (a a')^{-1/2}$ from its coincidence value.
-\item[(iii)] \emph{(The thin-layer restricted parametrix.)} (a) (Proved.) For the Dirac Hadamard parametrix $G^{+}_{\mathrm{par}}$ (Facts \claimref{synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport}, \claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}(a)), normalised so that $G^{+}_{\mathrm{par}} + G^{-}_{\mathrm{par}} = S$ modulo smooth kernels, the same pullback between $\mathcal{H}$ and $\mathcal{H}_{v}$ in the canonical normalisation has, as $v \to 0$ from either side, the limit $W_{0}\otimes\id_{K} + r$, $W_{0} = \tfrac{i}{2\pi}(u - u' + i0)^{-1}$, where for each pair of transverse profiles $r(u, u')$ is a bounded function of $(u, u')$, bounded uniformly for profiles bounded in $C^{4}$ with support in a fixed compact set: the $i0$ is the same from both sides (with the regulator $\sigma + i\epsilon(t(x) - t(x'))$ of the ordering $\omega(\psi^{*}(x')\psi(x))$, its sign at the light cone is $-\mathrm{sgn}(v)$, and $\sigma_{*}$ carries the factor $v$), the coefficient of $\log|v|$ is the same combination of jets as the step coefficient of (i), hence zero, and the limit does not depend on the time function. (b) (Proved, with the flux contraction and the thin-layer limits of Theorem \claimref{synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car}(i), (iii-a).) For every gauge-invariant quasi-free Hadamard state $\omega$, the restricted two-point function through the flux trace is $W_{0}\otimes\id_{K} + r + D_{0,0}$, $D_{0,0}$ smooth; so the restriction through the flux trace has generator scaling degree below one after subtracting $W_{0}\otimes\id_{K}$, with any $\varpi \in (0, 1)$, at every point of every local Rindler horizon, which is clause (b) of Theorem \claimref{synthesis.hadamard-scaling-limit-premise} for the flux-trace restriction. Its statement on the $\epsilon$-regularised restriction is Theorem \claimref{synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel}(iii); with that bound, the $\epsilon$-regularised restriction differs from the flux-trace restriction by a bounded kernel, which contains a smooth term depending on the time function, nonzero for time functions whose derivative along $k$ varies along the generators; the two do not agree identically.
+\item[(iii)] \emph{(The thin-layer restricted parametrix.)} (a) (Proved.) For the Dirac Hadamard parametrix $G^{+}_{\mathrm{par}}$ (Facts \claimref{synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport}, \claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}(a)), normalised so that $G^{+}_{\mathrm{par}} + G^{-}_{\mathrm{par}} = S$ modulo smooth kernels, the same pullback between $\mathcal{H}$ and $\mathcal{H}_{v}$ in the canonical normalisation has, as $v \to 0$ from either side, the limit $W_{0}\otimes\id_{K} + r$, $W_{0} = \tfrac{I_{4}}{2\pi}(u - u' + I_{4}0)^{-1}$ (the field theory's unit $I_{4}$; numbers are read in $\mathrm{span}\{1, I_{4}\}$), where for each pair of transverse profiles $r(u, u')$ is a bounded function of $(u, u')$, bounded uniformly for profiles bounded in $C^{4}$ with support in a fixed compact set: the $I_{4}0$ is the same from both sides (with the regulator $\sigma + I_{4}\epsilon(t(x) - t(x'))$ of the ordering $\omega(\psi^{*}(x')\psi(x))$, its sign at the light cone is $-\mathrm{sgn}(v)$, and $\sigma_{*}$ carries the factor $v$), the coefficient of $\log|v|$ is the same combination of jets as the step coefficient of (i), hence zero, and the limit does not depend on the time function. (b) (Proved, with the flux contraction and the thin-layer limits of Theorem \claimref{synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car}(i), (iii-a).) For every gauge-invariant quasi-free Hadamard state $\omega$, the restricted two-point function through the flux trace is $W_{0}\otimes\id_{K} + r + D_{0,0}$, $D_{0,0}$ smooth; so the restriction through the flux trace has generator scaling degree below one after subtracting $W_{0}\otimes\id_{K}$, with any $\varpi \in (0, 1)$, at every point of every local Rindler horizon, which is clause (b) of Theorem \claimref{synthesis.hadamard-scaling-limit-premise} for the flux-trace restriction. Its statement on the $\epsilon$-regularised restriction is Theorem \claimref{synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel}(iii); with that bound, the $\epsilon$-regularised restriction differs from the flux-trace restriction by a bounded kernel, which contains a smooth term depending on the time function, nonzero for time functions whose derivative along $k$ varies along the generators; the two do not agree identically.
 \end{enumerate}
 Nothing here uses the field equations or the value of the field strength.
 

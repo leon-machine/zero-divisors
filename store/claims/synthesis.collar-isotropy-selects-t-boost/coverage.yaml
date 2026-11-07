@@ -11,4 +11,6 @@ functions:
     kind: sampled
     clauses: [(i)]
     omits: Kasner rate tensor and the first-order collar rates at R = 1/10 and 1/4, with two rotation angles per plane; the angle exclusion "nonzero angle mod pi" is tested only at two sines.
+untouched_premises:
+  std-algebra.complexification-is-the-odd-extension: "supplies the unit of the complexified boost generator; the checks compute the centraliser and the Gibbs elements directly"
 judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: 'Clauses (i), (ii) and (iv) are covered at sample values (centraliser dimensions exact); clause (iii) (same beta over the sphere) has no check.'}

@@ -1,7 +1,7 @@
 ---
 id: angle.imported-singularity-papers-state-selection
 kind: claim
-version: 10
+version: 12
 title: 'Imported: the singularity paper''s state selection'
 status: proved
 region: angle
@@ -17,20 +17,28 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 11
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the phase flow written with the transverse unit J'
+  version: 12
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
-  - singularity.euclidean-section-period@5
-  - singularity.modular-descent@5
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
-  - singularity.schmidt-forcing-proved-outright@4
+  - singularity.euclidean-section-period@6
+  - singularity.modular-descent@7
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
+  - singularity.schmidt-forcing-proved-outright@6
   - singularity.class-relative-no-go-no-supplied@3
   - singularity.computed@4
   assumes:
   - singularity.l-boundary-mode-locality@2
   - singularity.q-joint-quasi-freeness-s-wave@3
-  - singularity.r-regularity-fixed-locus@3
+  - singularity.r-regularity-fixed-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -53,6 +61,14 @@ locators:
   label: fact:T5
   line: 116
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the phase flow Ad(e^{itK}) on the horizon pair (the completed-pair atom in the radial plane) is written Ad(e^{JtK}) with J = e_2 e_3, the atom''s complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention); the phases of ''invariant up to phase'' are numbers of span{1, J}. Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{itK}) acts on the complex mode factor of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares, so I_4 is not shown to be its unit.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -117,7 +133,7 @@ extraction:
 ---
 
 ## formal
-For the horizon pair, a state vector that is invariant up to phase under the boost and cyclic and separating for the pair factor has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$ with $\cos\theta\sin\theta \neq 0$; its one-sided marginal is $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$, the Gibbs state for the number operator at $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ has $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. Every automorphism of the mode factor intertwining the boost's phase flow $\operatorname{Ad}(e^{itK})$ acts on $\beta$ through $\{\pm 1\}$ only. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and (R) imposes KMS at that period mode by mode. The supplied class is ultralocal, and the s-wave array of Step 4e has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$. \emph{Provenance:} \cite[Lem.~7.2, Thm.~7.3, Thm.~7.16, Prop.~7.18, Prem.~7.19, Prop.~7.25, Rem.~7.26, Prem.~7.30, Rem.~7.33, Prem.~8.1, Thm.~C.8, Rem.~C.9, Prop.~A.2]{ButlerT5}.
+For the horizon pair, a state vector that is invariant up to phase under the boost and cyclic and separating for the pair factor has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$ with $\cos\theta\sin\theta \neq 0$; its one-sided marginal is $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$, the Gibbs state for the number operator at $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ has $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. Every automorphism of the mode factor intertwining the boost's phase flow $\operatorname{Ad}(e^{JtK})$, written with the atom's complex unit $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), acts on $\beta$ through $\{\pm 1\}$ only. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and (R) imposes KMS at that period mode by mode. The supplied class is ultralocal, and the s-wave array of Step 4e has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$. \emph{Provenance:} \cite[Lem.~7.2, Thm.~7.3, Thm.~7.16, Prop.~7.18, Prem.~7.19, Prop.~7.25, Rem.~7.26, Prem.~7.30, Rem.~7.33, Prem.~8.1, Thm.~C.8, Rem.~C.9, Prop.~A.2]{ButlerT5}.
 
 ## technical
 This entry restates the singularity paper's state selection for a horizon pair. A state vector of the pair that is boost invariant up to phase and cyclic and separating has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$, and its one-sided marginal $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$ is the Gibbs state for the number operator with $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ corresponds to $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. The algebra does not fix $\beta$: every automorphism of the mode factor that intertwines the boost flow acts on $\beta$ only through $\{\pm 1\}$.

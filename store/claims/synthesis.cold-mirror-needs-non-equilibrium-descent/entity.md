@@ -1,7 +1,7 @@
 ---
 id: synthesis.cold-mirror-needs-non-equilibrium-descent
 kind: claim
-version: 1
+version: 3
 title: 'A cold mirror needs a non-equilibrium descent'
 status: proved
 region: synthesis
@@ -17,14 +17,22 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 derivations:
 - name: main
   uses:
-  - hawking.i-state@3
-  - hawking.gibbs-states-are-kms-conversely-finite@2
+  - hawking.i-state@4
+  - hawking.gibbs-states-are-kms-conversely-finite@4
   - hawking.imported-kms-passes-inductive-limits@1
   - hawking.imported-quasi-free-states-car-algebra@2
   - dark-matter.superselected-hence-dark-exactly-stable@5
@@ -43,6 +51,14 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras: by U2 the boundary modes'' unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), written out as e_2 e_3 because J names the mode set here, so tau_{beta e_2 e_3}(A) = e^{-beta H} A e^{beta H}, the KMS continuation in the core result''s form. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the KMS identity is tested with the imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras, part of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   open_problem: op.no-dark-radiation-under-p2
   note: >-
     Narrows the problem's success condition at the level of the boundary-mode model: a scope for

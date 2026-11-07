@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.vector-squares@1
-  - std-algebra.complex-clifford-algebra@1
+  - std-algebra.complex-clifford-algebra@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

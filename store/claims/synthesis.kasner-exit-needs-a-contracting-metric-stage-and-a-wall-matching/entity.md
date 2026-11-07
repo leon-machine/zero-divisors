@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching
 kind: claim
-version: 2
+version: 3
 title: 'Kasner exit needs a contracting stage and a wall matching'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@2
-  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@2
-  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@1
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
+  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
+  - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
   - dark-energy.frozen-point-datum-kasner-wall@7
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
   proof: proof-main.tex
@@ -42,6 +46,10 @@ lineage:
   - dark-energy.gravity-pre-metric-forces-degenerate-exactly
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The positive-frequency mode u = e^{-is}/sqrt 2 in the proof of (ii) is written e^{-I_4 s}/sqrt 2, with the field theory''s unit I_4 and numbers read in span{1, I_4}; no bare i remains.'
   open_problem: op.descent-state-and-spectrum
   maintainer_pass:
     by: maintainer-2026-11-01

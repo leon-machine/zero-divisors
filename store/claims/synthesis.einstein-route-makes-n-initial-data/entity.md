@@ -29,7 +29,7 @@ derivations:
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.promoted-norm-one-global-pair@4
   - dark-energy.imported-henneaux-teitelboim-promotion@5
-  - synthesis.smallness-monomials-exact-hierarchy-casimir@2
+  - synthesis.smallness-monomials-exact-hierarchy-casimir@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

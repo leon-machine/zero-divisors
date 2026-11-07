@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.incidence-vacua-thermofield-real-capacity@5
+  - synthesis.incidence-vacua-thermofield-real-capacity@6
   - state-selection.partner-purification-are-canonical@4
   - one-relation.spacetime-manifold-vacuum-lines@6
   proof: proof-main.tex

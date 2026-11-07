@@ -26,7 +26,7 @@ derivations:
   uses:
   - singularity.descent-what-it-erases@5
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

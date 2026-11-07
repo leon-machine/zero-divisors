@@ -27,7 +27,7 @@ derivations:
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.hyp-u-equal-rank-one-eigenvalues@3
-  - dark-matter.premise-cpt-covariance@2
+  - dark-matter.premise-cpt-covariance@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

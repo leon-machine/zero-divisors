@@ -1,7 +1,7 @@
 ---
 id: synthesis.residues-zero-four-real-chirality-anomaly
 kind: claim
-version: 1
+version: 3
 title: 'Real chirality at residues 0 and 4, and the spinor-ideal anomaly'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -45,6 +53,14 @@ lineage:
   - synthesis.lowest-causal-residues-zero-four-content
   - dark-matter.p3-nearest-dimension-representatives
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. In the proof of (i), the +-i eigenspaces of the complex structure I at residues 2 and 6 live on the complexification of S, whose scalar must commute with I and with the action; by U3 it is the central pseudoscalar I_W = I e of the odd extension W = V + R e, Q(e) = +1 (std-algebra.complexification-is-the-odd-extension, cited as a mention): the splitting of S + I_W S into the +-I_W eigenspaces of I, reversed by I_W -> -I_W; the text says I_W and I are different elements. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): in the proof, at residues 2 and 6, chirality is the splitting into the +-i eigenspaces of the complex structure I itself, so the i is an eigenvalue of that pseudoscalar and cannot be written as it.'
   open_problem: op.window-p3
   note: >-
     Second clause of P3 (residues 0 and 4 empty). Residues 0 and 4 are, in every window, exactly

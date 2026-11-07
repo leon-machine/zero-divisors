@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
+  - mass.exact-join@8
   - neutrino.imported-derived-content-singlets@7
   assumes:
   - neutrino.m-framework-realises-majorana-term-scale@1

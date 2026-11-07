@@ -1,7 +1,7 @@
 ---
 id: synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 kind: claim
-version: 2
+version: 4
 title: 'Wedge reflections compose to the $2\pi$ rotor; spin-statistics if geometric'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -32,11 +40,11 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.modular-period-on-values-is-the-dual-plane-turn@2
-  - angle.imported-theorems-deliver-their-hypotheses@1
-  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1
-  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@2
-  - synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@1
+  - synthesis.modular-period-on-values-is-the-dual-plane-turn@4
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
+  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@4
+  - synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -55,6 +63,14 @@ lineage:
   - synthesis.n-plus-null-ground-state
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Borchers'' relation in the proof of (ii), Delta^{it} U(a) Delta^{-it} = U(e^{-2 pi t} a), is written Delta^{I_4 t}, I_4 the default scalar unit of the abstract Hilbert space (U1) and the unit the entity already uses in (iv), as the restated Kuckert-Borchers Fact has it. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the proof uses Borchers'' relation Delta^{it}U(a)Delta^{-it} = U(e^{-2 pi t}a), quoted from the imported Fact, for the modular objects of an interacting net on a general Hilbert space.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.modular-period-on-values-is-the-dual-plane-turn
 kind: claim
-version: 2
+version: 4
 title: 'The modular period on values is the dual-plane turn'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -25,10 +33,10 @@ derivations:
   - field-theory.where-each-lives@3
   - field-theory.boost-modes@3
   - hawking.modular-structure-completed-pair@3
-  - synthesis.local-boost-temperature-is-local-regularity@3
-  - synthesis.boost-evolution-on-generators-is-one-unitary-group@2
-  - singularity.euclidean-rotor-where-it-lies@4
-  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@1
+  - synthesis.local-boost-temperature-is-local-regularity@4
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group@4
+  - singularity.euclidean-rotor-where-it-lies@5
+  - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +52,14 @@ lineage:
   - field-theory.imported-standard-field-theory
   - synthesis.boost-evolution-on-generators-is-one-unitary-group
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. In (iii) the phase flow a -> e^{-i w lambda} a on the completed pair of Cl(1,1) is written with the atom''s unit J = e_2 e_3 (U2, synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): a -> e^{-J w lambda} a; the proof says that J acts there and the field theory''s I_4 in (i) and (ii), never identified. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The statements of the unit as i = I_4 now name I_4 directly, the continued value rotor is written cos(theta/2) + I_4 e_1 e_0 sin(theta/2) = cos(theta/2) - e_2 e_3 sin(theta/2), and the standard chiral-spinor relation is stated as the boost generator being +- the unit times the rotation generator; the phase flow a -> e^{-iw lambda}a on the completed pair of Cl(1,1) stays: its mode operators are built from e_0, e_1 and anticommute with I_4 (conventions, known limit 1).'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -67,7 +83,7 @@ extraction:
 ---
 
 ## formal
-Work in $\Cl(1,3)$ with the store's signature, $I_{4} = e_{0}e_{1}e_{2}e_{3}$, and the field theory's unit $i = I_{4}$ (Proposition \claimref{field-theory.second-quantisation}(4)), central in the even subalgebra $\Cl^{+}(1,3)$ (Proposition \claimref{field-theory.where-each-lives}(1)). Let $B$ be a unit timelike plane, $B^{2} = 1$, the plane of a wedge's boost, with boost rotor $S(\lambda) = \exp(-\lambda B/2)$.
+Work in $\Cl(1,3)$ with the store's signature, $I_{4} = e_{0}e_{1}e_{2}e_{3}$, and the field theory's unit $I_{4}$ (Proposition \claimref{field-theory.second-quantisation}(4)), central in the even subalgebra $\Cl^{+}(1,3)$ (Proposition \claimref{field-theory.where-each-lives}(1)). Let $B$ be a unit timelike plane, $B^{2} = 1$, the plane of a wedge's boost, with boost rotor $S(\lambda) = \exp(-\lambda B/2)$.
 \begin{enumerate}
 \item[(i)] \emph{(The dual plane.)} $B^{*} = I_{4}B$ is a unit spacelike 2-blade, $(B^{*})^{2} = -1$, commuting with $B$ and with $I_{4}$; it commutes with the vectors of $B$ and anticommutes with those of $B^{*}$. Continued to complex rapidity $\lambda + I_{4}\theta$, $S(\lambda + I_{4}\theta) = S(\lambda)R(\theta)$ with $R(\theta) = \exp(-\theta B^{*}/2) = \cos\tfrac{\theta}{2} - B^{*}\sin\tfrac{\theta}{2}$, the real rotor of the dual plane.
 \item[(ii)] \emph{(One period and half a period on values.)} $R(2\pi) = -1$ and $R(4\pi) = 1$: over one modular period the continued boost multiplies every even element (a spinor value, left action) by $-1$ and fixes every bivector and scalar value (conjugation), and a bivector built from a spinor, $\psi F_{0}\tilde\psi$, returns to itself; on a value carrying $2s$ spinor factors the factor is $(-1)^{2s}$. $R(\pi) = -B^{*}$, whose conjugation fixes the vectors of $B$ and reverses those of $B^{*}$: the turn by $\pi$ of the dual plane. On points the continuation is not this rotor, since $I_{4}$ anticommutes with vectors; on values it is. On vector arguments the complexified boost at half the period reverses the vectors of $B$ and fixes those of $B^{*}$, so it differs from the dual turn by the total inversion $x \mapsto -x$.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem
 kind: claim
-version: 1
+version: 3
 title: 'Imported: Kuckert''s modular spin-statistics theorem and Borchers'' theorem'
 status: imported
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -32,6 +40,19 @@ imported_from:
   key: DoplicherRoberts1990
   locator: 'Theorem 5.4 (twisted duality), as cited by Kuckert'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Restated by U4: the modular groups Delta^{it} of these abstract Hilbert spaces are written Delta^{I_4 t}, I_4 the default scalar unit of an abstract complex Hilbert space (U1), with a sentence that the scalars are span{1, I_4} and that J is a modular conjugation (not the transverse bivector); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
+  source_formal: |-
+    \begin{enumerate}
+    \item[(i)] \emph{(Kuckert.)} Let $\mathcal{A}$ be a net of local observables on Minkowski space in its vacuum sector $\mathcal{H}_{0}$ with vacuum $\Omega$. Assume: (I) $\mathcal{H}_{0}$ carries a strongly continuous unitary representation $U$ of the universal covering of the restricted Poincar\'e group under which $\mathcal{A}$ is covariant and $\Omega$ invariant, and the joint spectrum of the generators of the translations lies in the closed forward cone; (II) modular P$_{1}$CT symmetry: for the standard wedge $W$, the modular conjugation $J$ of $(\mathcal{A}(W), \Omega)$ satisfies $J\mathcal{A}(\mathcal{O})J = \mathcal{A}(j\mathcal{O})$ for every double cone $\mathcal{O}$, with $j$ the reflection reversing the two coordinates of the boost plane of $W$ (P$_{1}$T); (III) the group of internal symmetries is compact in the strong operator topology. Then, with $r(\varphi)$ the rotations in the spatial plane spanned by the boost direction of $W$ and one edge direction, $W_{\varphi} = r(\varphi)W$, $J_{\varphi}$ the modular conjugation of $(\mathcal{A}(W_{\varphi}), \Omega)$ and $R(\varphi) = U(r(\varphi))$, $R(\varphi) = J_{\varphi/2}J$ (Corollary 3.2), so $R(2\pi) = 1$ on $\mathcal{H}_{0}$; and on the field algebra of the parabosonic and parafermionic charges of finite statistics, built by Doplicher and Roberts \cite{DoplicherRoberts1990} (twisted duality being their theorem, not an assumption), the rotation by $2\pi$ equals the Bose-Fermi operator $k$ (Theorem 3.4, Corollary 3.5): the spin-statistics connection \cite{Kuckert1995}. The modular groups $\Delta^{it}$ need not act geometrically on the net; the argument also works in $1 + 2$ dimensions.
+    \item[(ii)] \emph{(Borchers.)} Let $\mathcal{M}$ be a von Neumann algebra with cyclic and separating vector $\Omega$ and modular objects $\Delta$, $J$, and let $U(s)$ be a continuous one-parameter unitary group with positive generator, $U(s)\Omega = \Omega$ for all $s$ and $U(s)\mathcal{M}U(s)^{*} \subset \mathcal{M}$ for $s \ge 0$. Then $\Delta^{it}U(s)\Delta^{-it} = U(e^{-2\pi t}s)$ and $JU(s)J = U(-s)$ for all real $s$, $t$ \cite{Borchers1992, Summers2006}.
+    \end{enumerate}
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): Kuckert''s theorem and Borchers'' relation Delta^{it}U(s)Delta^{-it} = U(e^{-2 pi t}s) are quoted as their sources state them on a general Hilbert space.'
   note: >-
     Imported so that the result on wedge reflections and interacting spin-statistics can pin the theorem it
     applies instead of citing it. Kuckert 1995 checked on 2 November 2026 against the arXiv abstract page and the
@@ -56,9 +77,10 @@ extraction:
 ---
 
 ## formal
+The Hilbert spaces are complex with scalars $\mathrm{span}\{1, I_{4}\}$, the default scalar field of an abstract complex Hilbert space; $J$ denotes a modular conjugation throughout.
 \begin{enumerate}
-\item[(i)] \emph{(Kuckert.)} Let $\mathcal{A}$ be a net of local observables on Minkowski space in its vacuum sector $\mathcal{H}_{0}$ with vacuum $\Omega$. Assume: (I) $\mathcal{H}_{0}$ carries a strongly continuous unitary representation $U$ of the universal covering of the restricted Poincar\'e group under which $\mathcal{A}$ is covariant and $\Omega$ invariant, and the joint spectrum of the generators of the translations lies in the closed forward cone; (II) modular P$_{1}$CT symmetry: for the standard wedge $W$, the modular conjugation $J$ of $(\mathcal{A}(W), \Omega)$ satisfies $J\mathcal{A}(\mathcal{O})J = \mathcal{A}(j\mathcal{O})$ for every double cone $\mathcal{O}$, with $j$ the reflection reversing the two coordinates of the boost plane of $W$ (P$_{1}$T); (III) the group of internal symmetries is compact in the strong operator topology. Then, with $r(\varphi)$ the rotations in the spatial plane spanned by the boost direction of $W$ and one edge direction, $W_{\varphi} = r(\varphi)W$, $J_{\varphi}$ the modular conjugation of $(\mathcal{A}(W_{\varphi}), \Omega)$ and $R(\varphi) = U(r(\varphi))$, $R(\varphi) = J_{\varphi/2}J$ (Corollary 3.2), so $R(2\pi) = 1$ on $\mathcal{H}_{0}$; and on the field algebra of the parabosonic and parafermionic charges of finite statistics, built by Doplicher and Roberts \cite{DoplicherRoberts1990} (twisted duality being their theorem, not an assumption), the rotation by $2\pi$ equals the Bose-Fermi operator $k$ (Theorem 3.4, Corollary 3.5): the spin-statistics connection \cite{Kuckert1995}. The modular groups $\Delta^{it}$ need not act geometrically on the net; the argument also works in $1 + 2$ dimensions.
-\item[(ii)] \emph{(Borchers.)} Let $\mathcal{M}$ be a von Neumann algebra with cyclic and separating vector $\Omega$ and modular objects $\Delta$, $J$, and let $U(s)$ be a continuous one-parameter unitary group with positive generator, $U(s)\Omega = \Omega$ for all $s$ and $U(s)\mathcal{M}U(s)^{*} \subset \mathcal{M}$ for $s \ge 0$. Then $\Delta^{it}U(s)\Delta^{-it} = U(e^{-2\pi t}s)$ and $JU(s)J = U(-s)$ for all real $s$, $t$ \cite{Borchers1992, Summers2006}.
+\item[(i)] \emph{(Kuckert.)} Let $\mathcal{A}$ be a net of local observables on Minkowski space in its vacuum sector $\mathcal{H}_{0}$ with vacuum $\Omega$. Assume: (I) $\mathcal{H}_{0}$ carries a strongly continuous unitary representation $U$ of the universal covering of the restricted Poincar\'e group under which $\mathcal{A}$ is covariant and $\Omega$ invariant, and the joint spectrum of the generators of the translations lies in the closed forward cone; (II) modular P$_{1}$CT symmetry: for the standard wedge $W$, the modular conjugation $J$ of $(\mathcal{A}(W), \Omega)$ satisfies $J\mathcal{A}(\mathcal{O})J = \mathcal{A}(j\mathcal{O})$ for every double cone $\mathcal{O}$, with $j$ the reflection reversing the two coordinates of the boost plane of $W$ (P$_{1}$T); (III) the group of internal symmetries is compact in the strong operator topology. Then, with $r(\varphi)$ the rotations in the spatial plane spanned by the boost direction of $W$ and one edge direction, $W_{\varphi} = r(\varphi)W$, $J_{\varphi}$ the modular conjugation of $(\mathcal{A}(W_{\varphi}), \Omega)$ and $R(\varphi) = U(r(\varphi))$, $R(\varphi) = J_{\varphi/2}J$ (Corollary 3.2), so $R(2\pi) = 1$ on $\mathcal{H}_{0}$; and on the field algebra of the parabosonic and parafermionic charges of finite statistics, built by Doplicher and Roberts \cite{DoplicherRoberts1990} (twisted duality being their theorem, not an assumption), the rotation by $2\pi$ equals the Bose-Fermi operator $k$ (Theorem 3.4, Corollary 3.5): the spin-statistics connection \cite{Kuckert1995}. The modular groups $\Delta^{I_{4}t}$ need not act geometrically on the net; the argument also works in $1 + 2$ dimensions.
+\item[(ii)] \emph{(Borchers.)} Let $\mathcal{M}$ be a von Neumann algebra with cyclic and separating vector $\Omega$ and modular objects $\Delta$, $J$, and let $U(s)$ be a continuous one-parameter unitary group with positive generator, $U(s)\Omega = \Omega$ for all $s$ and $U(s)\mathcal{M}U(s)^{*} \subset \mathcal{M}$ for $s \ge 0$. Then $\Delta^{I_{4}t}U(s)\Delta^{-I_{4}t} = U(e^{-2\pi t}s)$ and $JU(s)J = U(-s)$ for all real $s$, $t$ \cite{Borchers1992, Summers2006}.
 \end{enumerate}
 
 ## technical
@@ -68,4 +90,4 @@ Kuckert's theorem derives the spin-statistics connection of a theory of local ob
 Why particles of half-integer spin obey the exclusion rule can be proved in several ways. Kuckert showed that it follows from a symmetry property of the vacuum: the mathematical reflection that the vacuum defines for each wedge-shaped region of spacetime must act on what can be measured as the ordinary mirror reflection of that wedge. Borchers's theorem, a tool of the same theory, says how this reflection and its companion flow treat a shift along a light ray that carries the region into itself. The series uses both when asking which assumption would carry its spin and statistics results beyond approximations.
 
 ## one-liner
-Kuckert 1995: covariance under the covering group, the spectrum condition, compact internal symmetries and modular P$_{1}$CT symmetry ($J_{W}\mathcal{A}(\mathcal{O})J_{W} = \mathcal{A}(j\mathcal{O})$) give $R(\varphi) = J_{\varphi/2}J$ and the rotation by $2\pi$ equal to the Bose-Fermi operator; Borchers: for half-sided positive translations, $\Delta^{it}U(s)\Delta^{-it} = U(e^{-2\pi t}s)$, $JU(s)J = U(-s)$.
+Kuckert 1995: covariance under the covering group, the spectrum condition, compact internal symmetries and modular P$_{1}$CT symmetry ($J_{W}\mathcal{A}(\mathcal{O})J_{W} = \mathcal{A}(j\mathcal{O})$) give $R(\varphi) = J_{\varphi/2}J$ and the rotation by $2\pi$ equal to the Bose-Fermi operator; Borchers: for half-sided positive translations, $\Delta^{I_{4}t}U(s)\Delta^{-I_{4}t} = U(e^{-2\pi t}s)$, $JU(s)J = U(-s)$.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard
 kind: claim
-version: 2
+version: 3
 title: 'The massless Dirac spin-product state is never Hadamard'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -31,12 +35,12 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@2
+  - synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field@3
   - synthesis.imported-microlocal-hadamard-condition@2
-  - synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard@2
-  - synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite@2
+  - synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard@3
+  - synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite@3
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
-  - synthesis.attachment-conformal-energy-is-generated-by-z@1
+  - synthesis.attachment-conformal-energy-is-generated-by-z@4
   - synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field@1
   proof: proof-main.tex
 checked_by:
@@ -60,6 +64,10 @@ lineage:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
   - synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit is now named as the right unit psi -> psi I_4 throughout (the chirality I_4 psi I_4 composed with it), the blocks'' mode equation is I u'' = Hu with I = s_1 s_2 s_3 and their Hermitian product is over span{1, I} (was C^2), and the weight transform F-hat(lambda) = int F e^{I_4 lambda t} dt uses I_4 (numbers read in span{1, I_4}); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -84,11 +92,11 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$; $\Cl(1,3)$ with $e_{0}^{2} = 1$, $e_{i}^{2} = -1$, $I_{4} = e_{0}e_{1}e_{2}e_{3}$; spinors acted on by left multiplication, unit $i$ the right unit $\psi \mapsto \psi I_{4}$; matrix forms are parenthetical readings. Let $N$ be a globally hyperbolic region of a gravitational field $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with a time function $t$, $\mathcal{H}$ the solutions of the Dirac equation of mass $m \ge 0$ with the conserved current product $(\psi|\phi)$ (Fact \claimref{synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field}), and $F \ge 0$ a weight in $t$ for which $\langle\psi|\phi\rangle_{F} = \int_{N}F\,\bar\psi\phi\,\mathrm{dvol}$ is bounded on $\mathcal{H}$, with $\bar\psi\phi$ read as $\langle e_{0}\tilde\psi\phi\rangle_{0}$ plus its unit part. Let $A_{F}$ be the self-adjoint operator with $(\psi|A_{F}\phi) = \langle\psi|\phi\rangle_{F}$, $\Pi_{F}$ the projection onto its kernel, and $\omega_{F}$ the gauge-invariant quasi-free state with one-particle projection $Q_{F} = \chi_{(0,\infty)}(A_{F})$: the Fewster-Lang weighted spin-product state (Fact \claimref{synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field}), the finite-time form of the fermionic projector state. Let $\Gamma\psi = I_{4}\psi I_{4}$ (the matrix $\gamma_{5}$).
+Units $\hbar = c = 1$; $\Cl(1,3)$ with $e_{0}^{2} = 1$, $e_{i}^{2} = -1$, $I_{4} = e_{0}e_{1}e_{2}e_{3}$; spinors acted on by left multiplication, the field theory's unit the right unit $\psi \mapsto \psi I_{4}$ (numbers read in $\mathrm{span}\{1, I_{4}\}$); matrix forms are parenthetical readings. Let $N$ be a globally hyperbolic region of a gravitational field $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with a time function $t$, $\mathcal{H}$ the solutions of the Dirac equation of mass $m \ge 0$ with the conserved current product $(\psi|\phi)$ (Fact \claimref{synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field}), and $F \ge 0$ a weight in $t$ for which $\langle\psi|\phi\rangle_{F} = \int_{N}F\,\bar\psi\phi\,\mathrm{dvol}$ is bounded on $\mathcal{H}$, with $\bar\psi\phi$ read as $\langle e_{0}\tilde\psi\phi\rangle_{0}$ plus its unit part. Let $A_{F}$ be the self-adjoint operator with $(\psi|A_{F}\phi) = \langle\psi|\phi\rangle_{F}$, $\Pi_{F}$ the projection onto its kernel, and $\omega_{F}$ the gauge-invariant quasi-free state with one-particle projection $Q_{F} = \chi_{(0,\infty)}(A_{F})$: the Fewster-Lang weighted spin-product state (Fact \claimref{synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field}), the finite-time form of the fermionic projector state. Let $\Gamma\psi = I_{4}\psi I_{4}$ (the matrix $\gamma_{5}$).
 \begin{enumerate}
 \item[(i)] \emph{(Chirality.)} $\Gamma$ is an involution commuting with the unit, minus the grade involution on the algebra, anticommuting with the left action of vectors and commuting with that of bivectors; the spin product is odd and the current even under it. Hence for $m = 0$, $\Gamma A_{F}\Gamma = -A_{F}$ and $Q_{F} + \Gamma Q_{F}\Gamma = 1 - \Pi_{F}$.
 \item[(ii)] \emph{(Massless no-go.)} If $m = 0$ and $A_{F}$ is injective, $\omega_{F}$ is Hadamard on no open subset of $N$: Hadamard would give $C^{+} = C^{-}$ (Fact \claimref{synthesis.imported-microlocal-hadamard-condition}(b)).
-\item[(iii)] \emph{(Homogeneous collars.)} On a flat slab, and for $m = 0$ on a spatially flat Robertson-Walker collar $\hb(b) = b/a(\eta)$ in conformal time (with the flat weight $Fa$), each momentum-helicity block is the two-level system $H = Ms_{3} + ks_{1}$ of Theorem \claimref{synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard}, the spin-product density is $\partial H/\partial M = s_{3}$, $A_{F}$ restricted to a block is the weighted mean $\int Fa\,\tilde Us_{3}U\,d\eta$ of the turned density ($U = e^{-IH\eta}$), and $\omega_{F}$ is the pure state with Bloch vector $\hat A$. For constant $M$, with $\hat F(\lambda) = \int Fe^{i\lambda t}dt$ and $\omega^{2} = k^{2} + M^{2}$: $A\cdot\hat h = (M/\omega)\hat F(0)$, $|A|^{2} = (M/\omega)^{2}\hat F(0)^{2} + (k/\omega)^{2}|\hat F(2\omega)|^{2}$ and $1 - 2|\beta_{k}|^{2} = M\hat F(0)/(\omega|A|)$ against the vacuum. For $m = 0$, $A \perp \hat h = s_{1}$ for every weight, so $|\beta_{k}|^{2} = \tfrac12$ over the conformal vacuum wherever $\widehat{Fa}(2k) \ne 0$; for every nonzero compactly supported weight this is every momentum off a null set, $A_{F}$ is injective and (ii) applies; the energy density over the conformal vacuum diverges.
+\item[(iii)] \emph{(Homogeneous collars.)} On a flat slab, and for $m = 0$ on a spatially flat Robertson-Walker collar $\hb(b) = b/a(\eta)$ in conformal time (with the flat weight $Fa$), each momentum-helicity block is the two-level system $H = Ms_{3} + ks_{1}$ of Theorem \claimref{synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard}, the spin-product density is $\partial H/\partial M = s_{3}$, $A_{F}$ restricted to a block is the weighted mean $\int Fa\,\tilde Us_{3}U\,d\eta$ of the turned density ($U = e^{-IH\eta}$), and $\omega_{F}$ is the pure state with Bloch vector $\hat A$. For constant $M$, with $\hat F(\lambda) = \int Fe^{I_{4}\lambda t}dt$ and $\omega^{2} = k^{2} + M^{2}$: $A\cdot\hat h = (M/\omega)\hat F(0)$, $|A|^{2} = (M/\omega)^{2}\hat F(0)^{2} + (k/\omega)^{2}|\hat F(2\omega)|^{2}$ and $1 - 2|\beta_{k}|^{2} = M\hat F(0)/(\omega|A|)$ against the vacuum. For $m = 0$, $A \perp \hat h = s_{1}$ for every weight, so $|\beta_{k}|^{2} = \tfrac12$ over the conformal vacuum wherever $\widehat{Fa}(2k) \ne 0$; for every nonzero compactly supported weight this is every momentum off a null set, $A_{F}$ is injective and (ii) applies; the energy density over the conformal vacuum diverges.
 \item[(iv)] \emph{(Massive slab.)} For the sharp slab of length $T$, along $\omega T = (n + \tfrac12)\pi$, $|\beta_{k}|^{2} \to \tfrac12(1 - MT(1 + M^{2}T^{2})^{-1/2})$ ($\tfrac15$ at $MT = \tfrac34$), so the state is not Hadamard; for smooth compactly supported weights $|\beta_{k}|^{2} \le k^{2}|\hat F(2\omega)|^{2}/(4M^{2}\hat F(0)^{2})$ at large $k$, rapidly decreasing, and these states are Hadamard (Fact \claimref{synthesis.imported-fewster-lang-spin-product-states-of-the-dirac-field}, \cite[Thms 3.4, 3.5]{FewsterLang2015}, proved there for ultrastatic slabs with compact spatial sections; carried to the flat slab mode by mode, argued).
 \item[(v)] \emph{(The deposit.)} So the selection by the Dirac field's own spin product gives no Hadamard state for the massless Dirac field on any collar of the descent with injective $A_{F}$ (on the radiation-type collar, for every compactly supported weight), and for massive fields only with a smooth weight, which the form does not fix: it does not supply the occupation profile that the premise (HD) leaves free (Premise \claimref{synthesis.hadamard-deposit-premise}). The massless no-go holds with torsion as well: with $\Omega$ independent of $\hb$ (the definition's Einstein-Cartan choice) the connection term of the Dirac operator is a vector plus a trivector, both odd, so $\Gamma$ still anticommutes with it. The twistor form, by contrast, selects the attachment's vacuum (Theorem \claimref{synthesis.attachment-conformal-energy-is-generated-by-z}), the conformal vacuum on a Weyl-flat collar, which is Hadamard there.
 \end{enumerate}

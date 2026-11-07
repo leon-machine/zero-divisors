@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Loewner''s theorem and Yafaev''s Hankel sign criterion'
 status: imported
 region: synthesis
@@ -17,10 +17,11 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
-outside_ga:
-  kind: imported
-  why: 'two theorems of real and complex analysis (Pick functions on the upper half-plane, Laplace transforms of measures), quoted in their sources'' language'
 imported_from:
 - citation: 'K. Loewner, Ueber monotone Matrixfunktionen, Math. Z. 38 (1934), 177--216.'
   key: Loewner1934
@@ -31,6 +32,18 @@ imported_from:
   locator: 'Theorem 4.7 of the arXiv version, Theorem 4.9 of the journal version: a nonnegative Hankel form has a kernel that is the Laplace transform of a positive measure; abstract: the sign-function criterion'
   doi: 10.2140/apde.2015.8.183
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2 (U4). No bare i was written; the declaration covered the complex analysis of the two quoted theorems (Pick functions on the upper half-plane, the conjugate in the Hankel form). By U1 that is complex analysis of scalar functions, with numbers in span{1, I_4}: one opening sentence of the formal level says so (upper half-plane x + I_4 y, y > 0; imaginary part y; the bar as I_4 -> -I_4). The source form is kept in source_formal. Status stays imported; declaration removed. Statement content unchanged.'
+  source_formal: |-
+    \begin{enumerate}
+    \item[(a)] (Loewner.) Let $I$ be an open interval of $\R$ and $f : I \to \R$. The following are equivalent: $f$ is operator monotone on $I$ ($A \le B$ implies $f(A) \le f(B)$ for self-adjoint matrices of every size with spectra in $I$); every Loewner matrix $\big[(f(x_{k}) - f(x_{l}))/(x_{k} - x_{l})\big]_{k,l}$, with $f'(x_{k})$ on the diagonal, for finitely many distinct points $x_{k} \in I$, is positive semidefinite (for $f$ continuously differentiable); $f$ is the restriction to $I$ of a Pick function, analytic on the upper half-plane with nonnegative imaginary part there, which continues analytically across $I$ into the lower half-plane by reflection.
+    \item[(b)] (Yafaev.) Let $h$ be a distribution on $(0, \infty)$ in the class of the source, defining the Hankel form $\int_{0}^{\infty}\int_{0}^{\infty}h(t + s)f(s)\overline{f(t)}\,ds\,dt$ on test functions $f$ on $(0, \infty)$. If the form is nonnegative, then $h(t) = \int_{0}^{\infty}e^{-t\lambda}\,dm(\lambda)$ with a positive measure $m$ of at most polynomial growth. More generally the numbers of positive and negative eigenvalues of the Hankel operator equal those of multiplication by its sign-function $s$, so the operator is nonnegative exactly when $s \ge 0$.
+    \end{enumerate}
+    \emph{Provenance:} \cite{Loewner1934}; \cite[Theorem 4.7 (arXiv), Theorem 4.9 (journal)]{Yafaev2015}.
+
+    The source writes $i$ for $I_{4}$ (its complex plane is $\mathrm{span}\{1, I_{4}\}$).
   note: >-
     Imported so that the result on field-level geometric modular conjugations on a horizon generator can pin the
     two analytic theorems its positivity step uses (Loewner's theorem, and Yafaev's representation as an
@@ -51,6 +64,7 @@ extraction:
 ---
 
 ## formal
+Numbers are read in $\mathrm{span}\{1, I_{4}\}$ (complex analysis of scalar functions): the upper half-plane is $\{x + I_{4}y : x, y \in \R,\ y > 0\}$, the imaginary part of $x + I_{4}y$ is $y$, and the bar is the conjugation $I_{4} \mapsto -I_{4}$.
 \begin{enumerate}
 \item[(a)] (Loewner.) Let $I$ be an open interval of $\R$ and $f : I \to \R$. The following are equivalent: $f$ is operator monotone on $I$ ($A \le B$ implies $f(A) \le f(B)$ for self-adjoint matrices of every size with spectra in $I$); every Loewner matrix $\big[(f(x_{k}) - f(x_{l}))/(x_{k} - x_{l})\big]_{k,l}$, with $f'(x_{k})$ on the diagonal, for finitely many distinct points $x_{k} \in I$, is positive semidefinite (for $f$ continuously differentiable); $f$ is the restriction to $I$ of a Pick function, analytic on the upper half-plane with nonnegative imaginary part there, which continues analytically across $I$ into the lower half-plane by reflection.
 \item[(b)] (Yafaev.) Let $h$ be a distribution on $(0, \infty)$ in the class of the source, defining the Hankel form $\int_{0}^{\infty}\int_{0}^{\infty}h(t + s)f(s)\overline{f(t)}\,ds\,dt$ on test functions $f$ on $(0, \infty)$. If the form is nonnegative, then $h(t) = \int_{0}^{\infty}e^{-t\lambda}\,dm(\lambda)$ with a positive measure $m$ of at most polynomial growth. More generally the numbers of positive and negative eigenvalues of the Hankel operator equal those of multiplication by its sign-function $s$, so the operator is nonnegative exactly when $s \ge 0$.

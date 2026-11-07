@@ -1,7 +1,7 @@
 ---
 id: synthesis.clausius-heat-exceeds-created-modes-killing-energy
 kind: claim
-version: 2
+version: 4
 title: 'Clausius heat exceeds the created modes'' Killing energy'
 status: proved
 region: synthesis
@@ -17,13 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@6
   - synthesis.boundary-mode-thermal-entropy@2
-  - synthesis.boundary-mode-first-law-of-entanglement@6
+  - synthesis.boundary-mode-first-law-of-entanglement@7
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -40,6 +48,14 @@ lineage:
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.hole-mass-is-ground-energy-label
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) the window algebra End(Lambda C^F) is read over span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof), so the boost dynamics Ad(e^{itH_F}) is Ad(e^{JtH_F}); the outside_ga declaration is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boost dynamics Ad(e^{itH_F}) acts on the window algebra End(Lambda C^F) of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

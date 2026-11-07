@@ -26,10 +26,10 @@ derivations:
   uses:
   - synthesis.imported-gtg-dictionary@1
   - field-theory.second-quantisation@5
-  - synthesis.boost-evolution-on-generators-is-one-unitary-group@2
-  - synthesis.affine-cell-boost-spreads-without-scrambling@1
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group@4
+  - synthesis.affine-cell-boost-spreads-without-scrambling@3
   - singularity.plane-rate@4
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.positive-null-energy-gives-r-premises@7
   - transport.group-null-rotations@4
   proof: proof-main.tex
 checked_by:

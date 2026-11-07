@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - neutrino.breaking-relation@3
-  - synthesis.theta23-at-s3-s2-direction@2
+  - synthesis.theta23-at-s3-s2-direction@3
   - synthesis.solar-angle-light-plane-sum-rule@1
   proof: proof-main.tex
 checked_by:

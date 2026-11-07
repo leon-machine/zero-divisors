@@ -1,7 +1,7 @@
 ---
 id: standard-model.raw-representation-content-state-space
 kind: claim
-version: 3
+version: 4
 title: The raw representation content of the state space
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: prop:raw
   line: 1027
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the pair-number phase e^{I_4 theta} I_3 and its action e^{I_4 k theta} on Lambda^k are written with I_4, the module C^2 tensor C^3 read over span{1, I_4} on the tower''s floors (stated once in the formal level; notational); no bare i remains, so the earlier declaration is removed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -71,7 +79,7 @@ extraction:
 ---
 
 ## formal
-Under $\su(2) \oplus \su(3) \oplus \uu(1)$, with the abelian charge the pair number, the full Fock space of the minimal massive hierarchy decomposes as
+Under $\su(2) \oplus \su(3) \oplus \uu(1)$, with the abelian charge the pair number, the full Fock space of the minimal massive hierarchy (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) decomposes as
 \begin{equation}
 \Lambda^{\bullet}(\C^{2} \otimes \C^{3}) = (1,1) \oplus (2,3) \oplus \bigl[(3,\bar{3}) \oplus (1,6)\bigr] \oplus \bigl[(4,1) \oplus (2,8)\bigr] \oplus \bigl[(3,3) \oplus (1,\bar{6})\bigr] \oplus (2,\bar{3}) \oplus (1,1),
 \end{equation}

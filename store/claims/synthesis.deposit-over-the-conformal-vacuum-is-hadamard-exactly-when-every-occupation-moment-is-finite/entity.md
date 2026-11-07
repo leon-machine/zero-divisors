@@ -1,7 +1,7 @@
 ---
 id: synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite
 kind: claim
-version: 2
+version: 3
 title: 'A diagonal deposit is Hadamard exactly when its moments are finite'
 status: proved
 region: synthesis
@@ -17,20 +17,24 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@3
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-microlocal-hadamard-condition@2
-  - hawking.i-state@3
+  - hawking.i-state@4
   - field-theory.second-quantisation@5
   - synthesis.imported-gtg-dictionary@1
-  - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian@4
+  - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian@6
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
-  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@1
+  - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -49,6 +53,10 @@ lineage:
   - synthesis.hadamard-scaling-limit-premise
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The plane-wave phases of the two-point kernels and the frequency representation phi(tau) = int e^{-I_4 nu tau} d mu, with I_4 phi'', now use the field theory''s unit I_4 (numbers read in span{1, I_4}, as the proof''s unit phases c + s I_4 already were); no bare i remains.'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Step (1) of op.deposit-state-is-hadamard for the deposit the store states (a homogeneous quasi-free

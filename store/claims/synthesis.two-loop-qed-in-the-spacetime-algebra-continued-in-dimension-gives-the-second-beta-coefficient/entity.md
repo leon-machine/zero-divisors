@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient
 kind: claim
-version: 2
+version: 3
 title: 'Two-loop QED in the spacetime algebra gives the second beta coefficient'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -45,10 +49,10 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
   - field-theory.coupled-system-tree-level@3
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
@@ -76,6 +80,10 @@ lineage:
   motivated_by:
   - synthesis.one-loop-qed-in-the-spacetime-algebra
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The units of the Feynman rules (propagator, vertex and overall loop factors) are now the field theory''s unit I_4, collected outside the product as the right unit (numbers read in span{1, I_4}); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

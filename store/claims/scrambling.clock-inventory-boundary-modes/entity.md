@@ -1,7 +1,7 @@
 ---
 id: scrambling.clock-inventory-boundary-modes
 kind: claim
-version: 5
+version: 6
 title: The clock inventory of the boundary modes
 status: proved
 region: scrambling
@@ -17,14 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
   uses:
   - hawking.modular-structure-completed-pair@3
   - scrambling.boundary-mode-space-matrix@4
-  - scrambling.imported-modes-modular-inventory@3
-  - singularity.euclidean-rotor-where-it-lies@4
+  - scrambling.imported-modes-modular-inventory@5
+  - singularity.euclidean-rotor-where-it-lies@5
   - tower.witt-index-quantum-capacity@4
   proof: proof-main.tex
 checked_by:
@@ -50,6 +54,14 @@ locators:
   label: lem:inventory
   line: 677
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) numbers on the boundary modes are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom, which commutes with the mode operators (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof): the phase circle e^{J theta n} and its generator J times a bivector, the adjoint eigenvalues +-J and +-J sqrt|cd| and the continued action e^{-+J theta} at rapidity lambda = J theta are written with J; the outside_ga declaration is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the proof''s point is that e^{i theta n} lies outside the real boundary-mode algebra, and the eigenvalues +-i and e^{+-i theta} are on the singularity atom of the plane e0e1, where I_4 anticommutes with the modes (conventions, known limit 1); declared (version and levels unchanged). Declaration kind set to complex-analysis by Leon''s ruling R1 (atom, boundary-mode and window flows keep i).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

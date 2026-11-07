@@ -1,7 +1,7 @@
 ---
 id: synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
 kind: claim
-version: 2
+version: 3
 title: 'A gauge algebra decides the neutral-singlet bit exactly when it leaves $\uu(5)$'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -48,6 +52,10 @@ lineage:
   - standard-model.slot-module-hypothesis
   - standard-model.chain
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the five-mode module is read over span{1, I_4} on the tower''s floors, so the conjugation kappa sends I_4 to -I_4 and negates the Hermitian Majoranas I_4 (a^dagger_k - a_k) (stated once in the formal level; notational); no bare i remains, so the earlier declaration is removed.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -89,7 +97,7 @@ Let $V = \Lambda^{\bullet}\C^{5}$ be the five-mode module of Theorem \claimref{s
 \item[(ii)] \emph{(One pair decides.)} $(-1)^{N}$ commutes with $\so(10)$; $\Gamma'$ commutes with $\uu(5)$, and $x \mapsto [\Gamma', x]$ is injective on $\mathfrak{p}$. For an involution equal to $s(-1)^{N}$ ($s = \pm1$) on the charged states and arbitrary on the neutral block, commuting with one nonzero pure creation element $x \in \mathfrak{p}$ forces $\Gamma\Omega^{\top} = -s\Omega^{\top}$ and $\Gamma\Omega \in s\Omega + \C\Omega^{\top}$, and commuting with $x$ and $x^{\dagger}$ forces $\Gamma = s(-1)^{N}$.
 \item[(iii)] \emph{(Dichotomy.)} Let $\mathfrak{g}$ be closed under adjoints with $\mathfrak{s}(\uu(2) \oplus \uu(3)) \subseteq \mathfrak{g} \subseteq \so(10)$. If $\mathfrak{g} \subseteq \uu(5)$, the vacuum-swapped halving commutes with $\mathfrak{g}$ and the bit is free. If $\mathfrak{g} \not\subseteq \uu(5)$, the anomaly-free gauge-commuting CPT halvings that commute with $\mathfrak{g}$ are exactly $\pm(-1)^{N}$, with no use of number conservation or of the grading clause. In particular the Pati-Salam algebra $\so(4) \oplus \so(6)$ of the split-preserving bivectors (Proposition \claimref{standard-model.automorphisms-preserve-slot-pair-split-are}), the left-right algebra $\su(3) \oplus \su(2)_{L} \oplus \su(2)_{R} \oplus \uu(1)_{B - L}$, $\su(4) \oplus \su(2)_{L} \oplus \uu(1)$ and the flipped $\uu(5)$ fix the bit; the Georgi-Glashow $\uu(5)$, and the Standard Model algebra with $B - L$ or with $N$ adjoined, do not.
 \item[(iv)] \emph{(Yukawa forms.)} With the invariant pairing $B$ of Lemma \claimref{standard-model.invariant-pairing-five-modes}: for $(-1)^{N}$ the slot vectors pair the lepton doublet (one slot, three pairs) with $\Omega$; for $\Gamma'$ the full state $\Omega^{\top}$ has $B(\Omega^{\top}, X\psi) = B(\psi, X\Omega^{\top}) = 0$ for every other state $\psi$ of its half and every Clifford element $X$ of grade $1$, $3$ or $5$, keeps a nonzero self-pairing $B(\Omega^{\top}, X\Omega^{\top})$, and meets the lepton doublet only through grade four. The charged states of the two halves coincide. Hence, for Yukawa couplings that are odd-grade forms $B(\psi, X\varphi)$ (the $10$, $120$ and $126$ forms of the stored mass relations; under $\Gamma'$ the particle half is not an $\so(10)$ module, so these forms are an assumption there, not singled out), the rung coupling gives the particle half's neutral singlet a Dirac coupling to the lepton doublet under $(-1)^{N}$ and none under $\Gamma'$.
-\item[(v)] \emph{(CPT blindness.)} $\Theta = U\kappa$, with $U = \prod_{k}(a^{\dagger}_{k} + a_{k})$ and $\kappa$ complex conjugation in the occupation basis, commutes with all ten Hermitian Majoranas, so with $\Spin(10)$, carries $\Omega$ to $\pm\Omega^{\top}$, commutes with the swap $S$ of $\Omega$ and $\Omega^{\top}$, and satisfies $\Theta(-1)^{N}\Theta^{-1} = -(-1)^{N}$ and $\Theta\Gamma'\Theta^{-1} = -\Gamma'$.
+\item[(v)] \emph{(CPT blindness.)} $\Theta = U\kappa$, with $U = \prod_{k}(a^{\dagger}_{k} + a_{k})$ and $\kappa$ complex conjugation in the occupation basis (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors; $\kappa$ sends $I_{4}$ to $-I_{4}$), commutes with all ten Hermitian Majoranas, so with $\Spin(10)$, carries $\Omega$ to $\pm\Omega^{\top}$, commutes with the swap $S$ of $\Omega$ and $\Omega^{\top}$, and satisfies $\Theta(-1)^{N}\Theta^{-1} = -(-1)^{N}$ and $\Theta\Gamma'\Theta^{-1} = -\Gamma'$.
 \end{enumerate}
 Hence, given the other clauses of the slot-module hypothesis (\claimref{standard-model.slot-module-hypothesis}) and anomaly freedom, the grading form of its chirality clause (its earlier version) is equivalent to the chirality commuting with some gauge algebra between the Standard Model and $\so(10)$ that leaves $\uu(5)$, the Pati-Salam algebra of the chain among them (the clause's current form), and is not implied by any that stays inside it.
 

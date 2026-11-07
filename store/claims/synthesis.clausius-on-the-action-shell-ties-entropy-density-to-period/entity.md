@@ -25,11 +25,11 @@ derivations:
   uses:
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.r-loc-independent-sets-matter-coupling@3
+  - synthesis.r-loc-independent-sets-matter-coupling@5
   - synthesis.einstein-equations-from-c-loc-and-clausius@7
   - synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent@1
   - synthesis.loc-independent-of-clausius-and-killing-data@4
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@2
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
   - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@2
   - synthesis.imported-gtg-dictionary@1
   - synthesis.imported-jacobson-clausius-1995@2

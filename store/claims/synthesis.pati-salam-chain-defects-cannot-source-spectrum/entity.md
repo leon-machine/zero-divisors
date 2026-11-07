@@ -1,7 +1,7 @@
 ---
 id: synthesis.pati-salam-chain-defects-cannot-source-spectrum
 kind: claim
-version: 2
+version: 3
 title: 'Pati-Salam chain defects cannot source the spectrum'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -26,7 +30,7 @@ derivations:
   - standard-model.what-angle-asks-neutrino-sector@4
   - synthesis.untuned-fit-caps-lightest-heavy-neutrino@1
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - std-algebra.spin-double-cover@1
   - synthesis.imported-macro-monopole-flux-limit@1
   - synthesis.imported-nielsen-olesen-string-tension@1
@@ -55,6 +59,14 @@ lineage:
   - synthesis.pati-salam-monopoles-bound-descent-history
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U5 with U1: the complex matrices of the defining representations of SU(4), SU(2)_L, SU(2)_R and U(1)_Y (exp(3 pi i(B - L)), diag(e^{i theta/6}U_3, e^{-i theta/2}), exp(i theta Y), the centre {i^a 1_4}, exp(2 pi i t Y)) are written with entries in span{1, I_4}, the store''s complex field, beside the Clifford (rotor) form already given. No bare i remains, so the outside_ga declaration (bridge, for i only) is removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the phases are entries of the complex defining representations of the Pati-Salam factors, stated beside their Clifford (rotor) form; declared as a bridge (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -77,7 +89,7 @@ extraction:
 ## formal
 Work on the stored chain: $G = SU(4) \times SU(2)_{L} \times SU(2)_{R}$, simply connected (the store's $\mathrm{Spin}(6) \times \mathrm{Spin}(4)$), broken in one step at $M_{I} = 1.95 \times 10^{10}$ GeV to the Standard Model by the $\nu^{c}\nu^{c}$ component of the $(10,1,3)$ (Theorem \claimref{standard-model.majorana-element}), with $v_{R} = M_{I}/g_{R}$, $g_{R} = 0.469$ (Proposition \claimref{standard-model.what-angle-asks-neutrino-sector}); let $H$ be the stabiliser of that vacuum and $H_{0} = SU(3) \times SU(2)_{L} \times U(1)_{Y}$, $Y = T_{3R} + \tfrac12(B - L)$, its identity component. Let $M_{r} = 2.435 \times 10^{18}$ GeV be the reduced Planck mass and $A_{s} = 2.1 \times 10^{-9}$ the measured amplitude (Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}).
 \begin{enumerate}
-\item[(i)] \emph{($\mathbb{Z}_{2}$ strings.)} The matter parity $m = (-1_{4}, 1, 1) = \exp(3\pi i(B - L))$ on the $16$, which is the rotor $-1$ of $\mathrm{Spin}(6) = SU(4)$ (the $2\pi$ rotor, the kernel element of Proposition \claimref{std-algebra.spin-double-cover}; its image in $\mathrm{Spin}(10)$ is the rotor $-1$ there), lies in $H$ (it fixes every vector and so every tensor, and the $(10,1,3)$ is a tensor: self-dual $3$-vectors of the six-dimensional factor and self-dual bivectors of the four-dimensional one) and not in $H_{0}$: every central element of $G$ in $H_{0}$ has equal $SU(4)$ and $SU(2)_{R}$ scalars, and $m$ does not. Hence $\pi_{1}(G/H) = \pi_{0}(H)$ contains $\mathbb{Z}_{2}$: the chain has topologically stable $\mathbb{Z}_{2}$ strings at the scale $v_{R}$, besides the monopoles of $\pi_{2}(G/H) = \pi_{1}(H_{0}) \supseteq \mathbb{Z}$ (the hypercharge circle is a noncontractible loop of $H_{0}$ that closes in the simply connected $G$).
+\item[(i)] \emph{($\mathbb{Z}_{2}$ strings.)} The matter parity $m = (-1_{4}, 1, 1) = \exp(3\pi I_{4}(B - L))$ on the $16$ (numbers, and the entries of the defining representations of the factors, are read in $\mathrm{span}\{1, I_{4}\}$, conventions U1), which is the rotor $-1$ of $\mathrm{Spin}(6) = SU(4)$ (the $2\pi$ rotor, the kernel element of Proposition \claimref{std-algebra.spin-double-cover}; its image in $\mathrm{Spin}(10)$ is the rotor $-1$ there), lies in $H$ (it fixes every vector and so every tensor, and the $(10,1,3)$ is a tensor: self-dual $3$-vectors of the six-dimensional factor and self-dual bivectors of the four-dimensional one) and not in $H_{0}$: every central element of $G$ in $H_{0}$ has equal $SU(4)$ and $SU(2)_{R}$ scalars, and $m$ does not. Hence $\pi_{1}(G/H) = \pi_{0}(H)$ contains $\mathbb{Z}_{2}$: the chain has topologically stable $\mathbb{Z}_{2}$ strings at the scale $v_{R}$, besides the monopoles of $\pi_{2}(G/H) = \pi_{1}(H_{0}) \supseteq \mathbb{Z}$ (the hypercharge circle is a noncontractible loop of $H_{0}$ that closes in the simply connected $G$).
 \item[(ii)] \emph{(No formation after the descent.)} Under Premise \claimref{neutrino.r-descent-reheats-below-lower-heavy} on the untuned fit (Proposition \claimref{synthesis.untuned-fit-caps-lightest-heavy-neutrino}) the descent reheats below $7.3 \times 10^{8}$ GeV $< 0.0176\,v_{R}$, so unless the restoration temperature of the chain lies below $0.0176\,v_{R}$ the descended bath never restores Pati-Salam, and the chain's monopoles and strings exist after the descent only as part of the deposit. The later transitions form no topologically stable defect: the electroweak vacuum manifold is the three-sphere and the strong interaction breaks no gauge symmetry.
 \item[(iii)] \emph{(A deposited network is negligible.)} A deposited $\mathbb{Z}_{2}$ string network reaches scaling with $G\mu = \epsilon\,\eta^{2}/(4M_{r}^{2})$; for $\epsilon \in [\tfrac12, 10]$ and $\eta \in [v_{R}/\sqrt2, \sqrt2\,v_{R}]$, $G\mu \in (1.8 \times 10^{-17}, 1.46 \times 10^{-15})$, central value $7.3 \times 10^{-17}$. Its share of the temperature power at $\ell = 10$ is $f_{10} = \kappa\,(G\mu)^{2}$ with $\kappa < 10^{13}$ for both string models, so, with the mirror copy doubling it, $f_{10} < 4.3 \times 10^{-17}$.
 \item[(iv)] \emph{(Monopoles.)} Deposited monopoles are a pressureless gas with fluctuations of finite range, in the class of Theorem \claimref{synthesis.finite-range-descent-deposit-cannot-seed-cmb}, and are bounded in density by the flux limit of Fact \claimref{synthesis.imported-macro-monopole-flux-limit} (argued).

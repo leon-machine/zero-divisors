@@ -21,9 +21,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.many-twistor-join@2
-  - standard-model.internal-symmetry-ladder@3
-  - families.chart-computation-sign-twist-bracket-form@5
+  - synthesis.many-twistor-join@3
+  - standard-model.internal-symmetry-ladder@4
+  - families.chart-computation-sign-twist-bracket-form@6
   assumes:
   - families.slot-covariance-of-mass-law@1
   proof: proof-main.tex

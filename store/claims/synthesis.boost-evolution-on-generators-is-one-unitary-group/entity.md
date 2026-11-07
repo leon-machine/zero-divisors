@@ -1,7 +1,7 @@
 ---
 id: synthesis.boost-evolution-on-generators-is-one-unitary-group
 kind: claim
-version: 2
+version: 4
 title: 'Boost evolution on horizon generators is one unitary dilation group'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the quoted window dynamics written with the transverse unit J'
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -25,12 +33,12 @@ derivations:
 - name: main
   uses:
   - field-theory.second-quantisation@5
-  - tower.structure-tower-c-norms@7
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
-  - synthesis.affine-cell-boost-spreads-without-scrambling@1
-  - synthesis.number-diagonal-dynamics-spreads-nothing@1
-  - singularity.euclidean-rotor-where-it-lies@4
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - tower.structure-tower-c-norms@9
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
+  - synthesis.affine-cell-boost-spreads-without-scrambling@3
+  - synthesis.number-diagonal-dynamics-spreads-nothing@2
+  - singularity.euclidean-rotor-where-it-lies@5
+  - synthesis.positive-null-energy-gives-r-premises@7
   - scrambling.spreading-law-chaos-bound-saturated@5
   - hawking.i-state-continuum@5
   proof: proof-main.tex
@@ -54,6 +62,14 @@ lineage:
   - note.decisions.two-boost-flows
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2 for the quoted window dynamics: a_j -> e^{-J omega_j t}a_j with J = e_2 e_3, the boundary modes'' complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention); the generator''s continuum keeps I_4 (U1), and the proof now says which unit acts where and that the comparison is of frequencies, the units not identified. Declaration removed: no bare i remains.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The field''s operator unit on the even values of the canonical null component (Definition obj.field-theory.single-algebra-field: i = I_4) is written I_4 throughout: the Mellin modes |u|^{-1/2 + I_4 w}, the phase flow e^{-I_4 kappa w t}, the imaginary rapidity lambda = I_4 theta, the value rotor B_{I_4 theta} = cos + I_4 e1e0 sin with B_{I_4 theta}Lambda(m) = e^{-I_4 theta/2}Lambda(m), the rotation u -> e^{-I_4 theta}u into span{1, I_4} and the factor -I_4 at theta = pi, numbers read in span{1, I_4}; the proof''s quoted window formula a_j -> e^{-i omega_j t}a_j keeps i (Leon''s ruling R1: window flows keep their own unit) and is declared.'
   open_problem: op.which-boost-flow-is-time
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -86,8 +102,8 @@ Work in the spacetime algebra $\Cl(1,3)$ of the flat background with the store's
 \alpha_{\lambda}(\psi_{m}(u)) = e^{-\lambda/2}\psi_{m}(e^{-\lambda}u), \qquad \alpha_{\lambda}(a(f)) = a(D_{\lambda}f),\quad (D_{\lambda}f)(u) = e^{-\lambda/2}f(e^{-\lambda}u),
 \]
 with $D_{\lambda}$ unitary and $D_{\lambda}D_{\mu} = D_{\lambda+\mu}$, so $\alpha$ is a one-parameter group of quasi-free $*$-automorphisms; it is the dilation of Proposition \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}. Neither factor alone preserves the anticommutator (they rescale it by $e^{\mp\lambda}$), so neither is a $*$-automorphism, and among weights $e^{-w\lambda}$ only $w = \tfrac12$ makes the product unitary. On $\Lambda(k)\psi$ the rotor weight is $e^{+\lambda/2}$ and the two factors do not cancel.
-\item[(iii)] \emph{(The phase flow.)} On each half-generator the half-density monomials $f_{w}(u) = |u|^{-1/2 + iw}$ satisfy $D_{\lambda}f_{w} = e^{-iw\lambda}f_{w}$, and a weight $e^{-\lambda(1/2 + s)}$ on $|u|^{s}$ is a phase exactly when $\mathrm{Re}\,s = -\tfrac12$. So in the Mellin basis $\alpha_{\kappa t}$ is the phase flow $a(f_{w}) \mapsto e^{-i\kappa wt}a(f_{w})$ of one-particle Hamiltonian $\kappa w$, spectrum all of $\R$: the boost dynamics of the windows (Proposition \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}) with its point spectrum refined to the continuum.
-\item[(iv)] \emph{(Imaginary rapidity.)} Continued to $\lambda = i\theta$ the two factors are the Euclidean rotor $B_{i\theta} = \cos\tfrac{\theta}{2} + i\,e_{1}e_{0}\sin\tfrac{\theta}{2}$ of Proposition \claimref{singularity.euclidean-rotor-where-it-lies} on values, $B_{i\theta}\Lambda(m) = e^{-i\theta/2}\Lambda(m)$, and the rotation $u \mapsto e^{-i\theta}u$ of the affine parameter into the complex plane. At $\theta = \pi$ it carries the half-generator $u > 0$ to $u < 0$ with factor $-i$; at $\theta = 2\pi$ it returns with factor $-1$, at $4\pi$ with $+1$. On Mellin modes the continued phase is the real factor $e^{w\theta}$: the rotor flow, which rescales the modes, is this group's continuation into the strip, and under (N$_{+}$) the restriction of the ground state to a half-generator is KMS for $\alpha$ at $\theta = 2\pi$ (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}).
+\item[(iii)] \emph{(The phase flow.)} Numbers are read in $\mathrm{span}\{1, I_{4}\}$, the unit $I_{4}$ being the field's operator unit on the even values (Definition \claimref{obj.field-theory.single-algebra-field}). On each half-generator the half-density monomials $f_{w}(u) = |u|^{-1/2 + I_{4}w}$ satisfy $D_{\lambda}f_{w} = e^{-I_{4}w\lambda}f_{w}$, and a weight $e^{-\lambda(1/2 + s)}$ on $|u|^{s}$, $s \in \mathrm{span}\{1, I_{4}\}$, is a phase exactly when $\mathrm{Re}\,s = -\tfrac12$. So in the Mellin basis $\alpha_{\kappa t}$ is the phase flow $a(f_{w}) \mapsto e^{-I_{4}\kappa wt}a(f_{w})$ of one-particle Hamiltonian $\kappa w$, spectrum all of $\R$: the boost dynamics of the windows (Proposition \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}) with its point spectrum refined to the continuum.
+\item[(iv)] \emph{(Imaginary rapidity.)} Continued to $\lambda = I_{4}\theta$ the two factors are the Euclidean rotor $B_{I_{4}\theta} = \cos\tfrac{\theta}{2} + I_{4}e_{1}e_{0}\sin\tfrac{\theta}{2}$ of Proposition \claimref{singularity.euclidean-rotor-where-it-lies} on values (its unit read on the even values as $I_{4}$, as that proposition's note on values records), $B_{I_{4}\theta}\Lambda(m) = e^{-I_{4}\theta/2}\Lambda(m)$, and the rotation $u \mapsto e^{-I_{4}\theta}u$ of the affine parameter into the plane $\mathrm{span}\{1, I_{4}\}$. At $\theta = \pi$ it carries the half-generator $u > 0$ to $u < 0$ with factor $-I_{4}$; at $\theta = 2\pi$ it returns with factor $-1$, at $4\pi$ with $+1$. On Mellin modes the continued phase is the real factor $e^{w\theta}$: the rotor flow, which rescales the modes, is this group's continuation into the strip, and under (N$_{+}$) the restriction of the ground state to a half-generator is KMS for $\alpha$ at $\theta = 2\pi$ (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}).
 \item[(v)] \emph{(Real time.)} For all $f, g$ and all real $\lambda$, $|\{a(D_{\lambda}f), a^{*}(g)\}| = |\ip{g}{D_{\lambda}f}| \le \|f\|\,\|g\|$, and for two fixed affine cells it falls as $e^{-\lambda/2}$. The anticommutator of linear elements is a scalar, so in every state the out-of-time-order correlators built from them are bounded: the real-time Lyapunov exponent of the quasi-free dynamics $\alpha$ on linear elements is $0$. Nothing here bears on non-quadratic dynamics. What grows at rate $\kappa$ in real time is the support, which covers $e^{\kappa t}$ affine cells (Proposition \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}); what grows in imaginary time is the Mellin factor $e^{w\theta}$.
 \item[(vi)] \emph{(Killing horizons.)} At the eternal hole's horizon and at the de Sitter cosmological horizon the Killing flow acts on the affine parameter of the generators as $u \mapsto e^{\pm\kappa t}u$ (the boost $\beta_{t}$ of the setup of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}); by (ii) the anticommutator then forces the weight $\tfrac12$, so the boost time evolution there is the same group $\alpha_{\kappa t}$, and (iii) to (v) hold unchanged. That its value factor is the boost of the frame along the generator, relative to frames parallel along the generators, is derived for every Killing horizon with nonzero surface gravity, off its bifurcation surface and whatever the field strength, in Theorem \claimref{synthesis.killing-horizon-value-factor-is-the-generator-boost}, which builds on (i) and (ii) here.
 \end{enumerate}

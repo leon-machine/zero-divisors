@@ -67,7 +67,7 @@ def lam_m(x):
 
 
 def check_mass_terms_enter_only_the_constraint():
-    premise("synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays")
+    premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
     premise("field-theory.second-quantisation")
     ok = GA.is_zero(mm(K, K)) and GA.eq(mm(K, M), GA.add(GA.sc(2), GA.scal(F(2), B)))
     # reciprocal frame of the (k, m) plane: k.m = 2, so a = (1/2) m (k.a) + (1/2) k (m.a) + a_perp
@@ -97,7 +97,7 @@ def check_mass_terms_enter_only_the_constraint():
 
 def check_canonical_projector_is_residue_zero_ideal():
     premise("synthesis.lowest-causal-residues-zero-four-content")
-    premise("synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays")
+    premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
     f = GA.scal(F(1, 2), GA.add(GA.sc(1), mm(g(0), g(3))))
     lm = GA.scal(F(1, 2), GA.sub(GA.sc(1), B))
     ok = GA.eq(f, lm) and GA.eq(mm(f, f), f)

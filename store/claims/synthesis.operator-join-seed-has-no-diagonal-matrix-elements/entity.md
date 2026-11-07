@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-seed-has-no-diagonal-matrix-elements
 kind: claim
-version: 1
+version: 2
 title: 'The operator join''s seed has no diagonal matrix elements'
 status: proved
 region: synthesis
@@ -17,11 +17,15 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@2
+  - synthesis.operator-join-ordering-constants@3
   - mass.imported-palatial-quadratics-homogeneity-charge@4
   - families.source-term-linear-tilt-mass-functional@4
   - families.imported-face-valued-bracket-quantum-numbers@5
@@ -40,6 +44,10 @@ lineage:
   - synthesis.massless-composites-de-sitter-conformal-boundary
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3: the determinant U(1) of proof (3) is exp(I_4 phi tr h / hbar), the palatial Fock space read over span{1, I_4} on the tower''s floors (stated once, at its only use; notational); no bare i remains, so the earlier declaration is removed.'
   open_problem: op.operator-join
   note: >-
     Bears on the reformulated question of the problem (is the seed supported on the quantum massless

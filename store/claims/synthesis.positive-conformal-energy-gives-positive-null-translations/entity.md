@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-conformal-energy-gives-positive-null-translations
 kind: claim
-version: 5
+version: 7
 title: 'Positive conformal energy gives positive null translations'
 status: proved
 region: synthesis
@@ -17,14 +17,22 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.positive-energy-selects-rule-2-sign@3
+  - synthesis.positive-energy-selects-rule-2-sign@4
   - mass.chart-form-spin-isomorphism@5
-  - angle.imported-theorems-deliver-their-hypotheses@1
-  - std-algebra.bivector-exponential@1
+  - angle.imported-theorems-deliver-their-hypotheses@3
+  - std-algebra.bivector-exponential@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -42,6 +50,14 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.point-spectrum-boost-admits-no-half-sided-translations
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7. The self-adjoint generators -i d pi(Y) of an arbitrary unitary representation on a GNS Hilbert space: by U1 the scalars of an abstract complex Hilbert space are span{1, I_4}, so the generators are -I_4 d pi(Y) (the formal level and every occurrence in the proof), with a sentence fixing the scalars. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the hypothesis is an arbitrary continuous unitary representation of Spin+(2,4) on a GNS Hilbert space, and -i d pi(Y) is its self-adjoint generator; the store does not tie that space''s complex structure to I_4.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -78,7 +94,7 @@ extraction:
 ---
 
 ## formal
-Work in $\Cl(2,4)$ with orthonormal $e_{0}$ ($e_{0}^{2} = 1$), $e_{1}, e_{2}, e_{3}$ (square $-1$), $\nu$ ($\nu^{2} = 1$) and $e_{-}$ ($e_{-}^{2} = -1$); put $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, so $\ip{\nO}{\nInf} = 1$, and $X(x) = \nO + x - \tfrac12 Q(x)\nInf$ for $x \in \R^{1,3}$, the chart of Lemma \claimref{mass.chart-form-spin-isomorphism}. Let $Z = e_{0}\nu$, which spans the centre of the maximal compact subalgebra of $\so(2,4)$ (Proposition \claimref{synthesis.positive-energy-selects-rule-2-sign}(i)), and for $a \in \R^{1,3}$ let $P_{a} = \tfrac12 a\nInf$, so that $\exp(tP_{a}) = 1 + tP_{a}$ maps $X(x)$ to $X(x + ta)$. Let $\pi$ be a continuous unitary representation of $\mathrm{Spin}^{+}(2,4)$ (for a field, on the GNS space of its state, not on a one-particle space such as $L^{2}(\R, du)$, where the null momentum takes both signs), and $C_{\pi}$ the set of Lie algebra elements $Y$ with $-i\,d\pi(Y) \ge 0$.
+Work in $\Cl(2,4)$ with orthonormal $e_{0}$ ($e_{0}^{2} = 1$), $e_{1}, e_{2}, e_{3}$ (square $-1$), $\nu$ ($\nu^{2} = 1$) and $e_{-}$ ($e_{-}^{2} = -1$); put $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, so $\ip{\nO}{\nInf} = 1$, and $X(x) = \nO + x - \tfrac12 Q(x)\nInf$ for $x \in \R^{1,3}$, the chart of Lemma \claimref{mass.chart-form-spin-isomorphism}. Let $Z = e_{0}\nu$, which spans the centre of the maximal compact subalgebra of $\so(2,4)$ (Proposition \claimref{synthesis.positive-energy-selects-rule-2-sign}(i)), and for $a \in \R^{1,3}$ let $P_{a} = \tfrac12 a\nInf$, so that $\exp(tP_{a}) = 1 + tP_{a}$ maps $X(x)$ to $X(x + ta)$. Let $\pi$ be a continuous unitary representation of $\mathrm{Spin}^{+}(2,4)$ (for a field, on the GNS space of its state, not on a one-particle space such as $L^{2}(\R, du)$, where the null momentum takes both signs), and $C_{\pi}$ the set of Lie algebra elements $Y$ with $-I_{4}\,d\pi(Y) \ge 0$, the Hilbert space's scalars read in $\mathrm{span}\{1, I_{4}\}$, the default scalar field of an abstract complex Hilbert space.
 \begin{enumerate}
 \item[(i)] \emph{(Orbit identities, exact.)} $Z^{2} = -1$ and $Z = P_{e_{0}} + e_{0}\nO$. For the dilation rotor $D_{\rho} = \tfrac12(\rho + \rho^{-1}) + \tfrac12(\rho - \rho^{-1})e_{-}\nu$, which maps $X(x)$ to $\rho^{-2}X(\rho^{2}x)$, $\rho^{-2}\,D_{\rho}Z\tilde D_{\rho} = P_{e_{0}} + \rho^{-4}e_{0}\nO$. For the boost rotor $B_{\rho} = \tfrac12(\rho + \rho^{-1}) + \tfrac12(\rho - \rho^{-1})e_{1}e_{0}$, $2\rho^{-2}\,B_{\rho}P_{e_{0}}\tilde B_{\rho} = P_{\ell} + \rho^{-4}P_{e_{0} - e_{1}}$ with $\ell = e_{0} + e_{1}$. Rotations fixing $e_{0}$ and $\nInf$ carry $P_{\ell}$ to $P_{e_{0} + \hat n}$ for every unit $\hat n$, and every $a$ in the closed forward cone is a nonnegative combination of two future null vectors. The $P_{a}$ commute.
 \item[(ii)] \emph{(The cone.)} $C_{\pi}$ is a closed convex cone, invariant under the adjoint action. If $Z \in C_{\pi}$ (nonnegative conformal energy), then $P_{a} \in C_{\pi}$ for every $a$ in the closed forward cone: the joint spectrum of the translations lies in the closed forward cone, and for every future null $\ell$ the null translation $\exp(tP_{\ell})$ has a nonnegative generator. If $-Z \in C_{\pi}$, the same holds with the backward cone. A spacelike $P_{a}$ is conjugate to $-P_{a}$, so it lies in $C_{\pi}$ only if $d\pi(P_{a}) = 0$.

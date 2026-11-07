@@ -1,7 +1,7 @@
 ---
 id: mass.casimir-form-join
 kind: claim
-version: 6
+version: 7
 title: The Casimir form of the join
 status: proved
 region: mass
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 7
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.mass.grip-mass-composite
@@ -24,7 +28,7 @@ derivations:
 - name: main
   uses:
   - mass.chart-form-spin-isomorphism@5
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.invariant-forms-simple-lie-algebra@2
   proof: proof-main.tex
@@ -47,6 +51,10 @@ locators:
   label: prop:casimir
   line: 766
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The chart''s complex unit, which the proof''s convention line already read as I_6 but wrote i, is now written I_6: on the moment element''s spinor values on the right (W -> sum Z (Zbar . W) I_6), on numbers (traces) read in span{1, I_6}; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

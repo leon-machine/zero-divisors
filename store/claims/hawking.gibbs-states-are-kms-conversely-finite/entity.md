@@ -1,7 +1,7 @@
 ---
 id: hawking.gibbs-states-are-kms-conversely-finite
 kind: claim
-version: 2
+version: 4
 title: Gibbs states are KMS, and conversely, in finite dimensions
 status: proved
 region: hawking
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -36,6 +44,14 @@ locators:
   label: lem:gibbs
   line: 442
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The flow Ad(e^{itH}) and its continuation alpha_{i beta} on the general matrix algebra End(C^m): by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tH}), alpha_{I_4 beta}(x) = e^{-beta H} x e^{beta H}. Declaration removed.'
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the flow Ad(e^{itH}) and its continuation alpha_{i beta} are taken on the general matrix algebra End(C^m), not on a mode space the store ties to I_4.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -53,14 +69,14 @@ extraction:
 ---
 
 ## formal
-Let $\mathfrak{B} = \End(\C^m)$, let $H$ be diagonal in the basis $(\xi_a)$ with eigenvalues $\lambda_a$, all distinct or not, let $\alpha_t = \mathrm{Ad}(e^{itH})$, and $\beta \in \R$. Then the Gibbs state $\omega_G(x) := \tr(e^{-\beta H}x)/\tr(e^{-\beta H})$ satisfies the KMS identity
+Let $\mathfrak{B} = \End(\C^m)$, with scalars $\C = \mathrm{span}\{1, I_4\}$ (the default scalar field of an abstract complex matrix algebra), let $H$ be diagonal in the basis $(\xi_a)$ with eigenvalues $\lambda_a$, all distinct or not, let $\alpha_t = \mathrm{Ad}(e^{I_4tH})$, and $\beta \in \R$. Then the Gibbs state $\omega_G(x) := \tr(e^{-\beta H}x)/\tr(e^{-\beta H})$ satisfies the KMS identity
 \[
-\omega_G(x\,y) \;=\; \omega_G\bigl(y\,\alpha_{i\beta}(x)\bigr), \qquad \alpha_{i\beta}(x) := e^{-\beta H}x\,e^{\beta H},
+\omega_G(x\,y) \;=\; \omega_G\bigl(y\,\alpha_{I_4\beta}(x)\bigr), \qquad \alpha_{I_4\beta}(x) := e^{-\beta H}x\,e^{\beta H},
 \]
 for all $x, y$; and it is the \emph{unique} $\alpha$-KMS state at $\beta$ on $\mathfrak{B}$, degenerate spectrum included.
 
 ## technical
-Let $\mathfrak{B} = \End(\C^m)$ carry the dynamics $\alpha_t = \mathrm{Ad}(e^{itH})$ for a diagonal $H$ with eigenvalues $\lambda_a$, repeated or not, and fix $\beta \in \R$. The Gibbs state $\omega_G(x) = \tr(e^{-\beta H}x)/\tr(e^{-\beta H})$ satisfies the KMS identity $\omega_G(xy) = \omega_G(y\,\alpha_{i\beta}(x))$ with $\alpha_{i\beta}(x) = e^{-\beta H}x\,e^{\beta H}$, by cyclicity of the trace.
+Let $\mathfrak{B} = \End(\C^m)$, over $\mathrm{span}\{1, I_4\}$, carry the dynamics $\alpha_t = \mathrm{Ad}(e^{I_4tH})$ for a diagonal $H$ with eigenvalues $\lambda_a$, repeated or not, and fix $\beta \in \R$. The Gibbs state $\omega_G(x) = \tr(e^{-\beta H}x)/\tr(e^{-\beta H})$ satisfies the KMS identity $\omega_G(xy) = \omega_G(y\,\alpha_{I_4\beta}(x))$ with $\alpha_{I_4\beta}(x) = e^{-\beta H}x\,e^{\beta H}$, by cyclicity of the trace.
 
 Conversely, writing a KMS state as $\omega(x) = \tr(\rho x)$ and testing the identity on matrix units forces Gibbs ratios $\rho_{aa} = e^{-\beta(\lambda_a-\lambda_b)}\rho_{bb}$ between the diagonal entries and makes every off-diagonal entry vanish, even where eigenvalues coincide. Hence $\rho = e^{-\beta H}/Z$: the Gibbs state is the unique $\alpha$-KMS state at $\beta$.
 

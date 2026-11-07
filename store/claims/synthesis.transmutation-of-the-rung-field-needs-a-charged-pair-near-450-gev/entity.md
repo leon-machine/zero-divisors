@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@2
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - synthesis.scale-free-rung-potentials-need-the-flat-physical-branch@2
   - synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass@1
   proof: proof-main.tex

@@ -1,7 +1,7 @@
 ---
 id: synthesis.theta23-at-s3-s2-direction
 kind: claim
-version: 2
+version: 3
 title: Near-maximal theta-23 at the S3 to S2 direction needs the far root and opposite signs
 status: proved
 subject: neutrinos
@@ -19,6 +19,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 derivations:
 - name: main
   uses:
@@ -31,6 +35,10 @@ checked_by:
 - kind: check
   ref: check.py::test_theta23
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F: the eigenvector angle 2 theta = arg(Delta + I_4 B'') of the proof and the point Delta + I_4 B'' that moves in the upper half-plane are written with I_4, numbers read in span{1, I_4}; no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

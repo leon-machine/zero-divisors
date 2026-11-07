@@ -23,8 +23,8 @@ derivations:
   proof: proof-main.tex
   uses:
   - scrambling.area-law-test@4
-  - scrambling.clock-inventory-boundary-modes@5
-  - scrambling.imported-modes-modular-inventory@3
+  - scrambling.clock-inventory-boundary-modes@6
+  - scrambling.imported-modes-modular-inventory@5
   - scrambling.mode-count@2
 checked_by:
 - kind: legacy

@@ -24,7 +24,7 @@ derivations:
   - one-relation.imported-cartans-purity-theorem-thouless-form@1
   - pairing.imported-stabiliser-tangent-external@1
   - singularity.envelope-endpoint-why-boundary-mode-locality@7
-  - singularity.l-stabiliser-tangent@5
+  - singularity.l-stabiliser-tangent@6
   proof: proof-main.tex
 checked_by:
 - kind: proof
