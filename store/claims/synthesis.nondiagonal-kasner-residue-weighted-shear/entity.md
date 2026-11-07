@@ -25,16 +25,20 @@ credit:
   role: 'GTG proof: the boost block from the torsion equation on the constant physical frame; Ricci and constraint along gamma_0'
   version: 4
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): torsion-equation citation corrected'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.variable-exponents-residue-pointwise-corrections-are@4
-  - synthesis.diagonal-kasner-momentum-constraint@3
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - dark-energy.cosmological-constant-does-not-change-residue@6
+  - dark-energy.variable-exponents-residue-pointwise-corrections-are@5
+  - synthesis.diagonal-kasner-momentum-constraint@4
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - dark-energy.cosmological-constant-does-not-change-residue@7
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -53,6 +57,10 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 9.1 applied (citation): the frame torsion equation is attributed to Definition obj.synthesis.gtg-flat-spacetime-gauge-fields(f), D ^ hb^T(a) = hb^T(grad ^ a) applied to a = f^a, not to Fact synthesis.imported-gtg-dictionary(ii). The referee''s optional formal change (formal (i) could now fix the sign it leaves ''up to the sign convention'') is listed for Leon, not applied. Pins (all notation: GA rewrites with the component form kept as reading, or formal unchanged): dark-energy.variable-exponents-residue-pointwise-corrections-are 4 -> 5, synthesis.diagonal-kasner-momentum-constraint 3 -> 4, dark-energy.frozen-point-datum-kasner-wall 7 -> 8, dark-energy.cosmological-constant-does-not-change-residue 6 -> 7.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

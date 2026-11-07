@@ -28,11 +28,15 @@ credit:
   role: 'GTG proof of (i), (ii): I and V as Cl(2,4) vectors with the bivector action, T a trivector field; exact checks'
   version: 5
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): outside_ga made exact (clause (iv) global fact); pin'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - dark-energy.under-action-written-norm-parameter-laws@4
   proof: proof-main.tex
@@ -54,6 +58,10 @@ about:
 - obj.dark-energy.four-ways-number-enters-theory-shape
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 finding applied. outside_ga named clause (iii) only; the proof of clause (iv) also uses a global form fact, the solvability of the four-form equation c dT = -dL/d lambda on M = R x Sigma because a noncompact connected four-manifold has H^4(M) = 0 (standard: the top de Rham cohomology of a connected noncompact manifold vanishes). The declaration now names it. The referee''s recomputation (constraint rank 3, gauge image rank 9, gauge plus norm mode rank 10 at Lambda = 3, 3/4, -6) agrees with the checks; nothing else changed. Repinned dark-energy.imported-henneaux-teitelboim-promotion 5 -> 6 (formal unchanged since the lock). No check changed. Version kept at 5.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -80,7 +88,7 @@ extraction:
     note: 'Restated in Gauge Theory Gravity (FLAG): the spacetime M carries a gravitational field (hb, Omega) on flat spacetime; the compact spatial slice Sigma of M = R x Sigma, on which the reduced phase space H^0 x H^3 gives the one global pair, carries the Section 14 flag and a flags entry; the pointwise count (i) and d lambda = 0 of (ii) are local. Clauses (i)-(v) unchanged.'
 outside_ga:
   kind: other
-  why: 'Clause (iii) uses de Rham cohomology (H^0 and H^3) of the compact spatial slice, topological data beyond one flat chart, stated and proved in the language of forms on the assembled manifold; the local clauses are in GA (T a trivector field, dT = grad ^ T).'
+  why: 'Clause (iii) uses de Rham cohomology (H^0 and H^3) of the compact spatial slice, and the proof of clause (iv) the vanishing of the top cohomology H^4(M) = 0 of the noncompact connected M = R x Sigma (so that the four-form equation c dT = -dL/d lambda is solvable): topological data beyond one flat chart, stated and proved in the language of forms on the assembled manifold; the local clauses are in GA (T a trivector field, dT = grad ^ T).'
 ---
 
 ## formal

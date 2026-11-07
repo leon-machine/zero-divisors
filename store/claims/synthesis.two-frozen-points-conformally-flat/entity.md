@@ -25,6 +25,10 @@ credit:
   role: 'GTG proof: tractors as Cl(2,4) vectors, the flat-scale connection as the gauge field -ninf ^ a, stabilisers as bivectors'
   version: 4
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): Einstein scale computed directly instead of from the converse of the Fact'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 derivations:
 - name: main
@@ -47,6 +51,10 @@ lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 10.1 applied: proof (i) read ''a parallel tractor of norm Lambda/3 is the scale tractor of an Einstein scale'' from Fact dark-energy.imported-frozen-point-geometry, which states the converse direction only. The step is now computed: for hb^{-1}(a) = a/sigma the torsion equation gives Omega(a) = (grad sigma ^ a)/sigma, R(a ^ b) = -(2 r sigma + Q(grad sigma)) sigma^-2 a ^ b = -Q(I) sigma^-2 a ^ b, calR(B) = -R(sigma^2 B) = Q(I) B, Lambda = 3 Q(I). Fixer verified exactly with the gtg engine (torsion solved, not assumed) at (s, r) = (1, 1), (-2, 3/4), (3/2, -5/2), (1, 1/2) with generic m and points: torsion-free, Omega(e_mu) equal to the formula, R(e_mu ^ e_nu) = -Q(I) sigma^-2 e_mu ^ e_nu, calR = Q(I) id and Ricci map 3 Q(I) id. The existing check already computes this field; no check change.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

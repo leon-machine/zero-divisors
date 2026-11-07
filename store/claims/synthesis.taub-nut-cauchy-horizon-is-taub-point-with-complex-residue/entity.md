@@ -29,6 +29,10 @@ credit:
   role: 'GTG proof of (i): Bianchi IX gauge field solved from the torsion equation, field equations from the field strength; exact checks'
   version: 3
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F2): pin'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -36,7 +40,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.bkl-bounces-no-framewise-invariant@2
   proof: proof-main.tex
@@ -59,6 +63,10 @@ lineage:
   motivated_by:
   - synthesis.bkl-bounce-invariant-holonomy-and-bound
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 review (accepted, no fix). Repinned synthesis.imported-gtg-dictionary 1 -> 2: clause (iv) now states the component sign R(g ^ g) = -R(e ^ e) of the store and the GA forms of the Ricci and Einstein maps; this proof cites (ii) and (iv) for the equivalence with Einstein''s equations and computes calR(B) = -R(hb(B)), which is that sign, so the use holds. The citation of synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue is a comparison, not a step, and gets no edge. No check changed. Version kept at 3.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

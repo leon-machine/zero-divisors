@@ -29,6 +29,10 @@ credit:
   role: 'GTG proof: gauge field solved from the torsion equation, classes in Cl(2,3) with I_5; exact checks'
   version: 8
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F2): uses and pins'
+  version: 8
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -36,8 +40,9 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@5
-  - pairing.imported-spin-coefficients-null-tetrad@2
+  - pairing.imported-schwarzschild-connection-curvature@6
+  - pairing.imported-spin-coefficients-null-tetrad@3
+  - std-algebra.complexification-is-the-odd-extension@2
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -60,6 +65,10 @@ locators:
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 review (accepted). uses: std-algebra.complexification-is-the-odd-extension@2 added (the I_5 classes and m = e_2 + I_5 e_3 rest on it; cited in the formal and proof). Repinned pairing.imported-schwarzschild-connection-curvature 5 -> 6 (formal unchanged) and pairing.imported-spin-coefficients-null-tetrad 2 -> 3 (the unit I_5 named, U3; the cited components hold). The referee''s optional wording ''every class tends to zero as F -> 0'' (the static gauge is not defined on the horizon locus) touches a formal clause and is listed for Leon, not applied. No check changed. Version kept at 8.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

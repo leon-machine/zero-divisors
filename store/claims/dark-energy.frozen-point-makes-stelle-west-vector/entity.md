@@ -25,6 +25,10 @@ credit:
   role: 'GTG proof: Omega_T in Cl(2,4), DI = 0, DV = hb^{-1}(a), reduced field Omega - hb^{-1}(a) ^ V/l^2, eps(I, V, X, Y) = <(X ^ Y) I_4^{-1}>; exact checks on both branches'
   version: 6
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): translational-term sign and the factor 4 of the Stelle-West contraction in the proof; outside_ga made exact'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 derivations:
 - name: main
@@ -32,7 +36,8 @@ derivations:
   - dark-energy.imported-frozen-point-geometry@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - dark-energy.imported-walls-sphere-theorem@6
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.stelle-west-vector-frozen-point@6
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -55,6 +60,10 @@ locators:
   label: thm:action
   line: 685
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Proof (ii): the translational term of the reduced field strength is -(D_a B - D_b A) ^ V/l^2, not +; checked exactly in Cl(2,4) on random spacetime bivectors and vectors (Lambda = 3/4): the cross terms Omega(a) x (-B ^ V/l^2) + (-A ^ V/l^2) x Omega(b) equal -(Omega(a) x B - Omega(b) x A) ^ V/l^2, and V is constant. It is minus the torsion wedged with V/l^2 and vanishes either way; no conclusion changes. (2) Proof (iii) and the component reading: eps_abcd X^ab Y^cd = 4 <(X ^ Y) I_4^{-1}> = 4 eps(I, V, X, Y) for X = (1/2) X^ab e_a ^ e_b, eps_abcd read off the Clifford product (checked exactly on three random bivector pairs in Cl(1,3): ratio 4); the proof now carries the 4 and the reading eps_abcd F^ab F^cd = 4 eps(I, V, F, F)/(|I| l). The formal level''s ~ absorbs the constant, so the statement is unaffected. (3) outside_ga made exact: it now also names formal (ii)''s form displays (D + e ^ V/Q(V), R + l^{-2} e ^ e), whose GA forms are in the formal and the proof, and the technical level''s repetition of the expansion. (4) uses: synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1 added (its Omega_T is the field the proof computes with in (i) and (ii)); repinned dark-energy.stelle-west-vector-frozen-point 5 -> 6 (formal unchanged; the cited (i) to (iv) hold). Version kept at 6.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -89,7 +98,7 @@ extraction:
   eqrefs: 2
 outside_ga:
   kind: other
-  why: 'Consequence (2) displays the imported expansion of the MacDowell-Mansouri Fact as four-forms (epsilon_abcd R^ab ^ R^cd, e^a ^ e^b ^ R^cd, e^a ^ e^b ^ e^c ^ e^d), the Fact''s own language; the proof computes with eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}> in GA.'
+  why: 'Consequence (2) displays the imported expansion of the MacDowell-Mansouri Fact as four-forms (epsilon_abcd R^ab ^ R^cd, e^a ^ e^b ^ R^cd, e^a ^ e^b ^ e^c ^ e^d), the Fact''s own language, and the technical level repeats it; formal (ii) writes the reduced connection and its Lorentz block in the form notation of the Lemma and the Fact (D + e ^ V/Q(V), R + l^{-2} e ^ e), beside the GA gauge field Omega(a) - hb^{-1}(a) ^ V/l^2 (the block is -(calR(B) - l^{-2} B) in the store''s sign, as the proof computes); the proof computes with eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}> in GA.'
 ---
 
 ## formal

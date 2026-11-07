@@ -25,11 +25,15 @@ credit:
   role: 'GTG proof: forms as multivector fields, the star as |det hb|^-1 I G(F) with G the cometric map'
   version: 5
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): proof citation corrected'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-walls-sphere-theorem@6
   proof: proof-main.tex
 checked_by:
@@ -55,6 +59,10 @@ locators:
   label: thm:twokinds
   line: 823
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F1: ACCEPT. Its one remark (the variation''s plus sign is right; the component proof had a minus, harmless since the term vanishes) needs no change. Fixer: the opening sentence attributed the reading of forms as multivector fields to Fact synthesis.imported-gtg-dictionary, which states nothing about forms (clauses (i) to (vi): vectors, derivative, geodesics, curvature, Weyl, Killing); the parenthesis is removed and the reading stands as the proof''s stated convention. Pin dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged byte for byte: notation only).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -6,7 +6,7 @@ functions:
   check_gtg_black_hole_data:
     kind: sampled
     clauses: [(i), (ii), (iv)]
-    omits: 'Gauge-field computation at five Schwarzschild points (two masses) and two Reissner-Nordstrom points (M = 3/2, Q^2 = 5/4): curvature operator, vacuum, Kretschmann, radial eigenvalue, horizon rate; the Wald contraction as a derivative along -<B sigma> sigma for R, R^2 and Ric^2 only (quadratic Lagrangians, where the symmetric difference is the exact derivative). Not tested: the vacuum field equations of every L_f and the fourth-order claim of (iii).'
+    omits: 'Gauge-field computation at five Schwarzschild points (two masses) and two Reissner-Nordstrom points (M = 3/2, Q^2 = 5/4): curvature operator, vacuum, Kretschmann, radial eigenvalue, horizon rate; the Wald direction -<B sigma> sigma read through C11 as Riem^o = -eps_uv eps_wz on all frame quadruples (constant 1); the Wald contraction as a derivative along -<B sigma> sigma for R, R^2 and Ric^2 only (quadratic Lagrangians, where the symmetric difference is the exact derivative). Not tested: the vacuum field equations of every L_f and the fourth-order claim of (iii).'
 judge:
   by: fix-round-2026-10-23
   date: '2026-10-23'

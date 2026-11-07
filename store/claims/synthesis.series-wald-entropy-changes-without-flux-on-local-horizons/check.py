@@ -396,6 +396,11 @@ def check_gtg_horizon_cross_section_surface_gravity_and_value():
         ok = ok and gtg.vdot(gtg.m_val(xi), gtg.m_val(xi)) == 0
         kappa = (2 * M / rb ** 2 - 2 * lam * rb / 3) / 2
         ok = ok and GA.eq(fld.cov_phys([F(1), F(1), F(0), F(0)], xi), GA.scal(kappa, gtg.m_val(xi)))
+        # the cut's second fundamental form along xi vanishes (the condition of (i)); the other null normal's does not
+        tang = ([F(0), F(0), F(1), F(0)], [F(0), F(0), F(0), F(1)])
+        ok = ok and all(gtg.vdot(GA.gen(b), fld.cov_phys(a, xi)) == 0 for a in tang for b in (2, 3))
+        n = gtg.vec([gtg.J(1), gtg.J(-1), gtg.J(0), gtg.J(0)])
+        ok = ok and -sum(gtg.vdot(GA.gen(2 + i), fld.cov_phys(a, n)) for i, a in enumerate(tang)) == -4 / rb
         K = sect(fld.curvature(), gtg.wedge(GA.gen(2), GA.gen(3)))
         # coefficients of pi: 4 rb^2 * s = A/4 - 3/Lambda (pi factored out), s = -(3/4 Lambda)(K - Lambda/3)
         ok = ok and 4 * rb * rb * (-F(3, 4) / lam * (K - lam / 3)) == rb * rb - 3 / lam

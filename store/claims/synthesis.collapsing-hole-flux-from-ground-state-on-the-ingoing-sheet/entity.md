@@ -33,6 +33,10 @@ credit:
   role: 'GTG proof of (ii): the ingoing generator''s velocity hb^{-1}(x'') is D-parallel; (K . D) K = kappa K'
   version: 3
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): control of the GTG check uses the physical velocity'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -41,11 +45,11 @@ derivations:
 - name: main
   uses:
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
-  - synthesis.positive-null-energy-gives-r-premises@7
+  - synthesis.positive-null-energy-gives-r-premises@8
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
-  - sheaf.gauge-field-cometric@3
-  - synthesis.imported-gtg-dictionary@1
+  - sheaf.gauge-field-cometric@4
+  - synthesis.imported-gtg-dictionary@2
   - singularity.euclidean-section-period@6
   - synthesis.r-loc-needs-sheet-labelled-modes@4
   assumes:
@@ -73,6 +77,14 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign, with GA wording in (ii) and (iv); this result cites clauses (i), (iii) and (vi), unchanged, so the use holds as cited. sheaf.gauge-field-cometric repinned 3 -> 4 after reviewing its correction of the description of the degeneration at r = 0 (beta diverges and beta^-1 hb tends to the rank-one -P); this result uses only the Painleve-Gullstrand field hb = 1 - beta P, invertible on r > 0, unchanged, so the use holds as cited. synthesis.positive-null-energy-gives-r-premises repinned 7 -> 8: only a remark naming the home of (i) and (ii) added (notation).'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 4.1 applied (check only): in check_gtg_ingoing_generator_is_affine_and_horizon_rate the control used the background tangent e_t - (1 + beta) e_r as if it were the physical velocity. The fixer computed hb^{-1}(e_t - (1 + beta) e_r) = gamma_0 - gamma_1 (PG, hb^{-1}(e_t) = e_t + beta e_r) and D_{x_t}(gamma_0 - gamma_1) = (1 + beta)(x'' . grad beta) k = (beta/2r)(gamma_0 - gamma_1); the control now uses kt = gamma_0 - gamma_1, asserts hb^{-1}(x_t) = kt and that exact value (nonzero). runcheck passes; mutants caught: the old background-tangent control, and the sign of beta/2r. Proof unchanged (it was right).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -29,6 +29,10 @@ credit:
   role: 'GTG proof: Ricci map and curvature operator of the PG fields; the Wald contraction as a derivative along -<B sigma> sigma'
   version: 7
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): the Wald direction identified exactly, without calibration; dictionary edge'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -39,6 +43,7 @@ derivations:
   - scrambling.mode-count@2
   - singularity.rate-discharge-hypothesis-iii@6
   - synthesis.imported-wald-noether-charge-entropy@3
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,6 +56,10 @@ lineage:
   motivated_by:
   - synthesis.quarter-from-temperature
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1: ACCEPT; its optional tightening applied. Proof (ii) no longer fixes the sign of the Wald contraction by calibration against the Einstein term: by the reading of Fact synthesis.imported-gtg-dictionary(iv) (C11, Riem^o(u,v,w,z) = (w ^ z) . calR(u ^ v) in (+,-,-,-)), (w ^ z) . S_sigma(u ^ v) = -eps_uv eps_wz on the frame, so S_sigma(B) = -<B sigma> sigma is exactly the curvature operator whose (-,+,+,+) Riemann tensor is eps_ab eps_cd, constant 1. Verified exactly by the fixer on all 256 frame quadruples (gtg.riem_o); the same assertion added to check_gtg_black_hole_data with premise(synthesis.imported-gtg-dictionary); mutants caught: the asserted sign flipped, and S_sigma -> +<B sigma> sigma. Uses edge synthesis.imported-gtg-dictionary@2 added (the proof cites it for that step; imported). coverage.yaml omits updated.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

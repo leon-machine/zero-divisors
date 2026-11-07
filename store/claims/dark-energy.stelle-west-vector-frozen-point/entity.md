@@ -25,11 +25,16 @@ credit:
   role: 'GTG proof: the tractor connection as the Cl(2,4) gauge field Omega_T, checked slot by slot'
   version: 6
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): opening citation corrected (no circular use of the tractor theorem); dictionary edge'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: typed
 derivations:
 - name: main
   uses:
   - dark-energy.imported-frozen-point-geometry@6
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -52,6 +57,10 @@ locators:
   label: lem:sw
   line: 658
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 2.1 applied: the opening sentence attributed tractors as Cl(2,4) vectors and the tractor connection as a Cl(2,4) gauge field to Fact synthesis.imported-gtg-dictionary, which says nothing about tractors (checked: its formal (i) to (vi)). It now cites the dictionary only for physical vectors, derived metric and D, and says that the gauge-field form is derived in the next paragraph from the display of Fact dark-energy.imported-frozen-point-geometry alone, using neither that Fact''s sentence naming Theorem synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection (confirmed present in the Fact''s formal) nor that theorem, which uses this lemma (@6). Uses edge synthesis.imported-gtg-dictionary@2 added (cited for a step, imported, no uses of its own); premise() for it added to check_tractor_gauge_field_slots_and_bracket (runcheck passes).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

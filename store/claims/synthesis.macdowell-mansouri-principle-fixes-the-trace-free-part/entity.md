@@ -29,6 +29,10 @@ credit:
   role: 'GTG proof of (i)-(iii): frame equation E(a) = 2 d_b ^ F(I(a ^ b)) = 2(G(a) + Lambda a) I from the curvature operator; exact checks'
   version: 3
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F2): GA readings of the formal setup (Ricci, Schouten and Lorentz-block maps); pins'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -36,12 +40,12 @@ derivations:
 - name: main
   uses:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@2
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@2
-  - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
-  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
-  - synthesis.imported-gtg-dictionary@1
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
+  - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@3
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@3
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence@4
+  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@4
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-einstein-cartan-matter-coupling@1
   proof: proof-main.tex
 checked_by:
@@ -68,6 +72,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 review. (1) The formal display A(a) = Omega(a) - hb^{-1}(a) ^ V/l^2 with l^2 = 3/|Lambda| has the wrong sign on the anti-de Sitter branch: with Q(V) = -3/Lambda, D_a V = -(Q(V)/l^2) hb^{-1}(a) = (3/(Lambda l^2)) hb^{-1}(a), which is +hb^{-1}(a) for Lambda > 0 and -hb^{-1}(a) for Lambda < 0 (computed by hand from (A ^ V) . V = Q(V) A; the referee found the same on both branches with the engine). The Lorentz block (A ^ V) x (B ^ V)/l^4 = (Lambda/3) A ^ B is quadratic in 1/l^2 and the same on both branches, so clauses (i) to (iv) and the checks are unaffected; the display on the anti-de Sitter branch is the Stelle-West connection of -V. It is a sign in the formal statement and is listed for Leon with the proposed text, not applied. (2) Optional language finding applied: the formal setup now defines the Ricci, scalar, Einstein and Schouten maps and J in GA and the Lorentz block as the operator F(B) = calR(B) - (Lambda/3) B, with the index definitions kept as the component reading (notation only; the proof computes with exactly these maps, E(a) = 2 d_b ^ F(I(a ^ b)) = 2(G(a) + Lambda a) I). (3) Six stale pins repinned after review: dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged; (ii) and (iii) as cited), series-wald-entropy-changes-without-flux-on-local-horizons 2 -> 3 (formal unchanged), positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale 2 -> 3 (decided restatement A3: the sign of sqrt|g| calR = 6 phi Box phi and of the Euler-Lagrange equation in (ii); this result cites only the trace calR = 4 Lambda of (ii), which is unchanged, so the use holds), einstein-condition-is-infinity-vacuum-incidence 3 -> 4 (the unit I_7 named; clause (7) as quoted), infinity-vacuum-incidence-is-a-property-of-the-scale 3 -> 4 (GA rewrite; the quoted component form of (4) is still its reading), synthesis.imported-gtg-dictionary 1 -> 2 (component sign of (iv) stated; the store-sign definitions used hold). No check changed. Version kept at 3.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -107,7 +115,7 @@ extraction:
 ---
 
 ## formal
-Units $c = 1$, signature $(1,3)$ (store), the store's curvature sign (the components $R_{abcd}$ are minus those of the round-sphere-positive Riemann tensor, so that de Sitter space has $\Ric = \Lambda g$ and $F_{abcd} = 0$), read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, Einstein tensor $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, Schouten tensor $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$ (Fact \claimref{synthesis.imported-gtg-dictionary}). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$, as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
+Units $c = 1$, signature $(1,3)$ (store), the store's curvature sign (the components $R_{abcd}$ are minus those of the round-sphere-positive Riemann tensor, so that de Sitter space has $\Ric = \Lambda g$ and $F_{abcd} = 0$), read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); the Ricci map $\Ric(b) = \partial_{a}\cdot\mathcal{R}(a\wedge b)$ and scalar $\mathcal{R} = \partial_{a}\cdot\Ric(a)$, the Einstein map $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, the Schouten map $\Sch(a) = \tfrac12(\Ric(a) - \tfrac{\mathcal{R}}{6}a)$ and $J = \partial_{a}\cdot\Sch(a)$ (Fact \claimref{synthesis.imported-gtg-dictionary}; in components $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is the operator $F(B) = \mathcal{R}(B) - \tfrac{\Lambda}{3}B$ on bivectors (in components $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$), as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
 \begin{enumerate}
 \item[(i)] \emph{(The frame equation; proved.)} The variation of $S_{\mathrm{MM}}$ with respect to the frame $\hb^{-1}$ is the trivector-valued linear function $E(a) = 2\big(\mathcal{G}(a) + \Lambda a\big)I$. In components (a labelled reading), the three-form of the Fact's second Euler-Lagrange equation is
 \[

@@ -25,6 +25,10 @@ credit:
   role: 'GTG proof: forms as multivector fields, the curvature contractions and densities as maps of the curvature operator'
   version: 3
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): two conformal-product values in proof (i) corrected'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -32,10 +36,10 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.stelle-west-norm-is-no-local-output@2
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   proof: proof-main.tex
@@ -61,6 +65,14 @@ lineage:
   - synthesis.stelle-west-norm-is-no-local-output
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites that frame equation in (v), in the store sign, so the use holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 6.1 applied: proof (i) said (ninf ^ n0) . ninf = -n0 and (ninf ^ n0) . n0 = ninf (carried over from the component proof, orig-proof-main.tex, which has the same slip and is kept as history). With (u ^ w) . Y = u (w . Y) - w (u . Y) and n0 . ninf = 1 the values are ninf and -n0; the fixer verified this in Cl(2,4) with GA.py and recomputed Omega_T x I and Omega_T x X for a generic Lorentz bivector, slot, dilation and spacetime vector at rho = 3/7 and -2/5: the displayed DI(a) = rho a - S(a) + beta(a)(ninf - rho n0) and DX(a) = a - beta(a) n0 hold, and the values the proof stated would give beta (rho ninf - n0) and + beta ninf, which fail. So the error did not propagate: the displays, formal (i) and check_broken_components_of_the_frozen_point (which computes the products) were right; only the sentence is corrected. Pins: dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged), synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 2 -> 3 (GA rewrite of (iii), component value kept as reading), synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 (see maintainer_pass_pin_review).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

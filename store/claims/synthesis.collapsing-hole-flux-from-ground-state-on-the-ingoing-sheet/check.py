@@ -276,11 +276,13 @@ def check_gtg_ingoing_generator_is_affine_and_horizon_rate():
             ok = ok and gtg.m_sub(fld.hb_inv(gtg.vec(xp)), gtg.m_val(k)) == {}
             Dk = gtg.m_add(*[gtg.m_scal(xp[mu], fld.cov(mu, k)) for mu in range(2)])
             ok = ok and Dk == {}                                    # r is affine
-            # control: the same worldline parametrised by t is not affinely parametrised
-            kt = {(0,): gtg.Jet.const(1, 4), (1,): -1 - beta}
+            # control: the same worldline parametrised by t is not affinely parametrised; its physical
+            # velocity is hb^{-1}(e_t - (1 + beta) e_r) = gamma_0 - gamma_1, and D_{x_t} of it is (beta/2r)(gamma_0 - gamma_1)
+            kt = {(0,): gtg.Jet.const(1, 4), (1,): gtg.Jet.const(-1, 4)}
             xt = [F(1), -1 - b0, F(0), F(0)]
+            ok = ok and gtg.m_sub(fld.hb_inv(gtg.vec(xt)), gtg.m_val(kt)) == {}
             Dkt = gtg.m_add(*[gtg.m_scal(xt[mu], fld.cov(mu, kt)) for mu in range(2)])
-            ok = ok and Dkt != {}
+            ok = ok and Dkt != {} and gtg.m_sub(Dkt, gtg.m_scal(b0 / (2 * r0), gtg.vec([1, -1, 0, 0]))) == {}
             K = {(0,): gtg.Jet.const(1, 4), (1,): beta}
             DK = fld.cov(0, K)
             if r0 == 2 * M:

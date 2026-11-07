@@ -25,6 +25,10 @@ credit:
   role: 'GTG proof of (iv): the PG rotation-gauge field solved from the torsion equation for general beta'
   version: 2
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): two citations in (iv) corrected'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -32,11 +36,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
-  - field-theory.second-quantisation@5
+  - synthesis.imported-gtg-dictionary@2
+  - field-theory.second-quantisation@6
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - singularity.plane-rate@4
-  - transport.group-null-rotations@4
+  - transport.group-null-rotations@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -58,6 +62,14 @@ lineage:
   - synthesis.boost-evolution-on-generators-is-one-unitary-group
   - note.decisions.two-boost-flows
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign, with GA wording in (ii) and (iv); this result cites (ii) for the parallel spin frame (dU/dt = -Omega U/2), whose content is unchanged (only the component reading moved into a parenthesis), so the use holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fixes 7.1 and 7.2 applied (citations): the physical frame vectors of the label directions are now stated as the field''s definition through the frame g_mu = hb^{-1}(e_mu) of Definition obj.synthesis.gtg-flat-spacetime-gauge-fields(a) (clause (d), cited before, is the derived metric), and the frame torsion equation is attributed to Definition (f), D ^ hb^T(a) = hb^T(grad ^ a) applied to a = f^a with D = sum_b gamma^b D_{hb(gamma_b)} (Fact synthesis.imported-gtg-dictionary(ii), cited before, is the Levi-Civita derivative and transport). Fixer check: D ^ gamma^a = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) for constant gamma^a, so the displayed equation is (f) on the physical frame. Pins: synthesis.imported-gtg-dictionary 1 -> 2 (see maintainer_pass_pin_review), field-theory.second-quantisation 5 -> 6 (unit named, notation), transport.group-null-rotations 4 -> 5 (formal unchanged).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

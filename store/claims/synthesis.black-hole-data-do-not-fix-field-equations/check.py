@@ -235,7 +235,13 @@ def _along(L, R):
 def check_gtg_black_hole_data():
     premise("synthesis.imported-wald-noether-charge-entropy")
     premise("singularity.rate-discharge-hypothesis-iii")
+    premise("synthesis.imported-gtg-dictionary")
     ok = True
+    # the Wald direction: Riem^o(u, v, w, z) = (w ^ z) . S(u ^ v) = -eps_uv eps_wz on the frame (eps_tr = 1), so S is
+    # the curvature operator whose (-,+,+,+) Riemann tensor is eps_ab eps_cd, with constant 1
+    eps = {(0, 1): 1, (1, 0): -1}
+    ok = ok and all(gtg.riem_o(_wald_op, gtg.e(u), gtg.e(v), gtg.e(w), gtg.e(z)) == -eps.get((u, v), 0) * eps.get((w, z), 0)
+                    for u in range(4) for v in range(4) for w in range(4) for z in range(4))
     ric2 = lambda R: gtg.ricci_sq(R)                                     # noqa: E731
     for M, radii in SCHW:
         for r0 in radii:

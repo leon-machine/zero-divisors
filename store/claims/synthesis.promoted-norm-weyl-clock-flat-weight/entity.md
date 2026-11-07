@@ -25,6 +25,10 @@ credit:
   role: 'GTG proof: Q(X, Y) = 2 <X(a ^ b) I^-1 Y(I d_b ^ d_a)>, F = W on Einstein fields by Weyl duality, instantons as Euclidean gauge fields; exact checks'
   version: 7
   source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): Euclidean frame-equation sign in (iii), de Sitter operator in (iv), instanton check pinned to the store sign'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -32,11 +36,12 @@ derivations:
 - name: main
   uses:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.de-sitter-entropy-pi-n-squared@6
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - synthesis.imported-chern-gauss-bonnet@3
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -64,6 +69,10 @@ checked_by:
 - kind: check
   ref: check.py::check_gtg_kasner_and_flrw_densities_from_gauge_fields
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Proof (iii) quoted the frame equation on Cl(4,0) as 2(G(a) + Lambda a) I = 0; on Cl(4,0), with F = calR - l^{-2} D and D = -id, it is 2 d_b ^ F(I(a ^ b)) = 2(G(a) - Lambda a) I (the Lorentzian form keeps + Lambda, the de Sitter operator there being +Lambda/3 id); its trace gives s(calR) = 4 Lambda and s(F) = 0, as the proof needs (the quoted form would give s(F) = -8 Lambda). Checked exactly on the torsion-solved S^4, S^2 x S^2 and CP^2 (scratch FX2/e9_frame.py, now in the check): the trivector equals 2(G(a) - Lambda a) I and vanishes, G(a) + Lambda a does not, and d_b ^ calR(I(a ^ b)) = G(a) I, d_b ^ (I(a ^ b)) = -3 a I. (2) Proof (iv), on Cl(1,3), said the whole curvature is (Lambda/3) D (the anti-de Sitter sign there); now calR(B) = (Lambda/3) B, the de Sitter operator of C6 (checked on the flat-slicing de Sitter field: calR = +(Lambda/3) id). Neither error reaches the formal level (its frame-equation and de Sitter clauses carry no sign of calR). (3) check_gtg_instantons_as_euclidean_gauge_fields passed with gtg.STORE_SIGN flipped; it now asserts Lambda = 3, 1, 6, calR(B) = -B on every plane of the unit S^4, and the Euclidean frame trivector; the flipped-sign mutant, G + Lambda a in place of G - Lambda a, and F = calR - (Lambda/3) id all fail, the unmutated check passes. (4) uses: synthesis.imported-gtg-dictionary@2 added (Weyl duality, row 5, needed for Q(W) = |W|^2; dictionary clauses (i), (iv), (v)); synthesis.imported-miskovic-olea-identity not added (cited as prior work only, as the 2026-10-22 maintainer pass decided). Repinned henneaux-teitelboim-promotion 5 -> 6 (formal unchanged) and frozen-point-datum-kasner-wall 7 -> 8 (GA rewrite of the formal, values unchanged; the cited Kretschmann value 64/27 tau^-4 holds). Version kept at 7.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

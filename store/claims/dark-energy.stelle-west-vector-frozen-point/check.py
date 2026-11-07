@@ -274,6 +274,7 @@ def p_map(a):
 
 def check_tractor_gauge_field_slots_and_bracket():
     premise("dark-energy.imported-frozen-point-geometry")
+    premise("synthesis.imported-gtg-dictionary")
     ok = True
     for A in A_SAMPLES:
         for Om in OMEGA_SAMPLES:

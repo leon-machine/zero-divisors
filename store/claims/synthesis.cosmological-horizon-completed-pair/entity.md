@@ -29,7 +29,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   - mass.de-sitter-scale-frozen-point@6
   - dark-energy.imported-frozen-point-geometry@6
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
@@ -48,6 +48,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - standard-model.what
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1: ACCEPT, no fix asked. Pin synthesis.de-sitter-static-boost-frozen-point 5 -> 6 (formal unchanged byte for byte: notation only).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

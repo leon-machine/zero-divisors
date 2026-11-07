@@ -25,17 +25,21 @@ credit:
   role: 'GTG reading of the base forms as multivector fields of a flat five-dimensional background; declaration narrowed'
   version: 3
   source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): vacuous check removed; outside_ga withdrawn'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
-  - rule2.rule-2-kaluza-klein-algebra@6
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - rule2.rule-2-kaluza-klein-algebra@7
   - synthesis.imported-five-dimensional-chern-simons-gravity@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   proof: proof-main.tex
@@ -56,6 +60,14 @@ lineage:
   - rule2.imported-five-dimensional-chern-simons-shift
   - rule2.rule-2-kaluza-klein-algebra
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites the frame equation vanishing on Einstein fields, so the use holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fixes 8.1 and 8.2 applied. 8.1: check_gtg_reduction_with_base_forms_as_background_multivectors tested nothing: fmul_bg keeps the grade-additive part of GA.blade_mul, which for disjoint blades is the reordering sign whatever the squares, so it equals the Grassmann product fmul identically; the fixer reran it with BG5 = (5, 2, -3, 7, 1) and (1, 1, 1, 1, 1) and it still passed. It is removed from check.py, checked_by and coverage.yaml, and the proof''s parenthesis that it recomputed (i) is replaced by the reason it needs no check (disjoint background blades: outer product = Grassmann product in any signature). The referee''s alternative (grad ^ of the transgression form = P(F,F,F) - P(F0,F0,F0)) is vacuous on the five-dimensional base, where both sides are six-forms; on a larger background it would test the imported Chern-Weil Fact, not this result, so it was not added. 8.2: outside_ga withdrawn: the proof reads the imported transgression and variation formulas with the base forms as multivector fields (d = grad ^, exterior product = outer product), the two Facts they come from (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms) declare no outside_ga, and the remaining component expressions are permitted readings, so no stand-in remains (as for dark-energy.gravity-pre-metric-forces-degenerate-exactly). Pins: dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged), rule2.rule-2-kaluza-klein-algebra 6 -> 7 (pseudoscalar named, notation), synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 (see maintainer_pass_pin_review).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
