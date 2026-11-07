@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-seed-has-no-diagonal-matrix-elements
 kind: claim
-version: 1
+version: 2
 title: 'The operator join''s seed has no diagonal matrix elements'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -43,7 +47,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Not rewritten: the i of the determinant U(1), exp(i phi tr h / hbar), is the scalar unit of the palatial Fock space, whose unit the store does not fix (twistor numbers are read with I_6, the field theory''s one-particle space with I_4); declared outside_ga (complex-analysis).'
+    note: 'By Leon''s ruling R3: the determinant U(1) of proof (3) is exp(I_4 phi tr h / hbar), the palatial Fock space read over span{1, I_4} on the tower''s floors (stated once, at its only use; notational); no bare i remains, so the earlier declaration is removed.'
   open_problem: op.operator-join
   note: >-
     Bears on the reformulated question of the problem (is the seed supported on the quantum massless
@@ -67,9 +71,6 @@ extraction:
     a state carrying the seed breaks a U(1) under which the bracket is hypercharged, at the observation
     level of that Fact. Transport-convenient (the join and the palatial ordering are the series'; the
     rule is the U(2) covariance of the bracket).
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays in the determinant U(1), exp(i phi tr h / hbar), a unitary group on the palatial oscillator Fock space, whose complex unit the store does not settle between the twistor unit I_6 and the field unit I_4'
 ---
 
 ## formal

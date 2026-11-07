@@ -53,7 +53,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: the proof''s point is that e^{i theta n} lies outside the real boundary-mode algebra, and the eigenvalues +-i and e^{+-i theta} are on the singularity atom of the plane e0e1, where I_4 anticommutes with the modes (conventions, known limit 1); declared (version and levels unchanged).'
+    note: 'No unit replaced: the proof''s point is that e^{i theta n} lies outside the real boundary-mode algebra, and the eigenvalues +-i and e^{+-i theta} are on the singularity atom of the plane e0e1, where I_4 anticommutes with the modes (conventions, known limit 1); declared (version and levels unchanged). Declaration kind set to complex-analysis by Leon''s ruling R1 (atom, boundary-mode and window flows keep i).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -96,7 +96,7 @@ extraction:
     decision: 4
     note: 'The two boost flows: flow_note recorded.'
 outside_ga:
-  kind: other
+  kind: complex-analysis
   why: 'in the proof the phase circle e^{i theta n} and its generator, i times a bivector, are exhibited as lying outside the real boundary-mode algebra (scalar centre); the adjoint eigenvalues +-i, +-i sqrt|cd| and the continued action e^{+-i theta} are complex eigenvalues on the singularity paper''s atom, built in the plane e0e1 where I_4 anticommutes with the modes'
 ---
 

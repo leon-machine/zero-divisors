@@ -37,7 +37,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: the modes are the completed pairs of singularity.modular-structure-completed-pair, whose unit_note keeps a scalar i (atom in the plane e0e1, I_4 anticommuting with the modes, known limit 1); declared (version and levels unchanged).'
+    note: 'No unit replaced: the modes are the completed pairs of singularity.modular-structure-completed-pair, whose unit_note keeps a scalar i (atom in the plane e0e1, I_4 anticommuting with the modes, known limit 1); declared (version and levels unchanged). Declaration kind set to complex-analysis by Leon''s ruling R1 (atom, boundary-mode and window flows keep i).'
   open_problem: op.which-boost-flow-is-time
   flow_note: phase; every evolution here is the unitary phase flow Ad(e^{itH}) (see synthesis.phase-flow-is-time-rotor-flow-kms-continuation).
   tension_with:
@@ -72,7 +72,7 @@ extraction:
     (support growth from a hopping generator, which (L_E) excludes at E, without exponential commutator
     growth); same vocabulary.
 outside_ga:
-  kind: other
+  kind: complex-analysis
   why: 'the phase flow e^{itH}, the unitaries cos theta + i sin theta sigma, the factors cos 2Jt - i sin 2Jt sigma_k and the terms e^{i omega t} act on the completed pairs of the singularity paper, whose atom is built in the spacetime plane e0e1, where I_4 anticommutes with the mode operators (conventions, known limit 1), so the i stays a scalar'
 ---
 

@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'No unit replaced: C^n, Mat_n(C) and e^{i theta^a J_a} are the complex representation theory of the principal su(2) on the completed pairs, whose unit stays a scalar (known limit 1); declared (version and levels unchanged).'
+    note: 'No unit replaced: C^n, Mat_n(C) and e^{i theta^a J_a} are the complex representation theory of the principal su(2) on the completed pairs, whose unit stays a scalar (known limit 1); declared (version and levels unchanged). Declaration kind set to complex-analysis by Leon''s ruling R1 (atom, boundary-mode and window flows keep i).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -64,7 +64,7 @@ extraction:
     a property of the state, invariance under the rotation-equivariant particle-hole map. Mostly
     transport-absent representation theory; the series enters through the principal embedding.
 outside_ga:
-  kind: other
+  kind: complex-analysis
   why: 'the one-particle space C^n of the counted completed pairs, Mat_n(C), the rotations u = e^{i theta^a J_a} and the extension of the identity over C to J_1, J_2 are the complex representation theory of su(2) on the singularity paper''s completed pairs, whose unit stays a scalar (atom in the plane e0e1, conventions known limit 1)'
 ---
 

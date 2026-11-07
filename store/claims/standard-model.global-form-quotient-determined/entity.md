@@ -1,7 +1,7 @@
 ---
 id: standard-model.global-form-quotient-determined
 kind: claim
-version: 3
+version: 4
 title: 'The global form: the quotient determined'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -41,14 +45,11 @@ locators:
   number: Thm 4.2
   label: thm:global
   line: 987
-outside_ga:
-  kind: other
-  why: 'the complex unit of the representation spaces on which U(2) x U(3) acts: the slot space C^2 and the pair space W = C^3, a maximal isotropic subspace of the complexified conformal space V_C = W + W-bar whose vectors include the spacetime directions; that unit must commute with the conformal vectors, which no pseudoscalar does, so the determinants and roots of unity of the proof keep the plain i'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pass made, nothing replaced: the i of the proof (det A = e^{i alpha}, the sixth and cube roots of unity, the central characters e^{2 pi i t/3} and exp 2 pi i(...)) is the scalar of C^2 tensor C^3 and C^5, kept as the plain complexification and declared.'
+    note: 'By Leon''s ruling R3: the determinant phases e^{I_4 alpha}, the sixth root lambda = e^{2 pi I_4/6} and the central characters e^{2 pi I_4 t/3}, e^{2 pi I_4 (p_1 - p_2)/3} of the proof are written with I_4, the module C^2 tensor C^3 read over span{1, I_4} on the tower''s floors (stated once in the formal level; notational); no bare i remains, so the earlier declaration is removed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -79,7 +80,7 @@ extraction:
 ---
 
 ## formal
-The global gauge group of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} is determined exactly. The kernel of the $(U(2) \times U(3))$-action on $\C^{2} \otimes \C^{3}$ is $K = \{(\lambda I_{2}, \lambda^{-1} I_{3})\} \cong U(1)$, and
+The global gauge group of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} is determined exactly. The kernel of the $(U(2) \times U(3))$-action on $\C^{2} \otimes \C^{3}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors; $I_{2}$ and $I_{3}$ are identity matrices) is $K = \{(\lambda I_{2}, \lambda^{-1} I_{3})\} \cong U(1)$, and
 \begin{equation}
 (U(2) \times U(3))/K \;\cong\; S(U(2) \times U(3)) \;\cong\; \bigl(SU(2) \times SU(3) \times U(1)\bigr)/\mathbb{Z}_{6}:
 \end{equation}

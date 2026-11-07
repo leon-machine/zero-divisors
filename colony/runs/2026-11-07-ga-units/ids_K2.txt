@@ -1,2 +1,10 @@
 note.standard-model.setting-content-charges-chirality-2
 note.standard-model.setting-intermediate-symmetry-slot-pair-split
+standard-model.global-form-quotient-determined
+standard-model.raw-representation-content-state-space
+synthesis.majorana-element-is-null-blade-no-frozen-point-condition
+synthesis.majorana-scale-not-carried-by-rung-frame-boost
+synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
+synthesis.operator-join-positive-energy-no-finite-energy-zero-modes
+synthesis.operator-join-seed-has-no-diagonal-matrix-elements
+note.dark-tower-matter.neutral-row

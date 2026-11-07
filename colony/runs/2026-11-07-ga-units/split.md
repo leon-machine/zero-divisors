@@ -84,3 +84,131 @@ On every changed entity: a credit entry for the new version, an `extraction.main
   - The plane-wave phases of the massive bulk kernels mix even and odd parts ((p + m0)e0), so writing them with I_4 would need the right-unit treatment. I left them as they are.
 - **The \C^5 declaration** on the slot-module result (`kind: other`) is a judgement call. The scanner does not flag the \C macro, so no warning required it.
 - **Commits.** I made none; the orchestrator's checkpoint commit f4d7ccd picked up the files.
+
+# Round 2: the null vacuum and the collapse lemmas (cuts 1 and 2), and the unit rulings
+
+## Result
+Both cuts are made. holds_given of synthesis.hadamard-scaling-limit-premise falls from 10 to 1: only synthesis.n-plus-null-ground-state remains. It enters through one entity, synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit (details below). Validation is clean: tp check layers 1 to 3 report 0 errors and 0 warnings store-wide after the cuts and again after the unit rulings.
+
+## Cut 1: the null vacuum, out of synthesis.positive-null-energy-gives-r-premises
+- **New entity:** synthesis.null-vacuum-on-a-horizon-generator, version 1. It is proved and holds given nothing. It uses hawking.i-state-continuum@5, hawking.imported-quasi-free-kms-reduces-two@2 and hawking.imported-ideal-fermi-gas-uniqueness@2, all premise-free.
+  - **(i):** the weight 1/2 is the only one that preserves the anticommutator, and the boost dilates the translations.
+  - **(ii):** a gauge-invariant quasi-free state is a ground state for the null translations if and only if its symbol is chi(P < 0). This state ω_0 has kernel W_0 = (I_4/2π)(u − v + I_4 0)^{-1}, and the expression for the other ordering is also given.
+  - **The converse in (ii) is new.** "The null vacuum satisfies the ground-state condition" was cited by local-normality, microlocal and normality-on-the-closed-generator, but positive-null-energy only ever proved necessity. The new proof uses the Fock representation of a projection symbol, which is cited from memory.
+  - **(iii):** this is the old clause (ii) of positive-null-energy: on either half-generator the null vacuum is the continuum I-state at rapidity period 2π.
+  - **Numbering:** the old setup became (i), the old (i) became (ii) and the old (ii) became (iii). The proofs were moved.
+  - **Checks:** there are six, all exact. The three strip, past-half and Mellin checks were copied without the (N+) premise call. Three checks are new: the boost and dilation statement, the forcing of the symbol (with an orientation control), and W_0 with the Poisson anticommutator in span{1, I_4}. Positive-null-energy had no check of its (i).
+  - **check4:** 0 findings, after I tightened the three new checks with tabulated values to clear a weak-check warning (W413).
+- **synthesis.positive-null-energy-gives-r-premises, 5 → 6.**
+  - It uses the new entity@1, and its statement is unchanged. The proofs of (i) and (ii) now cite the new entity: under (N+) the state is a gauge-invariant quasi-free ground state, hence ω_0.
+  - The assumes edge to (N+) is kept.
+  - Its checks are kept, and the (ii) checks also record the new premise.
+
+## Cut 2: the collapse lemmas, out of synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
+- **New entity:** synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation, version 1. It is proved and holds given nothing. It uses the cut-1 entity@1 and hawking.imported-quasi-free-kms-reduces-two@2.
+  - **(i):** this is the old (iii). Under a regular reparametrisation, the weight-1/2 null-vacuum kernels differ by (1/12)S_ξ(U)(U − U').
+  - **(ii):** this is the old (iv), with the Killing flow β_τ written as the dilation δ_ε, ε = e^{-κτ}. A bounded remainder scales away; the condition is sufficient but not necessary.
+  - The Boulware example stays in collapsing-hole-flux.
+  - The proofs were moved, and the two checks were copied. check4 gives 0 findings.
+- **collapsing-hole-flux, 1 → 2.**
+  - It uses the new entity@1, and its pin to positive-null-energy moves from 4 to 6. It keeps that link because it needs (iii) (the horizons) and (N+) on the sheet. It also keeps its J3 assumes edge.
+  - The statements of (iii) and (iv) are unchanged; they and their proofs now cite the new entity.
+  - It still holds given 10 premises, but nothing in the HS-premise cone uses it any more.
+
+## Users repointed
+In every case below, the user cites positive-null-energy only for its (i), or only for the carrier's boost. Where it also cited collapsing-hole-flux, that was only for (iii) and (iv). None of these users is on ids_B, ids_C1, ids_C2 or ids_E, and none is conditioned on (N+) (each derives a form of it). For each one, the claimrefs, uses edges and check premise() calls now point to the new entities, with clause numbers renumbered. Each has a version + 1, a credit entry and an extraction note.
+
+| Entity | Version | Notes |
+|---|---|---|
+| synthesis.local-normality-at-the-edge-gives-the-null-ground-state | 2 → 3 | positive-null-energy → cut 1; collapsing-hole-flux → cut 2 |
+| synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state | 4 → 5 | Also repinned local-normality → @3 |
+| synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes | 4 → 5 | Also repinned microlocal → @5 |
+| synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays | 3 → 4 | It cited only the carrier's boost, now cut-1 (i) |
+| synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state | 2 → 3 | Both cuts |
+| synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i | 2 → 3 | |
+| synthesis.attachment-conformal-energy-is-generated-by-z | 2 → 3 | |
+| synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state | 2 → 3 | |
+| synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian | 5 → 6 | |
+
+I also moved stale pins inside these entities to entities changed in the same pass, recording each in its note (all statements unchanged). Slot-module's pin to light-ray moved to @4; slot-module stays at version 2 of this pass.
+
+**Kept on positive-null-energy, because they need more than the null vacuum:**
+- stationary-horizon-state: the horizon kinematics, and its flag that the bifurcation surface lies beyond one flat chart.
+- boost-evolution: (ii), stated under (N+).
+- thermality: case (b) geometry.
+- killing-horizon-value-factor and schwarzschild-horizon-translations: horizon kinematics.
+- null-ordering: (iii) and (iv).
+
+## Validation
+- **runcheck:** all checks pass on both new entities and on every changed check.
+- **check4** (with the mutation test) on the 2 new entities and the 11 changed ones: 0 errors. The remaining findings are I405 "declared and untouched, as expected", plus I213 on attachment-conformal, which was already in the baseline.
+- **tp check layers 1 to 3:** 0 errors, 0 warnings.
+
+## holds_given at the start of round 2 and now
+| Entity | Start of round 2 | Now |
+|---|---|---|
+| synthesis.hadamard-scaling-limit-premise | 10 | 1: n-plus-null-ground-state |
+| microlocal theorem | 10 | 1: (N+) |
+| local-normality | 10 | 1: (N+) |
+| bulk-Hadamard | 10 | 1: (N+) |
+| hadamard-dirac-states-scale | 10 | 1: (N+) |
+| Both new entities | (new) | 0 |
+
+The nine premises removed are hawking.joint-j3-s-wave-reduction, scrambling.intrinsic-clock-ic-flagged-premise, sheaf.tameness, singularity.c1-curvature-cutoff, singularity.c2-cell-density, singularity.p-univalence, singularity.r-regularity-fixed-locus, synthesis.c-loc-local-horizon-premise and synthesis.r-lambda-regularity-cosmological-horizon.
+
+## The remaining path to (N+)
+Every path is X -> synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit -> synthesis.positive-null-energy-gives-r-premises -> (N+). The microlocal theorem and local-normality both reach stationary-horizon directly; the HS premise reaches it through those two. I did not edit stationary-horizon; it is still at version 3 and pins positive-null-energy@4.
+
+**Why stationary-horizon still needs positive-null-energy:**
+- Its (i) identifies the boost of every horizon in scope (eternal hole, de Sitter, local Rindler) with u ↦ e^{κt}u. That rests on positive-null-energy's setup and its proof of (iii).
+- Its (v) cites positive-null-energy's flag that the bifurcation surface lies beyond one flat chart.
+- Its citations of positive-null-energy (i) and (ii) could move to cut 1, but that alone would not cut the edge.
+- The kinematics rest on singularity.euclidean-section-period, synthesis.de-sitter-static-boost-frozen-point and synthesis.local-boost-temperature-is-local-regularity, which hold given nothing.
+
+**What the users take from stationary-horizon:**
+- Local-normality and microlocal use only stationary-horizon (i) on the carrier (the boost is the weight-1/2 scaling about the edge) and (ii) (a stationary state is its own scaling limit there, so ω = ω_0).
+- Both are pure analysis on the generator.
+
+**Options for a third cut (for Leon):**
+- **(a)** Split the horizon kinematics of positive-null-energy (iii) into a premise-free result, and repoint stationary-horizon to it and to cut 1.
+- **(b)** Split stationary-horizon (i) and (ii), read on the carrier, into a premise-free result, and repoint local-normality and microlocal to it.
+
+Either should leave the HS premise holding given nothing.
+
+## Unit rulings R1 to R4
+- **Bookkeeping:** I folded these changes into the version each entity already has in this pass, adding a credit entry and an `extraction.maintainer_pass_unit_rulings` note. There is no second version bump. outside_ga is not substantive, so changing it needed no bump either.
+- **What changed:**
+  - **R2 and R4:** I_4 now appears throughout these entities: W_0 and the generator kernels (+ I_4 0), the thermal, mixture and weight-h kernels, the Mellin powers, the contour rotations, the strips and the Fourier integrals.
+    - collapsing-hole-flux: 7 replacements
+    - local-normality: 6
+    - microlocal: 21
+    - bulk-Hadamard: 15. Its bulk plane-wave phases use the right unit, e^{-p·(x − x')I_4}, because the numerator (p ± m_0)e_0 is not even; the text says so once.
+    - cut-1 entity: 57. I also dropped its sentence "written with i for the unit I_4".
+    - cut-2 entity: 10. I also dropped its "written with i" phrase.
+  - **Declarations removed** because no bare i remains: collapsing-hole-flux, local-normality, microlocal, bulk-Hadamard, and both new entities.
+  - **positive-null-energy:** e^{-iπ} in the remark of (iii) is now e^{-I_4π}. Bare i stays only in the Borchers relation Δ^{is}U(a)Δ^{-is}, which is quoted from an imported Fact, so the declaration is now kind imported.
+  - **R3 on the slot-module result:** I added the span{1, I_4} tower-floor sentence once in the formal level and removed its declaration (no bare i).
+- **Not changed:**
+  - stationary-horizon was already all I_4.
+  - The attachment-modules result keeps its Mellin inversion 1/(2πi): its results use no I_4, so this is complex analysis in its own right and stays declared.
+  - Canonical-part, light-ray and krein have no bare i.
+  - No owned entity carries an i0 shift of a spacetime vector, and R1 applies to none of them.
+- **Not checked against the rulings:** the five repointed users that are not on SPLIT_OWNED.txt: modular-data, attachment-conformal, geometric-modular, weyl-flat and normality-on-the-closed-generator. I edited only their links, claimrefs, versions and notes; their unit text is left for the consistency agents.
+
+## Stale pins left (all formal repins: statements unchanged)
+None of these pinning entities is mine.
+
+| Target (now) | Still pinned at the old version by |
+|---|---|
+| positive-null-energy (v6) | boost-evolution, killing-horizon-value-factor, null-ordering, schwarzschild-horizon-translations, thermality (all @4); also stationary-horizon @4, which is mine but unchanged |
+| bulk-Hadamard (v5) | dirac-causal-propagator, dirac-states-restrict, field-strength-cancels, hadamard-dirac-states-scale, hadamard-scaling-limit-premise, restricted-dirac-hadamard-parametrix (all @3) |
+| microlocal (v5) | dirac-states-restrict, field-strength-cancels (@4) |
+| local-normality (v3) | clausius-on-the-action-shell (@2) |
+| stationary-horizon (v3, from the sweep) | null-ordering, thermality (@2) |
+| attachment-conformal (v3) | attachment-transport-is-flat-only-where-weyl-vanishes, spin-product-state-of-the-massless-dirac-field (@1) |
+| weyl-flat (v6) | deposit-over-the-conformal-vacuum (@4) |
+| attachment-modules (v3) and krein (v3) | series-content-induces-a-newton-coupling (@2) |
+
+## Not done
+- **The third cut** (above), left for Leon's decision.
+- **Commits:** I made none.

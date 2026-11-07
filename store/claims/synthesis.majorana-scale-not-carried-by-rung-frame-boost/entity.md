@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-not-carried-by-rung-frame-boost
 kind: claim
-version: 1
+version: 2
 title: 'The rung-frame boost does not carry the Majorana scale'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -58,14 +62,11 @@ lineage:
   - synthesis.rung-unit-second-free-number
   - synthesis.majorana-scale-free-input
   - synthesis.majorana-scale-free-on-pati-salam-route
-outside_ga:
-  kind: other
-  why: 'the compact flow exp(i phi ad 2T_3R) of the proof acts on the complexified Clifford algebra of the ten, pair vectors and the grade-five T included; its i must commute with all ten vectors, which no pseudoscalar does'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pass made, nothing replaced: the parenthetical compact flow exp(i phi ad 2T_3R) acts on the whole complexified algebra of the ten, pair vectors and the Majorana element T included, so its unit is kept and declared.'
+    note: 'By Leon''s ruling R3: the compact flow of the proof''s parenthesis is exp(I_4 phi ad 2T_3R), the Clifford algebra of the ten read over span{1, I_4} on the tower''s floors, where I_4 commutes with the ten vectors (stated once; notational); no bare i remains, so the earlier declaration is removed.'
   open_problem: op.rung-unit
   note: >-
     Tests the one series structure that could tie the Majorana scale to the weak scale: the frame boost
