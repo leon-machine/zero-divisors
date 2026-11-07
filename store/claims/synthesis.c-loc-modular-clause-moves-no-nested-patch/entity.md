@@ -1,7 +1,7 @@
 ---
 id: synthesis.c-loc-modular-clause-moves-no-nested-patch
 kind: claim
-version: 2
+version: 3
 title: 'The modular clause of (C$_{\mathrm{loc}}$) moves no nested patch'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the clauses cited named as those of version 1 of the local-horizon premise'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -43,6 +47,10 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.point-spectrum-boost-admits-no-half-sided-translations
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Clauses (i), (ii) and (iii) cited are those of version 1 of the local-horizon premise (count, temperature, modular flow); version 6 keeps the temperature as (R_loc) and drops the other two; the references now say so.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -72,7 +80,7 @@ Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawk
 \begin{enumerate}
 \item[(i)] \emph{(Recurrence.)} Every $x \in \mathfrak{A}$ has a relatively compact $\tau$-orbit, and for every $\varepsilon > 0$ and $S > 0$ there are $T \ge S$ and $T' \le -S$ with $\|\tau_{T}(x) - x\| < \varepsilon$ and $\|\tau_{T'}(x) - x\| < \varepsilon$.
 \item[(ii)] \emph{(No proper semigroup invariance.)} If $\mathcal{B} \subseteq \mathfrak{A}$ is a norm-closed subspace with $\tau_{t}(\mathcal{B}) \subseteq \mathcal{B}$ for all $t \ge 0$, or for all $t \le 0$, then $\tau_{t}(\mathcal{B}) = \mathcal{B}$ for every $t \in \R$. The same holds in the GNS representation $(\mathcal{H}, \pi, \Omega)$ of any $\tau$-invariant state, with $V_{t}$ the unitaries implementing $\tau$: $V_{t}$ has pure point spectrum, and every $\sigma$-weakly closed subspace $\mathcal{B}$ of $\pi(\mathfrak{A})''$ with $V_{t}\mathcal{B}V_{t}^{*} \subseteq \mathcal{B}$ for all $t$ of one sign satisfies $V_{t}\mathcal{B}V_{t}^{*} = \mathcal{B}$ for all $t$.
-\item[(iii)] \emph{(Consequence for the local-horizon premise.)} Let $\mathcal{H}$ be a local Rindler horizon carrying $\mathfrak{A}$ as clause (i) of Premise \claimref{synthesis.c-loc-local-horizon-premise} asserts, with affine parameter $\lambda$ on its generators and bifurcation cut at $\lambda = 0$, and let $\mathcal{N}_{c} = \{\lambda > c\}$, $c > 0$. Assume (P): the local boost acts on the patch's modes as the Definition's boost dynamics, so that the modular flow, which clause (iii) identifies with the local boost, is $\tau$ up to a nonzero rescaling of its parameter (clause (i) cites the algebra; that its phase dynamics is the local boost is this hypothesis). Consider the geometric reading (G) of clause (iii): the modes on $\mathcal{N}_{c}$ generate C$^{*}$-subalgebras $\mathfrak{A}_{c} \subseteq \mathfrak{A}$ (or von Neumann subalgebras of $\pi(\mathfrak{A})''$ in the GNS representation of the selected state) with $\mathfrak{A}_{c} \subseteq \mathfrak{A}_{c'}$ for $c \ge c'$, and the modular flow carries $\mathfrak{A}_{c}$ onto $\mathfrak{A}_{e^{\mp 2\pi s}c}$ at modular parameter $s$, the way the boost moves $\mathcal{N}_{c}$. Then, under (P), $\mathfrak{A}_{c} = \mathfrak{A}_{c'}$ for all $c, c' > 0$. So (G) with properly nested sub-patch algebras contradicts clause (i) as worded, given (P); the same holds for nested diamonds sharing a tip, moved monotonically by the conformal Killing flow of the larger one.
+\item[(iii)] \emph{(Consequence for the local-horizon premise.)} Let $\mathcal{H}$ be a local Rindler horizon carrying $\mathfrak{A}$ as clause (i) of version 1 of Premise \claimref{synthesis.c-loc-local-horizon-premise} asserts (clauses (i), (ii), (iii) below are those of version 1: count, temperature, modular flow; the current version keeps the temperature clause as (R$_{\mathrm{loc}}$) and records the other two under ``Not part of this premise''), with affine parameter $\lambda$ on its generators and bifurcation cut at $\lambda = 0$, and let $\mathcal{N}_{c} = \{\lambda > c\}$, $c > 0$. Assume (P): the local boost acts on the patch's modes as the Definition's boost dynamics, so that the modular flow, which clause (iii) identifies with the local boost, is $\tau$ up to a nonzero rescaling of its parameter (clause (i) cites the algebra; that its phase dynamics is the local boost is this hypothesis). Consider the geometric reading (G) of clause (iii): the modes on $\mathcal{N}_{c}$ generate C$^{*}$-subalgebras $\mathfrak{A}_{c} \subseteq \mathfrak{A}$ (or von Neumann subalgebras of $\pi(\mathfrak{A})''$ in the GNS representation of the selected state) with $\mathfrak{A}_{c} \subseteq \mathfrak{A}_{c'}$ for $c \ge c'$, and the modular flow carries $\mathfrak{A}_{c}$ onto $\mathfrak{A}_{e^{\mp 2\pi s}c}$ at modular parameter $s$, the way the boost moves $\mathcal{N}_{c}$. Then, under (P), $\mathfrak{A}_{c} = \mathfrak{A}_{c'}$ for all $c, c' > 0$. So (G) with properly nested sub-patch algebras contradicts clause (i) as worded, given (P); the same holds for nested diamonds sharing a tip, moved monotonically by the conformal Killing flow of the larger one.
 \end{enumerate}
 Hence, given (P), clause (iii) is consistent with clause (i) only as a statement about the boost dynamics acting on the patch's mode algebra as a whole, which is how the flow acts at a Killing horizon, where the modes sit on the fixed locus of the boost; for a faithful state this is the KMS condition of clause (ii) restated (on windows, part (ii) of Theorem \claimref{synthesis.local-boost-temperature-is-local-regularity}). The geometric reading, the one the Bisognano-Wichmann and Hislop-Longo flows realise for a quantum field and the one the small-diamond route uses, needs a mode space on which the boost has continuous spectrum, such as Definition \claimref{obj.hawking.continuum-mode-space}, which clause (i) does not cite.
 
@@ -83,4 +91,4 @@ Clause (i) of the local-horizon premise puts on every local horizon the series' 
 The new assumption needed for Einstein's equations has three parts: small horizons carry the series' quantum modes, those modes are at the right temperature, and their natural time flow is the geometric flow of the horizon. This result shows that the third part can only be meant in a weak sense. The series' modes evolve by simple rotations of phases, and such an evolution always comes back close to where it started. A genuinely geometric flow would instead push the modes of a smaller piece of horizon ever deeper into a larger piece, never returning. The two cannot both hold. So the third part must be read as a statement about the modes of the whole patch, where it adds nothing beyond the temperature part; the stronger geometric reading would need a continuous family of modes, which the assumption does not name.
 
 ## one-liner
-A phase-acting boost is almost periodic, so it maps no closed subspace properly into itself; hence, if the local boost acts on the patch's modes as the cited boost dynamics, clause (iii) of (C$_{\mathrm{loc}}$) cannot move properly nested C$^{*}$- or von Neumann sub-patch algebras of the mode algebra its clause (i) cites, and is consistent only as the boost dynamics on the whole patch, where for a faithful state it restates clause (ii).
+A phase-acting boost is almost periodic, so it maps no closed subspace properly into itself; hence, if the local boost acts on the patch's modes as the cited boost dynamics, clause (iii) of version 1 of (C$_{\mathrm{loc}}$) cannot move properly nested C$^{*}$- or von Neumann sub-patch algebras of the mode algebra its clause (i) cites, and is consistent only as the boost dynamics on the whole patch, where for a faithful state it restates clause (ii).

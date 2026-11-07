@@ -1,7 +1,7 @@
 ---
 id: synthesis.black-hole-data-do-not-fix-field-equations
 kind: claim
-version: 6
+version: 7
 title: 'Black-hole thermodynamics does not fix Einstein''s equations'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, the convention parenthetical made exact (which components change sign in which convention)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -37,6 +41,10 @@ lineage:
   motivated_by:
   - synthesis.quarter-from-temperature
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The parenthetical said the mixed Ricci components flip in the store convention; they flip in signature (+,-,-,-) with the Ricci tensor still positive on spheres, but in the store sign (Ric = -Ric°) they equal the (-,+,+,+) values and only the components with both indices down change sign; checked exactly on de Sitter (v/r03_checks.py).'
   correction:
     by: maintainer-2026-10-22
     date: '2026-10-22'
@@ -63,7 +71,7 @@ extraction:
 ---
 
 ## formal
-Conventions: signature $(-,+,+,+)$ with the Ricci tensor positive on spheres (in the store's $(+,-,-,-)$ convention the signs of the mixed Ricci components below flip). For a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $L_{f} = (R - 2\Lambda)/16\pi G + f$ with $\Lambda = 0$, a Lagrangian density (with the weight $\det(\hb)^{-1}$), where $R$ is the scalar curvature and $f$ is a polynomial in the components of the Ricci tensor, the Ricci map of the field strength (indices contracted with the derived metric), every monomial of which has degree at least two in the Ricci tensor; its field equations are those obtained by varying $\hb$ with $\Omega$ the torsion-free field of $\hb$, equivalently by varying the derived metric; $f = 0$ is Einstein's theory.
+Conventions: signature $(-,+,+,+)$ with the Ricci tensor positive on spheres (in signature $(+,-,-,-)$ with the Ricci tensor still positive on spheres the mixed components $R^{a}{}_{b}$ below change sign; in the store's curvature sign, $\Ric = -\Ric^{\circ}$, they are the same as here, and only the components with both indices down change sign). For a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $L_{f} = (R - 2\Lambda)/16\pi G + f$ with $\Lambda = 0$, a Lagrangian density (with the weight $\det(\hb)^{-1}$), where $R$ is the scalar curvature and $f$ is a polynomial in the components of the Ricci tensor, the Ricci map of the field strength (indices contracted with the derived metric), every monomial of which has degree at least two in the Ricci tensor; its field equations are those obtained by varying $\hb$ with $\Omega$ the torsion-free field of $\hb$, equivalently by varying the derived metric; $f = 0$ is Einstein's theory.
 \begin{enumerate}
 \item[(i)] Every vacuum field (Ricci-flat derived metric, vanishing Ricci map) solves the field equations of every $L_{f}$. The Schwarzschild field is a vacuum field, with horizon locus $r = 2M$, surface gravity $1/4M$, interior and Kretschmann scalar $K = 48M^{2}/r^{6}$ independent of $f$; so the surface $2M/r^{3} = 1$ on which (C1) places the boundary modes is the curvature level $\sqrt{K/12} = 1$, and a region where the field strength vanishes has no such surface.
 \item[(ii)] Assume (W): horizon entropy is Wald's Noether-charge entropy (Fact \claimref{synthesis.imported-wald-noether-charge-entropy}). Then the Schwarzschild horizon has entropy $A/4G$ under every $L_{f}$, since the Ricci-dependent part of the Wald functional vanishes where the Ricci tensor does.

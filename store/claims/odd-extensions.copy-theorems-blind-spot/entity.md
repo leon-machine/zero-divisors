@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.copy-theorems-blind-spot
 kind: claim
-version: 5
+version: 6
 title: The copy theorem's blind spot
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, order of the centres of the odd extensions corrected in the technical level
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.odd-extensions.single-extension
@@ -45,6 +49,10 @@ locators:
   label: cor:blind
   line: 531
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Technical level: the centres were listed as C against R+R for both pairs; for Cl(1,4) against Cl(4,1) the order is R+R against C (pseudoscalar squares +1 and -1, (-1)^{10+q}); wording fix.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -84,7 +92,7 @@ extraction:
 The copy theorem identifies this world and its mirror by working in an algebra, $\Cl^{0}(2,4) \cong \Cl(2,3)$, that contains both real forms and is the complexification of each, its complex unit being the conformal pseudoscalar $I_6$ that spans its centre with $1$. It is therefore exactly blind to the distinction that a single extension sees: the two oriented towers have isomorphic conformal spin groups, isomorphic conformal spinor modules (twistor modules) and one complexified ambient, but odd extensions that signature reversal does not identify (Theorem \claimref{odd-extensions.twistor-algebra}(iv)), whose centres differ. The shadows themselves are non-isomorphic (Fact \claimref{odd-extensions.imported-representatives-dimension-nearest-four-types}); every object the copy theorem is built from, the even subalgebra of the rung, the conformal spin group and the conformal spinor module $\CS$ (Theorem \claimref{odd-extensions.twistor-algebra}(iii)), identifies the two towers, while the rungs themselves, $\Cl(2,4)$ and $\Cl(4,2)$, do not, being of the two towers' types by Facts \claimref{odd-extensions.imported-towers-clock} and \claimref{odd-extensions.imported-representatives-dimension-nearest-four-types}; the odd extension is the first construction above the shadow, by dimension, that keeps them apart, and it does so through an element, the bare fifth generator, that no derived quantity of the series uses (Proposition \claimref{odd-extensions.two-towers-one-curved-universe}).
 
 ## technical
-The copy theorem identifies this world $(1,3)$ with its mirror $(3,1)$ by working in $\Cl^{0}(2,4) \cong \Cl(2,3)$, an algebra that contains both real forms and is the complexification of each. Every object it is built from (the rung's even subalgebra, the conformal spin group and the conformal spinor module) therefore identifies the two towers. The shadows themselves are not isomorphic, and the rungs $\Cl(2,4)$ and $\Cl(4,2)$ are not identified either, being of the two towers' types. Nor are the odd extensions: $\Cl(2,3) \not\cong \Cl(3,2)$ and $\Cl(1,4) \not\cong \Cl(4,1)$, with centres $\C$ against $\R \oplus \R$. So the odd extension is the first construction above the shadow, by dimension, that keeps the towers apart, and it does so through the bare fifth generator, which no derived quantity of the series uses.
+The copy theorem identifies this world $(1,3)$ with its mirror $(3,1)$ by working in $\Cl^{0}(2,4) \cong \Cl(2,3)$, an algebra that contains both real forms and is the complexification of each. Every object it is built from (the rung's even subalgebra, the conformal spin group and the conformal spinor module) therefore identifies the two towers. The shadows themselves are not isomorphic, and the rungs $\Cl(2,4)$ and $\Cl(4,2)$ are not identified either, being of the two towers' types. Nor are the odd extensions: $\Cl(2,3) \not\cong \Cl(3,2)$, with centres $\C$ against $\R \oplus \R$, and $\Cl(1,4) \not\cong \Cl(4,1)$, with centres $\R \oplus \R$ against $\C$. So the odd extension is the first construction above the shadow, by dimension, that keeps the towers apart, and it does so through the bare fifth generator, which no derived quantity of the series uses.
 
 ## lay
 The series proves that the mirror tower is a copy of ours by working in an algebra in which the two look identical. This result points out that the method is therefore blind to where they do differ: a five-dimensional extension of each, which reversing the signature does not match up. The difference sits in a single element that none of the series' derived quantities uses.

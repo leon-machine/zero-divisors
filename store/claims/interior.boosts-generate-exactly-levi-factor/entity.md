@@ -1,7 +1,7 @@
 ---
 id: interior.boosts-generate-exactly-levi-factor
 kind: claim
-version: 4
+version: 5
 title: The boosts generate exactly the Levi factor
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, typo in the proof (the frame vectors are u, v, w)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: lem:gen
   line: 660
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The bracket rule was introduced for u, v, u'', v'' but states [u ^ v, v ^ w]; the vectors are now u, v, w.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

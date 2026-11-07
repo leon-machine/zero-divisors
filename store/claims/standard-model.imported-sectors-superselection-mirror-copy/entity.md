@@ -1,7 +1,7 @@
 ---
 id: standard-model.imported-sectors-superselection-mirror-copy
 kind: claim
-version: 3
+version: 4
 title: 'Imported: sectors, superselection, and the mirror copy'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, premise named as the single frozen point
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.dark-matter.frozen-phase-operators
@@ -40,6 +44,10 @@ locators:
   label: fact:towers
   line: 1286
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Every level and the proof called the premise of T14 Prop 4.1 the single-clock premise; that proposition (dark-matter.superselected-hence-dark-exactly-stable) assumes P1, the single frozen point, while the single clock is the filter of the census. Naming fix.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -60,15 +68,15 @@ extraction:
 ---
 
 ## formal
-The eight towers are the residues of the shadow dimension mod $8$ \cite[Prop.~3.1]{ButlerT14}, this world's tower one of them and the mirror tower another. Under the sector decomposition of \cite[Def.~3.6]{ButlerT14}, every frozen-phase local operator is a section of one tower's soldered bundle and acts within that tower's sector; the tower charge is superselected, the shadow walls separating residues are unreachable, and matter in another tower gravitates on the shared metric and does nothing else: the only inter-tower coupling is gravitational, and the only inter-tower event is the descent \cite[Prop.~4.1]{ButlerT14}. The mirror tower's derived content is a copy of this one's, with the same gauge algebra, global form, generation, hypercharges and chirality halves, hence the same $\beta$-functions at every scale \cite[Thm.~4.3(i),(iii)]{ButlerT14}. \emph{Provenance:} T14, at the levels declared there; Proposition 4.1 rests on the single-clock premise and the sector decomposition, and everything below that uses it is conditional on the same.
+The eight towers are the residues of the shadow dimension mod $8$ \cite[Prop.~3.1]{ButlerT14}, this world's tower one of them and the mirror tower another. Under the sector decomposition of \cite[Def.~3.6]{ButlerT14}, every frozen-phase local operator is a section of one tower's soldered bundle and acts within that tower's sector; the tower charge is superselected, the shadow walls separating residues are unreachable, and matter in another tower gravitates on the shared metric and does nothing else: the only inter-tower coupling is gravitational, and the only inter-tower event is the descent \cite[Prop.~4.1]{ButlerT14}. The mirror tower's derived content is a copy of this one's, with the same gauge algebra, global form, generation, hypercharges and chirality halves, hence the same $\beta$-functions at every scale \cite[Thm.~4.3(i),(iii)]{ButlerT14}. \emph{Provenance:} T14, at the levels declared there; Proposition 4.1 rests on the single-frozen-point premise P1 and the sector decomposition, and everything below that uses it is conditional on the same.
 
 ## technical
 The eight towers are the residues of the shadow dimension mod $8$, this world's tower one of them and the mirror tower another. Under the sector decomposition every frozen-phase local operator is a section of one tower's soldered bundle and acts within that tower's sector; the tower charge is superselected and the shadow walls between residues are unreachable, so matter in another tower only gravitates on the shared metric, and the only inter-tower event is the descent.
 
-The mirror tower's derived content is a copy of ours, with the same gauge algebra, global form, generation, hypercharges and chirality halves, hence the same $\beta$-functions at every scale. The fact is imported from the dark-matter paper at the levels declared there, and is conditional on the single-clock premise and the sector decomposition.
+The mirror tower's derived content is a copy of ours, with the same gauge algebra, global form, generation, hypercharges and chirality halves, hence the same $\beta$-functions at every scale. The fact is imported from the dark-matter paper at the levels declared there, and is conditional on the single-frozen-point premise P1 and the sector decomposition.
 
 ## lay
-Under the dark-matter paper's single-clock premise and its decomposition into sectors, the framework splits matter into eight separate sectors that can exchange nothing except gravity. One of them is ours, and another is a mirror copy with the same particles and forces. Because the forces are the same, their strengths change with energy in exactly the same way in both sectors. All of this is carried over from that paper at the levels it declares there.
+Under the dark-matter paper's single-frozen-point premise and its decomposition into sectors, the framework splits matter into eight separate sectors that can exchange nothing except gravity. One of them is ours, and another is a mirror copy with the same particles and forces. Because the forces are the same, their strengths change with energy in exactly the same way in both sectors. All of this is carried over from that paper at the levels it declares there.
 
 ## one-liner
-Conditional on the single-clock premise and the sector decomposition, the eight towers are superselected sectors coupled only through gravity, and the mirror tower's content copies ours, with the same $\beta$-functions at every scale.
+Conditional on the single-frozen-point premise P1 and the sector decomposition, the eight towers are superselected sectors coupled only through gravity, and the mirror tower's content copies ours, with the same $\beta$-functions at every scale.

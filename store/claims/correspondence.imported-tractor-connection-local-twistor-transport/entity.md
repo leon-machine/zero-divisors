@@ -1,7 +1,7 @@
 ---
 id: correspondence.imported-tractor-connection-local-twistor-transport
 kind: claim
-version: 7
+version: 8
 title: 'Imported: the tractor connection and its conformal spinor form'
 status: proved
 region: correspondence
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 7
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the Schouten tensor written with its stored macro'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -45,6 +49,10 @@ locators:
   label: fact:ltt
   line: 581
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The levels and proof wrote the Schouten tensor as mathrm P, against the stored macro Sch used by the tractor Fact it restates; the source form under extraction.source_formal keeps the source letter.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -93,16 +101,16 @@ extraction:
 ## formal
 Let $[g]$ be the conformal class of the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), on its invertible region. (i) $[g]$ carries a canonical connection on the rank-six tractor bundle, whose fibre is the vector space of $\Cl(2,4)$ and which on flat spacetime is the rotation-gauge field $D^{T}_{a} = a \cdot \nabla + \Omega_{T}(a)\times$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}; its expression in a scale $g$ is
 \[
-\nabla_a(\sigma, \mu_b, \rho) = \bigl(\nabla_a\sigma - \mu_a,\;\; \nabla_a\mu_b + g_{ab}\rho - \mathrm{P}_{ab}\sigma,\;\; \nabla_a\rho + \mathrm{P}_a{}^b\mu_b\bigr),
+\nabla_a(\sigma, \mu_b, \rho) = \bigl(\nabla_a\sigma - \mu_a,\;\; \nabla_a\mu_b + g_{ab}\rho - \Sch_{ab}\sigma,\;\; \nabla_a\rho + \Sch_a{}^b\mu_b\bigr),
 \]
-with $\mathrm{P}$ the Schouten tensor. (ii) The conformal class likewise carries the classical bundle of conformal spinors (the \emph{local twistor} bundle), fibrewise the conformal spinor space $\CS = \Cl^+(2,4)P$, a $4$-dimensional module over the complex unit $I_6$, with the scale splitting $Z = (\omega^B, \pi_{B'})$ into the halves $\Som \oplus \Spi$, and its transport, the conformal spinor connection (local twistor transport),
+with $\Sch$ the Schouten tensor. (ii) The conformal class likewise carries the classical bundle of conformal spinors (the \emph{local twistor} bundle), fibrewise the conformal spinor space $\CS = \Cl^+(2,4)P$, a $4$-dimensional module over the complex unit $I_6$, with the scale splitting $Z = (\omega^B, \pi_{B'})$ into the halves $\Som \oplus \Spi$, and its transport, the conformal spinor connection (local twistor transport),
 \[
-\nabla^{\mathrm{LT}}_a(\omega^B, \pi_{B'}) \;=\; \bigl(\nabla_a \omega^B + \varepsilon_A{}^B\,\pi_{A'}I_6,\;\; \nabla_a\pi_{B'} + \mathrm{P}_{AA'BB'}\,\omega^B I_6\bigr),
+\nabla^{\mathrm{LT}}_a(\omega^B, \pi_{B'}) \;=\; \bigl(\nabla_a \omega^B + \varepsilon_A{}^B\,\pi_{A'}I_6,\;\; \nabla_a\pi_{B'} + \Sch_{AA'BB'}\,\omega^B I_6\bigr),
 \]
 in the index conventions of \cite[Vol.~2, Ch.~6]{PenroseRindler86}, where the complex unit of $\CS$, the source's imaginary unit, is right multiplication by the conformal pseudoscalar $I_6$; under conformal rescaling $\omega$ is invariant and $\pi$ shifts, so the $\pi$-plane $\{\omega = 0\}$ (the kernel in $\CS$ of the point's null vector) is the canonical subbundle. \emph{Provenance:} (i) \cite{BEG1994, CurryGover2018}, in the conventions of \cite[Fact 4.1, eq.~(3)]{ButlerT6}; (ii) \cite{PenroseMacCallum73, Dighton74}; the statement that (ii) is the spin representation of (i), that is, that the conformal spinor connection is the tractor connection acting on $\CS$, is standard in the tractor literature \cite{BEG1994, CurryGover2018}, and is \emph{proved} rather than imported below, since the proof is short in the present framework.
 
 ## technical
-The conformal class of a gravitational field on flat spacetime carries two canonical connections. On the rank-six tractor bundle, whose fibre is the vector space of $\Cl(2,4)$ and on which the connection is the flat-space gauge field $\Omega_{T}$ built from $\Omega$, the frame and the Schouten map, the expression in a scale $g$ is $\nabla_a(\sigma, \mu_b, \rho) = (\nabla_a\sigma - \mu_a,\ \nabla_a\mu_b + g_{ab}\rho - \mathrm{P}_{ab}\sigma,\ \nabla_a\rho + \mathrm{P}_a{}^b\mu_b)$, with $\mathrm{P}$ the Schouten tensor. On the bundle of conformal spinors, fibrewise the $4$-dimensional spinor space $\CS$ of the even conformal algebra over the complex unit $I_6$ and split in a scale as $Z = (\omega^B, \pi_{B'})$, the conformal spinor connection is $\nabla^{\mathrm{LT}}_a(\omega^B, \pi_{B'}) = (\nabla_a\omega^B + \varepsilon_A{}^B\pi_{A'}I_6,\ \nabla_a\pi_{B'} + \mathrm{P}_{AA'BB'}\omega^B I_6)$ in Penrose-Rindler index conventions, with the unit $I_6$ acting on the right.
+The conformal class of a gravitational field on flat spacetime carries two canonical connections. On the rank-six tractor bundle, whose fibre is the vector space of $\Cl(2,4)$ and on which the connection is the flat-space gauge field $\Omega_{T}$ built from $\Omega$, the frame and the Schouten map, the expression in a scale $g$ is $\nabla_a(\sigma, \mu_b, \rho) = (\nabla_a\sigma - \mu_a,\ \nabla_a\mu_b + g_{ab}\rho - \Sch_{ab}\sigma,\ \nabla_a\rho + \Sch_a{}^b\mu_b)$, with $\Sch$ the Schouten tensor. On the bundle of conformal spinors, fibrewise the $4$-dimensional spinor space $\CS$ of the even conformal algebra over the complex unit $I_6$ and split in a scale as $Z = (\omega^B, \pi_{B'})$, the conformal spinor connection is $\nabla^{\mathrm{LT}}_a(\omega^B, \pi_{B'}) = (\nabla_a\omega^B + \varepsilon_A{}^B\pi_{A'}I_6,\ \nabla_a\pi_{B'} + \Sch_{AA'BB'}\omega^B I_6)$ in Penrose-Rindler index conventions, with the unit $I_6$ acting on the right.
 
 Under conformal rescaling $\omega$ is invariant and $\pi$ shifts, so the $\pi$-plane $\{\omega = 0\}$, the kernel of the point's null vector, is the canonical subbundle. Both connections are taken from the literature, the first in the series' own conventions; that the second is the first acting on conformal spinors (its spin representation) is proved in the series rather than imported.
 

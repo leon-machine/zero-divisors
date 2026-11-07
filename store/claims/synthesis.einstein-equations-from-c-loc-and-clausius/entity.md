@@ -1,7 +1,7 @@
 ---
 id: synthesis.einstein-equations-from-c-loc-and-clausius
 kind: claim
-version: 7
+version: 8
 title: 'Einstein''s equations from (C$_{\mathrm{loc}}$) and Clausius'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, the temperature clause cited by its current name'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -54,6 +58,10 @@ lineage:
   - synthesis.black-hole-data-do-not-fix-field-equations
   - synthesis.boundary-mode-first-law-of-entanglement
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item (1) cited clause (ii), the temperature clause of version 1 of the local-horizon premise; the pinned version 6 names it (R_loc).'
   maintainer_pass_2026_11_01:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -113,7 +121,7 @@ Units $\hbar = c = 1$, signature $(1,3)$. Write $\Ric^{\circ}$ for the Ricci ten
 \end{enumerate}
 Then, with $G_{\mathrm{cl}} := 1/(4\eta)$:
 \begin{enumerate}
-\item \emph{(Temperature.)} Clause (ii) gives $T_{\chi} = \kappa/2\pi$: on the orbit of $\chi$ at proper distance $\rho$ from the edge, $a = 1/\rho$ and $|\chi| = \kappa\rho$, and $T_{\chi} = (a/2\pi)\,|\chi|$. Nothing below depends on $\kappa$.
+\item \emph{(Temperature.)} Clause (R$_{\mathrm{loc}}$) gives $T_{\chi} = \kappa/2\pi$: on the orbit of $\chi$ at proper distance $\rho$ from the edge, $a = 1/\rho$ and $|\chi| = \kappa\rho$, and $T_{\chi} = (a/2\pi)\,|\chi|$. Nothing below depends on $\kappa$.
 \item \emph{(Focusing at leading order.)} $\theta(\lambda) = -\lambda\,\Ric^{\circ}(k,k)|_{p} + O(\lambda^{2})$, and per unit cross-section area at $p$
 \[
 \delta Q - T_{\chi}\,\eta\,\delta A \;=\; \frac{\kappa}{2}\Big(T(k,k) - \frac{\eta}{2\pi}\Ric^{\circ}(k,k)\Big)\Big|_{p}\,\lambda_{0}^{2} + O(\lambda_{0}^{3}),

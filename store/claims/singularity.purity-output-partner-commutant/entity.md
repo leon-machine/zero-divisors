@@ -1,7 +1,7 @@
 ---
 id: singularity.purity-output-partner-commutant
 kind: claim
-version: 4
+version: 5
 title: 'Purity is an output: the partner is the commutant'
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, scalars of the mode factor and the meaning of J stated
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: thm:gns
   line: 1948
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The formal level now says that the scalars of the mode factor are span{1, e2e3}, the radial atom's complex unit (unit principle U2), and that J here is the modular conjugation, not that unit, which the cited Schmidt-forcing lemma also writes J; no mathematical change."
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -63,7 +71,7 @@ extraction:
 ---
 
 ## formal
-Let $\omega$ be a faithful state on the mode factor with $\varrho = \operatorname{diag}(\lambda_0^{2}, \lambda_1^{2})$, $\lambda_i > 0$. In its GNS representation: the space is $\C^{2}\otimes\C^{2}$ and the cyclic vector is $\Omega = \sum_i \lambda_i|ii\rangle$, cyclic and separating for $\pi(\Aa) = \Aa\otimes 1$; the commutant $\pi(\Aa)' = 1 \otimes \Aa$ is the partner copy and equals $J\pi(\Aa)J$; any two purifications of $\omega$ differ by a unitary on the purifying factor alone; and when $\omega$ is the Gibbs state at $\beta$, $\Omega$ is the thermofield double with $\tan\theta = e^{-\omega_k/2T}$, which is exactly the vector Lemma \claimref{singularity.schmidt-forcing-proved-outright} produces. Hypothesis (i) of Theorem \claimref{singularity.modular-descent}, the existence of the partner, and the thermofield form are therefore consequences of the one-sided state rather than independent choices.
+Let $\omega$ be a faithful state on the mode factor (scalars $\mathrm{span}\{1, e_{2}e_{3}\}$, the complex unit of the radial atom, \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}; below, $J$ is the modular conjugation of Lemma \claimref{singularity.modular-theory-matrix-factor-proved-outright}, not that unit) with $\varrho = \operatorname{diag}(\lambda_0^{2}, \lambda_1^{2})$, $\lambda_i > 0$. In its GNS representation: the space is $\C^{2}\otimes\C^{2}$ and the cyclic vector is $\Omega = \sum_i \lambda_i|ii\rangle$, cyclic and separating for $\pi(\Aa) = \Aa\otimes 1$; the commutant $\pi(\Aa)' = 1 \otimes \Aa$ is the partner copy and equals $J\pi(\Aa)J$; any two purifications of $\omega$ differ by a unitary on the purifying factor alone; and when $\omega$ is the Gibbs state at $\beta$, $\Omega$ is the thermofield double with $\tan\theta = e^{-\omega_k/2T}$, which is exactly the vector Lemma \claimref{singularity.schmidt-forcing-proved-outright} produces. Hypothesis (i) of Theorem \claimref{singularity.modular-descent}, the existence of the partner, and the thermofield form are therefore consequences of the one-sided state rather than independent choices.
 
 ## technical
 Let $\omega$ be a faithful state on the mode factor with $\varrho = \operatorname{diag}(\lambda_0^2, \lambda_1^2)$, $\lambda_i > 0$. Its GNS representation lives on $\C^2 \otimes \C^2$ with cyclic vector $\Omega = \sum_i \lambda_i |ii\rangle$, cyclic and separating for $\pi(\Aa) = \Aa \otimes 1$; the commutant $\pi(\Aa)' = 1 \otimes \Aa = J\pi(\Aa)J$ is the partner copy, and any two purifications of $\omega$ differ by a unitary on the purifying factor alone.

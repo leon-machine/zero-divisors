@@ -1,7 +1,7 @@
 ---
 id: dark-matter.stored-asymmetry-charge-not-number
 kind: claim
-version: 8
+version: 9
 title: The stored asymmetry is a charge, not a number
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, interval of the eta-prime and thermal-share bounds stated
+  version: 9
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -50,6 +54,10 @@ locators:
   label: prop:charge
   line: 399
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Wording: the bounds eta-prime/eta >= 10^7 and f_2 <= 10^-7 hold from the floor to the hot deposit (xi up to about 4.3e-3, xi^3 <= 7.7e-8), not up to the N_eff cap, where 1/xi^3 = 11 and xi^3 = 0.090 (computed); clause (iv) and the technical level now say so, the mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -127,14 +135,14 @@ Under the classification of Proposition \claimref{dark-matter.asymmetry-arrow-co
 \eta' \;=\; \frac{\eta}{\xi^{3}}
 \]
 runs from $19$ to $26$ at the floor down to about $0.008$ at the hot deposit, crossing one at $\xi = \eta^{1/3} = 8.5 \times 10^{-4}$: at least $10^{7}$ times ours throughout, with $\Delta\Neff$ eight orders or more below the cap.
-\item[(iv)] \emph{(The two readings.)} The thermal reading would give $f_{2} \sim \xi_{2}^{3}$ instead, at most $0.090$ under the $\Neff$ cap ($0.448^{3}$) and $10^{-7}$ or less anywhere in the interval; the two readings cannot both hold, and the paper's own classification decides for the charge.
+\item[(iv)] \emph{(The two readings.)} The thermal reading would give $f_{2} \sim \xi_{2}^{3}$ instead, at most $0.090$ under the $\Neff$ cap ($0.448^{3}$) and $10^{-7}$ or less anywhere between the floor and the hot deposit; the two readings cannot both hold, and the paper's own classification decides for the charge.
 \end{enumerate}
 Level: the classification is Fact \claimref{dark-matter.imported-trichotomy-descents-data}'s; the incompatibility is arithmetic. The mirror's nucleosynthesis, which is not a copy of ours and on which the burning branch of Proposition \claimref{dark-matter.mirror-share-one-how-fragile}(i) and the composition caveat of refutation item 6 rest, follows the proof, at assembly level. Caveat (T14c): the proof's thermal up-down ratio at freeze-out fails at the floor, where the mirror is degenerate and, for a copied lepton number $L \leq 0$, ends $96$ to $100$ percent neutrons; it is helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$, an interval containing the hot-deposit estimate (Computation \claimref{dark-tower-matter.mirrors-composition}). The burning branch is therefore not the floor's composition.
 
 ## technical
 Under the classification in which the asymmetry $\epsilon$ is inherited initial data of the descent, with the number $N = M_{P}/H$ common to the towers under P1 (it fixes a count of light rays, about $\pi N^{2}/\ln 2$, rather than being it; the boundary-mode arrays per light ray depend on the tower), (i) the asymmetry stored in an oriented tower is the charge $Q = \epsilon N$, independent of temperature, not a thermal excess $n - \bar{n} \propto g\,\mu T^{2}$, so the mirror share $f_{2} = 1$ holds at any mirror temperature. (ii) The charge cannot be produced afterwards: gravitational production yields $1.8$ to $2.7 \times 10^{-15}$ quanta per unit entropy at the ceiling reheating against the $8.7 \times 10^{-11}$ baryons per unit entropy required, and black holes are a sink for $Q$, not a source, under P5.
 
-(iii) Taken as a free datum of the descent, the mirror's temperature ratio $\xi$ lies between the gravitational floor, about $3 \times 10^{-4}$, and the $N_{\mathrm{eff}}$ cap at $0.448$, with a hot deposit putting it near $4 \times 10^{-3}$; the mirror baryon-to-photon ratio $\eta' = \eta/\xi^{3}$ is then at least $10^{7}$ times ours throughout. (iv) The thermal reading would give $f_{2} \sim \xi^{3} \le 0.090$, so the two readings cannot both hold, and the classification decides for the charge.
+(iii) Taken as a free datum of the descent, the mirror's temperature ratio $\xi$ lies between the gravitational floor, about $3 \times 10^{-4}$, and the $N_{\mathrm{eff}}$ cap at $0.448$, with a hot deposit putting it near $4 \times 10^{-3}$; the mirror baryon-to-photon ratio $\eta' = \eta/\xi^{3}$ is then at least $10^{7}$ times ours from the floor to the hot deposit (only $11$ times ours at the cap). (iv) The thermal reading would give $f_{2} \sim \xi^{3} \le 0.090$, so the two readings cannot both hold, and the classification decides for the charge.
 
 Caveats from the T14c note: a free $\xi$ is an exception to P2, which applied with the reach of the copy theorem gives $\xi = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}); and the mirror is helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$, while at the floor it is degenerate and neutron-rich (Computation \claimref{dark-tower-matter.mirrors-composition}), so the burning branch does not describe the floor.
 

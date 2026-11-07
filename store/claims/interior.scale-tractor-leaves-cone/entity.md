@@ -1,7 +1,7 @@
 ---
 id: interior.scale-tractor-leaves-cone
 kind: claim
-version: 7
+version: 8
 title: '$\Lambda \neq 0$: the scale tractor leaves the cone'
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, stale paper reference replaced by the store sign'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -45,6 +49,10 @@ locators:
   label: thm:lambda
   line: 528
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal pointed to the paper''s Section sec:setting for the curvature convention; it is the store sign of the definition.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -68,7 +76,7 @@ extraction:
 ---
 
 ## formal
-Let $g$ be the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) and let it satisfy the Einstein condition $\Ric_{ab} = \Lambda\, g_{ab}$ on the invertible region $M^\circ$, that is $\mathcal{R}(a) = \Lambda a$ for the field strength in the conventions of Section \ref{sec:setting}, and set
+Let $g$ be the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) and let it satisfy the Einstein condition $\Ric_{ab} = \Lambda\, g_{ab}$ on the invertible region $M^\circ$, that is $\mathcal{R}(a) = \Lambda a$ for the field strength in the store's curvature sign, and set
 \[
 I_g \;:=\; \Bigl(1,\; 0,\; \tfrac{\Lambda}{6}\Bigr) \;=\; \nInf + \tfrac{\Lambda}{6}\,\nO
 \]

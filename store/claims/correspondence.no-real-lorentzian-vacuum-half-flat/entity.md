@@ -1,7 +1,7 @@
 ---
 id: correspondence.no-real-lorentzian-vacuum-half-flat
 kind: claim
-version: 6
+version: 7
 title: No real Lorentzian vacuum is half-flat
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the complexifying scalar i of the bivectors written as the central pseudoscalar I5'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -46,6 +50,10 @@ locators:
   label: prop:lorentz
   line: 807
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U3) the scalar that complexifies the bivectors, kept distinct from I, is the central pseudoscalar I5 of Cl(2,3), which commutes with every spacetime vector; complex conjugation is I5 -> -I5; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -80,10 +88,10 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $\mathcal{W}$ the Weyl map of its field strength on physical bivectors, and $\Lambda^{\pm}$ the duality halves, the eigenspaces of multiplication by the pseudoscalar $I$ (the Hodge star) on the complexified bivectors $\Lambda^{2}_{\C}$, with the scalar $i$ kept distinct from $I$. At every point of the invertible region, if either duality half of $\mathcal{W}$ vanishes, $\mathcal{W}$ vanishes: a real half-flat field has a conformally flat derived metric. The statement is pointwise; equivalently, on an oriented Lorentzian $4$-manifold, if either duality half of the Weyl tensor vanishes, the Weyl tensor vanishes: a real Lorentzian half-flat metric is conformally flat. (This is classical, and is the reason the nonlinear graviton is stated for complex or Riemannian signature in \cite{Penrose76}; the proof is included because it is four lines.) In particular no real Lorentzian black hole is half-flat: the Weyl maps of the Schwarzschild and Kerr fields are nonzero (a nonzero curvature scale times a nonzero type-D bivector off the singular locus, the locus where $\hb$ fails, imported from \cite[Prop.~3.3, Fact 6.3]{ButlerT6}).
+Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $\mathcal{W}$ the Weyl map of its field strength on physical bivectors, and $\Lambda^{\pm}$ the duality halves, the eigenspaces of multiplication by the pseudoscalar $I$ (the Hodge star) on the bivectors complexified by the central pseudoscalar $I_5$ of $\Cl(2,3)$, $\Lambda^{2}_{\C} = \Lambda^{2} \oplus \Lambda^{2}I_5$ ($I_5$ commutes with every spacetime vector and is kept distinct from $I$; complex conjugation is $I_5 \mapsto -I_5$). At every point of the invertible region, if either duality half of $\mathcal{W}$ vanishes, $\mathcal{W}$ vanishes: a real half-flat field has a conformally flat derived metric. The statement is pointwise; equivalently, on an oriented Lorentzian $4$-manifold, if either duality half of the Weyl tensor vanishes, the Weyl tensor vanishes: a real Lorentzian half-flat metric is conformally flat. (This is classical, and is the reason the nonlinear graviton is stated for complex or Riemannian signature in \cite{Penrose76}; the proof is included because it is four lines.) In particular no real Lorentzian black hole is half-flat: the Weyl maps of the Schwarzschild and Kerr fields are nonzero (a nonzero curvature scale times a nonzero type-D bivector off the singular locus, the locus where $\hb$ fails, imported from \cite[Prop.~3.3, Fact 6.3]{ButlerT6}).
 
 ## technical
-For a gravitational field on flat spacetime, duality on bivectors is multiplication by the pseudoscalar $I$, the Hodge star of the derived metric, a complex structure on bivectors; on the complexified bivectors, with a scalar $i$ distinct from $I$, its eigenspaces $\Lambda^\pm$ are interchanged by complex conjugation. The real Weyl map $\mathcal{W}$ of the field strength commutes with $I$, so it preserves $\Lambda^\pm$, and its restrictions $\mathcal{W}^\pm$ are complex conjugates of each other. Hence $\mathcal{W}^- = 0$ forces $\mathcal{W}^+ = 0$ and so $\mathcal{W} = 0$, and by Weyl's theorem the derived metric of a real half-flat field is conformally flat. In manifold language: on an oriented Lorentzian four-manifold a real half-flat metric is conformally flat.
+For a gravitational field on flat spacetime, duality on bivectors is multiplication by the pseudoscalar $I$, the Hodge star of the derived metric, a complex structure on bivectors; on the bivectors complexified by the central pseudoscalar $I_5$ of $\Cl(2,3)$, distinct from $I$, its eigenspaces $\Lambda^\pm$ are interchanged by complex conjugation. The real Weyl map $\mathcal{W}$ of the field strength commutes with $I$, so it preserves $\Lambda^\pm$, and its restrictions $\mathcal{W}^\pm$ are complex conjugates of each other. Hence $\mathcal{W}^- = 0$ forces $\mathcal{W}^+ = 0$ and so $\mathcal{W} = 0$, and by Weyl's theorem the derived metric of a real half-flat field is conformally flat. In manifold language: on an oriented Lorentzian four-manifold a real half-flat metric is conformally flat.
 
 In particular no real Lorentzian black hole is half-flat: the Weyl maps of the Schwarzschild and Kerr fields are a nonzero curvature scale times a nonzero type-D bivector off the singular locus. The result is classical, and is the reason the nonlinear graviton is stated for complex or Riemannian signature.
 

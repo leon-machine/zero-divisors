@@ -1,7 +1,7 @@
 ---
 id: dark-matter.premise-flag-as-datum
 kind: claim
-version: 3
+version: 4
 title: 'The flag as datum: the sign of the Witt flag is configuration data'
 status: postulate
 region: dark-matter
@@ -25,11 +25,19 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, technical level names the unit I_7 of the Fock module
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.dark-matter.witt-flag
 - obj.dark-energy.four-ways-number-enters-theory-shape
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Technical level: ''the imaginary unit of the Fock module'' replaced by ''the unit I_7 of the Fock module'', the unit the formal level names; wording only.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -53,7 +61,7 @@ extraction:
 \emph{What would refute it.} A structure of the framework, or a term of one of its action functionals, that distinguishes $J$ from $-J$ relative to the Fock module's $I_7$ and is fixed by the descent's kinematics rather than chosen by a solution: for example a proof that the pairing on the Fock module, the completion or the frozen point's data carry a preferred sign of $J$. Such a result would make the orientation bit kinematic or dynamically fixed. No observation tests the premise directly; it is a modelling choice about where the bit lives.
 
 ## technical
-The descent's Witt flag can be described as a choice of orthogonal complex structure $J$ on the six-dimensional conformal ambient: the flag is the $+I_7$ eigenspace of $J$, and the conjugate flag, in the other family, is the $+I_7$ eigenspace of $-J$, with $I_7$ the scalar unit of the complexification, the central pseudoscalar of $\Cl(3,4)$. The orientation bit is then the sign of $J$ relative to the imaginary unit of the Fock module on which the modes act.
+The descent's Witt flag can be described as a choice of orthogonal complex structure $J$ on the six-dimensional conformal ambient: the flag is the $+I_7$ eigenspace of $J$, and the conjugate flag, in the other family, is the $+I_7$ eigenspace of $-J$, with $I_7$ the scalar unit of the complexification, the central pseudoscalar of $\Cl(3,4)$. The orientation bit is then the sign of $J$ relative to the unit $I_7$ of the Fock module on which the modes act.
 
 The premise is that this sign belongs to each solution, planted once by the descent, and is not part of the kinematic structure of the theory. Two configurations differing only in that sign are kinematically isomorphic and are configurations of the same theory. CPT conjugation, which acts antilinearly and exchanges the two signs, then carries every solution to a solution of the same theory with the opposite bit, so the bit is initial data. This is what the seventeenth refutation and its two restatements in the one-relation paper need; if the sign were kinematic, each orientation would define its own theory, the bit would be fixed within each, and their conclusion would fail. The premise would be refuted by a structure or law of the framework that singles out one sign of $J$ from the kinematics alone. It is a modelling choice, not tested by any observation directly.
 

@@ -1,7 +1,7 @@
 ---
 id: synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
 kind: claim
-version: 5
+version: 6
 title: 'Hadamard Dirac states scale to the flat massless vacuum at every point'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 5
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (geodesic equation as D-parallelism)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -71,6 +75,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof step on the Synge function states the geodesic as the worldline whose velocity hb^{-1}(gamma'') is D-parallel (dictionary Fact (iii)), with the scaled Christoffel form of that equation as its labelled component reading (Gamma = g^rho . D_{e_mu} g_nu, Fact (ii)); the check''s coordinate formulas (van Vleck determinant, eikonal identity) are described as the check''s computation and stay; notation only.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

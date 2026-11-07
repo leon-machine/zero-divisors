@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
 kind: claim
-version: 2
+version: 3
 title: 'The MacDowell-Mansouri principle fixes the trace-free part'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, the curvature-sign line made the store sign that its formulas use'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -52,6 +56,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The convention line said Riemann positive on spheres in signature (1,3), but F_abcd = R_abcd - (Lambda/3)(gg - gg) vanishing on de Sitter, the vacuum Ric = Lambda g, Sch = (Lambda/6) g and clause (7) all need the store sign (R_abcd minus the round-sphere-positive components); checked exactly on de Sitter (v/r03_checks.py); identity (i) itself holds in either sign.'
   open_problem: op.scale-selection-principle
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -79,7 +87,7 @@ extraction:
 ---
 
 ## formal
-Units $c = 1$, signature $(1,3)$ (store), Riemann tensor positive on spheres, read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, Einstein tensor $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, Schouten tensor $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$ (Fact \claimref{synthesis.imported-gtg-dictionary}). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$, as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
+Units $c = 1$, signature $(1,3)$ (store), the store's curvature sign (the components $R_{abcd}$ are minus those of the round-sphere-positive Riemann tensor, so that de Sitter space has $\Ric = \Lambda g$ and $F_{abcd} = 0$), read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, Einstein tensor $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, Schouten tensor $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$ (Fact \claimref{synthesis.imported-gtg-dictionary}). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$, as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
 \begin{enumerate}
 \item[(i)] \emph{(The frame equation; proved.)} The variation of $S_{\mathrm{MM}}$ with respect to the frame $\hb^{-1}$ is the trivector-valued linear function $E(a) = 2\big(\mathcal{G}(a) + \Lambda a\big)I$. In components (a labelled reading), the three-form of the Fact's second Euler-Lagrange equation is
 \[
