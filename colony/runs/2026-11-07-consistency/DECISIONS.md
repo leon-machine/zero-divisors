@@ -547,3 +547,20 @@ content change).
 7. B4 (wall class): restate clause (a) as the one-rung completion, fix the clock wording; keep conjectured.
 8. The gravity entities declared because their proofs work in components, forms or tractor slots: write GTG proofs,
    checked exactly and reviewed blind before they replace the component proofs (gtg_targets.txt).
+
+## Leon's answers, second round (7 November 2026, 17:31; items from REPORT.md "For Leon")
+1. Formal fixes: apply all five (positive-structure (iii) l = e0 - e1; macdowell-mansouri-principle with Lambda/3 in
+   place of l^2 = 3/|Lambda|; static-frame "tends to 0 as F -> 0"; frozen-point-unique "for c != 0"; nondiagonal-kasner
+   (i) the definite sign). Exact texts: fix-F1.md, fix-F2.md, fix-F3.md.
+2. Ceiling-coupling premise: drop the two scope-only assumes edges (dark-matter.which-towers-can-carry-arrow,
+   dark-matter.no-coupling-rule-odd-towers-follows); keep the scope as a text mention.
+3. Theta angle: the common ceiling-coupling premise covers the mirror's theta angle ("every other coupling"); the
+   asymmetry remark stands as it reads.
+4. Route one: scope (iii) to what tower-charge proves (finite windows, or when its sum converges).
+5. c-loc: no assumes edges from series-wald or euler-entropy.
+6. dark-energy.imported-frozen-point-geometry: the sentence naming the tractor theorem becomes a text-only remark.
+7. Rewrite the remaining non-GA formal notation in GA (the weighted blow-up object's display; the two-form and
+   four-form definitions in frozen-point-integrand; index expressions marked as readings in black-hole-data,
+   frozen-point stiffness and collapsing-hole), old forms kept as labelled readings, checked exactly.
+8. Do the deferred renames now (H5: kappa -> mu in synthesis.n-plus-null-ground-state and its users; the double
+   letters of R01, R02, R04; dOmega^2 where it clashes).
