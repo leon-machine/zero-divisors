@@ -35938,6 +35938,101 @@
 }
 ]
 },
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum": {
+"failed": false,
+"findings": [],
+"key": "a70e640dca7a04b9",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_single_fermions_collect_into_one_fermion",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"field-theory.no-canonical-commutation-relations-tower"
+]
+},
+{
+"derivation": null,
+"func": "check_hopping_ladder_is_the_particle_hole_image_of_the_pairing_ladder",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_block_commutators_and_their_values_in_product_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_block_form_rank_and_its_tracial_kernel",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_density_form_edge_operator_converse_and_product_values",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off"
+]
+},
+{
+"derivation": null,
+"func": "check_null_vacuum_window_has_nondegenerate_density_and_block_forms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_fluctuation_commutator_tends_to_the_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_finite_excitations_of_a_deep_sea_see_the_canonical_relation",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.current-commutator-exactly-edge-split",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_product_state_is_the_quasi_free_state_of_its_symbol",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+}
+]
+},
 "synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet": {
 "failed": false,
 "findings": [],

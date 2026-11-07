@@ -49550,6 +49550,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "de918419968926c8",
+  "ledger": null,
+  "parts": {
+   "checks": "5820dac4ebadc65e",
+   "proofs": "2b67d299ed4fcef7",
+   "rest": "33009deb10105397",
+   "statement": "ef767075de06ee60"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet": {
   "assumes": [],
   "credit": [
