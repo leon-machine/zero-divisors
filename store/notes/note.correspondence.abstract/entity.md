@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.abstract
 kind: note
-version: 1
+version: 2
 title: Abstract
 status: setting
 subject: completion
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - correspondence.imported-forced-completion-fibre-quadric
 locators:
@@ -22,6 +26,14 @@ locators:
   number: Abstract
   section: Abstract
   line: 290
+outside_ga:
+  kind: bridge
+  why: 'the incidence relation is written omega = I_6 x pi with Penrose''s omega = ix pi beside it in its source''s notation'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The incidence relation omega = ix pi is written omega = I_6 hat-x pi with Penrose''s form kept in parentheses, and the factor i becomes I_6, the complex unit of CS; Penrose''s i stays as quoted, declared bridge.'
 ---
 
 ## formal

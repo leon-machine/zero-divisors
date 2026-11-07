@@ -1,7 +1,7 @@
 ---
 id: singularity.matching-steps-4b-4c-join-equation
 kind: claim
-version: 5
+version: 6
 title: 'The matching: Steps 4b and 4c join by equation'
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -46,7 +50,14 @@ locators:
   number: Cor 6.4
   label: cor:weld
   line: 1674
+outside_ga:
+  kind: complex-analysis
+  why: 'the phase flow Ad(e^{it sigma/2}) of the boundary pair is the complex phase whose real rotor flow is exp(lambda sigma/2); with I_4 in its place exp(I_4 t sigma/2) would be a rotor of the dual plane I sigma_r that the corollary excludes'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{it sigma/2}) of the boundary pair is the complex phase whose real rotor flow is exp(lambda sigma/2); with I_4 in its place exp(I_4 t sigma/2) would be a rotor of the dual plane I sigma_r that the corollary excludes.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

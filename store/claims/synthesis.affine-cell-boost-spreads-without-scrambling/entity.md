@@ -1,7 +1,7 @@
 ---
 id: synthesis.affine-cell-boost-spreads-without-scrambling
 kind: claim
-version: 1
+version: 2
 title: 'The boost spreads affine cells without scrambling'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -41,7 +45,14 @@ checked_by:
 lineage:
   motivated_by:
   - synthesis.phase-flow-is-time-rotor-flow-kms-continuation
+outside_ga:
+  kind: complex-analysis
+  why: 'the proof quotes Borchers'' relation Delta^{it}U(a)Delta^{-it} from the imported Fact and works with the one-particle space L^2 of the generator''s cells, whose complex structure the store does not tie to I_4 here'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the proof quotes Borchers'' relation Delta^{it}U(a)Delta^{-it} from the imported Fact and works with the one-particle space L^2 of the generator''s cells, whose complex structure the store does not tie to I_4 here.'
   open_problem: op.which-boost-flow-is-time
   note: Bears on the open item left by the stored decision (real-time spreading needs a mode-displacing generator). It exhibits that generator, the boost itself acting on affine cells of a horizon generator, and shows that it gives the count t = kappa^{-1} ln N in real time as support growth, with decaying local anticommutators; so the stored conclusion stands (no real-time chaos-bound saturation is shown), and the real-time reading of the count is basis-dependent (affine cells spread, log cells are displaced). Transport-absent (free-field kinematics on one null generator). The Borchers relation (modular flow dilates null translations) is taken from the store's imported fact. Spreading here is one-particle spread in the affine-cell basis; the evolved operator stays linear in the modes.
 ---

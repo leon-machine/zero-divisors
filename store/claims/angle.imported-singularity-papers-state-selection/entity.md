@@ -1,7 +1,7 @@
 ---
 id: angle.imported-singularity-papers-state-selection
 kind: claim
-version: 10
+version: 11
 title: 'Imported: the singularity paper''s state selection'
 status: proved
 region: angle
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 11
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -52,7 +56,14 @@ locators:
   number: Fact 1.1
   label: fact:T5
   line: 116
+outside_ga:
+  kind: complex-analysis
+  why: 'the phase flow Ad(e^{itK}) acts on the complex mode factor of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares, so I_4 is not shown to be its unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{itK}) acts on the complex mode factor of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares, so I_4 is not shown to be its unit.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

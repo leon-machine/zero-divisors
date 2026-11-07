@@ -1,7 +1,7 @@
 ---
 id: synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 kind: claim
-version: 2
+version: 3
 title: 'Wedge reflections compose to the $2\pi$ rotor; spin-statistics if geometric'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -54,7 +58,14 @@ lineage:
   - field-theory.imported-standard-field-theory
   - synthesis.n-plus-null-ground-state
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
+outside_ga:
+  kind: complex-analysis
+  why: 'the proof uses Borchers'' relation Delta^{it}U(a)Delta^{-it} = U(e^{-2 pi t}a), quoted from the imported Fact, for the modular objects of an interacting net on a general Hilbert space'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the proof uses Borchers'' relation Delta^{it}U(a)Delta^{-it} = U(e^{-2 pi t}a), quoted from the imported Fact, for the modular objects of an interacting net on a general Hilbert space.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

@@ -1,7 +1,7 @@
 ---
 id: note.singularity.euclidean-reading-sign-flagged
 kind: note
-version: 1
+version: 2
 title: The Euclidean reading of the sign, flagged
 status: remark
 subject: descent
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - singularity.two-kms-functionals-sign
 - singularity.euclidean-rotor-where-it-lies
@@ -23,7 +27,14 @@ locators:
   number: Rem 7.24
   label: rem:spinstructure
   line: 1928
+outside_ga:
+  kind: complex-analysis
+  why: 'R_{i theta} is the boost rotor continued to imaginary rapidity, the Euclidean rotation of the (rho, tau) plane, which singularity.euclidean-rotor-where-it-lies (3) shows is realised by no real rotor of Cl(1,3); the dual-plane rotor I_4 B would be a different rotation'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): R_{i theta} is the boost rotor continued to imaginary rapidity, the Euclidean rotation of the (rho, tau) plane, which singularity.euclidean-rotor-where-it-lies (3) shows is realised by no real rotor of Cl(1,3); the dual-plane rotor I_4 B would be a different rotation.'
   i4_conversion:
     by: ai-i4-pass
     date: '2026-10-21'

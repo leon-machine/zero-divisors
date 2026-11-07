@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-temperature-frozen-point-norm
 kind: claim
-version: 5
+version: 6
 title: The cosmological horizon's descent temperature is the frozen point's norm over 2 pi
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.cosmological-horizon-boundary-modes
@@ -44,7 +48,14 @@ lineage:
   - singularity.euclidean-section-period
   - mass.de-sitter-scale-frozen-point
   - standard-model.what
+outside_ga:
+  kind: complex-analysis
+  why: 'the Killing flow alpha_t(v) = e^{-it omega}v acts on the cosmological boundary modes, defined on the complexification of Cl(|J|,|J|), which contains no I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the Killing flow alpha_t(v) = e^{-it omega}v acts on the cosmological boundary modes, defined on the complexification of Cl(|J|,|J|), which contains no I_4.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

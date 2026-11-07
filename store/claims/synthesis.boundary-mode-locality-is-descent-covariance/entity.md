@@ -1,7 +1,7 @@
 ---
 id: synthesis.boundary-mode-locality-is-descent-covariance
 kind: claim
-version: 1
+version: 2
 title: 'Boundary-mode locality is covariance under the descent'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -34,7 +38,14 @@ checked_by:
   ref: check.py::check_greybody_channel_covariant
 - kind: proof
   derivation: main
+outside_ga:
+  kind: complex-analysis
+  why: 'the flows Ad(e^{itH}) act on the window algebras of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the flows Ad(e^{itH}) act on the window algebras of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   open_problem: pr.locality-and-interface
   flow_note: phase; the dynamics is the unitary phase flow Ad(e^{itH}) (see synthesis.phase-flow-is-time-rotor-flow-kms-continuation).
   note: >-

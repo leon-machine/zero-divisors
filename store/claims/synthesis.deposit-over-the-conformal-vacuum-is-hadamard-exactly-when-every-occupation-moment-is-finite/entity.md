@@ -1,7 +1,7 @@
 ---
 id: synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite
 kind: claim
-version: 2
+version: 3
 title: 'A diagonal deposit is Hadamard exactly when its moments are finite'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,6 +53,10 @@ lineage:
   - synthesis.hadamard-scaling-limit-premise
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The plane-wave phases of the two-point kernels and the frequency representation phi(tau) = int e^{-I_4 nu tau} d mu, with I_4 phi'', now use the field theory''s unit I_4 (numbers read in span{1, I_4}, as the proof''s unit phases c + s I_4 already were); no bare i remains.'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Step (1) of op.deposit-state-is-hadamard for the deposit the store states (a homogeneous quasi-free

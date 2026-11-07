@@ -1,7 +1,7 @@
 ---
 id: obj.hawking.continuum-mode-space
 kind: object
-version: 1
+version: 2
 title: Continuum mode space
 status: defined
 region: hawking
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -25,7 +29,14 @@ locators:
   number: Def 4.1
   label: def:continuum
   line: 535
+outside_ga:
+  kind: complex-analysis
+  why: 'the definition takes a general separable complex Hilbert space h (for the s-wave sector L^2(R_+, d omega)) whose countable case is the boundary-mode algebra, declared because its modes anticommute with I_4; the dynamics a(e^{ith}f) is the scalar phase of h'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the definition takes a general separable complex Hilbert space h (for the s-wave sector L^2(R_+, d omega)) whose countable case is the boundary-mode algebra, declared because its modes anticommute with I_4; the dynamics a(e^{ith}f) is the scalar phase of h.'
   env: definition
   typing:
     by: ai-typing-pass

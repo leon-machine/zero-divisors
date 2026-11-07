@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability
 kind: claim
-version: 1
+version: 2
 title: 'Imported: geometric modular action and modular stability (Buchholz, Florig and Summers)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'D. Buchholz, M. Florig and S. J. Summers, An algebraic characterization of vacuum states in Minkowski space. II. Continuity aspects, Lett. Math. Phys. 49 (1999), 337--350; arXiv:math-ph/9909003.'
@@ -27,7 +31,14 @@ imported_from:
   key: BS1993
   locator: 'origin of the condition of geometric modular action, as cited in BFS1999; not read directly'
   doi: 10.1007/BF02096722
+outside_ga:
+  kind: imported
+  why: 'the Condition of Geometric Modular Action and the Modular Stability Condition, with Delta_W^{it}, are quoted as Buchholz, Florig and Summers state them on a general Hilbert space'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): the Condition of Geometric Modular Action and the Modular Stability Condition, with Delta_W^{it}, are quoted as Buchholz, Florig and Summers state them on a general Hilbert space.'
   note: >-
     Imported so that the results on modular conjugations on a horizon generator can pin the Minkowski-space
     statements they compare with instead of citing them in words. Checked on 6 November 2026 against the arXiv

@@ -26,7 +26,14 @@ imported_from:
   locator: 'ch. 2'
 - citation: 'H. Whitney, Differentiable even functions, Duke Math. J. 10 (1943), 159--160.'
   key: Whitney1943
+outside_ga:
+  kind: imported
+  why: 'Bochner''s theorem for complex-valued functions on the line, f(tau) = int e^{-i nu tau} d mu(nu), is quoted as its source states it: Fourier analysis of scalar functions in their own right'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: Bochner''s theorem for functions R -> C, f(tau) = int e^{-i nu tau} d mu, is quoted as its source states it, Fourier analysis of scalar functions in their own right; the results that use it read the numbers in span{1, I_4}. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the occupation-moment criterion (the necessity of finite moments) and the wall result
     (the smoothness in t of solutions even in the proper time) cite these classical lemmas as a Fact instead

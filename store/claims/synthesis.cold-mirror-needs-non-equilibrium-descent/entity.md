@@ -1,7 +1,7 @@
 ---
 id: synthesis.cold-mirror-needs-non-equilibrium-descent
 kind: claim
-version: 1
+version: 2
 title: 'A cold mirror needs a non-equilibrium descent'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -42,7 +46,14 @@ checked_by:
   ref: check.py::check_reading_under_m
 - kind: proof
   derivation: main
+outside_ga:
+  kind: complex-analysis
+  why: 'the KMS identity is tested with the imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras, part of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the KMS identity is tested with the imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras, part of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   open_problem: op.no-dark-radiation-under-p2
   note: >-
     Narrows the problem's success condition at the level of the boundary-mode model: a scope for

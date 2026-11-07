@@ -1,7 +1,7 @@
 ---
 id: hawking.imported-modular-descent-premises-geometric-normalisation
 kind: claim
-version: 6
+version: 7
 title: 'Imported: modular descent, its premises, and the geometric normalisation'
 status: proved
 region: hawking
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 7
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -48,7 +52,14 @@ locators:
   number: Fact 2.2
   label: fact:descent
   line: 408
+outside_ga:
+  kind: complex-analysis
+  why: 'the phase flow Ad(e^{it sigma/2}) of the completed pair is the scalar phase of the complexified atom, whose modes anticommute with I_4 (conventions, known limit 1); with I_4 in its place exp(I_4 t sigma/2) would be a real rotor of the dual plane and the flow a different one'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{it sigma/2}) of the completed pair is the scalar phase of the complexified atom, whose modes anticommute with I_4 (conventions, known limit 1); with I_4 in its place exp(I_4 t sigma/2) would be a real rotor of the dual plane and the flow a different one.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

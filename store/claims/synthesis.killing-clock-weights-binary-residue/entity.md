@@ -1,7 +1,7 @@
 ---
 id: synthesis.killing-clock-weights-binary-residue
 kind: claim
-version: 3
+version: 4
 title: 'Killing-clock weights make the residue binary'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -48,7 +52,14 @@ lineage:
   - synthesis.residue-from-mode-entropy
   - singularity.q-joint-quasi-freeness-s-wave
   - obj.synthesis.cosmological-horizon-boundary-modes
+outside_ga:
+  kind: complex-analysis
+  why: 'the Killing flow Ad(e^{it sum omega_j K_j}), K_j = sigma_j/2, acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the Killing flow Ad(e^{it sum omega_j K_j}), K_j = sigma_j/2, acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

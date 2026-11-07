@@ -1,7 +1,7 @@
 ---
 id: std-algebra.bivector-exponential
 kind: claim
-version: 1
+version: 2
 title: Exponentials of bivectors with scalar square
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 trust: ai-proposed
 about:
@@ -47,7 +51,14 @@ locators:
     locator: 'Ch. 4 (foundations of geometric algebra: rotors, versors)'
   - key: HestenesSobczyk1984
     locator: Ch. 3 (versors, rotors and the bivector algebra)
+outside_ga:
+  kind: bridge
+  why: 'the lay level compares the bivector exponential with e^{i theta} turning the complex plane, the familiar form the result generalises'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): the lay level compares the bivector exponential with e^{i theta} turning the complex plane, the familiar form the result generalises.'
   referee_fixes: '2026-10-26: simple bivectors: (a^b)^2 = B(a,b)^2 - Q(a)Q(b) proved directly; every bivector simple for n <= 3 proved via exterior-isomorphism; the angle absorbed into an unnormalised b stated explicitly (referee part 1, point 7).'
   by: algebra-core-2026-10-26
 ---

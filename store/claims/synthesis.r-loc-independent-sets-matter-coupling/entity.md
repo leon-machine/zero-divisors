@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-loc-independent-sets-matter-coupling
 kind: claim
-version: 3
+version: 4
 title: '(R$_{\mathrm{loc}}$) is independent and fixes the matter coupling'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -45,7 +49,14 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.clausius-route-newton-constant-is-residue
   - synthesis.boundary-mode-premises-finite-models
+outside_ga:
+  kind: complex-analysis
+  why: 'the boost a_j -> e^{-is w_j}a_j acts on a window of local-horizon modes in their complex occupation basis, a space the store does not tie to I_4 here'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boost a_j -> e^{-is w_j}a_j acts on a window of local-horizon modes in their complex occupation basis, a space the store does not tie to I_4 here.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

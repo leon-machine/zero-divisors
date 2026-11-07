@@ -1,7 +1,7 @@
 ---
 id: angle.imported-theorems-deliver-their-hypotheses
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the theorems that deliver $2\pi$, and their hypotheses'
 status: imported
 region: angle
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 imported_from:
 - citation: J. J. Bisognano and E. H. Wichmann, On the duality condition for a Hermitian scalar field,
@@ -48,7 +52,14 @@ locators:
   number: Fact 1.3
   label: fact:BW
   line: 124
+outside_ga:
+  kind: imported
+  why: 'Borchers'' theorem and the Bisognano-Wichmann modular groups Delta^{it} are quoted as their sources state them, on the Hilbert space of a general von Neumann algebra'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): Borchers'' theorem and the Bisognano-Wichmann modular groups Delta^{it} are quoted as their sources state them, on the Hilbert space of a general von Neumann algebra.'
   env: fact
   typing:
     by: ai-typing-pass

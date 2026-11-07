@@ -1,7 +1,7 @@
 ---
 id: singularity.rate-discharge-hypothesis-iii
 kind: claim
-version: 4
+version: 5
 title: The rate, and the discharge of hypothesis (iii)
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -48,7 +52,14 @@ locators:
   number: Thm 7.20
   label: thm:rate
   line: 1880
+outside_ga:
+  kind: complex-analysis
+  why: 'the flow alpha_t(v) = e^{-it omega}v and the KMS gluing act on the atom mode factor, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not its unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the flow alpha_t(v) = e^{-it omega}v and the KMS gluing act on the atom mode factor, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not its unit.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

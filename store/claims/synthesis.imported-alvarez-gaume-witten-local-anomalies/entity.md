@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-alvarez-gaume-witten-local-anomalies
 kind: claim
-version: 1
+version: 2
 title: 'Imported: local anomalies from the A-hat genus (Alvarez-Gaume and Witten 1984)'
 status: imported
 region: synthesis
@@ -17,13 +17,24 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 imported_from:
 - citation: 'L. Alvarez-Gaum''e and E. Witten, Gravitational anomalies, Nucl. Phys. B 234 (1984), 269--330.'
   key: AGW1984
+outside_ga:
+  kind: imported
+  why: 'the anomaly polynomial tr e^{iF/2 pi} is quoted as Alvarez-Gaume and Witten state it, with F a Lie-algebra-valued curvature in their conventions'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): the anomaly polynomial tr e^{iF/2 pi} is quoted as Alvarez-Gaume and Witten state it, with F a Lie-algebra-valued curvature in their conventions.'
   note: >-
     Imported so that synthesis.residues-zero-four-real-chirality-anomaly can cite the local-anomaly
     theorem it names as part of its hypothesis (A). Checked on 2026-10-26 against the published paper's

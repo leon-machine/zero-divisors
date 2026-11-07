@@ -1,7 +1,7 @@
 ---
 id: dark-energy.acoustic-no-go-one-way-grip
 kind: claim
-version: 3
+version: 4
 title: 'The acoustic no-go: one way to grip'
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -40,7 +44,14 @@ locators:
   number: Prop 5.2
   label: prop:nogo
   line: 979
+outside_ga:
+  kind: complex-analysis
+  why: 'the U(1) gauge rotations and their characters e^{iq theta} act on the current algebra of the s-wave boundary-mode array, part of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the U(1) gauge rotations and their characters e^{iq theta} act on the current algebra of the s-wave boundary-mode array, part of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

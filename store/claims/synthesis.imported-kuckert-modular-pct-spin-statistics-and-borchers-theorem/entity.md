@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Kuckert''s modular spin-statistics theorem and Borchers'' theorem'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -31,7 +35,14 @@ imported_from:
 - citation: 'S. Doplicher and J. E. Roberts, Why there is a field algebra with a compact gauge group describing the superselection structure in particle physics, Commun. Math. Phys. 131 (1990), 51--107.'
   key: DoplicherRoberts1990
   locator: 'Theorem 5.4 (twisted duality), as cited by Kuckert'
+outside_ga:
+  kind: imported
+  why: 'Kuckert''s theorem and Borchers'' relation Delta^{it}U(s)Delta^{-it} = U(e^{-2 pi t}s) are quoted as their sources state them on a general Hilbert space'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): Kuckert''s theorem and Borchers'' relation Delta^{it}U(s)Delta^{-it} = U(e^{-2 pi t}s) are quoted as their sources state them on a general Hilbert space.'
   note: >-
     Imported so that the result on wedge reflections and interacting spin-statistics can pin the theorem it
     applies instead of citing it. Kuckert 1995 checked on 2 November 2026 against the arXiv abstract page and the

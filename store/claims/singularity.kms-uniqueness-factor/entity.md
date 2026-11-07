@@ -1,7 +1,7 @@
 ---
 id: singularity.kms-uniqueness-factor
 kind: claim
-version: 4
+version: 5
 title: KMS uniqueness at a factor
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -35,7 +39,14 @@ locators:
   number: Thm 7.13
   label: thm:kmsunique
   line: 1806
+outside_ga:
+  kind: complex-analysis
+  why: 'the inner flow Ad(e^{itK}) and its continuation alpha_{i beta} are taken on a general complex matrix factor, not on a space the store ties to I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the inner flow Ad(e^{itK}) and its continuation alpha_{i beta} are taken on a general complex matrix factor, not on a space the store ties to I_4.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

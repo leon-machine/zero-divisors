@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-le-i-independent-spectrum-condition-separates
 kind: claim
-version: 2
+version: 3
 title: '(R), (L$_E$) and (I) are independent; a ground-state condition separates two'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -38,7 +42,14 @@ checked_by:
 lineage:
   motivated_by:
   - singularity.l-boundary-mode-locality
+outside_ga:
+  kind: complex-analysis
+  why: 'the Killing flows Ad(e^{it omega_k K_k}) and the imaginary-time continuation act on window modes realised by Jordan-Wigner on C^2 (x) C^2, a complex space the store does not tie to I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the Killing flows Ad(e^{it omega_k K_k}) and the imaginary-time continuation act on window modes realised by Jordan-Wigner on C^2 (x) C^2, a complex space the store does not tie to I_4.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

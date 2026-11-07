@@ -1,7 +1,7 @@
 ---
 id: synthesis.clausius-heat-exceeds-created-modes-killing-energy
 kind: claim
-version: 2
+version: 3
 title: 'Clausius heat exceeds the created modes'' Killing energy'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -39,7 +43,14 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.hole-mass-is-ground-energy-label
+outside_ga:
+  kind: complex-analysis
+  why: 'the boost dynamics Ad(e^{itH_F}) acts on the window algebra End(Lambda C^F) of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boost dynamics Ad(e^{itH_F}) acts on the window algebra End(Lambda C^F) of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

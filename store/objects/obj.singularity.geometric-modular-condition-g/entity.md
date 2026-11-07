@@ -1,7 +1,7 @@
 ---
 id: obj.singularity.geometric-modular-condition-g
 kind: object
-version: 2
+version: 3
 title: The geometric modular condition (G)
 status: defined
 region: singularity
@@ -17,13 +17,24 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 locators:
   paper: T05
   number: Def 7.12
   label: def:gmc
   line: 1802
+outside_ga:
+  kind: complex-analysis
+  why: 'the phase flow Ad(e^{itK_geo}) acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares; the definition contrasts it with the real rotor flow, which I_4 would turn it into on these modes'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the phase flow Ad(e^{itK_geo}) acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares; the definition contrasts it with the real rotor flow, which I_4 would turn it into on these modes.'
   env: definition
   context_refs:
   - singularity.curvature-gauge-field-exact-shape-decoupling

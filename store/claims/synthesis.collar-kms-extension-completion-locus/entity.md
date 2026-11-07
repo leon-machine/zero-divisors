@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-kms-extension-completion-locus
 kind: claim
-version: 1
+version: 2
 title: 'Under (E), the horizon''s KMS state reads $6\pi$ at the exceptional set'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -35,7 +39,14 @@ checked_by:
   ref: check.py::check_one_atom_kms_every_slice
 - kind: proof
   derivation: main
+outside_ga:
+  kind: complex-analysis
+  why: 'the holonomy phase flows Ad(e^{is f(r) K_P}), K_p = sigma_p/2, act on the CAR algebra of the atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the holonomy phase flows Ad(e^{is f(r) K_P}), K_p = sigma_p/2, act on the CAR algebra of the atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit.'
   open_problem: op.collar-kms-extension
   flow_note: phase; every flow here is the phase flow Ad(e^{isfK}) of the stated rate f (see synthesis.phase-flow-is-time-rotor-flow-kms-continuation).
   note: >-

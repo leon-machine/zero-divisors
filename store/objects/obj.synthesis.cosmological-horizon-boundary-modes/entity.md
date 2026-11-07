@@ -1,7 +1,7 @@
 ---
 id: obj.synthesis.cosmological-horizon-boundary-modes
 kind: object
-version: 1
+version: 2
 title: The boundary modes of the cosmological horizon
 status: defined
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.tower.tower
@@ -24,7 +28,14 @@ lineage:
   motivated_by:
   - synthesis.cosmological-horizon-completed-pair
   - standard-model.what
+outside_ga:
+  kind: complex-analysis
+  why: 'the static Killing flow v_j -> e^{-it omega_j}v_j is the scalar phase of the complexification of Cl(|J|,|J|), which the definition takes as the algebra and which contains no I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the static Killing flow v_j -> e^{-it omega_j}v_j is the scalar phase of the complexification of Cl(|J|,|J|), which the definition takes as the algebra and which contains no I_4.'
   note: The algebra the de Sitter temperature conjecture lacked. Each mode is a copy of the completed pair that the static observer's geometry supplies; the number of modes, on which the horizon's entropy count of T12's Observation 'What N is' depends, is left open, as the singularity paper's cell calibration is.
   flow_note: phase flow e^{-i omega_j t} on the modes (the T05 Thm 7.16 sense), the static Killing flow continued to imaginary rapidity.
   unit_note: The mode algebra is the plain complexification of the atom. The field unit I_4 anticommutes with e_0, which lies in the plane, so it is not the unit here (store/conventions.md, the imaginary units, known limit 1).
