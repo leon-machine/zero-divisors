@@ -15,6 +15,9 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+outside_ga:
+  kind: complex-analysis
+  why: 'the boost rotor at imaginary rapidity i pi is the continuation with a commuting scalar i, whose action is the wedge reflection; I_4 in its place gives the turn by pi in the dual plane, not the reflection (angle.wedge-reflection-translations-are-ascent)'
 comments_on:
 - angle.imported-singularity-papers-state-selection
 locators:
@@ -22,6 +25,11 @@ locators:
   number: Abstract
   section: Abstract
   line: 95
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the imaginary rapidity i pi is the continuation with a commuting scalar i (the wedge reflection); I_4 would give the dual-plane turn. Declared complex-analysis.'
 ---
 
 ## formal

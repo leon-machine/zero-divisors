@@ -18,12 +18,19 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the algebra is defined as the CAR algebra over the complex space l^2(J) with windows End(Lambda C^F), and the boost dynamics tau_t(a_j) = e^{-i omega_j t}a_j is the scalar phase of that complex algebra; its modes descend from the atom of the spacetime radial plane, which anticommutes with I_4 (conventions, known limits 1 and 2), so I_4 is not shown to be its unit'
 locators:
   paper: T07
   number: Def 2.7
   label: def:ledger
   line: 430
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the phase e^{-i omega_j t} of the boost dynamics is the scalar of the complex CAR algebra over l^2(J) as defined (T07 Def 2.7), and the store records that the modes of T05''s atom anticommute with I_4 and that this algebra is complex here and real in the scrambling results (conventions, known limits 1 and 2); declared complex-analysis, left for Leon to rule.'
   env: definition
   open_problem: op.boundary-mode-provenance
   correction:

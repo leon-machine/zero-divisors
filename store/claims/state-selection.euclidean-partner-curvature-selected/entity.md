@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'lambda -> i theta names the continuation before its unit is fixed: clause (3) states it as an analogy between the two rotor flows of the pair and clause (4) reads its unit as I_6; writing I_4 in (3) would make it the identity exp(I_4 theta sigma_r/2) = R_theta, a different and stronger statement, and on vectors I_4 does not give the Euclidean rotation'
 derivations:
 - name: main
   uses:
@@ -46,6 +49,10 @@ locators:
   label: prop:euclid
   line: 268
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: lambda -> i theta is the continuation whose unit clause (4) reads as I_6 and which clause (3) states only as an analogy; I_4 there would change the statement. Declared complex-analysis; listed for Leon.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

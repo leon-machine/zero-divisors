@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the Dirac kernels (iD_x + m_0)H_+ e_0 and their limit (i/2 pi^2)(y - y'')e_0/Q(y - y'' - i0 e_0)^2 = i nabla D_+ e_0 are distributions whose i0 shifts a spacetime vector or a time function and whose Fourier form e^{-ip.z} is scalar analysis; the prefactor i (the field unit standing outside the product, as the statement says) and the boundary value carry one complex unit, and no pseudoscalar can shift a vector, so i stays'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 imported_from:
@@ -63,6 +66,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the field unit in (iD_x + m_0) and i nabla D_+ stands outside the product, as the statement says, but it is the same complex unit as the boundary values sigma_{+-}, Q(y - y'' - i0 e_0) and the Fourier phases e^{-ip.z}, which no pseudoscalar can carry (an i0 shift of a vector); kept whole, declared complex-analysis; listed for Leon.'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Clause (a) of the adopted premise (HS), synthesis.hadamard-scaling-limit-premise, re-derived in the spacetime

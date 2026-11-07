@@ -1,7 +1,7 @@
 ---
 id: synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations
 kind: claim
-version: 2
+version: 3
 title: 'Sakharov weights on the attachment cancel at three separate generations'
 status: proved
 region: synthesis
@@ -17,13 +17,20 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: pin to the slot-module result moved to its version 2 after the clause split; notation declaration
+  version: 3
+  source: maintainer pass 2026-11-07
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'i stays only in the Mellin inversion of the wave trace, a contour integral of scalar functions in their own right; nothing else in the text uses an imaginary unit'
 derivations:
 - name: main
   uses:
   - field-theory.twistor-attachment@6
   - standard-model.connection-forced@4
-  - synthesis.slot-module-light-ray-arrays-are-weyl-components@1
+  - synthesis.slot-module-light-ray-arrays-are-weyl-components@2
   - synthesis.imported-sakharov-induced-gravity-coefficients@1
   - synthesis.imported-luscher-mack-conformal-energy-on-the-einstein-static-field@1
   proof: proof-main.tex
@@ -64,6 +71,10 @@ extraction:
     covariant gauge fixing (synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts),
     clause (iv)). The sharp-floor clause is consistent with the floor regulator's boost breaking (synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off). Transport-absent in
     mechanism; the attachment makes the dictionary convenient.
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026 splitting the algebra of the canonical part on a null plane out of the light-ray and slot-module results (synthesis.canonical-part-of-a-spinor-on-a-null-plane): this result cites the slot-module result for its clause (ii), sixteen Weyl components per generation, which is not part of the algebra split out, so the uses edge stays and its pin moves from version 1 to 2 (statement unchanged). Statement, proof and checks unchanged. Notation: the one bare i, in the Mellin inversion, stays (declared, complex-analysis).'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

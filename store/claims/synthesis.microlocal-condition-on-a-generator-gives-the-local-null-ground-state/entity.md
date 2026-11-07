@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the generator kernels (i/2 pi)(u - u'' + i0)^{-1} and their thermal and log forms, the Fourier and Laplace transforms on L^2 of a null line and the regularised Synge function sigma + i epsilon(...) are boundary values and contour arguments of scalar kernels; the prefactor and the boundary value carry one complex unit, so writing the prefactor alone as I_4 would split it, and the i0 of a time function or of a spacetime vector cannot be a pseudoscalar'
 about:
 - obj.hawking.continuum-mode-space
 derivations:
@@ -50,6 +53,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the generator and thermal kernels W_beta, the remainders R and the Fourier integrals e^{ip(u - v)} is complex analysis of scalar kernels, kept whole. Declared complex-analysis; the wholesale alternative is listed for Leon.'
   open_problem: op.r-premises-external
   note: >-
     Poses on the continuum mode space of one horizon generator the analogue of the microlocal form of the

@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the finite models are T05''s single-mode atoms Mat_2(C) with the phase flow Ad(e^{i t omega_k K_k}) and the gauge phases e^{i theta}v_k; their modes lie in the spacetime radial plane and anticommute with I_4 (conventions, known limit 1), so the unit of these complex matrix algebras is not I_4'
 about:
 - obj.singularity.grading-parity-automorphism
 - obj.singularity.geometric-modular-condition-g
@@ -52,6 +55,10 @@ lineage:
   - singularity.l-boundary-mode-locality
   - singularity.q-joint-quasi-freeness-s-wave
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: Ad(e^{i t omega_k K_k}) and e^{i theta}v_k act on T05''s atoms Mat_2(C), whose modes anticommute with I_4; the index letters i, j are false positives. Declared complex-analysis.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

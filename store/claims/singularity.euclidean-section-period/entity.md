@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 't_s = -i tau is the Wick rotation of the static Killing time coordinate, an analytic continuation of a scalar coordinate to a Riemannian section, not a unit acting on multivector values'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
@@ -44,6 +47,10 @@ locators:
   label: prop:section
   line: 1852
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: t_s = -i tau is the Wick rotation of a coordinate; the formal-level "i.e." is a false positive. Declared complex-analysis.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
 review: typed
+outside_ga:
+  kind: other
+  why: 'the pairing classes are coordinates on the complexified tangent space of the complex null vector m = e_2 + i e_3, so the value -i sqrt(f)/r carries an i that must commute with the spacetime vectors, which no pseudoscalar does'
 about:
 - obj.pairing.pairing-class-transport
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -44,6 +47,10 @@ locators:
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: -i sqrt(f)/r and e_2 + i e_3 belong to the complexified tangent space. Declared other.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -15,6 +15,9 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+outside_ga:
+  kind: imported
+  why: 'the geometric half of the Bisognano-Wichmann theorem, the boost at rapidity i pi as the wedge reflection, is quoted as its source states it, with i a commuting scalar; I_4 in its place gives the dual-plane turn, not the reflection'
 comments_on:
 - angle.wedge-reflection-translations-are-ascent
 locators:
@@ -23,6 +26,10 @@ locators:
   label: rem:geometry
   line: 161
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the boost at rapidity i pi is the Bisognano-Wichmann statement in its source''s form, i a commuting scalar (I_4 would give the dual-plane turn). Declared imported.'
   i4_conversion:
     by: ai-i4-pass
     date: '2026-10-21'

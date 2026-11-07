@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'the KMS strip i beta and the continuation lambda -> i theta in the proof are those of T05''s single-mode atoms in the spacetime radial plane and of the partner result, which keep a commuting complex unit; the atom''s modes anticommute with I_4 (conventions, known limit 1)'
 about:
 - obj.singularity.geometric-modular-condition-g
 derivations:
@@ -48,6 +51,10 @@ locators:
   label: thm:rate
   line: 282
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: i beta (KMS strip) and lambda -> i theta are the continuations of T05''s atom, whose modes anticommute with I_4. Declared complex-analysis.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -15,6 +15,9 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+outside_ga:
+  kind: complex-analysis
+  why: 'kill condition K4 speaks of the boost rotor at imaginary rapidity i pi, the continuation with a commuting scalar i, whose action is the wedge reflection; I_4 in its place gives the turn by pi in the dual plane, not the reflection (angle.wedge-reflection-translations-are-ascent)'
 comments_on:
 - angle.wedge-reflection-translations-are-ascent
 locators:
@@ -22,6 +25,11 @@ locators:
   number: Setting
   section: The claim, and the kill conditions fixed before computation
   line: 134
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the imaginary rapidity i pi of K4 is the continuation with a commuting scalar i (the wedge reflection); I_4 would give the dual-plane turn. Declared complex-analysis.'
 ---
 
 ## formal

@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'the KMS continuation alpha_{i beta} is taken in the boundary-mode algebra, which its definition builds over the complex numbers (windows End(Lambda C^F)); its modes descend from the atom of the spacetime radial plane, with which I_4 anticommutes (conventions, known limits 1 and 2), so I_4 is not shown to be that algebra''s unit'
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 derivations:
@@ -44,6 +47,10 @@ locators:
   label: thm:istate
   line: 485
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: alpha_{i beta} in the proof is the KMS continuation in the complex boundary-mode algebra of T07 Def 2.7, whose unit the store does not identify with I_4 (conventions, known limits 1 and 2); the formal-level "i.e." is a false positive. Declared complex-analysis; left for Leon to rule with the definition.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

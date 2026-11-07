@@ -22,6 +22,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: other
+  why: 'the frame atom is the complexification Cl(1,3)_C = Mat_4(C), its i central and commuting with the vectors; the flow Ad(e^{itK}) with K = (B_b + iB_c)/2 acts on the odd elements too, where I_4 anticommutes, so I_4 cannot stand for this i'
 derivations:
 - name: main
   uses:
@@ -43,6 +46,10 @@ lineage:
   motivated_by:
   - synthesis.collar-kms-extension-three-flows
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: K = (B_b + iB_c)/2 and Ad(e^{itK}) live in the plain complexification Cl(1,3)_C, whose i must commute with the vectors. Declared other.'
   open_problem: op.collar-kms-extension
   note: Answers the problem's second attack bullet (the SO(3)-invariant states on the sphere holonomies compatible with KMS for B1) positively for B1, on the pointwise frame atom Cl(1,3)_C, a model choice that is neither the completed-pair atom nor an algebra the series constructs for the collar. Invariance under rotations mixing the t-direction with a sphere direction would exclude every faithful KMS state, but those rotations are not symmetries of the collar. It does not decide the extension question, which still rests on hypothesis (C) of the stored three-flows result. Transport-essential in its input (the collar's holonomy boosts and Kasner rates), elementary in its algebra.
 ---

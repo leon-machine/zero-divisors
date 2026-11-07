@@ -15,6 +15,9 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+outside_ga:
+  kind: complex-analysis
+  why: 'the phase flow is the rotor flow continued to lambda = it with i commuting with the modes of the atom, which lies in the spacetime radial plane where I_4 anticommutes with them (conventions, known limit 1); the note''s point is that i sigma is not in the real algebra, while I_4 sigma is the real dual-plane rotor, so I_4 cannot stand for this i'
 comments_on:
 - singularity.modular-structure-completed-pair
 - scrambling.clock-inventory-boundary-modes
@@ -24,6 +27,10 @@ comments_on:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - singularity.euclidean-rotor-where-it-lies
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the phase flow, of lambda = it, of R_{i theta} and of i sigma is the commuting unit of the complexified atom (spacetime radial plane, conventions known limit 1); the note states that i sigma is not in the real algebra, which would be false of I_4 sigma. Declared complex-analysis.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'Cites synthesis.phase-flow-is-time-rotor-flow-kms-continuation, which settles which boost flow is time (phase flow; rotor flow is its KMS continuation) under its stated *-automorphism criterion; formal, technical and lay updated.'

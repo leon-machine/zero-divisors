@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the generator kernels (i/2 pi)(u - u'' + i0)^{-1} and their thermal and log forms, the Fourier and Laplace transforms on L^2 of a null line and the regularised Synge function sigma + i epsilon(...) are boundary values and contour arguments of scalar kernels; the prefactor and the boundary value carry one complex unit, so writing the prefactor alone as I_4 would split it, and the i0 of a time function or of a spacetime vector cannot be a pseudoscalar; the bulk limit i nabla D_+(y - y'')e_0 with its Q(y - y'' - i0 e_0) is the Dirac kernel whose i0 shifts a spacetime vector'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 - obj.hawking.continuum-mode-space
@@ -52,6 +55,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the generator kernels, the bulk limit i nabla D_{+-} and their boundary values is complex analysis of scalar kernels, kept whole. Declared complex-analysis; the wholesale alternative is listed for Leon.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

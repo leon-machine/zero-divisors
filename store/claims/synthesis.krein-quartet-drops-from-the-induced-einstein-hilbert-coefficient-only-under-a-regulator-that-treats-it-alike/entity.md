@@ -1,7 +1,7 @@
 ---
 id: synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike
 kind: claim
-version: 2
+version: 3
 title: 'The Krein quartet''s induced-gravity weight depends on the regulator'
 status: proved
 region: synthesis
@@ -17,14 +17,18 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: pins to the slot-module and attachment results moved to their new versions after the clause split
+  version: 3
+  source: maintainer pass 2026-11-07
 review: draft
 derivations:
 - name: main
   uses:
   - synthesis.imported-sakharov-induced-gravity-coefficients@1
-  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@2
+  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
   - standard-model.connection-forced@4
-  - synthesis.slot-module-light-ray-arrays-are-weyl-components@1
+  - synthesis.slot-module-light-ray-arrays-are-weyl-components@2
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   - synthesis.imported-ikeda-taniguchi-spectra-of-the-hodge-laplacian-on-spheres@1
@@ -52,6 +56,10 @@ lineage:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026 splitting the algebra of the canonical part on a null plane out of the light-ray and slot-module results (synthesis.canonical-part-of-a-spinor-on-a-null-plane): this result cites the slot-module result for sixteen Weyl components per generation (its clause (ii)), which is not part of the algebra split out, so the uses edge stays; its pin moves from version 1 to 2 and the pin to the attachment result from 2 to 3 (both statements unchanged). Statement, proof and checks unchanged. Notation: no bare imaginary unit; nothing to declare.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

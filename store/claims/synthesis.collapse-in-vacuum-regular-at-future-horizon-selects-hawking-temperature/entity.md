@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the generator kernels (i/2 pi)(u - u'' + i0)^{-1} and their thermal and log forms, the Fourier and Laplace transforms on L^2 of a null line and the regularised Synge function sigma + i epsilon(...) are boundary values and contour arguments of scalar kernels; the prefactor and the boundary value carry one complex unit, so writing the prefactor alone as I_4 would split it, and the i0 of a time function or of a spacetime vector cannot be a pseudoscalar; the KMS continuation by -i beta and the deficiency-index argument for i d/d lambda are operator theory on that L^2'
 about:
 - obj.hawking.continuum-mode-space
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -54,6 +57,10 @@ lineage:
   - singularity.r-regularity-fixed-locus
   - synthesis.positive-conformal-energy-gives-positive-null-translations
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the generator kernels and their boundary values, of the KMS continuation -i beta and of the deficiency-index argument is complex analysis on L^2 of a generator (rule 5 of the pass), kept whole rather than split between i and I_4. Declared complex-analysis; the wholesale alternative is listed for Leon.'
   open_problem: op.collapsing-hole-state
   note: >-
     Companion to synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet, filed alongside, which states the short-distance condition on the ingoing

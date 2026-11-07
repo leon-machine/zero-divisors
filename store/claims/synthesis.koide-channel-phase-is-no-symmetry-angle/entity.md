@@ -1,7 +1,7 @@
 ---
 id: synthesis.koide-channel-phase-is-no-symmetry-angle
 kind: claim
-version: 2
+version: 3
 title: 'The Koide channel phase is no symmetry angle'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -48,6 +52,10 @@ lineage:
   - families.one-open-problem-three-forms
   - synthesis.channel-phase-invisible-to-axially-covariant-completions
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit in the face-space quarter turn exp(i pi/2 P_d) became I_4, numbers read in span{1, I_4}; no bare i remains.'
   open_problem: op.non-gaussian-completion
   note: 'Adversarial, on the number to be predicted. In the store the projected coherent face vector at the Koide depth is p_k = 1 + sqrt2 cos(delta + 2 pi k/3), with delta the channel phase (or the channel phase minus a quarter turn on the Lorentzian slice), so at exact Koide the 207 is one phase. This result fixes that phase from the measured m_mu/m_e alone (tau-independent) and tests the two kinds of value a selection rule could supply without a second free number: a small rational (the literature value 2/9, Brannen 2006, cited from memory) and a symmetry angle, a rational multiple of pi such as any finite stabiliser (the Z2 of the real structure, the S3, the quarter turn, the Z3 of the cubic word) supplies. Both are excluded. The phase 2/9 alone, with the depth left free, fits the data (computed in floating point in the proof text: the depth then misses Koide by about 1e-7 in Q, invisible to the tau mass); it is the joint exactness of Q = 2/3 and delta = 2/9 that the muon-electron ratio excludes, by more than 400 standard deviations. Also relevant to op.second-order-breaking, whose free phase delta = 0.222 is this phase. The result is conditional on the sqrt(m) (circulant) reading of the projected coherent vector; under the mass-squared reading of the mass form the channel phase does not enter the spectrum of source-built completions (synthesis.real-structure-breaks-source-stabiliser-to-z2), and which reading is primary is open. Consistent with the eigenvalue form of \claimref{synthesis.series-family-structures-give-no-lopsided-second-stage} (same p_k after k -> -k). Denominator bounds are properties of the three-sigma window, not of an exact number. Transport-absent (data and the stored parametrisation).'
   maintainer_pass:

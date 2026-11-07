@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'the KMS strip F(t + ip) and the phase flow Ad(e^{i t omega_k K_k}) act on the ladders {v_k, v_k^*} of T05''s atom in the spacetime radial plane, whose modes anticommute with I_4 (conventions, known limit 1), so the strip''s unit is the complex scalar of the atom, not the field''s I_4'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 locators:
@@ -26,6 +29,10 @@ locators:
   label: prem:reg
   line: 1870
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the KMS strip t + ip and the flow Ad(e^{i t omega_k K_k}) are on the ladders of T05''s atom, which anticommute with I_4 (conventions, known limit 1). Declared complex-analysis.'
   env: premise
   context_refs:
   - singularity.euclidean-section-period

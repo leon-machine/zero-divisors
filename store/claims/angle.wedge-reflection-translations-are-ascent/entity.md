@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'the rapidity is continued to eta = i pi/2 with i a commuting scalar of the complexified algebra, so the rotor iB acts by x -> BxB, the wedge reflection; with I_4 in its place the rotor I_4 B acts by -BxB, the turn by pi in the dual plane, so no pseudoscalar can stand for this i'
 derivations:
 - name: main
   uses:
@@ -38,6 +41,10 @@ locators:
   label: prop:geometry
   line: 148
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the continued rapidity eta = i pi/2 and of the rotor iB is a commuting scalar whose twisted action BxB is the wedge reflection, while I_4 B acts by -BxB (the dual-plane turn); it stays, declared complex-analysis.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

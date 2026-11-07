@@ -28,6 +28,10 @@ imported_from:
   locator: 'eqs. (3.8) to (3.10), Section 5.1'
   doi: 10.1016/S0550-3213(99)00337-5
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten: the relative phase e^{-i psi} is kept as Fritzsch and Xing state it, and the entity declares outside_ga (imported); the store result that uses it writes its phases with I_4.'
   note: >-
     Imported so that synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
     can pin the formula it reads in the store's light-plane block. Checked on 2026-11-01 against
@@ -45,6 +49,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Created by the maintainer pass of 2026-11-01 (Leon approved the import of the Fritzsch-Xing formula, with Gatto-Sartori-Tonin and Fritzsch 1978, as a routine Fact).'
+outside_ga:
+  kind: imported
+  why: 'the Cabibbo formula sin theta_C = |R_u - R_d e^{-i psi}| is quoted as Fritzsch and Xing state it, with i the unit of the imported complex mass matrices'
 ---
 
 ## formal

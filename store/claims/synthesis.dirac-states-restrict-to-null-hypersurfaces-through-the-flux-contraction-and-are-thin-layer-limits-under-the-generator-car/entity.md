@@ -18,6 +18,9 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'the generator kernels (i/2 pi)(u - u'' + i0)^{-1} and their thermal and log forms, the Fourier and Laplace transforms on L^2 of a null line and the regularised Synge function sigma + i epsilon(...) are boundary values and contour arguments of scalar kernels; the prefactor and the boundary value carry one complex unit, so writing the prefactor alone as I_4 would split it, and the i0 of a time function or of a spacetime vector cannot be a pseudoscalar'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 - obj.hawking.continuum-mode-space
@@ -67,6 +70,10 @@ lineage:
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the kernels, the i epsilon regularisations and the boundary values is complex analysis of scalar kernels, kept whole. Declared complex-analysis; the wholesale alternative is listed for Leon.'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Bears on the passage from the premise (HS), synthesis.hadamard-scaling-limit-premise (version 3), to

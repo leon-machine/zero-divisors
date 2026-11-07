@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
 review: typed
+outside_ga:
+  kind: complex-analysis
+  why: 'i is the formal unit of the complexified atom Mat_2(C) (lambda = i theta, R_{i theta}, i sigma, diag(e^{-+ i theta/2})), commuting with the vectors e_0 and e_1; clause (3) is the statement that i sigma is not the dual I sigma_r = e_2e_3, so I_4 cannot replace it (the note on values records where it may)'
 derivations:
 - name: main
   uses:
@@ -40,6 +43,10 @@ locators:
   label: prop:euclid
   line: 1898
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the continuation''s i is the unit of the complexified atom Mat_2(C), and clause (3) distinguishes i sigma from I_4 sigma_r = e_2e_3, so i = I_4 would contradict it; the note on values already says how the field''s unit I_4 reads it. Declared complex-analysis.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

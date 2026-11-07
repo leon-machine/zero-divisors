@@ -18,6 +18,9 @@ credit:
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
 review: typed
+outside_ga:
+  kind: other
+  why: 'the bivectors are those of so(4, C), the complexified Clifford algebra on the two-mode Fock module, and the entries 0, -1, -i, 1, i of the proof come from the complex matrices of e_0, ..., e_3 there; that complexification must commute with the vectors, which no pseudoscalar does'
 derivations:
 - name: main
   uses:
@@ -36,6 +39,10 @@ locators:
   label: prop:dictionary
   line: 259
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of so(4, C) and of the matrix entries is the plain complexification of the Clifford algebra on the Fock module, which must commute with the vectors. Declared other.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
