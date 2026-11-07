@@ -48,6 +48,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - standard-model.what
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item H5 (notation, routine): formal (iii) and proof Step 3 name the unit of the phase, span{1, hat-I} with hat-I the central unit of the boundary-mode object (unit principle U3), and the bar as its conjugate. No content change; evidence: the uniqueness computation of Step 3 is unchanged (|a| = 1/2 for either unit).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -77,7 +81,7 @@ Let $\Lambda = 3H^{2} > 0$. In the conventions of Lemma \claimref{mass.de-sitter
 \[
 v_{\Lambda} \;=\; \tfrac12\,(e_{0} + e_{W}), \qquad v_{\Lambda}^{*} \;=\; \tfrac12\,(e_{0} - e_{W})
 \]
-satisfy $Q(v_{\Lambda}) = Q(v_{\Lambda}^{*}) = 0$, $v_{\Lambda}v_{\Lambda}^{*} + v_{\Lambda}^{*}v_{\Lambda} = 1$ and $v_{\Lambda}^{*}v_{\Lambda} - v_{\Lambda}v_{\Lambda}^{*} = u = B_{\Lambda}/\kappa_{\Lambda}$, and up to a phase they are the only such pair of vectors of $\Pi_{\Lambda}$ with $v^{*}$ the frame adjoint of $v$ ($e_{0}^{*} = e_{0}$, $e_{W}^{*} = -e_{W}$). By Theorem \claimref{singularity.modular-structure-completed-pair}, with its $\sigma$ equal to $u$: the static Killing flow $\exp(tB_{\Lambda}/2)$ (the flow of $-\xi$, $\xi = X\cdot B_{\Lambda}$ being past-directed at the observer) is the pair's rotor flow at rapidity $\lambda = \kappa_{\Lambda}t$, acting by $v_{\Lambda} \mapsto e^{-\kappa_{\Lambda}t}v_{\Lambda}$ and $v_{\Lambda}^{*} \mapsto e^{\kappa_{\Lambda}t}v_{\Lambda}^{*}$, and for $t > 0$ it carries the observer to the future (the origin to $x = \tfrac{2}{H}\tanh(Ht/2)\,e_{0}$); the boost's spectral projectors are the occupation projectors, and $K := u/2 = N - \tfrac12$.
+satisfy $Q(v_{\Lambda}) = Q(v_{\Lambda}^{*}) = 0$, $v_{\Lambda}v_{\Lambda}^{*} + v_{\Lambda}^{*}v_{\Lambda} = 1$ and $v_{\Lambda}^{*}v_{\Lambda} - v_{\Lambda}v_{\Lambda}^{*} = u = B_{\Lambda}/\kappa_{\Lambda}$, and up to a phase (a unit number of $\mathrm{span}\{1, \hat{I}\}$, $\hat{I}$ the central unit of the boundary-mode algebra of obj.synthesis.cosmological-horizon-boundary-modes, $\bar a$ its conjugate) they are the only such pair of vectors of $\Pi_{\Lambda}$ with $v^{*}$ the frame adjoint of $v$ ($e_{0}^{*} = e_{0}$, $e_{W}^{*} = -e_{W}$). By Theorem \claimref{singularity.modular-structure-completed-pair}, with its $\sigma$ equal to $u$: the static Killing flow $\exp(tB_{\Lambda}/2)$ (the flow of $-\xi$, $\xi = X\cdot B_{\Lambda}$ being past-directed at the observer) is the pair's rotor flow at rapidity $\lambda = \kappa_{\Lambda}t$, acting by $v_{\Lambda} \mapsto e^{-\kappa_{\Lambda}t}v_{\Lambda}$ and $v_{\Lambda}^{*} \mapsto e^{\kappa_{\Lambda}t}v_{\Lambda}^{*}$, and for $t > 0$ it carries the observer to the future (the origin to $x = \tfrac{2}{H}\tanh(Ht/2)\,e_{0}$); the boost's spectral projectors are the occupation projectors, and $K := u/2 = N - \tfrac12$.
 \item[(iv)] \emph{Anchored at conformal infinity.} $v_{\Lambda}$ and $v_{\Lambda}^{*}$ are orthogonal to $I_{\Lambda}$, and as points of the conformal model
 \[
 v_{\Lambda} \;=\; -\frac{H}{4}\,X\Bigl(-\frac{2}{H}\,e_{0}\Bigr), \qquad v_{\Lambda}^{*} \;=\; \frac{H}{4}\,X\Bigl(\frac{2}{H}\,e_{0}\Bigr),

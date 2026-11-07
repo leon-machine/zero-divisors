@@ -73,6 +73,10 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item H5 (notation, routine): one parenthesis in the formal level states this entity''s normalisation (rho = r/2M, U = -e^{-kappa t}(s - 1) e^{s^2/2 + s}) and that the companion null-shell result uses rho = r - 2M, U = -rho e^{rho/2M}. No content change; evidence: the companion''s own formal level (checked by reading it).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -134,7 +138,7 @@ extraction:
     reaches from the other side.
 ---
 ## formal
-Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}d\Omega^{2}$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$.
+Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}d\Omega^{2}$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$ (this entity's normalisation, $\rho = r/2M$ and $U$ as in (i); the companion null-shell result filed alongside, synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature, uses $\rho = r - 2M$ and $U = -\rho\,e^{\rho/2M}$, a different normalisation).
 \begin{enumerate}
 \item[(i)] \emph{(The Kruskal functions in this gauge.)} On $r > 0$ put
 \[
