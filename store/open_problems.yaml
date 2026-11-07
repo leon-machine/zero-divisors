@@ -2055,7 +2055,14 @@
     every Hadamard Dirac state has the null vacuum as its generator scaling limit
     (\claimref{synthesis.hadamard-scaling-limit-premise}). So field-level modular action at dense cuts,
     of either sign, together with the Hadamard deposit premise gives (N$_{+}$) on those fields; the
-    eternal hole and eternal de Sitter, which no descent reaches, keep the datum. With the field
+    eternal hole and eternal de Sitter, which no descent reaches, keep the datum. This reduction
+    rests on no postulate: the Hadamard results inherited (N$_{+}$) and seventeen other postulates
+    only through citations of algebraic and analytic clauses, which now stand as their own results
+    (\claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane},
+    \claimref{synthesis.null-vacuum-on-a-horizon-generator},
+    \claimref{synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation},
+    \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}), and
+    \claimref{synthesis.hadamard-scaling-limit-premise} now holds given nothing. With the field
     theory's unit $I_4$ (computed exactly, under review): on the modes of each future null momentum $k$,
     with boost bivector $B$, $L_B = 1$ and $L_J = -L_{I_4}$ for $J = -I_4B$, so every mode's helicity is
     locked to its frequency sign; every map commuting with the Lorentz rotors is $I_4$-linear; and among
