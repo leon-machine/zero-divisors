@@ -41,7 +41,14 @@ locators:
   number: Thm 4.2
   label: thm:global
   line: 987
+outside_ga:
+  kind: other
+  why: 'the complex unit of the representation spaces on which U(2) x U(3) acts: the slot space C^2 and the pair space W = C^3, a maximal isotropic subspace of the complexified conformal space V_C = W + W-bar whose vectors include the spacetime directions; that unit must commute with the conformal vectors, which no pseudoscalar does, so the determinants and roots of unity of the proof keep the plain i'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the i of the proof (det A = e^{i alpha}, the sixth and cube roots of unity, the central characters e^{2 pi i t/3} and exp 2 pi i(...)) is the scalar of C^2 tensor C^3 and C^5, kept as the plain complexification and declared.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -47,7 +47,14 @@ lineage:
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice
   - standard-model.slot-module-hypothesis
   - standard-model.chain
+outside_ga:
+  kind: other
+  why: 'the antiunitary CPT map Theta = kappa U is built from the complex conjugation kappa of the five-mode module, which negates i(a^dagger_k - a_k); this i is the unit of the complexification of the real algebra Cl(5,5) of the ten and must commute with all ten vectors, which no pseudoscalar of Cl(5,5) does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: in (v) the complex conjugation kappa of the five-mode module negates i(a^dagger_k - a_k); that i is the unit of the complexification of the real Clifford algebra of the ten, kept and declared.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

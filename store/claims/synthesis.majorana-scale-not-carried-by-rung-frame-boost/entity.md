@@ -58,7 +58,14 @@ lineage:
   - synthesis.rung-unit-second-free-number
   - synthesis.majorana-scale-free-input
   - synthesis.majorana-scale-free-on-pati-salam-route
+outside_ga:
+  kind: other
+  why: 'the compact flow exp(i phi ad 2T_3R) of the proof acts on the complexified Clifford algebra of the ten, pair vectors and the grade-five T included; its i must commute with all ten vectors, which no pseudoscalar does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the parenthetical compact flow exp(i phi ad 2T_3R) acts on the whole complexified algebra of the ten, pair vectors and the Majorana element T included, so its unit is kept and declared.'
   open_problem: op.rung-unit
   note: >-
     Tests the one series structure that could tie the Majorana scale to the weak scale: the frame boost

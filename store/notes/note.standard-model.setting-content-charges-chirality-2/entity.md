@@ -25,6 +25,14 @@ locators:
   number: Setting
   section: Content, charges, chirality
   line: 1081
+outside_ga:
+  kind: other
+  why: 'the complex unit of the representation spaces on which U(2) x U(3) acts: the slot space C^2 and the pair space W = C^3, a maximal isotropic subspace of the complexified conformal space V_C = W + W-bar whose vectors include the spacetime directions; that unit must commute with the conformal vectors, which no pseudoscalar does, so the hypercharge generator (3i I_2, -2i I_3) and its phase keep the plain i'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the hypercharge generator (3i I_2, -2i I_3), its phase lambda = e^{i theta} and its action by iq use the scalar of C^2 tensor C^3, kept as the plain complexification and declared.'
 ---
 
 ## formal

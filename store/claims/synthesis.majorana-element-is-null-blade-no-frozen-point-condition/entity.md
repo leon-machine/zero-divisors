@@ -38,7 +38,14 @@ lineage:
   motivated_by:
   - synthesis.majorana-scale-free-input
   - synthesis.majorana-scale-free-on-pati-salam-route
+outside_ga:
+  kind: other
+  why: 'exp(i theta (B - L)) and the compact real form spanned by i times the Hermitian elements of the 21 live in the complexification of the real algebra Cl(5,5) of the ten, whose unit must commute with all ten vectors and with the grade-five T; no pseudoscalar of Cl(5,5) does (I_10 anticommutes with vectors and squares to +1)'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the compact one-parameter group exp(i theta (B - L)), its action e^{-2 i theta} on T and the compact real form (i times the Hermitian elements of the 21) use the unit of the complexified Clifford algebra of the ten, kept and declared.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

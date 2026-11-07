@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-left-right-bidoublet-two-yukawa-couplings
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the left-right bidoublet''s two Yukawa couplings'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'G. Senjanovic and R. N. Mohapatra, Exact left-right symmetry and spontaneous violation of parity, Phys. Rev. D 12 (1975), 1502.'
@@ -25,7 +29,14 @@ imported_from:
 - citation: 'Y. Zhang, H. An, X. Ji and R. N. Mohapatra, General CP violation in minimal left-right symmetric model and constraints on the right-handed scale, arXiv:0712.4218, equations (7), (12) and (13).'
   key: ZhangAnJiMohapatra2008
   doi: 10.1016/j.nuclphysb.2008.05.019
+outside_ga:
+  kind: imported
+  why: 'the left-right model''s Yukawa Lagrangian, the conjugate bidoublet tau_2 Phi^* tau_2 and the mass matrices with the phases e^{-+ i theta} are quoted with the complex unit i and the Pauli matrix tau_2 as Zhang, An, Ji and Mohapatra state them; only the reading in the series'' chart writes the unit as I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The reading in the series'' chart writes the vacuum phase with I_4, beta <-> kappa'' e^{I_4 theta}, the unit on rung values; the imported Lagrangian, conjugate bidoublet and mass matrices (formal level and one-liner) keep the source''s i and tau_2, declared as imported.'
   note: >-
     Imported so that the coupling-to-conjugate result can pin the standard two-coupling structure of a
     complex bidoublet, which it cited from memory. Checked on 2026-11-01: the bibliographic data of
@@ -55,7 +66,7 @@ M_{U} = \kappa h + \kappa'e^{-\mathrm{i}\theta}\tilde{h}, \qquad M_{D} = \kappa'
 \]
 \emph{Provenance:} \cite{SenjanovicMohapatra1975}; the displayed form as in \cite{ZhangAnJiMohapatra2008}, equations (7), (12), (13).
 
-\emph{Reading in the series' chart (identification of formulas, not part of the import).} With the rung-$4$ components of the rung field read as $\alpha \leftrightarrow \kappa$, $\beta \leftrightarrow \kappa'e^{\mathrm{i}\theta}$, $Y \leftrightarrow h$ and $\tilde{Y} \leftrightarrow \tilde{h}$, these are the mass matrices $M_{u} = \alpha Y + \bar{\beta}\tilde{Y}$, $M_{d} = \beta Y + \bar{\alpha}\tilde{Y}$ of the coupling $Yc + \tilde{Y}c^{*}$ of the rung field and its conjugate.
+\emph{Reading in the series' chart (identification of formulas, not part of the import).} With the rung-$4$ components of the rung field read as $\alpha \leftrightarrow \kappa$, $\beta \leftrightarrow \kappa'e^{I_{4}\theta}$ (the source's $\mathrm{i}$ read as the field theory's unit $I_{4}$ on rung values), $Y \leftrightarrow h$ and $\tilde{Y} \leftrightarrow \tilde{h}$, these are the mass matrices $M_{u} = \alpha Y + \bar{\beta}\tilde{Y}$, $M_{d} = \beta Y + \bar{\alpha}\tilde{Y}$ of the coupling $Yc + \tilde{Y}c^{*}$ of the rung field and its conjugate.
 
 ## technical
 In the left-right symmetric extension of the Standard Model the Higgs field that gives the quarks their masses is a bidoublet, a doublet of both the left-handed and the right-handed weak isospin. It and its conjugate transform alike, so the quarks can couple to each with its own family matrix. The two vacuum values of the bidoublet then mix the two matrices, one combination giving the up-type masses and the other the down-type masses; with one matrix only, the up-type and down-type mass matrices would be proportional.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-on-the-lift-locus
 kind: claim
-version: 2
+version: 3
 title: 'The rung field on the null-lift locus'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -48,6 +52,10 @@ lineage:
   - standard-model.what-derived-what-not
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the complexified rung summand and of its coefficients (the u(2) generators T_j = (I_4/2) sigma_j, Y = (I_4/2) 1, K = -2 I_4 Y, the stabiliser generator diag(0, I_4) and the gauge directions in the proof) is written as I_4, which commutes with the rung vectors; C is read as span{1, I_4} and R_C = R + I_4 R; nothing stays.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -57,7 +65,7 @@ extraction:
 ---
 
 ## formal
-Let $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$ be the complexified rung summand of Theorem \claimref{synthesis.rung-unit-is-frame-boost}, with mode vectors $v_{a}, w_{a}$ ($a = 4, 5$) of Fact \claimref{standard-model.imported-tower-commuting-copies-fock-module}, and write $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$ with $\alpha, \beta \in \C^{2}$. The complex-bilinear extension of the quadratic form is $Q(c) = \alpha^{\mathsf T}\beta$, and the Hermitian norm of the tower's conjugation is $N(c) = c^{*}\cdot c = \tfrac12(|\alpha|^{2} + |\beta|^{2})$. Let $X \in U(2)$, the slot mixing of Proposition \claimref{standard-model.ten-transported-ambient-space-doublets-are}, act by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$, with generators $T_{j} = \tfrac{I_{4}}{2}\sigma_{j}$ and hypercharge $Y = \tfrac{I_{4}}{2}\mathbf{1}$; let $K = -2I_{4}Y$, so $Kv_{a} = v_{a}$ and $Kw_{a} = -w_{a}$, and let $m(c) = \operatorname{Re}(c^{*}\cdot Kc) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the hypercharge moment map. Let $\Lambda > 0$, $H^{2} = \Lambda/3$, let $L = \{c \in \mathcal{R}_{\C} : Q(c) = -\Lambda/3\}$, the rung components $c$ for which $I + c$ is null with $I$ the frozen point, and let $c_{\lambda} = -\lambda w_{4} + \tfrac{\Lambda}{3\lambda}v_{4}$, $\lambda > 0$, be the rung component of the lift of $I$ in the frame $\lambda$ (Theorem \claimref{synthesis.rung-unit-transverse-to-norm}, Proposition \claimref{standard-model.transported-frozen-point}(i) at $\lambda = 1$); write $\eta = \log(\lambda/H)$.
+Let $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$, with $\C = \mathrm{span}\{1, I_{4}\}$ (the unit is the field theory's unit $I_{4}$, which commutes with the rung vectors, so $\mathcal{R}_{\C} = \mathcal{R} \oplus I_{4}\mathcal{R}$), be the complexified rung summand of Theorem \claimref{synthesis.rung-unit-is-frame-boost}, with mode vectors $v_{a}, w_{a}$ ($a = 4, 5$) of Fact \claimref{standard-model.imported-tower-commuting-copies-fock-module}, and write $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$ with $\alpha, \beta \in \C^{2}$. The complex-bilinear extension of the quadratic form is $Q(c) = \alpha^{\mathsf T}\beta$, and the Hermitian norm of the tower's conjugation is $N(c) = c^{*}\cdot c = \tfrac12(|\alpha|^{2} + |\beta|^{2})$. Let $X \in U(2)$, the slot mixing of Proposition \claimref{standard-model.ten-transported-ambient-space-doublets-are}, act by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$, with generators $T_{j} = \tfrac{I_{4}}{2}\sigma_{j}$ and hypercharge $Y = \tfrac{I_{4}}{2}\mathbf{1}$; let $K = -2I_{4}Y$, so $Kv_{a} = v_{a}$ and $Kw_{a} = -w_{a}$, and let $m(c) = \operatorname{Re}(c^{*}\cdot Kc) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the hypercharge moment map. Let $\Lambda > 0$, $H^{2} = \Lambda/3$, let $L = \{c \in \mathcal{R}_{\C} : Q(c) = -\Lambda/3\}$, the rung components $c$ for which $I + c$ is null with $I$ the frozen point, and let $c_{\lambda} = -\lambda w_{4} + \tfrac{\Lambda}{3\lambda}v_{4}$, $\lambda > 0$, be the rung component of the lift of $I$ in the frame $\lambda$ (Theorem \claimref{synthesis.rung-unit-transverse-to-norm}, Proposition \claimref{standard-model.transported-frozen-point}(i) at $\lambda = 1$); write $\eta = \log(\lambda/H)$.
 \begin{enumerate}
 \item \emph{(The charge-preserving locus is the lift family.)} The stabiliser in $U(2)$ of $c \in L$ is trivial unless $\beta \in \C\bar{\alpha}$, and is then a circle. The points of $L$ with a circle stabiliser are exactly the $U(2)$-images of the $c_{\lambda}$, $\lambda > 0$; on them $|\beta| = \lambda$ and $|\alpha| = H^{2}/\lambda$, so $\lambda$ is a $U(2)$-invariant and $|\alpha||\beta| = \Lambda/3$. At $c_{\lambda}$ the unbroken generator is $Y - T_{3}$.
 \item \emph{(Two readings of the gauge-boson masses.)} For gauge fields $(W^{j}, B)$ acting through $gT_{j}$ and $g'Y$, the quadratic forms in the gauge fields at $c_{\lambda}$ of the Hermitian kinetic term $\operatorname{Re}((Dc)^{*}\cdot Dc)$ and of the bilinear kinetic term $Q(Dc, Dc)$ are $\tfrac14 N(c_{\lambda})P$ and $\tfrac14 Q(c_{\lambda})P$, with $P = \operatorname{diag}(g^{2}, g^{2}) \oplus \bigl(\begin{smallmatrix} g^{2} & gg' \\ gg' & g'^{2}\end{smallmatrix}\bigr)$, of eigenvalues $g^{2}, g^{2}, g^{2} + g'^{2}, 0$. The Hermitian reading has the electroweak pattern (one massless combination, $M_{Z}^{2}/M_{W}^{2} = (g^{2} + g'^{2})/g^{2}$) with scale $N(c_{\lambda}) = H^{2}\cosh 2\eta$; the bilinear reading has the same pattern with scale $-\Lambda/3$ in every frame.

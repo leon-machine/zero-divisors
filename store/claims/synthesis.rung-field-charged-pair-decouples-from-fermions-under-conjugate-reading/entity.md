@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading
 kind: claim
-version: 2
+version: 3
 title: 'The charged pair decouples from fermions under the per-sector reading'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -60,6 +64,10 @@ lineage:
   - synthesis.rung-field-charged-scalar-sum-rule
   - synthesis.rung-unit-is-frame-boost
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'In the proof the unit on the rung field is written as I_4, which commutes with the rung vectors (C read as span{1, I_4}): the generators (I_4/2) sigma_j and (I_4/2) 1, the rational phases 3/5 + (4/5) I_4 and 5/13 - (12/13) I_4 and the moment maps G(c, -I_4 T c); nothing stays.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

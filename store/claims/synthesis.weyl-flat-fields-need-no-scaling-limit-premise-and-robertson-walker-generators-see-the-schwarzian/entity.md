@@ -1,7 +1,7 @@
 ---
 id: synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
 kind: claim
-version: 4
+version: 5
 title: 'No scaling-limit premise on Weyl-flat fields; the Robertson-Walker Schwarzian'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -54,6 +58,10 @@ lineage:
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The two-point kernels on the generator modes (continuum mode space) are written with the field unit I_4, numbers read in span{1, I_4}: the null-vacuum kernel and the Schwarzian kernel; nothing stays (e_i is an index).'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Step (3) of op.deposit-state-is-hadamard on the Weyl-flat part of the chain. Clause (i) is the
@@ -110,7 +118,7 @@ Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a gravitational field on flat spac
 \begin{enumerate}
 \item[(i)] \emph{(Conformal transfer and bulk scaling limit; standard, re-derived.)} The flat null lines with $d\tilde\lambda = \varphi^{2}d\lambda$ are the affine null geodesics of the derived metric and carry the flat covectors, so a state of $\psi = \varphi^{-3/2}\chi$ is Hadamard exactly when the corresponding state of the flat field $\chi$ is. For every gauge-invariant quasi-free Hadamard state $\omega$ and every $x_{0} \in U$, the scaling limit of $\omega$ at $x_{0}$ (weight $\tfrac32$ per leg) is the flat massless vacuum in the local inertial coordinates $\varphi(x_{0})(x - x_{0})$.
 \item[(ii)] \emph{(Generators; proved.)} On every null generator in $U$ the physical affine parameter $\tilde\lambda$ satisfies $d\tilde\lambda = \varphi^{2}d\lambda$, $\lambda$ the flat one. With the comoving transverse labels fixed as the multiplicity space (the physical area element $\varphi^{2}d^{2}y$ changes along an expanding generator), the CAR makes the generator field carry weight $\tfrac12$ in $\tilde\lambda$, and the restriction of $\omega$ satisfies the generator microlocal condition in $\tilde\lambda$. Hence the local form of (N$_{+}$) holds at every point of every null plane of the chart in $U$, for every such state, with no further premise. The chart's null planes through $x_{0}$ agree with the local Rindler horizons at $x_{0}$ (expansion-free there) at the leading order, tangent at $x_{0}$, at which the scaling-limit premise (HS) and (C$_{\mathrm{loc}}$) define them; at that order the conclusion of (HS) is, on Weyl-flat regions, a theorem for the massless Dirac field.
-\item[(iii)] \emph{(Robertson-Walker generators; proved and computed.)} For $\varphi = a(t)$, $t = x\cdot e_{0}$, the restriction of the conformal vacuum to a null generator, read in $\tilde\lambda = \Psi(\lambda)$ with $\Psi' = a^{2}$, is the null vacuum of $\tilde\lambda$ plus the Schwarzian kernel of $\Phi = \Psi^{-1}$, whose leading term is $\tfrac{i}{2\pi}\cdot\tfrac{1}{12}S_{\Phi}\,(u - v)$ with $S_{\Phi} = -S/a^{4}$, where
+\item[(iii)] \emph{(Robertson-Walker generators; proved and computed.)} For $\varphi = a(t)$, $t = x\cdot e_{0}$, the restriction of the conformal vacuum to a null generator, read in $\tilde\lambda = \Psi(\lambda)$ with $\Psi' = a^{2}$, is the null vacuum of $\tilde\lambda$ plus the Schwarzian kernel of $\Phi = \Psi^{-1}$, whose leading term is $\tfrac{I_{4}}{2\pi}\cdot\tfrac{1}{12}S_{\Phi}\,(u - v)$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$, $I_{4}$ the unit of the mode space) with $S_{\Phi} = -S/a^{4}$, where
 \[
 S = S_{\Psi} = \frac{\Psi'''}{\Psi'} - \frac32\Bigl(\frac{\Psi''}{\Psi'}\Bigr)^{2} = \frac{2a''}{a} - 4\Bigl(\frac{a'}{a}\Bigr)^{2} = -2a\Bigl(\frac1a\Bigr)'' ,
 \]

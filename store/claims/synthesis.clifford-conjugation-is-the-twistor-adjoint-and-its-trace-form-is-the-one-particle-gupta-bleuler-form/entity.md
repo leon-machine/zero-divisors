@@ -49,7 +49,14 @@ lineage:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time
+outside_ga:
+  kind: complex-analysis
+  why: 'the module is the irreducible representation of the complexified Cl(2,4) with a Hermitian structure; its scalar i must commute with the generators (J = i e_1 e_+, the complex null mode (e_1 + i e_+)/2, Hermitian forms S + iA), which no pseudoscalar does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the module is the eight-dimensional representation of the complexified Cl(2,4) with a Hermitian structure, whose scalar i commutes with the generators (J = i e_1 e_+, the mode c = (e_1 + i e_+)/2, Hermitian forms S + iA on C^4); no pseudoscalar commutes with the vectors, so i stays and is declared (version and levels unchanged).'
   open_problem: op.qft-non-abelian-gauge-fields
   note: >-
     Bears on whether the indefinite form of the Krein premise (KF) can be derived from the series' structures.

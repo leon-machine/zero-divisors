@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
 kind: claim
-version: 2
+version: 3
 title: 'The covariant completion of the conjugate reading: a second family matrix'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -50,6 +54,10 @@ lineage:
   - synthesis.rung-field-on-the-lift-locus
   - synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit on the rung field is written as I_4, which commutes with the rung vectors (C read as span{1, I_4}): R_2 = I_4 [b_2, .] in the formal level and R_2, the hypercharge (I_4/2, -I_4/2) and the compensating factor in the proof; nothing stays.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -103,7 +111,7 @@ M_{d} = \beta Y + \bar{\alpha}\tilde{Y}, \qquad M_{u} = \alpha Y + \bar{\beta}\t
 \]
 and write $H_{q} = M_{q}M_{q}^{\dagger}$, $\|Y\|^{2} = \tr(YY^{\dagger})$, $r = e^{-2\eta}$.
 \begin{enumerate}
-\item[(i)] \emph{(Covariance.)} The coefficients $(\bar{\beta}, \bar{\alpha})$ of $c^{*}$ transform under $U(2)$ as $(\alpha, \beta)$ do. The bivectors $b_{1} = \tfrac12(v_{4}v_{5} + w_{4}w_{5})$ and $b_{2} = \tfrac12(v_{4}v_{5} - w_{4}w_{5})$ act on rung vectors by commutator; $R_{1} = [b_{1}, \cdot]$ and $R_{2} = I_{4}[b_{2}, \cdot]$ commute with the weak $\su(2)$ and with $c \mapsto c^{*}$, $[R_{1}, R_{2}]$ is the hypercharge action, and $B$ is anti-invariant under $b_{1}$, $b_{2}$, so $x \mapsto B(\cdot, x\,\cdot)$ is equivariant. Hence the coupling $Yc + \tilde{Y}c^{*}$ is covariant under the weak $\su(2)$ and this right-handed $\su(2)$ (the commutant of the weak $\su(2)$ of \claimref{synthesis.rung-field-level-needed-off-balance-and-not-right-invariant}(2)), the two-coupling structure of a complex bidoublet in left-right models (Fact \claimref{synthesis.imported-left-right-bidoublet-two-yukawa-couplings}): it is the $\su(2)_{R}$-covariant completion of the per-sector conjugate reading of Corollary \claimref{standard-model.one-vev-vector-relations-breaking-pattern} (down entries from $c$, up entries from $c^{*}$, one matrix), which vanishes on the $\alpha$ half and so is covariant for no action of $\su(2)_{R}$ on the fermions.
+\item[(i)] \emph{(Covariance.)} The coefficients $(\bar{\beta}, \bar{\alpha})$ of $c^{*}$ transform under $U(2)$ as $(\alpha, \beta)$ do. The bivectors $b_{1} = \tfrac12(v_{4}v_{5} + w_{4}w_{5})$ and $b_{2} = \tfrac12(v_{4}v_{5} - w_{4}w_{5})$ act on rung vectors by commutator; $R_{1} = [b_{1}, \cdot]$ and $R_{2} = I_{4}[b_{2}, \cdot]$ (the unit on the rung field is the field theory's unit $I_{4}$, which commutes with the rung vectors; $\C = \mathrm{span}\{1, I_{4}\}$) commute with the weak $\su(2)$ and with $c \mapsto c^{*}$, $[R_{1}, R_{2}]$ is the hypercharge action, and $B$ is anti-invariant under $b_{1}$, $b_{2}$, so $x \mapsto B(\cdot, x\,\cdot)$ is equivariant. Hence the coupling $Yc + \tilde{Y}c^{*}$ is covariant under the weak $\su(2)$ and this right-handed $\su(2)$ (the commutant of the weak $\su(2)$ of \claimref{synthesis.rung-field-level-needed-off-balance-and-not-right-invariant}(2)), the two-coupling structure of a complex bidoublet in left-right models (Fact \claimref{synthesis.imported-left-right-bidoublet-two-yukawa-couplings}): it is the $\su(2)_{R}$-covariant completion of the per-sector conjugate reading of Corollary \claimref{standard-model.one-vev-vector-relations-breaking-pattern} (down entries from $c$, up entries from $c^{*}$, one matrix), which vanishes on the $\alpha$ half and so is covariant for no action of $\su(2)_{R}$ on the fermions.
 \item[(ii)] \emph{(Sum rules.)} For all $\alpha$, $\beta$, $Y$, $\tilde{Y}$:
 $\tr H_{u} - \tr H_{d} = 2m(c)(\|Y\|^{2} - \|\tilde{Y}\|^{2})$ and $\tr H_{u} + \tr H_{d} = 2N(c)(\|Y\|^{2} + \|\tilde{Y}\|^{2}) + 4\operatorname{Re}(Q(c)\tr(Y\tilde{Y}^{\dagger}))$.
 \item[(iii)] \emph{(One matrix.)} If $\tilde{Y} = Y$ (the coupling to the real part $c + c^{*}$), then $\bar{z}M_{d} = zM_{u}$ with $z = \beta + \bar{\alpha}$: $m_{u_{i}} = m_{d_{i}}$ and $V = 1$ exactly, in every frame; on the lift family this agrees with the per-sector conjugate reading up to relative corrections $e^{-2\eta}$.

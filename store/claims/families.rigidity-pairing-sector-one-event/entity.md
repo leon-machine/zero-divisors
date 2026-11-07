@@ -65,6 +65,9 @@ extraction:
   typing:
     by: ai-typing-pass
     note: "The squeezed-vacuum edge is the premise for applying functions in the Takagi basis and was kept; its E204 is cleared by removing the ordering-dictionary edge from that fact."
+outside_ga:
+  kind: other
+  why: 'no bare i remains; the family-space algebra is written, as in its source, with the three-dimensional cross product (the cross-product matrices [a]_x, the channel cross products f_+ x f_- and u'' x f_+, the triple-product identity) on family vectors with components in span{1, I_4}'
 ---
 
 ## formal

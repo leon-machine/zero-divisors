@@ -44,7 +44,14 @@ lineage:
   - synthesis.vacuum-field-stress-tensor-is-einstein-tensor-or-trace
   - mass.imported-frozen-point-tractor-connection
   - synthesis.rung-unit-second-free-number
+outside_ga:
+  kind: complex-analysis
+  why: 'the tube point i rho e_0 is a point of complexified spacetime and J = i e_1 e_+ acts on the module of the complexified Cl(2,4); both i multiply spacetime or conformal vectors, which no pseudoscalar commutes with'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: J = i e_1 e_+ is the involution of the module of the complexified Cl(2,4), and the tube point m = i rho e_0 with X(m) = n_0 + (rho^2/2) n_inf + i rho e_0 is a point of complexified spacetime; both i stand next to vectors, which no pseudoscalar commutes with, so i stays and is declared (version and levels unchanged).'
   open_problem: op.scale-selection-principle
   note: >-
     Tests both lines of attack of the open problem and finds each blocked, with exact counter-models. (a) The

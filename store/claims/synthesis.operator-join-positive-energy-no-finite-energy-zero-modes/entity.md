@@ -44,6 +44,10 @@ lineage:
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten: the i of the generalised state exp((2i/hbar) sum a^dagger b^dagger) and the spectral parameter mu in C are the scalars of the palatial Fock space F, whose unit the store does not fix (twistor numbers are read with I_6, the field theory''s one-particle space with I_4, and the twistor attachment makes F that space); declared outside_ga (complex-analysis).'
   open_problem: op.operator-join
   note: >-
     The problem's second line of attack (decide whether the polynomial and positive-energy
@@ -72,6 +76,9 @@ extraction:
     massless representations of SU(2,2), and the Friedrichs extension of a semibounded form.
     Transport-convenient: the join and its ordering are the series' objects; the positivity and the
     band argument are standard oscillator algebra.
+outside_ga:
+  kind: complex-analysis
+  why: 'i stays as the scalar unit of the palatial oscillator Fock space F (the generalised state exp((2i/hbar) sum a^dagger b^dagger) applied to the vacuum, and the spectral parameter mu in C), and the store does not settle whether that unit is the twistor unit I_6 or the field unit I_4'
 ---
 
 ## formal

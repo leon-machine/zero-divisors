@@ -1,7 +1,7 @@
 ---
 id: synthesis.even-slots-need-a-spectator-generator
 kind: claim
-version: 2
+version: 3
 title: 'Even slots need a spectator generator'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -36,6 +40,10 @@ lineage:
   - rungs.r-s-are-one-hypothesis-two
   - field-theory.no-canonical-commutation-relations-tower
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the complexified floor of five rungs is written as I_4, which commutes with every tower vector (F_C = F + I_4 F, C read as span{1, I_4}): the unit vector (c, I_4 d) and the bracket identity in the proof of (i); nothing stays.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -45,7 +53,7 @@ extraction:
 ---
 
 ## formal
-Let $F = \Cl(5,5)$ be a floor spanned by five rungs of the tower, with null pairs $(v_{k}, w_{k})$ satisfying the canonical anticommutation relations as vectors (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}); let rungs $1, 2, 3$ carry the composite's pair modes, as in Fact \claimref{standard-model.imported-pair-systems-two-chirality-halves}, with pair algebra $P$ and pair parity $\Gamma_{W} = \prod_{k \le 3}(1 - 2v_{k}w_{k})$. Let $s_{1}, s_{2} \in F_{\C}$ be slot operators that are (a) homogeneous of tower parity $\pi$, (b) two-level, $s_{i}^{2} = 0$, $s_{i}s_{i}^{*} + s_{i}^{*}s_{i} = 1$, (c) carried into two-level operators by every $A \in U(2)$ acting on their span, and (d) such that each slot operator commutes with every pair operator, or each anticommutes with every one. Then:
+Let $F = \Cl(5,5)$ be a floor spanned by five rungs of the tower, with null pairs $(v_{k}, w_{k})$ satisfying the canonical anticommutation relations as vectors (Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}); let rungs $1, 2, 3$ carry the composite's pair modes, as in Fact \claimref{standard-model.imported-pair-systems-two-chirality-halves}, with pair algebra $P$ and pair parity $\Gamma_{W} = \prod_{k \le 3}(1 - 2v_{k}w_{k})$. Let $s_{1}, s_{2} \in F_{\C}$ ($F_{\C} = F \oplus I_{4}F$, $\C = \mathrm{span}\{1, I_{4}\}$, the unit being the field theory's $I_{4}$, which commutes with every tower vector) be slot operators that are (a) homogeneous of tower parity $\pi$, (b) two-level, $s_{i}^{2} = 0$, $s_{i}s_{i}^{*} + s_{i}^{*}s_{i} = 1$, (c) carried into two-level operators by every $A \in U(2)$ acting on their span, and (d) such that each slot operator commutes with every pair operator, or each anticommutes with every one. Then:
 \begin{enumerate}
 \item[(i)] $s_{1}, s_{2}$ satisfy the canonical anticommutation relations among themselves; commuting two-level slots violate (c);
 \item[(ii)] the commutant $P'$ of $P$ in $F$ is spanned by $16$ blades, of which $8$ are even and span a subalgebra; $s_{i}$ or $s_{i}\Gamma_{W}$ lies in $P'$ and has parity $\pi$; two canonical anticommutation modes generate a $16$-dimensional algebra; hence $\pi = 1$: inside $F$ every such pair of slots is odd;

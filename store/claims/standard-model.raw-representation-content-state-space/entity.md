@@ -40,7 +40,14 @@ locators:
   number: Prop 5.1
   label: prop:raw
   line: 1027
+outside_ga:
+  kind: other
+  why: 'the complex unit of the representation spaces on which U(2) x U(3) acts: the slot space C^2 and the pair space W = C^3, a maximal isotropic subspace of the complexified conformal space V_C = W + W-bar whose vectors include the spacetime directions; that unit must commute with the conformal vectors, which no pseudoscalar does, so the scalar e^{i theta} I_3 of the pair slot keeps the plain i'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the scalar e^{i theta} I_3 of the pair slot and its action e^{ik theta} on Lambda^k C^3 use the unit of the pair space W, kept as the plain complexification and declared.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

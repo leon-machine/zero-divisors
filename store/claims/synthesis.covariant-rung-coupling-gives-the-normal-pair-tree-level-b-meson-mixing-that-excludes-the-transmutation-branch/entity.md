@@ -1,7 +1,7 @@
 ---
 id: synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
 kind: claim
-version: 2
+version: 3
 title: 'B-meson mixing excludes the transmutation branch under covariant coupling'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 imported_from:
 - citation: 'F. Gabbiani, E. Gabrielli, A. Masiero and L. Silvestrini, A complete analysis of FCNC and CP constraints in general SUSY extensions of the standard model, Nucl. Phys. B 477 (1996), 321--352; arXiv:hep-ph/9604387.'
@@ -61,6 +65,10 @@ lineage:
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
   - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The bare i that the formal level and the proof had kept as the number convention of the imported four-quark operators is written as I_4: in the bidoublet form e^{-+ I_4 theta}, in phi = (H + I_4 A)/sqrt 2 of step 3 (the same field as in step 1) and in the source K_A = I_4 (J^dagger - J)/sqrt 2, the bilinears J being number-valued; the sentences that set i apart as that convention now say the unit is I_4 there too; nothing stays.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -110,7 +118,7 @@ extraction:
 ---
 
 ## formal
-Take the linear rung field of \claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum} at a vacuum with $\alpha = 0$, $\beta = (-v, 0)$ (eight real components with kinetic coefficient one, so $|\beta| = v$), coupled to quarks as in \claimref{synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix}, $M_{d} = \beta Y + \bar{\alpha}\tilde{Y}$, $M_{u} = \alpha Y + \bar{\beta}\tilde{Y}$ on rung-$4$ components, with $Y$, $\tilde{Y}$ complex symmetric (the rung $10$). Let $M_{q} = U_{q}\hat{M}_{q}U_{q}^{\mathsf T}$ be Takagi forms (Fact \claimref{synthesis.imported-takagi-factorisation}) and $V = U_{u}^{\dagger}U_{d}$, whose moduli are those of the quark mixing matrix. The normal pair is the direction $\alpha_{4} = \sqrt2\,\phi$, $\phi = (H + I_{4}A)/\sqrt2$ ($i = I_{4}$ on rung values), with masses $m_{H}$, $m_{A}$; in the four-quark algebra below $i$ is the number convention of the imported operators.
+Take the linear rung field of \claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum} at a vacuum with $\alpha = 0$, $\beta = (-v, 0)$ (eight real components with kinetic coefficient one, so $|\beta| = v$), coupled to quarks as in \claimref{synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix}, $M_{d} = \beta Y + \bar{\alpha}\tilde{Y}$, $M_{u} = \alpha Y + \bar{\beta}\tilde{Y}$ on rung-$4$ components, with $Y$, $\tilde{Y}$ complex symmetric (the rung $10$). Let $M_{q} = U_{q}\hat{M}_{q}U_{q}^{\mathsf T}$ be Takagi forms (Fact \claimref{synthesis.imported-takagi-factorisation}) and $V = U_{u}^{\dagger}U_{d}$, whose moduli are those of the quark mixing matrix. The normal pair is the direction $\alpha_{4} = \sqrt2\,\phi$, $\phi = (H + I_{4}A)/\sqrt2$ ($i = I_{4}$ on rung values, and on the number-valued quark bilinears of the four-quark algebra below), with masses $m_{H}$, $m_{A}$.
 \begin{enumerate}
 \item[(i)] \emph{(Couplings; proved.)} In the down mass basis the normal pair enters as $-\kappa\bar{\phi}\,\bar{d}_{L}Ad_{R} + \mathrm{h.c.}$ with $\kappa = \sqrt2/v$ and $A = V^{\dagger}\hat{M}_{u}V^{*}$, symmetric, $|A_{jk}| = |\sum_{i}V_{ij}V_{ik}m_{u_{i}}|$; in the up mass basis it enters through $V\hat{M}_{d}V^{\mathsf T}$. This is the flavour structure of a left-right bidoublet with one vacuum value (Fact \claimref{synthesis.imported-left-right-bidoublet-two-yukawa-couplings}).
 \item[(ii)] \emph{(Lower bounds; proved, given the imported ranges.)} For every choice of the relative phases, $|A_{sb}| \ge m_{t}|V_{ts}||V_{tb}| - m_{c}|V_{cs}||V_{cb}| - m_{u}|V_{us}||V_{ub}| > 5.18$ GeV, $|A_{db}| > 1.07$ GeV and $|A_{sd}| \ge m_{c}|V_{cs}||V_{cd}| - m_{t}|V_{ts}||V_{td}| - m_{u}|V_{us}||V_{ud}| > 0.035$ GeV, with running masses at any scale from $100$ to $600$ GeV and $|V_{ts}|$, $|V_{td}|$ from tree-level determinations and three-family unitarity.

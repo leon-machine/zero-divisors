@@ -25,6 +25,14 @@ locators:
   number: Setting
   section: 'An intermediate symmetry: the slot/pair split'
   line: 1876
+outside_ga:
+  kind: other
+  why: 'the Majorana generators gamma_{2a-1} = i(v_a - w_a) of the two-rung module include the pair modes a = 1, 2, 3, whose vectors span the complexified conformal space V_C; the module''s unit must commute with them, and with the spacetime directions among them no pseudoscalar does'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pass made, nothing replaced: the Majorana generators gamma_{2a-1} = i(v_a - w_a) of the two-rung module run over the pair modes a = 1, 2, 3 of V_C as well as the rung modes, so their unit is kept as the module''s plain complexification and declared (I_4 would serve for a = 4, 5 alone).'
 ---
 
 ## formal
