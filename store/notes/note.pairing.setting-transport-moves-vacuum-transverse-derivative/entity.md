@@ -22,6 +22,14 @@ locators:
   number: Setting
   section: Transport moves the vacuum by the transverse derivative of its null direction
   line: 279
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): m = e_2 + ie_3 is a complex null vector transverse to the null direction; its i must commute with the spacetime vectors, which no pseudoscalar does.'
+outside_ga:
+  kind: other
+  why: 'm = e_2 + ie_3 is a complex null vector transverse to the null direction; its i must commute with the spacetime vectors, which no pseudoscalar does'
 ---
 
 ## formal

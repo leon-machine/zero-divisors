@@ -26,6 +26,7 @@ derivations:
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
   - hawking.imported-ideal-fermi-gas-uniqueness@2
+  - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,14 +52,15 @@ extraction:
     its clause (ii) (the restriction to either half-generator is the continuum I-state at rapidity period
     2 pi). There they are proved for the state that (N+) supplies; here for the null vacuum itself, with no
     premise. The converse in (ii), that the null vacuum is a ground state, which several results cite, is
-    added. Standard: the null-plane form of Bisognano-Wichmann, Hislop-Longo and Sewell, transport-absent.
-    Literature cited from memory: the ground-state characterisation (Bratteli and Robinson, Vol. 2,
-    5.3.19), the Fock representation of a quasi-free state with projection symbol, Euler's integral,
-    Mellin-Plancherel.
+    added; it rests on the imported purity Fact (Araki), clause (d) of
+    synthesis.imported-powers-stormer-takesaki-disjointness. Standard: the null-plane form of
+    Bisognano-Wichmann, Hislop-Longo and Sewell (orientation, from memory), transport-absent. Literature
+    cited from memory: the ground-state characterisation (Bratteli and Robinson, Vol. 2, Definition 5.3.18
+    and Proposition 5.3.19), Euler's integral, Mellin-Plancherel.
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Created at Leon''s decision of 7 November 2026 to split the premise-free analysis out of synthesis.positive-null-energy-gives-r-premises, so that results citing only the null vacuum (its kernel W_0, its uniqueness and ground-state property, its half-generator thermality) no longer inherit (N+) through that result. Numbering: the setup and the weight and dilation statements are (i) here; that result''s (i) is (ii) here, with the converse added; its (ii) is (iii) here. Proofs moved from there; the checks of (iii) are copied from its check functions without the (N+) premise call, and checks of (i) and (ii), which it lacked, are added. Units per Leon''s rulings R2 and R4 of 7 November 2026: I_4 throughout, the kernels, the Mellin, contour and strip steps included; no bare i remains, so nothing is declared.'
+    note: 'Referee fixes of 7 November 2026, folded into version 1: the converse in (ii) now cites the imported purity Fact (Araki; clause (d) of synthesis.imported-powers-stormer-takesaki-disjointness, a uses edge to an imported, postulate-free Fact) in place of a citation from memory; the necessity step reads the symbol as decomposable over the spectrum of P, fibrewise on K (it had assumed K one-dimensional, inherited); the Bratteli-Robinson reference is Definition 5.3.18 and Proposition 5.3.19; the orientation literature is flagged as from memory. Created at Leon''s decision of 7 November 2026 to split the premise-free analysis out of synthesis.positive-null-energy-gives-r-premises, so that results citing only the null vacuum (its kernel W_0, its uniqueness and ground-state property, its half-generator thermality) no longer inherit (N+) through that result. Numbering: the setup and the weight and dilation statements are (i) here; that result''s (i) is (ii) here, with the converse added; its (ii) is (iii) here. Proofs moved from there; the checks of (iii) are copied from its check functions without the (N+) premise call, and checks of (i) and (ii), which it lacked, are added. Units per Leon''s rulings R2 and R4 of 7 November 2026: I_4 throughout, the kernels, the Mellin, contour and strip steps included; no bare i remains, so nothing is declared.'
 ---
 
 ## formal

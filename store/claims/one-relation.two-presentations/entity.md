@@ -42,6 +42,10 @@ locators:
   label: prop:twopresentations
   line: 552
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the complex Witt pair (e_2 + ie_3)/2, -(e_2 - ie_3)/2 of Cl(1,3)_C and Cl(2,4)_C is a pair of complex null vectors; their i must commute with the spacetime vectors, which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -71,6 +75,9 @@ extraction:
     date: 2026-10-21
     cited:
     - one-relation.imported-pure-spinors-incidence-chart
+outside_ga:
+  kind: other
+  why: 'the complex Witt pair (e_2 + ie_3)/2, -(e_2 - ie_3)/2 of Cl(1,3)_C and Cl(2,4)_C is a pair of complex null vectors; their i must commute with the spacetime vectors, which no pseudoscalar does'
 ---
 
 ## formal

@@ -30,3 +30,5 @@ functions:
     clauses:
     - (iii)
     omits: The symbol m = (i/2)(cot(pi s) - i) is taken as given (not derived as the Mellin transform of the kernel) and shown equal to (1 + e^{2 pi h})^-1 and not to the beta = pi or 4 pi values at five values of e^{pi omega}; the two-point KMS identity is checked at the same points
+untouched_premises:
+  synthesis.imported-powers-stormer-takesaki-disjointness: "imported purity Fact (Araki), clause (d), cited in the proof of the converse in (ii) only; no check computes with it"

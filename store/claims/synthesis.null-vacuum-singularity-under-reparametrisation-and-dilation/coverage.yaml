@@ -9,3 +9,5 @@ functions:
     clauses:
     - (ii)
     omits: Invariance of the singular part and the eps-scaling of one polynomial remainder and one degree -1 remainder at three pairs of points, with the weight-0 and weight-1 controls; the bound on a bounded remainder's integral, the finite-rank remark and the extension from two-point functions to the state are argued in the proof, not computed
+untouched_premises:
+  hawking.imported-quasi-free-states-car-algebra: "imported Fact that a gauge-invariant quasi-free state is determined by its two-point function, cited in (ii) for the passage from two-point functions to the state; no check computes with it"

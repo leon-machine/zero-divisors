@@ -38,6 +38,10 @@ locators:
   label: lem:paircount
   line: 923
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -63,6 +67,9 @@ payload:
 - kind: count
   clause: (n+2)/2 for n even
   python: all(perp_dim(form(n), null_basis(n)[0]) == len(null_basis(n)[0]) == (n + 2) // 2 for n in EVEN_N)
+outside_ga:
+  kind: other
+  why: 'the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does'
 ---
 
 ## formal

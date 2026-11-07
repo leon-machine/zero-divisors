@@ -138,3 +138,34 @@ None in the mathematics.
 - No bare i remains in collapsing-hole-flux, local-normality-at-the-edge, stationary-horizon-state,
   bulk-hadamard-states-restrict, canonical-part-of-a-spinor, light-ray-good-part (only the definitional
   "with i = I_4") or krein-quartet. They need no R3/R4 work.
+
+## Group F: 13 entities found by the language check's bare-unit detector (ids_F.txt)
+
+Same rules and bookkeeping. Declaration-only entities keep their version: outside_ga is not substantive.
+
+Validation:
+- `tp check --layers 1,2,3 --keep-going --author leon`: 0 errors and 0 warnings. On ids_F the only
+  findings are the I213 infos on internal-symmetry-ladder, pair-count-dimension and
+  imported-dirac-hadamard, all three already in baseline.log.
+- `galang.scan`: every converted entity is free of "a bare imaginary unit", and every remaining hit is
+  on a declared entity.
+
+| id | version | treatment |
+|---|---|---|
+| interior.complex-factorisation-location-ring | 5 (declared) | bridge: the proof identifies R + R I with C by x + Iy -> x + iy; that comparison is the clause |
+| interior.imported-walker-penrose-killing-spinor | 2 (declared) | imported: the Kerr invariant r - ia cos(theta) as Walker and Penrose state it |
+| one-relation.two-capacities-three-consequences | 5 (declared) | other: complex null pairs (e +- ie')/2 in V_C |
+| one-relation.two-presentations | 4 (declared) | other: complex Witt pair (e_2 +- ie_3)/2 of Cl(1,3)_C, Cl(2,4)_C |
+| standard-model.internal-symmetry-ladder | 3 -> 4 | proof: polarisation vector e_j + e_k I_6, "real and I_6 parts". The entries of v and U multiply twistor components, so they take the conformal-spinor unit I_6 (R3's twistor clause), not I_4 |
+| standard-model.pair-count-dimension | 3 (declared) | other: (y_1 + iy_2)(y_1 - iy_2) splits a form on the complexified conformal vector space |
+| synthesis.de-sitter-entropy-pi-n-squared | 5 -> 6 | proof: w = -3/2 + I_4 N_w, numbers in span{1, I_4} |
+| synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard | 2 (declared) | imported: nabla-slash + im and the fibres identified with C^r, as Sahlmann and Verch state them |
+| synthesis.pair-singlet-mass-form-is-floor-plus-face-density | 1 -> 2 | formal (iii): face vector c = (1, a, I_4 a) = c_R + I_4 c_I, with the R3 sentence |
+| synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue | 1 -> 2 | complex mass m + Il (formal, technical, one-liner), with the entity's own I = e0e1e2e3 = I_4, which it already uses in kappa I B_3; numbers in span{1, I} |
+| synthesis.theta23-at-s3-s2-direction | 2 -> 3 | proof: 2 theta = arg(Delta + I_4 B'), and the point Delta + I_4 B' in the upper half-plane (two places), numbers in span{1, I_4} |
+| note.pairing.setting-transport-moves-vacuum-transverse-derivative | 1 (declared) | other: complex null vector m = e_2 + ie_3 |
+| note.transport.setting-euclidean-plane-inversion-circle-riemann | 1 (declared) | bridge: the note identifies the plane with C by z = x + iy, to set the inversion beside the Riemann-sphere picture. A GA rewrite (z = e_1 v in span{1, e_1e_2}) is possible if Leon prefers it |
+
+Note for Leon: internal-symmetry-ladder takes I_6, not the I_4 of the group brief. Its numbers multiply
+twistor components (pi^i = a conj(v_i)), and R3 keeps twistor components on I_6. The polarisation
+argument holds with either unit.

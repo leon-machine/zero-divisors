@@ -1,7 +1,7 @@
 ---
 id: synthesis.pair-singlet-mass-form-is-floor-plus-face-density
 kind: claim
-version: 1
+version: 2
 title: 'The pair-singlet mass form is a floor plus a face density'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -42,6 +46,10 @@ lineage:
   - synthesis.real-structure-breaks-source-stabiliser-to-z2
   - synthesis.cumulants-at-fixed-second-moments-keep-the-floor
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F, by Leon''s ruling R3: the face-space vector of (iii) is c = (1, a, I_4 a) = c_R + I_4 c_I, face space read over span{1, I_4} on the tower''s floors (stated once; notational); no bare i remains.'
   open_problem: op.non-gaussian-completion
   note: >-
     Settles the problem's second line of attack (the ordering observation) and sharpens its first.
@@ -77,7 +85,7 @@ so $\hat{V} = \hat{D}(\hat{D} + 1)$ on $\mathcal{S}$, $\hat{D} = \hat{N}/2$.
 H \;=\; \Bigl(1 + \frac{\langle\hat{N}\rangle}{4}\Bigr)\mathbb{1} + G, \qquad G_{kl} = \Bigl\langle\hat\Omega_{k}^{\dagger}\hat\Omega_{l}\,\frac{\hat{N} + 3}{\hat{N} + 2}\Bigr\rangle \ \ge 0,
 \]
 with $\bar{y}^{\mathsf T}Gy = 0$ exactly when $\hat\Omega(y)$ annihilates the state, and $\mathrm{tr}\,H = 3 + 3\langle\hat{D}\rangle + \langle\hat{D}^{2}\rangle$. So $H \ge (1 + \langle\hat{N}\rangle/4)\mathbb{1}$ on $\mathcal{S}$, the floor attained exactly on the face directions whose pair annihilator kills the state.
-\item[(iii)] \emph{(Source-built states: the ordering.)} In the normal frame of Proposition \claimref{synthesis.real-structure-breaks-source-stabiliser-to-z2}, $c = (1, a, ia) = c_{R} + ic_{I}$, $a > 0$, $n = c_{R}\times c_{I}$, every state built from $\hat\Omega(c)^{\dagger}$, $\hat\Omega(\bar{c})^{\dagger}$ and $\hat{V}$ on the vacuum (and every mixture of such) satisfies $\hat\Omega(n)\psi = 0$, hence
+\item[(iii)] \emph{(Source-built states: the ordering.)} In the normal frame of Proposition \claimref{synthesis.real-structure-breaks-source-stabiliser-to-z2}, $c = (1, a, I_{4}a) = c_{R} + I_{4}c_{I}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors), $a > 0$, $n = c_{R}\times c_{I}$, every state built from $\hat\Omega(c)^{\dagger}$, $\hat\Omega(\bar{c})^{\dagger}$ and $\hat{V}$ on the vacuum (and every mixture of such) satisfies $\hat\Omega(n)\psi = 0$, hence
 \[
 Hn = \Bigl(1 + \frac{\langle\hat{N}\rangle}{4}\Bigr)n ,
 \]

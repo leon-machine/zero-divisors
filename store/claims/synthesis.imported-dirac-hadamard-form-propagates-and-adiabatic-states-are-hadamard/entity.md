@@ -35,6 +35,10 @@ imported_from:
   key: Sanders2010
   doi: 10.1142/S0129055X10003990
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (imported): the Dirac operator nabla-slash + im and the fibres identified with C^r are quoted as Sahlmann and Verch state them.'
   note: >-
     Imported so that the Dirac step of the deposit chain (the propagation of a Hadamard deposit from a
     collar of the descent to every later field) and the massive-Dirac deposit result can cite Facts instead
@@ -87,6 +91,9 @@ extraction:
     by: maintainer-2026-11-02
     date: '2026-11-02'
     note: 'Version 1 -> 2, at Leon''s decisions of 2 November 2026 (imports for the Hadamard scaling results): clause (d) adds Prop. 5.6 of Sahlmann and Verch (scaling limits of quasi-free Hadamard states, CAR case), checked against the text; the note and clause (a) record that the paper''s CAR results are posed for Majorana spinors, cite Sanders 2010 for the Dirac equivalence, and mark Thm. 5.8 as not read against the text. Clauses (a) to (c) assert what they asserted.'
+outside_ga:
+  kind: imported
+  why: 'the Dirac operator nabla-slash + im and the fibres identified with C^r are quoted as Sahlmann and Verch state them'
 ---
 
 ## formal

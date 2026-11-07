@@ -43,6 +43,10 @@ locators:
   label: prop:ring
   line: 809
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (bridge): the proof of (1) identifies the commutative subalgebra R + R I of Cl(1,3) with the complex numbers by x + Iy -> x + iy; the i is the unit of C on the other side of that comparison, which is the point of the clause.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -59,6 +63,9 @@ extraction:
     date: '2026-10-21'
     cited:
     - interior.imported-kerr-curvature
+outside_ga:
+  kind: bridge
+  why: 'the proof of (1) identifies the commutative subalgebra R + R I of Cl(1,3) with the complex numbers by x + Iy -> x + iy; the i is the unit of C on the other side of that comparison, which is the point of the clause'
 ---
 
 ## formal

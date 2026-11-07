@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-entropy-pi-n-squared
 kind: claim
-version: 5
+version: 6
 title: The cosmological horizon's entropy is pi N^2
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
 review: reviewed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -37,6 +41,10 @@ lineage:
   motivated_by:
   - standard-model.what
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F: the de Sitter weight w = -3/2 + i N_w of the proof is written -3/2 + I_4 N_w, a physical number read in span{1, I_4}, as elsewhere in the store; no bare i remains.'
   maintainer_pass_gtg:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'

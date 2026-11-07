@@ -98,6 +98,12 @@ conventions of notation and of the imaginary units that the texts assume.
   of the $\Cl(2,4)$ Dirac module (Fock-grade parity). *Chiral halves at a
   point*: `\Som`, `\Spi`, the two-dimensional spacetime halves that split
   `\CS`. The two names are for different splittings.
+- *The boost bivector of a null generator* has two signs in the store: the
+  light-ray results write $B = n\gamma_0$ (so $L_B = +1$ on the modes of
+  $k = \gamma_0 + n$), the wedge-reflection results and the massless
+  frequency-sign result write $B_k = \gamma_0 n = -B$ (so $L_{B_k} = -1$
+  there). Both are consistent; check which one an entity uses before
+  combining signs.
 - Ladder pairs are normalised $\langle v, v^{*}\rangle = 1$ in T09's
   Clifford-side proposition and $kk^{*} + k^{*}k = 1$ elsewhere (T03, T04,
   T07, T16). T14's $W$ annihilates the vacuum where T09's and T12's $W$

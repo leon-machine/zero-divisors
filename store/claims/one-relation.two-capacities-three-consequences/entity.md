@@ -48,6 +48,10 @@ locators:
   label: prop:capacity
   line: 606
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (other): the null pairs (e + ie'')/2, -(e - ie'')/2 are complex null vectors of the complexified space V_C; their i must commute with the vectors e, e'', which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -78,6 +82,9 @@ extraction:
     date: 2026-10-21
     cited:
     - one-relation.two-presentations
+outside_ga:
+  kind: other
+  why: 'the null pairs (e + ie'')/2, -(e - ie'')/2 are complex null vectors of the complexified space V_C; their i must commute with the vectors e, e'', which no pseudoscalar does'
 ---
 
 ## formal

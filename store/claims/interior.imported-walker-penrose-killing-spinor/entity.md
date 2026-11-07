@@ -33,6 +33,10 @@ locators:
   label: fact:wp
   line: 868
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (imported): the Kerr invariant r - ia cos(theta) is quoted as Walker and Penrose state it; the series'' reading of the factor as R + R I is given in interior.complex-scale-inverse-cube-killing-spinor.'
   typing:
     by: ai-typing-pass
     note: 'Imported fact with no derivation; nothing to edge.'
@@ -44,6 +48,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: type-D vacuum is read as a vacuum gravitational field (hb, Omega) on flat spacetime whose Weyl map is of type D; the Killing spinor and conformal Killing-Yano tensor are taken for the covariant derivative D; geodesic motion is free fall with D-parallel velocity; Psi_2 is a component of the Weyl map. Imported content unchanged.'
+outside_ga:
+  kind: imported
+  why: 'the Kerr invariant r - ia cos(theta) is quoted as Walker and Penrose state it; the series'' reading of the factor as R + R I is given in interior.complex-scale-inverse-cube-killing-spinor'
 ---
 
 ## formal

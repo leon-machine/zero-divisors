@@ -26,6 +26,14 @@ locators:
   section: 'Type N: the isotropic obstruction, and Rule 1'
   line: 1071
   subsection: 'The Euclidean plane: inversion in a circle on the Riemann sphere'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Group F (found by the language check''s bare-unit detector): nothing replaced; the i stays and is declared outside_ga (bridge): the note identifies the Euclidean plane with the complex plane by z = x + iy to set the inversion beside the classical Riemann-sphere picture; the i is the unit of that classical side.'
+outside_ga:
+  kind: bridge
+  why: 'the note identifies the Euclidean plane with the complex plane by z = x + iy to set the inversion beside the classical Riemann-sphere picture; the i is the unit of that classical side'
 ---
 
 ## formal
