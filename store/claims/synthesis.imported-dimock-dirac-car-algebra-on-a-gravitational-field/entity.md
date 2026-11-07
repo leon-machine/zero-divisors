@@ -25,7 +25,14 @@ imported_from:
   key: Dimock1982
   doi: 10.1090/S0002-9947-1982-0637032-8
   locator: 'Sec. II.A (S = S+ - S-, after Thm. 2.1); Sec. II.B (Prop. 2.2, Thm. 2.3, Prop. 2.4(b)-(d)); Sec. III.A (the inner product on Cauchy data); Sec. III.B and Thm. 3.1 (the anticommutator)'
+outside_ga:
+  kind: imported
+  why: 'the factor -i appears only in the source''s normalisation u = -iSp'' gamma u_0, quoted as Dimock states it beside the store''s normalisation, in which no such factor appears'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the only i is in the source''s normalisation u = -iSp'' gamma u_0, quoted as Dimock states it, beside the store''s normalisation of S, in which no such factor appears. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the results on the field theory on a gravitational field can cite the existence of the
     Dirac field algebra, as distinct from a state on it, instead of citing it from memory. Checked on

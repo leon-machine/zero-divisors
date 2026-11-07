@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the Hadamard parametrix of the squared Dirac operator'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -47,7 +51,14 @@ imported_from:
   key: Lewis2020
   locator: 'Eqs. (14), (26), (52)'
   doi: 10.1103/PhysRevD.101.125019
+outside_ga:
+  kind: imported
+  why: 'the i0 prescription of the Hadamard form (the distributions 1/sigma and log sigma as boundary values) is quoted as Kay and Wald and Sahlmann and Verch state it, a boundary value in the complex plane'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The field theory''s unit in the squared Dirac operator is now the right unit R_{I_4}: psi -> psi I_4, so (R_{I_4}D - m)(R_{I_4}D + m) = -(D^2 + m^2); the i0 prescription of the Hadamard form stays as its sources (Kay and Wald; Sahlmann and Verch) state it, a boundary-value prescription.'
   note: >-
     Imported so that the two results on the scaling of Hadamard Dirac states
     (synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field
@@ -118,7 +129,7 @@ extraction:
 Let $(\hb, \Omega)$ be a gravitational field on four-dimensional flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric $g$ is smooth and globally hyperbolic on a region $U$ of its invertible region, $N \subset U$ geodesically convex, $\sigma$ the Synge function of $g$ on $N\times N$ ($\sigma = \tfrac12 Q(x - x')$ on the flat field) and $\Delta$ its Van Vleck determinant.
 \begin{enumerate}
 \item[(a)] \emph{(Bundle parametrix; Friedlander; B\"ar, Ginoux and Pf\"affle, Ch.~2.)} A normally hyperbolic operator $P$ on a vector bundle over $N$ (principal part that of the d'Alembertian of $g$) is, uniquely, the d'Alembertian of a connection $\nabla^{P}$ plus a zero-order term. Its Hadamard coefficients are the unique sections fixed by transport equations along the geodesics from $x'$ with the identity at coincidence, and the leading one is $\Delta^{1/2}(x, x')\,\Pi(x, x')$, $\Pi(x, x')$ the parallel transport of $\nabla^{P}$ along the geodesic from $x'$ to $x$. In four dimensions the Hadamard parametrix of $P$ is, up to its normalising constant, $U/\sigma + V\log\sigma + W$ with $U = \Delta^{1/2}\Pi$ and $V$, $W$ smooth.
-\item[(b)] \emph{(The squared Dirac operator; Lichnerowicz.)} Let $\psi$ be the free Dirac field of mass $m \ge 0$ on $(\hb, \Omega)$, with covariant derivative $D_{a}\psi = a\cdot\nabla\psi + \tfrac12\Omega(a)\psi$ and Dirac operator $D = g^{\mu}D_{e_{\mu}}$, $g^{\mu} = \hb^{T}(e^{\mu})$; on massive lines the field theory's unit $i$ stands outside the Clifford product. The squared operator $(iD - m)(iD + m) = -(D^{2} + m^{2})$ is normally hyperbolic, and by the Lichnerowicz formula ($D^{2}$ is the d'Alembertian of the spin connection plus a multiple of the scalar curvature) its connection $\nabla^{P}$ is the spin connection. So $\Pi(x, x')$ is left multiplication by the rotor $R$ of the geodesic $\gamma$ from $x'$ ($t = 0$) to $x$ ($t = 1$), $\dot R = -\tfrac12\Omega(\dot\gamma)R$, $R = 1$ at $t = 0$ (parallel transport, Fact \claimref{synthesis.imported-gtg-dictionary}(ii)), and the leading Hadamard coefficient of the squared Dirac operator is $U = \Delta^{1/2}R$.
+\item[(b)] \emph{(The squared Dirac operator; Lichnerowicz.)} Let $\psi$ be the free Dirac field of mass $m \ge 0$ on $(\hb, \Omega)$, with covariant derivative $D_{a}\psi = a\cdot\nabla\psi + \tfrac12\Omega(a)\psi$ and Dirac operator $D = g^{\mu}D_{e_{\mu}}$, $g^{\mu} = \hb^{T}(e^{\mu})$; on massive lines the field theory's unit stands outside the Clifford product, as the right unit $R_{I_{4}}: \psi \mapsto \psi I_{4}$. The squared operator $(R_{I_{4}}D - m)(R_{I_{4}}D + m) = -(D^{2} + m^{2})$ is normally hyperbolic, and by the Lichnerowicz formula ($D^{2}$ is the d'Alembertian of the spin connection plus a multiple of the scalar curvature) its connection $\nabla^{P}$ is the spin connection. So $\Pi(x, x')$ is left multiplication by the rotor $R$ of the geodesic $\gamma$ from $x'$ ($t = 0$) to $x$ ($t = 1$), $\dot R = -\tfrac12\Omega(\dot\gamma)R$, $R = 1$ at $t = 0$ (parallel transport, Fact \claimref{synthesis.imported-gtg-dictionary}(ii)), and the leading Hadamard coefficient of the squared Dirac operator is $U = \Delta^{1/2}R$.
 \item[(c)] \emph{(The $i0$ prescription; Kay and Wald; Sahlmann and Verch, Sec.~5.1.)} The distributions $1/\sigma$ and $\log\sigma$ of the Hadamard form are the $\epsilon \to 0^{+}$ limits of their regularisations by $\epsilon(t(x) - t(x'))$ and $\epsilon^{2}$, for a time function $t$ (a smooth function with future-directed timelike unit gradient), as in the source; the Hadamard form so defined, for the scalar field and for vector-valued fields such as the Dirac field, does not depend on the choice of time function. This concerns the bulk distributions on $N\times N$.
 \item[(d)] \emph{(Fundamental solutions in four dimensions; Friedlander; B\"ar, Ginoux and Pf\"affle, Ch.~2; for scalar and vector fields Poisson, Secs.~4.3.2, 4.4.2.)} On a geodesically convex, causally convex domain $N$ (a causal domain), with $\sigma$ positive on timelike separation, a time function $t$, and $P$ normalised so that its principal part is $g^{\mu\nu}\partial_{\mu}\partial_{\nu}$ (on the flat field the d'Alembertian $\partial_{t}^{2} - \nabla^{2}$), the retarded and advanced fundamental solutions of $P$ ($PG_{\pm} = \delta$, $G_{\pm}(\cdot, x')$ supported in $J^{\pm}(x')$) are
 \[

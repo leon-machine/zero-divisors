@@ -29,7 +29,14 @@ imported_from:
   key: Shalabi2024
 - citation: 'R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, Benjamin (1964).'
   key: StreaterWightman1964
+outside_ga:
+  kind: imported
+  why: 'the massless two-point function -1/(4 pi^2 (Q(xi) - i0 xi_0)) is quoted with its source''s i0 prescription, the boundary value of a scalar distribution in the complex plane'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the massless two-point function D_+(xi) = -1/(4 pi^2 (Q(xi) - i0 xi_0)) is quoted with its source''s i0 prescription, a boundary value of a scalar distribution. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that the locality result and the modular-period result can pin the two-point function, Pauli's
     argument and the Guido-Longo theorem instead of citing them from memory. Checked on 2026-11-01: the bibliographic
