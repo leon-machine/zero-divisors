@@ -1,7 +1,7 @@
 ---
 id: interior.complex-factorisation-location-ring
 kind: claim
-version: 5
+version: 6
 title: Complex factorisation and the location of the ring
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: prop:ring
   line: 809
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U1: the proof of (1) no longer maps x + Iy to x + iy in an external complex field; R + R I is span{1, I_4}, the store''s complex field, presented as R[X]/(X^2 + 1), with invertibility read off z z~ = x^2 + y^2 directly. No bare i remains, so the outside_ga declaration (bridge, for i only) is removed. Statement unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -63,9 +71,6 @@ extraction:
     date: '2026-10-21'
     cited:
     - interior.imported-kerr-curvature
-outside_ga:
-  kind: bridge
-  why: 'the proof of (1) identifies the commutative subalgebra R + R I of Cl(1,3) with the complex numbers by x + Iy -> x + iy; the i is the unit of C on the other side of that comparison, which is the point of the clause'
 ---
 
 ## formal

@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the modular group written with the unit I_4'
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -45,10 +49,11 @@ checked_by:
 lineage:
   motivated_by:
   - synthesis.phase-flow-is-time-rotor-flow-kms-continuation
-outside_ga:
-  kind: complex-analysis
-  why: 'the proof quotes Borchers'' relation Delta^{it}U(a)Delta^{-it} from the imported Fact and works with the one-particle space L^2 of the generator''s cells, whose complex structure the store does not tie to I_4 here'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U1: the one-particle space of the generator''s cells is the horizon''s continuum mode space, whose complex structure is I_4; Borchers'' relation quoted in the proof is written Delta^{I_4 t}U(a)Delta^{-I_4 t}, as the imported Fact now states it (angle.imported-theorems-deliver-their-hypotheses). Declaration removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

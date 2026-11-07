@@ -1,7 +1,7 @@
 ---
 id: synthesis.c-loc-modular-clause-moves-no-nested-patch
 kind: claim
-version: 1
+version: 2
 title: 'The modular clause of (C$_{\mathrm{loc}}$) moves no nested patch'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -38,10 +42,11 @@ lineage:
   motivated_by:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.point-spectrum-boost-admits-no-half-sided-translations
-outside_ga:
-  kind: complex-analysis
-  why: 'the boundary-mode algebra''s phase flow e^{-i omega_j t}, its GNS unitaries and modular group Delta^{is}, and the check''s Gaussian step (3 + 4i)/5 keep i: the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4, and the store does not fix their unit'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) numbers on the boundary-mode algebra and its GNS spaces are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level), the source unit i read as J: the phase flow e^{-J omega_j t}, the spectral phases e^{-J mu t}, the modular group Delta^{Js} and the check''s Gaussian step z = (3 + 4J)/5 with unique factorisation in Z[J] are written with J; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -63,7 +68,7 @@ extraction:
 ---
 
 ## formal
-Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}, the CAR algebra over a countable mode set with window algebras $\mathfrak{A}_{F}$, and let $(\tau_{t})_{t \in \R}$ be any one-parameter group of $*$-automorphisms that multiplies each generating mode by a phase, $\tau_{t}(a_{j}) = e^{-i\omega_{j}t}a_{j}$ with real $\omega_{j}$, as the Definition's boost dynamics does.
+Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}, the CAR algebra over a countable mode set with window algebras $\mathfrak{A}_{F}$, and let $(\tau_{t})_{t \in \R}$ be any one-parameter group of $*$-automorphisms that multiplies each generating mode by a phase, $\tau_{t}(a_{j}) = e^{-J\omega_{j}t}a_{j}$ with real $\omega_{j}$, as the Definition's boost dynamics does. Numbers on $\mathfrak{A}$ and on its GNS spaces are read in $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the complex unit of the radial atom from which the boundary modes descend, which commutes with the mode operators (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}).
 \begin{enumerate}
 \item[(i)] \emph{(Recurrence.)} Every $x \in \mathfrak{A}$ has a relatively compact $\tau$-orbit, and for every $\varepsilon > 0$ and $S > 0$ there are $T \ge S$ and $T' \le -S$ with $\|\tau_{T}(x) - x\| < \varepsilon$ and $\|\tau_{T'}(x) - x\| < \varepsilon$.
 \item[(ii)] \emph{(No proper semigroup invariance.)} If $\mathcal{B} \subseteq \mathfrak{A}$ is a norm-closed subspace with $\tau_{t}(\mathcal{B}) \subseteq \mathcal{B}$ for all $t \ge 0$, or for all $t \le 0$, then $\tau_{t}(\mathcal{B}) = \mathcal{B}$ for every $t \in \R$. The same holds in the GNS representation $(\mathcal{H}, \pi, \Omega)$ of any $\tau$-invariant state, with $V_{t}$ the unitaries implementing $\tau$: $V_{t}$ has pure point spectrum, and every $\sigma$-weakly closed subspace $\mathcal{B}$ of $\pi(\mathfrak{A})''$ with $V_{t}\mathcal{B}V_{t}^{*} \subseteq \mathcal{B}$ for all $t$ of one sign satisfies $V_{t}\mathcal{B}V_{t}^{*} = \mathcal{B}$ for all $t$.
@@ -72,7 +77,7 @@ Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawk
 Hence, given (P), clause (iii) is consistent with clause (i) only as a statement about the boost dynamics acting on the patch's mode algebra as a whole, which is how the flow acts at a Killing horizon, where the modes sit on the fixed locus of the boost; for a faithful state this is the KMS condition of clause (ii) restated (on windows, part (ii) of Theorem \claimref{synthesis.local-boost-temperature-is-local-regularity}). The geometric reading, the one the Bisognano-Wichmann and Hislop-Longo flows realise for a quantum field and the one the small-diamond route uses, needs a mode space on which the boost has continuous spectrum, such as Definition \claimref{obj.hawking.continuum-mode-space}, which clause (i) does not cite.
 
 ## technical
-Clause (i) of the local-horizon premise puts on every local horizon the series' boundary-mode algebra, on which the boost multiplies each mode by a phase. Such a flow is almost periodic: every orbit is relatively compact, so every element returns arbitrarily close to itself at arbitrarily late and early times. It follows that a closed subspace mapped into itself by the flow for all positive times (or all negative times) is mapped onto itself for all times: the flow cannot push a subalgebra properly inside itself. The same holds for weakly closed subalgebras in the GNS representation of any boost-invariant state, since the implementing unitaries have pure point spectrum and generate a compact group, in which a closed semigroup is a group. A boost acting geometrically does exactly that to the algebras of the future parts of the generators, $\lambda > c$, which it carries to $\lambda > e^{\mp 2\pi s}c$; this is the half-sided structure behind the Bisognano-Wichmann and Hislop-Longo theorems, and the stored no-go on half-sided translations is its translation-side counterpart. So, if the local boost acts on the patch's modes as the cited boost dynamics, clause (iii) cannot mean that the modular flow moves nested sub-patch algebras, unless those algebras all coincide. Read as the boost dynamics acting on the patch's algebra as a whole, as at a Killing horizon where the modes sit on the fixed locus, clause (iii) is consistent, and for a faithful state it says no more than the KMS condition of clause (ii). The exact checks illustrate the theorem and do not test (ii) or (iii), which are proved in the proof text: they verify the canonical anticommutation relations and the phase action on a two-mode window with the non-periodic phase $(3 + 4i)/5$, that this phase is no root of unity up to order $200$ while returning within $10^{-3}$ of $1$ (squared distance) at order $61$, and, in contrast, that the bilateral shift never returns and maps its half-space properly into itself.
+Clause (i) of the local-horizon premise puts on every local horizon the series' boundary-mode algebra, on which the boost multiplies each mode by a phase. Such a flow is almost periodic: every orbit is relatively compact, so every element returns arbitrarily close to itself at arbitrarily late and early times. It follows that a closed subspace mapped into itself by the flow for all positive times (or all negative times) is mapped onto itself for all times: the flow cannot push a subalgebra properly inside itself. The same holds for weakly closed subalgebras in the GNS representation of any boost-invariant state, since the implementing unitaries have pure point spectrum and generate a compact group, in which a closed semigroup is a group. A boost acting geometrically does exactly that to the algebras of the future parts of the generators, $\lambda > c$, which it carries to $\lambda > e^{\mp 2\pi s}c$; this is the half-sided structure behind the Bisognano-Wichmann and Hislop-Longo theorems, and the stored no-go on half-sided translations is its translation-side counterpart. So, if the local boost acts on the patch's modes as the cited boost dynamics, clause (iii) cannot mean that the modular flow moves nested sub-patch algebras, unless those algebras all coincide. Read as the boost dynamics acting on the patch's algebra as a whole, as at a Killing horizon where the modes sit on the fixed locus, clause (iii) is consistent, and for a faithful state it says no more than the KMS condition of clause (ii). The exact checks illustrate the theorem and do not test (ii) or (iii), which are proved in the proof text: they verify the canonical anticommutation relations and the phase action on a two-mode window with the non-periodic phase $(3 + 4J)/5$ (numbers read in $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the boundary modes' complex unit), that this phase is no root of unity up to order $200$ while returning within $10^{-3}$ of $1$ (squared distance) at order $61$, and, in contrast, that the bilateral shift never returns and maps its half-space properly into itself.
 
 ## lay
 The new assumption needed for Einstein's equations has three parts: small horizons carry the series' quantum modes, those modes are at the right temperature, and their natural time flow is the geometric flow of the horizon. This result shows that the third part can only be meant in a weak sense. The series' modes evolve by simple rotations of phases, and such an evolution always comes back close to where it started. A genuinely geometric flow would instead push the modes of a smaller piece of horizon ever deeper into a larger piece, never returning. The two cannot both hold. So the third part must be read as a statement about the modes of the whole patch, where it adds nothing beyond the temperature part; the stronger geometric reading would need a continuous family of modes, which the assumption does not name.

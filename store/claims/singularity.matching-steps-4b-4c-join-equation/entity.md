@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 6
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the phase flow written with the transverse unit J'
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -50,10 +54,11 @@ locators:
   number: Cor 6.4
   label: cor:weld
   line: 1674
-outside_ga:
-  kind: complex-analysis
-  why: 'the phase flow Ad(e^{it sigma/2}) of the boundary pair is the complex phase whose real rotor flow is exp(lambda sigma/2); with I_4 in its place exp(I_4 t sigma/2) would be a rotor of the dual plane I sigma_r that the corollary excludes'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the phase flow Ad(e^{it sigma/2}) of the completed pair is written Ad(e^{J t sigma/2}) with J = e_2 e_3, the atom''s complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention); the formal level says that J, which equals the excluded dual I sigma_r as an element, is the flow''s scalar and not its bivector, so the characterisation of sigma is unchanged. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -137,7 +142,7 @@ spans the radial plane and satisfies the pair of equations
 \[
 S(\sigma) = -2\,\sigma, \qquad \sigma^2 = +1 ,
 \]
-and this pair characterises $\sigma$ up to sign among the unit frame bivectors: the eigenvalue equation confines $\sigma$ to $\{\sigma_r, I\sigma_r\}$ (Theorem \claimref{singularity.curvature-gauge-field-exact-shape-decoupling}), and the square excludes the dual, for which $(I\sigma_r)^2 = -1$. The bivector that generates Step 4c's modular flow, the phase flow $\operatorname{Ad}(e^{it\sigma/2})$, whose real rotor flow is $\exp(\lambda\sigma/2)$, is therefore the same object Step 4b's curvature distinguishes, identified by equation rather than by name; the residual sign is the orientation of the boost, the labelling of outgoing against ingoing, which is exactly the $\mathbb{Z}_2$ that Theorem \claimref{singularity.modular-structure-completed-pair}(2) attaches to the weights of $v$ and $v^*$. And by the localisation theorem \cite[Thm.~4.4, Cor.~4.5]{ButlerT4} the pair, hence the atom, hence $\sigma$, is at the degenerate radial direction, which is where Proposition \claimref{singularity.degeneration-exactly} located the division: the plane the curvature selects, the plane the completed pair lies in, and the plane through which division fails are one plane. One plane, not one locus: the curvature selects it at every $r > 0$, the calibration reads it at the horizon (Proposition \claimref{singularity.plane-rate}), the ladder inhabits it on $E$, and Proposition \claimref{singularity.why-calibration-cannot-be-internal} records that the calibration locus and the singular locus do not meet; what carries the identification across them is the frame-robustness of the plane (Remark \ref{rem:frame}) and the radius-independence of its selection, not a claim that the loci coincide.
+and this pair characterises $\sigma$ up to sign among the unit frame bivectors: the eigenvalue equation confines $\sigma$ to $\{\sigma_r, I\sigma_r\}$ (Theorem \claimref{singularity.curvature-gauge-field-exact-shape-decoupling}), and the square excludes the dual, for which $(I\sigma_r)^2 = -1$. The bivector that generates Step 4c's modular flow, the phase flow $\operatorname{Ad}(e^{Jt\sigma/2})$, whose real rotor flow is $\exp(\lambda\sigma/2)$, is therefore the same object Step 4b's curvature distinguishes, identified by equation rather than by name (the flow's scalar unit is the atom's complex unit $J = e_{2}e_{3}$, which commutes with the atom, \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}; as an element $J$ equals the dual $I\sigma_r$, but it enters the flow as its scalar, not as its bivector, which is $\sigma$); the residual sign is the orientation of the boost, the labelling of outgoing against ingoing, which is exactly the $\mathbb{Z}_2$ that Theorem \claimref{singularity.modular-structure-completed-pair}(2) attaches to the weights of $v$ and $v^*$. And by the localisation theorem \cite[Thm.~4.4, Cor.~4.5]{ButlerT4} the pair, hence the atom, hence $\sigma$, is at the degenerate radial direction, which is where Proposition \claimref{singularity.degeneration-exactly} located the division: the plane the curvature selects, the plane the completed pair lies in, and the plane through which division fails are one plane. One plane, not one locus: the curvature selects it at every $r > 0$, the calibration reads it at the horizon (Proposition \claimref{singularity.plane-rate}), the ladder inhabits it on $E$, and Proposition \claimref{singularity.why-calibration-cannot-be-internal} records that the calibration locus and the singular locus do not meet; what carries the identification across them is the frame-robustness of the plane (Remark \ref{rem:frame}) and the radius-independence of its selection, not a claim that the loci coincide.
 
 ## technical
 Realise the hyperbolic atom on the radial plane, $e_0 = \hat e_t$, $e_1 = \hat e_r$. The modular bivector of the completed pair is then $\sigma = v^*v - vv^* = e_0e_1$, which spans the radial plane and satisfies $S(\sigma) = -2\sigma$ and $\sigma^2 = +1$. Among the unit frame bivectors this pair of equations characterises $\sigma$ up to sign: the eigenvalue equation confines it to $\{\sigma_r, I\sigma_r\}$, and the square excludes the dual, $(I\sigma_r)^2 = -1$. The residual sign is the orientation of the boost, outgoing against ingoing. So the bivector generating the modular flow is the object the curvature distinguishes, identified by equation rather than by name.

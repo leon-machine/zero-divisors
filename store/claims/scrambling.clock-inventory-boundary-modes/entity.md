@@ -1,7 +1,7 @@
 ---
 id: scrambling.clock-inventory-boundary-modes
 kind: claim
-version: 5
+version: 6
 title: The clock inventory of the boundary modes
 status: proved
 region: scrambling
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -50,6 +54,10 @@ locators:
   label: lem:inventory
   line: 677
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) numbers on the boundary modes are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom, which commutes with the mode operators (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof): the phase circle e^{J theta n} and its generator J times a bivector, the adjoint eigenvalues +-J and +-J sqrt|cd| and the continued action e^{-+J theta} at rapidity lambda = J theta are written with J; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -95,9 +103,6 @@ extraction:
     date: '2026-10-21'
     decision: 4
     note: 'The two boost flows: flow_note recorded.'
-outside_ga:
-  kind: complex-analysis
-  why: 'in the proof the phase circle e^{i theta n} and its generator, i times a bivector, are exhibited as lying outside the real boundary-mode algebra (scalar centre); the adjoint eigenvalues +-i, +-i sqrt|cd| and the continued action e^{+-i theta} are complex eigenvalues on the singularity paper''s atom, built in the plane e0e1 where I_4 anticommutes with the modes'
 ---
 
 ## formal

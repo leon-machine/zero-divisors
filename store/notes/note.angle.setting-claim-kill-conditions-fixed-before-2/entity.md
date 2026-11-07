@@ -1,7 +1,7 @@
 ---
 id: note.angle.setting-claim-kill-conditions-fixed-before-2
 kind: note
-version: 1
+version: 2
 title: The claim, and the kill conditions fixed before computation
 status: setting
 subject: thermality
@@ -15,9 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
-outside_ga:
-  kind: complex-analysis
-  why: 'kill condition K4 speaks of the boost rotor at imaginary rapidity i pi, the continuation with a commuting scalar i, whose action is the wedge reflection; I_4 in its place gives the turn by pi in the dual plane, not the reflection (angle.wedge-reflection-translations-are-ascent)'
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the continued rapidity written with the central unit I_5 of Cl(2,3)'
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 comments_on:
 - angle.wedge-reflection-translations-are-ascent
 locators:
@@ -26,6 +27,10 @@ locators:
   section: The claim, and the kill conditions fixed before computation
   line: 134
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: K4''s rapidity i pi needs a unit commuting with every vector (the wedge reflection is the twisted action of a central unit times the boost plane); it is written I_5 pi with I_5 the central unit of Cl(2,3) (std-algebra.complexification-is-the-odd-extension). The registered conditions and predictions are otherwise unchanged. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -39,7 +44,7 @@ extraction:
 \item[K1] (the supplied class selects Boulware) If every joint-number-diagonal generator with a unique ground state has a number basis state as that ground state, then within the supplied class the spectrum condition selects a product state across every cut, whose one-sided marginals are pure: boost-KMS at $\beta = \infty$ only, the Boulware member of the dictionary. Claim G is dead within the supplied class. Test: $\nu = 2$ and $\nu = 3$, generic rational diagonal generators, and the degenerate case exhibited (a degenerate ground space can contain an entangled state, but then positivity selects nothing).
 \item[K2] (a hop is what the route needs) If a generator with a hop across the cut, outside the supplied class, has a unique entangled ground state whose one-sided marginal is Gibbs for the number operator at a finite $\beta$, then the route survives exactly when the singularity paper's residual is answered with a hopping term: its open items (a) and (b) are one item. Test: two modes, one-particle sector, $H = \begin{psmallmatrix} 7 & -12 \\ -12 & 0\end{psmallmatrix}$ in the basis $\ket{10}, \ket{01}$; predicted ground state $\tfrac35\ket{10} + \tfrac45\ket{01}$, left marginal $\operatorname{diag}(\tfrac{16}{25}, \tfrac{9}{25})$, the sample point $e^{-\omega/T} = \tfrac{9}{16}$.
 \item[K3] (the pairing is the hop with the sea filled) If the particle-hole map on the right mode carries the hop-type ground state $c\ket{10} + s\ket{01}$ to the pairing-type thermofield state $c\ket{00} + s\ket{11}$ and the hop generator to the pairing generator, then the hop with a filled sea on the right and the pairing from the vacuum are the same correlation in two vacua, and the residual ``differential or pairing term'' is one term seen from two vacua. Test: exact, on the two-mode module.
-\item[K4] (the geometric half of Bisognano--Wichmann is in the algebra) If the boost rotor of the horizon plane at imaginary rapidity $i\pi$ acts on vectors as the reflection through the bifurcation surface, and if the translations of the conformal completion are the null rotations fixing $\nInf$, $T_{a} = 1 + \tfrac12\nInf a$ with $T_{a}X(x)T_{a}^{-1} = X(x + a)$, then the two geometric ingredients of the theorem, the wedge reflection and the translation group, are supplied by the ascent. Expected to hold; recorded as the positive residue, not as evidence for Claim G.
+\item[K4] (the geometric half of Bisognano--Wichmann is in the algebra) If the boost rotor of the horizon plane at imaginary rapidity $I_{5}\pi$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$ (\claimref{std-algebra.complexification-is-the-odd-extension}), acts on vectors as the reflection through the bifurcation surface, and if the translations of the conformal completion are the null rotations fixing $\nInf$, $T_{a} = 1 + \tfrac12\nInf a$ with $T_{a}X(x)T_{a}^{-1} = X(x + a)$, then the two geometric ingredients of the theorem, the wedge reflection and the translation group, are supplied by the ascent. Expected to hold; recorded as the positive residue, not as evidence for Claim G.
 \item[K5] (the value) The factor $2\pi$ is the conclusion of Bisognano--Wichmann for a Wightman theory, or of Hislop--Longo for the half-line algebra of a chiral field, both statements about infinitely many modes with an analytic (spectrum) condition. If no finite mode model reproduces $2\pi$ from its own data, exact arithmetic reaches the necessity of a hop and not the value; the value stays imported. Expected to trigger.
 \item[K6] (ledger) If the ascent's contribution is the vocabulary (translations, the boost plane, the rungs as modes) and no step of the argument needs the $(1,1)$ increment, the result is transport-absent. Expected.
 \end{itemize}

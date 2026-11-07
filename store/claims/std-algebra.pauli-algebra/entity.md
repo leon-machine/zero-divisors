@@ -50,8 +50,16 @@ locators:
     locator: Ch. 16 (matrix representations and periodicity of 8)
 outside_ga:
   kind: bridge
-  why: 'the result connects Cl(3,0) with the Pauli matrices, whose complex entries carry i, and shows that i is the image of the pseudoscalar e_1e_2e_3'
+  why: 'the result connects Cl(3,0) with the Pauli matrices, matrices with entries in span{1, I_4} whose unit is the image of the pseudoscalar e_1e_2e_3; no bare i remains'
 extraction:
+  source_formal: |-
+    $\Cl(3,0) \cong \Mat_2(\C)$ by $e_k \mapsto \sigma_k$, where (as a labelled reading) $\sigma_1 = \begin{psmallmatrix} 0 & 1 \\ 1 & 0 \end{psmallmatrix}$, $\sigma_2 = \begin{psmallmatrix} 0 & -\mathrm{i} \\ \mathrm{i} & 0 \end{psmallmatrix}$, $\sigma_3 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$ are the Pauli matrices. Under it the pseudoscalar $I = e_1 e_2 e_3$ goes to $\mathrm{i}\,1$: the centre $\R 1 \oplus \R I$ is a copy of $\C$, and the complex unit of the matrix reading is the pseudoscalar of space.
+
+    The source writes $\mathrm{i}$ for the complex unit of the matrix entries, read in the store as $I_4$ (span{1, I_4}).
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U1, U5) the Pauli matrices'' entries are read in span{1, I_4}: sigma_2 and the image I_4 1 of the pseudoscalar are written with I_4 in the formal, technical and one-liner levels and the proof; the source''s form moves to source_formal; the bridge declaration is kept, narrowed to the Pauli matrices.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -60,13 +68,13 @@ extraction:
 ---
 
 ## formal
-$\Cl(3,0) \cong \Mat_2(\C)$ by $e_k \mapsto \sigma_k$, where (as a labelled reading) $\sigma_1 = \begin{psmallmatrix} 0 & 1 \\ 1 & 0 \end{psmallmatrix}$, $\sigma_2 = \begin{psmallmatrix} 0 & -\mathrm{i} \\ \mathrm{i} & 0 \end{psmallmatrix}$, $\sigma_3 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$ are the Pauli matrices. Under it the pseudoscalar $I = e_1 e_2 e_3$ goes to $\mathrm{i}\,1$: the centre $\R 1 \oplus \R I$ is a copy of $\C$, and the complex unit of the matrix reading is the pseudoscalar of space.
+$\Cl(3,0) \cong \Mat_2(\C)$ by $e_k \mapsto \sigma_k$, where (as a labelled reading) $\sigma_1 = \begin{psmallmatrix} 0 & 1 \\ 1 & 0 \end{psmallmatrix}$, $\sigma_2 = \begin{psmallmatrix} 0 & -I_4 \\ I_4 & 0 \end{psmallmatrix}$, $\sigma_3 = \begin{psmallmatrix} 1 & 0 \\ 0 & -1 \end{psmallmatrix}$ are the Pauli matrices, with entries in the complex field read as $\mathrm{span}\{1, I_4\}$ (conventions, the unit principle, U1 and U5). Under it the pseudoscalar $I = e_1 e_2 e_3$ goes to $I_4\,1$: the centre $\R 1 \oplus \R I$ is a copy of $\C$, and the complex unit of the matrix reading is the pseudoscalar of space.
 
 ## technical
-The algebra of three-dimensional space is the algebra of $2 \times 2$ complex matrices, with the basis vectors read as the Pauli matrices. The pseudoscalar, the unit oriented volume, is central and squares to minus one, and it is what the matrix reading calls $\mathrm{i}$. So the complex structure of nonrelativistic spin is the volume element of space.
+The algebra of three-dimensional space is the algebra of $2 \times 2$ complex matrices, with the basis vectors read as the Pauli matrices. The pseudoscalar, the unit oriented volume, is central and squares to minus one, and it is what the matrix reading calls the imaginary unit, $I_4$ when the entries are read in $\mathrm{span}\{1, I_4\}$. So the complex structure of nonrelativistic spin is the volume element of space.
 
 ## lay
 The Pauli spin matrices of quantum mechanics are a way of writing the three directions of space as matrices. The imaginary unit that appears in them is the oriented unit volume of space.
 
 ## one-liner
-$\Cl(3,0) \cong \Mat_2(\C)$ with $e_k \mapsto \sigma_k$, and the pseudoscalar $e_1e_2e_3$ maps to $\mathrm{i}$.
+$\Cl(3,0) \cong \Mat_2(\C)$ with $e_k \mapsto \sigma_k$, and the pseudoscalar $e_1e_2e_3$ maps to the matrices' imaginary unit $I_4\,1$ (entries read in $\mathrm{span}\{1, I_4\}$).

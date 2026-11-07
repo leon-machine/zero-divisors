@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 5
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -41,10 +45,11 @@ locators:
   number: Lem 7.1
   label: lem:tomita
   line: 1701
-outside_ga:
-  kind: complex-analysis
-  why: 'Tomita-Takesaki theory on the Hilbert space C^n (x) C^n of a full complex matrix factor (rho^{it}, Delta^{it}); the space is not one of the series'' geometric-algebra mode spaces with unit I_4'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 kept (already raised in this pass). Tomita-Takesaki theory on the abstract complex Hilbert space C^n (x) C^n of a full matrix factor: by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex Hilbert space and matrix algebra, so rho^{it}, Delta^{it} become rho^{I_4 t}, Delta^{I_4 t}, with a sentence fixing the scalars and naming J as the modular conjugation. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -78,16 +83,16 @@ extraction:
 ---
 
 ## formal
-Let $H = \C^n \otimes \C^n$, let $M = \Mat_n(\C) \otimes 1$ act on the first factor, and let $\Omega = \sum_i \lambda_i\, |ii\rangle$ with all $\lambda_i > 0$ and $\sum \lambda_i^2 = 1$ (any cyclic separating vector of $M$ has this form in its Schmidt basis). Define the Tomita operator as the closure of $S : a\Omega \mapsto a^*\Omega$ ($a \in M$). Then its polar decomposition $S = J\Delta^{1/2}$ has
+Let $H = \C^n \otimes \C^n$, let $M = \Mat_n(\C) \otimes 1$ act on the first factor (here the complex numbers are $\C = \mathrm{span}\{1, I_4\}$, the default scalar field of an abstract complex Hilbert space and matrix algebra, and $J$ is the modular conjugation), and let $\Omega = \sum_i \lambda_i\, |ii\rangle$ with all $\lambda_i > 0$ and $\sum \lambda_i^2 = 1$ (any cyclic separating vector of $M$ has this form in its Schmidt basis). Define the Tomita operator as the closure of $S : a\Omega \mapsto a^*\Omega$ ($a \in M$). Then its polar decomposition $S = J\Delta^{1/2}$ has
 \[
 \Delta = \rho \otimes \bar\rho^{\,-1}, \qquad \rho = \sum_i \lambda_i^2\,|i\rangle\langle i| , \qquad J\,|ij\rangle = |ji\rangle \ \text{(antilinearly)},
 \]
-and the modular flow on $M$ is $\sigma_t(a) = \rho^{it} a\, \rho^{-it}$. Moreover the state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho\,a\,\rho^{-1})$ for all $a, b \in M$.
+and the modular flow on $M$ is $\sigma_t(a) = \rho^{I_4t} a\, \rho^{-I_4t}$. Moreover the state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho\,a\,\rho^{-1})$ for all $a, b \in M$.
 
 ## technical
-Take $H = \C^n \otimes \C^n$, $M = \Mat_n(\C) \otimes 1$ and a cyclic separating vector in Schmidt form $\Omega = \sum_i \lambda_i |ii\rangle$ with all $\lambda_i > 0$ and $\sum_i \lambda_i^2 = 1$. The Tomita operator $S : a\Omega \mapsto a^*\Omega$ acts on basis vectors as $|ij\rangle \mapsto (\lambda_i/\lambda_j)|ji\rangle$, and its polar decomposition $S = J\Delta^{1/2}$ is explicit: $\Delta = \rho \otimes \bar\rho^{\,-1}$ with $\rho = \sum_i \lambda_i^2 |i\rangle\langle i|$, and $J$ the antilinear swap $|ij\rangle \mapsto |ji\rangle$.
+Take $H = \C^n \otimes \C^n$ over $\C = \mathrm{span}\{1, I_4\}$, $M = \Mat_n(\C) \otimes 1$ and a cyclic separating vector in Schmidt form $\Omega = \sum_i \lambda_i |ii\rangle$ with all $\lambda_i > 0$ and $\sum_i \lambda_i^2 = 1$. The Tomita operator $S : a\Omega \mapsto a^*\Omega$ acts on basis vectors as $|ij\rangle \mapsto (\lambda_i/\lambda_j)|ji\rangle$, and its polar decomposition $S = J\Delta^{1/2}$ is explicit: $\Delta = \rho \otimes \bar\rho^{\,-1}$ with $\rho = \sum_i \lambda_i^2 |i\rangle\langle i|$, and $J$ the antilinear swap $|ij\rangle \mapsto |ji\rangle$.
 
-Consequently the modular flow on $M$ is $\sigma_t(a) = \rho^{it} a \rho^{-it}$, and the vector state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho a \rho^{-1})$ for all $a, b \in M$. Because everything is finite-dimensional, all of this follows by direct computation.
+Consequently the modular flow on $M$ is $\sigma_t(a) = \rho^{I_4t} a \rho^{-I_4t}$, and the vector state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho a \rho^{-1})$ for all $a, b \in M$. Because everything is finite-dimensional, all of this follows by direct computation.
 
 ## lay
 Tomita-Takesaki theory attaches to a quantum state a natural time evolution, called the modular flow. For two finite quantum systems in an entangled state, this lemma works out every ingredient of that theory by hand. The modular flow turns out to be the evolution generated by the reduced density matrix of one side, and the state satisfies the equilibrium (KMS) condition with respect to it.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-one-loop-integrals-and-pauli-villars-regulators
 kind: claim
-version: 1
+version: 2
 title: 'Imported: one-loop integrals and Pauli-Villars regulators'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'W. Pauli and F. Villars, On the invariant regularization in relativistic quantum theory, Rev. Mod. Phys. 21 (1949), 434--444.'
@@ -26,10 +30,20 @@ imported_from:
   key: PeskinSchroeder1995
 - citation: 'S. Weinzierl, Introduction to Feynman integrals, arXiv:1005.1855, equations (50) and (61).'
   key: Weinzierl2010
-outside_ga:
-  kind: imported
-  why: 'the Wick rotation l_0 = i l_{E,0}, the values of the rotated integrals and the photon propagator -i/(k^2 + i0) are quoted as their sources (Weinzierl, Peskin and Schroeder) state them, a contour argument in the complex plane of l_0'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Restated by U4: the Wick rotation of the scalar variable l_0, the values of the rotated integrals and the photon propagator with its scalar +i0 shift of k^2 are numbers of the field theory, so by U1 their unit is I_4 (the right unit on values that are not even, as synthesis.one-loop-qed-in-the-spacetime-algebra uses them): l_0 = I_4 l_{E,0}, -I_4/(32 pi^2 Delta), I_4/(16 pi^2)(ln(L/Delta) - 1), -I_4/(k^2 + I_4 0); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the source writes i for I_4. Status stays imported. Declaration removed.'
+  source_formal: |-
+    Signature $(+,-,-,-)$, $\ell^{2} = Q(\ell)$, units $\hbar = c = 1$.
+    \begin{enumerate}
+    \item[(i)] \emph{(Feynman parametrisation.)} For nonzero $D_{1}, \ldots, D_{n}$ of one sign, $\dfrac{1}{D_{1}\cdots D_{n}} = (n-1)!\displaystyle\int_{0}^{1}\!dx_{1}\cdots dx_{n}\,\frac{\delta(1 - \sum_{j}x_{j})}{(\sum_{j}x_{j}D_{j})^{n}}$ \cite{Weinzierl2010}.
+    \item[(ii)] \emph{(Wick-rotated integrals.)} After the rotation $\ell_{0} = i\ell_{E,0}$, which takes $\int d^{4}\ell\,f(-\ell^{2})$ to $i\int d^{4}\ell_{E}\,f(\ell_{E}^{2})$ \cite{Weinzierl2010}, for $\Delta > 0$: $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-3} = \frac{-i}{32\pi^{2}\Delta}$; with the Euclidean cut-off $\ell_{E}^{2} \le L$, $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-2} = \frac{i}{16\pi^{2}}\bigl(\ln(L/\Delta) - 1 + O(\Delta/L)\bigr)$. Terms odd in $\ell$ integrate to zero and $\ell^{\alpha}\ell^{\beta} \to \tfrac14 Q(\ell)g^{\alpha\beta}$ under the integral (symmetric integration) \cite{PeskinSchroeder1995}.
+    \item[(iii)] \emph{(Pauli-Villars regulators.)} Each internal line of mass $m$ is replaced by a weighted sum over fields of masses $M_{i}$ and weights $c_{i}$, $c_{0} = 1$, $M_{0} = m$, with $\sum_{i}c_{i} = \sum_{i}c_{i}M_{i}^{2} = 0$; the weights take both signs, and a field of negative weight is quantised with a negative metric. At one loop these conditions make the integrals of (ii) finite, the regularisation is Lorentz invariant and keeps the Ward identity of electrodynamics, and the physical limit is $M_{i} \to \infty$ for $i \ge 1$ \cite{PauliVillars1949}. A regulator of a single Weyl fermion is a Dirac field of mass $M_{i}$, so the scheme does not preserve chirality.
+    \item[(iv)] \emph{(Covariant photon.)} In the covariant (Gupta-Bleuler) quantisation the photon propagator in the gauge with parameter $\xi$ is $\frac{-i}{k^{2} + i0}\bigl(g_{\mu\nu} - (1 - \xi)\frac{k_{\mu}k_{\nu}}{k^{2}}\bigr)$, $\xi = 1$ the Feynman gauge, and on-shell amplitudes between physical external states are independent of $\xi$ by the Ward identity \cite{PeskinSchroeder1995}.
+    \item[(v)] \emph{(On-shell external states.)} Scattering amplitudes are evaluated between on-shell spinors, $(p - m)u(p) = 0$, so between external states a Dirac line carries the projector $(p + m)/(2m)$ (LSZ reduction) \cite{PeskinSchroeder1995}.
+    \end{enumerate}
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -52,12 +66,12 @@ extraction:
 ---
 
 ## formal
-Signature $(+,-,-,-)$, $\ell^{2} = Q(\ell)$, units $\hbar = c = 1$.
+Signature $(+,-,-,-)$, $\ell^{2} = Q(\ell)$, units $\hbar = c = 1$. Numbers are read in $\mathrm{span}\{1, I_{4}\}$, the field theory's unit (on values that are not even, such as a Dirac numerator, it is the right unit $x \mapsto xI_{4}$, a coefficient collected in front of the product).
 \begin{enumerate}
 \item[(i)] \emph{(Feynman parametrisation.)} For nonzero $D_{1}, \ldots, D_{n}$ of one sign, $\dfrac{1}{D_{1}\cdots D_{n}} = (n-1)!\displaystyle\int_{0}^{1}\!dx_{1}\cdots dx_{n}\,\frac{\delta(1 - \sum_{j}x_{j})}{(\sum_{j}x_{j}D_{j})^{n}}$ \cite{Weinzierl2010}.
-\item[(ii)] \emph{(Wick-rotated integrals.)} After the rotation $\ell_{0} = i\ell_{E,0}$, which takes $\int d^{4}\ell\,f(-\ell^{2})$ to $i\int d^{4}\ell_{E}\,f(\ell_{E}^{2})$ \cite{Weinzierl2010}, for $\Delta > 0$: $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-3} = \frac{-i}{32\pi^{2}\Delta}$; with the Euclidean cut-off $\ell_{E}^{2} \le L$, $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-2} = \frac{i}{16\pi^{2}}\bigl(\ln(L/\Delta) - 1 + O(\Delta/L)\bigr)$. Terms odd in $\ell$ integrate to zero and $\ell^{\alpha}\ell^{\beta} \to \tfrac14 Q(\ell)g^{\alpha\beta}$ under the integral (symmetric integration) \cite{PeskinSchroeder1995}.
+\item[(ii)] \emph{(Wick-rotated integrals.)} After the rotation $\ell_{0} = I_{4}\ell_{E,0}$ of the scalar integration variable $\ell_{0}$ in $\mathrm{span}\{1, I_{4}\}$, which takes $\int d^{4}\ell\,f(-\ell^{2})$ to $I_{4}\int d^{4}\ell_{E}\,f(\ell_{E}^{2})$ \cite{Weinzierl2010}, for $\Delta > 0$: $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-3} = \frac{-I_{4}}{32\pi^{2}\Delta}$; with the Euclidean cut-off $\ell_{E}^{2} \le L$, $\int\frac{d^{4}\ell}{(2\pi)^{4}}(\ell^{2} - \Delta)^{-2} = \frac{I_{4}}{16\pi^{2}}\bigl(\ln(L/\Delta) - 1 + O(\Delta/L)\bigr)$. Terms odd in $\ell$ integrate to zero and $\ell^{\alpha}\ell^{\beta} \to \tfrac14 Q(\ell)g^{\alpha\beta}$ under the integral (symmetric integration) \cite{PeskinSchroeder1995}.
 \item[(iii)] \emph{(Pauli-Villars regulators.)} Each internal line of mass $m$ is replaced by a weighted sum over fields of masses $M_{i}$ and weights $c_{i}$, $c_{0} = 1$, $M_{0} = m$, with $\sum_{i}c_{i} = \sum_{i}c_{i}M_{i}^{2} = 0$; the weights take both signs, and a field of negative weight is quantised with a negative metric. At one loop these conditions make the integrals of (ii) finite, the regularisation is Lorentz invariant and keeps the Ward identity of electrodynamics, and the physical limit is $M_{i} \to \infty$ for $i \ge 1$ \cite{PauliVillars1949}. A regulator of a single Weyl fermion is a Dirac field of mass $M_{i}$, so the scheme does not preserve chirality.
-\item[(iv)] \emph{(Covariant photon.)} In the covariant (Gupta-Bleuler) quantisation the photon propagator in the gauge with parameter $\xi$ is $\frac{-i}{k^{2} + i0}\bigl(g_{\mu\nu} - (1 - \xi)\frac{k_{\mu}k_{\nu}}{k^{2}}\bigr)$, $\xi = 1$ the Feynman gauge, and on-shell amplitudes between physical external states are independent of $\xi$ by the Ward identity \cite{PeskinSchroeder1995}.
+\item[(iv)] \emph{(Covariant photon.)} In the covariant (Gupta-Bleuler) quantisation the photon propagator in the gauge with parameter $\xi$ is $\frac{-I_{4}}{k^{2} + I_{4}0}\bigl(g_{\mu\nu} - (1 - \xi)\frac{k_{\mu}k_{\nu}}{k^{2}}\bigr)$, $\xi = 1$ the Feynman gauge, and on-shell amplitudes between physical external states are independent of $\xi$ by the Ward identity \cite{PeskinSchroeder1995}.
 \item[(v)] \emph{(On-shell external states.)} Scattering amplitudes are evaluated between on-shell spinors, $(p - m)u(p) = 0$, so between external states a Dirac line carries the projector $(p + m)/(2m)$ (LSZ reduction) \cite{PeskinSchroeder1995}.
 \end{enumerate}
 
@@ -68,4 +82,4 @@ These are the standard tools for computing one-loop corrections in a relativisti
 To compute the first quantum corrections in a theory such as electrodynamics, physicists use a standard toolkit: a trick for combining denominators, a rotation of the time direction into an imaginary one that turns the integrals into ordinary ones, and a way of taming their infinities with heavy auxiliary particles, some of which count negatively. These tools are textbook material; the series takes them as given.
 
 ## one-liner
-Feynman parametrisation, the Wick-rotated integrals ($-i/(32\pi^{2}\Delta)$ for three denominators, $\tfrac{i}{16\pi^{2}}(\ln(L/\Delta) - 1)$ for two) with symmetric integration, Pauli-Villars regulators with $\sum c_{i} = \sum c_{i}M_{i}^{2} = 0$ and weights of both signs, the covariant photon propagator with gauge-parameter independence of on-shell amplitudes, and on-shell external states.
+Feynman parametrisation, the Wick-rotated integrals ($-I_{4}/(32\pi^{2}\Delta)$ for three denominators, $\tfrac{I_{4}}{16\pi^{2}}(\ln(L/\Delta) - 1)$ for two) with symmetric integration, Pauli-Villars regulators with $\sum c_{i} = \sum c_{i}M_{i}^{2} = 0$ and weights of both signs, the covariant photon propagator with gauge-parameter independence of on-shell amplitudes, and on-shell external states.

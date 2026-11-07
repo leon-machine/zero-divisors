@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 5
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the flow and the KMS gluing written with the transverse unit J'
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -52,10 +56,11 @@ locators:
   number: Thm 7.20
   label: thm:rate
   line: 1880
-outside_ga:
-  kind: complex-analysis
-  why: 'the flow alpha_t(v) = e^{-it omega}v and the KMS gluing act on the atom mode factor, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not its unit'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the flow on the atom''s mode factor and the KMS gluing in the proof are written with J = e_2 e_3, the atom''s complex unit: alpha_t(v) = e^{-J t omega} v, alpha_t(v^*) = e^{J t omega} v^*, and F(t + J p) = e^{p omega} e^{-J t omega} n (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention). Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

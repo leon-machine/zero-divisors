@@ -1,7 +1,7 @@
 ---
 id: singularity.r-regularity-fixed-locus
 kind: claim
-version: 3
+version: 4
 title: '(R): regularity at the fixed locus'
 status: postulate
 region: singularity
@@ -17,10 +17,11 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the Killing flow and KMS strip written with the transverse unit J'
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
-outside_ga:
-  kind: complex-analysis
-  why: 'the KMS strip F(t + ip) and the phase flow Ad(e^{i t omega_k K_k}) act on the ladders {v_k, v_k^*} of T05''s atom in the spacetime radial plane, whose modes anticommute with I_4 (conventions, known limit 1), so the strip''s unit is the complex scalar of the atom, not the field''s I_4'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 locators:
@@ -29,6 +30,10 @@ locators:
   label: prem:reg
   line: 1870
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the Killing flow on the ladders {v_k, v_k^*} of the radial atom and its KMS strip are written with J = e_2 e_3, the atom''s complex unit: alpha_t = Ad(e^{J t omega_k K_k}) and F_{a,b}(t + J p) = omega(alpha_t(b) a), the sign of the core result''s KMS relation (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention). The formal level says that the strip''s J and the Euclidean section''s I_5 (singularity.euclidean-section-period) are matched through the real period, not identified. Statement otherwise unchanged; declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -79,16 +84,17 @@ extraction:
 ---
 
 ## formal
-For every mode $k$ and every pair $a, b$ of elements of its ladder $\{v_k, v_k^{*}\}$, the correlation function $F_{a,b}(t) := \omega\bigl(a\,\alpha_t(b)\bigr)$ of the Killing flow $\alpha_t = \operatorname{Ad}(e^{it\omega_k K_k})$, an entire function of $t$, continues in imaginary Killing time to a single-valued function on the regular Euclidean section of the Schwarzschild gravitational field on flat spacetime (Proposition \claimref{singularity.euclidean-section-period}; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}): its two orderings are the two sides of the cut, and they meet after one period,
+For every mode $k$ and every pair $a, b$ of elements of its ladder $\{v_k, v_k^{*}\}$, the correlation function $F_{a,b}(t) := \omega\bigl(a\,\alpha_t(b)\bigr)$ of the Killing flow $\alpha_t = \operatorname{Ad}(e^{Jt\omega_k K_k})$, written with the atom's complex unit $J = e_{2}e_{3}$, which commutes with the ladder (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), an entire function of $t$ in the field $\mathrm{span}\{1, J\}$, continues in imaginary Killing time to a single-valued function on the regular Euclidean section of the Schwarzschild gravitational field on flat spacetime (Proposition \claimref{singularity.euclidean-section-period}; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}): its two orderings are the two sides of the cut, and they meet after one period,
 \[
-F_{a,b}\bigl(t + i\,p\bigr) \;=\; \omega\bigl(\alpha_t(b)\,a\bigr), \qquad p = \frac{2\pi}{\kappa} .
+F_{a,b}\bigl(t + J\,p\bigr) \;=\; \omega\bigl(\alpha_t(b)\,a\bigr), \qquad p = \frac{2\pi}{\kappa} .
 \]
+The strip's unit is $J$, acting on the ladder; the Euclidean section's Wick rotation is written with the central unit $I_{5}$ of $\Cl(2,3)$, acting on the coordinates; the two are matched through the real period $p$ and are not identified.
 In words: each single-mode marginal is KMS for the Killing flow at exactly the period the Euclidean section's smoothness at its tip dictates. The regularity is local, posed at the tip of the Euclidean section (a polar chart about the tip of the Wick-rotated flat background); for a state that is KMS for the Killing flow, this is also the period at which it is regular across the horizon locus in the Painlev\'e-Gullstrand chart.
 
 \emph{Note (continuum restatement).} Posed on the continuum of the horizon's null generators (Definition \claimref{obj.hawking.continuum-mode-space}), the content of (R) for the eternal (Kruskal) hole follows from Premise \claimref{synthesis.n-plus-null-ground-state}: by Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(iii) the generators' modes are then jointly KMS for the Killing flow at $\beta = 8\pi M$. The wording above, on the ladders $\{v_{k}, v_{k}^{*}\}$ with a phase-acting flow, is a discretisation of that statement, recovered only for modes of vanishing Mellin width; (N$_{+}$) itself cannot be posed on point spectrum. A hole formed by collapse is not covered by (N$_{+}$), and (R) remains a premise. (The whole generator of the eternal horizon, which that case of (N$_{+}$) uses, lies beyond one flat chart; see that premise.)
 
 ## technical
-Premise (R) imposes the KMS condition on each single-mode marginal at a fixed period. For mode $k$, with Killing flow $\alpha_t = \operatorname{Ad}(e^{it\omega_k K_k})$ and $a, b \in \{v_k, v_k^{*}\}$, the entire correlation function $F_{a,b}(t) = \omega(a\,\alpha_t(b))$ is required to continue in imaginary Killing time to a single-valued function on the regular Euclidean section of the Schwarzschild field, its two orderings being the two sides of the cut, which meet after one period: $F_{a,b}(t + ip) = \omega(\alpha_t(b)\,a)$ with $p = 2\pi/\kappa$.
+Premise (R) imposes the KMS condition on each single-mode marginal at a fixed period. For mode $k$, with Killing flow $\alpha_t = \operatorname{Ad}(e^{Jt\omega_k K_k})$, $J = e_{2}e_{3}$ the complex unit of the atom, and $a, b \in \{v_k, v_k^{*}\}$, the entire correlation function $F_{a,b}(t) = \omega(a\,\alpha_t(b))$ is required to continue in imaginary Killing time to a single-valued function on the regular Euclidean section of the Schwarzschild field, its two orderings being the two sides of the cut, which meet after one period: $F_{a,b}(t + Jp) = \omega(\alpha_t(b)\,a)$ with $p = 2\pi/\kappa$.
 
 The period is the one that smoothness of the Euclidean section at its tip dictates, a local condition. The condition is imposed on the single-mode marginals only.
 

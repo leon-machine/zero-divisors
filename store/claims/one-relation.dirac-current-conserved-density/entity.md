@@ -1,7 +1,7 @@
 ---
 id: one-relation.dirac-current-conserved-density
 kind: claim
-version: 2
+version: 3
 title: The Dirac current is the conserved density
 status: proved
 region: one-relation
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: lem:current
   line: 805
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U5 with U3: the i of the Dirac operator, of the plane waves e^{-ip.x} and of the conservation computation is written I_5 = I_4 e, the central pseudoscalar of Cl(2,3), the complexification of Cl(1,3) whose type is the 4 x 4 matrices over span{1, I_5} (std-algebra.complexification-is-the-odd-extension, cited as a mention). No bare i remains; the outside_ga declaration (bridge) is kept with its reason narrowed to the gamma-matrix representation, which the lemma is stated in.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -62,14 +70,14 @@ extraction:
       converting would need the Hestenes form, which the statement only cites. Doubtful for the plane waves'
 outside_ga:
   kind: bridge
-  why: 'the lemma is stated and proved in a Mat(4, C) Dirac-matrix representation (the operator i gamma^mu d_mu, plane waves e^{-ip.x}, currents with complex matrix coefficients), with the Hestenes form J = psi gamma_0 psi~ cited alongside as its translation into the spacetime algebra'
+  why: 'the lemma is stated and proved in a 4 x 4 matrix representation of the Dirac algebra (gamma matrices with entries in span{1, I_5}, I_5 the central unit of Cl(2,3)), with the Hestenes form J = psi gamma_0 psi~ cited alongside as its translation into the spacetime algebra'
 ---
 
 ## formal
-Let $\psi$ range over solutions of the Dirac equation $(i\gamma^{\mu}\partial_{\mu} - m)\psi = 0$ with $m > 0$, in a matrix representation with $\{\gamma^{\mu}, \gamma^{\nu}\} = 2\eta^{\mu\nu}$, $\gamma^{0}$ Hermitian and $\gamma^{k}$ anti-Hermitian, and let $\bar{\psi} = \psi^{\dagger}\gamma^{0}$. Among the constant sesquilinear currents $J^{\mu}_{\Gamma} = \bar{\psi}\,\Gamma^{\mu}\psi$, $\Gamma^{\mu} \in \Mat(4, \C)$ constant, those conserved on every solution ($\partial_{\mu}J^{\mu}_{\Gamma} = 0$) form the one-dimensional space spanned by $\Gamma^{\mu} = \gamma^{\mu}$. The density of that current, $J^{0} = \bar{\psi}\gamma^{0}\psi = \psi^{\dagger}\psi$, is a sum of squared moduli, positive and zero only on the zero state.
+Let $\psi$ range over solutions of the Dirac equation $(I_5\gamma^{\mu}\partial_{\mu} - m)\psi = 0$ with $m > 0$, in a matrix representation over $\mathrm{span}\{1, I_5\}$ (the complex unit of the matrices is $I_5 = I_4e$, the central pseudoscalar of the odd extension $\Cl(2,3)$, which is the complexification of $\Cl(1,3)$, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}; Hermitian conjugation is taken over it) with $\{\gamma^{\mu}, \gamma^{\nu}\} = 2\eta^{\mu\nu}$, $\gamma^{0}$ Hermitian and $\gamma^{k}$ anti-Hermitian, and let $\bar{\psi} = \psi^{\dagger}\gamma^{0}$. Among the constant sesquilinear currents $J^{\mu}_{\Gamma} = \bar{\psi}\,\Gamma^{\mu}\psi$, $\Gamma^{\mu} \in \Mat(4, \C)$ constant, those conserved on every solution ($\partial_{\mu}J^{\mu}_{\Gamma} = 0$) form the one-dimensional space spanned by $\Gamma^{\mu} = \gamma^{\mu}$. The density of that current, $J^{0} = \bar{\psi}\gamma^{0}\psi = \psi^{\dagger}\psi$, is a sum of squared moduli, positive and zero only on the zero state.
 
 ## technical
-For solutions of the Dirac equation $(i\gamma^{\mu}\partial_{\mu} - m)\psi = 0$ with $m > 0$, consider the constant sesquilinear currents $J^{\mu}_{\Gamma} = \bar{\psi}\Gamma^{\mu}\psi$. Those conserved on every solution form a one-dimensional space, spanned by $\Gamma^{\mu} = \gamma^{\mu}$. Its density $J^{0} = \psi^{\dagger}\psi$ is a sum of squared moduli, positive and vanishing only on the zero state.
+For solutions of the Dirac equation $(I_5\gamma^{\mu}\partial_{\mu} - m)\psi = 0$ with $m > 0$, the matrices having entries in $\mathrm{span}\{1, I_5\}$ ($I_5$ the central unit of $\Cl(2,3)$), consider the constant sesquilinear currents $J^{\mu}_{\Gamma} = \bar{\psi}\Gamma^{\mu}\psi$. Those conserved on every solution form a one-dimensional space, spanned by $\Gamma^{\mu} = \gamma^{\mu}$. Its density $J^{0} = \psi^{\dagger}\psi$ is a sum of squared moduli, positive and vanishing only on the zero state.
 
 Conservation on every solution reduces to the linear condition $(p - p')_{\mu}\bar{u}\Gamma^{\mu}v = 0$ over mass-shell plane waves; $\gamma^{\mu}$ satisfies it, and an exact finite sample of momenta already cuts the solution space down to one dimension.
 

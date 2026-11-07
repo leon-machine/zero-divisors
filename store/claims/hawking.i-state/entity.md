@@ -1,7 +1,7 @@
 ---
 id: hawking.i-state
 kind: claim
-version: 3
+version: 4
 title: The I-state
 status: proved
 region: hawking
@@ -17,10 +17,11 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T07, deposited version
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the KMS continuation written with the transverse unit J'
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
-outside_ga:
-  kind: complex-analysis
-  why: 'the KMS continuation alpha_{i beta} is taken in the boundary-mode algebra, which its definition builds over the complex numbers (windows End(Lambda C^F)); its modes descend from the atom of the spacetime radial plane, with which I_4 anticommutes (conventions, known limits 1 and 2), so I_4 is not shown to be that algebra''s unit'
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 derivations:
@@ -47,6 +48,10 @@ locators:
   label: thm:istate
   line: 485
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the KMS continuation alpha_{i beta} of the boost dynamics on the boundary-mode algebra (modes of the radial atom) is written alpha_{J beta} with J = e_2 e_3, the modes'' complex unit, which on each mode is Ad(e^{-beta K}) (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention). The formal display's ''i.e.'' (a false positive of the detector) is written ''that is''. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -80,7 +85,7 @@ Consider the boundary-mode algebra with its boost dynamics (Definition \claimref
 \begin{enumerate}
 \item \emph{(Existence, exactly on windows.)} The quasi-free state $\omega_I$ with the Fermi-Dirac symbol
 \[
-A_I \;=\; \bigl(1 + e^{\beta h}\bigr)^{-1}, \qquad\text{i.e.}\qquad n_j = \frac{1}{e^{\omega_j/\TH} + 1},
+A_I \;=\; \bigl(1 + e^{\beta h}\bigr)^{-1}, \qquad\text{that is}\qquad n_j = \frac{1}{e^{\omega_j/\TH} + 1},
 \]
 restricts on every window to the Gibbs state of $H_F = \sum_{j \in F}\omega_j N_j$ and is KMS there, exactly (Lemma \claimref{hawking.gibbs-states-are-kms-conversely-finite}); it is the unique quasi-free extension of these window states, and it is $\tau$-KMS at $\beta$ on the full algebra by Fact \claimref{hawking.imported-kms-passes-inductive-limits}.
 \item \emph{(Gauge invariance is forced.)} If a quasi-free state of $\mathfrak{A}$ is $\tau$-KMS at $\beta$, its pairing vanishes: the state is gauge-invariant automatically.

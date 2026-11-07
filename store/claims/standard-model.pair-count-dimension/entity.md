@@ -1,7 +1,7 @@
 ---
 id: standard-model.pair-count-dimension
 kind: claim
-version: 3
+version: 4
 title: The pair count in dimension $n$
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: lem:paircount
   line: 923
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: V_C is realised as V + I_W V with I_W = I_V e the central pseudoscalar of the odd extension of the ambient space (I_7 = I_6 e at n = 4; std-algebra.complexification-is-the-odd-extension, cited as a mention), and the split of the squares (y_1 + iy_2)(y_1 - iy_2) is written with I_W, the unit of that field of scalars. No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -67,9 +75,6 @@ payload:
 - kind: count
   clause: (n+2)/2 for n even
   python: all(perp_dim(form(n), null_basis(n)[0]) == len(null_basis(n)[0]) == (n + 2) // 2 for n in EVEN_N)
-outside_ga:
-  kind: other
-  why: 'the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does'
 ---
 
 ## formal

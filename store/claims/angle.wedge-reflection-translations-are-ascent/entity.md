@@ -1,7 +1,7 @@
 ---
 id: angle.wedge-reflection-translations-are-ascent
 kind: claim
-version: 3
+version: 4
 title: The wedge reflection and the translations are in the ascent
 status: proved
 region: angle
@@ -17,14 +17,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-angle, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the continued rapidity written with the central unit I_5 of Cl(2,3)'
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
-outside_ga:
-  kind: complex-analysis
-  why: 'the rapidity is continued to eta = i pi/2 with i a commuting scalar of the complexified algebra, so the rotor iB acts by x -> BxB, the wedge reflection; with I_4 in its place the rotor I_4 B acts by -BxB, the turn by pi in the dual plane, so no pseudoscalar can stand for this i'
 derivations:
 - name: main
   uses:
   - angle.imported-conformal-model-null-rotations@5
+  - std-algebra.complexification-is-the-odd-extension@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -41,6 +43,10 @@ locators:
   label: prop:geometry
   line: 148
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3 (RESOLVE.md): the i of the continued rapidity eta = i pi/2 and of the rotor iB must commute with every vector, since the twisted action (iB)x(-iB) = BxB is the wedge reflection only for a central unit; it is now the central unit I_5 = I_4 e of the odd extension Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited in (ii) and the proof, added as a pinned uses edge because the proof uses I_5 central with square -1). Clause (iii) is unchanged. The outside_ga declaration is removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -76,12 +82,12 @@ extraction:
 In $\Cl(1,3)$ with $e_{t}^{2} = +1$ and $e_{r}^{2} = e_{\theta}^{2} = e_{\varphi}^{2} = -1$, let $B = e_{t}e_{r}$ be the horizon's boost plane, the boost member of the singularity paper's curvature-selected pair.
 \begin{enumerate}
 \item[(i)] $B^{2} = +1$; the rotor $R = \cosh\eta + B\sinh\eta$ at $(\cosh\eta, \sinh\eta) = (\tfrac54, \tfrac34)$ satisfies $R\widetilde{R} = 1$ and acts on $(e_{t}, e_{r})$ by the boost of rapidity $2\eta$, the matrix $\begin{psmallmatrix} 17/8 & -15/8 \\ -15/8 & 17/8\end{psmallmatrix}$, fixing $e_{\theta}$ and $e_{\varphi}$; it rescales the null generators $e_{t} \pm e_{r}$ of the plane by $e^{\mp 2\eta} = \tfrac14, 4$.
-\item[(ii)] At boost rapidity $2\eta = i\pi$, that is $\eta = i\pi/2$, the rotor is $iB$, with $(iB)\widetilde{(iB)} = B^{2} = 1$, and its action $x \mapsto BxB$ is $-1$ on the boost plane and $+1$ transverse to it: the reflection through the bifurcation surface. It commutes with the boost and squares to the identity.
+\item[(ii)] Let $I_{5} = I_{4}e$ be the central unit of the odd extension $\Cl(2,3)$ of the base, $e$ orthogonal to the base with $Q(e) = +1$, so that $I_{5}^{2} = -1$ and $I_{5}$ commutes with every vector (Theorem \claimref{std-algebra.complexification-is-the-odd-extension}). At boost rapidity $2\eta = I_{5}\pi$, that is $\eta = I_{5}\pi/2$, the rotor is $I_{5}B$, with $(I_{5}B)\widetilde{(I_{5}B)} = B^{2} = 1$, and its action $x \mapsto BxB$ is $-1$ on the boost plane and $+1$ transverse to it: the reflection through the bifurcation surface. It commutes with the boost and squares to the identity.
 \item[(iii)] In the completion $\Cl(2,4)$, for $a$ in the base, $T_{a} = 1 + \tfrac12\nInf a$ is an even element with inverse $1 - \tfrac12\nInf a$, fixes $\nInf$, is the null rotation $R_{u}$ of Fact \claimref{angle.imported-conformal-model-null-rotations} with $v = \nInf$ and $u = \tfrac12 a$, and carries $X(x)$ to $X(x + a)$. The base's boost rotor, read in the completion, fixes $\nO$ and $\nInf$ and carries $X(x)$ to $X(Rx\widetilde{R})$.
 \end{enumerate}
 
 ## technical
-In $\Cl(1,3)$ with $e_{t}^{2} = +1$ and the spatial squares $-1$, the horizon's boost plane $B = e_{t}e_{r}$ has $B^{2} = +1$. The rotor $R = \cosh\eta + B\sinh\eta$ boosts $(e_{t}, e_{r})$ by rapidity $2\eta$ and fixes the transverse directions; at $(\cosh\eta, \sinh\eta) = (\tfrac54, \tfrac34)$ it rescales the null generators $e_{t} \pm e_{r}$ by $\tfrac14$ and $4$. Continued to $\eta = i\pi/2$ the rotor becomes $iB$ and acts by $x \mapsto BxB$, which is $-1$ on the boost plane and $+1$ transverse to it: the reflection through the bifurcation surface, which commutes with the boost and squares to the identity.
+In $\Cl(1,3)$ with $e_{t}^{2} = +1$ and the spatial squares $-1$, the horizon's boost plane $B = e_{t}e_{r}$ has $B^{2} = +1$. The rotor $R = \cosh\eta + B\sinh\eta$ boosts $(e_{t}, e_{r})$ by rapidity $2\eta$ and fixes the transverse directions; at $(\cosh\eta, \sinh\eta) = (\tfrac54, \tfrac34)$ it rescales the null generators $e_{t} \pm e_{r}$ by $\tfrac14$ and $4$. Continued to $\eta = I_{5}\pi/2$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$, which commutes with every vector, the rotor becomes $I_{5}B$ and acts by $x \mapsto BxB$, which is $-1$ on the boost plane and $+1$ transverse to it: the reflection through the bifurcation surface, which commutes with the boost and squares to the identity.
 
 In the completion $\Cl(2,4)$, with the conformal model's null vector $X(x)$ and its null rotations, the element $T_{a} = 1 + \tfrac12\nInf a$ for $a$ in the base is the null rotation fixing $\nInf$ with $u = \tfrac12 a$, and it carries $X(x)$ to $X(x + a)$: the translations are in the ascent. The base's boost rotor, read in the completion, fixes $\nO$ and $\nInf$ and carries $X(x)$ to $X(Rx\widetilde{R})$.
 
@@ -89,4 +95,4 @@ In the completion $\Cl(2,4)$, with the conformal model's null vector $X(x)$ and 
 A horizon comes with two pieces of geometry: a reflection that swaps its two sides, and translations along it. This result shows that both are already present in the Clifford-algebra framework. Running the horizon's boost to an imaginary rapidity gives exactly the reflection, and the larger algebra reached by the ascent contains the translations as particular rotations. These are geometric facts only; they say nothing about which quantum state is selected.
 
 ## one-liner
-The horizon's boost rotor at imaginary rapidity $i\pi$ is the reflection through the bifurcation surface, and the translations are the null rotations $T_{a} = 1 + \tfrac12\nInf a$ of the completion $\Cl(2,4)$.
+The horizon's boost rotor at imaginary rapidity $I_{5}\pi$, with $I_{5}$ the central unit of $\Cl(2,3)$, is the reflection through the bifurcation surface, and the translations are the null rotations $T_{a} = 1 + \tfrac12\nInf a$ of the completion $\Cl(2,4)$.

@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 5
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 5
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -39,10 +43,11 @@ locators:
   number: Thm 7.13
   label: thm:kmsunique
   line: 1806
-outside_ga:
-  kind: complex-analysis
-  why: 'the inner flow Ad(e^{itK}) and its continuation alpha_{i beta} are taken on a general complex matrix factor, not on a space the store ties to I_4'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 kept (already raised in this pass). The inner flow Ad(e^{itK}) and its continuation alpha_{i beta} on a general complex matrix factor: by U1 the factor''s scalars are span{1, I_4}, the default scalar field of an abstract complex matrix algebra: Ad(e^{I_4 tK}), alpha_{I_4 beta}(a) = e^{-beta K} a e^{beta K} (also in the merged proof file). The result is used for factors over other complex fields (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom uses it over span{1, J}); being a statement about complex matrix algebras it transfers through the isomorphism of the fields, which identifies no two units of the algebra. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -100,10 +105,10 @@ extraction:
 ---
 
 ## formal
-Let $\Aa$ be a matrix factor, $\alpha_t = \operatorname{Ad}(e^{itK})$ a flow and $\beta \neq 0$. A state $\omega = \tr(\varrho\,\cdot\,)$ is $(\alpha,\beta)$-KMS if and only if $\varrho = e^{-\beta K}/\tr e^{-\beta K}$. In particular there is exactly one KMS state for each $\beta$, and, for $K$ not a multiple of $1$, the KMS states of the flow form a line parametrised by $\beta$.
+Let $\Aa$ be a matrix factor, with scalars $\mathrm{span}\{1, I_4\}$ (the default scalar field of an abstract complex matrix algebra), $\alpha_t = \operatorname{Ad}(e^{I_4tK})$ a flow and $\beta \neq 0$. A state $\omega = \tr(\varrho\,\cdot\,)$ is $(\alpha,\beta)$-KMS if and only if $\varrho = e^{-\beta K}/\tr e^{-\beta K}$. In particular there is exactly one KMS state for each $\beta$, and, for $K$ not a multiple of $1$, the KMS states of the flow form a line parametrised by $\beta$.
 
 ## technical
-On a matrix factor $\Aa$ with the inner flow $\alpha_t = \operatorname{Ad}(e^{itK})$ and any $\beta \neq 0$, a state $\omega = \tr(\varrho\,\cdot\,)$ satisfies the $(\alpha,\beta)$-KMS condition exactly when $\varrho = e^{-\beta K}/\tr e^{-\beta K}$. Writing the KMS identity $\omega(ab) = \omega(b\,e^{-\beta K}a\,e^{\beta K})$ as traces and using cyclicity shows that $\varrho\,e^{\beta K}$ commutes with every element, so it is central and therefore scalar because the algebra is a factor; normalisation fixes the constant, and the converse is the same computation read backwards.
+On a matrix factor $\Aa$ over $\mathrm{span}\{1, I_4\}$ with the inner flow $\alpha_t = \operatorname{Ad}(e^{I_4tK})$ and any $\beta \neq 0$, a state $\omega = \tr(\varrho\,\cdot\,)$ satisfies the $(\alpha,\beta)$-KMS condition exactly when $\varrho = e^{-\beta K}/\tr e^{-\beta K}$. Writing the KMS identity $\omega(ab) = \omega(b\,e^{-\beta K}a\,e^{\beta K})$ as traces and using cyclicity shows that $\varrho\,e^{\beta K}$ commutes with every element, so it is central and therefore scalar because the algebra is a factor; normalisation fixes the constant, and the converse is the same computation read backwards.
 
 So for each nonzero $\beta$ there is exactly one KMS state, and, for $K$ not a multiple of $1$, the KMS states of the flow form a single line parametrised by $\beta$.
 

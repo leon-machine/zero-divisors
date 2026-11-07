@@ -1,7 +1,7 @@
 ---
 id: singularity.euclidean-section-period
 kind: claim
-version: 5
+version: 6
 title: The Euclidean section, and its period
 status: proved
 region: singularity
@@ -17,10 +17,11 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the Wick rotation written with the central unit I_5 of Cl(2,3)'
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
-outside_ga:
-  kind: complex-analysis
-  why: 't_s = -i tau is the Wick rotation of the static Killing time coordinate, an analytic continuation of a scalar coordinate to a Riemannian section, not a unit acting on multivector values'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
@@ -47,6 +48,10 @@ locators:
   label: prop:section
   line: 1852
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the Wick rotation t_s = -i tau continues the time coordinate of the static gauge, which multiplies the frame vector e_0, so its unit must commute with every vector; it is written t_s = -I_5 tau with I_5 = I_4 e the central unit of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention). The formal display''s ''i.e.'' (a false positive of the detector) is written ''that is''. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -83,18 +88,18 @@ extraction:
 ---
 
 ## formal
-Let $t_s = -i\tau$ in the static gauge of the Schwarzschild gravitational field on flat spacetime (Appendix \ref{app:metric}; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}). The Wick-rotated field lives on the flat Euclidean background, and its derived metric is the Riemannian metric $f\,d\tau^{2} + f^{-1}dr^{2} + r^{2}d\Omega^{2}$ on $r > 2M$; let $\varrho(r) := \int_{2M}^{r} f^{-1/2}\,dr'$ be proper radial distance from the horizon locus. Then, with $F := \sqrt f$ regarded as a function of $\varrho$,
+Let $t_s = -I_{5}\tau$ in the static gauge of the Schwarzschild gravitational field on flat spacetime (Appendix \ref{app:metric}; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the Wick rotation written with the central unit $I_{5} = I_{4}e$ of the odd extension $\Cl(2,3)$, which squares to $-1$ and commutes with every vector, so that the continued coordinate may multiply the frame vectors (\claimref{std-algebra.complexification-is-the-odd-extension}). The Wick-rotated field lives on the flat Euclidean background, and its derived metric is the Riemannian metric $f\,d\tau^{2} + f^{-1}dr^{2} + r^{2}d\Omega^{2}$ on $r > 2M$; let $\varrho(r) := \int_{2M}^{r} f^{-1/2}\,dr'$ be proper radial distance from the horizon locus. Then, with $F := \sqrt f$ regarded as a function of $\varrho$,
 \[
 f\,d\tau^{2} + f^{-1}dr^{2} \;=\; d\varrho^{2} + F(\varrho)^{2}\,d\tau^{2}, \qquad F(0) = 0, \qquad \frac{dF}{d\varrho}\Big|_{\varrho = 0} \;=\; \frac{f'(2M)}{2} \;=\; \kappa \;=\; \frac{1}{4M} ,
 \]
 so that near $\varrho = 0$ the $(\varrho, \tau)$ plane carries the metric $d\varrho^{2} + \kappa^{2}\varrho^{2}d\tau^{2} + O(\varrho^{4})\,d\tau^{2}$. If $\tau$ is periodic with period $p$, the section is a smooth Riemannian manifold at $\varrho = 0$ (the tip of the section, the two-sphere where the Euclidean Killing flow has its fixed points, the Euclidean counterpart of the bifurcation sphere) if and only if
 \[
-\kappa\,p \;=\; 2\pi, \qquad \text{i.e.} \qquad p \;=\; \frac{2\pi}{\kappa} \;=\; 8\pi M ;
+\kappa\,p \;=\; 2\pi, \qquad \text{that is} \qquad p \;=\; \frac{2\pi}{\kappa} \;=\; 8\pi M ;
 \]
 for any other period the origin of the $(\varrho, \tau)$ plane is a conical point of total angle $\kappa p$. The period of imaginary Killing time is therefore fixed by the gravitational field, at the horizon locus, and it is the conversion factor of Proposition \claimref{singularity.plane-rate} read in imaginary time. The regularity condition is local: it lives in a polar chart about the tip of the Wick-rotated flat background; the Lorentzian bifurcation surface itself lies beyond one flat chart and is not used.
 
 ## technical
-Setting $t_s = -i\tau$ in the static gauge of the Schwarzschild field gives a field on the flat Euclidean background whose derived metric is the Riemannian $f\,d\tau^2 + f^{-1}dr^2 + r^2 d\Omega^2$ on $r > 2M$. With proper radial distance $\varrho(r) = \int_{2M}^{r} f^{-1/2}\,dr'$ and $F = \sqrt f$ regarded as a function of $\varrho$, the $(\varrho, \tau)$ part is $d\varrho^2 + F(\varrho)^2\,d\tau^2$, with $F(0) = 0$ and $dF/d\varrho$ at $\varrho = 0$ equal to $f'(2M)/2 = \kappa = 1/4M$; so near $\varrho = 0$ it is $d\varrho^2 + \kappa^2\varrho^2\,d\tau^2 + O(\varrho^4)\,d\tau^2$.
+Setting $t_s = -I_{5}\tau$, with $I_{5}$ the central unit of $\Cl(2,3)$, in the static gauge of the Schwarzschild field gives a field on the flat Euclidean background whose derived metric is the Riemannian $f\,d\tau^2 + f^{-1}dr^2 + r^2 d\Omega^2$ on $r > 2M$. With proper radial distance $\varrho(r) = \int_{2M}^{r} f^{-1/2}\,dr'$ and $F = \sqrt f$ regarded as a function of $\varrho$, the $(\varrho, \tau)$ part is $d\varrho^2 + F(\varrho)^2\,d\tau^2$, with $F(0) = 0$ and $dF/d\varrho$ at $\varrho = 0$ equal to $f'(2M)/2 = \kappa = 1/4M$; so near $\varrho = 0$ it is $d\varrho^2 + \kappa^2\varrho^2\,d\tau^2 + O(\varrho^4)\,d\tau^2$.
 
 If $\tau$ has period $p$, the section is smooth at its tip $\varrho = 0$, the Euclidean counterpart of the bifurcation sphere, if and only if $\kappa p = 2\pi$, that is $p = 2\pi/\kappa = 8\pi M$; for any other period the origin of the $(\varrho, \tau)$ plane is a conical point of total angle $\kappa p$. The period of imaginary Killing time is therefore fixed by the field at the horizon locus, and it is the rapidity-to-time conversion factor read in imaginary time. The condition is local, in a polar chart about the tip.
 

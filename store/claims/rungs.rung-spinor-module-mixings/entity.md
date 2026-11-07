@@ -53,10 +53,11 @@ locators:
   number: Thm 2.1
   label: thm:rungs
   line: 235
-outside_ga:
-  kind: other
-  why: 'the generator (i I_3, -i I_3) of u(3) + u(3) and its eigenvalue i(j - k) act on the complexified module of T_n (x) C, whose scalar commutes with every generator, so no pseudoscalar can stand for it'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U3) the module''s complex scalar is the central pseudoscalar of the odd extension, Cl(2+n,4+n) (x) C = Cl(3+n,4+n) with unit I_{7+2n} (I_13 at n = 3; std-algebra.complexification-is-the-odd-extension), stated once in clause (1): the generator (i I_3, -i I_3) of K and its eigenvalue i(j - k) in the proof became (I_13 I_3, -I_13 I_3) and I_13(j - k); the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,7 +92,7 @@ extraction:
 ---
 
 ## formal
-Let $\Cl(2{+}n, 4{+}n)$ be the $n$-th rung of the tower above $\Cl(2,4)$, with new isotropic directions $v_{1}, \ldots, v_{n}$ spanning $R_{n} \cong \C^{n}$ after complexification. Then:
+Let $\Cl(2{+}n, 4{+}n)$ be the $n$-th rung of the tower above $\Cl(2,4)$, with new isotropic directions $v_{1}, \ldots, v_{n}$ spanning $R_{n} \cong \C^{n}$ after complexification. The complexification is the odd extension $\Cl(2{+}n, 4{+}n) \otimes \C = \Cl(3{+}n, 4{+}n)$, whose complex unit is the central pseudoscalar $I_{7+2n} = I_{6+2n}e$ ($I_{6+2n}^{2} = -1$ at every rung, so $Q(e) = +1$; \claimref{std-algebra.complexification-is-the-odd-extension}); numbers below are read in $\mathrm{span}\{1, I_{7+2n}\}$, $I_{13}$ at $n = 3$. Then:
 \begin{enumerate}
 \item Its complexified spinor module is $\Lambda^{\bullet}(W \oplus R_{n}) = \Sp \otimes \Lambda^{\bullet}\C^{n}$, of dimension $2^{3+n}$, graded by $(j, k)$ with $j$ the number of new modes and $k$ the number of old pairs occupied, and irreducible; its chirality is the parity of $j + k$. At $n = 2$ this is the five-mode ledger of Hypothesis (S), with the same grading and the same chirality rule.
 \item The subgroup of unitaries of $W \oplus R_{n}$ preserving the two summands is $U(3) \times U(n)$, and it acts on the module as $\Lambda^{\bullet}(B \oplus A)$: on $\Lambda^{j}R_{n} \otimes \Lambda^{k}W$ by $\Lambda^{j}(A) \otimes \Lambda^{k}(B)$. At $n = 2$ this is exactly the action Hypothesis (S) prescribes.

@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -42,10 +46,11 @@ checked_by:
 lineage:
   motivated_by:
   - singularity.l-boundary-mode-locality
-outside_ga:
-  kind: complex-analysis
-  why: 'the Killing flows Ad(e^{it omega_k K_k}) and the imaginary-time continuation act on window modes realised by Jordan-Wigner on C^2 (x) C^2, a complex space the store does not tie to I_4'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Folded into version 3 of this pass. The window is boundary modes (U2): its numbers are read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level), the source unit i read as J; the Killing flows Ad(e^{J t omega_k K_k}) and the continuation to imaginary time Jp (alpha^k_{Jp}(a_k) = q_k^{-1} a_k, the signs of that result) are written with J; the Jordan-Wigner space C^2 (x) C^2 has this field as scalars. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -59,7 +64,7 @@ extraction:
 ---
 
 ## formal
-Model a window by $\nu$ fermionic modes $a_{k}$ with their Killing flows $\alpha^{k}_{t} = \operatorname{Ad}(e^{it\omega_{k}K_{k}})$, $K_{k} = N_{k} - \tfrac12$, $\omega_{k} > 0$, a state $\omega$, a dynamics generator $H = H^{*}$ in the window algebra, and an exterior channel map $a^{\mathrm{out}}_{k} = \sum_{j}T_{kj}a_{j} + (\text{vacuum-fed terms})$, with $T$ a contraction on the channel space. Read the premises as: (R) each single-mode marginal of $\omega$ is $(\alpha^{k}, p)$-KMS at $p = 2\pi/\kappa$, as in Premise \claimref{singularity.r-regularity-fixed-locus}, equivalently its Boltzmann factor is $q_{k} = e^{-p\omega_{k}}$; (L$_E$) $H$ commutes with every $N_{k}$, as in Premise \claimref{singularity.l-boundary-mode-locality}; (I) $T$ is diagonal, so there is no cross-channel mixing: each channel feeds its own asymptotic channel, possibly attenuated by a vacuum-fed (greybody) loss, as in Premise \claimref{hawking.premise-i-interface-identification}; and the unique-ground-state condition (S) $\omega$ is the unique ground state of $H$.
+Model a window by $\nu$ fermionic modes $a_{k}$ with their Killing flows $\alpha^{k}_{t} = \operatorname{Ad}(e^{Jt\omega_{k}K_{k}})$, $K_{k} = N_{k} - \tfrac12$, $\omega_{k} > 0$ (the window's numbers are read in $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the complex unit of the boundary modes' radial atom, Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}, which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode), a state $\omega$, a dynamics generator $H = H^{*}$ in the window algebra, and an exterior channel map $a^{\mathrm{out}}_{k} = \sum_{j}T_{kj}a_{j} + (\text{vacuum-fed terms})$, with $T$ a contraction on the channel space. Read the premises as: (R) each single-mode marginal of $\omega$ is $(\alpha^{k}, p)$-KMS at $p = 2\pi/\kappa$, as in Premise \claimref{singularity.r-regularity-fixed-locus}, equivalently its Boltzmann factor is $q_{k} = e^{-p\omega_{k}}$; (L$_E$) $H$ commutes with every $N_{k}$, as in Premise \claimref{singularity.l-boundary-mode-locality}; (I) $T$ is diagonal, so there is no cross-channel mixing: each channel feeds its own asymptotic channel, possibly attenuated by a vacuum-fed (greybody) loss, as in Premise \claimref{hawking.premise-i-interface-identification}; and the unique-ground-state condition (S) $\omega$ is the unique ground state of $H$.
 \begin{enumerate}
 \item[(i)] \emph{(Independence.)} On two modes: (M1) $H = \omega_{0}N_{0} + \omega_{1}N_{1}$, the product Gibbs state and $T = 1$ satisfy (R), (L$_E$), (I), with $\omega$ stationary for $H$; (M2) the same $H$ with the vacuum $\ket{00}$ and $T = 1$ satisfies (L$_E$), (I) and (S) but not (R), at any Boltzmann factor; (M3) the pairing generator below with its ground state and $T = 1$ satisfies (R), (I) and (S) but not (L$_E$); (M4) the state and generator of (M1) with a beam splitter $T$ of nonzero mixing angle and $q_{0} \ne q_{1}$ satisfy (R) and (L$_E$) but not (I). So none of (R), (L$_E$), (I) follows from the other two.
 \item[(ii)] \emph{(Pairing realises (R) with (S) at every Boltzmann factor.)} For $0 < t < 1$ and $g > 0$ let $H_{t} = g\bigl[\tfrac{1 - t^{2}}{2t}(N_{0} + N_{1}) + a_{0}^{*}a_{1}^{*} + a_{1}a_{0}\bigr]$. Its unique ground state is $\ket{00} - t\ket{11}$ (with $\ket{11} = a_{0}^{*}a_{1}^{*}\ket{00}$), of energy $-gt$, separated from the rest of the spectrum, and both single-mode marginals are Gibbs with Boltzmann factor $t^{2}$; so for equal frequencies (R) holds with $t = e^{-p\omega/2}$, while $H_{t}$ does not commute with $N_{0}$.

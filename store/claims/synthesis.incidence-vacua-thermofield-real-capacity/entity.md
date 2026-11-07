@@ -1,7 +1,7 @@
 ---
 id: synthesis.incidence-vacua-thermofield-real-capacity
 kind: claim
-version: 5
+version: 6
 title: 'No incidence vacuum is real; incidence lines as thermofield doubles'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -38,6 +42,10 @@ lineage:
   motivated_by:
   - note.one-relation.two-residues-named-so-synthesis-can
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the complexifications Cl(p,q)_C and V_C are realised in the odd extension with complex unit I_hatV, its central pseudoscalar (for Cl(2,4), I_7 = I_6 e), which commutes with every vector (std-algebra.complexification-is-the-odd-extension, cited as a mention); the complex null modes (g + ih)/2, c = (e_3 + i e_4)/2, (epsilon + i nu)/2, the projector (1 - i e_3e_4)/2 and the value +-i on e_3e_4 are written with I_hatV, or I_7 for Cl(2,4), the Hermitian structure conjugating it. One unit throughout (I_7 is the instance V = R^{2,4} of I_hatV). No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -62,20 +70,17 @@ extraction:
     note: 'W503: lay and one-liner now state the condition u != 0 (respectively v != 0) for the thermofield-double reading.'
   open_problem: op.which-capacity
   note: Partial progress only. Computes how the incidence vacua split between the real and complex capacities; it does not connect them to the series' selected (descended) state of the boundary modes, so the open problem stays partial. Clause (v) bears on op.rule-2-sign conditionally on a reality premise. Restated after referee review (only the two spanning vacua are thermofield doubles).
-outside_ga:
-  kind: other
-  why: 'the result compares the complexification Cl(p,q)_C, V_C with its real form: the modes (g + ih)/2 and c = (e_3 + i e_4)/2 are complex null vectors, the projector (1 - i e_3e_4)/2 and the value +-i on e_3e_4 are complex expectations of real states, so i stands next to vectors and no pseudoscalar commutes with them'
 ---
 
 ## formal
-Let $\Cl(2,4)$ act on its eight-dimensional Fock module, with ground generators $e_{1}$ ($e_{1}^{2} = 1$) and $e_{2}, e_{3}, e_{4}$ (squares $-1$), and ascent plane $e_{+}, e_{-}$ ($e_{\pm}^{2} = \pm 1$); give the module the Hermitian structure for which every generator is unitary, $g^{*} = g^{-1}$, which fixes the frame $e_{1}$ and the normalisation of the ascent pair. Put $\nO = \tfrac12(e_{+} + e_{-})$, $\ninf = e_{+} - e_{-}$, the ascent mode $a = \nO$, $a^{*} = \tfrac12\ninf$, $N = a^{*}a$. For a point $x = t e_{1} + r e_{2}$ (every point after a spatial rotation, which is unitary and fixes $N$) put $b = \tfrac12(e_{1} + e_{2})$, $b^{*} = \tfrac12(e_{1} - e_{2})$, the boost-qubit mode of the $(t,r)$ plane, $c = \tfrac12(e_{3} + ie_{4})$, the complex-only (spectator) mode, the null coordinates $u = t - r$, $v = t + r$, and $X(x) = \nO + x - \tfrac12 Q(x)\ninf$ with $Q(x) = uv$, as in Proposition \claimref{one-relation.spacetime-manifold-vacuum-lines}.
+Let $\Cl(2,4)$ act on its eight-dimensional Fock module, with ground generators $e_{1}$ ($e_{1}^{2} = 1$) and $e_{2}, e_{3}, e_{4}$ (squares $-1$), and ascent plane $e_{+}, e_{-}$ ($e_{\pm}^{2} = \pm 1$). Complex scalars are those of the odd extension (Theorem \claimref{std-algebra.complexification-is-the-odd-extension}): $\Cl(p,q)_{\C} = \Cl(p,q) \oplus \Cl(p,q)I_{\hat V}$ and $V_{\C} = V \oplus I_{\hat V}V$, with $I_{\hat V}$ the central pseudoscalar of the odd extension $\hat V$ of $V = \R^{p,q}$ (of $V \oplus \R f$, for one further vector $f$, when $p + q$ is odd), which squares to $-1$ and commutes with every vector; for $\Cl(2,4)$ it is $I_{7} = I_{6}e$, $I_{6} = e_{1}e_{2}e_{3}e_{4}e_{+}e_{-}$, $e$ orthogonal to all six with $Q(e) = +1$, and the Fock module is a module of $\Cl(2,4)_{\C} = \Cl(3,4)$; give the module the Hermitian structure for which every generator is unitary, $g^{*} = g^{-1}$, conjugate-linear over $\mathrm{span}\{1, I_{7}\}$, which fixes the frame $e_{1}$ and the normalisation of the ascent pair. Put $\nO = \tfrac12(e_{+} + e_{-})$, $\ninf = e_{+} - e_{-}$, the ascent mode $a = \nO$, $a^{*} = \tfrac12\ninf$, $N = a^{*}a$. For a point $x = t e_{1} + r e_{2}$ (every point after a spatial rotation, which is unitary and fixes $N$) put $b = \tfrac12(e_{1} + e_{2})$, $b^{*} = \tfrac12(e_{1} - e_{2})$, the boost-qubit mode of the $(t,r)$ plane, $c = \tfrac12(e_{3} + I_{7}e_{4})$, the complex-only (spectator) mode, the null coordinates $u = t - r$, $v = t + r$, and $X(x) = \nO + x - \tfrac12 Q(x)\ninf$ with $Q(x) = uv$, as in Proposition \claimref{one-relation.spacetime-manifold-vacuum-lines}.
 \begin{enumerate}
-\item[(i)] \emph{(Real states fill only the real capacity.)} Call a state $\omega$ on $\Cl(p,q)_{\C}$ real if $\omega(y) \in \R$ for every $y \in \Cl(p,q)$. Then $\omega(gh) = 0$ for orthogonal generators $g, h$ of equal square, so every mode $\tfrac12(g + ih)$ of a definite block has occupation exactly $\tfrac12$; and $\{y \in V_{\C} : \omega(y^{*}y) = 0\}$ is the complexification of a real totally isotropic subspace, of dimension at most $\min(p,q)$. Hence a real state is the Fock vacuum of a maximal isotropic subspace of $V_{\C}$ only if $|p - q| \le 1$: no vacuum of the incidence chart of Fact \claimref{one-relation.imported-pure-spinors-incidence-chart} is a real state.
+\item[(i)] \emph{(Real states fill only the real capacity.)} Call a state $\omega$ on $\Cl(p,q)_{\C}$ real if $\omega(y) \in \R$ for every $y \in \Cl(p,q)$. Then $\omega(gh) = 0$ for orthogonal generators $g, h$ of equal square, so every mode $\tfrac12(g + I_{\hat V}h)$ of a definite block has occupation exactly $\tfrac12$; and $\{y \in V_{\C} : \omega(y^{*}y) = 0\}$ is the complexification of a real totally isotropic subspace, of dimension at most $\min(p,q)$. Hence a real state is the Fock vacuum of a maximal isotropic subspace of $V_{\C}$ only if $|p - q| \le 1$: no vacuum of the incidence chart of Fact \claimref{one-relation.imported-pure-spinors-incidence-chart} is a real state.
 \item[(ii)] \emph{(The two distinguished vacua of a line.)} Let $\ket{0}_{\pm}$ be the vacua of $a$ and $b$ in the two chirality halves; they differ in the occupation of $c$. The incidence line $L_{x}$ is spanned by the two vacua of definite spectator occupation
 \[
 \Omega_{x} = (1 - u\,a^{*}b^{*})\ket{0}_{+}, \qquad \Psi_{x} = (b^{*} - v\,a^{*})\ket{0}_{-} .
 \]
-On each, the state of the $(a,b)$ pair is pure, the spectator is pure and carries all the non-reality required by (i) (value $\pm i$ on $e_{3}e_{4}$), and the state is real on the subalgebra generated by $e_{1}, e_{2}, e_{+}, e_{-}$. For $u \ne 0$, $\Omega_{x}$ is the thermofield double of the ascent mode's Gibbs state with $e^{-\beta} = u^{2}$, with partner the boost qubit $b$ (Theorem \claimref{state-selection.partner-purification-are-canonical}); for $v \ne 0$, $\Psi_{x}$ is likewise the thermofield double at $e^{-\beta} = v^{2}$, after a unitary on the partner. The inverse temperature is negative when $|u| > 1$ (respectively $|v| > 1$), the occupation then exceeding $\tfrac12$. At $u = 0$, $\Omega_{x}$ is the bare vacuum, not faithful on the ascent mode, and is no thermofield double (likewise $\Psi_{x}$ at $v = 0$).
+On each, the state of the $(a,b)$ pair is pure, the spectator is pure and carries all the non-reality required by (i) (value $\pm I_{7}$ on $e_{3}e_{4}$), and the state is real on the subalgebra generated by $e_{1}, e_{2}, e_{+}, e_{-}$. For $u \ne 0$, $\Omega_{x}$ is the thermofield double of the ascent mode's Gibbs state with $e^{-\beta} = u^{2}$, with partner the boost qubit $b$ (Theorem \claimref{state-selection.partner-purification-are-canonical}); for $v \ne 0$, $\Psi_{x}$ is likewise the thermofield double at $e^{-\beta} = v^{2}$, after a unitary on the partner. The inverse temperature is negative when $|u| > 1$ (respectively $|v| > 1$), the occupation then exceeding $\tfrac12$. At $u = 0$, $\Omega_{x}$ is the bare vacuum, not faithful on the ascent mode, and is no thermofield double (likewise $\Psi_{x}$ at $v = 0$).
 \item[(iii)] \emph{(A general vacuum on the line.)} Every vacuum on $L_{x}$ has a diagonal ascent-mode marginal, of the descended Gibbs form when the ascent mode has nonzero weight (Theorem \claimref{singularity.descended-form-state-independent}; at zero weight a diagonal marginal is Gibbs only at occupation $\tfrac12$), with occupation $\langle N \rangle$ in the closed segment between $u^{2}/(1 + u^{2})$ and $v^{2}/(1 + v^{2})$, every value attained. A vacuum $\lambda\Omega_{x} + \mu\Psi_{x}$ with $\lambda\mu \ne 0$ entangles the $(a,b)$ pair with the spectator $c$: its $(a,b)$ state is mixed, and the ascent mode is purified by $b$ and $c$ jointly, not by the boost qubit alone.
 \item[(iv)] \emph{(Pointwise compatibility.)} So the incidence-line structure admits, at the point $x$, a vacuum with thermal ascent marginal at every inverse temperature corresponding to the segment of (iii); $\beta = 2\pi$ is attained on $L_{x}$ exactly when $e^{-\pi}$ lies between $|u|$ and $|v|$, a condition that depends on the frame and scale fixed by the Hermitian structure, the dilation not being unitary for it. At the origin every vacuum on $L_{0}$ is the ascent vacuum. Nothing here connects these vacua to the selected (descended) state of the boundary modes.
 \item[(v)] \emph{(The sign of an adjoined generator.)} Let two adjoined orthogonal generators $\varepsilon$, $\nu$ have $\varepsilon^{2} = -1$. Their plane is hyperbolic if and only if $\nu^{2} = +1$; if $\nu^{2} = -1$, every state real on the subalgebra of that plane gives its mode occupation exactly $\tfrac12$, by the argument of (i). A state real on the adjoined plane's subalgebra with a non-tracial ($\beta \ne 0$) marginal there therefore exists only for $\nu^{2} = +1$; this selects the sign only under the premise that the adjoined plane's state be real there, which is not derived.

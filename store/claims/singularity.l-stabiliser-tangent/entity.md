@@ -1,7 +1,7 @@
 ---
 id: singularity.l-stabiliser-tangent
 kind: claim
-version: 5
+version: 6
 title: (L$_E$) as the stabiliser and the tangent
 status: proved
 region: singularity
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -45,6 +49,10 @@ locators:
   label: prop:stabtangent
   line: 2470
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) the Fock space of the boundary modes has its numbers read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom, which commutes with the mode operators (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom), stated once in the formal level; the Majorana generator gamma_{2i} = i(v_i - v_i^*) of the proof became J(v_i - v_i^*); the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -85,13 +93,10 @@ extraction:
     sigma = e0 e1, where the field theory''s unit I4 anticommutes with the mode operators, so the convention
     i = I4 (which needs a plane orthogonal to spacetime) does not apply. Recorded 21 October 2026; see
     store/conventions.md, known limit 1.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the complex Fock space of the singularity paper''s atom (so(2 nu) + C, Spin(2 nu, C), the Majorana basis gamma_{2i} = i(v_i - v_i^*)) keeps a scalar i: the atom is built in the spacetime radial plane e0e1, where I_4 anticommutes with the mode operators (conventions, known limit 1)'
 ---
 
 ## formal
-On the Fock space of $\nu \geq 2$ boundary modes with creation operators $v^*_i$, the bivectors of $\mathfrak{so}(2\nu)$ are the quadratic elements $v^*_i v_j - \tfrac12\delta_{ij}$, $v_i v_j$ and $v^*_i v^*_j$, and split as hops (the $\nu(\nu - 1)$ elements $v^*_i v_j$ with $i \neq j$ together with the $\nu$ Cartan elements $v^*_i v_i - \tfrac12$), pair annihilations $v_i v_j$ and pair creations $v^*_i v^*_j$ ($\nu(\nu - 1)/2$ each), $\nu^2 + \nu(\nu - 1) = \nu(2\nu - 1) = \dim\mathfrak{so}(2\nu)$; the same elements without the $\tfrac12$ span, with the identity, $\mathfrak{so}(2\nu) \oplus \C$, and are not themselves closed under the bracket. On the vacuum $|0\rangle$ every hop with $i \neq j$ and every pair annihilation vanishes and every Cartan element acts as the scalar $-\tfrac12$, so the hops and the pair annihilations together are the stabiliser of the vacuum ray; the pair creations applied to $|0\rangle$ are linearly independent and span, modulo $|0\rangle$, the tangent space at $|0\rangle$ of the orbit of Witt vacua, of complex dimension $\nu(\nu - 1)/2$, while the tangent space of the orbit of the vector $|0\rangle$ itself, the span of $X|0\rangle$ over $X \in \mathfrak{so}(2\nu)$, has dimension $1 + \nu(\nu - 1)/2$, the extra dimension being the scalar action of the Cartan elements. Consequently every hop rotation $\exp\theta(v^*_i v_j - v^*_j v_i)$ fixes the vacuum and every pairing rotation $\exp\theta(v^*_i v^*_j - v_j v_i)$ moves it; the necessity witness of Corollary \claimref{singularity.envelope-endpoint-why-boundary-mode-locality}, $|00\rangle \mapsto \tfrac35|00\rangle + \tfrac45|11\rangle$, is the pairing rotation on modes $(1,2)$ at $(\cos\theta, \sin\theta) = (\tfrac35, \tfrac45)$. The half of Premise \claimref{singularity.l-boundary-mode-locality} that Theorem \claimref{singularity.class-relative-no-go-no-supplied} proves, within the supplied class, therefore lies in the stabiliser of the vacuum; of the half it premises, the exclusion of unsupplied generators, the pairing terms are the tangent space of the vacuum's orbit, the part that changes the Witt decomposition and the only part that can move the vacuum, and so the only part that can create entanglement from it, at one dimension per pair of modes, while the differential terms of Remark \ref{rem:hopresidual} are hops and lie in the stabiliser.
+On the Fock space of $\nu \geq 2$ boundary modes with creation operators $v^*_i$ (numbers and complex dimensions are read over $\mathrm{span}\{1, J\}$, $J = e_2e_3$ the complex unit of the boundary modes, which commutes with the mode operators, \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), the bivectors of $\mathfrak{so}(2\nu)$ are the quadratic elements $v^*_i v_j - \tfrac12\delta_{ij}$, $v_i v_j$ and $v^*_i v^*_j$, and split as hops (the $\nu(\nu - 1)$ elements $v^*_i v_j$ with $i \neq j$ together with the $\nu$ Cartan elements $v^*_i v_i - \tfrac12$), pair annihilations $v_i v_j$ and pair creations $v^*_i v^*_j$ ($\nu(\nu - 1)/2$ each), $\nu^2 + \nu(\nu - 1) = \nu(2\nu - 1) = \dim\mathfrak{so}(2\nu)$; the same elements without the $\tfrac12$ span, with the identity, $\mathfrak{so}(2\nu) \oplus \C$, and are not themselves closed under the bracket. On the vacuum $|0\rangle$ every hop with $i \neq j$ and every pair annihilation vanishes and every Cartan element acts as the scalar $-\tfrac12$, so the hops and the pair annihilations together are the stabiliser of the vacuum ray; the pair creations applied to $|0\rangle$ are linearly independent and span, modulo $|0\rangle$, the tangent space at $|0\rangle$ of the orbit of Witt vacua, of complex dimension $\nu(\nu - 1)/2$, while the tangent space of the orbit of the vector $|0\rangle$ itself, the span of $X|0\rangle$ over $X \in \mathfrak{so}(2\nu)$, has dimension $1 + \nu(\nu - 1)/2$, the extra dimension being the scalar action of the Cartan elements. Consequently every hop rotation $\exp\theta(v^*_i v_j - v^*_j v_i)$ fixes the vacuum and every pairing rotation $\exp\theta(v^*_i v^*_j - v_j v_i)$ moves it; the necessity witness of Corollary \claimref{singularity.envelope-endpoint-why-boundary-mode-locality}, $|00\rangle \mapsto \tfrac35|00\rangle + \tfrac45|11\rangle$, is the pairing rotation on modes $(1,2)$ at $(\cos\theta, \sin\theta) = (\tfrac35, \tfrac45)$. The half of Premise \claimref{singularity.l-boundary-mode-locality} that Theorem \claimref{singularity.class-relative-no-go-no-supplied} proves, within the supplied class, therefore lies in the stabiliser of the vacuum; of the half it premises, the exclusion of unsupplied generators, the pairing terms are the tangent space of the vacuum's orbit, the part that changes the Witt decomposition and the only part that can move the vacuum, and so the only part that can create entanglement from it, at one dimension per pair of modes, while the differential terms of Remark \ref{rem:hopresidual} are hops and lie in the stabiliser.
 
 ## technical
 On the Fock space of $\nu \geq 2$ modes, the quadratic elements spanning $\mathfrak{so}(2\nu)$ split into hops with the Cartan elements ($\nu^2$ in all), pair annihilations and pair creations ($\nu(\nu-1)/2$ each). On the vacuum, the hops with $i \neq j$ and the pair annihilations vanish and the Cartan elements act as the scalar $-\tfrac12$, so these form the stabiliser of the vacuum ray, while the pair creations span the tangent space of the orbit of Witt vacua, of complex dimension $\nu(\nu-1)/2$.

@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 7
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -49,10 +53,11 @@ locators:
   number: Prop 4.5
   label: prop:reality
   line: 495
-outside_ga:
-  kind: other
-  why: 'the proof works in the complex Fock module over V_C (b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta} of the Hermitian form, the rescaling by (3+4i)/5), whose scalar must commute with the vector actions c(v) and is +-I_6 only on CS'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 7 kept (already raised in this pass). The Fock module''s scalar, the last bare i (b_3 - i b_4, b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta}, the rescaling (3+4i)/5, the i-multiples, m(i x-hat)), is the central pseudoscalar I_7 = I_6 e of Cl(3,4) = Cl(2,4)_C by U3 (std-algebra.complexification-is-the-odd-extension, cited as a mention in clause (5) and its proof); I_6 stays the factor of the incidence relation, acting by left multiplication, and clause (5) says that on CS it equals +-I_7, related there and not identified. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -126,7 +131,7 @@ is an antilinear bijection of $\Lambda^\bullet W$ with $\kappa\, c(v) = c(\bar v
 \item (\emph{The invariant Hermitian form.}) $\Sigma(Z_1, Z_2) := B(\kappa Z_1, Z_2)$ (the twistor form; on the conformal spinor space $\CS$ it corresponds to the reversion form) is a nondegenerate sesquilinear form on $\CS$ with $\Sigma(Z_2, Z_1) = \lambda\,\overline{\Sigma(Z_1, Z_2)}$ for a constant $\lambda$ of modulus one, so that a rescaling of $\kappa$ by a phase makes $\Sigma$ Hermitian; for the $\kappa$ of (1), $\lambda = 1$ and $\Sigma$ is Hermitian as it stands. The real bivectors act $\Sigma$-anti-Hermitianly, so $\Sigma$ is $\mathrm{Spin}(2,4)$-invariant.
 \item (\emph{Null planes.}) For every real null vector $v$ the plane of $\Psi(v)$ is $\Sigma$-null. In particular $\Som$ and $\Spi$ are $\Sigma$-null.
 \item (\emph{Signature.}) $\Sigma$ has signature $(2,2)$.
-\item (\emph{Reality of the chart, and the factor $I_6$.}) The conformal pseudoscalar $I_6$ acts on $\CS$ as its complex unit (the factor $i$). Let $\sigma(\omega, \pi) := \Sigma(\omega, \pi)$ be the resulting perfect pairing $\Som\times\Spi \to \C$, and call $\hat x: \Spi\to\Som$ \emph{$\sigma$-Hermitian} if $\sigma(\hat x\pi, \pi') = \overline{\sigma(\hat x\pi', \pi)}$ for all $\pi, \pi' \in \Spi$. For $A \in \operatorname{Hom}(\Spi, \Som)$ the following are equivalent: (a) the chart point $m(A)$ of Theorem \claimref{correspondence.incidence-relation-chart} is real, $m(A) \in W_{1,3}$; (b) the line $L_A$ is $\Sigma$-null; (c) $A = I_6\hat x$ with $\hat x$ $\sigma$-Hermitian. Consequently the real points of the affine chart are exactly the $\Sigma$-null lines skew to $L_\infty$, the incidence relation of a real point reads $\omega = I_6\hat x\pi$ with $\hat x$ $\sigma$-Hermitian, and on real points the chart norm is $Q(m) = -2\det A = 2\det\hat x$ in the bases of Theorem \claimref{correspondence.incidence-relation-chart}.
+\item (\emph{Reality of the chart, and the factor $I_6$.}) The conformal pseudoscalar $I_6$ acts on $\CS$ as its complex unit (the factor Penrose writes as his imaginary unit). The scalars of the module are $\mathrm{span}\{1, I_7\}$, $I_7 = I_6e$ the central pseudoscalar of the odd extension $\Cl(3,4) = \Cl(2,4)_\C$, with $V_\C = V \oplus I_7V$ (\claimref{std-algebra.complexification-is-the-odd-extension}); on $\CS$, $I_6$ acting by left multiplication equals $\pm I_7$, the two being related there and not identified. Let $\sigma(\omega, \pi) := \Sigma(\omega, \pi)$ be the resulting perfect pairing $\Som\times\Spi \to \C$, and call $\hat x: \Spi\to\Som$ \emph{$\sigma$-Hermitian} if $\sigma(\hat x\pi, \pi') = \overline{\sigma(\hat x\pi', \pi)}$ for all $\pi, \pi' \in \Spi$. For $A \in \operatorname{Hom}(\Spi, \Som)$ the following are equivalent: (a) the chart point $m(A)$ of Theorem \claimref{correspondence.incidence-relation-chart} is real, $m(A) \in W_{1,3}$; (b) the line $L_A$ is $\Sigma$-null; (c) $A = I_6\hat x$ with $\hat x$ $\sigma$-Hermitian. Consequently the real points of the affine chart are exactly the $\Sigma$-null lines skew to $L_\infty$, the incidence relation of a real point reads $\omega = I_6\hat x\pi$ with $\hat x$ $\sigma$-Hermitian, and on real points the chart norm is $Q(m) = -2\det A = 2\det\hat x$ in the bases of Theorem \claimref{correspondence.incidence-relation-chart}.
 \end{enumerate}
 
 ## technical

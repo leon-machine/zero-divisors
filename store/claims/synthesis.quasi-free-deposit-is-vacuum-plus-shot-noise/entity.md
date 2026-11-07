@@ -1,7 +1,7 @@
 ---
 id: synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise
 kind: claim
-version: 3
+version: 4
 title: 'A quasi-free deposit is the vacuum plus shot noise'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -50,6 +54,10 @@ lineage:
   - synthesis.quadratic-flows-cannot-thermalise-descent
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the complexified Clifford algebra of the 2n Majorana generators a + a^dagger, i(a^dagger - a) has as its complex unit I_hatM, the central pseudoscalar of the odd extension of the real span M of the generators, which commutes with every generator (std-algebra.complexification-is-the-odd-extension, cited as a mention). No bare i remains, so the outside_ga declaration (other, for i only) is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -99,12 +107,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2 -> 3, at Leon''s decisions of 2026-11-01 (deposit state, as restated in the final round): a marked note after the pointer note records that the vacuum of (ii) and (iv), any pure quasi-free state here, must be one over which the deposit is Hadamard if the deposit is to be Hadamard; for a massive Dirac field the instantaneous vacuum where ma'' is nonzero, and every deposit diagonal over it, are not Hadamard, and the shot-noise count does not decide the Hadamard property (claimrefs to the massive-Dirac and occupation-moment results, which use this one). No clause changed.'
-outside_ga:
-  kind: other
-  why: 'the CAR algebra is taken as the complexified Clifford algebra of the Majorana generators a + a^dagger and i(a^dagger - a), a complexification whose unit must commute with the generators'
 ---
 ## formal
-Let $\CAR$ be the CAR algebra of $n$ fermionic modes $a_{1}, \dots, a_{n}$, equivalently the complexified Clifford algebra of the $2n$ Majorana generators $a_{j} + a_{j}^{\dagger}$, $i(a_{j}^{\dagger} - a_{j})$, whose quadratic elements are its bivectors. Write $\alpha = (a_{1}, \dots, a_{n}, a_{1}^{\dagger}, \dots, a_{n}^{\dagger})$ and, for a state $\omega$, $\Gamma_{IJ} = \omega(\alpha_{J}^{\dagger}\alpha_{I})$, so $0 \le \Gamma \le 1$; $\omega$ is quasi-free when its truncated functions beyond second order vanish (Fact \claimref{hawking.imported-quasi-free-states-car-algebra}), and a quasi-free state is pure exactly when $\Gamma^{2} = \Gamma$. A quadratic Hermitian element is $O = \tfrac12\alpha^{\dagger}F\alpha$ with $F$ Hermitian of the particle-hole form; for a gauge-invariant state and a number-conserving $O = N_{f} = \sum_{ij}f_{ij}a_{i}^{\dagger}a_{j}$ these reduce to the one-particle density $E_{ij} = \omega(a_{j}^{\dagger}a_{i})$ and $f$. Write $\mathrm{sd}_{\omega}(O) = \mathrm{Var}_{\omega}(O)^{1/2}$.
+Let $\CAR$ be the CAR algebra of $n$ fermionic modes $a_{1}, \dots, a_{n}$, equivalently the complexified Clifford algebra of the $2n$ Majorana generators $a_{j} + a_{j}^{\dagger}$, $I_{\hat M}(a_{j}^{\dagger} - a_{j})$, whose quadratic elements are its bivectors; here the complex unit $I_{\hat M}$ is the central pseudoscalar of the odd extension $\hat M$ of the real $2n$-dimensional span $M$ of the Majorana generators, which squares to $-1$ and commutes with every generator, so that the complexification is $\Cl(M) \oplus \Cl(M)I_{\hat M}$ (Theorem \claimref{std-algebra.complexification-is-the-odd-extension}), and $\dagger$ conjugates it, $I_{\hat M} \mapsto -I_{\hat M}$. Write $\alpha = (a_{1}, \dots, a_{n}, a_{1}^{\dagger}, \dots, a_{n}^{\dagger})$ and, for a state $\omega$, $\Gamma_{IJ} = \omega(\alpha_{J}^{\dagger}\alpha_{I})$, so $0 \le \Gamma \le 1$; $\omega$ is quasi-free when its truncated functions beyond second order vanish (Fact \claimref{hawking.imported-quasi-free-states-car-algebra}), and a quasi-free state is pure exactly when $\Gamma^{2} = \Gamma$. A quadratic Hermitian element is $O = \tfrac12\alpha^{\dagger}F\alpha$ with $F$ Hermitian of the particle-hole form; for a gauge-invariant state and a number-conserving $O = N_{f} = \sum_{ij}f_{ij}a_{i}^{\dagger}a_{j}$ these reduce to the one-particle density $E_{ij} = \omega(a_{j}^{\dagger}a_{i})$ and $f$. Write $\mathrm{sd}_{\omega}(O) = \mathrm{Var}_{\omega}(O)^{1/2}$.
 \begin{enumerate}
 \item[(i)] \emph{(Variance.)} For every quasi-free $\omega$, $\mathrm{Var}_{\omega}(O) = \tfrac12\Tr\bigl(F\Gamma F(1 - \Gamma)\bigr)$, and $\mathrm{Var}_{\omega}(O) = \tfrac14\|[F, \Gamma]\|_{2}^{2}$ when $\omega$ is pure; for gauge-invariant $\omega$, $\mathrm{Var}_{\omega}(N_{f}) = \Tr\bigl(fEf(1 - E)\bigr)$.
 \item[(ii)] \emph{(Vacuum plus shot noise.)} Let $\omega_{0}$ be any pure quasi-free state (the vacuum), $\Gamma_{0}^{2} = \Gamma_{0}$, and $N_{0}$ the number operator of its quasi-particles, $N_{0} = \tfrac12\alpha^{\dagger}(1 - 2\Gamma_{0})\alpha + \tfrac n2$. Then for every quasi-free $\omega$ and every $O$,

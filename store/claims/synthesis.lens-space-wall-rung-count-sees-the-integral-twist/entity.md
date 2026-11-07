@@ -53,10 +53,11 @@ lineage:
   motivated_by:
   - sheaf.wall-class
   - synthesis.wall-rung-count-is-height-of-dying-line-class
-outside_ga:
-  kind: other
-  why: 'C stays only in the classical remark, not used in the proof, that L + L is the realification of the complex line bundle L tensor C, whose first Chern class is the integral Bockstein of x'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle (U1, a plane''s unit bivector): the classical remark, not used in the proof, now writes the complexification of the real line bundle L as L + L with the fibrewise complex structure (s, t) -> (-t, s), the unit bivector of each fibre plane, in place of the realification of L (x) C. No complex field or bare i remains, so the outside_ga declaration (other, for C only) is removed. Version kept at 3, already bumped in this pass.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

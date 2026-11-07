@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Mehler''s formula, Hermite rank and power-law spectra'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'F. G. Mehler, Ueber die Entwicklung einer Function von beliebig vielen Variablen nach Laplaceschen Functionen hoeherer Ordnung, J. Reine Angew. Math. 66 (1866), 161--176.'
@@ -30,6 +34,20 @@ imported_from:
   locator: 'Section 3 (Riesz potentials)'
   url: https://arxiv.org/abs/1709.07195
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U4 with U1: the Fourier convention P(k) = int e^{-ik.x} xi(x) d^3x is restated with I_4 (Fourier analysis of a scalar function, values in span{1, I_4}); the source''s form moves to extraction.source_formal, and the formal level says the sources write i for I_4. No bare i remains, so the outside_ga declaration (imported, for i only) is removed; status stays imported.'
+  source_formal: |-
+    Let $(X, Y)$ be jointly Gaussian with mean $0$, variance $1$ and correlation $\rho$, and let $\mathrm{He}_{n}$ be the Hermite polynomials orthogonal for the standard Gaussian weight ($\mathrm{He}_{0} = 1$, $\mathrm{He}_{1}(x) = x$, $\mathrm{He}_{2}(x) = x^{2} - 1$). Then
+    \[
+    E\bigl[\mathrm{He}_{m}(X)\,\mathrm{He}_{n}(Y)\bigr] = \delta_{mn}\, n!\, \rho^{n}.
+    \]
+    Consequently, for $f$ square-integrable against the Gaussian weight with expansion $f = \sum_{n \ge 0} c_{n}\mathrm{He}_{n}$, $\mathrm{Cov}(f(X), f(Y)) = \sum_{n \ge 1} c_{n}^{2}\, n!\, \rho^{n}$, a series with nonnegative coefficients. The Hermite rank of $f$ is the least $q \ge 1$ with $c_{q} \ne 0$. For a stationary Gaussian field of unit variance whose correlation is $\rho(r) = A r^{-m}(1 + o(1))$ as $r \to \infty$, $m > 0$, the correlation of $f$ of the field is therefore $c_{q}^{2}\, q!\, A^{q} r^{-qm}(1 + o(1))$: the rank-$q$ term dominates at large separation, and the limit theorems for sums of such functionals (non-central when $qm$ is below the dimension) are governed by $q$. In three dimensions, the Fourier transform of $r^{-\beta}$, $0 < \beta < 3$, is $C(\beta)\,k^{\beta - 3}$ with
+    \[
+    C(\beta) = \pi^{3/2}\,2^{3 - \beta}\,\frac{\Gamma\bigl(\tfrac{3 - \beta}{2}\bigr)}{\Gamma\bigl(\tfrac{\beta}{2}\bigr)} = 4\pi\,\Gamma(2 - \beta)\,\sin\bigl(\tfrac{\pi}{2}(2 - \beta)\bigr) > 0
+    \]
+    (the second form read by continuity at $\beta = 1$ and $\beta = 2$, where $C = 4\pi$ and $2\pi^{2}$), in the convention $P(k) = \int e^{-i\mathbf{k}\cdot\mathbf{x}}\xi(\mathbf{x})\,d^{3}x$; and a locally integrable correlation equal to $B r^{-\beta}(1 + O(r^{-\delta}))$ at large $r$, $\delta > 0$, has $P(k) = B\,C(\beta)\,k^{\beta - 3}(1 + o(1))$ as $k \to 0$. \emph{Provenance:} \cite{Mehler1866}, \cite{Taqqu1975}, \cite{DobrushinMajor1979} (eq. (1.11), Theorem 1); the Fourier constant is the Riesz-potential constant (Kolyada, arXiv:1709.07195, Section 3).
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -53,9 +71,6 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Created by the maintainer pass of 2026-11-01 (Leon approved the import of Mehler''s formula, the Hermite-rank result and the Fourier asymptotics of a power-law correlation as routine Facts).'
-outside_ga:
-  kind: imported
-  why: 'the Fourier convention P(k) = int e^{-i k.x} xi(x) d^3x is quoted as the sources state it, Fourier analysis of scalar functions'
 ---
 
 ## formal
@@ -67,7 +82,7 @@ Consequently, for $f$ square-integrable against the Gaussian weight with expansi
 \[
 C(\beta) = \pi^{3/2}\,2^{3 - \beta}\,\frac{\Gamma\bigl(\tfrac{3 - \beta}{2}\bigr)}{\Gamma\bigl(\tfrac{\beta}{2}\bigr)} = 4\pi\,\Gamma(2 - \beta)\,\sin\bigl(\tfrac{\pi}{2}(2 - \beta)\bigr) > 0
 \]
-(the second form read by continuity at $\beta = 1$ and $\beta = 2$, where $C = 4\pi$ and $2\pi^{2}$), in the convention $P(k) = \int e^{-i\mathbf{k}\cdot\mathbf{x}}\xi(\mathbf{x})\,d^{3}x$; and a locally integrable correlation equal to $B r^{-\beta}(1 + O(r^{-\delta}))$ at large $r$, $\delta > 0$, has $P(k) = B\,C(\beta)\,k^{\beta - 3}(1 + o(1))$ as $k \to 0$. \emph{Provenance:} \cite{Mehler1866}, \cite{Taqqu1975}, \cite{DobrushinMajor1979} (eq. (1.11), Theorem 1); the Fourier constant is the Riesz-potential constant (Kolyada, arXiv:1709.07195, Section 3).
+(the second form read by continuity at $\beta = 1$ and $\beta = 2$, where $C = 4\pi$ and $2\pi^{2}$), in the convention $P(k) = \int e^{-I_4\mathbf{k}\cdot\mathbf{x}}\xi(\mathbf{x})\,d^{3}x$ (the Fourier transform of a scalar function, with values in $\mathrm{span}\{1, I_4\}$, conventions U1; the sources write $i$ for $I_4$); and a locally integrable correlation equal to $B r^{-\beta}(1 + O(r^{-\delta}))$ at large $r$, $\delta > 0$, has $P(k) = B\,C(\beta)\,k^{\beta - 3}(1 + o(1))$ as $k \to 0$. \emph{Provenance:} \cite{Mehler1866}, \cite{Taqqu1975}, \cite{DobrushinMajor1979} (eq. (1.11), Theorem 1); the Fourier constant is the Riesz-potential constant (Kolyada, arXiv:1709.07195, Section 3).
 
 ## technical
 Functions of a Gaussian variable are expanded in Hermite polynomials, and Mehler's formula says that the polynomials of two correlated Gaussian variables are uncorrelated unless their degrees agree, with covariance $n!\rho^{n}$ at degree $n$. So the covariance of any function of a Gaussian field is a power series in the field's correlation with nonnegative coefficients, and its leading term at large separation is the power set by the first nonzero Hermite coefficient, the Hermite rank. This is the basis of the classical limit theorems for functionals of long-range dependent Gaussian sequences (Taqqu; Dobrushin and Major). The companion fact is the Fourier transform of a power law in three dimensions: a correlation falling as $r^{-\beta}$ has a spectrum rising as $k^{\beta - 3}$ at small $k$, with a positive constant for $0 < \beta < 3$.

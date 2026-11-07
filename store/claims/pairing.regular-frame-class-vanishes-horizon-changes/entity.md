@@ -1,7 +1,7 @@
 ---
 id: pairing.regular-frame-class-vanishes-horizon-changes
 kind: claim
-version: 5
+version: 6
 title: 'The regular frame: the class vanishes on the horizon and changes sign inside'
 status: proved
 region: pairing
@@ -17,10 +17,11 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the pairing classes written with the central unit I_5 of Cl(2,3)'
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
-outside_ga:
-  kind: other
-  why: 'the pairing classes are coordinates on the complexified tangent space of the complex null vector m = e_2 + i e_3, so the values -i(1 - beta)/r and +i(1 + beta)/r carry an i that must commute with the spacetime vectors, which no pseudoscalar does'
 about:
 - obj.pairing.pairing-class-transport
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -51,6 +52,10 @@ locators:
   label: prop:pg
   line: 327
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3: the pairing classes are coordinates on the tangent space complexified with the transverse null vector m = e_2 + i e_3, whose unit must commute with every spacetime vector; it is the central unit I_5 = I_4 e of Cl(2,3) (std-algebra.complexification-is-the-odd-extension, cited as a mention), so m = e_2 + I_5 e_3 and the classes -I_5(1 - beta)/r, +I_5(1 + beta)/r are numbers of span{1, I_5}. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -83,17 +88,17 @@ extraction:
 ## formal
 For the Schwarzschild gravitational field on flat spacetime in the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), take the orthonormal physical frame $\{e_a\}$ whose coframe is the set of components of the physical displacement $\hb^{-1}(dx)$: $\theta^{0} = dT$, $\theta^{1} = dr + \beta\,dT$, $\theta^{2} = r\,d\vartheta$, $\theta^{3} = r\sin\vartheta\,d\varphi$. The rotation-gauge field along this frame, written $\Omega(e_c)$ for $\Omega(\hb(e_c))$ (the bivector of item (b) of the definition along the physical vector $e_c$), has the connection forms $\omega^{0}{}_{1} = -\beta'\,\theta^{1}$, $\omega^{2}{}_{1} = \theta^{2}/r$, $\omega^{2}{}_{0} = -(\beta/r)\,\theta^{2}$, with $\hat3$ mirroring $\hat2$ and $\omega^{3}{}_{2} = (\cot\vartheta/r)\theta^{3}$, where $\beta' = d\beta/dr = -\beta^{3}/4M$. The pairing classes of the outgoing vacuum $\ell = e_{0} + e_{1}$ are
 \[
-\pv(\Omega(e_{0})) = \pv(\Omega(e_{1})) = 0, \qquad \pv(\Omega(e_{2})) = -\frac{1 - \beta}{r}, \qquad \pv(\Omega(e_{3})) = -\,i\,\frac{1 - \beta}{r},
+\pv(\Omega(e_{0})) = \pv(\Omega(e_{1})) = 0, \qquad \pv(\Omega(e_{2})) = -\frac{1 - \beta}{r}, \qquad \pv(\Omega(e_{3})) = -\,I_{5}\,\frac{1 - \beta}{r},
 \]
-zero on the horizon locus $\beta = 1$, negative outside and positive inside; the transverse expansion is $2(1 - \beta)/r$, the expansion of the outgoing congruence, which vanishes on the horizon locus and is negative in the trapped region; and $(\ell \cdot D)\ell = (\beta^{3}/4M)\,\ell$. For the ingoing flag bit, the vacuum $\operatorname{span}\{n, m\}$ with $n = e_{0} - e_{1}$, the transverse classes are $+(1 + \beta)/r$ and $+i(1 + \beta)/r$: one sign throughout, $\tfrac{144}{125}$, $2$ and $12$ at $\beta = \tfrac45, 1, 2$, and no horizon zero, the ingoing rays converging everywhere. The two frames agree covariantly: $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$ in both transverse directions, the factor being the rescaling $\ell_{\mathrm{PG}} = (F/(1 + \beta))\,\ell_{\mathrm{static}}$; at $(F, \beta) = (\tfrac35, \tfrac45)$ the values are $-\tfrac{16}{125} = \tfrac13\cdot(-\tfrac{48}{125})$. The field strength $\mathcal{R}(B)$ read in the regular frame has the same coefficients as functions of $r$, and the class of the loop $(n, e_{2})$ is $2M/r^{3}$ in this frame too, equal to $1$ on the horizon locus at $M = \tfrac12$: the curvature classes do not vanish where the connection classes do.
+numbers of $\mathrm{span}\{1, I_{5}\}$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$, in which the transverse complex null vector is $m = e_{2} + I_{5}e_{3}$ (\claimref{std-algebra.complexification-is-the-odd-extension}); zero on the horizon locus $\beta = 1$, negative outside and positive inside; the transverse expansion is $2(1 - \beta)/r$, the expansion of the outgoing congruence, which vanishes on the horizon locus and is negative in the trapped region; and $(\ell \cdot D)\ell = (\beta^{3}/4M)\,\ell$. For the ingoing flag bit, the vacuum $\operatorname{span}\{n, m\}$ with $n = e_{0} - e_{1}$, the transverse classes are $+(1 + \beta)/r$ and $+I_{5}(1 + \beta)/r$: one sign throughout, $\tfrac{144}{125}$, $2$ and $12$ at $\beta = \tfrac45, 1, 2$, and no horizon zero, the ingoing rays converging everywhere. The two frames agree covariantly: $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$ in both transverse directions, the factor being the rescaling $\ell_{\mathrm{PG}} = (F/(1 + \beta))\,\ell_{\mathrm{static}}$; at $(F, \beta) = (\tfrac35, \tfrac45)$ the values are $-\tfrac{16}{125} = \tfrac13\cdot(-\tfrac{48}{125})$. The field strength $\mathcal{R}(B)$ read in the regular frame has the same coefficients as functions of $r$, and the class of the loop $(n, e_{2})$ is $2M/r^{3}$ in this frame too, equal to $1$ on the horizon locus at $M = \tfrac12$: the curvature classes do not vanish where the connection classes do.
 
 ## technical
-For the Schwarzschild field on flat spacetime in the Painlev\'e-Gullstrand gauge, the orthonormal physical frame has coframe $\theta^0 = dT$, $\theta^1 = dr + \beta\,dT$, $\theta^2 = r\,d\vartheta$, $\theta^3 = r\sin\vartheta\,d\varphi$ (the components of $\hb^{-1}(dx)$), with $\beta' = -\beta^3/4M$. Along this frame the rotation-gauge field gives the outgoing vacuum $\ell = e_0 + e_1$ the pairing classes $\pv(\Omega(e_0)) = \pv(\Omega(e_1)) = 0$, $\pv(\Omega(e_2)) = -(1 - \beta)/r$ and $\pv(\Omega(e_3)) = -i(1 - \beta)/r$: zero on the horizon locus $\beta = 1$, negative outside and positive inside. The transverse expansion $2(1 - \beta)/r$ of the outgoing congruence vanishes on the horizon locus and is negative in the trapped region, and $(\ell \cdot D)\ell = (\beta^3/4M)\,\ell$.
+For the Schwarzschild field on flat spacetime in the Painlev\'e-Gullstrand gauge, the orthonormal physical frame has coframe $\theta^0 = dT$, $\theta^1 = dr + \beta\,dT$, $\theta^2 = r\,d\vartheta$, $\theta^3 = r\sin\vartheta\,d\varphi$ (the components of $\hb^{-1}(dx)$), with $\beta' = -\beta^3/4M$. Along this frame the rotation-gauge field gives the outgoing vacuum $\ell = e_0 + e_1$ the pairing classes $\pv(\Omega(e_0)) = \pv(\Omega(e_1)) = 0$, $\pv(\Omega(e_2)) = -(1 - \beta)/r$ and $\pv(\Omega(e_3)) = -I_{5}(1 - \beta)/r$, numbers of $\mathrm{span}\{1, I_{5}\}$ with $I_{5}$ the central unit of $\Cl(2,3)$ that complexifies the transverse null vector $m = e_{2} + I_{5}e_{3}$: zero on the horizon locus $\beta = 1$, negative outside and positive inside. The transverse expansion $2(1 - \beta)/r$ of the outgoing congruence vanishes on the horizon locus and is negative in the trapped region, and $(\ell \cdot D)\ell = (\beta^3/4M)\,\ell$.
 
-For the ingoing vacuum $\operatorname{span}\{n, m\}$, $n = e_0 - e_1$, the transverse classes are $(1 + \beta)/r$ and $i(1 + \beta)/r$, of one sign throughout with no horizon zero. The two frames agree covariantly, $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$, the factor being the rescaling of $\ell$ between them. The curvature class of the loop $(n, e_2)$, read from the field strength, is $2M/r^3$ in this frame too, nonzero on the horizon: the curvature classes do not vanish where the connection classes do.
+For the ingoing vacuum $\operatorname{span}\{n, m\}$, $n = e_0 - e_1$, the transverse classes are $(1 + \beta)/r$ and $I_{5}(1 + \beta)/r$, of one sign throughout with no horizon zero. The two frames agree covariantly, $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$, the factor being the rescaling of $\ell$ between them. The curvature class of the loop $(n, e_2)$, read from the field strength, is $2M/r^3$ in this frame too, nonzero on the horizon: the curvature classes do not vanish where the connection classes do.
 
 ## lay
 In axes carried by an observer falling freely into a non-rotating black hole, which stay regular across the horizon, transport leaves the outgoing light-like vacuum undisturbed exactly on the horizon and disturbs it with opposite signs outside and inside. This matches the familiar behaviour of outgoing light rays, which stop spreading at the horizon and converge inside it. The ingoing choice is disturbed everywhere with one sign, and the gravitational field strength's own contribution does not vanish on the horizon.
 
 ## one-liner
-For the Schwarzschild field in the Painlev\'e-Gullstrand gauge the transverse pairing classes of the outgoing vacuum are $-(1 - \beta)/r$ and $-i(1 - \beta)/r$, vanishing on the horizon locus and changing sign inside, while the ingoing classes and the curvature class of the loop $(n, e_2)$ do not vanish there.
+For the Schwarzschild field in the Painlev\'e-Gullstrand gauge the transverse pairing classes of the outgoing vacuum are $-(1 - \beta)/r$ and $-I_{5}(1 - \beta)/r$ ($I_{5}$ the central unit of $\Cl(2,3)$), vanishing on the horizon locus and changing sign inside, while the ingoing classes and the curvature class of the loop $(n, e_2)$ do not vanish there.

@@ -43,10 +43,11 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.hole-mass-is-ground-energy-label
-outside_ga:
-  kind: complex-analysis
-  why: 'the boost dynamics Ad(e^{itH_F}) acts on the window algebra End(Lambda C^F) of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) the window algebra End(Lambda C^F) is read over span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof), so the boost dynamics Ad(e^{itH_F}) is Ad(e^{JtH_F}); the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

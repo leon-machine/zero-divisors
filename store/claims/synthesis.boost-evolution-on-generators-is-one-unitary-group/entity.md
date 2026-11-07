@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the quoted window dynamics written with the transverse unit J'
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -57,10 +61,11 @@ lineage:
   motivated_by:
   - note.decisions.two-boost-flows
   - synthesis.n-plus-null-ground-state
-outside_ga:
-  kind: complex-analysis
-  why: 'the proof quotes the windows'' boost dynamics a_j -> e^{-i omega_j t}a_j with i: window flows on boundary modes keep their own unit (their modes descend from T05''s atom and anticommute with I_4, conventions known limits 1 and 2), while the generator''s continuum carries I_4'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2 for the quoted window dynamics: a_j -> e^{-J omega_j t}a_j with J = e_2 e_3, the boundary modes'' complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention); the generator''s continuum keeps I_4 (U1), and the proof now says which unit acts where and that the comparison is of frequencies, the units not identified. Declaration removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

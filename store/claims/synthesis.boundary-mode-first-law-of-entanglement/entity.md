@@ -1,7 +1,7 @@
 ---
 id: synthesis.boundary-mode-first-law-of-entanglement
 kind: claim
-version: 6
+version: 7
 title: The first law of entanglement and entanglement equilibrium on the boundary-mode algebra
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -42,6 +46,10 @@ about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) the window''s Fock space and its GNS spaces have their numbers read in span{1, J}, J = e_2 e_3 the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level); the entity wrote no bare i (the detector''s hits were the eigenbasis index of the purification, renamed k); the outside_ga declaration, whose reason was the complex Hilbert-space structure, is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -83,13 +91,10 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (light; clauses (i)-(iii) have no gravity content): in (iv) the small geodesic ball read at x0 in a gauge with hb(x0) = 1, Omega(x0) = 0 on a flat background of dimension d; flat-space conformal fields named as vanishing gravitational field; the store-convention equation given its GTG form R(a) + 8 pi G T(a) = (Lambda + 4 pi G tr T) a in four dimensions. The d-dimensional tensor balance kept in the clause''s declared signature and convention. Clauses (i)-(iv) unchanged.'
-outside_ga:
-  kind: complex-analysis
-  why: 'the proof works on the window''s Fock space as the tensor product of copies of C^2, a full matrix algebra with density matrices and a GNS purification: Hilbert-space structure that the entity does not build with a pseudoscalar as its unit'
 ---
 
 ## formal
-Let $F$ be a window of the boundary-mode algebra with its boost dynamics (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}), $H_{F} = \sum_{j \in F}\omega_{j}N_{j}$, and $\omega_{I}$ the state of Theorem \claimref{hawking.i-state}, whose restriction to $F$ is the Gibbs state $\rho_{I} = e^{-\beta H_{F}}/Z_{F}$ with $n_{j} = (e^{\beta\omega_{j}} + 1)^{-1}$. Put $K_{F} := -\ln\rho_{I} = \beta H_{F} + \ln Z_{F}$, the modular Hamiltonian of $\omega_{I}$ on $F$. Then:
+Let $F$ be a window of the boundary-mode algebra with its boost dynamics (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}), $H_{F} = \sum_{j \in F}\omega_{j}N_{j}$, and $\omega_{I}$ the state of Theorem \claimref{hawking.i-state}, whose restriction to $F$ is the Gibbs state $\rho_{I} = e^{-\beta H_{F}}/Z_{F}$ with $n_{j} = (e^{\beta\omega_{j}} + 1)^{-1}$. Put $K_{F} := -\ln\rho_{I} = \beta H_{F} + \ln Z_{F}$, the modular Hamiltonian of $\omega_{I}$ on $F$. Numbers on the window's Fock space and its GNS spaces are read in $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the complex unit of the radial atom from which the boundary modes descend (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}). Then:
 \begin{enumerate}
 \item[(i)] (First law of entanglement.) For every differentiable family $\rho_{t}$ of density matrices on $F$ with $\rho_{0} = \rho_{I}$, $\frac{d}{dt}S(\rho_{t})\big|_{0} = \frac{d}{dt}\Tr(\rho_{t}K_{F})\big|_{0} = \beta\,\frac{d}{dt}\Tr(\rho_{t}H_{F})\big|_{0}$.
 \item[(ii)] (Equilibrium.) For every state $\rho$ on $F$, $S(\rho) - \beta\Tr(\rho H_{F}) = \ln Z_{F} - S(\rho\,\|\,\rho_{I}) \le \ln Z_{F}$, with equality if and only if $\rho = \rho_{I}$: among the states of $F$ with a given modular energy $\Tr(\rho K_{F})$, $\omega_{I}$ is the unique one of maximal entropy, and at second order the first law fails by exactly the relative entropy. Per mode, $s(q) - \beta\omega_{j}q$ is strictly concave in the occupation $q$ and stationary only at $q = n_{j}$.
