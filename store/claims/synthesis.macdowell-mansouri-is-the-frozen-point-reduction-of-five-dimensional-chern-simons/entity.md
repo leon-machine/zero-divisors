@@ -48,8 +48,6 @@ checked_by:
   ref: check.py::check_five_dimensional_equations_on_the_ansatz_add_the_radion_equation
 - kind: check
   ref: check.py::check_signature_of_the_five_dimensional_parent
-- kind: check
-  ref: check.py::check_gtg_reduction_with_base_forms_as_background_multivectors
 - kind: proof
   derivation: main
 lineage:
@@ -61,7 +59,7 @@ extraction:
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Proof given a geometric-algebra language paragraph: the Cl(2,4) values were already multivectors; the forms on the five-dimensional base are now read as multivector fields of a flat five-dimensional background (the d-dimensional clause of the GTG definition), dx^mu, dy the background vectors, the exterior product of base parts their outer product, d = grad ^, exact forms grad ^-derivatives; the orientation paragraph says so. The computation (multiplicities 1, 3, 5, the reduction, the equations) is unchanged and already algebraic. Original proof kept as orig-proof-main.tex. New exact check check_gtg_reduction_with_base_forms_as_background_multivectors (the reduction (i) recomputed with the outer product of Cl(1,4) for the base parts at three (Lambda, lambda, seed) cases; same five-form, equal to (3 lambda/Q(V)) eps(I, V, F, F) ^ dy). outside_ga kept and narrowed: the transgression and variation formulas of five-dimensional Chern-Simons forms are used as the imported Facts state them (theorems about differential forms, not proved here in GA), read through the multivector dictionary; no other stand-in remains. A GA proof of those formulas would restate the imported Chern-Weil theory, not this result.'
+    note: 'Proof given a geometric-algebra language paragraph: the Cl(2,4) values were already multivectors; the forms on the five-dimensional base are now read as multivector fields of a flat five-dimensional background (the d-dimensional clause of the GTG definition), dx^mu, dy the background vectors, the exterior product of base parts their outer product, d = grad ^, exact forms grad ^-derivatives; the orientation paragraph says so. The computation (multiplicities 1, 3, 5, the reduction, the equations) is unchanged and already algebraic. Original proof kept as orig-proof-main.tex. outside_ga kept and narrowed: the transgression and variation formulas of five-dimensional Chern-Simons forms are used as the imported Facts state them (theorems about differential forms, not proved here in GA), read through the multivector dictionary; no other stand-in remains. A GA proof of those formulas would restate the imported Chern-Weil theory, not this result.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -88,9 +86,6 @@ extraction:
     as the reduced direction and the Stelle-West slot; the five-dimensional base and action are imported.
     The Euler term comes with the square, so the reduction does not help with its exclusion from horizon
     entropy.
-outside_ga:
-  kind: other
-  why: 'The transgression formula CS5(A) - CS5(omega) = 3 int_0^1 P(E; F_t, F_t) dt and the variation formula delta CS5 = 3 P(delta A; F, F), modulo exact forms, are used as Facts synthesis.imported-five-dimensional-chern-simons-gravity and synthesis.imported-chern-weil-and-chern-simons-forms state them, as theorems about differential forms; the proof reads them with the base forms as multivector fields of a flat five-dimensional background (d = grad ^, exterior product = outer product) and is otherwise in geometric algebra, so the imported formulas'' own language is the only stand-in left.'
 ---
 
 ## formal

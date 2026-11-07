@@ -141,8 +141,10 @@ optional to fix, since the unit principle covers levels and proofs.
   - Omega(e_x) = -(alpha1'/(a2 a3)) e01 + (a1^2/(2 a2 a3)) e23;
   - Omega(e_y) = z (alpha1'/(a2 a3)) e01 - (alpha2'/(a1 a3)) e02 + (a1/(2 a3)) e13 - z (a1^2/(2 a2 a3)) e23;
   - Omega(e_z) = -(alpha3'/(a1 a2)) e03 - (a1/(2 a2)) e12.
-- The Ellis-MacCallum formula: `e6_ellis_maccallum.py` is a symbolic polynomial identity in the general
-  2-jet of a coframe; `e6_ellis_maccallum_fast.py` checks random exact 2-jets. See the result line below.
+- The Ellis-MacCallum formula itself is correct. `e6_ellis_maccallum_fast.py` checks it against the
+  MTW-convention Christoffel scalar at three random exact 2-jets of a general coframe (theta(x0) = 1,
+  81 random rational jet coefficients). They agree exactly (R = 767/72, 1477/18, -25621/288). The fully
+  symbolic version, `e6_ellis_maccallum.py`, timed out at 900 s, so this is strong evidence, not a proof.
 - Mutations of check_gtg_slice_and_bianchi_ii_field_strength (the sign of a1^4 in E1, and R3 -> -R3)
   both FAIL.
 

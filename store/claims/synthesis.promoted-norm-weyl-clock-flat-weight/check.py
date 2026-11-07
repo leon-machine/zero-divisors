@@ -518,6 +518,18 @@ def gauge_cp2(r0, root):
     return gtg.Field(TH, sq=E4)
 
 
+def frame_trivector(Fop, a, sq):
+    """The MacDowell-Mansouri frame equation as a trivector: 2 d_b ^ F(I(a ^ b)) (eps_abcd e^b ^ F^cd)."""
+    I = gtg.pseudoscalar(sq)
+    out = {}
+    for b in R4:
+        out = gtg.m_add(out, gtg.outer(gtg.er(b, sq), gtg.apply_op(Fop, GA.mul(I, gtg.wedge(a, gen(b), sq), sq)), sq))
+    return gtg.m_scal(2, out)
+
+
+INSTANTON_LAMBDAS = (F(3), F(1), F(6))   # S^4, S^2 x S^2, CP^2 in these normalisations: calR(a) = -Lambda a
+
+
 def check_gtg_instantons_as_euclidean_gauge_fields():
     premise("synthesis.imported-chern-gauss-bonnet")
     premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
@@ -530,8 +542,17 @@ def check_gtg_instantons_as_euclidean_gauge_fields():
         ok = ok and fld.torsion_free()
         Rc = fld.curvature()
         lam = -gtg.ricci(Rc, gen(0), E4).get((0,), F(0))   # Einstein: calR(a) = -Lambda a on (4,0)
+        ok = ok and lam == INSTANTON_LAMBDAS[len(out)]      # the store sign: positive Lambda gives calR(a) = -Lambda a
         ok = ok and all(GA.eq(gtg.ricci(Rc, gen(c), E4), GA.scal(-lam, gen(c))) for c in R4)
         Fop = gtg.op_planes(gtg.op_add(Rc, gtg.op_const(lam / 3)), E4)    # F = calR - (Lambda/3) D
+        if not out:                                          # the unit S^4: calR(B) = -B = D(B) on every plane
+            ok = ok and all(GA.eq(Rc[pl], D[pl]) for pl in D)
+        I = gtg.pseudoscalar(E4)
+        for c in R4:                                         # frame equation 2(G(a) - Lambda a) I = 0 on (4,0)
+            a = gen(c)
+            T = frame_trivector(Fop, a, E4)
+            ok = ok and GA.eq(T, GA.scal(2, GA.mul(gtg.m_sub(gtg.einstein(Rc, a, E4), GA.scal(lam, a)), I, E4)))
+            ok = ok and GA.is_zero(T) and not GA.is_zero(gtg.m_add(gtg.einstein(Rc, a, E4), GA.scal(lam, a)))
         W = gtg.weyl_op(Rc, E4)
         W2, E = gtg.kretschmann(W, E4), gtg.euler_density(Rc, E4)
         ok = ok and q_ga(Fop, Fop, E4) == W2 and q_ga(Rc, Rc, E4) == E and E == W2 + F(8, 3) * lam * lam
