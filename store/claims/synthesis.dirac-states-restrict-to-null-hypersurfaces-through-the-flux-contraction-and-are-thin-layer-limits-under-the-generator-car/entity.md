@@ -52,7 +52,7 @@ derivations:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@3
   - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
-  - synthesis.imported-haefner-nicolas-dirac-characteristic-problem-on-light-cones-near-the-vertex@1
+  - synthesis.imported-haefner-nicolas-dirac-characteristic-problem-on-light-cones-near-the-vertex@2
   - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@5
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@6

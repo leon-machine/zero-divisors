@@ -316,6 +316,8 @@ def check_gtg_tractor_transport_in_cl24():
     N_n^2 = 0; (b) N_n E N_n = nu N_n; (c) N_n N_R N_n = 0; A preserves the tractor metric; the gauge identity
     (1 - f N_n) A (1 + f N_n) - f' N_n = E + N_R + f [E, N_n] for f' = nu (S - f^2); (4) Einstein sides have
     P = (Lambda/6) id."""
+    premise("synthesis.imported-gtg-dictionary")
+    premise("synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection")
     premise("interior.imported-tractor-connection")
     ok = True
     for gp, n, R, tests in GTG_DATA:

@@ -223,6 +223,7 @@ def check_gtg_rotation_gauge_field_and_mixed_ricci():
     Omega(e_tau) = 0, Omega(e_{x^i}) = -d_tau A_i B_i - sum_j (d_j A_i / A_j) e_i ^ e_j; the boost row of the
     field strength gives e0 . calR(e_i) = sum_k (1/A_k) d_tau(d_i A_k / A_i); and tau R_0i = -tau A_i e0 .
     calR(e_i) equals d_i p_i + sum_j (p_i - p_j) d_i b_j for two values of L (the log tau terms cancel)."""
+    premise("synthesis.imported-gtg-dictionary")
     premise("dark-energy.variable-exponents-residue-pointwise-corrections-are")
     ok = True
     x0 = [F(1, 2), F(-1, 3), F(2)]

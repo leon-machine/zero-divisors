@@ -32,7 +32,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -53,6 +53,10 @@ locators:
   label: thm:wallfree
   line: 772
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (close-out): dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 repinned; its formal is unchanged (the v6 change is the GTG proof and its fixes).'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -274,6 +274,7 @@ def check_gtg_kasner_field_strength_and_weyl_map():
     (S - 1) t^-2 e0, calR(e_j) = 0; scalar (S - 1) t^-2; Weyl map W(B_i) = lambda_i B_i and W(I4 B_i) =
     lambda_i I4 B_i with t^2 lambda_1 = E1/3, t^2 lambda_2 = -E2/3, trace zero; zero exactly at the Weyl-flat
     points; field strength zero at the Milne points."""
+    premise("synthesis.imported-gtg-dictionary")
     premise("synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching")
     ok = True
     sq = gtg.S13

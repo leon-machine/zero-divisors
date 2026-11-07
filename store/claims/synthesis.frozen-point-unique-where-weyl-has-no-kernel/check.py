@@ -225,6 +225,8 @@ def check_gtg_tractor_field_strength_is_minus_weyl():
     kernel vector (rank four); type N has its null direction as a kernel vector; the algebraic step: on
     sigma ninf + rho n0 the connection's algebraic part is -(u . V) A, zero exactly on the line of I, and
     Q(c I) = c^2 Lambda/3."""
+    premise("synthesis.imported-gtg-dictionary")
+    premise("synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection")
     premise("dark-energy.imported-frozen-point-geometry")
     ok = True
     sq = gtg.S13

@@ -42,8 +42,12 @@ on the reconciled findings chose the recommended answer to each of the eight dec
    Euclidean sign (unit S^4: calR(B) = -B, Einstein is calR(a) = -Lambda a).
 7. **Pin review (PIN_REVIEW.md, pin-review.md).** 751 stale pins at the start; 576 notation-only repins, 106
    restatement repins after reading the dependant's use (each noted), 4 quotations updated, 0 left; the 70 on the
-   GTG entities were reviewed in the fix round (40 more, 0 left).
-8. **Language check.** The bare-unit detector now also catches 3iI_2, 2iJ, a lone iq and Q(i) (tests added).
+   GTG entities were reviewed in the fix round and at close-out (0 left; the build reports 0 stale claims).
+8. **Language check.** The bare-unit detector now also catches 3iI_2, 2iJ, a lone iq and Q(i), and no longer
+   flags an index pair such as $ij$ (tests added). At close-out `tp ga-report` found three entities using notation
+   outside GA with nothing declared: sheaf.wall-fibre-black-hole and note.sheaf.remark-965 now name the quotient
+   Cl(1,2) = Cl(3,0), the Pauli algebra (isomorphism stated in the proof, checked exactly), in place of
+   Mat_2(C); the Haefner-Nicolas import declares its source's L^2 tensor C^2. The report now lists none.
 
 ## GA coverage, stated plainly
 
@@ -84,4 +88,10 @@ letters (apply-AP1.md). references.yaml would restore WeinbergQFT1 on a rebuild 
 
 ## Checks
 
-CHECK_RESULT
+- `tp check --store store --full --keep-going --author leon` (all six layers, every check rerun, 37 min):
+  0 errors, 9 warnings, all from this run's last edits (6 W405 on new uses edges, now touched by premise() in
+  the GTG checks; 3 W503 wording, fixed). Log: final-check-full.log.
+- After the close-out edits, all six layers with the layer-4 cache: 0 errors, 0 warnings (final-check.log).
+- `tp build`: 2,269 entities, 7,113 edges, 0 errors, 0 stale claims. `tp.site` rebuilt. `tp lock` written;
+  layers 1-3 after the lock: 0 errors, 0 warnings.
+- Unit tests: 393 passed, 1 skipped.

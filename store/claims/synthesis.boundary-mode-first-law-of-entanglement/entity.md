@@ -34,7 +34,7 @@ derivations:
 - name: main
   uses:
   - hawking.i-state@4
-  - state-selection.partner-purification-are-canonical@4
+  - state-selection.partner-purification-are-canonical@5
   - synthesis.boundary-mode-thermal-entropy@2
   - angle.imported-theorems-deliver-their-hypotheses@3
   - synthesis.imported-jacobson-entanglement-equilibrium-2016@2
@@ -54,6 +54,10 @@ about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (close-out): state-selection.partner-purification-are-canonical 4 -> 5 repinned; the v5 formal only names the unit of the mode factor''s scalars, and clause (1)-(4) as used in (iii) is unchanged.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

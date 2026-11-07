@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-haefner-nicolas-dirac-characteristic-problem-on-light-cones-near-the-vertex
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Dirac characteristic problem on a light cone (Haefner and Nicolas)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: consistency pass, outside_ga declared for the source's function space
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -24,7 +28,14 @@ imported_from:
 - citation: 'D. Häfner and J.-P. Nicolas, The characteristic Cauchy problem for Dirac fields on curved backgrounds, J. Hyperbolic Differ. Equ. 8 (2011), no. 3, 437--483; arXiv:0903.0515.'
   key: HafnerNicolas2011
   locator: 'Abstract; Sec. 3 (Def. 3.6, the domain D_T); Sec. 4.1 (Def. 4.2, Eq. (14), Thm. 1); Sec. 4.4 (Def. 4.11, Thm. 2)'
+outside_ga:
+  kind: imported
+  why: 'Clause (b) quotes the source''s target space L^2(C_0^+, d sigma) tensor C^2 of the trace operator as the theorem states it (the two components Psi_1, Psi_4 of the spinor on the cone); the store reads its scalars in span{1, I_4}, and nothing in the clause depends on the matrix form.'
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GA language (close-out): outside_ga declared (imported) for the source''s L^2 tensor C^2 in clause (b). Version 1 -> 2.'
   note: >-
     Imported as supporting provenance for the restriction of Dirac states to null hypersurfaces: it is the
     case of the generator anticommutation relations (an isometric trace on a null hypersurface with the flux
