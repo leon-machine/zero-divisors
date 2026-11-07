@@ -61,6 +61,7 @@ def _taylor(rf, n):
 
 
 def check_regular_reparametrisation_keeps_the_ground_state_singularity():
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     premise("synthesis.positive-null-energy-gives-r-premises")
     xis = ([F(0), F(1), F(1, 3)],
            [F(2), F(3), F(-1, 2), F(1, 5)],
@@ -96,6 +97,7 @@ def check_regular_reparametrisation_keeps_the_ground_state_singularity():
 
 
 def check_scaling_limit_is_the_ground_state():
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     premise("synthesis.positive-null-energy-gives-r-premises")
     premise("hawking.imported-quasi-free-kms-reduces-two")
     e = RF.var()

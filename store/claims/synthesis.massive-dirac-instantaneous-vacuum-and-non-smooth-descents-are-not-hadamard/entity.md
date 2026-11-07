@@ -1,7 +1,7 @@
 ---
 id: synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard
 kind: claim
-version: 2
+version: 3
 title: 'Massive Dirac: instantaneous vacua and non-smooth descents are not Hadamard'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,6 +53,10 @@ lineage:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
   - synthesis.imported-propagation-of-hadamard-form
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the two-level mode equation I u'' = Hu is now written as the Pauli pseudoscalar I = sigma_1 sigma_2 sigma_3 (I_4 read in the even subalgebra), as the proof already identified it, and the Bunch-Davies mode u = e^{-I_4 z}(1 - I_4/z) with the instantaneous data chi_z = -I_4 use the field theory''s unit I_4 (numbers read in span{1, I_4}); no bare i remains.'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Sets outside state-selection principles against the descent's deposit on the deposit's own field, the
@@ -95,7 +103,7 @@ extraction:
 ---
 
 ## formal
-Let the descended field be a spatially flat Robertson-Walker gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with conformal time $\eta$ and scale factor $a(\eta)$, and let $\psi$ be a free Dirac field of mass $m \ge 0$. With $\chi = a^{3/2}\psi$, each momentum $\vec k$, $k = |\vec k|$, and helicity sector is the two-level system $i u' = Hu$, $H = M\sigma_{3} + k\sigma_{1}$, $M = ma(\eta)$, in the Pauli algebra with unit $i = I = \sigma_{1}\sigma_{2}\sigma_{3}$; for a pure state $\rho = \tfrac12(1 + s)$, $s$ a unit vector, it reads $s' = 2h \times s$ with $h = k\sigma_{1} + M\sigma_{3}$. Write $M_{j} = d^{j}M/d\eta^{j}$, $\hat h = h/|h|$, and $|\beta_{k}|^{2} = \tfrac12(1 - s\cdot s')$ for the Bogoliubov coefficient between the pure states of Bloch vectors $s$ and $s'$.
+Let the descended field be a spatially flat Robertson-Walker gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) with conformal time $\eta$ and scale factor $a(\eta)$, and let $\psi$ be a free Dirac field of mass $m \ge 0$. With $\chi = a^{3/2}\psi$, each momentum $\vec k$, $k = |\vec k|$, and helicity sector is the two-level system $I u' = Hu$, $H = M\sigma_{3} + k\sigma_{1}$, $M = ma(\eta)$, in the Pauli algebra with unit its pseudoscalar $I = \sigma_{1}\sigma_{2}\sigma_{3}$ ($I_{4}$ read in the even subalgebra); for a pure state $\rho = \tfrac12(1 + s)$, $s$ a unit vector, it reads $s' = 2h \times s$ with $h = k\sigma_{1} + M\sigma_{3}$. Write $M_{j} = d^{j}M/d\eta^{j}$, $\hat h = h/|h|$, and $|\beta_{k}|^{2} = \tfrac12(1 - s\cdot s')$ for the Bogoliubov coefficient between the pure states of Bloch vectors $s$ and $s'$.
 \begin{enumerate}
 \item[(i)] \emph{(Adiabatic series.)} The equation has a unique formal solution $s_{\mathrm{ad}} = \sum_{j \ge 0}k^{-j}c_{j}$ with $c_{0} = \sigma_{1}$, each $c_{j}$ a vector polynomial in $M_{0}, \dots, M_{j-1}$, homogeneous of weight $j$ when $M_{i}$ has weight $i + 1$, and $|s_{\mathrm{ad}}| = 1$ order by order: $c_{1} = M\sigma_{3}$, $c_{2} = -\tfrac12 M^{2}\sigma_{1} + \tfrac12 M_{1}\sigma_{2}$. The only monomial of $c_{n+1}$ containing $M_{n}$ is $\lambda_{n}M_{n}v_{n}$ with $v_{n} = \sigma_{3}$ for $n$ even, $\sigma_{2}$ for $n$ odd, and $\lambda_{n} = (-1)^{\lfloor n/2\rfloor}2^{-n}$; $M_{n}$ does not occur in $c_{j}$ for $j \le n$. At $m = 0$ every $c_{j}$ with $j \ge 1$ vanishes.
 \item[(ii)] \emph{(The instantaneous vacuum.)} $\hat h$ agrees with $s_{\mathrm{ad}}$ through order $k^{-1}$ and differs from it at order $k^{-2}$ by $\tfrac12M_{1}\sigma_{2}$; $1 - s_{\mathrm{ad}}\cdot\hat h = M_{1}^{2}/(8k^{4}) + \bigl(\tfrac1{32}M_{2}^{2} - \tfrac1{16}M_{1}M_{3} - \tfrac38M^{2}M_{1}^{2}\bigr)k^{-6} + O(k^{-8})$. So, at an instant where $M_{1} = ma' \neq 0$, the instantaneous vacuum has $|\beta_{k}|^{2} = M_{1}^{2}/(16k^{4}) + O(k^{-6})$ against an adiabatic state of infinite order: a finite number density of quanta above that state, but a point-split energy density relative to it that diverges to $-\infty$ logarithmically. Given that adiabatic states of infinite order of the Dirac field are Hadamard (Fact \claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}(c)), the instantaneous vacuum is not Hadamard. Every gauge-invariant quasi-free deposit diagonal over it, whatever its occupations, has the same $\sigma_{2}$ gap $\tfrac14M_{1}k^{-2} + O(k^{-4})$ in its one-particle symbol against the adiabatic state, and is not Hadamard either.

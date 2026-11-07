@@ -158,7 +158,7 @@ def check_canonical_part_is_lambda_m():
 
 
 def check_boost_weight_of_canonical_part():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("field-theory.second-quantisation")
     c, s = F(5, 4), F(3, 4)                     # e^{l/2} = c + s = 2
     R = GA.add(GA.sc(c), GA.scal(s, B))

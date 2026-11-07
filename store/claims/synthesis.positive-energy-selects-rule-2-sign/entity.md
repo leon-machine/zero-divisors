@@ -38,7 +38,14 @@ lineage:
   motivated_by:
   - rule2.where-obstruction-sits-commuting-square
   - field-theory.twistor-attachment
+outside_ga:
+  kind: complex-analysis
+  why: 'positive energy is the spectrum condition on -i d pi(X) for a unitary representation of Spin(p, q) on an abstract complex Hilbert space, as in the imported invariant-cone classification, and the real forms are compared inside so(6, C); neither is a GA-built mode space'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the generator -i d pi(X) of a continuous unitary representation of Spin(p, q) on an abstract Hilbert space (the spectrum condition, the imported invariant-cone classification) and the complex Lie algebra so(6, C) are Hilbert-space and Lie-theoretic structure, not a GA-built mode space; declared (version and levels unchanged).'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

@@ -87,7 +87,7 @@ KERNELS = [
 
 def check_weight_half_preserves_the_local_hilbert_schmidt_norm():
     premise("synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit")
-    premise("synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet")
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     l, n = _vec(1, 1), _vec(1, -1)
     for r in ROTOR_R:
         B = _rotor(r)
@@ -163,7 +163,7 @@ def _log_arg(a, b, c, d):
 
 def check_homogeneous_remainder_is_not_square_integrable_at_the_edge():
     premise("synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     # the log arguments are multiplicative over adjacent rectangles (additivity of the integral), in both legs
     for (a, b, e, c, d, g) in RECTS:
         GA.check("additive in u", _log_arg(a, b, c, d) * _log_arg(b, e, c, d) == _log_arg(a, e, c, d))
@@ -193,7 +193,7 @@ def check_homogeneous_remainder_is_not_square_integrable_at_the_edge():
 
 
 def check_regular_reparametrisation_changes_the_vacuum_by_a_bounded_kernel():
-    premise("synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet")
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
 
     def f(u):
         return u + F(2, 3) * u ** 3 + F(1, 5) * u ** 5

@@ -56,13 +56,13 @@ lineage:
   - synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four
   - standard-model.imported-anomaly-coefficients
 outside_ga:
-  kind: other
-  why: 'two plain complexifications stay: the Dirac matrices over Q(i) against which the trace is checked (the matrix reading), and the complexified gauge algebra sl(3) + sl(2) + C of clause (vi), on which the symmetric tensor d is shown to vanish'
+  kind: bridge
+  why: 'i stays only in the Dirac matrices over Q(i) against which the check compares the trace (the matrix reading set beside the algebra), where it is the matrices'' complex scalar'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'gamma_5 = i I_4 is now the chirality x -> I_4 x I_4 (left I_4 inside the product, the unit on the right); the chiral traces, the pseudoscalar triangle numerator and the imported integral value use the field theory''s unit I_4, numbers read in span{1, I_4} and collected outside the product; what stays is the check''s comparison with Dirac matrices over Q(i) and the complexified gauge algebra sl(3) + sl(2) + C of clause (vi).'
+    note: 'gamma_5 = i I_4 is now the chirality x -> I_4 x I_4 (left I_4 inside the product, the unit on the right); the chiral traces, the pseudoscalar triangle numerator and the imported integral value use the field theory''s unit I_4, numbers read in span{1, I_4} and collected outside the product; by Leon''s ruling R3 the complexified gauge algebra of clause (vi) and its representation are read over span{1, I_4} on the tower''s floors (stated once); i stays only in the check''s comparison with Dirac matrices over Q(i), declared as a bridge.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -108,7 +108,7 @@ q_{\mu}T^{\mu\nu\rho} = \frac{1}{2\pi^{2}}\langle I_{4}\gamma^{\nu}k_{1}\gamma^{
 which depends on the regulators only through $\sum_{i \geq 1}c_{i} = -1$. In the index reading the right side is $\pm\tfrac{1}{2\pi^{2}}\epsilon^{\nu\rho\alpha\beta}k_{1\alpha}k_{2\beta}$, the sign fixed by the orientation convention of $\epsilon$.
 \item[(iv)] (Field form.) For polarisations $a_{1}$, $a_{2}$, $\langle I_{4}a_{1}k_{1}a_{2}k_{2}\rangle_{0} = \langle I_{4}f_{1}f_{2}\rangle_{0}$ with the plane-wave field-strength bivectors $f_{j} = a_{j} \wedge k_{j}$, symmetric in the two photons; it is the bilinear form of $\langle I_{4}F^{2}\rangle_{0}$, and for $F = E + I_{4}B$ ($E$, $B$ relative vectors) $\langle I_{4}F^{2}\rangle_{0} = -2E\cdot B$.
 \item[(v)] (Chiral fields.) With $P_{L,R} = \tfrac12(1 \mp \gamma_{5})$, $\mathrm{Tr}[\gamma^{\mu}P_{L}a\gamma^{\nu}P_{L}b\gamma^{\rho}P_{L}c] = \mathrm{Tr}[\gamma^{\mu}a\gamma^{\nu}b\gamma^{\rho}cP_{R}]$, half the vector trace plus half the $\gamma_{5}$ trace, so a Weyl loop carries half the Dirac axial term with the sign of its chirality. For left-handed Weyl fields in a representation of a gauge algebra the anomalous part of the three-current triangle is proportional to the symmetric tensor $d(X, Y, Z) = \mathrm{tr}(X\{Y, Z\})$. The projector identity is proved; the reduction to $d$ is argued (Bose symmetrisation, standard).
-\item[(vi)] (One generation.) For the left-handed content $(1,1)_{0} \oplus (1,\bar 3)_{-2/3} \oplus (2,3)_{1/6} \oplus (2,1)_{-1/2} \oplus (1,1)_{1} \oplus (1,\bar 3)_{1/3}$ of Theorem \claimref{synthesis.anomaly-freedom-forces-slot-content} ($m = 1$), $d$ vanishes on the whole complexified gauge algebra $\mathfrak{sl}(3) \oplus \mathfrak{sl}(2) \oplus \C$ and $\mathrm{tr}\,X = 0$ for every $X$ (for the hypercharge this is $\mathrm{tr}\,Y = 0$, the imported mixed gravitational coefficient: a trace count, not a computed gauge-gravitational triangle); the cancellation is between fields (the quark doublet alone gives $\mathrm{tr}\,Y^{3} = \tfrac{1}{36}$) and holds generation by generation, for any number of generations.
+\item[(vi)] (One generation.) For the left-handed content $(1,1)_{0} \oplus (1,\bar 3)_{-2/3} \oplus (2,3)_{1/6} \oplus (2,1)_{-1/2} \oplus (1,1)_{1} \oplus (1,\bar 3)_{1/3}$ of Theorem \claimref{synthesis.anomaly-freedom-forces-slot-content} ($m = 1$), $d$ vanishes on the whole complexified gauge algebra $\mathfrak{sl}(3) \oplus \mathfrak{sl}(2) \oplus \C$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) and $\mathrm{tr}\,X = 0$ for every $X$ (for the hypercharge this is $\mathrm{tr}\,Y = 0$, the imported mixed gravitational coefficient: a trace count, not a computed gauge-gravitational triangle); the cancellation is between fields (the quark doublet alone gives $\mathrm{tr}\,Y^{3} = \tfrac{1}{36}$) and holds generation by generation, for any number of generations.
 \end{enumerate}
 
 ## technical

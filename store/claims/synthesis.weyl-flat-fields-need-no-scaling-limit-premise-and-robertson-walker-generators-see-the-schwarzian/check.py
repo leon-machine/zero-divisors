@@ -86,7 +86,7 @@ def t_power(n):
 
 def check_schwarzian_vanishes_exactly_on_de_sitter_and_flat():
     premise("synthesis.imported-gtg-dictionary")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     ok = True
     T = GA.RF.var()
     zero_at = []

@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint
 kind: claim
-version: 2
+version: 3
 title: 'A one-doublet field is pure gauge on the null-lift locus'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -44,6 +48,10 @@ lineage:
   - synthesis.rung-unit-is-frame-boost
   - synthesis.rung-field-on-the-lift-locus
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the U(2) generators T_j = (I_4/2) sigma_j, Y = (I_4/2) 1 and of the check''s basis maps (I_4, 0), (0, I_4) is now the field theory''s unit I_4, which commutes with the rung vectors; the complex numbers of the statement are said to be span{1, I_4} (the stored C of R_C); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -67,7 +75,7 @@ extraction:
 ---
 
 ## formal
-In the setting of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}: $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$ with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$ (generators $T_{j} = \tfrac{\mathrm{i}}{2}\sigma_{j}$, $Y = \tfrac{\mathrm{i}}{2}\mathbf{1}$), $H^{2} = \Lambda/3$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, the lift family $c_{\lambda} = -\lambda w_{4} + \tfrac{H^{2}}{\lambda}v_{4}$ and the rung unit $u_{\lambda} = dc_{\lambda}/d\lambda$. Call a \emph{one-doublet subspace} a $U(2)$-invariant real subspace of $\mathcal{R}_{\C}$ of real dimension four, and a one-doublet field a field valued in one.
+In the setting of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}: $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$ (the field theory's unit $I_{4}$ commutes with the rung vectors, and numbers are read in $\mathrm{span}\{1, I_{4}\}$, which is the $\C$ of this statement) with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$ (generators $T_{j} = \tfrac{I_{4}}{2}\sigma_{j}$, $Y = \tfrac{I_{4}}{2}\mathbf{1}$), $H^{2} = \Lambda/3$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, the lift family $c_{\lambda} = -\lambda w_{4} + \tfrac{H^{2}}{\lambda}v_{4}$ and the rung unit $u_{\lambda} = dc_{\lambda}/d\lambda$. Call a \emph{one-doublet subspace} a $U(2)$-invariant real subspace of $\mathcal{R}_{\C}$ of real dimension four, and a one-doublet field a field valued in one.
 \begin{enumerate}
 \item \emph{(Classification.)} The real-linear $U(2)$-equivariant maps from the doublet $\C^{2}$ (generators $T_{j}$, $Y$) to $\mathcal{R}_{\C}$ are $\gamma \mapsto (p\gamma, q\bar{\gamma})$, $p, q \in \C$, a real four-dimensional space, and each nonzero one is injective. The one-doublet subspaces are $D_{0} = \{\beta = 0\}$, $D_{\infty} = \{\alpha = 0\}$ and the graphs $G_{a} = \{\beta = a\bar{\alpha}\}$, $a \in \C \setminus \{0\}$.
 \item \emph{(One orbit, one frame.)} $Q$ vanishes on $D_{0}$ and $D_{\infty}$, which miss $L$. On $G_{a}$, $Q(\alpha, a\bar{\alpha}) = a|\alpha|^{2}$ and $m/N = (1 - |a|^{2})/(1 + |a|^{2})$; so $G_{a}$ meets $L$ only when $a = -r$, $r > 0$, and then $G_{-r} \cap L = \{|\alpha|^{2} = H^{2}/r\}$ is one $U(2)$-orbit, a three-sphere, which contains $c_{\lambda}$ exactly when $\lambda^{2} = rH^{2}$. The frame of a vacuum on $G_{-r} \cap L$ is fixed by $r$.

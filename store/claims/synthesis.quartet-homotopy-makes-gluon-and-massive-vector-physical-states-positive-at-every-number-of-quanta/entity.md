@@ -1,7 +1,7 @@
 ---
 id: synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta
 kind: claim
-version: 2
+version: 3
 title: 'Gluon and massive-vector BRST cohomology is positive at all numbers of quanta'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -47,6 +51,10 @@ lineage:
   motivated_by:
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The hypercharge generator on the rung doublet, (i/2), is now (1/2) I_4, the doublet''s complex structure being the field theory''s unit I_4 (numbers read in span{1, I_4}); no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'

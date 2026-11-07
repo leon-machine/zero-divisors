@@ -44,7 +44,7 @@ SHELL = [(F(1), F(0), F(0), F(0)), (F(3, 2), F(1), F(-2), F(0)), (F(1, 5), F(3),
 
 def _premises():
     premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("field-theory.second-quantisation")
 
 

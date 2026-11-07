@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch
 kind: claim
-version: 2
+version: 3
 title: 'On the transmutation branch the rung quartics turn strong within a few TeV'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -72,6 +76,10 @@ lineage:
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
   - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit of the coefficient generators (I_4/2) sigma_j and +-(I_4/2), of the real matrix (I_4/2) sigma_2 and of the complex coupling lambda_5 = 4(k_8 - I_4 k_9) is now the field theory''s unit I_4 (numbers read in span{1, I_4}), and the statements i = I_4 name the unit directly; no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -111,9 +119,9 @@ extraction:
 ---
 
 ## formal
-Let the rung field $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$ of \claimref{synthesis.rung-field-on-the-lift-locus} take values in the complexified rung summand inside $\Cl(3,5)$ (spacetime and the two rung planes), with coefficients in $\mathrm{span}\{1, I_{4}\}$ ($i = I_{4}$, \claimref{obj.field-theory.single-algebra-field}), eight real components each with kinetic coefficient one, and the scale-free quartic of \claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum}(3), $V = k_{1}A^{2} + k_{2}B^{2} + k_{3}AB + A(k_{4}\operatorname{Re}Q + k_{5}\operatorname{Im}Q) + B(k_{6}\operatorname{Re}Q + k_{7}\operatorname{Im}Q) + k_{8}\operatorname{Re}Q^{2} + k_{9}\operatorname{Im}Q^{2} + k_{10}|Q|^{2}$, $A = |\alpha|^{2}$, $B = |\beta|^{2}$, $Q = c^{2} = \alpha^{\mathsf T}\beta$. Gauge couplings $g$, $g'$; third family coupled as in \claimref{synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix} with $\tilde{Y}_{33} = y$ and $Y_{33}$ neglected. Write $w = 9g^{2} + 3g'^{2}$, $G = \tfrac{9}{32}g^{4} + \tfrac{3}{16}g^{2}g'^{2} + \tfrac{3}{32}g'^{4}$, $s = k_{8}^{2} + k_{9}^{2}$, $t = \ln\mu$.
+Let the rung field $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$ of \claimref{synthesis.rung-field-on-the-lift-locus} take values in the complexified rung summand inside $\Cl(3,5)$ (spacetime and the two rung planes), with coefficients in $\mathrm{span}\{1, I_{4}\}$ (the field theory's unit $I_{4}$, numbers read in $\mathrm{span}\{1, I_{4}\}$, \claimref{obj.field-theory.single-algebra-field}), eight real components each with kinetic coefficient one, and the scale-free quartic of \claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum}(3), $V = k_{1}A^{2} + k_{2}B^{2} + k_{3}AB + A(k_{4}\operatorname{Re}Q + k_{5}\operatorname{Im}Q) + B(k_{6}\operatorname{Re}Q + k_{7}\operatorname{Im}Q) + k_{8}\operatorname{Re}Q^{2} + k_{9}\operatorname{Im}Q^{2} + k_{10}|Q|^{2}$, $A = |\alpha|^{2}$, $B = |\beta|^{2}$, $Q = c^{2} = \alpha^{\mathsf T}\beta$. Gauge couplings $g$, $g'$; third family coupled as in \claimref{synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix} with $\tilde{Y}_{33} = y$ and $Y_{33}$ neglected. Write $w = 9g^{2} + 3g'^{2}$, $G = \tfrac{9}{32}g^{4} + \tfrac{3}{16}g^{2}g'^{2} + \tfrac{3}{32}g'^{4}$, $s = k_{8}^{2} + k_{9}^{2}$, $t = \ln\mu$.
 \begin{enumerate}
-\item[(i)] \emph{(The field's symmetries and coupling from the algebra; proved.)} With $b_{a} = v_{a}\wedge w_{a}$, the maps $\tfrac12[I_{4}(v_{4}w_{5} + v_{5}w_{4}), \cdot]$, $\tfrac12[v_{4}w_{5} - v_{5}w_{4}, \cdot]$, $\tfrac12[I_{4}(b_{4} - b_{5}), \cdot]$ and $\tfrac12[I_{4}(b_{4} + b_{5}), \cdot]$ on rung values are the stored $T_{1}$, $T_{2}$, $T_{3}$ and $Y$ (on the coefficients, $\alpha \mapsto \tfrac{i}{2}\sigma_{j}\alpha$, $\beta \mapsto \overline{\tfrac{i}{2}\sigma_{j}}\beta$, and $\pm\tfrac{i}{2}$), and $V$ is invariant. At the third family the covariant coupling is $y\,\epsilon(q, \bar{\beta})u^{c} - y\,(q\cdot\bar{\alpha})d^{c}$ in Weyl fields, invariant under $SU(2) \times U(1)$ with hypercharges $\tfrac16$, $-\tfrac23$, $\tfrac13$: the doublet $\beta$ carries the top mass and the doublet $\alpha$ couples to $(q, d^{c})$ with the same strength. Below, $y_{2}$ is its coefficient on $\bar\beta$ and $y_{1}$ on $\bar\alpha$; the covariant coupling has $y_{1} = y_{2} = m_{t}/v$ at the vacuum.
+\item[(i)] \emph{(The field's symmetries and coupling from the algebra; proved.)} With $b_{a} = v_{a}\wedge w_{a}$, the maps $\tfrac12[I_{4}(v_{4}w_{5} + v_{5}w_{4}), \cdot]$, $\tfrac12[v_{4}w_{5} - v_{5}w_{4}, \cdot]$, $\tfrac12[I_{4}(b_{4} - b_{5}), \cdot]$ and $\tfrac12[I_{4}(b_{4} + b_{5}), \cdot]$ on rung values are the stored $T_{1}$, $T_{2}$, $T_{3}$ and $Y$ (on the coefficients, $\alpha \mapsto \tfrac{I_{4}}{2}\sigma_{j}\alpha$, $\beta \mapsto \overline{\tfrac{I_{4}}{2}\sigma_{j}}\beta$, and $\pm\tfrac{I_{4}}{2}$), and $V$ is invariant. At the third family the covariant coupling is $y\,\epsilon(q, \bar{\beta})u^{c} - y\,(q\cdot\bar{\alpha})d^{c}$ in Weyl fields, invariant under $SU(2) \times U(1)$ with hypercharges $\tfrac16$, $-\tfrac23$, $\tfrac13$: the doublet $\beta$ carries the top mass and the doublet $\alpha$ couples to $(q, d^{c})$ with the same strength. Below, $y_{2}$ is its coefficient on $\bar\beta$ and $y_{1}$ on $\bar\alpha$; the covariant coupling has $y_{1} = y_{2} = m_{t}/v$ at the vacuum.
 \item[(ii)] \emph{(One loop; proved, computed exactly; the terms in $g$, $g'$ come from internal gauge lines in Landau gauge and hold under the Krein premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, as for the stored one-loop running.)} On the branch $k_{4} = k_{5} = k_{6} = k_{7} = 0$, which the running preserves at one and at two loops,
 \begin{align*}
 16\pi^{2}\dot k_{1} &= 96k_{1}^{2} + 8k_{3}^{2} + 8k_{3}k_{10} + 4k_{10}^{2} + 4s + G - wk_{1} + 24k_{1}y_{1}^{2} - 6y_{1}^{4},\\
@@ -122,7 +130,7 @@ Let the rung field $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$ of \claimref
 16\pi^{2}\dot k_{10} &= 16(k_{1} + k_{2})k_{10} + 32k_{3}k_{10} + 16k_{10}^{2} + 32s + \tfrac34g^{2}g'^{2} - wk_{10} + 12k_{10}(y_{1}^{2} + y_{2}^{2}) + 12y_{1}^{2}y_{2}^{2},\\
 16\pi^{2}\dot k_{8,9} &= k_{8,9}\bigl(16(k_{1} + k_{2}) + 32k_{3} + 48k_{10} - w + 12(y_{1}^{2} + y_{2}^{2})\bigr);
 \end{align*}
-the forms with $k_{4}, \ldots, k_{7}$ are in Step 2. Under $\lambda_{1} = 8k_{1}$, $\lambda_{2} = 8k_{2}$, $\lambda_{3} = 4k_{3}$, $\lambda_{4} = 4k_{10}$, $\lambda_{5} = 4(k_{8} - ik_{9})$, $y_{b} = \sqrt2y_{1}$, $y_{t} = \sqrt2y_{2}$ these are the standard one-loop equations of the two-doublet model with a discrete symmetry and type-II couplings (Fact \claimref{synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations}(ii)); under the covariant completion the down-type doublet's coupling is the top's.
+the forms with $k_{4}, \ldots, k_{7}$ are in Step 2. Under $\lambda_{1} = 8k_{1}$, $\lambda_{2} = 8k_{2}$, $\lambda_{3} = 4k_{3}$, $\lambda_{4} = 4k_{10}$, $\lambda_{5} = 4(k_{8} - I_{4}k_{9})$, $y_{b} = \sqrt2y_{1}$, $y_{t} = \sqrt2y_{2}$ these are the standard one-loop equations of the two-doublet model with a discrete symmetry and type-II couplings (Fact \claimref{synthesis.imported-general-quartic-running-and-two-doublet-renormalisation-group-equations}(ii)); under the covariant completion the down-type doublet's coupling is the top's.
 \item[(iii)] \emph{(Two loops, pure-quartic part; proved, computed exactly.)} On the same branch,
 \begin{align*}
 (16\pi^{2})^{2}\dot k_{1}^{(2)} &= -4992k_{1}^{3} - 320k_{1}k_{3}^{2} - 320k_{1}k_{3}k_{10} - 192k_{1}k_{10}^{2} - 224k_{1}s - 128k_{3}^{3} - 192k_{3}^{2}k_{10} - 256k_{3}k_{10}^{2} - 96k_{10}^{3} - 320k_{3}s - 352k_{10}s,\\
@@ -148,4 +156,4 @@ The one-loop equations follow from the renormalisation-group invariance of the o
 The series' Higgs field, read as an elementary quantum field, has eight components and, on the branch where all masses come from quantum effects, must have its extra particles near 400 to 500 GeV. That needs strong self-interactions. This result computes how those interactions change with energy, using the series' own description of the field, and finds that, under the approximations assumed for that branch, they grow too strong for ordinary calculation within a few TeV.
 
 ## one-liner
-For the scale-free linear rung field (generators as rung bivectors with $i = I_{4}$, covariant top coupling giving both doublets top strength) the one-loop running of all ten quartics (gauge terms under the Krein premise) is the standard two-doublet system under $\lambda_{1,2} = 8k_{1,2}$, $\lambda_{3} = 4k_{3}$, $\lambda_{4} = 4k_{10}$, $\lambda_{5} = 4(k_{8} - ik_{9})$, the two-loop pure-quartic part is given exactly, $m_{h}^{2} = 4v^{2}\beta_{k_{2}}$ is the stored scalon sum and the scalon self-coupling is $\tfrac53$ of tree; under Gildener-Weinberg and decoupling the quartics reach $4\pi$ at $0.8$ to $4$ TeV at one loop (computed); the two-loop quartic terms are already 30 to 70 percent of the one-loop terms there, so perturbation theory has failed at that scale.
+For the scale-free linear rung field (generators as rung bivectors with the unit $I_{4}$, covariant top coupling giving both doublets top strength) the one-loop running of all ten quartics (gauge terms under the Krein premise) is the standard two-doublet system under $\lambda_{1,2} = 8k_{1,2}$, $\lambda_{3} = 4k_{3}$, $\lambda_{4} = 4k_{10}$, $\lambda_{5} = 4(k_{8} - I_{4}k_{9})$, the two-loop pure-quartic part is given exactly, $m_{h}^{2} = 4v^{2}\beta_{k_{2}}$ is the stored scalon sum and the scalon self-coupling is $\tfrac53$ of tree; under Gildener-Weinberg and decoupling the quartics reach $4\pi$ at $0.8$ to $4$ TeV at one loop (computed); the two-loop quartic terms are already 30 to 70 percent of the one-loop terms there, so perturbation theory has failed at that scale.

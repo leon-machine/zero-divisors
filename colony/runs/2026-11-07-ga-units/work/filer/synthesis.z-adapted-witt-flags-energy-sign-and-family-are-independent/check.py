@@ -141,7 +141,7 @@ def check_the_conformal_energy_is_minus_s0_times_the_unit():
     GA.check("(2) <psi, (Z psi) I6> = s0 <psi, psi>, <psi, psi> > 0", ok_h)
 
 
-def check_the_family_is_s0_s1_s2_and_independent_of_the_energy_sign():
+def check_the_family_is_fixed_by_s0_s1_s2_and_independent_of_the_energy_sign():
     premise("dark-matter.two-families-are-two-chiralities")
     ok_fam = ok_par = ok_conj = True
     table = {}

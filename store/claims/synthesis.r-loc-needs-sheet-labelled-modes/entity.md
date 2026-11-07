@@ -48,7 +48,14 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.collar-isotropy-selects-t-boost
+outside_ga:
+  kind: complex-analysis
+  why: 'the windows are complex matrix factors Mat_n(C) with flows Ad(e^{isH}), inner derivations i[h, .] and su(n) as i times the traceless self-adjoint matrices, and the single-mode window is the completed pair of Cl(1,1), built from e_0 and e_1, whose mode operators anticommute with I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the window flows Ad(e^{isH}), their inner derivations i[h, .], su(n) as i times the traceless self-adjoint matrices, and the flow on the completed pair of Cl(1,1) keep i (window algebras of modes whose operators anticommute with I_4, conventions known limits 1 and 2). Declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

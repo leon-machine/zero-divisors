@@ -1,7 +1,7 @@
 ---
 id: synthesis.local-normality-at-the-edge-gives-the-null-ground-state
 kind: claim
-version: 2
+version: 3
 title: 'Local normality at the edge gives the null ground state'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 3
+  source: maintainer pass 2026-11-07
 review: draft
 outside_ga:
   kind: complex-analysis
@@ -26,10 +30,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
-  - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet@1
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@3
+  - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-haag-local-normality@1
   proof: proof-main.tex
 checked_by:
@@ -50,6 +54,10 @@ lineage:
   - synthesis.attachment-conformal-energy-is-generated-by-z
   - synthesis.tower-charge-sector-label-temperature-not
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum, its kernel W_0, and that it satisfies the condition of (N+)) and synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet only for its lemmas (iii) and (iv); these are now synthesis.null-vacuum-on-a-horizon-generator (ii) and synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation (i), (ii), and the two uses edges, the claimrefs and the checks'' premise calls are repointed to them, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit 2 -> 3.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -85,11 +93,11 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$, $\omega_{0}$ the null vacuum with $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)), and $R = W_{\omega} - W_{0}$. For an interval $J$ say that $\omega$ is \emph{locally normal to $\omega_{0}$ on $J$} if the restrictions of $\omega$ and $\omega_{0}$ to $\CAR(L^{2}(J)\otimes K)$ are quasi-equivalent, and that $\omega$ satisfies the \emph{local Hilbert-Schmidt condition on $J$} if $R$ restricted to $J \times J$ is a square-integrable kernel (in each $K$-component). Scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}.
+Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$, $\omega_{0}$ the null vacuum with $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)), and $R = W_{\omega} - W_{0}$. For an interval $J$ say that $\omega$ is \emph{locally normal to $\omega_{0}$ on $J$} if the restrictions of $\omega$ and $\omega_{0}$ to $\CAR(L^{2}(J)\otimes K)$ are quasi-equivalent, and that $\omega$ satisfies the \emph{local Hilbert-Schmidt condition on $J$} if $R$ restricted to $J \times J$ is a square-integrable kernel (in each $K$-component). Scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}.
 \begin{enumerate}
 \item[(i)] \emph{(The scaling preserves local Hilbert-Schmidt norms; proved.)} For the scaling about $u_{0}$ with weight $p$ per leg, $(S_{\lambda}R)(x, y) = \lambda^{2p}R(u_{0} + \lambda x, u_{0} + \lambda y)$, and any interval $I$, $\|S_{\lambda}R\|^{2}_{L^{2}(I \times I)} = \lambda^{4p - 2}\|R\|^{2}_{L^{2}((u_{0} + \lambda I)^{2})}$. The norm is carried over unchanged exactly for $p = \tfrac12$, the weight of the boost and of the anticommutator.
 \item[(ii)] \emph{(Local normality gives the local form; proved, given Powers-Stormer.)} Local normality to $\omega_{0}$ on $J$ implies the local Hilbert-Schmidt condition on $J$. If the condition holds on an interval $J$ containing $u_{0}$, then the scaled kernels $\lambda W_{\omega}(u_{0} + \lambda x, u_{0} + \lambda y)$ converge to $W_{0}$ in Hilbert-Schmidt norm on every bounded interval, so every $n$-point function converges: the scaling limit of $\omega$ at $u_{0}$ exists and is $\omega_{0}$, that is, $\omega$ is locally the null vacuum at $u_{0}$. No bound on $R$ near the point and no reference to the field strength enters.
-\item[(iii)] \emph{(Parametrisation independence; proved.)} For a regular reparametrisation $f$ ($C^{3}$, $f' > 0$) the vacuum of the parameter $f$ differs from $\omega_{0}$ by a kernel continuous across the diagonal (Theorem \claimref{synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet}(iii)), hence square integrable on bounded intervals; so the local Hilbert-Schmidt condition relative to the vacuum of any regular parameter is one condition, and (ii) holds in the affine parameter of a generator whatever the field strength. Example (exact): $f(u) = u + \tfrac23 u^{3} + \tfrac15 u^{5}$, $f' = (1 + u^{2})^{2}$, gives the difference $(u - v)\big(\tfrac13 - \tfrac15(u^{2} + 3uv + v^{2})\big)/Q(u, v)$ with $Q = (f(u) - f(v))/(u - v) > 0$, leading term $S_{f}(0)(u - v)/12$.
+\item[(iii)] \emph{(Parametrisation independence; proved.)} For a regular reparametrisation $f$ ($C^{3}$, $f' > 0$) the vacuum of the parameter $f$ differs from $\omega_{0}$ by a kernel continuous across the diagonal (Theorem \claimref{synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation}(i)), hence square integrable on bounded intervals; so the local Hilbert-Schmidt condition relative to the vacuum of any regular parameter is one condition, and (ii) holds in the affine parameter of a generator whatever the field strength. Example (exact): $f(u) = u + \tfrac23 u^{3} + \tfrac15 u^{5}$, $f' = (1 + u^{2})^{2}$, gives the difference $(u - v)\big(\tfrac13 - \tfrac15(u^{2} + 3uv + v^{2})\big)/Q(u, v)$ with $Q = (f(u) - f(v))/(u - v) > 0$, leading term $S_{f}(0)(u - v)/12$.
 \item[(iv)] \emph{(Stationarity plus local normality at the edge is (N$_{+}$); proved.)} Let the horizon be in the scope of (N$_{+}$), $u$ the affine parameter with the edge at $u = 0$, and $\omega$ stationary for the boost, which acts as the weight-$\tfrac12$ dilation about the edge (Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}(i)). If $\omega$ satisfies the local Hilbert-Schmidt condition on an interval containing the edge, in particular if it is locally normal to $\omega_{0}$ there, then $\omega = \omega_{0}$: it satisfies (N$_{+}$), and its affine null translations are positive. This strengthens (ii) of that theorem, where $R$ is assumed bounded near $(0, 0)$.
 \item[(v)] \emph{(Local disjointness of the thermal products; proved.)} A kernel homogeneous of degree $-1$ and nonzero on a set of positive measure is not square integrable on any neighbourhood of $(0, 0)$: its integral over each dyadic shell is the same positive number. Hence every stationary gauge-invariant quasi-free state other than $\omega_{0}$, in particular each product $\omega_{c}^{\times}$ of half-generator KMS states at rapidity period $2\pi c$, $c \in (0, \infty]$, including $c = 1$ where both halves are the I-state at $2\pi$, fails the local Hilbert-Schmidt condition on every interval containing the edge, and by Powers-Stormer it is disjoint from $\omega_{0}$ on the algebra of every such interval. For the cross-edge block, common to all $c$, the shell value is $\ln\tfrac98$ on every square $[s, 2s]^{2}$.
 \end{enumerate}

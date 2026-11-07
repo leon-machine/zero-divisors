@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
-  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@3
+  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@4
   - field-theory.second-quantisation@5
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
@@ -63,7 +63,7 @@ extraction:
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 1 -> 2, at Leon''s decision of 7 November 2026: the algebra of clause (i) (mass terms reach only the constraint) is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane, its clause (iv), with the flux identity its clause (ii), and the proof of (i) cites it; the pin to the light-ray result moves to its version 3 (the same split, statement unchanged). The two checks of (i) are kept and record the new premise in place of the light-ray result, which the check of (iv) still records. Statement unchanged. Notation: no bare imaginary unit; the complex field stays in the slot module V and is declared under outside_ga.'
+    note: 'Version 1 -> 2, at Leon''s decision of 7 November 2026: the algebra of clause (i) (mass terms reach only the constraint) is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane, its clause (iv), with the flux identity its clause (ii), and the proof of (i) cites it; the pin to the light-ray result moves to its version 3 (the same split, statement unchanged). The two checks of (i) are kept and record the new premise in place of the light-ray result, which the check of (iv) still records. Statement unchanged. Notation: no bare imaginary unit; the complex field stays in the slot module V and is declared under outside_ga. Pins moved to current versions (statements unchanged): synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays 3 -> 4.'
   note: >-
     The problem's first line of attack, with the field content imported from the Standard Model
     subject: compute the light-ray array content of the series' matter per generation from the slot

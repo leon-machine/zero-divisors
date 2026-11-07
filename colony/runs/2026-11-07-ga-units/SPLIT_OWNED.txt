@@ -1,0 +1,11 @@
+synthesis.positive-null-energy-gives-r-premises
+synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
+synthesis.local-normality-at-the-edge-gives-the-null-ground-state
+synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
+synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
+synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
+synthesis.canonical-part-of-a-spinor-on-a-null-plane
+synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays
+synthesis.slot-module-light-ray-arrays-are-weyl-components
+synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations
+synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike

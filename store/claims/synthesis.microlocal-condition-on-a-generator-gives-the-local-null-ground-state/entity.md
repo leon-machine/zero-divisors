@@ -1,7 +1,7 @@
 ---
 id: synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
 kind: claim
-version: 4
+version: 5
 title: 'The microlocal condition on a generator gives the local null ground state'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 5
+  source: maintainer pass 2026-11-07
 review: draft
 outside_ga:
   kind: complex-analysis
@@ -26,9 +30,9 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@2
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@3
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-local-quasi-equivalence-of-hadamard-states@1
   - synthesis.imported-kay-wald-uniqueness-and-no-go@1
@@ -53,6 +57,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum, its kernel W_0, and that it satisfies the condition of (N+)), which is now synthesis.null-vacuum-on-a-horizon-generator (ii); the uses edge, the claimrefs and the checks'' premise calls are repointed to it, and the pin to synthesis.local-normality-at-the-edge-gives-the-null-ground-state moves to its version 3 (same split, statement unchanged), so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit 2 -> 3.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -110,7 +118,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with the two orderings of its two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$ and $\tilde W_{\omega}(u, v) = \omega(\psi(u)\psi^{*}(v)) = \delta(u - v)\otimes\id_{K} - W_{\omega}(u, v)$, let $\omega_{0}$ be the null vacuum, $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)), and $R = W_{\omega} - W_{0}$. For a distribution $D$ on $J \times J$, $J$ an open interval, write $\mathrm{WF}(D)$ for its wave-front set, and let $\Gamma_{\pm} = \{(u, u; \xi, -\xi) : u \in J,\ \pm\xi > 0\}$, with the sign convention in which $\mathrm{WF}(W_{0}) = \Gamma_{+}$. Say that $\omega$ satisfies the \emph{microlocal spectrum condition on $J$} (the generator analogue of the microlocal form of the Hadamard condition) if $\mathrm{WF}(W_{\omega}) \subset \Gamma_{+}$ and $\mathrm{WF}(\tilde W_{\omega}) \subset \Gamma_{-}$ on $J \times J$, in each $K$-component. It names no temperature, no period and no symmetry of the state. The local Hilbert-Schmidt condition, scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state}.
+Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with the two orderings of its two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$ and $\tilde W_{\omega}(u, v) = \omega(\psi(u)\psi^{*}(v)) = \delta(u - v)\otimes\id_{K} - W_{\omega}(u, v)$, let $\omega_{0}$ be the null vacuum, $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)), and $R = W_{\omega} - W_{0}$. For a distribution $D$ on $J \times J$, $J$ an open interval, write $\mathrm{WF}(D)$ for its wave-front set, and let $\Gamma_{\pm} = \{(u, u; \xi, -\xi) : u \in J,\ \pm\xi > 0\}$, with the sign convention in which $\mathrm{WF}(W_{0}) = \Gamma_{+}$. Say that $\omega$ satisfies the \emph{microlocal spectrum condition on $J$} (the generator analogue of the microlocal form of the Hadamard condition) if $\mathrm{WF}(W_{\omega}) \subset \Gamma_{+}$ and $\mathrm{WF}(\tilde W_{\omega}) \subset \Gamma_{-}$ on $J \times J$, in each $K$-component. It names no temperature, no period and no symmetry of the state. The local Hilbert-Schmidt condition, scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state}.
 \begin{enumerate}
 \item[(i)] \emph{(Equivalence; proved.)} $\omega$ satisfies the microlocal spectrum condition on $J$ if and only if $R$ is smooth on $J \times J$. The condition is the same in every smooth regular parameter.
 \item[(ii)] \emph{(Consequences; proved, a corollary of the stored theorem.)} If $\omega$ satisfies the condition on $J$, it satisfies the local Hilbert-Schmidt condition on every closed bounded subinterval of $J$, so by Theorem \claimref{synthesis.local-normality-at-the-edge-gives-the-null-ground-state}(ii) its scaling limit at every point of $J$ is $\omega_{0}$: the local form of (N$_{+}$) holds at every point of $J$, with no stationarity and no temperature assumed. With that theorem's (iv): if the horizon is in the scope of (N$_{+}$), $J$ contains the edge and $\omega$ is stationary for the boost, then $\omega = \omega_{0}$.

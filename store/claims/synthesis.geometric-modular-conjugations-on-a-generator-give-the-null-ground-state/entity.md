@@ -1,7 +1,7 @@
 ---
 id: synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state
 kind: claim
-version: 2
+version: 3
 title: 'Field-level geometric modular conjugations on a generator give the null ground state'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-06-edge-normality
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 3
+  source: maintainer pass 2026-11-07
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -48,7 +52,7 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion@1
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@1
@@ -75,6 +79,10 @@ lineage:
   - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
   - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum, its kernel and ground-state property), which is now synthesis.null-vacuum-on-a-horizon-generator (ii); the uses edge, the claimrefs and the checks'' premise calls are repointed to it, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it.'
   open_problem: op.r-premises-external
   note: >-
     Answers the problem's request for a stationarity-free form of (N+) at the level of a principle with no
@@ -120,7 +128,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On one generator, affine parameter $u \in \R$, let $\CAR(h)$, $h = L^{2}(\R, du)\otimes K$, be the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $h_{a} = L^{2}((a, \infty))\otimes K$, $\rho_{a}f(u) = f(2a - u)$ the reflection about the cut $a$, $P = i\,d/du$, $B(f) = \psi(f) + \psi^{*}(f)$, and $\omega$ a gauge-invariant quasi-free state with symbol $T$, $\omega(\psi^{*}(v)\psi(u)) = T(u, v)$; the null vacuum $\omega_{0}$ has $T_{0} = \chi_{(-\infty, 0)}(P)\otimes\id_{K}$, kernel $\tfrac{i}{2\pi}(u - v + i0)^{-1}$, the state of Premise \claimref{synthesis.n-plus-null-ground-state} (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)). In the GNS representation $(\pi, \mathcal{H}, \Omega)$ let $\Theta$ implement the grading, $Z = (1 + i\Theta)/(1 + i)$ the Klein twist, $\mathcal{R}_{a} = \pi(\CAR(h_{a}))''$ and $\mathcal{R}_{a}^{c} = \pi(\CAR(h_{a}^{c}))''$. For $\eta \in \{1, -1\}$, $\omega$ satisfies \emph{CGMA$_{\eta}$ at the cut $a$} if $\Omega$ is cyclic and separating for $\mathcal{R}_{a}$ and its modular conjugation $J_{a}$ acts as the twisted charge-conjugating reflection about $a$:
+Units $\hbar = c = 1$. On one generator, affine parameter $u \in \R$, let $\CAR(h)$, $h = L^{2}(\R, du)\otimes K$, be the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $h_{a} = L^{2}((a, \infty))\otimes K$, $\rho_{a}f(u) = f(2a - u)$ the reflection about the cut $a$, $P = i\,d/du$, $B(f) = \psi(f) + \psi^{*}(f)$, and $\omega$ a gauge-invariant quasi-free state with symbol $T$, $\omega(\psi^{*}(v)\psi(u)) = T(u, v)$; the null vacuum $\omega_{0}$ has $T_{0} = \chi_{(-\infty, 0)}(P)\otimes\id_{K}$, kernel $\tfrac{i}{2\pi}(u - v + i0)^{-1}$, the state of Premise \claimref{synthesis.n-plus-null-ground-state} (Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)). In the GNS representation $(\pi, \mathcal{H}, \Omega)$ let $\Theta$ implement the grading, $Z = (1 + i\Theta)/(1 + i)$ the Klein twist, $\mathcal{R}_{a} = \pi(\CAR(h_{a}))''$ and $\mathcal{R}_{a}^{c} = \pi(\CAR(h_{a}^{c}))''$. For $\eta \in \{1, -1\}$, $\omega$ satisfies \emph{CGMA$_{\eta}$ at the cut $a$} if $\Omega$ is cyclic and separating for $\mathcal{R}_{a}$ and its modular conjugation $J_{a}$ acts as the twisted charge-conjugating reflection about $a$:
 \[ J_{a}\,\pi(\psi(f))\,J_{a} = \eta\,Z\,\pi(\psi^{*}(\rho_{a}f))\,Z^{*}\qquad (f \in h_{a}). \]
 The hypothesis names $J_{a}$ only: no modular group, no KMS condition, no temperature, no stationarity. Let $A \subset \R$ be a set of cuts whose differences generate a dense subgroup of $\R$ (three cuts $0, 1, c$ with $c$ irrational suffice).
 \begin{enumerate}

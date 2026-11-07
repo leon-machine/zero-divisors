@@ -111,7 +111,7 @@ def _w0(u, v):
 
 def check_the_attachment_closes_each_null_line_into_a_circle():
     premise("synthesis.attachment-conformal-energy-is-generated-by-z")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     GA.check("n_inf, n_o null with n_inf . n_o = 1",
              _m(NINF, NINF) == {} and _m(NO, NO) == {} and GA.eq(GA.add(_m(NINF, NO), _m(NO, NINF)), GA.sc(2)))
     for s in LINE_S:
@@ -162,7 +162,7 @@ def check_three_arcs_cover_every_pair_of_points():
 
 
 def check_affine_kms_states_fail_on_a_single_far_end():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.local-normality-at-the-edge-gives-the-null-ground-state")
     # sinh(x)/x = sum x^{2k}/(2k+1)!
     fact = [F(1)]
@@ -246,7 +246,7 @@ def _fp(u):
 
 
 def check_the_slope_jump_vacuum_is_the_null_vacuum_on_each_far_end():
-    premise("synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet")
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     premise("synthesis.local-normality-at-the-edge-gives-the-null-ground-state")
     fp = _fprime_poly()
     anti = GA.ps_int(fp)
@@ -320,7 +320,7 @@ def _finv_far(U):
 
 def check_the_affine_group_is_implementable_on_the_slope_jump_vacuum():
     premise("synthesis.imported-powers-stormer-takesaki-disjointness")
-    premise("synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet")
+    premise("synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation")
     for b in TRANS_B:
         for U in IMPL_LEFT:
             GA.check("h = f tau_b f^-1 is U + b near -inf", _f(_finv_far(U - abs(b)) + b) == U - abs(b) + b)

@@ -1,7 +1,7 @@
 ---
 id: synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
 kind: claim
-version: 2
+version: 3
 title: 'Locality fixes the statistics of the attached free fields'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -44,7 +48,14 @@ lineage:
   - field-theory.imported-standard-field-theory
   - field-theory.twistor-attachment
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
+outside_ga:
+  kind: complex-analysis
+  why: 'the imported two-point function is quoted as the boundary value -1/(4 pi^2 (Q(xi) - i0 xi_0)) of a scalar distribution, an i0 prescription in the complex plane of xi_0; only its real spacelike value enters'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The plane-wave phases of the free fields and of the two-point function, the momentum substitution P(I_4 d) and the overall factor -I_4^d/(4 pi^2) now use the field theory''s unit I_4 (numbers read in span{1, I_4}); the i0 of the imported boundary value -1/(4 pi^2 (Q(xi) - i0 xi_0)) stays, a boundary-value prescription quoted from the Fact.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

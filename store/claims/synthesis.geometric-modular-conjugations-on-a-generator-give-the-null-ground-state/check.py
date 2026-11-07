@@ -69,7 +69,7 @@ DIAG_P = (F(1, 5), F(2), F(9, 4))
 
 
 def check_the_form_is_a_loewner_kernel():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     for p, a, b in LOEWNER_SAMPLES:
         k = _kappa(p, a, b)
         GA.check("kappa_p(a,b) = p(a+b)/((a^2+p^2)(b^2+p^2))",
@@ -88,7 +88,7 @@ def check_the_form_is_a_loewner_kernel():
 
 
 def check_the_vacuum_form_is_positive_and_fixes_the_sign():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state")
     G = _vacuum_gram(5)
     for m in range(5):
@@ -110,7 +110,7 @@ def check_the_vacuum_form_is_positive_and_fixes_the_sign():
 
 
 def check_charge_symmetry_and_the_states_it_admits():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.imported-powers-stormer-takesaki-disjointness")
     vac = lambda p: 1 if p < 0 else 0
     rev = lambda p: 1 if p > 0 else 0
@@ -133,7 +133,7 @@ def check_charge_symmetry_and_the_states_it_admits():
 
 
 def check_the_swapped_band_state_breaks_the_positivity():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     # w(p) = 1 - 2 theta(p) = -1 on (0, 2), +1 on (2, inf); antiderivative of kappa_p(l, l) is A(p) = -l/(l^2+p^2)
     def diag(lam):
         A = lambda p: -lam / (lam * lam + p * p)
@@ -158,7 +158,7 @@ def check_the_swapped_band_state_breaks_the_positivity():
 
 
 def check_two_cuts_do_not_give_stationarity():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
 
     def tri(u):
         # distance from u to the nearest even integer: even about 0 and about 1, period 2

@@ -77,7 +77,7 @@ def _inverse_series(a, order):
 
 def check_affine_kms_remainder_is_smooth_at_every_point():
     premise("synthesis.local-normality-at-the-edge-gives-the-null-ground-state")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     # sinh(y)/y = sum_k y^{2k}/(2k+1)!, as a series in z = y^2
     a = [F(1, _fact(2 * k + 1)) for k in range(ORDER + 1)]
     g = _inverse_series(a, ORDER)
@@ -104,7 +104,7 @@ def check_affine_kms_remainder_is_smooth_at_every_point():
 
 
 def check_symbol_criterion_separates_thermal_mixture_and_jump_states():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("synthesis.local-normality-at-the-edge-gives-the-null-ground-state")
     for q in Q_SAMPLES:
         GA.check("0 < q < 1", 0 < q < 1)

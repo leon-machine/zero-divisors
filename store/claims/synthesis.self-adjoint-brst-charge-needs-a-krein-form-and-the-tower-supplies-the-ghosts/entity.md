@@ -1,7 +1,7 @@
 ---
 id: synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 kind: claim
-version: 2
+version: 3
 title: 'A self-adjoint BRST charge needs a Krein form; the tower supplies the ghosts'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -52,6 +56,10 @@ lineage:
   - field-theory.fock-space-maxwell-modes
   - field-theory.path-integral-inside-tower
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By Leon''s ruling R3 (7 November 2026): the matter representation C^2 tensor C^3 of clause (v) is read over span{1, I_4}, on the tower''s floors where I_4 commutes with the tower vectors (stated once at the formal level; notational); the detector''s other hit is the index in ''mu = i''; no bare i remains, so no declaration.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -82,7 +90,7 @@ Units and signature of the store; $k$ a null vector, $Q(k) = 0$. Polarisation mo
 \item[(ii)] \emph{(Gupta-Bleuler BRST at a null momentum; proved.)} Let $\eta = (-1)^{n_0} \otimes S$, with $S = 1 - (b^{*} - d^{*})(b - d)$ the inner involution of the ghost floor exchanging $b$ and $d$, and $\langle x, y\rangle_K = \langle x, \eta y\rangle$. Then $a_\mu^{\dagger} = -g_{\mu\mu}z_\mu$ and $b^{\dagger} = d^{*}$, so $[a(u), a(w)^{\dagger}] = -u\cdot w$ for polarisation vectors $u, w$: the one-particle Krein form is the Minkowski metric of the polarisations, the standard Gupta-Bleuler form, invariant under boost rotors (the positive form is not). With $L = \sum_\mu g_{\mu\mu}k^\mu a_\mu$, $Q = L^{\dagger}b + d^{*}L$ satisfies $Q^2 = 0$ and $Q^{\dagger} = Q$.
 \item[(iii)] \emph{(Positive cohomology; computed up to three quanta.)} $Q$ preserves the total number $T$ (bosons plus ghosts). At ghost number $N_d - N_b = 0$ and $T = 0, 1, 2, 3$ the cohomology of $Q$ has dimensions $1, 2, 3, 4$, those of the symmetric powers of a two-dimensional space, and the Krein form restricted to $\ker Q$ has signature $(\dim H, 0, \dim \operatorname{im} Q)$: positive definite on the cohomology, with radical $\operatorname{im} Q$.
 \item[(iv)] \emph{(The physical modes are the stored photon modes; proved.)} The one-particle cohomology is $k^{\perp}/\mathrm{span}\{k\}$, and $\epsilon \mapsto k\epsilon$ maps it isomorphically onto the bivectors $\{f : kf = 0\}$, the mode space of Proposition \claimref{field-theory.fock-space-maxwell-modes}(2).
-\item[(v)] \emph{(The constraint charge of the derived algebra on tower ghosts; proved, standard for any Lie algebra.)} For the derived gauge algebra $\mathfrak{su}(2) \oplus \mathfrak{su}(3) \oplus \mathfrak{u}(1)$ of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} acting on the finite-dimensional matter representation $\C^{2} \otimes \C^{3}$, with ghosts $c^a$ and antighosts $\bar c_a$ the creation and annihilation operators of twelve tower planes, the charge $Q = c^aT_a - \tfrac12 f_{ab}{}^{c}\,c^ac^b\bar c_c$ satisfies $Q^2 = 0$; without the cubic ghost term $Q^2 \neq 0$, and changing one structure constant gives $Q^2 \neq 0$.
+\item[(v)] \emph{(The constraint charge of the derived algebra on tower ghosts; proved, standard for any Lie algebra.)} For the derived gauge algebra $\mathfrak{su}(2) \oplus \mathfrak{su}(3) \oplus \mathfrak{u}(1)$ of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} acting on the finite-dimensional matter representation $\C^{2} \otimes \C^{3}$ (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors), with ghosts $c^a$ and antighosts $\bar c_a$ the creation and annihilation operators of twelve tower planes, the charge $Q = c^aT_a - \tfrac12 f_{ab}{}^{c}\,c^ac^b\bar c_c$ satisfies $Q^2 = 0$; without the cubic ghost term $Q^2 \neq 0$, and changing one structure constant gives $Q^2 \neq 0$.
 \end{enumerate}
 \emph{Reading.} A self-adjoint BRST charge for the series' gauge fields needs an indefinite form, which the store's representations lack; the Gupta-Bleuler form of the polarisations supplies it in a Lorentz-invariant way, and under the premise that gauge fields carry this indefinite form, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, the covariant route works at the free level with positive physical states. An indefinite form is already present at the one-particle level of the attachment: the conformal-group-invariant twistor form of signature $(2,2)$, whose positive polarisations alone carry states (Theorem \claimref{synthesis.positive-structure-is-twistor-form-at-imaginary-time}); this is a parallel, not the form used here. The ghosts are tower modes, as the Grassmann variables of Proposition \claimref{field-theory.path-integral-inside-tower} are rungs; they are scalar CAR modes, which the spin-statistics clause of Proposition \claimref{field-theory.twistor-attachment} excludes as local fields with positive weights, and which are local only with antiparticle weight $-1$, that is in the indefinite form (\claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}); they appear only in zero-norm quartets. The sign of the one-loop beta coefficients of the non-abelian factors is computed in a result (\claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces}).
 

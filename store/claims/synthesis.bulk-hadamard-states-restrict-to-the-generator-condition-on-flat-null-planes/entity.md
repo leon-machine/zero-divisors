@@ -1,7 +1,7 @@
 ---
 id: synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 kind: claim
-version: 4
+version: 5
 title: 'Flat-field Hadamard states meet the generator condition on null planes'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: premises repointed to synthesis.canonical-part-of-a-spinor-on-a-null-plane (the algebra it cites), in place of the light-ray and slot-module results; notation declaration
   version: 4
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 5
+  source: maintainer pass 2026-11-07
 review: draft
 outside_ga:
   kind: complex-analysis
@@ -32,9 +36,9 @@ derivations:
 - name: main
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - field-theory.second-quantisation@5
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@4
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-null-plane-restriction-of-free-fields-is-mass-independent@1
   proof: proof-main.tex
@@ -55,6 +59,10 @@ lineage:
   - synthesis.n-plus-null-ground-state
   - synthesis.attachment-conformal-energy-is-generated-by-z
 extraction:
+  maintainer_pass_clause_split_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum and its kernel W_0), which is now synthesis.null-vacuum-on-a-horizon-generator (ii); the uses edge, the claimrefs and the check''s premise calls are repointed to it, and the pin to the microlocal theorem moves to its version 5 (same split, statement unchanged), so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it.'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Answers the second attack line of op.qft-on-gtg-fields (derive the generator form of the Hadamard
@@ -103,7 +111,7 @@ extraction:
 Units $\hbar = c = 1$. On the flat gravitational field ($\hb = 1$, $\Omega = 0$; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) let $N = \{x_{0} + \lambda k + y\}$ be a null plane with generators along $k = e_{0} + e_{3}$, $y$ in the span of $e_{1}, e_{2}$, $m = e_{0} - e_{3}$, and $\Lambda(m) = \tfrac12(1 + e_{0}e_{3})$ the projector onto the canonical part on $N$ (Theorem \claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}), with two-channel image $V_{\Lambda}$. For the free Dirac field of mass $m_{0} \ge 0$ (Proposition \claimref{field-theory.second-quantisation}) put $\psi_{N}(\lambda, y) = \sqrt{2}\,\Lambda(m)\psi(x_{0} + \lambda k + y)$ and $K = L^{2}(\R^{2}, d^{2}y)\otimes V_{\Lambda}$.
 \begin{enumerate}
 \item[(i)] \emph{(The plane carries the generator CAR; computed.)} $\{\psi_{N}(\lambda, y), \psi_{N}^{*}(\lambda', y')\} = \delta(\lambda - \lambda')\,\delta^{2}(y - y')\,\Lambda(m)$: the continuum mode space $\CAR(L^{2}(\R, d\lambda)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, with $u = \lambda$ an affine parameter on each generator.
-\item[(ii)] \emph{(Every vacuum restricts to the null vacuum; computed exactly.)} $\Lambda(m)(p \pm m_{0})e_{0}\Lambda(m) = \ip{p}{k}\Lambda(m)$ for every vector $p$ and mass $m_{0}$, the positive-energy shell has $\ip{p}{k} > 0$, and in the variables $(\ip{p}{k}, p_{\perp})$ the compressed shell density is $\tfrac12$ for every $m_{0}$ and $p_{\perp}$. Hence for every $m_{0} \ge 0$ the bulk vacuum restricts (the restriction defined by this momentum-space computation with transverse smearing, not as a pullback of distributions, since the wave-front set of the vacuum kernel meets the conormal of $N\times N$ along the generators) to $\omega_{m_{0}}(\psi_{N}^{*}(v)\psi_{N}(u)) = W_{0}(u, v)\otimes\id_{K}$, $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}$: the null vacuum $\omega_{0}$ of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i) on every generator, in every affine parameter.
+\item[(ii)] \emph{(Every vacuum restricts to the null vacuum; computed exactly.)} $\Lambda(m)(p \pm m_{0})e_{0}\Lambda(m) = \ip{p}{k}\Lambda(m)$ for every vector $p$ and mass $m_{0}$, the positive-energy shell has $\ip{p}{k} > 0$, and in the variables $(\ip{p}{k}, p_{\perp})$ the compressed shell density is $\tfrac12$ for every $m_{0}$ and $p_{\perp}$. Hence for every $m_{0} \ge 0$ the bulk vacuum restricts (the restriction defined by this momentum-space computation with transverse smearing, not as a pullback of distributions, since the wave-front set of the vacuum kernel meets the conormal of $N\times N$ along the generators) to $\omega_{m_{0}}(\psi_{N}^{*}(v)\psi_{N}(u)) = W_{0}(u, v)\otimes\id_{K}$, $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}$: the null vacuum $\omega_{0}$ of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii) on every generator, in every affine parameter.
 \item[(iii)] \emph{(Hadamard states give the generator condition; proved, given the imported fact.)} If $\omega$ is a gauge-invariant quasi-free state of the mass-$m_{0}$ field whose two-point kernel differs from $\omega_{m_{0}}$'s by a smooth kernel (a Hadamard state; Fact \claimref{synthesis.imported-microlocal-hadamard-condition}), its restriction to $N$ has smooth remainder $R = W_{\omega} - W_{0}\otimes\id_{K}$ on $J\times J$ for every interval $J$ of every generator, in each $K$-component with compactly supported transverse profiles. So it satisfies the microlocal spectrum condition on every such $J$ and, by Theorem \claimref{synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state}(ii), its scaling limit at every point of $N$ is $\omega_{0}$: the local form of (N$_{+}$) holds at every point of every local Rindler horizon of the flat field, with no stationarity, temperature or symmetry assumed.
 \item[(iv)] \emph{(What it does not give.)} Not the ground-state clause of (N$_{+}$) (every Hadamard state passes, the stored affine-KMS states included), not (Loc), and not the statement on a field with nonzero field strength.
 \end{enumerate}

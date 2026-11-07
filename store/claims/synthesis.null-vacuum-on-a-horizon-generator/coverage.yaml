@@ -1,0 +1,32 @@
+functions:
+  check_boost_dilates_the_null_translations:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: The conjugation of a translation by the boost composed as affine maps of the generator at three boost factors and three shifts; the weight factors are argued to cancel; the forcing of the weight 1/2 is tested in the strip function
+  check_ground_state_symbol_is_the_filled_sea:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: The two ground-state inequalities k A(k) <= 0 and (1 - A(k)) k >= 0 on a rational grid of symbol values at six nonzero k leave exactly A = 1 for k < 0 and A = 0 for k > 0, and P = I_4 d/du acts on e^{I_4 k u} as -k; the ground-state characterisation, the spectral representation and the converse (the Fock representation of a projection symbol) are argued, not computed
+  check_null_vacuum_kernel_and_anticommutator:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: In span{1, I_4} of Cl(1,3), the regularised Fourier integral of the sea, (eps - I_4 x)^{-1} = I_4 (x + I_4 eps)^{-1}, and the two orderings adding to the Poisson kernel 2 eps/(x^2 + eps^2), at four x and three eps; the limit eps -> 0 and the integral 2 pi of the Poisson kernel are not computed
+  check_half_generator_strip_is_kms_at_two_pi:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (i)
+    omits: The analytic strip of the continued two-point function (no zero of z q u - v for 0 < theta < 2 pi, boundary signs, weight 1/2 forced by the CAR, the factor e^{i pi} carrying W- to W+, controls for u < 0) at four (u, v, q) triples and twelve values of tan(theta/2); uniqueness of the beta-KMS state, evenness and the identification with the I-state of the cited theorem are not tested
+  check_past_half_is_kms_for_the_future_boost:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: Same strip analysis on the past half at three (u, v, q') triples with the orientation control; the Mellin relation m(-w) = (1 + e^{2 pi w})^-1 is evaluated from a symbol function defined in the check, so it restates the formula rather than deriving it
+  check_mellin_symbol_is_the_i_state_at_two_pi:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: The symbol m = (i/2)(cot(pi s) - i) is taken as given (not derived as the Mellin transform of the kernel) and shown equal to (1 + e^{2 pi h})^-1 and not to the beta = pi or 4 pi values at five values of e^{pi omega}; the two-point KMS identity is checked at the same points

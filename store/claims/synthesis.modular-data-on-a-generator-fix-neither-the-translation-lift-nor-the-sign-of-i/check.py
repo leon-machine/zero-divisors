@@ -195,7 +195,7 @@ def check_polar_part_gives_the_modular_conjugation():
 
 
 def check_fermi_sea_is_a_local_gauge_transform_of_the_vacuum():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     # plane wave e^{-ipu} has P-eigenvalue p; multiplication by e^{iku} sends p to p - k
     ks = (F(3, 2), F(-2, 7), F(0))
     ps = (F(-5), F(-1, 3), F(0), F(1, 4), F(1), F(13, 9), F(4))
@@ -253,7 +253,7 @@ def check_fermi_sea_is_a_local_gauge_transform_of_the_vacuum():
 
 
 def check_hankel_phases_of_the_vacuum_and_the_filled_sea():
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.null-vacuum-on-a-horizon-generator")
     premise("angle.imported-theorems-deliver-their-hypotheses")
     # int_{-oo}^0 e^{ipt} dp = 1/(it) = -i/t ; int_0^oo e^{ipt} dp = -1/(it) = i/t (Abel regularised)
     for t in (F(1, 3), F(2), F(17, 5)):

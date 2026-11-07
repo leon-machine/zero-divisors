@@ -1,7 +1,7 @@
 ---
 id: synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
 kind: claim
-version: 2
+version: 3
 title: 'Net-level modular data on a generator fix neither the translation lift nor the sign of i'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-06-edge-normality
+- name: Claude Opus 5.5
+  role: premises repointed to the premise-free results split out of the null-energy and collapse results
+  version: 3
+  source: maintainer pass 2026-11-07
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -30,14 +34,14 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - angle.imported-theorems-deliver-their-hypotheses@1
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - singularity.modular-theory-matrix-factor-proved-outright@4
   - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics@2
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@4
-  - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@1
-  - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@2
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
+  - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@3
+  - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@3
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@1
   - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@1
   proof: proof-main.tex
@@ -61,6 +65,10 @@ outside_ga:
   kind: complex-analysis
   why: 'Tomita-Takesaki modular theory on the Fock space of the generator modes (Hilbert-space structure, antiunitary conjugations, the antilinear Majorana conjugation); i is kept throughout because the result is about which element the imaginary unit is on a generator and its orientation: the conventions give I_4, the argued reading of (iv) gives the transverse bivector J = I_4 B, and writing either would prejudge that reading.'
 extraction:
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3, at Leon''s decision of 7 November 2026: it cited synthesis.positive-null-energy-gives-r-premises only for its (i) (the null vacuum as the unique gauge-invariant quasi-free ground state), which is now synthesis.null-vacuum-on-a-horizon-generator (ii); the uses edge, the claimrefs and the checks'' premise calls are repointed to it, so this result no longer inherits Premise (N+) through them. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed; notation as the sweep left it. Pins moved to current versions (statements unchanged): synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state 4 -> 5; synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state 1 -> 3; synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state 2 -> 3.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -92,7 +100,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On one horizon generator with affine parameter $u \in \R$, let $\mathfrak{h} = L^{2}(\R, du)\otimes K$, $\CAR(\mathfrak{h})$ the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $\mathfrak{A}(O)$ its subalgebra over $L^{2}(O)\otimes K$ for an interval or half-line $O$, $\tau_{t}(a(f)) = a(f(\cdot - t))$ the field translations, $P = i\,d/du$, and $\omega_{0}$ the null vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty,0)}(P)\otimes\id_{K}$ (convention $\omega(a^{*}(f)a(g)) = \ip{g}{Ef}$), the unique gauge-invariant quasi-free state of (N$_{+}$) (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i)). For a measurable $m : \R \to U(K)$ let $\alpha_{m}(a(f)) = a(mf)$, and let $r_{a}(u) = 2a - u$. $\Theta$ is the grading unitary, normalised by $\Theta\Omega = \Omega$; the vacuum's half-line conjugations act on the fields as $J_{a}\,a(f)\,J_{a} = \Theta\,a^{*}(c\,f\circ r_{a})$, $f$ supported in $(a, \infty)$, with a constant phase $c$ (Fact \claimref{synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection}(c); $c = i\eta$ in the notation $J_{a}\psi(f)J_{a} = \eta Z\psi^{*}(\rho_{a}f)Z^{*}$ with the Klein twist $Z$; $c = -i$).
+Units $\hbar = c = 1$. On one horizon generator with affine parameter $u \in \R$, let $\mathfrak{h} = L^{2}(\R, du)\otimes K$, $\CAR(\mathfrak{h})$ the continuum mode space (Definition \claimref{obj.hawking.continuum-mode-space}), $\mathfrak{A}(O)$ its subalgebra over $L^{2}(O)\otimes K$ for an interval or half-line $O$, $\tau_{t}(a(f)) = a(f(\cdot - t))$ the field translations, $P = i\,d/du$, and $\omega_{0}$ the null vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty,0)}(P)\otimes\id_{K}$ (convention $\omega(a^{*}(f)a(g)) = \ip{g}{Ef}$), the unique gauge-invariant quasi-free state of (N$_{+}$) (Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)). For a measurable $m : \R \to U(K)$ let $\alpha_{m}(a(f)) = a(mf)$, and let $r_{a}(u) = 2a - u$. $\Theta$ is the grading unitary, normalised by $\Theta\Omega = \Omega$; the vacuum's half-line conjugations act on the fields as $J_{a}\,a(f)\,J_{a} = \Theta\,a^{*}(c\,f\circ r_{a})$, $f$ supported in $(a, \infty)$, with a constant phase $c$ (Fact \claimref{synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection}(c); $c = i\eta$ in the notation $J_{a}\psi(f)J_{a} = \eta Z\psi^{*}(\rho_{a}f)Z^{*}$ with the Klein twist $Z$; $c = -i$).
 \begin{enumerate}
 \item[(i)] \emph{(Net-level identity.)} For every $m$, the state $\omega_{0}\circ\alpha_{m}$ has the GNS triple $(\mathcal{H}_{0}, \pi_{0}\circ\alpha_{m}, \Omega_{0})$ and the same von Neumann algebra $\pi_{0}(\mathfrak{A}(O))''$ for every interval and half-line $O$ as $\omega_{0}$. Its modular operators and conjugations for every such algebra are the vacuum's, so every condition on the net $O \mapsto \pi(\mathfrak{A}(O))''$ and the vector holds for it exactly when it holds for $\omega_{0}$: the generator form of the Condition of Geometric Modular Action ($J_{a}$ maps the algebra of each $O \subset (a, \infty)$ onto the twisted algebra of $r_{a}O$, every cut $a$), geometric modular groups on the net, modular stability, twisted Haag duality, and the existence of a unitary group with positive generator implementing the net translations and fixing the vector.
 \item[(ii)] \emph{(Fermi seas.)} For $m(u) = e^{iu\kappa}$, $\kappa$ a constant Hermitian operator on $K$, $\omega_{\kappa} = \omega_{0}\circ\alpha_{m}$ is the gauge-invariant quasi-free state with symbol $\chi_{(-\infty,0)}(P - \kappa)$: pure, $\tau$-invariant, locally normal to $\omega_{0}$ on every bounded interval (the symbols differ there by $\pm$ a positive trace-class operator), and its two-point kernel differs from the vacuum's by a smooth kernel, so it satisfies the generator microlocal condition of \claimref{synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state} at every point. For $\kappa \neq 0$ it is not a ground state for $\tau$: the excitations at momenta between $0$ and an eigenvalue of $\kappa$ (holes for a positive eigenvalue, particles for a negative one) have negative energy, and the generator is unbounded below. Its charge density is $\tr\kappa/2\pi$ and its energy density $\tr\kappa^{2}/4\pi$. It is the ground state of the other lift $\alpha_{m}^{-1}\tau_{t}\alpha_{m}$, $a(f) \mapsto a(e^{-it\kappa}f(\cdot - t))$, $\tau_{t}$ followed by the internal rotation $e^{-it\kappa}$, with one-particle generator $P - \kappa$. For $\kappa = k\,\id_{K}$, on the gauge-invariant subalgebra it is a ground state for $\tau$ (there $\alpha_{m}$ commutes with $\tau$ and the vacuum's positive implementer serves), distinct from $\omega_{0}$ by its charge density; with $K$ two-dimensional and $\kappa$ of eigenvalues $\pm k$ the charge density vanishes. Elementwise, its modular conjugations act as $J_{a}\,a(f)\,J_{a} = \Theta\,a^{*}(c\,e^{2i\kappa(a - u)}f\circ r_{a})$: a reflection with a position-dependent phase, constant only for $\kappa = 0$; so the elementwise action does see the lift.
