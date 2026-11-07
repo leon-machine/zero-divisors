@@ -274,3 +274,35 @@ In normality-on-the-closed-generator I also moved its pin to stationary-horizon 
 
 ## Not done
 - **Commits:** I made none.
+
+# Round 4: referee fixes
+
+## Result
+I applied every fix in referee-split.md in place. Each is folded into the entity's current version of this pass (no version bump), with a sentence added at the head of its existing `maintainer_pass_clause_split` note.
+
+## Fixes by entity
+- **synthesis.canonical-part-of-a-spinor-on-a-null-plane (v1).**
+  - (iv) in the formal, technical and one-liner levels and in the proof: the constraint fixes Lambda(k)ψ only up to its value at one end of each generator. So the free data are Lambda(m)ψ together with that one boundary value per generator (the light-front zero mode).
+  - (iv): with an internal index, a covariant mass term is a matrix of right multiplications, ψ_a ↦ Σ_b ψ_b X_ba.
+  - Not asked for: I made the same zero-mode wording fix in synthesis.slot-module-light-ray-arrays-are-weyl-components (i), folded into its v2, because it carried the source phrase.
+- **synthesis.null-vacuum-on-a-horizon-generator (v1).**
+  - The converse in (ii) now cites Fact synthesis.imported-powers-stormer-takesaki-disjointness (d) (Araki purity). I added a uses edge to it @3; it is imported and holds given nothing, and no assumes edge was added. Since no check computes with it, coverage.yaml lists it as untouched, and it is removed from the note's from-memory list.
+  - The necessity step now reads the symbol as decomposable over the spectrum of P, fibrewise on K, with A(k) = id_K for k < 0.
+  - Bratteli-Robinson is cited as Definition 5.3.18 and Proposition 5.3.19. I made the same correction in the proof of synthesis.positive-null-energy-gives-r-premises (i), folded into its v6.
+  - Bisognano-Wichmann, Hislop-Longo and Sewell are flagged as orientation, from memory.
+- **synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation (v1).**
+  - The sharpness remark in the proof of (ii) now says states fall outside the class when some a_k is unbounded near 0. It gives the referee's example: a(u) = (u + I_4 0)^{-1/4}(u + I_4)^{-1}, with symbol T_0 − c|a⟩⟨a|/‖a‖², 0 < c ≤ 1. It also notes that a bounded but discontinuous a_k stays inside the class.
+  - "Determined by its two-point function" now cites hawking.imported-quasi-free-states-car-algebra in formal (ii) and in the proof, beside the KMS Fact. I added a uses edge to it @2; it is imported and holds given nothing, and coverage.yaml lists it as untouched.
+- **synthesis.stationary-generator-states-and-the-edge-scaling (v1).**
+  - Proof of (iii): for c = ∞ the symbol is now χ_(0,∞)(w), that is χ_(−∞,0)(h).
+  - The same slip is no longer in synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit: since round 3 its proof of (iii) cites this result and no longer carries the sentence (checked: no occurrence in its entity or proof). So that entity needed no change.
+
+## Validation
+- **runcheck:** 0 failures on the four. No check.py was changed this round.
+- **check4:** 0 errors on the four. The only findings are I405 "as expected" on null-vacuum and null-vacuum-singularity, for the two new untouched imported Facts.
+- **tp check layers 1 to 3:** 0 errors, 0 warnings. Nothing on my ids apart from the I213 already in the baseline.
+- **holds_given:** none for each of the four, and none for synthesis.hadamard-scaling-limit-premise.
+
+## Not done
+- **collapsing-hole-flux (iv)** still carries the same inherited citation: determination by the two-point function credited to the KMS Fact. Its proof no longer contains the "discontinuous" remark. Neither fix was asked for there.
+- **Commits:** I made none.
