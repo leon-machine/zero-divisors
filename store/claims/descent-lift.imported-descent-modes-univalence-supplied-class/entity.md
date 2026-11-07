@@ -29,7 +29,7 @@ derivations:
   - singularity.l-stabiliser-tangent@5
   - singularity.p-reduced-metric-level-reading-many@6
   - singularity.purity-output-partner-commutant@4
-  - singularity.schmidt-forcing-proved-outright@4
+  - singularity.schmidt-forcing-proved-outright@5
   assumes:
   - singularity.l-boundary-mode-locality@2
   - singularity.p-univalence@2

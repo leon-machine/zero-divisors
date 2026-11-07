@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - families.imported-dictionary-exact-join@5
+  - families.imported-dictionary-exact-join@6
   - families.imported-face-valued-bracket-quantum-numbers@5
   proof: proof-main.tex
 checked_by:

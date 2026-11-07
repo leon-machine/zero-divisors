@@ -32,7 +32,7 @@ derivations:
   - mass.chart-form-spin-isomorphism@5
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.de-sitter-scale-frozen-point@6
-  - mass.exact-join@7
+  - mass.exact-join@8
   proof: proof-main.tex
 checked_by:
 - kind: check

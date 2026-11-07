@@ -23,13 +23,13 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
-  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@1
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
+  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@2
   - synthesis.counted-unit-energy-at-half-offset@1
   - synthesis.imported-theta-function-identities@1
   - synthesis.hole-mass-is-ground-energy-label@3
   - synthesis.residue-from-mode-entropy@4
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.positive-null-energy-gives-r-premises@6
   assumes:
   - synthesis.window-reading-array-killing-energy@1
   proof: proof-main.tex

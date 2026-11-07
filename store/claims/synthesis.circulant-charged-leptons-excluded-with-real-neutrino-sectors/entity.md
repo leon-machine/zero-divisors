@@ -25,12 +25,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.koide-channel-phase-is-no-symmetry-angle@2
-  - synthesis.series-family-structures-give-no-lopsided-second-stage@2
-  - synthesis.theta23-at-s3-s2-direction@2
+  - synthesis.koide-channel-phase-is-no-symmetry-angle@3
+  - synthesis.series-family-structures-give-no-lopsided-second-stage@3
+  - synthesis.theta23-at-s3-s2-direction@3
   - neutrino.breaking-relation@3
-  - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns@1
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@2
+  - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns@2
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
   - synthesis.imported-nufit-6-oscillation-parameter-ranges@1
   - synthesis.imported-harrison-scott-mu-tau-reflection@1
   - synthesis.imported-takagi-factorisation@1

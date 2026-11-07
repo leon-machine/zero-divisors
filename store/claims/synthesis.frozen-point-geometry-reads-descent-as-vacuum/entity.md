@@ -27,9 +27,9 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - dark-matter.imported-frozen-point-de-sitter-radius@6
-  - standard-model.imported-frozen-point-dictionary@7
-  - synthesis.frozen-phase-spectrum-not-red@2
-  - synthesis.sudden-descent-feature-not-tilt@3
+  - standard-model.imported-frozen-point-dictionary@8
+  - synthesis.frozen-phase-spectrum-not-red@3
+  - synthesis.sudden-descent-feature-not-tilt@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
   - synthesis.quadratic-flows-cannot-thermalise-descent@1
   - synthesis.imported-planck-2018-lcdm-parameters@3

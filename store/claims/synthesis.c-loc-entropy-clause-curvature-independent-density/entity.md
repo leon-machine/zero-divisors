@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.imported-jacobson-clausius-1995@2
   - synthesis.quarter-from-temperature@1
-  - synthesis.de-sitter-entropy-pi-n-squared@5
+  - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
   - synthesis.clausius-route-newton-constant-is-residue@4
   proof: proof-main.tex

@@ -24,7 +24,7 @@ derivations:
   uses:
   - scrambling.area-law-test@4
   - scrambling.clock-inventory-boundary-modes@5
-  - scrambling.imported-modes-modular-inventory@3
+  - scrambling.imported-modes-modular-inventory@4
   - scrambling.mode-count@2
 checked_by:
 - kind: legacy

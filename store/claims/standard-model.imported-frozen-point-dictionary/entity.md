@@ -29,7 +29,7 @@ derivations:
   - interior.scale-tractor-leaves-cone@7
   - mass.de-sitter-scale-frozen-point@6
   - mass.mass-weight-dictionary@4
-  - mass.weight-polynomial-two-series@5
+  - mass.weight-polynomial-two-series@6
   - standard-model.imported-frozen-point-dictionary-external@2
   proof: proof-main.tex
 checked_by:

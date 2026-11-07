@@ -46,8 +46,8 @@ derivations:
   - field-theory.coupled-system-tree-level@3
   - field-theory.twistor-attachment@6
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off@3
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@2
-  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@3
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@3
+  - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@4
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2

@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.acoustic-no-go-one-way-grip@3
+  - dark-energy.acoustic-no-go-one-way-grip@4
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - dark-energy.conclusion-does-not-depend-ontology-level@1
   assumes:

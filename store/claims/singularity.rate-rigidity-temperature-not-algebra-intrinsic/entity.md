@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

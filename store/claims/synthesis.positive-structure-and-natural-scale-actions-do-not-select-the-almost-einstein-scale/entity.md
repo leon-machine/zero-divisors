@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
   - correspondence.imported-vacuum-equations-scale-tractor@6
-  - synthesis.positive-conformal-energy-gives-positive-null-translations@5
+  - synthesis.positive-conformal-energy-gives-positive-null-translations@6
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time@3
   - synthesis.imported-gtg-dictionary@1
   proof: proof-main.tex

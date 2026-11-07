@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.acoustic-no-go-one-way-grip@3
+  - dark-energy.acoustic-no-go-one-way-grip@4
   - dark-energy.imported-walls-sphere-theorem@6
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - interior.imported-equivalence-einstein-equations@2

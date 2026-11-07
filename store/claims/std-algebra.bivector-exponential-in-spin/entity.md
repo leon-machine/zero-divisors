@@ -34,9 +34,9 @@ derivations:
   - primer.centre@2
   - primer.sign@2
   - std-algebra.spin-double-cover@1
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@2
   - std-algebra.inverse-of-vector@1
-  - std-algebra.complex-clifford-algebra@1
+  - std-algebra.complex-clifford-algebra@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

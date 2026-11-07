@@ -27,8 +27,8 @@ derivations:
   uses:
   - neutrino.breaking-relation@3
   - synthesis.solar-angle-light-plane-sum-rule@1
-  - synthesis.series-family-structures-give-no-lopsided-second-stage@2
-  - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns@1
+  - synthesis.series-family-structures-give-no-lopsided-second-stage@3
+  - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns@2
   - families.faces-ordered-what-identification-requires-first@3
   - synthesis.imported-fritzsch-texture-cabibbo-formula@1
   - synthesis.imported-flag-2024-light-quark-mass-ratios@1

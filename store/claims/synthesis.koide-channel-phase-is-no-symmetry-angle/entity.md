@@ -25,11 +25,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.coherent-face-vector-real-slices@1
+  - synthesis.coherent-face-vector-real-slices@2
   - families.koide-nullity-condition-one-member-invariant@2
-  - synthesis.real-structure-breaks-source-stabiliser-to-z2@2
+  - synthesis.real-structure-breaks-source-stabiliser-to-z2@3
   - families.classification-displaced-gaussian-class-solved-level@3
-  - synthesis.light-cone-koide-is-quarter-turn@1
+  - synthesis.light-cone-koide-is-quarter-turn@2
   proof: proof-main.tex
 quantities:
 - quantity.electron-mass@1

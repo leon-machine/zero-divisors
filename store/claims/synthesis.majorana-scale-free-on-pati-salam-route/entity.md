@@ -35,7 +35,7 @@ derivations:
   - standard-model.fits-record-level@6
   - standard-model.what-angle-asks-neutrino-sector@4
   - standard-model.chain@8
-  - neutrino.rank-one-seesaw-ordering-sum-double@8
+  - neutrino.rank-one-seesaw-ordering-sum-double@9
   proof: proof-main.tex
 checked_by:
 - kind: check

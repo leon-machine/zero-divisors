@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.koide-channel-phase-is-no-symmetry-angle@2
-  - synthesis.coherent-face-vector-real-slices@1
+  - synthesis.koide-channel-phase-is-no-symmetry-angle@3
+  - synthesis.coherent-face-vector-real-slices@2
   - families.koide-nullity-condition-one-member-invariant@2
   - synthesis.imported-one-loop-qed-pole-mass-relation@1
   proof: proof-main.tex

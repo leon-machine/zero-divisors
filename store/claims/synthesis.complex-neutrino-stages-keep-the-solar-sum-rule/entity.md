@@ -28,8 +28,8 @@ derivations:
   - neutrino.breaking-relation@3
   - synthesis.solar-angle-light-plane-sum-rule@1
   - synthesis.one-type-second-stages-are-twins@1
-  - synthesis.series-family-structures-give-no-lopsided-second-stage@2
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@2
+  - synthesis.series-family-structures-give-no-lopsided-second-stage@3
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
   - standard-model.imported-clebsch-structure-seesaw@1
   - synthesis.imported-takagi-factorisation@1
   - synthesis.imported-nufit-6-oscillation-parameter-ranges@1

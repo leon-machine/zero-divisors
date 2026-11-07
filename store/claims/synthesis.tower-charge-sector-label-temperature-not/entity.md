@@ -31,7 +31,7 @@ derivations:
   - hawking.i-state@3
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-matter.stored-asymmetry-charge-not-number@8
-  - synthesis.cold-mirror-needs-non-equilibrium-descent@1
+  - synthesis.cold-mirror-needs-non-equilibrium-descent@2
   - synthesis.mirror-asymmetry-route-one@2
   - dark-matter.mirror-tower-copy-one@8
   - synthesis.imported-powers-stormer-takesaki-disjointness@3

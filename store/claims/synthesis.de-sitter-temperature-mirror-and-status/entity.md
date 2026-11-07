@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.de-sitter-temperature-frozen-point-norm@5
+  - synthesis.de-sitter-temperature-frozen-point-norm@6
   - synthesis.cosmological-horizon-completed-pair@3
   - odd-extensions.two-towers-one-curved-universe@6
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
   - dark-energy.under-action-written-norm-parameter-laws@4
   assumes:
   - singularity.p-univalence@2

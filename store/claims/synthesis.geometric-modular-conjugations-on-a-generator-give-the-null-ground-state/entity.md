@@ -57,9 +57,9 @@ derivations:
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   - synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion@1
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@1
-  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@1
-  - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state@2
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@2
+  - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state@3
+  - angle.imported-theorems-deliver-their-hypotheses@2
   proof: proof-main.tex
 checked_by:
 - kind: check

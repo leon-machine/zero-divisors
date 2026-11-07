@@ -31,7 +31,7 @@ derivations:
   - std-algebra.existence-uniqueness@1
   - std-algebra.functoriality@1
   - std-algebra.sylvester-inertia@1
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

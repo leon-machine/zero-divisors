@@ -28,7 +28,7 @@ derivations:
   - standard-model.imported-tower-commuting-copies-fock-module@5
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - standard-model.transported-frozen-point@5
-  - synthesis.rung-unit-is-frame-boost@2
+  - synthesis.rung-unit-is-frame-boost@3
   - synthesis.rung-unit-transverse-to-norm@3
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   proof: proof-main.tex

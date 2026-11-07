@@ -24,10 +24,10 @@ derivations:
 - name: main
   uses:
   - singularity.exact-equilibrium-over-determines-boundary-modes@5
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   - singularity.parity-protection@2
-  - singularity.rate-discharge-hypothesis-iii@4
+  - singularity.rate-discharge-hypothesis-iii@5
   proof: proof-main.tex
   assumes:
   - singularity.p-univalence@2

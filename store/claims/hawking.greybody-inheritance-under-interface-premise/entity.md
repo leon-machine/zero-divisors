@@ -24,7 +24,7 @@ derivations:
   - hawking.imported-exterior-exactly-general-relativity@3
   - hawking.i-state-continuum@5
   - hawking.imported-s-wave-bosonic-sector@6
-  - hawking.imported-modular-descent-premises-geometric-normalisation@6
+  - hawking.imported-modular-descent-premises-geometric-normalisation@7
   proof: proof-main.tex
   assumes:
   - hawking.premise-i-interface-identification@1

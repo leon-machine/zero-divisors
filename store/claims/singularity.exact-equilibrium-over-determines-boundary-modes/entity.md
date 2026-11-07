@@ -26,7 +26,7 @@ derivations:
   uses:
   - singularity.deficit-carried-quanta-correlations@5
   - singularity.deficit-theorem-cost-descent-exactly@4
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

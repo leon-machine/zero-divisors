@@ -24,7 +24,7 @@ derivations:
   - hawking.i-state@3
   - state-selection.partner-purification-are-canonical@4
   - synthesis.boundary-mode-thermal-entropy@2
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - angle.imported-theorems-deliver-their-hypotheses@2
   - synthesis.imported-jacobson-entanglement-equilibrium-2016@2
   proof: proof-main.tex
 checked_by:

@@ -25,9 +25,9 @@ review: draft
 derivations:
 - name: main
   uses:
-  - families.chart-computation-sign-twist-bracket-form@5
+  - families.chart-computation-sign-twist-bracket-form@6
   - families.koide-nullity-condition-one-member-invariant@2
-  - synthesis.coherent-face-vector-real-slices@1
+  - synthesis.coherent-face-vector-real-slices@2
   - families.alignment-computed-thirteenth-refutation-democracy-one@4
   - families.linear-conjecture-refuted-data@3
   proof: proof-main.tex

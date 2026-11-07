@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@2
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
   - interior.kasner-form-interior@5
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2

@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - mass.mass-symplectic-area-two-twistor-formula@3
-  - standard-model.internal-symmetry-ladder@3
+  - standard-model.internal-symmetry-ladder@4
   - standard-model.mass-bracket-charged-singlet@4
   proof: proof-main.tex
 checked_by:

@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - rule2.where-obstruction-sits-commuting-square@5
-  - std-algebra.complexification@1
+  - std-algebra.complexification@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -67,7 +67,7 @@ extraction:
       step is self-contained. Linked equivalent_to transport.odd-lorentzian-dimension-exactly-one-real:
       the companion note restates it.'
 equivalent_to:
-- transport.odd-lorentzian-dimension-exactly-one-real@4
+- transport.odd-lorentzian-dimension-exactly-one-real@5
 ---
 
 ## formal

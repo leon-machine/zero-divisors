@@ -25,8 +25,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
-  - synthesis.rung-field-on-the-lift-locus@2
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-on-the-lift-locus@3
   - synthesis.rung-unit-transverse-to-norm@3
   - standard-model.generation-ten-under-pati-salam@7
   - synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors@1

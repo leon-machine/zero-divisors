@@ -26,10 +26,10 @@ derivations:
 - name: main
   uses:
   - standard-model.ten-transported-ambient-space-doublets-are@2
-  - synthesis.rung-unit-is-frame-boost@2
-  - synthesis.rung-field-on-the-lift-locus@2
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3
+  - synthesis.rung-unit-is-frame-boost@3
+  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
   proof: proof-main.tex
 checked_by:
 - kind: check

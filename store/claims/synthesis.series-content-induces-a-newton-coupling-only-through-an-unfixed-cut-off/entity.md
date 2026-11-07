@@ -22,11 +22,11 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-sakharov-induced-gravity-coefficients@1
-  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@2
+  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
   - standard-model.connection-forced@4
   - standard-model.chain@8
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3
-  - synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike@2
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike@3
   proof: proof-main.tex
 quantities:
 - quantity.top-quark-mass@1

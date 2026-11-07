@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@2
+  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@3
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.imported-tower-limit@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@3
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2

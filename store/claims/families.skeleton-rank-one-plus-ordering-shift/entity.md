@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - families.imported-squeezed-vacuum-bosonic-pairing@3
-  - families.rigidity-pairing-sector-one-event@3
+  - families.rigidity-pairing-sector-one-event@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

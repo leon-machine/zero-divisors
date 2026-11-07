@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - standard-model.imported-frozen-point-dictionary@7
+  - standard-model.imported-frozen-point-dictionary@8
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -26,8 +26,8 @@ derivations:
 - name: main
   uses:
   - correspondence.chevalley-pairing@4
-  - correspondence.incidence-relation-chart@4
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.incidence-relation-chart@5
+  - correspondence.fock-model-complexified-ascended-algebra@8
   - std-algebra.inverse-of-vector@1
   - std-algebra.reflection@1
   proof: proof-main.tex

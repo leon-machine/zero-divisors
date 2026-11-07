@@ -25,8 +25,8 @@ derivations:
   uses:
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.quarter-from-temperature@1
-  - synthesis.de-sitter-entropy-pi-n-squared@5
-  - synthesis.de-sitter-temperature-frozen-point-norm@5
+  - synthesis.de-sitter-entropy-pi-n-squared@6
+  - synthesis.de-sitter-temperature-frozen-point-norm@6
   assumes:
   - singularity.p-univalence@2
   - singularity.r-regularity-fixed-locus@3

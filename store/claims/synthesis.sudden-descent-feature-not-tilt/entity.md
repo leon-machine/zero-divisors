@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.frozen-phase-spectrum-not-red@2
+  - synthesis.frozen-phase-spectrum-not-red@3
   - mass.de-sitter-scale-frozen-point@6
   proof: proof-main.tex
 checked_by:

@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@2
+  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@3
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes@2
   - dark-energy.imported-walls-sphere-theorem@6
   proof: proof-main.tex

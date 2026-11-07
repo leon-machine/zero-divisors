@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - hawking.imported-quasi-free-states-car-algebra@2
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - singularity.chains-state-class-stability@7
   proof: proof-main.tex
 checked_by:

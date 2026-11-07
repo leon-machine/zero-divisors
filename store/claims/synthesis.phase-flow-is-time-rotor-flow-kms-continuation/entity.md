@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - tower.structure-tower-c-norms@7
+  - tower.structure-tower-c-norms@8
   - scrambling.clock-inventory-boundary-modes@5
   - field-theory.boost-modes@3
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - singularity.euclidean-rotor-where-it-lies@4
   - rungs.imported-fock-representation-bogoliubov-group@4
   - scrambling.spreading-law-chaos-bound-saturated@5

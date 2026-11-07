@@ -24,7 +24,7 @@ derivations:
   - correspondence.spin-representation@6
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   - correspondence.ordering-filtration@3
-  - correspondence.chirality-split-ordering-insensitivity-asd-sector@4
+  - correspondence.chirality-split-ordering-insensitivity-asd-sector@5
   - correspondence.chiral-planes-summand-spaces@5
   proof: proof-main.tex
 checked_by:

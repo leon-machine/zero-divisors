@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.rate-discharge-hypothesis-iii@4
+  - singularity.rate-discharge-hypothesis-iii@5
   assumes:
   - singularity.p-univalence@2
   - singularity.r-regularity-fixed-locus@3

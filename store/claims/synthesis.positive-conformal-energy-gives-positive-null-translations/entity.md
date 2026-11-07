@@ -27,8 +27,8 @@ derivations:
   uses:
   - synthesis.positive-energy-selects-rule-2-sign@3
   - mass.chart-form-spin-isomorphism@5
-  - angle.imported-theorems-deliver-their-hypotheses@1
-  - std-algebra.bivector-exponential@1
+  - angle.imported-theorems-deliver-their-hypotheses@2
+  - std-algebra.bivector-exponential@2
   proof: proof-main.tex
 checked_by:
 - kind: check

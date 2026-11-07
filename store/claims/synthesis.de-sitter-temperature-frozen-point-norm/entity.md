@@ -31,7 +31,7 @@ derivations:
   - synthesis.de-sitter-static-boost-frozen-point@5
   - singularity.ascended-marginals-are-diagonal@5
   - singularity.descended-form-state-independent@4
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   assumes:
   - singularity.p-univalence@2
   - synthesis.r-lambda-regularity-cosmological-horizon@4

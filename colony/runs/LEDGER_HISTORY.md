@@ -1,3 +1,4 @@
 # Ledger history (one line per run)
 
 - 2026-11-06-edge-normality: op.r-premises-external proved-partial (field-level geometric modular action equivalent to the (N+) ground-state clause; net-level no-go naming the lift and sign-of-i data); plus three scalars-session entities and one note; about 1.6M subagent tokens.
+- 2026-11-07-ga-units: bridge survey of op.hypothesis-s, op.r-premises-external, op.deposit-state-is-hadamard (findings; no premise derived); handedness test killed; four results accepted after review (frequency sign under I4, Z-flag energy sign follows the flag bit, Fock slot module gives one doublet, clause (f) a Klein convention); Hadamard chain now holds given no postulate (four split-out results); store-wide imaginary-unit pass under Leon's rule and rulings R1-R4; about 5.1M subagent tokens.

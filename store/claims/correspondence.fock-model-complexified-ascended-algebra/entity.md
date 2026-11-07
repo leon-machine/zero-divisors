@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.existence-uniqueness@1
-  - std-algebra.complex-clifford-algebra@1
+  - std-algebra.complex-clifford-algebra@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

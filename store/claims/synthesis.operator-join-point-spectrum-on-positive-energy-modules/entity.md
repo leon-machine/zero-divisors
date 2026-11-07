@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@2
-  - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@1
+  - synthesis.operator-join-ordering-constants@3
+  - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@2
   - synthesis.operator-join-casimir-shifts@2
-  - mass.exact-join@7
+  - mass.exact-join@8
   - field-theory.twistor-attachment@6
   proof: proof-main.tex
 checked_by:

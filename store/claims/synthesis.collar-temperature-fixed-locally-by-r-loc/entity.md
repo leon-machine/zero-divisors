@@ -26,10 +26,10 @@ derivations:
 - name: main
   uses:
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
-  - synthesis.collar-kms-extension-three-flows@1
-  - synthesis.collar-kms-extension-completion-locus@1
+  - synthesis.collar-kms-extension-three-flows@2
+  - synthesis.collar-kms-extension-completion-locus@2
   - synthesis.collar-isotropy-selects-t-boost@1
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - synthesis.local-boost-temperature-is-local-regularity@3
   proof: proof-main.tex
 checked_by:

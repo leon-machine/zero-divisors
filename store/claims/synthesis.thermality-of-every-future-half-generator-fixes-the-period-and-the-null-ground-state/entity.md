@@ -33,10 +33,10 @@ derivations:
   uses:
   - hawking.i-state-continuum@5
   - hawking.imported-ideal-fermi-gas-uniqueness@2
-  - synthesis.positive-null-energy-gives-r-premises@4
-  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@2
+  - synthesis.positive-null-energy-gives-r-premises@6
+  - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@4
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - angle.imported-theorems-deliver-their-hypotheses@2
   proof: proof-main.tex
 checked_by:
 - kind: check

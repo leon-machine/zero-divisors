@@ -25,8 +25,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
-  - synthesis.rung-field-on-the-lift-locus@2
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-on-the-lift-locus@3
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.yukawa-pattern-two-rung-module@5
   - standard-model.imported-tower-commuting-copies-fock-module@5

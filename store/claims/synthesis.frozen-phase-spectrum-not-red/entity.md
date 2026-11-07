@@ -27,8 +27,8 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - dark-matter.imported-frozen-point-de-sitter-radius@6
-  - standard-model.imported-frozen-point-dictionary@7
-  - mass.weight-polynomial-two-series@5
+  - standard-model.imported-frozen-point-dictionary@8
+  - mass.weight-polynomial-two-series@6
   - mass.imported-unitary-representations-de-sitter-group@3
   - dark-energy.imported-henneaux-teitelboim-promotion@5
   proof: proof-main.tex

@@ -24,10 +24,10 @@ derivations:
 - name: main
   uses:
   - families.alignment-computed-thirteenth-refutation-democracy-one@4
-  - families.bracket-fixed-join@4
+  - families.bracket-fixed-join@5
   - families.source-term-linear-tilt-mass-functional@4
   - mass.de-sitter-scale-frozen-point@6
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.mass-weight-dictionary@4
   - standard-model.connection-forced@4
   proof: proof-main.tex

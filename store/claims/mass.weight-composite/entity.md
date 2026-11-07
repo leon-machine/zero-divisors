@@ -27,8 +27,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
-  - mass.weight-polynomial-two-series@5
+  - mass.exact-join@8
+  - mass.weight-polynomial-two-series@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

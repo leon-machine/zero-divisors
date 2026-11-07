@@ -32,7 +32,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.periodicity@1
-  - std-algebra.complexification@1
+  - std-algebra.complexification@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

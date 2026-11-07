@@ -28,9 +28,9 @@ derivations:
   - correspondence.chiral-planes-summand-spaces@5
   - correspondence.clifford-side-ordering-shift@3
   - correspondence.imported-stabilisers-flat-model@3
-  - correspondence.imported-tractor-connection-local-twistor-transport@6
+  - correspondence.imported-tractor-connection-local-twistor-transport@7
   - correspondence.spin-representation@6
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.fock-model-complexified-ascended-algebra@8
   - std-algebra.bivector-lie-algebra@1
   proof: proof-main.tex
 - name: standard-route

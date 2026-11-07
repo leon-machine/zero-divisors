@@ -25,10 +25,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@2
+  - synthesis.rung-field-on-the-lift-locus@3
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - field-theory.imported-tower-limit@3
-  - synthesis.even-slots-need-a-spectator-generator@2
+  - synthesis.even-slots-need-a-spectator-generator@3
   proof: proof-main.tex
 checked_by:
 - kind: check

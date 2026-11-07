@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@2
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - synthesis.rung-unit-transverse-to-norm@3
   - synthesis.rung-field-charged-scalar-sum-rule@2
   proof: proof-main.tex

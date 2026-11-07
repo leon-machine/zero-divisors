@@ -20,7 +20,7 @@ derivations:
 - name: main
   uses:
   - correspondence.clifford-side-ordering-shift@3
-  - correspondence.fock-model-complexified-ascended-algebra@7
+  - correspondence.fock-model-complexified-ascended-algebra@8
   - correspondence.shared-core-ordering-dictionary@4
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   proof: proof-main.tex

@@ -27,8 +27,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@2
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - synthesis.scale-free-rung-potentials-need-the-flat-physical-branch@2
   - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev@4
   - synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass@1

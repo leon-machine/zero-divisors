@@ -33,7 +33,7 @@ derivations:
   - standard-model.matching-traces@4
   - standard-model.spectrum-run@6
   - standard-model.chain@8
-  - synthesis.majorana-scale-free-on-pati-salam-route@3
+  - synthesis.majorana-scale-free-on-pati-salam-route@4
   proof: proof-main.tex
 checked_by:
 - kind: check

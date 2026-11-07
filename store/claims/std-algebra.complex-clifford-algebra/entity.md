@@ -41,7 +41,7 @@ derivations:
   - std-algebra.chevalley-pairing@1
   - std-algebra.involution-properties@1
   - std-algebra.even-subalgebra-isomorphism@1
-  - std-algebra.complexification@1
+  - std-algebra.complexification@2
   - primer.centre@2
   - primer.sign@2
   proof: proof-main.tex

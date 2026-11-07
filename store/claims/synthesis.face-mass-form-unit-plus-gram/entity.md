@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - families.skeleton-rank-one-plus-ordering-shift@5
+  - families.skeleton-rank-one-plus-ordering-shift@6
   - families.imported-squeezed-vacuum-bosonic-pairing@3
   proof: proof-main.tex
 checked_by:

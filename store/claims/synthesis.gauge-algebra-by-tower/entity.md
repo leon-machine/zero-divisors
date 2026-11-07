@@ -24,7 +24,7 @@ derivations:
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - standard-model.four-dimensions-forces-converse@4
   - standard-model.pair-count-dimension@3
-  - standard-model.internal-symmetry-ladder@3
+  - standard-model.internal-symmetry-ladder@4
   - mass.mass-symplectic-area-two-twistor-formula@3
   - dark-tower-matter.gauge-algebras@5
   - dark-tower-matter.where-mass-begins@2

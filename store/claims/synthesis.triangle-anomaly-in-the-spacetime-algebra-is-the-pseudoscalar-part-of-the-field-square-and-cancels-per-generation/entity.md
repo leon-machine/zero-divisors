@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@3
   - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1
   - synthesis.anomaly-freedom-forces-slot-content@3
   - synthesis.imported-adler-bell-jackiw-axial-anomaly@1

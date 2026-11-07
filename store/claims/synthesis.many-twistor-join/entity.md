@@ -27,11 +27,11 @@ about:
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.chart-form-spin-isomorphism@5
   - mass.de-sitter-scale-frozen-point@6
   - mass.imported-flat-model-twistor-chart-infinity@7
-  - mass.casimir-form-join@6
+  - mass.casimir-form-join@7
   proof: proof-main.tex
 checked_by:
 - kind: check

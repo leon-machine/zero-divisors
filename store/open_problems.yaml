@@ -2063,7 +2063,7 @@
     \claimref{synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation},
     \claimref{synthesis.stationary-generator-states-and-the-edge-scaling}), and
     \claimref{synthesis.hadamard-scaling-limit-premise} now holds given nothing. With the field
-    theory's unit $I_4$ (computed exactly, under review): on the modes of each future null momentum $k$,
+    theory's unit $I_4$ (\claimref{synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality}): on the modes of each future null momentum $k$,
     with boost bivector $B$, $L_B = 1$ and $L_J = -L_{I_4}$ for $J = -I_4B$, so every mode's helicity is
     locked to its frequency sign; every map commuting with the Lorentz rotors is $I_4$-linear; and among
     the discrete maps of the massless field the frequency sign flips exactly under reversal of spatial
@@ -2114,8 +2114,7 @@
       on the Witt flags adapted to the conformal energy $Z$, the energy sign of a flag's vacuum and the
       stored family bit flip together on each pair of conjugate flags, so read as the energy sign of the
       flag's vacuum the datum is the stored flag bit up to the descent's kinematic sign on the four-space
-      orthogonal to $Z$, as \claimref{one-relation.arrow-frequency-are-one-bit-level} states (computed,
-      under review); what remains is to show that the generators' modes inherit the descent's flag.
+      orthogonal to $Z$, as \claimref{one-relation.arrow-frequency-are-one-bit-level} states (\claimref{synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit}); what remains is to show that the generators' modes inherit the descent's flag.
     - >-
       A module-level image of field-level modular action: the Wick-rotated boost continued to rapidity
       $\pi$ is the wedge reflection, unitary for the twistor form exactly at the tube points it fixes
@@ -2768,13 +2767,13 @@
     Clause (G) as a Fock clause: if the slot module is a Fock module of either statistics over its
     one-slot space, CPT closure forces one doublet and the exterior algebra of it (for two or more
     doublets the two-slot space carries weak spin one; a symmetric Fock module is infinite-dimensional),
-    so the vacuum count, the statistics and the doublet count become outputs and the clause holds
-    automatically if the slot quanta are tower modes (computed, under review).
+    so the statistics and the doublet count become outputs (the unique vacuum is part of the Fock clause) and the clause holds
+    automatically if the slot quanta are tower modes (\claimref{synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet}).
   - >-
     Clause (f) as a Klein convention: the Klein-twisted slot operators obey the same relations as the
     slot operators, the Pati-Salam generators and the grading are the same operators in both
-    conventions, and the twist is unique up to sign, so on the composite's module the joint Clifford
-    system exists canonically (computed, under review;
+    conventions, and the twist is unique up to a central phase, so on the composite's module the joint Clifford
+    system exists canonically (\claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space};
     \claimref{synthesis.even-slots-need-a-spectator-generator} already uses the twist).
   success: A theorem deriving (S) or its weaker form from stated structure, or one of the five outcomes adopted and recorded
     in the tier declaration with its consequences carried to T13 and T15.

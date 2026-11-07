@@ -29,8 +29,8 @@ derivations:
   - singularity.imported-one-sided-completion-singularity@5
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   - singularity.modular-structure-completed-pair@5
-  - singularity.kms-uniqueness-factor@4
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
+  - singularity.kms-uniqueness-factor@5
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -30,8 +30,8 @@ derivations:
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - one-relation.recording-irreversible-stated-so-it-can@1
-  - dark-matter.premise-cpt-covariance@2
-  - dark-matter.premise-flag-as-datum@1
+  - dark-matter.premise-cpt-covariance@3
+  - dark-matter.premise-flag-as-datum@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

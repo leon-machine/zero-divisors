@@ -24,7 +24,7 @@ derivations:
   - synthesis.incidence-vacua-thermofield-real-capacity@5
   - one-relation.spacetime-manifold-vacuum-lines@6
   - singularity.descended-form-state-independent@4
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@2
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - std-algebra.sylvester-inertia@1
-  - synthesis.residues-zero-four-real-chirality-anomaly@1
+  - synthesis.residues-zero-four-real-chirality-anomaly@2
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -28,7 +28,7 @@ derivations:
   - standard-model.pair-count-dimension@3
   - one-relation.imported-single-mode-thermality-modular-period@6
   - correspondence.clifford-side-ordering-shift@3
-  - dark-energy.acoustic-no-go-one-way-grip@3
+  - dark-energy.acoustic-no-go-one-way-grip@4
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - std-algebra.periodicity@1
   proof: proof-main.tex

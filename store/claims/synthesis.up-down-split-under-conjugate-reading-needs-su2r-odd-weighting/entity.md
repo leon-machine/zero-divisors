@@ -32,7 +32,7 @@ derivations:
   - synthesis.georgi-jarlskog-majorana-moment-map@3
   - synthesis.georgi-jarlskog-square-of-majorana-element@3
   - synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square@2
-  - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@2
+  - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@3
   proof: proof-main.tex
 checked_by:
 - kind: check

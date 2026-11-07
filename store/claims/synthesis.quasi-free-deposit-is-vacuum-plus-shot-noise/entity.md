@@ -27,7 +27,7 @@ derivations:
   - singularity.descent-parity-average@4
   - singularity.imported-descent-one-way-conditional-expectation@7
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@4
-  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@1
+  - synthesis.frozen-point-geometry-reads-descent-as-vacuum@2
   - synthesis.imported-planck-2018-lcdm-parameters@3
   proof: proof-main.tex
 checked_by:

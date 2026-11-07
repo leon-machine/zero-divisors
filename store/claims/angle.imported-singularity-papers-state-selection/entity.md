@@ -26,9 +26,9 @@ derivations:
 - name: main
   uses:
   - singularity.euclidean-section-period@5
-  - singularity.modular-descent@5
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
-  - singularity.schmidt-forcing-proved-outright@4
+  - singularity.modular-descent@6
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
+  - singularity.schmidt-forcing-proved-outright@5
   - singularity.class-relative-no-go-no-supplied@3
   - singularity.computed@4
   assumes:

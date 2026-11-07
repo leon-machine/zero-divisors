@@ -28,8 +28,8 @@ derivations:
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - standard-model.hyp-s-slot-statistics@9
   assumes:
-  - dark-matter.premise-cpt-covariance@2
-  - dark-matter.premise-flag-as-datum@1
+  - dark-matter.premise-cpt-covariance@3
+  - dark-matter.premise-flag-as-datum@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

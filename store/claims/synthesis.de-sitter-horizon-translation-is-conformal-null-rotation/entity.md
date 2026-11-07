@@ -24,12 +24,12 @@ derivations:
   - mass.de-sitter-scale-frozen-point@6
   - synthesis.de-sitter-static-boost-frozen-point@5
   - synthesis.cosmological-horizon-completed-pair@3
-  - synthesis.positive-conformal-energy-gives-positive-null-translations@5
+  - synthesis.positive-conformal-energy-gives-positive-null-translations@6
   - mass.chart-form-spin-isomorphism@5
   - synthesis.imported-gtg-dictionary@1
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - singularity.curvature-gauge-field-exact-shape-decoupling@4
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@2
   proof: proof-main.tex
 checked_by:
 - kind: check

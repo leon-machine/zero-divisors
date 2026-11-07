@@ -27,17 +27,17 @@ derivations:
   uses:
   - mass.imported-thomas-operator@2
   - mass.mass-weight-dictionary@4
-  - mass.weight-polynomial-two-series@5
+  - mass.weight-polynomial-two-series@6
   - mass.imported-unitary-representations-de-sitter-group@3
   - synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise@2
   - interior.kasner-form-interior@5
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
-  - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@2
-  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@2
+  - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@3
+  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -28,7 +28,7 @@ derivations:
   - neutrino.imported-ceiling-under-hypothesis-u-arrow@6
   - neutrino.imported-indifference-faces-democratic-alignment-rank@6
   - neutrino.invariant-symmetric-matrices@2
-  - neutrino.rank-one-seesaw-ordering-sum-double@8
+  - neutrino.rank-one-seesaw-ordering-sum-double@9
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   - dark-matter.hyp-u-equal-rank-one-eigenvalues@3

@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - correspondence.reality-conjugation-twistor-form-factor@6
-  - correspondence.incidence-relation-chart@4
+  - correspondence.reality-conjugation-twistor-form-factor@7
+  - correspondence.incidence-relation-chart@5
   - synthesis.incidence-vacua-thermofield-real-capacity@5
   - one-relation.two-capacities-three-consequences@5
   proof: proof-main.tex

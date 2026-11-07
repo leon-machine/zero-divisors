@@ -30,7 +30,7 @@ derivations:
   uses:
   - singularity.imported-interior-collar-kasner-form@6
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@2
   proof: proof-main.tex
 checked_by:

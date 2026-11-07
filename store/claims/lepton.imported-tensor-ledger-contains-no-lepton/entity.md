@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - standard-model.quarks-leptons-two-level-fermion-content@5
-  - standard-model.raw-representation-content-state-space@3
+  - standard-model.raw-representation-content-state-space@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

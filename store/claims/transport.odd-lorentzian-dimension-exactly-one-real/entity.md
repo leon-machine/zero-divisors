@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - transport.where-obstruction-lies-commuting-square@4
-  - std-algebra.complexification@1
+  - std-algebra.complexification@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

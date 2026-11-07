@@ -24,9 +24,9 @@ derivations:
   - synthesis.einstein-equations-from-c-loc-and-clausius@7
   - synthesis.c-loc-is-a-second-placement-of-the-count@2
   - hawking.kms-restricts-invariant-subalgebras@3
-  - singularity.kms-uniqueness-factor@4
-  - hawking.gibbs-states-are-kms-conversely-finite@2
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
+  - singularity.kms-uniqueness-factor@5
+  - hawking.gibbs-states-are-kms-conversely-finite@3
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
   - hawking.modular-structure-completed-pair@3
   - synthesis.de-sitter-static-boost-frozen-point@5
   proof: proof-main.tex

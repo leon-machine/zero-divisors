@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@2
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
   - interior.kasner-form-interior@5
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - dark-tower-matter.five-dimensional-content@5

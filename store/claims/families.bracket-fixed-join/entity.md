@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - families.imported-dictionary-exact-join@5
+  - families.imported-dictionary-exact-join@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

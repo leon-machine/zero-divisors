@@ -24,7 +24,7 @@ derivations:
   - families.imported-face-valued-bracket-quantum-numbers@5
   - mass.mass-symplectic-area-two-twistor-formula@3
   - neutrino.imported-derived-content-singlets@7
-  - standard-model.internal-symmetry-ladder@3
+  - standard-model.internal-symmetry-ladder@4
   - standard-model.mass-bracket-charged-singlet@4
   proof: proof-main.tex
 checked_by:

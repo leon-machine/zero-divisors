@@ -25,10 +25,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.face-mass-form-unit-plus-gram@1
-  - families.skeleton-rank-one-plus-ordering-shift@5
+  - synthesis.face-mass-form-unit-plus-gram@2
+  - families.skeleton-rank-one-plus-ordering-shift@6
   - families.imported-squeezed-vacuum-bosonic-pairing@3
-  - synthesis.coherent-face-vector-real-slices@1
+  - synthesis.coherent-face-vector-real-slices@2
   proof: proof-main.tex
 checked_by:
 - kind: check

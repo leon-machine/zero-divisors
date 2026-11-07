@@ -44,10 +44,10 @@ derivations:
   - synthesis.de-sitter-static-boost-frozen-point@5
   - synthesis.local-boost-temperature-is-local-regularity@3
   - synthesis.point-spectrum-boost-admits-no-half-sided-translations@3
-  - angle.imported-theorems-deliver-their-hypotheses@1
+  - angle.imported-theorems-deliver-their-hypotheses@2
   - mass.chart-form-spin-isomorphism@5
   assumes:
-  - synthesis.n-plus-null-ground-state@10
+  - synthesis.n-plus-null-ground-state@11
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -48,7 +48,7 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
 ---
 
 ## formal

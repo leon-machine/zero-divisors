@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@2
+  - synthesis.operator-join-ordering-constants@3
   - mass.imported-palatial-quadratics-homogeneity-charge@4
   - families.source-term-linear-tilt-mass-functional@4
   - families.imported-face-valued-bracket-quantum-numbers@5

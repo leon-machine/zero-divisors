@@ -25,9 +25,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - mass.exact-join@7
+  - mass.exact-join@8
   - mass.mass-weight-dictionary@4
-  - mass.weight-composite@6
+  - mass.weight-composite@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy

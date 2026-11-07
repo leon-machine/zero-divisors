@@ -58,7 +58,7 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - neutrino.rank-one-seesaw-ordering-sum-double@8
+  - neutrino.rank-one-seesaw-ordering-sum-double@9
   assumes:
   - neutrino.h-second-stage-hierarchical@1
 lineage:

@@ -29,7 +29,7 @@ derivations:
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.imported-cauchy-decomposition-exterior-power@1
   - standard-model.imported-anomaly-coefficients@1
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
   proof: proof-main.tex
 checked_by:
 - kind: check

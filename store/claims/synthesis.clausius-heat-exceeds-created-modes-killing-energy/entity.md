@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - synthesis.boundary-mode-thermal-entropy@2
   - synthesis.boundary-mode-first-law-of-entanglement@6
   proof: proof-main.tex

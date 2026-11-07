@@ -23,10 +23,10 @@ derivations:
   uses:
   - mass.mass-symplectic-area-two-twistor-formula@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.imported-pair-systems-two-chirality-halves@5
-  - standard-model.internal-symmetry-ladder@3
+  - standard-model.internal-symmetry-ladder@4
   - standard-model.pair-count-dimension@3
   - standard-model.quarks-leptons-two-level-fermion-content@5
   - standard-model.ten-transported-ambient-space-doublets-are@2

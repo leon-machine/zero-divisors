@@ -29,10 +29,10 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@2
+  - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@3
   - synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard@2
-  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@3
-  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@3
+  - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces@4
+  - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -27,7 +27,7 @@ derivations:
   uses:
   - neutrino.breaking-relation@3
   - synthesis.residual-s2-fixes-120-family-form@1
-  - synthesis.coherent-face-vector-real-slices@1
+  - synthesis.coherent-face-vector-real-slices@2
   - synthesis.solar-angle-light-plane-sum-rule@1
   proof: proof-main.tex
 checked_by:

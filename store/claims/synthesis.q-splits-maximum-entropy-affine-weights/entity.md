@@ -25,7 +25,7 @@ derivations:
   uses:
   - singularity.chains-state-class-stability@7
   - singularity.exact-equilibrium-over-determines-boundary-modes@5
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - singularity.deficit-carried-quanta-correlations@5
   - singularity.deficit-theorem-cost-descent-exactly@4
   - hawking.imported-quasi-free-states-car-algebra@2

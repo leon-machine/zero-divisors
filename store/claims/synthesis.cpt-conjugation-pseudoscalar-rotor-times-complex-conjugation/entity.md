@@ -33,7 +33,7 @@ derivations:
   - singularity.euclidean-rotor-where-it-lies@4
   - dark-energy.frozen-point-makes-stelle-west-vector@5
   - std-algebra.involution-properties@1
-  - std-algebra.bivector-exponential@1
+  - std-algebra.bivector-exponential@2
   - std-algebra.pseudoscalar-commutation@1
   assumes: []
   proof: proof-main.tex

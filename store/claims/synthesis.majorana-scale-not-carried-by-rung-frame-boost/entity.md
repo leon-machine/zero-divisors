@@ -25,14 +25,14 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-unit-is-frame-boost@2
+  - synthesis.rung-unit-is-frame-boost@3
   - synthesis.rung-unit-transverse-to-norm@3
-  - synthesis.rung-field-on-the-lift-locus@2
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@3
+  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
   - standard-model.majorana-element@7
   - synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square@2
   - standard-model.what-angle-asks-neutrino-sector@4
-  - synthesis.majorana-scale-free-on-pati-salam-route@3
+  - synthesis.majorana-scale-free-on-pati-salam-route@4
   - standard-model.imported-clebsch-structure-seesaw@1
   proof: proof-main.tex
 quantities:

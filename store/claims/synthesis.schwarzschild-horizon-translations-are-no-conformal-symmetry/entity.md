@@ -24,9 +24,9 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gtg-dictionary@1
-  - synthesis.positive-null-energy-gives-r-premises@4
+  - synthesis.positive-null-energy-gives-r-premises@6
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
-  - synthesis.positive-conformal-energy-gives-positive-null-translations@5
+  - synthesis.positive-conformal-energy-gives-positive-null-translations@6
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -23,7 +23,7 @@ derivations:
   uses:
   - hawking.modular-structure-completed-pair@3
   - scrambling.boundary-mode-space-matrix@4
-  - scrambling.imported-modes-modular-inventory@3
+  - scrambling.imported-modes-modular-inventory@4
   - singularity.euclidean-rotor-where-it-lies@4
   - tower.witt-index-quantum-capacity@4
   proof: proof-main.tex

@@ -49,7 +49,7 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@3
   - field-theory.coupled-system-tree-level@3
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
   - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@1

@@ -23,9 +23,9 @@ derivations:
   uses:
   - standard-model.four-dimensions-forces-converse@4
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - standard-model.global-form-quotient-determined@3
+  - standard-model.global-form-quotient-determined@4
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
-  - standard-model.imported-frozen-point-dictionary@7
+  - standard-model.imported-frozen-point-dictionary@8
   - standard-model.imported-norm-frozen-point-not-field@5
   - standard-model.pair-count-dimension@3
   - standard-model.quarks-leptons-two-level-fermion-content@5

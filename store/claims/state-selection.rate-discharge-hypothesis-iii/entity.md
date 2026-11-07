@@ -28,7 +28,7 @@ derivations:
   uses:
   - singularity.plane-rate@4
   - state-selection.euclidean-partner-curvature-selected@4
-  - singularity.kms-uniqueness-factor@4
+  - singularity.kms-uniqueness-factor@5
   - singularity.universality-temperature-under-g@3
   assumes:
   - singularity.p-univalence@2

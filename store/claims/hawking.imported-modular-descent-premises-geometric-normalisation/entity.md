@@ -30,10 +30,10 @@ derivations:
   - singularity.computed@4
   - singularity.descended-form-state-independent@4
   - singularity.euclidean-section-period@5
-  - singularity.matching-steps-4b-4c-join-equation@5
-  - singularity.modular-descent@5
-  - singularity.rate-discharge-hypothesis-iii@4
-  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@4
+  - singularity.matching-steps-4b-4c-join-equation@6
+  - singularity.modular-descent@6
+  - singularity.rate-discharge-hypothesis-iii@5
+  - singularity.rate-rigidity-temperature-not-algebra-intrinsic@5
   assumes:
   - singularity.p-univalence@2
   - singularity.r-regularity-fixed-locus@3

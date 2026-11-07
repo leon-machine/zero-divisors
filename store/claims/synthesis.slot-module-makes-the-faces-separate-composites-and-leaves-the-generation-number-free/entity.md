@@ -23,7 +23,7 @@ derivations:
   uses:
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - standard-model.imported-anomaly-coefficients@1
-  - synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group@1
+  - synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group@2
   - families.three-identical-families-mixing-shared-slots@8
   - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@2
   - standard-model.gauge-algebra-minimal-massive-composite@4

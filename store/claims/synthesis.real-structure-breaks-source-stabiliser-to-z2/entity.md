@@ -25,15 +25,15 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.light-pair-split-needs-broken-source-stabiliser@1
-  - synthesis.coherent-face-vector-real-slices@1
-  - families.rigidity-pairing-sector-one-event@3
-  - synthesis.face-mass-form-unit-plus-gram@1
-  - families.skeleton-rank-one-plus-ordering-shift@5
+  - synthesis.light-pair-split-needs-broken-source-stabiliser@2
+  - synthesis.coherent-face-vector-real-slices@2
+  - families.rigidity-pairing-sector-one-event@4
+  - synthesis.face-mass-form-unit-plus-gram@2
+  - families.skeleton-rank-one-plus-ordering-shift@6
   - families.imported-squeezed-vacuum-bosonic-pairing@3
-  - synthesis.light-cone-koide-is-quarter-turn@1
-  - families.chart-computation-sign-twist-bracket-form@5
-  - synthesis.channel-phase-invisible-to-axially-covariant-completions@2
+  - synthesis.light-cone-koide-is-quarter-turn@2
+  - families.chart-computation-sign-twist-bracket-form@6
+  - synthesis.channel-phase-invisible-to-axially-covariant-completions@3
   proof: proof-main.tex
 checked_by:
 - kind: check

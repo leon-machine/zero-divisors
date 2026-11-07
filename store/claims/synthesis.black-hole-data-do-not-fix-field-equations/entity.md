@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.quarter-from-temperature@1
   - scrambling.mode-count@2
-  - singularity.rate-discharge-hypothesis-iii@4
+  - singularity.rate-discharge-hypothesis-iii@5
   - synthesis.imported-wald-noether-charge-entropy@3
   proof: proof-main.tex
 checked_by:
