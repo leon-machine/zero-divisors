@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons
 kind: claim
-version: 2
+version: 3
 title: 'MacDowell-Mansouri as the reduction of five-dimensional Chern-Simons'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (outside_ga declared for the base forms; Weyl sign in (iii))
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -51,7 +55,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Not rewritten; outside_ga declared (kind other). The Clifford parts are already geometric algebra; the differential forms that remain are the base forms of a Chern-Simons five-form on a five-dimensional base, whose transgression and variation formulas are imported theorems about differential forms (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms). No text, status or version change.'
+    note: 'Not rewritten; outside_ga declared (kind other). The Clifford parts are already geometric algebra; the differential forms that remain are the base forms of a Chern-Simons five-form on a five-dimensional base, whose transgression and variation formulas are imported theorems about differential forms (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms). Weyl sign (reader R03): formal (iii) said that F is the Weyl curvature and displayed W(B) = m(B + 3 sigma B sigma), m = -M/(2r^3), which is minus the store-sign Weyl map; it now says F = -calW (the tractor theorem, clause (iv)) and F(B) = W(B) = m(B + 3 sigma B sigma), calW(sigma) = +2M/r^3 sigma; the value 48 m^2 is unchanged. Version 2 -> 3 for that formal change.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
