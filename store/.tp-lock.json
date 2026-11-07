@@ -90,6 +90,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    11
    ]
   ],
   "hash": "8a6898049f91c361",
@@ -101,7 +106,7 @@
    "statement": "794fd835a10c0c4c"
   },
   "status": "proved",
-  "version": 10
+  "version": 11
  },
  "angle.imported-theorems-deliver-their-hypotheses": {
   "assumes": [],
@@ -115,6 +120,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "47550d945ed58670",
@@ -126,7 +136,7 @@
    "statement": "b10146230bb8270c"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "angle.value-parameter-dynamics": {
   "assumes": [],
@@ -415,6 +425,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "7390d9cb8d83fbc6",
@@ -426,7 +441,7 @@
    "statement": "c85f17e664ec3a84"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "correspondence.clifford-side-ordering-shift": {
   "assumes": [],
@@ -465,6 +480,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
   "hash": "eb879d587cbb0463",
@@ -476,7 +496,7 @@
    "statement": "bffd0e57030a91db"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "correspondence.googly-localisation-quartic-order": {
   "assumes": [],
@@ -640,18 +660,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    7
    ]
   ],
-  "hash": "c112c5b9e8a809e8",
+  "hash": "129a3022636d5757",
   "ledger": null,
   "parts": {
    "checks": "e08f1c7fe8126323",
-   "proofs": "8699f5cb0385770c",
+   "proofs": "c6e58c9530452a84",
    "rest": "d3b65c89b700e77b",
-   "statement": "0bbd6693ffb80a19"
+   "statement": "d0a6254c5da5934a"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "correspondence.imported-tractor-connection-local-twistor-transport-external": {
   "assumes": [],
@@ -765,6 +790,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "7693dd38e9854a6f",
@@ -776,7 +806,7 @@
    "statement": "3b68cbfb01a5622b"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "correspondence.local-twistor-transport-ascended-spinor-connection": {
   "assumes": [],
@@ -790,6 +820,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
   "hash": "d385fc0241a352c2",
@@ -801,7 +836,7 @@
    "statement": "46ca27fca315636f"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "correspondence.lorentzian-duality-complex-structure": {
   "assumes": [],
@@ -815,6 +850,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
   "hash": "4f38c139c5e865de",
@@ -826,7 +866,7 @@
    "statement": "c2915bfc7d0a031f"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "correspondence.no-real-lorentzian-vacuum-half-flat": {
   "assumes": [],
@@ -915,6 +955,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    7
    ]
   ],
   "hash": "dacc064f7fad2eb0",
@@ -926,7 +971,7 @@
    "statement": "e9841dc43df75d4a"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "correspondence.shared-core-ordering-dictionary": {
   "assumes": [],
@@ -1115,6 +1160,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
   "hash": "9aae91b2f767e7fc",
@@ -1126,7 +1176,7 @@
    "statement": "d4c85efd74f9b018"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "dark-energy.conclusion-does-not-depend-ontology-level": {
   "assumes": [],
@@ -2541,8 +2591,8 @@
  },
  "dark-matter.orientation-arrow-seventeenth-refutation": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@2",
-   "dark-matter.premise-flag-as-datum@1"
+   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-flag-as-datum@2"
   ],
   "credit": [
    [
@@ -2763,18 +2813,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Leon Butler",
+    "decision to restate the relation to the CPT operator of quantum field theory",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "drafting of the restated sentence",
+    3
    ]
   ],
-  "hash": "3b3fa104ad3f0042",
+  "hash": "9090a5a241061222",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "a6c4751e45ced69f",
-   "statement": "e6835c206bd3e4db"
+   "statement": "e44d22ef2f2d902d"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.premise-flag-as-datum": {
   "assumes": [],
@@ -2788,6 +2848,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "b650735792c40ed1",
@@ -2799,7 +2864,7 @@
    "statement": "2130f1f70af20946"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-matter.projection-every-towers-content-dilutes-ones": {
   "assumes": [
@@ -4608,6 +4673,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "02a57638021cab39",
@@ -4619,7 +4689,7 @@
    "statement": "f78f1c903fab7c48"
   },
   "status": "conjectured",
-  "version": 2
+  "version": 3
  },
  "families.alignment-computed-thirteenth-refutation-democracy-one": {
   "assumes": [],
@@ -4658,18 +4728,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
-  "hash": "0e7bf4c628f9d630",
+  "hash": "77014b0306c6e292",
   "ledger": null,
   "parts": {
    "checks": "8fa2b4d38c86c246",
    "proofs": "11ecd1198ecd0fbf",
    "rest": "d3b65c89b700e77b",
-   "statement": "32a8562052ae9028"
+   "statement": "4388f5f4d5e59b99"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "families.chart-computation-sign-twist-bracket-form": {
   "assumes": [],
@@ -4683,18 +4758,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
-  "hash": "d6acf846ab744c77",
+  "hash": "0cd0cc0b81333db5",
   "ledger": null,
   "parts": {
    "checks": "7f19214e1e127eee",
-   "proofs": "2511f671cea49751",
+   "proofs": "bb0d482deac095ed",
    "rest": "d3b65c89b700e77b",
-   "statement": "18de9b5fc351f280"
+   "statement": "1804cd57c1ccfb47"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "families.classification-displaced-gaussian-class-solved-level": {
   "assumes": [],
@@ -4833,18 +4913,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
-  "hash": "701eeb9aaddb170d",
+  "hash": "f786a0945238cbc8",
   "ledger": null,
   "parts": {
    "checks": "4e363450e06245d9",
-   "proofs": "ebb6d52de484f24d",
+   "proofs": "39920cfe1bb3b495",
    "rest": "d3b65c89b700e77b",
-   "statement": "8b178eeb06f4c566"
+   "statement": "f9c7084d15d20c81"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "families.imported-face-valued-bracket-quantum-numbers": {
   "assumes": [],
@@ -5210,18 +5295,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "4f2e0180d3b87f77",
+  "hash": "56a854cd3a4e59e5",
   "ledger": null,
   "parts": {
    "checks": "5819b445d24fafdf",
-   "proofs": "f97e7072c3532a26",
+   "proofs": "26fa1b867f0a38c8",
    "rest": "d3b65c89b700e77b",
-   "statement": "911aa31e14244158"
+   "statement": "402b2da804053483"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "families.selectivity-observation-level": {
   "assumes": [],
@@ -5260,18 +5350,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
-  "hash": "11653630ca109470",
+  "hash": "9d44f4d311ea0c60",
   "ledger": null,
   "parts": {
    "checks": "57ddfb6758c6162c",
-   "proofs": "7ff55ae1fcdeaac9",
+   "proofs": "fc886565cfb57719",
    "rest": "d3b65c89b700e77b",
    "statement": "81def213db6ad169"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "families.slot-covariance-of-mass-law": {
   "assumes": [],
@@ -5385,18 +5480,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "e17c7bb597d6c116",
+  "hash": "9679391b2e09725f",
   "ledger": null,
   "parts": {
    "checks": "931a3715f839ca77",
-   "proofs": "05ea382468f3c09a",
+   "proofs": "9f84217d9d6c1697",
    "rest": "d3b65c89b700e77b",
-   "statement": "84f481962830b952"
+   "statement": "716bbf8a92e535ab"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "field-theory.assignments-survive": {
   "assumes": [],
@@ -6060,6 +6160,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "27cde17e10a76da6",
@@ -6071,7 +6176,7 @@
    "statement": "20f9fc044ff6f6ea"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "hawking.greybody-inheritance-under-interface-premise": {
   "assumes": [
@@ -6317,6 +6422,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    7
    ]
   ],
   "hash": "96067e21290e73b9",
@@ -6328,7 +6438,7 @@
    "statement": "0603f29ec4bf8fce"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "hawking.imported-modular-descent-premises-geometric-normalisation-external": {
   "assumes": [],
@@ -7723,18 +7833,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    7
    ]
   ],
-  "hash": "a43c5b319ed86cfc",
+  "hash": "d26b39ad73afca34",
   "ledger": null,
   "parts": {
    "checks": "5ec4fab2ac8a6430",
-   "proofs": "1e0293543f1038ba",
+   "proofs": "f1c7c87af90c9946",
    "rest": "a5741d8b825b9256",
    "statement": "230ee56452e1ec5b"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "mass.chart-form-spin-isomorphism": {
   "assumes": [],
@@ -7798,18 +7913,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
-  "hash": "230910cc2909d648",
+  "hash": "56a42504488c46f3",
   "ledger": null,
   "parts": {
    "checks": "7d7c0e4aa138178c",
-   "proofs": "939326103dc8dd05",
+   "proofs": "bcfb15bdf165598b",
    "rest": "a5741d8b825b9256",
    "statement": "e6e6eb7f5a2378a6"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "mass.five-broken-generators": {
   "assumes": [],
@@ -7848,18 +7968,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
-  "hash": "4c81973939ccd39b",
+  "hash": "945913207e059332",
   "ledger": null,
   "parts": {
    "checks": "8a8804dd6b733157",
-   "proofs": "0d4734a1b8a44b72",
+   "proofs": "570e9d9360e7bf52",
    "rest": "a5741d8b825b9256",
    "statement": "d5bed92874ccb3d6"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "mass.imported-flat-model-twistor-chart-infinity": {
   "assumes": [],
@@ -8098,18 +8223,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    7
    ]
   ],
-  "hash": "b271d19311608c38",
+  "hash": "847b6c78d716c70a",
   "ledger": null,
   "parts": {
    "checks": "d0b3e03c26883883",
    "proofs": "4319190ca2c125ba",
    "rest": "a5741d8b825b9256",
-   "statement": "7e62c555db87b2f5"
+   "statement": "bf0e941b5d3b2179"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "mass.weight-polynomial-two-series": {
   "assumes": [],
@@ -8123,18 +8253,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
-  "hash": "66c3aa0707e3c673",
+  "hash": "dd50f39e4310814d",
   "ledger": null,
   "parts": {
    "checks": "b9855850845ba2b2",
-   "proofs": "d0ef957687caae9a",
+   "proofs": "c046637610b675ab",
    "rest": "d3b65c89b700e77b",
-   "statement": "238febcef97f69e1"
+   "statement": "88323812abdd3251"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "neutrino.breaking-relation": {
   "assumes": [],
@@ -8239,7 +8374,7 @@
  "neutrino.imported-ceiling-under-hypothesis-u-arrow": {
   "assumes": [
    "dark-matter.hyp-u-equal-rank-one-eigenvalues@3",
-   "dark-matter.premise-cpt-covariance@2"
+   "dark-matter.premise-cpt-covariance@3"
   ],
   "credit": [
    [
@@ -8382,18 +8517,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
-  "hash": "642347c2d4b68c59",
+  "hash": "700fe3feccb61525",
   "ledger": null,
   "parts": {
    "checks": "deba597b3b726e72",
-   "proofs": "024d7333480f541d",
+   "proofs": "934a0ee5a94e7dd6",
    "rest": "d3b65c89b700e77b",
    "statement": "78ab3eaa089e9094"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "neutrino.m-framework-realises-majorana-term-scale": {
   "assumes": [],
@@ -8485,18 +8625,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    9
    ]
   ],
-  "hash": "fdce45c9b37e4a8f",
+  "hash": "ed323ff0cfe3a2ed",
   "ledger": null,
   "parts": {
    "checks": "e7c2d12058716a7b",
-   "proofs": "1cf05365a109571f",
+   "proofs": "061bef352995001d",
    "rest": "d3b65c89b700e77b",
-   "statement": "25b979d19b595c2a"
+   "statement": "dc7ae5ebee8f6549"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "neutrino.real-breaking-assumption": {
   "assumes": [],
@@ -9187,18 +9332,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "a5d735c7fb39852c",
+  "hash": "e1bb3b5b5b96f633",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "4de4f7e4837affd8",
-   "statement": "66762c32d36a8382"
+   "statement": "51457c9e5f80f2a8"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.correspondence.boundary-stated-plainly": {
   "assumes": [],
@@ -9487,6 +9637,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "1a1d87b7eeee5f5b",
@@ -9498,7 +9653,7 @@
    "statement": "774c55a7cdc5d2f5"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.correspondence.setting-nonlinear-graviton-boundary-googly-conjecture": {
   "assumes": [],
@@ -9737,18 +9892,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "b9898c65a19961b9",
+  "hash": "5fd9cc24e13adaf1",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "d1abca01591339d3",
-   "statement": "e541297a632fab2b"
+   "statement": "32eb313ebe147919"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.correspondence.setting-what-proved-what-imported-what": {
   "assumes": [],
@@ -9812,6 +9972,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "a90a92b3fd577f7c",
@@ -9823,7 +9988,7 @@
    "statement": "9ac9d46d5f98dadd"
   },
   "status": "remark",
-  "version": 2
+  "version": 3
  },
  "note.correspondence.what-proved-what-conjectured": {
   "assumes": [],
@@ -11862,18 +12027,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "3baa355178d3538f",
+  "hash": "17edaca741a2d3b3",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "c84a43c2401a5aea",
-   "statement": "f1a94ef8ffb6daa6"
+   "statement": "8a3d6d32409f34a5"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.dark-tower-matter.r-5-unit-datum-or-field": {
   "assumes": [],
@@ -12937,18 +13107,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "1aad8702f06dd4be",
+  "hash": "8e3e16afa9c7a2fe",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "b585ef90d2a30fbd",
-   "statement": "bf21429e067e2112"
+   "statement": "3e407ddd658179c6"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.families.setting-introduction": {
   "assumes": [],
@@ -15242,18 +15417,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "f79e38594f35fb26",
+  "hash": "94ed8e68cb86723c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "db452fe568b1cf29",
-   "statement": "ae4d523f08c35e90"
+   "statement": "9b310eb25159313c"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.mass.conventions-sign": {
   "assumes": [],
@@ -15467,18 +15647,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "d1889f8e6d08f7e5",
+  "hash": "79fda603f3c4f58e",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "4a534563e7f1a52b",
-   "statement": "6d9d364e7dce9713"
+   "statement": "be3b3468309f1ecd"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.mass.setting-grip-composite-frozen-point-2": {
   "assumes": [],
@@ -15542,18 +15727,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "a612a49dea9f18e4",
+  "hash": "cd40965f39f10f87",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "db452fe568b1cf29",
-   "statement": "3db2316f97aa1ccb"
+   "statement": "aa97d463cd055dd5"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.mass.setting-levels-results": {
   "assumes": [],
@@ -15592,18 +15782,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "0891bafc2223d32f",
+  "hash": "c4b5a8d4e9854886",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "0c801887db3a0f69",
-   "statement": "9a6b66d76a4790a8"
+   "statement": "3974ed7b64127903"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.mass.setting-mass-symplectic-area": {
   "assumes": [],
@@ -16167,6 +16362,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "a52f04d6ab249b5e",
@@ -16178,7 +16378,7 @@
    "statement": "e7f260c99b1280e8"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.odd-extensions.dictionary-ascents-null-pair": {
   "assumes": [],
@@ -16267,6 +16467,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "64019bd3d7551129",
@@ -16278,7 +16483,7 @@
    "statement": "4c19baa06a729230"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.odd-extensions.setting-frozen-point-splits-ascents-pair": {
   "assumes": [],
@@ -17292,6 +17497,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "d1d234b8c34d7a32",
@@ -17303,7 +17513,7 @@
    "statement": "0f986fcb8727c932"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.pairing.setting-position-series": {
   "assumes": [],
@@ -18592,18 +18802,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "f810cdef0cf8d82d",
+  "hash": "f636dae0a22aa595",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "1db65b43263638f1",
-   "statement": "acf385bb0be6532b"
+   "statement": "1b02ed2ac608755c"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.programme.setting-measure-two-numbers-one-bit": {
   "assumes": [],
@@ -18767,18 +18982,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "393c078de9653597",
+  "hash": "faa8c53f306d19af",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "1db65b43263638f1",
-   "statement": "d9893930c09c5fd0"
+   "statement": "496266660cbaac9f"
   },
   "status": "setting",
-  "version": 3
+  "version": 4
  },
  "note.programme.setting-seventeen-refutations": {
   "assumes": [],
@@ -18792,18 +19012,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "8df001d2557353d4",
+  "hash": "7b74774ba292e1fa",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "d419eb0142a2f152",
-   "statement": "3a8b530e688db55a"
+   "statement": "5042a5d2912b30c6"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.programme.setting-thesis": {
   "assumes": [],
@@ -23117,6 +23342,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "d94fe13b3be5e03a",
@@ -23128,7 +23358,7 @@
    "statement": "6b8785f4d9c4796e"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.singularity.four-dimensional-lift-flagged": {
   "assumes": [],
@@ -25222,18 +25452,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "f46306b3772131c5",
+  "hash": "220a0eaa0dc4c63c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "9b8fb13ae87e9376",
-   "statement": "c9fe37a6829db53c"
+   "statement": "e9a9b36dcf88a796"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.standard-model.setting-content-charges-chirality-3": {
   "assumes": [],
@@ -25397,18 +25632,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "02d3eceac3332bc2",
+  "hash": "ccab5227053a7e23",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "f99aae400d6eb2ed",
-   "statement": "c356d482494574cc"
+   "statement": "dafc8d736f9f20ac"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.standard-model.setting-internal-symmetry-ladder": {
   "assumes": [],
@@ -26860,6 +27100,31 @@
   "status": "remark",
   "version": 2
  },
+ "note.synthesis.n-plus-orientation-datum": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and the decision to record this note",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "24a101f761174ffc",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "7ce992cf7a4ad742",
+   "statement": "535297bc3914f73f"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.residue-and-the-prediction": {
   "assumes": [],
   "credit": [
@@ -27897,6 +28162,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "dec34d64bb3df19d",
@@ -27908,7 +28178,7 @@
    "statement": "b71baec337ebf42a"
   },
   "status": "example",
-  "version": 1
+  "version": 2
  },
  "note.transport.hyperbolic-atom": {
   "assumes": [],
@@ -29847,18 +30117,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "895d290992347082",
+  "hash": "8b251b80928c4775",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "c514c6ebfccf6cb4",
-   "statement": "7f01d55dc6c687f9"
+   "statement": "ac427ba4834d3085"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.interior.weighted-blow-up-hubble-normalisation-admissible": {
   "assumes": [],
@@ -30197,6 +30472,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "9c4d55eb212805fc",
@@ -30208,7 +30488,7 @@
    "statement": "c8aad92d15aafa21"
   },
   "status": "defined",
-  "version": 2
+  "version": 3
  },
  "obj.singularity.grading-parity-automorphism": {
   "assumes": [],
@@ -30947,6 +31227,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "ffecc1662d86ee73",
@@ -30958,7 +31243,7 @@
    "statement": "c204dca3686c0b27"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.synthesis.gtg-flat-spacetime-gauge-fields": {
   "assumes": [],
@@ -32144,8 +32429,8 @@
  },
  "one-relation.imported-flag-arrow-superselection": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@2",
-   "dark-matter.premise-flag-as-datum@1"
+   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-flag-as-datum@2"
   ],
   "credit": [
    [
@@ -32453,8 +32738,8 @@
  },
  "one-relation.record-chain-votes-measurement-without-collapse": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@2",
-   "dark-matter.premise-flag-as-datum@1",
+   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-flag-as-datum@2",
    "one-relation.recording-irreversible-stated-so-it-can@1"
   ],
   "credit": [
@@ -33092,6 +33377,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "b2a3491fe486fe6e",
@@ -33103,7 +33393,7 @@
    "statement": "63fd1eebec006021"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "pairing.static-frame-only-expansion-survives": {
   "assumes": [],
@@ -34873,6 +35163,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "b0b40e205a65ad8c",
@@ -34884,7 +35179,7 @@
    "statement": "75db4cd633cff815"
   },
   "status": "refuted",
-  "version": 1
+  "version": 2
  },
  "refuted.the-neutrino-mass-is-set-by-the-cosmological-ter": {
   "assumes": [],
@@ -35373,6 +35668,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "007f65eb95d2595c",
@@ -35384,7 +35684,7 @@
    "statement": "0a44fc7779d5af85"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "rule2.rule-2-kaluza-klein-algebra": {
   "assumes": [],
@@ -35855,6 +36155,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "c75bb19f0dad1307",
@@ -35866,7 +36171,7 @@
    "statement": "06e81012ae51f561"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "rungs.transported-module-holds-tuple-one-vector": {
   "assumes": [],
@@ -36207,6 +36512,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
   "hash": "b3fc44a56a173b03",
@@ -36218,7 +36528,7 @@
    "statement": "ca0c177e24ea6599"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "scrambling.imported-time-plane-modular-data": {
   "assumes": [],
@@ -39471,6 +39781,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "fcb059f457f7d8ca",
@@ -39482,7 +39797,7 @@
    "statement": "25b6ad977e58746b"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "singularity.l-boundary-mode-locality": {
   "assumes": [],
@@ -39546,6 +39861,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "26bff923c7079b4f",
@@ -39557,7 +39877,7 @@
    "statement": "2275b58f4e0cac8e"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "singularity.models-entropy-sequence-exactly": {
   "assumes": [],
@@ -39598,6 +39918,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "8792bb1e19e8c196",
@@ -39609,7 +39934,7 @@
    "statement": "633bf8a2b1191954"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "singularity.modular-flow-boundary-modes-holonomy-universal": {
   "assumes": [
@@ -39675,6 +40000,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "deb2e56d30b7e16e",
@@ -39686,7 +40016,7 @@
    "statement": "ab43a05b1a4092b8"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "singularity.net-assembly-net-it-everything": {
   "assumes": [],
@@ -40057,6 +40387,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "d402d0ce29ad4566",
@@ -40068,7 +40403,7 @@
    "statement": "e75aaf0f4e57338b"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "singularity.rate-models-kinematic-inputs-l-u": {
   "assumes": [],
@@ -40107,6 +40442,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "a702b33b0329d129",
@@ -40118,7 +40458,7 @@
    "statement": "6a7ae6939e57795c"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "singularity.schmidt-forcing-proved-outright": {
   "assumes": [],
@@ -40132,6 +40472,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "60b372affe467884",
@@ -40143,7 +40488,7 @@
    "statement": "1d33828f87e21867"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "singularity.sheaf-assembly-sheaf": {
   "assumes": [],
@@ -40260,6 +40605,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "51c84eb1edf172a6",
@@ -40271,7 +40621,7 @@
    "statement": "45b64d266253b038"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "singularity.two-levels-finite-model": {
   "assumes": [],
@@ -40947,18 +41297,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "769c9e3b7f525597",
+  "hash": "f241a09bd72cb47a",
   "ledger": null,
   "parts": {
    "checks": "4dff91f1dbf1af03",
-   "proofs": "7fdf25f9746bfbb8",
+   "proofs": "12b4061ade73a6c7",
    "rest": "d3b65c89b700e77b",
-   "statement": "03382fb18608a4d1"
+   "statement": "f17b406e98126b66"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "standard-model.grade-three-georgi-jarlskog-direction": {
   "assumes": [],
@@ -41224,18 +41579,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
-  "hash": "4c3bec17c5be9c9c",
+  "hash": "e38548ae287d31a9",
   "ledger": null,
   "parts": {
    "checks": "11c047b6483a6809",
-   "proofs": "990465887c7e77e1",
+   "proofs": "daa0fcf9e051988d",
    "rest": "d3b65c89b700e77b",
-   "statement": "fc0f5ae105a96cdd"
+   "statement": "a3df295a1ec712a0"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "standard-model.imported-frozen-point-dictionary-external": {
   "assumes": [],
@@ -41649,18 +42009,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "96f05e84a5f9d8ae",
+  "hash": "4ed449fc6fd7a257",
   "ledger": null,
   "parts": {
    "checks": "7ba9c0b9cb215f82",
-   "proofs": "74a76c6a92dc1dc3",
+   "proofs": "7d03efa8f1b36eb9",
    "rest": "d3b65c89b700e77b",
    "statement": "d6eb34a75bd3db6e"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "standard-model.invariant-operators-module": {
   "assumes": [],
@@ -42276,18 +42641,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "917e8a9539cad42e",
+  "hash": "f938f2fe2484b53a",
   "ledger": null,
   "parts": {
    "checks": "1ddce3fab9654990",
-   "proofs": "9130ee52e7fd1c88",
+   "proofs": "d75dd0a090c6a142",
    "rest": "d3b65c89b700e77b",
-   "statement": "82a495bb0ae88410"
+   "statement": "a51b10688c2e548b"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "standard-model.reduction": {
   "assumes": [],
@@ -43029,6 +43399,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "8335f9d83a563809",
@@ -43040,7 +43415,7 @@
    "statement": "b2c407e240d674dd"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.bivector-exponential-in-spin": {
   "assumes": [],
@@ -43229,6 +43604,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "8bc59a3a057c74f9",
@@ -43240,7 +43620,7 @@
    "statement": "07d131c1574146a2"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.complex-numbers": {
   "assumes": [],
@@ -43254,6 +43634,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "74c1a947b4ab42b9",
@@ -43265,7 +43650,7 @@
    "statement": "58b70b7c9e4f944d"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.complexification": {
   "assumes": [],
@@ -43279,6 +43664,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "e9afd9b90da210ab",
@@ -43290,7 +43680,7 @@
    "statement": "4aa1864c9b9be682"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.contraction-expansion": {
   "assumes": [],
@@ -43679,6 +44069,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "dbb1334738f7533f",
@@ -43690,7 +44085,7 @@
    "statement": "38e43ba16b751689"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.periodicity": {
   "assumes": [],
@@ -43954,6 +44349,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "5152c10201155e85",
@@ -43965,7 +44365,7 @@
    "statement": "9a0348a9c641097c"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.sta-matrix": {
   "assumes": [],
@@ -44254,6 +44654,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "48762b1f08f465e0",
@@ -44265,7 +44670,7 @@
    "statement": "bcab6f7c41517008"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.anomaly-freedom-forces-slot-content": {
   "assumes": [],
@@ -44329,18 +44734,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    3
    ]
   ],
-  "hash": "883a6ab68d878066",
+  "hash": "35099a09532abb59",
   "ledger": null,
   "parts": {
-   "checks": "4cb6cc167ffdd8ff",
-   "proofs": "33a868ad95e4deba",
+   "checks": "b713f9a1656125c9",
+   "proofs": "224f277db8275c05",
    "rest": "d3b65c89b700e77b",
-   "statement": "e9cbcceda135ff78"
+   "statement": "579e8e271ddeb520"
   },
   "status": "proved",
-  "version": 1
+  "version": 3
  },
  "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations": {
   "assumes": [],
@@ -44354,18 +44769,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "pin to the slot-module result moved to its version 2 after the clause split; notation declaration",
+    3
    ]
   ],
-  "hash": "fb74a4cee52699ff",
+  "hash": "3b3f98709533e360",
   "ledger": null,
   "parts": {
    "checks": "4e2d26d86f96c4f4",
-   "proofs": "be0bcfc10e75bdab",
+   "proofs": "ad60c790bdfda175",
    "rest": "d3b65c89b700e77b",
    "statement": "5ff77fb989b1dfa6"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.attachment-transport-is-flat-only-where-weyl-vanishes": {
   "assumes": [],
@@ -44504,18 +44924,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "0537b87ee6eb4f3e",
+  "hash": "998d2627151f33db",
   "ledger": null,
   "parts": {
    "checks": "951a31ca02197f92",
-   "proofs": "fd4a25bffacd8cf7",
+   "proofs": "77012f050f9e80cd",
    "rest": "0805b3758af17c51",
-   "statement": "2dde44fa0d34ccba"
+   "statement": "0ddcbc683cce16e9"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.boost-stationary-incidence-vacua-read-interval": {
   "assumes": [],
@@ -44579,6 +45004,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "53921af57e7d915e",
@@ -44590,7 +45020,7 @@
    "statement": "7cdea4a6b3fd9428"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.boundary-mode-premises-finite-models": {
   "assumes": [],
@@ -44657,18 +45087,33 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to synthesis.canonical-part-of-a-spinor-on-a-null-plane (the algebra it cites), in place of the light-ray and slot-module results; notation declaration",
+    4
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    5
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R2, R4)",
+    5
    ]
   ],
-  "hash": "b389a2c32882eeef",
+  "hash": "8ec7bf543ed4f677",
   "ledger": null,
   "parts": {
-   "checks": "343e05b1de2c1e87",
-   "proofs": "38a5a1e4e5f62eb7",
+   "checks": "4882a1c40e0c62e2",
+   "proofs": "76fd2db7c206d4d6",
    "rest": "5ef59c08a022541a",
-   "statement": "d1d4f22165495bc0"
+   "statement": "42f7eb55d7b7e369"
   },
   "status": "proved",
-  "version": 3
+  "version": 5
  },
  "synthesis.c-loc-entropy-clause-curvature-independent-density": {
   "assumes": [],
@@ -44807,18 +45252,48 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "22260530d3ebc656",
+  "hash": "f80967300a1d47f1",
   "ledger": null,
   "parts": {
    "checks": "a2fadb4acb03ac9e",
-   "proofs": "d769fd6ff12c2f62",
+   "proofs": "3656f94f54984c7f",
    "rest": "d3b65c89b700e77b",
-   "statement": "fb32e2f118e6907f"
+   "statement": "3dcec012f9bfa08e"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
+ },
+ "synthesis.canonical-part-of-a-spinor-on-a-null-plane": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "split out of synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays and synthesis.slot-module-light-ray-arrays-are-weyl-components so that their users rest only on the algebra",
+    null
+   ]
+  ],
+  "hash": "f48649fa328ad42e",
+  "ledger": null,
+  "parts": {
+   "checks": "cee6af070b3832dd",
+   "proofs": "e708f7812628a99b",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2476104b6ce16c1b"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.capacity-per-mode-independent-of-helicity": {
   "assumes": [],
@@ -44882,18 +45357,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "9d28173e56a7de0f",
+  "hash": "24557c1114e39ea5",
   "ledger": null,
   "parts": {
    "checks": "ac29e48c034008d5",
-   "proofs": "950ff5d6e1402f05",
+   "proofs": "ab0e4ed9acd4ef38",
    "rest": "d3b65c89b700e77b",
-   "statement": "ac41eaadf8834938"
+   "statement": "099fae4369b88bc5"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.charged-vaidya-cauchy-horizon-tractor-threshold": {
   "assumes": [],
@@ -44932,18 +45412,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "fc4c6d520674c332",
+  "hash": "9755c854596ab310",
   "ledger": null,
   "parts": {
    "checks": "d1138ee2acaa6a1a",
-   "proofs": "b344a623e2241e66",
+   "proofs": "ab8b078b89760e98",
    "rest": "7606dd3d8e2cbc14",
-   "statement": "ba18a9e4bfdfb0a5"
+   "statement": "e6b3045413476a1e"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors": {
   "assumes": [],
@@ -44957,18 +45442,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "a720181ec7ed7ca1",
+  "hash": "2e7df6bd4b28bb59",
   "ledger": null,
   "parts": {
    "checks": "37ace98822a9534a",
-   "proofs": "6d45948f365490fd",
+   "proofs": "5b535dc5fe2f7a2b",
    "rest": "d3b65c89b700e77b",
-   "statement": "4a27c90806f751be"
+   "statement": "ba24f1ed992e2e09"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.clausius-heat-exceeds-created-modes-killing-energy": {
   "assumes": [],
@@ -44982,6 +45472,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "6daa0dae18d84fd7",
@@ -44993,7 +45488,7 @@
    "statement": "92c231d3cf76cab2"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.clausius-is-window-first-law-plus-boost-charge-conservation": {
   "assumes": [],
@@ -45007,18 +45502,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "61da4a2498aa59c3",
+  "hash": "a62f66fd3b7f0574",
   "ledger": null,
   "parts": {
    "checks": "bfc57cb5b0c1ea70",
-   "proofs": "3866e08055360bb8",
+   "proofs": "3808d6517951957b",
    "rest": "3db75f58a5f56f09",
-   "statement": "0f150cf2633461da"
+   "statement": "3de66b6d424891ae"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period": {
   "assumes": [],
@@ -45107,18 +45607,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "b91ec682ce031051",
+  "hash": "3801c3198db8a5af",
   "ledger": null,
   "parts": {
    "checks": "54a949650202dd5f",
-   "proofs": "2dc82f2d7bfb3514",
+   "proofs": "0d93e469a8c5b9fc",
    "rest": "d3b65c89b700e77b",
-   "statement": "faa525b76597137e"
+   "statement": "029908f9e706a620"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.cold-mirror-needs-non-equilibrium-descent": {
   "assumes": [],
@@ -45132,6 +45637,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "4806be5781f9cbcd",
@@ -45143,7 +45653,7 @@
    "statement": "6686c36997f6d009"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
   "assumes": [
@@ -45159,18 +45669,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "ebd3cfc3a67fe36e",
+  "hash": "7a782b13e7837cd5",
   "ledger": null,
   "parts": {
    "checks": "a1be04ca3a6a1861",
-   "proofs": "f3f1e7e0f8624938",
+   "proofs": "f316557d88216442",
    "rest": "5ef59c08a022541a",
-   "statement": "3a3785d552fd819e"
+   "statement": "925f81d631b5e550"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
   "assumes": [
@@ -45186,18 +45701,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "lemmas (iii) and (iv) split out into synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation, which the proof now cites",
+    2
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R2, R4)",
+    2
    ]
   ],
-  "hash": "f89eeb02e6d83e7c",
+  "hash": "8c1c57f2e377d027",
   "ledger": null,
   "parts": {
-   "checks": "e82a253a7978bc4d",
-   "proofs": "30136801e5579822",
+   "checks": "5eb18e7f8e40979f",
+   "proofs": "2280dde5db6f768a",
    "rest": "5ef59c08a022541a",
-   "statement": "f04f8e95b250a8eb"
+   "statement": "6727cb2fa5d1f381"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.collar-isotropy-selects-t-boost": {
   "assumes": [],
@@ -45236,6 +45761,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "a4561adbc12c9427",
@@ -45247,7 +45777,7 @@
    "statement": "723331be77c8772a"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.collar-kms-extension-three-flows": {
   "assumes": [],
@@ -45261,6 +45791,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "442ff14b889b5eaa",
@@ -45272,7 +45807,7 @@
    "statement": "bdcb2a10edcebb81"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.collar-temperature-fixed-locally-by-r-loc": {
   "assumes": [],
@@ -45286,6 +45821,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "12bdd04cf2f4981d",
@@ -45297,7 +45837,7 @@
    "statement": "3bbbcac85aba67c7"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.colour-light-content-proton-ceiling": {
   "assumes": [],
@@ -45336,18 +45876,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "2515fa46f83025f9",
+  "hash": "cb9d37e626c2dfe1",
   "ledger": null,
   "parts": {
    "checks": "56307afaacaac942",
-   "proofs": "7c060ba0a7c0802e",
+   "proofs": "2e7700a681ea73a8",
    "rest": "d3b65c89b700e77b",
    "statement": "b8acb2bb91ce4383"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd": {
   "assumes": [],
@@ -45463,18 +46008,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "7847c4cf62c700d0",
+  "hash": "6a5f7994149bfcd3",
   "ledger": null,
   "parts": {
    "checks": "f36743a7aac28a03",
-   "proofs": "2b49d808590d4a83",
+   "proofs": "ecfba2c4d0ba5e2a",
    "rest": "e91d0b6c134ffca8",
-   "statement": "45b29ca1661123d1"
+   "statement": "6efaff7ce20fd359"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.cpt-closure-forces-slot-module-and-chirality": {
   "assumes": [],
@@ -45513,6 +46063,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "f3807ff242c65d42",
@@ -45524,7 +46079,7 @@
    "statement": "06a741802d252d9c"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.crossing-transport-tipler-threshold-sharp": {
   "assumes": [],
@@ -45638,18 +46193,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
-  "hash": "3fc6d184acbe4415",
+  "hash": "e58ac9cbc080c483",
   "ledger": null,
   "parts": {
    "checks": "32f57639f5941d47",
-   "proofs": "7e8309fcbdd8c77e",
+   "proofs": "1dc244ac9e24d46d",
    "rest": "36880587349d3e5c",
    "statement": "a38c048fe9f0bc18"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.de-sitter-field-fixes-the-observer-tube-point": {
   "assumes": [
@@ -45768,6 +46328,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "191c7ab0a2d387ec",
@@ -45779,7 +46344,7 @@
    "statement": "79b81ffe41e239fc"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.de-sitter-temperature-mirror-and-status": {
   "assumes": [
@@ -45821,18 +46386,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "2b3e7146e4931a79",
+  "hash": "27a09b70fe2b6642",
   "ledger": null,
   "parts": {
    "checks": "fc7ad156a8b6807d",
-   "proofs": "ed4f414067b6db28",
+   "proofs": "81750d90527d1512",
    "rest": "36880587349d3e5c",
    "statement": "78ad396c8f3289a2"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.diagonal-kasner-momentum-constraint": {
   "assumes": [],
@@ -45896,18 +46466,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "bb1b5bc7314f8f35",
+  "hash": "c717a911b18df184",
   "ledger": null,
   "parts": {
    "checks": "78062cf513ac9b25",
-   "proofs": "b2089700055b56cd",
+   "proofs": "cc09f187e58b524d",
    "rest": "62f1e4e5250e685f",
-   "statement": "9c8b3c9449ffd07d"
+   "statement": "5d7739549c67f8a3"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car": {
   "assumes": [],
@@ -45921,18 +46496,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "af516756e82aa517",
+  "hash": "07ecda3c7256a7f8",
   "ledger": null,
   "parts": {
    "checks": "b5fe4272f1ef3b78",
-   "proofs": "947f6fbe6b9830d0",
+   "proofs": "be7a9f6082c6ca1f",
    "rest": "99bf2a2f4232f536",
-   "statement": "3044200ed93fa9be"
+   "statement": "1ef0de822d79bd81"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
   "assumes": [],
@@ -46050,18 +46630,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "617eae5f1208d9e1",
+  "hash": "fe0e320e97d7e14a",
   "ledger": null,
   "parts": {
    "checks": "5da488f2b228f49e",
-   "proofs": "fb48bd1b7a87fb42",
+   "proofs": "39f76afa7027a79b",
    "rest": "67e1df12d535f591",
-   "statement": "553d0ce418327db6"
+   "statement": "5014357d074b0a05"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.euler-entropy-first-order-rate-on-local-patches": {
   "assumes": [],
@@ -46150,18 +46735,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "c52ad5140ba65d83",
+  "hash": "12dc2a4f60a432cc",
   "ledger": null,
   "parts": {
    "checks": "726e89179c0aed80",
-   "proofs": "a8395e8819a19166",
+   "proofs": "8e1d28d514d077e4",
    "rest": "d3b65c89b700e77b",
-   "statement": "7728a299568a56c3"
+   "statement": "634d4c1dd9e4100a"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.eviction-deficit-against-page-deficit": {
   "assumes": [],
@@ -46275,18 +46865,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "778566f15a7e72f4",
+  "hash": "cbec2338f565c3b7",
   "ledger": null,
   "parts": {
    "checks": "866912117b069234",
-   "proofs": "ea918f9981776281",
+   "proofs": "ddd438c7ffa20c1d",
    "rest": "d3b65c89b700e77b",
-   "statement": "16bec46f91f028fe"
+   "statement": "64aab95cd0629163"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group": {
   "assumes": [],
@@ -46300,18 +46895,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "29f5d64db32038ac",
+  "hash": "84864833f1a3d086",
   "ledger": null,
   "parts": {
    "checks": "9ddc4f8f326b380c",
-   "proofs": "ff967d15c9c850ef",
+   "proofs": "d367096a2885ff7b",
    "rest": "d3b65c89b700e77b",
-   "statement": "acfe747be06c5dd0"
+   "statement": "ad3f8bbe5336c863"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent": {
   "assumes": [],
@@ -46375,18 +46975,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "258259bc264a3e2a",
+  "hash": "42befcdcab628e66",
   "ledger": null,
   "parts": {
    "checks": "1e09ac346d5cb7c9",
-   "proofs": "18a23ad43f08f3ad",
+   "proofs": "826b12e65ebfc55d",
    "rest": "f3e4dea33f4dfed7",
-   "statement": "99eb4357a3d87548"
+   "statement": "bfe30f19e4614012"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.finite-range-descent-deposit-cannot-seed-cmb": {
   "assumes": [],
@@ -46425,18 +47030,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "33ae7045af7bb7ca",
+  "hash": "62b5821bbb59727e",
   "ledger": null,
   "parts": {
    "checks": "01a7a99bb4069bd2",
-   "proofs": "c8b0e65414dbcd3e",
+   "proofs": "4b933123a475e549",
    "rest": "d3b65c89b700e77b",
    "statement": "eb87a8075b51c374"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off": {
   "assumes": [],
@@ -46463,7 +47073,7 @@
   "status": "proved",
   "version": 3
  },
- "synthesis.frozen-phase-spectrum-not-red": {
+ "synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet": {
   "assumes": [],
   "credit": [
    [
@@ -46477,16 +47087,46 @@
     null
    ]
   ],
-  "hash": "68ebb1bb6c2e0e03",
+  "hash": "22efd17517b118ee",
+  "ledger": null,
+  "parts": {
+   "checks": "e5990e8b7dc131e4",
+   "proofs": "a28bd66c0af5eaae",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ca3ca76df1a64084"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.frozen-phase-spectrum-not-red": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
+   ]
+  ],
+  "hash": "05a317f8c6b0f9d9",
   "ledger": null,
   "parts": {
    "checks": "b3c9390d04c25a17",
-   "proofs": "45c298152b96feae",
+   "proofs": "100b7d1d9b6df6d2",
    "rest": "d3b65c89b700e77b",
-   "statement": "69ab1c4481bfaf76"
+   "statement": "76ed653433e97156"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x": {
   "assumes": [],
@@ -46575,18 +47215,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "e252cd3ed93f3464",
+  "hash": "85f61548fc32fc9d",
   "ledger": null,
   "parts": {
    "checks": "d53f648557597830",
-   "proofs": "a459925eb8e15511",
+   "proofs": "128528231738f1de",
    "rest": "d3b65c89b700e77b",
-   "statement": "19d62b53c3e26047"
+   "statement": "c84899d5c566b6b8"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen": {
   "assumes": [],
@@ -46729,18 +47374,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "10c6eed25e9c3d72",
+  "hash": "8b9a0b0a8d51fc98",
   "ledger": null,
   "parts": {
-   "checks": "3bed1f6c3e77491b",
-   "proofs": "b3a0f806f7d8e1ef",
+   "checks": "79a0eefacff57ccc",
+   "proofs": "dcfc690ca8db555b",
    "rest": "79fedc53279b9903",
-   "statement": "4724aac6759a0046"
+   "statement": "cccebe1cc2a3df73"
   },
   "status": "proved",
-  "version": 2
+  "version": 4
  },
  "synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square": {
   "assumes": [],
@@ -46854,18 +47509,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "6b66a5824ef75845",
+  "hash": "5dc6e338a5956839",
   "ledger": null,
   "parts": {
    "checks": "550a3f37dadbc1d6",
-   "proofs": "458d4a88cf921b09",
+   "proofs": "71a8442819139bd3",
    "rest": "d3b65c89b700e77b",
-   "statement": "6de6cc5e6cb637ca"
+   "statement": "4dc1178f81a09a10"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.hadamard-deposit-premise": {
   "assumes": [],
@@ -46904,18 +47564,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "12a6736eb969f916",
+  "hash": "005a448219bf671a",
   "ledger": null,
   "parts": {
    "checks": "89bac64d1c53dba3",
-   "proofs": "694f20ac8f30285a",
+   "proofs": "084ca39203779ff7",
    "rest": "c84760418af24e54",
-   "statement": "c09f76e1220f90f0"
+   "statement": "9de0ca9ab1fdac19"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.hadamard-scaling-limit-premise": {
   "assumes": [],
@@ -46929,18 +47594,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
-  "hash": "23879957f49fad0e",
+  "hash": "75acb1db6ae29622",
   "ledger": null,
   "parts": {
    "checks": "f9fa63c4d39b0f1b",
-   "proofs": "555dfe820ad73ce5",
+   "proofs": "d132b35d0311d8ba",
    "rest": "f3e4dea33f4dfed7",
-   "statement": "f6c814f5d3a9e775"
+   "statement": "dc2e772f78f33d98"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.half-integer-weight-array-carries-half-ln2": {
   "assumes": [],
@@ -47106,6 +47776,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "992491a7a273ff86",
@@ -47117,7 +47792,7 @@
    "statement": "4adb4218aea37d1e"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits": {
   "assumes": [],
@@ -47331,6 +48006,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "919a3a5cf82a7aa6",
@@ -47342,7 +48022,7 @@
    "statement": "bf4f3b82c08d21fa"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-chern-gauss-bonnet": {
   "assumes": [],
@@ -48031,18 +48711,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "59044b39bcd0ed0a",
+  "hash": "9740c03e328d837c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "b1585eda688bdeee",
-   "statement": "0e0f02994627c035"
+   "statement": "a150a9d3b71d9c04"
   },
   "status": "imported",
-  "version": 2
+  "version": 3
  },
  "synthesis.imported-hadamard-stress-tensor-diverges-at-the-reissner-nordstrom-de-sitter-cauchy-horizon": {
   "assumes": [],
@@ -48456,6 +49141,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "64ac3d8910f3a984",
@@ -48467,7 +49157,7 @@
    "statement": "80f45857dda0e1c5"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-large-scale-potential-and-sachs-wolfe-relations": {
   "assumes": [],
@@ -48506,18 +49196,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "8dc246aa148d391f",
+  "hash": "25df79b731fb7853",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "7a208367913e20c2",
-   "statement": "e83cea1c9e845c4e"
+   "statement": "d10aa2c263010c25"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-line-bundles-classified-and-cellular-approximation": {
   "assumes": [],
@@ -50118,18 +50813,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "8808eca7906a2a53",
+  "hash": "1daad5f1718cdf04",
   "ledger": null,
   "parts": {
    "checks": "143ac556e07ed0e9",
-   "proofs": "571095c85ec349a7",
+   "proofs": "6f76f4fe3f51d68d",
    "rest": "4879cd9d86c1b22a",
-   "statement": "568f5c895d9c6cbf"
+   "statement": "e30a3321d23aba11"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.invariant-forms-on-spinor-ideal-factor-through-reversion": {
   "assumes": [],
@@ -50206,7 +50906,7 @@
   "status": "proved",
   "version": 2
  },
- "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
+ "synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space": {
   "assumes": [],
   "credit": [
    [
@@ -50220,16 +50920,46 @@
     null
    ]
   ],
-  "hash": "199047f7d641c98e",
+  "hash": "fc76275dace05c09",
+  "ledger": null,
+  "parts": {
+   "checks": "05f87e8dec935ec4",
+   "proofs": "e385a4fb3cbd01b9",
+   "rest": "d3b65c89b700e77b",
+   "statement": "c6a0dfe8b2517c37"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
+   ]
+  ],
+  "hash": "d20db6612ce8cd4a",
   "ledger": null,
   "parts": {
    "checks": "6279afcec76759dd",
-   "proofs": "6c97793eb477a542",
+   "proofs": "5f6b27223375d0ef",
    "rest": "d3b65c89b700e77b",
    "statement": "a57733116c3b9a82"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
   "assumes": [],
@@ -50243,18 +50973,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "aba6cf0a03d98771",
+  "hash": "fe7fd129f62b3567",
   "ledger": null,
   "parts": {
    "checks": "df3aa8923d68d1cd",
-   "proofs": "c99fc55c5748ea48",
+   "proofs": "1fa28fe8ec938716",
    "rest": "d3b65c89b700e77b",
    "statement": "8189fd996ef3e9a1"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.kasner-curvature-wall-is-negative-weight-helicity": {
   "assumes": [],
@@ -50293,18 +51028,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "0c48ce5fa9fa9289",
+  "hash": "f79b23bcf2931c0f",
   "ledger": null,
   "parts": {
    "checks": "88e38658a38434a7",
-   "proofs": "19ac9bc39e2a119d",
+   "proofs": "ef2b2b1ce4f2fecb",
    "rest": "d3b65c89b700e77b",
    "statement": "3897884d5c1f34f5"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points": {
   "assumes": [],
@@ -50343,18 +51083,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "fcab3fe32a33a0cb",
+  "hash": "01140f768dd0a46e",
   "ledger": null,
   "parts": {
    "checks": "740216cda7a601b1",
-   "proofs": "6af88c09bbbad3fb",
+   "proofs": "f59ccefc34f28861",
    "rest": "d3b65c89b700e77b",
    "statement": "5f393323eb15ed5e"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue": {
   "assumes": [],
@@ -50493,6 +51238,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
   "hash": "fc4765734255eba3",
@@ -50504,7 +51254,7 @@
    "statement": "f691d525a360d08e"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.killing-horizon-value-factor-is-the-generator-boost": {
   "assumes": [],
@@ -50543,18 +51293,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "6d5f0b568251a668",
+  "hash": "f784f390ece88c16",
   "ledger": null,
   "parts": {
    "checks": "9e6ac86df2ae8aeb",
-   "proofs": "ae9e172c46cf7285",
+   "proofs": "5e44ca791974d984",
    "rest": "d3b65c89b700e77b",
    "statement": "7dd361e8c5daeccd"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.koide-channel-phase-target-depends-on-mass-definition": {
   "assumes": [],
@@ -50620,6 +51375,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "pins to the slot-module and attachment results moved to their new versions after the clause split",
+    3
    ]
   ],
   "hash": "3aea884f36f7a43c",
@@ -50631,7 +51391,7 @@
    "statement": "ec14eba35e7bb694"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.lens-space-wall-rung-count-sees-the-integral-twist": {
   "assumes": [
@@ -50647,18 +51407,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "05ca5b9ddc3fcef8",
+  "hash": "80188bdfa06887af",
   "ledger": null,
   "parts": {
    "checks": "50b0703febde35ed",
-   "proofs": "c7d70807d72eba1d",
+   "proofs": "a05de17e7b18660d",
    "rest": "8428bc93cb263500",
    "statement": "cf14fe09a281741d"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.light-cone-koide-is-quarter-turn": {
   "assumes": [],
@@ -50672,18 +51437,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "26e94554742d1842",
+  "hash": "3e6a598b186d7bcc",
   "ledger": null,
   "parts": {
    "checks": "1ab64d2f1210cbb7",
-   "proofs": "b0443d57f5ea9fa1",
+   "proofs": "dd622d9757ef8d0a",
    "rest": "d3b65c89b700e77b",
-   "statement": "91ab8e3dd3a5d9c1"
+   "statement": "68ae8b350d8965c1"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.light-pair-split-needs-broken-source-stabiliser": {
   "assumes": [],
@@ -50697,18 +51467,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "201dcbc468db4f71",
+  "hash": "43e87050beba0af6",
   "ledger": null,
   "parts": {
    "checks": "fbc64a96106ef078",
-   "proofs": "839202a86887dc58",
+   "proofs": "4389f5295872c753",
    "rest": "d3b65c89b700e77b",
-   "statement": "04d7b9966ea57a3d"
+   "statement": "6ee0e943af85e48c"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays": {
   "assumes": [
@@ -50724,18 +51499,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "clause (i) split out into synthesis.canonical-part-of-a-spinor-on-a-null-plane, which the proof now cites",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    4
    ]
   ],
-  "hash": "3614e5c0f7f343c0",
+  "hash": "cec7d535295316d8",
   "ledger": null,
   "parts": {
-   "checks": "8d97bad5f0bc3eea",
-   "proofs": "79541eca4ed6515f",
+   "checks": "ec8e191ad5ffe368",
+   "proofs": "3cc4425567dad77e",
    "rest": "d3b65c89b700e77b",
-   "statement": "f68c0011f7db40b9"
+   "statement": "8ee93cb59057745e"
   },
   "status": "proved",
-  "version": 2
+  "version": 4
  },
  "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum": {
   "assumes": [],
@@ -50749,18 +51534,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "7cab52566913a443",
+  "hash": "c1abb485c055ceaf",
   "ledger": null,
   "parts": {
    "checks": "b4e44648f6e9c3ee",
-   "proofs": "0f7afaff7f0e93cc",
+   "proofs": "7308c9a02b5d68ac",
    "rest": "3ae2f3aba227a8a2",
-   "statement": "a18190ad52ac3dbb"
+   "statement": "f8c9eb4f14338451"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.loc-independent-of-clausius-and-killing-data": {
   "assumes": [],
@@ -50849,18 +51639,33 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R2)",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "premise repointed to the carrier content split out of the stationary-horizon result",
+    3
    ]
   ],
-  "hash": "8796e773699dfdbb",
+  "hash": "a92e394867616c91",
   "ledger": null,
   "parts": {
-   "checks": "abcaf7cefd3b7b96",
-   "proofs": "7db0a40ffc3f8a98",
+   "checks": "3d83598b65b52784",
+   "proofs": "d9310dd70c27542f",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "7a88b1847ed7ef03"
+   "statement": "26ee09fe8c126614"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics": {
   "assumes": [],
@@ -50874,18 +51679,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "7fa8c7267bbafdf7",
+  "hash": "e2d5459171fc6a36",
   "ledger": null,
   "parts": {
    "checks": "326492ec97c37a32",
-   "proofs": "d61be80ab7d291d0",
+   "proofs": "fabfa84d78e11cb0",
    "rest": "d3b65c89b700e77b",
-   "statement": "9dd806620bb50d07"
+   "statement": "68311e9926d9183a"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.lowest-causal-residues-zero-four-content": {
   "assumes": [
@@ -50976,18 +51786,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "edbd235aea5a015a",
+  "hash": "6e8e0e713760321f",
   "ledger": null,
   "parts": {
    "checks": "b3b17b4f775beb9a",
-   "proofs": "a5ebfd77504389e2",
+   "proofs": "32f0f210835e68e5",
    "rest": "d3b65c89b700e77b",
-   "statement": "2564253543ee1c8a"
+   "statement": "4a4dece30907b7de"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.majorana-scale-free-input": {
   "assumes": [],
@@ -51031,18 +51846,23 @@
     "Claude Opus 5.5",
     "strengthened check and wording",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "54680d80cb9ae993",
+  "hash": "a3f8b42da03313a0",
   "ledger": null,
   "parts": {
    "checks": "5d5746185f3ca7fc",
-   "proofs": "71679f0fc21d1349",
+   "proofs": "3be3f80d701dd2dd",
    "rest": "d3b65c89b700e77b",
    "statement": "c20a42f6940960a9"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.majorana-scale-is-126-doublet-vev": {
   "assumes": [
@@ -51083,18 +51903,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "1698e52e57f6c0e6",
+  "hash": "a4113791000ef928",
   "ledger": null,
   "parts": {
    "checks": "d1b8ee6fdd26bc55",
-   "proofs": "6c94e88960a95ff3",
+   "proofs": "a0c1736c6a036339",
    "rest": "d3b65c89b700e77b",
    "statement": "57f65ded184755f4"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.many-twistor-join": {
   "assumes": [],
@@ -51108,18 +51933,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "7c6c9b453c1db72e",
+  "hash": "5515868a7a95f400",
   "ledger": null,
   "parts": {
    "checks": "5a7ce6d915906786",
-   "proofs": "03b5156844a783fb",
+   "proofs": "e548028df3ff77db",
    "rest": "a5741d8b825b9256",
    "statement": "6b581800988dc244"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.mass-ordered-dressing-cannot-spoil-koide": {
   "assumes": [],
@@ -51183,18 +52013,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "f24116eda20b3f9b",
+  "hash": "33c25e20955217d7",
   "ledger": null,
   "parts": {
    "checks": "eb76a069024b1d7a",
-   "proofs": "abe0cb0b8e8d05f6",
+   "proofs": "e50f6fc5fedc7aee",
    "rest": "36880587349d3e5c",
-   "statement": "9e3260701a85727b"
+   "statement": "f6d5bfc352f636a1"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.massless-composites-de-sitter-conformal-boundary": {
   "assumes": [],
@@ -51220,6 +52055,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "4f96ffa4a6c9f05d",
+  "ledger": null,
+  "parts": {
+   "checks": "5a0e63e5465fd421",
+   "proofs": "a71bc1005f722304",
+   "rest": "d3b65c89b700e77b",
+   "statement": "96a06413616cd9d3"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.matter-asymmetry-registered-free-input": {
   "assumes": [],
@@ -51258,18 +52118,33 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    5
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R2, R4)",
+    5
+   ],
+   [
+    "Claude Opus 5.5",
+    "premise repointed to the carrier content split out of the stationary-horizon result",
+    5
    ]
   ],
-  "hash": "76aa1e8414467dd3",
+  "hash": "9754be35dc22492d",
   "ledger": null,
   "parts": {
-   "checks": "6d6b0ce292ab34ec",
-   "proofs": "a90a6899a29cedf7",
+   "checks": "7cce8c05c69a946b",
+   "proofs": "252b6b2a1655b51c",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "58109f2a3c15ba23"
+   "statement": "533614a7dcde9e91"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.mirror-asymmetry-route-one": {
   "assumes": [],
@@ -51360,18 +52235,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "f39f9c379395f938",
+  "hash": "eb596c0e108763ca",
   "ledger": null,
   "parts": {
-   "checks": "457da19e26faf3c7",
-   "proofs": "5c2c01128cc05ce6",
+   "checks": "145b7b34229309fb",
+   "proofs": "0cd2aab6b152d6af",
    "rest": "eae88243719e4ed2",
-   "statement": "a10e14a2724d12f1"
+   "statement": "e86bb319f884c31d"
   },
   "status": "proved",
-  "version": 2
+  "version": 4
  },
  "synthesis.modular-period-on-values-is-the-dual-plane-turn": {
   "assumes": [],
@@ -51385,18 +52270,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "df4e704a13bc13b2",
+  "hash": "5e401d32017ee77f",
   "ledger": null,
   "parts": {
    "checks": "e37b3818c5c2721d",
-   "proofs": "eac6b3ada5bf899f",
+   "proofs": "080b32a7a6cf75f7",
    "rest": "d3b65c89b700e77b",
-   "statement": "ceaa0b6c94ece522"
+   "statement": "7817b2322223d0a7"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.n-plus-null-ground-state": {
   "assumes": [],
@@ -51420,18 +52310,23 @@
     "Claude Opus 5.5",
     "drafting of the maintainer pass",
     10
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    11
    ]
   ],
-  "hash": "1882d98ba06d2407",
+  "hash": "7e78768e29de503e",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "c0df8cdcc9eedc62",
-   "statement": "8a7096a7d47b8b75"
+   "statement": "03abe6deea763a3a"
   },
   "status": "postulate",
-  "version": 10
+  "version": 11
  },
  "synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5": {
   "assumes": [],
@@ -51445,18 +52340,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "ba0311ca013150c5",
+  "hash": "b6d2f6169e400818",
   "ledger": null,
   "parts": {
    "checks": "94396f1073ca84ad",
-   "proofs": "b442f9ab0c171251",
+   "proofs": "8e73c4c74e7277d9",
    "rest": "d3b65c89b700e77b",
-   "statement": "b16399bc63d63de5"
+   "statement": "c6ef0aae68f3ee18"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.nilpotent-steps-derivative-exponential-and-boost": {
   "assumes": [],
@@ -51570,18 +52470,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    3
    ]
   ],
-  "hash": "84894315d0e64901",
+  "hash": "a0afee14671d7f26",
   "ledger": null,
   "parts": {
-   "checks": "ffb55178b46ddac4",
-   "proofs": "979d9ddbc0008a85",
+   "checks": "717a7d33c7ff304a",
+   "proofs": "23128449a19d5ffb",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "7829cd3b13b0e684"
+   "statement": "6cdd087b3178b96c"
   },
   "status": "proved",
-  "version": 1
+  "version": 3
  },
  "synthesis.null-ordering-of-counted-units-is-zeta-symmetric": {
   "assumes": [
@@ -51609,6 +52519,56 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.null-vacuum-on-a-horizon-generator": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "split out of synthesis.positive-null-energy-gives-r-premises so that its users rest only on the analysis",
+    null
+   ]
+  ],
+  "hash": "a94d29e2b1cb4fa2",
+  "ledger": null,
+  "parts": {
+   "checks": "d67843206e54d5f7",
+   "proofs": "294073644675ec37",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "0e2c5905c2f440fa"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "split out of synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet so that its users rest only on the analysis",
+    null
+   ]
+  ],
+  "hash": "7a80a8a08b206345",
+  "ledger": null,
+  "parts": {
+   "checks": "3da2d125438a3e84",
+   "proofs": "a30a4800ee89dca9",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "b6dcdb8e54bd6749"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.number-diagonal-dynamics-spreads-nothing": {
   "assumes": [],
@@ -51672,18 +52632,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "f311dc049a47a323",
+  "hash": "a0001379db4ea06a",
   "ledger": null,
   "parts": {
    "checks": "2ea2e2c13f6ec054",
-   "proofs": "f76ecc9d51bdcbdc",
+   "proofs": "c398448ecb4171f2",
    "rest": "d3b65c89b700e77b",
-   "statement": "8cb464acf0a32d78"
+   "statement": "b763468f5073cfd7"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.one-loop-qed-in-the-spacetime-algebra": {
   "assumes": [
@@ -51699,18 +52664,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "d75e8494166dc641",
+  "hash": "846eab1cf1cfe7bd",
   "ledger": null,
   "parts": {
    "checks": "56b528371d7d30e6",
-   "proofs": "b2c5be08900e22a8",
+   "proofs": "52d537f93428d6a7",
    "rest": "3ae2f3aba227a8a2",
-   "statement": "c47667ef7b41ccd5"
+   "statement": "7aa620c71b3c2d83"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces": {
   "assumes": [
@@ -51753,18 +52723,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "7aab2f4733905dc4",
+  "hash": "f78ce7e57b394c9e",
   "ledger": null,
   "parts": {
    "checks": "ef44daeb2c3790bf",
-   "proofs": "66fd63b35413e153",
+   "proofs": "3edeb26004d55df9",
    "rest": "17e9fd84147a91e6",
-   "statement": "97c2961de29d08c7"
+   "statement": "00018e913827d9ee"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.one-type-second-stages-are-twins": {
   "assumes": [],
@@ -51828,18 +52803,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "2952c0cb92b8f3fc",
+  "hash": "44742b6d2f67e8f3",
   "ledger": null,
   "parts": {
    "checks": "54cc0bab0f1dbd13",
-   "proofs": "f193f47442c2b64c",
+   "proofs": "2c4023f0027fe1b8",
    "rest": "a5741d8b825b9256",
-   "statement": "7565269f27f69819"
+   "statement": "6d3e489435d05e54"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.operator-join-point-spectrum-on-positive-energy-modules": {
   "assumes": [],
@@ -51878,18 +52858,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "73e7528e805329e3",
+  "hash": "e89153ab6f835cde",
   "ledger": null,
   "parts": {
    "checks": "455c3d7f9198e880",
-   "proofs": "1a8008291c74ccac",
+   "proofs": "c5ae2920a6c751c7",
    "rest": "d3b65c89b700e77b",
-   "statement": "fe9027571e2e88bb"
+   "statement": "6f9913a3058e3796"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.operator-join-seed-has-no-diagonal-matrix-elements": {
   "assumes": [],
@@ -51903,18 +52888,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "413d571ccb20de43",
+  "hash": "48f35b096395a252",
   "ledger": null,
   "parts": {
    "checks": "3762ffa6af4cda50",
-   "proofs": "5faae19fffbc3d02",
+   "proofs": "5414a7352bd64bf1",
    "rest": "d3b65c89b700e77b",
    "statement": "161c517d6b5fb121"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.oriented-causal-towers-mirror-pair-every-window": {
   "assumes": [],
@@ -51953,18 +52943,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "a032fae06071b900",
+  "hash": "347c09c27796bf8f",
   "ledger": null,
   "parts": {
    "checks": "9ddc0095e8630b65",
    "proofs": "99ad379a06567eed",
    "rest": "d3b65c89b700e77b",
-   "statement": "906f82e8605737ae"
+   "statement": "3413a680cf58c7a5"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise": {
   "assumes": [],
@@ -52105,6 +53100,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "4ecfb9b18a22f3b2",
@@ -52116,7 +53116,7 @@
    "statement": "557e2c490f5d563e"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity": {
   "assumes": [],
@@ -52180,6 +53180,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    6
    ]
   ],
   "hash": "3b379e85cccd8c93",
@@ -52191,7 +53196,7 @@
    "statement": "d5e37fe2f4567f51"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.positive-energy-selects-rule-2-sign": {
   "assumes": [],
@@ -52220,7 +53225,7 @@
  },
  "synthesis.positive-null-energy-gives-r-premises": {
   "assumes": [
-   "synthesis.n-plus-null-ground-state@10"
+   "synthesis.n-plus-null-ground-state@11"
   ],
   "credit": [
    [
@@ -52232,18 +53237,33 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
+   ],
+   [
+    "Claude Opus 5.5",
+    "the analysis of (i) and (ii) split out into synthesis.null-vacuum-on-a-horizon-generator, which the proof now cites",
+    6
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R4)",
+    6
    ]
   ],
-  "hash": "1a4b737acce5b83c",
+  "hash": "70b6ee50a68c7fc4",
   "ledger": null,
   "parts": {
-   "checks": "1dd6c8aa28794ca4",
-   "proofs": "a46f1470907faec9",
+   "checks": "e485c63b1f999085",
+   "proofs": "aebcceaad20fe6af",
    "rest": "5ef59c08a022541a",
-   "statement": "d4ee22fbbc3cf2c3"
+   "statement": "b4263628bbbb1345"
   },
   "status": "proved",
-  "version": 4
+  "version": 6
  },
  "synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale": {
   "assumes": [],
@@ -52512,18 +53532,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "9961561bf4c1a5d1",
+  "hash": "54cb3c5705d16106",
   "ledger": null,
   "parts": {
    "checks": "7626e6a0b5a4fc24",
-   "proofs": "cf47747c8a23bbbc",
+   "proofs": "eae23b2ed06e4071",
    "rest": "3ae2f3aba227a8a2",
    "statement": "85d1334d78817184"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.quartic-ordering-tensor-locally-trivial": {
   "assumes": [],
@@ -52612,6 +53637,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "54bf0f2f6a90d402",
@@ -52623,7 +53653,7 @@
    "statement": "e475e170e34ffe46"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.r-loc-independent-sets-matter-coupling": {
   "assumes": [],
@@ -52637,6 +53667,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
   "hash": "a1df111af7e2dd25",
@@ -52648,7 +53683,7 @@
    "statement": "dcac6c4f6ea52705"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.r-loc-needs-sheet-labelled-modes": {
   "assumes": [],
@@ -52714,18 +53749,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "130143ebcc775f87",
+  "hash": "7bd2fbc79d1206a2",
   "ledger": null,
   "parts": {
    "checks": "2ce2fce790bed5ab",
-   "proofs": "8df0fe4626ddc01f",
+   "proofs": "20b88a8164560781",
    "rest": "d3b65c89b700e77b",
-   "statement": "5972f848c212bf73"
+   "statement": "9237c84092691463"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns": {
   "assumes": [],
@@ -52739,18 +53779,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "6f5ec7558fa23b3b",
+  "hash": "5f8fc93f628b78d9",
   "ledger": null,
   "parts": {
    "checks": "cdac4a599687f7e7",
-   "proofs": "0efa532c41d23994",
+   "proofs": "17c25194e87710c5",
    "rest": "d3b65c89b700e77b",
-   "statement": "62c546003eaa8cca"
+   "statement": "243cb8c213830c7e"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.residual-s2-fixes-120-family-form": {
   "assumes": [],
@@ -52843,6 +53888,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "73d0b4d5ec5e2ab9",
@@ -52854,7 +53904,7 @@
    "statement": "b941be73f8fdace6"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel": {
   "assumes": [],
@@ -52868,18 +53918,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "9bc2ee718b751bcc",
+  "hash": "e3565ea7703ca91e",
   "ledger": null,
   "parts": {
    "checks": "88a1b0984de1586d",
-   "proofs": "4862cc3429375aca",
+   "proofs": "08f3bf055af2b1ad",
    "rest": "f3e4dea33f4dfed7",
-   "statement": "acbd345365423e4f"
+   "statement": "727e44a4c5f54df7"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.reversion-pairing-vanishes-residues-zero-four": {
   "assumes": [],
@@ -52943,18 +53998,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "c051bf8784289aff",
+  "hash": "307c9c47e196a0fc",
   "ledger": null,
   "parts": {
    "checks": "acdd530f0c0c5feb",
-   "proofs": "6d85081c21f630f9",
+   "proofs": "6b6742d6823f89cf",
    "rest": "d3b65c89b700e77b",
    "statement": "838267873c1c3f3c"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-charged-scalar-sum-rule": {
   "assumes": [],
@@ -52993,18 +54053,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "e5b8c50fa4ea2a1c",
+  "hash": "c5927ad76e69fd60",
   "ledger": null,
   "parts": {
    "checks": "cb0b90d00a889fb6",
-   "proofs": "f2e2d77ca43b914f",
+   "proofs": "c33bfa4aada21461",
    "rest": "d3b65c89b700e77b",
-   "statement": "ff41bcd8bc76e32d"
+   "statement": "4d387242df776ba4"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": {
   "assumes": [
@@ -53020,18 +54085,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "d196eea33239baad",
+  "hash": "d4d26bb9485860c0",
   "ledger": null,
   "parts": {
    "checks": "ba566f2b8be4f9bb",
-   "proofs": "d4623ce3a7f79378",
+   "proofs": "18f7b9f7389bffcb",
    "rest": "d3b65c89b700e77b",
-   "statement": "4c4b2de0b0b56d78"
+   "statement": "4f524b384b1b0a1d"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet": {
   "assumes": [],
@@ -53045,18 +54115,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "ea3a6f3225a9d286",
+  "hash": "b5434089e69845ff",
   "ledger": null,
   "parts": {
    "checks": "b00cd9618b332dd8",
-   "proofs": "c589a76183d68733",
+   "proofs": "f92094eb72987e93",
    "rest": "d3b65c89b700e77b",
    "statement": "b37002a41698506b"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant": {
   "assumes": [],
@@ -53070,18 +54145,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "485f66888cfe3b59",
+  "hash": "7a48c8c93e824085",
   "ledger": null,
   "parts": {
    "checks": "ab7680af9f676551",
-   "proofs": "5ee30013a3858698",
+   "proofs": "728638b928a8fa9d",
    "rest": "d3b65c89b700e77b",
-   "statement": "3066513744cd0509"
+   "statement": "ac827ffd7f866cdd"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-on-the-lift-locus": {
   "assumes": [],
@@ -53095,18 +54175,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "edc246abf64455af",
+  "hash": "9ea0ec2367f98b55",
   "ledger": null,
   "parts": {
    "checks": "9c4578476aeabea0",
-   "proofs": "76f56d37b024f4c8",
+   "proofs": "4313aab900a77506",
    "rest": "d3b65c89b700e77b",
-   "statement": "289f538e213a1d5b"
+   "statement": "55f5c09fd793dab4"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch": {
   "assumes": [
@@ -53122,18 +54207,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "654db60f3f35f486",
+  "hash": "336a0f5d9933550f",
   "ledger": null,
   "parts": {
    "checks": "3014e044e348c0b7",
-   "proofs": "35a20faae77ce741",
+   "proofs": "25aa01fd66656b34",
    "rest": "63f3946a4c9b61ea",
-   "statement": "5529d5a3729f14a5"
+   "statement": "02ea336f2a2a12c0"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-unit-is-frame-boost": {
   "assumes": [],
@@ -53147,18 +54237,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "cd1f06e0ed0caa54",
+  "hash": "07dbee2e2f48e198",
   "ledger": null,
   "parts": {
    "checks": "87af8b9bc5b712e5",
-   "proofs": "f50d02effaec9962",
+   "proofs": "2127742b27f1adf7",
    "rest": "d3b65c89b700e77b",
-   "statement": "0c9865d0d14b5e01"
+   "statement": "8048a292113f22b9"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-unit-second-free-number": {
   "assumes": [],
@@ -53401,18 +54496,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "38bbcb4a42e6b8b8",
+  "hash": "d0bc3c390f5300e5",
   "ledger": null,
   "parts": {
    "checks": "a11d11de9d6ac4b7",
    "proofs": "12c45bad7b5eff70",
    "rest": "3ae2f3aba227a8a2",
-   "statement": "2d64747c6fac6fa7"
+   "statement": "0666630631b887aa"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off": {
   "assumes": [],
@@ -53451,18 +54551,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "6b1d2f8805f1e86b",
+  "hash": "db3f6a9abecaa1eb",
   "ledger": null,
   "parts": {
    "checks": "a839fb148d439ff8",
-   "proofs": "1278b4a4feafdb36",
+   "proofs": "a20e5b8c63749e9c",
    "rest": "d3b65c89b700e77b",
-   "statement": "63e3302eadf3744c"
+   "statement": "678f284f883c7ad3"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.series-wald-entropy-changes-without-flux-on-local-horizons": {
   "assumes": [],
@@ -53553,18 +54658,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "clause (i) split out into synthesis.canonical-part-of-a-spinor-on-a-null-plane, which the proof now cites; notation declaration",
+    2
+   ],
+   [
+    "Claude Opus 5.5",
+    "unit conventions per Leon's rulings of 7 November 2026 (R3)",
+    2
    ]
   ],
-  "hash": "019ae2eba1f9e189",
+  "hash": "041dc4f5c3b20e1c",
   "ledger": null,
   "parts": {
-   "checks": "54fd97b9f594e93b",
-   "proofs": "4aa04fe8d9e18b4e",
+   "checks": "3e493b75f44292a5",
+   "proofs": "5d77f629d11e3e03",
    "rest": "d3b65c89b700e77b",
-   "statement": "446a72be6df4c149"
+   "statement": "7cf30f3417c9c671"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free": {
   "assumes": [
@@ -53606,18 +54721,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "81eff26564ec35b0",
+  "hash": "e9398927796a6740",
   "ledger": null,
   "parts": {
    "checks": "2a086b1060d20907",
-   "proofs": "3e3d5fafbeb7e399",
+   "proofs": "64180de26b8e3146",
    "rest": "d3b65c89b700e77b",
    "statement": "373be7bd94ea9d34"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.smallness-monomials-exact-hierarchy-casimir": {
   "assumes": [],
@@ -53631,18 +54751,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "432d31b7d22d40a4",
+  "hash": "3d1ef89495dc7605",
   "ledger": null,
   "parts": {
    "checks": "38bd81019e471a56",
-   "proofs": "c3580a66afc042db",
+   "proofs": "62ca775ca797326c",
    "rest": "d3b65c89b700e77b",
-   "statement": "649126bdd0de84ef"
+   "statement": "570bfc555fe0496b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.solar-angle-light-plane-sum-rule": {
   "assumes": [],
@@ -53681,18 +54806,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "34dadd8c4b57184d",
+  "hash": "28b628f1a2262900",
   "ledger": null,
   "parts": {
    "checks": "6d3fdd70a605e29d",
-   "proofs": "0b46ddfe54035f6a",
+   "proofs": "632a48366cc4a6e3",
    "rest": "9b9aa379938f3e2f",
-   "statement": "8fe524f84d958572"
+   "statement": "ac1349be237edd01"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.spin10-clause-content-is-the-neutral-singlet-choice": {
   "assumes": [],
@@ -53744,6 +54874,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.stationary-generator-states-and-the-edge-scaling": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "split out of synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit so that its users rest only on the analysis",
+    null
+   ]
+  ],
+  "hash": "e8b0357c5a88abc2",
+  "ledger": null,
+  "parts": {
+   "checks": "1a8a554de1b8d654",
+   "proofs": "79a6073452ae3945",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "51349eb000d037ac"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit": {
   "assumes": [],
   "credit": [
@@ -53756,18 +54911,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
+   ],
+   [
+    "Claude Opus 5.5",
+    "the carrier content of (i) to (iii) split out into synthesis.stationary-generator-states-and-the-edge-scaling, which the proof now cites",
+    4
    ]
   ],
-  "hash": "3d01667098dfedd8",
+  "hash": "031304a3a992f0b9",
   "ledger": null,
   "parts": {
-   "checks": "ad796194eb5e93c4",
-   "proofs": "fdaa764bea3f58b6",
+   "checks": "b80127bc638c70b6",
+   "proofs": "ac945c9b997e6c61",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "a4d484fb09b924f0"
+   "statement": "b403a6edabb3bb4f"
   },
   "status": "proved",
-  "version": 2
+  "version": 4
  },
  "synthesis.stelle-west-norm-is-no-local-output": {
   "assumes": [],
@@ -53806,18 +54971,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "e04bfb4bccbeae48",
+  "hash": "75a11bf274c42b68",
   "ledger": null,
   "parts": {
    "checks": "b865a9d39d1bb2ed",
-   "proofs": "a223660eddffc8ef",
+   "proofs": "caf55aac36b74b5a",
    "rest": "d3b65c89b700e77b",
-   "statement": "24a9568669deb88d"
+   "statement": "da7f658fe5f5ad1f"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.sudden-descent-feature-not-tilt": {
   "assumes": [],
@@ -53831,18 +55001,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "92c9312c55b5b12f",
+  "hash": "48441c4aefc5edb1",
   "ledger": null,
   "parts": {
    "checks": "49c30c6a17900e3d",
-   "proofs": "eea45175f8a463e0",
+   "proofs": "d09a09164fa56622",
    "rest": "d3b65c89b700e77b",
-   "statement": "e866a3e528a7defa"
+   "statement": "f2d120f3f6da42fc"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.supersymmetric-splits-two-loops": {
   "assumes": [],
@@ -53931,18 +55106,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "e211ad048251e7d0",
+  "hash": "64522b17437c120c",
   "ledger": null,
   "parts": {
    "checks": "4ee05339d76c73bd",
    "proofs": "686250207006e0b6",
    "rest": "a0ff5c900c312224",
-   "statement": "7d74e67c89696b1b"
+   "statement": "efd60455cec5a504"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state": {
   "assumes": [],
@@ -53956,18 +55136,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "a447c8938722a1b9",
+  "hash": "2b6d44d7e2b5c651",
   "ledger": null,
   "parts": {
    "checks": "f9ff1db1ae19f8cf",
-   "proofs": "b7b555b199ac9b4c",
+   "proofs": "e044003f2378b67d",
    "rest": "1c84e0bd2ea441d1",
-   "statement": "9a73808325e53f3d"
+   "statement": "e3aaacf4d6453164"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.theta23-at-s3-s2-direction": {
   "assumes": [],
@@ -53981,18 +55166,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "2b623acae1cee362",
+  "hash": "6344630f5384eb46",
   "ledger": null,
   "parts": {
    "checks": "03b8840084792714",
-   "proofs": "b29392d4111d2ff4",
+   "proofs": "fc93adf85ca9d7da",
    "rest": "d3b65c89b700e77b",
    "statement": "763485bebff50aa6"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.three-twistor-composites-massive": {
   "assumes": [],
@@ -54031,6 +55221,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "6069fbdd1b804f5e",
@@ -54042,7 +55237,7 @@
    "statement": "b159bfc493fe4a6b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.tower-limit-forgets-residue": {
   "assumes": [],
@@ -54206,18 +55401,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "3541feb62b1f4d0a",
+  "hash": "714b3b258fd85f07",
   "ledger": null,
   "parts": {
    "checks": "a1fd9744a2200ac5",
-   "proofs": "3f13a2f46b8b0e61",
+   "proofs": "e462e40c3a289f41",
    "rest": "d3b65c89b700e77b",
-   "statement": "8169b49f14908ac4"
+   "statement": "68b1e7a51a4e0dff"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation": {
   "assumes": [],
@@ -54231,18 +55431,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "e8bc3fece0b131f0",
+  "hash": "bb444f384ebf52b9",
   "ledger": null,
   "parts": {
    "checks": "c75febee0ced828c",
-   "proofs": "3b3f44952e608556",
+   "proofs": "861cac9fcc20d2d9",
    "rest": "3ae2f3aba227a8a2",
-   "statement": "3a36514366b565db"
+   "statement": "40d64c259dc3b201"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries": {
   "assumes": [],
@@ -54385,18 +55590,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
-  "hash": "c6f625d733c451f8",
+  "hash": "75c37a41f6f87528",
   "ledger": null,
   "parts": {
    "checks": "f260d0d321c4cd27",
-   "proofs": "63b6fb5ca47e64e4",
+   "proofs": "a7bfe3bf3284e0ab",
    "rest": "3a103f9415fb50ec",
    "statement": "3e52b39ff55cf0c0"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.two-loop-running-cannot-fix-majorana-coupling": {
   "assumes": [],
@@ -54410,18 +55620,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
-  "hash": "6b4152c1c2576fbc",
+  "hash": "6a2cda10a0a3a848",
   "ledger": null,
   "parts": {
    "checks": "4e6cd1a883234987",
-   "proofs": "cd02b799aa0880d7",
+   "proofs": "5f2fe97c985fd28b",
    "rest": "d3b65c89b700e77b",
    "statement": "dd00ede7a91644d3"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands": {
   "assumes": [],
@@ -54510,6 +55725,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    2
    ]
   ],
   "hash": "ec6b8a4d01cd2774",
@@ -54521,7 +55741,7 @@
    "statement": "8aa8d66903e50925"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.univalence-from-even-stationary-dynamics": {
   "assumes": [],
@@ -54535,6 +55755,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "eaa7d521a3e590de",
@@ -54546,7 +55771,7 @@
    "statement": "333d0a33f8b1ac7b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.untuned-fit-caps-lightest-heavy-neutrino": {
   "assumes": [
@@ -54716,6 +55941,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    3
    ]
   ],
   "hash": "d7c7eb6c08d56cb3",
@@ -54727,7 +55957,7 @@
    "statement": "695daadb7248c423"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian": {
   "assumes": [],
@@ -54741,18 +55971,28 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
+   ],
+   [
+    "Claude Opus 5.5",
+    "premises repointed to the premise-free results split out of the null-energy and collapse results",
+    6
    ]
   ],
-  "hash": "85fc7904158ac739",
+  "hash": "85749b69bca26986",
   "ledger": null,
   "parts": {
-   "checks": "9dd81cf4ee1f0614",
-   "proofs": "b0a632cdfac1edeb",
+   "checks": "5aa8912dfcedcdaf",
+   "proofs": "1bd6d836958948da",
    "rest": "5ef59c08a022541a",
-   "statement": "ed9e72216944063e"
+   "statement": "b6eb5adb78d69d97"
   },
   "status": "proved",
-  "version": 4
+  "version": 6
  },
  "synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel": {
   "assumes": [],
@@ -54816,18 +56056,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    4
    ]
   ],
-  "hash": "99fb3aa03120abbb",
+  "hash": "ede131fb1fec0679",
   "ledger": null,
   "parts": {
    "checks": "90c7bf102263a50e",
-   "proofs": "56f961f137e41f46",
+   "proofs": "3319edb909d265b0",
    "rest": "d3b65c89b700e77b",
-   "statement": "1943b80b71dd8ec6"
+   "statement": "96af97d4ce55a3d3"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.window-reading-array-killing-energy": {
   "assumes": [],
@@ -54852,6 +56097,31 @@
    "statement": "fd930ea1084de7c5"
   },
   "status": "postulate",
+  "version": 1
+ },
+ "synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "88b02722b249c8ae",
+  "ledger": null,
+  "parts": {
+   "checks": "64bbcec5f550fff2",
+   "proofs": "b88b6da1ea34fdd1",
+   "rest": "3d40c3098c8f640e",
+   "statement": "b5a4a16495e8e0b2"
+  },
+  "status": "proved",
   "version": 1
  },
  "three-routes.base-unipotents-their-action-candidates": {
@@ -55468,6 +56738,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    8
    ]
   ],
   "hash": "a5f96af40d2ad0aa",
@@ -55479,7 +56754,7 @@
    "statement": "6b8957c2e89cf5e6"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "tower.volume-elements-planes": {
   "assumes": [],
@@ -56245,6 +57520,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
+    5
    ]
   ],
   "hash": "c200a7b182c0a04d",
@@ -56256,7 +57536,7 @@
    "statement": "0a44fc7779d5af85"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "transport.one-generator-minimal-minimal-completions-classified": {
   "assumes": [],
