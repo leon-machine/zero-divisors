@@ -1,7 +1,7 @@
 ---
 id: correspondence.chirality-split-ordering-insensitivity-asd-sector
 kind: claim
-version: 4
+version: 5
 title: "The chirality split, and the ordering insensitivity of the ASD sector"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -44,7 +48,14 @@ locators:
   number: Prop 6.10
   label: prop:blind
   line: 844
+outside_ga:
+  kind: other
+  why: 'the i of the +-i eigenspaces is the scalar of the complexified Lorentz algebra so(1,3)_C, which must commute with the duality operator (on real bivectors, multiplication by I_4 up to sign), so no pseudoscalar can stand for it'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the i of the +-i eigenspaces is the scalar of the complexified Lorentz algebra so(1,3)_C, which must commute with the duality operator (on real bivectors, multiplication by I_4 up to sign), so no pseudoscalar can stand for it.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

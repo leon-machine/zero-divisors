@@ -1,7 +1,7 @@
 ---
 id: synthesis.light-pair-split-needs-broken-source-stabiliser
 kind: claim
-version: 1
+version: 2
 title: 'Splitting the light pair needs a broken source stabiliser'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -40,6 +44,10 @@ lineage:
   - families.one-open-problem-three-forms
   - families.classification-displaced-gaussian-class-solved-level
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The unit in the coefficient 2i of the non-Gaussian state, in the test vectors c = (1, i, 1/2 + i/3) and (1, i, 0), in the phases e^{i phi} and in the check field Q(i) became I_4, numbers (Fock amplitudes included) read in span{1, I_4}; C^3 and the line C c are written over span{1, I_4}; no bare i remains.'
   open_problem: op.non-gaussian-completion
   note: >-
     Adversarial route on op.non-gaussian-completion. The problem's first attack line (add the
@@ -57,11 +65,11 @@ extraction:
 ---
 
 ## formal
-Let $a_{iA}$ ($i = 1,2,3$ a family, $A = 1,2$ a slot) be the six bosonic face modes, $\hat\Omega_{k}$ the face operators and $H(\psi)$ the mass form of Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, evaluated in an arbitrary state $\psi$ as in Proposition \claimref{synthesis.face-mass-form-unit-plus-gram}, and put $\hat\Omega(c)^{\dagger} = \sum_{k}\bar{c}_{k}\hat\Omega_{k}^{\dagger}$ for $c \in \C^{3}$. For $U \in U(3)$ let $\hat{U}$ be the Fock unitary with $\hat{U}a_{iA}^{\dagger}\hat{U}^{\dagger} = \sum_{j}U_{ji}a_{jA}^{\dagger}$, and $N(U) = \overline{\det U}\,U$.
+Let $a_{iA}$ ($i = 1,2,3$ a family, $A = 1,2$ a slot) be the six bosonic face modes, $\hat\Omega_{k}$ the face operators and $H(\psi)$ the mass form of Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, evaluated in an arbitrary state $\psi$ as in Proposition \claimref{synthesis.face-mass-form-unit-plus-gram}, and put $\hat\Omega(c)^{\dagger} = \sum_{k}\bar{c}_{k}\hat\Omega_{k}^{\dagger}$ for $c \in \mathrm{span}\{1, I_4\}^{3}$ (numbers, including the amplitudes of Fock states, are read in $\mathrm{span}\{1, I_4\}$, and the bar reverses $I_4$). For $U \in U(3)$ let $\hat{U}$ be the Fock unitary with $\hat{U}a_{iA}^{\dagger}\hat{U}^{\dagger} = \sum_{j}U_{ji}a_{jA}^{\dagger}$, and $N(U) = \overline{\det U}\,U$.
 \begin{enumerate}
 \item[(i)] \emph{(Covariance.)} For every state, $H(\hat{U}\psi) = N(U)\,H(\psi)\,N(U)^{\dagger}$, and $\hat{U}\hat\Omega(c)^{\dagger}\hat{U}^{\dagger} = \hat\Omega(N(U)c)^{\dagger}$.
 \item[(ii)] \emph{(The stabiliser keeps the pair degenerate.)} Fix $c \neq 0$ and let $G_{c} = \{U : N(U)c = c\}$, which contains every $U$ fixing $c$ with $\det U = 1$ and so acts on $c^{\perp}$ as $SU(2)$. If $\hat{U}\psi = \psi$ for all $U \in G_{c}$, or only for two elements whose $N(U)$ have commutant $\mathrm{span}\{P_{c}, 1 - P_{c}\}$, then $H(\psi) = h_{c}P_{c} + h_{\perp}(1 - P_{c})$: $c$ is an eigenvector and the light pair is exactly degenerate. This holds for every such state, Gaussian or not, whatever its cumulants. It covers every state obtained from the vacuum by a polynomial in $\hat\Omega(c)^{\dagger}$ and $U(3)$-invariant face words such as $\hat{V} = \sum_{k}\hat\Omega_{k}^{\dagger}\hat\Omega_{k}$, and every state evolved from the vacuum by a Hamiltonian built from $\hat\Omega(c)$, $\hat\Omega(c)^{\dagger}$ and such words: one source and covariant interactions never split the pair.
-\item[(iii)] \emph{(Non-Gaussian instances; computed, exact.)} $(1 + (\hat\Omega_{3}^{\dagger})^{3})\ket{0}$ and $(\hat\Omega_{3}^{\dagger} + \tfrac13\hat{V}(\hat\Omega_{3}^{\dagger})^{2} + 2i\,\hat\Omega_{3}^{\dagger}\hat{V}(\hat\Omega_{3}^{\dagger})^{2})\ket{0}$ are invariant under $G_{e_{3}}$, have a nonzero ordered truncated four-point function $\langle a_{11}^{\dagger}a_{22}^{\dagger}a_{11}a_{22}\rangle^{T}$, so are not Gaussian (Wick's theorem, Fact \claimref{families.imported-squeezed-vacuum-bosonic-pairing}), and have exactly degenerate light pairs with $h_{e_{3}} \neq h_{\perp}$; so does a state built from $\hat\Omega(c)^{\dagger}$ and $\hat{V}$ on a complex $c$.
+\item[(iii)] \emph{(Non-Gaussian instances; computed, exact.)} $(1 + (\hat\Omega_{3}^{\dagger})^{3})\ket{0}$ and $(\hat\Omega_{3}^{\dagger} + \tfrac13\hat{V}(\hat\Omega_{3}^{\dagger})^{2} + 2I_4\,\hat\Omega_{3}^{\dagger}\hat{V}(\hat\Omega_{3}^{\dagger})^{2})\ket{0}$ are invariant under $G_{e_{3}}$, have a nonzero ordered truncated four-point function $\langle a_{11}^{\dagger}a_{22}^{\dagger}a_{11}a_{22}\rangle^{T}$, so are not Gaussian (Wick's theorem, Fact \claimref{families.imported-squeezed-vacuum-bosonic-pairing}), and have exactly degenerate light pairs with $h_{e_{3}} \neq h_{\perp}$; so does a state built from $\hat\Omega(c)^{\dagger}$ and $\hat{V}$ on a complex $c$.
 \item[(iv)] \emph{(Breaking it; computed, exact.)} Adding $(\hat\Omega_{1}^{\dagger})^{2}\ket{0}$ to the first state of (iii) splits the pair. Words that also use the complex-conjugate face vector, $\ket{0} + \hat\Omega(c)^{\dagger}\ket{0} + \tfrac23\hat\Omega(c)^{\dagger}\hat\Omega(\bar{c})^{\dagger}\ket{0}$, which are covariant under real orthogonal $U$ only, split the pair for a complex $c$, generic or isotropic ($\sum_{k}c_{k}^{2} = 0$), and leave it degenerate for real $c$; the same words with $\hat\Omega(c)^{\dagger}$ in place of $\hat\Omega(\bar{c})^{\dagger}$ leave it degenerate.
 \end{enumerate}
 So the light-pair degeneracy of the skeleton is a symmetry statement about the source, not a property of the Gaussian class: a completion that splits the pair must carry a second face-space structure breaking $G_{c}$. A real structure on face space is one already in the store, and by Proposition \claimref{synthesis.coherent-face-vector-real-slices}(ii) the coherent vector of every antisymmetric pairing with $\lambda > 0$ is not real up to phase under any $S_{3}$-equivariant real structure, which is the situation in which (iv) splits the pair. Whether a completion of that kind produces $m_{\mu}/m_{e}$ with no second free number is not decided here.

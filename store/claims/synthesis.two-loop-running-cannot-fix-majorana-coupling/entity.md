@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-loop-running-cannot-fix-majorana-coupling
 kind: claim
-version: 1
+version: 2
 title: 'Two-loop running cannot fix the Majorana coupling'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -49,6 +53,10 @@ lineage:
   - synthesis.majorana-scale-free-on-pati-salam-route
   - synthesis.majorana-scale-free-input
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex scalar components Phi_c = (phi_c1 + I_4 phi_c2)/sqrt 2 and the Yukawa matrix Y^{c2} = I_4 (y tensor T^c)/sqrt 2 in the proof are written with I_4 (numbers read in span{1, I_4}); nothing stays. Wording, to clear W222: "Dirac matrices" (the Dirac mass matrices, not gamma matrices) now reads "Dirac mass matrices".'
   open_problem: op.majorana-scale
   note: 'Answers the problem''s second line of attack (two-loop gauge running with Yukawa terms on the chain) in the negative, using the imported Machacek-Vaughn Fact, which no stored result had used. Two findings. First, a selection rule: every Yukawa coupling of Dirac type (psi psi^c with a scalar in any representation; on the chains the bidoublet and the (15,2,2), whichever 10, 120 or 126 they descend from) enters the three Pati-Salam couplings with the same weight (1/4) dim R Tr(y y^dag), which the matching at M_I keeps universal, so it moves alpha_U only; the Majorana coupling f of the (10,1,3) is the only Yukawa that moves M_I and M_U, with the matched vector (6, 0, 15/4) Tr(f f^dag). Second, a count: for every value of the averaged trace the running is a nonsingular linear system in (alpha_U^-1, x, y), so the three measured couplings fix the scales as functions of f and never f. The two-loop terms break the scaling symmetry of the stored relations into a one-parameter family M_I(f), along which the observed m_3 is still the only datum; the premise synthesis.majorana-scale-free-input survives at two loops. Sizes are at the one-loop baseline of the chain (computed exactly, certified pi): Tr(f f^dag) = 1 raises ln M_I by 0.08 to 0.11, comparable with the alpha_s one-sigma move (0.03 to 0.05) and with moving the (10,1,3) threshold off M_I by a factor 1.5 to 1.8; so even a derived M_I would fix Tr(f f^dag) only to about 0.4 per sigma of alpha_s. Normalisation: M_R = v_R f with canonically normalised orthonormal scalar components (stated in the proof); the selection rule and the count do not depend on it. Transport-absent (standard Pati-Salam group theory and running); the transport content is upstream, in the Majorana element and the chain.'
 ---

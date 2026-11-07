@@ -48,7 +48,14 @@ locators:
   number: Prop 5.5
   label: prop:curvature
   line: 343
+outside_ga:
+  kind: complex-analysis
+  why: 'the classes +-iM/r^3 are values of the pairing against the complex null vector m = (e_2 + i e_3)/sqrt 2, a plain complexification next to spacetime vectors, which no pseudoscalar commutes with'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the values +-iM/r^3 are pairing classes <B.l, m> against the transverse complex null vector m = (e_2 + i e_3)/sqrt 2, whose i stands next to spacetime vectors (no pseudoscalar commutes with them), so it stays and is declared (version and levels unchanged).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

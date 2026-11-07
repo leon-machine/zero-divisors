@@ -1,7 +1,7 @@
 ---
 id: correspondence.reality-conjugation-twistor-form-factor
 kind: claim
-version: 6
+version: 7
 title: "Reality: the conjugation, the invariant Hermitian form, and the factor $I_6$"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 7
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -45,7 +49,14 @@ locators:
   number: Prop 4.5
   label: prop:reality
   line: 495
+outside_ga:
+  kind: other
+  why: 'the proof works in the complex Fock module over V_C (b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta} of the Hermitian form, the rescaling by (3+4i)/5), whose scalar must commute with the vector actions c(v) and is +-I_6 only on CS'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the proof works in the complex Fock module over V_C (b_4 = -(i/2)(w_3 + 2w_3''), the phases e^{i theta} of the Hermitian form, the rescaling by (3+4i)/5), whose scalar must commute with the vector actions c(v) and is +-I_6 only on CS.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

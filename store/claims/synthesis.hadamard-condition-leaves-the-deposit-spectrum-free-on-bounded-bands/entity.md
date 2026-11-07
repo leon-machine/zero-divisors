@@ -52,6 +52,10 @@ lineage:
   - synthesis.local-conversion-cannot-redden-a-gaussian-spectator
   - synthesis.imported-propagation-of-hadamard-form
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Wronskian normalisation i, the modes e^{-ik eta}/sqrt(2k), the Bogoliubov phases and the Bunch-Davies control are complex analysis of scalar mode functions, sharing one unit; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Bears on op.deposit-state-is-hadamard (the primordial spectrum as the infrared data of a Hadamard
@@ -99,6 +103,9 @@ extraction:
   flags:
   - 'clauses (i), (ii) and (iv) hold relative to any homogeneous Hadamard reference state of a scalar field on a spatially flat Robertson-Walker field; clause (iii) is stated for the conformally coupled massless field with its conformal vacuum as reference, proved on the frozen point''s field (where it is the weight -1 field of the dictionary) and, on other spatially flat Robertson-Walker fields, given that the conformal vacuum is Hadamard there (the conformal covariance is the imported Fact synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness; the Hadamard property of the conformal vacuum there is assumed)'
   - 'the infrared clause is about the field algebra of the deposited field on the slice; it is evaded by restricting to fields smeared with test functions of zero mean, itself a choice the series would have to make'
+outside_ga:
+  kind: complex-analysis
+  why: 'the scalar mode functions keep i: the Wronskian normalisation chi chi-bar'' - chi'' chi-bar = i, the conformal modes e^{-ik eta}/sqrt(2k), the Bogoliubov phases e^{+-2ik eta_d} and the Bunch-Davies control e^{-iz}(1 - i/z) are one complex analysis of scalar functions, whose normalisation and mode functions share one unit'
 ---
 
 ## formal

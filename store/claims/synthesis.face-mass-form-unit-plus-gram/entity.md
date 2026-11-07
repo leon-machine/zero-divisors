@@ -1,7 +1,7 @@
 ---
 id: synthesis.face-mass-form-unit-plus-gram
 kind: claim
-version: 1
+version: 2
 title: In every state the face mass form is at least the unit, the excess an explicit Gram matrix
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -35,12 +39,16 @@ lineage:
   motivated_by:
   - families.skeleton-rank-one-plus-ordering-shift
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No bare i: the coefficient space C^3 of the source vector c is written span{1, I_4}^3, numbers read in span{1, I_4}; nothing stays.'
   open_problem: op.non-gaussian-completion
   note: Generalises clauses (1)-(2) of the skeleton theorem from the Gaussian class to every state of the six bosonic face modes, so it is the frame inside which any non-Gaussian completion must split the light pair. Its content is the state-independent lower bound H >= 1 and the explicit vectors that realise W; that H - 1 is a Gram matrix is automatic for any positive semidefinite matrix, so it does not by itself answer op.gram-square-and-face-space, which asks for the Yukawa form as the square of a face-space map. It uses only the canonical commutation relations of the bosonic modes; with fermionic (CAR) modes the face operators vanish identically, because the fermionic bracket is symmetric in the family pair, so the statement has no fermionic counterpart. Symmetric ordering being equivariant, the ordering constants alone cannot break S2, which (ii) makes explicit. Transport-absent.
 ---
 
 ## formal
-Let $a_{p}$, $p = (i, A)$, be the six bosonic modes of the face algebra, $\Theta_{k} = \tfrac12(E_{k} \otimes \varepsilon)$ and $\hat\Omega_{k} = \sum_{pq}\Theta_{k}[p,q]\,a_{p}a_{q}$ as in Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, and for any state $\psi$ (normalised, with finite fourth moments) let $H_{kl} = \tfrac12\langle\hat\Omega_{k}^{\dagger}\hat\Omega_{l} + \hat\Omega_{l}\hat\Omega_{k}^{\dagger}\rangle$ be that theorem's mass form. For $c \in \C^{3}$ put $\Theta(c) = \sum_{k}c_{k}\Theta_{k}$ and $\hat\Omega(c) = \sum_{k}c_{k}\hat\Omega_{k}$. Then, for every state, Gaussian or not,
+Let $a_{p}$, $p = (i, A)$, be the six bosonic modes of the face algebra, $\Theta_{k} = \tfrac12(E_{k} \otimes \varepsilon)$ and $\hat\Omega_{k} = \sum_{pq}\Theta_{k}[p,q]\,a_{p}a_{q}$ as in Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, and for any state $\psi$ (normalised, with finite fourth moments) let $H_{kl} = \tfrac12\langle\hat\Omega_{k}^{\dagger}\hat\Omega_{l} + \hat\Omega_{l}\hat\Omega_{k}^{\dagger}\rangle$ be that theorem's mass form. For $c \in \mathrm{span}\{1, I_4\}^{3}$ (numbers are read in $\mathrm{span}\{1, I_4\}$) put $\Theta(c) = \sum_{k}c_{k}\Theta_{k}$ and $\hat\Omega(c) = \sum_{k}c_{k}\hat\Omega_{k}$. Then, for every state, Gaussian or not,
 \[
 H \;=\; \mathbb{1} \;+\; W^{\dagger}W, \qquad W c \;=\; \bigl(\hat\Omega(c)\psi,\ \sqrt2\,(\Theta(c)a)\psi\bigr) \in \mathcal{F} \oplus \mathcal{F}^{6},
 \]

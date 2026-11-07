@@ -1,7 +1,7 @@
 ---
 id: singularity.modular-theory-matrix-factor-proved-outright
 kind: claim
-version: 4
+version: 5
 title: Modular theory of a matrix factor, proved outright
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -37,7 +41,14 @@ locators:
   number: Lem 7.1
   label: lem:tomita
   line: 1701
+outside_ga:
+  kind: complex-analysis
+  why: 'Tomita-Takesaki theory on the Hilbert space C^n (x) C^n of a full complex matrix factor (rho^{it}, Delta^{it}); the space is not one of the series'' geometric-algebra mode spaces with unit I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): Tomita-Takesaki theory on the Hilbert space C^n (x) C^n of a full complex matrix factor (rho^{it}, Delta^{it}); the space is not one of the series'' geometric-algebra mode spaces with unit I_4.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

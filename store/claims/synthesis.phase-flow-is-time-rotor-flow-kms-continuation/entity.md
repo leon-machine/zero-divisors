@@ -48,7 +48,14 @@ checked_by:
   ref: check.py::check_pairing_flow_exponentiated
 - kind: proof
   derivation: main
+outside_ga:
+  kind: complex-analysis
+  why: 'i is the unit of the complexified windows Cl(p,q)_C and of V_C (phase flow Ad(e^{itH}), the common phase e^{-i kappa t}, the continuation tau_{-i lambda}, the check over Q(i)); the frame *-structure is conjugate-linear in it and it must commute with the mode vectors, which no pseudoscalar of a general Cl(p,q) does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: i is the unit of the complexification of a general Cl(p,q) and of V_C, on which the frame *-structure is conjugate-linear and which must commute with the vectors (the mode generators), so no pseudoscalar can stand for it; it stays in the phase flow Ad(e^{itH}), the phases, the KMS continuation tau_{-i lambda} and the check over Q(i) (declared complex-analysis).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

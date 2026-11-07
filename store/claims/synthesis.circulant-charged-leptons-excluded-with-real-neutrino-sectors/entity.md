@@ -1,7 +1,7 @@
 ---
 id: synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors
 kind: claim
-version: 2
+version: 3
 title: 'The Koide circulant as charged-lepton matrix against the global fit'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -49,6 +53,10 @@ lineage:
   - synthesis.koide-channel-phase-is-no-symmetry-angle
   - synthesis.theta23-at-s3-s2-direction
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The cube root of unity omega, the circulant phase b = |b| e^{I_4 delta}, the Hermitian-circulant decomposition, the overall neutrino phase and the Takagi phases are written with I_4 (numbers read in span{1, I_4}); nothing stays.'
   open_problem: op.second-order-breaking
   note: 'Answers the attack line that asks to reconcile the two charged-lepton structures in the store, the circulant reading of the Koide parametrisation and the texture c(J + delta_c E) of the neutrino paper, or to decide which one the second stage acts on; the same line appears in op.non-gaussian-completion (its third attack line). The decision is made by computing what each structure does to the lepton mixing matrix with the series neutrino sector. The stored textures have real coefficients; under the su(2)_R-covariant completion (synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix) the Dirac neutrino matrix alpha Y + conj(beta) Ytilde and M_R = v_R f are complex for generic frame coefficients and family matrices (real only on relatively real sub-branches), so the real-sector clauses do not reach that branch; the residual-S2 clause does, real or complex. The key identity is elementary: the Fourier vectors f_1 and f_2 are complex conjugates, so their overlaps with any real vector have equal moduli. A circulant charged-lepton matrix together with a real neutrino mass matrix therefore gives mu-tau reflection symmetry when the electron sits on the democratic line; this is the pattern of Harrison and Scott (hep-ph/0210197, imported as the Fact synthesis.imported-harrison-scott-mu-tau-reflection: mu-tau reflection, |U_mu i| = |U_tau i|; they attribute the circulant-basis case to an earlier paper, not checked). Clause (i) restates clauses (i) and (ii) of synthesis.series-family-structures-give-no-lopsided-second-stage (there S e_j = e_{j+1}; here (Sx)_i = x_{i+1}, the transpose, so A here is minus the stored A, the same line). The new content is (ii) to (iv), applied to the store: the stored representative of the circulant reading puts the tau on the democratic line, which the global fit excludes for every real neutrino sector; the other two placements are treated too. Placement of a charged lepton on the democratic line is physical once the family basis is shared with the neutrino sector: permutations of the families fix f_0, so the shift of the channel phase by 2 pi/3, which the circulant-reading result counts among relabellings of the square-root-mass vector, here changes the matrix. The NuFIT 6.0 three-sigma ranges (arXiv:2410.05380, Table 1) are imported as the Fact synthesis.imported-nufit-6-oscillation-parameter-ranges, and the Takagi factorisation as synthesis.imported-takagi-factorisation; the result uses the union of its four data sets, and combines one-dimensional ranges, which is conservative for an exclusion. Free numbers: none; look-elsewhere count: three placements. Transport-absent (flavour linear algebra and data).'
   maintainer_pass:
@@ -58,7 +66,7 @@ extraction:
 ---
 
 ## formal
-Work in the family basis of the textures of Proposition \claimref{synthesis.theta23-at-s3-s2-direction}, with $S$ the cyclic shift $(Sx)_{i} = x_{i+1}$ (the transpose of the shift of Proposition \claimref{synthesis.series-family-structures-give-no-lopsided-second-stage}), $P_{12}$ the exchange of the first two families, $u' = (1, 1, 1)$, $A = S - S^{\mathsf{T}}$ (minus the $A$ of that Proposition, the same sign line), $\omega = e^{2\pi i/3}$ and $f_{k} = (1, \omega^{k}, \omega^{2k})/\sqrt3$. Read the projected coherent vector as the $\sqrt{m}$ vector of a circulant $C = a\mathbb{1} + bS + \bar{b}S^{\mathsf{T}}$ acting on that basis (the circulant reading of Proposition \claimref{synthesis.koide-channel-phase-is-no-symmetry-angle}), whose eigenvalue on $f_{k}$ is $p_{k}$; the stored representative there ($0 < \delta < \tfrac{\pi}{12}$, $p_{1} < p_{2} < p_{0}$) puts the tau on the democratic line $f_{0}$. For a complex symmetric neutrino mass matrix $m_{\nu}$ with Takagi vectors $\nu_{j}$ (Fact \claimref{synthesis.imported-takagi-factorisation}), let $U_{\alpha j} = \langle f_{k(\alpha)}, \nu_{j}\rangle$, $k(\alpha)$ the Fourier line of the charged lepton $\alpha$.
+Work in the family basis of the textures of Proposition \claimref{synthesis.theta23-at-s3-s2-direction}, with $S$ the cyclic shift $(Sx)_{i} = x_{i+1}$ (the transpose of the shift of Proposition \claimref{synthesis.series-family-structures-give-no-lopsided-second-stage}), $P_{12}$ the exchange of the first two families, $u' = (1, 1, 1)$, $A = S - S^{\mathsf{T}}$ (minus the $A$ of that Proposition, the same sign line), $\omega = e^{2\pi I_{4}/3}$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$) and $f_{k} = (1, \omega^{k}, \omega^{2k})/\sqrt3$. Read the projected coherent vector as the $\sqrt{m}$ vector of a circulant $C = a\mathbb{1} + bS + \bar{b}S^{\mathsf{T}}$ acting on that basis (the circulant reading of Proposition \claimref{synthesis.koide-channel-phase-is-no-symmetry-angle}), whose eigenvalue on $f_{k}$ is $p_{k}$; the stored representative there ($0 < \delta < \tfrac{\pi}{12}$, $p_{1} < p_{2} < p_{0}$) puts the tau on the democratic line $f_{0}$. For a complex symmetric neutrino mass matrix $m_{\nu}$ with Takagi vectors $\nu_{j}$ (Fact \claimref{synthesis.imported-takagi-factorisation}), let $U_{\alpha j} = \langle f_{k(\alpha)}, \nu_{j}\rangle$, $k(\alpha)$ the Fourier line of the charged lepton $\alpha$.
 \begin{enumerate}
 \item[(i)] \emph{(The two charged-lepton structures; this restates clauses (i) and (ii) of Proposition \claimref{synthesis.series-family-structures-give-no-lopsided-second-stage}.)} Every circulant, and so $CC^{\dagger}$, is diagonal on the $f_{k}$ for every channel phase. Under conjugation by $S_{3}$ the circulants span the trivial lines $\mathbb{1}$, $\J$ and the sign line $A$; every $P_{12}$-invariant matrix, in particular $c^{2}(\J + \delta_{c}E)^{2}$, has no component on $A$. So a Hermitian circulant is $P_{12}$-invariant exactly when it lies in $\mathrm{span}\{\mathbb{1}, \J\}$, and $(\J + \delta_{c}E)^{2}$ with $\delta_{c} \ne 0$ is not a circulant: the two structures share the democratic term and nothing else.
 \item[(ii)] \emph{(Real neutrino sectors.)} If $m_{\nu}$ is real up to an overall phase, then $|U_{f_{1}j}| = |U_{f_{2}j}|$ for $j = 1, 2, 3$, and $|U_{f_{0}j}| = |\nu_{j}\cdot u'|/\sqrt3$ with $\nu_{j}$ chosen real.

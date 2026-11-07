@@ -1,7 +1,7 @@
 ---
 id: synthesis.wick-rotor-chiral-angular-rotor
 kind: claim
-version: 3
+version: 4
 title: 'The Wick-rotated boost as the angular rotor on each chiral half'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -39,6 +43,10 @@ lineage:
   motivated_by:
   - note.pairing.setting-two-claims-kill-conditions-fixed-3
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The external imaginary unit of the continuation to imaginary rapidity, already identified with the conformal spinors unit, is now written as I_6 throughout (lambda -> I_6 theta, R_{I_6 theta}); nothing stays.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -54,7 +62,7 @@ extraction:
 ---
 
 ## formal
-Let $\sigma = e_{0}e_{1}$ be the radial boost bivector ($\sigma^{2} = +1$), $I_{4} = e_{0}e_{1}e_{2}e_{3}$, $E = e_{+}e_{-}$ and $I_{6} = I_{4}E$ as in Proposition \claimref{field-theory.where-each-lives}, and $I_{4}\sigma = e_{2}e_{3}$ the angular member of the curvature-selected pair (Proposition \claimref{state-selection.euclidean-partner-curvature-selected}). Take as the unit of the continuation $\lambda \mapsto i\theta$ of Proposition \claimref{singularity.euclidean-rotor-where-it-lies} the complex unit $I_{6}$ of the conformal spinors $\CS$ (Fact \claimref{odd-extensions.imported-conformal-completion}). Then:
+Let $\sigma = e_{0}e_{1}$ be the radial boost bivector ($\sigma^{2} = +1$), $I_{4} = e_{0}e_{1}e_{2}e_{3}$, $E = e_{+}e_{-}$ and $I_{6} = I_{4}E$ as in Proposition \claimref{field-theory.where-each-lives}, and $I_{4}\sigma = e_{2}e_{3}$ the angular member of the curvature-selected pair (Proposition \claimref{state-selection.euclidean-partner-curvature-selected}). Take as the unit of the continuation to imaginary rapidity of Proposition \claimref{singularity.euclidean-rotor-where-it-lies} the complex unit $I_{6}$ of the conformal spinors $\CS$ (Fact \claimref{odd-extensions.imported-conformal-completion}), so that the continuation is $\lambda \mapsto I_{6}\theta$. Then:
 \begin{enumerate}
 \item[(i)] $I_{6}\sigma = E\,(I_{4}\sigma) = E\,e_{2}e_{3}$, a $4$-blade of the real even algebra $\Cl^{+}(2,4)$, commuting with $\sigma$ and with $E$, with $(I_{6}\sigma)^{2} = -1$; so $R^{W}_{\theta} := \exp(\theta I_{6}\sigma/2) = \cos(\theta/2) + \sin(\theta/2)\,E\,e_{2}e_{3}$ is a real even element, with $R^{W}_{2\pi} = -1$ and $R^{W}_{4\pi} = +1$.
 \item[(ii)] With the idempotents $\varepsilon_{\pm} = \tfrac12(1 \pm E)$ and the angular rotor $R_{\theta} = \exp(\theta I_{4}\sigma/2)$,
@@ -66,10 +74,10 @@ On $\CS = L_{0} \oplus L_{\infty}$, the $E = \pm 1$ eigenspaces on which $I_{6} 
 \end{enumerate}
 
 ## technical
-The singularity paper continues the radial boost $\exp(\lambda\sigma/2)$ to imaginary rapidity with an external unit $i$ and finds that the result is no real rotor of $\Cl(1,3)$; the state-selection note instead reads the Euclidean rotation as the real angular rotor $\exp(\theta I\sigma_r/2)$, $I\sigma_r = e_{2}e_{3}$. Taking for $i$ the conformal spinors' own unit $I_{6} = I_{4}E$ reconciles the two. Since $I_{6}\sigma = E\,e_{2}e_{3}$ with $E$ and $e_{2}e_{3}$ commuting, the continued boost is the real even element $\cos(\theta/2) + \sin(\theta/2)E\,e_{2}e_{3}$, equal to $\tfrac12(1+E)R_{\theta} + \tfrac12(1-E)R_{-\theta}$. On the chiral halves $L_{0}$, $L_{\infty}$ of the conformal spinors ($E = \pm1$) it is the angular rotor turned one way or the other, so the state-selection reading holds on each chirality, the sense of rotation being the orientation bit. For $\theta \notin \pi\Z$ it is not even in the Clifford group, so the singularity paper's statement that no real rotor, and no holonomy, realises the Euclidean rotation is untouched.
+The singularity paper continues the radial boost $\exp(\lambda\sigma/2)$ to imaginary rapidity with an external imaginary unit and finds that the result is no real rotor of $\Cl(1,3)$; the state-selection note instead reads the Euclidean rotation as the real angular rotor $\exp(\theta I\sigma_r/2)$, $I\sigma_r = e_{2}e_{3}$. Taking for that unit the conformal spinors' own unit $I_{6} = I_{4}E$ reconciles the two. Since $I_{6}\sigma = E\,e_{2}e_{3}$ with $E$ and $e_{2}e_{3}$ commuting, the continued boost is the real even element $\cos(\theta/2) + \sin(\theta/2)E\,e_{2}e_{3}$, equal to $\tfrac12(1+E)R_{\theta} + \tfrac12(1-E)R_{-\theta}$. On the chiral halves $L_{0}$, $L_{\infty}$ of the conformal spinors ($E = \pm1$) it is the angular rotor turned one way or the other, so the state-selection reading holds on each chirality, the sense of rotation being the orientation bit. For $\theta \notin \pi\Z$ it is not even in the Clifford group, so the singularity paper's statement that no real rotor, and no holonomy, realises the Euclidean rotation is untouched.
 
 ## lay
 A standard way to see that black holes are hot is to turn the time of a static observer into an angle. Two of the series' texts seemed to disagree about which real rotation that angle belongs to: one says no real rotation of spacetime does the job, the other says the rotation along the horizon sphere does. Using the imaginary unit that the series' twistor-like spinors already carry, this result shows both are right in their own place: acting on spinors of one handedness the turned boost is exactly the rotation along the sphere, in a direction set by the handedness, while acting on ordinary directions in spacetime it is not a rotation at all.
 
 ## one-liner
-With $i = I_{6}$, $\exp(\theta I_{6}\sigma/2) = \tfrac12(1+E)\exp(\theta e_{2}e_{3}/2) + \tfrac12(1-E)\exp(-\theta e_{2}e_{3}/2)$: on each chiral half of the conformal spinors the Wick-rotated radial boost is the real angular rotor, while for $\theta \notin \pi\Z$ it acts on vectors as no isometry.
+With the unit of the continuation taken as $I_{6}$, $\exp(\theta I_{6}\sigma/2) = \tfrac12(1+E)\exp(\theta e_{2}e_{3}/2) + \tfrac12(1-E)\exp(-\theta e_{2}e_{3}/2)$: on each chiral half of the conformal spinors the Wick-rotated radial boost is the real angular rotor, while for $\theta \notin \pi\Z$ it acts on vectors as no isometry.

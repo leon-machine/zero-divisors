@@ -1,7 +1,7 @@
 ---
 id: std-algebra.pauli-algebra
 kind: claim
-version: 1
+version: 2
 title: 'The Pauli algebra: Cl(3,0) and 2 x 2 complex matrices'
 status: proved
 region: std-algebra
@@ -21,6 +21,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 trust: ai-proposed
 about:
@@ -44,7 +48,14 @@ locators:
     locator: Ch. 2 (geometric algebra in two and three dimensions)
   - key: Lounesto2001
     locator: Ch. 16 (matrix representations and periodicity of 8)
+outside_ga:
+  kind: bridge
+  why: 'the result connects Cl(3,0) with the Pauli matrices, whose complex entries carry i, and shows that i is the image of the pseudoscalar e_1e_2e_3'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): the result connects Cl(3,0) with the Pauli matrices, whose complex entries carry i, and shows that i is the image of the pseudoscalar e_1e_2e_3.'
   by: algebra-core-2026-10-26
 ---
 

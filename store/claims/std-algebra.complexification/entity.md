@@ -1,7 +1,7 @@
 ---
 id: std-algebra.complexification
 kind: claim
-version: 1
+version: 2
 title: Complexification, and the odd-dimensional split
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 trust: ai-proposed
 about:
@@ -47,7 +51,14 @@ locators:
     locator: Ch. 16 (matrix representations and periodicity of 8)
   - key: Lam2005
     locator: 'Ch. V (Clifford algebras: the tensor product rules)'
+outside_ga:
+  kind: other
+  why: 'the complexification Cl(V) (x) C is the subject, and its scalar i (epsilon_i = i e_i) commutes with every vector, which no pseudoscalar does; where omega squares to -1 the result already names omega as the imaginary unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the complexification Cl(V) (x) C is the subject, and its scalar i (epsilon_i = i e_i) commutes with every vector, which no pseudoscalar does; where omega squares to -1 the result already names omega as the imaginary unit.'
   referee_fixes: '2026-10-26: (ii) fixes omega = e_1...e_n for an orthonormal basis, so omega^2 = +-1 exactly (referee part 1, point 4).'
   by: algebra-core-2026-10-26
 ---

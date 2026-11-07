@@ -55,6 +55,10 @@ lineage:
   - synthesis.pati-salam-monopoles-bound-descent-history
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the phases are entries of the complex defining representations of the Pati-Salam factors, stated beside their Clifford (rotor) form; declared as a bridge (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -72,6 +76,9 @@ extraction:
     every quartic-to-gauge ratio up to about 10^4); scaling of string networks from any initial density;
     the Planck 2013 and 2015 string bounds (Nambu-Goto G mu < 1.5e-7 at f_10 < 0.015, Abelian-Higgs
     G mu < 3.2e-7 at f_10 < 0.028); the LISA reach for string backgrounds (G mu of order 1e-17).
+outside_ga:
+  kind: bridge
+  why: 'the group elements are written as complex matrices in the defining representations of SU(4), SU(2)_L, SU(2)_R and U(1)_Y (exp(3 pi i(B - L)), diag(e^{i theta/6}U_3, e^{-i theta/2}), the centre i^a 1_4), with the Clifford form of the same elements (rotors of Spin(6) and Spin(10)) given alongside'
 ---
 
 ## formal

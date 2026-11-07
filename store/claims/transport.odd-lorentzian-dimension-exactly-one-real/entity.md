@@ -1,7 +1,7 @@
 ---
 id: transport.odd-lorentzian-dimension-exactly-one-real
 kind: claim
-version: 4
+version: 5
 title: 'Odd Lorentzian dimension: exactly one real form is split'
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -42,7 +46,14 @@ locators:
   number: Cor 5.16
   label: cor:lorentz
   line: 1341
+outside_ga:
+  kind: other
+  why: 'the common complexification Cl(p,q) (x) C is the subject; its scalar i (in i omega and e_i -> i e_i) commutes with every vector, which no pseudoscalar does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the common complexification Cl(p,q) (x) C is the subject; its scalar i (in i omega and e_i -> i e_i) commutes with every vector, which no pseudoscalar does.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

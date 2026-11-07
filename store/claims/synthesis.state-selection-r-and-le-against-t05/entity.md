@@ -45,7 +45,14 @@ lineage:
   - singularity.p-univalence
   - singularity.rate-discharge-hypothesis-iii
   - state-selection.rate-discharge-hypothesis-iii
+outside_ga:
+  kind: complex-analysis
+  why: 'i stays in the Killing flow Ad(e^{i t sum omega_k K_k}), the ladder phases and the imaginary-time continuation F(t + i p): the window is the complexification of completed pairs of the hyperbolic atom, with whose radial-plane mode operators I_4 anticommutes, so no pseudoscalar is shown to be its unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the window is built from completed pairs of the hyperbolic atom (Proposition hawking.modular-structure-completed-pair), and on the atom of the spacetime radial plane I_4 anticommutes with the mode operators (conventions, known limit 1), so the store does not show I_4 to be the unit; i stays in the Killing flow, the ladder phases and the continuation F(t + i p) (declared complex-analysis).'
   maintainer_pass_2:
     by: maintainer-2026-10-23
     date: '2026-10-23'

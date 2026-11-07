@@ -131,7 +131,7 @@ def canonical():
 
 def check_canonical_part_is_lambda_m():
     premise("field-theory.second-quantisation")
-    premise("synthesis.positive-null-energy-gives-r-premises")
+    premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
     ok = GA.mat_eq(GA.mat_mul(LB, LB), E8)
     # projectors: Lambda(k) = k gamma_0 / 2 = (1 + B)/2, Lambda(m) = m gamma_0 / 2 = (1 - B)/2
     ok = ok and GA.eq(GA.scal(F(1, 2), m(K, g(0))), GA.scal(F(1, 2), GA.add(GA.sc(1), B)))

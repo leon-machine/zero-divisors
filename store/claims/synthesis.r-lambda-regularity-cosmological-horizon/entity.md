@@ -24,7 +24,14 @@ about:
 lineage:
   derived_from:
   - singularity.r-regularity-fixed-locus
+outside_ga:
+  kind: complex-analysis
+  why: 'i stays in the Killing flow and in the imaginary-time continuation F(t + i p) of the correlation function: the boundary-mode algebra is defined as the plain complexification of Cl(|J|,|J|), its template plane span{e_0, e_W} contains the spacetime vector e_0 (which I_4 and I_6 anticommute with), and the store does not show I_4 to be its unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the boundary-mode algebra of the cosmological horizon is the plain complexification of Cl(|J|,|J|) its template plane span{e_0, e_W} containing a spacetime vector, so the store does not show I_4 to be its unit; i stays in the Killing flow Ad(e^{i t omega_j K_j}) and in the imaginary-time continuation F(t + i p) (declared complex-analysis).'
   maintainer_pass_gtg_l0:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'

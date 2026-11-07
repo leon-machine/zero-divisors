@@ -3,7 +3,7 @@
 Spacetime algebra Cl(1,3), e0^2 = +1, e1^2 = e2^2 = e3^2 = -1; the null plane N through a point with
 generators along k = e0 + e3 and second null vector m = e0 - e3 (k . m = 2); the canonical part on N is
 the image of Lambda(m) = (1 + e0 e3)/2 = m k / 4, which acts on spinors from the left (the stored
-light-ray result). Points of N: x = lambda k + y with y in the span of e1, e2, so for a momentum p,
+result on the canonical part of a spinor on a null plane). Points of N: x = lambda k + y with y in the span of e1, e2, so for a momentum p,
 p . x = lambda (p . k) - p_perp . y (Euclidean dot on the transverse plane).
 The bulk two-point kernels of a free Dirac field of mass m0 (matrix reading, labelled: omega(psi psi^dag) =
 int d^3p/((2 pi)^3 2 p0) (p + m0) e0 e^{-ip.x}, the other ordering with (p - m0) e0 and e^{+ip.x}) restricted
@@ -43,8 +43,7 @@ SHELL = [(F(1), F(0), F(0), F(0)), (F(3, 2), F(1), F(-2), F(0)), (F(1, 5), F(3),
 
 
 def _premises():
-    premise("synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays")
-    premise("synthesis.slot-module-light-ray-arrays-are-weyl-components")
+    premise("synthesis.canonical-part-of-a-spinor-on-a-null-plane")
     premise("synthesis.positive-null-energy-gives-r-premises")
     premise("field-theory.second-quantisation")
 

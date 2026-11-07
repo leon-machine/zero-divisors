@@ -1,7 +1,7 @@
 ---
 id: synthesis.univalence-from-even-stationary-dynamics
 kind: claim
-version: 2
+version: 3
 title: 'Univalence from even stationary dynamics'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -39,7 +43,14 @@ checked_by:
 lineage:
   motivated_by:
   - singularity.p-univalence
+outside_ga:
+  kind: complex-analysis
+  why: 'the boundary modes are realised on a complex Fock space (e_{2k} = i(a_k^* - a_k), e^{i theta N_k}, the modular group rho^{it}); I_4 anticommutes with the atom mode operators (conventions, known limit 1), so it is not their unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boundary modes are realised on a complex Fock space (e_{2k} = i(a_k^* - a_k), e^{i theta N_k}, the modular group rho^{it}); I_4 anticommutes with the atom mode operators (conventions, known limit 1), so it is not their unit.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

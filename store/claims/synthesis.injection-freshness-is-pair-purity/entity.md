@@ -40,6 +40,10 @@ lineage:
   - singularity.rate-models-kinematic-inputs-l-u
   - singularity.eviction-window-thermal-product-radiation-entropy
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the phase e^{i phi} and C^2 are the abstract qubit Hilbert spaces of the window mode and emitted quantum, not built here from GA modes; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -54,6 +58,9 @@ extraction:
     and violates it). At zero weight purity no longer fixes the number-basis form. The rate model
     is described, not assumed, so it enters as lineage. Transport-absent (finite quantum
     information).
+outside_ga:
+  kind: complex-analysis
+  why: 'the pair state psi = c|00> + e^{i phi} s|11> lives in the abstract qubit spaces H_W = H_R = C^2, Hilbert-space structure that the entity does not build from geometric-algebra modes'
 ---
 
 ## formal

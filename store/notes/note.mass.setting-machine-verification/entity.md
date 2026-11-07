@@ -1,7 +1,7 @@
 ---
 id: note.mass.setting-machine-verification
 kind: note
-version: 2
+version: 3
 title: Machine verification
 status: setting
 subject: einstein
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - mass.imported-frozen-point-tractor-connection
 - mass.imported-thomas-operator
@@ -25,7 +29,14 @@ locators:
   number: Setting
   section: Machine verification
   line: 850
+outside_ga:
+  kind: complex-analysis
+  why: 'Part C works on Lambda^2 C^4, the exterior square of twistor space, which is the plain complexification of the conformal vector space; no pseudoscalar of Cl(2,4) commutes with its vectors, so its unit stays i'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex weight -3/2 +- i nu is now -3/2 +- I_4 nu, read in span{1, I_4} (the script''s Gaussian rationals standing for Q(I_4)); the chart on Lambda^2 C^4, the exterior square of twistor space, stays complex: it is the complexified conformal vector space, whose unit must commute with vectors.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -35,7 +46,7 @@ extraction:
 ## formal
 Every computational identity asserted in this paper has been verified in exact arithmetic by the script \texttt{verify\_T11.py} \cite{ButlerVerifyT11}, which imports the series' shared library \texttt{GA.py}: exact rationals and Gaussian rationals, exact rank, rational functions in a formal variable, and exact truncated power series. No floating point is used anywhere; thirty-nine checks, all passing, organised in five parts keyed to statement tags.
 
-\emph{Part A: the dictionary.} The pairing $I \cdot D\sigma$ is formed slot by slot from Facts \claimref{mass.imported-frozen-point-tractor-connection} and \claimref{mass.imported-thomas-operator}, with $\sigma$ and $\Box\sigma$ as formal coordinates, and $m^{2}$ is read off the resulting Klein-Gordon equation: $m^{2} = -w(w+n-1)Q(I)$ on a $144$-point rational grid in $(w, n, J)$, with a separate check that the opposite sign fails at every grid point where $m^{2} \neq 0$; in $n = 4$, $Q(I) = \Lambda/3$, $\rho_{I} = \Lambda/6$ and $m^{2} = -w(w+3)\Lambda/3$ as rational-function identities in a formal $\Lambda$. Corollary \claimref{mass.weight-polynomial-two-series}: the conformally coupled scalar's $m^{2} = 2\Lambda/3$ from the pairing; the massless weights $w = 0$ and $w = 1-n$, and no others among four further test values; the shadow symmetry $m^{2}(w) = m^{2}(1-n-w)$ and the closed form $\tfrac{n(n-2)}{4}Q(I)$ at $w = 1 - n/2$ for four values of $n$; the completed square $-w(w+3) = \tfrac94 - (w+\tfrac32)^{2}$ as a polynomial identity, with $m^{2} \ge 0$ at six real weights inside $[-3,0]$ and $m^{2} < 0$ at six outside; and $w = -\tfrac32 \pm i\nu$ solving the dictionary in exact Gaussian rationals.
+\emph{Part A: the dictionary.} The pairing $I \cdot D\sigma$ is formed slot by slot from Facts \claimref{mass.imported-frozen-point-tractor-connection} and \claimref{mass.imported-thomas-operator}, with $\sigma$ and $\Box\sigma$ as formal coordinates, and $m^{2}$ is read off the resulting Klein-Gordon equation: $m^{2} = -w(w+n-1)Q(I)$ on a $144$-point rational grid in $(w, n, J)$, with a separate check that the opposite sign fails at every grid point where $m^{2} \neq 0$; in $n = 4$, $Q(I) = \Lambda/3$, $\rho_{I} = \Lambda/6$ and $m^{2} = -w(w+3)\Lambda/3$ as rational-function identities in a formal $\Lambda$. Corollary \claimref{mass.weight-polynomial-two-series}: the conformally coupled scalar's $m^{2} = 2\Lambda/3$ from the pairing; the massless weights $w = 0$ and $w = 1-n$, and no others among four further test values; the shadow symmetry $m^{2}(w) = m^{2}(1-n-w)$ and the closed form $\tfrac{n(n-2)}{4}Q(I)$ at $w = 1 - n/2$ for four values of $n$; the completed square $-w(w+3) = \tfrac94 - (w+\tfrac32)^{2}$ as a polynomial identity, with $m^{2} \ge 0$ at six real weights inside $[-3,0]$ and $m^{2} < 0$ at six outside; and $w = -\tfrac32 \pm I_4\nu$ (numbers read in $\mathrm{span}\{1, I_4\}$, the Gaussian rationals standing for $\mathbb{Q}(I_4)$) solving the dictionary in exact Gaussian rationals.
 
 \emph{Part B: the area.} On exact Gaussian-rational spinor instances: a single twistor's momentum is null; $p^{2} = 2|\br{\pi^{1}\pi^{2}}|^{2}$ on all ten pairs with the imaginary part identically zero; aligned spinors give a null composite.
 

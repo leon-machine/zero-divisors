@@ -1,7 +1,7 @@
 ---
 id: standard-model.imported-frozen-point-dictionary
 kind: claim
-version: 7
+version: 8
 title: 'Imported: the frozen point and the dictionary'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -45,6 +49,10 @@ locators:
   label: fact:dictionary
   line: 883
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4} (formal, technical, proof), as in the restated mass.weight-polynomial-two-series; the source record under extraction is left as it was; no bare i remains.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -103,7 +111,7 @@ On the Einstein region with $\Lambda \neq 0$ of a gravitational field $(\hb, \Om
 \[
 m^{2} = -\,w(w+3)\,\frac{\Lambda}{3} = \Delta(3-\Delta)\,H^{2}, \qquad \Delta = -w,
 \]
-so a real weight gives $m^{2} \ge 0$ only on $w \in [-3, 0]$, where $m \le 3H/2$, and every heavier field has complex weight $w = -\tfrac32 \pm i\nu$ with $\nu \approx m/H$. In particular the weight of the Planck mass is complex, and its imaginary part is
+so a real weight gives $m^{2} \ge 0$ only on $w \in [-3, 0]$, where $m \le 3H/2$, and every heavier field has complex weight $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu \approx m/H$. In particular the weight of the Planck mass is complex, and its imaginary part is
 \[
 N := \operatorname{Im} w(M_{P}) \approx M_{P}/H, \qquad\text{about } 1.0 \times 10^{61}.
 \]
@@ -112,7 +120,7 @@ Throughout this paper $N$ means $M_{P}/H$, the number the dictionary attaches to
 ## technical
 For a gravitational field on flat spacetime, on its Einstein region with $\Lambda \neq 0$ the frozen point is the scale tractor $I$ parallel for the tractor gauge field, with $Q(I) = \Lambda/3 = H^{2}$, which in the flat chart of the conformal model is $I_{\Lambda} = n_{\infty} + (\Lambda/6)\,n_{0}$. A density of conformal weight $w$ coupled to the frozen point obeys the Klein-Gordon equation with $m^{2} = -w(w+3)\Lambda/3 = \Delta(3-\Delta)H^{2}$, where $\Delta = -w$.
 
-A real weight gives $m^{2} \ge 0$ only for $w \in [-3,0]$, where $m \le 3H/2$; every heavier field has complex weight $w = -\tfrac32 \pm i\nu$ with $\nu \approx m/H$. For the Planck mass this defines $N := \operatorname{Im} w(M_{P}) \approx M_{P}/H$, about $1.0 \times 10^{61}$, the value being the measured ratio.
+A real weight gives $m^{2} \ge 0$ only for $w \in [-3,0]$, where $m \le 3H/2$; every heavier field has complex weight $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu \approx m/H$. For the Planck mass this defines $N := \operatorname{Im} w(M_{P}) \approx M_{P}/H$, about $1.0 \times 10^{61}$, the value being the measured ratio.
 
 ## lay
 In this framework the mass of a field is read off from how it scales, measured against the frozen point whose length sets the cosmological constant. Only extremely light fields, no heavier than about the present expansion rate of the universe, get an ordinary real scaling number; everything heavier gets a complex one. For the Planck mass the imaginary part is a number of about $10^{61}$, called $N$, which later results treat as the theory's single large number.

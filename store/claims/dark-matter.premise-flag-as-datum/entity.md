@@ -1,7 +1,7 @@
 ---
 id: dark-matter.premise-flag-as-datum
 kind: claim
-version: 1
+version: 2
 title: 'The flag as datum: the sign of the Witt flag is configuration data'
 status: postulate
 region: dark-matter
@@ -17,11 +17,22 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.dark-matter.witt-flag
 - obj.dark-energy.four-ways-number-enters-theory-shape
+outside_ga:
+  kind: other
+  why: 'the flag is the +i eigenspace of a complex structure J on the complexification of R^{2,4}, and the premise compares J with the scalar i of the Fock module; that scalar commutes with the vectors, which no pseudoscalar does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the flag is the +i eigenspace of a complex structure J on the complexification of R^{2,4}, and the premise compares J with the scalar i of the Fock module; that scalar commutes with the vectors, which no pseudoscalar does.'
   env: premise (store-named reading)
   maintainer_pass:
     by: maintainer-2026-10-22

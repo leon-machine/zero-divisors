@@ -59,8 +59,12 @@ lineage:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state
 outside_ga:
   kind: complex-analysis
-  why: 'Tomita-Takesaki modular theory on the Fock space of the generator modes (Hilbert-space structure); the two residual data are then located in Cl(1,3), where the imaginary unit is the transverse bivector I_4 B.'
+  why: 'Tomita-Takesaki modular theory on the Fock space of the generator modes (Hilbert-space structure, antiunitary conjugations, the antilinear Majorana conjugation); i is kept throughout because the result is about which element the imaginary unit is on a generator and its orientation: the conventions give I_4, the argued reading of (iv) gives the transverse bivector J = I_4 B, and writing either would prejudge that reading.'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, left for Leon to rule: the result is about which element the field unit is on a generator and its orientation relative to time; the conventions give I_4 for the continuum mode space, while clause (iv) and Step 4 argue the reading i = J = I_4 B and contrast it with the Klein twist written with i = I_4, so writing either pseudoscalar for i would prejudge that reading; the existing complex-analysis declaration is kept with its reason extended.'
   open_problem: op.r-premises-external
   note: >-
     Adversarial arm on the ground-state clause of (N+) without stationarity, testing the condition of geometric

@@ -42,6 +42,10 @@ about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the C^2 factors of the window''s Fock space carry the Hilbert-space structure of density matrices and purifications, which the store does not state with the unit I_4 here; declared (version and levels unchanged); the |i> are basis labels.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -79,6 +83,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (light; clauses (i)-(iii) have no gravity content): in (iv) the small geodesic ball read at x0 in a gauge with hb(x0) = 1, Omega(x0) = 0 on a flat background of dimension d; flat-space conformal fields named as vanishing gravitational field; the store-convention equation given its GTG form R(a) + 8 pi G T(a) = (Lambda + 4 pi G tr T) a in four dimensions. The d-dimensional tensor balance kept in the clause''s declared signature and convention. Clauses (i)-(iv) unchanged.'
+outside_ga:
+  kind: complex-analysis
+  why: 'the proof works on the window''s Fock space as the tensor product of copies of C^2, a full matrix algebra with density matrices and a GNS purification: Hilbert-space structure that the entity does not build with a pseudoscalar as its unit'
 ---
 
 ## formal

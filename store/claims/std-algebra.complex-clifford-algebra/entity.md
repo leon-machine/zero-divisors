@@ -1,7 +1,7 @@
 ---
 id: std-algebra.complex-clifford-algebra
 kind: claim
-version: 1
+version: 2
 title: The complex Clifford algebra, its classification modulo 2, its Fock model and its pairing
 status: proved
 region: std-algebra
@@ -21,6 +21,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.std-algebra.clifford-algebra
@@ -66,7 +70,14 @@ locators:
     locator: Ch. I, Sections 4 and 5 (complex Clifford algebras and their representations)
   - key: Lounesto2001
     locator: Ch. 18 (scalar products of spinors)
+outside_ga:
+  kind: other
+  why: 'the result is about Clifford algebras of complex quadratic spaces, whose scalar i (in w_j = (e_{2j-1} + i e_{2j})/2, omega_C, e_j -> i e_j e_n) commutes with every vector, which no pseudoscalar does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the result is about Clifford algebras of complex quadratic spaces, whose scalar i (in w_j = (e_{2j-1} + i e_{2j})/2, omega_C, e_j -> i e_j e_n) commutes with every vector, which no pseudoscalar does.'
   open_problem: op.complex-clifford
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: correspondence.fock-model-complexified-ascended-algebra
 kind: claim
-version: 7
+version: 8
 title: "The Fock model of the complexified ascended algebra"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -42,7 +46,14 @@ locators:
   number: Thm 3.1
   label: thm:purespinor
   line: 337
+outside_ga:
+  kind: other
+  why: 'the Fock model is built over V_C, and its complex isotropic vector w_3 = b_3 + i b_4 needs a scalar that commutes with the vectors, which no pseudoscalar of Cl(2,4) does'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the Fock model is built over V_C, and its complex isotropic vector w_3 = b_3 + i b_4 needs a scalar that commutes with the vectors, which no pseudoscalar of Cl(2,4) does.'
   maintainer_pass_2026_10_31:
     by: maintainer-2026-10-31
     date: '2026-10-31'

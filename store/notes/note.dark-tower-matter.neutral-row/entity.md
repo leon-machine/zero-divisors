@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.neutral-row
 kind: note
-version: 1
+version: 2
 title: The neutral row
 status: remark
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - dark-tower-matter.five-dimensional-content
 - dark-tower-matter.gauge-algebras
@@ -23,7 +27,14 @@ locators:
   number: Rem 6.2
   label: lem:neutralrow
   line: 599
+outside_ga:
+  kind: other
+  why: 'the central generator (k i, -i 1_k) of u(1) + u(k) is a complex matrix on the multiplicity spaces C^1 + C^k, whose complex structure the note does not tie to the field theory''s unit I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the central generator (k i, -i 1_k) of u(1) + u(k) is a complex matrix on the multiplicity spaces C^1 + C^k, whose complex structure the note does not tie to the field theory''s unit I_4.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21

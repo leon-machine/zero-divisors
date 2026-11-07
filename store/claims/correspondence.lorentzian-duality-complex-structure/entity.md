@@ -1,7 +1,7 @@
 ---
 id: correspondence.lorentzian-duality-complex-structure
 kind: claim
-version: 3
+version: 4
 title: Lorentzian duality is a complex structure
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -37,7 +41,14 @@ locators:
   number: Lem 6.4
   label: lem:star
   line: 799
+outside_ga:
+  kind: other
+  why: 'the +-i eigenvalues are taken on the complexification of the real space of 2-forms, whose scalar must commute with the Hodge star (on real bivectors, multiplication by I_4 up to sign), so no pseudoscalar can stand for it'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the +-i eigenvalues are taken on the complexification of the real space of 2-forms, whose scalar must commute with the Hodge star (on real bivectors, multiplication by I_4 up to sign), so no pseudoscalar can stand for it.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.tower-charge-sector-label-temperature-not
 kind: claim
-version: 2
+version: 3
 title: 'The tower charge is a sector label; the temperature is not'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -43,7 +47,14 @@ checked_by:
   ref: check.py::check_mode_affinity
 - kind: proof
   derivation: main
+outside_ga:
+  kind: complex-analysis
+  why: 'the charge rotations e^{i theta} act on the boundary-mode CAR algebra over l^2(J), defined over C, with windows End(Lambda C^F); the boundary modes are the atom''s ladder pairs, with whose mode operators I_4 anticommutes (conventions, known limit 1), so it is not their unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the charge rotations e^{i theta} act on the boundary-mode CAR algebra over l^2(J), defined over C, with windows End(Lambda C^F); the boundary modes are the atom''s ladder pairs, with whose mode operators I_4 anticommutes (conventions, known limit 1), so it is not their unit.'
   maintainer_pass:
     by: maintainer-2026-10-22
     date: '2026-10-22'

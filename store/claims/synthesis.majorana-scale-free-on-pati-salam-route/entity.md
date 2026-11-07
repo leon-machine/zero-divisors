@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-free-on-pati-salam-route
 kind: claim
-version: 3
+version: 4
 title: 'The Majorana scale is free on the Pati-Salam route'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: strengthened check and wording
   version: 3
   source: maintainer pass of 7 November 2026
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -54,6 +58,10 @@ lineage:
   - neutrino.m-framework-realises-majorana-term-scale
   - standard-model.what-angle-asks-neutrino-sector
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complex test values of the scale lambda in the proof are written with I_4: {7/3, 2 + I_4, -1/5 + 3 I_4/4} (numbers, and C, read in span{1, I_4}); nothing stays.'
   maintainer_pass_warnings:
     by: maintainer-2026-11-07
     date: '2026-11-07'

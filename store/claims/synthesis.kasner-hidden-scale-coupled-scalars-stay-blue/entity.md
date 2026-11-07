@@ -53,6 +53,10 @@ lineage:
   - standard-model.dating-descent
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the plane-wave modes, the canonical normalisation i and the Hankel Wronskian are complex analysis of scalar and Bessel functions sharing one unit; the axis label i is an index; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes the scalar part of what the stored Kasner result lists as not covered: fields coupled to the
@@ -91,6 +95,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2: the Bessel reduction and small-argument Hankel forms, the Kaluza-Klein ansatz and the statistical isotropy of the record, cited from memory in version 1, now cite the imported Facts (uses edges added, claimrefs in the proof); the Planck parameters pin moved to version 2 (baryon and dark matter densities added there, not used here); the five-dimensional stiff Kasner relations stay a flagged citation; the pin to synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise moved to its version 2 (a pointer note added there). No clause changed.'
+outside_ga:
+  kind: complex-analysis
+  why: 'the scalar modes e^{ikx}, their canonical normalisation tau^alpha(phi phi-dot* - phi* phi-dot) = i and the Hankel Wronskian W = -4i/(pi s) are one complex analysis of scalar mode functions and Bessel functions, sharing one unit'
 ---
 
 ## formal

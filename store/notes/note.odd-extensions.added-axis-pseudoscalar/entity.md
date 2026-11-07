@@ -1,7 +1,7 @@
 ---
 id: note.odd-extensions.added-axis-pseudoscalar
 kind: note
-version: 1
+version: 2
 title: the added axis is the pseudoscalar
 status: remark
 subject: tower
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - odd-extensions.four-extensions-oriented-pair
 locators:
@@ -22,7 +26,14 @@ locators:
   number: Rem 2.5
   label: rem:pseudo
   line: 475
+outside_ga:
+  kind: bridge
+  why: 'the note names the fifth generator of the complexified case in the physicists'' notation, i gamma_5, beside its geometric-algebra form +-omega omega''^{-1}'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): the note names the fifth generator of the complexified case in the physicists'' notation, i gamma_5, beside its geometric-algebra form +-omega omega''^{-1}.'
   i4_conversion:
     by: ai-i4-pass
     date: '2026-10-21'

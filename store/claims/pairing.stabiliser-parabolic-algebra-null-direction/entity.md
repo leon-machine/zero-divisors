@@ -1,7 +1,7 @@
 ---
 id: pairing.stabiliser-parabolic-algebra-null-direction
 kind: claim
-version: 4
+version: 5
 title: The stabiliser is the parabolic algebra of the null direction
 status: proved
 region: pairing
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -41,7 +45,14 @@ locators:
   number: Prop 3.1
   label: prop:stabiliser
   line: 239
+outside_ga:
+  kind: other
+  why: 'the values +-i and 2i are values of a complex functional on so(4,C) built on the complex null tetrad m = e_2 + i e_3 in C^4, where i stands next to a spacetime vector and no pseudoscalar can replace it'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the values +-i and 2i are values of a complex functional on so(4,C) built on the complex null tetrad m = e_2 + i e_3 in C^4, where i stands next to a spacetime vector and no pseudoscalar can replace it.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

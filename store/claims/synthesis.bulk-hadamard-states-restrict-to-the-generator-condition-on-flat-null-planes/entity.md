@@ -1,7 +1,7 @@
 ---
 id: synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 kind: claim
-version: 3
+version: 4
 title: 'Flat-field Hadamard states meet the generator condition on null planes'
 status: proved
 region: synthesis
@@ -17,15 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: premises repointed to synthesis.canonical-part-of-a-spinor-on-a-null-plane (the algebra it cites), in place of the light-ray and slot-module results; notation declaration
+  version: 4
+  source: maintainer pass 2026-11-07
 review: draft
+outside_ga:
+  kind: complex-analysis
+  why: 'i stays in the scalar Fourier analysis: the plane-wave phases of the standard bulk vacuum kernels (stated in their matrix reading), the Fourier integrals, and the boundary-value distribution W_0 = (i/2 pi)(u - v + i0)^(-1) of the stored null vacuum, whose i0 is a contour prescription'
 about:
 - obj.hawking.continuum-mode-space
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@2
-  - synthesis.slot-module-light-ray-arrays-are-weyl-components@1
+  - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
   - synthesis.positive-null-energy-gives-r-premises@4
   - field-theory.second-quantisation@5
   - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@4
@@ -83,6 +89,10 @@ extraction:
   flags:
   - 'flat field only: the plane is a local Rindler horizon of hb = 1, Omega = 0; on a field with nonzero field strength the restriction of the Hadamard parametrix to a null surface is not computed'
   - 'transverse profiles of compact support: the K-components are taken for compactly supported transverse profiles'
+  maintainer_pass_clause_split:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4, at Leon''s decision of 7 November 2026: the result cited the light-ray result and the slot-module result only for the algebra of the canonical part on a null plane (the projector Lambda(m) = (1 + e0 e3)/2 = m k/4, the flux identity, the two-channel image, and that mass terms reach only the constraint), which is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane; the two uses edges are replaced by one to it, and the claimrefs and the check''s premise calls follow. So this result no longer inherits Premise (Q), the slot-module hypothesis or the dark-matter counting premises. Statement, proof argument and checks otherwise unchanged; no assumes edge added or removed. Notation: the bare i of the scalar Fourier analysis and of the null-vacuum kernel W_0 stays (declared under outside_ga, complex-analysis), as in the stored null vacuum.'
   maintainer_pass_hs_bound:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -90,7 +100,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On the flat gravitational field ($\hb = 1$, $\Omega = 0$; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) let $N = \{x_{0} + \lambda k + y\}$ be a null plane with generators along $k = e_{0} + e_{3}$, $y$ in the span of $e_{1}, e_{2}$, $m = e_{0} - e_{3}$, and $\Lambda(m) = \tfrac12(1 + e_{0}e_{3})$ the projector onto the canonical part on $N$ (Theorem \claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}), with two-channel image $V_{\Lambda}$. For the free Dirac field of mass $m_{0} \ge 0$ (Proposition \claimref{field-theory.second-quantisation}) put $\psi_{N}(\lambda, y) = \sqrt{2}\,\Lambda(m)\psi(x_{0} + \lambda k + y)$ and $K = L^{2}(\R^{2}, d^{2}y)\otimes V_{\Lambda}$.
+Units $\hbar = c = 1$. On the flat gravitational field ($\hb = 1$, $\Omega = 0$; Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) let $N = \{x_{0} + \lambda k + y\}$ be a null plane with generators along $k = e_{0} + e_{3}$, $y$ in the span of $e_{1}, e_{2}$, $m = e_{0} - e_{3}$, and $\Lambda(m) = \tfrac12(1 + e_{0}e_{3})$ the projector onto the canonical part on $N$ (Theorem \claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}), with two-channel image $V_{\Lambda}$. For the free Dirac field of mass $m_{0} \ge 0$ (Proposition \claimref{field-theory.second-quantisation}) put $\psi_{N}(\lambda, y) = \sqrt{2}\,\Lambda(m)\psi(x_{0} + \lambda k + y)$ and $K = L^{2}(\R^{2}, d^{2}y)\otimes V_{\Lambda}$.
 \begin{enumerate}
 \item[(i)] \emph{(The plane carries the generator CAR; computed.)} $\{\psi_{N}(\lambda, y), \psi_{N}^{*}(\lambda', y')\} = \delta(\lambda - \lambda')\,\delta^{2}(y - y')\,\Lambda(m)$: the continuum mode space $\CAR(L^{2}(\R, d\lambda)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, with $u = \lambda$ an affine parameter on each generator.
 \item[(ii)] \emph{(Every vacuum restricts to the null vacuum; computed exactly.)} $\Lambda(m)(p \pm m_{0})e_{0}\Lambda(m) = \ip{p}{k}\Lambda(m)$ for every vector $p$ and mass $m_{0}$, the positive-energy shell has $\ip{p}{k} > 0$, and in the variables $(\ip{p}{k}, p_{\perp})$ the compressed shell density is $\tfrac12$ for every $m_{0}$ and $p_{\perp}$. Hence for every $m_{0} \ge 0$ the bulk vacuum restricts (the restriction defined by this momentum-space computation with transverse smearing, not as a pullback of distributions, since the wave-front set of the vacuum kernel meets the conormal of $N\times N$ along the generators) to $\omega_{m_{0}}(\psi_{N}^{*}(v)\psi_{N}(u)) = W_{0}(u, v)\otimes\id_{K}$, $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}$: the null vacuum $\omega_{0}$ of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i) on every generator, in every affine parameter.

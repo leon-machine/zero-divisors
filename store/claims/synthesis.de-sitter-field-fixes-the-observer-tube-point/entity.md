@@ -60,6 +60,10 @@ lineage:
   - synthesis.wick-rotated-boost-selects-observer-tube-point
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the tube points and of the complexified Stelle-West vector belongs to the complexification of the vectors (forward tube), whose unit must commute with them; declared (version and levels unchanged).'
   open_problem: op.which-capacity
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -89,6 +93,9 @@ extraction:
     content is standard de Sitter static-patch geometry (Gibbons-Hawking); what is new to the store is
     its form on the compatible tube points of the twistor-form polarisation and the identification of the
     three candidates. Tolman's relation is cited from memory and used only in the reading.
+outside_ga:
+  kind: complex-analysis
+  why: 'the tube points m = x_perp + i rho u, V(m) = i ell u and the complexified null vector X(m) = alpha + i beta with its real and imaginary parts live in the complexification of the conformal vectors, whose unit must commute with the vectors; no pseudoscalar of Cl(2,4) does'
 ---
 
 ## formal

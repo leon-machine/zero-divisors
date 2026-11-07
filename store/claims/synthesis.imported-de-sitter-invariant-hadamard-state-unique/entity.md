@@ -27,6 +27,10 @@ imported_from:
 - citation: 'R. Brunetti, K. Fredenhagen and S. Hollands, A remark on alpha vacua for quantum field theories on de Sitter space, J. High Energy Phys. 2005, no. 05, 063; arXiv:hep-th/0503022.'
   key: BrunettiFredenhagenHollands2005
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Hankel expansion is quoted from the literature in complex-analysis form; declared (version and levels unchanged).'
   note: >-
     Imported so that synthesis.frozen-point-geometry-reads-descent-as-vacuum can cite the
     uniqueness of the stabiliser-invariant Hadamard state and the non-Hadamard character of the
@@ -48,6 +52,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 1 -> 2, at Leon''s decisions of 2026-11-01 (deposit state): a marked note after the formal statement records that the massless minimally coupled Bunch-Davies state is infrared-divergent on slice fields of nonzero mean (synthesis.imported-ford-parker-infrared-divergence); the massive statement and the index-2 conclusion that uses it are unaffected. Content otherwise unchanged.'
+outside_ga:
+  kind: imported
+  why: 'the large-argument Hankel expansion H_nu(z) ~ sqrt(2/pi z) e^{i(z - nu pi/2 - pi/4)}(1 + i(4 nu^2 - 1)/8z + ...) is quoted as the source states it, complex analysis of Bessel functions'
 ---
 
 ## formal

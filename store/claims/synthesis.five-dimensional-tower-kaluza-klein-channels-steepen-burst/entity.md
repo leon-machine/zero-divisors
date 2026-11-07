@@ -1,7 +1,7 @@
 ---
 id: synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
 kind: claim
-version: 1
+version: 2
 title: 'Kaluza-Klein channels of a five-dimensional tower steepen the burst'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -41,6 +45,10 @@ lineage:
   - pred.dimmed-evaporation-bursts
   - dark-matter.thickness-not-gravitational-quantity
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The two Kaluza-Klein phases along e_5 in the proof, e^{i mu y} and e^{2 pi i k y/L_f}, are written with the field theory''s unit I_4 acting on the right (exact for fields of any grade); no bare i remains.'
   open_problem: op.odd-towers
   note: >-
     Supplies the five-dimensional towers' part of the emission coefficient o that op.odd-towers asks

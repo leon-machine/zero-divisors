@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-conformal-energy-gives-positive-null-translations
 kind: claim
-version: 5
+version: 6
 title: 'Positive conformal energy gives positive null translations'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 6
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -41,7 +45,14 @@ lineage:
   - field-theory.twistor-attachment
   - synthesis.c-loc-local-horizon-premise
   - synthesis.point-spectrum-boost-admits-no-half-sided-translations
+outside_ga:
+  kind: complex-analysis
+  why: 'the hypothesis is an arbitrary continuous unitary representation of Spin+(2,4) on a GNS Hilbert space, and -i d pi(Y) is its self-adjoint generator; the store does not tie that space''s complex structure to I_4'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the hypothesis is an arbitrary continuous unitary representation of Spin+(2,4) on a GNS Hilbert space, and -i d pi(Y) is its self-adjoint generator; the store does not tie that space''s complex structure to I_4.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

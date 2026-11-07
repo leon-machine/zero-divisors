@@ -26,6 +26,10 @@ lineage:
   - synthesis.wick-rotated-boost-selects-observer-tube-point
   - synthesis.imported-de-sitter-invariant-hadamard-state-unique
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the tube point m = x_perp + i rho u belongs to the complexified spacetime (forward tube), whose unit must commute with the vectors; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -36,6 +40,9 @@ extraction:
       its reach, one-horizon fields only) and a refutation condition stated. It fixes rho^2 = 12/Lambda for
       Lambda > 0 and leaves rho free for Lambda <= 0. An assumes edge from the de Sitter tube-point result is
       added with it.
+outside_ga:
+  kind: complex-analysis
+  why: 'the tube point m = x_perp + i rho u, on which the symmetries act complex-linearly, lies in the complexification of the spacetime vectors, whose unit must commute with the vectors; no pseudoscalar of Cl(2,4) does'
 ---
 
 ## formal

@@ -45,6 +45,10 @@ locators:
   label: prop:stabtangent
   line: 2470
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the C of so(2 nu) + C and Spin(2 nu, C) and the i of the Majorana basis are the scalar unit of the atom built in the plane e0e1, where I_4 anticommutes with the modes (the entity''s unit_note, conventions known limit 1); declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -81,6 +85,9 @@ extraction:
     sigma = e0 e1, where the field theory''s unit I4 anticommutes with the mode operators, so the convention
     i = I4 (which needs a plane orthogonal to spacetime) does not apply. Recorded 21 October 2026; see
     store/conventions.md, known limit 1.'
+outside_ga:
+  kind: other
+  why: 'the complex Fock space of the singularity paper''s atom (so(2 nu) + C, Spin(2 nu, C), the Majorana basis gamma_{2i} = i(v_i - v_i^*)) keeps a scalar i: the atom is built in the spacetime radial plane e0e1, where I_4 anticommutes with the mode operators (conventions, known limit 1)'
 ---
 
 ## formal

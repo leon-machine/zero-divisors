@@ -1,7 +1,7 @@
 ---
 id: synthesis.s-wave-array-is-a-boundary-mode-set
 kind: claim
-version: 3
+version: 4
 title: 'The s-wave array is a boundary-mode set'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -43,6 +47,10 @@ lineage:
   motivated_by:
   - note.hawking.setting-mode-continuum
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The boost phases on the boundary-mode array are written in the field unit I_4 (the unit of the boundary-mode algebra); nothing stays (v_i, w_j, delta_{ij} are indices).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -55,7 +63,7 @@ extraction:
 Let $\{\psi_k, \psi_k^{\dagger}\}_{k \in \mathbb{Z}}$ be the s-wave array of boundary modes of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector}, with boost weights $\omega_k = \kappa k$ and the sea filled below the level, and let $\beta = 2\pi/\kappa$.
 \begin{enumerate}
 \item[(i)] \emph{(The tower is the model, not the count.)} The adjoined null pairs of the tower satisfy the CAR exactly at the level of vectors (Fact \claimref{tower.ladder-pairs-satisfy-car-vectors}), so $n$ rungs realise a window algebra of $n$ modes and the tower limit is the CAR algebra over a countable set (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}). On the physical closure one ascent completes the description, further rungs lying on shadow walls outside the physical region (Corollary \claimref{tower.answers-iteration-question}(1)); so the physical boundary modes are not counted by rungs, and the tower supplies the form of their algebra only.
-\item[(ii)] \emph{(Particle-hole conjugation makes the array a mode set.)} Put $b_k := \psi_k^{\dagger}$ for $k < 0$ and $b_k := \psi_k$ for $k \geq 0$. The $b_k$ satisfy the CAR, the boost dynamics acts as $b_k \mapsto e^{-i\kappa|k|t}b_k$, and on every finite window $\sum_k \kappa k\,N_k = \sum_k \kappa|k|\,N'_k + \sum_{k<0}\kappa k$ with $N'_k = b_k^{\dagger}b_k$, so the Gibbs state of the one is the Gibbs state of the other. Each frequency $\kappa m$, $m \geq 1$, occurs exactly twice (a particle at $k = m$, a hole at $k = -m$), and the frequency $0$ once, at $k = 0$. The Fermi-Dirac marginals $n_k = (e^{\beta\kappa k} + 1)^{-1}$ of the bosonisation theorem become $\langle N'_k\rangle = (e^{\beta\kappa|k|} + 1)^{-1}$ for $k \neq 0$.
+\item[(ii)] \emph{(Particle-hole conjugation makes the array a mode set.)} Put $b_k := \psi_k^{\dagger}$ for $k < 0$ and $b_k := \psi_k$ for $k \geq 0$. The $b_k$ satisfy the CAR, the boost dynamics acts as $b_k \mapsto e^{-I_{4}\kappa|k|t}b_k$ (the unit of the mode space is $I_{4}$), and on every finite window $\sum_k \kappa k\,N_k = \sum_k \kappa|k|\,N'_k + \sum_{k<0}\kappa k$ with $N'_k = b_k^{\dagger}b_k$, so the Gibbs state of the one is the Gibbs state of the other. Each frequency $\kappa m$, $m \geq 1$, occurs exactly twice (a particle at $k = m$, a hole at $k = -m$), and the frequency $0$ once, at $k = 0$. The Fermi-Dirac marginals $n_k = (e^{\beta\kappa k} + 1)^{-1}$ of the bosonisation theorem become $\langle N'_k\rangle = (e^{\beta\kappa|k|} + 1)^{-1}$ for $k \neq 0$.
 \item[(iii)] \emph{(The zero mode is in its trace state.)} On one mode of frequency $\omega \geq 0$ the KMS relation at $\beta$ is $n = e^{-\beta\omega}(1 - n)$, whose unique solution is the Fermi-Dirac value; at $\omega = 0$ it is $n = \tfrac12$, the trace.
 \end{enumerate}
 Consequently the definition of the boundary-mode algebra (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}) applies with $J = \mathbb{Z}\setminus\{0\}$ and $\omega_j = \kappa|j|$, with one provenance, the ladder pairs of the blown-up singular boundary aggregated over s-wave channels, and the tower as model. Under (Q), the state of the array with these marginals, quasi-free on $J$, is the I-state of Theorem \claimref{hawking.i-state} on that mode set, and the excluded zero mode carries the trace, so the extension to the full array has no free parameter.

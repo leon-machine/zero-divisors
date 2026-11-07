@@ -22,6 +22,14 @@ locators:
   number: Setting
   section: Setting, and what is imported
   line: 170
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the null tetrad m = e_2 + i e_3, of C^4 and of e_3 = -i(a_2 + a_2^dagger) stands next to spacetime vectors (no pseudoscalar commutes with them), so it stays and is declared (version and levels unchanged).'
+outside_ga:
+  kind: other
+  why: 'the complex null tetrad m, mb = e_2 +- i e_3, the complexification C^4 of the vectors and the Majorana reading e_3 = -i(a_2 + a_2^dagger) keep i: it stands next to spacetime vectors, and no pseudoscalar commutes with them'
 ---
 
 ## formal

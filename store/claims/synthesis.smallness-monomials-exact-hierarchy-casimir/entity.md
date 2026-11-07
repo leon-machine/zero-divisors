@@ -1,7 +1,7 @@
 ---
 id: synthesis.smallness-monomials-exact-hierarchy-casimir
 kind: claim
-version: 2
+version: 3
 title: 'The smallness problems as exact monomials in $N$'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -34,6 +38,10 @@ lineage:
   motivated_by:
   - standard-model.one-number-explain
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4} (formal and proof); Im w is its I_4 part; no bare i remains.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -47,7 +55,7 @@ Let $\Lambda = 3H^{2} > 0$, in units $\hbar = c = 1$ with $G = M_{P}^{-2}$, let 
 \begin{enumerate}
 \item[(i)] \emph{(The two gravitational entries.)} Exactly, $G\Lambda = 3N^{-2}$ and $G\,Q(I_{\Lambda}) = (H/M_{P})^{2} = N^{-2}$.
 \item[(ii)] \emph{(The hierarchy entry, exactly.)} For every mass, $c(w(m)) = (m/M_{P})^{2}\,N^{2}$: the exact monomial is the Casimir of the weight, not its imaginary part.
-\item[(iii)] \emph{(The imaginary part, asymptotically.)} For $m > 3H/2$ the weights are $w = -\tfrac32 \pm i\nu$ with $\nu^{2} = (m/M_{P})^{2}N^{2} - \tfrac94$, and with $x = m/H = (m/M_{P})N$,
+\item[(iii)] \emph{(The imaginary part, asymptotically.)} For $m > 3H/2$ the weights are $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) with $\nu^{2} = (m/M_{P})^{2}N^{2} - \tfrac94$, and with $x = m/H = (m/M_{P})N$,
 \[
 \frac{9}{8x} \;\le\; x - \nu \;\le\; \frac{9}{4x}, \qquad 0 < 1 - \frac{\operatorname{Im} w}{(m/M_{P})N} \le \frac{9H^{2}}{4m^{2}},
 \]

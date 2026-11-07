@@ -1,7 +1,7 @@
 ---
 id: synthesis.plane-grading-records-residue-sign
 kind: claim
-version: 1
+version: 2
 title: 'The plane grading records the sign of the residue'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -46,7 +50,14 @@ lineage:
   - synthesis.tower-top-pair-forgets-reversal
 about:
 - obj.tower.tower
+outside_ga:
+  kind: other
+  why: 'clauses (iv) and (v) work in the complexified floors: the phase flow Ad(exp(it sum omega_j K_j)) and the map x_i -> i y_i need a scalar commuting with every ground and plane generator, which no pseudoscalar of the tower is'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): clauses (iv) and (v) work in the complexified floors: the phase flow Ad(exp(it sum omega_j K_j)) and the map x_i -> i y_i need a scalar commuting with every ground and plane generator, which no pseudoscalar of the tower is.'
   open_problem: op.mirror-reversal-at-tower-top
   note: Locates the sign of the residue at the tower top in a datum smaller than the grading of the whole limit, namely the grading of the plane algebra alone, which the framing by the individual planes supplies and which any phase clock with no zero mode enforces; over the complex numbers none of these records it.
 ---

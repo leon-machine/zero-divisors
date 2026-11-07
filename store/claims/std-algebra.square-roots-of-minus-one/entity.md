@@ -1,7 +1,7 @@
 ---
 id: std-algebra.square-roots-of-minus-one
 kind: claim
-version: 1
+version: 2
 title: Square roots of -1
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 trust: ai-proposed
 about:
@@ -43,7 +47,14 @@ locators:
   sources:
   - key: HitzerAblamowiczSangwine2013
     locator: the classification of square roots of -1
+outside_ga:
+  kind: other
+  why: 'the classification is over the abstract matrix algebras Mat_m(C) and Mat_m(H): the eigenvalues +-i and the quaternion unit (through R_i) are scalars of those algebras, not elements of a Clifford algebra standing for a pseudoscalar'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the classification is over the abstract matrix algebras Mat_m(C) and Mat_m(H): the eigenvalues +-i and the quaternion unit (through R_i) are scalars of those algebras, not elements of a Clifford algebra standing for a pseudoscalar.'
   referee_fixes: '2026-10-26: D = H case: f is left (not right) multiplication by -i on coordinates (referee part 2, point 2).'
   by: algebra-core-2026-10-26
 ---

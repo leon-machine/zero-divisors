@@ -1,7 +1,7 @@
 ---
 id: singularity.schmidt-forcing-proved-outright
 kind: claim
-version: 4
+version: 5
 title: Schmidt forcing, proved outright
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -37,7 +41,14 @@ locators:
   number: Lem 7.2
   label: lem:schmidt
   line: 1713
+outside_ga:
+  kind: complex-analysis
+  why: 'the boost acts on the doubled mode C^2 (x) C^2 by the unitary group e^{itG} in the cyclic-and-separating setting of modular theory; these are atom modes, with which I_4 anticommutes, so I_4 is not their unit'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the boost acts on the doubled mode C^2 (x) C^2 by the unitary group e^{itG} in the cyclic-and-separating setting of modular theory; these are atom modes, with which I_4 anticommutes, so I_4 is not their unit.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

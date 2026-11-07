@@ -1,7 +1,7 @@
 ---
 id: synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation
 kind: claim
-version: 2
+version: 3
 title: 'CPT conjugation as the pseudoscalar rotor times complex conjugation'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.dark-matter.witt-flag
@@ -50,7 +54,14 @@ lineage:
   motivated_by:
   - dark-matter.premise-cpt-covariance
   - dark-matter.orientation-arrow-seventeenth-refutation
+outside_ga:
+  kind: other
+  why: 'the result is about complex conjugation kappa on Cl(2,4) (x) C and the Witt flag in C^6 spanned by e_{2k-2} - i e_{2k-1}; that i must commute with every vector, and I_6 psi_W = +-i psi_W compares I_6 with it'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the result is about complex conjugation kappa on Cl(2,4) (x) C and the Witt flag in C^6 spanned by e_{2k-2} - i e_{2k-1}; that i must commute with every vector, and I_6 psi_W = +-i psi_W compares I_6 with it.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

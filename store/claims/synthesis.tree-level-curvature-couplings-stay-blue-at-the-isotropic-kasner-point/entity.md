@@ -1,7 +1,7 @@
 ---
 id: synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
 kind: claim
-version: 2
+version: 3
 title: 'Tree-level curvature couplings stay blue at the isotropic Kasner point'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -53,6 +57,10 @@ lineage:
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu, and the coupling it gives, 1/4 -+ i nu/6, as 1/4 -+ I_4 nu/6, numbers read in span{1, I_4} (formal and proof); no bare i remains.'
   open_problem: op.descent-state-and-spectrum
   maintainer_pass:
     by: maintainer-2026-11-01
@@ -96,7 +104,7 @@ extraction:
 Assume hypothesis (P1): before the descent a gravitational field on flat spacetime approaches a wall with the synchronous diagonal derived metric $dT^{2} - \sum_{a}T^{2P_{a}}(dx^{a})^{2}$, $\sum_{a}P_{a} = 1$, as in Theorem \claimref{synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling}. Write a scalar's tree-level field equation as $(\Box + \xi R + \mu)\sigma = 0$ in the sign of the dictionary (de Sitter has $R = 4\Lambda > 0$; $\xi = \tfrac16$ is conformal). Let $D$ be the Thomas operator of Fact \claimref{mass.imported-thomas-operator} on a density of weight $w$ in dimension $n$, $J = R/(2(n - 1))$, and $I = \nInf + \rho\,\nO$ a tractor in the physical scale with $\rho$ independent of $J$.
 \begin{enumerate}
 \item[(i)] \emph{(The dictionary off the Einstein region.)} $I \cdot D\sigma = 0$ reads $(\Box + m^{2})\sigma = 0$ with $m^{2} = -wJ - \rho w(n + 2w - 2)$. Hence, in $n = 4$: with the frozen point in its stored form, $\rho = \Lambda/6$ (Theorem \claimref{synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise}), $\xi = -w/6$ and $\mu = -w(w + 1)\Lambda/3$ (first reading); with the derived metric's own scale tractor, $\rho = J/4$, $\xi = -w(w + 3)/12$ and $\mu = 0$ (second reading, not the frozen point off the Einstein region); with the Thomas operator of the connection whose special-conformal slot is $\rho\,\mathrm{id}$, $J \to 4\rho$, $\xi = 0$ and $\mu = -w(w + 3)\Lambda/3$ (third reading). On Einstein regions ($R = 4\Lambda$) the three agree with Theorem \claimref{mass.mass-weight-dictionary}; off them they differ. In every dimension the conformal weight $w = 1 - n/2$ gives the Yamabe value $\xi = (n - 2)/(4(n - 1))$ in the first two, with $\mu = 0$ in the first.
-\item[(ii)] \emph{(Values.)} On the real weights of the unitary range $w \in [-3, 0]$ (Corollary \claimref{mass.weight-polynomial-two-series}) the first reading gives $\xi \in [0, \tfrac12]$, the second $\xi \in [0, \tfrac{3}{16}]$, the third $0$. On the principal series $w = -\tfrac32 \pm i\nu$ the first gives $\xi = \tfrac14 \mp i\nu/6$, not real for $\nu \neq 0$, while the dictionary stays real on Einstein regions. The stored actions give $\xi = 0$ at tree level: the minimal coupling of Fact \claimref{synthesis.imported-einstein-cartan-matter-coupling}, the rung field's D-term action of Theorem \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}, the wall's massless scalar of Theorem \claimref{synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall}, and the Wilson-line component $A_{y}$ of Theorem \claimref{synthesis.kasner-hidden-scale-coupled-scalars-stay-blue}, whose stored action has no curvature term (a local $A_{y}^{2}R$ is not gauge invariant; a periodic $R\,V(W)$ of the holonomy $W$ is gauge invariant and not fixed by the store).
+\item[(ii)] \emph{(Values.)} On the real weights of the unitary range $w \in [-3, 0]$ (Corollary \claimref{mass.weight-polynomial-two-series}) the first reading gives $\xi \in [0, \tfrac12]$, the second $\xi \in [0, \tfrac{3}{16}]$, the third $0$. On the principal series $w = -\tfrac32 \pm I_4\nu$ (numbers are read in $\mathrm{span}\{1, I_4\}$) the first gives $\xi = \tfrac14 \mp I_4\nu/6$, not real for $\nu \neq 0$, while the dictionary stays real on Einstein regions. The stored actions give $\xi = 0$ at tree level: the minimal coupling of Fact \claimref{synthesis.imported-einstein-cartan-matter-coupling}, the rung field's D-term action of Theorem \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}, the wall's massless scalar of Theorem \claimref{synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall}, and the Wilson-line component $A_{y}$ of Theorem \claimref{synthesis.kasner-hidden-scale-coupled-scalars-stay-blue}, whose stored action has no curvature term (a local $A_{y}^{2}R$ is not gauge invariant; a periodic $R\,V(W)$ of the holonomy $W$ is gauge invariant and not fixed by the store).
 \item[(iii)] \emph{(Where a coupling acts.)} $R = 0$ on the four-dimensional vacuum circle (the Schwarzschild interior of Lemma \claimref{interior.kasner-form-interior} and the points of Theorem \claimref{synthesis.bkl-bounce-invariant-holonomy-and-bound}), $R_{5} = 0$ at the five-dimensional vacuum ends $(0, 0, 0, 1)$ and $(\tfrac12, \tfrac12, \tfrac12, -\tfrac12)$, and the induced four-dimensional metrics there have $R = 0$. At the isotropic disk point $(\tfrac13, \tfrac13, \tfrac13)$, the Einstein-frame reduction of both ends, $RT^{2} = -\tfrac23$, of the sign opposite to de Sitter. So among the Kasner points the store fixes, a curvature coupling acts only there (every disk point with $c^{2} \neq 0$ has $R \neq 0$, but no stored result fixes the anisotropic ones).
 \item[(iv)] \emph{(Confrontation.)} At the isotropic point a scalar with no hidden-scale weight in the Einstein frame has Bessel order $\nu^{2} = \tfrac32\xi$ and index $3 - 2\nu$. A scalar whose four-dimensional action carries $b^{\lambda}$ has Einstein-frame weight $b^{\lambda - 1}$, and with the curvature term carrying the same power of $b$, $\nu^{2} = \tfrac14(\lambda - 1)^{2} + \tfrac32\xi$. Every real tree-level coupling in (ii) is at most $\tfrac12$, so the index is at least $3 - \sqrt{3}$ for $\lambda = 1$ and at least $3 - \sqrt{7}$, which is positive, for the stored weights $|\lambda - 1| \le 2$. The measured $n_{s} - 1 = -0.0351 \pm 0.0042$ (Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}) needs, within three standard deviations and with $\lambda = 1$, $\xi \in [1.522584375, 1.548079215]$, which contains no listed value.
 \item[(v)] \emph{(The window read back.)} In the first reading the window needs a real weight $w = -6\xi \in [-9.28847529, -9.13550625]$, where $-w(w + 3) < 0$: outside both series of Fact \claimref{mass.imported-unitary-representations-de-sitter-group}. The third cannot reach it. The second reaches it only on the principal series with $m^{2}/H^{2} = 12\xi$ between $18.27$ and $18.58$, a scalar mass that no stored field has.

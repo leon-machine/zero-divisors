@@ -53,6 +53,10 @@ lineage:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the Hankel Wronskian -4i/(pi s) is complex analysis of Bessel functions; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes the part the stored Kasner result left out for two families: the gravitational field's off-diagonal
@@ -79,6 +83,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2: the Kaluza-Klein ansatz, the small-argument Hankel forms and the statistical isotropy of the record, cited from memory in version 1, now cite the imported Facts (uses edges added, claimrefs in the proof); the Planck parameters pin moved to version 2 (baryon and dark matter densities added there, not used here); the five-dimensional stiff wall stays a flagged citation. No clause changed.'
+outside_ga:
+  kind: complex-analysis
+  why: 'the normalisation of the scalar modes uses the Hankel Wronskian W[H^(1), H^(2)](s) = -4i/(pi s): complex analysis of Bessel functions, whose unit is the one of the mode functions themselves'
 ---
 
 ## formal

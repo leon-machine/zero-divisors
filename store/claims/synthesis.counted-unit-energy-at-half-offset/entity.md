@@ -47,6 +47,10 @@ lineage:
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.half-integer-weight-array-carries-half-ln2
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the modular parameter tau = i beta kappa/2 pi, of the self-dual point tau = i and of the theta-function argument is complex analysis of modular forms; declared (version and levels unchanged).'
   open_problem: op.counted-mode-energy
   note: >-
     The problem's second line of attack: the energy of the counted units at the weights of (Q) version 3, which the
@@ -60,6 +64,9 @@ extraction:
     10^-57 of 1/24 for the array energy in units of kappa, and of (1/2) ln 2 - pi/12 for ln Z above the sea).
     The premise (Q) version 3 (singularity.q-joint-quasi-freeness-s-wave) is cited in the text and enters through
     the half-offset theorem's cone; with a direct assumes edge to it.
+outside_ga:
+  kind: complex-analysis
+  why: 'the modular parameter tau = i beta kappa/2 pi of the array''s torus, its self-dual point tau = i and the theta-function argument i y/2 pi keep i: they are complex analysis of modular forms'
 ---
 
 ## formal

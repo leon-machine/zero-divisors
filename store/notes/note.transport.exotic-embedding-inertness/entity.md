@@ -1,7 +1,7 @@
 ---
 id: note.transport.exotic-embedding-inertness
 kind: note
-version: 1
+version: 2
 title: An exotic embedding, and its inertness
 status: example
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - transport.classification-real-clifford-algebras
 - transport.representation-independent-minimality-completion
@@ -23,6 +27,14 @@ locators:
   number: Ex 4.20
   label: ex:exotic
   line: 999
+outside_ga:
+  kind: bridge
+  why: 'the standard embedding of H in Mat_2(C) is written with complex matrices (diag(i, -i) and the like), the matrix form of the classification Cl(2,3) = Mat_4(C) in which the note states the embedding'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): the standard embedding of H in Mat_2(C) is written with complex matrices (diag(i, -i) and the like), the matrix form of the classification Cl(2,3) = Mat_4(C) in which the note states the embedding.'
 ---
 
 ## formal

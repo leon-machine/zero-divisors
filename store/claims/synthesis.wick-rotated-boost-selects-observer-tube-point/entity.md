@@ -45,6 +45,10 @@ lineage:
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time
   - hawking.i-state
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: W_theta = exp(i theta K) is the Wick rotation in Cl(2,4)_C, which maps the complex tube points to real ones; the dual-plane rotation exp(theta I_4 K) is a real rotation of span(e_3, e_4) and is a different operator, so i stays with the complex points; declared (version and levels unchanged).'
   open_problem: op.which-capacity
   note: >-
     Attack lines 2 and 3 of the open problem. The stored result reduced the Hermitian-structure
@@ -82,6 +86,9 @@ extraction:
     Osterwalder-Schrader picture of the Euclidean rotation. Transport-convenient: the incidence
     lines, the ascent pair and the twistor-form polarisation are the series' own; (i) and (iii) are
     the finite-dimensional form of standard Euclidean geometry of the Rindler wedge.
+outside_ga:
+  kind: complex-analysis
+  why: 'the Wick rotation W_theta = exp(i theta K) acts in the complexified Clifford algebra on the complex Fock module and carries the complex tube points m = x_perp + i rho u to real points; its i commutes with the spacetime vectors, so it is not the dual-plane rotation by I_4 K (a real rotation of span(e_3, e_4)), and no pseudoscalar can replace it'
 ---
 
 ## formal

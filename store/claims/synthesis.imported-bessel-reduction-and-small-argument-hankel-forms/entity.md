@@ -24,6 +24,10 @@ imported_from:
   locator: 'eq. 10.13.5; Section 10.7'
   url: https://dlmf.nist.gov/10.13
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Hankel forms are quoted from the literature with the i of complex analysis, as the entity says; declared (version and levels unchanged).'
   note: >-
     Imported so that synthesis.kasner-hidden-scale-coupled-scalars-stay-blue and
     synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
@@ -38,6 +42,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Created by the maintainer pass of 2026-11-01 (Leon approved the import of the Bessel reduction formula and the small-argument Hankel forms as routine Facts).'
+outside_ga:
+  kind: imported
+  why: 'the small-argument Hankel forms H_nu(z) ~ -(i/pi) Gamma(nu)(2/z)^nu and H_0(z) ~ (2i/pi) ln z are quoted as the source states them, with i the unit of complex analysis'
 ---
 
 ## formal

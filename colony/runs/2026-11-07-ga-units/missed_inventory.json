@@ -1,0 +1,448 @@
+{
+ "angle.imported-singularity-papers-state-selection": {
+  "n": 2,
+  "subject": "thermality",
+  "path": "store/claims/angle.imported-singularity-papers-state-selection",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{itK})",
+   "\\operatorname{Ad}(e^{itK})"
+  ]
+ },
+ "angle.imported-theorems-deliver-their-hypotheses": {
+  "n": 4,
+  "subject": "thermality",
+  "path": "store/claims/angle.imported-theorems-deliver-their-hypotheses",
+  "declared": false,
+  "samples": [
+   "\\Delta^{it}U(a)\\Delta^",
+   "Delta^{it}U(a)\\Delta^{-it} = U(e^{-2\\",
+   "\\Delta^{it}U(a)\\Delta^",
+   "Delta^{it}U(a)\\Delta^{-it} = U(e^{-2\\"
+  ]
+ },
+ "dark-energy.acoustic-no-go-one-way-grip": {
+  "n": 2,
+  "subject": "dark-energy",
+  "path": "store/claims/dark-energy.acoustic-no-go-one-way-grip",
+  "declared": false,
+  "samples": [
+   "\\varphi(TO) = e^{iq\\vartheta}\\v",
+   "_\\vartheta(T O)) = e^{iq\\vartheta}\\,"
+  ]
+ },
+ "dark-energy.variable-exponents-residue-pointwise-corrections-are": {
+  "n": 8,
+  "subject": "interior",
+  "path": "store/claims/dark-energy.variable-exponents-residue-pointwise-corrections-are",
+  "declared": false,
+  "samples": [
+   "\\,e^i, \\qquad \\omega^{ij} \\;=\\; \\log",
+   "a^{i}{}_{j} = \\omega^{ik}\\eta_{kj} =",
+   "}\\eta_{kj} = -\\omega^{ij}",
+   "-\\omega^{ij}\\wedge e^j "
+  ]
+ },
+ "hawking.gibbs-states-are-kms-conversely-finite": {
+  "n": 8,
+  "subject": "descent",
+  "path": "store/claims/hawking.gibbs-states-are-kms-conversely-finite",
+  "declared": false,
+  "samples": [
+   "ha_t = \\mathrm{Ad}(e^{itH})",
+   "a_G\\bigl(y\\,\\alpha_{i\\beta}(x)\\bigr), ",
+   "gr), \\qquad \\alpha_{i\\beta}(x) := e^{-",
+   "ha_t = \\mathrm{Ad}(e^{itH})"
+  ]
+ },
+ "hawking.imported-modular-descent-premises-geometric-normalisation": {
+  "n": 3,
+  "subject": "descent",
+  "path": "store/claims/hawking.imported-modular-descent-premises-geometric-normalisation",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{it\\sigma/2})",
+   "\\operatorname{Ad}(e^{it\\sigma/2})",
+   "\\operatorname{Ad}(e^{it\\sigma/2})"
+  ]
+ },
+ "interior.covariant-form-vacuum-equations": {
+  "n": 1,
+  "subject": "einstein",
+  "path": "store/claims/interior.covariant-form-vacuum-equations",
+  "declared": false,
+  "samples": [
+   "), \\qquad\\text{that is}\\qquad D^{T"
+  ]
+ },
+ "singularity.kms-uniqueness-factor": {
+  "n": 3,
+  "subject": "descent",
+  "path": "store/claims/singularity.kms-uniqueness-factor",
+  "declared": false,
+  "samples": [
+   " \\operatorname{Ad}(e^{itK})",
+   " \\operatorname{Ad}(e^{itK})",
+   "ega\\bigl(b\\,\\alpha_{i\\beta}(a)\\bigr) ="
+  ]
+ },
+ "singularity.matching-steps-4b-4c-join-equation": {
+  "n": 1,
+  "subject": "thermality",
+  "path": "store/claims/singularity.matching-steps-4b-4c-join-equation",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{it\\sigma/2})"
+  ]
+ },
+ "singularity.modular-descent": {
+  "n": 4,
+  "subject": "descent",
+  "path": "store/claims/singularity.modular-descent",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{it\\sigma/2})",
+   "\\operatorname{Ad}(e^{it\\sigma/2})",
+   "\\operatorname{Ad}(e^{it\\sigma/2})",
+   "peratorname{Ad}(\\rho^{it})"
+  ]
+ },
+ "singularity.rate-discharge-hypothesis-iii": {
+  "n": 7,
+  "subject": "thermality",
+  "path": "store/claims/singularity.rate-discharge-hypothesis-iii",
+  "declared": false,
+  "samples": [
+   "\\alpha_t(v) = e^{-it\\omega}v",
+   "\\alpha_t(v^{*}) = e^{it\\omega}v^{*}",
+   "^{*}\\alpha_t(v)) = e^{-it\\omega}n",
+   "alpha_t(v)v^{*}) = e^{-it\\omega}\\,\\om"
+  ]
+ },
+ "singularity.rate-rigidity-temperature-not-algebra-intrinsic": {
+  "n": 6,
+  "subject": "thermality",
+  "path": "store/claims/singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+  "declared": false,
+  "samples": [
+   " \\operatorname{Ad}(e^{itK})",
+   " \\operatorname{Ad}(e^{itK})",
+   "\\operatorname{Ad}(e^{itK})",
+   "Ue^{itK}U^{*} = c("
+  ]
+ },
+ "singularity.two-kms-functionals-sign": {
+  "n": 5,
+  "subject": "descent",
+  "path": "store/claims/singularity.two-kms-functionals-sign",
+  "declared": false,
+  "samples": [
+   " \\operatorname{Ad}(e^{it\\omega K})",
+   "phi\\bigl(b\\,\\alpha_{i\\beta}(a)\\bigr)",
+   "phi\\bigl(b\\,\\alpha_{i\\beta}(a)\\bigr)",
+   " \\operatorname{Ad}(e^{it\\omega K})"
+  ]
+ },
+ "std-algebra.bivector-exponential": {
+  "n": 1,
+  "subject": "standard-algebra",
+  "path": "store/claims/std-algebra.bivector-exponential",
+  "declared": false,
+  "samples": [
+   "e^{i\\theta}"
+  ]
+ },
+ "synthesis.affine-cell-boost-spreads-without-scrambling": {
+  "n": 2,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.affine-cell-boost-spreads-without-scrambling",
+  "declared": false,
+  "samples": [
+   "\\Delta^{it}U(a)\\Delta^",
+   "Delta^{it}U(a)\\Delta^{-it} = U(e^{-2\\"
+  ]
+ },
+ "synthesis.boundary-mode-locality-is-descent-covariance": {
+  "n": 3,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.boundary-mode-locality-is-descent-covariance",
+  "declared": false,
+  "samples": [
+   " \\operatorname{Ad}(e^{itH})",
+   "e^{itH} \\in \\math",
+   "\\operatorname{Ad}(e^{itH})"
+  ]
+ },
+ "synthesis.clausius-heat-exceeds-created-modes-killing-energy": {
+  "n": 1,
+  "subject": "einstein",
+  "path": "store/claims/synthesis.clausius-heat-exceeds-created-modes-killing-energy",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{itH_F})"
+  ]
+ },
+ "synthesis.cold-mirror-needs-non-equilibrium-descent": {
+  "n": 1,
+  "subject": "dark-matter",
+  "path": "store/claims/synthesis.cold-mirror-needs-non-equilibrium-descent",
+  "declared": false,
+  "samples": [
+   "\\rho A = \\tau_{i\\beta}(A)\\rho"
+  ]
+ },
+ "synthesis.collar-kms-extension-completion-locus": {
+  "n": 4,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.collar-kms-extension-completion-locus",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{isf(r)K_{P}})",
+   "\\operatorname{Ad}(e^{isf(r)K_{P}})",
+   "\\operatorname{Ad}(e^{isf(r)K_{P}})",
+   "\\operatorname{Ad}(e^{isK_{P}/3})"
+  ]
+ },
+ "synthesis.collar-kms-extension-three-flows": {
+  "n": 2,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.collar-kms-extension-three-flows",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{it f(r_{k})K_{",
+   "\\operatorname{Ad}(e^{itK_{f}})"
+  ]
+ },
+ "synthesis.collar-temperature-fixed-locally-by-r-loc": {
+  "n": 2,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.collar-temperature-fixed-locally-by-r-loc",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{isK})",
+   "\\operatorname{Ad}(e^{-isK})"
+  ]
+ },
+ "synthesis.de-sitter-temperature-frozen-point-norm": {
+  "n": 4,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.de-sitter-temperature-frozen-point-norm",
+  "declared": false,
+  "samples": [
+   "\\alpha_{t}(v) = e^{-it\\omega}v",
+   "alpha_{t}(v^{*}) = e^{it\\omega}v^{*}",
+   "*}\\alpha_{t}(v)) = e^{-it\\omega}n",
+   "pha_{t}(v)v^{*}) = e^{-it\\omega}(1 - "
+  ]
+ },
+ "synthesis.imported-alvarez-gaume-witten-local-anomalies": {
+  "n": 1,
+  "subject": "dark-matter",
+  "path": "store/claims/synthesis.imported-alvarez-gaume-witten-local-anomalies",
+  "declared": false,
+  "samples": [
+   "mathrm{tr}_{\\rho}\\,e^{iF/2\\pi}\\Bigr]"
+  ]
+ },
+ "synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability": {
+  "n": 1,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability",
+  "declared": false,
+  "samples": [
+   "\\Delta_{W}^{it}"
+  ]
+ },
+ "synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem": {
+  "n": 5,
+  "subject": "quantum-fields",
+  "path": "store/claims/synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem",
+  "declared": false,
+  "samples": [
+   "\\Delta^{it}",
+   "\\Delta^{it}U(s)\\Delta^",
+   "Delta^{it}U(s)\\Delta^{-it} = U(e^{-2\\",
+   "\\Delta^{it}U(s)\\Delta^"
+  ]
+ },
+ "synthesis.inverse-problem-for-the-clausius-route": {
+  "n": 2,
+  "subject": "einstein",
+  "path": "store/claims/synthesis.inverse-problem-for-the-clausius-route",
+  "declared": false,
+  "samples": [
+   "P = \\sum a^{ij}(x)\\partial",
+   "\\sum (a^{ij})^{\\top}\\pa"
+  ]
+ },
+ "synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching": {
+  "n": 3,
+  "subject": "dark-energy",
+  "path": "store/claims/synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching",
+  "declared": false,
+  "samples": [
+   "u = e^{-is}/\\sqrt{2}",
+   "\\omega^{ij} = 0",
+   "R^{ij} = -p_{i}p_"
+  ]
+ },
+ "synthesis.killing-clock-weights-binary-residue": {
+  "n": 1,
+  "subject": "entropy",
+  "path": "store/claims/synthesis.killing-clock-weights-binary-residue",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{it\\sum_{j}\\ome"
+  ]
+ },
+ "synthesis.massless-composites-de-sitter-conformal-boundary": {
+  "n": 3,
+  "subject": "mass",
+  "path": "store/claims/synthesis.massless-composites-de-sitter-conformal-boundary",
+  "declared": false,
+  "samples": [
+   "B^{il}_{\\Lambda} ",
+   "B^{il}_{\\Lambda}",
+   "B^{il}_{\\Lambda} "
+  ]
+ },
+ "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law": {
+  "n": 1,
+  "subject": "quantum-fields",
+  "path": "store/claims/synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+  "declared": false,
+  "samples": [
+   "\\sqrt{g}\\,g^{ij} = \\Omega\\,"
+  ]
+ },
+ "synthesis.r-le-i-independent-spectrum-condition-separates": {
+  "n": 1,
+  "subject": "thermality",
+  "path": "store/claims/synthesis.r-le-i-independent-spectrum-condition-separates",
+  "declared": false,
+  "samples": [
+   " \\operatorname{Ad}(e^{it\\omega_{k}K_"
+  ]
+ },
+ "synthesis.r-loc-independent-sets-matter-coupling": {
+  "n": 1,
+  "subject": "einstein",
+  "path": "store/claims/synthesis.r-loc-independent-sets-matter-coupling",
+  "declared": false,
+  "samples": [
+   "a_{j} \\mapsto e^{-isw_{j}}a_{j}"
+  ]
+ },
+ "synthesis.slot-covariance-forces-gram-square": {
+  "n": 5,
+  "subject": "generations",
+  "path": "store/claims/synthesis.slot-covariance-forces-gram-square",
+  "declared": false,
+  "samples": [
+   "B^{il}_{\\Lambda} ",
+   "\\beta_{k} := B^{ij}_{\\Lambda}",
+   "tr M = 2\\sum_{i<l}|B^{il}_{\\Lambda}|",
+   "B^{ij}_{\\Lambda}"
+  ]
+ },
+ "synthesis.three-twistor-composites-massive": {
+  "n": 12,
+  "subject": "mass",
+  "path": "store/claims/synthesis.three-twistor-composites-massive",
+  "declared": false,
+  "samples": [
+   "B^{il}_{\\Lambda} ",
+   "B^{il}_{\\Lambda} ",
+   "2} \\ge 2\\sum_{i<l}|B^{il}_{\\Lambda}|",
+   "B^{il}_{0} = 0"
+  ]
+ },
+ "synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics": {
+  "n": 2,
+  "subject": "quantum-fields",
+  "path": "store/claims/synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics",
+  "declared": false,
+  "samples": [
+   "\\Delta^{it}U(a)\\Delta^",
+   "Delta^{it}U(a)\\Delta^{-it} = U(e^{-2\\"
+  ]
+ },
+ "obj.hawking.continuum-mode-space": {
+  "n": 2,
+  "subject": "thermality",
+  "path": "store/objects/obj.hawking.continuum-mode-space",
+  "declared": false,
+  "samples": [
+   "\\tau_t(a(f)) = a(e^{ith}f)",
+   "\\tau_t(a(f)) = a(e^{ith}f)"
+  ]
+ },
+ "obj.singularity.geometric-modular-condition-g": {
+  "n": 3,
+  "subject": "thermality",
+  "path": "store/objects/obj.singularity.geometric-modular-condition-g",
+  "declared": false,
+  "samples": [
+   "\\operatorname{Ad}(e^{itK_{\\mathrm{g",
+   "\\operatorname{Ad}(e^{itK_{\\mathrm{g",
+   "\\operatorname{Ad}(e^{itK_{\\mathrm{g"
+  ]
+ },
+ "obj.synthesis.cosmological-horizon-boundary-modes": {
+  "n": 4,
+  "subject": "thermality",
+  "path": "store/objects/obj.synthesis.cosmological-horizon-boundary-modes",
+  "declared": false,
+  "samples": [
+   "\\; \\operatorname{Ad}\\exp\\Bigl(it\\sum_{j \\in ",
+   "alpha_{t}(v_{j}) = e^{-it\\omega_{j}}v",
+   "e^{-it\\omega_{j}}",
+   "v_{j} \\mapsto e^{-it\\omega_{j}}v"
+  ]
+ },
+ "note.correspondence.abstract": {
+  "n": 1,
+  "subject": "completion",
+  "path": "store/notes/note.correspondence.abstract",
+  "declared": false,
+  "samples": [
+   "\\omega = ix\\pi"
+  ]
+ },
+ "note.correspondence.setting-successor-problems": {
+  "n": 1,
+  "subject": "conformal-spacetime",
+  "path": "store/notes/note.correspondence.setting-successor-problems",
+  "declared": false,
+  "samples": [
+   "\\omega = ix\\pi"
+  ]
+ },
+ "note.correspondence.what-factor-i-what-remains-conventional": {
+  "n": 1,
+  "subject": "conformal-spacetime",
+  "path": "store/notes/note.correspondence.what-factor-i-what-remains-conventional",
+  "declared": false,
+  "samples": [
+   "\\omega = ix\\pi"
+  ]
+ },
+ "note.mass.setting-successor-problems": {
+  "n": 1,
+  "subject": "mass",
+  "path": "store/notes/note.mass.setting-successor-problems",
+  "declared": false,
+  "samples": [
+   "2\\sum_{i<l}|B^{il}_{\\Lambda}|"
+  ]
+ },
+ "note.singularity.euclidean-reading-sign-flagged": {
+  "n": 1,
+  "subject": "descent",
+  "path": "store/notes/note.singularity.euclidean-reading-sign-flagged",
+  "declared": false,
+  "samples": [
+   "R_{i\\theta}"
+  ]
+ }
+}

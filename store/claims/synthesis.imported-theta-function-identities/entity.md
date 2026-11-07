@@ -26,6 +26,10 @@ imported_from:
   key: Mumford1983
   locator: 'Ch.~I'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: q = e^{2 pi i tau} and sqrt(-i tau) are the classical identities quoted from the literature; declared (version and levels unchanged).'
   note: >-
     Imported for the exact value of the half-offset array's entropy at the Hawking temperature.
     Cited from memory, not checked against the source. During filing each identity (the product
@@ -38,6 +42,9 @@ extraction:
     by: maintainer-2026-10-22
     date: '2026-10-22'
     note: 'Created by the maintainer pass so that the half-offset array result can pin the theta-function identities it cited from memory; statements confirmed numerically, references cited from memory.'
+outside_ga:
+  kind: imported
+  why: 'the theta-function identities, with q = e^{2 pi i tau} and the factor sqrt(-i tau) of tau -> -1/tau, are quoted as Whittaker-Watson and Mumford state them, complex analysis of modular forms'
 ---
 
 ## formal

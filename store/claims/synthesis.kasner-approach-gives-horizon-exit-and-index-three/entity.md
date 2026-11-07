@@ -48,6 +48,10 @@ lineage:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
   - dark-energy.frozen-point-datum-kasner-wall
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the plane-wave modes, the canonical normalisation i and the Hankel Wronskian -4i/(pi s) are complex analysis of scalar and Bessel functions sharing one unit; the axis label i is an index; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -73,6 +77,9 @@ extraction:
     integral). Matter walls: the classification of matter walls,
     \claimref{synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue}, keeps sum p = 1 at every reachable
     epoch, which is all this result uses; the check includes two interior points of the disk.
+outside_ga:
+  kind: complex-analysis
+  why: 'the scalar modes e^{ikx}, their canonical normalisation tau(phi phi-dot* - phi* phi-dot) = i and the Hankel Wronskian -2i W[J_0, Y_0] = -4i/(pi s) are one complex analysis of scalar mode functions and Bessel functions, sharing one unit'
 ---
 
 ## formal

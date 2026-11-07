@@ -1,7 +1,7 @@
 ---
 id: note.correspondence.setting-machine-verification
 kind: note
-version: 2
+version: 3
 title: Machine verification
 status: setting
 subject: conformal-spacetime
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - correspondence.fock-model-complexified-ascended-algebra
 - correspondence.clifford-side-ordering-shift
@@ -25,7 +29,14 @@ locators:
   number: Setting
   section: Machine verification
   line: 892
+outside_ga:
+  kind: other
+  why: 'the note describes a script that works over the Gaussian rationals Q(i) as the scalars of the complexified Fock model over V_C, where i must commute with the vectors; it records the script''s sample maps (i times a Hermitian matrix, the rescaling (3+4i)/5) in those scalars'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the note describes a script that works over the Gaussian rationals Q(i) as the scalars of the complexified Fock model over V_C, where i must commute with the vectors; it records the script''s sample maps (i times a Hermitian matrix, the rescaling (3+4i)/5) in those scalars.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

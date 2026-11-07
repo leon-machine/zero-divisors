@@ -46,6 +46,10 @@ lineage:
   - note.singularity.island-dictionary-one-dissonance
   - synthesis.eviction-keeps-one-replica-saddle
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the C^d of the Haar-random states is an abstract Hilbert space, not built from GA modes; the i in prod_{i<n}(d^2 + i) is an index; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -59,6 +63,9 @@ extraction:
     n = 2 case is the stored Lubkin Fact and is recomputed). The n -> 1 statement is a consistency check
     of the analytic continuation of ln C_n/(n-1) against the stored half nat, not a derivation of the
     von Neumann gap. Transport-absent: quantum-information combinatorics on the stored eviction theorem.
+outside_ga:
+  kind: complex-analysis
+  why: 'the Haar computation is on random pure states of the abstract Hilbert spaces C^d (x) C^d and C^D, Hilbert-space structure that the store does not build from geometric-algebra modes'
 ---
 
 ## formal

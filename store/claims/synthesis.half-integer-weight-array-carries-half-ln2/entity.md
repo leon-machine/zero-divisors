@@ -1,7 +1,7 @@
 ---
 id: synthesis.half-integer-weight-array-carries-half-ln2
 kind: claim
-version: 4
+version: 5
 title: 'With half-integer weights the s-wave array carries half of ln 2'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -41,6 +45,10 @@ lineage:
   - singularity.q-joint-quasi-freeness-s-wave
   - synthesis.residue-from-mode-entropy
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The phase of the array''s Killing flow on its modes, e^{-i omega_k t}, its value e^{-2 pi i(k + delta)} at one modular period and the checked window element e^{2 pi i K} are written in the field''s unit I_4 (proof); the modular parameter tau = i y/2 pi, q = e^{2 pi i tau}, sqrt(-i tau) and the self-dual point tau = i of the theta-function computation keep i (complex analysis of modular forms) and are declared.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -63,6 +71,9 @@ extraction:
     carry the capacity of one registered boundary mode. Which units are counted, and which offset
     is right, remain open: this is a computation, not a derivation of the residue, and it does not
     identify arrays with helicity channels. Transport-absent except for the rotor sign.
+outside_ga:
+  kind: complex-analysis
+  why: 'the theta-function and Dedekind-eta computation keeps i: the modular parameter tau = i y/2 pi, q = e^{2 pi i tau}, the factor sqrt(-i tau) of the transformation tau -> -1/tau and the self-dual point tau = i are complex analysis of modular forms'
 ---
 
 ## formal

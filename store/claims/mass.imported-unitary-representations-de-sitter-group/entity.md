@@ -32,6 +32,10 @@ locators:
   label: fact:dixmier
   line: 434
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten: Delta = 3/2 + i nu is kept as Dixmier and Higuchi state it, and the entity declares outside_ga (imported); its dependants write the weight with I_4.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -54,6 +58,9 @@ extraction:
     by: ai-typing-pass
     note: Imported claim with no derivations; its context_refs are claims that use or compare with it,
       not premises, so no edges changed.
+outside_ga:
+  kind: imported
+  why: 'the principal-series weight Delta = 3/2 + i nu is quoted as Dixmier and Higuchi state it, on the abstract Hilbert space of a unitary representation of SO(1,4), which the store does not build from geometric-algebra modes'
 ---
 
 ## formal

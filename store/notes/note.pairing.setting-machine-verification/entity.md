@@ -1,7 +1,7 @@
 ---
 id: note.pairing.setting-machine-verification
 kind: note
-version: 1
+version: 2
 title: Machine verification
 status: setting
 subject: conformal-spacetime
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - pairing.imported-null-flags
 - pairing.imported-spin-coefficients-null-tetrad
@@ -25,6 +29,14 @@ locators:
   number: Setting
   section: Machine verification
   line: 438
+outside_ga:
+  kind: other
+  why: 'the class value 2i of n e_3 is a value of the complex functional pi on so(4,C), built on the complex null tetrad m = e_2 + i e_3, where i stands next to a spacetime vector'
+extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the class value 2i of n e_3 is a value of the complex functional pi on so(4,C), built on the complex null tetrad m = e_2 + i e_3, where i stands next to a spacetime vector.'
 ---
 
 ## formal

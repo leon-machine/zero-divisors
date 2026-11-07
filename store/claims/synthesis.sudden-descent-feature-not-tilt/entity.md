@@ -45,6 +45,10 @@ lineage:
   - dark-energy.imported-henneaux-teitelboim-promotion
   - mass.imported-unitary-representations-de-sitter-group
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Bunch-Davies mode, its Wronskian 2i and the Bogoliubov coefficients are complex analysis of scalar mode functions sharing one unit; declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -55,6 +59,9 @@ extraction:
     note: 'Version 2 -> 3, at Leon''s decisions of 2026-11-01 (deposit state): a marked note after the formal statement records that the model''s instantaneous-vacuum start is not a Hadamard state (clause (iv) of synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard), so the model describes a state the adopted Hadamard deposit premise excludes; the spectrum computation and every clause are unchanged.'
   open_problem: op.descent-state-and-spectrum
   note: 'Sharpens the first escape of the frozen-phase no-go (the descent state must break the slicing dilatation): if the descent is a single event into the frozen phase and the field starts there in the instantaneous vacuum, the spectrum is flat at small scales, suppressed at large scales and ringing in between, and no 7-e-fold window carries the measured red index (exact rational enclosures for every window). Read as a pointer, not a theorem: dilatation breaking that produces the measured tilt would have to persist while the whole observed window is set. The mode computation is standard de Sitter field theory and transport-absent; the series supplies the setting (frozen phase in flat slicing, the massless point of its weight dictionary, the descent as the origin). The de Sitter scale during the descent is not addressed.'
+outside_ga:
+  kind: complex-analysis
+  why: 'the scalar mode analysis keeps i: the Bunch-Davies solution u(z) = e^{-iz}(1 - i/z), its Wronskian 2i, the matching conditions chi_z = -i and the Bogoliubov coefficients alpha = e^{-ix}A, A = 1 - i/x - 1/(2x^2), are complex analysis of scalar functions sharing one unit'
 ---
 
 ## formal

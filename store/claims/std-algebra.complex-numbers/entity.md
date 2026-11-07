@@ -1,7 +1,7 @@
 ---
 id: std-algebra.complex-numbers
 kind: claim
-version: 1
+version: 2
 title: The complex numbers inside Clifford algebras
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 trust: ai-proposed
 about:
@@ -40,7 +44,14 @@ locators:
   sources:
   - key: DoranLasenby2003
     locator: Ch. 2 (geometric algebra in two and three dimensions)
+outside_ga:
+  kind: bridge
+  why: 'the result identifies the complex numbers a + b i with Cl(0,1) and with the even part of the plane, so it names the abstract field C and its unit i to connect them with geometric algebra'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): the result identifies the complex numbers a + b i with Cl(0,1) and with the even part of the plane, so it names the abstract field C and its unit i to connect them with geometric algebra.'
   referee_fixes: '2026-10-26: "rotates" corrected to "rotates and scales" (a pure rotation for a^2 + b^2 = 1) (referee part 1, point 5).'
   by: algebra-core-2026-10-26
 ---

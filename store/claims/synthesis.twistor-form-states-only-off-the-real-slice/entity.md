@@ -36,6 +36,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the complex points m = x + iy, of A = i x^ - y^ and of the imaginary boost belongs to the complexified chart, whose unit must commute with the vectors; declared (version and levels unchanged).'
   open_problem: op.which-capacity
   flow_note: phase; the imaginary boost of clause (iii) is the phase flow's geometric continuation, the rotor at imaginary rapidity (see synthesis.phase-flow-is-time-rotor-flow-kms-continuation).
   note: >-
@@ -63,6 +67,9 @@ extraction:
     which answers the same question under the positive Hermitian structure; the two do not conflict,
     and the present result shows that the only structure under which the boost is a symmetry gives no
     states on real points.
+outside_ga:
+  kind: complex-analysis
+  why: 'the complex unit of the Fock model, the pairing sigma into C, the complexified affine chart m = x + iy with m(i x^) = x and A = i x^ - y^, and the imaginary boost x(theta) = rho cos theta e_1 + i rho sin theta e_0 belong to the complexification of the spacetime vectors (the forward tube), whose unit must commute with the vectors; no pseudoscalar of Cl(2,4) does'
 ---
 
 ## formal

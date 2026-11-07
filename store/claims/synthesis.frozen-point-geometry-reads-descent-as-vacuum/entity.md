@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-geometry-reads-descent-as-vacuum
 kind: claim
-version: 1
+version: 2
 title: 'Under (F), the frozen point reads the descent deposit as vacuum'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -52,6 +56,10 @@ lineage:
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb
   - synthesis.frozen-phase-spectrum-not-red
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The factor i of the two-point kernel D_c of the horizon-generator modes (the continuum mode space, whose unit is the field''s unit I_4) is written I_4 (proof); the Bunch-Davies mode functions e^{-ik eta}(1 - i/k eta)/sqrt(2k), the Fourier kernels e^{-i k.r} and the phase e^{2iu + i theta} of the scalar mode analysis keep i (Fourier analysis of scalar functions) and are declared.'
   open_problem: op.descent-state-and-spectrum
   flags:
   - 'beyond one flat chart: the descent slice is placed in the frozen point''s chart through the late-time matching of the descended universe to the frozen point''s de Sitter field (hypothesis (F) in the formal level); the conformal compactification is used only as the identification of the two flat charts'
@@ -87,6 +95,9 @@ extraction:
     alongside (synthesis.pati-salam-monopoles-bound-descent-history: an orientation aligned beyond
     the descent's Hubble length); the obstruction here concerns the zeta spectrum, not vacuum
     orientation.
+outside_ga:
+  kind: complex-analysis
+  why: 'the scalar mode analysis keeps i: the Bunch-Davies mode e^{-ik eta}(1 - i/k eta)/sqrt(2k), the Fourier kernels e^{-i k.r} of the correlators and the phase e^{2iu + i theta} of the excited modes are Fourier analysis of scalar functions in their own right'
 ---
 ## formal
 Work in the conformal model of Lemma \claimref{mass.de-sitter-scale-frozen-point} ($\ip{\nO}{\nInf} = 1$, $X(x) = \nO + x - \tfrac12 Q(x)\,\nInf$, $Q$ of signature $(+,-,-,-)$) with the flat-slicing frozen point $I_{\mathrm{fs}} = He_{0}$ of Proposition \claimref{synthesis.frozen-phase-spectrum-not-red}, $\Lambda = 3H^{2}$, scale function $\ip{X(x)}{I_{\mathrm{fs}}} = Hx_{0}$, so that the frozen point's gravitational field is de Sitter in its flat slicing with conformal time $x_{0} < 0$ and $x_{0} \to 0^{-}$ its future infinity. Let the descended universe be the flat FLRW field of the stored finite-range result on the same flat background, $\hb^{-1}(a) = a(\eta)\,a$ in conformal coordinates $(\eta, \vec x)$, with $\dot a^{2}/H_{0}^{2} = \Omega_{r}a^{-2} + \Omega_{m}a^{-1} + \Omega_{\Lambda}a^{2}$ and the record values of Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}. Hypothesis (F): its late-time de Sitter stage is the frozen point's field, $a(\eta) \to 1/(H|x_{0}|)$ with $x_{0} = \eta - \eta_{\infty}$, $\eta_{\infty} = \int_{0}^{\infty}da/(a^{2}\dot a)$ the conformal time from the origin to future infinity (the reading of the dating and of P1: one frozen point, $w = -1$). Write $\eta_{d}$ for the conformal time of the descent and $x_{d} = \eta_{d} - \eta_{\infty}$ for the descent slice in the frozen point's chart.

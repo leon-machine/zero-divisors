@@ -1,7 +1,7 @@
 ---
 id: rungs.rung-spinor-module-mixings
 kind: claim
-version: 4
+version: 5
 title: The $n$-rung spinor module and its mixings
 status: proved
 region: rungs
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-rungs, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -49,7 +53,14 @@ locators:
   number: Thm 2.1
   label: thm:rungs
   line: 235
+outside_ga:
+  kind: other
+  why: 'the generator (i I_3, -i I_3) of u(3) + u(3) and its eigenvalue i(j - k) act on the complexified module of T_n (x) C, whose scalar commutes with every generator, so no pseudoscalar can stand for it'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the generator (i I_3, -i I_3) of u(3) + u(3) and its eigenvalue i(j - k) act on the complexified module of T_n (x) C, whose scalar commutes with every generator, so no pseudoscalar can stand for it.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

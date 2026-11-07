@@ -26,6 +26,10 @@ locators:
   label: rem:nullity
   line: 622
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the real slice stands inside the explicit complex 2 x 2 matrices of the chart''s frame (i/sqrt 2 times K epsilon, the entries of K), whose GA reading as I_6 the note already gives; a matrix computation over C placed beside its GA reading, declared as a bridge (version and levels unchanged).'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -47,6 +51,9 @@ extraction:
     by: ai-ga-pass
     date: '2026-10-21'
     note: 'Kept the explicit complex $2 \times 2$ matrices of the real slice, which are a computation in the chart''s frame; added the GA readings that the Hermitian form is the reversion form on $\CS$ and the incidence factor $i$ is $I_6$ (TWGA E1.7), and called T9 the correspondence paper.'
+outside_ga:
+  kind: bridge
+  why: 'the real slice is computed in the chart''s frame as explicit complex 2 x 2 matrices, the factor i/sqrt 2 and the entries x^1 -+ i x^2 of the Hermitian K, whose geometric-algebra reading (i as the conformal pseudoscalar I_6, x^{aa''} as H_x) the text states alongside'
 ---
 
 ## formal

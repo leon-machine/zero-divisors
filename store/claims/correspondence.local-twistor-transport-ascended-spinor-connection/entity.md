@@ -1,7 +1,7 @@
 ---
 id: correspondence.local-twistor-transport-ascended-spinor-connection
 kind: claim
-version: 7
+version: 8
 title: "The conformal spinor connection is Penrose's local twistor transport"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -51,7 +55,14 @@ locators:
   number: Prop 4.10
   label: prop:localtwistor
   line: 593
+outside_ga:
+  kind: imported
+  why: 'the composite i epsilon (i P omega) in the proof is quoted in the two-spinor notation of the imported Fact (Penrose and Rindler), whose i is a scalar of that formalism; the bundle is the complex Fock module over W_C'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (imported): the composite i epsilon (i P omega) in the proof is quoted in the two-spinor notation of the imported Fact (Penrose and Rindler), whose i is a scalar of that formalism; the bundle is the complex Fock module over W_C.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

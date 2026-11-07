@@ -26,7 +26,14 @@ imported_from:
   key: PeskinSchroeder1995
 - citation: 'S. Weinzierl, Introduction to Feynman integrals, arXiv:1005.1855, equations (50) and (61).'
   key: Weinzierl2010
+outside_ga:
+  kind: imported
+  why: 'the Wick rotation l_0 = i l_{E,0}, the values of the rotated integrals and the photon propagator -i/(k^2 + i0) are quoted as their sources (Weinzierl, Peskin and Schroeder) state them, a contour argument in the complex plane of l_0'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Wick rotation l_0 = i l_{E,0}, the values of the Wick-rotated integrals and the covariant photon propagator -i/(k^2 + i0) are quoted as the imported sources state them; the series'' results that use them read these numbers in span{1, I_4}. Declared imported (version and levels unchanged).'
   note: >-
     Imported so that one-loop electrodynamics in the spacetime algebra can pin its loop machinery instead of
     citing it from memory. Checked on 2026-11-01: the bibliographic data of Pauli and Villars (title, Rev. Mod.

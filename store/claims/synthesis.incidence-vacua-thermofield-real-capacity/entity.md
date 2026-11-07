@@ -38,6 +38,10 @@ lineage:
   motivated_by:
   - note.one-relation.two-residues-named-so-synthesis-can
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the content is the comparison of Cl(p,q)_C with its real form, and the i of the complex null modes (g + ih)/2, c = (e_3 + i e_4)/2 and of the values +-i on e_3e_4 stands next to vectors; declared (version and levels unchanged).'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -58,6 +62,9 @@ extraction:
     note: 'W503: lay and one-liner now state the condition u != 0 (respectively v != 0) for the thermofield-double reading.'
   open_problem: op.which-capacity
   note: Partial progress only. Computes how the incidence vacua split between the real and complex capacities; it does not connect them to the series' selected (descended) state of the boundary modes, so the open problem stays partial. Clause (v) bears on op.rule-2-sign conditionally on a reality premise. Restated after referee review (only the two spanning vacua are thermofield doubles).
+outside_ga:
+  kind: other
+  why: 'the result compares the complexification Cl(p,q)_C, V_C with its real form: the modes (g + ih)/2 and c = (e_3 + i e_4)/2 are complex null vectors, the projector (1 - i e_3e_4)/2 and the value +-i on e_3e_4 are complex expectations of real states, so i stands next to vectors and no pseudoscalar commutes with them'
 ---
 
 ## formal

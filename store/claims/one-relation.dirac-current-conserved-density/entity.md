@@ -40,6 +40,10 @@ locators:
   label: lem:current
   line: 805
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the statement and proof are Dirac theory in a Mat(4, C) gamma-matrix representation, with the Hestenes current cited beside it; rewriting it in the spacetime algebra would change the lemma, so it is declared as a bridge (version and levels unchanged).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -56,6 +60,9 @@ extraction:
     - '$(i\gamma^\mu\partial_\mu - m)\psi = 0$ and the plane waves $u\,e^{-ip\cdot x}$: Dirac theory in
       a $\Mat(4, \C)$ matrix representation, $i$ next to $\gamma^\mu$ (gamma matrices as complex matrices);
       converting would need the Hestenes form, which the statement only cites. Doubtful for the plane waves'
+outside_ga:
+  kind: bridge
+  why: 'the lemma is stated and proved in a Mat(4, C) Dirac-matrix representation (the operator i gamma^mu d_mu, plane waves e^{-ip.x}, currents with complex matrix coefficients), with the Hestenes form J = psi gamma_0 psi~ cited alongside as its translation into the spacetime algebra'
 ---
 
 ## formal

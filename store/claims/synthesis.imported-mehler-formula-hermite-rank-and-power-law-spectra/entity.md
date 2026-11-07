@@ -30,6 +30,10 @@ imported_from:
   locator: 'Section 3 (Riesz potentials)'
   url: https://arxiv.org/abs/1709.07195
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the Fourier kernel e^{-i k.x} is quoted from the sources; declared (version and levels unchanged).'
   note: >-
     Imported so that synthesis.local-conversion-cannot-redden-a-gaussian-spectator can pin the
     Gaussian identities it cited from memory. Checked on 2026-11-01 against Dobrushin and Major 1979
@@ -49,6 +53,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Created by the maintainer pass of 2026-11-01 (Leon approved the import of Mehler''s formula, the Hermite-rank result and the Fourier asymptotics of a power-law correlation as routine Facts).'
+outside_ga:
+  kind: imported
+  why: 'the Fourier convention P(k) = int e^{-i k.x} xi(x) d^3x is quoted as the sources state it, Fourier analysis of scalar functions'
 ---
 
 ## formal

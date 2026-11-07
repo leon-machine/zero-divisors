@@ -1,7 +1,7 @@
 ---
 id: families.absolute-scale-clean-negative-result
 kind: claim
-version: 2
+version: 3
 title: 'The absolute scale: a clean negative result'
 status: conjectured
 region: families
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T13, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 lineage:
   motivated_by:
@@ -34,6 +38,10 @@ locators:
   label: obs:absolute
   line: 879
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The de Sitter weight -3/2 +- i nu, a physical number, is written -3/2 +- I_4 nu with numbers read in span{1, I_4}; no bare i remains.'
   i4_conversion:
     by: ai-i4-pass
     date: 2026-10-21
@@ -69,7 +77,7 @@ extraction:
 The other half of the weight problem, why $\mathrm{Im}\,w_{e} \sim 10^{38}$ at all (Fact \claimref{families.imported-dictionary-exact-join}), resists every structural attack attempted: expressing the imaginary weights as powers of $N$ finds no clean exponent for the electron or the weak scale, and the one suggestive scaling (a hadronic weight $\mathrm{Im}\,w_{h} \sim N^{2/3}$ with $N = M_{P}/H$ of Fact \claimref{standard-model.trichotomy-what-kind-number}, equivalently $m_{h} \sim (M_{P}^{2}H)^{1/3} \approx 5 \times 10^{7}$ eV on the inputs of Proposition \claimref{families.alignment-computed-thirteenth-refutation-democracy-one}(1), the pion-scale coincidence) reduces to the Zel'dovich-Weinberg coincidence, in the literature since 1967 \cite{Zeldovich1967, Weinberg1972}, and therefore fails the series' prior-art condition. Counting the tower's hyperbolic pairs, mode-count ratios, and fine-structure powers all fail their own refutation conditions. The absolute hierarchy remains as the fifth and thirteenth refutations left it: one unexplained number, restated, with a map of the routes that do not work.
 
 ## technical
-The observation concerns the second half of the weight problem: why the imaginary part of the electron's induced weight is of order $10^{38}$ at all, given that a heavy composite has weight $w = -\tfrac32 \pm i\nu$ with $\nu \approx m/H$. Writing the imaginary weights as powers of $N = M_{P}/H$ gives no clean exponent for the electron or the weak scale. The one suggestive scaling, a hadronic weight $\mathrm{Im}\,w_{h} \sim N^{2/3}$, equivalently $m_{h} \sim (M_{P}^{2}H)^{1/3} \approx 5 \times 10^{7}$ eV, is the Zel'dovich-Weinberg coincidence, in the literature since 1967, and so fails the series' prior-art condition.
+The observation concerns the second half of the weight problem: why the imaginary part of the electron's induced weight is of order $10^{38}$ at all, given that a heavy composite has weight $w = -\tfrac32 \pm I_4\nu$ with $\nu \approx m/H$ (numbers are read in $\mathrm{span}\{1, I_4\}$). Writing the imaginary weights as powers of $N = M_{P}/H$ gives no clean exponent for the electron or the weak scale. The one suggestive scaling, a hadronic weight $\mathrm{Im}\,w_{h} \sim N^{2/3}$, equivalently $m_{h} \sim (M_{P}^{2}H)^{1/3} \approx 5 \times 10^{7}$ eV, is the Zel'dovich-Weinberg coincidence, in the literature since 1967, and so fails the series' prior-art condition.
 
 Counting the tower's hyperbolic pairs, mode-count ratios and powers of the fine-structure constant each fail their own refutation conditions. The absolute hierarchy remains one unexplained number, restated, together with a map of the routes that do not work.
 

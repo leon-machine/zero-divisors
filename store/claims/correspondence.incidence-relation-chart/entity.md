@@ -1,7 +1,7 @@
 ---
 id: correspondence.incidence-relation-chart
 kind: claim
-version: 4
+version: 5
 title: "The incidence relation is the chart"
 status: proved
 region: correspondence
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T09, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 5
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -42,7 +46,14 @@ locators:
   number: Thm 4.2
   label: thm:incidence
   line: 445
+outside_ga:
+  kind: bridge
+  why: 'clause (4)(iii) sets Penrose''s incidence relation omega = i x pi, in its source''s notation, beside its real-algebra form, and records that I_6 acts as -i on the complex module CS of Cl(2,4)_C'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (bridge): clause (4)(iii) sets Penrose''s incidence relation omega = i x pi, in its source''s notation, beside its real-algebra form, and records that I_6 acts as -i on the complex module CS of Cl(2,4)_C.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

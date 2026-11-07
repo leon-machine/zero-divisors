@@ -1,7 +1,7 @@
 ---
 id: synthesis.series-family-structures-give-no-lopsided-second-stage
 kind: claim
-version: 2
+version: 3
 title: 'The series'' family structures give no lopsided second stage'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 derivations:
 - name: main
@@ -43,6 +47,10 @@ lineage:
   - synthesis.one-type-second-stages-are-twins
   - synthesis.no-120-excludes-hierarchical-second-stage
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The circulant phase e^{I_4 delta} and the channel-phase coefficient I_4 (lambda/2) sin delta are written with I_4 in the formal level and the proof (numbers, and C, read in span{1, I_4}); nothing stays. To clear W222 the proof of (i) writes the cross-product matrix of u-prime as the contraction Av = v . (I_e u-prime) with the bivector dual to u-prime, I_e = e1 e2 e3 the family-space pseudoscalar, and its sign law through the automorphism sending I_e to det P I_e; same matrix, same argument.'
   open_problem: op.second-order-breaking
   note: >-
     Answers the question the stored decoupling result left: the second stage must be odd under the
@@ -69,7 +77,7 @@ extraction:
 Work at the $S_{3} \to S_{2}$ direction with the textures and the order of Proposition \claimref{synthesis.solar-angle-light-plane-sum-rule}: $M_{e} = c(\J + \delta_{c}(E + X_{e}))$, $\mD = d(\J + \delta(E + X_{\nu}))$, $M_{R} = \alpha\Pi + M_{3}\J/3$, $E = e_{3}e_{3}^{\mathsf T}$, $P_{12}$ the exchange of $e_{1}, e_{2}$, each $X_{s}$ odd under $P_{12}$, now allowed complex. Call the series' family structures $\mathbb{1}$, $\J$, $\Pi$, $E$ (Lemma \claimref{neutrino.breaking-relation}), $u'\wedge s$ (Proposition \claimref{synthesis.residual-s2-fixes-120-family-form}) and the cyclic shift $S$, $Se_{j} = e_{j+1}$, with $S^{\mathsf T}$. Let $A$ be the matrix of $v \mapsto u'\times v$.
 \begin{enumerate}
 \item[(i)] \emph{(One odd line.)} The $P_{12}$-odd part of the complex span of the series' family structures is $\C A$, with $A = S - S^{\mathsf T}$ and $S + S^{\mathsf T} = \J - \mathbb{1}$. $A$ spans the sign representation of $S_{3}$, $PAP^{\mathsf T} = \mathrm{sgn}(P)A$, which occurs exactly once among the $3 \times 3$ family matrices; it is antisymmetric, fixed by the $3$-cycles and odd under every transposition. Without the shift, which enters only through the circulant reading of (ii) and is not a premise of the store, the $P_{12}$-odd part of the span of $\mathbb{1}$, $\J$, $\Pi$, $E$ and $u'\wedge s$ is zero.
-\item[(ii)] \emph{(The channel phase on that line, circulant reading.)} The circulant $C = \mathbb{1} + \tfrac{\lambda}{2}(e^{i\delta}S + e^{-i\delta}S^{\mathsf T}) = (1 - \tfrac{\lambda}{2}\cos\delta)\mathbb{1} + \tfrac{\lambda}{2}\cos\delta\,\J + i\tfrac{\lambda}{2}\sin\delta\,A$ has eigenvalues $1 + \lambda\cos(\delta - 2\pi k/3)$ on the Fourier vectors $f_{k}$, the components of the projected Koide vector of Proposition \claimref{synthesis.coherent-face-vector-real-slices}(iii) up to scale and labelling. So if the face family lines are read as the Fourier lines of a flavour basis, the channel phase is the coefficient of the sign line, odd under every residual $S_{2}$, and it breaks $S_{3}$ to $\mathbb{Z}_{3}$.
+\item[(ii)] \emph{(The channel phase on that line, circulant reading.)} The circulant (numbers, and $\C$, are read in $\mathrm{span}\{1, I_{4}\}$) $C = \mathbb{1} + \tfrac{\lambda}{2}(e^{I_{4}\delta}S + e^{-I_{4}\delta}S^{\mathsf T}) = (1 - \tfrac{\lambda}{2}\cos\delta)\mathbb{1} + \tfrac{\lambda}{2}\cos\delta\,\J + I_{4}\tfrac{\lambda}{2}\sin\delta\,A$ has eigenvalues $1 + \lambda\cos(\delta - 2\pi k/3)$ on the Fourier vectors $f_{k}$, the components of the projected Koide vector of Proposition \claimref{synthesis.coherent-face-vector-real-slices}(iii) up to scale and labelling. So if the face family lines are read as the Fourier lines of a flavour basis, the channel phase is the coefficient of the sign line, odd under every residual $S_{2}$, and it breaks $S_{3}$ to $\mathbb{Z}_{3}$.
 \item[(iii)] \emph{(Moduli.)} In the compression $B_{s} = \bigl[\begin{smallmatrix} 2/3 & x_{s}\\ y_{s} & 0\end{smallmatrix}\bigr]$ of that proposition, a symmetric odd $X$ gives $y = x$, an antisymmetric one $y = -x$, a Hermitian one $y = \bar{x}$, and $X = \gamma A$ gives $x = \sqrt3\gamma = -y$ for every complex $\gamma$; in all of these $|x| = |y|$.
 \item[(iv)] \emph{(Sum rule for complex charged stages.)} For $B = \bigl[\begin{smallmatrix} k & x\\ y & 0\end{smallmatrix}\bigr]$ with $k > 0$ and complex $x, y$, the light left singular vector depends only on $k$, $|x|$, $|y|$, and for $|x| = |y|$ it makes the angle $\theta$ with $\tan^{2}\theta = \sigma_{2}/\sigma_{1}$ with the odd axis. Hence, with any complex charged stage with $|x_{e}| = |y_{e}|$ and a real one-type neutrino stage, $|U_{e1}| \ge \cos(\theta_{e} + \theta_{\nu})$ and the sum rule $\Delta \le \arctan\sqrt{m_{e}/m_{\mu}} + \arctan(m_{1}/m_{2})^{1/4}$ holds; under the inequality of Premise (H), taken as a hypothesis of this clause, $\Delta < 21.6^{\circ}$, excluding the measured solar angle.
 \item[(v)] \emph{(Consequence.)} No second stage built linearly from the series' family structures, in the charged sector with any complex coefficient and in the neutrino sector with a real one, reaches the measured solar angle under (H) at the breaking lemma's order. The stage the data need has $|y| \ne |x|$ in some sector: an $S_{2}$-odd symmetric part (a standard-representation component) together with an antisymmetric part at a non-Hermitian relative phase, which the series' structures do not supply; products such as $AE = (1,-1,0)\,e_{3}^{\mathsf T}$ would.

@@ -50,6 +50,10 @@ lineage:
   - synthesis.quadratic-flows-cannot-thermalise-descent
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of the Majorana generator i(a^dagger - a) is the unit of the complexified Clifford algebra the CAR algebra is identified with; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Answer to the open problem's first two lines of attack (an occupation law n_k proportional to
@@ -95,6 +99,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 2 -> 3, at Leon''s decisions of 2026-11-01 (deposit state, as restated in the final round): a marked note after the pointer note records that the vacuum of (ii) and (iv), any pure quasi-free state here, must be one over which the deposit is Hadamard if the deposit is to be Hadamard; for a massive Dirac field the instantaneous vacuum where ma'' is nonzero, and every deposit diagonal over it, are not Hadamard, and the shot-noise count does not decide the Hadamard property (claimrefs to the massive-Dirac and occupation-moment results, which use this one). No clause changed.'
+outside_ga:
+  kind: other
+  why: 'the CAR algebra is taken as the complexified Clifford algebra of the Majorana generators a + a^dagger and i(a^dagger - a), a complexification whose unit must commute with the generators'
 ---
 ## formal
 Let $\CAR$ be the CAR algebra of $n$ fermionic modes $a_{1}, \dots, a_{n}$, equivalently the complexified Clifford algebra of the $2n$ Majorana generators $a_{j} + a_{j}^{\dagger}$, $i(a_{j}^{\dagger} - a_{j})$, whose quadratic elements are its bivectors. Write $\alpha = (a_{1}, \dots, a_{n}, a_{1}^{\dagger}, \dots, a_{n}^{\dagger})$ and, for a state $\omega$, $\Gamma_{IJ} = \omega(\alpha_{J}^{\dagger}\alpha_{I})$, so $0 \le \Gamma \le 1$; $\omega$ is quasi-free when its truncated functions beyond second order vanish (Fact \claimref{hawking.imported-quasi-free-states-car-algebra}), and a quasi-free state is pure exactly when $\Gamma^{2} = \Gamma$. A quadratic Hermitian element is $O = \tfrac12\alpha^{\dagger}F\alpha$ with $F$ Hermitian of the particle-hole form; for a gauge-invariant state and a number-conserving $O = N_{f} = \sum_{ij}f_{ij}a_{i}^{\dagger}a_{j}$ these reduce to the one-particle density $E_{ij} = \omega(a_{j}^{\dagger}a_{i})$ and $f$. Write $\mathrm{sd}_{\omega}(O) = \mathrm{Var}_{\omega}(O)^{1/2}$.

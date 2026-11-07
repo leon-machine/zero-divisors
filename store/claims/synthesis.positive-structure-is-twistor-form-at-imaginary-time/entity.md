@@ -44,6 +44,10 @@ lineage:
   - synthesis.twistor-form-states-only-off-the-real-slice
   - synthesis.boost-stationary-incidence-vacua-read-interval
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i of J = i e_1 e_+, of the points +-i e_1 and x + iy, and of the imaginary boost is the plain unit of Cl(2,4)_C and of the complexified chart, which must commute with the vectors; declared (version and levels unchanged).'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -75,6 +79,9 @@ extraction:
     twistor space with the forward tube (Penrose), here re-proved from the stored statements; the
     elementary positivity argument of (iv) is standard. Transport-convenient: the incidence lines
     and the Witt-pair normalisation are the series' own; (iv) is transport-absent linear algebra.
+outside_ga:
+  kind: complex-analysis
+  why: 'the complexified Clifford algebra Cl(2,4)_C on its complex Fock module, the complex points m = x + iy of the forward tube (X(+-i e_1)), J = i e_1 e_+ and the imaginary boost keep the plain complex unit, which must commute with the vectors; no pseudoscalar of Cl(2,4) does'
 ---
 
 ## formal

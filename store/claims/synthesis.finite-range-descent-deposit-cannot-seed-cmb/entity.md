@@ -45,6 +45,10 @@ lineage:
   - synthesis.sudden-descent-feature-not-tilt
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced: the i is the kernel e^{-i k.r} of the Fourier transform of a scalar correlator; declared (version and levels unchanged).'
   open_problem: op.descent-state-and-spectrum
   maintainer_pass:
     by: maintainer-2026-10-23
@@ -59,6 +63,9 @@ extraction:
     by: maintainer-2026-11-01
     date: '2026-11-01'
     note: 'Version 4: a marked pointer note after the formal statement sends the classically modulated deposit to synthesis.adiabatic-deposit-modulation-is-a-time-shift (adiabatic only as a field of delays, still under the bound) and synthesis.local-conversion-cannot-redden-a-gaussian-spectator (the classical-modulation escape closed for Gaussian modulators), as claimrefs, not edges, since both results use this one. The pins to the Planck parameters and superhorizon-zeta Facts moved to their versions 2 and 3 (additions there are not used here). No clause changed.'
+outside_ga:
+  kind: complex-analysis
+  why: 'the power spectrum is the Fourier transform of a scalar correlator, kernel e^{-i k.r}: Fourier analysis of a scalar function in its own right, on which no pseudoscalar acts'
 ---
 
 ## formal

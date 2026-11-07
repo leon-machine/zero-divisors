@@ -1,7 +1,7 @@
 ---
 id: tower.structure-tower-c-norms
 kind: claim
-version: 7
+version: 8
 title: The *-structure of the tower, and its C*-norms
 status: proved
 region: tower
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T03, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 8
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 about:
 - obj.tower.tower
@@ -47,7 +51,14 @@ locators:
   number: Lem 5.4
   label: lem:cstar
   line: 409
+outside_ga:
+  kind: other
+  why: 'the result is about the complexified floors T_k^C, and the renormalisation y_i = i x_i applies the complexification''s scalar to ground generators, spacetime vectors among them, which no pseudoscalar commutes with'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (other): the result is about the complexified floors T_k^C, and the renormalisation y_i = i x_i applies the complexification''s scalar to ground generators, spacetime vectors among them, which no pseudoscalar commutes with.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

@@ -1,7 +1,7 @@
 ---
 id: scrambling.imported-modes-modular-inventory
 kind: claim
-version: 3
+version: 4
 title: 'Imported: the mode''s modular inventory'
 status: proved
 region: scrambling
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 4
+  source: maintainer pass 2026-11-07 (GA units)
 review: typed
 derivations:
 - name: main
@@ -41,7 +45,14 @@ locators:
   number: Fact 2.2
   label: fact:inventory
   line: 592
+outside_ga:
+  kind: complex-analysis
+  why: 'the continuation of the boost rotor to imaginary rapidity lives in the complexified atom, and the result states that its generator i sigma lies outside the real algebra, so no pseudoscalar of that algebra can stand for i'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced; every bare i stays and is declared outside_ga (complex-analysis): the continuation of the boost rotor to imaginary rapidity lives in the complexified atom, and the result states that its generator i sigma lies outside the real algebra, so no pseudoscalar of that algebra can stand for i.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

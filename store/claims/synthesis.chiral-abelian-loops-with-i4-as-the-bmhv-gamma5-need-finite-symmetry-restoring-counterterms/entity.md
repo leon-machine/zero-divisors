@@ -1,7 +1,7 @@
 ---
 id: synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms
 kind: claim
-version: 2
+version: 3
 title: 'Chiral abelian loops in BMHV need finite symmetry-restoring counterterms'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 3
+  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -54,6 +58,10 @@ lineage:
   motivated_by:
   - synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'gamma_5 = i I_4 is now the chirality x -> I_4 x I_4 (the left I_4 the BMHV element inside the product, the right one the unit); the Feynman-rule units, the loop prefactors and the values of the master integrals use the field theory''s unit I_4, numbers read in span{1, I_4} and collected outside the product; no bare i remains.'
   maintainer_pass:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -86,7 +94,7 @@ extraction:
 ---
 
 ## formal
-In $\Cl(1, D-1)$ (integer $D \geq 4$, signature $(1, D-1)$) call components along $\gamma_{0}, \ldots, \gamma_{3}$ barred and the rest (evanescent) hatted, $k = \bar k + \hat k$. Take the unit of the Feynman rules as a coefficient outside the product and $\gamma_{5} = iI_{4}$ with $I_{4} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$, the Breitenlohner-Maison-'t Hooft-Veltman element (Theorem \claimref{synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four}(iv); Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}), $P_{R,L} = \tfrac12(1 \pm \gamma_{5})$, and the trace $4\langle X\rangle_{0}$. A massless fermion of charge $Y$ couples to an abelian gauge field through the vertex $\bar\gamma^{\mu}P_{R}$ (or $\bar\gamma^{\mu}P_{L}$) with the full propagator numerator $k$; external momenta are four-dimensional. In the purely chiral formulation every field of the content couples this way.
+In $\Cl(1, D-1)$ (integer $D \geq 4$, signature $(1, D-1)$) call components along $\gamma_{0}, \ldots, \gamma_{3}$ barred and the rest (evanescent) hatted, $k = \bar k + \hat k$. Take the unit of the Feynman rules as the right unit $x \mapsto xI_{4}$, a coefficient outside the product (numbers read in $\mathrm{span}\{1, I_{4}\}$), and the chirality $\gamma_{5}$ as $x \mapsto I_{4}xI_{4}$: on the left $I_{4} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3}$ inside the product, the Breitenlohner-Maison-'t Hooft-Veltman element (Theorem \claimref{synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four}(iv); Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}), and on the right the unit; $P_{R,L} = \tfrac12(1 \pm \gamma_{5})$, and the trace $4\langle X\rangle_{0}$. A massless fermion of charge $Y$ couples to an abelian gauge field through the vertex $\bar\gamma^{\mu}P_{R}$ (or $\bar\gamma^{\mu}P_{L}$) with the full propagator numerator $k$; external momenta are four-dimensional. In the purely chiral formulation every field of the content couples this way.
 \begin{enumerate}
 \item[(i)] (The projectors delete the evanescent momentum.) $\bar\gamma^{\mu}P_{R}k\bar\gamma^{\nu}P_{R} = \bar\gamma^{\mu}\bar k\bar\gamma^{\nu}P_{R}$, the same with $P_{L}$, so around a closed loop of chiral vertices every propagator numerator is replaced by its barred part; $\hat k$ enters only through traces with zero scalar part.
 \item[(ii)] (Two-point contraction.) After $\ell^{a}\ell^{b} \to g^{ab}Q(\ell)/D$, the $\ell\ell$ part of the normalised numerator is $-\bar g^{\mu\nu}$ for the chiral loop and $\tfrac{2 - D}{2}\bar g^{\mu\nu}$ for half the vector-like Dirac loop, for $D = 4, \ldots, 8$; the difference is $\tfrac{D-4}{2}\bar g^{\mu\nu}$.
