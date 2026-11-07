@@ -79,7 +79,7 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
 outside_ga:
   kind: imported
-  why: 'i stays only in the Borchers relation Delta^{is} U(a) Delta^{-is}, quoted in the form of the imported Fact angle.imported-theorems-deliver-their-hypotheses'
+  why: 'i stays in the Borchers relation Delta^{is} U(a) Delta^{-is}, quoted in the form of the imported Fact angle.imported-theorems-deliver-their-hypotheses, and in the window commutator of the obstruction check, whose window algebra keeps its own unit'
 extraction:
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07

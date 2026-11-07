@@ -22,9 +22,6 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays only in the Mellin inversion of the wave trace, a contour integral of scalar functions in their own right; nothing else in the text uses an imaginary unit'
 derivations:
 - name: main
   uses:
@@ -53,6 +50,10 @@ lineage:
   - families.three-generations-faces-maximal-composite
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_unit_rulings_close:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Mellin inversion of the wave trace written with the unit I_4 (1/(2 pi I_4)), numbers read in span{1, I_4}, under Leon''s ruling of one unit throughout; the outside_ga declaration is removed since no bare i remains.'
   open_problem: op.einstein-from-the-field-theory
   note: >-
     Outside idea tested: Sakharov's induced gravity, with the attachment's positive-energy modules as the vacuum
