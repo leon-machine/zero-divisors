@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the phase flows written with the transverse unit J'
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -37,10 +41,11 @@ checked_by:
   ref: check.py::check_product_kms_and_no_common_state
 - kind: proof
   derivation: main
-outside_ga:
-  kind: complex-analysis
-  why: 'the phase flows Ad(e^{it f(r_k) K_k}), K_k = sigma_k/2, act on the slices'' matrix-factor atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the phase flows on the slices'' completed-pair atoms are written Ad(e^{J t f(r_k) K_k}) and Ad(e^{J t K_f}) with J = e_2 e_3, the atoms'' complex unit (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention); hypothesis (C) is otherwise unchanged. Declaration removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -79,7 +84,7 @@ extraction:
 ## formal
 Work in units $2M = 1$ on the collar of Fact \claimref{singularity.imported-interior-collar-kasner-form}, with $\kappa = \tfrac12$, $A = 1/r - 1$, and $\tau(r) = \int_{0}^{r}\sqrt{x/(1-x)}\,dx = \tfrac23 r^{3/2}S(r)$. By Proposition \claimref{singularity.modular-flow-boundary-modes-holonomy-universal} the $t$-line holonomy on the slice $r$ is the $B_{1}$ boost of that slice's completed pair, with rapidity rate $\rho(r) = 1/(2r^{2})$ per unit Killing time and, for $r < 1$, $\rho_{\mathrm{H}}(r) = \tau\,|A'|/(2\sqrt{A}) = \tfrac13 S(r)(1-r)^{-1/2}$ per unit Hubble-normalised parameter. Assume:
 \begin{enumerate}
-\item[(C)] for every finite set of slices $0 < r_{1} < \dots < r_{m} \le 1$ the collar algebra is the tensor product of the slices' matrix-factor atoms, each holonomy flow acting slice by slice as the phase flow $\operatorname{Ad}(e^{it f(r_{k})K_{k}})$ of its rate $f$, with $K_{k} = \sigma_{k}/2$; for the Hubble flow the slices satisfy $r_{m} < 1$, since $\rho_{\mathrm{H}}$ is not defined at the horizon.
+\item[(C)] for every finite set of slices $0 < r_{1} < \dots < r_{m} \le 1$ the collar algebra is the tensor product of the slices' matrix-factor atoms, each holonomy flow acting slice by slice as the phase flow $\operatorname{Ad}(e^{Jt f(r_{k})K_{k}})$ of its rate $f$, with $K_{k} = \sigma_{k}/2$ and $J = e_{2}e_{3}$ the atoms' complex unit, which commutes with them (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}); for the Hubble flow the slices satisfy $r_{m} < 1$, since $\rho_{\mathrm{H}}$ is not defined at the horizon.
 \end{enumerate}
 Call a flow with rate profile $f$ the Killing flow ($f = \rho$), the Hubble flow ($f = \rho_{\mathrm{H}}$, slices in $(0,1)$) or the rapidity flow ($f = 1$). Then:
 \begin{enumerate}

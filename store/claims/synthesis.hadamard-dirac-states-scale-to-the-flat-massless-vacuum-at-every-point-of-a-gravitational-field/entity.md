@@ -21,10 +21,11 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays only in the i0 shift of the spacetime separation: the boundary values sigma_{+-} with the i0 of a time function, the regulators sigma_l + i epsilon h_l and Q(z)/2 + i0 h, the flat boundary value Q(y - y'' - i0 e_0) and D_+(xi) = -1/(4 pi^2(Q(xi) - i0 xi_0)) as the imported Fact states it; no pseudoscalar commutes with the spacetime vectors, so none can stand for it, and every other unit is I_4 (the right unit on the bispinor kernels)'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 imported_from:
@@ -70,6 +71,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Folded into version 4 of this pass. The infinitesimal shift of the spacetime separation is written in scalar form with the field unit (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain): the boundary values sigma_{+-} with the -+ I_4 0 of a time function, the regulators sigma_l + I_4 epsilon h_l and Q(z)/2 + I_4 0 h, the flat boundary value Q(y - y) - I_4 0 <y - y, e_0> (from Q(y - y - i0 e_0): the square of the shifted vector is Q(xi) - 2 i 0 xi_0, so the scalar form is exact) and D_+(xi) = -1/(4 pi^2 (Q(xi) - I_4 0 xi_0)) of the imported Fact. A vector-form shift with I_5 is not used, since the kernels already carry I_4 and the two units must not meet in one distribution (I_4 I_5 = -e, not -1). No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -141,11 +146,11 @@ Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a gravitational field on four-dime
 \[
 H_{\pm} = -\frac{1}{8\pi^{2}}\Bigl(\frac{U}{\sigma_{\pm}} + V\log\sigma_{\pm}\Bigr),\qquad U(x, x') = \Delta^{1/2}(x, x')\,R(x, x'),
 \]
-where $\sigma$ is the Synge function of $g$ ($\sigma = \tfrac12 Q(x - x')$ on the flat field), $\sigma_{\pm}$ its boundary values with the $\mp i0$ of a time function, $\Delta$ the Van Vleck determinant, $R(x, x')$ the spinor transport rotor along the geodesic $\gamma$ from $x'$ ($t = 0$) to $x$ ($t = 1$), $\dot R = -\tfrac12\Omega(\dot\gamma)R$, $R(x', x') = 1$, and $V$ smooth (on the flat field $V(x, x) = -\tfrac12 m_{0}^{2}$). In this form $D_{x}\sigma = \hb^{-1}(\dot\gamma(1))$, the physical tangent of $\gamma$ at $x$ (proved).
+where $\sigma$ is the Synge function of $g$ ($\sigma = \tfrac12 Q(x - x')$ on the flat field), $\sigma_{\pm}$ its boundary values with the $\mp I_{4}0$ of a time function (an infinitesimal shift of the separation, written in scalar form: the square of a shifted vector is a number, Theorem \claimref{std-algebra.complexification-is-the-odd-extension}(iii)), $\Delta$ the Van Vleck determinant, $R(x, x')$ the spinor transport rotor along the geodesic $\gamma$ from $x'$ ($t = 0$) to $x$ ($t = 1$), $\dot R = -\tfrac12\Omega(\dot\gamma)R$, $R(x', x') = 1$, and $V$ smooth (on the flat field $V(x, x) = -\tfrac12 m_{0}^{2}$). In this form $D_{x}\sigma = \hb^{-1}(\dot\gamma(1))$, the physical tangent of $\gamma$ at $x$ (proved).
 \item[(ii)] \emph{(Taylor data in the store's dilation; computed.)} With $x = x_{0} + l y$, $x' = x_{0} + l y'$, $d = y - y'$, $\bar y = \tfrac12(y + y')$: $\sigma = l^{2}\sigma_{l}(y, y')$ with $\sigma_{l}$ jointly smooth down to $l = 0$ and $\sigma_{l} = \tfrac12 Q(d) + l\,d\cdot\bigl[(\bar y\cdot\nabla)\hb^{-1}\bigr](d)\big|_{x_{0}} + O(l^{2})$ (index reading $\tfrac{l}{2}(\partial_{\rho}g_{\mu\nu})(x_{0})\bar y^{\rho}d^{\mu}d^{\nu}$); $\Delta = 1 + \tfrac{l^{2}}{6}\Ric^{\circ}(d, d) + O(l^{3})$ with $\Ric^{\circ}(d, d) = -d\cdot\mathcal{R}(d)$ at $x_{0}$ (the store's Ricci map; at $x_{0}$ physical and background vectors agree); $R = 1 - \tfrac{l}{2}\Omega(d)(x_{0}) + O(l^{2})$, which is $1 - \tfrac{l^{2}}{2}(\bar y\cdot\nabla)\Omega(d)(x_{0}) + O(l^{3})$ when $\Omega(x_{0}) = 0$. The scaled Dirac operator is $lD = g^{\mu}(x_{0} + ly)(\partial_{y^{\mu}} + \tfrac{l}{2}\Omega(e_{\mu})(x_{0} + ly)) \to \nabla_{y}$, with mass term $lm_{0}$.
 \item[(iii)] \emph{(The scaling limit; standard, \cite[Prop.~5.6]{SahlmannVerch2001}, posed there for Majorana spinors with a normal-coordinate dilation and Dirac mass $m \ge 0$; imported as Fact \claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}(d); re-derived here, proved given the leading coefficient and the independence of the Hadamard form from the time function, Fact \claimref{synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport}.)} For every $m_{0} \ge 0$, at every point, whatever the Weyl and Ricci curvature, as $l \to 0^{+}$, in $\mathcal{D}'$ on a neighbourhood of $(0, 0)$,
 \[
-l^{3}\,\omega\bigl(\psi(x_{0} + ly)\psi^{\dagger}(x_{0} + ly')\bigr) \to \frac{I_{4}}{2\pi^{2}}\,\frac{(y - y')\,e_{0}}{Q(y - y' - i0e_{0})^{2}} = I_{4}\nabla D_{+}(y - y')\,e_{0},
+l^{3}\,\omega\bigl(\psi(x_{0} + ly)\psi^{\dagger}(x_{0} + ly')\bigr) \to \frac{I_{4}}{2\pi^{2}}\,\frac{(y - y')\,e_{0}}{\bigl(Q(y - y') - I_{4}0\,\ip{y - y'}{e_{0}}\bigr)^{2}} = I_{4}\nabla D_{+}(y - y')\,e_{0},
 \]
 and the other ordering tends to $-I_{4}\nabla D_{-}(y - y')e_{0}$ (even values, on which $I_{4}$ on the left and on the right agree), $D_{-} = \overline{D_{+}}$: the two-point functions of the vacuum of the massless Dirac field on the flat field in the stored normalisation (Fact \claimref{synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem}; the kernels of Theorem \claimref{synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes}(ii) at $m_{0} = 0$). Rates, in every gauge with $\hb(x_{0}) = 1$: the leading term converges at rate $l$ (the first derivatives of $\hb^{-1}$ at $x_{0}$); the mass term is $O(l)$; the connection and $D_{x}U$ terms are each $O(l)$ when $\Omega(x_{0}) \ne 0$, but their $O(l)$ parts cancel, so their sum is $O(l^{2})$ (each is $O(l^{2})$ when $\Omega(x_{0}) = 0$); the logarithmic term is $O(l^{2})$ (its $\log l$ part $O(l^{3}\log l)$); the $C^{1}$ remainder is $O(l^{3})$. Only $\hb(x_{0}) = 1$ is needed; $\Omega(x_{0}) = 0$ is not. Since $\omega$ is gauge-invariant and quasi-free, all its $n$-point functions converge: the scaling limit of $\omega$ at $x_{0}$ is the flat massless vacuum. This is clause (a) of Premise \claimref{synthesis.hadamard-scaling-limit-premise}, (HS), in its version 2, for every gravitational field in its scope; that clause is now retired from the premise, which is restated as a statement about the Hadamard parametrix restricted to horizon generators.
 \item[(iv)] \emph{(Normal-coordinate dilation; computed.)} If $N(x)$ are the normal coordinates at $x_{0}$, $\Phi_{l}(y) = l^{-1}N(x_{0} + ly) = y + \tfrac{l}{2}\Gamma(x_{0})(y, y) + O(l^{2})$, where, when $\Omega(x_{0}) = 0$, $\Gamma(x_{0})(a, b) = (a\cdot\nabla\hb^{-1})(b)|_{x_{0}}$; $\Phi_{l}$ tends to the identity with all derivatives, and $\sigma(x_{0}, x) = \tfrac12 Q(N(x))$. So the limit (iii) is the normal-coordinate scaling limit of Sahlmann and Verch, and the role of their $\Theta$ (the matrix of the Dirac conjugation composed with charge conjugation) is taken by the constant Dirac adjoint, the $e_{0}$ above.

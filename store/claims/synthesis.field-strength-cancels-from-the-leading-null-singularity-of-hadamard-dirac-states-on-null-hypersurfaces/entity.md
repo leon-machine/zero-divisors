@@ -21,10 +21,11 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays only in the i0 of a time function, the regulator sigma_epsilon = sigma + i epsilon s of the bulk parametrix and its transverse integrand: a shift of the spacetime separation along the time direction, which no pseudoscalar commuting with the vectors can replace; the evaluated kernels, logarithms and the null vacuum carry I_4'
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 - obj.hawking.continuum-mode-space
@@ -69,6 +70,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Folded into version 4 of this pass. The infinitesimal shift of the spacetime separation along a time function is written in scalar form with the field unit, the I_4 0 of the boundary values and the regulator sigma_epsilon = sigma + I_4 epsilon s with its transverse integrand (U3 scalar form, citing std-algebra.complexification-is-the-odd-extension(iii); U1, the Hadamard chain), so the regulator and the evaluated kernels and logarithms, already in span{1, I_4}, carry one unit. No i remains; declaration removed. Mathematics, links and checks unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

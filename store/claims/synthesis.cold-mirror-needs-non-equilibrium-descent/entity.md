@@ -54,7 +54,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 2 kept (already raised in this pass). The imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras: by U2 the boundary modes'' unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), so tau_{J beta}(A) = e^{-beta H} A e^{beta H}, the KMS continuation in the core result''s form. Declaration removed.'
+    note: 'Version 2 kept (already raised in this pass). The imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras: by U2 the boundary modes'' unit is J = e_2 e_3 (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention), written out as e_2 e_3 because J names the mode set here, so tau_{beta e_2 e_3}(A) = e^{-beta H} A e^{beta H}, the KMS continuation in the core result''s form. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

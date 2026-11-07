@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the pair flows written with the transverse unit J'
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -48,10 +52,11 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.collar-kms-extension-three-flows
   - synthesis.collar-kms-extension-completion-locus
-outside_ga:
-  kind: complex-analysis
-  why: 'the flows Ad(e^{+-isK}) and KMS uniqueness are taken on the frame atom Cl(1,3)_C and the factor Mat_2(C), whose scalar commutes with the spacetime vectors, which no pseudoscalar does'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U2: the flows Ad(e^{+-isK}) on the completed pair read by both t-plane horizons (proof of (iv)) are written Ad(e^{+-J s K}) with J = e_2 e_3, the pair''s complex unit, the factor Mat_2(C) being taken over span{1, J} (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention). Declaration removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

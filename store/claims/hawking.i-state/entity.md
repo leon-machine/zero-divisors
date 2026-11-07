@@ -51,7 +51,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Unit principle U2: the KMS continuation alpha_{i beta} of the boost dynamics on the boundary-mode algebra (modes of the radial atom) is written alpha_{J beta} with J = e_2 e_3, the modes'' complex unit, which on each mode is Ad(e^{-beta K}) (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention). The formal display's ''i.e.'' (a false positive of the detector) is written ''that is''. Declaration removed.'
+    note: 'Unit principle U2: the KMS continuation alpha_{i beta} of the boost dynamics on the boundary-mode algebra (modes of the radial atom) is written alpha_{J beta} with J = e_2 e_3, the modes'' complex unit, which on each mode is Ad(e^{-beta K}) (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the proof as a mention). The formal display''s ''i.e.'' (a false positive of the detector) is written ''that is''. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 6
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'unit resolution pass, the Killing flow written with the central unit of the odd extension'
+  version: 6
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.synthesis.cosmological-horizon-boundary-modes
@@ -48,10 +52,11 @@ lineage:
   - singularity.euclidean-section-period
   - mass.de-sitter-scale-frozen-point
   - standard-model.what
-outside_ga:
-  kind: complex-analysis
-  why: 'the Killing flow alpha_t(v) = e^{-it omega}v acts on the cosmological boundary modes, defined on the complexification of Cl(|J|,|J|), which contains no I_4'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit principle U3, as in the defining object: the static Killing flow on the cosmological boundary modes and the gluing in the proof are written with hat-I, the central unit of the odd extension of the modes'' Clifford algebra (obj.synthesis.cosmological-horizon-boundary-modes; std-algebra.complexification-is-the-odd-extension, cited as a mention): alpha_t(v) = e^{-hat-I t omega} v, F(t) = e^{-hat-I t omega} n. Declaration removed: no bare i remains.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
