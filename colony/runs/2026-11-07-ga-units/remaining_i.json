@@ -1,0 +1,1290 @@
+[
+ {
+  "id": "angle.imported-singularity-papers-state-selection",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/angle.imported-singularity-papers-state-selection",
+  "why": "the phase flow Ad(e^{itK}) acts on the complex mode factor of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known li"
+ },
+ {
+  "id": "angle.imported-theorems-deliver-their-hypotheses",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 4,
+  "path": "store/claims/angle.imported-theorems-deliver-their-hypotheses",
+  "why": "Borchers' theorem and the Bisognano-Wichmann modular groups Delta^{it} are quoted as their sources state them, on the Hilbert space of a general von Neumann algebra"
+ },
+ {
+  "id": "angle.wedge-reflection-translations-are-ascent",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 15,
+  "path": "store/claims/angle.wedge-reflection-translations-are-ascent",
+  "why": "the rapidity is continued to eta = i pi/2 with i a commuting scalar of the complexified algebra, so the rotor iB acts by x -> BxB, the wedge reflection; with I_4 in its place the rotor I_4 B acts by -"
+ },
+ {
+  "id": "correspondence.chirality-split-ordering-insensitivity-asd-sector",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 11,
+  "path": "store/claims/correspondence.chirality-split-ordering-insensitivity-asd-sector",
+  "why": "the i of the +-i eigenspaces is the scalar of the complexified Lorentz algebra so(1,3)_C, which must commute with the duality operator (on real bivectors, multiplication by I_4 up to sign), so no pseu"
+ },
+ {
+  "id": "correspondence.fock-model-complexified-ascended-algebra",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/correspondence.fock-model-complexified-ascended-algebra",
+  "why": "the Fock model is built over V_C, and its complex isotropic vector w_3 = b_3 + i b_4 needs a scalar that commutes with the vectors, which no pseudoscalar of Cl(2,4) does"
+ },
+ {
+  "id": "correspondence.incidence-relation-chart",
+  "subject": "conformal-spacetime",
+  "kind": "bridge",
+  "n": 3,
+  "path": "store/claims/correspondence.incidence-relation-chart",
+  "why": "clause (4)(iii) sets Penrose's incidence relation omega = i x pi, in its source's notation, beside its real-algebra form, and records that I_6 acts as -i on the complex module CS of Cl(2,4)_C"
+ },
+ {
+  "id": "correspondence.local-twistor-transport-ascended-spinor-connection",
+  "subject": "conformal-spacetime",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/correspondence.local-twistor-transport-ascended-spinor-connection",
+  "why": "the composite i epsilon (i P omega) in the proof is quoted in the two-spinor notation of the imported Fact (Penrose and Rindler), whose i is a scalar of that formalism; the bundle is the complex Fock "
+ },
+ {
+  "id": "correspondence.lorentzian-duality-complex-structure",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 6,
+  "path": "store/claims/correspondence.lorentzian-duality-complex-structure",
+  "why": "the +-i eigenvalues are taken on the complexification of the real space of 2-forms, whose scalar must commute with the Hodge star (on real bivectors, multiplication by I_4 up to sign), so no pseudosca"
+ },
+ {
+  "id": "correspondence.reality-conjugation-twistor-form-factor",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 16,
+  "path": "store/claims/correspondence.reality-conjugation-twistor-form-factor",
+  "why": "the proof works in the complex Fock module over V_C (b_4 = -(i/2)(w_3 + 2w_3'), the phases e^{i theta} of the Hermitian form, the rescaling by (3+4i)/5), whose scalar must commute with the vector acti"
+ },
+ {
+  "id": "dark-energy.acoustic-no-go-one-way-grip",
+  "subject": "dark-energy",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/dark-energy.acoustic-no-go-one-way-grip",
+  "why": "the U(1) gauge rotations and their characters e^{iq theta} act on the current algebra of the s-wave boundary-mode array, part of the boundary-mode algebra, whose modes descend from the atom of the spa"
+ },
+ {
+  "id": "dark-matter.premise-flag-as-datum",
+  "subject": "dark-matter",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/dark-matter.premise-flag-as-datum",
+  "why": "the flag is the +i eigenspace of a complex structure J on the complexification of R^{2,4}, and the premise compares J with the scalar i of the Fock module; that scalar commutes with the vectors, which"
+ },
+ {
+  "id": "families.rigidity-pairing-sector-one-event",
+  "subject": "generations",
+  "kind": "other",
+  "n": 0,
+  "path": "store/claims/families.rigidity-pairing-sector-one-event",
+  "why": "no bare i remains; the family-space algebra is written, as in its source, with the three-dimensional cross product (the cross-product matrices [a]_x, the channel cross products f_+ x f_- and u' x f_+,"
+ },
+ {
+  "id": "hawking.gibbs-states-are-kms-conversely-finite",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 8,
+  "path": "store/claims/hawking.gibbs-states-are-kms-conversely-finite",
+  "why": "the flow Ad(e^{itH}) and its continuation alpha_{i beta} are taken on the general matrix algebra End(C^m), not on a mode space the store ties to I_4"
+ },
+ {
+  "id": "hawking.i-state",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/hawking.i-state",
+  "why": "the KMS continuation alpha_{i beta} is taken in the boundary-mode algebra, which its definition builds over the complex numbers (windows End(Lambda C^F)); its modes descend from the atom of the spacet"
+ },
+ {
+  "id": "hawking.imported-modular-descent-premises-geometric-normalisation",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/hawking.imported-modular-descent-premises-geometric-normalisation",
+  "why": "the phase flow Ad(e^{it sigma/2}) of the completed pair is the scalar phase of the complexified atom, whose modes anticommute with I_4 (conventions, known limit 1); with I_4 in its place exp(I_4 t sig"
+ },
+ {
+  "id": "interior.complex-factorisation-location-ring",
+  "subject": "interior",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/claims/interior.complex-factorisation-location-ring",
+  "why": "the proof of (1) identifies the commutative subalgebra R + R I of Cl(1,3) with the complex numbers by x + Iy -> x + iy; the i is the unit of C on the other side of that comparison, which is the point "
+ },
+ {
+  "id": "interior.complex-scale-inverse-cube-killing-spinor",
+  "subject": "interior",
+  "kind": "bridge",
+  "n": 2,
+  "path": "store/claims/interior.complex-scale-inverse-cube-killing-spinor",
+  "why": "the result identifies span{1, I} with the complex numbers, matching I with the i of the imported Walker-Penrose Killing-spinor scalar r - ia cos(theta), which stays in its source's form; that comparis"
+ },
+ {
+  "id": "interior.imported-walker-penrose-killing-spinor",
+  "subject": "interior",
+  "kind": "imported",
+  "n": 3,
+  "path": "store/claims/interior.imported-walker-penrose-killing-spinor",
+  "why": "the Kerr invariant r - ia cos(theta) is quoted as Walker and Penrose state it; the series' reading of the factor as R + R I is given in interior.complex-scale-inverse-cube-killing-spinor"
+ },
+ {
+  "id": "mass.imported-unitary-representations-de-sitter-group",
+  "subject": "mass",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/mass.imported-unitary-representations-de-sitter-group",
+  "why": "the principal-series weight Delta = 3/2 + i nu is quoted as Dixmier and Higuchi state it, on the abstract Hilbert space of a unitary representation of SO(1,4), which the store does not build from geom"
+ },
+ {
+  "id": "one-relation.dirac-current-conserved-density",
+  "subject": "one-relation",
+  "kind": "bridge",
+  "n": 8,
+  "path": "store/claims/one-relation.dirac-current-conserved-density",
+  "why": "the lemma is stated and proved in a Mat(4, C) Dirac-matrix representation (the operator i gamma^mu d_mu, plane waves e^{-ip.x}, currents with complex matrix coefficients), with the Hestenes form J = p"
+ },
+ {
+  "id": "one-relation.two-capacities-three-consequences",
+  "subject": "one-relation",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/one-relation.two-capacities-three-consequences",
+  "why": "the null pairs (e + ie')/2, -(e - ie')/2 are complex null vectors of the complexified space V_C; their i must commute with the vectors e, e', which no pseudoscalar does"
+ },
+ {
+  "id": "one-relation.two-presentations",
+  "subject": "one-relation",
+  "kind": "other",
+  "n": 2,
+  "path": "store/claims/one-relation.two-presentations",
+  "why": "the complex Witt pair (e_2 + ie_3)/2, -(e_2 - ie_3)/2 of Cl(1,3)_C and Cl(2,4)_C is a pair of complex null vectors; their i must commute with the spacetime vectors, which no pseudoscalar does"
+ },
+ {
+  "id": "pairing.curvature-which-loops-move-vacuum",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/pairing.curvature-which-loops-move-vacuum",
+  "why": "the classes +-iM/r^3 are values of the pairing against the complex null vector m = (e_2 + i e_3)/sqrt 2, a plain complexification next to spacetime vectors, which no pseudoscalar commutes with"
+ },
+ {
+  "id": "pairing.pairing-functional-pair-creation-amplitude",
+  "subject": "thermality",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/pairing.pairing-functional-pair-creation-amplitude",
+  "why": "the bivectors are those of so(4, C), the complexified Clifford algebra on the two-mode Fock module, and the entries 0, -1, -i, 1, i of the proof come from the complex matrices of e_0, ..., e_3 there; "
+ },
+ {
+  "id": "pairing.regular-frame-class-vanishes-horizon-changes",
+  "subject": "thermality",
+  "kind": "other",
+  "n": 5,
+  "path": "store/claims/pairing.regular-frame-class-vanishes-horizon-changes",
+  "why": "the pairing classes are coordinates on the complexified tangent space of the complex null vector m = e_2 + i e_3, so the values -i(1 - beta)/r and +i(1 + beta)/r carry an i that must commute with the "
+ },
+ {
+  "id": "pairing.stabiliser-parabolic-algebra-null-direction",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 5,
+  "path": "store/claims/pairing.stabiliser-parabolic-algebra-null-direction",
+  "why": "the values +-i and 2i are values of a complex functional on so(4,C) built on the complex null tetrad m = e_2 + i e_3 in C^4, where i stands next to a spacetime vector and no pseudoscalar can replace i"
+ },
+ {
+  "id": "pairing.static-frame-only-expansion-survives",
+  "subject": "thermality",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/pairing.static-frame-only-expansion-survives",
+  "why": "the pairing classes are coordinates on the complexified tangent space of the complex null vector m = e_2 + i e_3, so the value -i sqrt(f)/r carries an i that must commute with the spacetime vectors, w"
+ },
+ {
+  "id": "rule2.odd-lorentzian-dimension-exactly-one-real",
+  "subject": "clifford-structure",
+  "kind": "other",
+  "n": 6,
+  "path": "store/claims/rule2.odd-lorentzian-dimension-exactly-one-real",
+  "why": "the common complexification Cl(p,q) (x) C is the subject; its scalar i (in i omega and e_i -> i e_i) commutes with every vector, which no pseudoscalar does"
+ },
+ {
+  "id": "rule2.rule-2-kaluza-klein-algebra",
+  "subject": "completion",
+  "kind": "bridge",
+  "n": 0,
+  "path": "store/claims/rule2.rule-2-kaluza-klein-algebra",
+  "why": "the two ideals are compared with the five-dimensional Dirac (gamma-matrix) representations of the imported Fact, stated in that source's language; the algebra itself is worked in GA"
+ },
+ {
+  "id": "rungs.rung-spinor-module-mixings",
+  "subject": "tower",
+  "kind": "other",
+  "n": 3,
+  "path": "store/claims/rungs.rung-spinor-module-mixings",
+  "why": "the generator (i I_3, -i I_3) of u(3) + u(3) and its eigenvalue i(j - k) act on the complexified module of T_n (x) C, whose scalar commutes with every generator, so no pseudoscalar can stand for it"
+ },
+ {
+  "id": "scrambling.clock-inventory-boundary-modes",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 6,
+  "path": "store/claims/scrambling.clock-inventory-boundary-modes",
+  "why": "in the proof the phase circle e^{i theta n} and its generator, i times a bivector, are exhibited as lying outside the real boundary-mode algebra (scalar centre); the adjoint eigenvalues +-i, +-i sqrt|"
+ },
+ {
+  "id": "scrambling.imported-modes-modular-inventory",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 5,
+  "path": "store/claims/scrambling.imported-modes-modular-inventory",
+  "why": "the continuation of the boost rotor to imaginary rapidity lives in the complexified atom, and the result states that its generator i sigma lies outside the real algebra, so no pseudoscalar of that alg"
+ },
+ {
+  "id": "singularity.euclidean-rotor-where-it-lies",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 30,
+  "path": "store/claims/singularity.euclidean-rotor-where-it-lies",
+  "why": "i is the formal unit of the complexified atom Mat_2(C) (lambda = i theta, R_{i theta}, i sigma, diag(e^{-+ i theta/2})), commuting with the vectors e_0 and e_1; clause (3) is the statement that i sigm"
+ },
+ {
+  "id": "singularity.euclidean-section-period",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 5,
+  "path": "store/claims/singularity.euclidean-section-period",
+  "why": "t_s = -i tau is the Wick rotation of the static Killing time coordinate, an analytic continuation of a scalar coordinate to a Riemannian section, not a unit acting on multivector values"
+ },
+ {
+  "id": "singularity.kms-uniqueness-factor",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/singularity.kms-uniqueness-factor",
+  "why": "the inner flow Ad(e^{itK}) and its continuation alpha_{i beta} are taken on a general complex matrix factor, not on a space the store ties to I_4"
+ },
+ {
+  "id": "singularity.l-stabiliser-tangent",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/singularity.l-stabiliser-tangent",
+  "why": "the complex Fock space of the singularity paper's atom (so(2 nu) + C, Spin(2 nu, C), the Majorana basis gamma_{2i} = i(v_i - v_i^*)) keeps a scalar i: the atom is built in the spacetime radial plane e"
+ },
+ {
+  "id": "singularity.matching-steps-4b-4c-join-equation",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/singularity.matching-steps-4b-4c-join-equation",
+  "why": "the phase flow Ad(e^{it sigma/2}) of the boundary pair is the complex phase whose real rotor flow is exp(lambda sigma/2); with I_4 in its place exp(I_4 t sigma/2) would be a rotor of the dual plane I "
+ },
+ {
+  "id": "singularity.modular-descent",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/claims/singularity.modular-descent",
+  "why": "the phase flow Ad(e^{it sigma/2}) and the modular flow Ad(rho^{it}) act on the complexified atom pair, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit"
+ },
+ {
+  "id": "singularity.modular-theory-matrix-factor-proved-outright",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 16,
+  "path": "store/claims/singularity.modular-theory-matrix-factor-proved-outright",
+  "why": "Tomita-Takesaki theory on the Hilbert space C^n (x) C^n of a full complex matrix factor (rho^{it}, Delta^{it}); the space is not one of the series' geometric-algebra mode spaces with unit I_4"
+ },
+ {
+  "id": "singularity.r-regularity-fixed-locus",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/claims/singularity.r-regularity-fixed-locus",
+  "why": "the KMS strip F(t + ip) and the phase flow Ad(e^{i t omega_k K_k}) act on the ladders {v_k, v_k^*} of T05's atom in the spacetime radial plane, whose modes anticommute with I_4 (conventions, known lim"
+ },
+ {
+  "id": "singularity.rate-discharge-hypothesis-iii",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 7,
+  "path": "store/claims/singularity.rate-discharge-hypothesis-iii",
+  "why": "the flow alpha_t(v) = e^{-it omega}v and the KMS gluing act on the atom mode factor, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not its unit"
+ },
+ {
+  "id": "singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 6,
+  "path": "store/claims/singularity.rate-rigidity-temperature-not-algebra-intrinsic",
+  "why": "the phase flow Ad(e^{itK}) acts on the complex single-mode matrix factor of the atom, whose modes anticommute with I_4 (conventions, known limit 1); the proof also uses complex determinants of e^{itK}"
+ },
+ {
+  "id": "singularity.schmidt-forcing-proved-outright",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 5,
+  "path": "store/claims/singularity.schmidt-forcing-proved-outright",
+  "why": "the boost acts on the doubled mode C^2 (x) C^2 by the unitary group e^{itG} in the cyclic-and-separating setting of modular theory; these are atom modes, with which I_4 anticommutes, so I_4 is not the"
+ },
+ {
+  "id": "singularity.two-kms-functionals-sign",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 5,
+  "path": "store/claims/singularity.two-kms-functionals-sign",
+  "why": "the flow Ad(e^{it omega K}) and its continuation alpha_{i beta} act on the atom mode factor, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not its unit"
+ },
+ {
+  "id": "standard-model.pair-count-dimension",
+  "subject": "standard-model",
+  "kind": "other",
+  "n": 2,
+  "path": "store/claims/standard-model.pair-count-dimension",
+  "why": "the dimension count works on the complexified conformal vector space (C^{n+2}, split by (y_1 + iy_2)(y_1 - iy_2)); that complexification must commute with the vectors, which no pseudoscalar does"
+ },
+ {
+  "id": "state-selection.euclidean-partner-curvature-selected",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 8,
+  "path": "store/claims/state-selection.euclidean-partner-curvature-selected",
+  "why": "lambda -> i theta names the continuation before its unit is fixed: clause (3) states it as an analogy between the two rotor flows of the pair and clause (4) reads its unit as I_6; writing I_4 in (3) w"
+ },
+ {
+  "id": "state-selection.rate-discharge-hypothesis-iii",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 6,
+  "path": "store/claims/state-selection.rate-discharge-hypothesis-iii",
+  "why": "the KMS strip i beta and the continuation lambda -> i theta in the proof are those of T05's single-mode atoms in the spacetime radial plane and of the partner result, which keep a commuting complex un"
+ },
+ {
+  "id": "std-algebra.bivector-exponential",
+  "subject": "standard-algebra",
+  "kind": "bridge",
+  "n": 2,
+  "path": "store/claims/std-algebra.bivector-exponential",
+  "why": "the lay level compares the bivector exponential with e^{i theta} turning the complex plane, the familiar form the result generalises"
+ },
+ {
+  "id": "std-algebra.complex-clifford-algebra",
+  "subject": "standard-algebra",
+  "kind": "other",
+  "n": 13,
+  "path": "store/claims/std-algebra.complex-clifford-algebra",
+  "why": "the result is about Clifford algebras of complex quadratic spaces, whose scalar i (in w_j = (e_{2j-1} + i e_{2j})/2, omega_C, e_j -> i e_j e_n) commutes with every vector, which no pseudoscalar does"
+ },
+ {
+  "id": "std-algebra.complex-numbers",
+  "subject": "standard-algebra",
+  "kind": "bridge",
+  "n": 8,
+  "path": "store/claims/std-algebra.complex-numbers",
+  "why": "the result identifies the complex numbers a + b i with Cl(0,1) and with the even part of the plane, so it names the abstract field C and its unit i to connect them with geometric algebra"
+ },
+ {
+  "id": "std-algebra.complexification",
+  "subject": "standard-algebra",
+  "kind": "other",
+  "n": 3,
+  "path": "store/claims/std-algebra.complexification",
+  "why": "the complexification Cl(V) (x) C is the subject, and its scalar i (epsilon_i = i e_i) commutes with every vector, which no pseudoscalar does; where omega squares to -1 the result already names omega a"
+ },
+ {
+  "id": "std-algebra.pauli-algebra",
+  "subject": "standard-algebra",
+  "kind": "bridge",
+  "n": 6,
+  "path": "store/claims/std-algebra.pauli-algebra",
+  "why": "the result connects Cl(3,0) with the Pauli matrices, whose complex entries carry i, and shows that i is the image of the pseudoscalar e_1e_2e_3"
+ },
+ {
+  "id": "std-algebra.square-roots-of-minus-one",
+  "subject": "standard-algebra",
+  "kind": "other",
+  "n": 22,
+  "path": "store/claims/std-algebra.square-roots-of-minus-one",
+  "why": "the classification is over the abstract matrix algebras Mat_m(C) and Mat_m(H): the eigenvalues +-i and the quaternion unit (through R_i) are scalars of those algebras, not elements of a Clifford algeb"
+ },
+ {
+  "id": "synthesis.affine-cell-boost-spreads-without-scrambling",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.affine-cell-boost-spreads-without-scrambling",
+  "why": "the proof quotes Borchers' relation Delta^{it}U(a)Delta^{-it} from the imported Fact and works with the one-particle space L^2 of the generator's cells, whose complex structure the store does not tie "
+ },
+ {
+  "id": "synthesis.attachment-conformal-energy-is-generated-by-z",
+  "subject": "conformal-spacetime",
+  "kind": "complex-analysis",
+  "n": 30,
+  "path": "store/claims/synthesis.attachment-conformal-energy-is-generated-by-z",
+  "why": "the module is realised on C^8 by Jordan-Wigner matrices (e_1 = i g_3) and the twistor oscillators act on a bosonic Fock space; i is the scalar of these complex Hilbert spaces, which commutes with the "
+ },
+ {
+  "id": "synthesis.boost-evolution-on-generators-is-one-unitary-group",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.boost-evolution-on-generators-is-one-unitary-group",
+  "why": "the proof quotes the windows' boost dynamics a_j -> e^{-i omega_j t}a_j with i: window flows on boundary modes keep their own unit (their modes descend from T05's atom and anticommute with I_4, conven"
+ },
+ {
+  "id": "synthesis.boundary-mode-first-law-of-entanglement",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.boundary-mode-first-law-of-entanglement",
+  "why": "the proof works on the window's Fock space as the tensor product of copies of C^2, a full matrix algebra with density matrices and a GNS purification: Hilbert-space structure that the entity does not "
+ },
+ {
+  "id": "synthesis.boundary-mode-locality-is-descent-covariance",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/synthesis.boundary-mode-locality-is-descent-covariance",
+  "why": "the flows Ad(e^{itH}) act on the window algebras of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and"
+ },
+ {
+  "id": "synthesis.boundary-mode-premises-finite-models",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 7,
+  "path": "store/claims/synthesis.boundary-mode-premises-finite-models",
+  "why": "the finite models are T05's single-mode atoms Mat_2(C) with the phase flow Ad(e^{i t omega_k K_k}) and the gauge phases e^{i theta}v_k; their modes lie in the spacetime radial plane and anticommute wi"
+ },
+ {
+  "id": "synthesis.c-loc-modular-clause-moves-no-nested-patch",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 12,
+  "path": "store/claims/synthesis.c-loc-modular-clause-moves-no-nested-patch",
+  "why": "the boundary-mode algebra's phase flow e^{-i omega_j t}, its GNS unitaries and modular group Delta^{is}, and the check's Gaussian step (3 + 4i)/5 keep i: the boundary modes descend from T05's atom, wh"
+ },
+ {
+  "id": "synthesis.clausius-heat-exceeds-created-modes-killing-energy",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.clausius-heat-exceeds-created-modes-killing-energy",
+  "why": "the boost dynamics Ad(e^{itH_F}) acts on the window algebra End(Lambda C^F) of the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conv"
+ },
+ {
+  "id": "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+  "subject": "quantum-fields",
+  "kind": "complex-analysis",
+  "n": 9,
+  "path": "store/claims/synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+  "why": "the module is the irreducible representation of the complexified Cl(2,4) with a Hermitian structure; its scalar i must commute with the generators (J = i e_1 e_+, the complex null mode (e_1 + i e_+)/2"
+ },
+ {
+  "id": "synthesis.cold-mirror-needs-non-equilibrium-descent",
+  "subject": "dark-matter",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.cold-mirror-needs-non-equilibrium-descent",
+  "why": "the KMS identity is tested with the imaginary-time continuation tau_{i beta} of the boundary-mode dynamics on window algebras, part of the boundary-mode algebra, whose modes descend from the atom of t"
+ },
+ {
+  "id": "synthesis.collar-isotropy-selects-t-boost",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 5,
+  "path": "store/claims/synthesis.collar-isotropy-selects-t-boost",
+  "why": "the frame atom is the complexification Cl(1,3)_C = Mat_4(C), its i central and commuting with the vectors; the flow Ad(e^{itK}) with K = (B_b + iB_c)/2 acts on the odd elements too, where I_4 anticomm"
+ },
+ {
+  "id": "synthesis.collar-kms-extension-completion-locus",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/claims/synthesis.collar-kms-extension-completion-locus",
+  "why": "the holonomy phase flows Ad(e^{is f(r) K_P}), K_p = sigma_p/2, act on the CAR algebra of the atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit"
+ },
+ {
+  "id": "synthesis.collar-kms-extension-three-flows",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.collar-kms-extension-three-flows",
+  "why": "the phase flows Ad(e^{it f(r_k) K_k}), K_k = sigma_k/2, act on the slices' matrix-factor atoms, whose modes anticommute with I_4 (conventions, known limit 1), so I_4 is not their unit"
+ },
+ {
+  "id": "synthesis.collar-temperature-fixed-locally-by-r-loc",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.collar-temperature-fixed-locally-by-r-loc",
+  "why": "the flows Ad(e^{+-isK}) and KMS uniqueness are taken on the frame atom Cl(1,3)_C and the factor Mat_2(C), whose scalar commutes with the spacetime vectors, which no pseudoscalar does"
+ },
+ {
+  "id": "synthesis.cosmological-horizon-completed-pair",
+  "subject": "thermality",
+  "kind": null,
+  "n": 1,
+  "path": "store/claims/synthesis.cosmological-horizon-completed-pair",
+  "why": ""
+ },
+ {
+  "id": "synthesis.counted-unit-energy-at-half-offset",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/synthesis.counted-unit-energy-at-half-offset",
+  "why": "the modular parameter tau = i beta kappa/2 pi of the array's torus, its self-dual point tau = i and the theta-function argument i y/2 pi keep i: they are complex analysis of modular forms"
+ },
+ {
+  "id": "synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation",
+  "subject": "clifford-structure",
+  "kind": "other",
+  "n": 10,
+  "path": "store/claims/synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation",
+  "why": "the result is about complex conjugation kappa on Cl(2,4) (x) C and the Witt flag in C^6 spanned by e_{2k-2} - i e_{2k-1}; that i must commute with every vector, and I_6 psi_W = +-i psi_W compares I_6 "
+ },
+ {
+  "id": "synthesis.de-sitter-field-fixes-the-observer-tube-point",
+  "subject": "one-relation",
+  "kind": "complex-analysis",
+  "n": 15,
+  "path": "store/claims/synthesis.de-sitter-field-fixes-the-observer-tube-point",
+  "why": "the tube points m = x_perp + i rho u, V(m) = i ell u and the complexified null vector X(m) = alpha + i beta with its real and imaginary parts live in the complexification of the conformal vectors, who"
+ },
+ {
+  "id": "synthesis.de-sitter-temperature-frozen-point-norm",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/claims/synthesis.de-sitter-temperature-frozen-point-norm",
+  "why": "the Killing flow alpha_t(v) = e^{-it omega}v acts on the cosmological boundary modes, defined on the complexification of Cl(|J|,|J|), which contains no I_4"
+ },
+ {
+  "id": "synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 16,
+  "path": "store/claims/synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface",
+  "why": "i stays only in the regulator sigma + i epsilon(t(x) - t(x')) of the bulk kernels and the i0 sgn v it carries through the Morse-coordinate computation of the layer kernel and onto the light cone: a sh"
+ },
+ {
+  "id": "synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 13,
+  "path": "store/claims/synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car",
+  "why": "i stays only in the i epsilon regulator of the bulk parametrix, sigma + i epsilon s with s from a time function, and the i0 it produces (a shift of the spacetime separation along the time direction, w"
+ },
+ {
+  "id": "synthesis.eviction-keeps-one-of-catalan-many-replica-saddles",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/synthesis.eviction-keeps-one-of-catalan-many-replica-saddles",
+  "why": "the Haar computation is on random pure states of the abstract Hilbert spaces C^d (x) C^d and C^D, Hilbert-space structure that the store does not build from geometric-algebra modes"
+ },
+ {
+  "id": "synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 7,
+  "path": "store/claims/synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces",
+  "why": "i stays only in the i0 of a time function, the regulator sigma_epsilon = sigma + i epsilon s of the bulk parametrix and its transverse integrand: a shift of the spacetime separation along the time dir"
+ },
+ {
+  "id": "synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+  "subject": "dark-energy",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+  "why": "the power spectrum is the Fourier transform of a scalar correlator, kernel e^{-i k.r}: Fourier analysis of a scalar function in its own right, on which no pseudoscalar acts"
+ },
+ {
+  "id": "synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 8,
+  "path": "store/claims/synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+  "why": "i stays only in the i0 shift of the spacetime separation: the boundary values sigma_{+-} with the i0 of a time function, the regulators sigma_l + i epsilon h_l and Q(z)/2 + i0 h, the flat boundary val"
+ },
+ {
+  "id": "synthesis.hadamard-scaling-limit-premise",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/claims/synthesis.hadamard-scaling-limit-premise",
+  "why": "i stays only in the i0 regularisation of the bulk kernel, the shift of the spacetime separation along the time direction (Q(y - y' - i0 e_0), in scalar form sigma + i epsilon(t(x) - t(x'))): no pseudo"
+ },
+ {
+  "id": "synthesis.half-integer-weight-array-carries-half-ln2",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 16,
+  "path": "store/claims/synthesis.half-integer-weight-array-carries-half-ln2",
+  "why": "the array's Killing flow e^{-i omega_k t} on its modes, its value e^{-2 pi i(k + delta)} and the window element e^{2 pi iK} keep i (a boundary-mode window flow, whose modes descend from T05's atom and"
+ },
+ {
+  "id": "synthesis.imported-alvarez-gaume-witten-local-anomalies",
+  "subject": "dark-matter",
+  "kind": "imported",
+  "n": 1,
+  "path": "store/claims/synthesis.imported-alvarez-gaume-witten-local-anomalies",
+  "why": "the anomaly polynomial tr e^{iF/2 pi} is quoted as Alvarez-Gaume and Witten state it, with F a Lie-algebra-valued curvature in their conventions"
+ },
+ {
+  "id": "synthesis.imported-bessel-reduction-and-small-argument-hankel-forms",
+  "subject": "dark-energy",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-bessel-reduction-and-small-argument-hankel-forms",
+  "why": "the small-argument Hankel forms H_nu(z) ~ -(i/pi) Gamma(nu)(2/z)^nu and H_0(z) ~ (2i/pi) ln z are quoted as the source states them, with i the unit of complex analysis"
+ },
+ {
+  "id": "synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions",
+  "why": "Bochner's theorem for complex-valued functions on the line, f(tau) = int e^{-i nu tau} d mu(nu), is quoted as its source states it: Fourier analysis of scalar functions in their own right"
+ },
+ {
+  "id": "synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 1,
+  "path": "store/claims/synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability",
+  "why": "the Condition of Geometric Modular Action and the Modular Stability Condition, with Delta_W^{it}, are quoted as Buchholz, Florig and Summers state them on a general Hilbert space"
+ },
+ {
+  "id": "synthesis.imported-de-sitter-invariant-hadamard-state-unique",
+  "subject": "dark-energy",
+  "kind": "imported",
+  "n": 3,
+  "path": "store/claims/synthesis.imported-de-sitter-invariant-hadamard-state-unique",
+  "why": "the large-argument Hankel expansion H_nu(z) ~ sqrt(2/pi z) e^{i(z - nu pi/2 - pi/4)}(1 + i(4 nu^2 - 1)/8z + ...) is quoted as the source states it, complex analysis of Bessel functions"
+ },
+ {
+  "id": "synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 1,
+  "path": "store/claims/synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field",
+  "why": "the factor -i appears only in the source's normalisation u = -iSp' gamma u_0, quoted as Dimock states it beside the store's normalisation, in which no such factor appears"
+ },
+ {
+  "id": "synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 1,
+  "path": "store/claims/synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard",
+  "why": "the Dirac operator nabla-slash + im and the fibres identified with C^r are quoted as Sahlmann and Verch state them"
+ },
+ {
+  "id": "synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem",
+  "why": "the massless two-point function -1/(4 pi^2 (Q(xi) - i0 xi_0)) is quoted with its source's i0 prescription, the boundary value of a scalar distribution in the complex plane"
+ },
+ {
+  "id": "synthesis.imported-fritzsch-texture-cabibbo-formula",
+  "subject": "generations",
+  "kind": "imported",
+  "n": 4,
+  "path": "store/claims/synthesis.imported-fritzsch-texture-cabibbo-formula",
+  "why": "the Cabibbo formula sin theta_C = |R_u - R_d e^{-i psi}| is quoted as Fritzsch and Xing state it, with i the unit of the imported complex mass matrices"
+ },
+ {
+  "id": "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+  "why": "the i0 prescription of the Hadamard form (the distributions 1/sigma and log sigma as boundary values) is quoted as Kay and Wald and Sahlmann and Verch state it, a boundary value in the complex plane"
+ },
+ {
+  "id": "synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 5,
+  "path": "store/claims/synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem",
+  "why": "Kuckert's theorem and Borchers' relation Delta^{it}U(s)Delta^{-it} = U(e^{-2 pi t}s) are quoted as their sources state them on a general Hilbert space"
+ },
+ {
+  "id": "synthesis.imported-left-right-bidoublet-two-yukawa-couplings",
+  "subject": "standard-model",
+  "kind": "imported",
+  "n": 6,
+  "path": "store/claims/synthesis.imported-left-right-bidoublet-two-yukawa-couplings",
+  "why": "the left-right model's Yukawa Lagrangian, the conjugate bidoublet tau_2 Phi^* tau_2 and the mass matrices with the phases e^{-+ i theta} are quoted with the complex unit i and the Pauli matrix tau_2 a"
+ },
+ {
+  "id": "synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 0,
+  "path": "store/claims/synthesis.imported-loewner-theorem-and-yafaev-hankel-sign-criterion",
+  "why": "two theorems of real and complex analysis (Pick functions on the upper half-plane, Laplace transforms of measures), quoted in their sources' language"
+ },
+ {
+  "id": "synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra",
+  "subject": "dark-energy",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-mehler-formula-hermite-rank-and-power-law-spectra",
+  "why": "the Fourier convention P(k) = int e^{-i k.x} xi(x) d^3x is quoted as the sources state it, Fourier analysis of scalar functions"
+ },
+ {
+  "id": "synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection",
+  "why": "modular objects of the CAR algebra on a complex Hilbert space (antiunitary conjugations, the Klein twist), quoted in their sources' language"
+ },
+ {
+  "id": "synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+  "subject": "quantum-fields",
+  "kind": "imported",
+  "n": 8,
+  "path": "store/claims/synthesis.imported-one-loop-integrals-and-pauli-villars-regulators",
+  "why": "the Wick rotation l_0 = i l_{E,0}, the values of the rotated integrals and the photon propagator -i/(k^2 + i0) are quoted as their sources (Weinzierl, Peskin and Schroeder) state them, a contour argum"
+ },
+ {
+  "id": "synthesis.imported-theta-function-identities",
+  "subject": "entropy",
+  "kind": "imported",
+  "n": 18,
+  "path": "store/claims/synthesis.imported-theta-function-identities",
+  "why": "the theta-function identities, with q = e^{2 pi i tau} and the factor sqrt(-i tau) of tau -> -1/tau, are quoted as Whittaker-Watson and Mumford state them, complex analysis of modular forms"
+ },
+ {
+  "id": "synthesis.incidence-vacua-thermofield-real-capacity",
+  "subject": "one-relation",
+  "kind": "other",
+  "n": 11,
+  "path": "store/claims/synthesis.incidence-vacua-thermofield-real-capacity",
+  "why": "the result compares the complexification Cl(p,q)_C, V_C with its real form: the modes (g + ih)/2 and c = (e_3 + i e_4)/2 are complex null vectors, the projector (1 - i e_3e_4)/2 and the value +-i on e"
+ },
+ {
+  "id": "synthesis.injection-freshness-is-pair-purity",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.injection-freshness-is-pair-purity",
+  "why": "the pair state psi = c|00> + e^{i phi} s|11> lives in the abstract qubit spaces H_W = H_R = C^2, Hilbert-space structure that the entity does not build from geometric-algebra modes"
+ },
+ {
+  "id": "synthesis.killing-clock-weights-binary-residue",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.killing-clock-weights-binary-residue",
+  "why": "the Killing flow Ad(e^{it sum omega_j K_j}), K_j = sigma_j/2, acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, "
+ },
+ {
+  "id": "synthesis.lens-space-wall-rung-count-sees-the-integral-twist",
+  "subject": "walls",
+  "kind": "other",
+  "n": 0,
+  "path": "store/claims/synthesis.lens-space-wall-rung-count-sees-the-integral-twist",
+  "why": "C stays only in the classical remark, not used in the proof, that L + L is the realification of the complex line bundle L tensor C, whose first Chern class is the integral Bockstein of x"
+ },
+ {
+  "id": "synthesis.local-boost-temperature-is-local-regularity",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 15,
+  "path": "store/claims/synthesis.local-boost-temperature-is-local-regularity",
+  "why": "the boundary-mode and window flows e^{-iw_j lambda}, Ad(e^{i lambda K}), their modular flow rho^{is} and the KMS strip lambda + 2 pi i keep i (the modes descend from T05's atom, whose operators antico"
+ },
+ {
+  "id": "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+  "subject": "quantum-fields",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+  "why": "the imported two-point function is quoted as the boundary value -1/(4 pi^2 (Q(xi) - i0 xi_0)) of a scalar distribution, an i0 prescription in the complex plane of xi_0; only its real spacelike value e"
+ },
+ {
+  "id": "synthesis.modular-period-on-values-is-the-dual-plane-turn",
+  "subject": "quantum-fields",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.modular-period-on-values-is-the-dual-plane-turn",
+  "why": "the KMS relation in (iii) is for the phase flow a -> e^{-iw lambda}a on the completed pair of Cl(1,1), built from e_0 and e_1, whose mode operators anticommute with I_4 (the conventions' first known l"
+ },
+ {
+  "id": "synthesis.null-ordering-of-counted-units-is-zeta-symmetric",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.null-ordering-of-counted-units-is-zeta-symmetric",
+  "why": "the twist phase e^{2 pi i delta} of the chiral component on a window keeps i: it is a window flow on boundary modes, which descend from T05's atom and anticommute with I_4 (conventions, known limits 1"
+ },
+ {
+  "id": "synthesis.number-diagonal-dynamics-spreads-nothing",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 32,
+  "path": "store/claims/synthesis.number-diagonal-dynamics-spreads-nothing",
+  "why": "the phase flow e^{itH}, the unitaries cos theta + i sin theta sigma, the factors cos 2Jt - i sin 2Jt sigma_k and the terms e^{i omega t} act on the completed pairs of the singularity paper, whose atom"
+ },
+ {
+  "id": "synthesis.one-loop-qed-in-the-spacetime-algebra",
+  "subject": "quantum-fields",
+  "kind": "bridge",
+  "n": 4,
+  "path": "store/claims/synthesis.one-loop-qed-in-the-spacetime-algebra",
+  "why": "i stays only in the Dirac-matrix reading set beside the algebra: the check's Dirac matrices over Q(i), gamma_5 = i gamma_0 gamma_1 gamma_2 gamma_3 and the Gordon term gamma^mu ^ q = -i sigma^{mu nu} q"
+ },
+ {
+  "id": "synthesis.pati-salam-chain-defects-cannot-source-spectrum",
+  "subject": "dark-energy",
+  "kind": "bridge",
+  "n": 29,
+  "path": "store/claims/synthesis.pati-salam-chain-defects-cannot-source-spectrum",
+  "why": "the group elements are written as complex matrices in the defining representations of SU(4), SU(2)_L, SU(2)_R and U(1)_Y (exp(3 pi i(B - L)), diag(e^{i theta/6}U_3, e^{-i theta/2}), the centre i^a 1_4"
+ },
+ {
+  "id": "synthesis.phase-flow-is-time-rotor-flow-kms-continuation",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 29,
+  "path": "store/claims/synthesis.phase-flow-is-time-rotor-flow-kms-continuation",
+  "why": "i is the unit of the complexified windows Cl(p,q)_C and of V_C (phase flow Ad(e^{itH}), the common phase e^{-i kappa t}, the continuation tau_{-i lambda}, the check over Q(i)); the frame *-structure i"
+ },
+ {
+  "id": "synthesis.plane-grading-records-residue-sign",
+  "subject": "tower",
+  "kind": "other",
+  "n": 10,
+  "path": "store/claims/synthesis.plane-grading-records-residue-sign",
+  "why": "clauses (iv) and (v) work in the complexified floors: the phase flow Ad(exp(it sum omega_j K_j)) and the map x_i -> i y_i need a scalar commuting with every ground and plane generator, which no pseudo"
+ },
+ {
+  "id": "synthesis.point-spectrum-boost-admits-no-half-sided-translations",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 17,
+  "path": "store/claims/synthesis.point-spectrum-boost-admits-no-half-sided-translations",
+  "why": "the boundary-mode algebra's boost dynamics e^{-i omega_j t}, Ad(e^{itK}) on its windows, [K, P] = icP and the GNS and modular unitaries Delta^{is} keep i: the boundary modes descend from T05's atom, w"
+ },
+ {
+  "id": "synthesis.positive-conformal-energy-gives-positive-null-translations",
+  "subject": "conformal-spacetime",
+  "kind": "complex-analysis",
+  "n": 9,
+  "path": "store/claims/synthesis.positive-conformal-energy-gives-positive-null-translations",
+  "why": "the hypothesis is an arbitrary continuous unitary representation of Spin+(2,4) on a GNS Hilbert space, and -i d pi(Y) is its self-adjoint generator; the store does not tie that space's complex structu"
+ },
+ {
+  "id": "synthesis.positive-energy-selects-rule-2-sign",
+  "subject": "completion",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.positive-energy-selects-rule-2-sign",
+  "why": "positive energy is the spectrum condition on -i d pi(X) for a unitary representation of Spin(p, q) on an abstract complex Hilbert space, as in the imported invariant-cone classification, and the real "
+ },
+ {
+  "id": "synthesis.positive-null-energy-gives-r-premises",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/claims/synthesis.positive-null-energy-gives-r-premises",
+  "why": "i stays in the Borchers relation Delta^{is} U(a) Delta^{-is}, quoted in the form of the imported Fact angle.imported-theorems-deliver-their-hypotheses, and in the window commutator of the obstruction "
+ },
+ {
+  "id": "synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 6,
+  "path": "store/claims/synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale",
+  "why": "the tube point i rho e_0 is a point of complexified spacetime and J = i e_1 e_+ acts on the module of the complexified Cl(2,4); both i multiply spacetime or conformal vectors, which no pseudoscalar co"
+ },
+ {
+  "id": "synthesis.positive-structure-is-twistor-form-at-imaginary-time",
+  "subject": "one-relation",
+  "kind": "complex-analysis",
+  "n": 26,
+  "path": "store/claims/synthesis.positive-structure-is-twistor-form-at-imaginary-time",
+  "why": "the complexified Clifford algebra Cl(2,4)_C on its complex Fock module, the complex points m = x + iy of the forward tube (X(+-i e_1)), J = i e_1 e_+ and the imaginary boost keep the plain complex uni"
+ },
+ {
+  "id": "synthesis.principality-is-genericity",
+  "subject": "programme",
+  "kind": null,
+  "n": 2,
+  "path": "store/claims/synthesis.principality-is-genericity",
+  "why": ""
+ },
+ {
+  "id": "synthesis.q-splits-maximum-entropy-affine-weights",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 20,
+  "path": "store/claims/synthesis.q-splits-maximum-entropy-affine-weights",
+  "why": "the geometric boost flow e^{itK_geo}(.)e^{-itK_geo} and the phases e^{-i omega_k t} on the window's modes, with the window read over C, keep i: they are flows on boundary-mode windows, whose modes des"
+ },
+ {
+  "id": "synthesis.quadratic-flows-cannot-thermalise-descent",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 11,
+  "path": "store/claims/synthesis.quadratic-flows-cannot-thermalise-descent",
+  "why": "the quadratic flows Ad(e^{itX_k}) on the boundary-mode algebra, their phases on coherences and pairings, the one-particle unitary e^{-itk}, its Cayley form and the check's field Q(i) keep i: the bound"
+ },
+ {
+  "id": "synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise",
+  "subject": "dark-energy",
+  "kind": "other",
+  "n": 1,
+  "path": "store/claims/synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise",
+  "why": "the CAR algebra is taken as the complexified Clifford algebra of the Majorana generators a + a^dagger and i(a^dagger - a), a complexification whose unit must commute with the generators"
+ },
+ {
+  "id": "synthesis.r-lambda-regularity-cosmological-horizon",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.r-lambda-regularity-cosmological-horizon",
+  "why": "i stays in the Killing flow and in the imaginary-time continuation F(t + i p) of the correlation function: the boundary-mode algebra is defined as the plain complexification of Cl(|J|,|J|), its templa"
+ },
+ {
+  "id": "synthesis.r-le-i-independent-spectrum-condition-separates",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.r-le-i-independent-spectrum-condition-separates",
+  "why": "the Killing flows Ad(e^{it omega_k K_k}) and the imaginary-time continuation act on window modes realised by Jordan-Wigner on C^2 (x) C^2, a complex space the store does not tie to I_4"
+ },
+ {
+  "id": "synthesis.r-loc-independent-sets-matter-coupling",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.r-loc-independent-sets-matter-coupling",
+  "why": "the boost a_j -> e^{-is w_j}a_j acts on a window of local-horizon modes in their complex occupation basis, a space the store does not tie to I_4 here"
+ },
+ {
+  "id": "synthesis.r-loc-needs-sheet-labelled-modes",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 10,
+  "path": "store/claims/synthesis.r-loc-needs-sheet-labelled-modes",
+  "why": "the windows are complex matrix factors Mat_n(C) with flows Ad(e^{isH}), inner derivations i[h, .] and su(n) as i times the traceless self-adjoint matrices, and the single-mode window is the completed "
+ },
+ {
+  "id": "synthesis.residue-common-weight-particle-hole",
+  "subject": "entropy",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/claims/synthesis.residue-common-weight-particle-hole",
+  "why": "the one-particle space C^n of the counted completed pairs, Mat_n(C), the rotations u = e^{i theta^a J_a} and the extension of the identity over C to J_1, J_2 are the complex representation theory of s"
+ },
+ {
+  "id": "synthesis.residues-zero-four-real-chirality-anomaly",
+  "subject": "dark-matter",
+  "kind": "other",
+  "n": 1,
+  "path": "store/claims/synthesis.residues-zero-four-real-chirality-anomaly",
+  "why": "in the proof, at residues 2 and 6, chirality is the splitting into the +-i eigenspaces of the complex structure I itself, so the i is an eigenvalue of that pseudoscalar and cannot be written as it"
+ },
+ {
+  "id": "synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 26,
+  "path": "store/claims/synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel",
+  "why": "i stays only in the regulator sigma_epsilon = sigma + i epsilon(t(x) - t(x')) - epsilon^2/2, a shift of the spacetime separation along a time function, and in the epsilon-expressions it generates (the"
+ },
+ {
+  "id": "synthesis.rule-2-fusing-plane-lorentzian",
+  "subject": "completion",
+  "kind": "other",
+  "n": 0,
+  "path": "store/claims/synthesis.rule-2-fusing-plane-lorentzian",
+  "why": "C names only the isomorphism type of the centre span{1, omega x} of the completion's even part and of Cl^0(2,4) = Mat(4, C), a statement about which algebras arise; the unit itself is the volume eleme"
+ },
+ {
+  "id": "synthesis.s-wave-array-is-a-boundary-mode-set",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 10,
+  "path": "store/claims/synthesis.s-wave-array-is-a-boundary-mode-set",
+  "why": "the boost phases e^{-i kappa|k| t} on the s-wave modes and the one-mode flow tau_t keep i: they are flows on the boundary-mode algebra, whose modes descend from T05's atom and anticommute with I_4 (co"
+ },
+ {
+  "id": "synthesis.state-selection-r-and-le-against-t05",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 11,
+  "path": "store/claims/synthesis.state-selection-r-and-le-against-t05",
+  "why": "i stays in the Killing flow Ad(e^{i t sum omega_k K_k}), the ladder phases and the imaginary-time continuation F(t + i p): the window is the complexification of completed pairs of the hyperbolic atom,"
+ },
+ {
+  "id": "synthesis.tower-charge-sector-label-temperature-not",
+  "subject": "dark-matter",
+  "kind": "complex-analysis",
+  "n": 10,
+  "path": "store/claims/synthesis.tower-charge-sector-label-temperature-not",
+  "why": "the charge rotations e^{i theta} act on the boundary-mode CAR algebra over l^2(J), defined over C, with windows End(Lambda C^F); the boundary modes are the atom's ladder pairs, with whose mode operato"
+ },
+ {
+  "id": "synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "subject": "quantum-fields",
+  "kind": "bridge",
+  "n": 0,
+  "path": "store/claims/synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation",
+  "why": "i stays only in the Dirac matrices over Q(i) against which the check compares the trace (the matrix reading set beside the algebra), where it is the matrices' complex scalar"
+ },
+ {
+  "id": "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries",
+  "subject": "one-relation",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries",
+  "why": "the tube point m = x_perp + i rho u, on which the symmetries act complex-linearly, lies in the complexification of the spacetime vectors, whose unit must commute with the vectors; no pseudoscalar of C"
+ },
+ {
+  "id": "synthesis.twistor-form-states-only-off-the-real-slice",
+  "subject": "one-relation",
+  "kind": "complex-analysis",
+  "n": 25,
+  "path": "store/claims/synthesis.twistor-form-states-only-off-the-real-slice",
+  "why": "the complex unit of the Fock model, the pairing sigma into C, the complexified affine chart m = x + iy with m(i x^) = x and A = i x^ - y^, and the imaginary boost x(theta) = rho cos theta e_1 + i rho "
+ },
+ {
+  "id": "synthesis.univalence-even-extension-split",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 1,
+  "path": "store/claims/synthesis.univalence-even-extension-split",
+  "why": "the proof continues the Killing flow Ad(e^{it omega N}) on the complex mode factor Mat_2(C) to imaginary time (alpha_{ip}) for the KMS relation; the store does not tie that factor's complex structure "
+ },
+ {
+  "id": "synthesis.univalence-from-even-stationary-dynamics",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 23,
+  "path": "store/claims/synthesis.univalence-from-even-stationary-dynamics",
+  "why": "the boundary modes are realised on a complex Fock space (e_{2k} = i(a_k^* - a_k), e^{i theta N_k}, the modular group rho^{it}); I_4 anticommutes with the atom mode operators (conventions, known limit "
+ },
+ {
+  "id": "synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics",
+  "subject": "quantum-fields",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/claims/synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics",
+  "why": "the proof uses Borchers' relation Delta^{it}U(a)Delta^{-it} = U(e^{-2 pi t}a), quoted from the imported Fact, for the modular objects of an interacting net on a general Hilbert space"
+ },
+ {
+  "id": "synthesis.wick-rotated-boost-selects-observer-tube-point",
+  "subject": "one-relation",
+  "kind": "complex-analysis",
+  "n": 40,
+  "path": "store/claims/synthesis.wick-rotated-boost-selects-observer-tube-point",
+  "why": "the Wick rotation W_theta = exp(i theta K) acts in the complexified Clifford algebra on the complex Fock module and carries the complex tube points m = x_perp + i rho u to real points; its i commutes "
+ },
+ {
+  "id": "tower.structure-tower-c-norms",
+  "subject": "tower",
+  "kind": "other",
+  "n": 4,
+  "path": "store/claims/tower.structure-tower-c-norms",
+  "why": "the result is about the complexified floors T_k^C, and the renormalisation y_i = i x_i applies the complexification's scalar to ground generators, spacetime vectors among them, which no pseudoscalar c"
+ },
+ {
+  "id": "transport.odd-lorentzian-dimension-exactly-one-real",
+  "subject": "clifford-structure",
+  "kind": "other",
+  "n": 6,
+  "path": "store/claims/transport.odd-lorentzian-dimension-exactly-one-real",
+  "why": "the common complexification Cl(p,q) (x) C is the subject; its scalar i (in i omega and e_i -> i e_i) commutes with every vector, which no pseudoscalar does"
+ },
+ {
+  "id": "obj.hawking.boundary-mode-algebra-windows-boost-dynamics",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 6,
+  "path": "store/objects/obj.hawking.boundary-mode-algebra-windows-boost-dynamics",
+  "why": "the algebra is defined as the CAR algebra over the complex space l^2(J) with windows End(Lambda C^F), and the boost dynamics tau_t(a_j) = e^{-i omega_j t}a_j is the scalar phase of that complex algebr"
+ },
+ {
+  "id": "obj.singularity.geometric-modular-condition-g",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 3,
+  "path": "store/objects/obj.singularity.geometric-modular-condition-g",
+  "why": "the phase flow Ad(e^{itK_geo}) acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its d"
+ },
+ {
+  "id": "obj.synthesis.cosmological-horizon-boundary-modes",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 4,
+  "path": "store/objects/obj.synthesis.cosmological-horizon-boundary-modes",
+  "why": "the static Killing flow v_j -> e^{-it omega_j}v_j is the scalar phase of the complexification of Cl(|J|,|J|), which the definition takes as the algebra and which contains no I_4"
+ },
+ {
+  "id": "note.angle.abstract",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/notes/note.angle.abstract",
+  "why": "the boost rotor at imaginary rapidity i pi is the continuation with a commuting scalar i, whose action is the wedge reflection; I_4 in its place gives the turn by pi in the dual plane, not the reflect"
+ },
+ {
+  "id": "note.angle.setting-claim-kill-conditions-fixed-before-2",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 2,
+  "path": "store/notes/note.angle.setting-claim-kill-conditions-fixed-before-2",
+  "why": "kill condition K4 speaks of the boost rotor at imaginary rapidity i pi, the continuation with a commuting scalar i, whose action is the wedge reflection; I_4 in its place gives the turn by pi in the d"
+ },
+ {
+  "id": "note.angle.what-supplies-what-it-does-not",
+  "subject": "thermality",
+  "kind": "imported",
+  "n": 2,
+  "path": "store/notes/note.angle.what-supplies-what-it-does-not",
+  "why": "the geometric half of the Bisognano-Wichmann theorem, the boost at rapidity i pi as the wedge reflection, is quoted as its source states it, with i a commuting scalar; I_4 in its place gives the dual-"
+ },
+ {
+  "id": "note.correspondence.abstract",
+  "subject": "completion",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.correspondence.abstract",
+  "why": "the incidence relation is written omega = I_6 x pi with Penrose's omega = ix pi beside it in its source's notation"
+ },
+ {
+  "id": "note.correspondence.setting-machine-verification",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 4,
+  "path": "store/notes/note.correspondence.setting-machine-verification",
+  "why": "the note describes a script that works over the Gaussian rationals Q(i) as the scalars of the complexified Fock model over V_C, where i must commute with the vectors; it records the script's sample ma"
+ },
+ {
+  "id": "note.correspondence.setting-successor-problems",
+  "subject": "conformal-spacetime",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.correspondence.setting-successor-problems",
+  "why": "the incidence relation is written omega = I_6 x pi with Penrose's omega = ix pi beside it in its source's notation"
+ },
+ {
+  "id": "note.correspondence.what-factor-i-what-remains-conventional",
+  "subject": "conformal-spacetime",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.correspondence.what-factor-i-what-remains-conventional",
+  "why": "the note sets Penrose's i in omega = ix pi beside the factor I_6 of omega = I_6 x pi that it derives, in its source's notation"
+ },
+ {
+  "id": "note.decisions.two-boost-flows",
+  "subject": "thermality",
+  "kind": "complex-analysis",
+  "n": 18,
+  "path": "store/notes/note.decisions.two-boost-flows",
+  "why": "the phase flow is the rotor flow continued to lambda = it with i commuting with the modes of the atom, which lies in the spacetime radial plane where I_4 anticommutes with them (conventions, known lim"
+ },
+ {
+  "id": "note.mass.setting-machine-verification",
+  "subject": "einstein",
+  "kind": "complex-analysis",
+  "n": 0,
+  "path": "store/notes/note.mass.setting-machine-verification",
+  "why": "Part C works on Lambda^2 C^4, the exterior square of twistor space, which is the plain complexification of the conformal vector space; no pseudoscalar of Cl(2,4) commutes with its vectors, so its unit"
+ },
+ {
+  "id": "note.mass.what-nullity-fixes",
+  "subject": "dark-energy",
+  "kind": "bridge",
+  "n": 9,
+  "path": "store/notes/note.mass.what-nullity-fixes",
+  "why": "the real slice is computed in the chart's frame as explicit complex 2 x 2 matrices, the factor i/sqrt 2 and the entries x^1 -+ i x^2 of the Hermitian K, whose geometric-algebra reading (i as the confo"
+ },
+ {
+  "id": "note.odd-extensions.added-axis-pseudoscalar",
+  "subject": "tower",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.odd-extensions.added-axis-pseudoscalar",
+  "why": "the note names the fifth generator of the complexified case in the physicists' notation, i gamma_5, beside its geometric-algebra form +-omega omega'^{-1}"
+ },
+ {
+  "id": "note.odd-extensions.one-operator-sees-difference",
+  "subject": "tower",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.odd-extensions.one-operator-sees-difference",
+  "why": "the note compares gamma_5 with i gamma_5 in the physicists' gamma-matrix notation of the complexified Dirac algebra, where the central complex unit is a scalar of the complexification"
+ },
+ {
+  "id": "note.pairing.setting-machine-verification",
+  "subject": "conformal-spacetime",
+  "kind": "other",
+  "n": 1,
+  "path": "store/notes/note.pairing.setting-machine-verification",
+  "why": "the class value 2i of n e_3 is a value of the complex functional pi on so(4,C), built on the complex null tetrad m = e_2 + i e_3, where i stands next to a spacetime vector"
+ },
+ {
+  "id": "note.pairing.setting-setting-what-imported",
+  "subject": "one-relation",
+  "kind": "other",
+  "n": 3,
+  "path": "store/notes/note.pairing.setting-setting-what-imported",
+  "why": "the complex null tetrad m, mb = e_2 +- i e_3, the complexification C^4 of the vectors and the Majorana reading e_3 = -i(a_2 + a_2^dagger) keep i: it stands next to spacetime vectors, and no pseudoscal"
+ },
+ {
+  "id": "note.pairing.setting-transport-moves-vacuum-transverse-derivative",
+  "subject": "thermality",
+  "kind": "other",
+  "n": 1,
+  "path": "store/notes/note.pairing.setting-transport-moves-vacuum-transverse-derivative",
+  "why": "m = e_2 + ie_3 is a complex null vector transverse to the null direction; its i must commute with the spacetime vectors, which no pseudoscalar does"
+ },
+ {
+  "id": "note.singularity.euclidean-reading-sign-flagged",
+  "subject": "descent",
+  "kind": "complex-analysis",
+  "n": 0,
+  "path": "store/notes/note.singularity.euclidean-reading-sign-flagged",
+  "why": "R_{i theta} is the boost rotor continued to imaginary rapidity, the Euclidean rotation of the (rho, tau) plane, which singularity.euclidean-rotor-where-it-lies (3) shows is realised by no real rotor o"
+ },
+ {
+  "id": "note.transport.exotic-embedding-inertness",
+  "subject": "clifford-structure",
+  "kind": "bridge",
+  "n": 2,
+  "path": "store/notes/note.transport.exotic-embedding-inertness",
+  "why": "the standard embedding of H in Mat_2(C) is written with complex matrices (diag(i, -i) and the like), the matrix form of the classification Cl(2,3) = Mat_4(C) in which the note states the embedding"
+ },
+ {
+  "id": "note.transport.setting-euclidean-plane-inversion-circle-riemann",
+  "subject": "completion",
+  "kind": "bridge",
+  "n": 1,
+  "path": "store/notes/note.transport.setting-euclidean-plane-inversion-circle-riemann",
+  "why": "the note identifies the Euclidean plane with the complex plane by z = x + iy to set the inversion beside the classical Riemann-sphere picture; the i is the unit of that classical side"
+ }
+]
