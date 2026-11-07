@@ -87,3 +87,42 @@ I also changed the bullet just before it. It said V_C, Cl(p,q)_C and the Dirac m
 
    The sweep will touch the entities behind these limits, so I left the text for Leon to rule on.
 7. **Literature.** Both extraction notes flag literature cited from memory, as orientation only: Porteous 1995 and Lounesto 2001 for the first entity, and Takesaki 2003 for the modular group of a matrix factor in the second. Neither result uses them as a premise.
+
+## Fixes after review (referee-core.md, both SOUND WITH FIXES)
+Every fix is folded into version 1 and recorded in each entity's extraction.maintainer_pass_ga_units note. Both ids are unchanged. No specialises or supports links were added (Leon's decision).
+
+std-algebra.complexification-is-the-odd-extension:
+- **Duplicate named.** extraction.note now says the spacetime instance of (ii) is already stored as odd-extensions.four-extensions-oriented-pair (row this world + time) and odd-extensions.mirror-inside-complexified-extension-absent-doubled (iii). This entity is the general even-dimensional form, and adds (iii), (iv), the conformal instance and (vi).
+- **Formal (ii) wording.** The splitting Cl(W) = Cl(V) + Cl(V) I_W is now said to hold "as real vector spaces, with Cl(V) a real subalgebra commuting with I_W".
+- **New clause (vi), odd dimension.** For odd dim V, complexify through V' = V + Rf. The multiplication map Cl(V) (x) span{1, I_W'} -> Cl(W') is an injective homomorphism, so the complexification is the subalgebra Cl(V) + Cl(V) I_W'. This is the step rule2 uses. The proof is added, and the check now covers Cl(1,2) in Cl(2,3) (all 16 x 16 basis pairs, rank 16).
+
+synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom:
+- **J is a choice, now stated in (i).** The centraliser of e_0, e_1 in Cl(1,3) is the quaternion algebra span{1, J, e_0e_1e_2, e_0e_1e_3}.
+  - +-J are its only units of square -1 in the even subalgebra, which is the same as being fixed by the transverse rotations.
+  - The sign of J is fixed by J sigma = +I_4.
+  - Odd units such as sigma e_2 (u^2 = -1, u* = -u, anticommuting with J) also commute with the atom and are not identified with J.
+- **Wording across the levels.**
+  - Title: "The transverse bivector is the even complex unit of the radial atom". The id is kept.
+  - Lay: "the only one built from the even part of the algebra".
+  - Technical and one-liner now say "even".
+- **(iv)** names the source's phase flow: T05 Thm 7.16 and T07 Def 2.7, and the flow of singularity.kms-uniqueness-factor. The sign agrees: v -> e^{-Jt} v.
+- **(v)** adds one sentence: the continued boost on the modes, e^{theta I_4/2}, and the dual-plane rotor on values, e^{theta J/2}, are different objects. The rotor is central in A and acts trivially on it.
+- **(vi)** now says "the only span{1, J}-linear state" and "for beta != 0, not at -beta". The proof shows why field-linearity is needed: the real parts of (1 + bJ) omega_beta are KMS for every b. In the proof and the check, e^beta is renamed q.
+- **extraction.note.**
+  - The ledger label is now transport-absent.
+  - It records that (iv) to (vi) restate singularity.euclidean-rotor-where-it-lies (1)-(2), singularity.kms-uniqueness-factor, singularity.two-kms-functionals-sign (1) and synthesis.phase-flow-is-time-rotor-flow-kms-continuation (v) with J. The new content is (i) to (iii), JK = I_4/2, and that the unit lies in Cl(1,3).
+- **Premises.** primer.centre@2 is added to uses and is touched by the check.
+- **Check.** It now computes the centraliser (dimension 4 and its blades), and tests tau_z at a mixed z = t + J theta: tau_z(v) = e^theta e^{-Jt} v and tau_z(v*) = e^-theta e^{Jt} v*.
+
+No sign changed. The conventions bullet U2 gains one parenthesis: J is the even unit of the atom's quaternionic centraliser, and odd units such as sigma e_2 are not identified with it.
+
+Gates after the fixes:
+- runcheck: 4/4 and 5/5 pass.
+- check4 on proposals/ copies: 0 errors and 0 other findings for both. The copies are deleted.
+- tp check layers 1,2,3, filtered to the two ids: no finding on either. Store-wide it currently reports 171 errors and 2 warnings, all on entities the sweep agents are editing.
+- No bare unit in any level or proof of either entity.
+
+Decisions for Leon, from the review:
+1. **Two units for the atom's phase flow.** The store now gives it two units: J here (U2), and the odd-extension unit hat I = I_V e in synthesis.phase-flow-is-time-rotor-flow-kms-continuation (v) (U3, which for the atom window with e = e_2 is sigma e_2). They anticommute in Cl(1,3) and agree as abstract flows. One of the two entities should state how they relate.
+2. **Citations without uses.** rule2.odd-lorentzian-dimension-exactly-one-real and synthesis.phase-flow-is-time-rotor-flow-kms-continuation \claimref the first id without it in their uses.
+3. **Links.** Whether to add pinned specialises or supports links from the stored instances to the two core results.

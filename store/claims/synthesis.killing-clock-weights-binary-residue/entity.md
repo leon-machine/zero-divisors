@@ -52,10 +52,11 @@ lineage:
   - synthesis.residue-from-mode-entropy
   - singularity.q-joint-quasi-freeness-s-wave
   - obj.synthesis.cosmological-horizon-boundary-modes
-outside_ga:
-  kind: complex-analysis
-  why: 'the Killing flow Ad(e^{it sum omega_j K_j}), K_j = sigma_j/2, acts on the boundary-mode algebra, whose modes descend from the atom of the spacetime radial plane and anticommute with I_4 (conventions, known limits 1 and 2), as its defining object declares'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U2) the Killing flow on the completed pairs is the phase flow written with J = e_2 e_3, the complex unit of the radial atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level): Ad(e^{it sum omega_j K_j}) became Ad(e^{Jt sum omega_j K_j}); the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -79,7 +80,7 @@ extraction:
 ---
 
 ## formal
-Let the counted boundary modes of a window be $n$ completed pairs $(v_{j}, v_{j}^{*})$, with $N_{j} = v_{j}^{*}v_{j}$ and boost generators $K_{j} = \sigma_{j}/2 = N_{j} - \tfrac12$ (Proposition \claimref{hawking.modular-structure-completed-pair}), and let the Killing flow on them be $\operatorname{Ad}(e^{it\sum_{j}\omega_{j}K_{j}})$ in Schwarzschild time, with the weights $\omega_{j}$ of Definition \claimref{obj.singularity.geometric-modular-condition-g}. In rapidity $\lambda = \kappa t$ (Proposition \claimref{singularity.plane-rate}) its real generator is $X = \sum_{j}(\omega_{j}/\kappa)K_{j}$, with $\operatorname{ad}_{X}v_{j} = -(\omega_{j}/\kappa)v_{j}$ and $\operatorname{ad}_{X}v_{j}^{*} = (\omega_{j}/\kappa)v_{j}^{*}$. Assume
+Let the counted boundary modes of a window be $n$ completed pairs $(v_{j}, v_{j}^{*})$, with $N_{j} = v_{j}^{*}v_{j}$ and boost generators $K_{j} = \sigma_{j}/2 = N_{j} - \tfrac12$ (Proposition \claimref{hawking.modular-structure-completed-pair}), and let the Killing flow on them be $\operatorname{Ad}(e^{Jt\sum_{j}\omega_{j}K_{j}})$ in Schwarzschild time, $J = e_{2}e_{3}$ the complex unit of the completed pairs, which commutes with their mode operators (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), with the weights $\omega_{j}$ of Definition \claimref{obj.singularity.geometric-modular-condition-g}. In rapidity $\lambda = \kappa t$ (Proposition \claimref{singularity.plane-rate}) its real generator is $X = \sum_{j}(\omega_{j}/\kappa)K_{j}$, with $\operatorname{ad}_{X}v_{j} = -(\omega_{j}/\kappa)v_{j}$ and $\operatorname{ad}_{X}v_{j}^{*} = (\omega_{j}/\kappa)v_{j}^{*}$. Assume
 
 (K) $X$ is a clock in the sense of Lemma \claimref{scrambling.clock-inventory-boundary-modes}(ii) at unit rapidity, which is two assumptions: (K1) the nonzero adjoint eigenvalues of $X$ on the mode operators have one magnitude; (K2) that magnitude is one in the Killing flow's own rapidity $\lambda = \kappa t$, the parameter that Proposition \claimref{singularity.plane-rate} converts to Schwarzschild time. The Lemma normalises a clock's parameter by convention, which rescales $X$ and does not constrain the weights of a given flow, so (K2) is a separate assumption: Proposition \claimref{singularity.plane-rate} supports it for pairs in the boost plane, and for any other counted mode it is assumed. Under (K1) alone the statements below hold with $\pm c\kappa$ in place of $\pm\kappa$ for one $c > 0$, and the moved value $s(2\pi)$ becomes $s(2\pi c)$.
 

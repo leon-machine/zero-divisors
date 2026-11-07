@@ -1,7 +1,7 @@
 ---
 id: synthesis.local-boost-temperature-is-local-regularity
 kind: claim
-version: 3
+version: 4
 title: 'Local boost temperature is local regularity'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 4
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -45,10 +49,11 @@ checked_by:
   ref: check.py::check_window_kms_iff_modular
 - kind: proof
   derivation: main
-outside_ga:
-  kind: complex-analysis
-  why: 'the boundary-mode and window flows e^{-iw_j lambda}, Ad(e^{i lambda K}), their modular flow rho^{is} and the KMS strip lambda + 2 pi i keep i (the modes descend from T05''s atom, whose operators anticommute with I_4), and lambda = -i theta is a Wick continuation of a coordinate of the line element'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle two units act, named once in the proof and not identified: the boundary-mode algebra and its window flows use J = e_2 e_3 (U2; synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited in the formal level): e^{-J w_j lambda}, Ad(e^{J lambda K}), the modular flow rho^{Js} = Ad(e^{-J beta K s}), tau_{J beta} and the KMS strip F(lambda + 2 pi J) of (R_loc); the Wick continuation lambda = -I_5 theta of the line element''s rapidity coordinate uses the central unit I_5 of Cl(2,3) (U3; std-algebra.complexification-is-the-odd-extension), as in the cited Proposition singularity.euclidean-section-period; the Definition''s mode-set letter J is written calligraphic where it would clash with the unit; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -90,10 +95,10 @@ Signature $(-,+,+,+)$ in this statement and its proof; in the store's $(+,-,-,-)
 d\rho^{2} - F(\rho)^{2}\,d\lambda^{2}, \qquad F(\rho)^{2} = \rho^{2} + k\rho^{4}, \quad k = \tfrac13 R_{0101},
 \]
 with no cross term and no dependence on the rapidity $\lambda$, for every field strength at $p$; the third-order terms $-\tfrac16\nabla_{e}R_{acbd}x^{c}x^{d}x^{e}$ add $O(\rho^{5})$ to $F^{2}$, with rapidity dependence. Hence $F(0) = 0$ and $F'(0) = 1$, and by Proposition \claimref{singularity.euclidean-section-period} read with unit rate, the Euclidean section of the local boost is regular at its tip $\rho = 0$ (the bifurcation point $p$ of the local boost, its fixed point in the boost plane) exactly when the period of imaginary rapidity is $2\pi$. The static observer at $\rho$ has proper acceleration $a = F'/F$ and, at rapidity period $2\pi$, proper inverse temperature $2\pi F$, so $T = a/(2\pi F'(\rho))$; with $F'(\rho)^{2} = (1 + 2k\rho^{2})^{2}/(1 + k\rho^{2})$ from the second-order terms, $T = (a/2\pi)\bigl(1 - \tfrac32 k\rho^{2} + O(\rho^{3})\bigr)$, and $T = a/2\pi$ at leading order. Off the boost plane, at transverse distance $y$, the induced metric depends on $\lambda$ at order $|\mathrm{Riem}|\,y^{2}$, the size of the field strength times $y^{2}$, so these statements hold at leading order and not beyond. For a diamond of radius $L$ in the leading-order flat geometry of the normal gauge, $\zeta = \bigl((L^{2} - t^{2} - r^{2})\partial_{t} - 2t\,x^{i}\partial_{i}\bigr)/(2L)$ is conformal Killing, vanishes on the edge $\{t = 0, r = L\}$, is divergence-free there, and its derivative on the edge is the unit boost of the plane spanned by $\partial_{t}$ and the edge normal: surface gravity $1$, the normalisation of (i) for the wedge.
-\item[(ii)] \emph{(Clause (iii), read on the whole mode algebra, is clause (ii).)} Let $\mathfrak{A}$ be the CAR algebra over a mode set $J$ with windows $\mathfrak{A}_{F}$ (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}) and let $\tau_{\lambda}(a_{j}) = e^{-iw_{j}\lambda}a_{j}$ be a quasi-free flow in rapidity with real weights $w_{j}$. For $\beta > 0$ a state $\omega$ is $(\tau, \beta)$-KMS if and only if, on every window, $\omega|_{\mathfrak{A}_{F}}$ is faithful and its modular group is $\sigma_{s} = \tau_{-\beta s}$; the faithful states with that modular group on a window are exactly one, the Gibbs state of $\sum_{j \in F} w_{j}N_{j}$ at $\beta$. With $\beta = 2\pi$ of rapidity, clause (iii) of Premise \claimref{synthesis.c-loc-local-horizon-premise}, read as a statement about the modular flow of the state on the patch's whole mode algebra, is therefore equivalent, on a patch carrying such modes, to KMS at rapidity period $2\pi$, which is clause (ii) at leading order, the conversion to $T = a/2\pi$ in proper time being (i) (exact only where $F' = 1$). The stronger geometric reading of clause (iii), a flow carrying the algebras of nested sub-patches properly into one another, cannot hold on a mode space where the boost acts by phases (Theorem \claimref{synthesis.c-loc-modular-clause-moves-no-nested-patch}) and is not treated here.
+\item[(ii)] \emph{(Clause (iii), read on the whole mode algebra, is clause (ii).)} Let $\mathfrak{A}$ be the CAR algebra over a mode set $\mathcal{J}$ (the Definition's mode set, renamed here so as not to clash with the unit $J$) with windows $\mathfrak{A}_{F}$ (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}), its numbers read in $\mathrm{span}\{1, J\}$, $J = e_{2}e_{3}$ the complex unit of the radial atom from which the boundary modes descend (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), and let $\tau_{\lambda}(a_{j}) = e^{-Jw_{j}\lambda}a_{j}$ be a quasi-free flow in rapidity with real weights $w_{j}$. For $\beta > 0$ a state $\omega$ is $(\tau, \beta)$-KMS if and only if, on every window, $\omega|_{\mathfrak{A}_{F}}$ is faithful and its modular group is $\sigma_{s} = \tau_{-\beta s}$; the faithful states with that modular group on a window are exactly one, the Gibbs state of $\sum_{j \in F} w_{j}N_{j}$ at $\beta$. With $\beta = 2\pi$ of rapidity, clause (iii) of Premise \claimref{synthesis.c-loc-local-horizon-premise}, read as a statement about the modular flow of the state on the patch's whole mode algebra, is therefore equivalent, on a patch carrying such modes, to KMS at rapidity period $2\pi$, which is clause (ii) at leading order, the conversion to $T = a/2\pi$ in proper time being (i) (exact only where $F' = 1$). The stronger geometric reading of clause (iii), a flow carrying the algebras of nested sub-patches properly into one another, cannot hold on a mode space where the boost acts by phases (Theorem \claimref{synthesis.c-loc-modular-clause-moves-no-nested-patch}) and is not treated here.
 \item[(iii)] \emph{(The thermal half, assumed.)} Consequently, for a patch carrying a mode algebra on which the local boost (or the diamond flow) acts as such a quasi-free phase flow, an assumption and not a result, clauses (ii) and (iii) of Premise \claimref{synthesis.c-loc-local-horizon-premise} together are, at leading order, the single condition
 \begin{enumerate}
-\item[(R$_{\mathrm{loc}}$)] for all elements $a, b$ of every window, the correlator $F_{a,b}(\lambda) = \omega\bigl(a\,\tau_{\lambda}(b)\bigr)$ continues in imaginary rapidity and its two orderings meet after one period of the regular Euclidean section of the local boost: $F_{a,b}(\lambda + 2\pi i) = \omega\bigl(\tau_{\lambda}(b)\,a\bigr)$.
+\item[(R$_{\mathrm{loc}}$)] for all elements $a, b$ of every window, the correlator $F_{a,b}(\lambda) = \omega\bigl(a\,\tau_{\lambda}(b)\bigr)$ continues in imaginary rapidity and its two orderings meet after one period of the regular Euclidean section of the local boost: $F_{a,b}(\lambda + 2\pi J) = \omega\bigl(\tau_{\lambda}(b)\,a\bigr)$, the continuation taken in $\mathrm{span}\{1, J\}$.
 \end{enumerate}
 This is joint KMS on whole windows: the local-boost form of the joint KMS condition that defines the I-state (Theorem \claimref{hawking.i-state}), which the store obtains at a Schwarzschild horizon from Premise \claimref{singularity.r-regularity-fixed-locus} for the single-mode marginals together with the joint quasi-freeness of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}, and at the de Sitter horizon from Premise \claimref{synthesis.r-lambda-regularity-cosmological-horizon} for the marginals. (R$_{\mathrm{loc}}$) is a new premise, stronger than the local form of (R) alone. Under it the state is the quasi-free state with symbol $(1 + e^{2\pi w})^{-1}$, the unique KMS state whatever the weights $w_{j}$, so the condition fixes the state without fixing which modes the patch carries. No condition on the pair $(\mathfrak{A}, \tau)$ alone can replace it: by Theorem \claimref{singularity.rate-rigidity-temperature-not-algebra-intrinsic} the value of $\beta$ is fixed only by a stipulation or by data outside the pair.
 \end{enumerate}

@@ -1,7 +1,7 @@
 ---
 id: synthesis.counted-unit-energy-at-half-offset
 kind: claim
-version: 1
+version: 2
 title: 'A counted unit''s Killing energy at the weights of (Q)'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -47,6 +51,10 @@ lineage:
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.half-integer-weight-array-carries-half-ln2
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U1) the modular parameter of the array''s torus is read in span{1, I_4}, as for theta functions and modular forms: tau = I_4 beta kappa/2 pi and the self-dual point tau = I_4; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -64,9 +72,6 @@ extraction:
     10^-57 of 1/24 for the array energy in units of kappa, and of (1/2) ln 2 - pi/12 for ln Z above the sea).
     The premise (Q) version 3 (singularity.q-joint-quasi-freeness-s-wave) is cited in the text and enters through
     the half-offset theorem's cone; with a direct assumes edge to it.
-outside_ga:
-  kind: complex-analysis
-  why: 'the modular parameter tau = i beta kappa/2 pi of the array''s torus, its self-dual point tau = i and the theta-function argument i y/2 pi keep i: they are complex analysis of modular forms'
 ---
 
 ## formal
@@ -77,7 +82,7 @@ Assume (Q) version 3 (Premise \claimref{singularity.q-joint-quasi-freeness-s-wav
 \item[(iii)] (against the hole) per counted unit $\beta E = \pi/6$ and $E/(TS) = \pi/(6\ln 2) \in (0.75539, 0.75540)$, below one as clause (v) of Theorem \claimref{synthesis.residue-from-mode-entropy} requires. Under the area-law hypothesis ($N = A/(4\ln 2)$ counted units, $T = 1/8\pi M$, Theorem \claimref{synthesis.quarter-from-temperature}) the counted units carry $E_{\mathrm{c}} = \pi M/(12\ln 2) \in (0.37769, 0.37770)\,M$, below $TS = M/2$; if the hole is the Gibbs state of hypothesis (H) of Theorem \claimref{synthesis.hole-mass-is-ground-energy-label} with the counted units as its excitations, its ground energy is $E_{0}(M) = M(1 - \pi/(12\ln 2)) \in (0.62230, 0.62231)\,M$, inside the interval $(M/2, M]$ of that theorem's (ii) and strictly below the zero-weight value $M$ of its (iii). This value is independent of the ordering, since $E_{0}$ is the bottom of the spectrum; in the symmetric ordering of (ii) the same Hamiltonian is a c-number of exactly $M$ plus counted units of mean energy zero, and the Smarr relation reads $\beta M = 2N\ln 2$ as in the zero-weight case;
 \item[(iv)] (what distinguishes the two realisations of $\ln 2$) the energy fluctuation of one counted unit is $\beta^{2}\operatorname{Var}(E) \in (1.5964, 1.5965)$, against $0$ for one zero-weight mode.
 \end{enumerate}
-Remark (not a further clause): the exact values in (i) and (ii) come from the self-dual point $\tau = i$, where the real-time recurrence period $2\pi/\kappa$ of the array's Killing flow equals the thermal period $\beta$; the zero offset has no comparable simplification.
+Remark (not a further clause): the exact values in (i) and (ii) come from the self-dual point $\tau = I_4$ of the modular parameter (read, as for every modular form, in $\mathrm{span}\{1, I_4\}$), where the real-time recurrence period $2\pi/\kappa$ of the array's Killing flow equals the thermal period $\beta$; the zero offset has no comparable simplification.
 So at the adopted weights the counted units carry about $0.378\,M$ of excitation energy above their sea and the label carries the rest, about $0.622\,M$. Whether the counted units carry any energy at all is a matter of how the sea's energy is ordered: in the zeta-regularised symmetric ordering they carry none and the label is all of $M$. Which ordering is physical, and what structure supplies the label, are not decided here.
 
 ## technical

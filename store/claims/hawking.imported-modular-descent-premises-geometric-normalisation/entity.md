@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 7
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 7
+  source: maintainer pass 2026-11-07 (resolve units)
 review: typed
 derivations:
 - name: main
@@ -52,10 +56,11 @@ locators:
   number: Fact 2.2
   label: fact:descent
   line: 408
-outside_ga:
-  kind: complex-analysis
-  why: 'the phase flow Ad(e^{it sigma/2}) of the completed pair is the scalar phase of the complexified atom, whose modes anticommute with I_4 (conventions, known limit 1); with I_4 in its place exp(I_4 t sigma/2) would be a real rotor of the dual plane and the flow a different one'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 7 kept (already raised in this pass). The phase flow Ad(e^{it sigma/2}) of the completed pair: by U2 its unit is J = e_2 e_3, which commutes with the atom (synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention, where Ad(e^{J t sigma/2}) is proved to be the store''s phase flow); written Ad(e^{J t sigma/2}) in the formal and technical levels and the proof. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -115,10 +120,10 @@ extraction:
 ---
 
 ## formal
-Let the ascended algebra of a horizon pair carry a state that is pure, invariant under the boost flow of Proposition \claimref{hawking.modular-structure-completed-pair}, and entangling across the pair (cyclic and separating for the one-sided subalgebra). Then the descended state is KMS for the phase flow $\operatorname{Ad}(e^{it\sigma/2})$ of the same generator at \emph{some} inverse temperature $\beta \in \R$ of rapidity, and the hypotheses leave $\beta$ free, its sign included; the Gibbs \emph{form} of the descended state is state-independent. Positivity and the value are supplied by T5's named premises: under (P) univalence and (R) the KMS condition at the geometric period (one modular period equal to one rapidity period $2\pi$, i.e.\ Schwarzschild time $2\pi/\kappa$, the Euclidean period $8\pi M$), the descended state is Fermi-Dirac at $\beta = 2\pi$ of rapidity, which is the physical temperature $\TH = \kappa/2\pi = 1/8\pi M$; the boost plane is the one the shape operator scales by $-2$, and $\kappa = 1/4M$ is proved from the gauge field. Per mode of Schwarzschild frequency $\omega$ the reduced density matrix is the Fermi-Dirac matrix $\mathrm{diag}(1, e^{-\omega/\TH})/Z$. \emph{Provenance:} T5 \cite[Thms.~7.3 and 7.6, Prems.~7.8 and 7.19, Prop.~7.18, Thm.~7.20, Cor.~6.4]{ButlerT5}, with $\kappa = 1/4M$ from the gauge field in \cite[App.~A]{ButlerT5}; premise (R) is proved irreducible there, the temperature being no algebra-intrinsic quantity \cite[Thm.~7.16]{ButlerT5}. The wedge-modular mechanism is Bisognano-Wichmann-Sewell \cite{BisognanoWichmann1976, Sewell1982}, and the thermofield reading is Israel's \cite{Israel1976}.
+Let the ascended algebra of a horizon pair carry a state that is pure, invariant under the boost flow of Proposition \claimref{hawking.modular-structure-completed-pair}, and entangling across the pair (cyclic and separating for the one-sided subalgebra). Then the descended state is KMS for the phase flow $\operatorname{Ad}(e^{Jt\sigma/2})$ of the same generator, $J = e_{2}e_{3}$ the complex unit of the atom (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), at \emph{some} inverse temperature $\beta \in \R$ of rapidity, and the hypotheses leave $\beta$ free, its sign included; the Gibbs \emph{form} of the descended state is state-independent. Positivity and the value are supplied by T5's named premises: under (P) univalence and (R) the KMS condition at the geometric period (one modular period equal to one rapidity period $2\pi$, i.e.\ Schwarzschild time $2\pi/\kappa$, the Euclidean period $8\pi M$), the descended state is Fermi-Dirac at $\beta = 2\pi$ of rapidity, which is the physical temperature $\TH = \kappa/2\pi = 1/8\pi M$; the boost plane is the one the shape operator scales by $-2$, and $\kappa = 1/4M$ is proved from the gauge field. Per mode of Schwarzschild frequency $\omega$ the reduced density matrix is the Fermi-Dirac matrix $\mathrm{diag}(1, e^{-\omega/\TH})/Z$. \emph{Provenance:} T5 \cite[Thms.~7.3 and 7.6, Prems.~7.8 and 7.19, Prop.~7.18, Thm.~7.20, Cor.~6.4]{ButlerT5}, with $\kappa = 1/4M$ from the gauge field in \cite[App.~A]{ButlerT5}; premise (R) is proved irreducible there, the temperature being no algebra-intrinsic quantity \cite[Thm.~7.16]{ButlerT5}. The wedge-modular mechanism is Bisognano-Wichmann-Sewell \cite{BisognanoWichmann1976, Sewell1982}, and the thermofield reading is Israel's \cite{Israel1976}.
 
 ## technical
-Suppose the ascended algebra of a horizon pair carries a state that is pure, invariant under the boost flow of the completed pair, and entangling across the pair (cyclic and separating for the one-sided subalgebra). Then the descended state is KMS for the phase flow $\operatorname{Ad}(e^{it\sigma/2})$ of the same generator at some inverse temperature $\beta\in\R$ of rapidity, with $\beta$ left free, sign included; the Gibbs form of the descended state is state independent.
+Suppose the ascended algebra of a horizon pair carries a state that is pure, invariant under the boost flow of the completed pair, and entangling across the pair (cyclic and separating for the one-sided subalgebra). Then the descended state is KMS for the phase flow $\operatorname{Ad}(e^{Jt\sigma/2})$ of the same generator, $J = e_2e_3$ the atom's complex unit, at some inverse temperature $\beta\in\R$ of rapidity, with $\beta$ left free, sign included; the Gibbs form of the descended state is state independent.
 
 Under the premises (P) univalence and (R) the KMS condition at the geometric period, the descended state is Fermi-Dirac at $\beta = 2\pi$ of rapidity, the physical temperature $\TH = \kappa/2\pi = 1/8\pi M$, with $\kappa = 1/4M$ proved from the gauge field; per mode of Schwarzschild frequency $\omega$ the reduced density matrix is $\operatorname{diag}(1, e^{-\omega/\TH})/Z$. Premise (R) is irreducible, the temperature being no algebra-intrinsic quantity.
 

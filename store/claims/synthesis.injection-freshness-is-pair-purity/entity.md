@@ -1,7 +1,7 @@
 ---
 id: synthesis.injection-freshness-is-pair-purity
 kind: claim
-version: 2
+version: 3
 title: 'Freshness of injection is the purity of the injected pair'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -40,6 +44,10 @@ lineage:
   - singularity.rate-models-kinematic-inputs-l-u
   - singularity.eviction-window-thermal-product-radiation-entropy
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'By the unit principle (U1) the abstract qubit spaces H_W = H_R = C^2 have their numbers read in span{1, I_4}, stated once in the formal level, so the thermofield form is psi = c|00> + e^{I_4 phi} s|11>; the outside_ga declaration is removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -58,13 +66,10 @@ extraction:
     and violates it). At zero weight purity no longer fixes the number-basis form. The rate model
     is described, not assumed, so it enters as lineage. Transport-absent (finite quantum
     information).
-outside_ga:
-  kind: complex-analysis
-  why: 'the pair state psi = c|00> + e^{i phi} s|11> lives in the abstract qubit spaces H_W = H_R = C^2, Hilbert-space structure that the entity does not build from geometric-algebra modes'
 ---
 
 ## formal
-Consider one injection step of the rate model of Premise \claimref{singularity.rate-models-kinematic-inputs-l-u}: the window mode $W$ and emitted quantum $R$ of the $k$-th pair, and a finite system $X$ holding everything already present, in a state $\varrho$ on $\mathcal{H}_W \otimes \mathcal{H}_R \otimes \mathcal{H}_X$ with $\mathcal{H}_W = \mathcal{H}_R = \C^{2}$. Let (M) say that both single-mode marginals are the thermal marginal $\operatorname{diag}(c^{2}, s^{2})$, $c, s > 0$, $c^{2} + s^{2} = 1$, that Theorem \claimref{singularity.modular-descent} and Corollary \claimref{singularity.chains-state-class-stability} supply; (Pure) that the pair state $\varrho_{WR}$ is pure; (F) freshness, $\varrho_{WRX} = \varrho_{WR} \otimes \varrho_X$; and (TF) the thermofield form $\varrho_{WR} = |\psi\rangle\langle\psi|$, $\psi = c|00\rangle + e^{i\phi}s|11\rangle$. Then:
+Consider one injection step of the rate model of Premise \claimref{singularity.rate-models-kinematic-inputs-l-u}: the window mode $W$ and emitted quantum $R$ of the $k$-th pair, and a finite system $X$ holding everything already present, in a state $\varrho$ on $\mathcal{H}_W \otimes \mathcal{H}_R \otimes \mathcal{H}_X$ with $\mathcal{H}_W = \mathcal{H}_R = \C^{2}$, abstract qubit spaces whose numbers are read in $\mathrm{span}\{1, I_4\}$ (conventions, the unit principle, U1). Let (M) say that both single-mode marginals are the thermal marginal $\operatorname{diag}(c^{2}, s^{2})$, $c, s > 0$, $c^{2} + s^{2} = 1$, that Theorem \claimref{singularity.modular-descent} and Corollary \claimref{singularity.chains-state-class-stability} supply; (Pure) that the pair state $\varrho_{WR}$ is pure; (F) freshness, $\varrho_{WRX} = \varrho_{WR} \otimes \varrho_X$; and (TF) the thermofield form $\varrho_{WR} = |\psi\rangle\langle\psi|$, $\psi = c|00\rangle + e^{I_4\phi}s|11\rangle$. Then:
 \begin{enumerate}
 \item[(i)] (Pure) implies (F), for every $\varrho$;
 \item[(ii)] if $\varrho_{WRX}$ is pure, clause (U) restricted to this step, then (F) implies (Pure);

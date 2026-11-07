@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the twisted modular reflection of the chiral Fermi field'
 status: imported
 region: synthesis
@@ -17,10 +17,11 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
+  version: 2
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
-outside_ga:
-  kind: imported
-  why: 'modular objects of the CAR algebra on a complex Hilbert space (antiunitary conjugations, the Klein twist), quoted in their sources'' language'
 imported_from:
 - citation: 'R. Brunetti, D. Guido and R. Longo, Modular structure and duality in conformal quantum field theory, Commun. Math. Phys. 156 (1993), 201--219; arXiv:funct-an/9302008.'
   key: BGL1993
@@ -31,6 +32,19 @@ imported_from:
   locator: 'twisted duality M(q)'' = Z M(q^perp) Z* for the self-dual CAR algebra in any Fock representation, and an explicit formula for the graph of the modular operator, applied to free fermionic nets; abstract checked'
   doi: 10.1063/1.1483376
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2 (U4). Restated with the unit of the Hilbert spaces written as I_4 (U1, abstract complex Hilbert spaces and the continuum mode space of the line): the Klein twist Z = (1 + I_4 Theta)/(1 + I_4) and the momentum P = I_4 d/du; the antiunitary conjugations stay as operators. The source writes i for I_4; its form is kept in source_formal. Status stays imported; declaration removed. Statement content unchanged.'
+  source_formal: |-
+    \begin{enumerate}
+    \item[(a)] (Bisognano-Wichmann for conformal nets; Brunetti, Guido and Longo.) For a local net of von Neumann algebras on the circle, covariant under the M\"obius group with positive energy and with a unique invariant vacuum $\Omega$, the modular group of the algebra of an interval $I$ with respect to $\Omega$ is the one-parameter M\"obius subgroup fixing the endpoints of $I$, with the modular parameter rescaled by $2\pi$, and the modular conjugation implements the M\"obius reflection fixing the endpoints of $I$, mapping the algebra of $I$ onto that of its complement (Haag duality). On the line, for the half-line $(a, \infty)$, the modular group is the dilation about $a$ and the conjugation implements $u \mapsto 2a - u$.
+    \item[(b)] (Twisted duality; Baumgaertel, Jurke and Lledo.) For the self-dual CAR algebra over a Hilbert space with antiunitary involution, in any Fock representation, and a closed subspace $q$ invariant under the involution, the von Neumann algebras satisfy $\mathcal{M}(q)' = Z\mathcal{M}(q^{\perp})Z^{*}$, with $Z = (1 + i\Theta)/(1 + i)$ the Klein twist built from the grading $\Theta$; the graph of the modular operator has an explicit form, which applies to free fermionic nets.
+    \item[(c)] (The field-level form for the chiral Fermi field.) For the free chiral Fermi field $\psi$ on the line, $\CAR(L^{2}(\R)\otimes K)$, in its vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty, 0)}(P)\otimes\id_{K}$, $P = i\,d/du$, the modular conjugation $J_{a}$ of the algebra of the half-line $(a, \infty)$ acts on the fields as the Klein-twisted charge-conjugating reflection about $a$: $J_{a}\psi(f)J_{a} = c'\,Z\psi^{*}(f\circ r_{a})Z^{*}$ for $f$ supported in $(a, \infty)$, $r_{a}(u) = 2a - u$, with a constant phase $c'$ independent of $f$ and $a$. It is the second quantisation, twisted by $Z$, of the one-particle modular conjugation, as in (a) for local nets; the value of $c'$ depends on the conventions and is not part of this Fact.
+    \end{enumerate}
+    \emph{Provenance:} \cite{BGL1993}; \cite{BJL2002}; clause (c) and the circle form of (a) cited from memory.
+
+    The source writes $i$ for $I_{4}$.
   note: >-
     Imported so that the results on modular conjugations on a horizon generator pin the field-level action of
     the vacuum's half-line modular conjugations, which the Fact angle.imported-theorems-deliver-their-hypotheses
@@ -55,10 +69,11 @@ extraction:
 ---
 
 ## formal
+Numbers are read in $\mathrm{span}\{1, I_{4}\}$, the unit of every Hilbert space here (U1; on the line it is the unit of the continuum mode space). The modular conjugations $J_{a}$ are antiunitary operators, not units.
 \begin{enumerate}
 \item[(a)] (Bisognano-Wichmann for conformal nets; Brunetti, Guido and Longo.) For a local net of von Neumann algebras on the circle, covariant under the M\"obius group with positive energy and with a unique invariant vacuum $\Omega$, the modular group of the algebra of an interval $I$ with respect to $\Omega$ is the one-parameter M\"obius subgroup fixing the endpoints of $I$, with the modular parameter rescaled by $2\pi$, and the modular conjugation implements the M\"obius reflection fixing the endpoints of $I$, mapping the algebra of $I$ onto that of its complement (Haag duality). On the line, for the half-line $(a, \infty)$, the modular group is the dilation about $a$ and the conjugation implements $u \mapsto 2a - u$.
-\item[(b)] (Twisted duality; Baumgaertel, Jurke and Lledo.) For the self-dual CAR algebra over a Hilbert space with antiunitary involution, in any Fock representation, and a closed subspace $q$ invariant under the involution, the von Neumann algebras satisfy $\mathcal{M}(q)' = Z\mathcal{M}(q^{\perp})Z^{*}$, with $Z = (1 + i\Theta)/(1 + i)$ the Klein twist built from the grading $\Theta$; the graph of the modular operator has an explicit form, which applies to free fermionic nets.
-\item[(c)] (The field-level form for the chiral Fermi field.) For the free chiral Fermi field $\psi$ on the line, $\CAR(L^{2}(\R)\otimes K)$, in its vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty, 0)}(P)\otimes\id_{K}$, $P = i\,d/du$, the modular conjugation $J_{a}$ of the algebra of the half-line $(a, \infty)$ acts on the fields as the Klein-twisted charge-conjugating reflection about $a$: $J_{a}\psi(f)J_{a} = c'\,Z\psi^{*}(f\circ r_{a})Z^{*}$ for $f$ supported in $(a, \infty)$, $r_{a}(u) = 2a - u$, with a constant phase $c'$ independent of $f$ and $a$. It is the second quantisation, twisted by $Z$, of the one-particle modular conjugation, as in (a) for local nets; the value of $c'$ depends on the conventions and is not part of this Fact.
+\item[(b)] (Twisted duality; Baumgaertel, Jurke and Lledo.) For the self-dual CAR algebra over a Hilbert space with antiunitary involution, in any Fock representation, and a closed subspace $q$ invariant under the involution, the von Neumann algebras satisfy $\mathcal{M}(q)' = Z\mathcal{M}(q^{\perp})Z^{*}$, with $Z = (1 + I_{4}\Theta)/(1 + I_{4})$ the Klein twist built from the grading $\Theta$; the graph of the modular operator has an explicit form, which applies to free fermionic nets.
+\item[(c)] (The field-level form for the chiral Fermi field.) For the free chiral Fermi field $\psi$ on the line, $\CAR(L^{2}(\R)\otimes K)$, in its vacuum, the gauge-invariant quasi-free state with symbol $\chi_{(-\infty, 0)}(P)\otimes\id_{K}$, $P = I_{4}\,d/du$, the modular conjugation $J_{a}$ of the algebra of the half-line $(a, \infty)$ acts on the fields as the Klein-twisted charge-conjugating reflection about $a$: $J_{a}\psi(f)J_{a} = c'\,Z\psi^{*}(f\circ r_{a})Z^{*}$ for $f$ supported in $(a, \infty)$, $r_{a}(u) = 2a - u$, with a constant phase $c'$ independent of $f$ and $a$. It is the second quantisation, twisted by $Z$, of the one-particle modular conjugation, as in (a) for local nets; the value of $c'$ depends on the conventions and is not part of this Fact.
 \end{enumerate}
 \emph{Provenance:} \cite{BGL1993}; \cite{BJL2002}; clause (c) and the circle form of (a) cited from memory.
 

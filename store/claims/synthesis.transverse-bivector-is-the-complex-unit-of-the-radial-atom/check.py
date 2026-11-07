@@ -5,6 +5,8 @@ v = (e_0 + e_1)/2, v* = (e_0 - e_1)/2, sigma = v* v - v v* = e_0 e_1, K = sigma/
 P_- = v v*. J = e_2 e_3. Frame *-structure x* = e_0 rev(x) e_0.
 
 (i)   J^2 = -1, J commutes with e_0, e_1, v, v*, sigma; J sigma = sigma J = +I_4, J = I_4 sigma; J* = -J;
+      the centraliser of e_0, e_1 is span{1, J, e_0e_1e_2, e_0e_1e_3} (dimension 4, even part span{1, J}),
+      sigma e_2 squares to -1, commutes with the atom and anticommutes with J;
 (ii)  A = Cl(1,1) + Cl(1,1) J has real dimension 8, is closed under products, has centre span{1, J}, and
       is spanned over span{1, J} by 1, v, v*, v* v; * is an antiautomorphism with v -> v*, sigma* = sigma;
 (iii) I_4 anticommutes with e_0, e_1, v, v*; (I_4 a)(I_4 b) = +ab, (J a)(J b) = -ab; I_4 P_+- = +-J P_+-;
@@ -12,10 +14,10 @@ P_- = v v*. J = e_2 e_3. Frame *-structure x* = e_0 rev(x) e_0.
       (Cayley form) U = c + s (2JK) is unitary, U U' is the rotor at the summed angle, and
       U v U^-1 = (C - S J) v, U v* U^-1 = (C + S J) v* with C = c^2 - s^2, S = 2cs (cos t, sin t);
       the rotor flow exp(lambda K) at rational e^(lambda/2) gives e^-lambda v, and t = -J lambda turns
-      -J t into -lambda;
-(v)   with T(x) = 2<x>_0 - 2J<Jx>_0 and rho = P_+ + y P_- (y = e^beta rational), omega(x) = T(rho x)/T(rho)
+      -J t into -lambda; at z = t + J theta, tau_z(v) = e^theta e^{-Jt} v and tau_z(v*) = e^-theta e^{Jt} v*;
+(v)   with T(x) = 2<x>_0 - 2J<Jx>_0 and rho = P_+ + q P_- (q = e^beta rational), omega(x) = T(rho x)/T(rho)
       is KMS for tau_{J beta} = Ad(rho): omega(x rho y rho^-1) = omega(y x) on a basis, not for Ad(rho^-1);
-      omega(v* v) = 1/(1 + y); omega(x* x) real and positive; the KMS densities form the J-line of rho;
+      omega(v* v) = 1/(1 + q); omega(x* x) real and positive; the KMS densities form the J-line of rho;
       Ad(P_+ + w P_-) v = w v for w = C + S J (the modular flow Ad(rho^{Jt}) = tau_{-beta t} on v).
 Exact arithmetic only (Fractions).
 """
@@ -76,6 +78,7 @@ def trace(x, J):
 def check_transverse_plane_is_a_central_unit_of_the_atom():
     premise("singularity.modular-structure-completed-pair")
     premise("singularity.pseudo-inverse-identities-hyperbolic-atom")
+    premise("primer.centre")
     v, vs, sigma, J, I4 = build()
     ok = m(v, v) == {} and m(vs, vs) == {} and GA.add(m(v, vs), m(vs, v)) == GA.sc(1)
     ok &= sigma == m(g(0), g(1))
@@ -98,7 +101,23 @@ def check_transverse_plane_is_a_central_unit_of_the_atom():
     # spanned over span{1, J} by 1, v, v*, v* v
     gens = [GA.sc(1), v, vs, m(vs, v)]
     ok &= GA.rank_of_vectors(coords(gens + [m(J, x) for x in gens])) == 8
-    GA.check("(i)-(ii) J = e_2 e_3: J^2 = -1, commutes with e_0, e_1, v, v*, sigma; J sigma = +I_4; "
+    # the centraliser of e_0, e_1 in Cl(1,3): dimension 4, spanned by 1, J, e_0e_1e_2, e_0e_1e_3
+    bl = GA.all_blades(4)
+    rows = []
+    for gen_ in (g(0), g(1)):
+        cols = [comm({b: F(1)}, gen_) for b in bl]
+        for c in bl:
+            rows.append([x.get(c, F(0)) for x in cols])
+    ok &= 16 - GA.mat_rank(GA.frac_matrix(rows)) == 4
+    cen = [b for b in bl if comm({b: F(1)}, g(0)) == {} and comm({b: F(1)}, g(1)) == {}]
+    ok &= cen == [(), (2, 3), (0, 1, 2), (0, 1, 3)]
+    ok &= [b for b in cen if len(b) % 2 == 0] == [(), (2, 3)]
+    u = m(sigma, g(2))
+    ok &= m(u, u) == GA.sc(-1) and GA.anticommutes(u, J, SQ)
+    ok &= all(GA.commutes(u, x, SQ) for x in (v, vs, sigma))
+    ok &= m(u, m(sigma, g(3))) == J
+    GA.check("(i)-(ii) J = e_2 e_3: J^2 = -1, commutes with e_0, e_1, v, v*, sigma; J sigma = +I_4; the "
+             "centraliser is the quaternions span{1, J, e_0e_1e_2, e_0e_1e_3} with even part span{1, J}; "
              "A = Cl(1,1) + Cl(1,1) J is an algebra of dimension 8 with centre span{1, J}, spanned over it "
              "by 1, v, v*, v* v", ok)
     return ok
@@ -173,6 +192,18 @@ def check_phase_flow_with_unit_J():
         ok &= m(R, Ri) == GA.sc(1)
         ok &= m(R, v, Ri) == GA.scal(1 / (a * a), v) and m(R, vs, Ri) == GA.scal(a * a, vs)
     # continuation: at t = -J lambda the exponent -J t is -lambda, and J t K is lambda K
+    # a mixed parameter z = t + J theta: e^{JzK} = e^{JtK} e^{-theta K}
+    c, s, U = rot(F(1, 3))
+    Ui = GA.sub(GA.sc(c), GA.scal(s, A2))
+    C, S = c * c - s * s, 2 * c * s
+    a = F(5, 2)
+    ch, sh = (a + 1 / a) / 2, (a - 1 / a) / 2
+    E = GA.sub(GA.sc(ch), GA.scal(sh, sigma))
+    Ei = GA.add(GA.sc(ch), GA.scal(sh, sigma))
+    Z, Zi = m(U, E), m(Ei, Ui)
+    ok &= m(Z, Zi) == GA.sc(1)
+    ok &= m(Z, v, Zi) == GA.scal(a * a, m(GA.sub(GA.sc(C), GA.scal(S, J)), v))
+    ok &= m(Z, vs, Zi) == GA.scal(1 / (a * a), m(GA.add(GA.sc(C), GA.scal(S, J)), vs))
     lam = F(7, 4)
     t = GA.scal(-lam, J)
     ok &= GA.neg(m(J, t)) == GA.sc(-lam)
@@ -191,16 +222,16 @@ def check_gibbs_state_is_kms_for_the_J_flow():
     pp, pm = m(vs, v), m(v, vs)
     ok = trace(GA.sc(1), J) == GA.sc(2) and trace(J, J) == GA.scal(2, J)
     ok &= all(trace(m(x, y), J) == trace(m(y, x), J) for x in A for y in A)
-    for y in (F(3), F(2, 7)):
-        rho = GA.add(pp, GA.scal(y, pm))
-        rhoi = GA.add(pp, GA.scal(1 / y, pm))
+    for q in (F(3), F(2, 7)):
+        rho = GA.add(pp, GA.scal(q, pm))
+        rhoi = GA.add(pp, GA.scal(1 / q, pm))
         ok &= m(rho, rhoi) == GA.sc(1)
         Z = scalar(trace(rho, J))
 
         def omega(x):
             return GA.scal(1 / Z, trace(m(rho, x), J))
 
-        ok &= omega(pp) == GA.sc(1 / (1 + y))
+        ok &= omega(pp) == GA.sc(1 / (1 + q))
         kms = all(omega(m(x, rho, w, rhoi)) == omega(m(w, x)) for x in A for w in A)
         anti = all(omega(m(x, rhoi, w, rho)) == omega(m(w, x)) for x in A for w in A)
         ok &= kms and not anti

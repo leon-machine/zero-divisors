@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 derivations:
 - name: main
@@ -47,10 +51,11 @@ lineage:
   motivated_by:
   - field-theory.imported-standard-field-theory
   - synthesis.boost-evolution-on-generators-is-one-unitary-group
-outside_ga:
-  kind: complex-analysis
-  why: 'the KMS relation in (iii) is for the phase flow a -> e^{-iw lambda}a on the completed pair of Cl(1,1), built from e_0 and e_1, whose mode operators anticommute with I_4 (the conventions'' first known limit), so no pseudoscalar of the store serves as its unit'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 kept (already raised in this pass). In (iii) the phase flow a -> e^{-i w lambda} a on the completed pair of Cl(1,1) is written with the atom''s unit J = e_2 e_3 (U2, synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom, cited as a mention): a -> e^{-J w lambda} a; the proof says that J acts there and the field theory''s I_4 in (i) and (ii), never identified. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

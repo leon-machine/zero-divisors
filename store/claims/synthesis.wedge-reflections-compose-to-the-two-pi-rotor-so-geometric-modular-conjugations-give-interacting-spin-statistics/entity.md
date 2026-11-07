@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: notation pass, imaginary units resolved by the unit principle
+  version: 3
+  source: maintainer pass 2026-11-07 (resolve units)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -58,10 +62,11 @@ lineage:
   - field-theory.imported-standard-field-theory
   - synthesis.n-plus-null-ground-state
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
-outside_ga:
-  kind: complex-analysis
-  why: 'the proof uses Borchers'' relation Delta^{it}U(a)Delta^{-it} = U(e^{-2 pi t}a), quoted from the imported Fact, for the modular objects of an interacting net on a general Hilbert space'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 kept (already raised in this pass). Borchers'' relation in the proof of (ii), Delta^{it} U(a) Delta^{-it} = U(e^{-2 pi t} a), is written Delta^{I_4 t}, I_4 the default scalar unit of the abstract Hilbert space (U1) and the unit the entity already uses in (iv), as the restated Kuckert-Borchers Fact has it. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

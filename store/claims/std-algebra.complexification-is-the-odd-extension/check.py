@@ -9,6 +9,7 @@ I_V = e_0 ... e_{n-1}. Adjoin e = e_n orthogonal to V with Q(e) = -I_V^2, W = V 
 (ii)  a + b (unit) -> a + b I_W is an isomorphism Cl(V) (x) span{1, I_W} -> Cl(W): the images of the
       generators obey the defining relations, the map is onto (rank 2^(n+1)), and it is multiplicative
       on every pair of basis elements for n = 4; Cl(W) = Cl^0(W) + Cl^0(W) I_W;
+(vi)  odd n: Cl(1,2) (x) span{1, I_W'} -> Cl(2,3) through V + R f is multiplicative and injective;
 (iii) (a + I_W b)^2 = Q(a) - Q(b) + 2 <a, b> I_W, the shift (y + eps I_W a)^2 = Q(y) - eps^2 Q(a)
       + 2 eps <y, a> I_W, e_2 + I_5 e_3 is null, e_2 + I_4 e_3 squares outside span{1, I_4};
 (iv)  with Q(e) = +1 and P_+- = (1 +- e)/2: (x P_+-) I_W = +-(x I_V) P_+- for every blade x of Cl(V),
@@ -131,6 +132,19 @@ def check_complexification_map_is_an_isomorphism():
             pa = GA.sub(GA.mul(a1, a2, sqv), GA.mul(b1, b2, sqv))
             pb = GA.add(GA.mul(a1, b2, sqv), GA.mul(b1, a2, sqv))
             ok &= GA.mul(phi(a1, b1), phi(a2, b2), sqw) == phi(pa, pb)
+    # (vi) odd dimension: V = R^{1,2} inside V' = V + R f (Q(f) = -1), W' = V' + R e (Q(e) = +1)
+    sqv3, sqw5, iw5 = (1, -1, -1), (1, -1, -1, -1, 1), top(5)
+
+    def phi3(a, b):
+        return GA.add(a, GA.mul(b, iw5, sqw5))
+
+    basis3 = [({b: F(1)}, {}) for b in blades(3)] + [({}, {b: F(1)}) for b in blades(3)]
+    for a1, b1 in basis3:
+        for a2, b2 in basis3:
+            pa = GA.sub(GA.mul(a1, a2, sqv3), GA.mul(b1, b2, sqv3))
+            pb = GA.add(GA.mul(a1, b2, sqv3), GA.mul(b1, a2, sqv3))
+            ok &= GA.mul(phi3(a1, b1), phi3(a2, b2), sqw5) == phi3(pa, pb)
+    ok &= GA.rank_of_vectors([[phi3(a, b).get(c, F(0)) for c in blades(5)] for a, b in basis3]) == 16
     GA.check("(ii) e_k -> e_k, unit -> I_W is an isomorphism Cl(V) (x) span{1, I_W} -> Cl(W) for "
              "Cl(1,3) -> Cl(2,3) and Cl(2,4) -> Cl(3,4); Cl(W) = Cl^0(W) + Cl^0(W) I_W", ok)
     return ok

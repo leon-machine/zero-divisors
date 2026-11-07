@@ -183,7 +183,9 @@ on the radial atom, $I_5$ and $I_7$ for complexifications):
   dual plane, $I_4B$. (U2) $J = e_2e_3$, the pseudoscalar of the plane
   orthogonal to the atom's plane, for the completed-pair atom and the boundary
   modes in the radial plane $\sigma = e_0e_1$: $J^2 = -1$, $J$ commutes with
-  the atom, $J\sigma = +I_4$; the phase flow is $\operatorname{Ad}(e^{JtK})$,
+  the atom, $J\sigma = +I_4$ (it is the even unit of the atom's quaternionic
+  centraliser $\mathrm{span}\{1, J, \sigma e_2, \sigma e_3\}$; odd units such as
+  $\sigma e_2$ also commute with the atom and are not identified with $J$); the phase flow is $\operatorname{Ad}(e^{JtK})$,
   $K = \sigma/2$, with $v \mapsto e^{-Jt}v$ and $v^* \mapsto e^{+Jt}v^*$, the
   rotor flow $e^{\lambda K}$ is its value at $t = -J\lambda$, the KMS
   relation is $\omega_\beta(x\,\tau_{J\beta}(y)) = \omega_\beta(yx)$ with

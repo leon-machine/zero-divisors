@@ -47,8 +47,12 @@ locators:
   line: 592
 outside_ga:
   kind: complex-analysis
-  why: 'the continuation of the boost rotor to imaginary rapidity lives in the complexified atom, and the result states that its generator i sigma lies outside the real algebra, so no pseudoscalar of that algebra can stand for i'
+  why: 'the clause states that the continuation''s generator i sigma lies outside the real algebra Cl(1,3) (T5 Prop. 7.21(3)); with the atom''s unit J (U2) it is J sigma = I_4 and with I_4 it is e_2 e_3, both in Cl(1,3), so no pseudoscalar of the algebra can stand for this i without making the statement false'
 extraction:
+  maintainer_pass_resolve_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 kept (already raised in this pass). Not resolved (U6). The clause states that the continuation''s generator i sigma lies outside the real algebra (T5 Prop. 7.21(3), singularity.euclidean-rotor-where-it-lies (3): outside Cl(1,3)). With the atom''s unit J of U2 the generator is J sigma = I_4, and with I_4 it is I_4 sigma = e_2 e_3; both lie in Cl(1,3), so either replacement makes the statement false. The central I_5 of Cl(2,3) would keep it true but would give the complexified atom a unit other than the J that U2 assigns to it. The bare i stays and the declaration is kept with its reason narrowed. Text unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

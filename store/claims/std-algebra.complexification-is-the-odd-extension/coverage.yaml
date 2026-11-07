@@ -5,8 +5,8 @@ functions:
     omits: "every signature of dimension 2 and 4 and the conformal signature (1,5) in dimension 6: epsilon_V against the formula, I_W^2 = -1 with Q(e) = -epsilon_V and +1 with the other sign, I_W commuting with every generator; the centre computed as a commutant of dimension 2 only for n = 2, 4 (for n = 6 it is the stored centre theorem); Q(e) = +1 for Cl(1,3) and Cl(2,4)"
   check_complexification_map_is_an_isomorphism:
     kind: exact
-    clauses: ["(ii)", "(v)"]
-    omits: "for Cl(1,3) -> Cl(2,3) and Cl(2,4) -> Cl(3,4): the Clifford relations of the image generators, I_W central of square -1, rank 2^(n+1) of the images of the real basis, Cl(W) = Cl^0(W) + Cl^0(W) I_W; multiplicativity on all 32 x 32 basis pairs only for Cl(1,3) -> Cl(2,3) (for Cl(2,4) it follows from the generators and centrality, as in the proof); the matrix form is the stored complexification theorem"
+    clauses: ["(ii)", "(v)", "(vi)"]
+    omits: "for Cl(1,3) -> Cl(2,3) and Cl(2,4) -> Cl(3,4): the Clifford relations of the image generators, I_W central of square -1, rank 2^(n+1) of the images of the real basis, Cl(W) = Cl^0(W) + Cl^0(W) I_W; multiplicativity on all 32 x 32 basis pairs only for Cl(1,3) -> Cl(2,3) (for Cl(2,4) it follows from the generators and centrality, as in the proof); the matrix form is the stored complexification theorem; (vi) only for V = R^{1,2} with Q(f) = -1, multiplicative on all 16 x 16 basis pairs and injective by rank"
   check_complex_vectors_and_shifted_squares:
     kind: exact
     clauses: ["(iii)", "(v)"]
