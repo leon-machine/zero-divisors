@@ -1,4 +1,10 @@
 functions:
+  check_gtg_formal_forms_equal_their_index_readings:
+    kind: sampled
+    clauses:
+    - 'setting: the Weyl map W(a ^ b) = calR(a ^ b) - P*(a) ^ b - a ^ P*(b) is the index reading R - KN(P*) for torsion-free Omega'
+    - '(iii) (1/2) <W(a ^ b) W(d_b ^ d_a)> = (1/4) W_abcd W^abcd; (iv) the GA display equals the index display and (1 - t) L1(P*) + t L1(rho id)'
+    omits: 'one torsion-free curvature sample (and one with torsion for the Weyl-map convention), four values of t and two of rho; the general equalities are the dictionary identities, argued in the proof'
   check_broken_components_of_the_frozen_point:
     kind: sampled
     clauses:
@@ -24,3 +30,11 @@ functions:
     clauses:
     - (v) frame derivative with S = rho H tied is 2 rho times the slot derivative 2(G + Lambda); over Q(I) the stored frame equation
     omits: one torsion-free curvature at rho in {3/7, -2/5}; the general case is the frame-slot symmetry of the block argued in the proof
+  check_gtg_readings_of_the_curvature_operator:
+    kind: sampled
+    clauses:
+    - "setting: the index readings of the Ricci, Schouten and Weyl maps, the Weyl square and the Euler density"
+    - (iii) L1 at the Schouten slot is the Weyl square
+    - (iv) L1 at the frozen slot
+    - (v) the slot derivative 2(calG + Lambda id) as a map
+    omits: "one torsion-free and one torsionful curvature sample, one slot matrix for Q2, two values of rho"

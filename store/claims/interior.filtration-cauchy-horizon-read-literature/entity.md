@@ -25,7 +25,7 @@ derivations:
 - name: main
   uses:
   - interior.imported-mass-inflation-stability@3
-  - interior.stabilisers-flat-model@5
+  - interior.stabilisers-flat-model@6
   - singularity.type-n-only-type-n@5
   proof: proof-main.tex
 checked_by:

@@ -1,7 +1,7 @@
 ---
 id: dark-energy.cosmological-constant-does-not-change-residue
 kind: claim
-version: 6
+version: 7
 title: The cosmological constant does not change the residue
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (gauge field and connection stated in GA, forms as labelled reading)
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -45,6 +49,10 @@ locators:
   label: prop:lambdacorr
   line: 871
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA: the Bianchi I field is given by its gauge field, hb^{-1}(e_tau) = gamma_0, hb^{-1}(e_i) = a_i gamma_i, with the derived metric line element and the Levi-Civita connection forms omega^{i0} = H_i e^i kept only as labelled component readings (formal and technical). A notation change: the line element is Q(hb^{-1}(dx)) and the forms are the components of the stated Omega (DICTIONARY C10), the same field as in dark-energy.frozen-point-datum-kasner-wall, whose GA values were checked exactly. Proof unchanged (not in forms).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -73,7 +81,7 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a diagonal Bianchi I gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with derived metric $g = d\tau^2 - \sum_i a_i(\tau)^2(dx^i)^2$ and Hubble rates $H_i = \dot a_i/a_i$, so that on the orthonormal physical frame $\{\gamma_0, \gamma_i\}$ over $(\partial_\tau, \partial_i)$ the rotation-gauge field is $\Omega(\gamma_i) = -H_i\,\gamma_0 \wedge \gamma_i$, $\Omega(\gamma_0) = 0$ (as Levi-Civita connection forms of $g$ in the coframe $e^i = a_i\,dx^i$, $\omega^{i0} = H_i\,e^i$), and impose the vacuum field equations with cosmological constant, $\mathcal{R}(a) = \Lambda a$ in the store's sign (for the derived metric, $\mathrm{Ric} = \Lambda g$):
+Let $(\hb, \Omega)$ be a diagonal Bianchi I gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), given by $\hb^{-1}(e_\tau) = \gamma_0$, $\hb^{-1}(e_i) = a_i(\tau)\,\gamma_i$ on the background frame of the labels $(\tau, x^i)$ (derived metric, in components, $g = d\tau^2 - \sum_i a_i(\tau)^2(dx^i)^2$), with Hubble rates $H_i = \dot a_i/a_i$, so that on the orthonormal physical frame $\{\gamma_0, \gamma_i\}$ over $(\partial_\tau, \partial_i)$ the rotation-gauge field is $\Omega(\gamma_i) = -H_i\,\gamma_0 \wedge \gamma_i$, $\Omega(\gamma_0) = 0$ (in components, a labelled reading: the Levi-Civita connection forms $\omega^{i0} = H_i\,e^i$ of the coframe $e^i = a_i\,dx^i$), and impose the vacuum field equations with cosmological constant, $\mathcal{R}(a) = \Lambda a$ in the store's sign (for the derived metric, $\mathrm{Ric} = \Lambda g$):
 \[
 \dot H_i + H_i\sum_j H_j = \Lambda \quad (i = 1,2,3), \qquad \sum_{i<j}H_iH_j = \Lambda .
 \]
@@ -84,7 +92,7 @@ H_i \;=\; \frac{p_i}{\tau} \;+\; \frac{\Lambda}{2}\,(1 - p_i)\,\tau \;+\; \sum_{
 every $h_{i,n}$ a polynomial in $\Lambda$ and $p$ determined by the evolution equations alone, the constraint then holding identically. In the Bianchi I class the first correction to the connection is therefore $O(\Lambda\tau)$ and regular. At a Schwarzschild-de Sitter wall, whose slices are Kantowski-Sachs rather than flat, the sphere's intrinsic curvature adds corrections of relative order $\tau^{1/3}$ in the rotation block and $\tau^{2/3}$ in the boost block (Fact \claimref{dark-energy.imported-weighted-limit-schwarzschild-singularity-matching}), larger than $\Lambda\tau^2$ and singular in absolute terms; what this proposition establishes there is only that the residue, the coefficient of $\tau^{-1}$, is the Kasner boost of the $\Lambda = 0$ approach and that the field equations at the wall remain the Kasner relations.
 
 ## technical
-For a diagonal Bianchi I gravitational field on flat spacetime, with derived metric $g = d\tau^2 - \sum_i a_i^2 (dx^i)^2$, Hubble rates $H_i = \dot a_i/a_i$ and rotation-gauge field $\Omega(\gamma_i) = -H_i\,\gamma_0 \wedge \gamma_i$ on the orthonormal physical frame, the field equations with cosmological constant, $\mathcal{R}(a) = \Lambda a$ (for the derived metric $\mathrm{Ric} = \Lambda g$), are the evolution equations $\dot H_i + H_i \sum_j H_j = \Lambda$ together with the constraint $\sum_{i<j} H_i H_j = \Lambda$. For every Kasner point $p$ there is a unique formal solution with a simple pole of residue $p$ at $\tau = 0$. It is odd in $\tau$, $H_i = p_i/\tau + \tfrac{\Lambda}{2}(1 - p_i)\tau + \sum_{n \geq 2} h_{i,n}\tau^{2n-1}$, each coefficient a polynomial in $\Lambda$ and $p$ fixed by the evolution equations, and the constraint then holds identically.
+For a diagonal Bianchi I gravitational field on flat spacetime, $\hb^{-1}(e_\tau) = \gamma_0$, $\hb^{-1}(e_i) = a_i\gamma_i$ (derived metric $d\tau^2 - \sum_i a_i^2 (dx^i)^2$), with Hubble rates $H_i = \dot a_i/a_i$ and rotation-gauge field $\Omega(\gamma_i) = -H_i\,\gamma_0 \wedge \gamma_i$ on the orthonormal physical frame, the field equations with cosmological constant, $\mathcal{R}(a) = \Lambda a$ (for the derived metric $\mathrm{Ric} = \Lambda g$), are the evolution equations $\dot H_i + H_i \sum_j H_j = \Lambda$ together with the constraint $\sum_{i<j} H_i H_j = \Lambda$. For every Kasner point $p$ there is a unique formal solution with a simple pole of residue $p$ at $\tau = 0$. It is odd in $\tau$, $H_i = p_i/\tau + \tfrac{\Lambda}{2}(1 - p_i)\tau + \sum_{n \geq 2} h_{i,n}\tau^{2n-1}$, each coefficient a polynomial in $\Lambda$ and $p$ fixed by the evolution equations, and the constraint then holds identically.
 
 So within the Bianchi I class the cosmological constant enters only through a regular correction of order $\Lambda\tau$. At a Schwarzschild-de Sitter wall, whose slices are Kantowski-Sachs, the sphere's curvature adds larger corrections, of relative order $\tau^{1/3}$ in the rotation block and $\tau^{2/3}$ in the boost block; there the result asserts only that the residue, the coefficient of $\tau^{-1}$, is the Kasner boost of the $\Lambda = 0$ approach and that the field equations at the wall remain the Kasner relations.
 

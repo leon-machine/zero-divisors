@@ -21,9 +21,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.stored-asymmetry-charge-not-number@9
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.mirror-tower-copy-one@8
+  - dark-matter.mirror-tower-copy-one@9
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -41,6 +41,10 @@ locators:
   label: comp:mirror
   line: 770
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

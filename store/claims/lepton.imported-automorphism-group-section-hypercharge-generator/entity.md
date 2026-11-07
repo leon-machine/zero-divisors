@@ -1,7 +1,7 @@
 ---
 id: lepton.imported-automorphism-group-section-hypercharge-generator
 kind: claim
-version: 3
+version: 4
 title: 'Imported: the automorphism group, its section, and the hypercharge generator'
 status: proved
 region: lepton
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-lepton, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, imaginary unit of the hypercharge generator written as I_4'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: fact:group
   line: 188
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The hypercharge generator y = (3i I_2, -2i I_3) and its eigenvalue i q are written with the field theory''s unit I_4 (y = (3 I_4 I_2, -2 I_4 I_3), eigenvalue I_4 q), numbers read in span{1, I_4} as in standard-model.global-form-quotient-determined, and the clash of I_2, I_3 (identity matrices) with I_4 (the pseudoscalar) is stated; the bare i had been missed by the unit pass''s detector; source_formal keeps the source''s form.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -68,12 +76,12 @@ extraction:
 ---
 
 ## formal
-The automorphisms of the hierarchy, the unitaries $A \otimes B$ of $\C^{2} \otimes \C^{3}$ with $(A, B) \in U(2) \times U(3)$, form $(U(2) \times U(3))/K$ with $K = \{(\lambda I_{2}, \lambda^{-1}I_{3})\}$, and each $K$-coset contains exactly one pair with $\det A \cdot \det B = 1$, so the group is $S(U(2) \times U(3)) \cong (SU(2) \times SU(3) \times U(1))/\mathbb{Z}_{6}$, the $U(1)$ factor acting as $(\lambda^{3}a, \lambda^{-2}b)$. The centre of its Lie algebra is spanned by $\mathsf{y} = (3iI_{2}, -2iI_{3})$; on an irreducible representation $\mathsf{y}$ acts as $iq$ with $q$ the abelian weight, and hypercharge is $Y = q/6$. Irreducible representations of $S(U(2) \times U(3))$ are determined by their $SU(2)$ content, $SU(3)$ content and weight. \emph{Provenance:} \cite[Thms.~4.1, 4.2, and the definition before Prop.~5.3]{ButlerT12}.
+The automorphisms of the hierarchy, the unitaries $A \otimes B$ of $\C^{2} \otimes \C^{3}$ with $(A, B) \in U(2) \times U(3)$, form $(U(2) \times U(3))/K$ with $K = \{(\lambda I_{2}, \lambda^{-1}I_{3})\}$, and each $K$-coset contains exactly one pair with $\det A \cdot \det B = 1$, so the group is $S(U(2) \times U(3)) \cong (SU(2) \times SU(3) \times U(1))/\mathbb{Z}_{6}$, the $U(1)$ factor acting as $(\lambda^{3}a, \lambda^{-2}b)$. The centre of its Lie algebra is spanned by $\mathsf{y} = (3I_{4}\,I_{2}, -2I_{4}\,I_{3})$ (numbers are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors; $I_{2}$ and $I_{3}$ are identity matrices); on an irreducible representation $\mathsf{y}$ acts as $I_{4}q$ with $q$ the abelian weight, and hypercharge is $Y = q/6$. Irreducible representations of $S(U(2) \times U(3))$ are determined by their $SU(2)$ content, $SU(3)$ content and weight. \emph{Provenance:} \cite[Thms.~4.1, 4.2, and the definition before Prop.~5.3]{ButlerT12}.
 
 ## technical
 The automorphisms of the hierarchy $\C^{2} \otimes \C^{3}$ are the unitaries $A \otimes B$, $(A, B) \in U(2) \times U(3)$, modulo the kernel $K = \{(\lambda I_{2}, \lambda^{-1}I_{3})\}$. Each $K$-coset contains exactly one pair with $\det A \cdot \det B = 1$, which gives the canonical section and the group $S(U(2) \times U(3)) \cong (SU(2) \times SU(3) \times U(1))/\mathbb{Z}_{6}$, the $U(1)$ factor acting as $(\lambda^{3}a, \lambda^{-2}b)$.
 
-The centre of the Lie algebra is spanned by $\mathsf{y} = (3iI_{2}, -2iI_{3})$, which acts as $iq$ on an irreducible representation of abelian weight $q$, and hypercharge is $Y = q/6$. Irreducible representations are determined by their $SU(2)$ content, $SU(3)$ content and weight.
+The centre of the Lie algebra is spanned by $\mathsf{y} = (3I_{4}\,I_{2}, -2I_{4}\,I_{3})$, with $I_{4}$ the field theory's unit and $I_{2}$, $I_{3}$ identity matrices, which acts as $I_{4}q$ on an irreducible representation of abelian weight $q$, and hypercharge is $Y = q/6$. Irreducible representations are determined by their $SU(2)$ content, $SU(3)$ content and weight.
 
 ## lay
 The symmetries of the structure of two spinor states with three internal pairs form exactly the Standard Model's gauge group in its smallest global form. Each symmetry can be written in many ways, and there is one canonical choice among them. The group's single abelian direction defines hypercharge as one sixth of a whole-number weight, and a particle type is fixed by three labels: its weak content, its colour content and that weight.

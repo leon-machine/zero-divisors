@@ -1,7 +1,7 @@
 ---
 id: synthesis.tangential-derivative-transport-bound
 kind: claim
-version: 3
+version: 4
 title: 'A bound on tangential derivatives of the transport'
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, pointer to the filed sharpness example made exact'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - interior.transport-level-convergence-along-tangential-curves@4
-  - interior.weighted-limit-theorem@5
+  - interior.weighted-limit-theorem@6
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -36,6 +40,10 @@ checked_by:
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof, Consequences: the parenthetical named the filed sharpness example for an error tau^{1/2} phi(x/tau); the filed example is tau^{1/2} phi(x/tau^2), with coordinate derivative tau^{-3/2}; both examples work, and the pointer now says which is filed; wording only.'
   open_problem: op.generic-weighted-limit
   note: >-
     The edge-regularity half of the problem asks for control of tangential derivatives of the

@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - one-relation.imported-null-cone-determines-form-zeemans@3
-  - one-relation.imported-witts-extension-theorem@2
-  - std-algebra.bivector-exponential@3
+  - one-relation.imported-witts-extension-theorem@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

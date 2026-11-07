@@ -1,7 +1,7 @@
 ---
 id: synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion
 kind: claim
-version: 2
+version: 3
 title: 'A constant D-term level fixes the weak scale under promotion'
 status: proved
 region: synthesis
@@ -17,11 +17,15 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
   - synthesis.einstein-route-makes-n-initial-data@4
   - synthesis.smallness-monomials-exact-hierarchy-casimir@3
   proof: proof-main.tex
@@ -37,6 +41,10 @@ lineage:
   - synthesis.rung-unit-second-free-number
   - programme.n-parameter-of-the-laws
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject, and this entity used both letters N (the norm in (1), (2) and its proof; N = M_P/H in (3)). N = M_P/H keeps N. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -63,18 +71,18 @@ extraction:
 ## formal
 Let the rung field have the D-term action of Theorem \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}, with the couplings $g$, $g'$ and the level $\xi \neq 0$ constants of the action, on the locus $L = \{Q(c) = -H^{2}\}$, $H^{2} = \Lambda/3$, and read the theory under the Henneaux-Teitelboim promotion, so that $\Lambda$, and with it $N = M_{P}/H$, is initial data while $G = M_{P}^{-2}$ is a constant of the action (Theorem \claimref{synthesis.einstein-route-makes-n-initial-data}(ii), (iii)).
 \begin{enumerate}
-\item \emph{(The vacuum moment map does not see $\Lambda$.)} On the boundary $N^{2} - m^{2} = H^{4}$ of the orbit space, $V_{D} = \tfrac12\bigl(\tfrac{g^{2}}{4}m^{2} + g'^{2}(\tfrac{m}{2} - \zeta)^{2}\bigr)$, $\xi = 2\zeta$, with no dependence on $H$. Its minimum $m^{*} = g'^{2}\xi/(g^{2} + g'^{2})$ is therefore the same on every solution, and $N^{*} = \sqrt{m^{*2} + H^{4}}$ satisfies $0 < N^{*} - |m^{*}| \le H^{4}/(2|m^{*}|)$.
-\item \emph{(Which ratio the laws fix.)} Consequently $\xi G$, equivalently $m^{*}G$, is fixed by the laws, and $M_{W}^{2}/M_{P}^{2} = \tfrac12 g^{2}N^{*}G$ is the same on every solution up to a relative change at most $H^{4}/(2m^{*2})$, of order $(H/v)^{4}$, while $N^{*}/H^{2} = \sqrt{1 + m^{*2}/H^{4}}$ is strictly decreasing in $H$: the weak scale in Hubble units takes different values on different solutions. The D-term action with a constant level is thus the branch of Theorem \claimref{synthesis.einstein-route-makes-n-initial-data}(iii) in which $v/M_{P}$ is held and $v/H$ is initial data. $N^{*}/H^{2}$ is the same on every solution exactly when $m^{*}/H^{2}$ is, that is, when the level is proportional to $\Lambda$.
+\item \emph{(The vacuum moment map does not see $\Lambda$.)} On the boundary $\mathsf{N}^{2} - m^{2} = H^{4}$ of the orbit space, $V_{D} = \tfrac12\bigl(\tfrac{g^{2}}{4}m^{2} + g'^{2}(\tfrac{m}{2} - \zeta)^{2}\bigr)$, $\xi = 2\zeta$, with no dependence on $H$. Its minimum $m^{*} = g'^{2}\xi/(g^{2} + g'^{2})$ is therefore the same on every solution, and $\mathsf{N}^{*} = \sqrt{m^{*2} + H^{4}}$ satisfies $0 < \mathsf{N}^{*} - |m^{*}| \le H^{4}/(2|m^{*}|)$.
+\item \emph{(Which ratio the laws fix.)} Consequently $\xi G$, equivalently $m^{*}G$, is fixed by the laws, and $M_{W}^{2}/M_{P}^{2} = \tfrac12 g^{2}\mathsf{N}^{*}G$ is the same on every solution up to a relative change at most $H^{4}/(2m^{*2})$, of order $(H/v)^{4}$, while $\mathsf{N}^{*}/H^{2} = \sqrt{1 + m^{*2}/H^{4}}$ is strictly decreasing in $H$: the weak scale in Hubble units takes different values on different solutions. The D-term action with a constant level is thus the branch of Theorem \claimref{synthesis.einstein-route-makes-n-initial-data}(iii) in which $v/M_{P}$ is held and $v/H$ is initial data. $\mathsf{N}^{*}/H^{2}$ is the same on every solution exactly when $m^{*}/H^{2}$ is, that is, when the level is proportional to $\Lambda$.
 \item \emph{(The relation is an identity.)} With $G = M_{P}^{-2}$ and $N = M_{P}/H$, $Gv^{2}N^{2} = (v/H)^{2}$ is an identity, $(v/H)^{2}$ times the identity $G\Lambda = 3N^{-2}$ of Proposition \claimref{synthesis.smallness-monomials-exact-hierarchy-casimir}(i). Its left side is a constant of the laws exactly when $v/H$ is, so it does not decide between the branches of Theorem \claimref{synthesis.einstein-route-makes-n-initial-data}(iii).
 \end{enumerate}
 
 \emph{Note (register, 2026-11-01).} The rung-unit premise has been restated on this branch: its version 3 (\claimref{synthesis.rung-unit-second-free-number}) holds the level $\xi G$ as the constant of the laws, $v/M_{P}$ as the law up to relative order $(H/v)^{4}$, $v/H$ as initial data, and $Gv^{2}N^{2} = (v/H)^{2}$ as an identity. The refutation condition met here is that of its version 2.
 
 ## technical
-The rung field's D-term action puts its vacuum on the boundary of the orbit space, where the norm and the hypercharge moment map are tied by $N^{2} - m^{2} = H^{4}$. On that boundary the potential depends on the moment map alone, with no trace of the cosmological constant, so the vacuum moment map is fixed by the level and the couplings, and the norm follows the cosmological constant only through a correction of relative size $H^{4}/m^{*2}$. Under the Henneaux-Teitelboim promotion the cosmological constant is initial data while the level, the couplings and Newton's constant stay constants of the action. The level times Newton's constant is then fixed by the laws, so the weak scale against the Planck mass is fixed up to a relative correction of order $(H/v)^{4}$, and the weak scale against the Hubble scale is initial data: the opposite of the assignment version 2 of the rung-unit premise made, which this dynamics met as its refutation condition (version 3 of the premise adopts this assignment). The premise's assignment holds only if the level scales with the cosmological constant, a coupling the stored action does not have. The relation $Gv^{2}N^{2} = (v/H)^{2}$ that the register cites is an identity in the units used; it is a constant of the laws exactly when $v/H$ is, so it does not decide between the branches.
+The rung field's D-term action puts its vacuum on the boundary of the orbit space, where the norm and the hypercharge moment map are tied by $\mathsf{N}^{2} - m^{2} = H^{4}$. On that boundary the potential depends on the moment map alone, with no trace of the cosmological constant, so the vacuum moment map is fixed by the level and the couplings, and the norm follows the cosmological constant only through a correction of relative size $H^{4}/m^{*2}$. Under the Henneaux-Teitelboim promotion the cosmological constant is initial data while the level, the couplings and Newton's constant stay constants of the action. The level times Newton's constant is then fixed by the laws, so the weak scale against the Planck mass is fixed up to a relative correction of order $(H/v)^{4}$, and the weak scale against the Hubble scale is initial data: the opposite of the assignment version 2 of the rung-unit premise made, which this dynamics met as its refutation condition (version 3 of the premise adopts this assignment). The premise's assignment holds only if the level scales with the cosmological constant, a coupling the stored action does not have. The relation $Gv^{2}N^{2} = (v/H)^{2}$ that the register cites is an identity in the units used; it is a constant of the laws exactly when $v/H$ is, so it does not decide between the branches.
 
 ## lay
 The framework treats one number, the ratio of the Planck mass to the scale of the cosmological constant, as a fact about the history of the universe rather than a law. A second number, the strength of the Higgs field, is supposed to be a law when it is measured against the cosmological scale. But the framework's own candidate equation for the Higgs field contains a fixed constant that does not know about the cosmological scale at all. Read with the history-dependent cosmological constant, that equation makes the Higgs strength a law when measured against the Planck mass instead, and a historical fact when measured against the cosmological scale. The two statements are incompatible: either the stated law is changed to the Planck-mass ratio, or the constant in the equation must be tied to the cosmological constant. The framework has since changed the stated law to the Planck-mass ratio.
 
 ## one-liner
-On the orbit-space boundary the stored D-term potential has no $H$, so with a constant level $m^{*}$ is the same on every promoted solution and $N^{*} = \sqrt{m^{*2} + H^{4}}$: under the promotion $\xi G$ is fixed, $v/M_{P}$ is fixed up to relative order $(H/v)^{4}$ and $v/H$ is initial data, against version 2 of the rung-unit premise (its refutation condition; version 3 adopts this assignment), unless the level is proportional to $\Lambda$; $Gv^{2}N^{2} = (v/H)^{2}$ is an identity that does not decide the branch.
+On the orbit-space boundary the stored D-term potential has no $H$, so with a constant level $m^{*}$ is the same on every promoted solution and $\mathsf{N}^{*} = \sqrt{m^{*2} + H^{4}}$: under the promotion $\xi G$ is fixed, $v/M_{P}$ is fixed up to relative order $(H/v)^{4}$ and $v/H$ is initial data, against version 2 of the rung-unit premise (its refutation condition; version 3 adopts this assignment), unless the level is proportional to $\Lambda$; $Gv^{2}N^{2} = (v/H)^{2}$ is an identity that does not decide the branch.

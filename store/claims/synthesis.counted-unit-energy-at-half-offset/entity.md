@@ -1,7 +1,7 @@
 ---
 id: synthesis.counted-unit-energy-at-half-offset
 kind: claim
-version: 2
+version: 3
 title: 'A counted unit''s Killing energy at the weights of (Q)'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, bare imaginary unit in proof (i) written as I_4
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -51,6 +55,10 @@ lineage:
   - synthesis.central-label-carries-mass-at-zero-weight
   - synthesis.half-integer-weight-array-carries-half-ln2
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof (i): the argument (iy/2 pi) of the theta quotient, a bare imaginary unit left by the unit pass, is written (I_4 y/2 pi), the unit of the modular forms as in the proof of synthesis.half-integer-weight-array-carries-half-ln2 and the Remark of this proof; nothing else changes.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

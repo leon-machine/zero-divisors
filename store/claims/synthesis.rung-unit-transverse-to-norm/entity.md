@@ -22,9 +22,9 @@ derivations:
 - name: main
   uses:
   - transport.totality@3
-  - standard-model.transported-frozen-point@5
-  - standard-model.imported-tower-commuting-copies-fock-module@5
-  - odd-extensions.transport-constrains-frozen-point-only-through@2
+  - standard-model.transported-frozen-point@6
+  - standard-model.imported-tower-commuting-copies-fock-module@6
+  - odd-extensions.transport-constrains-frozen-point-only-through@3
   proof: proof-main.tex
 checked_by:
 - kind: check

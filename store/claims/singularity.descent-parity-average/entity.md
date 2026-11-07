@@ -1,7 +1,7 @@
 ---
 id: singularity.descent-parity-average
 kind: claim
-version: 4
+version: 5
 title: The descent is the parity average
 status: proved
 region: singularity
@@ -17,13 +17,17 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the matrix conjugation replaced by the CAR computation)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.singularity.grading-parity-automorphism
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -42,6 +46,10 @@ locators:
   label: thm:parityavg
   line: 1583
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The proof computes alpha(x) = sigma x sigma from the CAR on x = a vv* + b v + c v* + d v*v (sigma = v*v - vv* commutes with vv*, v*v and anticommutes with v, v*) in place of the 2 x 2 matrix product, which stays as a labelled reading. Verified exactly with lib/GA.py in Cl(1,1) (sigma = e0e1 there). The stored copies of the merged entity''s proofs are kept unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

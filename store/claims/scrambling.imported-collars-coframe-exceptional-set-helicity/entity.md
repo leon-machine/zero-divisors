@@ -27,9 +27,9 @@ derivations:
   uses:
   - hawking.helicity-lift-joints-itemised@5
   - hawking.homogeneity-ordering-shift@6
-  - hawking.imported-penrose-transform@2
-  - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
+  - hawking.imported-penrose-transform@3
+  - interior.interior-connection-exactly@8
+  - interior.kasner-form-interior@7
   - sheaf.weights-are-forced-are-kasner-exponents@5
   proof: proof-main.tex
 checked_by:

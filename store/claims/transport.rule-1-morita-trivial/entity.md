@@ -1,7 +1,7 @@
 ---
 id: transport.rule-1-morita-trivial
 kind: claim
-version: 5
+version: 6
 title: Rule 1 is Morita-trivial
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, corner computation in the proof corrected'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -44,6 +48,10 @@ locators:
   label: thm:morita
   line: 1437
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Proof slip: the chain ff* . f . ff* = f f* Q(f) f* = f . ff* had a wrong middle term; now (ff*f) ff* = f ff* = f^2 f* = 0 (exact check in scratch, Cl(1,1): E11 f E11 = 0 and ff*f = f). The commutation ff* a = a ff* is from the evenness of ff*, not of a; said so. Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

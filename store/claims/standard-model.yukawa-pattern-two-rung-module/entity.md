@@ -1,7 +1,7 @@
 ---
 id: standard-model.yukawa-pattern-two-rung-module
 kind: claim
-version: 5
+version: 6
 title: The Yukawa pattern of the two-rung module
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation moved out of a formula'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: thm:yukawa
   line: 1730
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'A citation of Hypothesis (S) had been inserted inside the formula 6(Y(S) + Y(T)) + 6Y(x) = 0 (as an argument of Y); it is moved after the formula. No mathematics changed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

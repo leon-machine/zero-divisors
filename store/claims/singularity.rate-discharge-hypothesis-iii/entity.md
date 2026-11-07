@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - singularity.ascended-marginals-are-diagonal@5
-  - singularity.computed@4
+  - singularity.computed@5
   - singularity.descended-form-state-independent@4
   - singularity.modular-structure-completed-pair@5
   - singularity.plane-rate@4

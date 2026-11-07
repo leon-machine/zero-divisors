@@ -1,7 +1,7 @@
 ---
 id: neutrino.imported-derived-content-singlets
 kind: claim
-version: 7
+version: 8
 title: 'Imported: the derived content and its singlets'
 status: proved
 region: neutrino
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T15, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, Hypothesis (S) described as derived from the slot-module premise'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -44,6 +48,10 @@ locators:
   label: fact:content
   line: 554
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale status wording (DECISIONS G3, R04 item 1): the levels said Hypothesis (S) is ''a structural premise, not a theorem'' / ''declared there and open'', while the pinned standard-model.hyp-s-slot-statistics@9 is a proved claim derived from the postulate standard-model.slot-module-hypothesis; they now say (S) is derived in the store from that weaker premise, on which the charged-lepton statements rest. The paper''s sentence stays in source_formal; status, edges and pins unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -79,7 +87,7 @@ extraction:
 ---
 
 ## formal
-The minimal massive hierarchy's fermion content is $(2,3) \oplus (2,1)$, the doublets under the Standard-Model paper's Hypothesis (S); the sector of a single conformal spinor (the single-twistor sector) $\Lambda^{\bullet}\C^{3} = 1 \oplus 3 \oplus \bar{3} \oplus 1$, graded zero through three, carries the weight $q = -2k$ at grade $k$ and hence the hypercharge $Y = -k/3$, that is $0, -\tfrac13, -\tfrac23, -1$, unconditionally as a computation on the Fock space of a single conformal spinor with the pair-slot factor acting alone (that Fock space is not a subspace of the tensor state space, and under (S) it is the row $j = 0$); listed by the handedness that keeps the even grades, the singlet spectrum is $(1)_{0} \oplus (\bar{3})_{-2/3} \oplus (\bar{3})_{+1/3} \oplus (1)_{+1}$, that is $\nu^{c}, u^{c}, d^{c}, e^{c}$, with the hypercharge-zero singlet at grade zero; the four anomaly conditions hold on this spectrum, and determine it (up to the $u^{c}, d^{c}$ relabelling) given the content, $Y_{Q} = \tfrac16$, and a fourth singlet of hypercharge zero or none; and the physical representations are confined to the $\mathbb{Z}_{6}$ lattice. \emph{Provenance:} \cite[Prop.~5.1, Prop.~5.3, Thm.~5.5, Thm.~4.2]{ButlerT12}; Hypothesis (S) is declared there and is open.
+The minimal massive hierarchy's fermion content is $(2,3) \oplus (2,1)$, the doublets under the Standard-Model paper's Hypothesis (S); the sector of a single conformal spinor (the single-twistor sector) $\Lambda^{\bullet}\C^{3} = 1 \oplus 3 \oplus \bar{3} \oplus 1$, graded zero through three, carries the weight $q = -2k$ at grade $k$ and hence the hypercharge $Y = -k/3$, that is $0, -\tfrac13, -\tfrac23, -1$, unconditionally as a computation on the Fock space of a single conformal spinor with the pair-slot factor acting alone (that Fock space is not a subspace of the tensor state space, and under (S) it is the row $j = 0$); listed by the handedness that keeps the even grades, the singlet spectrum is $(1)_{0} \oplus (\bar{3})_{-2/3} \oplus (\bar{3})_{+1/3} \oplus (1)_{+1}$, that is $\nu^{c}, u^{c}, d^{c}, e^{c}$, with the hypercharge-zero singlet at grade zero; the four anomaly conditions hold on this spectrum, and determine it (up to the $u^{c}, d^{c}$ relabelling) given the content, $Y_{Q} = \tfrac16$, and a fourth singlet of hypercharge zero or none; and the physical representations are confined to the $\mathbb{Z}_{6}$ lattice. \emph{Provenance:} \cite[Prop.~5.1, Prop.~5.3, Thm.~5.5, Thm.~4.2]{ButlerT12}; Hypothesis (S) is declared in the Standard-Model paper and is derived in the store from the weaker slot-module premise (\claimref{standard-model.hyp-s-slot-statistics}, from Premise \claimref{standard-model.slot-module-hypothesis}), on which the lepton doublet rests.
 
 ## technical
 The minimal massive hierarchy's fermion content is the doublets $(2,3) \oplus (2,1)$, under Hypothesis (S). Unconditionally, the sector of a single conformal spinor, $\Lambda^{\bullet}\C^{3} = 1 \oplus 3 \oplus \bar{3} \oplus 1$, carries weight $q = -2k$ at grade $k$, hence $Y = -k/3$, a computation on the Fock space of a single conformal spinor with the pair-slot factor acting alone.
@@ -87,7 +95,7 @@ The minimal massive hierarchy's fermion content is the doublets $(2,3) \oplus (2
 Listed in the handedness that keeps the even grades, the singlets are $(1)_{0} \oplus (\bar{3})_{-2/3} \oplus (\bar{3})_{+1/3} \oplus (1)_{+1}$, that is $\nu^{c}, u^{c}, d^{c}, e^{c}$, with the hypercharge-zero singlet at grade zero. The four anomaly conditions hold on this spectrum and determine it, up to the $u^{c}, d^{c}$ relabelling, given the content, $Y_{Q} = \tfrac16$ and a fourth singlet of hypercharge zero or none; and the physical representations lie on the $\mathbb{Z}_{6}$ lattice.
 
 ## lay
-The neutrino paper imports the series' derivation of one generation of matter. The quark and lepton doublets come from the structure of two basic spinor states, the lepton doublet only under a stated hypothesis that remains open, and four single-particle states come from one free spinor state. One of those singlets has zero charge, the right-handed neutrino, and it sits at the lowest grade. The anomaly conditions confirm this spectrum and fix it, up to swapping the two coloured singlets, once the doublets, the quark doublet's hypercharge and at most one neutral singlet are given.
+The neutrino paper imports the series' derivation of one generation of matter. The quark and lepton doublets come from the structure of two basic spinor states, the lepton doublet only under a stated hypothesis, which the store derives from a weaker stated premise about the constituents, and four single-particle states come from one free spinor state. One of those singlets has zero charge, the right-handed neutrino, and it sits at the lowest grade. The anomaly conditions confirm this spectrum and fix it, up to swapping the two coloured singlets, once the doublets, the quark doublet's hypercharge and at most one neutral singlet are given.
 
 ## one-liner
 The derived generation's singlets are $\nu^{c}, u^{c}, d^{c}, e^{c}$ with $Y = 0, -\tfrac23, \tfrac13, 1$, the hypercharge-zero $\nu^{c}$ at grade zero, while the lepton doublet rests on Hypothesis (S).

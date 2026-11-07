@@ -23,8 +23,8 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.unipotency-across-kerr-family@5
-  - interior.imported-kerr-schild-form-kerr-gauge@1
+  - interior.unipotency-across-kerr-family@6
+  - interior.imported-kerr-schild-form-kerr-gauge@2
   - synthesis.kerr-ring-double-cover-data@3
   proof: proof-main.tex
 checked_by:

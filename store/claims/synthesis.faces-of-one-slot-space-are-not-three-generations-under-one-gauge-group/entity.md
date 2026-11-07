@@ -27,7 +27,7 @@ derivations:
   uses:
   - families.three-identical-families-mixing-shared-slots@8
   - standard-model.hyp-s-slot-statistics@9
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
   proof: proof-main.tex
 checked_by:
 - kind: check

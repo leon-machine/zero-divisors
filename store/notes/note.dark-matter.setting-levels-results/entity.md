@@ -1,7 +1,7 @@
 ---
 id: note.dark-matter.setting-levels-results
 kind: note
-version: 1
+version: 2
 title: The levels of the results
 status: setting
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, a dated bracket: the orientation classification no longer uses the trichotomy''s exhaustiveness'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - dark-matter.towers-are-residues-single-clock-filter
 - dark-matter.flag-insensitive-residue-no-flag-level
@@ -26,6 +30,11 @@ locators:
   section: The premises attacked, and what would refute this paper
   line: 1353
   subsection: The levels of the results
+extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Dated bracket added to the paper text, which is kept (DECISIONS G11, R05 item 6): the list of levels cites the exhaustiveness of the trichotomy for the final step of the orientation classification, which the stored proposition (dark-matter.orientation-arrow-seventeenth-refutation, since its amendment) no longer uses; it uses the premise that the flag is a datum instead.'
 ---
 
 ## formal
@@ -35,7 +44,7 @@ locators:
 \item exact superselection given Definition \claimref{obj.dark-matter.frozen-phase-operators} (Proposition \claimref{dark-matter.superselected-hence-dark-exactly-stable}(1));
 \item the mirror tower as a copy of this one, and its share of one given P1, P2 and the copy, to half a percent on the burning branch (Theorems \claimref{dark-matter.mirror-tower-copy-one}, \claimref{dark-matter.mirror-share-assembled}); the mode counts and the convention-dependent weightings (Theorem \claimref{dark-matter.mode-counts-two-modules-which-one}); the one-loop fragility bound under its stated assumptions (Proposition \claimref{dark-matter.mirror-share-one-how-fragile});
 \item the two families as the two chiralities, the flag bit exactly in the even residues at P3, and which towers can carry the arrow (Proposition \claimref{dark-matter.two-families-are-two-chiralities}, Theorem \claimref{dark-matter.flag-bit-exists-exactly-tower-dimension}, Corollary \claimref{dark-matter.which-towers-can-carry-arrow});
-\item the asymmetry as a charge (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}); the $\theta$ no-go's degree count (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}); the CPT-covariance classification of the orientation, given the covariance of the listed structures, Hypothesis (S) and, for the final step, the exhaustiveness of the trichotomy, which its clause (4) makes conditional on the promotion of the frozen norm (Fact \claimref{dark-matter.imported-trichotomy-descents-data}, Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation});
+\item the asymmetry as a charge (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}); the $\theta$ no-go's degree count (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}); the CPT-covariance classification of the orientation, given the covariance of the listed structures, Hypothesis (S) and, for the final step, the exhaustiveness of the trichotomy, which its clause (4) makes conditional on the promotion of the frozen norm (Fact \claimref{dark-matter.imported-trichotomy-descents-data}, Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation}; status now, 7 November 2026: the stored proposition, since its amendment, uses the premise that the flag is a datum in place of the exhaustiveness);
 \item the projection lemma given the sourcing rule, the $\Delta\Neff$ arithmetic and thresholds, and the ceiling range's arithmetic (Lemma \claimref{dark-matter.projection-every-towers-content-dilutes-ones}, Propositions \claimref{dark-matter.radiation-audit-what-theorem-closes-what}, \claimref{dark-matter.open-channels-their-costs}, \claimref{dark-matter.ceiling-valued-inherited-success});
 \item the infall routing, given P1, P5, the imported flux and Facts \claimref{dark-matter.imported-schwinger-discharge-charged-hole} and \ref{fact:noremnant}, its Gauss-law clause limited to holes below about $1.3 \times 10^{5}$ solar masses (Proposition \claimref{dark-matter.parallel-boundary-mode-spaces-one-wall});
 \item the seeding floor given the imported rate, the coefficients as species counts, and the yield's shortfall against the baryon number (Propositions \claimref{dark-matter.seeding-gravity-floor-dark-towers-temperature}, \claimref{dark-matter.coefficients-floors-they-give-what-gravity});

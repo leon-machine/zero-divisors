@@ -1,7 +1,7 @@
 ---
 id: synthesis.eviction-keeps-one-replica-saddle
 kind: claim
-version: 2
+version: 3
 title: 'At Renyi index two, eviction keeps one of two replica saddles'
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - singularity.eviction-window-thermal-product-radiation-entropy@7
-  - synthesis.eviction-deficit-against-page-deficit@3
+  - synthesis.eviction-deficit-against-page-deficit@4
   - singularity.imported-page-average-entropy-subsystem@1
   proof: proof-main.tex
 checked_by:
@@ -41,6 +45,10 @@ lineage:
   - note.singularity.island-dictionary-one-dissonance
   - synthesis.eviction-deficit-against-page-deficit
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1, an abstract Hilbert space), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -73,7 +81,7 @@ Work under the hypotheses of Theorem \claimref{singularity.eviction-window-therm
 \operatorname{tr}\rho_{R}^{2} = \max\bigl(1/k,\ e^{-n_{\mathrm{cap}}\ln 2}\bigr) ,
 \]
 the larger of the two terms of the two-saddle value $P_{2} := 1/k + e^{-n_{\mathrm{cap}}\ln 2}$, and never their sum;
-\item[(iii)] (the Haar average) for a pure state on $\C^{m} \otimes \C^{n}$ drawn from the unitarily invariant measure, $\langle\operatorname{tr}\rho_{A}^{2}\rangle = (m + n)/(mn + 1)$, which lies strictly between the one-saddle value $\max(1/m, 1/n)$ and the two-saddle value $1/m + 1/n$, below the latter by $(m + n)/(mn(mn + 1))$;
+\item[(iii)] (the Haar average) for a pure state on $\C^{m} \otimes \C^{n}$ (an abstract Hilbert space, its numbers read in $\mathrm{span}\{1, I_4\}$, conventions, the unit principle) drawn from the unitarily invariant measure, $\langle\operatorname{tr}\rho_{A}^{2}\rangle = (m + n)/(mn + 1)$, which lies strictly between the one-saddle value $\max(1/m, 1/n)$ and the two-saddle value $1/m + 1/n$, below the latter by $(m + n)/(mn(mn + 1))$;
 \item[(iv)] (the crossing) at $j = n_{\mathrm{cap}}$ ($m = n$): eviction purity $1/m$, two-saddle $2/m$, Haar $2m/(m^{2} + 1)$. In Renyi-2 entropy $S_{2} = -\ln\operatorname{tr}\rho^{2}$, the eviction branch sits at the capacity exactly, the two-saddle value exactly $\ln 2$ below it, and the Haar value below it by $\ln 2 - \ln(1 + m^{-2}) \in (\ln 2 - m^{-2}, \ln 2)$. At distance $d = |j - n_{\mathrm{cap}}|$ from the crossing the two-saddle value lies below the eviction one by $\ln(1 + 2^{-d})$;
 \item[(v)] (baseline) at every weight the falling branch $S_{R} = \sum_{k \in W(t)}h_{k}$ is the thermal entropy of the window, with no correction; the deficit of clause (iii) of Theorem \claimref{synthesis.eviction-deficit-against-page-deficit}, linear in the window when the weights are bounded away from zero (as every member's is under the weights $\kappa(k + \tfrac12)$ of (Q) version 3, $|x_{k}| \geq \pi$), is measured against the window's maximal entropy $C$, which is its thermal entropy only at zero weight.
 \end{enumerate}

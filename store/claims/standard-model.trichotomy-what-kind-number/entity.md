@@ -1,7 +1,7 @@
 ---
 id: standard-model.trichotomy-what-kind-number
 kind: claim
-version: 10
+version: 11
 title: 'The trichotomy: what kind of number $N$ is'
 status: proved
 region: standard-model
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, proof rung arithmetic brought to the corrected value'
+  version: 11
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the adopted Henneaux-Teitelboim promotion named in clause (4)'
+  version: 11
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -25,12 +33,12 @@ derivations:
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - standard-model.global-form-quotient-determined@4
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   - standard-model.imported-norm-frozen-point-not-field@5
   - standard-model.pair-count-dimension@4
   - standard-model.quarks-leptons-two-level-fermion-content@5
   - standard-model.weak-angle-over-derived-generation@5
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -49,6 +57,14 @@ locators:
   label: prop:trichotomy
   line: 1259
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale wording (DECISIONS G4, R07 item 3): the Henneaux-Teitelboim promotion was adopted on 2026-10-23 (programme.n-parameter-of-the-laws); the levels that still read it as an open decision now add that the store adopts it. The T10 paper text in source_formal and in the setting notes is kept.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof, last sentence: the rung count still read R ~ 2*60/log10(2) ~ 400 from the old N ~ 10^60, against the corrected statement R = log2 N^2 ~ 405; exact interval arithmetic with M_P = 1.221e19 GeV, H_0 = 67.4 km/s/Mpc, Omega_Lambda = 0.685 gives 2^405 < N^2 < 2^406 and 2^407 < pi N^2/ln 2 < 2^408 (consistency run scratch v3.py); the sentence now states that and that the script checks only the coarse pair for N ~ 10^60.'
   maintainer_pass_weak_scale:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -164,7 +180,7 @@ The question the paper ends by pointing at can itself be classified. The classif
 \item \emph{(Kinematic.)} Proved: under $\Lambda \to s^{2}\Lambda$ at fixed $M_{P}$, that is $I \to sI$ on the frozen point with the conformal class unchanged, $H \to sH$ and $N \to N/s$, while every discrete invariant this paper derives (the algebra and its dimension twelve, the global form and its $\mathbb{Z}_{6}$, the dimension four, the content and the hypercharges, and under (S) the ratio $3/8$) is unchanged, since each is computed from the conformal class, the pair structure and the group alone, none of which the rescaling affects. Reading, at observation level: since the conformal class and the pair structure carry no scale, no construction from them alone can fix $N$, which lies in the ratio of the frozen point's norm to the Planck scale; on this reading the kinematic layer determines all discrete invariants and no continuous modulus, and $N$ and the weight spectrum are its only continuous moduli.
 \item \emph{(Non-dynamical, imported.)} $\Lambda$ is the norm of the frozen point, and the norm is not a field: it is fixed by a constraint, the fluctuations of the frozen point are pure gauge, and the action carries no equation of motion for it (Fact \claimref{standard-model.imported-norm-frozen-point-not-field}).
 \item \emph{(Initial data, conditional.)} If the alternatives kinematic, dynamical and initial-data are exhaustive, then by (1) and (2) $N$ is initial data, and Observation \claimref{standard-model.dating-descent}(ii) locates the boundary that carries it at the origin. The exhaustiveness is not proved here, and the location is an Observation; the clause is conditional on both, and clause (4) says what the exhaustiveness costs.
-\item \emph{(Parameter of the laws, imported.)} The three alternatives are not exhaustive: a conserved quantity that is constant on every solution of a theory but varies across a family of theories indexed by a parameter is a parameter of the laws, and the action paper proves that under the action as written, with $\Lambda$ the value of the Stelle-West constraints fixed before variation, $N$ is exactly that: constant on each solution space $\mathcal{S}_{\Lambda}$ by the rigidity of (2), varying across $\Lambda$, so neither dynamically fixed nor initial data \cite[Prop.~5.8]{ButlerT10}. Clause (3) therefore holds only if the norm is promoted from a fixed number to the value of a Lagrange-multiplier field whose constancy is an equation of motion, the Henneaux-Teitelboim mechanism, which makes $\Lambda$ a label of the solution rather than of the theory; that promotion is a decision for the series, recorded open with both branches stated \cite[Rem.~5.9]{ButlerT10}, and the entropic and null-endpoint effects named below act on a measure over theories or on a measure within one theory according to it.
+\item \emph{(Parameter of the laws, imported.)} The three alternatives are not exhaustive: a conserved quantity that is constant on every solution of a theory but varies across a family of theories indexed by a parameter is a parameter of the laws, and the action paper proves that under the action as written, with $\Lambda$ the value of the Stelle-West constraints fixed before variation, $N$ is exactly that: constant on each solution space $\mathcal{S}_{\Lambda}$ by the rigidity of (2), varying across $\Lambda$, so neither dynamically fixed nor initial data \cite[Prop.~5.8]{ButlerT10}. Clause (3) therefore holds only if the norm is promoted from a fixed number to the value of a Lagrange-multiplier field whose constancy is an equation of motion, the Henneaux-Teitelboim mechanism, which makes $\Lambda$ a label of the solution rather than of the theory; that promotion is a decision for the series, recorded open with both branches stated \cite[Rem.~5.9]{ButlerT10}, which the store adopts (\claimref{programme.n-parameter-of-the-laws}), and the entropic and null-endpoint effects named below act on a measure over theories or on a measure within one theory according to it.
 \end{enumerate}
 At observation level, two competing effects are then named without being balanced: an entropic weighting of the freezing by $\exp(S_{\Lambda}) = \exp(\pi N^{2})$, with $S_{\Lambda} = \pi N^{2}$ the cosmological horizon's area-law entropy (Theorem \claimref{synthesis.de-sitter-entropy-pi-n-squared}), favours large $N$ overwhelmingly (the well-known entropic argument for small $\Lambda$, inherited with every one of its known objections, listed as inherited and not solved), while at the endpoint $\Lambda = 0$ the frozen point is null and the curvature-squared presentation of the action, whose prefactor is $3/\Lambda$, does not exist; the action paper is explicit that this is a boundary of the presentation and not of the action, the Einstein-Cartan functional remaining \cite[Thm.~3.1, Rem.~3.2]{ButlerT10}, so what is lost at $\Lambda = 0$ is the reductive structure and the frozen point's length, not gravity. Large because large boundary mode spaces dominate the measure; nonzero because the descent selects a frozen point of nonzero length; the value is the balance point, and the balance point awaits the descent measure, the one object this framework does not possess. Last, a statement of units only, flagged as such: in the boundary modes' own units, qubits, one per rung of the Fock module (Theorem \claimref{tower.fock-module-one-qubit-per-rung}), the horizon's capacity $S_{\Lambda} = \pi N^{2}$ is $\pi N^{2}/\ln 2$, about $4.8 \times 10^{122}$ qubits (the mode count of Theorem \claimref{synthesis.de-sitter-mode-count} under the black hole's counting rule), whose base-two logarithm is about $407$; the paper's $R = \log_{2} N^{2} \approx 405$ counts the rungs of a module of dimension $N^{2}$, whose capacity is only $\ln N^{2} = 2\ln N$ nats, not the horizon's. Neither number is a count of turns of the mod-8 clock, which no rung moves: each rung preserves the residue $p - q \pmod 8$ (Theorem \claimref{transport.rule-1-morita-trivial}). This is the question in the framework's own coordinates, not an answer to it.
 
@@ -173,10 +189,10 @@ At observation level, two competing effects are then named without being balance
 ## technical
 The classification of $N = M_{P}/H$ has four clauses at different levels. Proved: under $\Lambda \to s^{2}\Lambda$ at fixed $M_{P}$, that is $I \to sI$ with the conformal class unchanged, $H \to sH$ and $N \to N/s$, while every discrete invariant the paper derives (the gauge algebra, its global form, the dimension four, the content and the hypercharges, and under (S) the ratio $3/8$) is unchanged; on the observation-level reading, no construction from the conformal class and pair structure alone can fix $N$. Imported: the norm of the frozen point is not a field, being fixed by a constraint with pure-gauge fluctuations.
 
-Conditional: if kinematic, dynamical and initial data were exhaustive, $N$ would be initial data located at the origin. Imported: they are not exhaustive, since under the action as written, with $\Lambda$ fixed before variation, $N$ is a parameter of the laws, constant on each solution space and varying across $\Lambda$; the conditional clause holds only if the norm is promoted to the value of a Lagrange-multiplier field, a decision the series records open. The entropic and null-endpoint effects are named at observation level, the entropic weight being $\exp(\pi N^{2})$ for the area-law entropy $\pi N^{2}$. In units of qubits, one per rung, the horizon holds about $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$; the paper's $R = \log_{2}N^{2} \approx 405$ counts the rungs of a module of dimension $N^{2}$, not the horizon's mode space (whose base-two logarithm is about $407$), and no rung turns the mod-8 clock.
+Conditional: if kinematic, dynamical and initial data were exhaustive, $N$ would be initial data located at the origin. Imported: they are not exhaustive, since under the action as written, with $\Lambda$ fixed before variation, $N$ is a parameter of the laws, constant on each solution space and varying across $\Lambda$; the conditional clause holds only if the norm is promoted to the value of a Lagrange-multiplier field, a decision the series records open and the store adopts (\claimref{programme.n-parameter-of-the-laws}). The entropic and null-endpoint effects are named at observation level, the entropic weight being $\exp(\pi N^{2})$ for the area-law entropy $\pi N^{2}$. In units of qubits, one per rung, the horizon holds about $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$; the paper's $R = \log_{2}N^{2} \approx 405$ counts the rungs of a module of dimension $N^{2}$, not the horizon's mode space (whose base-two logarithm is about $407$), and no rung turns the mod-8 clock.
 
 ## lay
-The framework's one large number, $N$, could in principle be fixed by the structure of the theory, by its equations, or by the starting conditions of the universe. This result proves that rescaling it changes nothing else the theory derives, reads that, at observation level, as showing that the structure alone cannot fix it, and imports the fact that no equation governs it. With the action as currently written $N$ turns out to be a fixed parameter of the laws; it would count as a starting condition only if the theory were modified in a specific way that the series leaves as an open choice.
+The framework's one large number, $N$, could in principle be fixed by the structure of the theory, by its equations, or by the starting conditions of the universe. This result proves that rescaling it changes nothing else the theory derives, reads that, at observation level, as showing that the structure alone cannot fix it, and imports the fact that no equation governs it. With the action as currently written $N$ turns out to be a fixed parameter of the laws; it would count as a starting condition only if the theory were modified in a specific way that the series left as an open choice and has since adopted.
 
 ## one-liner
 The number $N = M_{P}/H$ rescales while every derived discrete invariant stays fixed (proved), which is read at observation level as $N$ not being kinematic; it is imported as not dynamical, and under the action as written it is a parameter of the laws, becoming initial data only if the norm is promoted to a field.

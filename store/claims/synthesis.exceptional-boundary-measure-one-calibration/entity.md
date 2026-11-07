@@ -23,13 +23,13 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@5
-  - singularity.imported-interior-collar-kasner-form@6
-  - scrambling.slice-volume-exactly-per-unit-killing@4
-  - interior.imported-schwarzschild-curvature-spectrum@6
-  - singularity.stretched-singularity-count@7
+  - interior.kasner-form-interior@7
+  - singularity.imported-interior-collar-kasner-form@7
+  - scrambling.slice-volume-exactly-per-unit-killing@5
+  - interior.imported-schwarzschild-curvature-spectrum@7
+  - singularity.stretched-singularity-count@8
   - singularity.area-law-test@5
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -22,12 +22,12 @@ derivations:
 - name: main
   uses:
   - synthesis.mirror-temperature-measures-deposit-under-r@1
-  - dark-matter.stored-asymmetry-charge-not-number@8
+  - dark-matter.stored-asymmetry-charge-not-number@9
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-superhorizon-zeta-conservation@3
-  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@1
+  - synthesis.imported-large-scale-potential-and-sachs-wolfe-relations@2
   - synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds@1
   proof: proof-main.tex
 checked_by:
@@ -48,6 +48,10 @@ lineage:
   - synthesis.cold-mirror-needs-non-equilibrium-descent
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited.'
   open_problem: op.pre-descent-theory
   note: >-
     Cross-subject import from the dark-matter results (the charge reading of the stored asymmetry and

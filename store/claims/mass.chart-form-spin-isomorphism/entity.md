@@ -1,7 +1,7 @@
 ---
 id: mass.chart-form-spin-isomorphism
 kind: claim
-version: 5
+version: 6
 title: "The chart form of the spin isomorphism"
 status: proved
 region: mass
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T11, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (matrices as linear maps on the chart frame)
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: lem:chartiso
   line: 634
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The three block matrices are written as the linear maps they are on the chart frame (the grading element as -1/2 on S- and +1/2 on S+, the translations as b_x: S+ -> S-, the special conformal generators as c_x: S- -> S+), acting on Lambda^2 S as derivations of the outer product; the block matrices stay as a labelled reading. Pure notation: each map is the displayed matrix read column by column, so no equivalence needed computing. The spinor components x^{aa''} and epsilon_{ab} stay (components, which the conventions allow). Found in passing: the front matter carries two source_formal keys, the first empty.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -76,20 +84,21 @@ extraction:
 ---
 
 ## formal
-For $x = x^{aa'}e_{a}\wedge e_{a'}$ in the $x$-slot:
+Let $A(U)$ be the traceless linear map of $\CS = \Som \oplus \Spi$ (frame $e_{1}, e_{2}$ of $\Som$ and $e_{3}, e_{4}$ of $\Spi$) that acts on $\Lambda^{2}\CS$ as the derivation $A\cdot(u \wedge v) = Au \wedge v + u \wedge Av$ of the outer product by which $U$ acts. For $x = x^{aa'}e_{a}\wedge e_{a'}$ in the $x$-slot:
 \begin{enumerate}
-\item $A(n_{\infty}\wedge n_{0}) = \operatorname{diag}(-\tfrac12, -\tfrac12, \tfrac12, \tfrac12)$, the grading element;
-\item $A(x \wedge n_{\infty}) = \begin{pmatrix} 0 & b_{x} \\ 0 & 0 \end{pmatrix}$ with $b_{x}: \Spi \to \Som$, $(b_{x}\pi)^{a} = x^{aa'}\varepsilon_{a'b'}\pi^{b'}$: the translations;
-\item $A(x \wedge n_{0}) = \begin{pmatrix} 0 & 0 \\ c_{x} & 0 \end{pmatrix}$ with $c_{x}: \Som \to \Spi$, $(c_{x}\omega)^{a'} = -x^{ba'}\varepsilon_{ba}\omega^{a}$: the special conformal generators.
+\item $A(n_{\infty}\wedge n_{0})$: $e_{a} \mapsto -\tfrac12 e_{a}$, $e_{a'} \mapsto \tfrac12 e_{a'}$, the grading element;
+\item $A(x \wedge n_{\infty})$ is zero on $\Som$ and is $b_{x}: \Spi \to \Som$, $b_{x}(e_{b'}) = x^{aa'}\varepsilon_{a'b'}e_{a}$, that is $(b_{x}\pi)^{a} = x^{aa'}\varepsilon_{a'b'}\pi^{b'}$: the translations;
+\item $A(x \wedge n_{0})$ is zero on $\Spi$ and is $c_{x}: \Som \to \Spi$, $c_{x}(e_{a}) = -x^{ba'}\varepsilon_{ba}e_{a'}$, that is $(c_{x}\omega)^{a'} = -x^{ba'}\varepsilon_{ba}\omega^{a}$: the special conformal generators.
 \end{enumerate}
+(As matrices in the frame $(e_{1}, \dots, e_{4})$, a labelled reading: $\operatorname{diag}(-\tfrac12, -\tfrac12, \tfrac12, \tfrac12)$, $\begin{psmallmatrix} 0 & b_{x} \\ 0 & 0 \end{psmallmatrix}$ and $\begin{psmallmatrix} 0 & 0 \\ c_{x} & 0 \end{psmallmatrix}$.)
 
 ## technical
-Write $\CS = \Som \oplus \Spi$ with $n_\infty = e_1 \wedge e_2$, $n_0 = e_3 \wedge e_4$, and the $x$-slot spanned by the mixed bivectors $e_a \wedge e_{a'}$. Under the isomorphism $\mathfrak{sl}(\CS) \to \so(\Lambda^2\CS, \varepsilon)$, the bivector $n_\infty \wedge n_0$ corresponds to the grading element $\operatorname{diag}(-\tfrac12, -\tfrac12, \tfrac12, \tfrac12)$.
+Write $\CS = \Som \oplus \Spi$ with $n_\infty = e_1 \wedge e_2$, $n_0 = e_3 \wedge e_4$, and the $x$-slot spanned by the mixed bivectors $e_a \wedge e_{a'}$. Under the isomorphism $\mathfrak{sl}(\CS) \to \so(\Lambda^2\CS, \varepsilon)$, the bivector $n_\infty \wedge n_0$ corresponds to the grading element, $-\tfrac12$ on $\Som$ and $+\tfrac12$ on $\Spi$ (the matrix $\operatorname{diag}(-\tfrac12, -\tfrac12, \tfrac12, \tfrac12)$ in the chart frame).
 
-The translations $x \wedge n_\infty$ correspond to the upper off-diagonal block $b_x : \Spi \to \Som$, $(b_x\pi)^a = x^{aa'}\varepsilon_{a'b'}\pi^{b'}$, and the special conformal generators $x \wedge n_0$ to the lower block $c_x : \Som \to \Spi$, $(c_x\omega)^{a'} = -x^{ba'}\varepsilon_{ba}\omega^a$. The proof checks on each basis bivector that the displayed matrix acts as the named rotation.
+The translations $x \wedge n_\infty$ correspond to the map $b_x : \Spi \to \Som$ (zero on $\Som$), $(b_x\pi)^a = x^{aa'}\varepsilon_{a'b'}\pi^{b'}$, and the special conformal generators $x \wedge n_0$ to the map $c_x : \Som \to \Spi$ (zero on $\Spi$), $(c_x\omega)^{a'} = -x^{ba'}\varepsilon_{ba}\omega^a$. The proof checks on each basis bivector that the displayed map, acting as a derivation of the outer product, acts as the named rotation.
 
 ## lay
-The conformal symmetries of spacetime can be written either as rotations of a six-dimensional space or as four-by-four matrices acting on the four-component spinors of the conformal algebra. This lemma writes that translation out explicitly in the chart used for spacetime points. Dilations become a diagonal matrix, translations an upper corner block, and special conformal transformations a lower corner block.
+The conformal symmetries of spacetime can be written either as rotations of a six-dimensional space or as linear maps of the four-component spinors of the conformal algebra. This lemma writes that translation out explicitly in the chart used for spacetime points. Dilations become a scaling of the two spinor halves in opposite senses, translations a map from one half into the other, and special conformal transformations a map back.
 
 ## one-liner
-In the conformal spinor chart, the dilation, the translations and the special conformal generators correspond to the grading matrix and to the upper and lower off-diagonal blocks $b_x$ and $c_x$.
+In the conformal spinor chart, the dilation, the translations and the special conformal generators correspond to the grading element and to the maps $b_x: \Spi \to \Som$ and $c_x: \Som \to \Spi$ between the chiral halves.

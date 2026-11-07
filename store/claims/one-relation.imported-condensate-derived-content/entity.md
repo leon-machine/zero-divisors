@@ -29,7 +29,7 @@ derivations:
   - mass.de-sitter-scale-frozen-point@6
   - mass.exact-join@8
   - mass.mass-weight-dictionary@4
-  - standard-model.connection-forced@4
+  - standard-model.connection-forced@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

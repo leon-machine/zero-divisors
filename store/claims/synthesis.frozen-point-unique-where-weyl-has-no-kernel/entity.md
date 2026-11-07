@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-unique-where-weyl-has-no-kernel
 kind: claim
-version: 4
+version: 6
 title: One frozen point up to scale wherever the Weyl tensor has no kernel vector
 status: proved
 region: synthesis
@@ -17,11 +17,29 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: the tractor gauge field on the Einstein region as Omega(a) + u ^ hb^{-1}(a), its field strength -W computed in Cl(2,4), the kernel argument on Cl(2,4) vectors; slot route kept as a labelled reading'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): uses edges to the GTG dictionary and the tractor gauge-field theorem; the choice of representative of the conformal class justified'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: 'formal restated at Leon''s second-round decisions: the Consequently clauses for c != 0'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -32,11 +50,33 @@ checked_by:
   ref: check.py::check_parallel_tractors_are_multiples_of_I
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_tractor_field_strength_is_minus_weyl
 lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
   - dark-energy.point-infinity-has-no-physical-fluctuation
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Leon''s second-round answer 1 (REPORT.md For Leon item 4, fix-F3.md): the formal''s Consequently sentence now reads "Consequently, for c != 0, the Einstein scale of I'' is c times that of I, ...", the text proposed in fix-F3.md; the proof''s Consequences paragraph states the condition. Exact check (GA.py, Cl(2,4), n0 . ninf = 1): for I = ninf + (Lambda/6) n0 at Lambda = 3, -6/5, 0 and c = 2, -3/2, 0, Q(cI) = c^2 Lambda/3 and the top slot of cI is c; at c = 0, I'' = 0 and its top slot vanishes identically, so I'' has no Einstein scale and the Consequently clauses need c != 0. No check asserts c = 0.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with fixes. Applied (5a): the proof cites Fact synthesis.imported-gtg-dictionary (v) for the Weyl decomposition with Sch = (Lambda/6) id; added to uses at version 2 (imported). Applied (5b): one sentence now says why computing with the field whose derived metric is the Einstein scale g loses nothing (another representative of [g] has a tractor gauge field related by a parabolic gauge rotor U, Theorem synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection (i) and its closing gauge law, and V -> U V U~ carries parallel tractors to parallel tractors); that Theorem, proved, is cited for this step and was added to uses at version 1. No mathematics changed; check unchanged (the referee recomputed the Schwarzschild-de Sitter tractor field strength -W, the rank-4 kernel map and the type N kernel symbolically, and two mutations of check_gtg_tractor_field_strength_is_minus_weyl fail). Not applied (formal, for Leon): the Consequently clauses need c != 0.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: on the Einstein region P = (Lambda/6) id, so Omega_T(a) = Omega(a) + u ^ hb^{-1}(a) with the constant u = (Lambda/6) n0 - ninf, Q(u) = -Lambda/3; its field strength is R(a ^ b) + u ^ (torsion) + (Lambda/3) hb^{-1}(a) ^ hb^{-1}(b), so F_T(hb(X)) = -calR(X) + (Lambda/3) X = -W(X) (no Cotton or ninf block); a parallel I'' has W(X) . mu'' = 0, the no-kernel hypothesis gives mu'' = 0 near x0, and D^T_a I'' = (a . grad sigma'') ninf + (a . grad rho'') n0 - (u . I'') A forces I'' = c I. The examples use the store-sign Schwarzschild operator; the slot computation is kept as a labelled reading. New check check_gtg_tractor_field_strength_is_minus_weyl (library tractor field strength of the static Schwarzschild-de Sitter field at Lambda = 3/7 and 0 on exact jets equals -W with spacetime blades only, rank-four kernel map, a type N Weyl map with k in its kernel, the algebraic step); runcheck 4/4, check4 clean on a proposals copy. The proof cites the dictionary Fact for the Weyl decomposition, not in uses (a links question left for Leon). outside_ga removed: no stand-in remains. Statement, status, links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof integrates the tractor parallelism equations in scale-g components (Schouten tensor P_ab, Weyl tensor W_{cabd}, commutators of nabla_a); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component integration is the evidence (reader R05).'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -70,7 +110,7 @@ extraction:
 ---
 
 ## formal
-Let $(M, [g])$ be a connected four-dimensional conformal manifold with its tractor connection $\nabla$ (Fact \claimref{dark-energy.imported-frozen-point-geometry}); for a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $M$ is a connected open subset of the invertible region with the conformal class of the derived metric, $\nabla$ is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, and the Weyl tensor below is the trace-free part $\mathcal{W}$ of the field strength, and let $I$ be a parallel tractor with $Q(I) = \Lambda/3$ ($\Lambda = 0$ allowed, $I$ then null), so that on its Einstein region, in the scale $g$ it determines, $I = (1, 0, \Lambda/6)$, $g$ is Einstein with $\Ric = \Lambda g$ and $P_{ab} = (\Lambda/6) g_{ab}$. Suppose that at some point $x_0$ of that region the Weyl tensor has no kernel vector: $W_{abcd} v^d = 0$ for all $a, b, c$ implies $v = 0$. Then every tractor $I'$ parallel for $\nabla$ is a constant multiple of $I$, $I' = c\, I$. Consequently the Einstein scale of $I'$ is $c$ times that of $I$, the metrics agree up to the constant factor $c^{-2}$, their zero sets (the walls where the scale vanishes) coincide, and $Q(I') = c^2 \Lambda/3$.
+Let $(M, [g])$ be a connected four-dimensional conformal manifold with its tractor connection $\nabla$ (Fact \claimref{dark-energy.imported-frozen-point-geometry}); for a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $M$ is a connected open subset of the invertible region with the conformal class of the derived metric, $\nabla$ is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, and the Weyl tensor below is the trace-free part $\mathcal{W}$ of the field strength, and let $I$ be a parallel tractor with $Q(I) = \Lambda/3$ ($\Lambda = 0$ allowed, $I$ then null), so that on its Einstein region, in the scale $g$ it determines, $I = (1, 0, \Lambda/6)$, $g$ is Einstein with $\Ric = \Lambda g$ and $P_{ab} = (\Lambda/6) g_{ab}$. Suppose that at some point $x_0$ of that region the Weyl tensor has no kernel vector: $W_{abcd} v^d = 0$ for all $a, b, c$ implies $v = 0$. Then every tractor $I'$ parallel for $\nabla$ is a constant multiple of $I$, $I' = c\, I$. Consequently, for $c \neq 0$, the Einstein scale of $I'$ is $c$ times that of $I$, the metrics agree up to the constant factor $c^{-2}$, their zero sets (the walls where the scale vanishes) coincide, and $Q(I') = c^2 \Lambda/3$.
 
 Applied to towers: if the frozen points $I_r$ of all towers are parallel for the one tractor connection of a shared conformal structure ($[g]$, or $[-g]$ for the reversed signature, which has the same parallel tractors), and the universe contains one point of the Einstein region at which the Weyl tensor has no kernel vector, then $I_r = c_r I$ for constants $c_r$, and the metric clause of Premise \claimref{dark-matter.p1-single-frozen-point} holds exactly when the frozen points share their norm, $c_r = \pm 1$. Every point of a Schwarzschild ($\Lambda = 0$) or Schwarzschild-de Sitter ($\Lambda > 0$) exterior with $M \neq 0$ has the no-kernel property. The no-kernel property fails at points of Petrov type N (the null propagation vector is a kernel vector) and on regions where the Weyl part of the field strength vanishes (conformally flat derived metric); on the latter uniqueness itself fails, the tractor connection being flat with a six-dimensional space of parallel tractors.
 

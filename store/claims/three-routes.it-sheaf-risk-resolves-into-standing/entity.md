@@ -1,7 +1,7 @@
 ---
 id: three-routes.it-sheaf-risk-resolves-into-standing
 kind: claim
-version: 6
+version: 7
 title: It is a sheaf, and the risk resolves into the standing hypothesis
 status: proved
 region: three-routes
@@ -16,6 +16,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, proof brought into line with the corrected statement on the even part
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 7
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.ladder-bundle-even-subbundle
@@ -47,6 +55,17 @@ locators:
   label: prop:issheaf
   line: 132
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 7 (already raised in this run). Decision item E6 (routine; no retirement): partial overlap with singularity.sheaf-assembly-sheaf recorded under extraction.overlaps_with (no pinned link: the overlap is partial); this entity carries the 23 October correction.'
+  overlaps_with:
+  - id: singularity.sheaf-assembly-sheaf
+    note: 'Near-duplicate in part (decision E6): with its sibling, this entity restates part of the singularity entity''s sheaf assembly and carries the 23 October correction. Kept both; recorded here since no clause-level link kind exists.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The last sentence of the proof still said that the even part A^+ exists only in the twisted sense, against the statement as corrected on 2026-10-23 (the even part glues on a twisted ladder bundle and does not see the twist); it now says that the sign of the ladder leaves sigma, hence A^+, unchanged and that only the ladder bundle needs the twist. Statement unchanged."
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'

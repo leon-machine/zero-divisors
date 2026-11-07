@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons
 kind: claim
-version: 2
+version: 4
 title: 'MacDowell-Mansouri as the reduction of five-dimensional Chern-Simons'
 status: proved
 region: synthesis
@@ -17,17 +17,33 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (outside_ga declared for the base forms; Weyl sign in (iii))
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG reading of the base forms as multivector fields of a flat five-dimensional background; declaration narrowed'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): vacuous check removed; outside_ga withdrawn'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: consistency pass, the sign of l^2 named on the anti-de Sitter branch
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
-  - rule2.rule-2-kaluza-klein-algebra@6
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - rule2.rule-2-kaluza-klein-algebra@7
   - synthesis.imported-five-dimensional-chern-simons-gravity@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   proof: proof-main.tex
@@ -48,6 +64,26 @@ lineage:
   - rule2.imported-five-dimensional-chern-simons-shift
   - rule2.rule-2-kaluza-klein-algebra
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'l^2 = -Q(V) = 3/Lambda with its sign named (negative for Lambda < 0) where the normalisation of the Fact is quoted. Version 3 -> 4.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites the frame equation vanishing on Einstein fields, so the use holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fixes 8.1 and 8.2 applied. 8.1: check_gtg_reduction_with_base_forms_as_background_multivectors tested nothing: fmul_bg keeps the grade-additive part of GA.blade_mul, which for disjoint blades is the reordering sign whatever the squares, so it equals the Grassmann product fmul identically; the fixer reran it with BG5 = (5, 2, -3, 7, 1) and (1, 1, 1, 1, 1) and it still passed. It is removed from check.py, checked_by and coverage.yaml, and the proof''s parenthesis that it recomputed (i) is replaced by the reason it needs no check (disjoint background blades: outer product = Grassmann product in any signature). The referee''s alternative (grad ^ of the transgression form = P(F,F,F) - P(F0,F0,F0)) is vacuous on the five-dimensional base, where both sides are six-forms; on a larger background it would test the imported Chern-Weil Fact, not this result, so it was not added. 8.2: outside_ga withdrawn: the proof reads the imported transgression and variation formulas with the base forms as multivector fields (d = grad ^, exterior product = outer product), the two Facts they come from (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms) declare no outside_ga, and the remaining component expressions are permitted readings, so no stand-in remains (as for dark-energy.gravity-pre-metric-forces-degenerate-exactly). Pins: dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged), rule2.rule-2-kaluza-klein-algebra 6 -> 7 (pseudoscalar named, notation), synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 (see maintainer_pass_pin_review).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof given a geometric-algebra language paragraph: the Cl(2,4) values were already multivectors; the forms on the five-dimensional base are now read as multivector fields of a flat five-dimensional background (the d-dimensional clause of the GTG definition), dx^mu, dy the background vectors, the exterior product of base parts their outer product, d = grad ^, exact forms grad ^-derivatives; the orientation paragraph says so. The computation (multiplicities 1, 3, 5, the reduction, the equations) is unchanged and already algebraic. Original proof kept as orig-proof-main.tex. outside_ga kept and narrowed: the transgression and variation formulas of five-dimensional Chern-Simons forms are used as the imported Facts state them (theorems about differential forms, not proved here in GA), read through the multivector dictionary; no other stand-in remains. A GA proof of those formulas would restate the imported Chern-Weil theory, not this result.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten; outside_ga declared (kind other). The Clifford parts are already geometric algebra; the differential forms that remain are the base forms of a Chern-Simons five-form on a five-dimensional base, whose transgression and variation formulas are imported theorems about differential forms (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms). Weyl sign (reader R03): formal (iii) said that F is the Weyl curvature and displayed W(B) = m(B + 3 sigma B sigma), m = -M/(2r^3), which is minus the store-sign Weyl map; it now says F = -calW (the tractor theorem, clause (iv)) and F(B) = W(B) = m(B + 3 sigma B sigma), calW(sigma) = +2M/r^3 sigma; the value 48 m^2 is unchanged. Version 2 -> 3 for that formal change.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -73,7 +109,7 @@ extraction:
 ---
 
 ## formal
-Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, $\Lambda \neq 0$, frozen point $I = \nInf + \tfrac{\Lambda}{6}\nO$ ($Q(I) = \Lambda/3$), canonical tractor $X = \nO$ and Stelle-West vector $V = X - \tfrac{3}{\Lambda}I$ ($Q(V) = -3/\Lambda$, $\ip{I}{V} = 0$), as in Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}; $W = \{I, V\}^{\perp}$, of signature $(1,3)$. Orientation as in the stored check of that theorem: generators $e_{0}$ ($+1$), $e_{1}, e_{2}, e_{3}$ ($-1$), $e_{4}$ ($+1$), $e_{5}$ ($-1$), $\nO = \tfrac12(e_{4} + e_{5})$, $\nInf = e_{4} - e_{5}$, $I_{6} = e_{0}e_{1}e_{2}e_{3}e_{4}e_{5}$; two-forms are combined by the exterior product of their form parts (a sum over ordered planes), so that $\epsilon(I, V, e\wedge e, e\wedge e) = 6$ times the volume form. Let $P(B_{1}, B_{2}, B_{3}) = \langle B_{1}B_{2}B_{3}\rangle_{6}\,I_{6}^{-1}$ be the Pfaffian (cubic invariant) of the bivectors, so that $\epsilon(I, V, F, G) = P(I\wedge V, F, G)$. On a five-dimensional base with coordinates $(x, y)$, let $\theta$ be a vector-valued one-form with values in $V^{\perp}$ (the frame), $E = \theta\wedge V/Q(V)$ (the translational part of the connection, in the normalisation $A = \Omega - \hb^{-1}\wedge V/\ell^{2}$ of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), $K = E\times E$, and $R$ the curvature of the Lorentz part. The five-dimensional Chern-Simons form of $P$, written through its transgression from the Lorentz connection (Facts \claimref{synthesis.imported-five-dimensional-chern-simons-gravity} and \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}(b)), is, modulo exact forms,
+Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, $\Lambda \neq 0$, frozen point $I = \nInf + \tfrac{\Lambda}{6}\nO$ ($Q(I) = \Lambda/3$), canonical tractor $X = \nO$ and Stelle-West vector $V = X - \tfrac{3}{\Lambda}I$ ($Q(V) = -3/\Lambda$, $\ip{I}{V} = 0$), as in Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}; $W = \{I, V\}^{\perp}$, of signature $(1,3)$. Orientation as in the stored check of that theorem: generators $e_{0}$ ($+1$), $e_{1}, e_{2}, e_{3}$ ($-1$), $e_{4}$ ($+1$), $e_{5}$ ($-1$), $\nO = \tfrac12(e_{4} + e_{5})$, $\nInf = e_{4} - e_{5}$, $I_{6} = e_{0}e_{1}e_{2}e_{3}e_{4}e_{5}$; two-forms are combined by the exterior product of their form parts (a sum over ordered planes), so that $\epsilon(I, V, e\wedge e, e\wedge e) = 6$ times the volume form. Let $P(B_{1}, B_{2}, B_{3}) = \langle B_{1}B_{2}B_{3}\rangle_{6}\,I_{6}^{-1}$ be the Pfaffian (cubic invariant) of the bivectors, so that $\epsilon(I, V, F, G) = P(I\wedge V, F, G)$. On a five-dimensional base with coordinates $(x, y)$, let $\theta$ be a vector-valued one-form with values in $V^{\perp}$ (the frame), $E = \theta\wedge V/Q(V)$ (the translational part of the connection, in the normalisation $A = \Omega - \hb^{-1}\wedge V/\ell^{2}$, $\ell^{2} = -Q(V) = 3/\Lambda$ (negative for $\Lambda < 0$), of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), $K = E\times E$, and $R$ the curvature of the Lorentz part. The five-dimensional Chern-Simons form of $P$, written through its transgression from the Lorentz connection (Facts \claimref{synthesis.imported-five-dimensional-chern-simons-gravity} and \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}(b)), is, modulo exact forms,
 \[
 L_{5} = 3\int_{0}^{1} P\big(E;\, (R + t^{2}K)\wedge(R + t^{2}K)\big)\,dt = P\big(E;\, 3\,R\wedge R + 2\,R\wedge K + \tfrac35\,K\wedge K\big).
 \]
@@ -88,7 +124,7 @@ the frozen-point MacDowell-Mansouri density of Theorem \claimref{dark-energy.fro
 \[
 \epsilon(I, V, F, F) = \frac{Q(V)}{3}\,\frac{\partial L_{5}}{\partial\lambda} = 0,
 \]
-the equation of the scale $\lambda$ of the reduced direction. On an Einstein field with the matching $\Lambda$, $F$ is the Weyl curvature; at a point of Schwarzschild-de Sitter, $W(B) = m(B + 3\sigma B\sigma)$ with $\sigma = e_{1}e_{0}$ and $m = -M/(2r^{3})$, its value is $48m^{2} = \tfrac14 C_{abcd}C^{abcd} = 12M^{2}/r^{6} \neq 0$ for either sign of $\Lambda$ (in this orientation; the general identity $\epsilon(I, V, F, F) = \tfrac14 C_{abcd}C^{abcd}$ times the volume form on the tractor field strength of a torsion-free field is Theorem \claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared}(iii), in the same orientation), while for a type N Weyl field (plane waves) it is $0$. So the frozen-point functional is the consistent reduction of the five-dimensional one only with $\lambda$ held fixed; with $\lambda$ varied the black holes are not solutions. The same scalar equation is the equation of a released Stelle-West norm in Theorem \claimref{synthesis.stelle-west-norm-is-no-local-output}(iv): in both the Lagrangian is of degree one in the scale.
+the equation of the scale $\lambda$ of the reduced direction. On an Einstein field with the matching $\Lambda$, $F$ is minus the Weyl map in the store's sign, $F = -\mathcal{W}$ (the Lorentz block of the tractor field strength, Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}(iv)); at a point of Schwarzschild-de Sitter, $F(B) = W(B) = m(B + 3\sigma B\sigma)$ with $\sigma = e_{1}e_{0}$ and $m = -M/(2r^{3})$ (so $\mathcal{W}(\sigma) = +\tfrac{2M}{r^{3}}\sigma$), its value is $48m^{2} = \tfrac14 C_{abcd}C^{abcd} = 12M^{2}/r^{6} \neq 0$ for either sign of $\Lambda$ (in this orientation; the general identity $\epsilon(I, V, F, F) = \tfrac14 C_{abcd}C^{abcd}$ times the volume form on the tractor field strength of a torsion-free field is Theorem \claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared}(iii), in the same orientation), while for a type N Weyl field (plane waves) it is $0$. So the frozen-point functional is the consistent reduction of the five-dimensional one only with $\lambda$ held fixed; with $\lambda$ varied the black holes are not solutions. The same scalar equation is the equation of a released Stelle-West norm in Theorem \claimref{synthesis.stelle-west-norm-is-no-local-output}(iv): in both the Lagrangian is of degree one in the scale.
 \item[(iv)] \emph{(Signature of the parent; proved.)} The five-dimensional frame space $V^{\perp} = W \oplus \langle I\rangle$ has signature $(2,3)$ for $\Lambda > 0$ ($I$ timelike) and $(1,4)$ for $\Lambda < 0$. So within $\Cl(2,4)$ the de Sitter functional is the reduction of a parent on a $(2,3)$ base along a timelike direction, and the anti-de Sitter functional that of the ordinary anti-de Sitter Chern-Simons gravity along a spacelike one. A Lorentzian parent with a spacelike reduced direction for $\Lambda > 0$ is the Chern-Simons gravity of $SO(1,5)$, in $\Cl(1,5)$, the second repair of Theorem \claimref{rule2.rule-2-kaluza-klein-algebra}(iv).
 \item[(v)] \emph{(Coupling; argued.)} With the Chern-Simons coefficient $k$ (a level, quantised for a compact form of the group; the quantisation for $SU(2,2)$ is not standard) the four-dimensional coefficient is $k$ times the integral of $\lambda\,dy$ times a fixed number, so $N^{2} = 3/(G\Lambda)$ is $k$ times the length of the reduced direction in units of the de Sitter radius, times a fixed number: the level does not fix Newton's constant, and the relation is a re-expression of $N$, not a prediction.
 \end{enumerate}

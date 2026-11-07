@@ -23,14 +23,14 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-lovelock-cartan-four-forms-and-holst-term@1
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,6 +51,14 @@ lineage:
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 3 -> 4 repinned; its change is the two-form and four-form definitions written in GA, the forms kept as readings and proved equal (notation).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass_2026_11_01:
     by: maintainer-2026-11-01

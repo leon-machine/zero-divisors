@@ -1,7 +1,7 @@
 ---
 id: pairing.imported-spin-coefficients-null-tetrad
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the spin coefficients of a null tetrad'
 status: imported
 region: pairing
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (complexification unit named)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -37,6 +41,10 @@ locators:
   label: fact:NP
   line: 196
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The complexification of the tetrad vectors m, m-bar is named: the central pseudoscalar I_5 = I_4 e of the odd extension (U3), the coefficients read in span{1, I_5} (reader R03); the GA statement through (X.D) l was already primary; status imported.'
   typing:
     by: ai-typing-pass
     note: Imported classical result; levels only.
@@ -56,7 +64,7 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a gravitational field on flat spacetime with covariant derivative $D$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and $(\ell, n, m, \mb)$ a null tetrad of physical vector fields on its invertible region (complexified for $m$, $\mb$), with $\ip{\cdot}{\cdot}$ the flat product of physical vectors, the derived metric. The four spin coefficients of the first kind are the components on $\ell, n, m, \mb$ of the linear form $X \mapsto \ip{(X \cdot D)\, \ell}{m}$, up to the normalisation of the tetrad and the sign conventions of the formalism:
+Let $(\hb, \Omega)$ be a gravitational field on flat spacetime with covariant derivative $D$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and $(\ell, n, m, \mb)$ a null tetrad of physical vector fields on its invertible region (complexified for $m$, $\mb$ by the central pseudoscalar $I_{5} = I_{4}e$ of the odd extension $\Cl(2,3)$, the unit that commutes with every vector, conventions U3; $\mb$ is $m$ with $I_{5} \mapsto -I_{5}$, and the coefficients are numbers of $\mathrm{span}\{1, I_{5}\}$), with $\ip{\cdot}{\cdot}$ the flat product of physical vectors, the derived metric. The four spin coefficients of the first kind are the components on $\ell, n, m, \mb$ of the linear form $X \mapsto \ip{(X \cdot D)\, \ell}{m}$, up to the normalisation of the tetrad and the sign conventions of the formalism:
 \[
 \kappa \leftrightarrow \ip{(\ell \cdot D)\, \ell}{m}, \qquad \tau \leftrightarrow \ip{(n \cdot D)\, \ell}{m}, \qquad \sigma \leftrightarrow \ip{(m \cdot D)\, \ell}{m}, \qquad \rho \leftrightarrow \ip{(\mb \cdot D)\, \ell}{m}
 \]

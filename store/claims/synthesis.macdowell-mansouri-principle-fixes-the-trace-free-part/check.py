@@ -294,3 +294,101 @@ def check_on_shell_schouten_is_the_stored_tractor_derivative():
         P = [[(Ric[a][b] - s / 6 * ETAM[a][b]) / 2 for b in R4] for a in R4]
         GA.check("vacuum: P = Lambda eta/6 (the Stelle-West Cartan slot)",
                  all(P[a][b] == L / 6 * ETAM[a][b] for a in R4 for b in R4))
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The frame equation as a trivector-valued linear function of the curvature OPERATOR (lib/gtg.py):
+# E(a) = 2 d_b ^ F(I (a ^ b)), F = calR - (Lambda/3) id (store sign), with the GA identities
+# d_b ^ calR(I (a ^ b)) = calG(a) I and d_b ^ (I (a ^ b)) = -3 a I, so E(a) = 2 (calG(a) + Lambda a) I.
+import gtg  # noqa: E402
+
+
+def frame_trivector(Rop, a, lam):
+    """2 d_b ^ F(I (a ^ b)) with F(B) = Rop(B) - (Lambda/3) B."""
+    R = gtg.as_op(Rop)
+    out = {}
+    for b in R4:
+        X = _m(I4, gtg.wedge(a, GA.gen(b), SQ))
+        Fx = GA.sub(R(X), GA.scal(lam / 3, X))
+        out = GA.add(out, gtg.outer(_rec(b), Fx, SQ))
+    return GA.scal(2, out)
+
+
+def op_from_components(R):
+    """calR(e_e ^ e_f) = (1/2) sum_cd R^{cd}_{ef} e_c ^ e_d from the orthonormal components R_{cdef}."""
+    planes = {}
+    for e in R4:
+        for f in R4:
+            if e < f:
+                acc = {}
+                for c in R4:
+                    for d in R4:
+                        co = F(1, 2) * F(1, ETA[c] * ETA[d]) * R[c, d, e, f]
+                        if co != 0 and c != d:
+                            acc = GA.add(acc, GA.scal(co, gtg.wedge(GA.gen(c), GA.gen(d), SQ)))
+                planes[(e, f)] = acc
+    return planes
+
+
+def weyl_sample_fields():
+    """Schwarzschild (PG, beta = 4/5), a Kasner vacuum (2/3, 2/3, -1/3) and a non-vacuum synchronous field."""
+    return (gtg.schwarzschild_pg(F(1, 2), F(25, 16), F(3, 5), F(4, 5)),
+            gtg.synchronous_from_data([(F(1), F(2, 3), F(-2, 9)), (F(1), F(2, 3), F(-2, 9)), (F(1), F(-1, 3), F(4, 9))]),
+            gtg.synchronous_from_data([(F(1), F(1, 2), F(1, 7)), (F(2), F(-1, 3), F(2)), (F(1, 2), F(1), F(-3))]))
+
+
+def check_gtg_frame_trivector_is_twice_dual_einstein_plus_lambda():
+    premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    e = [GA.gen(i) for i in R4]
+    # the identity operator: d_b ^ (I (a ^ b)) = -3 a I
+    ok = ok and all(GA.eq(frame_trivector(gtg.op_const(0), e[c], F(-3, 2)), GA.scal(-3, _m(e[c], I4))) for c in R4)
+    # the Ricci part: the Kulkarni-Nomizu operators of the ten basis symmetric maps (linearity covers all)
+    for S in _basis_sym():
+        T = (lambda Sm: (lambda v: GA.add(*[GA.scal(sum(Sm[i][j] * GA.dot(v, e[j], SQ) * ETA[j] for j in R4) * ETA[i],
+                                                     e[i]) for i in R4])))(S)
+        op = gtg.op_kn(T, SQ)
+        ok = ok and all(GA.eq(frame_trivector(op, e[c], F(0)), GA.scal(2, _m(gtg.einstein(op, e[c]), I4)))
+                        for c in R4)
+    # the Weyl part: W(IB) = I W(B) and trace-free give d_b ^ W(I (a ^ b)) = 0, on three gauge fields
+    for fld in weyl_sample_fields():
+        W = gtg.weyl_op(fld.curvature())
+        ok = ok and any(v != {} for v in W.values())
+        for (p, q) in gtg.bivector_blades(4):
+            B = gtg.wedge(e[p], e[q], SQ)
+            ok = ok and GA.eq(gtg.apply_op(W, _m(I4, B)), _m(I4, gtg.apply_op(W, B)))
+        ok = ok and all(frame_trivector(W, e[c], F(0)) == {} for c in R4)
+    # the component three-form of the Fact is this trivector, on the sample curvatures
+    for R in SAMPLES:
+        op = op_from_components(R)
+        for L in LAMBDAS:
+            E = _frame_eq(R, L)
+            ok = ok and all(GA.eq(E[c], frame_trivector(op, e[c], L)) for c in R4)
+            ok = ok and all(GA.eq(E[c], GA.scal(2, _m(gtg.einstein_residual(op, e[c], L), I4))) for c in R4)
+    assert ok
+    return ok
+
+
+def check_gtg_frame_equation_on_gauge_fields_and_dilation_trace():
+    premise("dark-energy.imported-macdowell-mansouri-theorem-stelle-west")
+    premise("synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale")
+    ok = True
+    e = [GA.gen(i) for i in R4]
+    ds = gtg.de_sitter_flat(F(1, 2), F(2)).curvature()            # Lambda = 3/4
+    ok = ok and all(frame_trivector(ds, e[c], F(3, 4)) == {} for c in R4)
+    ok = ok and any(frame_trivector(ds, e[c], F(7, 4)) != {} for c in R4)
+    rows = []
+    for S in _basis_sym():
+        T = (lambda Sm: (lambda v: GA.add(*[GA.scal(sum(Sm[i][j] * GA.dot(v, e[j], SQ) * ETA[j] for j in R4) * ETA[i],
+                                                     e[i]) for i in R4])))(S)
+        op = gtg.op_kn(T, SQ)
+        rows.append(_coeffs([frame_trivector(op, e[c], F(0)) for c in R4]))
+    ok = ok and GA.mat_rank(rows) == 10
+    for fld in (gtg.flrw_flat(F(1), F(1, 3), F(-1, 5)), gtg.schwarzschild_pg(F(1, 2), F(25, 16), F(3, 5), F(4, 5))):
+        Rc = fld.curvature()
+        for L in (F(0), F(5, 3)):
+            tr = GA.add(*[gtg.outer(_rec(c), frame_trivector(Rc, e[c], L), SQ) for c in R4])
+            ok = ok and GA.eq(tr, GA.scal(2 * (4 * L - gtg.ricci_scalar(Rc)), I4))
+    assert ok
+    return ok

@@ -1,7 +1,7 @@
 ---
 id: note.mass.what-nullity-fixes
 kind: note
-version: 4
+version: 5
 title: What nullity fixes
 status: remark
 subject: dark-energy
@@ -19,6 +19,10 @@ credit:
   role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: chart-frame matrix computation)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - mass.de-sitter-scale-frozen-point
 - mass.imported-flat-model-twistor-chart-infinity
@@ -30,6 +34,10 @@ locators:
   label: rem:nullity
   line: 622
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Not rewritten: the remark computes the real slice of the x-slot with explicit 2 x 2 matrices in the chart''s frame (K Hermitian with entries in span{1, I_6}, epsilon, the translation block x epsilon anti-Hermitian, Q = -2 det x = det K), a statement about those matrices as such, and it already gives the GA readings (the Hermitian form is the reversion form on CS, the incidence factor is I_6); declared outside_ga (bridge). No text changed.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -59,6 +67,9 @@ extraction:
     by: ai-ga-pass
     date: '2026-10-21'
     note: 'Kept the explicit complex $2 \times 2$ matrices of the real slice, which are a computation in the chart''s frame; added the GA readings that the Hermitian form is the reversion form on $\CS$ and the incidence factor $i$ is $I_6$ (TWGA E1.7), and called T9 the correspondence paper.'
+outside_ga:
+  kind: bridge
+  why: 'the remark computes the real slice of the x-slot with explicit 2 x 2 matrices in the chart frame (K Hermitian with entries in span{1, I_6}, x epsilon anti-Hermitian, Q = -2 det x = det K), a statement about those matrices as such placed beside its GA reading (the reversion form on the conformal spinors, the unit I_6)'
 ---
 
 ## formal

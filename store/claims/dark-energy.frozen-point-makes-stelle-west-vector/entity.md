@@ -1,7 +1,7 @@
 ---
 id: dark-energy.frozen-point-makes-stelle-west-vector
 kind: claim
-version: 5
+version: 7
 title: The frozen point makes the Stelle-West vector
 status: proved
 region: dark-energy
@@ -17,14 +17,31 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Omega_T in Cl(2,4), DI = 0, DV = hb^{-1}(a), reduced field Omega - hb^{-1}(a) ^ V/l^2, eps(I, V, X, Y) = <(X ^ Y) I_4^{-1}>; exact checks on both branches'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): translational-term sign and the factor 4 of the Stelle-West contraction in the proof; outside_ga made exact'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: consistency pass, the sign of l^2 named on the anti-de Sitter branch
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-frozen-point-geometry@6
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-frozen-point-geometry@7
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - dark-energy.imported-walls-sphere-theorem@6
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.stelle-west-vector-frozen-point@6
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -37,12 +54,36 @@ checked_by:
   ref: check.py::check_stelle_west_datum_and_lorentz_block
 - kind: check
   ref: check.py::check_action_prefactor_expansion_and_invariance
+- kind: check
+  ref: check.py::check_gtg_stelle_west_datum_on_einstein_fields_both_branches
+- kind: check
+  ref: check.py::check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp
 locators:
   paper: T10
   number: Thm 3.1
   label: thm:action
   line: 685
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'l^2 = 3/Lambda with its sign named (negative for Lambda < 0), so V/Q(V) = -V/l^2 holds on both branches. Version 6 -> 7.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Proof (ii): the translational term of the reduced field strength is -(D_a B - D_b A) ^ V/l^2, not +; checked exactly in Cl(2,4) on random spacetime bivectors and vectors (Lambda = 3/4): the cross terms Omega(a) x (-B ^ V/l^2) + (-A ^ V/l^2) x Omega(b) equal -(Omega(a) x B - Omega(b) x A) ^ V/l^2, and V is constant. It is minus the torsion wedged with V/l^2 and vanishes either way; no conclusion changes. (2) Proof (iii) and the component reading: eps_abcd X^ab Y^cd = 4 <(X ^ Y) I_4^{-1}> = 4 eps(I, V, X, Y) for X = (1/2) X^ab e_a ^ e_b, eps_abcd read off the Clifford product (checked exactly on three random bivector pairs in Cl(1,3): ratio 4); the proof now carries the 4 and the reading eps_abcd F^ab F^cd = 4 eps(I, V, F, F)/(|I| l). The formal level''s ~ absorbs the constant, so the statement is unaffected. (3) outside_ga made exact: it now also names formal (ii)''s form displays (D + e ^ V/Q(V), R + l^{-2} e ^ e), whose GA forms are in the formal and the proof, and the technical level''s repetition of the expansion. (4) uses: synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1 added (its Omega_T is the field the proof computes with in (i) and (ii)); repinned dark-energy.stelle-west-vector-frozen-point 5 -> 6 (formal unchanged; the cited (i) to (iv) hold). Version kept at 6.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG and Cl(2,4): D_a I = Omega_T(a) . I = 0 on the Einstein region (the two (Lambda/6) A terms cancel), F_T . I = 0 so F_T is a bivector of I-perp (B = I ^ u + B'''' gives B . I = -Q(I) u); V = n0/2 - (3/Lambda) ninf with I ^ V = e+ ^ e- on both branches, D_a V = hb^{-1}(a); Omega_T(a) = Omega(a) - hb^{-1}(a) ^ V/l^2 exactly, with (A ^ V) x (B ^ V) = l^2 A ^ B giving the Lorentz block R + l^-2 e ^ e; eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}>, the Stelle-West contraction; the Gauss-Bonnet variation through the second Bianchi identity dot-D ^ dot-R = 0; index and form computations kept as a labelled reading. Checked exactly: the existing Cl(2,4) checks and the new check_gtg_stelle_west_datum_on_einstein_fields_both_branches (shared engine, Kottler fields in the PG chart with Lambda = 3/4, 3 and -3/4: P = (Lambda/6) id from the field strength, D I = 0, D V = hb^{-1}(a), Omega_T = Omega - hb^{-1} ^ V/l^2, I ^ V = ninf ^ n0, Q(I) Q(V) = -1, Weyl part nonzero) and check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp (tractor field strength with derivatives on three Kottler fields equals -W and commutes with I and V). This covers the anti-de Sitter branch and a field with Weyl curvature, which the earlier checks did not. Version kept at 6 (already above the lock in this run). outside_ga narrowed to the form display of consequence (2).'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The functional and its variation are written in the language of the MacDowell-Mansouri Fact, as integrals of four-forms built from the frame and curvature forms with the fibre symbol epsilon_{abcd} (its GTG reading is the scalar of the I_4 part of the product of bivector-valued forms); the proof varies those forms.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -67,13 +108,16 @@ extraction:
   - dark-energy.frozen-point-datum-kasner-wall
   - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching
   eqrefs: 2
+outside_ga:
+  kind: other
+  why: 'Consequence (2) displays the imported expansion of the MacDowell-Mansouri Fact as four-forms (epsilon_abcd R^ab ^ R^cd, e^a ^ e^b ^ R^cd, e^a ^ e^b ^ e^c ^ e^d), the Fact''s own language, and the technical level repeats it; formal (ii) writes the reduced connection and its Lorentz block in the form notation of the Lemma and the Fact (D + e ^ V/Q(V), R + l^{-2} e ^ e), beside the GA gauge field Omega(a) - hb^{-1}(a) ^ V/l^2 (the block is -(calR(B) - l^{-2} B) in the store''s sign, as the proof computes); the proof computes with eps(I, V, X, Y) = <I ^ V ^ X ^ Y I_6^{-1}> = <(X ^ Y) I_4^{-1}> in GA.'
 ---
 
 ## formal
 On the Einstein region with $\Lambda \neq 0$ of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), whose tractor connection is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, in the notation of Lemma \claimref{dark-energy.stelle-west-vector-frozen-point}:
 \begin{enumerate}
 \item[(i)] \emph{(Reduction; proved.)} Parallelism of $I$ reduces the ambient $SO(2,4)$-structure to the stabiliser of $I$, the de Sitter group $SO(1,4)$ for $\Lambda > 0$ and the anti-de Sitter group $SO(2,3)$ for $\Lambda < 0$, and the tractor connection to a metric connection on the rank-five bundle $I^\perp$, of signature $(1,4)$ or $(2,3)$ respectively; the ambient curvature takes values in $\Lambda^2 I^\perp$. (The de Sitter names are used below; the anti-de Sitter branch reads identically with these substitutions, and every statement that follows uses only $\{I,V\}^\perp$, whose signature is $(1,3)$ on both branches.)
-\item[(ii)] \emph{(The Stelle-West datum; proved.)} $V$ is a section of $I^\perp$ of fixed squared norm $-3/\Lambda = -\ell^2$, its stabiliser in $SO(1,4)$ (or $SO(2,3)$) is the Lorentz group of $\{I, V\}^\perp$, of signature $(1,3)$, its covariant derivative is the soldering form, the physical frame $\hb^{-1}(a)$, and the reduced connection is $D + e\wedge V/Q(V)$, on flat spacetime the gauge field $\Omega(a) - \hb^{-1}(a) \wedge V/\ell^{2}$, with Lorentz curvature block $R + \ell^{-2}\,e\wedge e$. The pair (reduced connection, $V$) is exactly the datum of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. The Stelle-West vector is therefore not the frozen point, which is parallel; it is made from the frozen point and the canonical tractor, $V = X - (3/\Lambda)\,I$.
+\item[(ii)] \emph{(The Stelle-West datum; proved.)} $V$ is a section of $I^\perp$ of fixed squared norm $-3/\Lambda = -\ell^2$ ($\ell^{2} = 3/\Lambda$, negative for $\Lambda < 0$), its stabiliser in $SO(1,4)$ (or $SO(2,3)$) is the Lorentz group of $\{I, V\}^\perp$, of signature $(1,3)$, its covariant derivative is the soldering form, the physical frame $\hb^{-1}(a)$, and the reduced connection is $D + e\wedge V/Q(V)$, on flat spacetime the gauge field $\Omega(a) - \hb^{-1}(a) \wedge V/\ell^{2}$, with Lorentz curvature block $R + \ell^{-2}\,e\wedge e$. The pair (reduced connection, $V$) is exactly the datum of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. The Stelle-West vector is therefore not the frozen point, which is parallel; it is made from the frozen point and the canonical tractor, $V = X - (3/\Lambda)\,I$.
 \item[(iii)] \emph{(The action; proved, with the Stelle-West contraction of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west} as the imported input.)} The MacDowell-Mansouri functional of that datum is
 \[
 \begin{aligned}

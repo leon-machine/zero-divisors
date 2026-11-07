@@ -21,9 +21,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.imported-massless-graviton-production-rate@1
-  - dark-matter.mirror-tower-copy-one@8
-  - dark-matter.open-channels-their-costs@5
+  - dark-matter.imported-massless-graviton-production-rate@2
+  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.open-channels-their-costs@6
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   proof: proof-main.tex
 checked_by:
@@ -45,6 +45,10 @@ locators:
   label: prop:coefficients
   line: 1503
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.imported-massless-graviton-production-rate repinned 1 -> 2 after reviewing the F14 change writing the rate with the reduced Planck mass bar M_P, the source''s M_P (any M_P here that is evaluated is 2.435e18 GeV, the reduced mass); the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -1,8 +1,8 @@
 ---
 id: synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four
 kind: claim
-version: 2
-title: 'The unit $i = I_4$ keeps its properties only in dimension 0 mod 4'
+version: 3
+title: 'The unit $I_4$ keeps its properties only in dimension 0 mod 4'
 status: proved
 region: synthesis
 subject: quantum-fields
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -26,7 +30,7 @@ derivations:
   - field-theory.imported-tower-limit@3
   - primer.sign@2
   - std-algebra.pseudoscalar-commutation@1
-  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
+  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -50,6 +54,10 @@ lineage:
   - field-theory.second-quantisation
   - field-theory.elementary-photon-ga
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -86,7 +94,7 @@ extraction:
 ---
 
 ## formal
-Let $\Cl(1, D-1)$ have orthogonal generators $g_0, \ldots, g_{D-1}$ with $Q(g_0) = 1$ and $Q(g_a) = -1$ for $a \ge 1$, $I_D = g_0g_1\cdots g_{D-1}$ and $I_4 = g_0g_1g_2g_3$, and write $\hat{x}$ for the grade involution. For $D = 4$ the unit $i = I_4$ of Definition \claimref{obj.field-theory.single-algebra-field} has three properties: (a) $I_4^2 = -1$; (b) $I_4$ commutes with every bivector, so left multiplication by it commutes with every rotor; (c) $I_4$ anticommutes with every vector, so $I_4x = \hat{x}I_4$ for all $x$ and left and right multiplication by $I_4$ agree on even elements.
+Let $\Cl(1, D-1)$ have orthogonal generators $g_0, \ldots, g_{D-1}$ with $Q(g_0) = 1$ and $Q(g_a) = -1$ for $a \ge 1$, $I_D = g_0g_1\cdots g_{D-1}$ and $I_4 = g_0g_1g_2g_3$, and write $\hat{x}$ for the grade involution. For $D = 4$ the unit $I_4$ of Definition \claimref{obj.field-theory.single-algebra-field} has three properties: (a) $I_4^2 = -1$; (b) $I_4$ commutes with every bivector, so left multiplication by it commutes with every rotor; (c) $I_4$ anticommutes with every vector, so $I_4x = \hat{x}I_4$ for all $x$ and left and right multiplication by $I_4$ agree on even elements.
 \begin{enumerate}
 \item[(i)] For $D \ge 3$ the elements of $\Cl(1, D-1)$ commuting with every bivector are exactly $\mathrm{span}\{1, I_D\}$.
 \item[(ii)] In the signature $(1, D-1)$, $I_D^2 = (-1)^{D(D-1)/2 + D - 1}$, which is $-1$ exactly when $D \equiv 0$ or $3 \pmod 4$. (In the signature $(D-1, 1)$ it is $-1$ exactly when $D \equiv 0$ or $1 \pmod 4$.)

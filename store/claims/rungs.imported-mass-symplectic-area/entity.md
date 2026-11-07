@@ -23,7 +23,7 @@ derivations:
   uses:
   - mass.de-sitter-scale-frozen-point@6
   - mass.mass-symplectic-area-two-twistor-formula@3
-  - standard-model.imported-frozen-point-dictionary@8
+  - standard-model.imported-frozen-point-dictionary@9
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -28,6 +28,18 @@ functions:
     clauses:
     - '"The field strength R(B) read in the regular frame has the same coefficients as functions of r, and the class of the loop (n, e_2) is 2M/r^3 in this frame too, equal to 1 on the horizon locus at M = 1/2"'
     omits: five points, one of them on the horizon locus at M = 1/2
+  check_gtg_torsion_solution_is_the_pg_gauge_field:
+    kind: sampled
+    clauses:
+    - "the rotation-gauge field along this frame has the connection forms omega^0_1 = -beta' theta^1, omega^2_1 = theta^2/r, omega^2_0 = -(beta/r) theta^2, omega^3_2 = (cot theta/r) theta^3"
+    omits: "five rational points outside, on and inside the horizon locus; the gauge field is solved from the coframe by the torsion equation (rank 24, so unique) and compared with the displayed bivectors"
+  check_gtg_classes_and_loop_class_in_cl23:
+    kind: sampled
+    clauses:
+    - "pv(Omega(e_2)) = -(1 - beta)/r, pv(Omega(e_3)) = -I_5 (1 - beta)/r, (l . D) l = (beta^3/4M) l"
+    - "the transverse classes are +(1 + beta)/r and +I_5 (1 + beta)/r: 144/125, 2 and 12 at beta = 4/5, 1, 2"
+    - "the class of the loop (n, e_2) is 2M/r^3"
+    omits: "the same five points, classes computed in Cl(2,3) with I_5 from the solved field; the covariance with the static frame is tested by the earlier function"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

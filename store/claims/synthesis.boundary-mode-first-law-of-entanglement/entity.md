@@ -21,12 +21,20 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG pass: declaration narrowed (clause (iv) kept in components; no GTG derivation of the small-ball expansions)'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 derivations:
 - name: main
   uses:
   - hawking.i-state@4
-  - state-selection.partner-purification-are-canonical@4
+  - state-selection.partner-purification-are-canonical@5
   - synthesis.boundary-mode-thermal-entropy@2
   - angle.imported-theorems-deliver-their-hypotheses@3
   - synthesis.imported-jacobson-entanglement-equilibrium-2016@2
@@ -46,6 +54,18 @@ about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (close-out): state-selection.partner-purification-are-canonical 4 -> 5 repinned; the v5 formal only names the unit of the mode factor''s scalars, and clause (1)-(4) as used in (iii) is unchanged.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof not written for clause (iv): the clause is stated in the components of its own signature and convention (the formal level, unchanged), and its geometric step is the classical small-ball expansion V = w_m l^m (1 - R_s l^2/(6(m+2))), A = m w_m l^(m-1) (1 - R_s l^2/(6m)), cited from memory; a GTG proof would need the second-order normal gauge of hb with its curvature terms and the angular integrals in every dimension, new derivations not verified exactly here. The GTG field equation and the sign conversion are already stated in GTG; clauses (i) to (iii) are finite-dimensional Gibbs-state facts. Declaration kept and narrowed to that reason; no check added; version, statement, status and links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (iv) works in metric components with the sign conversion stated, as its imported premise does (reader R08: consistent, the import''s language); the GTG field equation is stated beside it.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,6 +111,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (light; clauses (i)-(iii) have no gravity content): in (iv) the small geodesic ball read at x0 in a gauge with hb(x0) = 1, Omega(x0) = 0 on a flat background of dimension d; flat-space conformal fields named as vanishing gravitational field; the store-convention equation given its GTG form R(a) + 8 pi G T(a) = (Lambda + 4 pi G tr T) a in four dimensions. The d-dimensional tensor balance kept in the clause''s declared signature and convention. Clauses (i)-(iv) unchanged.'
+outside_ga:
+  kind: other
+  why: 'Clause (iv) is stated, as its imported premise (J16) is, in metric components of the clause''s own declared signature (-,+,...,+) and sphere-positive convention (G_00, T_00 and the tensor equation), and its geometric side uses the classical volume and area expansions of a small geodesic ball in normal coordinates (cited from memory); their derivation in Gauge Theory Gravity, through the second-order expansion of hb in a gauge with hb(x0) = 1, Omega(x0) = 0, is not given here. The GTG field equation and the sign conversion are stated beside it; clauses (i) to (iii) have no gravity content.'
 ---
 
 ## formal

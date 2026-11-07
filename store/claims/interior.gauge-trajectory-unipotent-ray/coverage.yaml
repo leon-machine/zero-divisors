@@ -16,6 +16,8 @@ functions:
     clauses: ["(4)"]
     omits: "null directions e_t + lambda e_r with lambda = -beta +- 1 checked null at beta = 1, 3, 20, with the bound |1/lambda|(beta - 1) <= 1 and P(e_r) = 0; the convergence of the normalised directions to e_r as beta -> infinity and the failure of division at r = 0 are not computed, and the type-N degeneration is cited to T5"
 untouched_premises:
+  singularity.unipotent-ray: "restated in (1), (2); the check recomputes the nilpotency and the group law directly"
+  singularity.cones-fold: "restated in (4); the check recomputes the folding of the null directions directly"
   singularity.type-n-only-type-n: "the type-N classification of the degeneration is a cited result, with no computation here"
   singularity.non-removability-invariant-argument: "non-removability of the divergence is an argument about invariants, with no finite computation here"
   std-algebra.orthogonal-anticommute: "standard algebra cited in the proof; the check computes the statement directly"

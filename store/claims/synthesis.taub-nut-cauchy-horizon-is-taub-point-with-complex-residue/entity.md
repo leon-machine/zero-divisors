@@ -1,7 +1,7 @@
 ---
 id: synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
 kind: claim
-version: 2
+version: 3
 title: 'The Taub-NUT Cauchy horizon as a Taub point with complex residue'
 status: proved
 region: synthesis
@@ -21,6 +21,18 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i): Bianchi IX gauge field solved from the torsion equation, field equations from the field strength; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F2): pin'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -28,7 +40,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.bkl-bounces-no-framewise-invariant@2
   proof: proof-main.tex
@@ -43,10 +55,26 @@ checked_by:
   ref: check.py::check_generated_algebra
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_bianchi_ix_torsion_solution_and_field_strength
+- kind: check
+  ref: check.py::check_gtg_taub_nut_is_a_vacuum_gauge_field
 lineage:
   motivated_by:
   - synthesis.bkl-bounce-invariant-holonomy-and-bound
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 review (accepted, no fix). Repinned synthesis.imported-gtg-dictionary 1 -> 2: clause (iv) now states the component sign R(g ^ g) = -R(e ^ e) of the store and the GA forms of the Ricci and Einstein maps; this proof cites (ii) and (iv) for the equivalence with Einstein''s equations and computes calR(B) = -R(hb(B)), which is that sign, so the use holds. The citation of synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue is a comparison, not a step, and gets no edge. No check changed. Version kept at 3.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof of (i) rewritten in GTG: the coframe f^0 = N grad T, f^l = a_l sigma_l (sigma_l background vector fields with grad ^ sigma_k = -sigma_i ^ sigma_j), the torsion equation hb^T(grad ^ f^a) = sum_b e^b ^ (Omega(e_b) . e^a) with left side H_k e^0 ^ e^k - mu_k e^i ^ e^j, solved uniquely by Omega(e_0) = 0, Omega(e_k) = -H_k B_k + (mu_i + mu_j - mu_k)/2 e_i e_j; the field equations from the store curvature calR(B) = -R(hb(B)) of the solved field and its Ricci map, read with Ric^o(u, v) = -u . calR(v). (ii) to (iv) unchanged (rational algebra and GA already); the Christoffel computation kept as a labelled reading. Checked exactly: check_gtg_bianchi_ix_torsion_solution_and_field_strength (shared engine, second-order jets at psi = 0, theta = pi/2, two generic data: torsion map rank 24, the solved Omega equals the display, N^2 Ric^o(e_l, e_l) = alpha_l'''' + (G^-1 dV)_l, N^2 Ric^o(e_0, e_0) = -sum alpha'''' + 2C, off-diagonal zero) and check_gtg_taub_nut_is_a_vacuum_gauge_field (the Taub region gauge field is Ricci-flat at five rational points, and not when alpha_3'''' is shifted by 1/3). Version 2 -> 3; outside_ga removed (no Christoffel computation remains as evidence; the one-forms sigma_l are read as background vector fields).'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the Christoffel symbols and the coordinate Ricci tensor of the Taub-NUT derived metric in its left-invariant one-forms; the coordinate computation is the evidence.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -11,6 +11,18 @@ functions:
     kind: sampled
     clauses: ["(iii)", "consequence (2)"]
     omits: "expansion is checked for one sample pair of bivectors and four values of Lambda; the topological character of the first term, the Lambda -> 0 limit being Einstein-Cartan, and consequence (1) (polynomial action at the Schwarzschild wall) are not tested"
+  check_gtg_stelle_west_datum_on_einstein_fields_both_branches:
+    kind: sampled
+    clauses:
+    - "(ii) V is a section of I-perp of squared norm -3/Lambda, its covariant derivative is the soldering form, the reduced connection is Omega(a) - hb^{-1}(a) ^ V/l^2"
+    - "(i) I is parallel; both branches"
+    omits: "four Kottler points (Lambda = 3/4, 3, -3/4, -3/4) in the PG chart, one point each, through the shared engine"
+  check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp:
+    kind: sampled
+    clauses:
+    - "(i) the ambient curvature takes values in Lambda^2 I-perp"
+    - "(ii) Lorentz curvature block R + l^-2 e ^ e"
+    omits: "three Kottler points (two de Sitter, one anti-de Sitter branch), tractor field strength with derivative terms from order-2 jets; equal to -W and commuting with I and V"
 untouched_premises:
   dark-energy.imported-walls-sphere-theorem: "cited only for the wall in consequence (1), which has no computable content in this check"
 judge:

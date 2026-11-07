@@ -1,7 +1,7 @@
 ---
 id: interior.stabilisers-flat-model
 kind: claim
-version: 5
+version: 6
 title: Stabilisers in the flat model
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the slot order of the flat-model triples stated against the tractor splitting'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -40,6 +44,10 @@ locators:
   label: prop:flatstab
   line: 478
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal set nO := (1,0,0) and the proof paired (0,0,1) with (1, x, -x^2/2): triples in the flat-model order (nO, W, nInf), the reverse of the tractor splitting sigma nInf + mu + rho nO in which (1,0,0) is nInf (interior.covariant-form-vacuum-equations, synthesis.einstein-condition-is-infinity-vacuum-incidence); the order is now stated, and x^2 is written Q(x); <nInf, X(x)> = 1 checked exactly in Cl(2,4) (v/r03_checks.py).'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -62,7 +70,7 @@ extraction:
 ---
 
 ## formal
-Fix the null vector $\nInf$ and a second null vector $\nO := (1,0,0)$ with $\ip{\nInf}{\nO} = 1$, and let $W := \{\nInf, \nO\}^\perp \cong \R^{1,3}$. Decompose $\Lambda^2 V = \R\,(\nInf \wedge \nO) \oplus \Lambda^2 W \oplus (\nInf \wedge W) \oplus (\nO \wedge W)$. Then:
+Fix the null vector $\nInf$ and a second null vector $\nO$ (the triple $(1,0,0)$ of the flat-model dictionary, whose triples list the $\nO$, $W$ and $\nInf$ components, the reverse of the order of the tractor splitting $\sigma\nInf + \mu + \rho\nO$, in which $(1,0,0)$ is $\nInf$) with $\ip{\nInf}{\nO} = 1$, and let $W := \{\nInf, \nO\}^\perp \cong \R^{1,3}$. Decompose $\Lambda^2 V = \R\,(\nInf \wedge \nO) \oplus \Lambda^2 W \oplus (\nInf \wedge W) \oplus (\nO \wedge W)$. Then:
 \begin{enumerate}
 \item the stabiliser subalgebra of the vector $\nInf$ is $\Lambda^2 W \oplus (\nInf \wedge W) \cong \mathfrak{so}(1,3) \ltimes \R^4$, the Poincar\'e algebra, of dimension $10$;
 \item the stabiliser subalgebra of the ray $\R^+\nInf$ adds the grading element $\nInf \wedge \nO$ and is the $11$-dimensional maximal parabolic $\mathfrak{p} = (\mathfrak{so}(1,3) \oplus \R) \ltimes \R^4$;

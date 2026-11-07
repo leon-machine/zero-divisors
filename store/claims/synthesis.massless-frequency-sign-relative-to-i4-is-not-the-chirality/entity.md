@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - field-theory.fock-space-maxwell-modes@4
+  - field-theory.fock-space-maxwell-modes@5
   proof: proof-main.tex
 checked_by:
 - kind: check

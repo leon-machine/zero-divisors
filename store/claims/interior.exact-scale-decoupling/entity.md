@@ -1,7 +1,7 @@
 ---
 id: interior.exact-scale-decoupling
 kind: claim
-version: 4
+version: 5
 title: Exact scale decoupling
 status: proved
 region: interior
@@ -19,11 +19,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the curvature operator written with its stored symbol, script R, in place of R'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
   uses:
-  - interior.imported-schwarzschild-curvature-spectrum@6
+  - interior.imported-schwarzschild-curvature-spectrum@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -40,6 +44,10 @@ locators:
   label: prop:shape
   line: 403
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The factorised operator was written R(B), the stored symbol for the background field strength in the literature sign; its values (+2M/r^3 on the radial pair, -M/r^3 on the mixed planes) are those of the store-sign curvature operator, now written with that symbol; the stale paper reference Section sec:setting is replaced by the store sign.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -60,13 +68,13 @@ extraction:
       across subjects (einstein, singularity) by the crossover scan of 21 October; not merged, since T05's statement
       is strictly stronger.
 specialises:
-- singularity.curvature-gauge-field-exact-shape-decoupling@4
+- singularity.curvature-gauge-field-exact-shape-decoupling@5
 ---
 
 ## formal
 In the conventions of Fact \claimref{interior.imported-schwarzschild-curvature-spectrum}, the Schwarzschild curvature operator is, exactly and at every radius,
 \[
-R(B) \;=\; -\,\frac{M}{r^3}\,S(B), \qquad
+\mathcal{R}(B) \;=\; -\,\frac{M}{r^3}\,S(B), \qquad
 S \;:=\; 1 - 3\Pi \;=\; -\tfrac12\bigl(B \mapsto B + 3\,\sigma_r B \sigma_r\bigr),
 \]
 where the shape operator $S$ satisfies the algebraic identity
@@ -76,7 +84,7 @@ S^2 + S = 2 ,
 has spectrum $(-2, -2, 1, 1, 1, 1)$, and is trace-free. The factorisation is exact: $S$ depends on neither $M$ nor $r$, and the entire approach to the singularity changes only the conformal prefactor $-M/r^3$.
 
 ## technical
-Let $\Pi$ project the six-dimensional bivector space onto the pair $\operatorname{span}\{\sigma_r, I\sigma_r\}$ formed by the radial boost plane and its dual. Given the imported Schwarzschild spectrum, the curvature operator factorises exactly, at every radius, as $R(B) = -\frac{M}{r^3}\,S(B)$ with $S = 1 - 3\Pi = -\tfrac12(B \mapsto B + 3\,\sigma_r B\sigma_r)$.
+Let $\Pi$ project the six-dimensional bivector space onto the pair $\operatorname{span}\{\sigma_r, I\sigma_r\}$ formed by the radial boost plane and its dual. Given the imported Schwarzschild spectrum, the curvature operator factorises exactly, at every radius, as $\mathcal{R}(B) = -\frac{M}{r^3}\,S(B)$ with $S = 1 - 3\Pi = -\tfrac12(B \mapsto B + 3\,\sigma_r B\sigma_r)$.
 
 The shape operator obeys $S^2 + S = 2$, has spectrum $(-2,-2,1,1,1,1)$ and is trace-free. It depends on neither $M$ nor $r$, so the whole approach to the singularity changes only the conformal prefactor $-M/r^3$. The singularity paper proves the same identity in its Theorem on the curvature of the gauge field (\claimref{singularity.curvature-gauge-field-exact-shape-decoupling}), adding that the doubled eigenvalue sits exactly on the radial boost plane and its dual.
 

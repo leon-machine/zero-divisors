@@ -1,7 +1,7 @@
 ---
 id: synthesis.wall-class-one-rung-obstruction
 kind: claim
-version: 2
+version: 3
 title: The torsion part of a tame wall obstructs exactly the one-rung completions
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, references to the conjecture''s clause (a) dated at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -51,6 +55,10 @@ lineage:
   - sheaf.wall-class
   - sheaf.conservation-degeneracy-absolute-form
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Consequence of Leon''s answer 7 (B4): sheaf.wall-class clause (a) is restated as the one-rung completion, so the two places this theorem cites clause (a) now say ''as first posed (its version 2)'', and the closing sentence notes that the conjecture''s clause (a) now asks for the one-rung completion of (3), (4). Wording; mathematics unchanged.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'W503: the one-liner now states the tameness hypotheses and the two-nonempty-sides condition.'
@@ -69,7 +77,7 @@ extraction:
 ## formal
 Let $(M, G)$ be a tame corank-one degeneration (Hypotheses \claimref{sheaf.tameness}) with $M$ connected and without boundary, $\Sig$ compact and separating $M$ into a physical side $\Mp$ and a far side, both nonempty, with signatures $(p,q)$ and $(p{-}1,q{+}1)$; let $\shL \subset T^*M|_\Sig$ be the radical line bundle and fix a collar $C \cong \Sig \times [-1,1]$, $\Sig = \Sig \times \{0\}$, the physical side at positive parameter. Write $H$ for the hyperbolic form on the trivial plane $\underline{\R}^2$ and call $T := T^*M \oplus \underline{\R}^2$ the one-rung bundle.
 \begin{enumerate}
-\item \emph{(Strict reading.)} No smooth symmetric form on any bundle $E \supset T^*M$ that equals $G \perp K$ outside $C$ with one signature of $K$ on both exterior regions is nondegenerate everywhere (Theorem \claimref{sheaf.conservation-degeneracy-absolute-form}). The obstruction is the clock mismatch $2 \in \mathbb{Z}_8$, which is nonzero for every tame wall with two nonempty sides; so on every tame wall satisfying these hypotheses the condition in clause (a) of Conjecture \claimref{sheaf.wall-class} fails, whatever the torsion of $(\shL, N^*\Sig)$.
+\item \emph{(Strict reading.)} No smooth symmetric form on any bundle $E \supset T^*M$ that equals $G \perp K$ outside $C$ with one signature of $K$ on both exterior regions is nondegenerate everywhere (Theorem \claimref{sheaf.conservation-degeneracy-absolute-form}). The obstruction is the clock mismatch $2 \in \mathbb{Z}_8$, which is nonzero for every tame wall with two nonempty sides; so on every tame wall satisfying these hypotheses the condition in clause (a) of Conjecture \claimref{sheaf.wall-class}, as first posed (its version 2), fails, whatever the torsion of $(\shL, N^*\Sig)$.
 \item \emph{(Full relaxation.)} If the exterior model may change signature across the wall, nothing obstructs: for any bundle metric $A$ on $T^*M$ and any bump $\beta$ equal to $1$ near $\Sig$ and $0$ outside $C$, the form
 \[
 h_D(\alpha \oplus \alpha', \gamma \oplus \gamma') \;=\; G(\alpha,\gamma) - G(\alpha',\gamma') + \beta\bigl(A(\alpha,\gamma') + A(\alpha',\gamma)\bigr)
@@ -79,7 +87,7 @@ on $T^*M \oplus T^*M$ is nondegenerate of signature $(n,n)$ at every point of $M
 \item \emph{(One rung, one side.)} There is a smooth symmetric form $h$ on $T$ over $\Mp$, nondegenerate at every point of $\Mp$ including $\Sig$, with $h|_{T^*M} = G$ along $\Sig$ and $h = G \perp H$ outside $C$, if and only if $w_1(\shL) = 0$. The standing hypothesis of Theorem \claimref{sheaf.one-sided-completion} is therefore necessary for every one-sided one-rung completion, not only for the coupling construction.
 \item \emph{(Twisted rung.)} If the adjoined plane is $\Lambda \oplus \Lambda^*$ with its hyperbolic pairing, for a line bundle $\Lambda$ over $\Mp$, a form as in (4) with $\Lambda \oplus \Lambda^*$ in place of $\underline{\R}^2$ exists only if $\Lambda|_\Sig \cong \shL$. In particular a twisted one-sided completion requires $w_1(\shL)$ to lie in the image of the restriction $H^1(\Mp; \mathbb{Z}_2) \to H^1(\Sig; \mathbb{Z}_2)$.
 \end{enumerate}
-Consequently the pair $W(\Sig) := (w(\Sig), w_1(\shL))$ has a precise meaning: its coarse part obstructs the strict two-sided completion and is never zero on a two-sided wall; its torsion part obstructs exactly the one-rung completions, one-sided or two-sided; and no torsion-sensitive class can be characterised by clause (a) of Conjecture \claimref{sheaf.wall-class} in either reading of ``standard''.
+Consequently the pair $W(\Sig) := (w(\Sig), w_1(\shL))$ has a precise meaning: its coarse part obstructs the strict two-sided completion and is never zero on a two-sided wall; its torsion part obstructs exactly the one-rung completions, one-sided or two-sided; and no torsion-sensitive class can be characterised by clause (a) of Conjecture \claimref{sheaf.wall-class} as first posed (its version 2) in either reading of ``standard''; the conjecture's clause (a) now asks for the one-rung completion of (3) and (4).
 
 ## technical
 The wall-class conjecture asks for a torsion-sensitive invariant of a tame wall, refining the signature mismatch, whose vanishing is equivalent to the existence of a completion nondegenerate on both sides. This result shows that the equivalence as posed cannot involve torsion, and locates where torsion does act. In the strict reading (one exterior model on both sides) the signature count always obstructs; in the fully relaxed reading (the added form may change signature across the wall) a doubling of the cotangent bundle removes every obstruction. Between the two, with exactly one adjoined hyperbolic plane, the obstruction is exactly the first Stiefel-Whitney class of the dying line: a two-sided completion that is standard on the physical side and positive definite on the far side exists if and only if $w_1(\shL) = 0$, and so does any one-sided one-rung completion that restricts to $G$ along the wall. With a twisted plane $\Lambda \oplus \Lambda^*$ the dying line must extend over the physical side.

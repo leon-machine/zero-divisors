@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-frozen-points-conformally-flat
 kind: claim
-version: 3
+version: 5
 title: 'Two frozen points of one norm on conformally flat fields'
 status: proved
 region: synthesis
@@ -17,11 +17,27 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: tractors as Cl(2,4) vectors, the flat-scale connection as the gauge field -ninf ^ a, stabilisers as bivectors'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): Einstein scale computed directly instead of from the converse of the Fact'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'proof''s citation of the frozen-point Fact taken from its scale-g display, after that Fact''s gauge-field sentence became a remark (second-round decisions)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   proof: proof-main.tex
 checked_by:
@@ -31,12 +47,30 @@ checked_by:
   ref: check.py::check_two_frozen_points_give_two_metrics
 - kind: check
   ref: check.py::check_pair_has_one_gauge_invariant
+- kind: check
+  ref: check.py::check_gtg_parallel_tractors_flat_strength_and_einstein_scale
 - kind: proof
   derivation: main
 lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Leon''s second-round answer 6 moved the sentence of Fact dark-energy.imported-frozen-point-geometry naming the tractor gauge field out of that Fact''s statement. The proof here took the flat-scale gauge field Omega_T(a) = -ninf ^ a from that sentence; it now reads the Fact''s scale-g display at P = 0 and shows, by the computation it already made ((ninf ^ a) . Y = (a . mu) ninf - rho a for Y = sigma ninf + mu + rho n0, n0 . ninf = 1), that the gauge field reproduces that display slot by slot. Statement and check unchanged. Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 10.1 applied: proof (i) read ''a parallel tractor of norm Lambda/3 is the scale tractor of an Einstein scale'' from Fact dark-energy.imported-frozen-point-geometry, which states the converse direction only. The step is now computed: for hb^{-1}(a) = a/sigma the torsion equation gives Omega(a) = (grad sigma ^ a)/sigma, R(a ^ b) = -(2 r sigma + Q(grad sigma)) sigma^-2 a ^ b = -Q(I) sigma^-2 a ^ b, calR(B) = -R(sigma^2 B) = Q(I) B, Lambda = 3 Q(I). Fixer verified exactly with the gtg engine (torsion solved, not assumed) at (s, r) = (1, 1), (-2, 3/4), (3/2, -5/2), (1, 1/2) with generic m and points: torsion-free, Omega(e_mu) equal to the formula, R(e_mu ^ e_nu) = -Q(I) sigma^-2 e_mu ^ e_nu, calR = Q(I) id and Ricci map 3 Q(I) id. The existing check already computes this field; no check change.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: tractors as Cl(2,4) vectors sigma ninf + mu + rho n0; the flat-scale tractor connection of the frozen-point Fact as the gauge field Omega_T(a) = -ninf ^ a (hb = 1, Omega = 0, Schouten map 0), giving the parallel tractors I(x) = sigma(x) ninf + (m - r x) + r n0 and the norm 2rs + Q(m) in one line; the field strength (ninf ^ a) x (ninf ^ b) = 0; the Einstein scale read as the dilation field hb^{-1}(a) = a/sigma; the pairing constant because Omega_T is bivector-valued; the stabilisers as the bivectors of I-perp and of the complement of the plane. Component reading kept, shortened, at the end; the original proof kept as orig-proof-main.tex. New exact check check_gtg_parallel_tractors_flat_strength_and_einstein_scale (parallelism as exact jets at three points for four tractors, constant norm, flat strength, the dilation field''s store-sign curvature calR(B) = Q(I) B with Omega solved from the torsion condition at twelve points, which the coverage judge had listed as untested, and the stabiliser dimensions 15, 10, 6 by rank on the bivectors of Cl(2,4)). outside_ga withdrawn: no stand-in remains.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof solves the tractor parallelism equations in flat components (eta_ab, partial_a partial_b sigma); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component solution is the evidence (reader R05).'
   maintainer_pass:
     by: maintainer-2026-10-24
     date: '2026-10-24'

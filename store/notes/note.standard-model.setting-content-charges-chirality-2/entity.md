@@ -1,7 +1,7 @@
 ---
 id: note.standard-model.setting-content-charges-chirality-2
 kind: note
-version: 2
+version: 3
 title: Content, charges, chirality
 status: setting
 subject: standard-model
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, a dated bracket: Hypothesis (S) is now derived from the slot-module premise, and the thirteenth generator against the twisted action'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - standard-model.hyp-s-slot-statistics
 - standard-model.global-form-quotient-determined
@@ -30,6 +34,10 @@ locators:
   section: Content, charges, chirality
   line: 1081
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Dated bracket added to the paper text, which is kept (DECISIONS G3, R04 items 1 and 8): Hypothesis (S) is now a proved claim (standard-model.hyp-s-slot-statistics@9) derived from the postulate standard-model.slot-module-hypothesis. The thirteenth-generator sentence gets a bracket citing standard-model.under-s-composites-state-space-spinor@6 (3)(b): in the twisted action every abelian generator in the span is anomaly-free.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -51,7 +59,7 @@ the unique trace-free combination of the two scalar generators up to scale (numb
 \emph{Hypothesis (S), slot statistics.} The twistor slots of the composite are fermionic modes on the same footing as its pairs: the composite's state space is the Fock space $\Lambda^{\bullet}(\C^{2} \oplus W)$ of five modes, two slot modes and three pair modes, a state being a set of occupied slots and occupied pairs, on which $(A, B) \in U(2) \times U(3)$ acts as $\Lambda^{\bullet}(A \oplus B)$; and, as in Fact \claimref{standard-model.imported-pair-systems-two-chirality-halves} for the three-mode Fock space $\Lambda^{\bullet}W$, the chirality of a state is the parity of its total mode number (Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov} supplies the structure: $\Lambda^{\bullet}\C^{5}$ is the spinor module of $\Cl(10)$ and its parity grading is that module's chirality).
 \end{quote}
 
-Hypothesis (S) is a structural premise, not a theorem of the series, and the paper carries it as one: every result below that needs it says so, and successor problem (6) records what deciding it would settle and what it would cost. Two remarks on its content. Under (S) a cell of the tensor state space, one slot with one pair, is the state with one slot mode and one pair mode occupied, of weight $3 - 2 = 1$, so the pair-level content of the tensor state space is recovered; but (S) does not record which pairs belong to which slot, so it is not a refinement of the two-level hierarchy but a different state space with the same one-cell sector. And under (S) the automorphisms preserving the slot-pair split act faithfully: the kernel $K$ of Theorem \claimref{standard-model.global-form-quotient-determined} acts on the $(j, k)$ component by $\lambda^{j - k}$, so the automorphism group of the five-mode state space that preserves the slot-pair split and the mode number is $U(2) \times U(3)$ itself, thirteen-dimensional, and the framework's rule that the gauge group is the automorphism group then yields one abelian generator more than Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s twelve. The extra generator, the total mode number $j + k$ (or equivalently $j - k$), cannot be gauged: Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(3) proves that over the derived generation every abelian generator in the span of the two mode numbers except hypercharge fails three of the four anomaly conditions, so the automorphism rule read with anomaly cancellation returns the twelve. What (S) still costs is the second item: a state space that is not a refinement of the two-level hierarchy.
+Hypothesis (S) is a structural premise, not a theorem of the series, and the paper carries it as one: every result below that needs it says so, and successor problem (6) records what deciding it would settle and what it would cost. (Status now, 7 November 2026: the store derives (S) from a weaker postulate, Premise \claimref{standard-model.slot-module-hypothesis}, in Proposition \claimref{standard-model.hyp-s-slot-statistics}; the results that need (S) rest on that premise.) Two remarks on its content. Under (S) a cell of the tensor state space, one slot with one pair, is the state with one slot mode and one pair mode occupied, of weight $3 - 2 = 1$, so the pair-level content of the tensor state space is recovered; but (S) does not record which pairs belong to which slot, so it is not a refinement of the two-level hierarchy but a different state space with the same one-cell sector. And under (S) the automorphisms preserving the slot-pair split act faithfully: the kernel $K$ of Theorem \claimref{standard-model.global-form-quotient-determined} acts on the $(j, k)$ component by $\lambda^{j - k}$, so the automorphism group of the five-mode state space that preserves the slot-pair split and the mode number is $U(2) \times U(3)$ itself, thirteen-dimensional, and the framework's rule that the gauge group is the automorphism group then yields one abelian generator more than Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s twelve. The extra generator, the total mode number $j + k$ (or equivalently $j - k$), cannot be gauged: Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(3) proves that over the derived generation every abelian generator in the span of the two mode numbers except hypercharge fails three of the four anomaly conditions, so the automorphism rule read with anomaly cancellation returns the twelve. (Status now, 7 November 2026: that holds for the action $\Lambda^{\bullet}(A \oplus B)$; in the action the state space carries, through $\Lambda^{\bullet} \otimes \det^{-1/2}$, every abelian generator in that span is anomaly-free, Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(3)(b), and the rule read with anomaly cancellation returns thirteen.) What (S) still costs is the second item: a state space that is not a refinement of the two-level hierarchy.
 
 ## technical
 pending

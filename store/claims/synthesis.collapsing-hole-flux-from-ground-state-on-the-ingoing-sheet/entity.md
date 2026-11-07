@@ -1,7 +1,7 @@
 ---
 id: synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 kind: claim
-version: 2
+version: 4
 title: 'Late-time Hawking state from the ground state on the ingoing sheet'
 status: proved
 region: synthesis
@@ -25,6 +25,22 @@ credit:
   role: unit conventions per Leon's rulings of 7 November 2026 (R2, R4)
   version: 2
   source: maintainer pass 2026-11-07 (unit rulings)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (ii): the ingoing generator''s velocity hb^{-1}(x'') is D-parallel; (K . D) K = kappa K'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): control of the GTG check uses the physical velocity'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'GA rewrite of (ii)''s affine-parameter statement (the ingoing velocity is D-parallel), Gamma^r_rr = 0 kept as the reading; new exact check'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -33,11 +49,11 @@ derivations:
 - name: main
   uses:
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1
-  - synthesis.positive-null-energy-gives-r-premises@7
+  - synthesis.positive-null-energy-gives-r-premises@9
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
-  - sheaf.gauge-field-cometric@3
-  - synthesis.imported-gtg-dictionary@1
+  - sheaf.gauge-field-cometric@4
+  - synthesis.imported-gtg-dictionary@2
   - singularity.euclidean-section-period@6
   - synthesis.r-loc-needs-sheet-labelled-modes@4
   assumes:
@@ -54,6 +70,10 @@ checked_by:
   ref: check.py::check_ingoing_generator_crosses_the_horizon_regularly
 - kind: check
   ref: check.py::check_exterior_half_is_the_i_state_at_the_hawking_temperature
+- kind: check
+  ref: check.py::check_gtg_ingoing_generator_is_affine_and_horizon_rate
+- kind: check
+  ref: check.py::check_gtg_affine_velocity_is_the_christoffel_reading
 - kind: proof
   derivation: main
 lineage:
@@ -63,6 +83,30 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s answers, second round, item 7 (version 3 -> 4): the index expression of (ii) marked as a reading now follows its GA form, the mathematics unchanged. The generators cross H+ with r an affine parameter because their physical velocity k = hb^{-1}(x''), x'' the background tangent with respect to r, is D-parallel, D_{x''} k = 0 (dictionary (iii)); Gamma^r_rr = 0 in the chart (v, r) is kept as the reading. Evidence: new check check_gtg_affine_velocity_is_the_christoffel_reading: with the chart''s coordinate vectors X_v = e_t, X_r = e_r - e_t/(1 + beta) and their physical vectors gamma_0 + beta gamma_1 and (gamma_1 - gamma_0)/(1 + beta), D_{X_a} hb^{-1}(X_b) = Gamma^c_ab hb^{-1}(X_c) for all four radial pairs with the Christoffel symbols of f dv^2 - 2 dv dr, at six PG points of two masses (24 identities); so D_{x''} k = 0 is exactly Gamma^c_rr = 0, Gamma^r_rr = 0 included, and the vv pair gives Gamma^v_vv = M/r^2. The derived line element was already a labelled reading. No outside_ga declaration to narrow. Also, notation only (items from the rename pass of answer 8): the formal''s quotation of the companion synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature (now version 3, not pinned here) brought up to its renamed radial offset, zeta = r - 2M and U = -zeta e^{zeta/2M}; and r^2 dOmega^2 beside the gauge field Omega written r^2(dtheta^2 + sin^2 theta dvarphi^2) in the formal''s line-element reading and in the proof''s two line elements (theta and varphi otherwise unused).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign, with GA wording in (ii) and (iv); this result cites clauses (i), (iii) and (vi), unchanged, so the use holds as cited. sheaf.gauge-field-cometric repinned 3 -> 4 after reviewing its correction of the description of the degeneration at r = 0 (beta diverges and beta^-1 hb tends to the rank-one -P); this result uses only the Painleve-Gullstrand field hb = 1 - beta P, invertible on r > 0, unchanged, so the use holds as cited. synthesis.positive-null-energy-gives-r-premises repinned 7 -> 8: only a remark naming the home of (i) and (ii) added (notation).'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 4.1 applied (check only): in check_gtg_ingoing_generator_is_affine_and_horizon_rate the control used the background tangent e_t - (1 + beta) e_r as if it were the physical velocity. The fixer computed hb^{-1}(e_t - (1 + beta) e_r) = gamma_0 - gamma_1 (PG, hb^{-1}(e_t) = e_t + beta e_r) and D_{x_t}(gamma_0 - gamma_1) = (1 + beta)(x'' . grad beta) k = (beta/2r)(gamma_0 - gamma_1); the control now uses kt = gamma_0 - gamma_1, asserts hb^{-1}(x_t) = kt and that exact value (nonzero). runcheck passes; mutants caught: the old background-tangent control, and the sign of beta/2r. Proof unchanged (it was right).'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item H5 (notation, routine): one parenthesis in the formal level states this entity''s normalisation (rho = r/2M, U = -e^{-kappa t}(s - 1) e^{s^2/2 + s}) and that the companion null-shell result uses rho = r - 2M, U = -rho e^{rho/2M}. No content change; evidence: the companion''s own formal level (checked by reading it).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Clause (ii) of the proof rewritten in Gauge Theory Gravity: the ingoing radial null worldline parametrised by r has physical velocity k = hb^{-1}(x'') = (gamma_1 - gamma_0)/(1 + beta), and with the PG rotation-gauge field on the radial plane (Omega(e_t) = (M/r^2) sigma_r, Omega(e_r) = -beta'' sigma_r) D_{x''} k = dk/dr + Omega(x'') x k = 0, so r is affine; the horizon rate is (K . D) K = Omega(e_t) x K = K/(4M) at r = 2M. The Christoffel symbols Gamma^r_rr = 0 and Gamma^v_vv = f''/2 of the chart (v, r) are kept as a labelled reading (the formal level''s parenthesis is unchanged), with their old check. Original proof kept as orig-proof-main.tex. New exact check check_gtg_ingoing_generator_is_affine_and_horizon_rate (two masses, three radii each with rational beta: the engine''s PG field torsion-free, its radial-plane connection, Q(k) = 0, hb^{-1}(x'') = k, D_{x''} k = 0, a non-affine control in the t parametrisation, (K . D) K = K/(4M) on the horizon and its off-horizon value). outside_ga withdrawn: no stand-in remains in the proof''s main line.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The affine parametrisation of the horizon generators is computed from the Christoffel symbols of the ingoing chart (Gamma^r_rr) in components, as a labelled reading of (K.D)K beside the GTG statement.'
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -116,14 +160,14 @@ extraction:
     reaches from the other side.
 ---
 ## formal
-Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}d\Omega^{2}$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$.
+Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}(d\theta^{2} + \sin^{2}\theta\,d\varphi^{2})$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$ (this entity's normalisation, $\rho = r/2M$ and $U$ as in (i); the companion null-shell result filed alongside, synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature, uses $\zeta = r - 2M$ and $U = -\zeta\,e^{\zeta/2M}$, a different normalisation).
 \begin{enumerate}
 \item[(i)] \emph{(The Kruskal functions in this gauge.)} On $r > 0$ put
 \[
 U \;=\; -\,e^{-\kappa t}\,(s - 1)\,e^{s^{2}/2 + s}, \qquad V \;=\; e^{\kappa t}\,(s + 1)\,e^{s^{2}/2 - s}.
 \]
 Both are smooth on the invertible region; $UV = -(\rho - 1)e^{\rho}$; $U = 0$ exactly on $\mathcal{H}^{+}$, $U < 0$ outside and $U > 0$ inside, with $\partial_{s}U = -s^{2}e^{s^{2}/2 + s}e^{-\kappa t} \ne 0$; $V > 0$ everywhere. With $u = t - \int dr/(1 - \beta)$ and $v = t + \int dr/(1 + \beta)$ the retarded and advanced Eddington-Finkelstein labels of the derived metric, $U = -e^{-\kappa u}$ and $V = e^{\kappa v}$, because $\kappa\int dr/(1 \mp \beta) = s^{2}/2 \pm s + \ln|s \mp 1|$. The symmetry acts as $U \mapsto e^{-\kappa\tau}U$, $V \mapsto e^{\kappa\tau}V$: dilations of the two Kruskal functions at rate $\kappa$, of opposite sense.
-\item[(ii)] \emph{(The ingoing sheet.)} The level sets of $V$ are null hypersurfaces whose generators, the radial ingoing free-fall null worldlines $v = \mathrm{const}$, cross $\mathcal{H}^{+}$ with $r$ an affine parameter ($\Gamma^{r}{}_{rr} = 0$ in the chart $(v, r)$ of the derived metric, Fact \claimref{synthesis.imported-gtg-dictionary}(iii)) and $U$ a regular parameter on them: along $v = \mathrm{const}$, $U = -e^{-\kappa v}(\rho - 1)e^{\rho}$ and $dU/d\rho = -e^{-\kappa v}\rho\,e^{\rho} \ne 0$, equal to $-e^{1 - \kappa v}$ on the horizon. The level sets of $U$ are the null hypersurfaces generated by the outgoing radial free-fall null worldlines, so under the s-wave reduction premise (J3), Premise \claimref{hawking.joint-j3-s-wave-reduction}, which reduces each channel of a massless field to a two-dimensional boundary mode, the outgoing sector near $\mathcal{H}^{+}$ is one chiral field per light ray constant along them, a function of $U$ and the transverse labels, and its carrier on the ingoing generator through a point $p$ of $\mathcal{H}^{+}$ is the continuum mode space $\CAR(L^{2}(\R, dU)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, the sheet of $p$ generated by the ingoing null direction in the sense of Proposition \claimref{synthesis.r-loc-needs-sheet-labelled-modes}. The symmetry acts on it as the boost $\beta_{\tau}(\psi(U)) = e^{-\kappa\tau/2}\,\psi(e^{-\kappa\tau}U)$, future-directed on the exterior half $U < 0$ and the reverse on the interior half $U > 0$. The generator has both halves at the crossing for every hole, collapse included; its interior half ends at $r = 0$, where $U = e^{-\kappa v}$, so the affine parameter runs over a half-line, the exact translation group of (N$_{+}$) does not act on it, and only the local form below can be posed.
+\item[(ii)] \emph{(The ingoing sheet.)} The level sets of $V$ are null hypersurfaces whose generators, the radial ingoing free-fall null worldlines $v = \mathrm{const}$, cross $\mathcal{H}^{+}$ with $r$ an affine parameter (their physical velocity $k = \hb^{-1}(x')$, $x'$ the background tangent with respect to $r$, is $D$-parallel, $D_{x'}k = 0$, Fact \claimref{synthesis.imported-gtg-dictionary}(iii); in components $\Gamma^{r}{}_{rr} = 0$ in the chart $(v, r)$ of the derived metric, a reading) and $U$ a regular parameter on them: along $v = \mathrm{const}$, $U = -e^{-\kappa v}(\rho - 1)e^{\rho}$ and $dU/d\rho = -e^{-\kappa v}\rho\,e^{\rho} \ne 0$, equal to $-e^{1 - \kappa v}$ on the horizon. The level sets of $U$ are the null hypersurfaces generated by the outgoing radial free-fall null worldlines, so under the s-wave reduction premise (J3), Premise \claimref{hawking.joint-j3-s-wave-reduction}, which reduces each channel of a massless field to a two-dimensional boundary mode, the outgoing sector near $\mathcal{H}^{+}$ is one chiral field per light ray constant along them, a function of $U$ and the transverse labels, and its carrier on the ingoing generator through a point $p$ of $\mathcal{H}^{+}$ is the continuum mode space $\CAR(L^{2}(\R, dU)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, the sheet of $p$ generated by the ingoing null direction in the sense of Proposition \claimref{synthesis.r-loc-needs-sheet-labelled-modes}. The symmetry acts on it as the boost $\beta_{\tau}(\psi(U)) = e^{-\kappa\tau/2}\,\psi(e^{-\kappa\tau}U)$, future-directed on the exterior half $U < 0$ and the reverse on the interior half $U > 0$. The generator has both halves at the crossing for every hole, collapse included; its interior half ends at $r = 0$, where $U = e^{-\kappa v}$, so the affine parameter runs over a half-line, the exact translation group of (N$_{+}$) does not act on it, and only the local form below can be posed.
 \item[(iii)] \emph{(Lemma: the ground-state singularity is the same in every regular parameter.)} (Theorem \claimref{synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation}(i).) For the weight-$\tfrac12$ fields of the carrier and a $C^{3}$ reparametrisation $\xi$ of the generator with $\xi' > 0$, the ground-state kernels of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}(i) in the two parameters differ by a kernel continuous across the diagonal and vanishing on it:
 \[
 \frac{\xi'(U)^{1/2}\,\xi'(U')^{1/2}}{\xi(U) - \xi(U') + I_{4}0} \;-\; \frac{1}{U - U' + I_{4}0} \;=\; \frac{S_{\xi}(U)}{12}\,(U - U') + O\bigl((U - U')^{2}\bigr), \qquad S_{\xi} = \frac{\xi'''}{\xi'} - \frac32\Bigl(\frac{\xi''}{\xi'}\Bigr)^{2},

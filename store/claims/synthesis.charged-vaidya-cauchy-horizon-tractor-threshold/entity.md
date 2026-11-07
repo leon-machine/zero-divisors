@@ -1,7 +1,7 @@
 ---
 id: synthesis.charged-vaidya-cauchy-horizon-tractor-threshold
 kind: claim
-version: 1
+version: 2
 title: 'Tractor transport to the charged Vaidya Cauchy horizon: a flux threshold'
 status: proved
 region: synthesis
@@ -17,17 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (Schouten map and conormal as physical vectors, tensors as labelled readings)
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.tractor-transport-weak-null-crossing@4
-  - synthesis.crossing-transport-tipler-threshold-sharp@4
-  - interior.imported-tractor-connection@2
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity@4
+  - synthesis.tractor-transport-weak-null-crossing@5
+  - synthesis.crossing-transport-tipler-threshold-sharp@5
+  - interior.imported-tractor-connection@3
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -47,6 +51,14 @@ lineage:
   - interior.filtration-cauchy-horizon-read-literature
   - synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms and tensors to GA in the statements: the Schouten tensor becomes the Schouten map P(a) = (Lambda/6) a - (m''/r^2)(a . N) N + (e^2/2r^4)(P_S(a) - P_2(a)) with N = hb^T(grad v) the physical null gradient of the label v and P_2, P_S the projections on the (v, r) and sphere planes; the conormal dv/w becomes the physical vector N/w and gamma''^flat the physical tangent k = hb^{-1}(gamma''), so P(gamma'', .) = S nu n + R reads P(k) = S nu n + R with R = (Lambda/6 - e^2/2r^4) k; the tensor and covector forms stay as labelled readings. A notation change through the dictionary (covectors are physical vectors via hb^T, g(u, v) = u . v on physical vectors; the identities (dv dv)(u, v) = (u . N)(v . N) and n . k = 1 follow from hb(u) . grad v = u . hb^T(grad v)); the proof keeps its component computation, now saying so in its opening, and the check is unchanged.'
   open_problem: op.cauchy-horizon-transport
   flags:
   - 'beyond one flat chart: the Cauchy horizon is the boundary v -> infinity of the region-II chart of background labels (v, r, x, y); clauses (1)-(4) are statements on the approach side, and a crossing needs a continuation of the gravitational field beyond that boundary, which is not constructed here'
@@ -83,20 +95,20 @@ g = f\,dv^{2} - 2\,dv\,dr - r^{2}q\,(dx^{2} + dy^{2}), \qquad f(v, r) = 1 - \fra
 \begin{enumerate}
 \item \emph{(Field strength.)} In the store's convention ($\Ric = \Lambda g$ for de Sitter) the Schouten map is
 \[
-\Sch = \frac{\Lambda}{6}\,g - \frac{m'}{r^{2}}\,dv \otimes dv + \frac{e^{2}}{2r^{4}}\,(-h_{2} + h_{S}),\qquad R = 4\Lambda,
+\Sch(a) = \frac{\Lambda}{6}\,a - \frac{m'}{r^{2}}\,(a\cdot N)\,N + \frac{e^{2}}{2r^{4}}\,\bigl(P_{S}(a) - P_{2}(a)\bigr),\qquad \partial_a\cdot\mathcal{R}(a) = 4\Lambda,
 \]
-with $h_{2}$ and $h_{S}$ the $(v, r)$ and sphere blocks of $g$; the dust part is rank-one null along $dv$, with the focusing sign $-m'/r^{2} \le 0$.
-\item \emph{(The crossing hypotheses on the approach side.)} Along $\gamma$, $r(v)$ decreases to $r_{-}$ and $\int^{\infty}(r - r_{-})\,dv < \infty$; $\gamma' = w\,(\partial_{v} + \tfrac12 f\,\partial_{r})$ with $(\log w)' = -\tfrac12\partial_{r}f$ along $\gamma$, so $w = C e^{\kappa_{-}v}(1 + o(1))$ for a constant $C > 0$, and $\gamma$ reaches $v = \infty$, the Cauchy horizon, at a finite affine parameter $s_{c}$, with $s_{c} - s = e^{-\kappa_{-}v}(1 + o(1))/(\kappa_{-}C)$. The covector $n := dv/w$ is $D$-parallel and null along $\gamma$ with $\nu = n(\gamma') = 1$, and
+on physical vectors $a$, with $N = \hb^{T}(\nabla v)$ the physical gradient of the label $v$, a null vector, and $P_{2}$, $P_{S}$ the projections onto the physical $(v, r)$ plane and the sphere plane (in components, a labelled reading: $\Sch = \frac{\Lambda}{6}\,g - \frac{m'}{r^{2}}\,dv \otimes dv + \frac{e^{2}}{2r^{4}}\,(-h_{2} + h_{S})$, $R = 4\Lambda$, with $h_{2}$ and $h_{S}$ the $(v, r)$ and sphere blocks of $g$); the dust part is rank-one null along $N$, with the focusing sign $-m'/r^{2} \le 0$.
+\item \emph{(The crossing hypotheses on the approach side.)} Along $\gamma$, $r(v)$ decreases to $r_{-}$ and $\int^{\infty}(r - r_{-})\,dv < \infty$; $\gamma' = w\,(\partial_{v} + \tfrac12 f\,\partial_{r})$ with $(\log w)' = -\tfrac12\partial_{r}f$ along $\gamma$, so $w = C e^{\kappa_{-}v}(1 + o(1))$ for a constant $C > 0$, and $\gamma$ reaches $v = \infty$, the Cauchy horizon, at a finite affine parameter $s_{c}$, with $s_{c} - s = e^{-\kappa_{-}v}(1 + o(1))/(\kappa_{-}C)$. With $k = \hb^{-1}(\gamma')$ the physical tangent, the physical vector $n := N/w$ is $D$-parallel and null along $\gamma$ with $\nu = n\cdot k = 1$ (in components, the covector $dv/w$ with $\nu = n(\gamma')$), and
 \[
-\Sch(\gamma', \cdot) = S\,\nu\,n + R, \qquad S = -\frac{m'}{r^{2}}\,w^{2} \le 0, \qquad R = \Bigl(\frac{\Lambda}{6} - \frac{e^{2}}{2r^{4}}\Bigr)\gamma'^{\flat},
+\Sch(k) = S\,\nu\,n + R, \qquad S = -\frac{m'}{r^{2}}\,w^{2} \le 0, \qquad R = \Bigl(\frac{\Lambda}{6} - \frac{e^{2}}{2r^{4}}\Bigr)k,
 \]
-where $\gamma'^{\flat} = g(\gamma', \cdot)$ is $D$-parallel, so $R$ has bounded components in a $D$-parallel frame. The Tipler-type integral is finite: $\int_{s_{0}}^{s_{c}}(s_{c} - s)|S|\,ds$ is bounded above and below by positive multiples of the accreted mass $m_{\infty} - m(v_{0})$.
-\item \emph{(The threshold.)} $\int_{s_{0}}^{s_{c}}|S|\,ds < \infty$ if and only if the blue-shifted flux $F := \int_{v_{0}}^{\infty} m'(v)\,e^{\kappa_{-}v}\,dv$ is finite. Hence, by Proposition \claimref{synthesis.tractor-transport-weak-null-crossing}: if $F < \infty$ the tractor transport coefficient $A = E_{\gamma'} + N_{\Sch(\gamma', \cdot)}$ is integrable up to $s_{c}$ and every parallel tractor has a limit at the Cauchy horizon; if $F = \infty$, in the splitting of $g$ a parallel tractor has bounded components up to $s_{c}$ only if $\sigma(s_{c}) = 0$ and $\ip{n}{\mu(s_{c})} = 0$, the divergence sitting in the $\mathfrak g_{1}$ slot along $n$. Case (c) of Proposition \claimref{synthesis.crossing-transport-tipler-threshold-sharp} (Tipler-strong) never occurs in this class. If the field is continued across the Cauchy horizon with continuous derived metric, $D$-transport continuous across and no surface layer, transport across is unique when $F < \infty$ and defined exactly modulo $\exp(\R N_{n})$ when $F = \infty$.
+where $k$ is $D$-parallel (in components $\Sch(\gamma', \cdot)$ and the covector $\gamma'^{\flat} = g(\gamma', \cdot)$), so $R$ has bounded components in a $D$-parallel frame. The Tipler-type integral is finite: $\int_{s_{0}}^{s_{c}}(s_{c} - s)|S|\,ds$ is bounded above and below by positive multiples of the accreted mass $m_{\infty} - m(v_{0})$.
+\item \emph{(The threshold.)} $\int_{s_{0}}^{s_{c}}|S|\,ds < \infty$ if and only if the blue-shifted flux $F := \int_{v_{0}}^{\infty} m'(v)\,e^{\kappa_{-}v}\,dv$ is finite. Hence, by Proposition \claimref{synthesis.tractor-transport-weak-null-crossing}: if $F < \infty$ the tractor transport coefficient $A = E_{\gamma'} + N_{\Sch(k)}$ (in the notation of that Proposition) is integrable up to $s_{c}$ and every parallel tractor has a limit at the Cauchy horizon; if $F = \infty$, in the splitting of $g$ a parallel tractor has bounded components up to $s_{c}$ only if $\sigma(s_{c}) = 0$ and $\ip{n}{\mu(s_{c})} = 0$, the divergence sitting in the $\mathfrak g_{1}$ slot along $n$. Case (c) of Proposition \claimref{synthesis.crossing-transport-tipler-threshold-sharp} (Tipler-strong) never occurs in this class. If the field is continued across the Cauchy horizon with continuous derived metric, $D$-transport continuous across and no surface layer, transport across is unique when $F < \infty$ and defined exactly modulo $\exp(\R N_{n})$ when $F = \infty$.
 \item \emph{(Tails.)} If $m' = \mu e^{-2\alpha v}(1 + o(1))$ with $\mu, \alpha > 0$, then $F < \infty$ exactly when $\beta := \alpha/\kappa_{-} > \tfrac12$, and $|S|$ is bounded above and below by multiples of $(s_{c} - s)^{2\beta - 2}$, the power profile of Proposition \claimref{synthesis.crossing-transport-tipler-threshold-sharp}(4) with the same $\beta$. If $m' = \mu v^{-p}(1 + o(1))$ with $p > 2$, then $F = \infty$ and $|S|$ is comparable to $(s_{c} - s)^{-2}(\log\frac{1}{s_{c} - s})^{-p}$, the logarithmic profile with $q = p > 1$: case (b), transport defined modulo one nilpotent direction, divergence in the bottom slot.
 \end{enumerate}
 
 ## technical
-The open problem asks whether the tractor transport of the completion survives the crossing of a perturbed Cauchy horizon, and the store's crossing theorem answers it for a curvature class whose realisation at a black-hole Cauchy horizon was only argued from the literature. This result verifies the hypotheses on an exact black-hole interior: the charged Vaidya gravitational field (Einstein-Maxwell with an ingoing null dust, with or without a cosmological constant), whose mass function $m(v)$ increases to a limit as radiation falls in. The Schouten tensor is computed exactly: its dust part is $-(m'/r^{2})\,dv\otimes dv$, rank-one null with the focusing sign, and the Maxwell and $\Lambda$ parts act on an outgoing radial null tangent as a bounded multiple of the tangent's own parallel covector. Along every outgoing radial null free-fall worldline in region II the radius decreases to the inner root $r_{-}$, and the blue-shift factor $w = dv/ds$ grows like $e^{\kappa_{-}v}$, $\kappa_{-}$ the inner surface gravity, so the worldline reaches the Cauchy horizon at finite affine parameter; the parallel null conormal is $dv/w$. The two integrals of the crossing theorem then become physical: the Tipler-type integral is comparable to the total accreted mass, always finite, and the $L^{1}$ norm of the singular coefficient is comparable to the blue-shifted flux $\int m'\,e^{\kappa_{-}v}\,dv$. So the transport reaches the horizon with a unique limit exactly when the crossing observer absorbs a finite blue-shifted dose; otherwise it diverges in the nilpotent slot along the conormal, and is defined modulo $\exp(\R N_{n})$ once the field is continued across. Inverse-power (Price-type) tails are always in the divergent case; exponential tails, as in the de Sitter case, give uniqueness exactly for $\beta = \alpha/\kappa_{-} > \tfrac12$, the same threshold the literature finds for the $H^{1}$ form of strong cosmic censorship. The model has no outgoing flux, so it tests the blue-shift instability and not mass inflation, and the continuation across the horizon is not constructed. The exact checks compute the curvature from second-order jets at rational points, the geodesic and parallel-transport identities along the outgoing ray, the inner surface gravity on two rational examples, and the exponent bookkeeping of the exponential tails.
+The open problem asks whether the tractor transport of the completion survives the crossing of a perturbed Cauchy horizon, and the store's crossing theorem answers it for a curvature class whose realisation at a black-hole Cauchy horizon was only argued from the literature. This result verifies the hypotheses on an exact black-hole interior: the charged Vaidya gravitational field (Einstein-Maxwell with an ingoing null dust, with or without a cosmological constant), whose mass function $m(v)$ increases to a limit as radiation falls in. The Schouten map is computed exactly: its dust part is $a \mapsto -(m'/r^{2})(a\cdot N)N$ along the physical null gradient $N$ of the label $v$, rank-one null with the focusing sign, and the Maxwell and $\Lambda$ parts act on an outgoing radial null tangent as a bounded multiple of that parallel tangent itself. Along every outgoing radial null free-fall worldline in region II the radius decreases to the inner root $r_{-}$, and the blue-shift factor $w = dv/ds$ grows like $e^{\kappa_{-}v}$, $\kappa_{-}$ the inner surface gravity, so the worldline reaches the Cauchy horizon at finite affine parameter; the parallel null conormal is the physical vector $N/w$ (in components $dv/w$). The two integrals of the crossing theorem then become physical: the Tipler-type integral is comparable to the total accreted mass, always finite, and the $L^{1}$ norm of the singular coefficient is comparable to the blue-shifted flux $\int m'\,e^{\kappa_{-}v}\,dv$. So the transport reaches the horizon with a unique limit exactly when the crossing observer absorbs a finite blue-shifted dose; otherwise it diverges in the nilpotent slot along the conormal, and is defined modulo $\exp(\R N_{n})$ once the field is continued across. Inverse-power (Price-type) tails are always in the divergent case; exponential tails, as in the de Sitter case, give uniqueness exactly for $\beta = \alpha/\kappa_{-} > \tfrac12$, the same threshold the literature finds for the $H^{1}$ form of strong cosmic censorship. The model has no outgoing flux, so it tests the blue-shift instability and not mass inflation, and the continuation across the horizon is not constructed. The exact checks compute the curvature from second-order jets at rational points, the geodesic and parallel-transport identities along the outgoing ray, the inner surface gravity on two rational examples, and the exponent bookkeeping of the exponential tails.
 
 ## lay
 Inside a charged black hole there is an inner horizon. Radiation falling into the hole piles up there, because an observer crossing it sees all the late radiation squeezed into an instant and strongly blue-shifted. This result takes the standard exact model of that situation, a charged hole fed by a stream of infalling radiation, and checks one by one the conditions under which the series' theorem on carrying structure across such a horizon applies. All the conditions on the approach hold. The theorem's two key quantities turn out to be governed by simple physical totals: one by the total mass that falls in, which is finite here, and the other is the total blue-shifted energy the crossing observer receives. When that energy is finite the series' transport goes through cleanly; when it is infinite, as it is for the slowly fading radiation expected around real holes, the transport still survives but loses one number, in exactly the place the theory predicted. The model leaves out the outgoing radiation that makes real inner horizons more violent, so it is a first realistic test rather than the final answer.

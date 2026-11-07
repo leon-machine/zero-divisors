@@ -16,6 +16,7 @@ functions:
     clauses: ["(iii) the unit-ball expression 2 (4/3) + 2 (8/(3 pi)) returns 4.364"]
     omits: "the unit-ball rule itself, a fitted relation, and the gravitational floor on the odd towers' temperature are not computed here"
 untouched_premises:
+  synthesis.common-ceiling-coupling-premise: "enters through the mirror theorem's share of one, cited and not recomputed"
   dark-matter.mirror-tower-copy-one: "f_2 = 1 is cited from the mirror theorem, not recomputed (docstring)"
   dark-matter.no-coupling-rule-odd-towers-follows: "scope statement in (iii), no computation"
   dark-matter.projection-every-towers-content-dilutes-ones: "dilution lemma used in the setup, not part of the computable content"

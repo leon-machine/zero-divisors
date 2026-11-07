@@ -1,0 +1,11 @@
+dark-energy.frozen-point-makes-stelle-west-vector
+pairing.regular-frame-class-vanishes-horizon-changes
+pairing.static-frame-only-expansion-survives
+singularity.transport-schwarzschild-fibre
+synthesis.einstein-condition-is-infinity-vacuum-incidence
+synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term
+synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
+synthesis.promoted-norm-one-global-pair
+synthesis.promoted-norm-weyl-clock-flat-weight
+synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
+synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue

@@ -1,7 +1,7 @@
 ---
 id: note.primer.setting-products-vectors-one-rule
 kind: note
-version: 1
+version: 2
 title: Products of vectors, and the one rule
 status: setting
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T00, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: the primer motivates the geometric product against the cross product)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - primer.commutation-rule
 locators:
@@ -22,6 +26,14 @@ locators:
   number: Setting
   section: Products of vectors, and the one rule
   line: 203
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the passage explains how the inner and cross products of three-dimensional vector algebra fall short of an invertible product; the cross product is the subject, so the text stays and is declared outside_ga (bridge).'
+outside_ga:
+  kind: bridge
+  why: 'the passage is the primer''s motivation of the geometric product, which compares it with the inner and cross products of three-dimensional vector algebra that it replaces; the cross product is the subject of the comparison, not a stand-in'
 ---
 
 ## formal

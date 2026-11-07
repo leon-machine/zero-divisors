@@ -33,7 +33,7 @@ derivations:
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - std-algebra.spin-double-cover@1
   - synthesis.imported-macro-monopole-flux-limit@1
-  - synthesis.imported-nielsen-olesen-string-tension@1
+  - synthesis.imported-nielsen-olesen-string-tension@2
   - synthesis.imported-planck-2013-cosmic-string-bounds@1
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1

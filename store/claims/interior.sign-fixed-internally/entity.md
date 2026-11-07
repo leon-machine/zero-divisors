@@ -1,7 +1,7 @@
 ---
 id: interior.sign-fixed-internally
 kind: claim
-version: 4
+version: 5
 title: The sign is fixed internally
 status: proved
 region: interior
@@ -17,12 +17,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, stale paper references replaced by the series conventions'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
   uses:
   - interior.non-null-stabilisers-section-they-act@4
-  - interior.scale-tractor-leaves-cone@7
+  - interior.scale-tractor-leaves-cone@8
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -37,6 +41,10 @@ locators:
   label: lem:signpin
   line: 544
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal pointed twice to the paper''s Section sec:setting; the conventions are the series'' and the store sign of the definition it already cites.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -57,7 +65,7 @@ extraction:
 ---
 
 ## formal
-The relative sign of the Schouten slots in \eqref{eq:tractorconn}, the $\nO \wedge \Sch(\hb^{-1}(a))$ term of the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, is determined, within the conventions of Section \ref{sec:setting}, by the requirement that the flat-model section attached to a $\Lambda > 0$ Einstein representative be de Sitter space: with the signs as displayed, $\Lambda > 0$ gives $Q(I_g) = \Lambda/3 > 0$, whose flat-model section is the de Sitter pseudosphere by Proposition \claimref{interior.non-null-stabilisers-section-they-act}(2); the opposite sign choice would attach the anti-de Sitter section to $\Lambda > 0$, contradicting the naming convention $\Ric_{ab} = \Lambda g_{ab}$, $R = 4\Lambda$ for de Sitter space fixed in Section \ref{sec:setting}, which is the store's curvature sign of the field strength, $\mathcal{R}(B) = \tfrac{\Lambda}{3}B$ on de Sitter space (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}).
+The relative sign of the Schouten slots in \eqref{eq:tractorconn}, the $\nO \wedge \Sch(\hb^{-1}(a))$ term of the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, is determined, within the series' conventions, by the requirement that the flat-model section attached to a $\Lambda > 0$ Einstein representative be de Sitter space: with the signs as displayed, $\Lambda > 0$ gives $Q(I_g) = \Lambda/3 > 0$, whose flat-model section is the de Sitter pseudosphere by Proposition \claimref{interior.non-null-stabilisers-section-they-act}(2); the opposite sign choice would attach the anti-de Sitter section to $\Lambda > 0$, contradicting the naming convention $\Ric_{ab} = \Lambda g_{ab}$, $R = 4\Lambda$ for de Sitter space, which is the store's curvature sign of the field strength, $\mathcal{R}(B) = \tfrac{\Lambda}{3}B$ on de Sitter space (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}).
 
 ## technical
 The relative sign of the Schouten slots in the tractor connection, on flat spacetime the special-conformal part $\nO \wedge \Sch(\hb^{-1}(a))$ of the tractor gauge field, is not a free convention once the series' other conventions are fixed. With the displayed signs, a $\Lambda > 0$ Einstein representative has $Q(I_g) = \Lambda/3 > 0$, whose flat-model section is the de Sitter pseudosphere.

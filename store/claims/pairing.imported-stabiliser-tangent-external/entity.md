@@ -1,7 +1,7 @@
 ---
 id: pairing.imported-stabiliser-tangent-external
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the stabiliser and the tangent (external ingredients)'
 status: imported
 region: pairing
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation typography in the formal level'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: '''E. Cartan, Lecons sur la th''eorie des spineurs, Hermann, Paris (1938).'
@@ -32,6 +40,17 @@ locators:
   label: ''
   line: 184
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 2 (already raised in this run). Decision item E9 (routine; no retirement): this citation list gives the sources of one-relation.imported-cartans-purity-theorem-thouless-form, the home; recorded under extraction.overlaps_with (a citation list against a Fact with content, no pinned link).'
+  overlaps_with:
+  - id: one-relation.imported-cartans-purity-theorem-thouless-form
+    note: 'Decision E9: this external entry lists the sources of the Cartan purity Fact, which is kept as the home.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The citation list in the formal level carried stray apostrophes for the accents and doubled full stops; now plain (Lecons, theorie) with single stops; no change of content.'
   env: fact
   context_refs:
   - one-relation.imported-cartans-purity-theorem-thouless-form
@@ -45,7 +64,7 @@ extraction:
 ---
 
 ## formal
-The results from outside the series on which \claimref{pairing.imported-stabiliser-tangent} draws, as cited there: 'E. Cartan, Lecons sur la th'eorie des spineurs, Hermann, Paris (1938).; C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954).; D. J. Thouless, Stability conditions and nuclear rotations in the Hartree-Fock theory, Nucl. Phys. 21 (1960) 225--232..
+The results from outside the series on which \claimref{pairing.imported-stabiliser-tangent} draws, as cited there: E. Cartan, Lecons sur la theorie des spineurs, Hermann, Paris (1938); C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954); D. J. Thouless, Stability conditions and nuclear rotations in the Hartree-Fock theory, Nucl. Phys. 21 (1960) 225--232.
 
 ## technical
 This entry records the sources from outside the series of the stabiliser-and-tangent fact: Cartan and Chevalley for pure spinors and the spinor variety, the single orbit of Witt vacua of dimension $\nu(\nu-1)/2$, and Thouless for the exponential form $\exp(\sum_{i<j}A_{ij}a^{\dagger}_{i}a^{\dagger}_{j})\ket{0}$ of a Bogoliubov-rotated vacuum.

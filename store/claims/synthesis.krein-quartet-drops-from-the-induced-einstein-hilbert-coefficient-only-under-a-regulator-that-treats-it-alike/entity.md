@@ -25,15 +25,15 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.imported-sakharov-induced-gravity-coefficients@1
+  - synthesis.imported-sakharov-induced-gravity-coefficients@2
   - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
-  - standard-model.connection-forced@4
-  - synthesis.slot-module-light-ray-arrays-are-weyl-components@2
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - standard-model.connection-forced@5
+  - synthesis.slot-module-light-ray-arrays-are-weyl-components@3
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   - synthesis.imported-ikeda-taniguchi-spectra-of-the-hodge-laplacian-on-spheres@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check

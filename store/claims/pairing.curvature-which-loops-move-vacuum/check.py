@@ -5,13 +5,18 @@ Schwarzschild field of the premise Fact (pairing.imported-schwarzschild-connecti
 points (sqrt f, sin, cos rational), exact first-order jets. The field strength R(e_mu ^ e_nu) is computed
 from Omega by d_mu Omega_nu - d_nu Omega_mu + Omega_mu x Omega_nu; the curvature bivector of the loop of
 physical vectors (u, v) is R(u, v) = R(hb(u ^ v)) = -calR(u ^ v) (LDG sign), extended complex-bilinearly.
-pv(B) = <B . l, m>, l = e0 + e1, n = e0 - e1, m = e2 + i e3, mbar = e2 - i e3. Computed:
-(1) the six frame-plane classes: 0, 0, M/r^3, -M/r^3, i M/r^3, -i M/r^3;
+pv(B) = <B . l, m>, l = e0 + e1, n = e0 - e1, m = e2 + I5 e3, mbar = e2 - I5 e3 (I5 the central unit of Cl(2,3)).
+Computed:
+(1) the six frame-plane classes: 0, 0, M/r^3, -M/r^3, I5 M/r^3, -I5 M/r^3;
 (2) R(l, e2) = (M/r^3) l e2, a null rotation about l ((l e2)^2 = 0, (l e2) . l = 0) of zero class;
     R(n, e2) has class 2M/r^3;
 (3) the complex loops: (l, m), (l, mbar), (m, mbar), (n, m) have class 0, (n, mbar) has 4M/r^3, (l, n) has 0;
 (4) as a linear functional on the six tetrad bivectors the class is supported on n ^ mbar alone, so it
-    vanishes on every loop in the null hypersurface spanned by l, m, mbar.
+    vanishes on every loop in the null hypersurface spanned by l, m, mbar;
+(5) the proof's GTG computation: Omega solved from the torsion equation of the static gauge field, omega(gamma_c),
+    and the field strength on the six background planes against the proof's closed forms, the frame-loop
+    bivectors and their classes recomputed from those closed forms.
+The complex unit of m is I5 (central in Cl(2,3)); GA.QI carries span{1, I5} as pairs (re, im).
 """
 from fractions import Fraction as F
 
@@ -31,7 +36,7 @@ M_TR = (GA.gen(2), GA.gen(3))
 
 
 def pv(B, l=L_OUT, m=M_TR):
-    """Pairing class pv(B) = <B . l, m> (real bivector B or complex pair), m = e2 + i e3."""
+    """Pairing class pv(B) = <B . l, m> (real bivector B or complex pair), m = e2 + I5 e3."""
     if isinstance(B, dict):
         B = (B, {})
     return gtg.cdot(gtg.cbdot(B, l), m)
@@ -129,3 +134,43 @@ def check_class_supported_on_n_wedge_mbar():
         hyper = [p for p in pairs if "n" not in p]
         ok = ok and len(hyper) == 3 and all(pv(loop(Rc, TETRAD[u], TETRAD[v])) == 0 for u, v in hyper)
     _tp_rv = (ok); assert _tp_rv is not False, "check_class_supported_on_n_wedge_mbar"; return _tp_rv
+
+
+def check_gtg_connection_and_field_strength():
+    """The proof's GTG computation: Omega from the torsion equation of the static gauge field and the field
+    strength R(a ^ b) on the background planes, against the closed forms of the proof; then the frame-loop
+    bivectors R(e_c, e_d) = -calR(e_c ^ e_d) and their classes recomputed from the closed forms alone."""
+    premise("pairing.imported-schwarzschild-connection-curvature")
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    for F0, s0, c0, M in SAMPLES:
+        fld, r = static_field(F0, s0, c0, M)
+        solved = gtg.Field(fld.TH)                     # Omega solved from the torsion equation alone
+        b = gtg.biv
+        want_Om = [GA.scal(-M / r ** 2, b(0, 1)), {}, GA.scal(F0, b(1, 2)),
+                   GA.add(GA.scal(F0 * s0, b(1, 3)), GA.scal(c0, b(2, 3)))]
+        for mu in range(4):
+            ok = ok and GA.eq(solved.Omega(mu), want_Om[mu]) and GA.eq(fld.Omega(mu), want_Om[mu])
+        want_om = [GA.scal(M / (r ** 2 * F0), GA.mul(E[1], E[0], S13)), {}, GA.scal(F0 / r, b(1, 2)),
+                   GA.add(GA.scal(F0 / r, b(1, 3)), GA.scal((c0 / s0) / r, b(2, 3)))]
+        for c in range(4):
+            ok = ok and GA.eq(solved.omega(c), want_om[c])
+        want_R = {(0, 1): GA.scal(-2 * M / r ** 3, b(0, 1)), (0, 2): GA.scal(M * F0 / r ** 2, b(0, 2)),
+                  (0, 3): GA.scal(M * F0 * s0 / r ** 2, b(0, 3)), (1, 2): GA.scal(M / (r ** 2 * F0), b(1, 2)),
+                  (1, 3): GA.scal(M * s0 / (r ** 2 * F0), b(1, 3)), (2, 3): GA.scal(-2 * M * s0 / r, b(2, 3))}
+        for (mu, nu), w in want_R.items():
+            ok = ok and GA.eq(solved.strength(mu, nu), w)
+        # frame loops R(e_c, e_d) = -calR(e_c ^ e_d), and the classes from these closed forms
+        k = M / r ** 3
+        loopR = {(0, 1): GA.scal(-2 * k, b(0, 1)), (2, 3): GA.scal(-2 * k, b(2, 3)), (0, 2): GA.scal(k, b(0, 2)),
+                 (0, 3): GA.scal(k, b(0, 3)), (1, 2): GA.scal(k, b(1, 2)), (1, 3): GA.scal(k, b(1, 3))}
+        Rc = solved.curvature()
+        for pl, w in loopR.items():
+            ok = ok and GA.eq(GA.neg(Rc[pl]), w)
+        cls = {(0, 1): GA.QI(0), (2, 3): GA.QI(0), (0, 2): GA.QI(k), (1, 2): GA.QI(-k), (0, 3): GA.QI(0, k),
+               (1, 3): GA.QI(0, -k)}
+        ok = ok and all(pv(loopR[pl]) == w for pl, w in cls.items())
+        # bilinearity: R(u, v) = k u ^ v across the planes, -2k u ^ v within the radial and angular planes
+        ok = ok and GA.eq(GA.add(loopR[(0, 2)], loopR[(1, 2)]), GA.scal(k, GA.mul(LC[0], E[2], S13)))
+        ok = ok and GA.eq(GA.scal(-2, loopR[(0, 1)]), GA.scal(-2 * k, gtg.wedge(LC[0], NC[0])))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_connection_and_field_strength"; return _tp_rv

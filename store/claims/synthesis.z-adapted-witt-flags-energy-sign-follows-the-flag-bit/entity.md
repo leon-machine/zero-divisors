@@ -25,7 +25,7 @@ derivations:
 - name: main
   uses:
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
-  - dark-matter.two-families-are-two-chiralities@6
+  - dark-matter.two-families-are-two-chiralities@7
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -24,9 +24,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.descent-what-it-erases@5
+  - singularity.descent-what-it-erases@6
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -47,6 +47,10 @@ locators:
   label: thm:modular
   line: 1654
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The unit_note above (21 October) predates the unit principle of 7 November: no bare imaginary unit remains in this entity, and on this radial atom the complex unit is J = e2e3 (conventions U2, synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom); extraction only, no version change."
   open_problem: op.bivector-exponential-spin
   correction:
     by: ai-correction

@@ -26,9 +26,9 @@ derivations:
   uses:
   - tower.commuting-copies@5
   - tower.matrix-amplification-structural-properties@3
-  - tower.morita-equivalence-algebra-amplification@1
+  - tower.morita-equivalence-algebra-amplification@2
   - transport.existence-classification-type-c@4
-  - std-algebra.sta-matrix@1
+  - std-algebra.sta-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

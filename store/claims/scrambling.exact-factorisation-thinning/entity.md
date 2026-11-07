@@ -23,8 +23,8 @@ about:
 derivations:
 - name: main
   uses:
-  - scrambling.epoch-modular-period-two-unknowns-become@5
-  - scrambling.slice-volume-exactly-per-unit-killing@4
+  - scrambling.epoch-modular-period-two-unknowns-become@6
+  - scrambling.slice-volume-exactly-per-unit-killing@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -1,7 +1,7 @@
 ---
 id: sheaf.matching-connection-level
 kind: claim
-version: 7
+version: 8
 title: The matching at connection level
 status: proved
 region: sheaf
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, citations of the weighted-limit Fact corrected'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -25,9 +29,9 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.matching-fibre@4
+  - sheaf.matching-fibre@5
   - sheaf.schwarzschild-degeneration-boundary-tame@6
-  - sheaf.weighted-limit@6
+  - sheaf.weighted-limit@7
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -44,6 +48,10 @@ locators:
   label: thm:connweld
   line: 1143
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal clauses (preamble, (2), (3)) and the proof cited the adapted coframe, the rate series, the weighted-limit connection and its holonomy clause as Fact obj.interior.weighted-blow-up-hubble-normalisation-admissible, which is a Definition holding none of them; they are the Fact sheaf.weighted-limit (already in uses); wording only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -71,15 +79,15 @@ extraction:
 ---
 
 ## formal
-For the Schwarzschild interior gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), write $(d\tau, \theta^1, \theta^2, \theta^3)$ for the adapted orthonormal coframe of Fact \claimref{obj.interior.weighted-blow-up-hubble-normalisation-admissible} (synchronous time, normalised Killing direction, sphere directions): the components $\theta^a(v) = \gamma^a \cdot \hb^{-1}(v)$ of the physical-vector map in the adapted orthonormal frame. Then:
+For the Schwarzschild interior gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), write $(d\tau, \theta^1, \theta^2, \theta^3)$ for the adapted orthonormal coframe of Fact \claimref{sheaf.weighted-limit} (synchronous time, normalised Killing direction, sphere directions): the components $\theta^a(v) = \gamma^a \cdot \hb^{-1}(v)$ of the physical-vector map in the adapted orthonormal frame. Then:
 \begin{enumerate}
 \item \emph{(Frames.)} The adapted coframe consists of exceptional-module sections, exactly: $\sqrt{m^2 - r}\;d\tau = \rho$ and
 \[
 \sqrt{m^2 - r}\;\theta^1 \;=\; -\sqrt r\,\dtPG \,+\, m\,(k/\sqrt r),
 \]
 with $\theta^2 = \mu_1$, $\theta^3 = \mu_2$ exactly (the first identity uses the transition of Theorem \claimref{sheaf.schwarzschild-degeneration-boundary-tame}(4)). The static and rain frames of $\shW_{\mathrm{exc}}$ are related by the rotation-gauge boost of rapidity $\chi$ with $(\sinh\chi, \cosh\chi) = (-\sqrt r, m)/\sqrt{m^2-r}$, unit-normalised exactly and vanishing on the exceptional boundary: the two frames coincide at the wall, future orientations matched.
-\item \emph{(Rates.)} In this common frame the Hubble-normalised rotation-gauge field is $-\sum_i (\tau\sigma_i)B_i \otimes \hat\theta^i$ (in the sign of the Definition) plus a sphere term of normalised size $\tau/r = \tfrac23\sqrt r + O(r^{3/2}) \to 0$, with the exact series of Fact \claimref{obj.interior.weighted-blow-up-hubble-normalisation-admissible} re-derived here independently by exact power series in $\sqrt r$, agreeing coefficient by coefficient, and the trace rule $\tau(\sigma_1 + 2\sigma_2) \to 1$ realising the first Kasner relation as a rate statement.
-\item \emph{(The matching.)} Consequently the weighted-limit connection of Fact \claimref{obj.interior.weighted-blow-up-hubble-normalisation-admissible} is a connection datum on the exceptional bundle of this section: its boundary value is minus the weight one-form of the exceptional coframe, $-\sum_i p_i B_i \otimes \hat\nu^i$, its total element is $-B_w$, minus the unit boost $B_w$ of Proposition \claimref{sheaf.matching-fibre}, and its values, nonzero multiples of the three boosts, generate the full bivector algebra, so the holonomy theorem of \cite{ButlerT6} is the statement that the boundary holonomy of the exceptional bundle, in the values-level sense of \cite[Def.~5.5]{ButlerT6}, is all of $\mathfrak{so}(1,3)$; the matching uses exactly those values. The two black-hole routes are one structure: the weighted limit transports the exceptional fibre, the completion Clifford-multiplies it, and the ladder boost is the transverse $\mathfrak{so}(1,1)$.
+\item \emph{(Rates.)} In this common frame the Hubble-normalised rotation-gauge field is $-\sum_i (\tau\sigma_i)B_i \otimes \hat\theta^i$ (in the sign of the Definition) plus a sphere term of normalised size $\tau/r = \tfrac23\sqrt r + O(r^{3/2}) \to 0$, with the exact series of Fact \claimref{sheaf.weighted-limit} re-derived here independently by exact power series in $\sqrt r$, agreeing coefficient by coefficient, and the trace rule $\tau(\sigma_1 + 2\sigma_2) \to 1$ realising the first Kasner relation as a rate statement.
+\item \emph{(The matching.)} Consequently the weighted-limit connection of Fact \claimref{sheaf.weighted-limit} is a connection datum on the exceptional bundle of this section: its boundary value is minus the weight one-form of the exceptional coframe, $-\sum_i p_i B_i \otimes \hat\nu^i$, its total element is $-B_w$, minus the unit boost $B_w$ of Proposition \claimref{sheaf.matching-fibre}, and its values, nonzero multiples of the three boosts, generate the full bivector algebra, so the holonomy theorem of \cite{ButlerT6} is the statement that the boundary holonomy of the exceptional bundle, in the values-level sense of \cite[Def.~5.5]{ButlerT6}, is all of $\mathfrak{so}(1,3)$; the matching uses exactly those values. The two black-hole routes are one structure: the weighted limit transports the exceptional fibre, the completion Clifford-multiplies it, and the ladder boost is the transverse $\mathfrak{so}(1,1)$.
 \end{enumerate}
 
 ## technical

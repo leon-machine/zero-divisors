@@ -1,7 +1,7 @@
 ---
 id: three-routes.change-transversal-canonical-isomorphism-completions
 kind: claim
-version: 5
+version: 6
 title: Change of transversal is a canonical isomorphism of completions
 status: proved
 region: three-routes
@@ -16,6 +16,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.sheaf.collar-data-coupling
@@ -43,6 +47,10 @@ locators:
   label: thm:intertwiner
   line: 200
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Decision item E6 (routine; no retirement): specialises sheaf.transversal-independence-wall@4 added. The sheaf result is the general statement and the home; this one is its case.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -68,6 +76,8 @@ extraction:
     cited:
     - three-routes.imported-collar-data-coupling
     - three-routes.radical-gauge-closes-solve
+specialises:
+- sheaf.transversal-independence-wall@4
 ---
 
 ## formal

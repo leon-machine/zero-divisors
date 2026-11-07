@@ -1,7 +1,7 @@
 ---
 id: refuted.the-three-twistor-hierarchy-carries-the-standard
 kind: claim
-version: 2
+version: 3
 title: 'No Standard Model algebra on the three-spinor hierarchy'
 status: refuted
 subject: standard-model
@@ -22,6 +22,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T17, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, stored macros used for C and the Lie algebras'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 locators:
   paper: T17
@@ -29,6 +33,10 @@ locators:
   label: tab:refutations
   carried_by: T12
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The formal and technical levels write C and su(2) + su(3) + u(1) with the stored macros (\C, \su, \uu) as the one-liner does; the formal wording (the refuted conjecture as T17 tabulates it) is unchanged.'
   ga_conversion:
     by: ai-ga-pass
     date: 2026-10-21
@@ -55,10 +63,10 @@ extraction:
 ---
 
 ## formal
-The hierarchy of three conformal spinors (the three-twistor hierarchy) $\mathbb{C}^{3}\otimes\mathbb{C}^{3}$ carries the Standard Model
+The hierarchy of three conformal spinors (the three-twistor hierarchy) $\C^{3} \otimes \C^{3}$ carries the Standard Model
 
 ## technical
-Refuted. The corrected statement: Its automorphism algebra is seventeen-dimensional, not twelve; the minimal massive composite $\mathbb{C}^{2}\otimes\mathbb{C}^{3}$ carries exactly $su(2)\oplus su(3)\oplus u(1)$.
+Refuted. The corrected statement: Its automorphism algebra is seventeen-dimensional, not twelve; the minimal massive composite $\C^{2} \otimes \C^{3}$ carries exactly $\su(2) \oplus \su(3) \oplus \uu(1)$.
 
 ## lay
 One natural guess was that the largest system of three basic spinor states, each with three internal pairs, carries the symmetries of the Standard Model. Counting its symmetries gives seventeen independent directions, not the twelve the Standard Model has. The smallest composite that can have mass, two spinor states of three pairs each, has exactly the Standard Model's symmetry algebra instead.

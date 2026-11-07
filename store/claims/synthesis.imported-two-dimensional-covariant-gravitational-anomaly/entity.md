@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-two-dimensional-covariant-gravitational-anomaly
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the two-dimensional covariant gravitational anomaly (Iso et al. 2006)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (covariant anomaly read in two-dimensional GTG)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -27,6 +31,10 @@ imported_from:
 - citation: 'S. P. Robinson and F. Wilczek, A relationship between Hawking radiation and gravitational anomalies, Phys. Rev. Lett. 95 (2005), 011303; arXiv:gr-qc/0502074.'
   key: RobinsonWilczek2005
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'A sentence reads the covariant anomaly in two-dimensional GTG (the covariant divergence of the stress-energy map is +-1/96 pi times the I_2-dual of the physical gradient of the scalar curvature, sign by the source''s conventions, which the entity already leaves open); the source''s displays stay and the entity declares outside_ga (imported): the consistent anomaly is written in the Christoffel symbols themselves, which are not a covariant object, and the epsilon and sqrt(-g) normalisations are the source''s; status imported. Reader fix (R05): the sentence on the curvature sign now says that the store''s scalar curvature has the source''s de Sitter-positive sign (C6, C7), so R carries over (the old sentence said it may flip).'
   note: >-
     Imported so that synthesis.residues-zero-four-real-chirality-anomaly can cite the
     two-dimensional covariant anomaly form that it uses at (1,1), part of its hypothesis (A). Checked on
@@ -42,6 +50,9 @@ extraction:
     by: maintainer-2026-10-26
     date: '2026-10-26'
     note: 'Created by the maintainer pass (fix round of 26 October: the covariant two-dimensional anomaly form of Iso, Umetsu and Wilczek, cited from memory by the residue-zero-four anomaly result, to be imported as a Fact).'
+outside_ga:
+  kind: imported
+  why: 'The consistent anomaly is stated in the Christoffel symbols themselves, a non-covariant expression with no GTG counterpart, and both anomalies are quoted with the source''s conventions for epsilon, sqrt(-g) and R; the covariant form is read in two-dimensional GTG in the text, up to the sign those conventions fix.'
 ---
 
 ## formal
@@ -53,7 +64,7 @@ and the covariant anomaly, the covariant divergence of the covariant stress tens
 \[
 \nabla_{\mu}\tilde{T}^{\mu}{}_{\nu} \;=\; -\frac{1}{96\pi\sqrt{-g}}\,\epsilon_{\mu\nu}\,\partial^{\mu}R
 \]
-(in the paper's conventions for $\epsilon$ and $R$). For a content with central charges $c_{L}$ and $c_{R}$ of left- and right-moving fields the coefficient is proportional to $c_{R} - c_{L}$, so the covariant stress is conserved wherever $c_{L} = c_{R}$ or $R$ is constant, and not conserved where $c_{L} \neq c_{R}$ and $R$ varies. In the store's curvature sign convention the sign of $R$, and so the overall sign, may flip; whether the divergence vanishes does not depend on it. The covariant form is the one used to derive the Hawking flux from the anomaly near a horizon; Robinson and Wilczek's original derivation used the consistent form. \emph{Provenance:} \cite{IsoUmetsuWilczek2006} (equations (13) and (14)); \cite{RobinsonWilczek2005}.
+(in the paper's conventions for $\epsilon$ and $R$). In Gauge Theory Gravity on the flat plane $\R^{1,1}$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}, $d = 2$), with $I_{2}$ the unit bivector of the plane, the covariant form says that the covariant divergence $\dot{\tilde{T}}(\dot{D})$ of the covariant stress-energy map is $\pm\frac{1}{96\pi}$ times the $I_{2}$-dual of the physical gradient $\hb^{T}(\nabla R)$ of the scalar curvature, the sign fixed by the source's conventions. For a content with central charges $c_{L}$ and $c_{R}$ of left- and right-moving fields the coefficient is proportional to $c_{R} - c_{L}$, so the covariant stress is conserved wherever $c_{L} = c_{R}$ or $R$ is constant, and not conserved where $c_{L} \neq c_{R}$ and $R$ varies. The store's scalar curvature has the source's sign (de Sitter positive, conventions C6 and C7), so $R$ carries over unchanged; whether the divergence vanishes does not depend on any sign. The covariant form is the one used to derive the Hawking flux from the anomaly near a horizon; Robinson and Wilczek's original derivation used the consistent form. \emph{Provenance:} \cite{IsoUmetsuWilczek2006} (equations (13) and (14)); \cite{RobinsonWilczek2005}.
 
 ## technical
 In two dimensions a field that moves only one way (one chirality) cannot have a conserved stress tensor on a gravitational field whose scalar curvature varies: the covariant divergence of its stress is proportional to the gradient of the curvature, with coefficient $1/96\pi$ in the paper's normalisation, and to the difference of the left- and right-moving central charges. Iso, Umetsu and Wilczek wrote this covariant form and used it to derive the Hawking flux from the anomaly in the near-horizon two-dimensional sections of a black hole, extending Robinson and Wilczek's derivation, which used the consistent form. The series uses it to ask whether one-chirality matter on the planes of the one metric can source the field equations.

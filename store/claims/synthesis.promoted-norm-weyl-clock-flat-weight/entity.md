@@ -1,7 +1,7 @@
 ---
 id: synthesis.promoted-norm-weyl-clock-flat-weight
 kind: claim
-version: 6
+version: 7
 title: 'The promoted norm''s clock: Weyl square in vacuum, Euler excess with matter'
 status: proved
 region: synthesis
@@ -17,18 +17,31 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Q(X, Y) = 2 <X(a ^ b) I^-1 Y(I d_b ^ d_a)>, F = W on Einstein fields by Weyl duality, instantons as Euclidean gauge fields; exact checks'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): Euclidean frame-equation sign in (iii), de Sitter operator in (iv), instanton check pinned to the store sign'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.imported-henneaux-teitelboim-promotion@5
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.under-action-written-norm-parameter-laws@4
   - synthesis.de-sitter-entropy-pi-n-squared@6
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - synthesis.imported-chern-gauss-bonnet@3
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,7 +64,23 @@ checked_by:
   ref: check.py::check_lorentzian_decomposition_with_source
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_instantons_as_euclidean_gauge_fields
+- kind: check
+  ref: check.py::check_gtg_kasner_and_flrw_densities_from_gauge_fields
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Proof (iii) quoted the frame equation on Cl(4,0) as 2(G(a) + Lambda a) I = 0; on Cl(4,0), with F = calR - l^{-2} D and D = -id, it is 2 d_b ^ F(I(a ^ b)) = 2(G(a) - Lambda a) I (the Lorentzian form keeps + Lambda, the de Sitter operator there being +Lambda/3 id); its trace gives s(calR) = 4 Lambda and s(F) = 0, as the proof needs (the quoted form would give s(F) = -8 Lambda). Checked exactly on the torsion-solved S^4, S^2 x S^2 and CP^2 (scratch FX2/e9_frame.py, now in the check): the trivector equals 2(G(a) - Lambda a) I and vanishes, G(a) + Lambda a does not, and d_b ^ calR(I(a ^ b)) = G(a) I, d_b ^ (I(a ^ b)) = -3 a I. (2) Proof (iv), on Cl(1,3), said the whole curvature is (Lambda/3) D (the anti-de Sitter sign there); now calR(B) = (Lambda/3) B, the de Sitter operator of C6 (checked on the flat-slicing de Sitter field: calR = +(Lambda/3) id). Neither error reaches the formal level (its frame-equation and de Sitter clauses carry no sign of calR). (3) check_gtg_instantons_as_euclidean_gauge_fields passed with gtg.STORE_SIGN flipped; it now asserts Lambda = 3, 1, 6, calR(B) = -B on every plane of the unit S^4, and the Euclidean frame trivector; the flipped-sign mutant, G + Lambda a in place of G - Lambda a, and F = calR - (Lambda/3) id all fail, the unmutated check passes. (4) uses: synthesis.imported-gtg-dictionary@2 added (Weyl duality, row 5, needed for Q(W) = |W|^2; dictionary clauses (i), (iv), (v)); synthesis.imported-miskovic-olea-identity not added (cited as prior work only, as the 2026-10-22 maintainer pass decided). Repinned henneaux-teitelboim-promotion 5 -> 6 (formal unchanged) and frozen-point-datum-kasner-wall 7 -> 8 (GA rewrite of the formal, values unchanged; the cited Kretschmann value 64/27 tau^-4 holds). Version kept at 7.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: the density Q(X, Y) = 2 <X(a ^ b) I^{-1} Y(I d_b ^ d_a)> of curvature operators (eps_abcd X^ab ^ Y^cd / vol as its reading), D the unit sphere''s operator (D(B) = -B in the store sign on Cl(4,0)), s(X) = Q(X, D)/2, identity (1) by bilinearity; on Einstein fields F = W and Q(W) = |W|^2 by W(IB) = I W(B); E = |W|^2 + 8 Lambda^2/3 since Q(W, D) = 0; the instantons as gauge fields on flat Cl(4,0) (stereographic S^4 and S^2 x S^2, CP^2 in a cohomogeneity-one gauge with the SU(2) fields sigma_l), with Vol = 32 pi^2 chi/E from Chern-Gauss-Bonnet; Kasner and FLRW densities from their gauge fields; the 3-form T read as a trivector field. Component contractions (delta^{efgh}_{abcd}) kept as a labelled reading. Checked exactly: check_gtg_instantons_as_euclidean_gauge_fields (torsion-solved S^4, S^2 x S^2, CP^2: Einstein with Lambda = 3, 1, 6, Q(F) = |W|^2 = 0, 16/3, 96, E = 24, 8, 192 = |W|^2 + 8 Lambda^2/3, Q(D) = 24, Q(R, D) = 2 s(R); I_MM/pi N^2 = 0, 4/3, 3/4 and I_EH/pi N^2 = -1, -2/3, -3/4) and check_gtg_kasner_and_flrw_densities_from_gauge_fields (Kasner (2/3, 2/3, -1/3) Ricci-flat with |W|^2 = 64/(27 tau^4) at three tau; flat FLRW at five (Lambda, rho~, p~): store-sign field equation with the perfect-fluid T~, Weyl zero, E = 24 h q = Q(R), and the display of (v)). Version kept at 7 (already above the lock in this run). outside_ga narrowed to the formal level''s form notation.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The densities are written as forms and frame components (W_abcd W^abcd, epsilon_{abcd} F^{ab} ^ F^{cd}, delta^{efgh}_{abcd}, sqrt|g|); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map (stated in the formal), and the proof computes on the components (reader R07).'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -100,6 +129,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (MIXED): the functional is that of a gravitational field on the Wick-rotated flat background; |W|^2 read from the Weyl part of the curvature operator; vol = det(hb)^{-1} d^4x; locally de Sitter as W = 0; FLRW as the comoving-gauge field. The closed Einstein instantons of (ii) and (H) (S^4, S^2 x S^2, CP^2, chi) carry the Section 14 flag and a flags entry; the clock density of (iii)-(v) is local. Clauses (i)-(v) and the reading unchanged; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The formal level writes the functional and its densities in the forms of the imported MacDowell-Mansouri Fact (epsilon_abcd F^ab ^ F^cd, W_abcd W^abcd, sqrt|g|) and part (v) in the source''s signature (3,1); the proof computes in GTG with Q(X, Y) = 2 <X(a ^ b) I^{-1} Y(I d_b ^ d_a)>, of which the forms are the reading.'
 ---
 
 ## formal

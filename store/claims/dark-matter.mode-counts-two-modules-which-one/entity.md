@@ -21,11 +21,11 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@8
+  - dark-matter.mirror-tower-copy-one@9
   - dark-matter.type-residue-what-each-tower-can@5
   - tower.commuting-copies@5
   - tower.fock-module-one-qubit-per-rung@6
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   assumes:
   - dark-matter.p1-single-frozen-point@1
   - dark-matter.p2-indifference@2
@@ -49,6 +49,10 @@ locators:
   label: thm:modes
   line: 354
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: note.state-selection.setting-gap-stated-exactly
 kind: note
-version: 2
+version: 3
 title: The gap, stated exactly
 status: setting
 subject: descent
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, house-style wording
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - singularity.descent-parity-average
 - singularity.descended-form-state-independent
@@ -26,6 +30,10 @@ locators:
   section: The gap, stated exactly
   line: 73
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "Two sentences used the word honesty, against the house style; they now read \"it does not pretend otherwise\" and \"That admission\", with the meaning unchanged."
   maintainer_pass:
     by: maintainer-2026-10-22
     date: '2026-10-22'
@@ -43,9 +51,9 @@ Step 4d of T5 \cite{ButlerT5} proves the following. Let the completed ladder pai
 \[
 T \;=\; \frac{\kappa}{2\pi} \;=\; \frac{1}{8\pi M} \;=\; \TH ,
 \]
-with per-mode reduced density matrix the Fermi-Dirac matrix. The theorem is stated with its converse: a state violating (ii) or (iii) reduces non-thermally under the same projector. The status line in the chain table reads \emph{up to a state}, and the paper says in as many words that the projection alone cannot select a temperature and that honesty forbids pretending otherwise.
+with per-mode reduced density matrix the Fermi-Dirac matrix. The theorem is stated with its converse: a state violating (ii) or (iii) reduces non-thermally under the same projector. The status line in the chain table reads \emph{up to a state}, and the paper says in as many words that the projection alone cannot select a temperature and that it does not pretend otherwise.
 
-That honesty is the point of departure here. Every derivation of the Hawking effect meets the same wall. Hawking's original calculation \cite{Hawking1975} selects the state by the collapse history and the choice of an ``in'' vacuum; Hartle and Hawking \cite{HartleHawking1976} select it by regularity of a Euclidean path integral; Unruh \cite{Unruh1976} by regularity on the future horizon; Boulware's alternative \cite{Boulware1975} is the same field theory with a different state and radiates nothing; Kay and Wald \cite{KayWald1991} prove, in the rigorous setting, that a stationary nonsingular quasi-free state on a spacetime with a bifurcate Killing horizon is unique when it exists, and is KMS at the Hawking temperature, which is exactly a theorem about the strength of the regularity premise; and Fredenhagen and Haag \cite{FredenhagenHaag1990} localise the input to the short-distance behaviour of the state near the horizon. The wall is not an accident of any one formalism, and it is not a wall this note claims to knock down.
+That admission is the point of departure here. Every derivation of the Hawking effect meets the same wall. Hawking's original calculation \cite{Hawking1975} selects the state by the collapse history and the choice of an ``in'' vacuum; Hartle and Hawking \cite{HartleHawking1976} select it by regularity of a Euclidean path integral; Unruh \cite{Unruh1976} by regularity on the future horizon; Boulware's alternative \cite{Boulware1975} is the same field theory with a different state and radiates nothing; Kay and Wald \cite{KayWald1991} prove, in the rigorous setting, that a stationary nonsingular quasi-free state on a spacetime with a bifurcate Killing horizon is unique when it exists, and is KMS at the Hawking temperature, which is exactly a theorem about the strength of the regularity premise; and Fredenhagen and Haag \cite{FredenhagenHaag1990} localise the input to the short-distance behaviour of the state near the horizon. The wall is not an accident of any one formalism, and it is not a wall this note claims to knock down.
 
 What this note does claim is that the wall stands in a different place than Step 4d's three hypotheses suggest, and that once it is put in the right place, two of the three hypotheses are theorems, the third is an output, and what remains is one real number and one named premise. The results, with statuses, are in Table \ref{tab:results}.
 

@@ -34,11 +34,11 @@ derivations:
   uses:
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes@5
-  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@5
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
+  - synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state@6
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - field-theory.second-quantisation@5
-  - synthesis.imported-gtg-dictionary@1
+  - field-theory.second-quantisation@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
   proof: proof-main.tex
 checked_by:
@@ -62,6 +62,14 @@ lineage:
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No version change: the lay level brought up to date (it said the scaling-limit assumption is still needed for massive fields, which (HS), now a theorem, covers).'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -144,7 +152,7 @@ Since 2 November the bulk scaling limit holds at every point of every globally h
 On a Robertson-Walker field the Schwarzian is $2a''/a - 4(a'/a)^{2}$ in conformal time, and the remainder in the physical affine parameter has leading coefficient $-S/a^{4}$ over twelve. It vanishes exactly for de Sitter and flat fields, where the conformal vacuum is the ground state for the physical affine translations on every null generator; on radiation- or matter-dominated fields it is not, and only the local form holds. Transport-absent.
 
 ## lay
-The series assumes that, very close up, the quantum field always looks like empty flat space, even where gravity is present. This result proves that assumption, for massless spin-one-half particles, wherever space-time is a rescaled copy of flat space, which includes the uniform expanding universe of cosmology. So, for those particles, the assumption is only needed where gravity distorts shapes, as near a black hole; for particles with mass it is still an assumption. It also finds that the universe's natural empty state counts as the lowest-energy state along light rays only if the expansion is of the accelerating de Sitter kind, not during the radiation era.
+The series assumes that, very close up, the quantum field always looks like empty flat space, even where gravity is present. This result proves that assumption, for massless spin-one-half particles, wherever space-time is a rescaled copy of flat space, which includes the uniform expanding universe of cosmology. So, for those particles, the assumption was needed only where gravity distorts shapes, as near a black hole, and for particles with mass; a later result in the series has since proved it in those cases too. It also finds that the universe's natural empty state counts as the lowest-energy state along light rays only if the expansion is of the accelerating de Sitter kind, not during the radiation era.
 
 ## one-liner
 On a globally hyperbolic Weyl-flat region every quasi-free Hadamard state of the massless Dirac field has the flat massless vacuum as its scaling limit and, with comoving transverse labels, the generator microlocal condition in the physical affine parameter, so for the massless field the local form of (N$_{+}$) (at the leading order defining local Rindler horizons) needs no scaling-limit premise there; on a Robertson-Walker field the conformal vacuum differs on null generators from the physical null vacuum by a Schwarzian kernel with $S = 2a''/a - 4(a'/a)^{2}$ (leading coefficient $-S/12a^{4}$ in the physical parameter), zero exactly on de Sitter and flat fields (radiation $-4/t^{2}$).

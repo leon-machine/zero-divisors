@@ -1,7 +1,7 @@
 ---
 id: synthesis.einstein-condition-is-infinity-vacuum-incidence
 kind: claim
-version: 3
+version: 4
 title: 'The Einstein condition read as infinity-vacuum incidence'
 status: proved
 region: synthesis
@@ -17,14 +17,29 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: tractors as Cl(2,4) vectors with the tractor gauge field, Schouten and Ricci maps, complexification by I_7; exact checks'
+  version: 4
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): the unit I_7 named in the formal; outside_ga made exact; uses and pins'
+  version: 4
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 derivations:
 - name: main
   uses:
-  - interior.imported-tractor-connection@2
+  - interior.imported-tractor-connection@3
   - interior.covariant-form-vacuum-equations@5
   - interior.metric-parallelism-trace-schouten-condition@6
   - one-relation.imported-pure-spinors-incidence-chart@5
+  - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
+  - std-algebra.complexification-is-the-odd-extension@2
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -41,12 +56,30 @@ checked_by:
   ref: check.py::check_matter_and_bianchi
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_tractor_gauge_field_moves_ig_and_x
+- kind: check
+  ref: check.py::check_gtg_own_ray_classes_on_gauge_fields
+- kind: check
+  ref: check.py::check_gtg_infinity_vacua_with_the_unit_i7
 lineage:
   motivated_by:
   - pairing.displacement-pairs-point-mode-vacuum-parallel
   - correspondence.one-statement-three-languages
   - one-relation.two-presentations
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) The outside_ga declaration, narrowed to the unnamed unit, was incomplete: formal (4), (6), (7) and the technical level state the tensor identities in index notation (Sch = (J/4) g, Ric = (R/4) g, Sch = c l^flat (x) l^flat, g^{ab} T_ab, nabla^a T_ab), which the proof does in GA. The declaration now names them exactly; the formal mathematics is unchanged. (2) Its why was a deferral (kept until a decided restatement). Naming the unit by the unit principle is notation (FIX_GTG.md), so the formal now writes the complexified tractor space as T_x + T_x I_7, the span of V + I_7 V'' with I_7 = I_6 e'' central in Cl(3,4), and the mu slot as T_xM + T_xM I_7, saying that its unit is I_7 and not the spacetime I_5; this is exactly the unit the proof and the GTG check use (check_gtg_infinity_vacua_with_the_unit_i7: W = span(I_g, l, s_1 + I_7 s_2) totally isotropic in Cl(3,4)), and it resolves the prover''s For-Leon item on this entity. (3) uses: synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1 (its Omega_T gives D_v ninf = -Sch(v), D_v n0 = v), std-algebra.complexification-is-the-odd-extension@2 (the unit I_7) and synthesis.imported-gtg-dictionary@2 (the store-sign reading Ric(v, w) = v . calR(w)) added; repinned interior.imported-tractor-connection 2 -> 3 (GA rewrite of the Fact, its connection unchanged). No check changed. Version kept at 4.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: tractors sigma ninf + mu + rho n0 of Cl(2,4) with the flat product as tractor form, Omega_T(hb(v)) = Omega(hb(v)) - ninf ^ v + n0 ^ P(v), so D_v ninf = (n0 ^ P(v)) . ninf = -P(v) and D_v n0 = v; P, Ric and T as symmetric linear maps (the null-cone lemma for S, the one-vacuum argument as P vanishing on A + conj(A) = the complexified l-perp, so P(a) = c (a . l) l), the contracted Bianchi identity as dot-calR(dot-D) = D calR/2 with the physical gradient; complexification with the central unit I_7 = I_6 e'' of Cl(3,4) (U3); index components kept as a labelled reading. Checked exactly: check_gtg_tractor_gauge_field_moves_ig_and_x (Omega_T on de Sitter, SdS, Schwarzschild, FLRW and Kasner gauge fields with P from each field strength: D_v ninf = -P(v), D_v n0 = v, flat product preserved), check_gtg_own_ray_classes_on_gauge_fields (own-ray classes zero on the Einstein fields, with P = (Lambda/6) id and calR = 4 Lambda, nonzero on FLRW, equal to (1/2) l . T~(l) with T~ = -(G + Lambda) on all), check_gtg_infinity_vacua_with_the_unit_i7 (I_7 central of square -1 in Cl(3,4); W = span(I_g, l, s1 + I_7 s2) totally isotropic; the (I_g, m) class -l.P(s1) - I_7 l.P(s2), zero on de Sitter). Version kept at 4 (already above the lock in this run). outside_ga narrowed to the formal level''s unnamed unit of the complexifications.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (7) and the proof work with the Ricci, Schouten and stress tensors of the derived metric in components (l-flat tensor l-flat, g^{ab} T_{ab}, nabla^a Ric_ab) and with the complexified tangent and tractor spaces; the GTG field-equation form is stated beside them, and the complexifications T_x M (x) C and T_x (x) C have the units I_5 and I_7 by U3, not yet written in (reader R03).'
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -71,12 +104,15 @@ extraction:
     infinity-vacuum field left unexcited forces pure null radiation. The classical twistor statement behind
     (5) (the infinity twistor is constant under local twistor transport iff the metric is Einstein) is
     Penrose's, cited from memory. The transport ledger is left to the build.
+outside_ga:
+  kind: other
+  why: 'The formal and technical levels state the Einstein condition in the index form of the standard equivalence the result translates (Einstein if and only if Sch(l, l) = 0 for every null l): Sch(v, w) and g(v, w) as bilinear forms, Sch = (J/4) g and Ric = (R/4) g in (4), Sch = c l^flat (x) l^flat and Ric = 2c l^flat (x) l^flat in (6), T(l, l), Ric + 8 pi G T = h g, g^{ab} T_ab and nabla^a T_ab in (7). The proof does all of it in GA, with Sch, Ric and T symmetric linear maps (Sch(a) = c (a . l) l, tau = d_a . T(a), the contracted Bianchi identity dot-calR(dot-D) = D calR/2), and keeps the components as a labelled reading. The unit of the complexification is named in the formal: I_7 of Cl(3,4) (U3), on the tractor space and on its mu slot; the proof and the earlier checks use it (the earlier checks as Gaussian rationals standing for span{1, I_7}).'
 ---
 
 ## formal
-Let $g$ be the derived metric, of signature $(1,3)$, of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), write tractors in its splitting as $(\sigma, \mu_b, \rho)$, the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$, with the connection of Fact \claimref{interior.imported-tractor-connection} (on flat spacetime the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), and let $I_g = (1, 0, 0)$ be the pure-scale tractor and $X = (0, 0, 1)$ the canonical tractor, so $Q(I_g) = Q(X) = 0$ and $\ip{X}{I_g} = 1$. Call a maximal totally isotropic subspace $W \subset \mathcal{T}_x \otimes \C$ (dimension three) an \emph{infinity vacuum} at $x$ if $I_g \in W$ and a \emph{point vacuum} if $X \in W$; maximal isotropic subspaces come in two families, and by Fact \claimref{one-relation.imported-pure-spinors-incidence-chart} the infinity (respectively point) vacua of the family attached to the conformal spinor space $\CS$ are the Fock vacua $u \in \CS$ with $c(I_g)u = 0$ (respectively $c(X)u = 0$); the other family is attached in the same way to the other half of the Fock module. For a field $W$ of such subspaces and $v \in T_xM$, a physical vector at $x$, the pairing classes of $W$ along $v$ are the values $\omega_v(w, w') := \ip{\nabla_v w}{w'}$ for $w, w' \in W$. The content is a translation of the standard equivalence ``$g$ is Einstein if and only if $\Sch(\ell,\ell) = 0$ for every null $\ell$'' into this language, not a derivation of it. Then:
+Let $g$ be the derived metric, of signature $(1,3)$, of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), write tractors in its splitting as $(\sigma, \mu_b, \rho)$, the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$, with the connection of Fact \claimref{interior.imported-tractor-connection} (on flat spacetime the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), and let $I_g = (1, 0, 0)$ be the pure-scale tractor and $X = (0, 0, 1)$ the canonical tractor, so $Q(I_g) = Q(X) = 0$ and $\ip{X}{I_g} = 1$. Call a maximal totally isotropic subspace $W$ (dimension three) of the complexified tractor space $\mathcal{T}_x \oplus \mathcal{T}_x I_{7}$, the span of the $V + I_{7}V'$ with $V, V' \in \mathcal{T}_x$ and numbers in $\mathrm{span}\{1, I_{7}\}$, $I_{7} = I_{6}e'$ the central unit of the odd extension $\Cl(3,4)$ (conventions U3; \claimref{std-algebra.complexification-is-the-odd-extension}), an \emph{infinity vacuum} at $x$ if $I_g \in W$ and a \emph{point vacuum} if $X \in W$; maximal isotropic subspaces come in two families, and by Fact \claimref{one-relation.imported-pure-spinors-incidence-chart} the infinity (respectively point) vacua of the family attached to the conformal spinor space $\CS$ are the Fock vacua $u \in \CS$ with $c(I_g)u = 0$ (respectively $c(X)u = 0$); the other family is attached in the same way to the other half of the Fock module. For a field $W$ of such subspaces and $v \in T_xM$, a physical vector at $x$, the pairing classes of $W$ along $v$ are the values $\omega_v(w, w') := \ip{\nabla_v w}{w'}$ for $w, w' \in W$. The content is a translation of the standard equivalence ``$g$ is Einstein if and only if $\Sch(\ell,\ell) = 0$ for every null $\ell$'' into this language, not a derivation of it. Then:
 \begin{enumerate}
-\item \emph{(Shape.)} Every infinity vacuum is $W = \mathrm{span}(I_g, \ell, m)$ with $\ell, m$ in the $\mu$ slot spanning a totally null plane $A_W$ of $T_xM \otimes \C$; $A_W$ contains exactly one real null direction $\ell_W$, and every real null direction lies in exactly two infinity vacua. The same holds for point vacua with $X$ in place of $I_g$.
+\item \emph{(Shape.)} Every infinity vacuum is $W = \mathrm{span}(I_g, \ell, m)$ with $\ell, m$ in the $\mu$ slot spanning a totally null plane $A_W$ of the $\mu$ slot $T_xM \oplus T_xM\,I_{7}$ of that space, the complexified tangent space with the same unit $I_{7}$ (not the spacetime unit $I_{5}$ of U3); $A_W$ contains exactly one real null direction $\ell_W$, and every real null direction lies in exactly two infinity vacua. The same holds for point vacua with $X$ in place of $I_g$.
 \item \emph{(Classes.)} For $w \in W$, $\omega_v(I_g, w) = -\Sch(v, w)$ for infinity vacua and $\omega_v(X, w) = g(v, w)$ for point vacua; both depend only on $W$ at $x$, not on its extension. For $W$ in the family of $\CS$, its Fock vacuum $u_W$ is annihilated by $c(\nabla_v I_g)$ if and only if $\omega_v(I_g, \cdot) = 0$ on $W$.
 \item \emph{(Point vacua, in every metric.)} Every point vacuum has $\omega_{\ell_W}(X, \cdot) = 0$ on $W$: point vacua are unexcited along their own real null direction whatever $g$ is.
 \item \emph{(Einstein with a free constant.)} The following are equivalent at $x$: (a) every infinity vacuum has $\omega_{\ell_W}(I_g, \ell_W) = 0$; (b) every infinity vacuum has $\omega_{\ell_W}(I_g, \cdot) = 0$ on $W$; (c) $\Sch = \tfrac{J}{4}\, g$ at $x$, that is $\Ric = \tfrac{R}{4}\, g$. If (c) holds on a connected region, $R$ is constant there (contracted Bianchi identity, Schur's argument in dimension four), and with $\Lambda := R/4$ the classes along a general direction are $\omega_v(I_g, w) = -\tfrac{\Lambda}{6}\, g(v, w)$.

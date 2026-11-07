@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - singularity.degeneration-exactly@2
-  - singularity.non-removability-invariant-argument@2
+  - singularity.non-removability-invariant-argument@3
   - std-algebra.orthogonal-anticommute@1
   proof: proof-main.tex
 checked_by:

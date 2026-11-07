@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching@5
-  - sheaf.matching-connection-level@7
-  - sheaf.matching-fibre@4
+  - sheaf.matching-connection-level@8
+  - sheaf.matching-fibre@5
   - sheaf.weights-are-forced-are-kasner-exponents@5
   proof: proof-main.tex
 checked_by:

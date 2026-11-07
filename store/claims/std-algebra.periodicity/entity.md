@@ -1,7 +1,7 @@
 ---
 id: std-algebra.periodicity
 kind: claim
-version: 1
+version: 2
 title: Periodicity and the table of real Clifford algebras
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, idempotents of Cl(1,0) renamed P_pm; Hamilton units in bold'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 trust: ai-proposed
 about:
@@ -29,7 +33,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.tensor-rules@1
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   - std-algebra.blade-basis@1
   proof: proof-main.tex
 checked_by:
@@ -50,6 +54,10 @@ locators:
   - key: ABS1964
     locator: the periodicity of Clifford algebras
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Notation: the base-case idempotents of Cl(1,0) were written e_+, e_-, the store''s names for the hyperbolic-plane generators (conventions); renamed P_pm (exact check in scratch: P_+^2 = P_+, P_+P_- = 0 in Cl(1,0)). Hamilton''s units written bold as in std-algebra.quaternions, so no roman i reads as an imaginary unit. Mathematics unchanged.'
   by: algebra-core-2026-10-26
 ---
 

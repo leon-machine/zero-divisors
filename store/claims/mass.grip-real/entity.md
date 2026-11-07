@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - correspondence.reality-conjugation-twistor-form-factor@8
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.imported-frozen-point-tractor-connection@6
   proof: proof-main.tex

@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.volume-element-odd-dimension
 kind: claim
-version: 3
+version: 4
 title: The volume element in odd dimension
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,10 @@ locators:
   label: lem:omega
   line: 433
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item E7 (routine; no retirement): specialises primer.sign@2 added. With specialises primer.centre@2: this lemma restates primer.centre and primer.sign for odd n, the primer entities being the general statements and homes.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -57,6 +65,9 @@ payload:
   python: 'all(GA.mul(omega_of(5), omega_of(5), GA.sig(p, 5 - p)) == {(): F((-1) ** (5 - p))} and all(GA.commutes(GA.gen(i),
     omega_of(5), GA.sig(p, 5 - p)) for i in range(5)) for p in range(6))'
   note: for n = 5, omega is central and omega^2 = (-1)^q, all six signatures
+specialises:
+- primer.centre@2
+- primer.sign@2
 ---
 
 ## formal

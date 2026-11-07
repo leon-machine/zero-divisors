@@ -15,6 +15,12 @@ functions:
     clauses:
     - '"the radial loop then has zero class as well, and only Psi_2 remains" (Schwarzschild instance)'
     omits: an instance of the statement at three values of M/r^3 (the statement itself is for general vacuum fields, covered by the first two functions)
+  check_gtg_trace_and_pair_symmetry:
+    kind: exact
+    clauses:
+    - '"C(u, v, w, z) := <R(u, v) . w, z>"'
+    - '"(l,m): Psi_0, (l,mb): 0, (m,mb): -Psi_1, (l,n): Psi_1, (n,m): 0, (n,mb): -Psi_2" (tetrad with l . n = 2, m . mb = -2)'
+    omits: the symmetry and trace-freeness of the vacuum curvature operator are the cited dictionary; verified on the ten basis Weyl maps and a generic combination, the trace identity also on a non-Weyl map
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

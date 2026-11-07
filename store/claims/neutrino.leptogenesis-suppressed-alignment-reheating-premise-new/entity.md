@@ -32,7 +32,7 @@ derivations:
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   - dark-matter.hyp-u-equal-rank-one-eigenvalues@3
-  - neutrino.real-breaking-assumption@1
+  - neutrino.real-breaking-assumption@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -53,6 +53,10 @@ locators:
   label: prop:leptogenesis
   line: 733
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: neutrino.real-breaking-assumption repinned 1 -> 2 after reviewing its C2 restatement (the premise now adds that the charged-lepton matrix is real in the same basis; the neutrino-sector clause is unchanged); the use here holds as cited.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

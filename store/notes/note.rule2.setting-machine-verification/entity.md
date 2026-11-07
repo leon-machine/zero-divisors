@@ -1,7 +1,7 @@
 ---
 id: note.rule2.setting-machine-verification
 kind: note
-version: 1
+version: 2
 title: Machine verification
 status: setting
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: cites the imported gamma-matrix Fact by name)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - rule2.imported-gamma-matrices-odd-dimension
 - rule2.imported-five-dimensional-chern-simons-shift
@@ -25,6 +29,14 @@ locators:
   number: Setting
   section: Machine verification
   line: 278
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the only stand-in the language check finds is the cited id of the imported Fact on odd-dimensional gamma matrices, which the note lists among the physics the script does not check; declared outside_ga (bridge), as reader R11 proposed.'
+outside_ga:
+  kind: bridge
+  why: 'the setting text names, by its id, the imported Fact on odd-dimensional gamma matrices, one of the physics Facts the script does not recompute; the script''s own checks are in exact Clifford arithmetic'
 ---
 
 ## formal

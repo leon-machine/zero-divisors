@@ -25,12 +25,19 @@ rational symmetric matrices; W is the Weyl part, R - KN(P, eta) with P the Schou
     (4/3)(K1 + K2)^2/(K1 K2), which changes with K2/K1, while the Euler integral over 16 pi^2 is 8.
 (7) The Chern form is exact: <F ^ F>_0 = d CS(A), CS = <A ^ dA> + (1/3)<A ^ (A x A)>, on a fixed
     2-jet of a so(2,4) connection.
+(8) The proof's GTG route: ten independent Weyl maps of Cl(1,3) as linear functions on bivectors (lib/gtg.py,
+    Weyl parts of Kulkarni-Nomizu operators), eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)> on all 55 pairs;
+    the S^2 x S^2 densities pointwise from the product operator of Cl(4,0).
+(9) The frame legs in GA: K(DX ^ DX, F) = -<I4 R(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -<R(a ^ b)(d_b ^ d_a)> = -calR
+    for F = -R (Cotton block present), zero on the Weyl maps; the Weyl maps obey the first Bianchi identity and
+    B -> I4 B (symmetric, trace-free, I-linear) does not.
 Exact arithmetic only (Fractions); fixed tables, no randomness.
 """
 from fractions import Fraction as Fr
 from itertools import combinations, permutations
 import GA
 from tp_premise import premise
+import gtg
 
 SQ = (1, -1, -1, -1, 1, -1)
 ETA = (1, -1, -1, -1)
@@ -539,3 +546,312 @@ if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("check_") and callable(fn):
             fn()
+
+
+# ---- the proof's GTG route: Weyl maps as linear functions on bivectors (lib/gtg.py) ----
+def _sym_maps():
+    """The ten basis symmetric maps T of spacetime vectors (T(e_a) . e_b symmetric), as callables."""
+    out = []
+    for i in R4:
+        for j in range(i, 4):
+            def T(v, i=i, j=j):
+                res = {}
+                for (k,), c in v.items():
+                    # matrix with (i, j) and (j, i) entries 1 on lowered components: T(e_k) = sum_l M_kl e^l
+                    for (a, b) in ({(i, j), (j, i)}):
+                        if a == k:
+                            res = GA.add(res, GA.scal(c * Fr(1, ETA[b]), GA.gen(b)))
+                return res
+            out.append(T)
+    return out
+
+
+def _weyl_map_basis():
+    """Ten independent Weyl maps W = weyl_op(KN(S, T)) of Cl(1,3), as frame-plane dicts."""
+    S = _sym_maps()
+    blades = gtg.bivector_blades(4)
+    basis, rows = [], []
+    for A in S:
+        for B in S:
+            Wp = gtg.weyl_op(_kn_pair(A, B), gtg.S13)
+            row = [c for pl in sorted(Wp) for c in [Wp[pl].get(bl, Fr(0)) for bl in blades]]
+            trial = rows + [row]
+            if GA.rank_of_vectors([list(r) for r in trial]) > len(rows):
+                rows, basis = trial, basis + [Wp]
+    return basis
+
+
+def _kn_pair(A, B):
+    """The Kulkarni-Nomizu-type operator a ^ b -> A(a) ^ B(b) + B(a) ^ A(b) (symmetric in A, B)."""
+    def R(Xb):
+        out = {}
+        for (m, n), c in Xb.items():
+            em, en = GA.gen(m), GA.gen(n)
+            out = GA.add(out, GA.scal(c, GA.add(gtg.wedge(A(em), B(en)), gtg.wedge(B(em), A(en)))))
+        return out
+    return R
+
+
+def _F_from_weyl_map(W, C=None):
+    """Frame components F_ef = -W(e_e ^ e_f) (plus the Cotton block n0 ^ c) in Cl(2,4)."""
+    def Fc(e, f):
+        if e == f:
+            return {}
+        out = GA.neg(gtg.apply_op(W, gtg.biv(e, f)))
+        if C is not None:
+            c = {}
+            for a in R4:
+                c = GA.add(c, GA.scal(C[e][a] - C[f][a], E[a]))
+            out = GA.add(out, _wedge(N0, c))
+        return out
+    return Fc
+
+
+def _half_weyl_square(W1, W2):
+    """(1/2) <W1(a ^ b) W2(d_b ^ d_a)>, summed over the frame (the scalar of the Weyl map pair)."""
+    tot = Fr(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                rb = GA.scal(Fr(1, ETA[a] * ETA[b]), gtg.biv(b, a))
+                tot += gtg.sp(GA.mul(gtg.apply_op(W1, gtg.biv(a, b)), gtg.apply_op(W2, rb), gtg.S13))
+    return tot / 2
+
+
+def check_gtg_weyl_square_of_weyl_maps():
+    """(iii) with the Weyl part as a linear map on bivectors: on ten independent Weyl maps of Cl(1,3) (built by
+    the library from Kulkarni-Nomizu operators) and their 55 pairs, eps_X(F1, F2) = (1/2) <W1(a ^ b) W2(d_b ^ d_a)>
+    for F = -W (and with a Cotton block); the Weyl maps are trace-free and I-linear. (v) pointwise, on the
+    product operator calR = -K1 on e1 ^ e2, -K2 on e3 ^ e4 of Cl(4,0) (store sign; the torsion-solved field of
+    S^2(1) x S^2(1/4) gives it): Weyl square 2 <W W> = (4/3)(K1 + K2)^2 and
+    Euler density 8 K1 K2, so the integrals over 16 pi^2 are (4/3)(K1 + K2)^2/(K1 K2) and 8."""
+    _premises_locus()
+    premise("dark-energy.frozen-point-makes-stelle-west-vector")
+    basis = _weyl_map_basis()
+    ok = len(basis) == 10
+    I4 = gtg.pseudoscalar(gtg.S13)
+    for W in basis:
+        ok = ok and all(gtg.ricci(W, GA.gen(m)) == {} for m in R4)
+        ok = ok and all(GA.eq(gtg.apply_op(W, GA.mul(I4, gtg.biv(a, b), gtg.S13)),
+                              GA.mul(I4, gtg.apply_op(W, gtg.biv(a, b)), gtg.S13)) for a in R4 for b in range(a + 1, 4))
+    Fs = [_F_from_weyl_map(W) for W in basis]
+    n = 0
+    for i in range(len(basis)):
+        for j in range(i, len(basis)):
+            ok = ok and _eps_X(Fs[i], Fs[j]) == _half_weyl_square(basis[i], basis[j])
+            n += 1
+    ok = ok and n == 55
+    ok = ok and _eps_X(_F_from_weyl_map(basis[3], COTTON), _F_from_weyl_map(basis[3], COTTON)) == \
+        _half_weyl_square(basis[3], basis[3])
+    sq4 = GA.sig(4, 0)
+    for k1, k2 in ((Fr(1), Fr(1)), (Fr(1), Fr(2)), (Fr(2), Fr(6))):
+        def R(Xb, k1=k1, k2=k2):
+            return GA.add(GA.scal(-k1 * Xb.get((0, 1), Fr(0)), gtg.biv(0, 1, sq4)),
+                          GA.scal(-k2 * Xb.get((2, 3), Fr(0)), gtg.biv(2, 3, sq4)))
+        Wp = gtg.weyl_op(R, sq4)
+        ok = ok and gtg.kretschmann(Wp, sq4) == Fr(4, 3) * (k1 + k2) ** 2
+        ok = ok and gtg.euler_density(R, sq4) == 8 * k1 * k2
+    s1, c1 = gtg.sincos(0, Fr(3, 5), Fr(4, 5), 4, 2)
+    s2, c2 = gtg.sincos(2, Fr(5, 13), Fr(12, 13), 4, 2)
+    TH = [[Fr(0)] * 4 for _ in R4]
+    TH[0][0], TH[1][1], TH[2][2], TH[3][3] = Fr(1), s1, Fr(2), Fr(2) * s2      # radii 1 and 2: K1 = 1, K2 = 1/4
+    Rs = gtg.Field(TH, sq=sq4).curvature()
+    ok = ok and Rs[(0, 1)] == {(0, 1): Fr(-1)} and Rs[(2, 3)] == {(2, 3): Fr(-1, 4)}
+    ok = ok and all(Rs[k] == {} for k in Rs if k not in ((0, 1), (2, 3)))
+    ok = ok and gtg.kretschmann(gtg.weyl_op(Rs, sq4), sq4) == Fr(25, 12) and gtg.euler_density(Rs, sq4) == 2
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_weyl_square_of_weyl_maps"; return _tp_rv
+
+
+def _frame_plane_op(R):
+    """The frame-plane dict {(a, b): R(e_a ^ e_b)} of a callable bivector map R of Cl(1,3)."""
+    return {bl: R(gtg.biv(*bl)) for bl in gtg.bivector_blades(4)}
+
+
+def _bianchi_free(W):
+    """First Bianchi identity d_a ^ W(a ^ b) = 0 for every frame vector b."""
+    for m in R4:
+        tot = {}
+        for a in R4:
+            if a != m:
+                tot = gtg.m_add(tot, gtg.outer(gtg.er(a), gtg.apply_op(W, gtg.wedge(GA.gen(a), GA.gen(m))), gtg.S13))
+        if tot:
+            return False
+    return True
+
+
+def _leg_traces(W):
+    """(<W(a ^ b)(d_b ^ d_a)>, <I4 W(a ^ b)(d_b ^ d_a)>) summed over the frame."""
+    I4 = gtg.pseudoscalar(gtg.S13)
+    s0, sI = Fr(0), Fr(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                rb = GA.scal(Fr(1, ETA[a] * ETA[b]), gtg.biv(b, a))
+                P = GA.mul(gtg.apply_op(W, gtg.biv(a, b)), rb, gtg.S13)
+                s0 += gtg.sp(P)
+                sI += gtg.sp(GA.mul(I4, P, gtg.S13))
+    return s0, sI
+
+
+def check_gtg_frame_legs_and_weyl_space():
+    """(iv) frame legs in GA: for a bivector map R with Lorentz block F = -R (Cotton block present),
+    K(DX ^ DX, F) = -<I4 R(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -<R(a ^ b)(d_b ^ d_a)> = -calR (the scalar),
+    on a Kulkarni-Nomizu map with a Ricci part, on B -> I4 B and on their sum (both sides nonzero there), and both
+    vanish on the ten basis Weyl maps (first Bianchi identity, trace-freeness). (iii) the Weyl space: the basis
+    Weyl maps obey the first Bianchi identity d_a ^ W(a ^ b) = 0; B -> I4 B is symmetric, trace-free and I-linear
+    but violates it, so those three conditions alone do not cut out the Weyl maps."""
+    _premises_locus()
+    I4 = gtg.pseudoscalar(gtg.S13)
+    S = _sym_maps()
+    kn = _frame_plane_op(_kn_pair(S[0], S[4]))
+    imap = _frame_plane_op(lambda B: GA.mul(I4, B, gtg.S13))
+    both = {bl: GA.add(kn[bl], imap[bl]) for bl in kn}
+
+    def ee(e, f):
+        return {} if e == f else GA.scal(2, _wedge(E[e], E[f]))
+
+    def legs(W):
+        Fc = _F_from_weyl_map(W, COTTON)
+        return _form(ee, Fc, lambda F1, F2: _m(F1, F2).get((), Fr(0))), _eps_X(ee, Fc)
+    ok = True
+    vals = []
+    for W in (kn, imap, both):
+        K, ex = legs(W)
+        s0, sI = _leg_traces(W)
+        ok = ok and K == -sI and ex == -s0 and s0 == gtg.ricci_scalar(W, gtg.S13)
+        vals.append((K, ex))
+    ok = ok and vals == [(Fr(0), Fr(2)), (Fr(12), Fr(0)), (Fr(12), Fr(2))]
+    ok = ok and _bianchi_free(kn) and not _bianchi_free(imap)
+    for bl in gtg.bivector_blades(4):
+        for bl2 in gtg.bivector_blades(4):
+            A, B = gtg.biv(*bl), gtg.biv(*bl2)
+            ok = ok and gtg.sp(GA.mul(A, gtg.apply_op(imap, B), gtg.S13)) == gtg.sp(GA.mul(gtg.apply_op(imap, A), B, gtg.S13))
+    ok = ok and all(gtg.ricci(imap, GA.gen(m)) == {} for m in R4)
+    for W in _weyl_map_basis():
+        ok = ok and _bianchi_free(W) and legs(W) == (Fr(0), Fr(0))
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_frame_legs_and_weyl_space"; return _tp_rv
+
+
+# ---- the statement's two-forms and four-forms in GA (second round of Leon's answers, item 7) ----
+# Two generic bivector-valued two-forms (linear maps of physical bivectors to bivectors of Cl(2,4)), given by
+# a fixed rational table of coefficients on the fifteen bivector blades of Cl(2,4), and a general frame
+# f_a = H(e_a) with det H != 1. Data live outside the function, so the mutation test perturbs the identity.
+_BLADES6 = [(i, j) for i in range(6) for j in range(i + 1, 6)]
+_TF = [[(3 * p + 5 * q + 7 * k) % 11 - 5 for k in range(15)] for p in range(4) for q in range(4)]
+_TG = [[(2 * p + 7 * q + 3 * k + 1) % 13 - 6 for k in range(15)] for p in range(4) for q in range(4)]
+_HF = [[2, 1, 0, -1], [0, 3, 1, 0], [1, 0, -2, 1], [0, 1, 1, 4]]
+_YG = GA.add(GA.scal(Fr(5, 2), NI), GA.scal(Fr(-4), N0), E[1], GA.scal(Fr(2, 3), E[3]))
+
+
+def _two_form(T):
+    """B -> F(B) on physical bivectors, from the frame components F(e_p ^ e_q) (p < q) in the table."""
+    def Fc(p, q):
+        if p == q:
+            return {}
+        if p > q:
+            return GA.neg(Fc(q, p))
+        out = {}
+        for k, bl in enumerate(_BLADES6):
+            c = T[4 * p + q][k]
+            if c:
+                out = GA.add(out, GA.scal(Fr(c), _wedge(E[bl[0]], E[bl[1]])))
+        return out
+    return Fc
+
+
+def _on(Fc, B):
+    """F(B) for a spacetime bivector B, by linearity on the frame planes."""
+    out = {}
+    for bl, c in B.items():
+        if len(bl) == 2 and c:
+            out = GA.add(out, GA.scal(c, Fc(bl[0], bl[1])))
+    return out
+
+
+def _in_frame(Fc, H):
+    """Components of the same map in the frame f_a = H(e_a): (a, b) -> F(f_a ^ f_b)."""
+    def Fh(a, b):
+        out = {}
+        for m in R4:
+            for n in R4:
+                c = H[a][m] * H[b][n]
+                if c and m != n:
+                    out = GA.add(out, GA.scal(Fr(c), Fc(m, n)))
+        return out
+    return Fh
+
+
+def _det4(M):
+    tot = Fr(0)
+    for p in permutations(range(4)):
+        t = Fr(_sign(p))
+        for i in R4:
+            t *= M[i][p[i]]
+        tot += t
+    return tot
+
+
+_LAM = Fr(9, 7)
+_IFR = GA.add(NI, GA.scal(_LAM / 6, N0))
+_VFR = GA.sub(X, GA.scal(3 / _LAM, _IFR))
+_PAIRS = [lambda A, B: _eps(NI, X, A, B), lambda A, B: _eps(_YG, X, A, B),
+          lambda A, B: _eps(E[2], X, A, B), lambda A, B: _eps(_IFR, _VFR, A, B),
+          lambda A, B: _m(A, B).get((), Fr(0))]
+_DENSITIES = [20, 20, 0, Fr(75, 2), Fr(75, 2), Fr(88, 3), Fr(81, 2), Fr(81, 2), 90, 20, 20, 0, 19, 19, -94]
+_DET_HF = -50
+_VOL = 24
+
+
+def _tractor_value(a):
+    """Omega_T(e_a) = Omega(e_a) - ninf ^ e_a + n0 ^ P(e_a) at hb = 1, with a generic rotation-gauge value and slot."""
+    Om = _wedge(E[(a + 1) % 4], E[(a + 2) % 4])
+    P = GA.add(GA.scal(Fr(a + 2), E[0]), GA.scal(Fr(-3), E[(a + 1) % 4]))
+    return GA.add(Om, GA.neg(_wedge(NI, E[a])), _wedge(N0, P))
+
+
+def check_gtg_four_form_density_of_bivector_maps():
+    """The formal's two-form and four-form definitions in GA equal the component ones exactly. For two generic
+    linear maps F, G of physical bivectors to bivectors of Cl(2,4) and the pairings eps(Y, X, ., .) (three Y),
+    eps(I, V, ., .) at the frozen point and K = <. .>_0: the component coefficient (1/4) sum_p sgn(p)
+    beta(F_{p0 p1}, G_{p2 p3}) (the sum over ordered pairs of complementary planes) equals the GA density
+    (1/2) beta(F(c ^ d), G(I4 (d_d ^ d_c))); in a general frame f_a = H(e_a) the component coefficient on
+    f^0 ^ ... ^ f^3 is det H times the same density (the four-form is density times vol). The frame legs: with a
+    generic slot and rotation-gauge value, (a . D) X = a for X = n0, so the two-form
+    a ^ b -> 2 (a . D X) ^ (b . D X) is the frame-leg two-form 2 e_e ^ e_f of the component check."""
+    _premises_locus()
+    premise("dark-energy.frozen-point-makes-stelle-west-vector")
+    I4 = _wedge(E[0], E[1], E[2], E[3])
+
+    def density(Fc, Gc, pair):
+        tot = Fr(0)
+        for c in R4:
+            for d in R4:
+                if c != d:
+                    rec = GA.scal(Fr(1, ETA[c] * ETA[d]), _wedge(E[d], E[c]))
+                    tot += pair(Fc(c, d), _on(Gc, _m(I4, rec)))
+        return tot / 2
+    Fa, Ga_ = _two_form(_TF), _two_form(_TG)
+    ok = True
+    vals = []
+    for pair in _PAIRS:
+        for P, Q in ((Fa, Ga_), (Ga_, Fa), (Fa, Fa)):
+            new = density(P, Q, pair)
+            ok = ok and _form(P, Q, pair) == new
+            vals.append(new)
+    ok = ok and vals == _DENSITIES
+    dH = _det4(_HF)
+    ok = ok and dH == _DET_HF
+    for pair in _PAIRS:
+        ok = ok and _form(_in_frame(Fa, _HF), _in_frame(Ga_, _HF), pair) == dH * density(Fa, Ga_, pair)
+    DX = [_cp(_tractor_value(a), X) for a in R4]
+    ok = ok and all(GA.eq(DX[a], E[a]) for a in R4)
+
+    def legs(e, f):
+        return {} if e == f else GA.scal(2, _wedge(DX[e], DX[f]))
+
+    def ee(e, f):
+        return {} if e == f else GA.scal(2, _wedge(E[e], E[f]))
+    ok = ok and all(GA.eq(legs(e, f), ee(e, f)) for e in R4 for f in R4)
+    vol = density(legs, legs, _PAIRS[0])
+    ok = ok and vol == _form(ee, ee, _PAIRS[0]) == _VOL
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_four_form_density_of_bivector_maps"; return _tp_rv

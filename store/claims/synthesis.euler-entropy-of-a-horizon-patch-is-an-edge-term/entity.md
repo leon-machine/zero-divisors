@@ -1,7 +1,7 @@
 ---
 id: synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term
 kind: claim
-version: 2
+version: 3
 title: 'The Euler entropy of a horizon patch is an edge term'
 status: proved
 region: synthesis
@@ -17,21 +17,34 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i), (ii): the cut as a two-dimensional gauge field, abelian field strength as the transgression, the rotor gauge law, k_g from (T.D)T; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): the cut rotation-gauge field named Omega_S = -omega_S J in the formal and technical levels; outside_ga made exact; uses and pins'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.euler-term-horizon-entropy-shift@4
+  - synthesis.euler-term-horizon-entropy-shift@5
   - synthesis.imported-wald-noether-charge-entropy@3
-  - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@2
-  - synthesis.euler-entropy-first-order-rate-on-local-patches@2
-  - synthesis.sds-clausius-fixes-area-constant@4
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - dark-energy.wall-counterterm@4
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term@1
+  - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@3
+  - synthesis.euler-entropy-first-order-rate-on-local-patches@3
+  - synthesis.sds-clausius-fixes-area-constant@5
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - dark-energy.wall-counterterm@6
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term@2
+  - synthesis.imported-chern-weil-and-chern-simons-forms@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -52,12 +65,28 @@ checked_by:
   ref: check.py::check_wall_counterterm_anomaly_is_the_edge_transgression
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature
+- kind: check
+  ref: check.py::check_gtg_binormal_contraction_is_four_times_the_cut_component
 lineage:
   motivated_by:
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
   - dark-energy.wall-counterterm
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Formal (i) and the technical level called omega_S the rotation-gauge field of the cut; by C10 the rotation-gauge field is Omega_S = -omega_S J (J = e_2 e_3) and omega_S its Cartan form. Both now say so and state the field strength calR_S(J) = K J, of which d omega_S = K e^2 ^ e^3 is the reading (notation; checked by hand on the profile field g_s = e_s, g_phi = rho e_phi of Cl(0,2): the torsion solve gives Omega(e_phi) = rho'' J, the Cartan form is omega_S = -rho'' dphi, calR_S(J) = -(rho''''/rho) J = K J, d omega_S = K e^2 ^ e^3; the existing check confirms it on five profiles). (2) outside_ga: the why said the transgression and the gauge law are computed in GTG while formal (i) states them in forms; it now names those form displays beside their GA form. (3) uses: synthesis.imported-chern-weil-and-chern-simons-forms@1 added (its (c), the Chern-Simons gauge variation, is cited for the exact identity of the (i) reading). synthesis.c-loc-local-horizon-premise is a postulate and is not added (listed for Leon: clause (iv) says what the integrated reading of (Loc) excludes, it does not rest on it). Eight stale pins repinned after review: euler-term-horizon-entropy-shift 4 -> 5 (GA notation for the Euler form), series-wald-entropy-changes-without-flux-on-local-horizons 2 -> 3 (formal unchanged since the lock), euler-entropy-first-order-rate-on-local-patches 2 -> 3 (signature sentence and the plane-wave field written in GA), sds-clausius-fixes-area-constant 4 -> 5 (formal unchanged), einstein-equations-from-c-loc-and-clausius 7 -> 8 (a clause label), dark-energy.wall-counterterm 4 -> 6 (Chern-Simons form written in GA, values unchanged), synthesis.imported-gtg-dictionary 1 -> 2 (clause (iv) now states the component sign R(g ^ g) = -R(e ^ e) of the store; the use, the store-sign curvature, holds), imported-gauss-bonnet-with-corners 1 -> 2 (formal unchanged). The referee noted that the remark''s soldering part -(Lambda/3) e ^ e has the opposite sign to the Fact''s F = R + l^{-2} e ^ e; it is not an error: the remark''s F is F_abcd of series-wald (i), which that statement defines as minus the Fact''s Lorentz block, with the Riemann tensor positive on spheres, and in that sign the soldering part is -(Lambda/3) e ^ e and gives the density -3/(4 Lambda) . (-Lambda/3) = 1/4. The remark now names which F it uses. No check changed. Version kept at 3.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof of (i), (ii) rewritten in GTG: the cut as a two-dimensional gauge field on a flat Riemannian plane (frame e_2, e_3, J = e_2 e_3), Omega_S(a) = -omega_S(a) J (Cartan sign, C10), field strength with no commutator term, R_S(a ^ b) = -(d omega_S)(a, b) J, so calR_S(J) = K J is d omega_S = K e^2 ^ e^3; the holonomy rotor exp((1/2) J oint omega_S); the frame rotation by theta as the gauge transformation with R = exp(-J theta/2), giving omega_S -> omega_S - d theta; k_g = -((T.D)T) . N; the binormal contraction eps_abcd lambda^ab Y^cd = 4 <lambda I^{-1} Y> = 4 Y^23. The Chern-Simons variation and the Gauss-equation identity of the (i) reading, Gauss-Bonnet with corners and (iii), (iv) stay as before; the Christoffel and form computations kept as a labelled reading. Checked exactly: check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature (five profiles, three points: torsion-solved Omega_S(e_s) = 0, Omega_S(e_phi) = rho'' J, no commutator, field strength rho'''' J, calR_S(J) = K J with K = -rho''''/rho, k_g = -rho''/rho for N = e_2, and the gauge law Omega''(e_s) = theta'' J for three rotations) and check_gtg_binormal_contraction_is_four_times_the_cut_component (4 <lambda I^{-1} Y> = 4 Y^23 on three bivectors). Version kept at 3 (already above the lock in this run). outside_ga narrowed to the reading of (i) and the imported surface theorems.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The Euler density and its edge term are written as Cartan forms (epsilon_{abcd} lambda^{ab} d omega^{cd}, two-dimensional rotation one-forms) and computed from Christoffel symbols of the derived metric; the forms are the computation (reader R03).'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -90,12 +119,15 @@ extraction:
     Gauss-Bonnet with boundary and corners, Poincare-Hopf, the clutching description of the Euler number
     and the two-dimensional Gibbons-Hawking term are \claimref{synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term};
     the gauge variation of a Chern-Simons form is \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}.
+outside_ga:
+  kind: other
+  why: 'The reading in (i) (the Chern-Simons gauge variation and the Gauss-equation identity with the extrinsic forms a_A, b_A) is stated and checked as identities of Cartan forms, and Gauss-Bonnet with corners is imported in its surface-geometry form. Formal (i) also states the transgression and the gauge law in forms (d omega_S = K e^2 ^ e^3, omega_S -> omega_S - d theta, S_E = alpha oint omega_S), beside their GA form (Omega_S = -omega_S J, calR_S(J) = K J), which the proof computes in GTG with the edge curvature k_g = -((T . D) T) . N.'
 ---
 
 ## formal
 Units $\hbar = c = G = 1$; $\Lambda \neq 0$ and $\alpha = -3/(4\Lambda)$, the Euler coefficient of the series' Lagrangian $(R - 2\Lambda + \alpha E_{4})/16\pi$ (Theorem \claimref{synthesis.euler-term-horizon-entropy-shift}(i)). Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $\Sigma$ a spacelike two-surface element (a cut of a local horizon) with its Riemannian induced metric, Gauss curvature $K$ (${}^{(2)}\!R = 2K$) and area element $dA$, and for a compact patch $P \subset \Sigma$ with piecewise smooth edge let $S[P] = \tfrac14\int_{P}(1 + 2\alpha\,{}^{(2)}\!R)\,dA = A(P)/4 + S_{E}[P]$, $S_{E}[P] = \alpha\int_{P}K\,dA$, be the Jacobson-Myers functional of Fact \claimref{synthesis.imported-wald-noether-charge-entropy}(c) evaluated on the patch, as in (W$_{\mathrm{loc}}$) of Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}.
 \begin{enumerate}
-\item[(i)] \emph{(Transgression on the cut.)} For every orthonormal frame $(e_{2}, e_{3})$ tangent to $\Sigma$ on an open set $U$, with $\omega_{\Sigma}$ the rotation-gauge field of the cut in that frame (the $e_{2}\wedge e_{3}$ component of its connection one-form, $de^{2} = -\omega_{\Sigma}\wedge e^{3}$, $de^{3} = \omega_{\Sigma}\wedge e^{2}$), $d\omega_{\Sigma} = K\,e^{2}\wedge e^{3}$. Hence on every patch $P \subset U$ on which the frame is smooth, $S_{E}[P] = \alpha\oint_{\partial P}\omega_{\Sigma}$, $\alpha$ times the holonomy angle of the cut's own rotation-gauge field (its Levi-Civita connection) around the edge, measured against the frame smooth on $P$; under a rotation of the frame by $\theta$, $\omega_{\Sigma} \mapsto \omega_{\Sigma} - d\theta$, so the edge integral is unchanged for $\theta$ smooth on $P$ and shifts by $-2\pi w$ for winding $w$ along the edge, $S_{E}$ by $-2\pi\alpha w$. (Reading.) In a frame adapted to the cut this edge term is the wall counterterm one dimension down, a reading supported by the following exact identities: the Chern-Simons form $Q(\omega)$ of Proposition \claimref{dark-energy.wall-counterterm} has gauge variation $\delta_{\lambda}Q = d\bigl(\epsilon_{abcd}\lambda^{ab}d\omega^{cd}\bigr)$ (for $\delta\omega = D\lambda$), whose two-form $\epsilon_{abcd}\lambda^{ab}d\omega^{cd}$ is $4\,d\omega^{23}$ for $\lambda$ the binormal $e_{0}\wedge e_{1}$ of the cut, and on the cut $R^{23} - d\omega^{23} = -(b_{2}\wedge a_{3} + a_{2}\wedge b_{3})$ with $a_{A} = \omega^{A0} - \omega^{A1}$ and $b_{A} = \tfrac12(\omega^{A0} + \omega^{A1})$ the extrinsic forms along the null normals $k = e_{0} + e_{1}$ and $l$, which vanishes on admissible cuts ($a = 0$, the local Rindler cuts of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius}).
+\item[(i)] \emph{(Transgression on the cut.)} For every orthonormal frame $(e_{2}, e_{3})$ tangent to $\Sigma$ on an open set $U$, with $\Omega_{\Sigma} = -\omega_{\Sigma}J$, $J = e_{2}e_{3}$, the rotation-gauge field of the cut in that frame and $\omega_{\Sigma}$ its Cartan connection form (conventions C10; in components the $e_{2}\wedge e_{3}$ component of the connection one-form, $de^{2} = -\omega_{\Sigma}\wedge e^{3}$, $de^{3} = \omega_{\Sigma}\wedge e^{2}$), the field strength of the cut is $\mathcal{R}_{\Sigma}(J) = K\,J$, that is $d\omega_{\Sigma} = K\,e^{2}\wedge e^{3}$. Hence on every patch $P \subset U$ on which the frame is smooth, $S_{E}[P] = \alpha\oint_{\partial P}\omega_{\Sigma}$, $\alpha$ times the holonomy angle of the cut's own rotation-gauge field (its Levi-Civita connection) around the edge, measured against the frame smooth on $P$; under a rotation of the frame by $\theta$, $\omega_{\Sigma} \mapsto \omega_{\Sigma} - d\theta$, so the edge integral is unchanged for $\theta$ smooth on $P$ and shifts by $-2\pi w$ for winding $w$ along the edge, $S_{E}$ by $-2\pi\alpha w$. (Reading.) In a frame adapted to the cut this edge term is the wall counterterm one dimension down, a reading supported by the following exact identities: the Chern-Simons form $Q(\omega)$ of Proposition \claimref{dark-energy.wall-counterterm} has gauge variation $\delta_{\lambda}Q = d\bigl(\epsilon_{abcd}\lambda^{ab}d\omega^{cd}\bigr)$ (for $\delta\omega = D\lambda$), whose two-form $\epsilon_{abcd}\lambda^{ab}d\omega^{cd}$ is $4\,d\omega^{23}$ for $\lambda$ the binormal $e_{0}\wedge e_{1}$ of the cut, and on the cut $R^{23} - d\omega^{23} = -(b_{2}\wedge a_{3} + a_{2}\wedge b_{3})$ with $a_{A} = \omega^{A0} - \omega^{A1}$ and $b_{A} = \tfrac12(\omega^{A0} + \omega^{A1})$ the extrinsic forms along the null normals $k = e_{0} + e_{1}$ and $l$, which vanishes on admissible cuts ($a = 0$, the local Rindler cuts of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius}).
 \item[(ii)] \emph{(The edge term.)} By Gauss-Bonnet with edge and corners (Fact \claimref{synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term}(a)), for every patch $P$, with $k_{g}$ the geodesic curvature of its edge in $\Sigma$ (the rate at which the edge tangent turns against the cut's own parallel transport along the edge) and $\varepsilon_{j}$ the turning angles at its corners,
 \[
 S_{E}[P] + \alpha\Bigl(\oint_{\partial P}k_{g}\,ds + \sum_{j}\varepsilon_{j}\Bigr) \;=\; 2\pi\alpha\,\chi(P) \;=\; -\frac{3\pi\,\chi(P)}{2\Lambda} .
@@ -106,7 +138,7 @@ So with the edge term $E[\partial P] = \alpha(\oint k_{g}\,ds + \sum_{j}\varepsi
 \end{enumerate}
 
 ## technical
-Take the series' Lagrangian $(R - 2\Lambda + \alpha E_{4})/16\pi$, $\alpha = -3/(4\Lambda)$, and read the entropy of a patch $P$ of a cut as the Jacobson-Myers functional, $A(P)/4$ plus the Euler part $S_{E}[P] = \alpha\int_{P}K\,dA$. On a cut, $K\,dA$ is exact: $K\,e^{2}\wedge e^{3} = d\omega_{\Sigma}$ with $\omega_{\Sigma}$ the cut's rotation-gauge field in any tangent frame. So $S_{E}[P]$ is an edge quantity, $\alpha$ times the holonomy angle of the cut's own rotation-gauge field around the edge, measured against a frame smooth on $P$, unchanged by smooth frame rotations and shifted by $-2\pi\alpha w$ for a frame winding $w$ times along the edge. As a reading, in an adapted frame this is the Chern-Simons wall counterterm one dimension down: the gauge variation of $Q(\omega)$ under the cut's binormal is $4\,d\omega^{23}$, and on admissible cuts $R^{23} = d\omega^{23}$ there.
+Take the series' Lagrangian $(R - 2\Lambda + \alpha E_{4})/16\pi$, $\alpha = -3/(4\Lambda)$, and read the entropy of a patch $P$ of a cut as the Jacobson-Myers functional, $A(P)/4$ plus the Euler part $S_{E}[P] = \alpha\int_{P}K\,dA$. On a cut, $K\,dA$ is exact: $K\,e^{2}\wedge e^{3} = d\omega_{\Sigma}$ with $\omega_{\Sigma}$ the Cartan form of the cut's rotation-gauge field $\Omega_{\Sigma} = -\omega_{\Sigma}J$ in any tangent frame ($\mathcal{R}_{\Sigma}(J) = KJ$). So $S_{E}[P]$ is an edge quantity, $\alpha$ times the holonomy angle of the cut's own rotation-gauge field around the edge, measured against a frame smooth on $P$, unchanged by smooth frame rotations and shifted by $-2\pi\alpha w$ for a frame winding $w$ times along the edge. As a reading, in an adapted frame this is the Chern-Simons wall counterterm one dimension down: the gauge variation of $Q(\omega)$ under the cut's binormal is $4\,d\omega^{23}$, and on admissible cuts $R^{23} = d\omega^{23}$ there.
 
 By Gauss-Bonnet, $S_{E}[P] + \alpha(\oint k_{g}\,ds + \sum\varepsilon_{j}) = 2\pi\alpha\chi(P)$. With this geodesic-curvature edge term added (the two-dimensional Gibbons-Hawking term, a choice within the edge ambiguity of the Noether charge on open patches, argued not derived), the Euler part of every patch is the constant $-3\pi\chi(P)/(2\Lambda)$, so entropy changes along a local horizon are $\delta A/4$: on radial Schwarzschild-de Sitter generators the change is zero, matching the zero heat flux, where the bare density changes as $-3M/(2\Lambda r^{3})$. No additive edge term built from the field and the cut removes the constant (on a sphere cut into two disks the edge terms cancel and $4\pi\alpha$ is left); a frame-relative edge term moves it into the clutching winding $\chi$ of the cap frames. On closed cuts every choice leaves the stored shift $-3\pi\chi/(2\Lambda)$, which the normalisation (Z) or nonnegativity removes; on open patches, for $\Lambda > 0$, it makes the edge-corrected entropy negative on every disk patch of area below $6\pi/\Lambda$. So, with that edge term, the action and Clausius routes agree on entropy changes and differ by one topological constant; the integrated reading of (Loc) excludes it, transport does not. Transport-absent: the series supplies only $\alpha$.
 

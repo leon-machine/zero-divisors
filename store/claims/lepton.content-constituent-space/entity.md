@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - lepton.imported-automorphism-group-section-hypercharge-generator@3
+  - lepton.imported-automorphism-group-section-hypercharge-generator@4
   - lepton.imported-duality-pair-system@3
   assumes:
   - lepton.hyp-c-constituent@2

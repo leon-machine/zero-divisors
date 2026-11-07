@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-point-spectrum-on-positive-energy-modules
 kind: claim
-version: 1
+version: 2
 title: 'The operator join''s point spectrum is bounded away from zero'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, normalisation hypothesis stated in the sharpness paragraph at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@3
+  - synthesis.operator-join-ordering-constants@4
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@2
-  - synthesis.operator-join-casimir-shifts@2
+  - synthesis.operator-join-casimir-shifts@3
   - mass.exact-join@8
   - field-theory.twistor-attachment@6
   proof: proof-main.tex
@@ -49,6 +53,14 @@ lineage:
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.operator-join-casimir-shifts repinned 2 -> 3 after reviewing its B6 restatement (clause (iii) and the closing sentence now hold under an explicitly stated, unproved normalisation hypothesis; (i) and (ii) are unchanged); the use here holds as cited.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item B6 (routine): the sharpness paragraph of the proof now states the normalisation hypothesis of synthesis.operator-join-casimir-shifts (iii) (the de Sitter Casimir in the imported scalar-module normalisation, with no shift), says it is not proved, and that the bound and its sharpness use only the central constant and the ordered Casimirs of that Proposition''s (i), (ii) (as the check''s join-as-Casimirs function does), not that hypothesis. A hypothesis made explicit; statement unchanged.'
   open_problem: op.operator-join
   note: >-
     Answers the reformulated question in the negative on the positive-energy modules, the problem's

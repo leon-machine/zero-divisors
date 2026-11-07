@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   - singularity.chains-state-class-stability@7
   proof: proof-main.tex
 checked_by:

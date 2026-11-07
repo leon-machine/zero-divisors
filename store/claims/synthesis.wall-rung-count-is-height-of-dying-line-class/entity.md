@@ -1,7 +1,7 @@
 ---
 id: synthesis.wall-rung-count-is-height-of-dying-line-class
 kind: claim
-version: 1
+version: 2
 title: 'A tame wall''s rung count and the height of its dying line''s class'
 status: proved
 region: synthesis
@@ -17,14 +17,18 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: consistency pass, torus-wall half-angle sine renamed sigma, freeing s for G^{-1}(u,u)
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
 derivations:
 - name: main
   uses:
-  - synthesis.wall-class-one-rung-obstruction@2
-  - synthesis.twisted-wall-induction-conserves-dying-line-class@1
+  - synthesis.wall-class-one-rung-obstruction@3
+  - synthesis.twisted-wall-induction-conserves-dying-line-class@2
   - sheaf.one-sided-completion@4
   - sheaf.tame-wall-induction@5
   - sheaf.degeneration-sheaf@6
@@ -49,6 +53,10 @@ lineage:
   - sheaf.wall-class
   - synthesis.wall-class-one-rung-obstruction
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "In the proof the torus-wall paragraph wrote the half-angle pair as (c, s) while s is G^{-1}(u,u) in clause (2) and in F; the sine is now sigma, as in synthesis.twisted-wall-induction-conserves-dying-line-class, a pure notation change."
   open_problem: op.wall-class-invariant
   note: >-
     Cross-subject input: stable real line bundles (Whitney product formula, the cohomology ring of

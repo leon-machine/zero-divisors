@@ -1,7 +1,7 @@
 ---
 id: std-algebra.rotors-beyond-exponentials
 kind: claim
-version: 2
+version: 3
 title: Rotors that are not plus or minus an exponential when min(p, q) >= 2
 status: proved
 region: std-algebra
@@ -19,6 +19,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, the (2,2) volume element no longer written I_4'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.std-algebra.rotor
@@ -27,7 +31,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.bivector-lie-algebra@1
-  - std-algebra.bivector-exponential@3
+  - std-algebra.bivector-exponential@4
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.bivector-exponential-in-spin@2
   proof: proof-main.tex
@@ -47,6 +51,10 @@ locators:
   - key: DoranLasenby2003
     locator: 'Ch. 4 (foundations of geometric algebra: rotors, versors)'
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Unit-name clash: the proof of (ii) called e_1e_2e_3e_4 of a (2,2) block I_4, the store''s reserved name for the spacetime pseudoscalar gamma_0gamma_1gamma_2gamma_3 (square -1); this element squares to +1 (exact check in scratch). Renamed omega_4. Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

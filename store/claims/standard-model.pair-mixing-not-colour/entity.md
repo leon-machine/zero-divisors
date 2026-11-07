@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.connection-forced@4
+  - standard-model.connection-forced@5
   - standard-model.imported-maximal-compact-subgroups@1
   proof: proof-main.tex
 checked_by:

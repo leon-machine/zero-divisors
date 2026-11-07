@@ -54,6 +54,8 @@ _INDEX_AFTER = re.compile(r"\s*(=|\\in\b|\\ne(q)?\b|<|>|\\le(q)?\b|\\ge(q)?\b|\\
 _INDEX_AFTER2 = re.compile(r"\s*(\\notin\b|\\leftrightarrow\b|\\\}|:|/\s*[0-9]|\^\{?([-+0]|\\[mp][pm])\}?|\s*(\\,|\\;)?\s*[a-z]\s*\})")
 _INDEX_BEFORE = re.compile(r"(\\setminus|\\\{|\\ket\{|\\bra\{|\\ne(q)?|\\mathbf\{|[_^]?\{[0-9]|^\s*0)\s*$"
                            r"|\\(mu|nu|alpha|beta|rho|sigma)\s*=\s*$")
+# a numeral times the unit times a capital or a matrix, 3iI_2, 2iJ; the Gaussian field Q(i)
+_UNIT_EXTRA = re.compile(r"(?<![A-Za-z\\_^{])[0-9]+\s*i(?=[A-Z]|\\mathbb|\\mathsf)|(\\mathbb\{Q\}|(?<![A-Za-z\\])Q)\(\s*i\s*\)")
 # an i followed by a letter where it can only be the unit: e^{it}, \Delta^{is}, \exp(it ...), \alpha_{i\beta}
 _UNIT_BEFORE_LETTER = re.compile(
     r"\^\{\s*-?\s*[0-9]*\s*(\\pi)?\s*i\s*[a-zA-Z\\(]|\\exp\s*(\\left|\\bigl|\\Bigl)?\(\s*-?\s*[0-9]*\s*(\\pi)?\s*i\s*[a-zA-Z\\(]"
@@ -70,6 +72,10 @@ def bare_unit_hits(text):
             continue
         if re.search(r"\(\s*i\s*[-+]\s*1\s*\)", seg):
             continue                                      # i is an index throughout: (i+1)(d-1-i)
+        for u in _UNIT_EXTRA.finditer(seg):
+            out.append(seg[max(0, u.start() - 12):u.end() + 8])
+        if re.fullmatch(r"\s*-?\s*i[a-hopq-z]\s*", seg):
+            out.append(seg)                               # a unit times a letter alone: $iq$
         for u in _UNIT_BEFORE_LETTER.finditer(seg):
             ctx_before = seg[max(0, u.start() - 12):u.start()]
             if not u.group(0).startswith("_{i\\beta") and re.search(r"_\{\s*$", ctx_before):

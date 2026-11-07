@@ -1,7 +1,7 @@
 ---
 id: synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
 kind: claim
-version: 2
+version: 3
 title: 'Wald entropy changes without flux on local horizons, against (Loc)'
 status: proved
 region: synthesis
@@ -17,18 +17,31 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: field strength of the SdS gauge field in the PG chart, sectional curvature as <calR(B) B^-1>, surface gravity as (xi.D)xi; G6 applied; exact checks'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): the cross-section sentence of proof (i) corrected, the sectional-curvature convention stated, outside_ga made exact; check tightened'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.euler-term-horizon-entropy-shift@4
+  - synthesis.euler-term-horizon-entropy-shift@5
   - synthesis.imported-wald-noether-charge-entropy@3
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.imported-raychaudhuri-null-congruence@2
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.sds-clausius-fixes-area-constant@4
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.sds-clausius-fixes-area-constant@5
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -39,11 +52,31 @@ checked_by:
   ref: check.py::check_entropy_change_without_flux
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_sds_field_strength_on_radial_generators
+- kind: check
+  ref: check.py::check_gtg_horizon_cross_section_surface_gravity_and_value
 lineage:
   motivated_by:
   - synthesis.euler-term-horizon-entropy-shift
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Proof (i) said that on the cross-section {t = t_0, r = r_b} of the horizon locus both null second fundamental forms vanish (Killing horizon); the sentence came with item G6 and is false off the bifurcation surface. Computed exactly with the SdS PG field at three rational horizons (r_b, Lambda) = (1, 3/4), (2, 3/16), (1/2, 3/2): chi^(xi)(e_A, e_B) = e_B . ((e_A . D) xi) = 0 for A, B in {2, 3}, while the expansion of n = e_0 - e_1 is -4/r_b. The step needs only chi^(xi) = 0 (formula (i) with k = xi), so the sentence now says that, with the other normal''s expansion and the bifurcation surface named; the value A/4 - 3 pi/Lambda is unchanged. check_gtg_horizon_cross_section_surface_gravity_and_value now asserts chi^(xi) = 0 and theta_n = -4/r_b (mutants: xi -> e_0 - beta e_1, n -> xi, and a forced failure of the chi assertion all fail). The formal level is not affected: its (i) assumes only that the second fundamental form along one null normal vanishes, and its cross-section clause names xi. (2) The proofs "positive on round spheres in either convention" replaced by the exact statement: K = <calR(B) B^{-1}> is the sectional curvature for the planes positive-definite induced metric because the vectors of a spacelike plane of Cl(1,3) square to -1 (B^2 = -1); on a plane whose vectors square to +1 the stores sign gives -K (checked on S^2 in Cl(2,0) and Cl(0,2): calR(J) = -J and +J). (3) outside_ga widened to the formal levels component displays (F_abcd, R(k, A, k, B), R(k, A, B, C), k_pm in static coordinates, signature (-,+,+,+)), whose GA forms are in the proof. (4) uses: synthesis.imported-gtg-dictionary@2 added (C11 and clauses (i), (ii), (iv) are cited for the translation steps); synthesis.c-loc-local-horizon-premise is a postulate and not added (listed for Leon; the result refutes (W_loc) against it and does not rest on it). Repinned euler-term-horizon-entropy-shift 4 -> 5 (GA notation for the Euler form; the cited (i), (ii) values hold), einstein-equations-from-c-loc-and-clausius 7 -> 8 (a clause label), sds-clausius-fixes-area-constant 4 -> 5 (formal unchanged). Version kept at 3.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item G6 (DECISIONS.md, Leon 7 November): proof (i) evaluates on a cross-section {t = t_0, r = r_b} of the horizon locus in the Painleve-Gullstrand chart in place of the bifurcation sphere (the item''s parenthetical, both null second fundamental forms vanish on the Killing horizon, was false and is corrected by maintainer_pass_gtg_review: only the one along xi vanishes), as the formal level and the dictionary''s bifurcation rule have it. Wording in the proof; the value A/4 - 3 pi/Lambda is unchanged (checked at three rational horizons by check_gtg_horizon_cross_section_surface_gravity_and_value).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG (store signature; the quantities used, K = <calR(B) B^{-1}> of a spacelike plane, K - Lambda/3 and the vanishing of (k ^ B) . calR(k ^ A), are the same in the statement''s signature): SdS in the PG chart, calR(B) = (M/2r^3)(B + 3 sigma B sigma) + (Lambda/3) B, K = 2M/r^3 + Lambda/3 on e_2 ^ e_3, calR(k ^ A) = (Lambda/3 - M/r^3) k ^ A for k radial null and A transverse, so R(k, A, k, B) = R(k, A, B, C) = 0; k_+ = (e_0 + e_1)/(1 - beta), k_- = (e_0 - e_1)/(1 + beta); the transverse frame is D-parallel along both (Omega(hb(e_1)) = -beta'' e_1 e_0 commutes with e_2, e_3). Item G6 applied (maintainer_pass_decisions): proof (i) on a cross-section {t = t_0, r = r_b} of the horizon locus in the PG chart, with xi = hb^{-1}(e_t) null and (xi.D)xi = kappa_b xi there. The Christoffel computation is kept as a labelled reading. Checked exactly: check_gtg_sds_field_strength_on_radial_generators (three points of the static region: Ricci map Lambda a, the transverse eigenvalue, the two vanishing contractions for both signs, sectional curvature unchanged at three tilts, transverse frame parallel, the density -3M/(2 Lambda r^3); de Sitter K = Lambda/3 on two planes) and check_gtg_horizon_cross_section_surface_gravity_and_value (three rational horizons: beta = 1, xi null, (xi.D)xi = (f''(r_b)/2) xi, and 4 r_b^2 s = r_b^2 - 3/Lambda in units of pi). Version kept at 3 (already above the lock in this run). outside_ga narrowed to the component Gauss and Sachs equations.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The Wald-entropy computation works in the components of the Riemann tensor of the derived metric (F_abcd, h^{ac} h^{bd} R_{abcd}, binormals) in the source''s signature (-,+,+,+), as the Wald formula is stated; the components are the computation.'
   open_problem: op.horizon-entropy-functional
   note: >-
     Settles the open-patch question left by the Euler-term result: whether the topological shift of the
@@ -67,6 +100,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Lagrangian is that of a gravitational field on flat spacetime, the Cartan curvature is the Lorentz block of the MacDowell-Mansouri field strength (R(B) - (Lambda/3) B in the store''s sign), de Sitter space is the de Sitter field, and Schwarzschild-de Sitter is the field in the Painleve-Gullstrand gauge beta^2 = 1 - f. Following Leon''s decision on bifurcation surfaces (DICTIONARY), the integral over the bifurcation sphere in (i) is restated on a cross-section of the horizon locus r = r_b in the Painleve-Gullstrand chart (same area, same surface gravity, same value A/4 - 3 pi/Lambda), with the note that the bifurcation surface itself is beyond one chart. Signature (-,+,+,+) kept as declared. Clauses (i) to (iii) and their strength unchanged; proof given a pointer to the dictionary Fact. Fix (referee GR1, 2026-10-23): the Killing field renamed xi (K is the sectional curvature) with kappa_b = f''(r_b)/2 defined; F is minus the Lorentz block of the MacDowell-Mansouri field strength, matching the Fact''s -(R(B) - B/l^2).'
+outside_ga:
+  kind: other
+  why: 'The Gauss equation of the cut and the Sachs equation are used in their component form (h^{ac} h^{bd} R_abcd, chi_AB, theta), as the standard Gauss equation and the imported Raychaudhuri Fact state them, and the formal level states the Cartan curvature F_abcd, the contractions R(k, A, k, B) and R(k, A, B, C) and the generators k_pm = f^{-1} d_t pm d_r in components in the source''s signature (-,+,+,+); their GA forms (K - Lambda/3 = <(calR(B) - Lambda/3 B) B^{-1}>, (k ^ B) . calR(k ^ A), (B ^ C) . calR(k ^ A), k_pm = (e_0 pm e_1)/(1 mp beta)) and the curvature computation itself are in the proof, in GTG.'
 ---
 
 ## formal

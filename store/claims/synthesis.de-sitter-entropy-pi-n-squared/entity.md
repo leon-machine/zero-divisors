@@ -28,9 +28,9 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-gibbons-hawking-entropy@3
-  - standard-model.imported-frozen-point-dictionary@8
-  - synthesis.de-sitter-static-boost-frozen-point@5
-  - synthesis.cosmological-horizon-completed-pair@3
+  - standard-model.imported-frozen-point-dictionary@9
+  - synthesis.de-sitter-static-boost-frozen-point@6
+  - synthesis.cosmological-horizon-completed-pair@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -41,6 +41,10 @@ lineage:
   motivated_by:
   - standard-model.what
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'One-liner: Q(I) is written Q(I_Lambda), the frozen point of the formal level, so that the bare I is not read as the pseudoscalar; no version change.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -79,4 +83,4 @@ The series' number $N$ is the Planck mass over the Hubble rate of the cosmologic
 The series condenses the smallness of the cosmological constant into one large number, $N$, about $10^{61}$. The entropy of the cosmological horizon, the standard measure of how much information the observable universe's horizon can hold, comes out as exactly $\pi$ times $N$ squared, about $3 \times 10^{122}$. No counting assumption is needed for this: it follows from the standard area law of Einstein's theory, which the series imports. The series' own form of the gravitational action, as written, would give zero instead, because an extra topological term in it subtracts the same amount.
 
 ## one-liner
-Under the imported Einstein-Hilbert area law, the cosmological horizon's entropy is exactly $\pi N^{2} = \pi M_{P}^{2}/Q(I)$ (and $\pi(N_{w}^{2} + 9/4)$ with $N_{w} = \operatorname{Im} w(M_{P})$).
+Under the imported Einstein-Hilbert area law, the cosmological horizon's entropy is exactly $\pi N^{2} = \pi M_{P}^{2}/Q(I_{\Lambda})$ (and $\pi(N_{w}^{2} + 9/4)$ with $N_{w} = \operatorname{Im} w(M_{P})$).

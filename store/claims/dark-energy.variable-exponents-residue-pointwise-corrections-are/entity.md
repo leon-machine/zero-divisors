@@ -1,7 +1,7 @@
 ---
 id: dark-energy.variable-exponents-residue-pointwise-corrections-are
 kind: claim
-version: 4
+version: 5
 title: 'Variable exponents: the residue is pointwise, the corrections are subleading'
 status: proved
 region: dark-energy
@@ -17,14 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (connection one-forms as the bivectors Omega(hb(gamma_a)))
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - dark-energy.wall-counterterm@4
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - dark-energy.wall-counterterm@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,6 +47,10 @@ locators:
   label: lem:varexp
   line: 953
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA: the connection is stated on the physical frame, omega(gamma_0) = 0, omega(gamma_i) = -(p_i/tau) B_i - log(tau) hb^T(grad p_i) ^ gamma_i, with hb^T(grad p_i) = -sum_j tau^{-p_j} (d_j p_i) gamma_j the physical gradient of the exponent; the one-forms and the coframe stay as a labelled component reading (formal, technical); the proof solves the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) term by term and states the order counting on the physical frame planes. Equivalence checked exactly with lib/GA.py and lib/gtg.py in the maintainer scratch: at the four points and two log placeholders of the check, the closed GA form equals the bivectors the check assembles from the stored one-forms and satisfies the GA structure equation, and the opposite sign does not. Mathematics unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,15 +69,15 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric is $g = d\tau^2 - \sum_i\tau^{2p_i(x)}(dx^i)^2$, with smooth exponents $p_i(x)$ taking values in the open Kasner circle ($\sum p_i = 1 = \sum p_i^2$, all $p_i < 1$), and let $e^0 = d\tau$, $e^i = \tau^{p_i(x)}dx^i$ be the orthonormal coframe of $g$. Then the rotation-gauge field $\Omega$, written as the connection one-forms of $g$ in this coframe (its Levi-Civita connection), is
+Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) given by $\hb^{-1}(e_0) = \gamma_0$, $\hb^{-1}(e_i) = \tau^{p_i(x)}\gamma_i$ on the background frame of the labels $(\tau, x^i)$ (derived metric, in components, $g = d\tau^2 - \sum_i\tau^{2p_i(x)}(dx^i)^2$), with smooth exponents $p_i(x)$ taking values in the open Kasner circle ($\sum p_i = 1 = \sum p_i^2$, all $p_i < 1$), physical frame $\{\gamma_0, \gamma_i\}$, $B_i = \gamma_0\wedge\gamma_i$, and $\hat\nabla p_i := \hb^{T}(\nabla p_i) = -\sum_j \tau^{-p_j}(\partial_j p_i)\,\gamma_j$ the physical gradient of the exponent. Then the rotation-gauge field on the physical frame, $\omega(\gamma_a) := \Omega(\hb(\gamma_a))$ (its Levi-Civita connection), is
 \[
-\omega^{i0} \;=\; \frac{p_i(x)}{\tau}\,e^i, \qquad
-\omega^{ij} \;=\; \log\tau\;\Bigl[(\partial_i p_j)\,\tau^{-p_i}\,e^j \;-\; (\partial_j p_i)\,\tau^{-p_j}\,e^i\Bigr] ,
+\omega(\gamma_0) = 0, \qquad
+\omega(\gamma_i) \;=\; -\frac{p_i(x)}{\tau}\,B_i \;-\; \log\tau\;\hat\nabla p_i\wedge\gamma_i
 \]
-so the boost block is the pointwise Kasner pole with no correction, and the tangential block is singular of order $\tau^{-p_{\max}}|\log\tau|$ with $p_{\max} := \max_j p_j < 1$: subleading to the pole. Every term of the field strength $\mathcal{R}(B)$ beyond the Kasner double pole of Proposition \claimref{dark-energy.frozen-point-datum-kasner-wall}(i) is of relative order $\tau^{1-p_{\max}}|\log\tau|^m$, $m \leq 2$, and tends to zero: the leading field equations at the wall are the Kasner relations pointwise in $x$, the residue of the datum's pole is the pointwise Kasner boost, and the wall counterterm of Proposition \claimref{dark-energy.wall-counterterm} has density $8\,p_1p_2p_3(x)\,\varepsilon^{-2}d^3x$ pointwise.
+(in components, a labelled reading: the connection one-forms $\omega^{i0} = (p_i(x)/\tau)\,e^i$ and $\omega^{ij} = \log\tau\,[(\partial_i p_j)\,\tau^{-p_i}\,e^j - (\partial_j p_i)\,\tau^{-p_j}\,e^i]$ of the coframe $e^0 = d\tau$, $e^i = \tau^{p_i(x)}dx^i$), so the boost block is the pointwise Kasner pole with no correction, and the tangential block is singular of order $\tau^{-p_{\max}}|\log\tau|$ with $p_{\max} := \max_j p_j < 1$: subleading to the pole. Every term of the field strength $\mathcal{R}(B)$ beyond the Kasner double pole of Proposition \claimref{dark-energy.frozen-point-datum-kasner-wall}(i) is of relative order $\tau^{1-p_{\max}}|\log\tau|^m$, $m \leq 2$, and tends to zero: the leading field equations at the wall are the Kasner relations pointwise in $x$, the residue of the datum's pole is the pointwise Kasner boost, and the wall counterterm of Proposition \claimref{dark-energy.wall-counterterm} has density $8\,p_1p_2p_3(x)\,\varepsilon^{-2}d^3x$ pointwise.
 
 ## technical
-Take a gravitational field on flat spacetime whose derived metric is $g = d\tau^2 - \sum_i \tau^{2p_i(x)}(dx^i)^2$, with smooth exponents in the open Kasner circle ($\sum_i p_i = 1 = \sum_i p_i^2$, all $p_i < 1$), and coframe $e^0 = d\tau$, $e^i = \tau^{p_i(x)}dx^i$. Its rotation-gauge field, read as connection one-forms, has boost block $\omega^{i0} = (p_i(x)/\tau)\,e^i$, the pointwise Kasner pole with no correction, and a tangential block built from $\log\tau$ times the gradients of the exponents, of order $\tau^{-p_{\max}}|\log\tau|$ with $p_{\max} = \max_j p_j < 1$, hence subleading to the pole.
+Take a gravitational field on flat spacetime with $\hb^{-1}(e_0) = \gamma_0$, $\hb^{-1}(e_i) = \tau^{p_i(x)}\gamma_i$ (derived metric $d\tau^2 - \sum_i \tau^{2p_i(x)}(dx^i)^2$), with smooth exponents in the open Kasner circle ($\sum_i p_i = 1 = \sum_i p_i^2$, all $p_i < 1$). On the physical frame its rotation-gauge field is $\Omega(\hb(\gamma_i)) = -(p_i(x)/\tau)\,\gamma_0\wedge\gamma_i - \log\tau\,\hb^{T}(\nabla p_i)\wedge\gamma_i$: a boost block that is the pointwise Kasner pole with no correction, and a tangential block built from $\log\tau$ times the physical gradients of the exponents, of order $\tau^{-p_{\max}}|\log\tau|$ with $p_{\max} = \max_j p_j < 1$, hence subleading to the pole.
 
 Every term of the field strength beyond the Kasner double pole has relative order $\tau^{1 - p_{\max}}|\log\tau|^m$ with $m \leq 2$ and tends to zero. So the leading field equations at the wall are the Kasner relations pointwise in $x$, the residue of the datum's pole is the pointwise Kasner boost, and the wall counterterm has density $8\,p_1p_2p_3(x)\,\varepsilon^{-2}d^3x$ pointwise.
 

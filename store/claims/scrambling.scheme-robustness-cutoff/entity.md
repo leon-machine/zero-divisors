@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@5
+  - interior.kasner-form-interior@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -3,4 +3,8 @@ functions:
     kind: sampled
     clauses: [(i), (ii), (iii), (iv), (v)]
     omits: 'Exact Cl(2,4) arithmetic at five Hubble rates and sample points: (i) the constant -Lambda/3 curvature (the (+,-,-,-) convention of the statement) is computed from Christoffel symbols at four spacetime points per Lambda; (ii) the differential of X/sigma on six rational points of the bifurcation sphere; (iii) the CAR pair, projectors, rotor action v -> q^{-2} v at four q and the future-directed origin motion; (iv) v, v* as X(-+2e0/H) exactly; (v) the mirror pair and definiteness or degeneracy of the plane for Lambda = 0, -3, -12/5. Not tested: that the pair is the only one up to a phase (only rescalings of the same rays and the opposite ray are tried), and the identification of the static Killing flow of the observer with the rotor flow beyond the sampled q.'
+  check_gtg_dilation_field_curvature_selects_no_plane:
+    kind: sampled
+    clauses: ["(i) the curvature of the scale is (Lambda/3) id in the store sign, Weyl zero, and -Lambda/3 in the round-sphere-positive convention"]
+    omits: "three Hubble rates at three rational points each; the field and its connection are exact jets there, not symbolic in x"
 judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Every displayed identity is reproduced exactly at sample Lambda and points; the uniqueness-up-to-phase clause is only partly tested.}

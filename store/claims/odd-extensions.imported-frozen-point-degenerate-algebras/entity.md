@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
+  - dark-energy.imported-frozen-point-geometry@7
   - sheaf.degeneration-sheaf@6
   - sheaf.one-sided-completion@4
   - sheaf.resolution-ideal-theoretically@4
@@ -42,6 +42,10 @@ locators:
   label: fact:null
   line: 569
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

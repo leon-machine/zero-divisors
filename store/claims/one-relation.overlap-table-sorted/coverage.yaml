@@ -7,7 +7,7 @@ functions:
   check_pair_count_is_the_complex_capacity:
     kind: exact
     clauses:
-    - (ii) "the pair count (n+2)/2 = 3 at n = 4 is the maximal isotropic dimension of the complexified ascended space"
+    - Reading (ii) "the pair count (n+2)/2 = 3 at n = 4 is the maximal isotropic dimension of the complexified ascended space"
     omits: the equality is an identification, which the check does not touch beyond exhibiting the dimension 3 with U-perp = U; (iii) and the constants placement are readings
 untouched_premises:
   std-algebra.periodicity: "standard algebra cited in the proof; the check computes the statement directly"

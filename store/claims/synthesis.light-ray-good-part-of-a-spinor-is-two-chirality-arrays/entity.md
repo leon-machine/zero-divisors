@@ -1,7 +1,7 @@
 ---
 id: synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays
 kind: claim
-version: 4
+version: 5
 title: 'The light-ray good part of a spinor is two chirality arrays'
 status: proved
 region: synthesis
@@ -25,13 +25,17 @@ credit:
   role: premises repointed to the premise-free results split out of the null-energy and collapse results
   version: 4
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
-  - field-theory.second-quantisation@5
-  - field-theory.where-each-lives@3
+  - field-theory.second-quantisation@6
+  - field-theory.where-each-lives@4
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.half-integer-weight-array-carries-half-ln2@5
   - synthesis.residue-from-mode-entropy@4
@@ -60,6 +64,10 @@ lineage:
   - synthesis.capacity-per-mode-independent-of-helicity
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_clause_split_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'

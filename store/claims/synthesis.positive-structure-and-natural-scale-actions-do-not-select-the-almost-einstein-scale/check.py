@@ -11,21 +11,29 @@ the stored de Sitter tractor n_inf + (L/6) n0.
     (Lambda = 0, e.g. n_inf) lies in neither span. Tabulated scales: I = nu gives (1 - Q)/2 (de Sitter, L = 12),
     I = e0 gives t, I = e- gives (1 + Q)/2 (anti de Sitter).
 (2) Yamabe obstruction: for g = phi^2 eta (phi = 1/sigma) the Ricci tensor computed exactly from the Christoffel
-    symbols at rational points satisfies sqrt|g| R = -6 phi box phi, so the Einstein-Hilbert action restricted to
-    the class is int (6 eta(d phi, d phi) - 2 Lambda phi^4), with the single Euler-Lagrange equation
-    box phi = -(2/3) Lambda phi^3 (the trace R = 4 Lambda). Counter-model phi = 1 + x1 x2 (Lambda = 0): box phi = 0,
+    symbols at rational points has the index convention's (round-sphere-positive) scalar R^o with
+    sqrt|g| R^o = -6 phi box phi; the store-sign scalar is calR = -R^o, sqrt|g| calR = 6 phi box phi (also computed
+    in GTG from the dilation field, (4)), so the Einstein-Hilbert action restricted to the class is
+    int (-6 eta(d phi, d phi) - 2 Lambda phi^4), with the single Euler-Lagrange equation
+    box phi = (2/3) Lambda phi^3 (the trace calR = 4 Lambda). Counter-model phi = 1 + x1 x2 (Lambda = 0): box phi = 0,
     so R = 0 everywhere, while the trace-free Ricci tensor is nonzero at every sample point: a stationary scale
     that is not almost-Einstein.
 (3) Tractor Dirichlet functional S[sigma] = int H0 : H0, H0 the trace-free Hessian (the middle slot of the
     derivative of D sigma in the flat splitting): Euler-Lagrange equation (3/2) box^2 sigma = 0; sigma = 1 + x1 x2
-    is stationary with H0 != 0; sigma = (t + x1)^2 has H0 = 2 l l (l null) != 0 and H0 : H0 = 0, so in Lorentzian
+    is stationary with H0 != 0; sigma = (t + x1)^2 has H0(a) = 2 (a . l) l, l = grad(t + x1) = e0 - e1 null, so H0 != 0
+    and H0 : H0 = 0, so in Lorentzian
     signature even a vanishing action does not force parallelism.
+(4) The proof's GTG route: the dilation field hb^{-1}(a) = phi a on exact jets (lib/gtg.py), Omega solved from the
+    torsion equation equals a ^ grad ln phi, the store-sign scalar is 6 box phi/phi^3 and the Ricci map
+    (2 K(b) + tr K b)/phi^2; the de Sitter scale phi = 1/(1 - Lambda Q/12) has box phi = (2/3) Lambda phi^3; the
+    tractor derivative D_a D sigma = H0(a) - (1/4)(a . grad box sigma) n0 and its Cl(2,4) contraction H0 : H0.
 Controls: a perturbed Z, phi = 1 + x1^2 (box phi != 0), sigma = 1 - Q(x)/2 (almost-Einstein, H0 = 0).
 """
 from fractions import Fraction as F
 from itertools import product
 
 import GA
+import gtg
 from tp_premise import premise
 
 SQ = (1, -1, -1, -1, 1, -1)
@@ -195,7 +203,8 @@ def check_yamabe_stationary_scale_is_not_almost_einstein():
         for x in pts:
             f, Ric = _ricci_conformal(phi, x)
             Rs = sum(ETA[a] * Ric[a][a] for a in range(4)) / f ** 2           # g^{ab} R_ab
-            GA.check("sqrt|g| R = -6 phi box phi (%s, %s)" % (name, x), f ** 4 * Rs == -6 * f * _ev(_box(phi), x))
+            GA.check("store sign: sqrt|g| calR = 6 phi box phi, calR = -R^o (%s, %s)" % (name, x),
+                     f ** 4 * (-Rs) == 6 * f * _ev(_box(phi), x))
             GA.check("R = 0: stationary for the class-restricted action at Lambda = 0", Rs == 0)
             tf = [[Ric[a][b] - (Rs * f ** 2 / 4) * (ETA[a] if a == b else 0) for b in range(4)] for a in range(4)]
             GA.check("trace-free Ricci nonzero: not almost-Einstein (%s, %s)" % (name, x),
@@ -206,7 +215,7 @@ def check_yamabe_stationary_scale_is_not_almost_einstein():
     for x in pts:
         f, Ric = _ricci_conformal(ctrl, x)
         Rs = sum(ETA[a] * Ric[a][a] for a in range(4)) / f ** 2
-        GA.check("control identity sqrt|g| R = -6 phi box phi", f ** 4 * Rs == -6 * f * _ev(_box(ctrl), x))
+        GA.check("control identity, store sign: sqrt|g| calR = 6 phi box phi", f ** 4 * (-Rs) == 6 * f * _ev(_box(ctrl), x))
         GA.check("control R != 0", Rs != 0)
     # control: the Einstein scale phi = 1/sigma with sigma = 1 - Q/12 * L ... use the de Sitter phi^2 eta,
     # phi = 1/(1 - Q/12) is not polynomial; instead Minkowski phi = 1 has Ric = 0
@@ -278,3 +287,100 @@ def check_tractor_dirichlet_stationary_points_are_not_parallel():
     GA.check("control: perturbed coefficient gives H0 != 0",
              any(v != 0 for row in _tf_hess_at(bad, pts[1]) for v in row))
     return True
+
+
+def _jet_poly(p, X):
+    """The polynomial p (dict of exponent tuples) evaluated on label jets X."""
+    out = gtg.Jet.const(F(0), 4)
+    for m, c in p.items():
+        term = gtg.Jet.const(c, 4)
+        for i in range(4):
+            for _ in range(m[i]):
+                term = term * X[i]
+        out = out + term
+    return out
+
+
+def _grad(j):
+    """grad j = e^mu d_mu j as a vector with jet coefficients (e^mu = eta^{mu mu} e_mu)."""
+    return {(mu,): ETA[mu] * j.d(mu) for mu in range(4)}
+
+
+L_NULL = {(0,): F(1), (1,): F(-1)}          # l = grad(t + x1) = e^0 + e^1 = e0 - e1, null
+GTG_PTS = [(F(1, 2), F(1, 3), F(-2, 5), F(1)), (F(-1), F(2), F(1, 7), F(3, 4))]
+GTG_PHIS = [_poly([(ONE, 1), ((0, 1, 1, 0), 1)]),
+            _poly([(ONE, 1), ((1, 0, 0, 0), F(1, 3)), ((0, 2, 0, 1), 1), ((0, 0, 2, 1), -1)]),
+            _poly([(ONE, 1), ((0, 2, 0, 0), 1)])]
+GTG_SIGMAS = [_poly([(ONE, 1), ((0, 1, 1, 0), 1)]), _poly([((2, 0, 0, 0), 1), ((1, 1, 0, 0), 2), ((0, 2, 0, 0), 1)]),
+            _poly([((2, 1, 0, 0), 1), ((0, 3, 0, 0), F(1, 5)), ((1, 1, 1, 1), 2), ((4, 0, 0, 0), F(2, 3))])]
+
+
+def check_gtg_dilation_field_scalar_and_tractor_dirichlet():
+    """(ii) in GTG: the dilation field hb^{-1}(a) = phi a, Omega solved from the torsion equation equals
+    a ^ w (w = grad ln phi), the store-sign scalar is 6 box phi/phi^3 (sqrt|g| calR = 6 phi box phi) and the
+    Ricci map (2 K(b) + tr K b)/phi^2, K(a) = a . grad w - (w . a) w + Q(w) a/2; the de Sitter scale
+    phi = 1/(1 - Lambda Q/12) obeys box phi = (2/3) Lambda phi^3 (store sign). (iii) in Cl(2,4): with
+    Omega_T(a) = -ninf ^ a, D_a D sigma = H0(a) - (1/4)(a . grad box sigma) n0 and
+    sum_mu eta^{mu mu} <D_mu D sigma, D_mu D sigma> = H0 : H0; for sigma = (t + x1)^2, H0(a) = 2 (a . l) l with
+    l = grad(t + x1) = e0 - e1 null."""
+    premise("synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale")
+    premise("correspondence.imported-vacuum-equations-scale-tractor")
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    sq = gtg.S13
+    pts, phis = GTG_PTS, GTG_PHIS
+    for phi in phis:
+        for x in pts:
+            X = [gtg.Jet.var(i, x[i], 4, 3) for i in range(4)]
+            ph = _jet_poly(phi, X)
+            TH = [[ph if a == mu else F(0) for mu in range(4)] for a in range(4)]
+            fld = gtg.Field(TH)
+            lnw = {(mu,): ETA[mu] * ph.d(mu) / ph for mu in range(4)}          # w = grad ln phi, jets
+            w = gtg.m_val(lnw)
+            for mu in range(4):
+                ok = ok and GA.eq(fld.Omega(mu), gtg.wedge(GA.gen(mu), w, sq))
+            Rc = fld.curvature()
+            f, box = ph.v, _ev(_box(phi), x)
+            ok = ok and gtg.ricci_scalar(Rc) == 6 * box / f ** 3
+            ok = ok and f ** 4 * gtg.ricci_scalar(Rc) == 6 * f * box
+
+            def K(b):
+                Hb = gtg.m_val(gtg.m_add(*[gtg.m_scal(b.get((mu,), F(0)), gtg.m_d(lnw, mu)) for mu in range(4)]))
+                return GA.add(Hb, GA.scal(-gtg.vdot(w, b, sq), w), GA.scal(gtg.vdot(w, w, sq) / 2, b))
+            trK = sum((gtg.vdot(gtg.er(mu), K(GA.gen(mu)), sq) for mu in range(4)), F(0))
+            ok = ok and trK == box / f
+            for mu in range(4):
+                b = GA.gen(mu)
+                ok = ok and GA.eq(gtg.ricci(Rc, b), GA.scal(1 / f ** 2, GA.add(GA.scal(2, K(b)), GA.scal(trK, b))))
+    # de Sitter scale, Lambda = 3: box phi = 2 phi^3 (store sign), from the jet's second-order coefficients
+    for x in pts:
+        X = [gtg.Jet.var(i, x[i], 4, 2) for i in range(4)]
+        Qx = X[0] * X[0] - X[1] * X[1] - X[2] * X[2] - X[3] * X[3]
+        ph = 1 / (1 - Qx * F(3, 12))
+        box = sum(ETA[mu] * ph.d(mu).d(mu).v for mu in range(4))
+        ok = ok and box == F(2, 3) * 3 * ph.v ** 3
+    # (iii): the tractor derivative of D sigma in Cl(2,4)
+    sqc = gtg.S24
+    n0, ni = gtg.null_pair(sqc)
+    sigs = GTG_SIGMAS
+    for sg in sigs:
+        for x in pts:
+            X = [gtg.Jet.var(i, x[i], 4, 3) for i in range(4)]
+            sj = _jet_poly(sg, X)
+            boxj = sum((ETA[mu] * sj.d(mu).d(mu) for mu in range(4)), gtg.Jet.const(F(0), 4))
+            V = gtg.m_add(gtg.m_scal(sj, ni), _grad(sj), gtg.m_scal(boxj * F(-1, 4), n0))
+            H0 = _tf_hess_at(sg, x)
+            total = F(0)
+            for mu in range(4):
+                DV = GA.add(gtg.m_val(gtg.m_d(V, mu)), gtg.m_val(gtg.comm(GA.neg(gtg.wedge(ni, GA.gen(mu), sqc)), V, sqc)))
+                want = GA.add({(nu,): ETA[nu] * H0[mu][nu] for nu in range(4) if H0[mu][nu]},
+                              GA.scal(F(-1, 4) * boxj.d(mu).v, n0))
+                ok = ok and GA.eq(DV, want)
+                total += ETA[mu] * gtg.vdot(DV, DV, sqc)
+            ok = ok and total == _contract(H0)
+            if sg is sigs[1]:
+                for mu in range(4):
+                    Hm = {(nu,): ETA[nu] * H0[mu][nu] for nu in range(4) if H0[mu][nu]}
+                    ok = ok and GA.eq(Hm, GA.scal(2 * gtg.vdot(GA.gen(mu), L_NULL, sq), L_NULL))
+                ok = ok and gtg.vdot(L_NULL, L_NULL, sq) == 0
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_dilation_field_scalar_and_tractor_dirichlet"; return _tp_rv

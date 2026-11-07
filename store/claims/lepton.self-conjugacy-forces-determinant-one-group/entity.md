@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - lepton.content-constituent-space@4
-  - lepton.imported-automorphism-group-section-hypercharge-generator@3
+  - lepton.imported-automorphism-group-section-hypercharge-generator@4
   - lepton.imported-duality-pair-system@3
   proof: proof-main.tex
 checked_by:

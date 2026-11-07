@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.imported-s-wave-current-algebra-external@1
-  - singularity.bosonisation-bridge-s-wave-sector@7
+  - singularity.bosonisation-bridge-s-wave-sector@8
   - hawking.current-commutator-exactly-edge-split@4
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3

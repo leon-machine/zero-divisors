@@ -1,7 +1,7 @@
 ---
 id: singularity.descent-what-it-erases
 kind: claim
-version: 5
+version: 6
 title: The descent, and what it erases
 status: proved
 region: singularity
@@ -18,12 +18,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the matrix reading of the mode replaced by the CAR basis)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
   uses:
   - std-algebra.witt-basis-car@1
-  - std-algebra.cl11-matrix@1
+  - std-algebra.cl11-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -40,6 +44,10 @@ locators:
   label: prop:descent
   line: 1565
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The statement and proof now write the single-mode element as x = a vv* + b v + c v* + d v*v and the descent as x -> a vv* + d v*v, computed from the CAR (vv*, v, v*, v*v are matrix units in the mode algebra); the 2 x 2 matrices E_ij stay as a labelled reading. The matrix-unit table and the descent action were verified exactly with lib/GA.py in Cl(1,1) (v = (e0 + e1)/2, v* = (e0 - e1)/2). The citation of std-algebra.cl11-matrix is kept, for the matrix reading.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -66,22 +74,22 @@ extraction:
   unit_note: 'The imaginary unit here stays a scalar i: this atom is built in the spacetime radial plane
     sigma = e0 e1, where the field theory''s unit I4 anticommutes with the mode operators, so the convention
     i = I4 (which needs a plane orthogonal to spacetime) does not apply. Recorded 21 October 2026; see
-    store/conventions.md, known limit 1.'
+    store/conventions.md, known limit 1. Superseded on 7 November 2026 (version 6): no imaginary unit remains in
+    this entity, and on this radial atom the unit principle''s unit is J = e2 e3 (conventions, U2).'
 ---
 
 ## formal
-Set $P := v^* v$. Then $P^2 = P$, $1 - P = v v^*$, and in the defining $2 \times 2$ representation ($v = E_{12}$, $v^* = E_{21}$),
+Set $P := v^* v$. Then $P^2 = P$, $1 - P = v v^*$, and every element of the mode algebra is $x = a\,vv^{*} + b\,v + c\,v^{*} + d\,v^{*}v$ for unique scalars $a, b, c, d$. With
 \[
-P = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}, \qquad
 E(x) := P x P + (1{-}P)\,x\,(1{-}P), \qquad
-E\begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} .
+E\bigl(a\,vv^{*} + b\,v + c\,v^{*} + d\,v^{*}v\bigr) = a\,vv^{*} + d\,v^{*}v .
 \]
-Descent retains the occupation data and erases the coherences $b, c$.
+Descent retains the occupation data $a, d$ and erases the coherences $b, c$. (In the defining $2 \times 2$ representation, a labelled reading, $v = E_{12}$, $v^{*} = E_{21}$, $vv^{*} = E_{11}$, $P = E_{22} = \operatorname{diag}(0, 1)$, and $E$ sends the matrix with entries $a, b, c, d$ to $\operatorname{diag}(a, d)$.)
 
 ## technical
-With $P := v^* v$, the anticommutation relation and $v^2 = (v^*)^2 = 0$ give $P^2 = P$ and $1 - P = v v^*$. In the defining $2 \times 2$ representation, $v = E_{12}$ and $v^* = E_{21}$, so $P = \operatorname{diag}(0,1)$.
+With $P := v^* v$, the anticommutation relation and $v^2 = (v^*)^2 = 0$ give $P^2 = P$ and $1 - P = v v^*$. Every element of the mode algebra is $x = a\,vv^{*} + b\,v + c\,v^{*} + d\,v^{*}v$.
 
-The descent $E(x) := PxP + (1-P)\,x\,(1-P)$ sends the matrix with entries $a, b, c, d$ to $\operatorname{diag}(a, d)$: it retains the occupation data and erases the coherences $b, c$.
+The descent $E(x) := PxP + (1-P)\,x\,(1-P)$ sends $x$ to $a\,vv^{*} + d\,v^{*}v$: it retains the occupation data and erases the coherences $b, c$. In the defining $2 \times 2$ representation ($v = E_{12}$, $v^* = E_{21}$, $P = \operatorname{diag}(0,1)$) it keeps the diagonal of the matrix with entries $a, b, c, d$.
 
 ## lay
 A single fermionic mode can be described by a two-by-two matrix. The descent keeps the two diagonal entries, which record whether the mode is empty or occupied, and discards the two off-diagonal entries, which record quantum coherence between those two possibilities.

@@ -1,7 +1,7 @@
 ---
 id: interior.exact-parallelism-convergence-rate
 kind: claim
-version: 5
+version: 6
 title: Exact parallelism, and the convergence rate
 status: proved
 region: interior
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Christoffel computation as D on the physical frame)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the two frames named e_0..e_3 and e_mu distinguished (notation)'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -24,7 +32,7 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@5
+  - interior.kasner-form-interior@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,6 +51,14 @@ locators:
   label: lem:parallel
   line: 612
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5, ga-tensor): the formal uses e_0, ..., e_3 for the normalised physical frame and e_mu (e_tau, e_t, ...) for the background vectors in one statement; it now says which is which. No content change.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof step (1) is written with the covariant derivative D on the physical frame g_mu = hb^{-1}(e_mu) instead of Christoffel symbols: the Koszul identity for a torsion-free, product-preserving D gives D_{e_tau} g_i = (d_tau log a_i) g_i, which is the old Gamma^i_{tau i} = d_tau log a_i by Fact (ii) (Gamma^rho_{mu nu} = g^rho . D_{e_mu} g_nu), kept as a labelled reading; the same computation, so the mathematics is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -60,7 +76,7 @@ extraction:
 ---
 
 ## formal
-For the Schwarzschild interior field $(\hb, \Omega)$ on flat spacetime in the synchronous gauge of Lemma \claimref{interior.kasner-form-interior}, with physical frame $g_\mu = \hb^{-1}(e_\mu)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $e_0 := g_\tau$ and let $(e_1, e_2, e_3)$ be the orthonormal frame obtained by normalising the physical vectors $(g_t, g_\theta, g_\varphi)$. Then:
+For the Schwarzschild interior field $(\hb, \Omega)$ on flat spacetime in the synchronous gauge of Lemma \claimref{interior.kasner-form-interior}, with physical frame $g_\mu = \hb^{-1}(e_\mu)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $e_0 := g_\tau$ and let $(e_1, e_2, e_3)$ be the orthonormal frame obtained by normalising the physical vectors $(g_t, g_\theta, g_\varphi)$ (so $e_0, \ldots, e_3$ name this normalised physical frame, and $e_\mu$ with a label index $\mu \in \{\tau, t, \theta, \varphi\}$ the background vectors). Then:
 \begin{enumerate}
 \item the frame is \emph{exactly} $D$-parallel along the free-fall worldlines of velocity $g_\tau$ (the geodesics of the derived metric), at every $\tau > 0$: parallel transport into the singularity is not an asymptotic question for the frame;
 \item with $\sigma_1 := \partial_\tau \log \sqrt{A}$ and $\sigma_2 = \sigma_3 := \partial_\tau \log r$ the Hubble-normalised expansion rates, in units $2M = 1$,

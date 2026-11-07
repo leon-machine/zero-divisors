@@ -27,7 +27,7 @@ derivations:
   uses:
   - singularity.euclidean-rotor-where-it-lies@5
   - state-selection.euclidean-partner-curvature-selected@5
-  - field-theory.where-each-lives@3
+  - field-theory.where-each-lives@4
   - odd-extensions.imported-conformal-completion@5
   proof: proof-main.tex
 checked_by:

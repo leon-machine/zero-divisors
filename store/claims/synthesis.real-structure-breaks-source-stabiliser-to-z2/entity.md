@@ -1,7 +1,7 @@
 ---
 id: synthesis.real-structure-breaks-source-stabiliser-to-z2
 kind: claim
-version: 3
+version: 4
 title: 'The real structure leaves a $\mathbb{Z}_{2}$ stabiliser and cannot give 207'
 status: proved
 region: synthesis
@@ -21,13 +21,17 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: consistency pass, sign slip in an intermediate expression of proof (ii) corrected
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - synthesis.light-pair-split-needs-broken-source-stabiliser@2
   - synthesis.coherent-face-vector-real-slices@2
-  - families.rigidity-pairing-sector-one-event@4
+  - families.rigidity-pairing-sector-one-event@5
   - synthesis.face-mass-form-unit-plus-gram@2
   - families.skeleton-rank-one-plus-ordering-shift@6
   - families.imported-squeezed-vacuum-bosonic-pairing@3
@@ -52,6 +56,10 @@ lineage:
   - synthesis.light-pair-split-needs-broken-source-stabiliser
   - synthesis.light-cone-koide-is-quarter-turn
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof (ii): the intermediate expression for the face action of I_4 R_n read conj(-I_4) I_4 R_n (-1)(-1), which is -R_n, against the correct end value R_n; it now reads conj(I_4^3 det R_n) I_4 R_n = conj(I_4) I_4 R_n = R_n (exact check in Cl(1,3) at a = 1 and a = 2/3: det(I_4 R_n) = I_4, N(I_4 R_n) = R_n, the old intermediate equals -R_n); the formal statement and the conclusion are unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

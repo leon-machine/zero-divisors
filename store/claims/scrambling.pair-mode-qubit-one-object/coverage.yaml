@@ -20,4 +20,5 @@ judge:
   verdict: agrees
   note: The algebra and entropy arithmetic are exact; the sameness of the three descriptions is a reading, not tested.
 untouched_premises:
+  sheaf.schwarzschild-degeneration-boundary-tame: "cited for the corank-one count (one ladder pair per point of the exceptional set); nothing is computed from it"
   std-algebra.witt-basis-car: "standard algebra cited in the proof; the check computes the statement directly"

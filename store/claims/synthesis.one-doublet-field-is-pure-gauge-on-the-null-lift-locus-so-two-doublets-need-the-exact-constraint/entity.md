@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint
 kind: claim
-version: 3
+version: 4
 title: 'A one-doublet field is pure gauge on the null-lift locus'
 status: proved
 region: synthesis
@@ -21,15 +21,19 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - synthesis.rung-unit-is-frame-boost@3
-  - synthesis.rung-field-on-the-lift-locus@3
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - synthesis.rung-field-on-the-lift-locus@5
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -48,6 +52,10 @@ lineage:
   - synthesis.rung-unit-is-frame-boost
   - synthesis.rung-field-on-the-lift-locus
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -75,10 +83,10 @@ extraction:
 ---
 
 ## formal
-In the setting of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}: $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$ (the field theory's unit $I_{4}$ commutes with the rung vectors, and numbers are read in $\mathrm{span}\{1, I_{4}\}$, which is the $\C$ of this statement) with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$ (generators $T_{j} = \tfrac{I_{4}}{2}\sigma_{j}$, $Y = \tfrac{I_{4}}{2}\mathbf{1}$), $H^{2} = \Lambda/3$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, the lift family $c_{\lambda} = -\lambda w_{4} + \tfrac{H^{2}}{\lambda}v_{4}$ and the rung unit $u_{\lambda} = dc_{\lambda}/d\lambda$. Call a \emph{one-doublet subspace} a $U(2)$-invariant real subspace of $\mathcal{R}_{\C}$ of real dimension four, and a one-doublet field a field valued in one.
+In the setting of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}: $\mathcal{R}_{\C} = (H_{4} \oplus H_{5}) \otimes \C$ (the field theory's unit $I_{4}$ commutes with the rung vectors, and numbers are read in $\mathrm{span}\{1, I_{4}\}$, which is the $\C$ of this statement) with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $\mathsf{N}(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$ (generators $T_{j} = \tfrac{I_{4}}{2}\sigma_{j}$, $Y = \tfrac{I_{4}}{2}\mathbf{1}$), $H^{2} = \Lambda/3$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, the lift family $c_{\lambda} = -\lambda w_{4} + \tfrac{H^{2}}{\lambda}v_{4}$ and the rung unit $u_{\lambda} = dc_{\lambda}/d\lambda$. Call a \emph{one-doublet subspace} a $U(2)$-invariant real subspace of $\mathcal{R}_{\C}$ of real dimension four, and a one-doublet field a field valued in one.
 \begin{enumerate}
 \item \emph{(Classification.)} The real-linear $U(2)$-equivariant maps from the doublet $\C^{2}$ (generators $T_{j}$, $Y$) to $\mathcal{R}_{\C}$ are $\gamma \mapsto (p\gamma, q\bar{\gamma})$, $p, q \in \C$, a real four-dimensional space, and each nonzero one is injective. The one-doublet subspaces are $D_{0} = \{\beta = 0\}$, $D_{\infty} = \{\alpha = 0\}$ and the graphs $G_{a} = \{\beta = a\bar{\alpha}\}$, $a \in \C \setminus \{0\}$.
-\item \emph{(One orbit, one frame.)} $Q$ vanishes on $D_{0}$ and $D_{\infty}$, which miss $L$. On $G_{a}$, $Q(\alpha, a\bar{\alpha}) = a|\alpha|^{2}$ and $m/N = (1 - |a|^{2})/(1 + |a|^{2})$; so $G_{a}$ meets $L$ only when $a = -r$, $r > 0$, and then $G_{-r} \cap L = \{|\alpha|^{2} = H^{2}/r\}$ is one $U(2)$-orbit, a three-sphere, which contains $c_{\lambda}$ exactly when $\lambda^{2} = rH^{2}$. The frame of a vacuum on $G_{-r} \cap L$ is fixed by $r$.
+\item \emph{(One orbit, one frame.)} $Q$ vanishes on $D_{0}$ and $D_{\infty}$, which miss $L$. On $G_{a}$, $Q(\alpha, a\bar{\alpha}) = a|\alpha|^{2}$ and $m/\mathsf{N} = (1 - |a|^{2})/(1 + |a|^{2})$; so $G_{a}$ meets $L$ only when $a = -r$, $r > 0$, and then $G_{-r} \cap L = \{|\alpha|^{2} = H^{2}/r\}$ is one $U(2)$-orbit, a three-sphere, which contains $c_{\lambda}$ exactly when $\lambda^{2} = rH^{2}$. The frame of a vacuum on $G_{-r} \cap L$ is fixed by $r$.
 \item \emph{(Pure gauge on the locus.)} At $c_{\lambda}$ the tangent spaces of $G_{-r}$ and of $L$ meet in the tangent space of the gauge orbit, of dimension three. So the rung unit $u_{\lambda}$ and the charged plane of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}(3) lie in no one-doublet subspace through $c_{\lambda}$, and the smallest $U(2)$-invariant real subspace containing $c_{\lambda}$ and $u_{\lambda}$ is $\mathcal{R}_{\C}$.
 \item \emph{(The one physical mode leaves the locus.)} In $G_{-r}$ the complement of the gauge orbit at $c_{\lambda}$ for $\operatorname{Re}(x^{*}\cdot y)$ is the line of $c_{\lambda}$, along which $dQ = 2Q(c_{\lambda}) = -2H^{2} \neq 0$: a direction normal to $L$, while $Q(c_{\lambda}, u_{\lambda}) = 0$.
 \item \emph{(Size of the distinction; computed.)} The one-doublet subspace through $c_{\lambda}$ is $G_{-r}$ with $r = \lambda^{2}/H^{2}$; its radial direction $c_{\lambda}/\lambda = (\tfrac{H^{2}}{\lambda^{2}}e_{4}, -e_{4})$ and the rung unit $u_{\lambda} = (-\tfrac{H^{2}}{\lambda^{2}}e_{4}, -e_{4})$ differ by $\tfrac{2H^{2}}{\lambda^{2}}e_{4}$ in the $\alpha$-coefficient, a relative angle of order $H^{2}/\lambda^{2}$ (of order $H^{2}/v^{2}$ at the stored vacuum, where $\lambda^{2}$ is of the order of the weak scale squared); and along the radial direction the term $k_{10}|Q + H^{2}|^{2}$ of the linear field adds a mass squared of order $k_{10}H^{4}/\lambda^{2}$.

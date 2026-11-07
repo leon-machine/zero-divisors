@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   - std-algebra.pseudoscalar-commutation@1
   - primer.centre@2
   proof: proof-main.tex

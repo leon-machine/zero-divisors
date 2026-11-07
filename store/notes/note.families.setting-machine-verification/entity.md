@@ -1,7 +1,7 @@
 ---
 id: note.families.setting-machine-verification
 kind: note
-version: 1
+version: 2
 title: Machine verification
 status: setting
 subject: generations
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T13, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (cross products as the dual of the outer product)
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - families.koide-instrument
 - families.skeleton-rank-one-plus-ordering-shift
@@ -25,6 +29,11 @@ locators:
   number: Setting
   section: Machine verification
   line: 970
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The channel cross products f_+ x f_- and u'' x f_+ are written as the duals of outer products, -I_f(f_+ ^ f_-) and -I_f(u'' ^ f_+), as in families.rigidity-pairing-sector-one-event (version 5). What stays: the matrix identity G G^dag = |a|^2 1 - abar a^T and the sparse exact matrices of Part F, which describe the script''s own computations (matrices as such).'
 ---
 
 ## formal
@@ -38,7 +47,7 @@ Every computational identity asserted in this paper at its own proof level has b
 
 \emph{Part D: the chart.} $C(f_{\pm}) = 0$ and $C(f_{+}, f_{-}) = 3$ in exact cyclotomic arithmetic; $C(af_{+} + bf_{-}) = 6ab$; the $\mathbf{3} \otimes \mathrm{sgn}$ twist on explicit arrays; the space of $S_{3}$-invariant symmetric forms on $\R^{3}$ computed as the kernel of the invariance constraints, of dimension exactly two, spanned by $\delta$ and the all-ones form; the Fourier bijection on explicit doublet vectors; and the $S_{2}$-point equivalence $Q = 2/3 \iff b^{2} = 2a^{2}$ on the explicit triple $(a+b, a-b/2, a-b/2)$, with $(a+b)/(a-b/2) = 4 + 3\sqrt{2}$ at $b = a\sqrt{2}$ in $\mathbb{Z}[\sqrt{2}]$.
 
-\emph{Part E: the Gaussian theorems.} The closure identity $GG^{\dagger} = |a|^{2}\mathbb{1} - \bar{a}a^{\mathsf{T}}$ with its exact kernel and rank two on Gaussian-rational instances; the channel cross products $f_{+} \times f_{-} = (\zeta^{2} - \zeta)(1,1,1)$ and $u' \times f_{+} = (\zeta^{2} - \zeta)f_{+}$ with their Hermitian orthogonality; the Gaussian data $\hat\xi\hat\xi^{\dagger} = R \otimes \mathbb{1}$ at every point; the Wick evaluation of Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, piece by piece and in total, against the closed form \eqref{eq:H}, in $\mathbb{Q}(\zeta_{3})$ at the rational hyperbolic points $(\tfrac34, \tfrac54)$ and $(\tfrac{12}{5}, \tfrac{13}{5})$, feeding ratios $0, \tfrac34, \tfrac43$ and channel phases $1, \zeta, \zeta^{2}$, with the coherent vector $2sc\,n$ and the rank-one normal-ordered form; the skeleton's trace and eigenvalue identities as rational-function identities in the depth; $\rho = 4 + 3\sqrt{2}$ as the exact root of $\rho^{2} - 8\rho - 2$; $(4+3\sqrt{2})^{4} = 2308 + 1632\sqrt{2}$ exactly; the crossing bracketed by exact sign evaluation in $\mathbb{Z}[\sqrt{2}]$ ($769.332 < x^{*} < 769.333$), the identity $(1+6x+6x^{2})/(1+x) = 6x + 1/(1+x)$ as a rational-function identity, and the displacement of $x^{*}$ from $K/6$ bracketed in $(2 \times 10^{-4}, 3 \times 10^{-4})$; the failure of the nominated canonical depth (the ratio function evaluated at $x = 1$ is $13/2$, and $K$ exceeds it by a factor above $700$ in exact $\mathbb{Z}[\sqrt{2}]$ sign arithmetic); and a monotonicity chain witnessing the single crossing.
+\emph{Part E: the Gaussian theorems.} The closure identity $GG^{\dagger} = |a|^{2}\mathbb{1} - \bar{a}a^{\mathsf{T}}$ with its exact kernel and rank two on Gaussian-rational instances; the channels' dual outer products $-I_{f}(f_{+} \wedge f_{-}) = (\zeta^{2} - \zeta)(1,1,1)$ and $-I_{f}(u' \wedge f_{+}) = (\zeta^{2} - \zeta)f_{+}$ ($I_{f}$ the family pseudoscalar) with their Hermitian orthogonality; the Gaussian data $\hat\xi\hat\xi^{\dagger} = R \otimes \mathbb{1}$ at every point; the Wick evaluation of Theorem \claimref{families.skeleton-rank-one-plus-ordering-shift}, piece by piece and in total, against the closed form \eqref{eq:H}, in $\mathbb{Q}(\zeta_{3})$ at the rational hyperbolic points $(\tfrac34, \tfrac54)$ and $(\tfrac{12}{5}, \tfrac{13}{5})$, feeding ratios $0, \tfrac34, \tfrac43$ and channel phases $1, \zeta, \zeta^{2}$, with the coherent vector $2sc\,n$ and the rank-one normal-ordered form; the skeleton's trace and eigenvalue identities as rational-function identities in the depth; $\rho = 4 + 3\sqrt{2}$ as the exact root of $\rho^{2} - 8\rho - 2$; $(4+3\sqrt{2})^{4} = 2308 + 1632\sqrt{2}$ exactly; the crossing bracketed by exact sign evaluation in $\mathbb{Z}[\sqrt{2}]$ ($769.332 < x^{*} < 769.333$), the identity $(1+6x+6x^{2})/(1+x) = 6x + 1/(1+x)$ as a rational-function identity, and the displacement of $x^{*}$ from $K/6$ bracketed in $(2 \times 10^{-4}, 3 \times 10^{-4})$; the failure of the nominated canonical depth (the ratio function evaluated at $x = 1$ is $13/2$, and $K$ exceeds it by a factor above $700$ in exact $\mathbb{Z}[\sqrt{2}]$ sign arithmetic); and a monotonicity chain witnessing the single crossing.
 
 \emph{Part F: the $126$ direction.} The module rebuilt as sparse exact matrices on $\Lambda^{\bullet}\C^{5}$: the CAR of five mode pairs, the sixteen even states with their species, the hypercharge and $B - L$ eigenvalues; the forty-five bivectors and the $\so(10)$-invariance of the pairing on all $45 \times 32 \times 32$ basis identities; the $10$ form of $w_{4}$ (symmetric, entries $\pm 1$ on $(L, e^{c})$, $(Q, d^{c})$); the form of $T_{\mathrm{GJ}}$ symmetric with entries exactly $-1$ on $(L, e^{c})$ and $\pm\tfrac13$ on $(Q, d^{c})$, sign-sensitively, the one-sided weighting antisymmetric, the ratio $3$; the $\Cl(5,5)$ orthonormal basis and the grade decomposition of $T_{\mathrm{GJ}}$ by the trace formula, pure grade five, with the grade-one part's form identically zero and the symmetric part of $Y_{T}$ equal to $Y_{5}$; the up-type direction $v_{4}(B - L)\chi$, its form symmetric with signed entries $+1$ and $\pm\tfrac13$ and the magnitude ratio $3$; the closed form $\tfrac43\,w_{4}(v_{5} \wedge w_{5})(\sum v_{i} \wedge w_{i})$ and the anticommutations behind it (Proposition \claimref{families.doublet-direction-module-georgi-jarlskog-clebsch}); and, as Fact \claimref{families.imported-tree-relations-family-no-go}'s content recomputed, the family no-go on an invertible rational family matrix without symmetry, the $10$ giving $M_{e}$ and $M_{d}$ with equal singular spectra for every sign of the entries while the $126$ direction gives spectra in the ratio $3$ on the same $F$, and the charge $Y(e^{c}) = 1$.
 

@@ -24,7 +24,7 @@ derivations:
   - synthesis.quarter-from-temperature@1
   - synthesis.residue-from-mode-entropy@4
   - synthesis.boundary-mode-thermal-entropy@2
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - scrambling.boundary-mode-space-matrix@4
   proof: proof-main.tex
 checked_by:

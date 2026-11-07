@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points
 kind: claim
-version: 1
+version: 2
 title: 'Kasner fields are Weyl-flat only at the Milne and isotropic points'
 status: proved
 region: synthesis
@@ -17,15 +17,28 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Weyl eigenvalue stated for the Weyl map; proof route declared)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (i): Omega from the torsion equation of the synchronous gauge field, store-sign field strength, Ricci and Weyl maps; coordinate route kept as a labelled reading'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): uses edge to the GTG dictionary; stale pins reviewed'
+  version: 2
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@3
-  - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes@2
+  - synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching@4
+  - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes@3
   - dark-energy.imported-walls-sphere-theorem@6
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -36,12 +49,30 @@ checked_by:
   ref: check.py::check_weyl_flat_points_in_cosmic_and_conformal_time
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_kasner_field_strength_and_weyl_map
 lineage:
   motivated_by:
   - synthesis.pre-descent-contracting-kasner-stage-premise
   - synthesis.pre-descent-state-carried-into-descended-phase-premise
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with one link fix. Applied (7a): the proof computes the Weyl map from the formula of Fact synthesis.imported-gtg-dictionary (v), which was not in uses; added at its current version 2 (imported). No text or check change (the referee recomputed Omega, the Ricci and Weyl maps and the resultant -9 p1^2 (p1 - 1)(3 p1 - 1) symbolically, and a mutation 1/3 -> 1/6 in lambda fails).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching 3 -> 4 writes its frame curvature components of (iii) as the store-sign field strength (values unchanged), and synthesis.attachment-transport-is-flat-only-where-weyl-vanishes 2 -> 3 adds the sentence naming the units I4 and I6: notation (N); repinned.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof for (i): the synchronous gauge field hb^{-1}(e_t) = e0, hb^{-1}(e_i) = t^{p_i} e_i (derived metric -g_p, dictionary C7), Omega(e_{x^i}) = -p_i t^{p_i - 1} B_i from the torsion equation, the field strength and calR(B_i) = p_i(p_i - 1) t^-2 B_i, calR(e_i ^ e_j) = p_i p_j t^-2 e_i ^ e_j, the Ricci map (S - 1) t^-2 on e0 and 0 on e_j, scalar (S - 1) t^-2, and the Weyl map W(B_i) = W(I4 B_i)/I4 = lambda_i with the sign of the (-,+,+,+) mixed component derived from C11; (ii) and (iv) read flatness off the field strength (the isotropic bracket has Omega = 0); the Christoffel route is kept as a labelled reading. New check check_gtg_kasner_field_strength_and_weyl_map (seven rational points of the plane, torsion-solved Omega on exact jets, the bracket field); runcheck 4/4, check4 clean on a proposals copy. The proof cites the dictionary Fact for the Weyl formula, which is not in uses (a links question left for Leon). outside_ga removed: no stand-in remains. Statement, status, links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The eigenvalue is stated for the Weyl map on bivectors with the mixed component C_{0i}^{0i} = C_{jk}^{jk} as a labelled reading; the proof and its check compute the Weyl components from the coordinate Riemann tensor of the diagonal metric (Christoffel route) and are kept, declared outside_ga (other): a GTG derivation through the rotation-gauge field would be a different proof, listed for Leon. Reader fix (R06), version kept: the formal declares the (-,+,+,+) signature of its line element and says that lambda_i are store-sign eigenvalues of the Weyl map (the mixed component C_{0i}^{0i} of the round-sphere-positive tensor in that signature agrees in sign with the store''s operator: +2M/r^3 on the Schwarzschild radial boost plane, Lambda/3 on de Sitter) and that R t^2 = -2/3 holds in the store''s sign.'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Bears on the first and second steps of op.deposit-state-is-hadamard under the Kasner-exit premises (P1)
@@ -63,9 +94,9 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric is the four-dimensional diagonal Kasner field $g_{p} = -dt^{2} + t^{2p_{1}}dx^{2} + t^{2p_{2}}dy^{2} + t^{2p_{3}}dz^{2}$, $t > 0$, with $p_{1} + p_{2} + p_{3} = 1$ (the Kasner plane of Theorem \claimref{synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching} with three exponents; no field equation imposed, and under Einstein's equations the source is stiff, $P = \rho$). Put $S = \sum p_{i}^{2}$, $E_{1} = p_{1}^{2} - 2p_{1}p_{2} - p_{1} - 2p_{2}^{2} + 2p_{2}$, $E_{2} = 2p_{1}^{2} + 2p_{1}p_{2} - 2p_{1} - p_{2}^{2} + p_{2}$, and let $e_{0}, e_{1}, e_{2}, e_{3}$ be the orthonormal frame of $g_{p}$.
+Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) whose derived metric is the four-dimensional diagonal Kasner field $g_{p} = -dt^{2} + t^{2p_{1}}dx^{2} + t^{2p_{2}}dy^{2} + t^{2p_{3}}dz^{2}$, $t > 0$, with $p_{1} + p_{2} + p_{3} = 1$ (the Kasner plane of Theorem \claimref{synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching} with three exponents; no field equation imposed, and under Einstein's equations the source is stiff, $P = \rho$). Put $S = \sum p_{i}^{2}$, $E_{1} = p_{1}^{2} - 2p_{1}p_{2} - p_{1} - 2p_{2}^{2} + 2p_{2}$, $E_{2} = 2p_{1}^{2} + 2p_{1}p_{2} - 2p_{1} - p_{2}^{2} + p_{2}$, and let $e_{0}, e_{1}, e_{2}, e_{3}$ be the orthonormal frame of $g_{p}$. The line element is written in the signature $(-,+,+,+)$ (dictionary C7); the eigenvalues $\lambda_{i}$ below are those of the Weyl part of the store's curvature operator $\mathcal{R}$ on the physical bivectors (in components the mixed $C_{0i}{}^{0i}$ of the round-sphere-positive tensor in that signature, which has the store's sign: both give $+2M/r^{3}$ on the radial boost plane of Schwarzschild and $\Lambda/3$ on de Sitter), and the scalar curvature $Rt^{2} = -\tfrac23$ has the same value in the store's sign in $(+,-,-,-)$.
 \begin{enumerate}
-\item[(i)] \emph{(The Weyl map; proved.)} The Weyl map on bivectors has the frame bivectors $e_{0}\wedge e_{i}$ and their duals $I_{4}\,e_{0}\wedge e_{i}$ as eigenvectors, with the same eigenvalue $\lambda_{i}$ on both, the mixed component $C_{0i}{}^{0i} = C_{jk}{}^{jk}$ ($\{i, j, k\} = \{1, 2, 3\}$): $\lambda_{i} = (p_{i}^{2} - p_{i} + \tfrac{1 - S}{3})\,t^{-2}$, so $\lambda_{1} = E_{1}/(3t^{2})$, $\lambda_{2} = -E_{2}/(3t^{2})$, $\lambda_{1} + \lambda_{2} + \lambda_{3} = 0$. So the Weyl curvature vanishes exactly where $E_{1} = E_{2} = 0$, and elsewhere it is nonzero at every $t > 0$ and grows as $t^{-2}$ toward the wall.
+\item[(i)] \emph{(The Weyl map; proved.)} The Weyl map on bivectors has the frame bivectors $e_{0}\wedge e_{i}$ and their duals $I_{4}\,e_{0}\wedge e_{i}$ as eigenvectors, with the same eigenvalue $\lambda_{i}$ on both ($\{i, j, k\} = \{1, 2, 3\}$; in components the mixed Weyl component $C_{0i}{}^{0i} = C_{jk}{}^{jk}$): $\lambda_{i} = (p_{i}^{2} - p_{i} + \tfrac{1 - S}{3})\,t^{-2}$, so $\lambda_{1} = E_{1}/(3t^{2})$, $\lambda_{2} = -E_{2}/(3t^{2})$, $\lambda_{1} + \lambda_{2} + \lambda_{3} = 0$. So the Weyl curvature vanishes exactly where $E_{1} = E_{2} = 0$, and elsewhere it is nonzero at every $t > 0$ and grows as $t^{-2}$ toward the wall.
 \item[(ii)] \emph{(The Weyl-flat points; proved.)} On the plane $E_{1} = E_{2} = 0$ holds exactly at the Milne points $(1, 0, 0)$, $(0, 1, 0)$, $(0, 0, 1)$, where $g_{p}$ is flat, and at the isotropic point $(\tfrac13, \tfrac13, \tfrac13)$, where $Rt^{2} = -\tfrac23$.
 \item[(iii)] \emph{(No attached state at the wall; proved, a corollary.)} At every other point of the plane the Weyl curvature is nonzero on all of $t > 0$, so by Theorem \claimref{synthesis.attachment-transport-is-flat-only-where-weyl-vanishes} the tractor transport of the attachment supplies no state on any neighbourhood of the wall: on a four-dimensional Kasner approach as in Premise \claimref{synthesis.pre-descent-contracting-kasner-stage-premise} (P1), the state carried into the descended phase is not the attachment's, and must be supplied by the rule of Premise \claimref{synthesis.pre-descent-state-carried-into-descended-phase-premise} (P2).
 \item[(iv)] \emph{(Not tame walls in cosmic time; proved.)} In the smooth structure of the cosmic coordinate $t$ neither Weyl-flat case is a tame corank-one wall (in the sense of the wall Fact \claimref{dark-energy.imported-walls-sphere-theorem}): at the isotropic point $g_{p} = t^{2/3}$ times a flat bracket whose cometric degenerates at order $\tfrac23$, and at a Milne point the metric itself degenerates at order two while the cometric has a pole. In its conformal time $\eta = \tfrac32 t^{2/3}$, and $t' = \eta^{2}/4$, the isotropic bracket is the radical-normal wall $-t'^{-1}dt'^{2} + \delta$, as for every decelerating power law (\claimref{synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state}), (iv)).

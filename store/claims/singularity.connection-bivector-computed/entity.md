@@ -1,7 +1,7 @@
 ---
 id: singularity.connection-bivector-computed
 kind: claim
-version: 4
+version: 5
 title: The connection bivector, computed
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: GA rewrite (connection one-forms as the bivectors Omega(hb(gamma_c)))
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -40,6 +44,10 @@ locators:
   label: prop:omega
   line: 1351
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA: clause (2) now states the rotation-gauge field on the physical frame, omega(gamma_1) = -beta'' sigma_r, omega(gamma_2) = (beta gamma_0 + gamma_1) ^ gamma_2 / r, omega(gamma_3) = (beta gamma_0 + gamma_1) ^ gamma_3 / r + (cot theta / r) gamma_2 ^ gamma_3, omega(gamma_0) = 0, as the solution of the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a), the first structure equations read through hb^T; the one-forms stay as a labelled component reading; technical level and proof likewise. Equivalence checked exactly with lib/GA.py and lib/gtg.py in the maintainer scratch: at the six sample points of the check the bivectors assembled from the stored one-forms equal these closed forms and satisfy the GA structure equation (the opposite sign fails). Values unchanged. Orientation (reader R06): sigma_r = gamma_1 gamma_0 is stated beside the GA display.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,16 +69,14 @@ extraction:
 For the Painlev\'e-Gullstrand gauge field $\hb = 1 - \beta P$ of Fact \claimref{sheaf.gauge-field-cometric} on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), whose physical-vector map in components is the coframe \eqref{eq:pgcoframe}, $\theta^a(v) = \gamma^a \cdot \hb^{-1}(v)$, write $\sigma_r$ for the unit radial boost bivector of that coframe (the sign convention is fixed once, in Remark \ref{rem:frame}; the verification script fixes it by computation). Then:
 \begin{enumerate}
 \item all connection data is algebraic in $(r, \beta)$: $\beta' = -\beta/2r$ and $\beta\beta' = -M/r^2$ exactly, so every coefficient below lies in the field $\mathbb{Q}(r)[\beta]$ with $\beta^2 = 2M/r$;
-\item the torsion condition of \eqref{eq:gtgfield} is solved by the rotation-gauge field $\Omega$ whose components in this coframe are the connection one-forms
+\item the torsion condition of \eqref{eq:gtgfield}, read on the physical frame, is $\hb^{T}(\nabla\wedge f^a) = \sum_b \gamma^b\wedge\bigl(\omega(\gamma_b)\cdot\gamma^a\bigr)$ for the background vector fields $f^a$ with $\hb^{T}(f^a) = \gamma^a$ (the coframe as background vectors: $f^0 = \nabla t$, $f^1 = \beta\nabla t + \nabla r$, $f^2 = r\nabla\vartheta$, $f^3 = r\sin\vartheta\,\nabla\varphi$), with $\omega(\gamma_b) := \Omega(\hb(\gamma_b))$; it is solved by the rotation-gauge field
 \[
-\omega^1{}_0 = -\beta'\,\theta^1, \qquad
-\omega^2{}_0 = -\tfrac{\beta}{r}\,\theta^2, \qquad
-\omega^3{}_0 = -\tfrac{\beta}{r}\,\theta^3, \qquad
-\omega^2{}_1 = \tfrac{1}{r}\,\theta^2, \qquad
-\omega^3{}_1 = \tfrac{1}{r}\,\theta^3, \qquad
-\omega^3{}_2 = \tfrac{\cot\vartheta}{r}\,\theta^3,
+\omega(\gamma_0) = 0, \qquad
+\omega(\gamma_1) = -\beta'\,\sigma_r, \qquad
+\omega(\gamma_2) = \tfrac{1}{r}\,(\beta\gamma_0 + \gamma_1)\wedge\gamma_2, \qquad
+\omega(\gamma_3) = \tfrac{1}{r}\,(\beta\gamma_0 + \gamma_1)\wedge\gamma_3 + \tfrac{\cot\vartheta}{r}\,\gamma_2\wedge\gamma_3,
 \]
-verified by substitution in the first structure equations: $d\theta^0 = 0$ and $-\omega^0{}_1 \wedge \theta^1 = \beta'\,\theta^1 \wedge \theta^1 = 0$; $d\theta^1 = \beta'\,dr\wedge dt = \beta'\,\theta^1\wedge\theta^0 = -\,\omega^1{}_0\wedge\theta^0$; and $d\theta^2 = \tfrac1r\,dr\wedge\theta^2 = \tfrac1r(\theta^1 - \beta\theta^0)\wedge\theta^2 = -\,\omega^2{}_0\wedge\theta^0 - \omega^2{}_1\wedge\theta^1$, with the $\theta^3$ leg the round sphere's standard connection;
+with $\sigma_r = \gamma_1\gamma_0$, the image of $e_re_t$ (the orientation of the dictionary, for which the surface gravity is $+1/4M$), verified by substitution: $\nabla\wedge f^0 = 0$, and with $\hb^{T}(\nabla r) = \gamma^1 - \beta\gamma^0$, $\hb^{T}(\nabla\wedge f^1) = \beta'\,\gamma^1\wedge\gamma^0$ and $\hb^{T}(\nabla\wedge f^2) = \tfrac1r(\gamma^1 - \beta\gamma^0)\wedge\gamma^2$, which are the right sides for the displayed $\omega$, the $\gamma_3$ leg being the round sphere's standard connection (in components, a labelled reading: these are the connection one-forms $\omega^1{}_0 = -\beta'\,\theta^1$, $\omega^2{}_0 = -\tfrac{\beta}{r}\,\theta^2$, $\omega^3{}_0 = -\tfrac{\beta}{r}\,\theta^3$, $\omega^2{}_1 = \tfrac{1}{r}\,\theta^2$, $\omega^3{}_1 = \tfrac{1}{r}\,\theta^3$, $\omega^3{}_2 = \tfrac{\cot\vartheta}{r}\,\theta^3$, solving the first structure equations $d\theta^a = -\omega^a{}_b\wedge\theta^b$ of the coframe);
 \item evaluated on the background directions $\partial_t$, $\partial_r$ of the $(t,r)$ plane, the connection bivector is
 \[
 \Omega(\partial_t) \;=\; -\beta\beta'\,\sigma_r \;=\; \frac{M}{r^2}\,\sigma_r ,
@@ -81,7 +87,7 @@ the time-direction connection is the Newtonian field $M/r^2$, exactly and at eve
 \end{enumerate}
 
 ## technical
-For the Painlev\'e-Gullstrand gauge field $\hb = 1 - \beta P$ on flat spacetime, with coframe the components of $\hb^{-1}$ and $\beta^2 = 2M/r$, all connection data is algebraic in $(r,\beta)$: $\beta' = -\beta/2r$ and $\beta\beta' = -M/r^2$, so every coefficient lies in $\mathbb{Q}(r)[\beta]$. The torsion condition of the gauge-theory field equations is solved by the rotation-gauge field with explicit connection one-forms as components, for example $\omega^1{}_0 = -\beta'\,\theta^1$, $\omega^2{}_0 = -(\beta/r)\,\theta^2$ and $\omega^2{}_1 = \theta^2/r$, each checked by substitution in the first structure equations.
+For the Painlev\'e-Gullstrand gauge field $\hb = 1 - \beta P$ on flat spacetime, with coframe the components of $\hb^{-1}$ and $\beta^2 = 2M/r$, all connection data is algebraic in $(r,\beta)$: $\beta' = -\beta/2r$ and $\beta\beta' = -M/r^2$, so every coefficient lies in $\mathbb{Q}(r)[\beta]$. The torsion condition of the gauge-theory field equations, read on the physical frame through the outermorphism $\hb^{T}$, is solved by the rotation-gauge field with $\Omega(\hb(\gamma_1)) = -\beta'\,\sigma_r$, $\Omega(\hb(\gamma_2)) = \tfrac1r(\beta\gamma_0 + \gamma_1)\wedge\gamma_2$, $\Omega(\hb(\gamma_3)) = \tfrac1r(\beta\gamma_0 + \gamma_1)\wedge\gamma_3 + \tfrac{\cot\vartheta}{r}\gamma_2\wedge\gamma_3$ and $\Omega(\hb(\gamma_0)) = 0$, each checked by substitution (in components, the connection one-forms of the coframe and the first structure equations).
 
 On the background directions of the $(t,r)$ plane the connection bivector is $\Omega(\partial_t) = (M/r^2)\,\sigma_r$ and $\Omega(\partial_r) = \sqrt{M/2r^3}\,\sigma_r$, with $\sigma_r$ the unit radial boost bivector. The time-direction connection is exactly the Newtonian field at every radius, and the radial-direction connection diverges as $r^{-3/2}$ when $r \to 0$, the square root of the field-strength scale $M/r^3$.
 

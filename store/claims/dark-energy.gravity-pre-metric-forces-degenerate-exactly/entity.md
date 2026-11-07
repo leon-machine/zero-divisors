@@ -1,7 +1,7 @@
 ---
 id: dark-energy.gravity-pre-metric-forces-degenerate-exactly
 kind: claim
-version: 4
+version: 5
 title: Gravity is pre-metric; the forces degenerate exactly where the conformal class does
 status: proved
 region: dark-energy
@@ -17,11 +17,23 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: forms as multivector fields, the star as |det hb|^-1 I G(F) with G the cometric map'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): proof citation corrected'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-walls-sphere-theorem@6
   proof: proof-main.tex
 checked_by:
@@ -35,12 +47,30 @@ checked_by:
   ref: check.py::check_hodge_star_depends_on_conformal_class_only
 - kind: check
   ref: check.py::check_star_degenerates_at_corank_one_wall
+- kind: check
+  ref: check.py::check_gtg_star_free_density_is_a_divergence
+- kind: check
+  ref: check.py::check_gtg_hodge_star_is_the_cometric_duality
+- kind: check
+  ref: check.py::check_gtg_star_has_no_limit_at_a_corank_one_wall
 locators:
   paper: T10
   number: Thm 4.3
   label: thm:twokinds
   line: 823
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F1: ACCEPT. Its one remark (the variation''s plus sign is right; the component proof had a minus, harmless since the term vanishes) needs no change. Fixer: the opening sentence attributed the reading of forms as multivector fields to Fact synthesis.imported-gtg-dictionary, which states nothing about forms (clauses (i) to (vi): vectors, derivative, geodesics, curvature, Weyl, Killing); the parenthesis is removed and the reading stands as the proof''s stated convention. Pin dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged byte for byte: notation only).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity with forms as multivector fields (d = grad ^, wedge = outer product of background parts, internal Lie algebra as bivectors of an internal Clifford algebra, trace = internal scalar part): Bianchi D ^ F = 0, <F ^ F> = grad ^ CS and the variation a boundary term. The Hodge star on background two-forms derived as the physical duality read back, *_g F = |det hb|^-1 I G(F) with G = hb hb^T the cometric map (outermorphism on bivectors), so scale-invariant (hb -> lam hb) and rotation-gauge invariant, a function of [g] only, squaring to -1 since G(I G(F)) = det(G) I F; at a corank-one wall G -> G_0 of rank 3 and det hb -> 0, so the star has no limit and |det hb| star -> I G_0 has rank 3 of 6. The answer to the earlier declaration (no pseudoscalar duality at the degenerate point): the duality is written for every invertible field near the wall and its failure is read as a limit. Component formula kept as a labelled reading; orig-proof-main.tex kept. New exact checks: check_gtg_star_free_density_is_a_divergence (su(2) as bivectors of Cl(3,0), exact polynomial fields, abelian and nonabelian, Bianchi, <F ^ F> = grad ^ CS, the 2/3 forced), check_gtg_hodge_star_is_the_cometric_duality (the GA star equals the component star on three fields, one with det hb < 0; the inverse-adjoint formula; star^2 = -1; scale and boost invariance; dependence on [g]), check_gtg_star_has_no_limit_at_a_corank_one_wall (divergence like 1/s and the rank-3 limit I G_0). outside_ga withdrawn: the statement''s forms are read as multivector fields and no stand-in remains in the proof.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result is about the Hodge star on two-forms as a function of the metric, *alpha_{ab} = (1/2) sqrt|g| epsilon_{abcd} g^{ce} g^{df} alpha_{ef}, and its failure where the metric degenerates; on bivectors of an invertible field it is multiplication by the pseudoscalar, but the degenerate case it treats has no pseudoscalar duality, so the component form is the content.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: transport.regularity-localises-zero-divisors-idempotents
 kind: claim
-version: 2
+version: 3
 title: Regularity localises zero divisors at idempotents
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -38,6 +42,13 @@ locators:
   label: lem:regular
   line: 547
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Decision item E7 (routine; no retirement): the consequence clause overlaps std-algebra.zero-divisors-annihilated (d), (e), the general statement and home; recorded under extraction.overlaps_with (a clause-level overlap, no pinned link).'
+  overlaps_with:
+  - id: std-algebra.zero-divisors-annihilated
+    note: 'Decision E7: the consequence clause here is clause (d), (e) of std-algebra.zero-divisors-annihilated, kept as the general statement; overlap in part, so no pinned link.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

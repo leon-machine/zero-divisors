@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - scrambling.slice-volume-exactly-per-unit-killing@4
+  - scrambling.slice-volume-exactly-per-unit-killing@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

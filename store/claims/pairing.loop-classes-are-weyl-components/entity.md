@@ -1,7 +1,7 @@
 ---
 id: pairing.loop-classes-are-weyl-components
 kind: claim
-version: 4
+version: 5
 title: The loop classes are Weyl components
 status: proved
 region: pairing
@@ -17,6 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: C as a bilinear form of the Weyl map, the trace d_a . W(a ^ b) = 0 in the null tetrad''s reciprocal frame, pair symmetry from the symmetry of W'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): source of the pair symmetry cited; the unit I5 named in the check docstring; stale pins reviewed'
+  version: 5
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -24,8 +36,8 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@2
-  - synthesis.imported-gtg-dictionary@1
+  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@3
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -36,12 +48,30 @@ checked_by:
   ref: check.py::check_null_cone_classes_vanish_iff_repeated_pnd
 - kind: check
   ref: check.py::check_schwarzschild_type_d
+- kind: check
+  ref: check.py::check_gtg_trace_and_pair_symmetry
 locators:
   paper: T05-pairing
   number: Lem 5.7
   label: lem:weylclasses
   line: 360
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with one citation fix. Applied (2a): the proof attributed the symmetry <A W(B)> = <W(A) B> to dictionary clauses (iv) and (v), which do not state it; it now cites the pair symmetry of the Riemann tensor that calR reads by clause (iv), in GA a consequence of the first Bianchi identity, and clause (v) for trace-freeness. Checked exactly in scratch (lib/GA.py, lib/gtg.py): the linear maps on the bivectors of Cl(1,3) obeying the first Bianchi identity form a 20-dimensional space, all of whose elements are symmetric. Also: the check.py docstring wrote m = (e2 + i e3)/sqrt 2 and m0 = e2 + i e3; now I5 (the central unit of Cl(2,3)); docstring only.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): pairing.imported-weyl-scalars-petrov-type-schwarzschild 2 -> 3 names the unit I5 (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): this proof cites (iv) for the curvature operator read as the Riemann tensor and (v) for the trace-free Weyl part, both unchanged in substance, so the use holds; both repinned.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: C(u, v, w, z) = -W(u ^ v) . (w ^ z) for the vacuum operator calR = W, the pair symmetry from <A W(B)> = <W(A) B>, and the tracelessness as d_a . W(a ^ u) = 0 read in the reciprocal frame of the null tetrad (l -> n/2, n -> l/2, m -> -mbar/2, mbar -> -m/2 for l . n = 2, m . mbar = -2), which gives the source''s trace formula exactly; the six classes follow as before; the eta^{ab} form is kept as a labelled reading. New check check_gtg_trace_and_pair_symmetry (exact, ten basis Weyl maps, a generic one and a non-Weyl map for the trace identity); runcheck 4/4, check4 clean on a proposals copy. outside_ga removed: no stand-in remains. Statement, status, links unchanged; orig-proof-main.tex kept.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof identifies loop classes with Weyl components in a frame (eta^{ab}); the components are the content (reader R03).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.p-reduced-metric-level-reading-many@6
+  - singularity.p-reduced-metric-level-reading-many@7
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -71,7 +71,7 @@ extraction:
     - obj.singularity.multi-mode-descent
     - obj.three-routes.ladder-bundle-even-subbundle
     uses:
-    - singularity.p-reduced-metric-level-reading-many@6
+    - singularity.p-reduced-metric-level-reading-many@7
     checked_by: verify_three_routes.py num:2.4
     proof_files:
     - proof-main.tex (kept here as merged-three-routes.sections-are-meet-finite-truncation-proof-main.tex)

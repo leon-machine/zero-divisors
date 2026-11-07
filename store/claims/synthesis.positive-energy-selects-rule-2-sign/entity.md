@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - rule2.where-obstruction-sits-commuting-square@5
+  - rule2.where-obstruction-sits-commuting-square@6
   - standard-model.imported-maximal-compact-subgroups@1
   - field-theory.twistor-attachment@6
   - synthesis.imported-invariant-cone-classification@1

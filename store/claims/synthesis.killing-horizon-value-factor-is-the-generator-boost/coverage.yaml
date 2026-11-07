@@ -25,6 +25,10 @@ functions:
     clauses:
     - (iii)
     omits: the kernel identity on two affine cells at three rapidities, including one below 1 (the cosmological orientation)
+  check_gtg_pg_torsion_equation_and_killing_line:
+    kind: sampled
+    clauses:
+    - (iv) the rotation-gauge field of the PG gauge for general beta, and Omega(e_t) = (f'/2) sigma_r
+    omits: both sides of the torsion equation at three sample points with independent rational beta, beta', r, angle (linear in these values, so a point check is a check of the formulas); the horizon instances are in check_pg_rotation_field_on_the_killing_line
 untouched_premises:
-  synthesis.positive-null-energy-gives-r-premises: "cited (the boost of its setup) for the transport u -> e^{+-kappa t} u of the generators' affine parameter; the check uses the transport law directly"
   transport.group-null-rotations: "cited for the null rotations 1 + (1/2) k s forming a group fixing k; the check builds them directly and verifies the rotor and fixing properties"

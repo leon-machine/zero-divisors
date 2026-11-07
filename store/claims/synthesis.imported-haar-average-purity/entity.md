@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-haar-average-purity
 kind: claim
-version: 1
+version: 2
 title: 'Imported: average purity of a random pure state (Lubkin 1978)'
 status: imported
 region: synthesis
@@ -17,12 +17,20 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'E. Lubkin, Entropy of an n-system from its correlation with a k-reservoir, J. Math. Phys. 19 (1978), 1028.'
   key: Lubkin1978
   doi: 10.1063/1.523763
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged. Imported (status kept): the source''s formula is unchanged, so no source_formal is needed; the sentence says the source writes the complex field for span{1, I_4}.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -42,7 +50,7 @@ extraction:
 ---
 
 ## formal
-Let $\mathcal{H} = \C^{m}\otimes\C^{n}$ and let $\ket{\psi}$ be a unit vector drawn from the unitarily invariant probability measure on the unit sphere of $\mathcal{H}$, with $\rho_{A} = \operatorname{Tr}_{B}\ket{\psi}\bra{\psi}$ its marginal on $\C^{m}$. Then
+Let $\mathcal{H} = \C^{m}\otimes\C^{n}$ (an abstract Hilbert space, its numbers read in $\mathrm{span}\{1, I_4\}$, conventions U1; the source writes the complex numbers for that field) and let $\ket{\psi}$ be a unit vector drawn from the unitarily invariant probability measure on the unit sphere of $\mathcal{H}$, with $\rho_{A} = \operatorname{Tr}_{B}\ket{\psi}\bra{\psi}$ its marginal on $\C^{m}$. Then
 \[
 \bigl\langle \operatorname{Tr}\rho_{A}^{2} \bigr\rangle = \frac{m + n}{mn + 1},
 \qquad\text{equivalently}\qquad

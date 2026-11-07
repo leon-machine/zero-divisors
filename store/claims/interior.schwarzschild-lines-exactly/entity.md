@@ -23,9 +23,9 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.exact-parallelism-convergence-rate@5
-  - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
+  - interior.exact-parallelism-convergence-rate@6
+  - interior.interior-connection-exactly@8
+  - interior.kasner-form-interior@7
   - interior.transport-level-convergence-along-tangential-curves@4
   proof: proof-main.tex
 checked_by:

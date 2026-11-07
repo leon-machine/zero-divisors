@@ -21,10 +21,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.transported-frozen-point@5
+  - standard-model.transported-frozen-point@6
   - standard-model.ten-transported-ambient-space-doublets-are@2
-  - standard-model.yukawa-pattern-two-rung-module@5
-  - standard-model.frozen-point-first-rung-component@4
+  - standard-model.yukawa-pattern-two-rung-module@6
+  - standard-model.frozen-point-first-rung-component@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

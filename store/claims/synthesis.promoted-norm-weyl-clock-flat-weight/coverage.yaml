@@ -45,6 +45,18 @@ functions:
     clauses:
     - (v)
     omits: The decomposition E - (8/3) Lambda^2 = |W|^2 - 2|T_tf|^2 - (4/3) Lambda t + t^2/6 on one generic algebraic curvature tensor at three values of Lambda, and the first-order value -t/(2 Lambda); the identity is quadratic in the curvature and is not run on a basis of curvature tensors
+  check_gtg_instantons_as_euclidean_gauge_fields:
+    kind: sampled
+    clauses:
+    - "(ii) on every Einstein metric eps_abcd F^ab ^ F^cd = |W|^2 vol"
+    - "(ii) I_MM = 0, 4/3 pi N^2, 3/4 pi N^2 and I_EH = -pi N^2, -2/3 pi N^2, -3/4 pi N^2 for S^4, S^2 x S^2, CP^2"
+    omits: "one point of each homogeneous instanton, built as a gauge field on flat Cl(4,0) with Omega solved from the torsion equation; volumes from Chern-Gauss-Bonnet with the cited Euler characteristics"
+  check_gtg_kasner_and_flrw_densities_from_gauge_fields:
+    kind: sampled
+    clauses:
+    - "(iv) near a Kasner wall the density is k times the Kretschmann density, 64/27 k tau^-3 for the Schwarzschild exponents"
+    - "(v) on flat FLRW, E - 8 Lambda^2/3 = (4/3)[Lambda (rho~ - 3 p~) - rho~ (rho~ + 3 p~)]"
+    omits: "Kasner at three tau, FLRW at five rational (Lambda, rho~, p~) with rational H; the general Lorentzian decomposition is tested by the earlier function"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

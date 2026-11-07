@@ -1,7 +1,7 @@
 ---
 id: three-routes.stalks-are-pointwise-metric-levels
 kind: claim
-version: 4
+version: 5
 title: The stalks are the pointwise metric levels
 status: proved
 region: three-routes
@@ -18,6 +18,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-three-routes, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.three-routes.ladder-bundle-even-subbundle
@@ -25,7 +29,7 @@ derivations:
 - name: main
   uses:
   - sheaf.function-linearity-tame-constructions@2
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -42,6 +46,13 @@ locators:
   label: prop:stalks
   line: 140
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item E6 (routine; no retirement): partial overlap with singularity.sheaf-assembly-sheaf recorded under extraction.overlaps_with (no pinned link: the overlap is partial); this entity carries the 23 October correction.'
+  overlaps_with:
+  - id: singularity.sheaf-assembly-sheaf
+    note: 'Near-duplicate in part (decision E6): with its sibling, this entity restates part of the singularity entity''s sheaf assembly and carries the 23 October correction. Kept both; recorded here since no clause-level link kind exists.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

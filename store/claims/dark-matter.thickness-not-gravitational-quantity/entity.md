@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.imported-inverse-square-law-short-range@1
-  - dark-matter.sourcing-rule-forced-not-chosen@3
+  - dark-matter.sourcing-rule-forced-not-chosen@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

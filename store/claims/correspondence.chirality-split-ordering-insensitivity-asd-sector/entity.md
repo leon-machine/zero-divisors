@@ -33,7 +33,7 @@ derivations:
   - correspondence.lorentzian-duality-complex-structure@5
   - correspondence.spin-representation@6
   - correspondence.symmetrised-quadratics-palatial-algebra@5
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.boosts-generate-exactly-levi-factor@5
   - std-algebra.bivector-lie-algebra@1
   proof: proof-main.tex
 checked_by:

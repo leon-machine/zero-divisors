@@ -1,7 +1,7 @@
 ---
 id: synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state
 kind: claim
-version: 5
+version: 6
 title: 'The microlocal condition on a generator gives the local null ground state'
 status: proved
 region: synthesis
@@ -29,14 +29,18 @@ credit:
   role: premise repointed to the carrier content split out of the stationary-horizon result
   version: 5
   source: maintainer pass 2026-11-07 (third cut)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the flat-chart sentence for the edge (flagged, sentence missing) and a dated marker on the stale sentence of the Reading'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
 derivations:
 - name: main
   uses:
-  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@3
-  - synthesis.stationary-generator-states-and-the-edge-scaling@1
+  - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
+  - synthesis.stationary-generator-states-and-the-edge-scaling@2
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-local-quasi-equivalence-of-hadamard-states@1
@@ -62,6 +66,10 @@ lineage:
   - synthesis.imported-haag-local-normality
   - synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6: The flat-chart sentence for the edge (flagged, sentence missing) and a dated marker on the stale sentence of the Reading; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_clause_split_3:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -140,8 +148,10 @@ Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$
 \end{enumerate}
 \emph{Note (the bulk link; added 1 November).} The restriction of bulk Hadamard states to the generator algebra, recorded in the technical level as not in the store, is now computed on the flat field for the Dirac field on every null plane, with the transverse labels as $K$ and no s-wave reduction: every gauge-invariant quasi-free Hadamard state restricts to a state satisfying the condition of (i) on every interval of every generator (Theorem \claimref{synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes}(iii)). Where the field strength is nonzero, the consequence (ii), the local form of (N$_{+}$) at each point, follows for such states by Theorem \claimref{synthesis.hadamard-scaling-limit-premise}, (HS) (formerly a premise); the condition of (i) on intervals is not derived there. So the open premise that the series' states satisfy this condition reduces, for the use the store makes of it, to their being Hadamard plus (HS). Statement and proof unchanged.
 
+\emph{Beyond one flat chart.} On the eternal hole and on de Sitter space the edge, where the stationary clause of (ii) is posed, is the bifurcation surface, which is global and is not carried by a single gravitational field $(\hb, \Omega)$ on flat spacetime; there the condition is stated on the algebra of an interval of the generator, in any smooth regular parameter, and the statements that hold on generator pieces of the invertible region are in GTG.
+
 ## technical
-The Hadamard condition is the standard requirement on physical states of a quantum field in a gravitational background: at short distances every physical state looks like the vacuum. In its microlocal form it says that the singularities of the two-point function carry only positive frequency, a pointwise condition with no reference to any symmetry. This result poses the generator analogue of that condition on one generator of a horizon, for the two orderings of the continuum modes' two-point kernel, and proves the generator analogue of the statement that Hadamard states differ by smooth kernels: the condition holds exactly when the kernel differs from the null vacuum's by a smooth function. The proof is two lines: the difference inherits positive frequency from one ordering and negative frequency from the other, and a distribution singular in neither direction is smooth. So the condition gives the square-integrable remainder from which the store already derives the local form of (N$_{+}$) at every point; for a state stationary under the boost the stored theorem then gives (N$_{+}$), which is the Kay-Wald mechanism on the generator algebra. Thermal states for the affine translations meet the condition at every point, so it cannot select the ground state by itself (the stored theorem states this as argued; here it is proved): a global datum is still needed. Translation-invariant mixtures of the vacuum and the anti-vacuum fail it everywhere, the stored half-thermal products fail it at the edge only, and a state whose remainder jumps across the diagonal shows that it is stronger than both square integrability and boundedness of the remainder. It is complementary to normality at the point at infinity of the closed generator: neither condition implies the other, and together they still do not give (N$_{+}$) without stationarity. What op.derive-loc-and-r-loc still needs (the series' states satisfy local normality at every point of the generators) would follow from this condition, which in turn would follow from the bulk Hadamard condition given a restriction of bulk Hadamard states to the generator algebra, which is not in the store (for the Dirac field it needs the s-wave reduction J3), and the propagation of the bulk condition from one Cauchy surface. (Added 1 November: on the flat field that restriction is now computed, for the Dirac field on every null plane with no s-wave reduction, and where the field strength is nonzero the local form at each point follows for Hadamard states by the scaling-limit theorem (HS), formerly a premise; so for that use the open premise reduces to the series' states being Hadamard.)
+The Hadamard condition is the standard requirement on physical states of a quantum field in a gravitational background: at short distances every physical state looks like the vacuum. In its microlocal form it says that the singularities of the two-point function carry only positive frequency, a pointwise condition with no reference to any symmetry. This result poses the generator analogue of that condition on one generator of a horizon, for the two orderings of the continuum modes' two-point kernel, and proves the generator analogue of the statement that Hadamard states differ by smooth kernels: the condition holds exactly when the kernel differs from the null vacuum's by a smooth function. The proof is two lines: the difference inherits positive frequency from one ordering and negative frequency from the other, and a distribution singular in neither direction is smooth. So the condition gives the square-integrable remainder from which the store already derives the local form of (N$_{+}$) at every point; for a state stationary under the boost the stored theorem then gives (N$_{+}$), which is the Kay-Wald mechanism on the generator algebra. Thermal states for the affine translations meet the condition at every point, so it cannot select the ground state by itself (the stored theorem states this as argued; here it is proved): a global datum is still needed. Translation-invariant mixtures of the vacuum and the anti-vacuum fail it everywhere, the stored half-thermal products fail it at the edge only, and a state whose remainder jumps across the diagonal shows that it is stronger than both square integrability and boundedness of the remainder. It is complementary to normality at the point at infinity of the closed generator: neither condition implies the other, and together they still do not give (N$_{+}$) without stationarity. What op.derive-loc-and-r-loc still needs (the series' states satisfy local normality at every point of the generators) would follow from this condition, which in turn would follow from the bulk Hadamard condition given a restriction of bulk Hadamard states to the generator algebra, which is not in the store (for the Dirac field it needs the s-wave reduction J3), and the propagation of the bulk condition from one Cauchy surface. (Added 1 November: on the flat field that restriction is now computed, for the Dirac field on every null plane with no s-wave reduction, and where the field strength is nonzero the local form at each point follows for Hadamard states by the scaling-limit theorem (HS), formerly a premise; so for that use the open premise reduces to the series' states being Hadamard.) On the eternal hole and de Sitter space the edge is the bifurcation surface, which is global: no single gravitational field on flat spacetime carries it, so that part is read on the manifold assembled from several charts.
 
 ## lay
 Physicists usually require that any reasonable quantum state, looked at closely enough, resembles empty space. The precise version of this requirement says that the very fine-grained structure of the state carries only positive energy. This result writes a version of that requirement for the quantum modes running along a single light ray of a horizon and shows that it is the same as saying the state differs from the vacuum only by something smooth. From there the store's earlier results give the horizon temperature at every point, without assuming that anything is static. It does not single out the vacuum, though: a gas of modes at any temperature also passes, so to get the full premise one still needs the state to be static near the point where the two halves of the horizon meet. Whether the series' states obey the requirement is still an open assumption.

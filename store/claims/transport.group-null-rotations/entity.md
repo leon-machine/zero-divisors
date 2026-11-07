@@ -1,7 +1,7 @@
 ---
 id: transport.group-null-rotations
 kind: claim
-version: 4
+version: 5
 title: The group of null rotations
 status: proved
 region: transport
@@ -17,11 +17,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, Spin^0 membership for null u completed in the proof'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
   uses:
-  - transport.no-go-level-elements@4
+  - transport.no-go-level-elements@5
   - std-algebra.blade-basis@1
   - std-algebra.orthogonal-anticommute@1
   proof: proof-main.tex
@@ -42,6 +46,10 @@ locators:
   label: lem:Nv
   line: 792
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Proof gap: Step 2 of the no-go, cited for membership in Spin^0, covers u with Q(u) != 0 only; the null u of U are now covered by the group law (u a sum of two non-null vectors of the nondegenerate U). Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

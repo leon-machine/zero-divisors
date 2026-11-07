@@ -1,7 +1,7 @@
 ---
 id: dark-matter.two-families-are-two-chiralities
 kind: claim
-version: 6
+version: 7
 title: The two families are the two chiralities
 status: proved
 region: dark-matter
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, garbled annihilation identity corrected; which Witt half annihilates said'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -49,6 +53,10 @@ locators:
   label: prop:families
   line: 245
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7. Proof (i): the expression U(Rf) = +-R(Wf)R^{-1}R was garbled; written +-(R W R^{-1})(Rf) = +-R(Wf) = 0. A clause now says that the w_i annihilate and the v_i create here, the reverse of std-algebra.witt-basis-car''s reading, which the cited relation does not depend on. Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

@@ -1,7 +1,7 @@
 ---
 id: interior.imported-tractor-connection
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the tractor connection'
 status: imported
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (tractor connection as the Cl(2,4) gauge field)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -35,6 +39,16 @@ locators:
   label: fact:tractor
   line: 441
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The imported tractor connection is stated first as the Cl(2,4) rotation-gauge field D^T_a = a.nabla + Omega_T(a)x, Omega_T(a) = Omega(a) - ninf ^ hb^{-1}(a) + n0 ^ P(hb^{-1}(a)), on the tractors sigma ninf + mu + rho n0 (the store''s transcription, synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection), the scale-g component display kept as its labelled reading; the dangling references (eq:tractormetric, Section sec:setting, ''this paper'', R03) are replaced; the previous formal is in source_formal; status imported.'
+  source_formal: |-
+    Let $g$ be the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) on its invertible region. The tractor bundle $\mathcal{T}$ of the conformal class $[g]$, trivialised in the scale $g$ by $\nInf$, the physical vectors and $\nO$ (the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$), carries a canonical connection depending only on $[g]$, preserving the metric \eqref{eq:tractormetric}, whose expression in the scale $g$ is
+    \begin{equation}
+    \nabla_a(\sigma, \mu_b, \rho) \;=\; \bigl(\nabla_a\sigma - \mu_a,\;\; \nabla_a\mu_b + g_{ab}\,\rho - \Sch_{ab}\,\sigma,\;\; \nabla_a\rho + \Sch_a{}^{b}\mu_b\bigr),
+    \end{equation}
+    where $\nabla_a$ on $\mu$ is the covariant derivative $D$ of the gravitational field in the physical frame and $\Sch_{ab}$ is the Schouten tensor of $g$, the components of the Schouten map $\Sch(A) = \tfrac12\bigl(\mathcal{R}(A) - \tfrac16 A\,\mathcal{R}\bigr)$ of the field strength; in four dimensions $\Sch_{ab} = \tfrac12\bigl(\Ric_{ab} - \tfrac{R}{6}\,g_{ab}\bigr)$. \emph{Provenance:} Bailey-Eastwood-Gover \cite{BEG1994}; Curry-Gover \cite[\S 5]{CurryGover2018}. The display \eqref{eq:tractorconn} is their connection written in the curvature conventions of Section \ref{sec:setting}; the relative sign of the Schouten slots against those references is convention-dependent, and Lemma \claimref{interior.sign-fixed-internally} fixes it internally, so that no sign in this paper rests on a translation between conventions.
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -49,11 +63,11 @@ extraction:
 ---
 
 ## formal
-Let $g$ be the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) on its invertible region. The tractor bundle $\mathcal{T}$ of the conformal class $[g]$, trivialised in the scale $g$ by $\nInf$, the physical vectors and $\nO$ (the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$), carries a canonical connection depending only on $[g]$, preserving the metric \eqref{eq:tractormetric}, whose expression in the scale $g$ is
+Let $g$ be the derived metric of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) on its invertible region. The tractor bundle $\mathcal{T}$ of the conformal class $[g]$, trivialised in the scale $g$ by $\nInf$, the physical vectors and $\nO$ (the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$), carries a canonical connection depending only on $[g]$, preserving the tractor metric (the product of $\Cl(2,4)$), which on flat spacetime is the $\Cl(2,4)$ rotation-gauge field $D^{T}_{a} = a \cdot \nabla + \Omega_{T}(a)\times$, $\Omega_{T}(a) = \Omega(a) - \nInf \wedge \hb^{-1}(a) + \nO \wedge \Sch(\hb^{-1}(a))$, acting on the tractors $\sigma\nInf + \mu + \rho\nO$ (Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}), and whose expression in the scale $g$, its component reading, is
 \begin{equation}
 \nabla_a(\sigma, \mu_b, \rho) \;=\; \bigl(\nabla_a\sigma - \mu_a,\;\; \nabla_a\mu_b + g_{ab}\,\rho - \Sch_{ab}\,\sigma,\;\; \nabla_a\rho + \Sch_a{}^{b}\mu_b\bigr),
 \end{equation}
-where $\nabla_a$ on $\mu$ is the covariant derivative $D$ of the gravitational field in the physical frame and $\Sch_{ab}$ is the Schouten tensor of $g$, the components of the Schouten map $\Sch(A) = \tfrac12\bigl(\mathcal{R}(A) - \tfrac16 A\,\mathcal{R}\bigr)$ of the field strength; in four dimensions $\Sch_{ab} = \tfrac12\bigl(\Ric_{ab} - \tfrac{R}{6}\,g_{ab}\bigr)$. \emph{Provenance:} Bailey-Eastwood-Gover \cite{BEG1994}; Curry-Gover \cite[\S 5]{CurryGover2018}. The display \eqref{eq:tractorconn} is their connection written in the curvature conventions of Section \ref{sec:setting}; the relative sign of the Schouten slots against those references is convention-dependent, and Lemma \claimref{interior.sign-fixed-internally} fixes it internally, so that no sign in this paper rests on a translation between conventions.
+where $\nabla_a$ on $\mu$ is the covariant derivative $D$ of the gravitational field in the physical frame and $\Sch_{ab}$ is the Schouten tensor of $g$, the components of the Schouten map $\Sch(A) = \tfrac12\bigl(\mathcal{R}(A) - \tfrac16 A\,\mathcal{R}\bigr)$ of the field strength; in four dimensions $\Sch_{ab} = \tfrac12\bigl(\Ric_{ab} - \tfrac{R}{6}\,g_{ab}\bigr)$. \emph{Provenance:} Bailey-Eastwood-Gover \cite{BEG1994}; Curry-Gover \cite[\S 5]{CurryGover2018}. The display is their connection written in the store's curvature convention (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); the relative sign of the Schouten slots against those references is convention-dependent, and Lemma \claimref{interior.sign-fixed-internally} fixes it internally, so that no sign rests on a translation between conventions.
 
 ## technical
 For a gravitational field on flat spacetime with derived metric $g$, the tractor bundle $\mathcal{T}$ of the conformal class $[g]$ is, on the invertible region, the vectors $\sigma\nInf + \mu + \rho\nO$ of $\Cl(2,4)$. It carries a canonical connection that depends only on $[g]$ and preserves the tractor metric. In the scale $g$ it reads $\nabla_a(\sigma,\mu_b,\rho) = \bigl(\nabla_a\sigma - \mu_a,\ \nabla_a\mu_b + g_{ab}\rho - \Sch_{ab}\sigma,\ \nabla_a\rho + \Sch_a{}^{b}\mu_b\bigr)$, with $\nabla$ on $\mu$ the gravitational covariant derivative, where in four dimensions the Schouten tensor is $\Sch_{ab} = \tfrac12\bigl(\Ric_{ab} - \tfrac{R}{6}g_{ab}\bigr)$, read from the field strength.

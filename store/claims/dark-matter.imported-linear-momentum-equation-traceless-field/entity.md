@@ -1,7 +1,7 @@
 ---
 id: dark-matter.imported-linear-momentum-equation-traceless-field
 kind: claim
-version: 2
+version: 3
 title: 'Imported: the linear momentum equation and the traceless field equation'
 status: imported
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (covariant conservation)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -31,6 +35,12 @@ locators:
   label: fact:linpert
   line: 1171
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The covariant conservation is written dot-T(dot-D) = 0 for the stress-energy map of Gauge Theory Gravity, with nabla_mu T^{mu nu} = 0 as a labelled reading; the source''s form (the previous formal level) is in source_formal; the equations are unchanged; status imported.'
+  source_formal: |-
+    For the perturbed FLRW gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in conformal Newtonian gauge, $\hb^{-1}(e_\tau) = a(1 + \psi)\,e_\tau$, $\hb^{-1}(e_i) = a(1 - \phi)\,e_i$ at linear order, whose derived metric in the source's signature $(-,+,+,+)$ is $ds^{2} = a^{2}[-(1 + 2\psi)d\tau^{2} + (1 - 2\phi)dx^{2}]$, the covariant conservation of the stress-energy under $D$ ($\nabla_{\mu}T^{\mu\nu} = 0$) gives a pressureless component of velocity divergence $\theta$ and anisotropic stress $\sigma$ the momentum equation $\theta' = -\mathcal{H}\theta + k^{2}\psi - k^{2}\sigma$, and the traceless part of the field equations of the gravitational field gives $k^{2}(\phi - \psi) = 12\pi G a^{2}\sum_{i}(\rho_{i} + p_{i})\sigma_{i}$. \emph{Provenance:} \cite[eqs.~(30), (23d)]{MaBertschinger1995}.
   env: fact
   typing:
     by: ai-typing-pass
@@ -42,7 +52,7 @@ extraction:
 ---
 
 ## formal
-For the perturbed FLRW gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in conformal Newtonian gauge, $\hb^{-1}(e_\tau) = a(1 + \psi)\,e_\tau$, $\hb^{-1}(e_i) = a(1 - \phi)\,e_i$ at linear order, whose derived metric in the source's signature $(-,+,+,+)$ is $ds^{2} = a^{2}[-(1 + 2\psi)d\tau^{2} + (1 - 2\phi)dx^{2}]$, the covariant conservation of the stress-energy under $D$ ($\nabla_{\mu}T^{\mu\nu} = 0$) gives a pressureless component of velocity divergence $\theta$ and anisotropic stress $\sigma$ the momentum equation $\theta' = -\mathcal{H}\theta + k^{2}\psi - k^{2}\sigma$, and the traceless part of the field equations of the gravitational field gives $k^{2}(\phi - \psi) = 12\pi G a^{2}\sum_{i}(\rho_{i} + p_{i})\sigma_{i}$. \emph{Provenance:} \cite[eqs.~(30), (23d)]{MaBertschinger1995}.
+For the perturbed FLRW gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in conformal Newtonian gauge, $\hb^{-1}(e_\tau) = a(1 + \psi)\,e_\tau$, $\hb^{-1}(e_i) = a(1 - \phi)\,e_i$ at linear order, whose derived metric in the source's signature $(-,+,+,+)$ is $ds^{2} = a^{2}[-(1 + 2\psi)d\tau^{2} + (1 - 2\phi)dx^{2}]$, the covariant conservation of the stress-energy map under $D$, $\dot T(\dot D) = 0$ (in components $\nabla_{\mu}T^{\mu\nu} = 0$), gives a pressureless component of velocity divergence $\theta$ and anisotropic stress $\sigma$ the momentum equation $\theta' = -\mathcal{H}\theta + k^{2}\psi - k^{2}\sigma$, and the traceless part of the field equations of the gravitational field gives $k^{2}(\phi - \psi) = 12\pi G a^{2}\sum_{i}(\rho_{i} + p_{i})\sigma_{i}$. \emph{Provenance:} \cite[eqs.~(30), (23d)]{MaBertschinger1995}.
 
 ## technical
 For the perturbed FLRW gravitational field on flat spacetime in conformal Newtonian gauge, whose derived metric is $ds^{2} = a^{2}[-(1 + 2\psi)d\tau^{2} + (1 - 2\phi)dx^{2}]$, covariant conservation of the stress tensor gives a pressureless component with velocity divergence $\theta$ and anisotropic stress $\sigma$ the momentum equation $\theta' = -\mathcal{H}\theta + k^{2}\psi - k^{2}\sigma$. The traceless part of the field equations ties the difference of the two potentials to the total anisotropic stress, $k^{2}(\phi - \psi) = 12\pi G a^{2}\sum_{i}(\rho_{i} + p_{i})\sigma_{i}$. These are the standard linear-perturbation equations of Ma and Bertschinger.

@@ -43,7 +43,7 @@ extraction:
 derivations:
 - name: main
   uses:
-  - tower.car-limit-even-charge@5
+  - tower.car-limit-even-charge@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

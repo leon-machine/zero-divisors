@@ -26,9 +26,9 @@ derivations:
 - name: main
   uses:
   - field-theory.twistor-attachment@6
-  - standard-model.connection-forced@4
-  - synthesis.slot-module-light-ray-arrays-are-weyl-components@2
-  - synthesis.imported-sakharov-induced-gravity-coefficients@1
+  - standard-model.connection-forced@5
+  - synthesis.slot-module-light-ray-arrays-are-weyl-components@3
+  - synthesis.imported-sakharov-induced-gravity-coefficients@2
   - synthesis.imported-luscher-mack-conformal-energy-on-the-einstein-static-field@1
   proof: proof-main.tex
 checked_by:

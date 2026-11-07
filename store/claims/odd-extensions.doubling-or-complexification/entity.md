@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.doubling-or-complexification
 kind: claim
-version: 5
+version: 6
 title: Doubling or complexification
 status: proved
 region: odd-extensions
@@ -17,13 +17,21 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, bare imaginary unit replaced by the central volume element (U3)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.odd-extensions.single-extension
 derivations:
 - name: main
   uses:
-  - odd-extensions.volume-element-odd-dimension@3
+  - odd-extensions.volume-element-odd-dimension@4
   - std-algebra.z2-grading@1
   - std-algebra.orthogonal-anticommute@1
   proof: proof-main.tex
@@ -44,6 +52,17 @@ locators:
   label: thm:split
   line: 441
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 6 (already raised in this run). Decision item E7 (routine; no retirement): specialises std-algebra.even-subalgebra-isomorphism@1 added. Clause (iii) here (Cl^0 = Cl(p,q) or Cl(q,p) via e_i e_n) is the odd-dimensional case of the standard even-subalgebra isomorphism, so this result joins the existing chain (rule2.even-subalgebra-one-dimensional-extension already specialises it); the overlap of clauses (i), (ii) with std-algebra.complexification (ii) is recorded under extraction.overlaps_with.'
+  overlaps_with:
+  - id: std-algebra.complexification
+    note: 'Decision E7: clauses (i), (ii) here overlap clause (ii) of std-algebra.complexification; kept both.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Unit principle U3: the bare i of the proof (x (x) (a + bi)) and the abstract C of clause (ii) are written with the central volume element omega, the unit the clause already names, as in std-algebra.complexification-is-the-odd-extension (span{1, I_W}); exact check in scratch: omega central with omega^2 = -1 in Cl(1,2). Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -67,18 +86,20 @@ extraction:
     date: '2026-10-21'
     cited:
     - odd-extensions.volume-element-odd-dimension
+specialises:
+- std-algebra.even-subalgebra-isomorphism@1
 ---
 
 ## formal
 Let $n$ be odd and let $\Cl^{0}$ be the even subalgebra of $\Cl(p,q)$.
 \begin{enumerate}
 \item[(i)] If $\omega^{2} = +1$, then $\Cl(p,q) \cong \Cl^{0} \oplus \Cl^{0}$, the two summands the ideals of the complementary central idempotents $(1 \pm \omega)/2$, and on the summand of $(1 \pm \omega)/2$ the generator $e_{n}$ acts as $\pm s\,\omega'$, with $s = e_{n}^{2}$ and $\omega' = e_{1}\cdots e_{n-1}$ the volume element of the shadow (so the two summands carry opposite signs).
-\item[(ii)] If $\omega^{2} = -1$, then $\Cl(p,q) \cong \Cl^{0} \otimes_{\R} \C$ with $\omega$ as the imaginary unit.
+\item[(ii)] If $\omega^{2} = -1$, then $\Cl(p,q) \cong \Cl^{0} \otimes_{\R} \mathrm{span}\{1, \omega\}$, the field $\mathrm{span}\{1, \omega\} \cong \C$ having the central $\omega$ as its unit.
 \item[(iii)] $\Cl^{0}(p, q+1) \cong \Cl(p,q)$ and $\Cl^{0}(p+1, q) \cong \Cl(q,p)$.
 \end{enumerate}
 
 ## technical
-Let $n$ be odd, so the volume element $\omega$ of $\Cl(p,q)$ is central, and let $\Cl^{0}$ be the even subalgebra. If $\omega^{2} = +1$, the complementary central idempotents $(1 \pm \omega)/2$ split the algebra as $\Cl(p,q) \cong \Cl^{0} \oplus \Cl^{0}$, and on the summand of $(1 \pm \omega)/2$ the generator $e_n$ acts as $\pm s\,\omega'$, with $s = e_n^{2}$ and $\omega' = e_1 \cdots e_{n-1}$ the volume element of the shadow. If $\omega^{2} = -1$, then $\omega$ is a central imaginary unit and $\Cl(p,q) \cong \Cl^{0} \otimes_{\R} \C$.
+Let $n$ be odd, so the volume element $\omega$ of $\Cl(p,q)$ is central, and let $\Cl^{0}$ be the even subalgebra. If $\omega^{2} = +1$, the complementary central idempotents $(1 \pm \omega)/2$ split the algebra as $\Cl(p,q) \cong \Cl^{0} \oplus \Cl^{0}$, and on the summand of $(1 \pm \omega)/2$ the generator $e_n$ acts as $\pm s\,\omega'$, with $s = e_n^{2}$ and $\omega' = e_1 \cdots e_{n-1}$ the volume element of the shadow. If $\omega^{2} = -1$, then $\omega$ is a central unit of square $-1$ and $\Cl(p,q) \cong \Cl^{0} \otimes_{\R} \mathrm{span}\{1, \omega\}$, the complexification of $\Cl^{0}$ with unit $\omega$.
 
 Separately, the even subalgebra of a one-generator extension is a Clifford algebra of one dimension fewer: $\Cl^{0}(p, q+1) \cong \Cl(p,q)$ and $\Cl^{0}(p+1, q) \cong \Cl(q,p)$.
 

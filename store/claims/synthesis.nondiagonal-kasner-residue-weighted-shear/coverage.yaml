@@ -19,6 +19,12 @@ functions:
     clauses:
     - (iv)
     omits: Only shows that the Kasner weights satisfy tr R = tr R^2 = (tr R)^2 and that one off-circle point violates it; the derivation of these from the 00 Einstein equation and the Hamiltonian constraint at order tau^-2, the hypotheses on the limit and on tau^2 R3, and independence of Lambda are not tested (they come with the premises)
+  check_gtg_torsion_equation_gives_the_boost_block:
+    kind: sampled
+    clauses:
+    - (i) the boost block and the e^0-leg of the rotation-gauge field, and tau K = sym(B) in the physical frame
+    - (iv) the 00 Ricci and Hamiltonian-constraint identities used, on flat slices
+    omits: "six cases at the Kasner point (-2/7, 3/7, 6/7), tau0 = 1 and 2^7, shears exp(c log tau N) in both orders and 1 + tau^(3/7) E_12, one x-dependent and one constant theta0; the constraint identity only with R3 = 0; the order-tau^-2 limits of (iv) are argued"
 judge:
   by: fix-round-2026-10-23
   date: '2026-10-23'

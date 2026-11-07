@@ -25,12 +25,12 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.operator-join-ordering-constants@3
+  - synthesis.operator-join-ordering-constants@4
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements@2
-  - synthesis.operator-join-casimir-shifts@2
+  - synthesis.operator-join-casimir-shifts@3
   - mass.imported-palatial-quadratics-homogeneity-charge@4
   - field-theory.twistor-attachment@6
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -48,6 +48,10 @@ lineage:
   - synthesis.operator-join-seed-has-no-diagonal-matrix-elements
   - synthesis.operator-join-ordering-constants
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.operator-join-casimir-shifts repinned 2 -> 3 after reviewing its B6 restatement (clause (iii) and the closing sentence now hold under an explicitly stated, unproved normalisation hypothesis; (i) and (ii) are unchanged); the use here holds as cited.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

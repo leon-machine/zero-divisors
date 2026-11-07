@@ -1,7 +1,7 @@
 ---
 id: transport.exhaustiveness-every-zero-divisor-annihilated-idempotent
 kind: claim
-version: 3
+version: 4
 title: 'Exhaustiveness: every zero divisor is annihilated by an idempotent'
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.transport.obstruction-types
@@ -26,7 +30,7 @@ derivations:
   - transport.classification-real-clifford-algebras@3
   - transport.existence-classification-type-c@4
   - transport.existence-locus-type-n@5
-  - transport.regularity-localises-zero-divisors-idempotents@2
+  - transport.regularity-localises-zero-divisors-idempotents@3
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -45,6 +49,13 @@ locators:
   label: thm:annihilator
   line: 642
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Decision item E7 (routine; no retirement): clause (1) overlaps std-algebra.zero-divisors-annihilated (d), (e), the general statement and home; recorded under extraction.overlaps_with (a clause-level overlap, no pinned link).'
+  overlaps_with:
+  - id: std-algebra.zero-divisors-annihilated
+    note: 'Decision E7: clause (1) here is clause (d), (e) of std-algebra.zero-divisors-annihilated, kept as the general statement; overlap in part, so no pinned link.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

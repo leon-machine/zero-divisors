@@ -40,6 +40,10 @@ locators:
   number: T17 stance 12
   label: tab:stances
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: one-relation.record-chain-votes-measurement-without-collapse repinned 6 -> 7 after reviewing its B3 restatement (it now assumes the postulate one-relation.recorded-sectors-superselected-premise where it cited Remark rem:recording; the conclusion is unchanged); the use here holds as cited.'
   small_findings_pass:
     by: ai-small-findings-pass
     date: 2026-10-22
@@ -56,7 +60,7 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - one-relation.record-chain-votes-measurement-without-collapse@6
+  - one-relation.record-chain-votes-measurement-without-collapse@7
 ---
 
 ## formal

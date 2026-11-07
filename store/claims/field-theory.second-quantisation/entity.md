@@ -1,7 +1,7 @@
 ---
 id: field-theory.second-quantisation
 kind: claim
-version: 5
+version: 6
 title: Second quantisation
 status: proved
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 about:
 - obj.field-theory.single-algebra-field
@@ -62,6 +66,10 @@ locators:
   label: prop:secondq
   line: 140
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -95,16 +103,16 @@ With Definition \claimref{obj.field-theory.single-algebra-field}:
 \item $\Lambda(k) = k\gamma_0/(2k_0)$ is the orthogonal projector onto $\ker k$.
 \item The field's anticommutator has no tower part and equals $\ip{\phi_1}{\sum_j 2\alpha_j\cos(k_j\cdot\xi)\Lambda(k_j)\chi\,\phi_2}$; in the continuum it is $\chi(\nabla D)\gamma_0$ with $D$ the Pauli-Jordan function, so the field is local.
 \item The span$\{1, I_4\}$ part of $\Psi^*M\Psi$ is the second-quantised $d\Gamma(M)$ on particle modes; antiparticle terms need normal ordering.
-\item With $i = I_4$ a field carrying both chiralities gives the right-handed part complex-linearly and the left-handed part conjugated. With Hestenes' $i = \IS$ the same field quantises as a whole Dirac field, at the cost of a frame-dependent unit. The split is forced by the choice $i = I_4$, not by the algebra.
+\item With the unit $I_4$ a field carrying both chiralities gives the right-handed part complex-linearly and the left-handed part conjugated. With Hestenes' $i = \IS$ the same field quantises as a whole Dirac field, at the cost of a frame-dependent unit. The split is forced by the choice of the unit $I_4$, not by the algebra.
 \end{enumerate}
 
 ## technical
 With the single-algebra field, $\Lambda(k) = k\gamma_0/(2k_0)$ is the orthogonal projector onto $\ker k$, and the field's anticommutator has no tower part and equals $\ip{\phi_1}{\sum_j 2\alpha_j\cos(k_j\cdot\xi)\Lambda(k_j)\chi\,\phi_2}$; in the continuum it is $\chi(\nabla D)\gamma_0$ with $D$ the Pauli-Jordan function, so the field is local. The $\mathrm{span}\{1, I_4\}$ part of $\Psi^*M\Psi$ is the second-quantised $d\Gamma(M)$ on particle modes, with antiparticle terms needing normal ordering.
 
-With $i = I_4$ a field carrying both chiralities gives the right-handed part complex-linearly and the left-handed part conjugated; with Hestenes' $i = \IS$ the same field quantises as a whole Dirac field, at the cost of a frame-dependent unit. The split is forced by the choice $i = I_4$, not by the algebra.
+With the unit $I_4$ a field carrying both chiralities gives the right-handed part complex-linearly and the left-handed part conjugated; with Hestenes' $i = \IS$ the same field quantises as a whole Dirac field, at the cost of a frame-dependent unit. The split is forced by the choice of the unit $I_4$, not by the algebra.
 
 ## lay
 Fields whose values are elements of the spacetime algebra and whose modes are tower planes can be quantised inside one algebra, with the volume element as imaginary unit. The resulting field is local, and its observables are the standard second-quantised ones. The price of this unit is that a field's two chiralities enter differently, one directly and one conjugated; Hestenes' unit avoids that at the cost of choosing a frame.
 
 ## one-liner
-With the single-algebra field and $i = I_4$, second quantisation gives a local field and the standard $d\Gamma(M)$, one chirality entering complex-linearly and the other conjugated.
+With the single-algebra field and the unit $I_4$, second quantisation gives a local field and the standard $d\Gamma(M)$, one chirality entering complex-linearly and the other conjugated.

@@ -24,7 +24,7 @@ derivations:
   - scrambling.clock-inventory-boundary-modes@6
   - sheaf.one-sided-completion-singularity@4
   - singularity.imported-descent-one-way-conditional-expectation@7
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   - transport.door-one-way@5
   - transport.pinching-kernel@3
   - singularity.why-calibration-cannot-be-internal@6

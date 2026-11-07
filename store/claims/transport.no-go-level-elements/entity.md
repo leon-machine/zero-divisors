@@ -1,7 +1,7 @@
 ---
 id: transport.no-go-level-elements
 kind: claim
-version: 4
+version: 5
 title: No-go at the level of elements
 status: proved
 region: transport
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T01, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, normalised vector no longer written with the grade-involution hat'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.transport.equivariance
@@ -43,6 +47,10 @@ locators:
   label: thm:nogo
   line: 686
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Notation clash inside the proof: hat is declared the grade involution throughout, and Step 2 also wrote the normalised vector u/sqrt|Q(u)| as hat-u; renamed u_1. Mathematics unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

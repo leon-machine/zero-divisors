@@ -1,7 +1,7 @@
 ---
 id: pred.dark-energy-w-minus-one
 kind: prediction
-version: 3
+version: 4
 title: 'Dark energy cannot evolve: w = -1'
 status: live
 subject: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, label of the cited result corrected'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 kill_condition:
   threshold: A confirmed detection of $w \neq -1$ at any epoch, with no parameter available to absorb
@@ -45,6 +49,10 @@ locators:
   number: T17 stance 2
   label: tab:stances
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The registration result was cited as a Theorem; it is a Proposition (T10 Prop. 4.2), as the notes and the result itself name it; wording only.'
   maintainer_pass_2026_11_01:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -67,7 +75,7 @@ derivations:
 ---
 
 ## formal
-Dark energy cannot evolve: $w = -1$ exactly, at every epoch; registered with its one condition, that on matter-filled regions the gravitational connection, the $\Cl(2,4)$ connection that preserves the frozen point $I$, keeps it parallel in the physical scale, $\ip{X}{I} = 1$ (Theorem \claimref{dark-energy.vacuum-region-registration-condition}(iii)); in that form the condition is the field-space premise (FS) of the gravitational action (Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), which the store adopts.
+Dark energy cannot evolve: $w = -1$ exactly, at every epoch; registered with its one condition, that on matter-filled regions the gravitational connection, the $\Cl(2,4)$ connection that preserves the frozen point $I$, keeps it parallel in the physical scale, $\ip{X}{I} = 1$ (Proposition \claimref{dark-energy.vacuum-region-registration-condition}(iii)); in that form the condition is the field-space premise (FS) of the gravitational action (Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), which the store adopts.
 
 \emph{Note (deflation).} On the reduced field space of (FS) the norm $Q(I) = \Lambda/3$ is constant, so $\Lambda$ is a constant parameter and $w = -1$ is the $\Lambda$CDM equation of state. A confirmed $w = -1$ therefore supports $\Lambda$CDM with a frozen point but is not evidence for (FS) independent of $\Lambda$CDM; a confirmed $w \neq -1$ would refute (FS), and $\Lambda$CDM with it (Theorem \claimref{synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise}, Reading).
 

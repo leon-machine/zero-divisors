@@ -30,8 +30,8 @@ derivations:
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.imported-microlocal-hadamard-condition@2
   - hawking.i-state@4
-  - field-theory.second-quantisation@5
-  - synthesis.imported-gtg-dictionary@1
+  - field-theory.second-quantisation@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian@6
   - synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness@1
   - synthesis.imported-bochner-theorem-moment-lemma-and-whitney-even-functions@2
@@ -53,6 +53,10 @@ lineage:
   - synthesis.hadamard-scaling-limit-premise
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

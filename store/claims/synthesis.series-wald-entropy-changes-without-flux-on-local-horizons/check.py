@@ -322,3 +322,88 @@ def check_entropy_change_without_flux():
 
 
 EXPORTS = {}
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The Schwarzschild-de Sitter field as a gauge field on flat spacetime (lib/gtg.py), store signature (+,-,-,-),
+# Painleve-Gullstrand chart hb = 1 - beta P, beta^2 = 2M/r + Lambda r^2/3 = 1 - f; the store curvature
+# calR(B) = -R(hb(B)) from the field strength. The sectional curvature of a spacelike plane with unit bivector
+# B (B^2 = -1) is K = <calR(B) B^{-1}> (de Sitter: Lambda/3, sign-free); the Cartan curvature of the edge plane
+# is K - Lambda/3 = <(calR(B) - (Lambda/3) B) B^{-1}>; R(k, A, k, B) = (k ^ B) . calR(k ^ A) (dictionary C11).
+import gtg  # noqa: E402
+
+S13 = gtg.S13
+# (r, Lambda, beta) in the static region (beta < 1), M = r (beta^2 - Lambda r^2/3)/2 > 0
+SDS_POINTS = [(F(1), F(3, 4), F(4, 5)), (F(2), F(3, 8), F(4, 5)), (F(1, 2), F(3), F(3, 5))]
+
+
+def sds_gauge_field(r0, lam, b0):
+    M = r0 * (b0 * b0 - lam * r0 * r0 / 3) / 2
+    return gtg.pg_field(r0, F(3, 5), F(4, 5), gtg.beta_kottler(M, lam)), M
+
+
+def sect(Rc, B):
+    """<calR(B) B^{-1}> for a bivector B (B^{-1} = B/<BB>)."""
+    BB = gtg.sp(GA.mul(B, B, S13))
+    return gtg.sp(GA.mul(gtg.apply_op(Rc, B), B, S13)) / BB
+
+
+def check_gtg_sds_field_strength_on_radial_generators():
+    premise("synthesis.imported-raychaudhuri-null-congruence")
+    premise("synthesis.imported-gtg-dictionary")      # C11: R(k, A, k, B) = (k ^ B) . calR(k ^ A)
+    premise("synthesis.euler-term-horizon-entropy-shift")
+    ok = True
+    e = [GA.gen(i) for i in range(4)]
+    for r0, lam, b0 in SDS_POINTS:
+        fld, M = sds_gauge_field(r0, lam, b0)
+        ok = ok and M > 0 and fld.torsion_free()
+        Rc = fld.curvature()
+        ok = ok and all(GA.eq(gtg.ricci(Rc, e[c]), GA.scal(lam, e[c])) for c in range(4))
+        K = 2 * M / r0 ** 3 + lam / 3
+        ok = ok and GA.eq(gtg.apply_op(Rc, gtg.wedge(e[2], e[3])), GA.scal(K, gtg.wedge(e[2], e[3])))
+        for sgn in (1, -1):
+            k = GA.add(e[0], GA.scal(sgn, e[1]))
+            for A in (e[2], e[3]):
+                for Bv in (e[2], e[3]):
+                    ok = ok and gtg.riem_o(Rc, k, A, k, Bv) == 0
+                    ok = ok and gtg.riem_o(Rc, k, A, e[2], e[3]) == 0
+            for a, b in ((F(0), F(0)), (F(2), F(-1, 3)), (F(-5, 7), F(4))):
+                tilt = gtg.wedge(GA.add(e[2], GA.scal(a, k)), GA.add(e[3], GA.scal(b, k)))
+                ok = ok and sect(Rc, tilt) == K
+            # the transverse physical frame is D-parallel along both radial null directions
+            kc = [F(1), F(sgn), F(0), F(0)]
+            ok = ok and all(fld.cov_phys(kc, gtg.vec([gtg.J(1 if j == i else 0) for j in range(4)])) == {}
+                            for i in (2, 3))
+        s_density = -F(3, 4) / lam * (K - lam / 3)
+        ok = ok and s_density == -3 * M / (2 * lam * r0 ** 3)
+    # de Sitter (flat slicing): every spacelike plane has K = Lambda/3, so the density vanishes
+    Rds = gtg.de_sitter_flat(F(1, 2), F(3)).curvature()
+    for B in (gtg.wedge(e[2], e[3]), gtg.wedge(GA.add(e[1], GA.scal(F(2), e[3])), GA.add(e[2], GA.scal(F(1, 3), e[0])))):
+        ok = ok and sect(Rds, B) == F(1, 4)
+    assert ok
+    return ok
+
+
+def check_gtg_horizon_cross_section_surface_gravity_and_value():
+    premise("synthesis.euler-term-horizon-entropy-shift")
+    premise("synthesis.sds-clausius-fixes-area-constant")
+    ok = True
+    for rb, lam in ((F(1), F(3, 4)), (F(2), F(3, 16)), (F(1, 2), F(3, 2))):
+        M = rb * (1 - lam * rb * rb / 3) / 2
+        fld = gtg.pg_field(rb, F(3, 5), F(4, 5), gtg.beta_kottler(M, lam))
+        beta = fld.TH[1][0]
+        ok = ok and M > 0 and beta.v == 1
+        xi = gtg.vec([gtg.J(1), beta, gtg.J(0), gtg.J(0)])
+        ok = ok and gtg.vdot(gtg.m_val(xi), gtg.m_val(xi)) == 0
+        kappa = (2 * M / rb ** 2 - 2 * lam * rb / 3) / 2
+        ok = ok and GA.eq(fld.cov_phys([F(1), F(1), F(0), F(0)], xi), GA.scal(kappa, gtg.m_val(xi)))
+        # the cut's second fundamental form along xi vanishes (the condition of (i)); the other null normal's does not
+        tang = ([F(0), F(0), F(1), F(0)], [F(0), F(0), F(0), F(1)])
+        ok = ok and all(gtg.vdot(GA.gen(b), fld.cov_phys(a, xi)) == 0 for a in tang for b in (2, 3))
+        n = gtg.vec([gtg.J(1), gtg.J(-1), gtg.J(0), gtg.J(0)])
+        ok = ok and -sum(gtg.vdot(GA.gen(2 + i), fld.cov_phys(a, n)) for i, a in enumerate(tang)) == -4 / rb
+        K = sect(fld.curvature(), gtg.wedge(GA.gen(2), GA.gen(3)))
+        # coefficients of pi: 4 rb^2 * s = A/4 - 3/Lambda (pi factored out), s = -(3/4 Lambda)(K - Lambda/3)
+        ok = ok and 4 * rb * rb * (-F(3, 4) / lam * (K - lam / 3)) == rb * rb - 3 / lam
+    assert ok
+    return ok

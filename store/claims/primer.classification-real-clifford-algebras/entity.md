@@ -24,7 +24,7 @@ derivations:
   proof: proof-main.tex
 - name: via-periodicity
   uses:
-  - std-algebra.periodicity@1
+  - std-algebra.periodicity@2
   proof: proof-via-periodicity.tex
 checked_by:
 - kind: proof

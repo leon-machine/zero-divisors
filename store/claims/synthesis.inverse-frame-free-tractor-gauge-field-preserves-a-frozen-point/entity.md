@@ -23,11 +23,11 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
-  - dark-energy.walls-free-sector@5
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
+  - dark-energy.walls-free-sector@6
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation@2
   - synthesis.imported-holonomy-reductions-of-cartan-geometries@1
   proof: proof-main.tex
@@ -53,6 +53,10 @@ lineage:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01

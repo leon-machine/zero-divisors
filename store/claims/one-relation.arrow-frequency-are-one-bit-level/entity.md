@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - one-relation.imported-flag-arrow-superselection@7
-  - one-relation.one-datum-not-two-imaginary-unit@3
+  - one-relation.one-datum-not-two-imaginary-unit@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -1,7 +1,7 @@
 ---
 id: synthesis.schwarzschild-horizon-translations-are-no-conformal-symmetry
 kind: claim
-version: 1
+version: 2
 title: 'Schwarzschild horizon translations are no conformal symmetry'
 status: proved
 region: synthesis
@@ -17,14 +17,18 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the gauge named as the outgoing chart (past horizon), with the dilation''s sign, the proof in u = t - r and the time-reflected future horizon (restatement), and the dilation citation repointed to the premise-free null-vacuum result'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.positive-null-energy-gives-r-premises@7
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
   proof: proof-main.tex
@@ -47,9 +51,17 @@ lineage:
   - synthesis.attachment-conformal-energy-is-generated-by-z
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal correction (DECISIONS A5, restatement, wording route that keeps check.py): the formal called hb^{-1}(a) = a - (M/r)(a.k)k, k = e_0 + xhat, the ingoing gauge covering the future horizon. Evidence (reconciler and reader, exact, M = 1/2): at r = 2M, Q_g(e_0 + xhat) = 0 and Q_g(e_0 - xhat) = -4, so this is the outgoing chart (exterior, past horizon, white-hole interior), which is why (v) and the check find (K.D)K = -kappa K. The formal now names the outgoing gauge and the past horizon, (v) has lambda -> e^{-kappa tau} lambda and -alpha kappa lambda d_lambda, proof (iv) uses u = t - r with g = (1 - 2M/r) du^2 + 2 du dr - r^2 dsigma^2 (it had v = t + r, which this field does not have), proof (v) has d lambda/du = c e^{-kappa u} (it had e^{+kappa v} against its own -kappa), the future horizon follows by the time reflection (ingoing gauge k = e_0 - xhat, +kappa), and the ''Beyond one flat chart'' sentence its flag requires is added. The conclusion is time-reflection symmetric and stands; check.py unchanged. D1 (AP2''s item, applied here): the citation of synthesis.positive-null-energy-gives-r-premises@7, used only for the dilation of its setup, is repointed to synthesis.null-vacuum-on-a-horizon-generator@1 (i), premise-free, in derivations, formal (v), proof (v) and the check''s premise() call; this drops (N+) from holds_given. runcheck and check4 pass.'
   open_problem: op.null-positivity-curved-horizons
   flags:
-  - 'beyond one flat chart: the bifurcation surface of the eternal hole lies off the ingoing (Kerr-Schild) chart used here; the statement there follows by the same argument in a chart through it, or by the time reflection of the field'
+  - 'beyond one flat chart: the bifurcation surface of the eternal hole and the future horizon lie off the outgoing (Kerr-Schild) chart used here; the statement there follows by the same argument in a chart through it, or by the time reflection of the field'
   note: >-
     Item (ii) of the open problem asks for the positivity of the affine null translations along the eternal
     Schwarzschild horizon's generators, or a proof that it cannot come from the conformal structure. This is the
@@ -65,13 +77,13 @@ extraction:
     at general r (checked exactly at sampled radii on both sides of the horizon).
 ---
 ## formal
-Units $c = G = 1$. Store sign (Fact \claimref{synthesis.imported-gtg-dictionary}), signature $(+,-,-,-)$; let $(\hb, \Omega)$ be the Schwarzschild gravitational field of mass $M > 0$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in the ingoing (Kerr-Schild) gauge $\hb^{-1}(a) = a - \tfrac{M}{r}(a\cdot k)k$, $k = e_{0} + \hat{x}$, which covers the exterior, the future horizon $r = 2M$ and the interior; $g$ its derived metric and $I$ the square of the Weyl part of its curvature $\mathcal{R}(B)$ (its Weyl square). A \emph{conformal symmetry} on an open set $W$ is a vector field $\xi$ on $W$ whose flow preserves the derived metric up to a positive function, $\mathcal{L}_{\xi}g = 2\phi g$.
+Units $c = G = 1$. Store sign (Fact \claimref{synthesis.imported-gtg-dictionary}), signature $(+,-,-,-)$; let $(\hb, \Omega)$ be the Schwarzschild gravitational field of mass $M > 0$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in the outgoing (Kerr-Schild) gauge $\hb^{-1}(a) = a - \tfrac{M}{r}(a\cdot k)k$, $k = e_{0} + \hat{x}$, which covers the exterior, the past horizon $r = 2M$ and the white-hole interior; $g$ its derived metric and $I$ the square of the Weyl part of its curvature $\mathcal{R}(B)$ (its Weyl square). A \emph{conformal symmetry} on an open set $W$ is a vector field $\xi$ on $W$ whose flow preserves the derived metric up to a positive function, $\mathcal{L}_{\xi}g = 2\phi g$.
 \begin{enumerate}
 \item[(i)] \emph{(The invariant.)} The field is Ricci-flat and $I = 48M^{2}/r^{6} > 0$ at every point of the invertible region, inside, on and outside the horizon.
 \item[(ii)] \emph{(An invariant metric.)} The Weyl square of $\Omega^{2}g$ is $\Omega^{-4}I$ for every positive function $\Omega$, so the metric $(2M)^{3}(I/48M^{2})^{1/2}g = (2M/r)^{3}g =: \hat g$ is the same when computed from $g$ or from any $\Omega^{2}g$. Hence every conformal symmetry of the field on $W$ is a Killing field of $\hat g$ on $W$. The Weyl square of $\hat g$ is the constant $48M^{2}/(2M)^{6}$.
 \item[(iii)] \emph{(Separation.)} The scalar curvature of $\hat g$ is $\hat R = (27M - \tfrac92 r)/(2M)^{3}$, affine in $r$ with nonzero slope, so every Killing field of $\hat g$, hence every conformal symmetry of the field, is tangent to the spheres-times-time $r = \mathrm{const}$.
 \item[(iv)] \emph{(The algebra.)} On every connected open $W$ in the invertible region, every conformal symmetry is $\alpha\,\partial_{t} + \sum_{j}c_{j}L_{j}$ with constants $\alpha$, $c_{j}$, where $\partial_{t}$ is the background time translation (a symmetry of the field: the gauge field does not depend on $t$) and $L_{j}$ the rotations; in particular it is a Killing symmetry of the field.
-\item[(v)] \emph{(The horizon.)} On the future horizon $r = 2M$ the physical vector of $\partial_{t}$ is null and tangent to the generators, with $(K\cdot D)K = -\kappa K$ in the store's $D$, $\kappa = 1/(4M)$: the time translation by $\tau$ acts on a generator's affine parameter $\lambda$ as the dilation $\lambda \mapsto e^{\kappa\tau}\lambda$ about the bifurcation edge (the boost $\beta_{t}$ of the setup and item (ii) of Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}). Hence the restriction of any conformal symmetry to an open piece of the horizon is $\alpha\kappa\lambda\,\partial_{\lambda}$ plus a rotation, and the affine translations $\lambda \mapsto \lambda + a$ along the generators are the restriction of no conformal symmetry on any open set meeting the horizon.
+\item[(v)] \emph{(The horizon.)} On the past horizon $r = 2M$ the physical vector of $\partial_{t}$ is null and tangent to the generators, with $(K\cdot D)K = -\kappa K$ in the store's $D$, $\kappa = 1/(4M)$: the time translation by $\tau$ acts on a generator's affine parameter $\lambda$ as the dilation $\lambda \mapsto e^{-\kappa\tau}\lambda$ about the bifurcation edge (the boost $\beta_{t}$ of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(i), which dilates the null translations at rate $\kappa$). Hence the restriction of any conformal symmetry to an open piece of the horizon is $-\alpha\kappa\lambda\,\partial_{\lambda}$ plus a rotation, and the affine translations $\lambda \mapsto \lambda + a$ along the generators are the restriction of no conformal symmetry on any open set meeting the horizon. The future horizon follows by the time reflection of the field, which carries this gauge to the ingoing one ($k = e_{0} - \hat{x}$), where $(K\cdot D)K = +\kappa K$ and the time translation is $\lambda \mapsto e^{\kappa\tau}\lambda$. Beyond one flat chart: the future horizon and the bifurcation surface of the eternal hole lie off this chart; the statement there follows by the same argument in a chart through them, or by the time reflection.
 \item[(vi)] \emph{(Consequence for (N$_{+}$) case (a).)} The positivity of the stored conformal energy reaches a translation only through the conformal symmetries of the field it is represented on (Proposition \claimref{synthesis.positive-conformal-energy-gives-positive-null-translations}; for de Sitter, whose Weyl part vanishes, the horizon translation is the conformal null rotation of Theorem \claimref{synthesis.de-sitter-horizon-translation-is-conformal-null-rotation}). By (v) no element of the field's conformal symmetry algebra on a neighbourhood of a piece of the horizon, nor a limit of elements, acts on the generators as the affine translations: their positivity on the eternal hole cannot come from the field's conformal structure, nor be carried to the horizon from a region of vanishing field strength by a conformal map. It is a condition on the state of the generators' modes.
 \end{enumerate}
 

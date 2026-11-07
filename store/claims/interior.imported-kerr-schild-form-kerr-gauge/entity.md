@@ -1,7 +1,7 @@
 ---
 id: interior.imported-kerr-schild-form-kerr-gauge
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Kerr-Schild form of the Kerr gauge field'
 status: imported
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, square of the null vector written Q(k)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
 - citation: R. P. Kerr and A. Schild, Some algebraically degenerate solutions of Einstein's gravitational
@@ -34,6 +38,10 @@ locators:
   label: fact:kerrschild
   line: 778
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'House style: the square of the vector k is written Q(k) in the formal level, as the technical level already writes it; notation only.'
   typing:
     by: ai-typing-pass
     note: 'Imported fact with no derivation; nothing to edge.'
@@ -45,7 +53,7 @@ The Kerr solution admits a gauge in which the gauge field is
 \[
 \hb(a) \;=\; a + H(x)\,(a\cdot k)\,k ,
 \]
-with $k$ a null vector field tangent to the ingoing principal null congruence, $k^2 = 0$, and $H$ a scalar function ($H = Mr^3/(r^4 + a^2\cos^2\theta\, r^2)$ in Boyer-Lindquist-adapted oblate coordinates; only $k^2 = 0$ enters the algebra below). Schwarzschild is the case $a = 0$ in ingoing Eddington-Finkelstein form. \emph{Provenance:} Kerr-Schild \cite{KerrSchild1965}; the GTG form \cite[Ch.~14]{DoranLasenby2003}, \cite{LDG1998}.
+with $k$ a null vector field tangent to the ingoing principal null congruence, $Q(k) = 0$, and $H$ a scalar function ($H = Mr^3/(r^4 + a^2\cos^2\theta\, r^2)$ in Boyer-Lindquist-adapted oblate coordinates; only $Q(k) = 0$ enters the algebra below). Schwarzschild is the case $a = 0$ in ingoing Eddington-Finkelstein form. \emph{Provenance:} Kerr-Schild \cite{KerrSchild1965}; the GTG form \cite[Ch.~14]{DoranLasenby2003}, \cite{LDG1998}.
 
 ## technical
 The Kerr solution admits a gauge in which the gauge field is $\hb(a) = a + H(x)\,(a\cdot k)\,k$, with $k$ tangent to the ingoing principal null congruence, $Q(k) = 0$, and $H$ a scalar function, $H = Mr^3/(r^4 + a^2 r^2\cos^2\theta)$ in oblate coordinates adapted to Boyer-Lindquist. Only the nullity of $k$ enters the algebra built on it. Schwarzschild is the case $a = 0$, in ingoing Eddington-Finkelstein form. This is the classical Kerr-Schild form, imported together with its gauge-theory-gravity presentation.

@@ -1,7 +1,7 @@
 ---
 id: interior.weighted-limit-theorem
 kind: claim
-version: 5
+version: 6
 title: Weighted limit theorem
 status: proved
 region: interior
@@ -17,21 +17,25 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, proof sign of the phi-line boost corrected'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
 derivations:
 - name: main
   uses:
-  - interior.boosts-generate-exactly-levi-factor@4
+  - interior.boosts-generate-exactly-levi-factor@5
   - interior.covariant-form-vacuum-equations@5
-  - interior.exact-parallelism-convergence-rate@5
-  - interior.interior-connection-exactly@7
-  - interior.kasner-form-interior@5
+  - interior.exact-parallelism-convergence-rate@6
+  - interior.interior-connection-exactly@8
+  - interior.kasner-form-interior@7
   - interior.metric-parallelism-trace-schouten-condition@6
   - interior.non-null-stabilisers-section-they-act@4
-  - interior.scale-tractor-leaves-cone@7
-  - interior.stabilisers-flat-model@5
+  - interior.scale-tractor-leaves-cone@8
+  - interior.stabilisers-flat-model@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -52,6 +56,10 @@ locators:
   label: thm:weighted
   line: 682
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof, final clause: the connection on the coordinate vector of the phi-lines is -(d_tau a_3) B_3 + cos(theta) R_23, not +(d_tau a_3) B_3: Omega(d_phi) = a_3 Omega(e_3) with Omega(e_3) = -sigma_3 B_3 + (cot(theta)/r) R_23 (interior.interior-connection-exactly) and a_3 sigma_3 = d_tau a_3, checked exactly in Cl(1,3) at a rational interior point; the formal statement is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

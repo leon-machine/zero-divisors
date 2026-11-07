@@ -1,7 +1,7 @@
 ---
 id: synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state
 kind: claim
-version: 2
+version: 3
 title: 'A radical-normal tame wall is a regular initial surface that selects no state'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Ricci square; coordinate curvature engine declared)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of the curvature statements of (i), (iii), (iv): diagonal gauge fields, torsion-solved Omega, store-sign field strength, Ricci and Einstein maps; coordinate engine kept as a confirming reading'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -46,6 +54,8 @@ checked_by:
   ref: check.py::check_radiation_field_smoothness_in_t_depends_on_the_conformal_weight
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_wall_field_strengths
 lineage:
   motivated_by:
   - standard-model.dating-descent
@@ -53,6 +63,14 @@ lineage:
   - dark-energy.gravity-pre-metric-forces-degenerate-exactly
   - synthesis.pre-descent-state-carried-into-descended-phase-premise
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof for the curvature content: every metric of the result is (up to the sign of C7) the derived metric of a diagonal gauge field hb^{-1}(e_t) = N e0, hb^{-1}(e_i) = A_i e_i; the torsion equation gives Omega(e_{x^i}) = -(dA_i/N) B_i, and the store-sign operator is diagonal with calR(B_i) = d_t(dA_i/N)/(N A_i), calR(e_i ^ e_j) = dA_i dA_j/(N^2 A_i A_j); from it (i) the radical-normal side is flat (Omega = 0), (iii) R = (b/2)(b + 2 - a) t^(a - 2), 3/2 t^-2 for (0, 1), (iv) the Einstein map gives p = 2/(3(1 + w)) and the radiation field has R = 0, Ricci square 3/4 t^-4; the sign agreement with the (-,+,+,+) index convention is derived. The Dirac and scalar analysis was already in GA and scalar calculus. The coordinate engine stays as a confirming reading. New check check_gtg_wall_field_strengths; runcheck 6/6, check4 clean on a proposals copy. outside_ga removed: the curvature values now come from the gauge field, and the line elements and cometric components are the definition''s readings (tameness is defined on the cometric). Statement, status, links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The Ricci square is written R(d_a).R(a) for the Ricci map of the GTG definition (sign-independent, equal to R_{ab} R^{ab}, kept as a labelled reading); the curvature values of the proof come from the check''s coordinate curvature engine (Christoffel route, its stated sign convention, metrics in (-,+,+,+)), described as such and declared outside_ga (other). Reader fix (R06), version kept: the signature (-,+,+,+) of the components and line elements is declared beside the (+,-,-,-) algebra of (ii), with the statement that R has the same value in the store''s sign and the Ricci square is sign-free (dictionary C6, C7).'
   open_problem: op.deposit-state-is-hadamard
   note: >-
     Bears on the second step of op.deposit-state-is-hadamard: whether the descent's surface is a Cauchy
@@ -89,12 +107,12 @@ extraction:
 ---
 
 ## formal
-Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) and $g$ its derived metric, with inverse $G$ (the cometric). Let $\Sigma = \{t = 0\}$ in coordinates $(t, x, y, z)$, with physical side $t > 0$, and for exponents $(a, b)$ let $G_{a,b} = \mathrm{diag}(-t^{a}, t^{b}, 1, 1)$, with $g_{a,b} = \mathrm{diag}(-t^{-a}, t^{-b}, 1, 1)$ on $t \neq 0$. The degeneration at $\Sigma$ is tame (Definition \claimref{sheaf.tameness}) exactly for $(a, b) = (1, 0)$, with radical $dt$, the conormal of $\Sigma$, and $(a, b) = (0, 1)$, with radical $dx$, tangent; in both the metric has the simple pole of Fact \claimref{dark-energy.imported-walls-sphere-theorem}.
+Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) and $g$ its derived metric, with inverse $G$ (the cometric). Let $\Sigma = \{t = 0\}$ in coordinates $(t, x, y, z)$, with physical side $t > 0$, and for exponents $(a, b)$ let $G_{a,b} = \mathrm{diag}(-t^{a}, t^{b}, 1, 1)$, with $g_{a,b} = \mathrm{diag}(-t^{-a}, t^{-b}, 1, 1)$ on $t \neq 0$; these components, and the line elements below, are written in the signature $(-,+,+,+)$ (dictionary C7), while the spacetime algebra of (ii) has $\gamma_{0}^{2} = +1$; the scalar curvature $R$ quoted below has the same value in the store's sign in $(+,-,-,-)$, and the Ricci square does not depend on the sign. The degeneration at $\Sigma$ is tame (Definition \claimref{sheaf.tameness}) exactly for $(a, b) = (1, 0)$, with radical $dt$, the conormal of $\Sigma$, and $(a, b) = (0, 1)$, with radical $dx$, tangent; in both the metric has the simple pole of Fact \claimref{dark-energy.imported-walls-sphere-theorem}.
 \begin{enumerate}
 \item[(i)] \emph{(Radical the conormal: a regular initial surface; proved.)} For $(1, 0)$, with $\tau = 2\sqrt{t}$, $g_{1,0} = -d\tau^{2} + dx^{2} + dy^{2} + dz^{2}$: the physical side is the half $\tau > 0$ of Minkowski space, flat, at proper time $2\sqrt{t}$ from $\Sigma$, and its slices $\tau = \varepsilon > 0$ are Cauchy surfaces; the far side is Riemannian. So the propagation of the Hadamard form (Fact \claimref{synthesis.imported-propagation-of-hadamard-form}, scalar field) carries a two-point function of Hadamard form near one slice $\tau = \varepsilon$ to the whole physical side.
 \item[(ii)] \emph{(Smoothness at the wall selects no bulk state; proved.)} $\partial_{\tau}^{2} = t\,\partial_{t}^{2} + \tfrac12\partial_{t}$, with indicial exponents $0$ and $\tfrac12$. A Klein-Gordon solution of any mass on the physical side is smooth in $t$ up to $\Sigma$ exactly when it is even in $\tau$, that is when $\partial_{\tau}\phi = 0$ on $\Sigma$; these solutions form a Lagrangian subspace for the symplectic form, so the fields they smear commute. In the constant frame of the chart $(\tau, x, y, z)$ (zero spin connection), a Dirac plane wave (Hestenes form, spatial wave vector $k$, mass $m$) obeys $\phi' = M\phi$ with $M^{2} = -(|k|^{2} + m^{2})$, so it is smooth in $t$ across $\Sigma$ only if it vanishes, unless $k = 0 = m$; the only Dirac solution with square-integrable data that is smooth in $t$ across $\Sigma$ in this frame is zero, for every mass. So no bulk field obeying the canonical commutation or anticommutation relations is smooth across $\Sigma$ in $t$, while in $\tau$ the surface imposes no condition: smoothness at the wall selects no bulk state. This does not concern the boundary modes the wall carries by the wall Fact, nor any selection by the Riemannian far side.
 \item[(iii)] \emph{(Radical tangent: a singular wall; proved.)} For $(0, 1)$, $g_{0,1} = -dt^{2} + t^{-1}dx^{2} + dy^{2} + dz^{2}$ has scalar curvature $R = \tfrac32 t^{-2}$, unbounded at $\Sigma$, at finite proper time; the far side has signature $(2, 2)$. Its slices $t = \varepsilon > 0$ are Cauchy surfaces of the physical side, and $\Sigma$ is a singular past boundary.
-\item[(iv)] \emph{(Power-law origins in cosmic time; proved.)} For a spatially flat expanding field $-dt^{2} + t^{2p}(dx^{2} + dy^{2} + dz^{2})$ of a perfect fluid with $P = w\rho$, $p = 2/(3(1 + w))$, in the cosmic coordinate $t$ the metric is $t^{2p}$ times a field whose cometric degenerates at $t = 0$ with radical $dt$, tamely exactly when $2p = 1$, that is $w = \tfrac13$; the radiation-dominated field is $t\,g_{1,0}$, with conformal time $\tau$, scalar curvature $0$ and $R_{ab}R^{ab} = \tfrac34 t^{-4}$. In its conformal time $\eta$ every such field with $p < 1$ has the bracket $-d\eta^{2} + dx^{2} + dy^{2} + dz^{2}$, which is $g_{1,0}$ in $t' = \eta^{2}/4$: tameness of the bracket is a property of the time coordinate. For the conformally covariant fields (the massless Dirac, Maxwell and Yang-Mills fields) the radiation origin is the initial slice of half of Minkowski space, where the Weyl curvature vanishes. Which bulk solutions are smooth in $t$ there depends on the conformal weight: for the massless scalar ($R = 0$, so minimal and conformal coupling agree), $\phi = t^{-1/2}\phi_{\mathrm{flat}}$, they are the solutions odd in $\tau$ (indicial exponents $0$ and $-\tfrac12$), the other half from (ii); for the massless Dirac field, $\psi = t^{-3/4}\psi_{\mathrm{flat}}$, the exponents $-\tfrac34 + \tfrac{n}{2}$ are never integers and no nonzero solution is smooth in $t$.
+\item[(iv)] \emph{(Power-law origins in cosmic time; proved.)} For a spatially flat expanding field $-dt^{2} + t^{2p}(dx^{2} + dy^{2} + dz^{2})$ of a perfect fluid with $P = w\rho$, $p = 2/(3(1 + w))$, in the cosmic coordinate $t$ the metric is $t^{2p}$ times a field whose cometric degenerates at $t = 0$ with radical $dt$, tamely exactly when $2p = 1$, that is $w = \tfrac13$; the radiation-dominated field is $t\,g_{1,0}$, with conformal time $\tau$, scalar curvature $0$ and Ricci square $\mathcal{R}(\partial_{a})\cdot\mathcal{R}(a) = \tfrac34 t^{-4}$ (in components $R_{ab}R^{ab}$). In its conformal time $\eta$ every such field with $p < 1$ has the bracket $-d\eta^{2} + dx^{2} + dy^{2} + dz^{2}$, which is $g_{1,0}$ in $t' = \eta^{2}/4$: tameness of the bracket is a property of the time coordinate. For the conformally covariant fields (the massless Dirac, Maxwell and Yang-Mills fields) the radiation origin is the initial slice of half of Minkowski space, where the Weyl curvature vanishes. Which bulk solutions are smooth in $t$ there depends on the conformal weight: for the massless scalar ($R = 0$, so minimal and conformal coupling agree), $\phi = t^{-1/2}\phi_{\mathrm{flat}}$, they are the solutions odd in $\tau$ (indicial exponents $0$ and $-\tfrac12$), the other half from (ii); for the massless Dirac field, $\psi = t^{-3/4}\psi_{\mathrm{flat}}$, the exponents $-\tfrac34 + \tfrac{n}{2}$ are never integers and no nonzero solution is smooth in $t$.
 \end{enumerate}
 
 ## technical

@@ -1,7 +1,7 @@
 ---
 id: synthesis.loc-independent-of-clausius-and-killing-data
 kind: claim
-version: 4
+version: 5
 title: '(Loc) is independent of Clausius and the Killing data'
 status: proved
 region: synthesis
@@ -17,16 +17,20 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'notation: d Omega_3^2 written as the explicit round metric'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.c-loc-entropy-clause-curvature-independent-density@3
-  - synthesis.black-hole-data-do-not-fix-field-equations@6
-  - synthesis.sds-clausius-fixes-area-constant@4
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.c-loc-entropy-clause-curvature-independent-density@4
+  - synthesis.black-hole-data-do-not-fix-field-equations@8
+  - synthesis.sds-clausius-fixes-area-constant@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -40,6 +44,10 @@ lineage:
   - synthesis.c-loc-local-horizon-premise
   - synthesis.c-loc-entropy-clause-curvature-independent-density
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R03 C): the Einstein static universe was written -dt^2 + a^2 d Omega_3^2 beside the gravitational field (hb, Omega) of the entity; the three-sphere metric is now written (d chi^2 + sin^2 chi (d theta^2 + sin^2 theta d phi^2)) in formal and proof (chi unused otherwise; theta, phi as in the proof''s chart). No content change.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -82,7 +90,7 @@ Units $\hbar = c = G = 1$, signature $(-,+,+,+)$, $\mathrm{Ric}$ positive on sph
 the patch's boundary modes are in the state that (R$_{\mathrm{loc}}$) of Premise \claimref{synthesis.c-loc-local-horizon-premise} prescribes, and the admissible pairs (gravitational field, matter) are those satisfying hypotheses (H1) to (H4) of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius} with this density. (H1) thus holds in $\mathcal{M}_{c}$ by construction; the content is that the admissible class contains the $\Lambda$-vacua unchanged and a spacetime on which $\eta \neq \tfrac14$. On the integrated reading the class is small ($S_{ab}S^{ab}$ must be constant on each admissible field; Reissner-Nordstr\"om with its Maxwell field, $S_{ab}S^{ab} = 4Q^{4}/r^{8}$, is not admissible). The entropy here is decoupled from any mode count, as in version 2 of the premise, which dropped the mode-count reading: (R$_{\mathrm{loc}}$) is imposed on the state, and $\mathcal{M}_{c}$ is not a model of version 1, where the entropy of a fixed mode set in the (R$_{\mathrm{loc}}$) state would fix $\eta$.
 \begin{enumerate}
 \item[(i)] \emph{(Vacuum data unchanged.)} On every field with $\mathrm{Ric} = \Lambda g$ (Ricci map $\Lambda$ times the identity), in particular the Schwarzschild, Kerr, Schwarzschild-de Sitter and de Sitter fields, $S_{ab} = 0$ and $\eta = \tfrac14$, and (H1) holds with $T = 0$. So every statement of the store about these geometries (horizon temperatures under (R) and (R$_{\Lambda}$), the Clausius integrals along the Schwarzschild and Schwarzschild-de Sitter families of Theorems \claimref{synthesis.c-loc-entropy-clause-curvature-independent-density}(ii) and \claimref{synthesis.sds-clausius-fixes-area-constant}, the cutoff counts of Theorem \claimref{synthesis.black-hole-data-do-not-fix-field-equations}(iii) on Schwarzschild) holds in $\mathcal{M}_{c}$ exactly as in the store; whatever tension those statements already have among themselves is inherited, not created (the literal cutoff count on Schwarzschild-de Sitter, identified with the horizon modes, already disagrees with $A_{b}/4$: filed alongside, synthesis.cutoff-count-is-not-a-local-density-on-sds), and the calibration of Theorem \claimref{synthesis.c-loc-entropy-clause-curvature-independent-density}(ii) returns $\tfrac14$.
-\item[(ii)] \emph{(A spacetime where it fails.)} Let $a > 0$ and let $(g, T)$ be the Einstein static universe $-dt^{2} + a^{2}d\Omega_{3}^{2}$ with dust at rest of density $\rho$, $8\pi\rho = 2(1 + 3c/a^{4})/a^{2}$. Then $S_{ab}S^{ab} = 3/a^{4}$ everywhere, $\eta = \tfrac14(1 + 3c/a^{4}) \neq \tfrac14$, the dust is conserved, and for every point and every null $k$
+\item[(ii)] \emph{(A spacetime where it fails.)} Let $a > 0$ and let $(g, T)$ be the Einstein static universe $-dt^{2} + a^{2}(d\chi^{2} + \sin^{2}\chi\,(d\theta^{2} + \sin^{2}\theta\,d\phi^{2}))$ with dust at rest of density $\rho$, $8\pi\rho = 2(1 + 3c/a^{4})/a^{2}$. Then $S_{ab}S^{ab} = 3/a^{4}$ everywhere, $\eta = \tfrac14(1 + 3c/a^{4}) \neq \tfrac14$, the dust is conserved, and for every point and every null $k$
 \[
 T(k,k) - \frac{\eta}{2\pi}\,\mathrm{Ric}(k,k) \;=\; 0 ,
 \]

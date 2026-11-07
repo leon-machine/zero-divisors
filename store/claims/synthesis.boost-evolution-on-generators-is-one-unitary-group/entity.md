@@ -1,7 +1,7 @@
 ---
 id: synthesis.boost-evolution-on-generators-is-one-unitary-group
 kind: claim
-version: 4
+version: 6
 title: 'Boost evolution on horizon generators is one unitary dilation group'
 status: proved
 region: synthesis
@@ -25,6 +25,14 @@ credit:
   role: 'unit resolution pass, the quoted window dynamics written with the transverse unit J'
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the smeared form of the boost evolution in (ii) corrected to a(D_{-lambda} f), with the antilinear step of (iii) written out (restatement), and the spreading-law citation made a mention'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: consistency pass, the boost rotor renamed G_lambda
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, small items)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -32,14 +40,13 @@ about:
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - tower.structure-tower-c-norms@9
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
-  - synthesis.affine-cell-boost-spreads-without-scrambling@3
-  - synthesis.number-diagonal-dynamics-spreads-nothing@2
+  - field-theory.second-quantisation@6
+  - tower.structure-tower-c-norms@10
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
+  - synthesis.affine-cell-boost-spreads-without-scrambling@4
+  - synthesis.number-diagonal-dynamics-spreads-nothing@3
   - singularity.euclidean-rotor-where-it-lies@5
-  - synthesis.positive-null-energy-gives-r-premises@7
-  - scrambling.spreading-law-chaos-bound-saturated@5
+  - synthesis.positive-null-energy-gives-r-premises@9
   - hawking.i-state-continuum@5
   proof: proof-main.tex
 checked_by:
@@ -62,6 +69,14 @@ lineage:
   - note.decisions.two-boost-flows
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_small_items:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5, second round answer 8, as D3 did in positive-null-energy): the boost rotor B_lambda is renamed G_lambda, since B is the boost bivector and, in the proof, the operator a^*(g). No content change. Version 5 -> 6.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal correction (DECISIONS A2, restatement): formal (ii) displayed alpha_l(a(f)) = a(D_l f); with a(f) = int conj(f) psi_m du and alpha_l(psi_m(u)) = e^{-l/2} psi_m(e^{-l} u), the substitution v = e^{-l} u gives alpha_l(a(f)) = a(g), g(v) = e^{l/2} f(e^l v) = (D_{-l} f)(v) (checked by hand by the reconciler and on an exact log-lattice model by the reader), so (ii) now reads a(D_{-lambda} f) and the dilation of the affine-cell result with the time parameter reversed. The proof of (iii) had pulled the phase out of the antilinear a without conjugating (two compensating slips); it now writes a(D_{-lambda} f_w) = a(e^{I_4 w lambda} f_w) = e^{-I_4 w lambda} a(f_w). Clause (iii)''s Hamiltonian +kappa w was right and is unchanged, as are (v) and (vi). The uses edge to scrambling.spreading-law-chaos-bound-saturated is removed (DECISIONS B1 consequence; a uses edge change is routine): this result cites that estimate only to restate its chaos-bound comparison and to contradict its ''saturated by construction'' sentence, never as a premise, so the citation stays as a mention. With B1 lowering the estimate to conjectured, the edge made this result and its dependants (synthesis.modular-period-on-values-is-the-dual-plane-turn, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-...) effectively conjectured (E204). check_one_group_comparison no longer calls premise() on the spreading-law estimate (it computes nothing from it); runcheck and check4 pass.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -94,14 +109,14 @@ extraction:
     to the maintainer.
 ---
 ## formal
-Work in the spacetime algebra $\Cl(1,3)$ of the flat background with the store's signature, on a local Rindler horizon of a region of vanishing field strength (for the Killing horizons see (vi)). Let $k$ be a future null vector, $m$ the null vector with $\ip{k}{m} = 1$ in the plane of $k$ and $e_{0}$, $N_{k} = \{x : \ip{x}{k} = 0\} = \{u\,k + x_{\perp}\}$ the null plane with generators along $k$ and affine parameter $u$, edge $u = 0$. Let $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Proposition \claimref{field-theory.second-quantisation}(1)), $x^{*}$ the frame $*$-structure (Theorem \claimref{tower.structure-tower-c-norms}), and $B_{\lambda} = \exp(\tfrac{\lambda}{2}\,k\wedge m)$ normalised so that $B_{\lambda}kB_{\lambda}^{\sim} = e^{\lambda}k$ and $B_{\lambda}mB_{\lambda}^{\sim} = e^{-\lambda}m$ (for $k = e_{0} + e_{1}$: $B_{\lambda} = \cosh\tfrac{\lambda}{2} + e_{1}e_{0}\sinh\tfrac{\lambda}{2}$), the boost of the horizon, with rapidity $\lambda = \kappa t$.
+Work in the spacetime algebra $\Cl(1,3)$ of the flat background with the store's signature, on a local Rindler horizon of a region of vanishing field strength (for the Killing horizons see (vi)). Let $k$ be a future null vector, $m$ the null vector with $\ip{k}{m} = 1$ in the plane of $k$ and $e_{0}$, $N_{k} = \{x : \ip{x}{k} = 0\} = \{u\,k + x_{\perp}\}$ the null plane with generators along $k$ and affine parameter $u$, edge $u = 0$. Let $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Proposition \claimref{field-theory.second-quantisation}(1)), $x^{*}$ the frame $*$-structure (Theorem \claimref{tower.structure-tower-c-norms}), and $G_{\lambda} = \exp(\tfrac{\lambda}{2}\,k\wedge m)$ normalised so that $G_{\lambda}kG_{\lambda}^{\sim} = e^{\lambda}k$ and $G_{\lambda}mG_{\lambda}^{\sim} = e^{-\lambda}m$ (for $k = e_{0} + e_{1}$: $G_{\lambda} = \cosh\tfrac{\lambda}{2} + e_{1}e_{0}\sinh\tfrac{\lambda}{2}$), the boost of the horizon, with rapidity $\lambda = \kappa t$.
 \begin{enumerate}
 \item[(i)] \emph{(The canonical component.)} $\Lambda(m)\,a\gamma_{0}\,\Lambda(m) = 0$ for $a = k$ and for $a \perp k, m$, and $\Lambda(m)\,m\gamma_{0}\,\Lambda(m) = \Lambda(m)$. With $\nabla = k\,(m\cdot\nabla) + m\,(k\cdot\nabla) + \nabla_{\perp}$, the stored anticommutator $\chi(\nabla D)\gamma_{0}$ compressed to $\Lambda(m)$ is $\chi\,(k\cdot\nabla D)\,\Lambda(m)$: it involves only the derivative along the generators, so $\psi_{m} = \Lambda(m)\psi$ is the canonical component on $N_{k}$, with kernel a multiple of $\delta(u - v)\delta^{2}(x_{\perp} - y_{\perp})\Lambda(m)$, and on each generator its algebra is the continuum mode space $\CAR(L^{2}(\R, du)\otimes\Lambda(m)S)$ of Definition \claimref{obj.hawking.continuum-mode-space}. The other component $\Lambda(k)\psi$ keeps only the $m\cdot\nabla$ part, a derivative off the plane.
-\item[(ii)] \emph{(Two factors, one automorphism.)} The covariant action $\psi(x) \mapsto B_{\lambda}\psi(B_{\lambda}^{\sim}xB_{\lambda})$ is, on $\psi_{m}$ along a generator, the product of two factors: the rotor on values, $B_{\lambda}\Lambda(m) = e^{-\lambda/2}\Lambda(m)$, with $B_{\lambda}^{*} = B_{\lambda}$ and $B_{\lambda}\Lambda(m)B_{\lambda}^{*} = e^{-\lambda}\Lambda(m)$; and the transport of the affine parameter, $B_{\lambda}^{\sim}(uk)B_{\lambda} = e^{-\lambda}u\,k$, which multiplies the delta kernel by $e^{\lambda}$. Their product is
+\item[(ii)] \emph{(Two factors, one automorphism.)} The covariant action $\psi(x) \mapsto G_{\lambda}\psi(G_{\lambda}^{\sim}xG_{\lambda})$ is, on $\psi_{m}$ along a generator, the product of two factors: the rotor on values, $G_{\lambda}\Lambda(m) = e^{-\lambda/2}\Lambda(m)$, with $G_{\lambda}^{*} = G_{\lambda}$ and $G_{\lambda}\Lambda(m)G_{\lambda}^{*} = e^{-\lambda}\Lambda(m)$; and the transport of the affine parameter, $G_{\lambda}^{\sim}(uk)G_{\lambda} = e^{-\lambda}u\,k$, which multiplies the delta kernel by $e^{\lambda}$. Their product is
 \[
-\alpha_{\lambda}(\psi_{m}(u)) = e^{-\lambda/2}\psi_{m}(e^{-\lambda}u), \qquad \alpha_{\lambda}(a(f)) = a(D_{\lambda}f),\quad (D_{\lambda}f)(u) = e^{-\lambda/2}f(e^{-\lambda}u),
+\alpha_{\lambda}(\psi_{m}(u)) = e^{-\lambda/2}\psi_{m}(e^{-\lambda}u), \qquad \alpha_{\lambda}(a(f)) = a(D_{-\lambda}f),\quad (D_{\lambda}f)(u) = e^{-\lambda/2}f(e^{-\lambda}u),
 \]
-with $D_{\lambda}$ unitary and $D_{\lambda}D_{\mu} = D_{\lambda+\mu}$, so $\alpha$ is a one-parameter group of quasi-free $*$-automorphisms; it is the dilation of Proposition \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}. Neither factor alone preserves the anticommutator (they rescale it by $e^{\mp\lambda}$), so neither is a $*$-automorphism, and among weights $e^{-w\lambda}$ only $w = \tfrac12$ makes the product unitary. On $\Lambda(k)\psi$ the rotor weight is $e^{+\lambda/2}$ and the two factors do not cancel.
+with $D_{\lambda}$ unitary and $D_{\lambda}D_{\mu} = D_{\lambda+\mu}$, so $\alpha$ is a one-parameter group of quasi-free $*$-automorphisms; it is the dilation of Proposition \claimref{synthesis.affine-cell-boost-spreads-without-scrambling} with the time parameter reversed. Neither factor alone preserves the anticommutator (they rescale it by $e^{\mp\lambda}$), so neither is a $*$-automorphism, and among weights $e^{-w\lambda}$ only $w = \tfrac12$ makes the product unitary. On $\Lambda(k)\psi$ the rotor weight is $e^{+\lambda/2}$ and the two factors do not cancel.
 \item[(iii)] \emph{(The phase flow.)} Numbers are read in $\mathrm{span}\{1, I_{4}\}$, the unit $I_{4}$ being the field's operator unit on the even values (Definition \claimref{obj.field-theory.single-algebra-field}). On each half-generator the half-density monomials $f_{w}(u) = |u|^{-1/2 + I_{4}w}$ satisfy $D_{\lambda}f_{w} = e^{-I_{4}w\lambda}f_{w}$, and a weight $e^{-\lambda(1/2 + s)}$ on $|u|^{s}$, $s \in \mathrm{span}\{1, I_{4}\}$, is a phase exactly when $\mathrm{Re}\,s = -\tfrac12$. So in the Mellin basis $\alpha_{\kappa t}$ is the phase flow $a(f_{w}) \mapsto e^{-I_{4}\kappa wt}a(f_{w})$ of one-particle Hamiltonian $\kappa w$, spectrum all of $\R$: the boost dynamics of the windows (Proposition \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}) with its point spectrum refined to the continuum.
 \item[(iv)] \emph{(Imaginary rapidity.)} Continued to $\lambda = I_{4}\theta$ the two factors are the Euclidean rotor $B_{I_{4}\theta} = \cos\tfrac{\theta}{2} + I_{4}e_{1}e_{0}\sin\tfrac{\theta}{2}$ of Proposition \claimref{singularity.euclidean-rotor-where-it-lies} on values (its unit read on the even values as $I_{4}$, as that proposition's note on values records), $B_{I_{4}\theta}\Lambda(m) = e^{-I_{4}\theta/2}\Lambda(m)$, and the rotation $u \mapsto e^{-I_{4}\theta}u$ of the affine parameter into the plane $\mathrm{span}\{1, I_{4}\}$. At $\theta = \pi$ it carries the half-generator $u > 0$ to $u < 0$ with factor $-I_{4}$; at $\theta = 2\pi$ it returns with factor $-1$, at $4\pi$ with $+1$. On Mellin modes the continued phase is the real factor $e^{w\theta}$: the rotor flow, which rescales the modes, is this group's continuation into the strip, and under (N$_{+}$) the restriction of the ground state to a half-generator is KMS for $\alpha$ at $\theta = 2\pi$ (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}).
 \item[(v)] \emph{(Real time.)} For all $f, g$ and all real $\lambda$, $|\{a(D_{\lambda}f), a^{*}(g)\}| = |\ip{g}{D_{\lambda}f}| \le \|f\|\,\|g\|$, and for two fixed affine cells it falls as $e^{-\lambda/2}$. The anticommutator of linear elements is a scalar, so in every state the out-of-time-order correlators built from them are bounded: the real-time Lyapunov exponent of the quasi-free dynamics $\alpha$ on linear elements is $0$. Nothing here bears on non-quadratic dynamics. What grows at rate $\kappa$ in real time is the support, which covers $e^{\kappa t}$ affine cells (Proposition \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}); what grows in imaginary time is the Mellin factor $e^{w\theta}$.

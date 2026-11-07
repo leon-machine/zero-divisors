@@ -1,7 +1,7 @@
 ---
 id: odd-extensions.transport-constrains-frozen-point-only-through
 kind: claim
-version: 2
+version: 3
 title: The transport constrains the frozen point only through its norm
 status: proved
 region: odd-extensions
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14a, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the orthogonality condition on the null partner in (i) stated against the Lorentz frame (restatement)'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: thm:free
   line: 648
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal correction (DECISIONS A8, restatement): (i) required the null partner phi to satisfy phi perp ({I}^perp cap W). Since I spans the radical of W = I_0^perp, {I}^perp cap W = W, which contains I, so that condition contradicts Q(I, phi) = 1 (read in the store by the reader and the reconciler). The proof uses only the isometry fixing W, and (ii) already says ''orthogonal to the Lorentz frame''; formal (i) and the technical level now say phi is orthogonal to the Lorentz frame of W. The conclusion is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -55,14 +63,14 @@ extraction:
 ## formal
 Let $W = I_{0}^{\perp}$, the degenerate space of signature $(1,3;1)$ at $\Lambda = 0$ with radical spanned by the null frozen point $I_{0}$, written $I$ in this theorem, and let $\widetilde W$ be its minimal completion. Then:
 \begin{enumerate}
-\item[(i)] $\widetilde W$ has signature $(2,4)$ and is the rung; the isometry of Fact \claimref{odd-extensions.imported-minimal-completion-degenerate-algebra-rule} fixing $W$ pointwise is unique, so the null partner $\varphi$ of $I$ with $Q(I,\varphi) = 1$, $Q(\varphi,\varphi) = 0$, $\varphi \perp \{I\}^{\perp} \cap W$ is canonical: the transport supplies the hyperbolic plane $\mathrm{span}(I, \varphi)$ together with a distinguished null basis of it;
+\item[(i)] $\widetilde W$ has signature $(2,4)$ and is the rung; the isometry of Fact \claimref{odd-extensions.imported-minimal-completion-degenerate-algebra-rule} fixing $W$ pointwise is unique, so the null partner $\varphi$ of $I$ with $Q(I,\varphi) = 1$, $Q(\varphi,\varphi) = 0$ and $\varphi$ orthogonal to the Lorentz frame of $W$ is canonical: the transport supplies the hyperbolic plane $\mathrm{span}(I, \varphi)$ together with a distinguished null basis of it;
 \item[(ii)] every vector orthogonal to the Lorentz frame is $aI + b\varphi$ with norm $2ab$; a frozen point of cosmological constant $\Lambda$ is such a vector with $2ab = \Lambda/3$, and the sign of $\Lambda$ is the sign of the product of its components along the null generator and its canonical partner;
 \item[(iii)] the isometries of the completion that fix the Lorentz frame act on the plane as $O(1,1)$, whose orbits on nonzero vectors are exactly the level sets of the norm; so the only invariant of the frozen point under the symmetries the transport supplies is its norm $\Lambda/3$: the cosmological constant, sign and magnitude, is the one modulus of the frozen point that the transport leaves free;
 \item[(iv)] no symmetry of the completion carries a frozen point of positive norm to one of negative norm, and the two intermediate algebras $\Cl(I_{\Lambda}^{\perp})$ for the two signs are non-isomorphic (Theorem \claimref{odd-extensions.twistor-algebra}(iv)); the two signs are inequivalent under every symmetry the construction has, and the choice between them is decided by nothing in the transport.
 \end{enumerate}
 
 ## technical
-Take $W = I_{0}^{\perp}$, the degenerate space of signature $(1,3;1)$ at $\Lambda = 0$ whose radical is spanned by the null frozen point $I$. Its minimal completion $\widetilde W$ has signature $(2,4)$ and is the rung, and the isometry fixing $W$ pointwise is unique, so the null partner $\varphi$ with $Q(I,\varphi) = 1$, $Q(\varphi) = 0$ and $\varphi \perp \{I\}^{\perp} \cap W$ is canonical. Every vector orthogonal to the Lorentz frame is $aI + b\varphi$ with $Q(aI + b\varphi) = 2ab$, and a frozen point of cosmological constant $\Lambda$ has $2ab = \Lambda/3$.
+Take $W = I_{0}^{\perp}$, the degenerate space of signature $(1,3;1)$ at $\Lambda = 0$ whose radical is spanned by the null frozen point $I$. Its minimal completion $\widetilde W$ has signature $(2,4)$ and is the rung, and the isometry fixing $W$ pointwise is unique, so the null partner $\varphi$ with $Q(I,\varphi) = 1$, $Q(\varphi) = 0$ and $\varphi$ orthogonal to the Lorentz frame of $W$ is canonical. Every vector orthogonal to the Lorentz frame is $aI + b\varphi$ with $Q(aI + b\varphi) = 2ab$, and a frozen point of cosmological constant $\Lambda$ has $2ab = \Lambda/3$.
 
 The isometries of the completion fixing the Lorentz frame act on this plane as $O(1,1)$, whose orbits on nonzero vectors are exactly the level sets of the norm. So the norm $\Lambda/3$, sign and magnitude, is the one modulus of the frozen point the transport leaves free. No symmetry of the completion carries a positive norm to a negative one, the intermediate algebras $\Cl(I_{\Lambda}^{\perp})$ for the two signs are non-isomorphic, and nothing in the transport chooses between them.
 

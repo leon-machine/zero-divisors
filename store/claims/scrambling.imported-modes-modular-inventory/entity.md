@@ -29,9 +29,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - singularity.euclidean-rotor-where-it-lies@5
-  - singularity.computed@4
+  - singularity.computed@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

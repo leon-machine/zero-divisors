@@ -478,3 +478,125 @@ if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("check_") and callable(fn):
             print(name, fn())
+
+
+# ---------------------------------------------------------------------------
+# GTG proof (2026-11-07): the readings of the index expressions as maps of the curvature operator
+# calR(A ^ B) = sum_{a<b} R^{ab}_{ef} gamma_a ^ gamma_b on the frame planes (store sign; no pair symmetry
+# assumed): the Ricci map calR(b) = d_a . calR(a ^ b) is the contraction Ric_bd = sum_a eta^aa R_adab also with
+# torsion; Schouten and Einstein maps; (1/4) W_abcd W^abcd = (1/2) <W(a ^ b) W(d_b ^ d_a)>; the Euler density
+# 2 <calR(a ^ b) calR(d_b ^ d_a)> - 4 calR(d_a) . calR(a) + calR^2; the slot derivative as the map D with
+# dL = tr(D o dS) = d_a . D(dS(a)), so that at the frozen slot D = 2 (calG + Lambda id); Q2 by GA traces.
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+GTG_M = [[Fr(1), Fr(2), Fr(0), Fr(-1)], [Fr(3), Fr(0), Fr(1), Fr(1)], [Fr(0), Fr(-2), Fr(5), Fr(1)],
+         [Fr(2), Fr(1), Fr(0), Fr(4)]]
+
+
+def _op(R):
+    return {(e, f): _rbiv(R, e, f) for (e, f) in LB}
+
+
+def _lin_map(M):
+    return lambda a: gtg.m_add(*[gtg.m_scal(c * M[i][j], gtg.e(j)) for (i,), c in a.items() for j in R4 if M[i][j]])
+
+
+def _ga_trace(f):
+    return sum((gtg.vdot(gtg.er(a), f(gtg.e(a))) for a in R4), Fr(0))
+
+
+def check_gtg_readings_of_the_curvature_operator():
+    _premises_field()
+    premise("synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared")
+    premise("synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part")
+    ok = True
+    for R in (_curv_tf(), _curv_generic()):
+        op = _op(R)
+        Ric, sc, Pm, Gm = _invariants(R)
+        ok = ok and all(gtg.vdot(gtg.e(d), gtg.ricci(op, gtg.e(b))) == Ric[b][d] for b in R4 for d in R4)
+        ok = ok and gtg.ricci_scalar(op) == sc
+        P = gtg.schouten(op)
+        ok = ok and all(gtg.m_val(P(gtg.e(a))).get((j,), Fr(0)) == Pm[a][j] for a in R4 for j in R4)
+    R = _curv_tf()
+    op = _op(R)
+    _, sc, Pm, Gm = _invariants(R)
+    ok = ok and _sq(_weyl(R), _weyl(R)) / 4 == gtg.kretschmann(gtg.weyl_op(op)) / 4 != 0
+    ok = ok and _gb(R) == 2 * sum((gtg.sp(gtg.m_mul(gtg.apply_op(op, gtg.wedge(gtg.e(a), gtg.e(b))),
+                                                    gtg.apply_op(op, gtg.wedge(gtg.er(b), gtg.er(a)))))
+                                   for a in R4 for b in R4 if a != b), Fr(0)) - 4 * gtg.ricci_sq(op) + sc * sc
+    M = _lin_map(GTG_M)
+    ok = ok and _q2(GTG_M) == 2 * (_ga_trace(M) ** 2 - _ga_trace(lambda a: M(M(a))))
+    for rho in RHOS:
+        I, V = _frozen(rho)
+        lam = 6 * rho
+        # L1 at the Schouten slot is the Weyl square; at the frozen slot Euler/4 - (Lambda/3)(calR - 2 Lambda)
+        ok = ok and _L1(R, Pm, I, V) == gtg.kretschmann(gtg.weyl_op(op)) / 4
+        ok = ok and _L1(R, _ident(rho), I, V) == gtg.euler_density(op) / 4 - lam / 3 * (gtg.ricci_scalar(op) - 2 * lam)
+        # the slot derivative as the map 2 (calG + Lambda id): dL1 = 2 d_a . (calG + Lambda)(dS(a))
+        g1 = _grad(lambda S: _L1(R, S, I, V), _ident(rho))
+        for a in R4:
+            for j in R4:
+                want = 2 * (Fr(ETA[a]) * gtg.vdot(gtg.e(a), gtg.einstein(op, gtg.e(j))) + (lam if a == j else 0))
+                ok = ok and g1[a][j] == want
+    GA.check("GTG readings: Ricci map with torsion, Weyl square, Euler density, Q2, slot derivative 2(calG + Lambda)", ok)
+    return ok
+
+
+# The formal's GA forms against its index readings (Leon's answers, second round, item 7).
+TS = (Fr(0), Fr(1, 3), Fr(-2, 5), Fr(1))
+
+
+def _ga_half_sq(op):
+    """(1/2) <W(a ^ b) W(d_b ^ d_a)> written out over the frame."""
+    tot = Fr(0)
+    for a in R4:
+        for b in R4:
+            if a != b:
+                tot += gtg.sp(gtg.m_mul(gtg.apply_op(op, gtg.wedge(gtg.e(a), gtg.e(b))),
+                                        gtg.apply_op(op, gtg.wedge(gtg.er(b), gtg.er(a)))))
+    return tot / 2
+
+
+def check_gtg_formal_forms_equal_their_index_readings():
+    """Setting: the GA Weyl map W(a ^ b) = calR(a ^ b) - P*(a) ^ b - a ^ P*(b) is, plane by plane, the index
+    W = R - KN(P*) for torsion-free Omega (with torsion it is R - KN of the transposed Schouten matrix; the formal
+    uses the Weyl part only torsion-free). (iii)-(iv): (1/2) <W(a ^ b) W(d_b ^ d_a)> = (1/4) W_abcd W^abcd,
+    calR(d_a) . calR(a) = R_ab R^ab, and the GA display of (iv), (1 - t)(1/2) <W W> + t((1/4) E - (Lambda/3)(calR - 2 Lambda)),
+    E = 2 <calR calR> - 4 calR(d_a) . calR(a) + calR^2, equals the index display and (1 - t) L1(P*) + t L1(rho id)
+    at four t and two rho."""
+    _premises_field()
+    premise("synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared")
+    ok = True
+    R = _curv_tf()
+    Wga, Wix = gtg.weyl_op(_op(R)), _op(_weyl(R))
+    ok = ok and all(gtg.m_sub(Wga[pl], Wix[pl]) == {} for pl in LB)
+    # with torsion (no pair symmetry) the GA form is R - KN of the transposed Schouten matrix in this index
+    # convention, and differs from R - KN(P*): the formal uses the Weyl part only for torsion-free Omega
+    R = _curv_generic()
+    _, _, Pm, _ = _invariants(R)
+    P = [[Pm[a][j] * ETA[j] for j in R4] for a in R4]
+    for PP, same in ((P, False), ([list(x) for x in zip(*P)], True)):
+        K = _kn(PP, _eta())
+        Wix = _op({k: R[k] - K[k] for k in R})
+        Wga = gtg.weyl_op(_op(R))
+        ok = ok and all(gtg.m_sub(Wga[pl], Wix[pl]) == {} for pl in LB) == same
+    R = _curv_tf()
+    op = _op(R)
+    Ric, sc, Pm, _ = _invariants(R)
+    W = _weyl(R)
+    half = _ga_half_sq(gtg.weyl_op(op))
+    ok = ok and half == _sq(W, W) / 4 != 0
+    ric2 = sum(Ric[a][b] * Ric[a][b] * ETA[a] * ETA[b] for a in R4 for b in R4)
+    ok = ok and gtg.ricci_sq(op) == ric2 != 0
+    E_ga = 4 * _ga_half_sq(op) - 4 * gtg.ricci_sq(op) + gtg.ricci_scalar(op) ** 2
+    ok = ok and gtg.ricci_scalar(op) == sc != 0
+    for rho in RHOS:
+        I, V = _frozen(rho)
+        lam = 6 * rho
+        for t in TS:
+            ga = (1 - t) * half + t * (E_ga / 4 - lam / 3 * (gtg.ricci_scalar(op) - 2 * lam))
+            ix = (1 - t) * _sq(W, W) / 4 + t * ((_sq(R, R) - 4 * ric2 + sc * sc) / 4 - lam / 3 * (sc - 2 * lam))
+            ok = ok and ga == ix == (1 - t) * _L1(R, Pm, I, V) + t * _L1(R, _ident(rho), I, V)
+    GA.check("GTG forms of the formal = their index readings: Weyl map, Weyl square, Ric^2, the interpolated density", ok)
+    return ok

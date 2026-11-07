@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-is-126-doublet-vev
 kind: claim
-version: 2
+version: 3
 title: 'The Majorana scale is set by the 126 doublet admixture'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Dirac mass matrices named as such)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -37,6 +41,10 @@ lineage:
   - standard-model.what-angle-asks-neutrino-sector
   - standard-model.neutrino-dirac-matrix-charged-fermions
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. The phrase "the Dirac matrices", which here means the Dirac mass matrices of the charged fermions and neutrinos (family matrices, which the conventions allow), is written "the Dirac mass matrices", so that it is not read as the Dirac gamma matrices; wording only, the mathematics unchanged.'
   open_problem: op.majorana-scale
   note: 'Adversarial answer to the problem''s second success clause. On the one-vev Pati-Salam route the triplet vev is not free (the weak angle fixes it), so the question is what fixes the Majorana coupling; under (EW) and the imported Clebsch structure it is the 126 component w_u of the light up-type doublet, the same number that sizes every 126 entry against the 10s, so op.majorana-scale and op.pair-sector-current share one unknown. Clause (i) extends the store''s no-120 identity (standard-model.neutrino-dirac-matrix-charged-fermions) to the case with a 120 by taking symmetric parts. Does not use Hypothesis (U), which contradicts (EW). Numerics (bounds on w_u and M_3) are in the proof, with the normalisation of w_u against the canonically normalised doublet flagged as cited from memory. Transport-absent.'
   maintainer_pass:
@@ -54,7 +62,7 @@ M_{R} \;=\; v_{R}f \;=\; \frac{v_{R}}{4w_{u}}\,\mathrm{Sym}(M_{u} - M_{\nu}) \;=
 \]
 \item[(ii)] if, in some family basis, $(M_{u})_{33} = m_{t}$ and $(M_{\nu})_{33} = 0$ (the content of Premise (EW), \claimref{standard-model.premise-ew-equal-weight}, in its basis), then $(M_{R})_{33} = v_{R}f_{33} = \dfrac{m_{t}\,v_{R}}{4w_{u}}$, so the Majorana coupling along the heavy family direction is $f_{33} = m_{t}/(4w_{u})$.
 \end{enumerate}
-So, under that premise and given $v_{R}$ (as on the chain, where the weak angle fixes it) and $m_{t}$, the entry of the Majorana matrix along the heavy direction of the up sector is determined by $w_{u}$, the $126$ component of the light up-type doublet, which the series does not derive; $w_{u}$ also sets the size of every $126$ entry of the Dirac matrices relative to the $10$s. This re-parametrises the open Majorana scale as the open $126$ admixture: the two are one unknown, and a derivation of either gives the other. The $33$ entry is not an eigenvalue of $M_{R}$; a lower bound on it bounds the largest singular value of $M_{R}$ from below, an upper bound on it does not bound that value.
+So, under that premise and given $v_{R}$ (as on the chain, where the weak angle fixes it) and $m_{t}$, the entry of the Majorana matrix along the heavy direction of the up sector is determined by $w_{u}$, the $126$ component of the light up-type doublet, which the series does not derive; $w_{u}$ also sets the size of every $126$ entry of the Dirac mass matrices relative to the $10$s. This re-parametrises the open Majorana scale as the open $126$ admixture: the two are one unknown, and a derivation of either gives the other. The $33$ entry is not an eigenvalue of $M_{R}$; a lower bound on it bounds the largest singular value of $M_{R}$ from below, an upper bound on it does not bound that value.
 
 ## technical
 Take the imported Pati-Salam Clebsch structure with any number of $10$s, one $126$ and one $120$. Because the $10$ and $126$ family couplings are symmetric and the $120$ coupling antisymmetric, the $10$s cancel in the differences $M_{u} - M_{\nu}$ and $M_{d} - M_{e}$, the $120$ survives only in their antisymmetric parts, and the symmetric parts are $4w_{u}f$ and $4w_{d}f$. The Majorana matrix $M_{R} = v_{R}f$ is therefore the symmetric part of either Dirac difference, rescaled by $v_{R}/4w$. This extends the store's no-$120$ identity to the case with the $120$.

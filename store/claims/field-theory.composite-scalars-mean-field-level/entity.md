@@ -1,7 +1,7 @@
 ---
 id: field-theory.composite-scalars-mean-field-level
 kind: claim
-version: 4
+version: 5
 title: Composite scalars, at mean-field level
 status: proved
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'consistency pass, the symbol B of mu = mB defined'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.field-theory.single-algebra-field
@@ -64,18 +68,22 @@ extraction:
       fact imports only its random-phase Goldstone pole, not the mean-field condensate, so no standard-route
       derivation was added. Levels pass: levels written from scratch, keeping every condition and level
       qualifier of the formal statement.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Notation clarification: B in "mu = mB" (formal clause (1) and technical level) was undefined in the entity; it is the mass pairing B_N(f(k), f(-k)) of field-theory.mass on unit-normalised plane-wave modes, |B| = 1, as the check computes (check.py docstring (1): |B(f(k), f(-k))|^2/(alpha alpha) = 1 over six directions). Mathematics, status and links unchanged.'
 ---
 
 ## formal
 \begin{enumerate}
-\item The two-mode block $H = K(n_a + n_c) + \mu w_aw_c + \mu^*v_cv_a$, $\mu \in \mathrm{span}\{1, I_4\}$, is self-adjoint, with $\operatorname{ad}_H^2 = K^2 + |\mu|^2$ on all four mode operators and block spectrum $\{K - E, K, K, K + E\}$, $E = \sqrt{K^2 + |\mu|^2}$; with $\mu = mB$ the dispersion is $E^2 = K^2 + m^2$.
+\item The two-mode block $H = K(n_a + n_c) + \mu w_aw_c + \mu^*v_cv_a$, $\mu \in \mathrm{span}\{1, I_4\}$, is self-adjoint, with $\operatorname{ad}_H^2 = K^2 + |\mu|^2$ on all four mode operators and block spectrum $\{K - E, K, K, K + E\}$, $E = \sqrt{K^2 + |\mu|^2}$; with $\mu = mB$, $B = B_N(f(k), f(-k))$ the mass pairing of Proposition \claimref{field-theory.mass} on unit-normalised plane-wave modes ($|B| = 1$), the dispersion is $E^2 = K^2 + m^2$.
 \item The tower element $H_4 = \sum_b K(n_a + n_c) - GP^*P$, $P = \sum_b w_aw_c$, is self-adjoint, conserves the axial number, and has exact pair states of energy $2Kn - Gn(n_b - n + 1)$; pairs enter the ground state exactly when $G > 2K/n_b$, the threshold of the mean-field energy.
 \item In the block ground state $\langle w_aw_c\rangle = -\mu^*/(2E)$, so the gap equation holds: the fermion mass is $G$ times the pair condensate.
 \item The axial phase is an inner unitary of the tower, $U H(\mu) U^* = H(\mu e^{-2\theta I_4})$: the mean-field energy has an exactly flat phase direction.
 \end{enumerate}
 
 ## technical
-At mean-field level. The two-mode block $H = K(n_a + n_c) + \mu w_aw_c + \mu^*v_cv_a$ with $\mu \in \mathrm{span}\{1, I_4\}$ is self-adjoint, with $\operatorname{ad}_H^2 = K^2 + |\mu|^2$ on all four mode operators and block spectrum $\{K - E, K, K, K + E\}$, $E = \sqrt{K^2 + |\mu|^2}$; with $\mu = mB$ the dispersion is $E^2 = K^2 + m^2$. The tower element $H_4 = \sum_b K(n_a + n_c) - GP^*P$, $P = \sum_b w_aw_c$, is self-adjoint, conserves the axial number and has exact pair states of energy $2Kn - Gn(n_b - n + 1)$; pairs enter the ground state exactly when $G > 2K/n_b$, the threshold of the mean-field energy.
+At mean-field level. The two-mode block $H = K(n_a + n_c) + \mu w_aw_c + \mu^*v_cv_a$ with $\mu \in \mathrm{span}\{1, I_4\}$ is self-adjoint, with $\operatorname{ad}_H^2 = K^2 + |\mu|^2$ on all four mode operators and block spectrum $\{K - E, K, K, K + E\}$, $E = \sqrt{K^2 + |\mu|^2}$; with $\mu = mB$, $B = B_N(f(k), f(-k))$ the mass pairing of Proposition \claimref{field-theory.mass} on unit-normalised plane-wave modes ($|B| = 1$), the dispersion is $E^2 = K^2 + m^2$. The tower element $H_4 = \sum_b K(n_a + n_c) - GP^*P$, $P = \sum_b w_aw_c$, is self-adjoint, conserves the axial number and has exact pair states of energy $2Kn - Gn(n_b - n + 1)$; pairs enter the ground state exactly when $G > 2K/n_b$, the threshold of the mean-field energy.
 
 In the block ground state $\langle w_aw_c\rangle = -\mu^*/(2E)$, so the gap equation holds: the fermion mass is $G$ times the pair condensate. The axial phase is an inner unitary of the tower, $UH(\mu)U^* = H(\mu e^{-2\theta I_4})$, so the mean-field energy has an exactly flat phase direction.
 

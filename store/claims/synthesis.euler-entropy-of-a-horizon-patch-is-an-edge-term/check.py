@@ -542,6 +542,7 @@ def dQ_linear(om, dom_):
 
 def check_wall_counterterm_anomaly_is_the_edge_transgression():
     premise("dark-energy.wall-counterterm")
+    premise("synthesis.imported-chern-weil-and-chern-simons-forms")   # (c): the Chern-Simons gauge variation
     for (a, b, c, d) in [(0, 1, 2, 3), (1, 0, 2, 3), (2, 3, 0, 1), (3, 1, 0, 2)]:
         assert eps_from_GA(a, b, c, d) == eps4(a, b, c, d)
     om = generic_connection()
@@ -571,3 +572,90 @@ def check_wall_counterterm_anomaly_is_the_edge_transgression():
         pred = f_scal(f_add(f_wedge(bA[2], aA[3]), f_wedge(aA[2], bA[3])), -1)
         assert f_zero(f_add(defect, pred, -1))
         assert f_zero(defect) == admissible
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The cut as a two-dimensional gauge field on its flat Riemannian background (lib/gtg.py, sq = (-1, -1): the
+# tangent physical frame e2, e3 is generator 0, 1 here, J = e2 e3 the cut's unit bivector): hb^{-1}(e_s) = e2,
+# hb^{-1}(e_phi) = rho(s) e3; the rotation-gauge field is SOLVED from the torsion equation. It is J times a scalar
+# one-form, Omega_S(a) = -omega_S(a) J (the Cartan value omega_S = -rho' dphi of the statement, C10), so the field
+# strength has no commutator term, R(e_s ^ e_phi) = d_s Omega_S(e_phi), and calR(J) = K J with K = -rho''/rho.
+import gtg  # noqa: E402
+
+S2 = (-1, -1)
+CUT_POINTS = [F(1, 2), F(1, 3), F(3, 4)]
+
+
+def cut_field(rho, s0, tpoly=None):
+    """The cut's gauge field at s = s0; with tpoly, the gauge transformation hb^{-1} -> R hb^{-1} R~ with
+    R = exp(-J theta/2), cos = (1 - t^2)/(1 + t^2), sin = 2t/(1 + t^2), which rotates the frame map
+    E_A = hb(e_A) by +theta: E_2' = cos E_2 + sin E_3."""
+    s = gtg.J.var(0, s0, 2, 2)
+    z = gtg.J.const(0, 2)
+    r = z
+    for k, c in enumerate(rho):
+        r = r + c * s ** k
+    if tpoly is None:
+        return gtg.Field([[gtg.J.const(1, 2), z], [z, r]], sq=S2)
+    t = z
+    for k, c in enumerate(tpoly):
+        t = t + c * s ** k
+    cth, sth = (1 - t * t) / (1 + t * t), 2 * t / (1 + t * t)
+    return gtg.Field([[cth, sth * r], [-sth, cth * r]], sq=S2)
+
+
+def check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature():
+    premise("synthesis.imported-gtg-dictionary")
+    premise("synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term")
+    ok = True
+    Jb = {(0, 1): F(1)}
+    for rho in OPEN + [closed_profile(L, c) for (L, c) in CLOSED]:
+        d1, d2 = poly_d(rho), poly_d(poly_d(rho))
+        for s0 in CUT_POINTS:
+            r0, rp, rpp = poly_val(rho, s0), poly_val(d1, s0), poly_val(d2, s0)
+            if r0 <= 0:
+                continue
+            fld = cut_field(rho, s0)
+            ok = ok and fld.torsion_free() and fld.Omega(0) == {} and GA.eq(fld.Omega(1), GA.scal(rp, Jb))
+            # abelian field strength: no commutator term, so R = d Omega (the transgression d omega_S = K e^2 ^ e^3)
+            ok = ok and gtg.comm(fld.Omega(0), fld.Omega(1), S2) == {}
+            ok = ok and GA.eq(fld.strength(0, 1), GA.scal(rpp, Jb))
+            K = -rpp / r0
+            ok = ok and GA.eq(fld.curvature()[(0, 1)], GA.scal(K, Jb))
+            # edge curvature of the circle s = s0 for N = +e2: k_g = -((T . D) T) . N = -rho'/rho
+            TDT = fld.cov_phys([F(0), F(1)], gtg.vec([gtg.J(0, None, 2), gtg.J(1, None, 2)]))
+            ok = ok and -gtg.vdot(TDT, GA.gen(0), S2) == -rp / r0
+            # gauge law: rotating the tangent frame by theta(s) adds d theta: Omega'(e_s) = theta' J, i.e.
+            # omega_S -> omega_S - d theta
+            for tp in ([F(1, 3), F(1, 2)], [F(0), F(-2), F(1)], [F(2), F(0), F(0), F(-1, 5)]):
+                rot = cut_field(rho, s0, tp)
+                t0, t1 = poly_val(tp, s0), poly_val(poly_d(tp), s0)
+                ok = ok and GA.eq(rot.Omega(0), GA.scal(2 * t1 / (1 + t0 * t0), Jb))
+                ok = ok and GA.eq(rot.Omega(1), fld.Omega(1))
+    assert ok
+    return ok
+
+
+BIV_SAMPLES = ((1, 2, -3, 5, F(1, 2), 7), (0, 0, 0, 0, 0, 1), (F(2, 3), -1, 4, 0, 3, F(-5, 4)))
+
+
+def biv_from(coeffs):
+    """sum of coeffs times e_a ^ e_b over the blades (0,1), (0,2), (0,3), (1,2), (1,3), (2,3) of Cl(1,3)."""
+    Y = {}
+    for (a, b), c in zip(gtg.bivector_blades(4), coeffs):
+        Y = GA.add(Y, GA.scal(F(c), gtg.wedge(GA.gen(a), GA.gen(b), gtg.S13)))
+    return Y
+
+
+def check_gtg_binormal_contraction_is_four_times_the_cut_component():
+    premise("dark-energy.wall-counterterm")
+    S13 = gtg.S13
+    Iinv = GA.scal(F(-1), gtg.pseudoscalar(S13))
+    lam = gtg.wedge(GA.gen(0), GA.gen(1), S13)
+    ok = True
+    for coeffs in BIV_SAMPLES:
+        Y = biv_from(coeffs)
+        y23 = Y.get((2, 3), F(0))
+        ok = ok and y23 != 0 and 4 * gtg.sp(GA.mul(GA.mul(lam, Iinv, S13), Y, S13)) == 4 * y23
+    assert ok
+    return ok

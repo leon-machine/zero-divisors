@@ -6,8 +6,9 @@ functions:
   check_mass_ratio_half_percent:
     kind: exact
     clauses: ["burning-branch ratio m_2/m_6 = 0.995, half a percent"]
-    omits: "m_2 = m_6 up to composition, the common ceiling coupling being P2 along the reversal orbit, is premise-level and not computed; Y_p, m_p and m(4He) are the check's record values"
+    omits: "m_2 = m_6 up to composition, the common ceiling coupling being the premise synthesis.common-ceiling-coupling-premise along the reversal orbit, is premise-level and not computed; Y_p, m_p and m(4He) are the check's record values"
 untouched_premises:
+  synthesis.common-ceiling-coupling-premise: "(ii) the common ceiling and coupling are premise-level; the check computes the composition ratio only"
   dark-matter.asymmetry-arrow-counted-fifteenth-refutation: "(iii) the asymmetry ratio is premised on P2 and not computed (docstring)"
   dark-matter.imported-derived-generation-flag: "Hypothesis (S) as carried; no computable content in this assembly"
   dark-matter.population-count-one-share-half-percent: "not computed here; the share is assembled from the three factors"

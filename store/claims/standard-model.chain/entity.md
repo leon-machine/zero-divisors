@@ -29,7 +29,7 @@ derivations:
   - standard-model.imported-pati-salam-representation-theory-survival@1
   - standard-model.imported-proton-condition@1
   - standard-model.imported-two-loop-gauge-coefficients@1
-  - standard-model.left-right-parity-what-breaks-it@7
+  - standard-model.left-right-parity-what-breaks-it@8
   - standard-model.majorana-element@7
   - standard-model.matching-traces@4
   - standard-model.one-threshold-exact-criterion@3

@@ -22,9 +22,9 @@ derivations:
 - name: main
   uses:
   - standard-model.ten-transported-ambient-space-doublets-are@2
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
-  - standard-model.imported-tower-commuting-copies-fock-module@5
+  - standard-model.imported-tower-commuting-copies-fock-module@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

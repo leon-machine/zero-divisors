@@ -34,8 +34,8 @@ functions:
   check_no_weighting_of_the_conformal_energy_keeps_a_boost:
     kind: sampled
     clauses:
-    - '(vii) the stored commutant of gamma_0 e_+ among the 15 bivectors of Cl(2,4) is recomputed: 7-dimensional and closed; the anticommuting bivectors span 8'
-    - '(vii) the commutant with any one of seven tested generators (three boosts, two translations, a special conformal generator, the dilation) generates all 15'
+    - '(vii, merged into the floor-regulator result (v); kept as a cross-check) the stored commutant of gamma_0 e_+ among the 15 bivectors of Cl(2,4) is recomputed: 7-dimensional and closed; the anticommuting bivectors span 8'
+    - '(vii, merged) the commutant with any one of seven tested generators (three boosts, two translations, a special conformal generator, the dilation) generates all 15'
     omits: 'the closure for an arbitrary element outside the commutant is the irreducibility of the 8-dimensional complement, argued in the proof; Schur''s lemma and the irreducibility of the attachment''s modules are cited'
 untouched_premises:
   synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products: "imported extension theorem and existence of Ward-preserving extensions, cited in the proof; the check computes the kernels, their extensions and the difference spaces, not the theorem"

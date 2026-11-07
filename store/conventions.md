@@ -61,6 +61,10 @@ conventions of notation and of the imaginary units that the texts assume.
   eigenvalues and T14c's transposition rule (and the rate model's global
   purity in T05); (R) and (P) also recur; (R$_\Lambda$) is (R) transplanted to the cosmological horizon (`synthesis.r-lambda-regularity-cosmological-horizon`). `get_claim` lists a postulate's
   `namesakes`. Read the statement, not the letter.
+  P1, P2 are T14's single frozen point and indifference
+  (`dark-matter.p1-single-frozen-point`, `dark-matter.p2-indifference`); (P1), (P2) in the
+  Kasner-exit results are `synthesis.pre-descent-contracting-kasner-stage-premise` and
+  `synthesis.pre-descent-state-carried-into-descended-phase-premise`.
 - **Contradictions.** A pinned `contradicts` between two proved results would
   make the store inconsistent (error E303). Between hypotheses (at least one
   side a postulate) it records that they cannot both hold, for example T14's
@@ -76,10 +80,14 @@ conventions of notation and of the imaginary units that the texts assume.
 ## Notation
 
 - The square of a vector is written $Q(v)$; $v^2 = Q(v)$.
+  $Q(v)$ is for vectors; for other elements of scalar square write $\omega^2$.
 - $\Cl(p,q)$ has $p$ generators of square $+1$ and $q$ of square $-1$;
   spacetime is $\Cl(1,3)$, signature $(+,-,-,-)$, and the completion is
   $\Cl(2,4)$, adding the hyperbolic plane spanned by $e_+, e_-$
   ($e_+^2 = 1$, $e_-^2 = -1$).
+- The T01-derived regions write $\Cl^0(p,q)$ for the even subalgebra $\Cl^+(p,q)$; $\Cl^0$ for grade
+  zero is the standard-algebra objects' usage.
+- $\bar M_P = M_P/\sqrt{8\pi}$ (`quantity.reduced-planck-mass`); $M_P$ is the non-reduced mass.
 - $n_0$ (`\nO`) and $n_\infty$ (`\nInf`) are the null vectors of the added
   plane; the point embedding is $X(x) = n_0 + x + \tfrac12 Q(x)\, n_\infty$ in
   T01. Several papers (T06, T09, T11, T16 and the pairing note) normalise
@@ -88,6 +96,11 @@ conventions of notation and of the imaginary units that the texts assume.
   (up to scale and sign), so T09 puts the $\pi$-plane at $E = -1/2$ where T12,
   its rungs note and the field-theory note put it at $E = +1$: read each
   paper's chirality halves in its own convention.
+- *The frozen-point norm.* For $I_\Lambda = n_\infty + \tfrac{\Lambda}{6}n_0$,
+  $Q(I_\Lambda) = \tfrac{\Lambda}{3}\,n_0\cdot n_\infty$: $+\Lambda/3$ in the $n_0\cdot n_\infty = +1$
+  normalisation, $-\Lambda/3$ in T01's.
+- T06's flat-model triples list the ($n_0$, $W$, $n_\infty$) components; the tractor splitting
+  $\sigma n_\infty + \mu + \rho n_0$ has $(1,0,0) = n_\infty$.
 - Macros are in store/notation.yaml (the `notation` tool returns them).
   Conformal spinors: `\CS` $= \mathbb{S}^{+}$ (the even half of the Dirac
   module `\Sp` of $\Cl(2,4)$, the minimal left ideal $\Cl^+(2,4)P$; the papers'
@@ -108,6 +121,15 @@ conventions of notation and of the imaginary units that the texts assume.
   Clifford-side proposition and $kk^{*} + k^{*}k = 1$ elsewhere (T03, T04,
   T07, T16). T14's $W$ annihilates the vacuum where T09's and T12's $W$
   creates.
+- *Ladder labelling.* On the radial atom $v$ annihilates ($N = v^*v$); on tower planes
+  $v = \tfrac12(e + f)$ creates, so there $N_j - \tfrac12 = -K_j$.
+- *Total parity.* Singularity entities write $\Gamma = \prod_k\sigma_k$, $\sigma_k = 2N_k - 1$;
+  descent-lift entities $\Gamma_k = (-1)^{N_k} = -\sigma_k$; the totals differ by $(-1)^N$ and only
+  $\operatorname{Ad}(\Gamma)$ is used.
+- *The letter $J$.* $J$ is $e_2e_3$ (U2) unless the entity says otherwise at its first use; other
+  uses: the Schouten trace (tractor and mass entities), the Hodge star (the duality result), a
+  complex structure on a vector space (CPT, positive-energy, the Hermitian $J = I_7e_1e_+$), a map
+  (`transport.totality`); $J_a$ are modular conjugations.
 
 ## The language: geometric algebra
 
@@ -224,6 +246,15 @@ on the radial atom, $I_5$ and $I_7$ for complexifications):
   not imaginary units. The language check flags a bare $i$ in a new or changed
   entity that does not declare `outside_ga` (E609 for a contributor, W222 for
   a maintainer).
+  The unit is named ("the unit $I_4$"), never equated with a bare $i$ ("$i = I_4$").
+- *$I_6$ against $I_7$ on $\CS$.* In the T09 Fock model ($w_3 = b_3 + I_7b_4$, $I_7 = I_6e$),
+  $I_6 = I_4E$ acts on $\CS$ as $+I_7$; the opposite orientation $a_1a_2b_1b_2b_3b_4$ acts as
+  $-I_7$. A result using the mass-chart $I_6$ and the T09 scalar $I_7$ together names the
+  orientation.
+- *The tower complexification scalar.* In the tower limit the scalars are
+  $\mathrm{span}\{1, 1\otimes I_4\}$, a formal unit in a tensor factor (the floors' odd extensions
+  do not pass to the limit); for the physical ground it is not the ground's volume element
+  $\gamma_0\gamma_1\gamma_2\gamma_3$. The symbol is written $1\otimes I_4$.
 - **Where the unit stands (1 November 2026).** The field theory's unit is
   $I_4$ on even values. On anything else, in particular on a massive Dirac
   line, whose numerator $k + m$ is not even, it sits outside the Clifford
@@ -238,6 +269,10 @@ on the radial atom, $I_5$ and $I_7$ for complexifications):
   vector) only in dimension $0 \bmod 4$
   (`synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four`),
   so a continuation in dimension keeps the right unit, not the left one.
+  On a massive Dirac line the field theory's unit is the right unit $xI_4$; Hestenes' unit is the
+  right factor $I\sigma_3 = \gamma_2\gamma_1$. They are not identified; the store relates them only
+  on massless modes, $L_{I_4} = -\Gamma R_{I\sigma_3}$
+  (`synthesis.massless-frequency-sign-relative-to-i4-is-not-the-chirality` (ii)).
 - **Chiral loops (2 November 2026).** The chirality element of a chiral loop is
   $\gamma_5 = iI_4$: the $I_4$ is the four-dimensional pseudoscalar
   $\gamma_0\gamma_1\gamma_2\gamma_3$ acting by left multiplication inside the
@@ -310,6 +345,8 @@ Known limits of these conventions (recorded findings, not settled):
   (`synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection`). Connection values computed
   from Cartan forms are the right-action ones, the negative of the definition's $\Omega$ on vectors;
   results that set them beside a GTG formula say so.
+- In the MacDowell-Mansouri blocks $R$ is the background field strength (literature sign,
+  $-\mathcal{R}$) and $\mathcal{R}$ the store sign; an entity writing $F_W$ names which.
 - Results that need more than one flat chart (closed or otherwise non-trivial topology, Euler
   characteristics of closed manifolds, second sheets and maximal extensions, conformal
   compactification) state their local content in this language and add a sentence beginning

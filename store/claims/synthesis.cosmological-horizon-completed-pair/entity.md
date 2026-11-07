@@ -1,7 +1,7 @@
 ---
 id: synthesis.cosmological-horizon-completed-pair
 kind: claim
-version: 3
+version: 4
 title: The cosmological horizon's completed pair
 status: proved
 region: synthesis
@@ -17,19 +17,29 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of the curvature step: the dilation field, Omega from the torsion equation, calR = (Lambda/3) id'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.de-sitter-static-boost-frozen-point@5
+  - synthesis.de-sitter-static-boost-frozen-point@6
   - mass.de-sitter-scale-frozen-point@6
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
   - singularity.modular-structure-completed-pair@5
   proof: proof-main.tex
 checked_by:
 - kind: check
   ref: check.py::check_completed_pair
+- kind: check
+  ref: check.py::check_gtg_dilation_field_curvature_selects_no_plane
 - kind: proof
   derivation: main
 lineage:
@@ -38,6 +48,26 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - standard-model.what
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1: ACCEPT, no fix asked. Pin synthesis.de-sitter-static-boost-frozen-point 5 -> 6 (formal unchanged byte for byte: notation only).'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Item H5 (notation, routine): formal (iii) and proof Step 3 name the unit of the phase, span{1, hat-I} with hat-I the central unit of the boundary-mode object (unit principle U3), and the bar as its conjugate. No content change; evidence: the uniqueness computation of Step 3 is unchanged (|a| = 1/2 for either unit).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Step 1 of the proof rewritten in Gauge Theory Gravity: the de Sitter field of the scale as the dilation hb^{-1}(a) = a/sigma; the torsion equation hb^T(grad ^ f^a) = sum_b gamma^b ^ (omega(gamma_b) . gamma^a) solved by omega(A) = grad sigma ^ A, so Omega(a) = -(Lambda/(6 sigma)) x ^ a; the field strength computed in GA to R(a ^ b) = -(Lambda/3) sigma^-2 a ^ b, hence calR(B) = (Lambda/3) B, Schouten (Lambda/6) id, Weyl zero; the Christoffel computation and the -Lambda/3 of the round-sphere-positive convention kept as a labelled reading (C11). Steps 2-5 were already in Cl(2,4) and are unchanged. Original proof kept as orig-proof-main.tex. New exact check check_gtg_dilation_field_curvature_selects_no_plane (Omega solved from torsion at nine rational points, its closed form, calR = (Lambda/3) id, Ricci map Lambda a, Weyl operator zero, riem_o = -(Lambda/3)(g_ac g_bd - g_ad g_bc)). outside_ga withdrawn: no stand-in remains in the proof''s main line.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof''s curvature check computes the Riemann tensor of the derived metric from its Christoffel symbols in components; the GTG statement is in the formal level.'
   maintainer_pass:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -59,7 +89,7 @@ Let $\Lambda = 3H^{2} > 0$. In the conventions of Lemma \claimref{mass.de-sitter
 \[
 v_{\Lambda} \;=\; \tfrac12\,(e_{0} + e_{W}), \qquad v_{\Lambda}^{*} \;=\; \tfrac12\,(e_{0} - e_{W})
 \]
-satisfy $Q(v_{\Lambda}) = Q(v_{\Lambda}^{*}) = 0$, $v_{\Lambda}v_{\Lambda}^{*} + v_{\Lambda}^{*}v_{\Lambda} = 1$ and $v_{\Lambda}^{*}v_{\Lambda} - v_{\Lambda}v_{\Lambda}^{*} = u = B_{\Lambda}/\kappa_{\Lambda}$, and up to a phase they are the only such pair of vectors of $\Pi_{\Lambda}$ with $v^{*}$ the frame adjoint of $v$ ($e_{0}^{*} = e_{0}$, $e_{W}^{*} = -e_{W}$). By Theorem \claimref{singularity.modular-structure-completed-pair}, with its $\sigma$ equal to $u$: the static Killing flow $\exp(tB_{\Lambda}/2)$ (the flow of $-\xi$, $\xi = X\cdot B_{\Lambda}$ being past-directed at the observer) is the pair's rotor flow at rapidity $\lambda = \kappa_{\Lambda}t$, acting by $v_{\Lambda} \mapsto e^{-\kappa_{\Lambda}t}v_{\Lambda}$ and $v_{\Lambda}^{*} \mapsto e^{\kappa_{\Lambda}t}v_{\Lambda}^{*}$, and for $t > 0$ it carries the observer to the future (the origin to $x = \tfrac{2}{H}\tanh(Ht/2)\,e_{0}$); the boost's spectral projectors are the occupation projectors, and $K := u/2 = N - \tfrac12$.
+satisfy $Q(v_{\Lambda}) = Q(v_{\Lambda}^{*}) = 0$, $v_{\Lambda}v_{\Lambda}^{*} + v_{\Lambda}^{*}v_{\Lambda} = 1$ and $v_{\Lambda}^{*}v_{\Lambda} - v_{\Lambda}v_{\Lambda}^{*} = u = B_{\Lambda}/\kappa_{\Lambda}$, and up to a phase (a unit number of $\mathrm{span}\{1, \hat{I}\}$, $\hat{I}$ the central unit of the boundary-mode algebra of obj.synthesis.cosmological-horizon-boundary-modes, $\bar a$ its conjugate) they are the only such pair of vectors of $\Pi_{\Lambda}$ with $v^{*}$ the frame adjoint of $v$ ($e_{0}^{*} = e_{0}$, $e_{W}^{*} = -e_{W}$). By Theorem \claimref{singularity.modular-structure-completed-pair}, with its $\sigma$ equal to $u$: the static Killing flow $\exp(tB_{\Lambda}/2)$ (the flow of $-\xi$, $\xi = X\cdot B_{\Lambda}$ being past-directed at the observer) is the pair's rotor flow at rapidity $\lambda = \kappa_{\Lambda}t$, acting by $v_{\Lambda} \mapsto e^{-\kappa_{\Lambda}t}v_{\Lambda}$ and $v_{\Lambda}^{*} \mapsto e^{\kappa_{\Lambda}t}v_{\Lambda}^{*}$, and for $t > 0$ it carries the observer to the future (the origin to $x = \tfrac{2}{H}\tanh(Ht/2)\,e_{0}$); the boost's spectral projectors are the occupation projectors, and $K := u/2 = N - \tfrac12$.
 \item[(iv)] \emph{Anchored at conformal infinity.} $v_{\Lambda}$ and $v_{\Lambda}^{*}$ are orthogonal to $I_{\Lambda}$, and as points of the conformal model
 \[
 v_{\Lambda} \;=\; -\frac{H}{4}\,X\Bigl(-\frac{2}{H}\,e_{0}\Bigr), \qquad v_{\Lambda}^{*} \;=\; \frac{H}{4}\,X\Bigl(\frac{2}{H}\,e_{0}\Bigr),

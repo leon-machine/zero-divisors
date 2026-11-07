@@ -1,4 +1,22 @@
 functions:
+  check_gtg_four_form_density_of_bivector_maps:
+    kind: exact
+    clauses:
+    - 'formal setting: the four-form beta(F ^ G) = (1/2) beta(F(c ^ d), G(I4 (d_d ^ d_c))) vol of two linear maps of physical bivectors equals the component reading (the sum over ordered pairs of complementary coordinate planes), for eps(a, b, ., .) and K'
+    - '(iv) the frame-leg two-form a ^ b -> 2 ((a . D) X) ^ ((b . D) X) is the component two-form 2 e_e ^ e_f'
+    omits: 'two generic rational maps and five pairings in the orthonormal frame, two pairings in one general frame (det H = -50); the general identity is the complement relation (e_c ^ e_d) ^ I4 (e^d ^ e^c) = I4 argued in the proof'
+  check_gtg_frame_legs_and_weyl_space:
+    kind: exact
+    clauses:
+    - '(iv) the frame-leg pairings in GA: K(DX ^ DX, F) = -<I4 calR(a ^ b)(d_b ^ d_a)> and eps_X(DX ^ DX, F) = -calR for F = -calR, both zero on the Weyl maps'
+    - '(iii) the Weyl maps obey the first Bianchi identity; B -> I4 B is symmetric, trace-free and I-linear and violates it'
+    omits: 'the two identities on three curvature maps (a Kulkarni-Nomizu map with a Ricci part, B -> I4 B, their sum) with the Cotton block, and the vanishing on the ten basis Weyl maps (complete by linearity); the general identities are the Bianchi and trace arguments in the proof'
+  check_gtg_weyl_square_of_weyl_maps:
+    kind: exact
+    clauses:
+    - '(iii) eps_X(F, F) = (1/2) <W(a ^ b) W(d_b ^ d_a)>_0 times the volume form, the Cotton block not contributing'
+    - '(v) the pointwise Weyl square (4/3)(K1 + K2)^2 and Euler density 8 K1 K2 of S^2(K1) x S^2(K2), whose integrals over 16 pi^2 are the stated ones'
+    omits: 'complete for (iii) by bilinearity (ten independent Weyl maps, all 55 pairs); the integration over the closed product uses the areas 4 pi/K_i (beyond one flat chart)'
   check_tractor_field_strength_of_torsion_free_field_annihilates_x:
     kind: sampled
     clauses:

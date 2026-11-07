@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
+  - field-theory.second-quantisation@6
   proof: proof-main.tex
 checked_by:
 - kind: check

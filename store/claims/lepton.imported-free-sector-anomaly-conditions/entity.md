@@ -1,7 +1,7 @@
 ---
 id: lepton.imported-free-sector-anomaly-conditions
 kind: claim
-version: 4
+version: 5
 title: 'Imported: the free sector and the anomaly conditions'
 status: proved
 region: lepton
@@ -17,11 +17,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T12-lepton, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate reference key merged at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
   uses:
-  - lepton.imported-free-sector-anomaly-conditions-external@1
+  - lepton.imported-free-sector-anomaly-conditions-external@2
   - standard-model.imported-anomaly-coefficients@1
   - standard-model.quarks-leptons-two-level-fermion-content@5
   proof: proof-main.tex
@@ -38,6 +42,10 @@ locators:
   label: fact:free
   line: 196
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Decision item D12 (routine): references.yaml held WeinbergQFT1 and WeinbergQFT2 as one book (Weinberg, QFT Vol. 2, 1996); the key is merged into WeinbergQFT2 and the citations of the formal level and the proof repointed (the source_formal and orig-proof-main.tex keep the paper''s key as history).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -64,7 +72,7 @@ extraction:
 ---
 
 ## formal
-The sector of a single conformal spinor (the single-twistor sector; massless, free) is $\Sp = \Lambda^{\bullet}W$ with the pair-slot factor acting as $\Lambda^{\bullet}(\lambda^{-2}b)$: its grade-$k$ states transform as $\Lambda^{k}\C^{3} = 1, 3, \bar{3}, 1$ with weight $-2k$, that is $(1)_{0}, (3)_{-1/3}, (\bar{3})_{-2/3}, (1)_{-1}$. For a gauge group with a $U(1)$ factor acting on Weyl fermions listed in one handedness, the four anomaly-cancellation conditions are those of \cite[Fact~2.7]{ButlerT12}; a fermion of the opposite handedness enters as its conjugate, with the conjugate representation and the opposite hypercharge. \emph{Provenance:} \cite[Prop.~5.3(3), Fact~2.7]{ButlerT12}; \cite[\S 22.4]{WeinbergQFT1}.
+The sector of a single conformal spinor (the single-twistor sector; massless, free) is $\Sp = \Lambda^{\bullet}W$ with the pair-slot factor acting as $\Lambda^{\bullet}(\lambda^{-2}b)$: its grade-$k$ states transform as $\Lambda^{k}\C^{3} = 1, 3, \bar{3}, 1$ with weight $-2k$, that is $(1)_{0}, (3)_{-1/3}, (\bar{3})_{-2/3}, (1)_{-1}$. For a gauge group with a $U(1)$ factor acting on Weyl fermions listed in one handedness, the four anomaly-cancellation conditions are those of \cite[Fact~2.7]{ButlerT12}; a fermion of the opposite handedness enters as its conjugate, with the conjugate representation and the opposite hypercharge. \emph{Provenance:} \cite[Prop.~5.3(3), Fact~2.7]{ButlerT12}; \cite[\S 22.4]{WeinbergQFT2}.
 
 ## technical
 The sector of a single conformal spinor (massless, free), $\Sp = \Lambda^{\bullet}W$, with the pair-slot factor acting as $\Lambda^{\bullet}(\lambda^{-2}b)$, has grade-$k$ states $\Lambda^{k}\C^{3}$ of weight $-2k$, that is $(1)_{0}, (3)_{-1/3}, (\bar{3})_{-2/3}, (1)_{-1}$.

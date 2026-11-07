@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue
 kind: claim
-version: 2
+version: 3
 title: 'Matter at a Kasner wall: Maxwell bounces, only stiff matter moves the residue'
 status: proved
 region: synthesis
@@ -17,18 +17,22 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (Maxwell equation as DF = 0)
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.imported-gtg-dictionary@1
-  - synthesis.kasner-curvature-wall-is-negative-weight-helicity@1
+  - synthesis.imported-gtg-dictionary@2
+  - synthesis.kasner-curvature-wall-is-negative-weight-helicity@2
   - synthesis.bkl-bounces-no-framewise-invariant@2
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
-  - synthesis.unit-boost-residue-needs-nonpositive-exponent@3
-  - synthesis.imported-maxwell-stress-spacetime-algebra@1
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
+  - synthesis.unit-boost-residue-needs-nonpositive-exponent@4
+  - synthesis.imported-maxwell-stress-spacetime-algebra@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -48,6 +52,14 @@ lineage:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
   - synthesis.kasner-curvature-wall-is-negative-weight-helicity
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in the proof: the source-free Maxwell equations are stated as the spacetime-algebra equation DF = 0 of the gravitational field (its vector part D . F = 0 and trivector part D ^ F = 0), with dF = 0 and d*F = 0 kept as the labelled coordinate reading from which the constant charges are read. A notation change; the derived metric in harmonic time stays as the sanctioned reading of the gauge field, and the minisuperspace DeWitt form and its linear forms are scalar linear algebra, not spacetime forms. Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

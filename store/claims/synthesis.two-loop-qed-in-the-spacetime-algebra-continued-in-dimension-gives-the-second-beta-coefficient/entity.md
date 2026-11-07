@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient
 kind: claim
-version: 3
+version: 4
 title: 'Two-loop QED in the spacetime algebra gives the second beta coefficient'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (photon propagator and polarisation as linear maps)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -49,13 +53,13 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
-  - field-theory.coupled-system-tree-level@3
-  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@2
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@5
+  - field-theory.coupled-system-tree-level@4
+  - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@3
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@3
   - synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -80,6 +84,10 @@ lineage:
   motivated_by:
   - synthesis.one-loop-qed-in-the-spacetime-algebra
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'In the formal level the covariant photon is written as the map a -> (a - (1 - xi)(a.r) r/Q(r))/Q(r) and the vacuum polarisation as the map Pi_q(a) = (Q(q) a - (a.q) q) Pi(Q(q)) with transversality q.Pi_q(q) = 0 (contractions of the old component forms with frame vectors, kept as labelled readings); the proof''s components are on the frame gamma_mu of the Euclidean Clifford algebra, the algebra''s own vectors, and stay; notation only. Reader fix (R06), version kept: proof Step 3(a) cites the integrals of the Conventions paragraph (there is no Step 0).'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -110,12 +118,12 @@ extraction:
 ---
 
 ## formal
-Under the Krein-form premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (the covariant photon $(\delta_{\alpha\beta} - (1 - \xi)r_{\alpha}r_{\beta}/Q(r))/Q(r)$ on internal lines, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}(iv)), with the vertex of \claimref{field-theory.coupled-system-tree-level}, the conventions of \claimref{synthesis.one-loop-qed-in-the-spacetime-algebra} (trace equal to four times the scalar part; the unit of the Feynman rules a coefficient outside the Clifford product), after the Wick rotation (Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}(ii)) and in dimensional regularisation, $d = 4 - 2\epsilon$ (Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}(i)). Write $a = \alpha/(4\pi)$, $\Pi_{\mu\nu}(q) = (Q(q)\delta_{\mu\nu} - q_{\mu}q_{\nu})\Pi(Q(q))$ for one massless Dirac fermion, and $G(a_{1}, a_{2})$ for the massless one-loop bubble. The $d$-dimensional integral rules used (the radial integral, symmetric integration in $d$ dimensions, translation invariance, the vanishing of scale-free integrals and of total derivatives, hence integration by parts), the bubble formula and the five-line benchmark are those of Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}(iv) \cite{ChetyrkinTkachov1981}. Then:
+Under the Krein-form premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (the covariant photon, the map $a \mapsto (a - (1 - \xi)(a\cdot r)\,r/Q(r))/Q(r)$ on vectors, in components $(\delta_{\alpha\beta} - (1 - \xi)r_{\alpha}r_{\beta}/Q(r))/Q(r)$, on internal lines, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}(iv)), with the vertex of \claimref{field-theory.coupled-system-tree-level}, the conventions of \claimref{synthesis.one-loop-qed-in-the-spacetime-algebra} (trace equal to four times the scalar part; the unit of the Feynman rules a coefficient outside the Clifford product), after the Wick rotation (Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}(ii)) and in dimensional regularisation, $d = 4 - 2\epsilon$ (Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}(i)). Write $a = \alpha/(4\pi)$, $\Pi_{q}(a) = (Q(q)\,a - (a\cdot q)\,q)\,\Pi(Q(q))$ for the polarisation map of one massless Dirac fermion (in components $\Pi_{\mu\nu}(q) = (Q(q)\delta_{\mu\nu} - q_{\mu}q_{\nu})\Pi(Q(q))$, $\Pi_{\mu\nu} = \gamma_{\mu}\cdot\Pi_{q}(\gamma_{\nu})$), and $G(a_{1}, a_{2})$ for the massless one-loop bubble. The $d$-dimensional integral rules used (the radial integral, symmetric integration in $d$ dimensions, translation invariance, the vanishing of scale-free integrals and of total derivatives, hence integration by parts), the bubble formula and the five-line benchmark are those of Fact \claimref{synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5}(iv) \cite{ChetyrkinTkachov1981}. Then:
 \begin{enumerate}
 \item (The algebra in $d$ dimensions; computed.) The rule $\gamma_{\alpha}\gamma_{\alpha} = d$, $\gamma_{\alpha}Xb\gamma_{\alpha} = -(\gamma_{\alpha}X\gamma_{\alpha})b + 2bX$ ($b$ a vector, $X$ a product of vectors) reproduces $\sum_{\alpha}\gamma_{\alpha}X\gamma^{\alpha}$ in $\Cl(D, 0)$ for $D = 4, \ldots, 8$ and in $\Cl(1, D-1)$ for $D = 4, 5, 6$, and the resulting traces of every word below equal four times the scalar part of the explicit Clifford products in $\Cl(D, 0)$, $D = 4, 5, 6$.
 \item (Reduction; computed.) With the denominators $Q(k)$, $Q(k - q)$, $Q(l)$, $Q(l - q)$, $Q(k - l)$, every two-loop integral that occurs is an exact rational function of $d$ times $M_{1} = G(1,1)^{2}$ plus a rational function of $d$ times $M_{2} = G(1,1)G(1, 3 - d/2)$ (integration by parts \cite{ChetyrkinTkachov1981}); on the benchmark with five unit lines this gives $6\zeta_{3} + O(\epsilon)$.
 \item (One loop; computed.) $\Pi^{(1)} = -\tfrac{2(d-2)}{d-1}\,a\,(4\pi)^{\epsilon}G(1,1)\,Q(q)^{-\epsilon} = -\tfrac43\tfrac{a}{\epsilon} + \dots$, so $\beta_{0} = \tfrac43$ in $\mu^{2}da/d\mu^{2} = \beta_{0}a^{2} + \beta_{1}a^{3}$; the $\overline{\mathrm{MS}}$ constant is $-\tfrac{20}{9}a$.
-\item (Two loops; computed.) Summed over the two self-energy insertions and the vertex correction: the coefficient of $1 - \xi$ vanishes identically in $d$, so the result does not depend on $\xi$ and holds in particular in the Feynman gauge $\xi = 1$, the gauge whose Fock space realises the one-particle Gupta-Bleuler form $-u\cdot w$ of (K1), which the store restates as the trace form of Clifford conjugation (\claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}; a restatement, not a derivation of the premise), and $q_{\mu}q_{\nu}\Pi^{(2)}_{\mu\nu} = 0$ identically in $d$; in the Feynman gauge the self-energy insertions carry $+\tfrac43 a^{2}/\epsilon^{2}$ and the vertex correction $-\tfrac43 a^{2}/\epsilon^{2}$; the sum is $\Pi^{(2)} = a^{2}\bigl(-\tfrac{2}{\epsilon} + 16\zeta_{3} - \tfrac{55}{3} + 4\ln(Q(q)/\mu^{2}) + O(\epsilon)\bigr)$ in $\overline{\mathrm{MS}}$ normalisation. Hence $Z_{3} = 1 - \tfrac43\tfrac{a}{\epsilon} - 2\tfrac{a^{2}}{\epsilon}$, $\beta_{1} = 4$, and with $n_{f}$ fermions $\mu\,d\alpha/d\mu = \tfrac{2n_{f}}{3\pi}\alpha^{2} + \tfrac{n_{f}}{2\pi^{2}}\alpha^{3}$ \cite{JostLuttinger1950, Steinhauser2002, FanchiottiKniehlSirlin1993} (Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(iii)).
+\item (Two loops; computed.) Summed over the two self-energy insertions and the vertex correction: the coefficient of $1 - \xi$ vanishes identically in $d$, so the result does not depend on $\xi$ and holds in particular in the Feynman gauge $\xi = 1$, the gauge whose Fock space realises the one-particle Gupta-Bleuler form $-u\cdot w$ of (K1), which the store restates as the trace form of Clifford conjugation (\claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}; a restatement, not a derivation of the premise), and $q\cdot\Pi^{(2)}_{q}(q) = 0$ (in components $q_{\mu}q_{\nu}\Pi^{(2)}_{\mu\nu} = 0$) identically in $d$; in the Feynman gauge the self-energy insertions carry $+\tfrac43 a^{2}/\epsilon^{2}$ and the vertex correction $-\tfrac43 a^{2}/\epsilon^{2}$; the sum is $\Pi^{(2)} = a^{2}\bigl(-\tfrac{2}{\epsilon} + 16\zeta_{3} - \tfrac{55}{3} + 4\ln(Q(q)/\mu^{2}) + O(\epsilon)\bigr)$ in $\overline{\mathrm{MS}}$ normalisation. Hence $Z_{3} = 1 - \tfrac43\tfrac{a}{\epsilon} - 2\tfrac{a^{2}}{\epsilon}$, $\beta_{1} = 4$, and with $n_{f}$ fermions $\mu\,d\alpha/d\mu = \tfrac{2n_{f}}{3\pi}\alpha^{2} + \tfrac{n_{f}}{2\pi^{2}}\alpha^{3}$ \cite{JostLuttinger1950, Steinhauser2002, FanchiottiKniehlSirlin1993} (Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(iii)).
 \item (Ward identity at two loops; proved for the integrands, argued for the integrals.) In $\Cl(1,3)$ with massive lines and the unit outside the product, $S(k + h) - S(k) = -S(k + h)hS(k)$ makes the sum of the insertions of $h$ into the open fermion line of the rainbow, crossed and polarisation-insertion self-energies equal to minus the difference of the line at $p + h$ and at $p$, and the insertions into a closed loop telescope to the difference of one integrand at loop momenta $l + h$ and $l$; with the shift invariance of dimensional regularisation, $\Lambda^{(2)}(p, p) = -\partial\Sigma^{(2)}/\partial p$ and $Z_{1} = Z_{2}$ at two loops \cite{Ward1950} (as in Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(ii)).
 \end{enumerate}
 

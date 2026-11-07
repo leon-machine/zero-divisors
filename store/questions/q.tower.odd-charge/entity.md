@@ -33,6 +33,10 @@ locators:
   label: q:oddcharge
   line: 450
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Lay level and one-liner updated to the settled status (settled_by synthesis.tower-limit-forgets-residue: the odd-charge limit is Cl^0(p,q) (x) Mat_{2^infinity}, isomorphic to Mat_{2^infinity}, and no invariant separates the cases); the formal and technical levels keep the question as posed. No version bump (lay and one-liner only).'
   env: question
   context_refs:
   - tower.grade-twist-when-it-inner
@@ -69,7 +73,7 @@ For odd transport charge $p - q$ the connecting twist acts as an outer automorph
 The question asks for that limit: is it again a plain tensor product with $\Mat_{2^\infty}$, and if not, which real K-theoretic invariant separates the cases?
 
 ## lay
-For towers of even charge the series knows exactly what the infinite limit of the ladder of algebras is. For odd charge each step twists the centre of the algebra in a way that blocks the same argument. The open question is what the limit is in that case, and whether some invariant from K-theory is needed to tell the possibilities apart.
+For towers of even charge the series knows exactly what the infinite limit of the ladder of algebras is. For odd charge each step twists the centre of the algebra in a way that blocks the same argument. The question was what the limit is in that case, and whether some invariant from K-theory is needed to tell the possibilities apart. It is settled: the limit is again a plain tensor product, now of the even half of the starting algebra, and it is the same algebra for every tower, so no invariant tells the cases apart.
 
 ## one-liner
-Open question: identify the direct limit of the tower for odd transport charge, deciding whether it is still a tensor product with $\Mat_{2^\infty}$ and, if not, which real K-theoretic invariant separates the cases.
+Settled question: the direct limit of the tower for odd transport charge is $\Cl^{0}(p,q) \otimes \Mat_{2^\infty} \cong \Mat_{2^\infty}$, a plain tensor product, and no invariant, real K-theoretic or other, separates the cases.

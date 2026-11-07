@@ -1,7 +1,7 @@
 ---
 id: rule2.rule-2-kaluza-klein-algebra
 kind: claim
-version: 6
+version: 7
 title: Rule 2 in the Kaluza-Klein algebra
 status: proved
 region: rule2
@@ -21,6 +21,10 @@ credit:
   role: strengthened check and wording
   version: 6
   source: maintainer pass of 7 November 2026
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the letter gamma for the spacetime pseudoscalar defined (notation)'
+  version: 7
+  source: maintainer pass 2026-11-07 (decisions)
 outside_ga:
   kind: bridge
   why: 'the two ideals are compared with the five-dimensional Dirac (gamma-matrix) representations of the imported Fact, stated in that source''s language; the algebra itself is worked in GA'
@@ -33,11 +37,11 @@ derivations:
   - rule2.even-subalgebra-one-dimensional-extension@4
   - rule2.imported-classification-centre-type-c@3
   - rule2.imported-completion-spacetime-algebra-spinors@5
-  - rule2.imported-gamma-matrices-odd-dimension@1
+  - rule2.imported-gamma-matrices-odd-dimension@2
   - rule2.imported-rule-2-matrix-units-forgotten@3
-  - rule2.where-obstruction-sits-commuting-square@5
+  - rule2.where-obstruction-sits-commuting-square@6
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.sta-matrix@1
+  - std-algebra.sta-matrix@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -62,6 +66,10 @@ locators:
   label: thm:KK
   line: 197
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (DECISIONS H5, R11 item 9): the formal used gamma for the spacetime pseudoscalar without defining it, beside frame vectors and the imported Gamma matrices; it now says gamma = e_0e_1e_2e_3, the store''s I_4 (omega = gamma e_4 is the volume element of Cl(1,4) with omega^2 = +1, as (i) states). No content change.'
   maintainer_pass_warnings:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -103,7 +111,7 @@ extraction:
 ---
 
 ## formal
-In $A_5 = \Cl(1,4)$:
+In $A_5 = \Cl(1,4)$, with $\gamma = e_{0}e_{1}e_{2}e_{3}$ the spacetime pseudoscalar (the store's $I_{4}$; the $\Gamma^{\mu}$ below are the matrices of the imported representation):
 \begin{enumerate}
 \item[(i)] the volume element $\omega = \gamma e_4$ is central with $\omega^2 = +1$; $A_5$ is type C, $A_5 = \varepsilon_+ A_5 \oplus \varepsilon_- A_5$;
 \item[(ii)] each ideal is a copy of the spacetime algebra: $a \mapsto \varepsilon_\pm a$ is an injective homomorphism $\Cl(1,3) \to \varepsilon_\pm A_5$ onto the ideal, and under it the fifth generator becomes minus or plus the spacetime pseudoscalar,

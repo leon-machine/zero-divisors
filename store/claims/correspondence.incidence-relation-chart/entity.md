@@ -1,7 +1,7 @@
 ---
 id: correspondence.incidence-relation-chart
 kind: claim
-version: 6
+version: 7
 title: "The incidence relation is the chart"
 status: proved
 region: correspondence
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 6
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, the basis and orientation of I_6 named in clause (4)(iii), with the sign of I_6 on CS for both orientations
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -51,6 +55,10 @@ locators:
   label: thm:incidence
   line: 445
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7. Clause (4)(iii) wrote I_6 = e_0 ... e_5 without a frame (T09 names its basis a_1, a_2, b_1, ..., b_4, and its e_0, ..., e_3 elsewhere are a_2, b_2, b_3, b_4); exact computation in Cl(3,4) with lib/GA.py (vacuum f = w_1'''' w_2'''' w_3'''' of the Fock model, w_3 = b_3 + I_7 b_4, I_7 = I_6 e) gives I_6 f = -I_7 f for I_6 = a_1 a_2 b_1 b_2 b_3 b_4 and I_6 f = +I_7 f for the store''''s I_6 = I_4 E = -a_1 a_2 b_1 b_2 b_3 b_4 (I_4 = a_2 b_2 b_3 b_4, E = a_1 b_1) with I_7 and W rebuilt from it; the clause now names the frame and states both, consistent with the +-I_7 of correspondence.reality-conjugation-twistor-form-factor (5); the mathematics is unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -122,7 +130,7 @@ P(A) \;=\; \nO \,+\, m(A)\,-\,\tfrac12\,Q(m(A))\,\nInf \;=\; X\bigl(m(A)\bigr).
 \]
 In particular every $P(A)$ is null, as a Pl\"ucker bivector must be, and the nullity of $P(A)$ is equivalent to the identity $\det A = -\tfrac12Q(m(A))$: the quadratic term of the chart is a determinant.
 \item \emph{(Coverage.)} $A \mapsto L_A$ is a bijection from $\operatorname{Hom}(\Spi, \Som)$ onto the lines of $\PCS$ skew to $L_\infty$, and $[P(A)]$ ranges exactly over the points of the Klein quadric with $\ip{P}{\nInf} \neq 0$: the affine chart of the complexified conformal compactification, with the lines meeting $L_\infty$ as the points at infinity; the real locus is cut out in Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5).
-\item \emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\infty, L_0)$ (Proposition \claimref{correspondence.skew-lines-splittings-hyperbolic-planes-one}). (ii) The splitting of a conformal spinor (a twistor) into its $(\omega, \pi)$ parts along $\CS = \Som\oplus\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) The incidence relation (Penrose's, whose imaginary unit is the factor $I_6$ below; in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$, real-linear in $x$) is the case $A = I_6\hat x$ of the chart map, with $I_6$ the complex unit of $\CS$ (with $I_6 = e_0e_1e_2e_3e_4e_5$, $I_6$ acts on $\CS$ as $-I_7$, where $I_7 = I_6e$, the central pseudoscalar of the odd extension $\Cl(3,4)$, is the scalar unit of the complexified module, $V_\C = V \oplus I_7V$ and $\Cl(2,4)_\C = \Cl(3,4)$ (\claimref{std-algebra.complexification-is-the-odd-extension}); $I_6$ acts on the module by left multiplication, $I_7$ is its scalar, and the two are not identified) and $\hat x$ Hermitian for the invariant Hermitian form $\Sigma$ (the twistor form) of Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5)). (iv) The stabiliser of the infinity line $L_\infty$ in $\mathfrak{so}(V_\C)$ is the stabiliser of the ray of $\nInf$: the Poincar\'e parabolic, with its Levi factor acting on $\Som \oplus \Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\mathfrak{sl}(2,\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \claimref{correspondence.chiral-planes-summand-spaces}(1)).
+\item \emph{(Consequences.)} (i) The null pair adjoined by the Witt completion is the pair of skew lines $(L_\infty, L_0)$ (Proposition \claimref{correspondence.skew-lines-splittings-hyperbolic-planes-one}). (ii) The splitting of a conformal spinor (a twistor) into its $(\omega, \pi)$ parts along $\CS = \Som\oplus\Spi$ is the Witt completion seen at spinor level: the same datum in a third language. (iii) The incidence relation (Penrose's, whose imaginary unit is the factor $I_6$ below; in the real algebra $\omega = \tfrac12 x\,\nInf\,\pi$, real-linear in $x$) is the case $A = I_6\hat x$ of the chart map, with $I_6$ the complex unit of $\CS$ (with $I_6 = a_1a_2b_1b_2b_3b_4$ in the basis of Section \ref{sec:setting}, $I_6$ acts on $\CS$ as $-I_7$, where $I_7 = I_6e$, the central pseudoscalar of the odd extension $\Cl(3,4)$, is the scalar unit of the complexified module and $W$ is built from it as in the Fock model, $w_3 = b_3 + I_7b_4$; for the opposite orientation, $I_6 = I_4E$ with $I_4 = a_2b_2b_3b_4$ and $E = a_1b_1$, which is $-a_1a_2b_1b_2b_3b_4$, and with $I_7$ and $W$ built from it in the same way, $I_6$ acts on $\CS$ as $+I_7$, so the sign is a choice of orientation and the clause holds for either; $V_\C = V \oplus I_7V$ and $\Cl(2,4)_\C = \Cl(3,4)$ (\claimref{std-algebra.complexification-is-the-odd-extension}); $I_6$ acts on the module by left multiplication, $I_7$ is its scalar, and the two are not identified) and $\hat x$ Hermitian for the invariant Hermitian form $\Sigma$ (the twistor form) of Proposition \claimref{correspondence.reality-conjugation-twistor-form-factor}(5)). (iv) The stabiliser of the infinity line $L_\infty$ in $\mathfrak{so}(V_\C)$ is the stabiliser of the ray of $\nInf$: the Poincar\'e parabolic, with its Levi factor acting on $\Som \oplus \Spi$ as the two chiral $2$-dimensional representations, one plane the doublet of each $\mathfrak{sl}(2,\C)$ factor of the complexified Lorentz algebra and trivial for the other (Lemma \claimref{correspondence.chiral-planes-summand-spaces}(1)).
 \end{enumerate}
 
 ## technical

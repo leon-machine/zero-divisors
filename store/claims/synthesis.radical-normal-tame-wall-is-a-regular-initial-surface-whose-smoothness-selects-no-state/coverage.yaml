@@ -1,4 +1,11 @@
 functions:
+  check_gtg_wall_field_strengths:
+    kind: sampled
+    clauses:
+    - '(i) the physical side of (1, 0) is flat (zero field strength in the coordinate t)'
+    - '(iii) g_{0,1} has scalar curvature R = (3/2) t^-2'
+    - '(iv) p = 2/(3(1 + w)) for P = w rho; the radiation-dominated field has scalar curvature 0 and Ricci square calR(d_a) . calR(a) = (3/4) t^-4'
+    omits: 'the GTG fields on exact jets at t = 16 (five wall pairs) and at t = 2^D (five Friedmann exponents); the closed forms in t are the proof''s'
   check_aligned_tame_walls_regular_iff_radical_normal:
     kind: complete
     clauses:

@@ -1,7 +1,7 @@
 ---
 id: angle.imported-singularity-papers-state-selection
 kind: claim
-version: 12
+version: 13
 title: 'Imported: the singularity paper''s state selection'
 status: proved
 region: angle
@@ -25,16 +25,20 @@ credit:
   role: 'unit resolution pass, the phase flow written with the transverse unit J'
   version: 12
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the weights kappa k labelled as version 2 of premise (Q)'
+  version: 13
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
   uses:
   - singularity.euclidean-section-period@6
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   - singularity.schmidt-forcing-proved-outright@6
   - singularity.class-relative-no-go-no-supplied@3
-  - singularity.computed@4
+  - singularity.computed@5
   assumes:
   - singularity.l-boundary-mode-locality@2
   - singularity.q-joint-quasi-freeness-s-wave@3
@@ -61,6 +65,10 @@ locators:
   label: fact:T5
   line: 116
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version labels (DECISIONS G7; Leon''s 23 October ''note only'' decision; R01 item 2): Premise (Q) singularity.q-joint-quasi-freeness-s-wave is at version 3 with weights kappa(k + 1/2), while this entity states version 2''s weights kappa k (sea at a site); the displays now say ''version 2 of premise (Q)'' where they use kappa k. Statement content, edges and pins unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -133,12 +141,12 @@ extraction:
 ---
 
 ## formal
-For the horizon pair, a state vector that is invariant up to phase under the boost and cyclic and separating for the pair factor has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$ with $\cos\theta\sin\theta \neq 0$; its one-sided marginal is $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$, the Gibbs state for the number operator at $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ has $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. Every automorphism of the mode factor intertwining the boost's phase flow $\operatorname{Ad}(e^{JtK})$, written with the atom's complex unit $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), acts on $\beta$ through $\{\pm 1\}$ only. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and (R) imposes KMS at that period mode by mode. The supplied class is ultralocal, and the s-wave array of Step 4e has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$. \emph{Provenance:} \cite[Lem.~7.2, Thm.~7.3, Thm.~7.16, Prop.~7.18, Prem.~7.19, Prop.~7.25, Rem.~7.26, Prem.~7.30, Rem.~7.33, Prem.~8.1, Thm.~C.8, Rem.~C.9, Prop.~A.2]{ButlerT5}.
+For the horizon pair, a state vector that is invariant up to phase under the boost and cyclic and separating for the pair factor has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$ with $\cos\theta\sin\theta \neq 0$; its one-sided marginal is $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$, the Gibbs state for the number operator at $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ has $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. Every automorphism of the mode factor intertwining the boost's phase flow $\operatorname{Ad}(e^{JtK})$, written with the atom's complex unit $J = e_{2}e_{3}$ (\claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), acts on $\beta$ through $\{\pm 1\}$ only. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and (R) imposes KMS at that period mode by mode. The supplied class is ultralocal, and the s-wave array of Step 4e has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$ (the source paper's convention, version 2 of premise (Q); version 3 adopts $\kappa(k + \tfrac12)$). \emph{Provenance:} \cite[Lem.~7.2, Thm.~7.3, Thm.~7.16, Prop.~7.18, Prem.~7.19, Prop.~7.25, Rem.~7.26, Prem.~7.30, Rem.~7.33, Prem.~8.1, Thm.~C.8, Rem.~C.9, Prop.~A.2]{ButlerT5}.
 
 ## technical
 This entry restates the singularity paper's state selection for a horizon pair. A state vector of the pair that is boost invariant up to phase and cyclic and separating has the form $\cos\theta\,\ket{00} + \sin\theta\,\ket{11}$, and its one-sided marginal $\operatorname{diag}(\cos^{2}\theta, \sin^{2}\theta)$ is the Gibbs state for the number operator with $\tan^{2}\theta = e^{-\beta\omega}$; the sample point $e^{-\omega/T} = \tfrac{9}{16}$ corresponds to $(\cos\theta, \sin\theta) = (\tfrac45, \tfrac35)$. The algebra does not fix $\beta$: every automorphism of the mode factor that intertwines the boost flow acts on $\beta$ only through $\{\pm 1\}$.
 
-The value comes from the geometry and a premise. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and premise (R) imposes KMS at that period mode by mode. The supplied class of boundary-mode generators, the number-diagonal class that the boundary-mode locality premise (L$_E$) admits, is ultralocal, and the s-wave array has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$, the convention of premise (Q).
+The value comes from the geometry and a premise. The surface gravity is $\kappa = 1/4M$, the Euclidean section is smooth at the bifurcation sphere exactly for the period $2\pi/\kappa$, and premise (R) imposes KMS at that period mode by mode. The supplied class of boundary-mode generators, the number-diagonal class that the boundary-mode locality premise (L$_E$) admits, is ultralocal, and the s-wave array has weights $\omega_{k} = \kappa k$ with its sea level at $k = 0$, the source paper's convention, version 2 of premise (Q) (version 3 adopts $\kappa(k + \tfrac12)$).
 
 ## lay
 For a pair of modes straddling a black hole horizon, the states that look the same under the horizon's boost form a one-parameter family, and each of them looks thermal from one side. The algebra alone cannot say which temperature is right; it is set by requiring the geometry to be smooth at the horizon, an assumption (premise (R)) that gives the Hawking value. This entry gathers those earlier results, together with two further premises it rests on: that the framework's own dynamics never moves particles between points (premise (L$_E$), boundary-mode locality), and that the modes are jointly in the simplest thermal state with evenly spaced energies (premise (Q)).

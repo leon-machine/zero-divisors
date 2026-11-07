@@ -1,7 +1,7 @@
 ---
 id: correspondence.local-twistor-transport-ascended-spinor-connection
 kind: claim
-version: 9
+version: 10
 title: "The conformal spinor connection is Penrose's local twistor transport"
 status: proved
 region: correspondence
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 9
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, which unit stands for Penrose's imaginary unit in the composite (I_7 here, I_6 in the incidence relation) stated
+  version: 10
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -32,7 +36,7 @@ derivations:
   - correspondence.chiral-planes-summand-spaces@5
   - correspondence.clifford-side-ordering-shift@3
   - correspondence.imported-stabilisers-flat-model@3
-  - correspondence.imported-tractor-connection-local-twistor-transport@7
+  - correspondence.imported-tractor-connection-local-twistor-transport@8
   - correspondence.spin-representation@6
   - correspondence.fock-model-complexified-ascended-algebra@9
   - std-algebra.bivector-lie-algebra@1
@@ -60,6 +64,10 @@ locators:
   label: prop:localtwistor
   line: 593
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 9 -> 10. The proof reads Penrose''''s i in the composite of the imported transport as the module scalar I_7 while the incidence relation and the reality proposition read the same unit as I_6, equal to +-I_7 on CS by orientation; a sentence now says so and that the composite, quadratic in the unit, does not depend on the reading; no change of mathematics.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

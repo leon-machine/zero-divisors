@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-charged-scalar-sum-rule
 kind: claim
-version: 2
+version: 3
 title: 'A tree-level sum rule for the rung field''s charged pair'
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@4
-  - synthesis.rung-field-on-the-lift-locus@3
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
+  - synthesis.rung-field-on-the-lift-locus@5
   proof: proof-main.tex
 quantities:
 - quantity.z-boson-mass@2
@@ -46,6 +50,10 @@ lineage:
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'
@@ -71,21 +79,21 @@ extraction:
 ---
 
 ## formal
-In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the rung field on the null-lift locus $L = \{Q(c) = -H^{2}\}$ with the Hermitian kinetic term, the potential $V = V_{D} + W(N)$ with $V_{D}$ the hypercharge D-term action at level $\xi$ and $W$ a function of the Hermitian norm $N$, a charge-preserving vacuum on the lift family at $(N^{*}, m^{*})$ with $N^{*2} = m^{*2} + H^{4}$, $M_{W}^{2} = \tfrac12 g^{2}N^{*}$ and $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})N^{*}$.
+In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the rung field on the null-lift locus $L = \{Q(c) = -H^{2}\}$ with the Hermitian kinetic term, the potential $V = V_{D} + W(\mathsf{N})$ with $V_{D}$ the hypercharge D-term action at level $\xi$ and $W$ a function of the Hermitian norm $\mathsf{N}$, a charge-preserving vacuum on the lift family at $(\mathsf{N}^{*}, m^{*})$ with $\mathsf{N}^{*2} = m^{*2} + H^{4}$, $M_{W}^{2} = \tfrac12 g^{2}\mathsf{N}^{*}$ and $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})\mathsf{N}^{*}$.
 \begin{enumerate}
-\item[(i)] \emph{(Sum rule, tree level.)} For $W$ a function of $N$ alone the two charged modes are degenerate, and
+\item[(i)] \emph{(Sum rule, tree level.)} For $W$ a function of $\mathsf{N}$ alone the two charged modes are degenerate, and
 \[
-(m_{\pm}^{2} - M_{W}^{2}) - (m_{h}^{2} - M_{Z}^{2}) = 2\Bigl(\frac{m^{*}}{N^{*}}\Bigr)^{2}\bigl(W'(N^{*}) - N^{*}W''(N^{*})\bigr).
+(m_{\pm}^{2} - M_{W}^{2}) - (m_{h}^{2} - M_{Z}^{2}) = 2\Bigl(\frac{m^{*}}{\mathsf{N}^{*}}\Bigr)^{2}\bigl(W'(\mathsf{N}^{*}) - \mathsf{N}^{*}W''(\mathsf{N}^{*})\bigr).
 \]
-\item[(ii)] \emph{(Functions of $N$ alone.)} Among functions of $N$, the defect vanishes at every vacuum exactly when $W'(N) = 2\kappa N$, that is $W = \kappa N^{2}$ up to a constant, the only function of $N$ alone that adds no dimensionful constant and no dependence on the level; then $m_{\pm}^{2} - M_{W}^{2} = m_{h}^{2} - M_{Z}^{2} = 4\kappa N^{*}$ in every frame. A linear term $\mu N$ leaves the defect $2\mu(m^{*}/N^{*})^{2}$, of modulus below $2|\mu|$; a term built from the cosmological scale, $\mu = O(H^{2})$, shifts $m_{\pm}^{2}$ relative to $M_{W}^{2}$ by $O(H^{2}/N^{*})$. An invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no dimensionful constant and breaks the equality: for $\kappa = \tfrac15$ with the level re-solved for criticality the defect is $-\tfrac{17}{10}$ at $\lambda^{*} = \tfrac12$ and $-\tfrac{164}{45}$ at $\lambda^{*} = 3$ (with $H^{2} = 1$, $g = \tfrac23$, $g' = \tfrac12$).
-\item[(iii)] \emph{(Tree-level value from the record.)} With $W = \kappa N^{2}$ and the tree relation $M_{W}^{2} = (1 - \sin^{2}\theta_{W})M_{Z}^{2}$, at tree level $m_{\pm}^{2} = m_{h}^{2} - \sin^{2}\theta_{W}M_{Z}^{2}$; with the stored $M_{Z}$ and $\sin^{2}\theta_{W}(M_{Z})$ and $m_{h} \in [125, 125.4]$ GeV, $116 < m_{\pm} < 119$ GeV, below $m_{t} - m_{b}$ and above the kinematic pair threshold of $105$ GeV at the highest LEP energies.
+\item[(ii)] \emph{(Functions of $\mathsf{N}$ alone.)} Among functions of $\mathsf{N}$, the defect vanishes at every vacuum exactly when $W'(\mathsf{N}) = 2\kappa \mathsf{N}$, that is $W = \kappa \mathsf{N}^{2}$ up to a constant, the only function of $\mathsf{N}$ alone that adds no dimensionful constant and no dependence on the level; then $m_{\pm}^{2} - M_{W}^{2} = m_{h}^{2} - M_{Z}^{2} = 4\kappa \mathsf{N}^{*}$ in every frame. A linear term $\mu \mathsf{N}$ leaves the defect $2\mu(m^{*}/\mathsf{N}^{*})^{2}$, of modulus below $2|\mu|$; a term built from the cosmological scale, $\mu = O(H^{2})$, shifts $m_{\pm}^{2}$ relative to $M_{W}^{2}$ by $O(H^{2}/\mathsf{N}^{*})$. An invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no dimensionful constant and breaks the equality: for $\kappa = \tfrac15$ with the level re-solved for criticality the defect is $-\tfrac{17}{10}$ at $\lambda^{*} = \tfrac12$ and $-\tfrac{164}{45}$ at $\lambda^{*} = 3$ (with $H^{2} = 1$, $g = \tfrac23$, $g' = \tfrac12$).
+\item[(iii)] \emph{(Tree-level value from the record.)} With $W = \kappa \mathsf{N}^{2}$ and the tree relation $M_{W}^{2} = (1 - \sin^{2}\theta_{W})M_{Z}^{2}$, at tree level $m_{\pm}^{2} = m_{h}^{2} - \sin^{2}\theta_{W}M_{Z}^{2}$; with the stored $M_{Z}$ and $\sin^{2}\theta_{W}(M_{Z})$ and $m_{h} \in [125, 125.4]$ GeV, $116 < m_{\pm} < 119$ GeV, below $m_{t} - m_{b}$ and above the kinematic pair threshold of $105$ GeV at the highest LEP energies.
 \end{enumerate}
 
 ## technical
-The stored D-term action for the rung field fixes the Higgs-like neutral mode at $M_{Z}$ and the charged pair at $M_{W}$ at tree level, so a second invariant is owed, and for an invariant $W(N)$ of the norm alone the stored formulas give both masses in terms of its first two derivatives at the vacuum. Eliminating them leaves one combination: at tree level the difference of the two shifts is $2(m^{*}/N^{*})^{2}(W' - N^{*}W'')$, which vanishes exactly for the quartic $W = \kappa N^{2}$, the only function of $N$ alone that adds no constant. Then the charged pair sits at $\sqrt{M_{W}^{2} + m_{h}^{2} - M_{Z}^{2}} \approx 117$ GeV at tree level, light enough to appear in top decays; whether present searches exclude it depends on its couplings to quarks, which the series has not derived. The equality is not forced by the absence of constants in general: an invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no constant and breaks it. A charged mass away from the tree value measures either a scale in $W(N)$, a dependence on the moment map, or loop corrections.
+The stored D-term action for the rung field fixes the Higgs-like neutral mode at $M_{Z}$ and the charged pair at $M_{W}$ at tree level, so a second invariant is owed, and for an invariant $W(\mathsf{N})$ of the norm alone the stored formulas give both masses in terms of its first two derivatives at the vacuum. Eliminating them leaves one combination: at tree level the difference of the two shifts is $2(m^{*}/\mathsf{N}^{*})^{2}(W' - \mathsf{N}^{*}W'')$, which vanishes exactly for the quartic $W = \kappa \mathsf{N}^{2}$, the only function of $\mathsf{N}$ alone that adds no constant. Then the charged pair sits at $\sqrt{M_{W}^{2} + m_{h}^{2} - M_{Z}^{2}} \approx 117$ GeV at tree level, light enough to appear in top decays; whether present searches exclude it depends on its couplings to quarks, which the series has not derived. The equality is not forced by the absence of constants in general: an invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no constant and breaks it. A charged mass away from the tree value measures either a scale in $W(\mathsf{N})$, a dependence on the moment map, or loop corrections.
 
 ## lay
 The series' candidate for the Higgs field comes with a pair of electrically charged partners. A simple version of its energy function gives the wrong Higgs mass, so an extra term is needed; this result shows that, for an extra term that depends only on the field's overall size, the charged partners' mass and the Higgs mass are tied by one exact relation at lowest order. If the extra term depends only on the field's overall size and introduces no new energy scale, then at lowest order the charged partners weigh about 117 GeV, light enough to be produced in top-quark decays. Extra terms of other kinds, even without a new scale, move that value.
 
 ## one-liner
-For the rung field's D-term action plus an invariant $W(N)$ of the norm alone, at tree level $(m_{\pm}^{2} - M_{W}^{2}) - (m_{h}^{2} - M_{Z}^{2}) = 2(m^{*}/N^{*})^{2}(W' - N^{*}W'')$, so $W = \kappa N^{2}$, the only function of $N$ alone that adds no constant, gives $m_{\pm}^{2} = M_{W}^{2} + m_{h}^{2} - M_{Z}^{2}$ at tree level, a charged pair near $117$ GeV open to top decays; an invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no constant and breaks the equality.
+For the rung field's D-term action plus an invariant $W(\mathsf{N})$ of the norm alone, at tree level $(m_{\pm}^{2} - M_{W}^{2}) - (m_{h}^{2} - M_{Z}^{2}) = 2(m^{*}/\mathsf{N}^{*})^{2}(W' - \mathsf{N}^{*}W'')$, so $W = \kappa \mathsf{N}^{2}$, the only function of $\mathsf{N}$ alone that adds no constant, gives $m_{\pm}^{2} = M_{W}^{2} + m_{h}^{2} - M_{Z}^{2}$ at tree level, a charged pair near $117$ GeV open to top decays; an invariant depending on the hypercharge moment map, such as $\kappa m^{2}$, also adds no constant and breaks the equality.

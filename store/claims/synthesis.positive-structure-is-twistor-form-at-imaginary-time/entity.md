@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-structure-is-twistor-form-at-imaginary-time
 kind: claim
-version: 4
+version: 5
 title: 'The positive structure is the twistor form at imaginary time'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, a stale remark that a result is not yet in the store'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -28,7 +32,7 @@ derivations:
   - synthesis.incidence-vacua-thermofield-real-capacity@6
   - one-relation.spacetime-manifold-vacuum-lines@6
   - correspondence.reality-conjugation-twistor-form-factor@8
-  - correspondence.incidence-relation-chart@6
+  - correspondence.incidence-relation-chart@7
   - synthesis.twistor-form-states-only-off-the-real-slice@2
   - std-algebra.vector-squares@1
   proof: proof-main.tex
@@ -48,6 +52,10 @@ lineage:
   - synthesis.twistor-form-states-only-off-the-real-slice
   - synthesis.boost-stationary-incidence-vacua-read-interval
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The argued reading said synthesis.positive-null-energy-gives-r-premises is not yet in the store; it is now in the store, and the parenthesis names it without that remark; no change of content.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

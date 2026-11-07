@@ -1,7 +1,7 @@
 ---
 id: synthesis.number-diagonal-dynamics-spreads-nothing
 kind: claim
-version: 2
+version: 3
 title: 'Number-diagonal dynamics has no exponential operator spreading'
 status: proved
 region: synthesis
@@ -21,14 +21,17 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, uses edge to the now-conjectured spreading law turned into a mention at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 derivations:
 - name: main
   uses:
   - singularity.modular-structure-completed-pair@5
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
-  - scrambling.spreading-law-chaos-bound-saturated@5
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -38,6 +41,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Consequence of Leon''s answer 4 (B1): scrambling.spreading-law-chaos-bound-saturated is now conjectured; this result analyses that law''s growth step and does not rest on its truth, so the uses edge to it becomes a text mention (the proof''s \claimref stays as a citation for comparison) and the check''s premise() call for it is removed; mathematics unchanged, status stays proved.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

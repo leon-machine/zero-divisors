@@ -1,7 +1,7 @@
 ---
 id: synthesis.matter-asymmetry-registered-free-input
 kind: claim
-version: 1
+version: 2
 title: 'Premise: the matter asymmetry is a registered free input'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation type corrected at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 lineage:
   motivated_by:
@@ -29,6 +33,10 @@ lineage:
   - synthesis.rung-unit-second-free-number
   - synthesis.number-n-registered-free-input
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item D9 (routine): dark-matter.stored-asymmetry-charge-not-number is a Proposition (T14), not a Theorem; the two citations (formal and technical) now say so. Wording.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -45,11 +53,11 @@ extraction:
 ---
 
 ## formal
-\emph{Premise ($\epsilon$), the matter asymmetry as a registered input.} Let $\epsilon$ be the asymmetry per mode of the oriented towers, the strength $\epsilon_{r} = \epsilon$ at which the flag acts on an oriented tower's modes (Premise \claimref{dark-matter.p4-democracy-asymmetry-over-oriented-towers}), so that the asymmetry stored in an oriented tower is the charge $Q = \epsilon N$ (Theorem \claimref{dark-matter.stored-asymmetry-charge-not-number}(i)); the asymmetry lives only in this tower and the mirror (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iii)). The premise: \emph{$\epsilon$ is a free number of the series}, inherited, not generated: it is not computed from the transport structure, from another premise of the register, or from a dynamics of the series, and it is not a function of $N$ (Premise \claimref{synthesis.number-n-registered-free-input}) or of $\xi G$ (Premise \claimref{synthesis.rung-unit-second-free-number}). It is initial data of the descent, the stance of Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iv), registered here as a premise. Its value is taken from the record: in this tower it is fixed by the measured baryon density, $\Omega_{b}h^{2} = 0.02237 \pm 0.00015$ (Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}), equivalently the $8.7 \times 10^{-11}$ baryons per unit entropy that the stored results use.
+\emph{Premise ($\epsilon$), the matter asymmetry as a registered input.} Let $\epsilon$ be the asymmetry per mode of the oriented towers, the strength $\epsilon_{r} = \epsilon$ at which the flag acts on an oriented tower's modes (Premise \claimref{dark-matter.p4-democracy-asymmetry-over-oriented-towers}), so that the asymmetry stored in an oriented tower is the charge $Q = \epsilon N$ (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(i)); the asymmetry lives only in this tower and the mirror (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iii)). The premise: \emph{$\epsilon$ is a free number of the series}, inherited, not generated: it is not computed from the transport structure, from another premise of the register, or from a dynamics of the series, and it is not a function of $N$ (Premise \claimref{synthesis.number-n-registered-free-input}) or of $\xi G$ (Premise \claimref{synthesis.rung-unit-second-free-number}). It is initial data of the descent, the stance of Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iv), registered here as a premise. Its value is taken from the record: in this tower it is fixed by the measured baryon density, $\Omega_{b}h^{2} = 0.02237 \pm 0.00015$ (Fact \claimref{synthesis.imported-planck-2018-lcdm-parameters}), equivalently the $8.7 \times 10^{-11}$ baryons per unit entropy that the stored results use.
 
 \emph{Scope.} The premise registers the value. Its equality across the oriented towers is Premise P4 (a theorem for the mirror, Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)), not this premise. That it is one number across space, rather than a field, agrees with Theorem \claimref{synthesis.adiabatic-deposit-modulation-is-a-time-shift}: under the charge reading and the mirror's deposit law the charge per unit entropy must be uniform up to the isocurvature the record allows. It is not the deposit energy per unit charge $\varepsilon$ of Proposition \claimref{synthesis.mirror-temperature-measures-deposit-under-r}, which this premise does not register.
 
-\emph{What it is for.} The charge reading of the stored asymmetry, with the mirror's equal baryon charge, takes $\epsilon$ as initial data of the descent (Theorem \claimref{dark-matter.stored-asymmetry-charge-not-number}); the dark-to-baryon count uses only its equality across the reversal orbit, not its provenance; on that stance the unexplained numbers of the event are $N$ and $\epsilon$, with the orientation bit a third datum (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iv)). Registering it makes it a counted input of the register, exchanged for the baryon density of the standard cosmological model. No assumes edge to it is drawn here.
+\emph{What it is for.} The charge reading of the stored asymmetry, with the mirror's equal baryon charge, takes $\epsilon$ as initial data of the descent (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}); the dark-to-baryon count uses only its equality across the reversal orbit, not its provenance; on that stance the unexplained numbers of the event are $N$ and $\epsilon$, with the orientation bit a third datum (Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iv)). Registering it makes it a counted input of the register, exchanged for the baryon density of the standard cosmological model. No assumes edge to it is drawn here.
 
 \emph{What it does not give.} It does not explain the value or its sign; it does not say how the descent deposits the charge, nor with what energy per unit charge (the open entries of the pre-descent theory); and it does not decide the trichotomy's classification of $\epsilon$, whose kinematic clause runs for it at observation level and whose dynamical clause does not (Fact \claimref{dark-matter.imported-trichotomy-descents-data}).
 

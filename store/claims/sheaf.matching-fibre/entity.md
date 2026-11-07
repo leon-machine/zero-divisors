@@ -1,7 +1,7 @@
 ---
 id: sheaf.matching-fibre
 kind: claim
-version: 4
+version: 5
 title: The matching at the fibre
 status: proved
 region: sheaf
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, citation of the weighted-limit Fact corrected'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -24,7 +28,7 @@ derivations:
 - name: main
   uses:
   - sheaf.weights-are-forced-are-kasner-exponents@5
-  - sheaf.weighted-limit@6
+  - sheaf.weighted-limit@7
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -41,6 +45,10 @@ locators:
   label: prop:fibreweld
   line: 1135
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal clause (1) cited the holonomy algebra as Fact obj.interior.weighted-blow-up-hubble-normalisation-admissible, which is a Definition; the holonomy algebra is that of the Fact sheaf.weighted-limit (already in uses), as the proof says; wording only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -63,7 +71,7 @@ extraction:
 ---
 
 ## formal
-Normalise the exceptional Gram to $\eta = \operatorname{diag}(1,-1,-1,-1)$, with $\hat e_0$ the proper-time direction and $\hat e_i$ the Kasner eigendirections. Then: (1) the bivector algebra of the exceptional fibre is $\mathfrak{so}(1,3)$, the holonomy algebra of Fact \claimref{obj.interior.weighted-blow-up-hubble-normalisation-admissible}, and the identification of the two fibres matching proper time, eigendirections, and exponents is canonical up to the isometries preserving the Kasner data; (2) under it, the surviving value $-\sum_i p_i B_i$ of the Hubble-normalised rotation-gauge field (in the sign of the Gauge Theory Gravity definition, $D_a = a \cdot \nabla + \Omega(a) \times$) corresponds to $-B_w$, minus the \emph{weight bivector} $B_w = \sum_i p_i\,\hat e_0 \wedge \hat e_i$, because the weights of the sheaf construction are forced to equal the exponents (Theorem \claimref{sheaf.weights-are-forced-are-kasner-exponents}); (3) $B_w$ is $\eta$-antisymmetric with characteristic polynomial $\lambda^4 - (\sum_i p_i^2)\lambda^2 = \lambda^4 - \lambda^2$: \emph{the second Kasner relation says precisely that the surviving matrix is a unit boost of the exceptional algebra}. The wall itself carries the transverse generator: the ladder boost $K = \tfrac12[k,k^*] = k \wedge k^* = N - \tfrac12$ (no relation to the exterior form $K$ of Theorem \claimref{sheaf.conservation-degeneracy-absolute-form}), with $K^2 = \tfrac14$ on the whole ambient fibre, an $\mathfrak{so}(1,1)$ supported on the wall.
+Normalise the exceptional Gram to $\eta = \operatorname{diag}(1,-1,-1,-1)$, with $\hat e_0$ the proper-time direction and $\hat e_i$ the Kasner eigendirections. Then: (1) the bivector algebra of the exceptional fibre is $\mathfrak{so}(1,3)$, the holonomy algebra of Fact \claimref{sheaf.weighted-limit}, and the identification of the two fibres matching proper time, eigendirections, and exponents is canonical up to the isometries preserving the Kasner data; (2) under it, the surviving value $-\sum_i p_i B_i$ of the Hubble-normalised rotation-gauge field (in the sign of the Gauge Theory Gravity definition, $D_a = a \cdot \nabla + \Omega(a) \times$) corresponds to $-B_w$, minus the \emph{weight bivector} $B_w = \sum_i p_i\,\hat e_0 \wedge \hat e_i$, because the weights of the sheaf construction are forced to equal the exponents (Theorem \claimref{sheaf.weights-are-forced-are-kasner-exponents}); (3) $B_w$ is $\eta$-antisymmetric with characteristic polynomial $\lambda^4 - (\sum_i p_i^2)\lambda^2 = \lambda^4 - \lambda^2$: \emph{the second Kasner relation says precisely that the surviving matrix is a unit boost of the exceptional algebra}. The wall itself carries the transverse generator: the ladder boost $K = \tfrac12[k,k^*] = k \wedge k^* = N - \tfrac12$ (no relation to the exterior form $K$ of Theorem \claimref{sheaf.conservation-degeneracy-absolute-form}), with $K^2 = \tfrac14$ on the whole ambient fibre, an $\mathfrak{so}(1,1)$ supported on the wall.
 
 ## technical
 Normalise the exceptional Gram to $\eta = \operatorname{diag}(1,-1,-1,-1)$, with $\hat e_0$ the proper-time direction and $\hat e_i$ the Kasner eigendirections. The bivector algebra of the exceptional fibre is $\mathfrak{so}(1,3)$, the holonomy algebra of the weighted limit, and the identification of the two fibres matching proper time, eigendirections and exponents is canonical up to the isometries preserving the Kasner data. Under it, the surviving value $-\sum_i p_i B_i$ of the Hubble-normalised rotation-gauge field corresponds to $-B_w$, minus the weight bivector $B_w = \sum_i p_i\,\hat e_0 \wedge \hat e_i$, because the sheaf weights are forced to equal the exponents.

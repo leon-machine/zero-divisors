@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - correspondence.fock-model-complexified-ascended-algebra@9
-  - correspondence.incidence-relation-chart@6
-  - correspondence.one-statement-three-languages@5
+  - correspondence.incidence-relation-chart@7
+  - correspondence.one-statement-three-languages@6
   - correspondence.spin-representation@6
   - correspondence.spinor-identification@7
   - mass.imported-flat-model-twistor-chart-infinity-external@1

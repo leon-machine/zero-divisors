@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - interior.non-null-stabilisers-section-they-act@4
-  - interior.scale-tractor-leaves-cone@7
-  - interior.stabilisers-flat-model@5
+  - interior.scale-tractor-leaves-cone@8
+  - interior.stabilisers-flat-model@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

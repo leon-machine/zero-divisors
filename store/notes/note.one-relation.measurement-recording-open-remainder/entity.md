@@ -1,7 +1,7 @@
 ---
 id: note.one-relation.measurement-recording-open-remainder
 kind: note
-version: 1
+version: 2
 title: 'Measurement as recording: the open remainder'
 status: remark
 subject: one-relation
@@ -15,8 +15,13 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T16, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, comments_on link to the recording premise at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - one-relation.recording-irreversible-stated-so-it-can
+- one-relation.recorded-sectors-superselected-premise
 - one-relation.imported-flag-arrow-superselection
 - one-relation.record-chain-votes-measurement-without-collapse
 locators:
@@ -24,6 +29,11 @@ locators:
   number: Rem 6.4
   label: rem:recording
   line: 829
+extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Leon''s answer 6 (B3): this remark (T16 Rem 6.4, rem:recording) is now also stored as the postulate one-relation.recorded-sectors-superselected-premise, on which the two record-chain results rest; comments_on link added. Paper text unchanged.'
 ---
 
 ## formal

@@ -239,3 +239,112 @@ def check_exterior_half_is_the_i_state_at_the_hawking_temperature():
     for kap, U, want in ((F(1, 4), F(-1), F(1, 4)), (F(1, 6), F(-3, 2), F(1, 4)), (F(1, 4), F(-6), F(3, 2))):
         GA.check("tabulated dU/dtau = -kappa U on U < 0", -kap * U == want and want > 0)
         GA.check("control: on U > 0 the flow moves away from the horizon", -kap * (-U) == -want)
+
+
+# ---------------------------------------------------------------------------
+# GTG proof of (ii) (2026-11-07): in the Painleve-Gullstrand gauge field on flat spacetime, the ingoing
+# radial null worldline parametrised by r has physical velocity k = hb^{-1}(x') = (gamma_1 - gamma_0)/(1 + beta)
+# and D_{x'} k = 0 (r affine); the horizon generator K = hb^{-1}(e_t) has (K . D) K = K/(4M) at r = 2M.
+# The rotation-gauge field is the engine's torsion-free PG field (checked torsion-free here).
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+PG_CASES = [(F(1), [F(2), F(8), F(1, 2)]), (F(3, 2), [F(3), F(12), F(3, 4)])]   # beta = sqrt(2M/r) rational
+PG_ANGLE = (F(3, 5), F(4, 5))
+
+
+def check_gtg_ingoing_generator_is_affine_and_horizon_rate():
+    premise("synthesis.imported-gtg-dictionary")
+    premise("singularity.euclidean-section-period")
+    ok = True
+    horizons = 0
+    for M, radii in PG_CASES:
+        for r0 in radii:
+            fld = gtg.schwarzschild_pg(M, r0, PG_ANGLE[0], PG_ANGLE[1])
+            ok = ok and fld.torsion_free()
+            r = gtg.Jet.var(1, r0, 4, 2)
+            beta = (2 * M / r).pw(F(1, 2))
+            b0, db0 = beta.v, beta.d(1).v
+            ok = ok and db0 == -b0 / (2 * r0)
+            sig_r = gtg.biv(1, 0)                                   # sigma_r = e_r e_t
+            ok = ok and gtg.m_sub(fld.Omega(0), gtg.m_scal(M / (r0 * r0), sig_r)) == {}
+            ok = ok and gtg.m_sub(gtg.grade({bl: c for bl, c in fld.Omega(1).items() if bl == (0, 1)}, 2),
+                                  gtg.m_scal(-db0, sig_r)) == {}
+            k = {(0,): -1 / (1 + beta), (1,): 1 / (1 + beta)}
+            ok = ok and gtg.vdot(gtg.m_val(k), gtg.m_val(k)) == 0
+            xp = [-1 / (1 + b0), F(1), F(0), F(0)]                 # x' = e_r - e_t/(1 + beta)
+            ok = ok and gtg.m_sub(fld.hb_inv(gtg.vec(xp)), gtg.m_val(k)) == {}
+            Dk = gtg.m_add(*[gtg.m_scal(xp[mu], fld.cov(mu, k)) for mu in range(2)])
+            ok = ok and Dk == {}                                    # r is affine
+            # control: the same worldline parametrised by t is not affinely parametrised; its physical
+            # velocity is hb^{-1}(e_t - (1 + beta) e_r) = gamma_0 - gamma_1, and D_{x_t} of it is (beta/2r)(gamma_0 - gamma_1)
+            kt = {(0,): gtg.Jet.const(1, 4), (1,): gtg.Jet.const(-1, 4)}
+            xt = [F(1), -1 - b0, F(0), F(0)]
+            ok = ok and gtg.m_sub(fld.hb_inv(gtg.vec(xt)), gtg.m_val(kt)) == {}
+            Dkt = gtg.m_add(*[gtg.m_scal(xt[mu], fld.cov(mu, kt)) for mu in range(2)])
+            ok = ok and Dkt != {} and gtg.m_sub(Dkt, gtg.m_scal(b0 / (2 * r0), gtg.vec([1, -1, 0, 0]))) == {}
+            K = {(0,): gtg.Jet.const(1, 4), (1,): beta}
+            DK = fld.cov(0, K)
+            if r0 == 2 * M:
+                ok = ok and gtg.m_sub(DK, gtg.m_scal(1 / (4 * M), gtg.m_val(K))) == {}
+                horizons += 1
+            else:
+                ok = ok and gtg.m_sub(DK, gtg.m_scal(M / (r0 * r0), gtg.vec([b0, 1, 0, 0]))) == {}
+    ok = ok and horizons == 2
+    GA.check("GTG: D_{x'} k = 0 along the ingoing generator; (K . D) K = K/(4M) on the horizon", ok)
+    assert ok
+
+
+def _christoffel_vr(M):
+    """Gamma^a_bc (a, b, c in {v, r}) of g = f dv^2 - 2 dv dr (the radial block; angular Gammas with two radial
+    lower indices vanish), as rational functions of r."""
+    r = RF.var()
+    f = RF.const(1) - RF.const(2 * M) / r
+    g = [[f, RF.const(-1)], [RF.const(-1), RF.const(0)]]
+    gi = GA.rf_mat_inverse(g)
+    dg = [[f.deriv(), RF.const(0)], [RF.const(0), RF.const(0)]]
+
+    def gamma(a, b, c):
+        out = RF.const(0)
+        for d in range(2):
+            term = RF.const(0)
+            if b == 1:
+                term = term + dg[d][c]
+            if c == 1:
+                term = term + dg[d][b]
+            if d == 1:
+                term = term - dg[b][c]
+            out = out + gi[a][d] * term
+        return out * RF.const(F(1, 2))
+    return gamma
+
+
+def check_gtg_affine_velocity_is_the_christoffel_reading():
+    """(ii) in GA against its reading: the coordinate vectors of the chart (v, r) are the background vectors
+    X_v = e_t and X_r = e_r - e_t/(1 + beta), with physical vectors hb^{-1}(X_v) = gamma_0 + beta gamma_1 and
+    hb^{-1}(X_r) = (gamma_1 - gamma_0)/(1 + beta); for all four pairs D_{X_a} hb^{-1}(X_b) = Gamma^c_ab hb^{-1}(X_c)
+    with the Christoffel symbols of f dv^2 - 2 dv dr, at six PG points of two masses. So D_{x'} k = 0 for the
+    ingoing velocity is Gamma^c_rr = 0 (in particular Gamma^r_rr = 0), and the vv pair is the horizon rate."""
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    n = 0
+    for M, radii in PG_CASES:
+        gam = _christoffel_vr(M)
+        for r0 in radii:
+            fld = gtg.schwarzschild_pg(M, r0, PG_ANGLE[0], PG_ANGLE[1])
+            r = gtg.Jet.var(1, r0, 4, 2)
+            beta = (2 * M / r).pw(F(1, 2))
+            b0 = beta.v
+            V = [{(0,): gtg.Jet.const(1, 4), (1,): beta}, {(0,): -1 / (1 + beta), (1,): 1 / (1 + beta)}]
+            X = [[F(1), F(0), F(0), F(0)], [-1 / (1 + b0), F(1), F(0), F(0)]]
+            ok = ok and all(gtg.m_sub(fld.hb_inv(gtg.vec(X[b])), gtg.m_val(V[b])) == {} for b in range(2))
+            for a in range(2):
+                for b in range(2):
+                    lhs = gtg.m_add(*[gtg.m_scal(X[a][mu], fld.cov(mu, V[b])) for mu in range(2)])
+                    rhs = gtg.m_add(*[gtg.m_scal(gam(c, a, b).eval(r0), gtg.m_val(V[c])) for c in range(2)])
+                    ok = ok and gtg.m_sub(lhs, rhs) == {}
+                    n += 1
+            ok = ok and gam(1, 1, 1).eval(r0) == 0 and gam(0, 0, 0).eval(r0) == M / (r0 * r0)
+    ok = ok and n == 24
+    GA.check("GTG: D_{X_a} hb^{-1}(X_b) = Gamma^c_ab hb^{-1}(X_c) in the chart (v, r)", ok)
+    assert ok

@@ -1,7 +1,7 @@
 ---
 id: interior.kasner-form-interior
 kind: claim
-version: 5
+version: 7
 title: Kasner form of the interior
 status: proved
 region: interior
@@ -17,13 +17,21 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (geodesic condition as D-parallelism)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'notation: d Omega^2 written as the explicit round metric'
+  version: 7
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - interior.imported-schwarzschild-curvature-spectrum@6
+  - interior.imported-schwarzschild-curvature-spectrum@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -42,6 +50,14 @@ locators:
   label: lem:kasnerform
   line: 581
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R03 C): the derived line element wrote the round two-sphere as d Omega^2 beside Omega the rotation-gauge field of the gravitational field (hb, Omega). It is now written (d theta^2 + sin^2 theta d varphi^2), the angles of the proof''s (t, theta, varphi), so Omega names only the gauge field (as in interior.imported-schwarzschild-curvature-spectrum). No content change.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The proof''s geodesic step is written as D_{e_tau} g_tau = 0 on the physical frame, from Q(g_tau) = 1 and g_tau . g_nu = 0 by the Koszul identity for the torsion-free, product-preserving D, with Gamma^mu_{tau tau} = 0 as a labelled reading; the same computation.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -62,7 +78,7 @@ extraction:
 ## formal
 In the interior, with $A(r) := 2M/r - 1 > 0$, the Schwarzschild gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), taken in a synchronous position gauge, has derived metric of diagonal form
 \[
-ds^2 \;=\; d\tau^2 - A\,dt^2 - r^2\,d\Omega^2,
+ds^2 \;=\; d\tau^2 - A\,dt^2 - r^2(d\theta^{2} + \sin^{2}\theta\,d\varphi^{2}),
 \qquad
 \tau(r) \;=\; \int_0^r A(u)^{-1/2}\,du ,
 \]
@@ -80,7 +96,7 @@ p_1 + p_2 + p_3 \;=\; 1, \qquad p_1^2 + p_2^2 + p_3^2 \;=\; 1 .
 \]
 
 ## technical
-Inside the horizon, with $A(r) = 2M/r - 1 > 0$, the Schwarzschild gravitational field on flat spacetime, in a synchronous position gauge, has the diagonal derived metric $ds^2 = d\tau^2 - A\,dt^2 - r^2 d\Omega^2$, where $\tau(r) = \int_0^r A(u)^{-1/2}\,du$ is proper time along the radial free-fall worldlines, those whose velocity is parallel for the covariant derivative $D$, with the singularity at $\tau = 0$. In units $2M = 1$, $\tau = \tfrac23 r^{3/2}(1 + \tfrac{3}{10}r + O(r^2))$ and, inversely, $r = R(1 - \tfrac15 R + O(R^2))$ with $R = (3\tau/2)^{2/3}$.
+Inside the horizon, with $A(r) = 2M/r - 1 > 0$, the Schwarzschild gravitational field on flat spacetime, in a synchronous position gauge, has the diagonal derived metric $ds^2 = d\tau^2 - A\,dt^2 - r^2(d\theta^{2} + \sin^{2}\theta\,d\varphi^{2})$, where $\tau(r) = \int_0^r A(u)^{-1/2}\,du$ is proper time along the radial free-fall worldlines, those whose velocity is parallel for the covariant derivative $D$, with the singularity at $\tau = 0$. In units $2M = 1$, $\tau = \tfrac23 r^{3/2}(1 + \tfrac{3}{10}r + O(r^2))$ and, inversely, $r = R(1 - \tfrac15 R + O(R^2))$ with $R = (3\tau/2)^{2/3}$.
 
 To leading order $\sqrt A \propto \tau^{-1/3}$ and $r \propto \tau^{2/3}$, so the approach has Kasner exponents $(p_1, p_2, p_3) = (-\tfrac13, \tfrac23, \tfrac23)$, which satisfy $\sum_i p_i = 1$ and $\sum_i p_i^2 = 1$.
 

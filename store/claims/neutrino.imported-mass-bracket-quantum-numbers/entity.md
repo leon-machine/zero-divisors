@@ -23,7 +23,7 @@ derivations:
   uses:
   - families.imported-face-valued-bracket-quantum-numbers@5
   - mass.mass-symplectic-area-two-twistor-formula@3
-  - neutrino.imported-derived-content-singlets@7
+  - neutrino.imported-derived-content-singlets@8
   - standard-model.internal-symmetry-ladder@4
   - standard-model.mass-bracket-charged-singlet@4
   proof: proof-main.tex
@@ -44,6 +44,10 @@ locators:
   label: fact:bracket
   line: 558
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: neutrino.imported-derived-content-singlets repinned 7 -> 8 after reviewing its G3 restatement (Hypothesis (S) is now derived in the store from the slot-module premise, where it was called open; the derived content is unchanged); the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

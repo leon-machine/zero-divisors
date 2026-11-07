@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - sheaf.exceptional-algebra-black-hole@4
-  - sheaf.kasner-data-interior@2
+  - sheaf.kasner-data-interior@3
   - sheaf.schwarzschild-degeneration-boundary-tame@6
   proof: proof-main.tex
 checked_by:

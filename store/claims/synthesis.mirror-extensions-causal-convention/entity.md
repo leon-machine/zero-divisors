@@ -21,14 +21,14 @@ review: draft
 derivations:
 - name: main
   uses:
-  - odd-extensions.volume-element-odd-dimension@3
-  - odd-extensions.doubling-or-complexification@5
-  - odd-extensions.four-extensions-oriented-pair@5
+  - odd-extensions.volume-element-odd-dimension@4
+  - odd-extensions.doubling-or-complexification@6
+  - odd-extensions.four-extensions-oriented-pair@6
   - dark-matter.towers-are-residues-single-clock-filter@5
   - dark-matter.nesting@3
-  - rule2.where-obstruction-sits-commuting-square@5
+  - rule2.where-obstruction-sits-commuting-square@6
   - rule2.which-residues-obstruct-which-way@6
-  - rule2.rule-2-plane@3
+  - rule2.rule-2-plane@4
   - odd-extensions.two-towers-one-curved-universe@6
   proof: proof-main.tex
 checked_by:

@@ -21,11 +21,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.two-families-are-two-chiralities@6
+  - dark-matter.two-families-are-two-chiralities@7
   - transport.sign@3
   - odd-extensions.imported-conformal-completion@5
-  - rule2.where-obstruction-sits-commuting-square@5
-  - field-theory.where-each-lives@3
+  - rule2.where-obstruction-sits-commuting-square@6
+  - field-theory.where-each-lives@4
   proof: proof-main.tex
 checked_by:
 - kind: check

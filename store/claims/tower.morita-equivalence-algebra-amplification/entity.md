@@ -1,7 +1,7 @@
 ---
 id: tower.morita-equivalence-algebra-amplification
 kind: claim
-version: 1
+version: 2
 title: Morita equivalence of an algebra and its amplification
 status: imported
 region: tower
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T03, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: T. Y. Lam, Lectures on Modules and Rings, Graduate Texts in Mathematics 189, Springer, New
@@ -29,10 +33,16 @@ locators:
   label: fact:morita
   line: 262
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item E8 (routine; no retirement): equivalent_to std-algebra.morita-amplification@1 added. This imported Fact (Lam) is clause (iii) of the proved std-algebra.morita-amplification; status stays imported (a derivation would be a status change, not needed).'
   env: fact
   typing:
     by: ai-typing-pass
     note: 'Imported classical fact with no derivation; levels only.'
+equivalent_to:
+- std-algebra.morita-amplification@1
 ---
 
 ## formal

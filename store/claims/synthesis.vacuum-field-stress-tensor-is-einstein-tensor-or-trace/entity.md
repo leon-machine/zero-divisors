@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.einstein-condition-is-infinity-vacuum-incidence@3
-  - interior.imported-tractor-connection@2
+  - synthesis.einstein-condition-is-infinity-vacuum-incidence@4
+  - interior.imported-tractor-connection@3
   - interior.metric-parallelism-trace-schouten-condition@6
   proof: proof-main.tex
 checked_by:

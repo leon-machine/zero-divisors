@@ -16,11 +16,18 @@
     N = a1 a2 a3, vanishes at jets obeying the stated equations and not at perturbed jets.
 (e) The Liouville solution, the constraint BC = v^2, the limiting epochs and the BKL transition law (and u -> u - 1),
     with the negative weight of the earlier epoch on a helicity-free axis.
+(f) The GTG route (lib/gtg.py): the slice gauge field in Cl(0,3) and the Bianchi II gauge field on exact jets,
+    Omega solved from the torsion equation; the slice scalar equals the frame formula, the Bianchi II Omega equals
+    its closed form, and the Bianchi II Ricci map gives the stated equations.
+(g) The frame formula derived from the torsion equation: for a general orthonormal frame of Cl(0,3) the store-sign
+    scalar of the torsion-solved field strength equals the Ellis-MacCallum formula as an exact polynomial identity
+    in the structure functions and their frame derivatives.
 """
 from fractions import Fraction as F
 import GA
 from GA import field_solve, mul, gen, add, scal
 from tp_premise import premise
+import gtg
 
 N3 = 3
 
@@ -331,3 +338,234 @@ def check_liouville_bounce_is_bkl_law():
         ok &= sorted(q) == sorted(kasner(u - 1) if u >= 2 else kasner(1 / (u - 1)))
     GA.check("Liouville wall: late epoch p_1<0 -> earlier epoch = BKL law (u -> u-1); new negative weight on a free axis", ok)
     return ok
+
+
+# ---------------------------------------------------------------- the GTG route (lib/gtg.py)
+SQ_SLICE = GA.sig(0, 3)            # the slice's physical vectors: the spacetime vectors orthogonal to gamma_0
+
+
+def slice_field(a, A0, A1, A2):
+    """The slice gauge field hb^{-1}(e_i) = sum_l a_l theta^l_i(x) gamma_l (Cl(0,3)) on exact second-order jets."""
+    X = [gtg.Jet.var(i, F(0), N3, 2) for i in range(N3)]
+    TH = [[None] * N3 for _ in range(N3)]
+    for l in range(N3):
+        for i in range(N3):
+            j = gtg.Jet.const(A0[l][i], N3)
+            for k in range(N3):
+                j = j + A1[k][l][i] * X[k]
+                for m in range(N3):
+                    j = j + (A2[k][m][l][i] / 2) * X[k] * X[m]
+            TH[l][i] = a[l] * j
+    return gtg.Field(TH, sq=SQ_SLICE)
+
+
+def bianchi2_field(a, da, dda):
+    """N gamma0, a1 (dx - z dy) gamma1, a2 dy gamma2, a3 dz gamma3 on jets in (T, z) about T = 0, z = 0."""
+    T = gtg.Jet.var(0, F(0), 4, 2)
+    z = gtg.Jet.var(3, F(0), 4, 2)
+    aj = [a[i] + a[i] * da[i] * T + (a[i] * (dda[i] + da[i] * da[i]) / 2) * T * T for i in range(3)]
+    TH = [[F(0)] * 4 for _ in range(4)]
+    TH[0][0] = aj[0] * aj[1] * aj[2]
+    TH[1][1] = aj[0]
+    TH[1][2] = F(0) - aj[0] * z
+    TH[2][2] = aj[1]
+    TH[3][3] = aj[2]
+    return gtg.Field(TH)
+
+
+B2_GENERIC = (([F(2, 3), F(5, 4), F(3, 7)], [F(-1, 5), F(2, 3), F(1, 4)], [F(1, 2), F(-3), F(2, 7)]),
+              ([F(3, 2), F(1, 2), F(4)], [F(1), F(-2, 3), F(5)], [F(-1), F(1, 3), F(2)]))
+B2_SOLUTIONS = (([F(2, 3), F(5, 4), F(3, 7)], F(-1, 5), F(2, 3)), ([F(3, 2), F(1, 2), F(4)], F(-2, 7), F(5, 3)))
+B2_KICK = F(1, 7)
+
+
+def bianchi2_omega_closed(a, da, dda):
+    """The closed form of Omega(e_mu) for the Bianchi II field, as jets in (T, z):
+    Omega(e_T) = 0, Omega(e_x) = -(alpha1'/(a2 a3)) e01 + (a1^2/(2 a2 a3)) e23,
+    Omega(e_y) = z (alpha1'/(a2 a3)) e01 - (alpha2'/(a1 a3)) e02 + (a1/(2 a3)) e13 - z (a1^2/(2 a2 a3)) e23,
+    Omega(e_z) = -(alpha3'/(a1 a2)) e03 - (a1/(2 a2)) e12."""
+    T = gtg.Jet.var(0, F(0), 4, 2)
+    z = gtg.Jet.var(3, F(0), 4, 2)
+    aj = [a[i] + a[i] * da[i] * T + (a[i] * (dda[i] + da[i] * da[i]) / 2) * T * T for i in range(3)]
+    al = [aj[i].d(0) / aj[i] for i in range(3)]
+    a1, a2, a3 = aj
+    u = al[0] / (a2 * a3)
+    w = a1 * a1 / (a2 * a3 * 2)
+    return [{}, {(0, 1): F(0) - u, (2, 3): w},
+            {(0, 1): z * u, (0, 2): F(0) - al[1] / (a1 * a3), (1, 3): a1 / (a3 * 2), (2, 3): F(0) - z * w},
+            {(0, 3): F(0) - al[2] / (a1 * a2), (1, 2): F(0) - a1 / (a2 * 2)}]
+
+
+def check_gtg_slice_and_bianchi_ii_field_strength():
+    """(i) R^(3) is the store-sign scalar of the slice gauge field (Omega solved from the torsion equation,
+    physical vectors in Cl(0,3)); it equals the frame formula and the coordinate scalar at the sample coframes
+    and weights. (iv) The Bianchi II gauge field: the torsion-solved Omega equals the closed form
+    bianchi2_omega_closed (value and first derivatives in T and z); its Ricci map: R^o_{mu nu} = -g_mu . calR(g_nu) gives
+    R^o_TT = N^2 R^o(e0, e0) = -(E1 + E2 + E3)/2 + C/2, N^2 R^o(e_l, e_l) = E_l/2, off-diagonal zero; calR(a) = 0
+    on the stated solution jets and not on perturbed ones."""
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    for seed in SEEDS:
+        A0, A1, A2 = coframe(seed)
+        for a in WEIGHTS[:3]:
+            fld = slice_field(a, A0, A1, A2)
+            ok &= fld.torsion_free()
+            R3 = gtg.ricci_scalar(fld.curvature(), SQ_SLICE)
+            ok &= R3 == scalar_frame(a, A0, A1, A2)[0] and R3 == scalar_coord(a, A0, A1, A2)
+    for a, da, dda in B2_GENERIC:
+        fld = bianchi2_field(a, da, dda)
+        ok &= fld.torsion_free()
+        cf = bianchi2_omega_closed(a, da, dda)
+        for mu in range(4):
+            diff = gtg.m_sub(fld.Om[mu], cf[mu])
+            ok &= not gtg.m_val(diff) and not gtg.m_val(gtg.m_d(diff, 0)) and not gtg.m_val(gtg.m_d(diff, 3))
+        Rc = fld.curvature()
+        g = [fld.hb_inv(GA.gen(m)) for m in range(4)]
+        Ro = [[F(0) - gtg.vdot(g[m], gtg.ricci(Rc, g[n]), gtg.S13) for n in range(4)] for m in range(4)]
+        q = a[0] ** 4
+        N2 = (a[0] * a[1] * a[2]) ** 2
+        E = [2 * dda[0] + q, 2 * dda[1] - q, 2 * dda[2] - q]
+        Cc = 4 * (da[0] * da[1] + da[1] * da[2] + da[2] * da[0]) - q
+        ok &= Ro[0][0] == -sum(E) / 2 + Cc / 2          # coordinate R_TT = N^2 R(e0, e0)
+        ok &= all(N2 * Ro[l + 1][l + 1] / a[l] ** 2 == E[l] / 2 for l in range(3))
+        ok &= all(Ro[i][j] == 0 for i in range(4) for j in range(4) if i != j)
+        ok &= Ro == bianchi2_ricci(a, da, dda)
+    for a, al, be in B2_SOLUTIONS:
+        q = a[0] ** 4
+        ga = (q / 4 - al * be) / (al + be)
+        Rc = bianchi2_field(a, [al, be, ga], [-q / 2, q / 2, q / 2]).curvature()
+        ok &= all(gtg.ricci(Rc, GA.gen(m)) == {} for m in range(4))
+        Rp = bianchi2_field(a, [al, be, ga], [-q / 2, q / 2 + B2_KICK, q / 2]).curvature()
+        ok &= any(gtg.ricci(Rp, GA.gen(m)) != {} for m in range(4))
+    GA.check("GTG: slice scalar = frame formula = coordinate scalar; Bianchi II Ricci map gives E_l, C", ok)
+    return ok
+
+
+# ---- (i) the Ellis-MacCallum frame formula derived from the torsion equation (exact polynomial identity) ----
+EM_NV = 36                                  # nine c^_mn^l (m < n) and their 27 frame derivatives e^_k(c^_mn^l)
+EM_PAIRS = [(0, 1), (0, 2), (1, 2)]
+
+
+def _em_var(i):
+    return gtg.Jet.var(i, F(0), EM_NV, None)
+
+
+EM_ZERO = gtg.Jet.const(F(0), EM_NV)
+
+
+def _em_idx(i, j, k):
+    if i == j:
+        return None, 0
+    s = 1
+    if i > j:
+        i, j, s = j, i, -1
+    return EM_PAIRS.index((i, j)) * 3 + k, s
+
+
+def _em_c(i, j, k):
+    """The structure function c^_ij^k of the orthonormal frame, as a polynomial variable."""
+    idx, s = _em_idx(i, j, k)
+    return EM_ZERO if idx is None else _em_var(idx) * s
+
+
+def _em_dc(m, i, j, k):
+    """Its frame derivative e^_m(c^_ij^k), an independent variable."""
+    idx, s = _em_idx(i, j, k)
+    return EM_ZERO if idx is None else _em_var(9 + 9 * m + idx) * s
+
+
+def _em_frame_derivative(m, x):
+    """e^_m of a multivector whose coefficients are linear in the c^ (constant coefficients)."""
+    out = {}
+    for b, j in x.items():
+        t = EM_ZERO
+        for e, v in j.c.items():
+            if sum(e):
+                t = t + _em_var(9 + 9 * m + e.index(1)) * v
+        if t:
+            out[b] = t
+    return out
+
+
+def _em_omega():
+    """omega_m = Omega(e^_m) from the torsion equation omega_m x e_n - omega_n x e_m = c^_mn^l e_l (Cl(0,3))."""
+    E3 = [GA.gen(i) for i in range(N3)]
+    cols = [(m, b) for m in range(N3) for b in EM_PAIRS]
+    rows = []
+    for (m, n) in EM_PAIRS:
+        for comp in range(N3):
+            row = []
+            for (mm, b) in cols:
+                B = {b: F(1)}
+                v = F(0)
+                if mm == m:
+                    v += gtg.comm(B, E3[n], SQ_SLICE).get((comp,), F(0))
+                if mm == n:
+                    v -= gtg.comm(B, E3[m], SQ_SLICE).get((comp,), F(0))
+                row.append(v)
+            rows.append(row)
+    Minv = gtg.mat_inv(rows)
+    rhs = [_em_c(m, n, comp) for (m, n) in EM_PAIRS for comp in range(N3)]
+    w = [sum((Minv[r][s] * rhs[s] for s in range(9)), EM_ZERO) for r in range(9)]
+    om = [{b: w[3 * m + k] for k, b in enumerate(EM_PAIRS) if w[3 * m + k]} for m in range(N3)]
+    ok = True
+    for (m, n) in EM_PAIRS:
+        lhs = gtg.m_sub(gtg.comm(om[m], E3[n], SQ_SLICE), gtg.comm(om[n], E3[m], SQ_SLICE))
+        ok = ok and not gtg.m_sub(lhs, gtg.m_add(*[gtg.m_scal(_em_c(m, n, l), E3[l]) for l in range(N3)]))
+    return om, ok
+
+
+def _em_formula():
+    """4 e_i(acc_i) - 6 acc.acc - (1/2)(2 n:n - (tr n)^2), with acc_i = c_ij^j/2 and
+    n^lk = (1/2) eps^lij c_ij^k - eps^lik acc_i; returns the polynomial and whether the decomposition holds."""
+    acc = [sum((_em_c(i, j, j) for j in range(N3)), EM_ZERO) * F(1, 2) for i in range(N3)]
+    n = [[sum((_em_c(i, j, k) * (eps(l, i, j) / 2) for i in range(N3) for j in range(N3)), EM_ZERO)
+          - sum((acc[i] * eps(l, i, k) for i in range(N3)), EM_ZERO) for k in range(N3)] for l in range(N3)]
+    ok = all(not (n[l][k] - n[k][l]) for l in range(N3) for k in range(N3))
+    ok = ok and all(not (_em_c(i, j, k) - sum((n[l][k] * eps(i, j, l) for l in range(N3)), EM_ZERO)
+                         - (acc[i] if j == k else EM_ZERO) + (acc[j] if i == k else EM_ZERO))
+                    for i in range(N3) for j in range(N3) for k in range(N3))
+    ea = sum((_em_dc(i, i, j, j) for i in range(N3) for j in range(N3)), EM_ZERO) * F(1, 2)
+    nn = sum((n[k][l] * n[k][l] for k in range(N3) for l in range(N3)), EM_ZERO)
+    tr = sum((n[k][k] for k in range(N3)), EM_ZERO)
+    return ea * 4 - sum((acc[i] * acc[i] for i in range(N3)), EM_ZERO) * 6 - (nn * 2 - tr * tr) * F(1, 2), ok
+
+
+def _em_eval(j, vals):
+    tot = F(0)
+    for e, v in j.c.items():
+        t = v
+        for i, p in enumerate(e):
+            if p:
+                t *= vals[i] ** p
+        tot += t
+    return tot
+
+
+def check_gtg_ellis_maccallum_frame_formula():
+    """(i) The frame formula is a consequence of the torsion equation: for an orthonormal frame e_l of Cl(0,3) with
+    background fields e^_l = hb(e_l), [e^_m, e^_n] = c^_mn^l e^_l, omega_m = Omega(e^_m) solves
+    omega_m x e_n - omega_n x e_m = c^_mn^l e_l, and calR(e_m ^ e_n) = -(e^_m(omega_n) - e^_n(omega_m)
+    + omega_m x omega_n - c^_mn^l omega_l); its scalar d_a . calR(a), with the c^ and their frame derivatives as
+    independent variables, equals the Ellis-MacCallum formula as a polynomial (21 monomials, six of them the
+    derivatives e^_i(c^_ij^j)); n^ is symmetric and the decomposition reproduces c^; the unit three-sphere's
+    left-invariant frame (c^_ij^k = +-2 eps_ijk) gives 6 both ways."""
+    premise("synthesis.imported-gtg-dictionary")
+    om, ok = _em_omega()
+    Rc = {}
+    for (m, n) in EM_PAIRS:
+        Rmn = gtg.m_add(_em_frame_derivative(m, om[n]), gtg.m_neg(_em_frame_derivative(n, om[m])),
+                        gtg.comm(om[m], om[n], SQ_SLICE),
+                        *[gtg.m_scal(_em_c(m, n, l) * -1, om[l]) for l in range(N3)])
+        Rc[(m, n)] = gtg.m_neg(Rmn)
+    Rs = gtg.ricci_scalar(Rc, SQ_SLICE)
+    REM, dec = _em_formula()
+    ok = ok and dec and not (Rs - REM)
+    ok = ok and len(Rs.c) == 21 and sum(1 for e in Rs.c if any(e[9:])) == 6
+    for sgn in (2, -2):
+        vals = [F(0)] * EM_NV
+        for (i, j) in EM_PAIRS:
+            vals[_em_idx(i, j, 3 - i - j)[0]] = sgn * eps(i, j, 3 - i - j)
+        ok = ok and _em_eval(Rs, vals) == 6 and _em_eval(REM, vals) == 6
+    GA.check("GTG: the Ellis-MacCallum frame formula is the torsion-solved slice scalar, as a polynomial identity", ok)
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_ellis_maccallum_frame_formula"; return _tp_rv

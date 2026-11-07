@@ -1,7 +1,7 @@
 ---
 id: synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta
 kind: claim
-version: 3
+version: 4
 title: 'Gluon and massive-vector BRST cohomology is positive at all numbers of quanta'
 status: proved
 region: synthesis
@@ -21,20 +21,24 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
 derivations:
 - name: main
   uses:
-  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@3
+  - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@4
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.imported-tower-limit@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,6 +55,10 @@ lineage:
   motivated_by:
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -93,7 +101,7 @@ Units and signature of the store. A one-particle space is a real space $V$ with 
 \item[(iv)] \emph{(Exact checks; computed.)} For $k = 5\gamma_0 + 3\gamma_1 + 4\gamma_2$, $\bar k = \tfrac{1}{50}(5\gamma_0 - 3\gamma_1 - 4\gamma_2)$, and $p = 5\gamma_0 + 4\gamma_1$, $\beta = 3$: the one-particle statements (with $\beta = 2$ not nilpotent; physical Krein Gram $25, 1$ and $9, 1, 1$); $Q_{B}^2 = 0$, Krein self-adjointness and $Q_{B}R + RQ_{B} = N_{q}$ on every sector with at most four quanta (gluon) and three quanta (massive); ghost-number-zero cohomology of dimensions $1, 2, 3, 4, 5$ (gluon), $1, 3, 6, 10$ (massive) and $1, 4, 10, 20$ (two colours), with Krein signature $(\dim H, 0, \operatorname{rank})$ on $\ker Q_{B}$.
 \item[(v)] \emph{(The gauge algebra broken by two doublets; computed, given the vacuum as input.)} Take the twelve generators of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} acting on the two hypercharge-$\tfrac12$ doublets of \claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum} (eight real scalars), with a neutral aligned vacuum $(0, v_1)$, $(0, v_2)$ as input (the breaking pattern is not derived here). The Goldstone map $T_a \mapsto (T_a\phi_1, T_a\phi_2)$ has rank $3$, so nine vectors stay massless (its kernel: colour and one $\mathfrak{u}(1)$ mixing $T_3$ and hypercharge) and three are massive. The one-particle direct sum of the corresponding spaces of (ii) and (iii) is Krein-self-adjoint with a homotopy, has $27$ physical polarisations per momentum with Krein signature $(27, 0, 0)$, and $8 - 3 = 5$ scalars remain physical.
 \end{enumerate}
-\emph{Reading.} Under clauses (K1) and (K2) of the Krein-form premise (KF, \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}; the one-particle form of (K1) is restated in the store as the trace form of Clifford conjugation, \claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}, which does not derive the premise), that the polarisation states carry the Gupta-Bleuler form $-u\cdot w$ and the ghost pair the pairing $\langle c, \bar c\rangle_K = 1$, the free (asymptotic) gluons and the massive vectors (Feynman-'t Hooft gauge) have a positive physical space at every number of quanta, which the stored result had only up to three quanta; this is the quartet mechanism of Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}(ii), proved here in its free form by an explicit homotopy. The interacting statement is not proved: it needs Kugo and Ojima's hypotheses on the asymptotic fields, and the whole construction is perturbative, since beyond perturbation theory the covariant gauge condition has Gribov copies (Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}(iv); computed copies on the weak rotor lattice in \claimref{synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law}). The polarisation form used is the momentum-independent Gupta-Bleuler form $-u\cdot w$ (Feynman gauge); forms with a part along $k$ are not treated. All operators are real, so the unit $i = I_4$ commutes with them. Transport-absent.
+\emph{Reading.} Under clauses (K1) and (K2) of the Krein-form premise (KF, \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}; the one-particle form of (K1) is restated in the store as the trace form of Clifford conjugation, \claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}, which does not derive the premise), that the polarisation states carry the Gupta-Bleuler form $-u\cdot w$ and the ghost pair the pairing $\langle c, \bar c\rangle_K = 1$, the free (asymptotic) gluons and the massive vectors (Feynman-'t Hooft gauge) have a positive physical space at every number of quanta, which the stored result had only up to three quanta; this is the quartet mechanism of Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}(ii), proved here in its free form by an explicit homotopy. The interacting statement is not proved: it needs Kugo and Ojima's hypotheses on the asymptotic fields, and the whole construction is perturbative, since beyond perturbation theory the covariant gauge condition has Gribov copies (Fact \claimref{synthesis.imported-brst-kugo-ojima-strocchi-and-gribov}(iv); computed copies on the weak rotor lattice in \claimref{synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law}). The polarisation form used is the momentum-independent Gupta-Bleuler form $-u\cdot w$ (Feynman gauge); forms with a part along $k$ are not treated. All operators are real, so the unit $I_4$ commutes with them. Transport-absent.
 
 ## technical
 The stored covariant gauge fixing of the series' gauge fields showed, under the Krein-form premise, that the free BRST charge at one null momentum has a positive physical space, computed exactly up to three quanta. Positivity at every number of quanta is the content of the Kugo-Ojima quartet mechanism, and its free form has a short proof that the computation can follow exactly. On the one-particle space the unphysical modes (the polarisation along $k$, its partner $\bar k$, the ghost and the antighost) form a quartet, and there is an odd operator $R_1$ with $Q_1R_1 + R_1Q_1$ equal to the projection onto the quartet. Second quantisation turns graded commutators of one-particle operators into graded commutators of their Fock-space lifts, so the lifted $R$ satisfies $Q_{B}R + RQ_{B} = N_{q}$, the number of quartet quanta. Every closed state with at least one quartet quantum is then exact, $x = Q_{B}(Rx)/n$, so the cohomology is the Fock space of the transverse polarisations, in every number of quanta. The Krein form is positive there because the transverse polarisations have positive Gupta-Bleuler norm and are Krein-orthogonal to the quartet.

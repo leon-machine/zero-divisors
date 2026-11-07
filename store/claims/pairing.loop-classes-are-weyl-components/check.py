@@ -3,9 +3,9 @@
 The vacuum curvature operators at a point are the algebraic Weyl maps of Cl(1,3) (GA.py, (+,-,-,-)): the
 10-dimensional exact kernel of symmetry, Ricci trace-freeness d_a . W(a ^ b) = 0 and first Bianchi; for a
 vacuum field calR = W. The loop bivector is R(u, v) = -calR(u ^ v) (LDG sign) and
-C(u, v, w, z) = <R(u, v) . w, z>, complex-bilinear (Gaussian rationals). Unit tetrad l = e0 + e1,
-n = (e0 - e1)/2 (l . n = 1), m = (e2 + i e3)/sqrt 2 (m . mbar = -1); computed with m0 = e2 + i e3 and the
-powers of sqrt 2 cleared, so every identity below is exact. Psi0 = C(l, m, l, m), Psi1 = C(l, n, l, m),
+C(u, v, w, z) = <R(u, v) . w, z>, bilinear over span{1, I5} (I5 the central unit of Cl(2,3), carried as pairs).
+Unit tetrad l = e0 + e1, n = (e0 - e1)/2 (l . n = 1), m = (e2 + I5 e3)/sqrt 2 (m . mbar = -1); computed with
+m0 = e2 + I5 e3 and the powers of sqrt 2 cleared, so every identity below is exact. Psi0 = C(l, m, l, m), Psi1 = C(l, n, l, m),
 Psi2 = C(l, m, mbar, n), as in the premise Fact. Computed:
 (1) on all 10 basis Weyl maps and on a generic combination: the classes C(u, v, l, m) of the six tetrad
     loops are Psi0, 0, -Psi1, Psi1, 0, -Psi2 for (l, m), (l, mbar), (m, mbar), (l, n), (n, m), (n, mbar);
@@ -14,7 +14,10 @@ Psi2 = C(l, m, mbar, n), as in the premise Fact. Computed:
     the (n, mbar) class is -Psi2;
 (3) the Schwarzschild operator (M/2r^3)(B + 3 sigma_r B sigma_r) (store sign; sigma_r = e0 e1 the radial
     plane) is a Weyl map with Psi0 = Psi1 = Psi3 = Psi4 = 0 and Psi2 = -M/r^3 in the unit tetrad, so l is a
-    repeated principal null direction and every loop in its null cone has zero class.
+    repeated principal null direction and every loop in its null cone has zero class;
+(4) the proof's GTG steps: C(u, v, w, z) = -W(u ^ v) . (w ^ z), the trace d_a . X(a ^ u) read in the null
+    tetrad's reciprocal frame (equal for every bivector map X, zero on the Weyl maps), the pair symmetry, and
+    the six classes in the tetrad with l . n = 2, m . mbar = -2.
 """
 from fractions import Fraction as F
 
@@ -175,3 +178,86 @@ def check_schwarzschild_type_d():
         ok = ok and s["P2"] == GA.QI(-2 * k)                # 2 Psi2 (two factors of m) = -2 M/r^3
         ok = ok and s["lm"] == 0 and s["lmb"] == 0 and s["mmb"] == 0 and table_holds(X)
     _tp_rv = (ok); assert _tp_rv is not False, "check_schwarzschild_type_d"; return _tp_rv
+
+
+def _cscal(c, u):
+    """A number c of span{1, I} (GA.QI) times a complex vector or bivector (re, im)."""
+    return (GA.sub(GA.scal(c.re, u[0]), GA.scal(c.im, u[1])), GA.add(GA.scal(c.re, u[1]), GA.scal(c.im, u[0])))
+
+
+def _cadd(*xs):
+    return (GA.add(*[x[0] for x in xs]), GA.add(*[x[1] for x in xs]))
+
+
+def _capply(X, B):
+    return (wop(X, B[0], S), wop(X, B[1], S))
+
+
+def _bdot_scalar(A, B):
+    """A . B = <A B>_0 for complex bivectors."""
+    re = GA.sub(GA.mul(A[0], B[0], S), GA.mul(A[1], B[1], S)).get((), F(0))
+    im = GA.add(GA.mul(A[0], B[1], S), GA.mul(A[1], B[0], S)).get((), F(0))
+    return GA.QI(re, im)
+
+
+def _trace_flat(X, u, v):
+    """v . (d_a . X(a ^ u)) with d_a = sum_mu e^mu (e_mu . d): the GTG contraction, orthonormal frame."""
+    acc = ({}, {})
+    for mu in range(4):
+        rec = (GA.scal(F(1) / S[mu], E[mu]), {})
+        W = _capply(X, cwedge((E[mu], {}), u))
+        acc = _cadd(acc, _cscal(GA.QI(-1), cdot(W, rec)))      # c . B = -(B . c)
+    return cip(acc, v)
+
+
+def _trace_tetrad(X, tet, u, v):
+    """sum_a C(f_a, u, f^a, v) over a null tetrad (l, n, m, mbar), reciprocal frame from its Gram data."""
+    l, n, m, mb = tet
+    lam, mu = cip(l, n), cip(m, mb)
+    total = GA.QI(0)
+    for fa, rec in ((l, _cscal(GA.QI(1) / lam, n)), (n, _cscal(GA.QI(1) / lam, l)),
+                    (m, _cscal(GA.QI(1) / mu, mb)), (mb, _cscal(GA.QI(1) / mu, m))):
+        total = total + C(X, fa, u, rec, v)
+    return total
+
+
+EXTRA_VEC = (GA.add(E[1], GA.scal(F(3), E[2])), GA.scal(F(2), E[0]))
+ARBITRARY_MAP = [[F((7 * i + 3 * j) % 5 - 2) for j in range(6)] for i in range(6)]
+
+
+def check_gtg_trace_and_pair_symmetry():
+    """The proof's GTG steps: C(u, v, w, z) = -W(u ^ v) . (w ^ z); the trace d_a . W(a ^ u) = 0 read in the
+    null tetrad's reciprocal frame (an identity for every bivector map, zero on the Weyl maps); the pair
+    symmetry from the symmetry of W; and the six classes in the tetrad with l . n = 2, m . mbar = -2."""
+    premise("pairing.imported-weyl-scalars-petrov-type-schwarzschild")
+    premise("synthesis.imported-gtg-dictionary")
+    Ws = weyl_space(S)
+    ok = len(Ws) == 10
+    N2 = (GA.sub(E[0], E[1]), {})                      # n with l . n = 2
+    tet = (LV, N2, M0, MB0)
+    ok = ok and cip(LV, N2) == GA.QI(2) and cip(M0, MB0) == GA.QI(-2)
+    ok = ok and cip(M0, M0) == GA.QI(0) and cip(LV, M0) == GA.QI(0) and cip(N2, MB0) == GA.QI(0)
+    vecs = [LV, N2, M0, MB0, EXTRA_VEC]
+    arbitrary = ARBITRARY_MAP                          # not a Weyl map
+    gen = [[sum(c * X[i][j] for c, X in zip(GENERIC, Ws)) for j in range(6)] for i in range(6)]
+    for X in Ws + [gen, arbitrary]:
+        weyl = X is not arbitrary
+        for u in vecs:
+            for v in vecs:
+                t1, t2 = _trace_flat(X, u, v), _trace_tetrad(X, tet, u, v)
+                ok = ok and t1 == t2 and (t1 == 0 or not weyl)
+                for w in vecs[:2]:
+                    for z in vecs[2:]:
+                        lhs = C(X, u, v, w, z)
+                        rhs = GA.QI(0) - _bdot_scalar(_capply(X, cwedge(u, v)), cwedge(w, z))
+                        ok = ok and lhs == rhs
+                        if weyl:
+                            ok = ok and lhs == C(X, w, z, u, v)
+    ok = ok and any(_trace_flat(arbitrary, u, v) != 0 for u in vecs for v in vecs)
+    for X in Ws + [gen]:
+        P0, P1, P2 = C(X, LV, M0, LV, M0), C(X, LV, N2, LV, M0), C(X, LV, M0, MB0, N2)
+        cls = {("l", "m"): P0, ("l", "mb"): GA.QI(0), ("m", "mb"): GA.QI(0) - P1, ("l", "n"): P1,
+               ("n", "m"): GA.QI(0), ("n", "mb"): GA.QI(0) - P2}
+        T = {"l": LV, "n": N2, "m": M0, "mb": MB0}
+        ok = ok and all(C(X, T[a], T[b], LV, M0) == w for (a, b), w in cls.items())
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_trace_and_pair_symmetry"; return _tp_rv

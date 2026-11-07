@@ -25,12 +25,12 @@ review: typed
 derivations:
 - name: main
   uses:
-  - mass.imported-unitary-representations-de-sitter-group@4
+  - mass.imported-unitary-representations-de-sitter-group@5
   - mass.mass-weight-dictionary@4
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - mass.imported-unitary-representations-de-sitter-group@4
+  - mass.imported-unitary-representations-de-sitter-group@5
   proof: proof-standard-route.tex
 checked_by:
 - kind: legacy
@@ -51,6 +51,10 @@ locators:
   label: cor:series
   line: 478
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: mass.imported-unitary-representations-de-sitter-group repinned 4 -> 5 after reviewing its B6 restatement (the sentence giving the Casimir the same normalisation with no shift moved out to the stated, unproved hypothesis of synthesis.operator-join-casimir-shifts (iii); the classification, the two series and the mass formula are unchanged); the use here holds as cited.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

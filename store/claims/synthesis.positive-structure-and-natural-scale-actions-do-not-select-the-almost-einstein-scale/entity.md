@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 kind: claim
-version: 2
+version: 4
 title: 'Positive structure and natural actions leave the almost-Einstein scale free'
 status: proved
 region: synthesis
@@ -21,17 +21,33 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof of (ii) (dilation field, torsion-solved Omega, Kulkarni-Nomizu field strength, store-sign scalar) and of (iii) (tractor derivative in Cl(2,4)); decision A3 applied (store-sign scalar and Euler-Lagrange equation in (ii))'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): the null vector of the (t + x1)^2 counter-model corrected in the proof and asserted in the check; stale pins reviewed'
+  version: 3
+  source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: 'formal (iii) restated at Leon''s second-round decisions: the null vector of the (t + x1)^2 counter-model is l = e0 - e1'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@3
+  - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@4
   - correspondence.imported-vacuum-equations-scale-tractor@6
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
-  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@4
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -42,6 +58,8 @@ checked_by:
   ref: check.py::check_tractor_dirichlet_stationary_points_are_not_parallel
 - kind: proof
   derivation: main
+- kind: check
+  ref: check.py::check_gtg_dilation_field_scalar_and_tractor_dirichlet
 lineage:
   motivated_by:
   - synthesis.einstein-condition-is-infinity-vacuum-incidence
@@ -49,6 +67,30 @@ lineage:
   - mass.imported-frozen-point-tractor-connection
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Leon''s second-round answer 1 (REPORT.md For Leon item 1, fix-F3.md): formal (iii) now reads "H0(a) = 2(a . l) l, l = nabla(t + x1) = e0 - e1 null" in place of l = e0 + e1, the text proposed in fix-F3.md. Exact check (GA.py, Cl(1,3)): for sigma = (t + x1)^2, d_mu d_nu sigma = 2 on mu, nu in {0, 1}, so H(a) = (a . nabla) nabla sigma = 2 (a . l) l with l = nabla(t + x1) = e0 - e1 on e0, e1, e2 and a generic a; the old l = e0 + e1 fails on e0; Q(l) = 0 and the trace of H is 0, so H0 = H. The conclusion (H0 nonzero, H0:H0 = 0) is unchanged; the proof and check_gtg_dilation_field_scalar_and_tractor_dirichlet already carry l = e0 - e1.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3: accept with one fix (8a), confirmed. For sigma = (t + x1)^2, grad sigma = 2(t + x1)(e^0 + e^1) with e^0 = e0, e^1 = -e1, so H(a) = a . grad grad sigma = 2 (a . l) l with l = e0 - e1, not e0 + e1: H(e0) = 2(e0 - e1), while 2 (e0 . (e0 + e1))(e0 + e1) = 2(e0 + e1). The vector is still null, so H0 != 0 and H0 : H0 = 0 stand. Applied: proof (iii) now has l = grad(t + x1) = e^0 + e^1 = e0 - e1; check_gtg_dilation_field_scalar_and_tractor_dirichlet now asserts H0(e_mu) = 2 (e_mu . l) l with l = e0 - e1 null at both points (runcheck 4/4; the mutant l = e0 + e1 fails). The formal level (iii) has the same slip; not edited (a formal change, listed for Leon with the text l = e_0 - e_1).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale 3 -> 4 is the GA rewrite of its tractors and slots (middle slot of nabla_v I still -Sch0(v), which proof (iii) quotes; N) and synthesis.positive-structure-is-twistor-form-at-imaginary-time 4 -> 5 has a byte-identical formal (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): (ii) and its check use the Ricci map and the store-sign scalar of clause (iv), unchanged, so the use holds; all three repinned.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Decision A3 (Leon, 7 November 2026, DECISIONS.md category A; items-for-gtg.md): formal (ii) and proof (ii) restated in the store sign, sqrt|g| calR = 6 phi box phi, restricted action int(-6 eta(d phi, d phi) - 2 Lambda phi^4), Euler-Lagrange equation box phi = (2/3) Lambda phi^3 (the trace calR = 4 Lambda), and the index convention''s scalar named as -calR; the old text had -6 phi box phi and -(2/3) Lambda phi^3, contradicting synthesis.twistor-flat-fields-give-nordstrom-not-einstein (i). Evidence: the GTG scalar 6 box phi/phi^3 of the dilation field and box phi = (2/3) Lambda phi^3 for the de Sitter scale phi = 1/(1 - Lambda Q/12), both computed exactly in check_gtg_dilation_field_scalar_and_tractor_dirichlet (and in the reconciler''s and R03''s scripts). Kind: restatement; the Lambda = 0 counter-models and every conclusion are unaffected.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof for (ii) and (iii): the scale phi^2 eta is the derived metric of the dilation field hb^{-1}(a) = phi a; Omega(a) = a ^ grad ln phi solves the torsion equation; the field strength is the Kulkarni-Nomizu form R(a ^ b) = -(a ^ K(b) + K(a) ^ b), K(a) = a . grad w - (w . a) w + Q(w) a/2, w = grad ln phi; Ricci map (2K(b) + tr K b)/phi^2 and store-sign scalar 6 box phi/phi^3; (iii) computes D_a D sigma = H0(a) - (1/4)(a . grad box sigma) n0 with Omega_T(a) = -ninf ^ a and contracts it with the Cl(2,4) product; the Christoffel computation is kept as a labelled reading (index-convention scalar -calR). New check check_gtg_dilation_field_scalar_and_tractor_dirichlet (exact jets: three scales at two points, the de Sitter scale at Lambda = 3, three tractor scales); the Christoffel check now asserts the store-sign identity sqrt|g| calR = 6 phi box phi; runcheck 4/4, check4 clean on a proposals copy. outside_ga removed: no stand-in remains (tractor slots are coordinates of a Cl(2,4) vector). Status, links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the Ricci tensor and the tractor slots of conformally rescaled metrics from Christoffel symbols in components; the GTG statement is in the formal level and the component computation is the evidence.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -81,8 +123,8 @@ extraction:
 Work in $\Cl(2,4)$ with the generators of Proposition \claimref{synthesis.positive-conformal-energy-gives-positive-null-translations}: $e_{0}$, $\nu$ (square $+1$), $e_{1}, e_{2}, e_{3}$, $e_{-}$ (square $-1$), $\nInf = \nu + e_{-}$, $\nO = \tfrac12(\nu - e_{-})$, $X(x) = \nO + x - \tfrac12 Q(x)\nInf$, $Z = e_{0}\nu$. A constant vector $I$ is a parallel tractor of the flat class, with scale $\sigma = \ip{X(x)}{I}$ and derived metric $\sigma^{-2}\eta$ of the pure dilation field $\hb = \sigma$; in the normalisation of the stored de Sitter tractor $\nInf + \tfrac{\Lambda}{6}\nO$, $Q(I) = \Lambda/3$. The almost-Einstein scales of the flat class are those whose scale tractor is parallel (Theorem \claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}(3), Fact \claimref{correspondence.imported-vacuum-equations-scale-tractor}); in the flat splitting this is the vanishing of the trace-free Hessian $H^{\circ}$ of $\sigma$, $H(a) = a\cdot\nabla\,\nabla\sigma$, $H^{\circ}(a) = H(a) - \tfrac14(\partial_{b}\cdot H(b))\,a$, whose solutions are $\sigma = c + b\cdot x - \tfrac{k}{2}Q(x)$.
 \begin{enumerate}
 \item[(i)] \emph{(The positive structure fixes no scale tractor.)} The symmetry of the positive Hermitian structure inside $\mathrm{Spin}(2,4)$ is the centraliser of the bivector of its positive plane: for the stored structure (Theorem \claimref{synthesis.positive-structure-is-twistor-form-at-imaginary-time}, $J = I_{7}e_{1}e_{+}$ in its labels, $I_7$ the central pseudoscalar of $\Cl(2,4)_{\C} = \Cl(3,4)$, the complex unit of the module and of complexified points, \claimref{std-algebra.complexification-is-the-odd-extension}) this is the centraliser of $Z$, with Lie algebra $\mathfrak{u}(1)\oplus\so(4)$ spanned by $Z$ and the six bivectors of $\mathrm{span}(e_{1}, e_{2}, e_{3}, e_{-})$; for any other positive structure it is a conjugate. The vectors commuting with $Z$ are exactly $\mathrm{span}(e_{1}, e_{2}, e_{3}, e_{-})$, negative definite, so the conformal energy's $\mathfrak{u}(1)$ fixes exactly the tractors with $\Lambda < 0$; the vectors fixed by $\so(4)$ are exactly $\mathrm{span}(e_{0}, \nu)$, positive definite (de Sitter tractors, $\Lambda > 0$), on which $1 + tZ$ acts by the Cayley rotation; the whole centraliser fixes no nonzero vector. A null tractor ($\Lambda = 0$, for example $\nInf$, the Minkowski scale) lies in neither space. Every orbit of the centraliser on nonzero tractors is a product of a circle and a $3$-sphere, one factor possibly a point, with invariants $Q_{+}(I) \ge 0$ and $Q_{-}(I) \le 0$, the norms of the projections, $Q(I) = Q_{+} + Q_{-}$. So a principle invariant under the positive structure can fix at most $(Q_{+}, Q_{-})$, hence $\Lambda$, and never a scale tractor. A boost is a datum outside the structure: for the boost of the plane $(e_{0}, e_{1})$ the vectors fixed by it and by the $\so(4)$ are exactly the ray of $\nu$, and for the tube point $I_{7}\rho e_{0}$ (foot at the origin), whose positive plane is $\mathrm{span}(\mathrm{Re}\,X, \mathrm{Im}\,X) = \mathrm{span}(\nO + \tfrac{\rho^{2}}{2}\nInf, e_{0})$, the boost-fixed vector of that plane is $\tfrac{\rho^{2}}{2}$ times the de Sitter tractor at $\Lambda = 12/\rho^{2}$: structure and boost together select a de Sitter scale with $\Lambda$ fixed by the tube unit, never a $\Lambda \le 0$ one. This is the converse direction of synthesis.wick-rotated-boost-selects-observer-tube-point (filed alongside), where the boost and an observer select the tube point. The two agree that the frozen point $I_{\Lambda}$ commutes with the boost; here its tube point at the origin has $\rho^{2} = 12/\Lambda$, that is $\rho = 2\ell$ in the de Sitter normalisation $\sigma = 1 - \Lambda Q/12$ with $\ell = (3/\Lambda)^{1/2}$, while the argued normalisation $\rho = 1/\kappa = \ell$ of the result filed alongside differs by a factor $2$; both statements treat only tube points with foot $x_{\perp} = 0$; tabulated: $I = \nu$ gives $\sigma = \tfrac12(1 - Q(x))$ (de Sitter, $\Lambda = 12$ in this normalisation up to the factor $\tfrac12$), $I = e_{0}$ gives $\sigma = t$, $I = e_{-}$ gives $\sigma = \tfrac12(1 + Q(x))$ (anti de Sitter).
-\item[(ii)] \emph{(The Einstein-Hilbert action restricted to the class.)} For the scale $g = \varphi^{2}\eta$ ($\varphi = 1/\sigma$), the Ricci tensor computed from the Christoffel symbols gives $\sqrt{|g|}\,\mathcal{R} = -6\varphi\,\Box\varphi$, so $\int\sqrt{|g|}(\mathcal{R} - 2\Lambda)$ restricted to the class is $\int(6\,\eta(\partial\varphi, \partial\varphi) - 2\Lambda\varphi^{4})$ up to boundary terms, with the single Euler-Lagrange equation $\Box\varphi = -\tfrac23\Lambda\varphi^{3}$, the trace $\mathcal{R} = 4\Lambda$ of the field equations (the Yamabe equation). It has stationary scales that are not almost-Einstein: $\varphi = 1 + x_{1}x_{2}$ and $\varphi = 1 + \tfrac{t}{3} + x_{1}^{2}x_{3} - x_{2}^{2}x_{3}$ at $\Lambda = 0$ have $\Box\varphi = 0$, hence $\mathcal{R} = 0$ everywhere, and a nonzero trace-free Ricci tensor at every sample point.
-\item[(iii)] \emph{(The tractor Dirichlet functional.)} In the flat splitting the derivative of the tractor $D\sigma = (\sigma, \nabla\sigma, -\tfrac14\Box\sigma)$ has middle slot $H^{\circ}$ and vanishing top slot, so its tractor Dirichlet density is $H^{\circ}\!:\!H^{\circ} = \partial_{a}\cdot\partial_{b}\,(H^{\circ}(a)\cdot H^{\circ}(b))$. The functional $\int H^{\circ}\!:\!H^{\circ}$ has the single Euler-Lagrange equation $\tfrac32\Box^{2}\sigma = 0$. It is stationary at $\sigma = 1 + x_{1}x_{2}$, with $H^{\circ} \ne 0$ everywhere; and $\sigma = (t + x_{1})^{2}$ has $H^{\circ}(a) = 2(a\cdot l)\,l$, $l = e_{0} + e_{1}$ null, so $H^{\circ} \ne 0$ while $H^{\circ}\!:\!H^{\circ} = 0$: in Lorentzian signature even a vanishing action does not force a parallel tractor.
+\item[(ii)] \emph{(The Einstein-Hilbert action restricted to the class.)} For the scale $g = \varphi^{2}\eta$ ($\varphi = 1/\sigma$), the store-sign scalar curvature gives $\sqrt{|g|}\,\mathcal{R} = 6\varphi\,\Box\varphi$, so $\int\sqrt{|g|}(\mathcal{R} - 2\Lambda)$ restricted to the class is $\int(-6\,\eta(\partial\varphi, \partial\varphi) - 2\Lambda\varphi^{4})$ up to boundary terms, with the single Euler-Lagrange equation $\Box\varphi = \tfrac23\Lambda\varphi^{3}$, the trace $\mathcal{R} = 4\Lambda$ of the field equations (the Yamabe equation). It has stationary scales that are not almost-Einstein: $\varphi = 1 + x_{1}x_{2}$ and $\varphi = 1 + \tfrac{t}{3} + x_{1}^{2}x_{3} - x_{2}^{2}x_{3}$ at $\Lambda = 0$ have $\Box\varphi = 0$, hence $\mathcal{R} = 0$ everywhere, and a nonzero trace-free Ricci tensor at every sample point.
+\item[(iii)] \emph{(The tractor Dirichlet functional.)} In the flat splitting the derivative of the tractor $D\sigma = (\sigma, \nabla\sigma, -\tfrac14\Box\sigma)$ has middle slot $H^{\circ}$ and vanishing top slot, so its tractor Dirichlet density is $H^{\circ}\!:\!H^{\circ} = \partial_{a}\cdot\partial_{b}\,(H^{\circ}(a)\cdot H^{\circ}(b))$. The functional $\int H^{\circ}\!:\!H^{\circ}$ has the single Euler-Lagrange equation $\tfrac32\Box^{2}\sigma = 0$. It is stationary at $\sigma = 1 + x_{1}x_{2}$, with $H^{\circ} \ne 0$ everywhere; and $\sigma = (t + x_{1})^{2}$ has $H^{\circ}(a) = 2(a\cdot l)\,l$, $l = \nabla(t + x_{1}) = e_{0} - e_{1}$ null, so $H^{\circ} \ne 0$ while $H^{\circ}\!:\!H^{\circ} = 0$: in Lorentzian signature even a vanishing action does not force a parallel tractor.
 \item[(iv)] \emph{(Count, argued.)} Any local functional of the scale at fixed conformal class has one Euler-Lagrange equation, while parallelism of the scale tractor is nine independent trace-free conditions at second order, with a solution space of dimension at most six (parallel sections of a rank-six bundle). A single equation that is noncharacteristic on some hypersurface has an infinite-dimensional solution space (Cauchy-Kovalevskaya, cited from memory), so no such principle has exactly the almost-Einstein scales as its stationary points. Not treated: functionals whose Euler-Lagrange equation is characteristic everywhere, and principles that are not variational. A variational principle that does select them is either one with Lagrange multipliers for $\nabla I'$, a rewording of the parallel-tractor condition, or a principle that varies the conformal class too, that is, a dynamical principle for the whole gauge field $\hb$.
 \end{enumerate}
 In the vacuum the frozen point is the almost-Einstein scale; with matter, Theorem \claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}(4) already shows that the scale tractor's derivative is the trace-free stress tensor, a law only for an independently given $T$. The results above add that the series' positive structure does not supply the trace-free part, that the two natural variational principles in the scale do not, and (argued) that no local functional of the scale with a somewhere noncharacteristic Euler-Lagrange equation does.

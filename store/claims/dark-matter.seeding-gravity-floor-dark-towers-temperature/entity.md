@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.ceiling-valued-inherited-success@5
-  - dark-matter.imported-massless-graviton-production-rate@1
+  - dark-matter.imported-massless-graviton-production-rate@2
   - dark-matter.superselected-hence-dark-exactly-stable@5
   proof: proof-main.tex
 checked_by:
@@ -46,6 +46,10 @@ locators:
   label: prop:gravseed
   line: 1475
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.imported-massless-graviton-production-rate repinned 1 -> 2 after reviewing the F14 change writing the rate with the reduced Planck mass bar M_P, the source''s M_P (any M_P here that is evaluated is 2.435e18 GeV, the reduced mass); the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

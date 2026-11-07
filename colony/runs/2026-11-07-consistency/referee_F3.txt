@@ -1,0 +1,10 @@
+pairing.curvature-which-loops-move-vacuum
+pairing.loop-classes-are-weyl-components
+synthesis.diagonal-kasner-momentum-constraint
+synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
+synthesis.frozen-point-unique-where-weyl-has-no-kernel
+synthesis.kasner-curvature-wall-is-negative-weight-helicity
+synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points
+synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
+synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state
+synthesis.tractor-transport-weak-null-crossing

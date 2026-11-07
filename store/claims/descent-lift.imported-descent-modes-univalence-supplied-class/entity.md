@@ -23,12 +23,12 @@ derivations:
   uses:
   - descent-lift.imported-descent-modes-univalence-supplied-class-external@1
   - singularity.class-relative-no-go-no-supplied@3
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   - singularity.envelope-endpoint-why-boundary-mode-locality@7
   - singularity.imported-univalence-superselection-rule@2
-  - singularity.l-stabiliser-tangent@6
-  - singularity.p-reduced-metric-level-reading-many@6
-  - singularity.purity-output-partner-commutant@4
+  - singularity.l-stabiliser-tangent@7
+  - singularity.p-reduced-metric-level-reading-many@7
+  - singularity.purity-output-partner-commutant@5
   - singularity.schmidt-forcing-proved-outright@6
   assumes:
   - singularity.l-boundary-mode-locality@2

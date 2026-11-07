@@ -1,10 +1,15 @@
-The proof computes with the Christoffel symbols of the derived metric; by Fact \claimref{synthesis.imported-gtg-dictionary}(ii) these are $g^\rho \cdot D_{e_\mu} g_\nu$, so vanishing of the covariant derivative below is $D$-parallelism of the physical frame. (1) For a synchronous diagonal metric $d\tau^2 - \sum_i a_i^2 (dx^i)^2$ the only Christoffel symbols with a $\tau$ index are $\Gamma^i{}_{\tau i} = \partial_\tau \log a_i$ and $\Gamma^\tau{}_{ii} = a_i\,\partial_\tau a_i$ (no sum), so
+The proof computes with the covariant derivative $D$ on the physical frame $g_\mu = \hb^{-1}(e_\mu)$; by Fact \claimref{synthesis.imported-gtg-dictionary}(ii) $D$ is the Levi-Civita derivative of the derived metric, torsion-free ($D_{e_\mu} g_\nu = D_{e_\nu} g_\mu$ on the coordinate frame) and preserving the flat product of physical vectors, and parallel transport along the worldlines of velocity $g_\tau$ is $D_{e_\tau}$, since $\hb(g_\tau) = e_\tau$. (1) For a synchronous diagonal field, derived metric $d\tau^2 - \sum_i a_i^2 (dx^i)^2$, the frame has $Q(g_\tau) = 1$, $g_\tau \cdot g_i = 0$ and $g_i \cdot g_j = -a_i^2\,\delta_{ij}$. The two properties of $D$ give, for frame vectors $g_\alpha, g_\beta, g_\gamma$, the identity $2\,g_\gamma \cdot D_{e_\alpha} g_\beta = \partial_\alpha(g_\beta \cdot g_\gamma) + \partial_\beta(g_\alpha \cdot g_\gamma) - \partial_\gamma(g_\alpha \cdot g_\beta)$, so
 \[
-\nabla_{\partial_\tau}\bigl(a_i^{-1}\partial_i\bigr)
-= (\partial_\tau a_i^{-1})\,\partial_i + a_i^{-1}\,\Gamma^j{}_{\tau i}\,\partial_j
-= -a_i^{-2}(\partial_\tau a_i)\,\partial_i + a_i^{-2}(\partial_\tau a_i)\,\partial_i = 0 ,
+2\,g_j \cdot D_{e_\tau} g_i = \partial_\tau(g_i \cdot g_j) = -2a_i\,(\partial_\tau a_i)\,\delta_{ij}, \qquad
+2\,g_\tau \cdot D_{e_\tau} g_i = \partial_i Q(g_\tau) = 0 ,
 \]
-identically in $\tau$; and $\nabla_{\partial_\tau}\partial_\tau = 0$ as noted in Lemma \claimref{interior.kasner-form-interior}. Here $a_1 = \sqrt{A(\tau)}$, $a_2 = r(\tau)$, $a_3 = r(\tau)\sin\theta$; the $\theta$-dependence of $a_3$ does not enter $\partial_\tau$-derivatives, so the computation applies at each fixed angular position. (2) From $\partial_\tau = \sqrt{A}\,\partial_r$: $\sigma_1 = \sqrt A\,\partial_r \log\sqrt A = A'/(2\sqrt A)$, and with $A = (1-r)/r$, $A' = -1/r^2$, this is $\sigma_1 = -\tfrac12 r^{-3/2}(1-r)^{-1/2}$; likewise $\sigma_2 = \sqrt A / r = r^{-3/2}\sqrt{1-r}$. Multiplying by the series for $\tau$ from Lemma \claimref{interior.kasner-form-interior}:
+that is $D_{e_\tau} g_i = (\partial_\tau \log a_i)\, g_i$ (no sum; in components $\Gamma^i{}_{\tau i} = \partial_\tau \log a_i$), and therefore
+\[
+D_{e_\tau}\bigl(a_i^{-1} g_i\bigr)
+= (\partial_\tau a_i^{-1})\, g_i + a_i^{-1}\, D_{e_\tau} g_i
+= -a_i^{-2}(\partial_\tau a_i)\, g_i + a_i^{-2}(\partial_\tau a_i)\, g_i = 0 ,
+\]
+identically in $\tau$; and $D_{e_\tau} g_\tau = 0$ as noted in Lemma \claimref{interior.kasner-form-interior}. Here $a_1 = \sqrt{A(\tau)}$, $a_2 = r(\tau)$, $a_3 = r(\tau)\sin\theta$; the $\theta$-dependence of $a_3$ does not enter $\partial_\tau$-derivatives, so the computation applies at each fixed angular position. (2) From $\partial_\tau = \sqrt{A}\,\partial_r$: $\sigma_1 = \sqrt A\,\partial_r \log\sqrt A = A'/(2\sqrt A)$, and with $A = (1-r)/r$, $A' = -1/r^2$, this is $\sigma_1 = -\tfrac12 r^{-3/2}(1-r)^{-1/2}$; likewise $\sigma_2 = \sqrt A / r = r^{-3/2}\sqrt{1-r}$. Multiplying by the series for $\tau$ from Lemma \claimref{interior.kasner-form-interior}:
 \[
 \tau\sigma_1 = -\tfrac13\bigl(1 + \tfrac{3}{10}r\bigr)\bigl(1 + \tfrac12 r\bigr) + O(r^2) = -\tfrac13 - \tfrac{4}{15}r + O(r^2),
 \]

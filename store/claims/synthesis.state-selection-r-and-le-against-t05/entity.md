@@ -1,11 +1,11 @@
 ---
 id: synthesis.state-selection-r-and-le-against-t05
 kind: claim
-version: 4
+version: 5
 title: 'The folded note''s (R) and (L$_E$) against T05''s'
 status: proved
 region: synthesis
-subject: thermality
+subject: descent
 tags: [thermal-premises, entropy-premises, modular-theory, finite-models, ledger-audit]
 proposed_by:
   kind: ai
@@ -21,6 +21,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'notation: the Boltzmann factor Q_k renamed z_k'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -28,7 +32,7 @@ derivations:
 - name: main
   uses:
   - singularity.kms-uniqueness-factor@6
-  - hawking.modular-structure-completed-pair@3
+  - hawking.modular-structure-completed-pair@4
   - scrambling.boundary-mode-space-matrix@4
   - singularity.number-diagonal-dynamics-models-scrambling-derived@4
   proof: proof-main.tex
@@ -50,6 +54,14 @@ lineage:
   - singularity.rate-discharge-hypothesis-iii
   - state-selection.rate-discharge-hypothesis-iii
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R02 item 10): the formal and proof wrote the Boltzmann factor Q_k = e^{omega_k p} (and Q for one mode) beside Premise (Q), which the entity cites, and the house symbol Q(v). It is now z_k (z for one mode), unused in the entity; the premise labels (Q) are unchanged. No content change.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Subject moved from thermality to descent (DECISIONS H12, xsubject-R02 item 6): its logical neighbours are in descent (I213). Not a substantive field; no version change.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -85,10 +97,10 @@ extraction:
 ---
 
 ## formal
-Let a window of $n$ boundary modes, completed pairs $(a_{k}, a_{k}^{*})$ obeying the canonical anticommutation relations (Proposition \claimref{scrambling.boundary-mode-space-matrix}), carry the Killing flow $\alpha_{t} = \operatorname{Ad}(e^{Jt\sum_{k}\omega_{k}K_{k}})$, $K_{k} = N_{k} - \tfrac12$ (Proposition \claimref{hawking.modular-structure-completed-pair}), its numbers read in $\mathrm{span}\{1, J\}$ with $J = e_{2}e_{3}$ the complex unit of the completed pair's radial atom (Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode (the continuation $t + Jp$ is in that field), with period $p = 2\pi/\kappa$ and $Q_{k} = e^{\omega_{k}p}$. For mode operators $a, b$ write $F_{a,b}(t) = \omega(a\,\alpha_{t}(b))$, a finite sum of exponentials in $t$. Premise (R) of the state-selection note (its Premise 5.1, now retired from the store; its statement is recorded with \claimref{singularity.r-regularity-fixed-locus}) asks that the state's two-point functions, continued in the rapidity of the boost flow, be single valued and regular at its fixed locus; T05's Premise (R) (\claimref{singularity.r-regularity-fixed-locus}) asks that each single-mode correlator continue to the Euclidean section with its two orderings glued across the cut, $F_{a,b}(t + Jp) = \omega(\alpha_{t}(b)\,a)$.
+Let a window of $n$ boundary modes, completed pairs $(a_{k}, a_{k}^{*})$ obeying the canonical anticommutation relations (Proposition \claimref{scrambling.boundary-mode-space-matrix}), carry the Killing flow $\alpha_{t} = \operatorname{Ad}(e^{Jt\sum_{k}\omega_{k}K_{k}})$, $K_{k} = N_{k} - \tfrac12$ (Proposition \claimref{hawking.modular-structure-completed-pair}), its numbers read in $\mathrm{span}\{1, J\}$ with $J = e_{2}e_{3}$ the complex unit of the completed pair's radial atom (Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode (the continuation $t + Jp$ is in that field), with period $p = 2\pi/\kappa$ and $z_{k} = e^{\omega_{k}p}$. For mode operators $a, b$ write $F_{a,b}(t) = \omega(a\,\alpha_{t}(b))$, a finite sum of exponentials in $t$. Premise (R) of the state-selection note (its Premise 5.1, now retired from the store; its statement is recorded with \claimref{singularity.r-regularity-fixed-locus}) asks that the state's two-point functions, continued in the rapidity of the boost flow, be single valued and regular at its fixed locus; T05's Premise (R) (\claimref{singularity.r-regularity-fixed-locus}) asks that each single-mode correlator continue to the Euclidean section with its two orderings glued across the cut, $F_{a,b}(t + Jp) = \omega(\alpha_{t}(b)\,a)$.
 \begin{enumerate}
-\item[(i)] (one mode, three readings) on a mode of nonzero weight: regularity alone is vacuous (every $F_{a,b}$ is entire); single-valuedness read as strict periodicity, $F_{a,b}(t + Jp) = F_{a,b}(t)$ for both orderings of the ladder, holds for no state (it forces the occupancy to be both $1$ and $0$); single-valuedness read with the orderings glued, as T05 reads it, holds exactly when the occupancy is $n = 1/(Q + 1)$, which is T05's (R) on that mode; the ladder correlators do not see $\omega(a)$, and with $\omega(a) = 0$, as (P) (\claimref{singularity.p-univalence}) gives, the marginal is the Gibbs state at $\beta = p$ (Theorem \claimref{singularity.kms-uniqueness-factor}). At zero weight strict periodicity is vacuous and the glued reading forces $n = \tfrac12$ at every period;
-\item[(ii)] (the glued reading on the whole window) write (R$_{\mathrm{reg}}$) for the glued reading imposed on every two-point function of mode operators. On mixed correlators, $i \ne j$, it reads $Q^{\mp 1}\omega(a_{i}b_{j}) = -\omega(a_{i}b_{j})$ for $b_{j} \in \{a_{j}^{*}, a_{j}\}$, so (R$_{\mathrm{reg}}$) holds if and only if T05's (R) holds on every mode and every inter-mode two-point function vanishes;
+\item[(i)] (one mode, three readings) on a mode of nonzero weight: regularity alone is vacuous (every $F_{a,b}$ is entire); single-valuedness read as strict periodicity, $F_{a,b}(t + Jp) = F_{a,b}(t)$ for both orderings of the ladder, holds for no state (it forces the occupancy to be both $1$ and $0$); single-valuedness read with the orderings glued, as T05 reads it, holds exactly when the occupancy is $n = 1/(z + 1)$, which is T05's (R) on that mode; the ladder correlators do not see $\omega(a)$, and with $\omega(a) = 0$, as (P) (\claimref{singularity.p-univalence}) gives, the marginal is the Gibbs state at $\beta = p$ (Theorem \claimref{singularity.kms-uniqueness-factor}). At zero weight strict periodicity is vacuous and the glued reading forces $n = \tfrac12$ at every period;
+\item[(ii)] (the glued reading on the whole window) write (R$_{\mathrm{reg}}$) for the glued reading imposed on every two-point function of mode operators. On mixed correlators, $i \ne j$, it reads $z^{\mp 1}\omega(a_{i}b_{j}) = -\omega(a_{i}b_{j})$ for $b_{j} \in \{a_{j}^{*}, a_{j}\}$, so (R$_{\mathrm{reg}}$) holds if and only if T05's (R) holds on every mode and every inter-mode two-point function vanishes;
 \item[(iii)] (strictly between) T05's (R) with the two-point clause of (Q) (\claimref{singularity.q-joint-quasi-freeness-s-wave}) implies (R$_{\mathrm{reg}}$), and (R$_{\mathrm{reg}}$) implies T05's (R); neither converse holds. On two modes with Gibbs marginals: adding a coherence $c \ne 0$ between $\ket{10}$ and $\ket{01}$ gives an even state satisfying T05's (R) with $\omega(a_{1}a_{2}^{*}) = -c$, so (R$_{\mathrm{reg}}$) fails; adding instead a density correlation $d \ne 0$ gives an even state satisfying (R$_{\mathrm{reg}}$) with $\omega(N_{1}N_{2}) - n_{1}n_{2} = d$, so it is not quasi-free and (Q) fails;
 \item[(iv)] (the note's rate theorem) on each mode, the Gibbs form at $\beta = 2\pi/\kappa$ with occupancy in $(0,1)$, hence faithful marginals, follows from (R$_{\mathrm{reg}}$) and (P) by (i), without the geometric modular condition, as T05's Theorem \claimref{singularity.rate-discharge-hypothesis-iii} obtains it from T05's (R); the single-mode conclusions of the note's Theorem \claimref{state-selection.rate-discharge-hypothesis-iii} therefore need only T05's (R);
 \item[(v)] (the two (L$_E$)) T05's Premise \claimref{singularity.l-boundary-mode-locality} and the note's Premise 7.3 (now retired from the store as a restatement of T05's) generate the dynamics by the boost bivectors $\sigma_{k}$ and their products, the abelian algebra $\mathcal{A}_{\sigma}$ of dimension $2^{n}$, which commutes with every $N_{k}$, contains the cross-point products $\sigma_{j}\sigma_{k}$, and excludes the hopping $a_{j}^{*}a_{k}$ and the pairing $a_{j}^{*}a_{k}^{*}$ ($j \ne k$). The note's clause that no generator couples the ladder at one point to the ladder at another, read as excluding every generator that involves two points, would exclude $\sigma_{j}\sigma_{k}$, which its own first clause admits and its Proposition 7.4, merged into \claimref{singularity.number-diagonal-dynamics-models-scrambling-derived}, uses (the controlled-$Z$); read as excluding transfer of occupation, it is T05's clause. The two premises name one generator class.

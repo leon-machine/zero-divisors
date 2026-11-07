@@ -23,13 +23,13 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@5
-  - dark-matter.orientation-arrow-seventeenth-refutation@9
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
+  - dark-matter.orientation-arrow-seventeenth-refutation@10
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.premise-cpt-covariance@3
-  - dark-matter.premise-flag-as-datum@3
+  - dark-matter.premise-flag-as-datum@4
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -46,6 +46,14 @@ locators:
   label: fact:flag
   line: 521
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-matter.asymmetry-arrow-counted-fifteenth-refutation repinned 6 -> 7 (an extraction note only (Leon confirmed the theta-angle reading); N).'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The correction note of 2026-10-22 says the assumes edge to dark-matter.premise-trichotomy-exhaustive is kept pending a maintainer decision; that edge is no longer in the derivation (assumes: CPT covariance and the flag as a datum), so the note records history only; extraction only, no version change."
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

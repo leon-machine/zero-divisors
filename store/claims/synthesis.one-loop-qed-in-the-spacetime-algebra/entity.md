@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-loop-qed-in-the-spacetime-algebra
 kind: claim
-version: 4
+version: 5
 title: 'One-loop electrodynamics in the spacetime algebra'
 status: proved
 region: synthesis
@@ -25,18 +25,22 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (photon propagator as a linear map)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
 derivations:
 - name: main
   uses:
-  - field-theory.second-quantisation@5
-  - field-theory.elementary-photon-ga@4
-  - field-theory.coupled-system-tree-level@3
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
+  - field-theory.second-quantisation@6
+  - field-theory.elementary-photon-ga@5
+  - field-theory.coupled-system-tree-level@4
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@3
   assumes:
-  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@2
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -60,6 +64,10 @@ outside_ga:
   kind: bridge
   why: 'the levels and proof set the Dirac-matrix reading beside the algebra (the check''s Dirac matrices, with their complex scalar read as I_5, the Gordon term in sigma^{mu nu} form); the mathematics is done in the spacetime algebra'
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The covariant photon propagator is written as the map a -> -a/k^2 on vectors, with -g_{mu nu}/k^2 as its component reading; the remaining indices are components on the spacetime algebra''s frame gamma_mu and reciprocal gamma^mu (the algebra''s own vectors) and stay; notation only. Reader fix (R06), version kept: the field of the Dirac-matrix reading in proof (1) is written span_Q{1, I_5} (it was Q(i), a bare unit the detector skips).'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -97,7 +105,7 @@ extraction:
 ---
 
 ## formal
-Work in a covariant gauge, under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (imported, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}: the covariant propagator $-g_{\mu\nu}/k^{2}$ on internal lines; the photon of Proposition \claimref{field-theory.elementary-photon-ga}(4) gives the covariant form only at tree level on conserved currents). Take the Dirac matrices as the spacetime algebra's product (vectors $\gamma_{\mu}$ of $\Cl(1,3)$, reciprocal frame $\gamma^{\mu}$), the propagator numerator of momentum $k$ as the multivector $k + m$, the vertex as $\gamma^{\mu}$ with the coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, and the units of the Feynman rules and of the Wick rotation as the field theory's unit $I_{4}$ acting as the right unit, a coefficient collected outside the Clifford product (numbers, including the values of the Wick-rotated integrals, are read in $\mathrm{span}\{1, I_{4}\}$). Regulate with imported Pauli-Villars fields of weights $c_{i}$ (negative weights included), $\sum_{i} c_{i} = \sum_{i} c_{i}M_{i}^{2} = 0$ ($c_{0} = 1$, $M_{0} = m$): fermions on the fermion loop in (2), a photon on the photon line in (3) and (4). Then:
+Work in a covariant gauge, under the indefinite-form (Krein) premise for the gauge field, Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (imported, Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}: the covariant propagator, the map $a \mapsto -a/k^{2}$ on vectors ($-g_{\mu\nu}/k^{2}$ in components), on internal lines; the photon of Proposition \claimref{field-theory.elementary-photon-ga}(4) gives the covariant form only at tree level on conserved currents). Take the Dirac matrices as the spacetime algebra's product (vectors $\gamma_{\mu}$ of $\Cl(1,3)$, reciprocal frame $\gamma^{\mu}$), the propagator numerator of momentum $k$ as the multivector $k + m$, the vertex as $\gamma^{\mu}$ with the coupling of Proposition \claimref{field-theory.coupled-system-tree-level}, and the units of the Feynman rules and of the Wick rotation as the field theory's unit $I_{4}$ acting as the right unit, a coefficient collected outside the Clifford product (numbers, including the values of the Wick-rotated integrals, are read in $\mathrm{span}\{1, I_{4}\}$). Regulate with imported Pauli-Villars fields of weights $c_{i}$ (negative weights included), $\sum_{i} c_{i} = \sum_{i} c_{i}M_{i}^{2} = 0$ ($c_{0} = 1$, $M_{0} = m$): fermions on the fermion loop in (2), a photon on the photon line in (3) and (4). Then:
 \begin{enumerate}
 \item (Traces.) The matrix trace of $X \in \Cl(1,3)$ is $4\langle X\rangle_{0}$, and the chiral traces are the numbers $2(\langle X\rangle_{0} \mp x_{4}I_{4})$, $x_{4}$ the coefficient of $I_{4}$ in $X$: twice $\proj(X)$ of Definition \claimref{obj.field-theory.single-algebra-field}, read with the pseudoscalar of $X$ sent to $\mp$ the unit.
 \item (Vacuum polarisation.) With $k = \ell - xq$, $k' = \ell + (1-x)q$ and four-dimensional symmetric integration, the numerator $4\langle\gamma^{\mu}(k+m)\gamma^{\nu}(k'+m)\rangle_{0}$, read as the map $a \mapsto \sum_{\mu\nu}a_{\mu}N^{\mu\nu}\gamma_{\nu}$, is $a \mapsto -2Q(\ell)a + 8x(1-x)(Q(q)a - (a\cdot q)q) + 4\Delta a$, $\Delta = m^{2} - x(1-x)Q(q)$. The part proportional to $a$ has Euclidean radial integral $L - \Delta + \Delta^{2}/(L + \Delta)$ at squared cut-off $L$, so under the regulators it vanishes as $L \to \infty$; the polarisation is transverse, $\Pi(a) = (Q(q)a - (a\cdot q)q)\Pi(q^{2})$, with $\Pi(q^{2}) = -\tfrac{e^{2}}{2\pi^{2}}\int_{0}^{1}x(1-x)\ln(M^{2}/\Delta)\,dx$ up to a constant, $M$ the regulator scale. The coefficient of the logarithm is $e^{2}/(12\pi^{2})$ per Dirac fermion, its rational part $\tfrac{1}{16}\int_{0}^{1}8x(1-x)\,dx = \tfrac{1}{12}$. For a massless chiral fermion the numerator (not the regulated loop, whose regulators carry Dirac masses) has $I_{4}$ part zero after the shift and symmetric integration, and scalar part half the Dirac one.

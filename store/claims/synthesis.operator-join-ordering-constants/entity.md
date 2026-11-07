@@ -1,7 +1,7 @@
 ---
 id: synthesis.operator-join-ordering-constants
 kind: claim
-version: 3
+version: 4
 title: The operator join and its ordering constants
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (which unit acts where)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.mass.grip-mass-composite
@@ -29,7 +33,7 @@ derivations:
   uses:
   - correspondence.symmetrised-quadratics-palatial-algebra@5
   - correspondence.shared-core-ordering-dictionary@4
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   - mass.imported-flat-model-twistor-chart-infinity@7
   - mass.de-sitter-scale-frozen-point@6
   - mass.exact-join@8
@@ -43,6 +47,10 @@ lineage:
   motivated_by:
   - mass.exact-join
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Reader fix (R10, notation): one sentence says which unit acts where, I_6 as the classical moment''s factor and I_4 as the scalars of the palatial Fock space in the results built on this one, never identified, every displayed quantity real; the oscillator indices Z^alpha_i, Zbar_{l beta} and the Gram operators h_{il} are basis labels and Gram data and stay; the mathematics is unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -56,7 +64,7 @@ extraction:
 ---
 
 ## formal
-Let $Z^{1}, \dots, Z^{N}$ be $N$ copies of the palatial oscillators, $[Z^{\alpha}_{i}, \bar{Z}_{l\beta}] = \hbar\,\delta_{il}\delta^{\alpha}_{\beta}$, let $I_{\Lambda} = n_{\infty} + \lambda n_{0}$ with $\lambda = \Lambda/6$ be the frozen point of Lemma \claimref{mass.de-sitter-scale-frozen-point}, and quantise each moment component of the grip as a symmetrised quadratic (Lemma \claimref{correspondence.symmetrised-quadratics-palatial-algebra}, Theorem \claimref{correspondence.shared-core-ordering-dictionary}): $\hat{M}_{A} := I_{6}\sum_{i}\tfrac12\bigl(\bar{Z}_{i}\cdot AZ^{i} + AZ^{i}\cdot\bar{Z}_{i}\bigr)$, with $I_{6}$ the complex unit of $\CS$, the chart's unit of Theorem \claimref{mass.exact-join} (numbers, and the coefficients of polynomials in the oscillators, are read in $\mathrm{span}\{1, I_{6}\}$). Put $\ip{\hat{P}}{U} := \hat{M}_{U\wedge I_{\Lambda}}$ and $\hat{m}^{2} := Q(\hat{P})$. Write $\hat{h}_{il}$ for the symmetrised Gram operators (so $\hat{h}_{ii}$ is the palatial helicity generator of constituent $i$), $:\;:$ for normal ordering with every $\bar{Z}$ to the right of every $Z$, $\hat{B}^{il}$ for the bracket $B^{il}_{\Lambda} = \br{\pi^{i}\pi^{l}} + \lambda[\omega^{i}\omega^{l}]$ (a polynomial in the $Z$ alone) and $\hat{B}^{il\dagger}$ for its conjugate (a polynomial in the $\bar{Z}$ alone), and $m^{2}$ for the classical squared grip.
+Let $Z^{1}, \dots, Z^{N}$ be $N$ copies of the palatial oscillators, $[Z^{\alpha}_{i}, \bar{Z}_{l\beta}] = \hbar\,\delta_{il}\delta^{\alpha}_{\beta}$, let $I_{\Lambda} = n_{\infty} + \lambda n_{0}$ with $\lambda = \Lambda/6$ be the frozen point of Lemma \claimref{mass.de-sitter-scale-frozen-point}, and quantise each moment component of the grip as a symmetrised quadratic (Lemma \claimref{correspondence.symmetrised-quadratics-palatial-algebra}, Theorem \claimref{correspondence.shared-core-ordering-dictionary}): $\hat{M}_{A} := I_{6}\sum_{i}\tfrac12\bigl(\bar{Z}_{i}\cdot AZ^{i} + AZ^{i}\cdot\bar{Z}_{i}\bigr)$, with $I_{6}$ the complex unit of $\CS$, the chart's unit of Theorem \claimref{mass.exact-join} (numbers, and the coefficients of polynomials in the oscillators, are read in $\mathrm{span}\{1, I_{6}\}$; the results built on this one write the scalars of the palatial Fock space on which these operators act as $I_{4}$, by the unit principle U1, while $I_{6}$ here is the factor of the classical moment, equal to $\pm I_{4}$ on the two chiral halves at a point, and the two units are not identified; every quantity displayed below is real, $I_{6}$ entering $Q(\hat{P})$ only squared, so the choice does not enter). Put $\ip{\hat{P}}{U} := \hat{M}_{U\wedge I_{\Lambda}}$ and $\hat{m}^{2} := Q(\hat{P})$. Write $\hat{h}_{il}$ for the symmetrised Gram operators (so $\hat{h}_{ii}$ is the palatial helicity generator of constituent $i$), $:\;:$ for normal ordering with every $\bar{Z}$ to the right of every $Z$, $\hat{B}^{il}$ for the bracket $B^{il}_{\Lambda} = \br{\pi^{i}\pi^{l}} + \lambda[\omega^{i}\omega^{l}]$ (a polynomial in the $Z$ alone) and $\hat{B}^{il\dagger}$ for its conjugate (a polynomial in the $\bar{Z}$ alone), and $m^{2}$ for the classical squared grip.
 \begin{enumerate}
 \item \emph{(No shift in the grip.)} Every generator $A(U\wedge I_{\Lambda})$ is traceless, so every component of $\hat{P}$ carries no ordering shift, and $\hat{m}^{2}$ is a symmetric contraction of products of them: the operator grip and its square are fixed by the palatial quantisation without further choice.
 \item \emph{(Normal form.)} For any $N$,

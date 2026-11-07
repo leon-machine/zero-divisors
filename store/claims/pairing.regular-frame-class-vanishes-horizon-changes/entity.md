@@ -1,7 +1,7 @@
 ---
 id: pairing.regular-frame-class-vanishes-horizon-changes
 kind: claim
-version: 6
+version: 7
 title: 'The regular frame: the class vanishes on the horizon and changes sign inside'
 status: proved
 region: pairing
@@ -21,6 +21,18 @@ credit:
   role: 'unit resolution pass, the pairing classes written with the central unit I_5 of Cl(2,3)'
   version: 6
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: gauge field solved from the torsion equation, classes in Cl(2,3) with I_5; exact checks'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): the formal and technical levels state the rotation-gauge field as bivectors, the forms kept as a labelled reading; uses and pins'
+  version: 7
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -28,10 +40,11 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@5
+  - pairing.imported-schwarzschild-connection-curvature@7
   - pairing.pairing-class-transverse-derivative-null-direction@4
-  - pairing.two-frames-share-vacuum-selected-transport@5
-  - pairing.imported-spin-coefficients-null-tetrad@2
+  - pairing.two-frames-share-vacuum-selected-transport@6
+  - pairing.imported-spin-coefficients-null-tetrad@3
+  - std-algebra.complexification-is-the-odd-extension@2
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -46,12 +59,28 @@ checked_by:
   ref: check.py::check_static_and_regular_frames_agree
 - kind: check
   ref: check.py::check_curvature_classes_do_not_vanish_on_the_horizon
+- kind: check
+  ref: check.py::check_gtg_torsion_solution_is_the_pg_gauge_field
+- kind: check
+  ref: check.py::check_gtg_classes_and_loop_class_in_cl23
 locators:
   paper: T05-pairing
   number: Prop 5.3
   label: prop:pg
   line: 327
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 findings applied. (1) Language: the formal and technical levels defined the field only by its coframe and connection one-forms; they now state the frame by hb^{-1}(e_t) = e_0 + beta e_1, hb^{-1}(e_r) = e_1, hb^{-1}(e_theta) = r e_2, hb^{-1}(e_phi) = r sin(theta) e_3 and the rotation-gauge field as the four bivectors of the proof, Omega(e_0) = 0, Omega(e_1) = -beta'' e_1 e_0, Omega(e_2) = (beta e_0 + e_1) ^ e_2/r, Omega(e_3) = (beta e_0 + e_1) ^ e_3/r + (cot/r) e_2 ^ e_3, with the coframe and the connection forms omega^a_b(e_c) = e^a . (Omega(e_c) . e_b) kept as a labelled reading. Notation only: the bivectors are the torsion solution the check computes (rank 24 at five beta), and their components reproduce the stated forms (checked by hand: Omega(e_1) . e_1 = -beta'' e_0, Omega(e_2) . e_0 = -(beta/r) e_2). (2) uses: std-algebra.complexification-is-the-odd-extension@2 added (the I_5 classes and m = e_2 + I_5 e_3 rest on it; cited in the formal and proof). Repinned pairing.imported-schwarzschild-connection-curvature 5 -> 6 (formal unchanged), pairing.imported-spin-coefficients-null-tetrad 2 -> 3 (the unit I_5 named, U3) and pairing.two-frames-share-vacuum-selected-transport 5 -> 6 (clause (ii) now cites this result as a mention; the clause (i) rescaling this proof uses is unchanged). Version kept at 7.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG: the PG gauge field hb^{-1}(e_t) = e_0 + beta e_1, the rotation-gauge field solved from the torsion equation hb^T(grad ^ f^a) = sum_b e^b ^ (Omega(e_b) . e^a) (unique, rank 24): Omega(e_0) = 0, Omega(e_1) = -beta'' e_1 e_0, Omega(e_2) = (beta e_0 + e_1) ^ e_2/r, Omega(e_3) = (beta e_0 + e_1) ^ e_3/r + (cot theta/r) e_2 ^ e_3; classes as symmetric products in Cl(2,3) with the central unit I_5 ((u ^ e_2) . l = -(u . l) e_2); the static frame built inside the same gauge for the covariance; the loop class from the field strength of the solved field. Structure equations kept as a labelled reading. Checked exactly: check_gtg_torsion_solution_is_the_pg_gauge_field (solve from the coframe alone, rank 24, the four bivectors at five points beta = 4/5, 1, 2, 1/3, 3/5) and check_gtg_classes_and_loop_class_in_cl23 (I_5 central of square -1; outgoing and ingoing classes, (l.D)l = (beta^3/4M) l, the values 144/125, 2, 12 and the loop class 2M/r^3, all from the solved field). Version 6 -> 7; outside_ga removed (the forms are now a reading).'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof works with the coframe and connection one-forms (beta'' dr ^ dT) of the Painleve-Gullstrand frame; the forms are the computation.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -86,14 +115,18 @@ extraction:
 ---
 
 ## formal
-For the Schwarzschild gravitational field on flat spacetime in the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), take the orthonormal physical frame $\{e_a\}$ whose coframe is the set of components of the physical displacement $\hb^{-1}(dx)$: $\theta^{0} = dT$, $\theta^{1} = dr + \beta\,dT$, $\theta^{2} = r\,d\vartheta$, $\theta^{3} = r\sin\vartheta\,d\varphi$. The rotation-gauge field along this frame, written $\Omega(e_c)$ for $\Omega(\hb(e_c))$ (the bivector of item (b) of the definition along the physical vector $e_c$), has the connection forms $\omega^{0}{}_{1} = -\beta'\,\theta^{1}$, $\omega^{2}{}_{1} = \theta^{2}/r$, $\omega^{2}{}_{0} = -(\beta/r)\,\theta^{2}$, with $\hat3$ mirroring $\hat2$ and $\omega^{3}{}_{2} = (\cot\vartheta/r)\theta^{3}$, where $\beta' = d\beta/dr = -\beta^{3}/4M$. The pairing classes of the outgoing vacuum $\ell = e_{0} + e_{1}$ are
+For the Schwarzschild gravitational field on flat spacetime in the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), take the constant orthonormal physical frame $\{e_a\}$ with $\hb^{-1}(e_{t}) = e_{0} + \beta e_{1}$, $\hb^{-1}(e_{r}) = e_{1}$, $\hb^{-1}(e_{\vartheta}) = r\,e_{2}$, $\hb^{-1}(e_{\varphi}) = r\sin\vartheta\,e_{3}$ ($e_{t}, \dots, e_{\varphi}$ the background frame of the labels; in components, its coframe, the components of the physical displacement $\hb^{-1}(dx)$, is $\theta^{0} = dT$, $\theta^{1} = dr + \beta\,dT$, $\theta^{2} = r\,d\vartheta$, $\theta^{3} = r\sin\vartheta\,d\varphi$). The rotation-gauge field along this frame, written $\Omega(e_c)$ for $\Omega(\hb(e_c))$ (the bivector of item (b) of the definition along the physical vector $e_c$), is
+\[
+\Omega(e_{0}) = 0, \quad \Omega(e_{1}) = -\beta'\,e_{1}e_{0}, \quad \Omega(e_{2}) = \frac{(\beta e_{0} + e_{1})\wedge e_{2}}{r}, \quad \Omega(e_{3}) = \frac{(\beta e_{0} + e_{1})\wedge e_{3}}{r} + \frac{\cot\vartheta}{r}\,e_{2}\wedge e_{3},
+\]
+where $\beta' = d\beta/dr = -\beta^{3}/4M$ (in components, a labelled reading: the connection forms $\omega^{a}{}_{b}(e_{c}) = e^{a}\cdot(\Omega(e_{c})\cdot e_{b})$ are $\omega^{0}{}_{1} = -\beta'\,\theta^{1}$, $\omega^{2}{}_{1} = \theta^{2}/r$, $\omega^{2}{}_{0} = -(\beta/r)\,\theta^{2}$, with $\hat3$ mirroring $\hat2$ and $\omega^{3}{}_{2} = (\cot\vartheta/r)\theta^{3}$). The pairing classes of the outgoing vacuum $\ell = e_{0} + e_{1}$ are
 \[
 \pv(\Omega(e_{0})) = \pv(\Omega(e_{1})) = 0, \qquad \pv(\Omega(e_{2})) = -\frac{1 - \beta}{r}, \qquad \pv(\Omega(e_{3})) = -\,I_{5}\,\frac{1 - \beta}{r},
 \]
 numbers of $\mathrm{span}\{1, I_{5}\}$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$, in which the transverse complex null vector is $m = e_{2} + I_{5}e_{3}$ (\claimref{std-algebra.complexification-is-the-odd-extension}); zero on the horizon locus $\beta = 1$, negative outside and positive inside; the transverse expansion is $2(1 - \beta)/r$, the expansion of the outgoing congruence, which vanishes on the horizon locus and is negative in the trapped region; and $(\ell \cdot D)\ell = (\beta^{3}/4M)\,\ell$. For the ingoing flag bit, the vacuum $\operatorname{span}\{n, m\}$ with $n = e_{0} - e_{1}$, the transverse classes are $+(1 + \beta)/r$ and $+I_{5}(1 + \beta)/r$: one sign throughout, $\tfrac{144}{125}$, $2$ and $12$ at $\beta = \tfrac45, 1, 2$, and no horizon zero, the ingoing rays converging everywhere. The two frames agree covariantly: $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$ in both transverse directions, the factor being the rescaling $\ell_{\mathrm{PG}} = (F/(1 + \beta))\,\ell_{\mathrm{static}}$; at $(F, \beta) = (\tfrac35, \tfrac45)$ the values are $-\tfrac{16}{125} = \tfrac13\cdot(-\tfrac{48}{125})$. The field strength $\mathcal{R}(B)$ read in the regular frame has the same coefficients as functions of $r$, and the class of the loop $(n, e_{2})$ is $2M/r^{3}$ in this frame too, equal to $1$ on the horizon locus at $M = \tfrac12$: the curvature classes do not vanish where the connection classes do.
 
 ## technical
-For the Schwarzschild field on flat spacetime in the Painlev\'e-Gullstrand gauge, the orthonormal physical frame has coframe $\theta^0 = dT$, $\theta^1 = dr + \beta\,dT$, $\theta^2 = r\,d\vartheta$, $\theta^3 = r\sin\vartheta\,d\varphi$ (the components of $\hb^{-1}(dx)$), with $\beta' = -\beta^3/4M$. Along this frame the rotation-gauge field gives the outgoing vacuum $\ell = e_0 + e_1$ the pairing classes $\pv(\Omega(e_0)) = \pv(\Omega(e_1)) = 0$, $\pv(\Omega(e_2)) = -(1 - \beta)/r$ and $\pv(\Omega(e_3)) = -I_{5}(1 - \beta)/r$, numbers of $\mathrm{span}\{1, I_{5}\}$ with $I_{5}$ the central unit of $\Cl(2,3)$ that complexifies the transverse null vector $m = e_{2} + I_{5}e_{3}$: zero on the horizon locus $\beta = 1$, negative outside and positive inside. The transverse expansion $2(1 - \beta)/r$ of the outgoing congruence vanishes on the horizon locus and is negative in the trapped region, and $(\ell \cdot D)\ell = (\beta^3/4M)\,\ell$.
+For the Schwarzschild field on flat spacetime in the Painlev\'e-Gullstrand gauge, the orthonormal physical frame is given by $\hb^{-1}(e_t) = e_0 + \beta e_1$, $\hb^{-1}(e_r) = e_1$, $\hb^{-1}(e_\vartheta) = r\,e_2$, $\hb^{-1}(e_\varphi) = r\sin\vartheta\,e_3$ (in components, the coframe $\theta^0 = dT$, $\theta^1 = dr + \beta\,dT$, $\theta^2 = r\,d\vartheta$, $\theta^3 = r\sin\vartheta\,d\varphi$), and the rotation-gauge field along it is $\Omega(e_0) = 0$, $\Omega(e_1) = -\beta' e_1e_0$, $\Omega(e_2) = (\beta e_0 + e_1)\wedge e_2/r$, $\Omega(e_3) = (\beta e_0 + e_1)\wedge e_3/r + (\cot\vartheta/r)\,e_2\wedge e_3$, with $\beta' = -\beta^3/4M$. It gives the outgoing vacuum $\ell = e_0 + e_1$ the pairing classes $\pv(\Omega(e_0)) = \pv(\Omega(e_1)) = 0$, $\pv(\Omega(e_2)) = -(1 - \beta)/r$ and $\pv(\Omega(e_3)) = -I_{5}(1 - \beta)/r$, numbers of $\mathrm{span}\{1, I_{5}\}$ with $I_{5}$ the central unit of $\Cl(2,3)$ that complexifies the transverse null vector $m = e_{2} + I_{5}e_{3}$: zero on the horizon locus $\beta = 1$, negative outside and positive inside. The transverse expansion $2(1 - \beta)/r$ of the outgoing congruence vanishes on the horizon locus and is negative in the trapped region, and $(\ell \cdot D)\ell = (\beta^3/4M)\,\ell$.
 
 For the ingoing vacuum $\operatorname{span}\{n, m\}$, $n = e_0 - e_1$, the transverse classes are $(1 + \beta)/r$ and $I_{5}(1 + \beta)/r$, of one sign throughout with no horizon zero. The two frames agree covariantly, $\pv_{\mathrm{PG}} = \tfrac{F}{1 + \beta}\,\pv_{\mathrm{static}}$, the factor being the rescaling of $\ell$ between them. The curvature class of the loop $(n, e_2)$, read from the field strength, is $2M/r^3$ in this frame too, nonzero on the horizon: the curvature classes do not vanish where the connection classes do.
 

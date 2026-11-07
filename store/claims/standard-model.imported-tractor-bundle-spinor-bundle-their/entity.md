@@ -21,9 +21,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - correspondence.imported-tractor-connection-local-twistor-transport@7
-  - correspondence.local-twistor-transport-ascended-spinor-connection@9
-  - interior.imported-tractor-connection@2
+  - correspondence.imported-tractor-connection-local-twistor-transport@8
+  - correspondence.local-twistor-transport-ascended-spinor-connection@10
+  - interior.imported-tractor-connection@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - rungs.imported-fock-representation-bogoliubov-group-external@1
+  - rungs.imported-fock-representation-bogoliubov-group-external@2
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
   proof: proof-main.tex
 checked_by:

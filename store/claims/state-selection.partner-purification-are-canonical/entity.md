@@ -1,7 +1,7 @@
 ---
 id: state-selection.partner-purification-are-canonical
 kind: claim
-version: 4
+version: 5
 title: The partner and the purification are canonical
 status: proved
 region: state-selection
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-state-selection, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, scalars of the mode factor and the meaning of J stated
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -42,6 +50,14 @@ locators:
   label: thm:gns
   line: 314
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 5 (already raised in this run). Decision item E6 (routine; no retirement): equivalent_to singularity.purity-output-partner-commutant@5 added. The same result as the singularity entity, which is kept as the home.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: "The formal level now says that the scalars of the mode factor are span{1, e2e3}, the radial atom's complex unit (unit principle U2), and that J here is the modular conjugation, not that unit; no mathematical change."
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -52,10 +68,12 @@ extraction:
     - singularity.schmidt-forcing-proved-outright
     note: Removed the Schmidt-forcing lemma because clause (4) only compares the GNS vector with the state that lemma produces and the proof does not use it; the GNS, Tomita and thermofield-double results are standard but no imported claim for them exists in the store, so no standard route was added.
   env: theorem
+equivalent_to:
+- singularity.purity-output-partner-commutant@5
 ---
 
 ## formal
-Let $\omega$ be a faithful state on the mode factor $\Aa \cong \Mat_2(\C)$, with density matrix $\rho = \operatorname{diag}(\lambda_0^{2}, \lambda_1^{2})$, $\lambda_i > 0$. Then in the GNS representation of $\omega$:
+Let $\omega$ be a faithful state on the mode factor $\Aa \cong \Mat_2(\C)$ (scalars $\mathrm{span}\{1, e_{2}e_{3}\}$, the complex unit of the radial atom, \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}; below, $J$ is the modular conjugation of Lemma \claimref{singularity.modular-theory-matrix-factor-proved-outright}, not that unit), with density matrix $\rho = \operatorname{diag}(\lambda_0^{2}, \lambda_1^{2})$, $\lambda_i > 0$. Then in the GNS representation of $\omega$:
 \begin{enumerate}
 \item the representation space is $\C^{2}\otimes\C^{2}$, the cyclic vector is $\Omega = \sum_i \lambda_i |ii\rangle$, and $\Omega$ is cyclic and separating for $\pi(\Aa) = \Aa \otimes 1$;
 \item the commutant $\pi(\Aa)' = 1 \otimes \Aa$ is the partner copy, and is generated from $\pi(\Aa)$ by the modular conjugation, $\pi(\Aa)' = J\pi(\Aa)J$;

@@ -1,7 +1,7 @@
 ---
 id: rule2.imported-gamma-matrices-odd-dimension
 kind: claim
-version: 1
+version: 2
 title: 'Imported: gamma matrices in odd dimension'
 status: imported
 region: rule2
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 imported_from:
 - citation: 'J. Polchinski, String Theory, Vol. II: Superstring Theory and Beyond, Cambridge University
@@ -32,10 +36,17 @@ locators:
   label: fact:odd
   line: 193
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (imported) and left in its language: The Fact is about the irreducible matrix representations of the complex Clifford algebra in odd dimension as such (two inequivalent ones, related by Gamma^M -> -Gamma^M), quoted as the sources state it; in the series the two representations are the two signs of the central pseudoscalar, which the entities using it say.'
   env: fact
   typing:
     by: ai-typing-pass
     note: Imported standard fact, no derivation edges.
+outside_ga:
+  kind: imported
+  why: 'The Fact is about the irreducible matrix representations of the complex Clifford algebra in odd dimension as such (two inequivalent ones, related by Gamma^M -> -Gamma^M), quoted as the sources state it; in the series the two representations are the two signs of the central pseudoscalar, which the entities using it say.'
 ---
 
 ## formal

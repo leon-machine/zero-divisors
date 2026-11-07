@@ -1,7 +1,7 @@
 ---
 id: conformal.witt-extension-theorem
 kind: claim
-version: 1
+version: 2
 title: The Witt extension theorem
 status: imported
 region: conformal
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T02, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: T. Y. Lam, Introduction to Quadratic Forms over Fields, Graduate Studies in Mathematics 67,
@@ -29,10 +33,16 @@ locators:
   label: fact:witt
   line: 149
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item E7 (routine; no retirement): equivalent_to std-algebra.witt-extension@1 added. Witt''s extension theorem as imported in T02 is the standard-algebra entity, kept as the home.'
   env: fact
   typing:
     by: ai-typing-pass
     note: "Imported textbook result; levels describe the classical theorem only."
+equivalent_to:
+- std-algebra.witt-extension@1
 ---
 
 ## formal

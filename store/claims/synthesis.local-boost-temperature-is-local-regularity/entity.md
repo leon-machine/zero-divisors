@@ -1,7 +1,7 @@
 ---
 id: synthesis.local-boost-temperature-is-local-regularity
 kind: claim
-version: 4
+version: 5
 title: 'Local boost temperature is local regularity'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, version-1 clause numbers of the local-horizon premise named, and the signature sentence made exact'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -50,6 +54,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The clauses (ii) and (iii) cited are those of version 1 of the local-horizon premise (now (R_loc) and a dropped modular clause), now said; the sign sentence held for the round-sphere-positive tensor in (+,-,-,-), while in the store sign k = R_0101/3 is unchanged, now said (checked on de Sitter, v/r03_checks.py).'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -88,7 +96,7 @@ extraction:
 ---
 
 ## formal
-Signature $(-,+,+,+)$ in this statement and its proof; in the store's $(+,-,-,-)$ every component $R_{abcd}$ with all indices down changes sign, so $k$ below is $-R_{0101}/3$ there. Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $p$ a point of its invertible region, $\ell$ a future physically null direction at $p$, $n$ the other null direction of a boost plane through $p$ containing $\ell$, and $\mathcal{H}_{p,\ell}$ the local Rindler horizon of Premise \claimref{synthesis.c-loc-local-horizon-premise}; let $D$ be a causal diamond about $p$ of edge radius $L$. Leading order means leading order in the size of the patch against the scale of the field strength $\mathcal{R}$ at $p$.
+Signature $(-,+,+,+)$ in this statement and its proof; in signature $(+,-,-,-)$ with the Riemann tensor still positive on spheres every component $R_{abcd}$ with all indices down changes sign, so $k$ below is $-R_{0101}/3$ there, while with the store's curvature sign (minus that tensor) it is $R_{0101}/3$ unchanged. The clause numbers (i), (ii) and (iii) of Premise \claimref{synthesis.c-loc-local-horizon-premise} used here are those of its version 1 (clause (i) the mode count and entropy, clause (ii) the temperature, clause (iii) the modular flow); the current version states the entropy as (Loc), the temperature as (R$_{\mathrm{loc}}$), and records the rest under ``Not part of this premise''. Let $(\hb, \Omega)$ be a gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $p$ a point of its invertible region, $\ell$ a future physically null direction at $p$, $n$ the other null direction of a boost plane through $p$ containing $\ell$, and $\mathcal{H}_{p,\ell}$ the local Rindler horizon of Premise \claimref{synthesis.c-loc-local-horizon-premise}; let $D$ be a causal diamond about $p$ of edge radius $L$. Leading order means leading order in the size of the patch against the scale of the field strength $\mathcal{R}$ at $p$.
 \begin{enumerate}
 \item[(i)] \emph{(The geometric half, derived.)} In a normal gauge at $p$ (Riemann normal coordinates: a displacement gauge in which the straight background lines through $p$ are the geodesics of the derived metric, with $\hb(p) = 1$ and $\Omega(p) = 0$), the derived metric is $g_{ab} = \eta_{ab} - \tfrac13 R_{acbd}x^{c}x^{d} + O(x^{3})$, with $x$ the background displacement from $p$ and $R_{acbd}$ the curvature at $p$, read from the field strength in the signature of this statement. On the boost plane through $p$, with $x = \rho(\sinh\lambda, \cosh\lambda, 0, 0)$, the metric induced by the terms up to second order is
 \[
@@ -110,4 +118,4 @@ Premise (C$_{\mathrm{loc}}$) asks for three things on every small local horizon:
 The assumption that every small horizon is hot at the Unruh temperature and that its quantum state's internal clock runs along the horizon's own boost was stated as two separate requirements. This result shows that, read as statements about all the modes of the horizon together, they are one. The geometry part can be made local: near any point, however strong the gravitational field is, the smoothness condition that sets the temperature at a black hole gives the Unruh temperature, up to small corrections. For a quantum state on a finite set of modes, being thermal for a flow and having that flow as its internal clock are the same property. What is left is one assumption, that the modes of every small horizon are jointly thermal at that temperature. At black holes the series makes the corresponding assumption in two parts, one for each mode separately and one for how the modes combine; the local version needs both, so it is a new assumption, stronger than the black-hole smoothness rule alone. It is not derived here from anything weaker.
 
 ## one-liner
-For any patch carrying modes on which the local boost acts by phases (assumed), clause (iii) of (C$_{\mathrm{loc}}$), read on the patch's whole mode algebra, is equivalent to clause (ii) (KMS at $\beta$ iff faithful with modular group the boost at $-\beta s$, on every window), and both together are (R$_{\mathrm{loc}}$), the joint KMS condition of the I-state for the local boost at rapidity period $2\pi$, a new premise stronger than the local form of (R); derived is only the geometric half, that this period is where the local boost's Euclidean section is regular for every field strength at leading order, giving $T = a/2\pi$ up to a relative correction $-\tfrac32k\rho^{2} + O(\rho^{3})$.
+For any patch carrying modes on which the local boost acts by phases (assumed), clause (iii) of version 1 of (C$_{\mathrm{loc}}$), read on the patch's whole mode algebra, is equivalent to its clause (ii) (KMS at $\beta$ iff faithful with modular group the boost at $-\beta s$, on every window), and both together are (R$_{\mathrm{loc}}$), the joint KMS condition of the I-state for the local boost at rapidity period $2\pi$, a new premise stronger than the local form of (R); derived is only the geometric half, that this period is where the local boost's Euclidean section is regular for every field strength at leading order, giving $T = a/2\pi$ up to a relative correction $-\tfrac32k\rho^{2} + O(\rho^{3})$.

@@ -23,7 +23,7 @@ derivations:
   uses:
   - correspondence.shared-core-ordering-dictionary@4
   - hawking.homogeneity-ordering-shift@6
-  - hawking.imported-penrose-transform@2
+  - hawking.imported-penrose-transform@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

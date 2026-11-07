@@ -1,4 +1,12 @@
 functions:
+  check_gtg_tractor_field_strength_is_minus_weyl:
+    kind: sampled
+    clauses:
+    - 'on the Einstein region the field strength of Omega_T is -W, acting only on the middle slot (the proof''s curvature step)'
+    - '"Every point of a Schwarzschild (Lambda = 0) or Schwarzschild-de Sitter (Lambda > 0) exterior with M != 0 has the no-kernel property"'
+    - '"The no-kernel property fails at points of Petrov type N (the null propagation vector is a kernel vector)"'
+    - 'then every tractor I'' parallel for nabla is a constant multiple of I (the algebraic step once the middle slot vanishes)'
+    omits: 'two rational points (Lambda = 3/7 and 0) of the static field on exact jets; openness, connectedness and the uniqueness of parallel sections are the proof''s'
   check_weyl_kernel_schwarzschild_and_type_n:
     kind: sampled
     clauses: ["\"every point of a Schwarzschild or Schwarzschild-de Sitter exterior with M != 0 has the no-kernel property\"", "\"the no-kernel property fails at points of Petrov type N\""]

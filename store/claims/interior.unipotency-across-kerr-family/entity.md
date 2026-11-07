@@ -1,7 +1,7 @@
 ---
 id: interior.unipotency-across-kerr-family
 kind: claim
-version: 5
+version: 6
 title: Unipotency across the Kerr family
 status: proved
 region: interior
@@ -17,12 +17,16 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, square of the null vector written Q(k)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
   uses:
-  - interior.gauge-trajectory-unipotent-ray@8
-  - interior.imported-kerr-schild-form-kerr-gauge@1
+  - interior.gauge-trajectory-unipotent-ray@9
+  - interior.imported-kerr-schild-form-kerr-gauge@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -41,6 +45,14 @@ locators:
   label: prop:kerrschild
   line: 786
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: interior.gauge-trajectory-unipotent-ray repinned 8 -> 9 after reviewing its correction of clause (iv) (the light cones fold onto the kernel direction e_r, null for the rescaled limit form and spacelike at every r > 0); clauses (1) to (3) are unchanged; the use here holds as cited.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'House style: the square of the vector k is written Q(k) in the formal level and the proof; notation only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,7 +73,7 @@ extraction:
 ---
 
 ## formal
-Let $P_k(a) := (a\cdot k)\,k$ with $k^2 = 0$. Then, exactly:
+Let $P_k(a) := (a\cdot k)\,k$ with $Q(k) = 0$. Then, exactly:
 \begin{enumerate}
 \item $P_k^2 = 0$, so $\{1 + sHP_k\}$ is again a one-parameter unipotent family and $\hb^{-1} = 1 - H P_k$ in closed form wherever the gauge field is defined;
 \item $\hb(a)\cdot\hb(b) = a\cdot b + 2H\,(a\cdot k)(b\cdot k)$ with no higher corrections, and equally $\hb^{-1}(a)\cdot\hb^{-1}(b) = a\cdot b - 2H\,(a\cdot k)(b\cdot k)$; since the metric of Section \ref{sec:setting} is $g(a,b) = \hb^{-1}(a)\cdot\hb^{-1}(b)$, the gauge field reproduces the Kerr-Schild metric $g = \eta - 2H\,k\otimes k$ exactly, in the $(+,-,-,-)$ signature, the first display being the inverse metric;

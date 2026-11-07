@@ -25,7 +25,7 @@ derivations:
   - dark-tower-matter.five-dimensional-content@5
   - dark-tower-matter.gauge-algebras@5
   - dark-tower-matter.residue-seven-unit@3
-  - dark-tower-matter.third-pairs-unit-five-dimensions@4
+  - dark-tower-matter.third-pairs-unit-five-dimensions@5
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.where-mass-begins@2
   assumes:

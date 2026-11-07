@@ -1,7 +1,7 @@
 ---
 id: tower.witt-index-quantum-capacity
 kind: claim
-version: 4
+version: 5
 title: Witt index is quantum capacity
 status: proved
 region: tower
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T03, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, Q(v) for the square of a vector in the proof'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.tower.tower
@@ -45,6 +49,10 @@ locators:
   label: thm:capacity
   line: 328
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. The upper-bound step wrote Q(v,v) for the square of a vector; it is now Q(v), the store''s notation; no change of content.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'

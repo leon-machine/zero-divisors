@@ -1,7 +1,7 @@
 ---
 id: synthesis.unit-boost-residue-needs-nonpositive-exponent
 kind: claim
-version: 3
+version: 4
 title: 'A unit-boost Kasner residue needs a nonpositive exponent'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (Kasner-scalar field equations with the Ricci map and the physical gradient)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.frozen-point-datum-kasner-wall@7
+  - dark-energy.frozen-point-datum-kasner-wall@8
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense@4
-  - synthesis.diagonal-kasner-momentum-constraint@3
+  - synthesis.diagonal-kasner-momentum-constraint@4
   assumes: []
   proof: proof-main.tex
 checked_by:
@@ -41,6 +45,10 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Line element and index tensors to GA in (3): the ansatz is the synchronous gauge field hb^{-1}(e_0) = e_0, hb^{-1}(e_i) = tau^{p_i} e_i with its derived metric as a labelled reading, the kinetic term is Q(hb^T(grad phi))/2; in the proof the Ricci tensor becomes the Ricci map, the Einstein equation calR(a) = -8 pi G (T(a) - (d_b . T(b)) a/2), the scalar stress the map a -> (a . hat-grad phi) hat-grad phi with hat-grad phi = hb^T(grad phi) = (q/tau) e_0, and the wave equation D . hat-grad phi = 0; components stay as labelled readings. A notation change through the dictionary (R_ab = g_a . calR(g_b)); the Ricci map values are the ones checked exactly for dark-energy.frozen-point-datum-kasner-wall. Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -67,7 +75,7 @@ Let $p = (p_1, p_2, p_3) \in \R^3$ with $\sum_i p_i = 1$, and let $B_w = \sum_i 
 \begin{enumerate}
 \item $B_w^2 = \sum_i p_i^2$. So $B_w$ is a unit boost if and only if $p$ lies on the Kasner circle, which is the second Kasner relation of \claimref{dark-energy.frozen-point-datum-kasner-wall}(ii).
 \item On the Kasner circle some exponent is nonpositive, and an exponent vanishes only at the permutations of $(1,0,0)$. Equivalently, if every $p_i > 0$ then $B_w^2 = 1 - 2\sum_{i<j}p_ip_j < 1$.
-\item On the diagonal Kasner ansatz $g = d\tau^2 - \sum_i \tau^{2p_i}(dx^i)^2$ coupled to a massless scalar $\phi = q\log\tau$, at leading order in $\tau$, the Einstein-scalar equations hold if and only if $\sum_i p_i = 1$ and $\sum_i p_i^2 = 1 - 8\pi G q^2$ (the scalar's kinetic term normalised as $\tfrac12(\partial\phi)^2$), the wave equation then holding exactly. Hence $B_w^2 = 1 - 8\pi G q^2$: the residue is a unit boost exactly when the scalar carries no logarithmic rate.
+\item On the synchronous diagonal Kasner field $\hb^{-1}(e_0) = e_0$, $\hb^{-1}(e_i) = \tau^{p_i}e_i$ on flat spacetime (derived metric, in components, $d\tau^2 - \sum_i \tau^{2p_i}(dx^i)^2$) coupled to a massless scalar $\phi = q\log\tau$, at leading order in $\tau$, the Einstein-scalar equations hold if and only if $\sum_i p_i = 1$ and $\sum_i p_i^2 = 1 - 8\pi G q^2$ (the scalar's kinetic term normalised as $\tfrac12 Q(\hb^{T}(\nabla\phi))$, in components $\tfrac12(\partial\phi)^2$), the wave equation then holding exactly. Hence $B_w^2 = 1 - 8\pi G q^2$: the residue is a unit boost exactly when the scalar carries no logarithmic rate.
 \end{enumerate}
 So the identification of step (2) of \claimref{dark-energy.forcing-half-schwarzschild-wall-residue-sense}, field equations at the wall equal to a unit-boost residue, holds only on vacuum walls, and every such wall has an exponent $p_i \leq 0$.
 

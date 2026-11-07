@@ -28,7 +28,7 @@ derivations:
   - singularity.deficit-theorem-cost-descent-exactly@4
   - singularity.purity-correlation-transfer-recovery@3
   - singularity.parity-protection@2
-  - singularity.p-reduced-metric-level-reading-many@6
+  - singularity.p-reduced-metric-level-reading-many@7
   proof: proof-main.tex
 checked_by:
 - kind: legacy

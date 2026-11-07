@@ -1,7 +1,7 @@
 ---
 id: dark-energy.stelle-west-vector-frozen-point
 kind: claim
-version: 5
+version: 6
 title: The Stelle-West vector of the frozen point
 status: proved
 region: dark-energy
@@ -17,11 +17,24 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: the tractor connection as the Cl(2,4) gauge field Omega_T, checked slot by slot'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): opening citation corrected (no circular use of the tractor theorem); dictionary edge'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -36,12 +49,30 @@ checked_by:
   ref: check.py::check_gauge_field_is_omega_plus_frame_wedge_w
 - kind: check
   ref: check.py::check_bracket_of_soldering_bivectors
+- kind: check
+  ref: check.py::check_tractor_gauge_field_slots_and_bracket
 locators:
   paper: T10
   number: Lem 2.5
   label: lem:sw
   line: 658
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 2.1 applied: the opening sentence attributed tractors as Cl(2,4) vectors and the tractor connection as a Cl(2,4) gauge field to Fact synthesis.imported-gtg-dictionary, which says nothing about tractors (checked: its formal (i) to (vi)). It now cites the dictionary only for physical vectors, derived metric and D, and says that the gauge-field form is derived in the next paragraph from the display of Fact dark-energy.imported-frozen-point-geometry alone, using neither that Fact''s sentence naming Theorem synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection (confirmed present in the Fact''s formal) nor that theorem, which uses this lemma (@6). Uses edge synthesis.imported-gtg-dictionary@2 added (cited for a step, imported, no uses of its own); premise() for it added to check_tractor_gauge_field_slots_and_bracket (runcheck passes).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: tractors as Cl(2,4) vectors sigma ninf + mu + rho n0, the connection of the frozen-point Fact shown slot by slot to be the gauge field Omega_T(a) = Omega(a) - ninf ^ hb^{-1}(a) + n0 ^ P(hb^{-1}(a)) (derived in the proof, not cited from the tractor theorem, which rests on this lemma), Theta(A) = A ^ W at P = (Lambda/6) id, D^T X = (A ^ W) . n0 = A, and the bracket as the commutator product with the four-vector formula; the slot computation kept as a labelled reading at the end. New exact check check_tractor_gauge_field_slots_and_bracket (generic Schouten map and rotation bivector, three values of Lambda, the Jacobi form of the bracket). outside_ga withdrawn: no stand-in remains.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the tractor derivative of X and V slot by slot in the scale-g component form of the tractor connection (sigma, mu_b, rho; g_ab, P_ab); on flat spacetime that connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the slot computation is its component reading.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

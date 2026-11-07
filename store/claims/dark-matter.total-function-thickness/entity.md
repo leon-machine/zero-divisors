@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.population-count-one-share-half-percent@5
+  - dark-matter.population-count-one-share-half-percent@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
   - dark-matter.p2-indifference@2
@@ -49,6 +49,10 @@ locators:
   label: prop:Tc
   line: 947
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.population-count-one-share-half-percent repinned 5 -> 6 after reviewing its C1 restatement (the share of one now rests also on the common-ceiling-coupling premise, with an assumes edge; the numbers are unchanged); the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

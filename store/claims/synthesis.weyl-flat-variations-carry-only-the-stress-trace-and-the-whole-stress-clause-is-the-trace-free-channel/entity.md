@@ -24,10 +24,10 @@ derivations:
 - name: main
   uses:
   - synthesis.twistor-flat-fields-give-nordstrom-not-einstein@2
-  - synthesis.imported-maxwell-stress-spacetime-algebra@1
+  - synthesis.imported-maxwell-stress-spacetime-algebra@2
   - synthesis.imported-nordstrom-scalar-theory-einstein-fokker-form@1
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,6 +53,10 @@ lineage:
   - synthesis.inverse-problem-for-the-clausius-route
   - synthesis.vacuum-field-stress-tensor-is-einstein-tensor-or-trace
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.einstein-from-the-field-theory
   note: >-
     Constructive attack on the open problem's second attack (derive the whole-stress clause from the field

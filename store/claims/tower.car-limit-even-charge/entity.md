@@ -1,7 +1,7 @@
 ---
 id: tower.car-limit-even-charge
 kind: claim
-version: 5
+version: 6
 title: The CAR limit, even charge
 status: proved
 region: tower
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T03, deposited version
+- name: Claude Opus 5.5
+  role: 'consistency pass, the complexification''s unit named in the technical level'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.tower.tower
@@ -27,7 +31,7 @@ derivations:
   - tower.fock-module-one-qubit-per-rung@6
   - tower.glimms-classification-car-uniqueness@1
   - tower.ladder-pairs-satisfy-car-vectors@4
-  - tower.structure-tower-c-norms@9
+  - tower.structure-tower-c-norms@10
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +48,10 @@ locators:
   label: thm:carlimit
   line: 432
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. The technical level now says which unit complexifies: the scalar 1 (x) I_4 of the tensor factor of tower.structure-tower-c-norms, central and not in any floor, and for the physical ground not its volume element gamma_0 gamma_1 gamma_2 gamma_3 (which anticommutes with the ground vectors); mathematics unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -62,7 +70,7 @@ Continue with $p - q$ even. Complexifying and completing in the unique C*-norm o
 where $\CAR$ is the CAR algebra of countably many fermionic modes, the unique Glimm UHF algebra of type $2^\infty$; the mode operators are represented by the adjoined null vectors themselves via Proposition \claimref{tower.ladder-pairs-satisfy-car-vectors}, with $w_j = v_j^*$ both for the intrinsic *-structure of Lemma \claimref{tower.structure-tower-c-norms} and for the Fock inner product. The completed tower is the ground algebra tensored with the algebra of a free fermionic quantum field: iterated transport is second quantisation, one mode per rung.
 
 ## technical
-For $p - q$ even, complexify the algebraic limit of the tower and complete it in its unique C*-norm. The result is $\Cl(p,q)_\C \otimes \CAR$, where $\CAR$ is the CAR algebra of countably many fermionic modes, the unique UHF algebra of type $2^\infty$.
+For $p - q$ even, complexify the algebraic limit of the tower and complete it in its unique C*-norm. The complexification is that of the $*$-structure lemma: $\C$ is $\mathrm{span}\{1, I_4\}$ in a tensor factor, with unit $1 \otimes I_4$ central and in no floor; for the physical ground it is not the ground's own volume element $\gamma_0\gamma_1\gamma_2\gamma_3$, which anticommutes with the ground vectors. The result is $\Cl(p,q)_\C \otimes \CAR$, where $\CAR$ is the CAR algebra of countably many fermionic modes, the unique UHF algebra of type $2^\infty$.
 
 The mode operators are the adjoined null vectors themselves, $a_j = w_j$ and $a_j^\dagger = v_j$, and $w_j = v_j^*$ holds both for the intrinsic *-structure of the tower and for the Fock inner product. The completed tower is thus the ground algebra tensored with the algebra of a free fermionic field: iterated transport is second quantisation, one mode per rung.
 

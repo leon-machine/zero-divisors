@@ -37,7 +37,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.tensor-rules@1
-  - std-algebra.periodicity@1
+  - std-algebra.periodicity@2
   - std-algebra.z2-grading@1
   - primer.centre@2
   - primer.sign@2

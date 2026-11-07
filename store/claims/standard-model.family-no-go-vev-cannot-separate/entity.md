@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.yukawa-pattern-two-rung-module@5
+  - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.hyp-s-slot-statistics@9
   proof: proof-main.tex
 - name: standard-route

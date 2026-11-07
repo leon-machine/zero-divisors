@@ -24,8 +24,8 @@ derivations:
 - name: main
   uses:
   - dark-matter.imported-eight-towers-mod-8-clock@4
-  - dark-matter.imported-gravity-only-coupling@3
-  - dark-matter.residue-soldered-invariant-not-algebraic-one@3
+  - dark-matter.imported-gravity-only-coupling@4
+  - dark-matter.residue-soldered-invariant-not-algebraic-one@4
   - sheaf.infinite-wall-sequence@4
   assumes:
   - dark-matter.p1-single-frozen-point@1

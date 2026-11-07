@@ -24,9 +24,9 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - correspondence.imported-tractor-connection-local-twistor-transport@7
+  - correspondence.imported-tractor-connection-local-twistor-transport@8
   - correspondence.imported-weyls-theorem@2
-  - synthesis.imported-gtg-dictionary@1
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
   - synthesis.imported-nordstrom-scalar-theory-einstein-fokker-form@1
   - field-theory.twistor-attachment@6
@@ -48,6 +48,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - field-theory.operator-newtonian-coupling
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   open_problem: op.einstein-from-the-field-theory
   note: >-
     Adversarial result on the open problem's second attack (consistency of the coupled system: Bianchi

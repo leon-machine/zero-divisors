@@ -28,8 +28,8 @@ derivations:
   - synthesis.plane-commutant-even-ground@3
   - transport.classification-real-clifford-algebras@3
   - rule2.imported-rule-2-matrix-units-forgotten@3
-  - tower.structure-tower-c-norms@9
-  - tower.car-limit-even-charge@5
+  - tower.structure-tower-c-norms@10
+  - tower.car-limit-even-charge@6
   - std-algebra.existence-uniqueness@1
   proof: proof-main.tex
 checked_by:

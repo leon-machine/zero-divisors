@@ -1,7 +1,7 @@
 ---
 id: simulations.cluster-bound-two-dimensions
 kind: claim
-version: 3
+version: 4
 title: The cluster bound in two dimensions
 status: proved
 region: simulations
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14b, deposited version
+- name: Claude Opus 5.5
+  role: consistency pass, premise R3 named where the core spacing uses it
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -44,6 +48,10 @@ locators:
   label: prop:scatter
   line: 199
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The lay level, the one-liner and the proof attributed the core spacing to R1 and R2 only; the sheets'' spacing is R3''s, reached through simulations.effective-cross-section-sheet-matter, which assumes it (the technical level already said R1 to R3). Wording and citation; no edge changed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -88,7 +96,7 @@ Take quanta of the nucleon mass colliding at a relative speed of $3000$ km/s, so
 With $\sigma_{\mathrm{eff}} = \lambda s$ at the isotropic spacing of a cluster core, the bound $\sigma_{\mathrm{eff}}/m < 1\ \cmg$ requires $\lambda < 4.8 \times 10^{-12}$ fm. By size alone this needs $a < 10^{-4.0 \times 10^{6}}$ fm; through the interaction strength it needs an s-wave phase shift $\delta_{0} < 1.7 \times 10^{-7}$. These are numerical evaluations, with the spacing fixed by premises R1 to R3.
 
 ## lay
-Matter confined to thin sheets scatters as if it lived in two dimensions, where a particle's target size is a length rather than an area. At the speeds of colliding galaxy clusters even an absurdly small particle presents a sizeable target, because its size enters only through a logarithm. Taking the quanta to have the nucleon's mass, with the spacing in a cluster core fixed by the paper's counting premises R1 and R2, to meet the observed limit on dark-matter collisions there the particles would have to be smaller than any physical scale, or barely interact at all.
+Matter confined to thin sheets scatters as if it lived in two dimensions, where a particle's target size is a length rather than an area. At the speeds of colliding galaxy clusters even an absurdly small particle presents a sizeable target, because its size enters only through a logarithm. Taking the quanta to have the nucleon's mass, with the spacing in a cluster core fixed by the paper's counting premises R1 to R3, to meet the observed limit on dark-matter collisions there the particles would have to be smaller than any physical scale, or barely interact at all.
 
 ## one-liner
-For nucleon-mass sheet quanta at cluster speeds, assuming premises R1 and R2 for the core spacing, the cluster bound of $1\ \cmg$ needs an in-sheet cross-section below $4.8 \times 10^{-12}$ fm, which requires either an impossibly small size or an s-wave phase shift below $1.7 \times 10^{-7}$.
+For nucleon-mass sheet quanta at cluster speeds, assuming premises R1 to R3 for the core spacing, the cluster bound of $1\ \cmg$ needs an in-sheet cross-section below $4.8 \times 10^{-12}$ fm, which requires either an impossibly small size or an s-wave phase shift below $1.7 \times 10^{-7}$.

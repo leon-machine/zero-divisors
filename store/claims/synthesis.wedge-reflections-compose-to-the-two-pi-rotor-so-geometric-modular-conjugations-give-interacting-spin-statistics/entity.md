@@ -1,7 +1,7 @@
 ---
 id: synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 kind: claim
-version: 4
+version: 5
 title: 'Wedge reflections compose to the $2\pi$ rotor; spin-statistics if geometric'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the unit named as I_4 in place of ''i = I_4'' (wording)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: draft
 imported_from:
 - citation: 'B. Kuckert, A new approach to spin and statistics, Lett. Math. Phys. 35 (1995), 319--331; arXiv:hep-th/9412130.'
@@ -40,10 +44,10 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.modular-period-on-values-is-the-dual-plane-turn@4
+  - synthesis.modular-period-on-values-is-the-dual-plane-turn@5
   - angle.imported-theorems-deliver-their-hypotheses@3
   - synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem@2
-  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@4
+  - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics@5
   - synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem@3
   proof: proof-main.tex
 checked_by:
@@ -63,6 +67,10 @@ lineage:
   - synthesis.n-plus-null-ground-state
   - synthesis.modular-period-on-values-is-the-dual-plane-turn
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Unit naming (DECISIONS H1, R06 item 1): ''with $i = I_4$'' identified a bare i with the unit, which the unit principle treats as a bare unit; the levels and proofs now name the unit (''with the unit $I_4$'', ''the field theory''s unit $I_4$''). Mechanical; no content change.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -106,13 +114,13 @@ Units and signature of the store; $\Cl(1,3)$, $I_{4} = \gamma_{0}\gamma_{1}\gamm
 \item[(i)] \emph{(The wedge reflection; proved.)} $B^{2} = 1$, $B\tilde B = -1$, and $\mathrm{Ad}(B)$ is the reflection $j_{W}$: $(x^{0}, x^{1}) \mapsto (-x^{0}, -x^{1})$, $x^{2}$, $x^{3}$ fixed. Since $I_{4}D = -B$, $\mathrm{Ad}(B) = \mathrm{Ad}(I_{4}) \circ \mathrm{Ad}(D)$: the PT inversion after the turn by $\pi$ in the dual plane, which is the half modular period on values by \claimref{synthesis.modular-period-on-values-is-the-dual-plane-turn}(ii). This is the geometric part of the Bisognano-Wichmann conjugation, CPT composed with the turn by $\pi$ about the boost axis (Fact \claimref{angle.imported-theorems-deliver-their-hypotheses}).
 \item[(ii)] \emph{(Edge translations; geometric part proved, modular action imported.)} $j_{W}$ reverses $n_{\pm}$ and fixes $\gamma_{2}$, $\gamma_{3}$; the wedge's boosts map $W$ into itself and dilate $n_{\pm}$ by reciprocal factors ($(5 + 4B)/3$: $n_{+} \mapsto n_{+}/9$, $n_{-} \mapsto 9n_{-}$). Under the spectrum condition, Borchers' theorem (Fact \claimref{synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem}(ii)) gives that the modular group of every wedge algebra (with the vacuum cyclic and separating) acts on the translations as the wedge's boosts at rapidity $-2\pi t$ and its modular conjugation as $j_{W}$, for interacting nets as well.
 \item[(iii)] \emph{(Turned wedges; proved.)} Independently of signs: for $B_{\pi/2} = \gamma_{0}\gamma_{2}$, the reflection versor of the quarter-turned wedge, $(\pm B_{\pi/2}\cdot\pm B)^{2} = -1$, so the two reflections compose to a rotor representing the half turn whose square is the rotation by $2\pi$ in the spin group. For the wedge $W_{\theta}$ turned by $\theta$ in the plane $\gamma_{1}\gamma_{2}$, $B_{\theta} = \gamma_{0}(\cos\theta\,\gamma_{1} + \sin\theta\,\gamma_{2})$ and $B_{\theta}B = \cos\theta + \sin\theta\,\gamma_{1}\gamma_{2}$, the spin rotor of the turn by $2\theta$; $\theta \mapsto B_{\theta}B$ runs from $1$ to $-1$ on $[0, \pi]$, $W_{\pi} = W'$ and $B_{\pi} = -B$. As maps $\mathrm{Ad}(B_{\pi}) = \mathrm{Ad}(B)$; the sign $B_{\pi} = -B$ is the lift by continuity along $\theta$, and along that lift the product of the reflection versors of $W'$ and $W$ is the rotation by $2\pi$ of the spin group, $-1$ on spinor values and $(-1)^{2s}$ on spin-$s$ values.
-\item[(iv)] \emph{(The twist with $i = I_{4}$; proved, the standard Klein-twist identity with $i$ written as $I_{4}$.)} For an even involution $k$ commuting with $I_{4}$, $V = (1 + I_{4}k)(1 + I_{4})^{-1}$ satisfies $VV^{*} = 1$, $Vk = kV$, $V^{2} = k$, and a conjugate-linear $J$ reversing $I_{4}$ and fixing $k$ has $JV^{*}J = V$, so $VJV^{*}J = k$.
+\item[(iv)] \emph{(The twist with the unit $I_{4}$; proved, the standard Klein-twist identity with $i$ written as $I_{4}$.)} For an even involution $k$ commuting with $I_{4}$, $V = (1 + I_{4}k)(1 + I_{4})^{-1}$ satisfies $VV^{*} = 1$, $Vk = kV$, $V^{2} = k$, and a conjugate-linear $J$ reversing $I_{4}$ and fixing $k$ has $JV^{*}J = V$, so $VJV^{*}J = k$.
 \item[(v)] \emph{(Spin-statistics; imported, conditional.)} If the spectrum condition holds and the modular conjugation of the wedge algebra of the observables acts on the local algebras as $j_{W}$ (modular P1CT symmetry), with covering-group covariance, the spectrum condition, a unique vacuum, dimension at least $1 + 2$ and a compact group of internal symmetries, then for every covariant normal field the rotation by $2\pi$ equals the Bose-Fermi grading, $R(2\pi) = J_{W'}J_{W} = VJV^{*}J = k$ (Fact \claimref{synthesis.imported-kuckert-modular-pct-spin-statistics-and-borchers-theorem}(i), \cite{Kuckert1995}, Corollaries 3.2 and 3.5; there twisted duality is derived, from \cite{DoplicherRoberts1990}, not assumed); (iii) is the geometric step and (iv) the algebraic step in the spacetime algebra. Modular covariance (Fact \claimref{synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem}(iii)) implies the premise.
 \item[(vi)] \emph{(What remains; argued.)} The spectrum condition, a hypothesis of the theorem, gives by (ii) the action of the modular objects on translations; (N$_{+}$) is posed for quasi-free states of a CAR mode algebra (\claimref{synthesis.positive-null-energy-gives-r-premises}) and does not supply the spectrum condition of an interacting net. Nothing in the store gives the action of the modular conjugations on the local algebras, which is the remaining premise for interacting fields; (HS) and (HD) do not bear on it. Electric charge is not localisable in spacelike cones, so for the charged fields of QED the conclusion needs more than this premise.
 \end{enumerate}
 
 ## technical
-The geometric side of the modular route to spin and statistics has a short form in the spacetime algebra. The reflection of a wedge, which reverses time and the wedge's spatial direction, is conjugation by the wedge's own boost bivector $B$; by the stored dual-plane result it is the PT inversion after the half modular period on values. The reflections of a wedge and of its quarter-turned copy compose, whatever signs the versors carry, to a rotor whose square is $-1$, the rotation by $2\pi$ in the spin group; along the turned wedges the product is $\cos\theta + \sin\theta\,\gamma_{1}\gamma_{2}$, whose lift by continuity reaches $-1$ at the causal complement. With $i = I_{4}$ the Klein twist $V = (1 + I_{4}k)/(1 + I_{4})$ squares to the grading $k$. These are the two steps of Kuckert's theorem (standard): if each wedge's modular conjugation acts on the local algebras as the wedge's reflection, a premise weaker than modular covariance, then the rotation by $2\pi$ is the grading for interacting fields.
+The geometric side of the modular route to spin and statistics has a short form in the spacetime algebra. The reflection of a wedge, which reverses time and the wedge's spatial direction, is conjugation by the wedge's own boost bivector $B$; by the stored dual-plane result it is the PT inversion after the half modular period on values. The reflections of a wedge and of its quarter-turned copy compose, whatever signs the versors carry, to a rotor whose square is $-1$, the rotation by $2\pi$ in the spin group; along the turned wedges the product is $\cos\theta + \sin\theta\,\gamma_{1}\gamma_{2}$, whose lift by continuity reaches $-1$ at the causal complement. With the unit $I_{4}$ the Klein twist $V = (1 + I_{4}k)/(1 + I_{4})$ squares to the grading $k$. These are the two steps of Kuckert's theorem (standard): if each wedge's modular conjugation acts on the local algebras as the wedge's reflection, a premise weaker than modular covariance, then the rotation by $2\pi$ is the grading for interacting fields.
 
 The spectrum condition, a hypothesis of that theorem, gives through Borchers' theorem the action of the modular objects on translations; the reflection reverses the edge's null translations and the boosts dilate them. Nothing in the store gives their action on the local algebras, which is what remains; the null ground-state premise of the horizons is posed for free (quasi-free) states and does not supply the spectrum condition of an interacting net. It does not reach electric charge, which the Gauss law keeps out of spacelike cones.
 

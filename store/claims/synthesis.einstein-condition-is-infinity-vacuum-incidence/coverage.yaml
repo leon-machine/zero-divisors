@@ -23,6 +23,24 @@ functions:
     kind: sampled
     clauses: ["(7)"]
     omits: "only the forward direction at one (kappa, Lambda, T); the converse 'only if' is not tested; the Bianchi linear system is typed in, not derived; the de Sitter normalisation assert is a tautology of the constructed Ric0"
+  check_gtg_tractor_gauge_field_moves_ig_and_x:
+    kind: sampled
+    clauses:
+    - "the stored vacuum equations nabla I_g = (0, -P, 0)"
+    - "omega_v(I_g, w) = -P(v, w) for infinity vacua and omega_v(X, w) = g(v, w) for point vacua"
+    omits: "five gauge fields (de Sitter, SdS, Schwarzschild, FLRW instant, Kasner) at one point each, every frame direction; the tractor gauge field built from each field's own Schouten map"
+  check_gtg_own_ray_classes_on_gauge_fields:
+    kind: sampled
+    clauses:
+    - "(4) (a) iff (c): own-ray classes vanish on Einstein fields"
+    - "(7) omega_l(I_g, l) = 4 pi G T(l, l) with Ric + 8 pi G T = (Lambda + 4 pi G tau) g"
+    omits: "five rational null vectors on five gauge fields; the converse of (4) is the exact rank test of check_own_ray; T is read from the field equation, so (7) is the identity on actual fields, not an independent source"
+  check_gtg_infinity_vacua_with_the_unit_i7:
+    kind: sampled
+    clauses:
+    - "(1) every infinity vacuum is W = span(I_g, l, m) with l, m spanning a totally null plane"
+    - "(2) the classes of W along l on the de Sitter and FLRW gauge fields"
+    omits: "three null directions with explicit screens, two fields; the exactly-two count and the Fock criterion are tested by the earlier functions"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

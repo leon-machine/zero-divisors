@@ -29,11 +29,11 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.imported-interior-collar-kasner-form@6
+  - singularity.imported-interior-collar-kasner-form@7
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   - singularity.kms-uniqueness-factor@6
-  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@3
-  - std-algebra.complexification-is-the-odd-extension@1
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
+  - std-algebra.complexification-is-the-odd-extension@2
   proof: proof-main.tex
 checked_by:
 - kind: check

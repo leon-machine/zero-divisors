@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.blade-basis-degenerate-forms-included@4
+  - sheaf.blade-basis-degenerate-forms-included@5
   - std-algebra.functoriality@1
   proof: proof-main.tex
 checked_by:

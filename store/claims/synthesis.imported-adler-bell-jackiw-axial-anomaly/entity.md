@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-adler-bell-jackiw-axial-anomaly
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the axial anomaly (Adler 1969; Bell and Jackiw 1969)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, unit principle (U4): the bare unit of the mass term written as I_4'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'S. L. Adler, Axial-vector vertex in spinor electrodynamics, Phys. Rev. 177 (1969), 2426--2438.'
@@ -41,12 +45,22 @@ extraction:
     by: maintainer-2026-11-02
     date: '2026-11-02'
     note: 'Created by the maintainer pass of 2026-11-02 (Adler and Bell-Jackiw as a Fact, by Leon''s list of routine imports).'
+  source_formal: |-
+    Units $\hbar = c = 1$, signature $(+,-,-,-)$, $\alpha = e^{2}/(4\pi)$. For a Dirac fermion of mass $m$ and charge $e$ coupled to the electromagnetic field $F$, with the axial current $j^{5}_{\mu} = \bar\psi\gamma_{\mu}\gamma_{5}\psi$ and the pseudoscalar density $j^{5} = \bar\psi\gamma_{5}\psi$ (index reading of the sources), the one-loop triangle graph with one axial and two vector vertices cannot be made to conserve the vector current and to satisfy the naive axial Ward identity at once; keeping the vector current conserved,
+    \[
+    \partial^{\mu}j^{5}_{\mu} = 2im\,j^{5} + \frac{\alpha}{4\pi}\,\epsilon_{\xi\sigma\tau\rho}F^{\xi\sigma}F^{\tau\rho}
+    \]
+    \cite{Adler1969} (in the form of \cite{Adler2004}, eq. (1), with bare $m$ and $\alpha$). The anomalous term is proportional to $E\cdot B$, the pseudoscalar part of the square of the field-strength bivector. In the $\sigma$-model the same term removes the conflict between partial conservation of the axial current and the observed rate of $\pi^{0} \to \gamma\gamma$ \cite{BellJackiw1969}.
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Restated by U4: the bare unit i in the mass term 2im j^5 of the formal level and the one-liner (missed by the bare-unit detector, which does not flag i followed by a letter) is the field theory''s unit, a number multiplying the bilinear, so by U1 it is I_4 (numbers in span{1, I_4}; gamma_5 read as the chirality x -> I_4 x I_4 of the store''s one-loop electrodynamics); the source''s form (the formal level as first stored) moves to extraction.source_formal, and the sources write i for I_4. Status, links and what is imported unchanged.'
 ---
 
 ## formal
-Units $\hbar = c = 1$, signature $(+,-,-,-)$, $\alpha = e^{2}/(4\pi)$. For a Dirac fermion of mass $m$ and charge $e$ coupled to the electromagnetic field $F$, with the axial current $j^{5}_{\mu} = \bar\psi\gamma_{\mu}\gamma_{5}\psi$ and the pseudoscalar density $j^{5} = \bar\psi\gamma_{5}\psi$ (index reading of the sources), the one-loop triangle graph with one axial and two vector vertices cannot be made to conserve the vector current and to satisfy the naive axial Ward identity at once; keeping the vector current conserved,
+Units $\hbar = c = 1$, signature $(+,-,-,-)$, $\alpha = e^{2}/(4\pi)$. Numbers, the bilinears $j^{5}_{\mu}$ and $j^{5}$ among them, are read in $\mathrm{span}\{1, I_{4}\}$, the field theory's unit (on Clifford products the right unit $x \mapsto xI_{4}$), and $\gamma_{5}$ is the chirality $x \mapsto I_{4}xI_{4}$ of the store's one-loop electrodynamics (the left $I_{4}$ inside the product, the right one the unit); the sources write $i$ for $I_{4}$. For a Dirac fermion of mass $m$ and charge $e$ coupled to the electromagnetic field $F$, with the axial current $j^{5}_{\mu} = \bar\psi\gamma_{\mu}\gamma_{5}\psi$ and the pseudoscalar density $j^{5} = \bar\psi\gamma_{5}\psi$ (index reading of the sources), the one-loop triangle graph with one axial and two vector vertices cannot be made to conserve the vector current and to satisfy the naive axial Ward identity at once; keeping the vector current conserved,
 \[
-\partial^{\mu}j^{5}_{\mu} = 2im\,j^{5} + \frac{\alpha}{4\pi}\,\epsilon_{\xi\sigma\tau\rho}F^{\xi\sigma}F^{\tau\rho}
+\partial^{\mu}j^{5}_{\mu} = 2I_{4}m\,j^{5} + \frac{\alpha}{4\pi}\,\epsilon_{\xi\sigma\tau\rho}F^{\xi\sigma}F^{\tau\rho}
 \]
 \cite{Adler1969} (in the form of \cite{Adler2004}, eq. (1), with bare $m$ and $\alpha$). The anomalous term is proportional to $E\cdot B$, the pseudoscalar part of the square of the field-strength bivector. In the $\sigma$-model the same term removes the conflict between partial conservation of the axial current and the observed rate of $\pi^{0} \to \gamma\gamma$ \cite{BellJackiw1969}.
 
@@ -57,4 +71,4 @@ The axial anomaly is the failure of the classical conservation law of the axial 
 Some symmetries of the classical equations of particle physics do not survive in the quantum theory. The best known case concerns the difference between left-handed and right-handed particles: in 1969 Adler, and Bell and Jackiw, found that quantum effects of light break this balance by an amount set by the electric and magnetic fields together, and that this explains why a neutral pion decays into two photons. The series takes this result from the literature.
 
 ## one-liner
-The axial anomaly (Adler; Bell and Jackiw 1969): with the vector current conserved, $\partial\cdot j^{5} = 2im\,j^{5} + (\alpha/4\pi)\epsilon FF$ from the triangle graph, proportional to $E\cdot B$; it explains $\pi^{0} \to \gamma\gamma$.
+The axial anomaly (Adler; Bell and Jackiw 1969): with the vector current conserved, $\partial\cdot j^{5} = 2I_{4}m\,j^{5} + (\alpha/4\pi)\epsilon FF$ from the triangle graph, proportional to $E\cdot B$; it explains $\pi^{0} \to \gamma\gamma$.

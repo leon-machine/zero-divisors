@@ -25,9 +25,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - one-relation.imported-witts-extension-theorem@2
+  - one-relation.imported-witts-extension-theorem@3
   - one-relation.two-presentations@5
-  - tower.witt-index-quantum-capacity@4
+  - tower.witt-index-quantum-capacity@5
   - std-algebra.vector-squares@1
   - std-algebra.witt-decomposition@1
   proof: proof-main.tex

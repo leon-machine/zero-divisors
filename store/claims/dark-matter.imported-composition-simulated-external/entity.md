@@ -1,7 +1,7 @@
 ---
 id: dark-matter.imported-composition-simulated-external
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the composition simulated (external ingredients)'
 status: imported
 region: dark-matter
@@ -19,6 +19,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: S. W. Randall, M. Markevitch, D. Clowe, A. H. Gonzalez, and M. Bradac, Constraints on the
@@ -34,6 +38,13 @@ locators:
   label: ''
   line: 1237
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Decision item E10 (routine; no retirement): link to simulations.imported-bullet-cluster, which imports these two sources with content and is the home, recorded under extraction.overlaps_with (a citation list against a Fact, no pinned link).'
+  overlaps_with:
+  - id: simulations.imported-bullet-cluster
+    note: 'Decision E10: this is a citation list of Randall et al. 2008 and Clowe et al. 2006, which simulations.imported-bullet-cluster imports with content; that entity is kept as the home.'
   env: fact
   context_refs:
   - simulations.confinement-scale-does-not-matter

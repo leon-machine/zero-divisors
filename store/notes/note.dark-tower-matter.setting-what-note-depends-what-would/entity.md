@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.setting-what-note-depends-what-would
 kind: note
-version: 1
+version: 2
 title: What this note depends on, and what would refute it
 status: setting
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, a dated bracket on the cold-mirror exception'
+  version: 2
+  source: maintainer pass 2026-11-07 (decisions)
 comments_on:
 - dark-tower-matter.constituents-field
 - dark-tower-matter.adjoint-norm
@@ -25,6 +29,11 @@ locators:
   number: Setting
   section: What this note depends on, and what would refute it
   line: 894
+extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Dated bracket added to the paper text, which is kept. G1 (DECISIONS; R05 item 2): the cold-mirror exception now says that it is an exception to P2 at its version-1 reach, that P2 as scoped (version 2, labels not states) leaves xi free (synthesis.tower-charge-sector-label-temperature-not), and that the cold mirror then needs a non-equilibrium descent (synthesis.cold-mirror-needs-non-equilibrium-descent); P2 is unchanged by Leon''s answer 2, so the sentence stands.'
 ---
 
 ## formal
@@ -40,7 +49,7 @@ locators:
 
 \emph{What would refute the physics.} A thin dark disk or bulge component excluding a mirror of $0.995\,\Omega_{b}$ in the helium interval with helium-star feedback refutes T14's mirror; a demonstration that dark plasma instabilities transfer bulk momentum in cluster mergers, with gauge zero modes in the five-dimensional towers, refutes the composition unless their relic is the neutral species; a measured $\Delta\Neff$ excess attributable to a dark sector would place a five-dimensional tower above $0.085$ of the photon temperature, outside T14's estimates.
 
-\emph{Successor problems.} (1) Whether the cold mirror is a stated exception to P2, and where in T14's interval $\xi$ lies. (2) A footing for R1 in the odd towers, or a replacement. (3) The boundary data of the five-dimensional towers' fifth direction (zero modes or not) and their population mechanism. (4) The three-dimensional phase and coupling. (5) Hypothesis (S) off dimension four, the same missing theorem as in this tower. (6) The family count in the odd towers, where the maximal-composite bound of T13 \cite[Conj.~3.1]{ButlerT13} does not transpose. (7) The $r = 5$ unit: datum or field. (8) Whether the five-dimensional pair unit is internal (U3) or external, which decides between $\uu(3)$ and the Standard-Model algebra in both towers. (9) The $SU(3)$ and mixed Chern-Simons levels of the five-dimensional content.
+\emph{Successor problems.} (1) Whether the cold mirror is a stated exception to P2, and where in T14's interval $\xi$ lies. (Status now, 7 November 2026: it is an exception to P2 at its version-1 reach; P2 as scoped, version 2, leaves $\xi$ free, Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}, and the cold mirror then needs a non-equilibrium descent, Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}.) (2) A footing for R1 in the odd towers, or a replacement. (3) The boundary data of the five-dimensional towers' fifth direction (zero modes or not) and their population mechanism. (4) The three-dimensional phase and coupling. (5) Hypothesis (S) off dimension four, the same missing theorem as in this tower. (6) The family count in the odd towers, where the maximal-composite bound of T13 \cite[Conj.~3.1]{ButlerT13} does not transpose. (7) The $r = 5$ unit: datum or field. (8) Whether the five-dimensional pair unit is internal (U3) or external, which decides between $\uu(3)$ and the Standard-Model algebra in both towers. (9) The $SU(3)$ and mixed Chern-Simons levels of the five-dimensional content.
 
 ## technical
 pending

@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-null-energy-gives-r-premises
 kind: claim
-version: 7
+version: 9
 title: 'Positive null energy gives the (R) premises'
 status: proved
 region: synthesis
@@ -33,6 +33,22 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows'' unit J'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (surface gravity as (K.D)K)'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, restated clauses marked with their premise-free home at Leon''s decisions'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'notation: the boost and dilation rotors of proof (iii) and (v) renamed G and S; d Omega^2 written out'
+  version: 9
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -45,13 +61,13 @@ derivations:
   - hawking.imported-quasi-free-kms-reduces-two@2
   - hawking.imported-ideal-fermi-gas-uniqueness@2
   - singularity.euclidean-section-period@6
-  - synthesis.de-sitter-static-boost-frozen-point@5
-  - synthesis.local-boost-temperature-is-local-regularity@4
-  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@4
+  - synthesis.de-sitter-static-boost-frozen-point@6
+  - synthesis.local-boost-temperature-is-local-regularity@5
+  - synthesis.point-spectrum-boost-admits-no-half-sided-translations@5
   - angle.imported-theorems-deliver-their-hypotheses@3
-  - mass.chart-form-spin-isomorphism@5
+  - mass.chart-form-spin-isomorphism@6
   assumes:
-  - synthesis.n-plus-null-ground-state@11
+  - synthesis.n-plus-null-ground-state@12
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -82,6 +98,22 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R02 item 10): proof (iii)(c) and (v) named the boost rotor B, the conventions'' letter for the boost bivector (here B = e_1e_0 itself, of which the rotor is the exponential), and the dilation rotor D, beside D the covariant derivative of (iii). They are now G (boost) and S (dilation), both unused in the entity. Also (consistency-R03 C): proof (iii) wrote the round two-sphere as d Omega^2 beside the gauge field Omega (hb = 1, Omega = 0 in its setting); it is now (d vartheta^2 + sin^2 vartheta d phi^2), both letters unused in the entity (theta is the strip variable, varphi_w the Mellin modes). Proof text only; formal, check and conclusions unchanged.'
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version kept at 8 (already raised in this run). Decision item E11 (routine; no retirement): clauses (i), (ii) restate synthesis.null-vacuum-on-a-horizon-generator (ii), (iii) after the 7 November split; a marked Restatement sentence in the formal names the premise-free home so counts take each once (the uses edge already exists). The store has no clause-level restates link, so the build''s restatement count is unchanged; the marking is in the text.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Reader item R02-7: proof (iii) states the horizon non-affinity in GTG, (K.D)K = kappa K for the physical Killing field K = hb^{-1}(e_v) (resp. e_u), with kappa = 1/4M and H, and gives the Eddington-Finkelstein Christoffel symbols as the labelled component reading (Fact synthesis.imported-gtg-dictionary (ii), (vi)); the check''s coordinate route is unchanged; the mathematics is unchanged.'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 7 -> 8: The last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows'' unit J; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -139,6 +171,8 @@ Let $\mathcal{H}$ be one of: (a) the future event horizon of the eternal (Kruska
 \end{enumerate}
 
 \emph{Beyond one flat chart.} The whole generator of the eternal horizon (case (a)) and of the de Sitter cosmological horizon (case (b)), through its bifurcation surface, is global and is not carried by a single gravitational field $(\hb, \Omega)$ on flat spacetime; the statements above that hold on the invertible region are in GTG, and the whole generator, through its bifurcation surface, is read on the manifold assembled from the derived metric's charts.
+
+\emph{Restatement.} Clauses (i) and (ii) restate clauses (ii) and (iii) of Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}, which assumes no premise and is their home in the store; they are kept here for the horizon cases (a) to (c) and counted once, at the home.
 
 ## technical
 The series carries three thermal premises of one shape: (R) at the black-hole horizon, (R$_{\Lambda}$) at the cosmological horizon, and (R$_{\mathrm{loc}}$) on every local Rindler horizon. Each asserts that boundary modes are KMS for a boost at the period where the boost's Euclidean section is smooth. This result restates them on the continuum of a horizon's null generators and derives that restated content from one premise with no temperature in it. Place the modes on the generators, with the affine null translations along them. Premise (N$_{+}$) asks that a gauge-invariant quasi-free state be a ground state for those translations: invariant, with positive generator. That fixes the state as the filled sea of every generator. Restricted to either side of the edge, it is the continuum I-state at rapidity period exactly $2\pi$ for the boost that is future-directed on that side. The local-horizon premise and the Einstein derivation use the past side, the generators ending on the edge.

@@ -15,6 +15,16 @@ functions:
     clauses:
     - (v)
     omits: Exact secants of g(Lambda) = Lambda/3 (constant 1/3) and 3/Lambda (-3/(ab)) at four rational points and the identity Lambda_obs/Lambda_max = 3/N^2 at M_P = 1; the Liouville measure |c| d Lambda d tau itself, the divergence of its integral, the solution-dependent advance of tau and (iv) are not computed
+  check_gtg_pointwise_count_in_cl24:
+    kind: sampled
+    clauses:
+    - "(i)"
+    omits: "four values of Lambda (both signs), I and V the scale tractor and the Stelle-West vector of the shared engine; unitary gauge itself is argued"
+  check_gtg_multiplier_equation_is_grad_lambda_zero:
+    kind: sampled
+    clauses:
+    - "(ii) Varying T gives d lambda = 0"
+    omits: "the algebraic step only (the map dT -> <(g ^ dT) I^-1> has rank 1 for g != 0, five sample g including a null one); the integration by parts is the Leibniz rule"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

@@ -1,7 +1,7 @@
 ---
 id: dark-matter.orientation-arrow-seventeenth-refutation
 kind: claim
-version: 9
+version: 10
 title: 'The orientation is the arrow: the seventeenth refutation'
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: consistency pass, the unit of the Fock module written as I_7
+  version: 10
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.dark-matter.witt-flag
@@ -32,7 +36,7 @@ derivations:
   - standard-model.hyp-s-slot-statistics@9
   assumes:
   - dark-matter.premise-cpt-covariance@3
-  - dark-matter.premise-flag-as-datum@3
+  - dark-matter.premise-flag-as-datum@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -53,6 +57,10 @@ locators:
   label: prop:orientation
   line: 518
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof: the bare unit in ''relative to the Fock module''s i'' written as the Fock module''s unit I_7, the scalar unit of the complexification named in Premise dark-matter.premise-flag-as-datum; notation only.'
   notation_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

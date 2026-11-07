@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - sheaf.blade-basis-degenerate-forms-included@4
+  - sheaf.blade-basis-degenerate-forms-included@5
   - sheaf.degeneration-sheaf@6
   assumes:
   - sheaf.tameness@1

@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - correspondence.reality-conjugation-twistor-form-factor@8
-  - correspondence.incidence-relation-chart@6
+  - correspondence.incidence-relation-chart@7
   - synthesis.incidence-vacua-thermofield-real-capacity@6
   - one-relation.two-capacities-three-consequences@6
   proof: proof-main.tex

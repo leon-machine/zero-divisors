@@ -27,7 +27,7 @@ derivations:
   uses:
   - synthesis.coherent-face-vector-real-slices@2
   - families.koide-nullity-condition-one-member-invariant@2
-  - synthesis.real-structure-breaks-source-stabiliser-to-z2@3
+  - synthesis.real-structure-breaks-source-stabiliser-to-z2@4
   - families.classification-displaced-gaussian-class-solved-level@3
   - synthesis.light-cone-koide-is-quarter-turn@2
   proof: proof-main.tex

@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching
 kind: claim
-version: 3
+version: 4
 title: 'Kasner exit needs a contracting stage and a wall matching'
 status: proved
 region: synthesis
@@ -21,15 +21,19 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: GA rewrite (wall curvature as the store-sign curvature operator)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@3
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
-  - dark-energy.frozen-point-datum-kasner-wall@7
-  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@1
+  - dark-energy.frozen-point-datum-kasner-wall@8
+  - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -46,6 +50,10 @@ lineage:
   - dark-energy.gravity-pre-metric-forces-degenerate-exactly
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in (iii), formal and proof: the curvature at the wall is the store-sign curvature operator on the physical frame planes, calR(e_0 ^ e_i) = p_i(p_i - 1) tau^-2 e_0 ^ e_i and calR(e_i ^ e_j) = p_i p_j tau^-2 e_i ^ e_j, computed in the proof from Omega(hb(e_i)) = -(p_i/tau) B_i through the field strength, and the Kretschmann scalar is 2 <calR(a ^ b) calR(d_b ^ d_a)>, four times the sum of the squared eigenvalues; the Cartan forms and curvature two-forms stay as a labelled component reading. The same eigenvalues were checked exactly with lib/GA.py for dark-energy.frozen-point-datum-kasner-wall (in any number of directions the computation is the same plane by plane); the Kretschmann formula and its values are unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -78,7 +86,7 @@ Let a gravitational field on flat spacetime have, near a wall at $\tau = 0$, the
 \begin{enumerate}
 \item[(i)] \emph{(Exit only toward the wall.)} The expansion rate is $(\sum_{j}p_{j})/\tau = 1/\tau$ and the ratio of the mode's wavelength along the axis to the Hubble length is $1/(qs) = 1/(k\tau^{q})$, strictly decreasing in $\tau$. So a mode leaves the Hubble length only on the branch on which $\tau$ decreases toward the wall, and on the branch expanding away from a wall every mode starts outside and enters; this holds for every order $\nu$, since the order does not enter. This extends to every order the closing remark of Theorem \claimref{synthesis.kasner-approach-gives-horizon-exit-and-index-three}, made there for order $0$.
 \item[(ii)] \emph{(No adiabatic state at the wall on the expanding branch.)} In the Liouville form in $s$: with $Z = s^{-1/2}u$ the equation is $u'' + \omega^{2}u = 0$, $\omega^{2} = 1 + a/s^{2}$, $a = \tfrac14 - \nu^{2}$. For $0 \le \nu < \tfrac12$ the adiabatic parameter obeys $(\omega'/\omega^{2})^{2} = a^{2}/(s^{2} + a)^{3}$, equal to $1/a \ge 4$ at the wall and decreasing in $s$, at least $1$ for $s^{2} \le a^{2/3} - a$; for $\nu > \tfrac12$, $\omega^{2} < 0$ for $s^{2} < \nu^{2} - \tfrac14$, so the mode does not oscillate there; only $\nu = \tfrac12$ gives $\omega^{2} = 1$ exactly. So on an expanding branch the state of every mode with $\nu \ne \tfrac12$ is not fixed by an adiabatic condition in $s$ at the wall: it is initial data there (in $\ln s$ the frequency squared is $s^{2} - \nu^{2}$, with the same conclusion). Modes with $\nu = \tfrac12$ have the exact positive-frequency solution, index $2$.
-\item[(iii)] \emph{(The walls.)} The frame components of the curvature are $p_{i}(p_{i} - 1)/\tau^{2}$ on $e^{0}\wedge e^{i}$ and $-p_{i}p_{j}/\tau^{2}$ on $e^{i}\wedge e^{j}$ (as in Theorem \claimref{dark-energy.frozen-point-datum-kasner-wall}(i), whose computation uses no field equation), so the Kretschmann scalar is
+\item[(iii)] \emph{(The walls.)} The field strength is diagonal on the physical frame planes, $\mathcal{R}(e_{0}\wedge e_{i}) = p_{i}(p_{i} - 1)\tau^{-2}\,e_{0}\wedge e_{i}$ and $\mathcal{R}(e_{i}\wedge e_{j}) = p_{i}p_{j}\tau^{-2}\,e_{i}\wedge e_{j}$ in the store's sign (as in Theorem \claimref{dark-energy.frozen-point-datum-kasner-wall}(i), whose computation uses no field equation; in components, the curvature two-forms $p_{i}(p_{i} - 1)/\tau^{2}$ on $e^{0}\wedge e^{i}$ and $-p_{i}p_{j}/\tau^{2}$ on $e^{i}\wedge e^{j}$), so the Kretschmann scalar $K = 2\langle\mathcal{R}(a\wedge b)\,\mathcal{R}(\partial_{b}\wedge\partial_{a})\rangle$ is
 \[
 K\tau^{4} = 4\sum_{i}p_{i}^{2}(p_{i} - 1)^{2} + 4\sum_{i<j}p_{i}^{2}p_{j}^{2},
 \]

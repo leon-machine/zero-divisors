@@ -1,7 +1,7 @@
 ---
 id: synthesis.kerr-ring-count-misses-area-law
 kind: claim
-version: 5
+version: 6
 title: 'For Kerr the literal curvature-cutoff count misses the area law'
 status: proved
 region: synthesis
@@ -17,17 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (Kerr-Schild gauge field; unit named I_4)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - interior.imported-kerr-schild-form-kerr-gauge@1
+  - interior.imported-kerr-schild-form-kerr-gauge@2
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.kerr-ring-double-cover-data@3
-  - singularity.stretched-singularity-count@7
-  - scrambling.epoch-modular-period-two-unknowns-become@5
+  - singularity.stretched-singularity-count@8
+  - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
   proof: proof-main.tex
 checked_by:
@@ -49,6 +53,10 @@ lineage:
   - scrambling.mode-count
   - scrambling.area-law-test
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The Kerr field is stated by its Kerr-Schild gauge field hb(a) = a + H(a.k)k with derived metric g(a,b) = a.b - 2H(a.k)(b.k) (Q(k) = 0), the oblate-coordinate line element in the source''s signature (-,+,+,+) kept as its labelled component reading; Delta = Sigma g^{rr} is read as -Sigma Q(hb^T(nabla r)) in the store''s product and the induced metric on the tube as the Gram matrix of the physical tangent vectors; the unnamed unit I of z = r - I a u, z = rho e^{I psi} and rho(c + I s) is written I_4, the spacetime pseudoscalar that is the unit I of the Walker-Penrose scale in interior.complex-scale-inverse-cube-killing-spinor (numbers in span{1, I_4}); the component computations of the proof are Gram-matrix computations and stay; the mathematics is unchanged.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -92,16 +100,16 @@ extraction:
 ---
 
 ## formal
-Let $0 < a \le M$ and take the Kerr gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in the Kerr-Schild gauge of Fact \claimref{interior.imported-kerr-schild-form-kerr-gauge}; in oblate coordinates $(t, r, u, \phi)$ of the flat background, $u = \cos\theta$, signature $(-,+,+,+)$, its derived metric is
+Let $0 < a \le M$ and take the Kerr gravitational field on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) in the Kerr-Schild gauge of Fact \claimref{interior.imported-kerr-schild-form-kerr-gauge}; its gauge field is $\hb(a) = a + H\,(a\cdot k)\,k$, $\hb^{-1}(a) = a - H\,(a\cdot k)\,k$, with $k$ a null vector field of the flat background, so the derived metric is $g(a,b) = \hb^{-1}(a)\cdot\hb^{-1}(b) = a\cdot b - 2H\,(a\cdot k)(b\cdot k)$ (as $Q(k) = 0$). In oblate coordinates $(t, r, u, \phi)$ of the flat background, $u = \cos\theta$, and in the source's signature $(-,+,+,+)$, which reverses the sign of every product, this reads (in components)
 \[
 g = \eta + 2H\,k\otimes k,\quad
 \eta = -dt^2 + \tfrac{\Sigma}{P}\,dr^2 + \tfrac{\Sigma}{1 - u^2}\,du^2 + P(1 - u^2)\,d\phi^2,\quad
 k = -dt - \tfrac{\Sigma}{P}\,dr + a(1 - u^2)\,d\phi,
 \]
-with $H = Mr/\Sigma$, $\Sigma = r^2 + a^2u^2 = |z|^2$, $P = r^2 + a^2$, $z = r - Iau$ the double-cover coordinate of Proposition \claimref{synthesis.kerr-ring-double-cover-data}, and horizon loci at $r_\pm = M \pm \sqrt{M^2 - a^2}$, the roots of $\Delta = r^2 - 2Mr + a^2 = \Sigma\, g^{rr}$. Read the curvature-cutoff postulate with the Kerr scale $|\mathfrak M| = M|z|^{-3}$ of Proposition \claimref{interior.complex-scale-inverse-cube-killing-spinor}: the stretched singularity is $2M|z|^{-3} = 1$, i.e. $|z| = \rho_c := (2M)^{1/3}$ in Planck units, as $r_c = (2M)^{1/3}$ for Schwarzschild in Proposition \claimref{singularity.stretched-singularity-count}. Assume $a^2 \ge 8M\rho_c$ (equivalently $a \ge 2\rho_c^2$; it forces $M \ge 32$). Put $\varepsilon = \rho_c^2/a^2$ and $\delta = 2M\rho_c/a^2 \le \tfrac14$.
+with $H = Mr/\Sigma$, $\Sigma = r^2 + a^2u^2 = |z|^2$, $P = r^2 + a^2$, $z = r - I_4au$ the double-cover coordinate of Proposition \claimref{synthesis.kerr-ring-double-cover-data} (a number of $\mathrm{span}\{1, I_4\}$, $I_4$ the spacetime pseudoscalar, the unit $I$ of the Walker-Penrose scale $r - Ia\cos\theta$ of Proposition \claimref{interior.complex-scale-inverse-cube-killing-spinor}), and horizon loci at $r_\pm = M \pm \sqrt{M^2 - a^2}$, the roots of $\Delta = r^2 - 2Mr + a^2 = -\Sigma\,Q(\hb^{T}(\nabla r))$ (the store\'s product), where the physical gradient of $r$ is null (in components, source\'s signature, $\Delta = \Sigma\, g^{rr}$). Read the curvature-cutoff postulate with the Kerr scale $|\mathfrak M| = M|z|^{-3}$ of Proposition \claimref{interior.complex-scale-inverse-cube-killing-spinor}: the stretched singularity is $2M|z|^{-3} = 1$, i.e. $|z| = \rho_c := (2M)^{1/3}$ in Planck units, as $r_c = (2M)^{1/3}$ for Schwarzschild in Proposition \claimref{singularity.stretched-singularity-count}. Assume $a^2 \ge 8M\rho_c$ (equivalently $a \ge 2\rho_c^2$; it forces $M \ge 32$). Put $\varepsilon = \rho_c^2/a^2$ and $\delta = 2M\rho_c/a^2 \le \tfrac14$.
 \begin{enumerate}
-\item \emph{(Where the locus is.)} On the double cover the locus is the tube $z = \rho_c e^{I\psi}$, $\psi \in [0, 2\pi)$, times the orbits of $\partial_t$ and $\partial_\phi$; both sheets ($\cos\psi > 0$ and $< 0$) meet it, glued across the disc. It lies in $|r| \le \rho_c < a^2/2M \le r_-$: beyond the inner horizon. In $r_- \le r \le r_+$ the curvature scale never reaches the Planck value, since there $|z| \ge r_- > \rho_c$.
-\item \emph{(Its geometry.)} In the coordinates $(t, \psi, \phi)$ the metric $h$ that the derived metric induces on the tube of any radius $\rho \le a$ satisfies, identically,
+\item \emph{(Where the locus is.)} On the double cover the locus is the tube $z = \rho_c e^{I_4\psi}$, $\psi \in [0, 2\pi)$, times the orbits of $\partial_t$ and $\partial_\phi$; both sheets ($\cos\psi > 0$ and $< 0$) meet it, glued across the disc. It lies in $|r| \le \rho_c < a^2/2M \le r_-$: beyond the inner horizon. In $r_- \le r \le r_+$ the curvature scale never reaches the Planck value, since there $|z| \ge r_- > \rho_c$.
+\item \emph{(Its geometry.)} In the coordinates $(t, \psi, \phi)$ the metric $h$ that the derived metric induces on the tube of any radius $\rho \le a$, the Gram matrix of the physical tangent vectors $\hb^{-1}(\partial_t), \hb^{-1}(\partial_\psi), \hb^{-1}(\partial_\phi)$ in the source's signature, satisfies, identically,
 \[
 \det h \;=\; -\rho^4\Bigl[\,1 + \frac{\rho^2}{a^2}\cos 2\psi - \frac{2M\rho}{a^2}\cos^3\psi\,\Bigr],
 \]

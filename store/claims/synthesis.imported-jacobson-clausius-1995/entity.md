@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-jacobson-clausius-1995
 kind: claim
-version: 2
+version: 3
 title: 'Imported: Einstein''s equation as an equation of state (Jacobson 1995)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, the signature of the displayed tensor equation stated'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -25,6 +29,10 @@ imported_from:
   key: Jacobson1995
   doi: 10.1103/PhysRevLett.75.1260
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The displayed R_ab - R g_ab/2 + Lambda g_ab = (2 pi/eta) T_ab is the source''s form in signature (-,+,+,+); in (+,-,-,-) with the same round-sphere-positive tensor the Lambda term changes sign; checked exactly on de Sitter (v/r03_checks.py); the store-sign GA form was already right.'
   note: >-
     Imported for the results that map the Clausius route to Einstein's equations onto the store.
     Bibliographic data checked against the arXiv and publisher listings on 2026-10-22. The
@@ -49,7 +57,7 @@ Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a gravitational field on flat spac
 \item[(b)] its entropy is $\eta$ per unit area, $\delta S = \eta\,\delta A$, with $\eta$ one universal constant;
 \item[(c)] the Clausius relation $\delta Q = T\,\delta S$ holds, with $\delta Q = \int T_{ab}\chi^{a}\,d\Sigma^{b}$ the boost energy of matter crossing it, and $\delta A$ given by the focusing of the generators through the Raychaudhuri equation.
 \end{enumerate}
-Then $T_{ab}k^{a}k^{b} = (\eta/2\pi)R_{ab}k^{a}k^{b}$ for every null $k^{a}$, with $R_{ab}$ the Ricci tensor of the round-sphere-positive convention, that is $k \cdot T(k) = -(\eta/2\pi)\,k \cdot \mathcal{R}(k)$ for every physical null $k$ in the store's sign of the curvature operator; and with the conservation of $T$ ($\nabla^{a}T_{ab} = 0$) and the contracted Bianchi identity,
+Then $T_{ab}k^{a}k^{b} = (\eta/2\pi)R_{ab}k^{a}k^{b}$ for every null $k^{a}$, with $R_{ab}$ the Ricci tensor of the round-sphere-positive convention, that is $k \cdot T(k) = -(\eta/2\pi)\,k \cdot \mathcal{R}(k)$ for every physical null $k$ in the store's sign of the curvature operator; and with the conservation of $T$ ($\nabla^{a}T_{ab} = 0$) and the contracted Bianchi identity, in the signature $(-,+,+,+)$ of the source,
 \[
 R_{ab} - \tfrac12 R\,g_{ab} + \Lambda g_{ab} \;=\; \frac{2\pi}{\eta}\,T_{ab},
 \]

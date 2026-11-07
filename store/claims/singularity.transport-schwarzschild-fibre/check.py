@@ -212,3 +212,49 @@ def check_dying_direction_dual_norm_and_read_out():
         s1, X1, t1 = slots(image(uu))
         ok = ok and s1 == uu * uu and t1 == F(-1, 2) and GA.eq(X1, GA.scal(uu, ER))
     _tp_rv = (ok); assert _tp_rv is not False, "check_dying_direction_dual_norm_and_read_out"; return _tp_rv
+
+
+# ---- GTG derivation (maintainer pass 2026-11-07, GTG proofs) ----
+# The dual norm read off the shared GTG engine (lib/gtg.py): the PG and static gauge fields of the stored
+# Schwarzschild field, hb^T(xi) = sum_a (hb(gamma_a) . xi) gamma^a for a background gradient xi (labels
+# t, r, theta, phi; grad t = e^t = e_t, grad r = e^r = -e_r), and Q*(xi) = Q(hb^T(xi)).
+import gtg  # noqa: E402
+
+
+def hb_adjoint(fld, xi):
+    """hb^T(xi) for a background vector xi (dict on e_mu): sum_a (hb(gamma_a) . xi) gamma^a."""
+    out = {}
+    for a in range(4):
+        c = gtg.vdot(fld.hb(GA.gen(a)), xi)
+        if c:
+            out = GA.add(out, GA.scal(c * F(1, gtg.S13[a]), GA.gen(a)))
+    return out
+
+
+def check_gtg_dual_norm_of_the_dying_direction_from_the_engine():
+    premise("sheaf.schwarzschild-degeneration-boundary-tame")
+    premise("transport.descent-read-out-map")
+    ok = True
+    grad_t, grad_r = GA.gen(0), GA.scal(-1, GA.gen(1))
+    for M in (F(1, 2), F(2), F(9, 2)):
+        a = isqrt_frac(2 * M)
+        for r in (F(1, 4), 2 * M, F(9), F(25, 16)):
+            u = isqrt_frac(r)
+            fld = gtg.schwarzschild_pg(M, r, F(3, 5), F(4, 5))
+            xi = GA.add(GA.scal(a, grad_t), GA.scal(u, grad_r))
+            k = hb_adjoint(fld, xi)
+            ok = ok and GA.eq(k, GA.scal(-u, GA.gen(1))) and gtg.vdot(k, k) == -r
+            s, Xv, t = slots(iota(lift(GA.scal(-u, ER))[0]))
+            ok = ok and s == r and GA.eq(GA.scal(1 / s, Xv), GA.scal(-1 / r, k))
+    for M, w, sn in STATIC:
+        f = w * w
+        r = 2 * M / (1 - f)
+        a, u = isqrt_frac(2 * M), isqrt_frac(r)
+        fld = gtg.schwarzschild_static(M, r, sn, isqrt_frac(1 - sn * sn))
+        xi = GA.add(GA.scal(a, grad_t), GA.scal(u / f, grad_r))
+        k = hb_adjoint(fld, xi)
+        ok = ok and gtg.vdot(k, k) == -r
+        kt = hb_adjoint(fld, grad_t)
+        ok = ok and gtg.vdot(kt, kt) == 1 / f
+    assert ok
+    return ok

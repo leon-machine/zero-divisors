@@ -1,7 +1,7 @@
 ---
 id: interior.imported-equivalence-einstein-equations
 kind: claim
-version: 2
+version: 3
 title: 'Imported: equivalence with the Einstein equations'
 status: imported
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, duplicate link at Leon''s decisions'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 imported_from:
 - citation: A. Lasenby, C. Doran and S. Gull, Gravity, gauge theories and geometric algebra, Phil. Trans.
@@ -32,6 +36,10 @@ locators:
   label: fact:gtg
   line: 362
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Decision item E5 (routine; no retirement): equivalent_to singularity.imported-equivalence-einstein-equations@3 added. The two Facts state the equivalence of the Einstein equations for T06 and T05; both are kept for their paper locators, and the T05 entity, which adds the curvature clause, is the better one.'
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -40,6 +48,8 @@ extraction:
   typing:
     by: ai-typing-pass
     note: 'Imported fact with no derivation; nothing to edge.'
+equivalent_to:
+- singularity.imported-equivalence-einstein-equations@3
 ---
 
 ## formal

@@ -24,7 +24,7 @@ about:
 derivations:
 - name: main
   uses:
-  - dark-matter.two-families-are-two-chiralities@6
+  - dark-matter.two-families-are-two-chiralities@7
   assumes:
   - dark-matter.p3-nearest-dimension-representatives@2
   proof: proof-main.tex

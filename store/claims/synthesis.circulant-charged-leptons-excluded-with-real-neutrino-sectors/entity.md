@@ -30,7 +30,7 @@ derivations:
   - synthesis.theta23-at-s3-s2-direction@3
   - neutrino.breaking-relation@3
   - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns@2
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@4
   - synthesis.imported-nufit-6-oscillation-parameter-ranges@1
   - synthesis.imported-harrison-scott-mu-tau-reflection@1
   - synthesis.imported-takagi-factorisation@1

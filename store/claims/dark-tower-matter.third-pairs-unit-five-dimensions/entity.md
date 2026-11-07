@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.third-pairs-unit-five-dimensions
 kind: claim
-version: 4
+version: 5
 title: The third pair's unit in five dimensions
 status: proved
 region: dark-tower-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: consistency pass, the two meanings of I_7 separated in clause (i)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -56,6 +60,10 @@ locators:
   label: thm:unit
   line: 452
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation: I_7 here is the pseudoscalar of Cl(5,2), the r = 3 tower''s conformal algebra, while the conventions'' I_7 = I_6 e is the unit of Cl(3,4); clause (i) now says which is meant. No change of mathematics.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -80,7 +88,7 @@ extraction:
 ## formal
 Work on the sixteen-dimensional irreducible module of the conformal algebra, which is the constituent ideal $T$ as a module of the spin group, with spin commutant $\HH$ (Theorem \claimref{dark-tower-matter.constituents-field}).
 \begin{enumerate}
-\item[(i)] ($r = 3$) The pseudoscalar $I_{7}$ of $\Cl(5,2)$ lies in $\HH$, squares to $-1$ and commutes with every vector. With it the third pair $\tfrac{1}{2}(e_{a} \pm I_{7}e_{b})$ joins two real pairs to give three pairs obeying the canonical relations, and their bilinears $I_{7}(v_{i}w_{i} - \tfrac{1}{2})$, $v_{i}w_{k} - v_{k}w_{i}$, $I_{7}(v_{i}w_{k} + v_{k}w_{i})$ span a Lie algebra $\uu(3)$ whose centraliser in $\HH$ is $\mathrm{span}\{1, I_{7}\}$.
+\item[(i)] ($r = 3$) The pseudoscalar $I_{7}$ of $\Cl(5,2)$ (here the pseudoscalar of the conformal algebra of the $(4,1)$ tower, not the unit $I_{7} = I_{6}e$ of $\Cl(3,4)$ that complexifies this tower's conformal algebra) lies in $\HH$, squares to $-1$ and commutes with every vector. With it the third pair $\tfrac{1}{2}(e_{a} \pm I_{7}e_{b})$ joins two real pairs to give three pairs obeying the canonical relations, and their bilinears $I_{7}(v_{i}w_{i} - \tfrac{1}{2})$, $v_{i}w_{k} - v_{k}w_{i}$, $I_{7}(v_{i}w_{k} + v_{k}w_{i})$ span a Lie algebra $\uu(3)$ whose centraliser in $\HH$ is $\mathrm{span}\{1, I_{7}\}$.
 \item[(ii)] ($r = 3$) Every unit $J \in \HH$ anticommuting with $I_{7}$ anticommutes with every vector, so it acts as the grade involution: it fixes the real pairs up to sign and sends $w_{3}$ to $-\bar{w}_{3}$, exchanging the third pair's creator and annihilator; $\uu(3)$ and $J$ generate a Lie algebra of dimension $30$, not the commuting sum $\su(2) \oplus \uu(3)$ of dimension $12$.
 \item[(iii)] ($r = 5$) No element of $\HH$ outside $\R$ commutes with all of $\HH$, and $\omega$ squares to $+1$: the algebra supplies no canonical unit. Every unit $u \in \HH$ commutes with the vectors and builds a third pair, $w_{3} = \tfrac{1}{2}(e_{a} + ue_{b})$, $v_{3} = -\tfrac{1}{2}(e_{a} - ue_{b})$ with $Q(e_{a}) = Q(e_{b}) = -1$; the resulting $\uu(3)_{u}$ has centraliser $\mathrm{span}\{1, u\}$ in $\HH$, and a second unit anticommuting with $u$ generates dimension $30$ with it. Any two units are conjugate in $\HH$: $(1 - u'u)\,u = u'(1 - u'u)$ for $u' \neq -u$, and $u' = -u$ is reached by conjugation with any unit anticommuting with $u$. The choices form the sphere $Sp(1)/U(1) = S^{2}$.
 \end{enumerate}

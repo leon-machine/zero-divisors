@@ -21,10 +21,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-energy.acoustic-no-go-one-way-grip@5
+  - dark-energy.acoustic-no-go-one-way-grip@6
   - dark-energy.imported-walls-sphere-theorem@6
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
-  - interior.imported-equivalence-einstein-equations@2
+  - interior.imported-equivalence-einstein-equations@3
   - scrambling.principality-indifference-sphere@4
   assumes:
   - scrambling.indifference-structural-premise-series@2

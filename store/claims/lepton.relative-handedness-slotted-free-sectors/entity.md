@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - lepton.content-constituent-space@4
-  - lepton.imported-free-sector-anomaly-conditions@4
+  - lepton.imported-free-sector-anomaly-conditions@5
   assumes:
   - lepton.hyp-c-constituent@2
   proof: proof-main.tex

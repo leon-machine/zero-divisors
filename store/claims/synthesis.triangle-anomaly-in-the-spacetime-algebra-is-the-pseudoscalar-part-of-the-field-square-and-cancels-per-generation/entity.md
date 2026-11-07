@@ -31,10 +31,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.one-loop-qed-in-the-spacetime-algebra@4
-  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@2
+  - synthesis.one-loop-qed-in-the-spacetime-algebra@5
+  - synthesis.imported-one-loop-integrals-and-pauli-villars-regulators@3
   - synthesis.anomaly-freedom-forces-slot-content@3
-  - synthesis.imported-adler-bell-jackiw-axial-anomaly@1
+  - synthesis.imported-adler-bell-jackiw-axial-anomaly@2
   proof: proof-main.tex
 checked_by:
 - kind: check

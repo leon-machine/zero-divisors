@@ -217,3 +217,76 @@ def check_pair_has_one_gauge_invariant():
     pairs = 2 * (6 - 1)
     assert pairs - orbit == 1
     return True
+
+
+# ---------------------------------------------------------------------------
+# GTG proof (2026-11-07): tractors as Cl(2,4) vectors Y = sigma ninf + mu + rho n0, the flat-scale
+# tractor connection as the gauge field Omega_T(a) = -ninf ^ a (hb = 1, Omega = 0, Schouten map 0), the
+# parallel tractors I(x) = sigma(x) ninf + (m - r x) + r n0, the flat field strength, the Einstein field
+# hb^{-1}(a) = a/sigma with calR(B) = Q(I) B, and the stabilisers as bivectors of Cl(2,4).
+# ---------------------------------------------------------------------------
+import gtg  # noqa: E402
+
+S24 = gtg.S24
+GN0, GNI = gtg.N0, gtg.NINF
+FIELD_PTS = [(F(0), F(0), F(0), F(0)), (F(1, 3), F(1, 5), F(0), F(-1, 7)), (F(-1, 4), F(1, 2), F(1, 3), F(1, 6))]
+
+
+def gtg_tractor_field(I, x0):
+    """I(x) as a Cl(2,4) vector with jet coefficients about x0 (exact for the quadratic sigma)."""
+    s, m, r = I
+    X = [gtg.Jet.var(i, x0[i], 4, 3) for i in range(4)]
+    qx = sum((F(ETA[a]) * X[a] * X[a] for a in range(4)), gtg.Jet.const(0, 4))
+    sigma = s + sum((F(ETA[a]) * m[a] * X[a] for a in range(4)), gtg.Jet.const(0, 4)) - (r / 2) * qx
+    mu = {(a,): m[a] - r * X[a] for a in range(4) if (m[a] - r * X[a])}
+    return sigma, gtg.m_add({b: sigma * c for b, c in GNI.items()}, mu, {b: r * c for b, c in GN0.items()})
+
+
+def check_gtg_parallel_tractors_flat_strength_and_einstein_scale():
+    _premises()
+    ok = True
+    einstein_points = 0
+    for I in (I_A, I_B, I_C, I_D):
+        s, m, r = I
+        norm = 2 * r * s + sum((F(ETA[a]) * m[a] * m[a] for a in range(4)), F(0))
+        for x0 in FIELD_PTS:
+            sigma, Y = gtg_tractor_field(I, x0)
+            for a in range(4):
+                OT = gtg.m_neg(gtg.wedge(GNI, gtg.e(a), S24))
+                DY = gtg.m_add(gtg.m_d(Y, a), gtg.comm(OT, Y, S24))
+                ok = ok and all(c == 0 for c in DY.values())          # parallel, as polynomials
+            QY = gtg.vdot(Y, Y, S24)
+            ok = ok and QY == gtg.Jet.const(norm, 4)                 # constant norm 2 r s + Q(m)
+            # the Einstein field hb^{-1}(a) = a/sigma where sigma != 0: calR(B) = Q(I) B
+            if sigma.v != 0 and r != 0:
+                fld = gtg.field_from_hbinv(lambda X, I=I: _dilation_rows(I, X), x0)
+                ok = ok and fld.torsion_free()
+                Rc = fld.curvature()
+                ok = ok and all(gtg.m_sub(Rc[(p, q)], gtg.m_scal(norm, gtg.biv(p, q))) == {}
+                                for p in range(4) for q in range(p + 1, 4))
+                einstein_points += 1
+        # flat field strength of Omega_T: (ninf ^ a) x (ninf ^ b) = 0
+        for a in range(4):
+            for b in range(4):
+                ok = ok and gtg.comm(gtg.wedge(GNI, gtg.e(a), S24), gtg.wedge(GNI, gtg.e(b), S24), S24) == {}
+    ok = ok and einstein_points == 12
+    # stabilisers in the bivectors of Cl(2,4): 15, 10, 6
+    va = gtg.m_val(gtg_tractor_field(I_A, FIELD_PTS[0])[1])
+    vb = gtg.m_val(gtg_tractor_field(I_B, FIELD_PTS[0])[1])
+    blades = gtg.bivector_blades(6)
+    rows = [[gtg.comm({bl: F(1)}, v, S24).get((k,), F(0)) for bl in blades] for v in (va, vb) for k in range(6)]
+    ok = ok and len(blades) == 15 and 15 - GA.rank_of_vectors(rows[:6]) == 10 and 15 - GA.rank_of_vectors(rows) == 6
+    ok = ok and gtg.vdot(va, vb, S24) == F(3, 2) and gtg.vdot(va, va, S24) == 2
+    ab = gtg.wedge(va, vb, S24)
+    ok = ok and gtg.sp(gtg.m_mul(ab, ab, S24)) == gtg.vdot(va, vb, S24) ** 2 - 4 != 0
+    GA.check("GTG: flat-scale tractor gauge field, parallel tractors, Einstein dilation field, stabilisers", ok)
+    assert ok
+
+
+def _dilation_rows(I, X):
+    """rows g[mu][a] of hb^{-1}(e_mu) = e_mu / sigma(X), the dilation field of the scale sigma."""
+    s, m, r = I
+    qx = sum((F(ETA[a]) * X[a] * X[a] for a in range(4)), gtg.Jet.const(0, 4))
+    sigma = s + sum((F(ETA[a]) * m[a] * X[a] for a in range(4)), gtg.Jet.const(0, 4)) - (r / 2) * qx
+    inv = sigma.inv()
+    return [[inv if a == mu else F(0) for a in range(4)] for mu in range(4)]

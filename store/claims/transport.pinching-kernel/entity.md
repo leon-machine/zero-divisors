@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - transport.rule-1-morita-trivial@5
+  - transport.rule-1-morita-trivial@6
   proof: proof-main.tex
 checked_by:
 - kind: legacy

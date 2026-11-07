@@ -1,7 +1,7 @@
 ---
 id: note.odd-extensions.added-axis-pseudoscalar
 kind: note
-version: 3
+version: 4
 title: the added axis is the pseudoscalar
 status: remark
 subject: tower
@@ -23,6 +23,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the gamma_5 convention of the physicists'' reading stated'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - odd-extensions.four-extensions-oriented-pair
 locators:
@@ -31,6 +35,10 @@ locators:
   label: rem:pseudo
   line: 475
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The note reads the complexified fifth generator as I_5 gamma_5, which holds for gamma_5 = gamma_0 gamma_1 gamma_2 gamma_3 = omega'' (square -1); with the store''s chiral-loop gamma_5 (the unit times I_4, written I_5 omega'' here, square +1) the complexified e_5 is +-gamma_5 itself and I_5 gamma_5 = -omega'' is the doubled value. Exact computation in Cl(2,3) and Cl(1,4) with lib/GA.py: e_5 = omega''^{-1} omega, I_5 (I_5 omega'') = -omega'', e_5 = +-I_5 omega'', and e_5 = -+omega'' on the summands of Cl(1,4). The note now states its convention; content unchanged.'
   source_formal: |-
     In the complexified case the fifth generator is $e_{5} = \pm\,\omega\,\omega'^{-1}$, that is $i\gamma_{5}$ in the physicists' notation, and the algebra is the complexified Dirac algebra.
 
@@ -53,7 +61,7 @@ extraction:
 ---
 
 ## formal
-In the doubled case the fifth generator is nothing new: on each summand it acts as the pseudoscalar $\omega' = e_{1}e_{2}e_{3}e_{4}$ of the shadow, up to sign, so the extra space direction of $\Cl(1,4)$ is the chirality operator of $\Cl(1,3)$ promoted from a $4$-blade to a vector, with the choice of sign the only datum the extension adds. In the complexified case the fifth generator is $e_{5} = \pm\,\omega\,\omega'^{-1}$, where the central pseudoscalar $\omega$ ($\omega^{2} = -1$) is the unit of the complexification (\claimref{std-algebra.complexification-is-the-odd-extension}; for this world the extension is $\Cl(2,3)$ and $\omega = \pm I_5$); in the physicists' notation, with their complex unit read as that central pseudoscalar, it is $I_5\gamma_{5}$, and the algebra is the complexified Dirac algebra.
+In the doubled case the fifth generator is nothing new: on each summand it acts as the pseudoscalar $\omega' = e_{1}e_{2}e_{3}e_{4}$ of the shadow, up to sign, so the extra space direction of $\Cl(1,4)$ is the chirality operator of $\Cl(1,3)$ promoted from a $4$-blade to a vector, with the choice of sign the only datum the extension adds. In the complexified case the fifth generator is $e_{5} = \pm\,\omega\,\omega'^{-1}$, where the central pseudoscalar $\omega$ ($\omega^{2} = -1$) is the unit of the complexification (\claimref{std-algebra.complexification-is-the-odd-extension}; for this world the extension is $\Cl(2,3)$ and $\omega = \pm I_5$); in the physicists' notation, with their complex unit read as that central pseudoscalar, it is $I_5\gamma_{5}$ for $\gamma_{5} = \gamma_{0}\gamma_{1}\gamma_{2}\gamma_{3} = \omega'$ (square $-1$), and the algebra is the complexified Dirac algebra; with the Hermitian $\gamma_{5} = I_{5}\omega'$ of the store's chiral-loop convention (the unit read as $I_{5}$) it is $\pm\gamma_{5}$ itself, and $I_{5}\gamma_{5} = -\omega'$ is the doubled case's value.
 
 ## technical
 pending

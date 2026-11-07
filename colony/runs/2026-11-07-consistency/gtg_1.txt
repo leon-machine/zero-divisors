@@ -1,0 +1,11 @@
+dark-energy.gravity-pre-metric-forces-degenerate-exactly
+dark-energy.stelle-west-vector-frozen-point
+dark-energy.walls-free-sector
+synthesis.black-hole-data-do-not-fix-field-equations
+synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
+synthesis.cosmological-horizon-completed-pair
+synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff
+synthesis.killing-horizon-value-factor-is-the-generator-boost
+synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons
+synthesis.nondiagonal-kasner-residue-weighted-shear
+synthesis.two-frozen-points-conformally-flat

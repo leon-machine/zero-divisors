@@ -1,7 +1,7 @@
 ---
 id: dark-matter.imported-trichotomy-descents-data
 kind: claim
-version: 5
+version: 6
 title: 'Imported: the trichotomy and the descent''s data'
 status: proved
 region: dark-matter
@@ -19,12 +19,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, clause (2) worded as the cited clause'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - dark-energy.under-action-written-norm-parameter-laws@4
-  - standard-model.trichotomy-what-kind-number@10
+  - standard-model.trichotomy-what-kind-number@11
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -35,6 +39,10 @@ locators:
   label: fact:trichotomy
   line: 124
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Clause (2) read "the frozen action is N-insensitive", which is not what the cited clause (2) of standard-model.trichotomy-what-kind-number says and is not true of the action (its prefactor is 3/Lambda); it now states the cited content, the norm fixed by a constraint with pure-gauge fluctuations and no equation of motion; the paper wording stays in source_formal.'
   open_problem: op.trichotomy-exhaustiveness
   correction:
     by: ai-correction
@@ -63,10 +71,10 @@ about:
 ---
 
 ## formal
-\cite[Prop.~7.6]{ButlerT12}: (1) \emph{kinematic}: the rescaling covariance fixes every discrete invariant (proved), and no construction from the conformal class and pair structure alone fixes $N$ (observation level); (2) \emph{non-dynamical}: the frozen action is $N$-insensitive (imported); (3) \emph{conditional}: if kinematic, dynamical and initial-data are exhaustive (not proved), $N$ is initial data, located at the origin at observation level; (4) \emph{parameter of the laws} (imported): the three are not exhaustive, since under the action as written $N$ is constant on every solution and varies across $\Lambda$, a parameter of the laws \cite[Prop.~5.8]{ButlerT10}, so that (3) holds only if the frozen point's norm is promoted to the value of a Lagrange-multiplier field, a decision that paper records open. Wherever this paper calls a datum initial data of the descent ($\epsilon$, Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}, clause (1) only, as a stance; the orientation bit, Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation}, which as corrected cites none of these clauses and in particular not clause (3): it reaches clause (I) of Definition \claimref{obj.dark-energy.four-ways-number-enters-theory-shape} directly from CPT covariance, with no exhaustiveness), these clauses are premises of the sentence, and clause (4) names the alternative for each, a parameter of the laws rather than data of the event: for the bit that would require the laws to distinguish the two orientations, for which the CPT covariance of the structures Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation} lists leaves no room within them, so the bit is data if it is anything; for $\epsilon$ the paper takes no position.
+\cite[Prop.~7.6]{ButlerT12}: (1) \emph{kinematic}: the rescaling covariance fixes every discrete invariant (proved), and no construction from the conformal class and pair structure alone fixes $N$ (observation level); (2) \emph{non-dynamical}: the norm of the frozen point is not a field, being fixed by a constraint with pure-gauge fluctuations and no equation of motion (imported); (3) \emph{conditional}: if kinematic, dynamical and initial-data are exhaustive (not proved), $N$ is initial data, located at the origin at observation level; (4) \emph{parameter of the laws} (imported): the three are not exhaustive, since under the action as written $N$ is constant on every solution and varies across $\Lambda$, a parameter of the laws \cite[Prop.~5.8]{ButlerT10}, so that (3) holds only if the frozen point's norm is promoted to the value of a Lagrange-multiplier field, a decision that paper records open. Wherever this paper calls a datum initial data of the descent ($\epsilon$, Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}, clause (1) only, as a stance; the orientation bit, Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation}, which as corrected cites none of these clauses and in particular not clause (3): it reaches clause (I) of Definition \claimref{obj.dark-energy.four-ways-number-enters-theory-shape} directly from CPT covariance, with no exhaustiveness), these clauses are premises of the sentence, and clause (4) names the alternative for each, a parameter of the laws rather than data of the event: for the bit that would require the laws to distinguish the two orientations, for which the CPT covariance of the structures Proposition \claimref{dark-matter.orientation-arrow-seventeenth-refutation} lists leaves no room within them, so the bit is data if it is anything; for $\epsilon$ the paper takes no position.
 
 ## technical
-The Standard-Model paper classifies $N = M_P/H$ in four clauses: it is not kinematic, since the rescaling covariance fixes every discrete invariant (proved) and no construction from the conformal class and pair structure alone fixes $N$ (observation level); it is not dynamical, the frozen action being $N$-insensitive (imported); if kinematic, dynamical and initial data were exhaustive, which is not proved, $N$ would be initial data; and the three are not exhaustive, since under the action as written $N$ is constant on every solution and varies across $\Lambda$, a parameter of the laws, so the third clause holds only if the frozen point's norm is promoted to a Lagrange-multiplier field.
+The Standard-Model paper classifies $N = M_P/H$ in four clauses: it is not kinematic, since the rescaling covariance fixes every discrete invariant (proved) and no construction from the conformal class and pair structure alone fixes $N$ (observation level); it is not dynamical, the norm of the frozen point being fixed by a constraint, with pure-gauge fluctuations and no equation of motion (imported); if kinematic, dynamical and initial data were exhaustive, which is not proved, $N$ would be initial data; and the three are not exhaustive, since under the action as written $N$ is constant on every solution and varies across $\Lambda$, a parameter of the laws, so the third clause holds only if the frozen point's norm is promoted to a Lagrange-multiplier field.
 
 Wherever the dark-matter paper calls a datum initial data of the descent, these clauses are premises of the sentence, and the fourth names the alternative; the orientation proposition, as corrected, no longer uses the conditional third clause, deriving initial data from CPT covariance directly. For the orientation bit that alternative would need the laws to distinguish the two orientations, which the CPT covariance of the listed structures leaves no room for, so the bit is data if it is anything; for $\epsilon$ no position is taken.
 

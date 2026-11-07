@@ -1,7 +1,7 @@
 ---
 id: singularity.p-reduced-metric-level-reading-many
 kind: claim
-version: 6
+version: 7
 title: '(P$_{\mathrm{loc}}$), reduced: the metric-level reading on many modes'
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the Pauli-string witness written in the mode algebra)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.singularity.multi-mode-descent
@@ -25,7 +29,7 @@ about:
 derivations:
 - name: main
   uses:
-  - singularity.descent-parity-average@4
+  - singularity.descent-parity-average@5
   - singularity.imported-one-sided-completion-singularity@5
   proof: proof-main.tex
 checked_by:
@@ -45,6 +49,10 @@ locators:
   label: prem:localuniv
   line: 2117
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7. The qubit (Pauli-string) label X_{R1}X_{L1}Z_{L2} is written in the mode algebra as (v_{R1} + v_{R1}*)(v_{L1} + v_{L1}*) sigma_{L2}, two Majorana elements and a parity section, with the qubit label kept as a reading up to the Jordan-Wigner sign string, as reader R09 proposed. Verified exactly with lib/GA.py in Cl(3,3) (three modes): the element commutes with the total parity and is odd under Ad(sigma_{R1}), so it is total-parity even and not joint-diagonal, the two properties the text uses.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

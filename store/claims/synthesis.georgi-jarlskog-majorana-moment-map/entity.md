@@ -26,7 +26,7 @@ derivations:
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
   - standard-model.grade-three-georgi-jarlskog-direction@5
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.automorphisms-preserve-slot-pair-split-are@6
+  - standard-model.automorphisms-preserve-slot-pair-split-are@7
   proof: proof-main.tex
 checked_by:
 - kind: check

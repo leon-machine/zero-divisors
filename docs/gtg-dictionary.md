@@ -110,6 +110,11 @@ Ric + 8 pi G T = (Lambda + 4 pi G tr T) g. The T05 and T06 curvature spectra fol
   the same equation.
 - Quadratic invariants (Kretschmann, Euler density), eigenvalue ratios, traces and eigenplanes do
   not depend on the sign.
+- Euclidean background Cl(4,0) (computed exactly from C5 by two blind referees and a fixer, run
+  2026-11-07-consistency): the unit round S^4 has \mathcal{R}(B) = -B, \mathcal{R}(a) = -3a,
+  \mathcal{R} = -12. An Einstein field is \mathcal{R}(a) = -Lambda a there, so the Euclidean field
+  equation in frame form is 2(\mathcal{G}(a) - Lambda a) I = 0, not 2(\mathcal{G}(a) + Lambda a) I = 0
+  (checked on S^4, S^2 x S^2 and CP^2 with Lambda = 3, 1, 6). In Cl(0,2) the round plane gives +KJ.
 
 Rule for restaters: write GTG forms in the store sign; when a source formula is in LDG's or the
 round-sphere-positive sign, convert (\mathcal{R} = -\mathcal{R}_LDG, Ric = -Ric^o) or name the sign

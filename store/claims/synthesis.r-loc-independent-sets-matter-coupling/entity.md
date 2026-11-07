@@ -31,10 +31,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.boundary-mode-premises-finite-models@4
-  - synthesis.local-boost-temperature-is-local-regularity@4
-  - synthesis.einstein-equations-from-c-loc-and-clausius@7
-  - synthesis.c-loc-entropy-clause-curvature-independent-density@3
+  - synthesis.boundary-mode-premises-finite-models@5
+  - synthesis.local-boost-temperature-is-local-regularity@5
+  - synthesis.einstein-equations-from-c-loc-and-clausius@8
+  - synthesis.c-loc-entropy-clause-curvature-independent-density@4
   - synthesis.quarter-from-temperature@1
   proof: proof-main.tex
 checked_by:

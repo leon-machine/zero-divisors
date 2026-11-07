@@ -16,6 +16,7 @@ functions:
     clauses: ["Caveat (T14c): xi = 1 under P2 gives Delta N_eff = (8/7)(11/4)^(4/3) + 3.044 in (7.44, 7.45), which the record excludes"]
     omits: "the exclusion is tested against the check's own cap constant, not against a cited bound"
 untouched_premises:
+  synthesis.common-ceiling-coupling-premise: "(iv) the common ceiling and coupling are a premise, not computed; the check runs the copied content's one-loop coefficients only"
   dark-matter.p1-single-frozen-point: "enters only the weaker second route in (v), a reading and not a computation (docstring)"
 judge:
   by: fix-round-2026-10-23

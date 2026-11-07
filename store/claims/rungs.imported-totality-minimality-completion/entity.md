@@ -27,7 +27,7 @@ derivations:
 - name: main
   uses:
   - transport.minimality@4
-  - transport.no-go-level-elements@4
+  - transport.no-go-level-elements@5
   - transport.totality@3
   proof: proof-main.tex
 checked_by:

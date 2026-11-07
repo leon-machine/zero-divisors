@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-large-scale-potential-and-sachs-wolfe-relations
 kind: claim
-version: 1
+version: 2
 title: 'Imported: super-Hubble potential and Sachs-Wolfe relations'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, technical level made consistent with the formal coefficients'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -28,6 +32,10 @@ imported_from:
   key: LangloisRiazuelo2000
   locator: 'eqs. (2), (3), (26), (28), (29), (36)'
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Technical: "matter isocurvature is about six times more visible than an adiabatic mode of the same amplitude" contradicts the formal -(1/5)(zeta + 2 Omega_c S_c), which gives the factor 2 Omega_c, about 1.69 for Omega_c = 0.1200/0.14237; the factor six compares the two at the same potential Phi (Phi/3 against 2 Phi); the formal is unchanged.'
   note: >-
     Imported so that synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window
     (the radiation-era factor 2/3) and synthesis.adiabatic-deposit-modulation-is-a-time-shift (the
@@ -59,7 +67,7 @@ For adiabatic perturbations of a spatially flat FLRW field (a gravitational fiel
 in the sign convention of \cite{Sriramkumar2009}. For a mixture of adiabatic and cold-dark-matter isocurvature modes, with $S_{c} = \delta n_{c}/n_{c} - \delta n_{\gamma}/n_{\gamma}$ and last scattering in the matter era, the large-angle (Sachs-Wolfe) temperature anisotropy is $(\Delta T/T)_{\mathrm{SW}} = \tfrac14\Delta_{\gamma} + 2\Phi$, with adiabatic part $\tfrac{1}{10}(3 + \tfrac45\Omega_{\nu})\hat\Phi$ ($\hat\Phi$ the radiation-era potential, $\Omega_{\nu}$ the neutrino fraction of the radiation) and isocurvature part $-\tfrac25\,\Omega_{c}S_{c}$ ($\Omega_{c}$ the dark-matter fraction of the matter). With the neutrino fraction neglected and $\hat\Phi = -\tfrac23\zeta$, the sum is $-\tfrac15(\zeta + 2\,\Omega_{c}S_{c})$. \emph{Provenance:} \cite{Sriramkumar2009} (eqs. (69), (70a), (70b)); \cite{LangloisRiazuelo2000} (eqs. (2), (3), (26), (28), (29), (36)).
 
 ## technical
-Outside the Hubble length the gravitational potential is a fixed fraction of the conserved curvature perturbation: two thirds while radiation dominates and three fifths once matter does, so the potential drops by $9/10$ at the transition. On the largest angular scales the temperature anisotropy is the Sachs-Wolfe term, one fifth of the curvature perturbation for adiabatic modes; an isocurvature perturbation of the dark matter contributes twice its matter-weighted amplitude with the same weight, which is why matter isocurvature is about six times more visible in the temperature map than an adiabatic mode of the same amplitude.
+Outside the Hubble length the gravitational potential is a fixed fraction of the conserved curvature perturbation: two thirds while radiation dominates and three fifths once matter does, so the potential drops by $9/10$ at the transition. On the largest angular scales the temperature anisotropy is the Sachs-Wolfe term, one fifth of the curvature perturbation for adiabatic modes; an isocurvature perturbation of the dark matter contributes twice its matter-weighted amplitude with the same weight, so a dark-matter isocurvature mode of the same amplitude as $\zeta$ is $2\Omega_{c}$ times as visible, about $1.7$ (the often-quoted factor six compares the two at the same late potential $\Phi$).
 
 ## lay
 These are standard relations between the frozen primordial ripples and the gravitational dips and bumps they produce at different epochs, and the formula for how both kinds of primordial ripple, the kind where everything fluctuates together and the kind where only the dark matter does, show up as hot and cold spots on the largest scales of the microwave sky.

@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.imported-massless-graviton-production-rate@1
-  - dark-matter.population-count-one-share-half-percent@5
+  - dark-matter.imported-massless-graviton-production-rate@2
+  - dark-matter.population-count-one-share-half-percent@6
   - dark-matter.coefficients-floors-they-give-what-gravity@4
   - standard-model.what-angle-asks-neutrino-sector@4
   - dark-matter.ceiling-valued-inherited-success@5
@@ -38,6 +38,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: dark-matter.imported-massless-graviton-production-rate repinned 1 -> 2 after reviewing the F14 change writing the rate with the reduced Planck mass bar M_P, the source''s M_P (any M_P here that is evaluated is 2.435e18 GeV, the reduced mass); the use here holds as cited. Pin review: dark-matter.population-count-one-share-half-percent repinned 5 -> 6 after reviewing its C1 restatement (the share of one now rests also on the common-ceiling-coupling premise, with an assumes edge; the numbers are unchanged); the use here holds as cited.'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'

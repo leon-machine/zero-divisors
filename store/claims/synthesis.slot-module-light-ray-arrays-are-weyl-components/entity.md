@@ -1,7 +1,7 @@
 ---
 id: synthesis.slot-module-light-ray-arrays-are-weyl-components
 kind: claim
-version: 2
+version: 3
 title: 'Light-ray arrays of the slot module are its Weyl components'
 status: proved
 region: synthesis
@@ -25,13 +25,17 @@ credit:
   role: unit conventions per Leon's rulings of 7 November 2026 (R3)
   version: 2
   source: maintainer pass 2026-11-07 (unit rulings)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the two units of proof (i) named, at reader R08''s request)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - synthesis.canonical-part-of-a-spinor-on-a-null-plane@1
-  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@4
-  - field-theory.second-quantisation@5
+  - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@5
+  - field-theory.second-quantisation@6
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
   - synthesis.half-integer-weight-array-carries-half-ln2@5
@@ -60,6 +64,10 @@ lineage:
   - synthesis.residue-from-mode-entropy
   - pred.boundary-mode-density
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 2 -> 3. Reader issue (ga-issues-R08.md): proof (i) now says which unit acts where: Hestenes'' right unit I_4 sigma_3 on the spinor values, span{1, I_4} on the slot module''s numbers and internal index, not identified, and the channel count (half the real dimension) independent of the choice. No change to the mathematics; the matrices in this entity are mass matrices and the Majorana symmetric matrix on the internal index, which the conventions allow, and stay.'
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07
     date: '2026-11-07'

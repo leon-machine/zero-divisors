@@ -42,6 +42,10 @@ locators:
   label: lem:atom
   line: 1506
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Extraction only (DECISIONS G13, R11 item 9): the unit_note said ''the imaginary unit here stays a scalar i'', though no i remains in the levels; it is marked superseded and kept as history. No version change.'
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
@@ -64,7 +68,7 @@ extraction:
     - transport.transport-algorithm
     instantiates: 'T05 states (its algorithm table) that this section executes a step of the T1 transport
       algorithm from Step 3 on: apply the rule, compute in the completion, descend, iterate'
-  unit_note: 'The imaginary unit here stays a scalar i: this atom is built in the spacetime radial plane
+  unit_note: 'Superseded (7 November 2026): no imaginary unit remains in this entity''s levels or proof; the note below is history. The imaginary unit here stays a scalar i: this atom is built in the spacetime radial plane
     sigma = e0 e1, where the field theory''s unit I4 anticommutes with the mode operators, so the convention
     i = I4 (which needs a plane orthogonal to spacetime) does not apply. Recorded 21 October 2026; see
     store/conventions.md, known limit 1.'

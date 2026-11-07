@@ -1,7 +1,7 @@
 ---
 id: note.families.setting-gaussian-theorems
 kind: note
-version: 2
+version: 3
 title: The Gaussian theorems
 status: setting
 subject: generations
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: consistency pass, cross products written as duals of outer products
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - families.rigidity-pairing-sector-one-event
 - families.chart-computation-sign-twist-bracket-form
@@ -30,6 +34,10 @@ locators:
   section: The Gaussian theorems
   line: 769
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The cross-product matrix [p x q]_x and the channel vectors f_+ x f_-, u'' x f_+ are written as the duals -I_f(p ^ q), -I_f(f_+ ^ f_-), -I_f(u'' ^ f_+) with I_f the family pseudoscalar, the notation of the proof of families.rigidity-pairing-sector-one-event; a pure notation change (a x b = -I_f(a ^ b) in Cl(3,0)).'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -45,7 +53,7 @@ the operator form of Proposition \claimref{families.chart-computation-sign-twist
 \[
 \xi \;=\; \tau\,\bigl(G \otimes \varepsilon\bigr), \qquad G = [a]_{\times}, \qquad a = a_{A} + \lambda e^{I_4\chi}a_{B},
 \]
-where a family wedge $p \wedge q$ acts on the family space as the cross-product matrix $[p \times q]_{\times}$ and the two channels are the wedges $f_{+} \wedge f_{-}$, the $S_{3}$-safe channel available to the uncaused vacuum, with $a_{A} = f_{+} \times f_{-}$ normalised, and $u' \wedge f_{+}$, $u' = (1,1,1)$, the channel that uses the descent's orientation bit, with $a_{B} = u' \times f_{+}$ normalised; $\tau > 0$ is the strength, $\lambda \ge 0$ the feeding ratio, $\chi$ the channel phase (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors), and $\lambda = 1$ the universal-strength point. The reading is the gauge-invariant symmetric square, forced by the bracket's gauge phase and the mass paper's $m^{2} = 2|B_{\Lambda}|^{2}$: the mass form is
+where a family wedge $p \wedge q$ acts on the family space by contraction, $w \mapsto w \cdot (p \wedge q)$, which is $[a]_{\times}(w) := -I_{f}(a \wedge w)$ for $a = -I_{f}(p \wedge q)$, the dual of the wedge ($I_{f} = f_{1}f_{2}f_{3}$ the family pseudoscalar), and the two channels are the wedges $f_{+} \wedge f_{-}$, the $S_{3}$-safe channel available to the uncaused vacuum, with $a_{A} = -I_{f}(f_{+} \wedge f_{-})$ normalised, and $u' \wedge f_{+}$, $u' = (1,1,1)$, the channel that uses the descent's orientation bit, with $a_{B} = -I_{f}(u' \wedge f_{+})$ normalised; $\tau > 0$ is the strength, $\lambda \ge 0$ the feeding ratio, $\chi$ the channel phase (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_4\}$, the module read on the tower's floors, where $I_4$ commutes with the tower vectors), and $\lambda = 1$ the universal-strength point. The reading is the gauge-invariant symmetric square, forced by the bracket's gauge phase and the mass paper's $m^{2} = 2|B_{\Lambda}|^{2}$: the mass form is
 \[
 H_{kl} \;=\; \tfrac12\,\bigl\langle \hat\Omega_{k}^{\dagger}\hat\Omega_{l} + \hat\Omega_{l}\hat\Omega_{k}^{\dagger}\bigr\rangle,
 \]

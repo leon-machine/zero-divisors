@@ -1,7 +1,7 @@
 ---
 id: synthesis.de-sitter-static-boost-frozen-point
 kind: claim
-version: 5
+version: 6
 title: The cosmological horizon's boost is the frozen point's time translation
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, undefined symbol in the flat-model translation replaced by the rotor'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
   - mass.de-sitter-scale-frozen-point@6
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - dark-energy.stelle-west-vector-frozen-point@6
   - singularity.imported-surface-gravity-redshifted-acceleration@2
   - singularity.euclidean-section-period@6
   proof: proof-main.tex
@@ -47,6 +51,10 @@ lineage:
   - odd-extensions.translation-bivectors-frozen-point
   - odd-extensions.two-towers-one-curved-universe
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof step 5 wrote the Lambda = 0 flow as e^{tN} X(x) = X(x - t e_0) with N undefined (and N is M_P/H in this subject); the flow of the Killing field X.B_0 is the rotor action e^{-tB_0/2} X e^{tB_0/2}, and exact computation in Cl(2,4) (n_0.n_inf = 1, X = n_0 + x - Q(x) n_inf/2, three values of t, two points) gives X(x - t e_0) for it and X(x + t e_0) for the opposite sandwich (consistency run scratch v2.py).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

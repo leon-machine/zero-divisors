@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff
 kind: claim
-version: 2
+version: 4
 title: 'The frozen point reduces the connection only when infinitely stiff'
 status: proved
 region: synthesis
@@ -17,6 +17,22 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: forms as multivector fields, the curvature contractions and densities as maps of the curvature operator'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review (referee F1): two conformal-product values in proof (i) corrected'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'GA rewrite of the formal''s index readings (traces, Ricci contraction, Schouten, Einstein and Weyl maps, the Weyl square and the interpolated density), the index forms kept as readings; new exact check'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -24,12 +40,12 @@ derivations:
 - name: main
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.stelle-west-norm-is-no-local-output@2
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@2
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@2
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -42,6 +58,10 @@ checked_by:
   ref: check.py::check_stiffness_interpolates_conformal_gravity_and_the_frozen_functional
 - kind: check
   ref: check.py::check_frame_equation_is_the_frozen_slot_equation
+- kind: check
+  ref: check.py::check_gtg_readings_of_the_curvature_operator
+- kind: check
+  ref: check.py::check_gtg_formal_forms_equal_their_index_readings
 - kind: proof
   derivation: main
 lineage:
@@ -51,6 +71,26 @@ lineage:
   - synthesis.stelle-west-norm-is-no-local-output
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s answers, second round, item 7 (version 3 -> 4): the index expressions the formal marked as readings now follow their GA forms, the mathematics unchanged. Setting: tr M = d_a . M(a); the curvature operator calR(A ^ B) of Omega (no pair symmetry with torsion), its Ricci contraction calR(b) = d_a . calR(a ^ b) (reading R_bd = sum_a eta^aa R_adab), scalar, Einstein map, Schouten map P*(a) = (1/2)(calR(a) - (1/6) a calR) and Weyl map W(a ^ b) = calR(a ^ b) - P*(a) ^ b - a ^ P*(b) (reading R - KN(P*)), the forms the proof already used; (iii) L1(P*) = (1/2) <W(a ^ b) W(d_b ^ d_a)> (reading (1/4) W_abcd W^abcd); (iv) the density displayed as (1 - t)(1/2) <W W> + t((1/4) E - (Lambda/3)(calR - 2 Lambda)), E = 2 <calR(a ^ b) calR(d_b ^ d_a)> - 4 calR(d_a) . calR(a) + calR^2, with the old index display kept as its reading, and the Weyl-square coefficient (1 - t)/2 of <W W> (reading (1 - t)/4 of W_abcd W^abcd). Evidence: the existing check_gtg_readings_of_the_curvature_operator already equates the Ricci contraction (with torsion), scalar, Schouten matrix, Weyl square, Euler density and Q2 with their index forms; new check check_gtg_formal_forms_equal_their_index_readings adds the Weyl map plane by plane against R - KN(P*) on the torsion-free sample, R_ab R^ab against calR(d_a) . calR(a), and the GA display of (iv) against the index display and (1 - t) L1(P*) + t L1(rho id) at t in {0, 1/3, -2/5, 1} and both rho. With torsion the GA Weyl map is R - KN of the transposed Schouten matrix in the check''s index convention (also asserted); no clause uses the Weyl part with torsion ((iii) and (iv) are stated for torsion-free Omega), so the reading is labelled torsion-free.'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites that frame equation in (v), in the store sign, so the use holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped); it is cited here for the frame equation 2(G(a) + Lambda a) of clause (i), unchanged, and the use holds as cited. synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared repinned 3 -> 4: its change is notation only (the two-forms and four-forms written as linear maps of physical bivectors and their densities, components kept as readings).'
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F1 fix 6.1 applied: proof (i) said (ninf ^ n0) . ninf = -n0 and (ninf ^ n0) . n0 = ninf (carried over from the component proof, orig-proof-main.tex, which has the same slip and is kept as history). With (u ^ w) . Y = u (w . Y) - w (u . Y) and n0 . ninf = 1 the values are ninf and -n0; the fixer verified this in Cl(2,4) with GA.py and recomputed Omega_T x I and Omega_T x X for a generic Lorentz bivector, slot, dilation and spacetime vector at rho = 3/7 and -2/5: the displayed DI(a) = rho a - S(a) + beta(a)(ninf - rho n0) and DX(a) = a - beta(a) n0 hold, and the values the proof stated would give beta (rho ninf - n0) and + beta ninf, which fail. So the error did not propagate: the displays, formal (i) and check_broken_components_of_the_frozen_point (which computes the products) were right; only the sentence is corrected. Pins: dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 (formal unchanged), synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 2 -> 3 (GA rewrite of (iii), component value kept as reading), synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 (see maintainer_pass_pin_review).'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in Gauge Theory Gravity: forms as multivector fields (one- and two-forms as linear maps of physical vectors and bivectors, four-form densities as the alternating product on the physical frame); the curvature of Omega as the store-sign operator calR(A ^ B) without pair symmetry when Omega has torsion, its Ricci map d_a . calR(a ^ b) (equal to the index reading sum_a eta^aa R_adab also with torsion), Schouten, Einstein and Weyl maps, traces d_a . M(a), the slot derivative as the map D with dL = d_a . D(dS(a)), the Weyl square (1/2) <W(a ^ b) W(d_b ^ d_a)> and the Euler density from the dictionary; the index expressions of the formal level are their labelled readings. The arguments of (i)-(v) were already in Cl(2,4) and are unchanged. Original proof kept as orig-proof-main.tex. New exact check check_gtg_readings_of_the_curvature_operator (Ricci map and Schouten map against the index readings for a torsion-free and a torsionful curvature, scalar, Weyl square and Euler density in GA against the index values, Q2 by GA traces, L1 at the Schouten slot = Weyl square and at the frozen slot = E/4 - (Lambda/3)(calR - 2 Lambda), and the slot derivative 2(calG + Lambda id) as a map, at two values of rho). outside_ga withdrawn: no stand-in remains in the proof; the formal level''s index expressions are labelled readings.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The action and its elimination are written in forms and frame components (W_abcd W^abcd, R_abcd R^abcd, eta^{aa} R_{adab}, two-forms F = (1/2) F_ab e^a ^ e^b); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map, but the elimination is computed on the components.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01
@@ -90,7 +130,7 @@ Work in $\Cl(2,4)$ with the chart of Theorem \claimref{synthesis.gtg-tractor-gau
 \[
 \Omega_{T}(a) = \Omega(a) - \nInf \wedge \hb^{-1}(a) + \nO \wedge S(a) + \beta(a)\,\nInf \wedge \nO,
 \]
-with $\hb$ (invertible), $\Omega$, the special-conformal slot $S$ (a vector-valued one-form) and the dilation $\beta$ (a scalar one-form) independent; $D Y = \Omega_{T} \times Y$. It contains the normal tractor connection ($S = \Sch\,\hb^{-1}$, $\beta = 0$, $\Omega$ torsion-free) and the connections preserving $I$, and no field equation enters its definition. With $I$ and $X$ held as fixed data, the densities below are invariant only under their joint stabiliser, the Lorentz rotations; holding $I$ constant is the unitary gauge of the Higgs reading (a special-conformal rotor of the parabolic group that gauges the tractor field moves $I$). The four-form densities are $L_{1} = \epsilon(I, V, F, F)$, $L_{3} = \epsilon(I, V, DV, DV, F)$, $L_{5} = \epsilon(I, V, DV, DV, DV, DV)$ (the family of Theorem \claimref{synthesis.stelle-west-norm-is-no-local-output}) and the stiffness $St = \epsilon(I, X, DI, DI, DX, DX)$, all polynomial with no inverse frame. In frame components ($\hb = 1$ at a point) write $M$ for a linear map, $Q_{2}(M) = 2\bigl((\tr M)^{2} - \tr(M^{2})\bigr)$ times the volume form, $\mathcal{G}$ the Einstein map of the curvature $\mathcal{R}$ of $\Omega$, $\Sch_{*}$ its Schouten map built from the Ricci contraction (index reading $R_{bd} = \sum_{a}\eta^{aa}R_{adab}$; for torsion-free $\Omega$ the stored Schouten map), and $\mathcal{W} = \mathcal{R} - \mathrm{KN}(\Sch_{*})$ its Weyl part.
+with $\hb$ (invertible), $\Omega$, the special-conformal slot $S$ (a vector-valued one-form) and the dilation $\beta$ (a scalar one-form) independent; $D Y = \Omega_{T} \times Y$. It contains the normal tractor connection ($S = \Sch\,\hb^{-1}$, $\beta = 0$, $\Omega$ torsion-free) and the connections preserving $I$, and no field equation enters its definition. With $I$ and $X$ held as fixed data, the densities below are invariant only under their joint stabiliser, the Lorentz rotations; holding $I$ constant is the unitary gauge of the Higgs reading (a special-conformal rotor of the parabolic group that gauges the tractor field moves $I$). The four-form densities are $L_{1} = \epsilon(I, V, F, F)$, $L_{3} = \epsilon(I, V, DV, DV, F)$, $L_{5} = \epsilon(I, V, DV, DV, DV, DV)$ (the family of Theorem \claimref{synthesis.stelle-west-norm-is-no-local-output}) and the stiffness $St = \epsilon(I, X, DI, DI, DX, DX)$, all polynomial with no inverse frame. At a point, in an orthonormal physical frame with $\hb = 1$ there, write $M$ for a linear map of physical vectors, $\tr M = \partial_{a} \cdot M(a)$, $Q_{2}(M) = 2\bigl((\tr M)^{2} - \tr(M^{2})\bigr)$ times the volume form; $\mathcal{R}(A \wedge B)$ for the store-sign curvature operator of $\Omega$ (without pair symmetry when $\Omega$ has torsion), $\mathcal{R}(b) = \partial_{a} \cdot \mathcal{R}(a \wedge b)$ its Ricci contraction (index reading $R_{bd} = \sum_{a}\eta^{aa}R_{adab}$), $\mathcal{R} = \partial_{a} \cdot \mathcal{R}(a)$, $\mathcal{G}(a) = \mathcal{R}(a) - \tfrac12 a\,\mathcal{R}$ its Einstein map, $\Sch_{*}(a) = \tfrac12\bigl(\mathcal{R}(a) - \tfrac16 a\,\mathcal{R}\bigr)$ its Schouten map (for torsion-free $\Omega$ the stored Schouten map), and $\mathcal{W}(a \wedge b) = \mathcal{R}(a \wedge b) - \Sch_{*}(a) \wedge b - a \wedge \Sch_{*}(b)$ its Weyl part (for torsion-free $\Omega$, where alone it is used below, the index reading $\mathcal{R} - \mathrm{KN}(\Sch_{*})$).
 \begin{enumerate}
 \item[(i)] \emph{(Broken components; proved.)} $DI(a) = \rho\,\hb^{-1}(a) - S(a) + \beta(a)(\nInf - \rho\nO)$ and $DX(a) = \hb^{-1}(a) - \beta(a)\nO$. Relative to the stabiliser of $I$ the broken components are therefore $S - \rho\,\hb^{-1}$ and $\beta$ (that $\Omega_{T}$ preserves $I$ exactly when both vanish is the slot lemma of Theorem \claimref{synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise}(i), and is not claimed here).
 \item[(ii)] \emph{(The Stelle-West family does not freeze the slot; computed, general by equivariance.)} With $S$ varied, the slot derivative of $c_{1}L_{1} + c_{3}L_{3} + c_{5}L_{5}$ at the frozen value $S = \rho\,\hb^{-1}$ is, for torsion-free $\Omega$,
@@ -98,12 +138,13 @@ with $\hb$ (invertible), $\Omega$, the special-conformal slot $S$ (a vector-valu
 \bigl(2c_{1} + c_{3}/\rho\bigr)\,\mathcal{G} + \bigl(2c_{1}\Lambda + 2c_{3}\Lambda/\rho + 12c_{5}/\rho\bigr)\id .
 \]
 So when $2c_{1} + c_{3}/\rho \neq 0$ the frozen slot solves its own equation only where $\mathcal{G} = -\Lambda_{\mathrm{eff}}\id$, an Einstein condition; for every curvature it does so only on the line $c_{3} = -2\rho c_{1}$, $c_{5} = \rho^{2}c_{1}$, where the density at the frozen slot is $c_{1}$ times the Euler form $\epsilon(I, X, \mathcal{R}, \mathcal{R})$ of $\Omega$ (also with torsion), which has no field equations, while the density still depends on $S$ away from it. More generally, adding to $c_{1}L_{1}$ ($c_{1} \neq 0$) any slot potential that does not involve the curvature leaves the frozen slot stationary only where $2c_{1}(\mathcal{G} + \Lambda\,\id)$ equals a fixed map, again an Einstein condition.
-\item[(iii)] \emph{(Stiffness is the slot Hessian; proved.)} $St = Q_{2}(S - \rho\,\hb^{-1})$, independent of $\beta$ and $\Omega$, and the same nondegenerate form is the slot Hessian of the frozen-point integrand: $L_{1}(S) = L_{1}(\Sch_{*}) + Q_{2}(S - \Sch_{*})$ for every curvature, where $\Sch_{*}$, the unique stationary slot of $L_{1}$, is the Schouten map of the slot elimination (for torsion-free $\Omega$ the stored Schouten map, with $L_{1}(\Sch_{*}) = \tfrac14 W_{abcd}W^{abcd}$; the elimination itself is the conformal-gauge step of Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(b), and is not claimed here).
-\item[(iv)] \emph{(Interpolation; proved.)} For $\mu \neq -1$ the slot equation of $L_{1} + \mu\,St$ has the unique solution $S_{\mu} = (\Sch_{*} + \mu\rho\,\id)/(1 + \mu)$ and the density there is $L_{1}(\Sch_{*}) + t\,Q_{2}(\rho\,\id - \Sch_{*})$ with $t = \mu/(1 + \mu)$; for torsion-free $\Omega$, in index reading,
+\item[(iii)] \emph{(Stiffness is the slot Hessian; proved.)} $St = Q_{2}(S - \rho\,\hb^{-1})$, independent of $\beta$ and $\Omega$, and the same nondegenerate form is the slot Hessian of the frozen-point integrand: $L_{1}(S) = L_{1}(\Sch_{*}) + Q_{2}(S - \Sch_{*})$ for every curvature, where $\Sch_{*}$, the unique stationary slot of $L_{1}$, is the Schouten map of the slot elimination (for torsion-free $\Omega$ the stored Schouten map, with $L_{1}(\Sch_{*}) = \tfrac12\langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0}$, in components $\tfrac14 W_{abcd}W^{abcd}$; the elimination itself is the conformal-gauge step of Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(b), and is not claimed here).
+\item[(iv)] \emph{(Interpolation; proved.)} For $\mu \neq -1$ the slot equation of $L_{1} + \mu\,St$ has the unique solution $S_{\mu} = (\Sch_{*} + \mu\rho\,\id)/(1 + \mu)$ and the density there is $L_{1}(\Sch_{*}) + t\,Q_{2}(\rho\,\id - \Sch_{*})$ with $t = \mu/(1 + \mu)$; for torsion-free $\Omega$,
 \[
-(1 - t)\,\tfrac14 W_{abcd}W^{abcd} + t\Bigl(\tfrac14\bigl(R_{abcd}R^{abcd} - 4R_{ab}R^{ab} + R^{2}\bigr) - \tfrac{\Lambda}{3}(R - 2\Lambda)\Bigr).
+(1 - t)\,\tfrac12\langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0} + t\Bigl(\tfrac14 E - \tfrac{\Lambda}{3}(\mathcal{R} - 2\Lambda)\Bigr), \qquad E = 2\langle\mathcal{R}(a \wedge b)\,\mathcal{R}(\partial_{b} \wedge \partial_{a})\rangle_{0} - 4\,\mathcal{R}(\partial_{a}) \cdot \mathcal{R}(a) + \mathcal{R}^{2},
 \]
-At $\mu = 0$ this is the Weyl square (the normal tractor slot, conformal gravity); as $\mu \to \infty$ it is the frozen-point density with the slot frozen; for finite $\mu \neq 0$ it is $t$ times the frozen-point density plus $\tfrac{1-t}{4}W_{abcd}W^{abcd}$: the frozen-point functional with Newton's constant rescaled by $1/t$, plus a Weyl square whose coefficient relative to the Einstein-Hilbert term has magnitude $3/(4\mu\Lambda)$, so with $\Lambda$ as small as observed the Weyl-square scale $(\mu\Lambda)^{-1/2}$ stays unobservable only for enormous $\mu$. $Q_{2}$ is indefinite and $S$ enters without derivatives, so $St$ is a penalty on an auxiliary field, not a mass for propagating fields.
+in index reading $(1 - t)\,\tfrac14 W_{abcd}W^{abcd} + t\bigl(\tfrac14(R_{abcd}R^{abcd} - 4R_{ab}R^{ab} + R^{2}) - \tfrac{\Lambda}{3}(R - 2\Lambda)\bigr)$.
+At $\mu = 0$ this is the Weyl square (the normal tractor slot, conformal gravity); as $\mu \to \infty$ it is the frozen-point density with the slot frozen; for finite $\mu \neq 0$ it is $t$ times the frozen-point density plus $\tfrac{1-t}{2}\langle\mathcal{W}(a \wedge b)\,\mathcal{W}(\partial_{b} \wedge \partial_{a})\rangle_{0}$ (in components $\tfrac{1-t}{4}W_{abcd}W^{abcd}$): the frozen-point functional with Newton's constant rescaled by $1/t$, plus a Weyl square whose coefficient relative to the Einstein-Hilbert term has magnitude $3/(4\mu\Lambda)$, so with $\Lambda$ as small as observed the Weyl-square scale $(\mu\Lambda)^{-1/2}$ stays unobservable only for enormous $\mu$. $Q_{2}$ is indefinite and $S$ enters without derivatives, so $St$ is a penalty on an auxiliary field, not a mass for propagating fields.
 \item[(v)] \emph{(Einstein's equation is the frozen slot's equation; proved.)} The slot derivative of $L_{1}$ at $S = \rho\,\hb^{-1}$ is $2(\mathcal{G} + \Lambda\,\id)$. With $\Omega$ fixed and the slot tied to the frame ($S = \rho\,\hb^{-1}$), the frame derivative of $L_{1}$ is $2\rho$ times it, and divided by $Q(I) = 2\rho$ it is the frame equation $2(\mathcal{G}(a) + \Lambda a)$ of Theorem \claimref{synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part}.
 \end{enumerate}
 \emph{Reading.} In the Stelle-West mechanism the Higgs vector's covariant derivative is the frame, which must be nondegenerate. Read the same way for the first step, from $\so(2,4)$ to the stabiliser of $I$, the field space of the frozen-point functional asks for the opposite: the broken components $DI$ must vanish. No member of the stored constant-coupling family, and no curvature-independent slot potential, imposes that off the Einstein locus; the stiffness penalty imposes it only in the limit $\mu \to \infty$. A Lagrange multiplier three-form paired with $DI$ (polynomial, inverse-frame free) imposes $DI = 0$ at finite coupling, but adding it is the same premise written into the action. The connections preserving $I$ are therefore the infinitely stiff frozen point, an equivalent reading of the field-space premise (Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), not a derivation of it. With the slot free the same integrand gives conformal gravity.

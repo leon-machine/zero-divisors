@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - interior.covariant-form-vacuum-equations@5
-  - interior.imported-equivalence-einstein-equations@2
+  - interior.imported-equivalence-einstein-equations@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

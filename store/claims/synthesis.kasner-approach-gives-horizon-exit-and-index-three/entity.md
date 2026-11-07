@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-approach-gives-horizon-exit-and-index-three
 kind: claim
-version: 3
+version: 4
 title: 'A Kasner approach gives horizon exit with index three and no red tilt'
 status: proved
 region: synthesis
@@ -21,17 +21,21 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (scalar wave equation in GTG)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@5
-  - sheaf.kasner-data-interior@2
+  - interior.kasner-form-interior@7
+  - sheaf.kasner-data-interior@3
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
   - synthesis.imported-planck-2018-lcdm-parameters@3
-  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@2
+  - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -52,6 +56,10 @@ lineage:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
   - dark-energy.frozen-point-datum-kasner-wall
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The massless scalar field equation is written det(hb) nabla.(det(hb)^{-1} hb hb^T(nabla phi)) = 0, which is the component form |g|^{-1/2} d_mu(|g|^{1/2} g^{mu nu} d_nu phi) = 0 exactly (sqrt|g| = det(hb)^{-1}, g^{mu nu} = hb^T(e^mu).hb^T(e^nu), and hb^T(e^mu).X = e^mu.hb(X)), kept as a labelled reading; the volume element is named the volume factor det(hb)^{-1}; notation only.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

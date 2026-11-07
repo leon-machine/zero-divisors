@@ -1,7 +1,7 @@
 ---
 id: synthesis.euler-term-horizon-entropy-shift
 kind: claim
-version: 4
+version: 5
 title: 'The Euler term shifts horizon entropy by a topological constant'
 status: proved
 region: synthesis
@@ -17,17 +17,21 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (MacDowell-Mansouri square as the Euler form of the curvature operator)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
-  - dark-energy.frozen-point-makes-stelle-west-vector@5
+  - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
+  - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-gibbons-hawking-entropy@3
   - synthesis.de-sitter-entropy-pi-n-squared@6
-  - dark-energy.wall-counterterm@4
+  - dark-energy.wall-counterterm@6
   - synthesis.imported-wald-noether-charge-entropy@3
   - synthesis.imported-chern-gauss-bonnet@3
   proof: proof-main.tex
@@ -41,6 +45,10 @@ lineage:
   - synthesis.de-sitter-entropy-pi-n-squared
   - dark-energy.wall-counterterm
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in (i), formal and proof: the MacDowell-Mansouri identity is stated for the Euler form E[X] = 2 <X(a ^ b) I^{-1} X(I d_b ^ d_a)> of linear maps on bivectors, l^2 E[F] = -4 s (R - 2 Lambda + alpha E_4) with F = calR - s l^{-2} id and E_4 = E[calR]; the proof expands E bilinearly with E[calR, id] = E[id, calR] = 2R and E[id] = 24; the two-forms, epsilon contractions and the component Euler density stay as labelled readings. Checked exactly with lib/GA.py in the maintainer scratch, in Cl(1,3) and Cl(4,0): E equals the check''s eps-eps contraction and the component Euler density R_abcd R^abcd - 4 R_ab R^ab + R^2 on constant-curvature and generic Gauss-type operators X(a ^ b) = sum_k c_k h_k(a) ^ h_k(b), the contractions are 2R and 24, and the identity holds on both branches. The previous formal level wrote E_4 = -2 <calR(a ^ b) I calR(I d_b ^ d_a)> in a statement that also covers Euclidean signature; that form is right only where I^2 = -1 (in Euclidean signature it gives -E_4), and the I^{-1} form replaces it. Proof (ii): the conformal factor of the induced metric, written Omega against the rotation-gauge field, renamed varrho. Statement otherwise unchanged.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -61,13 +69,13 @@ extraction:
 ---
 
 ## formal
-Take the gravitational action of the gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) to be the MacDowell-Mansouri functional of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}, the Cartan curvature $F$ being the Lorentz block of the field strength of its $SO(1,4)$ (respectively $SO(2,3)$) gauge field, which the series reaches from the frozen point (Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii)), with $\ell^{2} = 3/|\Lambda|$, the sign of the $\ell^{-2}e\wedge e$ term fixed by requiring the Cartan curvature $F$ to vanish on the de Sitter (respectively anti-de Sitter) model, and the overall constant fixed by normalising its Einstein-Cartan term to the Einstein-Hilbert Lagrangian with Newton constant $G$.
+Take the gravitational action of the gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}) to be the MacDowell-Mansouri functional of Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}, the Cartan curvature $F$ being the Lorentz block of the field strength of its $SO(1,4)$ (respectively $SO(2,3)$) gauge field, which the series reaches from the frozen point (Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii)), with $\ell^{2} = 3/|\Lambda|$, the sign of the $\ell^{-2}$ term (in components $\ell^{-2}e\wedge e$) fixed by requiring the Cartan curvature $F$ to vanish on the de Sitter (respectively anti-de Sitter) model, and the overall constant fixed by normalising its Einstein-Cartan term to the Einstein-Hilbert Lagrangian with Newton constant $G$.
 \begin{enumerate}
-\item[(i)] \emph{(The coefficient.)} For every algebraic curvature tensor, that is every curvature operator $\mathcal{R}(B)$ on bivectors with the algebraic symmetries, in Lorentzian and in Euclidean signature and on both branches,
+\item[(i)] \emph{(The coefficient.)} For every algebraic curvature tensor, that is every curvature operator $\mathcal{R}(B)$ on bivectors with the algebraic symmetries, in Lorentzian and in Euclidean signature and on both branches, with the Euler form $E[X] := 2\langle X(a \wedge b)\,I^{-1}\,X(I\partial_b \wedge \partial_a)\rangle$ of a linear map $X$ on bivectors ($I$ the pseudoscalar),
 \[
-\ell^{2}\,\epsilon_{abcd}F^{ab}\wedge F^{cd} \;=\; -4\,s\,\bigl(R - 2\Lambda + \alpha E_{4}\bigr)\,\mathrm{vol}, \qquad \alpha = -\frac{3}{4\Lambda}, \qquad E_{4} = R_{abcd}R^{abcd} - 4R_{ab}R^{ab} + R^{2},
+\ell^{2}\,E[\mathcal{F}] \;=\; -4\,s\,\bigl(R - 2\Lambda + \alpha E_{4}\bigr), \qquad \mathcal{F}(B) := \mathcal{R}(B) - s\ell^{-2}B, \qquad \alpha = -\frac{3}{4\Lambda}, \qquad E_{4} = E[\mathcal{R}],
 \]
-with $s = \operatorname{sign}\Lambda$, $R$ the scalar curvature ($\mathcal{R}$ in the store's sign, $4\Lambda$ on the model) and $E_{4}$ the Euler density, $E_{4} = -2\langle\mathcal{R}(a \wedge b)\,I\,\mathcal{R}(I\partial_b \wedge \partial_a)\rangle$ in either sign. So the series' Lagrangian is $(R - 2\Lambda + \alpha E_{4})/16\pi G$: the Euler density enters with $\alpha = -3/4\Lambda$, negative for $\Lambda > 0$, and $\alpha$ is already fixed by the vanishing of the square on the model.
+with $s = \operatorname{sign}\Lambda$, $R = \partial_a\cdot\mathcal{R}(a)$ the scalar curvature ($\mathcal{R}$ in the store's sign, $4\Lambda$ on the model), $E_{4}$ the Euler density, in either sign of $\mathcal{R}$, and $\mathcal{F}$, up to its overall sign, the Lorentz block of the Cartan curvature (in components, a labelled reading: $\ell^{2}\,\epsilon_{abcd}F^{ab}\wedge F^{cd} = \ell^{2}E[\mathcal{F}]\,\mathrm{vol}$ and $E_{4} = R_{abcd}R^{abcd} - 4R_{ab}R^{ab} + R^{2}$). So the series' Lagrangian is $(R - 2\Lambda + \alpha E_{4})/16\pi G$: the Euler density enters with $\alpha = -3/4\Lambda$, negative for $\Lambda > 0$, and $\alpha$ is already fixed by the vanishing of the square on the model.
 \item[(ii)] \emph{(The shift, and its invisibility.)} Assume (W): the entropy of a Killing horizon, evaluated on a cross-section $\Sigma$ of the horizon locus in the chart, on which the Killing field $K$ is null and normal to the horizon with $(K \cdot D)K = \kappa K$ (the boost flow is the flow of $K$, which carries cross-sections to cross-sections), is the Wald entropy of this Lagrangian, which by Fact \claimref{synthesis.imported-wald-noether-charge-entropy}(c) is the Jacobson-Myers functional $S[\Sigma] = \frac{1}{4G}\int_{\Sigma}\bigl(1 + 2\alpha\,{}^{(2)}\!R\bigr)\,dA$. Then
 \[
 S[\Sigma] \;=\; \frac{A(\Sigma)}{4G} \;-\; \frac{3\pi\,\chi(\Sigma)}{2\Lambda G} ,

@@ -23,11 +23,11 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.imported-tractor-connection@2
-  - interior.scale-tractor-leaves-cone@7
+  - interior.imported-tractor-connection@3
+  - interior.scale-tractor-leaves-cone@8
   - mass.de-sitter-scale-frozen-point@6
-  - synthesis.imported-gtg-dictionary@1
-  - dark-energy.stelle-west-vector-frozen-point@5
+  - synthesis.imported-gtg-dictionary@2
+  - dark-energy.stelle-west-vector-frozen-point@6
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -43,6 +43,10 @@ checked_by:
 - kind: check
   ref: check.py::check_stelle_west_reduction_is_macdowell_mansouri_connection
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
   note: >-
     The store's own transcription of the tractor connection into Gauge Theory Gravity: the
     connection becomes a Cl(2,4)-bivector-valued rotation-gauge field on flat spacetime, the

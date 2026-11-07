@@ -1,0 +1,7 @@
+# Cross-subject items from reader R05 (subject dark-matter)
+
+R05 looked for conflicts between dark-matter entities and results in other subjects that they cite or that cite them (clifford-structure, tower, completion, zero-divisors, dark-energy, neutrinos, hawking, standard-model). None found that is not already resolved:
+
+- `synthesis.mirror-extensions-causal-convention` (dark-matter) against `rule2.which-residues-obstruct-which-way` (zero-divisors) and `odd-extensions.four-extensions-oriented-pair` (tower): the uniform against causal labelling of the mirror's extensions. Both other entities already carry the causal-convention sentence; resolved.
+- `dark-tower-matter.constituents-field` (field $\C$ in this tower) against `dark-matter.type-residue-what-each-tower-can` ($\HH$): different commutants, recorded by `note.dark-tower-matter.t14s-types-are-different-commutant`; not a conflict.
+- Conventions (store level, not an entity): two GA-owned dark-matter entities (`synthesis.residues-zero-four-real-chirality-anomaly`, `synthesis.imported-two-dimensional-covariant-gravitational-anomaly`) say the store's curvature sign would flip the sign of the scalar curvature. By conventions C6 and C7 it does not (de Sitter $\mathcal{R} = 4\Lambda$, the same sign as the mostly-plus round-sphere-positive scalar). Sent to the GA rewriters in ga-issues-R05.md; any other subject using that phrasing would share the slip (not searched store-wide).

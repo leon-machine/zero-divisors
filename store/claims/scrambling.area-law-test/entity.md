@@ -1,7 +1,7 @@
 ---
 id: scrambling.area-law-test
 kind: claim
-version: 4
+version: 5
 title: The area-law test
 status: proved
 region: scrambling
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass on Leon''s decisions, the 1-nat convention of the coefficient stated in the formal level (restatement)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions)
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: prop:arealaw
   line: 648
 extraction:
+  maintainer_pass_decisions:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Formal correction (DECISIONS A15, R08; restatement): ''reproduces the Bekenstein-Hawking entropy, coefficient included'' holds in the 1-nat convention only; scrambling.residue-each-convention (iii) says that convention over-credits each mode, and with ln 2 per mode the condition is nu Delta t = M/(2 ln 2) (singularity.area-law-test). The formal now says so, as its one-liner already did. The equivalence N = 4 pi M^2 iff nu Delta t = M/2 is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -66,7 +74,7 @@ extraction:
 ---
 
 ## formal
-$N = \SBH = 4\pi M^2$ if and only if $\nu\,\Delta t = M/2$: the count reproduces the Bekenstein-Hawking entropy, coefficient included, precisely when the counted epoch is of order one Schwarzschild time. The scale has an independent causal meaning: the span of singularity in the causal future of a single horizon-crossing epoch is $\Delta t(\varepsilon) = 2M\bigl(\ln(1/\varepsilon) - \tfrac83 + 2\ln 2\bigr) + O(\varepsilon)$, of order $M$ up to a logarithm (Fact \claimref{singularity.causal-epoch-computed-exactly}). Counting instead over the hole's whole lifetime, $\Delta t \sim M^3$, gives $N \sim M^4$: the count then shares with the interior-volume growth of \cite{ChristodoulouRovelli2015} the linearity in time and the unresolved tension with the constancy of the horizon entropy, though not the growth law (their $dV/dv \propto M^2$ gives $V \sim M^5$ over the lifetime). The framework does not resolve that tension; it reproduces it from an independent starting point, which is evidence the count tracks real structure; the confrontation is recorded.
+$N = \SBH = 4\pi M^2$ if and only if $\nu\,\Delta t = M/2$: the count reproduces the Bekenstein-Hawking entropy, coefficient included, precisely when the counted epoch is of order one Schwarzschild time (in the 1-nat convention; with each mode credited its $\ln 2$ the condition is $\nu\,\Delta t = M/(2\ln 2)$, Proposition \claimref{singularity.area-law-test}). The scale has an independent causal meaning: the span of singularity in the causal future of a single horizon-crossing epoch is $\Delta t(\varepsilon) = 2M\bigl(\ln(1/\varepsilon) - \tfrac83 + 2\ln 2\bigr) + O(\varepsilon)$, of order $M$ up to a logarithm (Fact \claimref{singularity.causal-epoch-computed-exactly}). Counting instead over the hole's whole lifetime, $\Delta t \sim M^3$, gives $N \sim M^4$: the count then shares with the interior-volume growth of \cite{ChristodoulouRovelli2015} the linearity in time and the unresolved tension with the constancy of the horizon entropy, though not the growth law (their $dV/dv \propto M^2$ gives $V \sim M^5$ over the lifetime). The framework does not resolve that tension; it reproduces it from an independent starting point, which is evidence the count tracks real structure; the confrontation is recorded.
 
 ## technical
 With the mode count $N = 8\pi\nu M\,\Delta t$ (Planck units), the count equals the Bekenstein-Hawking entropy $\SBH = 4\pi M^2$ exactly when $\nu\,\Delta t = M/2$. This is the 1-nat convention, one nat per mode; in the singularity paper's capacity convention, $\ln 2$ per fermionic mode, the capacity $N\ln 2$ equals $\SBH$ exactly when $\nu\,\Delta t = M/(2\ln 2)$ (\claimref{singularity.area-law-test}). Either way the epoch must be of order one Schwarzschild time. That scale has an independent causal meaning: the span of singularity in the causal future of one horizon-crossing epoch is $\Delta t(\varepsilon) = 2M\bigl(\ln(1/\varepsilon) - \tfrac83 + 2\ln 2\bigr) + O(\varepsilon)$, of order $M$ up to a logarithm.

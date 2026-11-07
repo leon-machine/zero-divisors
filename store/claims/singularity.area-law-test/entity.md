@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.stretched-singularity-count@7
+  - singularity.stretched-singularity-count@8
   - singularity.causal-epoch-computed-exactly@4
   assumes:
   - singularity.c1-curvature-cutoff@4

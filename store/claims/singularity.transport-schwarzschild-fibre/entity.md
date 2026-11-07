@@ -1,7 +1,7 @@
 ---
 id: singularity.transport-schwarzschild-fibre
 kind: claim
-version: 8
+version: 9
 title: The transport, on the Schwarzschild fibre
 status: proved
 region: singularity
@@ -17,6 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 9
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: lift and reflection in e+ in Cl(2,4), dual norm as Q(hb^T(xi)) from the gauge field; exact check'
+  version: 9
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F2): xi written as a background gradient in the formal and technical levels; outside_ga removed'
+  version: 9
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.singularity.fibrewise-conformal-lift
@@ -45,12 +57,26 @@ checked_by:
   ref: check.py::check_null_directions_go_ideal
 - kind: check
   ref: check.py::check_dying_direction_dual_norm_and_read_out
+- kind: check
+  ref: check.py::check_gtg_dual_norm_of_the_dying_direction_from_the_engine
 locators:
   paper: T05
   number: Prop 5.2
   label: prop:lift
   line: 1535
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Referee F2 finding applied. The outside_ga declaration (the generator xi named by its one-form in the weighted PG coframe of T4 Thm 8.7) was not exact: on the invertible region xi is the background gradient sqrt(r) grad r + sqrt(2M) grad t_PG = sqrt(2M) grad t_s + (sqrt(r)/f) grad r, and the proof and check use it that way (hb^T(xi) = -sqrt(r) e_r, Q*(xi) = -r, verified by the referee and by the existing check at three masses and four radii). Formal (4) and the technical level now write xi with grad, the one-form k of T4 kept as the component reading and provenance; nothing outside GA remains, so the declaration is removed. Notation only; no check changed. Version kept at 9.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Proof rewritten in GTG and the conformal model: (1) X_p(x) = n0 + hb^{-1}(x) + Q_p(x) ninf/2 is null, iota is the reflection N -> e+ N e+ = -(2t n0 + X + (s/2) ninf), a versor (quadric preserved, involution); (2), (3) read-out X/s; (4) the one-forms read as background gradients (dr = -e_r, dt_PG = e_t), hb^T(a) = a - beta (a . e_r) e_t gives hb^T(xi) = -sqrt(r) e_r and Q*(xi) = -r at every radius, the static labels giving the same value through hb^T(grad t_s) = gamma^0/sqrt f, hb^T(grad r) = sqrt f gamma^1; cometric and Gram components kept as a labelled reading. Checked exactly: the existing GA checks for (1) to (4) and the new check_gtg_dual_norm_of_the_dying_direction_from_the_engine (hb^T from the shared engine''s PG and static gauge fields: hb^T(xi) = -sqrt(r) e_r, Q* = -r at 3 masses x 4 radii, inside, on and outside the horizon; Q*(grad t_s) = 1/f; read-out -hb^T(xi)/r). Version kept at 9 (already above the lock in this run). outside_ga narrowed to the definition of xi in the imported weighted coframe.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (4) and the proof work with the weighted Painleve-Gullstrand coframe and the cometric components ((g_p^{-1})^{tt} = 1/f, (g_p^{-1})^{rr} = -f) of the sheaf construction, whose GTG reading Q*_p(k) = Q(hb^T(k)) is stated; the weighted coframe is a construction on the degenerate cometric, outside the invertible region (reader R11).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -90,13 +116,13 @@ Fix $p$ in the invertible region of the Schwarzschild gravitational field $(\hb,
 \item[(1)] $X_p(x)$ satisfies the incidence condition for every $x \in T_pM$, and $\iota$ preserves it and is an involution.
 \item[(2)] \emph{(Invertible directions: the transport returns to the original space.)} If $Q_p(x) \neq 0$ then $\dsc\bigl(\iota(X_p(x))\bigr) = x/Q_p(x)$, the classical reciprocal.
 \item[(3)] \emph{(Null directions: the transport does not return.)} If $Q_p(x) = 0$, that is if $x$ is physically null, in particular for the radial null direction $x = \et + f\,\er$, then $\iota(X_p(x)) = [\,x + \tfrac12 \nInf\,]$, an ideal point, and $\dsc$ is undefined on it.
-\item[(4)] \emph{(The dying direction, and where the descent fails.)} Let $\xi := k = \sqrt r\,dr + \sqrt{2M}\,dt_{\mathrm{PG}}$ be the generator of the radical line of the degeneration in the weighted Painlev\'e-Gullstrand coframe of \cite[Thm.~8.7]{ButlerT4}, in the static chart $\xi = \sqrt{2M}\,dt_s + (\sqrt r/f)\,dr$. Its dual norm is $Q^*_p(\xi) = -r$ exactly, at every radius, the horizon included: nonzero for every $r > 0$ and tending to $0$ as $r \to 0^+$. Consequently $\iota(X_p(\xi))$ descends at every point $r > 0$, to $\dsc = -\xi/r$, and converges, as $r \to 0^+$, to an ideal point at which $\dsc$ is undefined. The read-out fails exactly on $E$ and nowhere else in the physical closure.
+\item[(4)] \emph{(The dying direction, and where the descent fails.)} Let $\xi := \sqrt r\,\nabla r + \sqrt{2M}\,\nabla t_{\mathrm{PG}}$, a background gradient, be the generator of the radical line of the degeneration (in components the one-form $k = \sqrt r\,dr + \sqrt{2M}\,dt_{\mathrm{PG}}$ of the weighted Painlev\'e-Gullstrand coframe of \cite[Thm.~8.7]{ButlerT4}); in the static labels $\xi = \sqrt{2M}\,\nabla t_s + (\sqrt r/f)\,\nabla r$. Its dual norm is $Q^*_p(\xi) = -r$ exactly, at every radius, the horizon included: nonzero for every $r > 0$ and tending to $0$ as $r \to 0^+$. Consequently $\iota(X_p(\xi))$ descends at every point $r > 0$, to $\dsc = -\xi/r$, and converges, as $r \to 0^+$, to an ideal point at which $\dsc$ is undefined. The read-out fails exactly on $E$ and nowhere else in the physical closure.
 \end{enumerate}
 
 ## technical
 Fix a point $p$ in the invertible region of the Schwarzschild gravitational field on flat spacetime, whose gauge field $\hb$ carries the flat background to the physical vectors (a vector $x$ to $\hb^{-1}(x)$, a covector $\xi$ to $\hb^{T}(\xi)$), with $Q_p(x) = Q(\hb^{-1}(x))$ the square of the physical vector over the background vector $x$, whose Gram in the static gauge is the derived metric $g_p = \operatorname{diag}(f, -f^{-1}, -r^2, -r^2\sin^2\theta)$ with $f = 1 - 2M/r$, and lift $x \in T_pM$ through its physical vector, $X_p(x) = (1, \hb^{-1}(x), \frac12 Q_p(x))$, in the homogeneous coordinates $(s, x, t)$ of the completion $\Cl(2,4)$. Every lift satisfies the incidence condition $Q_p(x) = 2st$, and the transported reciprocal $\iota(s,x,t) = (2t, x, \frac12 s)$ preserves it and is an involution. If $Q_p(x) \neq 0$ the read-out returns the classical reciprocal, $\dsc(\iota(X_p(x))) = \hb^{-1}(x)/Q_p(x)$, the physical vector over $x/Q_p(x)$. If $Q_p(x) = 0$, for instance on the radial null direction $\et + f\,\er$, the image is the ideal point $[\hb^{-1}(x) + \frac12 \nInf]$ and $\dsc$ is undefined there.
 
-For the generator $\xi = \sqrt{2M}\,dt_s + (\sqrt r/f)\,dr$ of the radical line of the degeneration, taken from the weighted Painlev\'e-Gullstrand coframe, the dual norm, the derived cometric $Q^{*}_p(\xi) = Q(\hb^{T}(\xi))$, is exactly $-r$ at every radius, the horizon included. Hence $\iota(X_p(\xi))$ descends to $\dsc = -\hb^{T}(\xi)/r$, the physical covector over $-\xi/r$, at every $r > 0$ and converges, as $r \to 0^{+}$, to an ideal point at which $\dsc$ is undefined: the read-out fails exactly on $E$ and nowhere else in the physical closure.
+For the generator $\xi = \sqrt r\,\nabla r + \sqrt{2M}\,\nabla t_{\mathrm{PG}} = \sqrt{2M}\,\nabla t_s + (\sqrt r/f)\,\nabla r$ of the radical line of the degeneration, a background gradient (the one-form of the weighted Painlev\'e-Gullstrand coframe), the dual norm, the derived cometric $Q^{*}_p(\xi) = Q(\hb^{T}(\xi))$, is exactly $-r$ at every radius, the horizon included. Hence $\iota(X_p(\xi))$ descends to $\dsc = -\hb^{T}(\xi)/r$, the physical covector over $-\xi/r$, at every $r > 0$ and converges, as $r \to 0^{+}$, to an ideal point at which $\dsc$ is undefined: the read-out fails exactly on $E$ and nowhere else in the physical closure.
 
 ## lay
 At each point of a non-rotating black hole away from its centre, the series' repair is carried out explicitly on the space of directions. Ordinary directions go up into the enlarged space and come back down as their usual reciprocals, while light-like directions go up to points at infinity that have nothing below them. The one direction that dies at the singularity can be brought back down at every radius, however close to the centre, and fails to come back only in the limit at the centre itself. So the read-out breaks down exactly at the singularity and nowhere else, the horizon included.

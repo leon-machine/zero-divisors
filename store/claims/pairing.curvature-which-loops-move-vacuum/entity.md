@@ -1,7 +1,7 @@
 ---
 id: pairing.curvature-which-loops-move-vacuum
 kind: claim
-version: 5
+version: 6
 title: 'Curvature: which loops move the vacuum'
 status: proved
 region: pairing
@@ -21,6 +21,22 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 5
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'consistency pass, the transverse null vector written m = e2 + I5 e3, the normalisation the stated classes and the check use'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG proof: Omega from the torsion equation, field strength and loop classes in GA; component route kept as a labelled reading'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG proofs)
+- name: Claude Opus 5.5
+  role: 'GTG review fixes (referee F3): the unit I5 named in the check docstring; stale pins reviewed'
+  version: 6
+  source: maintainer pass 2026-11-07 (GTG review fixes)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -28,13 +44,13 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@5
-  - synthesis.imported-gtg-dictionary@1
+  - pairing.imported-schwarzschild-connection-curvature@7
+  - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 - name: standard-route
   uses:
-  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@2
-  - pairing.loop-classes-are-weyl-components@4
+  - pairing.imported-weyl-scalars-petrov-type-schwarzschild@3
+  - pairing.loop-classes-are-weyl-components@5
   proof: proof-standard-route.tex
 checked_by:
 - kind: proof
@@ -47,12 +63,34 @@ checked_by:
   ref: check.py::check_complex_loops
 - kind: check
   ref: check.py::check_class_supported_on_n_wedge_mbar
+- kind: check
+  ref: check.py::check_gtg_connection_and_field_strength
 locators:
   paper: T05-pairing
   number: Prop 5.5
   label: prop:curvature
   line: 343
 extraction:
+  maintainer_pass_gtg_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Blind referee F3 accepted the GTG proof (own torsion solve, field strengths, classes and loops, two mutations of check_gtg_connection_and_field_strength failing). Applied: the check.py docstring wrote m = e2 + i e3 and classes i M/r^3; now m = e2 + I5 e3, mbar = e2 - I5 e3, classes I5 M/r^3, -I5 M/r^3, with I5 named as the central unit of Cl(2,3) (docstring only; runcheck 5/5 unchanged).'
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): pairing.imported-schwarzschild-connection-curvature 5 -> 6 and pairing.loop-classes-are-weyl-components 4 -> 5 have byte-identical formal levels (N); pairing.imported-weyl-scalars-petrov-type-schwarzschild 2 -> 3 names the unit I5 of the Weyl scalars (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) as calR(g_mu ^ g_nu) = -R(e_mu ^ e_nu) in the store sign (R): this proof cites (ii) and (iv) for the covariant derivative and R(u, v) = R(hb(u ^ v)) = -calR(u ^ v), which is the restated reading, so the use holds; all four repinned.'
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof made the main proof: the static gauge field hb, Omega solved from the torsion equation (Omega(e_t) = -(M/r^2) e01, Omega(e_theta) = sqrt f e12, Omega(e_phi) = sqrt f sin e13 + cos e23), the field strength R(a ^ b) on the six background planes, the frame-loop bivectors R(e_c, e_d) = -calR(e_c ^ e_d) (store-sign spectrum 2M/r^3, -M/r^3), and the classes and loop statements by bilinearity with m = e2 + I5 e3; the Cartan route is kept as a labelled reading. New check check_gtg_connection_and_field_strength compares the solved Omega, omega and field strength with the closed forms and recomputes the classes from them (three rational points, exact jets); runcheck 5/5, check4 clean on a proposals copy. outside_ga removed: no stand-in remains (the classes are numbers of span{1, I5}). Statement, status, links unchanged.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the curvature two-forms of the connection forms on the (t, r) plane; their GTG reading is the field strength on the radial plane, and the form computation is the evidence (reader R03).'
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The GA-units pass wrote m = (e2 + I5 e3)/sqrt 2, which divides every stated class by sqrt 2; the classes M/r^3, I5 M/r^3, 2M/r^3 and 4M/r^3 and the check (pv(B) = <B.l, m>, m = e2 + i e3) use m = e2 + I5 e3 with <m, mbar> = -2, checked exactly in Cl(2,3) in the reader script v/r03_checks.py (class of (e0, e2) equals M/r^3 with the unnormalised m).'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,11 +129,11 @@ For the Schwarzschild gravitational field on flat spacetime (Definition \claimre
 \pv(R(e_{0},e_{1})) = \pv(R(e_{2},e_{3})) = 0, \\
 \pv(R(e_{0},e_{2})) = \frac{M}{r^{3}}, \qquad \pv(R(e_{1},e_{2})) = -\frac{M}{r^{3}}, \qquad \pv(R(e_{0},e_{3})) = I_5\frac{M}{r^{3}}, \qquad \pv(R(e_{1},e_{3})) = -I_5\frac{M}{r^{3}} .
 \end{gather*}
-The classes are numbers of $\mathrm{span}\{1, I_5\}$: the transverse null vector against which the class pairs is $m = (e_{2} + I_5e_{3})/\sqrt{2}$, complexified by the central pseudoscalar $I_5$ of $\Cl(2,3)$, the unit that commutes with every spacetime vector (\claimref{std-algebra.complexification-is-the-odd-extension}), and $\mb = (e_{2} - I_5e_{3})/\sqrt{2}$.
+The classes are numbers of $\mathrm{span}\{1, I_5\}$: the transverse null vector against which the class pairs is $m = e_{2} + I_5e_{3}$, complexified by the central pseudoscalar $I_5$ of $\Cl(2,3)$, the unit that commutes with every spacetime vector (\claimref{std-algebra.complexification-is-the-odd-extension}), and $\mb = e_{2} - I_5e_{3}$, so $\ip{m}{\mb} = -2$ (the normalisation for which the classes take the values stated).
 Hence $R(\ell, e_{2}) = (M/r^{3})\,\ell e_{2}$ is a null rotation about $\ell$ with zero class, while $R(n, e_{2})$ has class $2M/r^{3}$; on the complex loops, $(\ell, m)$, $(\ell, \mb)$, $(m, \mb)$ and $(n, m)$ have zero class and $(n, \mb)$ has class $4M/r^{3}$. The holonomy therefore moves the vacuum exactly for loops with an $n \wedge \mb$ component, and for no loop lying in the null hypersurface generated by $\ell$.
 
 ## technical
-For the Schwarzschild field on flat spacetime and the loop spanned by physical vectors $e_c, e_d$, the holonomy of a small loop of area $\epsilon$ is $\exp(\epsilon R(e_c, e_d))$ to first order, with $R(e_c, e_d) = -\mathcal{R}(e_c \wedge e_d)$ the field strength on the plane of the loop, and its pairing class $\pv(R(e_c, e_d))$ records whether it moves the vacuum. In the static orthonormal frame the classes vanish for the loops $(e_0, e_1)$ and $(e_2, e_3)$, and are $M/r^3$, $-M/r^3$, $I_5M/r^3$ and $-I_5M/r^3$ (numbers of $\mathrm{span}\{1, I_5\}$, the unit of the complex null vector $m = (e_2 + I_5e_3)/\sqrt2$) for $(e_0, e_2)$, $(e_1, e_2)$, $(e_0, e_3)$ and $(e_1, e_3)$.
+For the Schwarzschild field on flat spacetime and the loop spanned by physical vectors $e_c, e_d$, the holonomy of a small loop of area $\epsilon$ is $\exp(\epsilon R(e_c, e_d))$ to first order, with $R(e_c, e_d) = -\mathcal{R}(e_c \wedge e_d)$ the field strength on the plane of the loop, and its pairing class $\pv(R(e_c, e_d))$ records whether it moves the vacuum. In the static orthonormal frame the classes vanish for the loops $(e_0, e_1)$ and $(e_2, e_3)$, and are $M/r^3$, $-M/r^3$, $I_5M/r^3$ and $-I_5M/r^3$ (numbers of $\mathrm{span}\{1, I_5\}$, the unit of the complex null vector $m = e_2 + I_5e_3$) for $(e_0, e_2)$, $(e_1, e_2)$, $(e_0, e_3)$ and $(e_1, e_3)$.
 
 By bilinearity $R(\ell, e_2) = (M/r^3)\,\ell e_2$ is a null rotation about $\ell$ with zero class, while $R(n, e_2)$ has class $2M/r^3$; among the complex loops only $(n, \mb)$ has nonzero class, $4M/r^3$. So the holonomy moves the vacuum exactly for loops with an $n \wedge \mb$ component, and for no loop lying in the null hypersurface generated by $\ell$.
 

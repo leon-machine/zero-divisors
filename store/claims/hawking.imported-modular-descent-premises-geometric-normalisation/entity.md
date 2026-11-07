@@ -30,12 +30,12 @@ derivations:
 - name: main
   uses:
   - hawking.imported-modular-descent-premises-geometric-normalisation-external@1
-  - hawking.modular-structure-completed-pair@3
-  - singularity.computed@4
+  - hawking.modular-structure-completed-pair@4
+  - singularity.computed@5
   - singularity.descended-form-state-independent@4
   - singularity.euclidean-section-period@6
   - singularity.matching-steps-4b-4c-join-equation@7
-  - singularity.modular-descent@7
+  - singularity.modular-descent@8
   - singularity.rate-discharge-hypothesis-iii@6
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic@6
   assumes:

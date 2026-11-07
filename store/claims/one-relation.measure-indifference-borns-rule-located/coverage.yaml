@@ -15,6 +15,8 @@ functions:
     clauses:
     - '"rational weights follow by fine-graining into equal-norm constituents"'
     omits: three Pythagorean-rational states; additivity of weights is assumed (the residual postulate), the permutation step and the continuity step are not tested
+untouched_premises:
+  one-relation.imported-envariance-born-rule: "the imported fine-graining and continuity steps; the check exhibits fine-graining on rational instances without reading the Fact"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

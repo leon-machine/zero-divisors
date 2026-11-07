@@ -1,7 +1,7 @@
 ---
 id: synthesis.kerr-ring-connection-limit-null-rotation-winding-three
 kind: claim
-version: 1
+version: 2
 title: 'The Kerr ring''s connection limit is a null rotation winding three times'
 status: proved
 region: synthesis
@@ -17,20 +17,24 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the spatial cross products as duals of outer products)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - interior.imported-kerr-schild-form-kerr-gauge@1
-  - interior.unipotency-across-kerr-family@5
-  - synthesis.imported-gtg-dictionary@1
+  - interior.imported-kerr-schild-form-kerr-gauge@2
+  - interior.unipotency-across-kerr-family@6
+  - synthesis.imported-gtg-dictionary@2
   - synthesis.kerr-ring-double-cover-data@3
   - synthesis.kerr-ring-blow-up-forced-cover-fixed-order@3
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - transport.group-null-rotations@4
+  - transport.group-null-rotations@5
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,6 +57,14 @@ lineage:
   - interior.weighted-limit-theorem
   - note.sheaf.setting-scope-successor-problems
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The frame vectors near the ring, e_2 = zhat x v/|zhat x v| and e_1 = v x e_2, are written e_2 = -I_s(zhat ^ v)/|zhat ^ v| and e_1 = -I_s(v ^ e_2) with I_s = e_x e_y e_Z the spatial unit trivector at e_0; the identity a x b = -I_s(a ^ b) for spatial vectors of Cl(1,3) (component formula, right-handed axes) and |a ^ b|^2 = -(a ^ b)^2 were verified exactly with lib/GA.py. The commutator products B x u of the proof are the GA commutator product, not a cross product, and stay.'
   open_problem: op.kerr-ring
   note: >-
     Carries out the first attack of the problem at the level of the connection: the weighted limit on the
@@ -66,7 +78,7 @@ extraction:
 ---
 
 ## formal
-Let $a \neq 0$ and take the Kerr gauge field $\hb(b) = b + H\,(b \cdot k)\,k$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with $k$ the null field of Fact \claimref{interior.imported-kerr-schild-form-kerr-gauge}, so that $k \cdot k = 0$ and $k \cdot \nabla k = 0$, and $H = M\operatorname{Re}(1/z)$ with $z = r - Ia\cos\theta$, $z^2 = w = x^2 + y^2 + (Z - Ia)^2$, $\rho = |z|$, $\psi = \arg z$ (Theorem \claimref{synthesis.kerr-ring-double-cover-data}); $\R \oplus \R I$ is identified with $\C$ as there. Write $k = e_0 + v$ with $v$ the spatial unit field, $\ell = \tfrac12(e_0 - v)$, and near the ring $e_2 = \hat z \times v / |\hat z \times v|$, $e_1 = v \times e_2$ (cross products of the spatial vectors at $e_0$), the smooth $\eta$-null frame of Theorem \claimref{synthesis.kerr-ring-blow-up-forced-cover-fixed-order}(1) with $e_1, e_2$ functions of $v$. For a frame $(F_A)$ write $\Gamma(A; B, C) = (D_{\hb(F_A)} F_B) \cdot F_C$. Then:
+Let $a \neq 0$ and take the Kerr gauge field $\hb(b) = b + H\,(b \cdot k)\,k$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with $k$ the null field of Fact \claimref{interior.imported-kerr-schild-form-kerr-gauge}, so that $k \cdot k = 0$ and $k \cdot \nabla k = 0$, and $H = M\operatorname{Re}(1/z)$ with $z = r - Ia\cos\theta$, $z^2 = w = x^2 + y^2 + (Z - Ia)^2$, $\rho = |z|$, $\psi = \arg z$ (Theorem \claimref{synthesis.kerr-ring-double-cover-data}); $\R \oplus \R I$ is identified with $\C$ as there. Write $k = e_0 + v$ with $v$ the spatial unit field, $\ell = \tfrac12(e_0 - v)$, and near the ring $e_2 = -I_{s}(\hat z \wedge v) / |\hat z \wedge v|$, $e_1 = -I_{s}(v \wedge e_2)$, with $I_{s} = e_{x}e_{y}e_{Z}$ the unit trivector of the background spatial axes at $e_0$ (so $-I_{s}(a \wedge b)$, the dual of the outer product of two spatial vectors, is the three-dimensional vector product of their components, and $|\hat z \wedge v|^{2} = -(\hat z \wedge v)^{2}$), the smooth $\eta$-null frame of Theorem \claimref{synthesis.kerr-ring-blow-up-forced-cover-fixed-order}(1) with $e_1, e_2$ functions of $v$. For a frame $(F_A)$ write $\Gamma(A; B, C) = (D_{\hb(F_A)} F_B) \cdot F_C$. Then:
 \begin{enumerate}
 \item \emph{(Exact connection.)} On the invertible region $\Omega(b) = \dot\nabla \wedge \bigl(\dot H\,(b \cdot \dot k)\,\dot k\bigr)$, the vector $b$ held fixed: the rotation-gauge field is linear in the potential. This holds for every potential $H$ whenever $k$ is null and $k \cdot \nabla k = 0$.
 \item \emph{(Frame components.)} $\Gamma(k; B, C) = 0$ for all $B, C$; $\Gamma(\ell; k, e_i) = 0$, $\Gamma(\ell; \ell, e_i) = e_i \cdot \nabla H$, $\Gamma(\ell; k, \ell) = -k \cdot \nabla H$ and $\Gamma(e_i; k, \ell) = 0$ exactly; and $\nabla H$ has Cartesian components $-M\operatorname{Re}\bigl((x, y, Z - Ia)\,z^{-3}\bigr)$, while $k \cdot \nabla z = 1$.

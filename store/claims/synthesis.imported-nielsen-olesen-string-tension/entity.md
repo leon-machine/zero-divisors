@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-nielsen-olesen-string-tension
 kind: claim
-version: 1
+version: 2
 title: 'Imported: the Nielsen-Olesen string tension'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'consistency pass, imaginary unit of the covariant derivative written as I_4'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'H. B. Nielsen and P. Olesen, Vortex-line models for dual strings, Nucl. Phys. B 61 (1973), 45--61.'
@@ -27,6 +31,11 @@ imported_from:
 - citation: 'M. B. Hindmarsh and T. W. B. Kibble, Cosmic strings, Rep. Prog. Phys. 58 (1995), 477--562; arXiv:hep-ph/9411342.'
   key: HindmarshKibble1995
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The bare imaginary unit of D = partial - i e A (missed by the unit sweep: the detector does not catch i followed by a letter) is the field theory unit on the complex scalar, written I_4 with numbers read in span{1, I_4} (conventions U1, U4); the source form is kept in source_formal.'
+  source_formal: 'In the Abelian Higgs model with complex scalar $\phi$, kinetic term $|D\phi|^{2}$, $D = \partial - ieA$, and potential $\tfrac{\lambda}{4}(|\phi|^{2} - \eta^{2})^{2}$. The source writes $i$ for $I_4$.'
   note: >-
     Imported so that the defect bound of the Pati-Salam chain can pin the tension it cites from
     memory (mu = 2 pi eps eta^2 with eps of order one). The Nielsen-Olesen reference (Nucl. Phys. B
@@ -43,7 +52,7 @@ extraction:
 ---
 
 ## formal
-In the Abelian Higgs model with complex scalar $\phi$, kinetic term $|D\phi|^{2}$, $D = \partial - ieA$, and potential $\tfrac{\lambda}{4}(|\phi|^{2} - \eta^{2})^{2}$, so that $|\phi| \to \eta$ in the vacuum, a straight static string of unit winding (the Nielsen-Olesen vortex) has energy per unit length
+In the Abelian Higgs model with complex scalar $\phi$, kinetic term $|D\phi|^{2}$, $D = \partial - I_{4}eA$ (the scalar valued in $\mathrm{span}\{1, I_{4}\}$, the store's complex field, conventions U1; the source writes $i$ for $I_{4}$), and potential $\tfrac{\lambda}{4}(|\phi|^{2} - \eta^{2})^{2}$, so that $|\phi| \to \eta$ in the vacuum, a straight static string of unit winding (the Nielsen-Olesen vortex) has energy per unit length
 \[
 \mu \;=\; 2\pi\,\epsilon(\beta)\,\eta^{2},
 \]
