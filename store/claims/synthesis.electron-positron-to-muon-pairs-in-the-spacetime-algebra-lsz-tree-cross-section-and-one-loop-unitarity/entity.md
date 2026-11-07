@@ -1,7 +1,7 @@
 ---
 id: synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity
 kind: claim
-version: 3
+version: 4
 title: '$e^{+}e^{-} \to \mu^{+}\mu^{-}$ in the spacetime algebra: tree and one loop'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (reader wording fix)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -62,6 +66,10 @@ lineage:
   motivated_by:
   - field-theory.coupled-system-tree-level
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Reader fix (R06, wording): formal (1) states the spin-sum rule for a particle, incoming or outgoing, and for an antiparticle ($p + m$, $p - m$), the rule the tree trace and proof Step 1 use (it named only an outgoing particle and an incoming antiparticle); the indices are components on the STA frame and stay; the mathematics is unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -94,7 +102,7 @@ extraction:
 ## formal
 Signature $(+,-,-,-)$ in $\Cl(1,3)$, the Clifford product in place of the matrix product, traces $4\langle\cdot\rangle_{0}$, the units of the Feynman rules (the field theory's unit $I_{4}$) outside the product (\claimref{synthesis.one-loop-qed-in-the-spacetime-algebra}), the vertex of \claimref{field-theory.coupled-system-tree-level}, the free fields of \claimref{field-theory.second-quantisation}, and the on-shell external states of Fact \claimref{synthesis.imported-one-loop-integrals-and-pauli-villars-regulators}(v). Let $p_{1}, p_{2}$ be the incoming electron and positron, $p_{3}, p_{4}$ the outgoing muon and antimuon, $s = Q(p_{1} + p_{2})$, $\beta$ the muon speed in the centre-of-mass frame.
 \begin{enumerate}
-\item (LSZ; proved.) If $Q(p) = m^{2}$ then $(p + m)^{2} = 2m(p + m)$, $(p - m)^{2} = -2m(p - m)$, $(p + m)(p - m) = 0$, and $4\langle p \pm m\rangle_{0} = \pm 4m$: for $m \neq 0$, $(p + m)/(2m)$ is an idempotent of trace two. The propagator $S(p) = (p + m)/(Q(p) - m^{2})$ has residue $p + m$ at the pole, so after amputation and multiplication by $Z_{2}^{1/2}$ per leg (the reduction formula \cite{LSZ1955}, Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(i)) the sums over the two spin states of an outgoing particle and an incoming antiparticle are the multivectors $p + m$ and $p - m$.
+\item (LSZ; proved.) If $Q(p) = m^{2}$ then $(p + m)^{2} = 2m(p + m)$, $(p - m)^{2} = -2m(p - m)$, $(p + m)(p - m) = 0$, and $4\langle p \pm m\rangle_{0} = \pm 4m$: for $m \neq 0$, $(p + m)/(2m)$ is an idempotent of trace two. The propagator $S(p) = (p + m)/(Q(p) - m^{2})$ has residue $p + m$ at the pole, so after amputation and multiplication by $Z_{2}^{1/2}$ per leg (the reduction formula \cite{LSZ1955}, Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(i)) the spin sums of a particle, incoming or outgoing, and of an antiparticle are the multivectors $p + m$ and $p - m$.
 \item (Tree; computed.) $\tfrac14\sum|M|^{2} = \tfrac{e^{4}}{4s^{2}}\,4\langle(p_{2} - m_{e})\gamma^{\mu}(p_{1} + m_{e})\gamma^{\nu}\rangle_{0}\,4\langle(p_{3} + m_{\mu})\gamma_{\mu}(p_{4} - m_{\mu})\gamma_{\nu}\rangle_{0} = \tfrac{8e^{4}}{s^{2}}[(p_{1}\cdot p_{3})(p_{2}\cdot p_{4}) + (p_{1}\cdot p_{4})(p_{2}\cdot p_{3}) + m_{\mu}^{2}\,p_{1}\cdot p_{2} + m_{e}^{2}\,p_{3}\cdot p_{4} + 2m_{e}^{2}m_{\mu}^{2}]$. For massless leptons $d\sigma/d\Omega = \tfrac{\alpha^{2}}{4s}(1 + \cos^{2}\theta)$ and $\sigma = \tfrac{4\pi\alpha^{2}}{3s}$; for $m_{e} = 0$, $\sigma = \tfrac{4\pi\alpha^{2}}{3s}\cdot\tfrac{\beta(3 - \beta^{2})}{2}$ \cite{PeskinSchroeder1995}.
 \item (One loop; computed, the optical-theorem reading argued.) The longitudinal part $q_{\mu}q_{\nu}$ of the dressed photon vanishes between the on-shell currents ($q = p_{1} + p_{2}$), so the polarisation insertions resum to $M_{\mathrm{tree}}/(1 - \hat\Pi(s))$ with $\hat\Pi(s) = -\tfrac{2\alpha}{\pi}\int_{0}^{1}x(1-x)\ln\frac{m^{2}}{m^{2} - x(1-x)s - I_{4}0}\,dx$ (numbers read in $\mathrm{span}\{1, I_{4}\}$, $\mathrm{Im}$ the coefficient of $I_{4}$) for a loop fermion of mass $m$ (\claimref{synthesis.one-loop-qed-in-the-spacetime-algebra}(2), subtracted at $s = 0$; the subtracted function does not depend on the regulator, and the loop has no internal photon; with no regulator and no Krein form it is the extension of \claimref{synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants}(ii)). Its absorptive part is $\mathrm{Im}\,\hat\Pi(s + I_{4}0) = -2\alpha\int_{(1-\beta)/2}^{(1+\beta)/2}x(1-x)\,dx = -\tfrac{\alpha}{3}\cdot\tfrac{\beta(3 - \beta^{2})}{2}$, $\beta = (1 - 4m^{2}/s)^{1/2}$, and this equals $-s\,\sigma_{\mathrm{tree}}(e^{+}e^{-} \to f\bar f)/(4\pi\alpha)$ at $m_{e} = 0$: the cut of the photon self-energy is the tree rate (the s-channel optical-theorem relation for the photon self-energy; full unitarity at order $e^{4}$ also involves other channels, not computed). For $s \gg m^{2}$, $\mathrm{Re}\,\hat\Pi(s) = \tfrac{\alpha}{3\pi}(\ln(s/m^{2}) - \tfrac53) + O(m^{2}/s)$. Under the Krein-form premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields} (the vertex and self-energy loops carry an internal photon), $Z_{1} = Z_{2}$ (Ward's identity, Fact \claimref{synthesis.imported-lsz-reduction-ward-identity-and-the-second-qed-beta-coefficient}(ii)) and the vertex counterterms cancel the leg factors $Z_{2}^{1/2}$, so the renormalised charge is $e = Z_{3}^{1/2}e_{0}$ and the insertion is the running $\alpha(s) = \alpha/(1 - \mathrm{Re}\,\hat\Pi(s))$ at this order (argued). All three clauses are standard \cite{LSZ1955, PeskinSchroeder1995}, recomputed in the spacetime algebra.
 \end{enumerate}

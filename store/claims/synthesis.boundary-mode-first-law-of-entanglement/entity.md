@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -46,6 +50,10 @@ about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (iv) works in metric components with the sign conversion stated, as its imported premise does (reader R08: consistent, the import''s language); the GTG field equation is stated beside it.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,6 +99,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (light; clauses (i)-(iii) have no gravity content): in (iv) the small geodesic ball read at x0 in a gauge with hb(x0) = 1, Omega(x0) = 0 on a flat background of dimension d; flat-space conformal fields named as vanishing gravitational field; the store-convention equation given its GTG form R(a) + 8 pi G T(a) = (Lambda + 4 pi G tr T) a in four dimensions. The d-dimensional tensor balance kept in the clause''s declared signature and convention. Clauses (i)-(iv) unchanged.'
+outside_ga:
+  kind: other
+  why: 'Clause (iv) works in metric components with the sign conversion stated, as its imported premise does (reader R08: consistent, the import''s language); the GTG field equation is stated beside it.'
 ---
 
 ## formal

@@ -1,7 +1,7 @@
 ---
 id: note.rule2.three-dimensions-matter-below
 kind: note
-version: 1
+version: 2
 title: The three dimensions that matter below
 status: remark
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: names the gamma matrices of standard physics)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - rule2.odd-lorentzian-dimension-exactly-one-real
 locators:
@@ -22,6 +26,14 @@ locators:
   number: Rem 2.5
   label: rem:threecases
   line: 185
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the remark contrasts the real form of the odd-dimensional algebras with physics done with complex gamma matrices; the comparison is the content, so it stays and is declared outside_ga (bridge), as reader R11 proposed.'
+outside_ga:
+  kind: bridge
+  why: 'the remark names the complex gamma matrices of the physics it compares with (odd-dimensional representations, planar electrodynamics, graphene); the series'' own statements it reads are in the Clifford algebras of the stated signatures'
 ---
 
 ## formal

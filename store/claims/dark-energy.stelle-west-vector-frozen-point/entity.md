@@ -1,7 +1,7 @@
 ---
 id: dark-energy.stelle-west-vector-frozen-point
 kind: claim
-version: 5
+version: 6
 title: The Stelle-West vector of the frozen point
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -42,6 +46,10 @@ locators:
   label: lem:sw
   line: 658
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the tractor derivative of X and V slot by slot in the scale-g component form of the tractor connection (sigma, mu_b, rho; g_ab, P_ab); on flat spacetime that connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the slot computation is its component reading.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -62,6 +70,9 @@ extraction:
   context_refs:
   - dark-energy.imported-frozen-point-geometry
   eqrefs: 5
+outside_ga:
+  kind: other
+  why: 'The proof computes the tractor derivative of X and V slot by slot in the scale-g component form of the tractor connection (sigma, mu_b, rho; g_ab, P_ab); on flat spacetime that connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the slot computation is its component reading.'
 ---
 
 ## formal

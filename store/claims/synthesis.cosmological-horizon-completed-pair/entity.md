@@ -1,7 +1,7 @@
 ---
 id: synthesis.cosmological-horizon-completed-pair
 kind: claim
-version: 3
+version: 4
 title: The cosmological horizon's completed pair
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -38,6 +42,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - standard-model.what
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof''s curvature check computes the Riemann tensor of the derived metric from its Christoffel symbols in components; the GTG statement is in the formal level.'
   maintainer_pass:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -48,6 +56,9 @@ extraction:
     note: Squares of vectors written Q(v) in place of the inner product of a vector with itself; no change of content.
   flow_note: rotor flow exp(t B_Lambda / 2) = exp(kappa_Lambda t u / 2), which rescales the pair (the T05 Thm 6.3 sense), the flow of minus the Killing field X . B_Lambda.
   note: Built at Leon's request (21 October 2026) to supply the boundary-mode algebra that the de Sitter temperature conjecture lacked. The Schwarzschild chain selects the pair's plane by curvature and localises its modes at the singular boundary; at the cosmological horizon curvature selects nothing, the static observer selects the plane, and the pair's two null vectors are the observer's endpoints on conformal infinity.
+outside_ga:
+  kind: other
+  why: 'The proof''s curvature check computes the Riemann tensor of the derived metric from its Christoffel symbols in components; the GTG statement is in the formal level.'
 ---
 
 ## formal

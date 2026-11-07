@@ -21,6 +21,10 @@ credit:
   role: 'unit resolution pass, the pairing classes written with the central unit I_5 of Cl(2,3)'
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -48,6 +52,10 @@ locators:
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof works with the block connection one-forms omega_{ab} of the static frame and frame components; the forms are the computation.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -87,6 +95,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: static frame = orthonormal physical frame of the static gauge of the Schwarzschild field on flat spacetime; Omega(e_c) named as Omega(hb(e_c)); nabla -> D. Formulas and values unchanged; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The proof works with the block connection one-forms omega_{ab} of the static frame and frame components; the forms are the computation.'
 ---
 
 ## formal

@@ -1,7 +1,7 @@
 ---
 id: pairing.imported-schwarzschild-connection-curvature
 kind: claim
-version: 5
+version: 6
 title: 'Imported: the Schwarzschild connection and curvature'
 status: proved
 region: pairing
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (round-sphere line element renamed)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.dark-matter.witt-flag
@@ -44,6 +48,10 @@ locators:
   label: fact:schw
   line: 204
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The round-sphere element r^2 dOmega^2 of the line element is written r^2(d theta^2 + sin^2 theta d phi^2), so that Omega names only the rotation-gauge field (reader R03); the line element is the derived metric''s reading and stays; notation only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -76,7 +84,7 @@ For the Schwarzschild gravitational field $(\hb, \Omega)$ on flat spacetime in t
 ## technical
 For the Schwarzschild field on flat spacetime in the static gauge, with static orthonormal coframe $\theta^0 = \sqrt f\,dt$, $\theta^1 = dr/\sqrt f$, $\theta^2 = r\,d\vartheta$, $\theta^3 = r\sin\vartheta\,d\varphi$ and $f = 1 - 2M/r$, the rotation-gauge field read as connection forms is $\omega^0{}_1 = (f'/2\sqrt f)\,\theta^0$, $\omega^2{}_1 = (\sqrt f/r)\,\theta^2$, $\omega^3{}_1 = (\sqrt f/r)\,\theta^3$ and $\omega^3{}_2 = (\cot\vartheta/r)\,\theta^3$. The curvature operator $\mathcal{R}(B)$ is diagonal on the coordinate planes, with eigenvalue $2M/r^3$ on the radial plane and the angular plane and $-M/r^3$ on the four mixed planes.
 
-The extreme eigenvalue picks out the pair $\{\sigma_r, I\sigma_r\}$ invariantly, and the sign of the square, $\sigma_r^2 = +1$ against $(I\sigma_r)^2 = -1$, selects the radial member; which null direction of the radial plane is the vacuum's is the flag bit, taken as initial data. In the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$ the derived metric is $ds^2 = dT^2 - (dr + \beta\,dT)^2 - r^2 d\Omega^2$ with $\beta^2 = 2M/r$, and the gauge field is invertible through the horizon.
+The extreme eigenvalue picks out the pair $\{\sigma_r, I\sigma_r\}$ invariantly, and the sign of the square, $\sigma_r^2 = +1$ against $(I\sigma_r)^2 = -1$, selects the radial member; which null direction of the radial plane is the vacuum's is the flag bit, taken as initial data. In the Painlev\'e-Gullstrand gauge $\hb = 1 - \beta P$ the derived metric is $ds^2 = dT^2 - (dr + \beta\,dT)^2 - r^2(d\theta^2 + \sin^2\theta\,d\varphi^2)$ with $\beta^2 = 2M/r$, and the gauge field is invertible through the horizon.
 
 ## lay
 This records the standard formulas for the gravitational field of a non-rotating black hole, described as two gauge fields on flat spacetime: how frames turn from point to point, and the field strength that plays the part of curvature, written in a frame adapted to the radius. One pair of planes, the radial one and its dual, carries the strongest field strength, which singles it out without any choice of coordinates. A second gauge, built on the clocks of infalling observers, shows that nothing goes wrong at the horizon.

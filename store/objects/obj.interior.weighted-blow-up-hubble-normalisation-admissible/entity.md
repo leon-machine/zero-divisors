@@ -1,7 +1,7 @@
 ---
 id: obj.interior.weighted-blow-up-hubble-normalisation-admissible
 kind: object
-version: 2
+version: 3
 title: Weighted blow-up, Hubble normalisation, and the admissible class
 status: defined
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -26,6 +30,10 @@ locators:
   label: def:blowup
   line: 674
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The definition is made on the Hubble-normalised connection one-forms tau Omega_tau = -sum p_i B_i (x) theta^i + E_tau in a coframe, with the Einstein condition written Ric_ab = Lambda g_ab; the coframe expansion is the definition''s content.'
   typing:
     by: ai-typing-pass
     note: 'Definition; levels typed, no edges.'
@@ -48,6 +56,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: admissibility is defined for a gravitational field (hb, Omega) on the collar in a synchronous gauge (Einstein: R(a) = Lambda a in the store sign, which is Ric = Lambda g for the derived metric), with the connection the rotation-gauge field in a D-parallel physical frame; a synchronous metric is called admissible when it is the derived metric of an admissible field, so dependants reading admissible metric are unchanged. Conditions, constants and boundary objects unchanged. Fix (Leon 2026-10-23, referee GR1): displayed connection values re-signed to the GTG sign of the definition, D_a = a.nabla + Omega(a) x (Cartan forms omega^i_0 = sigma_i theta^i assemble to -sigma_i B_i; Hubble-normalised Kasner model -sum_i p_i B_i, DICTIONARY C10); content unchanged.'
+outside_ga:
+  kind: other
+  why: 'The definition is made on the Hubble-normalised connection one-forms tau Omega_tau = -sum p_i B_i (x) theta^i + E_tau in a coframe, with the Einstein condition written Ric_ab = Lambda g_ab; the coframe expansion is the definition''s content.'
 ---
 
 ## formal

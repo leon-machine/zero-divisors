@@ -1,7 +1,7 @@
 ---
 id: synthesis.tractor-transport-weak-null-crossing
 kind: claim
-version: 4
+version: 5
 title: 'Tractor transport across a weak null crossing'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -39,6 +43,10 @@ lineage:
   - interior.filtration-cauchy-horizon-read-literature
   - interior.imported-mass-inflation-stability
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result is about the regularity of the Christoffel symbols and the Schouten tensor of the derived metric across a weak null singularity (their local square-integrability), properties of components as such.'
   maintainer_pass_gtg:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -73,6 +81,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement of the non-tractor language: the causal geodesic is a causal worldline of D-parallel velocity of a gravitational field (hb, Omega) on flat spacetime, the metric is its derived metric, Levi-Civita transport is D-transport, Christoffel symbols are connection components, Ric = Lambda g becomes R(a) = Lambda a; the tractor connection, splitting and nilradical are left in their own language for the lead. Clauses (1)-(4) unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
+outside_ga:
+  kind: other
+  why: 'The result is about the regularity of the Christoffel symbols and the Schouten tensor of the derived metric across a weak null singularity (their local square-integrability), properties of components as such.'
 ---
 
 ## formal

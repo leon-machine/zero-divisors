@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 2
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.interior.weighted-blow-up-hubble-normalisation-admissible
@@ -47,6 +51,10 @@ lineage:
   motivated_by:
   - synthesis.bkl-bounce-invariant-holonomy-and-bound
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the Christoffel symbols and the coordinate Ricci tensor of the Taub-NUT derived metric in its left-invariant one-forms; the coordinate computation is the evidence.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -74,6 +82,9 @@ extraction:
     1963) and the Bianchi IX potential (Misner 1969) are cited from memory; the check verifies the field
     equations directly, so neither is a premise. Transport-essential in its object (the Hubble-normalised
     rotation-gauge field), classical in its solution.
+outside_ga:
+  kind: other
+  why: 'The proof computes the Christoffel symbols and the coordinate Ricci tensor of the Taub-NUT derived metric in its left-invariant one-forms; the coordinate computation is the evidence.'
 ---
 
 ## formal

@@ -1,7 +1,7 @@
 ---
 id: note.rule2.setting-setting-what-imported
 kind: note
-version: 1
+version: 2
 title: Setting, and what is imported
 status: setting
 subject: clifford-structure
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: names the imported gamma-matrix physics)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - rule2.imported-classification-centre-type-c
 - rule2.odd-lorentzian-dimension-exactly-one-real
@@ -23,6 +27,14 @@ locators:
   number: Setting
   section: Setting, and what is imported
   line: 93
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the setting text lists the physics imported as Facts, among them that odd-dimensional gamma matrices come in two inequivalent representations; the gamma matrices are the subject named, so the text stays and is declared outside_ga (bridge), as reader R11 proposed.'
+outside_ga:
+  kind: bridge
+  why: 'the remark names the complex gamma matrices of the physics it compares with (odd-dimensional representations, planar electrodynamics, graphene); the series'' own statements it reads are in the Clifford algebras of the stated signatures'
 ---
 
 ## formal

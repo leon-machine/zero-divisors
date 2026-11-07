@@ -25,6 +25,10 @@ credit:
   role: 'consistency pass, the weights of Premise (Q) brought to its version 3 in the formal and technical levels (the technical level said the flow of (Q) returns to the identity after one period, true only for version 2)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -48,6 +52,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, J} (U2, the boundary modes), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

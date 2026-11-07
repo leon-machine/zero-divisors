@@ -1,7 +1,7 @@
 ---
 id: synthesis.promoted-norm-one-global-pair
 kind: claim
-version: 4
+version: 5
 title: 'The promoted norm as the one global pair of the reduction'
 status: proved
 region: synthesis
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -42,6 +46,10 @@ about:
 - obj.dark-energy.four-ways-number-enters-theory-shape
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The global pairing uses a 3-form and de Rham cohomology, topological data of the forms on a closed manifold, beyond one flat chart (reader R07).'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -58,6 +66,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (FLAG): the spacetime M carries a gravitational field (hb, Omega) on flat spacetime; the compact spatial slice Sigma of M = R x Sigma, on which the reduced phase space H^0 x H^3 gives the one global pair, carries the Section 14 flag and a flags entry; the pointwise count (i) and d lambda = 0 of (ii) are local. Clauses (i)-(v) unchanged.'
+outside_ga:
+  kind: other
+  why: 'The global pairing uses a 3-form and de Rham cohomology, topological data of the forms on a closed manifold, beyond one flat chart (reader R07).'
 ---
 
 ## formal

@@ -67,7 +67,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 3 -> 4. The proof states the rotors'' action on the null line as the Moebius maps s -> s + t, s -> s/(1 - 2cs), s -> e^{-2 theta}s and the inversion s -> -1/s as their composite, with the SL(2, R) matrices kept as a labelled reading. Pure wording: the rotors T_t, K_c, D_theta and J were already the GA objects computed in the check. (The composite: s -> s - 1 -> (s - 1)/s -> (s - 1)/s - 1 = -1/s.)'
+    note: 'Version 3 -> 4. The proof states the rotors'' action on the null line as the Moebius maps s -> s + t, s -> s/(1 - 2cs), s -> e^{-2 theta}s and the inversion s -> -1/s as their composite, with the SL(2, R) matrices kept as a labelled reading. Pure wording: the rotors T_t, K_c, D_theta and J were already the GA objects computed in the check. (The composite: s -> s - 1 -> (s - 1)/s -> (s - 1)/s - 1 = -1/s.) At reader R02''s request (ga-issues-R02.md, item 2) the inversion rotor, which the proof called J, is renamed R_inv, since J is the boundary-mode unit in this subject; the vector nu of (i) is left as it is (its rename needs the attachment''s frame, listed for Leon).'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'

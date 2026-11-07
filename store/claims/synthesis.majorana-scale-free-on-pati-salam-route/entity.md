@@ -25,6 +25,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -58,6 +62,10 @@ lineage:
   - neutrino.m-framework-realises-majorana-term-scale
   - standard-model.what-angle-asks-neutrino-sector
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -75,7 +83,7 @@ extraction:
 ---
 
 ## formal
-Assume Fact \claimref{standard-model.imported-clebsch-structure-seesaw}: with $10$ couplings $Y_{a}$, one $126$ coupling $f$ (symmetric) and one $120$ coupling $h$ (antisymmetric), $M_{u} = \sum_{a}v_{u}^{a}Y_{a} + w_{u}f + c_{u}h$, $M_{\nu} = \sum_{a}v_{u}^{a}Y_{a} - 3w_{u}f + c_{\nu}h$, $M_{d} = \sum_{a}v_{d}^{a}Y_{a} + w_{d}f + c_{d}h$, $M_{e} = \sum_{a}v_{d}^{a}Y_{a} - 3w_{d}f + c_{e}h$, $M_{R} = v_{R}f$ and $m_{\nu} = -M_{\nu}M_{R}^{-1}M_{\nu}^{\mathsf{T}}$. For $\lambda \in \C^{\times}$ let $g_{\lambda}$ act on the data by $f \mapsto \lambda f$, $(w_{u}, w_{d}) \mapsto (w_{u}/\lambda, w_{d}/\lambda)$, with $Y_{a}$, $h$, $v_{u}^{a}$, $v_{d}^{a}$, the four $c$'s and $v_{R}$ fixed. The electroweak normalisation of the doublet vevs is not among the stored relations and is not invariant under $g_{\lambda}$; composing $g_{\lambda}$ with $(Y_{a}, v^{a}_{u}, v^{a}_{d}) \mapsto (\mu_{a}Y_{a}, v^{a}_{u}/\mu_{a}, v^{a}_{d}/\mu_{a})$ on the $10$s (and likewise $(h, c) \mapsto (\nu h, c/\nu)$ on the $120$ data), which fixes every Dirac matrix, restores it, and (i) to (v) hold for the composite.
+Assume Fact \claimref{standard-model.imported-clebsch-structure-seesaw}: with $10$ couplings $Y_{a}$, one $126$ coupling $f$ (symmetric) and one $120$ coupling $h$ (antisymmetric), $M_{u} = \sum_{a}v_{u}^{a}Y_{a} + w_{u}f + c_{u}h$, $M_{\nu} = \sum_{a}v_{u}^{a}Y_{a} - 3w_{u}f + c_{\nu}h$, $M_{d} = \sum_{a}v_{d}^{a}Y_{a} + w_{d}f + c_{d}h$, $M_{e} = \sum_{a}v_{d}^{a}Y_{a} - 3w_{d}f + c_{e}h$, $M_{R} = v_{R}f$ and $m_{\nu} = -M_{\nu}M_{R}^{-1}M_{\nu}^{\mathsf{T}}$. For $\lambda \in \C^{\times}$ ($\C = \mathrm{span}\{1, I_4\}$, in which numbers are read, conventions U1) let $g_{\lambda}$ act on the data by $f \mapsto \lambda f$, $(w_{u}, w_{d}) \mapsto (w_{u}/\lambda, w_{d}/\lambda)$, with $Y_{a}$, $h$, $v_{u}^{a}$, $v_{d}^{a}$, the four $c$'s and $v_{R}$ fixed. The electroweak normalisation of the doublet vevs is not among the stored relations and is not invariant under $g_{\lambda}$; composing $g_{\lambda}$ with $(Y_{a}, v^{a}_{u}, v^{a}_{d}) \mapsto (\mu_{a}Y_{a}, v^{a}_{u}/\mu_{a}, v^{a}_{d}/\mu_{a})$ on the $10$s (and likewise $(h, c) \mapsto (\nu h, c/\nu)$ on the $120$ data), which fixes every Dirac matrix, restores it, and (i) to (v) hold for the composite.
 \begin{enumerate}
 \item[(i)] \emph{(What moves.)} $M_{u}, M_{\nu}, M_{d}, M_{e}$ are invariant; $M_{R} \mapsto \lambda M_{R}$ and $m_{\nu} \mapsto \lambda^{-1}m_{\nu}$. Hence $m_{\nu}m_{\nu}^{\dagger} \mapsto |\lambda|^{-2}m_{\nu}m_{\nu}^{\dagger}$: the lepton mixing and every ratio of light masses are invariant, the heavy masses scale by $|\lambda|$ and the light ones by $|\lambda|^{-1}$.
 \item[(ii)] \emph{(What the store fixes is invariant.)} Premise (EW), $4w_{u}f_{33} = m_{t}$ with $(M_{\nu})_{33} = 0$, is invariant; so is Hypothesis (U) in its Dirac-eigenvalue reading, a condition on the singular values of $M_{\nu}$ (Theorem \claimref{synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition}). The chain (Proposition \claimref{standard-model.chain}) and the triplet vev $v_{R} = M_{I}/g_{R}$ it gives (Proposition \claimref{standard-model.what-angle-asks-neutrino-sector}) are determined by the gauge content and the gauge coefficients, so they are invariant. Of the eighteen observables the fits of Proposition \claimref{standard-model.fits-record-level} reproduce, seventeen (nine charged-fermion masses, four CKM numbers, three lepton angles, $m_{3}/m_{2}$) are invariant and one, $m_{3}$, scales by $|\lambda|^{-1}$.

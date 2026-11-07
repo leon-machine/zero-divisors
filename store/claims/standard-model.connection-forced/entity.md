@@ -1,7 +1,7 @@
 ---
 id: standard-model.connection-forced
 kind: claim
-version: 4
+version: 5
 title: The connection is forced
 status: proved
 region: standard-model
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (connection forms as gauge fields)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: GA rewrite (connection forms as gauge fields in the proof)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -38,6 +46,10 @@ locators:
   label: prop:connection
   line: 1150
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The connection forms are stated as gauge fields evaluated on vectors, a.nabla + A(a), with so(2,4) read as the bivectors of Cl(2,4), the form notation d + A kept as a labelled reading (reader R04); notation only. GA rewriter (forms): the proof now speaks of the gauge field A(a) evaluated on the tangent (minus the derivative of the transport at the identity, the sign of D_a = a . grad + A(a)) instead of the connection form, names so(2,4) as the bivectors of Cl(2,4) acting on CS with the factor 1/2 (as the check does, Omega_T(a)/2), and replaces the boilerplate about an index computation, which this proof does not contain; version 4 -> 5 for the formal and proof changes of this run.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,12 +73,12 @@ extraction:
 ---
 
 ## formal
-Let matter fields be sections of $\mathcal{S} \otimes \mathcal{H}$ over the invertible region of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with $\mathcal{S}$ the conformal spinor bundle (local twistor bundle) of Fact \claimref{standard-model.imported-tractor-bundle-spinor-bundle-their} (the spinor bundle of the tractor bundle, whose fibre is the conformal spinor space) and $\mathcal{H}$ the hierarchy bundle, a complex vector bundle of rank six whose fibres carry the factorisation $\C^{2} \otimes \C^{3}$ and its Hermitian structure. Let $D$ be a connection on $\mathcal{S} \otimes \mathcal{H}$ that is induced from connections on the two factors, $D = \nabla \otimes 1 + 1 \otimes D_{\mathcal{H}}$, with $\nabla$ a $\mathrm{Spin}(2,4)$-connection on $\mathcal{S}$ (one whose transports lie in the spin group acting on the conformal spinor fibre, as the conformal spinor connection, local twistor transport, does; on flat spacetime that connection is the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} acting on $\CS$) and $D_{\mathcal{H}}$ preserving the Hermitian structure and the factorisation of the fibre (its parallel transports map the set of decomposable tensors onto itself). Then $\nabla$ has connection form valued in $\mathfrak{so}(2,4)$ and $D_{\mathcal{H}} = d + \mathcal{A}$ in any factorisation-adapted local frame, with $\mathcal{A}$ a one-form valued in $\su(2) \oplus \su(3) \oplus \uu(1)$ acting through Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s action; conversely every such pair $(\nabla, \mathcal{A})$ gives a connection with these properties.
+Let matter fields be sections of $\mathcal{S} \otimes \mathcal{H}$ over the invertible region of a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with $\mathcal{S}$ the conformal spinor bundle (local twistor bundle) of Fact \claimref{standard-model.imported-tractor-bundle-spinor-bundle-their} (the spinor bundle of the tractor bundle, whose fibre is the conformal spinor space) and $\mathcal{H}$ the hierarchy bundle, a complex vector bundle of rank six whose fibres carry the factorisation $\C^{2} \otimes \C^{3}$ and its Hermitian structure. Let $D$ be a connection on $\mathcal{S} \otimes \mathcal{H}$ that is induced from connections on the two factors, $D = \nabla \otimes 1 + 1 \otimes D_{\mathcal{H}}$, with $\nabla$ a $\mathrm{Spin}(2,4)$-connection on $\mathcal{S}$ (one whose transports lie in the spin group acting on the conformal spinor fibre, as the conformal spinor connection, local twistor transport, does; on flat spacetime that connection is the tractor gauge field of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection} acting on $\CS$) and $D_{\mathcal{H}}$ preserving the Hermitian structure and the factorisation of the fibre (its parallel transports map the set of decomposable tensors onto itself). Then $\nabla$ has its gauge field valued in $\mathfrak{so}(2,4)$, the bivectors of $\Cl(2,4)$, and in any factorisation-adapted local frame $D_{\mathcal{H}}$ acts along a vector $a$ as $a \cdot \nabla + \mathcal{A}(a)$ (in forms $D_{\mathcal{H}} = d + \mathcal{A}$), with $\mathcal{A}$ a gauge field valued in $\su(2) \oplus \su(3) \oplus \uu(1)$ acting through Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s action; conversely every such pair $(\nabla, \mathcal{A})$ gives a connection with these properties.
 
 ## technical
 Let matter fields be sections of $\mathcal{S} \otimes \mathcal{H}$ over the invertible region of a gravitational field on flat spacetime, with $\mathcal{S}$ the conformal spinor bundle and $\mathcal{H}$ a rank-six hierarchy bundle whose fibres carry the factorisation $\C^{2} \otimes \C^{3}$ and a Hermitian structure. Suppose the connection is induced from the factors, $D = \nabla \otimes 1 + 1 \otimes D_{\mathcal{H}}$, with $\nabla$ a $\mathrm{Spin}(2,4)$-connection and $D_{\mathcal{H}}$ preserving the Hermitian structure and the set of decomposable tensors.
 
-Then $\nabla$ has connection form valued in $\so(2,4)$, and in any factorisation-adapted frame $D_{\mathcal{H}} = d + \mathcal{A}$ with $\mathcal{A}$ a one-form valued in $\su(2) \oplus \su(3) \oplus \uu(1)$, by the Segre lemma and the closed-subgroup theorem. Conversely every such pair $(\nabla, \mathcal{A})$ gives a connection with these properties.
+Then $\nabla$ has its gauge field valued in $\so(2,4)$, the bivectors of $\Cl(2,4)$, and in any factorisation-adapted frame $D_{\mathcal{H}}$ acts along $a$ as $a \cdot \nabla + \mathcal{A}(a)$ (in forms $d + \mathcal{A}$) with $\mathcal{A}$ a gauge field valued in $\su(2) \oplus \su(3) \oplus \uu(1)$, by the Segre lemma and the closed-subgroup theorem. Conversely every such pair $(\nabla, \mathcal{A})$ gives a connection with these properties.
 
 ## lay
 Suppose matter fields carry both the spinor structure of the conformal algebra and the two-by-three internal structure, and that moving them from point to point must respect both. Then the only freedom left is a connection of a very particular kind, whose internal part takes values in exactly the Lie algebra of the Standard Model's forces. Under these assumptions the gauge fields are what the preserved structure allows, rather than an extra ingredient.

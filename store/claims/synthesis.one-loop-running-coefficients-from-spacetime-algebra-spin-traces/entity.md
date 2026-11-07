@@ -1,7 +1,7 @@
 ---
 id: synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
 kind: claim
-version: 2
+version: 3
 title: 'One-loop running coefficients from spacetime-algebra spin traces'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (unit of the gauge generators)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.field-theory.single-algebra-field
@@ -48,6 +52,10 @@ lineage:
   - standard-model.imported-coefficient-sum-indices
   - standard-model.spectrum-run
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Reader fix (R06): the field of the hermitian gauge generators in proof (3) is written span_Q{1, I_4} (it was Q(i), a bare unit); the remaining indices are components on the STA frame and stay; the mathematics is unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

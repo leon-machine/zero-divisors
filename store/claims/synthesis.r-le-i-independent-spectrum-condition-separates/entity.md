@@ -33,6 +33,10 @@ credit:
   role: 'consistency pass, a bare imaginary unit left in the proof of (M2), alpha_{ip}, written as alpha^k_{Jp} as in the rest of the proof'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -51,6 +55,10 @@ lineage:
   motivated_by:
   - singularity.l-boundary-mode-locality
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, J} (U2, the boundary modes), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

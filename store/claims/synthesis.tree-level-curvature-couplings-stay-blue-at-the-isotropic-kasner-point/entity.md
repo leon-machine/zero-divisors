@@ -1,7 +1,7 @@
 ---
 id: synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
 kind: claim
-version: 3
+version: 4
 title: 'Tree-level curvature couplings stay blue at the isotropic Kasner point'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: GA rewrite (Kasner field strength in the store sign)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -57,6 +61,10 @@ lineage:
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
   - standard-model.dating-descent
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Line element to GA in the proof of (iii): the Kasner approach is the synchronous field hb^{-1}(e_i) = T^{P_i} e_i with its derived metric as reading, and the field strength is stated as the store-sign curvature operator, calR(e_0 e_i) = P_i(P_i - 1) T^-2 e_0 e_i and calR(e_i e_j) = P_i P_j T^-2 e_i e_j, replacing the hedge up to the store overall sign: these are exactly the store-sign eigenvalues (checked with lib/GA.py for dark-energy.frozen-point-datum-kasner-wall, plane by plane, so in any number of directions), and the scalar 2 sum P(P - 1) + sum_{i != j} P_i P_j follows from them. Statement unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

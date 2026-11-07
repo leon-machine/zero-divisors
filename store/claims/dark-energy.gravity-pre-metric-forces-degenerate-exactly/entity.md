@@ -1,7 +1,7 @@
 ---
 id: dark-energy.gravity-pre-metric-forces-degenerate-exactly
 kind: claim
-version: 4
+version: 5
 title: Gravity is pre-metric; the forces degenerate exactly where the conformal class does
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -41,6 +45,10 @@ locators:
   label: thm:twokinds
   line: 823
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result is about the Hodge star on two-forms as a function of the metric, *alpha_{ab} = (1/2) sqrt|g| epsilon_{abcd} g^{ce} g^{df} alpha_{ef}, and its failure where the metric degenerates; on bivectors of an invertible field it is multiplication by the pseudoscalar, but the degenerate case it treats has no pseudoscalar duality, so the component form is the content.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -64,6 +72,9 @@ extraction:
     date: '2026-10-21'
     cited:
     - dark-energy.frozen-point-makes-stelle-west-vector
+outside_ga:
+  kind: other
+  why: 'The result is about the Hodge star on two-forms as a function of the metric, *alpha_{ab} = (1/2) sqrt|g| epsilon_{abcd} g^{ce} g^{df} alpha_{ef}, and its failure where the metric degenerates; on bivectors of an invertible field it is multiplication by the pseudoscalar, but the degenerate case it treats has no pseudoscalar duality, so the component form is the content.'
 ---
 
 ## formal

@@ -21,6 +21,10 @@ credit:
   role: 'unit resolution pass, the pairing classes written with the central unit I_5 of Cl(2,3)'
   version: 6
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -52,6 +56,10 @@ locators:
   label: prop:pg
   line: 327
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof works with the coframe and connection one-forms (beta'' dr ^ dT) of the Painleve-Gullstrand frame; the forms are the computation.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -83,6 +91,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Painleve-Gullstrand frame is the orthonormal physical frame of the gauge hb = 1 - beta P (coframe = components of hb^{-1}(dx)); Omega(e_c) named as the rotation-gauge field along the physical vector e_c, i.e. Omega(hb(e_c)); nabla_l l -> (l.D)l; curvature -> field strength; horizon -> horizon locus. Formulas and values unchanged; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The proof works with the coframe and connection one-forms (beta'' dr ^ dT) of the Painleve-Gullstrand frame; the forms are the computation.'
 ---
 
 ## formal

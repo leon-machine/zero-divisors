@@ -1,7 +1,7 @@
 ---
 id: singularity.computed
 kind: claim
-version: 4
+version: 5
 title: $\kappa = 1/4M$, computed
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (acceleration as (u.D)u)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -40,6 +44,10 @@ locators:
   label: prop:kappaval
   line: 2583
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The static observer''s acceleration is named the physical vector field (u.D)u, with A^mu = u^nu nabla_nu u^mu and the static-chart Christoffel symbol as its labelled component reading (dictionary Fact (ii)); the computation is unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

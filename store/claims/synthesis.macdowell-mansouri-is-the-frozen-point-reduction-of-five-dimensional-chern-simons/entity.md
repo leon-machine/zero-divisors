@@ -48,6 +48,10 @@ lineage:
   - rule2.imported-five-dimensional-chern-simons-shift
   - rule2.rule-2-kaluza-klein-algebra
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Not rewritten; outside_ga declared (kind other). The Clifford parts are already geometric algebra; the differential forms that remain are the base forms of a Chern-Simons five-form on a five-dimensional base, whose transgression and variation formulas are imported theorems about differential forms (synthesis.imported-five-dimensional-chern-simons-gravity, synthesis.imported-chern-weil-and-chern-simons-forms). No text, status or version change.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -70,6 +74,9 @@ extraction:
     as the reduced direction and the Stelle-West slot; the five-dimensional base and action are imported.
     The Euler term comes with the square, so the reduction does not help with its exclusion from horizon
     entropy.
+outside_ga:
+  kind: other
+  why: 'the result is about the Chern-Simons five-form of a Cl(2,4) connection on a five-dimensional base: the bivector parts (connection, curvature, the cubic invariant P(B1, B2, B3) = <B1 B2 B3>_6 I_6^{-1}, the Stelle-West slots) are in geometric algebra, while the form parts on the base (dx, dy, their exterior products, exact forms) and the transgression and variation formulas come from the imported Facts on five-dimensional Chern-Simons gravity and on Chern-Weil and Chern-Simons forms, which are theorems about differential forms; recasting the base forms as multivector fields would restate those imported theorems rather than this result, so the base forms stay'
 ---
 
 ## formal

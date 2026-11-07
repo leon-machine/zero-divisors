@@ -1,7 +1,7 @@
 ---
 id: synthesis.einstein-condition-is-infinity-vacuum-incidence
 kind: claim
-version: 3
+version: 4
 title: 'The Einstein condition read as infinity-vacuum incidence'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -47,6 +51,10 @@ lineage:
   - correspondence.one-statement-three-languages
   - one-relation.two-presentations
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (7) and the proof work with the Ricci, Schouten and stress tensors of the derived metric in components (l-flat tensor l-flat, g^{ab} T_{ab}, nabla^a Ric_ab) and with the complexified tangent and tractor spaces; the GTG field-equation form is stated beside them, and the complexifications T_x M (x) C and T_x (x) C have the units I_5 and I_7 by U3, not yet written in (reader R03).'
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
@@ -71,6 +79,9 @@ extraction:
     infinity-vacuum field left unexcited forces pure null radiation. The classical twistor statement behind
     (5) (the infinity twistor is constant under local twistor transport iff the metric is Einstein) is
     Penrose's, cited from memory. The transport ledger is left to the build.
+outside_ga:
+  kind: other
+  why: 'Clause (7) and the proof work with the Ricci, Schouten and stress tensors of the derived metric in components (l-flat tensor l-flat, g^{ab} T_{ab}, nabla^a Ric_ab) and with the complexified tangent and tractor spaces; the GTG field-equation form is stated beside them, and the complexifications T_x M (x) C and T_x (x) C have the units I_5 and I_7 by U3, not yet written in (reader R03).'
 ---
 
 ## formal

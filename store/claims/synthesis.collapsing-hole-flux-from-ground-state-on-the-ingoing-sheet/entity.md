@@ -25,6 +25,10 @@ credit:
   role: unit conventions per Leon's rulings of 7 November 2026 (R2, R4)
   version: 2
   source: maintainer pass 2026-11-07 (unit rulings)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -63,6 +67,10 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The affine parametrisation of the horizon generators is computed from the Christoffel symbols of the ingoing chart (Gamma^r_rr) in components, as a labelled reading of (K.D)K beside the GTG statement.'
   maintainer_pass_unit_rulings:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -114,6 +122,9 @@ extraction:
     per complex chiral fermion that the I-state at 2 pi/kappa carries is the two-dimensional anomaly flux of
     Robinson and Wilczek (2005), which a result filed alongside on the residue-0 chirality anomaly
     reaches from the other side.
+outside_ga:
+  kind: other
+  why: 'The affine parametrisation of the horizon generators is computed from the Christoffel symbols of the ingoing chart (Gamma^r_rr) in components, as a labelled reading of (K.D)K beside the GTG statement.'
 ---
 ## formal
 Work on flat spacetime with the vectors of $\Cl(1,3)$, gravity the pair of gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), and take the Schwarzschild field of mass $M$ in the Painlev\'e-Gullstrand gauge of Fact \claimref{sheaf.gauge-field-cometric}, $\hb = 1 - \beta P$, $\beta = \sqrt{2M/r}$, invertible on $r > 0$, with $t$ the background time label of that gauge (derived line element $dt^{2} - (dr + \beta\,dt)^{2} - r^{2}d\Omega^{2}$, a reading). The background translation $t \mapsto t + \tau$ is a symmetry of the gravitational field, with physical Killing vector $K = \hb^{-1}(e_{t})$ (Fact \claimref{synthesis.imported-gtg-dictionary}(vi)); the future horizon $\mathcal{H}^{+} = \{r = 2M\}$ is its Killing horizon, with surface gravity $\kappa = 1/(4M)$ (Theorem \claimref{singularity.euclidean-section-period}). Write $s = \sqrt{r/2M}$ and $\rho = s^{2}$.

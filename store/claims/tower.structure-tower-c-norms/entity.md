@@ -29,6 +29,10 @@ credit:
   role: 'consistency pass, the scalar unit distinguished from the ground volume element, and the conjugation step written with the scalar as a factor'
   version: 10
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: the C*-norm carried by a matrix representation)'
+  version: 10
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.tower.tower
@@ -60,6 +64,10 @@ locators:
   label: lem:cstar
   line: 409
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 10 kept (already bumped in this run). Not rewritten: in the even case the proof identifies each complexified floor with a full matrix *-algebra by the tensor-Pauli (Jordan-Wigner) assignment, so that the C*-norm is the matrix operator norm; the statement is about the floors as matrix *-algebras, and a Fock construction over a complex Witt basis (reader R12) would be a different proof, not a change of notation. Declared outside_ga (bridge).'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -108,6 +116,9 @@ extraction:
     - tower.algebraic-limit-even-charge
     - tower.commuting-copies
     - tower.compatibility-connecting-maps-transported
+outside_ga:
+  kind: bridge
+  why: 'in the even case the floors are identified with full matrix *-algebras by the tensor-Pauli (Jordan-Wigner) representation, which carries the involution to the conjugate transpose and the C*-norm to the matrix operator norm; the result is about the floors as matrix *-algebras'
 ---
 
 ## formal

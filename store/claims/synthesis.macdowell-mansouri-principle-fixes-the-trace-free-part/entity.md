@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, the curvature-sign line made the store sign that its formulas use'
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -56,6 +60,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result is stated and proved in the MacDowell-Mansouri curvature components F_{abcd} = R_{abcd} - (Lambda/3)(g_ac g_bd - g_ad g_bc), the four-forms epsilon_{abcd} e^b ^ F^{cd} and the tractor slots; the GTG operator F(B) = -(R(B) - B/l^2) is their reading (dictionary row 13), and the rank counts are made on the components.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -84,6 +92,9 @@ extraction:
     route: same field equations, different entropy, since the Wald entropy of this action carries the Euler
     term that (Loc) excludes. Cross-subject: the principle comes from the dark-energy and frozen-point results,
     not from the Einstein-route claims the problem lists.
+outside_ga:
+  kind: other
+  why: 'The result is stated and proved in the MacDowell-Mansouri curvature components F_{abcd} = R_{abcd} - (Lambda/3)(g_ac g_bd - g_ad g_bc), the four-forms epsilon_{abcd} e^b ^ F^{cd} and the tractor slots; the GTG operator F(B) = -(R(B) - B/l^2) is their reading (dictionary row 13), and the rank counts are made on the components.'
 ---
 
 ## formal

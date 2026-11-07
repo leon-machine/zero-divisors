@@ -25,6 +25,10 @@ credit:
   role: 'consistency pass, the transverse null vector written m = e2 + I5 e3, the normalisation the stated classes and the check use'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -57,6 +61,10 @@ locators:
   label: prop:curvature
   line: 343
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the curvature two-forms of the connection forms on the (t, r) plane; their GTG reading is the field strength on the radial plane, and the form computation is the evidence (reader R03).'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -91,6 +99,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the curvature bivector of a loop is the covariant field strength of the Schwarzschild field on the physical plane of the loop, R(e_c, e_d) = R(hb(e_c ^ e_d)) = -R(e_c ^ e_d) with the store-sign operator (sign fixed from the stated identity R(l, e_2) = (M/r^3) l e_2 and the mixed-plane eigenvalue -M/r^3 of the stored spectrum); the static frame is the orthonormal physical frame of the static gauge. Classes and conclusions unchanged; the dictionary Fact added to uses for that identification; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The proof computes the curvature two-forms of the connection forms on the (t, r) plane; their GTG reading is the field strength on the radial plane, and the form computation is the evidence (reader R03).'
 ---
 
 ## formal

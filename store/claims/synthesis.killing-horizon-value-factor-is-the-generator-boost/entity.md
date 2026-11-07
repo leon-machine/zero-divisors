@@ -1,7 +1,7 @@
 ---
 id: synthesis.killing-horizon-value-factor-is-the-generator-boost
 kind: claim
-version: 1
+version: 2
 title: 'At a Killing horizon the value factor is the generator boost'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -50,6 +54,10 @@ lineage:
   - synthesis.boost-evolution-on-generators-is-one-unitary-group
   - note.decisions.two-boost-flows
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result is stated for every rotation one-form omega of a frame along the horizon generators; the one-form is the frame connection evaluated on the generator, and the statement quantifies over it in that language.'
   open_problem: op.which-boost-flow-is-time
   note: >-
     The follow-up left by the problem's settlement: clause (vi) of
@@ -69,6 +77,9 @@ extraction:
     canonical block and no transverse rotation (helicity phase) occurs; with it, the identification argued in
     clause (vi) of the continuum result is derived. Excluded: degenerate (extremal) horizons, kappa = 0, and
     the bifurcation surface itself.
+outside_ga:
+  kind: other
+  why: 'The result is stated for every rotation one-form omega of a frame along the horizon generators; the one-form is the frame connection evaluated on the generator, and the statement quantifies over it in that language.'
 ---
 ## formal
 Work on flat spacetime with gravity the gauge fields $(\hb, \Omega)$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with the store's signature. Let $K$ be a Killing vector field of $(\hb, \Omega)$ in the sense of Fact \claimref{synthesis.imported-gtg-dictionary}(vi), with Killing bivector $F_{K} = \tfrac12 D \wedge K$, so that $(A\cdot D)K = A\cdot F_{K}$, and let $\mathcal{H}$ be a Killing horizon of $K$: a null hypersurface on which $K$ is normal, $Q(K) = 0$, with surface gravity $\kappa \ne 0$, $(K\cdot D)K = \kappa K$. At a point of $\mathcal{H}$ off its bifurcation surface write $K = \phi\,k$ with $k$ the physical generator direction, let $m$ be the null vector with $\ip{k}{m} = 1$ in the plane of $k$ and the frame vector $\gamma_{0}$, and $\Lambda(a) = a\gamma_{0}/(2a_{0})$ (Proposition \claimref{field-theory.second-quantisation}(1)), so that $\Lambda(m)$ projects onto the canonical light-ray component of a spinor field on the generator's null plane and $\Lambda(k) = 1 - \Lambda(m)$ onto the constrained one (Theorem \claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}(i)).

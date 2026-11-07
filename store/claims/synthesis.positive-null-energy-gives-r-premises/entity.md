@@ -37,6 +37,10 @@ credit:
   role: 'consistency pass, the last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows'' unit J'
   version: 8
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (surface gravity as (K.D)K)'
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -86,6 +90,10 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Reader item R02-7: proof (iii) states the horizon non-affinity in GTG, (K.D)K = kappa K for the physical Killing field K = hb^{-1}(e_v) (resp. e_u), with kappa = 1/4M and H, and gives the Eddington-Finkelstein Christoffel symbols as the labelled component reading (Fact synthesis.imported-gtg-dictionary (ii), (vi)); the check''s coordinate route is unchanged; the mathematics is unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

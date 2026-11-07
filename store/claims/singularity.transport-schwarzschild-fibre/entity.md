@@ -1,7 +1,7 @@
 ---
 id: singularity.transport-schwarzschild-fibre
 kind: claim
-version: 8
+version: 9
 title: The transport, on the Schwarzschild fibre
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 9
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.singularity.fibrewise-conformal-lift
@@ -51,6 +55,10 @@ locators:
   label: prop:lift
   line: 1535
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: Clause (4) and the proof work with the weighted Painleve-Gullstrand coframe and the cometric components ((g_p^{-1})^{tt} = 1/f, (g_p^{-1})^{rr} = -f) of the sheaf construction, whose GTG reading Q*_p(k) = Q(hb^T(k)) is stated; the weighted coframe is a construction on the degenerate cometric, outside the invertible region (reader R11).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -82,6 +90,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the point p lies in the invertible region of the Schwarzschild gravitational field (hb, Omega) on flat spacetime, the fibre is the background vectors at p, Q_p(x) = Q(hb^{-1}(x)) is the square of the physical vector over x (whose Gram in the static gauge is the derived metric g_p), and the dual norm is Q^*_p(xi) = Q(hb^T(xi)), the derived cometric. Clauses (1)-(4) unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
+outside_ga:
+  kind: other
+  why: 'Clause (4) and the proof work with the weighted Painleve-Gullstrand coframe and the cometric components ((g_p^{-1})^{tt} = 1/f, (g_p^{-1})^{rr} = -f) of the sheaf construction, whose GTG reading Q*_p(k) = Q(hb^T(k)) is stated; the weighted coframe is a construction on the degenerate cometric, outside the invertible region (reader R11).'
 ---
 
 ## formal

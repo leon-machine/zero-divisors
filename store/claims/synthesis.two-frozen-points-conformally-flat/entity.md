@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-frozen-points-conformally-flat
 kind: claim
-version: 3
+version: 4
 title: 'Two frozen points of one norm on conformally flat fields'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -37,6 +41,10 @@ lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof solves the tractor parallelism equations in flat components (eta_ab, partial_a partial_b sigma); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component solution is the evidence (reader R05).'
   maintainer_pass:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -54,6 +62,9 @@ extraction:
     model lives on conformally flat regions, which include the
     de Sitter vacuum of the dark-energy paper. The orientation clause of P1 (one Witt flag) is
     not addressed. Transport-convenient: tractor geometry, no Clifford input.
+outside_ga:
+  kind: other
+  why: 'The proof solves the tractor parallelism equations in flat components (eta_ab, partial_a partial_b sigma); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component solution is the evidence (reader R05).'
 ---
 
 ## formal

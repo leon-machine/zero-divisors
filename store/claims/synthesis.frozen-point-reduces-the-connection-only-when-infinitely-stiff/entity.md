@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff
 kind: claim
-version: 2
+version: 3
 title: 'The frozen point reduces the connection only when infinitely stiff'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -51,6 +55,10 @@ lineage:
   - synthesis.stelle-west-norm-is-no-local-output
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The action and its elimination are written in forms and frame components (W_abcd W^abcd, R_abcd R^abcd, eta^{aa} R_{adab}, two-forms F = (1/2) F_ab e^a ^ e^b); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map, but the elimination is computed on the components.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01
@@ -83,6 +91,9 @@ extraction:
     equation, by the frame-slot symmetry of the Lorentz block. Transport-convenient: the chart, X and I are
     the series' objects; transport does not choose mu. Quadratic gravity as fourth order (Stelle 1977, cited
     from memory) is mentioned only in the reading.
+outside_ga:
+  kind: other
+  why: 'The action and its elimination are written in forms and frame components (W_abcd W^abcd, R_abcd R^abcd, eta^{aa} R_{adab}, two-forms F = (1/2) F_ab e^a ^ e^b); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map, but the elimination is computed on the components.'
 ---
 
 ## formal

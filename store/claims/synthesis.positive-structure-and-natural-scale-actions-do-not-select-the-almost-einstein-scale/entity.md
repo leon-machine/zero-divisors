@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary units resolved by the unit principle (U1 to U6)
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,6 +53,10 @@ lineage:
   - mass.imported-frozen-point-tractor-connection
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof computes the Ricci tensor and the tractor slots of conformally rescaled metrics from Christoffel symbols in components; the GTG statement is in the formal level and the component computation is the evidence.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -75,6 +83,9 @@ extraction:
     class with a somewhere noncharacteristic Euler-Lagrange equation supplies; it has to be a dynamical principle for the whole gauge field hb (on the series' route, the
     Clausius relation with (C_loc)), or a Lagrange-multiplier rewording of the parallel-tractor condition, which
     the open problem excludes. Transport-absent.
+outside_ga:
+  kind: other
+  why: 'The proof computes the Ricci tensor and the tractor slots of conformally rescaled metrics from Christoffel symbols in components; the GTG statement is in the formal level and the component computation is the evidence.'
 ---
 
 ## formal

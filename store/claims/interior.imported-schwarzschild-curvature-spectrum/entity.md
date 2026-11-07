@@ -1,7 +1,7 @@
 ---
 id: interior.imported-schwarzschild-curvature-spectrum
 kind: claim
-version: 6
+version: 7
 title: 'Imported: the Schwarzschild curvature spectrum'
 status: proved
 region: interior
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T06, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (round-sphere line element renamed)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,6 +53,10 @@ locators:
   label: fact:spectrum
   line: 366
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'The round-sphere element r^2 dOmega^2 of the line element is written r^2(d theta^2 + sin^2 theta d phi^2), so that Omega names only the rotation-gauge field (reader R03); the line element is the derived metric''s reading and stays; notation only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -73,10 +81,10 @@ extraction:
 ---
 
 ## formal
-For the Schwarzschild gravitational field $(\hb, \Omega)$ on flat spacetime in the static gauge, whose derived metric is the static spherically symmetric vacuum metric $f\,dt_s^2 - f^{-1}dr^2 - r^2 d\Omega^2$ with $f = 1 - 2M/r$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the curvature operator $B \mapsto \mathcal{R}(B)$ on physical bivectors, in the store's sign, is diagonal on the coordinate planes of the static orthonormal frame of physical vectors, with eigenvalue of one magnitude, $2M/r^3$, on the radial boost plane $\sigma_r$ and its Hodge dual $I\sigma_r$, and eigenvalue of half that magnitude and opposite sign, $-M/r^3$, on the four mixed planes. \emph{Provenance:} the radial-plane eigenvalue from the gauge field alone in \cite[Prop.~2.4(1)]{ButlerT5}; the mixed- and angular-plane eigenvalues by the Cartan structure equations in the static chart in \cite[App.~A]{ButlerT5}, the two computations agreeing on the invertible region by Fact \claimref{interior.imported-equivalence-einstein-equations}; the same computation in the GTG literature is \cite[Ch.~14]{DoranLasenby2003}.
+For the Schwarzschild gravitational field $(\hb, \Omega)$ on flat spacetime in the static gauge, whose derived metric is the static spherically symmetric vacuum metric $f\,dt_s^2 - f^{-1}dr^2 - r^2(d\theta^2 + \sin^2\theta\,d\varphi^2)$ with $f = 1 - 2M/r$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), the curvature operator $B \mapsto \mathcal{R}(B)$ on physical bivectors, in the store's sign, is diagonal on the coordinate planes of the static orthonormal frame of physical vectors, with eigenvalue of one magnitude, $2M/r^3$, on the radial boost plane $\sigma_r$ and its Hodge dual $I\sigma_r$, and eigenvalue of half that magnitude and opposite sign, $-M/r^3$, on the four mixed planes. \emph{Provenance:} the radial-plane eigenvalue from the gauge field alone in \cite[Prop.~2.4(1)]{ButlerT5}; the mixed- and angular-plane eigenvalues by the Cartan structure equations in the static chart in \cite[App.~A]{ButlerT5}, the two computations agreeing on the invertible region by Fact \claimref{interior.imported-equivalence-einstein-equations}; the same computation in the GTG literature is \cite[Ch.~14]{DoranLasenby2003}.
 
 ## technical
-For the Schwarzschild field on flat spacetime in the static gauge, with derived metric $f\,dt_s^2 - f^{-1}dr^2 - r^2 d\Omega^2$ and $f = 1 - 2M/r$, the field strength read as the curvature operator $\mathcal{R}(B)$ on physical bivectors is diagonal on the coordinate planes of the static orthonormal frame. Its eigenvalue is $2M/r^3$ on the radial boost plane $\sigma_r$ and its dual $I\sigma_r$, and $-M/r^3$ on the four mixed planes.
+For the Schwarzschild field on flat spacetime in the static gauge, with derived metric $f\,dt_s^2 - f^{-1}dr^2 - r^2(d\theta^2 + \sin^2\theta\,d\varphi^2)$ and $f = 1 - 2M/r$, the field strength read as the curvature operator $\mathcal{R}(B)$ on physical bivectors is diagonal on the coordinate planes of the static orthonormal frame. Its eigenvalue is $2M/r^3$ on the radial boost plane $\sigma_r$ and its dual $I\sigma_r$, and $-M/r^3$ on the four mixed planes.
 
 The radial-plane value comes from the gauge field alone, the others from the Cartan structure equations in the static chart, and the two computations agree on the invertible region by the equivalence of the gauge field equations with Einstein's. The same computation appears in the gauge theory gravity literature.
 

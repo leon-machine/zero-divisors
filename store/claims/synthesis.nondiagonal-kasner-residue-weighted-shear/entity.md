@@ -1,7 +1,7 @@
 ---
 id: synthesis.nondiagonal-kasner-residue-weighted-shear
 kind: claim
-version: 3
+version: 4
 title: The residue in the non-diagonal Kasner class and the weighted shear criterion
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -43,12 +47,19 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result works with connection one-forms omega in a coframe e, the matrix G of the derived metric and the extrinsic-curvature matrix K (traces tr K^2, tr R); the matrix and form computation is the content.'
   open_problem: op.forcing-half-beyond-diagonal
   note: 'Attack route 2 of the open problem (the non-diagonal class, frame rotating as the wall is approached), carried out exactly. Transport-absent and standard in substance: the boost block is the second fundamental form, and the leading Raychaudhuri and Hamiltonian equations give the Kasner relations (textbook general relativity, cited from memory). The weighted admissibility criterion (off-diagonal frame terms weighted by tau^(p_l - p_m), harmless only when triangular in the order of the exponents) is not new: it is the symmetry-wall structure of the Iwasawa-frame analysis of cosmological billiards (Damour, Henneaux and Nicolai 2003; Heinzle, Uggla and Rohr 2009; cited from memory, not checked here). What the entity adds to the store: that criterion stated in the residue sense for the completion''s weights, with exact checks, and the explicit observation that a rotation at rate o(1/tau), even one with a convergent frame, can destroy the simple pole. Context, not a premise: the upper-triangular asymptotic data of Fournodavlos and Luk, Asymptotically Kasner-like singularities (arXiv:2003.13591), have this ordered shape (recalled from memory, not checked here). Not done: the subleading momentum constraints for non-diagonal data, and the condition that the slices'' scalar curvature is subleading, which is assumed in (iv) and not derived; for generic vacuum data with a negative exponent it is expected to fail (BKL bounces, literature from memory), which is why (iv) is stated conditionally. Filed alongside, synthesis.unit-boost-residue-needs-nonpositive-exponent: a unit-boost residue has an exponent <= 0, the case in which the curvature hypothesis of (iv) generically fails.'
   maintainer_pass:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'GTG restatement: the Kasner-like metric is the derived metric of a gravitational field on flat spacetime; the Levi-Civita connection is its rotation-gauge field in connection one-forms of the orthonormal coframe (with a note that the matrix Omega of the statement is the coframe''s logarithmic rate, not the rotation-gauge field); Ric = Lambda g becomes R(a) = Lambda a. Clauses (i)-(iv) and the closing paragraph unchanged; check unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact. Check entries synced with check.py: +1, -1 (added check_residue_relations_on_kasner_circle; removed check_residue_field_equations). Version 2 -> 3. check_boost_block_identity strengthened: (tau d_tau E) E^{-1} = B and tau K in the orthonormal frame = sym(B) asserted entrywise at the 12 sample cases; check_residue_field_equations renamed check_residue_relations_on_kasner_circle (it tests the residue relations only); docstrings (a), (d) reworded.'
+outside_ga:
+  kind: other
+  why: 'The result works with connection one-forms omega in a coframe e, the matrix G of the derived metric and the extrinsic-curvature matrix K (traces tr K^2, tr R); the matrix and form computation is the content.'
 ---
 
 ## formal

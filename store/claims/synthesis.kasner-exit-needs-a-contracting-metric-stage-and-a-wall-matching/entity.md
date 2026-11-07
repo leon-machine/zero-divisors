@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching
 kind: claim
-version: 3
+version: 4
 title: 'Kasner exit needs a contracting stage and a wall matching'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: GA rewrite (wall curvature as the store-sign curvature operator)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -46,6 +50,10 @@ lineage:
   - dark-energy.gravity-pre-metric-forces-degenerate-exactly
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in (iii), formal and proof: the curvature at the wall is the store-sign curvature operator on the physical frame planes, calR(e_0 ^ e_i) = p_i(p_i - 1) tau^-2 e_0 ^ e_i and calR(e_i ^ e_j) = p_i p_j tau^-2 e_i ^ e_j, computed in the proof from Omega(hb(e_i)) = -(p_i/tau) B_i through the field strength, and the Kretschmann scalar is 2 <calR(a ^ b) calR(d_b ^ d_a)>, four times the sum of the squared eigenvalues; the Cartan forms and curvature two-forms stay as a labelled component reading. The same eigenvalues were checked exactly with lib/GA.py for dark-energy.frozen-point-datum-kasner-wall (in any number of directions the computation is the same plane by plane); the Kretschmann formula and its values are unchanged.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

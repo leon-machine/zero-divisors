@@ -1,7 +1,7 @@
 ---
 id: note.dark-matter.r1-against-series-mass-formulas
 kind: note
-version: 1
+version: 2
 title: R1 against the series' mass formulas
 status: remark
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: a remark computed with explicit gamma matrices)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - dark-matter.r3-one-cell-per-unshared-direction
 locators:
@@ -22,6 +26,14 @@ locators:
   number: Rem 7.5
   label: rem:massR1
   line: 796
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the remark compares mass normalisations by an explicit computation with Hermitian gamma matrices of signature (1, n - 1), n = 3, 4, 5, built as matrices by the script (the current psi^dag gamma^0 gamma^mu psi and its bound); a GA form (the vector part of psi e_t psi~, as reader R05 notes) would change the class of the computation, not only its notation. Declared outside_ga (bridge).'
+outside_ga:
+  kind: bridge
+  why: 'the remark compares mass normalisations by an explicit computation with Hermitian gamma matrices of signature (1, n - 1), n = 3, 4, 5, built as matrices by the script; the current psi^dag gamma^0 gamma^mu psi is the standard formalism''s, set beside the series'' mass formulas'
 ---
 
 ## formal

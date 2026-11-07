@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, the convention parenthetical made exact (which components change sign in which convention)'
   version: 7
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -41,6 +45,10 @@ lineage:
   motivated_by:
   - synthesis.quarter-from-temperature
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The result compares field equations of higher-curvature actions in the components of the Ricci and Riemann tensors of the derived metric, with the signature and sign conversions stated (reader R03 fix); the variational and Wald-entropy computations are component computations.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -68,6 +76,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Lagrangians L_f are densities of a gravitational field on flat spacetime, f a polynomial in the Ricci map of the field strength, with field equations from varying hb with Omega the torsion-free field of hb (equivalently, varying the derived metric); Ricci-flat metrics are vacuum fields, Schwarzschild and Reissner-Nordstrom are the corresponding fields, and flat space is a region of vanishing field strength. Signature (-,+,+,+) kept as declared. Clauses (i) to (iv), the remark and their strength unchanged; proof given a pointer to the dictionary Fact. check_black_hole_data strengthened: kappa and horizon derived from f, Hawking integral computed and compared with A/4 at five masses, Wald (ii) for Einstein part and two quadratic monomials, RN horizon value computed; docstring names (iii) as untested. Version 4 -> 5. Check maintenance: comparisons over zip now also compare lengths, so a length mismatch cannot pass on a shorter prefix; no change to what is claimed. Version 5 -> 6.'
+outside_ga:
+  kind: other
+  why: 'The result compares field equations of higher-curvature actions in the components of the Ricci and Riemann tensors of the derived metric, with the signature and sign conversions stated (reader R03 fix); the variational and Wald-entropy computations are component computations.'
 ---
 
 ## formal

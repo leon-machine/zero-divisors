@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-haar-moments-of-random-pure-state
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Haar moments of a random pure state (Schur-Weyl duality)'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 imported_from:
 - citation: 'R. Goodman and N. R. Wallach, Symmetry, Representations, and Invariants, Graduate Texts in Mathematics 255, Springer (2009), Chapter 9 (Schur-Weyl duality).'
@@ -24,6 +28,10 @@ imported_from:
 - citation: 'A. W. Harrow, The church of the symmetric subspace, arXiv:1308.6595 (2013).'
   key: Harrow2013
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged. Imported (status kept): the source''s formula is unchanged, so no source_formal is needed.'
   note: >-
     Imported for the replica-saddle count of eviction, whose proof (iii) derives the moment formula
     from Schur's lemma and the irreducibility of the symmetric power, cited from memory. Generalises
@@ -38,7 +46,7 @@ extraction:
 ---
 
 ## formal
-Let $\ket{\psi}$ be a unit vector of $\C^{D}$ drawn from the unitarily invariant probability measure. For every $n \ge 1$,
+Let $\ket{\psi}$ be a unit vector of $\C^{D}$ (an abstract Hilbert space, its numbers read in $\mathrm{span}\{1, I_4\}$, conventions U1; the source writes the complex numbers for that field) drawn from the unitarily invariant probability measure. For every $n \ge 1$,
 \[
 \bigl\langle (\ket{\psi}\bra{\psi})^{\otimes n} \bigr\rangle \;=\; \frac{\Pi_{\mathrm{sym}}}{\dim \mathrm{Sym}^{n}\C^{D}} \;=\; \frac{\sum_{\sigma \in S_{n}} P_{\sigma}}{D(D + 1)\cdots(D + n - 1)},
 \]

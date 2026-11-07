@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-curvature-wall-is-negative-weight-helicity
 kind: claim
-version: 1
+version: 2
 title: 'The Kasner curvature wall is the negative-weight helicity'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -45,6 +49,10 @@ lineage:
   motivated_by:
   - synthesis.nondiagonal-kasner-residue-weighted-shear
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof works with the structure functions c_{mn}^l of an orthonormal coframe, the frame curvature components and their matrix decomposition; the components are the computation.'
   open_problem: op.forcing-half-beyond-diagonal
   note: >-
     Removes the subleading slice-curvature assumption of clause (iv) of
@@ -72,6 +80,9 @@ extraction:
     every p_l is in (0,1) (nonempty: it contains (1/3,1/3,1/3)) every power in (i) decays and the helicity
     condition is vacuous; elsewhere in the disk a weight can be negative and the condition applies.
     Transport-absent: a statement about the field equations, bearing on the connection's residue.
+outside_ga:
+  kind: other
+  why: 'The proof works with the structure functions c_{mn}^l of an orthonormal coframe, the frame curvature components and their matrix decomposition; the components are the computation.'
 ---
 
 ## formal

@@ -1,7 +1,7 @@
 ---
 id: synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue
 kind: claim
-version: 2
+version: 3
 title: 'Matter at a Kasner wall: Maxwell bounces, only stiff matter moves the residue'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: GA rewrite (Maxwell equation as DF = 0)
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -48,6 +52,10 @@ lineage:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
   - synthesis.kasner-curvature-wall-is-negative-weight-helicity
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms to GA in the proof: the source-free Maxwell equations are stated as the spacetime-algebra equation DF = 0 of the gravitational field (its vector part D . F = 0 and trivector part D ^ F = 0), with dF = 0 and d*F = 0 kept as the labelled coordinate reading from which the constant charges are read. A notation change; the derived metric in harmonic time stays as the sanctioned reading of the gauge field, and the minisuperspace DeWitt form and its linear forms are scalar linear algebra, not spacetime forms. Statement unchanged.'
   maintainer_pass:
     by: maintainer-2026-10-31
     date: '2026-10-31'

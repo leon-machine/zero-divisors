@@ -1,7 +1,7 @@
 ---
 id: pairing.loop-classes-are-weyl-components
 kind: claim
-version: 4
+version: 5
 title: The loop classes are Weyl components
 status: proved
 region: pairing
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T05-pairing, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -42,6 +46,10 @@ locators:
   label: lem:weylclasses
   line: 360
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof identifies loop classes with Weyl components in a frame (eta^{ab}); the components are the content (reader R03).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -61,6 +69,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: a Ricci-flat spacetime is a vacuum gravitational field on flat spacetime (R(a) = 0), the curvature bivector R(u, v) of a loop is the covariant field strength on the physical plane u ^ v, R(hb(u ^ v)) = -R(u ^ v) in the store''s sign (as in pairing.curvature-which-loops-move-vacuum), and the pairing <.,.> is the flat product of physical vectors. Classes, identities and conclusions unchanged; the dictionary Fact added to uses for the identification; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The proof identifies loop classes with Weyl components in a frame (eta^{ab}); the components are the content (reader R03).'
 ---
 
 ## formal

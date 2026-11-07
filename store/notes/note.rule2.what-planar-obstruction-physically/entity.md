@@ -1,7 +1,7 @@
 ---
 id: note.rule2.what-planar-obstruction-physically
 kind: note
-version: 1
+version: 2
 title: What the planar obstruction is, physically
 status: remark
 subject: completion
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T17-rule2, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared: reads planar electrodynamics and graphene in their gamma-matrix language)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 comments_on:
 - rule2.imported-parity-anomaly
 - rule2.rule-2-plane
@@ -24,6 +28,14 @@ locators:
   number: Rem 4.4
   label: rem:planarphysics
   line: 258
+extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 1 -> 2. Not rewritten: the remark reads the planar obstruction in the language of planar electrodynamics (the matrix nu = gamma^3 anticommuting with the three planar gamma matrices) and of graphene''s valleys; that comparison is its content, so it stays and is declared outside_ga (bridge), as reader R11 proposed.'
+outside_ga:
+  kind: bridge
+  why: 'the remark names the complex gamma matrices of the physics it compares with (odd-dimensional representations, planar electrodynamics, graphene); the series'' own statements it reads are in the Clifford algebras of the stated signatures'
 ---
 
 ## formal

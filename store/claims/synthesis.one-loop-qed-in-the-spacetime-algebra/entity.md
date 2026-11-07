@@ -67,7 +67,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The covariant photon propagator is written as the map a -> -a/k^2 on vectors, with -g_{mu nu}/k^2 as its component reading; the remaining indices are components on the spacetime algebra''s frame gamma_mu and reciprocal gamma^mu (the algebra''s own vectors) and stay; notation only.'
+    note: 'The covariant photon propagator is written as the map a -> -a/k^2 on vectors, with -g_{mu nu}/k^2 as its component reading; the remaining indices are components on the spacetime algebra''s frame gamma_mu and reciprocal gamma^mu (the algebra''s own vectors) and stay; notation only. Reader fix (R06), version kept: the field of the Dirac-matrix reading in proof (1) is written span_Q{1, I_5} (it was Q(i), a bare unit the detector skips).'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: field-theory.mass
 kind: claim
-version: 4
+version: 5
 title: Mass with $i = I_4$
 status: proved
 region: field-theory
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of FT, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the two-component epsilon pairing labelled as a reading)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -52,6 +56,10 @@ locators:
   label: prop:mass
   line: 159
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. At reader R06''s request, the two-component epsilon pairing lambda^T epsilon lambda beside B_N is labelled as a reading ("in two-component form") in the formal and technical levels; B_N(psi, phi) = <psi~ phi N> stays the statement. Wording only.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -78,10 +86,10 @@ about:
 ---
 
 ## formal
-For the four even right factors $N \in \{\gamma_0\gamma_1, \gamma_0\gamma_2, \gamma_1\gamma_3, \gamma_2\gamma_3\}$ that anticommute with $\IS$, $B_N(\psi, \phi) = \proj(\tilde\psi\phi N)$ is a nonzero, antisymmetric, nondegenerate, Lorentz-invariant, $I_4$-bilinear pairing on $\chi_+$: the epsilon pairing $\lambda^{\mathsf T}\epsilon\lambda$, of charge two under the common phase. A massive Dirac plane wave splits as $\chi + \psi_-$ with $\eta = \psi_-N \in \chi_+$; $\chi$ and $\eta$ have opposite $I_4$-charges, the Dirac equation is the coupled pair, and the mass density is $2B(\chi, \eta)$. The common $I_4$ phase is axial and the mass breaks it. Fact \claimref{field-theory.imported-one-datum-massive-law} stands: $I_4$ is the field algebra's unit, not the massive law's complex structure.
+For the four even right factors $N \in \{\gamma_0\gamma_1, \gamma_0\gamma_2, \gamma_1\gamma_3, \gamma_2\gamma_3\}$ that anticommute with $\IS$, $B_N(\psi, \phi) = \proj(\tilde\psi\phi N)$ is a nonzero, antisymmetric, nondegenerate, Lorentz-invariant, $I_4$-bilinear pairing on $\chi_+$ (in two-component form, a labelled reading, the epsilon pairing $\lambda^{\mathsf T}\epsilon\lambda$), of charge two under the common phase. A massive Dirac plane wave splits as $\chi + \psi_-$ with $\eta = \psi_-N \in \chi_+$; $\chi$ and $\eta$ have opposite $I_4$-charges, the Dirac equation is the coupled pair, and the mass density is $2B(\chi, \eta)$. The common $I_4$ phase is axial and the mass breaks it. Fact \claimref{field-theory.imported-one-datum-massive-law} stands: $I_4$ is the field algebra's unit, not the massive law's complex structure.
 
 ## technical
-For the four even right factors $N \in \{\gamma_0\gamma_1, \gamma_0\gamma_2, \gamma_1\gamma_3, \gamma_2\gamma_3\}$ that anticommute with $\IS$, the pairing $B_N(\psi, \phi) = \proj(\tilde\psi\phi N)$ is nonzero, antisymmetric, nondegenerate, Lorentz-invariant and $I_4$-bilinear on $\chi_+$: the epsilon pairing $\lambda^{\mathsf T}\epsilon\lambda$, of charge two under the common phase. A massive Dirac plane wave splits as $\chi + \psi_-$ with $\eta = \psi_-N \in \chi_+$; $\chi$ and $\eta$ have opposite $I_4$-charges, the Dirac equation is the coupled pair, and the mass density is $2B(\chi, \eta)$.
+For the four even right factors $N \in \{\gamma_0\gamma_1, \gamma_0\gamma_2, \gamma_1\gamma_3, \gamma_2\gamma_3\}$ that anticommute with $\IS$, the pairing $B_N(\psi, \phi) = \proj(\tilde\psi\phi N)$ is nonzero, antisymmetric, nondegenerate, Lorentz-invariant and $I_4$-bilinear on $\chi_+$ (in two-component form, a labelled reading, the epsilon pairing $\lambda^{\mathsf T}\epsilon\lambda$), of charge two under the common phase. A massive Dirac plane wave splits as $\chi + \psi_-$ with $\eta = \psi_-N \in \chi_+$; $\chi$ and $\eta$ have opposite $I_4$-charges, the Dirac equation is the coupled pair, and the mass density is $2B(\chi, \eta)$.
 
 So the common $I_4$ phase is axial and the mass breaks it, and the one-datum fact stands: $I_4$ is the field algebra's unit, not the massive law's complex structure.
 

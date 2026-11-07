@@ -1,7 +1,7 @@
 ---
 id: dark-energy.frozen-point-makes-stelle-west-vector
 kind: claim
-version: 5
+version: 6
 title: The frozen point makes the Stelle-West vector
 status: proved
 region: dark-energy
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T10, deposited version
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: typed
 derivations:
 - name: main
@@ -43,6 +47,10 @@ locators:
   label: thm:action
   line: 685
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The functional and its variation are written in the language of the MacDowell-Mansouri Fact, as integrals of four-forms built from the frame and curvature forms with the fibre symbol epsilon_{abcd} (its GTG reading is the scalar of the I_4 part of the product of bivector-valued forms); the proof varies those forms.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -67,6 +75,9 @@ extraction:
   - dark-energy.frozen-point-datum-kasner-wall
   - dark-energy.imported-weighted-limit-schwarzschild-singularity-matching
   eqrefs: 2
+outside_ga:
+  kind: other
+  why: 'The functional and its variation are written in the language of the MacDowell-Mansouri Fact, as integrals of four-forms built from the frame and curvature forms with the fibre symbol epsilon_{abcd} (its GTG reading is the scalar of the I_4 part of the product of bivector-valued forms); the proof varies those forms.'
 ---
 
 ## formal

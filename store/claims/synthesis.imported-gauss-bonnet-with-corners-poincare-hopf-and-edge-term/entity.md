@@ -1,7 +1,7 @@
 ---
 id: synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term
 kind: claim
-version: 1
+version: 2
 title: 'Imported: Gauss-Bonnet with corners, Poincare-Hopf and the edge term'
 status: imported
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 2
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -36,6 +40,10 @@ imported_from:
   key: GibbonsHawking1977
   doi: 10.1103/PhysRevD.15.2752
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (imported) and left in its language: Gauss-Bonnet with corners, Poincare-Hopf and clutching are quoted as their sources state them, for a compact surface with a Riemannian metric and an orthonormal coframe with its rotation one-form; the Euler characteristic and the clutching of frames are global data of the closed surface, and the local identity d omega = K e^2 ^ e^3 is the two-dimensional rotation-gauge field written as a form.'
   note: >-
     Imported for the result that the Euler part of a horizon patch's entropy is an edge term, which
     uses Gauss-Bonnet with edge and corners, Poincare-Hopf and the clutching number of the sphere, and
@@ -55,6 +63,9 @@ extraction:
     note: 'Created at Leon''s decision of 2026-10-31 approving the imports of Gauss-Bonnet with boundary and corners, Poincare-Hopf with clutching, and the two-dimensional Gibbons-Hawking term, merged into one Fact on surfaces; partly verified (see note).'
   flags:
   - 'beyond one flat chart: Euler characteristic of a closed surface and the clutching of two caps'
+outside_ga:
+  kind: imported
+  why: 'Gauss-Bonnet with corners, Poincare-Hopf and clutching are quoted as their sources state them, for a compact surface with a Riemannian metric and an orthonormal coframe with its rotation one-form; the Euler characteristic and the clutching of frames are global data of the closed surface, and the local identity d omega = K e^2 ^ e^3 is the two-dimensional rotation-gauge field written as a form.'
 ---
 
 ## formal

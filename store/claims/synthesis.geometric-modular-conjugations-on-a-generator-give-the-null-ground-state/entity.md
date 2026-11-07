@@ -29,6 +29,10 @@ credit:
   role: 'consistency pass, the clause number of the sharpness step (v -> vi), a stray parenthesis, and the digamma function no longer written with the field letter in the formal level'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -84,6 +88,10 @@ lineage:
   - synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state
   - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1, the generator modes and the scalar continuation), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
 kind: claim
-version: 2
+version: 3
 title: 'Wald entropy changes without flux on local horizons, against (Loc)'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -44,6 +48,10 @@ lineage:
   - synthesis.euler-term-horizon-entropy-shift
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The Wald-entropy computation works in the components of the Riemann tensor of the derived metric (F_abcd, h^{ac} h^{bd} R_{abcd}, binormals) in the source''s signature (-,+,+,+), as the Wald formula is stated; the components are the computation.'
   open_problem: op.horizon-entropy-functional
   note: >-
     Settles the open-patch question left by the Euler-term result: whether the topological shift of the
@@ -67,6 +75,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity: the Lagrangian is that of a gravitational field on flat spacetime, the Cartan curvature is the Lorentz block of the MacDowell-Mansouri field strength (R(B) - (Lambda/3) B in the store''s sign), de Sitter space is the de Sitter field, and Schwarzschild-de Sitter is the field in the Painleve-Gullstrand gauge beta^2 = 1 - f. Following Leon''s decision on bifurcation surfaces (DICTIONARY), the integral over the bifurcation sphere in (i) is restated on a cross-section of the horizon locus r = r_b in the Painleve-Gullstrand chart (same area, same surface gravity, same value A/4 - 3 pi/Lambda), with the note that the bifurcation surface itself is beyond one chart. Signature (-,+,+,+) kept as declared. Clauses (i) to (iii) and their strength unchanged; proof given a pointer to the dictionary Fact. Fix (referee GR1, 2026-10-23): the Killing field renamed xi (K is the sectional curvature) with kappa_b = f''(r_b)/2 defined; F is minus the Lorentz block of the MacDowell-Mansouri field strength, matching the Fact''s -(R(B) - B/l^2).'
+outside_ga:
+  kind: other
+  why: 'The Wald-entropy computation works in the components of the Riemann tensor of the derived metric (F_abcd, h^{ac} h^{bd} R_{abcd}, binormals) in the source''s signature (-,+,+,+), as the Wald formula is stated; the components are the computation.'
 ---
 
 ## formal

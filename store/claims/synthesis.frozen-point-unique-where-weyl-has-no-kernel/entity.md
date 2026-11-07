@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-unique-where-weyl-has-no-kernel
 kind: claim
-version: 4
+version: 5
 title: One frozen point up to scale wherever the Weyl tensor has no kernel vector
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -37,6 +41,10 @@ lineage:
   - dark-matter.p1-single-frozen-point
   - dark-energy.point-infinity-has-no-physical-fluctuation
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The proof integrates the tractor parallelism equations in scale-g components (Schouten tensor P_ab, Weyl tensor W_{cabd}, commutators of nabla_a); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component integration is the evidence (reader R05).'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -67,6 +75,9 @@ extraction:
     the statement is tractor calculus; the transport reading is that one parallel frozen point is all
     the curved geometry permits. Whether every tower's frozen point is parallel for the same
     connection (shared conformal structure) is the remaining structural input and a decision for Leon.
+outside_ga:
+  kind: other
+  why: 'The proof integrates the tractor parallelism equations in scale-g components (Schouten tensor P_ab, Weyl tensor W_{cabd}, commutators of nabla_a); on flat spacetime the connection is the Cl(2,4) gauge field Omega_T of synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection, and the component integration is the evidence (reader R05).'
 ---
 
 ## formal

@@ -87,7 +87,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'In the formal level the covariant photon is written as the map a -> (a - (1 - xi)(a.r) r/Q(r))/Q(r) and the vacuum polarisation as the map Pi_q(a) = (Q(q) a - (a.q) q) Pi(Q(q)) with transversality q.Pi_q(q) = 0 (contractions of the old component forms with frame vectors, kept as labelled readings); the proof''s components are on the frame gamma_mu of the Euclidean Clifford algebra, the algebra''s own vectors, and stay; notation only.'
+    note: 'In the formal level the covariant photon is written as the map a -> (a - (1 - xi)(a.r) r/Q(r))/Q(r) and the vacuum polarisation as the map Pi_q(a) = (Q(q) a - (a.q) q) Pi(Q(q)) with transversality q.Pi_q(q) = 0 (contractions of the old component forms with frame vectors, kept as labelled readings); the proof''s components are on the frame gamma_mu of the Euclidean Clifford algebra, the algebra''s own vectors, and stay; notation only. Reader fix (R06), version kept: proof Step 3(a) cites the integrals of the Conventions paragraph (there is no Step 0).'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

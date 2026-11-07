@@ -1,7 +1,7 @@
 ---
 id: synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term
 kind: claim
-version: 2
+version: 3
 title: 'The Euler entropy of a horizon patch is an edge term'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 3
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -58,6 +62,10 @@ lineage:
   - dark-energy.wall-counterterm
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The Euler density and its edge term are written as Cartan forms (epsilon_{abcd} lambda^{ab} d omega^{cd}, two-dimensional rotation one-forms) and computed from Christoffel symbols of the derived metric; the forms are the computation (reader R03).'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31
@@ -90,6 +98,9 @@ extraction:
     Gauss-Bonnet with boundary and corners, Poincare-Hopf, the clutching description of the Euler number
     and the two-dimensional Gibbons-Hawking term are \claimref{synthesis.imported-gauss-bonnet-with-corners-poincare-hopf-and-edge-term};
     the gauge variation of a Chern-Simons form is \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}.
+outside_ga:
+  kind: other
+  why: 'The Euler density and its edge term are written as Cartan forms (epsilon_{abcd} lambda^{ab} d omega^{cd}, two-dimensional rotation one-forms) and computed from Christoffel symbols of the derived metric; the forms are the computation (reader R03).'
 ---
 
 ## formal

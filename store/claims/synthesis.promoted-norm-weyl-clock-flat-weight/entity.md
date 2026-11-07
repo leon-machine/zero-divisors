@@ -1,7 +1,7 @@
 ---
 id: synthesis.promoted-norm-weyl-clock-flat-weight
 kind: claim
-version: 6
+version: 7
 title: 'The promoted norm''s clock: Weyl square in vacuum, Euler excess with matter'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (declared outside_ga)'
+  version: 7
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -52,6 +56,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Declared outside_ga (other) and left in its language: The densities are written as forms and frame components (W_abcd W^abcd, epsilon_{abcd} F^{ab} ^ F^{cd}, delta^{efgh}_{abcd}, sqrt|g|); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map (stated in the formal), and the proof computes on the components (reader R07).'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'
@@ -100,6 +108,9 @@ extraction:
     by: maintainer-2026-10-23-gtg
     date: '2026-10-23'
     note: 'Restated in Gauge Theory Gravity (MIXED): the functional is that of a gravitational field on the Wick-rotated flat background; |W|^2 read from the Weyl part of the curvature operator; vol = det(hb)^{-1} d^4x; locally de Sitter as W = 0; FLRW as the comoving-gauge field. The closed Einstein instantons of (ii) and (H) (S^4, S^2 x S^2, CP^2, chi) carry the Section 14 flag and a flags entry; the clock density of (iii)-(v) is local. Clauses (i)-(v) and the reading unchanged; proof given a pointer.'
+outside_ga:
+  kind: other
+  why: 'The densities are written as forms and frame components (W_abcd W^abcd, epsilon_{abcd} F^{ab} ^ F^{cd}, delta^{efgh}_{abcd}, sqrt|g|); the Weyl square is the scalar (1/2)<W(a ^ b) W(d_b ^ d_a)> of the Weyl map (stated in the formal), and the proof computes on the components (reader R07).'
 ---
 
 ## formal

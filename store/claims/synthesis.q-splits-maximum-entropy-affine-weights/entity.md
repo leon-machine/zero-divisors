@@ -25,6 +25,10 @@ credit:
   role: 'consistency pass, the text of Premise (Q) labelled with its version: the weights kappa k and the sea at a site are its version 2, the sea between sites its version 3'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -61,6 +65,10 @@ lineage:
   - singularity.q-joint-quasi-freeness-s-wave
   - synthesis.residue-common-weight-particle-hole
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 kept (already bumped in this run). The complex-field stand-in \C is tied to its unit, span{1, J} (U2, the boundary modes), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -104,7 +112,7 @@ Let $\{\psi_{k}\}_{k \in \Z}$ be the fermion array of Theorem \claimref{singular
 \item[(ii)] (the affine law) every current $a_{m}$, $m \neq 0$, is a normal mode of the boost flow, $e^{JtK_{\mathrm{geo}}}a_{m}e^{-JtK_{\mathrm{geo}}} = e^{-J\lambda_{m}t}a_{m}$ for all $t$, if and only if the weights are affine, $\omega_{k} = ck + d$; then $\lambda_{m} = cm$, and the linear span of the currents is invariant under the flow exactly in this case;
 \item[(iii)] (the Planck clause holds for every affine law) for affine weights with $c > 0$ and the symbol $n_{k} = (e^{\beta(ck + d)} + 1)^{-1}$, $\sum_{k \in \Z}n_{k+m}(1 - n_{k}) = m/(e^{\beta cm} - 1)$ for every $m > 0$ and every offset $d$: the Bose-Einstein occupancy at temperature $1/\beta$ and frequency $cm$ holds for every affine law, so clause (3) of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector} fixes neither $d$ nor $c$; that it requires the affine form rests on reading each current as a normal mode of the boost flow, which is (ii);
 \item[(iv)] (the two free data) for affine weights and an integer $k_{0}$, the particle-hole map $\psi_{k} \mapsto \psi_{k_{0} - k}^{\dagger}$ commutes with the boost flow, and carries the quasi-free Gibbs state at each $\beta$ to itself, if and only if $ck_{0} + 2d = 0$. Up to relabelling the array there are exactly two such classes: the sea at a site ($d = 0$: one mode of zero weight per array, with $n_{0} = \tfrac12$, the flow at time $2\pi/c$ the identity), which is the choice of (Q) in its version 2, and the sea between sites ($d = c/2$: no zero-weight mode, the flow at time $2\pi/c$ the parity automorphism $\psi \mapsto -\psi$). In either class the one remaining datum is the dimensionless slope $y := \beta c$, the ratio of the KMS period to the recurrence time $2\pi/c$ of the flow, multiplied by $2\pi$; (Q-w) sets $y = 2\pi$, the value at which the recurrence time of the array's flow equals the KMS period;
-\item[(v)] (rotations) let the counted modes be $\psi_{k,a}$ on $\ell^{2}(W) \otimes \C^{n}$, with the principal $\mathfrak{su}(2)$ of Theorem \claimref{scrambling.principality-indifference-sphere} on the second factor and the array index on the first. A quasi-free number-preserving generator with weights $\omega_{k,a}$ commutes with the second-quantised rotations if and only if $\omega_{k,a} = \omega_{k}$ does not depend on $a$; with (ii) in each channel, rotation equivariance and normal-mode currents together give $\omega_{k,a} = ck + d$, and the quasi-free state with symbol $\operatorname{diag}(n_{k}) \otimes \id$ is rotation invariant. At each array level the $n$ modes are a principal mode space of common weight $ck + d$, as Theorem \claimref{synthesis.residue-common-weight-particle-hole}(i) requires; the conflict of its clause (iv) arises exactly when a window of the array index is placed on the magnetic index. In the class with the sea at a site, the level $k = 0$ is a principal mode space at zero weight, maximally mixed and invariant under the particle-hole map of that theorem, the equality case of Theorem \claimref{synthesis.residue-from-mode-entropy}(ii).
+\item[(v)] (rotations) let the counted modes be $\psi_{k,a}$ on $\ell^{2}(W) \otimes \C^{n}$ (numbers, here and in the Jordan-Wigner realisation of the proof, read in $\mathrm{span}\{1, J\}$, the boundary modes' unit of the flows $e^{-JtK}$), with the principal $\mathfrak{su}(2)$ of Theorem \claimref{scrambling.principality-indifference-sphere} on the second factor and the array index on the first. A quasi-free number-preserving generator with weights $\omega_{k,a}$ commutes with the second-quantised rotations if and only if $\omega_{k,a} = \omega_{k}$ does not depend on $a$; with (ii) in each channel, rotation equivariance and normal-mode currents together give $\omega_{k,a} = ck + d$, and the quasi-free state with symbol $\operatorname{diag}(n_{k}) \otimes \id$ is rotation invariant. At each array level the $n$ modes are a principal mode space of common weight $ck + d$, as Theorem \claimref{synthesis.residue-common-weight-particle-hole}(i) requires; the conflict of its clause (iv) arises exactly when a window of the array index is placed on the magnetic index. In the class with the sea at a site, the level $k = 0$ is a principal mode space at zero weight, maximally mixed and invariant under the particle-hole map of that theorem, the equality case of Theorem \claimref{synthesis.residue-from-mode-entropy}(ii).
 \end{enumerate}
 So (Q) is the conjunction of a maximum-entropy rule, an affine weight law (forced if each current is a normal mode of the boost flow, as the Planck clause reads it), and two choices the framework does not make: the offset class and the value $y = 2\pi$. At $y = 2\pi$ the entropy of one array is the value $\ln 2 + \varepsilon$ of Theorem \claimref{synthesis.residue-from-mode-entropy}(vi) in the class with the sea at a site; its value in the class with the sea between sites is the subject of a result filed alongside, synthesis.half-integer-weight-array-carries-half-ln2.
 

@@ -1,7 +1,7 @@
 ---
 id: synthesis.eviction-deficit-against-page-deficit
 kind: claim
-version: 3
+version: 4
 title: 'The eviction deficit against the Page deficit'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'GA rewrite (the complex field named by its unit)'
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -41,6 +45,10 @@ lineage:
   - note.singularity.island-dictionary-one-dissonance
   - singularity.assembled-page-curve-up-typicality
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. The complex-field stand-in \C is tied to its unit, span{1, I_4} (U1, an abstract Hilbert space), by one parenthetical at its first use (readers R02 and R08: the language check does not flag the macro). Notation only; the mathematics is unchanged.'
   maintainer_pass_2:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -66,7 +74,7 @@ Let $L$ be the window, with $|W(t)|$ members and capacity $C = |W(t)|\ln 2$, and
 \[
 \delta_{\mathrm{ev}}(t) \;:=\; C(t) - S_{R}(t) \;=\; \sum_{k \in W(t)}\bigl(\ln 2 - h_{k}\bigr) ,
 \]
-with $h_{k} = s(x_{k})$ the mode entropy at $x_{k} = 2\pi\omega_{k}/\kappa$ (Theorem \claimref{synthesis.boundary-mode-thermal-entropy}). For a pure state on $\C^{m} \otimes \C^{n}$, $m \le n$, drawn from the unitarily invariant measure, let $\delta_{\mathrm{P}}(m, n) := \ln m - \langle S_{A}\rangle$ be the Page deficit, with $\langle S_{A}\rangle$ as in Fact \claimref{singularity.imported-page-average-entropy-subsystem}; the Page-typical falling branch of Fact \claimref{singularity.assembled-page-curve-up-typicality} has $\dim L = m$ after the crossing. Then:
+with $h_{k} = s(x_{k})$ the mode entropy at $x_{k} = 2\pi\omega_{k}/\kappa$ (Theorem \claimref{synthesis.boundary-mode-thermal-entropy}). For a pure state on $\C^{m} \otimes \C^{n}$ (an abstract Hilbert space, its numbers read in $\mathrm{span}\{1, I_4\}$, conventions, the unit principle), $m \le n$, drawn from the unitarily invariant measure, let $\delta_{\mathrm{P}}(m, n) := \ln m - \langle S_{A}\rangle$ be the Page deficit, with $\langle S_{A}\rangle$ as in Fact \claimref{singularity.imported-page-average-entropy-subsystem}; the Page-typical falling branch of Fact \claimref{singularity.assembled-page-curve-up-typicality} has $\dim L = m$ after the crossing. Then:
 \begin{enumerate}
 \item[(i)] (the typical deficit) for all $2 \le m \le n$,
 \[
