@@ -30,8 +30,14 @@ extraction:
     the OSTI record of the paper: the title, Phys. Rev. A 71, issue 5 (2005), DOI 10.1103/PhysRevA.71.052105,
     and the abstract (envariance of perfectly entangled states justifies complete ignorance of the outcome;
     for general states it yields Born's rule for the outcomes associated with Schmidt states). The steps
-    (swaps of equal-modulus Schmidt states, fine-graining with an ancilla, continuity) and the additivity
-    critique are stated from memory of the paper and of the discussion it prompted, not checked line by line.
+    were then checked on 2026-11-07 against the arXiv text (quant-ph/0405161v2): phase and swap envariance
+    with Facts 1-3 and assumptions (a)-(c); fine-graining in Sec. II.D through a counter C (a piece of the
+    environment or an ancilla), Eqs. (8)-(10), giving p_k = m_k/M; the irrational case asserted "by
+    continuity as rational numbers are dense among reals". The paper states the additivity premise itself
+    ("we have assumed that orthogonal states correspond to mutually exclusive events"), with zero probability
+    for absent Schmidt states and normalisation from certainty, and defers its motivation to Sec. V, where it
+    ties additivity to envariance; the critique imported here is that this premise is a fragment of the
+    probabilistic reading being derived.
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
