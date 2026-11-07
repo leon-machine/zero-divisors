@@ -62,6 +62,10 @@ lineage:
   - synthesis.attachment-transport-is-flat-only-where-weyl-vanishes
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No version change: the lay level brought up to date (it said the scaling-limit assumption is still needed for massive fields, which (HS), now a theorem, covers).'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -144,7 +148,7 @@ Since 2 November the bulk scaling limit holds at every point of every globally h
 On a Robertson-Walker field the Schwarzian is $2a''/a - 4(a'/a)^{2}$ in conformal time, and the remainder in the physical affine parameter has leading coefficient $-S/a^{4}$ over twelve. It vanishes exactly for de Sitter and flat fields, where the conformal vacuum is the ground state for the physical affine translations on every null generator; on radiation- or matter-dominated fields it is not, and only the local form holds. Transport-absent.
 
 ## lay
-The series assumes that, very close up, the quantum field always looks like empty flat space, even where gravity is present. This result proves that assumption, for massless spin-one-half particles, wherever space-time is a rescaled copy of flat space, which includes the uniform expanding universe of cosmology. So, for those particles, the assumption is only needed where gravity distorts shapes, as near a black hole; for particles with mass it is still an assumption. It also finds that the universe's natural empty state counts as the lowest-energy state along light rays only if the expansion is of the accelerating de Sitter kind, not during the radiation era.
+The series assumes that, very close up, the quantum field always looks like empty flat space, even where gravity is present. This result proves that assumption, for massless spin-one-half particles, wherever space-time is a rescaled copy of flat space, which includes the uniform expanding universe of cosmology. So, for those particles, the assumption was needed only where gravity distorts shapes, as near a black hole, and for particles with mass; a later result in the series has since proved it in those cases too. It also finds that the universe's natural empty state counts as the lowest-energy state along light rays only if the expansion is of the accelerating de Sitter kind, not during the radiation era.
 
 ## one-liner
 On a globally hyperbolic Weyl-flat region every quasi-free Hadamard state of the massless Dirac field has the flat massless vacuum as its scaling limit and, with comoving transverse labels, the generator microlocal condition in the physical affine parameter, so for the massless field the local form of (N$_{+}$) (at the leading order defining local Rindler horizons) needs no scaling-limit premise there; on a Robertson-Walker field the conformal vacuum differs on null generators from the physical null vacuum by a Schwarzian kernel with $S = 2a''/a - 4(a'/a)^{2}$ (leading coefficient $-S/12a^{4}$ in the physical parameter), zero exactly on de Sitter and flat fields (radiation $-4/t^{2}$).

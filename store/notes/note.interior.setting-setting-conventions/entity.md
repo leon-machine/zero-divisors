@@ -30,7 +30,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The de Sitter normalisation Ric_{ab} = Lambda g_{ab}, R = 4 Lambda is stated for the curvature operator of the GTG definition, R(a) = Lambda a and scalar 4 Lambda in the store''s sign (dictionary C6), with the component form as a labelled reading; the rest of the note was already in GTG; notation only.'
+    note: 'The de Sitter normalisation Ric_{ab} = Lambda g_{ab}, R = 4 Lambda is stated for the curvature operator of the GTG definition, R(a) = Lambda a and scalar 4 Lambda in the store''s sign (dictionary C6), with the component form as a labelled reading; the rest of the note was already in GTG; notation only. Reader fix (R03): the field equation is written in the store''s sign, R(a) - a R/2 = -kappa T(a) for R(B) = -R(hb(B)), with the LDG-sign form as a labelled reading.'
 ---
 
 ## formal

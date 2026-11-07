@@ -1,7 +1,7 @@
 ---
 id: synthesis.s-wave-array-is-a-boundary-mode-set
 kind: claim
-version: 4
+version: 5
 title: 'The s-wave array is a boundary-mode set'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, the conclusions under Premise (Q) labelled as its version 2 (weights kappa k), since version 3 has no zero-weight mode
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -47,6 +51,10 @@ lineage:
   motivated_by:
   - note.hawking.setting-mode-continuum
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5: The conclusions under Premise (Q) labelled as its version 2 (weights kappa k), since version 3 has no zero-weight mode; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -70,15 +78,15 @@ Let $\{\psi_k, \psi_k^{\dagger}\}_{k \in \mathbb{Z}}$ be the s-wave array of bou
 \item[(ii)] \emph{(Particle-hole conjugation makes the array a mode set.)} Put $b_k := \psi_k^{\dagger}$ for $k < 0$ and $b_k := \psi_k$ for $k \geq 0$. The $b_k$ satisfy the CAR, the boost dynamics acts as $b_k \mapsto e^{-J\kappa|k|t}b_k$, and on every finite window $\sum_k \kappa k\,N_k = \sum_k \kappa|k|\,N'_k + \sum_{k<0}\kappa k$ with $N'_k = b_k^{\dagger}b_k$, so the Gibbs state of the one is the Gibbs state of the other. Each frequency $\kappa m$, $m \geq 1$, occurs exactly twice (a particle at $k = m$, a hole at $k = -m$), and the frequency $0$ once, at $k = 0$. The Fermi-Dirac marginals $n_k = (e^{\beta\kappa k} + 1)^{-1}$ of the bosonisation theorem become $\langle N'_k\rangle = (e^{\beta\kappa|k|} + 1)^{-1}$ for $k \neq 0$.
 \item[(iii)] \emph{(The zero mode is in its trace state.)} On one mode of frequency $\omega \geq 0$ the KMS relation at $\beta$ is $n = e^{-\beta\omega}(1 - n)$, whose unique solution is the Fermi-Dirac value; at $\omega = 0$ it is $n = \tfrac12$, the trace.
 \end{enumerate}
-Consequently the definition of the boundary-mode algebra (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}) applies with the mode set $\mathbb{Z}\setminus\{0\}$ (the set called $J$ there, not the unit) and $\omega_j = \kappa|j|$, with one provenance, the ladder pairs of the blown-up singular boundary aggregated over s-wave channels, and the tower as model. Under (Q), the state of the array with these marginals, quasi-free on $J$, is the I-state of Theorem \claimref{hawking.i-state} on that mode set, and the excluded zero mode carries the trace, so the extension to the full array has no free parameter.
+Consequently the definition of the boundary-mode algebra (Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics}) applies with the mode set $\mathbb{Z}\setminus\{0\}$ (the set called $J$ there, not the unit) and $\omega_j = \kappa|j|$, with one provenance, the ladder pairs of the blown-up singular boundary aggregated over s-wave channels, and the tower as model. Under (Q) in its version 2, whose weights $\kappa k$ these are (its version 3 takes $\kappa(k + \tfrac12)$ and has no zero-weight mode), the state of the array with these marginals, quasi-free on $J$, is the I-state of Theorem \claimref{hawking.i-state} on that mode set, and the excluded zero mode carries the trace, so the extension to the full array has no free parameter.
 
 ## technical
 The boundary modes have two descriptions in the series: as rungs of the tower of iterated completions, whose limit is a CAR algebra over a countable set, and as the ladder pairs of the blown-up singular boundary, one per point, aggregated over s-wave channels into an array $\psi_k$, $k \in \mathbb{Z}$, with weights $\kappa k$ and a filled sea. The tower's null pairs satisfy the CAR exactly, so they model the algebra; but the physical closure has one ascent, further rungs sitting on shadow walls, so they do not count the modes.
 
-The array becomes a mode set of the thermality paper's definition by particle-hole conjugation below the level: $b_k = \psi_k^{\dagger}$ for $k < 0$. The Hamiltonian changes by a constant, every frequency becomes $\kappa|k| \geq 0$, each positive frequency appears twice (particle and hole), and the Fermi-Dirac marginals stay Fermi-Dirac at $\kappa|k|$. One mode has frequency zero; the thermality paper's definition requires positive frequencies and so excludes it, but the KMS relation forces its occupation to $1/2$, the trace. So, under (Q), the singularity paper's quasi-free state on the array is the I-state on the mode set $\mathbb{Z}\setminus\{0\}$ with $\omega_j = \kappa|j|$, tensored with the trace on the zero mode.
+The array becomes a mode set of the thermality paper's definition by particle-hole conjugation below the level: $b_k = \psi_k^{\dagger}$ for $k < 0$. The Hamiltonian changes by a constant, every frequency becomes $\kappa|k| \geq 0$, each positive frequency appears twice (particle and hole), and the Fermi-Dirac marginals stay Fermi-Dirac at $\kappa|k|$. One mode has frequency zero; the thermality paper's definition requires positive frequencies and so excludes it, but the KMS relation forces its occupation to $1/2$, the trace. So, under (Q) in its version 2 (weights $\kappa k$; version 3 has no zero mode), the singularity paper's quasi-free state on the array is the I-state on the mode set $\mathbb{Z}\setminus\{0\}$ with $\omega_j = \kappa|j|$, tensored with the trace on the zero mode.
 
 ## lay
 The series describes the quantum modes at a black hole's singularity in two ways: as the steps of an infinite tower of algebraic completions, and as one pair of modes at each point of the singularity's boundary, gathered into a list by keeping the spherically symmetric part. The first description is only a mathematical model: physically the tower stops after one step. This result makes the second description fit the thermal theory exactly. Modes below the filled level are relabelled as holes, which makes every frequency positive; each frequency then appears twice, once for a particle and once for a hole; and the single mode of zero frequency, which the thermal theory's definition leaves out, is forced to be exactly half occupied. Given the singularity paper's assumption that the joint state is of the simplest (quasi-free) kind, its thermal state is then the series' unique thermal state, with nothing left to choose.
 
 ## one-liner
-The boundary modes have one provenance, the s-wave array of ladder pairs, with the tower as model only; conjugating below the level makes it a mode set with frequencies $\kappa|k|$ (each positive one twice), and the excluded zero mode is forced into the trace, so under (Q) the array's quasi-free state is the I-state with nothing free.
+The boundary modes have one provenance, the s-wave array of ladder pairs, with the tower as model only; conjugating below the level makes it a mode set with frequencies $\kappa|k|$ (each positive one twice), and the excluded zero mode is forced into the trace, so under (Q) at its version-2 weights the array's quasi-free state is the I-state with nothing free.

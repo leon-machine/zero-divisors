@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-null-energy-gives-r-premises
 kind: claim
-version: 7
+version: 8
 title: 'Positive null energy gives the (R) premises'
 status: proved
 region: synthesis
@@ -33,6 +33,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 7
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, the last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows' unit J
+  version: 8
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -82,6 +86,10 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 7 -> 8: The last bare imaginary unit of the proof (the window commutator of (iv)) written as the windows'' unit J; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

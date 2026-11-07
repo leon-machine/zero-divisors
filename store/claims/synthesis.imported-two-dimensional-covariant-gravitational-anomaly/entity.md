@@ -34,7 +34,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'A sentence reads the covariant anomaly in two-dimensional GTG (the covariant divergence of the stress-energy map is +-1/96 pi times the I_2-dual of the physical gradient of the scalar curvature, sign by the source''s conventions, which the entity already leaves open); the source''s displays stay and the entity declares outside_ga (imported): the consistent anomaly is written in the Christoffel symbols themselves, which are not a covariant object, and the epsilon and sqrt(-g) normalisations are the source''s; status imported.'
+    note: 'A sentence reads the covariant anomaly in two-dimensional GTG (the covariant divergence of the stress-energy map is +-1/96 pi times the I_2-dual of the physical gradient of the scalar curvature, sign by the source''s conventions, which the entity already leaves open); the source''s displays stay and the entity declares outside_ga (imported): the consistent anomaly is written in the Christoffel symbols themselves, which are not a covariant object, and the epsilon and sqrt(-g) normalisations are the source''s; status imported. Reader fix (R05): the sentence on the curvature sign now says that the store''s scalar curvature has the source''s de Sitter-positive sign (C6, C7), so R carries over (the old sentence said it may flip).'
   note: >-
     Imported so that synthesis.residues-zero-four-real-chirality-anomaly can cite the
     two-dimensional covariant anomaly form that it uses at (1,1), part of its hypothesis (A). Checked on

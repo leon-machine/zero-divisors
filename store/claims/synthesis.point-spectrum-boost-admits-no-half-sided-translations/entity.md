@@ -1,7 +1,7 @@
 ---
 id: synthesis.point-spectrum-boost-admits-no-half-sided-translations
 kind: claim
-version: 4
+version: 5
 title: 'A point-spectrum boost admits no half-sided translations'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, the weights of Premise (Q) brought to its version 3 in the formal and technical levels (the technical level said the flow of (Q) returns to the identity after one period, true only for version 2)
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -44,6 +48,10 @@ lineage:
   - singularity.why-calibration-cannot-be-internal
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5: The weights of Premise (Q) brought to its version 3 in the formal and technical levels (the technical level said the flow of (Q) returns to the identity after one period, true only for version 2); mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -74,7 +82,7 @@ extraction:
 ---
 
 ## formal
-Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set (the set called $J$ in the Definition; below, $J$ is the unit) (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), its numbers read in $\mathrm{span}\{1, J\}$ with $J = e_{2}e_{3}$ the complex unit of the boundary modes' radial atom (Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode; it is also the unit of every GNS space below, and the imported theorem of (iii) is read with it, with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-J\omega_{j}t}a_{j}$ with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa k$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
+Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set (the set called $J$ in the Definition; below, $J$ is the unit) (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), its numbers read in $\mathrm{span}\{1, J\}$ with $J = e_{2}e_{3}$ the complex unit of the boundary modes' radial atom (Theorem \claimref{synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom}), which commutes with the radial plane and with every vector orthogonal to spacetime, hence with every mode; it is also the unit of every GNS space below, and the imported theorem of (iii) is read with it, with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-J\omega_{j}t}a_{j}$ with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa(k + \tfrac12)$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}, $\omega_{k} = \kappa k$ in its version 2). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
 \begin{enumerate}
 \item[(i)] every window is $\tau$-invariant and every element of $\bigcup_{F}\mathfrak{A}_{F}$ has a relatively compact $\tau$-orbit; on a window no nonzero $P$ satisfies $[K, P] = JcP$ with $c$ real and nonzero, $K = \sum_{j \in F}\omega_{j}N_{j}$;
 \item[(ii)] if $(\gamma_{a})_{a \in \R}$ is a one-parameter group of $*$-automorphisms of $\mathfrak{A}$, strongly continuous ($a \mapsto \gamma_{a}(x)$ norm continuous for each $x$), with $\tau_{t}\circ\gamma_{a}\circ\tau_{-t} = \gamma_{e^{ct}a}$ for all $t, a$ and some real $c \neq 0$, then $\gamma_{a} = \id$ for every $a$;
@@ -84,7 +92,7 @@ Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawk
 Consequently the mechanism by which the Bisognano-Wichmann and Borchers theorems produce the factor $2\pi$ cannot be realised on the windows, on the countable mode space, or on the array of (Q): a principle deriving (R) along that route must be posed on a one-particle space on which the boost has no eigenvectors spanning the relevant vectors, such as the continuum mode space of Definition \claimref{obj.hawking.continuum-mode-space} with a Hamiltonian of continuous spectrum. This result does not show that the route succeeds there.
 
 ## technical
-The series' best candidate for supplying the Hawking temperature from a principle stated in its own algebra is the Bisognano-Wichmann and Borchers mechanism: if the boost acts on a group of positive-energy translations by dilating them, the modular flow of the vacuum is that boost at exactly the rate $2\pi$, so the temperature would follow from positivity of energy instead of from the thermal premise (R). The store had already noted that a finite window cannot carry such translations. This result extends that to every setting the series uses for the boundary modes before the continuum: the whole countable mode space (with any real weights, including those of (Q)) and the Hilbert space of any boost-invariant state on it. The reason is that the boost there acts by phases on the modes, so it has pure point spectrum: every vector in a dense set moves on a compact orbit, and a translation group that the boost dilates is then forced to act trivially, by squeezing the translation parameter to zero along the orbit. So the half-sided translations that would fix $2\pi$ are trivial on these spaces, and a derivation of (R) along this route must use the continuum mode space, where the boost has continuous spectrum. Under (Q)'s weights the flow is even periodic, returning to the identity after exactly one modular period.
+The series' best candidate for supplying the Hawking temperature from a principle stated in its own algebra is the Bisognano-Wichmann and Borchers mechanism: if the boost acts on a group of positive-energy translations by dilating them, the modular flow of the vacuum is that boost at exactly the rate $2\pi$, so the temperature would follow from positivity of energy instead of from the thermal premise (R). The store had already noted that a finite window cannot carry such translations. This result extends that to every setting the series uses for the boundary modes before the continuum: the whole countable mode space (with any real weights, including those of (Q)) and the Hilbert space of any boost-invariant state on it. The reason is that the boost there acts by phases on the modes, so it has pure point spectrum: every vector in a dense set moves on a compact orbit, and a translation group that the boost dilates is then forced to act trivially, by squeezing the translation parameter to zero along the orbit. So the half-sided translations that would fix $2\pi$ are trivial on these spaces, and a derivation of (R) along this route must use the continuum mode space, where the boost has continuous spectrum. Under the weights $\kappa(k + \tfrac12)$ of (Q) the flow at one modular period is the parity automorphism and returns to the identity after two; under the weights $\kappa k$ of its version 2 it returns after one.
 
 ## lay
 One hope for explaining the black-hole temperature without simply assuming it uses a celebrated theorem: if the time-stretching symmetry at a horizon acts on a family of positive-energy shifts by rescaling them, the temperature comes out automatically with the right value. This result shows that the discrete models the series uses for the horizon's quantum modes cannot host that mechanism: their time evolution only ever returns close to where it started, and a rescaling that never escapes a bounded region can only rescale shifts that do nothing. The mechanism needs a genuinely continuous spectrum of mode energies, so any derivation of the temperature along these lines has to be built on the series' continuum description of the modes.

@@ -52,7 +52,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The derived metric is written g(a,b) = hb^{-1}(a).hb^{-1}(b) with g_{mu nu} = eta_{ab} e^a_mu e^b_nu as a labelled component reading; the rest stays in components and is declared outside_ga (other): the result counts the ranks of the Einstein-Cartan equations as linear conditions on the components of torsion, curvature and the connection one-forms in a normal form at a point where hb^{-1} is degenerate, outside the invertible region of the GTG definition.'
+    note: 'The derived metric is written g(a,b) = hb^{-1}(a).hb^{-1}(b) with g_{mu nu} = eta_{ab} e^a_mu e^b_nu as a labelled component reading; the rest stays in components and is declared outside_ga (other): the result counts the ranks of the Einstein-Cartan equations as linear conditions on the components of torsion, curvature and the connection one-forms in a normal form at a point where hb^{-1} is degenerate, outside the invertible region of the GTG definition. Reader fix (R09): the proof says that omega is the rotation-gauge field as Cartan one-forms, whose values on vectors are the negative of the definition''s Omega (C10), and that the ranks and the quadratic identity (d) do not depend on that sign.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'

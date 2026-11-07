@@ -60,7 +60,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The Pauli identity is written ab = a.b + a ^ b in Cl(3,0), the bivector a ^ b named as the bivector whose I_3-dual is the axial vector of vector algebra, instead of the I_3 times axial-vector form (the same identity); the vector derivative gamma^mu d_mu is the algebra''s own and stays; notation only.'
+    note: 'The Pauli identity is written ab = a.b + a ^ b in Cl(3,0), the bivector a ^ b named as the bivector whose I_3-dual is the axial vector of vector algebra, instead of the I_3 times axial-vector form (the same identity); the vector derivative gamma^mu d_mu is the algebra''s own and stays; notation only. Reader fix (R12): step (3) says that the Hestenes unit I sigma_3 acts on the right and is not the field theory''s unit I_4, which acts on the left (I_4 psi = -I_4 (psi I sigma_3) I sigma_3), the two never identified.'
   maintainer_pass_2:
     by: maintainer-2026-10-26
     date: '2026-10-26'

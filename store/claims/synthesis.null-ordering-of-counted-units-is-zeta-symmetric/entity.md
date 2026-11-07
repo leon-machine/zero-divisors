@@ -1,7 +1,7 @@
 ---
 id: synthesis.null-ordering-of-counted-units-is-zeta-symmetric
 kind: claim
-version: 3
+version: 4
 title: 'The null ordering of counted units is zeta-symmetric'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, a garbled sentence of the technical level repaired and the cited edge-scaling result named as the Theorem it is
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -53,6 +57,10 @@ lineage:
   - synthesis.counted-unit-energy-at-half-offset
   - synthesis.n-plus-null-ground-state
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4: A garbled sentence of the technical level repaired and the cited edge-scaling result named as the Theorem it is; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -89,7 +97,7 @@ extraction:
 ## formal
 Units $\hbar = c = 1$. On a half-generator of a horizon with surface gravity $\kappa$ let $u = e^{\kappa\tau}$, $\tau$ the Killing time. Call the \emph{null ordering} the normal ordering at the null ground state of Premise \claimref{synthesis.n-plus-null-ground-state}, in which that state has $\langle T_{uu}\rangle = 0$, and the \emph{boost ordering} the normal ordering at the boost ground state (the Mellin vacuum). An evenly spaced array with weights $\omega_{k} = \kappa(k + \delta)$, $k \in \Z$, $0 \le \delta < 1$, has the single-particle spectrum of one chiral complex component on a Killing-time interval of length $2\pi/\kappa$ with a twisted condition (its real-time recurrence window; that the array is that component on a window of the continuum is part of the window reading of (iv)), the offset $\delta = \tfrac12$ being the antiperiodic condition of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave} version 3. Then:
 \begin{enumerate}
-\item[(i)] \emph{(The boost ground state on one window.)} The Schwarzian of $u = e^{\kappa\tau}$ is $\{u, \tau\} = -\kappa^{2}/2$, so the null ground state carries the Killing-frame energy density $\kappa^{2}/(48\pi)$ per complex component in the boost ordering, and the boost ground state $-\kappa^{2}/(48\pi)$ in the null ordering, the value of Proposition \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit} at $c \to \infty$. Over one window of Killing time $2\pi/\kappa$ the boost ground state carries $-\kappa/24$ in the null ordering.
+\item[(i)] \emph{(The boost ground state on one window.)} The Schwarzian of $u = e^{\kappa\tau}$ is $\{u, \tau\} = -\kappa^{2}/2$, so the null ground state carries the Killing-frame energy density $\kappa^{2}/(48\pi)$ per complex component in the boost ordering, and the boost ground state $-\kappa^{2}/(48\pi)$ in the null ordering, the value of Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit} at $c \to \infty$. Over one window of Killing time $2\pi/\kappa$ the boost ground state carries $-\kappa/24$ in the null ordering.
 \item[(ii)] \emph{(The array's sea selects the offset.)} The zeta-regularised energy of the filled sea of the array in the symmetric ordering (half of each mode below and above, $\sum_{k}\omega_{k}(\psi_{k}^{\dagger}\psi_{k} - \tfrac12)$) is $\tfrac{\kappa}{2}B_{2}(\delta)$ for $0 < \delta < 1$, with $B_{2}(a) = a^{2} - a + \tfrac16$, and $+\kappa/12$ at $\delta = 0$. Since
 \[
 \tfrac{\kappa}{2}B_{2}(\delta) + \tfrac{\kappa}{24} = \tfrac{\kappa}{2}\bigl(\delta - \tfrac12\bigr)^{2},
@@ -103,7 +111,7 @@ So (N$_{+}$) decides the ordering question left open by the counted-unit energy 
 ## technical
 The stored counted-unit result found that a counted unit at the weights of (Q) version 3 carries Killing energy $\kappa/12$ above its filled sea, and none in the zeta-regularised symmetric ordering, and left open which ordering is physical. (N$_{+}$) supplies the zero: the state of the horizon's light rays is the ground state of the affine null translations, and null energy is measured from it.
 
-On one light ray, with Killing time $\tau$ and affine parameter $u = e^{\kappa\tau}$, the ground state of the affine translations and the ground state of the boost differ by the Schwarzian of the exponential map, $\{u, \tau\} = -\kappa^{2}/2$: measured from the null ground state the boost ground state has Killing-frame energy density $-\kappa^{2}/(48\pi)$, as the stored edge-scaling result found. An array with Killing-frequency spacing $\kappa$ has the spectrum of one chiral component on a Killing-time window of length $2\pi/\kappa$, and over that window the boost ground state carries $-\kappa/24$. The array's own boost ground state, its filled sea, has zeta-regularised symmetric energy $\tfrac{\kappa}{2}B_{2}(\delta)$, which equals $-\kappa/24$ exactly at the half offset: $\tfrac{\kappa}{2}B_{2}(\delta) + \tfrac{\kappa}{24} = \tfrac{\kappa}{2}(\delta - \tfrac12)^{2}$. At the half offset the array's thermal energy above its sea is also $\kappa/24$, so in the symmetric ordering the thermal array has energy zero, which is what the null ground state has on every window. The match is the standard modular relation between a chiral fermion's thermal state at temperature $\kappa/2\pi$ on the line and its antiperiodic vacuum on a circle of length $2\pi/\kappa$, whose Casimir energy is $-\tfrac{1}{24}\cdot\tfrac{2\pi}{L}$ (cited from memory); what is used here is that the antiperiodic, half-offset case is the only one where the array's zeta sea meets the continuum's null-ordered value. Under the window reading, which identifies the array's energy with the continuum's on its window as the continuum's on its window, the symmetric ordering is the physical one, the counted units carry no mean Killing energy, and the whole of $M$ sits in the constant of the hole's Hamiltonian.
+On one light ray, with Killing time $\tau$ and affine parameter $u = e^{\kappa\tau}$, the ground state of the affine translations and the ground state of the boost differ by the Schwarzian of the exponential map, $\{u, \tau\} = -\kappa^{2}/2$: measured from the null ground state the boost ground state has Killing-frame energy density $-\kappa^{2}/(48\pi)$, as the stored edge-scaling result found. An array with Killing-frequency spacing $\kappa$ has the spectrum of one chiral component on a Killing-time window of length $2\pi/\kappa$, and over that window the boost ground state carries $-\kappa/24$. The array's own boost ground state, its filled sea, has zeta-regularised symmetric energy $\tfrac{\kappa}{2}B_{2}(\delta)$, which equals $-\kappa/24$ exactly at the half offset: $\tfrac{\kappa}{2}B_{2}(\delta) + \tfrac{\kappa}{24} = \tfrac{\kappa}{2}(\delta - \tfrac12)^{2}$. At the half offset the array's thermal energy above its sea is also $\kappa/24$, so in the symmetric ordering the thermal array has energy zero, which is what the null ground state has on every window. The match is the standard modular relation between a chiral fermion's thermal state at temperature $\kappa/2\pi$ on the line and its antiperiodic vacuum on a circle of length $2\pi/\kappa$, whose Casimir energy is $-\tfrac{1}{24}\cdot\tfrac{2\pi}{L}$ (cited from memory); what is used here is that the antiperiodic, half-offset case is the only one where the array's zeta sea meets the continuum's null-ordered value. Under the window reading, which identifies the array's energy with the continuum's energy on its window, measured from the null ground state, the symmetric ordering is the physical one, the counted units carry no mean Killing energy, and the whole of $M$ sits in the constant of the hole's Hamiltonian.
 
 ## lay
 The series counts the black hole's entropy in small units on its horizon, and an earlier result found that whether those units carry any energy depended on a bookkeeping choice: where to put the zero of energy. The series' own premise about the state on the horizon's light rays fixes that zero: energy is measured from the lowest state for motion along the light rays. Measured that way, a stretch of light ray as long as one unit's natural cycle carries exactly the amount of energy that the zero-point bookkeeping of a unit assigns, but only if the unit's energy levels sit halfway between whole steps, which is the choice the series made. If a unit's energy is taken to be the energy of that stretch of light ray, then with that zero the units carry no energy on average, and the hole's mass sits entirely in one overall constant rather than in the counted units.

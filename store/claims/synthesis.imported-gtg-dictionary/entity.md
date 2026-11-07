@@ -43,7 +43,7 @@ extraction:
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The Levi-Civita and curvature clauses state the GTG objects first (D_{e_mu} A, the curvature operator R(B), the Ricci and Einstein maps) with the components nabla_mu A^nu, Gamma^rho_{mu nu}, R_{mu nu}^{rho sigma}, R_{mu nu} as labelled readings; the previous formal level is kept as source_formal; declared outside_ga (bridge), since the Fact is the translation table between the two languages; the content is unchanged; status imported.'
+    note: 'The Levi-Civita and curvature clauses state the GTG objects first (D_{e_mu} A, the curvature operator R(B), the Ricci and Einstein maps) with the components nabla_mu A^nu, Gamma^rho_{mu nu}, R_{mu nu}^{rho sigma}, R_{mu nu} as labelled readings; the previous formal level is kept as source_formal; declared outside_ga (bridge), since the Fact is the translation table between the two languages; the content is unchanged; status imported. Reader fix (R03): clause (iv) gives the frame-plane reading R(g_mu ^ g_nu) = -R(e_mu ^ e_nu) in the store''s sign instead of the tautology R(hb(g_mu ^ g_nu)) = R(e_mu ^ e_nu), naming the sources'' opposite sign.'
   source_formal: |-
     Let $(\hb, \Omega)$ be a gravitational field on flat spacetime with invertible region $U$ and derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), with frame $g_\mu = \hb^{-1}(e_\mu)$ and coframe $g^\mu = \hb^{T}(e^\mu)$. On $U$, with $\Omega$ the torsion-free field of $\hb$:
     \begin{enumerate}

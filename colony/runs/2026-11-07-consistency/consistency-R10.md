@@ -129,4 +129,4 @@ L6. mass.imported-unitary-representations-de-sitter-group (status imported, Dixm
 
 ### Counts after both passes
 Entities read in full: 205. Changed: 16 (5 claims, 11 notes). For Leon: 6 (L1-L6). Cross-subject: 2. GA issues sent:
-5 entities. Duplicates: 0. tp check runs: 2 (no error or warning on any R10 entity).
+4 entities. Duplicates: 0. tp check runs: 2 (no error or warning on any R10 entity).

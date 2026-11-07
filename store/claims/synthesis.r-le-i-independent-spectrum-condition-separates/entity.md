@@ -1,7 +1,7 @@
 ---
 id: synthesis.r-le-i-independent-spectrum-condition-separates
 kind: claim
-version: 4
+version: 5
 title: '(R), (L$_E$) and (I) are independent; a ground-state condition separates two'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: consistency pass, a bare imaginary unit left in the proof of (M2), alpha_{ip}, written as alpha^k_{Jp} as in the rest of the proof
+  version: 5
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -47,6 +51,10 @@ lineage:
   motivated_by:
   - singularity.l-boundary-mode-locality
 extraction:
+  maintainer_pass_consistency:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5: A bare imaginary unit left in the proof of (M2), alpha_{ip}, written as alpha^k_{Jp} as in the rest of the proof; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
