@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - synthesis.wick-rotated-boost-selects-observer-tube-point@2
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@3
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@4
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
   - synthesis.de-sitter-static-boost-frozen-point@6
   - synthesis.imported-gtg-dictionary@2
@@ -71,7 +71,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review: synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale repinned 2 -> 3 after reviewing its A3 correction (the signs in clause (ii): store-sign scalar curvature, the restricted action and the Euler-Lagrange equation Box phi = (2/3) Lambda phi^3; clauses (i), (iii) and (iv) unchanged); the use here holds as cited. Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+    note: 'Pin review: synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale repinned 2 -> 3 after reviewing its A3 correction (the signs in clause (ii): store-sign scalar curvature, the restricted action and the Euler-Lagrange equation Box phi = (2/3) Lambda phi^3; clauses (i), (iii) and (iv) unchanged); the use here holds as cited. Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited. Pin review (second round): synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale repinned 3 -> 4 after reviewing its restatement (formal (iii) restated (the null vector of the (t + x1)^2 counter-model is e0 - e1)); clauses (i), (ii) and (iv), cited here, are unchanged, and the use here holds as cited.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'

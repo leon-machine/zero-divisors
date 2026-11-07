@@ -33,10 +33,10 @@ derivations:
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - interior.scale-tractor-leaves-cone@8
   - interior.imported-tractor-connection@3
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - odd-extensions.transport-constrains-frozen-point-only-through@3
   - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@3
   proof: proof-main.tex
@@ -56,6 +56,10 @@ lineage:
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
   - pred.dark-energy-w-minus-one
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited. Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -12,7 +12,6 @@ functions:
     clauses: ["det(pi^1 pt^1T + pi^2 pt^2T) = <pi^1 pi^2><pt^1 pt^2>"]
     omits: "mass beginning at two as a statement about the fork's spectrum, and the Standard-Model gauge algebra, are not computed; only the polynomial identity and the vanishing of the one-spinor determinant"
 untouched_premises:
-  synthesis.common-ceiling-coupling-premise: "cited for its scope (the reversal orbit only) in the fork's share-one condition; nothing to compute"
   standard-model.four-dimensions-forces-converse: "the gauge algebra on the fork is cited, not computed (the docstring says no premise() call for it)"
 judge:
   by: coverage-judge-2026-10-23

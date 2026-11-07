@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
 kind: claim
-version: 3
+version: 4
 title: 'The MacDowell-Mansouri principle fixes the trace-free part'
 status: proved
 region: synthesis
@@ -33,6 +33,10 @@ credit:
   role: 'GTG review (referee F2): GA readings of the formal setup (Ricci, Schouten and Lorentz-block maps); pins'
   version: 3
   source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: 'formal setting restated at Leon''s second-round decisions: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, right on both branches'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -42,7 +46,7 @@ derivations:
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons@3
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@3
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@4
   - synthesis.einstein-condition-is-infinity-vacuum-incidence@4
   - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@4
   - synthesis.imported-gtg-dictionary@2
@@ -72,6 +76,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 3 -> 4. Leon''s second-round answer 1 (REPORT.md For Leon item 2, fix-F2.md): the formal setting drops "l^2 = 3/|Lambda|" and writes A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V (that is Omega(a) + hb^-1(a) ^ V/Q(V), so that D_aV = hb^-1(a) on both branches), the texts proposed in fix-F2.md; the proof''s one display of the Cartan connection follows (l no longer defined). Exact check (GA.py, Cl(2,4)): with Q(V) = -3/Lambda, the translational part of A(a) acting on V, (-(Lambda/3) u ^ V) x V, equals u for u = e0, e1 and e2 - (5/3) e3 at Lambda = 3, -3, 3/4 and -12 (V = e_-, e_+, 2 e_-, e_+/2), and so does (u ^ V/Q(V)) x V; the old -u ^ V/l^2 with l^2 = 3/|Lambda| gives -u at Lambda = -3 and -12. Clauses (i) to (iv) are unaffected (the Lorentz block is quadratic in 1/l^2); no check encodes l. Pin review (second round): synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale repinned 3 -> 4 after reviewing its restatement (formal (iii) restated (the null vector of the (t + x1)^2 counter-model is e0 - e1)); clauses (i), (ii) and (iv), cited here, are unchanged, and the use here holds as cited.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -115,7 +123,7 @@ extraction:
 ---
 
 ## formal
-Units $c = 1$, signature $(1,3)$ (store), the store's curvature sign (the components $R_{abcd}$ are minus those of the round-sphere-positive Riemann tensor, so that de Sitter space has $\Ric = \Lambda g$ and $F_{abcd} = 0$), read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); the Ricci map $\Ric(b) = \partial_{a}\cdot\mathcal{R}(a\wedge b)$ and scalar $\mathcal{R} = \partial_{a}\cdot\Ric(a)$, the Einstein map $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, the Schouten map $\Sch(a) = \tfrac12(\Ric(a) - \tfrac{\mathcal{R}}{6}a)$ and $J = \partial_{a}\cdot\Sch(a)$ (Fact \claimref{synthesis.imported-gtg-dictionary}; in components $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$). Let $\Lambda \neq 0$, $\ell^{2} = 3/|\Lambda|$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \hb^{-1}(a)\wedge V/\ell^{2}$ (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is the operator $F(B) = \mathcal{R}(B) - \tfrac{\Lambda}{3}B$ on bivectors (in components $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$), as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
+Units $c = 1$, signature $(1,3)$ (store), the store's curvature sign (the components $R_{abcd}$ are minus those of the round-sphere-positive Riemann tensor, so that de Sitter space has $\Ric = \Lambda g$ and $F_{abcd} = 0$), read from the field strength of a gravitational field $(\hb, \Omega)$ on flat spacetime with derived metric $g$ (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}); the Ricci map $\Ric(b) = \partial_{a}\cdot\mathcal{R}(a\wedge b)$ and scalar $\mathcal{R} = \partial_{a}\cdot\Ric(a)$, the Einstein map $\mathcal{G}(a) = \Ric(a) - \tfrac12 a\,\mathcal{R}$, the Schouten map $\Sch(a) = \tfrac12(\Ric(a) - \tfrac{\mathcal{R}}{6}a)$ and $J = \partial_{a}\cdot\Sch(a)$ (Fact \claimref{synthesis.imported-gtg-dictionary}; in components $\Ric_{bd} = g^{ac}R_{abcd}$, $\mathcal{R} = g^{bd}\Ric_{bd}$, $\Sch = \tfrac12(\Ric - \tfrac{\mathcal{R}}{6}g)$, $J = g^{ab}\Sch_{ab}$). Let $\Lambda \neq 0$, and let $S_{\mathrm{MM}}$ be the series' MacDowell-Mansouri functional of the de Sitter (anti-de Sitter) connection $A(a) = \Omega(a) - \tfrac{\Lambda}{3}\,\hb^{-1}(a)\wedge V$ (that is $\Omega(a) + \hb^{-1}(a)\wedge V/Q(V)$, so that $D_{a}V = \hb^{-1}(a)$ on both branches) (Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}), in the frozen-point presentation $S \sim Q(I)^{-1}\int\epsilon(I, V, F, F)$ of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(iii), whose field space is the whole pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ and $Q(V) = -3/\Lambda$ fixed. Its Lorentz block is the operator $F(B) = \mathcal{R}(B) - \tfrac{\Lambda}{3}B$ on bivectors (in components $F_{abcd} = R_{abcd} - \tfrac{\Lambda}{3}(g_{ac}g_{bd} - g_{ad}g_{bc})$), as in Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}. At a point, with an orthonormal frame $e_{a}$ of $g$, reciprocal frame $e^{a}$, pseudoscalar $I = e_{0}e_{1}e_{2}e_{3}$, $\epsilon_{abcd}$ defined by $e_{a}\wedge e_{b}\wedge e_{c}\wedge e_{d} = \epsilon_{abcd}\,I$ and $F^{cd} = \tfrac12 F^{cd}{}_{ef}\,e^{e}\wedge e^{f}$:
 \begin{enumerate}
 \item[(i)] \emph{(The frame equation; proved.)} The variation of $S_{\mathrm{MM}}$ with respect to the frame $\hb^{-1}$ is the trivector-valued linear function $E(a) = 2\big(\mathcal{G}(a) + \Lambda a\big)I$. In components (a labelled reading), the three-form of the Fact's second Euler-Lagrange equation is
 \[

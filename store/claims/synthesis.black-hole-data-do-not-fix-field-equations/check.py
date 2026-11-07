@@ -277,3 +277,42 @@ def check_gtg_black_hole_data():
             ok = ok and -2 * wald == -8 * RN_Q2 / r0 ** 4                   # entropy shift / (pi beta A)
     GA.check("GTG: Schwarzschild and RN curvature, Kretschmann, and the Wald contraction along -<B sigma> sigma", ok)
     assert ok
+
+
+# ---------------------------------------------------------------------------
+# The formal's GA forms against its component readings (Leon's answers, second round, item 7): on static gauge
+# fields f dt^2 - dr^2/f - r^2 dOmega^2 (physical frame along the static coordinates, sqrt f rational) the
+# frame components gamma^a . calR(gamma_b) of the store-sign Ricci map are the mixed components R^a_b of the
+# Christoffel computation in signature (-,+,+,+) with the Ricci tensor positive on spheres (all sixteen), the
+# scalar d_a . calR(a) is R, d_a . calR(calR(a)) is R_ab R^ab, d_a . calR(P_sigma(a)) is R^t_t + R^r_r, and
+# 2 <calR(a ^ b) calR(d_b ^ d_a)> is R_abcd R^abcd.
+# ---------------------------------------------------------------------------
+READ_CASES = [(F(2), F(1, 2), F(0), F(1)), (F(3), F(1, 3), F(1, 5), F(1, 2)), (F(5, 2), F(3, 5), F(0), F(0))]
+READ_ANGLE = (F(3, 5), F(4, 5))
+
+
+def check_gtg_formal_readings_of_the_ricci_components():
+    premise("synthesis.imported-gtg-dictionary")
+    ok = True
+    n = 0
+    for r0, w, lam, Q in READ_CASES:
+        M = gtg.mass_for_root(r0, w, lam, Q)
+        fld = gtg.static_field(r0, READ_ANGLE[0], READ_ANGLE[1], gtg.f_static(M, lam, Q))
+        ok = ok and fld.torsion_free()
+        Rc = fld.curvature()
+        g = metric(M, Q * Q, lam)
+        Riem, Ric, ginv = curvature(g)
+        mixed = [[(smul(ginv[a], Ric[(a, b)])[0]).eval(r0) for b in range(4)] for a in range(4)]
+        ga = [[gtg.vdot(gtg.er(a), gtg.ricci(Rc, gtg.e(b))) for b in range(4)] for a in range(4)]
+        ok = ok and ga == mixed
+        ok = ok and gtg.ricci_scalar(Rc) == sum(mixed[a][a] for a in range(4))
+        ric2 = sum(gtg.vdot(gtg.er(a), gtg.ricci(Rc, gtg.ricci(Rc, gtg.e(a)))) for a in range(4))
+        ok = ok and ric2 == sum(mixed[a][b] * mixed[b][a] for a in range(4) for b in range(4)) == gtg.ricci_sq(Rc)
+        ok = ok and sum(ga[a][a] for a in range(2)) == mixed[0][0] + mixed[1][1]
+        ok = ok and gtg.kretschmann(Rc) == kretschmann(Riem, g, ginv)[0].eval(r0)
+        if Q:
+            ok = ok and mixed[0][0] == mixed[1][1] == -Q * Q / r0 ** 4 + lam
+        n += 1
+    ok = ok and n == len(READ_CASES)
+    GA.check("GTG: gamma^a . calR(gamma_b) = R^a_b ((-,+,+,+), positive on spheres); scalar, Ric^2, radial trace, Kretschmann", ok)
+    assert ok

@@ -38,7 +38,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - rule2.rule-2-kaluza-klein-algebra@7
   - synthesis.imported-five-dimensional-chern-simons-gravity@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
@@ -63,7 +63,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites the frame equation vanishing on Einstein fields, so the use holds as cited.'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites the frame equation vanishing on Einstein fields, so the use holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

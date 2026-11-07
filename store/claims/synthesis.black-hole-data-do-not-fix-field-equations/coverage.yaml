@@ -7,6 +7,12 @@ functions:
     kind: sampled
     clauses: [(i), (ii), (iv)]
     omits: 'Gauge-field computation at five Schwarzschild points (two masses) and two Reissner-Nordstrom points (M = 3/2, Q^2 = 5/4): curvature operator, vacuum, Kretschmann, radial eigenvalue, horizon rate; the Wald direction -<B sigma> sigma read through C11 as Riem^o = -eps_uv eps_wz on all frame quadruples (constant 1); the Wald contraction as a derivative along -<B sigma> sigma for R, R^2 and Ric^2 only (quadratic Lagrangians, where the symmetric difference is the exact derivative). Not tested: the vacuum field equations of every L_f and the fourth-order claim of (iii).'
+  check_gtg_formal_readings_of_the_ricci_components:
+    kind: sampled
+    clauses:
+    - 'formal conventions: gamma^a . calR(gamma_b) = R^a_b in signature (-,+,+,+) with the Ricci tensor positive on spheres, and d_a . calR(a) = R'
+    - '(i) 2 <calR(a ^ b) calR(d_b ^ d_a)> = R_abcd R^abcd; (iii) d_a . calR(calR(a)) = R_ab R^ab; (iv) d_a . calR(P_sigma(a)) = R^t_t + R^r_r and the RN radial value -Q^2/r^4'
+    omits: 'three static fields (Reissner-Nordstrom, Reissner-Nordstrom-de Sitter, Schwarzschild) at one radius each, all sixteen mixed components against the Christoffel computation; the general identification is the dictionary''s C11 with the C7 signature change, argued in the proof'
 judge:
   by: fix-round-2026-10-23
   date: '2026-10-23'

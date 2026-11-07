@@ -1,4 +1,9 @@
 functions:
+  check_gtg_affine_velocity_is_the_christoffel_reading:
+    kind: sampled
+    clauses:
+    - '(ii) D_{x''} hb^{-1}(x'') = 0 for the ingoing velocity (r affine) is the reading Gamma^r_rr = 0 in the chart (v, r): D_{X_a} hb^{-1}(X_b) = Gamma^c_ab hb^{-1}(X_c) for all four radial pairs'
+    omits: 'six Painleve-Gullstrand points of two masses; the general identity is the dictionary''s covariant-derivative entry'
   check_regular_reparametrisation_keeps_the_ground_state_singularity:
     kind: sampled
     clauses:

@@ -1,7 +1,7 @@
 ---
 id: singularity.stretched-singularity-count
 kind: claim
-version: 7
+version: 8
 title: The stretched singularity, and the count
 status: proved
 region: singularity
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T05, deposited version
+- name: Claude Opus 5.5
+  role: 'notation: d Omega written as the explicit area element'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 derivations:
 - name: main
@@ -46,6 +50,10 @@ locators:
   label: prop:count
   line: 2165
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R03 C): the proof wrote the slice''s volume element with d Omega for the unit-sphere area element beside the gravitational field (hb, Omega); it is now sin theta dt d theta d varphi (theta, varphi unused otherwise in the entity). No content change.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

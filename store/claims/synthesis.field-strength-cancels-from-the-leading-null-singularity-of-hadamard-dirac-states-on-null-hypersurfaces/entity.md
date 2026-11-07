@@ -1,7 +1,7 @@
 ---
 id: synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
 kind: claim
-version: 5
+version: 6
 title: 'Field strength cancels from the leading null singularity of Hadamard kernels'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for
   version: 5
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: 'notation: the smooth kernels of (iii) and (iv) renamed S and S_omega'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -70,6 +74,10 @@ lineage:
   - synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian
   - synthesis.c-loc-local-horizon-premise
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R02 item 10): R was the spinor transport rotor of (ii) (U = Delta^{1/2} R, R = 1 in the parallel frame) and also the smooth kernel of (iii) and the remainder kernel R_omega of (iv) and (b). The rotor keeps R (the GA rotor letter); the smooth kernel is now S and the remainder S_omega, in formal and proof. S was unused in the entity''s mathematics. No content change.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -173,8 +181,8 @@ The tidal function (its trace, the Ricci term, and its trace-free Weyl part), th
 W_{0}(u, u')\,\delta^{2}(y - y')\,\Lambda,\qquad W_{0}(u, u') = \frac{I_{4}}{2\pi}(u - u' + I_{4}0)^{-1},
 \]
 the flat field's null vacuum (that theorem's (ii) at $m_{0} = 0$), with no correction from the field strength, the expansion, the shear or the mass. It comes only from the projected Dirac operator, $\Lambda\,p\,e_{0}\Lambda = (p\cdot k)\Lambda$, acting along $k$, where $R = 1$ in the parallel frame and the canonical factor $(a(u)a(u'))^{1/2}$ times $\Delta^{1/2}/\sqrt{\det M}$ is $1$ by (i). The same derivative and the transverse part of the projected Dirac operator also give log-order terms, $-\pi\theta(u)(\log\epsilon + \log(-I_{4}s))\delta^{2}(y - y')$ and connection and first-order transport terms; the projected transverse connection carries the expansion only ($\Lambda f^{a}\Omega(f_{a})e_{0}\Lambda = \theta\Lambda$ when $\Omega(f_{a})\cdot k = B(f_{a})$; exact), and none of these terms has a derivative along $k$. That no other term contributes at the order of $(u - u' + I_{4}0)^{-1}\delta^{2}$, and that the $\log\epsilon$ terms cancel, is part of the argued bound of (iv).
-\item[(iii)] \emph{(State independence; proved, given the imported Facts and the characteristic-data embedding of the generator field, cited from memory.)} For two gauge-invariant quasi-free Hadamard states the restricted kernels differ, in each $K$-component with compactly supported transverse profiles, by a smooth function of $(u, u')$, and $\lambda R(u_{0} + \lambda x, u_{0} + \lambda x') \to 0$ at rate $\lambda$ for every smooth $R$. So whether the generator scaling limit of the restriction at a point of $\mathcal{H}$ is the null vacuum, and whether the restriction satisfies the generator microlocal condition of Theorem \claimref{synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state}(i), is the same for every such state: a property of $(\hb, \Omega)$ and $\mathcal{H}$.
-\item[(iv)] \emph{(What it leaves of (HS)(b).)} Write the restricted kernel as $W_{0}\otimes\id_{K} + R_{\omega}$. By (iii), at a point $x_{0} = X(u_{0}, y_{0})$ of $\mathcal{H}$, clause (b) of Premise \claimref{synthesis.hadamard-scaling-limit-premise} holds for every gauge-invariant quasi-free Hadamard state of the Dirac field if and only if, for one of them, $\lambda R_{\omega}(u_{0} + \lambda x, u_{0} + \lambda x') \to 0$ in each $K$-component with compactly supported transverse profiles (proved). By (ii), $R_{\omega}$ has no coincident-label term of the order of the null singularity with a field-strength coefficient; it collects the higher orders of $\sigma$ and $U$ in the label difference, the spinor transport off the generator, the log-order terms of (ii), $V\log\sigma$, the mass term and the smooth part. That these give generator kernels of scaling degree below one, uniformly in the transverse profiles, with the $\log\epsilon$ terms cancelling, is argued and not proved here: it is the one ingredient (HS)(b) still needs. (Here (HS)(b) is the clause (b) of version 2 of the premise; the premise has since been restated as this bound, posed on the restricted parametrix. Its bulk clause (a) is Theorem \claimref{synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field}.)
+\item[(iii)] \emph{(State independence; proved, given the imported Facts and the characteristic-data embedding of the generator field, cited from memory.)} For two gauge-invariant quasi-free Hadamard states the restricted kernels differ, in each $K$-component with compactly supported transverse profiles, by a smooth function of $(u, u')$, and $\lambda S(u_{0} + \lambda x, u_{0} + \lambda x') \to 0$ at rate $\lambda$ for every smooth $S$. So whether the generator scaling limit of the restriction at a point of $\mathcal{H}$ is the null vacuum, and whether the restriction satisfies the generator microlocal condition of Theorem \claimref{synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state}(i), is the same for every such state: a property of $(\hb, \Omega)$ and $\mathcal{H}$.
+\item[(iv)] \emph{(What it leaves of (HS)(b).)} Write the restricted kernel as $W_{0}\otimes\id_{K} + S_{\omega}$. By (iii), at a point $x_{0} = X(u_{0}, y_{0})$ of $\mathcal{H}$, clause (b) of Premise \claimref{synthesis.hadamard-scaling-limit-premise} holds for every gauge-invariant quasi-free Hadamard state of the Dirac field if and only if, for one of them, $\lambda S_{\omega}(u_{0} + \lambda x, u_{0} + \lambda x') \to 0$ in each $K$-component with compactly supported transverse profiles (proved). By (ii), $S_{\omega}$ has no coincident-label term of the order of the null singularity with a field-strength coefficient; it collects the higher orders of $\sigma$ and $U$ in the label difference, the spinor transport off the generator, the log-order terms of (ii), $V\log\sigma$, the mass term and the smooth part. That these give generator kernels of scaling degree below one, uniformly in the transverse profiles, with the $\log\epsilon$ terms cancelling, is argued and not proved here: it is the one ingredient (HS)(b) still needs. (Here (HS)(b) is the clause (b) of version 2 of the premise; the premise has since been restated as this bound, posed on the restricted parametrix. Its bulk clause (a) is Theorem \claimref{synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field}.)
 \end{enumerate}
 Nothing in (i) to (iii) uses vanishing expansion or shear at $x_{0}$: the conclusions are the same for every geodesic null hypersurface through $x_{0}$ tangent to a given null plane, so the choice of local Rindler horizon does not matter. The computation uses a rotation gauge in which the frame parallel along a generator is the constant background frame ($\Omega(k) = 0$ along it); this is compatible with the gauge $\hb(x_{0}) = 1$, $\Omega(x_{0}) = 0$ of (HS) at $x_{0}$ when $B(x_{0}) = 0$, and the results are gauge-covariant in any case. Clause (b) scales the generator parameter at fixed transverse profiles, so it tests every generator of the cut $u = u_{0}$ in the profiles' support, not $x_{0}$ alone; it needs the Hadamard property near that cut, which the states of (HS), Hadamard on $U$, have.
 

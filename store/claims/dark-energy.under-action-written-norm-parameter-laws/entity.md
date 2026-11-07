@@ -25,7 +25,7 @@ derivations:
   uses:
   - dark-energy.four-alternatives-are-exhaustive-three-are@2
   - dark-energy.frozen-point-makes-stelle-west-vector@6
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   - standard-model.trichotomy-what-kind-number@11
   proof: proof-main.tex
@@ -46,6 +46,10 @@ locators:
   label: prop:parameter
   line: 1033
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

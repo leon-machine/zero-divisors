@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.r-loc-independent-sets-matter-coupling@5
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
@@ -56,7 +56,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited.'
+    note: 'Pin review: synthesis.imported-gtg-dictionary repinned 1 -> 2 after reviewing its correction of the component reading in clause (iv) to R(g_mu ^ g_nu) = -R(e_mu ^ e_nu), agreeing with the store''s sign R(B) = -R(hb(B)) the clause already stated, with GA wording in (ii) and (iv); the translation rules are unchanged; the use here holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
   open_problem: op.derive-loc-and-r-loc
   note: >-
     Reads the two independence results of the thermal route against the gravitational action now in

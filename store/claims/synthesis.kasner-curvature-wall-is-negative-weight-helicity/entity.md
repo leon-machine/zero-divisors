@@ -35,7 +35,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.nondiagonal-kasner-residue-weighted-shear@4
+  - synthesis.nondiagonal-kasner-residue-weighted-shear@5
   - synthesis.bkl-bounces-no-framewise-invariant@2
   - synthesis.unit-boost-residue-needs-nonpositive-exponent@4
   - synthesis.imported-gtg-dictionary@2
@@ -68,7 +68,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.nondiagonal-kasner-residue-weighted-shear 3 -> 4 has a byte-identical formal (N); synthesis.unit-boost-residue-needs-nonpositive-exponent 3 -> 4 writes its Kasner ansatz as the synchronous gauge field (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): this proof cites (ii) for the rotation-gauge field as the Levi-Civita connection and reads Ricci components through C11/G2, which the change does not touch, so the use holds; all three repinned.'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): synthesis.nondiagonal-kasner-residue-weighted-shear 3 -> 4 has a byte-identical formal (N); synthesis.unit-boost-residue-needs-nonpositive-exponent 3 -> 4 writes its Kasner ansatz as the synchronous gauge field (N); synthesis.imported-gtg-dictionary 1 -> 2 restates the frame-plane reading of clause (iv) (R): this proof cites (ii) for the rotation-gauge field as the Levi-Civita connection and reads Ricci components through C11/G2, which the change does not touch, so the use holds; all three repinned. Pin review (second round): synthesis.nondiagonal-kasner-residue-weighted-shear repinned 4 -> 5 after reviewing its restatement (formal (i) restated (the e^0-leg of the rotation block with its definite sign)); clauses (ii) and (iv) and the Gauss identity of its proof, cited here, are unchanged, and the use here holds as cited.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

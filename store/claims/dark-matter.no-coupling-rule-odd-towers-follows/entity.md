@@ -1,7 +1,7 @@
 ---
 id: dark-matter.no-coupling-rule-odd-towers-follows
 kind: claim
-version: 5
+version: 6
 title: Three obstructions to a coupling rule for the odd towers
 status: proved
 region: dark-matter
@@ -25,6 +25,10 @@ credit:
   role: 'maintainer pass, restatement of the formal as its three established facts, the reading moved to a remark, at Leon''s decisions'
   version: 5
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'assumes edge to the common-ceiling-coupling premise dropped at Leon''s second-round decisions (scope kept as a text mention)'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 derivations:
 - name: main
@@ -33,7 +37,6 @@ derivations:
   - dark-matter.residue-soldered-invariant-not-algebraic-one@4
   assumes:
   - dark-matter.p2-indifference@2
-  - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -48,6 +51,10 @@ locators:
   label: prop:norule
   line: 1517
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Leon''s second-round answer 2: the assumes edge to synthesis.common-ceiling-coupling-premise@1 is dropped, since (c) cites the premise only for its scope (it equates the ceiling coupling along the reversal orbit and does not reach the odd towers) and no step rests on it; the formal, technical, lay and one-liner keep that scope as a text mention, which is part of what (c) states, not a condition. The P2 edge stays. Coverage''s untouched_premises entry for the premise removed. holds_given still lists the premise, reached through dark-matter.mirror-tower-copy-one@9 (used for (c)), which assumes it; only the direct edge goes.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

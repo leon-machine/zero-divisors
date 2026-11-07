@@ -29,7 +29,7 @@ derivations:
   - one-relation.imported-indifference-instrument@4
   - one-relation.measure-indifference-borns-rule-located@3
   - standard-model.trichotomy-what-kind-number@11
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@6
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - standard-model.hyp-s-slot-statistics@9
   assumes:
@@ -47,6 +47,10 @@ locators:
   label: prop:vote
   line: 833
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-matter.asymmetry-arrow-counted-fifteenth-refutation repinned 6 -> 7 (an extraction note only (Leon confirmed the theta-angle reading); N).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

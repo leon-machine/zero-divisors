@@ -1,7 +1,7 @@
 ---
 id: dark-matter.which-towers-can-carry-arrow
 kind: claim
-version: 5
+version: 6
 title: Which towers can carry the arrow
 status: proved
 region: dark-matter
@@ -21,6 +21,10 @@ credit:
   role: 'maintainer pass, common-ceiling-coupling premise named in the fork''s share-one condition at Leon''s decisions'
   version: 5
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'assumes edge to the common-ceiling-coupling premise dropped at Leon''s second-round decisions (scope kept as a text mention); one-liner restored'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 derivations:
 - name: main
@@ -28,8 +32,6 @@ derivations:
   - dark-matter.flag-bit-exists-exactly-tower-dimension@3
   - dark-matter.towers-are-residues-single-clock-filter@5
   - standard-model.four-dimensions-forces-converse@4
-  assumes:
-  - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -48,6 +50,10 @@ locators:
   label: cor:whocarries
   line: 281
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 5 -> 6. Leon''s second-round answer 2: the assumes edge to synthesis.common-ceiling-coupling-premise@1 is dropped, since the corollary cites the premise only for its scope (the reversal orbit) in the fork''s share-one condition and its sort of the towers does not rest on it; the formal and technical keep the scope as a text mention (the premise equates the ceiling coupling for the mirror alone). The one-liner''s parenthesis naming the premise, added at close-out to satisfy W503, is reverted to the version-4 wording, so no plain level states a condition the result does not rest on; the lay never named it. Coverage''s untouched_premises entry for the premise removed. holds_given loses the premise (computed by the build).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -111,4 +117,4 @@ so with the dimension-four gauge-algebra result, and carrying its two conditiona
 The excess of matter over antimatter needs an orientation, a choice the theory says can only be made in the towers with even labels. Among those, taken at the dimension nearest four (premise P3), only our world and the mirror tower have a single direction of time, so only they can carry the excess. A tower with two time directions could in principle host a copy of the Standard Model, carrying the same two conditions as the Standard-Model derivation, but the paper keeps it closed by importing the standard result that physics with two times is unstable.
 
 ## one-liner
-Only the even-residue towers can be oriented, and of them, at their nearest-dimension representatives, only this one and the mirror are also causal, so they alone can carry the matter asymmetry (the mirror's shared ceiling coupling assumed through the common ceiling-coupling premise); the oriented two-time fork would be a Kleinian copy of the Standard Model, kept closed by the imported two-time instability.
+Only the even-residue towers can be oriented, and of them, at their nearest-dimension representatives, only this one and the mirror are also causal, so they alone can carry the matter asymmetry; the oriented two-time fork would be a Kleinian copy of the Standard Model, kept closed by the imported two-time instability.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.nondiagonal-kasner-residue-weighted-shear
 kind: claim
-version: 4
+version: 5
 title: The residue in the non-diagonal Kasner class and the weighted shear criterion
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: 'GTG review (referee F1): torsion-equation citation corrected'
   version: 4
   source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'formal (i) restated at Leon''s second-round decisions: the e^0-leg of the rotation block with its definite sign'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -57,6 +61,10 @@ lineage:
   motivated_by:
   - dark-energy.forcing-half-schwarzschild-wall-residue-sense
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Leon''s second-round answer 1 (REPORT.md For Leon item 5, fix-F1.md): formal (i) replaces "the e^0-leg of the rotation block is tau^-1 times the antisymmetric part of B (up to the sign convention)" with "the e^0-leg of the rotation block is omega(gamma_0) = tau^-1 sum_{l<m} antisym(B)_lm gamma_l ^ gamma_m in the sign of the Definition, D_a = a . nabla + Omega(a) x", the text proposed in fix-F1.md. Exact check, by a route independent of the engines torsion solver: the Levi-Civita derivative nabla_{E_0} E_m of the orthonormal frame from the Christoffel symbols of g (first derivatives exact, then Fractions at tau = 32 and 1, p = (-1/5, 2/5, 4/5), theta0 = [[1, 0, x2/3], [x3/4, 1, 0], [0, x1/2, 1]] at x = (1/2, 1/3, 1/5), three G with entries above and below the diagonal) equals W x gamma_m for all m with W = tau^-1 sum_{l<m} antisym(B)_lm gamma_l ^ gamma_m, and fails for -W: the sign is the Definitions, D_a = a . nabla + Omega(a) x. check_gtg_torsion_equation_gives_the_boost_block already asserts this value, so no check changes.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -84,7 +92,7 @@ B \;=\; P + \Delta\,\Omega\,\Delta^{-1}, \qquad B_{lm} \;=\; p_{l}\,\delta_{lm} 
 \]
 and use the orthonormal coframe $e^{0} = d\tau$, $e^{l} = \tau^{p_{l}}\theta^{l}$ (here the matrix $\Omega$ is the coframe's logarithmic rate of change, not the rotation-gauge field, which below is written as connection one-forms $\omega$ in this coframe).
 \begin{enumerate}
-\item[(i)] \emph{(Exact.)} The boost block of the rotation-gauge field (the Levi-Civita connection of $g$) is $\omega^{l0} = \tau^{-1}\,\mathrm{sym}(B)_{lm}\,e^{m}$, the $e^{0}$-leg of the rotation block is $\tau^{-1}$ times the antisymmetric part of $B$ (up to the sign convention), and $\tau K$, with $K$ the mixed second fundamental form of the slices, is similar to $\mathrm{sym}(B)$. For $G = 1$ this is the boost block of Lemma \claimref{dark-energy.variable-exponents-residue-pointwise-corrections-are}.
+\item[(i)] \emph{(Exact.)} The boost block of the rotation-gauge field (the Levi-Civita connection of $g$) is $\omega^{l0} = \tau^{-1}\,\mathrm{sym}(B)_{lm}\,e^{m}$, the $e^{0}$-leg of the rotation block is $\omega(\gamma_{0}) = \tau^{-1}\sum_{l<m}\mathrm{antisym}(B)_{lm}\,\gamma_{l}\wedge\gamma_{m}$ in the sign of the Definition, $D_{a} = a\cdot\nabla + \Omega(a)\times$, and $\tau K$, with $K$ the mixed second fundamental form of the slices, is similar to $\mathrm{sym}(B)$. For $G = 1$ this is the boost block of Lemma \claimref{dark-energy.variable-exponents-residue-pointwise-corrections-are}.
 \item[(ii)] \emph{(Weighted criterion.)} The boost block and the $e^{0}$-leg of the rotation block have at most a simple pole at $\tau = 0$ if and only if $\Delta\Omega\Delta^{-1}$ is bounded, and its residue is the diagonal Kasner boost of the weights, $\omega^{l0} \sim (p_{l}/\tau)e^{l}$, with no rotation residue, if and only if $\Delta\Omega\Delta^{-1} \to 0$, that is $\Omega_{ll} \to 0$ and $\Omega_{lm}\tau^{p_{l} - p_{m}} \to 0$ for $l \neq m$. For distinct weights, a shear at rate up to $1/\tau$ ($\Omega$ bounded) leaves the residue unchanged when it is strictly triangular in the order of the weights ($\Omega_{lm} \neq 0$ only where $p_{l} > p_{m}$). For $G = \exp(c\log\tau\,N)$ with $N$ strictly triangular in some order of the indices, $\Omega = cN$ and $\mathrm{tr}((\tau K)^{2}) = \sum_{l}p_{l}^{2} + \tfrac{c^{2}}{2}\sum_{l \neq m}N_{lm}^{2}\tau^{2(p_{l} - p_{m})}$, which tends to $\sum_{l}p_{l}^{2}$ when $N$ is triangular in the order of the weights and is unbounded when $N$ has an entry against it.
 \item[(iii)] \emph{(Rate alone does not decide.)} A coframe that converges, rotating at rate $o(1/\tau)$, can destroy the simple pole: at the Kasner point $(-\tfrac27, \tfrac37, \tfrac67)$, $G = 1 + \tau^{3/7}E_{12}$ tends to the identity, and $\mathrm{tr}((\tau K)^{2}) = 1 + \tfrac{9}{98}\tau^{-4/7}$.
 \item[(iv)] \emph{(Forcing, conditionally.)} Suppose the residue $R = \lim_{\tau\to 0}\tau K$ exists with $\tau\partial_{\tau}(\tau K) \to 0$, and assume $\tau^{2}R^{(3)} \to 0$, with $R^{(3)}$ the scalar curvature of the slices. Then the $00$ component of the Einstein condition $\mathcal{R}(a) = \Lambda a$ (for the derived metric $\mathrm{Ric} = \Lambda g$) and the Hamiltonian constraint, at order $\tau^{-2}$, give $\mathrm{tr}\,R = \mathrm{tr}\,R^{2} = (\mathrm{tr}\,R)^{2}$, so for $\mathrm{tr}\,R > 0$ the eigenvalues of $R$ lie on the Kasner circle, for every $\Lambda$; when the shear satisfies the criterion of (ii) they are the weights $p_{l}$.

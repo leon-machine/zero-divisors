@@ -1,7 +1,7 @@
 ---
 id: dark-matter.asymmetry-arrow-counted-fifteenth-refutation
 kind: claim
-version: 6
+version: 7
 title: 'The asymmetry: the arrow counted, and the fifteenth refutation'
 status: proved
 region: dark-matter
@@ -21,6 +21,10 @@ credit:
   role: 'pin review, the remark on the mirror''s angle in (ii) now names the common ceiling coupling of the copy theorem''s (iv), where it quoted P2'
   version: 6
   source: maintainer pass 2026-11-07 (pin review)
+- name: Claude Opus 5.5
+  role: 'extraction note recording Leon''s confirmation of the theta-angle reading (second-round decisions)'
+  version: 7
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 derivations:
 - name: main
@@ -49,6 +53,10 @@ locators:
   label: prop:arrow
   line: 504
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 6 -> 7, record only. Leon''s second-round answer 3 confirms the reading the pin review made: the common ceiling-coupling premise covers the mirror''s theta angle ("every other coupling"), so the remark in (ii) that the mirror''s angle equals ours only by the common ceiling coupling stands as it reads. No level, edge or check changed.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

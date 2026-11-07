@@ -1,4 +1,10 @@
 functions:
+  check_gtg_four_form_density_of_bivector_maps:
+    kind: exact
+    clauses:
+    - 'formal setting: the four-form beta(F ^ G) = (1/2) beta(F(c ^ d), G(I4 (d_d ^ d_c))) vol of two linear maps of physical bivectors equals the component reading (the sum over ordered pairs of complementary coordinate planes), for eps(a, b, ., .) and K'
+    - '(iv) the frame-leg two-form a ^ b -> 2 ((a . D) X) ^ ((b . D) X) is the component two-form 2 e_e ^ e_f'
+    omits: 'two generic rational maps and five pairings in the orthonormal frame, two pairings in one general frame (det H = -50); the general identity is the complement relation (e_c ^ e_d) ^ I4 (e^d ^ e^c) = I4 argued in the proof'
   check_gtg_frame_legs_and_weyl_space:
     kind: exact
     clauses:

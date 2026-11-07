@@ -730,3 +730,128 @@ def check_gtg_frame_legs_and_weyl_space():
     for W in _weyl_map_basis():
         ok = ok and _bianchi_free(W) and legs(W) == (Fr(0), Fr(0))
     _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_frame_legs_and_weyl_space"; return _tp_rv
+
+
+# ---- the statement's two-forms and four-forms in GA (second round of Leon's answers, item 7) ----
+# Two generic bivector-valued two-forms (linear maps of physical bivectors to bivectors of Cl(2,4)), given by
+# a fixed rational table of coefficients on the fifteen bivector blades of Cl(2,4), and a general frame
+# f_a = H(e_a) with det H != 1. Data live outside the function, so the mutation test perturbs the identity.
+_BLADES6 = [(i, j) for i in range(6) for j in range(i + 1, 6)]
+_TF = [[(3 * p + 5 * q + 7 * k) % 11 - 5 for k in range(15)] for p in range(4) for q in range(4)]
+_TG = [[(2 * p + 7 * q + 3 * k + 1) % 13 - 6 for k in range(15)] for p in range(4) for q in range(4)]
+_HF = [[2, 1, 0, -1], [0, 3, 1, 0], [1, 0, -2, 1], [0, 1, 1, 4]]
+_YG = GA.add(GA.scal(Fr(5, 2), NI), GA.scal(Fr(-4), N0), E[1], GA.scal(Fr(2, 3), E[3]))
+
+
+def _two_form(T):
+    """B -> F(B) on physical bivectors, from the frame components F(e_p ^ e_q) (p < q) in the table."""
+    def Fc(p, q):
+        if p == q:
+            return {}
+        if p > q:
+            return GA.neg(Fc(q, p))
+        out = {}
+        for k, bl in enumerate(_BLADES6):
+            c = T[4 * p + q][k]
+            if c:
+                out = GA.add(out, GA.scal(Fr(c), _wedge(E[bl[0]], E[bl[1]])))
+        return out
+    return Fc
+
+
+def _on(Fc, B):
+    """F(B) for a spacetime bivector B, by linearity on the frame planes."""
+    out = {}
+    for bl, c in B.items():
+        if len(bl) == 2 and c:
+            out = GA.add(out, GA.scal(c, Fc(bl[0], bl[1])))
+    return out
+
+
+def _in_frame(Fc, H):
+    """Components of the same map in the frame f_a = H(e_a): (a, b) -> F(f_a ^ f_b)."""
+    def Fh(a, b):
+        out = {}
+        for m in R4:
+            for n in R4:
+                c = H[a][m] * H[b][n]
+                if c and m != n:
+                    out = GA.add(out, GA.scal(Fr(c), Fc(m, n)))
+        return out
+    return Fh
+
+
+def _det4(M):
+    tot = Fr(0)
+    for p in permutations(range(4)):
+        t = Fr(_sign(p))
+        for i in R4:
+            t *= M[i][p[i]]
+        tot += t
+    return tot
+
+
+_LAM = Fr(9, 7)
+_IFR = GA.add(NI, GA.scal(_LAM / 6, N0))
+_VFR = GA.sub(X, GA.scal(3 / _LAM, _IFR))
+_PAIRS = [lambda A, B: _eps(NI, X, A, B), lambda A, B: _eps(_YG, X, A, B),
+          lambda A, B: _eps(E[2], X, A, B), lambda A, B: _eps(_IFR, _VFR, A, B),
+          lambda A, B: _m(A, B).get((), Fr(0))]
+_DENSITIES = [20, 20, 0, Fr(75, 2), Fr(75, 2), Fr(88, 3), Fr(81, 2), Fr(81, 2), 90, 20, 20, 0, 19, 19, -94]
+_DET_HF = -50
+_VOL = 24
+
+
+def _tractor_value(a):
+    """Omega_T(e_a) = Omega(e_a) - ninf ^ e_a + n0 ^ P(e_a) at hb = 1, with a generic rotation-gauge value and slot."""
+    Om = _wedge(E[(a + 1) % 4], E[(a + 2) % 4])
+    P = GA.add(GA.scal(Fr(a + 2), E[0]), GA.scal(Fr(-3), E[(a + 1) % 4]))
+    return GA.add(Om, GA.neg(_wedge(NI, E[a])), _wedge(N0, P))
+
+
+def check_gtg_four_form_density_of_bivector_maps():
+    """The formal's two-form and four-form definitions in GA equal the component ones exactly. For two generic
+    linear maps F, G of physical bivectors to bivectors of Cl(2,4) and the pairings eps(Y, X, ., .) (three Y),
+    eps(I, V, ., .) at the frozen point and K = <. .>_0: the component coefficient (1/4) sum_p sgn(p)
+    beta(F_{p0 p1}, G_{p2 p3}) (the sum over ordered pairs of complementary planes) equals the GA density
+    (1/2) beta(F(c ^ d), G(I4 (d_d ^ d_c))); in a general frame f_a = H(e_a) the component coefficient on
+    f^0 ^ ... ^ f^3 is det H times the same density (the four-form is density times vol). The frame legs: with a
+    generic slot and rotation-gauge value, (a . D) X = a for X = n0, so the two-form
+    a ^ b -> 2 (a . D X) ^ (b . D X) is the frame-leg two-form 2 e_e ^ e_f of the component check."""
+    _premises_locus()
+    premise("dark-energy.frozen-point-makes-stelle-west-vector")
+    I4 = _wedge(E[0], E[1], E[2], E[3])
+
+    def density(Fc, Gc, pair):
+        tot = Fr(0)
+        for c in R4:
+            for d in R4:
+                if c != d:
+                    rec = GA.scal(Fr(1, ETA[c] * ETA[d]), _wedge(E[d], E[c]))
+                    tot += pair(Fc(c, d), _on(Gc, _m(I4, rec)))
+        return tot / 2
+    Fa, Ga_ = _two_form(_TF), _two_form(_TG)
+    ok = True
+    vals = []
+    for pair in _PAIRS:
+        for P, Q in ((Fa, Ga_), (Ga_, Fa), (Fa, Fa)):
+            new = density(P, Q, pair)
+            ok = ok and _form(P, Q, pair) == new
+            vals.append(new)
+    ok = ok and vals == _DENSITIES
+    dH = _det4(_HF)
+    ok = ok and dH == _DET_HF
+    for pair in _PAIRS:
+        ok = ok and _form(_in_frame(Fa, _HF), _in_frame(Ga_, _HF), pair) == dH * density(Fa, Ga_, pair)
+    DX = [_cp(_tractor_value(a), X) for a in R4]
+    ok = ok and all(GA.eq(DX[a], E[a]) for a in R4)
+
+    def legs(e, f):
+        return {} if e == f else GA.scal(2, _wedge(DX[e], DX[f]))
+
+    def ee(e, f):
+        return {} if e == f else GA.scal(2, _wedge(E[e], E[f]))
+    ok = ok and all(GA.eq(legs(e, f), ee(e, f)) for e in R4 for f in R4)
+    vol = density(legs, legs, _PAIRS[0])
+    ok = ok and vol == _form(ee, ee, _PAIRS[0]) == _VOL
+    _tp_rv = (ok); assert _tp_rv is not False, "check_gtg_four_form_density_of_bivector_maps"; return _tp_rv

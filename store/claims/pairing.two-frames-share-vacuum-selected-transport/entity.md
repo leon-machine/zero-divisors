@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - pairing.pairing-functional-pair-creation-amplitude@6
-  - pairing.static-frame-only-expansion-survives@8
+  - pairing.static-frame-only-expansion-survives@9
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   proof: proof-main.tex
 checked_by:
@@ -47,6 +47,10 @@ locators:
   label: prop:gapone
   line: 406
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): pairing.static-frame-only-expansion-survives repinned 8 -> 9 after reviewing its restatement (formal clause restated (every class tends to 0 as F -> 0; the static gauge is not defined on the horizon locus)); the classes on r > 2M, cited here, are unchanged, and the use here holds as cited.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

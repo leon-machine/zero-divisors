@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.stelle-west-vector-frozen-point@6
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - singularity.non-removability-invariant-argument@3
@@ -51,6 +51,10 @@ lineage:
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
   - synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31

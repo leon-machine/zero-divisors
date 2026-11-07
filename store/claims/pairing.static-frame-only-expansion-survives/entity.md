@@ -1,7 +1,7 @@
 ---
 id: pairing.static-frame-only-expansion-survives
 kind: claim
-version: 8
+version: 9
 title: 'The static frame: only the expansion survives'
 status: proved
 region: pairing
@@ -33,6 +33,10 @@ credit:
   role: 'GTG review (referee F2): uses and pins'
   version: 8
   source: maintainer pass 2026-11-07 (GTG review fixes)
+- name: Claude Opus 5.5
+  role: 'formal and technical clause restated at Leon''s second-round decisions: every class tends to 0 as F -> 0 (the static gauge is not defined on the horizon locus)'
+  version: 9
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: typed
 about:
 - obj.pairing.pairing-class-transport
@@ -65,6 +69,10 @@ locators:
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 8 -> 9. Leon''s second-round answer 1 (REPORT.md For Leon item 3, fix-F2.md): in the formal and technical levels "Every class vanishes at F = 0" becomes "Every class tends to 0 as F -> 0 (the static gauge is not defined on the horizon locus)", the text proposed in fix-F2.md; the proof''s horizon-limit paragraph follows. Exact check: at M = 1/2 the transverse class is -F(1 - F^2), so |class| <= F at F = 1/10, 1/100, 1/1000, 1/10^6 (it tends to 0), while the static coframe coefficient of e^1 = dr/F is 1/F, unbounded: the static gauge is not defined at F = 0, so "vanishes at F = 0" evaluated the class where its gauge does not exist. The sample -48/125 at F = 3/5 is unchanged. check_horizon_limit_and_sample_value evaluates the polynomial -F + F^3 at 0, which is the limit (a polynomial is continuous), so its assertion holds for the new clause; the coverage clause is reworded.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -123,12 +131,12 @@ For the Schwarzschild gravitational field on flat spacetime in the static gauge 
 \[
 \pv(\Omega(e_{0})) = \pv(\Omega(e_{1})) = 0, \qquad \pv(\Omega(e_{2})) = -\frac{\sqrt f}{r}, \qquad \pv(\Omega(e_{3})) = -\,I_{5}\,\frac{\sqrt f}{r},
 \]
-numbers of $\mathrm{span}\{1, I_{5}\}$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$, in which the transverse complex null vector is $m = e_{2} + I_{5}e_{3}$ (\claimref{std-algebra.complexification-is-the-odd-extension}), so that on the null tetrad $\pv(\Omega(\ell)) = \pv(\Omega(n)) = \pv(\Omega(m)) = 0$ and $\pv(\Omega(\mb)) = -2\sqrt f/r$: the congruence is geodesic, $\tau = 0$, shear-free, and its only optical scalar is the transverse expansion $2\sqrt f/r$. Along its own direction $(\ell \cdot D)\ell = (f'/2\sqrt f)\,\ell$, a rescaling. In particular $\Omega(e_{0})$ is a multiple of $e_{01}$ and $\Omega(e_{1}) = 0$: the transports along the $t$-line and the $r$-line lie in the stabiliser. Every class vanishes at $F = 0$, and at $r = 25/16$ ($F = \tfrac35$) the transverse class is $-\tfrac{48}{125}$.
+numbers of $\mathrm{span}\{1, I_{5}\}$, with $I_{5} = I_{4}e$ the central unit of the odd extension $\Cl(2,3)$, in which the transverse complex null vector is $m = e_{2} + I_{5}e_{3}$ (\claimref{std-algebra.complexification-is-the-odd-extension}), so that on the null tetrad $\pv(\Omega(\ell)) = \pv(\Omega(n)) = \pv(\Omega(m)) = 0$ and $\pv(\Omega(\mb)) = -2\sqrt f/r$: the congruence is geodesic, $\tau = 0$, shear-free, and its only optical scalar is the transverse expansion $2\sqrt f/r$. Along its own direction $(\ell \cdot D)\ell = (f'/2\sqrt f)\,\ell$, a rescaling. In particular $\Omega(e_{0})$ is a multiple of $e_{01}$ and $\Omega(e_{1}) = 0$: the transports along the $t$-line and the $r$-line lie in the stabiliser. Every class tends to $0$ as $F \to 0$ (the static gauge is not defined on the horizon locus), and at $r = 25/16$ ($F = \tfrac35$) the transverse class is $-\tfrac{48}{125}$.
 
 ## technical
 For the Schwarzschild field on flat spacetime in the static gauge, with the connection of the imported Schwarzschild data read along the static orthonormal frame of physical vectors and $F = \sqrt f$, the rotation-gauge bivectors $\Omega(e_c)$ reproduce every covariant frame derivative, and the pairing classes of the outgoing vacuum are $\pv(\Omega(e_0)) = \pv(\Omega(e_1)) = 0$, $\pv(\Omega(e_2)) = -\sqrt f/r$ and $\pv(\Omega(e_3)) = -I_{5}\sqrt f/r$, with $I_{5}$ the central unit of $\Cl(2,3)$ that complexifies the transverse null vector $m = e_{2} + I_{5}e_{3}$. On the null tetrad only $\pv(\Omega(\mb)) = -2\sqrt f/r$ survives, so the congruence is geodesic, has $\tau = 0$, is shear-free, and its only optical scalar is the transverse expansion $2\sqrt f/r$; along its own direction $(\ell \cdot D)\ell = (f'/2\sqrt f)\,\ell$, a rescaling.
 
-In particular $\Omega(e_0)$ is a multiple of $e_{01}$ and $\Omega(e_1) = 0$, so the transports along the $t$-line and the $r$-line lie in the stabiliser. Every class vanishes at $F = 0$, and at $r = 25/16$ ($F = \tfrac35$) the transverse class is $-\tfrac{48}{125}$.
+In particular $\Omega(e_0)$ is a multiple of $e_{01}$ and $\Omega(e_1) = 0$, so the transports along the $t$-line and the $r$-line lie in the stabiliser. Every class tends to $0$ as $F \to 0$ (the static gauge is not defined on the horizon locus), and at $r = 25/16$ ($F = \tfrac35$) the transverse class is $-\tfrac{48}{125}$.
 
 ## lay
 In the usual axes of an observer hovering at a fixed distance from a non-rotating black hole, carrying the fermion vacuum forward in time or along the radial direction leaves it unchanged. The only disturbance comes from moving sideways, and it is exactly the spreading of the outgoing light rays. That spreading shrinks to zero at the horizon.

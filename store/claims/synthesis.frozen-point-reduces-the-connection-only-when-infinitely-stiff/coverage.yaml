@@ -1,4 +1,10 @@
 functions:
+  check_gtg_formal_forms_equal_their_index_readings:
+    kind: sampled
+    clauses:
+    - 'setting: the Weyl map W(a ^ b) = calR(a ^ b) - P*(a) ^ b - a ^ P*(b) is the index reading R - KN(P*) for torsion-free Omega'
+    - '(iii) (1/2) <W(a ^ b) W(d_b ^ d_a)> = (1/4) W_abcd W^abcd; (iv) the GA display equals the index display and (1 - t) L1(P*) + t L1(rho id)'
+    omits: 'one torsion-free curvature sample (and one with torsion for the Weyl-map convention), four values of t and two of rho; the general equalities are the dictionary identities, argued in the proof'
   check_broken_components_of_the_frozen_point:
     kind: sampled
     clauses:

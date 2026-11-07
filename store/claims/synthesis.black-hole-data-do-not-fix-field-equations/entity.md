@@ -1,7 +1,7 @@
 ---
 id: synthesis.black-hole-data-do-not-fix-field-equations
 kind: claim
-version: 7
+version: 8
 title: 'Black-hole thermodynamics does not fix Einstein''s equations'
 status: proved
 region: synthesis
@@ -33,6 +33,10 @@ credit:
   role: 'GTG review (referee F1): the Wald direction identified exactly, without calibration; dictionary edge'
   version: 7
   source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'GA rewrite of the formal''s index expressions (Ricci map, scalar, Kretschmann, Ric^2 and the radial trace), the components kept as readings; new exact check'
+  version: 8
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -50,12 +54,18 @@ checked_by:
   ref: check.py::check_black_hole_data
 - kind: check
   ref: check.py::check_gtg_black_hole_data
+- kind: check
+  ref: check.py::check_gtg_formal_readings_of_the_ricci_components
 - kind: proof
   derivation: main
 lineage:
   motivated_by:
   - synthesis.quarter-from-temperature
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s answers, second round, item 7 (version 7 -> 8): the formal''s index expressions are now in GA with the components as labelled readings, the mathematics unchanged. The conventions sentence states the GTG objects (curvature operator, Ricci map calR(a) = d_b . calR(b ^ a), scalar calR = d_a . calR(a)) and the reading R^a_b = gamma^a . calR(gamma_b), R = calR in signature (-,+,+,+) with the Ricci tensor positive on spheres, keeping the sign parenthetical; f is a polynomial in the frame components of the Ricci map; (i) gives K = 2 <calR(a ^ b) calR(d_b ^ d_a)> and the (C1) surface as the radial eigenvalue calR(sigma_r) = (2M/r^3) sigma_r; (iii) f = beta d_a . calR(calR(a)) (reading beta R_ab R^ab); (iv) calR(a) = -(Q^2/r^4) a on the radial plane and the entropy term 4 pi beta d_a . calR(P_sigma(a)) A (readings R^t_t = R^r_r = -Q^2/r^4 and 4 pi beta (R^t_t + R^r_r) A). Evidence: new check check_gtg_formal_readings_of_the_ricci_components: on three static gauge fields (Reissner-Nordstrom, Reissner-Nordstrom-de Sitter, Schwarzschild; physical frame along the static coordinates) the sixteen frame components gamma^a . calR(gamma_b) equal the mixed components R^a_b of the existing Christoffel computation in (-,+,+,+), positive on spheres, and the scalar, d_a . calR(calR(a)), the radial trace and 2 <calR calR> equal R, R_ab R^ab, R^t_t + R^r_r and R_abcd R^abcd; the radial value is Lambda - Q^2/r^4 (-Q^2/r^4 at Lambda = 0). outside_ga was already withdrawn; nothing to narrow.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -98,12 +108,12 @@ extraction:
 ---
 
 ## formal
-Conventions: signature $(-,+,+,+)$ with the Ricci tensor positive on spheres (in signature $(+,-,-,-)$ with the Ricci tensor still positive on spheres the mixed components $R^{a}{}_{b}$ below change sign; in the store's curvature sign, $\Ric = -\Ric^{\circ}$, they are the same as here, and only the components with both indices down change sign). For a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $L_{f} = (R - 2\Lambda)/16\pi G + f$ with $\Lambda = 0$, a Lagrangian density (with the weight $\det(\hb)^{-1}$), where $R$ is the scalar curvature and $f$ is a polynomial in the components of the Ricci tensor, the Ricci map of the field strength (indices contracted with the derived metric), every monomial of which has degree at least two in the Ricci tensor; its field equations are those obtained by varying $\hb$ with $\Omega$ the torsion-free field of $\hb$, equivalently by varying the derived metric; $f = 0$ is Einstein's theory.
+Conventions: curvature is the store-sign curvature operator $\mathcal{R}(B)$ of the field strength on physical bivectors (Fact \claimref{synthesis.imported-gtg-dictionary}), with Ricci map $\mathcal{R}(a) = \partial_{b} \cdot \mathcal{R}(b \wedge a)$ and scalar $\mathcal{R} = \partial_{a} \cdot \mathcal{R}(a)$. Component readings are in signature $(-,+,+,+)$ with the Ricci tensor positive on spheres: on an orthonormal physical frame $R^{a}{}_{b} = \gamma^{a} \cdot \mathcal{R}(\gamma_{b})$ and $R = \mathcal{R}$ (in signature $(+,-,-,-)$ with the Ricci tensor still positive on spheres the mixed components $R^{a}{}_{b}$ change sign; in the store's curvature sign, $\Ric = -\Ric^{\circ}$, they are the same as here, and only the components with both indices down change sign). For a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), let $L_{f} = (\mathcal{R} - 2\Lambda)/16\pi G + f$ with $\Lambda = 0$, a Lagrangian density (with the weight $\det(\hb)^{-1}$), where $f$ is a polynomial in the frame components $\gamma^{a} \cdot \mathcal{R}(\gamma_{b})$ of the Ricci map, contracted with the flat product (in components a polynomial in the Ricci tensor with indices contracted with the derived metric), every monomial of which has degree at least two in the Ricci map; its field equations are those obtained by varying $\hb$ with $\Omega$ the torsion-free field of $\hb$, equivalently by varying the derived metric; $f = 0$ is Einstein's theory.
 \begin{enumerate}
-\item[(i)] Every vacuum field (Ricci-flat derived metric, vanishing Ricci map) solves the field equations of every $L_{f}$. The Schwarzschild field is a vacuum field, with horizon locus $r = 2M$, surface gravity $1/4M$, interior and Kretschmann scalar $K = 48M^{2}/r^{6}$ independent of $f$; so the surface $2M/r^{3} = 1$ on which (C1) places the boundary modes is the curvature level $\sqrt{K/12} = 1$, and a region where the field strength vanishes has no such surface.
+\item[(i)] Every vacuum field (vanishing Ricci map; a Ricci-flat derived metric) solves the field equations of every $L_{f}$. The Schwarzschild field is a vacuum field, with horizon locus $r = 2M$, surface gravity $1/4M$, interior and Kretschmann scalar $K = 2\langle\mathcal{R}(a \wedge b)\,\mathcal{R}(\partial_{b} \wedge \partial_{a})\rangle_{0} = 48M^{2}/r^{6}$ (in components $R_{abcd}R^{abcd}$) independent of $f$; its curvature operator has eigenvalue $2M/r^{3}$ on the radial plane, so the surface $2M/r^{3} = 1$ on which (C1) places the boundary modes is the curvature level $\sqrt{K/12} = 1$, and a region where the field strength vanishes has no such surface.
 \item[(ii)] Assume (W): horizon entropy is Wald's Noether-charge entropy (Fact \claimref{synthesis.imported-wald-noether-charge-entropy}). Then the Schwarzschild horizon has entropy $A/4G$ under every $L_{f}$, since the Ricci-dependent part of the Wald functional vanishes where the Ricci tensor does.
-\item[(iii)] Hence, without (W), every black-hole input of the series takes the same value under every $L_{f}$, since each is a statement about the geometry: the boundary modes' temperature $1/8\pi M$ under (P) and (R) (Theorem \claimref{singularity.rate-discharge-hypothesis-iii}), the count $N = 8\pi\nu M\,\Delta t$ under (C1) and (C2) (Theorem \claimref{scrambling.mode-count}), and Hawking's integral $S = \int dM/T = 4\pi M^{2} = A/4$ (Proposition \claimref{synthesis.quarter-from-temperature}). Their field equations with matter differ from Einstein's whenever $f \neq 0$ (for $f = \beta R_{ab}R^{ab}$ they are of fourth order), so no derivation that uses only these inputs, the Clausius relation along the Schwarzschild family included, can yield Einstein's equations. (W) adds only that Wald's entropy agrees, by (ii).
-\item[(iv)] What separates the theories is a horizon with matter on it. At the horizon of the Reissner-Nordstr\"om field $R^{t}{}_{t} = R^{r}{}_{r} = -Q^{2}/r^{4} \neq 0$, and under (W) the term $f = \beta R_{ab}R^{ab}$ adds $4\pi\beta\,(R^{t}{}_{t} + R^{r}{}_{r})\,A$ to the entropy, which is nonzero there.
+\item[(iii)] Hence, without (W), every black-hole input of the series takes the same value under every $L_{f}$, since each is a statement about the geometry: the boundary modes' temperature $1/8\pi M$ under (P) and (R) (Theorem \claimref{singularity.rate-discharge-hypothesis-iii}), the count $N = 8\pi\nu M\,\Delta t$ under (C1) and (C2) (Theorem \claimref{scrambling.mode-count}), and Hawking's integral $S = \int dM/T = 4\pi M^{2} = A/4$ (Proposition \claimref{synthesis.quarter-from-temperature}). Their field equations with matter differ from Einstein's whenever $f \neq 0$ (for $f = \beta\,\partial_{a} \cdot \mathcal{R}(\mathcal{R}(a))$, in components $\beta R_{ab}R^{ab}$, they are of fourth order), so no derivation that uses only these inputs, the Clausius relation along the Schwarzschild family included, can yield Einstein's equations. (W) adds only that Wald's entropy agrees, by (ii).
+\item[(iv)] What separates the theories is a horizon with matter on it. The Ricci map of the Reissner-Nordstr\"om field is $\mathcal{R}(a) = -(Q^{2}/r^{4})\,a$ on its radial plane, nonzero at the horizon (in components $R^{t}{}_{t} = R^{r}{}_{r} = -Q^{2}/r^{4}$), and under (W) the term $f = \beta\,\partial_{a} \cdot \mathcal{R}(\mathcal{R}(a))$ adds $4\pi\beta\,\partial_{a} \cdot \mathcal{R}(P_{\sigma}(a))\,A$ to the entropy, $P_{\sigma}$ the projector onto the horizon's normal plane (in components $4\pi\beta\,(R^{t}{}_{t} + R^{r}{}_{r})\,A$), which is nonzero there.
 \end{enumerate}
 \emph{Remark (not part of the proved statement).} Jacobson's derivation (Fact \claimref{synthesis.imported-jacobson-clausius-1995}) imposes the Clausius relation on local Rindler horizons crossed by a matter flux, at every point and null direction, where the Ricci tensor is nonzero. A survey of the store finds no entropy statement for such non-Killing local horizons: (R) concerns stationary Killing horizons, and (C1) puts the black hole's boundary modes only where the curvature reaches the Planck scale. The store does place boundary modes at sub-Planckian curvature on de Sitter's cosmological horizon, but that is again a Killing horizon, so the conclusion concerns local non-Killing horizons only. Filed alongside, synthesis.clausius-route-newton-constant-is-residue, which locates the same missing step on Jacobson's own route.
 

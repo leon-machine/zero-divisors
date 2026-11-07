@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   - synthesis.einstein-route-makes-n-initial-data@4
@@ -58,6 +58,10 @@ lineage:
   - synthesis.imported-einstein-cartan-matter-coupling
   - synthesis.einstein-route-makes-n-initial-data
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-10-31

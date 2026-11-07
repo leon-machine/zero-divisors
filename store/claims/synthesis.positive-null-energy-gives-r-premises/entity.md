@@ -1,7 +1,7 @@
 ---
 id: synthesis.positive-null-energy-gives-r-premises
 kind: claim
-version: 8
+version: 9
 title: 'Positive null energy gives the (R) premises'
 status: proved
 region: synthesis
@@ -45,6 +45,10 @@ credit:
   role: 'maintainer pass, restated clauses marked with their premise-free home at Leon''s decisions'
   version: 8
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'notation: the boost and dilation rotors of proof (iii) and (v) renamed G and S; d Omega^2 written out'
+  version: 9
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -94,6 +98,10 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R02 item 10): proof (iii)(c) and (v) named the boost rotor B, the conventions'' letter for the boost bivector (here B = e_1e_0 itself, of which the rotor is the exponential), and the dilation rotor D, beside D the covariant derivative of (iii). They are now G (boost) and S (dilation), both unused in the entity. Also (consistency-R03 C): proof (iii) wrote the round two-sphere as d Omega^2 beside the gauge field Omega (hb = 1, Omega = 0 in its setting); it is now (d vartheta^2 + sin^2 vartheta d phi^2), both letters unused in the entity (theta is the strip variable, varphi_w the Mellin modes). Proof text only; formal, check and conclusions unchanged.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

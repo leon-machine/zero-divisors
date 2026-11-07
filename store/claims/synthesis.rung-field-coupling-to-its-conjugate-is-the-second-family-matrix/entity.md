@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix
 kind: claim
-version: 3
+version: 4
 title: 'The covariant completion of the conjugate reading: a second family matrix'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 4
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
@@ -54,6 +58,10 @@ lineage:
   - synthesis.rung-field-on-the-lift-locus
   - synthesis.second-doublet-of-one-family-coupling-gives-no-quark-mixing
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -105,7 +113,7 @@ extraction:
 ---
 
 ## formal
-Let $c = \alpha\cdot v + \beta\cdot w$ be the complexified rung field of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}, with $N(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, $Q(c) = \alpha^{\mathsf T}\beta$, the slot $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$, and $c^{*} = \bar{\beta}\cdot v + \bar{\alpha}\cdot w$; on a charge-preserving point take the frame in which $\alpha$ and $\beta$ lie along rung $4$ (every such point is a $U(2)$-image of the lift family, loc. cit. (i)) and write $\alpha$, $\beta$ for those components. By Theorem \claimref{standard-model.yukawa-pattern-two-rung-module}, on the sixteen of Proposition \claimref{standard-model.hyp-s-slot-statistics} with the pairing $B$ of Lemma \claimref{standard-model.invariant-pairing-five-modes}, the $w_{4}$ coefficient of a rung vector gives the down-type and charged-lepton entries and the $v_{4}$ coefficient the up-type and Dirac-neutrino entries. For family matrices $Y$, $\tilde{Y}$ (complex symmetric for a $10$; (ii) to (iv) hold for any complex matrices) let the Yukawa coupling be $Y$ on $c$ plus $\tilde{Y}$ on $c^{*}$, as wholes, so that
+Let $c = \alpha\cdot v + \beta\cdot w$ be the complexified rung field of Theorem \claimref{synthesis.rung-field-on-the-lift-locus}, with $\mathsf{N}(c) = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m(c) = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, $Q(c) = \alpha^{\mathsf T}\beta$, the slot $U(2)$ acting by $\alpha \mapsto X\alpha$, $\beta \mapsto \bar{X}\beta$, and $c^{*} = \bar{\beta}\cdot v + \bar{\alpha}\cdot w$; on a charge-preserving point take the frame in which $\alpha$ and $\beta$ lie along rung $4$ (every such point is a $U(2)$-image of the lift family, loc. cit. (i)) and write $\alpha$, $\beta$ for those components. By Theorem \claimref{standard-model.yukawa-pattern-two-rung-module}, on the sixteen of Proposition \claimref{standard-model.hyp-s-slot-statistics} with the pairing $B$ of Lemma \claimref{standard-model.invariant-pairing-five-modes}, the $w_{4}$ coefficient of a rung vector gives the down-type and charged-lepton entries and the $v_{4}$ coefficient the up-type and Dirac-neutrino entries. For family matrices $Y$, $\tilde{Y}$ (complex symmetric for a $10$; (ii) to (iv) hold for any complex matrices) let the Yukawa coupling be $Y$ on $c$ plus $\tilde{Y}$ on $c^{*}$, as wholes, so that
 \[
 M_{d} = \beta Y + \bar{\alpha}\tilde{Y}, \qquad M_{u} = \alpha Y + \bar{\beta}\tilde{Y},
 \]
@@ -113,10 +121,10 @@ and write $H_{q} = M_{q}M_{q}^{\dagger}$, $\|Y\|^{2} = \tr(YY^{\dagger})$, $r = 
 \begin{enumerate}
 \item[(i)] \emph{(Covariance.)} The coefficients $(\bar{\beta}, \bar{\alpha})$ of $c^{*}$ transform under $U(2)$ as $(\alpha, \beta)$ do. The bivectors $b_{1} = \tfrac12(v_{4}v_{5} + w_{4}w_{5})$ and $b_{2} = \tfrac12(v_{4}v_{5} - w_{4}w_{5})$ act on rung vectors by commutator; $R_{1} = [b_{1}, \cdot]$ and $R_{2} = I_{4}[b_{2}, \cdot]$ (the unit on the rung field is the field theory's unit $I_{4}$, which commutes with the rung vectors; $\C = \mathrm{span}\{1, I_{4}\}$) commute with the weak $\su(2)$ and with $c \mapsto c^{*}$, $[R_{1}, R_{2}]$ is the hypercharge action, and $B$ is anti-invariant under $b_{1}$, $b_{2}$, so $x \mapsto B(\cdot, x\,\cdot)$ is equivariant. Hence the coupling $Yc + \tilde{Y}c^{*}$ is covariant under the weak $\su(2)$ and this right-handed $\su(2)$ (the commutant of the weak $\su(2)$ of \claimref{synthesis.rung-field-level-needed-off-balance-and-not-right-invariant}(2)), the two-coupling structure of a complex bidoublet in left-right models (Fact \claimref{synthesis.imported-left-right-bidoublet-two-yukawa-couplings}): it is the $\su(2)_{R}$-covariant completion of the per-sector conjugate reading of Corollary \claimref{standard-model.one-vev-vector-relations-breaking-pattern} (down entries from $c$, up entries from $c^{*}$, one matrix), which vanishes on the $\alpha$ half and so is covariant for no action of $\su(2)_{R}$ on the fermions.
 \item[(ii)] \emph{(Sum rules.)} For all $\alpha$, $\beta$, $Y$, $\tilde{Y}$:
-$\tr H_{u} - \tr H_{d} = 2m(c)(\|Y\|^{2} - \|\tilde{Y}\|^{2})$ and $\tr H_{u} + \tr H_{d} = 2N(c)(\|Y\|^{2} + \|\tilde{Y}\|^{2}) + 4\operatorname{Re}(Q(c)\tr(Y\tilde{Y}^{\dagger}))$.
+$\tr H_{u} - \tr H_{d} = 2m(c)(\|Y\|^{2} - \|\tilde{Y}\|^{2})$ and $\tr H_{u} + \tr H_{d} = 2\mathsf{N}(c)(\|Y\|^{2} + \|\tilde{Y}\|^{2}) + 4\operatorname{Re}(Q(c)\tr(Y\tilde{Y}^{\dagger}))$.
 \item[(iii)] \emph{(One matrix.)} If $\tilde{Y} = Y$ (the coupling to the real part $c + c^{*}$), then $\bar{z}M_{d} = zM_{u}$ with $z = \beta + \bar{\alpha}$: $m_{u_{i}} = m_{d_{i}}$ and $V = 1$ exactly, in every frame; on the lift family this agrees with the per-sector conjugate reading up to relative corrections $e^{-2\eta}$.
 \item[(iv)] \emph{(The lift family.)} On $c_{\lambda}$, $\eta = \log(\lambda/H)$: $M_{d} = -\lambda Y + (H^{2}/\lambda)\tilde{Y}$ and $M_{u} = (H^{2}/\lambda)Y - \lambda\tilde{Y}$. At the balanced frame $\lambda = H$, where $m = 0$, $M_{u} = -M_{d}$ for every $Y$, $\tilde{Y}$. For $\eta \ne 0$ the part of $M_{u}$ carried by the coupling to $c$ is $(H^{2}/\lambda)Y = -(rM_{d} + r^{2}M_{u})/(1 - r^{2})$, and the same coupling's down-type part $-\lambda Y$ is $r^{-1}$ times it.
-\item[(v)] \emph{(The charged pair.)} At $c_{\lambda}$ the charged plane is $\alpha' = (0, a)$, $\beta' = (0, r\bar{a})$, $a \in \C$. Under the covariant coupling (one family, scalar couplings $Y$, $\tilde{Y}$) its squared Yukawa weights per unit $N$, relative to those of the vev, are $|\tilde{Y} + rY|^{2}/|Y - r\tilde{Y}|^{2}$ on the down-type pairs and $|Y + r\tilde{Y}|^{2}/|\tilde{Y} - rY|^{2}$ on the up-type pairs, of order one (tending to $|\tilde{Y}|^{2}/|Y|^{2}$ and $|Y|^{2}/|\tilde{Y}|^{2}$); under the per-sector reading both are $r^{2}$.
+\item[(v)] \emph{(The charged pair.)} At $c_{\lambda}$ the charged plane is $\alpha' = (0, a)$, $\beta' = (0, r\bar{a})$, $a \in \C$. Under the covariant coupling (one family, scalar couplings $Y$, $\tilde{Y}$) its squared Yukawa weights per unit $\mathsf{N}$, relative to those of the vev, are $|\tilde{Y} + rY|^{2}/|Y - r\tilde{Y}|^{2}$ on the down-type pairs and $|Y + r\tilde{Y}|^{2}/|\tilde{Y} - rY|^{2}$ on the up-type pairs, of order one (tending to $|\tilde{Y}|^{2}/|Y|^{2}$ and $|Y|^{2}/|\tilde{Y}|^{2}$); under the per-sector reading both are $r^{2}$.
 \end{enumerate}
 So the second family matrix that the conjugate reading needs is the coupling $\tilde{Y}$ to $c^{*}$ in its $\su(2)_{R}$-covariant completion: for $\eta \gg 1$, $M_{d} \approx -\lambda Y$ and $M_{u} \approx -\lambda\tilde{Y}$; the up-down split of the summed squares is $2m(c)$ times the difference of the two norms, which at the vacuum of the D-term action of Theorem \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus} is $2m^{*}$ times it, $m^{*} = g'^{2}\xi/(g^{2} + g'^{2})$ set by the level $\xi$, and it vanishes at the mirror frame for every coupling; the charged pair couples at Yukawa strength; and the rung $10$ read through $c$ does not carry the top mass, since a top entry through $c$ comes with a down-type entry $e^{2\eta}$ times larger.
 

@@ -28,7 +28,7 @@ derivations:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +44,10 @@ lineage:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting restated (A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped)); clauses (i) to (iv), the store sign and the frame equation, cited here, are unchanged, and the use here holds as cited.'
   open_problem: op.derive-gravitational-action
   maintainer_pass:
     by: maintainer-2026-11-01

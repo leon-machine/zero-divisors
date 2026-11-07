@@ -1,7 +1,7 @@
 ---
 id: synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
 kind: claim
-version: 5
+version: 6
 title: 'Rung-field transmutation needs a charged pair near 450 GeV, now excluded'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: 'consistency pass, Lie-algebra name written with its macro'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 6
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
@@ -62,6 +66,10 @@ lineage:
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
   - synthesis.rung-field-charged-scalar-sum-rule
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject. The colour number N_c keeps its letter. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -118,9 +126,9 @@ Assume (GW) the Gildener-Weinberg one-loop formula (Fact \claimref{synthesis.imp
 \[
 8\pi^{2}v^{2}m_{S}^{2} = 3\sum_{\text{vectors}}M^{4} + \sum_{\text{real scalars}}M^{4} - 4N_{c}\sum_{\text{Dirac fermions}}M^{4};
 \]
-and assume (D) decoupling: the only states whose masses depend on the rung field are the Standard Model's and the rung field's charged pair (the Majorana and Pati-Salam sectors carry no coupling to the rung field that gives a rung mass term; (D) fails for order-one neutrino Dirac couplings with the stored $v_{R}$, see the proof). Apply (GW) to the rung field on its flat physical branch on the cone $Q = 0$ (the ray $m = -N$ of a scale-free potential with $a + b = e$, $e \ge 0$, $2a \ge e$; \claimref{synthesis.scale-free-rung-potentials-need-the-flat-physical-branch}, clause (3)), with the Hermitian gauge masses of \claimref{synthesis.rung-field-on-the-lift-locus}(2), the charged plane of (3), the fermion entries of (5) (on the physical ray of size $|\beta|$ in the per-sector reading and in its $\su(2)_{R}$-covariant completion alike), and $v^{2} = 2N$.
+and assume (D) decoupling: the only states whose masses depend on the rung field are the Standard Model's and the rung field's charged pair (the Majorana and Pati-Salam sectors carry no coupling to the rung field that gives a rung mass term; (D) fails for order-one neutrino Dirac couplings with the stored $v_{R}$, see the proof). Apply (GW) to the rung field on its flat physical branch on the cone $Q = 0$ (the ray $m = -\mathsf{N}$ of a scale-free potential with $a + b = e$, $e \ge 0$, $2a \ge e$; \claimref{synthesis.scale-free-rung-potentials-need-the-flat-physical-branch}, clause (3)), with the Hermitian gauge masses of \claimref{synthesis.rung-field-on-the-lift-locus}(2), the charged plane of (3), the fermion entries of (5) (on the physical ray of size $|\beta|$ in the per-sector reading and in its $\su(2)_{R}$-covariant completion alike), and $v^{2} = 2\mathsf{N}$.
 \begin{enumerate}
-\item[(i)] \emph{(Content.)} The gauge mass form has eigenvalues $g^{2}$ twice, $g^{2} + g'^{2}$ once and $0$ once, so the vectors contribute $6M_{W}^{4} + 3M_{Z}^{4}$; the physical scalars are the scalon and the charged pair (two real directions), whose tree mass squared $2(2a - e)N$ is proportional to $N$, as are the gauge and fermion masses; the top contributes $-12m_{t}^{4}$. Hence $8\pi^{2}v^{2}m_{h}^{2} = 6M_{W}^{4} + 3M_{Z}^{4} + 2m_{\pm}^{4} - 12m_{t}^{4} - \ell$, with $\ell = 12m_{b}^{4} + 12m_{c}^{4} + 4m_{\tau}^{4}$.
+\item[(i)] \emph{(Content.)} The gauge mass form has eigenvalues $g^{2}$ twice, $g^{2} + g'^{2}$ once and $0$ once, so the vectors contribute $6M_{W}^{4} + 3M_{Z}^{4}$; the physical scalars are the scalon and the charged pair (two real directions), whose tree mass squared $2(2a - e)\mathsf{N}$ is proportional to $\mathsf{N}$, as are the gauge and fermion masses; the top contributes $-12m_{t}^{4}$. Hence $8\pi^{2}v^{2}m_{h}^{2} = 6M_{W}^{4} + 3M_{Z}^{4} + 2m_{\pm}^{4} - 12m_{t}^{4} - \ell$, with $\ell = 12m_{b}^{4} + 12m_{c}^{4} + 4m_{\tau}^{4}$.
 \item[(ii)] \emph{(Standard Model content.)} Without the charged pair the right side is negative for every $m_{t} \in [162, 173]$ GeV, the range containing the stored pole and $M_{Z}$-scale top masses; at the stored pole mass $m_{h}^{2}$ lies between $-(47\ \mathrm{GeV})^{2}$ and $-(45\ \mathrm{GeV})^{2}$; the vector bosons alone would give $9.7 < m_{h} < 9.9$ GeV.
 \item[(iii)] \emph{(Threshold.)} $m_{h}^{2} > 0$ exactly when $2m_{\pm}^{4} > 12m_{t}^{4} + \ell - 6M_{W}^{4} - 3M_{Z}^{4}$; the threshold lies in $(249, 250)$ GeV at $m_{t} = 162$ GeV and in $(267, 268)$ GeV at $m_{t} = 173$ GeV, above $m_{t} - m_{b}$: the charged pair is not produced in top decays.
 \item[(iv)] \emph{(The measured Higgs mass.)} With $m_{h} \in [125, 125.4]$ GeV, $v \in [246, 247]$ GeV (containing the tree value from the stored $M_{W}$, $\sin^{2}\theta_{W}(M_{Z})$ and $\alpha(M_{Z})$, and $246.22$ GeV), $m_{t} \in [162, 173]$ GeV and the stored $M_{W}$, $M_{Z}$, $m_{b}$, $m_{c}$, $m_{\tau}$: $450 < m_{\pm} < 456$ GeV, with $454 < m_{\pm} < 455$ GeV at $v = 246.22$ GeV, the stored $m_{h}$ and the stored pole $m_{t}$; the charged quartic is $3.2 < 2a - e = m_{\pm}^{2}/v^{2} < 3.5$.

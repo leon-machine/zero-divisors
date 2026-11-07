@@ -20,8 +20,8 @@ functions:
   check_horizon_limit_and_sample_value:
     kind: sampled
     clauses:
-    - '"Every class vanishes at F = 0, and at r = 25/16 (F = 3/5) the transverse class is -48/125"'
-    omits: -48/125 is an exact value at r = 25/16; vanishing at F = 0 (the singular horizon, where the jets divide by F) is reached only through the polynomial -F(1 - F^2) at M = 1/2, matched at the sample points F = 3/5 and 4/5
+    - '"Every class tends to 0 as F -> 0 (the static gauge is not defined on the horizon locus), and at r = 25/16 (F = 3/5) the transverse class is -48/125"'
+    omits: -48/125 is an exact value at r = 25/16; the limit F -> 0 (the horizon locus, where the static gauge is not defined and the jets divide by F) is reached only through the value at 0 of the polynomial -F(1 - F^2) at M = 1/2, matched at the sample points F = 3/5 and 4/5
   check_gtg_torsion_solution_is_the_stated_gauge_field:
     kind: sampled
     clauses:

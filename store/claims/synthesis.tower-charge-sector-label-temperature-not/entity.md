@@ -40,7 +40,7 @@ derivations:
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-matter.stored-asymmetry-charge-not-number@9
   - synthesis.cold-mirror-needs-non-equilibrium-descent@3
-  - synthesis.mirror-asymmetry-route-one@3
+  - synthesis.mirror-asymmetry-route-one@4
   - dark-matter.mirror-tower-copy-one@9
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
@@ -59,7 +59,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited. Pin review: synthesis.mirror-asymmetry-route-one repinned 2 -> 3 after reviewing its G2 restatement (the scoping of P2 it offered without proof is now P2 at version 2, so clause (v) of the copy theorem has both routes); the Reading (formal) and the proof''s reading quoted the scoping as offered and not proved and now say that it was first offered there at its version 2 and is P2 at version 2; the result, which analyses that scoping, is unchanged. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Version 4 -> 5.'
+    note: 'Pin review: dark-matter.stored-asymmetry-charge-not-number repinned 8 -> 9 after reviewing its G1 restatement (the cold mirror is an exception to P2 at its version-1 reach, P2 as scoped leaves xi free, and the cold mirror then needs a non-equilibrium descent; the charge reading and the numbers are unchanged); the use here holds as cited. Pin review: synthesis.mirror-asymmetry-route-one repinned 2 -> 3 after reviewing its G2 restatement (the scoping of P2 it offered without proof is now P2 at version 2, so clause (v) of the copy theorem has both routes); the Reading (formal) and the proof''s reading quoted the scoping as offered and not proved and now say that it was first offered there at its version 2 and is P2 at version 2; the result, which analyses that scoping, is unchanged. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Version 4 -> 5. Pin review (second round): synthesis.mirror-asymmetry-route-one repinned 3 -> 4 after reviewing its restatement ((iii) scoped to what the tower-charge theorem proves (finite windows, or a convergent Powers-Stormer sum)); the Reading here quotes only its version-2 offering of the scoping, which stands, and the use here holds as cited.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

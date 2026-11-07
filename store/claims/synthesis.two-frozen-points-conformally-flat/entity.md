@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-frozen-points-conformally-flat
 kind: claim
-version: 4
+version: 5
 title: 'Two frozen points of one norm on conformally flat fields'
 status: proved
 region: synthesis
@@ -29,11 +29,15 @@ credit:
   role: 'GTG review (referee F1): Einstein scale computed directly instead of from the converse of the Fact'
   version: 4
   source: maintainer pass 2026-11-07 (consistency, GTG review)
+- name: Claude Opus 5.5
+  role: 'proof''s citation of the frozen-point Fact taken from its scale-g display, after that Fact''s gauge-field sentence became a remark (second-round decisions)'
+  version: 5
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
   uses:
-  - dark-energy.imported-frozen-point-geometry@6
+  - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
   proof: proof-main.tex
 checked_by:
@@ -51,6 +55,10 @@ lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Version 4 -> 5. Leon''s second-round answer 6 moved the sentence of Fact dark-energy.imported-frozen-point-geometry naming the tractor gauge field out of that Fact''s statement. The proof here took the flat-scale gauge field Omega_T(a) = -ninf ^ a from that sentence; it now reads the Fact''s scale-g display at P = 0 and shows, by the computation it already made ((ninf ^ a) . Y = (a . mu) ninf - rho a for Y = sigma ninf + mu + rho n0, n0 . ninf = 1), that the gauge field reproduces that display slot by slot. Statement and check unchanged. Pin review (second round): dark-energy.imported-frozen-point-geometry repinned 6 -> 7 after reviewing its restatement (the sentence naming the tractor gauge-field theorem moved to a text-only remark); the parts cited here (parallel frozen point, Q(I) = Lambda/3, the stabilisers, the scale-g display and the Schouten tensor) are unchanged, and the use here holds as cited.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1,7 +1,7 @@
 ---
 id: synthesis.scale-free-rung-potentials-need-the-flat-physical-branch
 kind: claim
-version: 2
+version: 3
 title: 'Scale-free rung potentials need the flat physical branch'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'notation: the Hermitian norm renamed sans-serif N'
+  version: 3
+  source: maintainer pass 2026-11-07 (decisions, second round)
 review: draft
 derivations:
 - name: main
@@ -46,6 +50,10 @@ lineage:
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_decisions_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Notation (Leon, second round, answer 8; DECISIONS H5, consistency-R04 item 4): the rung-field results wrote N for the Hermitian norm of the rung component, N(c) = (|alpha|^2 + |beta|^2)/2, while N = M_P/H is the hierarchy number in the same subject. The norm is now \mathsf{N} (its values \mathsf{N}^*, \mathsf{N}_0, its derivative \partial_{\mathsf{N}}, and W(\mathsf{N})) in formal, proof and the other levels, in every rung-field entity that writes it (14 entities, one batch), so the family stays uniform. The letter was chosen free in the entity and in its subject (standard-model and quantum-fields): R04''s example \mathcal{N} is the store macro \Ncone (the null cone) and the number operator of synthesis.floor-regulator-... in quantum-fields. No content change.'
   maintainer_pass_qft_full:
     by: maintainer-2026-11-02
     date: '2026-11-02'
@@ -86,20 +94,20 @@ extraction:
 ---
 
 ## formal
-In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the complexified rung summand with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $N = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$, the conjugation $c \mapsto c^{*}$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, $H^{2} = \Lambda/3$, the lift family $c_{\lambda}$ with $\eta = \log(\lambda/H)$, $t = 2\eta$, and its physical half $\lambda \ge H$ (on which, read through $c^{*}$, every tree Dirac entry is $\lambda$, \claimref{synthesis.rung-field-on-the-lift-locus}(5)), the gauge masses $M_{W}^{2} = \tfrac12 g^{2}N$, $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})N$, and $v^{2} = 2N$. Call a potential \emph{scale-free} if it is a real $U(2)$-invariant polynomial on $\mathcal{R}_{\C}$ homogeneous of degree four. Masses are Hessians on the locus divided by the kinetic coefficient of the stored Hermitian term.
+In the setting of \claimref{synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus}: the complexified rung summand with $c = \sum_{a}(\alpha_{a}v_{a} + \beta_{a}w_{a})$, $Q(c) = \alpha^{\mathsf T}\beta$, $\mathsf{N} = \tfrac12(|\alpha|^{2} + |\beta|^{2})$, $m = \tfrac12(|\alpha|^{2} - |\beta|^{2})$, the slot mixing $U(2)$, the conjugation $c \mapsto c^{*}$, the null-lift locus $L = \{Q(c) = -H^{2}\}$, $H^{2} = \Lambda/3$, the lift family $c_{\lambda}$ with $\eta = \log(\lambda/H)$, $t = 2\eta$, and its physical half $\lambda \ge H$ (on which, read through $c^{*}$, every tree Dirac entry is $\lambda$, \claimref{synthesis.rung-field-on-the-lift-locus}(5)), the gauge masses $M_{W}^{2} = \tfrac12 g^{2}\mathsf{N}$, $M_{Z}^{2} = \tfrac12(g^{2} + g'^{2})\mathsf{N}$, and $v^{2} = 2\mathsf{N}$. Call a potential \emph{scale-free} if it is a real $U(2)$-invariant polynomial on $\mathcal{R}_{\C}$ homogeneous of degree four. Masses are Hessians on the locus divided by the kinetic coefficient of the stored Hermitian term.
 \begin{enumerate}
 \item \emph{(Five couplings.)} The real scale-free potentials are $V = \sum_{i}k_{i}I_{i}$ over $I_{1..10} = |\alpha|^{4}, |\beta|^{4}, |\alpha|^{2}|\beta|^{2}, |\alpha|^{2}\operatorname{Re}Q, |\alpha|^{2}\operatorname{Im}Q, |\beta|^{2}\operatorname{Re}Q, |\beta|^{2}\operatorname{Im}Q, \operatorname{Re}Q^{2}, \operatorname{Im}Q^{2}, |Q|^{2}$. On $L$,
 \[
-V = aN^{2} + bm^{2} + eNm + H^{2}(dN + fm) + c_{0}H^{4},
+V = a\mathsf{N}^{2} + bm^{2} + e\mathsf{N}m + H^{2}(d\mathsf{N} + fm) + c_{0}H^{4},
 \]
 with $a = k_{1} + k_{2} + k_{3}$, $b = k_{1} + k_{2} - k_{3}$, $e = 2(k_{1} - k_{2})$, $d = -(k_{4} + k_{6})$, $f = -(k_{4} - k_{6})$, $c_{0} = k_{8} + k_{10}$; the conjugation changes $(e, f)$ to $(-e, -f)$. The D-term action is scale-free exactly when its level $\xi$ vanishes, and then $(a, b, e, d, f, c_{0}) = (\tfrac18 g^{2}, \tfrac18 g'^{2}, 0, 0, 0, -\tfrac18 g^{2})$.
 \item \emph{(The frame, and the flat condition.)} Along the family $V(c_{\lambda}) = H^{4}\bigl[a + c_{0} + (a + b)\sinh^{2}t - \tfrac{e}{2}\sinh 2t + d\cosh t - f\sinh t\bigr]$, and the joint rescaling $(c, H) \mapsto (sc, sH)$ maps $c_{\lambda}$ to $c_{s\lambda}$ and $V$ to $s^{4}V$: a scale-free potential sees the rung unit only through the frame $t$. Let $K_{\pm} = a + b \mp e$. If $K_{+} < 0$, $V$ decreases without bound along the physical half. At every critical point of $V$ along the family with $t \ge 0$,
 \[
 K_{+} \le 2(|d| + |f|)e^{-t} + |K_{-}|e^{-2t}, \qquad \text{and for } K_{+} > 0,\quad e^{t} \le \frac{2(|d| + |f|) + \sqrt{K_{+}|K_{-}|}}{K_{+}};
 \]
-since $N^{*}/H^{2} = \cosh t \le e^{t}$, a charge-preserving tree-level critical point at $N^{*} = \tfrac12 v^{2}$, $N^{*}/H^{2} \approx 2 \times 10^{88}$ (with $H^{2} = \Lambda/3$; about $1.4 \times 10^{88}$ if $H$ is read as $H_{0}$, the two differing by a factor of order one), needs $K_{+} \le 2(|d| + |f|)H^{2}/N^{*} + |K_{-}|H^{4}/N^{*2}$. The half $t \le 0$ is the same with $K_{+}$ and $K_{-}$ exchanged and $f \mapsto -f$.
-\item \emph{(The Gildener-Weinberg flat ray, on the cone $Q = 0$.)} On the cone $L_{0} = \{Q = 0\}$, the limit $H \to 0$, with orbit cone $|m| \le N$, a scale-free potential is $V_{4} = aN^{2} + bm^{2} + eNm$. It is nonnegative on the cone and vanishes on the physical ray $m = -N$ if and only if $K_{+} = 0$, $e \ge 0$ and $2a \ge e$; the mirror ray $m = N$ then carries $V_{4} = 2eN^{2}$, flat as well exactly when $e = 0$ (so for every $c^{*}$-even potential). On the flat physical ray of $L_{0}$ the neutral mode is massless, the charged pair has $m_{\pm}^{2} = 2(2a - e)N = (2a - e)v^{2}$, and the two do not mix.
-\item \emph{(The norm quartic fails.)} For the level-zero D-term plus $\kappa N^{2}$ the physical ray is flat only at $\kappa = -\tfrac18(g^{2} + g'^{2})$, and there $m_{\pm}^{2} = -\tfrac12 g'^{2}N = M_{W}^{2} - M_{Z}^{2} < 0$ and $V < 0$ inside the cone: the potential is unbounded below and the family $W = \kappa N^{2}$ is not a flat-ray endpoint. With a moment-map quartic $\kappa'm^{2}$ and $eNm$ added the flat ray is admissible exactly when $e \ge 0$, $2a \ge e$, which requires $\kappa' \le \tfrac12 e - \tfrac18 g'^{2}$.
+since $\mathsf{N}^{*}/H^{2} = \cosh t \le e^{t}$, a charge-preserving tree-level critical point at $\mathsf{N}^{*} = \tfrac12 v^{2}$, $\mathsf{N}^{*}/H^{2} \approx 2 \times 10^{88}$ (with $H^{2} = \Lambda/3$; about $1.4 \times 10^{88}$ if $H$ is read as $H_{0}$, the two differing by a factor of order one), needs $K_{+} \le 2(|d| + |f|)H^{2}/\mathsf{N}^{*} + |K_{-}|H^{4}/\mathsf{N}^{*2}$. The half $t \le 0$ is the same with $K_{+}$ and $K_{-}$ exchanged and $f \mapsto -f$.
+\item \emph{(The Gildener-Weinberg flat ray, on the cone $Q = 0$.)} On the cone $L_{0} = \{Q = 0\}$, the limit $H \to 0$, with orbit cone $|m| \le \mathsf{N}$, a scale-free potential is $V_{4} = a\mathsf{N}^{2} + bm^{2} + e\mathsf{N}m$. It is nonnegative on the cone and vanishes on the physical ray $m = -\mathsf{N}$ if and only if $K_{+} = 0$, $e \ge 0$ and $2a \ge e$; the mirror ray $m = \mathsf{N}$ then carries $V_{4} = 2e\mathsf{N}^{2}$, flat as well exactly when $e = 0$ (so for every $c^{*}$-even potential). On the flat physical ray of $L_{0}$ the neutral mode is massless, the charged pair has $m_{\pm}^{2} = 2(2a - e)\mathsf{N} = (2a - e)v^{2}$, and the two do not mix.
+\item \emph{(The norm quartic fails.)} For the level-zero D-term plus $\kappa \mathsf{N}^{2}$ the physical ray is flat only at $\kappa = -\tfrac18(g^{2} + g'^{2})$, and there $m_{\pm}^{2} = -\tfrac12 g'^{2}\mathsf{N} = M_{W}^{2} - M_{Z}^{2} < 0$ and $V < 0$ inside the cone: the potential is unbounded below and the family $W = \kappa \mathsf{N}^{2}$ is not a flat-ray endpoint. With a moment-map quartic $\kappa'm^{2}$ and $e\mathsf{N}m$ added the flat ray is admissible exactly when $e \ge 0$, $2a \ge e$, which requires $\kappa' \le \tfrac12 e - \tfrac18 g'^{2}$.
 \item \emph{(The rung unit is the dilatation; a restatement.)} With the lift's null pair $n_{0}' = -w$, $n_{\infty}' = 2v$ and $X_{\mu}(x) = \mu n_{0}' + x + \tfrac{Q(x)}{2\mu}n_{\infty}'$ (\claimref{synthesis.rung-unit-transverse-to-norm}), $X_{\mu}(x) = \mu X_{1}(x/\mu)$, which restates the stored $X_{\mu} = B_{1/\mu}\circ X_{1}$ through the standard fact that the null-plane boost is the dilator of the conformal model: a change of the rung unit is the conformal dilatation of the ground point by $1/\mu$, and the flat ray of (3) is the orbit of the rung unit.
 \end{enumerate}
 
@@ -112,4 +120,4 @@ A potential for the rung field with no dimensionful constant is a quartic form i
 Could the weak scale come from nothing, as the strong-interaction scale does, by the slow running of a coupling? The first condition is a potential for the series' Higgs candidate with no built-in mass scale. This result lists all such potentials and shows that, without quantum effects, they put the weak scale at most a modest factor from the cosmological scale, unless one combination of couplings vanishes almost exactly. When it vanishes exactly the potential is flat along the very direction that changes the weak scale, which in the series' geometry is a rescaling; quantum corrections then pick the scale. The flat direction is stable only for some couplings, and the simplest choice, the one behind an earlier prediction of a charged scalar near 117 GeV, is not among them: it makes the charged scalar's mass squared negative.
 
 ## one-liner
-A scale-free rung potential is $aN^{2} + bm^{2} + eNm + H^{2}(dN + fm)$ on the null-lift locus and sees the rung unit only as the frame; a tree-level weak-scale vacuum needs $a + b - e$ to vanish to about $10^{-88}$, and on the cone $Q = 0$ the Gildener-Weinberg flat ray is admissible iff $e \ge 0$, $2a \ge e$, with tree masses $m_{h} = 0$, $m_{\pm}^{2} = (2a - e)v^{2}$, and the D-term with $\kappa N^{2}$ fails with $m_{\pm}^{2} = M_{W}^{2} - M_{Z}^{2}$.
+A scale-free rung potential is $a\mathsf{N}^{2} + bm^{2} + e\mathsf{N}m + H^{2}(d\mathsf{N} + fm)$ on the null-lift locus and sees the rung unit only as the frame; a tree-level weak-scale vacuum needs $a + b - e$ to vanish to about $10^{-88}$, and on the cone $Q = 0$ the Gildener-Weinberg flat ray is admissible iff $e \ge 0$, $2a \ge e$, with tree masses $m_{h} = 0$, $m_{\pm}^{2} = (2a - e)v^{2}$, and the D-term with $\kappa \mathsf{N}^{2}$ fails with $m_{\pm}^{2} = M_{W}^{2} - M_{Z}^{2}$.

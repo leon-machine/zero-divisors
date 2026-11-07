@@ -29,7 +29,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@6
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.coefficients-floors-they-give-what-gravity@4
   - dark-matter.imported-trichotomy-descents-data@6
   - dark-matter.mirror-tower-copy-one@9
@@ -61,7 +61,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review: dark-matter.imported-trichotomy-descents-data repinned 5 -> 6 after reviewing its restatement of clause (2) (the norm of the frozen point is not a field, fixed by a constraint with pure-gauge fluctuations, where it said the frozen action is N-insensitive); clauses (1), (3) and (4) are unchanged; the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited.'
+    note: 'Pin review: dark-matter.imported-trichotomy-descents-data repinned 5 -> 6 after reviewing its restatement of clause (2) (the norm of the frozen point is not a field, fixed by a constraint with pure-gauge fluctuations, where it said the frozen action is N-insensitive); clauses (1), (3) and (4) are unchanged; the use here holds as cited. Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2''s version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited. Pin review (second round): dark-matter.asymmetry-arrow-counted-fifteenth-refutation repinned 6 -> 7 (an extraction note only (Leon confirmed the theta-angle reading); N).'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@6
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.ceiling-valued-inherited-success@5
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - standard-model.hyp-s-slot-statistics@9
@@ -42,6 +42,10 @@ locators:
   label: fact:ceiling
   line: 570
 extraction:
+  maintainer_pass_pin_review:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second round): dark-matter.asymmetry-arrow-counted-fifteenth-refutation repinned 6 -> 7 (an extraction note only (Leon confirmed the theta-angle reading); N).'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
