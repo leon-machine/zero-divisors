@@ -49,7 +49,7 @@ extraction:
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 5 -> 6. Tomita-Takesaki theory on the abstract complex Hilbert space C^n (x) C^n of a full matrix factor: by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex Hilbert space and matrix algebra, so rho^{it}, Delta^{it} become rho^{I_4 t}, Delta^{I_4 t}, with a sentence fixing the scalars and naming J as the modular conjugation. Declaration removed.'
+    note: 'Version 5 -> 6. Tomita-Takesaki theory on the abstract complex Hilbert space C^n (x) C^n of a full matrix factor: by U1 its scalars are span{1, I_4}, the default scalar field of an abstract complex Hilbert space and matrix algebra, so rho^{it}, Delta^{it} become rho^{I_4 t}, Delta^{I_4 t}, with a sentence fixing the scalars and naming J as the modular conjugation; the basis indices i, j are renamed k, l (index letters only) so that no letter i is read as a unit. Declaration removed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -83,14 +83,14 @@ extraction:
 ---
 
 ## formal
-Let $H = \C^n \otimes \C^n$, let $M = \Mat_n(\C) \otimes 1$ act on the first factor (here the complex numbers are $\C = \mathrm{span}\{1, I_4\}$, the default scalar field of an abstract complex Hilbert space and matrix algebra, and $J$ is the modular conjugation), and let $\Omega = \sum_i \lambda_i\, |ii\rangle$ with all $\lambda_i > 0$ and $\sum \lambda_i^2 = 1$ (any cyclic separating vector of $M$ has this form in its Schmidt basis). Define the Tomita operator as the closure of $S : a\Omega \mapsto a^*\Omega$ ($a \in M$). Then its polar decomposition $S = J\Delta^{1/2}$ has
+Let $H = \C^n \otimes \C^n$, let $M = \Mat_n(\C) \otimes 1$ act on the first factor (here the complex numbers are $\C = \mathrm{span}\{1, I_4\}$, the default scalar field of an abstract complex Hilbert space and matrix algebra, and $J$ is the modular conjugation), and let $\Omega = \sum_k \lambda_k\, |kk\rangle$ with all $\lambda_k > 0$ and $\sum \lambda_k^2 = 1$ (any cyclic separating vector of $M$ has this form in its Schmidt basis). Define the Tomita operator as the closure of $S : a\Omega \mapsto a^*\Omega$ ($a \in M$). Then its polar decomposition $S = J\Delta^{1/2}$ has
 \[
-\Delta = \rho \otimes \bar\rho^{\,-1}, \qquad \rho = \sum_i \lambda_i^2\,|i\rangle\langle i| , \qquad J\,|ij\rangle = |ji\rangle \ \text{(antilinearly)},
+\Delta = \rho \otimes \bar\rho^{\,-1}, \qquad \rho = \sum_k \lambda_k^2\,|k\rangle\langle k| , \qquad J\,|kl\rangle = |lk\rangle \ \text{(antilinearly)},
 \]
 and the modular flow on $M$ is $\sigma_t(a) = \rho^{I_4t} a\, \rho^{-I_4t}$. Moreover the state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho\,a\,\rho^{-1})$ for all $a, b \in M$.
 
 ## technical
-Take $H = \C^n \otimes \C^n$ over $\C = \mathrm{span}\{1, I_4\}$, $M = \Mat_n(\C) \otimes 1$ and a cyclic separating vector in Schmidt form $\Omega = \sum_i \lambda_i |ii\rangle$ with all $\lambda_i > 0$ and $\sum_i \lambda_i^2 = 1$. The Tomita operator $S : a\Omega \mapsto a^*\Omega$ acts on basis vectors as $|ij\rangle \mapsto (\lambda_i/\lambda_j)|ji\rangle$, and its polar decomposition $S = J\Delta^{1/2}$ is explicit: $\Delta = \rho \otimes \bar\rho^{\,-1}$ with $\rho = \sum_i \lambda_i^2 |i\rangle\langle i|$, and $J$ the antilinear swap $|ij\rangle \mapsto |ji\rangle$.
+Take $H = \C^n \otimes \C^n$ over $\C = \mathrm{span}\{1, I_4\}$, $M = \Mat_n(\C) \otimes 1$ and a cyclic separating vector in Schmidt form $\Omega = \sum_k \lambda_k |kk\rangle$ with all $\lambda_k > 0$ and $\sum_k \lambda_k^2 = 1$. The Tomita operator $S : a\Omega \mapsto a^*\Omega$ acts on basis vectors as $|kl\rangle \mapsto (\lambda_k/\lambda_l)|lk\rangle$, and its polar decomposition $S = J\Delta^{1/2}$ is explicit: $\Delta = \rho \otimes \bar\rho^{\,-1}$ with $\rho = \sum_k \lambda_k^2 |k\rangle\langle k|$, and $J$ the antilinear swap $|kl\rangle \mapsto |lk\rangle$.
 
 Consequently the modular flow on $M$ is $\sigma_t(a) = \rho^{I_4t} a \rho^{-I_4t}$, and the vector state $\omega = \langle\Omega, \cdot\,\Omega\rangle$ satisfies the KMS identity $\omega(ab) = \omega(b\,\rho a \rho^{-1})$ for all $a, b \in M$. Because everything is finite-dimensional, all of this follows by direct computation.
 
