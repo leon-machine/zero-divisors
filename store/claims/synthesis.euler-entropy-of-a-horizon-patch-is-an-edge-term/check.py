@@ -635,17 +635,26 @@ def check_gtg_cut_gauge_field_transgression_gauge_law_and_edge_curvature():
     return ok
 
 
+BIV_SAMPLES = ((1, 2, -3, 5, F(1, 2), 7), (0, 0, 0, 0, 0, 1), (F(2, 3), -1, 4, 0, 3, F(-5, 4)))
+
+
+def biv_from(coeffs):
+    """sum of coeffs times e_a ^ e_b over the blades (0,1), (0,2), (0,3), (1,2), (1,3), (2,3) of Cl(1,3)."""
+    Y = {}
+    for (a, b), c in zip(gtg.bivector_blades(4), coeffs):
+        Y = GA.add(Y, GA.scal(F(c), gtg.wedge(GA.gen(a), GA.gen(b), gtg.S13)))
+    return Y
+
+
 def check_gtg_binormal_contraction_is_four_times_the_cut_component():
     premise("dark-energy.wall-counterterm")
     S13 = gtg.S13
     Iinv = GA.scal(F(-1), gtg.pseudoscalar(S13))
     lam = gtg.wedge(GA.gen(0), GA.gen(1), S13)
     ok = True
-    for coeffs in ((1, 2, -3, 5, F(1, 2), 7), (0, 0, 0, 0, 0, 1), (F(2, 3), -1, 4, 0, 3, F(-5, 4))):
-        Y = {}
-        for (a, b), c in zip(gtg.bivector_blades(4), coeffs):
-            Y = GA.add(Y, GA.scal(F(c), gtg.wedge(GA.gen(a), GA.gen(b), S13)))
-        y23 = F(coeffs[5])
-        ok = ok and 4 * gtg.sp(GA.mul(GA.mul(lam, Iinv, S13), Y, S13)) == 4 * y23
+    for coeffs in BIV_SAMPLES:
+        Y = biv_from(coeffs)
+        y23 = Y.get((2, 3), F(0))
+        ok = ok and y23 != 0 and 4 * gtg.sp(GA.mul(GA.mul(lam, Iinv, S13), Y, S13)) == 4 * y23
     assert ok
     return ok

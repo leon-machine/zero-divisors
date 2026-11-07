@@ -21,6 +21,10 @@ credit:
   role: 'GA rewrite (derived metric; components declared)'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'GTG pass: component proof kept, outside_ga narrowed (the point lies outside the invertible region)'
+  version: 6
+  source: maintainer pass 2026-11-07 (consistency, GTG proofs)
 review: typed
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -49,6 +53,10 @@ locators:
   label: thm:wallfree
   line: 772
 extraction:
+  maintainer_pass_gtg_proof:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'GTG proof not written; the component proof and checks are kept and the outside_ga reason narrowed. The result counts ranks and principal-symbol ranks of the Einstein-Cartan equations, as linear conditions on the components of torsion, curvature and the rotation-gauge field, in the normal form e^a = dx^a (a < 3), e^3 = 0 at a point where hb^{-1} has corank one. There hb does not exist, so the GTG definition, which holds on the invertible region and identifies the physical frame and omega(A) = Omega(hb(A)) through hb, does not apply; the equations themselves are polynomial in hb^{-1} and Omega and could be written as GA expressions, but the counts would still be ranks of these linear maps on components, and stating them as a GTG result needs an extension of the definition to degenerate soldering that the store does not have and that cannot be checked here exactly as a piece of GTG. No change of statement, proof or checks.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -90,7 +98,7 @@ extraction:
     note: 'GTG restatement: the soldering form is the physical-vector map hb^{-1} of the gravitational field, here the regular variable, and a corank-one soldering form is a locus where hb^{-1} drops rank (hb fails); g_{mu nu} is the derived metric; the connection omega is the rotation-gauge field Omega in components in the orthonormal physical frame. Ranks, free sector, constraint and cases unchanged. Proof: one opening sentence pointing to the GTG dictionary Fact.'
 outside_ga:
   kind: other
-  why: 'The result is a count of ranks and symbol ranks of the Einstein-Cartan equations as linear conditions on the components of torsion, curvature and the connection one-forms omega^{ab}_mu in the normal form e^a = dx^a, e^3 = 0, at a point where hb^{-1} is degenerate (outside the invertible region on which the GTG definition holds); the components, the forms and the symbol epsilon_{cab} are what is counted, so they stay.'
+  why: 'The result counts ranks and symbol ranks of the Einstein-Cartan equations, as linear conditions on the components of torsion, curvature and the rotation-gauge field omega^{ab}_mu, in the normal form e^a = dx^a, e^3 = 0 at a point where hb^{-1} has corank one. There hb does not exist, so the GTG definition, which holds on the invertible region and reads omega(A) = Omega(hb(A)) and the physical frame through hb, does not apply; a GTG treatment would need an extension of the definition to degenerate soldering that the store does not have. The components in the normal form and the symbol epsilon_{abcd} are what is counted.'
 ---
 
 ## formal
