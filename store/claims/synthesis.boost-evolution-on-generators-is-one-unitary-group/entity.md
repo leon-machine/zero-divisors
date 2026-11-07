@@ -57,11 +57,14 @@ lineage:
   motivated_by:
   - note.decisions.two-boost-flows
   - synthesis.n-plus-null-ground-state
+outside_ga:
+  kind: complex-analysis
+  why: 'the proof quotes the windows'' boost dynamics a_j -> e^{-i omega_j t}a_j with i: window flows on boundary modes keep their own unit (their modes descend from T05''s atom and anticommute with I_4, conventions known limits 1 and 2), while the generator''s continuum carries I_4'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The field''s operator unit on the even values of the canonical null component (Definition obj.field-theory.single-algebra-field: i = I_4) is written I_4 throughout: the Mellin modes |u|^{-1/2 + I_4 w}, the phase flow e^{-I_4 kappa w t}, the imaginary rapidity lambda = I_4 theta, the value rotor B_{I_4 theta} = cos + I_4 e1e0 sin with B_{I_4 theta}Lambda(m) = e^{-I_4 theta/2}Lambda(m), the rotation u -> e^{-I_4 theta}u into span{1, I_4} and the factor -I_4 at theta = pi, numbers read in span{1, I_4}; the proof''s quoted window formula a_j -> e^{-i omega_j t}a_j is cited in words (the windows keep their own unit); nothing stays.'
+    note: 'The field''s operator unit on the even values of the canonical null component (Definition obj.field-theory.single-algebra-field: i = I_4) is written I_4 throughout: the Mellin modes |u|^{-1/2 + I_4 w}, the phase flow e^{-I_4 kappa w t}, the imaginary rapidity lambda = I_4 theta, the value rotor B_{I_4 theta} = cos + I_4 e1e0 sin with B_{I_4 theta}Lambda(m) = e^{-I_4 theta/2}Lambda(m), the rotation u -> e^{-I_4 theta}u into span{1, I_4} and the factor -I_4 at theta = pi, numbers read in span{1, I_4}; the proof''s quoted window formula a_j -> e^{-i omega_j t}a_j keeps i (Leon''s ruling R1: window flows keep their own unit) and is declared.'
   open_problem: op.which-boost-flow-is-time
   maintainer_pass:
     by: maintainer-2026-10-31

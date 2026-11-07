@@ -18,9 +18,6 @@ credit:
   role: split out of synthesis.positive-null-energy-gives-r-premises so that its users rest only on the analysis
   source: maintainer pass 2026-11-07
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'i stays in the proof of (iii), the complex analysis of the kernels (Mellin multiplier, contour rotation x = r e^{-i pi}, continuation in lambda + i theta, Gaussian-rational points of the circle), written there for the unit I_4 of span{1, I_4}, as in the result it was split from'
 about:
 - obj.hawking.continuum-mode-space
 derivations:
@@ -61,7 +58,7 @@ extraction:
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Created at Leon''s decision of 7 November 2026 to split the premise-free analysis out of synthesis.positive-null-energy-gives-r-premises, so that results citing only the null vacuum (its kernel W_0, its uniqueness and ground-state property, its half-generator thermality) no longer inherit (N+) through that result. Numbering: the setup and the weight and dilation statements are (i) here; that result''s (i) is (ii) here, with the converse added; its (ii) is (iii) here. Proofs moved from there; the checks of (iii) are copied from its check functions without the (N+) premise call, and checks of (i) and (ii), which it lacked, are added. Notation as in the source: I_4 for the unit of the mode space in the statement and in (i), (ii); i in the complex analysis of the proof of (iii), declared.'
+    note: 'Created at Leon''s decision of 7 November 2026 to split the premise-free analysis out of synthesis.positive-null-energy-gives-r-premises, so that results citing only the null vacuum (its kernel W_0, its uniqueness and ground-state property, its half-generator thermality) no longer inherit (N+) through that result. Numbering: the setup and the weight and dilation statements are (i) here; that result''s (i) is (ii) here, with the converse added; its (ii) is (iii) here. Proofs moved from there; the checks of (iii) are copied from its check functions without the (N+) premise call, and checks of (i) and (ii), which it lacked, are added. Units per Leon''s rulings R2 and R4 of 7 November 2026: I_4 throughout, the kernels, the Mellin, contour and strip steps included; no bare i remains, so nothing is declared.'
 ---
 
 ## formal

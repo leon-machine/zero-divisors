@@ -1,7 +1,7 @@
 ---
 id: synthesis.point-spectrum-boost-admits-no-half-sided-translations
 kind: claim
-version: 4
+version: 3
 title: 'A point-spectrum boost admits no half-sided translations'
 status: proved
 region: synthesis
@@ -17,10 +17,6 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
-- name: Claude Opus 5.5
-  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
-  version: 4
-  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.boundary-mode-algebra-windows-boost-dynamics
@@ -43,11 +39,14 @@ lineage:
   motivated_by:
   - singularity.why-calibration-cannot-be-internal
   - singularity.rate-rigidity-temperature-not-algebra-intrinsic
+outside_ga:
+  kind: complex-analysis
+  why: 'the boundary-mode algebra''s boost dynamics e^{-i omega_j t}, Ad(e^{itK}) on its windows, [K, P] = icP and the GNS and modular unitaries Delta^{is} keep i: the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2), and the store does not fix their unit'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The unit of the boundary-mode algebra and of the GNS spaces of its states is written as the field unit I_4 (the boost phases e^{-I_4 omega t}, [K, P] = I_4 c P, Ad(e^{I_4 t K}), the modular unitaries Delta^{I_4 s} and rho^{I_4 s}, C read as span{1, I_4}); nothing stays.'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the boundary-mode algebra''s phase flow e^{-i omega_j t}, Ad(e^{itK}) on the windows, [K, P] = icP, the GNS unitaries and the modular group Delta^{is} keep i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2). Declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -70,11 +69,11 @@ extraction:
 ---
 
 ## formal
-Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set $J$ (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-I_{4}\omega_{j}t}a_{j}$ (the unit of the mode space is $I_{4}$; numbers are read in $\mathrm{span}\{1, I_{4}\}$) with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa k$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
+Let $\mathfrak{A}$ be the boundary-mode algebra of Definition \claimref{obj.hawking.boundary-mode-algebra-windows-boost-dynamics} over a countable mode set $J$ (Fact \claimref{hawking.imported-algebra-boundary-modes-car-algebra}), with window algebras $\mathfrak{A}_{F}$ and a quasi-free boost dynamics $\tau_{t}(a_{j}) = e^{-i\omega_{j}t}a_{j}$ with arbitrary real weights $\omega_{j}$ (positive, as in the Definition, or the bilateral weights $\omega_{k} = \kappa k$ of Premise \claimref{singularity.q-joint-quasi-freeness-s-wave}). The operative hypothesis is that the boost multiplies each generating mode by a phase, so that it has pure point spectrum on the windows; countability of the mode set alone would not suffice, since a one-particle space on which the boost has continuous spectrum also has countable bases, in which the boost is not diagonal. Then:
 \begin{enumerate}
-\item[(i)] every window is $\tau$-invariant and every element of $\bigcup_{F}\mathfrak{A}_{F}$ has a relatively compact $\tau$-orbit; on a window no nonzero $P$ satisfies $[K, P] = I_{4}cP$ with $c$ real and nonzero, $K = \sum_{j \in F}\omega_{j}N_{j}$;
+\item[(i)] every window is $\tau$-invariant and every element of $\bigcup_{F}\mathfrak{A}_{F}$ has a relatively compact $\tau$-orbit; on a window no nonzero $P$ satisfies $[K, P] = icP$ with $c$ real and nonzero, $K = \sum_{j \in F}\omega_{j}N_{j}$;
 \item[(ii)] if $(\gamma_{a})_{a \in \R}$ is a one-parameter group of $*$-automorphisms of $\mathfrak{A}$, strongly continuous ($a \mapsto \gamma_{a}(x)$ norm continuous for each $x$), with $\tau_{t}\circ\gamma_{a}\circ\tau_{-t} = \gamma_{e^{ct}a}$ for all $t, a$ and some real $c \neq 0$, then $\gamma_{a} = \id$ for every $a$;
-\item[(iii)] let $\omega$ be a $\tau$-invariant state with GNS triple $(\mathcal{H}, \pi, \Omega)$ and $V_{t}$ the unitary group with $V_{t}\pi(x)\Omega = \pi(\tau_{t}(x))\Omega$. If $(U(a))_{a \in \R}$ is a strongly continuous unitary group on $\mathcal{H}$ with $V_{t}U(a)V_{-t} = U(e^{ct}a)$ for all $t, a$ and some real $c \neq 0$, then $U(a) = 1$ for every $a$. In particular, if the modular unitaries of $(\pi(\mathfrak{A})'', \Omega)$ act through the boost, $\Delta^{I_{4}s} = V_{-\beta s}$ for some $\beta \neq 0$, as they do when $\omega$ is a faithful $(\tau, \beta)$-KMS state, then every unitary group satisfying the hypotheses of the abstract theorem of Fact \claimref{angle.imported-theorems-deliver-their-hypotheses} (positive generator, $U(a)\Omega = \Omega$, half-sided inclusion) is trivial, since by that theorem it satisfies $\Delta^{I_{4}s}U(a)\Delta^{-I_{4}s} = U(e^{-2\pi s}a)$, which is the hypothesis of (iii) with $c = 2\pi/\beta$;
+\item[(iii)] let $\omega$ be a $\tau$-invariant state with GNS triple $(\mathcal{H}, \pi, \Omega)$ and $V_{t}$ the unitary group with $V_{t}\pi(x)\Omega = \pi(\tau_{t}(x))\Omega$. If $(U(a))_{a \in \R}$ is a strongly continuous unitary group on $\mathcal{H}$ with $V_{t}U(a)V_{-t} = U(e^{ct}a)$ for all $t, a$ and some real $c \neq 0$, then $U(a) = 1$ for every $a$. In particular, if the modular unitaries of $(\pi(\mathfrak{A})'', \Omega)$ act through the boost, $\Delta^{is} = V_{-\beta s}$ for some $\beta \neq 0$, as they do when $\omega$ is a faithful $(\tau, \beta)$-KMS state, then every unitary group satisfying the hypotheses of the abstract theorem of Fact \claimref{angle.imported-theorems-deliver-their-hypotheses} (positive generator, $U(a)\Omega = \Omega$, half-sided inclusion) is trivial, since by that theorem it satisfies $\Delta^{is}U(a)\Delta^{-is} = U(e^{-2\pi s}a)$, which is the hypothesis of (iii) with $c = 2\pi/\beta$;
 \item[(iv)] for the weights $\kappa k$ the flow is periodic, $\tau_{2\pi/\kappa} = \id$, so (i) to (iii) hold with every orbit periodic; for weights in $\kappa(\Z + \tfrac12)$, $\tau_{2\pi/\kappa}$ is the parity automorphism.
 \end{enumerate}
 Consequently the mechanism by which the Bisognano-Wichmann and Borchers theorems produce the factor $2\pi$ cannot be realised on the windows, on the countable mode space, or on the array of (Q): a principle deriving (R) along that route must be posed on a one-particle space on which the boost has no eigenvectors spanning the relevant vectors, such as the continuum mode space of Definition \claimref{obj.hawking.continuum-mode-space} with a Hamiltonian of continuous spectrum. This result does not show that the route succeeds there.

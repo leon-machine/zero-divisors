@@ -25,6 +25,10 @@ credit:
   role: the analysis of (i) and (ii) split out into synthesis.null-vacuum-on-a-horizon-generator, which the proof now cites
   version: 6
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: unit conventions per Leon's rulings of 7 November 2026 (R4)
+  version: 6
+  source: maintainer pass 2026-11-07 (unit rulings)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -74,9 +78,13 @@ lineage:
   - synthesis.c-loc-modular-clause-moves-no-nested-patch
   - synthesis.einstein-equations-from-c-loc-and-clausius
 outside_ga:
-  kind: complex-analysis
-  why: 'i stays in the remark of the proof of (iii) on the contour rotation x = r e^{-i pi} and in the Borchers relation Delta^{is} U(a) Delta^{-is} quoted in the form of the imported Fact; the complex analysis of (ii) itself (Mellin multiplier, contour rotation, strip continuation) now stands in the cited result'
+  kind: imported
+  why: 'i stays only in the Borchers relation Delta^{is} U(a) Delta^{-is}, quoted in the form of the imported Fact angle.imported-theorems-deliver-their-hypotheses'
 extraction:
+  maintainer_pass_unit_rulings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s rulings R1-R4 of 7 November 2026, folded into version 6 of this pass: R4: the contour rotation x = r e^{-I_4 pi} of the remark in (iii) written with I_4; i stays only in the Borchers relation quoted from the imported Fact, now declared imported'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'

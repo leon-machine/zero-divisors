@@ -1,7 +1,7 @@
 ---
 id: note.standard-model.setting-content-charges-chirality-2
 kind: note
-version: 1
+version: 2
 title: Content, charges, chirality
 status: setting
 subject: standard-model
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
+  version: 2
+  source: maintainer pass 2026-11-07 (GA units)
 comments_on:
 - standard-model.hyp-s-slot-statistics
 - standard-model.global-form-quotient-determined
@@ -25,14 +29,11 @@ locators:
   number: Setting
   section: Content, charges, chirality
   line: 1081
-outside_ga:
-  kind: other
-  why: 'the complex unit of the representation spaces on which U(2) x U(3) acts: the slot space C^2 and the pair space W = C^3, a maximal isotropic subspace of the complexified conformal space V_C = W + W-bar whose vectors include the spacetime directions; that unit must commute with the conformal vectors, which no pseudoscalar does, so the hypercharge generator (3i I_2, -2i I_3) and its phase keep the plain i'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pass made, nothing replaced: the hypercharge generator (3i I_2, -2i I_3), its phase lambda = e^{i theta} and its action by iq use the scalar of C^2 tensor C^3, kept as the plain complexification and declared.'
+    note: 'By Leon''s ruling R3: the hypercharge generator is (3 I_4 1_2, -2 I_4 1_3), its phase lambda = e^{I_4 theta}, its action I_4 q; the slot and pair spaces C^2, W are read over span{1, I_4} on the tower''s floors (stated once; notational, nothing about Hypothesis (S) follows); no bare i remains, so the earlier declaration is removed.'
 ---
 
 ## formal
@@ -40,9 +41,9 @@ The comparison of Remark \claimref{note.standard-model.eighth-refutation-split-c
 
 \emph{The hypercharge generator.} The Lie algebra of Theorem \claimref{standard-model.global-form-quotient-determined}'s group is $\mathfrak{s}(\uu(2) \oplus \uu(3)) = \{(X, X') : \tr X + \tr X' = 0\}$, and its centre is one-dimensional, spanned by
 \[
-\mathsf{y} := (3i\,I_{2},\; -2i\,I_{3}),
+\mathsf{y} := (3I_{4}\,\mathbf{1}_{2},\; -2I_{4}\,\mathbf{1}_{3}),
 \]
-the unique trace-free combination of the two scalar generators up to scale. The one-parameter subgroup $\exp(\theta\mathsf{y}) = (\lambda^{3}I_{2}, \lambda^{-2}I_{3})$, $\lambda = e^{i\theta}$, is the image of the $U(1)$ factor of Theorem \claimref{standard-model.global-form-quotient-determined}'s second isomorphism, so $\mathsf{y}$ acts on an irreducible constituent by $iq$ where $q$ is the abelian weight of Theorem \claimref{standard-model.global-form-quotient-determined}(ii). \emph{Hypercharge} is $Y := q/6$: the normalisation in which the lattice condition reads $t/3 + \delta/2 + Y \in \mathbb{Z}$, and in which, as computed below, a single pair has weight one unit. The sign of $\mathsf{y}$ is not fixed by the algebra: $(a, b, \lambda) \mapsto (\lambda^{-3}a, \lambda^{2}b)$ is an equally good second isomorphism with the same $\mathbb{Z}_{6}$ kernel, and it reverses every weight. The sign chosen here is the one in which the pair-level generators of Proposition \claimref{standard-model.quarks-leptons-two-level-fermion-content}(1) have weight $+1$; the opposite sign gives the conjugate listing throughout, and the choice is part of the particle-antiparticle orientation of Theorem \claimref{standard-model.hypercharge-global-form-pair-counting-consistency}(1). This is a definition of the symbol $Y$; that the symbol so defined is the hypercharge of the Standard Model is the observation-level identification of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s reading, and is not claimed by the definition.
+the unique trace-free combination of the two scalar generators up to scale (numbers and the module's complex structure are read in $\mathrm{span}\{1, I_{4}\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors; $\mathbf{1}_{n}$ is the identity). The one-parameter subgroup $\exp(\theta\mathsf{y}) = (\lambda^{3}\mathbf{1}_{2}, \lambda^{-2}\mathbf{1}_{3})$, $\lambda = e^{I_{4}\theta}$, is the image of the $U(1)$ factor of Theorem \claimref{standard-model.global-form-quotient-determined}'s second isomorphism, so $\mathsf{y}$ acts on an irreducible constituent by $I_{4}q$ where $q$ is the abelian weight of Theorem \claimref{standard-model.global-form-quotient-determined}(ii). \emph{Hypercharge} is $Y := q/6$: the normalisation in which the lattice condition reads $t/3 + \delta/2 + Y \in \mathbb{Z}$, and in which, as computed below, a single pair has weight one unit. The sign of $\mathsf{y}$ is not fixed by the algebra: $(a, b, \lambda) \mapsto (\lambda^{-3}a, \lambda^{2}b)$ is an equally good second isomorphism with the same $\mathbb{Z}_{6}$ kernel, and it reverses every weight. The sign chosen here is the one in which the pair-level generators of Proposition \claimref{standard-model.quarks-leptons-two-level-fermion-content}(1) have weight $+1$; the opposite sign gives the conjugate listing throughout, and the choice is part of the particle-antiparticle orientation of Theorem \claimref{standard-model.hypercharge-global-form-pair-counting-consistency}(1). This is a definition of the symbol $Y$; that the symbol so defined is the hypercharge of the Standard Model is the observation-level identification of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}'s reading, and is not claimed by the definition.
 
 \emph{The tensor state space, and what it does not contain.} The state space of the minimal massive hierarchy is $\Lambda^{\bullet}(\C^{2} \otimes \C^{3})$, generated from its vacuum by the six creation operators of the cells of Figure \ref{fig:hierarchy}; a cell is one pair of one twistor, and an automorphism acts on the cells as $A \otimes B$. On this state space the $U(1)$ factor $(\lambda^{3}, \lambda^{-2})$ acts on a cell by $\lambda^{3}\lambda^{-2} = \lambda$, so a state with $k$ cells occupied has weight $k$, and Proposition \claimref{standard-model.raw-representation-content-state-space} lists every representation that occurs: $(2,3)$ at one cell, and in every degree only the representations of \eqref{eq:fock}. In particular no $(2,1)$ occurs anywhere in the tensor state space, and the states that fill a whole row of the figure, $(v \otimes f_{1}) \wedge (v \otimes f_{2}) \wedge (v \otimes f_{3})$ for $v \in \C^{2}$, are cubic in $v$ and span $S^{3}\C^{2} \otimes \Lambda^{3}\C^{3} = (4, 1)$, the quadruplet of Proposition \claimref{standard-model.raw-representation-content-state-space}'s degree three, of weight $+3$. A lepton doublet, $(2,1)$ of weight $-3$, is therefore not an object of the tensor state space, and no reading of its generators produces one. The same computation shows more: every cell has weight $+1$, so the state space contains no state of negative weight at all, and \eqref{eq:fock} contains no $(1, \bar{3})$ in any degree; so the single-twistor sector of Proposition \claimref{standard-model.quarks-leptons-two-level-fermion-content}(3), with its negative weights $-2k$ and its $\bar{3}$ at grade two, is not a subspace of the tensor state space either. What is unconditional is the state space's own content, the quark doublet as its cells and the negative theorem; the single-twistor sector is a computation on the Fock space $\Lambda^{\bullet}W$ of one twistor's pairs, which under the hypothesis below is the slot-free row of one object holding both. The lepton needs a hypothesis, stated here.
 

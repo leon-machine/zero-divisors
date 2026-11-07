@@ -1,7 +1,7 @@
 ---
 id: synthesis.q-splits-maximum-entropy-affine-weights
 kind: claim
-version: 5
+version: 4
 title: 'Premise (Q) splits into maximum entropy and an affine weight law'
 status: proved
 region: synthesis
@@ -17,10 +17,6 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
-- name: Claude Opus 5.5
-  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
-  version: 5
-  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.singularity.geometric-modular-condition-g
@@ -56,11 +52,14 @@ lineage:
   motivated_by:
   - singularity.q-joint-quasi-freeness-s-wave
   - synthesis.residue-common-weight-particle-hole
+outside_ga:
+  kind: complex-analysis
+  why: 'the geometric boost flow e^{itK_geo}(.)e^{-itK_geo} and the phases e^{-i omega_k t} on the window''s modes, with the window read over C, keep i: they are flows on boundary-mode windows, whose modes descend from T05''s atom and anticommute with I_4 (conventions, known limits 1 and 2), so the store does not fix their unit'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The unit of the fermion array mode space (boundary modes) is written as the field unit I_4: the boost-flow phases and the conjugations e^{I_4 t K_geo}, with C read as span{1, I_4}; nothing stays.'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the conjugations by e^{itK_geo}, the boost phases e^{-i omega_k t} on the modes and the window''s C keep i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2). Declared (version and levels unchanged).'
   maintainer_pass:
     by: maintainer-2026-10-23
     date: '2026-10-23'
@@ -89,10 +88,10 @@ extraction:
 Let $\{\psi_{k}\}_{k \in \Z}$ be the fermion array of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector}, with currents $a_{m} := \sum_{k}\psi_{k}^{\dagger}\psi_{k+m}$, mode weights $\omega_{k}$, number operators $N_{k} = \psi_{k}^{\dagger}\psi_{k}$, $K_{k} = N_{k} - \tfrac12$ and $K_{\mathrm{geo}} = \sum_{k}\omega_{k}K_{k}$, and let $\mathcal{C}$ be the class of Corollary \claimref{singularity.chains-state-class-stability}: the even states every single-mode marginal of which is the Gibbs state of $K_{k}$ at $\beta = 2\pi/\kappa$, with occupation $n_{k} = (e^{\beta\omega_{k}} + 1)^{-1}$. Premise \claimref{singularity.q-joint-quasi-freeness-s-wave} has two clauses: (Q-qf) the joint state is the gauge-invariant quasi-free state with $\langle\psi_{k}^{\dagger}\psi_{l}\rangle = \delta_{kl}n_{k}$; (Q-w) $\omega_{k} = \kappa k$. Then:
 \begin{enumerate}
 \item[(i)] (the quasi-free clause is a maximum-entropy selection) on every finite window, for $\varrho \in \mathcal{C}$ with product of marginals $\sigma$, one has $S(\sigma) - S(\varrho) = C(\varrho) = \rel{\varrho}{\sigma}$, with $C$ the total correlation of Corollary \claimref{singularity.deficit-carried-quanta-correlations}, and the following are equivalent: (a) $\varrho$ satisfies (Q-qf); (b) $\varrho = \sigma$; (c) $\varrho$ satisfies the geometric modular condition (G); (d) $C(\varrho) = 0$; (e) $\varrho$ has the largest von Neumann entropy in $\mathcal{C}$. Since $\mathcal{C}$ contains correlated states, (Q-qf) does not follow from (P) and (R); given them it is the maximum-entropy rule at the marginals (R) fixes, equivalently (G) in the stationary idealisation;
-\item[(ii)] (the affine law) every current $a_{m}$, $m \neq 0$, is a normal mode of the boost flow, $e^{I_{4}tK_{\mathrm{geo}}}a_{m}e^{-I_{4}tK_{\mathrm{geo}}} = e^{-I_{4}\lambda_{m}t}a_{m}$ for all $t$ (the unit of the mode space is $I_{4}$; numbers are read in $\mathrm{span}\{1, I_{4}\}$), if and only if the weights are affine, $\omega_{k} = ck + d$; then $\lambda_{m} = cm$, and the linear span of the currents is invariant under the flow exactly in this case;
+\item[(ii)] (the affine law) every current $a_{m}$, $m \neq 0$, is a normal mode of the boost flow, $e^{itK_{\mathrm{geo}}}a_{m}e^{-itK_{\mathrm{geo}}} = e^{-i\lambda_{m}t}a_{m}$ for all $t$, if and only if the weights are affine, $\omega_{k} = ck + d$; then $\lambda_{m} = cm$, and the linear span of the currents is invariant under the flow exactly in this case;
 \item[(iii)] (the Planck clause holds for every affine law) for affine weights with $c > 0$ and the symbol $n_{k} = (e^{\beta(ck + d)} + 1)^{-1}$, $\sum_{k \in \Z}n_{k+m}(1 - n_{k}) = m/(e^{\beta cm} - 1)$ for every $m > 0$ and every offset $d$: the Bose-Einstein occupancy at temperature $1/\beta$ and frequency $cm$ holds for every affine law, so clause (3) of Theorem \claimref{singularity.bosonisation-bridge-s-wave-sector} fixes neither $d$ nor $c$; that it requires the affine form rests on reading each current as a normal mode of the boost flow, which is (ii);
 \item[(iv)] (the two free data) for affine weights and an integer $k_{0}$, the particle-hole map $\psi_{k} \mapsto \psi_{k_{0} - k}^{\dagger}$ commutes with the boost flow, and carries the quasi-free Gibbs state at each $\beta$ to itself, if and only if $ck_{0} + 2d = 0$. Up to relabelling the array there are exactly two such classes: the sea at a site ($d = 0$: one mode of zero weight per array, with $n_{0} = \tfrac12$, the flow at time $2\pi/c$ the identity), which is (Q)'s choice, and the sea between sites ($d = c/2$: no zero-weight mode, the flow at time $2\pi/c$ the parity automorphism $\psi \mapsto -\psi$). In either class the one remaining datum is the dimensionless slope $y := \beta c$, the ratio of the KMS period to the recurrence time $2\pi/c$ of the flow, multiplied by $2\pi$; (Q-w) sets $y = 2\pi$, the value at which the recurrence time of the array's flow equals the KMS period;
-\item[(v)] (rotations) let the counted modes be $\psi_{k,a}$ on $\ell^{2}(W) \otimes \C^{n}$ ($\C = \mathrm{span}_{\R}\{1, I_{4}\}$), with the principal $\mathfrak{su}(2)$ of Theorem \claimref{scrambling.principality-indifference-sphere} on the second factor and the array index on the first. A quasi-free number-preserving generator with weights $\omega_{k,a}$ commutes with the second-quantised rotations if and only if $\omega_{k,a} = \omega_{k}$ does not depend on $a$; with (ii) in each channel, rotation equivariance and normal-mode currents together give $\omega_{k,a} = ck + d$, and the quasi-free state with symbol $\operatorname{diag}(n_{k}) \otimes \id$ is rotation invariant. At each array level the $n$ modes are a principal mode space of common weight $ck + d$, as Theorem \claimref{synthesis.residue-common-weight-particle-hole}(i) requires; the conflict of its clause (iv) arises exactly when a window of the array index is placed on the magnetic index. In the class with the sea at a site, the level $k = 0$ is a principal mode space at zero weight, maximally mixed and invariant under the particle-hole map of that theorem, the equality case of Theorem \claimref{synthesis.residue-from-mode-entropy}(ii).
+\item[(v)] (rotations) let the counted modes be $\psi_{k,a}$ on $\ell^{2}(W) \otimes \C^{n}$, with the principal $\mathfrak{su}(2)$ of Theorem \claimref{scrambling.principality-indifference-sphere} on the second factor and the array index on the first. A quasi-free number-preserving generator with weights $\omega_{k,a}$ commutes with the second-quantised rotations if and only if $\omega_{k,a} = \omega_{k}$ does not depend on $a$; with (ii) in each channel, rotation equivariance and normal-mode currents together give $\omega_{k,a} = ck + d$, and the quasi-free state with symbol $\operatorname{diag}(n_{k}) \otimes \id$ is rotation invariant. At each array level the $n$ modes are a principal mode space of common weight $ck + d$, as Theorem \claimref{synthesis.residue-common-weight-particle-hole}(i) requires; the conflict of its clause (iv) arises exactly when a window of the array index is placed on the magnetic index. In the class with the sea at a site, the level $k = 0$ is a principal mode space at zero weight, maximally mixed and invariant under the particle-hole map of that theorem, the equality case of Theorem \claimref{synthesis.residue-from-mode-entropy}(ii).
 \end{enumerate}
 So (Q) is the conjunction of a maximum-entropy rule, an affine weight law (forced if each current is a normal mode of the boost flow, as the Planck clause reads it), and two choices the framework does not make: the offset class and the value $y = 2\pi$. At $y = 2\pi$ the entropy of one array is the value $\ln 2 + \varepsilon$ of Theorem \claimref{synthesis.residue-from-mode-entropy}(vi) in the class with the sea at a site; its value in the class with the sea between sites is the subject of a result filed alongside, synthesis.half-integer-weight-array-carries-half-ln2.
 

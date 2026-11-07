@@ -1,0 +1,9 @@
+synthesis.point-spectrum-boost-admits-no-half-sided-translations
+synthesis.s-wave-array-is-a-boundary-mode-set
+synthesis.q-splits-maximum-entropy-affine-weights
+synthesis.quadratic-flows-cannot-thermalise-descent
+synthesis.half-integer-weight-array-carries-half-ln2
+synthesis.null-ordering-of-counted-units-is-zeta-symmetric
+synthesis.boost-evolution-on-generators-is-one-unitary-group
+note.standard-model.setting-content-charges-chirality-2
+note.standard-model.setting-intermediate-symmetry-slot-pair-split

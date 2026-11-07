@@ -1,0 +1,2 @@
+note.standard-model.setting-content-charges-chirality-2
+note.standard-model.setting-intermediate-symmetry-slot-pair-split

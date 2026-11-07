@@ -1,7 +1,7 @@
 ---
 id: synthesis.null-ordering-of-counted-units-is-zeta-symmetric
 kind: claim
-version: 3
+version: 2
 title: 'The null ordering of counted units is zeta-symmetric'
 status: proved
 region: synthesis
@@ -17,10 +17,6 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
-- name: Claude Opus 5.5
-  role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
-  version: 3
-  source: maintainer pass 2026-11-07 (GA units)
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -52,11 +48,14 @@ lineage:
   motivated_by:
   - synthesis.counted-unit-energy-at-half-offset
   - synthesis.n-plus-null-ground-state
+outside_ga:
+  kind: complex-analysis
+  why: 'the twist phase e^{2 pi i delta} of the chiral component on a window keeps i: it is a window flow on boundary modes, which descend from T05''s atom and anticommute with I_4 (conventions, known limits 1 and 2), so the store does not fix its unit'
 extraction:
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'The twist phase of the chiral component on one window is written in the field unit I_4, e^{2 pi I_4 delta}; nothing stays.'
+    note: 'No unit replaced, by Leon''s ruling R1 (7 November 2026): the twist phase e^{2 pi i delta} of the chiral component on one window keeps i, since the boundary modes descend from T05''s atom, whose mode operators anticommute with I_4 (conventions, known limits 1 and 2). Declared (version and levels unchanged).'
   open_problem: op.counted-mode-energy
   maintainer_pass:
     by: maintainer-2026-10-31

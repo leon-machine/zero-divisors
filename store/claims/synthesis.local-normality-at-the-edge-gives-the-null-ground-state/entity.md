@@ -21,10 +21,11 @@ credit:
   role: premises repointed to the premise-free results split out of the null-energy and collapse results
   version: 3
   source: maintainer pass 2026-11-07
+- name: Claude Opus 5.5
+  role: unit conventions per Leon's rulings of 7 November 2026 (R2)
+  version: 3
+  source: maintainer pass 2026-11-07 (unit rulings)
 review: draft
-outside_ga:
-  kind: complex-analysis
-  why: 'the generator kernels (i/2 pi)(u - u'' + i0)^{-1} and their thermal and log forms, the Fourier and Laplace transforms on L^2 of a null line and the regularised Synge function sigma + i epsilon(...) are boundary values and contour arguments of scalar kernels; the prefactor and the boundary value carry one complex unit, so writing the prefactor alone as I_4 would split it, and the i0 of a time function or of a spacetime vector cannot be a pseudoscalar'
 about:
 - obj.hawking.continuum-mode-space
 derivations:
@@ -54,6 +55,10 @@ lineage:
   - synthesis.attachment-conformal-energy-is-generated-by-z
   - synthesis.tower-charge-sector-label-temperature-not
 extraction:
+  maintainer_pass_unit_rulings:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Leon''s rulings R1-R4 of 7 November 2026, folded into version 3 of this pass: R2: the null-vacuum kernel W_0 = (I_4/2 pi)(u - v + I_4 0)^{-1}, the cross-edge and thermal kernels written with I_4; no bare i remains, declaration removed'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -93,7 +98,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$, $\omega_{0}$ the null vacuum with $W_{0}(u, v) = \tfrac{i}{2\pi}(u - v + i0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)), and $R = W_{\omega} - W_{0}$. For an interval $J$ say that $\omega$ is \emph{locally normal to $\omega_{0}$ on $J$} if the restrictions of $\omega$ and $\omega_{0}$ to $\CAR(L^{2}(J)\otimes K)$ are quasi-equivalent, and that $\omega$ satisfies the \emph{local Hilbert-Schmidt condition on $J$} if $R$ restricted to $J \times J$ is a square-integrable kernel (in each $K$-component). Scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}.
+Units $\hbar = c = 1$. On a generator of a horizon, with a regular parameter $u$ and the continuum mode space $\CAR(L^{2}(\R, du)\otimes K)$ of Definition \claimref{obj.hawking.continuum-mode-space}, let $\omega$ be a gauge-invariant quasi-free state with two-point kernel $W_{\omega}(u, v) = \omega(\psi^{*}(v)\psi(u))$, $\omega_{0}$ the null vacuum with $W_{0}(u, v) = \tfrac{I_{4}}{2\pi}(u - v + I_{4}0)^{-1}\otimes\id_{K}$ (the state that (N$_{+}$) selects, Theorem \claimref{synthesis.null-vacuum-on-a-horizon-generator}(ii)), and $R = W_{\omega} - W_{0}$. For an interval $J$ say that $\omega$ is \emph{locally normal to $\omega_{0}$ on $J$} if the restrictions of $\omega$ and $\omega_{0}$ to $\CAR(L^{2}(J)\otimes K)$ are quasi-equivalent, and that $\omega$ satisfies the \emph{local Hilbert-Schmidt condition on $J$} if $R$ restricted to $J \times J$ is a square-integrable kernel (in each $K$-component). Scaling limits and the local form of (N$_{+}$) are as in Theorem \claimref{synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit}.
 \begin{enumerate}
 \item[(i)] \emph{(The scaling preserves local Hilbert-Schmidt norms; proved.)} For the scaling about $u_{0}$ with weight $p$ per leg, $(S_{\lambda}R)(x, y) = \lambda^{2p}R(u_{0} + \lambda x, u_{0} + \lambda y)$, and any interval $I$, $\|S_{\lambda}R\|^{2}_{L^{2}(I \times I)} = \lambda^{4p - 2}\|R\|^{2}_{L^{2}((u_{0} + \lambda I)^{2})}$. The norm is carried over unchanged exactly for $p = \tfrac12$, the weight of the boost and of the anticommutator.
 \item[(ii)] \emph{(Local normality gives the local form; proved, given Powers-Stormer.)} Local normality to $\omega_{0}$ on $J$ implies the local Hilbert-Schmidt condition on $J$. If the condition holds on an interval $J$ containing $u_{0}$, then the scaled kernels $\lambda W_{\omega}(u_{0} + \lambda x, u_{0} + \lambda y)$ converge to $W_{0}$ in Hilbert-Schmidt norm on every bounded interval, so every $n$-point function converges: the scaling limit of $\omega$ at $u_{0}$ exists and is $\omega_{0}$, that is, $\omega$ is locally the null vacuum at $u_{0}$. No bound on $R$ near the point and no reference to the field strength enters.
