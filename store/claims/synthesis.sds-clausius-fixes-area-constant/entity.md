@@ -18,7 +18,7 @@ credit:
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
 - name: Claude Opus 5.5
-  role: 'consistency pass, normalisation of the null pair stated in proof (iv)'
+  role: consistency pass, normalisation of the null pair stated in proof (iv)
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

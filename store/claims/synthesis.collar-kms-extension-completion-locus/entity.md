@@ -1,7 +1,7 @@
 ---
 id: synthesis.collar-kms-extension-completion-locus
 kind: claim
-version: 3
+version: 4
 title: 'Under (E), the horizon''s KMS state reads $6\pi$ at the exceptional set'
 status: proved
 region: synthesis
@@ -25,6 +25,10 @@ credit:
   role: 'unit resolution pass, the holonomy phase flows written with the transverse unit J'
   version: 3
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Claude Opus 5.5
+  role: GA rewrite (Killing bivector from the synchronous gauge field)
+  version: 4
+  source: maintainer pass 2026-11-07 (consistency)
 review: draft
 derivations:
 - name: main
@@ -44,6 +48,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_ga_rewrite:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Forms and Christoffel symbols to GA in the proof of (i): the (tau, t) block is the synchronous field hb^{-1}(e_tau) = e_0, hb^{-1}(e_t) = a e_1 with Omega(e_tau) = 0, Omega(hb(e_1)) = -(a''/a) B_1, so e_0, e_1 and B_1 are D-parallel along the tau-lines, and the Killing vector K = a e_1 has A . DK = A . F_K with F_K = (D ^ K)/2 = a'' B_1 (dictionary clause (vi)); the Christoffel symbol and the two-form d(xi_flat) stay as a labelled component reading. A notation change: the two frame derivatives are one-line GA computations ((e_0 . D)K = a'' e_1, (e_1 . D)K = -a'' (e_0 ^ e_1) . e_1 = a'' e_0), equal to the stored component values. Statement unchanged.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'

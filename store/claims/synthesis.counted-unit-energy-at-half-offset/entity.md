@@ -22,7 +22,7 @@ credit:
   version: 2
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: 'consistency pass, bare imaginary unit in proof (i) written as I_4'
+  role: consistency pass, bare imaginary unit in proof (i) written as I_4
   version: 3
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

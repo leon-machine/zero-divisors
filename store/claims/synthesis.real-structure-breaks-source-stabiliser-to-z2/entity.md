@@ -22,7 +22,7 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
-  role: 'consistency pass, sign slip in an intermediate expression of proof (ii) corrected'
+  role: consistency pass, sign slip in an intermediate expression of proof (ii) corrected
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

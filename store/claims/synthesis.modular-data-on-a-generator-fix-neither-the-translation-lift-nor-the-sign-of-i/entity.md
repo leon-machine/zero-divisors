@@ -2,7 +2,7 @@
 id: synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i
 kind: claim
 version: 5
-title: 'Net-level modular data on a generator fix neither the translation lift nor the sign of the unit'
+title: 'Net-level modular data on a generator fix neither the translation lift nor the unit''s sign'
 status: proved
 region: synthesis
 subject: thermality
@@ -26,7 +26,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
-  role: 'consistency pass, the bare i of the title written as the unit, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used'
+  role: 'consistency pass, the bare i of the title replaced by the unit''s sign, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft
@@ -73,7 +73,7 @@ extraction:
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Version 4 -> 5: The bare i of the title written as the unit, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used; mathematics, links, pins, status and checks unchanged.'
+    note: 'Version 4 -> 5: The bare i of the title replaced by the unit''s sign, and a sentence saying that the unindexed J of (iv) is the transverse bivector, not a modular conjugation J_a, and which sign of the boost bivector B is used; mathematics, links, pins, status and checks unchanged.'
   maintainer_pass_clause_split:
     by: maintainer-2026-11-07
     date: '2026-11-07'

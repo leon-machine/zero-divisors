@@ -26,7 +26,7 @@ credit:
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
 - name: Claude Opus 5.5
-  role: 'consistency pass, formal now cites the imported Stiefel and Grassmannian Fact its proof uses'
+  role: consistency pass, formal now cites the imported Stiefel and Grassmannian Fact its proof uses
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
 review: draft

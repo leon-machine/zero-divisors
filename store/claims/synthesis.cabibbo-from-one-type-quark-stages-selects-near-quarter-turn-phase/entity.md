@@ -22,7 +22,7 @@ credit:
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
 - name: Claude Opus 5.5
-  role: 'consistency pass, Pauli-matrix reading of the light-plane block in proof (i) written in Cl(3,0)'
+  role: consistency pass, Pauli-matrix reading of the light-plane block in proof (i) written in Cl(3,0)
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
 review: draft
