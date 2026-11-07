@@ -55,7 +55,14 @@ lineage:
   - synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
   - synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes
   - synthesis.c-loc-local-horizon-premise
+outside_ga:
+  kind: complex-analysis
+  why: 'the parametrix is the boundary value of a complexified world function (sigma + i epsilon(t - t''), the i0 and log(-i s) prescriptions, the complex shift of the transverse Gaussian integral), and the i of its Dirac numerator (i D_x + m_0) stands before an odd factor of a bispinor kernel, where the store fixes no placement of the right unit I_4; W_0 keeps i because it is equated with that kernel'
 extraction:
+  maintainer_pass_ga_units:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'No unit replaced, left for Leon to rule: the i of the Dirac numerator (i D_x + m_0) multiplies an odd factor of a bispinor kernel, where the right unit x -> x I_4 would have to act on the spinor and not on the kernel and the store fixes no such placement, and the rest is the boundary value of the complexified world function (sigma + i epsilon(t - t''), the i0 and log(-i s) prescriptions, the complex shift of the transverse Gaussian integral); W_0 keeps i here because the result equates it with that restricted parametrix (declared complex-analysis).'
   open_problem: op.qft-on-gtg-fields
   note: >-
     Proves the remainder bound that the premise (HS), synthesis.hadamard-scaling-limit-premise version 3,
