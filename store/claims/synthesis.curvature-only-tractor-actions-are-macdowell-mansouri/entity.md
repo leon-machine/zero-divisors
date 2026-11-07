@@ -30,7 +30,7 @@ derivations:
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-lovelock-cartan-four-forms-and-holst-term@1
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,6 +51,10 @@ lineage:
   - synthesis.series-wald-entropy-changes-without-flux-on-local-horizons
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 3 -> 4 repinned; its change is the two-form and four-form definitions written in GA, the forms kept as readings and proved equal (notation).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

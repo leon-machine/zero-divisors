@@ -34,7 +34,7 @@ derivations:
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -58,6 +58,10 @@ lineage:
   - synthesis.imported-einstein-cartan-matter-coupling
   - synthesis.einstein-route-makes-n-initial-data
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 3 -> 4 repinned; its change is the two-form and four-form definitions written in GA, the forms kept as readings and proved equal (notation).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -44,7 +44,7 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@6
+  - pairing.imported-schwarzschild-connection-curvature@7
   - pairing.imported-spin-coefficients-null-tetrad@3
   - std-algebra.complexification-is-the-odd-extension@2
   proof: proof-main.tex
@@ -69,6 +69,10 @@ locators:
   label: prop:schwarzschild
   line: 311
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): pairing.imported-schwarzschild-connection-curvature 6 -> 7 repinned; its change is the round two-sphere written out in place of d Omega^2 (notation).'
   maintainer_pass_decisions_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -1739,7 +1739,7 @@
 ""
 ]
 ],
-"key": "b88207be16bb3e04",
+"key": "45207de6f6ff1fe5",
 "result": "pass",
 "runs": [
 {
@@ -3152,7 +3152,7 @@
 "dark-matter.no-coupling-rule-odd-towers-follows": {
 "failed": false,
 "findings": [],
-"key": "7a6e6a48e8579304",
+"key": "93f12d26fe2d8946",
 "result": "pass",
 "runs": [
 {
@@ -4142,7 +4142,7 @@
 ""
 ]
 ],
-"key": "e9cc4f7e829e2dcf",
+"key": "0b2a28b8b0bb799f",
 "result": "pass",
 "runs": [
 {
@@ -8680,7 +8680,7 @@
 ""
 ]
 ],
-"key": "8e86e061dfddfc78",
+"key": "7aafbae197db137c",
 "result": "pass",
 "runs": [
 {
@@ -16680,7 +16680,7 @@
 "obj.interior.weighted-blow-up-hubble-normalisation-admissible": {
 "failed": false,
 "findings": [],
-"key": "ba6dee2e43b3e393",
+"key": "4e499e1718d111fd",
 "result": "none",
 "runs": []
 },
@@ -19066,7 +19066,7 @@
 "pairing.imported-schwarzschild-connection-curvature": {
 "failed": false,
 "findings": [],
-"key": "756705fbbc861aeb",
+"key": "3ff19a63fd3b07b4",
 "result": "pass",
 "runs": [
 {
@@ -19462,7 +19462,7 @@
 "pairing.static-frame-only-expansion-survives": {
 "failed": false,
 "findings": [],
-"key": "fa1f9157d5979d9c",
+"key": "e3a051f741411942",
 "result": "pass",
 "runs": [
 {
@@ -22164,7 +22164,7 @@
 ""
 ]
 ],
-"key": "52e2b3c3337ef524",
+"key": "943e3dbe91a589ba",
 "result": "pass",
 "runs": [
 {
@@ -23869,7 +23869,7 @@
 "sheaf.weighted-limit": {
 "failed": false,
 "findings": [],
-"key": "95b482e20bb93b22",
+"key": "a241a2dd0c9185a7",
 "result": "pass",
 "runs": [
 {
@@ -25324,7 +25324,7 @@
 "singularity.imported-interior-collar-kasner-form": {
 "failed": false,
 "findings": [],
-"key": "6821805174ace797",
+"key": "4b089b745c3f5764",
 "result": "pass",
 "runs": [
 {
@@ -26530,7 +26530,7 @@
 ""
 ]
 ],
-"key": "c513d74fbeec36cb",
+"key": "43c9ac43a7bcfa53",
 "result": "pass",
 "runs": [
 {
@@ -31893,7 +31893,7 @@
 "synthesis.black-hole-data-do-not-fix-field-equations": {
 "failed": false,
 "findings": [],
-"key": "a65f10e3575c7342",
+"key": "ede86afd6d9ec8f4",
 "result": "pass",
 "runs": [
 {
@@ -31917,6 +31917,15 @@
 "singularity.rate-discharge-hypothesis-iii",
 "synthesis.imported-gtg-dictionary",
 "synthesis.imported-wald-noether-charge-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_gtg_formal_readings_of_the_ricci_components",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-gtg-dictionary"
 ]
 }
 ]
@@ -33022,7 +33031,7 @@
 "synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period": {
 "failed": false,
 "findings": [],
-"key": "0af380d8aeb35f07",
+"key": "91cc3f3a106bf438",
 "result": "pass",
 "runs": [
 {
@@ -33282,7 +33291,7 @@
 "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
 "failed": false,
 "findings": [],
-"key": "0f4838813bbade0a",
+"key": "daddae06413364eb",
 "result": "pass",
 "runs": [
 {
@@ -33351,7 +33360,7 @@
 "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
 "failed": false,
 "findings": [],
-"key": "e75cb8e19c6e3a2f",
+"key": "ea7b5f1e451b5692",
 "result": "pass",
 "runs": [
 {
@@ -33416,6 +33425,15 @@
 "quantities": [],
 "touched": [
 "singularity.euclidean-section-period",
+"synthesis.imported-gtg-dictionary"
+]
+},
+{
+"derivation": null,
+"func": "check_gtg_affine_velocity_is_the_christoffel_reading",
+"ok": true,
+"quantities": [],
+"touched": [
 "synthesis.imported-gtg-dictionary"
 ]
 }
@@ -33731,7 +33749,7 @@
 "synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion": {
 "failed": false,
 "findings": [],
-"key": "26aeb158ee6a654c",
+"key": "1febb1cbda10923f",
 "result": "pass",
 "runs": [
 {
@@ -33840,7 +33858,7 @@
 "synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch": {
 "failed": false,
 "findings": [],
-"key": "26b245ae43f63193",
+"key": "95d0df44fa0327c7",
 "result": "pass",
 "runs": [
 {
@@ -34072,7 +34090,7 @@
 "synthesis.curvature-only-tractor-actions-are-macdowell-mansouri": {
 "failed": false,
 "findings": [],
-"key": "40e322a24bbf8cf5",
+"key": "e4341fbb69542d53",
 "result": "pass",
 "runs": [
 {
@@ -34666,7 +34684,7 @@
 "synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface": {
 "failed": false,
 "findings": [],
-"key": "92bf0d47f39eb3f5",
+"key": "b065a0ec7cb8d7df",
 "result": "pass",
 "runs": [
 {
@@ -34784,7 +34802,7 @@
 "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "b945189935140ed9",
+"key": "de6e727e9f797f2e",
 "result": "pass",
 "runs": [
 {
@@ -35676,7 +35694,7 @@
 "synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces": {
 "failed": false,
 "findings": [],
-"key": "d2e8dcdb6235808e",
+"key": "ebbff8b98337732c",
 "result": "pass",
 "runs": [
 {
@@ -36109,7 +36127,7 @@
 "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
 "failed": false,
 "findings": [],
-"key": "28fd11a0c73e0b98",
+"key": "f51c2e46786e8518",
 "result": "pass",
 "runs": [
 {
@@ -36215,7 +36233,7 @@
 "synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen": {
 "failed": false,
 "findings": [],
-"key": "0be1c74fd5ba61bf",
+"key": "b768d04b0166713f",
 "result": "pass",
 "runs": [
 {
@@ -36266,7 +36284,7 @@
 "synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared": {
 "failed": false,
 "findings": [],
-"key": "e805decc51969390",
+"key": "77e4d1d64a7d4ed3",
 "result": "pass",
 "runs": [
 {
@@ -36359,13 +36377,24 @@
 "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection",
 "synthesis.imported-gtg-dictionary"
 ]
+},
+{
+"derivation": null,
+"func": "check_gtg_four_form_density_of_bivector_maps",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-makes-stelle-west-vector",
+"synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection",
+"synthesis.imported-gtg-dictionary"
+]
 }
 ]
 },
 "synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff": {
 "failed": false,
 "findings": [],
-"key": "f4eebf46913c714e",
+"key": "847db1caf37514ac",
 "result": "pass",
 "runs": [
 {
@@ -36437,13 +36466,24 @@
 "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection",
 "synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part"
 ]
+},
+{
+"derivation": null,
+"func": "check_gtg_formal_forms_equal_their_index_readings",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-makes-stelle-west-vector",
+"synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared",
+"synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection"
+]
 }
 ]
 },
 "synthesis.frozen-point-unique-where-weyl-has-no-kernel": {
 "failed": false,
 "findings": [],
-"key": "14aae0d7dce18206",
+"key": "5df45100d685c2d1",
 "result": "pass",
 "runs": [
 {
@@ -37210,7 +37250,7 @@
 "synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability": {
 "failed": false,
 "findings": [],
-"key": "c7357adda6968932",
+"key": "8aabd6c65a018559",
 "result": "none",
 "runs": []
 },
@@ -38126,7 +38166,7 @@
 "synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent": {
 "failed": false,
 "findings": [],
-"key": "e8f4e74e627c3569",
+"key": "a751ea2a4f385bf1",
 "result": "pass",
 "runs": [
 {
@@ -38289,7 +38329,7 @@
 "synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "b98d1b2cc77e76be",
+"key": "baf5d134f35ff6bd",
 "result": "pass",
 "runs": [
 {
@@ -38354,7 +38394,7 @@
 "synthesis.inverse-problem-for-the-clausius-route": {
 "failed": false,
 "findings": [],
-"key": "d4a4a63ca1efc76f",
+"key": "2cd2f97f0ccbf967",
 "result": "pass",
 "runs": [
 {
@@ -39615,7 +39655,7 @@
 "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum": {
 "failed": false,
 "findings": [],
-"key": "de419e593999ddf2",
+"key": "ed62b67b9f7cc7f2",
 "result": "pass",
 "runs": [
 {
@@ -39695,7 +39735,7 @@
 "synthesis.loc-independent-of-clausius-and-killing-data": {
 "failed": false,
 "findings": [],
-"key": "cd10020e8b46b500",
+"key": "00eb50c36c4ca96c",
 "result": "pass",
 "runs": [
 {
@@ -39994,7 +40034,7 @@
 "synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part": {
 "failed": false,
 "findings": [],
-"key": "2160fe33f4e2d842",
+"key": "f4d3655ce14e0d72",
 "result": "pass",
 "runs": [
 {
@@ -40203,7 +40243,7 @@
 "synthesis.majorana-scale-not-carried-by-rung-frame-boost": {
 "failed": false,
 "findings": [],
-"key": "6376f5482939d6dc",
+"key": "dc4f11c1625fd19c",
 "result": "pass",
 "runs": [
 {
@@ -40570,7 +40610,7 @@
 "synthesis.mirror-asymmetry-route-one": {
 "failed": false,
 "findings": [],
-"key": "2bad738d3691a057",
+"key": "0f1765433bf01385",
 "result": "pass",
 "runs": [
 {
@@ -40726,7 +40766,7 @@
 "synthesis.n-plus-null-ground-state": {
 "failed": false,
 "findings": [],
-"key": "dfc5bf66737258d6",
+"key": "668ef24cb0fea694",
 "result": "none",
 "runs": []
 },
@@ -40923,7 +40963,7 @@
 "synthesis.nondiagonal-kasner-residue-weighted-shear": {
 "failed": false,
 "findings": [],
-"key": "70cb5984c6a9b2d8",
+"key": "b3cef9fff0830be9",
 "result": "pass",
 "runs": [
 {
@@ -41214,7 +41254,7 @@
 "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint": {
 "failed": false,
 "findings": [],
-"key": "3f3d1ca21a8374e7",
+"key": "3d254ae82f3b4ca0",
 "result": "pass",
 "runs": [
 {
@@ -41733,7 +41773,7 @@
 "synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise": {
 "failed": false,
 "findings": [],
-"key": "eb1c9cb96f2d435c",
+"key": "630726ca9824874c",
 "result": "pass",
 "runs": [
 {
@@ -42201,7 +42241,7 @@
 "synthesis.positive-null-energy-gives-r-premises": {
 "failed": false,
 "findings": [],
-"key": "6c2f7889929fc604",
+"key": "9bcf1070df56c7e5",
 "result": "pass",
 "runs": [
 {
@@ -42283,7 +42323,7 @@
 "synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale": {
 "failed": false,
 "findings": [],
-"key": "461fcdfcfd0dd0a9",
+"key": "ebd970a01743c914",
 "result": "pass",
 "runs": [
 {
@@ -43456,7 +43496,7 @@
 "synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading": {
 "failed": false,
 "findings": [],
-"key": "15e94bd43a254ccf",
+"key": "2094658433d5306d",
 "result": "pass",
 "runs": [
 {
@@ -43540,7 +43580,7 @@
 "synthesis.rung-field-charged-scalar-sum-rule": {
 "failed": false,
 "findings": [],
-"key": "f4fb95006f32c593",
+"key": "9ca5db21fd92856b",
 "result": "pass",
 "runs": [
 {
@@ -43593,7 +43633,7 @@
 "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix": {
 "failed": false,
 "findings": [],
-"key": "9c57b386ab2faa07",
+"key": "e396dbdcdc58b5bc",
 "result": "pass",
 "runs": [
 {
@@ -43664,7 +43704,7 @@
 "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": {
 "failed": false,
 "findings": [],
-"key": "9926199882799768",
+"key": "8e55cc2035f63978",
 "result": "pass",
 "runs": [
 {
@@ -43700,7 +43740,7 @@
 "synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet": {
 "failed": false,
 "findings": [],
-"key": "6e1d50269f69fac5",
+"key": "727ff63e455f469f",
 "result": "pass",
 "runs": [
 {
@@ -43755,7 +43795,7 @@
 "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant": {
 "failed": false,
 "findings": [],
-"key": "6b84a8b92bba2f55",
+"key": "8f50d8d7fbfb2edc",
 "result": "pass",
 "runs": [
 {
@@ -43803,7 +43843,7 @@
 "synthesis.rung-field-on-the-lift-locus": {
 "failed": false,
 "findings": [],
-"key": "38dd8b127e81061a",
+"key": "57336125f127dc12",
 "result": "pass",
 "runs": [
 {
@@ -44095,7 +44135,7 @@
 "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch": {
 "failed": false,
 "findings": [],
-"key": "0f417707f3741343",
+"key": "9adf847458758d04",
 "result": "pass",
 "runs": [
 {
@@ -44882,7 +44922,7 @@
 "synthesis.state-selection-r-and-le-against-t05": {
 "failed": false,
 "findings": [],
-"key": "bc07557a66de874a",
+"key": "a72b6ce009eea34c",
 "result": "pass",
 "runs": [
 {
@@ -44926,7 +44966,7 @@
 "synthesis.stationary-generator-states-and-the-edge-scaling": {
 "failed": false,
 "findings": [],
-"key": "42c004e076df5811",
+"key": "762a7343686094ff",
 "result": "pass",
 "runs": [
 {
@@ -44972,7 +45012,7 @@
 "synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit": {
 "failed": false,
 "findings": [],
-"key": "4accdc28bdc658e5",
+"key": "3b94d7be8b3293ec",
 "result": "pass",
 "runs": [
 {
@@ -45658,7 +45698,7 @@
 "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev": {
 "failed": false,
 "findings": [],
-"key": "6d35c6ef6dd8a200",
+"key": "9fb9389f8c05259e",
 "result": "pass",
 "runs": [
 {
@@ -45859,7 +45899,7 @@
 "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
 "failed": false,
 "findings": [],
-"key": "0d084229bc7f25f2",
+"key": "3b19c6cef5f9dfa2",
 "result": "pass",
 "runs": [
 {
@@ -46151,7 +46191,7 @@
 "synthesis.two-frozen-points-conformally-flat": {
 "failed": false,
 "findings": [],
-"key": "5e761bfae1505912",
+"key": "588b580633bcb95e",
 "result": "pass",
 "runs": [
 {

@@ -28,7 +28,7 @@ derivations:
   - synthesis.r-loc-independent-sets-matter-coupling@5
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
   - synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent@1
-  - synthesis.loc-independent-of-clausius-and-killing-data@4
+  - synthesis.loc-independent-of-clausius-and-killing-data@5
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@3
   - synthesis.imported-gtg-dictionary@2
@@ -53,6 +53,10 @@ lineage:
   - synthesis.r-loc-independent-sets-matter-coupling
   - synthesis.field-space-premise-parallel-frozen-point
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.loc-independent-of-clausius-and-killing-data 4 -> 5 repinned; its change is the three-sphere metric written out in place of d Omega_3^2 (notation).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

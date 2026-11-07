@@ -26,7 +26,7 @@ derivations:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   proof: proof-main.tex
@@ -44,6 +44,10 @@ lineage:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared 3 -> 4 repinned; its change is the two-form and four-form definitions written in GA, the forms kept as readings and proved equal (notation).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

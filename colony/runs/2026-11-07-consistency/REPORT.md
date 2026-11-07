@@ -52,13 +52,13 @@ on the reconciled findings chose the recommended answer to each of the eight dec
 ## GA coverage, stated plainly
 
 Of 2,269 entities, 40 declare outside_ga: 22 bridge (results whose point is the standard form beside the GA one),
-5 imported (a source's own formalism), 13 other. The 13 "other" are where GA is not reached: the walls-free
+6 imported (a source's own formalism), 12 other. The 12 "other" are where GA is not reached: the walls-free
 sector (degenerate soldering), the boundary-mode first law (iv) (small-ball expansions in components; a GTG
 proof needs a second-order normal gauge not derived here), the global clauses of the promoted-norm pair and the
-frozen-point integrand (cohomology and integrals beyond one flat chart), the Chern-Simons gauge variation in the
-Euler edge term, index displays in the einstein-condition and series-wald results, the Kasner-wall coframe
-setting, the frozen-point Stelle-West form displays, a definition, a machine-verification note and the rule-2
-fusing plane. Each declaration now says exactly what remains and why.
+frozen-point integrand (cohomology, the Chern-Simons form and integrals beyond one flat chart), the Chern-Simons
+gauge variation in the Euler edge term, index displays in the einstein-condition and series-wald results, the
+Kasner-wall coframe setting, the frozen-point Stelle-West form displays, a machine-verification note and the
+rule-2 fusing plane. Each declaration says exactly what remains and why. `tp ga-report` lists no undeclared use.
 
 ## For Leon
 
@@ -95,3 +95,26 @@ letters (apply-AP1.md). references.yaml would restore WeinbergQFT1 on a rebuild 
 - `tp build`: 2,269 entities, 7,113 edges, 0 errors, 0 stale claims. `tp.site` rebuilt. `tp lock` written;
   layers 1-3 after the lock: 0 errors, 0 warnings.
 - Unit tests: 393 passed, 1 skipped.
+
+## Second round (Leon's answers of 17:31; DECISIONS.md "second round"; APPLY2.md, apply2-D1/D2/D3.md)
+
+- The five formal corrections applied as worded, each verified exactly first (positive-structure 3 -> 4,
+  macdowell-mansouri-principle 3 -> 4, static-frame 8 -> 9, frozen-point-unique 5 -> 6, nondiagonal-kasner 4 -> 5;
+  the Kasner sign recomputed independently from the Christoffel symbols).
+- The two scope-only ceiling-coupling edges dropped (which-towers, no-coupling-rule 5 -> 6); route one (iii)
+  scoped to finite windows or a convergent sum (3 -> 4); the frozen-point Fact's sentence naming the tractor theorem
+  made a text remark (6 -> 7; two-frozen-points 4 -> 5 now cites the Fact's display); the theta reading and the
+  no-edge c-loc decision recorded.
+- The last formal notation outside GA rewritten, each old form a labelled reading proved equal exactly: the weighted
+  blow-up object (declaration withdrawn), the frozen-point integrand's two- and four-forms, and the index readings
+  of black-hole-data, frozen-point stiffness and collapsing-hole (four new checks, mutation-tested).
+- The deferred renames: kappa -> mu in synthesis.n-plus-null-ground-state; the double letters of R01, R02 and R04
+  (the rung-field Hermitian norm is \mathsf{N} in all 14 entities); d Omega^2 written out beside the gauge field.
+- The anti-de Sitter question raised by D1 on five related texts (A = Omega - hb^-1 ^ V/l^2): checked, no error;
+  they define l^2 = 3/Lambda with its sign, so l^2 < 0 on the anti-de Sitter branch and the formulas hold.
+- Pins: every pin on a changed entity reviewed (36 + 102 + 13), 0 stale; build 0 stale claims.
+- Checks: all six layers (layer-4 cache), 0 errors, 0 warnings (final-check-2.log); build 0 errors; lock
+  rewritten; 393 tests pass.
+- Left: the same letter clashes in boost-evolution (rotor B_lambda) and hadamard-scaling-limit (region U), not on
+  the readers' lists; whether the weighted blow-up object's tau = 0 boundary takes the beyond-one-flat-chart flag;
+  an optional sentence in the five anti-de Sitter-capable texts that l^2 < 0 there.

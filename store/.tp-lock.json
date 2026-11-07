@@ -1530,18 +1530,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "the sentence naming the tractor gauge-field theorem made a text-only remark, at Leon's second-round decisions",
+    7
    ]
   ],
-  "hash": "053006cd6642da75",
+  "hash": "4768f80d51c19760",
   "ledger": null,
   "parts": {
    "checks": "59fb0cb3b83fee4d",
-   "proofs": "8ddc247fd6c576ef",
+   "proofs": "f2bffad4bee2ea5a",
    "rest": "d3b65c89b700e77b",
-   "statement": "202570af30a198fe"
+   "statement": "14bdadb82ac40b7e"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-energy.imported-frozen-point-geometry-external": {
   "assumes": [],
@@ -2028,6 +2033,11 @@
     "Claude Opus 5.5",
     "pin review, the remark on the mirror's angle in (ii) now names the common ceiling coupling of the copy theorem's (iv), where it quoted P2",
     6
+   ],
+   [
+    "Claude Opus 5.5",
+    "extraction note recording Leon's confirmation of the theta-angle reading (second-round decisions)",
+    7
    ]
   ],
   "hash": "6b7249df45ff2e3b",
@@ -2039,7 +2049,7 @@
    "statement": "a6901d58ad374906"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-matter.ceiling-valued-inherited-success": {
   "assumes": [
@@ -2793,8 +2803,7 @@
  },
  "dark-matter.no-coupling-rule-odd-towers-follows": {
   "assumes": [
-   "dark-matter.p2-indifference@2",
-   "synthesis.common-ceiling-coupling-premise@1"
+   "dark-matter.p2-indifference@2"
   ],
   "credit": [
    [
@@ -2816,18 +2825,23 @@
     "Claude Opus 5.5",
     "maintainer pass, restatement of the formal as its three established facts, the reading moved to a remark, at Leon's decisions",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "assumes edge to the common-ceiling-coupling premise dropped at Leon's second-round decisions (scope kept as a text mention)",
+    6
    ]
   ],
-  "hash": "d2b71a2b2d19dff0",
+  "hash": "a4b984d16857f159",
   "ledger": null,
   "parts": {
    "checks": "c8c956ca34335ada",
-   "proofs": "b06c6b4828e02e4e",
+   "proofs": "a99ad3bac278ad97",
    "rest": "d3b65c89b700e77b",
    "statement": "32ffabafcb4cdda2"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.open-channels-their-costs": {
   "assumes": [],
@@ -3738,9 +3752,7 @@
   "version": 1
  },
  "dark-matter.which-towers-can-carry-arrow": {
-  "assumes": [
-   "synthesis.common-ceiling-coupling-premise@1"
-  ],
+  "assumes": [],
   "credit": [
    [
     "Leon Butler",
@@ -3756,18 +3768,23 @@
     "Claude Opus 5.5",
     "maintainer pass, common-ceiling-coupling premise named in the fork's share-one condition at Leon's decisions",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "assumes edge to the common-ceiling-coupling premise dropped at Leon's second-round decisions (scope kept as a text mention); one-liner restored",
+    6
    ]
   ],
-  "hash": "f5547d9c4e07b34a",
+  "hash": "779467dec180ab68",
   "ledger": null,
   "parts": {
    "checks": "c07fcf9475dbc788",
-   "proofs": "2dd67846644cd134",
+   "proofs": "e59e9f5e960e66fd",
    "rest": "d3b65c89b700e77b",
    "statement": "1d13ebebc6813dc9"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-tower-matter.adjoint-norm": {
   "assumes": [],
@@ -7737,18 +7754,23 @@
     "Claude Opus 5.5",
     "GA rewrite (geodesic condition as D-parallelism)",
     6
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega^2 written as the explicit round metric",
+    7
    ]
   ],
-  "hash": "fcaacf52d752be66",
+  "hash": "285f3d3434fbc67e",
   "ledger": null,
   "parts": {
    "checks": "ebb6755a49df345e",
    "proofs": "adf1309bca0c5778",
    "rest": "36880587349d3e5c",
-   "statement": "3d0951b537b1955a"
+   "statement": "aa617598a02bbfdc"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "interior.metric-parallelism-trace-schouten-condition": {
   "assumes": [],
@@ -31275,18 +31297,23 @@
     "Claude Opus 5.5",
     "GTG pass: declaration narrowed (the Hubble-normalised coframe display is the definition's own language)",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "GA rewrite of the Hubble-normalised display as the linear function tau omega(e_j) = -p_j B_j + E_tau(e_j) on unit tangential physical vectors, the coframe display kept as its reading; outside_ga withdrawn",
+    4
    ]
   ],
-  "hash": "ded3cf65e7d12857",
+  "hash": "c69fa19d8e0ab50b",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "63bb17904be8a019",
-   "statement": "ceec1a0a05629085"
+   "statement": "cc20093d660a3db2"
   },
   "status": "defined",
-  "version": 3
+  "version": 4
  },
  "obj.mass.grip-mass-composite": {
   "assumes": [],
@@ -34462,18 +34489,23 @@
     "Claude Opus 5.5",
     "GA rewrite (round-sphere line element renamed)",
     6
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega^2 written as the explicit round metric",
+    7
    ]
   ],
-  "hash": "9b41244c4d7eade5",
+  "hash": "799e1ad60c77d957",
   "ledger": null,
   "parts": {
    "checks": "407c5cf76ffd30be",
-   "proofs": "e6159b90e0b24695",
+   "proofs": "367d25f88f9ea40e",
    "rest": "8e84b827ed21812b",
-   "statement": "d33a56b570031d37"
+   "statement": "aed235c58a379fec"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "pairing.imported-spin-coefficients-null-tetrad": {
   "assumes": [],
@@ -34852,18 +34884,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F2): uses and pins",
     8
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal and technical clause restated at Leon's second-round decisions: every class tends to 0 as F -> 0 (the static gauge is not defined on the horizon locus)",
+    9
    ]
   ],
-  "hash": "b1fdfe3589ba16bc",
+  "hash": "48702e78d19bae8d",
   "ledger": null,
   "parts": {
    "checks": "1f9704865312ac86",
-   "proofs": "6544e2f621bfa815",
+   "proofs": "b4bd933122282e63",
    "rest": "e9d81cb75d71e953",
-   "statement": "b4a6319923a953f0"
+   "statement": "55a392fcb371c882"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "pairing.two-frames-share-vacuum-selected-transport": {
   "assumes": [],
@@ -38466,18 +38503,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega^2 written as the explicit round metric",
+    5
    ]
   ],
-  "hash": "0917d72b63b9fe45",
+  "hash": "0b49e863338736dc",
   "ledger": null,
   "parts": {
    "checks": "f088e0db2fadf69b",
    "proofs": "c8dfb11458682dc4",
    "rest": "48cf2ea25cc88ee6",
-   "statement": "9369561720690d47"
+   "statement": "1615ed0fa0c268bb"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "scrambling.spreading-law-chaos-bound-saturated": {
   "assumes": [],
@@ -39835,18 +39877,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega^2 written as the explicit round metric",
+    7
    ]
   ],
-  "hash": "fd065fb4ca1602ec",
+  "hash": "7287c28393044196",
   "ledger": null,
   "parts": {
    "checks": "0396598b9c99b84f",
-   "proofs": "e34a1bf6d61a60d0",
+   "proofs": "4954361535279381",
    "rest": "a0ff5c900c312224",
-   "statement": "17390342dcb89592"
+   "statement": "1ae289d53588e0e1"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "sheaf.weights-are-forced-are-kasner-exponents": {
   "assumes": [],
@@ -41286,18 +41333,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega^2 written as the explicit round metric",
+    7
    ]
   ],
-  "hash": "7204d4be8dcdb3a8",
+  "hash": "21e27de0ccac74f0",
   "ledger": null,
   "parts": {
    "checks": "96416b2b350d831e",
-   "proofs": "140dc9716d21d3fb",
+   "proofs": "54635be170785b18",
    "rest": "a0ff5c900c312224",
-   "statement": "4366203a8c3abd1c"
+   "statement": "649e24b2f97e9b26"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "singularity.imported-no-c-number-repair": {
   "assumes": [],
@@ -42315,18 +42367,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega written as the explicit area element",
+    8
    ]
   ],
-  "hash": "f60e110c3d36a4b1",
+  "hash": "06d9d6c1cf1aa985",
   "ledger": null,
   "parts": {
    "checks": "7625f99c4b699c78",
-   "proofs": "73f1ddf6dbcaab9f",
+   "proofs": "5059694b849aee0d",
    "rest": "d3b65c89b700e77b",
    "statement": "16c6cf5c8864929f"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "singularity.transport-schwarzschild-fibre": {
   "assumes": [],
@@ -46914,18 +46971,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): the Wald direction identified exactly, without calibration; dictionary edge",
     7
+   ],
+   [
+    "Claude Opus 5.5",
+    "GA rewrite of the formal's index expressions (Ricci map, scalar, Kretschmann, Ric^2 and the radial trace), the components kept as readings; new exact check",
+    8
    ]
   ],
-  "hash": "47ea52130a795682",
+  "hash": "3200206339cfda74",
   "ledger": null,
   "parts": {
-   "checks": "1c6b67dc61ac7e6d",
-   "proofs": "65ea11a5f063111d",
+   "checks": "fab298e43f89e083",
+   "proofs": "924d38ac941e9366",
    "rest": "36880587349d3e5c",
-   "statement": "c22b335a18eb5002"
+   "statement": "6ac78a4e833c9d81"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "synthesis.blade-square-signs-f2-quadratic-form": {
   "assumes": [],
@@ -47804,18 +47866,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     2
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: r - 2M renamed zeta",
+    3
    ]
   ],
-  "hash": "7a782b13e7837cd5",
+  "hash": "4879a8765786cd07",
   "ledger": null,
   "parts": {
    "checks": "a1be04ca3a6a1861",
-   "proofs": "f316557d88216442",
+   "proofs": "d8ae046f30fca80c",
    "rest": "5ef59c08a022541a",
-   "statement": "925f81d631b5e550"
+   "statement": "9041a7c359c4137d"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
   "assumes": [
@@ -47856,18 +47923,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): control of the GTG check uses the physical velocity",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "GA rewrite of (ii)'s affine-parameter statement (the ingoing velocity is D-parallel), Gamma^r_rr = 0 kept as the reading; new exact check",
+    4
    ]
   ],
-  "hash": "cb7b2112b504dfdb",
+  "hash": "5a95fa866cc4dd65",
   "ledger": null,
   "parts": {
-   "checks": "d235ee8b124648ad",
-   "proofs": "631b376af0c39a54",
+   "checks": "700ba285a0b8c914",
+   "proofs": "ea4d51233541549d",
    "rest": "5ef59c08a022541a",
-   "statement": "bf3a4b94b59c1c65"
+   "statement": "0b06bdbb7eb5ab7c"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.collar-isotropy-selects-t-boost": {
   "assumes": [],
@@ -48126,18 +48198,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    3
    ]
   ],
-  "hash": "87b027afabff71f5",
+  "hash": "5e705dcae31180de",
   "ledger": null,
   "parts": {
    "checks": "8350684ec6f8202f",
-   "proofs": "6854f61b57beb985",
+   "proofs": "25e33c35543ff263",
    "rest": "d3b65c89b700e77b",
-   "statement": "0f4a518b08ad539b"
+   "statement": "9009ccb5cd484277"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.cosmological-horizon-completed-pair": {
   "assumes": [],
@@ -48233,18 +48310,23 @@
     "Claude Opus 5.5",
     "consistency pass, bare i in a unit aside removed",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the coupling matrix renamed calligraphic A, the Hermitian norm sans-serif N",
+    5
    ]
   ],
-  "hash": "05ade7d70b400f2c",
+  "hash": "59582f4313f2c38a",
   "ledger": null,
   "parts": {
    "checks": "f36743a7aac28a03",
-   "proofs": "ecfba2c4d0ba5e2a",
+   "proofs": "0b9021ab397699c6",
    "rest": "e91d0b6c134ffca8",
-   "statement": "8dd0c5fd02a64a42"
+   "statement": "a981aaced99ab02a"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.cpt-closure-forces-slot-module-and-chirality": {
   "assumes": [],
@@ -48741,18 +48823,23 @@
     "Claude Opus 5.5",
     "unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the region of the formal renamed O (calligraphic)",
+    5
    ]
   ],
-  "hash": "d19e7ba0975b3133",
+  "hash": "55d464b86f07addb",
   "ledger": null,
   "parts": {
    "checks": "78062cf513ac9b25",
    "proofs": "d0e4de6328962b63",
    "rest": "62f1e4e5250e685f",
-   "statement": "b7cd2d55957de46e"
+   "statement": "7e59bef53729ae36"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car": {
   "assumes": [],
@@ -49340,18 +49427,23 @@
     "Claude Opus 5.5",
     "unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the smooth kernels of (iii) and (iv) renamed S and S_omega",
+    6
    ]
   ],
-  "hash": "2be73f22afb4550a",
+  "hash": "c6b10adc1995cfbf",
   "ledger": null,
   "parts": {
    "checks": "1e09ac346d5cb7c9",
-   "proofs": "fa867481ef0a1e63",
+   "proofs": "cd46d2eeb79272c1",
    "rest": "f3e4dea33f4dfed7",
-   "statement": "f697089ac71ae449"
+   "statement": "7db3550fe6417c23"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.finite-range-descent-deposit-cannot-seed-cmb": {
   "assumes": [],
@@ -49660,18 +49752,23 @@
     "Claude Opus 5.5",
     "GTG review fixes (referee F3): Weyl space described with the first Bianchi identity; frame-leg pairings of (iv) proved in GA with a new check; declaration narrowed; Beyond-one-flat-chart flag added (dictionary section 14); stale pins reviewed",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "GA rewrite of the two-form and four-form definitions (linear maps of physical bivectors and their densities), the frame-leg two-form and the Weyl square of (v); the component forms kept as readings; new exact check",
+    4
    ]
   ],
-  "hash": "a1432ee92c502028",
+  "hash": "5b7bf534dabf9327",
   "ledger": null,
   "parts": {
-   "checks": "bd1ccf0be4c7ba5c",
-   "proofs": "0e5e37667ff697ae",
+   "checks": "cface6df02d8f02c",
+   "proofs": "b2dfbbb1b5228554",
    "rest": "36880587349d3e5c",
-   "statement": "4550462661763fb0"
+   "statement": "5d7d019444c273ff"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff": {
   "assumes": [],
@@ -49700,18 +49797,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): two conformal-product values in proof (i) corrected",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "GA rewrite of the formal's index readings (traces, Ricci contraction, Schouten, Einstein and Weyl maps, the Weyl square and the interpolated density), the index forms kept as readings; new exact check",
+    4
    ]
   ],
-  "hash": "c38518fb60273730",
+  "hash": "25e7a4e22f18953e",
   "ledger": null,
   "parts": {
-   "checks": "46422573dfe2de22",
-   "proofs": "e97f9ddb6cc61a0e",
+   "checks": "c593586a8fcf3151",
+   "proofs": "f8400e5c2c46e1f6",
    "rest": "36880587349d3e5c",
-   "statement": "21d9d09ddcea7f10"
+   "statement": "eef19c893b5325a3"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.frozen-point-unique-where-weyl-has-no-kernel": {
   "assumes": [],
@@ -49740,18 +49842,23 @@
     "Claude Opus 5.5",
     "GTG review fixes (referee F3): uses edges to the GTG dictionary and the tractor gauge-field theorem; the choice of representative of the conformal class justified",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal restated at Leon's second-round decisions: the Consequently clauses for c != 0",
+    6
    ]
   ],
-  "hash": "92a162a5cb44a3be",
+  "hash": "d15f52bf7d6a6db6",
   "ledger": null,
   "parts": {
    "checks": "2f648c40abaf5802",
-   "proofs": "8b46d2d890a04cbe",
+   "proofs": "379e06ed76c779a8",
    "rest": "d3b65c89b700e77b",
-   "statement": "55d8308339c17ff4"
+   "statement": "85c6870ccaf70538"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.gauge-algebra-by-tower": {
   "assumes": [
@@ -50496,18 +50603,23 @@
     "Claude Opus 5.5",
     "unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the inner items of clause (a) numbered (1) to (4)",
+    4
    ]
   ],
-  "hash": "f2f91c4b9ce2ed67",
+  "hash": "d9da6fe037439009",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "ebb5809b325029b1",
-   "statement": "37e2c16ea2ff9c58"
+   "statement": "b54967dc31ffbac9"
   },
   "status": "imported",
-  "version": 3
+  "version": 4
  },
  "synthesis.imported-chern-gauss-bonnet": {
   "assumes": [],
@@ -54299,18 +54411,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    5
    ]
   ],
-  "hash": "c1abb485c055ceaf",
+  "hash": "1ec984bd18dd9eca",
   "ledger": null,
   "parts": {
    "checks": "b4e44648f6e9c3ee",
-   "proofs": "7308c9a02b5d68ac",
+   "proofs": "8d4911b3472ee8ab",
    "rest": "3ae2f3aba227a8a2",
-   "statement": "f8c9eb4f14338451"
+   "statement": "6f9d6f15a8ac6a01"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.loc-independent-of-clausius-and-killing-data": {
   "assumes": [],
@@ -54324,18 +54441,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: d Omega_3^2 written as the explicit round metric",
+    5
    ]
   ],
-  "hash": "48030eaa283f28aa",
+  "hash": "6898cf9095313771",
   "ledger": null,
   "parts": {
    "checks": "5001c2c5e7f3d61a",
-   "proofs": "a919e8ffef76ab8e",
+   "proofs": "058687e718ccbc42",
    "rest": "36880587349d3e5c",
-   "statement": "e4b4980c75ee7905"
+   "statement": "9d327bc0b6f7872e"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.local-boost-temperature-is-local-regularity": {
   "assumes": [],
@@ -54586,18 +54708,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F2): GA readings of the formal setup (Ricci, Schouten and Lorentz-block maps); pins",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal setting restated at Leon's second-round decisions: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, right on both branches",
+    4
    ]
   ],
-  "hash": "c1e21b5a3c3e66bb",
+  "hash": "162f74fb2398bf4b",
   "ledger": null,
   "parts": {
    "checks": "fee4cf6519fdc5f8",
-   "proofs": "4b2e344b799a6b2b",
+   "proofs": "e37f016ce80a7fef",
    "rest": "36880587349d3e5c",
-   "statement": "f916eb593efebc49"
+   "statement": "59eee3a34298b2d7"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.majorana-element-is-null-blade-no-frozen-point-condition": {
   "assumes": [],
@@ -54748,18 +54875,23 @@
     "Claude Opus 5.5",
     "consistency pass, notation clash on N resolved",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    4
    ]
   ],
-  "hash": "7578ee40d517a864",
+  "hash": "62165e094c40c8a8",
   "ledger": null,
   "parts": {
    "checks": "d1b8ee6fdd26bc55",
-   "proofs": "36bbd1ebfaa91884",
+   "proofs": "d980543c11a53a5a",
    "rest": "d3b65c89b700e77b",
-   "statement": "57f65ded184755f4"
+   "statement": "66d1bd82ab290c9f"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.many-twistor-join": {
   "assumes": [],
@@ -55018,18 +55150,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, clause (iii) and the close updated to P2 at version 2, which states the scoping route one needs (restatement)",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal (iii), closing paragraph and plain levels scoped to what the tower-charge theorem proves, at Leon's second-round decisions",
+    4
    ]
   ],
-  "hash": "27384c76225b255e",
+  "hash": "e7e43b12c4fd0519",
   "ledger": null,
   "parts": {
    "checks": "dc275107a4751271",
-   "proofs": "0f669eadd9fa94dd",
+   "proofs": "33fa9565115e8fad",
    "rest": "1096ef713b125b46",
-   "statement": "b3f65c128ccfb12d"
+   "statement": "e84201369b50ae0d"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.mirror-extensions-causal-convention": {
   "assumes": [],
@@ -55195,18 +55332,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     11
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the constant Hermitian operator of the Fermi seas renamed mu (kappa is the surface gravity)",
+    12
    ]
   ],
-  "hash": "7e78768e29de503e",
+  "hash": "dacc23ec0dbbad37",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "c0df8cdcc9eedc62",
-   "statement": "03abe6deea763a3a"
+   "statement": "0b03130e4e2ff6e9"
   },
   "status": "postulate",
-  "version": 11
+  "version": 12
  },
  "synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5": {
   "assumes": [],
@@ -55345,18 +55487,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): torsion-equation citation corrected",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal (i) restated at Leon's second-round decisions: the e^0-leg of the rotation block with its definite sign",
+    5
    ]
   ],
-  "hash": "efbc177e7a8df9ca",
+  "hash": "cac4e673d4c2864b",
   "ledger": null,
   "parts": {
    "checks": "bbe4679e90c53a59",
    "proofs": "2ec7051c1206653e",
    "rest": "36880587349d3e5c",
-   "statement": "34a7aeacde8332c1"
+   "statement": "72ee31941bc4bbd2"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state": {
   "assumes": [],
@@ -55572,18 +55719,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    4
    ]
   ],
-  "hash": "a0001379db4ea06a",
+  "hash": "0411f87434bdad5e",
   "ledger": null,
   "parts": {
    "checks": "2ea2e2c13f6ec054",
-   "proofs": "c398448ecb4171f2",
+   "proofs": "01afc2c9ed62d897",
    "rest": "d3b65c89b700e77b",
-   "statement": "b763468f5073cfd7"
+   "statement": "e1c5754ae888c548"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.one-loop-qed-in-the-spacetime-algebra": {
   "assumes": [
@@ -56275,7 +56427,7 @@
  },
  "synthesis.positive-null-energy-gives-r-premises": {
   "assumes": [
-   "synthesis.n-plus-null-ground-state@11"
+   "synthesis.n-plus-null-ground-state@12"
   ],
   "credit": [
    [
@@ -56322,18 +56474,23 @@
     "Claude Opus 5.5",
     "maintainer pass, restated clauses marked with their premise-free home at Leon's decisions",
     8
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the boost and dilation rotors of proof (iii) and (v) renamed G and S; d Omega^2 written out",
+    9
    ]
   ],
-  "hash": "e0f66f2e0831b7b3",
+  "hash": "4d048912312c92ab",
   "ledger": null,
   "parts": {
    "checks": "e485c63b1f999085",
-   "proofs": "05390aa1e85183ca",
+   "proofs": "f018b3db9645dbf8",
    "rest": "5ef59c08a022541a",
    "statement": "daa9b99e81bee9b3"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale": {
   "assumes": [],
@@ -56367,18 +56524,23 @@
     "Claude Opus 5.5",
     "GTG review fixes (referee F3): the null vector of the (t + x1)^2 counter-model corrected in the proof and asserted in the check; stale pins reviewed",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "formal (iii) restated at Leon's second-round decisions: the null vector of the (t + x1)^2 counter-model is l = e0 - e1",
+    4
    ]
   ],
-  "hash": "79e5188069bd4221",
+  "hash": "3489749f76be5be4",
   "ledger": null,
   "parts": {
    "checks": "00d03ce1d1c617cd",
    "proofs": "8505b265c5fadc25",
    "rest": "36880587349d3e5c",
-   "statement": "0e395798dc9bc78c"
+   "statement": "28bf698241ba7472"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.positive-structure-is-twistor-form-at-imaginary-time": {
   "assumes": [],
@@ -57248,18 +57410,23 @@
     "Claude Opus 5.5",
     "consistency pass, Lie-algebra name written with its macro",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    5
    ]
   ],
-  "hash": "6fb5be6ff9f10027",
+  "hash": "be3ccbff698ac646",
   "ledger": null,
   "parts": {
    "checks": "acdd530f0c0c5feb",
-   "proofs": "1fcdc0ea317cf68f",
+   "proofs": "155b62bc01e353f1",
    "rest": "d3b65c89b700e77b",
-   "statement": "5e8d7c163ebc966e"
+   "statement": "2200c3aa37a6a539"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.rung-field-charged-scalar-sum-rule": {
   "assumes": [],
@@ -57273,18 +57440,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    3
    ]
   ],
-  "hash": "4e05b3462ee8f9be",
+  "hash": "a9f044de07a01a3b",
   "ledger": null,
   "parts": {
    "checks": "6c2980dc854712d1",
-   "proofs": "31dd67861d6630d3",
+   "proofs": "17b09b5e2d997c66",
    "rest": "d3b65c89b700e77b",
-   "statement": "89761fad0751f2b7"
+   "statement": "dd5af90358baccb2"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix": {
   "assumes": [],
@@ -57303,18 +57475,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    4
    ]
   ],
-  "hash": "c5927ad76e69fd60",
+  "hash": "216b07d638f4c51b",
   "ledger": null,
   "parts": {
    "checks": "cb0b90d00a889fb6",
-   "proofs": "c33bfa4aada21461",
+   "proofs": "25e06447aa0b5ac7",
    "rest": "d3b65c89b700e77b",
-   "statement": "4d387242df776ba4"
+   "statement": "3c0fc76044564f37"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": {
   "assumes": [
@@ -57340,18 +57517,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the weak generators as slot bilinears)",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    6
    ]
   ],
-  "hash": "477e63133eba43ff",
+  "hash": "bdc38c19a6c098b5",
   "ledger": null,
   "parts": {
    "checks": "ba566f2b8be4f9bb",
-   "proofs": "18f7b9f7389bffcb",
+   "proofs": "3ecec0695d1db8b1",
    "rest": "d3b65c89b700e77b",
-   "statement": "610225b635cb8b14"
+   "statement": "90bdefdc9445f5bb"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet": {
   "assumes": [],
@@ -57370,18 +57552,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     2
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    3
    ]
   ],
-  "hash": "b5434089e69845ff",
+  "hash": "3e4a0d50fa3d5a74",
   "ledger": null,
   "parts": {
    "checks": "b00cd9618b332dd8",
-   "proofs": "f92094eb72987e93",
+   "proofs": "86837e8a937f960d",
    "rest": "d3b65c89b700e77b",
-   "statement": "b37002a41698506b"
+   "statement": "eb21bc6481008c26"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.rung-field-level-needed-off-balance-and-not-right-invariant": {
   "assumes": [],
@@ -57405,18 +57592,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the weak generators as slot bilinears)",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    5
    ]
   ],
-  "hash": "3fbd916c8b9758ff",
+  "hash": "a870938b1ef12c4a",
   "ledger": null,
   "parts": {
    "checks": "ab7680af9f676551",
-   "proofs": "728638b928a8fa9d",
+   "proofs": "d1a049a32032a9d0",
    "rest": "d3b65c89b700e77b",
-   "statement": "07e385f1c569e91d"
+   "statement": "5e1b3ad030f38b1d"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.rung-field-on-the-lift-locus": {
   "assumes": [],
@@ -57440,18 +57632,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the weak generators as slot bilinears)",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    5
    ]
   ],
-  "hash": "059041e3f1e8849f",
+  "hash": "e7e8198c469aeda4",
   "ledger": null,
   "parts": {
    "checks": "9c4578476aeabea0",
-   "proofs": "4313aab900a77506",
+   "proofs": "b3a241dcc2eb020b",
    "rest": "d3b65c89b700e77b",
-   "statement": "40f62b0c6a333a95"
+   "statement": "9e6d45fe9dfb5338"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch": {
   "assumes": [
@@ -57642,18 +57839,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    3
    ]
   ],
-  "hash": "2be1ffb59f48d36f",
+  "hash": "d490d9100dda918d",
   "ledger": null,
   "parts": {
    "checks": "bca638ae53d06e7f",
-   "proofs": "89fe614e4439792d",
+   "proofs": "5c3188adb0ffacc1",
    "rest": "d3b65c89b700e77b",
-   "statement": "7456bac4159f5944"
+   "statement": "dda2cf954836b22c"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.schwarzschild-horizon-translations-are-no-conformal-symmetry": {
   "assumes": [],
@@ -58181,18 +58383,23 @@
     "Claude Opus 5.5",
     "unit pass, every imaginary unit resolved to the geometric-algebra unit it stands for",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Boltzmann factor Q_k renamed z_k",
+    5
    ]
   ],
-  "hash": "cb09706a6b08b81a",
+  "hash": "e08df490ae99612a",
   "ledger": null,
   "parts": {
    "checks": "c49b711149012036",
-   "proofs": "184c6be183ab5901",
+   "proofs": "0b1f78903a7c8925",
    "rest": "2949ff83db536858",
-   "statement": "5c37836a62437ac9"
+   "statement": "2edca1de7ecc2a67"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.stationary-generator-states-and-the-edge-scaling": {
   "assumes": [],
@@ -58206,18 +58413,23 @@
     "Claude Opus 5.5",
     "split out of synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit so that its users rest only on the analysis",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the boost rotor of (i) renamed G",
+    2
    ]
   ],
-  "hash": "e8b0357c5a88abc2",
+  "hash": "367465df1ed28d19",
   "ledger": null,
   "parts": {
    "checks": "1a8a554de1b8d654",
-   "proofs": "79a6073452ae3945",
+   "proofs": "3c1ddc1014fe3770",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "51349eb000d037ac"
+   "statement": "ccd4af61a715c5d7"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit": {
   "assumes": [],
@@ -58246,18 +58458,23 @@
     "Claude Opus 5.5",
     "maintainer pass, restated clauses marked with their premise-free home at Leon's decisions",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the boost rotor of (i) renamed G",
+    6
    ]
   ],
-  "hash": "cb64e2e0dbc3f0af",
+  "hash": "c7c122264c713f06",
   "ledger": null,
   "parts": {
    "checks": "b80127bc638c70b6",
-   "proofs": "ac945c9b997e6c61",
+   "proofs": "ba2d20a2268b105e",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "788aa40e50e71b58"
+   "statement": "33ff410867269d55"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.stelle-west-norm-is-no-local-output": {
   "assumes": [],
@@ -58731,18 +58948,23 @@
     "Claude Opus 5.5",
     "consistency pass, Lie-algebra name written with its macro",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "notation: the Hermitian norm renamed sans-serif N",
+    6
    ]
   ],
-  "hash": "9c7798fccf6b1a3f",
+  "hash": "eeb42f7b85f8e29b",
   "ledger": null,
   "parts": {
    "checks": "02966136055a7446",
-   "proofs": "488d519fbb45998b",
+   "proofs": "e6e84a75554564d3",
    "rest": "d3b65c89b700e77b",
-   "statement": "0848a10d4e8875b7"
+   "statement": "0e01e03da6ee3b39"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom": {
   "assumes": [],
@@ -59008,18 +59230,23 @@
     "Claude Opus 5.5",
     "GTG review (referee F1): Einstein scale computed directly instead of from the converse of the Fact",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "proof's citation of the frozen-point Fact taken from its scale-g display, after that Fact's gauge-field sentence became a remark (second-round decisions)",
+    5
    ]
   ],
-  "hash": "b96bf1f97a0e4691",
+  "hash": "5393bf39722e0637",
   "ledger": null,
   "parts": {
    "checks": "82a1f0e3667b3ffd",
-   "proofs": "983f3804f748165b",
+   "proofs": "158a45334e696aac",
    "rest": "d3b65c89b700e77b",
    "statement": "a0bbd8df9c3058d4"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient": {
   "assumes": [

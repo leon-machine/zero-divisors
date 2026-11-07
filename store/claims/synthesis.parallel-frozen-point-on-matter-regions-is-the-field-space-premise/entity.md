@@ -38,7 +38,7 @@ derivations:
   - interior.imported-tractor-connection@3
   - dark-energy.imported-frozen-point-geometry@7
   - odd-extensions.transport-constrains-frozen-point-only-through@3
-  - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@3
+  - synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -56,6 +56,10 @@ lineage:
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
   - pred.dark-energy-w-minus-one
 extraction:
+  maintainer_pass_pin_review_2:
+    by: maintainer-2026-11-07
+    date: '2026-11-07'
+    note: 'Pin review (second-round close-out): synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff 3 -> 4 repinned; its change is the setting maps and densities written in GA, the index forms kept as readings and proved equal (notation).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
