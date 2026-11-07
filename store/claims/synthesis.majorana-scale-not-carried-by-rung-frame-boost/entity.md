@@ -35,8 +35,8 @@ derivations:
   uses:
   - synthesis.rung-unit-is-frame-boost@3
   - synthesis.rung-unit-transverse-to-norm@3
-  - synthesis.rung-field-on-the-lift-locus@4
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
+  - synthesis.rung-field-on-the-lift-locus@5
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
   - standard-model.majorana-element@7
   - synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square@2
   - standard-model.what-angle-asks-neutrino-sector@4

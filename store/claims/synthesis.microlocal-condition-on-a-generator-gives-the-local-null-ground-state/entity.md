@@ -40,7 +40,7 @@ derivations:
 - name: main
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
-  - synthesis.stationary-generator-states-and-the-edge-scaling@1
+  - synthesis.stationary-generator-states-and-the-edge-scaling@2
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.imported-microlocal-hadamard-condition@2
   - synthesis.imported-local-quasi-equivalence-of-hadamard-states@1

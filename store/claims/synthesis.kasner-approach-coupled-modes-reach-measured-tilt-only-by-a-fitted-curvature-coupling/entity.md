@@ -27,7 +27,7 @@ derivations:
   uses:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
-  - interior.kasner-form-interior@6
+  - interior.kasner-form-interior@7
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3

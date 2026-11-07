@@ -39,10 +39,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.stationary-generator-states-and-the-edge-scaling@1
+  - synthesis.stationary-generator-states-and-the-edge-scaling@2
   - hawking.i-state-continuum@5
   - hawking.imported-quasi-free-kms-reduces-two@2
-  - synthesis.positive-null-energy-gives-r-premises@8
+  - synthesis.positive-null-energy-gives-r-premises@9
   - singularity.why-calibration-cannot-be-internal@6
   proof: proof-main.tex
 checked_by:

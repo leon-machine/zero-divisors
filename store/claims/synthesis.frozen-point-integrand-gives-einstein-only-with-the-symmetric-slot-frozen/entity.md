@@ -26,7 +26,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.imported-gtg-dictionary@2
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
   - synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1

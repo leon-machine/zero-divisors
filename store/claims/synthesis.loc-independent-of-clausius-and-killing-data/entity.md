@@ -29,7 +29,7 @@ derivations:
   uses:
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
   - synthesis.c-loc-entropy-clause-curvature-independent-density@4
-  - synthesis.black-hole-data-do-not-fix-field-equations@7
+  - synthesis.black-hole-data-do-not-fix-field-equations@8
   - synthesis.sds-clausius-fixes-area-constant@5
   proof: proof-main.tex
 checked_by:

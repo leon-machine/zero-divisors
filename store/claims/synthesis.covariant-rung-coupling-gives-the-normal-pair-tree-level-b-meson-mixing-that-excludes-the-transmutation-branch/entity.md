@@ -51,8 +51,8 @@ quantities:
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@4
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
   - synthesis.imported-takagi-factorisation@1
   - synthesis.imported-left-right-bidoublet-two-yukawa-couplings@3
   - synthesis.imported-b-meson-mixing-inputs-vacuum-insertion-lattice-and-tree-level-quark-mixing@1

@@ -72,3 +72,5 @@ sheaf.weighted-limit
 singularity.imported-interior-collar-kasner-form
 singularity.stretched-singularity-count
 synthesis.loc-independent-of-clausius-and-killing-data
+synthesis.duality-complex-structure-does-not-reach-the-frozen-point
+synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen

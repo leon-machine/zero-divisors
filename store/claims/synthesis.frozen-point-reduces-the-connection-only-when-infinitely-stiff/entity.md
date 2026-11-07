@@ -42,8 +42,8 @@ derivations:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.stelle-west-norm-is-no-local-output@2
-  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@3
   proof: proof-main.tex
@@ -78,7 +78,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites that frame equation in (v), in the store sign, so the use holds as cited.'
+    note: 'Pin review (fix round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 2 -> 3 after reviewing its convention line, corrected from ''Riemann positive on spheres'' to the store''s sign that its formulas already used (de Sitter Ric = Lambda g, F_abcd = 0); its frame equation 2(G(a) + Lambda a) is unchanged; this result cites that frame equation in (v), in the store sign, so the use holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped); it is cited here for the frame equation 2(G(a) + Lambda a) of clause (i), unchanged, and the use holds as cited. synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared repinned 3 -> 4: its change is notation only (the two-forms and four-forms written as linear maps of physical bivectors and their densities, components kept as readings).'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

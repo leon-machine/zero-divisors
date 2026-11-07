@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - sheaf.weights-are-forced-are-kasner-exponents@5
-  - sheaf.weighted-limit@6
+  - sheaf.weighted-limit@7
   proof: proof-main.tex
 checked_by:
 - kind: proof

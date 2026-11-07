@@ -42,7 +42,7 @@ derivations:
   - synthesis.affine-cell-boost-spreads-without-scrambling@4
   - synthesis.number-diagonal-dynamics-spreads-nothing@3
   - singularity.euclidean-rotor-where-it-lies@5
-  - synthesis.positive-null-energy-gives-r-premises@8
+  - synthesis.positive-null-energy-gives-r-premises@9
   - hawking.i-state-continuum@5
   proof: proof-main.tex
 checked_by:

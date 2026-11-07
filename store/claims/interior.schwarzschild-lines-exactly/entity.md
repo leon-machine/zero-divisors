@@ -25,7 +25,7 @@ derivations:
   uses:
   - interior.exact-parallelism-convergence-rate@6
   - interior.interior-connection-exactly@8
-  - interior.kasner-form-interior@6
+  - interior.kasner-form-interior@7
   - interior.transport-level-convergence-along-tangential-curves@4
   proof: proof-main.tex
 checked_by:

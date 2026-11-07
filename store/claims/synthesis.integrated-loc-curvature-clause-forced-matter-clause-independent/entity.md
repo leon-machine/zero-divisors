@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.c-loc-entropy-clause-curvature-independent-density@4
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
-  - synthesis.loc-independent-of-clausius-and-killing-data@4
+  - synthesis.loc-independent-of-clausius-and-killing-data@5
   - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 checked_by:

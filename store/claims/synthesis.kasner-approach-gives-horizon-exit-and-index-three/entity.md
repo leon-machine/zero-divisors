@@ -29,7 +29,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@6
+  - interior.kasner-form-interior@7
   - sheaf.kasner-data-interior@3
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
   - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1

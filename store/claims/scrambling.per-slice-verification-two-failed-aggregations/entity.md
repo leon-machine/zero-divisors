@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - scrambling.integer-holographic-form-identification@2
-  - scrambling.slice-volume-exactly-per-unit-killing@4
+  - scrambling.slice-volume-exactly-per-unit-killing@5
   proof: proof-main.tex
 checked_by:
 - kind: legacy

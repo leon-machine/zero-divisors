@@ -42,9 +42,9 @@ derivations:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.frozen-point-makes-stelle-west-vector@6
   - synthesis.imported-gtg-dictionary@2
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@3
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
   - synthesis.imported-miskovic-olea-identity@3
-  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@3
+  - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@4
   - synthesis.promoted-norm-weyl-clock-flat-weight@7
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form@1
@@ -91,7 +91,7 @@ extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
-    note: 'Stale pins reviewed (fix round, 2026-11-07): dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 and synthesis.promoted-norm-weyl-clock-flat-weight 6 -> 7 have byte-identical formal levels (N). R: synthesis.imported-gtg-dictionary 1 -> 2 (frame-plane reading of clause (iv) restated) is cited for the Weyl part and the Schouten map of (v), unchanged; synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 now names the store curvature sign in place of positive on spheres, and is cited only in the Reading for its Einstein equations from varying over I-preserving connections, which the change does not touch; synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale 2 -> 3 (A3, signs of (ii)) is cited only for the scale non-selection that (ii) of this result extends, untouched by A3. Uses hold; all five repinned.'
+    note: 'Stale pins reviewed (fix round, 2026-11-07): dark-energy.frozen-point-makes-stelle-west-vector 5 -> 6 and synthesis.promoted-norm-weyl-clock-flat-weight 6 -> 7 have byte-identical formal levels (N). R: synthesis.imported-gtg-dictionary 1 -> 2 (frame-plane reading of clause (iv) restated) is cited for the Weyl part and the Schouten map of (v), unchanged; synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part 2 -> 3 now names the store curvature sign in place of positive on spheres, and is cited only in the Reading for its Einstein equations from varying over I-preserving connections, which the change does not touch; synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale 2 -> 3 (A3, signs of (ii)) is cited only for the scale non-selection that (ii) of this result extends, untouched by A3. Uses hold; all five repinned. Pin review (second round): synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale repinned 3 -> 4 after reviewing its restatement (formal (iii): the null vector of the (t + x1)^2 counter-model is e0 - e1); it is cited here only for the scale non-selection that (ii) extends, which is unchanged, and the use holds as cited. Pin review (second round): synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part repinned 3 -> 4 after reviewing its restatement (formal setting: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, l^2 = 3/|Lambda| dropped); it is cited here only in the Reading and proof for its Einstein equations from varying over I-preserving connections, unchanged, and the use holds as cited.'
   maintainer_pass_gtg_proof:
     by: maintainer-2026-11-07
     date: '2026-11-07'

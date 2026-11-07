@@ -47,7 +47,7 @@ extraction:
     date: '2026-10-23'
     note: 'GTG restatement: the metric is the derived metric of the Schwarzschild gravitational field (hb, Omega) on flat spacetime. Exponents and proper time unchanged.'
 equivalent_to:
-- interior.kasner-form-interior@6
+- interior.kasner-form-interior@7
 ---
 
 ## formal

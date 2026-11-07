@@ -33,7 +33,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.imported-interior-collar-kasner-form@6
+  - singularity.imported-interior-collar-kasner-form@7
   - singularity.imported-one-sided-completion-singularity@5
   - singularity.modular-flow-boundary-modes-holonomy-universal@2
   - singularity.modular-structure-completed-pair@5

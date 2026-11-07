@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.exceptional-boundary-measure-one-calibration@2
   - interior.schwarzschild-de-sitter-weighted-limit@7
-  - singularity.stretched-singularity-count@7
+  - singularity.stretched-singularity-count@8
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.sds-clausius-fixes-area-constant@5
   - synthesis.residue-from-mode-entropy@4

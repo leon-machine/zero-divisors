@@ -42,3 +42,5 @@ needed for this) and add the sentence to your entity's `maintainer_pass_pin_revi
    This is the form D3 used in the other nine entities (interior.kasner-form-interior,
    singularity.imported-interior-collar-kasner-form, sheaf.weighted-limit, scrambling.slice-volume-..., and others).
    Notation only; one sentence in your maintainer_pass_decisions_2 note.
+3. synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet: pin `synthesis.positive-null-energy-gives-r-premises@8`
+   -> `@9` (notation only: proof's boost and dilation rotors renamed G and S, and d Omega^2 written out; formal unchanged). Repin.

@@ -31,7 +31,7 @@ derivations:
   uses:
   - sheaf.matching-fibre@5
   - sheaf.schwarzschild-degeneration-boundary-tame@6
-  - sheaf.weighted-limit@6
+  - sheaf.weighted-limit@7
   proof: proof-main.tex
 checked_by:
 - kind: proof

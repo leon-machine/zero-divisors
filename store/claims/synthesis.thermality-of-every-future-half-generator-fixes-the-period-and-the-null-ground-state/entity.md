@@ -38,7 +38,7 @@ derivations:
   - hawking.i-state-continuum@5
   - hawking.imported-ideal-fermi-gas-uniqueness@2
   - synthesis.null-vacuum-on-a-horizon-generator@1
-  - synthesis.stationary-generator-states-and-the-edge-scaling@1
+  - synthesis.stationary-generator-states-and-the-edge-scaling@2
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
   - angle.imported-theorems-deliver-their-hypotheses@3
   proof: proof-main.tex

@@ -67,7 +67,7 @@ derivations:
   - angle.imported-theorems-deliver-their-hypotheses@3
   - mass.chart-form-spin-isomorphism@6
   assumes:
-  - synthesis.n-plus-null-ground-state@11
+  - synthesis.n-plus-null-ground-state@12
   proof: proof-main.tex
 checked_by:
 - kind: check

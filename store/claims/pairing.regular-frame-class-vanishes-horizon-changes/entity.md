@@ -40,7 +40,7 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@6
+  - pairing.imported-schwarzschild-connection-curvature@7
   - pairing.pairing-class-transverse-derivative-null-direction@4
   - pairing.two-frames-share-vacuum-selected-transport@6
   - pairing.imported-spin-coefficients-null-tetrad@3

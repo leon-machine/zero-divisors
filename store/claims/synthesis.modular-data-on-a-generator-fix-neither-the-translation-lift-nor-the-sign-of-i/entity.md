@@ -55,7 +55,7 @@ derivations:
   - synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state@4
   - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state@5
   - synthesis.imported-modular-conjugation-of-the-chiral-fermi-field-is-the-twisted-reflection@2
-  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@3
+  - synthesis.imported-buchholz-florig-summers-geometric-modular-action-and-modular-stability@4
   proof: proof-main.tex
 checked_by:
 - kind: check

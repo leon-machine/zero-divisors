@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - interior.kasner-form-interior@6
+  - interior.kasner-form-interior@7
   - sheaf.weights-are-forced-are-kasner-exponents@5
   - sheaf.kasner-data-interior@3
-  - scrambling.slice-volume-exactly-per-unit-killing@4
+  - scrambling.slice-volume-exactly-per-unit-killing@5
   - singularity.imported-induced-geometry-interior-slice@2
   proof: proof-main.tex
 checked_by:

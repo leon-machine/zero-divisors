@@ -35,7 +35,7 @@ derivations:
   - field-theory.imported-statistics-no-go-palatial-algebra@2
   - field-theory.imported-tower-limit@3
   - standard-model.gauge-algebra-minimal-massive-composite@4
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov@1
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3

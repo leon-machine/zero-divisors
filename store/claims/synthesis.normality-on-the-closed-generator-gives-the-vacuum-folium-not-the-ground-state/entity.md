@@ -45,7 +45,7 @@ derivations:
   uses:
   - synthesis.local-normality-at-the-edge-gives-the-null-ground-state@4
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
-  - synthesis.stationary-generator-states-and-the-edge-scaling@1
+  - synthesis.stationary-generator-states-and-the-edge-scaling@2
   - synthesis.null-vacuum-on-a-horizon-generator@1
   - synthesis.attachment-conformal-energy-is-generated-by-z@5
   - synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation@1

@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - singularity.stretched-singularity-count@7
+  - singularity.stretched-singularity-count@8
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - scrambling.area-law-test@5
   - synthesis.clausius-route-newton-constant-is-residue@4

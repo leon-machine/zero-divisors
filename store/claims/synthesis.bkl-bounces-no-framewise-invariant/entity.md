@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - interior.weighted-limit-theorem@6
-  - interior.kasner-form-interior@6
+  - interior.kasner-form-interior@7
   - sheaf.collision-census@2
   - dark-energy.wall-counterterm@6
   - interior.boosts-generate-exactly-levi-factor@5

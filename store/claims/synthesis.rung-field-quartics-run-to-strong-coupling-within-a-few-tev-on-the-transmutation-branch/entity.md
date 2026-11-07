@@ -42,9 +42,9 @@ imported_from:
 derivations:
 - name: main
   uses:
-  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@4
-  - synthesis.rung-field-on-the-lift-locus@4
-  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@3
+  - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
+  - synthesis.rung-field-on-the-lift-locus@5
+  - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@4
   - synthesis.imported-coleman-weinberg-gildener-weinberg-scalon-mass@1
   - synthesis.imported-two-doublet-scalon-sum-rule-and-lep-neutrino-count@1
   - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces@3

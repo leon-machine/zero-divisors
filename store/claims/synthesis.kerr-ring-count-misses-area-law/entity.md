@@ -30,7 +30,7 @@ derivations:
   - interior.imported-kerr-schild-form-kerr-gauge@2
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.kerr-ring-double-cover-data@3
-  - singularity.stretched-singularity-count@7
+  - singularity.stretched-singularity-count@8
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
   proof: proof-main.tex

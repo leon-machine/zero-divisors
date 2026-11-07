@@ -25,10 +25,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.rung-field-on-the-lift-locus@4
-  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@5
+  - synthesis.rung-field-on-the-lift-locus@5
+  - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus@6
   - synthesis.rung-unit-transverse-to-norm@3
-  - synthesis.rung-field-charged-scalar-sum-rule@2
+  - synthesis.rung-field-charged-scalar-sum-rule@3
   proof: proof-main.tex
 checked_by:
 - kind: check

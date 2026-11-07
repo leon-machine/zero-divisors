@@ -21,8 +21,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - scrambling.slice-volume-exactly-per-unit-killing@4
-  - singularity.stretched-singularity-count@7
+  - scrambling.slice-volume-exactly-per-unit-killing@5
+  - singularity.stretched-singularity-count@8
   proof: proof-main.tex
 checked_by:
 - kind: check

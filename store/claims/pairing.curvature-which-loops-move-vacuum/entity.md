@@ -44,7 +44,7 @@ about:
 derivations:
 - name: main
   uses:
-  - pairing.imported-schwarzschild-connection-curvature@6
+  - pairing.imported-schwarzschild-connection-curvature@7
   - synthesis.imported-gtg-dictionary@2
   proof: proof-main.tex
 - name: standard-route

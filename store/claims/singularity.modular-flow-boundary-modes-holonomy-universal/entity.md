@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - singularity.imported-general-form@1
-  - singularity.imported-interior-collar-kasner-form@6
+  - singularity.imported-interior-collar-kasner-form@7
   - singularity.modular-structure-completed-pair@5
   - singularity.plane-rate@4
   assumes:
