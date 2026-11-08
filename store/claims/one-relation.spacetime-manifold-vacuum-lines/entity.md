@@ -24,7 +24,7 @@ derivations:
   - one-relation.imported-pure-spinors-incidence-chart@5
   - one-relation.imported-witts-extension-theorem@3
   - one-relation.two-presentations@5
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   - sheaf.one-sided-completion@4
   - sheaf.one-sided-completion-singularity@4
   - std-algebra.inverse-of-vector@1

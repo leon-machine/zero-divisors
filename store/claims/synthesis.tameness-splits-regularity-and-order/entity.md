@@ -1,7 +1,7 @@
 ---
 id: synthesis.tameness-splits-regularity-and-order
 kind: claim
-version: 3
+version: 4
 title: 'Tameness splits into regularity and order'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 4
+  source: run 2026-11-07-bit-root
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -25,7 +29,7 @@ derivations:
   uses:
   - sheaf.determinant-identity-blow-up-expansion@3
   - sheaf.invariant-form-t3@2
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -42,10 +46,14 @@ lineage:
   - sheaf.one-sided-completion
   - sheaf.tame-wall-induction
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 3 -> 4. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
-    note: 'Grounding pass 2026-10-26: cites std-algebra.sylvester-inertia where the proof uses them. Version 2 -> 3.'
+    note: 'Grounding pass 2026-10-26: cites synthesis.completion-recovers-the-real-clifford-algebras where the proof uses them. Version 2 -> 3.'
   correction:
     by: maintainer-2026-10-22
     date: '2026-10-22'

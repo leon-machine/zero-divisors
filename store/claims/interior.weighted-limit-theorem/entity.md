@@ -33,7 +33,7 @@ derivations:
   - interior.interior-connection-exactly@8
   - interior.kasner-form-interior@7
   - interior.metric-parallelism-trace-schouten-condition@6
-  - interior.non-null-stabilisers-section-they-act@4
+  - interior.non-null-stabilisers-section-they-act@5
   - interior.scale-tractor-leaves-cone@8
   - interior.stabilisers-flat-model@6
   proof: proof-main.tex

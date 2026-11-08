@@ -12,7 +12,7 @@ functions:
     clauses: ["T = V1 + span{k, n0, ninf}, h-orthogonal", "(1)", "(4)"]
     omits: "21 signatures with p + q <= 6 and four (mu, nu) pairs only; the (p-1, q) signature of G|V1 is skipped (vacuous) for n = 1"
 untouched_premises:
-  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+  synthesis.completion-recovers-the-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

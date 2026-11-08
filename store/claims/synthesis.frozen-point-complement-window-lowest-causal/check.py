@@ -75,7 +75,7 @@ def check_complement_signature():
 
 
 def check_inertia_bound():
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     sq = GA.sig(1, 4)
     vals = (-1, 0, 1)
     vecs = [vec(c) for c in product(vals, repeat=5) if any(c)]
@@ -131,7 +131,7 @@ def lowest_causal(nmax=16):
 
 
 def check_window_census():
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     premise("dark-energy.frozen-point-makes-stelle-west-vector")
     W = admitted(1, 4)
     assert W == [(1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (3, 1), (4, 1)]
@@ -171,7 +171,7 @@ def check_window_census():
 
 def check_residue_zero_member():
     premise("synthesis.residues-zero-four-real-chirality-anomaly")
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     # the admitted residue-0 member is (1,1), causal, and P3's (2,2) is not causal
     W = admitted(1, 4)
     zero = [s for s in W if (s[0] - s[1]) % 8 == 0]

@@ -24,7 +24,7 @@ derivations:
 - name: main
   uses:
   - sheaf.determinant-identity-blow-up-expansion@3
-  - sheaf.wall-gram@3
+  - sheaf.wall-gram@4
   proof: proof-main.tex
 checked_by:
 - kind: legacy

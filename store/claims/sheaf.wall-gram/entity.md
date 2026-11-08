@@ -1,7 +1,7 @@
 ---
 id: sheaf.wall-gram
 kind: claim
-version: 3
+version: 4
 title: The wall Gram
 status: proved
 region: sheaf
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T04, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 4
+  source: run 2026-11-07-bit-root
 review: typed
 about:
 - obj.sheaf.collar-data-coupling
@@ -24,7 +28,7 @@ derivations:
 - name: main
   uses:
   - sheaf.degeneration-sheaf@6
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -43,10 +47,14 @@ locators:
   label: lem:wallgram
   line: 562
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 3 -> 4. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
-    note: 'Grounding pass 2026-10-26: cites std-algebra.sylvester-inertia where the proof uses them. Version 2 -> 3.'
+    note: 'Grounding pass 2026-10-26: cites synthesis.completion-recovers-the-real-clifford-algebras where the proof uses them. Version 2 -> 3.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.grade-decomposition@2
   - primer.sign@2
   proof: proof-main.tex
 checked_by:

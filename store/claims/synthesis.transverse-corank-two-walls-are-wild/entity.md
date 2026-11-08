@@ -1,7 +1,7 @@
 ---
 id: synthesis.transverse-corank-two-walls-are-wild
 kind: claim
-version: 2
+version: 3
 title: 'Transverse corank-two walls are wild: tameness is not generic'
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 3
+  source: run 2026-11-07-bit-root
 review: draft
 derivations:
 - name: main
   uses:
   - sheaf.invariant-form-t3@2
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -41,10 +45,14 @@ lineage:
   motivated_by:
   - sheaf.tameness
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 2 -> 3. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
-    note: 'Grounding pass 2026-10-26: cites std-algebra.sylvester-inertia where the proof uses them. Version 1 -> 2.'
+    note: 'Grounding pass 2026-10-26: cites synthesis.completion-recovers-the-real-clifford-algebras where the proof uses them. Version 1 -> 2.'
   open_problem: pr.tameness
   note: >-
     Answers the route "are generic degenerations automatically tame?" of pr.tameness on the

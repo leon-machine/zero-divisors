@@ -30,7 +30,7 @@ derivations:
   uses:
   - tower.ladder-pairs-satisfy-car-vectors@4
   - std-algebra.vector-squares@1
-  - std-algebra.witt-decomposition@1
+  - std-algebra.witt-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

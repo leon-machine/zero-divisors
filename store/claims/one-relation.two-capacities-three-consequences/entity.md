@@ -29,7 +29,7 @@ derivations:
   - one-relation.two-presentations@5
   - tower.witt-index-quantum-capacity@5
   - std-algebra.vector-squares@1
-  - std-algebra.witt-decomposition@1
+  - std-algebra.witt-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

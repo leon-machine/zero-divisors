@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.sterile-kinematics
 kind: claim
-version: 4
+version: 5
 title: The kinematics of the sterile towers
 status: proved
 region: dark-tower-matter
@@ -18,11 +18,15 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 5
+  source: run 2026-11-07-bit-root
 review: typed
 derivations:
 - name: main
   uses:
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -45,10 +49,14 @@ locators:
   label: prop:sterile
   line: 845
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 4 -> 5. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
-    note: 'Grounding pass 2026-10-26: cites std-algebra.sylvester-inertia where the proof uses them. Version 3 -> 4.'
+    note: 'Grounding pass 2026-10-26: cites synthesis.completion-recovers-the-real-clifford-algebras where the proof uses them. Version 3 -> 4.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

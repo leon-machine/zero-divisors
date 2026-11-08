@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.residue-soldered-invariant-not-algebraic-one@4
+  - dark-matter.residue-soldered-invariant-not-algebraic-one@5
   - dark-tower-matter.mirrors-temperature-p2@7
   proof: proof-main.tex
 checked_by:

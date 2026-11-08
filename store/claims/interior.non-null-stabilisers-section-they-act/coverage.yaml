@@ -13,7 +13,7 @@ functions:
     omits: "five (I, X) pairs only; checks the signature of X-perp in I-perp ((0,3) plus null direction or (1,2) plus null direction); that the polar hypersurface meets the quadric in the whole projectivised null cone of I-perp, and the S^3 conformal structure, are not tested"
 untouched_premises:
   std-algebra.bivector-lie-algebra: "standard algebra cited in the proof; the check computes the statement directly"
-  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+  synthesis.completion-recovers-the-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

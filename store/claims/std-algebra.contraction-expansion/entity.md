@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.product-decomposition@1
-  - std-algebra.exterior-isomorphism@1
+  - std-algebra.exterior-isomorphism@2
   - std-algebra.involution-properties@1
   proof: proof-main.tex
 checked_by:

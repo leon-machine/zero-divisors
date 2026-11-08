@@ -29,7 +29,7 @@ def antisym(vs, sq):
 def check_antisymmetrised_products_have_one_grade():
     premise("std-algebra.blade-basis")
     premise("std-algebra.orthogonal-anticommute")
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     ok = True
     tested = 0
     for p, q, r in S.signatures(4):

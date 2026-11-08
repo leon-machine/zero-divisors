@@ -41,7 +41,7 @@ derivations:
   - sheaf.degeneration-sheaf@6
   - sheaf.imported-real-line-bundles@1
   - std-algebra.spin-double-cover@1
-  - std-algebra.radical-ideal-and-quotient@1
+  - std-algebra.radical-ideal-and-quotient@2
   - synthesis.imported-stiefel-connectivity-and-grassmannian-classification@1
   assumes:
   - sheaf.tameness@1

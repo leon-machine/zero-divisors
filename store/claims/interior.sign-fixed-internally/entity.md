@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - interior.non-null-stabilisers-section-they-act@4
+  - interior.non-null-stabilisers-section-they-act@5
   - interior.scale-tractor-leaves-cone@8
   proof: proof-main.tex
 checked_by:

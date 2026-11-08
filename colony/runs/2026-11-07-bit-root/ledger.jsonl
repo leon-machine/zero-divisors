@@ -1,0 +1,4 @@
+{"t": 1794124886.6918292, "problem": "bit.root", "tokens": 0, "outcome": "settled", "proposal": "synthesis.signed-directions-and-the-integer-clifford-algebra", "verdict": "SOUND WITH FIXES"}
+{"t": 1794124886.7522507, "problem": "bit.rationals", "tokens": 0, "outcome": "settled", "proposal": "synthesis.division-gives-the-rationals", "verdict": "SOUND WITH FIXES"}
+{"t": 1794124886.795296, "problem": "bit.reals", "tokens": 0, "outcome": "settled", "proposal": "synthesis.completion-recovers-the-real-clifford-algebras", "verdict": "SOUND WITH FIXES"}
+{"t": 1794124886.8260612, "problem": "bit.frobenius", "tokens": 0, "outcome": "settled", "proposal": "synthesis.frobenius-and-universality-in-clifford-algebras", "verdict": "SOUND WITH FIXES"}

@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - std-algebra.radical-ideal-and-quotient@1
+  - std-algebra.radical-ideal-and-quotient@2
   - std-algebra.witt-basis-car@1
   - singularity.pseudo-inverse-identities-hyperbolic-atom@4
   - conformal.minimal-nondegenerate-completion@6

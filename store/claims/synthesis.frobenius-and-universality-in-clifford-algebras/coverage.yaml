@@ -1,0 +1,21 @@
+functions:
+  check_real_polynomials_have_roots_in_the_plane_algebra:
+    kind: partial
+    clauses: ["(i) square roots in Cl(0,1), the sign change of odd-degree polynomials at +-M, and the real coefficients of Laplace's auxiliary polynomial g_t"]
+    omits: "finite instances only (six square roots, three odd-degree polynomials, one degree-4 polynomial with roots in Cl(0,1)); the least upper bound, the splitting field and the induction are the proof's"
+  check_pure_part_and_minimal_polynomial:
+    kind: sampled
+    clauses: ["(ii) an element squares to a real exactly when its real or pure part vanishes; x^2 - 2a x + (a^2 - v^2) = 0"]
+    omits: "Cl(0,1) and Cl(0,2) on a grid of integer coefficients; an abstract division algebra is the proof's"
+  check_the_bivector_bounds_the_dimension:
+    kind: sampled
+    clauses: ["(ii) u = e1e2 is pure, orthogonal to e1, e2 and commutes with e_j (j >= 3); (1 - u e_j)(1 + u e_j) = 0; e3 -> e1e2 gives the quaternionic quotient; dimensions 1, 2, 4"]
+    omits: "Cl(0,k) for k = 2, 3, 4; the step from these relations to e_j = +-u inside a division algebra is the proof's"
+  check_every_algebra_embeds_in_some_cl_kk:
+    kind: sampled
+    clauses: ["(iii) the E_{I,J} = w_I f v_J are matrix units of Cl(k,k), and the regular representation through them embeds A in a corner"]
+    omits: "matrix-unit relations for k = 1, 2 and completeness for k = 1, 2, 3; five algebras of dimension 2 to 4"
+  check_the_number_systems_inside:
+    kind: complete
+    clauses: ["(iv) the split-complex idempotents of Cl(1,0), the dual numbers on a null vector of Cl(1,1), and x xbar = sum of squares in Cl(0,1), Cl(0,2)"]
+    omits: "the stored identifications (complex numbers, quaternions, Cl(k,k) as matrices) are cited, not rechecked"

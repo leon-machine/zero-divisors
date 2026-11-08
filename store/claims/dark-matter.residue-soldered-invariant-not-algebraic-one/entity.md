@@ -1,7 +1,7 @@
 ---
 id: dark-matter.residue-soldered-invariant-not-algebraic-one
 kind: claim
-version: 4
+version: 5
 title: The residue is a soldered invariant, not an algebraic one
 status: proved
 region: dark-matter
@@ -21,12 +21,16 @@ credit:
   role: 'maintainer pass on Leon''s decisions, the quaternionic matrix algebra written with the stored macros (notation)'
   version: 4
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 5
+  source: run 2026-11-07-bit-root
 review: typed
 derivations:
 - name: main
   uses:
   - dark-matter.type-residue-what-each-tower-can@5
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   - primer.classification-real-clifford-algebras@3
   proof: proof-main.tex
 checked_by:
@@ -46,6 +50,10 @@ locators:
   label: thm:soldered
   line: 195
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 4 -> 5. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -53,7 +61,7 @@ extraction:
   maintainer_pass:
     by: maintainer-2026-10-26
     date: '2026-10-26'
-    note: 'Grounding pass 2026-10-26: cites std-algebra.sylvester-inertia, primer.classification-real-clifford-algebras where the proof uses them. Version 2 -> 3.'
+    note: 'Grounding pass 2026-10-26: cites synthesis.completion-recovers-the-real-clifford-algebras, primer.classification-real-clifford-algebras where the proof uses them. Version 2 -> 3.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

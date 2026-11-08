@@ -1,9 +1,0 @@
-functions:
-  check_inertia_under_congruence:
-    kind: sampled
-    clauses:
-    - '"the numbers p, q, r do not depend on the basis"'
-    - '"r = dim rad V"'
-    - '"p + q is the rank"'
-    omits: five 3x3 forms and three changes of basis each; existence of the orthogonal basis is exercised
-      by the diagonalisation itself; the isometry classification is not tested separately

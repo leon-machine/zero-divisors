@@ -48,7 +48,7 @@ def check_outer_product_is_exterior():
     premise("std-algebra.grade-decomposition")
     premise("std-algebra.orthogonal-anticommute")
     premise("std-algebra.existence-uniqueness")
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     ok = True
     tested = 0
     # structure constants on blades: the same for every signature with the same n

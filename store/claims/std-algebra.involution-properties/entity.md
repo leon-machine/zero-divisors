@@ -30,7 +30,7 @@ derivations:
   uses:
   - std-algebra.functoriality@1
   - std-algebra.existence-uniqueness@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.grade-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

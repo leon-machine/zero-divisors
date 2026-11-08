@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-complement-window-lowest-causal
 kind: claim
-version: 1
+version: 2
 title: 'The frozen point''s complement as window: lowest causal representatives'
 status: proved
 region: synthesis
@@ -17,12 +17,16 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 2
+  source: run 2026-11-07-bit-root
 review: draft
 derivations:
 - name: main
   uses:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   - synthesis.residues-zero-four-real-chirality-anomaly@4
   proof: proof-main.tex
 checked_by:
@@ -42,6 +46,10 @@ lineage:
   - dark-matter.towers-are-residues-single-clock-filter
   - dark-matter.nesting
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there. The check's premise() call names the new result; nothing else changed.
   open_problem: op.window-p3
   note: >-
     A sharp reformulation of P3, not a derivation from the series' present premises. P1's one frozen
@@ -65,7 +73,7 @@ extraction:
 Let $I$ be the frozen point of Premise \claimref{dark-matter.p1-single-frozen-point}, a vector of the tractor space $\R^{2,4}$ with $Q(I) = \Lambda/3$, and $I^{\perp}$ its orthogonal complement (Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}(i)). Call a tower's spacetime, a quadratic space of signature $(p,q)$, \emph{admitted} if it or its negative is isometric to a nondegenerate subspace of $I^{\perp}$; write (W) for the hypothesis that every populated tower's spacetime is admitted, and (W$_{T}$) for the same with the whole tractor space in place of $I^{\perp}$. A signature is causal if $\min(p,q) = 1$, and (C) is the single-clock filter of Proposition \claimref{dark-matter.towers-are-residues-single-clock-filter}: towers hold matter only at causal signatures. (W) is a candidate premise that restates the window of P3; it was found knowing the window the unit-ball fit needs and is a costed alternative to Premise \claimref{dark-matter.p3-nearest-dimension-representatives}, not a derivation of it.
 \begin{enumerate}
 \item[(i)] \emph{(The complement; computed, exact.)} $I^{\perp}$ has signature $(1,4)$ if $\Lambda > 0$, $(2,3)$ if $\Lambda < 0$, and is $(1,3)$ plus the radical spanned by $I$ if $\Lambda = 0$. For $\Lambda > 0$ it has residue $1 - 4 \equiv 5 \pmod 8$: the frozen point's complement has the signature of the residue-$5$ tower.
-\item[(ii)] \emph{(Admission; proved.)} A nondegenerate $(a,b)$ is isometric to a subspace of a space whose nondegenerate part is $(P,Q)$ if and only if $a \le P$ and $b \le Q$ (Sylvester inertia, Fact \claimref{std-algebra.sylvester-inertia}); it is admitted if and only if this holds for $(a,b)$ or for $(b,a)$. The sign freedom is what Premise \claimref{dark-matter.p2-indifference} requires: it equates residues $r$ and $-r$, and $(p,q) \mapsto (q,p)$ maps the admitted set onto itself.
+\item[(ii)] \emph{(Admission; proved.)} A nondegenerate $(a,b)$ is isometric to a subspace of a space whose nondegenerate part is $(P,Q)$ if and only if $a \le P$ and $b \le Q$ (Sylvester inertia, Theorem \claimref{synthesis.completion-recovers-the-real-clifford-algebras}(iii)); it is admitted if and only if this holds for $(a,b)$ or for $(b,a)$. The sign freedom is what Premise \claimref{dark-matter.p2-indifference} requires: it equates residues $r$ and $-r$, and $(p,q) \mapsto (q,p)$ maps the admitted set onto itself.
 \item[(iii)] \emph{(The window; proved, exact census.)} For $\Lambda > 0$ the admitted causal signatures are exactly
 \[
 (1,1),\ (2,1),\ (1,2),\ (3,1),\ (1,3),\ (4,1),\ (1,4),

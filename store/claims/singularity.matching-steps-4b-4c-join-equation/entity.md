@@ -29,7 +29,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   - sheaf.one-sided-completion@4
   - singularity.curvature-gauge-field-exact-shape-decoupling@5
   - singularity.degeneration-exactly@2

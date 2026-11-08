@@ -31,7 +31,7 @@ derivations:
   - sheaf.degeneration-sheaf@6
   - sheaf.metrics-residue-square-root-twist@5
   - sheaf.imported-real-line-bundles@1
-  - sheaf.wall-gram@3
+  - sheaf.wall-gram@4
   - sheaf.determinant-identity-blow-up-expansion@3
   - sheaf.one-sided-completion@4
   - sheaf.tame-wall-induction@5

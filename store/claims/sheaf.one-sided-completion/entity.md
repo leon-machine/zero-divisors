@@ -25,7 +25,7 @@ derivations:
   uses:
   - sheaf.determinant-identity-blow-up-expansion@3
   - sheaf.local-freeness-constant-rank@2
-  - sheaf.wall-gram@3
+  - sheaf.wall-gram@4
   assumes:
   - sheaf.tameness@1
   proof: proof-main.tex

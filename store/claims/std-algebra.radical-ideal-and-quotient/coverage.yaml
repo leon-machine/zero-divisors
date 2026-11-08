@@ -41,4 +41,4 @@ functions:
       model; J^(r+1) tested on the words a f b f (r = 1) and a f b f' f'' (r = 2), the reduction
       of general products to these is (ii) of the proof
 untouched_premises:
-  std-algebra.sylvester-inertia: "cited for an orthonormal basis of the complement; GA.py signatures are diagonal already"
+  synthesis.completion-recovers-the-real-clifford-algebras: "cited for an orthonormal basis of the complement; GA.py signatures are diagonal already"

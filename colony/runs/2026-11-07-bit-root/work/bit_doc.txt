@@ -1,0 +1,210 @@
+
+# From the Bit to the Numbers
+ · 
+## Thesis
+Geometric algebra is not one formalism among many: it is what independent distinctions become when they are allowed the least possible non-commutativity, and every number system physics uses sits inside it. The argument starts from a single bit, something or nothing, and adds one ingredient at a time:
+a distinction (the bit);
+many independent distinctions (directions);
+one bit of non-commutativity between them (the sign -1, signature and geometry);
+superposition (the algebra);
+one completion (the continuum), whose collective limit gives the bosons.
+At the end, the real numbers, the complex numbers, the quaternions, the split-complex and dual numbers, and the matrix algebras over them all appear as subalgebras or centres of real Clifford algebras, and by Frobenius' theorem nothing associative is missing. That is the case for geometric algebra as the algebra of physics: the structures physics has found empirically (spinors and their sign under a full turn, the Pauli and Dirac algebras, fermion anticommutation, Lorentz signature, the complex unit of quantum mechanics, qubits) are exactly the structures this ladder produces, and none it does not.
+Each step is graded. Proved means a theorem with its proof given or cited. Chosen means a primitive that is assumed, not derived; there are four, and they are named. Argued means an inference from evidence, not a proof. The claim that geometric algebra is intrinsic to the universe is argued, not proved; the section on objections states what would weaken it.
+## Step 0: the bit
+The floor is a single distinction: something or nothing. (Chosen; nothing beneath it is available to derive it from.)
+Write the two states as 0 (nothing) and 1 (something). The only natural way to combine distinctions is to compare them: making a distinction and then making it again returns to nothing. So 1 + 1 = 0, and the bit is the group ℤ₂, or with its "both" operation (1·1 = 1, otherwise 0) the two-element field F₂. This is Spencer-Brown's law of crossing in algebraic form: to cross a boundary twice is not to cross it.
+Two features of the bit matter for everything that follows.
+It is already a number system. F₂ is the smallest field. Arithmetic does not wait for counting; it begins with the first distinction.
+In it, 1 = -1. The bit cannot tell a thing from its reversal. A sign, the difference between going one way and the other, is not present at the floor. It will appear in Step 2 as the residue of two distinctions passing each other, and that is why the coefficients of physics must avoid characteristic 2 while the skeleton beneath them is a characteristic-2 object.
+## Step 1: many independent distinctions
+Take n distinctions that are independent of one another; each is a direction e₁, …, eₙ. (Independence is part of the first chosen primitive: the bit, repeated.) A configuration is the set S of distinctions that have been made, and combining two configurations is the bitwise comparison of Step 0, the symmetric difference S + T. So the space of configurations is F₂ⁿ, with 2ⁿ elements. (Proved, by counting.)
+These 2ⁿ configurations are already the blades of geometric algebra, graded by how many distinctions they contain:
+Grade |S|
+Configuration
+Name in geometric algebra
+0
+nothing distinguished
+scalar
+1
+one direction
+vector
+2
+two directions
+bivector (a plane)
+k
+k directions
+k-vector
+n
+every direction
+pseudoscalar (the volume)
+The counting of geometric algebra (C(n, k) blades of grade k, 2ⁿ in all) is therefore the counting of independent distinctions, before any geometry. What is missing is order: in F₂ⁿ, combining e₁ with e₂ is the same as combining e₂ with e₁, so there is no orientation, no rotation and no sign. The configurations have the shape of the algebra but none of its geometry.
+## Step 2: minimal non-commutativity
+Geometry appears when distinctions are allowed to depend on order, by the smallest amount possible: one extra central bit. (Chosen: the second primitive.) Precisely, the directions generate a group G with a central element c such that
+that is, G is a central extension of the configurations of Step 1 by one bit, and distinct directions do not commute. Everything below is then proved.
+The sign is born. Passing eⱼ by eᵢ and back gives c² = 1, and c ≠ 1 because distinct directions do not commute. So c is the one non-trivial square root of the identity: it is -1. The first sign in mathematics, on this reading, is the residue of two distinctions passing each other.
+Squares are numbers. Each eᵢ² lies over the empty configuration, so it is 1 or c: every direction squares to +1 or -1, and these squares commute with everything. There is no room for magnitude, because the extension carries only one bit.
+The signature is a choice of quadratic form. Writing e_S² = (-1)^{q(S)} defines a quadratic form q on F₂ⁿ whose polar form records which blades anticommute. Central extensions of this kind correspond exactly to such forms (Ovsienko; Elduque and Rodrigo-Escudero), so the whole multiplication table is one quadratic form over the bit. Which directions square to -1 is the signature; the series reads every signature as populated, so none is singled out.
+Rotation appears. For two directions of the same sign, (eᵢeⱼ)² = -eᵢ²eⱼ² = -1: a plane squares to -1, and is the generator of rotations in that plane. The first imaginary unit is a plane, not a number.
+The extension is the least non-commutative possible. For even n, G is an extraspecial 2-group: its centre and its commutator subgroup are both the single bit {1, -1}. For odd n the volume element also becomes central.
+The type of algebra is already fixed. For even n the Arf invariant of q decides whether the algebra will be a real or a quaternionic matrix algebra; for odd n the sign of the volume element's square decides between a complex and a doubled algebra.
+So -1, the signature, rotation and the type of algebra are all present before a single addition has been made.
+## Step 3: superposition
+The third ingredient is that configurations can be added: the group is represented linearly, with its sign bit acting as -1. (Chosen: the third primitive.) Formally the algebra is the twisted group algebra of G with c identified with -1, of dimension 2ⁿ over its coefficients. Then:
+The axiom of geometric algebra becomes a theorem. For a vector v = Σ aᵢeᵢ the cross terms cancel in pairs, eᵢeⱼ + eⱼeᵢ = (c + 1)eⱼeᵢ = 0, so
+a quadratic form. The contraction rule v² = Q(v), which textbooks take as the defining axiom, is the shadow of the sign bit of Step 2. The algebra is the Clifford algebra Cl(p, q). (Proved.)
+It is unique. Over the complex numbers and for even n, the extraspecial group of Step 2 has exactly one irreducible representation in which its sign bit acts as -1, of dimension 2^{n/2} (a finite form of the Stone-von Neumann theorem), and the algebra is all operators on it. So the result of Steps 0 to 3 is not one algebra among several: given the four choices made so far, it is forced. (Proved, classical.)
+It is the algebra of qubits. That representation is n/2 qubits, and the group of Step 2 is the real Pauli group of quantum information: the same central extension of the same F₂ space, with the same quadratic form. (Proved, classical: the Jordan-Wigner correspondence.)
+Null directions and pairs. With addition, indefinite signatures contain null directions, n² = 0, which have no self-residue. Each is completed by a partner m with nm + mn = 1, so the unit returns as a pair residue; these pairs are exactly fermionic creation and annihilation operators. Over the integers the paired reading is the more fundamental one: the pair generates the full matrix ring M₂(ℤ), the orthogonal reading only an index-4 part of it.
+## Step 4: the number systems inside
+Every familiar number system is found inside geometric algebra, as a subalgebra, an even part or a centre. (Proved, classical; the continuum itself waits for Step 5.)
+Number system
+Where it sits
+How it arises
+F₂, the bit
+the configuration space of Step 1
+the distinctions themselves
+±1
+the sign bit
+Step 2
+ℤ
+multiples of 1
+superposition of the unit
+ℚ
+inverses of non-unit vectors, v⁻¹ = v/Q(v)
+dividing by self-residues
+ℝ
+grade 0, Cl(0,0)
+after the completion of Step 5
+ℂ
+Cl(0,1); the even part of Cl(2,0) (a plane, e₁e₂); the centre of Cl(3,0) (the volume I₃)
+a plane or a volume squaring to -1
+Split-complex numbers
+Cl(1,0)
+a direction squaring to +1
+Dual numbers
+Cl(0,0,1); a null direction of Cl(1,1)
+a direction squaring to 0
+Quaternions ℍ
+Cl(0,2); the even part of Cl(3,0) (rotors of space)
+three planes squaring to -1
+Matrices over ℝ, ℂ, ℍ, and their doubles
+every Cl(p, q), repeating with period 8 in p - q
+the full algebras
+Two theorems make the containment complete for the associative world.
+Frobenius. The only finite-dimensional associative real division algebras are ℝ, ℂ and ℍ, and all three are Clifford algebras: Cl(0,0), Cl(0,1) and Cl(0,2). Every way of dividing that is associative and finite already lives here.
+Universality. Every finite-dimensional associative real algebra acts faithfully on itself (its regular representation), so it is a subalgebra of a real matrix algebra, and every real matrix algebra of size 2ᵏ is the Clifford algebra Cl(k, k) (a smaller matrix algebra sits in it as a corner). So every finite-dimensional associative algebra over the reals sits inside geometric algebra.
+In this precise sense the number systems in common use are pieces of geometric algebra: the complex numbers are a plane, the quaternions are the rotors of space, the matrices are whole algebras, and the integers and rationals are what superposition and division make of the sign. The one standard number system not inside is the octonions, which are not associative (see the objections).
+## Step 5: the continuum
+The last ingredient is a single completion; it is the only step that is not algebraic. (Chosen: the fourth primitive.)
+Everything built so far is countable: any structure generated by finitely many elements and relations is. The real line is not, and its characteristic numbers (π, e, ln 2) are reached only through limits. The algebra shows exactly where they enter. It holds planes, which add, and rotors, which multiply, but not the exponential that turns one into the other. Rational rotors compose rationally (t = (t₁ + t₂)/(1 - t₁t₂) for t = tan(θ/2)), yet the angle that adds needs arctan, an infinite series; π is the length of the path from the identity to the rotor -1, which is itself just the sign bit of Step 2. The sign is algebraic; the distance to it is transcendental.
+Three facts make the completion a single, forced step rather than an open choice.
+Only signs survive in ℝ. Rescaling a direction changes its square by a square, so what a direction carries is its square class. Over ℝ every positive number is a square and the classes are just the signs, which is why directions are ±1 in physics. Over the rationals a direction carries a sign together with a set of primes, and those primes decide, for example, whether a plane has zero divisors (with squares 2 and 3 it has none). The real completion is the one in which the bit of Step 2 is all that remains.
+The completion is unique. Given the norm the self-residues define, Ostrowski's theorem leaves exactly one completion, ℝ, rather than a p-adic field.
+Physics supplies it once. In the Transport Papers the completion is not a separate act of mathematics but a physical premise: a state on the infinite tower of transport steps ((N₊)). Half-sidedness forces that completion to be the hyperfinite type III₁ factor, which is unique (Connes, Haagerup), and it can be reached from rational data alone.
+With that one step the coefficient ring is ℝ, and every row of the table in Step 4 becomes the familiar number system.
+## Step 6: bosons, the same ladder after the completion
+Bosons are not a second primitive: they are the collective modes of infinitely many Clifford steps, and they exist only after the completion of Step 5. (The mechanism is proved and classical; that the series' own state gives genuine bosons follows from (N₊) and Mattis and Lieb, with the finite identities checked exactly.)
+Two algebras, mirror images. Fermions obey anticommutation relations built on a symmetric form, a Clifford algebra; bosons obey commutation relations built on an antisymmetric (symplectic) form, a Weyl algebra.
+Clifford (fermions)
+Weyl (bosons)
+Relation
+uv + vu = 2B(u, v)
+xy - yx = ω(x, y)
+One mode
+aa† + a†a = 1, a² = 0
+aa† - a†a = 1
+States per mode
+2 (empty, full)
+infinitely many (0, 1, 2, … quanta)
+Dimension
+finite, 2ⁿ
+no finite-dimensional representation
+Skeleton
+bits extended by a sign (Step 2)
+phase space extended by a continuous phase
+The Weyl algebra has no finite-dimensional representation (the trace of a commutator is 0, the trace of the identity is not), so no finite stage of the ladder can contain it.
+Bosons as the limit of the tower. Each transport step adds a hyperbolic plane, one fermion mode. Take a collective operator spread evenly over N steps, B = (b₁ + … + b_N)/√N, where each bᵢ lowers its own step. On a state with k excitations,
+exactly (the Holstein-Primakoff relation). As N grows with k fixed this becomes 1: the bosonic relation. In general, the large-N fluctuations of an infinite product of matrix algebras form a Weyl algebra (the quantum central limit theorem).
+Three conditions, each already in the ladder.
+Paired elements. The bᵢ must be even elements of each step (pairs of fermion operators), so that operators on different steps commute. Summing single fermion operators gives only one large fermion mode. Bosons are collective excitations of fermion pairs, as Cooper pairs and particle-hole pairs are.
+The completion. The 1/√N scaling and the limit N → ∞ are the completion of Step 5, which is why bosons come after the continuum and not before.
+A polarised state. The number on the right of the commutator is the state's expectation of the step-wise commutator. In the trace state it vanishes and the fluctuations commute, giving a classical field. Bosons appear only in a vacuum-like state, so the symplectic form of the Weyl algebra is supplied by the state on the infinite tower: the same state the series already needs for (N₊) and the type III₁ completion.
+Spin and statistics, read on the ladder. Fermions, with half-integer spin and anticommutation, live at each finite step; bosons, with integer spin and commutation, are collective and exist only in the limit. The same central-extension construction gives both: over the bit with a sign, and over the continuum with a phase.
+The series' state gives genuine bosons. The open question was whether the state on the tower supplies a non-degenerate symplectic form or only a classical field. It supplies one. Under (N₊) the state on every horizon generator is the filled sea of the chiral Fermi field: negative frequencies occupied, positive ones empty. The bosons of such a field are its density modes ρ_q = Σ c†_{k+q}c_k, pair operators exactly as condition 1 requires, and Mattis and Lieb showed that their commutators, which vanish for any finite number of particles, become a non-zero constant in the filled sea. The finite version was checked exactly here (8 modes):
+Quantity
+Finite tower
+Filled sea (the (N₊) state)
+Trace state
+[ρ_q, ρ_q†]
+an operator: the occupation of the q lowest modes minus that of the q highest
+the constant q: a Weyl algebra
+0: a classical field
+[b, b†] for a pair b = a₁†a₂
+n₁ - n₂
+1
+0
+the same, one side of the edge at temperature T
+tanh(ω/2T) for the two levels at -ω and +ω, non-zero for every ω ≠ 0 (exactly 1/2 at e^{ω/T} = 3)
+0
+So the commutator is pure edge effect at every finite size, and becomes the bosonic constant only when the tower is infinite and its far edges are a filled sea below and an empty sea above. That is the series' state, which is pure, so its form cannot vanish: among product states the full fluctuation form of a step degenerates only in the trace state (infinite temperature), although single pieces of it can vanish in other states (the density form alone is zero whenever the two edges are equally occupied, and the polarised vacuum carries the hopping boson but not the pairing one). Bosons are therefore the density waves of the transport tower's filled sea: they need the infinite tower (Step 5) and the (N₊) state, and nothing else.
+## Why this is the algebra of physics
+Each low step of the ladder has been found in nature, and the algebraic structures physics uses for space, spacetime, spin and fermions are ones the ladder produces. (Argued: an inference from evidence, not a proof.)
+Step on the ladder
+Where physics found it
+Evidence
+The sign bit -1 (Step 2)
+spinors change sign under a rotation by 2π and return only after 4π
+neutron interferometry, Rauch et al. and Werner et al. (1975)
+A plane squaring to -1 (Step 2)
+the imaginary unit of quantum mechanics
+Hestenes' reading of the Pauli and Dirac theories, i = the bivector of the spin plane
+Cl(3,0) (Step 3)
+spin one half: the Pauli matrices are a matrix form of it
+atomic spectra, Stern-Gerlach
+Cl(1,3) (Step 3)
+the Dirac equation: the gamma matrices are a matrix form of it
+the electron's magnetic moment, antimatter
+The signature, a quadratic form over the bit (Step 2)
+spacetime is a quadratic form of signature (1, 3)
+special relativity
+Null directions and their partners (Step 3)
+fermionic creation and annihilation operators, the exclusion principle
+the periodic table, the stability of matter
+The extraspecial group and its unique representation (Steps 2 and 3)
+the Pauli group of qubits
+quantum information and computing
+Rotors, the even part (Step 4)
+rotations and Lorentz transformations act on spinors by rotors; Spin(1,3) is the symmetry of the matter fields
+all of relativistic quantum theory
+The argument has three parts.
+Coverage. Physics needs signs, rotation, a complex unit, spinors, a Lorentzian quadratic form and anticommuting fermions. All of them appear on the ladder by Step 3, from a bit, its repetition and one bit of non-commutativity.
+Economy. The same object, one quadratic form over the bit with its unique representation, serves rotations of space, the geometry of spacetime, the spin of the electron, the exclusion principle and the qubit. Physics did not have to choose these separately; on this reading they were never separate.
+Nothing extra. Established physics uses no associative number system outside the ladder, and by Frobenius there is none to use. The non-associative octonions appear only in speculative unification schemes.
+So geometric algebra is the natural choice for physics not because it is a convenient notation for vectors, but because it is the least structure that independent distinctions can carry once they are allowed to depend on order, and nature appears to use exactly that structure.
+## Objections and limits
+The derivation is sound given its four choices; the claim that geometric algebra is intrinsic to the universe is weaker than the derivation, and these are the reasons.
+The primitives are chosen. The bit, minimal non-commutativity, superposition and completeness are assumed. The argument shows that geometric algebra is forced once they are granted, not that nature had to grant them. Each is natural, but naturalness is not proof.
+Universality is cheap. Every finite-dimensional associative algebra sits inside geometric algebra because matrix algebras are Clifford algebras; the same containment can be claimed for matrices. What geometric algebra adds is not more containment but meaning: grades, blades, the bit structure and the geometric reading of i, which matrices hide. The thesis is strongest as a claim about the natural description, not about what can be embedded.
+Formalisms are equivalent. Anything stated in geometric algebra can be restated with matrices or tensors, so "intrinsic to the universe" is an inference to the best explanation, not a theorem.
+Bosons (resolved, conditional on (N₊)). Fermions obey anticommutation relations, a Clifford algebra; bosons obey commutation relations, a Weyl algebra. Step 6 derives the second from the first: bosons are the collective pair modes of the infinite tower, by the quantum central limit theorem (Cushen and Hudson; Goderis, Verbeure and Vets, both checked against the sources), and in the series' own state, the filled sea of (N₊), their symplectic form is non-degenerate (Mattis and Lieb, checked; the finite identities verified exactly). What remains is what remains for the whole programme: (N₊) is a premise and the completion an axiom, so bosons are exactly as derived as the continuum is.
+Octonions. If a non-associative structure (the octonions, triality, the exceptional groups) turns out to be fundamental, the claim that nothing is missing fails. Today they appear only in speculative unification schemes.
+The continuum is supplied, not derived. Step 5 is an axiom. In the Transport Papers it is tied to premise (N₊), which is still a premise; the uniqueness of the type III₁ completion rests on literature cited from memory.
+Arithmetic below the reals. Over the rationals a direction carries primes as well as a sign. Physics works over ℝ, where only signs survive, but the series' finitist branch, which computes over the rationals, has to keep track of the extra structure.
+The signature. That every signature is populated is the series' reading (the dark towers), not an established result.
+What would weaken the thesis: a fundamental role for a non-associative algebra; a bosonic structure that cannot be brought onto the same ladder; or a measured spinor phase under a full rotation other than -1.
+## Sources
+Items marked (memory) are cited from memory and were not checked against the source for this document.
+V. Ovsienko, Real Clifford algebras and quadratic forms over F₂: two old problems become one, arXiv:1601.07664 (2016): the F₂ quadratic form of Step 2.
+A. Elduque and A. Rodrigo-Escudero, Clifford algebras as twisted group algebras and the Arf invariant, Adv. Appl. Clifford Algebras 28 (2018), article 41, arXiv:1801.07002: central extensions, twisted group algebras and the Arf invariant.
+N. Salingaros, vee groups of Clifford algebras (memory): the finite group of Step 2.
+Extraspecial 2-groups and their representations; the finite Stone-von Neumann theorem (memory, standard group theory): uniqueness in Step 3.
+P. Jordan and E. Wigner (1928) (memory): Clifford algebras as qubit operator algebras.
+G. Frobenius (1878) (memory): ℝ, ℂ, ℍ as the associative real division algebras.
+G. Spencer-Brown, Laws of Form (1969) (memory): the law of crossing in Step 0.
+A. Ostrowski (1916) (memory): the completions of ℚ.
+Hasse–Minkowski theorem (memory): rational quadratic forms and the primes a direction carries.
+H. Rauch et al. and S. A. Werner et al., neutron interferometry tests of the 4π spinor periodicity, Phys. Lett. A and Phys. Rev. Lett. (1975) (memory).
+D. Hestenes, Space-Time Algebra (1966) and later work (memory): the geometric reading of the Pauli and Dirac algebras and of i.
+A. Connes and U. Haagerup (memory): uniqueness of the hyperfinite type III₁ factor; Longo and Wiesbrock: half-sided modular inclusions give type III₁ (cited via arXiv:2111.03172).
+Companion documents: Geometric Algebra from Directions (7 November 2026), the axiomatic derivation in detail; Scalars and the Continuum: Review and Extensions (6 November 2026), the continuum and premise (N₊). The exact-arithmetic checks were run in the workspace on 6 and 7 November 2026.
+For Step 6 (checked against the sources on 7 November 2026): C. D. Cushen and R. L. Hudson, A quantum-mechanical central limit theorem, J. Appl. Probab. 8 (1971) 454-469, doi:10.2307/3212170; D. Goderis, A. Verbeure and P. Vets, Non-commutative central limits, Probab. Th. Rel. Fields 82 (1989) 527-544, and D. Goderis and P. Vets, Central limit theorem for mixing quantum systems and the CCR-algebra of fluctuations, Commun. Math. Phys. 122 (1988) 249-265 (as cited in RIMS Kôkyûroku 1278); D. C. Mattis and E. H. Lieb, Exact solution of a many-fermion system and its associated boson field, J. Math. Phys. 6 (1965) 304-312, doi:10.1063/1.1704281. T. Holstein and H. Primakoff, Phys. Rev. 58 (1940) (memory). The exact finite checks (Holstein-Primakoff for N = 2 to 6, pair commutators, the edge form of the Schwinger term for 6 and 8 modes) were run in the workspace.

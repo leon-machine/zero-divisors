@@ -1,7 +1,7 @@
 ---
 id: std-algebra.blade-subspace
 kind: claim
-version: 1
+version: 2
 title: Blades and subspaces
 status: proved
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 2
+  source: run 2026-11-07-bit-root
 review: typed
 trust: ai-proposed
 about:
@@ -27,10 +31,10 @@ about:
 derivations:
 - name: main
   uses:
-  - std-algebra.exterior-isomorphism@1
-  - std-algebra.sylvester-inertia@1
+  - std-algebra.exterior-isomorphism@2
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   - std-algebra.involution-properties@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.grade-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -46,6 +50,10 @@ locators:
   - key: DoranLasenby2003
     locator: Ch. 4 (foundations of geometric algebra)
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there. The check's premise() call names the new result; nothing else changed.
   referee_fixes: '2026-10-26: (iv) covers dependent factors and invertibility is stated for nonzero blades; check label says dim [A] = k, which is what it tests (referee part 1, point 3).'
   by: algebra-core-2026-10-26
 ---

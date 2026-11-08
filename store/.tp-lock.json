@@ -3360,18 +3360,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the quaternionic matrix algebra written with the stored macros (notation)",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    5
    ]
   ],
-  "hash": "5837fb64e180387c",
+  "hash": "4c71c3daeccd310f",
   "ledger": null,
   "parts": {
    "checks": "036a9e6f0fee7267",
-   "proofs": "783653f00db6dba1",
+   "proofs": "b30da48026319234",
    "rest": "d3b65c89b700e77b",
    "statement": "0c1df9c4ba9749c5"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "dark-matter.seeding-gravity-floor-dark-towers-temperature": {
   "assumes": [],
@@ -4443,18 +4448,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    5
    ]
   ],
-  "hash": "696cfaf1e3d8a6bd",
+  "hash": "89b5b23f5ebab55f",
   "ledger": null,
   "parts": {
    "checks": "e497df1abe21ac35",
-   "proofs": "e591935eab5898ef",
+   "proofs": "09046aec2f605c0c",
    "rest": "d3b65c89b700e77b",
    "statement": "51e1cbf23fe8522f"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "dark-tower-matter.survival-sheets": {
   "assumes": [
@@ -7819,18 +7829,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    5
    ]
   ],
-  "hash": "c81c92703581eb4b",
+  "hash": "21818ff644437649",
   "ledger": null,
   "parts": {
    "checks": "80f1b01de6695506",
-   "proofs": "369334233cb6a080",
+   "proofs": "d6ba214cc3001281",
    "rest": "d3b65c89b700e77b",
    "statement": "f2b0cafde45e36ad"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "interior.scale-tractor-leaves-cone": {
   "assumes": [],
@@ -28185,6 +28200,56 @@
   "status": "remark",
   "version": 2
  },
+ "note.synthesis.geometric-algebra-as-the-algebra-of-physics": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "ac66b22115e7a241",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "999a1addc97a7f2d",
+   "statement": "dcedaca175d367fe"
+  },
+  "status": "remark",
+  "version": 1
+ },
+ "note.synthesis.grading-of-the-bit-ladder": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f8e959f0a18c6fee",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "e8b2a8c08b286fa0",
+   "statement": "fb0a23d0e4f6e0f2"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.n-plus-orientation-datum": {
   "assumes": [],
   "credit": [
@@ -32332,18 +32397,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "450c12d07d0d16d8",
+  "hash": "f48ad3a95f0ac0ef",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "33283a4e86c51958",
-   "statement": "5410c0967fa8d207"
+   "statement": "c79f47c8a48c82bd"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.spacetime-algebra": {
   "assumes": [],
@@ -39289,18 +39359,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    6
    ]
   ],
-  "hash": "4e8409fc926845c3",
+  "hash": "37ce24e87b7bab86",
   "ledger": null,
   "parts": {
    "checks": "de93281e20753b95",
-   "proofs": "bbb35ca7777f82f5",
+   "proofs": "ce67989e59e43926",
    "rest": "e3dc7eb2f4cfe7d3",
    "statement": "9db13a20076f5e08"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "sheaf.log-obstruction": {
   "assumes": [],
@@ -39867,18 +39942,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    4
    ]
   ],
-  "hash": "a339b1bcf231270d",
+  "hash": "350b39c80b119981",
   "ledger": null,
   "parts": {
    "checks": "975a3e101319523e",
-   "proofs": "936b95fcbba998e6",
+   "proofs": "a8e5cf9922671fee",
    "rest": "8428bc93cb263500",
    "statement": "7f6cd1a3f2d075d8"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "sheaf.weighted-limit": {
   "assumes": [],
@@ -45476,18 +45556,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "5148ea51eeb64fdb",
+  "hash": "98a4537d89e3e5cb",
   "ledger": null,
   "parts": {
-   "checks": "da23db74f563354c",
-   "proofs": "dfebf11e8f3e44b4",
+   "checks": "2379bd2cdf25d1e4",
+   "proofs": "4b70577b3225be29",
    "rest": "c294efb98b60ce27",
    "statement": "ad0122dce201dddd"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.cartan-dieudonne": {
   "assumes": [],
@@ -45841,18 +45926,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "4cdac6d9117a648b",
+  "hash": "106de689b7ae5166",
   "ledger": null,
   "parts": {
-   "checks": "97ae97cff69dd3cd",
-   "proofs": "b8ec0ffcec32f088",
+   "checks": "804181792c3642ea",
+   "proofs": "70aa64b29ee5a7b2",
    "rest": "2c5458164e0eec1b",
    "statement": "b8e1f0eb95b0a033"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.fock-representation": {
   "assumes": [],
@@ -45941,18 +46031,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "3cbda4cada60c83c",
+  "hash": "f4972292f318e54d",
   "ledger": null,
   "parts": {
-   "checks": "2d79500264becc63",
-   "proofs": "7d6337bc6be7b588",
+   "checks": "c264553b70701e4c",
+   "proofs": "7d8f78ea35f81c93",
    "rest": "5d6fd726c722ef40",
    "statement": "86892218306cbf4c"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.inverse-of-vector": {
   "assumes": [],
@@ -46286,18 +46381,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "30e8df1b1b64c11e",
+  "hash": "01320ab1abf16f8b",
   "ledger": null,
   "parts": {
    "checks": "6a6beb91e4ef8ea9",
-   "proofs": "7115d5adf1733b9e",
+   "proofs": "c6e92a79ec555adc",
    "rest": "b41c5cb0f02f6034",
    "statement": "471c61c30973033f"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.reflection": {
   "assumes": [],
@@ -46449,31 +46549,6 @@
   "status": "proved",
   "version": 2
  },
- "std-algebra.sylvester-inertia": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "direction",
-    null
-   ],
-   [
-    "Claude Opus 5.5",
-    "proposal and drafting",
-    null
-   ]
-  ],
-  "hash": "bb548278010b88b8",
-  "ledger": null,
-  "parts": {
-   "checks": "541f9d406a7813c1",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "264d0d3ef173efe7",
-   "statement": "6466c867f297653d"
-  },
-  "status": "imported",
-  "version": 1
- },
  "std-algebra.tensor-rules": {
   "assumes": [],
   "credit": [
@@ -46561,18 +46636,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "55adcdeea79d1c21",
+  "hash": "1ecf5f937f4c433f",
   "ledger": null,
   "parts": {
-   "checks": "d2771bf683b493e0",
-   "proofs": "a0307b91a8447a05",
+   "checks": "a5992e017ebbed73",
+   "proofs": "7ac4f4ddb19008d1",
    "rest": "9d66e104b80a5482",
    "statement": "938ed5853f29daec"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.witt-extension": {
   "assumes": [],
@@ -47016,18 +47096,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, the derivation citing the retired imported Fact removed",
+    3
    ]
   ],
-  "hash": "ece880ffc71f0816",
+  "hash": "6e3b96c63df4926d",
   "ledger": null,
   "parts": {
    "checks": "222290d69e11bc36",
-   "proofs": "92734f38479fe2d8",
+   "proofs": "b32320e7d0c868ec",
    "rest": "d3b65c89b700e77b",
    "statement": "37d29c86d513ef60"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.boost-evolution-on-generators-is-one-unitary-group": {
   "assumes": [],
@@ -48176,6 +48261,31 @@
   "status": "postulate",
   "version": 1
  },
+ "synthesis.completion-recovers-the-real-clifford-algebras": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a866a67f1aafc528",
+  "ledger": null,
+  "parts": {
+   "checks": "415aaccdf3402087",
+   "proofs": "da9a01e4ff9fc9c4",
+   "rest": "b4df5bcbac80e9a4",
+   "statement": "ba8c6c8e6d94c181"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.complex-neutrino-stages-keep-the-solar-sum-rule": {
   "assumes": [],
   "credit": [
@@ -48260,6 +48370,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.continuum-completion-premise": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "e54fcec684269796",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "9dfe6d071febf76e",
+   "statement": "8312a7b6fa3238d9"
+  },
+  "status": "postulate",
+  "version": 1
  },
  "synthesis.cosmological-horizon-completed-pair": {
   "assumes": [],
@@ -48945,6 +49080,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.division-gives-the-rationals": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "918dca8951910585",
+  "ledger": null,
+  "parts": {
+   "checks": "607d7d71c0c6a768",
+   "proofs": "1484a90760fe251b",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ff5c71255c34438d"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
   "assumes": [],
@@ -49675,6 +49835,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.frobenius-and-universality-in-clifford-algebras": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "127a233c47f66fcc",
+  "ledger": null,
+  "parts": {
+   "checks": "9d6444f9902036c2",
+   "proofs": "352d0bdc540c4381",
+   "rest": "f3aec8140ee84842",
+   "statement": "44d2481852da2027"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.frozen-phase-spectrum-not-red": {
   "assumes": [],
   "credit": [
@@ -49747,18 +49932,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    2
    ]
   ],
-  "hash": "e5e85af8c7548361",
+  "hash": "1dfd4383888948d6",
   "ledger": null,
   "parts": {
-   "checks": "973c233046389fc3",
-   "proofs": "320cc16777606d80",
+   "checks": "898f7ae0918ffe18",
+   "proofs": "f2648aca8a9b44e4",
    "rest": "d3b65c89b700e77b",
-   "statement": "8a815c34bff4af71"
+   "statement": "dab73231c35abfc0"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
   "assumes": [],
@@ -52960,31 +53150,6 @@
   },
   "status": "imported",
   "version": 2
- },
- "synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "direction",
-    null
-   ],
-   [
-    "Claude Opus 5.5",
-    "proposal and drafting",
-    null
-   ]
-  ],
-  "hash": "a3443f3d7923ee8c",
-  "ledger": null,
-  "parts": {
-   "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "f4cb970588f68d74",
-   "statement": "c25cfed8b1f1ae42"
-  },
-  "status": "imported",
-  "version": 1
  },
  "synthesis.imported-renormalised-stress-tensor-of-hadamard-dirac-states": {
   "assumes": [],
@@ -56882,6 +57047,81 @@
   "status": "postulate",
   "version": 1
  },
+ "synthesis.premise-minimal-non-commutativity": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "daa12ba5f5b9a53e",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "23ad026cc2a03084"
+  },
+  "status": "postulate",
+  "version": 1
+ },
+ "synthesis.premise-superposition-over-the-integers": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "866b21c9c2e849c2",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "35dfb4014b272af5"
+  },
+  "status": "postulate",
+  "version": 1
+ },
+ "synthesis.premise-the-bit": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "e5ae03c53559def9",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "5458a4a5733b21f3"
+  },
+  "status": "postulate",
+  "version": 1
+ },
  "synthesis.principality-is-genericity": {
   "assumes": [],
   "credit": [
@@ -58361,6 +58601,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.signed-directions-and-the-integer-clifford-algebra": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0ad428788a5f5d65",
+  "ledger": null,
+  "parts": {
+   "checks": "67be2778f8f73ff7",
+   "proofs": "4eedb05a46ba776b",
+   "rest": "f3aec8140ee84842",
+   "statement": "3ee41763862dfff8"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.slot-count-not-from-constituent-fock-space": {
   "assumes": [],
   "credit": [
@@ -58853,18 +59118,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    4
    ]
   ],
-  "hash": "1ab62615070362fd",
+  "hash": "41cef22fdadff986",
   "ledger": null,
   "parts": {
    "checks": "03e08ad605d63301",
-   "proofs": "93b515755af0d5ba",
+   "proofs": "f7247c2d2187bfff",
    "rest": "8428bc93cb263500",
    "statement": "6606ac46c1017771"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.tangential-derivative-transport-bound": {
   "assumes": [],
@@ -59258,18 +59528,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    3
    ]
   ],
-  "hash": "c1b44cd314588043",
+  "hash": "21e4fc252bca9550",
   "ledger": null,
   "parts": {
    "checks": "b8626c8614dfb442",
-   "proofs": "2346816680f2e957",
+   "proofs": "1725662475d0f321",
    "rest": "d3b65c89b700e77b",
    "statement": "e6eb7fe24b94a26b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
   "assumes": [],
@@ -61022,18 +61297,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    4
    ]
   ],
-  "hash": "5c85b214237a9703",
+  "hash": "e07a5f2d4ad11872",
   "ledger": null,
   "parts": {
    "checks": "97e86444c54610a1",
-   "proofs": "f1ca34f9a4f82640",
+   "proofs": "b422888d12a80a50",
    "rest": "d3b65c89b700e77b",
    "statement": "fa0f6d53c50db1ba"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "transport.corner-even-subalgebra": {
   "assumes": [],
@@ -61437,18 +61717,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    5
    ]
   ],
-  "hash": "0d38b38f40057974",
+  "hash": "1a02a5181fa6c338",
   "ledger": null,
   "parts": {
    "checks": "c9033d0ba212bd35",
-   "proofs": "b9770b38b7877c4a",
+   "proofs": "2990dbff19a91459",
    "rest": "dd6698a4cf58a02b",
    "statement": "be026eca730b2889"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "transport.no-fourth-rule": {
   "assumes": [],
@@ -61627,18 +61912,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
+    6
    ]
   ],
-  "hash": "b3ed84f37575e42c",
+  "hash": "6a7f29938d1264cd",
   "ledger": null,
   "parts": {
    "checks": "a2926036f81d8414",
-   "proofs": "c9495c594b109847",
+   "proofs": "50d7e8fdfa062711",
    "rest": "aa112b7c075a171e",
    "statement": "c59905132a5538f9"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "transport.original-conjecture-refuted-below": {
   "assumes": [],

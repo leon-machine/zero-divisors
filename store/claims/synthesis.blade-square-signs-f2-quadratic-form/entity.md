@@ -1,7 +1,7 @@
 ---
 id: synthesis.blade-square-signs-f2-quadratic-form
 kind: claim
-version: 2
+version: 3
 title: Blade square signs as a quadratic form over the two-element field
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-06-edge-normality
+- name: Claude Opus 5.5
+  role: 'maintainer pass, the derivation citing the retired imported Fact removed'
+  version: 3
+  source: run 2026-11-07-bit-root
 review: draft
 derivations:
 - name: main
@@ -27,10 +31,6 @@ derivations:
   - tower.commuting-copies@5
   - tower.rigidity-clock-frozen@5
   proof: proof-main.tex
-- name: standard-route
-  uses:
-  - synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant@1
-  proof: proof-standard-route.tex
 checked_by:
 - kind: check
   ref: check.py::check_symmetry_forces_the_sign
@@ -45,6 +45,14 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 2 -> 3. Leon's decision of 7 November 2026: the imported Fact
+      synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant is retired, replaced by
+      synthesis.signed-directions-and-the-integer-clifford-algebra, which derives its clause (a) over every commutative ring and its
+      clause (b) for the Clifford twisting functions; clause (c) is clause (iv) here. The standard-route derivation that cited the
+      Fact is removed (derivation main is self-contained and unchanged); the literature stays as prior art in this note.
   note: >-
     From Leon's working document "Scalars and the Continuum: Review and Extensions" (6 November
     2026), items on the directional skeleton and on the sign from symmetry, re-proved and re-checked
@@ -57,7 +65,7 @@ extraction:
     twisted group algebra of F_2^n; isomorphism iff the F_2 forms are equivalent; the Arf invariant
     separates real from quaternionic), and in A. Elduque and A. Rodrigo-Escudero, "Clifford algebras as
     twisted group algebras and the Arf invariant", Adv. Appl. Clifford Algebras (2018),
-    arXiv:1801.07002 (both now Fact synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant, checked against the arXiv texts, and cited by the standard-route derivation); the Gauss sum
+    arXiv:1801.07002 (checked against the arXiv texts; formerly pinned as an imported Fact, now retired); the Gauss sum
     sum_S e_S^2 is the signature of the trace form x -> <x^2>_0, which is +k, 0, -2k on Mat_k(R),
     Mat_k(C), Mat_k(H). Clause (v) is Theorem tower.commuting-copies at one plane read in F_2 language,
     with the type statement that of Theorem tower.rigidity-clock-frozen. Clause (i) is a two-line

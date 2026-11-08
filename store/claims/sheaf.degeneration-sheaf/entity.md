@@ -28,7 +28,7 @@ derivations:
   - std-algebra.vector-squares@1
   - primer.commutation-rule@2
   - std-algebra.existence-uniqueness@1
-  - std-algebra.radical-ideal-and-quotient@1
+  - std-algebra.radical-ideal-and-quotient@2
   assumes:
   - sheaf.tameness@1
   proof: proof-main.tex

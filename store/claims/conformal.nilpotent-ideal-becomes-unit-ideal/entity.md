@@ -23,7 +23,7 @@ derivations:
   uses:
   - conformal.blade-basis-persists-under-degeneracy@5
   - std-algebra.vector-squares@1
-  - std-algebra.radical-ideal-and-quotient@1
+  - std-algebra.radical-ideal-and-quotient@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

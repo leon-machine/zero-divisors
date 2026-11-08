@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.even-slots-need-a-spectator-generator@3
-  - synthesis.blade-square-signs-f2-quadratic-form@2
+  - synthesis.blade-square-signs-f2-quadratic-form@3
   proof: proof-main.tex
 checked_by:
 - kind: check

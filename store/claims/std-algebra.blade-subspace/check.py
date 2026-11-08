@@ -59,7 +59,7 @@ def gram_det(vs, sq):
 
 def check_blades_and_subspaces():
     premise("std-algebra.exterior-isomorphism")
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     premise("std-algebra.involution-properties")
     premise("std-algebra.grade-decomposition")
     ok = True

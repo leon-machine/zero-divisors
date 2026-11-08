@@ -23,7 +23,7 @@ derivations:
   uses:
   - correspondence.fock-model-complexified-ascended-algebra@9
   - correspondence.spinor-identification@7
-  - transport.minimality@4
+  - transport.minimality@5
   - transport.no-go-level-elements@5
   proof: proof-main.tex
 checked_by:

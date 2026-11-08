@@ -81,3 +81,14 @@
   replaced_by: note.singularity.two-clocks-one-calibration
   date: '2026-11-07'
   reason: 'duplicate of note.singularity.two-clocks-one-calibration: the same remark in T05 (Rem 7.17) and the state-selection note (Rem 4.6)'
+- id: std-algebra.sylvester-inertia
+  replaced_by: synthesis.completion-recovers-the-real-clifford-algebras
+  date: '2026-11-08'
+  reason: 'imported Fact derived in geometric algebra (Leon''s decision of 7 November 2026): clause (iii) of the replacement
+    proves Sylvester''s law of inertia over any Euclidean ordered field, the reals included; its dependants now cite it'
+- id: synthesis.imported-real-clifford-algebras-as-twisted-group-algebras-and-the-arf-invariant
+  replaced_by: synthesis.signed-directions-and-the-integer-clifford-algebra
+  date: '2026-11-08'
+  reason: 'imported Fact derived in geometric algebra (Leon''s decision of 7 November 2026): the replacement derives clause (a)
+    over every commutative ring and clause (b) for the Clifford twisting functions; clause (c) is clause (iv) of
+    synthesis.blade-square-signs-f2-quadratic-form, whose standard-route derivation that cited the Fact is removed'

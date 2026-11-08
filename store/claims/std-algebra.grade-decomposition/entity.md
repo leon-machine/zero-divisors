@@ -1,7 +1,7 @@
 ---
 id: std-algebra.grade-decomposition
 kind: claim
-version: 1
+version: 2
 title: The grade decomposition
 status: proved
 region: std-algebra
@@ -19,6 +19,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 2
+  source: run 2026-11-07-bit-root
 review: typed
 trust: ai-proposed
 about:
@@ -28,7 +32,7 @@ derivations:
   uses:
   - std-algebra.blade-basis@1
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -42,6 +46,10 @@ locators:
   - key: Chevalley1954
     locator: Ch. II (the Clifford algebra of a quadratic space)
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there. The check's premise() call names the new result; nothing else changed.
   by: algebra-core-2026-10-26
 ---
 

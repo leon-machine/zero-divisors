@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   - sheaf.one-sided-completion@4
   - sheaf.one-sided-completion-singularity@4
   - sheaf.schwarzschild-degeneration-boundary-tame@6

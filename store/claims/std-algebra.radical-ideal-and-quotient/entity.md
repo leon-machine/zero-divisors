@@ -1,7 +1,7 @@
 ---
 id: std-algebra.radical-ideal-and-quotient
 kind: claim
-version: 1
+version: 2
 title: The radical ideal of a degenerate Clifford algebra and its quotient
 status: proved
 region: std-algebra
@@ -19,6 +19,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 2
+  source: run 2026-11-07-bit-root
 review: draft
 about:
 - obj.std-algebra.radical
@@ -30,7 +34,7 @@ derivations:
   - std-algebra.blade-basis@1
   - std-algebra.existence-uniqueness@1
   - std-algebra.functoriality@1
-  - std-algebra.sylvester-inertia@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@1
   - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:
@@ -55,6 +59,10 @@ locators:
   - key: Porteous1995
     locator: the Clifford algebra of a degenerate quadratic space (chapter not checked; cited from memory)
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   open_problem: op.radical-quotient
 ---
 

@@ -1,0 +1,48 @@
+functions:
+  check_the_sign_bit_is_forced:
+    kind: exact
+    clauses:
+    - (i) c^2 = 1 forced by the relation read both ways (Heisenberg group mod k, and the group of the premise for four sign vectors)
+    - (i) independence of c^2 = 1 at n = 1 (cyclic groups of order 2m, 2 <= m <= 7)
+    omits: the forcing for n >= 2 is a two-line group identity, checked on instances only
+  check_normal_form_table_squares_commutators:
+    kind: complete
+    clauses:
+    - (i) normal form c^a e_S and |G| = 2^{n+1}, with associativity of the rewriting product for n <= 3
+    - (ii) e_S e_T = c^f e_{S xor T} equal to the GA product of signed blades, squares and commutators in {1, c}, closed forms of q and b
+    omits: all sign vectors for n <= 4 and the standard signatures for n = 5; the presentation argument is in the proof
+  check_centre_and_extraspecial:
+    kind: complete
+    clauses:
+    - (iii) centre {1, c} for n even and {1, c, e_full, c e_full} for n odd; number of central involutions; extraspecial for n even
+    omits: the 20 standard signatures with n <= 5
+  check_integer_algebra_free_and_contraction:
+    kind: complete
+    clauses:
+    - (v) the ideal (c + 1) is the span of the (1 + c) e_S, the basis change is unimodular, the quotient is a ring map with integral structure constants equal to GA's
+    - (vi) v^2 = Q(v) for all integer vectors with entries in [-2, 2], n <= 4, and for rational vectors in three signatures
+    omits: all sign vectors for n <= 4; general n is the proof
+  check_universal_property_and_base_change:
+    kind: sampled
+    clauses:
+    - (vii) maps of the directions to anticommuting elements of the right squares extend multiplicatively (27 cases in Cl(p+1, q+1), rotor-conjugated frames and the grade involution)
+    - (vii) in characteristic 2 the product is e_S e_T = e_{S xor T}
+    omits: uniqueness and the comparison with the tensor algebra are in the proof; targets are Clifford algebras only
+  check_classification_by_gauss_sum:
+    kind: complete
+    clauses:
+    - (iv) and (viii) (a) <=> (e) an explicit F_2-isometry exists exactly when the Gauss sums agree (all sign vectors n <= 3, standard signatures 4 <= n <= 6)
+    - (viii) (b) => (c) the lift to anticommuting blades is an algebra isomorphism over Z (n <= 4)
+    - (viii) the trace of left multiplication by a blade and the diagonal trace form
+    omits: the invariance of the trace-form signature over an ordered field is in the proof
+  check_existence_by_the_bilinear_cocycle:
+    kind: complete
+    clauses:
+    - '(i) existence for every sign vector: the cocycle product is associative, has inverses, satisfies the relations and equals the rewriting product'
+    omits: every sign vector with n <= 4; general n is the bilinearity argument in the proof
+  check_radical_and_gauss_sums_over_the_integers:
+    kind: complete
+    clauses:
+    - (iii) the radical of b is {0} for n even and {0, full} for n odd
+    - (viii) the Gauss sum equals the integral scalar part of (1 - j)(1 + j)^p (1 - j)^q in Cl_Z(0,1) and the tabulated value by p - q mod 8
+    omits: the 44 signatures with n <= 8

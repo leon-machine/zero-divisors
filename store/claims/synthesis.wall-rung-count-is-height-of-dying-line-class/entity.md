@@ -32,7 +32,7 @@ derivations:
   - sheaf.one-sided-completion@4
   - sheaf.tame-wall-induction@5
   - sheaf.degeneration-sheaf@6
-  - sheaf.wall-gram@3
+  - sheaf.wall-gram@4
   - sheaf.imported-real-line-bundles@1
   assumes:
   - sheaf.tameness@1

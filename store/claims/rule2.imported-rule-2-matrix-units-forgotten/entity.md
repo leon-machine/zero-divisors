@@ -25,7 +25,7 @@ derivations:
   - transport.corner-even-subalgebra@5
   - transport.fusion-occurs-most-once@5
   - transport.matrix-units-peirce-isomorphism@3
-  - transport.one-generator-minimal-minimal-completions-classified@5
+  - transport.one-generator-minimal-minimal-completions-classified@6
   - transport.rule-2-ideal-fusion-sharp-form@4
   proof: proof-main.tex
 checked_by:

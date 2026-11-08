@@ -1,0 +1,24 @@
+functions:
+  check_complete_field_square_root_step:
+    kind: partial
+    clauses: ["(i) the two inequalities that exclude s^2 < a and s^2 > a for the least upper bound s"]
+    omits: "rational instances only; the least upper bound itself does not exist in Q and is the proof's; 2 is not a rational square (residues mod 4)"
+  check_orthogonal_basis_by_rejection:
+    kind: sampled
+    clauses: ["(ii) repeated rejection gives a basis of anticommuting vectors, and square roots normalise the squares to 1, -1, 0"]
+    omits: "six rational Gram matrices (hyperbolic, nondiagonal, degenerate) in the exact exterior model; one A^T D A example whose square roots are rational"
+  check_inertia_is_basis_independent:
+    kind: sampled
+    clauses: ["(iii) the counts (p, q, r) do not depend on the basis, and r = n - rank G"]
+    omits: "four changes of basis and every ordering of the basis for six Gram matrices; the maximality characterisation of p is the proof's"
+  check_base_change_and_degenerate_embedding:
+    kind: sampled
+    clauses: ["(iv) structure constants in {0, 1, -1}, so Cl(p,q,r) is a rational algebra extended by scalars; Cl(p,q,r) embeds in Cl(p+r, q+r) through null vectors"]
+    omits: "four signatures for the structure constants and five for the embedding"
+  check_square_classes_survive_over_the_rationals:
+    kind: complete
+    clauses: ["(v) x xbar = a^2 - 2b^2 and a^2 - 2b^2 - 3c^2 + 6d^2, no nontrivial rational zero (descent lemmas over all residues mod 4 and mod 9), and the zero divisors of Cl_Q(1,0), Cl_Q(2,0)"]
+    omits: "the norm identities on a grid of integer coefficients; the descent lemmas are checked on every residue class, which with the proof's scaling argument is the whole statement"
+untouched_premises:
+  std-algebra.functoriality: "used only in the proof's step from an isometry to an isomorphism of Clifford algebras, which has no finite content beyond the bases the other checks build"
+  std-algebra.existence-uniqueness: "the existence of Cl(V,Q) over F as a tensor-algebra quotient, used in the proof; the checks realise the algebra by the exterior model instead"

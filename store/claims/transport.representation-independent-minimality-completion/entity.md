@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - transport.conformal-gram-matrix@3
+  - transport.conformal-gram-matrix@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

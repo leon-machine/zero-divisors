@@ -24,8 +24,8 @@ derivations:
 - name: main
   uses:
   - conformal.minimal-nondegenerate-completion@6
-  - transport.minimality@4
-  - transport.one-generator-minimal-minimal-completions-classified@5
+  - transport.minimality@5
+  - transport.one-generator-minimal-minimal-completions-classified@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

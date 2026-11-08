@@ -1,7 +1,7 @@
 ---
 id: obj.std-algebra.signature
 kind: object
-version: 1
+version: 2
 title: Signature, and the spaces R^{p,q,r}
 status: defined
 region: std-algebra
@@ -20,6 +20,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra'
+  version: 2
+  source: run 2026-11-07-bit-root
 review: typed
 trust: ai-proposed
 about:
@@ -31,11 +35,15 @@ locators:
   - key: Lounesto2001
     locator: Ch. 14 (definitions of the Clifford algebra)
 extraction:
+  maintainer_pass_2026_11_08:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 7 November 2026: the imported Fact std-algebra.sylvester-inertia is retired, replaced by synthesis.completion-recovers-the-real-clifford-algebras, whose clause (iii) derives Sylvester's law of inertia in geometric algebra over any Euclidean field, the reals included; the citation and edge now point there.
   by: algebra-core-2026-10-26
 ---
 
 ## formal
-The \emph{signature} of a real quadratic space is the triple $(p, q, r)$ of the law of inertia, \claimref{std-algebra.sylvester-inertia}. $\R^{p,q,r}$ denotes $\R^{p+q+r}$ with the standard basis orthogonal and $Q(e_i) = 1$ for $i \le p$, $Q(e_i) = -1$ for $p < i \le p+q$, and $Q(e_i) = 0$ for the last $r$. We write $\R^{p,q} = \R^{p,q,0}$ and $n = p + q + r$. Every real quadratic space of signature $(p, q, r)$ is isometric to $\R^{p,q,r}$.
+The \emph{signature} of a real quadratic space is the triple $(p, q, r)$ of the law of inertia, \claimref{synthesis.completion-recovers-the-real-clifford-algebras}(iii). $\R^{p,q,r}$ denotes $\R^{p+q+r}$ with the standard basis orthogonal and $Q(e_i) = 1$ for $i \le p$, $Q(e_i) = -1$ for $p < i \le p+q$, and $Q(e_i) = 0$ for the last $r$. We write $\R^{p,q} = \R^{p,q,0}$ and $n = p + q + r$. Every real quadratic space of signature $(p, q, r)$ is isometric to $\R^{p,q,r}$.
 
 ## technical
 The signature $(p, q, r)$ counts the basis vectors squaring to $+1$, $-1$ and $0$ in any orthogonal basis; it is well defined by the law of inertia. The model space $\R^{p,q,r}$ has an orthonormal standard basis with $p$ positive, $q$ negative and $r$ null generators, in that order, and represents every space of that signature.

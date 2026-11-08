@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - sheaf.invariant-form-t3@2
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   assumes:
   - sheaf.tameness@1
   proof: proof-main.tex

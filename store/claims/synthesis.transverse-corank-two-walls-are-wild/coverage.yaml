@@ -20,7 +20,7 @@ functions:
     clauses: ["(2) contrast: a transverse corank-one wall separates exactly two signatures differing by one swap"]
     omits: "not a clause of the statement; two rest blocks at eps = 1/5"
 untouched_premises:
-  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+  synthesis.completion-recovers-the-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

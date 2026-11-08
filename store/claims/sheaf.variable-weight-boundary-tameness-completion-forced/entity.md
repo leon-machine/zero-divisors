@@ -25,7 +25,7 @@ derivations:
   uses:
   - sheaf.determinant-identity-blow-up-expansion@3
   - sheaf.function-linearity-tame-constructions@2
-  - sheaf.wall-gram@3
+  - sheaf.wall-gram@4
   proof: proof-main.tex
 checked_by:
 - kind: proof

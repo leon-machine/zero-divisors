@@ -34,7 +34,7 @@ derivations:
   uses:
   - std-algebra.existence-uniqueness@1
   - std-algebra.blade-basis@1
-  - std-algebra.witt-decomposition@1
+  - std-algebra.witt-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

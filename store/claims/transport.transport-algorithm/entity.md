@@ -34,12 +34,12 @@ derivations:
   - transport.existence-classification-type-c@4
   - transport.existence-locus-type-n@5
   - transport.fusion-occurs-most-once@5
-  - transport.minimality@4
+  - transport.minimality@5
   - transport.no-fourth-rule@4
   - transport.no-go-level-elements@5
   - transport.no-transport-terminates@4
   - transport.noinverse@4
-  - transport.one-generator-minimal-minimal-completions-classified@5
+  - transport.one-generator-minimal-minimal-completions-classified@6
   - transport.pinching-kernel@3
   - transport.representation-independent-minimality-completion@4
   - transport.rule-1-morita-trivial@6

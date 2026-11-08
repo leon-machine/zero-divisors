@@ -12,7 +12,7 @@ functions:
     clauses: ["(3) even m: the signature does not change across the wall"]
     omits: "m = 2 with b = 0 and a diagonal-block model, signature compared at tau = +-1/10 only; no completed form h is built for m = 2, so 'h is nondegenerate on a whole neighbourhood of the wall' is not tested; (4) two-sidedness of a signature-changing wall and the existence of a one-sided even-order wall with a corank-one degeneration are not tested (the m = 3, b = 0 model only shows a signature change)"
 untouched_premises:
-  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+  synthesis.completion-recovers-the-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

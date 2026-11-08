@@ -13,7 +13,7 @@ functions:
     omits: "one coupling (mu,nu) = (2,3), four signatures; 'exactly over Sigma' is tested only as c(k)^2 = lambda != 0 at tau = 1/5, 1/20, -1/50, which rules out k as a null ladder operator off the wall but not every conceivable partner"
 untouched_premises:
   std-algebra.existence-uniqueness: "standard algebra cited in the proof; the check computes the statement directly"
-  std-algebra.sylvester-inertia: "standard algebra cited in the proof; the check computes the statement directly"
+  synthesis.completion-recovers-the-real-clifford-algebras: "standard algebra cited in the proof; the check computes the statement directly"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

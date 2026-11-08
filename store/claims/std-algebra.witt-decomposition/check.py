@@ -42,7 +42,7 @@ def check_hyperbolic_partner_in_a_plane():
 
 
 def check_witt_decomposition_and_maximal_null_subspace():
-    premise("std-algebra.sylvester-inertia")
+    premise("synthesis.completion-recovers-the-real-clifford-algebras")
     ok = True
     tested = 0
     for p, q, r in S.signatures(5):

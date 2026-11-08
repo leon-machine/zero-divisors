@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - std-algebra.grade-decomposition@1
+  - std-algebra.grade-decomposition@2
   - std-algebra.involution-properties@1
   - std-algebra.z2-grading@1
   - std-algebra.vector-squares@1

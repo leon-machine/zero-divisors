@@ -44,7 +44,7 @@ derivations:
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.inverse-of-vector@1
   - std-algebra.product-decomposition@1
-  - std-algebra.exterior-isomorphism@1
+  - std-algebra.exterior-isomorphism@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

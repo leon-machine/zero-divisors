@@ -27,7 +27,7 @@ derivations:
   - interior.boosts-generate-exactly-levi-factor@5
   - interior.exact-parallelism-convergence-rate@6
   - interior.kasner-form-interior@7
-  - interior.non-null-stabilisers-section-they-act@4
+  - interior.non-null-stabilisers-section-they-act@5
   - interior.scale-tractor-leaves-cone@8
   - interior.weighted-limit-theorem@6
   proof: proof-main.tex

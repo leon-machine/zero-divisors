@@ -30,7 +30,7 @@ derivations:
   - dark-energy.stelle-west-vector-frozen-point@6
   - dark-energy.walls-free-sector@6
   - sheaf.metrics-residue-square-root-twist@5
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   assumes:
   - sheaf.tameness@1
   proof: proof-main.tex

@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.orthogonal-anticommute@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.grade-decomposition@2
   - std-algebra.involution-properties@1
   proof: proof-main.tex
 checked_by:

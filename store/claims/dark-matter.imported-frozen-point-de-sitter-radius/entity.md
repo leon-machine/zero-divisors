@@ -27,7 +27,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.under-action-written-norm-parameter-laws@4
-  - interior.non-null-stabilisers-section-they-act@4
+  - interior.non-null-stabilisers-section-they-act@5
   - interior.scale-tractor-leaves-cone@8
   - interior.stabiliser-rotates-parabolic-reductive@2
   proof: proof-main.tex

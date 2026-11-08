@@ -30,8 +30,8 @@ derivations:
   - std-algebra.pseudoscalar-commutation@1
   - std-algebra.product-decomposition@1
   - std-algebra.contraction-expansion@1
-  - std-algebra.blade-subspace@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.blade-subspace@2
+  - std-algebra.grade-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

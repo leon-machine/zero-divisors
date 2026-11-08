@@ -30,7 +30,7 @@ derivations:
   uses:
   - transport.splitting-along-hyperbolic-plane@3
   - primer.commutation-rule@2
-  - std-algebra.witt-decomposition@1
+  - std-algebra.witt-decomposition@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

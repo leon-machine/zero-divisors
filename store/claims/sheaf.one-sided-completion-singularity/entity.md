@@ -25,7 +25,7 @@ derivations:
 - name: main
   uses:
   - sheaf.determinant-identity-blow-up-expansion@3
-  - sheaf.localised-transport@5
+  - sheaf.localised-transport@6
   - sheaf.schwarzschild-degeneration-boundary-tame@6
   proof: proof-main.tex
 checked_by:

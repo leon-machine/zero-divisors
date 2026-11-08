@@ -28,8 +28,8 @@ about:
 derivations:
 - name: main
   uses:
-  - std-algebra.exterior-isomorphism@1
-  - std-algebra.grade-decomposition@1
+  - std-algebra.exterior-isomorphism@2
+  - std-algebra.grade-decomposition@2
   - std-algebra.functoriality@1
   proof: proof-main.tex
 checked_by:
