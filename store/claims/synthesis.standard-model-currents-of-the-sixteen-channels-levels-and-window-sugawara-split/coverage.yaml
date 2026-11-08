@@ -1,0 +1,21 @@
+functions:
+  check_gauge_algebra_acts_on_the_sixteen_channels_by_channel_unitary_matrices:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "The embedding, homomorphism, adjoint and trace statements on a basis of the gauge algebra; the helicity statement only as the phase z z* = 1 of a common channel weight."
+  check_levels_trace_form_is_four_times_the_slot_form:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "The trace identity on all of gl(5) (complete); the window central term on three edge-clean vectors of a three-level window for six pairs of generators."
+  check_adjoint_casimirs_and_central_charges:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "The adjoint Casimirs on one generator of each factor (the Casimir is checked to be scalar there) and the arithmetic of the central values."
+  check_split_commutes_on_localised_window_vectors:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "Two localised vectors of a twelve-level window, one generator per factor, m = +1 and -1; the failure on one edge vector. The statement on D is proved, not run."
+  check_central_charges_from_level_two_vacuum_norms:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "One window (four levels, sea depth two); the norms do not depend on s or L under the stated conditions, which the proof shows."

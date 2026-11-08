@@ -1,0 +1,125 @@
+{
+ "front_matter": {
+  "id": "std-algebra.witt-basis-car",
+  "kind": "claim",
+  "version": 1,
+  "title": "Null pairs satisfy the canonical anticommutation relations",
+  "status": "proved",
+  "region": "std-algebra",
+  "programme": "standard",
+  "subject": "standard-algebra",
+  "tags": [
+   "car-algebra",
+   "ladder-pairs",
+   "hyperbolic-plane"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "algebra-core-2026-10-26"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "Co-Authored-By trailer of the commit that added it"
+   }
+  ],
+  "review": "typed",
+  "trust": "ai-proposed",
+  "about": [
+   "obj.std-algebra.clifford-algebra"
+  ],
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "std-algebra.vector-squares@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "proof",
+    "derivation": "main"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_null_pairs_satisfy_the_car"
+   }
+  ],
+  "locators": {
+   "sources": [
+    {
+     "key": "DoranLasenby2003",
+     "locator": "Ch. 9 (multiparticle states)"
+    },
+    {
+     "key": "LawsonMichelsohn1989",
+     "locator": "Ch. I, Sections 2 and 5"
+    },
+    {
+     "key": "Chevalley1954",
+     "locator": "Ch. II and III (spinors, pure spinors)"
+    }
+   ]
+  },
+  "extraction": {
+   "by": "algebra-core-2026-10-26"
+  }
+ },
+ "levels": {
+  "formal": "Let $v_1, \\dots, v_k, w_1, \\dots, w_k \\in V$ be a \\emph{Witt basis} of their span: $B(v_i, v_j) = B(w_i, w_j) = 0$ and $B(v_i, w_j) = \\tfrac12 \\delta_{ij}$. Then in $\\Cl(V, Q)$\n\\begin{equation}\nv_i v_j + v_j v_i = 0, \\qquad w_i w_j + w_j w_i = 0, \\qquad v_i w_j + w_j v_i = \\delta_{ij},\n\\end{equation}\nthe canonical anticommutation relations for $k$ modes (read $v_i$ as annihilators, $w_i$ as creators). The elements $N_i = w_i v_i$ are mutually commuting idempotents with $N_i + v_i w_i = 1$. In particular, for orthogonal hyperbolic planes $\\operatorname{span}(e_i, e_{k+i})$ of $\\R^{k,k}$, $v_i = \\tfrac12(e_i + e_{k+i})$ and $w_i = \\tfrac12(e_i - e_{k+i})$ form such a basis. The form need not be nondegenerate outside the span.",
+  "technical": "Pairs of null vectors with polar form one half between partners and zero otherwise satisfy, at the level of vectors and with nothing else assumed, the anticommutation relations of fermionic modes. Each hyperbolic plane supplies one such pair, $v = \\tfrac12(e_+ + e_-)$ and $w = \\tfrac12(e_+ - e_-)$. The number elements $w_i v_i$ are commuting projections. The algebra outside the pairs plays no role.",
+  "lay": "Inside a Clifford algebra, a direction of space paired with a direction of time produces two zero-length arrows that obey exactly the rules for creating and destroying a fermion. With several such pairs you get several independent fermion modes, without building any Hilbert space first.",
+  "one-liner": "For a Witt basis ($B(v_i,v_j) = B(w_i,w_j) = 0$, $B(v_i,w_j) = \\tfrac12\\delta_{ij}$), $\\{v_i,v_j\\} = \\{w_i,w_j\\} = 0$ and $\\{v_i,w_j\\} = \\delta_{ij}$ in $\\Cl(V,Q)$."
+ },
+ "proofs": {
+  "main": "By \\claimref{std-algebra.vector-squares}, $xy + yx = 2B(x, y)$ for vectors, which gives the three relations at once. Then $N_i^{2} = w_i v_i w_i v_i = w_i (1 - w_i v_i) v_i = w_i v_i - w_i^{2} v_i^{2} = N_i$ since $w_i^{2} = Q(w_i) = 0$. For $i \\ne j$, $N_i$ and $N_j$ commute because each of $v_i, w_i$ anticommutes with each of $v_j, w_j$, and $N_i$, $N_j$ are products of two. $N_i + v_i w_i = w_i v_i + v_i w_i = 1$. For the hyperbolic planes: $Q(e_i \\pm e_{k+i}) = 1 - 1 = 0$, $B(v_i, w_i) = \\tfrac14(Q(e_i) - Q(e_{k+i})) = \\tfrac12$, and vectors from different planes are orthogonal.\n"
+ },
+ "notes": [
+  {
+   "id": "note.synthesis.geometric-algebra-as-the-algebra-of-physics",
+   "kind": "remark",
+   "title": "Argued: geometric algebra as the algebra of physics",
+   "opening": "\\emph{Status: argued, not proved.} The reading is that geometric algebra is the algebra of physics: the least structure that independent distinctions carry once they may depend on order, and the structure nature uses. It rests on the graded..."
+  }
+ ],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "std-algebra.vector-squares"
+  ],
+  "used_by": [
+   "dark-matter.two-families-are-two-chiralities",
+   "hawking.current-commutator-exactly-edge-split",
+   "one-relation.two-presentations",
+   "scrambling.boundary-mode-space-matrix",
+   "scrambling.pair-mode-qubit-one-object",
+   "singularity.descent-what-it-erases",
+   "singularity.l-stabiliser-tangent",
+   "std-algebra.complex-clifford-algebra",
+   "std-algebra.fock-representation",
+   "synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit",
+   "synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves",
+   "synthesis.frobenius-and-universality-in-clifford-algebras",
+   "synthesis.nilpotent-steps-derivative-exponential-and-boost",
+   "tower.ladder-pairs-satisfy-car-vectors"
+  ],
+  "ledger": "absent",
+  "programme": "standard",
+  "holds_given": [],
+  "evidence": "pass",
+  "past_cone_size": 2,
+  "future_cone_size": 607
+ }
+}

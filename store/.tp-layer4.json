@@ -40368,6 +40368,64 @@
 }
 ]
 },
+"synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
+"failed": false,
+"findings": [],
+"key": "09f1a4cfb3d1a441",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_partner_blocks_are_minus_transposes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.slot-module-light-ray-arrays-are-weyl-components",
+"synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+]
+},
+{
+"derivation": null,
+"func": "check_particle_hole_reversal_intertwines_window_currents",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.witt-basis-car",
+"synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves",
+"synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins"
+]
+},
+{
+"derivation": null,
+"func": "check_trace_form_is_halving_independent_and_anomalies_are_not",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality",
+"synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+]
+},
+{
+"derivation": null,
+"func": "check_abelian_level_depends_on_the_scale_of_y",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+]
+},
+{
+"derivation": null,
+"func": "check_hypercharge_constant_is_the_linear_anomaly_coefficient",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality",
+"synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins"
+]
+}
+]
+},
 "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays": {
 "failed": false,
 "findings": [],
@@ -45852,6 +45910,68 @@
 }
 ]
 },
+"synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split": {
+"failed": false,
+"findings": [],
+"key": "9348b4cde3f92b65",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_gauge_algebra_acts_on_the_sixteen_channels_by_channel_unitary_matrices",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite",
+"synthesis.cpt-closure-forces-slot-module-and-chirality",
+"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
+"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+]
+},
+{
+"derivation": null,
+"func": "check_levels_trace_form_is_four_times_the_slot_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.cpt-closure-forces-slot-module-and-chirality",
+"synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators"
+]
+},
+{
+"derivation": null,
+"func": "check_adjoint_casimirs_and_central_charges",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality"
+]
+},
+{
+"derivation": null,
+"func": "check_split_commutes_on_localised_window_vectors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves",
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+},
+{
+"derivation": null,
+"func": "check_central_charges_from_level_two_vacuum_norms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators",
+"synthesis.null-vacuum-on-a-horizon-generator"
+]
+}
+]
+},
 "synthesis.state-selection-r-and-le-against-t05": {
 "failed": false,
 "findings": [],
@@ -48214,6 +48334,54 @@
 "quantities": [],
 "touched": [
 "singularity.euclidean-rotor-where-it-lies"
+]
+}
+]
+},
+"synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy": {
+"failed": false,
+"findings": [],
+"key": "d5243ec7e49c258d",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_window_quadratic_form_lemma",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves"
+]
+},
+{
+"derivation": null,
+"func": "check_window_energy_is_the_u_n_sugawara_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves",
+"synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators"
+]
+},
+{
+"derivation": null,
+"func": "check_so10_casimir_tensor_identity",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cpt-closure-forces-slot-module-and-chirality",
+"synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+]
+},
+{
+"derivation": null,
+"func": "check_window_energy_equals_so10_sugawara_plus_number",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.slot-module-light-ray-arrays-are-weyl-components",
+"synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
 ]
 }
 ]

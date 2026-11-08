@@ -1,0 +1,21 @@
+functions:
+  check_partner_blocks_are_minus_transposes:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "twelve basis generators (modes numbered 0 to 4 in the check, 1 to 5 in the text) on the five conjugate pairs: partner block -M^T in the complement basis with signs eps, anti-Hermitian over span{1, J}, block diagonal on all 32 states, traces 0 and dim Y J; the derivation argument for general t is the proof"
+  check_particle_hole_reversal_intertwines_window_currents:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "window L = 4, five channels (components V_{1,0} and V_{0,1}), C = all five, the doublet, the triplet: images square and adjoint correctly, Ad(u_x) = phi on one channel's generators and fixes another, u_x reverse(u_x) = 16, n -> 1 - n, H fixed, phi(rho_q(M)) = rho_q(M^C) + delta L tr_C M for twelve generators and q = 0..3; sixteen channels, general even L and the weight phase are the proof"
+  check_trace_form_is_halving_independent_and_anomalies_are_not:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "all 32 sign patterns with the neutral line Omega (any other line carries the zero matrix): the 12 x 12 trace form equals 4 tr_5, traces 2, 2, 10/3, four doublets; the four anomaly conditions (Cartan form) and the colour cubic vanish for exactly two complementary patterns of uniform parity; the weighted cubic invariance and the other neutral lines are the proof"
+  check_abelian_level_depends_on_the_scale_of_y:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "the parity halving: traces 2, 10/3, 16/3, ratios 4, 4, 3/8, 5/3, integral charges 6Y with gcd 1 and squares 120, 3Q with squares 48, scaling by 2, 1/6, 3/5"
+  check_hypercharge_constant_is_the_linear_anomaly_coefficient:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "tr Y over V_+ on all 32 sign patterns (neutral line Omega): component contributions 1, 1, -1, 1, 2, values 0, +-2, +-4, +-6, zero on 8, nonzero on 24, the 2 anomaly-free patterns among the 8; the constant L tr_C Y as the difference of the seas' hypercharges for all 32 x 5 one-component reversals at L = 2; on a window L = 2 with the three channels of V_{1,0} and V_{2,0} the sea's hypercharge and the Y-N central term [rho_1(J Y), rho_1(1)*] on the sea, both tr Y J = 2 J; sixteen channels and general L are the proof"

@@ -992,6 +992,20 @@
     (\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}) these are exact $\mathfrak{u}(16)$
     currents per light ray and generation: a one-dimensional current algebra along each generator, not the
     four-dimensional Yang-Mills field.
+
+    (8 November, current algebra.) The Standard Model algebra acts on the sixteen channels of a light ray inside
+    the $\mathfrak{u}(16)$ pair currents, with no generator mixing the two chiralities, and $\mathfrak{su}(3)$,
+    $\mathfrak{su}(2)$ and hypercharge are at level $4$ relative to the five-mode trace form
+    (\claimref{synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split}). One
+    generation's energy along the light ray is exactly the $\mathfrak{so}(10)$ Sugawara energy at level $4$ plus the
+    number term on every window, $c = 15 + 1 = 16$
+    (\claimref{synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy}); the Standard Model
+    factors' parts leave a remainder of central value $52/7$, on localised vectors, with the Virasoro relations not
+    derived. These currents see the linear (mixed gravitational) anomaly condition, $\mathrm{tr}\,Y = 0$, but no
+    quadratic trace sees the cubic conditions: of the eight particle-antiparticle splittings with $\mathrm{tr}\,Y = 0$
+    only two are anomaly-free
+    (\claimref{synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation}). This is a
+    current algebra along each generator, not the four-dimensional Yang-Mills field.
   attack:
     - "The interacting charge: the operator BRST charge of the interacting theory on the Krein space (renormalisation and the Slavnov-Taylor identities, for example in causal perturbation theory, where the local construction is imported for electrodynamics and Yang-Mills), and positivity of its physical space under Kugo and Ojima's hypotheses."
     - "Higgs-sector BRST: the field-level differential with the Goldstone and doublet terms (s phi), and the breaking pattern derived from the series' scalar sector instead of the aligned vacuum taken as input."
@@ -1001,6 +1015,9 @@
       The current algebra along generators: compute the embedding of the Standard Model gauge algebra in the
       exact $\mathfrak{u}(16)$ channel currents per light ray, its level, and what the Sugawara form gives for
       its dynamics along a generator.
+    - >-
+      Derive the Virasoro relations of the gauge factors' Sugawara parts on the band domain, so that their central
+      values ($32/7$, $2$, $1$, $1$ and the remainder $52/7$) are central charges in the full sense.
   success: >-
     Interacting non-abelian gauge fields with a consistent gauge fixing (or a
     gauge-invariant non-perturbative definition) and a positive physical space,

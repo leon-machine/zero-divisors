@@ -264,6 +264,16 @@ on the radial atom, $I_5$ and $I_7$ for complexifications):
   entity that does not declare `outside_ga` (E609 for a contributor, W222 for
   a maintainer).
   The unit is named ("the unit $I_4$"), never equated with a bare $i$ ("$i = I_4$").
+- *Slot module to channels.* The slot module's numbers are read in $\mathrm{span}\{1, I_4\}$ and the
+  light-ray channels' in $\mathrm{span}\{1, J\}$, $J$ the tower's kernel unit; writing the gauge
+  matrices on the channels matches $I_4 \leftrightarrow +J$ (Leon's decision, 8 November 2026). It is
+  a matching on that one module, not an identification of the two units; the opposite matching is
+  unitarily equivalent with every rotation weight reversed
+  (`synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation`).
+- *Gauge levels.* Levels of the gauge factors on the sixteen channels of a light ray are stated
+  relative to the trace form of the five internal modes, in which $\mathfrak{su}(3)$, $\mathfrak{su}(2)$
+  and hypercharge are all at level $4$; for the store's $Y$, $\mathrm{tr}\,\rho(Y)^{2} = 10/3$. An
+  abelian level is never quoted without its normalisation (Leon's decision, 8 November 2026).
 - *$I_6$ against $I_7$ on $\CS$.* In the T09 Fock model ($w_3 = b_3 + I_7b_4$, $I_7 = I_6e$),
   $I_6 = I_4E$ acts on $\CS$ as $+I_7$; the opposite orientation $a_1a_2b_1b_2b_3b_4$ acts as
   $-I_7$. A result using the mass-chart $I_6$ and the T09 scalar $I_7$ together names the

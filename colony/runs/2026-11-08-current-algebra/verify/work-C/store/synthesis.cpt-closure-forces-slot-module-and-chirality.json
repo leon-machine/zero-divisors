@@ -1,0 +1,114 @@
+{
+ "front_matter": {
+  "id": "synthesis.cpt-closure-forces-slot-module-and-chirality",
+  "kind": "claim",
+  "version": 1,
+  "title": "CPT closure forces the slot module; anomaly freedom, the chirality",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "standard-model",
+  "tags": [
+   "hypotheses-s-r-c",
+   "hypercharge-and-anomalies",
+   "chirality",
+   "classification"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "2026-10-23-toe"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "Co-Authored-By trailer of the commit that added it"
+   }
+  ],
+  "review": "draft",
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "standard-model.imported-pair-systems-two-chirality-halves@5",
+     "standard-model.global-form-quotient-determined@4",
+     "standard-model.imported-anomaly-coefficients@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::check_cpt_closure_classification"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_generation_forces_fermionic_slots"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_anomaly_free_halvings"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_chirality_is_mode_parity"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "lineage": {
+   "motivated_by": [
+    "standard-model.slot-module-hypothesis",
+    "synthesis.anomaly-freedom-forces-slot-content",
+    "field-theory.assignments-survive"
+   ]
+  },
+  "extraction": {
+   "open_problem": "op.hypothesis-s",
+   "note": "Bears on the reformulated problem by replacing clauses (c), (d) and (e) of the slot-module hypothesis by a CPT halving (the standard structure of a theory of Weyl fermions, entered here as a hypothesis of the theorem, not as a premise of the register) and the generation clause (which contains (e), the unique slot vacuum, and fixes the one-slot space to a single doublet), with anomaly freedom: (d) is recovered up to a line in the neutral-singlet block, and (c) is no longer needed (if the slots are tower elements of one parity whose grading is the chirality, that parity is odd); and by deriving the fermionic slot content and exclusion from CPT closure and generation without the anomaly conditions. It does not use the slot-module hypothesis or Hypothesis (S); its past cone is that of synthesis.anomaly-freedom-forces-slot-content, which fixes the chirality grading and derives the content, while here the grading is derived. Clause (4) for F = Lambda C^2 agrees with the count of four anomaly-free conjugation patterns of field-theory.assignments-survive, which is stated for the (S) listing and is not used. The generation clause was added after the pre-registered form of the route (CPT halving with a unique slot vacuum only) was killed by the counter-model of clause (2) at b = 3; the general classification for dim F_0 = a > 1 (net chiralities equal to one integer s with s, a, b of one parity and |s| at most min(a, b)) was computed in parallel in the same run and is not part of this statement. Transport-absent beyond the pair system and the global form. Imported from memory, not as store entities, and used only in the proof - the Pieri rule for U(2), Schur's lemma, and the CPT theorem's statement that the antiparticle states of left-handed Weyl fermions are right-handed in the conjugate representation (R. F. Streater and A. S. Wightman, PCT, Spin and Statistics, and All That, 1964), which motivates the halving hypothesis. Suggested decision for Leon (not a store change) - restate the slot-module hypothesis with clauses (c), (d) and (e) replaced by the generation clause and the CPT halving, keeping the unique slot vacuum (multiplicity one) stated explicitly, and fix the line in the neutral-singlet block by requiring the chirality to commute with Spin(10)."
+  }
+ },
+ "levels": {
+  "formal": "Let $W$ be the pair space of Fact \\claimref{standard-model.imported-pair-systems-two-chirality-halves}, let $F = \\bigoplus_{n \\ge 0}F_{n}$ be a finite-dimensional polynomial representation of $U(2)$ graded by the slot number $n$, and let $(A, B) \\in S(U(2) \\times U(3))$ act on $V = F \\otimes \\Lambda^{\\bullet}W$ as $A \\otimes \\Lambda^{\\bullet}B$, so that the hypercharge of Theorem \\claimref{standard-model.global-form-quotient-determined} is $Y = (3n - 2k)/6$ on $F_{n} \\otimes \\Lambda^{k}W$. A \\emph{CPT halving} is a decomposition $V = V_{+} \\oplus V_{-}$ into subrepresentations with $V_{-}$ isomorphic to the complex conjugate of $V_{+}$; $V_{+}$ is \\emph{anomaly-free} when it satisfies the four conditions of Fact \\claimref{standard-model.imported-anomaly-coefficients}. $F$ is \\emph{generated} when $F_{0} = \\C$ and some $U(2)$-equivariant slot creation map $a^{\\dagger} : \\C^{2} \\otimes F_{n} \\to F_{n+1}$ is onto for every $n$. Write $F_{(\\lambda_{1}, \\lambda_{2})}$ for the irreducibles, so $\\Lambda^{0}\\C^{2} = F_{(0,0)}$, $\\Lambda^{1}\\C^{2} = F_{(1,0)}$, $\\Lambda^{2}\\C^{2} = F_{(1,1)}$.\n\\begin{enumerate}\n\\item \\emph{(CPT closure.)} $V$ is isomorphic to its complex conjugate, equivalently $V$ admits a CPT halving, if and only if $F \\cong a\\,\\Lambda^{0}\\C^{2} \\oplus b\\,\\Lambda^{1}\\C^{2} \\oplus a\\,\\Lambda^{2}\\C^{2}$ as graded $U(2)$-modules for some $a, b \\ge 0$. In particular CPT closure excludes every $F_{n}$ with $n \\ge 3$ and every slot state of weak spin one or more.\n\\item \\emph{(Unique slot vacuum.)} For $a = 1$ an anomaly-free CPT halving exists if and only if $b$ is odd; then $V_{+}$ is one generation together with $\\tfrac{b-1}{2}$ vectorlike pairs $(2,3)_{1/6} \\oplus (2,\\bar{3})_{-1/6}$ and $\\tfrac{b-1}{2}$ vectorlike pairs $(2,1)_{1/2} \\oplus (2,1)_{-1/2}$, or the conjugate of this.\n\\item \\emph{(Generation.)} If $F$ is generated, $V$ is CPT-closed if and only if $F \\cong \\Lambda^{\\bullet}\\C^{2}$, and then $a^{\\dagger}(u)a^{\\dagger}(u') = -a^{\\dagger}(u')a^{\\dagger}(u)$ for all $u, u' \\in \\C^{2}$: the slot module is the fermionic one and slot creation obeys exclusion, with no anomaly condition used.\n\\item \\emph{(Chirality.)} For $F = \\Lambda^{\\bullet}\\C^{2}$ the anomaly-free CPT halvings are exactly those with $V_{+}$ equal, on every isotypic component other than the twice-occurring neutral singlet $(1,1)_{0}$ (the components $n = k = 0$ and $n = 2$, $k = 3$), to the sum of the $F_{n} \\otimes \\Lambda^{k}W$ with $n + k$ even, or to the sum of those with $n + k$ odd; on the neutral singlet block $V_{+}$ is any line. The even choice is one generation, $Q, u^{c}, d^{c}, L, e^{c}$ and a neutral singlet. So the chirality is $\\pm(-1)^{n + k}$, the parity of the total mode number, away from the neutral singlets; it equals the tower grading $(-1)^{\\pi n + k}$ for slot parity $\\pi = 1$, and for $\\pi = 0$ neither half of the tower grading is anomaly-free.\n\\end{enumerate}\nConsequently, for a composite space $F \\otimes \\Lambda^{\\bullet}W$ with hypercharge from the centre, a slot module generated from a unique vacuum and a chirality that is an anomaly-free CPT halving, the fermionic slot module, exclusion and the chirality of Hypothesis (S), the parity of the total mode number, all follow, the last up to the choice of a line in the neutral singlet block; and if the slots are tower elements of one parity whose grading is the chirality, that parity is odd.",
+  "technical": "Take the composite space as a slot module tensored with one pair system and the hypercharge from the centre, as the slot-module hypothesis does, but do not assume a slot parity or that the chirality is the tower grading. Ask only what a theory of Weyl fermions requires, that the state space split into a left-handed half and its CPT conjugate. The colour triplets decide the slot module: a triplet with $n$ slots and its conjugate antitriplet must occur with the same multiplicity, which pairs $F_{n}$ with $F_{2 - n}$ and so leaves only slot numbers $0, 1, 2$, with no weak triplet and as many two-slot singlets as slot vacua. With one vacuum, anomaly freedom then allows any odd number of slot doublets, the extra ones entering in vectorlike pairs. If the slot module is generated from its vacuum by one doublet of slot creation operators, as a Fock-type module is, CPT closure alone leaves exactly the fermionic module $\\Lambda^{\\bullet}\\C^{2}$, with exclusion. For that module the four anomaly conditions select exactly two halvings, the even and the odd parity of the total mode number, apart from a free line in the block of the two neutral singlets. So the chirality of Hypothesis (S) and the odd slot parity are consequences, not premises.",
+  "lay": "The series builds each particle from two kinds of internal slot, and the most-used assumption in the store says, among other things, which states are left-handed and that the slot quanta behave like fermions. This result shows that part of that assumption can be derived. Requiring only what every theory of fermions has, that each particle's antiparticle be present with the opposite handedness, already forces the slot quanta to be fermion-like, provided the slot states are built from one empty state by adding quanta of a single two-state kind. Requiring further that the theory be free of quantum anomalies then forces the handedness to be the even-or-odd count of occupied modes, exactly as the assumption states, except for the choice within the pair of neutral states that would be the right-handed neutrino.",
+  "one-liner": "For $V = F \\otimes \\Lambda^{\\bullet}W$ with $Y = (3n - 2k)/6$, CPT closure holds iff $F = a\\Lambda^{0} \\oplus b\\Lambda^{1} \\oplus a\\Lambda^{2}$; with one vacuum anomaly-free halvings need $b$ odd, and with $F$ generated from its vacuum CPT closure forces $F = \\Lambda^{\\bullet}\\C^{2}$ with exclusion and anomaly freedom forces the chirality $\\pm(-1)^{n + k}$ off the neutral singlets."
+ },
+ "proofs": {
+  "main": "Notation. $W$ is three-dimensional with $U(3)$ acting by its defining representation (Fact \\claimref{standard-model.imported-pair-systems-two-chirality-halves}), so $\\Lambda^{k}W$ is the colour representation $1, 3, \\bar{3}, 1$ for $k = 0, 1, 2, 3$. A polynomial irreducible $F_{(\\lambda_{1}, \\lambda_{2})}$ of $U(2)$ has slot number $n = \\lambda_{1} + \\lambda_{2}$ and weak spin $j = (\\lambda_{1} - \\lambda_{2})/2$; write $M_{j}(n)$ for the multiplicity of weak spin $j$ in $F_{n}$, so $M_{j}(n) = 0$ for $n < 0$. By Theorem \\claimref{standard-model.global-form-quotient-determined} the abelian factor acts on $F_{n} \\otimes \\Lambda^{k}W$ with $Y = (3n - 2k)/6$, and $V$ is the sum over $(n, k, j)$ of $M_{j}(n)$ copies of $(2j + 1, \\Lambda^{k}\\C^{3})_{(3n - 2k)/6}$. The complex conjugate of $(2j + 1, R)_{Y}$ is $(2j + 1, \\bar{R})_{-Y}$, the $SU(2)$ representations being self-conjugate.\n\n(1) A CPT halving gives $\\bar{V} \\cong \\bar{V}_{+} \\oplus \\bar{V}_{-} \\cong V_{-} \\oplus V_{+} = V$; conversely if $V \\cong \\bar{V}$, every non-real isotype $R$ has the multiplicity of $\\bar{R}$, and the real isotypes, which here are colour and hypercharge singlets of $Y = 0$ and so occur at $(n, k) = (0, 0)$ or $(2, 3)$, have even multiplicity when $V$ has the form below, so taking one of each conjugate pair and half of each real isotype is a halving. For the classification compare colour triplets with antitriplets. A triplet occurs only at $k = 1$, where $(2j + 1, 3)_{Y}$ has multiplicity $M_{j}(n)$ with $Y = (3n - 2)/6$; its conjugate $(2j + 1, \\bar{3})_{-Y}$ occurs only at $k = 2$, with $-Y = (3n' - 4)/6$, so $n' = 2 - n$. Hence $V \\cong \\bar{V}$ forces $M_{j}(n) = M_{j}(2 - n)$ for all $j, n$, so $M_{j}(n) = 0$ for $n > 2$. The polynomial irreducibles with $n \\le 2$ are $F_{(0,0)}$ ($j = 0$), $F_{(1,0)}$ ($j = \\tfrac12$), $F_{(2,0)}$ ($j = 1$) and $F_{(1,1)}$ ($j = 0$); $M_{1}(2) = M_{1}(0) = 0$ excludes $F_{(2,0)}$, and $M_{0}(2) = M_{0}(0)$ gives as many copies of $F_{(1,1)}$ as of $F_{(0,0)}$. Conversely, for $F = a\\Lambda^{0} \\oplus b\\Lambda^{1} \\oplus a\\Lambda^{2}$ the map $(n, k) \\mapsto (2 - n, 3 - k)$ sends each isotype to its conjugate with the same multiplicity ($Y \\mapsto (3(2 - n) - 2(3 - k))/6 = -Y$, $\\Lambda^{3 - k}\\C^{3} \\cong \\overline{\\Lambda^{k}\\C^{3}}$, and $M_{j}(n) = M_{j}(2 - n)$ holds), and the real isotype $(1,1)_{0}$ has multiplicity $2a$.\n\n(2) Let $a = 1$. The isotypes come in six conjugate pairs: three from $n \\in \\{0, 2\\}$, namely $(1,3)_{-1/3} \\leftrightarrow (1,\\bar{3})_{1/3}$, $(1,\\bar{3})_{-2/3} \\leftrightarrow (1,3)_{2/3}$, $(1,1)_{-1} \\leftrightarrow (1,1)_{1}$, each of multiplicity one; two from $n = 1$, namely $(2,1)_{1/2} \\leftrightarrow (2,1)_{-1/2}$ and $(2,3)_{1/6} \\leftrightarrow (2,\\bar{3})_{-1/6}$, each of multiplicity $b$; and the real $(1,1)_{0}$ of multiplicity two. A halving puts $m$ copies of $R$ and $b - m$ of $\\bar{R}$ into $V_{+}$ for each pair; write $\\epsilon_{1}, \\epsilon_{2}, \\epsilon_{3} = \\pm1$ for the first three (sign $+$ for the first-named member) and $s_{t} = 2m_{t} - b$, $s_{u} = 2m_{u} - b$ for the last two. Each anomaly sum is odd under $R \\mapsto \\bar{R}$ and vanishes on $(1,1)_{0}$, so with the per-isotype values of Fact \\claimref{standard-model.imported-anomaly-coefficients} (gravitational $\\sum Y$: $-1, -2, -1, 1, 1$; $[SU(2)]^{2}U(1)$: $0, 0, 0, \\tfrac12, \\tfrac12$; $[SU(3)]^{2}U(1)$: $-\\tfrac13, -\\tfrac23, 0, 0, \\tfrac13$; $U(1)^{3}$: $-\\tfrac19, -\\tfrac89, -1, \\tfrac14, \\tfrac{1}{36}$, for the first-named members in the order above) the conditions are\n\\[\n-\\epsilon_{1} - 2\\epsilon_{2} - \\epsilon_{3} + s_{t} + s_{u} = 0,\\quad s_{t} + s_{u} = 0,\\quad \\epsilon_{1} + 2\\epsilon_{2} = s_{u},\\quad -\\tfrac{\\epsilon_{1}}{9} - \\tfrac{8\\epsilon_{2}}{9} - \\epsilon_{3} + \\tfrac{s_{t}}{4} + \\tfrac{s_{u}}{36} = 0.\n\\]\nThe first two give $\\epsilon_{3} = -\\epsilon_{1} - 2\\epsilon_{2}$, which is $\\pm1$ only if $\\epsilon_{1} = -\\epsilon_{2}$, and then $\\epsilon_{3} = -\\epsilon_{2}$, $s_{u} = \\epsilon_{2}$, $s_{t} = -\\epsilon_{2}$; the fourth then reads $\\epsilon_{2}(4 - 32 + 36 - 9 + 1)/36 = 0$. (As a linear system in five unknowns the four conditions have rank four, with solutions the multiples of $(-1, 1, -1, -1, 1)$.) $s_{u} = 2m_{u} - b = \\pm1$ needs $b$ odd, and then $m_{u} = (b \\pm 1)/2$, $m_{t} = (b \\mp 1)/2$: one generation and $(b - 1)/2$ vectorlike pairs of each doublet type. The $[SU(3)]^{3}$ coefficient $\\epsilon_{1} - \\epsilon_{2} + 2s_{u}$ vanishes on these solutions and the number of doublets in $V_{+}$, $b + 3b = 4b$, is even.\n\n(3) $F_{1} = a^{\\dagger}(\\C^{2} \\otimes F_{0})$ is $0$ or $\\C^{2}$, and $F_{2}$ is a quotient of $\\C^{2} \\otimes F_{1}$, which is $\\mathrm{Sym}^{2}\\C^{2} \\oplus \\Lambda^{2}\\C^{2} = F_{(2,0)} \\oplus F_{(1,1)}$ (Pieri). If $V$ is CPT-closed, (1) with $\\dim F_{0} = 1$ gives $a = 1$, so $F_{2} \\supseteq \\Lambda^{2}\\C^{2} \\ne 0$, hence $F_{1} = \\C^{2}$, $b = 1$, $F_{2} = \\Lambda^{2}\\C^{2}$ and $F_{n} = 0$ for $n \\ge 3$: $F \\cong \\Lambda^{\\bullet}\\C^{2}$. Conversely $\\Lambda^{\\bullet}\\C^{2}$ is generated by the wedge and is CPT-closed by (1). The map $u \\otimes u' \\mapsto a^{\\dagger}(u)a^{\\dagger}(u')\\lvert 0 \\rangle$ is $U(2)$-equivariant from $\\C^{2} \\otimes \\C^{2}$ to $F_{2} = \\Lambda^{2}\\C^{2}$, so by Schur's lemma it vanishes on $\\mathrm{Sym}^{2}\\C^{2}$; on $F_{1}$ and $F_{2}$ the product lands in $F_{3} = F_{4} = 0$. So $a^{\\dagger}(u)a^{\\dagger}(u') + a^{\\dagger}(u')a^{\\dagger}(u) = 0$ on all of $F$.\n\n(4) For $F = \\Lambda^{\\bullet}\\C^{2}$ ($a = b = 1$), (2) leaves the two solutions $\\epsilon_{2} = \\pm1$, each fixing $V_{+}$ on every non-real isotype. For $\\epsilon_{2} = +1$, $V_{+}$ contains $(1,\\bar{3})_{-2/3}$ ($n = 0$, $k = 2$), $(1,\\bar{3})_{1/3}$ ($n = 2$, $k = 2$), $(1,1)_{1}$ ($n = 2$, $k = 0$), $(2,3)_{1/6}$ ($n = 1$, $k = 1$) and $(2,1)_{-1/2}$ ($n = 1$, $k = 3$), exactly the components with $n + k$ even other than $n = k = 0$; $\\epsilon_{2} = -1$ gives the components with $n + k$ odd other than $(n, k) = (2, 3)$. On the real isotype $(1,1)_{0}$ of multiplicity two, $V_{+}$ is any line, and the anomaly sums do not see the choice. For $\\pi = 0$ the grading $(-1)^{k}$ puts $(1,\\bar{3})_{-2/3}$ ($n = 0$, $k = 2$) and $(2,\\bar{3})_{-1/6}$ ($n = 1$, $k = 2$) into one half, so that half has $s_{u} = -\\epsilon_{2}$ in the notation of (2), and its complement likewise; no solution has $s_{u} = -\\epsilon_{2}$.\n\nThe script enumerates every $F$ with multiplicities at most one among the ten irreducibles with $\\lambda_{1} \\le 3$, confirming that exactly the three nonzero modules of the form of (1) are CPT-closed, and that adding any of $F_{(2,0)}, F_{(2,1)}, F_{(2,2)}, F_{(3,0)}$ to $a\\Lambda^{0} \\oplus b\\Lambda^{1} \\oplus a\\Lambda^{2}$ ($a, b \\le 3$) breaks closure; it computes with GA.field_kernel the $U(2)$-equivariant maps $\\C^{2} \\otimes \\C^{2} \\to \\Lambda^{2}\\C^{2}$ and $\\to \\mathrm{Sym}^{2}\\C^{2}$ (one each, the first killing symmetric tensors, the second antisymmetric ones), enumerates all generated modules up to slot number four by the Pieri rule and finds $\\Lambda^{\\bullet}\\C^{2}$ the only CPT-closed one, and confirms that truncated bosonic modules are never closed; it counts the anomaly-free halvings for $a = 1$, $b = 0, \\ldots, 5$ ($0, 2, 0, 2, 0, 2$) with the cubic and doublet-parity conditions automatic, verifies the coefficient table above from the four sums, the rank-four system and its solution line, the content at $b = 3$, and the identification in (4) of the two solutions with the parity halves, the free neutral line, and the anomalous halves of the $\\pi = 0$ grading.\n"
+ },
+ "notes": [],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "standard-model.global-form-quotient-determined",
+   "standard-model.imported-anomaly-coefficients",
+   "standard-model.imported-pair-systems-two-chirality-halves"
+  ],
+  "used_by": [
+   "standard-model.hyp-s-slot-statistics",
+   "synthesis.fock-slot-module-is-cpt-closed-only-over-one-doublet",
+   "synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5",
+   "synthesis.slot-module-light-ray-arrays-are-weyl-components",
+   "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+   "synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+  ],
+  "ledger": "absent",
+  "programme": "transport-papers",
+  "holds_given": [],
+  "evidence": "pass",
+  "past_cone_size": 37,
+  "future_cone_size": 220
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "front_matter": {
+  "id": "synthesis.slot-module-light-ray-arrays-are-weyl-components",
+  "kind": "claim",
+  "version": 3,
+  "title": "Light-ray arrays of the slot module are its Weyl components",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "entropy",
+  "tags": [
+   "boundary-modes",
+   "mode-counting",
+   "counting-rules"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "2026-10-31-all-open"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "Co-Authored-By trailer of the commit that added it"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "clause (i) split out into synthesis.canonical-part-of-a-spinor-on-a-null-plane, which the proof now cites; notation declaration",
+    "version": 2,
+    "source": "maintainer pass 2026-11-07"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "unit conventions per Leon's rulings of 7 November 2026 (R3)",
+    "version": 2,
+    "source": "maintainer pass 2026-11-07 (unit rulings)"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "GA rewrite (the two units of proof (i) named, at reader R08's request)",
+    "version": 3,
+    "source": "maintainer pass 2026-11-07 (consistency)"
+   }
+  ],
+  "review": "draft",
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "synthesis.canonical-part-of-a-spinor-on-a-null-plane@1",
+     "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@5",
+     "field-theory.second-quantisation@6",
+     "synthesis.cpt-closure-forces-slot-module-and-chirality@1",
+     "synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2",
+     "synthesis.half-integer-weight-array-carries-half-ln2@5",
+     "standard-model.majorana-element@7",
+     "synthesis.lowest-causal-residues-zero-four-content@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::check_mass_terms_enter_only_the_constraint"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_canonical_projector_is_residue_zero_ideal"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_sixteen_weyl_components_every_halving"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_particle_half_is_chiral"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_electroweak_pairing_and_neutrino_cases"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_generations"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "lineage": {
+   "motivated_by": [
+    "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
+    "standard-model.slot-module-hypothesis",
+    "synthesis.residue-from-mode-entropy",
+    "pred.boundary-mode-density"
+   ]
+  },
+  "extraction": {
+   "maintainer_pass_ga_rewrite": {
+    "by": "maintainer-2026-11-07",
+    "date": "2026-11-07",
+    "note": "Version 2 -> 3. Reader issue (ga-issues-R08.md): proof (i) now says which unit acts where: Hestenes' right unit I_4 sigma_3 on the spinor values, span{1, I_4} on the slot module's numbers and internal index, not identified, and the channel count (half the real dimension) independent of the choice. No change to the mathematics; the matrices in this entity are mass matrices and the Majorana symmetric matrix on the internal index, which the conventions allow, and stay."
+   },
+   "maintainer_pass_unit_rulings": {
+    "by": "maintainer-2026-11-07",
+    "date": "2026-11-07",
+    "note": "Leon's rulings R1-R4 of 7 November 2026, folded into version 2 of this pass: R3: the slot module V and its CPT halvings are read over span{1, I_4} on the tower floors (stated once in the formal level); no bare i remains, declaration removed"
+   },
+   "open_problem": "op.residue-killing-weights",
+   "maintainer_pass_clause_split": {
+    "by": "maintainer-2026-11-07",
+    "date": "2026-11-07",
+    "note": "Referee fix folded into version 2: (i) now records the one boundary value of Lambda(k) psi per generator that the constraint leaves free, as in the cited result. Version 1 -> 2, at Leon's decision of 7 November 2026: the algebra of clause (i) (mass terms reach only the constraint) is now the separate result synthesis.canonical-part-of-a-spinor-on-a-null-plane, its clause (iv), with the flux identity its clause (ii), and the proof of (i) cites it; the pin to the light-ray result moves to its version 3 (the same split, statement unchanged). The two checks of (i) are kept and record the new premise in place of the light-ray result, which the check of (iv) still records. Statement unchanged. Notation: no bare imaginary unit; the complex field stays in the slot module V and is declared under outside_ga. Pins moved to current versions (statements unchanged): synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays 3 -> 4."
+   },
+   "note": "The problem's first line of attack, with the field content imported from the Standard Model subject: compute the light-ray array content of the series' matter per generation from the slot module and compare with the registered unit. Two findings. First, the light-ray count does not see whether a species is Dirac or Weyl: the canonical part on a null plane is fixed by the flux of the current, an algebraic identity, and every Lorentz-covariant mass term is a right multiplier, which reaches only the constraint that fixes the other component; so the arrays are the Weyl components, whatever the mass matrix, and 2 n_D + n_W of the light-ray result is their number. Second, every CPT halving of the slot module has a particle half of dimension sixteen, so a generation gives sixteen arrays and eight registered units, an integer, for every choice of the neutral singlet; and the particle half is chiral in every halving (only the neutral singlet is self-conjugate), so a generation's content cannot be grouped into gauge-covariant Dirac fields, and under a nonzero Majorana term it is seven Dirac species and two Majorana neutrals after electroweak breaking. The problem's clause \"each counted species is a Dirac species\" is therefore false for the series' matter on both readings; what holds is the count. Also bears on op.helicity-per-boundary-mode, second half. Transport-absent. Literature cited from memory as orientation only: light-front quantisation (Kogut and Soper 1970) for the mass independence of the null-plane data; Garcia-Etxebarria and Montero 2018 (Dai-Freed anomalies) for sixteen Weyl fermions per generation from a different premise."
+  }
+ },
+ "levels": {
+  "formal": "Work as in Theorem \\claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}: the spacetime algebra $\\Cl(1,3)$, a horizon's null plane $N_{k}$ with generators along $k = \\gamma_{0} + \\gamma_{3}$ and second null direction $m = \\gamma_{0} - \\gamma_{3}$, $B = \\gamma_{3}\\gamma_{0}$, $\\Lambda(k) = \\tfrac12(1 + B)$, $\\Lambda(m) = \\tfrac12(1 - B)$, so that the canonical part of a spinor on $N_{k}$ is $\\Lambda(m)\\psi$, one complex channel per chirality. Let $V = \\Lambda^{\\bullet}\\C^{5}$ be the fermionic slot module (numbers and the module's complex structure are read in $\\mathrm{span}\\{1, I_{4}\\}$, the module read on the tower's floors, where $I_{4}$ commutes with the tower vectors) (modes $1, 2$ the slots, $3, 4, 5$ the pairs) with the gauge algebra $\\mathfrak{s}(\\uu(2) \\oplus \\uu(3))$ and $Y = (3n - 2k)/6$ on states with $n$ slots and $k$ pairs (Theorem \\claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}), and call a CPT halving any involution $\\Gamma$ commuting with the gauge algebra whose $-1$ eigenspace $V_{-}$ is isomorphic to the conjugate of its $+1$ eigenspace $V_{+}$ (Theorem \\claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}). Read one generation as the left-handed Weyl fields valued in $V_{+}$, its antiparticles in $V_{-}$. Then:\n\\begin{enumerate}\n\\item[(i)] \\emph{(Mass terms reach only the constraint.)} With $\\ip{k}{m} = 2$, every vector splits as $a = \\tfrac12 m\\,\\ip{k}{a} + \\tfrac12 k\\,\\ip{m}{a} + a_{\\perp}$, so $k\\nabla = \\tfrac12 km\\,(k\\cdot\\nabla) + k\\nabla_{\\perp}$ contains no derivative off $N_{k}$; $km = 4\\Lambda(k)$, $k$ anticommutes with $\\gamma_{1}, \\gamma_{2}$, and $k\\Lambda(k) = 0$, so $k\\psi X = k\\Lambda(m)\\psi X$ for every multivector $X$ acting from the right, and $L_{k}$ is injective on the image of $\\Lambda(m)$. Every Lorentz-covariant mass term, of Dirac or of Majorana type, acts from the right, so on $N_{k}$ it enters only the equation that fixes $\\Lambda(k)\\psi$ from $\\Lambda(m)\\psi$: the free data on $N_{k}$ are $\\Lambda(m)\\psi$, with one boundary value of $\\Lambda(k)\\psi$ per generator, for every mass matrix (Theorem \\claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}(iv)), one complex channel per Weyl component. In the count of the light-ray result, $2n_{D} + n_{W}$ is the number of Weyl components, and whether they are grouped as Dirac or Majorana species is a property of the mass matrix that the count does not see.\n\\item[(ii)] \\emph{(Sixteen per generation.)} The gauge-commuting CPT halvings are the $2^{5}$ choices of one member from each of the five conjugate pairs of non-neutral isotypic components of $V$, times a line in the two-dimensional neutral block; for each of them $\\dim_{\\C}V_{+} = 16$ and the weights of $V_{-}$ are the negatives of those of $V_{+}$. So a generation supplies $16$ arrays per light ray, $8\\ln 2$ at the Hawking temperature with one (Q) version 3 array per channel (Theorem \\claimref{synthesis.half-integer-weight-array-carries-half-ln2}(i)), that is $8$ registered units of two arrays, an integer, for every choice of the neutral singlet; $N_{g}$ generations give $16N_{g}$ arrays and $8N_{g}$ units. A generation without the neutral singlet, fifteen components, is not a CPT halving of $V$; it would give $\\tfrac{15}{2}$ units.\n\\item[(iii)] \\emph{(The particle half is chiral.)} In every such halving no nonzero weight of $V_{+}$ under the Cartan algebra of $\\mathfrak{s}(\\uu(2) \\oplus \\uu(3))$ has its negative in $V_{+}$, and the zero weight occurs once (the neutral singlet). A Hestenes spinor field valued in a representation $R$ carries $R$ on both chiralities, so its left-handed content is $R \\oplus \\bar{R}$; hence no gauge-covariant Dirac field can be formed from a generation except from neutral singlets, and among $N_{g}$ generations at most $\\lfloor N_{g}/2 \\rfloor$ such pairs. At the anomaly-free halving $\\pm(-1)^{n + k}$ the hypercharges of $V_{+}$ are $0$ (once), $-\\tfrac23$ (three times), $\\tfrac16$ (six), $-\\tfrac12$ (two), $1$ (once), $\\tfrac13$ (three), and no nonzero value occurs with its negative.\n\\item[(iv)] \\emph{(After electroweak breaking.)} Labelled by electric charge $T_{3} + Y$ and colour, the half $V_{+}$ of the halving $(-1)^{n + k}$ pairs into exactly $7$ charged Dirac species (up and down quarks in three colours, the electron) and $2$ neutral components. With a nonzero Majorana term, the $\\nu^{c}\\nu^{c}$ entry of Theorem \\claimref{standard-model.majorana-element}(1), the neutral components are two Majorana species, $n_{D} = 7$ and $n_{W} = 2$; with none, and a Dirac entry pairing the neutral singlet with the doublet's neutral member, they form one Dirac species, $n_{D} = 8$; both give $16$ arrays. This clause is stated for the halvings $\\pm(-1)^{n + k}$ only: whether such a Dirac entry exists in the halving with the other neutral line is not decided here, and if it does not, $n_{D} = 7$, $n_{W} = 2$ there too, again $16$ arrays.\n\\end{enumerate}\nHence for the series' matter the clause that each counted species is a Dirac species with both chiralities fails on the gauge-covariant reading in every halving, and under a nonzero Majorana term also on the mass reading; what is derived is the count: the CAR content of a light ray is the number of Weyl components, sixteen per generation, eight registered units. Integer-weight fields lie outside this count. The count is per four-dimensional field; a five-dimensional field contributes one array set per Kaluza-Klein level, equivalently per resolution cell of the fifth direction. This is consistent with the common count of the dark-matter premise P1 (one frozen point, one count for every tower) when that count fixes the number of light rays, the arrays per light ray being tower-dependent; if instead every tower had the same number of boundary modes, a five-dimensional tower's cells per Planck area would have to be smaller by its level count. The count of Kaluza-Klein levels as emission channels of the exterior is a different count and is not constrained by this. The projector $\\Lambda(m)$ is the idempotent $f = \\tfrac12(1 + e_{t}e_{a})$, $e_{t} = \\gamma_{0}$, $e_{a} = \\gamma_{3}$, of the residue-$0$ signature $(1,1)$ in Theorem \\claimref{synthesis.lowest-causal-residues-zero-four-content}(ii): the canonical part is one chiral ideal of the even algebra of the plane of $k$ and $m$, and a mass couples it to the complementary ideal, as there.",
+  "technical": "The registered residue needs a counted unit of two s-wave arrays, and the stored light-ray result reads two arrays as one massless Dirac species. The open problem asks for a derivation that the horizon's counted species are Dirac species. This result takes the field content from the Standard Model subject, the slot module, and counts. Two points come out. The null-plane count does not see the Dirac or Weyl character of a species: the canonical part is fixed by the flux of the current, an algebraic identity, and mass terms, which in the spacetime algebra act from the right, reach only the equation that fixes the other component along the plane. So the arrays are the Weyl components, whatever the masses. And every CPT halving of the slot module has sixteen states in its particle half, so a generation gives sixteen arrays, eight units of $\\ln 2$: an integer number of registered units, whichever line of the neutral block is chosen; the Standard Model without a right-handed neutrino, fifteen components, is not a halving. The particle half is chiral in every halving: apart from the neutral singlet no representation occurs with its conjugate, so the content cannot be grouped into gauge-covariant Dirac fields, and after electroweak breaking with the Majorana term it is seven Dirac species and two Majorana neutrals. The problem's Dirac clause therefore fails for the series' own matter; the count it was meant to secure holds without it. The area law still fixes only the product of arrays per light ray and cells per Planck area, so the residue is not derived here.",
+  "lay": "The series counts quantum ladders on a black hole's horizon, and a counted unit has to be two ladders. An earlier result showed that one electron-like particle, which comes in two handednesses, supplies exactly two ladders, and the open question was whether every counted particle is of that kind. This result counts the particles the series itself predicts, one generation of sixteen handed components from its slot construction. Each component supplies one ladder whatever its mass, so a generation gives sixteen ladders, eight units, a whole number. But the series' matter is handed: almost no component has a mirror partner with the same charges, so the particles cannot be grouped into two-handed ones in a way the forces respect, and with the series' neutrino mass the neutrinos are one-handed. The count works; the reason offered for it does not.",
+  "one-liner": "On a horizon's null plane mass terms reach only the constraint, so the arrays of a light ray are the Weyl components; every CPT halving of the slot module has sixteen per generation (eight registered units, for either neutral singlet), and its particle half is chiral in every halving, so the series' matter cannot be grouped into gauge-covariant Dirac species and, with a nonzero Majorana term, is seven Dirac species and two Majorana neutrals per generation."
+ },
+ "proofs": {
+  "main": "\\emph{(i).} The algebra of this clause is Theorem \\claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}(iv), where its argument (formerly given here) now stands, with the step that a Lorentz-covariant mass term is a right multiplier computed there: with $\\ip{k}{m} = 2$ every vector is $a = \\tfrac12 m\\,\\ip{k}{a} + \\tfrac12 k\\,\\ip{m}{a} + a_{\\perp}$, so $k\\nabla = \\tfrac12 km\\,(k\\cdot\\nabla) + k\\nabla_{\\perp}$ has no derivative off $N_{k}$; $km = 2 + 2B = 4\\Lambda(k)$, $k\\Lambda(k) = 0$ and $k$ anticommutes with $\\gamma_{1}, \\gamma_{2}$, so $k\\psi X = k\\Lambda(m)\\psi X$ for every right multiplier $X$; a mass term commuting with the rotor action $\\psi \\mapsto R\\psi$ is a right multiplication ($\\psi \\mapsto \\psi\\gamma_{0}$ for a Dirac mass, Theorem \\claimref{field-theory.second-quantisation}; $\\psi \\mapsto \\psi\\sigma_{1}$, the charge conjugate, composed with a symmetric matrix on the internal index, for a Majorana mass), together with linear maps on the internal index; so a massive spinor equation $\\nabla\\psi I_{4}\\sigma_{3} = \\mathcal{M}(\\psi)$, multiplied on the left by $k$, reads $2(k\\cdot\\nabla)(\\Lambda(k)\\psi)I_{4}\\sigma_{3} = -k\\nabla_{\\perp}\\Lambda(m)\\psi\\,I_{4}\\sigma_{3} + k\\,\\mathcal{M}(\\Lambda(m)\\psi)$: along each generator it fixes $\\Lambda(k)\\psi$ from $\\Lambda(m)\\psi$ (up to its value at one end of the generator), and the mass enters only here. The flux of the current through $N_{k}$, which defines the canonical part, is $2|\\Lambda(m)\\psi|^{2}$ by an algebraic identity in $\\psi$ that involves no field equation (Theorem \\claimref{synthesis.canonical-part-of-a-spinor-on-a-null-plane}(ii); Theorem \\claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}(i)). So the free data on $N_{k}$ are $\\Lambda(m)\\psi$, with the same anticommutator, for every mass matrix: one complex canonical channel per Weyl component of the field content (Theorem \\claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}(iii), (v)). (Two units appear in this step: the spinor values carry Hestenes' unit, right multiplication by $I_{4}\\sigma_{3}$, as in the massive equation above, and the numbers of the slot module and of its internal index are read in $\\mathrm{span}\\{1, I_{4}\\}$. They act on different factors and are not identified here; a count of complex channels is half the real dimension of the data, so it is the same for either unit.) (The mass independence of the null-plane data is the familiar property of light-front quantisation, Kogut and Soper 1970, cited from memory as orientation; the argument above does not use it.) The script of this result still checks $k^{2} = 0$, $km = 2 + 2B$, the splitting of each $\\gamma_{\\mu}$, the anticommutation of $k$ with $\\gamma_{1}, \\gamma_{2}$, $\\mathrm{rank}(L_{k}\\Lambda(k)) = 0$, $\\mathrm{rank}(L_{k}\\Lambda(m)) = 4$, and $\\mathrm{rank}(L_{k}R_{X}\\Lambda(k)) = 0$ for each of the sixteen basis blades $X$. A Dirac field has two Weyl components and a Majorana field one, so $2n_{D} + n_{W}$ of the light-ray result is the number of Weyl components; how they group into species is decided by the mass matrix and is invisible to the count.\n\n\\emph{The link to residue $0$.} $f = \\tfrac12(1 + \\gamma_{0}\\gamma_{3}) = \\tfrac12(1 - \\gamma_{3}\\gamma_{0}) = \\Lambda(m)$; $(\\gamma_{0}\\gamma_{3})^{2} = 1$, so the even algebra of the plane of $k$ and $m$ is $\\mathrm{span}\\{1, \\gamma_{0}\\gamma_{3}\\} \\cong \\R \\oplus \\R$ with the two primitive idempotents $f$ and $1 - f = \\Lambda(k)$, $f(1 - f) = 0$, $mf = 0 \\neq kf$. This is the single chiral ideal of the residue-$0$ signature $(1,1)$ of Theorem \\claimref{synthesis.lowest-causal-residues-zero-four-content}(ii) with $e_{t} = \\gamma_{0}$, $e_{a} = \\gamma_{3}$; there, mass needs one constituent from each ideal, as here the mass couples $\\Lambda(m)\\psi$ to $\\Lambda(k)\\psi$.\n\n\\emph{(ii).} Build $V = \\Lambda^{\\bullet}\\C^{5}$ from the empty state by the creation operators of the five modes (the exterior model of the library), with number operators $n_{i} = a^{\\dagger}_{i}a_{i}$; on the basis state with occupation $(o_{1}, \\dots, o_{5})$ the slot number is $n = o_{1} + o_{2}$, the pair number $k = o_{3} + o_{4} + o_{5}$, $Y = (3n - 2k)/6$, $T_{3} = (o_{1} - o_{2})/2$, and the colour weights are $o_{2 + i} - k/3$, $i = 1, 2, 3$. The gauge algebra preserves $(n, k)$, and the isotypic components are the twelve spaces $F_{n} \\otimes \\Lambda^{k}W$, of which the two neutral ones, $(n, k) = (0, 0)$ and $(2, 3)$, are both $(1,1)_{0}$, and the other ten form five conjugate pairs: $(0,1)$ with $(2,2)$, $(0,2)$ with $(2,1)$, $(0,3)$ with $(2,0)$, $(1,0)$ with $(1,3)$, $(1,1)$ with $(1,2)$ (the script finds the pairing by comparing weight multisets). By Theorem \\claimref{synthesis.spin10-clause-content-is-the-neutral-singlet-choice}(i) a gauge-commuting CPT halving takes one member of each conjugate pair into $V_{+}$ and the other into $V_{-}$, and splits the neutral block into two lines. Each pair contributes the same dimension to both halves, and the neutral block one dimension to each, so $\\dim V_{+} = \\dim V_{-} = 16$ for all $2^{5}$ sign patterns and every line; the script enumerates the $32$ patterns with each of the two coordinate lines (other lines in the neutral block have the same weights) and finds $\\dim V_{\\pm} = 16$ and the weights of $V_{-}$ equal to the negatives of those of $V_{+}$ in all $64$ cases. By (i) a generation, the left-handed Weyl fields valued in $V_{+}$, has $16$ complex canonical channels per light ray, whatever the mass matrix; the antiparticles in $V_{-}$ are the holes of the same arrays (the conjugate entry of Theorem \\claimref{synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays}(iv)), not further arrays. With one (Q) version 3 array per channel and $\\tfrac12\\ln 2$ per array (Theorem \\claimref{synthesis.half-integer-weight-array-carries-half-ln2}(i)) a generation carries $8\\ln 2$, eight registered units of two arrays, and $N_{g}$ generations $8N_{g}$. Removing the neutral singlet leaves fifteen components, an odd number, so not the half of a $32$-dimensional module, and $\\tfrac{15}{2}$ units.\n\n\\emph{(iii).} In a halving each non-neutral isotypic component of $V$ occurs once, and its conjugate is the other member of its pair, which the halving puts in $V_{-}$; distinct pairs carry disjoint weight multisets. So for a nonzero weight $w$ of $V_{+}$ the weight $-w$ lies only in $V_{-}$, and the zero weight of $V_{+}$ is the neutral line, once. The script confirms this for all $64$ cases, and as a contrast that $V$ itself is vector-like (every weight occurs with its negative), so the test can fail. A Hestenes spinor field valued in a representation $R$ has left-handed part in $R$ and right-handed part in $R$, the latter being a left-handed field in $\\bar{R}$; a gauge-covariant Dirac field in the content therefore needs $R \\oplus \\bar{R}$ inside $V_{+}$, which by the above happens only for $R$ the neutral singlet, and a single neutral singlet pairs only with itself (a Majorana field). Among $N_{g}$ generations the $N_{g}$ neutral singlets give at most $\\lfloor N_{g}/2 \\rfloor$ such pairs; the script finds no nonzero weight paired with its negative in $N_{g}$ copies, $N_{g} = 1, \\dots, 4$. At the anomaly-free halving, $(-1)^{n + k}$ with the particle half containing $(2,3)_{1/6}$ (Theorem \\claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}(2)), the hypercharge histogram of $V_{+}$ is $\\{0: 1, -\\tfrac23: 3, \\tfrac16: 6, -\\tfrac12: 2, 1: 1, \\tfrac13: 3\\}$, with sum $0$ and no nonzero value with its negative.\n\n\\emph{(iv).} After electroweak breaking the unbroken algebra is colour and the electric charge $T_{3} + Y$. Take the halving $(-1)^{n + k}$ (the clause is stated for $\\pm(-1)^{n + k}$ only). Labelling the states of its $V_{+}$ by (charge, colour weights), a Dirac species needs a label and its negative. The labels with nonzero charge pair exactly: charge $\\tfrac23$ in colour $c$ with charge $-\\tfrac23$ in $\\bar{c}$ (three pairs), $-\\tfrac13$ with $\\tfrac13$ (three), $-1$ with $1$ (one), seven charged Dirac species; the two remaining labels are neutral and colourless (the $\\nu$ of the doublet and $\\nu^{c}$). With a nonzero $\\nu^{c}\\nu^{c}$ entry (Theorem \\claimref{standard-model.majorana-element}(1)) the neutral mass matrix is a symmetric $2 \\times 2$ matrix $\\begin{pmatrix} 0 & d \\\\ d & M \\end{pmatrix}$ with $M \\neq 0$; its two singular values differ (they coincide only at $M = 0$), so its Takagi eigenvectors are two Majorana fields of different masses, which no unitary mixing combines into one Dirac field, so $n_{D} = 7$, $n_{W} = 2$, $2n_{D} + n_{W} = 16$; with no Majorana entry and a Dirac entry coupling $\\nu^{c}$ to the doublet's neutral member, the two neutrals form one Dirac species, $n_{D} = 8$, $n_{W} = 0$, again $16$. In the halving with the other neutral line the existence of such a Dirac entry depends on the bilinears available to the full state and is not decided here; if there is none, the two neutrals are Majorana or massless Weyl fields, $n_{D} = 7$, $n_{W} = 2$, and the count is $16$ again. The count is per four-dimensional field. A five-dimensional field is, level by level, a tower of four-dimensional fields of masses set by its Kaluza-Klein levels, and by (i) each level's Weyl components give one array each on a light ray whatever its mass: one array set per Kaluza-Klein level, equivalently per resolution cell of the fifth direction. The area law fixes only the product of arrays per light ray and cells per Planck area, so this agrees with the common count of the dark-matter premise P1 (one frozen point, one count for every tower) when that count fixes the number of light rays, with tower-dependent arrays per light ray; were every tower to carry the same number of boundary modes instead, the five-dimensional tower's cell density would have to be smaller by its level count. Kaluza-Klein levels counted as emission channels of the exterior are a different count, not constrained here. Without $\\nu^{c}$ the charged pairing is unchanged and one neutral component is left, $2 \\cdot 7 + 1 = 15$. The script computes these pairings from the weights.\n\n\\emph{Conclusion.} The count of arrays per light ray is the number of Weyl components (i), sixteen per generation for every halving (ii); the grouping into Dirac species is neither gauge covariant (iii) nor, under a nonzero Majorana term, complete (iv). Nothing here uses the area law; the residue's calibration, which fixes the product of arrays per light ray and cells per Planck area, is untouched. The result is transport-absent.\n"
+ },
+ "notes": [],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "field-theory.second-quantisation",
+   "standard-model.majorana-element",
+   "synthesis.canonical-part-of-a-spinor-on-a-null-plane",
+   "synthesis.cpt-closure-forces-slot-module-and-chirality",
+   "synthesis.half-integer-weight-array-carries-half-ln2",
+   "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays",
+   "synthesis.lowest-causal-residues-zero-four-content",
+   "synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+  ],
+  "used_by": [
+   "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations",
+   "synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike"
+  ],
+  "ledger": "essential",
+  "programme": "transport-papers",
+  "holds_given": [
+   "dark-matter.p2-indifference",
+   "dark-matter.p3-nearest-dimension-representatives",
+   "dark-matter.r1-equal-mass-per-quantum",
+   "dark-matter.r2-one-quantum-per-unit-ball",
+   "dark-matter.r3-one-cell-per-unshared-direction",
+   "dark-tower-matter.h1-momentum",
+   "singularity.p-univalence",
+   "singularity.q-joint-quasi-freeness-s-wave",
+   "singularity.r-regularity-fixed-locus",
+   "standard-model.slot-module-hypothesis",
+   "synthesis.r-lambda-regularity-cosmological-horizon"
+  ],
+  "evidence": "pass",
+  "past_cone_size": 195,
+  "future_cone_size": 3
+ }
+}

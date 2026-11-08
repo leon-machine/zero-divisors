@@ -1,0 +1,157 @@
+{
+ "front_matter": {
+  "id": "field-theory.imported-tower-limit",
+  "kind": "claim",
+  "version": 3,
+  "title": "Imported: the tower and its limit",
+  "status": "proved",
+  "region": "field-theory",
+  "subject": "quantum-fields",
+  "tags": [
+   "car-algebra",
+   "limits"
+  ],
+  "proposed_by": {
+   "kind": "extraction",
+   "session": "pilot-2026-10-20"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "idea, direction and review"
+   },
+   {
+    "name": "Claude Fable 5",
+    "role": "mathematics and drafting",
+    "source": "authorship disclosure of FT, the series' standard disclaimer"
+   }
+  ],
+  "review": "typed",
+  "locators": {
+   "paper": "FT",
+   "number": "Fact 2.1",
+   "label": "fact:tower",
+   "line": 74
+  },
+  "extraction": {
+   "maintainer_pass_tests": {
+    "by": "maintainer-2026-10-23-tests",
+    "date": "2026-10-23",
+    "note": "Own exact check added: adjoined planes give null v_j, w_j with {v_j, w_k} = delta_jk over the ground Cl(1,3), and each rung is the full matrix algebra Mat_(2^n) on its Fock space with w_j = v_j^T. Version 1 -> 2. Fix round: check_rungs_are_full_matrix_algebras tests the unital embedding of rung n in rung n + 1 for n = 1, 2. Version 2 -> 3."
+   },
+   "env": "fact",
+   "flags": [
+    "citation taken from inline provenance (no \\cite)"
+   ],
+   "source_imported_from": [
+    {
+     "citation": "T03, Thm. thm:carlimit"
+    }
+   ],
+   "typing": {
+    "by": "ai-typing-pass",
+    "added": [
+     "tower.car-limit-even-charge"
+    ],
+    "note": "The fact restates the tower paper's CAR-limit theorem, which is in the store, so it was made a restatement (status proved, uses that theorem). Levels pass: levels written from scratch, keeping every condition and level qualifier of the formal statement."
+   }
+  },
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "tower.car-limit-even-charge@6"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "proof",
+    "derivation": "main"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_planes_generate_car"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_rungs_are_full_matrix_algebras"
+   }
+  ]
+ },
+ "levels": {
+  "formal": "The planes generate the CAR, $\\{v_j, w_k\\} = \\delta_{jk}$, $v_j^2 = w_j^2 = 0$, and the tower's limit is the CAR algebra. \\emph{Provenance:} T03, Thm.~thm:carlimit.",
+  "technical": "The adjoined tower planes generate the canonical anticommutation relations, $\\{v_j, w_k\\} = \\delta_{jk}$ with $Q(v_j) = Q(w_j) = 0$, and the tower's limit is the CAR algebra.",
+  "lay": "Each plane added to the tower contributes one fermionic mode, with the anticommutation rules of fermion creation and annihilation. Adding planes without end gives the algebra of a free fermionic quantum field.",
+  "one-liner": "The tower planes generate the CAR, $\\{v_j, w_k\\} = \\delta_{jk}$ with $Q(v_j) = Q(w_j) = 0$, and the tower's limit is the CAR algebra."
+ },
+ "proofs": {
+  "main": "Restated from \\claimref{tower.car-limit-even-charge} (T03, Thm.~thm:carlimit), where it is proved.\n"
+ },
+ "notes": [
+  {
+   "id": "note.field-theory.abstract",
+   "kind": "setting",
+   "title": "Abstract",
+   "opening": "The tower of the series has the canonical anticommutation relations as its limit; this note asks whether that limit reaches a quantum field theory. It does, in one way. The palatial storey supplies a positive-energy one-particle space, the ..."
+  },
+  {
+   "id": "note.field-theory.setting-introduction",
+   "kind": "setting",
+   "title": "Introduction",
+   "opening": "The relation of T16, $\\{e_a, e_b\\} = 2g_{ab}$, has two readings: a metric one in an orthogonal basis and the canonical anticommutation relations (CAR) in a Witt basis. The tower of T03 iterates the ascent and has the CAR algebra as its limi..."
+  },
+  {
+   "id": "note.field-theory.setting-prior-art",
+   "kind": "setting",
+   "title": "Prior art",
+   "opening": "Second quantisation, Coulomb-gauge quantum electrodynamics and old-fashioned perturbation theory are textbook (Sakurai; Weinberg, \\emph{The Quantum Theory of Fields}, vol.~I). The spacetime algebra, its plane waves, its chirality and its ph..."
+  },
+  {
+   "id": "note.field-theory.setting-setting-imports",
+   "kind": "setting",
+   "title": "Setting and imports",
+   "opening": "The ground is $\\Cl(1,3)$ with signature $(+,-,-,-)$ and pseudoscalar $I_4 = \\gamma_0\\gamma_1\\gamma_2\\gamma_3$, $I_4^2 = -1$. Tower planes $(e_j, f_j)$ with $e_j^2 = 1$, $f_j^2 = -1$ are adjoined after the ground; $v_j = (e_j + f_j)/2$ creat..."
+  }
+ ],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [
+   "tower.car-limit-even-charge"
+  ],
+  "restated_by": [],
+  "rests_on": [
+   "tower.car-limit-even-charge"
+  ],
+  "used_by": [
+   "field-theory.boost-modes",
+   "field-theory.how-close-tower-comes-ccr",
+   "field-theory.path-integral-inside-tower",
+   "field-theory.second-quantisation",
+   "field-theory.twistor-attachment",
+   "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+   "synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off",
+   "synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+   "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+   "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics",
+   "synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators",
+   "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+   "synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet",
+   "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+   "synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy",
+   "synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses",
+   "synthesis.uniform-pair-channel-of-a-tower-condensate-is-a-goldstone-rotor",
+   "synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four"
+  ],
+  "ledger": "absent",
+  "programme": "transport-papers",
+  "holds_given": [],
+  "evidence": "pass",
+  "past_cone_size": 36,
+  "future_cone_size": 111
+ }
+}

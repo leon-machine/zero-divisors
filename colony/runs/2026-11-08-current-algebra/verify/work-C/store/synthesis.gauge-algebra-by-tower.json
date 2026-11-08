@@ -1,0 +1,127 @@
+{
+ "front_matter": {
+  "id": "synthesis.gauge-algebra-by-tower",
+  "kind": "claim",
+  "version": 1,
+  "title": "One rule for the gauge algebra of every causal tower",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "dark-matter",
+  "tags": [
+   "gauge-fields",
+   "towers-by-residue",
+   "mirror-sector",
+   "dark-tower-premises"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "gauge-table-2026-10-22"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "Co-Authored-By trailer of the commit that added it"
+   }
+  ],
+  "review": "draft",
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "standard-model.gauge-algebra-minimal-massive-composite@4",
+     "standard-model.four-dimensions-forces-converse@4",
+     "standard-model.pair-count-dimension@4",
+     "standard-model.internal-symmetry-ladder@4",
+     "mass.mass-symplectic-area-two-twistor-formula@3",
+     "dark-tower-matter.gauge-algebras@5",
+     "dark-tower-matter.where-mass-begins@2",
+     "dark-tower-matter.constituents-field@2",
+     "dark-tower-matter.pairs@3",
+     "dark-tower-matter.ladder@2",
+     "dark-tower-matter.third-pairs-unit-five-dimensions@5",
+     "dark-tower-matter.mirror-algebra@4"
+    ],
+    "assumes": [
+     "dark-tower-matter.h2-identification@1",
+     "dark-tower-matter.u-transposition-rule@2",
+     "dark-tower-matter.h1-momentum@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "supports": [
+   "dark-matter.mirror-tower-copy-one@9"
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::test_gauge_algebra_by_tower"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "extraction": {
+   "maintainer_pass_pin_review": {
+    "by": "maintainer-2026-11-07",
+    "date": "2026-11-07",
+    "note": "Pin review: dark-matter.mirror-tower-copy-one repinned 8 -> 9 after reviewing its C1 restatement (clause (iv): the common ceiling and coupling are now Premise synthesis.common-ceiling-coupling-premise, P2 equating labels and not couplings; the share of one rests also on that premise; the caveat is reworded for P2's version-1 reach), clauses (i) to (iii) and (v) unchanged in content; the use here holds as cited."
+   },
+   "note": "Synthesis found by a scan of the graph: T12 Thm 4.1 and T14c Thm 5.1 apply one construction (the automorphism algebra of the minimal massive hierarchy) and the store had no link between them. This result states the common rule with T14c's inputs, tabulates all six causal towers, shows that the four-dimensional row is T12's theorem and that the mirror row equals it (the copy theorem, recorded as a supports link rather than a premise, so that P1, P2, P3 and (S) do not enter its holds-given set). The field column F (T14c Thm 3.2) and the hierarchy's scalars K are kept apart: they differ in the five-dimensional towers. The mirror's agreement rests on U1; the full-module commutant (T14 Thm 3.4's ground type, a different object) would break it."
+  }
+ },
+ "levels": {
+  "formal": "Assume H2 (Premise \\claimref{dark-tower-matter.h2-identification}) and Premise U (\\claimref{dark-tower-matter.u-transposition-rule}), and in dimensions three and five H1 (\\claimref{dark-tower-matter.h1-momentum}). For a causal tower of residue $r = p - q \\bmod 8$, signature $(p,q)$, dimension $n = p + q$ and conformal space $\\hatV$ of signature $(p+1, q+1)$, let\n\\begin{itemize}\n\\item $F$ be the field of its constituents (Theorem \\claimref{dark-tower-matter.constituents-field});\n\\item $a$ be the number of constituents at which mass begins (Theorem \\claimref{dark-tower-matter.where-mass-begins}): $a = 2$ for $n = 3, 4$ and $a = 1$ for $n = 5$;\n\\item $b$ be the number of ladder pairs of a constituent, the complex Witt index $\\lfloor (n+2)/2 \\rfloor$ of $\\hatV$ (Proposition \\claimref{dark-tower-matter.pairs});\n\\item $K$ be the scalars of the pairs: $\\R$ when the real Witt index of $\\hatV$, which is $2$ in every causal tower, equals $b$; otherwise the centraliser in $F$ of the unit $u \\in F$ that builds the last pair, which is $\\mathrm{span}\\{1, u\\} \\cong \\C$ both for $F = \\C$ and for $F = \\HH$ (Theorem \\claimref{dark-tower-matter.third-pairs-unit-five-dimensions}).\n\\end{itemize}\nThe hierarchy is $K^{a} \\otimes_{K} K^{b}$. Its automorphisms are the maps $A \\otimes B$ with $A$, $B$ in the isometry groups of the standard forms over $K$, $O$ over $\\R$ and $U$ over $\\C$ (Theorem \\claimref{dark-tower-matter.ladder}, its $Sp(1)$ at $n = 5$ cut to the $K$-linear circle as in Theorem \\claimref{dark-tower-matter.gauge-algebras}(ii), and U2), modulo the kernel $\\{(\\lambda, \\lambda^{-1})\\}$ of unit scalars of $K$; its automorphism algebra $\\mathfrak{g}_{r}$ has dimension $\\tfrac12 a(a-1) + \\tfrac12 b(b-1)$ over $\\R$ and $a^{2} + b^{2} - 1$ over $\\C$. The six causal towers give:\n\\begin{center}\\small\n\\begin{tabular}{@{}cccccccll@{}}\n\\toprule\n$r$ & $(p,q)$ & $n$ & $F$ & $K$ & $a$ & $b$ & hierarchy & $\\mathfrak{g}_{r}$, $\\dim$ \\\\\n\\midrule\n$6$ & $(1,3)$ & $4$ & $\\C$ & $\\C$ & $2$ & $3$ & $\\C^{2} \\otimes \\C^{3}$ & $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$, $12$ \\\\\n$2$ & $(3,1)$ & $4$ & $\\C$ & $\\C$ & $2$ & $3$ & $\\C^{2} \\otimes \\C^{3}$ & $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$, $12$ \\\\\n$1$ & $(2,1)$ & $3$ & $\\R$ & $\\R$ & $2$ & $2$ & $\\R^{2} \\otimes \\R^{2}$ & $\\so(2) \\oplus \\so(2)$, $2$ \\\\\n$7$ & $(1,2)$ & $3$ & $\\R$ & $\\R$ & $2$ & $2$ & $\\R^{2} \\otimes \\R^{2}$ & $\\so(2) \\oplus \\so(2)$, $2$ \\\\\n$3$ & $(4,1)$ & $5$ & $\\HH$ & $\\C$ & $1$ & $3$ & $\\C^{1} \\otimes \\C^{3}$ & $\\uu(3) = \\su(3) \\oplus \\uu(1)$, $9$ \\\\\n$5$ & $(1,4)$ & $5$ & $\\HH$ & $\\C$ & $1$ & $3$ & $\\C^{1} \\otimes \\C^{3}$ & $\\uu(3) = \\su(3) \\oplus \\uu(1)$, $9$ \\\\\n\\bottomrule\n\\end{tabular}\n\\end{center}\n\\begin{enumerate}\n\\item[(i)] The row $r = 6$ is Theorem \\claimref{standard-model.gauge-algebra-minimal-massive-composite}. In dimension four the rule's inputs are T12's: two constituents (Theorem \\claimref{dark-tower-matter.where-mass-begins}(i), which is T11's two-constituent formula, Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}, in the even algebra), three pairs (Lemma \\claimref{standard-model.pair-count-dimension}) over $\\C$, and the slot group $U(2)$ (Proposition \\claimref{standard-model.internal-symmetry-ladder}). The rule therefore returns $\\C^{2} \\otimes \\C^{3}$ and the Standard Model algebra, of dimension $12$; at three constituents it returns T12's seventeen-dimensional $\\su(3) \\oplus \\su(3) \\oplus \\uu(1)$; and no other row is the Standard Model algebra, by Proposition \\claimref{standard-model.four-dimensions-forces-converse}(2) for the complex rows and by dimension for the real ones.\n\\item[(ii)] The row $r = 2$, the mirror, equals the row $r = 6$: in both signatures the centre of the even conformal algebra is $\\mathrm{span}\\{1, I_{6}\\}$ with $I_{6}^{2} = -1$, the even algebras are isomorphic (Theorem \\claimref{dark-tower-matter.mirror-algebra}), and $F$, $a$, $b$, $K$ coincide. This agrees with the mirror copy theorem's gauge algebra (Theorem \\claimref{dark-matter.mirror-tower-copy-one}(i)). The agreement rests on U1: read with the commutant of the full Clifford module, $\\HH$ for $(1,3)$ and $\\R$ for $(3,1)$, the two rows would differ.\n\\item[(iii)] The rows $r = 1, 7, 3, 5$ are Theorem \\claimref{dark-tower-matter.gauge-algebras}(i) and (ii).\n\\item[(iv)] The field $F$ is not the hierarchy's scalars: in the five-dimensional towers $F = \\HH$ and $K = \\C$, the slot algebra $\\mathfrak{sp}(1)$ of the single constituent being cut, once U3 places $u$ in $F$, to the circle that commutes with the pair algebra.\n\\end{enumerate}\nThe column $\\mathfrak{g}_{r}$ is exact linear algebra on the hierarchy; the hierarchy column rests on U (and on H1 in dimensions three and five); reading $\\mathfrak{g}_{r}$ as the tower's gauge algebra is H2.",
+  "technical": "T12 and T14c compute a gauge algebra the same way: take the smallest composite that can have mass, write it as a two-level hierarchy $K^{a} \\otimes K^{b}$ (constituent slots tensor pair slots), and take the Lie algebra of the maps $A \\otimes B$ that preserve both levels and the positive norm, modulo the common scalars. Assuming, as T14c does, that this algebra is the gauge algebra (premise H2) and that the construction transposes by its rule U (with the momentum premise H1 in dimensions three and five), the three inputs are where mass begins ($a$), how many ladder pairs a constituent carries ($b$, the complex Witt index of the conformal space) and which scalars the pairs carry ($K$: the reals when the real ladder pairs already suffice, otherwise the circle that the pair unit generates inside the constituents' field). With T14c's inputs the rule gives, in the six causal towers: $\\C^{2} \\otimes \\C^{3}$ and $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$ (dimension $12$) in this tower and its mirror; $\\R^{2} \\otimes \\R^{2}$ and $\\so(2) \\oplus \\so(2)$ (dimension $2$) in the three-dimensional towers; $\\C^{1} \\otimes \\C^{3}$ and $\\uu(3)$ (dimension $9$) in the five-dimensional towers.\n\nIn four dimensions T14c's inputs coincide with T12's (two constituents from T11's mass formula, three complex pairs, the unitary ladder), so the rule reproduces T12's theorem, including its seventeen-dimensional control at three constituents. The mirror's row is the same, as the mirror copy theorem requires; this agreement depends on taking the constituents' field from the even conformal ideal (where it is $\\C$ in both signatures), not from the full Clifford module (quaternionic for ours, real for the mirror's). In five dimensions the constituents' field is the quaternions but the hierarchy's scalars are complex: the rule's $K$ is not the field. The check recomputes the onset count, the field, the real pairs and every automorphism algebra in exact arithmetic, and confirms that a different onset count, pair count or field gives a different algebra.",
+  "lay": "The Standard-Model paper found our forces as the symmetries of the smallest composite that can have mass: two constituents, each with three internal slots, with complex numbers as scalars. The dark-matter note applied the same recipe to the other worlds of the series. This result writes the recipe down once and runs it in all six worlds that can hold matter, under the note's premises that the recipe gives the forces and that it carries over to other worlds in one stated way. In our world it gives back exactly the Standard Model's forces, as it must. In the mirror world it gives the same forces, as the series' mirror theorem says, but only because the recipe reads the scalars from the right part of the algebra. In the three-dimensional worlds it gives two independent forces like electromagnetism; in the five-dimensional worlds a colour force and one charge.",
+  "one-liner": "One rule (the automorphisms of the minimal massive hierarchy $K^{a} \\otimes K^{b}$) gives $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$ in this tower and the mirror, $\\so(2) \\oplus \\so(2)$ in the three-dimensional towers and $\\uu(3)$ in the five-dimensional ones; its four-dimensional row is T12's theorem and its mirror row the copy theorem's, under H2 and U (and H1 in dimensions three and five)."
+ },
+ "proofs": {
+  "main": "\\textit{The premises.}\\enspace The identification of a tower's gauge algebra with the automorphism algebra of its minimal massive hierarchy is H2 (\\claimref{dark-tower-matter.h2-identification}); the definition of a constituent, its field and the two factors' groups is Premise U (\\claimref{dark-tower-matter.u-transposition-rule}), clauses U1 to U3; in dimensions three and five the constituent's momentum is H1 (\\claimref{dark-tower-matter.h1-momentum}), which in dimension four is T12's own setting. Nothing else is assumed. The six causal towers and their signatures are those of Theorem \\claimref{dark-tower-matter.constituents-field}.\n\n\\emph{The inputs, tower by tower.}  The field $F$ is read from Theorem \\claimref{dark-tower-matter.constituents-field}: $\\C$ at $r = 6, 2$, $\\R$ at $r = 1, 7$, $\\HH$ at $r = 3, 5$. The check recomputes it as $f\\Cl^{0}(V)f$ with $f = \\tfrac12(1 + e_{i}e_{j})$, $Q(e_{i}) = 1$, $Q(e_{j}) = -1$, the field acting on the right of $S = \\Cl^{0}(V)f$ as in Theorem \\claimref{dark-tower-matter.ladder}: it has real dimension $1$, $2$ (commutative) and $4$ (not commutative) in the three pairs of towers.\n\nThe onset count $a$ is Theorem \\claimref{dark-tower-matter.where-mass-begins}: in dimensions three and four the reversion pairing on $S$ is alternating, a single constituent is massless and mass begins at two; in dimension five it is not alternating and mass begins at one. The check recomputes the criterion: the symmetrised pairing $\\rev{\\psi}_{1}\\psi_{2} + \\rev{\\psi}_{2}\\psi_{1}$ vanishes on every pair of basis elements of $S$ exactly when $n \\le 4$.\n\nThe pair count $b$ and the pairs' scalars are Proposition \\claimref{dark-tower-matter.pairs}: the real Witt index of $\\hatV$ is $2$ in every causal tower and the complex one is $\\lfloor (n+2)/2 \\rfloor$, so $b = 2$ with real pairs for $n = 3$ and $b = 3$, the third pair needing a complex unit, for $n = 4, 5$. By U3 that unit lies in $F$. For $F = \\C$ (this tower and the mirror) it is fixed up to sign and its centraliser in $F$ is $F$ itself, so $K = \\C$. For $F = \\HH$ Theorem \\claimref{dark-tower-matter.third-pairs-unit-five-dimensions}(i) and (iii) give the centraliser of the pair algebra in $\\HH$ as $\\mathrm{span}\\{1, u\\}$, so again $K = \\C$; the check confirms in $f\\Cl^{0}(V)f$ that the centraliser of a unit $u$ is two-dimensional, and that in the commutator space $[F, F] = \\mathfrak{sp}(1)$, the slot algebra of one quaternionic constituent, it is one-dimensional, the circle of Theorem \\claimref{dark-tower-matter.gauge-algebras}(ii). For $F = \\R$ no unit is needed, and none would be available: the case in which the pairs need a unit and $F$ supplies none does not occur among the causal towers.\n\nThe slot group is the momentum-preserving group of $a$ constituents, $O(a)$, $U(a)$ or $Sp(a)$ as $F = \\R, \\C, \\HH$ (Theorem \\claimref{dark-tower-matter.ladder}), cut in the quaternionic case to the subgroup commuting with $u$, which for $a = 1$ is $U(1)$; the pair group is, by U2, the unitary group over $K$ of the $b$ pairs, $O(b)$ or $U(b)$.\n\n\\emph{The automorphism algebras.}  An automorphism of $K^{a} \\otimes_{K} K^{b}$ is $A \\otimes B$; $A \\otimes B = 1$ forces $A = \\lambda 1$, $B = \\lambda^{-1}1$ with $\\lambda$ a unit scalar of $K$ (the argument of Theorem \\claimref{standard-model.gauge-algebra-minimal-massive-composite}, a linear map fixing every line being a scalar). Over $\\C$ the kernel is a circle and $\\mathfrak{g}_{r} = (\\uu(a) \\oplus \\uu(b))/\\uu(1) = \\su(a) \\oplus \\su(b) \\oplus \\uu(1)$, of dimension $a^{2} + b^{2} - 1$, as in Proposition \\claimref{standard-model.four-dimensions-forces-converse}(2); over $\\R$ it is $\\{\\pm 1\\}$, discrete, and $\\mathfrak{g}_{r} = \\so(a) \\oplus \\so(b)$, of dimension $\\tfrac12 a(a-1) + \\tfrac12 b(b-1)$. The check computes each $\\mathfrak{g}_{r}$ as the image of $\\mathfrak{g}(a, K) \\oplus \\mathfrak{g}(b, K)$ acting by $X \\otimes 1 + 1 \\otimes Y$ on the real form of $K^{a} \\otimes K^{b}$, as an exact rank, for all $a, b \\le 3$ over both fields; it confirms that every image element is antisymmetric (it preserves the norm) and, over $\\C$, commutes with the complex structure, and it computes the centre and the derived algebra: for $\\C^{2} \\otimes \\C^{3}$ dimension $12$, centre $1$, derived algebra $11 = 3 + 8$, the images of $\\su(2)$ and $\\su(3)$; for $\\C^{3} \\otimes \\C^{3}$, $17$, $1$, $16$; for $\\C^{1} \\otimes \\C^{3}$, $9$, $1$, $8$; for $\\R^{2} \\otimes \\R^{2}$, $2$, abelian. Substituting the inputs gives the table.\n\n\\emph{(i) The four-dimensional row.}  At $r = 6$ the inputs are T12's. Two constituents: Theorem \\claimref{dark-tower-matter.where-mass-begins}(i) in dimension four is T11's two-constituent formula (Proposition \\claimref{mass.mass-symplectic-area-two-twistor-formula}) written in the even algebra, the pairing $\\rev{\\psi}_{1}\\psi_{2}$ in a copy of $\\C$ playing the bracket (Remark \\claimref{note.dark-tower-matter.four-dimensional-case-t11s-formula}). Three pairs: the complex Witt index $3$ of Proposition \\claimref{dark-tower-matter.pairs}(ii) is Lemma \\claimref{standard-model.pair-count-dimension} at $n = 4$. The field and the groups: $F = \\C$, and by T14c's Remark \\claimref{note.dark-tower-matter.why-u} any complex unit commuting with the spin action, the complexification's included, acts on the constituent ideal as $\\pm I_{6}$, so T14c's real construction and T12's complexified one give the same $\\C$; the slot group $U(2)$ of Theorem \\claimref{dark-tower-matter.ladder} is T12's $U(2)$ (Proposition \\claimref{standard-model.internal-symmetry-ladder}), and U2 takes the pair group $U(3)$ as T12 does. So the rule's hierarchy is $\\C^{2} \\otimes \\C^{3}$, with automorphism algebra $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$ of dimension $12$: Theorem \\claimref{standard-model.gauge-algebra-minimal-massive-composite}. At $a = 3$ the same computation gives its seventeen-dimensional control. The rows $r = 1, 7$ (dimension $2$) and $r = 3, 5$ (dimension $9$) are not the Standard Model algebra, by Proposition \\claimref{standard-model.four-dimensions-forces-converse}(2) for the complex rows and by dimension for the real ones.\n\n\\emph{(ii) The mirror row.}  At $r = 2$, signature $(3,1)$ and conformal signature $(4,2)$, every input is the same as at $r = 6$. The field is $\\C$ by Theorem \\claimref{dark-tower-matter.constituents-field}; the check confirms that the centre of $\\Cl^{0}(4,2)$, like that of $\\Cl^{0}(2,4)$, is $\\mathrm{span}\\{1, I_{6}\\}$ with $I_{6}^{2} = -1$, and that $e_{K} \\mapsto (-1)^{|K|/2}e_{K}$ is an algebra isomorphism of the even algebras in both the tower and the conformal signatures (Theorem \\claimref{dark-tower-matter.mirror-algebra}(i)). The onset count is two (dimension four), the pairs are three and complex (Proposition \\claimref{dark-tower-matter.pairs}(ii) names the mirror), and the ladder is $U(n)$ (Theorem \\claimref{dark-tower-matter.ladder} names the mirror). So the mirror's row is this tower's, $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$, which is the gauge algebra of the mirror copy theorem, Theorem \\claimref{dark-matter.mirror-tower-copy-one}(i). The two derivations are independent: T14 runs T12's chain on the reversed data over $V_{\\C}$, T14c's rule reads the real even algebras. The agreement uses U1. The commutant of the full Clifford module, computed in the check with a primitive idempotent, is $\\HH$ for $\\Cl(1,3)$ and $\\R$ for $\\Cl(3,1)$: with that reading the mirror's pairs would need a complex unit that $\\R$ does not supply, and the two rows would not agree, which is T14c's reason (Remark \\claimref{note.dark-tower-matter.why-u}) for rejecting it; that commutant is T14's ground type, a different object from the constituent field (Remark \\claimref{note.dark-tower-matter.t14s-types-are-different-commutant}). Theorem \\claimref{dark-tower-matter.mirror-algebra}(ii) sends the mirror's conformal unit to $-I_{6}$: the mirror's $\\C$ is ours with the opposite orientation, which conjugates the representations and leaves the algebra unchanged.\n\n\\emph{(iii) The odd rows}  are Theorem \\claimref{dark-tower-matter.gauge-algebras}: (i) for $r = 1, 7$ and (ii) for $r = 3, 5$.\n\n\\emph{(iv) $F$ and $K$.}  In the five-dimensional towers $F = \\HH$ and $K = \\C$, by the centraliser computation above. A rule that took $K = F$ there would keep the quaternionic slot group: that is the external-unit branch of T14c's Remark \\claimref{note.dark-tower-matter.branches-break-u-what-they-give}, which breaks U3 and is not this rule.\n\n\\emph{What fails with wrong inputs.}  The table is sensitive to each input: three constituents in dimension four give $17$, two pairs give $7$, real pairs ($\\R^{2} \\otimes \\R^{3}$) give $4$, one constituent gives $9$; none is $12$. In the check, replacing the onset count, the pair count, the field column or the scalars rule by another value makes it fail.\n"
+ },
+ "notes": [],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "dark-tower-matter.constituents-field",
+   "dark-tower-matter.gauge-algebras",
+   "dark-tower-matter.h1-momentum",
+   "dark-tower-matter.h2-identification",
+   "dark-tower-matter.ladder",
+   "dark-tower-matter.mirror-algebra",
+   "dark-tower-matter.pairs",
+   "dark-tower-matter.third-pairs-unit-five-dimensions",
+   "dark-tower-matter.u-transposition-rule",
+   "dark-tower-matter.where-mass-begins",
+   "mass.mass-symplectic-area-two-twistor-formula",
+   "standard-model.four-dimensions-forces-converse",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "standard-model.internal-symmetry-ladder",
+   "standard-model.pair-count-dimension"
+  ],
+  "used_by": [
+   "synthesis.seeding-remainder-excludes-perturbative-pati-salam"
+  ],
+  "ledger": "absent",
+  "programme": "transport-papers",
+  "holds_given": [
+   "dark-tower-matter.h1-momentum",
+   "dark-tower-matter.h2-identification",
+   "dark-tower-matter.u-transposition-rule"
+  ],
+  "evidence": "pass",
+  "past_cone_size": 50,
+  "future_cone_size": 2
+ }
+}

@@ -54792,6 +54792,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "1b08a87fde9fb706",
+  "ledger": null,
+  "parts": {
+   "checks": "4f9cfa345e6bdbb3",
+   "proofs": "e94540b9c78871f0",
+   "rest": "33009deb10105397",
+   "statement": "1174ea6515e4c252"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays": {
   "assumes": [
    "singularity.q-joint-quasi-freeness-s-wave@3"
@@ -58936,6 +58961,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "c4bac58b633fc012",
+  "ledger": null,
+  "parts": {
+   "checks": "6dfe37638ba6d66c",
+   "proofs": "7c88ee30b5ff432d",
+   "rest": "33009deb10105397",
+   "statement": "a51c5e6e9bff4c87"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.state-selection-r-and-le-against-t05": {
   "assumes": [],
   "credit": [
@@ -60430,6 +60480,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f27553c002451dae",
+  "ledger": null,
+  "parts": {
+   "checks": "fa1459d3c0465dfb",
+   "proofs": "fb2e072d0f3bc8b0",
+   "rest": "33009deb10105397",
+   "statement": "6beddf7e39efabb2"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.window-reading-array-killing-energy": {
   "assumes": [],

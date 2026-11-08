@@ -1,0 +1,17 @@
+functions:
+  check_window_quadratic_form_lemma:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "Every basis state for three generic symmetric tensors on (n, L) = (2, 3), (2, 2), (3, 2); larger windows are covered by the proof only."
+  check_window_energy_is_the_u_n_sugawara_form:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "Every basis state for (n, L) = (1, 4), (2, 3), (3, 3) and three states of sixteen channels on a three-level window."
+  check_so10_casimir_tensor_identity:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "The tensor identity on all 16^4 index quadruples (complete); the u(5) failure as one computed fact."
+  check_window_energy_equals_so10_sugawara_plus_number:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "The operator identity on seven states (three arbitrary states of a two-level window, four of a six-level window); the general case follows from the tensor identity and (i)."
