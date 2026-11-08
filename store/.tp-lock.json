@@ -49950,6 +49950,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.frozen-point-datum-is-h": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "4398101449055bcb",
+  "ledger": null,
+  "parts": {
+   "checks": "fa6f5ce39cec469c",
+   "proofs": "4c69ba78724f895a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "f2ec1c0b9e3c4cdb"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
   "assumes": [],
   "credit": [

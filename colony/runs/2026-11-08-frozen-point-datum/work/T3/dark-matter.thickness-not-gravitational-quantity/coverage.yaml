@@ -1,0 +1,20 @@
+functions:
+  check_inverse_cube_below_extent:
+    kind: sampled
+    clauses: ["gravity would fall as the inverse cube on scales below L"]
+    omits: "the Laplacian of 1/r^2 in R^4 vanishes at three rational points and |grad|^2 r^6 = 4 there, not as an identity; that a metric fifth direction of extent L makes space four-dimensional below L is the premise, not computed"
+  check_the_two_extents:
+    kind: exact
+    clauses: ["n_b = 0.25 per cubic metre", "d_b = 0.98 m, bracketed in (0.95, 1.02)", "ell = 10^26 m"]
+    omits: "the statement gives ell only as about 10^26 m; the check brackets it in [1e26, 1e27) and rounds it to 1.7e26 m"
+  check_both_exceed_the_short_range_bound:
+    kind: exact
+    clauses: ["both exceed the bound by more than four orders of magnitude"]
+    omits: "the interpretive conclusions (the four-dimensional reading of P1 is forced, the two reductions describe an excluded setting, the thickness cannot be measured gravitationally, compactness is not supplied) have no computable content"
+untouched_premises:
+  dark-matter.sourcing-rule-forced-not-chosen: "cited for the projected density rho_5 L; an argument about the series' content with no computable content in this check"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "the numeric content (n_b, d_b, ell and the 10^4 margin) is bracketed exactly from the stated inputs; the docstring says the reading of P1 is not computable"

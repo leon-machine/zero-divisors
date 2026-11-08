@@ -1,0 +1,8 @@
+PASS  action: prefactor 1/Q(I) = 3/Lambda, MacDowell-Mansouri expansion, ambient invariance
+PASS check_action_prefactor_expansion_and_invariance   premises touched: ['dark-energy.imported-macdowell-mansouri-theorem-stelle-west', 'dark-energy.stelle-west-vector-frozen-point']
+PASS check_gtg_stelle_west_datum_on_einstein_fields_both_branches   premises touched: ['dark-energy.imported-frozen-point-geometry', 'dark-energy.stelle-west-vector-frozen-point', 'synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection']
+PASS check_gtg_tractor_field_strength_in_the_lorentz_algebra_of_i_v_perp   premises touched: ['dark-energy.imported-frozen-point-geometry', 'dark-energy.imported-macdowell-mansouri-theorem-stelle-west']
+PASS  reduction to I-perp; curvature in Lambda^2 I-perp (de Sitter zero, Kasner Weyl)
+PASS check_reduction_and_curvature_in_i_perp   premises touched: ['dark-energy.imported-frozen-point-geometry']
+PASS  Stelle-West datum: stabiliser Lorentz (1,3), D V = soldering, Lorentz block R + e^e/l^2
+PASS check_stelle_west_datum_and_lorentz_block   premises touched: ['dark-energy.imported-macdowell-mansouri-theorem-stelle-west', 'dark-energy.stelle-west-vector-frozen-point']

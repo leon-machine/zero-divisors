@@ -1,0 +1,370 @@
+I126  store
+      coverage records: 3203 check function(s) in 940 entities (exact 732, complete 213, sampled 2061, partial 197); 0 check function(s) in those entities have no record
+I213  angle.imported-conformal-model-null-rotations
+      only 0% of its 3 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  conformal.nilpotent-ideal-becomes-unit-ideal
+      only 0% of its 3 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-energy.forcing-half-schwarzschild-wall-residue-sense
+      only 17% of its 6 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-energy.imported-macdowell-mansouri-theorem-stelle-west
+      only 17% of its 12 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-energy.wall-counterterm
+      only 0% of its 8 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-matter.imported-inputs-standard-model-chain
+      only 17% of its 6 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-matter.residue-soldered-invariant-not-algebraic-one
+      only 14% of its 7 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-matter.two-families-are-two-chiralities
+      only 10% of its 10 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  dark-tower-matter.imported-our-towers-chain
+      only 0% of its 10 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  families.source-term-linear-tilt-mass-functional
+      only 17% of its 6 logical neighbours share its subject; most are in 'mass'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  field-theory.assignments-survive
+      only 0% of its 3 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  hawking.gibbs-states-are-kms-conversely-finite
+      only 0% of its 5 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  hawking.imported-ideal-fermi-gas-uniqueness
+      only 0% of its 6 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  hawking.imported-kms-passes-inductive-limits
+      only 0% of its 3 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  hawking.imported-quasi-free-kms-reduces-two
+      only 0% of its 7 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  hawking.kms-restricts-invariant-subalgebras
+      only 0% of its 3 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  interior.boosts-generate-exactly-levi-factor
+      only 0% of its 8 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  interior.stabilisers-flat-model
+      only 20% of its 5 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  mass.chart-form-spin-isomorphism
+      only 20% of its 10 logical neighbours share its subject; most are in 'mass'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  mass.five-broken-generators
+      only 0% of its 3 logical neighbours share its subject; most are in 'conformal-spacetime'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  mass.grip-real
+      only 0% of its 4 logical neighbours share its subject; most are in 'conformal-spacetime'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  mass.imported-thomas-operator
+      only 0% of its 3 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.boost-dilation-ratio-gauge
+      only 0% of its 4 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.doubling-or-complexification
+      only 10% of its 10 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.four-extensions-oriented-pair
+      only 20% of its 10 logical neighbours share its subject; most are in 'clifford-structure'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.imported-conformal-completion
+      only 14% of its 7 logical neighbours share its subject; most are in 'conformal-spacetime'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.mirror-inside-complexified-extension-absent-doubled
+      only 0% of its 5 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.transport-constrains-frozen-point-only-through
+      only 12% of its 8 logical neighbours share its subject; most are in 'conformal-spacetime'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.twistor-algebra
+      only 0% of its 8 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.two-towers-one-curved-universe
+      only 20% of its 10 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  odd-extensions.volume-element-odd-dimension
+      only 14% of its 7 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  one-relation.imported-completion-ladder
+      only 20% of its 5 logical neighbours share its subject; most are in 'tower'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  one-relation.imported-flag-arrow-superselection
+      only 0% of its 10 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  one-relation.imported-single-mode-thermality-modular-period
+      only 18% of its 11 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  one-relation.imported-witts-extension-theorem
+      only 0% of its 3 logical neighbours share its subject; most are in 'one-relation'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  one-relation.spacetime-manifold-vacuum-lines
+      only 20% of its 15 logical neighbours share its subject; most are in 'one-relation'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  pairing.imported-schwarzschild-connection-curvature
+      only 20% of its 5 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  pairing.stabiliser-parabolic-algebra-null-direction
+      only 0% of its 4 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  primer.commutation-rule
+      only 0% of its 3 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  rule2.even-subalgebra-one-dimensional-extension
+      only 0% of its 5 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  rule2.which-residues-obstruct-which-way
+      only 0% of its 3 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  rungs.mass-bracket-frozen-points-grip-slot
+      only 20% of its 5 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  rungs.rung-spinor-module-mixings
+      only 11% of its 9 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  rungs.two-twistor-bivector-null-invites-one
+      only 17% of its 6 logical neighbours share its subject; most are in 'tower'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  scrambling.imported-modes-modular-inventory
+      only 20% of its 5 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  scrambling.scheme-robustness-cutoff
+      only 0% of its 3 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  scrambling.slice-volume-exactly-per-unit-killing
+      only 0% of its 6 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  sheaf.blade-basis-degenerate-forms-included
+      only 14% of its 7 logical neighbours share its subject; most are in 'walls'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  sheaf.kasner-data-interior
+      only 0% of its 3 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  sheaf.weights-are-forced-are-kasner-exponents
+      only 0% of its 8 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.chains-state-class-stability
+      only 18% of its 11 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.curvature-gauge-field-exact-shape-decoupling
+      only 9% of its 11 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.exact-equilibrium-over-determines-boundary-modes
+      only 20% of its 5 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.kms-uniqueness-factor
+      only 20% of its 20 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.l-stabiliser-tangent
+      only 0% of its 5 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.matching-steps-4b-4c-join-equation
+      only 0% of its 7 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.modular-structure-completed-pair
+      only 23% of its 13 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  singularity.pseudo-inverse-identities-hyperbolic-atom
+      only 0% of its 7 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.equal-weight-module
+      only 20% of its 5 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.fits-record-level
+      only 22% of its 9 logical neighbours share its subject; most are in 'neutrinos'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.imported-clebsch-structure-seesaw
+      only 13% of its 15 logical neighbours share its subject; most are in 'neutrinos'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.imported-fock-representation-clifford-algebra-bogoliubov
+      only 12% of its 8 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.imported-pair-systems-two-chirality-halves
+      only 20% of its 15 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.internal-symmetry-ladder
+      only 17% of its 6 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.module-factorises-even-ground-elements-act
+      only 20% of its 5 logical neighbours share its subject; most are in 'mass'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.pair-count-dimension
+      only 17% of its 6 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.under-s-mirror-inherits-desert
+      only 14% of its 7 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  standard-model.what-angle-asks-neutrino-sector
+      only 10% of its 10 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  std-algebra.complexification-is-the-odd-extension
+      only 20% of its 10 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  std-algebra.witt-basis-car
+      only 20% of its 15 logical neighbours share its subject; most are in 'clifford-structure'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.attachment-conformal-energy-is-generated-by-z
+      only 18% of its 11 logical neighbours share its subject; most are in 'quantum-fields'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.blade-square-signs-f2-quadratic-form
+      only 17% of its 6 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.boundary-mode-first-law-of-entanglement
+      only 14% of its 7 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.boundary-mode-locality-is-descent-covariance
+      only 0% of its 3 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.c-loc-is-a-second-placement-of-the-count
+      only 22% of its 9 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.c1-c2-forms-forced-one-number
+      only 20% of its 5 logical neighbours share its subject; most are in 'interior'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.clausius-heat-exceeds-created-modes-killing-energy
+      only 0% of its 3 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.clausius-is-window-first-law-plus-boost-charge-conservation
+      only 0% of its 7 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.completion-recovers-the-real-clifford-algebras
+      only 5% of its 22 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation
+      only 14% of its 7 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.cutoff-count-is-not-a-local-density-on-sds
+      only 0% of its 8 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.de-sitter-horizon-translation-is-conformal-null-rotation
+      only 23% of its 13 logical neighbours share its subject; most are in 'conformal-spacetime'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.density-modes-bosonise-only-along-one-null-direction
+      only 0% of its 3 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.even-slots-need-a-spectator-generator
+      only 20% of its 5 logical neighbours share its subject; most are in 'quantum-fields'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.frobenius-and-universality-in-clifford-algebras
+      only 0% of its 8 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.frozen-point-unique-where-weyl-has-no-kernel
+      only 0% of its 3 logical neighbours share its subject; most are in 'einstein'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins
+      only 20% of its 5 logical neighbours share its subject; most are in 'entropy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.hypothesis-u-readings-on-the-rung-coupling-line
+      only 0% of its 4 logical neighbours share its subject; most are in 'generations'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field
+      only 17% of its 6 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard
+      only 14% of its 7 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport
+      only 14% of its 7 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.imported-takagi-factorisation
+      only 0% of its 3 logical neighbours share its subject; most are in 'neutrinos'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower
+      only 18% of its 11 logical neighbours share its subject; most are in 'tower'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.local-boost-temperature-is-local-regularity
+      only 8% of its 13 logical neighbours share its subject; most are in 'thermality'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.mirror-extensions-causal-convention
+      only 22% of its 9 logical neighbours share its subject; most are in 'clifford-structure'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.nilpotent-steps-derivative-exponential-and-boost
+      only 0% of its 5 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint
+      only 20% of its 5 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.pati-salam-monopoles-bound-descent-history
+      only 20% of its 5 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.r-loc-needs-sheet-labelled-modes
+      only 22% of its 9 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.slot-module-light-ray-arrays-are-weyl-components
+      only 20% of its 10 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free
+      only 22% of its 9 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.stelle-west-norm-is-no-local-output
+      only 10% of its 10 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.transverse-bivector-is-the-complex-unit-of-the-radial-atom
+      only 22% of its 9 logical neighbours share its subject; most are in 'descent'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
+      only 23% of its 13 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.two-loop-running-cannot-fix-majorana-coupling
+      only 11% of its 9 logical neighbours share its subject; most are in 'standard-model'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  synthesis.untuned-fit-caps-lightest-heavy-neutrino
+      only 17% of its 6 logical neighbours share its subject; most are in 'dark-energy'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.centre
+      only 20% of its 5 logical neighbours share its subject; most are in 'zero-divisors'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.classification-real-clifford-algebras
+      only 17% of its 18 logical neighbours share its subject; most are in 'zero-divisors'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.corner-even-subalgebra
+      only 0% of its 7 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.even-subalgebra-one-dimensional-extension
+      only 0% of its 3 logical neighbours share its subject; most are in 'standard-algebra'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.existence-classification-type-c
+      only 17% of its 12 logical neighbours share its subject; most are in 'clifford-structure'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.sign
+      only 17% of its 6 logical neighbours share its subject; most are in 'dark-matter'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.type-p-self-repairing
+      only 20% of its 5 logical neighbours share its subject; most are in 'completion'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I213  transport.where-obstruction-lies-commuting-square
+      only 17% of its 12 logical neighbours share its subject; most are in 'clifford-structure'
+      fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I305  store
+      this change touches 1 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)
+I510  store
+      contradiction scan: 43 quantities, 381 symbol = value occurrences compared (101 left out as predictions, fits or hypotheticals); 0 drift, 0 disagreement(s), 0 decimal, 0 sign (7 C10 patterns; hits none)
+I502  store
+      AI judge not configured: statement-vs-check, level overclaiming and citation checks were skipped
+layer 4: ran 0 entities in 2 process(es), replayed 2287 unchanged from the cache (--full to rerun all)
+
+summary: 0 error(s), 0 warning(s), 1100 information finding(s)
+  I126      1  coverage records, store-wide
+               store
+  I213    114  
+               angle.imported-conformal-model-null-rotations, conformal.nilpotent-ideal-becomes-unit-ideal, dark-energy.forcing-half-schwarzschild-wall-residue-sense, +111 more
+  I305      1  
+               store
+  I405    667  untouched premise, expected (suppressed W405)
+               standard-model.trichotomy-what-kind-number (9), dark-matter.mirror-share-assembled (8), dark-matter.population-count-one-share-half-percent (8), +348 more
+  I410    315  
+               conformal.minimal-nondegenerate-completion, conformal.nilpotent-ideal-becomes-unit-ideal, correspondence.chevalley-pairing, +312 more
+  I502      1  
+               store
+  I510      1  
+               store
+
+layers run: [1, 2, 3, 4, 5, 6]; 0 error(s), 0 warning(s)
+EXIT=0

@@ -1,0 +1,11 @@
+functions:
+  check_mirror_pair_same_rate_same_boost:
+    kind: sampled
+    clauses: [(b)]
+    omits: 'Four values of H and three rotor parameters q: in the reversed form the plane is (1,1), B^2 = H^2 unchanged, the mirror pair w = (e0 - eW)/2, w* = -(e0 + eW)/2 is null with CAR and the same occupation boost u, its number operator equals the original blade for blade (so K = u/2 = N - 1/2 and the Gibbs state are the same), the ladder is reversed (w = v*, w* = -v) and the rotor contracts w by q^{-2}; that the mirror''s (P) and (R_Lambda) hold and that both towers share one Euclidean section is a hypothesis, not computed.'
+  check_conversion_factor_is_the_frozen_point_norm:
+    kind: sampled
+    clauses: [(c)]
+    omits: kappa^2 = Q(I) = Lambda/3 = H^2 at four H and Q(I) = -Lambda/3 in the reversed form; the claim that T_Lambda is undetermined within the series has no computable content and is not checked (the module docstring says so).
+untouched_premises: {odd-extensions.two-towers-one-curved-universe: 'hypothesis supplying the two-tower setting; no computable content, cited for the mirror reading in (b)', dark-energy.under-action-written-norm-parameter-laws: cited for the status remark on parameter laws in (c); no computable content, synthesis.r-lambda-regularity-cosmological-horizon: hypothesis (R_Lambda) taken as input for the mirror; the check does not call premise() on it, singularity.p-univalence: hypothesis (P) taken as input; the check uses its consequence (null CAR pair) directly, singularity.rate-rigidity-temperature-not-algebra-intrinsic: cited for the status remark that the temperature is not algebra-intrinsic; no computable content}
+judge: {by: coverage-judge-2026-10-23, date: '2026-10-23', verdict: agrees, note: Mirror pair and conversion-factor identities are reproduced at sample H; the status claim in (c) is not computable.}

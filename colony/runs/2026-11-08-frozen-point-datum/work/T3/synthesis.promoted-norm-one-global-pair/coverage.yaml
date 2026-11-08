@@ -1,0 +1,32 @@
+functions:
+  check_pointwise_count_with_norm_mode:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'Three sample frozen points (Lambda, I, V) in R^{2,4}: the constraint matrix has rank 3 on thirteen components, the fifteen bivector images have rank 9, they and the norm mode lie in the constraint kernel and together span the ten directions; unitary gauge and the elimination of all fluctuations except delta-lambda n follow by argument and are not run'
+  check_multiplier_sector_one_global_pair:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iii)
+    omits: 'Only the periodic cubical 3-tori L = 2, 3 (Betti numbers 1,3,3,1; d lambda = 0 leaves the constants; T modulo exact forms leaves the sum over cubes; the two pair): not a general compact connected orientable Sigma; varying T to get d lambda = 0, the canonical pairing from c int lambda dT, the gauge generator T -> T + d theta and the count of no local degree of freedom are not computed'
+  check_liouville_density_depends_on_multiplier:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: Exact secants of g(Lambda) = Lambda/3 (constant 1/3) and 3/Lambda (-3/(ab)) at four rational points and the identity Lambda_obs/Lambda_max = 3/N^2 at M_P = 1; the Liouville measure |c| d Lambda d tau itself, the divergence of its integral, the solution-dependent advance of tau and (iv) are not computed
+  check_gtg_pointwise_count_in_cl24:
+    kind: sampled
+    clauses:
+    - "(i)"
+    omits: "four values of Lambda (both signs), I and V the scale tractor and the Stelle-West vector of the shared engine; unitary gauge itself is argued"
+  check_gtg_multiplier_equation_is_grad_lambda_zero:
+    kind: sampled
+    clauses:
+    - "(ii) Varying T gives d lambda = 0"
+    omits: "the algebraic step only (the map dT -> <(g ^ dT) I^-1> has rank 1 for g != 0, five sample g including a null one); the integration by parts is the Leibniz rule"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: Pointwise constraint counting, the cohomology of a lattice 3-torus and the multiplier-dependence of the Liouville density are checked at sample data; (iv) (norm is initial data, not a parameter) has no function.

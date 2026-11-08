@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": true,
+ "findings": [
+  {
+   "code": "I126",
+   "severity": "info",
+   "entity": "store",
+   "message": "coverage records: 3187 check function(s) in 938 entities (exact 732, complete 211, sampled 2047, partial 197); 0 check function(s) in those entities have no record",
+   "fix": ""
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 2 entities; 144 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was stored but not run: evidence checks run when a maintainer reviews the proposal"
+}

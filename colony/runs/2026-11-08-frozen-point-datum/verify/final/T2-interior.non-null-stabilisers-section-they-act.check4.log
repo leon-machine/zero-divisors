@@ -1,0 +1,8 @@
+I410  interior.non-null-stabilisers-section-they-act
+      2 legacy checks pass in verify_T06.py (premises untracked, no mutation test)
+I405  interior.non-null-stabilisers-section-they-act
+      std-algebra.bivector-lie-algebra is declared and untouched, as expected: coverage.yaml: standard algebra cited in the proof; the check computes the statement directly
+I405  interior.non-null-stabilisers-section-they-act
+      synthesis.completion-recovers-the-real-clifford-algebras is declared and untouched, as expected: coverage.yaml: standard algebra cited in the proof; the check computes the statement directly
+
+interior.non-null-stabilisers-section-they-act: 0 error(s), 3 other finding(s); check result: pass

@@ -1,0 +1,6 @@
+PASS  invariant form (4,6) so(1,4) for Lambda > 0, (6,4) so(2,3) for Lambda < 0; (3,3,4) with nilradical ninf ^ W (abelian ideal, null shears) for Lambda = 0
+PASS check_reductive_or_parabolic   premises touched: ['interior.non-null-stabilisers-section-they-act', 'interior.stabilisers-flat-model']
+PASS  Y = X - I/Q(I) has Q(Y) = -1/Q(I) with Lorentzian tangent; polar infinity spacelike for Lambda > 0, timelike for Lambda < 0
+PASS check_section_and_polar_infinity   premises touched: ['interior.non-null-stabilisers-section-they-act']
+PASS  Q(I) = Lambda/3; stabiliser of dimension 10: Lambda^2(I-perp), or Lambda^2 W + ninf ^ W at Lambda = 0
+PASS check_stabiliser_dimension_and_shape   premises touched: ['interior.non-null-stabilisers-section-they-act', 'interior.scale-tractor-leaves-cone', 'interior.stabilisers-flat-model']

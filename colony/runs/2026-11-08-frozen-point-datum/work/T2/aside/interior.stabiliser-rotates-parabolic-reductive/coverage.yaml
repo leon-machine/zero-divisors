@@ -1,0 +1,18 @@
+functions:
+  check_stabiliser_dimension_and_shape:
+    kind: sampled
+    clauses: ["(1) stabiliser of the null frozen point", "(2) stabiliser of the Lambda > 0 frozen point", "(3) stabiliser of the Lambda < 0 frozen point"]
+    omits: "Lambda in {0, 3, 12, -3, -12} only; checks dimension 10, Q(I) = Lambda/3 and that the stabiliser equals Lambda^2(I-perp) (Lambda != 0) or Lambda^2 W + ninf ^ W (Lambda = 0); algebra level, not the structure group of the completion"
+  check_reductive_or_parabolic:
+    kind: sampled
+    clauses: ["(1) 4-dimensional nilradical, parabolic", "(2) de Sitter group SO(1,4), reductive", "(3) anti-de Sitter group SO(2,3), reductive"]
+    omits: "same five Lambda values; so(1,4) and so(2,3) are identified by the trace-form signatures (4,6) and (6,4) and I-perp signature, the Poincare case by form (3,3,4), abelian null-shear ideal ninf ^ W; group-level statements (SO versus its algebra) and the transvection/obstruction link to ButlerT1 are not tested"
+  check_section_and_polar_infinity:
+    kind: sampled
+    clauses: ["(2) Einstein section and spacelike polar infinity", "(3) timelike polar infinity"]
+    omits: "four nonzero Lambda values with one null X each; checks Q(Y) = -1/Q(I), tangent signature (1,3) and the signature of X-perp in I-perp; that the stabiliser acts as the isometry group and that the polar infinity is a 3-sphere are not tested here"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "Dimension, form signatures and the Poincare nilradical agree with (1)-(3) at the sampled Lambda; the statement's group-level and topological content is not computed."

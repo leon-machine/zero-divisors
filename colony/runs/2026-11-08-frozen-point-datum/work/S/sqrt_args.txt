@@ -1,0 +1,220 @@
+ 19 | m | families.chart-computation-sign-twist-bracket-form families.koide-class-crossing-fit-conclusion families.koide-instrument families.koide-nullity-condition-one-member-invariant families.linear-conjecture-refuted-data hawking.bose-einstein-occupancy-quantified-window-corrections ...
+ 13 | 2 | families.chart-computation-sign-twist-bracket-form families.koide-class-crossing-fit-conclusion mass.weight-composite neutrino.seesaw-what-gauge-invariance-proves-what note.families.setting-introduction note.families.setting-levels-results ...
+ 13 | \Omega_{\Lambda} | programme.n-parameter-of-the-laws standard-model.dating-descent standard-model.trichotomy-what-kind-number standard-model.what-derived-what-not synthesis.einstein-route-makes-n-initial-data synthesis.finite-range-descent-deposit-cannot-seed-cmb ...
+  8 | 2M/r | interior.gauge-trajectory-unipotent-ray note.singularity.setting-schwarzschild-gauge-field-connection-where scrambling.slice-volume-exactly-per-unit-killing sheaf.gauge-field-cometric singularity.imported-induced-geometry-interior-slice singularity.stretched-singularity-count ...
+  8 | \Lambda/3 | note.odd-extensions.what-says-what-it-does-not note.synthesis.what-n-is-counted odd-extensions.exceptional-algebra-residue-completion-both-sides synthesis.cosmological-horizon-completed-pair synthesis.de-sitter-static-boost-frozen-point synthesis.de-sitter-temperature-frozen-point-norm ...
+  8 | 3/\Lambda | dark-energy.under-action-written-norm-parameter-laws dark-matter.imported-frozen-point-de-sitter-radius dark-matter.thickness-not-gravitational-quantity neutrino.seesaw-what-gauge-invariance-proves-what odd-extensions.two-readings-which-which synthesis.de-sitter-static-boost-frozen-point ...
+  7 | A | interior.exact-parallelism-convergence-rate interior.kasner-form-interior scrambling.imported-collars-coframe-exceptional-set-helicity singularity.imported-interior-collar-kasner-form singularity.modular-flow-boundary-modes-holonomy-universal synthesis.collar-kms-extension-three-flows ...
+  7 | 2M | note.singularity.corank-limit-weighted-answer note.singularity.setting-imported-localisation-theorems-verbatim scrambling.slice-volume-exactly-per-unit-killing singularity.stretched-singularity-count singularity.transport-schwarzschild-fibre synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower ...
+  6 | 2$ | note.correspondence.setting-machine-verification note.mass.setting-machine-verification note.mass.what-nullity-fixes synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors synthesis.complex-neutrino-stages-keep-the-solar-sum-rule synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
+  6 | 2\, | correspondence.fock-model-complexified-ascended-algebra note.correspondence.isomorphism-witt-pair note.mass.what-nullity-fixes synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch synthesis.face-mass-form-unit-plus-gram synthesis.pati-salam-chain-defects-cannot-source-spectrum
+  6 | f$, | note.pairing.setting-schwarzschild-exactly note.pairing.setting-two-claims-kill-conditions-fixed note.singularity.setting-curvature-operator-cartan-structure-equations pairing.imported-schwarzschild-connection-curvature pairing.static-frame-only-expansion-survives singularity.computed
+  6 | 3 | families.alignment-computed-thirteenth-refutation-democracy-one neutrino.imported-indifference-faces-democratic-alignment-rank note.families.setting-koide-geometry synthesis.pre-descent-contracting-kasner-stage-premise synthesis.sds-clausius-fixes-area-constant synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
+  6 | f/r | note.pairing.departures-registered-wording note.pairing.setting-machine-verification note.pairing.setting-two-claims-kill-conditions-fixed-2 note.pairing.what-horizon-reading pairing.imported-schwarzschild-connection-curvature pairing.static-frame-only-expansion-survives
+  6 | t | note.sheaf.blow-up-dictionary note.sheaf.setting-contribution note.sheaf.setting-introduction sheaf.exceptional-algebra-deformation-normal-cone sheaf.metrics-residue-square-root-twist synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state
+  5 | r\, | note.singularity.corank-limit-weighted-answer sheaf.matching-connection-level sheaf.rain-duality singularity.matching-steps-4b-4c-join-equation singularity.transport-schwarzschild-fibre
+  5 | m_{d}/m_{s} | families.faces-ordered-what-identification-requires-first note.families.setting-introduction note.families.setting-prior-art synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase synthesis.imported-fritzsch-texture-cabibbo-formula
+  5 | \pi/\ln 2 | note.programme.setting-measure-two-numbers-one-bit note.synthesis.what-n-is-counted standard-model.largeness-number-universes-boundary-modes standard-model.what standard-model.why-large
+  5 | \pi | note.dark-matter.setting-rule-2 note.synthesis.what-n-is-counted standard-model.largeness-number-universes-boundary-modes standard-model.what synthesis.de-sitter-mode-count
+  5 | 2\c | note.correspondence.isomorphism-witt-pair synthesis.imported-brannen-charged-lepton-phase synthesis.koide-channel-phase-is-no-symmetry-angle synthesis.koide-channel-phase-target-depends-on-mass-definition synthesis.real-structure-breaks-source-stabiliser-to-z2
+  5 | m_{k} | families.chart-computation-sign-twist-bracket-form families.linear-conjecture-refuted-data note.families.setting-introduction synthesis.light-cone-koide-is-quarter-turn synthesis.mass-ordered-dressing-cannot-spoil-koide
+  4 | r$, | note.sheaf.setting-machine-verification obj.sheaf.weighted-coframe-module sheaf.exceptional-algebra-black-hole sheaf.matching-connection-level
+  4 | m_{e}/m_{\mu} | synthesis.complex-neutrino-stages-keep-the-solar-sum-rule synthesis.no-120-excludes-hierarchical-second-stage synthesis.series-family-structures-give-no-lopsided-second-stage synthesis.solar-angle-light-plane-sum-rule
+  4 | f$ | note.singularity.setting-fixing-rate-where-premise-has-2 note.singularity.setting-machine-verification singularity.computed singularity.euclidean-section-period
+  4 | r$ | note.interior.setting-machine-verification note.sheaf.setting-machine-verification sheaf.exceptional-algebra-black-hole sheaf.rain-duality
+  4 | s | families.imported-squeezed-vacuum-bosonic-pairing synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits synthesis.imported-long-lived-charged-particle-stau-limits synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch
+  4 | r | note.interior.setting-part-three-first-half-approach note.sheaf.setting-schwarzschild-composite-2 obj.sheaf.weighted-coframe-module sheaf.exceptional-algebra-black-hole
+  3 | r, | sheaf.exceptional-algebra-black-hole sheaf.matching-connection-level sheaf.rain-duality
+  3 | \det M | synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
+  3 | \rho | synthesis.complex-neutrino-stages-keep-the-solar-sum-rule synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands synthesis.series-family-structures-give-no-lopsided-second-stage
+  3 | f\, | note.singularity.setting-curvature-operator-cartan-structure-equations pairing.imported-schwarzschild-connection-curvature singularity.computed
+  3 | C/\pi | note.synthesis.what-n-is-counted standard-model.what synthesis.de-sitter-mode-count
+  3 | -g | synthesis.imported-kaluza-klein-ansatz synthesis.imported-miskovic-olea-identity synthesis.imported-two-dimensional-covariant-gravitational-anomaly
+  3 | f)\ | note.pairing.setting-machine-verification pairing.imported-schwarzschild-connection-curvature pairing.static-frame-only-expansion-survives
+  3 | r) | note.sheaf.setting-machine-verification sheaf.exceptional-algebra-black-hole sheaf.rain-duality
+  3 | Q(I_{\Lambda}) | synthesis.de-sitter-static-boost-frozen-point synthesis.de-sitter-temperature-frozen-point-norm synthesis.de-sitter-temperature-mirror-and-status
+  3 | 2a | synthesis.dirac-states-restrict-to-null-hypersurfaces-through-the-flux-contraction-and-are-thin-layer-limits-under-the-generator-car synthesis.hadamard-scaling-limit-premise synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel
+  3 | 2$. | note.correspondence.setting-setting-imports-2 synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form synthesis.solar-angle-light-plane-sum-rule
+  2 | 1-r | synthesis.collar-kms-extension-completion-locus synthesis.collar-kms-extension-three-flows
+  2 | A$ | interior.exact-parallelism-convergence-rate singularity.imported-interior-collar-kasner-form
+  2 | p | synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off synthesis.imported-schwinger-term-and-mattis-lieb-density-algebra
+  2 | xy | synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase synthesis.imported-fritzsch-texture-cabibbo-formula
+  2 | m^{*2} + H^{4} | synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
+  2 | 1 - r | singularity.modular-flow-boundary-modes-holonomy-universal synthesis.collar-temperature-fixed-locally-by-r-loc
+  2 | 3$, | odd-extensions.exceptional-algebra-residue-completion-both-sides synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors
+  2 | M/2r^3 | singularity.connection-bivector-computed singularity.why-calibration-cannot-be-internal
+  2 | \Lambda | mass.mass-weight-dictionary synthesis.cutoff-count-is-not-a-local-density-on-sds
+  2 | m^{2} + l^{2} | synthesis.imported-taub-nut-field-and-misner-extension synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
+  2 | \pi/2 | dark-matter.total-function-thickness simulations.imported-unit-ball-rule-family
+  2 | r/2M | singularity.causal-epoch-computed-exactly synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
+  2 | |g| | synthesis.kasner-approach-gives-horizon-exit-and-index-three synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
+  2 | 7 | synthesis.pre-descent-contracting-kasner-stage-premise synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
+  2 | 2k | synthesis.frozen-point-geometry-reads-descent-as-vacuum synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands
+  2 | f}{ | note.singularity.setting-curvature-operator-cartan-structure-equations pairing.static-frame-only-expansion-survives
+  2 | 15 | standard-model.imported-proton-condition synthesis.colour-light-content-proton-ceiling
+  2 | r,\ | sheaf.exceptional-algebra-black-hole sheaf.rain-duality
+  2 | r$. | sheaf.exceptional-algebra-black-hole sheaf.rain-duality
+  2 | r$) | note.singularity.setting-imported-localisation-theorems-verbatim sheaf.exponent-ratios-are-invariant
+  2 | m_{\tau} | families.linear-conjecture-refuted-data note.families.setting-machine-verification
+  2 | m_{e} | families.linear-conjecture-refuted-data note.families.setting-machine-verification
+  2 | m_{\mu} | families.linear-conjecture-refuted-data note.families.setting-machine-verification
+  2 | f_{J} | note.neutrino.valuation-m-both-ends-hypothesis-u standard-model.what-angle-asks-neutrino-sector
+  2 | 2M/r_c | note.scrambling.setting-machine-verification scrambling.slice-volume-exactly-per-unit-killing
+  2 | N | synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations
+  2 | 2$, | note.correspondence.setting-setting-imports-2 synthesis.real-structure-breaks-source-stabiliser-to-z2
+  2 | C | mass.weight-composite note.mass.what-join-says
+  2 | 1 - r_c/2M | singularity.stretched-singularity-count synthesis.c1-c2-forms-forced-one-number
+  2 | \Delta m^{2}_{21} | neutrino.rank-one-seesaw-ordering-sum-double pred.neutrino-mass-sum-floor
+  2 | \Delta m^{2}_{31} | neutrino.rank-one-seesaw-ordering-sum-double pred.neutrino-mass-sum-floor
+  2 | M/2r^{3} | note.state-selection.setting-what-remains-open singularity.why-calibration-cannot-be-internal
+  2 | 2}\ | note.mass.what-nullity-fixes synthesis.operator-join-point-spectrum-on-positive-energy-modules
+  2 | t$ | note.sheaf.setting-schwarzschild-composite note.sheaf.setting-scope-successor-problems
+  2 | u | note.simulations.setting-films note.simulations.setting-mirrors-cooling-settling
+  2 | m^2 - u^2 | note.sheaf.bounded-norm-alone-does-not-characterise note.sheaf.rain-boundedness-essential-null-mixing-extension
+  1 | m^2 - r | sheaf.matching-connection-level
+  1 | r), | sheaf.matching-connection-level
+  1 | m^2-r | sheaf.matching-connection-level
+  1 | r + | sheaf.matching-connection-level
+  1 | r)$ | sheaf.matching-connection-level
+  1 | 2a(u, y) | synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces
+  1 | r \ | sheaf.chains-radial-dyad-rain-finite
+  1 | \rho_{0} | synthesis.complex-neutrino-stages-keep-the-solar-sum-rule
+  1 | \frac{\sqrt{\rho}\,(1 + \sqrt{\rho})}{1 - \sqrt{\rho}} | synthesis.complex-neutrino-stages-keep-the-solar-sum-rule
+  1 | N}\ | synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit
+  1 | N}) | synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit
+  1 | N}N | synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit
+  1 | 2$; | synthesis.injection-freshness-is-pair-purity
+  1 | 2\; | correspondence.fock-model-complexified-ascended-algebra
+  1 | K^2 + |\mu|^2 | field-theory.composite-scalars-mean-field-level
+  1 | -Q((v \cdot D)v) | singularity.computed
+  1 | f)$ | singularity.computed
+  1 | 1 + m^{*2}/H^{4} | synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion
+  1 | |\Lambda| | odd-extensions.exceptional-algebra-residue-completion-both-sides
+  1 | |\Lambda|/3 | odd-extensions.exceptional-algebra-residue-completion-both-sides
+  1 | \frac{M}{2r^3} | singularity.connection-bivector-computed
+  1 | cd | scrambling.clock-inventory-boundary-modes
+  1 | A\, | scrambling.imported-collars-coframe-exceptional-set-helicity
+  1 | \frac{m^{2}}{H^{2}} - \frac94 | mass.weight-polynomial-two-series
+  1 | m^{2}/H^{2} - \tfrac94 | mass.weight-polynomial-two-series
+  1 | 2a_{v} | synthesis.dirac-causal-propagator-between-nearby-null-leaves-tends-to-the-generator-car-on-every-geodesic-null-hypersurface
+  1 | w^{2} + 4\xi c^{2} | synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+  1 | 6\xi | synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+  1 | \xi | synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+  1 | 1 - r_{c}/2M + \Lambda/3 | synthesis.cutoff-count-is-not-a-local-density-on-sds
+  1 | 4\pi | synthesis.majorana-scale-not-carried-by-rung-frame-boost
+  1 | 2c_{q} | synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower
+  1 | \frac{\pi}{2} | dark-matter.total-function-thickness
+  1 | \frac{128}{9\pi} | dark-matter.total-function-thickness
+  1 | 128/9\pi | dark-matter.total-function-thickness
+  1 | \frac{\pi^{2}g_{*}}{90} | dark-matter.seeding-gravity-floor-dark-towers-temperature
+  1 | m_{n} | synthesis.imported-brannen-charged-lepton-phase
+  1 | t^{2} + l^{2} | synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
+  1 | U | synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue
+  1 | c(w(m)) | synthesis.smallness-monomials-exact-hierarchy-casimir
+  1 | (m/H)^{2} - 9/4 | synthesis.smallness-monomials-exact-hierarchy-casimir
+  1 | K/12 | synthesis.black-hole-data-do-not-fix-field-equations
+  1 | K^{2} + \Delta^{2} | synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy
+  1 | \Omega_{r} + \Omega_{m}a + \Omega_{\Lambda}a^{4} | synthesis.frozen-point-geometry-reads-descent-as-vacuum
+  1 | 3$. | synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors
+  1 | 3$ | synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors
+  1 | 3\g | synthesis.series-family-structures-give-no-lopsided-second-stage
+  1 | M^2 - a^2 | synthesis.kerr-ring-count-misses-area-law
+  1 | \frac{3}{\Lambda} | dark-matter.thickness-not-gravitational-quantity
+  1 | r)( | sheaf.rain-duality
+  1 | 3/8 | standard-model.matching-traces
+  1 | 2/3 | standard-model.matching-traces
+  1 | M^{2} - a^{2} | synthesis.imported-kerr-surface-gravity-entropy
+  1 | -\Lambda/3 | synthesis.de-sitter-static-boost-frozen-point
+  1 | Q(I) | synthesis.de-sitter-static-boost-frozen-point
+  1 | l(l+2) | synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike
+  1 | m_{u}/m_{c} | synthesis.imported-fritzsch-texture-cabibbo-formula
+  1 | \tfrac{m_{u}}{m_{u} + m_{c}} | synthesis.imported-fritzsch-texture-cabibbo-formula
+  1 | \tfrac{m_{s}}{m_{d} + m_{s}} | synthesis.imported-fritzsch-texture-cabibbo-formula
+  1 | \tfrac{m_{c}}{m_{u} + m_{c}} | synthesis.imported-fritzsch-texture-cabibbo-formula
+  1 | \tfrac{m_{d}}{m_{d} + m_{s}} | synthesis.imported-fritzsch-texture-cabibbo-formula
+  1 | m_{3}\,f_{J}\,v_{R} | standard-model.what-angle-asks-neutrino-sector
+  1 | m_{3}f_{J}v_{R} | standard-model.what-angle-asks-neutrino-sector
+  1 | M_{W}^{2} + m_{h}^{2} - M_{Z}^{2} | synthesis.rung-field-charged-scalar-sum-rule
+  1 | x/(1-x) | synthesis.collar-kms-extension-three-flows
+  1 | r/(1-r) | synthesis.collar-kms-extension-three-flows
+  1 | r/f | singularity.transport-schwarzschild-fibre
+  1 | 2/\pi z | synthesis.imported-de-sitter-invariant-hadamard-state-unique
+  1 | 2y_ | synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch
+  1 | 5/18 | synthesis.colour-light-content-proton-ceiling
+  1 | t)$ | sheaf.exceptional-algebra-deformation-normal-cone
+  1 | 1-x_{c} | synthesis.exceptional-boundary-measure-one-calibration
+  1 | 1 - x_{c} | synthesis.exceptional-boundary-measure-one-calibration
+  1 | f | scrambling.slice-volume-exactly-per-unit-killing
+  1 | f$. | scrambling.slice-volume-exactly-per-unit-killing
+  1 | E(1 - E) | synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise
+  1 | 2, | synthesis.pati-salam-chain-defects-cannot-source-spectrum
+  1 | \rho_{k} | synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands
+  1 | \pi^{2}g_{*}/1440 | synthesis.pati-salam-monopoles-bound-descent-history
+  1 | \varepsilon_{m} | synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations
+  1 | \varepsilon | synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations
+  1 | km/N | synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations
+  1 | 3\, | synthesis.real-structure-breaks-source-stabiliser-to-z2
+  1 | K_{+}|K_{-}| | synthesis.scale-free-rung-potentials-need-the-flat-physical-branch
+  1 | -I_4\tau | synthesis.imported-theta-function-identities
+  1 | w$ | synthesis.kerr-ring-double-cover-data
+  1 | w$, | synthesis.kerr-ring-double-cover-data
+  1 | A \ | interior.kasner-form-interior
+  1 | 5)/ | synthesis.bkl-bounces-no-framewise-invariant
+  1 | 2M/r_c - 1 | synthesis.c1-c2-forms-forced-one-number
+  1 | \frac{r}{2M} | singularity.causal-epoch-computed-exactly
+  1 | 1-\varepsilon | singularity.causal-epoch-computed-exactly
+  1 | h | synthesis.euler-entropy-first-order-rate-on-local-patches
+  1 | 12/\Lambda | synthesis.cosmological-horizon-completed-pair
+  1 | \tfrac{3}{16\pi G} | synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
+  1 | 3/2 | synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
+  1 | 8\pi G | synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall
+  1 | T/t | families.koide-class-crossing-fit-conclusion
+  1 | 8\pi | dark-matter.imported-massless-graviton-production-rate
+  1 | k_{8}^{2} + k_{9}^{2} | synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
+  1 | |f(r_c)| | singularity.stretched-singularity-count
+  1 | 1 - \tfrac{r_c}{2M} | singularity.stretched-singularity-count
+  1 | 1 + \lambda^{2} | families.rigidity-pairing-sector-one-event
+  1 | \tfrac{2}{3} | families.rigidity-pairing-sector-one-event
+  1 | |g_{4}| | synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
+  1 | |g_{5}| | synthesis.kasner-hidden-scale-coupled-scalars-stay-blue
+  1 | q , | synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves
+  1 | (1 + g_{4, q})^{2} - g_{2, q}^{2} | synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves
+  1 | (1 + g_{4})^{2} - g_{2}^{2} | synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves
+  1 | 2/v | synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
+  1 | 2V^ | synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
+  1 | 6/\Lambda | neutrino.seesaw-what-gauge-invariance-proves-what
+  1 | n | field-theory.how-close-tower-comes-ccr
+  1 | Q(K) | singularity.imported-surface-gravity-redshifted-acceleration
+  1 | 1 - f | synthesis.killing-horizon-value-factor-is-the-generator-boost
+  1 | M | scrambling.uniqueness-internal-scaling
+  1 | \hbar | synthesis.operator-join-point-spectrum-on-positive-energy-modules
+  1 | 2 s | synthesis.operator-join-point-spectrum-on-positive-energy-modules
+  1 | \lambda | synthesis.operator-join-point-spectrum-on-positive-energy-modules
+  1 | \frac{\Lambda}{3} | synthesis.de-sitter-temperature-frozen-point-norm
+  1 | f'(u)f'(v) | synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
+  1 | \mu | synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state
+  1 | |Q(u_{i})| | synthesis.completion-recovers-the-real-clifford-algebras
+  1 | n_{j}n'_{j} | synthesis.tower-charge-sector-label-temperature-not
+  1 | (1 - n_{j})(1 - n'_{j}) | synthesis.tower-charge-sector-label-temperature-not
+  1 | q | synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum
+  1 | 6$, | synthesis.solar-angle-light-plane-sum-rule
+  1 | 2 = | note.correspondence.isomorphism-witt-pair
+  1 | m_{3}v_{R} | note.neutrino.setting-machine-verification
+  1 | \Omega_{m}(1+z)^{3} + \Omega_{\Lambda} | note.simulations.setting-model
+  1 | u(t + \Delta t) | note.simulations.setting-mirrors-cooling-settling
+  1 | u(t) | note.simulations.setting-mirrors-cooling-settling
+  1 | \epsilon/|\mathbf{a}_{i}| | note.simulations.setting-time-integration-output
+  1 | t$, | note.sheaf.direction-induced-twist
+  1 | f}\ | note.singularity.setting-curvature-operator-cartan-structure-equations
+  1 | f}) | note.singularity.setting-curvature-operator-cartan-structure-equations
+  1 | 2}( | note.transport.cl-1-1-n-p-together
+  1 | t$; | note.sheaf.setting-machine-verification
+  1 | r(k | note.sheaf.setting-machine-verification
+  1 | r$: | note.sheaf.setting-machine-verification
+  1 | 2\Bigl[\ln(1 + c) - \frac{c}{1 + c}\Bigr] | note.simulations.setting-halos
+  1 | Q(x) | note.transport.degenerate-adjunctions-why-they-are-excluded
+  1 | \tfrac{3}{\Lambda} | note.dark-matter.setting-what-could-fix-unit-de-2
+  1 | \gamma(\gamma - 1)u_{i} | note.simulations.setting-smoothed-particle-hydrodynamics
+  1 | a^2 + b^2 | note.primer.rotation-exactly
+  1 | 2}K | note.mass.what-nullity-fixes
+  1 | 1 - \tfrac94\epsilon^{2} | note.mass.setting-machine-verification

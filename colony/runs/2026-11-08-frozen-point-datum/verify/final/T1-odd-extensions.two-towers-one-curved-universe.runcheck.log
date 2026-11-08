@@ -1,0 +1,4 @@
+PASS check_even_subalgebras_coincide   premises touched: ['odd-extensions.imported-copy-theorem-soldered-residue']
+PASS check_fifth_generator_alone_differs   premises touched: ['odd-extensions.doubling-or-complexification']
+PASS check_intermediate_algebras_and_the_rule   premises touched: ['odd-extensions.doubling-or-complexification', 'odd-extensions.four-extensions-oriented-pair', 'odd-extensions.imported-frozen-point']
+PASS check_the_datum_makes_the_fifth_generator_a_unit   premises touched: ['odd-extensions.doubling-or-complexification', 'odd-extensions.imported-frozen-point']

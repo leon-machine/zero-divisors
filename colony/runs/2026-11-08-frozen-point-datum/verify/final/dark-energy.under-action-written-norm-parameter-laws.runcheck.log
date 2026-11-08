@@ -1,0 +1,6 @@
+PASS  Lambda fixed: 9 = 9, and H^2 = Q(I) = Lambda/3 on the de Sitter field
+PASS check_fixed_lambda_nine_and_de_sitter_scale   premises touched: ['dark-energy.imported-frozen-point-geometry', 'dark-energy.point-infinity-has-no-physical-fluctuation']
+PASS  d(N^2)/dLambda = -3 M_P^2/Lambda^2 != 0; I -> s I gives N -> N/s
+PASS check_n_varies_with_lambda   premises touched: ['standard-model.trichotomy-what-kind-number']
+PASS  Lambda varying: dimension 10, orbit 9, one norm mode (I/2Lambda, -V/2Lambda, 1)
+PASS check_varying_lambda_single_norm_mode   premises touched: ['dark-energy.point-infinity-has-no-physical-fluctuation']

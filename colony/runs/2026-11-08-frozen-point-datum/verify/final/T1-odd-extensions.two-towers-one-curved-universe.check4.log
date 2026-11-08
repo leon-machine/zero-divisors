@@ -1,0 +1,8 @@
+E408  odd-extensions.two-towers-one-curved-universe
+      check_the_datum_makes_the_fifth_generator_a_unit asserts nothing
+I405  odd-extensions.two-towers-one-curved-universe
+      dark-energy.point-infinity-has-no-physical-fluctuation is declared and untouched, as expected: coverage.yaml: Cited for placing the V direction in the pure-gauge sector; the docstring states the consequence is not recomputed.
+I405  odd-extensions.two-towers-one-curved-universe
+      odd-extensions.belongs-tower is declared and untouched, as expected: coverage.yaml: Cited for the closing consequence that the unit vector along V lies outside the soldered space; the docstring states the consequence is not recomputed.
+
+odd-extensions.two-towers-one-curved-universe: 1 error(s), 2 other finding(s); check result: fail

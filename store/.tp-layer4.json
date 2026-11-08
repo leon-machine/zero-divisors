@@ -36529,6 +36529,116 @@
 }
 ]
 },
+"synthesis.frozen-point-datum-is-h": {
+"failed": false,
+"findings": [],
+"key": "1665f437b21dc562",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_identities_hold_for_every_lambda",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point",
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_with_h_every_construction_is_over_the_base_field",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point",
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_lambda_over_three_must_be_a_square",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point",
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_the_quadratic_extension_supplies_what_is_missing",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point",
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_lambda_seven_thirds_sphere_has_no_rational_point",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_lambda_six_centres_are_other_quadratic_fields",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_similar_to_the_standard_form_iff_sum_of_two_squares",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_the_mirror_needs_minus_one_not_a_square",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_rescaling_by_root_lambda_needs_root_three",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_anti_de_sitter_datum",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.de-sitter-scale-frozen-point",
+"synthesis.de-sitter-static-boost-frozen-point"
+]
+},
+{
+"derivation": null,
+"func": "check_operator_join_scale_needs_root_two",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
 "failed": false,
 "findings": [],

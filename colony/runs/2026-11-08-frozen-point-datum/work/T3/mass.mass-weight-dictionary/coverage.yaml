@@ -1,0 +1,14 @@
+functions:
+  check_mass_is_minus_w_w_plus_n_minus_one_times_norm:
+    kind: sampled
+    clauses: ["m^2 = -w(w+n-1) Q(I)", "the coupling I.D sigma = 0 gives the Klein-Gordon equation (Box + m^2) sigma = 0 in the scale of I"]
+    omits: "144-point grid of 9 weights w, n in {3,4,5,6} and 4 values of J (120 with m^2 nonzero); the Thomas operator coefficients are typed in from the premise and the Klein-Gordon reading is m^2 = b/a from I.D sigma = a Box sigma + b sigma; the gradient slot is shown to pair to zero; the opposite sign fails wherever m^2 != 0"
+  check_four_dimensions_in_lambda_and_frozen_point:
+    kind: sampled
+    clauses: ["n = 4: m^2 = -w(w+3) Lambda/3 = -w(w+3) H^2", "the frozen point (1, 0, J/n) is (1/n) D 1 at w = 1"]
+    omits: "Lambda in {3, -6/5, 1/7}, nine weights; the consistency of the premise is checked for n = 3..6 and four J"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The dictionary formula is confirmed on a dense grid in w, n, J but the Thomas operator is an input, not recomputed."

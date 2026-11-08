@@ -1,0 +1,22 @@
+functions:
+  check_cosmological_term_magnitudes:
+    kind: sampled
+    clauses: ["(1) ratio of cosmological to flat term is Lambda l^2/6, equal to one at l = sqrt2 L_H", "(1) 0.05 eV Lambda-term neutrino has l = 2^(1/4) L_H", "(1) weak-scale constituents give extent of order 10^20 m", "(1) Casimir branch needs C of order 10^63"]
+    omits: "The l/L_H = sqrt2 identity is checked in Q(sqrt 2) at nine (Lambda, m) samples; the 10^20 m and 10^63 numbers are bracketed with exact rational intervals at p = 100 GeV and the quoted Lambda range. The deformed-bracket form from mass.exact-join and |[omega omega]| ~ l^2 p are taken as given; the scope remark that no compositeness floor exists is not tested."
+  check_unique_neutral_bilinear:
+    kind: complete
+    clauses: ["(2) N N is the unique neutral bilinear among the derived fermions", "(2) L N carries nonzero hypercharge"]
+    omits: "Exhaustive over the 21 unordered pairs of the six hard-coded hypercharges; the hypercharges are not recomputed here and \"forms at the electroweak scale v\" is not computed."
+  check_block_elimination:
+    kind: sampled
+    clauses: ["(3) light block is -m_D M_R^-1 m_D^T and symmetric"]
+    omits: "Two sizes (2 x 2, 3 x 3) of rational m_D, M_R and three vectors x; exact Schur-complement identity at those samples. That the light eigenvalues approximate those of the full matrix when ||m_D|| << ||M_R|| (leading order) is not tested for more than one generation."
+  check_scalar_seesaw_bound:
+    kind: sampled
+    clauses: ["(3) one generation m_nu = m_D^2/M_R", "(3) exact small eigenvalue differs by less than m_D^4/M_R^3"]
+    omits: "Four (m, M) samples with M > 0 give the sign-change bracket and its sharpness to a factor two (f(t + e/2) > 0), with f(t) = m^4/M^2 and the vertex M/2 pinned, and the identity f(t + e) = -2 m^6/M^4 + m^8/M^6 is checked on a 5 x 9 grid; the general bound for all m << M is not a symbolic proof."
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "The checks test the magnitudes, the bilinear census and the block inversion within their kinds; premise (M) has no computable content and clause (3) is checked under it as the docstring says. 2026-10-23 (weak checks): check_scalar_seesaw_bound now pins f(t) = m^4/M^2 exactly, shows the bound m^4/M^3 is sharp to a factor two (f(t + e/2) > 0, so |mu - t| > e/2) and pins the vertex M/2 by the symmetry of f; the identity grid moved to module level."

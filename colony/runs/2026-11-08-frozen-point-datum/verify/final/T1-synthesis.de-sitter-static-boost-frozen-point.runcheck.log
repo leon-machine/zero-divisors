@@ -1,0 +1,12 @@
+PASS  Lam = 3H^2: kappa = H, kappa^2 = B^2; dx = 0 on Q(x) = -12/Lam with Jacobian [[0,H],[H,0]]
+PASS check_horizon_surface_gravity_and_bifurcation_sphere   premises touched: ['singularity.imported-surface-gravity-redshifted-acceleration']
+PASS  Q(xi) = (1 + Lam Q(x)/12)^2 - (Lam/3) x_0^2 = Q(dx) on the 3 x 5^4 grid; dx as stated
+PASS check_killing_field_norm_and_chart_velocity   premises touched: ['mass.de-sitter-scale-frozen-point']
+PASS  under Q -> -Q, Q(I) changes sign and B^2 = Lam/3 does not
+PASS check_reversal_of_the_ambient_form   premises touched: []
+PASS  I = n_inf + (Lam/6) n_O, W = V/Q(V): B = e_0 W commutes with I and B^2 = Q(I) = Lam/3
+PASS check_stabiliser_and_square   premises touched: ['dark-energy.stelle-west-vector-frozen-point', 'mass.de-sitter-scale-frozen-point']
+PASS  on x = r e_1: sigma = 1 + Lam r^2/12 and g(xi, xi) = 1 - (Lam/3) R^2 with R = r/sigma
+PASS check_static_slice_norm   premises touched: ['mass.de-sitter-scale-frozen-point']
+PASS  Lam = 0: B nilpotent, the time translation X(x) -> X(x - t e_0); Lam < 0: a rotation, no horizon
+PASS check_zero_and_negative_lambda   premises touched: []

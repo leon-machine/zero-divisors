@@ -1,0 +1,1116 @@
+{
+"angle.imported-singularity-papers-state-selection": {
+"horizon": {
+"entity.md": 3,
+"orig-proof-main.tex": 1,
+"proof-main.tex": 1
+}
+},
+"angle.wedge-reflection-translations-are-ascent": {
+"cl5": {
+"entity.md": 5
+}
+},
+"conformal.principal-case": {
+"cl5": {
+"check.py": 2,
+"coverage.yaml": 1,
+"entity.md": 2
+}
+},
+"correspondence.no-real-lorentzian-vacuum-half-flat": {
+"cl5": {
+"entity.md": 3
+}
+},
+"dark-energy.cosmological-constant-does-not-change-residue": {
+"Hubble": {
+"check.py": 1,
+"entity.md": 3
+}
+},
+"dark-matter.contact-mechanism-returns-r3": {
+"cl5": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 1
+}
+},
+"dark-matter.direction-nesting-adds-algebra": {
+"cl5": {
+"check.py": 4,
+"entity.md": 3
+}
+},
+"dark-matter.imported-inputs-standard-model-chain": {
+"cl5": {
+"check.py": 2,
+"coverage.yaml": 1,
+"entity.md": 6,
+"orig-proof-main.tex": 2,
+"proof-main.tex": 2
+}
+},
+"dark-matter.imported-trichotomy-descents-data": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"dark-matter.mirror-tower-copy-one": {
+"cl5": {
+"check.py": 4,
+"orig-proof-main.tex": 3,
+"proof-main.tex": 3
+}
+},
+"dark-matter.nesting": {
+"cl5": {
+"check.py": 3,
+"entity.md": 4,
+"proof-main.tex": 2
+}
+},
+"dark-matter.sourcing-rule-forced-not-chosen": {
+"cl5": {
+"check.py": 1
+}
+},
+"dark-matter.two-reductions": {
+"cl5": {
+"check.py": 1
+}
+},
+"dark-tower-matter.pairs": {
+"cl5": {
+"orig-proof-main.tex": 2,
+"proof-main.tex": 2
+}
+},
+"dark-tower-matter.residue-seven-unit": {
+"cl5": {
+"check.py": 5,
+"coverage.yaml": 4,
+"entity.md": 3
+}
+},
+"dark-tower-matter.same-kind-matter": {
+"cl5": {
+"check.py": 4
+}
+},
+"dark-tower-matter.three-dimensional-phases": {
+"cl5": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 1
+}
+},
+"families.bracket-fixed-join": {
+"Hubble": {
+"coverage.yaml": 1,
+"entity.md": 3
+}
+},
+"families.why-kinematic-attacks-had-fail": {
+"Hubble": {
+"entity.md": 2,
+"proof-main.tex": 1
+}
+},
+"hawking.imported-penrose-transform": {
+"cl5": {
+"entity.md": 3
+}
+},
+"interior.exact-parallelism-convergence-rate": {
+"Hubble": {
+"check.py": 1,
+"entity.md": 5
+}
+},
+"interior.interior-connection-exactly": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"interior.schwarzschild-lines-exactly": {
+"Hubble": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 8
+}
+},
+"interior.transport-level-convergence-along-tangential-curves": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"interior.weighted-limit-theorem": {
+"Hubble": {
+"check.py": 1,
+"coverage.yaml": 2,
+"entity.md": 9,
+"proof-main.tex": 5
+}
+},
+"odd-extensions.are-ascents-pair-signed": {
+"cl5": {
+"check.py": 2,
+"coverage.yaml": 2,
+"entity.md": 8
+}
+},
+"odd-extensions.belongs-tower": {
+"cl5": {
+"entity.md": 3
+}
+},
+"odd-extensions.copy-theorems-blind-spot": {
+"cl5": {
+"check.py": 16,
+"coverage.yaml": 2,
+"entity.md": 11
+}
+},
+"odd-extensions.cosmological-constant-deforms-wall": {
+"cl5": {
+"coverage.yaml": 2,
+"entity.md": 6
+}
+},
+"odd-extensions.four-extensions-are-four-odd-towers": {
+"cl5": {
+"check.py": 4,
+"coverage.yaml": 4,
+"entity.md": 10
+}
+},
+"odd-extensions.four-extensions-oriented-pair": {
+"cl5": {
+"check.py": 6,
+"coverage.yaml": 2,
+"entity.md": 20
+}
+},
+"odd-extensions.mirror-inside-complexified-extension-absent-doubled": {
+"cl5": {
+"check.py": 12,
+"coverage.yaml": 9,
+"entity.md": 15,
+"proof-main.tex": 5
+}
+},
+"odd-extensions.not-coupling-between-towers": {
+"cl5": {
+"entity.md": 1
+}
+},
+"odd-extensions.twistor-algebra": {
+"cl5": {
+"check.py": 6,
+"coverage.yaml": 10,
+"entity.md": 36,
+"orig-proof-main.tex": 2,
+"proof-main.tex": 2
+}
+},
+"odd-extensions.two-towers-one-curved-universe": {
+"cl5": {
+"check.py": 8,
+"coverage.yaml": 8,
+"entity.md": 8,
+"orig-proof-main.tex": 2,
+"proof-main.tex": 2
+}
+},
+"one-relation.dirac-current-conserved-density": {
+"cl5": {
+"entity.md": 4
+}
+},
+"one-relation.two-presentations": {
+"cl5": {
+"entity.md": 1,
+"proof-main.tex": 1
+}
+},
+"pairing.curvature-which-loops-move-vacuum": {
+"cl5": {
+"check.py": 2,
+"entity.md": 4,
+"proof-main.tex": 1
+}
+},
+"pairing.imported-spin-coefficients-null-tetrad": {
+"cl5": {
+"entity.md": 1
+}
+},
+"pairing.loop-classes-are-weyl-components": {
+"cl5": {
+"check.py": 1,
+"entity.md": 1
+}
+},
+"pairing.pairing-functional-pair-creation-amplitude": {
+"cl5": {
+"entity.md": 4,
+"proof-main.tex": 1
+}
+},
+"pairing.regular-frame-class-vanishes-horizon-changes": {
+"cl5": {
+"check.py": 3,
+"coverage.yaml": 1,
+"entity.md": 7,
+"proof-main.tex": 2
+}
+},
+"pairing.stabiliser-parabolic-algebra-null-direction": {
+"cl5": {
+"entity.md": 3
+}
+},
+"pairing.static-frame-only-expansion-survives": {
+"cl5": {
+"check.py": 4,
+"coverage.yaml": 1,
+"entity.md": 7,
+"proof-main.tex": 2
+}
+},
+"programme.n-parameter-of-the-laws": {
+"Hubble": {
+"entity.md": 5
+}
+},
+"refuted.the-mass-dictionary-coupling-to-the-frozen-point": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"refuted.the-number-n-is-a-coincidence-dirac": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"rule2.rule-2-kaluza-klein-algebra": {
+"cl5": {
+"check.py": 1,
+"entity.md": 6
+}
+},
+"rule2.rule-2-plane": {
+"cl5": {
+"coverage.yaml": 1,
+"entity.md": 1
+}
+},
+"rule2.which-residues-obstruct-which-way": {
+"cl5": {
+"check.py": 4,
+"entity.md": 1
+}
+},
+"rungs.fact-null-momenta-invite-one-rung": {
+"cl5": {
+"check.py": 4,
+"coverage.yaml": 2,
+"entity.md": 2
+}
+},
+"scrambling.imported-modes-modular-inventory": {
+"cl5": {
+"entity.md": 3,
+"proof-main.tex": 1
+}
+},
+"sheaf.weighted-limit": {
+"Hubble": {
+"check.py": 1,
+"entity.md": 7,
+"orig-proof-main.tex": 2,
+"proof-main.tex": 2
+}
+},
+"singularity.euclidean-rotor-where-it-lies": {
+"cl5": {
+"entity.md": 4,
+"proof-main.tex": 2
+},
+"horizon": {
+"entity.md": 5
+}
+},
+"singularity.euclidean-section-period": {
+"cl5": {
+"entity.md": 4
+},
+"horizon": {
+"entity.md": 4
+}
+},
+"singularity.modular-flow-boundary-modes-holonomy-universal": {
+"Hubble": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 6,
+"proof-main.tex": 1
+}
+},
+"singularity.r-regularity-fixed-locus": {
+"cl5": {
+"entity.md": 1
+}
+},
+"singularity.rate-discharge-hypothesis-iii": {
+"horizon": {
+"entity.md": 1,
+"orig-proof-main.tex": 1,
+"proof-main.tex": 1
+}
+},
+"standard-model.imported-frozen-point-dictionary-external": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"standard-model.largeness-number-universes-boundary-modes": {
+"horizon": {
+"entity.md": 1
+}
+},
+"standard-model.one-number-explain": {
+"Hubble": {
+"entity.md": 4
+}
+},
+"standard-model.what": {
+"horizon": {
+"entity.md": 3
+}
+},
+"standard-model.what-derived-what-not": {
+"Hubble": {
+"coverage.yaml": 1,
+"entity.md": 5
+}
+},
+"std-algebra.bivector-exponential-in-spin": {
+"cl5": {
+"check.py": 2,
+"coverage.yaml": 1
+}
+},
+"std-algebra.complexification-is-the-odd-extension": {
+"cl5": {
+"check.py": 4,
+"coverage.yaml": 4,
+"entity.md": 5,
+"proof-main.tex": 4
+}
+},
+"std-algebra.sta-matrix": {
+"cl5": {
+"entity.md": 2
+}
+},
+"synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
+"Hubble": {
+"entity.md": 5,
+"proof-main.tex": 2
+}
+},
+"synthesis.admissible-decay-does-not-control-tangential-derivatives": {
+"Hubble": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 7,
+"proof-main.tex": 4
+}
+},
+"synthesis.attachment-conformal-energy-is-generated-by-z": {
+"horizon": {
+"entity.md": 3
+}
+},
+"synthesis.bkl-bounce-invariant-holonomy-and-bound": {
+"Hubble": {
+"entity.md": 3,
+"proof-main.tex": 2
+}
+},
+"synthesis.bkl-bounces-no-framewise-invariant": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"synthesis.boost-evolution-on-generators-is-one-unitary-group": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.c-loc-local-horizon-premise": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.collar-isotropy-selects-t-boost": {
+"Hubble": {
+"check.py": 1,
+"proof-main.tex": 1
+},
+"cl5": {
+"entity.md": 3,
+"proof-main.tex": 1
+}
+},
+"synthesis.collar-kms-extension-completion-locus": {
+"Hubble": {
+"check.py": 4,
+"entity.md": 11,
+"proof-main.tex": 6
+}
+},
+"synthesis.collar-kms-extension-three-flows": {
+"Hubble": {
+"check.py": 6,
+"coverage.yaml": 4,
+"entity.md": 24,
+"proof-main.tex": 12
+}
+},
+"synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term": {
+"horizon": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 2,
+"orig-proof-main.tex": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field": {
+"cl5": {
+"entity.md": 1
+}
+},
+"synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window": {
+"Hubble": {
+"check.py": 1,
+"entity.md": 5,
+"proof-main.tex": 1
+}
+},
+"synthesis.imported-de-sitter-invariant-hadamard-state-unique": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard": {
+"cl5": {
+"entity.md": 2
+}
+},
+"synthesis.imported-free-field-spin-statistics-and-guido-longo-theorem": {
+"cl5": {
+"entity.md": 2
+}
+},
+"synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport": {
+"cl5": {
+"entity.md": 2
+}
+},
+"synthesis.imported-kaluza-klein-ansatz": {
+"cl5": {
+"entity.md": 2
+}
+},
+"synthesis.imported-large-scale-potential-and-sachs-wolfe-relations": {
+"Hubble": {
+"entity.md": 6
+}
+},
+"synthesis.imported-planck-2018-lcdm-parameters": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"synthesis.imported-string-gas-thermal-spectrum-and-conversion": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"synthesis.imported-superhorizon-zeta-conservation": {
+"Hubble": {
+"entity.md": 6
+}
+},
+"synthesis.imported-taub-nut-field-and-misner-extension": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"synthesis.imported-wald-noether-charge-entropy": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.imported-wands-duality-of-perturbation-spectra": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent": {
+"horizon": {
+"proof-main.tex": 1
+}
+},
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
+"Hubble": {
+"entity.md": 8
+}
+},
+"synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching": {
+"Hubble": {
+"check.py": 3,
+"coverage.yaml": 1,
+"entity.md": 5,
+"proof-main.tex": 3
+}
+},
+"synthesis.kasner-hidden-scale-coupled-scalars-stay-blue": {
+"cl5": {
+"check.py": 2,
+"coverage.yaml": 2,
+"entity.md": 2,
+"proof-main.tex": 1
+}
+},
+"synthesis.kerr-ring-blow-up-forced-cover-fixed-order": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"synthesis.loc-independent-of-clausius-and-killing-data": {
+"horizon": {
+"entity.md": 2,
+"proof-main.tex": 1
+}
+},
+"synthesis.local-conversion-cannot-redden-a-gaussian-spectator": {
+"Hubble": {
+"proof-main.tex": 2
+}
+},
+"synthesis.majorana-scale-free-input": {
+"Hubble": {
+"entity.md": 4
+}
+},
+"synthesis.majorana-scale-free-on-pati-salam-route": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"synthesis.majorana-scale-not-carried-by-rung-frame-boost": {
+"Hubble": {
+"entity.md": 6,
+"proof-main.tex": 2
+}
+},
+"synthesis.mirror-extensions-causal-convention": {
+"cl5": {
+"entity.md": 20,
+"proof-main.tex": 3
+}
+},
+"synthesis.modular-period-on-values-is-the-dual-plane-turn": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.number-n-registered-free-input": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"synthesis.one-loop-qed-in-the-spacetime-algebra": {
+"cl5": {
+"entity.md": 2,
+"proof-main.tex": 2
+}
+},
+"synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise": {
+"Hubble": {
+"check.py": 1,
+"proof-main.tex": 2
+}
+},
+"synthesis.pati-salam-chain-defects-cannot-source-spectrum": {
+"Hubble": {
+"proof-main.tex": 4
+}
+},
+"synthesis.pati-salam-monopoles-bound-descent-history": {
+"Hubble": {
+"check.py": 4,
+"entity.md": 11,
+"proof-main.tex": 3
+}
+},
+"synthesis.phase-flow-is-time-rotor-flow-kms-continuation": {
+"horizon": {
+"check.py": 1
+}
+},
+"synthesis.plane-wave-weak-null-crossing-null-shell-ambiguity": {
+"Hubble": {
+"check.py": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.positive-conformal-energy-gives-positive-null-translations": {
+"horizon": {
+"entity.md": 3,
+"proof-main.tex": 1
+}
+},
+"synthesis.positive-energy-selects-rule-2-sign": {
+"cl5": {
+"entity.md": 2,
+"proof-main.tex": 2
+}
+},
+"synthesis.pre-descent-contracting-kasner-stage-premise": {
+"Hubble": {
+"entity.md": 4
+}
+},
+"synthesis.pre-descent-state-carried-into-descended-phase-premise": {
+"Hubble": {
+"entity.md": 5
+}
+},
+"synthesis.promoted-norm-weyl-clock-flat-weight": {
+"Hubble": {
+"orig-proof-main.tex": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.r-loc-independent-sets-matter-coupling": {
+"horizon": {
+"entity.md": 4,
+"proof-main.tex": 2
+}
+},
+"synthesis.residue-common-weight-particle-hole": {
+"horizon": {
+"entity.md": 1
+}
+},
+"synthesis.rule-2-fusing-plane-lorentzian": {
+"cl5": {
+"check.py": 1,
+"entity.md": 3
+}
+},
+"synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading": {
+"Hubble": {
+"entity.md": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix": {
+"Hubble": {
+"check.py": 1
+}
+},
+"synthesis.rung-unit-is-frame-boost": {
+"Hubble": {
+"entity.md": 1,
+"proof-main.tex": 3
+}
+},
+"synthesis.rung-unit-second-free-number": {
+"Hubble": {
+"entity.md": 11
+}
+},
+"synthesis.rung-unit-transverse-to-norm": {
+"Hubble": {
+"entity.md": 4,
+"proof-main.tex": 2
+}
+},
+"synthesis.schwarzschild-horizon-translations-are-no-conformal-symmetry": {
+"horizon": {
+"entity.md": 2
+}
+},
+"synthesis.series-wald-entropy-changes-without-flux-on-local-horizons": {
+"horizon": {
+"check.py": 2,
+"entity.md": 2,
+"orig-proof-main.tex": 1
+}
+},
+"synthesis.tangential-derivative-transport-bound": {
+"Hubble": {
+"check.py": 1,
+"coverage.yaml": 1,
+"entity.md": 7,
+"proof-main.tex": 2
+}
+},
+"synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue": {
+"Hubble": {
+"entity.md": 4
+}
+},
+"synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state": {
+"horizon": {
+"entity.md": 3,
+"proof-main.tex": 2
+}
+},
+"synthesis.tower-charge-sector-label-temperature-not": {
+"horizon": {
+"entity.md": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation": {
+"cl5": {
+"entity.md": 1,
+"proof-main.tex": 1
+}
+},
+"synthesis.unit-i4-keeps-its-three-properties-only-in-dimension-zero-mod-four": {
+"cl5": {
+"proof-main.tex": 1
+}
+},
+"synthesis.untuned-fit-caps-lightest-heavy-neutrino": {
+"Hubble": {
+"proof-main.tex": 1
+}
+},
+"synthesis.wick-rotated-boost-selects-observer-tube-point": {
+"horizon": {
+"proof-main.tex": 1
+}
+},
+"transport.which-residues-obstruct-which-way": {
+"cl5": {
+"check.py": 4,
+"coverage.yaml": 1,
+"entity.md": 3
+}
+},
+"obj.interior.weighted-blow-up-hubble-normalisation-admissible": {
+"Hubble": {
+"entity.md": 14
+}
+},
+"obj.std-algebra.conformal-algebra": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.angle.abstract": {
+"cl5": {
+"entity.md": 3
+}
+},
+"note.angle.setting-claim-kill-conditions-fixed-before-2": {
+"cl5": {
+"entity.md": 3
+}
+},
+"note.angle.setting-machine-verification": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.angle.what-supplies-what-it-does-not": {
+"cl5": {
+"entity.md": 3
+}
+},
+"note.conformal.abstract": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.conformal.setting-introduction": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.conformal.setting-machine-verification": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.dark-matter.setting-dark-stable-counted": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.dark-matter.setting-machine-verification": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.dark-matter.setting-what-would-refute-paper": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.decisions.two-boost-flows": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.families.setting-introduction": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.families.setting-setting-imports": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.interior.abstract": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.generic-delimiter-mixmaster": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.setting-contribution": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.setting-introduction": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.setting-machine-verification": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.setting-successor-problems": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.interior.setting-transport-along-tangential-curves-lines": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"note.interior.setting-transport-along-tangential-curves-lines-2": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.interior.what-closed-what-remains": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.mass.point-contact-dictionary-plain-words": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.mass.setting-setting-imports": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.mass.what-dictionary-does-does-not-yield": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.odd-extensions.abstract": {
+"cl5": {
+"entity.md": 5
+}
+},
+"note.odd-extensions.added-axis-pseudoscalar": {
+"cl5": {
+"entity.md": 7
+}
+},
+"note.odd-extensions.holographic-coincidence": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.odd-extensions.two-bits-compared": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.pairing.setting-machine-verification": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.pairing.setting-setting-what-imported": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.pairing.setting-transport-moves-vacuum-transverse-derivative": {
+"cl5": {
+"entity.md": 3
+}
+},
+"note.programme.setting-measure-two-numbers-one-bit": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"note.programme.setting-seventeen-refutations": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.programme.setting-thesis": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.rule2.abstract": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.rule2.setting-five-dimensional-kaluza-klein-algebra": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.rule2.setting-machine-verification": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.rule2.three-dimensions-matter-below": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.rule2.twistor-five-dimensional-spinor": {
+"cl5": {
+"entity.md": 5
+}
+},
+"note.scrambling.setting-calibration-factorised-quarter-examined": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.singularity.abstract": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.singularity.euclidean-reading-sign-flagged": {
+"cl5": {
+"entity.md": 2
+}
+},
+"note.singularity.setting-contribution": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.singularity.setting-fixing-rate-where-premise-has": {
+"horizon": {
+"entity.md": 1
+}
+},
+"note.singularity.setting-machine-verification": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.singularity.setting-modular-flow-boundary-modes-inside": {
+"Hubble": {
+"entity.md": 1
+}
+},
+"note.singularity.setting-what-established-what-premised-what": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.singularity.what-curvature-selected-pair-does-does": {
+"horizon": {
+"entity.md": 1
+}
+},
+"note.standard-model.0-what-massless-means-here": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.standard-model.setting-one-number": {
+"Hubble": {
+"entity.md": 2
+}
+},
+"note.standard-model.setting-setting-imports": {
+"horizon": {
+"entity.md": 1
+}
+},
+"note.standard-model.setting-successor-problems": {
+"Hubble": {
+"entity.md": 3
+}
+},
+"note.transport.exotic-embedding-inertness": {
+"cl5": {
+"entity.md": 6
+}
+},
+"note.transport.setting-machine-verification": {
+"cl5": {
+"entity.md": 1
+}
+},
+"note.transport.three-dimensions": {
+"cl5": {
+"entity.md": 2
+}
+}
+}

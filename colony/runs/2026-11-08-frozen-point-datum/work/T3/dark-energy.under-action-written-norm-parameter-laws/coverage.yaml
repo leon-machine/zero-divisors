@@ -1,0 +1,21 @@
+functions:
+  check_fixed_lambda_nine_and_de_sitter_scale:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "dimension 9 and the nine broken generators at three sample Lambda; H^2 = Q(I) = Lambda/3 on two flat-sliced de Sitter fields, not for every solution with parameter Lambda"
+  check_n_varies_with_lambda:
+    kind: exact
+    clauses: ["(ii) d(N^2)/dLambda = -3 M_P^2/Lambda^2 != 0"]
+    omits: "that N is not (K) is the cited rescaling argument, checked only as I -> sI sending N to N/s at three s; the classification as (P) in (iii) is not computed"
+  check_varying_lambda_single_norm_mode:
+    kind: sampled
+    clauses: ["Lambda varying: constrained space of dimension ten, gauge orbit nine, one norm mode", "the norm mode is the tangent at s = 1 of (sI, V/s, s^2 Lambda)"]
+    omits: "three sample Lambda; that the norm mode needs an equation of motion the action does not supply is not testable here"
+untouched_premises:
+  dark-energy.four-alternatives-are-exhaustive-three-are: "classification of the four ways a number enters; no computable content"
+  dark-energy.frozen-point-makes-stelle-west-vector: "the Stelle-West constraints are used through the point-infinity entity, whose premise is the one called"
+judge:
+  by: coverage-judge-2026-10-23
+  date: '2026-10-23'
+  verdict: agrees
+  note: "clauses (i) and (ii) and the varying-Lambda paragraph are tested; the (P) classification in (iii) is taxonomic"

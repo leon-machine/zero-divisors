@@ -85,6 +85,14 @@ conventions of notation and of the imaginary units that the texts assume.
   spacetime is $\Cl(1,3)$, signature $(+,-,-,-)$, and the completion is
   $\Cl(2,4)$, adding the hyperbolic plane spanned by $e_+, e_-$
   ($e_+^2 = 1$, $e_-^2 = -1$).
+- *The frozen point's datum.* Results that involve the cosmological constant are stated over
+  $\R$, where the completion (`synthesis.continuum-completion-premise`) makes $\Lambda/3 > 0$ a
+  square. On a rational reading (the foundation's scalars before the completion) the datum is
+  $H$, with $\Lambda = 3\varepsilon H^2$, $\varepsilon = \pm 1$ ($H'$ with $\Lambda = -3H'^2$ on the
+  anti-de Sitter side): then every frozen-point construction is defined over $\Q$, and without
+  it each needs $\Lambda/3$ to be a square (Leon's decision, 8 November 2026;
+  `synthesis.frozen-point-datum-is-h`, which lists the affected results and the few that need
+  more than $H$).
 - The T01-derived regions write $\Cl^0(p,q)$ for the even subalgebra $\Cl^+(p,q)$; $\Cl^0$ for grade
   zero is the standard-algebra objects' usage.
 - $\bar M_P = M_P/\sqrt{8\pi}$ (`quantity.reduced-planck-mass`); $M_P$ is the non-reduced mass.

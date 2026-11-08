@@ -1,0 +1,8 @@
+I410  dark-energy.under-action-written-norm-parameter-laws
+      7 legacy checks pass in verify_T10.py (premises untracked, no mutation test)
+I405  dark-energy.under-action-written-norm-parameter-laws
+      dark-energy.four-alternatives-are-exhaustive-three-are is declared and untouched, as expected: coverage.yaml: classification of the four ways a number enters; no computable content
+I405  dark-energy.under-action-written-norm-parameter-laws
+      dark-energy.frozen-point-makes-stelle-west-vector is declared and untouched, as expected: coverage.yaml: the Stelle-West constraints are used through the point-infinity entity, whose premise is the one called
+
+dark-energy.under-action-written-norm-parameter-laws: 0 error(s), 3 other finding(s); check result: pass

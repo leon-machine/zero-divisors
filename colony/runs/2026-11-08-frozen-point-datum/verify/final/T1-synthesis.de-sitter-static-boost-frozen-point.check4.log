@@ -1,0 +1,4 @@
+I405  synthesis.de-sitter-static-boost-frozen-point
+      singularity.euclidean-section-period is declared and untouched, as expected: coverage.yaml: cited only for the Euclidean-section period clause of (iii), which the module docstring records as the premise's analytic argument and does not check
+
+synthesis.de-sitter-static-boost-frozen-point: 0 error(s), 1 other finding(s); check result: pass
